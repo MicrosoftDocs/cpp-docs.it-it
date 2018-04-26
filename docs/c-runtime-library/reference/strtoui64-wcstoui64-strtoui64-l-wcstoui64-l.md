@@ -1,12 +1,12 @@
 ---
 title: _strtoui64, _wcstoui64, _strtoui64_l, _wcstoui64_l | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _strtoui64
@@ -48,129 +48,134 @@ helpviewer_keywords:
 - strtoui64_l function
 - strtoui64 function
 ms.assetid: 7fcb537e-4554-4ceb-a5b6-bc09244e72ef
-caps.latest.revision: 
+caps.latest.revision: 19
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2ad6ce06ef428005ea07214b426df0c61f623429
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: d596f66bd3272449466a080cf3ecd2f58fdd8627
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="strtoui64-wcstoui64-strtoui64l-wcstoui64l"></a>_strtoui64, _wcstoui64, _strtoui64_l, _wcstoui64_l
-Converte una stringa in un valore `__int64` senza segno.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-unsigned __int64 _strtoui64(  
-   const char *nptr,  
-   char **endptr,  
-   int base   
-);  
-unsigned __int64 _wcstoui64(  
-   const wchar_t *nptr,  
-   wchar_t **endptr,  
-   int base   
-);  
-unsigned __int64 _strtoui64_l(  
-   const char *nptr,  
-   char **endptr,  
-   int base,  
-   _locale_t locale  
-);  
-unsigned __int64 _wcstoui64(  
-   const wchar_t *nptr,  
-   wchar_t **endptr,  
-   int base,  
-   _locale_t locale  
-);  
-```  
-  
-#### <a name="parameters"></a>Parametri  
- `nptr`  
- Stringa con terminazione Null da convertire.  
-  
- `endptr`  
- Puntatore al carattere che interrompe la lettura.  
-  
- `base`  
- Base numerica da usare.  
-  
- `locale`  
- Impostazioni locali da usare.  
-  
-## <a name="return-value"></a>Valore restituito  
- `_strtoui64` restituisce il valore rappresentato nella stringa `nptr`, tranne quando la rappresentazione potrebbe causare un overflow, nel qual caso restituisce `_UI64_MAX`. `_strtoui64` restituisce 0 se è non possibile eseguire alcuna conversione.  
-  
- `_UI64_MAX` è definito in LIMITS.H.  
-  
- Se `nptr` è `NULL` o `base` è diverso da zero e minore di 2 o maggiore di 36, `errno` viene impostato su `EINVAL`.  
-  
- Per altre informazioni su questi e altri codici restituiti, vedere [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
-  
-## <a name="remarks"></a>Note  
- Il `_strtoui64` funzione converte `nptr` per un `unsigned` `__int64`. `_wcstoui64` è una versione a caratteri wide di `_strtoui64`. L'argomento `nptr` è una stringa di caratteri wide. In caso contrario, il comportamento di queste funzioni è identico.  
-  
- Entrambe le funzioni interrompono la lettura della stringa `nptr` in corrispondenza del primo carattere che non può essere riconosciuto come parte di un numero. Potrebbe trattarsi del carattere Null di terminazione o del primo carattere numerico maggiore o uguale a `base`.  
-  
-### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico  
-  
-|Routine TCHAR.H|_UNICODE e _MBCS non definiti|_MBCS definito|_UNICODE definito|  
-|---------------------|------------------------------------|--------------------|-----------------------|  
-|`_tcstoui64`|`_strtoui64`|`_strtoui64`|`_wstrtoui64`|  
-|`_tcstoui64_l`|`_strtoui64_l`|`_strtoui64_l`|`_wstrtoui64_l`|  
-  
- L'impostazione della categoria `LC_NUMERIC` delle impostazioni locali correnti determina il riconoscimento del carattere di base `nptr`. Per altre informazioni, vedere [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). Le funzioni senza il suffisso l utilizzano le impostazioni locali correnti; `_strtoui64_l` e `_wcstoui64_l` sono identiche alle corrispondenti funzioni senza il `_l` suffisso ad eccezione del fatto che usano le impostazioni locali passate. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).  
-  
- Se `endptr` non è `NULL`, un puntatore al carattere che ha interrotto la lettura viene archiviato in corrispondenza della posizione a cui punta `endptr`. Se è non possibile eseguire alcuna conversione (non vengono trovate cifre valide o viene specificata una base non valida), il valore di `nptr` viene archiviato in corrispondenza della posizione a cui punta `endptr`.  
-  
- `_strtoui64` prevede che `nptr` punti a una stringa nel formato seguente:  
-  
- [`whitespace`] [{`+` &#124; `-`}] [`0` [{ `x` &#124; `X` }]] [`digits`]  
-  
- `whitespace` può essere costituito da caratteri di spazio e tabulazione, che vengono ignorati. `digits` indica una o più cifre decimali. Il primo carattere che non corrisponde a questo formato interrompe la lettura. Se il valore `base` è compreso tra 2 e 36, viene usato come base del numero. Se `base` è 0, per determinare la base vengono usati i caratteri iniziali della stringa a cui punta `nptr`. Se il primo carattere è 0 e il secondo carattere non è 'x' né 'X', la stringa viene interpretata come un Integer ottale. Se il primo carattere è '0' e il secondo carattere è 'x' o 'X', la stringa viene interpretata come integer esadecimale. Se il primo carattere è compreso tra '1' e '9', la stringa viene interpretata come integer decimale. Alle lettere da 'a' a 'z' (o da 'A' a 'Z') vengono assegnati i valori da 10 a 35. Sono consentite solo le lettere con valori assegnati minori di `base`. Il primo carattere non compreso nell'intervallo della base interrompe la lettura. Ad esempio, se `base` è 0 e il primo carattere analizzato è '0', si presuppone un Integer ottale e il carattere '8' o '9' arresterà l'analisi.  
-  
-## <a name="requirements"></a>Requisiti  
-  
-|Routine|Intestazione obbligatoria|  
-|-------------|---------------------|  
-|`_strtoui64`|\<stdlib.h>|  
-|`_wcstoui64`|\<stdlib.h> or \<wchar.h>|  
-|`_strtoui64_l`|\<stdlib.h>|  
-|`_wcstoui64_l`|\<stdlib.h> or \<wchar.h>|  
-  
- Per altre informazioni sulla compatibilità, vedere la sezione [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
-  
-## <a name="example"></a>Esempio  
-  
-```  
-// crt_strtoui64.c  
-#include <stdio.h>  
-  
-unsigned __int64 atoui64(const char *szUnsignedInt) {  
-   return _strtoui64(szUnsignedInt, NULL, 10);  
-}  
-  
-int main() {  
-   unsigned __int64 u = atoui64("18446744073709551615");  
-   printf( "u = %I64u\n", u );  
-}  
-```  
-  
-```Output  
-u = 18446744073709551615  
-```  
-  
-## <a name="see-also"></a>Vedere anche  
- [Data Conversion](../../c-runtime-library/data-conversion.md)  (Conversione dei dati)  
- [Locale](../../c-runtime-library/locale.md)  (Impostazioni locali)  
- [localeconv](../../c-runtime-library/reference/localeconv.md)   
- [setlocale, _wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)   
- [Funzioni da stringa a valore numerico](../../c-runtime-library/string-to-numeric-value-functions.md)   
- [strtod, _strtod_l, wcstod, _wcstod_l](../../c-runtime-library/reference/strtod-strtod-l-wcstod-wcstod-l.md)   
- [strtoul, _strtoul_l, wcstoul, _wcstoul_l](../../c-runtime-library/reference/strtoul-strtoul-l-wcstoul-wcstoul-l.md)   
- [atof, _atof_l, _wtof, _wtof_l](../../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)
+
+Convertire una stringa in un unsigned **__int64** valore.
+
+## <a name="syntax"></a>Sintassi
+
+```C
+unsigned __int64 _strtoui64(
+   const char *strSource,
+   char **endptr,
+   int base
+);
+unsigned __int64 _wcstoui64(
+   const wchar_t *strSource,
+   wchar_t **endptr,
+   int base
+);
+unsigned __int64 _strtoui64_l(
+   const char *strSource,
+   char **endptr,
+   int base,
+   _locale_t locale
+);
+unsigned __int64 _wcstoui64(
+   const wchar_t *strSource,
+   wchar_t **endptr,
+   int base,
+   _locale_t locale
+);
+```
+
+### <a name="parameters"></a>Parametri
+
+*strSource*<br/>
+Stringa con terminazione Null da convertire.
+
+*endptr*<br/>
+Puntatore al carattere che interrompe la lettura.
+
+*base*<br/>
+Base numerica da usare.
+
+*locale*<br/>
+Impostazioni locali da usare.
+
+## <a name="return-value"></a>Valore restituito
+
+**_strtoui64** restituisce il valore rappresentato nella stringa *strSource*, tranne quando la rappresentazione potrebbe provocare un overflow, in tal caso, restituisce **_UI64_MAX**. **_strtoui64** restituisce 0 se è non possibile eseguire alcuna conversione.
+
+**_UI64_MAX** è definita nei limiti. H.
+
+Se *strSource* viene **NULL** o la *base* è diverso da zero e uno minore di 2 o superiore a 36, **errno** è impostato su **EINVAL** .
+
+Per altre informazioni su questi e altri codici restituiti, vedere [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+
+## <a name="remarks"></a>Note
+
+Il **_strtoui64** funzione converte *strSource* a un **unsigned** **__int64**. **_wcstoui64** è una versione a caratteri wide **_strtoui64**; relativo *strSource* argomento è una stringa di caratteri "wide". In caso contrario, il comportamento di queste funzioni è identico.
+
+Entrambe le funzioni di smettere di leggere la stringa *strSource* con il primo carattere che non è riconosciuto come parte di un numero. Ciò potrebbe essere il carattere di terminazione null, o potrebbe essere il primo carattere numerico maggiore o uguale a *base*.
+
+### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
+
+|Routine TCHAR.H|_UNICODE e _MBCS non definiti|_MBCS definito|_UNICODE definito|
+|---------------------|------------------------------------|--------------------|-----------------------|
+|**_tcstoui64**|**_strtoui64**|**_strtoui64**|**_wstrtoui64**|
+|**_tcstoui64_l**|**_strtoui64_l**|**_strtoui64_l**|**_wstrtoui64_l**|
+
+Le impostazioni locali correnti **LC_NUMERIC** categoria determina il riconoscimento del carattere radice *strSource*; per ulteriori informazioni, vedere [setlocale](setlocale-wsetlocale.md). Le funzioni senza il suffisso l utilizzano le impostazioni locali correnti; **_strtoui64_l** e **_wcstoui64_l** sono identiche alle corrispondenti funzioni senza il **l** suffisso ad eccezione del fatto che usano le impostazioni locali passate. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
+
+Se *endptr* non **NULL**, un puntatore al carattere che ha interrotto l'analisi viene archiviato in una posizione a cui puntata *endptr*. Se è non possibile eseguire alcuna conversione sono state trovate le cifre non valide o è stata specificata una base non valida, il valore di *strSource* archiviato in una posizione a cui puntata *endptr*.
+
+**_strtoui64** prevede *strSource* in modo che punti a una stringa nel formato seguente:
+
+> [*whitespace*] [{**+** &#124; **-**}] [**0** [{ **x** &#124; **X** }]] [*cifre* &#124; *lettere*]  
+
+Un *whitespace* può essere costituito da caratteri di spazio e tabulazione, ovvero vengono ignorati. *cifre* sono uno o più cifre decimali. *lettere* sono uno o più lettere 'a' a 'z' ('A' a 'Z'). Il primo carattere che non corrisponde a questo formato interrompe la lettura. Se *base* è compreso tra 2 e 36, viene usato come base del numero. Se *base* è 0, i caratteri iniziali della stringa a cui puntata *strSource* vengono utilizzati per determinare la base. Se il primo carattere è 0 e il secondo carattere non è 'x' né 'X', la stringa viene interpretata come un Integer ottale. Se il primo carattere è '0' e il secondo carattere è 'x' o 'X', la stringa viene interpretata come integer esadecimale. Se il primo carattere è compreso tra '1' e '9', la stringa viene interpretata come integer decimale. Alle lettere da 'a' a 'z' (o da 'A' a 'Z') vengono assegnati i valori da 10 a 35. Sono consentite solo le lettere con valori assegnati minori di *base*. Il primo carattere non compreso nell'intervallo della base interrompe la lettura. Ad esempio, se *base* è 0 e il primo carattere analizzato è '0', si presuppone un integer ottale e un carattere '8' o '9' arresterà l'analisi.
+
+## <a name="requirements"></a>Requisiti
+
+|Routine|Intestazione obbligatoria|
+|-------------|---------------------|
+|**_strtoui64**|\<stdlib.h>|
+|**_wcstoui64**|\<stdlib.h> or \<wchar.h>|
+|**_strtoui64_l**|\<stdlib.h>|
+|**_wcstoui64_l**|\<stdlib.h> or \<wchar.h>|
+
+Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+
+## <a name="example"></a>Esempio
+
+```C
+// crt_strtoui64.c
+#include <stdio.h>
+
+unsigned __int64 atoui64(const char *szUnsignedInt) {
+   return _strtoui64(szUnsignedInt, NULL, 10);
+}
+
+int main() {
+   unsigned __int64 u = atoui64("18446744073709551615");
+   printf( "u = %I64u\n", u );
+}
+```
+
+```Output
+u = 18446744073709551615
+```
+
+## <a name="see-also"></a>Vedere anche
+
+[Conversione dei dati](../../c-runtime-library/data-conversion.md)<br/>
+[Impostazioni locali](../../c-runtime-library/locale.md)<br/>
+[localeconv](localeconv.md)<br/>
+[setlocale, _wsetlocale](setlocale-wsetlocale.md)<br/>
+[Funzioni da stringa a valore numerico](../../c-runtime-library/string-to-numeric-value-functions.md)<br/>
+[strtod, _strtod_l, wcstod, _wcstod_l](strtod-strtod-l-wcstod-wcstod-l.md)<br/>
+[strtoul, _strtoul_l, wcstoul, _wcstoul_l](strtoul-strtoul-l-wcstoul-wcstoul-l.md)<br/>
+[atof, _atof_l, _wtof, _wtof_l](atof-atof-l-wtof-wtof-l.md)<br/>

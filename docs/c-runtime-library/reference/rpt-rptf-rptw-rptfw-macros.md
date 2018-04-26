@@ -1,12 +1,12 @@
 ---
 title: Macro _RPT, _RPTF, _RPTW, _RPTFW | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apilocation:
 - msvcrt.dll
@@ -95,100 +95,102 @@ helpviewer_keywords:
 - RPTFW1 macro
 - RPTW1 macro
 ms.assetid: a5bf8b30-57f7-4971-8030-e773b7a1ae13
-caps.latest.revision: 
+caps.latest.revision: 14
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 51668f9b286a6b438d7f7b686114b2fcf70c25ed
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 1692789ff2dac85e6ca33aa6b05ced6a01f30cba
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="rpt-rptf-rptw-rptfw-macros"></a>_RPT, _RPTF, _RPTW, _RPTFW Macros
-Tiene traccia dello stato di un'applicazione mediante la generazione di un report di debug (solo versione di debug). Si noti che  *n*  specifica il numero di argomenti in `args` e può essere 0, 1, 2, 3, 4 o 5.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-  
-      _RPT  
-      n  
-      (  
-   reportType,  
-   format,  
-...[args]  
-);  
-_RPTFn(  
-   reportType,  
-   format,  
-   [args]  
-);  
-_RPTWn(  
-   reportType,  
-   format   
-   [args]  
-);  
-_RPTFWn(  
-   reportType,  
-   format   
-   [args]  
-);  
-```  
-  
-#### <a name="parameters"></a>Parametri  
- `reportType`  
- Tipo di report: `_CRT_WARN`, `_CRT_ERROR` o `_CRT_ASSERT`.  
-  
- `format`  
- Stringa di controllo del formato usata per creare il messaggio utente.  
-  
- `args`  
- Argomenti di sostituzione usati da `format`.  
-  
-## <a name="remarks"></a>Note  
- Eseguire tutte le macro di `reportType` e `format` parametri. Potrebbero anche accettare fino a quattro argomenti aggiuntivi, indicati dal numero aggiunto al nome della macro. Ad esempio, `_RPT0` e `_RPTF0` non accettano altri argomenti, `_RPT1` e `_RPTF1` accettano `arg1`, `_RPT2` e `_RPTF2` accettano `arg1` e `arg2` e così via.  
-  
- Le macro `_RPT` e `_RPTF` sono simili alla funzione [printf](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md), perché possono essere usate per tenere traccia dello stato di un'applicazione durante il processo di debug. Queste macro sono tuttavia più flessibili di `printf`, perché non devono essere racchiuse in istruzioni `#ifdef` per evitare che vengano chiamate in una compilazione della versione finale di un'applicazione. Questa flessibilità si ottiene usando la macro[_DEBUG](../../c-runtime-library/debug.md). Le macro `_RPT` e `_RPTF` sono disponibili solo quando è definito i flag `_DEBUG`. Quando `_DEBUG` non viene definito, le chiamate a queste macro vengono rimosse durante la pre-elaborazione.  
-  
- Le macro `_RPTW` e `_RPTFW` sono versioni a caratteri wide di queste macro. Sono simili a `wprintf` e accettano stringhe di caratteri wide come argomenti.  
-  
- Le macro `_RPT` chiamano la funzione [CrtDbgReport](../../c-runtime-library/reference/crtdbgreport-crtdbgreportw.md) per generare un report di debug con un messaggio utente. Le macro `_RPTW` chiamano la funzione `_CrtDbgReportW` per generare lo stesso report con caratteri wide. Le macro `_RPTF` e `_RPTFW` creano un report di debug con il file di origine e il numero di riga in cui è stata chiamata la macro di report, oltre al messaggio utente. Viene creato il messaggio utente sostituendo il `arg`[*n*] argomenti al `format` stringa, usando le stesse regole definite per il [printf](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md) (funzione).  
-  
- `_CrtDbgReport` o `_CrtDbgReportW` genera il report di debug e ne determina la destinazione o destinazioni, in base alle modalità del report e al file definito per `reportType`. Le funzioni [_CrtSetReportFile](../../c-runtime-library/reference/crtsetreportmode.md) e [_CrtSetReportMode](../../c-runtime-library/reference/crtsetreportfile.md) vengono usate per definire le destinazioni per ogni tipo di report.  
-  
- Se viene chiamata una macro `_RPT` senza chiamare `_CrtSetReportMode` o `_CrtSetReportFile`, i messaggi vengono visualizzati come indicato di seguito.  
-  
-|Tipo di report|Destinazione di output|  
-|-----------------|------------------------|  
-|`_CRT_WARN`|Il testo dell'avviso non viene visualizzato.|  
-|`_CRT_ERROR`|Finestra popup. Come se fosse stato specificato `_CrtSetReportMode(_CRT_ERROR, _CRTDBG_MODE_WNDW);`.|  
-|`_CRT_ASSERT`|Uguale a `_CRT_ERROR`.|  
-  
- Quando la destinazione è una finestra di messaggio di debug e l'utente sceglie il pulsante **Riprova**, `_CrtDbgReport` o `_CrtDbgReportW` restituisce 1, inducendo le macro ad avviare il debugger, a condizione che sia abilitato il debug JIT (Just-In-Time). Per altre informazioni sull'uso di queste macro come meccanismo di gestione degli errori di debug, vedere [Using Macros for Verification and Reporting](/visualstudio/debugger/macros-for-reporting) (Uso delle macro per verifiche e report).  
-  
- Sono disponibili altre due macro che generano un report di debug. La macro [_ASSERT](../../c-runtime-library/reference/assert-asserte-assert-expr-macros.md) genera un report, ma solo quando il relativo argomento espressione restituisce FALSE. [_ASSERTE](../../c-runtime-library/reference/assert-asserte-assert-expr-macros.md) è identica a `_ASSERT`, ma include l'espressione non riuscita nel report generato.  
-  
-## <a name="requirements"></a>Requisiti  
-  
-|Macro|Intestazione obbligatoria|  
-|-----------|---------------------|  
-|Macro `_RPT`|\<crtdbg.h>|  
-|Macro `_RPTF`|\<crtdbg.h>|  
-|Macro `_RPTW`|\<crtdbg.h>|  
-|Macro `_RPTFW`|\<crtdbg.h>|  
-  
- Per altre informazioni sulla compatibilità, vedere la sezione [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
-  
-## <a name="libraries"></a>Librerie  
- Solo versioni di debug delle [librerie di runtime C](../../c-runtime-library/crt-library-features.md).  
-  
- Anche se queste sono macro e diventano disponibili includendo Crtdbg.h, l'applicazione deve collegarsi a una delle librerie di debug perché queste macro chiamano altre funzioni di runtime.  
-  
-## <a name="example"></a>Esempio  
- Vedere l'esempio nell'argomento [_ASSERT](../../c-runtime-library/reference/assert-asserte-assert-expr-macros.md).  
-  
-## <a name="see-also"></a>Vedere anche  
- [Routine di debug](../../c-runtime-library/debug-routines.md)
+
+Tiene traccia dello stato di un'applicazione mediante la generazione di un report di debug (solo versione di debug). Si noti che *n* specifica il numero di argomenti *args* e può essere 0, 1, 2, 3, 4 o 5.
+
+## <a name="syntax"></a>Sintassi
+
+```C
+_RPT
+      n
+      (
+   reportType,
+   format,
+...[args]
+);
+_RPTFn(
+   reportType,
+   format,
+   [args]
+);
+_RPTWn(
+   reportType,
+   format
+   [args]
+);
+_RPTFWn(
+   reportType,
+   format
+   [args]
+);
+```
+
+### <a name="parameters"></a>Parametri
+
+*reportType* tipo di Report: **CRT_WARN**, **CRT_ERROR**, o **CRT_ASSERT**.
+
+*formato* stringa di controllo del formato utilizzato per creare il messaggio utente.
+
+*args* argomenti di sostituzione usati dal *formato*.
+
+## <a name="remarks"></a>Note
+
+Tutte queste macro richiedono la *reportType* e *formato* parametri. Potrebbero anche accettare fino a quattro argomenti aggiuntivi, indicati dal numero aggiunto al nome della macro. Ad esempio **_RPT0** e **_RPTF0** non accettano alcun argomento aggiuntivo **_RPT1** e **_RPTF1** richiedere *arg1*, **_RPT2** e **_RPTF2** accettano *arg1* e **arg2**e così via.
+
+Il **rpt** e **rptf** sono simili alle macro il [printf](printf-printf-l-wprintf-wprintf-l.md) funziona, poiché possono essere utilizzati per rilevare lo stato di avanzamento di un'applicazione durante il processo di debug. Tuttavia, queste macro sono più flessibili **printf** perché non dovranno essere racchiusi tra parentesi **#ifdef** le istruzioni per evitare che vengano definite in una build finale di un'applicazione. Questa flessibilità viene raggiunta tramite il [debug](../../c-runtime-library/debug.md) macro; il **rpt** e **rptf** macro sono disponibili solo quando il **debug** flag è definito. Quando si **debug** non è definito, le chiamate a queste macro vengono rimosse durante la pre-elaborazione.
+
+Il **rptw** e **rptfw** macro sono versioni a caratteri wide di queste macro. Sono ad esempio **wprintf** e intraprendere le stringhe di caratteri wide come argomenti.
+
+Il **rpt** chiamata di macro il [CrtDbgReport](crtdbgreport-crtdbgreportw.md) funzione per generare un report di debug con un messaggio utente. Il **rptw** chiamata di macro il **CrtDbgReportW** funzione per generare il report stesso con caratteri "wide". Il **rptf** e **rptfw** macro di creano un report di debug con il numero di riga e file di origine in cui è stata chiamata la macro di report, inoltre per il messaggio utente. Il messaggio utente viene creato tramite la sostituzione il **arg**[*n*] argomenti al *formato* stringa, usando le stesse regole definite per il [printf](printf-printf-l-wprintf-wprintf-l.md)(funzione).
+
+**CrtDbgReport** oppure **CrtDbgReportW** genera il rapporto di debug e determina il destinazioni in base alle modalità rapporto correnti e definiti per il file *reportType*. Le funzioni [_CrtSetReportMode](crtsetreportmode.md) e [_CrtSetReportFile](crtsetreportfile.md) vengono usate per definire le destinazioni per ogni tipo di report.
+
+Se un **rpt** macro viene chiamata e né **CrtSetReportMode** né **crtsetreportfile** è stato chiamato, i messaggi vengono visualizzati come indicato di seguito.
+
+|Tipo di report|Destinazione di output|
+|-----------------|------------------------|
+|**CRT_WARN**|Il testo dell'avviso non viene visualizzato.|
+|**CRT_ERROR**|Finestra popup. Come se fosse stato specificato `_CrtSetReportMode(_CRT_ERROR, _CRTDBG_MODE_WNDW);`.|
+|**CRT_ASSERT**|Uguale a **CRT_ERROR**.|
+
+Quando la destinazione è una finestra di messaggio di debug e l'utente sceglie il **ripetere** pulsante **CrtDbgReport** oppure **CrtDbgReportW** restituisce 1, causando queste macro avviare il debugger, purché debug just-in-time (JIT) è abilitato. Per altre informazioni sull'uso di queste macro come meccanismo di gestione degli errori di debug, vedere [Using Macros for Verification and Reporting](/visualstudio/debugger/macros-for-reporting) (Uso delle macro per verifiche e report).
+
+Sono disponibili altre due macro che generano un report di debug. La macro [_ASSERT](assert-asserte-assert-expr-macros.md) genera un report, ma solo quando il relativo argomento espressione restituisce FALSE. [ASSERTE](assert-asserte-assert-expr-macros.md) è esattamente like **macro Assert**, ma include l'espressione non riuscita nel report generato.
+
+## <a name="requirements"></a>Requisiti
+
+|Macro|Intestazione obbligatoria|
+|-----------|---------------------|
+|**Rpt** macro|\<crtdbg.h>|
+|**Rptf** macro|\<crtdbg.h>|
+|**Rptw** macro|\<crtdbg.h>|
+|**Rptfw** macro|\<crtdbg.h>|
+
+Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+
+## <a name="libraries"></a>Librerie
+
+Solo versioni di debug delle [librerie di runtime C](../../c-runtime-library/crt-library-features.md).
+
+Anche se queste sono macro e diventano disponibili includendo Crtdbg.h, l'applicazione deve collegarsi a una delle librerie di debug perché queste macro chiamano altre funzioni di runtime.
+
+## <a name="example"></a>Esempio
+
+Vedere l'esempio nell'argomento [_ASSERT](assert-asserte-assert-expr-macros.md).
+
+## <a name="see-also"></a>Vedere anche
+
+[Routine di debug](../../c-runtime-library/debug-routines.md)<br/>

@@ -1,12 +1,12 @@
 ---
 title: _free_locale | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _free_locale
@@ -35,46 +35,49 @@ helpviewer_keywords:
 - locales, freeing
 - _free_locale function
 ms.assetid: 1f08d348-ab32-4028-a145-6cbd51b49af9
-caps.latest.revision: 
+caps.latest.revision: 12
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1baa1458d3e799d2370092b7d8f96ee9fe4a359e
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 23e1333d7649b6d1ce24ee1bb7840e0389edb908
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="freelocale"></a>_free_locale
-Libera un oggetto delle impostazioni locali.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-void _free_locale(  
-   _locale_t locale  
-);  
-```  
-  
-#### <a name="parameters"></a>Parametri  
- `locale`  
- L'oggetto delle impostazioni locali da liberare.  
-  
-## <a name="remarks"></a>Note  
- La funzione `_free_locale` viene utilizzata per liberare l'oggetto delle impostazioni locali ottenuto da una chiamata a `_get_current_locale` o a `_create_locale`.  
-  
- Il nome precedente di questa funzione, `__free_locale` (con due caratteri di sottolineatura iniziali), è stato deprecato.  
-  
-## <a name="requirements"></a>Requisiti  
-  
-|`Routine`|Intestazione obbligatoria|  
-|---------------|---------------------|  
-|`_free_locale`|\<locale.h>|  
-  
- Per altre informazioni sulla compatibilità, vedere la sezione [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
-  
-## <a name="see-also"></a>Vedere anche  
- [_get_current_locale](../../c-runtime-library/reference/get-current-locale.md)   
- [_create_locale, _wcreate_locale](../../c-runtime-library/reference/create-locale-wcreate-locale.md)
+
+Libera un oggetto delle impostazioni locali.
+
+## <a name="syntax"></a>Sintassi
+
+```C
+void _free_locale(
+   _locale_t locale
+);
+```
+
+### <a name="parameters"></a>Parametri
+
+*impostazioni locali* oggetto impostazioni locali da liberare.
+
+## <a name="remarks"></a>Note
+
+Il **free_locale** funzione viene utilizzata per liberare l'oggetto delle impostazioni locali ottenuto da una chiamata a **get_current_locale** oppure **create_locale**.
+
+Il nome precedente di questa funzione, **free_locale** (con due caratteri di sottolineatura iniziali) è stato deprecato.
+
+## <a name="requirements"></a>Requisiti
+
+|**Routine**|Intestazione obbligatoria|
+|---------------|---------------------|
+|**_free_locale**|\<locale.h>|
+
+Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+
+## <a name="see-also"></a>Vedere anche
+
+[_get_current_locale](get-current-locale.md)<br/>
+[_create_locale, _wcreate_locale](create-locale-wcreate-locale.md)<br/>

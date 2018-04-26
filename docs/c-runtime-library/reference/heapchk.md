@@ -1,12 +1,12 @@
 ---
 title: _heapchk | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _heapchk
@@ -35,104 +35,101 @@ helpviewer_keywords:
 - heaps, checking consistency
 - _heapchk function
 ms.assetid: 859619a5-1e35-4f02-9e09-11d9fa266ec0
-caps.latest.revision: 
+caps.latest.revision: 13
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1656c488b722d2ed791da16db8a014e53568e82d
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: bc4be6eca6f2c9a2849f0a9e6ebda67a021eb226
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="heapchk"></a>_heapchk
-Esegue verifiche della coerenza sull'heap.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-int _heapchk( void );  
-```  
-  
-## <a name="return-value"></a>Valore restituito  
- `_heapchk` restituisce una delle costanti manifeste di tipo Integer seguenti definite in Malloc.h.  
-  
- `_HEAPBADBEGIN`  
- Le informazioni di intestazione iniziali non sono valide o non è possibile trovarle.  
-  
- `_HEAPBADNODE`  
- È stato trovato un nodo non valido o l'heap è danneggiato.  
-  
- `_HEAPBADPTR`  
- Il puntatore nell'heap non è valido.  
-  
- `_HEAPEMPTY`  
- L'heap non è stato inizializzato.  
-  
- `_HEAPOK`  
- L'heap risulta coerente.  
-  
- Inoltre, se si verifica un errore, `_heapchk` imposta `errno` su `ENOSYS`.  
-  
-## <a name="remarks"></a>Note  
- La funzione `_heapchk` è utile per eseguire il debug di problemi relativi all'heap tramite il controllo della coerenza minima dell'heap. Se il sistema operativo non supporta `_heapchk`(ad esempio, Windows 98), la funzione restituisce `_HEAPOK` e imposta `errno` su `ENOSYS`.  
-  
-## <a name="requirements"></a>Requisiti  
-  
-|Routine|Intestazione obbligatoria|Intestazione facoltativa|  
-|-------------|---------------------|---------------------|  
-|`_heapchk`|\<malloc.h>|\<errno.h>|  
-  
- Per altre informazioni sulla compatibilità, vedere la sezione [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
-  
-## <a name="example"></a>Esempio  
-  
-```  
-// crt_heapchk.c  
-// This program checks the heap for  
-// consistency and prints an appropriate message.  
-  
-#include <malloc.h>  
-#include <stdio.h>  
-  
-int main( void )  
-{  
-   int  heapstatus;  
-   char *buffer;  
-  
-   // Allocate and deallocate some memory  
-   if( (buffer = (char *)malloc( 100 )) != NULL )  
-      free( buffer );  
-  
-   // Check heap status  
-   heapstatus = _heapchk();  
-   switch( heapstatus )  
-   {  
-   case _HEAPOK:  
-      printf(" OK - heap is fine\n" );  
-      break;  
-   case _HEAPEMPTY:  
-      printf(" OK - heap is empty\n" );  
-      break;  
-   case _HEAPBADBEGIN:  
-      printf( "ERROR - bad start of heap\n" );  
-      break;  
-   case _HEAPBADNODE:  
-      printf( "ERROR - bad node in heap\n" );  
-      break;  
-   }  
-}  
-```  
-  
-```Output  
-OK - heap is fine  
-```  
-  
-## <a name="see-also"></a>Vedere anche  
- [Allocazione di memoria](../../c-runtime-library/memory-allocation.md)   
- [_heapadd](../../c-runtime-library/heapadd.md)   
- [_heapmin](../../c-runtime-library/reference/heapmin.md)   
- [_heapset](../../c-runtime-library/heapset.md)   
- [_heapwalk](../../c-runtime-library/reference/heapwalk.md)
+
+Esegue verifiche della coerenza sull'heap.
+
+## <a name="syntax"></a>Sintassi
+
+```C
+int _heapchk( void );
+```
+
+## <a name="return-value"></a>Valore restituito
+
+**heapchk** restituisce una delle seguenti costanti manifesto integer definite in malloc. h.
+
+|Valore restituito|Condizione|
+|-|-|
+**HEAPBADBEGIN**|Le informazioni di intestazione iniziali non sono valide o non è possibile trovarle.
+**HEAPBADNODE**|È stato trovato un nodo non valido o l'heap è danneggiato.
+**HEAPBADPTR**|Il puntatore nell'heap non è valido.
+**HEAPEMPTY**|L'heap non è stato inizializzato.
+**HEAPOK**|L'heap risulta coerente.
+
+Inoltre, se si verifica un errore, **heapchk** imposta **errno** al **ENOSYS**.
+
+## <a name="remarks"></a>Note
+
+Il **heapchk** funzione consente di eseguire il debug di problemi di heap controllando la coerenza minima dell'heap. Se il sistema operativo non supporta **heapchk**(ad esempio, Windows 98), la funzione restituisce **heapok** e imposta **errno** a **ENOSYS**.
+
+## <a name="requirements"></a>Requisiti
+
+|Routine|Intestazione obbligatoria|Intestazione facoltativa|
+|-------------|---------------------|---------------------|
+|**_heapchk**|\<malloc.h>|\<errno.h>|
+
+Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+
+## <a name="example"></a>Esempio
+
+```C
+// crt_heapchk.c
+// This program checks the heap for
+// consistency and prints an appropriate message.
+
+#include <malloc.h>
+#include <stdio.h>
+
+int main( void )
+{
+   int  heapstatus;
+   char *buffer;
+
+   // Allocate and deallocate some memory
+   if( (buffer = (char *)malloc( 100 )) != NULL )
+      free( buffer );
+
+   // Check heap status
+   heapstatus = _heapchk();
+   switch( heapstatus )
+   {
+   case _HEAPOK:
+      printf(" OK - heap is fine\n" );
+      break;
+   case _HEAPEMPTY:
+      printf(" OK - heap is empty\n" );
+      break;
+   case _HEAPBADBEGIN:
+      printf( "ERROR - bad start of heap\n" );
+      break;
+   case _HEAPBADNODE:
+      printf( "ERROR - bad node in heap\n" );
+      break;
+   }
+}
+```
+
+```Output
+OK - heap is fine
+```
+
+## <a name="see-also"></a>Vedere anche
+
+[Allocazione di memoria](../../c-runtime-library/memory-allocation.md)<br/>
+[_heapadd](../../c-runtime-library/heapadd.md)<br/>
+[_heapmin](heapmin.md)<br/>
+[_heapset](../../c-runtime-library/heapset.md)<br/>
+[_heapwalk](heapwalk.md)<br/>

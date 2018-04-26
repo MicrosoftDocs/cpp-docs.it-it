@@ -1,12 +1,12 @@
 ---
 title: chdir | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - chdir
@@ -29,21 +29,21 @@ dev_langs:
 helpviewer_keywords:
 - chdir function
 ms.assetid: a65275a1-41e4-46be-83a5-167dfacb62a0
-caps.latest.revision: 
+caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 728562f3c84ff4c25eb60eec0704bb08c8c768b5
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: c9868c00e2095587b0571bd2809e4d63a04806ca
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="chdir"></a>chdir
 
-Questa funzione POSIX è deprecata. In alternativa, usare [_chdir](../../c-runtime-library/reference/chdir-wchdir.md) conforme a ISO C++.
+Questa funzione POSIX è deprecata. In alternativa, usare [_chdir](chdir-wchdir.md) conforme a ISO C++.
 
 > [!IMPORTANT]
-> Non è possibile usare questa API nelle applicazioni eseguite in Windows Runtime. Per ulteriori informazioni, vedere [funzioni CRT non supportate nelle App Universal Windows Platform](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Non è possibile usare questa API nelle applicazioni eseguite in Windows Runtime. Per altre informazioni, vedere [Funzioni CRT non supportate nelle app della piattaforma UWP (Universal Windows Platform)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).

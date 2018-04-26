@@ -1,12 +1,12 @@
 ---
 title: vscanf_s, vwscanf_s | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - vscanf_s
@@ -30,145 +30,150 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 23a1c383-5b01-4887-93ce-534a1e38ed93
-caps.latest.revision: 
+caps.latest.revision: 6
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2cc430ec34cd294de0cbabc8553ddda4fedce9e2
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 8357e9f2ab340ed7d620b0a281f7a302dd9aa1dc
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="vscanfs-vwscanfs"></a>vscanf_s, vwscanf_s
-Legge i dati formattati dal flusso di input standard. Queste versioni di [vscanf, vwscanf](../../c-runtime-library/reference/vscanf-vwscanf.md) includono miglioramenti per sicurezza, come descritto in [Funzionalità di sicurezza in CRT](../../c-runtime-library/security-features-in-the-crt.md).  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-int vscanf_s(  
-   const char *format,  
-   va_list arglist  
-);   
-int vwscanf_s(  
-   const wchar_t *format,  
-   va_list arglist  
-);  
-```  
-  
-#### <a name="parameters"></a>Parametri  
- `format`  
- Stringa di formato controllo.  
-  
- `arglist`  
- Elenco di argomenti variabili.  
-  
-## <a name="return-value"></a>Valore restituito  
- Restituisce il numero di campi che vengono convertiti ed assegnati correttamente; il valore restituito non include i campi che sono stati letti ma non assegnati. Un valore restituito pari a 0 indica che nessun campo è stato assegnato. Il valore restituito è`EOF` per un errore o se viene rilevato il carattere di fine del file o il carattere di fine della stringa durante il primo tentativo di leggere un carattere. Se `format` è un puntatore `NULL`, viene richiamato il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, `vscanf_s` e `vwscanf_s` restituiscono `EOF` e impostano `errno` su `EINVAL`.  
-  
- Per informazioni su questi e altri codici di errore, vedere [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
-  
-## <a name="remarks"></a>Note  
- La funzione `vscanf_s` legge i dati dal flusso di input standard `stdin` e scrive i dati nelle posizioni specificate dall'elenco di argomenti `arglist`. Ogni argomento nell'elenco deve essere un puntatore a una variabile di un tipo corrispondente a un identificatore di tipo in `format`. Se la copia avviene tra stringhe che si sovrappongono, il comportamento non è definito.  
-  
- `vwscanf_s` è una versione a caratteri wide di `vscanf_s`; l'argomento `format` in `vwscanf_s` è una stringa di caratteri wide. `vwscanf_s` e `vscanf_s` si comportano in modo analogo, se il flusso viene aperto in modalità ANSI. `vscanf_s` non supporta l'input da un flusso UNICODE.  
-  
- A differenza di `vscanf` e `vwscanf`, per `vscanf_s` e `vwscanf_s` è necessario specificare la dimensione del buffer di tutti i parametri di input `c`, `C`, `s`, `S` o set di controllo stringa inclusi in `[]`. La dimensione del buffer in caratteri viene passata come parametro aggiuntivo segue immediatamente dopo il puntatore del buffer o della variabile. Le dimensioni del buffer in caratteri per una stringa `wchar_t` non sono uguali alle dimensioni in byte.  
-  
- La dimensione del buffer include il carattere di terminazione null. È possibile usare un campo di specifica della larghezza per assicurarsi che il token che viene letto possa essere inserito nel buffer. Se non viene utilizzato alcun campo di specifica di larghezza e il token letto è troppo grande per entrare nel buffer, non vengono scritti dati nel buffer.  
-  
+
+Legge i dati formattati dal flusso di input standard. Queste versioni di [vscanf, vwscanf](vscanf-vwscanf.md) includono miglioramenti per sicurezza, come descritto in [Funzionalità di sicurezza in CRT](../../c-runtime-library/security-features-in-the-crt.md).
+
+## <a name="syntax"></a>Sintassi
+
+```C
+int vscanf_s(
+   const char *format,
+   va_list arglist
+);
+int vwscanf_s(
+   const wchar_t *format,
+   va_list arglist
+);
+```
+
+### <a name="parameters"></a>Parametri
+
+*format*<br/>
+Stringa di formato controllo.
+
+*arglist*<br/>
+Elenco di argomenti variabili.
+
+## <a name="return-value"></a>Valore restituito
+
+Restituisce il numero di campi che vengono convertiti ed assegnati correttamente; il valore restituito non include i campi che sono stati letti ma non assegnati. Un valore restituito pari a 0 indica che nessun campo è stato assegnato. Il valore restituito sarà **EOF** per un errore, o se il carattere di fine del file o il carattere di fine della stringa viene rilevato il primo tentativo di leggere un carattere. Se *formato* è un **NULL** puntatore, il gestore di parametri non validi viene richiamato, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, **vscanf_s** e **vwscanf_s** restituiscono **EOF** e impostare **errno** a **EINVAL**.
+
+Per informazioni su questi e altri codici di errore, vedere [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+
+## <a name="remarks"></a>Note
+
+Il **vscanf_s** funzione legge i dati dal flusso di input standard **stdin** e scrive i dati nelle posizioni fornite per il *arglist* elenco di argomenti. Ogni argomento nell'elenco deve essere un puntatore a una variabile di un tipo che corrisponde a un identificatore di tipo in *formato*. Se la copia avviene tra stringhe che si sovrappongono, il comportamento non è definito.
+
+**vwscanf_s** è una versione a caratteri wide **vscanf_s**; il *formato* argomento **vwscanf_s** è una stringa di caratteri "wide". **vwscanf_s** e **vscanf_s** comportarsi in modo analogo, se il flusso viene aperto in modalità ANSI. **vscanf_s** non supporta input da un flusso UNICODE.
+
+A differenza **vscanf** e **vwscanf**, **vscanf_s** e **vwscanf_s** richiedono le dimensioni del buffer per essere specificati per tutti i parametri di tipo di input **c**, **C**, **s**, **S**, o set di controllo che sono racchiusi tra parentesi stringa **[]**. La dimensione del buffer in caratteri viene passata come parametro aggiuntivo segue immediatamente dopo il puntatore del buffer o della variabile. Le dimensioni del buffer in caratteri per un **wchar_t** stringa non è la stessa dimensione in byte.
+
+La dimensione del buffer include il carattere di terminazione null. È possibile usare un campo di specifica della larghezza per assicurarsi che il token che viene letto possa essere inserito nel buffer. Se non viene utilizzato alcun campo di specifica di larghezza e il token letto è troppo grande per entrare nel buffer, non vengono scritti dati nel buffer.
+
 > [!NOTE]
->  Il parametro di dimensione è di tipo `unsigned` non `size_t`.  
-  
- Per altre informazioni, vedere [Specifica della larghezza per scanf](../../c-runtime-library/scanf-width-specification.md).  
-  
-### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico  
-  
-|Routine TCHAR.H|_UNICODE e _MBCS non definiti|_MBCS definito|_UNICODE definito|  
-|---------------------|------------------------------------|--------------------|-----------------------|  
-|`_vtscanf_s`|`vscanf_s`|`vscanf_s`|`vwscanf_s`|  
-  
- Per altre informazioni, vedere [Campi di specifica di formato: funzioni scanf e wscanf](../../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md).  
-  
-## <a name="requirements"></a>Requisiti  
-  
-|Routine|Intestazione obbligatoria|  
-|-------------|---------------------|  
-|`vscanf_s`|\<stdio.h>|  
-|`wscanf_s`|\<stdio.h> o \<wchar.h>|  
-  
-La console non è supportata nelle app di piattaforma UWP (Universal Windows). L'handle del flusso standard associati con la console, `stdin`, `stdout`, e `stderr`, devono essere reindirizzati prima di poter usare le funzioni di runtime C nelle App UWP. Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
-  
-## <a name="example"></a>Esempio  
-  
-```  
-// crt_vscanf_s.c  
-// compile with: /W3  
-// This program uses the vscanf_s and vwscanf_s functions  
-// to read formatted input.  
-  
-#include <stdio.h>  
-#include <stdarg.h>  
-#include <stdlib.h>  
-  
-int call_vscanf_s(char *format, ...)  
-{  
-    int result;  
-    va_list arglist;  
-    va_start(arglist, format);  
-    result = vscanf_s(format, arglist);  
-    va_end(arglist);  
-    return result;  
-}  
-  
-int call_vwscanf_s(wchar_t *format, ...)  
-{  
-    int result;  
-    va_list arglist;  
-    va_start(arglist, format);  
-    result = vwscanf_s(format, arglist);  
-    va_end(arglist);  
-    return result;  
-}  
-  
-int main( void )  
-{  
-    int   i, result;  
-    float fp;  
-    char  c, s[81];  
-    wchar_t wc, ws[81];  
-    result = call_vscanf_s("%d %f %c %C %s %S", &i, &fp, &c, 1,  
-                           &wc, 1, s, _countof(s), ws, _countof(ws) );  
-    printf( "The number of fields input is %d\n", result );  
-    printf( "The contents are: %d %f %c %C %s %S\n", i, fp, c, wc, s, ws);  
-    result = call_vwscanf_s(L"%d %f %hc %lc %S %ls", &i, &fp, &c, 2,  
-                            &wc, 1, s, _countof(s), ws, _countof(ws) );  
-    wprintf( L"The number of fields input is %d\n", result );  
-    wprintf( L"The contents are: %d %f %C %c %hs %s\n", i, fp, c, wc, s, ws);  
-}  
-  
-```  
-  
- Quando questo programma riceve l'input nell'esempio, produce l'output seguente:  
-  
- `71 98.6 h z Byte characters`  
-  
- `36 92.3 y n Wide characters`  
-  
-```Output  
-The number of fields input is 6  
-The contents are: 71 98.599998 h z Byte characters  
-The number of fields input is 6  
-The contents are: 36 92.300003 y n Wide characters  
-```  
-  
-## <a name="see-also"></a>Vedere anche  
- [Supporto delle funzioni a virgola mobile](../../c-runtime-library/floating-point-support.md)   
- [I/O di flusso](../../c-runtime-library/stream-i-o.md)   
- [Locale](../../c-runtime-library/locale.md)  (Impostazioni locali)  
- [printf, _printf_l, wprintf, _wprintf_l](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)   
- [scanf, _scanf_l, wscanf, _wscanf_l](../../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md)   
- [scanf_s, _scanf_s_l, wscanf_s, _wscanf_s_l](../../c-runtime-library/reference/scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md)   
- [vscanf, vwscanf](../../c-runtime-library/reference/vscanf-vwscanf.md)
+> Il *dimensioni* parametro è di tipo **unsigned**, non **size_t**.
+
+Per altre informazioni, vedere [Specifica della larghezza per scanf](../../c-runtime-library/scanf-width-specification.md).
+
+### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
+
+|Routine TCHAR.H|_UNICODE e _MBCS non definiti|_MBCS definito|_UNICODE definito|
+|---------------------|------------------------------------|--------------------|-----------------------|
+|**_vtscanf_s**|**vscanf_s**|**vscanf_s**|**vwscanf_s**|
+
+Per altre informazioni, vedere [Campi di specifica di formato: funzioni scanf e wscanf](../../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md).
+
+## <a name="requirements"></a>Requisiti
+
+|Routine|Intestazione obbligatoria|
+|-------------|---------------------|
+|**vscanf_s**|\<stdio.h>|
+|**wscanf_s**|\<stdio.h> o \<wchar.h>|
+
+La console non è supportata nelle app di piattaforma UWP (Universal Windows). Gli handle di flusso standard associati con la console **stdin**, **stdout**, e **stderr**, devono essere reindirizzati prima di poter usare le funzioni di runtime C nelle App UWP . Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+
+## <a name="example"></a>Esempio
+
+```C
+// crt_vscanf_s.c
+// compile with: /W3
+// This program uses the vscanf_s and vwscanf_s functions
+// to read formatted input.
+
+#include <stdio.h>
+#include <stdarg.h>
+#include <stdlib.h>
+
+int call_vscanf_s(char *format, ...)
+{
+    int result;
+    va_list arglist;
+    va_start(arglist, format);
+    result = vscanf_s(format, arglist);
+    va_end(arglist);
+    return result;
+}
+
+int call_vwscanf_s(wchar_t *format, ...)
+{
+    int result;
+    va_list arglist;
+    va_start(arglist, format);
+    result = vwscanf_s(format, arglist);
+    va_end(arglist);
+    return result;
+}
+
+int main( void )
+{
+    int   i, result;
+    float fp;
+    char  c, s[81];
+    wchar_t wc, ws[81];
+    result = call_vscanf_s("%d %f %c %C %s %S", &i, &fp, &c, 1,
+                           &wc, 1, s, _countof(s), ws, _countof(ws) );
+    printf( "The number of fields input is %d\n", result );
+    printf( "The contents are: %d %f %c %C %s %S\n", i, fp, c, wc, s, ws);
+    result = call_vwscanf_s(L"%d %f %hc %lc %S %ls", &i, &fp, &c, 2,
+                            &wc, 1, s, _countof(s), ws, _countof(ws) );
+    wprintf( L"The number of fields input is %d\n", result );
+    wprintf( L"The contents are: %d %f %C %c %hs %s\n", i, fp, c, wc, s, ws);
+}
+```
+
+Quando questo programma riceve l'input nell'esempio, produce l'output seguente:
+
+```Input
+71 98.6 h z Byte characters
+36 92.3 y n Wide characters
+```
+
+```Output
+The number of fields input is 6
+The contents are: 71 98.599998 h z Byte characters
+The number of fields input is 6
+The contents are: 36 92.300003 y n Wide characters
+```
+
+## <a name="see-also"></a>Vedere anche
+
+[Supporto delle funzioni a virgola mobile](../../c-runtime-library/floating-point-support.md)<br/>
+[I/O di flusso](../../c-runtime-library/stream-i-o.md)<br/>
+[Impostazioni locali](../../c-runtime-library/locale.md)<br/>
+[printf, _printf_l, wprintf, _wprintf_l](printf-printf-l-wprintf-wprintf-l.md)<br/>
+[scanf, _scanf_l, wscanf, _wscanf_l](scanf-scanf-l-wscanf-wscanf-l.md)<br/>
+[scanf_s, _scanf_s_l, wscanf_s, _wscanf_s_l](scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md)<br/>
+[vscanf, vwscanf](vscanf-vwscanf.md)<br/>

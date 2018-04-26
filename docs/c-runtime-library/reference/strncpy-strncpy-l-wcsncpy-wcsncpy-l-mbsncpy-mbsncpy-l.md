@@ -1,12 +1,12 @@
 ---
 title: strncpy, _strncpy_l, wcsncpy, _wcsncpy_l, _mbsncpy, _mbsncpy_l | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - strncpy
@@ -70,232 +70,238 @@ helpviewer_keywords:
 - tcsncpy function
 - _strncpy_l function
 ms.assetid: ac4345a1-a129-4f2f-bb8a-373ec58ab8b0
-caps.latest.revision: 
+caps.latest.revision: 42
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f881508cfa72686a791dae61af44c615e72cbfdc
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 219fe2a9c163da1a7653568675b9c776ecad9d66
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="strncpy-strncpyl-wcsncpy-wcsncpyl-mbsncpy-mbsncpyl"></a>strncpy, _strncpy_l, wcsncpy, _wcsncpy_l, _mbsncpy, _mbsncpy_l
-Copiare i caratteri di una stringa in un'altra. Sono disponibili versioni più sicure di queste funzioni; vedere [strncpy_s, _strncpy_s_l, wcsncpy_s, _wcsncpy_s_l, _mbsncpy_s, _mbsncpy_s_l](../../c-runtime-library/reference/strncpy-s-strncpy-s-l-wcsncpy-s-wcsncpy-s-l-mbsncpy-s-mbsncpy-s-l.md).  
-  
+
+Copiare i caratteri di una stringa in un'altra. Sono disponibili versioni più sicure di queste funzioni; vedere [strncpy_s, _strncpy_s_l, wcsncpy_s, _wcsncpy_s_l, _mbsncpy_s, _mbsncpy_s_l](strncpy-s-strncpy-s-l-wcsncpy-s-wcsncpy-s-l-mbsncpy-s-mbsncpy-s-l.md).
+
 > [!IMPORTANT]
->  `_mbsncpy` e `_mbsncpy_l` non possono essere usati nelle applicazioni eseguite in Windows Runtime. Per ulteriori informazioni, vedere [funzioni CRT non supportate nelle App Universal Windows Platform](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-char *strncpy(  
-   char *strDest,  
-   const char *strSource,  
-   size_t count   
-);  
-char *_strncpy_l(  
-   char *strDest,  
-   const char *strSource,  
-   size_t count,  
-   locale_t locale   
-);  
-wchar_t *wcsncpy(  
-   wchar_t *strDest,  
-   const wchar_t *strSource,  
-   size_t count   
-);  
-wchar_t *_wcsncpy_l(  
-   wchar_t *strDest,  
-   const wchar_t *strSource,  
-   size_t count,  
-   locale_t locale   
-);  
-unsigned char *_mbsncpy(  
-   unsigned char *strDest,  
-   const unsigned char *strSource,  
-   size_t count   
-);  
-unsigned char *_mbsncpy_l(  
-   unsigned char *strDest,  
-   const unsigned char *strSource,  
-   size_t count,  
-   _locale_t locale  
-);  
-template <size_t size>  
-char *strncpy(  
-   char (&strDest)[size],  
-   const char *strSource,  
-   size_t count   
-); // C++ only  
-template <size_t size>  
-char *_strncpy_l(  
-   char (&strDest)[size],  
-   const char *strSource,  
-   size_t count,  
-   locale_t locale   
-); // C++ only  
-template <size_t size>  
-wchar_t *wcsncpy(  
-   wchar_t (&strDest)[size],  
-   const wchar_t *strSource,  
-   size_t count   
-); // C++ only  
-template <size_t size>  
-wchar_t *_wcsncpy_l(  
-   wchar_t (&strDest)[size],  
-   const wchar_t *strSource,  
-   size_t count,  
-   locale_t locale   
-); // C++ only  
-template <size_t size>  
-unsigned char *_mbsncpy(  
-   unsigned char (&strDest)[size],  
-   const unsigned char *strSource,  
-   size_t count   
-); // C++ only  
-template <size_t size>  
-unsigned char *_mbsncpy_l(  
-   unsigned char (&strDest)[size],  
-   const unsigned char *strSource,  
-   size_t count,  
-   _locale_t locale  
-); // C++ only  
-```  
-  
-#### <a name="parameters"></a>Parametri  
- `strDest`  
- Stringa di destinazione.  
-  
- `strSource`  
- Stringa di origine.  
-  
- `count`  
- Il numero dei caratteri da copiare.  
-  
- `locale`  
- Impostazioni locali da usare.  
-  
-## <a name="return-value"></a>Valore restituito  
- Restituisce `strDest`. Nessun valore restituito è riservato per indicare un errore.  
-  
-## <a name="remarks"></a>Note  
- La funzione `strncpy` copia i caratteri iniziali `count` di `strSource` in `strDest` e restituisce `strDest`. Se `count` è minore o uguale alla lunghezza di `strSource`, un carattere null non viene aggiunto automaticamente alla stringa copiata. Se `count` è maggiore della lunghezza di `strSource`, alla stringa di destinazione vengono aggiunti caratteri null fino alla lunghezza `count`. Se le stringhe di origine e di destinazione si sovrappongono, il comportamento di `strncpy` non è definito.  
-  
+> **mbsncpy** e **mbsncpy_l** non può essere usata nelle applicazioni eseguite in Windows Runtime. Per altre informazioni, vedere [Funzioni CRT non supportate nelle app della piattaforma UWP (Universal Windows Platform)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+
+## <a name="syntax"></a>Sintassi
+
+```C
+char *strncpy(
+   char *strDest,
+   const char *strSource,
+   size_t count
+);
+char *_strncpy_l(
+   char *strDest,
+   const char *strSource,
+   size_t count,
+   locale_t locale
+);
+wchar_t *wcsncpy(
+   wchar_t *strDest,
+   const wchar_t *strSource,
+   size_t count
+);
+wchar_t *_wcsncpy_l(
+   wchar_t *strDest,
+   const wchar_t *strSource,
+   size_t count,
+   locale_t locale
+);
+unsigned char *_mbsncpy(
+   unsigned char *strDest,
+   const unsigned char *strSource,
+   size_t count
+);
+unsigned char *_mbsncpy_l(
+   unsigned char *strDest,
+   const unsigned char *strSource,
+   size_t count,
+   _locale_t locale
+);
+template <size_t size>
+char *strncpy(
+   char (&strDest)[size],
+   const char *strSource,
+   size_t count
+); // C++ only
+template <size_t size>
+char *_strncpy_l(
+   char (&strDest)[size],
+   const char *strSource,
+   size_t count,
+   locale_t locale
+); // C++ only
+template <size_t size>
+wchar_t *wcsncpy(
+   wchar_t (&strDest)[size],
+   const wchar_t *strSource,
+   size_t count
+); // C++ only
+template <size_t size>
+wchar_t *_wcsncpy_l(
+   wchar_t (&strDest)[size],
+   const wchar_t *strSource,
+   size_t count,
+   locale_t locale
+); // C++ only
+template <size_t size>
+unsigned char *_mbsncpy(
+   unsigned char (&strDest)[size],
+   const unsigned char *strSource,
+   size_t count
+); // C++ only
+template <size_t size>
+unsigned char *_mbsncpy_l(
+   unsigned char (&strDest)[size],
+   const unsigned char *strSource,
+   size_t count,
+   _locale_t locale
+); // C++ only
+```
+
+### <a name="parameters"></a>Parametri
+
+*strDest*<br/>
+Stringa di destinazione.
+
+*strSource*<br/>
+Stringa di origine.
+
+*count*<br/>
+Il numero dei caratteri da copiare.
+
+*locale*<br/>
+Impostazioni locali da usare.
+
+## <a name="return-value"></a>Valore restituito
+
+Restituisce *strDest*. Nessun valore restituito è riservato per indicare un errore.
+
+## <a name="remarks"></a>Note
+
+Il **strncpy** funzione copia iniziale *conteggio* caratteri *strSource* a *strDest* e restituisce *strDest* . Se *conteggio* è minore o uguale alla lunghezza di *strSource*, un carattere null non viene aggiunta automaticamente alla stringa copiata. Se *conteggio* è maggiore della lunghezza di *strSource*, la stringa di destinazione viene riempita con caratteri null fino alla lunghezza *conteggio*. Il comportamento delle **strncpy** è definito se le stringhe di origine e di destinazione si sovrappongono.
+
 > [!IMPORTANT]
->  `strncpy` non verifica la presenza di spazio sufficiente in `strDest`; è pertanto una causa possibile dei sovraccarichi del buffer. L'argomento `count` limita il numero di caratteri copiato; non è un limite della dimensione di `strDest`. Vedere l'esempio seguente. Per altre informazioni, vedere [Evitare sovraccarichi del buffer](http://msdn.microsoft.com/library/windows/desktop/ms717795).  
-  
- Se `strDest` o `strSource` è un puntatore `NULL` o se `count` è minore o uguale a zero, viene richiamato il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni restituiscono -1 e impostano `errno` su `EINVAL`  
-  
- `wcsncpy` e `_mbsncpy` sono le versioni a caratteri wide e a caratteri multibyte di `strncpy`. Gli argomenti e i valori restituiti da `wcsncpy` e `_mbsncpy` variano di conseguenza. In alternativa queste sei funzioni si comportano in modo identico.  
-  
- Le versioni di queste funzioni che presentano il suffisso `_l` sono identiche ad eccezione del fatto che, per il comportamento dipendente dalle impostazioni locali, usano le impostazioni locali passate anziché quelle correnti. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).  
-  
- In C++ queste funzioni presentano overload di modello che richiamano le relative controparti più recenti e sicure. Per altre informazioni, vedere [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).  
-  
-### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico  
-  
-|Routine TCHAR.H|_UNICODE e _MBCS non definiti|_MBCS definito|_UNICODE definito|  
-|---------------------|------------------------------------|--------------------|-----------------------|  
-|`_tcsncpy`|`strncpy`|`_mbsnbcpy`|`wcsncpy`|  
-|`_tcsncpy_l`|`_strncpy_l`|`_mbsnbcpy_l`|`_wcsncpy_l`|  
-  
+> **strncpy** non verifica la presenza di spazio sufficiente *strDest*; in questo modo è una causa possibile dei sovraccarichi del buffer. Il *conteggio* argomento limita il numero di caratteri copiato; non è un limite alle dimensioni dei *strDest*. Vedere l'esempio seguente. Per altre informazioni, vedere [Evitare sovraccarichi del buffer](http://msdn.microsoft.com/library/windows/desktop/ms717795).
+
+Se *strDest* oppure *strSource* è un **NULL** puntatore, o se *conteggio* è minore o uguale a zero, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni restituiscono -1 e impostare **errno** alla **EINVAL**.
+
+**wcsncpy** e **mbsncpy** sono versioni a caratteri wide e caratteri multibyte di **strncpy**. Gli argomenti e il valore restituito del **wcsncpy** e **mbsncpy** variano di conseguenza. In alternativa queste sei funzioni si comportano in modo identico.
+
+Le versioni di queste funzioni con il **l** suffisso sono identiche ad eccezione del fatto che usano le impostazioni locali passate anziché le impostazioni locali correnti per il comportamento dipendente dalle impostazioni locali. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
+
+In C++ queste funzioni presentano overload di modello che richiamano le relative controparti più recenti e sicure. Per altre informazioni, vedere [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
+
+### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
+
+|Routine TCHAR.H|_UNICODE e _MBCS non definiti|_MBCS definito|_UNICODE definito|
+|---------------------|------------------------------------|--------------------|-----------------------|
+|**tcsncpy**|**strncpy**|**_mbsnbcpy**|**wcsncpy**|
+|**tcsncpy_l**|**_strncpy_l**|**_mbsnbcpy_l**|**_wcsncpy_l**|
+
 > [!NOTE]
->  `_strncpy_l` e `_wcsncpy_l` non dipendono dalle impostazioni locali; vengono forniti solo per `_tcsncpy_l` e non possono essere chiamati direttamente.  
-  
-## <a name="requirements"></a>Requisiti  
-  
-|Routine|Intestazione obbligatoria|  
-|-------------|---------------------|  
-|`strncpy`|\<string.h>|  
-|`wcsncpy`|\<string.h> o \<wchar.h>|  
-|`_mbsncpy`, `_mbsncpy_l`|\<mbstring.h>|  
-  
- Per altre informazioni sulla compatibilità della piattaforma, vedere [Compatibilità](../../c-runtime-library/compatibility.md).  
-  
-## <a name="example"></a>Esempio  
- Nell'esempio seguente viene illustrato l'utilizzo di `strncpy` e come l'utilizzo improprio possa causare bug e problemi di sicurezza del programma. Il compilatore genera un avviso per ogni chiamata a `strncpy` simile a **crt_strncpy_x86.c(15): avviso C4996: 'strncpy': questa funzione o variabile potrebbe non essere sicura. In alternativa, considerare l'uso di strncpy_s. Per disabilitare la deprecazione, usare _CRT_SECURE_NO_WARNINGS. Vedere la Guida online per i dettagli.**  
-  
-```  
-// crt_strncpy_x86.c  
-// Use this command in an x86 developer command prompt to compile:   
-// cl /TC /W3 crt_strncpy_x86.c  
-  
-#include <stdio.h>  
-#include <string.h>  
-  
-int main() {  
-   char t[20];  
-   char s[20];  
-   char *p = 0, *q = 0;  
-  
-   strcpy_s(s, sizeof(s), "AA BB CC");  
-   // Note: strncpy is deprecated; consider using strncpy_s instead  
-   strncpy(s, "aa", 2);     // "aa BB CC"         C4996  
-   strncpy(s + 3, "bb", 2); // "aa bb CC"         C4996  
-   strncpy(s, "ZZ", 3);     // "ZZ",              C4996  
-                            // count greater than strSource, null added  
-   printf("%s\n", s);  
-  
-   strcpy_s(s, sizeof(s), "AA BB CC");  
-   p = strstr(s, "BB");  
-   q = strstr(s, "CC");  
-   strncpy(s, "aa", p - s - 1);   // "aa BB CC"   C4996  
-   strncpy(p, "bb", q - p - 1);   // "aa bb CC"   C4996  
-   strncpy(q, "cc",  q - s);      // "aa bb cc"   C4996  
-   strncpy(q, "dd", strlen(q));   // "aa bb dd"   C4996  
-   printf("%s\n", s);  
-  
-   // some problems with strncpy  
-   strcpy_s(s, sizeof(s), "test");  
-   strncpy(t, "this is a very long string", 20 ); // C4996  
-   // Danger: at this point, t has no terminating null,  
-   // so the printf continues until it runs into one.  
-   // In this case, it will print "this is a very long test"  
-   printf("%s\n", t);  
-  
-   strcpy_s(t, sizeof(t), "dogs like cats");  
-   printf("%s\n", t);  
-  
-   strncpy(t + 10, "to chase cars.", 14); // C4996  
-   printf("%s\n", t);  
-  
-   // strncpy has caused a buffer overrun and corrupted string s  
-   printf("Buffer overrun: s = '%s' (should be 'test')\n", s);  
-   // Since the stack grows from higher to lower addresses, buffer  
-   // overruns can corrupt function return addresses on the stack,  
-   // which can be exploited to run arbitrary code.  
-}  
-```  
-  
- Output  
-  
-```Output  
- ZZ  
-aa bb dd  
-this is a very long test  
-dogs like cats  
-dogs like to chase cars.  
-Buffer overrun: s = 'ars.' (should be 'test')  
-```  
-  
- Il layout delle variabili automatiche e il livello di rilevamento degli errori e di protezione di codice possono variare con le impostazioni modificate del compilatore. Questo esempio può produrre risultati diversi quando viene compilato in altri ambienti di compilazione o con altre opzioni del compilatore.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Modifica di stringhe](../../c-runtime-library/string-manipulation-crt.md)   
- [Locale](../../c-runtime-library/locale.md)  (Impostazioni locali)  
- [Interpretazione di sequenze di caratteri multibyte](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   
- [_mbsnbcpy, _mbsnbcpy_l](../../c-runtime-library/reference/mbsnbcpy-mbsnbcpy-l.md)   
- [strcat, wcscat, _mbscat](../../c-runtime-library/reference/strcat-wcscat-mbscat.md)   
- [strcmp, wcscmp, _mbscmp](../../c-runtime-library/reference/strcmp-wcscmp-mbscmp.md)   
- [strcpy, wcscpy, _mbscpy](../../c-runtime-library/reference/strcpy-wcscpy-mbscpy.md)   
- [strncat, _strncat_l, wcsncat, _wcsncat_l, _mbsncat, _mbsncat_l](../../c-runtime-library/reference/strncat-strncat-l-wcsncat-wcsncat-l-mbsncat-mbsncat-l.md)   
- [strncmp, wcsncmp, _mbsncmp, _mbsncmp_l](../../c-runtime-library/reference/strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)   
- [_strnicmp, _wcsnicmp, _mbsnicmp, _strnicmp_l, _wcsnicmp_l, _mbsnicmp_l](../../c-runtime-library/reference/strnicmp-wcsnicmp-mbsnicmp-strnicmp-l-wcsnicmp-l-mbsnicmp-l.md)   
- [strrchr, wcsrchr, _mbsrchr, _mbsrchr_l](../../c-runtime-library/reference/strrchr-wcsrchr-mbsrchr-mbsrchr-l.md)   
- [_strset, _strset_l, _wcsset, _wcsset_l, _mbsset, _mbsset_l](../../c-runtime-library/reference/strset-strset-l-wcsset-wcsset-l-mbsset-mbsset-l.md)   
- [strspn, wcsspn, _mbsspn, _mbsspn_l](../../c-runtime-library/reference/strspn-wcsspn-mbsspn-mbsspn-l.md)   
- [strncpy_s, _strncpy_s_l, wcsncpy_s, _wcsncpy_s_l, _mbsncpy_s, _mbsncpy_s_l](../../c-runtime-library/reference/strncpy-s-strncpy-s-l-wcsncpy-s-wcsncpy-s-l-mbsncpy-s-mbsncpy-s-l.md)   
- [strcpy_s, wcscpy_s, _mbscpy_s](../../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md)
+> **strncpy_l** e **wcsncpy_l** non dispone di alcuna dipendenza dalle impostazioni locali; vengono forniti solo per **tcsncpy_l** e non devono essere chiamati direttamente.
+
+## <a name="requirements"></a>Requisiti
+
+|Routine|Intestazione obbligatoria|
+|-------------|---------------------|
+|**strncpy**|\<string.h>|
+|**wcsncpy**|\<string.h> o \<wchar.h>|
+|**mbsncpy**, **mbsncpy_l**|\<mbstring.h>|
+
+Per altre informazioni sulla compatibilità della piattaforma, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+
+## <a name="example"></a>Esempio
+
+Nell'esempio seguente illustra l'uso di **strncpy** e come è possibile abusare per causare problemi di sicurezza e i bug di programma. Il compilatore genera un avviso per ogni chiamata a **strncpy** simile a **crt_strncpy_x86.c(15): avviso C4996: 'strncpy': questa funzione o variabile potrebbe non essere sicuro. In alternativa, considerare l'uso di strncpy_s. Per disabilitare la deprecazione, usare _CRT_SECURE_NO_WARNINGS. Vedere la Guida online per i dettagli.**
+
+```C
+// crt_strncpy_x86.c
+// Use this command in an x86 developer command prompt to compile:
+// cl /TC /W3 crt_strncpy_x86.c
+
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+   char t[20];
+   char s[20];
+   char *p = 0, *q = 0;
+
+   strcpy_s(s, sizeof(s), "AA BB CC");
+   // Note: strncpy is deprecated; consider using strncpy_s instead
+   strncpy(s, "aa", 2);     // "aa BB CC"         C4996
+   strncpy(s + 3, "bb", 2); // "aa bb CC"         C4996
+   strncpy(s, "ZZ", 3);     // "ZZ",              C4996
+                            // count greater than strSource, null added
+   printf("%s\n", s);
+
+   strcpy_s(s, sizeof(s), "AA BB CC");
+   p = strstr(s, "BB");
+   q = strstr(s, "CC");
+   strncpy(s, "aa", p - s - 1);   // "aa BB CC"   C4996
+   strncpy(p, "bb", q - p - 1);   // "aa bb CC"   C4996
+   strncpy(q, "cc",  q - s);      // "aa bb cc"   C4996
+   strncpy(q, "dd", strlen(q));   // "aa bb dd"   C4996
+   printf("%s\n", s);
+
+   // some problems with strncpy
+   strcpy_s(s, sizeof(s), "test");
+   strncpy(t, "this is a very long string", 20 ); // C4996
+   // Danger: at this point, t has no terminating null,
+   // so the printf continues until it runs into one.
+   // In this case, it will print "this is a very long test"
+   printf("%s\n", t);
+
+   strcpy_s(t, sizeof(t), "dogs like cats");
+   printf("%s\n", t);
+
+   strncpy(t + 10, "to chase cars.", 14); // C4996
+   printf("%s\n", t);
+
+   // strncpy has caused a buffer overrun and corrupted string s
+   printf("Buffer overrun: s = '%s' (should be 'test')\n", s);
+   // Since the stack grows from higher to lower addresses, buffer
+   // overruns can corrupt function return addresses on the stack,
+   // which can be exploited to run arbitrary code.
+}
+```
+
+Output
+
+```Output
+ZZ
+aa bb dd
+this is a very long test
+dogs like cats
+dogs like to chase cars.
+Buffer overrun: s = 'ars.' (should be 'test')
+```
+
+Il layout delle variabili automatiche e il livello di rilevamento degli errori e di protezione di codice possono variare con le impostazioni modificate del compilatore. Questo esempio può produrre risultati diversi quando viene compilato in altri ambienti di compilazione o con altre opzioni del compilatore.
+
+## <a name="see-also"></a>Vedere anche
+
+[Modifica di stringhe](../../c-runtime-library/string-manipulation-crt.md)<br/>
+[Impostazioni locali](../../c-runtime-library/locale.md)<br/>
+[Interpretazione di sequenze di caratteri multibyte](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[_mbsnbcpy, _mbsnbcpy_l](mbsnbcpy-mbsnbcpy-l.md)<br/>
+[strcat, wcscat, _mbscat](strcat-wcscat-mbscat.md)<br/>
+[strcmp, wcscmp, _mbscmp](strcmp-wcscmp-mbscmp.md)<br/>
+[strcpy, wcscpy, _mbscpy](strcpy-wcscpy-mbscpy.md)<br/>
+[strncat, _strncat_l, wcsncat, _wcsncat_l, _mbsncat, _mbsncat_l](strncat-strncat-l-wcsncat-wcsncat-l-mbsncat-mbsncat-l.md)<br/>
+[strncmp, wcsncmp, _mbsncmp, _mbsncmp_l](strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)<br/>
+[_strnicmp, _wcsnicmp, _mbsnicmp, _strnicmp_l, _wcsnicmp_l, _mbsnicmp_l](strnicmp-wcsnicmp-mbsnicmp-strnicmp-l-wcsnicmp-l-mbsnicmp-l.md)<br/>
+[strrchr, wcsrchr, _mbsrchr, _mbsrchr_l](strrchr-wcsrchr-mbsrchr-mbsrchr-l.md)<br/>
+[_strset, _strset_l, _wcsset, _wcsset_l, _mbsset, _mbsset_l](strset-strset-l-wcsset-wcsset-l-mbsset-mbsset-l.md)<br/>
+[strspn, wcsspn, _mbsspn, _mbsspn_l](strspn-wcsspn-mbsspn-mbsspn-l.md)<br/>
+[strncpy_s, _strncpy_s_l, wcsncpy_s, _wcsncpy_s_l, _mbsncpy_s, _mbsncpy_s_l](strncpy-s-strncpy-s-l-wcsncpy-s-wcsncpy-s-l-mbsncpy-s-mbsncpy-s-l.md)<br/>
+[strcpy_s, wcscpy_s, _mbscpy_s](strcpy-s-wcscpy-s-mbscpy-s.md)<br/>

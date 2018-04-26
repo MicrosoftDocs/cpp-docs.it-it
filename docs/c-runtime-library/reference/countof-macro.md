@@ -31,11 +31,11 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 773cf37e3a9e3d7047f0de4cd489c0ae9f41f61d
-ms.sourcegitcommit: 604907f77eb6c5b1899194a9877726f3e8c2dabc
+ms.openlocfilehash: e9e5dc49b59ac534d871d6b31efdeec0afef5c8d
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="countof-macro"></a>Macro _countof
 
@@ -58,15 +58,15 @@ Il numero di elementi nella matrice, espresso come un **size_t**.
 
 ## <a name="remarks"></a>Note
 
-`_countof` viene implementato come macro del preprocessore simile a funzione. La versione di C++ è macchine modello aggiuntivi da rilevare in fase di compilazione se viene passato un puntatore anziché una matrice di dichiarati in modo statico.
+**countof** viene implementato come macro del preprocessore simile a funzione. La versione di C++ è macchine modello aggiuntivi da rilevare in fase di compilazione se viene passato un puntatore anziché una matrice di dichiarati in modo statico.
 
-Assicurarsi che *matrice* è effettivamente una matrice, non un puntatore. Nel linguaggio C `_countof` produce risultati errati se *matrice* è un puntatore. In C++ `_countof` non riesce a compilare se *matrice* è un puntatore.  Una matrice passata come parametro a una funzione *decade a un puntatore*, il che significa che all'interno della funzione, non è possibile utilizzare `_countof` per determinare l'entità della matrice.
+Assicurarsi che *matrice* è effettivamente una matrice, non un puntatore. Nel linguaggio C **countof** produce risultati errati se *matrice* è un puntatore. In C++ **countof** compilazione se non viene completata *matrice* è un puntatore.  Una matrice passata come parametro a una funzione *decade a un puntatore*, il che significa che all'interno della funzione, non è possibile utilizzare **countof** per determinare l'entità della matrice.
 
 ## <a name="requirements"></a>Requisiti
 
 |Macro|Intestazione obbligatoria|
 |-----------|---------------------|
-|`_countof`|\<stdlib.h>|
+|**_countof**|\<stdlib.h>|
 
 ## <a name="example"></a>Esempio
 

@@ -1,12 +1,12 @@
 ---
 title: isspace, iswspace, _isspace_l, _iswspace_l | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - iswspace
@@ -42,72 +42,76 @@ helpviewer_keywords:
 - _istspace function
 - istspace function
 ms.assetid: b851e0c0-36bb-4dac-a1a3-533540939035
-caps.latest.revision: 
+caps.latest.revision: 18
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5eef3b216ed70bb7fa6a22d02827dec34b44c3b3
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 1da229dbb93e657b01d6f69e2d9b201ed72a7aad
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="isspace-iswspace-isspacel-iswspacel"></a>isspace, iswspace, _isspace_l, _iswspace_l
-Determina se un intero rappresenta uno spazio.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-int isspace(  
-   int c   
-);  
-int iswspace(  
-   wint_t c   
-);  
-int _isspace_l(  
-   int c,  
-   _locale_t locale  
-);  
-int _iswspace_l(  
-   wint_t c,  
-   _locale_t locale  
-);  
-```  
-  
-#### <a name="parameters"></a>Parametri  
- `c`  
- Valore Integer da testare.  
-  
- `locale`  
- Impostazioni locali da usare.  
-  
-## <a name="return-value"></a>Valore restituito  
- Ognuna di queste routine restituisce un valore diverso da zero se `c` è una rappresentazione particolare di uno spazio. `isspace` Restituisce un valore diverso da zero se `c` è un carattere di spazio vuoto (0x09-0x0D o 0x20). Il risultato della condizione di test per la funzione `isspace` dipende dall'impostazione della categoria `LC_CTYPE` delle impostazioni locali. Per altre informazioni, vedere [setlocale, _wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). Le versioni di queste funzioni che non hanno il suffisso `_l` usano le impostazioni locali correnti per qualsiasi comportamento dipendente dalle impostazioni locali. Le versioni che non hanno il suffisso `_l` sono identiche, con la differenza che usano le impostazioni locali passate. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).  
-  
- `iswspace` restituisce un valore diverso da zero se `c` è un carattere wide che corrisponde a uno spazio standard.  
-  
- Il comportamento di `isspace` e `_isspace_l` è indefinito se `c` non è EOF o non è compreso nell'intervallo da 0 a 0xFF, inclusi. Quando si usa una libreria di debug CRT e `c` non è uno di questi valori, le funzioni generano un'asserzione.  
-  
-### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico  
-  
-|Routine TCHAR.H|_UNICODE e _MBCS non definiti|_MBCS definito|_UNICODE definito|  
-|---------------------|------------------------------------|--------------------|-----------------------|  
-|**_** `istspace`|`isspace`|[_ismbcspace](../../c-runtime-library/reference/ismbcgraph-functions.md)|`iswspace`|  
-  
-## <a name="requirements"></a>Requisiti  
-  
-|Routine|Intestazione obbligatoria|  
-|-------------|---------------------|  
-|`isspace`|\<ctype.h>|  
-|`iswspace`|\<ctype.h> o \<wchar.h>|  
-|`_isspace_l`|\<ctype.h>|  
-|`_iswspace_l`|\<ctype.h> o \<wchar.h>|  
-  
- Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).  
-  
-## <a name="see-also"></a>Vedere anche  
- [Classificazione di caratteri](../../c-runtime-library/character-classification.md)   
- [Locale](../../c-runtime-library/locale.md)  (Impostazioni locali)  
- [Routine is, isw](../../c-runtime-library/is-isw-routines.md)
+
+Determina se un intero rappresenta uno spazio.
+
+## <a name="syntax"></a>Sintassi
+
+```C
+int isspace(
+   int c
+);
+int iswspace(
+   wint_t c
+);
+int _isspace_l(
+   int c,
+   _locale_t locale
+);
+int _iswspace_l(
+   wint_t c,
+   _locale_t locale
+);
+```
+
+### <a name="parameters"></a>Parametri
+
+*c*<br/>
+Valore Integer da testare.
+
+*locale*<br/>
+Impostazioni locali da usare.
+
+## <a name="return-value"></a>Valore restituito
+
+Ognuna di queste routine restituisce diverso da zero se *c* è una rappresentazione particolare di un carattere di spazio. **isspace** restituisce un valore diverso da zero se *c* è un carattere di spazio vuoto (0x09-0x0D o 0x20). Il risultato della condizione di test per il **isspace** dipende dalla funzione di **LC_CTYPE** categoria delle impostazioni locali, vedere [setlocale, wsetlocale](setlocale-wsetlocale.md) per altre informazioni. Le versioni di queste funzioni che non contengono il **l** suffisso utilizzare le impostazioni locali correnti per qualsiasi comportamento dipendente dalle impostazioni locali; le versioni che hanno il **l** suffisso sono identiche ad eccezione del fatto che usano il impostazioni locali che vengono passate. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
+
+**iswspace** restituisce un valore diverso da zero se *c* è un carattere "wide" che corrisponde a un carattere di spazio vuoto standard.
+
+Il comportamento delle **isspace** e **isspace_l** è definito se *c* non è EOF o compreso nell'intervallo tra 0 e 0xFF, inclusivo. Quando si utilizza una libreria di debug CRT e *c* non fa parte di questi valori, la generazione di funzioni è un'asserzione.
+
+### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
+
+|Routine TCHAR.H|_UNICODE e _MBCS non definiti|_MBCS definito|_UNICODE definito|
+|---------------------|------------------------------------|--------------------|-----------------------|
+|**_** **istspace**|**isspace**|[_ismbcspace](ismbcgraph-functions.md)|**iswspace**|
+
+## <a name="requirements"></a>Requisiti
+
+|Routine|Intestazione obbligatoria|
+|-------------|---------------------|
+|**isspace**|\<ctype.h>|
+|**iswspace**|\<ctype.h> o \<wchar.h>|
+|**_isspace_l**|\<ctype.h>|
+|**_iswspace_l**|\<ctype.h> o \<wchar.h>|
+
+Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+
+## <a name="see-also"></a>Vedere anche
+
+[Classificazione di caratteri](../../c-runtime-library/character-classification.md)<br/>
+[Impostazioni locali](../../c-runtime-library/locale.md)<br/>
+[Routine is, isw](../../c-runtime-library/is-isw-routines.md)<br/>

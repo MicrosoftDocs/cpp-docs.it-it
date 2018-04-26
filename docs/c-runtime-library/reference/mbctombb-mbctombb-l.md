@@ -1,12 +1,12 @@
 ---
 title: _mbctombb, _mbctombb_l | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _mbctombb_l
@@ -37,65 +37,70 @@ helpviewer_keywords:
 - mbctombb function
 - _mbctombb_l function
 ms.assetid: d90970b8-71ff-4586-b6a2-f9ceb811f776
-caps.latest.revision: 
+caps.latest.revision: 17
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b360eaf014747cec2359efbf3792d45323178f57
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 45567a2486a0783cd4b1f82e5a81046e529c49df
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="mbctombb-mbctombbl"></a>_mbctombb, _mbctombb_l
-Converte un carattere multibyte a byte doppio in un carattere multibyte a byte singolo corrispondente.  
-  
+
+Converte un carattere multibyte a byte doppio in un carattere multibyte a byte singolo corrispondente.
+
 > [!IMPORTANT]
->  Non è possibile usare questa API nelle applicazioni eseguite in Windows Runtime. Per ulteriori informazioni, vedere [funzioni CRT non supportate nelle App Universal Windows Platform](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-unsigned int _mbctombb(  
-   unsigned int c   
-);  
-unsigned int _mbctombb_l(  
-   unsigned int c,  
-   _locale_t locale  
-);  
-```  
-  
-#### <a name="parameters"></a>Parametri  
- `c`  
- Caratteri multibyte da convertire.  
-  
- `locale`  
- Impostazioni locali da usare.  
-  
-## <a name="return-value"></a>Valore restituito  
- Se ha esito positivo, `_mbctombb` e `_mbctombb_l` restituisce il carattere a byte singolo che corrisponde a `c`; in caso contrario restituisce `c`.  
-  
-## <a name="remarks"></a>Note  
- Il `_mbctombb` e `_mbctombb_l` funzioni convertono un carattere multibyte specificato in un carattere multibyte a byte singolo corrispondente. Caratteri devono corrispondere a caratteri a byte singolo compreso nell'intervallo 0x20-0x7E o 0xA1 - 0xDF da convertire.  
-  
- La configurazione dell'impostazione della categoria `LC_CTYPE` delle impostazioni locali influisce sul valore di output. Per altre informazioni, vedere [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). La versione di questa funzione senza il suffisso `_l` usa le impostazioni locali correnti per il comportamento dipendente dalle impostazioni locali. La versione con il suffisso `_l` è identica, ad eccezione del fatto che usa il parametro delle impostazioni locali passato. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).  
-  
- Nelle versioni precedenti, il nome della funzione `_mbctombb` era `zentohan`. In alternativa, usare `_mbctombb`.  
-  
-## <a name="requirements"></a>Requisiti  
-  
-|Routine|Intestazione obbligatoria|  
-|-------------|---------------------|  
-|`_mbctombb`|\<mbstring.h>|  
-|`_mbctombb_l`|\<mbstring.h>|  
-  
- Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).  
-  
-## <a name="see-also"></a>Vedere anche  
- [Data Conversion](../../c-runtime-library/data-conversion.md)  (Conversione dei dati)  
- [_mbbtombc, _mbbtombc_l](../../c-runtime-library/reference/mbbtombc-mbbtombc-l.md)   
- [_mbcjistojms, _mbcjistojms_l, _mbcjmstojis, _mbcjmstojis_l](../../c-runtime-library/reference/mbcjistojms-mbcjistojms-l-mbcjmstojis-mbcjmstojis-l.md)   
- [_mbctohira, _mbctohira_l, _mbctokata, _mbctokata_l](../../c-runtime-library/reference/mbctohira-mbctohira-l-mbctokata-mbctokata-l.md)   
- [_mbctolower, _mbctolower_l, _mbctoupper, _mbctoupper_l](../../c-runtime-library/reference/mbctolower-mbctolower-l-mbctoupper-mbctoupper-l.md)
+> Non è possibile usare questa API nelle applicazioni eseguite in Windows Runtime. Per altre informazioni, vedere [Funzioni CRT non supportate nelle app della piattaforma UWP (Universal Windows Platform)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+
+## <a name="syntax"></a>Sintassi
+
+```C
+unsigned int _mbctombb(
+   unsigned int c
+);
+unsigned int _mbctombb_l(
+   unsigned int c,
+   _locale_t locale
+);
+```
+
+### <a name="parameters"></a>Parametri
+
+*c*<br/>
+Caratteri multibyte da convertire.
+
+*locale*<br/>
+Impostazioni locali da usare.
+
+## <a name="return-value"></a>Valore restituito
+
+Se ha esito positivo, **mbctombb** e **mbctombb_l** restituisce il carattere a byte singolo che corrisponde a *c*; in caso contrario restituirà *c* .
+
+## <a name="remarks"></a>Note
+
+Il **mbctombb** e **mbctombb_l** funzioni convertono un carattere multibyte specificato in un carattere multibyte a byte singolo corrispondente. Caratteri devono corrispondere a caratteri a byte singolo compreso nell'intervallo 0x20-0x7E o 0xA1 - 0xDF da convertire.
+
+Il valore di output è interessato dalla configurazione dell'impostazione delle **LC_CTYPE** categoria delle impostazioni locali, vedere [setlocale](setlocale-wsetlocale.md) per altre informazioni. La versione di questa funzione senza il **l** suffisso utilizza le impostazioni locali correnti per questo comportamento dipendente dalle impostazioni locali; la versione con il **l** suffisso è identico ad eccezione del fatto che usi il parametro delle impostazioni locali passato al In alternativa. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
+
+Nelle versioni precedenti, **mbctombb** è stato chiamato **zentohan**. Uso **mbctombb** invece.
+
+## <a name="requirements"></a>Requisiti
+
+|Routine|Intestazione obbligatoria|
+|-------------|---------------------|
+|**_mbctombb**|\<mbstring.h>|
+|**_mbctombb_l**|\<mbstring.h>|
+
+Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+
+## <a name="see-also"></a>Vedere anche
+
+[Conversione dei dati](../../c-runtime-library/data-conversion.md)<br/>
+[_mbbtombc, _mbbtombc_l](mbbtombc-mbbtombc-l.md)<br/>
+[_mbcjistojms, _mbcjistojms_l, _mbcjmstojis, _mbcjmstojis_l](mbcjistojms-mbcjistojms-l-mbcjmstojis-mbcjmstojis-l.md)<br/>
+[_mbctohira, _mbctohira_l, _mbctokata, _mbctokata_l](mbctohira-mbctohira-l-mbctokata-mbctokata-l.md)<br/>
+[_mbctolower, _mbctolower_l, _mbctoupper, _mbctoupper_l](mbctolower-mbctolower-l-mbctoupper-mbctoupper-l.md)<br/>

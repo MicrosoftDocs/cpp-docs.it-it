@@ -1,13 +1,13 @@
 ---
 title: fmax, fmaxf, fmaxl | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.custom: ''
+ms.date: 04/05/2018
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp
 - devlang-cpp
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - fmax
@@ -40,82 +40,87 @@ helpviewer_keywords:
 - fmaxf function
 - fmaxl function
 ms.assetid: a773ccf7-495e-4a9a-8c6d-dfb53e341e35
-caps.latest.revision: 
+caps.latest.revision: 11
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8d9992c149dca5a2fc5be52ae0029494b10e4bbe
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: b108a01201e75d466f95f029f296c87c9b1430c7
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="fmax-fmaxf-fmaxl"></a>fmax, fmaxf, fmaxl
-Determina il valore più grande tra due valori numerici specificati.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-double fmax(  
-   double x,   
-   double y  
-);  
-  
-float fmax(  
-   float x,   
-   float y  
-); //C++ only  
-  
-long double fmax(  
-   long double x,   
-   long double y  
-); //C++ only  
-  
-float fmaxf(  
-   float x,   
-   float y  
-);  
-  
-long double fmaxl(  
-   long double x,   
-   long double y  
-);  
-  
-```  
-  
-#### <a name="parameters"></a>Parametri  
- [in] `x`  
- Primo valore da confrontare.  
-  
- [in] `y`  
- Secondo valore da confrontare.  
-  
-## <a name="return-value"></a>Valore restituito  
- In caso di esito positivo restituisce il valore più grande tra `x` o `y`. Il valore restituito è esatto e non dipende da alcuna forma di arrotondamento.  
-  
- In caso contrario può restituire uno dei valori seguenti:  
-  
-|Problema|INVIO|  
-|-----------|------------|  
-|`x` = NaN|`y`|  
-|`y` = NaN|`x`|  
-|`x` e `y` = NaN|NaN|  
-  
- Questa funzione non usa gli errori specificati [matherr](../../c-runtime-library/reference/matherr.md).  
-  
-## <a name="remarks"></a>Note  
- Dato che C++ consente l'overload, è possibile chiamare overload di fmax che accettano e restituiscono i tipi float e long double. In un programma C fmax accetta e restituisce sempre un valore double.  
-  
-## <a name="requirements"></a>Requisiti  
-  
-|Funzione|Intestazione C|Intestazione C++|  
-|--------------|--------------|------------------|  
-|`fmax`, `fmaxf`, `fmaxl`|\<math.h>|\<cmath> o \<math.h>|  
-  
- Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).  
-  
-## <a name="see-also"></a>Vedere anche  
- [Alphabetical Function Reference](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)  (Riferimento alfabetico alle funzioni)  
- [fmin, fminf, fminl](fmin-fminf-fminl.md)  
+
+Determina il valore più grande tra due valori numerici specificati.
+
+## <a name="syntax"></a>Sintassi
+
+```C
+double fmax(
+   double x,
+   double y
+);
+
+float fmax(
+   float x,
+   float y
+); //C++ only
+
+long double fmax(
+   long double x,
+   long double y
+); //C++ only
+
+float fmaxf(
+   float x,
+   float y
+);
+
+long double fmaxl(
+   long double x,
+   long double y
+);
+
+```
+
+### <a name="parameters"></a>Parametri
+
+*x*<br/>
+Primo valore da confrontare.
+
+*y*<br/>
+Secondo valore da confrontare.
+
+## <a name="return-value"></a>Valore restituito
+
+Se l'operazione riesce, restituisce il maggiore dei *x* oppure *y*. Il valore restituito è esatto e non dipende da alcuna forma di arrotondamento.
+
+In caso contrario può restituire uno dei valori seguenti:
+
+|Problema|INVIO|
+|-----------|------------|
+|*x* = NaN|*y*|
+|*y* = NaN|*x*|
+|*x* e *y* = NaN|NaN|
+
+Questa funzione non usa gli errori specificati [matherr](matherr.md).
+
+## <a name="remarks"></a>Note
+
+Dato che C++ consente l'overload, è possibile chiamare overload di fmax che accettano e restituiscono i tipi float e long double. In un programma C fmax accetta e restituisce sempre un valore double.
+
+## <a name="requirements"></a>Requisiti
+
+|Funzione|Intestazione C|Intestazione C++|
+|--------------|--------------|------------------|
+|**Fmax**, **fmaxf**, **fmaxl**|\<math.h>|\<cmath> o \<math.h>|
+
+Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+
+## <a name="see-also"></a>Vedere anche
+
+[Riferimento alfabetico alle funzioni](crt-alphabetical-function-reference.md)<br/>
+[fmin, fminf, fminl](fmin-fminf-fminl.md)<br/>

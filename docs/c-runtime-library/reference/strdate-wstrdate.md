@@ -1,12 +1,12 @@
 ---
 title: _strdate, _wstrdate | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _strdate
@@ -42,105 +42,110 @@ helpviewer_keywords:
 - _tstrdate function
 - copying dates
 ms.assetid: de8e4097-58f8-42ba-9dcd-cb4d9a9f1696
-caps.latest.revision: 
+caps.latest.revision: 26
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d81daed9666825446ab3a4a42ca0a9806531e2c2
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 47bc1764a92171053bbf921619fbb5218da8039a
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="strdate-wstrdate"></a>_strdate, _wstrdate
-Copia la data di sistema corrente in un buffer. Sono disponibili versioni più sicure di queste funzioni. Vedere [_strdate_s, _wstrdate_s](../../c-runtime-library/reference/strdate-s-wstrdate-s.md).  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-char *_strdate(  
-   char *datestr   
-);  
-wchar_t *_wstrdate(  
-   wchar_t *datestr   
-);  
-template <size_t size>  
-char *_strdate(  
-   char (&datestr)[size]  
-); // C++ only  
-template <size_t size>  
-wchar_t *_wstrdate(  
-   wchar_t (&datestr)[size]  
-); // C++ only  
-```  
-  
-#### <a name="parameters"></a>Parametri  
- `datestr`  
- Puntatore a un buffer contenente la stringa di data formattata.  
-  
-## <a name="return-value"></a>Valore restituito  
- Ognuna di queste funzioni restituisce un puntatore alla stringa di caratteri risultante `datestr`.  
-  
-## <a name="remarks"></a>Note  
- Sono disponibili versioni più sicure di queste funzioni. Vedere [_strdate_s, _wstrdate_s](../../c-runtime-library/reference/strdate-s-wstrdate-s.md). È consigliabile usare le funzioni più sicure laddove possibile.  
-  
- La funzione `_strdate` copia la data di sistema corrente nel buffer a cui punta `datestr`, con il formato `mm`/`dd`/`yy`, dove `mm` sono due cifre che rappresentano il mese, `dd` sono due cifre che rappresentano il giorno e `yy` sono le ultime due cifre dell'anno. Ad esempio, la stringa `12/05/99` rappresenta il 5 dicembre 1999. La lunghezza del buffer deve essere di almeno 9 byte.  
-  
- Se `datestr` è un puntatore `NULL`, viene richiamato il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni restituiscono -1 e impostano `errno` su `EINVAL`.  
-  
- `_wstrdate` è una versione a caratteri wide di `_strdate`. L'argomento e il valore restituito di `_wstrdate` sono stringhe a caratteri wide. A parte ciò, queste funzioni si comportano in modo identico.  
-  
- In C++ queste funzioni presentano overload di modello che richiamano le relative controparti più recenti e sicure. Per altre informazioni, vedere [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).  
-  
-### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico  
-  
-|Routine TCHAR.H|_UNICODE e _MBCS non definiti|_MBCS definito|_UNICODE definito|  
-|---------------------|------------------------------------|--------------------|-----------------------|  
-|`_tstrdate`|`_strdate`|`_strdate`|`_wstrdate`|  
-  
-## <a name="requirements"></a>Requisiti  
-  
-|Routine|Intestazione obbligatoria|  
-|-------------|---------------------|  
-|`_strdate`|\<time.h>|  
-|`_wstrdate`|\<time.h> or \<wchar.h>|  
-  
- Per altre informazioni sulla compatibilità, vedere la sezione [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
-  
-## <a name="example"></a>Esempio  
-  
-```  
-// strdate.c  
-// compile with: /W3  
-#include <time.h>  
-#include <stdio.h>  
-int main()  
-{  
-    char tmpbuf[9];  
-  
-    // Set time zone from TZ environment variable. If TZ is not set,  
-    // the operating system is queried to obtain the default value   
-    // for the variable.   
-    //  
-    _tzset();  
-  
-    printf( "OS date: %s\n", _strdate(tmpbuf) ); // C4996  
-    // Note: _strdate is deprecated; consider using _strdate_s instead  
-}  
-```  
-  
-```Output  
-OS date: 04/25/03  
-```  
-  
-## <a name="see-also"></a>Vedere anche  
- [Gestione del tempo](../../c-runtime-library/time-management.md)   
- [asctime, _wasctime](../../c-runtime-library/reference/asctime-wasctime.md)   
- [ctime, _ctime32, _ctime64, _wctime, _wctime32, _wctime64](../../c-runtime-library/reference/ctime-ctime32-ctime64-wctime-wctime32-wctime64.md)   
- [gmtime, _gmtime32, _gmtime64](../../c-runtime-library/reference/gmtime-gmtime32-gmtime64.md)   
- [localtime, _localtime32, _localtime64](../../c-runtime-library/reference/localtime-localtime32-localtime64.md)   
- [mktime, _mktime32, _mktime64](../../c-runtime-library/reference/mktime-mktime32-mktime64.md)   
- [time, _time32, _time64](../../c-runtime-library/reference/time-time32-time64.md)   
- [_tzset](../../c-runtime-library/reference/tzset.md)
+
+Copia la data di sistema corrente in un buffer. Sono disponibili versioni più sicure di queste funzioni. Vedere [_strdate_s, _wstrdate_s](strdate-s-wstrdate-s.md).
+
+## <a name="syntax"></a>Sintassi
+
+```C
+char *_strdate(
+   char *datestr
+);
+wchar_t *_wstrdate(
+   wchar_t *datestr
+);
+template <size_t size>
+char *_strdate(
+   char (&datestr)[size]
+); // C++ only
+template <size_t size>
+wchar_t *_wstrdate(
+   wchar_t (&datestr)[size]
+); // C++ only
+```
+
+### <a name="parameters"></a>Parametri
+
+*datestr*<br/>
+Puntatore a un buffer contenente la stringa di data formattata.
+
+## <a name="return-value"></a>Valore restituito
+
+Ognuna di queste funzioni restituisce un puntatore alla stringa di caratteri risultante *datestr*.
+
+## <a name="remarks"></a>Note
+
+Sono disponibili versioni più sicure di queste funzioni. Vedere [_strdate_s, _wstrdate_s](strdate-s-wstrdate-s.md). È consigliabile usare le funzioni più sicure laddove possibile.
+
+Il **strDate** funzione Copia la data di sistema corrente nel buffer a cui puntata *datestr*formattato **mm**/**gg** / **yy**, dove **mm** corrisponde a due cifre che rappresenta il mese **gg** corrisponde a due cifre che rappresenta il giorno e **AA**  è le ultime due cifre dell'anno. Ad esempio, la stringa **12/05/99** rappresenta il 5 dicembre 1999. La lunghezza del buffer deve essere di almeno 9 byte.
+
+Se *datestr* è un **NULL** puntatore, il gestore di parametri non validi viene richiamato, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni restituiscono -1 e impostare **errno** alla **EINVAL**.
+
+**wstrdate** è una versione a caratteri wide **strDate**; l'argomento e il valore restituito di **wstrdate** sono stringhe a caratteri "wide". A parte ciò, queste funzioni si comportano in modo identico.
+
+In C++ queste funzioni presentano overload di modello che richiamano le relative controparti più recenti e sicure. Per altre informazioni, vedere [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
+
+### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
+
+|Routine TCHAR.H|_UNICODE e _MBCS non definiti|_MBCS definito|_UNICODE definito|
+|---------------------|------------------------------------|--------------------|-----------------------|
+|**tstrdate**|**_strdate**|**_strdate**|**_wstrdate**|
+
+## <a name="requirements"></a>Requisiti
+
+|Routine|Intestazione obbligatoria|
+|-------------|---------------------|
+|**_strdate**|\<time.h>|
+|**_wstrdate**|\<time.h> or \<wchar.h>|
+
+Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+
+## <a name="example"></a>Esempio
+
+```C
+// strdate.c
+// compile with: /W3
+#include <time.h>
+#include <stdio.h>
+int main()
+{
+    char tmpbuf[9];
+
+    // Set time zone from TZ environment variable. If TZ is not set,
+    // the operating system is queried to obtain the default value
+    // for the variable.
+    //
+    _tzset();
+
+    printf( "OS date: %s\n", _strdate(tmpbuf) ); // C4996
+    // Note: _strdate is deprecated; consider using _strdate_s instead
+}
+```
+
+```Output
+OS date: 04/25/03
+```
+
+## <a name="see-also"></a>Vedere anche
+
+[Gestione dell'ora](../../c-runtime-library/time-management.md)<br/>
+[asctime, _wasctime](asctime-wasctime.md)<br/>
+[ctime, _ctime32, _ctime64, _wctime, _wctime32, _wctime64](ctime-ctime32-ctime64-wctime-wctime32-wctime64.md)<br/>
+[gmtime, _gmtime32, _gmtime64](gmtime-gmtime32-gmtime64.md)<br/>
+[localtime, _localtime32, _localtime64](localtime-localtime32-localtime64.md)<br/>
+[mktime, _mktime32, _mktime64](mktime-mktime32-mktime64.md)<br/>
+[time, _time32, _time64](time-time32-time64.md)<br/>
+[_tzset](tzset.md)<br/>

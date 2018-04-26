@@ -1,13 +1,13 @@
 ---
 title: ilogb, ilogbf, ilogbl2 | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.custom: ''
+ms.date: 04/05/2018
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp
 - devlang-cpp
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - ilogb
@@ -38,76 +38,81 @@ helpviewer_keywords:
 - ilogbf function
 - ilogbl function
 ms.assetid: 9ef19d57-1caa-41d5-8233-2faad3562fcb
-caps.latest.revision: 
+caps.latest.revision: 4
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8da5ba71b59f64c38a051fd8f31fa7bf58a4556d
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: dc15d09b2e2ff79771b2be4250ea1ea770a02f31
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="ilogb-ilogbf-ilogbl"></a>ilogb, ilogbf, ilogbl
-Restituisce un valore intero che rappresenta l'esponente in base 2 non distorto del valore specificato.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-int ilogb(  
-   double x  
-);  
-  
-int ilogb(  
-   float x  
-); //C++ only  
-  
-int ilogb(  
-   long double x  
-); //C++ only  
-  
-int ilogbf(  
-   float x  
-);  
-  
-int ilogbl(  
-   long double x  
-);  
-  
-```  
-  
-#### <a name="parameters"></a>Parametri  
- [in] `x`  
- Valore specificato.  
-  
-## <a name="return-value"></a>Valore restituito  
- In caso di esito positivo, restituisce l'esponente in base 2 di `x` come valore `int` con segno.  
-  
- In caso contrario, restituisce uno dei valori seguenti definiti in \<math.h>:  
-  
-|Input|Risultato|  
-|-----------|------------|  
-|±0|FP_ILOGB0|  
-|±INF, ±nan, indefinito|FP_ILOGBNAN|  
-  
- Gli errori vengono segnalati come specificato in [matherr](../../c-runtime-library/reference/matherr.md).  
-  
-## <a name="remarks"></a>Note  
- Dato che C++ consente l'overload, è possibile chiamare gli overload di `ilogb` che accettano e restituiscono i tipi float e long double. In un programma C `ilogb` accetta e restituisce sempre un valore double.  
-  
- Chiamare questa funzione è simile alla chiamata della funzione `logb` equivalente con successivo cast del valore restituito in `int`.  
-  
-## <a name="requirements"></a>Requisiti  
-  
-|Routine|Intestazione C|Intestazione C++|  
-|-------------|--------------|------------------|  
-|`ilogb`,                `ilogbf`,  `ilogbl`|\<math.h>|\<cmath>|  
-  
- Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).  
-  
-## <a name="see-also"></a>Vedere anche  
- [Alphabetical Function Reference](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)  (Riferimento alfabetico alle funzioni)  
- [frexp](../../c-runtime-library/reference/frexp.md)   
- [logb, logbf, logbl, _logb, _logbf](../../c-runtime-library/reference/logb-logbf-logbl-logb-logbf.md)
+
+Restituisce un valore intero che rappresenta l'esponente in base 2 non distorto del valore specificato.
+
+## <a name="syntax"></a>Sintassi
+
+```C
+int ilogb(
+   double x
+);
+
+int ilogb(
+   float x
+); //C++ only
+
+int ilogb(
+   long double x
+); //C++ only
+
+int ilogbf(
+   float x
+);
+
+int ilogbl(
+   long double x
+);
+
+```
+
+### <a name="parameters"></a>Parametri
+
+*x*<br/>
+Valore specificato.
+
+## <a name="return-value"></a>Valore restituito
+
+Se l'operazione riesce, restituisce l'esponente in base 2 di *x* come con un segno **int** valore.
+
+In caso contrario, restituisce uno dei valori seguenti definiti in \<math.h>:
+
+|Input|Risultato|
+|-----------|------------|
+|±0|FP_ILOGB0|
+|±INF, ±nan, indefinito|FP_ILOGBNAN|
+
+Gli errori vengono segnalati come specificato in [matherr](matherr.md).
+
+## <a name="remarks"></a>Note
+
+Dato che C++ consente l'overload, è possibile chiamare overload di **ilogb** che accettano e restituiscono **float** e **lungo** **doppie** tipi. In un programma C **ilogb** accetta e restituisce sempre un **doppie**.
+
+Chiamare questa funzione è simile alla chiamata l'equivalente **logb** (funzione), quindi eseguire il cast del valore restituito **int**.
+
+## <a name="requirements"></a>Requisiti
+
+|Routine|Intestazione C|Intestazione C++|
+|-------------|--------------|------------------|
+|**ilogb**, **ilogbf**, **ilogbl**|\<math.h>|\<cmath>|
+
+Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+
+## <a name="see-also"></a>Vedere anche
+
+[Riferimento alfabetico alle funzioni](crt-alphabetical-function-reference.md)<br/>
+[frexp](frexp.md)<br/>
+[logb, logbf, logbl, _logb, _logbf](logb-logbf-logbl-logb-logbf.md)<br/>

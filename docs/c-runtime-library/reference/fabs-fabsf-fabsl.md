@@ -1,12 +1,12 @@
 ---
 title: fabs, fabsf, fabsl | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.custom: ''
+ms.date: 04/05/2018
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - fabsf
@@ -41,67 +41,73 @@ helpviewer_keywords:
 - fabs function
 - fabsl function
 ms.assetid: 23bca210-f408-4f5e-b46b-0ccaaec31e36
-caps.latest.revision: 
+caps.latest.revision: 11
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 707e75f1036421d5392d2e7ecb2273760088e22c
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 95f34d81045aef90832a1d05090c548c1bf27dec
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="fabs-fabsf-fabsl"></a>fabs, fabsf, fabsl
-Calcola il valore assoluto dell'argomento a virgola mobile.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-double fabs(   
-   double x   
-);  
-float fabs(  
-   float x   
-); // C++ only  
-long double fabs(  
-   long double x  
-); // C++ only  
-float fabsf(   
-   float x   
-);  
-long double fabsl(  
-   long double x  
-);  
-```  
-  
-#### <a name="parameters"></a>Parametri  
- `x`  
- Valore a virgola mobile.  
-  
-## <a name="return-value"></a>Valore restituito  
- Le funzioni `fabs` restituiscono il valore assoluto dell'argomento `x`. Non vi è restituzione di errori.  
-  
-|Input|Eccezione SEH|Eccezione Matherr|  
-|-----------|-------------------|-----------------------|  
-|± QNAN,IND|none|_DOMAIN|  
-  
-## <a name="remarks"></a>Note  
- C++ consente l'overload, pertanto è possibile chiamare gli overload di `fabs` se si include l'intestazione \<cmath>. In un programma C, `fabs` accetta e restituisce sempre un double.  
-  
-## <a name="requirements"></a>Requisiti  
-  
-|Funzione|Intestazione C obbligatoria|Intestazione C++ obbligatoria|  
-|--------------|-----------------------|---------------------------|  
-|`fabs`, `fabsf`, `fabsl`|\<math.h>|\<cmath> o \<math.h>|  
-  
- Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md) (Compatibilità) nell'introduzione.  
-  
-## <a name="example"></a>Esempio  
- Vedere l'esempio per [abs](../../c-runtime-library/reference/abs-labs-llabs-abs64.md).  
-  
-## <a name="see-also"></a>Vedere anche  
- [Floating-Point Support](../../c-runtime-library/floating-point-support.md)  (Supporto delle funzioni a virgola mobile)  
- [abs, labs, llabs, _abs64](../../c-runtime-library/reference/abs-labs-llabs-abs64.md)   
- [_cabs](../../c-runtime-library/reference/cabs.md)   
+
+Calcola il valore assoluto dell'argomento a virgola mobile.
+
+## <a name="syntax"></a>Sintassi
+
+```C
+double fabs(
+   double x
+);
+float fabs(
+   float x
+); // C++ only
+long double fabs(
+   long double x
+); // C++ only
+float fabsf(
+   float x
+);
+long double fabsl(
+   long double x
+);
+```
+
+### <a name="parameters"></a>Parametri
+
+*x*<br/>
+Valore a virgola mobile.
+
+## <a name="return-value"></a>Valore restituito
+
+Il **fabs** le funzioni restituiscono il valore assoluto dell'argomento *x*. Non vi è restituzione di errori.
+
+|Input|Eccezione SEH|Eccezione Matherr|
+|-----------|-------------------|-----------------------|
+|± QNAN,IND|none|_DOMAIN|
+
+## <a name="remarks"></a>Note
+
+C++ consente l'overload, pertanto è possibile chiamare degli overload di **fabs** se si include il \<cmath > intestazione. In un programma C **fabs** accetta e restituisce sempre un **doppie**.
+
+## <a name="requirements"></a>Requisiti
+
+|Funzione|Intestazione C obbligatoria|Intestazione C++ obbligatoria|
+|--------------|-----------------------|---------------------------|
+|**fabs**, **fabsf**, **fabsl**|\<math.h>|\<cmath> o \<math.h>|
+
+Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+
+## <a name="example"></a>Esempio
+
+Vedere l'esempio per [abs](abs-labs-llabs-abs64.md).
+
+## <a name="see-also"></a>Vedere anche
+
+[Supporto delle funzioni a virgola mobile](../../c-runtime-library/floating-point-support.md)<br/>
+[abs, labs, llabs, _abs64](abs-labs-llabs-abs64.md)<br/>
+[_cabs](cabs.md)<br/>

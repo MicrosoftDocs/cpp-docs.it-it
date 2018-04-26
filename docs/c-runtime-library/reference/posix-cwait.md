@@ -1,12 +1,12 @@
 ---
 title: cwait | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - cwait
@@ -29,20 +29,21 @@ dev_langs:
 helpviewer_keywords:
 - cwait function
 ms.assetid: 1ad1ab19-02e5-4155-94ca-f02c2d5a90a6
-caps.latest.revision: 
+caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b0812d5cfed841c67d81a114e469b0e1772feb2
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 160557b6418286da66ba10e15954af7c0da9c02f
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="cwait"></a>cwait
-Questa funzione POSIX è deprecata. In alternativa, usare [cwait](../../c-runtime-library/reference/cwait.md) conforme a ISO C++.  
-  
+
+Questa funzione POSIX è deprecata. In alternativa, usare [cwait](cwait.md) conforme a ISO C++.
+
 > [!IMPORTANT]
->  Non è possibile usare questa API nelle applicazioni eseguite in Windows Runtime. Per ulteriori informazioni, vedere [funzioni CRT non supportate nelle App Universal Windows Platform](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Non è possibile usare questa API nelle applicazioni eseguite in Windows Runtime. Per altre informazioni, vedere [Funzioni CRT non supportate nelle app della piattaforma UWP (Universal Windows Platform)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).

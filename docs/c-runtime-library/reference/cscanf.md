@@ -1,12 +1,12 @@
 ---
 title: cscanf | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - cscanf
@@ -29,20 +29,21 @@ dev_langs:
 helpviewer_keywords:
 - cscanf function
 ms.assetid: 51aa2da2-0d53-4272-b510-f3eabf049ea7
-caps.latest.revision: 
+caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e048e3efda3549ff8d64d86db6361bb4676420ec
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 42d473cdeed1b204de24f8dce2624460aa31fb08
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="cscanf"></a>cscanf
-Questa funzione POSIX è deprecata. In alternativa, usare [_cscanf](../../c-runtime-library/reference/cscanf-cscanf-l-cwscanf-cwscanf-l.md) conforme a ISO C++.  
-  
+
+Questa funzione POSIX è deprecata. In alternativa, usare [_cscanf](cscanf-cscanf-l-cwscanf-cwscanf-l.md) conforme a ISO C++.
+
 > [!IMPORTANT]
->  Non è possibile usare questa API nelle applicazioni eseguite in Windows Runtime. Per ulteriori informazioni, vedere [funzioni CRT non supportate nelle App Universal Windows Platform](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Non è possibile usare questa API nelle applicazioni eseguite in Windows Runtime. Per altre informazioni, vedere [Funzioni CRT non supportate nelle app della piattaforma UWP (Universal Windows Platform)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).

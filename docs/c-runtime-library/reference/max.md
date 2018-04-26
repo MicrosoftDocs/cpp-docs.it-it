@@ -1,12 +1,12 @@
 ---
 title: __max | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.custom: ''
+ms.date: 04/05/2018
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - __max
@@ -32,52 +32,54 @@ helpviewer_keywords:
 - maximum macro
 - __max macro
 ms.assetid: 05c936f6-0e22-45d6-a58d-4bc102e9dae2
-caps.latest.revision: 
+caps.latest.revision: 12
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1868106e4224e05d661aba5bfb0ed4dca31f508a
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 5bc89f74bb98b8fb51dc652ab57c57d37a46d5a0
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="max"></a>__max
-Restituisce il maggiore di due valori.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-type __max(  
-   type a,  
-   type b   
-);  
-```  
-  
-#### <a name="parameters"></a>Parametri  
- `type`  
- Qualsiasi tipo di dati numerico.  
-  
- `a, b`  
- Valori di qualsiasi tipo numerico da confrontare.  
-  
-## <a name="return-value"></a>Valore restituito  
- `__max` restituisce il maggiore degli argomenti.  
-  
-## <a name="remarks"></a>Note  
- La macro `__max` confronta due valori e restituisce il valore di quello maggiore. Gli argomenti possono essere di qualsiasi tipo di dati numerico, con o senza segno. Il tipo di dati deve essere lo stesso per entrambi gli argomenti e il valore restituito.  
-  
-## <a name="requirements"></a>Requisiti  
-  
-|Routine|Intestazione obbligatoria|  
-|-------------|---------------------|  
-|`__max`|\<stdlib.h>|  
-  
-## <a name="example"></a>Esempio  
- Per altre informazioni, vedere l'esempio per [__min](../../c-runtime-library/reference/min.md).  
-  
-## <a name="see-also"></a>Vedere anche  
- [Floating-Point Support](../../c-runtime-library/floating-point-support.md)  (Supporto delle funzioni a virgola mobile)  
- [__min](../../c-runtime-library/reference/min.md)
+
+Una macro del preprocessore che restituisce il maggiore dei due valori.
+
+## <a name="syntax"></a>Sintassi
+
+```C
+#define __max(a,b) (((a) > (b)) ? (a) : (b))
+```
+
+### <a name="parameters"></a>Parametri
+
+*un*, *b*<br/>
+Valori di qualsiasi tipo numerico da confrontare.
+
+## <a name="return-value"></a>Valore restituito
+
+**max** restituisce il più elevato dei relativi argomenti.
+
+## <a name="remarks"></a>Note
+
+Il **max** macro Confronta due valori e restituisce il valore più grande. Gli argomenti possono essere di qualsiasi tipo di dati numerico, con o senza segno. Il tipo di dati deve essere lo stesso per entrambi gli argomenti e il valore restituito.
+
+L'argomento restituito viene valutata due volte, la macro. Questo può causare risultati imprevisti se l'argomento è un'espressione che consente di modificare il relativo valore quando viene valutata, ad esempio `*p++`.
+
+## <a name="requirements"></a>Requisiti
+
+|Macro|Intestazione obbligatoria|
+|-------------|---------------------|
+|**__max**|\<stdlib.h>|
+
+## <a name="example"></a>Esempio
+
+Per altre informazioni, vedere l'esempio per [__min](min.md).
+
+## <a name="see-also"></a>Vedere anche
+
+[Supporto delle funzioni a virgola mobile](../../c-runtime-library/floating-point-support.md)<br/>
+[__min](min.md)<br/>

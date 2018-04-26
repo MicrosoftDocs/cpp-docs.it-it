@@ -1,12 +1,12 @@
 ---
 title: _CrtMemDumpStatistics | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _CrtMemDumpStatistics
@@ -31,49 +31,52 @@ helpviewer_keywords:
 - _CrtMemDumpStatistics function
 - CrtMemDumpStatistics function
 ms.assetid: 27b9d731-3184-4a2d-b9a7-6566ab28a9fe
-caps.latest.revision: 
+caps.latest.revision: 15
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 175497b0bd51a8c651af4662991f6b0b85c273f5
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 69a96cf29d4cb9d7f6dbec3f079852beb528778d
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="crtmemdumpstatistics"></a>_CrtMemDumpStatistics
-Esegue il dump delle informazioni di intestazione di debug per uno stato dell'heap specificato in un form leggibile dall'utente (solo versione di debug).  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-void _CrtMemDumpStatistics(   
-   const _CrtMemState *state   
-);  
-```  
-  
-#### <a name="parameters"></a>Parametri  
- `state`  
- Puntatore allo stato dell'heap per eseguire il dump.  
-  
-## <a name="remarks"></a>Note  
- La funzione `_CrtMemDumpStatistics` esegue il dump delle informazioni di intestazione di debug per uno stato dell'heap specificato in un form leggibile dall'utente. Le statistiche di dump possono essere usate dall'applicazione per tenere traccia delle allocazioni e per rilevare problemi di memoria. Lo stato della memoria può contenere uno stato dell'heap specifico o la differenza tra i due stati. Quando [_DEBUG](../../c-runtime-library/debug.md) non è definito, le chiamate a `_CrtMemDumpStatistics` vengono rimosse durante la pre-elaborazione.  
-  
- La funzione `state` deve essere un puntatore a una struttura `_CrtMemState` che è stata compilata da [_CrtMemCheckpoint](../../c-runtime-library/reference/crtmemcheckpoint.md) o restituita da [_CrtMemDifference](../../c-runtime-library/reference/crtmemdifference.md) prima di chiamare `_CrtMemDumpStatistics` . Se `state` è `NULL`, verrà richiamato il gestore di parametri non valido, come descritto in [Parameter Validation](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, `errno` viene impostato su `EINVAL` e non viene eseguita alcuna azione. Per altre informazioni, vedere [errno, _doserrno, _sys_errlist, and _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) (errno, _doserrno, _sys_errlist e _sys_nerr).  
-  
- Per altre informazioni sulle funzioni dello stato dell'heap e sulla struttura `_CrtMemState` , vedere [Heap State Reporting Functions](/visualstudio/debugger/crt-debug-heap-details). Per altre informazioni sulle modalità di allocazione, inizializzazione e gestione dei blocchi di memoria nella versione di debug dell'heap di base, vedere [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details).  
-  
-## <a name="requirements"></a>Requisiti  
-  
-|Routine|Intestazione obbligatoria|Intestazioni facoltative|  
-|-------------|---------------------|----------------------|  
-|`_CrtMemDumpStatistics`|\<crtdbg.h>|\<errno.h>|  
-  
- Per altre informazioni sulla compatibilità, vedere la sezione [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
-  
- **Librerie:** solo le versioni di debug delle [funzionalità della libreria CRT](../../c-runtime-library/crt-library-features.md).  
-  
-## <a name="see-also"></a>Vedere anche  
- [Routine di debug](../../c-runtime-library/debug-routines.md)
+
+Esegue il dump delle informazioni di intestazione di debug per uno stato dell'heap specificato in un form leggibile dall'utente (solo versione di debug).
+
+## <a name="syntax"></a>Sintassi
+
+```C
+void _CrtMemDumpStatistics(
+   const _CrtMemState *state
+);
+```
+
+### <a name="parameters"></a>Parametri
+
+*stato* puntatore allo stato dell'heap per eseguire il dump.
+
+## <a name="remarks"></a>Note
+
+Il **CrtMemDumpStatistics** funzione trasferisce le informazioni di intestazione di debug per uno stato specificato dell'heap in un form leggibile dall'utente. Le statistiche di dump possono essere usate dall'applicazione per tenere traccia delle allocazioni e per rilevare problemi di memoria. Lo stato della memoria può contenere uno stato dell'heap specifico o la differenza tra i due stati. Quando si [debug](../../c-runtime-library/debug.md) non è definito, le chiamate a **CrtMemDumpStatistics** vengono rimosse durante la pre-elaborazione.
+
+Il *stato* parametro deve essere un puntatore a un **CrtMemState** struttura che è stato compilato da [CrtMemCheckpoint](crtmemcheckpoint.md) o restituiti da [_ CrtMemDifference](crtmemdifference.md) prima **CrtMemDumpStatistics** viene chiamato. Se *stato* viene **NULL**, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, **errno** è impostata su **EINVAL** e viene eseguita alcuna azione. Per altre informazioni, vedere [errno, _doserrno, _sys_errlist, and _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) (errno, _doserrno, _sys_errlist e _sys_nerr).
+
+Per ulteriori informazioni sulle funzioni dello stato dell'heap e il **CrtMemState** struttura, vedere [funzioni segnalazione dello stato dell'Heap](/visualstudio/debugger/crt-debug-heap-details). Per altre informazioni sulle modalità di allocazione, inizializzazione e gestione dei blocchi di memoria nella versione di debug dell'heap di base, vedere [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details).
+
+## <a name="requirements"></a>Requisiti
+
+|Routine|Intestazione obbligatoria|Intestazioni facoltative|
+|-------------|---------------------|----------------------|
+|**_CrtMemDumpStatistics**|\<crtdbg.h>|\<errno.h>|
+
+Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+
+**Librerie:** solo le versioni di debug delle [funzionalità della libreria CRT](../../c-runtime-library/crt-library-features.md).
+
+## <a name="see-also"></a>Vedere anche
+
+[Routine di debug](../../c-runtime-library/debug-routines.md)<br/>

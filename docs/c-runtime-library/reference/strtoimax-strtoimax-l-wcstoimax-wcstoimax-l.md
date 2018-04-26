@@ -1,12 +1,12 @@
 ---
 title: strtoimax, _strtoimax_l, wcstoimax, _wcstoimax_l | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - wcstoimax
@@ -42,106 +42,111 @@ helpviewer_keywords:
 - _wcstoimax_l function
 - wcstoimax function
 ms.assetid: 4530d3dc-aaac-4a76-b7cf-29ae3c98d0ae
-caps.latest.revision: 
+caps.latest.revision: 5
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4125ebf922ed3525d5efd6a92b1273ca18d0fd7d
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 60ab59992dc36502fff3d25cf6b0c7e2551e2564
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="strtoimax-strtoimaxl-wcstoimax-wcstoimaxl"></a>strtoimax, _strtoimax_l, wcstoimax, _wcstoimax_l
-Converte una stringa in un valore intero con il tipo Integer con segno supportato più grande.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-intmax_t strtoimax(  
-   const char *nptr,  
-   char **endptr,  
-   int base   
-);  
-intmax_t wcstoimax(  
-   const wchar_t *nptr,  
-   wchar_t **endptr,  
-   int base   
-);  
-intmax_t _strtoimax_l(  
-   const char *nptr,  
-   char **endptr,  
-   int base,  
-   _locale_t locale  
-);  
-intmax_t _wcstoimax_l(  
-   const wchar_t *nptr,  
-   wchar_t **endptr,  
-   int base,  
-   _locale_t locale  
-);  
-```  
-  
-#### <a name="parameters"></a>Parametri  
- `nptr`  
- Stringa con terminazione Null da convertire.  
-  
- `endptr`  
- Puntatore al carattere che interrompe la lettura.  
-  
- `base`  
- Base numerica da usare.  
-  
- `locale`  
- Impostazioni locali da usare.  
-  
-## <a name="return-value"></a>Valore restituito  
- `strtoimax` restituisce il valore rappresentato nella stringa `nptr`, tranne quando la rappresentazione potrebbe causare un overflow, nel qual caso restituisce `INTMAX_MAX` o `INTMAX_MIN` e `errno` viene impostato su `ERANGE`. La funzione restituisce 0 se è non possibile eseguire alcuna conversione. `wcstoimax` restituisce i valori in modo analogo a `strtoimax`.  
-  
- `INTMAX_MAX` e `INTMAX_MIN` sono definiti in stdint.h.  
-  
- Se `nptr` è `NULL` o `base` è diverso da zero e minore di 2 o maggiore di 36, `errno` viene impostato su `EINVAL`.  
-  
- Per altre informazioni sui codici restituiti, vedere [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
-  
-## <a name="remarks"></a>Note  
- La funzione `strtoimax` converte `nptr` in un valore `intmax_t`. La versione a caratteri wide di `strtoimax` è `wcstoimax`. Il relativo argomento `nptr` è una stringa di caratteri wide. In caso contrario, il comportamento di queste funzioni è identico. Entrambe le funzioni interrompono la lettura della stringa `nptr` in corrispondenza del primo carattere che non può essere riconosciuto come parte di un numero. Potrebbe trattarsi del carattere Null di terminazione o del primo carattere numerico maggiore o uguale a `base`.  
-  
- L'impostazione della categoria `LC_NUMERIC` delle impostazioni locali determina il riconoscimento del carattere di base `nptr`. Per altre informazioni, vedere [setlocale, wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). Le funzioni senza il suffisso `_l` usano le impostazioni locali correnti. `_strtoimax_l` e `_wcstoimax_l` sono identiche alle funzioni corrispondenti con il suffisso `_l`, ma usano le impostazioni locali passate. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).  
-  
- Se `endptr` non è `NULL`, un puntatore al carattere che ha interrotto la lettura viene archiviato in corrispondenza della posizione a cui punta `endptr`. Se è non possibile eseguire alcuna conversione (non vengono trovate cifre valide o viene specificata una base non valida), il valore di `nptr` viene archiviato in corrispondenza della posizione a cui punta `endptr`.  
-  
-### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico  
-  
-|Routine TCHAR.H|_UNICODE e _MBCS non definiti|_MBCS definito|_UNICODE definito|  
-|---------------------|------------------------------------|--------------------|-----------------------|  
-|`_tcstoimax`|`strtoimax`|`strtoimax`|`wcstoimax`|  
-|`_tcstoimax_l`|`strtoimax_l`|`_strtoimax_l`|`_wcstoimax_l`|  
-  
- `strtoimax` prevede che `nptr` punti a una stringa nel formato seguente:  
-  
- [`whitespace`] [{`+` &#124; `-`}] [`0` [{ `x` &#124; `X` }]] [`digits` &#124; `letters`]  
-  
- `whitespace` può essere costituito da caratteri di spazio e tabulazione, che vengono ignorati. `digits` indica una o più cifre decimali. `letters` corrisponde a una o più lettere da 'a' a 'z' (o da 'A' a 'Z'). Il primo carattere che non corrisponde a questo formato interrompe la lettura. Se il valore `base` è compreso tra 2 e 36, viene usato come base del numero. Se `base` è 0, per determinare la base vengono usati i caratteri iniziali della stringa a cui punta `nptr`. Se il primo carattere è '0' e il secondo carattere non è 'x' né 'X', la stringa viene interpretata come un intero ottale. Se il primo carattere è '0' e il secondo carattere è 'x' o 'X', la stringa viene interpretata come integer esadecimale. Se il primo carattere è compreso tra '1' e '9', la stringa viene interpretata come integer decimale. Alle lettere da 'a' a 'z' (o da 'A' a 'Z') vengono assegnati i valori da 10 a 35. Sono consentite solo le lettere con valori assegnati minori di `base`. Il primo carattere non compreso nell'intervallo della base interrompe la lettura. Ad esempio, se `base` è 0 e il primo carattere letto è '0', si presuppone un intero ottale e il carattere '8' o '9' interromperà la lettura.  
-  
-## <a name="requirements"></a>Requisiti  
-  
-|Routine|Intestazione obbligatoria|  
-|-------------|---------------------|  
-|`strtoimax`, `_strtoimax_l`, `wcstoimax`, `_wcstoimax_l`|\<inttypes.h>|  
-  
- Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).  
-  
-## <a name="see-also"></a>Vedere anche  
- [Data Conversion](../../c-runtime-library/data-conversion.md)  (Conversione dei dati)  
- [Locale](../../c-runtime-library/locale.md)  (Impostazioni locali)  
- [localeconv](../../c-runtime-library/reference/localeconv.md)   
- [setlocale, _wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)   
- [Funzioni da stringa a valore numerico](../../c-runtime-library/string-to-numeric-value-functions.md)   
- [strtod, _strtod_l, wcstod, _wcstod_l](../../c-runtime-library/reference/strtod-strtod-l-wcstod-wcstod-l.md)   
- [strtol, wcstol, _strtol_l, _wcstol_l](../../c-runtime-library/reference/strtol-wcstol-strtol-l-wcstol-l.md)   
- [strtoul, _strtoul_l, wcstoul, _wcstoul_l](../../c-runtime-library/reference/strtoul-strtoul-l-wcstoul-wcstoul-l.md)   
- [strtoumax, _strtoumax_l, wcstoumax, _wcstoumax_l](../../c-runtime-library/reference/strtoumax-strtoumax-l-wcstoumax-wcstoumax-l.md)   
- [atof, _atof_l, _wtof, _wtof_l](../../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)
+
+Converte una stringa in un valore intero con il tipo Integer con segno supportato più grande.
+
+## <a name="syntax"></a>Sintassi
+
+```C
+intmax_t strtoimax(
+   const char *strSource,
+   char **endptr,
+   int base
+);
+intmax_t wcstoimax(
+   const wchar_t *strSource,
+   wchar_t **endptr,
+   int base
+);
+intmax_t _strtoimax_l(
+   const char *strSource,
+   char **endptr,
+   int base,
+   _locale_t locale
+);
+intmax_t _wcstoimax_l(
+   const wchar_t *strSource,
+   wchar_t **endptr,
+   int base,
+   _locale_t locale
+);
+```
+
+### <a name="parameters"></a>Parametri
+
+*strSource*<br/>
+Stringa con terminazione Null da convertire.
+
+*endptr*<br/>
+Puntatore al carattere che interrompe la lettura.
+
+*base*<br/>
+Base numerica da usare.
+
+*locale*<br/>
+Impostazioni locali da usare.
+
+## <a name="return-value"></a>Valore restituito
+
+**strtoimax** restituisce il valore rappresentato nella stringa *strSource*, tranne quando la rappresentazione potrebbe provocare un overflow, in tal caso, restituisce **INTMAX_MAX** o**INTMAX_MIN**, e **errno** è impostato su **ERANGE**. La funzione restituisce 0 se è non possibile eseguire alcuna conversione. **wcstoimax** restituisce i valori in modo analogo a **strtoimax**.
+
+**INTMAX_MAX** e **INTMAX_MIN** sono definite nel stdint. h.
+
+Se *strSource* viene **NULL** o la *base* è diverso da zero e uno minore di 2 o superiore a 36, **errno** è impostato su **EINVAL** .
+
+Per altre informazioni sui codici restituiti, vedere [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+
+## <a name="remarks"></a>Note
+
+Il **strtoimax** funzione converte *strSource* a un **intmax_t**. La versione a caratteri "wide" di **strtoimax** viene **wcstoimax**; relativo *strSource* argomento è una stringa di caratteri "wide". In caso contrario, il comportamento di queste funzioni è identico. Entrambe le funzioni di smettere di leggere la stringa *strSource* con il primo carattere che non è riconosciuto come parte di un numero. Ciò potrebbe essere il carattere di terminazione null, o potrebbe essere il primo carattere numerico che è maggiore o uguale a *base*.
+
+Le impostazioni locali **LC_NUMERIC** categoria determina il riconoscimento del carattere radice *strSource*; per ulteriori informazioni, vedere [setlocale, wsetlocale](setlocale-wsetlocale.md). Le funzioni che non hanno il **l** suffisso usano le impostazioni locali; **strtoimax_l** e **wcstoimax_l** sono identiche alle funzioni corrispondenti che non hanno il **l** suffisso ad eccezione del fatto che utilizzano le impostazioni locali che passato. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
+
+Se *endptr* non **NULL**, un puntatore al carattere che ha interrotto l'analisi viene archiviato in una posizione che punta alla *endptr*. Se è non possibile eseguire alcuna conversione sono state trovate le cifre non valide o è stata specificata una base non valida, il valore di *strSource* archiviato in una posizione che punta alla *endptr*.
+
+### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
+
+|Routine TCHAR.H|_UNICODE e _MBCS non definiti|_MBCS definito|_UNICODE definito|
+|---------------------|------------------------------------|--------------------|-----------------------|
+|**_tcstoimax**|**strtoimax**|**strtoimax**|**wcstoimax**|
+|**_tcstoimax_l**|**strtoimax_l**|**_strtoimax_l**|**_wcstoimax_l**|
+
+**strtoimax** prevede *strSource* in modo che punti a una stringa nel formato seguente:
+
+> [*whitespace*] [{**+** &#124; **-**}] [**0** [{ **x** &#124; **X** }]] [*cifre* &#124; *lettere*]  
+
+Un *whitespace* può essere costituito da caratteri di spazio e tabulazione, che vengono ignorati; *cifre* sono uno o più cifre decimali. *lettere* sono uno o più lettere 'a' a 'z' ('A' a 'Z'). Il primo carattere che non corrisponde a questo formato interrompe la lettura. Se *base* è compreso tra 2 e 36, viene usato come base del numero. Se *base* è 0, i caratteri iniziali della stringa a cui puntata *strSource* vengono utilizzati per determinare la base. Se il primo carattere è '0' e il secondo carattere non è 'x' né 'X', la stringa viene interpretata come un intero ottale. Se il primo carattere è '0' e il secondo carattere è 'x' o 'X', la stringa viene interpretata come integer esadecimale. Se il primo carattere è compreso tra '1' e '9', la stringa viene interpretata come integer decimale. Alle lettere da 'a' a 'z' (o da 'A' a 'Z') vengono assegnati i valori da 10 a 35. Sono consentite solo le lettere con valori assegnati minori di *base*. Il primo carattere non compreso nell'intervallo della base interrompe la lettura. Ad esempio, se *base* è 0 e il primo carattere analizzato è '0', si presuppone un integer ottale e un carattere '8' o '9' viene arrestata l'analisi.
+
+## <a name="requirements"></a>Requisiti
+
+|Routine|Intestazione obbligatoria|
+|-------------|---------------------|
+|**strtoimax**, **strtoimax_l**, **wcstoimax**, **wcstoimax_l**|\<inttypes.h>|
+
+Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+
+## <a name="see-also"></a>Vedere anche
+
+[Conversione dei dati](../../c-runtime-library/data-conversion.md)<br/>
+[Impostazioni locali](../../c-runtime-library/locale.md)<br/>
+[localeconv](localeconv.md)<br/>
+[setlocale, _wsetlocale](setlocale-wsetlocale.md)<br/>
+[Funzioni da stringa a valore numerico](../../c-runtime-library/string-to-numeric-value-functions.md)<br/>
+[strtod, _strtod_l, wcstod, _wcstod_l](strtod-strtod-l-wcstod-wcstod-l.md)<br/>
+[strtol, wcstol, _strtol_l, _wcstol_l](strtol-wcstol-strtol-l-wcstol-l.md)<br/>
+[strtoul, _strtoul_l, wcstoul, _wcstoul_l](strtoul-strtoul-l-wcstoul-wcstoul-l.md)<br/>
+[strtoumax, _strtoumax_l, wcstoumax, _wcstoumax_l](strtoumax-strtoumax-l-wcstoumax-wcstoumax-l.md)<br/>
+[atof, _atof_l, _wtof, _wtof_l](atof-atof-l-wtof-wtof-l.md)<br/>

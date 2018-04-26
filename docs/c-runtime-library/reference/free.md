@@ -1,12 +1,12 @@
 ---
 title: free | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - free
@@ -31,63 +31,67 @@ helpviewer_keywords:
 - memory blocks, deallocating
 - free function
 ms.assetid: 74ded9cf-1863-432e-9306-327a42080bb8
-caps.latest.revision: 
+caps.latest.revision: 14
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 161b067c432a30e58db51410f0540d60d5e74bc8
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: ecb214f5b7f53682fe1f1327089836a172319015
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="free"></a>free
-Dealloca o libera un blocco di memoria.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-void free(   
-   void *memblock   
-);  
-```  
-  
-#### <a name="parameters"></a>Parametri  
- `memblock`  
- Blocco di memoria precedentemente allocata da liberare.  
-  
-## <a name="remarks"></a>Note  
- La funzione `free` dealloca un blocco di memoria (`memblock`) precedentemente allocato da una chiamata a `calloc`, `malloc` o `realloc`. Il numero di byte liberati è equivalente al numero di byte richiesto quando il blocco è stato allocato (o riallocato, nel caso di `realloc`). Se `memblock` è `NULL`, il puntatore viene ignorato e `free` terminerà immediatamente. Il tentativo di liberare un puntatore non valido (un puntatore a un blocco di memoria che non è stato allocato da `calloc`, `malloc` o `realloc`) può interessare le richieste di allocazione successive e causare errori.  
-  
- Se si verifica un errore nel liberare la memoria, `errno` viene impostato con informazioni dal sistema operativo sulla natura dell'errore. Per altre informazioni vedere [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
-  
- Dopo che un blocco di memoria è stato liberato, [_heapmin](../../c-runtime-library/reference/heapmin.md) riduce la quantità di memoria libera nell'heap unendo le aree inutilizzate e rilasciandole nuovamente al sistema operativo. La memoria liberata che non viene rilasciata al sistema operativo viene ripristinata al pool libero ed è disponibile nuovamente per l'allocazione.  
-  
- Quando l'applicazione viene collegata a una versione di debug delle librerie di runtime C, `free` viene risolto in [_free_dbg](../../c-runtime-library/reference/free-dbg.md). Per altre informazioni su come viene gestito l'heap durante il processo di debug, vedere [The CRT Debug Heap](/visualstudio/debugger/crt-debug-heap-details) (Informazioni dettagliate sull'heap di debug CRT).  
-  
- `free` è contrassegnato `__declspec(noalias)`, pertanto si garantisce che la funzione non modifichi le variabili globali. Per altre informazioni, vedere [noalias](../../cpp/noalias.md).  
-  
- Per liberare la memoria allocata con [_malloca](../../c-runtime-library/reference/malloca.md), usare [_freea](../../c-runtime-library/reference/freea.md).  
-  
-## <a name="requirements"></a>Requisiti  
-  
-|Funzione|Intestazione obbligatoria|  
-|--------------|---------------------|  
-|`free`|\<stdlib.h> e \<malloc.h>|  
-  
- Per altre informazioni sulla compatibilità, vedere la sezione [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
-  
-## <a name="example"></a>Esempio  
- Vedere l'esempio per [malloc](../../c-runtime-library/reference/malloc.md).  
-  
-## <a name="see-also"></a>Vedere anche  
- [Allocazione di memoria](../../c-runtime-library/memory-allocation.md)   
- [_alloca](../../c-runtime-library/reference/alloca.md)   
- [calloc](../../c-runtime-library/reference/calloc.md)   
- [malloc](../../c-runtime-library/reference/malloc.md)   
- [realloc](../../c-runtime-library/reference/realloc.md)   
- [_free_dbg](../../c-runtime-library/reference/free-dbg.md)   
- [_heapmin](../../c-runtime-library/reference/heapmin.md)   
- [_freea](../../c-runtime-library/reference/freea.md)
+
+Dealloca o libera un blocco di memoria.
+
+## <a name="syntax"></a>Sintassi
+
+```C
+void free(
+   void *memblock
+);
+```
+
+### <a name="parameters"></a>Parametri
+
+*memblock* allocato in precedenza il blocco di memoria da liberare.
+
+## <a name="remarks"></a>Note
+
+Il **gratuita** funzione dealloca un blocco di memoria (*memblock*) precedentemente allocato da una chiamata a **calloc**, **malloc**, o **realloc**. Il numero di byte liberati è equivalente al numero di byte richiesto quando il blocco è stato allocato (o riallocato, nel caso di **realloc**). Se *memblock* viene **NULL**, il puntatore viene ignorato e **libero** restituisce immediatamente. Tentativo di liberare un puntatore non valido (un puntatore a un blocco di memoria che non è stato allocato da **calloc**, **malloc**, o **realloc**) possono influire sulle richieste di allocazione successive e provocare errori.
+
+Se si verifica un errore nel liberare la memoria **errno** viene impostato con informazioni dal sistema operativo sulla natura dell'errore. Per altre informazioni, vedere [errno, _doserrno, _sys_errlist, and _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) (errno, _doserrno, _sys_errlist e _sys_nerr).
+
+Dopo che un blocco di memoria è stato liberato, [_heapmin](heapmin.md) riduce la quantità di memoria libera nell'heap unendo le aree inutilizzate e rilasciandole nuovamente al sistema operativo. La memoria liberata che non viene rilasciata al sistema operativo viene ripristinata al pool libero ed è disponibile nuovamente per l'allocazione.
+
+Quando l'applicazione viene collegata a una versione di debug delle librerie di runtime C **gratuita** risolve [free_dbg](free-dbg.md). Per altre informazioni su come viene gestito l'heap durante il processo di debug, vedere [The CRT Debug Heap](/visualstudio/debugger/crt-debug-heap-details) (Informazioni dettagliate sull'heap di debug CRT).
+
+**libera** contrassegnato `__declspec(noalias)`, vale a dire che la funzione è sicuramente non per modificare le variabili globali. Per altre informazioni, vedere [noalias](../../cpp/noalias.md).
+
+Per liberare la memoria allocata con [_malloca](malloca.md), usare [_freea](freea.md).
+
+## <a name="requirements"></a>Requisiti
+
+|Funzione|Intestazione obbligatoria|
+|--------------|---------------------|
+|**free**|\<stdlib.h> e \<malloc.h>|
+
+Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+
+## <a name="example"></a>Esempio
+
+Vedere l'esempio per [malloc](malloc.md).
+
+## <a name="see-also"></a>Vedere anche
+
+[Allocazione di memoria](../../c-runtime-library/memory-allocation.md)<br/>
+[_alloca](alloca.md)<br/>
+[calloc](calloc.md)<br/>
+[malloc](malloc.md)<br/>
+[realloc](realloc.md)<br/>
+[_free_dbg](free-dbg.md)<br/>
+[_heapmin](heapmin.md)<br/>
+[_freea](freea.md)<br/>

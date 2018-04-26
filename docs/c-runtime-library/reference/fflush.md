@@ -1,12 +1,12 @@
 ---
 title: fflush | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - fflush
@@ -32,108 +32,113 @@ helpviewer_keywords:
 - flushing
 - fflush function
 ms.assetid: 8bbc753f-dc74-4e77-b563-74da2835e92b
-caps.latest.revision: 
+caps.latest.revision: 18
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 23d90b61862736fc97c18343fe82f8ccf3aa42b5
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 9a92affa1483c8dba9be0718acc00d4574eb44bb
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="fflush"></a>fflush
-Scarica un flusso.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-int fflush(   
-   FILE *stream   
-);  
-```  
-  
-#### <a name="parameters"></a>Parametri  
- `stream`  
- Puntatore alla struttura `FILE` .  
-  
-## <a name="return-value"></a>Valore restituito  
- `fflush` restituisce 0 se il buffer è stato scaricato correttamente. Il valore 0 viene restituito anche nel caso in cui il flusso specificato non ha nessun buffer o viene aperto in sola lettura. Un valore restituito di `EOF` indica un errore.  
-  
+
+Scarica un flusso.
+
+## <a name="syntax"></a>Sintassi
+
+```C
+int fflush(
+   FILE *stream
+);
+```
+
+### <a name="parameters"></a>Parametri
+
+*Flusso*<br/>
+Puntatore alla struttura **FILE**.
+
+## <a name="return-value"></a>Valore restituito
+
+**fflush** restituisce 0 se il buffer è stato scaricato correttamente. Il valore 0 viene restituito anche nel caso in cui il flusso specificato non ha nessun buffer o viene aperto in sola lettura. Valore restituito di **EOF** indica un errore.
+
 > [!NOTE]
->  Se `fflush` restituisce `EOF`, i dati potrebbero essere andati persi a causa di un errore di scrittura. Quando si configura un gestore degli errori critici, è consigliabile disattivare il buffering con la funzione `setvbuf` o usare routine I/O di basso livello, ad esempio `_open`, `_close` e `_write` anziché le funzioni I/O del flusso.  
-  
-## <a name="remarks"></a>Note  
- La funzione `fflush` scarica il flusso `stream`. Se il flusso è stato aperto in modalità scrittura o in modalità aggiornamento e l'ultima operazione è stata un'operazione di scrittura, il contenuto del buffer di flusso viene scritto nel file sottostante o nel dispositivo e il buffer viene eliminato. Se il flusso è stato aperto in modalità di lettura o se il flusso non ha buffer, la chiamata a `fflush` non ha alcun effetto e qualsiasi buffer viene mantenuto. Una chiamata a `fflush` annulla l'effetto di qualsiasi chiamata precedente a `ungetc` per il flusso. Il flusso rimane aperto dopo la chiamata.  
-  
- Se `stream` è `NULL`, il comportamento è lo stesso di una chiamata a `fflush` su ogni flusso aperto. Tutti i flussi aperti in modalità scrittura e in modalità aggiornamento in cui l'ultima operazione è stata un'operazione di scrittura vengono scaricati. La chiamata non ha effetto su altri flussi.  
-  
- I buffer sono normalmente gestiti dal sistema operativo, il quale determina il momento ottimale per scrivere automaticamente i dati sul disco: quando un buffer è pieno, quando un flusso viene chiuso o quando un programma termina normalmente senza chiudere i flussi. La funzionalità di commit al disco della libreria di runtime consente di assicurare che i dati critici siano scritti direttamente su disco anziché nei buffer del sistema operativo. Senza riscrivere un programma esistente, è possibile abilitare questa funzionalità collegando i file oggetto del programma a COMMODE.OBJ. Nel file eseguibile risultante, le chiamate a `_flushall` scrivono il contenuto di tutti i buffer sul disco. Solo `_flushall` e `fflush` sono interessati da COMMODE.OBJ.  
-  
- Per informazioni sul controllo della funzionalità di commit al disco, vedere [I/O del flusso](../../c-runtime-library/stream-i-o.md), [fopen](../../c-runtime-library/reference/fopen-wfopen.md) e [_fdopen](../../c-runtime-library/reference/fdopen-wfdopen.md).  
-  
- Questa funzione blocca il thread che chiama e quindi è thread-safe. Per una versione che non blocca il thread, vedere `_fflush_nolock`.  
-  
-## <a name="requirements"></a>Requisiti  
-  
-|Funzione|Intestazione obbligatoria|  
-|--------------|---------------------|  
-|`fflush`|\<stdio.h>|  
-  
- Per altre informazioni sulla compatibilità, vedere la sezione [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
-  
-## <a name="example"></a>Esempio  
-  
-```  
-// crt_fflush.c  
-#include <stdio.h>  
-#include <conio.h>  
-  
-int main( void )  
-{  
-   int integer;  
-   char string[81];  
-  
-   // Read each word as a string.  
-   printf( "Enter a sentence of four words with scanf: " );  
-   for( integer = 0; integer < 4; integer++ )  
-   {  
-      scanf_s( "%s", string, sizeof(string) );        
-      printf( "%s\n", string );  
-   }  
-  
-   // You must flush the input buffer before using gets.   
-   // fflush on input stream is an extension to the C standard   
-   fflush( stdin );     
-   printf( "Enter the same sentence with gets: " );  
-   gets_s( string, sizeof(string) );  
-   printf( "%s\n", string );  
-}  
-```  
-  
-```Output  
-  
-      This is a test  
-This is a test  
-  
-```  
-  
-```Output  
-  
-      This is a test  
-This is a testEnter a sentence of four words with scanf: This is a test  
-This  
-is  
-a  
-test  
-Enter the same sentence with gets: This is a test  
-This is a test  
-```  
-  
-## <a name="see-also"></a>Vedere anche  
- [I/O di flusso](../../c-runtime-library/stream-i-o.md)   
- [fclose, _fcloseall](../../c-runtime-library/reference/fclose-fcloseall.md)   
- [_flushall](../../c-runtime-library/reference/flushall.md)   
- [setvbuf](../../c-runtime-library/reference/setvbuf.md)
+> Se **fflush** restituisce **EOF**, dati potrebbero essere andati persi a causa di un errore di scrittura. Quando si configura un gestore degli errori critici, è consigliabile disattivare la memorizzazione nel buffer con il **setvbuf** funzione o utilizzare routine dei / o di basso livello, ad esempio **Open**, **Close**, e **Write** anziché le funzioni di flusso i/o.
+
+## <a name="remarks"></a>Note
+
+Il **fflush** funzione Scarica il flusso *flusso*. Se il flusso è stato aperto in modalità scrittura o in modalità aggiornamento e l'ultima operazione è stata un'operazione di scrittura, il contenuto del buffer di flusso viene scritto nel file sottostante o nel dispositivo e il buffer viene eliminato. Se il flusso è stato aperto in modalità lettura o se il flusso non dispone di alcun buffer, la chiamata a **fflush** non ha alcun effetto e viene mantenuto alcun buffer. Una chiamata a **fflush** Annulla l'effetto di qualsiasi chiamata precedente a **ungetc** per il flusso. Il flusso rimane aperto dopo la chiamata.
+
+Se *flusso* viene **NULL**, il comportamento è lo stesso come una chiamata a **fflush** su ogni flusso aperto. Tutti i flussi aperti in modalità scrittura e in modalità aggiornamento in cui l'ultima operazione è stata un'operazione di scrittura vengono scaricati. La chiamata non ha effetto su altri flussi.
+
+I buffer sono normalmente gestiti dal sistema operativo, il quale determina il momento ottimale per scrivere automaticamente i dati sul disco: quando un buffer è pieno, quando un flusso viene chiuso o quando un programma termina normalmente senza chiudere i flussi. La funzionalità di commit al disco della libreria di runtime consente di assicurare che i dati critici siano scritti direttamente su disco anziché nei buffer del sistema operativo. Senza riscrivere un programma esistente, è possibile abilitare questa funzionalità collegando i file oggetto del programma a COMMODE.OBJ. Nel file eseguibile risultante, le chiamate a **FlushAll** scrivono il contenuto di tutti i buffer sul disco. Solo **FlushAll** e **fflush** interessati da commode.
+
+Per informazioni sul controllo della funzionalità di commit al disco, vedere [I/O del flusso](../../c-runtime-library/stream-i-o.md), [fopen](fopen-wfopen.md) e [_fdopen](fdopen-wfdopen.md).
+
+Questa funzione blocca il thread che chiama e quindi è thread-safe. Per una versione non di blocco, vedere **fflush_nolock**.
+
+## <a name="requirements"></a>Requisiti
+
+|Funzione|Intestazione obbligatoria|
+|--------------|---------------------|
+|**fflush**|\<stdio.h>|
+
+Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+
+## <a name="example"></a>Esempio
+
+```C
+// crt_fflush.c
+#include <stdio.h>
+#include <conio.h>
+
+int main( void )
+{
+   int integer;
+   char string[81];
+
+   // Read each word as a string.
+   printf( "Enter a sentence of four words with scanf: " );
+   for( integer = 0; integer < 4; integer++ )
+   {
+      scanf_s( "%s", string, sizeof(string) );
+      printf( "%s\n", string );
+   }
+
+   // You must flush the input buffer before using gets.
+   // fflush on input stream is an extension to the C standard
+   fflush( stdin );
+   printf( "Enter the same sentence with gets: " );
+   gets_s( string, sizeof(string) );
+   printf( "%s\n", string );
+}
+```
+
+```Output
+
+      This is a test
+This is a test
+
+```
+
+```Output
+
+      This is a test
+This is a testEnter a sentence of four words with scanf: This is a test
+This
+is
+a
+test
+Enter the same sentence with gets: This is a test
+This is a test
+```
+
+## <a name="see-also"></a>Vedere anche
+
+[I/O di flusso](../../c-runtime-library/stream-i-o.md)<br/>
+[fclose, _fcloseall](fclose-fcloseall.md)<br/>
+[_flushall](flushall.md)<br/>
+[setvbuf](setvbuf.md)<br/>

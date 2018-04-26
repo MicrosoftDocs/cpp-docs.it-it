@@ -1,12 +1,12 @@
 ---
 title: Classe regex_constants | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - regex/std::regex_constants
@@ -91,43 +91,47 @@ helpviewer_keywords:
 - std::regex_constants [C++], optimize
 - std::regex_constants [C++], collate
 ms.assetid: 4a69c0ba-c46d-46e4-bd29-6f4efb805f26
-caps.latest.revision: 
+caps.latest.revision: 18
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b14c219f755e50e1ede0e8fd58d9a5158283235
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 239dbe69d32a5d9a463e33d9d3c1076aa0e79f50
+ms.sourcegitcommit: dd1a509526fa8bb18e97ab7bc7b91cbdb3ec7059
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="regexconstants-class"></a>Classe regex_constants
-Spazio dei nomi per i flag dell'espressione regolare.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-namespace regex_constants {  
-    enum syntax_option_type;  
-    enum match_flag_type;  
-    enum error_type;  
- }  
-```  
-  
-## <a name="remarks"></a>Note  
- Lo spazio dei nomi `regex_constants` incapsula molti tipi di flag e i valori dei relativi flag associati.  
-  
-## <a name="requirements"></a>Requisiti  
- **Intestazione:** \<regex>  
-  
- **Spazio dei nomi:** std  
-  
-##  <a name="error_type"></a>  regex_constants::error_type  
- Indicatori per segnalare errori di sintassi di espressione regolare.  
-  
-```  
+
+Spazio dei nomi per i flag dell'espressione regolare.
+
+## <a name="syntax"></a>Sintassi
+
+```cpp
+namespace regex_constants {
+    enum syntax_option_type;
+    enum match_flag_type;
+    enum error_type;
+ }
+```
+
+## <a name="remarks"></a>Note
+
+Lo spazio dei nomi `regex_constants` incapsula molti tipi di flag e i valori dei relativi flag associati.
+
+## <a name="requirements"></a>Requisiti
+
+**Intestazione:** \<regex>
+
+**Spazio dei nomi:** std
+
+## <a name="error_type"></a>  regex_constants::error_type
+
+Indicatori per segnalare errori di sintassi di espressione regolare.
+
+```cpp
 enum error_type
     {    // identify error
     error_collate,
@@ -145,49 +149,51 @@ enum error_type
     error_stack,
     error_parse,
     error_syntax
-    };  
-```  
-  
-### <a name="remarks"></a>Note  
- Il tipo è un tipo enumerato che descrive un oggetto che può contenere flag di errore. I valori flag distinti sono:  
-  
- `error_backref` -- l'espressione contiene un backreference non valido  
-  
- `error_badbrace` -- l'espressione contiene un numero non valido in un'espressione { }  
-  
- `error_badrepeat` -- un'espressione di ripetizione (uno tra '*', '', '+', '{' nella maggior parte dei contesti) non può essere preceduta da un'espressione  
-  
- `error_brace` -- l'espressione contiene una mancata corrispondenza di '{' o '}'  
-  
- `error_brack` -- l'espressione contiene una mancata corrispondenza di '[' o ']'  
-  
- `error_collate` -- l'espressione contiene un nome di elemento di collazione non valido  
-  
- `error_complexity` -- una corrispondenza effettuata è fallita perché era troppo complessa  
-  
- `error_ctype` -- l'espressione contiene un nome della classe di carattere non valido  
-  
- `error_escape` -- l'espressione contiene una sequenza di escape non valida  
-  
- `error_paren` -- l'espressione contiene una mancata corrispondenza di '(' o ')'  
-  
- `error_parse` -- analisi dell'espressione non riuscita  
-  
- `error_range` -- l'espressione contiene un identificatore di intervallo di carattere non valido  
-  
- `error_space` -- l'analisi di un'espressione regolare è fallita perché non erano disponibili risorse sufficienti  
-  
- `error_stack` -- una corrispondenza effettuata è fallita perché non era disponibile memoria sufficiente  
-  
- `error_syntax` -- l'analisi è fallita per un errore di sintassi  
-  
- `error_backref` -- l'espressione contiene un backreference non valido  
-  
-##  <a name="match_flag_type"></a>  regex_constants::match_flag_type  
- Flag per opzioni di corrispondenza delle espressioni regolari.  
-  
-```  
-enum match_flag_type 
+    };
+```
+
+### <a name="remarks"></a>Note
+
+Il tipo è un tipo enumerato che descrive un oggetto che può contenere flag di errore. I valori flag distinti sono:
+
+`error_backref` -- l'espressione contiene un backreference non valido
+
+`error_badbrace` -- l'espressione contiene un numero non valido in un'espressione { }
+
+`error_badrepeat` -- un'espressione di ripetizione (uno tra '*', '', '+', '{' nella maggior parte dei contesti) non può essere preceduta da un'espressione
+
+`error_brace` -- l'espressione contiene una mancata corrispondenza di '{' o '}'
+
+`error_brack` -- l'espressione contiene una mancata corrispondenza di '[' o ']'
+
+`error_collate` -- l'espressione contiene un nome di elemento di collazione non valido
+
+`error_complexity` -- una corrispondenza effettuata è fallita perché era troppo complessa
+
+`error_ctype` -- l'espressione contiene un nome della classe di carattere non valido
+
+`error_escape` -- l'espressione contiene una sequenza di escape non valida
+
+`error_paren` -- l'espressione contiene una mancata corrispondenza di '(' o ')'
+
+`error_parse` -- analisi dell'espressione non riuscita
+
+`error_range` -- l'espressione contiene un identificatore di intervallo di carattere non valido
+
+`error_space` -- l'analisi di un'espressione regolare è fallita perché non erano disponibili risorse sufficienti
+
+`error_stack` -- una corrispondenza effettuata è fallita perché non era disponibile memoria sufficiente
+
+`error_syntax` -- l'analisi è fallita per un errore di sintassi
+
+`error_backref` -- l'espressione contiene un backreference non valido
+
+## <a name="match_flag_type"></a>  regex_constants::match_flag_type
+
+Flag per opzioni di corrispondenza delle espressioni regolari.
+
+```cpp
+enum match_flag_type
     {    // specify matching and formatting rules
     match_default = 0x0000,
     match_not_bol = 0x0001,
@@ -203,46 +209,48 @@ enum match_flag_type
     format_no_copy = 0x0800,
     format_first_only = 0x1000,
     _Match_not_null = 0x2000
-    };  
-```  
-  
-### <a name="remarks"></a>Note  
- Il tipo è un tipo di maschera di bit che descrive le opzioni da usare quando esiste una corrispondenza tra una sequenza di testo e un'espressione regolare e i flag di formato da usare quando si sostituisce il testo. Le opzioni possono essere usate in combinazione con `|`.  
-  
- Le opzioni di corrispondenza sono:  
-  
- `match_default`  
-  
- `match_not_bol` -- non considerare la prima posizione nella sequenza di destinazione come inizio di una riga  
-  
- `match_not_eol` -- non considerare la posizione successiva nella sequenza di destinazione come fine di una riga  
-  
- `match_not_bow` -- non considerare la prima posizione nella sequenza di destinazione come inizio di una parola  
-  
- `match_not_eow` -- non considerare la posizione successiva nella sequenza di destinazione come fine di una parola  
-  
- `match_any` -- se più corrispondenze sono possibili, qualsiasi corrispondenza è accettabile  
-  
- `match_not_null` -- non considerare una sottosequenza vuota come corrispondenza  
-  
- `match_continuous` -- non cercare corrispondenze se non quelle all'inizio della sequenza di destinazione  
-  
- `match_prev_avail` -- `--first` è un iteratore valido; ignorare `match_not_bol` e `match_not_bow`, se impostati  
-  
- I flag di formato sono:  
-  
- `format_default` -- usare le regole dei formati ECMAScript  
-  
- `format_sed` -- usare le regole dei formati sed  
-  
- `format_no_copy` -- non copiare testo che non corrisponde all'espressione regolare  
-  
- `format_first_only` -- non cercare corrispondenze dopo la prima  
-  
-##  <a name="syntax_option_type"></a>  regex_constants::syntax_option_type  
- Flag per selezionare le opzioni di sintassi.  
-  
-```  
+    };
+```
+
+### <a name="remarks"></a>Note
+
+Il tipo è un tipo di maschera di bit che descrive le opzioni da usare quando esiste una corrispondenza tra una sequenza di testo e un'espressione regolare e i flag di formato da usare quando si sostituisce il testo. Le opzioni possono essere usate in combinazione con `|`.
+
+Le opzioni di corrispondenza sono:
+
+`match_default`
+
+`match_not_bol` -- non considerare la prima posizione nella sequenza di destinazione come inizio di una riga
+
+`match_not_eol` -- non considerare la posizione successiva nella sequenza di destinazione come fine di una riga
+
+`match_not_bow` -- non considerare la prima posizione nella sequenza di destinazione come inizio di una parola
+
+`match_not_eow` -- non considerare la posizione successiva nella sequenza di destinazione come fine di una parola
+
+`match_any` -- se più corrispondenze sono possibili, qualsiasi corrispondenza è accettabile
+
+`match_not_null` -- non considerare una sottosequenza vuota come corrispondenza
+
+`match_continuous` -- non cercare corrispondenze se non quelle all'inizio della sequenza di destinazione
+
+`match_prev_avail` -- `--first` è un iteratore valido; ignorare `match_not_bol` e `match_not_bow`, se impostati
+
+I flag di formato sono:
+
+`format_default` -- usare le regole dei formati ECMAScript
+
+`format_sed` -- usare le regole dei formati sed
+
+`format_no_copy` -- non copiare testo che non corrisponde all'espressione regolare
+
+`format_first_only` -- non cercare corrispondenze dopo la prima
+
+## <a name="syntax_option_type"></a>  regex_constants::syntax_option_type
+
+Flag per selezionare le opzioni di sintassi.
+
+```cpp
 enum syntax_option_type
     {    // specify RE syntax rules
     ECMAScript = 0x01,
@@ -257,42 +265,44 @@ enum syntax_option_type
     nosubs = 0x0200,
     optimize = 0x0400,
     collate = 0x0800
-    };  
-```  
-  
-### <a name="remarks"></a>Note  
- Il tipo è un tipo di maschera di bit che descrive gli identificatori di lingua e i modificatori di sintassi da usare durante la compilazione di un'espressione regolare. Le opzioni possono essere usate in combinazione con `|`. Non deve essere usato più di un identificatore di lingua per volta.  
-  
- Gli identificatori di lingua sono:  
-  
- `ECMAScript` -- compilare come ECMAScript  
-  
- `basic` -- compilare come BRE  
-  
- `extended` -- compilare come ERE  
-  
- `awk` -- compilare come awk  
-  
- `grep` -- compilare come grep  
-  
- `egrep` -- compilare come egrep  
-  
- I modificatori di sintassi sono:  
-  
- `icase` -- rendere le corrispondenze senza distinzione tra maiuscole e minuscole  
-  
- `nosubs` -- l'implementazione non deve tenere traccia del contenuto dei gruppi Capture  
-  
- `optimize` -- l'implementazione deve evidenziare la velocità della corrispondenza anziché la velocità di compilazione delle espressioni regolari  
-  
- `collate` -- rendere le corrispondenze collegate alle impostazioni locali  
-  
-## <a name="see-also"></a>Vedere anche  
-[\<regex>](../standard-library/regex.md)  
-[Classe regex_error](../standard-library/regex-error-class.md)  
-[Funzioni \<regex>](../standard-library/regex-functions.md)  
-[Classe regex_iterator](../standard-library/regex-iterator-class.md)  
-[Operatori \<regex>](../standard-library/regex-operators.md)  
-[Classe regex_token_iterator](../standard-library/regex-token-iterator-class.md)  
-[Classe regex_traits](../standard-library/regex-traits-class.md)  
-[Typedef \<regex>](../standard-library/regex-typedefs.md)  
+    };
+```
+
+### <a name="remarks"></a>Note
+
+Il tipo è un tipo di maschera di bit che descrive gli identificatori di lingua e i modificatori di sintassi da usare durante la compilazione di un'espressione regolare. Le opzioni possono essere usate in combinazione con `|`. Non deve essere usato più di un identificatore di lingua per volta.
+
+Gli identificatori di lingua sono:
+
+`ECMAScript` -- compilare come ECMAScript
+
+`basic` -- compilare come BRE
+
+`extended` -- compilare come ERE
+
+`awk` -- compilare come awk
+
+`grep` -- compilare come grep
+
+`egrep` -- compilare come egrep
+
+I modificatori di sintassi sono:
+
+`icase` -- rendere le corrispondenze senza distinzione tra maiuscole e minuscole
+
+`nosubs` -- l'implementazione non deve tenere traccia del contenuto dei gruppi Capture
+
+`optimize` -- l'implementazione deve evidenziare la velocità della corrispondenza anziché la velocità di compilazione delle espressioni regolari
+
+`collate` -- rendere le corrispondenze collegate alle impostazioni locali
+
+## <a name="see-also"></a>Vedere anche
+
+[\<regex>](../standard-library/regex.md)<br/>
+[Classe regex_error](../standard-library/regex-error-class.md)<br/>
+[Funzioni \<regex>](../standard-library/regex-functions.md)<br/>
+[Classe regex_iterator](../standard-library/regex-iterator-class.md)<br/>
+[Operatori \<regex>](../standard-library/regex-operators.md)<br/>
+[Classe regex_token_iterator](../standard-library/regex-token-iterator-class.md)<br/>
+[Classe regex_traits](../standard-library/regex-traits-class.md)<br/>
+[Typedef \<regex>](../standard-library/regex-typedefs.md)<br/>

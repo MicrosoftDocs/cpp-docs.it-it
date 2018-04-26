@@ -1,12 +1,12 @@
 ---
 title: clearerr_s | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - clearerr_s
@@ -32,108 +32,113 @@ helpviewer_keywords:
 - resetting stream error indicator
 - clearerr_s function
 ms.assetid: b74d014d-b7a8-494a-a330-e5ffd5614772
-caps.latest.revision: 
+caps.latest.revision: 19
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 84cb2b30ccf074812dde52f103c22df04ed7d52d
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 60300b3eba79e759317facb384bc63bc83be6228
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="clearerrs"></a>clearerr_s
-Reimposta l'indicatore di errore per un flusso. Questa è una versione di [clearerr](../../c-runtime-library/reference/clearerr.md) che include miglioramenti per la sicurezza, come descritto in [Funzionalità di sicurezza in CRT](../../c-runtime-library/security-features-in-the-crt.md).  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-errno_t clearerr_s(  
-   FILE *stream   
-);  
-```  
-  
-#### <a name="parameters"></a>Parametri  
- `stream`  
- Puntatore alla struttura `FILE`  
-  
-## <a name="return-value"></a>Valore restituito  
- Zero in caso di esito positivo, `EINVAL` se `stream` è NULL.  
-  
-## <a name="remarks"></a>Note  
- La funzione `clearerr_s` reimposta l'indicatore di errore e l'indicatore di fine del file per `stream`. Gli indicatori di errore non vengono automaticamente cancellati. Dopo aver impostato l'indicatore di errore per un flusso specificato, le operazioni eseguite su tale flusso continuano a restituire un valore di errore finché non si chiama `clearerr_s`, `clearerr`, `fseek`, `fsetpos` o `rewind`.  
-  
- Se `stream` è NULL, viene richiamato il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, la funzione imposta `errno` su`EINVAL` e restituisce `EINVAL`.  
-  
-## <a name="requirements"></a>Requisiti  
-  
-|Routine|Intestazione obbligatoria|  
-|-------------|---------------------|  
-|`clearerr_s`|\<stdio.h>|  
-  
- Per altre informazioni sulla compatibilità, vedere la sezione [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
-  
-## <a name="example"></a>Esempio  
-  
-```  
-// crt_clearerr_s.c  
-// This program creates an error  
-// on the standard input stream, then clears  
-// it so that future reads won't fail.  
-  
-#include <stdio.h>  
-  
-int main( void )  
-{  
-   int c;  
-   errno_t err;  
-  
-   // Create an error by writing to standard input.  
-   putc( 'c', stdin );  
-   if( ferror( stdin ) )  
-   {  
-      perror( "Write error" );  
-      err = clearerr_s( stdin );  
-      if (err != 0)  
-      {  
-         abort();  
-      }  
-   }  
-  
-   // See if read causes an error.  
-   printf( "Will input cause an error? " );  
-   c = getc( stdin );  
-   if( ferror( stdin ) )  
-   {  
-      perror( "Read error" );  
-      err = clearerr_s( stdin );  
-      if (err != 0)  
-      {  
-         abort();  
-      }  
-   }  
-}  
-```  
-  
-```Output  
-  
-n  
-  
-```  
-  
-```Output  
-  
-      nWrite error: Bad file descriptor  
-Will input cause an error? n  
-```  
-  
-## <a name="see-also"></a>Vedere anche  
- [Gestione degli errori](../../c-runtime-library/error-handling-crt.md)   
- [I/O di flusso](../../c-runtime-library/stream-i-o.md)   
- [clearerr](../../c-runtime-library/reference/clearerr.md)   
- [_eof](../../c-runtime-library/reference/eof.md)   
- [feof](../../c-runtime-library/reference/feof.md)   
- [ferror](../../c-runtime-library/reference/ferror.md)   
- [perror, _wperror](../../c-runtime-library/reference/perror-wperror.md)
+
+Reimposta l'indicatore di errore per un flusso. Questa è una versione di [clearerr](clearerr.md) che include miglioramenti per la sicurezza, come descritto in [Funzionalità di sicurezza in CRT](../../c-runtime-library/security-features-in-the-crt.md).
+
+## <a name="syntax"></a>Sintassi
+
+```C
+errno_t clearerr_s(
+   FILE *stream
+);
+```
+
+### <a name="parameters"></a>Parametri
+
+*Flusso*<br/>
+Puntatore a **FILE** struttura
+
+## <a name="return-value"></a>Valore restituito
+
+Zero se ha esito positivo. **EINVAL** se *flusso* è NULL.
+
+## <a name="remarks"></a>Note
+
+Il **clearerr_s** funzione Reimposta l'indicatore di errore e l'indicatore di fine del file per *flusso*. Gli indicatori di errore non vengono automaticamente cancellati; Dopo aver impostato l'indicatore di errore per un flusso specificato, le operazioni su tale flusso continuano restituire un valore di errore finché **clearerr_s**, **clearerr**, [fseek](fseek-fseeki64.md), **fsetpos**, o [rewind](rewind.md) viene chiamato.
+
+Se *flusso* è NULL, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, la funzione imposta **errno** alla **EINVAL** e restituisce **EINVAL**.
+
+## <a name="requirements"></a>Requisiti
+
+|Routine|Intestazione obbligatoria|
+|-------------|---------------------|
+|**clearerr_s**|\<stdio.h>|
+
+Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+
+## <a name="example"></a>Esempio
+
+```C
+// crt_clearerr_s.c
+// This program creates an error
+// on the standard input stream, then clears
+// it so that future reads won't fail.
+
+#include <stdio.h>
+
+int main( void )
+{
+   int c;
+   errno_t err;
+
+   // Create an error by writing to standard input.
+   putc( 'c', stdin );
+   if( ferror( stdin ) )
+   {
+      perror( "Write error" );
+      err = clearerr_s( stdin );
+      if (err != 0)
+      {
+         abort();
+      }
+   }
+
+   // See if read causes an error.
+   printf( "Will input cause an error? " );
+   c = getc( stdin );
+   if( ferror( stdin ) )
+   {
+      perror( "Read error" );
+      err = clearerr_s( stdin );
+      if (err != 0)
+      {
+         abort();
+      }
+   }
+}
+```
+
+```Output
+
+n
+
+```
+
+```Output
+
+      nWrite error: Bad file descriptor
+Will input cause an error? n
+```
+
+## <a name="see-also"></a>Vedere anche
+
+[Gestione degli errori](../../c-runtime-library/error-handling-crt.md)<br/>
+[I/O di flusso](../../c-runtime-library/stream-i-o.md)<br/>
+[clearerr](clearerr.md)<br/>
+[_eof](eof.md)<br/>
+[feof](feof.md)<br/>
+[ferror](ferror.md)<br/>
+[perror, _wperror](perror-wperror.md)<br/>

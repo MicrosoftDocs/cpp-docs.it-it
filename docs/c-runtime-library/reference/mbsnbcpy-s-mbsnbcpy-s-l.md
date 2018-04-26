@@ -1,12 +1,12 @@
 ---
 title: _mbsnbcpy_s, _mbsnbcpy_s_l | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _mbsnbcpy_s_l
@@ -41,107 +41,112 @@ helpviewer_keywords:
 - _mbsnbcpy_s_l function
 - _tcsncpy_s function
 ms.assetid: dfff64ab-fe6f-49c4-99ba-75014e2b0cd6
-caps.latest.revision: 
+caps.latest.revision: 29
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0f36b2623133e5fcd7d1352713e8eb4ef207eba8
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: e5dfb0d070fbe5e229b38aca4ece47696fcfce24
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="mbsnbcpys-mbsnbcpysl"></a>_mbsnbcpy_s, _mbsnbcpy_s_l
-Copia `n` byte di una stringa in una stringa di destinazione. Queste versioni di [_mbsnbcpy, _mbsnbcpy_l](../../c-runtime-library/reference/mbsnbcpy-mbsnbcpy-l.md) includono miglioramenti per la sicurezza, come descritto in [Funzionalità di sicurezza in CRT](../../c-runtime-library/security-features-in-the-crt.md).  
-  
+
+Copie **n** byte di una stringa in una stringa di destinazione. Queste versioni di [_mbsnbcpy, _mbsnbcpy_l](mbsnbcpy-mbsnbcpy-l.md) includono miglioramenti per la sicurezza, come descritto in [Funzionalità di sicurezza in CRT](../../c-runtime-library/security-features-in-the-crt.md).
+
 > [!IMPORTANT]
->  Non è possibile usare questa API nelle applicazioni eseguite in Windows Runtime. Per ulteriori informazioni, vedere [funzioni CRT non supportate nelle App Universal Windows Platform](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-errno_t _mbsnbcpy_s(  
-   unsigned char * strDest,  
-   size_t sizeInBytes,  
-   const unsigned char * strSource,  
-   size_t count   
-);  
-errno_t _mbsnbcpy_s_l(  
-   unsigned char * strDest,  
-   size_t sizeInBytes,  
-   const unsigned char * strSource,  
-   size_t count,  
-   _locale_t locale  
-);  
-template <size_t size>  
-errno_t _mbsnbcpy_s(  
-   unsigned char (&strDest)[size],  
-   const unsigned char * strSource,  
-   size_t count   
-); // C++ only  
-template <size_t size>  
-errno_t _mbsnbcpy_s_l(  
-   unsigned char (&strDest)[size],  
-   const unsigned char * strSource,  
-   size_t count,  
-   _locale_t locale  
-); // C++ only  
-```  
-  
-#### <a name="parameters"></a>Parametri  
- `strDest`  
- Destinazione per la stringa di caratteri da copiare.  
-  
- `sizeInBytes`  
- Dimensioni del buffer di destinazione.  
-  
- `strSource`  
- Stringa di caratteri da copiare.  
-  
- `count`  
- Numero di byte da copiare.  
-  
- `locale`  
- Impostazioni locali da usare.  
-  
-## <a name="return-value"></a>Valore restituito  
- Zero in caso di esito positivo. `EINVAL` se viene passato un parametro non valido.  
-  
-## <a name="remarks"></a>Note  
- La funzione `_mbsnbcpy_s` copia `count` byte da `strSource` a `strDest`. Se le dimensioni di `count` sono maggiori di quelle di `strDest`, se una delle stringhe di input è un puntatore Null oppure se `sizeInBytes` o `count` è 0, questa funzione richiama il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, la funzione restituisce `EINVAL`. Se le stringhe di origine e di destinazione si sovrappongono, il comportamento di `_mbsnbcpy_s` non è definito.  
-  
- La configurazione dell'impostazione della categoria `LC_CTYPE` delle impostazioni locali influisce sul valore di output. Per altre informazioni, vedere [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). Le versioni di queste funzioni senza il suffisso `_l` usano le impostazioni locali correnti per questo comportamento dipendente dalle impostazioni locali. Le versioni con il suffisso `_l` sono identiche ma usano il parametro passato relativo alle impostazioni locali. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).  
-  
+> Non è possibile usare questa API nelle applicazioni eseguite in Windows Runtime. Per altre informazioni, vedere [Funzioni CRT non supportate nelle app della piattaforma UWP (Universal Windows Platform)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+
+## <a name="syntax"></a>Sintassi
+
+```C
+errno_t _mbsnbcpy_s(
+   unsigned char * strDest,
+   size_t sizeInBytes,
+   const unsigned char * strSource,
+   size_t count
+);
+errno_t _mbsnbcpy_s_l(
+   unsigned char * strDest,
+   size_t sizeInBytes,
+   const unsigned char * strSource,
+   size_t count,
+   _locale_t locale
+);
+template <size_t size>
+errno_t _mbsnbcpy_s(
+   unsigned char (&strDest)[size],
+   const unsigned char * strSource,
+   size_t count
+); // C++ only
+template <size_t size>
+errno_t _mbsnbcpy_s_l(
+   unsigned char (&strDest)[size],
+   const unsigned char * strSource,
+   size_t count,
+   _locale_t locale
+); // C++ only
+```
+
+### <a name="parameters"></a>Parametri
+
+*strDest*<br/>
+Destinazione per la stringa di caratteri da copiare.
+
+*sizeInBytes*<br/>
+Dimensioni del buffer di destinazione.
+
+*strSource*<br/>
+Stringa di caratteri da copiare.
+
+*count*<br/>
+Numero di byte da copiare.
+
+*locale*<br/>
+Impostazioni locali da usare.
+
+## <a name="return-value"></a>Valore restituito
+
+Zero se ha esito positivo. **EINVAL** se è stato passato un parametro non valido.
+
+## <a name="remarks"></a>Note
+
+Il **mbsnbcpy_s** funzione copie *conteggio* byte dal *strSource* a *strDest*. Se *conteggio* supera le dimensioni della *strDest*, ovvero delle stringhe di input è un puntatore null, o *sizeInBytes* oppure *conteggio* è 0, la funzione richiama il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md) . Se l'esecuzione può continuare, la funzione restituisce **EINVAL**. Se le stringhe di origine e destinazione si sovrappongono, il comportamento delle **mbsnbcpy_s** è definito.
+
+Il valore di output è interessato dalla configurazione dell'impostazione delle **LC_CTYPE** categoria delle impostazioni locali, vedere [setlocale](setlocale-wsetlocale.md) per altre informazioni. Le versioni di queste funzioni senza il suffisso **_l** usano le impostazioni locali correnti per questo comportamento dipendente dalle impostazioni locali. Le versioni con il suffisso **_l** sono identiche, ma usano il parametro passato alle impostazioni locali. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
+
 > [!NOTE]
->  Diversamente dalla versione non sicura di questa funzione, `_mbsnbcpy_s` non effettua alcun riempimento con Null e usa sempre la terminazione Null per la stringa.  
-  
- In C++ l'utilizzo di queste funzioni è semplificato dagli overload dei modelli. Gli overload possono dedurre la lunghezza del buffer automaticamente (eliminando la necessità di specificare un argomento di dimensione) e possono sostituire automaticamente le funzioni precedenti e non sicure con le controparti più recenti e sicure. Per altre informazioni, vedere [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).  
-  
- Le versioni di debug di queste funzioni riempiono innanzitutto il buffer con 0xFD. Per disabilitare questo comportamento, usare [_CrtSetDebugFillThreshold](../../c-runtime-library/reference/crtsetdebugfillthreshold.md).  
-  
-### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico  
-  
-|Routine Tchar.h|_UNICODE e _MBCS non definiti|_MBCS definito|_UNICODE definito|  
-|---------------------|--------------------------------------|--------------------|-----------------------|  
-|`_tcsncpy_s`|`_strncpy_s`|`_mbsnbcpy_s`|`_wcsncpy_s`|  
-|`_tcsncpy_s_l`|`_strncpy_s_l`|`_mbsnbcpy_s_l`|`_wcsncpy_s_l`|  
-  
-## <a name="requirements"></a>Requisiti  
-  
-|Routine|Intestazione obbligatoria|  
-|-------------|---------------------|  
-|`_mbsnbcpy_s`|\<mbstring.h>|  
-|`_mbsnbcpy_s_l`|\<mbstring.h>|  
-  
- Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).  
-  
-## <a name="see-also"></a>Vedere anche  
- [Modifica di stringhe](../../c-runtime-library/string-manipulation-crt.md)   
- [_mbsnbcat, _mbsnbcat_l](../../c-runtime-library/reference/mbsnbcat-mbsnbcat-l.md)   
- [_mbsnbcmp, _mbsnbcmp_l](../../c-runtime-library/reference/mbsnbcmp-mbsnbcmp-l.md)   
- [_strncnt, _wcsncnt, _mbsnbcnt, _mbsnbcnt_l, _mbsnccnt, _mbsnccnt_l](../../c-runtime-library/reference/strncnt-wcsncnt-mbsnbcnt-mbsnbcnt-l-mbsnccnt-mbsnccnt-l.md)   
- [_mbsnbicmp, _mbsnbicmp_l](../../c-runtime-library/reference/mbsnbicmp-mbsnbicmp-l.md)   
- [_mbsnbset, _mbsnbset_l](../../c-runtime-library/reference/mbsnbset-mbsnbset-l.md)   
- [strncpy, _strncpy_l, wcsncpy, _wcsncpy_l, _mbsncpy, _mbsncpy_l](../../c-runtime-library/reference/strncpy-strncpy-l-wcsncpy-wcsncpy-l-mbsncpy-mbsncpy-l.md)
+> A differenza delle versioni non sicure di questa funzione, **mbsnbcpy_s** non eseguire operazioni di spaziatura interna null e impostato sempre come null termina la stringa.
+
+In C++ l'utilizzo di queste funzioni è semplificato dagli overload dei modelli. Gli overload possono dedurre la lunghezza del buffer automaticamente (eliminando la necessità di specificare un argomento di dimensione) e possono sostituire automaticamente le funzioni precedenti e non sicure con le controparti più recenti e sicure. Per altre informazioni, vedere [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
+
+Le versioni di debug di queste funzioni riempiono innanzitutto il buffer con 0xFD. Per disabilitare questo comportamento, usare [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
+
+### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
+
+|Routine Tchar.h|_UNICODE e _MBCS non definiti|_MBCS definito|_UNICODE definito|
+|---------------------|--------------------------------------|--------------------|-----------------------|
+|**tcsncpy_s**|**_strncpy_s**|**_mbsnbcpy_s**|**_wcsncpy_s**|
+|**tcsncpy_s_l**|**_strncpy_s_l**|**_mbsnbcpy_s_l**|**_wcsncpy_s_l**|
+
+## <a name="requirements"></a>Requisiti
+
+|Routine|Intestazione obbligatoria|
+|-------------|---------------------|
+|**_mbsnbcpy_s**|\<mbstring.h>|
+|**_mbsnbcpy_s_l**|\<mbstring.h>|
+
+Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+
+## <a name="see-also"></a>Vedere anche
+
+[Modifica di stringhe](../../c-runtime-library/string-manipulation-crt.md)<br/>
+[_mbsnbcat, _mbsnbcat_l](mbsnbcat-mbsnbcat-l.md)<br/>
+[_mbsnbcmp, _mbsnbcmp_l](mbsnbcmp-mbsnbcmp-l.md)<br/>
+[_strncnt, _wcsncnt, _mbsnbcnt, _mbsnbcnt_l, _mbsnccnt, _mbsnccnt_l](strncnt-wcsncnt-mbsnbcnt-mbsnbcnt-l-mbsnccnt-mbsnccnt-l.md)<br/>
+[_mbsnbicmp, _mbsnbicmp_l](mbsnbicmp-mbsnbicmp-l.md)<br/>
+[_mbsnbset, _mbsnbset_l](mbsnbset-mbsnbset-l.md)<br/>
+[strncpy, _strncpy_l, wcsncpy, _wcsncpy_l, _mbsncpy, _mbsncpy_l](strncpy-strncpy-l-wcsncpy-wcsncpy-l-mbsncpy-mbsncpy-l.md)<br/>

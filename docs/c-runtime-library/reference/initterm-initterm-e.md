@@ -1,12 +1,12 @@
 ---
 title: _initterm, _initterm_e | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _initterm_e
@@ -37,44 +37,48 @@ helpviewer_keywords:
 - _initterm function
 - _initterm_e function
 ms.assetid: 85131efe-c747-429a-8897-bcdedb000172
-caps.latest.revision: 
+caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e27e165131b44181f1ee12f11477892fc144c267
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 968e354662deb065aa373d3044f638dc6cf077c4
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="initterm-initterme"></a>_initterm, _initterm_e
-Metodi interni che procedono a una tabella di puntatori funzione e li inizializzano.  
-  
- Il primo puntatore è la posizione iniziale nella tabella e il secondo puntatore è la posizione finale.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-void __cdecl _initterm(  
-   PVFV *,  
-   PVFV *  
-);  
-  
-int __cdecl _initterm_e(  
-   PVFV *,  
-   PVFV *  
-);  
-```  
-  
-## <a name="return-value"></a>Valore restituito  
- Un codice di errore diverso da zero se un'inizializzazione ha esito negativo e genera un errore; 0 se non si verificano errori.  
-  
-## <a name="remarks"></a>Note  
- Questi metodi vengono chiamati solo internamente durante l'inizializzazione di un programma C++. Non chiamare questi metodi in un programma.  
-  
- Quando questi metodi procedono a una tabella di voci di funzioni, essi ignorano le voci `NULL` e continuano.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Riferimento alfabetico alle funzioni](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)
+
+Metodi interni che procedono a una tabella di puntatori funzione e li inizializzano.
+
+Il primo puntatore è la posizione iniziale nella tabella e il secondo puntatore è la posizione finale.
+
+## <a name="syntax"></a>Sintassi
+
+```C
+void __cdecl _initterm(
+   PVFV *,
+   PVFV *
+);
+
+int __cdecl _initterm_e(
+   PVFV *,
+   PVFV *
+);
+```
+
+## <a name="return-value"></a>Valore restituito
+
+Un codice di errore diverso da zero se un'inizializzazione ha esito negativo e genera un errore; 0 se non si verificano errori.
+
+## <a name="remarks"></a>Note
+
+Questi metodi vengono chiamati solo internamente durante l'inizializzazione di un programma C++. Non chiamare questi metodi in un programma.
+
+Quando questi metodi procedono a una tabella di voci di funzioni, essi ignorano **NULL** voci e continuare.
+
+## <a name="see-also"></a>Vedere anche
+
+[Riferimento alfabetico alle funzioni](crt-alphabetical-function-reference.md)<br/>

@@ -1,12 +1,12 @@
 ---
 title: _ismbslead, _ismbstrail, _ismbslead_l, _ismbstrail_l | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _ismbstrail
@@ -49,80 +49,85 @@ helpviewer_keywords:
 - ismbstrail_l function
 - _ismbstrail_l function
 ms.assetid: 86d2cd7a-3cff-443a-b713-14cc17a231e9
-caps.latest.revision: 
+caps.latest.revision: 22
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a3d44722daa76e7409a43887f91d127c732dd6df
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 38463fdac8100edd89e2fead940ec82bd810f76b
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="ismbslead-ismbstrail-ismbsleadl-ismbstraill"></a>_ismbslead, _ismbstrail, _ismbslead_l, _ismbstrail_l
-Esegue test sensibili al contesto per i byte iniziali e finali della stringa con caratteri multibyte e determina se un puntatore di una data sottostringa punta a un byte iniziale o finale.  
-  
+
+Esegue test sensibili al contesto per i byte iniziali e finali della stringa con caratteri multibyte e determina se un puntatore di una data sottostringa punta a un byte iniziale o finale.
+
 > [!IMPORTANT]
->  Non è possibile usare questa API nelle applicazioni eseguite in Windows Runtime. Per ulteriori informazioni, vedere [funzioni CRT non supportate nelle App Universal Windows Platform](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-int _ismbslead(  
-   const unsigned char *str,  
-   const unsigned char *current   
-);  
-int _ismbstrail(  
-   const unsigned char *str,  
-   const unsigned char *current   
-);  
-int _ismbslead_l(  
-   const unsigned char *str,  
-   const unsigned char *current,  
-   _locale_t locale  
-);  
-int _ismbstrail_l(  
-   const unsigned char *str,  
-   const unsigned char *current,  
-   _locale_t locale  
-);  
-```  
-  
-#### <a name="parameters"></a>Parametri  
- `str`  
- Puntatore all'inizio della stringa o al precedente byte iniziale noto.  
-  
- `current`  
- Puntatore alla posizione nella stringa da testare.  
-  
- `locale`  
- Impostazioni locali da usare.  
-  
-## <a name="return-value"></a>Valore restituito  
- `_ismbslead` Restituisce -1 se il carattere è un byte iniziale e `_ismbstrail` restituisce -1 se il carattere è un byte finale. Se le stringhe di input sono valide ma non rappresentano un byte iniziale o finale, queste funzioni restituiscono zero. Se l'argomento è `NULL`, viene richiamato il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni restituiscono `NULL` e impostano `errno` su `EINVAL`.  
-  
-## <a name="remarks"></a>Note  
- `_ismbslead` e `_ismbstrail` sono più lenti delle versioni `_ismbblead` e `_ismbbtrail` perché prendono in considerazione il contesto della stringa.  
-  
- Le versioni di queste funzioni che presentano il suffisso `_l` sono identiche ad eccezione del fatto che, per il comportamento dipendente dalle impostazioni locali, usano le impostazioni locali passate anziché quelle correnti. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).  
-  
-## <a name="requirements"></a>Requisiti  
-  
-|Routine|Intestazione obbligatoria|Intestazione facoltativa|  
-|-------------|---------------------|---------------------|  
-|`_ismbslead`|\<mbctype.h> o \<mbstring.h>|\<ctype.h>,* \<limits.h>, \<stdlib.h>|  
-|`_ismbstrail`|\<mbctype.h> o \<mbstring.h>|\<ctype.h>,* \<limits.h>, \<stdlib.h>|  
-|`_ismbslead_l`|\<mbctype.h> o \<mbstring.h>|\<ctype.h>,* \<limits.h>, \<stdlib.h>|  
-|`_ismbstrail_l`|\<mbctype.h> o \<mbstring.h>|\<ctype.h>,* \<limits.h>, \<stdlib.h>|  
-  
- \* Per le costanti manifeste per le condizioni di test.  
-  
- Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).  
-  
-## <a name="see-also"></a>Vedere anche  
- [Classificazione di caratteri](../../c-runtime-library/character-classification.md)   
- [Routine _ismbc](../../c-runtime-library/ismbc-routines.md)   
- [Routine is, isw](../../c-runtime-library/is-isw-routines.md)   
- [Routine _ismbb](../../c-runtime-library/ismbb-routines.md)
+> Non è possibile usare questa API nelle applicazioni eseguite in Windows Runtime. Per altre informazioni, vedere [Funzioni CRT non supportate nelle app della piattaforma UWP (Universal Windows Platform)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+
+## <a name="syntax"></a>Sintassi
+
+```C
+int _ismbslead(
+   const unsigned char *str,
+   const unsigned char *current
+);
+int _ismbstrail(
+   const unsigned char *str,
+   const unsigned char *current
+);
+int _ismbslead_l(
+   const unsigned char *str,
+   const unsigned char *current,
+   _locale_t locale
+);
+int _ismbstrail_l(
+   const unsigned char *str,
+   const unsigned char *current,
+   _locale_t locale
+);
+```
+
+### <a name="parameters"></a>Parametri
+
+*str*<br/>
+Puntatore all'inizio della stringa o al precedente byte iniziale noto.
+
+*current*<br/>
+Puntatore alla posizione nella stringa da testare.
+
+*locale*<br/>
+Impostazioni locali da usare.
+
+## <a name="return-value"></a>Valore restituito
+
+**ismbslead** restituisce -1 se il carattere è un byte iniziale e **ismbstrail** restituisce -1 se il carattere è un byte finale. Se le stringhe di input sono valide ma non rappresentano un byte iniziale o finale, queste funzioni restituiscono zero. Se degli argomenti **NULL**, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni restituiscono **NULL** e impostare **errno** al **EINVAL**.
+
+## <a name="remarks"></a>Note
+
+**ismbslead** e **ismbstrail** inferiori il **ismbblead** e **ismbbtrail** versioni perché prendono in considerazione il contesto di stringa.
+
+Le versioni di queste funzioni con il **l** suffisso sono identiche ad eccezione del fatto che per il comportamento dipendente dalle impostazioni locali usano le impostazioni locali passate anziché le impostazioni locali correnti. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
+
+## <a name="requirements"></a>Requisiti
+
+|Routine|Intestazione obbligatoria|Intestazione facoltativa|
+|-------------|---------------------|---------------------|
+|**_ismbslead**|\<mbctype.h> o \<mbstring.h>|\<ctype.h>,* \<limits.h>, \<stdlib.h>|
+|**_ismbstrail**|\<mbctype.h> o \<mbstring.h>|\<ctype.h>,* \<limits.h>, \<stdlib.h>|
+|**_ismbslead_l**|\<mbctype.h> o \<mbstring.h>|\<ctype.h>,* \<limits.h>, \<stdlib.h>|
+|**_ismbstrail_l**|\<mbctype.h> o \<mbstring.h>|\<ctype.h>,* \<limits.h>, \<stdlib.h>|
+
+\* Per le costanti manifeste per le condizioni di test.
+
+Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+
+## <a name="see-also"></a>Vedere anche
+
+[Classificazione di caratteri](../../c-runtime-library/character-classification.md)<br/>
+[Routine _ismbc](../../c-runtime-library/ismbc-routines.md)<br/>
+[Routine is, isw](../../c-runtime-library/is-isw-routines.md)<br/>
+[Routine _ismbb](../../c-runtime-library/ismbb-routines.md)<br/>

@@ -1,12 +1,12 @@
 ---
 title: strset, wcsset | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - wcsset
@@ -32,17 +32,18 @@ helpviewer_keywords:
 - wcsset function
 - strset function
 ms.assetid: 20e132d8-4b6c-4341-b1eb-8e19b46047e2
-caps.latest.revision: 
+caps.latest.revision: 6
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 96c3190688ae6c481634d7446cdc2b6287240217
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 030ae284b060b9183439b0a618e1966362813050
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="strset-wcsset"></a>strset, wcsset
-Queste funzioni sono deprecate. Usare invece le funzioni conformi ISO C++ [strset, strset_l, wcsset, wcsset_l, mbsset, mbsset_l](../../c-runtime-library/reference/strset-strset-l-wcsset-wcsset-l-mbsset-mbsset-l.md) o le funzioni con sicurezza avanzata [strset_s, strset_s_l, wcsset_s, wcsset_s_l, mbsset_s, mbsset_s_l](../../c-runtime-library/reference/strset-s-strset-s-l-wcsset-s-wcsset-s-l-mbsset-s-mbsset-s-l.md).
+
+Queste funzioni sono deprecate. Usare invece le funzioni conformi ISO C++ [strset, strset_l, wcsset, wcsset_l, mbsset, mbsset_l](strset-strset-l-wcsset-wcsset-l-mbsset-mbsset-l.md) o le funzioni con sicurezza avanzata [strset_s, strset_s_l, wcsset_s, wcsset_s_l, mbsset_s, mbsset_s_l](strset-s-strset-s-l-wcsset-s-wcsset-s-l-mbsset-s-mbsset-s-l.md).

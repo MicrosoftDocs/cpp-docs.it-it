@@ -1,12 +1,12 @@
 ---
 title: _stat, _stat32, _stat64, _stati64, _stat32i64, _stat64i32, _wstat, _wstat32, _wstat64, _wstati64, _wstat32i64, _wstat64i32 | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _wstat64
@@ -115,237 +115,223 @@ helpviewer_keywords:
 - _tstat64 function
 - files [C++], getting status information
 ms.assetid: 99a75ae6-ff26-47ad-af70-5ea7e17226a5
-caps.latest.revision: 
+caps.latest.revision: 26
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2c84ed9e6ad7edab34dc80a4d2b446b7333f95c2
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: fb70840985c7d6f574a37aef535f35f63c0f4333
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="stat-stat32-stat64-stati64-stat32i64-stat64i32-wstat-wstat32-wstat64-wstati64-wstat32i64-wstat64i32"></a>_stat, _stat32, _stat64, _stati64, _stat32i64, _stat64i32, _wstat, _wstat32, _wstat64, _wstati64, _wstat32i64, _wstat64i32
-Ottenere informazioni sullo stato di un file.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-int _stat(  
-   const char *path,  
-   struct _stat *buffer   
-);  
-int _stat32(  
-   const char *path,  
-   struct __stat32 *buffer   
-);  
-int _stat64(  
-   const char *path,  
-   struct __stat64 *buffer   
-);  
-int _stati64(  
-   const char *path,  
-   struct _stati64 *buffer   
-);  
-int _stat32i64(  
-   const char *path,  
-   struct _stat32i64 *buffer   
-);  
-int _stat64i32(  
-   const char *path,  
-   struct _stat64i32 *buffer   
-);  
-int _wstat(  
-   const wchar_t *path,  
-   struct _stat *buffer   
-);  
-int _wstat32(  
-   const wchar_t *path,  
-   struct __stat32 *buffer   
-);  
-int _wstat64(  
-   const wchar_t *path,  
-   struct __stat64 *buffer   
-);  
-int _wstati64(  
-   const wchar_t *path,  
-   struct _stati64 *buffer   
-);  
-int _wstat32i64(  
-   const wchar_t *path,  
-   struct _stat32i64 *buffer   
-);  
-int _wstat64i32(  
-   const wchar_t *path,  
-   struct _stat64i32 *buffer   
-);  
-```  
-  
-#### <a name="parameters"></a>Parametri  
- `path`  
- Puntatore a una stringa contenente il percorso del file o directory esistente.  
-  
- `buffer`  
- Puntatore alla struttura che archivia i risultati.  
-  
-## <a name="return-value"></a>Valore restituito  
- Ognuna di queste funzioni restituisce 0 se si ottengono le informazioni sullo stato dei file. Il valore restituito-1 indica un errore, nel qual caso `errno` è impostato su `ENOENT`, che indica che il nome file o percorso non può essere trovato. Un valore restituito pari a `EINVAL` indica un parametro non valido; anche `errno` è impostato su `EINVAL` in questo caso.  
-  
- Per altre informazioni su questo e su altri codici restituiti, vedere [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) .  
-  
- L'indicatore di data in un file può essere rappresentato se più recente rispetto alla mezzanotte del 1 gennaio 1970 e precedente alle 23.59.59 UTC del 31 dicembre 3000, a meno che non si usi `_stat32` o `_wstat32`, o non sia stato definito `_USE_32BIT_TIME_T`, nel qual caso la data può essere rappresentata solo fino alle 23.59.59 UTC del 18 gennaio 2038.  
-  
-## <a name="remarks"></a>Note  
- La funzione `_stat` ottiene informazioni sul file o sulla directory specificati da `path` e le archivia nella struttura a cui punta `buffer`. `_stat` gestisce automaticamente gli argomenti stringa di caratteri multibyte in base alle esigenze, riconoscendo le sequenze di caratteri multibyte in base alla tabella codici multibyte attualmente in uso.  
-  
- `_wstat` è una versione a caratteri wide di `_stat`; l'argomento `path` in `_wstat` è una stringa di caratteri wide. `_wstat` e `_stat` si comportano in modo identico, ma `_wstat` non gestisce le stringhe di caratteri multibyte.  
-  
- Le variazioni di queste funzioni supportano tipi time a 32 o 64 bit e lunghezze di file a 32 o a 64 bit. Il primo suffisso numerico (`32` o `64`) indica le dimensioni del tipo time usato; il secondo suffisso è `i32` o `i64`, che indica se le dimensioni del file sono rappresentate come intero a 32 bit o 64 bit.  
-  
- `_stat` equivale a `_stat64i32`e `struct _stat` contiene un'ora a 64 bit. Questo vale a meno che non sia stato definito `_USE_32BIT_TIME_T` , nel qual caso è attivo il comportamento precedente; `_stat` usa un'ora a 32 bit e `struct _stat` contiene un'ora a 32 bit. Lo stesso vale per `_stati64`.  
-  
+
+Ottenere informazioni sullo stato di un file.
+
+## <a name="syntax"></a>Sintassi
+
+```C
+int _stat(
+   const char *path,
+   struct _stat *buffer
+);
+int _stat32(
+   const char *path,
+   struct __stat32 *buffer
+);
+int _stat64(
+   const char *path,
+   struct __stat64 *buffer
+);
+int _stati64(
+   const char *path,
+   struct _stati64 *buffer
+);
+int _stat32i64(
+   const char *path,
+   struct _stat32i64 *buffer
+);
+int _stat64i32(
+   const char *path,
+   struct _stat64i32 *buffer
+);
+int _wstat(
+   const wchar_t *path,
+   struct _stat *buffer
+);
+int _wstat32(
+   const wchar_t *path,
+   struct __stat32 *buffer
+);
+int _wstat64(
+   const wchar_t *path,
+   struct __stat64 *buffer
+);
+int _wstati64(
+   const wchar_t *path,
+   struct _stati64 *buffer
+);
+int _wstat32i64(
+   const wchar_t *path,
+   struct _stat32i64 *buffer
+);
+int _wstat64i32(
+   const wchar_t *path,
+   struct _stat64i32 *buffer
+);
+```
+
+### <a name="parameters"></a>Parametri
+
+*path*<br/>
+Puntatore a una stringa contenente il percorso del file o directory esistente.
+
+*buffer*<br/>
+Puntatore alla struttura che archivia i risultati.
+
+## <a name="return-value"></a>Valore restituito
+
+Ognuna di queste funzioni restituisce 0 se si ottengono le informazioni sullo stato dei file. Valore restituito di -1 indica un errore, nel qual caso **errno** è impostata su **ENOENT**, che indica che il nome file o percorso non trovato. Valore restituito di **EINVAL** indica un parametro non valido. **errno** è impostata su **EINVAL** in questo caso.
+
+Per altre informazioni su questo e su altri codici restituiti, vedere [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) .
+
+L'indicatore di data in un file può essere rappresentato se più recente rispetto a mezzanotte del 1 ° gennaio 1970 e prima di 23:59:59, 31 dicembre 3000 UTC, a meno che non si utilizza **_stat32** oppure **_wstat32**, o non è definita **_ USE_32BIT_TIME_T**, nel qual caso la data può essere rappresentata solo fino a 23:59:59 18 gennaio 2038, UTC.
+
+## <a name="remarks"></a>Note
+
+Il **Stat** funzione Ottiene informazioni sul file o directory specificata da *percorso* e lo archivia nella struttura a cui puntata *buffer*. **Stat** gestisce automaticamente gli argomenti di stringa di caratteri multibyte esigenze, riconoscendo le sequenze di caratteri multibyte in base alla tabella codici multibyte attualmente in uso.
+
+**wstat** è una versione a caratteri "wide" **Stat**; il *percorso* argomento **wstat** è una stringa di caratteri "wide". **wstat** e **Stat** si comportano in modo identico con la differenza che **wstat** gestiscono le stringhe di caratteri multibyte.
+
+Le variazioni di queste funzioni supportano tipi time a 32 o 64 bit e lunghezze di file a 32 o a 64 bit. Il primo suffisso numerico (**32** oppure **64**) indica le dimensioni del tempo utilizzato tipo; il secondo suffisso è **i32** oppure **i64**, che indica se le dimensioni del file sono rappresentata come intero a 32 bit o 64 bit.
+
+**Stat** equivale a **_stat64i32**, e **struct** **Stat** contiene un'ora a 64 bit. Ciò è vero, a meno che **_USE_32BIT_TIME_T** è definito, nel qual caso il comportamento precedente è attiva; **Stat** utilizza un tempo a 32 bit, e **struct** **Stat** contiene un'ora a 32 bit. Lo stesso vale per **_stati64**.
+
 > [!NOTE]
->  `_wstat` non funziona con i collegamenti simbolici di [!INCLUDE[wiprlhext](../../c-runtime-library/reference/includes/wiprlhext_md.md)]. In questi casi, `_wstat` visualizzerà sempre un file di dimensioni pari a 0. `_stat` funziona correttamente con i collegamenti simbolici.  
-  
- Questa funzione convalida i relativi parametri. Se `path` o `buffer` è `NULL`, verrà richiamato il gestore di parametri non validi, come descritto in [Parameter Validation](../../c-runtime-library/parameter-validation.md).  
-  
-### <a name="time-type-and-file-length-type-variations-of-stat"></a>Variazioni tipo time e tipo lunghezza file di _stat  
-  
-|Funzioni|_USE_32BIT_TIME_T definito?|Tipo time|Tipo lunghezza file|  
-|---------------|------------------------------------|---------------|----------------------|  
-|`_stat`, `_wstat`|Non definito|64 bit|32 bit|  
-|`_stat`, `_wstat`|Definito|32 bit|32 bit|  
-|`_stat32`, `_wstat32`|Non interessato dalla definizione macro|32 bit|32 bit|  
-|`_stat64`, `_wstat64`|Non interessato dalla definizione macro|64 bit|64 bit|  
-|`_stati64`, `_wstati64`|Non definito|64 bit|64 bit|  
-|`_stati64`, `_wstati64`|Definito|32 bit|64 bit|  
-|`_stat32i64`, `_wstat32i64`|Non interessato dalla definizione macro|32 bit|64 bit|  
-|`_stat64i32`, `_wstat64i32`|Non interessato dalla definizione macro|64 bit|32 bit|  
-  
-### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico  
-  
-|Routine TCHAR.H|_UNICODE e _MBCS non definiti|_MBCS definito|_UNICODE definito|  
-|---------------------|------------------------------------|--------------------|-----------------------|  
-|`_tstat`|`_stat`|`_stat`|`_wstat`|  
-|`_tstat64`|`_stat64`|`_stat64`|`_wstat64`|  
-|`_tstati64`|`_stati64`|`_stati64`|`_wstati64`|  
-|`_tstat32i64`|`_stat32i64`|`_stat32i64`|`_wstat32i64`|  
-|`_tstat64i32`|`_stat64i32`|`_stat64i32`|`_wstat64i32`|  
-  
- La struttura `_stat` , definita in SYS\STAT.H, include i campi seguenti.  
-  
- `st_gid`  
- Identificatore numerico del gruppo cui appartiene il file (specifico di UNIX). Questo campo sarà sempre zero nei sistemi Windows. Un file reindirizzato viene classificato come file di Windows.  
-  
- `st_atime`  
- Ora dell'ultimo accesso del file. Valido su NTFS, ma non nelle unità disco formattate come FAT.  
-  
- `st_ctime`  
- Ora di creazione del file. Valido su NTFS, ma non nelle unità disco formattate come FAT.  
-  
- `st_dev`  
- Numero unità del disco contenente il file (uguale a `st_rdev`).  
-  
- `st_ino`  
- Numero del nodo informazioni (il `inode`) per il file (specifico di UNIX). Nei file system UNIX, il `inode` descrive la data del file e i timbri data, le autorizzazioni e il contenuto. Quando il collegamento tra i file è reale, essi condividono lo stesso `inode`. Il `inode`, e quindi `st_ino`, non ha alcun significato nei file system FAT, HPFS o NTFS.  
-  
- `st_mode`  
- Maschera di bit per informazioni sulla modalità di file. Viene impostato il bit `_S_IFDIR` se `path` specifica una directory; viene impostato il bit `_S_IFREG` se `path` specifica un file o un dispositivo normale. I bit di lettura/scrittura dell'utente sono impostati in base alla modalità di autorizzazione del file; i bit di esecuzione utente sono impostati secondo l'estensione.  
-  
- `st_mtime`  
- Ora dell'ultima modifica del file.  
-  
- `st_nlink`  
- Sempre 1 nel file system non NTFS.  
-  
- `st_rdev`  
- Numero unità del disco contenente il file (uguale a `st_dev`).  
-  
- `st_size`  
- Dimensioni del file in byte. Un intero a 64 bit per le varianti con il suffisso `i64`**.**  
-  
- `st_uid`  
- Identificatore numerico dell'utente proprietario del file (specifico di UNIX). Questo campo sarà sempre zero nei sistemi Windows. Un file reindirizzato viene classificato come file di Windows.  
-  
- Se `path` fa riferimento a un dispositivo, i campi `st_size`, i vari campi ora, `st_dev`e `st_rdev` nella struttura `_stat` non hanno alcun significato. Dal momento che STAT.H usa il tipo [dev_t](../../c-runtime-library/standard-types.md) definito in TYPES.H, è necessario includere TYPES.H prima di STAT.H nel codice.  
-  
-## <a name="requirements"></a>Requisiti  
-  
-|Routine|Intestazione obbligatoria|Intestazioni facoltative|  
-|-------------|---------------------|----------------------|  
-|`_stat`, `_stat32`, `_stat64`, `_stati64`, `_stat32i64`, `_stat64i32`|\<sys/types.h> seguito da \<sys/stat.h>|\<errno.h>|  
-|`_wstat`, `_wstat32`, `_wstat64`, `_wstati64`, `_wstat32i64`, `_wstat64i32`|\<sys/types.h> seguito da \<sys/stat.h> o \<wchar.h>|\<errno.h>|  
-  
- Per altre informazioni sulla compatibilità, vedere la sezione [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
-  
-## <a name="example"></a>Esempio  
-  
-```  
-// crt_stat.c  
-// This program uses the _stat function to  
-// report information about the file named crt_stat.c.  
-  
-#include <time.h>  
-#include <sys/types.h>  
-#include <sys/stat.h>  
-#include <stdio.h>  
-#include <errno.h>  
-  
-int main( void )  
-{  
-   struct _stat buf;  
-   int result;  
-   char timebuf[26];  
-   char* filename = "crt_stat.c";  
-   errno_t err;  
-  
-   // Get data associated with "crt_stat.c":   
-   result = _stat( filename, &buf );  
-  
-   // Check if statistics are valid:   
-   if( result != 0 )  
-   {  
-      perror( "Problem getting information" );  
-      switch (errno)  
-      {  
-         case ENOENT:  
-           printf("File %s not found.\n", filename);  
-           break;  
-         case EINVAL:  
-           printf("Invalid parameter to _stat.\n");  
-           break;  
-         default:  
-           /* Should never be reached. */  
-           printf("Unexpected error in _stat.\n");  
-      }  
-   }  
-   else  
-   {  
-      // Output some of the statistics:   
-      printf( "File size     : %ld\n", buf.st_size );  
-      printf( "Drive         : %c:\n", buf.st_dev + 'A' );  
-      err = ctime_s(timebuf, 26, &buf.st_mtime);  
-      if (err)  
-      {  
-         printf("Invalid arguments to ctime_s.");  
-         exit(1);  
-      }  
-      printf( "Time modified : %s", timebuf );  
-   }  
-}  
-```  
-  
-```Output  
-File size     : 732  
-Drive         : C:  
-Time modified : Thu Feb 07 14:39:36 2002  
-```  
-  
-## <a name="see-also"></a>Vedere anche  
- [Gestione di file](../../c-runtime-library/file-handling.md)   
- [_access, _waccess](../../c-runtime-library/reference/access-waccess.md)   
- [_fstat, _fstat32, _fstat64, _fstati64, _fstat32i64, _fstat64i32](../../c-runtime-library/reference/fstat-fstat32-fstat64-fstati64-fstat32i64-fstat64i32.md)   
- [_getmbcp](../../c-runtime-library/reference/getmbcp.md)   
- [_setmbcp](../../c-runtime-library/reference/setmbcp.md)
+> **wstat** non funziona con i collegamenti simbolici Windows Vista. In questi casi **wstat** visualizzerà sempre una dimensione pari a 0. **Stat** funziona correttamente con i collegamenti simbolici.
+
+Questa funzione convalida i relativi parametri. Se entrambi *percorso* oppure *buffer* è **NULL**, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md).
+
+### <a name="time-type-and-file-length-type-variations-of-stat"></a>Variazioni tipo time e tipo lunghezza file di _stat
+
+|Funzioni|_USE_32BIT_TIME_T definito?|Tipo time|Tipo lunghezza file|
+|---------------|------------------------------------|---------------|----------------------|
+|**Stat**, **wstat**|Non definito|64 bit|32 bit|
+|**Stat**, **wstat**|Definito|32 bit|32 bit|
+|**_stat32**, **_wstat32**|Non interessato dalla definizione macro|32 bit|32 bit|
+|**_stat64**, **_wstat64**|Non interessato dalla definizione macro|64 bit|64 bit|
+|**_stati64**, **_wstati64**|Non definito|64 bit|64 bit|
+|**_stati64**, **_wstati64**|Definito|32 bit|64 bit|
+|**_stat32i64**, **_wstat32i64**|Non interessato dalla definizione macro|32 bit|64 bit|
+|**_stat64i32**, **_wstat64i32**|Non interessato dalla definizione macro|64 bit|32 bit|
+
+### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
+
+|Routine TCHAR.H|_UNICODE e _MBCS non definiti|_MBCS definito|_UNICODE definito|
+|---------------------|------------------------------------|--------------------|-----------------------|
+|**tstat**|**_stat**|**_stat**|**_wstat**|
+|**_tstat64**|**_stat64**|**_stat64**|**_wstat64**|
+|**_tstati64**|**_stati64**|**_stati64**|**_wstati64**|
+|**_tstat32i64**|**_stat32i64**|**_stat32i64**|**_wstat32i64**|
+|**_tstat64i32**|**_stat64i32**|**_stat64i32**|**_wstat64i32**|
+
+Il **Stat** struttura, definita in SYS\STAT. H, inclusi i campi seguenti.
+
+|Campo||
+|-|-|
+**st_gid**|Identificatore numerico del gruppo cui appartiene il file (specifico di UNIX). Questo campo sarà sempre zero nei sistemi Windows. Un file reindirizzato viene classificato come file di Windows.
+**st_atime**|Ora dell'ultimo accesso del file. Valido su NTFS, ma non nelle unità disco formattate come FAT.
+**st_ctime**|Ora di creazione del file. Valido su NTFS, ma non nelle unità disco formattate come FAT.
+**st_dev**|Numero unità del disco contenente il file (uguale a **st_rdev**).
+**st_ino**|Numero del nodo informazioni (il **inode**) per il file (specifico di UNIX). Nel file System UNIX, il **inode** descrive il file data e timestamp, autorizzazioni e contenuto. Quando i file di disco rigido collegate a un'altra, essi condividono lo stesso **inode**. Il **inode**e pertanto **st_ino**, non ha alcun significato nei file system FAT, HPFS o NTFS.
+**st_mode**|Maschera di bit per informazioni sulla modalità di file. Il **s_ifdir** bit viene impostato se *percorso* specifica una directory; la **s_ifreg** bit viene impostato se *percorso* specifica un file normale o un dispositivo. I bit di lettura/scrittura dell'utente sono impostati in base alla modalità di autorizzazione del file; i bit di esecuzione utente sono impostati secondo l'estensione.
+**st_mtime**|Ora dell'ultima modifica del file.
+**st_nlink**|Sempre 1 nel file system non NTFS.
+**st_rdev**|Numero unità del disco contenente il file (uguale a **st_dev**).
+**st_size**|Dimensioni del file in byte. un valore integer a 64 bit per le varianti con il **i64** suffisso.
+**st_uid**|Identificatore numerico dell'utente proprietario del file (specifico di UNIX). Questo campo sarà sempre zero nei sistemi Windows. Un file reindirizzato viene classificato come file di Windows.
+
+Se *percorso* fa riferimento a un dispositivo, la **st_size**, vari campi ora, **st_dev**, e **st_rdev** campi il **Stat**  struttura sono prive di significato. Dal momento che STAT. H usa il tipo [dev_t](../../c-runtime-library/standard-types.md) definito in TYPES.H, è necessario includere TYPES.H prima di STAT.H nel codice.
+
+## <a name="requirements"></a>Requisiti
+
+|Routine|Intestazione obbligatoria|Intestazioni facoltative|
+|-------------|---------------------|----------------------|
+|**Stat**, **_stat32**, **_stat64**, **_stati64**, **_stat32i64**, **_stat64i32**|\<sys/types.h> seguito da \<sys/stat.h>|\<errno.h>|
+|**wstat**, **_wstat32**, **_wstat64**, **_wstati64**, **_wstat32i64**, **_wstat64i32**|\<sys/types.h> seguito da \<sys/stat.h> o \<wchar.h>|\<errno.h>|
+
+Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+
+## <a name="example"></a>Esempio
+
+```C
+// crt_stat.c
+// This program uses the _stat function to
+// report information about the file named crt_stat.c.
+
+#include <time.h>
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <stdio.h>
+#include <errno.h>
+
+int main( void )
+{
+   struct _stat buf;
+   int result;
+   char timebuf[26];
+   char* filename = "crt_stat.c";
+   errno_t err;
+
+   // Get data associated with "crt_stat.c":
+   result = _stat( filename, &buf );
+
+   // Check if statistics are valid:
+   if( result != 0 )
+   {
+      perror( "Problem getting information" );
+      switch (errno)
+      {
+         case ENOENT:
+           printf("File %s not found.\n", filename);
+           break;
+         case EINVAL:
+           printf("Invalid parameter to _stat.\n");
+           break;
+         default:
+           /* Should never be reached. */
+           printf("Unexpected error in _stat.\n");
+      }
+   }
+   else
+   {
+      // Output some of the statistics:
+      printf( "File size     : %ld\n", buf.st_size );
+      printf( "Drive         : %c:\n", buf.st_dev + 'A' );
+      err = ctime_s(timebuf, 26, &buf.st_mtime);
+      if (err)
+      {
+         printf("Invalid arguments to ctime_s.");
+         exit(1);
+      }
+      printf( "Time modified : %s", timebuf );
+   }
+}
+```
+
+```Output
+File size     : 732
+Drive         : C:
+Time modified : Thu Feb 07 14:39:36 2002
+```
+
+## <a name="see-also"></a>Vedere anche
+
+[Gestione di file](../../c-runtime-library/file-handling.md)<br/>
+[_access, _waccess](access-waccess.md)<br/>
+[_fstat, _fstat32, _fstat64, _fstati64, _fstat32i64, _fstat64i32](fstat-fstat32-fstat64-fstati64-fstat32i64-fstat64i32.md)<br/>
+[_getmbcp](getmbcp.md)<br/>
+[_setmbcp](setmbcp.md)<br/>

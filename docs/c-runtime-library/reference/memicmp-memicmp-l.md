@@ -1,12 +1,12 @@
 ---
 title: _memicmp, _memicmp_l | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _memicmp_l
@@ -36,117 +36,122 @@ helpviewer_keywords:
 - memicmp_l function
 - _memicmp_l function
 ms.assetid: 0a6eb945-4077-4f84-935d-1aaebe8db8cb
-caps.latest.revision: 
+caps.latest.revision: 19
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b79c36bc665d1d7a32ef50984a75b48811985d1e
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 25540061a3c7b405dcd173c6aa3d28678551c78d
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="memicmp-memicmpl"></a>_memicmp, _memicmp_l
-Confronta i caratteri in due buffer (senza distinzione tra maiuscole e minuscole).  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-int _memicmp(  
-   const void *buf1,  
-   const void *buf2,  
-   size_t count   
-);  
-int _memicmp_l(  
-   const void *buf1,  
-   const void *buf2,  
-   size_t count,  
-   _locale_t locale  
-);  
-```  
-  
-#### <a name="parameters"></a>Parametri  
- `buf1`  
- Primo buffer.  
-  
- `buf2`  
- Secondo buffer.  
-  
- `count`  
- Numero di caratteri.  
-  
- `locale`  
- Impostazioni locali da usare.  
-  
-## <a name="return-value"></a>Valore restituito  
- Il valore restituito indica la relazione tra i buffer.  
-  
-|Valore restituito|Relazione dei primi byte corrispondenti al conteggio di buf1 e buf2|  
-|------------------|--------------------------------------------------------|  
-|< 0|`buf1` minore di `buf2`.|  
-|0|`buf1` uguale a `buf2`.|  
-|> 0|`buf1` maggiore di `buf2`.|  
-|`_NLSCMPERROR`|Si è verificato un errore.|  
-  
-## <a name="remarks"></a>Note  
- La funzione `_memicmp` confronta i primi `count` caratteri dei due buffer `buf1` e `buf2` byte per byte. Nel confronto non viene fatta distinzione tra maiuscole e minuscole.  
-  
- Se `buf1` o `buf2` è un puntatore Null, questa funzione richiama un gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, la funzione restituisce `_NLSCMPERROR` e imposta `errno` su `EINVAL`.  
-  
- `_memicmp` usa le impostazioni locali correnti per qualsiasi comportamento dipendente dalle impostazioni locali. La funzione `_memicmp_l` è identica, ma usa le impostazioni locali passate. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).  
-  
-## <a name="requirements"></a>Requisiti  
-  
-|Routine|Intestazione obbligatoria|  
-|-------------|---------------------|  
-|`_memicmp`|\<memory.h> o \<string.h>|  
-|`_memicmp_l`|\<memory.h> o \<string.h>|  
-  
- Per altre informazioni sulla compatibilità, vedere la sezione [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
-  
-## <a name="example"></a>Esempio  
-  
-```  
-// crt_memicmp.c  
-// This program uses _memicmp to compare  
-// the first 29 letters of the strings named first and  
-// second without regard to the case of the letters.  
-  
-#include <memory.h>  
-#include <stdio.h>  
-#include <string.h>  
-  
-int main( void )  
-{  
-   int result;  
-   char first[] = "Those Who Will Not Learn from History";  
-   char second[] = "THOSE WHO WILL NOT LEARN FROM their mistakes";  
-   // Note that the 29th character is right here ^  
-  
-   printf( "Compare '%.29s' to '%.29s'\n", first, second );  
-   result = _memicmp( first, second, 29 );  
-   if( result < 0 )  
-      printf( "First is less than second.\n" );  
-   else if( result == 0 )  
-      printf( "First is equal to second.\n" );  
-   else if( result > 0 )  
-      printf( "First is greater than second.\n" );  
-}  
-```  
-  
-```Output  
-Compare 'Those Who Will Not Learn from' to 'THOSE WHO WILL NOT LEARN FROM'  
-First is equal to second.  
-```  
-  
-## <a name="see-also"></a>Vedere anche  
- [Modifica del buffer](../../c-runtime-library/buffer-manipulation.md)   
- [_memccpy](../../c-runtime-library/reference/memccpy.md)   
- [memchr, wmemchr](../../c-runtime-library/reference/memchr-wmemchr.md)   
- [memcmp, wmemcmp](../../c-runtime-library/reference/memcmp-wmemcmp.md)   
- [memcpy, wmemcpy](../../c-runtime-library/reference/memcpy-wmemcpy.md)   
- [memset, wmemset](../../c-runtime-library/reference/memset-wmemset.md)   
- [_stricmp, _wcsicmp, _mbsicmp, _stricmp_l, _wcsicmp_l, _mbsicmp_l](../../c-runtime-library/reference/stricmp-wcsicmp-mbsicmp-stricmp-l-wcsicmp-l-mbsicmp-l.md)   
- [_strnicmp, _wcsnicmp, _mbsnicmp, _strnicmp_l, _wcsnicmp_l, _mbsnicmp_l](../../c-runtime-library/reference/strnicmp-wcsnicmp-mbsnicmp-strnicmp-l-wcsnicmp-l-mbsnicmp-l.md)
+
+Confronta i caratteri in due buffer (senza distinzione tra maiuscole e minuscole).
+
+## <a name="syntax"></a>Sintassi
+
+```C
+int _memicmp(
+   const void *buffer1,
+   const void *buffer2,
+   size_t count
+);
+int _memicmp_l(
+   const void *buffer1,
+   const void *buffer2,
+   size_t count,
+   _locale_t locale
+);
+```
+
+### <a name="parameters"></a>Parametri
+
+*buffer1*<br/>
+Primo buffer.
+
+*buffer2*<br/>
+Secondo buffer.
+
+*count*<br/>
+Numero di caratteri.
+
+*locale*<br/>
+Impostazioni locali da usare.
+
+## <a name="return-value"></a>Valore restituito
+
+Il valore restituito indica la relazione tra i buffer.
+
+|Valore restituito|Relazione dei primi byte corrispondenti al conteggio di buf1 e buf2|
+|------------------|--------------------------------------------------------|
+|< 0|*buffer1* minore *buffer2*.|
+|0|*buffer1* identico al *buffer2*.|
+|> 0|*buffer1* maggiore *buffer2*.|
+|**_NLSCMPERROR**|Si è verificato un errore.|
+
+## <a name="remarks"></a>Note
+
+Il **memicmp** funzione Confronta i primi *conteggio* caratteri di due buffer *buffer1* e *buffer2* byte per byte. Nel confronto non viene fatta distinzione tra maiuscole e minuscole.
+
+Se entrambi *buffer1* oppure *buffer2* è un puntatore null, questa funzione richiama un gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, la funzione restituisce **_NLSCMPERROR** e imposta **errno** al **EINVAL**.
+
+**memicmp** utilizza le impostazioni locali correnti per il comportamento dipendente dalle impostazioni locali; **memicmp_l** è identica ad eccezione del fatto che usa le impostazioni locali passate. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
+
+## <a name="requirements"></a>Requisiti
+
+|Routine|Intestazione obbligatoria|
+|-------------|---------------------|
+|**_memicmp**|\<memory.h> o \<string.h>|
+|**_memicmp_l**|\<memory.h> o \<string.h>|
+
+Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+
+## <a name="example"></a>Esempio
+
+```C
+// crt_memicmp.c
+// This program uses _memicmp to compare
+// the first 29 letters of the strings named first and
+// second without regard to the case of the letters.
+
+#include <memory.h>
+#include <stdio.h>
+#include <string.h>
+
+int main( void )
+{
+   int result;
+   char first[] = "Those Who Will Not Learn from History";
+   char second[] = "THOSE WHO WILL NOT LEARN FROM their mistakes";
+   // Note that the 29th character is right here ^
+
+   printf( "Compare '%.29s' to '%.29s'\n", first, second );
+   result = _memicmp( first, second, 29 );
+   if( result < 0 )
+      printf( "First is less than second.\n" );
+   else if( result == 0 )
+      printf( "First is equal to second.\n" );
+   else if( result > 0 )
+      printf( "First is greater than second.\n" );
+}
+```
+
+```Output
+Compare 'Those Who Will Not Learn from' to 'THOSE WHO WILL NOT LEARN FROM'
+First is equal to second.
+```
+
+## <a name="see-also"></a>Vedere anche
+
+[Modifica del buffer](../../c-runtime-library/buffer-manipulation.md)<br/>
+[_memccpy](memccpy.md)<br/>
+[memchr, wmemchr](memchr-wmemchr.md)<br/>
+[memcmp, wmemcmp](memcmp-wmemcmp.md)<br/>
+[memcpy, wmemcpy](memcpy-wmemcpy.md)<br/>
+[memset, wmemset](memset-wmemset.md)<br/>
+[_stricmp, _wcsicmp, _mbsicmp, _stricmp_l, _wcsicmp_l, _mbsicmp_l](stricmp-wcsicmp-mbsicmp-stricmp-l-wcsicmp-l-mbsicmp-l.md)<br/>
+[_strnicmp, _wcsnicmp, _mbsnicmp, _strnicmp_l, _wcsnicmp_l, _mbsnicmp_l](strnicmp-wcsnicmp-mbsnicmp-strnicmp-l-wcsnicmp-l-mbsnicmp-l.md)<br/>

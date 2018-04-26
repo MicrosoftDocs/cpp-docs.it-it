@@ -1,12 +1,12 @@
 ---
 title: _ismbbalpha, _ismbbalpha_l | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _ismbbalpha
@@ -37,60 +37,63 @@ helpviewer_keywords:
 - _ismbbalpha function
 - _ismbbalpha_l function
 ms.assetid: 8e54cb92-fc2b-41f5-8ab4-b22ac8aa9ad0
-caps.latest.revision: 
+caps.latest.revision: 18
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9df6ee4ab843d9adf6723936856519894b732958
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: a3e1a5984333def50c31ed6395265afb424fd7e6
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="ismbbalpha-ismbbalphal"></a>_ismbbalpha, _ismbbalpha_l
-Determina se un carattere multibyte specificato corrisponde ad alfa.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-int _ismbbalpha(  
-   unsigned int c   
-);  
-int _ismbbalpha_l(  
-   unsigned int c   
-);  
-```  
-  
-#### <a name="parameters"></a>Parametri  
- `c`  
- Valore Integer da testare.  
-  
- `locale`  
- Impostazioni locali da usare.  
-  
-## <a name="return-value"></a>Valore restituito  
- `_ismbbalpha` restituisce un valore diverso da zero se l'espressione:  
-  
-```  
-isalpha || _ismbbkalnum  
-```  
-  
- è diverso da zero per `c` oppure zero in caso contrario. `_ismbbalpha` usa le impostazioni locali correnti per qualsiasi impostazione del carattere dipendente dalle impostazioni locali. `_ismbbalpha_l` è identico, ma usa le impostazioni locali che gli vengono passate.  
-  
-## <a name="requirements"></a>Requisiti  
-  
-|Routine|Intestazione obbligatoria|  
-|-------------|---------------------|  
-|`_ismbbalpha`|\<mbctype.h>|  
-|`_ismbbalpha_l`|\<mbctype.h>|  
-  
- Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).  
-  
-## <a name="libraries"></a>Librerie  
- Tutte le versioni delle [librerie di runtime C](../../c-runtime-library/crt-library-features.md).  
-  
-## <a name="see-also"></a>Vedere anche  
- [Classificazione per byte](../../c-runtime-library/byte-classification.md)   
- [Routine _ismbb](../../c-runtime-library/ismbb-routines.md)
+
+Determina se un carattere multibyte specificato corrisponde ad alfa.
+
+## <a name="syntax"></a>Sintassi
+
+```C
+int _ismbbalpha(
+   unsigned int c
+);
+int _ismbbalpha_l(
+   unsigned int c
+);
+```
+
+### <a name="parameters"></a>Parametri
+
+*c*<br/>
+Valore Integer da testare.
+
+*locale*<br/>
+Impostazioni locali da usare.
+
+## <a name="return-value"></a>Valore restituito
+
+**ismbbalpha** restituisce un valore diverso da zero se l'espressione:
+
+`isalpha(c) || _ismbbkalnum(c)`
+
+è diverso da zero per *c*, oppure 0 in caso contrario. **ismbbalpha** utilizza le impostazioni locali correnti per le impostazioni dei caratteri dipendenti dalle impostazioni locali. **ismbbalpha_l** è identica ad eccezione del fatto che usa le impostazioni locali passata.
+
+## <a name="requirements"></a>Requisiti
+
+|Routine|Intestazione obbligatoria|
+|-------------|---------------------|
+|**_ismbbalpha**|\<mbctype.h>|
+|**_ismbbalpha_l**|\<mbctype.h>|
+
+Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+
+## <a name="libraries"></a>Librerie
+
+Tutte le versioni delle [librerie di runtime C](../../c-runtime-library/crt-library-features.md).
+
+## <a name="see-also"></a>Vedere anche
+
+[Classificazione per byte](../../c-runtime-library/byte-classification.md)<br/>
+[Routine _ismbb](../../c-runtime-library/ismbb-routines.md)<br/>

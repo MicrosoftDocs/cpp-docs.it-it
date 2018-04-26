@@ -86,15 +86,15 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3598724e905c51c68e7f4305f409060eb1f98e41
-ms.sourcegitcommit: 604907f77eb6c5b1899194a9877726f3e8c2dabc
+ms.openlocfilehash: 1f4d00b7938c9fce4e96cd900e460721d9ebe662
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="itoas-ltoas-ultoas-i64toas-ui64toas-itows--ltows--ultows-i64tows-ui64tows"></a>_itoa_s, _ltoa_s, _ultoa_s, _i64toa_s, _ui64toa_s, _itow_s,  _ltow_s,  _ultow_s, _i64tow_s, _ui64tow_s
 
-Converte un intero in una stringa. Queste sono versioni del [itoa, funzioni itow](../../c-runtime-library/reference/itoa-itow.md) a livello di sicurezza come descritto in [funzionalità di sicurezza in CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Converte un intero in una stringa. Queste sono versioni del [itoa, funzioni itow](itoa-itow.md) a livello di sicurezza come descritto in [funzionalità di sicurezza in CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 ## <a name="syntax"></a>Sintassi
 
@@ -161,22 +161,22 @@ Zero se con esito positivo; un codice di errore in caso di errore. Se si applica
 
 |predefinito|buffer|size|radix|INVIO|
 |-----------|------------|----------------------|-----------|------------|
-|qualsiasi|`NULL`|qualsiasi|qualsiasi|`EINVAL`|
-|qualsiasi|qualsiasi|<=0|qualsiasi|`EINVAL`|
-|qualsiasi|qualsiasi|<= lunghezza della stringa di risultato richiesta|qualsiasi|`EINVAL`|
-|qualsiasi|qualsiasi|qualsiasi|*radice* < 2 o *radice* > 36|`EINVAL`|
+|qualsiasi|**NULL**|qualsiasi|qualsiasi|**EINVAL**|
+|qualsiasi|qualsiasi|<=0|qualsiasi|**EINVAL**|
+|qualsiasi|qualsiasi|<= lunghezza della stringa di risultato richiesta|qualsiasi|**EINVAL**|
+|qualsiasi|qualsiasi|qualsiasi|*radice* < 2 o *radice* > 36|**EINVAL**|
 
 ### <a name="security-issues"></a>Problemi di sicurezza
 
-Queste funzioni possono generare una violazione di accesso se *buffer* non punta alla memoria valida e non è `NULL`, o se la lunghezza del buffer non è sufficiente per contenere la stringa di risultato.
+Queste funzioni possono generare una violazione di accesso se *buffer* non punta alla memoria valida e non è **NULL**, o se la lunghezza del buffer non è sufficiente per contenere la stringa di risultato.
 
 ## <a name="remarks"></a>Note
 
-Ad eccezione di parametri e il valore restituito, il `_itoa_s` e `_itow_s` famiglie di funzione hanno lo stesso comportamento come corrispondente meno sicura `_itoa` e `_itow` versioni.
+Ad eccezione di parametri e il valore restituito, il **itoa_s** e **itow_s** famiglie di funzione hanno lo stesso comportamento come corrispondente meno sicura **itoa** e**itow** versioni.
 
 In C++ l'utilizzo di queste funzioni è semplificato dagli overload dei modelli. Gli overload possono dedurre la lunghezza del buffer automaticamente (eliminando la necessità di specificare un argomento di dimensione) e possono sostituire automaticamente le funzioni precedenti e non sicure con le controparti più recenti e sicure. Per altre informazioni, vedere [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 
-Le versioni della libreria di debug di queste funzioni riempiono innanzitutto il buffer con 0xFD. Per disabilitare questo comportamento, usare [_CrtSetDebugFillThreshold](../../c-runtime-library/reference/crtsetdebugfillthreshold.md).
+Le versioni della libreria di debug di queste funzioni riempiono innanzitutto il buffer con 0xFD. Per disabilitare questo comportamento, usare [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
 
 La libreria CRT include pratiche macro per definire la dimensione del buffer necessarie per convertire il valore possibile più lungo di ogni tipo di integer, inclusi il carattere di terminazione null e firmare carattere, per diverse basi comuni. Per informazioni, vedere [macro conteggio di conversione massimo](itoa-itow.md#maximum-conversion-count-macros).
 
@@ -184,18 +184,18 @@ La libreria CRT include pratiche macro per definire la dimensione del buffer nec
 
 |Routine Tchar.h|_UNICODE e _MBCS non definiti|_MBCS definito|_UNICODE definito|
 |---------------------|--------------------------------------|--------------------|-----------------------|
-|`_itot_s`|`_itoa_s`|`_itoa_s`|`_itow_s`|
-|`_ltot_s`|`_ltoa_s`|`_ltoa_s`|`_ltow_s`|
-|`_ultot_s`|`_ultoa_s`|`_ultoa_s`|`_ultow_s`|
-|`_i64tot_s`|`_i64toa_s`|`_i64toa_s`|`_i64tow_s`|
-|`_ui64tot_s`|`_ui64toa_s`|`_ui64toa_s`|`_ui64tow_s`|
+|**itot_s**|**_itoa_s**|**_itoa_s**|**_itow_s**|
+|**_ltot_s**|**_ltoa_s**|**_ltoa_s**|**_ltow_s**|
+|**_ultot_s**|**_ultoa_s**|**_ultoa_s**|**_ultow_s**|
+|**_i64tot_s**|**_i64toa_s**|**_i64toa_s**|**_i64tow_s**|
+|**_ui64tot_s**|**_ui64toa_s**|**_ui64toa_s**|**_ui64tow_s**|
 
 ## <a name="requirements"></a>Requisiti
 
 |Routine|Intestazione obbligatoria|
 |-------------|---------------------|
-|`_itoa_s`, `_ltoa_s`, `_ultoa_s`, `_i64toa_s`, `_ui64toa_s`|\<stdlib.h>|
-|`_itow_s`, `_ltow_s`, `_ultow_s`, `_i64tow_s`, `_ui64tow_s`|\<stdlib.h> or \<wchar.h>|
+|**itoa_s**, **ltoa_s**, **ultoa_s**, **_i64toa_s**, **_ui64toa_s**|\<stdlib.h>|
+|**itow_s**, **ltow_s**, **ultow_s**, **_i64tow_s**, **_ui64tow_s**|\<stdlib.h> or \<wchar.h>|
 
 Queste funzioni sono specifiche di Microsoft. Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 
@@ -272,4 +272,4 @@ base 2: 1111111111111111111111111111111111111111111111111111111111111111 (64 cha
 ## <a name="see-also"></a>Vedere anche
 
 [Conversione dei dati](../../c-runtime-library/data-conversion.md)<br/>
-[itoa, itow funzioni](../../c-runtime-library/reference/itoa-itow.md)<br/>
+[itoa, itow funzioni](itoa-itow.md)<br/>

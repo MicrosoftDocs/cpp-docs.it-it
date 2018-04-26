@@ -1,13 +1,13 @@
 ---
 title: exp2, exp2f, exp2l | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.custom: ''
+ms.date: 04/05/2018
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp
 - devlang-cpp
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - exp2
@@ -40,75 +40,80 @@ helpviewer_keywords:
 - exp2f function
 - exp2l function
 ms.assetid: 526e3e10-201a-4610-a886-533f44ece344
-caps.latest.revision: 
+caps.latest.revision: 13
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8bf1eca51bbe7d5db5044e0c863f30a5af63f77d
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 69b7deb8e6e43ded0a3545bc1b33961d977eeb1f
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="exp2-exp2f-exp2l"></a>exp2, exp2f, exp2l
-Calcola 2 al valore specificato.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-double exp2(  
-   double x  
-);  
-  
-float exp2(  
-   float x  
-);  // C++ only  
-  
-long double exp2(  
-   long double x  
-); // C++ only  
-  
-float exp2f(  
-   float x  
-);  
-  
-long double exp2l(  
-   long double x  
-);  
-```  
-  
-#### <a name="parameters"></a>Parametri  
- [in] `x`  
- Valore dell'esponente.  
-  
-## <a name="return-value"></a>Valore restituito  
- Se ha esito positivo, restituisce l'esponente in base 2 di `x`, vale a dire 2<sup>x</sup>. In caso contrario, restituisce uno dei valori seguenti:  
-  
-|Problema|INVIO|  
-|-----------|------------|  
-|`x` = ±0|1|  
-|`x` = -INFINITO|+0|  
-|`x` = +INFINITO|+INFINITO|  
-|`x` = NaN|NaN|  
-|Errore di intervallo di overflow|+HUGE_VAL, +HUGE_VALF o +HUGE_VALL|  
-|Errore di intervallo di underflow|Risultato corretto, dopo l'arrotondamento|  
-  
- Gli errori vengono segnalati come specificato in [_matherr](../../c-runtime-library/reference/matherr.md).  
-  
-## <a name="remarks"></a>Note  
- Poiché C++ consente l'overload, è possibile chiamare overload di `exp2` che accettano e restituiscono **float** e **long double** tipi. In un programma C, `exp2` accetta e restituisce sempre un **double**.  
-  
-## <a name="requirements"></a>Requisiti  
-  
-|Routine|Intestazione C|Intestazione C++|  
-|-------------|--------------|------------------|  
-|`exp`, `expf`, `expl`|\<math.h>|\<cmath>|  
-  
- Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).  
-  
-## <a name="see-also"></a>Vedere anche  
- [Alphabetical Function Reference](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)  (Riferimento alfabetico alle funzioni)  
- [exp, expf, expl](../../c-runtime-library/reference/exp-expf.md)   
- [log2, log2f, log2l](../../c-runtime-library/reference/log2-log2f-log2l.md)
+
+Calcola 2 al valore specificato.
+
+## <a name="syntax"></a>Sintassi
+
+```C
+double exp2(
+   double x
+);
+
+float exp2(
+   float x
+);  // C++ only
+
+long double exp2(
+   long double x
+); // C++ only
+
+float exp2f(
+   float x
+);
+
+long double exp2l(
+   long double x
+);
+```
+
+### <a name="parameters"></a>Parametri
+
+*x*<br/>
+Valore dell'esponente.
+
+## <a name="return-value"></a>Valore restituito
+
+Se l'operazione riesce, restituisce l'esponente in base 2 di *x*, vale a dire, 2<sup>x</sup>. In caso contrario, restituisce uno dei valori seguenti:
+
+|Problema|INVIO|
+|-----------|------------|
+|*x* = ± 0|1|
+|*x* = - INFINITY|+0|
+|*x* = + INFINITY|+INFINITO|
+|*x* = NaN|NaN|
+|Errore di intervallo di overflow|+HUGE_VAL, +HUGE_VALF o +HUGE_VALL|
+|Errore di intervallo di underflow|Risultato corretto, dopo l'arrotondamento|
+
+Gli errori vengono segnalati come specificato in [_matherr](matherr.md).
+
+## <a name="remarks"></a>Note
+
+Dato che C++ consente l'overload, è possibile chiamare overload di **exp2** che accettano e restituiscono **float** e **long double** tipi. In un programma C **exp2** accetta e restituisce sempre un **doppie**.
+
+## <a name="requirements"></a>Requisiti
+
+|Routine|Intestazione C|Intestazione C++|
+|-------------|--------------|------------------|
+|**EXP**, **expf**, **expl**|\<math.h>|\<cmath>|
+
+Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+
+## <a name="see-also"></a>Vedere anche
+
+[Riferimento alfabetico alle funzioni](crt-alphabetical-function-reference.md)<br/>
+[exp, expf, expl](exp-expf.md)<br/>
+[log2, log2f, log2l](log2-log2f-log2l.md)<br/>

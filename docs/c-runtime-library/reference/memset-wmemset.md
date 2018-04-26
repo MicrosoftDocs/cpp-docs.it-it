@@ -1,12 +1,12 @@
 ---
 title: memset, wmemset | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - wmemset
@@ -34,127 +34,132 @@ helpviewer_keywords:
 - wmemset function
 - memset function
 ms.assetid: e7ceb01b-df69-49c2-b294-a39358ad4699
-caps.latest.revision: 
+caps.latest.revision: 12
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f960dc71198d35ad162c38e5bca85a7d38312a01
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 30b2dfd7fd1a932f0652af3823f21c1e25b0968e
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="memset-wmemset"></a>memset, wmemset
-Imposta i buffer su un carattere specificato.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-  
-      void *memset(  
-   void *dest,  
-   int c,  
-   size_t count   
-);  
-wchar_t *wmemset(  
-   wchar_t *dest,  
-   wchar_t c,  
-   size_t count  
-);  
-```  
-  
-#### <a name="parameters"></a>Parametri  
- *dest*  
- Puntatore alla destinazione.  
-  
- `c`  
- Carattere da impostare.  
-  
- *count*  
- Numero di caratteri.  
-  
-## <a name="return-value"></a>Valore restituito  
- Valore di `dest`.  
-  
-## <a name="remarks"></a>Note  
- Imposta i primi `count` caratteri di `dest` sul carattere `c`.  
-  
- **Nota sulla sicurezza** Assicurarsi che il buffer di destinazione abbia spazio sufficiente per almeno `count` caratteri. Per altre informazioni, vedere [Evitare sovraccarichi del buffer](http://msdn.microsoft.com/library/windows/desktop/ms717795).  
-  
-## <a name="requirements"></a>Requisiti  
-  
-|Routine|Intestazione obbligatoria|  
-|-------------|---------------------|  
-|`memset`|\<memory.h> o \<string.h>|  
-|`wmemset`|\<wchar.h>|  
-  
- Per altre informazioni sulla compatibilità, vedere la sezione [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
-  
-## <a name="libraries"></a>Librerie  
- Tutte le versioni delle [librerie di runtime C](../../c-runtime-library/crt-library-features.md).  
-  
-## <a name="example"></a>Esempio  
-  
-```  
-// crt_memset.c  
-/* This program uses memset to  
- * set the first four chars of buffer to "*".  
- */  
-  
-#include <memory.h>  
-#include <stdio.h>  
-  
-int main( void )  
-{  
-   char buffer[] = "This is a test of the memset function";  
-  
-   printf( "Before: %s\n", buffer );  
-   memset( buffer, '*', 4 );  
-   printf( "After:  %s\n", buffer );  
-}  
-```  
-  
-## <a name="output"></a>Output  
-  
-```  
-Before: This is a test of the memset function  
-After:  **** is a test of the memset function  
-```  
-  
- Ecco un esempio dell'uso di wmemset:  
-  
-```  
-// crt_wmemset.c  
-/* This program uses memset to  
- * set the first four chars of buffer to "*".  
- */  
-  
-#include <wchar.h>  
-#include <stdio.h>  
-  
-int main( void )  
-{  
-   wchar_t buffer[] = L"This is a test of the wmemset function";  
-  
-   wprintf( L"Before: %s\n", buffer );  
-   wmemset( buffer, '*', 4 );  
-   wprintf( L"After:  %s\n", buffer );  
-}  
-```  
-  
-## <a name="output"></a>Output  
-  
-```  
-Before: This is a test of the wmemset function  
-After:  **** is a test of the wmemset function  
-```  
-  
-## <a name="see-also"></a>Vedere anche  
- [Modifica del buffer](../../c-runtime-library/buffer-manipulation.md)   
- [_memccpy](../../c-runtime-library/reference/memccpy.md)   
- [memchr, wmemchr](../../c-runtime-library/reference/memchr-wmemchr.md)   
- [memcmp, wmemcmp](../../c-runtime-library/reference/memcmp-wmemcmp.md)   
- [memcpy, wmemcpy](../../c-runtime-library/reference/memcpy-wmemcpy.md)   
- [_strnset, _strnset_l, _wcsnset, _wcsnset_l, _mbsnset, _mbsnset_l](../../c-runtime-library/reference/strnset-strnset-l-wcsnset-wcsnset-l-mbsnset-mbsnset-l.md)
+
+Imposta i buffer su un carattere specificato.
+
+## <a name="syntax"></a>Sintassi
+
+```C
+void *memset(
+   void *dest,
+   int c,
+   size_t count
+);
+wchar_t *wmemset(
+   wchar_t *dest,
+   wchar_t c,
+   size_t count
+);
+```
+
+### <a name="parameters"></a>Parametri
+
+*dest*<br/>
+Puntatore alla destinazione.
+
+*c*<br/>
+Carattere da impostare.
+
+*count*<br/>
+Numero di caratteri.
+
+## <a name="return-value"></a>Valore restituito
+
+Il valore di *dest*.
+
+## <a name="remarks"></a>Note
+
+Imposta il primo *conteggio* caratteri *dest* al carattere *c*.
+
+**Nota sulla sicurezza** assicurarsi che il buffer di destinazione disponga di spazio sufficiente per almeno *conteggio* caratteri. Per altre informazioni, vedere [Evitare sovraccarichi del buffer](http://msdn.microsoft.com/library/windows/desktop/ms717795).
+
+## <a name="requirements"></a>Requisiti
+
+|Routine|Intestazione obbligatoria|
+|-------------|---------------------|
+|**memset**|\<memory.h> o \<string.h>|
+|**wmemset**|\<wchar.h>|
+
+Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+
+## <a name="libraries"></a>Librerie
+
+Tutte le versioni delle [librerie di runtime C](../../c-runtime-library/crt-library-features.md).
+
+## <a name="example"></a>Esempio
+
+```C
+// crt_memset.c
+/* This program uses memset to
+* set the first four chars of buffer to "*".
+*/
+
+#include <memory.h>
+#include <stdio.h>
+
+int main( void )
+{
+   char buffer[] = "This is a test of the memset function";
+
+   printf( "Before: %s\n", buffer );
+   memset( buffer, '*', 4 );
+   printf( "After:  %s\n", buffer );
+}
+```
+
+### <a name="output"></a>Output
+
+```Output
+Before: This is a test of the memset function
+After:  **** is a test of the memset function
+```
+
+Ecco un esempio dell'uso di wmemset:
+
+```C
+// crt_wmemset.c
+/* This program uses memset to
+* set the first four chars of buffer to "*".
+*/
+
+#include <wchar.h>
+#include <stdio.h>
+
+int main( void )
+{
+   wchar_t buffer[] = L"This is a test of the wmemset function";
+
+   wprintf( L"Before: %s\n", buffer );
+   wmemset( buffer, '*', 4 );
+   wprintf( L"After:  %s\n", buffer );
+}
+```
+
+### <a name="output"></a>Output
+
+```Output
+Before: This is a test of the wmemset function
+After:  **** is a test of the wmemset function
+```
+
+## <a name="see-also"></a>Vedere anche
+
+[Modifica del buffer](../../c-runtime-library/buffer-manipulation.md)<br/>
+[_memccpy](memccpy.md)<br/>
+[memchr, wmemchr](memchr-wmemchr.md)<br/>
+[memcmp, wmemcmp](memcmp-wmemcmp.md)<br/>
+[memcpy, wmemcpy](memcpy-wmemcpy.md)<br/>
+[_strnset, _strnset_l, _wcsnset, _wcsnset_l, _mbsnset, _mbsnset_l](strnset-strnset-l-wcsnset-wcsnset-l-mbsnset-mbsnset-l.md)<br/>

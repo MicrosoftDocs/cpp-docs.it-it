@@ -1,12 +1,12 @@
 ---
 title: fseek, _fseeki64 | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _fseeki64
@@ -36,129 +36,131 @@ helpviewer_keywords:
 - file pointers [C++]
 - seek file pointers
 ms.assetid: f6bb1f8b-891c-426e-9e14-0e7e5c62df70
-caps.latest.revision: 
+caps.latest.revision: 23
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4dd4c4e6550946bafdaf0ad8f521e1e942ae04c1
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 266eb1589c97b177057e6a72874261c745acb475
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="fseek-fseeki64"></a>fseek, _fseeki64
-Sposta il puntatore del file in una posizione specificata.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-int fseek(   
-   FILE *stream,  
-   long offset,  
-   int origin   
-);  
-int _fseeki64(   
-   FILE *stream,  
-   __int64 offset,  
-   int origin   
-);  
-```  
-  
-#### <a name="parameters"></a>Parametri  
- `stream`  
- Puntatore alla struttura `FILE` .  
-  
- `offset`  
- Numero di byte da `origin`.  
-  
- `origin`  
- Posizione iniziale.  
-  
-## <a name="return-value"></a>Valore restituito  
- Se l'esito è positivo, `fseek` e `_fseeki64` restituiscono 0. In caso contrario, viene restituito un valore diverso da zero. Nei dispositivi che non supportano la ricerca, il valore restituito è indefinito. Se `stream` è un puntatore Null o se `origin` non è uno dei valori consentiti descritti di seguito, `fseek` e `_fseeki64` richiamano il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni impostano `errno` su `EINVAL` e restituiscono -1.  
-  
-## <a name="remarks"></a>Note  
- Il `fseek` e `_fseeki64` funzioni passa il puntatore del file (se presente) associato `stream` in un percorso nuovo `offset` byte da `origin`. L'operazione successiva nel flusso viene eseguita nella nuova posizione. In un flusso aperto per l'aggiornamento, l'operazione successiva può essere un'operazione di lettura o scrittura. L'argomento origin deve essere una delle costanti seguenti, definite in STDIO.H:  
-  
- `SEEK_CUR`  
- Posizione corrente del puntatore del file.  
-  
- `SEEK_END`  
- Fine del file.  
-  
- `SEEK_SET`  
- Inizio del file.  
-  
- È possibile usare `fseek` e `_fseeki64` per riposizionare il puntatore in qualsiasi punto in un file. Il puntatore può essere posizionato anche oltre la fine del file. `fseek` e `_fseeki64` Cancella l'indicatore di fine del file e Annulla l'effetto di eventuali prima `ungetc` chiama contro `stream`.  
-  
- Quando un file viene aperto per l'accodamento dei dati, la posizione corrente nel file è determinata dall'ultima operazione di I/O e non dalla posizione in cui si verificherà la scrittura successiva. Se non è ancora stata eseguita alcuna operazione di I/O su un file aperto per l'accodamento, la posizione nel file è l'inizio del file.  
-  
- Per i flussi aperti in modalità testo, `fseek` e `_fseeki64` hanno un utilizzo limitato, perché possono causare traduzioni di ritorno a capo-avanzamento di riga restituito `fseek` e `_fseeki64` per produrre risultati imprevisti. L'unico `fseek` e `_fseeki64` operazioni funzionare su flussi aperti in modalità testo sono:  
-  
--   Ricerca con offset 0 rispetto a qualsiasi valore di origine.  
-  
--   La ricerca dall'inizio del file con un valore di offset restituito da una chiamata a `ftell` quando si utilizza `fseek` o `_ftelli64` quando si utilizza `_fseeki64`.  
-  
- In modalità testo, inoltre, CTRL+Z viene interpretato nell'input come un carattere di fine file. Nei file aperti per la lettura/scrittura, `fopen` e tutte le routine correlate verificano la presenza della combinazione CTRL+Z alla fine del file e la rimuovono, se possibile. Questa operazione viene eseguita perché l'uso di `fseek` e `ftell` o `_fseeki64` e `_ftelli64` per spostarsi all'interno di un file che termina con CTRL+Z può causare un comportamento non corretto di `fseek` o `_fseeki64` in prossimità della fine del file.  
-  
- Quando CRT apre un file che inizia con un BOM (Byte Order Mark), il puntatore del file viene posizionato dopo il BOM, ovvero all'inizio del contenuto effettivo del file. Se è necessario usare `fseek` per spostarsi all'inizio del file, usare `ftell` per ottenere la posizione iniziale e specificare tale posizione per `fseek`, invece della posizione 0.  
-  
- Questa funzione blocca altri thread durante l'esecuzione e pertanto è thread-safe. Per una versione che non blocca i thread, vedere [_fseek_nolock, _fseeki64_nolock](../../c-runtime-library/reference/fseek-nolock-fseeki64-nolock.md).  
-  
-## <a name="requirements"></a>Requisiti  
-  
-|Funzione|Intestazione obbligatoria|  
-|--------------|---------------------|  
-|`fseek`|\<stdio.h>|  
-|`_fseeki64`|\<stdio.h>|  
-  
- Per altre informazioni sulla compatibilità, vedere la sezione [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
-  
-## <a name="example"></a>Esempio  
-  
-```  
-// crt_fseek.c  
-// This program opens the file FSEEK.OUT and  
-// moves the pointer to the file's beginning.  
-  
-#include <stdio.h>  
-  
-int main( void )  
-{  
-   FILE *stream;  
-   char line[81];  
-   int  result;  
-  
-   if ( fopen_s( &stream, "fseek.out", "w+" ) != 0 )  
-   {  
-      printf( "The file fseek.out was not opened\n" );  
-      return -1;  
-   }  
-   fprintf( stream, "The fseek begins here: "  
-                    "This is the file 'fseek.out'.\n" );  
-   result = fseek( stream, 23L, SEEK_SET);  
-   if( result )  
-      perror( "Fseek failed" );  
-   else  
-   {  
-      printf( "File pointer is set to middle of first line.\n" );  
-      fgets( line, 80, stream );  
-      printf( "%s", line );  
-    }  
-   fclose( stream );  
-}  
-```  
-  
-```Output  
-File pointer is set to middle of first line.  
-This is the file 'fseek.out'.  
-```  
-  
-## <a name="see-also"></a>Vedere anche  
- [I/O di flusso](../../c-runtime-library/stream-i-o.md)   
- [fopen, _wfopen](../../c-runtime-library/reference/fopen-wfopen.md)   
- [ftell, _ftelli64](../../c-runtime-library/reference/ftell-ftelli64.md)   
- [_lseek, _lseeki64](../../c-runtime-library/reference/lseek-lseeki64.md)   
- [rewind](../../c-runtime-library/reference/rewind.md)
+
+Sposta il puntatore del file in una posizione specificata.
+
+## <a name="syntax"></a>Sintassi
+
+```C
+int fseek(
+   FILE *stream,
+   long offset,
+   int origin
+);
+int _fseeki64(
+   FILE *stream,
+   __int64 offset,
+   int origin
+);
+```
+
+### <a name="parameters"></a>Parametri
+
+*Flusso*<br/>
+Puntatore alla struttura **FILE**.
+
+*offset*<br/>
+Numero di byte da *origin*.
+
+*origin*<br/>
+Posizione iniziale.
+
+## <a name="return-value"></a>Valore restituito
+
+Se ha esito positivo, **fseek** e **_fseeki64** restituisce 0. In caso contrario, viene restituito un valore diverso da zero. Nei dispositivi che non supportano la ricerca, il valore restituito è indefinito. Se *flusso* è un puntatore null, o se *origine* non è uno dei valori consentiti descritti di seguito **fseek** e **_fseeki64** invoke non valido gestore di parametri, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni impostano **errno** alla **EINVAL** e restituiscono -1.
+
+## <a name="remarks"></a>Note
+
+Il **fseek** e **_fseeki64** funzioni si sposta il puntatore del file (se presente) associato *flusso* in una nuova posizione è *offset* byte da *origine*. L'operazione successiva nel flusso viene eseguita nella nuova posizione. In un flusso aperto per l'aggiornamento, l'operazione successiva può essere un'operazione di lettura o scrittura. L'argomento *origine* deve essere una delle seguenti costanti, definite in STDIO. H:
+
+|valore di origine|Significato|
+|-|-|
+**SEEK_CUR**|Posizione corrente del puntatore del file.
+**SEEK_END**|Fine del file.
+**SEEK_SET**|Inizio del file.
+
+È possibile utilizzare **fseek** e **_fseeki64** per riposizionare il puntatore in un punto qualsiasi in un file. Il puntatore può essere posizionato anche oltre la fine del file. **fseek** e **_fseeki64** Cancella l'indicatore di fine del file e Annulla l'effetto di eventuali prima [ungetc](ungetc-ungetwc.md) chiama contro *flusso*.
+
+Quando un file viene aperto per l'accodamento dei dati, la posizione corrente nel file è determinata dall'ultima operazione di I/O e non dalla posizione in cui si verificherà la scrittura successiva. Se non è ancora stata eseguita alcuna operazione di I/O su un file aperto per l'accodamento, la posizione nel file è l'inizio del file.
+
+Per i flussi aperti in modalità testo, **fseek** e **_fseeki64** hanno un utilizzo limitato, perché possono causare traduzioni ritorno-avanzamento riga, ritorno a capo **fseek** e **_ fseeki64** per produrre risultati imprevisti. L'unico **fseek** e **_fseeki64** operazioni potrebbero funzionare in flussi aperti in modalità testo sono:
+
+- Ricerca con offset 0 rispetto a qualsiasi valore di origine.
+
+- La ricerca dall'inizio del file con un valore di offset restituito da una chiamata a [ftell](ftell-ftelli64.md) quando si utilizza **fseek** oppure [_ftelli64](ftell-ftelli64.md) quando si utilizza **_fseeki64**.
+
+In modalità testo, inoltre, CTRL+Z viene interpretato nell'input come un carattere di fine file. Nei file aperti per la lettura/scrittura [fopen](fopen-wfopen.md) e tutte le routine correlate verificare la presenza di una combinazione CTRL + Z alla fine del file e rimuoverla se possibile. Questa operazione viene eseguita perché l'utilizzo di combinazione **fseek** e [ftell](ftell-ftelli64.md) oppure **_fseeki64** e [_ftelli64](ftell-ftelli64.md), per spostarsi all'interno di un file che termina con CTRL + Z può causare **fseek** oppure **_fseeki64** in prossimità della fine del file, un comportamento non corretto.
+
+Quando CRT apre un file che inizia con un BOM (Byte Order Mark), il puntatore del file viene posizionato dopo il BOM, ovvero all'inizio del contenuto effettivo del file. Se è necessario **fseek** all'inizio del file, utilizzare [ftell](ftell-ftelli64.md) per ottenere la posizione iniziale e **fseek** anziché alla posizione 0.
+
+Questa funzione blocca altri thread durante l'esecuzione e pertanto è thread-safe. Per una versione che non blocca i thread, vedere [_fseek_nolock, _fseeki64_nolock](fseek-nolock-fseeki64-nolock.md).
+
+## <a name="requirements"></a>Requisiti
+
+|Funzione|Intestazione obbligatoria|
+|--------------|---------------------|
+|**fseek**|\<stdio.h>|
+|**_fseeki64**|\<stdio.h>|
+
+Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+
+## <a name="example"></a>Esempio
+
+```C
+// crt_fseek.c
+// This program opens the file FSEEK.OUT and
+// moves the pointer to the file's beginning.
+
+#include <stdio.h>
+
+int main( void )
+{
+   FILE *stream;
+   char line[81];
+   int  result;
+
+   if ( fopen_s( &stream, "fseek.out", "w+" ) != 0 )
+   {
+      printf( "The file fseek.out was not opened\n" );
+      return -1;
+   }
+   fprintf( stream, "The fseek begins here: "
+                    "This is the file 'fseek.out'.\n" );
+   result = fseek( stream, 23L, SEEK_SET);
+   if( result )
+      perror( "Fseek failed" );
+   else
+   {
+      printf( "File pointer is set to middle of first line.\n" );
+      fgets( line, 80, stream );
+      printf( "%s", line );
+    }
+   fclose( stream );
+}
+```
+
+```Output
+File pointer is set to middle of first line.
+This is the file 'fseek.out'.
+```
+
+## <a name="see-also"></a>Vedere anche
+
+[I/O di flusso](../../c-runtime-library/stream-i-o.md)<br/>
+[fopen, _wfopen](fopen-wfopen.md)<br/>
+[ftell, _ftelli64](ftell-ftelli64.md)<br/>
+[_lseek, _lseeki64](lseek-lseeki64.md)<br/>
+[rewind](rewind.md)<br/>

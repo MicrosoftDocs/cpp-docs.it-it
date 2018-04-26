@@ -1,12 +1,12 @@
 ---
 title: fwide | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - fwide
@@ -29,47 +29,51 @@ dev_langs:
 helpviewer_keywords:
 - fwide function
 ms.assetid: a4641f5b-d74f-4946-95d5-53a64610d28d
-caps.latest.revision: 
+caps.latest.revision: 6
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e38bce95a26bd8b128a048768870c63f7de9da9f
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: a055df312215b5ff424aff54cfee54e0568ab307
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="fwide"></a>fwide
-Non implementato.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-int fwide(  
-   FILE *stream,  
-   int mode;  
-);  
-```  
-  
-#### <a name="parameters"></a>Parametri  
- `stream`  
- Puntatore alla struttura `FILE` (ignorata).  
-  
- `mode`  
- La nuova larghezza del flusso: positivo per carattere wide, negativo per byte, zero da lasciare invariato. (Questo valore viene ignorato).  
-  
-## <a name="return-value"></a>Valore restituito  
- Questa funzione attualmente restituisce semplicemente `mode`.  
-  
-## <a name="remarks"></a>Note  
- La versione corrente di questa funzione non è conforme allo standard.  
-  
-## <a name="requirements"></a>Requisiti  
-  
-|Funzione|Intestazione obbligatoria|  
-|--------------|---------------------|  
-|`fwide`|\<wchar.h>|  
-  
- Per altre informazioni, vedere [Compatibility](../../c-runtime-library/compatibility.md).
+
+Non implementato.
+
+## <a name="syntax"></a>Sintassi
+
+```C
+int fwide(
+   FILE *stream,
+   int mode;
+);
+```
+
+### <a name="parameters"></a>Parametri
+
+*Flusso*<br/>
+Puntatore a **FILE** struttura (ignorato).
+
+*mode*<br/>
+La nuova larghezza del flusso: positivo per carattere wide, negativo per byte, zero da lasciare invariato. (Questo valore viene ignorato).
+
+## <a name="return-value"></a>Valore restituito
+
+Questa funzione attualmente restituisce semplicemente *modalità*.
+
+## <a name="remarks"></a>Note
+
+La versione corrente di questa funzione non è conforme allo standard.
+
+## <a name="requirements"></a>Requisiti
+
+|Funzione|Intestazione obbligatoria|
+|--------------|---------------------|
+|**fwide**|\<wchar.h>|
+
+Per altre informazioni, vedere [Compatibility](../../c-runtime-library/compatibility.md).

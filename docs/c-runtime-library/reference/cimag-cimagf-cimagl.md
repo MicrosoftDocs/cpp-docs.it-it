@@ -1,13 +1,13 @@
 ---
 title: cimag, cimagf, cimagl | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp
 - devlang-cpp
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - cimag
@@ -40,64 +40,62 @@ helpviewer_keywords:
 - cimagf function
 - cimagl function
 ms.assetid: 0d8836f5-d61d-44cd-8731-6f75cb776def
-caps.latest.revision: 
+caps.latest.revision: 9
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9802a682193a0ef805f4a6964bf0aa1682a7619b
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: a00595ea5fdc6ecb5eb527d13211ed5bdda6303e
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="cimag-cimagf-cimagl"></a>cimag, cimagf, cimagl
-Ottiene la parte immaginaria di un numero complesso.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-double cimag(   
-   _Dcomplex z   
-);  
-float cimag(   
-   _Fcomplex z   
-);  // C++  
-long double cimag(   
-  _Lcomplex z   
-);  // C++  
-float cimagf(   
-   _Fcomplex z   
-);  
-long double cimagl(   
-   _Lcomplex z   
-);  
-```  
-  
-#### <a name="parameters"></a>Parametri  
- `z`  
- Numero complesso.  
-  
-## <a name="return-value"></a>Valore restituito  
- La parte immaginaria di `z`.  
-  
-## <a name="remarks"></a>Note  
- Dato che C++ consente l'overload, è possibile chiamare overload di `cimag` che accettano valori `_Fcomplex` o `_Lcomplex` e restituiscono valori `float` o `long double`. In un programma di C, `cimag` accetta sempre un valore `_Dcomplex` e restituisce sempre un valore `double`.  
-  
-## <a name="requirements"></a>Requisiti  
-  
-|Routine|Intestazione C|Intestazione C++|  
-|-------------|--------------|------------------|  
-|`cimag`,               `cimagf`, `cimagl`|\<complex.h>|\<ccomplex>|  
-  
- Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md) (Compatibilità) nell'introduzione.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Alphabetical Function Reference](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)  (Riferimento alfabetico alle funzioni)  
- [norm, normf, norml](../../c-runtime-library/reference/norm-normf-norml1.md)   
- [creal, crealf, creall](../../c-runtime-library/reference/creal-crealf-creall.md)   
- [cproj, cprojf, cprojl](../../c-runtime-library/reference/cproj-cprojf-cprojl.md)   
- [conj, conjf, conjl](../../c-runtime-library/reference/conj-conjf-conjl.md)   
- [carg, cargf, cargl](../../c-runtime-library/reference/carg-cargf-cargl.md)   
- [cabs, cabsf, cabsl](../../c-runtime-library/reference/cabs-cabsf-cabsl.md)
+
+Ottiene la parte immaginaria di un numero complesso.
+
+## <a name="syntax"></a>Sintassi
+
+```C
+double cimag( _Dcomplex z );
+float cimagf( _Fcomplex z );
+long double cimagl( _Lcomplex z );
+```
+
+```cpp
+float cimag( _Fcomplex z );  // C++
+long double cimag( _Lcomplex z );  // C++
+```
+
+### <a name="parameters"></a>Parametri
+
+*z*<br/>
+Numero complesso.
+
+## <a name="return-value"></a>Valore restituito
+
+La parte immaginaria *z*.
+
+## <a name="remarks"></a>Note
+
+Dato che C++ consente l'overload, è possibile chiamare overload di **cimag** che accettano **_Fcomplex** oppure **_Lcomplex** valori, quindi restituiscono **float** o **lungo** **doppie** valori. In un programma C **cimag** ha sempre un **_Dcomplex** valore e restituisce un **doppie** valore.
+
+## <a name="requirements"></a>Requisiti
+
+|Routine|Intestazione C|Intestazione C++|
+|-------------|--------------|------------------|
+|**cimag**, **cimagf**, **cimagl**|\<complex.h>|\<ccomplex>|
+
+Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+
+## <a name="see-also"></a>Vedere anche
+
+[Riferimento alfabetico alle funzioni](crt-alphabetical-function-reference.md)<br/>
+[norm, normf, norml](norm-normf-norml1.md)<br/>
+[creal, crealf, creall](creal-crealf-creall.md)<br/>
+[cproj, cprojf, cprojl](cproj-cprojf-cprojl.md)<br/>
+[conj, conjf, conjl](conj-conjf-conjl.md)<br/>
+[carg, cargf, cargl](carg-cargf-cargl.md)<br/>
+[cabs, cabsf, cabsl](cabs-cabsf-cabsl.md)<br/>

@@ -1,12 +1,12 @@
 ---
 title: _CrtIsValidPointer | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _CrtIsValidPointer
@@ -31,68 +31,75 @@ helpviewer_keywords:
 - CrtIsValidPointer function
 - _CrtIsValidPointer function
 ms.assetid: 91c35590-ea5e-450f-a15d-ad8d62ade1fa
-caps.latest.revision: 
+caps.latest.revision: 13
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e81cd074c9bd69386b300d307525a76515e02522
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 70d1cf7ac6c1f5af76457608863524cba60a39d5
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="crtisvalidpointer"></a>_CrtIsValidPointer
-Verifica che un puntatore non sia Null. Nelle versioni della libreria di runtime del linguaggio C precedenti a Visual Studio 2010, verifica che l'intervallo di memoria specificato sia valido per lettura e scrittura (solo versione di debug).  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-int _CrtIsValidPointer(   
-   const void *address,  
-   unsigned int size,  
-   int access   
-);  
-```  
-  
-#### <a name="parameters"></a>Parametri  
- indirizzo  
- Punta all'inizio dell'intervallo di memoria per il test della validità.  
-  
- `size`  
- Dimensione dell'intervallo di memoria specificato (in byte).  
-  
- access  
- Accessibilità in lettura/scrittura da determinare per l'intervallo di memoria.  
-  
-## <a name="return-value"></a>Valore restituito  
- `_CrtIsValidPointer` restituisce TRUE se il puntatore specificato non è NULL. Nelle versioni della libreria CRT precedenti a Visual Studio 2010, restituisce TRUE se l'intervallo di memoria è valido per l'operazione o per le operazioni specificate. In caso contrario, la funzione restituisce FALSE.  
-  
-## <a name="remarks"></a>Note  
- A partire dalla libreria CRT in Visual Studio 2010, vengono ignorati i parametri di dimensione e accesso e `_CrtIsValidPointer` verifica solo che l'indirizzo specificato non sia Null. Poiché è facile eseguire questo test manualmente , non è consigliabile usare questa funzione. Nelle versioni precedenti a Visual Studio 2010, la funzione verifica che l'intervallo di memoria che inizia in `address` e si estende per `size` byte sia valido per l'operazione o per le operazioni di accessibilità specificate. Quando `access` è impostato su TRUE, l'intervallo di memoria viene verificato sia per la lettura che per la scrittura. Quando `access` è FALSE, l'intervallo di memoria viene convalidato solo per la lettura. Quando [_DEBUG](../../c-runtime-library/debug.md) non è definito, le chiamate a `_CrtIsValidPointer` vengono rimosse durante la pre-elaborazione.  
-  
- Dato che la funzione restituisce TRUE o FALSE, può essere passata a una delle macro [_ASSERT](../../c-runtime-library/reference/assert-asserte-assert-expr-macros.md) per creare un semplice meccanismo di gestione degli errori di debug. L'esempio seguente causa un errore di asserzione se l'intervallo di memoria non è valido per entrambe lettura e scrittura:  
-  
-```  
-_ASSERTE( _CrtIsValidPointer( address, size, TRUE ) );  
-```  
-  
- Per informazioni su come usare `_CrtIsValidPointer` con altre funzioni di debug e macro, vedere [Macros for Reporting](/visualstudio/debugger/macros-for-reporting) (Macro per la creazione di report). Per informazioni sulle modalità di allocazione, inizializzazione e gestione dei blocchi di memoria nella versione di debug dell'heap di base, vedere [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details).  
-  
-## <a name="requirements"></a>Requisiti  
-  
-|Routine|Intestazione obbligatoria|  
-|-------------|---------------------|  
-|`_CrtIsValidPointer`|\<crtdbg.h>|  
-  
- `_CrtIsValidPointer` è un'estensione Microsoft. Per informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).  
-  
-## <a name="libraries"></a>Librerie  
- Solo le versioni di debug delle [librerie di runtime di C](../../c-runtime-library/crt-library-features.md).  
-  
-## <a name="example"></a>Esempio  
- Vedere l'esempio per l'argomento [_CrtIsValidHeapPointer](../../c-runtime-library/reference/crtisvalidheappointer.md).  
-  
-## <a name="see-also"></a>Vedere anche  
- [Routine di debug](../../c-runtime-library/debug-routines.md)
+
+Verifica che un puntatore non sia Null. Nelle versioni della libreria di runtime del linguaggio C precedenti a Visual Studio 2010, verifica che l'intervallo di memoria specificato sia valido per lettura e scrittura (solo versione di debug).
+
+## <a name="syntax"></a>Sintassi
+
+```C
+int _CrtIsValidPointer(
+   const void *address,
+   unsigned int size,
+   int access
+);
+```
+
+### <a name="parameters"></a>Parametri
+
+*address*<br/>
+Punta all'inizio dell'intervallo di memoria per il test della validità.
+
+*size*<br/>
+Dimensione dell'intervallo di memoria specificato (in byte).
+
+*access*<br/>
+Accessibilità in lettura/scrittura da determinare per l'intervallo di memoria.
+
+## <a name="return-value"></a>Valore restituito
+
+**CrtIsValidPointer** restituisce TRUE se il puntatore specificato non è null. Nelle versioni della libreria CRT precedenti a Visual Studio 2010, restituisce TRUE se l'intervallo di memoria è valido per l'operazione o per le operazioni specificate. In caso contrario, la funzione restituisce FALSE.
+
+## <a name="remarks"></a>Note
+
+Inizia con la libreria CRT in Visual Studio 2010, il *dimensioni* e *accesso* i parametri vengono ignorati, e **CrtIsValidPointer** verifica solo che specificato*indirizzo* non è null. Poiché è facile eseguire questo test manualmente , non è consigliabile usare questa funzione. Nelle versioni precedenti a Visual Studio 2010, la funzione verifica che l'intervallo di memoria partire *indirizzo* e si estende per *dimensioni* byte sia valido per l'accessibilità specificata o più operazioni. Quando si *accesso* è impostata su TRUE, viene verificata l'intervallo di memoria per la lettura e scrittura. Quando si *accesso* è FALSE, l'intervallo di memoria viene convalidato solo per la lettura. Quando si [debug](../../c-runtime-library/debug.md) non è definito, le chiamate a **CrtIsValidPointer** vengono rimosse durante la pre-elaborazione.
+
+Dato che la funzione restituisce TRUE o FALSE, può essere passata a una delle macro [_ASSERT](assert-asserte-assert-expr-macros.md) per creare un semplice meccanismo di gestione degli errori di debug. L'esempio seguente causa un errore di asserzione se l'intervallo di memoria non è valido per entrambe lettura e scrittura:
+
+```C
+_ASSERTE( _CrtIsValidPointer( address, size, TRUE ) );
+```
+
+Per ulteriori informazioni sul **CrtIsValidPointer** può essere utilizzato con altre funzioni di debug e macro, vedere [macro per la creazione di report](/visualstudio/debugger/macros-for-reporting). Per informazioni sulle modalità di allocazione, inizializzazione e gestione dei blocchi di memoria nella versione di debug dell'heap di base, vedere [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details).
+
+## <a name="requirements"></a>Requisiti
+
+|Routine|Intestazione obbligatoria|
+|-------------|---------------------|
+|**_CrtIsValidPointer**|\<crtdbg.h>|
+
+**CrtIsValidPointer** è un'estensione Microsoft. Per informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+
+## <a name="libraries"></a>Librerie
+
+Solo le versioni di debug delle [librerie di runtime di C](../../c-runtime-library/crt-library-features.md).
+
+## <a name="example"></a>Esempio
+
+Vedere l'esempio per l'argomento [_CrtIsValidHeapPointer](crtisvalidheappointer.md).
+
+## <a name="see-also"></a>Vedere anche
+
+[Routine di debug](../../c-runtime-library/debug-routines.md)<br/>

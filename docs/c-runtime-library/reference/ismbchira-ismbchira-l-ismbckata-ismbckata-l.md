@@ -1,12 +1,12 @@
 ---
 title: _ismbchira, _ismbchira_l, _ismbckata, _ismbckata_l | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _ismbckata
@@ -49,81 +49,86 @@ helpviewer_keywords:
 - Hiragana
 - ismbckata function
 ms.assetid: 2db388a2-be31-489b-81c8-f6bf3f0582d3
-caps.latest.revision: 
+caps.latest.revision: 20
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 38fe65f2b81def4afe08339f38b00cd69702fd83
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 8ad3f426e286ffcec6edaa1feb68725552572dcd
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="ismbchira-ismbchiral-ismbckata-ismbckatal"></a>_ismbchira, _ismbchira_l, _ismbckata, _ismbckata_l
-**Funzioni specifiche per la tabella codici 932**  
-  
+
+**Funzioni specifiche per la tabella codici 932**
+
 > [!IMPORTANT]
->  Non è possibile usare questa API nelle applicazioni eseguite in Windows Runtime. Per ulteriori informazioni, vedere [funzioni CRT non supportate nelle App Universal Windows Platform](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-int _ismbchira(  
-   unsigned int c   
-);  
-int _ismbchira_l(  
-   unsigned int c,  
-   _locale_t locale  
-);  
-int _ismbckata(  
-   unsigned int c   
-);  
-int _ismbckata_l(  
-   unsigned int c,  
-   _locale_t locale  
-);  
-```  
-  
-#### <a name="parameters"></a>Parametri  
- `c`  
- Carattere da testare.  
-  
- `locale`  
- Impostazioni locali da usare.  
-  
-## <a name="return-value"></a>Valore restituito  
- Ognuna di queste routine restituisce un valore diverso da zero se il carattere soddisfa la condizione di test oppure 0 in caso contrario. Se `c` <= 255 ed è presente una routine `_ismbb` corrispondente (ad esempio, `_ismbcalnum` corrisponde a `_ismbbalnum`), il risultato è il valore restituito della routine `_ismbb` corrispondente.  
-  
-## <a name="remarks"></a>Note  
- Ognuna di queste funzioni testa una particolare condizione su un determinato carattere multibyte.  
-  
- Le versioni di queste funzioni che presentano il suffisso `_l` sono identiche ad eccezione del fatto che, per il comportamento dipendente dalle impostazioni locali, usano le impostazioni locali passate anziché quelle correnti. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).  
-  
-|Routine|Condizione di test (solo per la tabella codici 932)|  
-|-------------|-------------------------------------------|  
-|`_ismbchira`|Hiragana DBCS: 0x829F<=`c`<=0x82F1.|  
-|`_ismbchira_l`|Hiragana DBCS: 0x829F<=`c`<=0x82F1.|  
-|`_ismbckata`|Katakana DBCS: 0x8340<=`c`<=0x8396.|  
-|`_ismbckata_l`|Katakana DBCS: 0x8340<=`c`<=0x8396.|  
-  
- **Fine della sezione specifica per la tabella codici 932**  
-  
-## <a name="requirements"></a>Requisiti  
-  
-|Routine|Intestazione obbligatoria|  
-|-------------|---------------------|  
-|`_ismbchira`|\<mbstring.h>|  
-|`_ismbchira_l`|\<mbstring.h>|  
-|`_ismbckata`|\<mbstring.h>|  
-|`_ismbckata_l`|\<mbstring.h>|  
-  
- Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).  
-  
-## <a name="see-also"></a>Vedere anche  
- [Classificazione di caratteri](../../c-runtime-library/character-classification.md)   
- [Routine _ismbc](../../c-runtime-library/ismbc-routines.md)   
- [Routine is, isw](../../c-runtime-library/is-isw-routines.md)   
- [Locale](../../c-runtime-library/locale.md)  (Impostazioni locali)  
- [Interpretazione di sequenze di caratteri multibyte](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)
+> Non è possibile usare questa API nelle applicazioni eseguite in Windows Runtime. Per altre informazioni, vedere [Funzioni CRT non supportate nelle app della piattaforma UWP (Universal Windows Platform)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+
+## <a name="syntax"></a>Sintassi
+
+```C
+int _ismbchira(
+   unsigned int c
+);
+int _ismbchira_l(
+   unsigned int c,
+   _locale_t locale
+);
+int _ismbckata(
+   unsigned int c
+);
+int _ismbckata_l(
+   unsigned int c,
+   _locale_t locale
+);
+```
+
+### <a name="parameters"></a>Parametri
+
+*c*<br/>
+Carattere da testare.
+
+*locale*<br/>
+Impostazioni locali da usare.
+
+## <a name="return-value"></a>Valore restituito
+
+Ognuna di queste routine restituisce un valore diverso da zero se il carattere soddisfa la condizione di test oppure 0 in caso contrario. Se *c* < = 255 ed è presente un corrispondente **ismbb** routine (ad esempio **ismbcalnum** corrisponde a **ismbbalnum**), il il risultato è il valore restituito dell'oggetto corrispondente **ismbb** routine.
+
+## <a name="remarks"></a>Note
+
+Ognuna di queste funzioni testa una particolare condizione su un determinato carattere multibyte.
+
+Le versioni di queste funzioni con il **l** suffisso sono identiche ad eccezione del fatto che usano le impostazioni locali passate anziché le impostazioni locali correnti per il comportamento dipendente dalle impostazioni locali. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
+
+|Routine|Condizione di test (solo per la tabella codici 932)|
+|-------------|-------------------------------------------|
+|**_ismbchira**|Hiragana DBCS: 0x829F < =*c*< = 0x82F1.|
+|**_ismbchira_l**|Hiragana DBCS: 0x829F < =*c*< = 0x82F1.|
+|**_ismbckata**|Katakana DBCS: 0x8340 < =*c*< = 0x8396.|
+|**_ismbckata_l**|Katakana DBCS: 0x8340 < =*c*< = 0x8396.|
+
+**Fine della sezione specifica per la tabella codici 932**
+
+## <a name="requirements"></a>Requisiti
+
+|Routine|Intestazione obbligatoria|
+|-------------|---------------------|
+|**_ismbchira**|\<mbstring.h>|
+|**_ismbchira_l**|\<mbstring.h>|
+|**_ismbckata**|\<mbstring.h>|
+|**_ismbckata_l**|\<mbstring.h>|
+
+Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+
+## <a name="see-also"></a>Vedere anche
+
+[Classificazione di caratteri](../../c-runtime-library/character-classification.md)<br/>
+[Routine _ismbc](../../c-runtime-library/ismbc-routines.md)<br/>
+[Routine is, isw](../../c-runtime-library/is-isw-routines.md)<br/>
+[Impostazioni locali](../../c-runtime-library/locale.md)<br/>
+[Interpretazione di sequenze di caratteri multibyte](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>

@@ -1,12 +1,12 @@
 ---
 title: _putch_nolock, _putwch_nolock | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _putwch_nolock
@@ -42,65 +42,70 @@ helpviewer_keywords:
 - console, writing characters to
 - _putwch_nolock function
 ms.assetid: edbc811d-bac6-47fa-a872-fe4f3a1590b0
-caps.latest.revision: 
+caps.latest.revision: 14
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 13db2622b7dd9829b744a0164fbb0a025f4013ae
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 24d0f847e272c31edda3dea0ea0b0369148c2f73
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="putchnolock-putwchnolock"></a>_putch_nolock, _putwch_nolock
-Scrive un carattere nella console senza bloccare il thread.  
-  
+
+Scrive un carattere nella console senza bloccare il thread.
+
 > [!IMPORTANT]
->  Non è possibile usare questa API nelle applicazioni eseguite in Windows Runtime. Per ulteriori informazioni, vedere [funzioni CRT non supportate nelle App Universal Windows Platform](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-  
-      int _putch_nolock(  
-int c  
-);  
-wint_t _putwch_nolock(  
-wchar_t c  
-);  
-```  
-  
-#### <a name="parameters"></a>Parametri  
- *c*  
- Carattere da restituire.  
-  
-## <a name="return-value"></a>Valore restituito  
- Se l'esito è positivo, restituisce *c*. Se **putch_nolock** ha esito negativo, restituisce **EOF**. Se **putwch_nolock** ha esito negativo, restituisce **WEOF**.  
-  
-## <a name="remarks"></a>Note  
- **_putch_nolock** e **_putwch_nolock** sono rispettivamente identiche a **_putch** e **_putwch**, ad eccezione del fatto che non sono protette da interferenze da parte di altri thread. Potrebbero essere più veloci perché non comportano un sovraccarico che blocca altri thread. Utilizzare queste funzioni solo in contesti thread-safe come applicazioni a thread singolo o dove l'ambito chiamante già gestisce l'isolamento del thread.  
-  
-### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico  
-  
-|Routine Tchar.h|_UNICODE e _MBCS non definiti|_MBCS definito|_UNICODE definito|  
-|---------------------|--------------------------------------|--------------------|-----------------------|  
-|**_puttch_nolock**|**_putch_nolock**|**_putch_nolock**|**_putwch_nolock**|  
-  
-## <a name="requirements"></a>Requisiti  
-  
-|Routine|Intestazione obbligatoria|  
-|-------------|---------------------|  
-|**_putch_nolock**|\<conio.h>|  
-|**_putwch_nolock**|\<conio.h>|  
-  
- Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).  
-  
-## <a name="libraries"></a>Librerie  
- Tutte le versioni delle [librerie di runtime C](../../c-runtime-library/crt-library-features.md).  
-  
-## <a name="see-also"></a>Vedere anche  
- [Console e porta I/O](../../c-runtime-library/console-and-port-i-o.md)   
- [_cprintf, _cprintf_l, _cwprintf, _cwprintf_l](../../c-runtime-library/reference/cprintf-cprintf-l-cwprintf-cwprintf-l.md)   
- [_getch, _getwch](../../c-runtime-library/reference/getch-getwch.md)
+> Non è possibile usare questa API nelle applicazioni eseguite in Windows Runtime. Per altre informazioni, vedere [Funzioni CRT non supportate nelle app della piattaforma UWP (Universal Windows Platform)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+
+## <a name="syntax"></a>Sintassi
+
+```C
+int _putch_nolock(
+int c
+);
+wint_t _putwch_nolock(
+wchar_t c
+);
+```
+
+### <a name="parameters"></a>Parametri
+
+*c*<br/>
+Carattere da restituire.
+
+## <a name="return-value"></a>Valore restituito
+
+Se l'esito è positivo, restituisce *c*. Se **putch_nolock** ha esito negativo, restituisce **EOF**. Se **putwch_nolock** ha esito negativo, restituisce **WEOF**.
+
+## <a name="remarks"></a>Note
+
+**_putch_nolock** e **_putwch_nolock** sono rispettivamente identiche a **_putch** e **_putwch**, ad eccezione del fatto che non sono protette da interferenze da parte di altri thread. Potrebbero essere più veloci perché non comportano un sovraccarico che blocca altri thread. Utilizzare queste funzioni solo in contesti thread-safe come applicazioni a thread singolo o dove l'ambito chiamante già gestisce l'isolamento del thread.
+
+### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
+
+|Routine Tchar.h|_UNICODE e _MBCS non definiti|_MBCS definito|_UNICODE definito|
+|---------------------|--------------------------------------|--------------------|-----------------------|
+|**_puttch_nolock**|**_putch_nolock**|**_putch_nolock**|**_putwch_nolock**|
+
+## <a name="requirements"></a>Requisiti
+
+|Routine|Intestazione obbligatoria|
+|-------------|---------------------|
+|**_putch_nolock**|\<conio.h>|
+|**_putwch_nolock**|\<conio.h>|
+
+Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+
+## <a name="libraries"></a>Librerie
+
+Tutte le versioni delle [librerie di runtime C](../../c-runtime-library/crt-library-features.md).
+
+## <a name="see-also"></a>Vedere anche
+
+[I/O su console e porta](../../c-runtime-library/console-and-port-i-o.md)<br/>
+[_cprintf, _cprintf_l, _cwprintf, _cwprintf_l](cprintf-cprintf-l-cwprintf-cwprintf-l.md)<br/>
+[_getch, _getwch](getch-getwch.md)<br/>

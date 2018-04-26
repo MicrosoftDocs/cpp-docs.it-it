@@ -1,12 +1,12 @@
 ---
 title: _strinc, _wcsinc, _mbsinc, _mbsinc_l | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _mbsinc
@@ -49,78 +49,83 @@ helpviewer_keywords:
 - _tcsinc function
 - tcsinc function
 ms.assetid: 54685943-8e2c-45e9-a559-2d94930dc6b4
-caps.latest.revision: 
+caps.latest.revision: 23
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 08e8d0e25b7d685856ccf4af068408bf0ac495cb
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 956a0c03d9242d0d8c2912c516e9ba4ed9a06683
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="strinc-wcsinc-mbsinc-mbsincl"></a>_strinc, _wcsinc, _mbsinc, _mbsinc_l
-Sposta un puntatore di stringa in avanti di un carattere.  
-  
+
+Sposta un puntatore di stringa in avanti di un carattere.
+
 > [!IMPORTANT]
->  `_mbsinc` e `_mbsinc_l` non possono essere usati nelle applicazioni eseguite in Windows Runtime. Per ulteriori informazioni, vedere [funzioni CRT non supportate nelle App Universal Windows Platform](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-char *_strinc(  
-   const char *current,  
-   _locale_t locale  
-);  
-wchar_t *_wcsinc(  
-   const wchar_t *current,  
-   _locale_t locale  
-);  
-unsigned char *_mbsinc(  
-   const unsigned char *current   
-);  
-unsigned char *_mbsinc_l(  
-   const unsigned char *current,  
-   _locale_t locale  
-);  
-  
-```  
-  
-#### <a name="parameters"></a>Parametri  
- `current`  
- Puntatore di caratteri.  
-  
- `locale`  
- Impostazioni locali da usare.  
-  
-## <a name="return-value"></a>Valore restituito  
- Ognuna di queste routine restituisce un puntatore al carattere che segue immediatamente `current`.  
-  
-## <a name="remarks"></a>Note  
- La funzione `_mbsinc` restituisce un puntatore al primo byte del carattere multibyte che segue immediatamente `current`. `_mbsinc` riconosce le sequenze di caratteri multibyte in base alla [tabella codici multibyte](../../c-runtime-library/code-pages.md) attualmente in uso. La funzione `_mbsinc_l` è identica ma usa il parametro delle impostazioni locali passato. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).  
-  
- La funzione di testo generico `_tcsinc`, definita in Tchar.h, è mappata a `_mbsinc` se è stato definito `_MBCS` oppure a `_wcsinc` se è stato definito `_UNICODE`. In caso contrario, `_tcsinc` è mappata a `_strinc`. `_strinc` e `_wcsinc` sono versioni con caratteri a byte singolo e caratteri wide di `_mbsinc`. `_strinc` e `_wcsinc` sono forniti solo per questo mapping e non devono essere usate in altre circostanze. Per altre informazioni, vedere [Uso dei mapping di testo generico](../../c-runtime-library/using-generic-text-mappings.md) e [Mapping di testo generico](../../c-runtime-library/generic-text-mappings.md).  
-  
- Se `current` è `NULL`, viene richiamato il gestore dei parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, la funzione restituisce `EINVAL` e imposta `errno` su `EINVAL`.  
-  
+> **mbsinc** e **mbsinc_l** non può essere usata nelle applicazioni eseguite in Windows Runtime. Per altre informazioni, vedere [Funzioni CRT non supportate nelle app della piattaforma UWP (Universal Windows Platform)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+
+## <a name="syntax"></a>Sintassi
+
+```C
+char *_strinc(
+   const char *current,
+   _locale_t locale
+);
+wchar_t *_wcsinc(
+   const wchar_t *current,
+   _locale_t locale
+);
+unsigned char *_mbsinc(
+   const unsigned char *current
+);
+unsigned char *_mbsinc_l(
+   const unsigned char *current,
+   _locale_t locale
+);
+
+```
+
+### <a name="parameters"></a>Parametri
+
+*current*<br/>
+Puntatore di caratteri.
+
+*locale*<br/>
+Impostazioni locali da usare.
+
+## <a name="return-value"></a>Valore restituito
+
+Ognuna di queste routine restituisce un puntatore al carattere che segue immediatamente *corrente*.
+
+## <a name="remarks"></a>Note
+
+Il **mbsinc** funzione restituisce un puntatore al primo byte del carattere multibyte che segue immediatamente *corrente*. **mbsinc** riconosce le sequenze di caratteri multibyte in base al [tabella codici multibyte](../../c-runtime-library/code-pages.md) che è attualmente in uso. **mbsinc_l** è identico ma utilizza invece il parametro delle impostazioni locali passato. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
+
+La funzione di testo generico **tcsinc**, definito in Tchar. h, corrisponde a **mbsinc** se **MBCS** è stata definita, o a **wcsinc** se **Unicode** è stato definito. In caso contrario, **tcsinc** esegue il mapping a **strinc**. **strinc** e **wcsinc** sono versioni caratteri a byte singolo e a caratteri wide di **mbsinc**. **strinc** e **wcsinc** vengono forniti solo per questo mapping e non deve essere utilizzato in caso contrario. Per altre informazioni, vedere [Uso dei mapping di testo generico](../../c-runtime-library/using-generic-text-mappings.md) e [Mapping di testo generico](../../c-runtime-library/generic-text-mappings.md).
+
+Se *correnti* viene **NULL**, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, questa funzione restituisce **EINVAL** e imposta **errno** al **EINVAL**.
+
 > [!IMPORTANT]
->  Queste funzioni potrebbero essere vulnerabili a rischi di sovraccarico del buffer. I sovraccarichi del buffer possono essere utilizzati per gli attacchi di sistema perché possono causare un'elevazione dei privilegi non autorizzata. Per altre informazioni, vedere [Evitare sovraccarichi del buffer](http://msdn.microsoft.com/library/windows/desktop/ms717795).  
-  
-## <a name="requirements"></a>Requisiti  
-  
-|Routine|Intestazione obbligatoria|  
-|-------------|---------------------|  
-|`_mbsinc`|\<mbstring.h>|  
-|`_mbsinc_l`|\<mbstring.h>|  
-|`_strinc`|\<tchar.h>|  
-|`_wcsinc`|\<tchar.h>|  
-  
- Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).  
-  
-## <a name="see-also"></a>Vedere anche  
- [Modifica di stringhe](../../c-runtime-library/string-manipulation-crt.md)   
- [_strdec, _wcsdec, _mbsdec, _mbsdec_l](../../c-runtime-library/reference/strdec-wcsdec-mbsdec-mbsdec-l.md)   
- [_strnextc, _wcsnextc, _mbsnextc, _mbsnextc_l](../../c-runtime-library/reference/strnextc-wcsnextc-mbsnextc-mbsnextc-l.md)   
- [_strninc, _wcsninc, _mbsninc, _mbsninc_l](../../c-runtime-library/reference/strninc-wcsninc-mbsninc-mbsninc-l.md)
+> Queste funzioni potrebbero essere vulnerabili a rischi di sovraccarico del buffer. I sovraccarichi del buffer possono essere utilizzati per gli attacchi di sistema perché possono causare un'elevazione dei privilegi non autorizzata. Per altre informazioni, vedere [Evitare sovraccarichi del buffer](http://msdn.microsoft.com/library/windows/desktop/ms717795).
+
+## <a name="requirements"></a>Requisiti
+
+|Routine|Intestazione obbligatoria|
+|-------------|---------------------|
+|**_mbsinc**|\<mbstring.h>|
+|**_mbsinc_l**|\<mbstring.h>|
+|**_strinc**|\<tchar.h>|
+|**_wcsinc**|\<tchar.h>|
+
+Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+
+## <a name="see-also"></a>Vedere anche
+
+[Modifica di stringhe](../../c-runtime-library/string-manipulation-crt.md)<br/>
+[_strdec, _wcsdec, _mbsdec, _mbsdec_l](strdec-wcsdec-mbsdec-mbsdec-l.md)<br/>
+[_strnextc, _wcsnextc, _mbsnextc, _mbsnextc_l](strnextc-wcsnextc-mbsnextc-mbsnextc-l.md)<br/>
+[_strninc, _wcsninc, _mbsninc, _mbsninc_l](strninc-wcsninc-mbsninc-mbsninc-l.md)<br/>

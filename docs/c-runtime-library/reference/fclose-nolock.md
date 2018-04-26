@@ -1,12 +1,12 @@
 ---
 title: _fclose_nolock | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _fclose_nolock
@@ -33,51 +33,56 @@ helpviewer_keywords:
 - fclose_nolock function
 - _fclose_nolock function
 ms.assetid: b4af4392-5fc8-49bb-9fe2-ca7293d3ce04
-caps.latest.revision: 
+caps.latest.revision: 15
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ba6e5a0955088a7acdbef5ecb7b9c746c0b37674
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 42a01b7174fd644af0fbb60f09795f7e93f9d46b
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="fclosenolock"></a>_fclose_nolock
-Chiude un flusso senza bloccare i thread.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-int _fclose_nolock(   
-   FILE *stream   
-);  
-```  
-  
-#### <a name="parameters"></a>Parametri  
- `stream`  
- Puntatore alla struttura `FILE`.  
-  
-## <a name="return-value"></a>Valore restituito  
- `fclose` restituisce 0 se il flusso è stato chiuso correttamente. Restituisce `EOF` per indicare un errore.  
-  
-## <a name="remarks"></a>Note  
- Questa funzione è una versione che non blocca di `fclose`. È identica, con la differenza che non è protetta da interferenze da parte di altri thread. Potrebbe essere più veloce perché non comporta un sovraccarico che blocca altri thread. Utilizzare questa funzione solo in contesti thread-safe come applicazioni a thread singolo o dove l'ambito chiamante già gestisce l'isolamento del thread.  
-  
-## <a name="requirements"></a>Requisiti  
-  
-|Funzione|Intestazione obbligatoria|  
-|--------------|---------------------|  
-|`_fclose_nolock`|\<stdio.h>|  
-  
- Per altre informazioni sulla compatibilità, vedere la sezione [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
-  
-## <a name="see-also"></a>Vedere anche  
- [I/O di flusso](../../c-runtime-library/stream-i-o.md)   
- [_close](../../c-runtime-library/reference/close.md)   
- [_fdopen, _wfdopen](../../c-runtime-library/reference/fdopen-wfdopen.md)   
- [fflush](../../c-runtime-library/reference/fflush.md)   
- [fopen, _wfopen](../../c-runtime-library/reference/fopen-wfopen.md)   
- [freopen, _wfreopen](../../c-runtime-library/reference/freopen-wfreopen.md)
+
+Chiude un flusso senza bloccare i thread.
+
+## <a name="syntax"></a>Sintassi
+
+```C
+int _fclose_nolock(
+   FILE *stream
+);
+```
+
+### <a name="parameters"></a>Parametri
+
+*Flusso*<br/>
+Puntatore alla struttura **FILE**.
+
+## <a name="return-value"></a>Valore restituito
+
+**fclose** restituisce 0 se il flusso viene chiuso correttamente. Restituisce **EOF** per indicare un errore.
+
+## <a name="remarks"></a>Note
+
+Questa funzione è una versione non blocca il thread di **fclose**. È identica, con la differenza che non è protetta da interferenze da parte di altri thread. Potrebbe essere più veloce perché non comporta un sovraccarico che blocca altri thread. Utilizzare questa funzione solo in contesti thread-safe come applicazioni a thread singolo o dove l'ambito chiamante già gestisce l'isolamento del thread.
+
+## <a name="requirements"></a>Requisiti
+
+|Funzione|Intestazione obbligatoria|
+|--------------|---------------------|
+|**_fclose_nolock**|\<stdio.h>|
+
+Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+
+## <a name="see-also"></a>Vedere anche
+
+[I/O di flusso](../../c-runtime-library/stream-i-o.md)<br/>
+[_close](close.md)<br/>
+[_fdopen, _wfdopen](fdopen-wfdopen.md)<br/>
+[fflush](fflush.md)<br/>
+[fopen, _wfopen](fopen-wfopen.md)<br/>
+[freopen, _wfreopen](freopen-wfreopen.md)<br/>

@@ -46,64 +46,69 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: abce100af16bff2ec7fd2de82d66ec3a7e59604e
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 5d80800bc5eae41e19f8c74888be21eca272c8ee
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="catanh-catanhf-catanhl"></a>catanh, catanhf, catanhl
-Recupera la tangente iperbolica inversa di un numero complesso, con tagli branch all'esterno dell'intervallo [-1; + 1] lungo l'asse reale.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-_Dcomplex catanh(   
-   _Dcomplex z   
-);  
-_Fcomplex catanh(   
-   _Fcomplex z   
-);  // C++ only  
-_Lcomplex catanh(   
-   _Lcomplex z   
-);  //  C++ only  
-_Fcomplex catanhf(   
-   _Fcomplex z   
-);  
-_Lcomplex catanhl(   
-   _Lcomplex z   
-);  
-```  
-  
-#### <a name="parameters"></a>Parametri  
- `z`  
- Numero complesso che rappresenta un angolo, espresso in radianti.  
-  
-## <a name="return-value"></a>Valore restituito  
- Tangente iperbolica inversa di `z`, espressa in radianti. Il risultato è unbounded lungo l'asse reale e nell'intervallo [-iπ/2; + iπ/2] lungo l'asse immaginaria. Si verificherà un errore di dominio se `z` è esterno all'intervallo [-1, +1]. Si verificherà un errore polo se `z` è -1 o + 1.  
-  
-## <a name="remarks"></a>Note  
- Dato che C++ consente l'overload, è possibile chiamare degli overload di `catanh` che accettino e restituiscano valori `_Fcomplex` e `_Lcomplex`. In un programma C `catanh` accetta e restituisce sempre un valore `_Dcomplex` .  
-  
-## <a name="requirements"></a>Requisiti  
-  
-|Routine|Intestazione C|Intestazione C++|  
-|-------------|--------------|------------------|  
-|`catanh`,               `catanhf`, `catanhl`|\<complex.h>|\<ccomplex>|  
-  
- Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md) (Compatibilità) nell'introduzione.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Alphabetical Function Reference](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)  (Riferimento alfabetico alle funzioni)  
- [ctanh, ctanhf, ctanhl](../../c-runtime-library/reference/ctanh-ctanhf-ctanhl.md)   
- [catan, catanf, catanl](../../c-runtime-library/reference/catan-catanf-catanl.md)   
- [csinh, csinhf, csinhl](../../c-runtime-library/reference/csinh-csinhf-csinhl.md)   
- [casinh, casinhf, casinhl](../../c-runtime-library/reference/casinh-casinhf-casinhl.md)   
- [ccosh, ccoshf, ccoshl](../../c-runtime-library/reference/ccosh-ccoshf-ccoshl.md)   
- [cacosh, cacoshf, cacoshl](../../c-runtime-library/reference/cacosh-cacoshf-cacoshl.md)   
- [cacos, cacosf, cacosl](../../c-runtime-library/reference/cacos-cacosf-cacosl.md)   
- [ctan, ctanf, ctanl](../../c-runtime-library/reference/ctan-ctanf-ctanl.md)   
- [csin, csinf, csinl](../../c-runtime-library/reference/csin-csinf-csinl.md)   
- [casin, casinf, casinl](../../c-runtime-library/reference/casin-casinf-casinl.md)   
- [ccos, ccosf, ccosl](../../c-runtime-library/reference/ccos-ccosf-ccosl.md)   
- [csqrt, csqrtf, csqrtl](../../c-runtime-library/reference/csqrt-csqrtf-csqrtl.md)
+
+Recupera la tangente iperbolica inversa di un numero complesso, con tagli branch all'esterno dell'intervallo [-1; + 1] lungo l'asse reale.
+
+## <a name="syntax"></a>Sintassi
+
+```C
+_Dcomplex catanh(
+   _Dcomplex z
+);
+_Fcomplex catanh(
+   _Fcomplex z
+);  // C++ only
+_Lcomplex catanh(
+   _Lcomplex z
+);  //  C++ only
+_Fcomplex catanhf(
+   _Fcomplex z
+);
+_Lcomplex catanhl(
+   _Lcomplex z
+);
+```
+
+### <a name="parameters"></a>Parametri
+
+*z*<br/>
+Numero complesso che rappresenta un angolo, espresso in radianti.
+
+## <a name="return-value"></a>Valore restituito
+
+La tangente iperbolica inversa di *z*, in radianti. Il risultato è unbounded lungo l'asse reale e nell'intervallo [-iπ/2; + iπ/2] lungo l'asse immaginaria. Se si verificherà un errore di dominio *z* è compreso nell'intervallo [-1, + 1]. Se si verificherà un errore polo *z* è -1 o + 1.
+
+## <a name="remarks"></a>Note
+
+Dato che C++ consente l'overload, è possibile chiamare overload di **catanh** che accettano e restituiscono **_Fcomplex** e **_Lcomplex** valori. In un programma C **catanh** accetta e restituisce sempre un **_Dcomplex** valore.
+
+## <a name="requirements"></a>Requisiti
+
+|Routine|Intestazione C|Intestazione C++|
+|-------------|--------------|------------------|
+|**catanh**, **catanhf**, **catanhl**|\<complex.h>|\<ccomplex>|
+
+Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+
+## <a name="see-also"></a>Vedere anche
+
+[Riferimento alfabetico alle funzioni](crt-alphabetical-function-reference.md)<br/>
+[ctanh, ctanhf, ctanhl](ctanh-ctanhf-ctanhl.md)<br/>
+[catan, catanf, catanl](catan-catanf-catanl.md)<br/>
+[csinh, csinhf, csinhl](csinh-csinhf-csinhl.md)<br/>
+[casinh, casinhf, casinhl](casinh-casinhf-casinhl.md)<br/>
+[ccosh, ccoshf, ccoshl](ccosh-ccoshf-ccoshl.md)<br/>
+[cacosh, cacoshf, cacoshl](cacosh-cacoshf-cacoshl.md)<br/>
+[cacos, cacosf, cacosl](cacos-cacosf-cacosl.md)<br/>
+[ctan, ctanf, ctanl](ctan-ctanf-ctanl.md)<br/>
+[csin, csinf, csinl](csin-csinf-csinl.md)<br/>
+[casin, casinf, casinl](casin-casinf-casinl.md)<br/>
+[ccos, ccosf, ccosl](ccos-ccosf-ccosl.md)<br/>
+[csqrt, csqrtf, csqrtl](csqrt-csqrtf-csqrtl.md)<br/>

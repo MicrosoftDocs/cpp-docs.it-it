@@ -1,12 +1,12 @@
 ---
 title: _chdir, _wchdir | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _wchdir
@@ -41,126 +41,131 @@ helpviewer_keywords:
 - chdir function
 - directories [C++], changing
 ms.assetid: 85e9393b-62ac-45d5-ab2a-fa2217f6152e
-caps.latest.revision: 
+caps.latest.revision: 22
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 37cb327b13fafafdb357a6a53f624c494ee317b6
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 61744ec875b057ae7d1b32703fb7ce5f813b5ff4
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="chdir-wchdir"></a>_chdir, _wchdir
-Modifica la directory di lavoro corrente.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-int _chdir(   
-   const char *dirname   
-);  
-int _wchdir(   
-   const wchar_t *dirname   
-);  
-```  
-  
-#### <a name="parameters"></a>Parametri  
- `dirname`  
- Percorso della nuova directory di lavoro.  
-  
-## <a name="return-value"></a>Valore restituito  
- Se eseguite correttamente, queste funzioni restituiscono un valore pari a 0. Il valore restituito-1 indica un errore. Se non è stato possibile trovare il percorso specificato, `errno` viene impostato su `ENOENT`. Se `dirname` è NULL, viene richiamato il gestore di parametro non valido, come descritto in [Parameter Validation](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, `errno` viene impostato su `EINVAL` e la funzione restituisce -1.  
-  
-## <a name="remarks"></a>Note  
- La funzione `_chdir` consente di passare dalla directory di lavoro corrente a quella specificata da `dirname`. Il parametro `dirname` deve fare riferimento a una directory esistente. Questa funzione può modificare la directory di lavoro corrente in qualsiasi unità. Se viene specificata una nuova lettera di unità in `dirname`, anche la lettera di unità predefinita verrà modificata. Ad esempio, se A è la lettera di unità predefinita e \BIN è la directory di lavoro corrente, la chiamata seguente consente di passare alla directory di lavoro corrente per l'unità C e stabilisce C come nuova unità predefinita:  
-  
-```  
-_chdir("c:\\temp");  
-```  
-  
- Quando si usa il carattere barra rovesciata (`\`) facoltativo nei percorsi, si devono inserire due caratteri di barra rovesciata (`\\`) in un valore letterale stringa C per rappresentare una singola barra rovesciata (`\`).  
-  
- `_wchdir` è una versione a caratteri wide di `_chdir`; l'argomento `dirname` in `_wchdir` è una stringa di caratteri wide`. _wchdir` e `_chdir` hanno lo stesso comportamento, in caso contrario.  
-  
-### <a name="generic-text-routine-mapping"></a>Mapping di routine di testo generico:  
-  
-|Routine Tchar.h|_UNICODE e _MBCS non definiti|_MBCS definito|_UNICODE definito|  
-|---------------------|--------------------------------------|--------------------|-----------------------|  
-|`_tchdir`|`_chdir`|`_chdir`|`_wchdir`|  
-  
-## <a name="requirements"></a>Requisiti  
-  
-|Routine|Intestazione obbligatoria|Intestazione facoltativa|  
-|-------------|---------------------|---------------------|  
-|`_chdir`|\<direct.h>|\<errno.h>|  
-|`_wchdir`|\<direct.h> o \<wchar.h>|\<errno.h>|  
-  
- Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).  
-  
-## <a name="example"></a>Esempio  
-  
-```  
-// crt_chdir.c  
-// arguments: C:\WINDOWS  
-  
-/* This program uses the _chdir function to verify  
-   that a given directory exists. */  
-  
-#include <direct.h>  
-#include <stdio.h>  
-#include <stdlib.h>  
-#include <errno.h>  
-  
-int main( int argc, char *argv[] )  
-{  
-  
-   if(_chdir( argv[1] ) )  
-   {  
-      switch (errno)  
-      {  
-      case ENOENT:  
-         printf( "Unable to locate the directory: %s\n", argv[1] );  
-         break;  
-      case EINVAL:  
-         printf( "Invalid buffer.\n");  
-         break;  
-      default:  
-         printf( "Unknown error.\n");  
-      }  
-   }  
-   else  
-      system( "dir *.exe");  
-}  
-```  
-  
-```Output  
-Volume in drive C has no label.  
- Volume Serial Number is 2018-08A1  
-  
- Directory of c:\windows  
-  
-08/29/2002  04:00 AM         1,004,032 explorer.exe  
-12/17/2002  04:43 PM            10,752 hh.exe  
-03/03/2003  09:24 AM            33,792 ieuninst.exe  
-10/29/1998  04:45 PM           306,688 IsUninst.exe  
-08/29/2002  04:00 AM            66,048 NOTEPAD.EXE  
-03/03/2003  09:24 AM            33,792 Q330994.exe  
-08/29/2002  04:00 AM           134,144 regedit.exe  
-02/28/2003  06:26 PM            46,352 setdebug.exe  
-08/29/2002  04:00 AM            15,360 TASKMAN.EXE  
-08/29/2002  04:00 AM            49,680 twunk_16.exe  
-08/29/2002  04:00 AM            25,600 twunk_32.exe  
-08/29/2002  04:00 AM           256,192 winhelp.exe  
-08/29/2002  04:00 AM           266,752 winhlp32.exe  
-              13 File(s)      2,249,184 bytes  
-               0 Dir(s)  67,326,029,824 bytes free  
-```  
-  
-## <a name="see-also"></a>Vedere anche  
- [Controllo delle directory](../../c-runtime-library/directory-control.md)   
- [_mkdir, _wmkdir](../../c-runtime-library/reference/mkdir-wmkdir.md)   
- [_rmdir, _wrmdir](../../c-runtime-library/reference/rmdir-wrmdir.md)   
- [system, _wsystem](../../c-runtime-library/reference/system-wsystem.md)
+
+Modifica la directory di lavoro corrente.
+
+## <a name="syntax"></a>Sintassi
+
+```C
+int _chdir(
+   const char *dirname
+);
+int _wchdir(
+   const wchar_t *dirname
+);
+```
+
+### <a name="parameters"></a>Parametri
+
+*DirName*<br/>
+Percorso della nuova directory di lavoro.
+
+## <a name="return-value"></a>Valore restituito
+
+Se eseguite correttamente, queste funzioni restituiscono un valore pari a 0. Il valore restituito-1 indica un errore. Se non è stato possibile trovare il percorso specificato, **errno** è impostata su **ENOENT**. Se *dirname* è NULL, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, **errno** è impostata su **EINVAL** e la funzione restituisce -1.
+
+## <a name="remarks"></a>Note
+
+Il **ChDir** funzione consente di modificare la directory di lavoro corrente per la directory specificata da *dirname*. Il *dirname* parametro deve fare riferimento a una directory esistente. Questa funzione può modificare la directory di lavoro corrente in qualsiasi unità. Se viene specificata in una nuova lettera di unità *dirname*, viene modificata anche la lettera di unità predefinito. Ad esempio, se A è la lettera di unità predefinita e \BIN è la directory di lavoro corrente, la chiamata seguente consente di passare alla directory di lavoro corrente per l'unità C e stabilisce C come nuova unità predefinita:
+
+```C
+_chdir("c:\temp");
+```
+
+Quando si usa il carattere barra rovesciata facoltativi (**&#92;**) nei percorsi, è necessario inserire due barre rovesciate (**&#92;&#92;**) in una stringa C per rappresentare una singola barra rovesciata letterale ( **&#92;**).
+
+**wchdir** è una versione a caratteri wide **ChDir**; il *dirname* argomento **wchdir** è una stringa di caratteri "wide". **wchdir** e **ChDir** si comportano in modo identico in caso contrario.
+
+### <a name="generic-text-routine-mapping"></a>Mapping di routine di testo generico:
+
+|Routine Tchar.h|_UNICODE e _MBCS non definiti|_MBCS definito|_UNICODE definito|
+|---------------------|--------------------------------------|--------------------|-----------------------|
+|**tchdir**|**_chdir**|**_chdir**|**_wchdir**|
+
+## <a name="requirements"></a>Requisiti
+
+|Routine|Intestazione obbligatoria|Intestazione facoltativa|
+|-------------|---------------------|---------------------|
+|**_chdir**|\<direct.h>|\<errno.h>|
+|**_wchdir**|\<direct.h> o \<wchar.h>|\<errno.h>|
+
+Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+
+## <a name="example"></a>Esempio
+
+```C
+// crt_chdir.c
+// arguments: C:\WINDOWS
+
+/* This program uses the _chdir function to verify
+   that a given directory exists. */
+
+#include <direct.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <errno.h>
+
+int main( int argc, char *argv[] )
+{
+
+   if(_chdir( argv[1] ) )
+   {
+      switch (errno)
+      {
+      case ENOENT:
+         printf( "Unable to locate the directory: %s\n", argv[1] );
+         break;
+      case EINVAL:
+         printf( "Invalid buffer.\n");
+         break;
+      default:
+         printf( "Unknown error.\n");
+      }
+   }
+   else
+      system( "dir *.exe");
+}
+```
+
+```Output
+ Volume in drive C has no label.
+ Volume Serial Number is 2018-08A1
+
+ Directory of c:\windows
+
+08/29/2002  04:00 AM         1,004,032 explorer.exe
+12/17/2002  04:43 PM            10,752 hh.exe
+03/03/2003  09:24 AM            33,792 ieuninst.exe
+10/29/1998  04:45 PM           306,688 IsUninst.exe
+08/29/2002  04:00 AM            66,048 NOTEPAD.EXE
+03/03/2003  09:24 AM            33,792 Q330994.exe
+08/29/2002  04:00 AM           134,144 regedit.exe
+02/28/2003  06:26 PM            46,352 setdebug.exe
+08/29/2002  04:00 AM            15,360 TASKMAN.EXE
+08/29/2002  04:00 AM            49,680 twunk_16.exe
+08/29/2002  04:00 AM            25,600 twunk_32.exe
+08/29/2002  04:00 AM           256,192 winhelp.exe
+08/29/2002  04:00 AM           266,752 winhlp32.exe
+              13 File(s)      2,249,184 bytes
+               0 Dir(s)  67,326,029,824 bytes free
+```
+
+## <a name="see-also"></a>Vedere anche
+
+[Controllo delle directory](../../c-runtime-library/directory-control.md)<br/>
+[_mkdir, _wmkdir](mkdir-wmkdir.md)<br/>
+[_rmdir, _wrmdir](rmdir-wrmdir.md)<br/>
+[system, _wsystem](system-wsystem.md)<br/>

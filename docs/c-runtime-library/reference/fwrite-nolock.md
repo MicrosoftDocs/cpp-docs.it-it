@@ -1,12 +1,12 @@
 ---
 title: _fwrite_nolock | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _fwrite_nolock
@@ -33,63 +33,69 @@ helpviewer_keywords:
 - streams, writing data to
 - _fwrite_nolock function
 ms.assetid: 2b4ec6ce-742e-4615-8407-44a0a18ec1d7
-caps.latest.revision: 
+caps.latest.revision: 11
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4e698c6957177720bd171429144518a683be9b08
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 03e04dd884b4b96f64a4d4ece5b61fe5aeafb3a1
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="fwritenolock"></a>_fwrite_nolock
-Scrive i dati in un flusso senza bloccare il thread.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-size_t _fwrite_nolock(  
-   const void *buffer,  
-   size_t size,  
-   size_t count,  
-   FILE *stream   
-);  
-```  
-  
-#### <a name="parameters"></a>Parametri  
- `buffer`  
- Puntatore ai dati da scrivere.  
-  
- `size`  
- Dimensione dell'elemento in byte.  
-  
- `count`  
- Numero massimo di elementi da scrivere.  
-  
- `stream`  
- Puntatore alla struttura `FILE`.  
-  
-## <a name="return-value"></a>Valore restituito  
- Uguale a [fwrite](../../c-runtime-library/reference/fwrite.md).  
-  
-## <a name="remarks"></a>Note  
- Questa funzione è una versione non di blocco di `fwrite`. È identica a `fwrite` con la differenza che non è protetta da interferenze da parte di altri thread. Potrebbe essere più veloce perché non comporta un sovraccarico che blocca altri thread. Utilizzare questa funzione solo in contesti thread-safe come applicazioni a thread singolo o dove l'ambito chiamante già gestisce l'isolamento del thread.  
-  
-## <a name="requirements"></a>Requisiti  
-  
-|Funzione|Intestazione obbligatoria|  
-|--------------|---------------------|  
-|`_fwrite_nolock`|\<stdio.h>|  
-  
- Per altre informazioni sulla compatibilità, vedere la sezione [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
-  
-## <a name="example"></a>Esempio  
- Vedere l'esempio relativo a [fread](../../c-runtime-library/reference/fread.md).  
-  
-## <a name="see-also"></a>Vedere anche  
- [I/O di flusso](../../c-runtime-library/stream-i-o.md)   
- [fread](../../c-runtime-library/reference/fread.md)   
- [_write](../../c-runtime-library/reference/write.md)
+
+Scrive i dati in un flusso senza bloccare il thread.
+
+## <a name="syntax"></a>Sintassi
+
+```C
+size_t _fwrite_nolock(
+   const void *buffer,
+   size_t size,
+   size_t count,
+   FILE *stream
+);
+```
+
+### <a name="parameters"></a>Parametri
+
+*buffer*<br/>
+Puntatore ai dati da scrivere.
+
+*size*<br/>
+Dimensione dell'elemento in byte.
+
+*count*<br/>
+Numero massimo di elementi da scrivere.
+
+*Flusso*<br/>
+Puntatore alla struttura **FILE**.
+
+## <a name="return-value"></a>Valore restituito
+
+Uguale a [fwrite](fwrite.md).
+
+## <a name="remarks"></a>Note
+
+Questa funzione è una versione non blocca il thread di **fwrite**. È identico a **fwrite** ad eccezione del fatto che non è protetta da interferenze da altri thread. Potrebbe essere più veloce perché non comporta un sovraccarico che blocca altri thread. Utilizzare questa funzione solo in contesti thread-safe come applicazioni a thread singolo o dove l'ambito chiamante già gestisce l'isolamento del thread.
+
+## <a name="requirements"></a>Requisiti
+
+|Funzione|Intestazione obbligatoria|
+|--------------|---------------------|
+|**_fwrite_nolock**|\<stdio.h>|
+
+Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+
+## <a name="example"></a>Esempio
+
+Vedere l'esempio relativo a [fread](fread.md).
+
+## <a name="see-also"></a>Vedere anche
+
+[I/O di flusso](../../c-runtime-library/stream-i-o.md)<br/>
+[fread](fread.md)<br/>
+[_write](write.md)<br/>

@@ -44,18 +44,18 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8820dbda16d95a201d666a0f25b4e06a6b79c941
-ms.sourcegitcommit: 604907f77eb6c5b1899194a9877726f3e8c2dabc
+ms.openlocfilehash: 16dfe0f560097ab7a5a423f7730c215c2d05530f
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="strcpys-wcscpys-mbscpys"></a>strcpy_s, wcscpy_s, _mbscpy_s
 
-Copia una stringa. Queste versioni di [strcpy, wcscpy, _mbscpy](../../c-runtime-library/reference/strcpy-wcscpy-mbscpy.md) includono miglioramenti per la sicurezza, come descritto in [Funzionalità di sicurezza in CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Copia una stringa. Queste versioni di [strcpy, wcscpy, _mbscpy](strcpy-wcscpy-mbscpy.md) includono miglioramenti per la sicurezza, come descritto in [Funzionalità di sicurezza in CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 > [!IMPORTANT]
-> `_mbscpy_s` non può essere utilizzato in applicazioni che vengono eseguite in Windows Runtime. Per altre informazioni, vedere [Funzioni CRT non supportate nelle app della piattaforma UWP (Universal Windows Platform)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **mbscpy_s** non può essere usata nelle applicazioni eseguite in Windows Runtime. Per altre informazioni, vedere [Funzioni CRT non supportate nelle app della piattaforma UWP (Universal Windows Platform)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Sintassi
 
@@ -121,9 +121,9 @@ Zero in caso di esito positivo; in caso contrario un errore.
 
 ## <a name="remarks"></a>Note
 
-Il `strcpy_s` funzione Copia il contenuto nell'indirizzo del *src*, incluso il carattere null di terminazione, nel percorso specificato da *dest*. La stringa di destinazione deve essere sufficientemente grande da contenere la stringa di origine e il relativo carattere Null di terminazione. Se le stringhe di origine e di destinazione si sovrappongono, il comportamento di `strcpy_s` non è definito.
+Il **strcpy_s** funzione Copia il contenuto nell'indirizzo del *src*, incluso il carattere null di terminazione, nel percorso specificato da *dest*. La stringa di destinazione deve essere sufficientemente grande da contenere la stringa di origine e il relativo carattere Null di terminazione. Il comportamento delle **strcpy_s** è definito se le stringhe di origine e di destinazione si sovrappongono.
 
-`wcscpy_s` è la versione a caratteri wide di `strcpy_s` e `_mbscpy_s` è la versione a caratteri multibyte. Gli argomenti di `wcscpy_s` sono stringhe di caratteri wide, mentre gli argomenti di `_mbscpy_s` sono stringhe di caratteri multibyte. A parte ciò, queste tre funzioni si comportano in modo identico.
+**wcscpy_s** è la versione a caratteri "wide" di **strcpy_s**, e **mbscpy_s** è la versione a caratteri multibyte. Gli argomenti di **wcscpy_s** sono caratteri wide, mentre quelli di stringhe **mbscpy_s** sono stringhe a caratteri multibyte. A parte ciò, queste tre funzioni si comportano in modo identico.
 
 Se *dest* oppure *src* è un puntatore null, o se la destinazione stringa dimensioni *dest_size* è troppo piccolo, viene richiamato il gestore di parametri non validi, come descritto nella [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni restituiscono **EINVAL** e impostare **errno** al **EINVAL** quando *dest* o  *src* è un puntatore null e restituiscono **ERANGE** e impostare **errno** a **ERANGE** quando la stringa di destinazione è troppo piccola.
 
@@ -131,21 +131,21 @@ Quando l'esecuzione dell'operazione si conclude correttamente, la stringa di des
 
 In C++ l'utilizzo di queste funzioni è semplificato dagli overload di modello; gli overload possono dedurre la lunghezza del buffer automaticamente, eliminando quindi la necessità di specificare un argomento di dimensione, e possono sostituire automaticamente le funzioni precedenti, meno sicure con le controparti più recenti e sicure. Per altre informazioni, vedere [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 
-Le versioni della libreria di debug di queste funzioni riempiono innanzitutto il buffer con 0xFE. Per disabilitare questo comportamento, usare [_CrtSetDebugFillThreshold](../../c-runtime-library/reference/crtsetdebugfillthreshold.md).
+Le versioni della libreria di debug di queste funzioni riempiono innanzitutto il buffer con 0xFE. Per disabilitare questo comportamento, usare [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 
 |Routine TCHAR.H|_UNICODE e _MBCS non definiti|_MBCS definito|_UNICODE definito|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|`_tcscpy_s`|`strcpy_s`|`_mbscpy_s`|`wcscpy_s`|
+|**tcscpy_s**|**strcpy_s**|**_mbscpy_s**|**wcscpy_s**|
 
 ## <a name="requirements"></a>Requisiti
 
 |Routine|Intestazione obbligatoria|
 |-------------|---------------------|
-|`strcpy_s`|\<string.h>|
-|`wcscpy_s`|\<string.h> o \<wchar.h>|
-|`_mbscpy_s`|\<mbstring.h>|
+|**strcpy_s**|\<string.h>|
+|**wcscpy_s**|\<string.h> o \<wchar.h>|
+|**_mbscpy_s**|\<mbstring.h>|
 
 Queste funzioni sono specifiche di Microsoft. Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 
@@ -215,11 +215,11 @@ String = Hello world from wcscpy_s and wcscat_s!
 ## <a name="see-also"></a>Vedere anche
 
 [Modifica di stringhe](../../c-runtime-library/string-manipulation-crt.md) <br/>
-[strcat, wcscat, _mbscat](../../c-runtime-library/reference/strcat-wcscat-mbscat.md) <br/>
-[strcmp, wcscmp, _mbscmp](../../c-runtime-library/reference/strcmp-wcscmp-mbscmp.md) <br/>
-[strncat_s, _strncat_s_l, wcsncat_s, _wcsncat_s_l, _mbsncat_s, _mbsncat_s_l](../../c-runtime-library/reference/strncat-s-strncat-s-l-wcsncat-s-wcsncat-s-l-mbsncat-s-mbsncat-s-l.md) <br/>
-[strncmp, wcsncmp, _mbsncmp, _mbsncmp_l](../../c-runtime-library/reference/strncmp-wcsncmp-mbsncmp-mbsncmp-l.md) <br/>
-[strncpy_s, _strncpy_s_l, wcsncpy_s, _wcsncpy_s_l, _mbsncpy_s, _mbsncpy_s_l](../../c-runtime-library/reference/strncpy-s-strncpy-s-l-wcsncpy-s-wcsncpy-s-l-mbsncpy-s-mbsncpy-s-l.md) <br/>
-[_strnicmp, _wcsnicmp, _mbsnicmp, _strnicmp_l, _wcsnicmp_l, _mbsnicmp_l](../../c-runtime-library/reference/strnicmp-wcsnicmp-mbsnicmp-strnicmp-l-wcsnicmp-l-mbsnicmp-l.md) <br/>
-[strrchr, wcsrchr, _mbsrchr, _mbsrchr_l](../../c-runtime-library/reference/strrchr-wcsrchr-mbsrchr-mbsrchr-l.md) <br/>
-[strspn, wcsspn, _mbsspn, _mbsspn_l](../../c-runtime-library/reference/strspn-wcsspn-mbsspn-mbsspn-l.md)<br/>
+[strcat, wcscat, _mbscat](strcat-wcscat-mbscat.md) <br/>
+[strcmp, wcscmp, _mbscmp](strcmp-wcscmp-mbscmp.md) <br/>
+[strncat_s, _strncat_s_l, wcsncat_s, _wcsncat_s_l, _mbsncat_s, _mbsncat_s_l](strncat-s-strncat-s-l-wcsncat-s-wcsncat-s-l-mbsncat-s-mbsncat-s-l.md) <br/>
+[strncmp, wcsncmp, _mbsncmp, _mbsncmp_l](strncmp-wcsncmp-mbsncmp-mbsncmp-l.md) <br/>
+[strncpy_s, _strncpy_s_l, wcsncpy_s, _wcsncpy_s_l, _mbsncpy_s, _mbsncpy_s_l](strncpy-s-strncpy-s-l-wcsncpy-s-wcsncpy-s-l-mbsncpy-s-mbsncpy-s-l.md) <br/>
+[_strnicmp, _wcsnicmp, _mbsnicmp, _strnicmp_l, _wcsnicmp_l, _mbsnicmp_l](strnicmp-wcsnicmp-mbsnicmp-strnicmp-l-wcsnicmp-l-mbsnicmp-l.md) <br/>
+[strrchr, wcsrchr, _mbsrchr, _mbsrchr_l](strrchr-wcsrchr-mbsrchr-mbsrchr-l.md) <br/>
+[strspn, wcsspn, _mbsspn, _mbsspn_l](strspn-wcsspn-mbsspn-mbsspn-l.md)<br/>

@@ -1,12 +1,12 @@
 ---
 title: _chmod, _wchmod | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _chmod
@@ -38,159 +38,154 @@ helpviewer_keywords:
 - files [C++], changing permissions
 - _wchmod function
 ms.assetid: 92f7cb86-b3b0-4232-a599-b8c04a2f2c19
-caps.latest.revision: 
+caps.latest.revision: 23
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d6df97d52e084b56ca9f0e3e749ce933994a8dd2
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: b8194e6bdaf93c4bc2cbbc8c2ff2fdf23df438a5
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="chmod-wchmod"></a>_chmod, _wchmod
-Modifica le impostazioni di autorizzazione file.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-  
-      int _chmod(   
-   const char *filename,  
-   int pmode   
-);  
-int _wchmod(   
-   const wchar_t *filename,  
-   int pmode   
-);  
-```  
-  
-#### <a name="parameters"></a>Parametri  
- `filename`  
- Nome del file esistente.  
-  
- `pmode`  
- Impostazione di autorizzazione per il file.  
-  
-## <a name="return-value"></a>Valore restituito  
- Queste funzioni restituiscono 0 se l'impostazione di autorizzazione viene modificata. Il valore restituito-1 indica un errore. Se non è stato possibile trovare il file specificato, `errno` viene impostata su `ENOENT`, se un parametro non è valido, `errno` viene impostata su `EINVAL`.  
-  
-## <a name="remarks"></a>Note  
- Il `_chmod` funzione consente di modificare l'impostazione delle autorizzazioni del file specificato da `filename`. L'impostazione di autorizzazione controlla l'accesso in lettura e scrittura al file. L'espressione Integer `pmode` contiene una o entrambe le seguenti costanti manifesto, definite in SYS\Stat.h.  
-  
- `_S_IWRITE`  
- Scrittura consentita.  
-  
- `_S_IREAD`  
- Lettura consentita.  
-  
- `_S_IREAD | _S_IWRITE`  
- Lettura e scrittura consentite.  
-  
- Quando vengono specificate entrambe le costanti, queste vengono unite con l'operatore `OR` bit per bit (`|`). Se non viene concessa l'autorizzazione in scrittura, il file è di sola lettura. Si noti che tutti i file sono sempre leggibili. Non è possibile concedere l'autorizzazione di sola scrittura. Di conseguenza, le modalità `_S_IWRITE` e `_S_IREAD | _S_IWRITE` sono equivalenti.  
-  
- `_wchmod` è una versione a caratteri wide di `_chmod`; l'argomento `filename` in `_wchmod` è una stringa di caratteri wide. In caso contrario, `_wchmod` e `_chmod` si comportano in modo identico.  
-  
- Questa funzione convalida i relativi parametri. Se `pmode` non è una combinazione di una delle costanti manifesto o non include un set alternativo di costanti, la funzione semplicemente li ignora. Se `filename` è `NULL`, viene richiamato il gestore dei parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, `errno` viene impostato su `EINVAL` e la funzione restituisce -1.  
-  
-### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico  
-  
-|Routine Tchar.h|_UNICODE e _MBCS non definiti|_MBCS definito|_UNICODE definito|  
-|---------------------|--------------------------------------|--------------------|-----------------------|  
-|`_tchmod`|`_chmod`|`_chmod`|`_wchmod`|  
-  
-## <a name="requirements"></a>Requisiti  
-  
-|Routine|Intestazione obbligatoria|Intestazione facoltativa|  
-|-------------|---------------------|---------------------|  
-|`_chmod`|\<io.h>|\<sys/types.h>, \<sys/stat.h>, \<errno.h>|  
-|`_wchmod`|\<io.h> o \<wchar.h>|\<sys/types.h>, \<sys/stat.h>, \<errno.h>|  
-  
- Per altre informazioni sulla compatibilità, vedere la sezione [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
-  
-## <a name="example"></a>Esempio  
-  
-```  
-// crt_chmod.c  
-// This program uses _chmod to  
-// change the mode of a file to read-only.  
-// It then attempts to modify the file.  
-//  
-  
-#include <sys/types.h>  
-#include <sys/stat.h>  
-#include <io.h>  
-#include <stdio.h>  
-#include <stdlib.h>  
-#include <errno.h>  
-  
-// Change the mode and report error or success   
-void set_mode_and_report(char * filename, int mask)  
-{  
-   // Check for failure   
-   if( _chmod( filename, mask ) == -1 )  
-   {  
-      // Determine cause of failure and report.   
-      switch (errno)  
-      {  
-         case EINVAL:  
-            fprintf( stderr, "Invalid parameter to chmod.\n");  
-            break;  
-         case ENOENT:  
-            fprintf( stderr, "File %s not found\n", filename );  
-            break;  
-         default:  
-            // Should never be reached   
-            fprintf( stderr, "Unexpected error in chmod.\n" );  
-       }  
-   }  
-   else  
-   {  
-      if (mask == _S_IREAD)  
-        printf( "Mode set to read-only\n" );  
-      else if (mask & _S_IWRITE)  
-        printf( "Mode set to read/write\n" );  
-   }  
-   fflush(stderr);  
-}  
-  
-int main( void )  
-{   
-  
-   // Create or append to a file.   
-   system( "echo /* End of file */ >> crt_chmod.c_input" );  
-  
-   // Set file mode to read-only:   
-   set_mode_and_report("crt_chmod.c_input ", _S_IREAD );  
-  
-   system( "echo /* End of file */ >> crt_chmod.c_input " );  
-  
-   // Change back to read/write:   
-   set_mode_and_report("crt_chmod.c_input ", _S_IWRITE );  
-  
-   system( "echo /* End of file */ >> crt_chmod.c_input " );   
-}   
-```  
-  
-```Output  
-  
-A line of text.  
-  
-```  
-  
-```Output  
-  
-      A line of text.Mode set to read-only  
-Access is denied.  
-Mode set to read/write  
-```  
-  
-## <a name="see-also"></a>Vedere anche  
- [Gestione di file](../../c-runtime-library/file-handling.md)   
- [_access, _waccess](../../c-runtime-library/reference/access-waccess.md)   
- [_creat, _wcreat](../../c-runtime-library/reference/creat-wcreat.md)   
- [_fstat, _fstat32, _fstat64, _fstati64, _fstat32i64, _fstat64i32](../../c-runtime-library/reference/fstat-fstat32-fstat64-fstati64-fstat32i64-fstat64i32.md)   
- [_open, _wopen](../../c-runtime-library/reference/open-wopen.md)   
- [Funzioni _stat, _wstat](../../c-runtime-library/reference/stat-functions.md)
+
+Modifica le impostazioni di autorizzazione file.
+
+## <a name="syntax"></a>Sintassi
+
+```C
+int _chmod( const char *filename, int pmode );
+int _wchmod( const wchar_t *filename, int pmode );
+```
+
+### <a name="parameters"></a>Parametri
+
+*filename*<br/>
+Nome del file esistente.
+
+*pmode*<br/>
+Impostazione di autorizzazione per il file.
+
+## <a name="return-value"></a>Valore restituito
+
+Queste funzioni restituiscono 0 se l'impostazione di autorizzazione viene modificata. Il valore restituito-1 indica un errore. Se non è stato possibile trovare il file specificato, **errno** è impostata su **ENOENT**; se non è valido, un parametro **errno** è impostata su **EINVAL**.
+
+## <a name="remarks"></a>Note
+
+Il **chmod** funzione consente di modificare l'impostazione delle autorizzazioni del file specificato da *filename*. L'impostazione di autorizzazione controlla l'accesso in lettura e scrittura al file. L'espressione integer *pmode* contiene una o entrambe le seguenti costanti manifesto, definite in SYS\Stat.h.
+
+|*pmode*|Significato|
+|-|-|
+**S_IREAD**|Solo lettura consentita.
+**S_IWRITE**|Scrittura consentita. (In effetti, consente la lettura e la scrittura)
+**S_IREAD** &AMP;#124; **S_IWRITE**|Lettura e scrittura consentite.
+
+Quando vengono fornite entrambe le costanti, queste sono combinate con i bit per bit o un operatore (**|**). Se non viene concessa l'autorizzazione in scrittura, il file è di sola lettura. Si noti che tutti i file sono sempre leggibili. Non è possibile concedere l'autorizzazione di sola scrittura. Di conseguenza, le modalità **s_iwrite** e **s_iread** | **s_iwrite** sono equivalenti.
+
+**wchmod** è una versione a caratteri "wide" **chmod**; il *filename* argomento **wchmod** è una stringa di caratteri "wide". **wchmod** e **chmod** si comportano in modo identico in caso contrario.
+
+Questa funzione convalida i relativi parametri. Se *pmode* non è una combinazione di una delle costanti manifesto o non include un set alternativo di costanti, la funzione semplicemente ignora quelli. Se *filename* viene **NULL**, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, **errno** è impostata su **EINVAL** e la funzione restituisce -1.
+
+### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
+
+|Routine Tchar.h|_UNICODE e _MBCS non definiti|_MBCS definito|_UNICODE definito|
+|---------------------|--------------------------------------|--------------------|-----------------------|
+|**_tchmod**|**_chmod**|**_chmod**|**_wchmod**|
+
+## <a name="requirements"></a>Requisiti
+
+|Routine|Intestazione obbligatoria|Intestazione facoltativa|
+|-------------|---------------------|---------------------|
+|**_chmod**|\<io.h>|\<sys/types.h>, \<sys/stat.h>, \<errno.h>|
+|**_wchmod**|\<io.h> o \<wchar.h>|\<sys/types.h>, \<sys/stat.h>, \<errno.h>|
+
+Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+
+## <a name="example"></a>Esempio
+
+```C
+// crt_chmod.c
+// This program uses _chmod to
+// change the mode of a file to read-only.
+// It then attempts to modify the file.
+//
+
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <io.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <errno.h>
+
+// Change the mode and report error or success
+void set_mode_and_report(char * filename, int mask)
+{
+   // Check for failure
+   if( _chmod( filename, mask ) == -1 )
+   {
+      // Determine cause of failure and report.
+      switch (errno)
+      {
+         case EINVAL:
+            fprintf( stderr, "Invalid parameter to chmod.\n");
+            break;
+         case ENOENT:
+            fprintf( stderr, "File %s not found\n", filename );
+            break;
+         default:
+            // Should never be reached
+            fprintf( stderr, "Unexpected error in chmod.\n" );
+       }
+   }
+   else
+   {
+      if (mask == _S_IREAD)
+        printf( "Mode set to read-only\n" );
+      else if (mask & _S_IWRITE)
+        printf( "Mode set to read/write\n" );
+   }
+   fflush(stderr);
+}
+
+int main( void )
+{
+
+   // Create or append to a file.
+   system( "echo /* End of file */ >> crt_chmod.c_input" );
+
+   // Set file mode to read-only:
+   set_mode_and_report("crt_chmod.c_input ", _S_IREAD );
+
+   system( "echo /* End of file */ >> crt_chmod.c_input " );
+
+   // Change back to read/write:
+   set_mode_and_report("crt_chmod.c_input ", _S_IWRITE );
+
+   system( "echo /* End of file */ >> crt_chmod.c_input " );
+}
+```
+
+```Output
+
+A line of text.
+
+```
+
+```Output
+
+      A line of text.Mode set to read-only
+Access is denied.
+Mode set to read/write
+```
+
+## <a name="see-also"></a>Vedere anche
+
+[Gestione di file](../../c-runtime-library/file-handling.md)<br/>
+[_access, _waccess](access-waccess.md)<br/>
+[_creat, _wcreat](creat-wcreat.md)<br/>
+[_fstat, _fstat32, _fstat64, _fstati64, _fstat32i64, _fstat64i32](fstat-fstat32-fstat64-fstati64-fstat32i64-fstat64i32.md)<br/>
+[_open, _wopen](open-wopen.md)<br/>
+[Funzioni _stat, _wstat](stat-functions.md)<br/>

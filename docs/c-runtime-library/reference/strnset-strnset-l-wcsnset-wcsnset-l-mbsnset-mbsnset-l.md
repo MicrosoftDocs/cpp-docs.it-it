@@ -1,12 +1,12 @@
 ---
 title: _strnset, _strnset_l, _wcsnset, _wcsnset_l, _mbsnset, _mbsnset_l | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _mbsnset
@@ -74,135 +74,140 @@ helpviewer_keywords:
 - strings [C++], initializing
 - tcsnset_l function
 ms.assetid: 3f306489-5763-48e5-b939-aefee7c94ef5
-caps.latest.revision: 
+caps.latest.revision: 31
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3dc658ef152eb6065f9b0a310468a6880d87ead5
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: f20d65398e477685d7a0834ebe9425aac8e97b9d
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="strnset-strnsetl-wcsnset-wcsnsetl-mbsnset-mbsnsetl"></a>_strnset, _strnset_l, _wcsnset, _wcsnset_l, _mbsnset, _mbsnset_l
-Inizializza i caratteri di una stringa sul carattere specificato. Esistono versioni più sicure di queste funzioni. Vedere [_strnset_s, _strnset_s_l, _wcsnset_s, _wcsnset_s_l, _mbsnset_s, _mbsnset_s_l](../../c-runtime-library/reference/strnset-s-strnset-s-l-wcsnset-s-wcsnset-s-l-mbsnset-s-mbsnset-s-l.md).  
-  
+
+Inizializza i caratteri di una stringa sul carattere specificato. Esistono versioni più sicure di queste funzioni. Vedere [_strnset_s, _strnset_s_l, _wcsnset_s, _wcsnset_s_l, _mbsnset_s, _mbsnset_s_l](strnset-s-strnset-s-l-wcsnset-s-wcsnset-s-l-mbsnset-s-mbsnset-s-l.md).
+
 > [!IMPORTANT]
->  `_mbsnset` e `_mbsnset_l` non possono essere usati nelle applicazioni eseguite in Windows Runtime. Per ulteriori informazioni, vedere [funzioni CRT non supportate nelle App Universal Windows Platform](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-char *_strnset(  
-   char *str,  
-   int c,  
-   size_t count   
-);  
-char *_strnset_l(  
-   char *str,  
-   int c,  
-   size_t count,  
-   locale_t locale  
-);  
-wchar_t *_wcsnset(  
-   wchar_t *str,  
-   wchar_t c,  
-   size_t count   
-);  
-wchar_t *_wcsnset_l(  
-   wchar_t *str,  
-   wchar_t c,  
-   size_t count,  
-   _locale_t locale  
-);  
-unsigned char *_mbsnset(  
-   unsigned char *str,  
-   unsigned int c,  
-   size_t count   
-);  
-unsigned char *_mbsnset_l(  
-   unsigned char *str,  
-   unsigned int c,  
-   size_t count,  
-   _locale_t locale  
-);  
-```  
-  
-#### <a name="parameters"></a>Parametri  
- `str`  
- Stringa da modificare.  
-  
- `c`  
- Impostazione del carattere.  
-  
- `count`  
- Numero dei caratteri da impostare.  
-  
- `locale`  
- Impostazioni locali da usare.  
-  
-## <a name="return-value"></a>Valore restituito  
- Restituisce un puntatore alla stringa modificata.  
-  
-## <a name="remarks"></a>Note  
- La funzione `_strnset` imposta al massimo i primi `count` caratteri di `str` su `c` (convertiti in `char`). Se `count` è maggiore della lunghezza di `str`, la lunghezza di `str` viene usata invece di `count`.  
-  
- `_wcsnset` e `_mbsnset` sono le versioni a caratteri wide e a caratteri multibyte di `_strnset`. Gli argomenti stringa e il valore restituito di `_wcsnset` sono stringhe di caratteri wide, mentre quelli di `_mbsnset` sono stringhe di caratteri multibyte. A parte ciò, queste tre funzioni si comportano in modo identico.  
-  
- `_mbsnset` convalida i parametri. Se `str` è un puntatore Null, viene richiamato il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, `_mbsnset` restituisce NULL e imposta `errno` su `EINVAL`. `_strnset` e `_wcsnset` non convalidano i parametri.  
-  
- La configurazione dell'impostazione della categoria `LC_CTYPE` delle impostazioni locali influisce sul valore di output. Per altre informazioni, vedere [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). Le versioni di queste funzioni senza il suffisso `_l` usano le impostazioni locali correnti per questo comportamento dipendente dalle impostazioni locali. Le versioni con il suffisso `_l` sono identiche ma usano il parametro passato relativo alle impostazioni locali. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).  
-  
-### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico  
-  
-|Routine TCHAR.H|_UNICODE e _MBCS non definiti|_MBCS definito|_UNICODE definito|  
-|---------------------|------------------------------------|--------------------|-----------------------|  
-|`_tcsnset`|`_strnset`|`_mbsnbset`|`_wcsnset`|  
-|`_tcsnset_l`|`_strnset_l`|`_mbsnbset_l`|`_wcsnset_l`|  
-  
-## <a name="requirements"></a>Requisiti  
-  
-|Routine|Intestazione obbligatoria|  
-|-------------|---------------------|  
-|`_strnset`|\<string.h>|  
-|`_strnset_l`|\<tchar.h>|  
-|`_wcsnset`|\<string.h> o \<wchar.h>|  
-|`_wcsnset_l`|\<tchar.h>|  
-|`_mbsnset`, `_mbsnset_l`|\<mbstring.h>|  
-  
- Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).  
-  
-## <a name="example"></a>Esempio  
-  
-```  
-// crt_strnset.c  
-// compile with: /W3  
-#include <string.h>  
-#include <stdio.h>  
-  
-int main( void )  
-{  
-   char string[15] = "This is a test";  
-   /* Set not more than 4 characters of string to be *'s */  
-   printf( "Before: %s\n", string );  
-   _strnset( string, '*', 4 ); // C4996  
-   // Note: _strnset is deprecated; consider using _strnset_s  
-   printf( "After:  %s\n", string );  
-}  
-```  
-  
-```Output  
-Before: This is a test  
-After:  **** is a test  
-```  
-  
-## <a name="see-also"></a>Vedere anche  
- [Modifica di stringhe](../../c-runtime-library/string-manipulation-crt.md)   
- [Locale](../../c-runtime-library/locale.md)  (Impostazioni locali)  
- [Interpretazione di sequenze di caratteri multibyte](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   
- [strcat, wcscat, _mbscat](../../c-runtime-library/reference/strcat-wcscat-mbscat.md)   
- [strcmp, wcscmp, _mbscmp](../../c-runtime-library/reference/strcmp-wcscmp-mbscmp.md)   
- [strcpy, wcscpy, _mbscpy](../../c-runtime-library/reference/strcpy-wcscpy-mbscpy.md)   
- [_strset, _strset_l, _wcsset, _wcsset_l, _mbsset, _mbsset_l](../../c-runtime-library/reference/strset-strset-l-wcsset-wcsset-l-mbsset-mbsset-l.md)
+> **mbsnset** e **mbsnset_l** non può essere usata nelle applicazioni eseguite in Windows Runtime. Per altre informazioni, vedere [Funzioni CRT non supportate nelle app della piattaforma UWP (Universal Windows Platform)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+
+## <a name="syntax"></a>Sintassi
+
+```C
+char *_strnset(
+   char *str,
+   int c,
+   size_t count
+);
+char *_strnset_l(
+   char *str,
+   int c,
+   size_t count,
+   locale_t locale
+);
+wchar_t *_wcsnset(
+   wchar_t *str,
+   wchar_t c,
+   size_t count
+);
+wchar_t *_wcsnset_l(
+   wchar_t *str,
+   wchar_t c,
+   size_t count,
+   _locale_t locale
+);
+unsigned char *_mbsnset(
+   unsigned char *str,
+   unsigned int c,
+   size_t count
+);
+unsigned char *_mbsnset_l(
+   unsigned char *str,
+   unsigned int c,
+   size_t count,
+   _locale_t locale
+);
+```
+
+### <a name="parameters"></a>Parametri
+
+*str*<br/>
+Stringa da modificare.
+
+*c*<br/>
+Impostazione del carattere.
+
+*count*<br/>
+Numero dei caratteri da impostare.
+
+*locale*<br/>
+Impostazioni locali da usare.
+
+## <a name="return-value"></a>Valore restituito
+
+Restituisce un puntatore alla stringa modificata.
+
+## <a name="remarks"></a>Note
+
+Il **strnset** funzione imposta, al massimo, il primo *conteggio* caratteri *str* a *c* (convertito in **char**). Se *conteggio* è maggiore della lunghezza di *str*, la lunghezza del *str* utilizzato al posto del *conteggio*.
+
+**wcsnset** e **mbsnset** sono versioni a caratteri wide e caratteri multibyte di **strnset**. Gli argomenti di stringa e valore restituito di **wcsnset** sono caratteri wide, mentre quelli di stringhe **mbsnset** sono stringhe a caratteri multibyte. A parte ciò, queste tre funzioni si comportano in modo identico.
+
+**mbsnset** convalida i propri parametri; se *str* è un puntatore null, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md) . Se l'esecuzione può continuare, **mbsnset** restituisce NULL e imposta **errno** al **EINVAL**. **strnset** e **wcsnset** non convalidano i relativi parametri.
+
+Il valore di output è interessato dalla configurazione dell'impostazione delle **LC_CTYPE** categoria delle impostazioni locali, vedere [setlocale](setlocale-wsetlocale.md) per altre informazioni. Le versioni di queste funzioni senza il suffisso **_l** usano le impostazioni locali correnti per questo comportamento dipendente dalle impostazioni locali. Le versioni con il suffisso **_l** sono identiche, ma usano il parametro passato alle impostazioni locali. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
+
+### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
+
+|Routine TCHAR.H|_UNICODE e _MBCS non definiti|_MBCS definito|_UNICODE definito|
+|---------------------|------------------------------------|--------------------|-----------------------|
+|**tcsnset**|**_strnset**|**_mbsnbset**|**_wcsnset**|
+|**tcsnset_l**|**_strnset_l**|**_mbsnbset_l**|**_wcsnset_l**|
+
+## <a name="requirements"></a>Requisiti
+
+|Routine|Intestazione obbligatoria|
+|-------------|---------------------|
+|**_strnset**|\<string.h>|
+|**_strnset_l**|\<tchar.h>|
+|**_wcsnset**|\<string.h> o \<wchar.h>|
+|**_wcsnset_l**|\<tchar.h>|
+|**mbsnset**, **mbsnset_l**|\<mbstring.h>|
+
+Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+
+## <a name="example"></a>Esempio
+
+```C
+// crt_strnset.c
+// compile with: /W3
+#include <string.h>
+#include <stdio.h>
+
+int main( void )
+{
+   char string[15] = "This is a test";
+   /* Set not more than 4 characters of string to be *'s */
+   printf( "Before: %s\n", string );
+   _strnset( string, '*', 4 ); // C4996
+   // Note: _strnset is deprecated; consider using _strnset_s
+   printf( "After:  %s\n", string );
+}
+```
+
+```Output
+Before: This is a test
+After:  **** is a test
+```
+
+## <a name="see-also"></a>Vedere anche
+
+[Modifica di stringhe](../../c-runtime-library/string-manipulation-crt.md)<br/>
+[Impostazioni locali](../../c-runtime-library/locale.md)<br/>
+[Interpretazione di sequenze di caratteri multibyte](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[strcat, wcscat, _mbscat](strcat-wcscat-mbscat.md)<br/>
+[strcmp, wcscmp, _mbscmp](strcmp-wcscmp-mbscmp.md)<br/>
+[strcpy, wcscpy, _mbscpy](strcpy-wcscpy-mbscpy.md)<br/>
+[_strset, _strset_l, _wcsset, _wcsset_l, _mbsset, _mbsset_l](strset-strset-l-wcsset-wcsset-l-mbsset-mbsset-l.md)<br/>

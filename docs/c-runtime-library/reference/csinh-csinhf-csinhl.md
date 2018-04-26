@@ -1,13 +1,13 @@
 ---
 title: csinh, csinhf, csinhl | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp
 - devlang-cpp
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - csinh
@@ -40,70 +40,75 @@ helpviewer_keywords:
 - csinhf function
 - csinhl function
 ms.assetid: cc616e55-d14d-4cd3-91f0-fbee03ce5edf
-caps.latest.revision: 
+caps.latest.revision: 11
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: be8c663e387997177c5f5164fafeecf7ba6c7220
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 24d89a6ebe9dec9677ce68e78bedf02fac7292bb
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="csinh-csinhf-csinhl"></a>csinh, csinhf, csinhl
-Recupera il seno iperbolico di un numero complesso.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-_Dcomplex csinh(   
-   _Dcomplex z   
-);  
-_Fcomplex csinh(   
-   _Fcomplex z   
-);  // C++ only  
-_Lcomplex csinh(   
-   _Lcomplex z   
-);  // C++ only  
-_Fcomplex csinhf(   
-   _Fcomplex z   
-);  
-_Lcomplex csinhl(   
-   _Lcomplex z   
-);  
-```  
-  
-#### <a name="parameters"></a>Parametri  
- `z`  
- Numero complesso che rappresenta un angolo, espresso in radianti.  
-  
-## <a name="return-value"></a>Valore restituito  
- Seno iperbolico di `z`, espresso in radianti.  
-  
-## <a name="remarks"></a>Note  
- Dato che C++ consente l'overload, è possibile chiamare degli overload di `csinh` che accettino e restituiscano valori `_Fcomplex` e `_Lcomplex`. In un programma C `csinh` accetta e restituisce sempre un valore `_Dcomplex` .  
-  
-## <a name="requirements"></a>Requisiti  
-  
-|Routine|Intestazione C|Intestazione C++|  
-|-------------|--------------|------------------|  
-|`csinh`,               `csinhf`, `csinhl`|\<complex.h>|\<ccomplex>|  
-  
- Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md) (Compatibilità) nell'introduzione.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Alphabetical Function Reference](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)  (Riferimento alfabetico alle funzioni)  
- [catanh, catanhf, catanhl](../../c-runtime-library/reference/catanh-catanhf-catanhl.md)   
- [ctanh, ctanhf, ctanhl](../../c-runtime-library/reference/ctanh-ctanhf-ctanhl.md)   
- [catan, catanf, catanl](../../c-runtime-library/reference/catan-catanf-catanl.md)   
- [casinh, casinhf, casinhl](../../c-runtime-library/reference/casinh-casinhf-casinhl.md)   
- [ccosh, ccoshf, ccoshl](../../c-runtime-library/reference/ccosh-ccoshf-ccoshl.md)   
- [cacosh, cacoshf, cacoshl](../../c-runtime-library/reference/cacosh-cacoshf-cacoshl.md)   
- [cacos, cacosf, cacosl](../../c-runtime-library/reference/cacos-cacosf-cacosl.md)   
- [ctan, ctanf, ctanl](../../c-runtime-library/reference/ctan-ctanf-ctanl.md)   
- [csin, csinf, csinl](../../c-runtime-library/reference/csin-csinf-csinl.md)   
- [casin, casinf, casinl](../../c-runtime-library/reference/casin-casinf-casinl.md)   
- [ccos, ccosf, ccosl](../../c-runtime-library/reference/ccos-ccosf-ccosl.md)   
- [csqrt, csqrtf, csqrtl](../../c-runtime-library/reference/csqrt-csqrtf-csqrtl.md)
+
+Recupera il seno iperbolico di un numero complesso.
+
+## <a name="syntax"></a>Sintassi
+
+```C
+_Dcomplex csinh(
+   _Dcomplex z
+);
+_Fcomplex csinh(
+   _Fcomplex z
+);  // C++ only
+_Lcomplex csinh(
+   _Lcomplex z
+);  // C++ only
+_Fcomplex csinhf(
+   _Fcomplex z
+);
+_Lcomplex csinhl(
+   _Lcomplex z
+);
+```
+
+### <a name="parameters"></a>Parametri
+
+*z*<br/>
+Numero complesso che rappresenta un angolo, espresso in radianti.
+
+## <a name="return-value"></a>Valore restituito
+
+Il seno iperbolico del *z*, in radianti.
+
+## <a name="remarks"></a>Note
+
+Dato che C++ consente l'overload, è possibile chiamare overload di **csinh** che accettano e restituiscono **_Fcomplex** e **_Lcomplex** valori. In un programma C **csinh** accetta e restituisce sempre un **_Dcomplex** valore.
+
+## <a name="requirements"></a>Requisiti
+
+|Routine|Intestazione C|Intestazione C++|
+|-------------|--------------|------------------|
+|**csinh**, **csinhf**, **csinhl**|\<complex.h>|\<ccomplex>|
+
+Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+
+## <a name="see-also"></a>Vedere anche
+
+[Riferimento alfabetico alle funzioni](crt-alphabetical-function-reference.md)<br/>
+[catanh, catanhf, catanhl](catanh-catanhf-catanhl.md)<br/>
+[ctanh, ctanhf, ctanhl](ctanh-ctanhf-ctanhl.md)<br/>
+[catan, catanf, catanl](catan-catanf-catanl.md)<br/>
+[casinh, casinhf, casinhl](casinh-casinhf-casinhl.md)<br/>
+[ccosh, ccoshf, ccoshl](ccosh-ccoshf-ccoshl.md)<br/>
+[cacosh, cacoshf, cacoshl](cacosh-cacoshf-cacoshl.md)<br/>
+[cacos, cacosf, cacosl](cacos-cacosf-cacosl.md)<br/>
+[ctan, ctanf, ctanl](ctan-ctanf-ctanl.md)<br/>
+[csin, csinf, csinl](csin-csinf-csinl.md)<br/>
+[casin, casinf, casinl](casin-casinf-casinl.md)<br/>
+[ccos, ccosf, ccosl](ccos-ccosf-ccosl.md)<br/>
+[csqrt, csqrtf, csqrtl](csqrt-csqrtf-csqrtl.md)<br/>

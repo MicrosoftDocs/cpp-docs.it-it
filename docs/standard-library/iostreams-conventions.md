@@ -1,12 +1,12 @@
 ---
 title: Convenzioni di iostream | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - C++
@@ -14,37 +14,38 @@ helpviewer_keywords:
 - iostream header
 - C++ Standard Library, iostreams
 ms.assetid: 9fe5ded0-37a1-48d1-9671-c81ffc4760ad
-caps.latest.revision: 
+caps.latest.revision: 10
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b6a89479eaef6839d1c0f6d30061b53dd198e592
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 8d5d6408f51bc3a0bf0fc0ca997635c5b371dcf6
+ms.sourcegitcommit: dd1a509526fa8bb18e97ab7bc7b91cbdb3ec7059
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="iostreams-conventions"></a>Convenzioni di iostream
-Le intestazioni iostream supportano le conversioni tra testo e form codificati e input e output in file esterni:  
-  
-|||  
-|-|-|  
-|[\<fstream>](../standard-library/fstream.md)|[\<iomanip>](../standard-library/iomanip.md)|  
-|[\<ios>](../standard-library/ios.md)|[\<iosfwd>](../standard-library/iosfwd.md)|  
-|[\<iostream>](../standard-library/iostream.md)|[\<istream>](../standard-library/istream.md)|  
-|[\<ostream>](../standard-library/ostream.md)|[\<sstream>](../standard-library/sstream.md)|  
-|[\<streambuf>](../standard-library/streambuf.md)|[\<strstream>](../standard-library/strstream.md)|  
-  
- L'utilizzo più semplice di iostream prevede di includere solo l'intestazione [\<iostream>](../standard-library/iostream.md). È possibile anche estrarre valori da [cin](../standard-library/iostream.md#cin) o [wcin](../standard-library/iostream.md#wcin) per leggere l'input standard. Le regole per eseguire questa operazione sono illustrate nella descrizione della classe [basic_istream Class](../standard-library/basic-istream-class.md). È possibile anche inserire valori in [cout](../standard-library/iostream.md#cout) o [wcout](../standard-library/iostream.md#wcout) per scrivere l'output standard. Le regole per eseguire questa operazione sono illustrate nella descrizione della classe [basic_ostream Class](../standard-library/basic-ostream-class.md). Il formato di controllo comune agli estrattori e agli inserimenti è gestito dalla classe [basic_ios Class](../standard-library/basic-ios-class.md). La modifica delle informazioni sul formato di modifica per l'estrazione e l'inserimento di oggetti è di esclusiva facoltà di specifici manipolatori.  
-  
- Usando le classi dichiarate in [\<fstream>](../standard-library/fstream.md), è possibile eseguire le stesse operazioni iostream nei file aperti in base al nome. Per eseguire la conversione tra oggetti iostream e oggetti della classe [basic_string Class](../standard-library/basic-string-class.md), è possibile usare le classi dichiarate in [\<sstream>](../standard-library/sstream.md). Per effettuare questa operazione con le stringhe C, è possibile usare le classi dichiarate in [\<strstream>](../standard-library/strstream.md).  
-  
- Le intestazioni rimanenti forniscono servizi di supporto, in genere di interesse solo per gli utenti esperti in classi iostream.  
-  
-## <a name="see-also"></a>Vedere anche  
- [C++ Standard Library Overview](../standard-library/cpp-standard-library-overview.md)  (Panoramica sulla libreria standard C++)  
- [Programmazione di iostream](../standard-library/iostream-programming.md)   
- [Thread Safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 
+Le intestazioni iostream supportano le conversioni tra testo e form codificati e input e output in file esterni:
+
+|||
+|-|-|
+|[\<fstream>](../standard-library/fstream.md)|[\<iomanip>](../standard-library/iomanip.md)|
+|[\<ios>](../standard-library/ios.md)|[\<iosfwd>](../standard-library/iosfwd.md)|
+|[\<iostream>](../standard-library/iostream.md)|[\<istream>](../standard-library/istream.md)|
+|[\<ostream>](../standard-library/ostream.md)|[\<sstream>](../standard-library/sstream.md)|
+|[\<streambuf>](../standard-library/streambuf.md)|[\<strstream>](../standard-library/strstream.md)|
+
+L'utilizzo più semplice di iostream prevede di includere solo l'intestazione [\<iostream>](../standard-library/iostream.md). È possibile anche estrarre valori da [cin](../standard-library/iostream.md#cin) o [wcin](../standard-library/iostream.md#wcin) per leggere l'input standard. Le regole per eseguire questa operazione sono illustrate nella descrizione della classe [basic_istream Class](../standard-library/basic-istream-class.md). È possibile anche inserire valori in [cout](../standard-library/iostream.md#cout) o [wcout](../standard-library/iostream.md#wcout) per scrivere l'output standard. Le regole per eseguire questa operazione sono illustrate nella descrizione della classe [basic_ostream Class](../standard-library/basic-ostream-class.md). Il formato di controllo comune agli estrattori e agli inserimenti è gestito dalla classe [basic_ios Class](../standard-library/basic-ios-class.md). La modifica delle informazioni sul formato di modifica per l'estrazione e l'inserimento di oggetti è di esclusiva facoltà di specifici manipolatori.
+
+Usando le classi dichiarate in [\<fstream>](../standard-library/fstream.md), è possibile eseguire le stesse operazioni iostream nei file aperti in base al nome. Per eseguire la conversione tra oggetti iostream e oggetti della classe [basic_string Class](../standard-library/basic-string-class.md), è possibile usare le classi dichiarate in [\<sstream>](../standard-library/sstream.md). Per effettuare questa operazione con le stringhe C, è possibile usare le classi dichiarate in [\<strstream>](../standard-library/strstream.md).
+
+Le intestazioni rimanenti forniscono servizi di supporto, in genere di interesse solo per gli utenti esperti in classi iostream.
+
+## <a name="see-also"></a>Vedere anche
+
+[Panoramica sulla libreria standard C++](../standard-library/cpp-standard-library-overview.md)<br/>
+[Programmazione iostream](../standard-library/iostream-programming.md)<br/>
+[Thread Safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>

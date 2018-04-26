@@ -1,12 +1,12 @@
 ---
-title: "Ereditarietà singola | Documenti Microsoft"
-ms.custom: 
+title: Ereditarietà singola | Documenti Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -19,22 +19,22 @@ helpviewer_keywords:
 - derived classes [C++], single base class
 - inheritance, single
 ms.assetid: 1cb946ed-8b1b-4cf1-bde0-d9cecbfdc622
-caps.latest.revision: 
+caps.latest.revision: 13
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 003e407edfd50440a2bbeaf483c2fba94d178b57
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3d005d4d973ca3ac1873b588975683b14624f21f
+ms.sourcegitcommit: dd1a509526fa8bb18e97ab7bc7b91cbdb3ec7059
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="single-inheritance"></a>Ereditarietà singola
 Nell'ereditarietà singola, una forma comune di ereditarietà, le classi contengono solo una classe base. Esaminare la relazione illustrata nella figura seguente.  
   
- ![Singola base &#45; grafico dell'ereditarietà](../cpp/media/vc38xj1.gif "vc38XJ1")  
+ ![Singola base&#45;grafico di ereditarietà](../cpp/media/vc38xj1.gif "vc38XJ1")  
 Grafico semplice dell'ereditarietà singola  
   
  Si noti la progressione da generale a specifico nella figura. Un altro attributo comune trovato nella progettazione delle gerarchie di classi corrisponde al fatto che la classe derivata ha una relazione "tipo di" con la classe base. Nella figura, `Book` è un tipo di `PrintedDocument` e `PaperbackBook` è un tipo di `book`.  
@@ -61,7 +61,7 @@ class PaperbackBook : public Book {};
   
  Una classe può essere usata come classe base per molte classi specifiche, come illustrato nella figura seguente.  
   
- ![Grafico aciclico diretto](../cpp/media/vc38xj2.gif "vc38XJ2")  
+ ![Un grafo aciclico diretto](../cpp/media/vc38xj2.gif "vc38XJ2")  
 Esempio di grafico aciclico diretto  
   
  Nel diagramma precedente, denominato grafico aciclico diretto, alcune classi sono classi base per più di una classe derivata. Tuttavia, il contrario non è vero: esiste una sola classe base diretta per qualsiasi classe derivata specificata. Il grafico nella figura raffigura struttura a ereditarietà singola.  
@@ -155,8 +155,10 @@ class PaperbackBook : public Document {};
   
 int main() {  
    Document * DocLib[10];   // Library of ten documents.  
-   for (int i = 0 ; i < 10 ; i++)  
+   for (int i = 0 ; i < 5 ; i++)  
       DocLib[i] = new Document;  
+   for (int i = 5 ; i < 10 ; i++)  
+      DocLib[i] = new PaperbackBook;  
 }  
 ```  
   

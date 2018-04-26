@@ -1,12 +1,12 @@
 ---
 title: _ismbbkalnum, _ismbbkalnum_l | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _ismbbkalnum
@@ -37,52 +37,56 @@ helpviewer_keywords:
 - _ismbbkalnum function
 - ismbbkalnum function
 ms.assetid: e1d70e7b-29d0-469c-9d93-442b99de22ac
-caps.latest.revision: 
+caps.latest.revision: 19
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: de4a09460e5c9da6aef8a9b9564c3f193bfba719
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 10f8dbda2331d9ac50b072a0383b725c42a306a1
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="ismbbkalnum-ismbbkalnuml"></a>_ismbbkalnum, _ismbbkalnum_l
-Determina se un carattere multibyte particolare è un simbolo di testo non ASCII.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-int _ismbbkalnum(  
-   unsigned int c   
-);  
-int _ismbbkalnum_l(  
-   unsigned int c,  
-   _locale_t locale   
-);  
-```  
-  
-#### <a name="parameters"></a>Parametri  
- `c`  
- Valore Integer da testare.  
-  
- `locale`  
- Impostazioni locali da usare.  
-  
-## <a name="return-value"></a>Valore restituito  
- `_ismbbkalnum` restituisce un valore diverso da zero se l'Integer `c` è un simbolo di testo non ASCII diverso da un simbolo di punteggiatura o 0 in caso contrario. `_ismbbkalnum` usa le impostazioni locali correnti per le informazioni dei caratteri dipendenti dalle impostazioni locali. `_ismbbkalnum_l` è identico a `_ismbbkalnum` con la differenza che accetta le impostazioni locali come parametro. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).  
-  
-## <a name="requirements"></a>Requisiti  
-  
-|Routine|Intestazione obbligatoria|  
-|-------------|---------------------|  
-|`_ismbbkalnum`|\<mbctype.h>|  
-|`_ismbbkalnum_l`|\<mbctype.h>|  
-  
- Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).  
-  
-## <a name="see-also"></a>Vedere anche  
- [Classificazione per byte](../../c-runtime-library/byte-classification.md)   
- [Routine _ismbb](../../c-runtime-library/ismbb-routines.md)
+
+Determina se un carattere multibyte particolare è un simbolo di testo non ASCII.
+
+## <a name="syntax"></a>Sintassi
+
+```C
+int _ismbbkalnum(
+   unsigned int c
+);
+int _ismbbkalnum_l(
+   unsigned int c,
+   _locale_t locale
+);
+```
+
+### <a name="parameters"></a>Parametri
+
+*c*<br/>
+Valore Integer da testare.
+
+*locale*<br/>
+Impostazioni locali da usare.
+
+## <a name="return-value"></a>Valore restituito
+
+**ismbbkalnum** restituisce un valore diverso da zero se il numero intero *c* è un simbolo di testo non ASCII diverso da segni di punteggiatura o 0 in caso contrario. **ismbbkalnum** Usa le impostazioni locali correnti per le informazioni di carattere dipendente dalle impostazioni locali. **ismbbkalnum_l** è identica a **ismbbkalnum** la differenza che accetta le impostazioni locali come parametro. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
+
+## <a name="requirements"></a>Requisiti
+
+|Routine|Intestazione obbligatoria|
+|-------------|---------------------|
+|**_ismbbkalnum**|\<mbctype.h>|
+|**_ismbbkalnum_l**|\<mbctype.h>|
+
+Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+
+## <a name="see-also"></a>Vedere anche
+
+[Classificazione per byte](../../c-runtime-library/byte-classification.md)<br/>
+[Routine _ismbb](../../c-runtime-library/ismbb-routines.md)<br/>

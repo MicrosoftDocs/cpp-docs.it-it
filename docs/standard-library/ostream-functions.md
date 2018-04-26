@@ -1,10 +1,10 @@
 ---
 title: Funzioni &lt;ostream&gt; | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - ostream/std::swap
@@ -12,18 +12,18 @@ f1_keywords:
 - ostream/std::ends
 - ostream/std::flush
 ms.assetid: d6e56cc0-c8df-4dbe-be10-98e14c35ed3a
-caps.latest.revision: 
+caps.latest.revision: 15
 manager: ghogen
 helpviewer_keywords:
 - std::swap [C++]
 - std::endl [C++]
 - std::ends [C++]
 - std::flush [C++]
-ms.openlocfilehash: 4693e33563048807cdef1c81cb4d47d4fb455137
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 41463d912b3ab33812a1f7c0a0ea5f8172036e57
+ms.sourcegitcommit: dd1a509526fa8bb18e97ab7bc7b91cbdb3ec7059
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="ltostreamgt-functions"></a>Funzioni &lt;ostream&gt;
 
@@ -39,21 +39,18 @@ Queste sono le funzioni di modello globale definite in &lt;ostream&gt;. Per le f
 Termina una riga e scarica il buffer.
 
 ```cpp
-template class<Elem, Tr> 
+template class<Elem, Tr>
 basic_ostream<Elem, Tr>& endl(
    basic_ostream<Elem, Tr>& Ostr);
 ```
 
 ### <a name="parameters"></a>Parametri
 
-*Elem*  
-Tipo dell'elemento.
+*Elem* il tipo di elemento.
 
-*Ostr*  
-Un oggetto di tipo **basic_ostream**.
+*Ostr* un oggetto di tipo **basic_ostream**.
 
-*Tr*  
-Tratti di carattere.
+*TR* tratti di carattere.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -86,21 +83,18 @@ testing
 Termina una stringa.
 
 ```cpp
-template class<Elem, Tr> 
+template class<Elem, Tr>
 basic_ostream<Elem, Tr>& ends(
    basic_ostream<Elem, Tr>& Ostr);
 ```
 
 ### <a name="parameters"></a>Parametri
 
-*Elem*  
-Tipo dell'elemento.
+*Elem* il tipo di elemento.
 
-*Ostr*  
-Un oggetto di tipo **basic_ostream**.
+*Ostr* un oggetto di tipo **basic_ostream**.
 
-*Tr*  
-Tratti di carattere.
+*TR* tratti di carattere.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -142,14 +136,11 @@ basic_ostream<Elem, Tr>& flush(
 
 ### <a name="parameters"></a>Parametri
 
-*Elem*  
-Tipo dell'elemento.
+*Elem* il tipo di elemento.
 
-*Ostr*  
-Un oggetto di tipo **basic_ostream**.
+*Ostr* un oggetto di tipo **basic_ostream**.
 
-*Tr*  
-Tratti di carattere.
+*TR* tratti di carattere.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -190,17 +181,13 @@ void swap(
 
 ### <a name="parameters"></a>Parametri
 
-*Elem*  
-Tipo dell'elemento.
+*Elem* il tipo di elemento.
 
-*Tr*  
-Tratti di carattere.
+*TR* tratti di carattere.
 
-*left*  
-Riferimento lvalue a un **basic_ostream** oggetto.
+*a sinistra* riferimento lvalue a un **basic_ostream** oggetto.
 
-*right*  
-Riferimento lvalue a un **basic_ostream** oggetto.
+*a destra* riferimento lvalue a un **basic_ostream** oggetto.
 
 ### <a name="remarks"></a>Note
 
@@ -208,4 +195,4 @@ La funzione di modello **scambio** esegue `left.swap(right)`.
 
 ## <a name="see-also"></a>Vedere anche
 
-[\<ostream>](../standard-library/ostream.md)  
+[\<ostream>](../standard-library/ostream.md)

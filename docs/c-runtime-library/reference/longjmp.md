@@ -1,12 +1,12 @@
 ---
 title: longjmp | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - longjmp
@@ -30,69 +30,72 @@ helpviewer_keywords:
 - restoring stack environment and execution locale
 - longjmp function
 ms.assetid: 0e13670a-5130-45c1-ad69-6862505b7a2f
-caps.latest.revision: 
+caps.latest.revision: 9
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f80495e9c3e9fa7ce39dac8811e474f68844d196
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 0a593c2dcdfe1731ee5c6438c7a330e7f4ea8740
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="longjmp"></a>longjmp
-Ripristina l'ambiente dello stack e le impostazioni locali di esecuzione.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-  
-      void longjmp(  
-   jmp_buf env,  
-   int value   
-);  
-```  
-  
-#### <a name="parameters"></a>Parametri  
- `env`  
- Variabile in cui è archiviato l'ambiente.  
-  
- *valore*  
- Valore da restituire alla chiamata di `setjmp`.  
-  
-## <a name="remarks"></a>Note  
- La funzione `longjmp` ripristina un ambiente dello stack e le impostazioni locali di esecuzione precedentemente salvati in `env` da `setjmp`. `setjmp` e `longjmp` offrono un modo per eseguire un'operazione `goto` non locale. In genere vengono usate per passare il controllo dell'esecuzione al codice di gestione degli errori o di ripristino in una routine chiamata in precedenza, senza usare le normali convenzioni di chiamata e restituzione del controllo.  
-  
- Una chiamata a `setjmp` causa il salvataggio dell'ambiente corrente dello stack in `env`. Una chiamata successiva a `longjmp` ripristina l'ambiente salvato e restituisce il controllo al punto immediatamente successivo alla chiamata `setjmp` corrispondente. L'esecuzione riprende come se la chiamata `setjmp` avesse appena restituito *value*. I valori di tutte le variabili (eccetto le variabili di registro) accessibili per la routine che riceve il controllo contengono i valori esistenti al momento della chiamata di `longjmp`. I valori delle variabili di registro sono imprevedibili. Il valore restituito da `setjmp` deve essere diverso da zero. Se si passa 0 come *value*, il valore restituito effettivo viene sostituito con 1.  
-  
- Chiamare `longjmp` prima che la funzione che ha chiamato `setjmp` restituisca il controllo. In caso contrario i risultati sono imprevedibili.  
-  
- Tenere conto delle restrizioni seguenti quando si usa `longjmp`:  
-  
--   Non partire dal presupposto che i valori delle variabili di registro rimangano invariati. I valori delle variabili di registro nella routine che chiama `setjmp` potrebbero non essere ripristinati sui valori appropriati dopo l'esecuzione di `longjmp`.  
-  
--   Non usare `longjmp` per trasferire il controllo fuori da una routine di gestione degli interrupt, a meno che l'interrupt non sia causato da un'eccezione a virgola mobile. In questo caso, un programma può restituire il controllo da un gestore di interrupt tramite `longjmp` se reinizializza prima di tutto il pacchetto di operazioni matematiche a virgola mobile chiamando `_fpreset`.  
-  
-     **Nota** Fare attenzione quando si usano `setjmp` e `longjmp` nei programmi C++. Dato che queste funzioni non supportano la semantica degli oggetti C++, è preferibile usare il meccanismo di gestione delle eccezioni C++.  
-  
- Per altre informazioni, vedere [Uso di setjmp e longjmp](../../cpp/using-setjmp-longjmp.md).  
-  
-## <a name="requirements"></a>Requisiti  
-  
-|Routine|Intestazione obbligatoria|  
-|-------------|---------------------|  
-|`longjmp`|\<setjmp.h>|  
-  
- Per altre informazioni sulla compatibilità, vedere la sezione [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
-  
-## <a name="libraries"></a>Librerie  
- Tutte le versioni delle [librerie di runtime C](../../c-runtime-library/crt-library-features.md).  
-  
-## <a name="example"></a>Esempio  
- Vedere l'esempio per [_fpreset](../../c-runtime-library/reference/fpreset.md).  
-  
-## <a name="see-also"></a>Vedere anche  
- [Controllo di processi e ambiente](../../c-runtime-library/process-and-environment-control.md)   
- [setjmp](../../c-runtime-library/reference/setjmp.md)
+
+Ripristina l'ambiente dello stack e le impostazioni locali di esecuzione.
+
+## <a name="syntax"></a>Sintassi
+
+```C
+void longjmp(
+   jmp_buf env,
+   int value
+);
+```
+
+### <a name="parameters"></a>Parametri
+
+*env* variabile in quale ambiente è archiviato.
+
+*valore* valore da restituire al **setjmp** chiamare.
+
+## <a name="remarks"></a>Note
+
+Il **longjmp** funzione Ripristina stack ambiente e l'esecuzione delle impostazioni locali salvate in precedenza in *env* dal **setjmp**. **setjmp** e **longjmp** offrono un metodo per eseguire un non locali **goto**; vengono generalmente utilizzati per passare il controllo dell'esecuzione al codice di gestione degli errori o di ripristino in una routine chiamata in precedenza senza tramite le chiamate normali e le convenzioni restituite.
+
+Una chiamata a **setjmp** fa sì che l'ambiente dello stack corrente deve essere salvato in *env*. Una chiamata successiva a **longjmp** Ripristina l'ambiente salvato e restituisce il controllo al punto immediatamente successivo corrispondente **setjmp** chiamare. Riprende l'esecuzione come se *valore* appena è stato restituito dal **setjmp** chiamare. I valori di tutte le variabili (ad eccezione del fatto variabili registro) accessibili al controllo di ricezione di routine contengono i valori che avevano al momento **longjmp** è stato chiamato. I valori delle variabili di registro sono imprevedibili. Il valore restituito da **setjmp** deve essere diverso da zero. Se si passa 0 come *value*, il valore restituito effettivo viene sostituito con 1.
+
+Chiamare **longjmp** prima della funzione che ha chiamato **setjmp** restituisce; in caso contrario i risultati sono imprevedibili.
+
+Osservare le restrizioni seguenti quando si utilizza **longjmp**:
+
+- Non partire dal presupposto che i valori delle variabili di registro rimangano invariati. I valori delle variabili di registro nella routine chiamante **setjmp** potrebbero non essere ripristinati i valori appropriati dopo **longjmp** viene eseguita.
+
+- Non usare **longjmp** per trasferire il controllo all'esterno di una routine di gestione delle interruzioni a meno che l'interrupt è causato da un'eccezione a virgola mobile. In questo caso, può restituire un programma da un gestore di interrupt tramite **longjmp** se il pacchetto matematica a virgola mobile vengono reinizializzate innanzitutto chiamando **fpreset**.
+
+     **Nota** prestare attenzione quando si utilizza **setjmp** e **longjmp** nei programmi C++. Dato che queste funzioni non supportano la semantica degli oggetti C++, è preferibile usare il meccanismo di gestione delle eccezioni C++.
+
+Per altre informazioni, vedere [Uso di setjmp e longjmp](../../cpp/using-setjmp-longjmp.md).
+
+## <a name="requirements"></a>Requisiti
+
+|Routine|Intestazione obbligatoria|
+|-------------|---------------------|
+|**longjmp**|\<setjmp.h>|
+
+Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+
+## <a name="libraries"></a>Librerie
+
+Tutte le versioni delle [librerie di runtime C](../../c-runtime-library/crt-library-features.md).
+
+## <a name="example"></a>Esempio
+
+Vedere l'esempio per [_fpreset](fpreset.md).
+
+## <a name="see-also"></a>Vedere anche
+
+[Controllo di processi e ambiente](../../c-runtime-library/process-and-environment-control.md)<br/>
+[setjmp](setjmp.md)<br/>

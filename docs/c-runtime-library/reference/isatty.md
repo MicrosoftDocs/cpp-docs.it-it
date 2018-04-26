@@ -1,12 +1,12 @@
 ---
 title: _isatty | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _isatty
@@ -33,78 +33,81 @@ helpviewer_keywords:
 - _isatty function
 - checking character devices
 ms.assetid: 9f1b2e87-0cd7-4079-b187-f2b7ca15fcbe
-caps.latest.revision: 
+caps.latest.revision: 18
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bea907f22496c3c1abe86462357ba14514a4aca7
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 3946ea4751b9ee654bcf24967fc5b109e14ac9b4
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="isatty"></a>_isatty
-Determina se un descrittore di file è associato a un dispositivo a caratteri.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-  
-      int _isatty(  
-int fd   
-);  
-```  
-  
-#### <a name="parameters"></a>Parametri  
- `fd`  
- Descrittore di file che fa riferimento al dispositivo da testare.  
-  
-## <a name="return-value"></a>Valore restituito  
- `_isatty` restituisce un valore diverso da zero se il descrittore è associato a un dispositivo a caratteri. In caso contrario `_isatty` restituisce 0.  
-  
-## <a name="remarks"></a>Note  
- La funzione `_isatty` determina se `fd` è associato a un dispositivo a caratteri (terminale, console, stampante o porta seriale).  
-  
- Questa funzione convalida il parametro `fd`. Se `fd` è un puntatore di file non valido, viene richiamato il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, la funzione restituisce 0 e imposta `errno` su `EBADF`.  
-  
-## <a name="requirements"></a>Requisiti  
-  
-|Routine|Intestazione obbligatoria|  
-|-------------|---------------------|  
-|`_isatty`|\<io.h>|  
-  
- Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).  
-  
-## <a name="libraries"></a>Librerie  
- Tutte le versioni delle [librerie di runtime C](../../c-runtime-library/crt-library-features.md).  
-  
-## <a name="example"></a>Esempio  
-  
-```  
-// crt_isatty.c  
-/* This program checks to see whether  
- * stdout has been redirected to a file.  
- */  
-  
-#include <stdio.h>  
-#include <io.h>  
-  
-int main( void )  
-{  
-   if( _isatty( _fileno( stdout ) ) )  
-      printf( "stdout has not been redirected to a file\n" );  
-   else  
-      printf( "stdout has been redirected to a file\n");  
-}  
-```  
-  
-## <a name="sample-output"></a>Esempio di output  
-  
-```  
-stdout has not been redirected to a file  
-```  
-  
-## <a name="see-also"></a>Vedere anche  
- [Gestione di file](../../c-runtime-library/file-handling.md)
+
+Determina se un descrittore di file è associato a un dispositivo a caratteri.
+
+## <a name="syntax"></a>Sintassi
+
+```C
+int _isatty( int fd );
+```
+
+### <a name="parameters"></a>Parametri
+
+*fd*<br/>
+Descrittore di file che fa riferimento al dispositivo da testare.
+
+## <a name="return-value"></a>Valore restituito
+
+**isatty** restituisce un valore diverso da zero se il descrittore è associato a un dispositivo a caratteri. In caso contrario, **isatty** restituisce 0.
+
+## <a name="remarks"></a>Note
+
+Il **isatty** funzione determina se *fd* è associato a un dispositivo a caratteri (un terminal, console, una stampante o della porta seriale).
+
+Questa funzione convalida il *fd* parametro. Se *fd* è un puntatore di file non valido, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, la funzione restituisce 0 e imposta **errno** alla **EBADF**.
+
+## <a name="requirements"></a>Requisiti
+
+|Routine|Intestazione obbligatoria|
+|-------------|---------------------|
+|**_isatty**|\<io.h>|
+
+Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+
+## <a name="libraries"></a>Librerie
+
+Tutte le versioni delle [librerie di runtime C](../../c-runtime-library/crt-library-features.md).
+
+## <a name="example"></a>Esempio
+
+```C
+// crt_isatty.c
+/* This program checks to see whether
+* stdout has been redirected to a file.
+*/
+
+#include <stdio.h>
+#include <io.h>
+
+int main( void )
+{
+   if( _isatty( _fileno( stdout ) ) )
+      printf( "stdout has not been redirected to a file\n" );
+   else
+      printf( "stdout has been redirected to a file\n");
+}
+```
+
+### <a name="sample-output"></a>Esempio di output
+
+```Output
+stdout has not been redirected to a file
+```
+
+## <a name="see-also"></a>Vedere anche
+
+[Gestione di file](../../c-runtime-library/file-handling.md)<br/>

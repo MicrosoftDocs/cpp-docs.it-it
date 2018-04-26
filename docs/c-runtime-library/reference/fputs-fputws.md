@@ -1,12 +1,12 @@
 ---
 title: fputs, fputws | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - fputs
@@ -37,87 +37,92 @@ helpviewer_keywords:
 - fputs function
 - fputts function
 ms.assetid: d48c82b8-aa17-4830-8c7d-30442ddbb326
-caps.latest.revision: 
+caps.latest.revision: 18
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 31c559e49712fa74d5cd457b528266c4eaeaa17a
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: c21c8d3ea7253904aedc0e5f64c89f20dd70088b
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="fputs-fputws"></a>fputs, fputws
-Scrive una stringa in un flusso.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-int fputs(   
-   const char *str,  
-   FILE *stream   
-);  
-int fputws(   
-   const wchar_t *str,  
-   FILE *stream   
-);  
-```  
-  
-#### <a name="parameters"></a>Parametri  
- `str`  
- Stringa di output.  
-  
- `stream`  
- Puntatore alla struttura `FILE` .  
-  
-## <a name="return-value"></a>Valore restituito  
- Ognuna di queste funzioni restituisce un valore non negativo se ha esito positivo. In caso di errore, `fputs` e `fputws` restituiscono `EOF`. Se `str` o `stream` è un puntatore Null, queste funzioni richiamano il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni impostano `errno` su `EINVAL` e quindi `fputs` restituisce `EOF` e `fputws` restituisce `WEOF`.  
-  
- Per informazioni su questi e altri codici di errore, vedere [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
-  
-## <a name="remarks"></a>Note  
- Ognuna di queste funzioni copia `str` nell'elemento `stream` di output nella posizione corrente. `fputws` copia l'argomento a caratteri wide `str` in `stream` come stringa di caratteri multibyte o stringa di caratteri wide a seconda che `stream` venga aperto rispettivamente in modalità testo oppure in modalità binaria. Nessuna delle funzioni copia il carattere Null di terminazione.  
-  
- Le due funzioni si comportano in modo identico se il flusso viene aperto in modalità ANSI. `fputs` non supporta attualmente l'output in un flusso UNICODE.  
-  
-### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico  
-  
-|Routine TCHAR.H|_UNICODE e _MBCS non definiti|_MBCS definito|_UNICODE definito|  
-|---------------------|------------------------------------|--------------------|-----------------------|  
-|`_fputts`|`fputs`|`fputs`|`fputws`|  
-  
-## <a name="requirements"></a>Requisiti  
-  
-|Funzione|Intestazione obbligatoria|  
-|--------------|---------------------|  
-|`fputs`|\<stdio.h>|  
-|`fputws`|\<stdio.h> o \<wchar.h>|  
-  
- La console non è supportata nelle app di piattaforma UWP (Universal Windows). L'handle del flusso standard associati con la console,`stdin`, `stdout`, e `stderr`, devono essere reindirizzati prima di poter usare le funzioni di runtime C nelle App UWP. Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).  
-  
-## <a name="example"></a>Esempio  
-  
-```  
-// crt_fputs.c  
-// This program uses fputs to write  
-// a single line to the stdout stream.  
-  
-#include <stdio.h>  
-  
-int main( void )  
-{  
-   fputs( "Hello world from fputs.\n", stdout );  
-}  
-```  
-  
-```Output  
-Hello world from fputs.  
-```  
-  
-## <a name="see-also"></a>Vedere anche  
- [I/O di flusso](../../c-runtime-library/stream-i-o.md)   
- [fgets, fgetws](../../c-runtime-library/reference/fgets-fgetws.md)   
- [gets, _getws](../../c-runtime-library/gets-getws.md)   
- [puts, _putws](../../c-runtime-library/reference/puts-putws.md)
+
+Scrive una stringa in un flusso.
+
+## <a name="syntax"></a>Sintassi
+
+```C
+int fputs(
+   const char *str,
+   FILE *stream
+);
+int fputws(
+   const wchar_t *str,
+   FILE *stream
+);
+```
+
+### <a name="parameters"></a>Parametri
+
+*str*<br/>
+Stringa di output.
+
+*Flusso*<br/>
+Puntatore alla struttura **FILE**.
+
+## <a name="return-value"></a>Valore restituito
+
+Ognuna di queste funzioni restituisce un valore non negativo se ha esito positivo. In caso di errore **fputs** e **fputws** restituiscono **EOF**. Se *str* oppure *flusso* è un puntatore null, queste funzioni richiamano il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni impostano **errno** alla **EINVAL** e quindi **fputs** restituisce **EOF**, e  **fputws** restituisce **WEOF**.
+
+Per informazioni su questi e altri codici di errore, vedere [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+
+## <a name="remarks"></a>Note
+
+Ognuna di queste funzioni copie *str* nell'output *flusso* in corrispondenza della posizione corrente. **fputws** copia l'argomento a caratteri wide *str* a *flusso* come una stringa di caratteri multibyte o una stringa di caratteri wide seconda *flusso*viene aperto in modalità testo oppure in modalità binaria, rispettivamente. Nessuna delle funzioni copia il carattere Null di terminazione.
+
+Le due funzioni si comportano in modo identico se il flusso viene aperto in modalità ANSI. **fputs** non supporta attualmente l'output in un flusso UNICODE.
+
+### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
+
+|Routine TCHAR.H|_UNICODE e _MBCS non definiti|_MBCS definito|_UNICODE definito|
+|---------------------|------------------------------------|--------------------|-----------------------|
+|**fputts**|**fputs**|**fputs**|**fputws**|
+
+## <a name="requirements"></a>Requisiti
+
+|Funzione|Intestazione obbligatoria|
+|--------------|---------------------|
+|**fputs**|\<stdio.h>|
+|**fputws**|\<stdio.h> o \<wchar.h>|
+
+La console non è supportata nelle app di piattaforma UWP (Universal Windows). Gli handle di flusso standard associati con la console, ovvero**stdin**, **stdout**, e **stderr**, ovvero devono essere reindirizzati prima di poter usare le funzioni di runtime C nelle App UWP . Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+
+## <a name="example"></a>Esempio
+
+```C
+// crt_fputs.c
+// This program uses fputs to write
+// a single line to the stdout stream.
+
+#include <stdio.h>
+
+int main( void )
+{
+   fputs( "Hello world from fputs.\n", stdout );
+}
+```
+
+```Output
+Hello world from fputs.
+```
+
+## <a name="see-also"></a>Vedere anche
+
+[I/O di flusso](../../c-runtime-library/stream-i-o.md)<br/>
+[fgets, fgetws](fgets-fgetws.md)<br/>
+[gets, _getws](../../c-runtime-library/gets-getws.md)<br/>
+[puts, _putws](puts-putws.md)<br/>

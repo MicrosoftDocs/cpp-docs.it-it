@@ -1,12 +1,12 @@
 ---
 title: rand_s | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 1/02/2018
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - rand_s
@@ -41,15 +41,15 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2438b2ced054667a658f8f31a37c9a62112debc6
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: a0e548a4225a457f846d334768d981c924d41953
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="rands"></a>rand_s
 
-Genera un numero pseudocasuale. Si tratta di una versione più sicura della funzione [rand](../../c-runtime-library/reference/rand.md), con miglioramenti della sicurezza, come descritto in [funzionalità di sicurezza in CRT](../../c-runtime-library/security-features-in-the-crt.md). 
+Genera un numero pseudocasuale. Si tratta di una versione più sicura della funzione [rand](rand.md), con miglioramenti della sicurezza, come descritto in [funzionalità di sicurezza in CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 ## <a name="syntax"></a>Sintassi
 
@@ -59,31 +59,31 @@ errno_t rand_s(unsigned int* randomValue);
 
 ### <a name="parameters"></a>Parametri
 
-*randomValue*  
+*randomValue*<br/>
 Puntatore a un numero intero per contenere il valore generato.
 
 ## <a name="return-value"></a>Valore restituito
 
-Zero in caso di esito positivo. In caso contrario un codice di errore. Se il puntatore di input _randomValue_ è un puntatore null, la funzione richiama un gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, la funzione restituisce `EINVAL` e imposta `errno` su `EINVAL`. Se la funzione ha esito negativo per qualsiasi motivo, *_randomValue_ è impostato su 0.
+Zero in caso di esito positivo. In caso contrario un codice di errore. Se il puntatore di input _randomValue_ è un puntatore null, la funzione richiama un gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, la funzione restituisce **EINVAL** e imposta **errno** al **EINVAL**. Se la funzione ha esito negativo per qualsiasi motivo, *_randomValue_ è impostato su 0.
 
 ## <a name="remarks"></a>Note
 
-La funzione `rand_s` scrivere un intero pseudocasuale nell'intervallo compreso tra 0 e `UINT_MAX` nel puntatore di input. La funzione `rand_s` usa il sistema operativo per generare numeri casuali sicuri dal punto di vista crittografico. Non usa il valore di inizializzazione generato dalla funzione [srand](../../c-runtime-library/reference/srand.md) e non influisce sulla sequenza di numeri casuali usata da `rand`.
+Il **rand_s** funzione scrive un integer pseudocasuale nell'intervallo da 0 a **UINT_MAX** al puntatore di input. Il **rand_s** funzione utilizza il sistema operativo per generare numeri casuali crittograficamente sicuro. Non viene utilizzato il valore di inizializzazione generati dal [srand](srand.md) funzione, né la sequenza di numeri casuali usata dal [rand](rand.md).
 
-La funzione `rand_s` richiede la definizione della costante `_CRT_RAND_S` prima della dichiarazione dell'istruzione di inclusione per la funzione, come nell'esempio seguente:
+Il **rand_s** funzione richiede la costante **_CRT_RAND_S** essere definiti prima dell'istruzione di inclusione per la funzione devono essere dichiarati, come nell'esempio seguente:
 
 ```C
 #define _CRT_RAND_S
 #include <stdlib.h>
 ```
 
-`rand_s` dipende dall'API [RtlGenRandom](http://msdn.microsoft.com/library/windows/desktop/aa387694), disponibile solo in Windows XP e versioni successive.
+**rand_s** varia in base il [RtlGenRandom](http://msdn.microsoft.com/library/windows/desktop/aa387694) API, in cui è disponibile solo in Windows XP e versioni successive.
 
 ## <a name="requirements"></a>Requisiti
 
 |Routine|Intestazione obbligatoria|
 |-------------|---------------------|
-|`rand_s`|\<stdlib.h>|
+|**rand_s**|\<stdlib.h>|
 
 Per altre informazioni, vedere [Compatibility](../../c-runtime-library/compatibility.md).
 
@@ -131,7 +131,7 @@ int main( void )
         {
             printf_s("The rand_s function failed!\n");
         }
-        printf_s( "  %g\n", (double) number / 
+        printf_s( "  %g\n", (double) number /
                           ((double) UINT_MAX + 1) * max );
     }
 }
@@ -165,6 +165,6 @@ int main( void )
 
 ## <a name="see-also"></a>Vedere anche
 
-[Supporto delle funzioni a virgola mobile](../../c-runtime-library/floating-point-support.md)  
-[rand](../../c-runtime-library/reference/rand.md)  
-[srand](../../c-runtime-library/reference/srand.md)  
+[Supporto delle funzioni a virgola mobile](../../c-runtime-library/floating-point-support.md)<br/>
+[rand](rand.md)<br/>
+[srand](srand.md)<br/>

@@ -1,12 +1,12 @@
 ---
 title: Classe allocator_traits | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - memory/std::allocator_traits
@@ -30,7 +30,7 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 612974b8-b5d4-4668-82fb-824bff6821d6
-caps.latest.revision: 
+caps.latest.revision: 12
 author: corob-msft
 ms.author: corob
 manager: ghogen
@@ -55,177 +55,187 @@ helpviewer_keywords:
 - std::allocator_traits [C++], select_on_container_copy_construction
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d732b91a1c7a288cf22fea61e9565a794bb3380d
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 8e95f203cfc59d21056119701f56eb4a0084bcce
+ms.sourcegitcommit: dd1a509526fa8bb18e97ab7bc7b91cbdb3ec7059
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="allocatortraits-class"></a>Classe allocator_traits
-La classe di modello descrive un oggetto che completa un *tipo di allocatore*. Un tipo di allocatore è un tipo che descrive un oggetto allocatore usato per la gestione dello spazio di archiviazione allocato. In particolare, per qualsiasi tipo di allocatore `Alloc`, è possibile usare `allocator_traits<Alloc>` per determinare tutte le informazioni necessarie per un contenitore che supporta gli allocatori. Per altre informazioni, vedere la [Classe allocator](../standard-library/allocator-class.md) predefinita.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```cpp  
+
+La classe di modello descrive un oggetto che completa un *tipo di allocatore*. Un tipo di allocatore è un tipo che descrive un oggetto allocatore usato per la gestione dello spazio di archiviazione allocato. In particolare, per qualsiasi tipo di allocatore `Alloc`, è possibile usare `allocator_traits<Alloc>` per determinare tutte le informazioni necessarie per un contenitore che supporta gli allocatori. Per altre informazioni, vedere la [Classe allocator](../standard-library/allocator-class.md) predefinita.
+
+## <a name="syntax"></a>Sintassi
+
+```cpp
 template <class Alloc>
 class allocator_traits;
-```  
-  
-### <a name="typedefs"></a>Definizioni typedef  
-  
-|Nome|Descrizione|  
-|----------|-----------------|  
-|`allocator_traits::allocator_type`|Questo tipo è un sinonimo del parametro di modello `Alloc`.|  
-|`allocator_traits::const_pointer`|Questo tipo è `Alloc::const_pointer`, se il tipo è ben formato; in caso contrario, questo tipo è `pointer_traits<pointer>::rebind<const value_type>`.|  
-|`allocator_traits::const_void_pointer`|Questo tipo è `Alloc::const_void_pointer`, se il tipo è ben formato; in caso contrario, questo tipo è `pointer_traits<pointer>::rebind<const void>`.|  
-|`allocator_traits::difference_type`|Questo tipo è `Alloc::difference_type`, se il tipo è ben formato; in caso contrario, questo tipo è `pointer_traits<pointer>::difference_type`.|  
-|`allocator_traits::pointer`|Questo tipo è `Alloc::pointer`, se il tipo è ben formato; in caso contrario, questo tipo è `value_type *`.|  
-|`allocator_traits::propagate_on_container_copy_assignment`|Questo tipo è `Alloc::propagate_on_container_copy_assignment`, se il tipo è ben formato; in caso contrario, questo tipo è `false_type`.|  
-|`allocator_traits::propagate_on_container_move_assignment`|Questo tipo è `Alloc::propagate_on_container_move_assignment`, se il tipo è ben formato; in caso contrario, questo tipo è `false_type`. Se il tipo dà come risultato true, un contenitore che supporta gli allocatori copia l'allocatore archiviato in un'assegnazione di spostamento.|  
-|`allocator_traits::propagate_on_container_swap`|Questo tipo è `Alloc::propagate_on_container_swap`, se il tipo è ben formato; in caso contrario, questo tipo è `false_type`. Se il tipo dà come risultato true, un contenitore che supporta gli allocatori scambia l'allocatore archiviato in uno scambio.|  
-|`allocator_traits::size_type`|Questo tipo è `Alloc::size_type`, se il tipo è ben formato; in caso contrario, questo tipo è `make_unsigned<difference_type>::type`.|  
-|`allocator_traits::value_type`|Questo tipo è sinonimo di `Alloc::value_type`.|  
-|`allocator_traits::void_pointer`|Questo tipo è `Alloc::void_pointer`, se il tipo è ben formato; in caso contrario, questo tipo è `pointer_traits<pointer>::rebind<void>`.|  
-  
-### <a name="static-methods"></a>Metodi statici  
- I metodi statici seguenti chiamano il metodo corrispondente in un parametro allocatore specificato.  
-  
-|nome|Descrizione|  
-|----------|-----------------|  
-|[allocate](#allocate)|Metodo statico che alloca la memoria usando il parametro allocatore specificato.|  
-|[construct](#construct)|Metodo statico che usa un allocatore specificato per costruire un oggetto.|  
-|[deallocate](#deallocate)|Metodo statico che usa un allocatore specificato per deallocare un numero specificato di oggetti.|  
-|[destroy](#destroy)|Metodo statico che usa un allocatore specificato per chiamare il distruttore in un oggetto senza la deallocazione della memoria.|  
-|[max_size](#max_size)|Metodo statico che usa un allocatore specificato per determinare il numero massimo di oggetti che possono essere allocati.|  
-|[select_on_container_copy_construction](#select_on_container_copy_construction)|Metodo statico che chiama `select_on_container_copy_construction`nell'allocatore specificato.|  
-  
-## <a name="requirements"></a>Requisiti  
- **Intestazione:** \<memory>  
-  
- **Spazio dei nomi:** std  
-  
-##  <a name="allocate"></a>  allocator_traits::allocate
- Metodo statico che alloca la memoria usando il parametro allocatore specificato.  
-  
-```cpp  
+```
+
+### <a name="typedefs"></a>Definizioni typedef
+
+|Nome|Descrizione|
+|----------|-----------------|
+|`allocator_traits::allocator_type`|Questo tipo è un sinonimo del parametro di modello `Alloc`.|
+|`allocator_traits::const_pointer`|Questo tipo è `Alloc::const_pointer`, se il tipo è ben formato; in caso contrario, questo tipo è `pointer_traits<pointer>::rebind<const value_type>`.|
+|`allocator_traits::const_void_pointer`|Questo tipo è `Alloc::const_void_pointer`, se il tipo è ben formato; in caso contrario, questo tipo è `pointer_traits<pointer>::rebind<const void>`.|
+|`allocator_traits::difference_type`|Questo tipo è `Alloc::difference_type`, se il tipo è ben formato; in caso contrario, questo tipo è `pointer_traits<pointer>::difference_type`.|
+|`allocator_traits::pointer`|Questo tipo è `Alloc::pointer`, se il tipo è ben formato; in caso contrario, questo tipo è `value_type *`.|
+|`allocator_traits::propagate_on_container_copy_assignment`|Questo tipo è `Alloc::propagate_on_container_copy_assignment`, se il tipo è ben formato; in caso contrario, questo tipo è `false_type`.|
+|`allocator_traits::propagate_on_container_move_assignment`|Questo tipo è `Alloc::propagate_on_container_move_assignment`, se il tipo è ben formato; in caso contrario, questo tipo è `false_type`. Se il tipo dà come risultato true, un contenitore che supporta gli allocatori copia l'allocatore archiviato in un'assegnazione di spostamento.|
+|`allocator_traits::propagate_on_container_swap`|Questo tipo è `Alloc::propagate_on_container_swap`, se il tipo è ben formato; in caso contrario, questo tipo è `false_type`. Se il tipo dà come risultato true, un contenitore che supporta gli allocatori scambia l'allocatore archiviato in uno scambio.|
+|`allocator_traits::size_type`|Questo tipo è `Alloc::size_type`, se il tipo è ben formato; in caso contrario, questo tipo è `make_unsigned<difference_type>::type`.|
+|`allocator_traits::value_type`|Questo tipo è sinonimo di `Alloc::value_type`.|
+|`allocator_traits::void_pointer`|Questo tipo è `Alloc::void_pointer`, se il tipo è ben formato; in caso contrario, questo tipo è `pointer_traits<pointer>::rebind<void>`.|
+
+### <a name="static-methods"></a>Metodi statici
+
+I metodi statici seguenti chiamano il metodo corrispondente in un parametro allocatore specificato.
+
+|nome|Descrizione|
+|----------|-----------------|
+|[allocate](#allocate)|Metodo statico che alloca la memoria usando il parametro allocatore specificato.|
+|[construct](#construct)|Metodo statico che usa un allocatore specificato per costruire un oggetto.|
+|[deallocate](#deallocate)|Metodo statico che usa un allocatore specificato per deallocare un numero specificato di oggetti.|
+|[destroy](#destroy)|Metodo statico che usa un allocatore specificato per chiamare il distruttore in un oggetto senza la deallocazione della memoria.|
+|[max_size](#max_size)|Metodo statico che usa un allocatore specificato per determinare il numero massimo di oggetti che possono essere allocati.|
+|[select_on_container_copy_construction](#select_on_container_copy_construction)|Metodo statico che chiama `select_on_container_copy_construction`nell'allocatore specificato.|
+
+## <a name="requirements"></a>Requisiti
+
+**Intestazione:** \<memory>
+
+**Spazio dei nomi:** std
+
+## <a name="allocate"></a>  allocator_traits::allocate
+
+Metodo statico che alloca la memoria usando il parametro allocatore specificato.
+
+```cpp
 static pointer allocate(Alloc& al, size_type count);
 
 static pointer allocate(Alloc& al, size_type count,
     typename allocator_traits<void>::const_pointer* hint);
-```  
-  
-### <a name="parameters"></a>Parametri  
- `al`  
- Un oggetto allocatore.  
-  
- `count`  
- Numero di elementi da allocare.  
-  
- `hint`  
- `const_pointer` che può essere utile all'oggetto allocatore per soddisfare la richiesta di spazio di archiviazione individuando l'indirizzo di un oggetto allocato prima della richiesta. Un puntatore null viene considerato come assenza di hint.  
-  
-### <a name="return-value"></a>Valore restituito  
- Ogni metodo restituisce un puntatore all'oggetto allocato.  
-  
- Il primo metodo statico restituisce `al.allocate(count)`.  
-  
- Il secondo metodo statico restituisce `al.allocate(count, hint)`, se l'espressione è ben formata; in caso contrario, restituisce `al.allocate(count)`.  
-  
-##  <a name="construct"></a>  allocator_traits::construct
- Metodo statico che usa un allocatore specificato per costruire un oggetto.  
-  
-```cpp  
+```
+
+### <a name="parameters"></a>Parametri
+
+`al` Un oggetto allocatore.
+
+`count` Il numero di elementi da allocare.
+
+`hint` Oggetto `const_pointer` che potrebbe facilitare l'oggetto allocatore per soddisfare la richiesta per l'archiviazione, individuare l'indirizzo di un oggetto allocato prima della richiesta. Un puntatore null viene considerato come assenza di hint.
+
+### <a name="return-value"></a>Valore restituito
+
+Ogni metodo restituisce un puntatore all'oggetto allocato.
+
+Il primo metodo statico restituisce `al.allocate(count)`.
+
+Il secondo metodo statico restituisce `al.allocate(count, hint)`, se l'espressione è ben formata; in caso contrario, restituisce `al.allocate(count)`.
+
+## <a name="construct"></a>  allocator_traits:: Construct
+
+Metodo statico che usa un allocatore specificato per costruire un oggetto.
+
+```cpp
 template <class Uty, class Types>
 static void construct(Alloc& al, Uty* ptr, Types&&... args);
-```  
-  
-### <a name="parameters"></a>Parametri  
- `al`  
- Un oggetto allocatore.  
-  
- `ptr`  
- Puntatore al percorso in cui deve essere creato l'oggetto.  
-  
- `args`  
- Elenco di argomenti passato al costruttore dell'oggetto.  
-  
-### <a name="remarks"></a>Note  
- La funzione membro statica chiama `al.construct(ptr, args...)`, se l'espressione è ben formata; in caso contrario, restituisce `::new (static_cast<void *>(ptr)) Uty(std::forward<Types>(args)...)`.  
-  
-##  <a name="deallocate"></a>  allocator_traits::deallocate
- Metodo statico che usa un allocatore specificato per deallocare un numero specificato di oggetti.  
-  
-```cpp  
+```
+
+### <a name="parameters"></a>Parametri
+
+`al` Un oggetto allocatore.
+
+`ptr` Un puntatore alla posizione in cui l'oggetto è deve essere costruita.
+
+`args` Un elenco di argomenti passato al costruttore dell'oggetto.
+
+### <a name="remarks"></a>Note
+
+La funzione membro statica chiama `al.construct(ptr, args...)`, se l'espressione è ben formata; in caso contrario, restituisce `::new (static_cast<void *>(ptr)) Uty(std::forward<Types>(args)...)`.
+
+## <a name="deallocate"></a>  allocator_traits::deallocate
+
+Metodo statico che usa un allocatore specificato per deallocare un numero specificato di oggetti.
+
+```cpp
 static void deallocate(Alloc al,
     pointer ptr,
     size_type count);
-```  
-  
-### <a name="parameters"></a>Parametri  
- `al`  
- Un oggetto allocatore.  
-  
- `ptr`  
- Puntatore alla posizione iniziale degli oggetti da deallocare.  
-  
- `count`  
- Numero di oggetti da deallocare.  
-  
-### <a name="remarks"></a>Note  
- Questo metodo chiama `al.deallocate(ptr, count)`.  
-  
- Questo metodo non genera nulla.  
-  
-##  <a name="destroy"></a>  allocator_traits::destroy
- Metodo statico che usa un allocatore specificato per chiamare il distruttore in un oggetto senza la deallocazione della memoria.  
-  
-```cpp  
+```
+
+### <a name="parameters"></a>Parametri
+
+`al` Un oggetto allocatore.
+
+`ptr` Puntatore alla posizione iniziale degli oggetti da deallocare.
+
+`count` Il numero di oggetti da deallocare.
+
+### <a name="remarks"></a>Note
+
+Questo metodo chiama `al.deallocate(ptr, count)`.
+
+Questo metodo non genera nulla.
+
+## <a name="destroy"></a>  allocator_traits:: Destroy
+
+Metodo statico che usa un allocatore specificato per chiamare il distruttore in un oggetto senza la deallocazione della memoria.
+
+```cpp
 template <class Uty>
 static void destroy(Alloc& al, Uty* ptr);
-```  
-  
-### <a name="parameters"></a>Parametri  
- `al`  
- Un oggetto allocatore.  
-  
- `ptr`  
- Puntatore alla posizione dell'oggetto.  
-  
-### <a name="remarks"></a>Note  
- Questo metodo chiama `al.destroy(ptr)`, se l'espressione è ben formata; in caso contrario, restituisce `ptr->~Uty()`.  
-  
-##  <a name="max_size"></a>  allocator_traits::max_size
- Metodo statico che usa un allocatore specificato per determinare il numero massimo di oggetti che possono essere allocati.  
-  
-```cpp  
+```
+
+### <a name="parameters"></a>Parametri
+
+`al` Un oggetto allocatore.
+
+`ptr` Un puntatore alla posizione dell'oggetto.
+
+### <a name="remarks"></a>Note
+
+Questo metodo chiama `al.destroy(ptr)`, se l'espressione è ben formata; in caso contrario, restituisce `ptr->~Uty()`.
+
+## <a name="max_size"></a>  allocator_traits::max_size
+
+Metodo statico che usa un allocatore specificato per determinare il numero massimo di oggetti che possono essere allocati.
+
+```cpp
 static size_type max_size(const Alloc& al);
-```  
-  
-### <a name="parameters"></a>Parametri  
- `al`  
- Un oggetto allocatore.  
-  
-### <a name="remarks"></a>Note  
- Questo metodo restituisce `al.max_size()`, se l'espressione è ben formata; in caso contrario, restituisce `numeric_limits<size_type>::max()`.  
-  
-##  <a name="select_on_container_copy_construction"></a>  allocator_traits::select_on_container_copy_construction
- Metodo statico che chiama `select_on_container_copy_construction`nell'allocatore specificato.  
-  
-```cpp  
+```
+
+### <a name="parameters"></a>Parametri
+
+`al` Un oggetto allocatore.
+
+### <a name="remarks"></a>Note
+
+Questo metodo restituisce `al.max_size()`, se l'espressione è ben formata; in caso contrario, restituisce `numeric_limits<size_type>::max()`.
+
+## <a name="select_on_container_copy_construction"></a>  allocator_traits::select_on_container_copy_construction
+
+Metodo statico che chiama `select_on_container_copy_construction`nell'allocatore specificato.
+
+```cpp
 static Alloc select_on_container_copy_construction(const Alloc& al);
-```  
-  
-### <a name="parameters"></a>Parametri  
- `al`  
- Un oggetto allocatore.  
-  
-### <a name="return-value"></a>Valore restituito  
- Questo metodo restituisce `al.select_on_container_copy_construction()`, se il tipo è ben formato; in caso contrario, restituisce `al`.  
-  
-### <a name="remarks"></a>Note  
- Questo metodo viene usato per specificare un allocatore quando il contenitore associato è creato con un costruttore di copia.  
-  
-## <a name="see-also"></a>Vedere anche  
- [\<memory>](../standard-library/memory.md)   
- [Struct pointer_traits](../standard-library/pointer-traits-struct.md)   
- [Classe scoped_allocator_adaptor](../standard-library/scoped-allocator-adaptor-class.md)
+```
+
+### <a name="parameters"></a>Parametri
+
+`al` Un oggetto allocatore.
+
+### <a name="return-value"></a>Valore restituito
+
+Questo metodo restituisce `al.select_on_container_copy_construction()`, se il tipo è ben formato; in caso contrario, restituisce `al`.
+
+### <a name="remarks"></a>Note
+
+Questo metodo viene usato per specificare un allocatore quando il contenitore associato è creato con un costruttore di copia.
+
+## <a name="see-also"></a>Vedere anche
+
+[\<memory>](../standard-library/memory.md)<br/>
+[Struct pointer_traits](../standard-library/pointer-traits-struct.md)<br/>
+[Classe scoped_allocator_adaptor](../standard-library/scoped-allocator-adaptor-class.md)<br/>

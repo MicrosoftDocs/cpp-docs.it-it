@@ -1,12 +1,12 @@
 ---
 title: _get_dstbias | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _get_dstbias
@@ -36,55 +36,57 @@ helpviewer_keywords:
 - get_dstbias function
 - _get_dstbias function
 ms.assetid: e751358c-1ecc-411b-ae2c-81b2ec54ea45
-caps.latest.revision: 
+caps.latest.revision: 18
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4f6d43b904b96f7323c76637d1f38c024d4696f1
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 15d3b4167e030f3861b7f01bc20bcbd8358dc376
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="getdstbias"></a>_get_dstbias
-Recupera l'offset ora legale in secondi.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-  
-      error_t _get_dstbias(   
-    int* seconds  
-);  
-```  
-  
-#### <a name="parameters"></a>Parametri  
- `seconds`  
- Offset ora legale in secondi.  
-  
-## <a name="return-value"></a>Valore restituito  
- Zero se l'esito è positivo oppure un valore `errno` se si verifica un errore.  
-  
-## <a name="remarks"></a>Note  
- La funzione `_get_dstbias` recupera il numero di secondi nell'ora legale come numero intero. Se è attiva l'ora legale, l'offset predefinito è pari a 3.600 secondi, che corrisponde al numero di secondi in un'ora (alcune regioni usano un offset di due ore).  
-  
- Se `seconds` è `NULL`, viene richiamato il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, la funzione imposta `errno` su`EINVAL` e restituisce `EINVAL`.  
-  
- È consigliabile usare questa funzione invece della macro `_dstbias` o della funzione deprecata `__dstbias`.  
-  
-## <a name="requirements"></a>Requisiti  
-  
-|Routine|Intestazione obbligatoria|  
-|-------------|---------------------|  
-|`_get_dstbias`|\<time.h>|  
-  
- Per altre informazioni, vedere [Compatibility](../../c-runtime-library/compatibility.md).  
-  
-## <a name="see-also"></a>Vedere anche  
- [Time Management](../../c-runtime-library/time-management.md)  (Gestione del tempo)  
- [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)   
- [_get_daylight](../../c-runtime-library/reference/get-daylight.md)   
- [_get_timezone](../../c-runtime-library/reference/get-timezone.md)   
- [_get_tzname](../../c-runtime-library/reference/get-tzname.md)
+
+Recupera l'offset ora legale in secondi.
+
+## <a name="syntax"></a>Sintassi
+
+```C
+error_t _get_dstbias( int* seconds );
+```
+
+### <a name="parameters"></a>Parametri
+
+*Secondi*<br/>
+Offset ora legale in secondi.
+
+## <a name="return-value"></a>Valore restituito
+
+Zero se ha esito positivo oppure un **errno** valore se si verifica un errore.
+
+## <a name="remarks"></a>Note
+
+Il **get_dstbias** funzione recupera il numero di secondi nell'ora legale come numero intero. Se è attiva l'ora legale, l'offset predefinito è pari a 3.600 secondi, che corrisponde al numero di secondi in un'ora (alcune regioni usano un offset di due ore).
+
+Se *secondi* viene **NULL**, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, la funzione imposta **errno** alla **EINVAL** e restituisce **EINVAL**.
+
+Si consiglia di usare questa funzione anziché la macro **_dstbias** o della funzione deprecata **__dstbias**.
+
+## <a name="requirements"></a>Requisiti
+
+|Routine|Intestazione obbligatoria|
+|-------------|---------------------|
+|**_get_dstbias**|\<time.h>|
+
+Per altre informazioni, vedere [Compatibility](../../c-runtime-library/compatibility.md).
+
+## <a name="see-also"></a>Vedere anche
+
+[Gestione dell'ora](../../c-runtime-library/time-management.md)<br/>
+[errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)<br/>
+[_get_daylight](get-daylight.md)<br/>
+[_get_timezone](get-timezone.md)<br/>
+[_get_tzname](get-tzname.md)<br/>

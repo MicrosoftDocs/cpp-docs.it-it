@@ -1,12 +1,12 @@
 ---
 title: _vfprintf_p, _vfprintf_p_l, _vfwprintf_p, _vfwprintf_p_l | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _vfprintf_p
@@ -52,104 +52,109 @@ helpviewer_keywords:
 - formatted text [C++]
 - vfwprintf_p function
 ms.assetid: 4d4a0914-4175-4b65-9ca1-037c4ef29147
-caps.latest.revision: 
+caps.latest.revision: 15
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bdbb916ef756d3437c8d4df1af725fc49fdfff6d
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 0433cdccf053b4a995a4560faee0e254c92285d1
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="vfprintfp-vfprintfpl-vfwprintfp-vfwprintfpl"></a>_vfprintf_p, _vfprintf_p_l, _vfwprintf_p, _vfwprintf_p_l
-Scrivere l'output formattato utilizzando un puntatore a un elenco di argomenti, con la possibilità di specificare l'ordine in cui gli argomenti sono utilizzati nella stringa di formato.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-int _vfprintf_p(  
-   FILE *stream,  
-   const char *format,  
-   va_list argptr   
-);  
-int _vfprintf_p_l(  
-   FILE *stream,  
-   const char *format,  
-   locale_t locale,  
-   va_list argptr   
-);  
-int _vfwprintf_p(  
-   FILE *stream,  
-   const wchar_t *format,  
-   va_list argptr   
-);  
-int _vfwprintf_p_l(  
-   FILE *stream,  
-   const wchar_t *format,  
-   locale_t locale,  
-   va_list argptr   
-);  
-```  
-  
-#### <a name="parameters"></a>Parametri  
- `stream`  
- Puntatore alla struttura `FILE` .  
-  
- `format`  
- Specifica di formato.  
-  
- `argptr`  
- Puntatore a un elenco di argomenti.  
-  
- `locale`  
- Impostazioni locali da usare.  
-  
- Per ulteriori informazioni, vedere [Specifiche di formato](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).  
-  
-## <a name="return-value"></a>Valore restituito  
- `_vfprintf_p` e `_vfwprintf_p` restituiscono il numero di caratteri scritti, escludendo il carattere Null di terminazione, o un valore negativo se si verifica un errore di output.  
-  
-## <a name="remarks"></a>Note  
- Ognuna di queste funzioni accetta un puntatore a un elenco di argomenti, quindi formatta e scrive i dati specificati in `stream`. Queste funzioni differiscono dalle versioni `_vfprint_s` e `_vfwprint_s` solo nel fatto che supportano parametri posizionali. Per altre informazioni, vedere [printf_p Positional Parameters](../../c-runtime-library/printf-p-positional-parameters.md) (Parametri posizionali printf_p).  
-  
- `_vfwprintf_p` è la versione a caratteri wide di `_vprintf_p`; se il flusso viene aperto in modalità ANSI, le due funzioni si comportano in modo identico. `_vprintf_p` non supporta attualmente l'output in un flusso UNICODE.  
-  
- Le versioni di queste funzioni con il suffisso `_l` sono identiche ad eccezione per il fatto che usano il parametro delle impostazioni locali passato al posto di quelle del thread corrente.  
-  
+
+Scrivere l'output formattato utilizzando un puntatore a un elenco di argomenti, con la possibilità di specificare l'ordine in cui gli argomenti sono utilizzati nella stringa di formato.
+
+## <a name="syntax"></a>Sintassi
+
+```C
+int _vfprintf_p(
+   FILE *stream,
+   const char *format,
+   va_list argptr
+);
+int _vfprintf_p_l(
+   FILE *stream,
+   const char *format,
+   locale_t locale,
+   va_list argptr
+);
+int _vfwprintf_p(
+   FILE *stream,
+   const wchar_t *format,
+   va_list argptr
+);
+int _vfwprintf_p_l(
+   FILE *stream,
+   const wchar_t *format,
+   locale_t locale,
+   va_list argptr
+);
+```
+
+### <a name="parameters"></a>Parametri
+
+*Flusso*<br/>
+Puntatore alla struttura **FILE**.
+
+*format*<br/>
+Specifica di formato.
+
+*valore di ArgPtr*<br/>
+Puntatore a un elenco di argomenti.
+
+*locale*<br/>
+Impostazioni locali da usare.
+
+Per ulteriori informazioni, vedere [Specifiche di formato](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).
+
+## <a name="return-value"></a>Valore restituito
+
+**vfprintf_p** e **vfwprintf_p** restituire il numero di caratteri scritti, senza includere il carattere di terminazione null o un valore negativo se si verifica un errore di output.
+
+## <a name="remarks"></a>Note
+
+Ognuna di queste funzioni accetta un puntatore a un elenco di argomenti, quindi formattare e scrivere i dati specificati nel *flusso*. Queste funzioni differiscono dal **_vfprint_s** e **_vfwprint_s** versioni solo che supportano i parametri posizionali. Per altre informazioni, vedere [printf_p Positional Parameters](../../c-runtime-library/printf-p-positional-parameters.md) (Parametri posizionali printf_p).
+
+**vfwprintf_p** è la versione a caratteri "wide" di **vprintf_p**; le due funzioni si comportano in modo identico, se il flusso viene aperto in modalità ANSI. **vprintf_p** attualmente non supporta output in un flusso UNICODE.
+
+Le versioni di queste funzioni con il **l** suffisso sono identiche ad eccezione del fatto che usano il parametro delle impostazioni locali passato al posto di quelle del thread corrente.
+
 > [!IMPORTANT]
->  Assicurarsi che `format` non sia una stringa definita dall'utente. Per altre informazioni, vedere [Evitare sovraccarichi del buffer](http://msdn.microsoft.com/library/windows/desktop/ms717795).  
-  
- Se `stream` o `format` è un puntatore Null o se la stringa di formato contiene caratteri di formattazione non validi, viene richiamato il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, le funzioni restituiranno -1 e imposteranno `errno` su `EINVAL`.  
-  
-### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico  
-  
-|Routine TCHAR.H|_UNICODE e _MBCS non definiti|_MBCS definito|_UNICODE definito|  
-|---------------------|------------------------------------|--------------------|-----------------------|  
-|`_vftprintf_p`|`_vfprintf_p`|`_vfprintf_p`|`_vfwprintf_p`|  
-|`_vftprintf_p_l`|`_vfprintf_p_l`|`_vfprintf_p_l`|`_vfwprintf_p_l`|  
-  
-## <a name="requirements"></a>Requisiti  
-  
-|Routine|Intestazione obbligatoria|Intestazioni facoltative|  
-|-------------|---------------------|----------------------|  
-|`_vfprintf_p`, `_vfprintf_p_l`|\<stdio.h> e \<stdarg.h>|\<varargs.h>*|  
-|`_vfwprintf_p`, `_vfwprintf_p_l`|\<stdio.h> o \<wchar.h> e \<stdarg.h>|\<varargs.h>*|  
-  
- \* Richiesto per la compatibilità con UNIX V.  
-  
- Per altre informazioni sulla compatibilità, vedere la sezione [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
-  
-## <a name="see-also"></a>Vedere anche  
- [I/O di flusso](../../c-runtime-library/stream-i-o.md)   
- [Funzioni vprintf](../../c-runtime-library/vprintf-functions.md)   
- [fprintf, _fprintf_l, fwprintf, _fwprintf_l](../../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md)   
- [printf, _printf_l, wprintf, _wprintf_l](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)   
- [sprintf, _sprintf_l, swprintf, _swprintf_l, \__swprintf_l](../../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)   
- [va_arg, va_copy, va_end, va_start](../../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md)   
- [printf_p Positional Parameters](../../c-runtime-library/printf-p-positional-parameters.md)  (Parametri posizionali printf_p)  
- [_fprintf_p, _fprintf_p_l, _fwprintf_p, _fwprintf_p_l](../../c-runtime-library/reference/fprintf-p-fprintf-p-l-fwprintf-p-fwprintf-p-l.md)   
- [_vsprintf_p, _vsprintf_p_l, _vswprintf_p, _vswprintf_p_l](../../c-runtime-library/reference/vsprintf-p-vsprintf-p-l-vswprintf-p-vswprintf-p-l.md)   
- [_sprintf_p, _sprintf_p_l, _swprintf_p, _swprintf_p_l](../../c-runtime-library/reference/sprintf-p-sprintf-p-l-swprintf-p-swprintf-p-l.md)
+> Assicurarsi che *format* non sia una stringa definita dall'utente. Per altre informazioni, vedere [Evitare sovraccarichi del buffer](http://msdn.microsoft.com/library/windows/desktop/ms717795).
+
+Se entrambi *flusso* oppure *formato* è un puntatore null o se la stringa di formato contiene caratteri di formattazione non validi, viene richiamato il gestore di parametri non validi, come descritto in [parametro Convalida](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, le funzioni restituiranno -1 e impostare **errno** alla **EINVAL**.
+
+### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
+
+|Routine TCHAR.H|_UNICODE e _MBCS non definiti|_MBCS definito|_UNICODE definito|
+|---------------------|------------------------------------|--------------------|-----------------------|
+|**vftprintf_p**|**_vfprintf_p**|**_vfprintf_p**|**_vfwprintf_p**|
+|**vftprintf_p_l**|**_vfprintf_p_l**|**_vfprintf_p_l**|**_vfwprintf_p_l**|
+
+## <a name="requirements"></a>Requisiti
+
+|Routine|Intestazione obbligatoria|Intestazioni facoltative|
+|-------------|---------------------|----------------------|
+|**vfprintf_p**, **vfprintf_p_l**|\<stdio.h> e \<stdarg.h>|\<varargs.h>*|
+|**vfwprintf_p**, **vfwprintf_p_l**|\<stdio.h> o \<wchar.h> e \<stdarg.h>|\<varargs.h>*|
+
+\* Richiesto per la compatibilità con UNIX V.
+
+Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+
+## <a name="see-also"></a>Vedere anche
+
+[I/O di flusso](../../c-runtime-library/stream-i-o.md)<br/>
+[Funzioni vprintf](../../c-runtime-library/vprintf-functions.md)<br/>
+[fprintf, _fprintf_l, fwprintf, _fwprintf_l](fprintf-fprintf-l-fwprintf-fwprintf-l.md)<br/>
+[printf, _printf_l, wprintf, _wprintf_l](printf-printf-l-wprintf-wprintf-l.md)<br/>
+[sprintf, _sprintf_l, swprintf, _swprintf_l, \__swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
+[va_arg, va_copy, va_end, va_start](va-arg-va-copy-va-end-va-start.md)<br/>
+[Parametri posizionali printf_p](../../c-runtime-library/printf-p-positional-parameters.md)<br/>
+[_fprintf_p, _fprintf_p_l, _fwprintf_p, _fwprintf_p_l](fprintf-p-fprintf-p-l-fwprintf-p-fwprintf-p-l.md)<br/>
+[_vsprintf_p, _vsprintf_p_l, _vswprintf_p, _vswprintf_p_l](vsprintf-p-vsprintf-p-l-vswprintf-p-vswprintf-p-l.md)<br/>
+[_sprintf_p, _sprintf_p_l, _swprintf_p, _swprintf_p_l](sprintf-p-sprintf-p-l-swprintf-p-swprintf-p-l.md)<br/>

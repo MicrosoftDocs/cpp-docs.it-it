@@ -1,12 +1,12 @@
 ---
 title: _memccpy | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _memccpy
@@ -31,102 +31,107 @@ helpviewer_keywords:
 - _memccpy function
 - memccpy function
 ms.assetid: 9a2337df-6e85-4eba-b247-dd0532f45ddb
-caps.latest.revision: 
+caps.latest.revision: 12
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 60b83b4915eead8c38025e983d4634b8324568fe
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 661f148e1af0877d0e961d743272de84c485ff32
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="memccpy"></a>_memccpy
-Copia caratteri da un buffer.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-  
-      void *_memccpy(  
-   void *dest,  
-   const void *src,  
-   int c,  
-   size_t count   
-);  
-```  
-  
-#### <a name="parameters"></a>Parametri  
- *dest*  
- Puntatore alla destinazione.  
-  
- *src*  
- Puntatore all'origine.  
-  
- `c`  
- Ultimo carattere da copiare.  
-  
- *count*  
- Numero di caratteri.  
-  
-## <a name="return-value"></a>Valore restituito  
- Se viene copiato il carattere `c`, `_memccpy` restituisce un puntatore al carattere in *dest* immediatamente successivo. Se `c` non viene copiato, la funzione restituisce **NULL**.  
-  
-## <a name="remarks"></a>Note  
- La funzione `_memccpy` copia 0 o più caratteri di *src* in *dest* e si interrompe dopo la copia del carattere `c` oppure dopo la copia di un numero di caratteri pari a *count*, a seconda della condizione che si verifica per prima.  
-  
- **Nota sulla sicurezza** Assicurarsi che il buffer di destinazione sia della stessa dimensione o più grande del buffer di origine. Per altre informazioni, vedere [Evitare sovraccarichi del buffer](http://msdn.microsoft.com/library/windows/desktop/ms717795).  
-  
-## <a name="requirements"></a>Requisiti  
-  
-|Routine|Intestazione obbligatoria|  
-|-------------|---------------------|  
-|`_memccpy`|\<memory.h> o \<string.h>|  
-  
- Per altre informazioni sulla compatibilità, vedere la sezione [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
-  
-## <a name="libraries"></a>Librerie  
- Tutte le versioni delle [librerie di runtime C](../../c-runtime-library/crt-library-features.md).  
-  
-## <a name="example"></a>Esempio  
-  
-```  
-// crt_memccpy.c  
-  
-#include <memory.h>  
-#include <stdio.h>  
-#include <string.h>  
-  
-char string1[60] = "The quick brown dog jumps over the lazy fox";  
-  
-int main( void )  
-{  
-   char buffer[61];  
-   char *pdest;  
-  
-   printf( "Function: _memccpy 60 characters or to character 's'\n" );  
-   printf( "Source: %s\n", string1 );  
-   pdest = _memccpy( buffer, string1, 's', 60 );  
-   *pdest = '\0';  
-   printf( "Result: %s\n", buffer );  
-   printf( "Length: %d characters\n", strlen( buffer ) );  
-}  
-```  
-  
-## <a name="output"></a>Output  
-  
-```  
-Function: _memccpy 60 characters or to character 's'  
-Source: The quick brown dog jumps over the lazy fox  
-Result: The quick brown dog jumps  
-Length: 25 characters  
-```  
-  
-## <a name="see-also"></a>Vedere anche  
- [Modifica del buffer](../../c-runtime-library/buffer-manipulation.md)   
- [memchr, wmemchr](../../c-runtime-library/reference/memchr-wmemchr.md)   
- [memcmp, wmemcmp](../../c-runtime-library/reference/memcmp-wmemcmp.md)   
- [memcpy, wmemcpy](../../c-runtime-library/reference/memcpy-wmemcpy.md)   
- [memset, wmemset](../../c-runtime-library/reference/memset-wmemset.md)
+
+Copia caratteri da un buffer.
+
+## <a name="syntax"></a>Sintassi
+
+```C
+void *_memccpy(
+   void *dest,
+   const void *src,
+   int c,
+   size_t count
+);
+```
+
+### <a name="parameters"></a>Parametri
+
+*dest*<br/>
+Puntatore alla destinazione.
+
+*src*<br/>
+Puntatore all'origine.
+
+*c*<br/>
+Ultimo carattere da copiare.
+
+*count*<br/>
+Numero di caratteri.
+
+## <a name="return-value"></a>Valore restituito
+
+Se il carattere *c* viene copiato **memccpy** restituisce un puntatore a char in *dest* che seguono immediatamente il carattere. Se *c* non viene copiato, viene restituito **NULL**.
+
+## <a name="remarks"></a>Note
+
+Il **memccpy** funzione Copia 0 o più caratteri di *src* al *dest*, interruzione quando il carattere *c* è stato copiato o quando *conteggio* caratteri sono stati copiati, quest'ultima giunge prima.
+
+**Nota sulla sicurezza** Assicurarsi che il buffer di destinazione sia della stessa dimensione o più grande del buffer di origine. Per altre informazioni, vedere [Evitare sovraccarichi del buffer](http://msdn.microsoft.com/library/windows/desktop/ms717795).
+
+## <a name="requirements"></a>Requisiti
+
+|Routine|Intestazione obbligatoria|
+|-------------|---------------------|
+|**_memccpy**|\<memory.h> o \<string.h>|
+
+Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+
+## <a name="libraries"></a>Librerie
+
+Tutte le versioni delle [librerie di runtime C](../../c-runtime-library/crt-library-features.md).
+
+## <a name="example"></a>Esempio
+
+```C
+// crt_memccpy.c
+
+#include <memory.h>
+#include <stdio.h>
+#include <string.h>
+
+char string1[60] = "The quick brown dog jumps over the lazy fox";
+
+int main( void )
+{
+   char buffer[61];
+   char *pdest;
+
+   printf( "Function: _memccpy 60 characters or to character 's'\n" );
+   printf( "Source: %s\n", string1 );
+   pdest = _memccpy( buffer, string1, 's', 60 );
+   *pdest = '\0';
+   printf( "Result: %s\n", buffer );
+   printf( "Length: %d characters\n", strlen( buffer ) );
+}
+```
+
+### <a name="output"></a>Output
+
+```Output
+Function: _memccpy 60 characters or to character 's'
+Source: The quick brown dog jumps over the lazy fox
+Result: The quick brown dog jumps
+Length: 25 characters
+```
+
+## <a name="see-also"></a>Vedere anche
+
+[Modifica del buffer](../../c-runtime-library/buffer-manipulation.md)<br/>
+[memchr, wmemchr](memchr-wmemchr.md)<br/>
+[memcmp, wmemcmp](memcmp-wmemcmp.md)<br/>
+[memcpy, wmemcpy](memcpy-wmemcpy.md)<br/>
+[memset, wmemset](memset-wmemset.md)<br/>

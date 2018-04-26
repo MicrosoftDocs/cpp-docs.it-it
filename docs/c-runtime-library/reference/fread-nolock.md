@@ -1,12 +1,12 @@
 ---
 title: _fread_nolock | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _fread_nolock
@@ -35,60 +35,65 @@ helpviewer_keywords:
 - _fread_nolock function
 - streams [C++], reading data from
 ms.assetid: 60e4958b-1097-46f5-a77b-94af5e7dba40
-caps.latest.revision: 
+caps.latest.revision: 11
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 71c7c853bb22bb4916924f5973ad51665077378e
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 4c5d20c137f1e5401fed042b358e994c7f82912f
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="freadnolock"></a>_fread_nolock
-Legge i dati da un flusso senza bloccare altri thread.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-size_t _fread_nolock(   
-   void *buffer,  
-   size_t size,  
-   size_t count,  
-   FILE *stream   
-);  
-```  
-  
-#### <a name="parameters"></a>Parametri  
- `buffer`  
- Percorso di archiviazione per i dati.  
-  
- `size`  
- Dimensione dell'elemento in byte.  
-  
- `count`  
- Numero massimo di elementi da leggere.  
-  
- `stream`  
- Puntatore alla struttura `FILE`.  
-  
-## <a name="return-value"></a>Valore restituito  
- Vedere [fread](../../c-runtime-library/reference/fread.md).  
-  
-## <a name="remarks"></a>Note  
- Questa funzione è una versione non di blocco di `fread`. È identica a `fread` con la differenza che non è protetta da interferenze da parte di altri thread. Potrebbe essere più veloce perché non comporta un sovraccarico che blocca altri thread. Utilizzare questa funzione solo in contesti thread-safe come applicazioni a thread singolo o dove l'ambito chiamante già gestisce l'isolamento del thread.  
-  
-## <a name="requirements"></a>Requisiti  
-  
-|Funzione|Intestazione obbligatoria|  
-|--------------|---------------------|  
-|`_fread_nolock`|\<stdio.h>|  
-  
- Per altre informazioni sulla compatibilità, vedere la sezione [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
-  
-## <a name="see-also"></a>Vedere anche  
- [I/O di flusso](../../c-runtime-library/stream-i-o.md)   
- [fwrite](../../c-runtime-library/reference/fwrite.md)   
- [_read](../../c-runtime-library/reference/read.md)
+
+Legge i dati da un flusso senza bloccare altri thread.
+
+## <a name="syntax"></a>Sintassi
+
+```C
+size_t _fread_nolock(
+   void *buffer,
+   size_t size,
+   size_t count,
+   FILE *stream
+);
+```
+
+### <a name="parameters"></a>Parametri
+
+*buffer*<br/>
+Percorso di archiviazione per i dati.
+
+*size*<br/>
+Dimensione dell'elemento in byte.
+
+*count*<br/>
+Numero massimo di elementi da leggere.
+
+*Flusso*<br/>
+Puntatore alla struttura **FILE**.
+
+## <a name="return-value"></a>Valore restituito
+
+Vedere [fread](fread.md).
+
+## <a name="remarks"></a>Note
+
+Questa funzione è una versione non blocca il thread di **fread**. È identico a **fread** ad eccezione del fatto che non è protetta da interferenze da altri thread. Potrebbe essere più veloce perché non comporta un sovraccarico che blocca altri thread. Utilizzare questa funzione solo in contesti thread-safe come applicazioni a thread singolo o dove l'ambito chiamante già gestisce l'isolamento del thread.
+
+## <a name="requirements"></a>Requisiti
+
+|Funzione|Intestazione obbligatoria|
+|--------------|---------------------|
+|**_fread_nolock**|\<stdio.h>|
+
+Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+
+## <a name="see-also"></a>Vedere anche
+
+[I/O di flusso](../../c-runtime-library/stream-i-o.md)<br/>
+[fwrite](fwrite.md)<br/>
+[_read](read.md)<br/>

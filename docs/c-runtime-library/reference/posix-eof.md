@@ -1,12 +1,12 @@
 ---
 title: eof | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - eof
@@ -29,17 +29,18 @@ dev_langs:
 helpviewer_keywords:
 - eof function
 ms.assetid: 2e8fb55b-b736-46a6-be5e-15f8876a714f
-caps.latest.revision: 
+caps.latest.revision: 4
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 23d1b0d010653e35b54022bde882fb18dfa546fb
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 14bb06f7cad836682406487c3c8b1d822677ebf9
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="eof"></a>eof
-Questa funzione POSIX è deprecata. In alternativa, usare [_eof](../../c-runtime-library/reference/eof.md) conforme a ISO C++.
+
+Questa funzione POSIX è deprecata. In alternativa, usare [_eof](eof.md) conforme a ISO C++.

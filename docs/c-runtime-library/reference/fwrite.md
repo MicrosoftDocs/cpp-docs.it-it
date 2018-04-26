@@ -1,12 +1,12 @@
 ---
 title: fwrite | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - fwrite
@@ -31,69 +31,75 @@ helpviewer_keywords:
 - streams, writing data to
 - fwrite function
 ms.assetid: 7afacf3a-72d7-4a50-ba2e-bea1ab9f4124
-caps.latest.revision: 
+caps.latest.revision: 18
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 73b5328ce6851ceb61ad3260760e95cd329ee064
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 3b91ad6efe0573bc469e0752ed27978b12018ee7
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="fwrite"></a>fwrite
-Scrive i dati in un flusso.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-size_t fwrite(  
-   const void *buffer,  
-   size_t size,  
-   size_t count,  
-   FILE *stream   
-);  
-```  
-  
-#### <a name="parameters"></a>Parametri  
- `buffer`  
- Puntatore ai dati da scrivere.  
-  
- `size`  
- Dimensioni elemento, in byte.  
-  
- `count`  
- Numero massimo di elementi da scrivere.  
-  
- `stream`  
- Puntatore alla struttura `FILE` .  
-  
-## <a name="return-value"></a>Valore restituito  
- `fwrite` restituisce il numero degli elementi completi attualmente scritti, che può risultare inferiore a `count` se si verifica un errore. Inoltre, se si verifica un errore, non è possibile determinare l'indicatore della posizione del file. Se `stream` o `buffer` è un puntatore Null o se viene specificato un numero dispari di byte da scrivere in modalità Unicode, la funzione richiama il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, la funzione imposta `errno` su`EINVAL` e restituisce 0.  
-  
-## <a name="remarks"></a>Note  
- La funzione `fwrite` scrive fino a `count` elementi, ognuno con una lunghezza pari a `size`, da `buffer` in `stream` di output. Il puntatore del file associato a `stream` (se presente) viene incrementato del numero di byte effettivamente scritti. Se `stream` viene aperto in modalità testo, ogni carattere di avanzamento riga viene sostituito con un ritorno a capo - avanzamento riga coppia. La sostituzione non ha effetto sul valore restituito.  
-  
- Quando `stream` viene aperto nella modalità di conversione Unicode, ad esempio se `stream` viene aperto tramite una chiamata a `fopen` e l'uso di un parametro modalità che include `ccs=UNICODE`, `ccs=UTF-16LE` o `ccs=UTF-8`, o se la modalità viene sostituita da una modalità di conversione Unicode tramite `_setmode` e un parametro modalità che include `_O_WTEXT`, `_O_U16TEXT` o `_O_U8TEXT`, `buffer` viene interpretato come un puntatore a una matrice di `wchar_t` che contiene dati UTF-16. Un tentativo di scrivere un numero dispari di byte in questa modalità causerà un errore di convalida del parametro.  
-  
- Poiché questa funzione blocca il thread di chiamata, può essere considerata thread-safe. Per una versione che non blocca il thread, vedere `_fwrite_nolock`.  
-  
-## <a name="requirements"></a>Requisiti  
-  
-|Funzione|Intestazione obbligatoria|  
-|--------------|---------------------|  
-|`fwrite`|\<stdio.h>|  
-  
- Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).  
-  
-## <a name="example"></a>Esempio  
- Vedere l'esempio relativo a [fread](../../c-runtime-library/reference/fread.md).  
-  
-## <a name="see-also"></a>Vedere anche  
- [I/O di flusso](../../c-runtime-library/stream-i-o.md)   
- [_setmode](../../c-runtime-library/reference/setmode.md)   
- [fread](../../c-runtime-library/reference/fread.md)   
- [_fwrite_nolock](../../c-runtime-library/reference/fwrite-nolock.md)   
- [_write](../../c-runtime-library/reference/write.md)
+
+Scrive i dati in un flusso.
+
+## <a name="syntax"></a>Sintassi
+
+```C
+size_t fwrite(
+   const void *buffer,
+   size_t size,
+   size_t count,
+   FILE *stream
+);
+```
+
+### <a name="parameters"></a>Parametri
+
+*buffer*<br/>
+Puntatore ai dati da scrivere.
+
+*size*<br/>
+Dimensioni elemento, in byte.
+
+*count*<br/>
+Numero massimo di elementi da scrivere.
+
+*Flusso*<br/>
+Puntatore alla struttura **FILE**.
+
+## <a name="return-value"></a>Valore restituito
+
+**fwrite** restituisce il numero di full elementi effettivamente scritti, che può essere minore *conteggio* se si verifica un errore. Inoltre, se si verifica un errore, non è possibile determinare l'indicatore della posizione del file. Se entrambi *flusso* oppure *buffer* è un puntatore null o se viene specificato un numero dispari di byte da scrivere in modalità Unicode, la funzione richiama il gestore di parametri non validi, come descritto in [ Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, la funzione imposta **errno** alla **EINVAL** e restituisce 0.
+
+## <a name="remarks"></a>Note
+
+Il **fwrite** funzione scrive fino a *conteggio* elementi, di *dimensioni* ognuno, con una lunghezza da *buffer* all'output *flusso*. Il puntatore del file associato *flusso* (se presente) viene incrementato il numero di byte effettivamente scritti. Se *flusso* viene aperto in modalità testo, ogni carattere di avanzamento riga viene sostituito con un ritorno a capo - avanzamento riga coppia. La sostituzione non ha effetto sul valore restituito.
+
+Quando *flusso* viene aperto in modalità di conversione Unicode, ad esempio, se *flusso* viene aperto chiamando **fopen** e l'utilizzo di un parametro modalità che include **ccs = UNICODE**, **ccs = UTF-16LE**, oppure **ccs = UTF-8**, o se la modalità viene modificata in una modalità di conversione Unicode tramite **setMode** e una modalità parametro che include **o_wtext**, **_O_U16TEXT**, o **_O_U8TEXT**:*buffer* viene interpretato come un puntatore a un Matrice di **wchar_t** che contiene i dati UTF-16. Un tentativo di scrivere un numero dispari di byte in questa modalità causerà un errore di convalida del parametro.
+
+Poiché questa funzione blocca il thread di chiamata, può essere considerata thread-safe. Per una versione non di blocco, vedere **fwrite_nolock**.
+
+## <a name="requirements"></a>Requisiti
+
+|Funzione|Intestazione obbligatoria|
+|--------------|---------------------|
+|**fwrite**|\<stdio.h>|
+
+Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+
+## <a name="example"></a>Esempio
+
+Vedere l'esempio relativo a [fread](fread.md).
+
+## <a name="see-also"></a>Vedere anche
+
+[I/O di flusso](../../c-runtime-library/stream-i-o.md)<br/>
+[_setmode](setmode.md)<br/>
+[fread](fread.md)<br/>
+[_fwrite_nolock](fwrite-nolock.md)<br/>
+[_write](write.md)<br/>

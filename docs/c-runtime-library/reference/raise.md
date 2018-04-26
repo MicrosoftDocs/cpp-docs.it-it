@@ -1,12 +1,12 @@
 ---
 title: raise | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 1/02/2018
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - raise
@@ -37,11 +37,11 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5a116bfab72222bcf3ee3357c77759960f838cb9
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: e7b4c6bc2668089c4e6b813a03246e0690d1b4af
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="raise"></a>raise
 
@@ -60,7 +60,7 @@ int raise(
 
 ### <a name="parameters"></a>Parametri
 
-*sig*  
+*sig*<br/>
 Segnale da inviare.
 
 ## <a name="return-value"></a>Valore restituito
@@ -73,14 +73,14 @@ La funzione **raise** invia *sig* al programma in esecuzione. Se una chiamata pr
 
 |Segnale|Significato|Impostazione predefinita|
 |------------|-------------|-------------|
-|`SIGABRT`|Terminazione anomala|Termina il programma chiamante con codice di uscita 3|
-|`SIGFPE`|Errore di virgola mobile|Termina il programma chiamante|
-|`SIGILL`|Istruzione non valida|Termina il programma chiamante|
-|`SIGINT`|Interrupt CTRL+C|Termina il programma chiamante|
-|`SIGSEGV`|Accesso all'archiviazione non valido|Termina il programma chiamante|
-|`SIGTERM`|Richiesta di terminazione inviata al programma|Ignora il segnale|
+|**SIGABRT**|Terminazione anomala|Termina il programma chiamante con codice di uscita 3|
+|**SIGFPE**|Errore di virgola mobile|Termina il programma chiamante|
+|**SIGILL**|Istruzione non valida|Termina il programma chiamante|
+|**SIGINT**|Interrupt CTRL+C|Termina il programma chiamante|
+|**SIGSEGV**|Accesso all'archiviazione non valido|Termina il programma chiamante|
+|**SIGTERM**|Richiesta di terminazione inviata al programma|Ignora il segnale|
 
-Se l'argomento non è un segnale valido come sopra specificato, viene richiamato il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se la condizione non viene gestita, la funzione imposta `errno` su `EINVAL` e restituisce un valore diverso da zero.
+Se l'argomento non è un segnale valido come sopra specificato, viene richiamato il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se non gestita, la funzione imposta **errno** alla **EINVAL** e restituisce un valore diverso da zero.
 
 ## <a name="requirements"></a>Requisiti
 
@@ -92,6 +92,6 @@ Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-run
 
 ## <a name="see-also"></a>Vedere anche
 
-[Controllo di processi e ambiente](../../c-runtime-library/process-and-environment-control.md)  
-[abort](../../c-runtime-library/reference/abort.md)  
-[signal](../../c-runtime-library/reference/signal.md)  
+[Controllo di processi e ambiente](../../c-runtime-library/process-and-environment-control.md)<br/>
+[abort](abort.md)<br/>
+[signal](signal.md)<br/>

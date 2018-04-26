@@ -35,11 +35,11 @@ ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f58b7ba7ae51c4db065cd7b30cc233128f7b7c68
-ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
+ms.openlocfilehash: 82585f9f2c727d7189633091429aef6742cdd00b
+ms.sourcegitcommit: 9a3a3d59176043ae60584482c2572c07f757b320
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="dialog-data-exchange-functions-for-crecordview-and-cdaorecordview"></a>Funzioni DDX (Dialog Data Exchange) per CRecordView e CDaoRecordView
 In questo argomento elenca le funzioni DDX_Field utilizzate per scambiare dati tra un [CRecordset](../../mfc/reference/crecordset-class.md) e [CRecordView](../../mfc/reference/crecordview-class.md) modulo o un [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) e un [ CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) form.  
@@ -423,7 +423,7 @@ void AFXAPI DDX_FieldScroll(
  `pDX`  
  Un puntatore a un [CDataExchange](../../mfc/reference/cdataexchange-class.md) oggetto. Il framework fornisce questo oggetto per stabilire il contesto dello scambio dei dati, inclusa la relativa direzione.  
   
- *nIDC\**  
+ `nIDC`  
  L'ID del primo in un gruppo (con stile **WS_GROUP**) adiacente controlli pulsante di opzione nel [CRecordView](../../mfc/reference/crecordview-class.md) o [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) oggetto.  
   
  *valore*  

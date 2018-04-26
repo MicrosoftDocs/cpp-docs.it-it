@@ -1,12 +1,12 @@
 ---
 title: Macro offsetof | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apilocation:
 - msvcrt.dll
@@ -28,57 +28,62 @@ helpviewer_keywords:
 - structure members, offset
 - offsetof macro
 ms.assetid: f3b4eb16-a882-4d38-afc9-eebd976a7352
-caps.latest.revision: 
+caps.latest.revision: 10
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a70bb2823f29caf3f76224bfb91c3c9642bbdcf1
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 686de81ecfd4216f3011c93d3bf9be1bfdc55365
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="offsetof-macro"></a>Macro offsetof
-Recupera l'offset di un membro dall'inizio della relativa struttura padre.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-  
-      size_t offsetof(  
-   structName,  
-   memberName   
-);  
-```  
-  
-#### <a name="parameters"></a>Parametri  
- *structName*  
- Nome della struttura di dati padre.  
-  
- `memberName`  
- Nome del membro nella struttura di dati padre per il quale determinare l'offset.  
-  
-## <a name="return-value"></a>Valore restituito  
- `offsetof` restituisce l'offset in byte del membro specificato dall'inizio della struttura di dati padre. Viene definito per i campi di bit.  
-  
-## <a name="remarks"></a>Note  
- La macro `offsetof` restituisce l'offset in byte di `memberName` dall'inizio della struttura specificata da *structName* come valore di tipo `size_t`. È possibile specificare tipi con la parola chiave `struct`.  
-  
+
+Recupera l'offset di un membro dall'inizio della relativa struttura padre.
+
+## <a name="syntax"></a>Sintassi
+
+```C
+size_t offsetof(
+   structName,
+   memberName
+);
+```
+
+### <a name="parameters"></a>Parametri
+
+*structName*<br/>
+Nome della struttura di dati padre.
+
+*Nome membro*<br/>
+Nome del membro nella struttura di dati padre per il quale determinare l'offset.
+
+## <a name="return-value"></a>Valore restituito
+
+**OffsetOf** restituisce l'offset in byte del membro specificato dall'inizio della struttura di dati padre. Viene definito per i campi di bit.
+
+## <a name="remarks"></a>Note
+
+Il **offsetof** macro restituisce l'offset in byte del *memberName* dall'inizio della struttura specificata da *structName* come valore di tipo **size_ t**. È possibile specificare tipi con il **struct** (parola chiave).
+
 > [!NOTE]
->  `offsetof` non è una funzione e non può essere descritta usando un prototipo C.  
-  
-## <a name="requirements"></a>Requisiti  
-  
-|Routine|Intestazione obbligatoria|  
-|-------------|---------------------|  
-|`offsetof`|\<stddef.h>|  
-  
- Per altre informazioni sulla compatibilità, vedere la sezione [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
-  
-## <a name="libraries"></a>Librerie  
- Tutte le versioni delle [librerie di runtime C](../../c-runtime-library/crt-library-features.md).  
-  
-## <a name="see-also"></a>Vedere anche  
- [Allocazione di memoria](../../c-runtime-library/memory-allocation.md)
+> **OffsetOf** non è una funzione e non può essere descritta usando un prototipo C.
+
+## <a name="requirements"></a>Requisiti
+
+|Routine|Intestazione obbligatoria|
+|-------------|---------------------|
+|**offsetof**|\<stddef.h>|
+
+Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+
+## <a name="libraries"></a>Librerie
+
+Tutte le versioni delle [librerie di runtime C](../../c-runtime-library/crt-library-features.md).
+
+## <a name="see-also"></a>Vedere anche
+
+[Allocazione di memoria](../../c-runtime-library/memory-allocation.md)<br/>

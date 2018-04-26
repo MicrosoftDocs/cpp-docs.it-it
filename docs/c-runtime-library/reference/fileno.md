@@ -1,12 +1,12 @@
 ---
 title: _fileno | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _fileno
@@ -33,79 +33,84 @@ helpviewer_keywords:
 - _fileno function
 - streams, getting file handles
 ms.assetid: 86474174-2f17-4100-bcc4-352dd976c7b5
-caps.latest.revision: 
+caps.latest.revision: 19
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1d0ce17b75ea74154121549209aed94b0a3affea
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 9eb3950ce66f6bfeadd4cc25602ffe2f6abda409
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="fileno"></a>_fileno
-Ottenere il descrittore di file associato al flusso.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-int _fileno(   
-   FILE *stream   
-);  
-```  
-  
-#### <a name="parameters"></a>Parametri  
- `stream`  
- Puntatore alla struttura `FILE`.  
-  
-## <a name="return-value"></a>Valore restituito  
- `_fileno` restituisce il descrittore del file. Non vi è restituzione di errori. Il risultato sarà indefinito se `stream` non specifica un file aperto. Se il flusso è `NULL`, `_fileno` richiama il gestore dei parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, questa funzione restituisce -1 e imposta `errno` su `EINVAL`.  
-  
- Per altre informazioni su questi e altri codici di errore, vedere [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
-  
+
+Ottenere il descrittore di file associato al flusso.
+
+## <a name="syntax"></a>Sintassi
+
+```C
+int _fileno(
+   FILE *stream
+);
+```
+
+### <a name="parameters"></a>Parametri
+
+*Flusso*<br/>
+Puntatore alla struttura **FILE**.
+
+## <a name="return-value"></a>Valore restituito
+
+**fileno** restituisce il descrittore del file. Non vi è restituzione di errori. Il risultato sarà indefinito se *flusso* non specifica un file aperto. Se flusso **NULL**, **fileno** richiama il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, questa funzione restituisce -1 e imposta **errno** alla **EINVAL**.
+
+Per altre informazioni su questi e altri codici di errore, vedere [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+
 > [!NOTE]
->  Se `stdout` o `stderr` non è associata a un flusso di output (ad esempio, in un'applicazione di Windows senza una finestra della console), il descrittore del file restituito è -2. Nelle versioni precedenti, il descrittore del file restituito era -1. Questa modifica consente alle applicazioni di distinguere questa condizione da un errore.  
-  
-## <a name="remarks"></a>Note  
- La routine `_fileno` restituisce il descrittore del file attualmente associato a `stream`. Questa routine viene implementata come funzione e come macro. Per informazioni sulla scelta di un'implementazione, vedere [Suggerimenti per la scelta tra funzioni e macro](../../c-runtime-library/recommendations-for-choosing-between-functions-and-macros.md).  
-  
-## <a name="requirements"></a>Requisiti  
-  
-|Funzione|Intestazione obbligatoria|  
-|--------------|---------------------|  
-|`_fileno`|\<stdio.h>|  
-  
- Per altre informazioni sulla compatibilità, vedere la sezione [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
-  
-## <a name="example"></a>Esempio  
-  
-```  
-// crt_fileno.c  
-// This program uses _fileno to obtain  
-// the file descriptor for some standard C streams.  
-//  
-  
-#include <stdio.h>  
-  
-int main( void )  
-{  
-   printf( "The file descriptor for stdin is %d\n", _fileno( stdin ) );  
-   printf( "The file descriptor for stdout is %d\n", _fileno( stdout ) );  
-   printf( "The file descriptor for stderr is %d\n", _fileno( stderr ) );  
-}  
-```  
-  
-```Output  
-The file descriptor for stdin is 0  
-The file descriptor for stdout is 1  
-The file descriptor for stderr is 2  
-```  
-  
-## <a name="see-also"></a>Vedere anche  
- [I/O di flusso](../../c-runtime-library/stream-i-o.md)   
- [_fdopen, _wfdopen](../../c-runtime-library/reference/fdopen-wfdopen.md)   
- [_filelength, _filelengthi64](../../c-runtime-library/reference/filelength-filelengthi64.md)   
- [fopen, _wfopen](../../c-runtime-library/reference/fopen-wfopen.md)   
- [freopen, _wfreopen](../../c-runtime-library/reference/freopen-wfreopen.md)
+> Se **stdout** oppure **stderr** non è associato a un flusso di output (ad esempio, in un'applicazione di Windows senza una finestra della console), il descrittore del file restituito è -2. Nelle versioni precedenti, il descrittore del file restituito era -1. Questa modifica consente alle applicazioni di distinguere questa condizione da un errore.
+
+## <a name="remarks"></a>Note
+
+Il **fileno** routine restituisce il descrittore di file attualmente associato *flusso*. Questa routine viene implementata come funzione e come macro. Per informazioni sulla scelta di un'implementazione, vedere [Suggerimenti per la scelta tra funzioni e macro](../../c-runtime-library/recommendations-for-choosing-between-functions-and-macros.md).
+
+## <a name="requirements"></a>Requisiti
+
+|Funzione|Intestazione obbligatoria|
+|--------------|---------------------|
+|**_fileno**|\<stdio.h>|
+
+Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+
+## <a name="example"></a>Esempio
+
+```C
+// crt_fileno.c
+// This program uses _fileno to obtain
+// the file descriptor for some standard C streams.
+//
+
+#include <stdio.h>
+
+int main( void )
+{
+   printf( "The file descriptor for stdin is %d\n", _fileno( stdin ) );
+   printf( "The file descriptor for stdout is %d\n", _fileno( stdout ) );
+   printf( "The file descriptor for stderr is %d\n", _fileno( stderr ) );
+}
+```
+
+```Output
+The file descriptor for stdin is 0
+The file descriptor for stdout is 1
+The file descriptor for stderr is 2
+```
+
+## <a name="see-also"></a>Vedere anche
+
+[I/O di flusso](../../c-runtime-library/stream-i-o.md)<br/>
+[_fdopen, _wfdopen](fdopen-wfdopen.md)<br/>
+[_filelength, _filelengthi64](filelength-filelengthi64.md)<br/>
+[fopen, _wfopen](fopen-wfopen.md)<br/>
+[freopen, _wfreopen](freopen-wfreopen.md)<br/>

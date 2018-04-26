@@ -1,12 +1,12 @@
 ---
 title: Classe sync_none | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - allocators/stdext::sync_none
@@ -21,101 +21,107 @@ helpviewer_keywords:
 - stdext::sync_none [C++], deallocate
 - stdext::sync_none [C++], equals
 ms.assetid: f7473cee-14f3-4fe1-88bc-68cd085e59e1
-caps.latest.revision: 
+caps.latest.revision: 21
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eb01cc0df6765b8aae994ba272dc12bcf25f9be9
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: e27611b077a6a1ea4715f20e6524f394af3b48f5
+ms.sourcegitcommit: dd1a509526fa8bb18e97ab7bc7b91cbdb3ec7059
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="syncnone-class"></a>Classe sync_none
-Descrive un [filtro di sincronizzazione](../standard-library/allocators-header.md) che non fornisce alcuna sincronizzazione.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```
-template <class Cache>  
+
+Descrive un [filtro di sincronizzazione](../standard-library/allocators-header.md) che non fornisce alcuna sincronizzazione.
+
+## <a name="syntax"></a>Sintassi
+
+```cpp
+template <class Cache>
 class sync_none
-```  
-  
-#### <a name="parameters"></a>Parametri  
-  
-|Parametro|Descrizione|  
-|---------------|-----------------|  
-|`Cache`|Tipo di cache associato al filtro di sincronizzazione. Può essere [cache_chunklist](../standard-library/cache-chunklist-class.md), [cache_freelist](../standard-library/cache-freelist-class.md) o [cache_suballoc](../standard-library/cache-suballoc-class.md).|  
-  
-### <a name="member-functions"></a>Funzioni membro  
-  
-|||  
-|-|-|  
-|[allocate](#allocate)|Alloca un blocco di memoria.|  
-|[deallocate](#deallocate)|Libera un numero specificato di oggetti dall'archiviazione iniziando da una posizione specificata.|  
-|[equals](#equals)|Confronta due cache per stabilirne l'uguaglianza.|  
-  
-## <a name="requirements"></a>Requisiti  
- **Intestazione:** \<allocators>  
-  
- **Spazio dei nomi:** stdext  
-  
-##  <a name="allocate"></a>  sync_none::allocate  
- Alloca un blocco di memoria.  
-  
 ```
+
+### <a name="parameters"></a>Parametri
+
+|Parametro|Descrizione|
+|---------------|-----------------|
+|`Cache`|Tipo di cache associato al filtro di sincronizzazione. Può essere [cache_chunklist](../standard-library/cache-chunklist-class.md), [cache_freelist](../standard-library/cache-freelist-class.md) o [cache_suballoc](../standard-library/cache-suballoc-class.md).|
+
+### <a name="member-functions"></a>Funzioni membro
+
+|Funzione membro|Descrizione|
+|-|-|
+|[allocate](#allocate)|Alloca un blocco di memoria.|
+|[deallocate](#deallocate)|Libera un numero specificato di oggetti dall'archiviazione iniziando da una posizione specificata.|
+|[equals](#equals)|Confronta due cache per stabilirne l'uguaglianza.|
+
+## <a name="requirements"></a>Requisiti
+
+**Intestazione:** \<allocators>
+
+**Spazio dei nomi:** stdext
+
+## <a name="allocate"></a>  sync_none::allocate
+
+Alloca un blocco di memoria.
+
+```cpp
 void *allocate(std::size_t count);
-```  
-  
-### <a name="parameters"></a>Parametri  
-  
-|Parametro|Descrizione|  
-|---------------|-----------------|  
-|`count`|Numero di elementi della matrice da allocare.|  
-  
-### <a name="remarks"></a>Note  
- La funzione membro restituisce `cache.allocate(count)`, dove `cache` è l'oggetto cache.  
-  
-##  <a name="deallocate"></a>  sync_none::deallocate  
- Libera un numero specificato di oggetti dall'archiviazione iniziando da una posizione specificata.  
-  
 ```
+
+### <a name="parameters"></a>Parametri
+
+|Parametro|Descrizione|
+|---------------|-----------------|
+|`count`|Numero di elementi della matrice da allocare.|
+
+### <a name="remarks"></a>Note
+
+La funzione membro restituisce `cache.allocate(count)`, dove `cache` è l'oggetto cache.
+
+## <a name="deallocate"></a>  sync_none::deallocate
+
+Libera un numero specificato di oggetti dall'archiviazione iniziando da una posizione specificata.
+
+```cpp
 void deallocate(void* ptr, std::size_t count);
-```  
-  
-### <a name="parameters"></a>Parametri  
-  
-|Parametro|Descrizione|  
-|---------------|-----------------|  
-|`ptr`|Puntatore al primo oggetto da deallocare dall'archivio.|  
-|`count`|Numero di oggetti da deallocare dall'archivio.|  
-  
-### <a name="remarks"></a>Note  
- La funzione membro chiama `cache.deallocate(ptr, count)`, dove `cache` rappresenta l'oggetto cache.  
-  
-##  <a name="equals"></a>  sync_none::equals  
- Confronta due cache per stabilirne l'uguaglianza.  
-  
 ```
+
+### <a name="parameters"></a>Parametri
+
+|Parametro|Descrizione|
+|---------------|-----------------|
+|`ptr`|Puntatore al primo oggetto da deallocare dall'archivio.|
+|`count`|Numero di oggetti da deallocare dall'archivio.|
+
+### <a name="remarks"></a>Note
+
+La funzione membro chiama `cache.deallocate(ptr, count)`, dove `cache` rappresenta l'oggetto cache.
+
+## <a name="equals"></a>  sync_none::equals
+
+Confronta due cache per stabilirne l'uguaglianza.
+
+```cpp
 bool equals(const sync<Cache>& Other) const;
-```  
-  
-### <a name="parameters"></a>Parametri  
-  
-|Parametro|Descrizione|  
-|---------------|-----------------|  
-|`Cache`|Oggetto cache del filtro di sincronizzazione.|  
-|`Other`|Oggetto cache da confrontare per verificarne l'uguaglianza.|  
-  
-### <a name="return-value"></a>Valore restituito  
- La funzione membro restituisce sempre `true`.  
-  
-### <a name="remarks"></a>Note  
-  
-## <a name="see-also"></a>Vedere anche  
- [\<allocators>](../standard-library/allocators-header.md)
+```
 
+### <a name="parameters"></a>Parametri
 
+|Parametro|Descrizione|
+|---------------|-----------------|
+|`Cache`|Oggetto cache del filtro di sincronizzazione.|
+|`Other`|Oggetto cache da confrontare per verificarne l'uguaglianza.|
 
+### <a name="return-value"></a>Valore restituito
+
+La funzione membro restituisce sempre `true`.
+
+### <a name="remarks"></a>Note
+
+## <a name="see-also"></a>Vedere anche
+
+[\<allocators>](../standard-library/allocators-header.md)<br/>

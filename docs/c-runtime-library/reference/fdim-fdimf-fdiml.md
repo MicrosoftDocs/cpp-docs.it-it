@@ -1,13 +1,13 @@
 ---
 title: fdim, fdimf, fdiml | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.custom: ''
+ms.date: 04/05/2018
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp
 - devlang-cpp
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - fdim
@@ -40,90 +40,95 @@ helpviewer_keywords:
 - fdimf function
 - fdiml function
 ms.assetid: 2d4ac639-51e9-462d-84ab-fb03b06971a0
-caps.latest.revision: 
+caps.latest.revision: 11
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 60e628f84dcadf7b1e214d526981191036428042
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 8cf0036bc35f6e3b87daecf47225e59d2dc8f087
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="fdim-fdimf-fdiml"></a>fdim, fdimf, fdiml
-Determina la differenza positiva tra il primo e il secondo valore.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-double fdim(  
-   double x,   
-   double y  
-);  
-  
-float fdim(  
-   float x,   
-   float y  
-); //C++ only  
-  
-long double fdim(  
-   long double x,   
-   long double y  
-); //C++ only  
-  
-float fdimf(  
-   float x,   
-   float y  
-);  
-  
-long double fdiml(  
-   long double x,   
-   long double y  
-);  
-  
-```  
-  
-#### <a name="parameters"></a>Parametri  
- [in] `x`  
- Primo valore.  
-  
- [in] `y`  
- Secondo valore.  
-  
-## <a name="return-value"></a>Valore restituito  
- Restituisce la differenza positiva tra `x` e `y`:  
-  
-|Valore restituito|Scenario|  
-|------------------|--------------|  
-|x-y|se x > y|  
-|0|se x <= y|  
-  
- In caso contrario, può restituire uno degli errori seguenti:  
-  
-|Problema|INVIO|  
-|-----------|------------|  
-|Errore di intervallo di overflow|+HUGE_VAL, +HUGE_VALF o +HUGE_VALL|  
-|Errore di intervallo di underflow|valore corretto (dopo l'arrotondamento)|  
-|`x` o `y` è NaN|NaN|  
-  
- Gli errori vengono segnalati come specificato in [_matherr](../../c-runtime-library/reference/matherr.md).  
-  
-## <a name="remarks"></a>Note  
- Dato che C++ consente l'overload, è possibile chiamare gli overload di `fdim` che accettano e restituiscono i tipi float e long double. In un programma C `fdim` accetta e restituisce sempre un valore double.  
-  
- Tranne la gestione di NaN, questa funzione è equivalente a `fmax(x - y, 0)`.  
-  
-## <a name="requirements"></a>Requisiti  
-  
-|Funzione|Intestazione C|Intestazione C++|  
-|--------------|--------------|------------------|  
-|`fdim`, `fdimf`, `fdiml`|\<math.h>|\<cmath>|  
-  
- Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).  
-  
-## <a name="see-also"></a>Vedere anche  
- [Alphabetical Function Reference](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)  (Riferimento alfabetico alle funzioni)  
- [fmax, fmaxf, fmaxl](../../c-runtime-library/reference/fmax-fmaxf-fmaxl.md)   
- [abs, labs, llabs, _abs64](../../c-runtime-library/reference/abs-labs-llabs-abs64.md)
+
+Determina la differenza positiva tra il primo e il secondo valore.
+
+## <a name="syntax"></a>Sintassi
+
+```C
+double fdim(
+   double x,
+   double y
+);
+
+float fdim(
+   float x,
+   float y
+); //C++ only
+
+long double fdim(
+   long double x,
+   long double y
+); //C++ only
+
+float fdimf(
+   float x,
+   float y
+);
+
+long double fdiml(
+   long double x,
+   long double y
+);
+
+```
+
+### <a name="parameters"></a>Parametri
+
+*x*<br/>
+Primo valore.
+
+*y*<br/>
+Secondo valore.
+
+## <a name="return-value"></a>Valore restituito
+
+Restituisce la differenza tra positivo *x* e *y*:
+
+|Valore restituito|Scenario|
+|------------------|--------------|
+|x-y|se x > y|
+|0|se x <= y|
+
+In caso contrario, può restituire uno degli errori seguenti:
+
+|Problema|INVIO|
+|-----------|------------|
+|Errore di intervallo di overflow|+HUGE_VAL, +HUGE_VALF o +HUGE_VALL|
+|Errore di intervallo di underflow|valore corretto (dopo l'arrotondamento)|
+|*x* oppure *y* è NaN|NaN|
+
+Gli errori vengono segnalati come specificato in [_matherr](matherr.md).
+
+## <a name="remarks"></a>Note
+
+Dato che C++ consente l'overload, è possibile chiamare overload di **fdim** che accettano e restituiscono **float** e **lungo** **doppie** tipi. In un programma C **fdim** accetta e restituisce sempre un **doppie**.
+
+Tranne la gestione di NaN, questa funzione è equivalente a `fmax(x - y, 0)`.
+
+## <a name="requirements"></a>Requisiti
+
+|Funzione|Intestazione C|Intestazione C++|
+|--------------|--------------|------------------|
+|**fdim**, **fdimf**, **fdiml**|\<math.h>|\<cmath>|
+
+Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+
+## <a name="see-also"></a>Vedere anche
+
+[Riferimento alfabetico alle funzioni](crt-alphabetical-function-reference.md)<br/>
+[fmax, fmaxf, fmaxl](fmax-fmaxf-fmaxl.md)<br/>
+[abs, labs, llabs, _abs64](abs-labs-llabs-abs64.md)<br/>

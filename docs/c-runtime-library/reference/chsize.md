@@ -37,15 +37,15 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cec2d058b356cbb7624ee6dd0bbecdfb55c64813
-ms.sourcegitcommit: cdd4808dcb274bbb29618286df4d1d4acd35b9bc
+ms.openlocfilehash: 818051fba093c83d695afcad103865b4114673d0
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="chsize"></a>_chsize
 
-Modifica la dimensione di un file. È disponibile una versione più sicura, vedere [_chsize_s](../../c-runtime-library/reference/chsize-s.md).
+Modifica la dimensione di un file. È disponibile una versione più sicura, vedere [_chsize_s](chsize-s.md).
 
 ## <a name="syntax"></a>Sintassi
 
@@ -57,6 +57,7 @@ int _chsize(
 ```
 
 ### <a name="parameters"></a>Parametri
+
 *fd*<br/>
 Descrittore del file che fa riferimento a un file aperto.
 
@@ -65,21 +66,21 @@ Nuova lunghezza, in byte, del file.
 
 ## <a name="return-value"></a>Valore restituito
 
-chsize` returns the value 0 if the file size is successfully changed. A return value of -1 indicates an error: `errno` is set to `EACCES` if the specified file is read-only or the specified file is locked against access, to `EBADF` if the descriptor is invalid, `ENOSPC` if no space is left on the device, or `EINVAL` if `dimensioni ' è minore di zero.
+**chsize** restituisce il valore 0 se le dimensioni del file viene modificata. Valore restituito di -1 indica un errore: **errno** è impostata su **EACCES** se il file specificato è di sola lettura o il file specificato è bloccato per impedire l'accesso, a **EBADF** se la non è valido, descrittore **ENOSPC** se non lo spazio viene lasciato sul dispositivo, o **EINVAL** se *dimensioni* è minore di zero.
 
 Per altre informazioni su questi e altri codici restituiti, vedere [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Note
 
-La funzione `_chsize` estende o tronca il file associato a `fd` in base alla lunghezza specificata da `size`. Il file deve essere aperto in una modalità che consente la scrittura. Se il file viene esteso, vengono aggiunti caratteri null ("\0"). Se il file viene troncato, si perderanno tutti i dati a partire dalla fine del file abbreviato fino alla fine del file originale.
+Il **chsize** funzione estende o tronca il file associato *fd* per la lunghezza specificata dal *dimensioni*. Il file deve essere aperto in una modalità che consente la scrittura. Se il file viene esteso, vengono aggiunti caratteri null ("\0"). Se il file viene troncato, si perderanno tutti i dati a partire dalla fine del file abbreviato fino alla fine del file originale.
 
-Questa funzione convalida i relativi parametri. Se `size` è minore di zero o `fd` è un descrittore di file non valido, viene richiamato il gestore di parametri non validi come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md).
+Questa funzione convalida i relativi parametri. Se *dimensioni* è minore di zero o *fd* è un descrittore di file non valido, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md).
 
 ## <a name="requirements"></a>Requisiti
 
 |Routine|Intestazione obbligatoria|Intestazione facoltativa|
 |-------------|---------------------|---------------------|
-|`_chsize`|\<io.h>|\<errno.h>|
+|**_chsize**|\<io.h>|\<errno.h>|
 
 Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 
@@ -126,6 +127,6 @@ File length after:  329678
 ## <a name="see-also"></a>Vedere anche
 
 [Gestione di file](../../c-runtime-library/file-handling.md)<br/>
-[_close](../../c-runtime-library/reference/close.md)<br/>
-[_sopen, _wsopen](../../c-runtime-library/reference/sopen-wsopen.md)<br/>
-[_open, _wopen](../../c-runtime-library/reference/open-wopen.md)<br/>
+[_close](close.md)<br/>
+[_sopen, _wsopen](sopen-wsopen.md)<br/>
+[_open, _wopen](open-wopen.md)<br/>

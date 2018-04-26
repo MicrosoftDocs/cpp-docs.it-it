@@ -1,13 +1,13 @@
 ---
 title: lgamma, lgammaf, lgammal | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.custom: ''
+ms.date: 04/05/2018
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp
 - devlang-cpp
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - lgamma
@@ -40,77 +40,70 @@ helpviewer_keywords:
 - lgammal function
 - lgammaf function
 ms.assetid: 6e326c58-7077-481a-a329-c82ae56ae9e6
-caps.latest.revision: 
+caps.latest.revision: 13
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e7ef4a64252342484a1c6aa68722013f1e6bffdf
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 6e718e2d387f8bf8f9e092e7530807e06557ef7c
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="lgamma-lgammaf-lgammal"></a>lgamma, lgammaf, lgammal
-Determina il logaritmo naturale del valore assoluto della funzione gamma del valore specificato.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-double lgamma(  
-   double x  
-);  
-  
-float lgamma(  
-   float x  
-); //C++ only  
-  
-long double lgamma(  
-   long double x  
-); //C++ only  
-  
-float lgammaf(  
-   float x  
-);  
-  
-long double lgammal(  
-   long double x  
-);  
-  
-```  
-  
-#### <a name="parameters"></a>Parametri  
- [in] `x`  
- Valore da calcolare.  
-  
-## <a name="return-value"></a>Valore restituito  
- In caso di esito positivo, restituisce il logaritmo naturale del valore assoluto della funzione gamma di `x.`.  
-  
-|Problema|INVIO|  
-|-----------|------------|  
-|`x` = NaN|NaN|  
-|`x` = ±0|+INFINITO|  
-|`x`= intero negativo|+INFINITO|  
-|±INFINITY|+INFINITO|  
-|Errore polo|+HUGE_VAL, +HUGE_VALF o +HUGE_VALL|  
-|Errore di intervallo di overflow|±HUGE_VAL, ±HUGE_VALF o ±HUGE_VALL|  
-  
- Gli errori vengono segnalati come specificato in [_matherr](../../c-runtime-library/reference/matherr.md).  
-  
-## <a name="remarks"></a>Note  
- Dato che C++ consente l'overload, è possibile chiamare gli overload di `lgamma` che accettano e restituiscono i tipi float e long double. In un programma C `lgamma` accetta e restituisce sempre un valore double.  
-  
- Se x è un numero razionale, questa funzione restituisce il logaritmo del fattoriale di (`x`-1).  
-  
-## <a name="requirements"></a>Requisiti  
-  
-|Funzione|Intestazione C|Intestazione C++|  
-|--------------|--------------|------------------|  
-|`lgamma`,                `lgammaf`,  `lgammal`|\<math.h>|\<cmath>|  
-  
- Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).  
-  
-## <a name="see-also"></a>Vedere anche  
- [Alphabetical Function Reference](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)  (Riferimento alfabetico alle funzioni)  
- [tgamma, tgammaf, tgammal](../../c-runtime-library/reference/tgamma-tgammaf-tgammal.md)
+
+Determina il logaritmo naturale del valore assoluto della funzione gamma del valore specificato.
+
+## <a name="syntax"></a>Sintassi
+
+```C
+double lgamma( double x );
+float lgammaf( float x );
+long double lgammal( long double x );
+```
+
+```cpp
+float lgamma( float x ); //C++ only
+long double lgamma( long double x ); //C++ only
+```
+
+### <a name="parameters"></a>Parametri
+
+*x*<br/>
+Valore da calcolare.
+
+## <a name="return-value"></a>Valore restituito
+
+Se ha esito positivo, restituisce il logaritmo naturale del valore assoluto della funzione gamma dei *x*.
+
+|Problema|INVIO|
+|-----------|------------|
+|*x* = NaN|NaN|
+|*x* = ± 0|+INFINITO|
+|*x*= numero intero negativo|+INFINITO|
+|±INFINITY|+INFINITO|
+|Errore polo|+HUGE_VAL, +HUGE_VALF o +HUGE_VALL|
+|Errore di intervallo di overflow|±HUGE_VAL, ±HUGE_VALF o ±HUGE_VALL|
+
+Gli errori vengono segnalati come specificato in [_matherr](matherr.md).
+
+## <a name="remarks"></a>Note
+
+Dato che C++ consente l'overload, è possibile chiamare overload di **lgamma** che accettano e restituiscono **float** e **lungo** **doppie** tipi. In un programma C **lgamma** accetta e restituisce sempre un **doppie**.
+
+Se x è un numero razionale, questa funzione restituisce il logaritmo del fattoriale (x - 1).
+
+## <a name="requirements"></a>Requisiti
+
+|Funzione|Intestazione C|Intestazione C++|
+|--------------|--------------|------------------|
+|**lgamma**, **lgammaf**, **lgammal**|\<math.h>|\<cmath>|
+
+Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+
+## <a name="see-also"></a>Vedere anche
+
+[Riferimento alfabetico alle funzioni](crt-alphabetical-function-reference.md)<br/>
+[tgamma, tgammaf, tgammal](tgamma-tgammaf-tgammal.md)<br/>

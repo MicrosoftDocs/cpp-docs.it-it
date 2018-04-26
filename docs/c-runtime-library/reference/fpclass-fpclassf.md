@@ -1,12 +1,12 @@
 ---
 title: _fpclass, _fpclassf | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.custom: ''
+ms.date: 04/05/2018
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _fpclass
@@ -39,65 +39,70 @@ helpviewer_keywords:
 - _fpclass function
 - _fpclassf function
 ms.assetid: 2774872d-3543-446f-bc72-db85f8b95a6b
-caps.latest.revision: 
+caps.latest.revision: 13
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a13abc84cf3e28f6282bf5c160d118d019334cfd
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 3ee483334c7456c1cf2be480d7f925d8f3a839e9
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="fpclass-fpclassf"></a>_fpclass, _fpclassf
-Restituisce un valore che indica la classificazione a virgola mobile dell'argomento.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-int _fpclass(   
-   double x   
-);  
-  
-int _fpclassf(   
-   float x   
-); /* x64 only */  
-```  
-  
-#### <a name="parameters"></a>Parametri  
- `x`  
- Valore a virgola mobile da verificare.  
-  
-## <a name="return-value"></a>Valore restituito  
- Le funzioni `_fpclass` e `_fpclassf` restituiscono un valore intero che indica la classificazione a virgola mobile dell'argomento `x`. La classificazione può avere uno dei valori seguenti, definiti in \<float.h>.  
-  
-|Valore|Descrizione|  
-|-----------|-----------------|  
-|`_FPCLASS_SNAN`|Segnalazione NaN|  
-|`_FPCLASS_QNAN`|NaN non interattivo|  
-|`_FPCLASS_NINF`|Valore di infinito negativo (-INF)|  
-|`_FPCLASS_NN`|Valore diverso da zero normalizzato negativo|  
-|`_FPCLASS_ND`|Denormalizzato negativo|  
-|`_FPCLASS_NZ`|Zero negativo (- 0)|  
-|`_FPCLASS_PZ`|0 positivo (+0)|  
-|`_FPCLASS_PD`|Denormalizzato positivo|  
-|`_FPCLASS_PN`|Diverso da zero normalizzato positivo|  
-|`_FPCLASS_PINF`|Infinito positivo (+INF)|  
-  
-## <a name="remarks"></a>Note  
- Le funzioni `_fpclass` e `_fpclassf` sono specifiche di Microsoft. Sono simili a [fpclassify](../../c-runtime-library/reference/fpclassify.md), ma restituiscono informazioni più dettagliate sull'argomento. La funzione `_fpclassf` è disponibile solo per la compilazione per la piattaforma x64.  
-  
-## <a name="requirements"></a>Requisiti  
-  
-|Funzione|Intestazione obbligatoria|  
-|--------------|---------------------|  
-|`_fpclass`|\<float.h>|  
-  
- Per altre informazioni sulla compatibilità e la conformità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).  
-  
-## <a name="see-also"></a>Vedere anche  
- [Floating-Point Support](../../c-runtime-library/floating-point-support.md)  (Supporto delle funzioni a virgola mobile)  
- [isnan, _isnan, _isnanf](../../c-runtime-library/reference/isnan-isnan-isnanf.md)   
- [fpclassify](../../c-runtime-library/reference/fpclassify.md)
+
+Restituisce un valore che indica la classificazione a virgola mobile dell'argomento.
+
+## <a name="syntax"></a>Sintassi
+
+```C
+int _fpclass(
+   double x
+);
+
+int _fpclassf(
+   float x
+); /* x64 only */
+```
+
+### <a name="parameters"></a>Parametri
+
+*x*<br/>
+Valore a virgola mobile da verificare.
+
+## <a name="return-value"></a>Valore restituito
+
+Il **fpclass** e **_fpclassf** funzioni restituiscono un valore intero che indica la classificazione dell'argomento a virgola mobile *x*. La classificazione può avere uno dei valori seguenti, definiti in \<float.h>.
+
+|Valore|Descrizione|
+|-----------|-----------------|
+|**_FPCLASS_SNAN**|Segnalazione NaN|
+|**_FPCLASS_QNAN**|NaN non interattivo|
+|**_FPCLASS_NINF**|Valore di infinito negativo (-INF)|
+|**_FPCLASS_NN**|Valore diverso da zero normalizzato negativo|
+|**_FPCLASS_ND**|Denormalizzato negativo|
+|**_FPCLASS_NZ**|Zero negativo (- 0)|
+|**_FPCLASS_PZ**|0 positivo (+0)|
+|**_FPCLASS_PD**|Denormalizzato positivo|
+|**_FPCLASS_PN**|Diverso da zero normalizzato positivo|
+|**_FPCLASS_PINF**|Infinito positivo (+INF)|
+
+## <a name="remarks"></a>Note
+
+Il **fpclass** e **_fpclassf** funzioni sono specifiche di Microsoft. Sono simili a [fpclassify](fpclassify.md), ma restituiscono informazioni più dettagliate sull'argomento. Il **_fpclassf** funzione è disponibile solo quando compilato per x64 della piattaforma.
+
+## <a name="requirements"></a>Requisiti
+
+|Funzione|Intestazione obbligatoria|
+|--------------|---------------------|
+|**fpclass**, **_fpclassf**|\<float.h>|
+
+Per altre informazioni sulla compatibilità e la conformità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+
+## <a name="see-also"></a>Vedere anche
+
+[Supporto delle funzioni a virgola mobile](../../c-runtime-library/floating-point-support.md)<br/>
+[isnan, _isnan, _isnanf](isnan-isnan-isnanf.md)<br/>
+[fpclassify](fpclassify.md)<br/>

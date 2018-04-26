@@ -1,12 +1,12 @@
 ---
 title: _putc_nolock, _putwc_nolock | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _putc_nolock
@@ -43,100 +43,105 @@ helpviewer_keywords:
 - _puttc_nolock function
 - _putwc_nolock function
 ms.assetid: 3cfc7f21-c9e8-4b7f-b0fb-af0d4d85e7e1
-caps.latest.revision: 
+caps.latest.revision: 15
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 348141f4d096e22efc80ada84c31a7e10b96287a
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: c52dcb390fac781018782f727fbc360d949770c1
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="putcnolock-putwcnolock"></a>_putc_nolock, _putwc_nolock
-Scrive un carattere in un flusso senza bloccare il thread.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-  
-      int _putc_nolock(  
-   int c,  
-   FILE *stream   
-);  
-wint_t _putwc_nolock(  
-   wchar_t c,  
-   FILE *stream   
-);  
-```  
-  
-#### <a name="parameters"></a>Parametri  
- `c`  
- Carattere da scrivere.  
-  
- `stream`  
- Puntatore alla struttura **FILE**.  
-  
-## <a name="return-value"></a>Valore restituito  
- Vedere **putc, putwc**.  
-  
-## <a name="remarks"></a>Note  
- `_putc_nolock` e `_putwc_nolock` sono identiche alle versioni senza il suffisso **_nolock** con la differenza che non sono protette da interferenze di altri thread. Potrebbero essere più veloci perché non comportano un sovraccarico che blocca altri thread. Utilizzare queste funzioni solo in contesti thread-safe come applicazioni a thread singolo o dove l'ambito chiamante già gestisce l'isolamento del thread.  
-  
- `_putwc_nolock` è la versione a caratteri wide di `_putc_nolock`; se il flusso viene aperto in modalità ANSI, le due funzioni si comportano in modo identico. `_putc_nolock` non supporta attualmente l'output in un flusso UNICODE.  
-  
-### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico  
-  
-|Routine Tchar.h|_UNICODE e _MBCS non definiti|_MBCS definito|_UNICODE definito|  
-|---------------------|--------------------------------------|--------------------|-----------------------|  
-|`_puttc_nolock`|`_putc_nolock`|`_putc_nolock`|**_putwc_nolock**|  
-  
-## <a name="requirements"></a>Requisiti  
-  
-|Routine|Intestazione obbligatoria|  
-|-------------|---------------------|  
-|`_putc_nolock`|\<stdio.h>|  
-|`_putwc_nolock`|\<stdio.h> o \<wchar.h>|  
-  
-La console non è supportata nelle app di piattaforma UWP (Universal Windows). L'handle del flusso standard associati con la console, `stdin`, `stdout`, e `stderr`, devono essere reindirizzati prima di poter usare le funzioni di runtime C nelle App UWP. Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
-  
-## <a name="libraries"></a>Librerie  
- Tutte le versioni delle [librerie di runtime C](../../c-runtime-library/crt-library-features.md).  
-  
-## <a name="example"></a>Esempio  
-  
-```  
-// crt_putc_nolock.c  
-/* This program uses putc to write buffer  
- * to a stream. If an error occurs, the program  
- * stops before writing the entire buffer.  
- */  
-  
-#include <stdio.h>  
-  
-int main( void )  
-{  
-   FILE *stream;  
-   char *p, buffer[] = "This is the line of output\n";  
-   int  ch;  
-  
-   ch = 0;  
-   /* Make standard out the stream and write to it. */  
-   stream = stdout;  
-   for( p = buffer; (ch != EOF) && (*p != '\0'); p++ )  
-      ch = _putc_nolock( *p, stream );  
-}  
-```  
-  
-## <a name="output"></a>Output  
-  
-```  
-This is the line of output  
-```  
-  
-## <a name="see-also"></a>Vedere anche  
- [I/O di flusso](../../c-runtime-library/stream-i-o.md)   
- [fputc, fputwc](../../c-runtime-library/reference/fputc-fputwc.md)   
- [getc, getwc](../../c-runtime-library/reference/getc-getwc.md)
+
+Scrive un carattere in un flusso senza bloccare il thread.
+
+## <a name="syntax"></a>Sintassi
+
+```C
+int _putc_nolock(
+   int c,
+   FILE *stream
+);
+wint_t _putwc_nolock(
+   wchar_t c,
+   FILE *stream
+);
+```
+
+### <a name="parameters"></a>Parametri
+
+*c*<br/>
+Carattere da scrivere.
+
+*Flusso*<br/>
+Puntatore alla struttura **FILE**.
+
+## <a name="return-value"></a>Valore restituito
+
+Vedere **putc, putwc**.
+
+## <a name="remarks"></a>Note
+
+**putc_nolock** e **putwc_nolock** sono identiche alle versioni senza il **NOLOCK** suffisso con la differenza che esse non sono protette da interferenze da altri thread. Potrebbero essere più veloci perché non comportano un sovraccarico che blocca altri thread. Utilizzare queste funzioni solo in contesti thread-safe come applicazioni a thread singolo o dove l'ambito chiamante già gestisce l'isolamento del thread.
+
+**putwc_nolock** è la versione a caratteri "wide" di **putc_nolock**; le due funzioni si comportano in modo identico, se il flusso viene aperto in modalità ANSI. **putc_nolock** attualmente non supporta output in un flusso UNICODE.
+
+### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
+
+|Routine Tchar.h|_UNICODE e _MBCS non definiti|_MBCS definito|_UNICODE definito|
+|---------------------|--------------------------------------|--------------------|-----------------------|
+|**puttc_nolock**|**_putc_nolock**|**_putc_nolock**|**_putwc_nolock**|
+
+## <a name="requirements"></a>Requisiti
+
+|Routine|Intestazione obbligatoria|
+|-------------|---------------------|
+|**_putc_nolock**|\<stdio.h>|
+|**_putwc_nolock**|\<stdio.h> o \<wchar.h>|
+
+La console non è supportata nelle app di piattaforma UWP (Universal Windows). Gli handle di flusso standard associati con la console **stdin**, **stdout**, e **stderr**, devono essere reindirizzati prima di poter usare le funzioni di runtime C nelle App UWP . Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+
+## <a name="libraries"></a>Librerie
+
+Tutte le versioni delle [librerie di runtime C](../../c-runtime-library/crt-library-features.md).
+
+## <a name="example"></a>Esempio
+
+```C
+// crt_putc_nolock.c
+/* This program uses putc to write buffer
+* to a stream. If an error occurs, the program
+* stops before writing the entire buffer.
+*/
+
+#include <stdio.h>
+
+int main( void )
+{
+   FILE *stream;
+   char *p, buffer[] = "This is the line of output\n";
+   int  ch;
+
+   ch = 0;
+   /* Make standard out the stream and write to it. */
+   stream = stdout;
+   for( p = buffer; (ch != EOF) && (*p != '\0'); p++ )
+      ch = _putc_nolock( *p, stream );
+}
+```
+
+### <a name="output"></a>Output
+
+```Output
+This is the line of output
+```
+
+## <a name="see-also"></a>Vedere anche
+
+[I/O di flusso](../../c-runtime-library/stream-i-o.md)<br/>
+[fputc, fputwc](fputc-fputwc.md)<br/>
+[getc, getwc](getc-getwc.md)<br/>

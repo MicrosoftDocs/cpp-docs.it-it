@@ -1,12 +1,12 @@
 ---
 title: _makepath, _wmakepath | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _makepath
@@ -42,120 +42,119 @@ helpviewer_keywords:
 - _wmakepath function
 - tmakepath function
 ms.assetid: 5930b197-a7b8-46eb-8519-2841a58cd026
-caps.latest.revision: 
+caps.latest.revision: 22
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bbbaa2f4191d36fb92af5e157990fde6f053df55
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 0c6ad1331021331e9c9ddc1d1344aae8ed164ce2
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="makepath-wmakepath"></a>_makepath, _wmakepath
-Crea un nome di percorso da componenti. Sono disponibili versioni più sicure di queste funzioni. Vedere [_makepath_s, _wmakepath_s](../../c-runtime-library/reference/makepath-s-wmakepath-s.md).  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-void _makepath(  
-   char *path,  
-   const char *drive,  
-   const char *dir,  
-   const char *fname,  
-   const char *ext   
-);  
-void _wmakepath(  
-   wchar_t *path,  
-   const wchar_t *drive,  
-   const wchar_t *dir,  
-   const wchar_t *fname,  
-   const wchar_t *ext   
-);  
-```  
-  
-#### <a name="parameters"></a>Parametri  
- `path`  
- Buffer del percorso completo.  
-  
- `drive`  
- Contiene una lettera (A, B e così via) corrispondente all'unità desiderata e i due punti finali opzionali. `_makepath` inserisce i due punti automaticamente nel percorso composto se mancanti. Se `drive` è `NULL` o punta a una stringa vuota, nessuna lettera di unità viene visualizzata nella stringa `path` composita.  
-  
- `dir`  
- Contiene il percorso delle directory, escluso il designatore di unità o il nome del file effettivo. La barra finale è facoltativa e una barra (/) o una barra rovesciata (\\) o entrambe possono essere usate in un singolo argomento `dir`. Se non viene specificata una barra finale (/o \\), viene inserita automaticamente. Se `dir` è `NULL` o punta a una stringa vuota, nessun percorso di directory viene inserito nella stringa `path` composita.  
-  
- `fname`  
- Contiene il nome del file di base senza alcuna estensione di nome file. Se `fname` è `NULL` o punta a una stringa vuota, nessun nome file viene inserito nella stringa `path` composita.  
-  
- `ext`  
- Contiene l'estensione di nome file effettiva, con o senza un punto iniziale (.). `_makepath` inserisce il punto automaticamente se non viene visualizzato in `ext`. Se `ext` è `NULL` o punta a una stringa vuota, nessuna estensione viene inserita nella stringa `path` composita.  
-  
-## <a name="remarks"></a>Note  
- La funzione `_makepath` crea una stringa di percorso composita da singoli componenti, archiviando il risultato in `path`. `path` potrebbe includere una lettera di unità, un percorso di directory, un nome di file e un'estensione del nome di file. `_wmakepath` è una versione a caratteri "wide" di `_makepath`. Gli argomenti per `_wmakepath` sono stringhe a caratteri "wide". In caso contrario, `_wmakepath` e `_makepath` si comportano in modo identico.  
-  
- **Nota sulla sicurezza** Usare una stringa con terminazione Null. Per evitare un sovraccarico del buffer, le dimensioni della stringa con terminazione Null non devono essere superiori a quelle del buffer di `path`. `_makepath` non assicura che la lunghezza del percorso composto non sia maggiore di `_MAX_PATH`. Per altre informazioni, vedere [Evitare sovraccarichi del buffer](http://msdn.microsoft.com/library/windows/desktop/ms717795).  
-  
-### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico  
-  
-|Routine Tchar.h|_UNICODE e _MBCS non definiti|_MBCS definito|_UNICODE definito|  
-|---------------------|--------------------------------------|--------------------|-----------------------|  
-|`_tmakepath`|`_makepath`|`_makepath`|`_wmakepath`|  
-  
- L'argomento `path` deve puntare a un buffer vuoto sufficientemente grande da contenere il percorso completo. Il `path` composito non deve essere maggiore della costante `_MAX_PATH`, definita in Stdlib.h.  
-  
- Se il percorso è `NULL`, viene richiamato il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Inoltre, `errno` è impostato su `EINVAL`. I valori `NULL` sono consentiti per tutti gli altri parametri.  
-  
-## <a name="requirements"></a>Requisiti  
-  
-|Routine|Intestazione obbligatoria|  
-|-------------|---------------------|  
-|`_makepath`|\<stdlib.h>|  
-|`_wmakepath`|\<stdlib.h> or \<wchar.h>|  
-  
- Per altre informazioni sulla compatibilità, vedere la sezione [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
-  
-## <a name="example"></a>Esempio  
-  
-```  
-// crt_makepath.c  
-#include <stdlib.h>  
-#include <stdio.h>  
-  
-int main( void )  
-{  
-   char path_buffer[_MAX_PATH];  
-   char drive[_MAX_DRIVE];  
-   char dir[_MAX_DIR];  
-   char fname[_MAX_FNAME];  
-   char ext[_MAX_EXT];  
-  
-   _makepath( path_buffer, "c", "\\sample\\crt\\", "makepath", "c" ); // C4996  
-   // Note: _makepath is deprecated; consider using _makepath_s instead  
-   printf( "Path created with _makepath: %s\n\n", path_buffer );  
-   _splitpath( path_buffer, drive, dir, fname, ext ); // C4996  
-   // Note: _splitpath is deprecated; consider using _splitpath_s instead  
-   printf( "Path extracted with _splitpath:\n" );  
-   printf( "  Drive: %s\n", drive );  
-   printf( "  Dir: %s\n", dir );  
-   printf( "  Filename: %s\n", fname );  
-   printf( "  Ext: %s\n", ext );  
-}  
-```  
-  
-```Output  
-Path created with _makepath: c:\sample\crt\makepath.c  
-  
-Path extracted with _splitpath:  
-  Drive: c:  
-  Dir: \sample\crt\  
-  Filename: makepath  
-  Ext: .c  
-```  
-  
-## <a name="see-also"></a>Vedere anche  
- [Gestione di file](../../c-runtime-library/file-handling.md)   
- [_fullpath, _wfullpath](../../c-runtime-library/reference/fullpath-wfullpath.md)   
- [_splitpath, _wsplitpath](../../c-runtime-library/reference/splitpath-wsplitpath.md)   
- [_makepath_s, _wmakepath_s](../../c-runtime-library/reference/makepath-s-wmakepath-s.md)
+
+Crea un nome di percorso da componenti. Sono disponibili versioni più sicure di queste funzioni. Vedere [_makepath_s, _wmakepath_s](makepath-s-wmakepath-s.md).
+
+## <a name="syntax"></a>Sintassi
+
+```C
+void _makepath(
+   char *path,
+   const char *drive,
+   const char *dir,
+   const char *fname,
+   const char *ext
+);
+void _wmakepath(
+   wchar_t *path,
+   const wchar_t *drive,
+   const wchar_t *dir,
+   const wchar_t *fname,
+   const wchar_t *ext
+);
+```
+
+### <a name="parameters"></a>Parametri
+
+*percorso* buffer del percorso completo.
+
+*unità* contiene una lettera (A, B e così via) corrispondente all'unità desiderata e due punti finali facoltativi. **makepath** inserisce automaticamente i due punti nel percorso composto se mancante. Se *unità* viene **NULL** o punta a una stringa vuota, nessuna lettera di unità viene visualizzata in composita *percorso* stringa.
+
+*dir* contiene il percorso della directory, escluso il designatore di unità o il nome del file effettivo. La barra finale è facoltativa e una barra (/) o una barra rovesciata (\\) o entrambe può essere utilizzate in una singola *dir* argomento. Se non viene specificata una barra finale (/o \\), viene inserita automaticamente. Se *dir* viene **NULL** o punta a una stringa vuota, nessun percorso di directory viene inserito nella composizione *percorso* stringa.
+
+*fname* contiene il nome del file di base senza alcuna estensione di nome file. Se *fname* viene **NULL** o punta a una stringa vuota, nessun nome file viene inserito nella composizione *percorso* stringa.
+
+*ext* contiene l'estensione di nome file effettiva, con o senza un punto iniziale (.). **makepath** inserisce il punto automaticamente se non viene visualizzato *ext*. Se *ext* viene **NULL** o punta a una stringa vuota, nessuna estensione viene inserita nella composizione *percorso* stringa.
+
+## <a name="remarks"></a>Note
+
+Il **makepath** funzione crea una stringa di percorso composita da singoli componenti, archiviando il risultato in *percorso*. Il *percorso* potrebbe includere una lettera di unità, percorso della directory, filename ed estensione del nome file. **wmakepath** è una versione a caratteri wide **makepath**; gli argomenti da **wmakepath** sono stringhe a caratteri "wide". **wmakepath** e **makepath** si comportano in modo identico in caso contrario.
+
+**Nota sulla sicurezza** Usare una stringa con terminazione Null. Per evitare sovraccarichi del buffer, la stringa con terminazione null non deve superare le dimensioni del *percorso* buffer. **makepath** non garantisce che non superi la lunghezza della stringa di percorso composita **MAX_PATH**. Per altre informazioni, vedere [Evitare sovraccarichi del buffer](http://msdn.microsoft.com/library/windows/desktop/ms717795).
+
+### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
+
+|Routine Tchar.h|_UNICODE e _MBCS non definiti|_MBCS definito|_UNICODE definito|
+|---------------------|--------------------------------------|--------------------|-----------------------|
+|**tmakepath**|**_makepath**|**_makepath**|**_wmakepath**|
+
+Il *percorso* argomento deve puntare a un buffer vuoto sufficientemente grande da contenere il percorso completo. Composita *percorso* deve essere più grande di **MAX_PATH** costante, definita in STDLIB. h.
+
+Se è percorso **NULL**, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Inoltre, **errno** è impostata su **EINVAL**. **NULL** sono consentiti valori per tutti gli altri parametri.
+
+## <a name="requirements"></a>Requisiti
+
+|Routine|Intestazione obbligatoria|
+|-------------|---------------------|
+|**_makepath**|\<stdlib.h>|
+|**_wmakepath**|\<stdlib.h> or \<wchar.h>|
+
+Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+
+## <a name="example"></a>Esempio
+
+```C
+// crt_makepath.c
+#include <stdlib.h>
+#include <stdio.h>
+
+int main( void )
+{
+   char path_buffer[_MAX_PATH];
+   char drive[_MAX_DRIVE];
+   char dir[_MAX_DIR];
+   char fname[_MAX_FNAME];
+   char ext[_MAX_EXT];
+
+   _makepath( path_buffer, "c", "\\sample\\crt\\", "makepath", "c" ); // C4996
+   // Note: _makepath is deprecated; consider using _makepath_s instead
+   printf( "Path created with _makepath: %s\n\n", path_buffer );
+   _splitpath( path_buffer, drive, dir, fname, ext ); // C4996
+   // Note: _splitpath is deprecated; consider using _splitpath_s instead
+   printf( "Path extracted with _splitpath:\n" );
+   printf( "   Drive: %s\n", drive );
+   printf( "   Dir: %s\n", dir );
+   printf( "   Filename: %s\n", fname );
+   printf( "   Ext: %s\n", ext );
+}
+```
+
+```Output
+Path created with _makepath: c:\sample\crt\makepath.c
+
+Path extracted with _splitpath:
+   Drive: c:
+   Dir: \sample\crt\
+   Filename: makepath
+   Ext: .c
+```
+
+## <a name="see-also"></a>Vedere anche
+
+[Gestione di file](../../c-runtime-library/file-handling.md)<br/>
+[_fullpath, _wfullpath](fullpath-wfullpath.md)<br/>
+[_splitpath, _wsplitpath](splitpath-wsplitpath.md)<br/>
+[_makepath_s, _wmakepath_s](makepath-s-wmakepath-s.md)<br/>

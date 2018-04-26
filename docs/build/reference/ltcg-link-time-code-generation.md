@@ -24,11 +24,11 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fd40617afecd0c9be03e3676ebe5f2fb8058312a
-ms.sourcegitcommit: ee7d74683af7631441c8c7f65ef5ceceaee4a5ee
+ms.openlocfilehash: a8ac39babea0c36e9d5d120e1f5ca89e3f3dc014
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="ltcg-link-time-code-generation"></a>/LTCG (Generazione di codice in fase di collegamento)
 
@@ -36,7 +36,7 @@ Uso **/LTCG** per eseguire l'Ottimizzazione intero programma, o per creare una s
 
 ## <a name="syntax"></a>Sintassi
 
-> **/LTCG**[**:**{**INCREMENTAL**|**NOSTATUS**|**STATUS**|**OFF**}]<br/>
+> **/LTCG**[**:**{**INCREMENTAL**|**NOSTATUS**|**STATO** | **OFF**}]<br/>
 
 Queste opzioni sono deprecate a partire da Visual Studio 2015:
 
@@ -51,7 +51,7 @@ Specifica che il linker si applica solo intero programma in fase di collegamento
 Specifica se il linker visualizza un indicatore di stato che mostra la percentuale di completamento del collegamento. Per impostazione predefinita, queste informazioni sullo stato non vengono visualizzate.
 
 **OFF** (facoltativo)<br/>
-Disabilita la generazione di codice in fase di collegamento. Questo comportamento è identico Quando /LTCG non viene specificato nella riga di comando.
+Disabilita la generazione di codice in fase di collegamento. Questo comportamento è identico a quando **/LTCG** non è specificato nella riga di comando.
 
 **PGINSTRUMENT** (facoltativo)<br/>
 Questa opzione è deprecata a partire da Visual Studio 2015. In alternativa, usare **/LTCG** e [/GENPROFILE o /fastgenprofile.](genprofile-fastgenprofile-generate-profiling-instrumented-build.md) per generare una compilazione instrumentata per l'ottimizzazione PGO. I dati che sono raccolti dalle esecuzioni instrumentate sono utilizzati per creare un'immagine ottimizzata. Per ulteriori informazioni, vedere [ottimizzazione PGO](profile-guided-optimizations.md). La versione abbreviata di questa opzione viene **/LTCG: PGI**.
@@ -156,7 +156,7 @@ I moduli compilati con [/GL](../../build/reference/gl-whole-program-optimization
 
 È inoltre possibile applicare **/LTCG** alle compilazioni specifiche scegliendo **compilare** > **ottimizzazione PGO** nella barra dei menu, oppure scegliendo una del profilo Opzioni di ottimizzazione guidate nel menu di scelta rapida per il progetto.
 
-#### <a name="to-set-this-compiler-option-programmatically"></a>Per impostare l'opzione del compilatore a livello di codice
+### <a name="to-set-this-compiler-option-programmatically"></a>Per impostare l'opzione del compilatore a livello di codice
 
 - Vedere <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.LinkTimeCodeGeneration%2A>.
 

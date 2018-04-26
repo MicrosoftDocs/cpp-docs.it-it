@@ -1,12 +1,12 @@
 ---
 title: _mbccpy, _mbccpy_l | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _mbccpy
@@ -43,74 +43,75 @@ helpviewer_keywords:
 - _mbccpy function
 - mbccpy_l function
 ms.assetid: 13f4de6e-7792-41ac-b319-dd9b135433aa
-caps.latest.revision: 
+caps.latest.revision: 24
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9ad2ff9b8d9b1369b009898ae9b78c34c3643f85
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 583f241d85c3c94a2f276e39c187baf175c5a1f4
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="mbccpy-mbccpyl"></a>_mbccpy, _mbccpy_l
-Copia un carattere multibyte da una stringa in un'altra stringa. Sono disponibili versioni più sicure di queste funzioni. Vedere [_mbccpy_s, _mbccpy_s_l](../../c-runtime-library/reference/mbccpy-s-mbccpy-s-l.md).  
-  
+
+Copia un carattere multibyte da una stringa in un'altra stringa. Sono disponibili versioni più sicure di queste funzioni. Vedere [_mbccpy_s, _mbccpy_s_l](mbccpy-s-mbccpy-s-l.md).
+
 > [!IMPORTANT]
->  Non è possibile usare questa API nelle applicazioni eseguite in Windows Runtime. Per ulteriori informazioni, vedere [funzioni CRT non supportate nelle App Universal Windows Platform](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-void _mbccpy(  
-   unsigned char *dest,  
-   const unsigned char *src   
-);  
-void _mbccpy_l(  
-   unsigned char *dest,  
-   const unsigned char *src,  
-   _locale_t locale  
-);  
-```  
-  
-#### <a name="parameters"></a>Parametri  
- `dest`  
- Destinazione della copia.  
-  
- `src`  
- Caratteri multibyte da copiare.  
-  
- `locale`  
- Impostazioni locali da usare.  
-  
-## <a name="remarks"></a>Note  
- La funzione `_mbccpy` copia un carattere multibyte da `src` a `dest`.  
-  
- Questa funzione convalida i relativi parametri. Se alla funzione `_mbccpy` viene passato un puntatore Null per `dest` o `src`, viene richiamato il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, `errno` viene impostato su `EINVAL`.  
-  
- `_mbccpy` usa le impostazioni locali correnti per qualsiasi comportamento dipendente dalle impostazioni locali. La funzione `_mbccpy_l` è identica a `_mbccpy`, ma `_mbccpy_l` usa le impostazioni locali passate per qualsiasi comportamento dipendente dalle impostazioni locali. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).  
-  
- **Nota sulla sicurezza** Usare una stringa con terminazione Null. Le dimensioni della stringa con terminazione Null non devono essere superiori a quelle del buffer di destinazione. Per altre informazioni, vedere [Evitare sovraccarichi del buffer](http://msdn.microsoft.com/library/windows/desktop/ms717795). I problemi di sovraccarico del buffer sono usati spesso come metodo di attacco di sistema e provocano un'elevazione dei privilegi non autorizzata.  
-  
-### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico  
-  
-|Routine Tchar.h|_UNICODE e _MBCS non definiti|_MBCS definito|_UNICODE definito|  
-|---------------------|--------------------------------------|--------------------|-----------------------|  
-|`_tccpy`|Mapping a una macro o a una funzione inline|`_mbccpy`|Mapping a una macro o a una funzione inline|  
-|`_tccpy_l`|N/D|`_mbccpy_l`|N/D|  
-  
-## <a name="requirements"></a>Requisiti  
-  
-|Routine|Intestazione obbligatoria|  
-|-------------|---------------------|  
-|`_mbccpy`|\<mbctype.h>|  
-|`_mbccpy_l`|\<mbctype.h>|  
-  
- Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).  
-  
-## <a name="see-also"></a>Vedere anche  
- [Locale](../../c-runtime-library/locale.md)  (Impostazioni locali)  
- [Interpretazione di sequenze di caratteri multibyte](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   
- [_mbclen, mblen, _mblen_l](../../c-runtime-library/reference/mbclen-mblen-mblen-l.md)
+> Non è possibile usare questa API nelle applicazioni eseguite in Windows Runtime. Per altre informazioni, vedere [Funzioni CRT non supportate nelle app della piattaforma UWP (Universal Windows Platform)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+
+## <a name="syntax"></a>Sintassi
+
+```C
+void _mbccpy(
+   unsigned char *dest,
+   const unsigned char *src
+);
+void _mbccpy_l(
+   unsigned char *dest,
+   const unsigned char *src,
+   _locale_t locale
+);
+```
+
+### <a name="parameters"></a>Parametri
+
+*distruttore* destinazione della copia.
+
+*src* carattere Multibyte da copiare.
+
+*impostazioni locali* impostazioni locali da usare.
+
+## <a name="remarks"></a>Note
+
+Il **mbccpy** funzione copia un carattere multibyte da *src* al *dest*.
+
+Questa funzione convalida i relativi parametri. Se **mbccpy** viene passato un puntatore null *dest* oppure *src*, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, **errno** è impostata su **EINVAL**.
+
+**mbccpy** utilizza le impostazioni locali correnti per qualsiasi comportamento dipendente dalle impostazioni locali. **mbccpy_l** è identica a **mbccpy** ad eccezione del fatto che **mbccpy_l** utilizza le impostazioni locali passata per qualsiasi comportamento dipendente dalle impostazioni locali. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
+
+**Nota sulla sicurezza** Usare una stringa con terminazione Null. Le dimensioni della stringa con terminazione Null non devono essere superiori a quelle del buffer di destinazione. Per altre informazioni, vedere [Evitare sovraccarichi del buffer](http://msdn.microsoft.com/library/windows/desktop/ms717795). I problemi di sovraccarico del buffer sono usati spesso come metodo di attacco di sistema e provocano un'elevazione dei privilegi non autorizzata.
+
+### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
+
+|Routine Tchar.h|_UNICODE e _MBCS non definiti|_MBCS definito|_UNICODE definito|
+|---------------------|--------------------------------------|--------------------|-----------------------|
+|**tccpy**|Mapping a una macro o a una funzione inline|**_mbccpy**|Mapping a una macro o a una funzione inline|
+|**tccpy_l**|N/D|**_mbccpy_l**|N/D|
+
+## <a name="requirements"></a>Requisiti
+
+|Routine|Intestazione obbligatoria|
+|-------------|---------------------|
+|**_mbccpy**|\<mbctype.h>|
+|**_mbccpy_l**|\<mbctype.h>|
+
+Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+
+## <a name="see-also"></a>Vedere anche
+
+[Impostazioni locali](../../c-runtime-library/locale.md)<br/>
+[Interpretazione di sequenze di caratteri multibyte](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[_mbclen, mblen, _mblen_l](mbclen-mblen-mblen-l.md)<br/>

@@ -1,12 +1,12 @@
 ---
 title: '&lt;iosfwd&gt; | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - <iosfwd>
@@ -15,31 +15,32 @@ dev_langs:
 helpviewer_keywords:
 - iosfwd header
 ms.assetid: 964442eb-17f1-43ef-a0e0-c5bb77f9c187
-caps.latest.revision: 
+caps.latest.revision: 18
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: da52a399718acb97f9d14c776091d33ad627a412
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 15005f088043b7d7904f57114fc125d3da80b1fc
+ms.sourcegitcommit: dd1a509526fa8bb18e97ab7bc7b91cbdb3ec7059
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="ltiosfwdgt"></a>&lt;iosfwd&gt;
-Dichiara riferimenti in avanti a varie classi modello usate nelle intestazioni iostream. Tutte queste classi modello sono definite in altre intestazioni standard. Questa intestazione deve essere inclusa in modo esplicito solo quando è necessaria una delle relative dichiarazioni, non la definizione.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-#include <iosfwd>  
-  
-```  
-  
-## <a name="typedefs"></a>Definizioni typedef  
-  
+
+Dichiara riferimenti in avanti a varie classi modello usate nelle intestazioni iostream. Tutte queste classi modello sono definite in altre intestazioni standard. Questa intestazione deve essere inclusa in modo esplicito solo quando è necessaria una delle relative dichiarazioni, non la definizione.
+
+## <a name="syntax"></a>Sintassi
+
+```cpp
+#include <iosfwd>
+
 ```
+
+## <a name="typedefs"></a>Definizioni typedef
+
+```cpp
 typedef T1 streamoff;
 typedef T2 streamsize;
 typedef fpos streampos;
@@ -74,11 +75,11 @@ typedef basic_ifstream<wchar_t, char_traits<wchar_t>> wifstream;
 typedef basic_ofstream<wchar_t, char_traits<wchar_t>> wofstream;
 typedef basic_fstream<wchar_t, char_traits<wchar_t>> wfstream;
 };
-```  
-  
-## <a name="forward-declarationstemplate-classes"></a>Dichiarazioni con prototipo/Classi modello  
-  
 ```
+
+## <a name="forward-declarationstemplate-classes"></a>Dichiarazioni con prototipo/Classi modello
+
+```cpp
 template <class _Statetype>
 class fpos;
 
@@ -138,13 +139,11 @@ class basic_ofstream;
 
 template <class Elem, class Tr = char_traits<Elem>>
 class basic_fstream;
-```  
-  
-## <a name="see-also"></a>Vedere anche  
- [Riferimento file di intestazione](../standard-library/cpp-standard-library-header-files.md)   
- [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)  (Sicurezza dei thread nella libreria standard C++)  
- [Programmazione di iostream](../standard-library/iostream-programming.md)   
- [Convenzioni di iostream](../standard-library/iostreams-conventions.md)
+```
 
+## <a name="see-also"></a>Vedere anche
 
-
+[Riferimento file di intestazione](../standard-library/cpp-standard-library-header-files.md)<br/>
+[Thread Safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Programmazione iostream](../standard-library/iostream-programming.md)<br/>
+[Convenzioni di iostream](../standard-library/iostreams-conventions.md)<br/>

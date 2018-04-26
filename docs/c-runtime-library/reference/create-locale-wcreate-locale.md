@@ -1,12 +1,12 @@
 ---
 title: _create_locale, _wcreate_locale | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _create_locale
@@ -37,167 +37,163 @@ helpviewer_keywords:
 - create_locale function
 - __create_locale function
 ms.assetid: ca362464-9f4a-4ec6-ab03-316c55c5be81
-caps.latest.revision: 
+caps.latest.revision: 23
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ff6254ecd33dfc844108b76fc1644eff2a373aed
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 420f18b3bac3daf538ee5eee48b8e57bedbdf9c1
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="createlocale-wcreatelocale"></a>_create_locale, _wcreate_locale
-Crea un oggetto di impostazioni locali.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-_locale_t _create_locale(  
-   int category,  
-   const char *locale   
-);  
-_locale_t _wcreate_locale(  
-   int category,  
-   const wchar_t *locale   
-);  
-```  
-  
-#### <a name="parameters"></a>Parametri  
- `category`  
- Categoria.  
-  
- `locale`  
- Identificatore delle impostazioni locali.  
-  
-## <a name="return-value"></a>Valore restituito  
- Se vengono specificati `locale` e `category` validi, le impostazioni locali specificate vengono restituite come oggetto `_locale_t`. Le impostazioni locali correnti del programma non vengono modificate.  
-  
-## <a name="remarks"></a>Note  
- La funzione `_create_locale` consente di creare un oggetto, che rappresenta determinate impostazioni di aree geografiche, da usare in versioni specifiche di impostazioni locali di molte funzioni CRT (le funzioni con il suffisso `_l`). Il comportamento è simile a `setlocale`, ad eccezione del fatto che anziché applicare le impostazioni locali specificate per l'ambiente corrente, le impostazioni vengono salvate in una struttura `_locale_t` restituita. La struttura `_locale_t` deve essere liberata tramite [free_locale](../../c-runtime-library/reference/free-locale.md) quando non è più necessaria.  
-  
- `_wcreate_locale` è una versione a caratteri wide di `_create_locale`; l'argomento `locale` in `_wcreate_locale` è una stringa di caratteri wide. In caso contrario, `_wcreate_locale` e `_create_locale` si comportano in modo identico.  
-  
- L'argomento `category` indica le parti del comportamento specifico per le impostazioni locali interessate. I contrassegni usati per `category` e le parti del programma interessate sono inclusi nella tabella seguente.  
-  
- `LC_ALL`  
- Tutte le categorie, come indicato di seguito.  
-  
- `LC_COLLATE`  
- Le funzioni `strcoll`, `_stricoll`, `wcscoll`, `_wcsicoll`, `strxfrm`, `_strncoll`, `_strnicoll`, `_wcsncoll`, `_wcsnicoll` e `wcsxfrm`.  
-  
- `LC_CTYPE`  
- Le funzioni di gestione dei caratteri, ad eccezione di `isdigit`, `isxdigit`, `mbstowcs` e `mbtowc` che non sono interessate.  
-  
- `LC_MONETARY`  
- Informazioni di formattazione monetaria restituite dalla funzione `localeconv`.  
-  
- `LC_NUMERIC`  
- Carattere del separatore decimale per le routine di output formattate, ad esempio `printf`, per le routine di conversione dei dati e per le informazioni di formattazione non monetarie restituite da `localeconv`. Oltre al separatore decimale, `LC_NUMERIC` imposta il separatore delle migliaia e la stringa di controllo del raggruppamento restituiti da [localeconv](../../c-runtime-library/reference/localeconv.md).  
-  
- `LC_TIME`  
- Funzioni `strftime` e `wcsftime`.  
-  
- Questa funzione convalida i parametri `category` e `locale`. Se il parametro di categoria non è uno dei valori indicati nella tabella precedente o se `locale` è `NULL`, la funzione restituisce `NULL`.  
-  
- L'argomento `locale` è un puntatore a una stringa che specifica le impostazioni locali. Per informazioni sul formato dell'argomento `locale`, vedere [Nomi delle impostazioni locali, lingue e stringhe relative a paesi](../../c-runtime-library/locale-names-languages-and-country-region-strings.md).  
-  
- L'argomento `locale` può accettare un nome delle impostazioni locali, una stringa di lingua, una stringa di lingua e un codice paese, una tabella codici o una stringa di lingua, un codice paese e una tabella codici. Il set di nomi delle impostazioni locali disponibili, lingue, codici paese e tabelle codici include tutti quelli supportati dalle API NLS di Windows, ad eccezione delle tabelle codici che richiedono più di due byte per carattere, ad esempio UTF-7 e UTF-8. Se si specifica una tabella codici quale UTF-7 o UTF-8, `_create_locale` avrà esito negativo e restituirà un valore NULL. Il set di nomi delle impostazioni locali supportate da `_create_locale` sono descritti in [Nomi delle impostazioni locali, lingue e stringhe relative a paesi](../../c-runtime-library/locale-names-languages-and-country-region-strings.md). Il set delle stringhe per lingua e paese supportato da `_create_locale` è elencato in [Stringhe relative a lingue](../../c-runtime-library/language-strings.md) e [Stringhe relative a paesi](../../c-runtime-library/country-region-strings.md).  
-  
- Per altre informazioni sulle impostazioni locali, vedere [setlocale, _wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md).  
-  
- Il nome precedente di questa funzione, `__create_locale` (con due caratteri di sottolineatura iniziali), è stato deprecato.  
-  
-## <a name="requirements"></a>Requisiti  
-  
-|Routine|Intestazione obbligatoria|  
-|-------------|---------------------|  
-|`_create_locale`|\<locale.h>|  
-|`_wcreate_locale`|\<locale.h> o \<wchar.h>|  
-  
- Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).  
-  
-## <a name="example"></a>Esempio  
-  
-```C  
-// crt_create_locale.c  
-// Sets the current locale to "de-CH" using the  
-// setlocale function and demonstrates its effect on the strftime  
-// function.  
-  
-#include <stdio.h>  
-#include <locale.h>  
-#include <time.h>  
-  
-int main(void)  
-{  
-    time_t ltime;  
-    struct tm thetime;  
-    unsigned char str[100];  
-    _locale_t locale;  
-  
-    // Create a locale object representing the German (Switzerland) locale  
-    locale = _create_locale(LC_ALL, "de-CH");  
-    time (&ltime);  
-    _gmtime64_s(&thetime, &ltime);  
-  
-    // %#x is the long date representation, appropriate to  
-    // the current locale  
-    if (!_strftime_l((char *)str, 100, "%#x",   
-                     (const struct tm *)&thetime, locale))  
+
+Crea un oggetto di impostazioni locali.
+
+## <a name="syntax"></a>Sintassi
+
+```C
+_locale_t _create_locale(
+   int category,
+   const char *locale
+);
+_locale_t _wcreate_locale(
+   int category,
+   const wchar_t *locale
+);
+```
+
+### <a name="parameters"></a>Parametri
+
+*category*<br/>
+Categoria.
+
+*locale*<br/>
+Identificatore delle impostazioni locali.
+
+## <a name="return-value"></a>Valore restituito
+
+Se un valore valido *delle impostazioni locali* e *categoria* sono specificati e restituisce le impostazioni locali specificato come un **locale_t** oggetto. Le impostazioni locali correnti del programma non vengono modificate.
+
+## <a name="remarks"></a>Note
+
+Il **create_locale** funzione consente di creare un oggetto che rappresenta determinate impostazioni specifiche dell'area, per l'utilizzo nelle versioni specifiche delle impostazioni locali di molte funzioni CRT (le funzioni con il **l** suffisso ). Il comportamento è simile a **setlocale**, ad eccezione del fatto che anziché applicare le impostazioni locali specificato all'ambiente corrente, le impostazioni vengono salvate un **locale_t** struttura restituito. Il **locale_t** struttura deve essere liberata mediante [free_locale](free-locale.md) quando non è più necessario.
+
+**_wcreate_locale** è una versione a caratteri "wide" **create_locale**; il *impostazioni locali* argomento **_wcreate_locale** è una stringa di caratteri "wide". **_wcreate_locale** e **create_locale** si comportano in modo identico in caso contrario.
+
+Il *categoria* argomento specifica le parti del comportamento specifiche delle impostazioni locali che sono interessate. I flag utilizzati per *categoria* e le parti del programma interessate sono come illustrato nella tabella seguente.
+
+|*categoria* flag|Applicazione|
+|-|-|
+**LC_ALL**|Tutte le categorie, come indicato di seguito.
+**LC_COLLATE**|Il **strcoll**, **stricoll**, **wcscoll**, **wcsicoll**, **strxfrm**, **_ strncoll**, **strnicoll**, **wcsncoll**, **wcsnicoll**, e **wcsxfrm** funzioni.
+**LC_CTYPE**|Le funzioni di gestione dei caratteri (tranne **isdigit**, **isxdigit**, **mbstowcs**, e **mbtowc**, che non sono interessate).
+**LC_MONETARY**|Le informazioni di formattazione monetaria restituite dal **localeconv** (funzione).
+**LC_NUMERIC**|Carattere per la routine di output formattate del separatore decimale (ad esempio **printf**), per le routine di conversione dei dati e per le informazioni di formattazione non monetarie restituite da **localeconv**. Oltre a carattere del separatore decimale **LC_NUMERIC** separatore imposta le migliaia e il raggruppamento di controllare la stringa restituita da [localeconv](localeconv.md).
+**LC_TIME**|Il **strftime** e **wcsftime** funzioni.
+
+Questa funzione convalida il *categoria* e *delle impostazioni locali* parametri. Se il parametro di categoria non è uno dei valori indicati nella tabella precedente o se *delle impostazioni locali* viene **NULL**, la funzione restituisce **NULL**.
+
+Il *delle impostazioni locali* argomento è un puntatore a una stringa che specifica le impostazioni locali. Per informazioni relative al formato del *delle impostazioni locali* argomento, vedere [nomi delle impostazioni locali, lingue e stringhe di paese/area geografica](../../c-runtime-library/locale-names-languages-and-country-region-strings.md).
+
+Il *delle impostazioni locali* argomento può richiedere un nome delle impostazioni locali, una stringa di lingua, una stringa di lingua e codice di paese/area geografica, una tabella codici, o una stringa di lingua, codice di paese/area geografica e tabella codici. Il set di nomi delle impostazioni locali disponibili, lingue, codici paese e tabelle codici include tutti quelli supportati dalle API NLS di Windows, ad eccezione delle tabelle codici che richiedono più di due byte per carattere, ad esempio UTF-7 e UTF-8. Se si specifica una tabella codici, ad esempio UTF-8 o UTF-7 **create_locale** avrà esito negativo e restituiscono NULL. Il set di nomi delle impostazioni locali supportate da **create_locale** descritte in [nomi delle impostazioni locali, lingue e stringhe di paese/area geografica](../../c-runtime-library/locale-names-languages-and-country-region-strings.md). Il set di stringhe lingua e paese/area geografica supportati da **create_locale** sono racchiusi [stringhe relative a lingue](../../c-runtime-library/language-strings.md) e [stringhe paese/area geografica](../../c-runtime-library/country-region-strings.md).
+
+Per altre informazioni sulle impostazioni locali, vedere [setlocale, _wsetlocale](setlocale-wsetlocale.md).
+
+Il nome precedente di questa funzione, **create_locale** (con due caratteri di sottolineatura iniziali), è stato deprecato.
+
+## <a name="requirements"></a>Requisiti
+
+|Routine|Intestazione obbligatoria|
+|-------------|---------------------|
+|**_create_locale**|\<locale.h>|
+|**_wcreate_locale**|\<locale.h> o \<wchar.h>|
+
+Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+
+## <a name="example"></a>Esempio
+
+```C
+// crt_create_locale.c
+// Sets the current locale to "de-CH" using the
+// setlocale function and demonstrates its effect on the strftime
+// function.
+
+#include <stdio.h>
+#include <locale.h>
+#include <time.h>
+
+int main(void)
+{
+    time_t ltime;
+    struct tm thetime;
+    unsigned char str[100];
+    _locale_t locale;
+
+    // Create a locale object representing the German (Switzerland) locale
+    locale = _create_locale(LC_ALL, "de-CH");
+    time (&ltime);
+    _gmtime64_s(&thetime, &ltime);
+
+    // %#x is the long date representation, appropriate to
+    // the current locale
+    if (!_strftime_l((char *)str, 100, "%#x",
+                     (const struct tm *)&thetime, locale))
     {
-        printf("_strftime_l failed!\n");  
+        printf("_strftime_l failed!\n");
     }
-    else  
+    else
     {
-        printf("In de-CH locale, _strftime_l returns '%s'\n", str);  
+        printf("In de-CH locale, _strftime_l returns '%s'\n", str);
     }
-  
-    _free_locale(locale);  
-  
-    // Create a locale object representing the default C locale  
-    locale = _create_locale(LC_ALL, "C");  
-    time(&ltime);  
-    _gmtime64_s(&thetime, &ltime);  
-  
-    if (!_strftime_l((char *)str, 100, "%#x",   
-                     (const struct tm *)&thetime, locale))  
+
+    _free_locale(locale);
+
+    // Create a locale object representing the default C locale
+    locale = _create_locale(LC_ALL, "C");
+    time(&ltime);
+    _gmtime64_s(&thetime, &ltime);
+
+    if (!_strftime_l((char *)str, 100, "%#x",
+                     (const struct tm *)&thetime, locale))
     {
-        printf("_strftime_l failed!\n");  
+        printf("_strftime_l failed!\n");
     }
-    else  
+    else
     {
-        printf("In 'C' locale, _strftime_l returns '%s'\n", str);  
+        printf("In 'C' locale, _strftime_l returns '%s'\n", str);
     }
-  
-    _free_locale(locale);  
-}  
-```  
-  
-```Output  
-In de-CH locale, _strftime_l returns 'Samstag, 9. Februar 2002'  
-In 'C' locale, _strftime_l returns 'Saturday, February 09, 2002'  
-```  
-  
-## <a name="see-also"></a>Vedere anche  
- [Nomi delle impostazioni locali, lingue e stringhe relative a paesi](../../c-runtime-library/locale-names-languages-and-country-region-strings.md)   
- [Stringhe relative a lingue](../../c-runtime-library/language-strings.md)   
- [Stringhe relative a paesi](../../c-runtime-library/country-region-strings.md)   
- [_free_locale](../../c-runtime-library/reference/free-locale.md)   
- [_configthreadlocale](../../c-runtime-library/reference/configthreadlocale.md)   
- [setlocale](../../preprocessor/setlocale.md)   
- [Locale](../../c-runtime-library/locale.md)   
- [localeconv](../../c-runtime-library/reference/localeconv.md)   
- [_mbclen, mblen, _mblen_l](../../c-runtime-library/reference/mbclen-mblen-mblen-l.md)   
- [strlen, wcslen, _mbslen, _mbslen_l, _mbstrlen, _mbstrlen_l](../../c-runtime-library/reference/strlen-wcslen-mbslen-mbslen-l-mbstrlen-mbstrlen-l.md)   
- [mbstowcs, _mbstowcs_l](../../c-runtime-library/reference/mbstowcs-mbstowcs-l.md)   
- [mbtowc, _mbtowc_l](../../c-runtime-library/reference/mbtowc-mbtowc-l.md)   
- [_setmbcp](../../c-runtime-library/reference/setmbcp.md)   
- [setlocale, _wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)   
- [Funzioni strcoll](../../c-runtime-library/strcoll-functions.md)   
- [strftime, wcsftime, _strftime_l, _wcsftime_l](../../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md)   
- [strxfrm, wcsxfrm, _strxfrm_l, _wcsxfrm_l](../../c-runtime-library/reference/strxfrm-wcsxfrm-strxfrm-l-wcsxfrm-l.md)   
- [wcstombs, _wcstombs_l](../../c-runtime-library/reference/wcstombs-wcstombs-l.md)   
- [wctomb, _wctomb_l](../../c-runtime-library/reference/wctomb-wctomb-l.md)
+
+    _free_locale(locale);
+}
+```
+
+```Output
+In de-CH locale, _strftime_l returns 'Samstag, 9. Februar 2002'
+In 'C' locale, _strftime_l returns 'Saturday, February 09, 2002'
+```
+
+## <a name="see-also"></a>Vedere anche
+
+[Nomi delle impostazioni locali, lingue e stringhe di paese/area geografica](../../c-runtime-library/locale-names-languages-and-country-region-strings.md)<br/>
+[Stringhe di lingue](../../c-runtime-library/language-strings.md)<br/>
+[Stringhe relative a paesi/aree geografiche](../../c-runtime-library/country-region-strings.md)<br/>
+[_free_locale](free-locale.md)<br/>
+[_configthreadlocale](configthreadlocale.md)<br/>
+[setlocale](../../preprocessor/setlocale.md)<br/>
+[Impostazioni locali](../../c-runtime-library/locale.md)<br/>
+[localeconv](localeconv.md)<br/>
+[_mbclen, mblen, _mblen_l](mbclen-mblen-mblen-l.md)<br/>
+[strlen, wcslen, _mbslen, _mbslen_l, _mbstrlen, _mbstrlen_l](strlen-wcslen-mbslen-mbslen-l-mbstrlen-mbstrlen-l.md)<br/>
+[mbstowcs, _mbstowcs_l](mbstowcs-mbstowcs-l.md)<br/>
+[mbtowc, _mbtowc_l](mbtowc-mbtowc-l.md)<br/>
+[_setmbcp](setmbcp.md)<br/>
+[setlocale, _wsetlocale](setlocale-wsetlocale.md)<br/>
+[Funzioni strcoll](../../c-runtime-library/strcoll-functions.md)<br/>
+[strftime, wcsftime, _strftime_l, _wcsftime_l](strftime-wcsftime-strftime-l-wcsftime-l.md)<br/>
+[strxfrm, wcsxfrm, _strxfrm_l, _wcsxfrm_l](strxfrm-wcsxfrm-strxfrm-l-wcsxfrm-l.md)<br/>
+[wcstombs, _wcstombs_l](wcstombs-wcstombs-l.md)<br/>
+[wctomb, _wctomb_l](wctomb-wctomb-l.md)<br/>

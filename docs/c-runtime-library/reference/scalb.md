@@ -1,15 +1,16 @@
 ---
-title: _scalb | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+title: scalb, _scalbf | Documenti Microsoft
+ms.custom: ''
+ms.date: 04/05/2018
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _scalb
+- _scalbf
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -26,60 +27,71 @@ apitype: DLLExport
 f1_keywords:
 - scalb
 - _scalb
+- _scalbf
 dev_langs:
 - C++
 helpviewer_keywords:
 - exponential calculations
 - _scalb function
+- _scalbf function
 - scalb function
 ms.assetid: 148cf5a8-b405-44bf-a1f0-7487adba2421
-caps.latest.revision: 
+caps.latest.revision: 14
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3f68d1e14a4f92c2ed7ee481966dc46c4384341f
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: f27f0c6ad88a8d0d89ab9bb66ba68eac0625507c
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
-# <a name="scalb"></a>_scalb
-Eleva l'argomento alla potenza di 2.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-double _scalb(  
-   double x,  
-   long exp   
-);  
-```  
-  
-#### <a name="parameters"></a>Parametri  
- `x`  
- Valore a virgola mobile e precisione doppia.  
-  
- `exp`  
- Esponente Long Integer.  
-  
-## <a name="return-value"></a>Valore restituito  
- Restituisce un valore esponenziale se ha esito positivo. In caso di overflow (in base al segno di `x`), `_scalb` restituisce + /- `HUGE_VAL`; `errno` variabile è impostata su `ERANGE`.  
-  
- Per altre informazioni su questi e su altri codici restituiti, vedere [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
-  
-## <a name="remarks"></a>Note  
- La funzione `_scalb` calcola il valore di `x *` 2exp.  
-  
-## <a name="requirements"></a>Requisiti  
-  
-|Routine|Intestazione obbligatoria|  
-|-------------|---------------------|  
-|`_scalb`|\<float.h>|  
-  
- Per altre informazioni sulla compatibilità, vedere la sezione [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Floating-Point Support](../../c-runtime-library/floating-point-support.md)  (Supporto delle funzioni a virgola mobile)  
- [ldexp](../../c-runtime-library/reference/ldexp.md)
+# <a name="scalb-scalbf"></a>scalb, _scalbf
+
+Eleva l'argomento alla potenza di 2.
+
+## <a name="syntax"></a>Sintassi
+
+```C
+double _scalb(
+   double x,
+   long exp
+);
+float _scalbf(
+   float x,
+   long exp
+); /* x64 only */
+```
+
+### <a name="parameters"></a>Parametri
+
+*x*<br/>
+Valore a virgola mobile e precisione doppia.
+
+*exp*<br/>
+Esponente Long Integer.
+
+## <a name="return-value"></a>Valore restituito
+
+Restituisce un valore esponenziale se ha esito positivo. In caso di overflow (in base al segno del *x*), **scalb** restituisce + /- **HUGE_VAL**; **errno** variabile è impostata su  **ERANGE**.
+
+Per altre informazioni su questi e su altri codici restituiti, vedere [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+
+## <a name="remarks"></a>Note
+
+Il **scalb** funzione calcola il valore di *x* * 2<sup>*exp*</sup>.
+
+## <a name="requirements"></a>Requisiti
+
+|Routine|Intestazione obbligatoria|
+|-------------|---------------------|
+|**scalb**, **_scalbf**|\<float.h>|
+
+Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+
+## <a name="see-also"></a>Vedere anche
+
+[Supporto delle funzioni a virgola mobile](../../c-runtime-library/floating-point-support.md)<br/>
+[ldexp](ldexp.md)<br/>

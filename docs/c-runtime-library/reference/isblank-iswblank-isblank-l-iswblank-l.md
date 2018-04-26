@@ -1,12 +1,12 @@
 ---
 title: isblank, iswblank, _isblank_l, _iswblank_l | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - isblank
@@ -36,73 +36,77 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 33ce96c0-f387-411a-8283-c3d2a69e56bd
-caps.latest.revision: 
+caps.latest.revision: 4
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5c3dff4f409fe57c67e00afe24f10cbb69c6f83b
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: dbf3c55f6a9665d8d6ad046dba653b362d46cd2a
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="isblank-iswblank-isblankl-iswblankl"></a>isblank, iswblank, _isblank_l, _iswblank_l
-Determina se un intero rappresenta un carattere vuoto.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-int isblank(  
-   int c   
-);  
-int iswblank(  
-   wint_t c   
-);  
-int _isblank_l(  
-   int c,  
-   _locale_t locale  
-);  
-int _iswblank_l(  
-   wint_t c,  
-   _locale_t locale  
-);  
-```  
-  
-#### <a name="parameters"></a>Parametri  
- `c`  
- Valore Integer da testare.  
-  
- `locale`  
- Impostazioni locali da usare.  
-  
-## <a name="return-value"></a>Valore restituito  
- Ognuna di queste routine restituisce un valore diverso da zero se `c` è una rappresentazione particolare di uno spazio o un carattere di tabulazione orizzontale oppure se fa parte di un set specifico delle impostazioni locali di caratteri usati per separare le parole all'interno di una riga di testo. `isblank` restituisce un valore diverso da zero se `c` è un carattere di spazio (0x20) oppure un carattere di tabulazione orizzontale (0x09). Il risultato della condizione di test per le funzioni `isblank` dipende dall'impostazione della categoria `LC_CTYPE` delle impostazioni locali. Per altre informazioni, vedere [setlocale, _wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). Le versioni di queste funzioni che non hanno il suffisso `_l` usano le impostazioni locali correnti per qualsiasi comportamento dipendente dalle impostazioni locali. Le versioni che non hanno il suffisso `_l` sono identiche, con la differenza che usano le impostazioni locali passate. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).  
-  
- `iswblank` restituisce un valore diverso da zero se `c` è un carattere wide che corrisponde a un carattere standard di spazio o di tabulazione orizzontale.  
-  
- Il comportamento di `isblank` e `_isblank_l` è indefinito se `c` non è EOF o non è compreso nell'intervallo da 0 a 0xFF, inclusi. Quando si usa una libreria di debug CRT e `c` non è uno di questi valori, le funzioni generano un'asserzione.  
-  
-### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico  
-  
-|Routine TCHAR.H|_UNICODE e _MBCS non definiti|_MBCS definito|_UNICODE definito|  
-|---------------------|------------------------------------|--------------------|-----------------------|  
-|`_istblank`|`isblank`|[_ismbcblank](../../c-runtime-library/reference/ismbcgraph-functions.md)|`iswblank`|  
-|`_istblank_l`|`_isblank_l`|[_ismbcblank_l](../../c-runtime-library/reference/ismbcgraph-functions.md)|`_iswblank_l`|  
-  
-## <a name="requirements"></a>Requisiti  
-  
-|Routine|Intestazione obbligatoria|  
-|-------------|---------------------|  
-|`isblank`|\<ctype.h>|  
-|`iswblank`|\<ctype.h> o \<wchar.h>|  
-|`_isblank_l`|\<ctype.h>|  
-|`_iswblank_l`|\<ctype.h> o \<wchar.h>|  
-  
- Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).  
-  
-## <a name="see-also"></a>Vedere anche  
- [Classificazione di caratteri](../../c-runtime-library/character-classification.md)   
- [Locale](../../c-runtime-library/locale.md)  (Impostazioni locali)  
- [Routine is, isw](../../c-runtime-library/is-isw-routines.md)
+
+Determina se un intero rappresenta un carattere vuoto.
+
+## <a name="syntax"></a>Sintassi
+
+```C
+int isblank(
+   int c
+);
+int iswblank(
+   wint_t c
+);
+int _isblank_l(
+   int c,
+   _locale_t locale
+);
+int _iswblank_l(
+   wint_t c,
+   _locale_t locale
+);
+```
+
+### <a name="parameters"></a>Parametri
+
+*c*<br/>
+Valore Integer da testare.
+
+*locale*<br/>
+Impostazioni locali da usare.
+
+## <a name="return-value"></a>Valore restituito
+
+Ognuna di queste routine restituisce diverso da zero se *c* è una rappresentazione particolare di spazi o caratteri di tabulazione orizzontale, o fa parte di un set di specifiche delle impostazioni locali di caratteri che vengono utilizzati per separare le parole all'interno di una riga di testo. **isblank** restituisce un valore diverso da zero se *c* è un carattere di spazio (0x20) o carattere di tabulazione orizzontale (0x09). Il risultato della condizione di test per il **isblank** funzioni dipende il **LC_CTYPE** categoria configurazione delle impostazioni locali; per ulteriori informazioni, vedere [setlocale, wsetlocale](setlocale-wsetlocale.md). Le versioni di queste funzioni che non contengono il **l** suffisso utilizzare le impostazioni locali correnti per qualsiasi comportamento dipendente dalle impostazioni locali; le versioni che hanno il **l** suffisso sono identiche ad eccezione del fatto che usano il impostazioni locali che vengono passate. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
+
+**iswblank** restituisce un valore diverso da zero se *c* è un carattere "wide" che corrisponde a uno spazio standard o un carattere di tabulazione orizzontale.
+
+Il comportamento delle **isblank** e **_isblank_l** è definito se *c* non è EOF o compreso nell'intervallo tra 0 e 0xFF, inclusivo. Quando si utilizza una libreria di debug CRT e *c* non fa parte di questi valori, la generazione di funzioni è un'asserzione.
+
+### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
+
+|Routine TCHAR.H|_UNICODE e _MBCS non definiti|_MBCS definito|_UNICODE definito|
+|---------------------|------------------------------------|--------------------|-----------------------|
+|**_istblank**|**isblank**|[_ismbcblank](ismbcgraph-functions.md)|**iswblank**|
+|**_istblank_l**|**_isblank_l**|[_ismbcblank_l](ismbcgraph-functions.md)|**_iswblank_l**|
+
+## <a name="requirements"></a>Requisiti
+
+|Routine|Intestazione obbligatoria|
+|-------------|---------------------|
+|**isblank**|\<ctype.h>|
+|**iswblank**|\<ctype.h> o \<wchar.h>|
+|**_isblank_l**|\<ctype.h>|
+|**_iswblank_l**|\<ctype.h> o \<wchar.h>|
+
+Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+
+## <a name="see-also"></a>Vedere anche
+
+[Classificazione di caratteri](../../c-runtime-library/character-classification.md)<br/>
+[Impostazioni locali](../../c-runtime-library/locale.md)<br/>
+[Routine is, isw](../../c-runtime-library/is-isw-routines.md)<br/>

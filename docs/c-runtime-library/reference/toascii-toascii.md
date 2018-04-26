@@ -1,12 +1,12 @@
 ---
 title: toascii, __toascii | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - __toascii
@@ -36,17 +36,17 @@ helpviewer_keywords:
 - __toascii function
 - ASCII characters, converting to
 ms.assetid: a07c0608-b0e2-4da2-a20c-7b64d6a9b77c
-caps.latest.revision: 
+caps.latest.revision: 13
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cf4c29934d22d3f20d79650faa406f217ffdd4c6
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 62b94724e95738c424ee04b0fbccfad1fdf6951c
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="toascii-toascii"></a>toascii, __toascii
 
@@ -63,29 +63,29 @@ int __toascii(
 
 ### <a name="parameters"></a>Parametri
 
-*c*  
+*c*<br/>
 Carattere da convertire.
 
 ## <a name="return-value"></a>Valore restituito
 
-`__toascii` Converte il valore di *c* per il functoid da ASCII a 7 bit intervallo e restituisce il risultato. Non esiste alcuno valore restituito riservato per indicare un errore.
+**ToAscii** converte il valore del *c* per il functoid da ASCII a 7 bit intervallo e restituisce il risultato. Non esiste alcuno valore restituito riservato per indicare un errore.
 
 ## <a name="remarks"></a>Note
 
-La routine `__toascii` converte il carattere specificato in un carattere ASCII troncandolo ai 7 bit di ordine inferiore. Non vengono applicate altre trasformazioni.
+Il **ToAscii** routine converte il carattere specificato in un carattere ASCII, troncando a 7 bit di ordine inferiore. Non vengono applicate altre trasformazioni.
 
-La routine `__toascii` è definita come macro, a meno che non sia definita la macro del preprocessore _CTYPE_DISABLE_MACROS. Per garantire la compatibilità con le versioni precedenti, `toascii` è definito come macro solo quando [&#95; &#95; STDC &#95; &#95; ](../../preprocessor/predefined-macros.md) non è definito o è definito come 0; in caso contrario non è definita.
+Il **ToAscii** routine è definita come macro, a meno che non è definito il _CTYPE_DISABLE_MACROS macro del preprocessore. Per motivi di compatibilità **toascii** è definito come macro solo quando [ &#95; &#95;STDC&#95; &#95; ](../../preprocessor/predefined-macros.md) non è definito o è definito come 0; in caso contrario, viene definito.
 
 ## <a name="requirements"></a>Requisiti
 
 |Routine|Intestazione obbligatoria|
 |-------------|---------------------|
-|`toascii`, `__toascii`|C: \<ctype.h><br /><br /> C++: \<cctype> o \<ctype.h>|
+|**ToAscii**, **ToAscii**|C: \<ctype.h><br /><br /> C++: \<cctype> o \<ctype.h>|
 
-La macro `toascii` è un'estensione POSIX, e `__toascii` è un'implementazione specifica di Microsoft dell'estensione POSIX. Per altre informazioni sulla compatibilità, vedere la sezione [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.
+Il **toascii** macro è un'estensione POSIX, e **ToAscii** è un'implementazione specifica di Microsoft dell'estensione POSIX. Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Vedere anche
 
-[Data Conversion](../../c-runtime-library/data-conversion.md)  (Conversione dei dati)  
-[Routine is, isw](../../c-runtime-library/is-isw-routines.md)   
-[Funzioni to](../../c-runtime-library/to-functions.md)
+[Conversione dei dati](../../c-runtime-library/data-conversion.md)<br/>
+[Routine is, isw](../../c-runtime-library/is-isw-routines.md)<br/>
+[Funzioni to](../../c-runtime-library/to-functions.md)<br/>

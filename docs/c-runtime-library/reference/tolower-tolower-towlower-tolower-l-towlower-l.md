@@ -52,84 +52,89 @@ helpviewer_keywords:
 - characters, converting
 - _towlower_l function
 ms.assetid: 86e0fc02-94ae-4472-9631-bf8e96f67b92
-caps.latest.revision: ''
+caps.latest.revision: 22
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 44c75ab979db21d72c682a3ba6f0da6947f22a4c
-ms.sourcegitcommit: 604907f77eb6c5b1899194a9877726f3e8c2dabc
+ms.openlocfilehash: 23d03190ae47857a7b49f687d1f03e78c0dbc9e0
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="tolower-tolower-towlower-tolowerl-towlowerl"></a>tolower, _tolower, towlower, _tolower_l, _towlower_l
-Converte un carattere in minuscolo.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-int tolower(  
-   int c   
-);  
-int _tolower(  
-   int c   
-);  
-int towlower(  
-   wint_t c   
-);  
-int _tolower_l(  
-   int c,  
-   _locale_t locale   
-);  
-int _towlower_l(  
-   wint_t c,  
-   _locale_t locale   
-);  
-```  
-  
-#### <a name="parameters"></a>Parametri  
- [in] `c`  
- Carattere da convertire.  
-  
- [in] `locale`  
- Impostazioni locali da usare per la conversione specifica delle impostazioni locali.  
-  
-## <a name="return-value"></a>Valore restituito  
- Ognuna di queste routine converte una copia di `c` in minuscolo, se la conversione è possibile, e restituisce il risultato. Non esiste alcuno valore restituito riservato per indicare un errore.  
-  
-## <a name="remarks"></a>Note  
- Ognuna di queste routine converte una determinata lettera maiuscola in minuscola, se possibile e rilevante. La conversione della combinazione di maiuscole/minuscole di `towlower` dipende dalle impostazioni locali. La combinazione di maiuscole/minuscole viene modificata solo per i caratteri rilevanti per le impostazioni locali correnti. Le funzioni senza il suffisso `_l` usano le impostazioni locali correnti. Le versioni di queste funzioni con il suffisso `_l` accettano le impostazioni locali come parametro e usano tali impostazioni invece di quelle correnti. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).  
-  
- Affinché `_tolower` possa fornire i risultati previsti, [__isascii](../../c-runtime-library/reference/isascii-isascii-iswascii.md) e [isupper](../../c-runtime-library/reference/isupper-isupper-l-iswupper-iswupper-l.md) devono entrambe restituire un valore diverso da zero.  
-  
-### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico  
-  
-|Routine TCHAR.H|_UNICODE e _MBCS non definiti|_MBCS definito|_UNICODE definito|  
-|---------------------|------------------------------------|--------------------|-----------------------|  
-|`_totlower`|`tolower`|`_mbctolower`|`towlower`|  
-|`_totlower_l`|`_tolower_l`|`_mbctolower_l`|`_towlower_l`|  
-  
+Converte un carattere in minuscolo.
+
+## <a name="syntax"></a>Sintassi
+
+```C
+int tolower(
+   int c
+);
+int _tolower(
+   int c
+);
+int towlower(
+   wint_t c
+);
+int _tolower_l(
+   int c,
+   _locale_t locale
+);
+int _towlower_l(
+   wint_t c,
+   _locale_t locale
+);
+```
+
+### <a name="parameters"></a>Parametri
+
+*c*<br/>
+Carattere da convertire.
+
+*locale*<br/>
+Impostazioni locali da usare per la conversione specifica delle impostazioni locali.
+
+## <a name="return-value"></a>Valore restituito
+
+Ognuna di queste routine converte una copia della *c* in lettere minuscole se la conversione è possibile e restituisce il risultato. Non esiste alcuno valore restituito riservato per indicare un errore.
+
+## <a name="remarks"></a>Note
+
+Ognuna di queste routine converte una determinata lettera maiuscola in minuscola, se possibile e rilevante. La conversione di maiuscole e minuscole **towlower** dalle impostazioni locali. La combinazione di maiuscole/minuscole viene modificata solo per i caratteri rilevanti per le impostazioni locali correnti. Le funzioni senza il **l** utilizzare il suffisso delle impostazioni locali. Le versioni di queste funzioni con il **l** suffisso accettano le impostazioni locali come parametro e che usano anziché attualmente impostati dalle impostazioni locali. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
+
+Affinché **ToLower** per fornire i risultati previsti [isascii](isascii-isascii-iswascii.md) e [isupper](isupper-isupper-l-iswupper-iswupper-l.md) deve restituire sia diverso da zero.
+
+### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
+
+|Routine TCHAR.H|_UNICODE e _MBCS non definiti|_MBCS definito|_UNICODE definito|
+|---------------------|------------------------------------|--------------------|-----------------------|
+|**totlower**|**tolower**|**_mbctolower**|**towlower**|
+|**_totlower_l**|**_tolower_l**|**_mbctolower_l**|**_towlower_l**|
+
 > [!NOTE]
->  Le funzioni `_tolower_l` e `_towlower_l` non dipendono dalle impostazioni locali e non sono progettate per essere chiamate direttamente. Sono destinate solo all'uso interno per `_totlower_l`.  
-  
-## <a name="requirements"></a>Requisiti  
-  
-|Routine|Intestazione obbligatoria|  
-|-------------|---------------------|  
-|`tolower`|\<ctype.h>|  
-|`_tolower`|\<ctype.h>|  
-|`towlower`|\<ctype.h> o \<wchar.h>|  
-  
- Per altre informazioni sulla compatibilità, vedere la sezione [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
-  
-## <a name="example"></a>Esempio  
- Vedere l'esempio in [Funzioni to](../../c-runtime-library/to-functions.md).  
-  
-## <a name="see-also"></a>Vedere anche  
- [Data Conversion](../../c-runtime-library/data-conversion.md)  (Conversione dei dati)  
- [Routine is, isw](../../c-runtime-library/is-isw-routines.md)   
- [Funzioni to](../../c-runtime-library/to-functions.md)   
- [Locale](../../c-runtime-library/locale.md)  (Impostazioni locali)  
- [Interpretazione di sequenze di caratteri multibyte](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)
+> **tolower_l** e **towlower_l** non dispone di alcuna dipendenza dalle impostazioni locali e non sono concepiti per essere chiamati direttamente. Vengono forniti per uso interno da parte **_totlower_l**.
+
+## <a name="requirements"></a>Requisiti
+
+|Routine|Intestazione obbligatoria|
+|-------------|---------------------|
+|**tolower**|\<ctype.h>|
+|**_tolower**|\<ctype.h>|
+|**towlower**|\<ctype.h> o \<wchar.h>|
+
+Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+
+## <a name="example"></a>Esempio
+
+Vedere l'esempio in [Funzioni to](../../c-runtime-library/to-functions.md).
+
+## <a name="see-also"></a>Vedere anche
+
+[Conversione dei dati](../../c-runtime-library/data-conversion.md)<br/>
+[Routine is, isw](../../c-runtime-library/is-isw-routines.md)<br/>
+[Funzioni to](../../c-runtime-library/to-functions.md)<br/>
+[Impostazioni locali](../../c-runtime-library/locale.md)<br/>
+[Interpretazione di sequenze di caratteri multibyte](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>

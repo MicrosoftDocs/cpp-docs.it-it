@@ -1,12 +1,12 @@
 ---
 title: iscntrl, iswcntrl, _iscntrl_l, _iswcntrl_l | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - iscntrl
@@ -44,73 +44,77 @@ helpviewer_keywords:
 - iswcntrl function
 - _istcntrl_l function
 ms.assetid: 616eebf9-aed4-49ba-ba2c-8677c8fe6fb5
-caps.latest.revision: 
+caps.latest.revision: 19
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f56b4060f6b83aca11121ad6c40c22de64a24b8f
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 7c0eecee5d33bd9e250e88021556625101202082
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="iscntrl-iswcntrl-iscntrll-iswcntrll"></a>iscntrl, iswcntrl, _iscntrl_l, _iswcntrl_l
-Determina se un intero rappresenta un carattere di controllo.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-int iscntrl(   
-   int c   
-);  
-int iswcntrl(   
-   wint_t c   
-);  
-int _iscntrl_l(   
-   int c,  
-   _locale_t locale  
-);  
-int _iswcntrl_l(   
-   wint_t c,  
-   _locale_t locale  
-);  
-```  
-  
-#### <a name="parameters"></a>Parametri  
- `c`  
- Intero da testare.  
-  
- `locale`  
- Impostazioni locali da usare.  
-  
-## <a name="return-value"></a>Valore restituito  
- Ognuna di queste routine restituisce un valore diverso da zero se `c` è una rappresentazione particolare di un carattere di controllo. `iscntrl` Restituisce un valore diverso da zero se `c` è un carattere di controllo (0x00-0x1F o 0x7F). `iswcntrl` restituisce un valore diverso da zero se `c` è un carattere wide di controllo. Ognuna di queste routine restituisce 0 se `c` non soddisfa la condizione di test.  
-  
- Le versioni di queste funzioni che hanno il suffisso `_l` utilizzano il parametro delle impostazioni locali che è stato passato anziché le impostazioni locali correnti. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).  
-  
- Il comportamento di `iscntrl` e `_iscntrl_l` è indefinito se `c` non è EOF o non è compreso nell'intervallo da 0 a 0xFF, inclusi. Quando si usa una libreria di debug CRT e `c` non è uno di questi valori, le funzioni generano un'asserzione.  
-  
-### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico  
-  
-|Routine TCHAR.H|_UNICODE e _MBCS non definiti|_MBCS definito|_UNICODE definito|  
-|---------------------|------------------------------------|--------------------|-----------------------|  
-|`_istcntrl`|`iscntrl`|`iscntrl`|`iswcntrl`|  
-|`_istcntrl_l`|`_iscntrl_l`|`_iscntrl_l`|`_iswcntrl_l`|  
-  
-## <a name="requirements"></a>Requisiti  
-  
-|Routine|Intestazione obbligatoria|  
-|-------------|---------------------|  
-|`iscntrl`|\<ctype.h>|  
-|`iswcntrl`|\<ctype.h> o \<wchar.h>|  
-|`_iscntrl_l`|\<ctype.h>|  
-|`_iswcntrl_l`|\<ctype.h> o \<wchar.h>|  
-  
- Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).  
-  
-## <a name="see-also"></a>Vedere anche  
- [Classificazione di caratteri](../../c-runtime-library/character-classification.md)   
- [Locale](../../c-runtime-library/locale.md)  (Impostazioni locali)  
- [Routine is, isw](../../c-runtime-library/is-isw-routines.md)
+
+Determina se un intero rappresenta un carattere di controllo.
+
+## <a name="syntax"></a>Sintassi
+
+```C
+int iscntrl(
+   int c
+);
+int iswcntrl(
+   wint_t c
+);
+int _iscntrl_l(
+   int c,
+   _locale_t locale
+);
+int _iswcntrl_l(
+   wint_t c,
+   _locale_t locale
+);
+```
+
+### <a name="parameters"></a>Parametri
+
+*c*<br/>
+Intero da testare.
+
+*locale*<br/>
+Impostazioni locali da usare.
+
+## <a name="return-value"></a>Valore restituito
+
+Ognuna di queste routine restituisce diverso da zero se *c* è una rappresentazione particolare di un carattere di controllo. **iscntrl** restituisce un valore diverso da zero se *c* è un carattere di controllo (0x00-0x1F o 0x7F). **iswcntrl** restituisce un valore diverso da zero se *c* è un controllo carattere wide. Ognuna di queste routine restituisce 0 se *c* non soddisfa la condizione di test.
+
+Le versioni di queste funzioni con il **l** suffisso Usa il parametro delle impostazioni locali passate anziché le impostazioni locali correnti. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
+
+Il comportamento delle **iscntrl** e **iscntrl_l** è definito se *c* non è EOF o compreso nell'intervallo tra 0 e 0xFF, inclusivo. Quando si utilizza una libreria di debug CRT e *c* non fa parte di questi valori, la generazione di funzioni è un'asserzione.
+
+### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
+
+|Routine TCHAR.H|_UNICODE e _MBCS non definiti|_MBCS definito|_UNICODE definito|
+|---------------------|------------------------------------|--------------------|-----------------------|
+|**istcntrl**|**iscntrl**|**iscntrl**|**iswcntrl**|
+|**istcntrl_l**|**_iscntrl_l**|**_iscntrl_l**|**_iswcntrl_l**|
+
+## <a name="requirements"></a>Requisiti
+
+|Routine|Intestazione obbligatoria|
+|-------------|---------------------|
+|**iscntrl**|\<ctype.h>|
+|**iswcntrl**|\<ctype.h> o \<wchar.h>|
+|**_iscntrl_l**|\<ctype.h>|
+|**_iswcntrl_l**|\<ctype.h> o \<wchar.h>|
+
+Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+
+## <a name="see-also"></a>Vedere anche
+
+[Classificazione di caratteri](../../c-runtime-library/character-classification.md)<br/>
+[Impostazioni locali](../../c-runtime-library/locale.md)<br/>
+[Routine is, isw](../../c-runtime-library/is-isw-routines.md)<br/>

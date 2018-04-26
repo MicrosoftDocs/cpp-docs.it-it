@@ -1,13 +1,13 @@
 ---
 title: timespec_get, _timespec32_get, _timespec64_get1 | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp
 - devlang-cpp
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - timespec_get
@@ -43,74 +43,79 @@ helpviewer_keywords:
 - _timespec32_get function
 - _timespec64_get function
 ms.assetid: ed757258-b4f2-4c1d-a91b-22ea6ffce4ab
-caps.latest.revision: 
+caps.latest.revision: 4
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 13b85eef72ed1a2180af1b41bf93eefe499967bd
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 04665cdc46f2bb5aa880eae6022629df1a6258bb
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="timespecget-timespec32get-timespec64get"></a>timespec_get, _timespec32_get, _timespec64_get
-Imposta l'intervallo a cui punta il primo argomento sull'ora di calendario corrente, secondo la base temporale specificata.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-int timespec_get(  
-    struct timespec* const time_spec,  
-    int const base  
-);  
-int _timespec32_get(  
-    struct _timespec32* const time_spec,  
-    int const base  
-);  
-int _timespec64_get(  
-    struct _timespec64* const time_spec,  
-    int const base  
-);  
-  
-```  
-  
-#### <a name="parameters"></a>Parametri  
- `time_spec`  
- Puntatore a uno struct impostato sul tempo, in secondi e nanosecondi, dall'inizio del periodo.  
-  
- `base`  
- Un valore specifico dell'implementazione diverso da zero che specifica la base temporale.  
-  
-## <a name="return-value"></a>Valore restituito  
- Il valore di `base` se ha esito positivo; in caso contrario, restituisce zero.  
-  
-## <a name="remarks"></a>Note  
- Le funzioni `timespec_get` impostano l'ora corrente nello struct a cui punta l'argomento `time_spec` . Tutte le versioni di questo struct hanno due membri, `tv_sec` e `tv_nsec`. Il valore di `tv_sec` è impostato sul numero intero di secondi e `tv_nsec` sul numero intero di nanosecondi, arrotondato alla risoluzione del clock di sistema, dall'inizio del periodo specificato da `base`.  
-  
- **Sezione specifica Microsoft**  
-  
- Queste funzioni supportano solo `TIME_UTC` come valore di `base` . Il valore di `time_spec` viene impostato sul numero di secondi e nanosecondi dall'inizio del periodo, ovvero la mezzanotte del 1 gennaio 1970, UTC (Coordinated Universal Time). In `struct _timespec32`, `tv_sec` è un valore di `__time32_t` . In `struct _timespec64`, `tv_sec` è un valore di `__time64_t` . In `struct timespec`, `tv_sec` è un tipo `time_t` , da 32 bit o 64 bit di lunghezza a seconda che sia definita o meno la macro del preprocessore _USE_32BIT_TIME_T. La funzione `timespec_get` è una funzione inline che chiama `_timespec32_get` se è definito _USE_32BIT_TIME_T; in caso contrario, chiama `_timespec64_get`.  
-  
- **Fine sezione specifica Microsoft**  
-  
-## <a name="requirements"></a>Requisiti  
-  
-|Routine|Intestazione obbligatoria|  
-|-------------|---------------------|  
-|`timespec_get`, `_timespec32_get`, `_timespec64_get`|C: \<time.h>, C++: \<ctime> o \<time.h>|  
-  
- Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).  
-  
-## <a name="see-also"></a>Vedere anche  
- [Gestione del tempo](../../c-runtime-library/time-management.md)   
- [asctime, _wasctime](../../c-runtime-library/reference/asctime-wasctime.md)   
- [asctime_s, _wasctime_s](../../c-runtime-library/reference/asctime-s-wasctime-s.md)   
- [_ftime, _ftime32, _ftime64](../../c-runtime-library/reference/ftime-ftime32-ftime64.md)   
- [gmtime, _gmtime32, _gmtime64](../../c-runtime-library/reference/gmtime-gmtime32-gmtime64.md)   
- [gmtime_s, _gmtime32_s, _gmtime64_s](../../c-runtime-library/reference/gmtime-s-gmtime32-s-gmtime64-s.md)   
- [localtime, _localtime32, _localtime64](../../c-runtime-library/reference/localtime-localtime32-localtime64.md)   
- [localtime_s, _localtime32_s, _localtime64_s](../../c-runtime-library/reference/localtime-s-localtime32-s-localtime64-s.md)   
- [time, _time32, _time64](../../c-runtime-library/reference/time-time32-time64.md)   
- [_utime, _utime32, _utime64, _wutime, _wutime32, _wutime64](../../c-runtime-library/reference/utime-utime32-utime64-wutime-wutime32-wutime64.md)
+
+Imposta l'intervallo a cui punta il primo argomento sull'ora di calendario corrente, secondo la base temporale specificata.
+
+## <a name="syntax"></a>Sintassi
+
+```C
+int timespec_get(
+    struct timespec* const time_spec,
+    int const base
+);
+int _timespec32_get(
+    struct _timespec32* const time_spec,
+    int const base
+);
+int _timespec64_get(
+    struct _timespec64* const time_spec,
+    int const base
+);
+
+```
+
+### <a name="parameters"></a>Parametri
+
+*time_spec*<br/>
+Puntatore a uno struct impostato sul tempo, in secondi e nanosecondi, dall'inizio del periodo.
+
+*base*<br/>
+Un valore specifico dell'implementazione diverso da zero che specifica la base temporale.
+
+## <a name="return-value"></a>Valore restituito
+
+Il valore di *base* se ha esito positivo, in caso contrario, restituisce zero.
+
+## <a name="remarks"></a>Note
+
+Il **timespec_get in base** le funzioni impostano l'ora corrente nello struct a cui puntata il *time_spec* argomento. Tutte le versioni di questo struct hanno due membri, **tv_sec** e **tv_nsec**. Il **tv_sec** valore è impostato su numero intero di secondi e **tv_nsec** sul numero intero di nanosecondi, arrotondato alla risoluzione del clock di sistema, dall'inizio del periodo specificato da *base*.
+
+**Sezione specifica Microsoft**
+
+Queste funzioni supportano solo **TIME_UTC** come il *base* valore. Questo modo viene impostato il *time_spec* valore sul numero di secondi e nanosecondi dall'inizio del periodo, mezzanotte del 1 ° gennaio 1970, Coordinated Universal Time (UTC). In un **struct** **_timespec32**, **tv_sec** è un **__time32_t** valore. In un **struct** **_timespec64**, **tv_sec** è un **__time64_t** valore. In un **struct** **timespec**, **tv_sec** è un **time_t** tipo, ovvero a 32 bit o 64 bit di lunghezza a seconda che il preprocessore macro _USE_32BIT_TIME_T è definito. Il **timespec_get in base** funzione è una funzione inline che chiama **_timespec32_get** se è definito _USE_32BIT_TIME_T; in caso contrario, chiama **_timespec64_get**.
+
+**Fine sezione specifica Microsoft**
+
+## <a name="requirements"></a>Requisiti
+
+|Routine|Intestazione obbligatoria|
+|-------------|---------------------|
+|**timespec_get in base**, **_timespec32_get**, **_timespec64_get**|C: \<time.h>, C++: \<ctime> o \<time.h>|
+
+Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+
+## <a name="see-also"></a>Vedere anche
+
+[Gestione dell'ora](../../c-runtime-library/time-management.md)<br/>
+[asctime, _wasctime](asctime-wasctime.md)<br/>
+[asctime_s, _wasctime_s](asctime-s-wasctime-s.md)<br/>
+[_ftime, _ftime32, _ftime64](ftime-ftime32-ftime64.md)<br/>
+[gmtime, _gmtime32, _gmtime64](gmtime-gmtime32-gmtime64.md)<br/>
+[gmtime_s, _gmtime32_s, _gmtime64_s](gmtime-s-gmtime32-s-gmtime64-s.md)<br/>
+[localtime, _localtime32, _localtime64](localtime-localtime32-localtime64.md)<br/>
+[localtime_s, _localtime32_s, _localtime64_s](localtime-s-localtime32-s-localtime64-s.md)<br/>
+[time, _time32, _time64](time-time32-time64.md)<br/>
+[_utime, _utime32, _utime64, _wutime, _wutime32, _wutime64](utime-utime32-utime64-wutime-wutime32-wutime64.md)<br/>

@@ -1,12 +1,12 @@
 ---
 title: access (CRT) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - access
@@ -29,17 +29,18 @@ dev_langs:
 helpviewer_keywords:
 - access function
 ms.assetid: 65197793-bd0a-41c3-9c29-18de2d95d9a6
-caps.latest.revision: 
+caps.latest.revision: 5
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fb8d4666eef6de1cb0cd0730732bcbc6b3dfe2d2
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: b52c69f8822f9ae1948cb0420da6f569858709d2
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="access-crt"></a>access (CRT)
-Questa funzione POSIX è deprecata. In alternativa, usare [_access](../../c-runtime-library/reference/access-waccess.md) conforme a ISO C++ o [_access_s](../../c-runtime-library/reference/access-s-waccess-s.md) con sicurezza avanzata.
+
+Questa funzione POSIX è deprecata. In alternativa, usare [_access](access-waccess.md) conforme a ISO C++ o [_access_s](access-s-waccess-s.md) con sicurezza avanzata.

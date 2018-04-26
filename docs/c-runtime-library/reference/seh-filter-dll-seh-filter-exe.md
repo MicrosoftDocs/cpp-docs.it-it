@@ -1,12 +1,12 @@
 ---
 title: _seh_filter_dll, _seh_filter_exe | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _XcptFilter
@@ -40,62 +40,68 @@ helpviewer_keywords:
 - _seh_filter_dll function
 - _seh_filter_exe function
 ms.assetid: 747e5963-3a12-4bf5-b5c4-d4c1b6068e15
-caps.latest.revision: 
+caps.latest.revision: 14
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ccdaa9f89a45d957b0d56bc435e5cf61cd152e8d
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 4adbca27bb86fd7ac2edc53476a0c1b42ce46c01
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="sehfilterdll-sehfilterexe"></a>_seh_filter_dll, _seh_filter_exe
-Identifica l'eccezione e la relativa azione da intraprendere.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-int __cdecl _seh_filter_dll(  
-   unsigned long _ExceptionNum,  
-   struct _EXCEPTION_POINTERS* _ExceptionPtr  
-);  
-int __cdecl _seh_filter_exe(  
-   unsigned long _ExceptionNum,  
-   struct _EXCEPTION_POINTERS* _ExceptionPtr  
-);  
-```  
-  
-#### <a name="parameters"></a>Parametri  
- [in] `_ExceptionNum`  
- Identificatore dell'eccezione.  
-  
- [in] `_ExceptionPtr`  
- Puntatore alle informazioni sull'eccezione.  
-  
-## <a name="return-value"></a>Valore restituito  
- Un intero che indica l'azione da intraprendere in base al risultato dell'elaborazione delle eccezioni.  
-  
-## <a name="remarks"></a>Note  
- Questi metodi vengono chiamati dall'espressione di filtro delle eccezioni dell'[istruzione try-except](../../cpp/try-except-statement.md). Il metodo consulta una tabella interna di costanti per identificare l'eccezione e determinare l'azione appropriata, come illustrato di seguito. I numeri di eccezione sono definiti in winnt.h e i numeri di segnale in signal.h.  
-  
-|Numero di eccezioni (unsigned long)|Numero di segnale|  
-|----------------------------------------|-------------------|  
-|STATUS_ACCESS_VIOLATION|SIGSEGV|  
-|STATUS_ILLEGAL_INSTRUCTION|SIGILL|  
-|STATUS_PRIVILEGED_INSTRUCTION|SIGILL|  
-|STATUS_FLOAT_DENORMAL_OPERAND|SIGFPE|  
-|STATUS_FLOAT_DIVIDE_BY_ZERO|SIGFPE|  
-|STATUS_FLOAT_INEXACT_RESULT|SIGFPE|  
-|STATUS_FLOAT_INVALID_OPERATION|SIGFPE|  
-|STATUS_FLOAT_OVERFLOW|SIGFPE|  
-|STATUS_FLOAT_STACK_CHECK|SIGFPE|  
-|STATUS_FLOAT_UNDERFLOW|SIGFPE|  
-  
-## <a name="requirements"></a>Requisiti  
- **Intestazione:** corecrt_startup.h  
-  
-## <a name="see-also"></a>Vedere anche  
- [Riferimento alfabetico alle funzioni](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)
+
+Identifica l'eccezione e la relativa azione da intraprendere.
+
+## <a name="syntax"></a>Sintassi
+
+```C
+int __cdecl _seh_filter_dll(
+   unsigned long _ExceptionNum,
+   struct _EXCEPTION_POINTERS* _ExceptionPtr
+);
+int __cdecl _seh_filter_exe(
+   unsigned long _ExceptionNum,
+   struct _EXCEPTION_POINTERS* _ExceptionPtr
+);
+```
+
+### <a name="parameters"></a>Parametri
+
+*_ExceptionNum*<br/>
+Identificatore dell'eccezione.
+
+*_ExceptionPtr*<br/>
+Puntatore alle informazioni sull'eccezione.
+
+## <a name="return-value"></a>Valore restituito
+
+Un intero che indica l'azione da intraprendere in base al risultato dell'elaborazione delle eccezioni.
+
+## <a name="remarks"></a>Note
+
+Questi metodi vengono chiamati dall'espressione di filtro delle eccezioni dell'[istruzione try-except](../../cpp/try-except-statement.md). Il metodo consulta una tabella interna di costanti per identificare l'eccezione e determinare l'azione appropriata, come illustrato di seguito. I numeri di eccezione sono definiti in winnt.h e i numeri di segnale in signal.h.
+
+|Numero di eccezioni (unsigned long)|Numero di segnale|
+|----------------------------------------|-------------------|
+|STATUS_ACCESS_VIOLATION|SIGSEGV|
+|STATUS_ILLEGAL_INSTRUCTION|SIGILL|
+|STATUS_PRIVILEGED_INSTRUCTION|SIGILL|
+|STATUS_FLOAT_DENORMAL_OPERAND|SIGFPE|
+|STATUS_FLOAT_DIVIDE_BY_ZERO|SIGFPE|
+|STATUS_FLOAT_INEXACT_RESULT|SIGFPE|
+|STATUS_FLOAT_INVALID_OPERATION|SIGFPE|
+|STATUS_FLOAT_OVERFLOW|SIGFPE|
+|STATUS_FLOAT_STACK_CHECK|SIGFPE|
+|STATUS_FLOAT_UNDERFLOW|SIGFPE|
+
+## <a name="requirements"></a>Requisiti
+
+**Intestazione:** corecrt_startup.h
+
+## <a name="see-also"></a>Vedere anche
+
+[Riferimento alfabetico alle funzioni](crt-alphabetical-function-reference.md)<br/>

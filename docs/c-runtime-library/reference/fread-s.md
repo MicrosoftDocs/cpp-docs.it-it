@@ -1,12 +1,12 @@
 ---
 title: fread_s | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - fread_s
@@ -29,135 +29,140 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: ce735de0-f005-435d-a8f2-6f4b80ac775e
-caps.latest.revision: 
+caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5fedb1419b3558fc773933619de247cfd3685e06
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 48fc286595835f30c259c4ef6b8356917968c150
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="freads"></a>fread_s
-Legge i dati da un flusso. Questa versione di [fread](../../c-runtime-library/reference/fread.md) include miglioramenti per la sicurezza, come descritto in [Funzionalità di sicurezza in CRT](../../c-runtime-library/security-features-in-the-crt.md).  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-size_t fread_s(   
-   void *buffer,  
-   size_t bufferSize,  
-   size_t elementSize,  
-   size_t count,  
-   FILE *stream   
-);  
-```  
-  
-#### <a name="parameters"></a>Parametri  
- `buffer`  
- Percorso di archiviazione per i dati.  
-  
- `bufferSize`  
- Dimensioni del buffer di destinazione in byte.  
-  
- `elementSize`  
- Dimensione dell'elemento da leggere in byte.  
-  
- `count`  
- Numero massimo di elementi da leggere.  
-  
- `stream`  
- Puntatore alla struttura `FILE` .  
-  
-## <a name="return-value"></a>Valore restituito  
- `fread_s` restituisce il numero di elementi (interi) letti nel buffer, che può essere minore di `count` se viene rilevato un errore di lettura o la fine del file prima di raggiungere `count`. Usa la funzione `feof` o `ferror` per distinguere una condizione di errore da una condizione di fine del file. Se `size` o `count` è 0, `fread_s` restituisce 0 e il contenuto del buffer rimane invariato. Se `stream` o `buffer` è un puntatore Null, `fread_s` richiama il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, la funzione imposta `errno` su`EINVAL` e restituisce 0.  
-  
- Per altre informazioni sui codici di errore, vedere [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
-  
-## <a name="remarks"></a>Note  
- La funzione `fread_s` legge fino a `count` elementi con dimensioni in byte pari a `elementSize` dall'elemento `stream` di output e li archivia in `buffer`.  Il puntatore del file associato a `stream` (se presente) viene incrementato del numero di byte effettivamente letti. Se il flusso specificato viene aperto in modalità testo, coppie di ritorno a capo-avanzamento di riga restituito vengono sostituite con caratteri di avanzamento riga singola. La sostituzione non ha effetto sul puntatore del file o sul valore restituito. La posizione del puntatore del file è indeterminata se si verifica un errore. Non è possibile determinare il valore di un elemento letto parzialmente.  
-  
- Questa funzione blocca gli altri thread. Se è necessaria una versione che non blocca il thread, usare `_fread_nolock`.  
-  
-## <a name="requirements"></a>Requisiti  
-  
-|Funzione|Intestazione obbligatoria|  
-|--------------|---------------------|  
-|`fread_s`|\<stdio.h>|  
-  
- Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).  
-  
-## <a name="example"></a>Esempio  
-  
-```cpp  
-// crt_fread_s.c  
-// Command line: cl /EHsc /nologo /W4 crt_fread_s.c  
-//  
-// This program opens a file that's named FREAD.OUT and  
-// writes characters to the file. It then tries to open  
-// FREAD.OUT and read in characters by using fread_s. If the attempt succeeds,  
-// the program displays the number of actual items read.  
-  
-#include <stdio.h>  
-  
-#define BUFFERSIZE 30  
-#define DATASIZE 22  
-#define ELEMENTCOUNT 2  
-#define ELEMENTSIZE (DATASIZE/ELEMENTCOUNT)  
-#define FILENAME "FREAD.OUT"  
-  
-int main( void )  
-{  
-   FILE *stream;  
-   char list[30];  
-   int  i, numread, numwritten;  
-  
-   for ( i = 0; i < DATASIZE; i++ )  
-      list[i] = (char)('z' - i);  
-   list[DATASIZE] = '\0'; // terminal null so we can print it  
-  
-   // Open file in text mode:  
-   if( fopen_s( &stream, FILENAME, "w+t" ) == 0 )  
-   {  
-      // Write DATASIZE characters to stream   
-      printf( "Contents of buffer before write/read:\n\t%s\n\n", list );  
-      numwritten = fwrite( list, sizeof( char ), DATASIZE, stream );  
-      printf( "Wrote %d items\n\n", numwritten );  
-      fclose( stream );  
-   } else {  
-      printf( "Problem opening the file\n" );  
-      return -1;  
-   }  
-  
-   if( fopen_s( &stream, FILENAME, "r+t" ) == 0 )   {  
-      // Attempt to read in characters in 2 blocks of 11  
-      numread = fread_s( list, BUFFERSIZE, ELEMENTSIZE, ELEMENTCOUNT, stream );  
-      printf( "Number of %d-byte elements read = %d\n\n", ELEMENTSIZE, numread );  
-      printf( "Contents of buffer after write/read:\n\t%s\n", list );  
-      fclose( stream );  
-   } else {  
-      printf( "File could not be opened\n" );  
-      return -1;  
-   }  
-}  
-```  
-  
-```Output  
-Contents of buffer before write/read:   
-        zyxwvutsrqponmlkjihgfe  
-  
-Wrote 22 items  
-  
-Number of 11-byte elements read = 2  
-  
-Contents of buffer after write/read:   
-        zyxwvutsrqponmlkjihgfe  
-```  
-  
-## <a name="see-also"></a>Vedere anche  
- [I/O di flusso](../../c-runtime-library/stream-i-o.md)   
- [fwrite](../../c-runtime-library/reference/fwrite.md)   
- [_read](../../c-runtime-library/reference/read.md)
+
+Legge i dati da un flusso. Questa versione di [fread](fread.md) include miglioramenti per la sicurezza, come descritto in [Funzionalità di sicurezza in CRT](../../c-runtime-library/security-features-in-the-crt.md).
+
+## <a name="syntax"></a>Sintassi
+
+```C
+size_t fread_s(
+   void *buffer,
+   size_t bufferSize,
+   size_t elementSize,
+   size_t count,
+   FILE *stream
+);
+```
+
+### <a name="parameters"></a>Parametri
+
+*buffer*<br/>
+Percorso di archiviazione per i dati.
+
+*BufferSize*<br/>
+Dimensioni del buffer di destinazione in byte.
+
+*elementSize*<br/>
+Dimensione dell'elemento da leggere in byte.
+
+*count*<br/>
+Numero massimo di elementi da leggere.
+
+*Flusso*<br/>
+Puntatore alla struttura **FILE**.
+
+## <a name="return-value"></a>Valore restituito
+
+**fread_s** restituisce il numero di (intero) di elementi che sono stati letti nel buffer, che può essere minore *conteggio* se viene rilevata un errore di lettura o la fine del file prima *conteggio* viene raggiunto. Usare la **feof** oppure **ferror** funzione per distinguere un errore da una condizione di fine del file. Se *dimensioni* oppure *conteggio* 0 **fread_s** restituisce 0 e il contenuto del buffer è rimasti invariato. Se *flusso* oppure *buffer* è un puntatore null **fread_s** richiama il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md) . Se l'esecuzione può continuare, la funzione imposta **errno** alla **EINVAL** e restituisce 0.
+
+Per altre informazioni sui codici di errore, vedere [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+
+## <a name="remarks"></a>Note
+
+Il **fread_s** funzione legge fino a *conteggio* elementi dello *elementSize* byte dall'input *flusso* e li archivia in *buffer*.  Il puntatore del file che è associato *flusso* (se presente) viene incrementato del numero di byte effettivamente letti. Se il flusso specificato viene aperto in modalità testo, coppie di ritorno a capo-avanzamento di riga restituito vengono sostituite con caratteri di avanzamento riga singola. La sostituzione non ha effetto sul puntatore del file o sul valore restituito. La posizione del puntatore del file è indeterminata se si verifica un errore. Non è possibile determinare il valore di un elemento letto parzialmente.
+
+Questa funzione blocca gli altri thread. Se è necessaria una versione non di blocco, utilizzare **fread_nolock**.
+
+## <a name="requirements"></a>Requisiti
+
+|Funzione|Intestazione obbligatoria|
+|--------------|---------------------|
+|**fread_s**|\<stdio.h>|
+
+Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+
+## <a name="example"></a>Esempio
+
+```cpp
+// crt_fread_s.c
+// Command line: cl /EHsc /nologo /W4 crt_fread_s.c
+//
+// This program opens a file that's named FREAD.OUT and
+// writes characters to the file. It then tries to open
+// FREAD.OUT and read in characters by using fread_s. If the attempt succeeds,
+// the program displays the number of actual items read.
+
+#include <stdio.h>
+
+#define BUFFERSIZE 30
+#define DATASIZE 22
+#define ELEMENTCOUNT 2
+#define ELEMENTSIZE (DATASIZE/ELEMENTCOUNT)
+#define FILENAME "FREAD.OUT"
+
+int main( void )
+{
+   FILE *stream;
+   char list[30];
+   int  i, numread, numwritten;
+
+   for ( i = 0; i < DATASIZE; i++ )
+      list[i] = (char)('z' - i);
+   list[DATASIZE] = '\0'; // terminal null so we can print it
+
+   // Open file in text mode:
+   if( fopen_s( &stream, FILENAME, "w+t" ) == 0 )
+   {
+      // Write DATASIZE characters to stream
+      printf( "Contents of buffer before write/read:\n\t%s\n\n", list );
+      numwritten = fwrite( list, sizeof( char ), DATASIZE, stream );
+      printf( "Wrote %d items\n\n", numwritten );
+      fclose( stream );
+   } else {
+      printf( "Problem opening the file\n" );
+      return -1;
+   }
+
+   if( fopen_s( &stream, FILENAME, "r+t" ) == 0 )   {
+      // Attempt to read in characters in 2 blocks of 11
+      numread = fread_s( list, BUFFERSIZE, ELEMENTSIZE, ELEMENTCOUNT, stream );
+      printf( "Number of %d-byte elements read = %d\n\n", ELEMENTSIZE, numread );
+      printf( "Contents of buffer after write/read:\n\t%s\n", list );
+      fclose( stream );
+   } else {
+      printf( "File could not be opened\n" );
+      return -1;
+   }
+}
+```
+
+```Output
+Contents of buffer before write/read:
+        zyxwvutsrqponmlkjihgfe
+
+Wrote 22 items
+
+Number of 11-byte elements read = 2
+
+Contents of buffer after write/read:
+        zyxwvutsrqponmlkjihgfe
+```
+
+## <a name="see-also"></a>Vedere anche
+
+[I/O di flusso](../../c-runtime-library/stream-i-o.md)<br/>
+[fwrite](fwrite.md)<br/>
+[_read](read.md)<br/>

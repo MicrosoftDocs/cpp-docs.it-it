@@ -1,12 +1,12 @@
 ---
 title: _CrtDbgBreak | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _CrtDbgBreak
@@ -31,44 +31,49 @@ helpviewer_keywords:
 - CrtDbgBreak function
 - _CrtDbgBreak function
 ms.assetid: 01f8b4a2-a2c7-4e1f-9f39-e573b4a7871f
-caps.latest.revision: 
+caps.latest.revision: 12
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f49870ace2b23983d7eb121cd18ea3d755250e51
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: d63795ec929fe1333bfc0d55acc307b52d559faf
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="crtdbgbreak"></a>_CrtDbgBreak
-Imposta un punto di interruzione su una particolare riga di codice. (Usato solo in modalità debug).  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-void _CrtDbgBreak( void );  
-```  
-  
-## <a name="return-value"></a>Valore restituito  
- Nessun valore restituito.  
-  
-## <a name="remarks"></a>Note  
- La funzione `_CrtDbgBreak` imposta un punto di interruzione di debug nella riga di codice specifica in cui si trova la funzione. Questa funzione viene usata in modalità di debug solo e dipende da `_DEBUG` definito in precedenza.  
-  
- Per informazioni sull'uso di altre funzioni di runtime capaci di eseguire l'hook e sulla scrittura delle funzioni di hook definite dal client, vedere [Writing Your Own Debug Hook Functions](/visualstudio/debugger/debug-hook-function-writing) (Scrittura di funzioni di hook di debug).  
-  
-## <a name="requirements"></a>Requisiti  
-  
-|Routine|Intestazione obbligatoria|  
-|-------------|---------------------|  
-|`_CrtDbgBreak`|\<CRTDBG.h>|  
-  
-## <a name="libraries"></a>Librerie  
- Solo le versioni di debug delle [librerie di runtime di C](../../c-runtime-library/crt-library-features.md).  
-  
-## <a name="see-also"></a>Vedere anche  
- [Routine di debug](../../c-runtime-library/debug-routines.md)   
- [__debugbreak](../../intrinsics/debugbreak.md)
+
+Imposta un punto di interruzione su una particolare riga di codice. (Usato solo in modalità debug).
+
+## <a name="syntax"></a>Sintassi
+
+```C
+void _CrtDbgBreak( void );
+```
+
+## <a name="return-value"></a>Valore restituito
+
+Nessun valore restituito.
+
+## <a name="remarks"></a>Note
+
+Il **CrtDbgBreak** funzione imposta un punto di interruzione di debug nella riga di codice specifica in cui risiede la funzione. Questa funzione viene utilizzata solo in modalità debug e dipende **debug** viene definito in precedenza.
+
+Per informazioni sull'uso di altre funzioni di runtime capaci di eseguire l'hook e sulla scrittura delle funzioni di hook definite dal client, vedere [Writing Your Own Debug Hook Functions](/visualstudio/debugger/debug-hook-function-writing) (Scrittura di funzioni di hook di debug).
+
+## <a name="requirements"></a>Requisiti
+
+|Routine|Intestazione obbligatoria|
+|-------------|---------------------|
+|**_CrtDbgBreak**|\<CRTDBG.h>|
+
+## <a name="libraries"></a>Librerie
+
+Solo le versioni di debug delle [librerie di runtime di C](../../c-runtime-library/crt-library-features.md).
+
+## <a name="see-also"></a>Vedere anche
+
+[Routine di debug](../../c-runtime-library/debug-routines.md)<br/>
+[__debugbreak](../../intrinsics/debugbreak.md)<br/>

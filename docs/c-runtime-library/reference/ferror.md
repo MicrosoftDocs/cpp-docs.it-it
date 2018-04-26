@@ -1,12 +1,12 @@
 ---
 title: ferror | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - ferror
@@ -32,57 +32,63 @@ helpviewer_keywords:
 - streams, testing for errors
 - errors [C++], testing for stream
 ms.assetid: 528a34bc-f2aa-4c3f-b89a-5b148e6864f7
-caps.latest.revision: 
+caps.latest.revision: 13
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7db390539df0761aacdb11de5eace58b2c9c87f8
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 3baec1f3f8775b422aa9e0e5da3a6eb3e738e74b
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="ferror"></a>ferror
-Test per un errore in un flusso.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-int ferror(   
-   FILE *stream   
-);  
-```  
-  
-#### <a name="parameters"></a>Parametri  
- `stream`  
- Puntatore alla struttura `FILE` .  
-  
-## <a name="return-value"></a>Valore restituito  
- Se nessun errore si è verificato in `stream`, `ferror` restituisce 0. In caso contrario, viene restituito un valore diverso da zero. Se il flusso è `NULL`, `ferror` richiama il gestore dei parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, la funzione imposta `errno` su`EINVAL` e restituisce 0.  
-  
- Per informazioni su questi e altri codici di errore, vedere [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
-  
-## <a name="remarks"></a>Note  
- La routine `ferror` (implementata sia come funzione che come macro) testa un errore di lettura o scrittura nel file associato a `stream`. Se si è verificato un errore, il contrassegno di errore per il flusso rimane impostato fino alla chiusura o azzeramento del flusso, oppure finché viene chiamato `clearerr`.  
-  
-## <a name="requirements"></a>Requisiti  
-  
-|Funzione|Intestazione obbligatoria|  
-|--------------|---------------------|  
-|`ferror`|\<stdio.h>|  
-  
- Per altre informazioni sulla compatibilità, vedere la sezione [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
-  
-## <a name="example"></a>Esempio  
- Vedere l'esempio per [feof](../../c-runtime-library/reference/feof.md).  
-  
-## <a name="see-also"></a>Vedere anche  
- [Gestione degli errori](../../c-runtime-library/error-handling-crt.md)   
- [I/O di flusso](../../c-runtime-library/stream-i-o.md)   
- [clearerr](../../c-runtime-library/reference/clearerr.md)   
- [_eof](../../c-runtime-library/reference/eof.md)   
- [feof](../../c-runtime-library/reference/feof.md)   
- [fopen, _wfopen](../../c-runtime-library/reference/fopen-wfopen.md)   
- [perror, _wperror](../../c-runtime-library/reference/perror-wperror.md)
+
+Test per un errore in un flusso.
+
+## <a name="syntax"></a>Sintassi
+
+```C
+int ferror(
+   FILE *stream
+);
+```
+
+### <a name="parameters"></a>Parametri
+
+*Flusso*<br/>
+Puntatore alla struttura **FILE**.
+
+## <a name="return-value"></a>Valore restituito
+
+Se si è verificato alcun errore in *flusso*, **ferror** restituisce 0. In caso contrario, viene restituito un valore diverso da zero. Se flusso **NULL**, **ferror** richiama il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, la funzione imposta **errno** alla **EINVAL** e restituisce 0.
+
+Per informazioni su questi e altri codici di errore, vedere [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+
+## <a name="remarks"></a>Note
+
+Il **ferror** routine (implementata sia come una funzione che come macro) testa una lettura o scrittura di errore nel file associato *flusso*. Se si è verificato un errore, l'indicatore di errore per il flusso rimane impostato fino alla chiusura o azzeramento del flusso o fino alla **clearerr** viene chiamato su di essa.
+
+## <a name="requirements"></a>Requisiti
+
+|Funzione|Intestazione obbligatoria|
+|--------------|---------------------|
+|**ferror**|\<stdio.h>|
+
+Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+
+## <a name="example"></a>Esempio
+
+Vedere l'esempio per [feof](feof.md).
+
+## <a name="see-also"></a>Vedere anche
+
+[Gestione degli errori](../../c-runtime-library/error-handling-crt.md)<br/>
+[I/O di flusso](../../c-runtime-library/stream-i-o.md)<br/>
+[clearerr](clearerr.md)<br/>
+[_eof](eof.md)<br/>
+[feof](feof.md)<br/>
+[fopen, _wfopen](fopen-wfopen.md)<br/>
+[perror, _wperror](perror-wperror.md)<br/>

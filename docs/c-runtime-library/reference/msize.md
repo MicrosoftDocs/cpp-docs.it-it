@@ -1,12 +1,12 @@
 ---
 title: _msize | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _msize
@@ -33,61 +33,67 @@ helpviewer_keywords:
 - msize function
 - _msize function
 ms.assetid: 02b1f89e-d0d7-4f12-938a-9eeba48a0f88
-caps.latest.revision: 
+caps.latest.revision: 12
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2fdf8e5b6c9b0f6b63ac14784a90a4dc94b6abdc
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 4ec596d74c5374720676b0c02f9d053fa443c3a3
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="msize"></a>_msize
-Restituisce le dimensioni di un blocco di memoria allocato nell'heap.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-  
-      size_t _msize(  
-   void *memblock   
-);  
-```  
-  
-#### <a name="parameters"></a>Parametri  
- `memblock`  
- Puntatore al blocco di memoria.  
-  
-## <a name="return-value"></a>Valore restituito  
- `_msize` restituisce le dimensioni (in byte) come intero senza segno.  
-  
-## <a name="remarks"></a>Note  
- La funzione `_msize` restituisce le dimensioni, in byte, del blocco di memoria allocato da una chiamata a `calloc`, `malloc` o `realloc`.  
-  
- Quando l'applicazione viene collegata a una versione di debug delle librerie di runtime C, `_msize` viene risolto in [_msize_dbg](../../c-runtime-library/reference/msize-dbg.md). Per altre informazioni su come viene gestito l'heap durante il processo di debug, vedere [The CRT Debug Heap](/visualstudio/debugger/crt-debug-heap-details) (Informazioni dettagliate sull'heap di debug CRT).  
-  
- Questa funzione convalida il relativo parametro. Se `memblock` è un puntatore Null, `_msize` richiama il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'errore viene gestito, la funzione imposta `errno` su `EINVAL` e restituisce -1.  
-  
-## <a name="requirements"></a>Requisiti  
-  
-|Routine|Intestazione obbligatoria|  
-|-------------|---------------------|  
-|`_msize`|\<malloc.h>|  
-  
- Per altre informazioni sulla compatibilità, vedere la sezione [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
-  
-## <a name="libraries"></a>Librerie  
- Tutte le versioni delle [librerie di runtime C](../../c-runtime-library/crt-library-features.md).  
-  
-## <a name="example"></a>Esempio  
- Vedere l'esempio per [realloc](../../c-runtime-library/reference/realloc.md).  
-  
-## <a name="see-also"></a>Vedere anche  
- [Memory Allocation](../../c-runtime-library/memory-allocation.md)  (Allocazione di memoria)  
- [calloc](../../c-runtime-library/reference/calloc.md)   
- [_expand](../../c-runtime-library/reference/expand.md)   
- [malloc](../../c-runtime-library/reference/malloc.md)   
- [realloc](../../c-runtime-library/reference/realloc.md)
+
+Restituisce le dimensioni di un blocco di memoria allocato nell'heap.
+
+## <a name="syntax"></a>Sintassi
+
+```C
+size_t _msize(
+   void *memblock
+);
+```
+
+### <a name="parameters"></a>Parametri
+
+*memblock*<br/>
+Puntatore al blocco di memoria.
+
+## <a name="return-value"></a>Valore restituito
+
+**msize** restituisce le dimensioni (in byte) come un intero senza segno.
+
+## <a name="remarks"></a>Note
+
+Il **msize** funzione restituisce le dimensioni, in byte, del blocco di memoria allocata da una chiamata a **calloc**, **malloc**, oppure **realloc**.
+
+Quando l'applicazione viene collegata a una versione di debug delle librerie di runtime C **msize** risolve [msize_dbg](msize-dbg.md). Per altre informazioni su come viene gestito l'heap durante il processo di debug, vedere [The CRT Debug Heap](/visualstudio/debugger/crt-debug-heap-details) (Informazioni dettagliate sull'heap di debug CRT).
+
+Questa funzione convalida il relativo parametro. Se *memblock* è un puntatore null **msize** richiama un gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'errore viene gestito, la funzione imposta **errno** alla **EINVAL** e restituisce -1.
+
+## <a name="requirements"></a>Requisiti
+
+|Routine|Intestazione obbligatoria|
+|-------------|---------------------|
+|**_msize**|\<malloc.h>|
+
+Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+
+## <a name="libraries"></a>Librerie
+
+Tutte le versioni delle [librerie di runtime C](../../c-runtime-library/crt-library-features.md).
+
+## <a name="example"></a>Esempio
+
+Vedere l'esempio per [realloc](realloc.md).
+
+## <a name="see-also"></a>Vedere anche
+
+[Allocazione di memoria](../../c-runtime-library/memory-allocation.md)<br/>
+[calloc](calloc.md)<br/>
+[_expand](expand.md)<br/>
+[malloc](malloc.md)<br/>
+[realloc](realloc.md)<br/>

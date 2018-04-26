@@ -1,12 +1,12 @@
 ---
 title: imaxabs | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.custom: ''
+ms.date: 04/05/2018
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - imaxabs
@@ -30,77 +30,82 @@ dev_langs:
 helpviewer_keywords:
 - imaxabs function
 ms.assetid: de2566a3-1415-4e9a-91b5-7ac3a49ebf5e
-caps.latest.revision: 
+caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ff253849a185b61a9bea98d280cb8f8fdbe112e3
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: cc756c4516ec5770fff6d46799740f3458fc112d
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="imaxabs"></a>imaxabs
-Calcola il valore assoluto di un intero di qualsiasi dimensione.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-intmax_t imaxabs(  
-   intmax_t n   
-);  
-```  
-  
-#### <a name="parameters"></a>Parametri  
- *n*  
- Valore intero.  
-  
-## <a name="return-value"></a>Valore restituito  
- La funzione `imaxabs` restituisce il valore assoluto dell'argomento. Non vi è restituzione di errori.  
-  
+
+Calcola il valore assoluto di un intero di qualsiasi dimensione.
+
+## <a name="syntax"></a>Sintassi
+
+```C
+intmax_t imaxabs(
+   intmax_t n
+);
+```
+
+### <a name="parameters"></a>Parametri
+
+*n*<br/>
+Valore intero.
+
+## <a name="return-value"></a>Valore restituito
+
+Il **imaxabs** funzione restituisce il valore assoluto dell'argomento. Non vi è restituzione di errori.
+
 > [!NOTE]
->  Dato che l'intervallo di numeri interi negativi che possono essere rappresentati mediante `intmax_t` è maggiore dell'intervallo di numeri interi positivi che possono essere rappresentati, è possibile fornire un argomento a `imaxabs` che non è possibile convertire. Se il valore assoluto dell'argomento non può essere rappresentato dal tipo restituito, il comportamento di `imaxabs` è indefinito.  
-  
-## <a name="requirements"></a>Requisiti  
-  
-|Routine|Intestazione obbligatoria|  
-|-------------|---------------------|  
-|`imaxabs`|\<inttypes.h>|  
-  
- Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).  
-  
-## <a name="libraries"></a>Librerie  
- Tutte le versioni delle [librerie di runtime C](../../c-runtime-library/crt-library-features.md).  
-  
-## <a name="example"></a>Esempio  
-  
-```  
-// crt_imaxabs.c  
-// Build using: cl /W3 /Tc crt_imaxabs.c  
-// This example calls imaxabs to compute an  
-// absolute value, then displays the results.  
-  
-#include <stdio.h>  
-#include <stdlib.h>  
-#include <inttypes.h>  
-  
-int main(int argc, char *argv[])  
-{  
-   intmax_t x = LLONG_MIN + 2;  
-  
-   printf("The absolute value of %lld is %lld\n", x, imaxabs(x));  
-}  
-```  
-  
-```Output  
-The absolute value of -9223372036854775806 is 9223372036854775806  
-```  
-  
-## <a name="see-also"></a>Vedere anche  
- [Data Conversion](../../c-runtime-library/data-conversion.md)  (Conversione dei dati)  
- [Floating-Point Support](../../c-runtime-library/floating-point-support.md)  (Supporto delle funzioni a virgola mobile)  
- [abs, labs, llabs, _abs64](../../c-runtime-library/reference/abs-labs-llabs-abs64.md)   
- [_cabs](../../c-runtime-library/reference/cabs.md)   
- [fabs, fabsf, fabsl](../../c-runtime-library/reference/fabs-fabsf-fabsl.md)   
+> Poiché l'intervallo di numeri interi negativi che può essere rappresentato tramite **intmax_t** è maggiore dell'intervallo di numeri interi positivi che possono essere rappresentati, è possibile fornire un argomento a **imaxabs** che non può essere convertito. Se il valore assoluto dell'argomento non può essere rappresentato dalla restituzione tipo, il comportamento delle **imaxabs** è definito.
+
+## <a name="requirements"></a>Requisiti
+
+|Routine|Intestazione obbligatoria|
+|-------------|---------------------|
+|**imaxabs**|\<inttypes.h>|
+
+Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+
+## <a name="libraries"></a>Librerie
+
+Tutte le versioni delle [librerie di runtime C](../../c-runtime-library/crt-library-features.md).
+
+## <a name="example"></a>Esempio
+
+```C
+// crt_imaxabs.c
+// Build using: cl /W3 /Tc crt_imaxabs.c
+// This example calls imaxabs to compute an
+// absolute value, then displays the results.
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <inttypes.h>
+
+int main(int argc, char *argv[])
+{
+   intmax_t x = LLONG_MIN + 2;
+
+   printf("The absolute value of %lld is %lld\n", x, imaxabs(x));
+}
+```
+
+```Output
+The absolute value of -9223372036854775806 is 9223372036854775806
+```
+
+## <a name="see-also"></a>Vedere anche
+
+[Conversione dei dati](../../c-runtime-library/data-conversion.md)<br/>
+[Supporto delle funzioni a virgola mobile](../../c-runtime-library/floating-point-support.md)<br/>
+[abs, labs, llabs, _abs64](abs-labs-llabs-abs64.md)<br/>
+[_cabs](cabs.md)<br/>
+[fabs, fabsf, fabsl](fabs-fabsf-fabsl.md)<br/>

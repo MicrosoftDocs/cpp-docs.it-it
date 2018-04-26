@@ -1,12 +1,12 @@
 ---
 title: _aligned_free | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _aligned_free
@@ -32,46 +32,50 @@ helpviewer_keywords:
 - _aligned_free function
 - aligned_free function
 ms.assetid: ed1ce952-cdfc-4682-85cc-f75d4101603d
-caps.latest.revision: 
+caps.latest.revision: 16
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 30b37b6424b02ffb4eab6f1d90d03d7b2a3154b2
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 31c618eb54051582c7e398b174b943e5bf7d2d37
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="alignedfree"></a>_aligned_free
-Libera un blocco di memoria che è stato allocato con [_aligned_malloc](../../c-runtime-library/reference/aligned-malloc.md) o [_aligned_offset_malloc](../../c-runtime-library/reference/aligned-offset-malloc.md).  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-void _aligned_free (  
-   void *memblock  
-);  
-```  
-  
-#### <a name="parameters"></a>Parametri  
- `memblock`  
- Puntatore al blocco di memoria che è stato restituito alla funzione `_aligned_malloc` o `_aligned_offset_malloc`.  
-  
-## <a name="remarks"></a>Note  
- `_aligned_free` è contrassegnato `__declspec(noalias)`, pertanto si garantisce che la funzione non modifichi le variabili globali. Per altre informazioni, vedere [noalias](../../cpp/noalias.md).  
-  
- Questa funzione non convalida il parametro, a differenza di altre funzioni CRT _aligned. Se `memblock` è un puntatore `NULL`, questa funzione non esegue alcuna azione. Non modifica `errno` e non richiama il gestore di parametri non validi. Se si verifica un errore nella funzione a causa del mancato utilizzo precedente di funzioni _aligned per allocare il blocco di memoria oppure si verifica un problema di allineamento della memoria a causa di alcune calamità impreviste, la funzione genera un report di debug dalle [Macro _RPT, _RPTF, _RPTW, _RPTFW](../../c-runtime-library/reference/rpt-rptf-rptw-rptfw-macros.md).  
-  
-## <a name="requirements"></a>Requisiti  
-  
-|Routine|Intestazione obbligatoria|  
-|-------------|---------------------|  
-|`_aligned_free`|\<malloc.h>|  
-  
-## <a name="example"></a>Esempio  
- Per altre informazioni, vedere [_aligned_malloc](../../c-runtime-library/reference/aligned-malloc.md).  
-  
-## <a name="see-also"></a>Vedere anche  
- [Allineamento dati](../../c-runtime-library/data-alignment.md)
+
+Libera un blocco di memoria che è stato allocato con [_aligned_malloc](aligned-malloc.md) o [_aligned_offset_malloc](aligned-offset-malloc.md).
+
+## <a name="syntax"></a>Sintassi
+
+```C
+void _aligned_free (
+   void *memblock
+);
+```
+
+### <a name="parameters"></a>Parametri
+
+*memblock* un puntatore al blocco di memoria che è stato restituito per il **aligned_malloc** o **aligned_offset_malloc** (funzione).
+
+## <a name="remarks"></a>Note
+
+**aligned_free** contrassegnato `__declspec(noalias)`, vale a dire che la funzione è sicuramente non per modificare le variabili globali. Per altre informazioni, vedere [noalias](../../cpp/noalias.md).
+
+Questa funzione non convalida il parametro, a differenza di altre funzioni CRT _aligned. Se *memblock* è un **NULL** semplicemente puntatore, questa funzione non esegue alcuna azione. Non viene modificato **errno** e non richiamano il gestore di parametri non validi. Se si verifica un errore nella funzione a causa del mancato utilizzo precedente di funzioni _aligned per allocare il blocco di memoria oppure si verifica un problema di allineamento della memoria a causa di alcune calamità impreviste, la funzione genera un report di debug dalle [Macro _RPT, _RPTF, _RPTW, _RPTFW](rpt-rptf-rptw-rptfw-macros.md).
+
+## <a name="requirements"></a>Requisiti
+
+|Routine|Intestazione obbligatoria|
+|-------------|---------------------|
+|**_aligned_free**|\<malloc.h>|
+
+## <a name="example"></a>Esempio
+
+Per altre informazioni, vedere [_aligned_malloc](aligned-malloc.md).
+
+## <a name="see-also"></a>Vedere anche
+
+[Allineamento dati](../../c-runtime-library/data-alignment.md)<br/>

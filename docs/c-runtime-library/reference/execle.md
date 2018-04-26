@@ -1,12 +1,12 @@
 ---
 title: execle | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - execle
@@ -29,20 +29,21 @@ dev_langs:
 helpviewer_keywords:
 - execle function
 ms.assetid: 5985b615-fe90-4d1c-9c1d-13ec87c8e306
-caps.latest.revision: 
+caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b686c15b01da16451f1dc47f09a7845fa7064666
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 36bb933d9bf2c5212be37b91f75813a3287116a0
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="execle"></a>execle
-Questa funzione POSIX è deprecata. In alternativa usare [_execle](../../c-runtime-library/reference/execle-wexecle.md) conforme a ISO C++.  
-  
+
+Questa funzione POSIX è deprecata. In alternativa usare [_execle](execle-wexecle.md) conforme a ISO C++.
+
 > [!IMPORTANT]
->  Non è possibile usare questa API nelle applicazioni eseguite in Windows Runtime. Per ulteriori informazioni, vedere [funzioni CRT non supportate nelle App Universal Windows Platform](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Non è possibile usare questa API nelle applicazioni eseguite in Windows Runtime. Per altre informazioni, vedere [Funzioni CRT non supportate nelle app della piattaforma UWP (Universal Windows Platform)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).

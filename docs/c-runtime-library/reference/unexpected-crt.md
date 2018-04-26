@@ -1,12 +1,12 @@
 ---
 title: unexpected (CRT) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - unexpected
@@ -29,42 +29,45 @@ dev_langs:
 helpviewer_keywords:
 - unexpected function
 ms.assetid: 2f873763-15ad-4556-a924-dcf28f2b52b4
-caps.latest.revision: 
+caps.latest.revision: 10
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b86200fc9501b9a543bae3ebc19f5069e49859bb
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 3fce88dd7b2fdb821fc015130d25e54701c3e467
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="unexpected-crt"></a>unexpected (CRT)
-Chiama `terminate` o una funzione specificata utilizzando `set_unexpected`.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-void unexpected( void );  
-```  
-  
-## <a name="remarks"></a>Note  
- La routine `unexpected` non viene utilizzata con l'implementazione corrente della gestione delle eccezioni C++. `unexpected` chiama `terminate` per impostazione predefinita. È possibile modificare questo comportamento predefinito scrivendo una funzione di terminazione personalizzata e chiamando `set_unexpected` con il nome della funzione come argomento. `unexpected` chiama l'ultima funzione fornita come argomento a `set_unexpected`.  
-  
-## <a name="requirements"></a>Requisiti  
-  
-|Routine|Intestazione obbligatoria|  
-|-------------|---------------------|  
-|`unexpected`|\<eh.h>|  
-  
- Per altre informazioni sulla compatibilità, vedere la sezione [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Routine di gestione delle eccezioni](../../c-runtime-library/exception-handling-routines.md)   
- [abort](../../c-runtime-library/reference/abort.md)   
- [_set_se_translator](../../c-runtime-library/reference/set-se-translator.md)   
- [set_terminate](../../c-runtime-library/reference/set-terminate-crt.md)   
- [set_unexpected](../../c-runtime-library/reference/set-unexpected-crt.md)   
- [terminate](../../c-runtime-library/reference/terminate-crt.md)
+
+Le chiamate **terminare** o una funzione specificata utilizzando **set_unexpected**.
+
+## <a name="syntax"></a>Sintassi
+
+```C
+void unexpected( void );
+```
+
+## <a name="remarks"></a>Note
+
+Il **imprevisto** routine non viene usata con l'implementazione corrente di gestione delle eccezioni C++. **imprevisto** chiamate **terminare** per impostazione predefinita. È possibile modificare questo comportamento predefinito scrivendo una funzione di terminazione personalizzata e chiamando **set_unexpected** con il nome della funzione come relativo argomento. **imprevisto** chiama l'ultima funzione fornita come argomento al **set_unexpected**.
+
+## <a name="requirements"></a>Requisiti
+
+|Routine|Intestazione obbligatoria|
+|-------------|---------------------|
+|**Imprevisto**|\<eh.h>|
+
+Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+
+## <a name="see-also"></a>Vedere anche
+
+[Routine di gestione delle eccezioni](../../c-runtime-library/exception-handling-routines.md)<br/>
+[abort](abort.md)<br/>
+[_set_se_translator](set-se-translator.md)<br/>
+[set_terminate](set-terminate-crt.md)<br/>
+[set_unexpected](set-unexpected-crt.md)<br/>
+[terminate](terminate-crt.md)<br/>

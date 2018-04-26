@@ -1,12 +1,12 @@
 ---
 title: _unlock_file | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _unlock_file
@@ -34,46 +34,49 @@ helpviewer_keywords:
 - _unlock_file function
 - unlocking files
 ms.assetid: cf380a51-6d3a-4f38-bd64-2d4fb57b4369
-caps.latest.revision: 
+caps.latest.revision: 10
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5d7bcfc3cf3bba84bf50933be9fa4137954e84a2
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 503087d84e65e556fa610efbf0054c66ee774d48
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="unlockfile"></a>_unlock_file
-Sblocca un file, consentendo ad altri processi di accedere al file.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-void _unlock_file(  
-   FILE* file  
-);  
-```  
-  
-#### <a name="parameters"></a>Parametri  
- `file`  
- Handle di file.  
-  
-## <a name="remarks"></a>Note  
- La funzione `_unlock_file` sblocca il file specificato da `file`. Lo sblocco di un file consente l'accesso al file da altri processi. Questa funzione non deve essere chiamata a meno che non sia stata chiamata `_lock_file` in precedenza sul puntatore `file`. La chiamata di `_unlock_file` su un file non bloccato può causare un deadlock. Per un esempio, vedere [_lock_file](../../c-runtime-library/reference/lock-file.md).  
-  
-## <a name="requirements"></a>Requisiti  
-  
-|Routine|Intestazione obbligatoria|  
-|-------------|---------------------|  
-|`_unlock_file`|\<stdio.h>|  
-  
- Per altre informazioni sulla compatibilità, vedere la sezione [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Gestione di file](../../c-runtime-library/file-handling.md)   
- [_creat, _wcreat](../../c-runtime-library/reference/creat-wcreat.md)   
- [_open, _wopen](../../c-runtime-library/reference/open-wopen.md)   
- [_lock_file](../../c-runtime-library/reference/lock-file.md)
+
+Sblocca un file, consentendo ad altri processi di accedere al file.
+
+## <a name="syntax"></a>Sintassi
+
+```C
+void _unlock_file(
+   FILE* file
+);
+```
+
+### <a name="parameters"></a>Parametri
+
+*file* handle di File.
+
+## <a name="remarks"></a>Note
+
+Il **unlock_file** funzione Sblocca il file specificato da *file*. Lo sblocco di un file consente l'accesso al file da altri processi. Questa funzione non deve essere chiamata solo se **lock_file** è stato chiamato in precedenza sul *file* puntatore. La chiamata **unlock_file** in un file che non sia bloccato, potrebbe causare un deadlock. Per un esempio, vedere [_lock_file](lock-file.md).
+
+## <a name="requirements"></a>Requisiti
+
+|Routine|Intestazione obbligatoria|
+|-------------|---------------------|
+|**_unlock_file**|\<stdio.h>|
+
+Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+
+## <a name="see-also"></a>Vedere anche
+
+[Gestione di file](../../c-runtime-library/file-handling.md)<br/>
+[_creat, _wcreat](creat-wcreat.md)<br/>
+[_open, _wopen](open-wopen.md)<br/>
+[_lock_file](lock-file.md)<br/>

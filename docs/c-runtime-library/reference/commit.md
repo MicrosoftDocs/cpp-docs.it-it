@@ -1,12 +1,12 @@
 ---
 title: _commit | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _commit
@@ -35,52 +35,57 @@ helpviewer_keywords:
 - _commit function
 - committing files to disk
 ms.assetid: d0c74d3a-4f2d-4fb0-b140-2d687db3d233
-caps.latest.revision: 
+caps.latest.revision: 14
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ed5a3f1e8d1f4a122ecf5a66393fa5c1f5c65f1b
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 9396fd502f5137b469c9f92110bfc23c9d2fb246
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="commit"></a>_commit
-Scarica un file direttamente su disco.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-int _commit(   
-   int fd   
-);  
-```  
-  
-#### <a name="parameters"></a>Parametri  
- `fd`  
- Il descrittore del file che fa riferimento al file aperto.  
-  
-## <a name="return-value"></a>Valore restituito  
- `_commit` restituisce 0 se lo scaricamento del file su disco è riuscito. Il valore restituito-1 indica un errore.  
-  
-## <a name="remarks"></a>Note  
- La funzione `_commit` forza il sistema operativo a scrivere il file associato a `fd` su disco. Questa chiamata assicura che il file specificato venga scaricato immediatamente, non a discrezione del sistema operativo.  
-  
- Se `fd` è un descrittore di file non valido, viene chiamato il gestore di parametri non validi, come descritto in [Parameter Validation](../../c-runtime-library/parameter-validation.md) (Convalida dei parametri). Se l'esecuzione può continuare, la funzione restituisce -1 ed `errno` viene impostato su `EBADF`.  
-  
-## <a name="requirements"></a>Requisiti  
-  
-|Routine|Intestazione obbligatoria|Intestazioni facoltative|  
-|-------------|---------------------|----------------------|  
-|`_commit`|\<io.h>|\<errno.h>|  
-  
- Per altre informazioni sulla compatibilità, vedere la sezione [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Low-Level I/O](../../c-runtime-library/low-level-i-o.md) (I/O di basso livello)   
- [_creat, _wcreat](../../c-runtime-library/reference/creat-wcreat.md)   
- [_open, _wopen](../../c-runtime-library/reference/open-wopen.md)   
- [_read](../../c-runtime-library/reference/read.md)   
- [_write](../../c-runtime-library/reference/write.md)
+
+Scarica un file direttamente su disco.
+
+## <a name="syntax"></a>Sintassi
+
+```C
+int _commit(
+   int fd
+);
+```
+
+### <a name="parameters"></a>Parametri
+
+*fd*<br/>
+Il descrittore del file che fa riferimento al file aperto.
+
+## <a name="return-value"></a>Valore restituito
+
+**_commit** restituisce 0 se il file è stato scaricato su disco. Il valore restituito-1 indica un errore.
+
+## <a name="remarks"></a>Note
+
+Il **_commit** funzione impone al sistema operativo per scrivere il file associato *fd* su disco. Questa chiamata assicura che il file specificato venga scaricato immediatamente, non a discrezione del sistema operativo.
+
+Se *fd* è un descrittore di file non valido, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, la funzione restituisce -1 e **errno** è impostata su **EBADF**.
+
+## <a name="requirements"></a>Requisiti
+
+|Routine|Intestazione obbligatoria|Intestazioni facoltative|
+|-------------|---------------------|----------------------|
+|**_commit**|\<io.h>|\<errno.h>|
+
+Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+
+## <a name="see-also"></a>Vedere anche
+
+[I/O a basso livello](../../c-runtime-library/low-level-i-o.md)<br/>
+[_creat, _wcreat](creat-wcreat.md)<br/>
+[_open, _wopen](open-wopen.md)<br/>
+[_read](read.md)<br/>
+[_write](write.md)<br/>

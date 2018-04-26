@@ -1,12 +1,12 @@
 ---
 title: exit, _Exit, _exit | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 1/02/2018
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _exit
@@ -44,15 +44,15 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ed4835662a53f3cb19b47818a9d6adfb3dfb2930
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: e682d10fe15b611ff9ceb363d7d8593e41f386d6
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="exit-exit-exit"></a>exit, _Exit, _exit
 
-Termina il processo di chiamata. La funzione `exit` termina dopo la pulizia `_exit` e `_Exit` terminano immediatamente la funzione.
+Termina il processo di chiamata. Il **uscire** funzione termina dopo la pulizia. **Exit** e **Exit** terminano immediatamente.
 
 > [!NOTE]
 > Non utilizzare questo metodo per arrestare un'app di Windows della piattaforma UWP (Universal), ad eccezione di testing o scenari di debug. Modalità a livello di codice o dell'interfaccia utente per chiudere un'app di Store non sono consentiti in base al [criteri di Microsoft Store](/legal/windows/agreements/store-policies). Per ulteriori informazioni, vedere [ciclo di vita dell'App UWP](/windows/uwp/launch-resume/app-lifecycle). Per altre informazioni sulle app di Windows 10, vedere [Guide pratiche per le app di Windows 10](http://go.microsoft.com/fwlink/p/?linkid=619133).
@@ -66,34 +66,33 @@ void exit(
 void _Exit(
    int const status
 );
-void _exit( 
+void _exit(
    int const status
 );
 ```
 
 ### <a name="parameters"></a>Parametri
 
-_status_  
-Codice di stato di uscita.
+*stato* codice di stato di uscita.
 
 ## <a name="remarks"></a>Note
 
-Le funzioni `exit`, `_Exit` e `_exit` terminano il processo di chiamata. La funzione `exit` chiama i distruttori per gli oggetti locali del thread, quindi chiama, secondo l'ordine LIFO (Last In First Out), le funzioni registrate da `atexit` e `_onexit`e infine scarica tutti i buffer di file prima di terminare il processo. Le funzioni `_Exit` e `_exit` terminano il processo senza eliminare gli oggetti locali del thread o elaborare la funzione `atexit` o `_onexit` e senza scaricare i buffer di flusso.
+Il **uscire**, **Exit** e **Exit** funzioni terminano il processo di chiamata. Il **uscire** funzione chiama i distruttori per gli oggetti thread-local, quindi chiama, ovvero nell'ordine di last-in-first-out (LIFO), ovvero le funzioni registrate da **atexit** e **OnExit**e infine Scarica tutti i buffer del file prima di terminare il processo. Il **Exit** e **Exit** funzioni terminano il processo senza eliminare definitivamente gli oggetti locali del thread o l'elaborazione **atexit** o **OnExit**funzioni e senza scaricare i buffer di flusso.
 
-Sebbene il `exit`, `_Exit` e `_exit` chiamate non restituiscono un valore, il valore in _stato_ viene reso disponibile per l'ambiente host o un processo di chiamata in attesa, se presente, dopo la chiusura del processo. In genere, il chiamante imposta il _stato_ valore su 0 per indicare una chiusura normale o un altro valore per indicare un errore. Il _stato_ valore è disponibile per il comando batch del sistema operativo `ERRORLEVEL` ed è rappresentato da una delle due costanti: `EXIT_SUCCESS`, che rappresenta un valore pari a 0, o `EXIT_FAILURE`, che rappresenta un valore pari a 1.
+Anche se il **uscire**, **Exit** e **Exit** chiamate non restituiscono un valore, il valore nella *stato* viene reso disponibile all'ambiente host o in attesa processo di chiamata, se presente, dopo la chiusura del processo. In genere, il chiamante imposta il *stato* valore su 0 per indicare una chiusura normale o un altro valore per indicare un errore. Il *stato* valore è disponibile per il comando batch del sistema operativo **ERRORLEVEL** e viene rappresentato da uno dei due costanti: **EXIT_SUCCESS**, che rappresenta un valore pari a 0, o **EXIT_FAILURE**, che rappresenta un valore pari a 1.
 
-Il comportamento delle funzioni `exit`, `_Exit`, `_exit`, `quick_exit`, `_cexit`e `_c_exit` è il seguente.
+Il **uscire**, **Exit**, **Exit**, **quick_exit**, **cexit**, e **c_exit** funzioni si comportano come indicato di seguito.
 
 |Funzione|Descrizione|
 |--------------|-----------------|
-|`exit`|Esegue le procedure complete di terminazione della libreria C, termina il processo e fornisce il codice di stato specificato all'ambiente host.|
-|`_Exit`|Esegue le procedure minime di terminazione della libreria C, termina il processo e fornisce il codice di stato specificato all'ambiente host.|
-|`_exit`|Esegue le procedure minime di terminazione della libreria C, termina il processo e fornisce il codice di stato specificato all'ambiente host.|
-|`quick_exit`|Esegue le procedure rapide di terminazione della libreria C, termina il processo e fornisce il codice di stato specificato all'ambiente host.|
-|`_cexit`|Esegue le procedure complete di terminazione della libreria C e torna al chiamante. Non termina il processo.|
-|`_c_exit`|Esegue le procedure minime di terminazione della libreria C e torna al chiamante. Non termina il processo.|
+|**exit**|Esegue le procedure complete di terminazione della libreria C, termina il processo e fornisce il codice di stato specificato all'ambiente host.|
+|**_Exit**|Esegue le procedure minime di terminazione della libreria C, termina il processo e fornisce il codice di stato specificato all'ambiente host.|
+|**_exit**|Esegue le procedure minime di terminazione della libreria C, termina il processo e fornisce il codice di stato specificato all'ambiente host.|
+|**quick_exit**|Esegue le procedure rapide di terminazione della libreria C, termina il processo e fornisce il codice di stato specificato all'ambiente host.|
+|**_cexit**|Esegue le procedure complete di terminazione della libreria C e torna al chiamante. Non termina il processo.|
+|**_c_exit**|Esegue le procedure minime di terminazione della libreria C e torna al chiamante. Non termina il processo.|
 
-Quando si chiama la funzione `exit`,  `_Exit` o `_exit` , i distruttori per gli oggetti temporanei o automatici presenti al momento della chiamata non vengono chiamati. Un oggetto automatico è un oggetto locale non statico definito in una funzione. Un oggetto temporaneo è un oggetto che viene creato dal compilatore, ad esempio un valore restituito da una chiamata di funzione. Per eliminare un oggetto automatico prima di chiamare `exit`, `_Exit`, o `_exit`, in modo esplicito chiama il distruttore per l'oggetto, come illustrato di seguito:
+Quando si chiama il **uscire**, **Exit** oppure **Exit** funzione, i distruttori per gli oggetti temporanei o automatici presenti al momento della chiamata non vengono chiamati. Un oggetto automatico è un oggetto locale non statico definito in una funzione. Un oggetto temporaneo è un oggetto che viene creato dal compilatore, ad esempio un valore restituito da una chiamata di funzione. Per eliminare un oggetto automatico prima di chiamare **uscire**, **Exit**, o **Exit**, in modo esplicito chiama il distruttore per l'oggetto, come illustrato di seguito:
 
 ```cpp
 void last_fn() {}
@@ -104,13 +103,13 @@ void last_fn() {}
 }
 ```
 
-Non usare `DLL_PROCESS_ATTACH` per chiamare `exit` da `DllMain`. Per uscire dall'installazione di `DLLMain` di funzione, restituiti `FALSE` da `DLL_PROCESS_ATTACH`.
+Non usare **DLL_PROCESS_ATTACH** chiamare **uscire** dal **DllMain**. Per uscire dall'installazione di **DLLMain** funzione, restituiti **FALSE** dal **DLL_PROCESS_ATTACH**.
 
 ## <a name="requirements"></a>Requisiti
 
 |Funzione|Intestazione obbligatoria|
 |--------------|---------------------|
-|`exit`, `_Exit`, `_exit`|\<process.h> o \<stdlib.h>|
+|**uscire**, **Exit**, **Exit**|\<process.h> o \<stdlib.h>|
 
 Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 
@@ -131,12 +130,12 @@ int main( void )
 
 ## <a name="see-also"></a>Vedere anche
 
-[Controllo di processi e ambiente](../../c-runtime-library/process-and-environment-control.md)  
-[abort](../../c-runtime-library/reference/abort.md)  
-[atexit](../../c-runtime-library/reference/atexit.md)  
-[_cexit, _c_exit](../../c-runtime-library/reference/cexit-c-exit.md)  
-[Funzioni _exec, _wexec](../../c-runtime-library/exec-wexec-functions.md)  
-[_onexit, _onexit_m](../../c-runtime-library/reference/onexit-onexit-m.md)  
-[quick_exit](../../c-runtime-library/reference/quick-exit1.md)  
-[Funzioni _spawn, _wspawn](../../c-runtime-library/spawn-wspawn-functions.md)  
-[system, _wsystem](../../c-runtime-library/reference/system-wsystem.md)  
+[Controllo di processi e ambiente](../../c-runtime-library/process-and-environment-control.md)<br/>
+[abort](abort.md)<br/>
+[atexit](atexit.md)<br/>
+[_cexit, _c_exit](cexit-c-exit.md)<br/>
+[Funzioni _exec, _wexec](../../c-runtime-library/exec-wexec-functions.md)<br/>
+[_onexit, _onexit_m](onexit-onexit-m.md)<br/>
+[quick_exit](quick-exit1.md)<br/>
+[Funzioni _spawn, _wspawn](../../c-runtime-library/spawn-wspawn-functions.md)<br/>
+[system, _wsystem](system-wsystem.md)<br/>

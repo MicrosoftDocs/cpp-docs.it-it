@@ -1,12 +1,12 @@
 ---
 title: Avvio e chiusura di un programma C++ | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - C++
@@ -18,37 +18,37 @@ helpviewer_keywords:
 - startup code, and C++ program termination
 - main function, program startup
 ms.assetid: f72c8f76-f507-4ddd-a270-7b60f4fed625
-caps.latest.revision: 
+caps.latest.revision: 9
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 42baa08777e8e898ee4c6e49ce74b03c293c9b96
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: eec5c6d72152f2aaea8d77df7ca65bf5f5f5565b
+ms.sourcegitcommit: dd1a509526fa8bb18e97ab7bc7b91cbdb3ec7059
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="c-program-startup-and-termination"></a>Avvio e chiusura di un programma C++
-Un programma C++ esegue le stesse operazioni eseguite da un programma C all'avvio e alla chiusura del programma, nonché alcune altre descritte in questo argomento.  
-  
- Prima che l'ambiente di destinazione chiami la funzione `main` e dopo aver archiviato i valori costanti iniziali specificati in tutti gli oggetti con una durata statica, il programma esegue i costruttori rimanenti per tali oggetti statici. L'ordine di esecuzione non viene specificato tra unità di conversione, ma si può comunque ritenere che alcuni oggetti [iostreams](../standard-library/iostreams-conventions.md) vengano inizializzati correttamente per l'uso da parte di questi costruttori statici. Questi flussi di testo di controllo sono:  
-  
--   [cin](../standard-library/iostream.md#cin) - per l'input standard.  
-  
--   [cout](../standard-library/iostream.md#cout) - per l'output standard.  
-  
--   [cerr](../standard-library/iostream.md#cerr) - per l'output di errore standard non memorizzato nel buffer.  
-  
--   [clog](../standard-library/iostream.md#clog) - per l'output di errore standard memorizzato nel buffer.  
-  
- È anche possibile usare questi oggetti all'interno dei distruttori chiamati per gli oggetti statici durante la chiusura del programma.  
-  
- Come con C, la restituzione da `main` o la chiamata di `exit` chiama tutte le funzioni registrate con `atexit` in ordine inverso del Registro di sistema. Un'eccezione generata da tale funzione registrata chiama `terminate`.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Panoramica sulla libreria standard C++](../standard-library/cpp-standard-library-overview.md)   
- [Thread Safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 
+Un programma C++ esegue le stesse operazioni eseguite da un programma C all'avvio e alla chiusura del programma, nonché alcune altre descritte in questo argomento.
 
+Prima che l'ambiente di destinazione chiami la funzione `main` e dopo aver archiviato i valori costanti iniziali specificati in tutti gli oggetti con una durata statica, il programma esegue i costruttori rimanenti per tali oggetti statici. L'ordine di esecuzione non viene specificato tra unità di conversione, ma si può comunque ritenere che alcuni oggetti [iostreams](../standard-library/iostreams-conventions.md) vengano inizializzati correttamente per l'uso da parte di questi costruttori statici. Questi flussi di testo di controllo sono:
+
+- [cin](../standard-library/iostream.md#cin) - per l'input standard.
+
+- [cout](../standard-library/iostream.md#cout) - per l'output standard.
+
+- [cerr](../standard-library/iostream.md#cerr) - per l'output di errore standard non memorizzato nel buffer.
+
+- [clog](../standard-library/iostream.md#clog) - per l'output di errore standard memorizzato nel buffer.
+
+È anche possibile usare questi oggetti all'interno dei distruttori chiamati per gli oggetti statici durante la chiusura del programma.
+
+Come con C, la restituzione da `main` o la chiamata di `exit` chiama tutte le funzioni registrate con `atexit` in ordine inverso del Registro di sistema. Un'eccezione generata da tale funzione registrata chiama `terminate`.
+
+## <a name="see-also"></a>Vedere anche
+
+[Panoramica sulla libreria standard C++](../standard-library/cpp-standard-library-overview.md)<br/>
+[Thread Safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>

@@ -1,12 +1,12 @@
 ---
 title: Conversioni standard | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -15,17 +15,17 @@ helpviewer_keywords:
 - L-values [C++]
 - conversions, standard
 ms.assetid: ce7ac8d3-5c99-4674-8229-0672de05528d
-caps.latest.revision: 
+caps.latest.revision: 10
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 324fa54362098e2b7ffae6fdf368bf590846f9c1
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: bdb7477d0ea07803bf2219118e1fb530a889118c
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="standard-conversions"></a>Conversioni standard
 Il linguaggio C++ definisce le conversioni tra i relativi tipi fondamentali. Inoltre, definisce le conversioni per i tipi derivati puntatore, riferimento e puntatore a membro. Queste conversioni sono definite "conversioni standard". (Per ulteriori informazioni sui tipi, tipi standard e tipi derivati, vedere [tipi](http://msdn.microsoft.com/en-us/6882ee83-ea32-4373-8d57-c3efbbc15af0).)  
@@ -81,11 +81,11 @@ long_num2 = int_num * long_num2;
   
  Le promozioni a mantenimento del valore e le promozioni che mantengono il segno producono, in genere, gli stessi risultati. Possono, però, produrre risultati diversi qualora l'oggetto promosso sia uno dei seguenti:  
   
--   Un operando di  **/** , `%`, `/=`, `%=`,  **<** ,  **\< =** ,  **>** , o **>=**  
+-   Un operando di **/**, `%`, `/=`, `%=`, **<**, **\< =**, **>**, o **>=**  
   
      Questi operatori si basano sul segno per determinare il risultato. Di conseguenza, le promozioni a mantenimento del valore e le promozioni che mantengono il segno portano a risultati diversi, se applicate a tali operandi.  
   
--   L'operando sinistro del  **>>**  o **>>=**  
+-   L'operando sinistro del **>>** o **>>=**  
   
      Questi operatori trattano le quantità con segno e quelle senza segno in maniera differente, quando si esegue un'operazione di spostamento. Nel caso delle quantità con segno, spostare una quantità a destra comporta la propagazione del bit di segno verso le posizioni di bit vuote. Nel caso delle quantità senza segno, le posizioni di bit vuote vengono riempite con zero.  
   
@@ -120,8 +120,7 @@ int main()
   
  Gli oggetti dei tipi integrali senza segno possono essere convertiti nei tipi con segno corrispondenti. Tuttavia, tale conversione può comportare l'errata interpretazione dei dati se il valore dell'oggetto senza segno è esterno all'intervallo rappresentabile dal tipo con segno, come mostrato nel seguente esempio:  
   
-```  
-  
+```cpp
 #include <iostream>  
   
 using namespace std;  
@@ -142,11 +141,11 @@ int main()
   
  Un oggetto di un tipo a virgola mobile può essere inoltre convertito in un tipo meno preciso, se è compreso in un intervallo rappresentabile mediante tale tipo (Vedere [limiti mobile](../cpp/floating-limits.md) per gli intervalli di tipo a virgola mobile.) Se il valore originale non può essere rappresentato in modo preciso, può essere convertito nel successivo valore più alto o più basso rappresentabile. Se tale valore non esiste, il risultato non è definito. Si consideri l'esempio seguente:  
   
-```  
+```cpp
 cout << (float)1E300 << endl;  
 ```  
   
- Il valore massimo rappresentabile dal tipo **float** è 3.402823466 e38, un numero molto inferiore rispetto a 1E300. Di conseguenza, il numero viene convertito a infinito e il risultato è 1.#INF.  
+ Il valore massimo rappresentabile dal tipo **float** è 3.402823466 e38, un numero molto inferiore rispetto a 1E300. Pertanto, il numero viene convertito verso l'infinito e il risultato è "inf".  
   
 ## <a name="conversions-between-integral-and-floating-point-types"></a>Conversioni tra tipi integrali e tipi punto a virgola mobile  
  Alcune espressioni possono causare la conversione degli oggetti di tipo a virgola mobile in tipi integrali o viceversa. Quando un oggetto di tipo integrale viene convertito in un tipo a virgola mobile e il valore originale non può essere rappresentato esattamente, il risultato è dato dal successivo valore più alto o più basso rappresentabile.  

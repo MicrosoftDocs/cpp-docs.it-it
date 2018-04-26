@@ -1,12 +1,12 @@
 ---
 title: _lfind | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _lfind
@@ -36,105 +36,110 @@ helpviewer_keywords:
 - finding keys in arrays
 - _lfind function
 ms.assetid: a40ece70-1674-4b75-94bd-9f57cfff18f2
-caps.latest.revision: 
+caps.latest.revision: 20
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b6df994306ad9a7d51d619a9bd409c021386a11
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 488863a32319fac17f5d1c84f56edaeeb63ff0ce
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="lfind"></a>_lfind
-Esegue una ricerca lineare della chiave specificata. È disponibile una versione più sicura di questa funzione. Vedere [_lfind_s](../../c-runtime-library/reference/lfind-s.md).  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```  
-void *_lfind(  
-   const void *key,  
-   const void *base,  
-   unsigned int *num,  
-   unsigned int width,  
-   int (__cdecl *compare)(const void *, const void *)  
-);  
-```  
-  
-#### <a name="parameters"></a>Parametri  
- `key`  
- Oggetto da cercare.  
-  
- `base`  
- Puntatore alla base dei dati di ricerca.  
-  
- `num`  
- Numero degli elementi della matrice.  
-  
- `width`  
- Larghezza degli elementi della matrice.  
-  
- `compare`  
- Puntatore alla routine di confronto. Il primo parametro è un puntatore alla chiave per la ricerca. Il secondo parametro è un puntatore all'elemento della matrice da confrontare con la chiave.  
-  
-## <a name="return-value"></a>Valore restituito  
- Se la chiave viene trovata, `_lfind` restituisce un puntatore all'elemento della matrice in `base` che corrisponde a `key`. Se la chiave non viene trovata, `_lfind` restituisce `NULL`.  
-  
-## <a name="remarks"></a>Note  
- La funzione `_lfind` esegue una ricerca lineare del valore `key` in una matrice di `num` elementi, ognuno di `width` byte. A differenza di `bsearch`, `_lfind` non richiede che la matrice sia ordinata. L'argomento `base` è un puntatore alla base della matrice in cui eseguire la ricerca. L'argomento `compare` è un puntatore a una routine fornita dall'utente che confronta due elementi di matrice e quindi restituisce un valore che ne specifica la relazione. `_lfind` chiama la routine `compare` una o più volte durante la ricerca, passando i puntatori a due elementi di matrice per ogni chiamata. La routine `compare` deve confrontare gli elementi e quindi restituire un valore diverso da zero (che indica che gli elementi sono diversi) o 0 (che indica che gli elementi sono identici).  
-  
- Questa funzione convalida i relativi parametri. Se `compare`, `key` o `num` è `NULL` o se `base` è NULL e *`num` è diverso da zero o se `width` è minore di zero, viene richiamato il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, `errno` viene impostato su `EINVAL` e la funzione restituisce `NULL`.  
-  
-## <a name="requirements"></a>Requisiti  
-  
-|Routine|Intestazione obbligatoria|  
-|-------------|---------------------|  
-|`_lfind`|\<search.h>|  
-  
- Per altre informazioni sulla compatibilità, vedere la sezione [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
-  
-## <a name="example"></a>Esempio  
-  
-```  
-// crt_lfind.c  
-// This program uses _lfind to search a string array  
-// for an occurrence of "hello".  
-  
-#include <search.h>  
-#include <string.h>  
-#include <stdio.h>  
-  
-int compare(const void *arg1, const void *arg2 )  
-{  
-   return( _stricmp( * (char**)arg1, * (char**)arg2 ) );  
-}  
-  
-int main( )  
-{  
-   char *arr[] = {"Hi", "Hello", "Bye"};  
-   int n = sizeof(arr) / sizeof(char*);  
-   char **result;  
-   char *key = "hello";  
-  
-   result = (char **)_lfind( &key, arr,   
-                      &n, sizeof(char *), compare );  
-  
-   if( result )  
-      printf( "%s found\n", *result );  
-   else  
-      printf( "hello not found!\n" );  
-}  
-```  
-  
-```Output  
-Hello found  
-```  
-  
-## <a name="see-also"></a>Vedere anche  
- [Ricerca e ordinamento](../../c-runtime-library/searching-and-sorting.md)   
- [_lfind_s](../../c-runtime-library/reference/lfind-s.md)   
- [bsearch](../../c-runtime-library/reference/bsearch.md)   
- [_lsearch](../../c-runtime-library/reference/lsearch.md)   
- [qsort](../../c-runtime-library/reference/qsort.md)
+
+Esegue una ricerca lineare della chiave specificata. È disponibile una versione più sicura di questa funzione. Vedere [_lfind_s](lfind-s.md).
+
+## <a name="syntax"></a>Sintassi
+
+```C
+void *_lfind(
+   const void *key,
+   const void *base,
+   unsigned int *num,
+   unsigned int width,
+   int (__cdecl *compare)(const void *, const void *)
+);
+```
+
+### <a name="parameters"></a>Parametri
+
+*key*<br/>
+Oggetto da cercare.
+
+*base*<br/>
+Puntatore alla base dei dati di ricerca.
+
+*Numero*<br/>
+Numero degli elementi della matrice.
+
+*width*<br/>
+Larghezza degli elementi della matrice.
+
+*compare*<br/>
+Puntatore alla routine di confronto. Il primo parametro è un puntatore alla chiave per la ricerca. Il secondo parametro è un puntatore all'elemento della matrice da confrontare con la chiave.
+
+## <a name="return-value"></a>Valore restituito
+
+Se la chiave viene trovata, **lfind** restituisce un puntatore all'elemento della matrice in corrispondenza *base* che corrisponde a *chiave*. Se la chiave non viene trovata, **lfind** restituisce **NULL**.
+
+## <a name="remarks"></a>Note
+
+Il **lfind** funzione esegue una ricerca lineare per il valore *chiave* in una matrice di *numero* elementi, ognuno dei *larghezza* byte. A differenza **bsearch**, **lfind** non richiede che la matrice da ordinare. Il *base* argomento è un puntatore alla base della matrice da cercare. Il *confrontare* argomento è un puntatore a una routine fornita dall'utente che confronta due elementi di matrice e quindi restituisce un valore che specifica la relazione. **lfind** chiama il *confrontare* routine una o più volte durante la ricerca, passando i puntatori a due elementi di matrice per ogni chiamata. Il *confrontare* routine deve confrontare gli elementi e quindi restituire diverso da zero (ovvero gli elementi sono diversi) oppure 0 (vale a dire gli elementi sono identici).
+
+Questa funzione convalida i relativi parametri. Se *confrontare*, *chiave* oppure *numero* è **NULL**, o se *base* è NULL e **numero*  è diverso da zero, oppure se *larghezza* è minore di zero, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, **errno** è impostata su **EINVAL** e la funzione restituisce **NULL**.
+
+## <a name="requirements"></a>Requisiti
+
+|Routine|Intestazione obbligatoria|
+|-------------|---------------------|
+|**_lfind**|\<search.h>|
+
+Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+
+## <a name="example"></a>Esempio
+
+```C
+// crt_lfind.c
+// This program uses _lfind to search a string array
+// for an occurrence of "hello".
+
+#include <search.h>
+#include <string.h>
+#include <stdio.h>
+
+int compare(const void *arg1, const void *arg2 )
+{
+   return( _stricmp( * (char**)arg1, * (char**)arg2 ) );
+}
+
+int main( )
+{
+   char *arr[] = {"Hi", "Hello", "Bye"};
+   int n = sizeof(arr) / sizeof(char*);
+   char **result;
+   char *key = "hello";
+
+   result = (char **)_lfind( &key, arr,
+                      &n, sizeof(char *), compare );
+
+   if( result )
+      printf( "%s found\n", *result );
+   else
+      printf( "hello not found!\n" );
+}
+```
+
+```Output
+Hello found
+```
+
+## <a name="see-also"></a>Vedere anche
+
+[Ricerca e ordinamento](../../c-runtime-library/searching-and-sorting.md)<br/>
+[_lfind_s](lfind-s.md)<br/>
+[bsearch](bsearch.md)<br/>
+[_lsearch](lsearch.md)<br/>
+[qsort](qsort.md)<br/>

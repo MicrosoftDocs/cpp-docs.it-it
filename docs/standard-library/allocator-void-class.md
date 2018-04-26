@@ -1,12 +1,12 @@
 ---
 title: Classe allocator&lt;void&gt; | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - memory/std::allocator<void>
@@ -16,24 +16,25 @@ dev_langs:
 helpviewer_keywords:
 - allocator<void> class
 ms.assetid: abfb40f5-c600-46a6-b130-f42c6535b2bd
-caps.latest.revision: 
+caps.latest.revision: 18
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cef6f292938ea503ec50fd72e6b7a710d9a40951
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: b1bc3128b81aa1ea10c1c147d1d1c1f7d5bb8550
+ms.sourcegitcommit: dd1a509526fa8bb18e97ab7bc7b91cbdb3ec7059
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="allocatorltvoidgt-class"></a>Classe allocator&lt;void&gt;
-Specializzazione dell'allocatore della classe di modello per il tipo `void`, che definisce i tipi che hanno un significato in questo contesto.  
-  
-## <a name="syntax"></a>Sintassi  
-  
-```
+
+Specializzazione dell'allocatore della classe di modello per il tipo `void`, che definisce i tipi che hanno un significato in questo contesto.
+
+## <a name="syntax"></a>Sintassi
+
+```cpp
 template <>
 class allocator<void> {
     typedef void *pointer;
@@ -50,26 +51,26 @@ class allocator<void> {
     template <class Other>
     allocator<void>& operator=(const allocator<Other>&);
 };
-```  
-  
-## <a name="remarks"></a>Note  
- La classe rende esplicitamente specializzata la classe di modello [allocator](../standard-library/allocator-class.md) per il tipo *void.* I costruttori e l'operatore di assegnazione della classe hanno lo stesso comportamento che hanno per la classe di modello, sebbene definisca solo i tipi seguenti:  
-  
-- [const_pointer](../standard-library/allocator-class.md#const_pointer).  
-  
-- [pointer](../standard-library/allocator-class.md#pointer).  
-  
-- [value_type](../standard-library/allocator-class.md#value_type).  
-  
-- [rebind](../standard-library/allocator-class.md#rebind), una classe di modello annidata.  
-  
-## <a name="requirements"></a>Requisiti  
- **Intestazione:** \<memory>  
-  
- **Spazio dei nomi:** std  
-  
-## <a name="see-also"></a>Vedere anche  
- [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md) (Thread safety nella libreria standard C++)
+```
 
+## <a name="remarks"></a>Note
 
+La classe rende esplicitamente specializzata la classe di modello [allocator](../standard-library/allocator-class.md) per il tipo *void.* I costruttori e l'operatore di assegnazione della classe hanno lo stesso comportamento che hanno per la classe di modello, sebbene definisca solo i tipi seguenti:
 
+- [const_pointer](../standard-library/allocator-class.md#const_pointer).
+
+- [pointer](../standard-library/allocator-class.md#pointer).
+
+- [value_type](../standard-library/allocator-class.md#value_type).
+
+- [rebind](../standard-library/allocator-class.md#rebind), una classe di modello annidata.
+
+## <a name="requirements"></a>Requisiti
+
+**Intestazione:** \<memory>
+
+**Spazio dei nomi:** std
+
+## <a name="see-also"></a>Vedere anche
+
+[Thread Safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
