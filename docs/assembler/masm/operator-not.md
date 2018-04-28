@@ -1,12 +1,9 @@
 ---
 title: operatore NOT | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-masm
 ms.topic: reference
 f1_keywords:
 - operator NOT
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - operator NOT
 - NOT operator
 ms.assetid: d68d44fd-f92f-4b65-8d36-96de03e1b4e5
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5654ac03491f0393cd2f7961e05082de37f258e5
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: ce90658ceea3505dde2bbb328d9a69c43020b0c7
+ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="operator-not"></a>Operatore NOT
 Restituisce *espressione* con tutti i bit invertiti.  

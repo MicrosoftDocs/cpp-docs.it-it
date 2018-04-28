@@ -1,12 +1,9 @@
 ---
 title: Riferimento della riga di comando ML e ML64 | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-masm
 ms.topic: reference
 f1_keywords:
 - ML
@@ -63,17 +60,15 @@ helpviewer_keywords:
 - command line, reference [ML]
 - /Ta MASM compiler option
 ms.assetid: 712623c6-f77e-47ea-a945-089e57c50b40
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: edb7f0c19e9517b1bcefcc2400542f910a73c8f0
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: da3fb143aeaaf6fa8cf31c45b31707fa01bf6898
+ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="ml-and-ml64-command-line-reference"></a>Riferimenti alla riga di comando ML e ML64
 Assembla e collega una o più file di origine in linguaggio assembly. Le opzioni della riga di comando sono tra maiuscole e minuscole.  
@@ -104,7 +99,7 @@ ML64 [[options]] filename [[ [[options]]  filename]]
 |**/Cx**|Consente di mantenere i case nei simboli pubblici ed extern.|  
 |**/D** `symbol`[[=`value`]]|Definisce una macro di testo con il nome specificato. Se `value` è mancante, questo campo è vuoto. Più token separati da spazi devono essere racchiusi tra virgolette.|  
 |**/EP**|Genera un elenco di origine pre-elaborato (inviato a STDOUT). Vedere **/Sf**.|  
-|**/ERRORREPORT** [ **NONE** &#124; **PROMPT** &#124; **CODA** &#124; **INVIARE** ]|Se ml.exe o ml64.exe non riesce in fase di esecuzione, è possibile utilizzare **/ERRORREPORT** per inviare informazioni a Microsoft informazioni su questi errori interni.<br /><br /> Per ulteriori informazioni su **/ERRORREPORT**, vedere [/errorReport (segnala interni del compilatore gli errori)](../../build/reference/errorreport-report-internal-compiler-errors.md).|  
+|**/ERRORREPORT** [ **NONE** &AMP;#124; **DEI MESSAGGI DI RICHIESTA** &AMP;#124; **CODA** &AMP;#124; **INVIARE** ]|Se ml.exe o ml64.exe non riesce in fase di esecuzione, è possibile utilizzare **/ERRORREPORT** per inviare informazioni a Microsoft informazioni su questi errori interni.<br /><br /> Per ulteriori informazioni su **/ERRORREPORT**, vedere [/errorReport (segnala interni del compilatore gli errori)](../../build/reference/errorreport-report-internal-compiler-errors.md).|  
 |**/F** `hexnum`|Imposta la dimensione dello stack `hexnum` byte (queste sono le stesse **/collegamento/STACK**:`number`). Il valore deve essere espressa in notazione esadecimale. È necessario uno spazio tra **/F** e `hexnum`.|  
 |**/Fe** `filename`|Il nome del file eseguibile.|  
 |**/Fl**[[`filename`]]|Genera un listato di codice assemblato. Vedere **/Sf**.|  

@@ -1,12 +1,9 @@
 ---
 title: '@InStr | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-masm
 ms.topic: reference
 f1_keywords:
 - '@InStr'
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - '@InStr symbol'
 ms.assetid: 980d5b9f-2b88-4306-8955-df6cd2133e68
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: feecfcd1135fb8fee6e074e3a78f5aad19be5ae2
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: d0fb92987de21f653440d6c4cc23d726ad323b69
+ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="instr"></a>@InStr
 Funzione di macro che trova la prima occorrenza di *string2* in *string1*, a partire da *posizione* all'interno di *string1*. Se *posizione* non è visualizzato, ricerca inizia all'inizio della *string1*. Restituisce un intero posizione oppure 0 se *string2* non viene trovato.  

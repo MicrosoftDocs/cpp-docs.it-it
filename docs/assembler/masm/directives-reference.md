@@ -1,12 +1,9 @@
 ---
 title: Riferimento a direttive | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-masm
 ms.topic: reference
 f1_keywords:
 - Directives Reference
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - MASM (Microsoft Macro Assembler), directives reference
 ms.assetid: da6efcd1-18f7-41de-81cd-a002a02f9a22
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ba0d13a4dab5668f1ee125c79275b93a7f5f7f04
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 06077d5da6b34e41a710058900d61569e3c06939
+ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="directives-reference"></a>Riferimento a direttive
 **x64**  
@@ -102,8 +97,8 @@ ms.lasthandoff: 02/14/2018
   
 ||||  
 |-|-|-|  
-|[ENDM](../../assembler/masm/endm.md)|[EXITM](../../assembler/masm/exitm.md)|[GOTO](../../assembler/masm/goto-masm.md)|  
-|[LOCAL](../../assembler/masm/local-masm.md)|[MACRO](../../assembler/masm/macro.md)|[PURGE](../../assembler/masm/purge.md)|  
+|[ENDM](../../assembler/masm/endm.md)|[EXITM](../../assembler/masm/exitm.md)|[ISTRUZIONE GOTO](../../assembler/masm/goto-masm.md)|  
+|[LOCALE](../../assembler/masm/local-masm.md)|[MACRO](../../assembler/masm/macro.md)|[PURGE](../../assembler/masm/purge.md)|  
   
 ### <a name="miscellaneous"></a>Varie  
   
@@ -111,7 +106,7 @@ ms.lasthandoff: 02/14/2018
 |-|-|-|  
 |[ALIAS](../../assembler/masm/alias-masm.md)|[ASSUME](../../assembler/masm/assume.md)|[COMMENTO](../../assembler/masm/comment-masm.md)|  
 |[ECHO](../../assembler/masm/echo.md)|[FINE](../../assembler/masm/end-masm.md)|[.FPO](../../assembler/masm/dot-fpo.md)|  
-|[INCLUDE](../../assembler/masm/include-masm.md)|[INCLUDELIB](../../assembler/masm/includelib-masm.md)|[MMWORD](../../assembler/masm/mmword.md)|  
+|[INCLUDERE](../../assembler/masm/include-masm.md)|[INCLUDELIB](../../assembler/masm/includelib-masm.md)|[MMWORD](../../assembler/masm/mmword.md)|  
 |[OPZIONE](../../assembler/masm/option-masm.md)|[POPCONTEXT](../../assembler/masm/popcontext.md)|[PUSHCONTEXT](../../assembler/masm/pushcontext.md)|  
 |[.RADIX](../../assembler/masm/dot-radix.md)|[.SAFESEH](../../assembler/masm/dot-safeseh.md)|[XMMWORD](../../assembler/masm/xmmword.md)|  
 |[YMMWORD](../../assembler/masm/ymmword.md)|||  
@@ -137,21 +132,21 @@ ms.lasthandoff: 02/14/2018
 ||||  
 |-|-|-|  
 |[ENDM](../../assembler/masm/endm.md)|[PER](../../assembler/masm/for-masm.md)|[FORC](../../assembler/masm/forc.md)|  
-|[GOTO](../../assembler/masm/goto-masm.md)|[REPEAT](../../assembler/masm/repeat.md)|[WHILE](../../assembler/masm/while-masm.md)|  
+|[ISTRUZIONE GOTO](../../assembler/masm/goto-masm.md)|[REPEAT](../../assembler/masm/repeat.md)|[WHILE](../../assembler/masm/while-masm.md)|  
   
 ### <a name="scope"></a>Ambito  
   
 ||||  
 |-|-|-|  
 |[COMM](../../assembler/masm/comm.md)|[EXTERN](../../assembler/masm/extern-masm.md)|[EXTERNDEF](../../assembler/masm/externdef.md)|  
-|[INCLUDELIB](../../assembler/masm/includelib-masm.md)|[PUBLIC](../../assembler/masm/public-masm.md)||  
+|[INCLUDELIB](../../assembler/masm/includelib-masm.md)|[PUBBLICA](../../assembler/masm/public-masm.md)||  
   
 ### <a name="segment"></a>segmento  
   
 ||||  
 |-|-|-|  
 |[.ALPHA](../../assembler/masm/dot-alpha.md)|[ASSUME](../../assembler/masm/assume.md)|[.DOSSEG](../../assembler/masm/dot-dosseg.md)|  
-|[FINE](../../assembler/masm/end-masm.md)|[ENDS](../../assembler/masm/ends-masm.md)|[GROUP](../../assembler/masm/group.md)|  
+|[FINE](../../assembler/masm/end-masm.md)|[TERMINA](../../assembler/masm/ends-masm.md)|[GROUP](../../assembler/masm/group.md)|  
 |[SEGMENT](../../assembler/masm/segment.md)|[.SEQ](../../assembler/masm/dot-seq.md)||  
   
 ### <a name="simplified-segment"></a>Segmento semplificata  
@@ -174,8 +169,8 @@ ms.lasthandoff: 02/14/2018
   
 ||||  
 |-|-|-|  
-|[ENDS](../../assembler/masm/ends-masm.md)|[RECORD](../../assembler/masm/record-masm.md)|[STRUCT](../../assembler/masm/struct-masm.md)|  
-|[TYPEDEF](../../assembler/masm/typedef-masm.md)|[UNION](../../assembler/masm/union.md)||  
+|[TERMINA](../../assembler/masm/ends-masm.md)|[RECORD](../../assembler/masm/record-masm.md)|[STRUCT](../../assembler/masm/struct-masm.md)|  
+|[(TYPEDEF)](../../assembler/masm/typedef-masm.md)|[UNION](../../assembler/masm/union.md)||  
   
 ## <a name="see-also"></a>Vedere anche  
  [Riferimento a Microsoft Macro Assembler](../../assembler/masm/microsoft-macro-assembler-reference.md)

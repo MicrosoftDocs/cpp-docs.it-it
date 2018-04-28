@@ -1,12 +1,9 @@
 ---
 title: operatore LOW32 | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-masm
 ms.topic: reference
 f1_keywords:
 - LOW32
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - LOW32 operator
 - operator LOW32
 ms.assetid: e552641c-e5be-4ce6-91ea-1ebad912ecab
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e7b8d3d7e98c0f5ce1c4b462e0393bedf6abc48a
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 0b079237508ca61ff3e7bc48e1d9b01a60e660a9
+ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="operator-low32"></a>Operatore LOW32
 Restituisce i 32 bit bassi di *espressione*. Espressioni MASM sono valori a 64 bit.  

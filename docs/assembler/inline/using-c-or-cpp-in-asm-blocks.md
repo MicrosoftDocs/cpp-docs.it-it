@@ -1,13 +1,10 @@
 ---
 title: Utilizzo di C o C++ in blocchi asm | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-masm
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - typedef names, used in __asm blocks
 - __asm keyword [C++], C/C++ elements in
 ms.assetid: ae8b2b52-6b75-42e3-ac0c-ad02d922ed97
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3ab706f682372cb0a76f0d3283157d4da9105ed6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5e9451a0b665e5377c2acaf871154ec78a38c8b5
+ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="using-c-or-c-in-asm-blocks"></a>Utilizzo di C o C++ in blocchi __asm
 ## <a name="microsoft-specific"></a>Sezione specifica Microsoft  
@@ -47,11 +42,11 @@ ms.lasthandoff: 12/21/2017
   
 -   Direttive per il preprocessore e macro  
   
--   Commenti (sia  **/ \* \* /**  e  **//**  )  
+-   Commenti (sia **/ \* \* /** e **//** )  
   
 -   Nomi dei tipi (laddove sia possibile utilizzare i tipi MASM)  
   
--   `typedef`i nomi, in genere utilizzati con gli operatori, ad esempio **PTR** e **tipo** o per specificare membri di struttura o unione  
+-   `typedef` i nomi, in genere utilizzati con gli operatori, ad esempio **PTR** e **tipo** o per specificare i membri di struttura o unione  
   
  All'interno di un blocco `__asm` è possibile specificare le costanti Integer sia con la notazione C che con la notazione base dell'assembler (ad esempio, 0x100 e 100h sono equivalenti). Ciò consente di definire (utilizzando `#define`) una costante in C e utilizzarla in seguito nelle parti dell'assembly del programma C o C++. È inoltre possibile specificare le costanti nel formato ottale precedendole con 0. Ad esempio, 0777 specifica una costante ottale.  
   
@@ -59,7 +54,7 @@ ms.lasthandoff: 12/21/2017
   
 -   [Uso degli operatori in blocchi __asm](../../assembler/inline/using-operators-in-asm-blocks.md)  
   
--   [Utilizzo di simboli C o C++ blocchi asm](../../assembler/inline/using-c-or-cpp-symbols-in-asm-blocks.md)  
+-   [Utilizzo di C o C++ simboli blocchi asm](../../assembler/inline/using-c-or-cpp-symbols-in-asm-blocks.md)  
   
 -   [Accesso a dati C o C++ in blocchi __asm](../../assembler/inline/accessing-c-or-cpp-data-in-asm-blocks.md)  
   

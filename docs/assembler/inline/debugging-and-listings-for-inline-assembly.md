@@ -1,13 +1,10 @@
 ---
 title: Debug ed elenchi per Assembly Inline | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-masm
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - debugging [C++], inline assembly code
 - inline assembly, debugging
 ms.assetid: 69266930-6f9a-433d-b704-f4f44e7b2583
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5fea943c30d48ac122ae5d848306e4fe251f58da
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 457402626edcdb2be05923aa33bbd26b1cab7137
+ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="debugging-and-listings-for-inline-assembly"></a>Debug ed elenchi per assembly inline
 ## <a name="microsoft-specific"></a>Sezione specifica Microsoft  
