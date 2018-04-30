@@ -24,7 +24,7 @@
 ## [Opzioni di collegamento](link-options.md)
 ## [Potenziali errori di passaggio di oggetti CRT attraverso i limiti DLL](potential-errors-passing-crt-objects-across-dll-boundaries.md)
 ## [Inizializzazione CRT](crt-initialization.md)
-# [Routine di runtime per categoria](run-time-routines-by-category.md)
+# [Routine di Universal C Runtime per categoria](run-time-routines-by-category.md)
 ## [Accesso agli argomenti](argument-access.md)
 ## [Modifica del buffer](buffer-manipulation.md)
 ## [Classificazione per byte](byte-classification.md)
