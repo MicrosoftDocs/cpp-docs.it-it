@@ -1,12 +1,9 @@
 ---
 title: Friend (C++) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - friend_cpp
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - friend classes [C++]
 - friend keyword [C++]
 ms.assetid: 8fe9ee55-d56f-40cd-9075-d9fb1375aff4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 46caba9230676e30cde02e31cc231d606f446767
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1538ad67ce1b742c55dc413d78e40e8dcc9884df
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="friend-c"></a>friend (C++)
 In alcuni casi, è preferibile concedere l'accesso a livello di membro alle funzioni che non sono membri di una classe o a tutti i membri in una classe separata. Solo l'implementatore della classe può dichiarare i rispettivi elementi friend. Una funzione o una classe non può dichiarare se stessa come elemento friend di una classe. In una definizione di classe, utilizzare il `friend` (parola chiave) e il nome di una funzione non membro o un'altra classe per concedere l'accesso ai membri privati e protetti della classe.         In una definizione di modello, un parametro di tipo può essere dichiarato come friend.  
@@ -63,7 +58,7 @@ friend class F;
 friend F;  
 ```  
   
- Il primo formato introduce una nuova classe F se viene trovata alcuna classe esistente con lo stesso nome nello spazio dei nomi più interno.  **C++ 11**: la seconda forma non introduce una nuova classe; può essere utilizzato quando la classe è già stata dichiarata e deve essere utilizzato quando si dichiara un parametro di tipo di modello o un typedef come friend.  
+ Il primo formato introduce una nuova classe F se viene trovata alcuna classe esistente con lo stesso nome nello spazio dei nomi più interno.  **C++11**: la seconda forma non introduce una nuova classe; può essere utilizzato quando la classe è già stata dichiarata e deve essere utilizzato quando si dichiara un parametro di tipo di modello o un typedef come friend.  
   
  Utilizzare `class friend F` quando il tipo di riferimento non è ancora stato dichiarato:  
   
@@ -130,7 +125,7 @@ class G
 >  Sebbene la seconda classe per intero debba essere Friend della prima classe, è possibile selezionare le funzioni nella prima classe che saranno Friend della seconda classe.  
   
 ## <a name="friend-functions"></a>funzioni di tipo friend  
- Una funzione `friend` è una funzione che non è un membro di una classe ma ha accesso ai membri privati e protetti della classe. Le funzioni friend non sono considerate membri della classe; sono funzioni esterne normali a cui vengono concessi privilegi di accesso speciali. Elementi Friend non sono presenti nell'ambito della classe e non vengono chiamati utilizzando gli operatori di selezione dei membri (**.** e -**>**) a meno che non sono membri di un'altra classe. Una funzione `friend` viene dichiarata dalla classe che le sta concedendo accesso. La dichiarazione `friend` può essere inserita in un punto qualsiasi della dichiarazione di classe. Non è influenzata dalle parole chiave di controllo di accesso.  
+ Una funzione `friend` è una funzione che non è un membro di una classe ma ha accesso ai membri privati e protetti della classe. Le funzioni friend non sono considerate membri della classe; sono funzioni esterne normali a cui vengono concessi privilegi di accesso speciali. Elementi Friend non sono nell'ambito della classe e non vengono chiamati con gli operatori di selezione dei membri (**.** e -**>**) a meno che non sono membri di un'altra classe. Una funzione `friend` viene dichiarata dalla classe che le sta concedendo accesso. La dichiarazione `friend` può essere inserita in un punto qualsiasi della dichiarazione di classe. Non è influenzata dalle parole chiave di controllo di accesso.  
   
  Nell'esempio seguente viene illustrata una classe `Point` e una funzione friend `ChangePrivate`. La funzione `friend` ha accesso al membro dati privato dell'oggetto `Point` ricevuto come parametro.  
   

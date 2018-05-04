@@ -1,30 +1,25 @@
 ---
-title: "Aggiunta di una proprietà al controllo (ATL esercitazione, parte 3) | Documenti Microsoft"
-ms.custom: 
+title: Aggiunta di una proprietà al controllo (ATL esercitazione, parte 3) | Documenti Microsoft
+ms.custom: get-started-article
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: get-started-article
+- cpp-atl
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: f775fe34-103b-4f07-9999-400e987ee030
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8a316ba56c551d0ee47261160058b00eca5e51a4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: db800de12c0c0e4d7bef2a59a576f1d475e675da
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="adding-a-property-to-the-control-atl-tutorial-part-3"></a>Aggiunta di una proprietà al controllo (Esercitazione di ATL, parte 3)
-`IPolyCtl`l'interfaccia che contiene i metodi del controllo personalizzato e le proprietà e si aggiungerà una proprietà.  
+`IPolyCtl` l'interfaccia che contiene i metodi del controllo personalizzato e le proprietà e verrà aggiunta una proprietà.  
   
 ### <a name="to-add-a-property-using-the-add-property-wizard"></a>Per aggiungere una proprietà tramite l'aggiunta guidata proprietà  
   
@@ -38,7 +33,7 @@ ms.lasthandoff: 12/21/2017
   
 4.  Nell'elenco a discesa dei tipi di proprietà, selezionare `SHORT`.  
   
-5.  Tipo `Sides` come il **nome della proprietà.**  
+5.  Tipo di `Sides` come il **nome della proprietà.**  
   
 6.  Fare clic su **fine** per completare l'aggiunta della proprietà.  
   
@@ -66,7 +61,7 @@ ms.lasthandoff: 12/21/2017
   
  Ora è una proprietà denominata `Sides`. Nel passaggio successivo, si modificherà il codice di disegno per poterlo utilizzare.  
   
- [Al passaggio 2](../atl/adding-a-control-atl-tutorial-part-2.md) &#124; [Al passaggio 4](../atl/changing-the-drawing-code-atl-tutorial-part-4.md)  
+ [Al passaggio 2](../atl/adding-a-control-atl-tutorial-part-2.md) &#124; [al passaggio 4](../atl/changing-the-drawing-code-atl-tutorial-part-4.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Esercitazione](../atl/active-template-library-atl-tutorial.md)

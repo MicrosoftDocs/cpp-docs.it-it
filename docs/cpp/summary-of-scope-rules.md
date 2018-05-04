@@ -1,12 +1,9 @@
 ---
 title: Riepilogo delle regole di ambito | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - names [C++], class
 - scope [C++], class names
 ms.assetid: 47e26482-0111-466f-b857-598c15d05105
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c530a586ca2b8b70cfdc967c354738e93435f20c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9d901103f36493e74f73b2edb18faa1188e704ef
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="summary-of-scope-rules"></a>Riepilogo delle regole di ambito
 L'utilizzo di un nome deve essere non ambiguo all'interno dell'ambito relativo (fino al punto in cui viene determinata l'esecuzione dell'overload). Se il nome indica una funzione, quest'ultima deve essere non ambigua rispetto al numero e al tipo di parametri. Se il nome non è ambiguo, [accesso ai membri](../cpp/member-access-control-cpp.md) vengono applicate le regole.  
@@ -47,7 +42,7 @@ L'utilizzo di un nome deve essere non ambiguo all'interno dell'ambito relativo (
 ## <a name="qualified-names"></a>Nomi completi  
  I nomi usati con l'operatore di risoluzione dell'ambito binario (`::`) sono denominati "nomi completi". Il nome specificato dopo l'operatore di risoluzione dell'ambito binario deve essere un membro della classe specificata a sinistra dell'operatore o un membro della relativa classe base.  
   
- I nomi specificati dopo l'operatore di selezione dei membri (**.** o  **->** ) devono essere membri del tipo di classe dell'oggetto specificato a sinistra dell'operatore o membri della relativa classe base. I nomi specificati a destra dell'operatore di selezione dei membri (**->**) può anche contenere oggetti di un altro tipo di classe, a condizione che il lato sinistro della  **->**  è un oggetto di classe e che la classe definisce un operatore di selezione dei membri in overload (**->**) che restituisce un puntatore a un altro tipo di classe. (Questa operazione viene illustrata in dettaglio in [accesso ai membri di classe](../cpp/member-access.md).)  
+ I nomi specificati dopo l'operatore di selezione dei membri (**.** o **->**) devono essere membri del tipo di classe dell'oggetto specificato a sinistra dell'operatore o membri della relativa classe base. I nomi specificati a destra dell'operatore di selezione dei membri (**->**) può anche contenere oggetti di un altro tipo di classe, a condizione che il lato sinistro della **->** è un oggetto di classe e che la classe definisce un operatore di selezione dei membri in overload (**->**) che restituisce un puntatore a un altro tipo di classe. (Questa operazione viene illustrata in dettaglio in [accesso ai membri di classe](../cpp/member-access.md).)  
   
  Il compilatore cerca i nomi nel seguente ordine, arrestandosi quando il nome viene trovato:  
   

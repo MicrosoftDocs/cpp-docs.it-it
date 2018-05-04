@@ -1,12 +1,12 @@
 ---
 title: 'Procedura: aggiungere il supporto Gestione riavvio | Documenti Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - C++
@@ -14,27 +14,28 @@ helpviewer_keywords:
 - Restart manager [MFC]
 - C++, application crash support
 ms.assetid: 7f3f5867-d4bc-4ba8-b3c9-dc1e7be93642
-caps.latest.revision: 
+caps.latest.revision: 9
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a413f28909a52e3bc82e9d8f2694d559bf8a885c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4550a8a6a6457c4bf5b7acc137a592aa5ecb2e4b
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-add-restart-manager-support"></a>Procedura: Aggiungere il supporto di Gestione riavvio
-Gestione riavvio è una funzionalità aggiunta a [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] per [!INCLUDE[wiprlhext](../c-runtime-library/reference/includes/wiprlhext_md.md)] che consente di riavviare l'applicazione in caso di chiusure o riavvii imprevisti. Il funzionamento di Gestione riavvio dipende dal tipo di applicazione Se l'applicazione è un editor di documenti, Gestione riavvio consente all'applicazione di salvare automaticamente lo stato e il contenuto di qualsiasi documento aperto e riavvia l'applicazione dopo una chiusura imprevista. Se l'applicazione non è un editor di documenti, Gestione riavvio riavvierà l'applicazione, ma per impostazione predefinita non potrà salvare lo stato dell'applicazione.  
+
+Gestione riavvio è una funzionalità aggiunta a Visual Studio per Windows Vista o sistemi operativi successivi. che consente di riavviare l'applicazione in caso di chiusure o riavvii imprevisti. Il funzionamento di Gestione riavvio dipende dal tipo di applicazione Se l'applicazione è un editor di documenti, Gestione riavvio consente all'applicazione di salvare automaticamente lo stato e il contenuto di qualsiasi documento aperto e riavvia l'applicazione dopo una chiusura imprevista. Se l'applicazione non è un editor di documenti, Gestione riavvio riavvierà l'applicazione, ma per impostazione predefinita non potrà salvare lo stato dell'applicazione.  
   
  Dopo il riavvio, se l'applicazione è di tipo Unicode verrà visualizzata una finestra di dialogo delle attività. Se l'applicazione è di tipo ANSI, verrà visualizzata una finestra di messaggio di Windows. In questa fase, l'utente sceglie se ripristinare i documenti automaticamente salvati. Se l'utente non ripristina i documenti automaticamente salvati, Gestione riavvio rimuove i file temporanei.  
   
 > [!NOTE]
 >  È possibile eseguire l'override del comportamento predefinito di Gestione riavvio per il salvataggio dei dati e il riavvio dell'applicazione.  
   
- Per impostazione predefinita, le applicazioni MFC create con la procedura guidata del progetto in [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] supportano Gestione riavvio quando le applicazioni vengono eseguite in un computer con [!INCLUDE[wiprlhext](../c-runtime-library/reference/includes/wiprlhext_md.md)]. Se non si vuole che l'applicazione supporti Gestione riavvio, è possibile disabilitare Gestione riavvio nella creazione guidata nuovo progetto.  
+ Per impostazione predefinita, le applicazioni MFC create tramite la creazione guidata progetto in [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] supportano Gestione riavvio quando le applicazioni vengono eseguite in un computer dotato di un Windows Vista o versioni successive del sistema operativo. Se non si vuole che l'applicazione supporti Gestione riavvio, è possibile disabilitare Gestione riavvio nella creazione guidata nuovo progetto.  
   
 ### <a name="to-add-support-for-the-restart-manager-to-an-existing-application"></a>Per aggiungere il supporto di Gestione riavvio a un'applicazione esistente  
   

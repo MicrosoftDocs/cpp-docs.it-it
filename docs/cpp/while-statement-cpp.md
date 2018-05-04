@@ -1,12 +1,9 @@
 ---
 title: while (istruzione) (C++) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - while_cpp
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - while keyword [C++]
 - while keyword [C++], syntax
 ms.assetid: 358dbe76-5e5e-4af5-b575-c2293c636899
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e93d31457beb3c1546b55d303fd71566176a9367
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6f281007bea3f23bc8e7cebcdd68b9a306b500e9
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="while-statement-c"></a>Istruzione while (C++)
 Esegue *istruzione* ripetutamente finché *espressione* restituisce zero.  
@@ -40,7 +35,7 @@ Esegue *istruzione* ripetutamente finché *espressione* restituisce zero.
 ```  
   
 ## <a name="remarks"></a>Note  
- Il test di *espressione* avviene prima dell'esecuzione del ciclo; pertanto, un `while` il ciclo viene eseguito zero o più volte. *espressione* deve essere di tipo integrale, un tipo di puntatore o un tipo di classe con una conversione non ambigua a un tipo integrale o un tipo di puntatore.  
+ Il test di *espressione* avviene prima dell'esecuzione del ciclo; pertanto, un `while` il ciclo viene eseguito zero o più volte. *espressione* deve essere di un tipo integrale, un tipo di puntatore o un tipo di classe con una conversione non ambigua a un tipo integrale o tipo di puntatore.  
   
  Oggetto `while` ciclo può terminare anche quando un [interruzione](../cpp/break-statement-cpp.md), [goto](../cpp/goto-statement-cpp.md), o [restituire](../cpp/return-statement-cpp.md) all'interno dell'istruzione corpo viene eseguito. Utilizzare [continuare](../cpp/continue-statement-cpp.md) per terminare l'iterazione corrente senza uscire il `while` ciclo. **continuare** passa il controllo all'iterazione successiva del `while` ciclo.  
   

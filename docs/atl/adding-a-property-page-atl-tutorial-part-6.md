@@ -1,27 +1,22 @@
 ---
 title: Aggiunta di una pagina delle proprietà (ATL esercitazione, parte 6) | Documenti Microsoft
-ms.custom: ''
+ms.custom: get-started-article
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: get-started-article
+- cpp-atl
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: df80d255-e7ea-49d9-b940-3f012e90cf9b
-caps.latest.revision: 15
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 067c5d662fee3838a33a3b53fd5dab2946ab50cf
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bf7f0383697fbc1e23e179936a2616d1d236b5f2
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="adding-a-property-page-atl-tutorial-part-6"></a>Aggiunta di una pagina di proprietà (Esercitazione di ATL, parte 6)
 Pagine delle proprietà vengono implementate come oggetti COM separati, che consentono loro di condivisione, se necessario. In questo passaggio si eseguiranno le attività seguenti per aggiungere una pagina delle proprietà al controllo:  
@@ -104,7 +99,7 @@ Pagine delle proprietà vengono implementate come oggetti COM separati, che cons
   
  Nel codice viene controllato l'impostazione di `Sides` proprietà effettivamente utilizzato. In caso contrario, il codice visualizza una finestra di messaggio, la visualizzazione dei dettagli di errore dal **IErrorInfo** interfaccia. In genere, un contenitore richiede un oggetto per il **ISupportErrorInfo** interfaccia e chiama `InterfaceSupportsErrorInfo` prima, per determinare se l'oggetto supporta l'impostazione delle informazioni di errore. È possibile ignorare questa attività.  
   
- [CComPtr](../atl/reference/ccomptr-class.md) consente gestendo automaticamente il conteggio dei riferimenti, pertanto non è necessario chiamare `Release` sull'interfaccia. `CComBSTR`Consente di con `BSTR` l'elaborazione, non è necessario eseguire finale `SysFreeString` chiamare. È inoltre utilizzare una delle varie classi di conversione di stringhe, pertanto è possibile convertire il `BSTR` eventualmente (perché il `USES_CONVERSION` macro è all'inizio della funzione).  
+ [Istanze CComPtr](../atl/reference/ccomptr-class.md) consente di gestendo automaticamente il conteggio dei riferimenti, pertanto non è necessario chiamare `Release` sull'interfaccia. `CComBSTR` Consente di con `BSTR` elaborare, quindi non è necessario eseguire finale `SysFreeString` chiamare. È inoltre utilizzare una delle varie classi di conversione di stringhe, pertanto è possibile convertire il `BSTR` eventualmente (perché il `USES_CONVERSION` macro è all'inizio della funzione).  
   
  È inoltre necessario impostare flag dirty della pagina delle proprietà per indicare che il **applica** pulsante deve essere attivato. Questo errore si verifica quando l'utente modifica il valore di **lati** casella di modifica.  
   
@@ -126,7 +121,7 @@ Pagine delle proprietà vengono implementate come oggetti COM separati, che cons
   
      [!code-cpp[NVC_ATL_Windowing#59](../atl/codesnippet/cpp/adding-a-property-page-atl-tutorial-part-6_2.cpp)]  
   
- `OnEnChangeSides`verrà chiamato quando un **WM_COMMAND** messaggio viene inviato con il **EN_CHANGE** notifica per il `IDC_SIDES` controllo. `OnEnChangeSides`chiama quindi `SetDirty` e passa `TRUE` per indicare la proprietà verrà pagina dirty e **applica** pulsante deve essere attivato.  
+ `OnEnChangeSides` verrà chiamato quando un **WM_COMMAND** messaggio viene inviato con il **EN_CHANGE** notifica per il `IDC_SIDES` controllo. `OnEnChangeSides` quindi chiama `SetDirty` e passa `TRUE` per indicare la proprietà verrà pagina dirty e la **applica** pulsante deve essere abilitato.  
   
 ## <a name="adding-the-property-page-to-the-control"></a>Aggiunta alla pagina delle proprietà al controllo  
  La creazione guidata classe aggiungere ATL e guidata pagina delle proprietà ATL non aggiungere la pagina delle proprietà al controllo automaticamente, perché nel progetto potrebbe essere più controlli. È necessario aggiungere una voce per il mapping di proprietà del controllo.  
@@ -152,7 +147,7 @@ Pagine delle proprietà vengono implementate come oggetti COM separati, che cons
   
  Successivamente, si passerà il controllo in una pagina Web.  
   
- [Al passaggio 5](../atl/adding-an-event-atl-tutorial-part-5.md) &#124; [Al passaggio 7](../atl/putting-the-control-on-a-web-page-atl-tutorial-part-7.md)  
+ [Al passaggio 5](../atl/adding-an-event-atl-tutorial-part-5.md) &#124; [al passaggio 7](../atl/putting-the-control-on-a-web-page-atl-tutorial-part-7.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Esercitazione](../atl/active-template-library-atl-tutorial.md)

@@ -2,11 +2,8 @@
 title: Membri dati modificabili (C++) | Documenti Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - mutable_cpp
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - mutable keyword [C++]
 ms.assetid: ebe89746-3d36-43a8-8d69-f426af23f551
-caps.latest.revision: 7
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a93ae14e6f630d8974163ce8295626a524b49e3c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e7dd639cbf1ef076dee6e447f317533bf12dae10
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mutable-data-members-c"></a>Membri dati modificabili (C++)
 Questa parola chiave può essere applicata solo a membri dati non dichiarati come static e const di una classe. Se viene dichiarato un membro dati `mutable`, è consentito assegnare un valore di questo membro dati da un **const** funzione membro.  

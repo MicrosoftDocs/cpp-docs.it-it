@@ -1,29 +1,24 @@
 ---
 title: Risoluzione dell'overload delle chiamate di funzione modello | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - function templates overload resolution
 ms.assetid: a2918748-2cbb-4fc6-a176-e256f120bee4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 64bc9371fcddad5f76f1474832a8d69188b60583
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3d4a0e2867c5057eb5808c4d39687961eabba6dd
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="overload-resolution-of-function-template-calls"></a>Risoluzione dell'overload di chiamate a modelli di funzioni
 Un modello di funzione può eseguire l'overload delle funzioni non template dello stesso nome. In questi casi, le chiamate di funzione vengono risolte innanzitutto utilizzando la deduzione dell'argomento di modello, per creare un'istanza del modello di funzione con una specializzazione univoca. Se la deduzione dell'argomento di modello non riesce, vengono presi in considerazione gli altri overload di funzione per risolvere la chiamata. Tali altri overload, noti anche come set candidati, includono funzioni non template e altri modelli di funzione per i quali si è creata un'istanza. Se la deduzione dell'argomento di modello viene eseguita correttamente, la funzione generata viene confrontata con le altre funzioni, al fine di determinare la migliore corrispondenza in base alle regole di risoluzione dell'overload. Per ulteriori informazioni, vedere [overload di funzioni](function-overloading.md).  

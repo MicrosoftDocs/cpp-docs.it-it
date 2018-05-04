@@ -2,11 +2,8 @@
 title: Controllo di accesso membri (C++) | Documenti Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - member access [C++]
 - member-access control [C++]
 ms.assetid: 2d596bca-56ad-4277-94e1-ce3db45fa14a
-caps.latest.revision: 9
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 88fe05ab0c0e6a1c433bf2b6007fb63c18fb5850
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c1f36b23ce76c4f4e639e824116f7f80063a8748
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="member-access-control-c"></a>Controllo di accesso dei membri [C++]
 I controlli di accesso permettono di separare il [pubblica](../cpp/public-cpp.md) interfaccia di una classe dal [privata](../cpp/private-cpp.md) i dettagli di implementazione e [protetto](../cpp/protected-cpp.md) membri che sono solo per utilizzare da classi derivate. L'identificatore di accesso si applica a tutti i membri dichiarati dopo l'identificatore stesso, fino a quando non viene rilevato l'identificatore di accesso successivo.  

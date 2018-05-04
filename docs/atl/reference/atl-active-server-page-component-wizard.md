@@ -1,12 +1,9 @@
 ---
 title: Creazione guidata componente ASP ATL | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - vc.codewiz.class.atl.asp.overview
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - ASP components, creating in ATL
 - ATL Active Server Page Component Wizard
 ms.assetid: 5a5cb904-dbbf-44ea-ad3d-2ddd14c1d3c5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ad2d707b5dbfc78ec8975471114bc87bf23fe5f4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4d717eefe9c9ee353692d343b88c57469eeb6892
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="atl-active-server-page-component-wizard"></a>Creazione guidata componente ASP ATL
 Questa procedura guidata consente di inserire nel progetto di componente pagine ASP (Active Server). Microsoft Internet Information Services (IIS) utilizza componenti ASP come parte della relativa architettura di sviluppo avanzato pagina Web.  
@@ -72,7 +67,7 @@ Questa procedura guidata consente di inserire nel progetto di componente pagine 
 ### <a name="com"></a>COM  
  Fornisce informazioni sulle funzionalità COM per l'oggetto.  
   
- **Coclasse**  
+ **coclasse**  
  Imposta il nome della classe del componente che contiene un elenco delle interfacce supportate dall'oggetto. Se il progetto o l'oggetto utilizza gli attributi, è possibile modificare questa opzione poiché ATL non include il **coclasse** attributo.  
   
  **Type**  

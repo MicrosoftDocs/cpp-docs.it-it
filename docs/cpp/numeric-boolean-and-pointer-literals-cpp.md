@@ -1,12 +1,9 @@
 ---
 title: Numerici, booleani e valori letterali di puntatore (C++) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -15,20 +12,18 @@ helpviewer_keywords:
 - constants, literals
 - literals [C++]
 ms.assetid: 17c09fc3-3ad7-47e2-8b48-ba8ae994edc8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 91f79a2703dee8a162b971a78eba7e13a9849b43
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8ce5f2c6703b18747dd4a2c51fe540d01370b38b
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="numeric-boolean-and-pointer-literals--c"></a>Numerici, booleani e valori letterali di puntatore (C++)
-Un valore letterale è un elemento del programma che rappresenta direttamente un valore. Questo articolo illustra i valori letterali di tipo Integer, a virgola mobile, booleano e puntatore. Per informazioni sui valori letterali stringa e carattere, vedere [stringa e valori letterali carattere (C++)](../cpp/string-and-character-literals-cpp.md). È inoltre possibile definire valori letterali personalizzati basati su uno qualsiasi di queste categorie. Per ulteriori informazioni vedere [valori letterali definiti dall'utente (C++)](../cpp/user-defined-literals-cpp.md)  
+Un valore letterale è un elemento del programma che rappresenta direttamente un valore. Questo articolo illustra i valori letterali di tipo Integer, a virgola mobile, booleano e puntatore. Per informazioni sui valori letterali stringa e carattere, vedere [stringa e valori letterali carattere (C++)](../cpp/string-and-character-literals-cpp.md). È inoltre possibile definire valori letterali personalizzati basati su uno qualsiasi di queste categorie; per altre informazioni vedere [valori letterali definiti dall'utente (C++)](../cpp/user-defined-literals-cpp.md)  
   
  . È possibile usare i valori letterali in molti contesti, ma in genere vengono usati per inizializzare le variabili denominate e passare argomenti alle funzioni:  
   
@@ -84,7 +79,7 @@ auto val_4 = 108LL;                           // signed long long
 auto val_4 = 0x8000000000000000ULL << 16;     // unsigned long long   
 ```  
   
- **Separatori di cifre**: È possibile utilizzare il carattere di virgoletta singola (apostrofo) per separare i valori sul posto nei numeri grandi per renderne più semplice la lettura per gli utenti. I separatori non hanno effetto sulla compilazione.  
+ **Separatori di cifre**: È possibile utilizzare il carattere di virgoletta singola (apostrofo) per separare i valori sul posto nei numeri grandi per migliorarne la leggibilità per l'uomo da leggere. I separatori non hanno effetto sulla compilazione.  
   
 ```  
 long long i = 24'847'458'121  

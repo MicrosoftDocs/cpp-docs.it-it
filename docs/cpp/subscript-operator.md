@@ -1,12 +1,9 @@
 ---
 title: 'Operatore di indice: | Documenti Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - '[]'
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - '[] operator'
 - subscript operator [C++], syntax
 ms.assetid: 69c31494-52da-4dd0-8bbe-6ccbfd50f197
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1fbcb3657af276cdfc9aa05d461c090b76f6de0b
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: b116b55dd951e3be32c23a73614e7082c4102db4
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="subscript-operator"></a>Operatore di indice inferiore:
 ## <a name="syntax"></a>Sintassi  
@@ -67,7 +62,7 @@ double aDbl[2];
   
  *expression1* **[***expression2***] [***expression3***]**...  
   
- Le espressioni di indice sono associate da sinistra a destra. L'espressione di indice più a sinistra, * expression1***[***expression2 ***]**, viene valutato per primo. L'indirizzo risultante dall'aggiunta di *expression1* ed *expression2* forma un'espressione puntatore; quindi *expression3* viene aggiunta a quest'espressione puntatore per formare una nuova espressione puntatore e così via finché non è stata aggiunta l'ultima espressione di indice. Operatore di riferimento indiretto (**\***) viene applicata dopo l'ultima espressione di indice viene valutata, a meno che il valore del puntatore finale risolve un tipo di matrice.  
+ Le espressioni di indice sono associate da sinistra a destra. L'espressione di indice più a sinistra, * expression1 ***[*** expression2 ***]**, viene valutato per primo. L'indirizzo risultante dall'aggiunta di *expression1* ed *expression2* forma un'espressione puntatore; quindi *expression3* viene aggiunta a quest'espressione puntatore per formare una nuova espressione puntatore e così via finché non è stata aggiunta l'ultima espressione di indice. Operatore di riferimento indiretto (**\***) viene applicata dopo l'ultima espressione di indice viene valutata, a meno che il valore del puntatore finale risolve un tipo di matrice.  
   
  Le espressioni con più indici fanno riferimento a elementi di "matrici multidimensionali". Una matrice multidimensionale è una matrice i cui elementi sono matrici. Ad esempio, il primo elemento di una matrice tridimensionale è una matrice con due dimensioni. Nell'esempio seguente viene dichiarata e inizializzata una matrice bidimensionale di caratteri semplice:  
   

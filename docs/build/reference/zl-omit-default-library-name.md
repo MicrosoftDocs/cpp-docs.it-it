@@ -1,13 +1,10 @@
 ---
 title: -Zl (Ometti nomi librerie predefinite) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - /zi
 - VC.Project.VCCLCompilerTool.OmitDefaultLibName
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - /Zl compiler option [C++]
 - default libraries, omitting names
 ms.assetid: b27d39d0-44d6-498c-84ae-27c1326fee59
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2b77b9c1033be1f6144d92b6051118ca85aaaf20
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4c14a3217334c2c43bac7fbcce8b0bfd60a609d3
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="zl-omit-default-library-name"></a>/Zl (Omette il nome della libreria predefinita)
 Omette il nome di libreria runtime C predefinita dal file obj. Per impostazione predefinita, il compilatore inserisce il nome della libreria nel file OBJ per indirizzare il linker alla libreria corretta.  

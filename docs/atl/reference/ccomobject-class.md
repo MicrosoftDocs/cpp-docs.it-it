@@ -1,12 +1,9 @@
 ---
 title: Classe CComObject | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CComObject
@@ -21,17 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - CComObject class
 ms.assetid: e2b6433b-6349-4749-b4bc-acbd7a22c8b0
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 27da00e09ca88cc06b8bafed8f8601dac756fd34
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: af84d64d326ed7746b76db39ef26181ab96ca88d
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ccomobject-class"></a>CComObject (classe)
 Questa classe implementa **IUnknown** per un oggetto non aggregato.  
@@ -54,7 +49,7 @@ class CComObject : public Base
 |Nome|Descrizione|  
 |----------|-----------------|  
 |[CComObject::CComObject](#ccomobject)|Costruttore.|  
-|[CComObject::~CComObject](#dtor)|Distruttore.|  
+|[CComObject:: ~ CComObject](#dtor)|Distruttore.|  
   
 ### <a name="public-methods"></a>Metodi pubblici  
   
@@ -116,7 +111,7 @@ CComObject();
 
   
 ##  <a name="createinstance"></a>  CComObject::CreateInstance  
- Questa funzione statica consente di creare un nuovo **CComObject <** `Base`  **>**  oggetto, senza l'overhead di [CoCreateInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615).  
+ Questa funzione statica consente di creare un nuovo **CComObject <** `Base` **>** oggetto, senza l'overhead di [CoCreateInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615).  
   
 ```
 static HRESULT WINAPI CreateInstance(CComObject<Base>** pp);
@@ -124,7 +119,7 @@ static HRESULT WINAPI CreateInstance(CComObject<Base>** pp);
   
 ### <a name="parameters"></a>Parametri  
  `pp`  
- [out] Un puntatore a un **CComObject <** `Base`  **>**  puntatore. Se `CreateInstance` ha esito negativo, `pp` è impostato su **NULL**.  
+ [out] Un puntatore a un **CComObject <** `Base` **>** puntatore. Se `CreateInstance` ha esito negativo, `pp` è impostato su **NULL**.  
   
 ### <a name="return-value"></a>Valore restituito  
  Un valore `HRESULT` standard.  

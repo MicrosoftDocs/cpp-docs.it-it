@@ -1,13 +1,10 @@
 ---
-title: 'Procedura: incorporare un manifesto all''interno di un''applicazione C/C++ | Documenti Microsoft'
-ms.custom: 
+title: "Procedura: incorporare un manifesto all'interno di un'applicazione C/C++ | Documenti Microsoft"
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - embedding manifests
 - makefiles, updating to embed manifest
 ms.assetid: ec0bac69-2fdc-466c-ab0d-710a22974e5d
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0950cff4cb568f0adcae5e7d523f233868da013d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7a759533a8e88ef05e3660e0e9b36525df378334
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-embed-a-manifest-inside-a-cc-application"></a>Procedura: incorporare un manifesto in un'applicazione C/C++
 È consigliabile che un'applicazione C/C++ (o libreria) il manifesto sia incorporato all'interno del file binario finale perché in questo modo il comportamento di runtime corretto nella maggior parte degli scenari. Per impostazione predefinita, [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] tenta di incorporare il manifesto quando compila un progetto da file di origine; vedere [generazione in Visual Studio](../build/manifest-generation-in-visual-studio.md) per ulteriori informazioni. Tuttavia se un'applicazione compilata con nmake, sono necessarie alcune modifiche al makefile esistente. In questa sezione viene illustrato come modificare makefile esistenti per incorporare automaticamente il manifesto nel file binario finale.  
@@ -35,11 +30,11 @@ ms.lasthandoff: 12/21/2017
   
 -   Se non si sta eseguendo una compilazione incrementale è possibile incorporare direttamente il manifesto tramite la riga di comando simile al seguente come passaggio post-compilazione:  
   
-     **MT.exe-manifesto MyApp.exe.manifest-outputresource:MyApp.exe;1**  
+     **MT.exe-manifest MyApp.exe.manifest-outputresource:MyApp.exe;1**  
   
      oppure  
   
-     **MT.exe-manifesto MyLibrary.dll.manifest-outputresource:MyLibrary.dll;2**  
+     **MT.exe-manifest MyLibrary.dll.manifest-outputresource:MyLibrary.dll;2**  
   
      (1 per un file EXE, 2 per una DLL).  
   

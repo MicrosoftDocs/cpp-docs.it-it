@@ -1,10 +1,10 @@
 ---
 title: /Zc:referenceBinding (applicare le regole di associazione riferimento) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/06/2018
 ms.technology:
 - cpp-tools
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - referenceBinding
 - /Zc:referenceBinding
@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 0c6cfaac-9c2a-41a3-aa94-64ca8ef261fc
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a8e3b10f5b2108a4c0e29d802951015749775a27
-ms.sourcegitcommit: eeb2b5ad8d3d22514a7b9bd7d756511b69ae0ccf
+ms.openlocfilehash: 30038f6ff73eaa2d9536c3685927458a70209864
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="zcreferencebinding-enforce-reference-binding-rules"></a>/Zc:referenceBinding (applicare le regole di associazione riferimento)
 

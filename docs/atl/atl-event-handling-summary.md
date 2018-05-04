@@ -1,29 +1,24 @@
 ---
 title: Riepilogo di gestione dell'evento ATL | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-atl
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - event handling, implementing
 ms.assetid: e8b47ef0-0bdc-47ff-9dd6-34df11dde9a2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cb863f334c00569ef849167cc39d365e0588f666
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a938bd072ea8df30e64cce28fbf0709f08547d28
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="atl-event-handling-summary"></a>Riepilogo della gestione degli eventi ATL
 In generale, la gestione degli eventi COM è un processo relativamente semplice. Esistono tre passaggi principali:  
@@ -40,11 +35,11 @@ In generale, la gestione degli eventi COM è un processo relativamente semplice.
 |Derivare da|Adatto per il tipo di interfaccia|È necessario implementare tutti i metodi *|Richiede una libreria dei tipi in fase di esecuzione|  
 |-----------------|---------------------------------|---------------------------------------------|-----------------------------------------|  
 |L'interfaccia|Vtable|Yes|No|  
-|[IDispatchImpl.](../atl/reference/idispatchimpl-class.md)|Doppio|Yes|Yes|  
+|[IDispatchImpl](../atl/reference/idispatchimpl-class.md)|Doppio|Yes|Yes|  
 |[IDispEventImpl](../atl/reference/idispeventimpl-class.md)|Interfaccia dispatch|No|Yes|  
 |[IDispEventSimpleImpl](../atl/reference/idispeventsimpleimpl-class.md)|Interfaccia dispatch|No|No|  
   
- \*Quando si utilizzano le classi di supporto ATL, non è necessario implementare la **IUnknown** o `IDispatch` metodi manualmente.  
+ \* Quando si utilizzano le classi di supporto ATL, è mai necessario implementare la **IUnknown** o `IDispatch` metodi manualmente.  
   
 ## <a name="advising-and-unadvising-the-event-source"></a>Consigli l'origine evento  
  Esistono tre modi principali per consigli di un'origine eventi mediante ATL.  
@@ -52,10 +47,10 @@ In generale, la gestione degli eventi COM è un processo relativamente semplice.
 |Funzione di notifica|Annullare gli avvisi per funzione|Più adatto per l'utilizzo con|È necessario tenere traccia di un cookie|Commenti|  
 |---------------------|-----------------------|--------------------------------|---------------------------------------------|--------------|  
 
-|[AtlAdvise](reference/connection-point-global-functions.md#atladvise), [CComPtrBase:: Advise](../atl/reference/ccomptrbase-class.md#advise)|[AtlUnadvise](reference/connection-point-global-functions.md#atlunadvise)| Vtable o interfacce duali | Sì | `AtlAdvise` funzione ATL globale. `CComPtrBase::Advise`viene utilizzato da [CComPtr](../atl/reference/ccomptr-class.md) e [CComQIPtr](../atl/reference/ccomqiptr-class.md). |  
+|[AtlAdvise](reference/connection-point-global-functions.md#atladvise), [CComPtrBase:: Advise](../atl/reference/ccomptrbase-class.md#advise)|[AtlUnadvise](reference/connection-point-global-functions.md#atlunadvise)| Vtable o interfacce duali | Sì | `AtlAdvise` funzione ATL globale. `CComPtrBase::Advise` viene utilizzato [CComPtr](../atl/reference/ccomptr-class.md) e [CComQIPtr](../atl/reference/ccomqiptr-class.md). |  
 
 |[IDispEventSimpleImpl:: DispEventAdvise](../atl/reference/idispeventsimpleimpl-class.md#dispeventadvise)|[IDispEventSimpleImpl:: DispEventUnadvise](../atl/reference/idispeventsimpleimpl-class.md#dispeventunadvise)|[IDispEventImpl](../atl/reference/idispeventimpl-class.md) o [ IDispEventSimpleImpl](../atl/reference/idispeventsimpleimpl-class.md)| Non | Parametri di un numero inferiore rispetto a `AtlAdvise` poiché la classe di base funziona più. |  
-|[CComCompositeControl::AdviseSinkMap(TRUE)](../atl/reference/ccomcompositecontrol-class.md#advisesinkmap)|[CComCompositeControl::AdviseSinkMap(FALSE)](../atl/reference/ccomcompositecontrol-class.md#advisesinkmap)| Controlli ActiveX in controlli compositi | Non | `CComCompositeControl::AdviseSinkMap` informa tutte le voci di sink di eventi della mappa. La stessa funzione unadvises le voci. Questo metodo viene chiamato automaticamente dalla `CComCompositeControl` classe. |  
+|[CComCompositeControl::AdviseSinkMap(TRUE)](../atl/reference/ccomcompositecontrol-class.md#advisesinkmap)|[CComCompositeControl::AdviseSinkMap(FALSE)](../atl/reference/ccomcompositecontrol-class.md#advisesinkmap)| Controlli ActiveX in controlli compositi | Non | `CComCompositeControl::AdviseSinkMap` informa tutte le voci della mappa del sink dell'evento. La stessa funzione unadvises le voci. Questo metodo viene chiamato automaticamente dalla `CComCompositeControl` classe. |  
 |[CAxDialogImpl::AdviseSinkMap(TRUE)](../atl/reference/caxdialogimpl-class.md#advisesinkmap)|[CAxDialogImpl::AdviseSinkMap(FALSE)](../atl/reference/caxdialogimpl-class.md#advisesinkmap)| Controlli ActiveX in una finestra di dialogo | Non | `CAxDialogImpl::AdviseSinkMap` informa e unadvises tutti i controlli ActiveX nella risorsa della finestra di dialogo. Questa operazione viene eseguita automaticamente per l'utente. |  
   
 ## <a name="see-also"></a>Vedere anche  

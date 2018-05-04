@@ -1,12 +1,9 @@
 ---
 title: dllexport, dllimport | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - dllimport_cpp
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - dllimport __declspec keyword
 - __declspec keyword [C++], dllimport
 ms.assetid: ff95b645-ef55-4e72-b848-df44657b3208
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d4e5b98b5541d1dc5f4a94c9611668a9ea8d787a
-ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
+ms.openlocfilehash: 3d57287723da1bb7fbe7f75dece05674142bd417
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="dllexport-dllimport"></a>dllexport, dllimport
 **Sezione specifica Microsoft**  
@@ -77,7 +72,7 @@ DllExport int n;
   
  Per altre informazioni, vedere:  
   
--   [Dichiarazioni e definizioni](../cpp/definitions-and-declarations-cpp.md)  
+-   [Definizioni e dichiarazioni](../cpp/definitions-and-declarations-cpp.md)  
   
 -   [Definizione delle funzioni C++ inline con dllexport e dllimport](../cpp/defining-inline-cpp-functions-with-dllexport-and-dllimport.md)  
   

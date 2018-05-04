@@ -1,29 +1,24 @@
 ---
 title: Calcolo dei valori necessari | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - helper functions, calculating necessary values
 ms.assetid: 4f037d0f-881a-4a48-a9d2-9f8872dfccb7
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4d1e51f1a23a81811bdd4aa6c6feec45748ee572
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4f8f51e448aab0978d6a7eb39a753c2274d2cae6
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="calculating-necessary-values"></a>Calcolo dei valori necessari
 Due tipi critici di informazioni devono essere calcolate in base alla routine di supporto di ritardo. A tal fine, esistono due funzioni inline in cpp per il calcolo di queste informazioni.  

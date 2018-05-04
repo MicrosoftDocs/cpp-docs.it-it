@@ -1,13 +1,10 @@
 ---
 title: -EH (modello di gestione delle eccezioni) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VC.Project.VCCLWCECompilerTool.ExceptionHandling
 - /eh
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - -EH compiler option [C++]
 - /EH compiler option [C++]
 ms.assetid: 754b916f-d206-4472-b55a-b6f1b0f2cb4d
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1c56020d5013e951d9d43ed799d34641d114d612
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 96b009a9f209ffcc4bb84550c5f37680ef71c9fe
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="eh-exception-handling-model"></a>/EH (Modello di gestione delle eccezioni)
 Specifica il tipo di gestione delle eccezioni usato dal compilatore, quando ottimizzare i controlli delle eccezioni e se eliminare gli oggetti C++ che non rientrano nell'ambito a causa di un'eccezione. Se l'opzione **/EH** non viene specificata, il compilatore intercetta sia le eccezioni strutturate asincrone sia le eccezioni C++, ma non elimina gli oggetti C++ che non rientrano nell'ambito a causa di un'eccezione asincrona.  
@@ -128,6 +123,6 @@ int main() {
 ## <a name="see-also"></a>Vedere anche  
  [Opzioni del compilatore](../../build/reference/compiler-options.md)   
  [Impostazione delle opzioni del compilatore](../../build/reference/setting-compiler-options.md)   
- [Errori e la gestione delle eccezioni](../../cpp/errors-and-exception-handling-modern-cpp.md)   
+ [Errori ed eccezioni](../../cpp/errors-and-exception-handling-modern-cpp.md)   
  [Specifiche di eccezioni (generazione)](../../cpp/exception-specifications-throw-cpp.md)   
  [Gestione strutturata delle eccezioni (C/C++)](../../cpp/structured-exception-handling-c-cpp.md)

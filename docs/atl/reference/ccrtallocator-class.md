@@ -1,12 +1,9 @@
 ---
 title: Classe CCRTAllocator | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CCRTAllocator
@@ -19,17 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - CCRTAllocator class
 ms.assetid: 3e1b8cb0-859a-41ab-8e93-6f0b5ceca49d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 84c8f800e0b68e23fe33ca0a7e1c1d977bcc344e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2f92ae3f4041b143a8cc4d58b1060c7d5b9a7bb4
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ccrtallocator-class"></a>Classe CCRTAllocator
 Questa classe fornisce metodi per la gestione della memoria, utilizzo della routine di memoria CRT.  
@@ -56,7 +51,7 @@ class ATL::CCRTAllocator
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** atlcore  
   
-##  <a name="allocate"></a>Ccrtallocator:: allocate  
+##  <a name="allocate"></a>  Ccrtallocator:: allocate  
  Chiamare questa funzione statica per allocare la memoria.  
   
 ```
@@ -73,7 +68,7 @@ static __declspec(allocator) void* Allocate(size_t nBytes) throw();
 ### <a name="remarks"></a>Note  
  Alloca memoria. Vedere [malloc](../../c-runtime-library/reference/malloc.md) per altri dettagli.  
   
-##  <a name="free"></a>Ccrtallocator:: Free  
+##  <a name="free"></a>  Ccrtallocator:: Free  
  Chiamare questa funzione statica per liberare memoria.  
   
 ```
@@ -87,7 +82,7 @@ static void Free(void* p) throw();
 ### <a name="remarks"></a>Note  
  Libera la memoria allocata. Vedere [libero](../../c-runtime-library/reference/free.md) per altri dettagli.  
   
-##  <a name="reallocate"></a>Ccrtallocator:: ReAllocate  
+##  <a name="reallocate"></a>  Ccrtallocator:: ReAllocate  
  Chiamare questa funzione statica per riallocare la memoria.  
   
 ```

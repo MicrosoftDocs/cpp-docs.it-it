@@ -1,12 +1,9 @@
 ---
 title: Funzioni con elenchi di argomenti variabili (C++) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -18,20 +15,18 @@ helpviewer_keywords:
 - declaring functions [C++], variables
 - function calls, variable number of arguments
 ms.assetid: 27c2f83a-21dd-44c6-913c-2834cb944703
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a715662ac6680218e3b15822108f429733569bfa
-ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
+ms.openlocfilehash: 14bbb56c7ae62bd7ef8c58b45704a4ba809965e0
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="functions-with-variable-argument-lists--c"></a>Elenchi di funzioni con argomenti variabili (C++)
-Le dichiarazioni di funzione, in cui l'ultimo membro sono i puntini di sospensione (...), possono accettare un numero variabile di argomenti. In questi casi, C++ fornisce il controllo di tipo solo per gli argomenti dichiarati esplicitamente. È possibile usare elenchi di argomenti variabili quando è necessario rendere una funzione così generale che anche il numero e i tipi di argomenti possono variare. La famiglia di funzioni è un esempio delle funzioni che utilizzano elenchi di argomenti variabili. `printf` *argument-declaration-list*  
+Le dichiarazioni di funzione, in cui l'ultimo membro sono i puntini di sospensione (...), possono accettare un numero variabile di argomenti. In questi casi, C++ fornisce il controllo di tipo solo per gli argomenti dichiarati esplicitamente. È possibile usare elenchi di argomenti variabili quando è necessario rendere una funzione così generale che anche il numero e i tipi di argomenti possono variare. La famiglia di funzioni è riportato un esempio delle funzioni che usano elenchi di argomenti variabili. `printf` *argument-declaration-list*  
   
 ## <a name="functions-with-variable-arguments"></a>Funzioni con elenchi di argomenti variabili  
  Per accedere agli argomenti dopo quelli dichiarati, usare le macro contenute nel file di inclusione standard \<stdarg. h > come descritto di seguito.  

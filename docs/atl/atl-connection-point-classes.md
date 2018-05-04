@@ -1,13 +1,10 @@
 ---
 title: Classi dei punti di connessione ATL | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-atl
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,36 +15,34 @@ helpviewer_keywords:
 - CFirePropNotifyEvent class
 - CComUnkArray class, connection point classes
 ms.assetid: 9582ba71-7ace-4df4-9c9b-1b0636953efc
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9845fdffdd951809ee7127c5fec86097a6219354
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 49acd19fcb25751ac9223b557b068383556f63f3
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="atl-connection-point-classes"></a>Classi dei punti di connessione ATL
 ATL Usa le classi seguenti per supportare i punti di connessione:  
   
 -   [IConnectionPointImpl](../atl/reference/iconnectionpointimpl-class.md) implementa un punto di connessione. L'IID dell'interfaccia in uscita che rappresenta viene passato come parametro di modello.  
   
--   [IConnectionPointContainerImpl](../atl/reference/iconnectionpointcontainerimpl-class.md) implementa il contenitore del punto di connessione e gestisce l'elenco di `IConnectionPointImpl` oggetti.  
+-   [IConnectionPointContainerImpl](../atl/reference/iconnectionpointcontainerimpl-class.md) implementa il contenitore del punto di connessione e gestiscono l'elenco di `IConnectionPointImpl` oggetti.  
   
 -   [IPropertyNotifySinkCP](../atl/reference/ipropertynotifysinkcp-class.md) implementa un punto di connessione che rappresenta il [IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638) interfaccia.  
   
 -   [CComDynamicUnkArray](../atl/reference/ccomdynamicunkarray-class.md) gestisce un numero arbitrario di connessioni tra il punto di connessione e il relativo sink.  
   
--   [CComUnkArray](../atl/reference/ccomunkarray-class.md) gestisce un numero predefinito di connessioni, come specificato dal parametro di modello.  
+-   [CComUnkArray](../atl/reference/ccomunkarray-class.md) gestisce un numero predefinito di connessioni come specificato dal parametro del modello.  
   
 -   [CFirePropNotifyEvent](../atl/reference/cfirepropnotifyevent-class.md) notifica al sink di un client che una proprietà dell'oggetto è stato modificato o sta per essere modificata.  
   
 -   [IDispEventImpl](../atl/reference/idispeventimpl-class.md) fornisce il supporto per i punti di connessione per un oggetto COM ATL. I punti di connessione vengono mappati a una mappa del sink di evento, viene fornito dall'oggetto COM.  
   
--   [IDispEventSimpleImpl](../atl/reference/idispeventsimpleimpl-class.md) funziona in combinazione con la mappa del sink di evento nella classe di eventi della route per la funzione del gestore appropriato.  
+-   [IDispEventSimpleImpl](../atl/reference/idispeventsimpleimpl-class.md) funziona in combinazione con la mappa di sink di evento nella classe di eventi della route per la funzione del gestore appropriato.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Punto di connessione](../atl/atl-connection-points.md)

@@ -1,36 +1,31 @@
 ---
 title: Implementazione di un gestore di stringa personalizzato (metodo di base) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - IAtlStringMgr class, using
 ms.assetid: eac5d13e-cbb4-4e82-b01e-f5f2dbcb962a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b80af4fc8b463b6987f586c426bd465520f75ba6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 259f9533747b266f0be0a782cdc94c98f167d2d2
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="implementation-of-a-custom-string-manager-basic-method"></a>Implementazione di un gestore di stringa personalizzato (metodo di base)
-Il modo più semplice per personalizzare lo schema di allocazione di memoria per i dati di stringa sono possibile utilizzare ATL fornita dal **CAtlStringMgr** classe ma fornire la propria memoria routine di allocazione. Il costruttore per **CAtlStringMgr** accetta un solo parametro: un puntatore a un `IAtlMemMgr` oggetto. `IAtlMemMgr`è una classe di base astratta che fornisce un'interfaccia generica per un heap. Utilizzando il `IAtlMemMgr` interfaccia, il **CAtlStringMgr** alloca rialloca e libera la memoria utilizzata per archiviare i dati di tipo stringa. È possibile implementare il `IAtlMemMgr` interfaccia manualmente oppure utilizzare una delle cinque classi di gestione di memoria di ATL. I gestori di memoria di ATL eseguito semplicemente il wrapping di funzioni di allocazione di memoria esistenti:  
+Il modo più semplice per personalizzare lo schema di allocazione di memoria per i dati di stringa sono possibile utilizzare ATL fornita dal **CAtlStringMgr** classe ma fornire la propria memoria routine di allocazione. Il costruttore per **CAtlStringMgr** accetta un solo parametro: un puntatore a un `IAtlMemMgr` oggetto. `IAtlMemMgr` è una classe basa astratta che fornisce un'interfaccia generica per un heap. Utilizzando il `IAtlMemMgr` interfaccia, il **CAtlStringMgr** alloca rialloca e libera la memoria utilizzata per archiviare i dati di tipo stringa. È possibile implementare il `IAtlMemMgr` interfaccia manualmente oppure utilizzare una delle cinque classi di gestione di memoria di ATL. I gestori di memoria di ATL eseguito semplicemente il wrapping di funzioni di allocazione di memoria esistenti:  
   
 -   [Su CCRTHeap](../atl/reference/ccrtheap-class.md) esegue il wrapping di funzioni di heap CRT standard ([malloc](../c-runtime-library/reference/malloc.md), [libero](../c-runtime-library/reference/free.md), e [realloc](../c-runtime-library/reference/realloc.md))  
   
--   [CWin32Heap](../atl/reference/cwin32heap-class.md) esegue il wrapping dell'handle di un heap Win32, utilizzando [HeapAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366597), [HeapFree](http://msdn.microsoft.com/library/windows/desktop/aa366701), e [HeapRealloc](http://msdn.microsoft.com/library/windows/desktop/aa366704)  
+-   [CWin32Heap](../atl/reference/cwin32heap-class.md) esegue il wrapping di gestire un heap Win32, usando [HeapAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366597), [HeapFree](http://msdn.microsoft.com/library/windows/desktop/aa366701), e [HeapRealloc](http://msdn.microsoft.com/library/windows/desktop/aa366704)  
   
 -   [CLocalHeap](../atl/reference/clocalheap-class.md) include le API Win32: [LocalAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366723), [LocalFree](http://msdn.microsoft.com/library/windows/desktop/aa366730), e [LocalRealloc](http://msdn.microsoft.com/library/windows/desktop/aa366742)  
   

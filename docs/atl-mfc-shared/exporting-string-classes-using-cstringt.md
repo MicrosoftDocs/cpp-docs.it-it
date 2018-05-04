@@ -1,29 +1,24 @@
 ---
 title: Esportazione di classi di stringa usando CStringT | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - CStringT class, exporting strings
 ms.assetid: bdfc441e-8d2a-461c-9885-46178066c09f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dd662b149f56cf0d6bd5e7a3c912e0ecd14f21b9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7510b1f44f49d17211c71419f4dde5a6e6a78974
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="exporting-string-classes-using-cstringt"></a>Esportazione di classi di stringa usando CStringT
 In passato, gli sviluppatori MFC è sono derivata da `CString` specializzare proprie classi di stringa. In Microsoft Visual C++ .NET (MFC 8.0), il [CString](../atl-mfc-shared/using-cstring.md) classe è stata sostituita da una classe di modello denominata [CStringT](../atl-mfc-shared/reference/cstringt-class.md). Questo fornito diversi vantaggi:  
@@ -32,7 +27,7 @@ In passato, gli sviluppatori MFC è sono derivata da `CString` specializzare pro
   
 -   Con il nuovo `CStringT` classe modello, è possibile personalizzare `CString` comportamento usando i parametri di modello che specificano i tratti di carattere, simili ai modelli nella libreria C++ Standard.  
   
--   Quando si esporta la propria classe di stringa da una DLL tramite `CStringT`, il compilatore Esporta automaticamente anche la `CString` classe di base. Poiché `CString` è essa stessa una classe modello, può essere creata dal compilatore quando utilizzata, a meno che il compilatore è in grado di riconoscere che `CString` viene importato da una DLL. Se sono stati migrati i progetti da Visual C++ 6.0 a Visual C++ .NET, potrebbe aver esaminato gli errori di simbolo del linker per un definito più volte `CString` a causa di conflitti del `CString` importato da una DLL e la versione locale di un'istanza. Il metodo migliore per eseguire questa operazione è descritta di seguito. Per ulteriori informazioni su questo problema, vedere l'articolo della Knowledge Base, "errori di collegamento quando si importano derivato CString classi" (Q309801) in [http://support.microsoft.com/default.aspx](http://support.microsoft.com/default.aspx).  
+-   Quando si esporta la propria classe di stringa da una DLL tramite `CStringT`, il compilatore Esporta automaticamente anche la `CString` classe di base. Poiché `CString` è essa stessa una classe modello, può essere creata dal compilatore quando utilizzata, a meno che il compilatore è in grado di riconoscere che `CString` viene importato da una DLL. Se sono stati migrati i progetti da Visual C++ 6.0 a Visual C++ .NET, potrebbe aver esaminato gli errori di simbolo del linker per un definito più volte `CString` a causa di conflitti del `CString` importato da una DLL e la versione locale di un'istanza. Il metodo migliore per eseguire questa operazione è descritta di seguito. Per ulteriori informazioni su questo problema, vedere l'articolo della Knowledge Base, "errori di collegamento quando si importano derivato CString classi" (Q309801) nella [ http://support.microsoft.com/default.aspx ](http://support.microsoft.com/default.aspx).  
   
  Lo scenario seguente provocherà al linker di generare errori di simbolo per classi definite più volte. Si supponga che si sta esportando un `CString`-classe derivata (`CMyString`) da una DLL di estensione MFC:  
   
@@ -60,7 +55,7 @@ In passato, gli sviluppatori MFC è sono derivata da `CString` specializzare pro
   
 -   Utilizzando un esportabile derivata da `CStringT` riduce al minimo la necessità di implementare nuovamente `CStringT` funzionalità. Codice aggiuntivo è limitato ai costruttori per l'inoltro di `CStringT` classe di base.  
   
--   `CString`, `CStringA`, e `CStringW` solo deve essere contrassegnato come `__declspec(dllexport/dllimport)` quando si compila con MFC DLL condivisa. Se il collegamento con una libreria statica di MFC, è necessario contrassegnare queste classi non esportati; utilizzare in caso contrario, interna di `CString`, `CStringA`, e `CStringW` all'interno di DLL dell'utente verranno contrassegnate `CString` esportati anche.  
+-   `CString`, `CStringA`, e `CStringW` devono essere contrassegnate solo `__declspec(dllexport/dllimport)` DLL quando si compila con MFC condivisa. Se il collegamento con una libreria statica di MFC, è necessario contrassegnare queste classi non esportati; utilizzare in caso contrario, interna di `CString`, `CStringA`, e `CStringW` all'interno di DLL dell'utente verranno contrassegnate `CString` esportati anche.  
   
 ## <a name="related-topics"></a>Argomenti correlati  
  [Classe CStringT](../atl-mfc-shared/reference/cstringt-class.md)  

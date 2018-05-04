@@ -1,12 +1,9 @@
 ---
 title: Creazione guidata finestra di dialogo ATL | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - vc.codewiz.class.atl.dlg.overview
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - ATL projects, adding dialog resources
 - ATL Dialog Wizard
 ms.assetid: b0b9ace5-83c9-40d3-82c3-eb6293f10583
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6cdf16b3e82ce69fa06b3eacda8d7b48643fb3c6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1e2d78f0a41edca44f8841d701cc87975c551466
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="atl-dialog-wizard"></a>Creazione guidata finestra di dialogo ATL
 Questa procedura guidata consente di inserire nel progetto un oggetto finestra di dialogo ATL, derivato da [CAxDialogImpl](../../atl/reference/caxdialogimpl-class.md). Una finestra di dialogo è derivato da `CAxDialogImpl` può ospitare controlli ActiveX.  

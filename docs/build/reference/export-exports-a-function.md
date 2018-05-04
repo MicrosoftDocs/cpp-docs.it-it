@@ -2,12 +2,9 @@
 title: -EXPORT (Esporta una funzione) | Documenti Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VC.Project.VCLinkerTool.ExportFunctions
 - /export
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - EXPORT linker option
 - -EXPORT linker option
 ms.assetid: 0920fb44-a472-4091-a8e6-73051f494ca0
-caps.latest.revision: 9
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2183a67679fc216396d03ac31a5a11db8d011454
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f366b40e8e40e62f67ec45f3e59ad61eb338c427
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="export-exports-a-function"></a>/EXPORT (Esporta una funzione)
 ```  
@@ -38,7 +33,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="remarks"></a>Note  
  Con questa opzione, è possibile esportare una funzione da un programma in modo che altri programmi possono chiamare la funzione. È inoltre possibile esportare i dati. Le esportazioni sono in genere definite in una DLL.  
   
- Il *entryname* è il nome dell'elemento di dati o funzione deve essere utilizzato dal programma chiamante. `ordinal`Specifica un indice nella tabella di esportazione nell'intervallo da 1 a 65.535. Se non si specifica `ordinal`, collegamento viene assegnato uno. Il **NONAME** (parola chiave) consente di esportare la funzione solo come un numero ordinale, senza un *entryname*.  
+ Il *entryname* è il nome dell'elemento di dati o funzione deve essere utilizzato dal programma chiamante. `ordinal` Specifica un indice nella tabella delle esportazioni compreso tra 1 e 65.535; Se non si specifica `ordinal`, collegamento viene assegnato uno. Il **NONAME** (parola chiave) consente di esportare la funzione solo come un numero ordinale, senza un *entryname*.  
   
  Il **dati** (parola chiave) specifica che l'elemento esportato è un elemento di dati. L'elemento di dati del programma client deve essere dichiarato utilizzando **extern declspec**.  
   

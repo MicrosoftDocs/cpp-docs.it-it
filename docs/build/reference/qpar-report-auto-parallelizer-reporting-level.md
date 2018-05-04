@@ -1,27 +1,22 @@
 ---
 title: -/Qpar-report (livello di segnalazione parallelizzazione automatica) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - C++
 ms.assetid: 562673b9-02da-4bf8-bb64-70bc25ef4651
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 70ae055d69341cc773b8b40ed1111b65ba5683cf
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: 94a9db6d02b9233c51a49cf506a664c9be0f821e
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="qpar-report-auto-parallelizer-reporting-level"></a>/Qvec-report (livello di segnalazione parallelizzazione automatica)
 Abilita la funzionalità di reporting del compilatore [parallelizzazione automatica](../../parallel/auto-parallelization-and-auto-vectorization.md) e specifica il livello dei messaggi informativi per l'output durante la compilazione.  
@@ -33,7 +28,7 @@ Abilita la funzionalità di reporting del compilatore [parallelizzazione automat
 ```  
   
 ## <a name="remarks"></a>Note  
- **/Qpar-report: 1**  
+ **/Qpar-report:1**  
  Invia all'output un messaggio informativo per i cicli parallelizzati.  
   
  **/Qpar-report: 2**  
@@ -45,7 +40,7 @@ Abilita la funzionalità di reporting del compilatore [parallelizzazione automat
   
 1.  In **Esplora soluzioni**aprire il menu di scelta rapida per il progetto e scegliere **Proprietà**.  
   
-2.  Nel **pagine delle proprietà** nella finestra di dialogo **C/C++**selezionare **riga di comando**.  
+2.  Nel **pagine delle proprietà** nella finestra di dialogo **C/C++** selezionare **riga di comando**.  
   
 3.  Nel **opzioni aggiuntive** immettere `/Qpar-report:1` o `/Qpar-report:2`.  
   

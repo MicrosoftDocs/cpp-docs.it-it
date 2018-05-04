@@ -2,12 +2,9 @@
 title: -MD, -MT, -LD (utilizzo della libreria Run-Time) | Documenti Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - /ld
 - /mt
@@ -44,17 +41,15 @@ helpviewer_keywords:
 - LIBCMTD.lib
 - -MT compiler option [C++]
 ms.assetid: cf7ed652-dc3a-49b3-aab9-ad60e5395579
-caps.latest.revision: 19
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b54a6aac55554cd7bd4698762779e540c4bc4c4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3b6fc814c1c2b0630a99cdaa19601be25c861580
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="md-mt-ld-use-run-time-library"></a>/MD, /MT, /LD (utilizzo della libreria di runtime)
 Indica se un modulo con multithreading è una DLL e specifica versioni finali o di debug della libreria di runtime.  
@@ -76,7 +71,7 @@ Indica se un modulo con multithreading è una DLL e specifica versioni finali o 
 |**/MT**|Fa in modo che l'applicazione utilizzi la versione statica con multithreading della libreria di runtime. Definisce `_MT` e fa in modo che il compilatore inserisca il nome della libreria LIBCMT.lib nel file OBJ, in modo che il linker utilizzi LIBCMT.lib per risolvere i simboli esterni.|  
 |**/MTd**|Definisce `_DEBUG` e `_MT`. Fa inoltre in modo che il compilatore inserisca il nome della libreria LIBCMTD.lib nel file .obj affinché il linker utilizzi LIBCMTD.lib per risolvere i simboli esterni.|  
 |**/LD**|Crea una DLL.<br /><br /> Passa la **/DLL** opzione al linker. Il linker cerca, ma non richiede, una funzione `DllMain`. Se non si scrive una funzione `DllMain`, il linker inserisce una funzione `DllMain` che restituisce TRUE.<br /><br /> Collega il codice di avvio della DLL.<br /><br /> Crea una libreria di importazione (LIB) se sulla riga di comando non è stato specificato un file di esportazione (EXP). Collegare la libreria di importazione alle applicazioni che chiamano la DLL.<br /><br /> Interpreta [/Fe (specifica file EXE File)](../../build/reference/fe-name-exe-file.md) come una DLL anziché un file .exe di denominazione. Per impostazione predefinita, il nome del programma diventa *basename*DLL anziché *basename*.exe.<br /><br /> Implica **/MT** a meno che non si specifica esplicitamente **/MD**.|  
-|**-LDd**|Crea una DLL di debug. Definisce `_MT` e `_DEBUG`.|  
+|**/LDd**|Crea una DLL di debug. Definisce `_MT` e `_DEBUG`.|  
   
  Per ulteriori informazioni sulle librerie di runtime C e le librerie a cui vengono utilizzate durante la compilazione con [/clr (compilazione Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md), vedere [funzionalità della libreria CRT](../../c-runtime-library/crt-library-features.md).  
   

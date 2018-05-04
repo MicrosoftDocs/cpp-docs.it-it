@@ -1,13 +1,10 @@
 ---
 title: -prediligono (Ottimizza per le specifiche di architettura) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - /favor
 dev_langs:
@@ -16,20 +13,18 @@ helpviewer_keywords:
 - -favor compiler option [C++]
 - /favor compiler option [C++]
 ms.assetid: ad264df2-e30f-4d68-8bd0-10d6bee71a2a
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4f9ec5882cb1535f089250bc467c795263132d35
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 91f91373eef29adcb9a632e80520ed6713d3e39b
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="favor-optimize-for-architecture-specifics"></a>/favor (ottimizzato per le specifiche di architettura)
-**/favor:** `option` genera il codice che è ottimizzato per un'architettura specifica o per le specifiche di micro-architetture AMD e le architetture Intel.  
+**/favor:** `option` genera codice ottimizzato per un'architettura specifica o per le specifiche di micro-architetture nelle architetture Intel e AMD.  
   
 ## <a name="syntax"></a>Sintassi  
   

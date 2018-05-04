@@ -1,13 +1,10 @@
 ---
 title: -VOCE (simbolo del punto di ingresso) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - /entry
 - VC.Project.VCLinkerTool.EntryPointSymbol
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - /ENTRY linker option
 - ENTRY linker option
 ms.assetid: 26c62ba2-4f52-4882-a7bd-7046a0abf445
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5ebaf9a8723f06b6fab8577abf283f6eec69aa25
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 74d7e6e05af98bb3d3175d352fb3d5de1b70b12b
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="entry-entry-point-symbol"></a>/ENTRY (Simbolo del punto di ingresso)
 ```  
@@ -52,8 +47,8 @@ ms.lasthandoff: 12/21/2017
 |Nome funzione|Impostazione predefinita per|  
 |-------------------|-----------------|  
 |**mainCRTStartup** (o **wmainCRTStartup**)|Un'applicazione che utilizza /SUBSYSTEM; chiamate `main` (o `wmain`)|  
-|**WinMainCRTStartup** (o **wWinMainCRTStartup**)|Un'applicazione che utilizza /SUBSYSTEM:**WINDOWS**; chiamate `WinMain` (o `wWinMain`), che deve essere definito da utilizzare`__stdcall`|  
-|**DllMainCRTStartup**|UNA DLL. chiamate `DllMain` se è presente, che deve essere definito da utilizzare`__stdcall`|  
+|**WinMainCRTStartup** (o **wWinMainCRTStartup**)|Un'applicazione che utilizza /SUBSYSTEM:**WINDOWS**; chiamate `WinMain` (o `wWinMain`), che deve essere definito da utilizzare `__stdcall`|  
+|**DllMainCRTStartup**|UNA DLL. chiamate `DllMain` se esiste, che deve essere definito da utilizzare `__stdcall`|  
   
  Se il [/DLL](../../build/reference/dll-build-a-dll.md) o [/SUBSYSTEM](../../build/reference/subsystem-specify-subsystem.md) opzione non è specificata, il linker seleziona un sottosistema e punto di ingresso a seconda che `main` o `WinMain` è definito.  
   

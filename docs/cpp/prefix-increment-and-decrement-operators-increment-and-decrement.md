@@ -1,12 +1,9 @@
 ---
 title: 'Operatori di incremento e decremento del prefisso: + + e -| Documenti Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - --
@@ -22,17 +19,15 @@ helpviewer_keywords:
 - decrement operators [C++], syntax
 - decrement operators [C++]
 ms.assetid: 45ea7fc7-f279-4be9-a216-1d9a0ef9eb7b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ff153c462361e8b6bac8f3c10192025352da650f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 071f21080bd093e5cb299471c8de7009741482f6
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="prefix-increment-and-decrement-operators--and---"></a>Operatori di incremento e decremento in forma prefissa: ++ e --
 ## <a name="syntax"></a>Sintassi  

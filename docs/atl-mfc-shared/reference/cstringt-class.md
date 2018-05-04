@@ -1,12 +1,9 @@
 ---
 title: Classe CStringT | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CStringT
@@ -89,17 +86,15 @@ helpviewer_keywords:
 - shared classes, CStringT
 - CStringT class
 ms.assetid: 7cacc59c-425f-40f1-8f5b-6db921318ec9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2d3b718249603c34d5a9a13eec966b586151f2e7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2f8a66f87b3c4a2c6712a1db93f97361a25b6955
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cstringt-class"></a>Classe CstringT
 Questa classe rappresenta un `CStringT` oggetto.  
@@ -120,9 +115,9 @@ public CSimpleStringT<BaseType,
  `BaseType`  
  Il tipo di carattere della classe string. Può essere uno dei seguenti:  
   
-- `char`(per stringhe di caratteri ANSI).  
+- `char` (per stringhe di caratteri ANSI).  
   
-- `wchar_t`(per stringhe di caratteri Unicode).  
+- `wchar_t` (per stringhe di caratteri Unicode).  
   
 - **TCHAR** (per le stringhe di caratteri sia ANSI e Unicode).  
   
@@ -202,18 +197,18 @@ public CSimpleStringT<BaseType,
 |[+ = CStringT::operator](#operator_add_eq)|Concatena una nuova stringa alla fine di una stringa esistente.|  
 |[CStringT::operator = =](#operator_eq_eq)|Determina se due stringhe sono uguali.|  
 |[CStringT::operator! =](#operator_neq)|Determina se due stringhe in modo logico non sono uguali.|  
-|[CStringT::operator&lt;](#operator_lt)|Determina se la stringa a sinistra dell'operatore è minore di stringa sul lato destro.|  
-|[CStringT::operator&gt;](#operator_gt)|Determina se la stringa a sinistra dell'operatore è maggiore rispetto alla stringa sul lato destro.|  
-|[CStringT::operator&lt;=](#operator_lt_eq)|Determina se la stringa a sinistra dell'operatore è minore o uguale alla stringa sul lato destro.|  
-|[CStringT::operator&gt;=](#operator_gt_eq)|Determina se la stringa a sinistra dell'operatore è maggiore o uguale alla stringa sul lato destro.|  
+|[CStringT::operator &lt;](#operator_lt)|Determina se la stringa a sinistra dell'operatore è minore di stringa sul lato destro.|  
+|[CStringT::operator &gt;](#operator_gt)|Determina se la stringa a sinistra dell'operatore è maggiore rispetto alla stringa sul lato destro.|  
+|[CStringT::operator &lt;=](#operator_lt_eq)|Determina se la stringa a sinistra dell'operatore è minore o uguale alla stringa sul lato destro.|  
+|[CStringT::operator &gt;=](#operator_gt_eq)|Determina se la stringa a sinistra dell'operatore è maggiore o uguale alla stringa sul lato destro.|  
   
 ## <a name="remarks"></a>Note  
- `CStringT`eredita da [CSimpleStringT classe](../../atl-mfc-shared/reference/csimplestringt-class.md). Funzionalità avanzate, ad esempio la modifica di carattere, ordinamento e ricerca, vengono implementate da `CStringT`.  
+ `CStringT` eredita da [CSimpleStringT classe](../../atl-mfc-shared/reference/csimplestringt-class.md). Funzionalità avanzate, ad esempio la modifica di carattere, ordinamento e ricerca, vengono implementate da `CStringT`.  
   
 > [!NOTE]
-> `CStringT`gli oggetti sono in grado di generare eccezioni. Questo errore si verifica quando un `CStringT` oggetto memoria insufficiente per qualsiasi motivo.  
+> `CStringT` gli oggetti sono in grado di generare eccezioni. Questo errore si verifica quando un `CStringT` oggetto memoria insufficiente per qualsiasi motivo.  
   
- Oggetto `CStringT` oggetto è costituito da una sequenza di lunghezza variabile di caratteri. `CStringT`fornisce funzioni e operatori utilizzando una sintassi simile a quella di base. Concatenazione e operatori di confronto, insieme a gestione della memoria semplificata, rendono `CStringT` oggetti più facili da utilizzare rispetto a matrici di caratteri normali.  
+ Oggetto `CStringT` oggetto è costituito da una sequenza di lunghezza variabile di caratteri. `CStringT` fornisce funzioni e operatori utilizzando una sintassi simile a quella di base. Concatenazione e operatori di confronto, insieme a gestione della memoria semplificata, rendono `CStringT` oggetti più facili da utilizzare rispetto a matrici di caratteri normali.  
   
 > [!NOTE]
 >  Sebbene sia possibile creare `CStringT` istanze che contengono caratteri null incorporati, è consigliabile su di essa. La chiamata di metodi e gli operatori su `CStringT` oggetti che contengono caratteri null incorporati possono produrre risultati imprevisti.  
@@ -251,11 +246,11 @@ public CSimpleStringT<BaseType,
 |**CAtlStringW**|Un carattere Unicode di tipo stringa con il supporto di CRT.|  
 |**CAtlString**|Tipi di carattere ANSI sia Unicode con supporto di CRT.|  
   
- `CString`Inoltre, gli oggetti hanno le seguenti caratteristiche:  
+ `CString` gli oggetti hanno inoltre le caratteristiche seguenti:  
   
-- `CStringT`gli oggetti possono aumentare in seguito a operazioni di concatenazione.  
+- `CStringT` gli oggetti possono aumentare in seguito a operazioni di concatenazione.  
   
-- `CStringT`gli oggetti seguono "semantica dei valori". Si consideri un `CStringT` oggetto come una stringa effettiva, non come un puntatore a una stringa.  
+- `CStringT` gli oggetti seguono "semantica dei valori". Si consideri un `CStringT` oggetto come una stringa effettiva, non come un puntatore a una stringa.  
   
 -   È possibile sostituire liberamente `CStringT` gli oggetti per `PCXSTR` gli argomenti della funzione.  
   
@@ -285,10 +280,10 @@ public CSimpleStringT<BaseType,
   
 |Header|Utilizzare per|  
 |------------|-------------|  
-|CStringT. h|Oggetti stringa solo MFC|  
+|cstringt.h|Oggetti stringa solo MFC|  
 |atlstr.h|Oggetti stringa non MFC|  
   
-##  <a name="allocsysstring"></a>CStringT::AllocSysString  
+##  <a name="allocsysstring"></a>  CStringT::AllocSysString  
  Alloca una stringa compatibili con l'automazione del tipo `BSTR` e copia il contenuto del `CStringT` oggetto, incluso il carattere di terminazione null.  
   
 ```  
@@ -312,7 +307,7 @@ BSTR AllocSysString() const;
   
  [!code-cpp[NVC_ATLMFC_Utilities#105](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_1.cpp)]  
   
-##  <a name="ansitooem"></a>CStringT::AnsiToOem  
+##  <a name="ansitooem"></a>  CStringT::AnsiToOem  
  Converte tutti i caratteri in questa `CStringT` oggetto dal set di caratteri ANSI al set di caratteri OEM.  
   
 ```  
@@ -325,7 +320,7 @@ void AnsiToOem();
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_ATLMFC_Utilities#106](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_2.cpp)]  
   
-##  <a name="appendformat"></a>CStringT::AppendFormat  
+##  <a name="appendformat"></a>  CStringT::AppendFormat  
  Aggiunge i dati formattati esistente `CStringT` oggetto.  
   
 ```  
@@ -349,7 +344,7 @@ void __cdecl AppendFormat(UINT nFormatID, [, argument] ...);
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_ATLMFC_Utilities#107](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_3.cpp)]  
   
-##  <a name="collate"></a>CStringT::Collate  
+##  <a name="collate"></a>  CStringT::Collate  
  Confronta due stringhe utilizzando la funzione di testo generico `_tcscoll`.  
   
 ```  
@@ -366,7 +361,7 @@ int Collate(PCXSTR psz) const throw();
 ### <a name="remarks"></a>Note  
  La funzione di testo generico `_tcscoll`, definito in TCHAR. H, esegue il mapping a uno `strcoll`, `wcscoll`, o `_mbscoll`, a seconda del set di caratteri che è definito in fase di compilazione. Ogni funzione esegue un confronto tra maiuscole e minuscole delle stringhe in base alla tabella codici correntemente in uso. Per ulteriori informazioni, vedere [strcoll, wcscoll, mbscoll, strcoll_l, wcscoll_l, _mbscoll_l](../../c-runtime-library/reference/strcoll-wcscoll-mbscoll-strcoll-l-wcscoll-l-mbscoll-l.md).  
   
-##  <a name="collatenocase"></a>CStringT::CollateNoCase  
+##  <a name="collatenocase"></a>  CStringT::CollateNoCase  
  Confronta due stringhe utilizzando la funzione di testo generico `_tcscoll`.  
   
 ```  
@@ -386,7 +381,7 @@ int CollateNoCase(PCXSTR psz) const throw();
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_ATLMFC_Utilities#109](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_4.cpp)]  
   
-##  <a name="compare"></a>CStringT::Compare  
+##  <a name="compare"></a>  CStringT::Compare  
  Confronta due stringhe (maiuscole / minuscole).  
   
 ```  
@@ -410,7 +405,7 @@ int Compare(PCXSTR psz) const;
   
  [!code-cpp[NVC_ATLMFC_Utilities#110](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_5.cpp)]  
   
-##  <a name="comparenocase"></a>CStringT::CompareNoCase  
+##  <a name="comparenocase"></a>  CStringT::CompareNoCase  
  Confronta due stringhe (distinzione tra maiuscole e minuscole).  
   
 ```  
@@ -430,7 +425,7 @@ int CompareNoCase(PCXSTR psz) const throw();
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_ATLMFC_Utilities#111](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_6.cpp)]  
   
-##  <a name="cstringt"></a>CStringT::CStringT  
+##  <a name="cstringt"></a>  CStringT::CStringT  
  Costruisce un oggetto `CStringT`.  
   
 ```  
@@ -531,11 +526,11 @@ CStringT(const YCHAR* pch, int nLength, IAtlStringMgr* pStringMgr) :
  `BaseType`  
  Il tipo di carattere della classe string. Può essere uno dei seguenti:  
   
- `char`(per stringhe di caratteri ANSI).  
+ `char` (per stringhe di caratteri ANSI).  
   
- `wchar_t`(per stringhe di caratteri Unicode).  
+ `wchar_t` (per stringhe di caratteri Unicode).  
   
- `TCHAR`(sia ANSI e Unicode stringhe di caratteri).  
+ `TCHAR` (sia ANSI che Unicode stringhe di caratteri).  
   
  `bMFCDLL`  
  Valore booleano che specifica se il progetto è una DLL di MFC (TRUE) o meno (FALSE).  
@@ -551,14 +546,14 @@ CStringT(const YCHAR* pch, int nLength, IAtlStringMgr* pStringMgr) :
   
 - `CStringT`( `LPCSTR` `lpsz` ): Costruisce Unicode `CStringT` da una stringa ANSI. È inoltre possibile utilizzare questo costruttore per caricare una risorsa di stringa, come illustrato nell'esempio riportato di seguito.  
   
-- `CStringT(``LPCWSTR` `lpsz` ): Costruisce una `CStringT` da una stringa Unicode.  
+- `CStringT(` `LPCWSTR` `lpsz` ): Costruisce una `CStringT` da una stringa Unicode.  
   
 - `CStringT`( `const unsigned char*` `psz` ): Consente di costruire un `CStringT` da un puntatore a `unsigned char`.  
   
 > [!NOTE]
 >  Definire il **_CSTRING_DISABLE_NARROW_WIDE_CONVERSION** macro per disattivare la conversione di stringa implicita tra [!INCLUDE[vcpransi](../../atl-mfc-shared/reference/includes/vcpransi_md.md)] e [!INCLUDE[TLA#tla_unicode](../../atl-mfc-shared/reference/includes/tlasharptla_unicode_md.md)] stringhe. La macro esclude dai costruttori di compilazione che supportano la conversione.  
   
- Si noti che il `strSrc` parametro può essere un `CStringT` o `CThisSimpleString` oggetto. Per `CStringT`, utilizzare uno dei relativi creazioni di istanze predefinite ( `CString`, `CStringA`, o `CStringW`); per `CThisSimpleString`, utilizzare un `this` puntatore. `CThisSimpleString`dichiara un'istanza di [CSimpleStringT classe](../../atl-mfc-shared/reference/csimplestringt-class.md), che è una classe di stringa più piccola con meno funzionalità rispetto al `CStringT` classe.  
+ Si noti che il `strSrc` parametro può essere un `CStringT` o `CThisSimpleString` oggetto. Per `CStringT`, utilizzare uno dei relativi creazioni di istanze predefinite ( `CString`, `CStringA`, o `CStringW`); per `CThisSimpleString`, utilizzare un `this` puntatore. `CThisSimpleString` dichiara un'istanza del [classe CSimpleStringT](../../atl-mfc-shared/reference/csimplestringt-class.md), ovvero una classe di stringa più piccola con meno funzionalità rispetto al `CStringT` (classe).  
   
  L'operatore di overload `CSimpleStringT<>&()` costruisce una `CStringT` dell'oggetto da un `CSimpleStringT` dichiarazione.  
   
@@ -568,7 +563,7 @@ CStringT(const YCHAR* pch, int nLength, IAtlStringMgr* pStringMgr) :
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_ATLMFC_Utilities#112](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_7.cpp)]  
   
-##  <a name="_dtorcstringt"></a>CStringT:: ~ CStringT  
+##  <a name="_dtorcstringt"></a>  CStringT:: ~ CStringT  
  Elimina definitivamente il `CStringT` oggetto.  
   
 ```  
@@ -578,7 +573,7 @@ CStringT(const YCHAR* pch, int nLength, IAtlStringMgr* pStringMgr) :
 ### <a name="remarks"></a>Note  
  Elimina definitivamente il `CStringT` oggetto.  
   
-##  <a name="delete"></a>CStringT::Delete  
+##  <a name="delete"></a>  CStringT::Delete  
  Elimina uno o più caratteri da una stringa inizia con il carattere in corrispondenza dell'indice specificato.  
   
 ```  
@@ -608,7 +603,7 @@ After: Soccer best,
     but hockey is quicker!  
 ```  
   
-##  <a name="find"></a>CStringT::Find  
+##  <a name="find"></a>  CStringT::Find  
  Cerca la prima corrispondenza di un carattere o una sottostringa di questa stringa.  
   
 ```  
@@ -635,7 +630,7 @@ int Find(XCHAR ch, int iStart=0) const throw();
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_ATLMFC_Utilities#114](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_9.cpp)]  
   
-##  <a name="findoneof"></a>CStringT::FindOneOf  
+##  <a name="findoneof"></a>  CStringT::FindOneOf  
  Cerca la stringa per il primo carattere che corrisponde a qualsiasi carattere incluso nel `pszCharSet`.  
   
 ```  
@@ -655,7 +650,7 @@ int FindOneOf(PCXSTR pszCharSet) const throw();
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_ATLMFC_Utilities#115](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_10.cpp)]  
   
-##  <a name="format"></a>CStringT::Format  
+##  <a name="format"></a>  CStringT::Format  
  Scrive dati formattati in un `CStringT` nello stesso modo in cui [sprintf_s](../../c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md) formati di dati in una matrice di caratteri di tipo C.  
   
 ```  
@@ -685,7 +680,7 @@ void __cdecl Format(PCXSTR pszFormat,  [, argument] ...);
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_ATLMFC_Utilities#117](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_12.cpp)]  
   
-##  <a name="formatmessage"></a>CStringT::FormatMessage  
+##  <a name="formatmessage"></a>  CStringT::FormatMessage  
  Formatta una stringa di messaggio.  
   
 ```  
@@ -707,14 +702,14 @@ void __cdecl FormatMessage(PCXSTR pszFormat, [, argument]...);
  La funzione richiede una definizione di messaggio come input. Definizione del messaggio è determinata dal `pszFormat` o dalla risorsa stringa identificato da `nFormatID`. La funzione Copia il testo del messaggio formattato il `CStringT` oggetto, l'elaborazione di qualsiasi incorporato inserisce sequenze, se richiesto.  
   
 > [!NOTE]
-> `FormatMessage`tenta di allocare la memoria di sistema per il nuovo formattata stringa. Se questo tentativo non riesce, viene automaticamente generata un'eccezione di memoria.  
+> `FormatMessage` tenta di allocare la memoria di sistema per la stringa appena formattata. Se questo tentativo non riesce, viene automaticamente generata un'eccezione di memoria.  
   
  Ogni inserimento deve avere un parametro corrispondente visualizzato dopo il `pszFormat` o `nFormatID` parametro. All'interno del testo del messaggio, sono supportate più sequenze di escape per la formattazione in modo dinamico il messaggio. Per ulteriori informazioni, vedere Windows [FormatMessage](http://msdn.microsoft.com/library/windows/desktop/ms679351) funzione in Windows SDK.  
   
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_ATLMFC_Utilities#118](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_13.cpp)]  
   
-##  <a name="formatmessagev"></a>CStringT::FormatMessageV  
+##  <a name="formatmessagev"></a>  CStringT::FormatMessageV  
  Formatta una stringa di messaggio utilizzando un elenco di argomenti variabile.  
   
 ```  
@@ -732,11 +727,11 @@ void FormatMessageV(PCXSTR pszFormat, va_list* pArgList);
  La funzione richiede una definizione di messaggio come input, determinato dal `pszFormat`. La funzione Copia il testo del messaggio formattato e un elenco di argomenti variabile il `CStringT` oggetto, l'elaborazione di qualsiasi incorporato inserisce sequenze, se richiesto.  
   
 > [!NOTE]
-> `FormatMessageV`chiamate [CStringT::FormatMessage](#formatmessage), che tenta di allocare la memoria di sistema per il nuovo formattata stringa. Se questo tentativo non riesce, viene automaticamente generata un'eccezione di memoria.  
+> `FormatMessageV` le chiamate [CStringT::FormatMessage](#formatmessage), che tenta di allocare la memoria di sistema per la stringa appena formattata. Se questo tentativo non riesce, viene automaticamente generata un'eccezione di memoria.  
   
  Per ulteriori informazioni, vedere Windows [FormatMessage](http://msdn.microsoft.com/library/windows/desktop/ms679351) funzione in Windows SDK.  
   
-##  <a name="formatv"></a>CStringT::FormatV  
+##  <a name="formatv"></a>  CStringT::FormatV  
  Formatta una stringa di messaggio utilizzando un elenco di argomenti variabile.  
   
 ```  
@@ -758,7 +753,7 @@ void FormatV(PCXSTR pszFormat, va_list args);
   
  [!code-cpp[NVC_ATLMFC_Utilities#120](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_15.cpp)]  
   
-##  <a name="getenvironmentvariable"></a>CStringT::GetEnvironmentVariable  
+##  <a name="getenvironmentvariable"></a>  CStringT::GetEnvironmentVariable  
  Imposta la stringa per il valore della variabile di ambiente specificato.  
   
 ```  
@@ -778,7 +773,7 @@ BOOL GetEnvironmentVariable(PCXSTR pszVar);
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_ATLMFC_Utilities#121](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_16.cpp)]  
   
-##  <a name="insert"></a>CStringT::Insert  
+##  <a name="insert"></a>  CStringT::Insert  
  Inserisce un singolo carattere o una sottostringa in corrispondenza dell'indice specificato all'interno della stringa.  
   
 ```  
@@ -805,7 +800,7 @@ int Insert(int iIndex, XCHAR ch);
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_ATLMFC_Utilities#122](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_17.cpp)]  
   
-##  <a name="left"></a>CStringT::Left  
+##  <a name="left"></a>  CStringT::Left  
  Estrae i caratteri più a sinistra di `nCount` da questo oggetto `CStringT` e restituisce una copia della sottostringa estratta.  
   
 ```  
@@ -827,7 +822,7 @@ CStringT Left(int nCount) const;
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_ATLMFC_Utilities#123](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_18.cpp)]  
   
-##  <a name="loadstring"></a>CStringT::LoadString  
+##  <a name="loadstring"></a>  CStringT::LoadString  
  Legge una risorsa di stringa di Windows, identificata da `nID`, in un oggetto esistente `CStringT` oggetto.  
   
 ```  
@@ -855,7 +850,7 @@ BOOL LoadString(UINT nID);
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_ATLMFC_Utilities#124](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_19.cpp)]  
   
-##  <a name="makelower"></a>CStringT::MakeLower  
+##  <a name="makelower"></a>  CStringT::MakeLower  
  Converte il `CStringT` oggetto da una stringa in caratteri minuscoli.  
   
 ```  
@@ -868,7 +863,7 @@ CStringT& MakeLower();
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_ATLMFC_Utilities#125](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_20.cpp)]  
   
-##  <a name="makereverse"></a>CStringT::MakeReverse  
+##  <a name="makereverse"></a>  CStringT::MakeReverse  
  Inverte l'ordine dei caratteri di `CStringT` oggetto.  
   
 ```  
@@ -881,7 +876,7 @@ CStringT& MakeReverse();
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_ATLMFC_Utilities#126](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_21.cpp)]  
   
-##  <a name="makeupper"></a>CStringT::MakeUpper  
+##  <a name="makeupper"></a>  CStringT::MakeUpper  
  Converte il `CStringT` oggetto da una stringa in caratteri maiuscoli.  
   
 ```  
@@ -896,7 +891,7 @@ CStringT& MakeUpper();
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_ATLMFC_Utilities#127](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_22.cpp)]  
   
-##  <a name="mid"></a>CStringT::Mid  
+##  <a name="mid"></a>  CStringT::Mid  
  Estrae una sottostringa di lunghezza `nCount` caratteri da questo `CStringT` oggetto, a partire dalla posizione `iFirst` (in base zero).  
   
 ```  
@@ -915,14 +910,14 @@ CStringT Mid(int iFirst) const;
  Oggetto `CStringT` contenente una copia dell'intervallo specificato. Si noti che l'oggetto restituito `CStringT` oggetto può essere vuoto.  
   
 ### <a name="remarks"></a>Note  
- La funzione restituisce una copia della sottostringa estratta. `Mid`è simile alla funzione Mid base (ad eccezione del fatto che gli indici in Basic sono in base uno).  
+ La funzione restituisce una copia della sottostringa estratta. `Mid` è simile alla funzione Mid base (ad eccezione del fatto che gli indici in Basic sono in base uno).  
   
  Per set di caratteri multibyte (MBCS), `nCount` fa riferimento a ogni byte di caratteri; vale a dire un responsabile e itinerario di 8 bit in un set di caratteri multibyte vengono conteggiati come due caratteri.  
   
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_ATLMFC_Utilities#128](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_23.cpp)]  
   
-##  <a name="oemtoansi"></a>CStringT::OemToAnsi  
+##  <a name="oemtoansi"></a>  CStringT::OemToAnsi  
  Converte tutti i caratteri in questa `CStringT` oggetto dal carattere OEM impostato per il set di caratteri ANSI.  
   
 ```  
@@ -935,7 +930,7 @@ void OemToAnsi();
 ### <a name="example"></a>Esempio  
  Per vedere l'esempio [CStringT::AnsiToOem](#ansitooem).  
   
-##  <a name="operator_add"></a>CStringT::operator +  
+##  <a name="operator_add"></a>  CStringT::operator +  
  Concatena due stringhe o un carattere e stringa.  
   
 ```  
@@ -976,7 +971,7 @@ friend CStringT operator+(wchar_t ch1, const CStringT& str2,);
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_ATLMFC_Utilities#140](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_24.cpp)]  
   
-##  <a name="operator_add_eq"></a>+ = CStringT::operator  
+##  <a name="operator_add_eq"></a>  + = CStringT::operator  
  Concatena i caratteri fino alla fine della stringa.  
   
 ```  
@@ -1028,7 +1023,7 @@ CStringT& operator+=(const VARIANT& var);
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_ATLMFC_Utilities#141](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_25.cpp)]  
   
-##  <a name="operator_eq_eq"></a>CStringT::operator = =  
+##  <a name="operator_eq_eq"></a>  CStringT::operator = =  
  Determina se due stringhe sono uguali.  
   
 ```  
@@ -1066,7 +1061,7 @@ friend bool operator==(XCHAR ch1, const CStringT& str2,) throw();
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_ATLMFC_Utilities#142](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_26.cpp)]  
   
-##  <a name="operator_neq"></a>CStringT::operator! =  
+##  <a name="operator_neq"></a>  CStringT::operator! =  
  Determina se due stringhe in modo logico non sono uguali.  
   
 ```  
@@ -1104,7 +1099,7 @@ friend bool operator!=(XCHAR ch1, const CStringT& str2,) throw();
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_ATLMFC_Utilities#143](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_27.cpp)]  
   
-##  <a name="operator_lt"></a>CStringT::operator&lt;  
+##  <a name="operator_lt"></a>  CStringT::operator &lt;  
  Determina se la stringa a sinistra dell'operatore è minore rispetto alla stringa sul lato destro.  
   
 ```  
@@ -1138,7 +1133,7 @@ friend bool operator<(PCXSTR psz1, const CStringT& str2) throw();
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_ATLMFC_Utilities#144](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_28.cpp)]  
   
-##  <a name="operator_gt"></a>CStringT::operator&gt;  
+##  <a name="operator_gt"></a>  CStringT::operator &gt;  
  Determina se la stringa a sinistra dell'operatore è maggiore rispetto alla stringa sul lato destro.  
   
 ```  
@@ -1172,7 +1167,7 @@ friend bool operator>(PCXSTR psz1, const CStringT& str2) throw();
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_ATLMFC_Utilities#145](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_29.cpp)]  
   
-##  <a name="operator_lt_eq"></a>CStringT::operator&lt;=  
+##  <a name="operator_lt_eq"></a>  CStringT::operator &lt;=  
  Determina se la stringa a sinistra dell'operatore è minore o uguale alla stringa sul lato destro.  
   
 ```  
@@ -1206,7 +1201,7 @@ friend bool operator<=(PCXSTR psz1, const CStringT& str2) throw();
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_ATLMFC_Utilities#146](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_30.cpp)]  
   
-##  <a name="operator_gt_eq"></a>CStringT::operator&gt;=  
+##  <a name="operator_gt_eq"></a>  CStringT::operator &gt;=  
  Determina se la stringa a sinistra dell'operatore è maggiore o uguale alla stringa sul lato destro.  
   
 ```  
@@ -1240,7 +1235,7 @@ friend bool operator>=(PCXSTR psz1, const CStringT& str2) throw();
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_ATLMFC_Utilities#147](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_31.cpp)]  
   
-##  <a name="remove"></a>CStringT::Remove  
+##  <a name="remove"></a>  CStringT::Remove  
  Rimuove tutte le istanze del carattere specificato dalla stringa.  
   
 ```  
@@ -1260,7 +1255,7 @@ int Remove(XCHAR chRemove);
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_ATLMFC_Utilities#129](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_32.cpp)]  
   
-##  <a name="replace"></a>CStringT::Replace  
+##  <a name="replace"></a>  CStringT::Replace  
  Esistono due versioni di `Replace`. La prima versione sostituisce uno o più copie di una sottostringa con un'altra sottostringa. Entrambe le sottostringhe sono con terminazione null. La seconda versione sostituisce uno o più copie di un carattere con un altro carattere. Entrambe le versioni operano su dati di tipo carattere archiviati in `CStringT`.  
   
 ```  
@@ -1285,7 +1280,7 @@ int Replace(XCHAR chOld, XCHAR chNew);
  Restituisce il numero di istanze sostituite il carattere o sottostringa oppure zero se la stringa non viene modificata.  
   
 ### <a name="remarks"></a>Note  
- `Replace`può modificare la lunghezza della stringa perché `pszNew` e `pszOld` non è necessario avere la stessa lunghezza e possono essere modificate più copie della sottostringa precedente a quello nuovo. La funzione esegue una corrispondenza tra maiuscole e minuscole.  
+ `Replace` può modificare la lunghezza della stringa perché `pszNew` e `pszOld` non è necessario avere la stessa lunghezza e possono essere modificate più copie della sottostringa precedente a quello nuovo. La funzione esegue una corrispondenza tra maiuscole e minuscole.  
   
  Esempi di `CStringT` istanze sono `CString`, `CStringA`, e `CStringW`.  
   
@@ -1303,7 +1298,7 @@ int Replace(XCHAR chOld, XCHAR chNew);
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_ATLMFC_Utilities#200](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_33.cpp)]  
   
-##  <a name="reversefind"></a>CStringT::ReverseFind  
+##  <a name="reversefind"></a>  CStringT::ReverseFind  
  Cerca questo `CStringT` oggetto per l'ultima corrispondenza di un carattere.  
   
 ```  
@@ -1323,7 +1318,7 @@ int ReverseFind(XCHAR ch) const throw();
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_ATLMFC_Utilities#130](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_34.cpp)]  
   
-##  <a name="right"></a>CStringT::Right  
+##  <a name="right"></a>  CStringT::Right  
  Estrae l'ultimo (ovvero, più a destra) `nCount` caratteri da questo `CStringT` specificato e restituisce una copia della sottostringa estratta.  
   
 ```  
@@ -1338,14 +1333,14 @@ CStringT Right(int nCount) const;
  Oggetto `CStringT` contenente una copia dell'intervallo specificato. Si noti che l'oggetto restituito `CStringT` oggetto può essere vuoto.  
   
 ### <a name="remarks"></a>Note  
- Se `nCount` supera la lunghezza della stringa, viene estratta l'intera stringa. `Right`è simile alla base `Right` (ad eccezione del fatto che gli indici in Basic sono in base zero).  
+ Se `nCount` supera la lunghezza della stringa, viene estratta l'intera stringa. `Right` è simile alla base `Right` funzione (ad eccezione del fatto che gli indici in Basic sono in base zero).  
   
  Per set di caratteri multibyte (MBCS), `nCount` fa riferimento a ogni byte di caratteri; vale a dire un responsabile e itinerario di 8 bit in un set di caratteri multibyte vengono conteggiati come due caratteri.  
   
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_ATLMFC_Utilities#131](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_35.cpp)]  
   
-##  <a name="setsysstring"></a>CStringT::SetSysString  
+##  <a name="setsysstring"></a>  CStringT::SetSysString  
  Rialloca il `BSTR` a cui puntava `pbstr` e copia il contenuto del `CStringT` oggetto, inclusi il `NULL` carattere.  
   
 ```  
@@ -1367,7 +1362,7 @@ BSTR SetSysString(BSTR* pbstr) const;
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_ATLMFC_Utilities#132](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_36.cpp)]  
   
-##  <a name="spanexcluding"></a>CStringT::SpanExcluding  
+##  <a name="spanexcluding"></a>  CStringT::SpanExcluding  
  Estrae i caratteri da stringa, a partire dal primo carattere che non sono presenti nel set di caratteri identificato da `pszCharSet`.  
   
 ```  
@@ -1382,12 +1377,12 @@ CStringT SpanExcluding(PCXSTR pszCharSet) const;
  Una sottostringa che contiene i caratteri nella stringa che non sono in `pszCharSet`, a partire dal primo carattere nella stringa e terminando con il primo carattere viene trovato nella stringa che è disponibili anche in `pszCharSet` (vale a dire, a partire dal primo carattere il stringa e fino a tranne il primo carattere nella stringa di cui viene trovato `pszCharSet`). Restituisce l'intera stringa se alcun carattere in `pszCharSet` viene trovato nella stringa.  
   
 ### <a name="remarks"></a>Note  
- `SpanExcluding`estrae e restituisce tutti i caratteri che precedono la prima occorrenza di un carattere da `pszCharSet` (in altre parole, il carattere da `pszCharSet` e non vengono restituiti tutti i caratteri nella stringa di seguito). Se nessun carattere da `pszCharSet` non viene trovato nella stringa di `SpanExcluding` restituisce l'intera stringa.  
+ `SpanExcluding` estrae e restituisce tutti i caratteri che precedono la prima occorrenza di un carattere dal `pszCharSet` (in altre parole, il carattere da `pszCharSet` e non vengono restituiti tutti i caratteri successivi nella stringa,). Se nessun carattere da `pszCharSet` non viene trovato nella stringa di `SpanExcluding` restituisce l'intera stringa.  
   
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_ATLMFC_Utilities#133](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_37.cpp)]  
   
-##  <a name="spanincluding"></a>CStringT::SpanIncluding  
+##  <a name="spanincluding"></a>  CStringT::SpanIncluding  
  Estrae i caratteri da stringa, a partire dal primo carattere che nel set di caratteri identificato da `pszCharSet`.  
   
 ```  
@@ -1399,7 +1394,7 @@ CStringT SpanIncluding(PCXSTR pszCharSet) const;
  Una stringa è interpretato come un set di caratteri.  
   
 ### <a name="return-value"></a>Valore restituito  
- Una sottostringa che contiene i caratteri nella stringa in `pszCharSet`, a partire dal primo carattere nella stringa e termina quando viene trovato un carattere nella stringa di cui non si trova in `pszCharSet`. `SpanIncluding`Restituisce una sottostringa vuota se il primo carattere della stringa non è incluso nel set specificato.  
+ Una sottostringa che contiene i caratteri nella stringa in `pszCharSet`, a partire dal primo carattere nella stringa e termina quando viene trovato un carattere nella stringa di cui non si trova in `pszCharSet`. `SpanIncluding` Restituisce una sottostringa vuota se il primo carattere nella stringa non è incluso nel set specificato.  
   
 ### <a name="remarks"></a>Note  
  Se il primo carattere della stringa non nel set di caratteri, quindi `SpanIncluding` restituisce una stringa vuota. In caso contrario, restituisce una sequenza di caratteri consecutivi che nel set.  
@@ -1407,7 +1402,7 @@ CStringT SpanIncluding(PCXSTR pszCharSet) const;
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_ATLMFC_Utilities#134](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_38.cpp)]  
   
-##  <a name="tokenize"></a>CStringT::Tokenize  
+##  <a name="tokenize"></a>  CStringT::Tokenize  
  Trova il token successivo in una stringa di destinazione  
   
 ```  
@@ -1441,7 +1436,7 @@ CStringT Tokenize(PCXSTR pszTokens, int& iStart) const;
   
  `Resulting Token: Third`  
   
-##  <a name="trim"></a>CStringT::Trim  
+##  <a name="trim"></a>  CStringT::Trim  
  Elimina i caratteri dalla stringa iniziali e finali.  
   
 ```  
@@ -1463,9 +1458,9 @@ CStringT& Trim();
 ### <a name="remarks"></a>Note  
  Rimuove tutte le occorrenze iniziali e finali di uno dei valori seguenti:  
   
--   Il carattere specificato da`chTarget.`  
+-   Il carattere specificato da `chTarget.`  
   
--   Tutti i caratteri trovati nella stringa specificata da`pszTargets.`  
+-   Tutti i caratteri trovati nella stringa specificata da `pszTargets.`  
   
 -   Spazi vuoti.  
   
@@ -1479,7 +1474,7 @@ CStringT& Trim();
   
  `After : "Soccer is best, but liquor is quicker"`  
   
-##  <a name="trimleft"></a>CStringT::TrimLeft  
+##  <a name="trimleft"></a>  CStringT::TrimLeft  
  Elimina i caratteri iniziali dalla stringa.  
   
 ```  
@@ -1501,16 +1496,16 @@ CStringT& TrimLeft();
 ### <a name="remarks"></a>Note  
  Rimuove tutte le occorrenze iniziali e finali di uno dei valori seguenti:  
   
--   Il carattere specificato da`chTarget.`  
+-   Il carattere specificato da `chTarget.`  
   
--   Tutti i caratteri trovati nella stringa specificata da`pszTargets.`  
+-   Tutti i caratteri trovati nella stringa specificata da `pszTargets.`  
   
 -   Spazi vuoti.  
   
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_ATLMFC_Utilities#137](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_41.cpp)]  
   
-##  <a name="trimright"></a>CStringT::TrimRight  
+##  <a name="trimright"></a>  CStringT::TrimRight  
  Taglia finali dalla stringa.  
   
 ```  
@@ -1532,9 +1527,9 @@ CStringT& TrimRight();
 ### <a name="remarks"></a>Note  
  Rimuove finale le occorrenze di uno dei seguenti:  
   
--   Il carattere specificato da`chTarget.`  
+-   Il carattere specificato da `chTarget.`  
   
--   Tutti i caratteri trovati nella stringa specificata da`pszTargets.`  
+-   Tutti i caratteri trovati nella stringa specificata da `pszTargets.`  
   
 -   Spazi vuoti.  
   

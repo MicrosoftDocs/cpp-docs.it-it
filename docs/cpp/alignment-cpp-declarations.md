@@ -2,26 +2,21 @@
 title: Allineamento (dichiarazioni C++) | Documenti Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
 ms.assetid: a986d510-ccb8-41f8-b905-433df9183485
-caps.latest.revision: 4
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 019884793eb3472e52c7772351b2f5826520a193
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4f39fe0cf3706a67e2aa42aa89de5914808e9cec
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="alignment-c-declarations"></a>Allineamento (dichiarazioni C++)
 Una delle funzionalità di basso livello di C++ è costituita dalla possibilità di specificare l'allineamento preciso degli oggetti in memoria per sfruttare al massimo una specifica architettura hardware. Per impostazione predefinita, il compilatore consente di allineare i membri di classe e struct in base al relativo valore di dimensione: bool e char vengono allineati in base a limiti di un byte, short di due byte, int di quattro byte e infine long, double e long double in base a limiti di otto byte. Nella maggior parte degli scenari è necessario preoccuparsi dell'allineamento in quanto quello predefinito è già ottimale. In alcuni casi, tuttavia, è possibile ottenere miglioramenti significativi in termini di prestazioni o di risparmio di memoria specificando un allineamento personalizzato per le strutture dei dati. Prima di Visual Studio 2015 era possibile usare le parole chiave specifiche di Microsoft __alignof e declspec(alignas) per specificare un allineamento maggiore rispetto a quello predefinito. A partire da Visual Studio 2015 è necessario utilizzare il C + + 11 parole chiave standard [alignof e alignas](../cpp/alignof-and-alignas-cpp.md) per la portabilità del codice massimo. Le nuove parole chiave si comportano in modo analogo alle estensioni specifiche di Microsoft e la documentazione di tali estensioni è valida anche per le nuove parole chiave. Vedere [operatore alignof](../cpp/alignof-operator.md) e [allineare](../cpp/align-cpp.md) per ulteriori informazioni. Lo standard C++ non specifica il comportamento di trasporto per l'allineamento in base a limiti inferiori rispetto al valore predefinito del compilatore per la piattaforma di destinazione, pertanto è necessario utilizzare Microsoft #pragma [pack](../preprocessor/pack.md) in questo caso.  

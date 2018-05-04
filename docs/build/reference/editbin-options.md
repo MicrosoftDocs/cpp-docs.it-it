@@ -1,13 +1,10 @@
 ---
 title: Opzioni di EDITBIN | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - editbin
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - EDITBIN program, options
 ms.assetid: 2da9f88e-cbab-4d64-bb66-ef700535230f
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e4fc808f27b1d7a37e29a0f308ce51d31a9cc953
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 1922e410b0151337ce403e24d20ae90b7e964cd5
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="editbin-options"></a>Opzioni di EDITBIN
 È possibile utilizzare EDITBIN per modificare i file oggetto, i file eseguibili e librerie a collegamento dinamico (DLL). Le opzioni specificano le modifiche che EDITBIN apporta.  
@@ -41,7 +36,7 @@ ms.lasthandoff: 02/14/2018
 |[/APPCONTAINER](../../build/reference/appcontainer.md)|Specifica se l'app deve essere eseguita in un AppContainer, ad esempio, un'app UWP.|  
 |[/BIND](../../build/reference/bind.md)|Imposta gli indirizzi per i punti di ingresso negli oggetti specificati per ridurre il tempo di caricamento.|  
 |[/DYNAMICBASE](../../build/reference/dynamicbase.md)|Specifica se l'immagine eseguibile o DLL può essere riassegnata in modo casuale in fase di caricamento utilizzando la funzionalità ASLR (Address Space Layout Randomization).|  
-|[/ERRORREPORT](../../build/reference/errorreport-editbin-exe.md)|Segnala a Microsoft gli errori interni.|  
+|[/ ERRORREPORT](../../build/reference/errorreport-editbin-exe.md)|Segnala a Microsoft gli errori interni.|  
 |[/HEAP](../../build/reference/heap.md)|Imposta la dimensione dell'heap dell'immagine eseguibile in byte.|  
 |[/HIGHENTROPYVA](../../build/reference/highentropyva.md)|Specifica se l'immagine eseguibile o DLL supporta un'entropia elevata (64 bit) per ASLR (Address Space Layout Randomization).|  
 |[/INTEGRITYCHECK](../../build/reference/integritycheck.md)|Specifica se verificare la firma digitale al momento del caricamento.|  

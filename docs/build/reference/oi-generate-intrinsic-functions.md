@@ -1,13 +1,10 @@
 ---
 title: -Oi (genera funzioni intrinseche) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VC.Project.VCCLCompilerTool.EnableIntrinsicFunctions
 - /oi
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - -Oi compiler option [C++]
 - generate intrinsic functions compiler option [C++]
 ms.assetid: fa4a3bf6-0ed8-481b-91c0-add7636132b4
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d0a24830dbc67466e52f3f3c488dda7ac5b4778d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f28051f5d7aaaa4606fffa4d4c94fb2086031419
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="oi-generate-intrinsic-functions"></a>/Oi (Genera funzioni intrinseche)
 Sostituisce alcune chiamate di funzione con intrinseci o speciali form della funzione che consentono l'applicazione è stato eseguito più velocemente.  
@@ -47,7 +42,7 @@ Sostituisce alcune chiamate di funzione con intrinseci o speciali form della fun
   
  Vedere [intrinseco](../../preprocessor/intrinsic.md) per ulteriori informazioni, in cui le funzioni hanno formati intrinseci.  
   
- **/Oi** è solo una richiesta di sostituire alcune chiamate di funzione con gli intrinseci; il compilatore può chiamare la funzione (e non sostituire la chiamata di funzione con una funzione intrinseca) se si ottengono prestazioni migliori.  
+ **/Oi** è solo una richiesta al compilatore di sostituire alcune chiamate di funzione con intrinseci; il compilatore può chiamare la funzione (e non sostituire la chiamata di funzione con una funzione intrinseca) se si ottengono prestazioni migliori.  
   
  **x86 specifico**  
   

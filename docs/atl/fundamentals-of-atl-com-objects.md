@@ -2,12 +2,9 @@
 title: Nozioni di base di oggetti COM ATL | Documenti Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-atl
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - ATL COM objects
 - COM objects, ATL
 ms.assetid: 0f9c9d98-cc28-45da-89ac-dc94cee422fe
-caps.latest.revision: 25
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6a5a43af31a88420c154d7a57d27d2b69787d11d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 955f8f6be96feeaf0f22f02c125dcdeaceb8e7f8
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="fundamentals-of-atl-com-objects"></a>Nozioni di base di oggetti COM ATL
 Nella figura seguente viene illustrata la relazione tra le classi e interfacce che consentono di definire un oggetto COM ATL.  
@@ -36,7 +31,7 @@ Nella figura seguente viene illustrata la relazione tra le classi e interfacce c
 > [!NOTE]
 >  Questo diagramma mostra che `CComObject` è derivato da `CYourClass` mentre `CComAggObject` e `CComPolyObject` includono `CYourClass` come una variabile membro.  
   
- Esistono tre modi per definire un oggetto COM ATL. L'opzione standard consiste nell'utilizzare il `CComObject` classe derivata da `CYourClass`. La seconda opzione consiste nel creare un oggetto aggregato utilizzando la `CComAggObject` classe. La terza opzione consiste nell'utilizzare il `CComPolyObject` classe. `CComPolyObject`funge da una configurazione ibrida: può essere un `CComObject` classe o come un `CComAggObject` (classe), a seconda di come viene creato inizialmente. Per ulteriori informazioni sull'utilizzo di `CComPolyObject` classe, vedere [CComPolyObject classe](../atl/reference/ccompolyobject-class.md).  
+ Esistono tre modi per definire un oggetto COM ATL. L'opzione standard consiste nell'utilizzare il `CComObject` classe derivata da `CYourClass`. La seconda opzione consiste nel creare un oggetto aggregato utilizzando la `CComAggObject` classe. La terza opzione consiste nell'utilizzare il `CComPolyObject` classe. `CComPolyObject` funge da una configurazione ibrida: possono funzionare come un `CComObject` classe o come un `CComAggObject` (classe), a seconda del modo in cui viene creato inizialmente. Per ulteriori informazioni sull'utilizzo di `CComPolyObject` classe, vedere [CComPolyObject classe](../atl/reference/ccompolyobject-class.md).  
   
  Quando si utilizza standard ATL COM, è possibile utilizzare due: un oggetto esterno e un oggetto interno. I client esterni di accedere alla funzionalità dell'oggetto interno tramite le funzioni wrapper vengono definite nell'oggetto esterno. L'oggetto esterno è di tipo `CComObject`.  
   
@@ -46,9 +41,9 @@ Nella figura seguente viene illustrata la relazione tra le classi e interfacce c
   
  ATL implementa [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) in due fasi:  
   
--   [CComObject](../atl/reference/ccomobject-class.md), [CComAggObject](../atl/reference/ccomaggobject-class.md), o [CComPolyObject](../atl/reference/ccompolyobject-class.md) implementa il **IUnknown** metodi.  
+-   [CComObject](../atl/reference/ccomobject-class.md), [CComAggObject](../atl/reference/ccomaggobject-class.md), oppure [CComPolyObject](../atl/reference/ccompolyobject-class.md) implementa il **IUnknown** metodi.  
   
--   [CComObjectRoot](../atl/reference/ccomobjectroot-class.md) o [CComObjectRootEx](../atl/reference/ccomobjectrootex-class.md) gestisce il conteggio dei riferimenti e outer puntatori di **IUnknown**.  
+-   [CComObjectRoot](../atl/reference/ccomobjectroot-class.md) oppure [CComObjectRootEx](../atl/reference/ccomobjectrootex-class.md) gestisce il conteggio dei riferimenti e i puntatori outer del **IUnknown**.  
   
  Altri aspetti di un oggetto COM ATL sono gestiti da altre classi:  
   
@@ -56,7 +51,7 @@ Nella figura seguente viene illustrata la relazione tra le classi e interfacce c
   
 -   [IDispatchImpl](../atl/reference/idispatchimpl-class.md) fornisce un'implementazione predefinita del `IDispatch Interface` parte delle interfacce duali sull'oggetto.  
   
--   [ISupportErrorInfoImpl](../atl/reference/isupporterrorinfoimpl-class.md) implementa il **ISupportErrorInfo** interfaccia che garantisce informazioni sugli errori che può essere propagata correttamente la catena di chiamate.  
+-   [ISupportErrorInfoImpl](../atl/reference/isupporterrorinfoimpl-class.md) implementa la **ISupportErrorInfo** interfaccia che garantisce le informazioni sugli errori che può essere propagata fino alla catena di chiamata in modo corretto.  
   
 ## <a name="in-this-section"></a>In questa sezione  
  [Implementazione di CComObjectRootEx](../atl/implementing-ccomobjectrootex.md)  

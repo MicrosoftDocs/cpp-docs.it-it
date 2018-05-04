@@ -1,13 +1,10 @@
 ---
 title: -QIfist (Elimina ftol) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - /qifist
 dev_langs:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - -QIfist compiler option [C++]
 - /QIfist compiler option [C++]
 ms.assetid: 1afd32a5-f658-4b66-85f4-e0ce4cb955bd
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7377824b45027318a21f464650ecbc837a76d31c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 77ec65e330cebb1de718330ba129e960383b31c6
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="qifist-suppress-ftol"></a>/QIfist (Elimina _ftol)
 Deprecato. Disattiva la chiamata della funzione helper `_ftol` quando è necessario eseguire una conversione da un tipo a virgola mobile a un tipo integrale.  
@@ -55,10 +50,10 @@ Deprecato. Disattiva la chiamata della funzione helper `_ftol` quando è necessa
   
  È possibile utilizzare il [control87, controlfp, \__control87_2](../../c-runtime-library/reference/control87-controlfp-control87-2.md) funzione C Run-Time per modificare il comportamento di arrotondamento della FPU. La modalità della FPU predefinita è "Round verso più vicino." Utilizzando **/QIfist** può migliorare le prestazioni dell'applicazione, ma non esente da rischi. È consigliabile verificare accuratamente le parti del codice che sono sensibili alle modalità di arrotondamento prima di fare affidamento sul codice compilato con **/QIfist** negli ambienti di produzione.  
   
- [/arch (x86)](../../build/reference/arch-x86.md) e **/QIfist** non può essere utilizzato nello stesso modulo.  
+ [/arch (x86)](../../build/reference/arch-x86.md) e **/QIfist** non può essere utilizzato nello stesso compilando.  
   
 > [!NOTE]
->  **/QIfist** è attiva per impostazione predefinita perché l'arrotondamento di bit a virgola mobile mobile influiscono anche punta arrotondamento (che si verifica dopo ogni operazione di calcolo), pertanto quando si impostano i flag per l'arrotondamento di tipo C (verso zero), della virgola i calcoli potrebbero essere diversi. **/QIfist** non deve essere utilizzata se il codice dipende il comportamento previsto di troncare la parte frazionaria del numero a virgola mobile. Se si è certi, non utilizzare **/QIfist**.  
+>  **/QIfist** è non attivo per impostazione predefinita perché l'arrotondamento di bit a virgola mobile mobile influiscono anche virgola arrotondamento (che si verifica dopo ogni operazione di calcolo), quando si impostano i flag per l'arrotondamento di tipo C (verso zero), della virgola i calcoli potrebbero essere diversi. **/QIfist** non deve essere utilizzata se il codice dipende il comportamento previsto di troncare la parte frazionaria del numero a virgola mobile. Se si è certi, non utilizzare **/QIfist**.  
   
  Il **/QIfist** opzione è deprecata a partire da Visual Studio 2005. Il compilatore è stati introdotti miglioramenti significativi in float a int velocità di conversione. Per un elenco di opzioni del compilatore obsolete, vedere **deprecate o rimosse le opzioni del compilatore** in [opzioni del compilatore elencate per categoria](../../build/reference/compiler-options-listed-by-category.md).  
   

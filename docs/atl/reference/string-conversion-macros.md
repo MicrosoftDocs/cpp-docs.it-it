@@ -1,12 +1,9 @@
 ---
 title: Macro di conversione di stringhe | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - atlconv/ATL::DEVMODEA2W
@@ -20,27 +17,25 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 2ff7c0b6-2bde-45fe-897f-6128e18e0c27
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c0a166fec6eceb84b1b22563849ff1b9462ef9a2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 917afc7dae7a0ed96d5d5cc476b4f8394abe8913
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="string-conversion-macros"></a>Macro di conversione di stringhe
 
 Queste macro forniscono stringa alle funzionalità di conversione.  
  
-##  <a name="atl_and_mfc_string_conversion_macros"></a>Macro di conversione di stringhe MFC e ATL
+##  <a name="atl_and_mfc_string_conversion_macros"></a>  Macro di conversione di stringhe MFC e ATL
 
 Le macro di conversione di stringhe presentate in questo argomento sono valide sia per ATL che per MFC. Per ulteriori informazioni sulla conversione di stringhe MFC, vedere [TN059: utilizzo delle macro conversione MFC MBCS/Unicode](../../mfc/tn059-using-mfc-mbcs-unicode-conversion-macros.md) e [macro MFC e funzioni globali](../../mfc/reference/mfc-macros-and-globals.md).
 
-##  <a name="devmode_and_textmetric_string_conversion_macros"></a>DEVMODE e TEXTMETRIC macro di conversione di stringhe
+##  <a name="devmode_and_textmetric_string_conversion_macros"></a>  DEVMODE e TEXTMETRIC macro di conversione di stringhe
 
 Queste macro creano una copia di un [DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565) o [TEXTMETRIC](http://msdn.microsoft.com/library/windows/desktop/dd145132) struttura e convertire le stringhe all'interno della nuova struttura di un nuovo tipo di stringa. Le macro di allocare memoria nello stack per la nuova struttura e restituiscono un puntatore alla struttura di nuovo.  
   
@@ -58,7 +53,7 @@ e:
   
 [!code-cpp[NVC_ATL_Utilities#129](../../atl/codesnippet/cpp/string-conversion-macros_2.cpp)]  
   
-Nei nomi delle macro, il tipo di stringa nella struttura di origine è a sinistra (ad esempio, **A**) e il tipo di stringa nella struttura di destinazione è a destra (ad esempio, **W**). **Oggetto** è l'acronimo di `LPSTR`, **OLE** è l'acronimo di `LPOLESTR`, **T** è l'acronimo di `LPTSTR`, e **W** è l'acronimo di `LPWSTR`.  
+Nei nomi delle macro, il tipo di stringa nella struttura di origine è a sinistra (ad esempio, **A**) e il tipo di stringa nella struttura di destinazione è a destra (ad esempio, **W**). **Un** acronimo `LPSTR`, **OLE** è l'acronimo di `LPOLESTR`, **T** è l'acronimo di `LPTSTR`, e **W** è l'acronimo di `LPWSTR`.  
   
 Di conseguenza, **DEVMODEA2W** copie un `DEVMODE` struttura `LPSTR` stringhe in un `DEVMODE` struttura `LPWSTR` stringhe, **TEXTMETRICOLE2T** copia un `TEXTMETRIC`struttura `LPOLESTR` stringhe in un `TEXTMETRIC` struttura `LPTSTR` stringhe e così via.  
   

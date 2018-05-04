@@ -1,10 +1,10 @@
 ---
 title: Compilare il codice C/C++ nella riga di comando | Documenti Microsoft
-ms.custom: ''
+ms.custom: conceptual
 ms.date: 03/29/2018
 ms.technology:
 - cpp-tools
-ms.topic: get-started-article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,14 +16,13 @@ helpviewer_keywords:
 ms.assetid: 7ca9daed-a003-4162-842d-908f79058365
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fc4ec1034d4d77542df4a4241ad3ba5c087602ae
-ms.sourcegitcommit: 78e5e5cdbafd29e2a6ccf68d4cce215136952907
+ms.openlocfilehash: d1e02ea59ffc5a4ece71d2790b2ebb6a953ed682
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/03/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="build-cc-code-on-the-command-line"></a>Compilare il codice C/C++ nella riga di comando
 
@@ -93,10 +92,10 @@ Il modo più semplice per specificare un'architettura di compilazione specifica 
 
 > **vcvarsall.bat** [*architecture*] [*platform_type*] [*winsdk_version*] [**-vcvars_ver=**_vcversion_]
 
-*architecture*<br/>
+*architettura*<br/>
 Questo argomento facoltativo specifica l'architettura di host e di destinazione da utilizzare. Se *architettura* viene omesso, viene usato l'ambiente di compilazione predefinito. Questi argomenti sono supportati:
 
-|*architecture*|Compilatore|Architettura del computer host|Compilare l'architettura dell'output (destinazione)|
+|*architettura*|Compilatore|Architettura del computer host|Compilare l'architettura dell'output (destinazione)|
 |----------------------------|--------------|----------------------------------|-------------------------------|
 |**x86**|x86 nativo a 32 bit|x86, x64|x86|
 |**x86\_amd64** oppure **x86\_x64**|x64 su x86 (incrociato)|x86, x64|X64|

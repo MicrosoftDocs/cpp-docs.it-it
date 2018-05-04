@@ -2,11 +2,8 @@
 title: Gli argomenti della funzione tipo-riferimento | Documenti Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - function arguments [C++], reference-type
 - passing parameters [C++], reference-type arguments
 ms.assetid: 0a70e831-9e76-46c0-821d-aeba13d73cc0
-caps.latest.revision: 8
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8b94f6b89ec00cc044cbaa93a4f0f914860db71e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 83d78aad4285ad711581dbed1c88ef6b9a8a9b24
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="reference-type-function-arguments"></a>Argomenti della funzione tipo-riferimento
 È spesso più efficiente passare alle funzioni riferimenti anziché oggetti di grandi dimensioni. In questo modo il compilatore può passare l'indirizzo dell'oggetto rispettando la sintassi che sarebbe stata usata per accedere all'oggetto. Si consideri l'esempio seguente che usa la struttura `Date`.  
@@ -81,7 +76,7 @@ long JulianFromGregorian( const Date& GDate );
   
  Questo prototipo garantisce che la funzione `JulianFromGregorian` non modificherà il relativo argomento.  
   
- Qualsiasi funzione con prototipo che usa un tipo di riferimento può accettare un oggetto dello stesso tipo al suo posto, poiché non esiste una conversione standard da *typename* a *typename*  **&** .  
+ Qualsiasi funzione con prototipo che accetti un tipo riferimento può accettare un oggetto dello stesso tipo al suo posto perché è disponibile una conversione standard dal *typename* a * typename ***&**.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Riferimenti](../cpp/references-cpp.md)

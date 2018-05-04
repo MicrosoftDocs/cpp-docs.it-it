@@ -2,12 +2,9 @@
 title: Modifiche al sistema di compilazione | Documenti Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.msbuild.changes
 dev_langs:
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - Build system changes, $(Inherit)
 - Build system changes, $(NoInherit)
 ms.assetid: e564d95f-a6cc-4d97-b57e-1a71daf66f4a
-caps.latest.revision: 13
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 59d30e2afd07c21cb42dbc2b9109d7547d6c5b9f
-ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
+ms.openlocfilehash: 01eb3a38ddaf7cdb1d54061e48680396f16b25e0
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="build-system-changes"></a>Modifiche al sistema di compilazione
 Il sistema MSBuild è utilizzato per compilare progetti Visual C++. Tuttavia, in Visual Studio 2008 e le versioni precedenti, il sistema VCBuild è stato utilizzato. Alcuni tipi di file e i concetti che dipendono da VCBuild non esistono o sono rappresentati in modo diverso nel sistema corrente. Questo documento vengono illustrate le differenze nel sistema di compilazione corrente.  

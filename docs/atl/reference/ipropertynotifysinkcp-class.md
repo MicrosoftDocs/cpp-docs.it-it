@@ -1,12 +1,9 @@
 ---
 title: Classe IPropertyNotifySinkCP | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - IPropertyNotifySinkCP
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - sinks, notifying of changes
 - IPropertyNotifySinkCP class
 ms.assetid: 1b41445e-bc88-4fa6-bb62-d68aacec2bd5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fa15ef6706010154151c696eca320d464cdfee6a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d9612cf65479e474b9a6e89a8f5a57ca078c9ed0
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ipropertynotifysinkcp-class"></a>Classe IPropertyNotifySinkCP
 Questa classe espone [IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638) interfaccia come un'interfaccia in uscita su un oggetto collegabile.  
@@ -52,7 +47,7 @@ class IPropertyNotifySinkCP
  Una classe che gestisce le connessioni tra un punto di connessione e il relativo sink. Il valore predefinito è [CComDynamicUnkArray](../../atl/reference/ccomdynamicunkarray-class.md), che consente un numero illimitato di connessioni. È inoltre possibile utilizzare [CComUnkArray](../../atl/reference/ccomunkarray-class.md), che consente di specificare un numero fisso di connessioni.  
   
 ## <a name="remarks"></a>Note  
- `IPropertyNotifySinkCP`eredita tutti i metodi tramite la relativa classe base, [IConnectionPointImpl](../../atl/reference/iconnectionpointimpl-class.md).  
+ `IPropertyNotifySinkCP` eredita tutti i metodi tramite la relativa classe base [IConnectionPointImpl](../../atl/reference/iconnectionpointimpl-class.md).  
   
  Il [IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638) interfaccia consente a un oggetto sink ricevere notifiche sulle modifiche delle proprietà. Classe `IPropertyNotifySinkCP` espone questa interfaccia come un'interfaccia in uscita su un oggetto collegabile. Il client deve implementare il `IPropertyNotifySink` metodi sul sink.  
   

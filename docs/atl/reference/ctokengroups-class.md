@@ -1,12 +1,9 @@
 ---
 title: Classe CTokenGroups | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CTokenGroups
@@ -25,17 +22,15 @@ dev_langs:
 helpviewer_keywords:
 - CTokenGroups class
 ms.assetid: 2ab08076-4b08-4487-bc70-ec6dee304190
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1a5a958fcc1bd8c26599272774c86cd64fa2c720
-ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
+ms.openlocfilehash: 8ccf73cdeac0e7522551c6ddb7bef6b0122297ca
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ctokengroups-class"></a>Classe CTokenGroups
 Questa classe è un wrapper per il **TOKEN_GROUPS** struttura.  
@@ -75,7 +70,7 @@ class CTokenGroups
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[TOKEN_GROUPS const CTokenGroups::operator *](#operator_const_token_groups__star)|Cast di `CTokenGroups` oggetto in un puntatore al **TOKEN_GROUPS** struttura.|  
+|[CTokenGroups::operator TOKEN_GROUPS const *](#operator_const_token_groups__star)|Cast di `CTokenGroups` oggetto in un puntatore al **TOKEN_GROUPS** struttura.|  
 |[CTokenGroups::operator =](#operator_eq)|Operatore di assegnazione.|  
   
 ## <a name="remarks"></a>Note  
@@ -125,7 +120,7 @@ CTokenGroups(const TOKEN_GROUPS& rhs) throw(...);
 ### <a name="remarks"></a>Note  
  Il `CTokenGroups` oggetto può essere creato facoltativamente utilizzando un **TOKEN_GROUPS** struttura o definita in precedenza `CTokenGroups` oggetto.  
   
-##  <a name="dtor"></a>  CTokenGroups::~CTokenGroups  
+##  <a name="dtor"></a>  CTokenGroups:: ~ CTokenGroups  
  Distruttore.  
   
 ```
@@ -166,7 +161,7 @@ UINT GetCount() const throw();
 ### <a name="return-value"></a>Valore restituito  
  Restituisce il numero di [IDSR](../../atl/reference/csid-class.md) oggetti e i relativi attributi associati al `CTokenGroups` oggetto.  
   
-##  <a name="getlength"></a>CTokenGroups::GetLength  
+##  <a name="getlength"></a>  CTokenGroups::GetLength  
  Restituisce la dimensione del **CTokenGroup** oggetto.  
   
 ```
@@ -242,7 +237,7 @@ CTokenGroups& operator= (const CTokenGroups& rhs) throw(...);
 ### <a name="return-value"></a>Valore restituito  
  Restituisce l'aggiornamento `CTokenGroups` oggetto.  
   
-##  <a name="operator_const_token_groups__star"></a>TOKEN_GROUPS const CTokenGroups::operator *  
+##  <a name="operator_const_token_groups__star"></a>  CTokenGroups::operator TOKEN_GROUPS const *  
  Esegue il cast di un valore a un puntatore per il **TOKEN_GROUPS** struttura.  
   
 ```  

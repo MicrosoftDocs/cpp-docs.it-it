@@ -1,12 +1,9 @@
 ---
 title: 'Formattazione di valori di ora: Classi di uso generale | Documenti Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 dev_langs:
 - C++
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - time [C++], formatting
 - formatting [C++], time
 ms.assetid: 7fcfee24-f874-4a4d-95b3-adc19a0f2df0
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4479fea641a21edf3f037924b50247798f5a6e6e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d48dd7ef4990c4ffe13c7c1f056d5904b6897435
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="formatting-time-values-general-purpose-classes"></a>Formattazione di valori di ora: Classi di uso generale
 La procedura seguente viene illustrato come formattare i valori di ora.  
@@ -39,11 +34,11 @@ La procedura seguente viene illustrato come formattare i valori di ora.
   
 ## <a name="what-do-you-want-to-know-more-about"></a>Ciò che si desidera saperne di più  
   
--   [Programmazione di tempo in MFC e data generale](../atl-mfc-shared/date-and-time.md)  
+-   [Generale di data e ora programmazione in MFC](../atl-mfc-shared/date-and-time.md)  
   
 -   [Utilizzo di SYSTEMTIME](../atl-mfc-shared/date-and-time-systemtime-support.md)  
   
--   [Supporto di automazione della programmazione di ora e data](../atl-mfc-shared/date-and-time-automation-support.md)  
+-   [Supporto di automazione di data e ora programmazione](../atl-mfc-shared/date-and-time-automation-support.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Data e ora: classi generiche](../atl-mfc-shared/date-and-time-general-purpose-classes.md)

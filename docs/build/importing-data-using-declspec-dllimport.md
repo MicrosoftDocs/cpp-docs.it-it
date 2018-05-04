@@ -1,13 +1,10 @@
 ---
 title: Importazione di dati tramite declspec | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - dllimport
 dev_langs:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - __declspec(dllimport) keyword [C++]
 - importing DLLs [C++], __declspec(dllimport)
 ms.assetid: 0ae70b39-87c7-4181-8be9-e786e0db60b0
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ebbc91b9144a7fe8025a34e9c1476ab23b604c46
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b9877c5a229c3cabcb7703dd2617d1d57e3512f0
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="importing-data-using-declspecdllimport"></a>Importazione di dati tramite __declspec(dllimport)
 Nel caso di dati, utilizzando **declspec** DllImport consente di rimuovere un livello di riferimento indiretto. Quando si importano dati da una DLL, è necessario scorrere la tabella di indirizzi di importazione. Prima di **declspec**, era necessario utilizzare un livello aggiuntivo di riferimento indiretto durante l'accesso ai dati esportate dalla DLL:  

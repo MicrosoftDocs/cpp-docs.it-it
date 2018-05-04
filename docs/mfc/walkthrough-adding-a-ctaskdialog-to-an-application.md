@@ -1,12 +1,12 @@
 ---
-title: 'Procedura dettagliata: Aggiunta di CTaskDialog a un''applicazione | Documenti Microsoft'
-ms.custom: 
+title: "Procedura dettagliata: Aggiunta di CTaskDialog a un'applicazione | Documenti Microsoft"
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - C++
@@ -14,34 +14,34 @@ helpviewer_keywords:
 - CTaskDialog, adding
 - walkthroughs [MFC], dialogs
 ms.assetid: 3a62abb8-2d86-4bec-bdb8-5784d5f9a9f8
-caps.latest.revision: 
+caps.latest.revision: 6
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f3e9e75cb705bb4497cfefa350c2b34eca75cf2d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7b0d820b45b85b5dc20e82cb647c05f839e7ab41
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="walkthrough-adding-a-ctaskdialog-to-an-application"></a>Procedura dettagliata: aggiunta di CTaskDialog a un'applicazione
 Questa procedura dettagliata illustra [CTaskDialog Class](../mfc/reference/ctaskdialog-class.md) e descrive come aggiungerla a un'applicazione.  
   
- `CTaskDialog` è una finestra di dialogo delle attività che sostituisce la finestra di messaggio di Windows in [!INCLUDE[wiprlhext](../c-runtime-library/reference/includes/wiprlhext_md.md)]. `CTaskDialog` migliora la finestra di messaggio originale e consente di aggiungere funzionalità. La finestra di messaggio di Windows è ancora supportata in [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)].  
+ Il `CTaskDialog` è una finestra di dialogo delle attività che sostituisce la finestra di messaggio di Windows in Windows Vista o versioni successive. `CTaskDialog` migliora la finestra di messaggio originale e consente di aggiungere funzionalità. La finestra di messaggio di Windows è ancora supportata in Visual Studio.  
   
 > [!NOTE]
->  Le versioni di Windows precedenti a [!INCLUDE[wiprlhext](../c-runtime-library/reference/includes/wiprlhext_md.md)] non supportano `CTaskDialog`. Se si desidera far visualizzare un messaggio a un utente che esegue l'applicazione su una versione precedente di Windows, è necessario programmare un'opzione alternativa per la finestra di dialogo. È possibile usare il metodo statico [CTaskDialog::IsSupported](../mfc/reference/ctaskdialog-class.md#issupported) per determinare in fase di esecuzione se un computer è in grado di visualizzare `CTaskDialog`. Inoltre, `CTaskDialog` è disponibile solo quando l'applicazione viene compilata con la libreria Unicode.  
+> Versioni di Windows precedenti a Windows Vista non supportano il `CTaskDialog`. Se si desidera far visualizzare un messaggio a un utente che esegue l'applicazione su una versione precedente di Windows, è necessario programmare un'opzione alternativa per la finestra di dialogo. È possibile usare il metodo statico [CTaskDialog::IsSupported](../mfc/reference/ctaskdialog-class.md#issupported) per determinare in fase di esecuzione se un computer è in grado di visualizzare `CTaskDialog`. Inoltre, `CTaskDialog` è disponibile solo quando l'applicazione viene compilata con la libreria Unicode.  
   
  `CTaskDialog` supporta diversi elementi facoltativi per raccogliere e visualizzare informazioni. Ad esempio, `CTaskDialog` consente di visualizzare collegamenti ai comandi, pulsanti personalizzati, icone personalizzate e un piè di pagina. `CTaskDialog` include anche diversi metodi che consentono di eseguire query sullo stato della finestra di dialogo delle attività per determinare gli elementi facoltativi selezionati dall'utente.  
   
 ## <a name="prerequisites"></a>Prerequisiti  
  Per completare la procedura dettagliata, è necessario disporre dei componenti seguenti:  
   
-- [!INCLUDE[vs_dev10_long](../build/includes/vs_dev10_long_md.md)]  
+- Visual Studio 2010 o versione successiva  
   
-- [!INCLUDE[wiprlhext](../c-runtime-library/reference/includes/wiprlhext_md.md)]  
+- Windows Vista o versioni successive  
   
 ## <a name="replacing-a-windows-message-box-with-a-ctaskdialog"></a>Sostituzione di una finestra di messaggio di Windows con CTaskDialog  
  La procedura seguente illustra l'uso di base di `CTaskDialog`, che consiste nel sostituire la finestra di messaggio di Windows. In questo esempio viene anche modificata l'icona associata alla finestra di dialogo delle attività. Tale modifica fa in modo che `CTaskDialog` sembri identica alla finestra di messaggio di Windows.  

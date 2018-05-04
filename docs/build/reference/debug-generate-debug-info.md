@@ -1,13 +1,10 @@
 ---
 title: -DEBUG (genera informazioni di Debug) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VC.Project.VCLinkerTool.GenerateDebugInformation
 - /debug
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - debugging [C++], linker option
 - program databases [C++]
 ms.assetid: 1af389ae-3f8b-4d76-a087-1cdf861e9103
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6f9f424a2e71a3094c9e633cbe5779ef5d75fbe9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f93c47a0f96cf0b75b453bcea97212d4ab2fd6d3
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="debug-generate-debug-info"></a>/DEBUG (Genera informazioni di debug)
 ```  
@@ -60,7 +55,7 @@ Quando si specifica **/debug** senza ulteriori opzioni, impostazione predefinita
   
 Il compilatore [compatibile C7](../../build/reference/z7-zi-zi-debug-information-format.md) (/ Z7) opzione, il compilatore lasciare le informazioni di debug nel file obj. È inoltre possibile utilizzare il [Database di programma](../../build/reference/z7-zi-zi-debug-information-format.md) opzione del compilatore (/Zi) per archiviare le informazioni di debug in un file PDB per il file con estensione obj. Il linker Cerca file PDB dell'oggetto prima di tutto il percorso assoluto scritto nel file obj, e quindi nella directory che contiene il file con estensione obj. È possibile specificare il nome del file PDB o percorso in cui il linker di un oggetto.  
   
-[/INCREMENTAL](../../build/reference/incremental-link-incrementally.md) è implicito quando si specifica.  
+[/ INCREMENTALE](../../build/reference/incremental-link-incrementally.md) è implicito quando si specifica.  
   
 /DEBUG Modifica le impostazioni predefinite per il [/OPT](../../build/reference/opt-optimizations.md) opzione da REF a NOREF e da ICF a NOICF, pertanto se si desidera default originali, è necessario specificare in modo esplicito /OPT: ref o /OPT: ICF.  
   

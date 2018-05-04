@@ -1,13 +1,10 @@
 ---
 title: -volatile (interpretazione della parola chiave volatile) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - /volatile:iso
 - /volatile:ms
@@ -22,17 +19,15 @@ helpviewer_keywords:
 - volatile compiler option
 - -volatile compiler option [C++]
 ms.assetid: 9d08fcc6-5bda-44c8-8151-8d8d54f164b8
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4528d53da01ae83f179f07ba52b2c86c335e883c
-ms.sourcegitcommit: 30ab99c775d99371ed22d1a46598e542012ed8c6
+ms.openlocfilehash: ccd36c5edaaab8577e5f278b25b51ce69e0633f1
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="volatile-volatile-keyword-interpretation"></a>/volatile (interpretazione della parole chiave volatile)
 
@@ -47,7 +42,7 @@ Specifica il modo in [volatile](../../cpp/volatile-cpp.md) parola chiave è da i
 **/volatile:iso**  
 Seleziona strict `volatile` semantica definita dal linguaggio standard ISO C++. Semantica Acquisisci/rilascia non è garantita per accesso volatile. Se il compilatore fa riferimento ARM, questa è l'interpretazione predefinita dei `volatile`.
 
-**/volatile:ms**  
+**/volatile: MS**  
 Seleziona estese Microsoft `volatile` semantica, a cui aggiunta memoria ordinamento garanzie oltre il linguaggio standard ISO C++. Semantica Acquisisci/rilascia garantita per accesso volatile. Tuttavia, questa opzione impone inoltre al compilatore di generare barriere di memoria hardware, che potrebbero aggiungere un overhead significativo su ARM e altre architetture di ordinamento memoria debole. Se il compilatore destinato a qualsiasi piattaforma, ad eccezione di ARM, questa è l'interpretazione predefinita dei `volatile`.
 
 ## <a name="remarks"></a>Note

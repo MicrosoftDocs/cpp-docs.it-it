@@ -1,12 +1,9 @@
 ---
 title: Classe IDSR | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CSid
@@ -30,17 +27,15 @@ dev_langs:
 helpviewer_keywords:
 - CSid class
 ms.assetid: be58b7ca-5958-49c3-a833-ca341aaaf753
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 38c2cff0cb9bd99a70e142d16ee5e7d38e82d8d0
-ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
+ms.openlocfilehash: ed55fd2286c3d6e37b59b16a06f43cc4efe55091
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="csid-class"></a>Classe IDSR
 Questa classe è un wrapper per un `SID` struttura (SID).  
@@ -97,11 +92,11 @@ class CSid
   
 |||  
 |-|-|  
-|[operator ==](#operator_eq_eq)|Verifica l'uguaglianza dei due oggetti di descrittore di sicurezza|  
+|[operatore = =](#operator_eq_eq)|Verifica l'uguaglianza dei due oggetti di descrittore di sicurezza|  
 |[operatore! =](#operator_neq)|Verifica due oggetti descrittore di sicurezza per verificarne la disuguaglianza|  
-|[(operatore)\<](#operator_lt_)|Confronta il valore relativo di due oggetti descrittore di sicurezza.|  
+|[(operatore) \<](#operator_lt_)|Confronta il valore relativo di due oggetti descrittore di sicurezza.|  
 |[operatore >](#operator_gt_)|Confronta il valore relativo di due oggetti descrittore di sicurezza.|  
-|[(operatore)\<=](#operator_lt__eq)|Confronta il valore relativo di due oggetti descrittore di sicurezza.|  
+|[(operatore) \<=](#operator_lt__eq)|Confronta il valore relativo di due oggetti descrittore di sicurezza.|  
 |[operatore > =](#operator_gt__eq)|Confronta il valore relativo di due oggetti descrittore di sicurezza.|  
   
 ## <a name="remarks"></a>Note  
@@ -279,7 +274,7 @@ DWORD GetSubAuthority(DWORD nSubAuthority) const throw();
  Il tipo di sottoautorità.  
   
 ### <a name="return-value"></a>Valore restituito  
- Restituisce il riferimento di sottoautorità *nSubAuthority.* Il valore di sottoautorità è un identificatore relativo (RID).  
+ Restituisce il sottoautorità fa *nSubAuthority.* Il valore di sottoautorità è un identificatore relativo (RID).  
   
 ### <a name="remarks"></a>Note  
  Il *nSubAuthority* parametro specifica un valore di indice che identifica il metodo restituirà l'elemento della matrice sottoautorità. Il metodo non esegue alcun test di convalida su questo valore. Un'applicazione può chiamare [CSid::GetSubAuthorityCount](#getsubauthoritycount) per individuare l'intervallo di valori accettabili.  
@@ -342,7 +337,7 @@ bool LoadAccount(
  Restituisce **true** in caso di esito positivo **false** in caso di errore. Per ottenere informazioni estese sull'errore, chiamare `GetLastError`.  
   
 ### <a name="remarks"></a>Note  
- `LoadAccount`tenta di trovare un ID di sicurezza per il nome specificato. Vedere [LookupAccountSid](http://msdn.microsoft.com/library/windows/desktop/aa379166\(v=vs.85\).aspx) per altri dettagli.  
+ `LoadAccount` tenta di trovare un ID di sicurezza per il nome specificato. Vedere [LookupAccountSid](http://msdn.microsoft.com/library/windows/desktop/aa379166\(v=vs.85\).aspx) per altri dettagli.  
   
 ##  <a name="operator_eq"></a>  CSid::operator =  
  Operatore di assegnazione.  
@@ -376,7 +371,7 @@ bool operator==(
  Il `SID` (SID) o `CSid` che viene visualizzato sul lato destro dell'operatore = =.  
   
 ### <a name="return-value"></a>Valore restituito  
- **true** se i descrittori di sicurezza sono uguali; in caso contrario **false**.  
+ **true** se i descrittori di sicurezza sono uguali, in caso contrario **false**.  
   
 ##  <a name="operator_neq"></a>  CSid::operator !=  
  Verifica due oggetti descrittore di sicurezza per verificarne la disuguaglianza.  
@@ -414,7 +409,7 @@ bool operator<(
  Il `SID` (ID di sicurezza) o `CSid` che viene visualizzato sul lato destro del! = (operatore).  
   
 ### <a name="return-value"></a>Valore restituito  
- **true** se `lhs` è minore di `rhs`, in caso contrario **false**.  
+ **true** se `lhs` è inferiore a `rhs`, in caso contrario **false**.  
   
 ##  <a name="operator_lt__eq"></a>  CSid::operator &lt;=  
  Confronta il valore relativo di due oggetti descrittore di sicurezza.  
@@ -473,7 +468,7 @@ bool operator>=(
 ### <a name="return-value"></a>Valore restituito  
  **true** se `lhs` è maggiore o uguale a `rhs`, in caso contrario **false**.  
   
-##  <a name="operator_const_sid__star"></a>SID const CSid::operator *  
+##  <a name="operator_const_sid__star"></a>  CSid::operator SID const *  
  Cast di un `CSid` oggetto in un puntatore a un `SID` struttura (SID).  
   
 ```  
@@ -516,7 +511,7 @@ SID_NAME_USE SidNameUse() const throw();
 |SidTypeComputer|Indica un `SID` per un computer.|  
   
 ### <a name="remarks"></a>Note  
- Chiamare [CSid::LoadAccount](#loadaccount) per aggiornare il `CSid` oggetto prima di chiamare `SidNameUse` per restituire il relativo stato. `SidNameUse`non modificare lo stato dell'oggetto (mediante una chiamata a **LookupAccountName** o **LookupAccountSid**), ma solo restituisce lo stato corrente.  
+ Chiamare [CSid::LoadAccount](#loadaccount) per aggiornare il `CSid` oggetto prima di chiamare `SidNameUse` per restituire il relativo stato. `SidNameUse` non modifica lo stato dell'oggetto (mediante una chiamata a **LookupAccountName** oppure **LookupAccountSid**), ma solo restituisce lo stato corrente.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Esempio di sicurezza](../../visual-cpp-samples.md)   

@@ -2,12 +2,9 @@
 title: Cenni preliminari su LIB | Documenti Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - Lib
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - LIB [C++], modes
 ms.assetid: e997d423-f574-434f-8b56-25585d137ee0
-caps.latest.revision: 9
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ef3d1e57371fdea62bb557830baca633f4165637
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d8fd3d370da4f841e85086e3d061508d68414e96
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="overview-of-lib"></a>Cenni preliminari su LIB
 LIB creare librerie standard e librerie di importazione è possibile utilizzare con file di esportazione [collegamento](../../build/reference/linker-options.md) quando si compila un programma. LIB viene eseguito da un prompt dei comandi.  
@@ -36,24 +31,24 @@ LIB creare librerie standard e librerie di importazione è possibile utilizzare 
   
 -   [Estrazione di un oggetto membro in un file](../../build/reference/extracting-a-library-member.md)  
   
--   [Creazione di un file di esportazione e di una libreria di importazione](../../build/reference/working-with-import-libraries-and-export-files.md)  
+-   [Creazione di un file di esportazione e una libreria di importazione](../../build/reference/working-with-import-libraries-and-export-files.md)  
   
  Queste modalità si escludono a vicenda; è possibile utilizzare LIB nella sola modalità alla volta.  
   
 ## <a name="lib-options"></a>Opzioni di LIB  
  Nella tabella seguente sono elencate le opzioni di lib.exe, con un collegamento a ulteriori informazioni.  
   
- **/DEF**  
+ **/ DEF**  
  Creare una libreria di importazione e un file di esportazione.  
   
  Per ulteriori informazioni vedere [la creazione di un File di esportazione e la libreria di importazione](../../build/reference/building-an-import-library-and-export-file.md).  
   
- **/ERRORREPORT**  
+ **/ ERRORREPORT**  
  Invia a Microsoft informazioni sugli errori interni con lib.exe.  
   
  Per ulteriori informazioni vedere [esecuzione di LIB](../../build/reference/running-lib.md).  
   
- **/ ESPORTAZIONE**  
+ **/EXPORT**  
  Esporta una funzione dal programma.  
   
  Per ulteriori informazioni vedere [la creazione di un File di esportazione e la libreria di importazione](../../build/reference/building-an-import-library-and-export-file.md).  
@@ -68,7 +63,7 @@ LIB creare librerie standard e librerie di importazione è possibile utilizzare 
   
  Per ulteriori informazioni vedere [la creazione di un File di esportazione e la libreria di importazione](../../build/reference/building-an-import-library-and-export-file.md).  
   
- **/LIBPATH**  
+ **/ LIBPATH**  
  Esegue l'override del percorso delle librerie dell'ambiente.  
   
  Per ulteriori informazioni vedere [gestione di una libreria](../../build/reference/managing-a-library.md).  
@@ -78,7 +73,7 @@ LIB creare librerie standard e librerie di importazione è possibile utilizzare 
   
  Per ulteriori informazioni vedere [gestione di una libreria](../../build/reference/managing-a-library.md).  
   
- **OPZIONE /LTCG**  
+ **/LTCG**  
  Fa sì che la libreria da compilare mediante la generazione di codice in fase di collegamento.  
   
  Per ulteriori informazioni vedere [esecuzione di LIB](../../build/reference/running-lib.md).  
@@ -93,7 +88,7 @@ LIB creare librerie standard e librerie di importazione è possibile utilizzare 
   
  Per ulteriori informazioni vedere [gestione di una libreria](../../build/reference/managing-a-library.md).  
   
- **/NODEFAULTLIB**  
+ **/ /NODEFAULTLIB**  
  Rimuove uno o più librerie predefinite dall'elenco delle librerie che la ricerca durante la risoluzione di riferimenti esterni.  
   
  Per ulteriori informazioni vedere [gestione di una libreria](../../build/reference/managing-a-library.md).  
@@ -103,22 +98,22 @@ LIB creare librerie standard e librerie di importazione è possibile utilizzare 
   
  Per ulteriori informazioni vedere [esecuzione di LIB](../../build/reference/running-lib.md).  
   
- **/OUT**  
+ **/ OUT**  
  Sostituisce il file di output predefinito.  
   
  Per ulteriori informazioni vedere [gestione di una libreria](../../build/reference/managing-a-library.md).  
   
- **INSTALLAZIONE**  
+ **/ RIMUOVI**  
  Omette l'oggetto dalla libreria di output.  
   
  Per ulteriori informazioni vedere [gestione di una libreria](../../build/reference/managing-a-library.md).  
   
- **/ SOTTOSISTEMA**  
+ **/SUBSYSTEM**  
  Indica al sistema operativo come eseguire un programma creato mediante il collegamento alla libreria di output.  
   
  Per ulteriori informazioni vedere [gestione di una libreria](../../build/reference/managing-a-library.md).  
   
- **/VERBOSE**  
+ **/ VERBOSE**  
  Visualizza i dettagli sullo stato di avanzamento della sessione, inclusi i nomi dei file con estensione obj da aggiungere.  
   
  Per ulteriori informazioni vedere [esecuzione di LIB](../../build/reference/running-lib.md).  

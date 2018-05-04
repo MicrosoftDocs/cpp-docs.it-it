@@ -1,12 +1,9 @@
 ---
 title: Creazione guidata progetto ATL | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - vc.appwiz.atl.com.overview
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - ATL projects, creating
 - ATL Project Wizard
 ms.assetid: 564d2aaf-5b8e-4c2a-a925-ca40a283ea34
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 373e39461aed7c3aadb7107e61a8aecab1177ee7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f47af89297efba2501e7f548075800d93dfda296
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="atl-project-wizard"></a>Creazione guidata progetto ATL
 La libreria ATL (Active Template) è un set di classi C++ basate su modelli che semplificano la scrittura di oggetti COM piccoli e veloci. La creazione guidata progetto ATL crea un progetto con le strutture per contenere gli oggetti COM.  
@@ -52,7 +47,7 @@ La libreria ATL (Active Template) è un set di classi C++ basate su modelli che 
   
  Quando si creano e ottimizzazione di un progetto ATL è inoltre possibile effettuare queste attività:  
   
--   [Rendere un noncreatable oggetto ATL](../../atl/reference/making-an-atl-object-noncreatable.md)  
+-   [Rendere noncreatable un oggetto ATL](../../atl/reference/making-an-atl-object-noncreatable.md)  
   
 -   [Ottimizzazione del compilatore per un progetto ATL](../../atl/reference/specifying-compiler-optimization-for-an-atl-project.md)  
   

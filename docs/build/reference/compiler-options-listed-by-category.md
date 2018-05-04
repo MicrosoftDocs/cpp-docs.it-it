@@ -1,29 +1,24 @@
 ---
 title: Opzioni del compilatore elencate per categoria | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - compiler options, C++
 ms.assetid: c4750dcf-dba0-4229-99b6-45cdecc11729
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 87eb79e7932d18ac5aae47a39ec207fec326d58e
-ms.sourcegitcommit: d24de38f9da844f824acb9d200a3f263077145fc
+ms.openlocfilehash: fff661bf573ca30a5b0e7550c2e53b00a7ff3d8f
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="compiler-options-listed-by-category"></a>Opzioni del compilatore elencate per categoria
 
@@ -39,7 +34,7 @@ In questo articolo viene fornito un elenco organizzato per categorie delle opzio
 |[/Od](od-disable-debug.md)|Disabilita l'ottimizzazione.|
 |[/Og](og-global-optimizations.md)|Deprecato. Usa le ottimizzazioni globali.|
 |[/Oi](oi-generate-intrinsic-functions.md)|Genera funzioni intrinseche.|
-|[/Os](os-ot-favor-small-code-favor-fast-code.md)|Ottimizza per dimensione codice.|
+|[/OS](os-ot-favor-small-code-favor-fast-code.md)|Ottimizza per dimensione codice.|
 |[/Ot](os-ot-favor-small-code-favor-fast-code.md)|Ottimizza per velocità codice.|
 |[/Ox](ox-full-optimization.md)|Usa la massima ottimizzazione (/Ob2gity /Gs).|
 |[/Oy](oy-frame-pointer-omission.md)|Omette i puntatori ai frame. (solo x86)|
@@ -84,7 +79,7 @@ In questo articolo viene fornito un elenco organizzato per categorie delle opzio
 |[/Qspectre](qspectre.md)|Abilitare soluzioni correttive per 5753 CVE 2017, per una classe di attacchi Spectre.|
 |[/Qvec-report](qvec-report-auto-vectorizer-reporting-level.md)|Abilita livelli di creazione rapporti per la vettorializzazione automatica.|
 |[/RTC](rtc-run-time-error-checks.md)|Attiva il controllo degli errori di runtime.|
-|[/volatile](volatile-volatile-keyword-interpretation.md)|Seleziona la modalità di interpretazione della parola chiave volatile.|
+|[/ volatile](volatile-volatile-keyword-interpretation.md)|Seleziona la modalità di interpretazione della parola chiave volatile.|
 
 ### <a name="output-files"></a>File di output
 
@@ -212,7 +207,7 @@ In questo articolo viene fornito un elenco organizzato per categorie delle opzio
 
 |Opzione|Scopo|
 |------------|-------------|
-|[/clr:noAssembly](clr-common-language-runtime-compilation.md)|Deprecato. Utilizzare [/LN (creazione di un modulo MSIL)](ln-create-msil-module.md) invece.|
+|[/CLR: noAssembly](clr-common-language-runtime-compilation.md)|Deprecato. Utilizzare [/LN (creazione di un modulo MSIL)](ln-create-msil-module.md) invece.|
 |[/Fr](fr-fr-create-dot-sbr-file.md)|Deprecato. Crea un file informazioni di visualizzazione senza variabili locali.|
 |[/Ge](ge-enable-stack-probes.md)|Deprecato. Attiva le ricerche dello stack. Attivazione per impostazione predefinita.|
 |[/GX](gx-enable-exception-handling.md)|Deprecato. Attiva la gestione sincrona delle eccezioni. Utilizzare [/EH](eh-exception-handling-model.md) invece.|

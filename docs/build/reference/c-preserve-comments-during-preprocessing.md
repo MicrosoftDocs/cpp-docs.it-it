@@ -1,13 +1,10 @@
 ---
 title: -C (conserva i commenti durante la pre-elaborazione) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VC.Project.VCCLCompilerTool.KeepComments
 - /c
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - c compiler option [C++]
 - /c compiler option [C++]
 ms.assetid: 944567ca-16bc-4728-befe-d414a7787f26
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6d27e6ed0f6a2ff6e6f63bc1b87522fb598953c2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 350addc63807a338eb451c14e52340ef67998f18
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="c-preserve-comments-during-preprocessing"></a>/C (Conserva i commenti durante la pre-elaborazione)
 Conserva i commenti durante la pre-elaborazione.  

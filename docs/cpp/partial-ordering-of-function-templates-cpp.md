@@ -1,29 +1,24 @@
 ---
 title: Ordinamento parziale dei modelli di funzione (C++) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - partial ordering of function templates
 ms.assetid: 0c17347d-0e80-47ad-b5ac-046462d9dc73
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cddc0f1680a3354276a2135dd28c31a2037a8202
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 60936a46732e4b2ed827a5efb08740661d9bb0d9
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="partial-ordering-of-function-templates-c"></a>Ordinamento parziale di modelli di funzione (C++)
 
@@ -49,9 +44,9 @@ Utilizzare la procedura seguente per determinare se un candidato di modello di f
 
      2. Un modello richiede solo __T\*__  è più specializzato di prendere una __T__, perché il tipo di un ipotetico __X\*__  è un argomento valido per un __T__ argomento di modello, ma __X__ non è un argomento valido per un __T\*__  argomento di modello.
 
-     3. __const T__ è più specializzato di __T__perché __const X__ è un argomento valido per un __T__ argomento di modello, ma __X__ non è un argomento valido per un __const T__ argomento di modello.
+     3. __const T__ è più specializzata __T__, in quanto __const X__ è un argomento valido per un __T__ argomento di modello, ma __X__ è argomento non valido per un __const T__ argomento di modello.
 
-     4. __const T\*__  è più specializzato di __T\*__perché __const X\*__  è un argomento valido per un __T\*__  argomento di modello, ma __X\*__  non è un argomento valido per un __const T\*__  argomento di modello.
+     4. __const T\*__  è più specializzato __T\*__, in quanto __const X\*__  è un argomento valido per un __T\*__  argomento di modello, ma __X\*__  non è un argomento valido per un __const T\*__  argomento di modello.
 
 ## <a name="example"></a>Esempio
 

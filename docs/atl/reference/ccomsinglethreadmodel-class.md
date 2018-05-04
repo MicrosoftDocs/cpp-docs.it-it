@@ -1,12 +1,9 @@
 ---
 title: Classe CComSingleThreadModel | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CComSingleThreadModel
@@ -23,15 +20,13 @@ helpviewer_keywords:
 - CComSingleThreadModel class
 - single-threaded applications, ATL
 ms.assetid: e5dc30c7-405a-4ba4-8ae9-51937243fce8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
-ms.openlocfilehash: 65af9492f3721fd642def72a3049552cdff75ce6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.openlocfilehash: 175cc1b867356949ca861f7015dedb6d64c4282f
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ccomsinglethreadmodel-class"></a>Classe CComSingleThreadModel
 Questa classe fornisce metodi per l'incremento e decremento del valore di una variabile.  
@@ -60,7 +55,7 @@ class CComSingleThreadModel
 |[CComSingleThreadModel::Increment](#increment)|Incrementa il valore della variabile specificata. Questa implementazione non è thread-safe.|  
   
 ## <a name="remarks"></a>Note  
- `CComSingleThreadModel`fornisce metodi per l'incremento e decremento del valore di una variabile. A differenza di [CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md) e [CComMultiThreadModelNoCS](../../atl/reference/ccommultithreadmodelnocs-class.md), questi metodi non sono thread-safe.  
+ `CComSingleThreadModel` fornisce metodi per l'incremento e decremento del valore di una variabile. A differenza di [CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md) e [CComMultiThreadModelNoCS](../../atl/reference/ccommultithreadmodelnocs-class.md), questi metodi non sono thread-safe.  
 
  In genere, si utilizza `CComSingleThreadModel` tramite uno dei due `typedef` nomi, [CComObjectThreadModel](atl-typedefs.md#ccomobjectthreadmodel) o [CComGlobalsThreadModel](atl-typedefs.md#ccomglobalsthreadmodel). La classe a cui fa riferimento ogni `typedef` dipende dal modello di threading utilizzato, come illustrato nella tabella seguente:  
 
@@ -70,14 +65,14 @@ class CComSingleThreadModel
 |`CComObjectThreadModel`|S|S|M|  
 |`CComGlobalsThreadModel`|S|M|M|  
   
- S = `CComSingleThreadModel`; M =`CComMultiThreadModel`  
+ S = `CComSingleThreadModel`; M = `CComMultiThreadModel`  
   
- `CComSingleThreadModel`stesso definisce tre `typedef` nomi. `ThreadModelNoCS`riferimenti `CComSingleThreadModel`. `AutoCriticalSection`e `CriticalSection` classe di riferimento [CComFakeCriticalSection](../../atl/reference/ccomfakecriticalsection-class.md), che fornisce i metodi vuoti associati ottenere e rilasciare la proprietà di una sezione critica.  
+ `CComSingleThreadModel` stesso definisce tre `typedef` nomi. `ThreadModelNoCS` riferimenti `CComSingleThreadModel`. `AutoCriticalSection` e `CriticalSection` classe riferimento [CComFakeCriticalSection](../../atl/reference/ccomfakecriticalsection-class.md), che fornisce metodi vuoti associati come ottenere e rilasciare la proprietà di una sezione critica.  
   
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** atlbase. h  
   
-##  <a name="autocriticalsection"></a>CComSingleThreadModel::AutoCriticalSection  
+##  <a name="autocriticalsection"></a>  CComSingleThreadModel::AutoCriticalSection  
  Quando si utilizza `CComSingleThreadModel`, `typedef` nome `AutoCriticalSection` fa riferimento a classe [CComFakeCriticalSection](../../atl/reference/ccomfakecriticalsection-class.md).  
   
 ```
@@ -100,7 +95,7 @@ typedef CComFakeCriticalSection AutoCriticalSection;
 ### <a name="example"></a>Esempio  
  Vedere [CComMultiThreadModel::AutoCriticalSection](../../atl/reference/ccommultithreadmodel-class.md#autocriticalsection).  
   
-##  <a name="criticalsection"></a>CComSingleThreadModel::CriticalSection  
+##  <a name="criticalsection"></a>  CComSingleThreadModel::CriticalSection  
  Quando si utilizza `CComSingleThreadModel`, `typedef` nome `CriticalSection` fa riferimento a classe [CComFakeCriticalSection](../../atl/reference/ccomfakecriticalsection-class.md).  
   
 ```
@@ -123,7 +118,7 @@ typedef CComFakeCriticalSection CriticalSection;
 ### <a name="example"></a>Esempio  
  Vedere [CComMultiThreadModel::AutoCriticalSection](../../atl/reference/ccommultithreadmodel-class.md#autocriticalsection).  
   
-##  <a name="decrement"></a>CComSingleThreadModel::Decrement  
+##  <a name="decrement"></a>  CComSingleThreadModel::Decrement  
  Questa funzione statica riducendo il valore della variabile a cui puntava `p`.  
   
 ```
@@ -137,7 +132,7 @@ static ULONG WINAPI Decrement(LPLONG p) throw();
 ### <a name="return-value"></a>Valore restituito  
  Il risultato del decremento.  
   
-##  <a name="increment"></a>CComSingleThreadModel::Increment  
+##  <a name="increment"></a>  CComSingleThreadModel::Increment  
  Questa funzione statica riducendo il valore della variabile a cui puntava `p`.  
   
 ```
@@ -151,7 +146,7 @@ static ULONG WINAPI Increment(LPLONG p) throw();
 ### <a name="return-value"></a>Valore restituito  
  Il risultato dell'incremento.  
   
-##  <a name="threadmodelnocs"></a>CComSingleThreadModel::ThreadModelNoCS  
+##  <a name="threadmodelnocs"></a>  CComSingleThreadModel::ThreadModelNoCS  
  Quando si utilizza `CComSingleThreadModel`, `typedef` nome `ThreadModelNoCS` fa semplicemente riferimento `CComSingleThreadModel`.  
   
 ```

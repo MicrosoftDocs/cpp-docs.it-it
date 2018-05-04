@@ -1,12 +1,9 @@
 ---
 title: Classe IServiceProviderImpl | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - IServiceProviderImpl
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - IServiceProviderImpl class
 - IServiceProvider interface, ATL implementation
 ms.assetid: 251254d3-c4ce-40d7-aee0-3d676d1d72f2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4946a88e6bf6767de0e3965670f94b91d1ddaf90
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1b1472fe5d952e93b45240128383db9fdec5b093
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="iserviceproviderimpl-class"></a>Classe IServiceProviderImpl
 Questa classe fornisce un'implementazione predefinita del `IServiceProvider` interfaccia.  
@@ -57,7 +52,7 @@ class ATL_NO_VTABLE IServiceProviderImpl : public IServiceProvider
   
  **IServiceProviderImpl** specifica un metodo: [QueryService](#queryservice), che crea o si accede al servizio specificato e restituisce un puntatore a interfaccia per l'interfaccia specificata per il servizio.  
   
- `IServiceProviderImpl`utilizza una mappa del servizio, a partire da [BEGIN_SERVICE_MAP](service-map-macros.md#begin_service_map) e terminando con [END_SERVICE_MAP](service-map-macros.md#end_service_map).  
+ `IServiceProviderImpl` utilizza una mappa del servizio, a partire da [BEGIN_SERVICE_MAP](service-map-macros.md#begin_service_map) fino al [END_SERVICE_MAP](service-map-macros.md#end_service_map).  
   
  La mappa del servizio contiene due voci: [SERVICE_ENTRY](service-map-macros.md#service_entry), che indica un id di servizio specificato (SID) supportato dall'oggetto, e [SERVICE_ENTRY_CHAIN](service-map-macros.md#service_entry_chain), che chiama `QueryService` a catena a un altro oggetto.  
   
@@ -69,7 +64,7 @@ class ATL_NO_VTABLE IServiceProviderImpl : public IServiceProvider
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** atlcom. h  
   
-##  <a name="queryservice"></a>IServiceProviderImpl::QueryService  
+##  <a name="queryservice"></a>  IServiceProviderImpl::QueryService  
  Crea o accede al servizio specificato e restituisce un puntatore a interfaccia per l'interfaccia specificata per il servizio.  
   
 ```
@@ -80,13 +75,13 @@ STDMETHOD(QueryService)(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [IN]`guidService`  
+ [IN] `guidService`  
  Puntatore a un identificatore di servizio (SID).  
   
- [IN]`riid`  
+ [IN] `riid`  
  Identificatore dell'interfaccia a cui il chiamante è per ottenere l'accesso.  
   
- [OUT]`ppvObj`  
+ [OUT] `ppvObj`  
  Puntatore indiretto all'interfaccia richiesta.  
   
 ### <a name="return-value"></a>Valore restituito  
@@ -101,7 +96,7 @@ STDMETHOD(QueryService)(
 |E_NOINTERFACE|L'interfaccia richiesta non fa parte di questo servizio, oppure il servizio è sconosciuto.|  
   
 ### <a name="remarks"></a>Note  
- `QueryService`Restituisce un puntatore indiretto all'interfaccia richiesta nel servizio specificato. Il chiamante è responsabile del rilascio di questo puntatore quando non è più necessario.  
+ `QueryService` Restituisce un puntatore indiretto all'interfaccia richiesta nel servizio specificato. Il chiamante è responsabile del rilascio di questo puntatore quando non è più necessario.  
   
  Quando si chiama `QueryService`, si passa un identificatore di servizio ( `guidService`) e un identificatore di interfaccia ( `riid`). Il `guidService` specifica il servizio a cui si desidera accedere, e `riid` identifica un'interfaccia che fa parte del servizio. In cambio, si riceve un puntatore all'interfaccia indiretto.  
   

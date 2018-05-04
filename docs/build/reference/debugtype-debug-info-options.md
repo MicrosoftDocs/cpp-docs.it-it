@@ -1,13 +1,10 @@
 ---
 title: -DEBUGTYPE (opzioni di informazioni di Debug) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - /debugtype
 dev_langs:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - DEBUGTYPE linker option
 - -DEBUGTYPE linker option
 ms.assetid: 1ddcb718-7fec-4f92-a319-3f70f04fe742
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7c069caca9831b841c3cb4be347331b58f538ba6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 66868f7648d20b890f3c1e8c40802d77e3af4544
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="debugtype-debug-info-options"></a>/DEBUGTYPE (opzioni delle informazioni di debug)
 L'opzione /DEBUGTYPE specifica i tipi di informazioni di debug generate dall'opzione /DEBUG.  
@@ -51,7 +46,7 @@ L'opzione /DEBUGTYPE specifica i tipi di informazioni di debug generate dall'opz
 ## <a name="remarks"></a>Note  
  Utilizzare il **/DEBUGTYPE** opzione per specificare l'inclusione di rilocazione dei dati o pdata e xdata intestazione informazioni della tabella nel flusso di debug. Il linker include così le informazioni sul codice in modalità utente visibile in un debugger del kernel durante un'interruzione nel codice in modalità kernel. Per rendere disponibili i simboli di debug quando **correzione** è specificato, includere il **CV** argomento.  
   
- Per eseguire il debug di codice in modalità utente, come avviene in genere per le applicazioni, il **/DEBUGTYPE** opzione non è necessaria. Per impostazione predefinita, le opzioni del compilatore che specificano il debug di output ([/Z7, /Zi, /ZI](../../build/reference/z7-zi-zi-debug-information-format.md)) la creazione di tutto le informazioni necessarie da Visual Studio del debugger. Utilizzare **/DEBUGTYPE:PDATA** o **/DEBUGTYPE: CV, PDATA, correzione** per eseguire il debug di codice che combina i componenti in modalità utente e in modalità kernel, ad esempio un'app di configurazione per un driver di dispositivo. Per ulteriori informazioni su debugger in modalità kernel, vedere [strumenti di debug per Windows (WinDbg, KD, CDB, NTSD)](http://go.microsoft.com/fwlink/p?LinkID=285651)  
+ Per eseguire il debug di codice in modalità utente, come avviene in genere per le applicazioni, il **/DEBUGTYPE** opzione non è necessaria. Per impostazione predefinita, le opzioni del compilatore che specificano il debug di output ([/Z7, /Zi, /ZI](../../build/reference/z7-zi-zi-debug-information-format.md)) la creazione di tutto le informazioni necessarie da Visual Studio del debugger. Utilizzare **/DEBUGTYPE:PDATA** o **/DEBUGTYPE: CV, PDATA, correzione** per eseguire il debug di codice che combina i componenti in modalità utente e in modalità kernel, ad esempio un'app di configurazione per un driver di dispositivo. Per ulteriori informazioni sui debugger in modalità kernel, vedere [strumenti di debug per Windows (WinDbg, KD, CDB, NTSD)](http://go.microsoft.com/fwlink/p?LinkID=285651)  
   
 ## <a name="see-also"></a>Vedere anche  
  [/DEBUG (genera informazioni di Debug)](../../build/reference/debug-generate-debug-info.md)   

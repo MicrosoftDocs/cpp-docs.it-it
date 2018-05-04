@@ -2,11 +2,8 @@
 title: Set di caratteri | Microsoft Docs
 ms.custom: ''
 ms.date: 04/12/2018
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 helpviewer_keywords:
 - Character sets
@@ -14,17 +11,15 @@ helpviewer_keywords:
 - universal character names
 - basic execution character set (C++)
 ms.assetid: 379a2af6-6422-425f-8352-ef0bca6c0d74
-caps.latest.revision: 8
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 81b1046ea7588a6cc5eb3274473f4e4bee9daccd
-ms.sourcegitcommit: 770f6c4a57200aaa9e8ac6e08a3631a4b4bdca05
+ms.openlocfilehash: 0627eaa2606d13ced457ae336bd2a0fb4dc83801
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="character-sets"></a>Set di caratteri
 Il testo di un programma C++ viene archiviato in file di origine che usano una particolare codifica dei caratteri. Lo standard C++ specifica un set di caratteri di origine base per i file di origine e un set di caratteri di esecuzione di base per i file compilati. Visual C++ consente un set aggiuntivo di caratteri specifici delle impostazioni locali da usare nei file di origine e nei file compilati.  

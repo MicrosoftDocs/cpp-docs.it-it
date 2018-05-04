@@ -1,13 +1,10 @@
 ---
 title: Esempi di script del Registro di sistema | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-atl
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - scripts, Registrar scripts
 - registry, Registrar
 ms.assetid: b6df80e1-e08b-40ee-9243-9b381b172460
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1b2a5dfd3bd31674917a5b41174277ef787aff25
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4c192e8bec1d32dd7d7a7953e5da72a139c7520e
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="registry-scripting-examples"></a>Esempi di script del Registro di sistema
 Gli esempi di script in questo argomento viene illustrato come aggiungere una chiave del Registro di sistema, registrare il server di registrazione COM e specificare più alberi di analisi.  
@@ -59,7 +54,7 @@ HKCU
   
  A questo punto, lo script aggiunge una sottochiave, `HasASubkey`a `MyVeryOwnKey`. Questa sottochiave, viene aggiunto sia il `PrettyCool` sottochiave (valore predefinito è `DWORD` valore 55) e il `ANameValue` denominato value (con un valore di stringa di `WithANamedValue`).  
   
-##  <a name="_atl_register_the_registrar_com_server"></a>Registrare il Server di registrazione COM  
+##  <a name="_atl_register_the_registrar_com_server"></a> Registrare il Server di registrazione COM  
  Lo script seguente registra il server COM di registrazione.  
   
 ```  
@@ -102,7 +97,7 @@ HKCR
   
 -   Aggiunge `ATL Registrar Class` come il valore di stringa del valore predefinito per `{44EC053A-400F-11D0-9DCD-00A0C90391D3}`.  
   
- La struttura ad albero di analisi ora aggiunge due nuove sottochiavi a `{44EC053A-400F-11D0-9DCD-00A0C90391D3}`. La prima chiave `ProgID`, ottiene un valore di stringa predefinita che è il valore ProgID. La seconda chiave, `InprocServer32`, ottiene un valore di stringa del valore predefinito, `%MODULE%`, vale a dire un valore per il preprocessore descritto nella sezione [utilizzando parametri sostituibili (il Registrar preprocessore)](../atl/using-replaceable-parameters-the-registrar-s-preprocessor.md), di questo articolo. `InprocServer32`Ottiene anche un valore denominato, `ThreadingModel`, con un valore stringa `Apartment`.  
+ La struttura ad albero di analisi ora aggiunge due nuove sottochiavi a `{44EC053A-400F-11D0-9DCD-00A0C90391D3}`. La prima chiave `ProgID`, ottiene un valore di stringa predefinita che è il valore ProgID. La seconda chiave, `InprocServer32`, ottiene un valore di stringa del valore predefinito, `%MODULE%`, vale a dire un valore per il preprocessore descritto nella sezione [utilizzando parametri sostituibili (il Registrar preprocessore)](../atl/using-replaceable-parameters-the-registrar-s-preprocessor.md), di questo articolo. `InprocServer32` Ottiene anche un valore denominato `ThreadingModel`, con un valore di stringa `Apartment`.  
   
 ## <a name="specify-multiple-parse-trees"></a>Specificare più alberi di analisi  
  Per specificare più di un albero di analisi in uno script, è sufficiente inserire una struttura ad albero alla fine di un altro. Ad esempio, lo script seguente aggiunge la chiave, `MyVeryOwnKey`, alle strutture di analisi per entrambi `HKEY_CLASSES_ROOT` e `HKEY_CURRENT_USER`:  

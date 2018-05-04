@@ -1,12 +1,9 @@
 ---
 title: Classe CAtlAutoThreadModuleT | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CAtlAutoThreadModuleT
@@ -17,17 +14,15 @@ dev_langs:
 helpviewer_keywords:
 - CAtlAutoThreadModuleT class
 ms.assetid: ae1667c6-3fb8-47bc-b35d-9ea5e9896d7f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 082214794b2caa66e8be1127c664e0ffec18a394
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a012494365745d40d98c0f65ee9eff6b5e9502da
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="catlautothreadmodulet-class"></a>Classe CAtlAutoThreadModuleT
 Questa classe fornisce metodi per l'implementazione di un server di pool di thread, modello di apartment COM.  
@@ -76,7 +71,7 @@ class ATL_NO_VTABLE CAtlAutoThreadModuleT : public IAtlAutoThreadModule
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** atlbase. h  
   
-##  <a name="getdefaultthreads"></a>CAtlAutoThreadModuleT::GetDefaultThreads  
+##  <a name="getdefaultthreads"></a>  CAtlAutoThreadModuleT::GetDefaultThreads  
  Questa funzione statica in modo dinamico calcola e restituisce il numero massimo di thread per il modulo EXE, in base al numero di processori.  
   
 ```

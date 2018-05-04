@@ -2,11 +2,8 @@
 title: "Operatore di risoluzione dell'ambito::: | Documenti Microsoft"
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - '::'
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - scope resolution operator
 - ':: operator'
 ms.assetid: fd5de9d3-c716-4e12-bae9-03a16fd79a50
-caps.latest.revision: 8
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 69b52b3029271ffae3d4a7b3441c49a01270abb4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7caea3a32c0bb983518f7610918c78c8c31c63a0
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="scope-resolution-operator-"></a>Operatore di risoluzione dell'ambito: ::
 L'operatore di risoluzione dell'ambito `::` viene usato per identificare e risolvere l'ambiguità degli identificatori usati in diversi ambiti. Per ulteriori informazioni sull'ambito, vedere [ambito](../cpp/scope-visual-cpp.md).  

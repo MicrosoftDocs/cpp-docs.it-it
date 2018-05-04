@@ -2,12 +2,9 @@
 title: NELLE SEZIONI (C/C++) | Documenti Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - SECTIONS
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - SECTIONS .def file statement
 ms.assetid: 7b974366-9ef5-4e57-bbcc-73a1df6f8857
-caps.latest.revision: 9
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0ab2f021a53e8ae685891863500feb3873e13e2e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4c433bf49ee4c56833ac7291bcc4a0f90e32f4e5
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sections-cc"></a>SECTIONS (C/C++)
 Introduce una sezione di uno o più `definitions` che sono identificatori di accesso per sezioni nel file di output del progetto.  
@@ -60,7 +55,7 @@ SECTIONS
 .rdata READ WRITE  
 ```  
   
- `SECTIONS`Contrassegna l'inizio di un elenco di sezione `definitions`. Ogni `definition` deve essere su una riga separata. Il `SECTIONS` parola chiave può essere sulla stessa riga del primo `definition` o su una riga precedente. Il file con estensione DEF può contenere uno o più `SECTIONS` istruzioni. Il `SEGMENTS` (parola chiave) è supportato come sinonimo di `SECTIONS`.  
+ `SECTIONS` Contrassegna l'inizio di un elenco di sezione `definitions`. Ogni `definition` deve essere su una riga separata. Il `SECTIONS` parola chiave può essere sulla stessa riga del primo `definition` o su una riga precedente. Il file con estensione DEF può contenere uno o più `SECTIONS` istruzioni. Il `SEGMENTS` (parola chiave) è supportato come sinonimo di `SECTIONS`.  
   
  Le versioni precedenti di Visual C++ supportate:  
   

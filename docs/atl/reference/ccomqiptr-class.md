@@ -1,12 +1,9 @@
 ---
 title: Classe CComQIPtr | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CComQIPtr
@@ -17,17 +14,15 @@ dev_langs:
 helpviewer_keywords:
 - CComQIPtr class
 ms.assetid: 969cacb5-05b6-4af4-b683-24911d70242d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8b63e584b7c4620be0e77da034a2a419b80cf741
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 66c6cc1484ef84ce53ffaf5529575eea43431869
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ccomqiptr-class"></a>Classe CComQIPtr
 Una classe del puntatore intelligente per la gestione dei puntatori a interfaccia COM.  
@@ -66,14 +61,14 @@ class CComQIPtr: public CComPtr<T>
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  [CComPtrBase](../../atl/reference/ccomptrbase-class.md)  
   
- [CComPtr](../../atl/reference/ccomptr-class.md)  
+ [Istanze CComPtr](../../atl/reference/ccomptr-class.md)  
   
  `CComQIPtr`  
   
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** atlcomcli. h  
   
-##  <a name="ccomqiptr"></a>CComQIPtr::CComQIPtr  
+##  <a name="ccomqiptr"></a>  CComQIPtr::CComQIPtr  
  Costruttore.  
   
 ```
@@ -93,7 +88,7 @@ CComQIPtr(const CComQIPtr<T, piid>& lp) throw();
  `piid`  
  Un puntatore per l'IID del `T`.  
   
-##  <a name="operator_eq"></a>CComQIPtr::operator =  
+##  <a name="operator_eq"></a>  CComQIPtr::operator =  
  L'operatore di assegnazione.  
   
 ```

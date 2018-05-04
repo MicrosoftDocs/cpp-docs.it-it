@@ -2,26 +2,21 @@
 title: -arch (x86) | Documenti Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - C++
 ms.assetid: 9dd5a75d-06e4-4674-aade-33228486078d
-caps.latest.revision: 33
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4905634af75f30c5428f8091d736adbe1b8490d8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 87e1826e324f8e544a791520a3ac035f5ab07100
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="arch-x86"></a>/arch (x86)
 Specifica l'architettura per la generazione del codice su piattaforme x86. Vedere anche [/arch (x64)](../../build/reference/arch-x64.md) e [/arch (ARM)](../../build/reference/arch-arm.md).  
@@ -39,13 +34,13 @@ Specifica l'architettura per la generazione del codice su piattaforme x86. Veder
  **/arch: SSE**  
  Abilita l'uso delle istruzioni SSE.  
   
- **/arch: SSE2**  
+ **/ arch:SSE2**  
  Abilita l'uso delle istruzioni SSE2. Si tratta dell'istruzione predefinita per x86 piattaforme se nessun **/arch** opzione specificata.  
   
  **/arch: AVX**  
  Abilita l'uso di istruzioni Intel Advanced Vector Extensions.  
   
- **/arch: avx2**  
+ **/ arch:avx2**  
  Abilita l'uso di istruzioni Intel Advanced Vector Extensions 2.  
   
 ## <a name="remarks"></a>Note  
@@ -59,9 +54,9 @@ Specifica l'architettura per la generazione del codice su piattaforme x86. Veder
   
  Poiché il compilatore x86 genera codice che Usa istruzioni SSE2 per impostazione predefinita, è necessario specificare **/arch:IA32** per disabilitare la generazione di istruzioni SSE ed SSE2 per x86 processori.  
   
- **/arch** solo influisce sul codice di generazione per le funzioni native. Quando si utilizza [/clr](../../build/reference/clr-common-language-runtime-compilation.md) da compilare, **/arch** non ha alcun effetto sulla generazione di codice per le funzioni gestite.  
+ **/arch** solo influisce sul codice generazione per le funzioni native. Quando si utilizza [/clr](../../build/reference/clr-common-language-runtime-compilation.md) da compilare, **/arch** non ha alcun effetto sulla generazione di codice per le funzioni gestite.  
   
- **/arch** e [/QIfist](../../build/reference/qifist-suppress-ftol.md) non può essere utilizzato nello stesso modulo. In particolare, se non si usa `_controlfp` per modificare la parola di controllo FP, il codice di avvio in fase di esecuzione imposta il campo di controllo della precisione della parola di controllo FPU dell'istruzione x87 su 53 bit. Di conseguenza, ogni operazione a virgola mobile e precisione doppia in un'espressione usa un significando a 53 bit e un esponente a 15 bit. Tuttavia, ogni operazione a precisione singola SSE usa un significando a 24 bit e un esponente a 8 bit, mentre le operazioni a precisione doppia SSE2 usano un significando a 53 bit e un esponente a 11 bit. Per altre informazioni, vedere [_control87, _controlfp, \__control87_2](../../c-runtime-library/reference/control87-controlfp-control87-2.md). Queste differenze sono possibili in un albero delle espressioni, ma non nei casi in cui è coinvolta un'assegnazione utente dopo ogni sottoespressione. Si consideri quanto segue.  
+ **/arch** e [/QIfist](../../build/reference/qifist-suppress-ftol.md) non può essere utilizzato nello stesso compilando. In particolare, se non si usa `_controlfp` per modificare la parola di controllo FP, il codice di avvio in fase di esecuzione imposta il campo di controllo della precisione della parola di controllo FPU dell'istruzione x87 su 53 bit. Di conseguenza, ogni operazione a virgola mobile e precisione doppia in un'espressione usa un significando a 53 bit e un esponente a 15 bit. Tuttavia, ogni operazione a precisione singola SSE usa un significando a 24 bit e un esponente a 8 bit, mentre le operazioni a precisione doppia SSE2 usano un significando a 53 bit e un esponente a 11 bit. Per altre informazioni, vedere [_control87, _controlfp, \__control87_2](../../c-runtime-library/reference/control87-controlfp-control87-2.md). Queste differenze sono possibili in un albero delle espressioni, ma non nei casi in cui è coinvolta un'assegnazione utente dopo ogni sottoespressione. Si consideri quanto segue.  
   
 ```cpp  
 r = f1 * f2 + d;  // Different results are possible on SSE/SSE2.  

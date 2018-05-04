@@ -2,11 +2,8 @@
 title: Classe CSnapInItemImpl | Documenti Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CSnapInItemImpl
@@ -36,17 +33,15 @@ helpviewer_keywords:
 - CSnapInItemImpl class
 - snap-ins
 ms.assetid: 52caefbd-9eae-49b0-add2-d55524271aa7
-caps.latest.revision: 20
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f1355173bafcf026a7f1bfba771a7769b202c92c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 759917497f06f80cde97f4e1bba9f3711add94a8
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="csnapinitemimpl-class"></a>Classe CSnapInItemImpl
 Questa classe fornisce metodi per l'implementazione di un oggetto del nodo snap-in.  
@@ -66,7 +61,7 @@ class ATL_NO_VTABLE CSnapInItemImpl : public CSnapInItem
  La classe, derivata da `CSnapInItemImpl`.  
   
  *bIsExtension*  
- **TRUE** se l'oggetto è un'estensione di snap-in; in caso contrario **FALSE**.  
+ **TRUE** se l'oggetto è un'estensione dello snap-in; in caso contrario **FALSE**.  
   
 ## <a name="members"></a>Membri  
   
@@ -103,7 +98,7 @@ class ATL_NO_VTABLE CSnapInItemImpl : public CSnapInItem
 |[CSnapInItemImpl::m_scopeDataItem](#m_scopedataitem)|Le finestre **SCOPEDATAITEM** struttura utilizzata per il `CSnapInItemImpl` oggetto.|  
   
 ## <a name="remarks"></a>Note  
- `CSnapInItemImpl`fornisce un'implementazione di base per un oggetto nodo snap-in, ad esempio l'aggiunta di voci di menu e barre degli strumenti e l'inoltro dei comandi per il nodo snap-in per la funzione del gestore appropriato. Queste funzionalità vengono implementate tramite diverse interfacce diverse e mapping di tipi. L'implementazione predefinita gestisce le notifiche inviate all'oggetto del nodo, determinando l'istanza della classe derivata corretto, quindi inoltrare il messaggio all'istanza corretta.  
+ `CSnapInItemImpl` fornisce un'implementazione di base per un oggetto del nodo snap-in, ad esempio aggiungere voci di menu e barre degli strumenti e comandi per il nodo snap-in per la funzione del gestore appropriato di inoltro. Queste funzionalità vengono implementate tramite diverse interfacce diverse e mapping di tipi. L'implementazione predefinita gestisce le notifiche inviate all'oggetto del nodo, determinando l'istanza della classe derivata corretto, quindi inoltrare il messaggio all'istanza corretta.  
   
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  `CSnapInItem`  
@@ -113,7 +108,7 @@ class ATL_NO_VTABLE CSnapInItemImpl : public CSnapInItem
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** atlsnap.h  
   
-##  <a name="addmenuitems"></a>CSnapInItemImpl::AddMenuItems  
+##  <a name="addmenuitems"></a>  CSnapInItemImpl::AddMenuItems  
  Questo metodo implementa la funzione Win32 [IExtendContextMenu::AddMenuItems](http://msdn.microsoft.com/library/aa814841).  
   
 ```
@@ -136,7 +131,7 @@ AddMenuItems(
   
 - **CCM_INSERTIONALLOWED_TASK** elementi possono essere inseriti nel sottomenu attività.  
   
-- **CCM_INSERTIONALLOWED_VIEW** elementi possono essere inseriti nel menu Visualizza sulla barra degli strumenti o nel sottomenu del menu di scelta rapida risultati riquadro visualizzazione.  
+- **CCM_INSERTIONALLOWED_VIEW** elementi possono essere inseriti nel menu Visualizza sulla barra degli strumenti o nel sottomenu di visualizzazione del menu di scelta rapida riquadro risultati.  
   
  `type`  
  [in] Specifica il tipo di oggetto. Può avere uno dei valori seguenti:  
@@ -149,7 +144,7 @@ AddMenuItems(
   
 - **CCT_UNINITIALIZED** oggetto dati dispone di un tipo non valido.  
   
-##  <a name="command"></a>CSnapInItemImpl::Command  
+##  <a name="command"></a>  CSnapInItemImpl::Command  
  Questo metodo implementa la funzione Win32 [IExtendContextMenu::Command](http://msdn.microsoft.com/library/aa814842).  
   
 ```
@@ -171,7 +166,7 @@ Command(long lCommandID, DATA_OBJECT_TYPES type);
   
 - **CCT_UNINITIALIZED** oggetto dati dispone di un tipo non valido.  
   
-##  <a name="createpropertypages"></a>CSnapInItemImpl::CreatePropertyPages  
+##  <a name="createpropertypages"></a>  CSnapInItemImpl::CreatePropertyPages  
  Questo metodo implementa la funzione Win32 [IExtendPropertySheet::CreatePropertyPages](http://msdn.microsoft.com/library/aa814846).  
   
 ```
@@ -186,7 +181,7 @@ CreatePropertyPages(
  *lpProvider*  
  [in] Puntatore al **IPropertySheetCallback** interfaccia.  
   
- *handle*  
+ *Handle*  
  [in] Specifica l'handle utilizzato per instradare il **MMCN_PROPERTY_CHANGE** messaggio di notifica per la classe di dati appropriato.  
   
  *pUnk*  
@@ -203,14 +198,14 @@ CreatePropertyPages(
   
 - **CCT_UNINITIALIZED** oggetto dati dispone di un tipo non valido.  
   
-##  <a name="csnapinitemimpl"></a>CSnapInItemImpl::CSnapInItemImpl  
+##  <a name="csnapinitemimpl"></a>  CSnapInItemImpl::CSnapInItemImpl  
  Costruisce un oggetto `CSnapInItemImpl`.  
   
 ```
 CSnapInItemImpl();
 ```  
   
-##  <a name="filldata"></a>CSnapInItemImpl::FillData  
+##  <a name="filldata"></a>  CSnapInItemImpl::FillData  
  Questa funzione viene chiamata per recuperare le informazioni sull'elemento.  
   
 ```
@@ -227,7 +222,7 @@ FillData(CLIPFORMAT cf, LPSTREAM pStream);
 ### <a name="remarks"></a>Note  
  Per implementare correttamente questa funzione, copiare le informazioni corrette nel flusso ( `pStream`), a seconda del formato degli Appunti indicato da `cf`.  
   
-##  <a name="getresultviewtype"></a>CSnapInItemImpl::GetResultViewType  
+##  <a name="getresultviewtype"></a>  CSnapInItemImpl::GetResultViewType  
  Chiamare questa funzione per recuperare il tipo di visualizzazione per il riquadro dei risultati dell'oggetto snap-in.  
   
 ```
@@ -243,11 +238,11 @@ GetResultViewType(
  *pViewOptions*  
  [out] Puntatore al **MMC_VIEW_OPTIONS** enumerazione, che fornisce la console con le opzioni specificate per lo snap-in appartenenza. Questo valore può essere uno dei valori seguenti:  
   
-- **MMC_VIEW_OPTIONS_NOLISTVIEWS** = 0x00000001 indica la console per evitare di presentazione delle opzioni di visualizzazione elenco standard di **vista** menu. Consente di visualizzare i proprio visualizzazioni personalizzate solo nel riquadro di visualizzazione dei risultati con lo snap-in. Questo è l'unico flag di opzione definita in questo momento.  
+- **MMC_VIEW_OPTIONS_NOLISTVIEWS** = 0x00000001 indica la console per evitare di presentare le opzioni di visualizzazione elenco standard nel **vista** menu. Consente di visualizzare i proprio visualizzazioni personalizzate solo nel riquadro di visualizzazione dei risultati con lo snap-in. Questo è l'unico flag di opzione definita in questo momento.  
   
 - **MMC_VIEW_OPTIONS_NONE** = 0 consente le opzioni di visualizzazione predefinito.  
   
-##  <a name="getscopepaneinfo"></a>CSnapInItemImpl::GetScopePaneInfo  
+##  <a name="getscopepaneinfo"></a>  CSnapInItemImpl::GetScopePaneInfo  
  Chiamare questa funzione per recuperare il **SCOPEDATAITEM** struttura dello snap-in.  
   
 ```
@@ -258,7 +253,7 @@ GetScopePaneInfo (SCOPEDATAITEM* pScopeDataItem);
  *pScopeDataItem*  
  [out] Un puntatore al **SCOPEDATAITEM** struttura il `CSnapInItemImpl` oggetto.  
   
-##  <a name="getresultpaneinfo"></a>CSnapInItemImpl::GetResultPaneInfo  
+##  <a name="getresultpaneinfo"></a>  CSnapInItemImpl::GetResultPaneInfo  
  Chiamare questa funzione per recuperare il **RESULTDATAITEM** struttura dello snap-in.  
   
 ```
@@ -269,28 +264,28 @@ GetResultPaneInfo (RESULTDATAITEM* pResultDataItem);
  *pResultDataItem*  
  [out] Un puntatore al **RESULTDATAITEM** struttura il `CSnapInItemImpl` oggetto.  
   
-##  <a name="m_bstrdisplayname"></a>CSnapInItemImpl::m_bstrDisplayName  
+##  <a name="m_bstrdisplayname"></a>  CSnapInItemImpl::m_bstrDisplayName  
  Contiene la stringa visualizzata per l'elemento del nodo.  
   
 ```
 CComBSTR m_bstrDisplayName;
 ```  
   
-##  <a name="m_scopedataitem"></a>CSnapInItemImpl::m_scopeDataItem  
+##  <a name="m_scopedataitem"></a>  CSnapInItemImpl::m_scopeDataItem  
  Il `SCOPEDATAITEM` struttura dell'oggetto dati snap-in.  
   
 ```
 SCOPEDATAITEM m_scopeDataItem;
 ```  
   
-##  <a name="m_resultdataitem"></a>CSnapInItemImpl::m_resultDataItem  
+##  <a name="m_resultdataitem"></a>  CSnapInItemImpl::m_resultDataItem  
  Il [RESULTDATAITEM](http://msdn.microsoft.com/library/aa815165) struttura dell'oggetto dati snap-in.  
   
 ```
 RESULTDATAITEM m_resultDataItem;
 ```  
   
-##  <a name="notify"></a>CSnapInItemImpl::Notify  
+##  <a name="notify"></a>  CSnapInItemImpl::Notify  
  Chiamato quando l'oggetto snap-in viene utilizzata dall'utente.  
   
 ```
@@ -307,7 +302,7 @@ STDMETHOD(Notify)(
  `event`  
  [in] Identifica l'azione eseguita da un utente. Le notifiche seguenti sono possibili:  
   
-- **MMCN_ACTIVATE** inviati quando una finestra è attivato e disattivato.  
+- **MMCN_ACTIVATE** inviato quando una finestra viene attivata e disattivata.  
   
 - **MMCN_ADD_IMAGES** inviati per aggiungere immagini al riquadro dei risultati.  
   
@@ -315,25 +310,25 @@ STDMETHOD(Notify)(
   
 - **MMCN_CLICK** inviato quando un utente fa clic su un pulsante del mouse su un elemento della visualizzazione elenco.  
   
-- **MMCN_DBLCLICK** inviato quando un utente fa doppio clic un pulsante del mouse su un elemento della visualizzazione elenco.  
+- **MMCN_DBLCLICK** inviati quando un utente fa doppio clic un pulsante del mouse su un elemento della visualizzazione elenco.  
   
 - **MMCN_DELETE** inviati per comunicare lo snap-in che l'oggetto deve essere eliminato.  
   
-- **MMCN_EXPAND** inviato quando una cartella deve essere espanso o contratto.  
+- **MMCN_EXPAND** inviato quando una cartella deve essere espanso o contratte.  
   
 - **MMCN_MINIMIZED** inviato quando una finestra viene ridotta a icona o ingrandita.  
   
-- **MMCN_PROPERTY_CHANGE** inviati per notificare a un oggetto snap-in vista dell'oggetto snap-in verrà modificato.  
+- **MMCN_PROPERTY_CHANGE** inviati per notificare a un oggetto snap-in vista dell'oggetto snap-in è sta per essere modificata.  
   
-- **MMCN_REMOVE_CHILDREN** inviato quando lo snap-in necessario, eliminare il sottoalbero intero è aggiunto di sotto del nodo specificato.  
+- **MMCN_REMOVE_CHILDREN** inviato quando lo snap-in necessario eliminare il sottoalbero intero è aggiunto di sotto del nodo specificato.  
   
 - **MMCN_RENAME** inviati la prima volta per eseguire query per un'operazione di ridenominazione e la seconda volta per eseguire l'operazione di ridenominazione.  
   
-- **MMCN_SELECT** inviati quando viene selezionato un elemento nel riquadro di visualizzazione di ambito o del risultato.  
+- **MMCN_SELECT** inviati quando viene selezionato un elemento nel riquadro Vista di ambito o del risultato.  
   
 - **MMCN_SHOW** inviato quando un elemento dell'ambito viene selezionato o deselezionato per la prima volta.  
   
-- **MMCN_VIEW_CHANGE** inviato quando lo snap-in possono aggiornare tutte le viste quando viene apportata una modifica.  
+- **MMCN_VIEW_CHANGE** inviato quando lo snap-in possono aggiornare tutte le viste quando si verifica una modifica.  
   
  `arg`  
  [in] Dipende dal tipo di notifica.  
@@ -358,14 +353,14 @@ STDMETHOD(Notify)(
   
 - **CCT_UNINITIALIZED** oggetto dati dispone di un tipo non valido.  
   
-##  <a name="querypagesfor"></a>CSnapInItemImpl::QueryPagesFor  
+##  <a name="querypagesfor"></a>  CSnapInItemImpl::QueryPagesFor  
  Chiamata eseguita per verificare se il nodo snap-in supporta pagine delle proprietà.  
   
 ```
 QueryPagesFor(DATA_OBJECT_TYPES type);
 ```  
   
-##  <a name="setmenuinsertionflags"></a>CSnapInItemImpl::SetMenuInsertionFlags  
+##  <a name="setmenuinsertionflags"></a>  CSnapInItemImpl::SetMenuInsertionFlags  
  Chiamare questa funzione per modificare i flag di inserimento di menu, specificati da `pInsertionAllowed`, per l'oggetto snap-in.  
   
 ```
@@ -387,14 +382,14 @@ void SetMenuInsertionFlags(
   
 - **CCM_INSERTIONALLOWED_TASK** elementi possono essere inseriti nel sottomenu attività.  
   
-- **CCM_INSERTIONALLOWED_VIEW** elementi possono essere inseriti nel menu Visualizza sulla barra degli strumenti o nel sottomenu del menu di scelta rapida risultati riquadro visualizzazione.  
+- **CCM_INSERTIONALLOWED_VIEW** elementi possono essere inseriti nel menu Visualizza sulla barra degli strumenti o nel sottomenu di visualizzazione del menu di scelta rapida riquadro risultati.  
   
 ### <a name="remarks"></a>Note  
  Se si sviluppa uno snap-in primario, è possibile ripristinare uno o più flag inserimento allo scopo di limitare il tipo di voci di menu che è possibile aggiungere un'estensione di terze parti. Ad esempio, lo snap-in primario può cancellare il **CCM_INSERTIONALLOWED_NEW** flag per impedire le estensioni di aggiungere i propri creare nuove voci di menu.  
   
  Non tentare di impostare i bit `pInsertionAllowed` che sono state cancellate originariamente. Le versioni future di MMC potrebbero utilizzare bits non è attualmente definita in modo da non modificare bits che attualmente non sono definiti.  
   
-##  <a name="settoolbarbuttoninfo"></a>CSnapInItemImpl::SetToolbarButtonInfo  
+##  <a name="settoolbarbuttoninfo"></a>  CSnapInItemImpl::SetToolbarButtonInfo  
  Chiamare questa funzione per modificare tutti gli stili pulsante della barra degli strumenti dell'oggetto snap-in, prima che venga creata la barra degli strumenti.  
   
 ```
@@ -411,32 +406,32 @@ void SetToolbarButtonInfo(
  `fsState`  
  [in] I flag di stato del pulsante. Può essere uno o più delle operazioni seguenti:  
   
-- `TBSTATE_CHECKED`Il pulsante ha il **TBSTYLE_CHECKED** stile e viene premuto.  
+- `TBSTATE_CHECKED` Il pulsante ha il **TBSTYLE_CHECKED** applicare uno stile e viene premuto.  
   
-- `TBSTATE_ENABLED`Pulsante accetta l'input dell'utente. Un pulsante che non ha questo stato non accetta l'input dell'utente e diventa inattivo.  
+- `TBSTATE_ENABLED` Il pulsante accetta l'input dell'utente. Un pulsante che non ha questo stato non accetta l'input dell'utente e diventa inattivo.  
   
-- `TBSTATE_HIDDEN`Il pulsante non è visibile e non può ricevere input dell'utente.  
+- `TBSTATE_HIDDEN` Il pulsante non è visibile e non può ricevere input dell'utente.  
   
-- `TBSTATE_INDETERMINATE`Il pulsante diventa inattivo.  
+- `TBSTATE_INDETERMINATE` Il pulsante diventa inattivo.  
   
-- `TBSTATE_PRESSED`Il pulsante è premuto.  
+- `TBSTATE_PRESSED` Viene premuto il pulsante.  
   
-- `TBSTATE_WRAP`Un'interruzione di riga segue il pulsante. Il pulsante deve inoltre disporre di `TBSTATE_ENABLED`.  
+- `TBSTATE_WRAP` Un'interruzione di riga segue il pulsante. Il pulsante deve inoltre disporre di `TBSTATE_ENABLED`.  
   
  *fsType*  
  [in] I flag di stato del pulsante. Può essere uno o più delle operazioni seguenti:  
   
-- `TBSTYLE_BUTTON`Crea un pulsante di comando standard.  
+- `TBSTYLE_BUTTON` Crea un pulsante di comando standard.  
   
-- `TBSTYLE_CHECK`Crea un pulsante che alterna tra gli stati premuti e premuto non ogni volta che l'utente fa clic. Il pulsante ha un colore di sfondo diversi quando è nello stato premuto.  
+- `TBSTYLE_CHECK` Crea un pulsante che alterna tra gli stati premuti e premuto non ogni volta che l'utente fa clic. Il pulsante ha un colore di sfondo diversi quando è nello stato premuto.  
   
-- `TBSTYLE_CHECKGROUP`Crea un pulsante di controllo che viene premuto fino a quando non viene premuto un pulsante un altro gruppo.  
+- `TBSTYLE_CHECKGROUP` Crea un pulsante di controllo che viene premuto fino a quando non viene premuto un altro pulsante nel gruppo.  
   
-- `TBSTYLE_GROUP`Crea un pulsante che viene premuto fino a quando non viene premuto un pulsante un altro gruppo.  
+- `TBSTYLE_GROUP` Crea un pulsante che viene premuto fino a quando non viene premuto un altro pulsante nel gruppo.  
   
-- `TBSTYLE_SEP`Crea un separatore, fornire un breve intervallo tra i gruppi di pulsanti. Un pulsante con questo stile non riceve l'input dell'utente.  
+- `TBSTYLE_SEP` Crea un separatore, fornendo un gap tra gruppi di pulsanti di piccole dimensioni. Un pulsante con questo stile non riceve l'input dell'utente.  
   
-##  <a name="updatemenustate"></a>CSnapInItemImpl::UpdateMenuState  
+##  <a name="updatemenustate"></a>  CSnapInItemImpl::UpdateMenuState  
  Chiamare questa funzione per modificare una voce di menu prima di essere inserito nel menu di scelta rapida dell'oggetto snap-in.  
   
 ```
@@ -458,7 +453,7 @@ void UpdateMenuState(
   
 - **MF_POPUP** specifica che si tratta di un sottomenu in menu di scelta rapida. Voci di menu, i punti di inserimento e i sottomenu ulteriormente possono essere aggiunti a questo sottomenu mediante il relativo **lCommandID** come loro **IInsertionPointID**.  
   
-- **MF_BITMAP** e `MF_OWNERDRAW` questi flag non consentiti e comporterà un valore restituito di `E_INVALIDARG`.  
+- **MF_BITMAP** e `MF_OWNERDRAW` questi flag non consentiti, sarà generato un valore restituito di `E_INVALIDARG`.  
   
 - **MF_SEPARATOR** Disegna una linea di divisione orizzontale. Solo **IContextMenuProvider** è consentito aggiungere voci di menu con **MF_SEPARATOR** impostato.  
   
@@ -466,13 +461,13 @@ void UpdateMenuState(
   
 - **MF_DISABLED** disabilita la voce di menu, pertanto non può essere selezionato, ma non di grigio, il flag.  
   
-- `MF_ENABLED`Consente la voce di menu in modo che può essere selezionato, eseguire il ripristino dallo stato inattivo.  
+- `MF_ENABLED` Abilita la voce di menu in modo potrà essere selezionato, eseguire il ripristino dallo stato inattivo.  
   
 - **MF_GRAYED** disabilita la voce di menu, viene fornito in modo che non possono essere selezionata.  
   
-- **MF_MENUBARBREAK** funziona nello stesso modo di **MF_MENUBREAK** flag per una barra dei menu. Per un menu a discesa, un sottomenu o un menu di scelta rapida, la nuova colonna è separata dalla precedente da una linea verticale.  
+- **MF_MENUBARBREAK** funziona esattamente come il **MF_MENUBREAK** flag per una barra dei menu. Per un menu a discesa, un sottomenu o un menu di scelta rapida, la nuova colonna è separata dalla precedente da una linea verticale.  
   
-- **MF_MENUBREAK** posiziona l'elemento in una nuova riga (per una barra dei menu) o in una nuova colonna (per un menu a discesa, un sottomenu o un menu di scelta rapida) senza la separazione di colonne.  
+- **MF_MENUBREAK** posiziona l'elemento in una nuova riga (per una barra dei menu) o in una nuova colonna (per un elenco a discesa menu, sottomenu o menu di scelta rapida) senza la separazione di colonne.  
   
 - **MF_UNCHECKED** non inserire un segno di spunta accanto all'elemento (impostazione predefinita).  
   
@@ -484,7 +479,7 @@ void UpdateMenuState(
   
 - **MF_CHECKED** e **MF_UNCHECKED**.  
   
-##  <a name="updatetoolbarbutton"></a>CSnapInItemImpl::UpdateToolbarButton  
+##  <a name="updatetoolbarbutton"></a>  CSnapInItemImpl::UpdateToolbarButton  
  Chiamare questa funzione per modificare un pulsante della barra degli strumenti, dell'oggetto snap-in, prima che venga visualizzato.  
   
 ```
@@ -500,9 +495,9 @@ BOOL UpdateToolbarButton(UINT id, BYTE fsState);
   
 - **ABILITATO** pulsante accetta l'input dell'utente. Un pulsante che non ha questo stato non accetta l'input dell'utente e diventa inattivo.  
   
-- **SELEZIONATA** il pulsante ha il **selezionata** stile e viene premuto.  
+- **CONTROLLATO** il pulsante ha il **controllato** applicare uno stile e viene premuto.  
   
-- **HIDDEN** pulsante non è visibile e non può ricevere input dell'utente.  
+- **HIDDEN** il pulsante non è visibile e non può ricevere input dell'utente.  
   
 - **INDETERMINATO** il pulsante diventa inattivo.  
   

@@ -1,13 +1,10 @@
 ---
 title: L'importazione di chiamate di funzione tramite declspec | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - __declspec
 - dllimport
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - __declspec(dllimport) keyword [C++]
 - function calls [C++], importing
 ms.assetid: 6b53c616-0c6d-419a-8e2a-d2fff20510b3
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5553bd5e9999a4737dc258358402eb71269b9c40
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1239ee3b33a9d6c8443161bacae6daea20260c1f
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="importing-function-calls-using-declspecdllimport"></a>Importazione di chiamate di funzione tramite __declspec(dllimport)
 Esempio di codice seguente viene illustrato come utilizzare **_declspec(dllimport)** per importare le chiamate di funzione da una DLL in un'applicazione. Si supponga che `func1` è una funzione che si trova in una DLL separata dal file .exe che contiene il **principale** (funzione).  

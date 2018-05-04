@@ -1,30 +1,25 @@
 ---
 title: Suggerimenti per l'ottimizzazione | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - Visual C++, optimization
 - optimization, best practices
 ms.assetid: f3433148-7255-4ca6-8a4f-7c31aac88508
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ec12e847eef72827e11700be322fd2a2ca309037
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4e869a12635117f37f32fad3dcfdd38ed45d401e
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="optimization-best-practices"></a>Suggerimenti per l'ottimizzazione
 Questo documento descrive alcune procedure consigliate per l'ottimizzazione in Visual C++. Vengono trattati i seguenti argomenti:  
@@ -71,7 +66,7 @@ Questo documento descrive alcune procedure consigliate per l'ottimizzazione in V
 |||  
 |-|-|  
 |**/fp: precise**|Questo è l'opzione predefinita e deve essere utilizzato nella maggior parte dei casi.|  
-|**Fast**|È consigliabile se le prestazioni sono di fondamentale importanza, ad esempio nei giochi. Ciò comporterà la velocità delle prestazioni.|  
+|**/fp: fast**|È consigliabile se le prestazioni sono di fondamentale importanza, ad esempio nei giochi. Ciò comporterà la velocità delle prestazioni.|  
 |**/fp: strict**|Consigliato se le eccezioni a virgola mobile a precisione e IEEE comportamento desiderato. Ciò comporterà la più lenta.|  
 |**/fp: except [-]**|Può essere utilizzato in combinazione con **/fp: strict** o **/fp: precise**, ma non **Fast**.|  
   
@@ -80,7 +75,7 @@ Questo documento descrive alcune procedure consigliate per l'ottimizzazione in V
 ## <a name="optimization-declspecs"></a>Declspec di ottimizzazione  
  In questa sezione verranno esaminati due declspec che possono essere utilizzati in programmi per le prestazioni: `__declspec(restrict)` e `__declspec(noalias)`.  
   
- Il `restrict` declspec può essere applicata solo alle dichiarazioni di funzione che restituiscono un puntatore, ad esempio`__declspec(restrict) void *malloc(size_t size);`  
+ Il `restrict` declspec può essere applicata solo alle dichiarazioni di funzione che restituiscono un puntatore, ad esempio `__declspec(restrict) void *malloc(size_t size);`  
   
  Il `restrict` declspec viene usata nelle funzioni che restituiscono puntatori privi di alias. Questa parola chiave viene utilizzata per l'implementazione della libreria di Runtime C di `malloc` poiché non restituirà mai un valore del puntatore che è già in uso nel programma corrente (a meno che non si esegue un'operazione non valida, ad esempio l'utilizzo di memoria dopo che è stato liberato).  
   
@@ -113,24 +108,24 @@ int myFunc() {...}
   
  Inline è uno dei più importanti ottimizzazioni che il compilatore esegue e in questo caso si parla di un paio di pragma che consentono di modificare questo comportamento.  
   
- `#pragma inline_recursion`è utile per specificare se si desidera che l'applicazione in grado di rendere inline una chiamata ricorsiva. Per impostazione predefinita che è off. È possibile per attivare questa opzione per la ricorsione superficiale di piccole funzioni. Per ulteriori informazioni, vedere [inline_recursion](../../preprocessor/inline-recursion.md).  
+ `#pragma inline_recursion` è utile per specificare se non si desidera che l'applicazione per essere in grado di rendere inline una chiamata ricorsiva. Per impostazione predefinita che è off. È possibile per attivare questa opzione per la ricorsione superficiale di piccole funzioni. Per ulteriori informazioni, vedere [inline_recursion](../../preprocessor/inline-recursion.md).  
   
  Un altro pragma utile per limitare il livello di incorporamento è `#pragma inline_depth`. Si tratta in genere utile nelle situazioni in cui si sta tentando di limitare le dimensioni di una funzione o un programma. Per ulteriori informazioni, vedere [inline_depth](../../preprocessor/inline-depth.md).  
   
 ## <a name="restrict-and-assume"></a>Restrict e \__assume  
  Esistono un paio di parole chiave in Visual C++ che può migliorare le prestazioni: [Restrict](../../cpp/extension-restrict.md) e [assume](../../intrinsics/assume.md).  
   
- In primo luogo, si noti che `__restrict` e `__declspec(restrict)` sono diverse. Mentre sono in qualche modo correlati, la semantica è diversa. `__restrict`è un qualificatore di tipo, ad esempio `const` o `volatile`, ma esclusivamente per i tipi di puntatore.  
+ In primo luogo, si noti che `__restrict` e `__declspec(restrict)` sono diverse. Mentre sono in qualche modo correlati, la semantica è diversa. `__restrict` è un qualificatore di tipo, ad esempio `const` o `volatile`, ma esclusivamente per i tipi di puntatore.  
   
  Un puntatore che viene modificato con `__restrict` viene definito un *Restrict puntatore*. Ovvero un puntatore è un puntatore che sono accessibili solo tramite il \_limita l'indicatore di misura. In altre parole, un altro puntatore non può essere utilizzato per accedere ai dati a cui fa riferimento il \_limita l'indicatore di misura.  
   
- `__restrict`può essere un potente strumento per l'ottimizzatore di Visual C++, ma utilizzarlo con cautela. Se utilizzato in modo improprio, query optimizer potrebbe eseguire un'ottimizzazione che causa l'interruzione dell'applicazione.  
+ `__restrict` può essere un potente strumento per l'utilità di ottimizzazione di Visual C++, ma prestare molta attenzione. Se utilizzato in modo improprio, query optimizer potrebbe eseguire un'ottimizzazione che causa l'interruzione dell'applicazione.  
   
  Il `__restrict` (parola chiave) sostituisce il **/Oa** passare da versioni precedenti.  
   
  Con `__assume`, uno sviluppatore può indicare al compilatore di presupporre il valore di una variabile.  
   
- Ad esempio `__assume(a < 5);` indica che l'utilità di ottimizzazione in una determinata riga di codice la variabile `a` è minore di 5. Nuovamente, questa è una promessa al compilatore. Se `a` è effettivamente 6 a questo punto del programma, il comportamento del programma dopo che il compilatore è ottimizzato potrebbe non essere quello previsto. `__assume`è molto utile prima di istruzioni switch e/o le espressioni condizionali.  
+ Ad esempio `__assume(a < 5);` indica che l'utilità di ottimizzazione in una determinata riga di codice la variabile `a` è minore di 5. Nuovamente, questa è una promessa al compilatore. Se `a` è effettivamente 6 a questo punto del programma, il comportamento del programma dopo che il compilatore è ottimizzato potrebbe non essere quello previsto. `__assume` è molto utile prima di istruzioni switch e/o le espressioni condizionali.  
   
  Esistono alcune limitazioni per `__assume`. In primo luogo, ad esempio `__restrict`, si tratta solo di un suggerimento, il compilatore è libero di ignorare. Inoltre, `__assume` attualmente funziona solo con le disuguaglianze rispetto alle costanti. Non propaga le disuguaglianze simboliche, ad esempio assume(a < b).  
   

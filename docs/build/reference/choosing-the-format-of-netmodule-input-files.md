@@ -1,27 +1,22 @@
 ---
 title: Scelta del formato di. netmodule file di Input | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - C++
 ms.assetid: 4653d1bd-300f-4083-86f5-d1a06f44e61c
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c6b83039a054e19e62cbbe87befbe08dd7997e51
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 62575d3e816bdc10587e7a4c9cebcea735329ec1
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="choosing-the-format-of-netmodule-input-files"></a>Scelta del formato dei file di input con estensione netmodule
 Un file con estensione obj MSIL (compilato con [/clr](../../build/reference/clr-common-language-runtime-compilation.md)) può essere utilizzato anche come file con estensione netmodule.  i file obj contengono i metadati e i simboli nativi.  I file con estensione netmodule contengono solo metadati.  

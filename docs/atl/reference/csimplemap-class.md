@@ -1,12 +1,9 @@
 ---
 title: Classe CSimpleMap | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CSimpleMap
@@ -32,17 +29,15 @@ dev_langs:
 helpviewer_keywords:
 - CSimpleMap class
 ms.assetid: 61b06eb4-ae73-44b0-a305-0afb5a33e8b1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 27e4fdad706ab9e586efe72663880646e6f50f11
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 415ce3c0d6b060ffc71aa448656cf9ad45a3e7bb
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="csimplemap-class"></a>Classe CSimpleMap
 Questa classe fornisce supporto per una matrice di mapping semplice.  
@@ -99,13 +94,13 @@ class CSimpleMap
 |[CSimpleMap::SetAtIndex](#setatindex)|Imposta la coppia chiave / valore.|  
   
 ## <a name="remarks"></a>Note  
- `CSimpleMap`fornisce il supporto per una matrice di mapping semplice di un tipo specificato `T`, la gestione di una matrice non ordinata di elementi chiave e i relativi valori associati.  
+ `CSimpleMap` fornisce il supporto per una matrice di mapping semplice di un tipo specificato `T`, la gestione di una matrice non ordinata di elementi chiave e i relativi valori associati.  
   
  Il parametro `TEqual` consente di definire una funzione di uguaglianza per due elementi di tipo `T`. Creando una classe simile a [CSimpleMapEqualHelper](../../atl/reference/csimplemapequalhelper-class.md), è possibile modificare il comportamento del test di uguaglianza per qualsiasi matrice specificata. Ad esempio, quando si lavora con una matrice di puntatori, può risultare utile definire l'uguaglianza come a seconda dei valori che di puntatori di riferimento. L'implementazione predefinita utilizza **operator==()**.  
   
  Entrambi `CSimpleMap` e [CSimpleArray](../../atl/reference/csimplearray-class.md) forniti per la compatibilità con ATL precedente rilascia e vengono fornite implementazioni di raccolta più efficiente e completa da [CAtlArray](../../atl/reference/catlarray-class.md) e [ CAtlMap](../../atl/reference/catlmap-class.md).  
   
- A differenza di altre raccolte di mappe in ATL e MFC, questa classe viene implementata con una semplice matrice e ricerche di ricerca richiedono una ricerca lineare. `CAtlMap`deve essere utilizzata quando la matrice contiene un numero elevato di elementi.  
+ A differenza di altre raccolte di mappe in ATL e MFC, questa classe viene implementata con una semplice matrice e ricerche di ricerca richiedono una ricerca lineare. `CAtlMap` deve essere utilizzata quando la matrice contiene un numero elevato di elementi.  
   
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** atlsimpcoll. h  
@@ -113,7 +108,7 @@ class CSimpleMap
 ## <a name="example"></a>Esempio  
  [!code-cpp[NVC_ATL_Utilities#91](../../atl/codesnippet/cpp/csimplemap-class_1.cpp)]  
   
-##  <a name="add"></a>CSimpleMap::Add  
+##  <a name="add"></a>  CSimpleMap::Add  
  Aggiunge una chiave e il valore associato alla matrice map.  
   
 ```
@@ -133,21 +128,21 @@ BOOL Add(const TKey& key, const TVal& val);
 ### <a name="remarks"></a>Note  
  Ogni coppia chiave / valore aggiunte cause il mapping della matrice memoria da liberare e riallocare, per garantire che i dati per ogni vengono sempre archiviati in modo contiguo. Ovvero, il secondo elemento chiave direttamente segue sempre il primo elemento chiave in memoria e così via.  
   
-##  <a name="_arrayelementtype"></a>CSimpleMap::_ArrayElementType  
+##  <a name="_arrayelementtype"></a>  CSimpleMap::_ArrayElementType  
  Typedef per il tipo di chiave.  
   
 ```
 typedef TVal _ArrayElementType;
 ```  
   
-##  <a name="_arraykeytype"></a>CSimpleMap::_ArrayKeyType  
+##  <a name="_arraykeytype"></a>  CSimpleMap::_ArrayKeyType  
  Typedef per il tipo di valore.  
   
 ```
 typedef TKey _ArrayKeyType;
 ```  
   
-##  <a name="csimplemap"></a>CSimpleMap::CSimpleMap  
+##  <a name="csimplemap"></a>  CSimpleMap::CSimpleMap  
  Costruttore.  
   
 ```
@@ -157,7 +152,7 @@ CSimpleMap();
 ### <a name="remarks"></a>Note  
  Inizializza i membri di dati.  
   
-##  <a name="dtor"></a>CSimpleMap:: ~ CSimpleMap  
+##  <a name="dtor"></a>  CSimpleMap:: ~ CSimpleMap  
  Distruttore.  
   
 ```
@@ -167,7 +162,7 @@ CSimpleMap();
 ### <a name="remarks"></a>Note  
  Libera tutte le risorse allocate.  
   
-##  <a name="findkey"></a>CSimpleMap::FindKey  
+##  <a name="findkey"></a>  CSimpleMap::FindKey  
  Consente di trovare una chiave specifica.  
   
 ```
@@ -181,7 +176,7 @@ int FindKey(const TKey& key) const;
 ### <a name="return-value"></a>Valore restituito  
  In caso contrario, restituisce l'indice di chiave se è presente, restituisce -1.  
   
-##  <a name="findval"></a>CSimpleMap::FindVal  
+##  <a name="findval"></a>  CSimpleMap::FindVal  
  Consente di trovare un valore specifico.  
   
 ```
@@ -195,7 +190,7 @@ int FindVal(const TVal& val) const;
 ### <a name="return-value"></a>Valore restituito  
  Restituisce che l'indice del valore se viene trovato, in caso contrario restituisce -1.  
   
-##  <a name="getkeyat"></a>CSimpleMap::GetKeyAt  
+##  <a name="getkeyat"></a>  CSimpleMap::GetKeyAt  
  Recupera la chiave in corrispondenza dell'indice specificato.  
   
 ```
@@ -212,7 +207,7 @@ TKey& GetKeyAt(int nIndex) const;
 ### <a name="remarks"></a>Note  
  L'indice passato `nIndex` deve essere valido per il valore restituito per essere significativo.  
   
-##  <a name="getsize"></a>CSimpleMap::GetSize  
+##  <a name="getsize"></a>  CSimpleMap::GetSize  
  Restituisce il numero di voci nella matrice di mapping.  
   
 ```
@@ -222,7 +217,7 @@ int GetSize() const;
 ### <a name="return-value"></a>Valore restituito  
  Restituisce il numero di voci (una chiave e il valore è una voce) nella matrice di mapping.  
   
-##  <a name="getvalueat"></a>CSimpleMap::GetValueAt  
+##  <a name="getvalueat"></a>  CSimpleMap::GetValueAt  
  Recupera il valore in corrispondenza dell'indice specifico.  
   
 ```
@@ -239,7 +234,7 @@ TVal& GetValueAt(int nIndex) const;
 ### <a name="remarks"></a>Note  
  L'indice passato `nIndex` deve essere valido per il valore restituito per essere significativo.  
   
-##  <a name="lookup"></a>CSimpleMap::Lookup  
+##  <a name="lookup"></a>  CSimpleMap::Lookup  
  Restituisce il valore associato alla chiave specificata.  
   
 ```
@@ -253,7 +248,7 @@ TVal Lookup(const TKey& key) const;
 ### <a name="return-value"></a>Valore restituito  
  Restituisce il valore associato. Se nessuna chiave corrispondente è presente, NULL.  
   
-##  <a name="remove"></a>CSimpleMap::Remove  
+##  <a name="remove"></a>  CSimpleMap::Remove  
  Rimuove una chiave e il valore corrispondente.  
   
 ```
@@ -267,7 +262,7 @@ BOOL Remove(const TKey& key);
 ### <a name="return-value"></a>Valore restituito  
  Restituisce TRUE se la chiave e il valore corrispondente, sono stati rimossi correttamente, FALSE in caso contrario.  
   
-##  <a name="removeall"></a>CSimpleMap::RemoveAll  
+##  <a name="removeall"></a>  CSimpleMap::RemoveAll  
  Rimuove tutte le chiavi e valori.  
   
 ```
@@ -277,7 +272,7 @@ void RemoveAll();
 ### <a name="remarks"></a>Note  
  Rimuove tutte le chiavi e valori dall'oggetto matrice mapping.  
   
-##  <a name="removeat"></a>CSimpleMap::RemoveAt  
+##  <a name="removeat"></a>  CSimpleMap::RemoveAt  
  Rimuove una chiave e il valore associato in corrispondenza dell'indice specificato.  
   
 ```
@@ -291,7 +286,7 @@ BOOL RemoveAt(int nIndex);
 ### <a name="return-value"></a>Valore restituito  
  Restituisce TRUE in caso di esito positivo, FALSE se l'indice specificato è un indice non valido.  
   
-##  <a name="reverselookup"></a>CSimpleMap::ReverseLookup  
+##  <a name="reverselookup"></a>  CSimpleMap::ReverseLookup  
  Restituisce la chiave associata al valore specificato.  
   
 ```
@@ -305,7 +300,7 @@ TKey ReverseLookup(const TVal& val) const;
 ### <a name="return-value"></a>Valore restituito  
  Restituisce la chiave associata. Se nessuna chiave corrispondente è presente, NULL.  
   
-##  <a name="setat"></a>CSimpleMap::SetAt  
+##  <a name="setat"></a>  CSimpleMap::SetAt  
  Imposta il valore associato alla chiave specificata.  
   
 ```
@@ -322,7 +317,7 @@ BOOL SetAt(const TKey& key, const TVal& val);
 ### <a name="return-value"></a>Valore restituito  
  Se è stata trovata la chiave e il valore è stato modificato correttamente, FALSE in caso contrario, restituisce TRUE.  
   
-##  <a name="setatindex"></a>CSimpleMap::SetAtIndex  
+##  <a name="setatindex"></a>  CSimpleMap::SetAtIndex  
  Imposta la chiave e il valore in corrispondenza dell'indice specificato.  
   
 ```

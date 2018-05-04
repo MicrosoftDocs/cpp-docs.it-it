@@ -2,11 +2,8 @@
 title: Classe CComCritSecLock | Documenti Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CComCritSecLock
@@ -19,17 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - CComCritSecLock class
 ms.assetid: 223152a1-86c3-4ef9-89a7-f455fe791b0e
-caps.latest.revision: 19
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1cb07c2cca9394c23c6c3db156e205749f62e3f9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 98b6eb7a8e6df16134573b55a7c9666befe4e4a1
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ccomcritseclock-class"></a>Classe CComCritSecLock
 Questa classe fornisce metodi per bloccare e sbloccare un oggetto sezione critica.  
@@ -66,7 +61,7 @@ template<class TLock> class CComCritSecLock
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** atlbase. h  
   
-##  <a name="ctor"></a>CComCritSecLock::CComCritSecLock  
+##  <a name="ctor"></a>  CComCritSecLock::CComCritSecLock  
  Costruttore.  
   
 ```
@@ -83,7 +78,7 @@ CComCritSecLock(TLock& cs, bool bInitialLock = true);
 ### <a name="remarks"></a>Note  
  Inizializza l'oggetto sezione critica.  
   
-##  <a name="dtor"></a>CComCritSecLock:: ~ CComCritSecLock  
+##  <a name="dtor"></a>  CComCritSecLock:: ~ CComCritSecLock  
  Distruttore.  
   
 ```
@@ -93,7 +88,7 @@ CComCritSecLock(TLock& cs, bool bInitialLock = true);
 ### <a name="remarks"></a>Note  
  Sblocca l'oggetto sezione critica.  
   
-##  <a name="lock"></a>CComCritSecLock::Lock  
+##  <a name="lock"></a>  CComCritSecLock::Lock  
  Chiamare questo metodo per bloccare l'oggetto sezione critica.  
   
 ```
@@ -106,7 +101,7 @@ HRESULT Lock() throw();
 ### <a name="remarks"></a>Note  
  Se l'oggetto è già bloccato, si verificherà un errore di ASSERZIONE nelle build di debug.  
   
-##  <a name="unlock"></a>CComCritSecLock::Unlock  
+##  <a name="unlock"></a>  CComCritSecLock::Unlock  
  Chiamare questo metodo per sbloccare l'oggetto sezione critica.  
   
 ```

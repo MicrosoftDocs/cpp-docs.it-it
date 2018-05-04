@@ -1,12 +1,12 @@
 ---
 title: Classe CMFCToolBarImages | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - CMFCToolBarImages
@@ -149,17 +149,17 @@ helpviewer_keywords:
 - CMFCToolBarImages [MFC], PreMultiplyAlpha
 - CMFCToolBarImages [MFC], m_bDisableTrueColorAlpha
 ms.assetid: d4e50518-9ffc-406f-9996-f79e5cd38155
-caps.latest.revision: 
+caps.latest.revision: 31
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b557a56b1d525941c96b9a6a96fd367b64afcaf0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1e2e46c4716627a4e1310dc7b1adb0ddb93aa178
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cmfctoolbarimages-class"></a>Classe CMFCToolBarImages
 Le immagini in una barra degli strumenti. La `CMFCToolBarImages` classe gestisce le immagini della barra degli strumenti caricate dalle risorse dell'applicazione o dai file.  
@@ -257,7 +257,7 @@ class CMFCToolBarImages : public CObject
   
 |nome|Descrizione|  
 |----------|-----------------|  
-|[CMFCToolBarImages::m_bDisableTrueColorAlpha](#m_bdisabletruecoloralpha)|`TRUE`Se alpha truecolor fusione (colore a 32 bit) è disabilitato.|  
+|[CMFCToolBarImages::m_bDisableTrueColorAlpha](#m_bdisabletruecoloralpha)|`TRUE` Se alpha truecolor fusione (colore a 32 bit) è disabilitato.|  
   
 ## <a name="remarks"></a>Note  
  La bitmap completa di immagini della barra degli strumenti gestiti da `CMFCToolbarImages` è costituito da una o più immagini di piccola barra degli strumenti (pulsanti) a dimensione fissa.  
@@ -276,7 +276,7 @@ class CMFCToolBarImages : public CObject
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** afxtoolbarimages.h  
   
-##  <a name="adaptcolors"></a>CMFCToolBarImages::AdaptColors  
+##  <a name="adaptcolors"></a>  CMFCToolBarImages::AdaptColors  
 
   
 ```  
@@ -291,7 +291,7 @@ void AdaptColors(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="addicon"></a>CMFCToolBarImages::AddIcon  
+##  <a name="addicon"></a>  CMFCToolBarImages::AddIcon  
  Aggiunge un'icona per l'elenco delle immagini della barra degli strumenti.  
   
 ```  
@@ -305,12 +305,12 @@ int AddIcon(
  Handle per l'icona da aggiungere.  
   
  [in] `bAlphaBlend`  
- `TRUE`Se questa icona viene utilizzata con la fusione alfa; in caso contrario `FALSE`.  
+ `TRUE` Se questa icona viene utilizzata con riempimenti con fusione alfa; in caso contrario `FALSE`.  
   
 ### <a name="return-value"></a>Valore restituito  
  L'indice in base zero dell'immagine della barra degli strumenti che è stato aggiunto se il metodo ha esito positivo; in caso contrario-1.  
   
-##  <a name="addimage"></a>CMFCToolBarImages::AddImage  
+##  <a name="addimage"></a>  CMFCToolBarImages::AddImage  
  Aggiunge una bitmap per le immagini della barra degli strumenti.  
   
 ```  
@@ -328,7 +328,7 @@ int AddImage(
  Handle di bitmap da aggiungere.  
   
  [in] `bSetBitPerPixel`  
- `TRUE`Se il `CMFCToolBarImages` oggetto utilizza l'intensità di colore (bit per pixel) dell'immagine di nuovo. `FALSE` se il `CMFCToolbarImages` oggetto mantiene l'intensità del colore corrente.  
+ `TRUE` Se il `CMFCToolBarImages` oggetto utilizza la profondità di colore (bit per pixel) dell'immagine nuova. `FALSE` se il `CMFCToolbarImages` oggetto mantiene l'intensità del colore corrente.  
   
  [in] `imageList`  
  Un riferimento a un `CMFCToolbarImages` oggetto che contiene l'immagine da aggiungere.  
@@ -339,7 +339,7 @@ int AddImage(
 ### <a name="return-value"></a>Valore restituito  
  Il numero della barra degli strumenti immagini che il `CMFCToolBarImages` oggetto mantiene dopo la nuova bitmap è stato aggiunto correttamente; -1 se l'operazione non riuscita.  
   
-##  <a name="cleanup"></a>CMFCToolBarImages::CleanUp  
+##  <a name="cleanup"></a>  CMFCToolBarImages::CleanUp  
 
   
 ```  
@@ -348,14 +348,14 @@ static void __stdcall CleanUp();
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="clear"></a>CMFCToolBarImages::Clear  
+##  <a name="clear"></a>  CMFCToolBarImages::Clear  
  Libera le risorse di sistema che il [CMFCToolbarImages](../../mfc/reference/cmfctoolbarimages-class.md) oggetto allocato.  
   
 ```  
 void Clear();
 ```  
   
-##  <a name="cmfctoolbarimages"></a>CMFCToolBarImages::CMFCToolBarImages  
+##  <a name="cmfctoolbarimages"></a>  CMFCToolBarImages::CMFCToolBarImages  
  Costruisce un oggetto `CMFCToolBarImages`.  
   
 ```  
@@ -365,7 +365,7 @@ CMFCToolBarImages();
 ### <a name="remarks"></a>Note  
  Costruisce un `CMFCToolBarImages` dell'oggetto, inizializza il motore di rendering e imposta le dimensioni dell'immagine sul valore predefinito 16 x 15 pixel. Utilizzare [CMFCToolBarImages::SetImageSize](#setimagesize) per modificare le dimensioni dell'immagine, prima di aggiungere immagini.  
   
-##  <a name="copyimagetoclipboard"></a>CMFCToolBarImages::CopyImageToClipboard  
+##  <a name="copyimagetoclipboard"></a>  CMFCToolBarImages::CopyImageToClipboard  
 
   
 ```  
@@ -379,7 +379,7 @@ BOOL CopyImageToClipboard(int iImage);
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="copyto"></a>CMFCToolBarImages::CopyTo  
+##  <a name="copyto"></a>  CMFCToolBarImages::CopyTo  
 
   
 ```  
@@ -393,7 +393,7 @@ BOOL CopyTo(CMFCToolBarImages& imageList);
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="createfromimagelist"></a>CMFCToolBarImages::CreateFromImageList  
+##  <a name="createfromimagelist"></a>  CMFCToolBarImages::CreateFromImageList  
  Inizializza le immagini della barra degli strumenti da un [CImageList (classe)](../../mfc/reference/cimagelist-class.md) oggetto.  
   
 ```  
@@ -410,7 +410,7 @@ BOOL CreateFromImageList(const CImageList& imageList);
 ### <a name="remarks"></a>Note  
  Utilizzare questa funzione per inizializzare rapidamente l'elenco di immagini della barra degli strumenti da un elenco di immagini esterne.  
   
-##  <a name="createregionfromimage"></a>CMFCToolBarImages::CreateRegionFromImage  
+##  <a name="createregionfromimage"></a>  CMFCToolBarImages::CreateRegionFromImage  
 
   
 ```  
@@ -427,7 +427,7 @@ static HRGN __stdcall CreateRegionFromImage(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="deleteimage"></a>CMFCToolBarImages::DeleteImage  
+##  <a name="deleteimage"></a>  CMFCToolBarImages::DeleteImage  
  Elimina l'immagine definita dall'utente che dispone di un indice specificato dalle immagini della barra degli strumenti.  
   
 ```  
@@ -439,9 +439,9 @@ BOOL DeleteImage(int iImage);
  Specifica l'indice in base zero dell'immagine da eliminare.  
   
 ### <a name="return-value"></a>Valore restituito  
- `TRUE`Se l'immagine è stata eliminata correttamente. `FALSE` se l'indice dell'immagine non è valido, il `CMFCToolbarImages` oggetto è temporaneo, il `CMFCToolbarImages` oggetto non contiene immagini definite dall'utente, o se un altro errore.  
+ `TRUE` Se l'immagine è stata eliminata correttamente. `FALSE` se l'indice dell'immagine non è valido, il `CMFCToolbarImages` oggetto è temporaneo, il `CMFCToolbarImages` oggetto non contiene immagini definite dall'utente, o se un altro errore.  
   
-##  <a name="draw"></a>CMFCToolBarImages::Draw  
+##  <a name="draw"></a>  CMFCToolBarImages::Draw  
  Disegna l'immagine della barra degli strumenti singolo.  
   
 ```  
@@ -472,27 +472,27 @@ BOOL Draw(
  Indice in base zero dell'immagine da visualizzare.  
   
  [in] `bHilite`  
- `TRUE`Se l'immagine viene evidenziata; in caso contrario `FALSE`.  
+ `TRUE` Se l'immagine deve essere evidenziato; in caso contrario `FALSE`.  
   
  [in] `bDisabled`  
- `TRUE`Se l'immagine da disegnare in stile disabilitato; in caso contrario `FALSE`.  
+ `TRUE` Se l'immagine deve essere disegnato nello stile disabilitato. in caso contrario `FALSE`.  
   
  [in] `bIndeterminate`  
- `TRUE`Se l'immagine deve essere disegnato nello stile indeterminato; in caso contrario `FALSE`.  
+ `TRUE` Se l'immagine deve essere disegnato nello stile di stato indeterminato. in caso contrario `FALSE`.  
   
  [in] `bShadow`  
- `TRUE`Se l'immagine da disegnare con un'ombreggiatura; in caso contrario `FALSE`.  
+ `TRUE` Se l'immagine da disegnare con un'ombreggiatura; in caso contrario `FALSE`.  
   
  [in] `bInactive`  
- `TRUE`Se l'immagine deve essere disegnato nello stile stato inattivo; in caso contrario `FALSE`.  
+ `TRUE` Se l'immagine deve essere disegnato nello stile di stato inattivo. in caso contrario `FALSE`.  
   
  [in] `alphaSrc`  
  Il valore del canale alfa (opacità). Un valore pari a 255 indica che l'immagine viene disegnata opaco. Un valore pari a 0 indica che l'immagine viene disegnata trasparente. Questo valore viene utilizzato solo per le immagini a colori a 32 bit e per le immagini visualizzate uno stile vetro Windows Vista.  
   
 ### <a name="return-value"></a>Valore restituito  
- `TRUE`Se l'immagine specificata è stato visualizzato correttamente. `FALSE` se l'indice dell'immagine non è valido oppure si è verificato un altro errore.  
+ `TRUE` Se l'immagine specificata è stato visualizzato correttamente. `FALSE` se l'indice dell'immagine non è valido oppure si è verificato un altro errore.  
   
-##  <a name="drawex"></a>CMFCToolBarImages::DrawEx  
+##  <a name="drawex"></a>  CMFCToolBarImages::DrawEx  
 
   
 ```  
@@ -524,7 +524,7 @@ BOOL DrawEx(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="enablertl"></a>CMFCToolBarImages::EnableRTL  
+##  <a name="enablertl"></a>  CMFCToolBarImages::EnableRTL  
 
   
 ```  
@@ -536,7 +536,7 @@ static void __stdcall EnableRTL(BOOL bIsRTL = TRUE);
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="enddrawimage"></a>CMFCToolBarImages::EndDrawImage  
+##  <a name="enddrawimage"></a>  CMFCToolBarImages::EndDrawImage  
  Libera le risorse di sistema che [CMFCToolBarImages::PrepareDrawImage](#preparedrawimage) allocati per disegnare un'immagine della barra degli strumenti chiamando [CMFCToolBarImages::Draw](#draw).  
   
 ```  
@@ -547,7 +547,7 @@ void EndDrawImage(CAfxDrawState& ds);
  [in] `ds`  
  Un riferimento al `CAfxDrawState` oggetto che è stato passato il `PrepareDrawImage` (metodo).  
   
-##  <a name="extracticon"></a>CMFCToolBarImages::ExtractIcon  
+##  <a name="extracticon"></a>  CMFCToolBarImages::ExtractIcon  
  Restituisce l'icona con un indice dell'immagine specificata dalle immagini della barra degli strumenti.  
   
 ```  
@@ -561,7 +561,7 @@ HICON ExtractIcon(int nIndex);
 ### <a name="return-value"></a>Valore restituito  
  Un handle per l'icona estratto, o `NULL` se `nIndex` non compreso nell'intervallo.  
   
-##  <a name="fillditheredrect"></a>CMFCToolBarImages::FillDitheredRect  
+##  <a name="fillditheredrect"></a>  CMFCToolBarImages::FillDitheredRect  
  Riempimento di un rettangolo con i colori di sfondo della barra degli strumenti.  
   
 ```  
@@ -580,7 +580,7 @@ static void FillDitheredRect(
 ### <a name="remarks"></a>Note  
  Utilizzare questo metodo per riempire un rettangolo con un colore che è la media dei colori di sistema COLOR_BTNFACE e COLOR_BTNHIGHLIGHT. Se il sistema utilizza fino a 256 colori, il rettangolo verrà riempito con un modello con dithering di questi due colori.  
   
-##  <a name="getalwayslight"></a>CMFCToolBarImages::GetAlwaysLight  
+##  <a name="getalwayslight"></a>  CMFCToolBarImages::GetAlwaysLight  
 
   
 ```  
@@ -591,7 +591,7 @@ BOOL GetAlwaysLight() const;
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="getcount"></a>CMFCToolBarImages::GetCount  
+##  <a name="getcount"></a>  CMFCToolBarImages::GetCount  
  Restituisce il numero di immagini nell'elenco di immagini della barra degli strumenti.  
   
 ```  
@@ -601,7 +601,7 @@ int GetCount() const;
 ### <a name="return-value"></a>Valore restituito  
  Il numero di immagini nel `CMFCToolBarImages` oggetto.  
   
-##  <a name="getdisabledimagealpha"></a>CMFCToolBarImages::GetDisabledImageAlpha  
+##  <a name="getdisabledimagealpha"></a>  CMFCToolBarImages::GetDisabledImageAlpha  
  Restituisce il valore del canale alfa (opacità) che viene utilizzato per le immagini disabilitate.  
   
 ```  
@@ -614,7 +614,7 @@ static BYTE GetDisabledImageAlpha();
 ### <a name="remarks"></a>Note  
  È possibile chiamare [CMFCToolBarImages::SetDisabledImageAlpha](#setdisabledimagealpha) per modificare il valore del canale alfa.  
   
-##  <a name="getfadedimagealpha"></a>CMFCToolBarImages::GetFadedImageAlpha  
+##  <a name="getfadedimagealpha"></a>  CMFCToolBarImages::GetFadedImageAlpha  
 
   
 ```  
@@ -625,7 +625,7 @@ static BYTE __stdcall GetFadedImageAlpha();
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="getimagesize"></a>CMFCToolBarImages::GetImageSize  
+##  <a name="getimagesize"></a>  CMFCToolBarImages::GetImageSize  
  Recupera le dimensioni delle immagini della barra degli strumenti che vengono archiviati in memoria (dimensione origine) o le dimensioni delle immagini della barra degli strumenti vengono disegnati sullo schermo (dimensioni di destinazione).  
   
 ```  
@@ -634,7 +634,7 @@ SIZE GetImageSize(BOOL bDest=FALSE) const;
   
 ### <a name="parameters"></a>Parametri  
  [in] `bDest`  
- `TRUE`per recuperare la dimensione di destinazione; `FALSE` per recuperare la dimensione di immagine di origine.  
+ `TRUE` per recuperare la dimensione di destinazione; `FALSE` per recuperare le dimensioni dell'immagine origine.  
   
 ### <a name="return-value"></a>Valore restituito  
  Oggetto `SIZE` struttura, che specifica le dimensioni di un'immagine in pixel.  
@@ -644,7 +644,7 @@ SIZE GetImageSize(BOOL bDest=FALSE) const;
   
  Per impostazione predefinita, la dimensione dell'immagine di destinazione è 0x0. Specificare la dimensione di destinazione quando si chiama [CMFCToolBarImages::PrepareDrawImage](#preparedrawimage). Il [CMFCToolBarImages::EndDrawImage](#enddrawimage) metodo reimposta la dimensione di destinazione per il valore predefinito.  
   
-##  <a name="getimagewell"></a>CMFCToolBarImages::GetImageWell  
+##  <a name="getimagewell"></a>  CMFCToolBarImages::GetImageWell  
  Restituisce l'handle per la mappa di bit che contiene tutte le immagini della barra degli strumenti.  
   
 ```  
@@ -657,7 +657,7 @@ HBITMAP GetImageWell() const;
 ### <a name="remarks"></a>Note  
  Le immagini della barra degli strumenti sono archiviate in una riga in una singola bitmap che è noto come un *immagine ben*. Per trovare un'immagine della barra degli strumenti nell'area dei immagine, moltiplicare l'indice dell'immagine per la larghezza delle immagini della barra degli strumenti (vedere [CMFCToolBarImages::GetImageSize](#getimagesize)) per ottenere correttamente l'offset orizzontale dell'immagine all'interno dell'immagine.  
   
-##  <a name="getimagewelllight"></a>CMFCToolBarImages::GetImageWellLight  
+##  <a name="getimagewelllight"></a>  CMFCToolBarImages::GetImageWellLight  
 
   
 ```  
@@ -668,7 +668,7 @@ HBITMAP GetImageWellLight() const;
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="getlastimagerect"></a>CMFCToolBarImages::GetLastImageRect  
+##  <a name="getlastimagerect"></a>  CMFCToolBarImages::GetLastImageRect  
 
   
 ```  
@@ -679,7 +679,7 @@ CRect GetLastImageRect() const;
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="getlightpercentage"></a>CMFCToolBarImages::GetLightPercentage  
+##  <a name="getlightpercentage"></a>  CMFCToolBarImages::GetLightPercentage  
 
   
 ```  
@@ -690,7 +690,7 @@ int GetLightPercentage() const;
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="getmapto3dcolors"></a>CMFCToolBarImages::GetMapTo3DColors  
+##  <a name="getmapto3dcolors"></a>  CMFCToolBarImages::GetMapTo3DColors  
 
   
 ```  
@@ -701,7 +701,7 @@ BOOL GetMapTo3DColors() const;
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="getmask"></a>CMFCToolBarImages::GetMask  
+##  <a name="getmask"></a>  CMFCToolBarImages::GetMask  
 
   
 ```  
@@ -715,7 +715,7 @@ HBITMAP GetMask(int iImage);
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="getresourceoffset"></a>CMFCToolBarImages::GetResourceOffset  
+##  <a name="getresourceoffset"></a>  CMFCToolBarImages::GetResourceOffset  
  Restituisce l'indice dell'immagine per un ID di risorsa specificata.  
   
 ```  
@@ -729,7 +729,7 @@ int GetResourceOffset(UINT uiResId) const;
 ### <a name="return-value"></a>Valore restituito  
  Se il metodo ha esito positivo; un indice delle immagini -1 se l'immagine con ID di risorsa specificato non esiste.  
   
-##  <a name="gettransparentcolor"></a>CMFCToolBarImages::GetTransparentColor  
+##  <a name="gettransparentcolor"></a>  CMFCToolBarImages::GetTransparentColor  
 
   
 ```  
@@ -740,7 +740,7 @@ COLORREF GetTransparentColor() const;
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="grayimages"></a>CMFCToolBarImages::GrayImages  
+##  <a name="grayimages"></a>  CMFCToolBarImages::GrayImages  
  Disattiva le immagini della barra degli strumenti per renderle disabilitato.  
   
 ```  
@@ -752,7 +752,7 @@ BOOL GrayImages(int nGrayImageLuminancePercentage);
  Percentuale di luminanza.  
   
 ### <a name="return-value"></a>Valore restituito  
- `TRUE`Se le immagini nella raccolta sono state disabilitate correttamente. in caso contrario `FALSE`.  
+ `TRUE` Se le immagini della raccolta sono state visualizzate in grigio correttamente. in caso contrario `FALSE`.  
   
 ### <a name="remarks"></a>Note  
  Questo metodo consente di modificare le immagini della barra degli strumenti calcolando la media di componenti rossi, verde e blu di ciascun pixel, moltiplicare il risultato per `nGrayImageLuminancePercentage` diviso per 100. Se `nGrayImageLuminancePercentage` è zero o negativo, il valore predefinito di 130 viene utilizzato invece.  
@@ -760,7 +760,7 @@ BOOL GrayImages(int nGrayImageLuminancePercentage);
 > [!NOTE]
 >  Se si desidera annullare la modifica, è necessario ricaricare le immagini dall'origine. È possibile farlo chiamando [CMFCToolBarImages::Load](#load) o [CMFCToolBarImages::UpdateImage](#updateimage) (solo per definito dall'utente immagini), oppure chiamando [CMFCToolBarImages::Clear](#clear)e aggiungere nuovamente le immagini chiamando [CMFCToolBarImages::AddIcon](#addicon) o [CMFCToolBarImages::AddImage](#addimage).  
   
-##  <a name="is32bittransparencysupported"></a>CMFCToolBarImages::Is32BitTransparencySupported  
+##  <a name="is32bittransparencysupported"></a>  CMFCToolBarImages::Is32BitTransparencySupported  
  Specifica se il sistema operativo supporta la fusione alfa di 32 bit.  
   
 ```  
@@ -768,12 +768,12 @@ static BOOL Is32BitTransparencySupported();
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- `TRUE`Se la fusione alfa di 32 bit è supportata. in caso contrario `FALSE`.  
+ `TRUE` Se la fusione alfa di 32 bit è supportata. in caso contrario `FALSE`.  
   
 ### <a name="remarks"></a>Note  
- Utilizzare questo metodo statico per determinare in fase di esecuzione se il sistema operativo supporta la fusione alfa di 32 bit. Questa funzionalità è supportata in [!INCLUDE[Win2kFamily](../../c-runtime-library/includes/win2kfamily_md.md)] e versioni successive.  
+ Utilizzare questo metodo statico per determinare in fase di esecuzione se il sistema operativo supporta la fusione alfa di 32 bit. Questa funzionalità è supportata in Windows 2000 e versioni successive.  
   
-##  <a name="ispremultiplyautocheck"></a>CMFCToolBarImages::IsPreMultiplyAutoCheck  
+##  <a name="ispremultiplyautocheck"></a>  CMFCToolBarImages::IsPreMultiplyAutoCheck  
 
   
 ```  
@@ -784,7 +784,7 @@ BOOL IsPreMultiplyAutoCheck() const;
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="isreadonly"></a>CMFCToolBarImages::IsReadOnly  
+##  <a name="isreadonly"></a>  CMFCToolBarImages::IsReadOnly  
  Specifica se le immagini della barra degli strumenti sono di sola lettura.  
   
 ```  
@@ -792,12 +792,12 @@ BOOL IsReadOnly() const;
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- `TRUE`Se le immagini della barra degli strumenti in sola lettura, in caso contrario `FALSE`.  
+ `TRUE` Se le immagini della barra degli strumenti sono sola lettura, in caso contrario `FALSE`.  
   
 ### <a name="remarks"></a>Note  
  Il `CMFCToolbarImages` oggetto è di sola lettura quando la bitmap con immagini della barra degli strumenti è stata caricata da un file di sola lettura, o quando la bitmap è stata copiata utilizzando la `CMFCToolBarImages::CopyTemp` metodo.  
   
-##  <a name="isrtl"></a>CMFCToolBarImages::IsRTL  
+##  <a name="isrtl"></a>  CMFCToolBarImages::IsRTL  
  Specifica se è abilitato il supporto da destra a sinistra (RTL).  
   
 ```  
@@ -805,12 +805,12 @@ static BOOL IsRTL();
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- `TRUE`Se è abilitato il supporto da destra a sinistra; in caso contrario `FALSE`.  
+ `TRUE` Se è abilitato il supporto da destra a sinistra; in caso contrario `FALSE`.  
   
 ### <a name="remarks"></a>Note  
  Supporto da destra a sinistra viene utilizzato quando l'applicazione è localizzata in un linguaggio che viene letto da destra a sinistra, come l'arabo, ebraico, persiano o Urdu.  
   
-##  <a name="isuserimageslist"></a>CMFCToolBarImages::IsUserImagesList  
+##  <a name="isuserimageslist"></a>  CMFCToolBarImages::IsUserImagesList  
  Specifica se questo set di immagini della barra degli strumenti contiene immagini definite dall'utente.  
   
 ```  
@@ -818,9 +818,9 @@ BOOL IsUserImagesList() const;
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- `TRUE`Se il `CMFCToolBarImages` oggetto contiene le immagini degli strumenti definite dall'utente; in caso contrario `FALSE`.  
+ `TRUE` Se il `CMFCToolBarImages` oggetto contiene le immagini della barra degli strumenti definite dall'utente; in caso contrario `FALSE`.  
   
-##  <a name="isvalid"></a>CMFCToolBarImages::IsValid  
+##  <a name="isvalid"></a>  CMFCToolBarImages::IsValid  
  Indica se questo set di immagini della barra degli strumenti contiene un'immagine della barra degli strumenti valido.  
   
 ```  
@@ -828,12 +828,12 @@ BOOL IsValid() const;
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- `TRUE`Se un `CMFCToolBarImages` oggetto è valido; in caso contrario `FALSE`.  
+ `TRUE` Se un `CMFCToolBarImages` oggetto è valido; in caso contrario `FALSE`.  
   
 ### <a name="remarks"></a>Note  
  Il `CMFCToolBarImages` oggetto non è valido quando il relativo handle per una bitmap con le immagini della barra degli strumenti è `NULL`.  
   
-##  <a name="load"></a>CMFCToolBarImages::Load  
+##  <a name="load"></a>  CMFCToolBarImages::Load  
  Carica le immagini della barra degli strumenti dalle risorse di sistema o da un file.  
   
 ```  
@@ -855,7 +855,7 @@ BOOL Load(
  Un'istanza della DLL della risorsa.  
   
  [in] `bAdd`  
- `TRUE`Per aggiungere bitmap caricata per la bitmap esistente, o `FALSE` per sostituire la bitmap esistente.  
+ `TRUE` Per aggiungere la bitmap caricata per la bitmap esistente, o `FALSE` per sostituire la bitmap esistente.  
   
  [in] `lpszBmpFileName`  
  Un percorso di un file di disco da cui caricare la bitmap.  
@@ -864,12 +864,12 @@ BOOL Load(
  Numero massimo di byte nel file di immagine bitmap. oppure 0 per caricare la bitmap indipendentemente dalle dimensioni del file. Se le dimensioni del file superano la dimensione massima, il metodo restituisce `FALSE` e non viene caricata la mappa di bit.  
   
 ### <a name="return-value"></a>Valore restituito  
- `TRUE`Se la bitmap è stata caricata correttamente. in caso contrario `FALSE`.  
+ `TRUE` Se la bitmap è stata caricata correttamente. in caso contrario `FALSE`.  
   
 ### <a name="remarks"></a>Note  
  Se il file ha l'attributo di sola lettura, l'elenco di immagini è contrassegnato come di sola lettura.  
   
-##  <a name="loadstr"></a>CMFCToolBarImages::LoadStr  
+##  <a name="loadstr"></a>  CMFCToolBarImages::LoadStr  
 
   
 ```  
@@ -888,7 +888,7 @@ BOOL LoadStr(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="mapfromsyscolor"></a>CMFCToolBarImages::MapFromSysColor  
+##  <a name="mapfromsyscolor"></a>  CMFCToolBarImages::MapFromSysColor  
 
   
 ```  
@@ -905,7 +905,7 @@ static COLORREF __stdcall MapFromSysColor(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="mapto3dcolors"></a>CMFCToolBarImages::MapTo3dColors  
+##  <a name="mapto3dcolors"></a>  CMFCToolBarImages::MapTo3dColors  
 
   
 ```  
@@ -924,7 +924,7 @@ BOOL MapTo3dColors(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="maptosyscolor"></a>CMFCToolBarImages::MapToSysColor  
+##  <a name="maptosyscolor"></a>  CMFCToolBarImages::MapToSysColor  
 
   
 ```  
@@ -941,7 +941,7 @@ static COLORREF __stdcall MapToSysColor(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="maptosyscoloralpha"></a>CMFCToolBarImages::MapToSysColorAlpha  
+##  <a name="maptosyscoloralpha"></a>  CMFCToolBarImages::MapToSysColorAlpha  
 
   
 ```  
@@ -955,7 +955,7 @@ static COLORREF __stdcall MapToSysColorAlpha(COLORREF color);
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="mirror"></a>CMFCToolBarImages::Mirror  
+##  <a name="mirror"></a>  CMFCToolBarImages::Mirror  
  Sostituisce le immagini della barra degli strumenti con l'immagine mirror orizzontale.  
   
 ```  
@@ -963,12 +963,12 @@ BOOL Mirror();
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- `TRUE`Se le immagini sono state correttamente sottoposto a mirroring; in caso contrario `FALSE`.  
+ `TRUE` Se le immagini sono state correttamente sottoposto a mirroring; in caso contrario `FALSE`.  
   
 ### <a name="remarks"></a>Note  
  Questo metodo viene utilizzato per supportare sistemi di scrittura da destra a sinistra.  
   
-##  <a name="mirrorbitmap"></a>CMFCToolBarImages::MirrorBitmap  
+##  <a name="mirrorbitmap"></a>  CMFCToolBarImages::MirrorBitmap  
  Sostituisce una bitmap con immagine speculare orizzontale.  
   
 ```  
@@ -985,12 +985,12 @@ static BOOL MirrorBitmap(
  Larghezza in pixel dell'immagine.  
   
 ### <a name="return-value"></a>Valore restituito  
- `TRUE`Se l'immagine è stata correttamente sottoposto a mirroring; in caso contrario `FALSE`.  
+ `TRUE` Se l'immagine è stata correttamente sottoposto a mirroring; in caso contrario `FALSE`.  
   
 ### <a name="remarks"></a>Note  
  Questa funzione viene utilizzata per supportare sistemi di scrittura da destra a sinistra.  
   
-##  <a name="mirrorbitmapvert"></a>CMFCToolBarImages::MirrorBitmapVert  
+##  <a name="mirrorbitmapvert"></a>  CMFCToolBarImages::MirrorBitmapVert  
 
   
 ```  
@@ -1007,7 +1007,7 @@ static BOOL __stdcall MirrorBitmapVert(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="mirrorvert"></a>CMFCToolBarImages::MirrorVert  
+##  <a name="mirrorvert"></a>  CMFCToolBarImages::MirrorVert  
 
   
 ```  
@@ -1018,7 +1018,7 @@ BOOL MirrorVert();
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="onsyscolorchange"></a>CMFCToolBarImages::OnSysColorChange  
+##  <a name="onsyscolorchange"></a>  CMFCToolBarImages::OnSysColorChange  
 
   
 ```  
@@ -1027,7 +1027,7 @@ void OnSysColorChange();
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="premultiplyalpha"></a>CMFCToolBarImages::PreMultiplyAlpha  
+##  <a name="premultiplyalpha"></a>  CMFCToolBarImages::PreMultiplyAlpha  
 
   
 ```  
@@ -1046,8 +1046,8 @@ BOOL PreMultiplyAlpha(HBITMAP hbmp);
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="m_bdisabletruecoloralpha"></a>CMFCToolBarImages::m_bDisableTrueColorAlpha  
- `TRUE`Se alpha truecolor fusione (colore a 32 bit) è disabilitato.  
+##  <a name="m_bdisabletruecoloralpha"></a>  CMFCToolBarImages::m_bDisableTrueColorAlpha  
+ `TRUE` Se alpha truecolor fusione (colore a 32 bit) è disabilitato.  
   
 ```  
 static BOOL m_bDisableTrueColorAlpha;  
@@ -1058,7 +1058,7 @@ static BOOL m_bDisableTrueColorAlpha;
   
  Il valore predefinito è `TRUE` per garantire la compatibilità con le versioni precedenti.  
   
-##  <a name="preparedrawimage"></a>CMFCToolBarImages::PrepareDrawImage  
+##  <a name="preparedrawimage"></a>  CMFCToolBarImages::PrepareDrawImage  
  Alloca le risorse necessarie per disegnare un'immagine della barra degli strumenti in una dimensione specificata.  
   
 ```  
@@ -1077,15 +1077,15 @@ BOOL PrepareDrawImage(
  Specifica le dimensioni di un'immagine di destinazione.  
   
  [in] `bFadeInactive`  
- `TRUE`Se si desidera inattiva le immagini vengano disegnate non riuscite.  
+ `TRUE` Se si desidera inattiva le immagini vengano disegnate non riuscite.  
   
 ### <a name="return-value"></a>Valore restituito  
- `TRUE`Se le risorse necessarie per disegnare l'immagine della barra degli strumenti sono state allocate correttamente, `FALSE`.  
+ `TRUE` Se le risorse necessarie per disegnare l'immagine della barra degli strumenti sono state allocate correttamente, in caso contrario `FALSE`.  
   
 ### <a name="remarks"></a>Note  
  Dopo aver chiamato questo metodo, è possibile chiamare [CMFCToolBarImages::Draw](#draw) qualsiasi numero di volte. Dopo aver disegno, è necessario chiamare [CMFCToolBarImages::EndDrawImage](#enddrawimage) per rilasciare le risorse allocate da `PrepareDrawImage`.  
   
-##  <a name="save"></a>CMFCToolBarImages::Save  
+##  <a name="save"></a>  CMFCToolBarImages::Save  
  Archivia le immagini della barra degli strumenti in un file se questo set di immagini della barra degli strumenti contiene immagini definite dall'utente.  
   
 ```  
@@ -1097,12 +1097,12 @@ BOOL Save(LPCTSTR lpszBmpFileName=NULL);
  Un percorso di un file su disco.  
   
 ### <a name="return-value"></a>Valore restituito  
- `TRUE`Se le immagini della barra degli strumenti sono state salvate correttamente. in caso contrario `FALSE`.  
+ `TRUE` Se le immagini della barra degli strumenti sono state salvate correttamente. in caso contrario `FALSE`.  
   
 ### <a name="remarks"></a>Note  
  Chiamare questo metodo per archiviare le immagini definite dall'utente in un file su disco. Se `lpszBmpFileName` è `NULL`, il metodo memorizza la mappa di bit nel file da cui la bitmap è stata caricata dal [CMFCToolBarImages::Load](#load) metodo.  
   
-##  <a name="setalwayslight"></a>CMFCToolBarImages::SetAlwaysLight  
+##  <a name="setalwayslight"></a>  CMFCToolBarImages::SetAlwaysLight  
 
   
 ```  
@@ -1114,7 +1114,7 @@ void SetAlwaysLight(BOOL bAlwaysLight = TRUE);
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="setdisabledimagealpha"></a>CMFCToolBarImages::SetDisabledImageAlpha  
+##  <a name="setdisabledimagealpha"></a>  CMFCToolBarImages::SetDisabledImageAlpha  
  Imposta il valore del canale alfa (opacità) che viene utilizzato per le immagini disabilitate.  
   
 ```  
@@ -1128,7 +1128,7 @@ static void SetDisabledImageAlpha(BYTE nValue);
 ### <a name="remarks"></a>Note  
  Utilizzare questo metodo per impostare un valore alfa personalizzato per le immagini disabilitate. Il valore predefinito è 127, che genera immagini pulsante disabilitato sia semitrasparente. Se si imposta un valore pari a 0, le immagini disabilitate sarà completamente trasparente. Se si imposta un valore pari a 255, immagini disabilitate sarà completamente opache.  
   
-##  <a name="setfadedimagealpha"></a>CMFCToolBarImages::SetFadedImageAlpha  
+##  <a name="setfadedimagealpha"></a>  CMFCToolBarImages::SetFadedImageAlpha  
 
   
 ```  
@@ -1140,7 +1140,7 @@ static void __stdcall SetFadedImageAlpha(BYTE nValue);
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="setimagesize"></a>CMFCToolBarImages::SetImageSize  
+##  <a name="setimagesize"></a>  CMFCToolBarImages::SetImageSize  
  Imposta le dimensioni di ogni immagine della barra degli strumenti (dimensione origine).  
   
 ```  
@@ -1156,7 +1156,7 @@ void SetImageSize(
 ### <a name="remarks"></a>Note  
  Per impostazione predefinita le dimensioni dell'immagine della barra degli strumenti è 16 x 15 pixel. Chiamare questo metodo se si desidera utilizzare le immagini della barra degli strumenti di dimensioni diverse.  
   
-##  <a name="setlightpercentage"></a>CMFCToolBarImages::SetLightPercentage  
+##  <a name="setlightpercentage"></a>  CMFCToolBarImages::SetLightPercentage  
 
   
 ```  
@@ -1168,7 +1168,7 @@ void SetLightPercentage(int nValue);
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="setmapto3dcolors"></a>CMFCToolBarImages::SetMapTo3DColors  
+##  <a name="setmapto3dcolors"></a>  CMFCToolBarImages::SetMapTo3DColors  
 
   
 ```  
@@ -1180,7 +1180,7 @@ void SetMapTo3DColors(BOOL bMapTo3DColors);
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="setpremultiplyautocheck"></a>CMFCToolBarImages::SetPreMultiplyAutoCheck  
+##  <a name="setpremultiplyautocheck"></a>  CMFCToolBarImages::SetPreMultiplyAutoCheck  
 
   
 ```  
@@ -1192,7 +1192,7 @@ void SetPreMultiplyAutoCheck(BOOL bAuto = TRUE);
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="setsingleimage"></a>CMFCToolBarImages::SetSingleImage  
+##  <a name="setsingleimage"></a>  CMFCToolBarImages::SetSingleImage  
 
   
 ```  
@@ -1201,7 +1201,7 @@ void SetSingleImage();
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="settransparentcolor"></a>CMFCToolBarImages::SetTransparentColor  
+##  <a name="settransparentcolor"></a>  CMFCToolBarImages::SetTransparentColor  
  Imposta il colore trasparente delle immagini della barra degli strumenti.  
   
 ```  
@@ -1218,7 +1218,7 @@ COLORREF SetTransparentColor(COLORREF clrTransparent);
 ### <a name="remarks"></a>Note  
  Quando si o il framework chiama [CMFCToolBarImages::Draw](#draw), il metodo non consente di disegnare qualsiasi pixel che abbina il colore specificato da `clrTransparent`.  
   
-##  <a name="updateimage"></a>CMFCToolBarImages::UpdateImage  
+##  <a name="updateimage"></a>  CMFCToolBarImages::UpdateImage  
  Aggiorna un'immagine degli strumenti definite dall'utente da una bitmap.  
   
 ```  
@@ -1235,9 +1235,9 @@ BOOL UpdateImage(
  Handle di bitmap da cui aggiornare l'immagine.  
   
 ### <a name="return-value"></a>Valore restituito  
- `TRUE`Se l'immagine è stata aggiornata correttamente. `FALSE` se l'elenco di immagini non è definito dall'utente o temporanei.  
+ `TRUE` Se l'immagine è stata aggiornata correttamente. `FALSE` se l'elenco di immagini non è definito dall'utente o temporaneo.  
   
-##  <a name="convertto32bits"></a>CMFCToolBarImages::ConvertTo32Bits  
+##  <a name="convertto32bits"></a>  CMFCToolBarImages::ConvertTo32Bits  
  Converte sottolineato bitmap a 32 bit per pixel immagini.  
   
 ```  
@@ -1250,7 +1250,7 @@ BOOL ConvertTo32Bits(COLORREF clrTransparent = (COLORREF)-1);
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="getbitsperpixel"></a>CMFCToolBarImages::GetBitsPerPixel  
+##  <a name="getbitsperpixel"></a>  CMFCToolBarImages::GetBitsPerPixel  
  Restituisce la risoluzione corrente delle immagini sottolineate.  
   
 ```  
@@ -1262,7 +1262,7 @@ int GetBitsPerPixel() const;
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="getscale"></a>CMFCToolBarImages::GetScale  
+##  <a name="getscale"></a>  CMFCToolBarImages::GetScale  
  Restituisce il rapporto di scala corrente delle immagini sottolineate.  
   
 ```  
@@ -1274,7 +1274,7 @@ double GetScale() const;
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="isscaled"></a>CMFCToolBarImages::IsScaled  
+##  <a name="isscaled"></a>  CMFCToolBarImages::IsScaled  
  Indica se le immagini sottolineate vengono scalate o No.  
   
 ```  
@@ -1282,11 +1282,11 @@ BOOL IsScaled () const;
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- `TRUE`Se vengono ridimensionate immagini sottolineate; in caso contrario `FALSE`.  
+ `TRUE` Se vengono ridimensionate immagini sottolineate; in caso contrario `FALSE`.  
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="smoothresize"></a>CMFCToolBarImages::SmoothResize  
+##  <a name="smoothresize"></a>  CMFCToolBarImages::SmoothResize  
  In modo uniforme Ridimensiona immagini sottolineate.  
   
 ```  
@@ -1298,7 +1298,7 @@ BOOL SmoothResize(double dblImageScale);
  Rapporto di scala.  
   
 ### <a name="return-value"></a>Valore restituito  
- `TRUE`Se ha esito positivo di ridimensionamento. in caso contrario `FALSE`.  
+ `TRUE` Se ha esito positivo ridimensionamento; in caso contrario `FALSE`.  
   
 ### <a name="remarks"></a>Note  
   

@@ -1,30 +1,25 @@
 ---
-title: "-kernel (creare Kernel modalità binaria) | Documenti Microsoft"
-ms.custom: 
+title: -kernel (creare Kernel modalità binaria) | Documenti Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - /kernel
 - /kernel-
 dev_langs:
 - C++
 ms.assetid: 6d7fdff0-c3d1-4b78-9367-4da588ce8b05
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b0e20df59788577acb680cbd18b737f7ec2d7822
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bbbae275e751287464e4bf1637ee21aff77fb697
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="kernel-create-kernel-mode-binary"></a>/kernel (crea file binario in modalità Kernel)
 Crea un file binario che può essere eseguito nel kernel di Windows.  
@@ -76,7 +71,7 @@ class NONPAGESECTION MyNonPagedClass
   
  Alcuni seguenti combinazioni di architettura di destinazione e **/arch** opzione generano un errore quando vengono utilizzati con **/kernel**:  
   
--   **/arch: {SSE &#124; SSE2 &#124; AVX}** non sono supportate in x86. Solo **/arch:IA32** è supportato con **/kernel** x86.  
+-   **/arch: {SSE&#124;SSE2&#124;AVX}** non sono supportate in x86. Solo **/arch:IA32** è supportato con **/kernel** x86.  
   
 -   **/arch: AVX** non è supportato con **/kernel** su x64.  
   
@@ -91,9 +86,9 @@ class NONPAGESECTION MyNonPagedClass
     ||**/kernel** obj|**/kernel-** obj, MASM obj o cvtresed|Combinazione di **/kernel** e **/kernel-** objs|  
     |-|----------------------|-----------------------------------------------|-------------------------------------------------|  
     |**collegamento /kernel**|Yes|Yes|Sì con avviso LNK4257|  
-    |**collegamento**|Yes|Sì|Yes|  
+    |**Collegamento**|Yes|Sì|Yes|  
   
-     **Oggetto a collegamento LNK4257 non è stato compilato con /KERNEL; immagine non può essere eseguita**  
+     **Oggetto a collegamento dinamico LNK4257 non compilato con /KERNEL; immagine potrebbe non essere eseguita**  
   
  Il **/kernel** opzione e **/driver** opzione funzionano in modo indipendente e nessuna delle due influisce su altra.  
   

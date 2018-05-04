@@ -1,12 +1,9 @@
 ---
 title: Classe CComQIPtrElementTraits | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CComQIPtrElementTraits
@@ -17,17 +14,15 @@ dev_langs:
 helpviewer_keywords:
 - CComQIPtrElementTraits class
 ms.assetid: 9df9250a-5413-4362-b133-332932a597c4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 30d4e73f3c1e4ad75b8b33442be4e64af1a11207
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9122431d0d71d33406250a624048dbede46fd387
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ccomqiptrelementtraits-class"></a>Classe CComQIPtrElementTraits
 Questa classe fornisce metodi e funzioni statiche typedef utile durante la creazione di raccolte di puntatori a interfaccia COM.  
@@ -74,7 +69,7 @@ class CComQIPtrElementTraits :
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** atlcoll. h  
   
-##  <a name="inargtype"></a>CComQIPtrElementTraits::INARGTYPE  
+##  <a name="inargtype"></a>  CComQIPtrElementTraits::INARGTYPE  
  Il tipo di dati da utilizzare per l'aggiunta di elementi per l'oggetto di classe di raccolta.  
   
 ```

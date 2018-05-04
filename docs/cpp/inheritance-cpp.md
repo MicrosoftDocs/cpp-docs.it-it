@@ -1,12 +1,9 @@
 ---
-title: "Ereditarietà (C++) | Documenti Microsoft"
-ms.custom: 
+title: Ereditarietà (C++) | Documenti Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - derived classes [C++], about derived classes
 - classes [C++], derived
 ms.assetid: 3534ca19-d9ed-4a40-be1b-b921ad0e6956
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 50b6b180a6def741daa47a5054f1c61d3265ebd7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: decef38bc69ea2b9a45005627b984c1f240afe13
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="inheritance--c"></a>Ereditarietà (C++)
 In questa sezione viene illustrato come utilizzare le classi derivate per produrre programmi estensibili.  
@@ -57,7 +52,7 @@ In questa sezione viene illustrato come utilizzare le classi derivate per produr
   
 -   [Più classi base](../cpp/multiple-base-classes.md)  
   
--   [Funzioni virtuali](../cpp/virtual-functions.md)  
+-   [Funzioni virtual](../cpp/virtual-functions.md)  
   
 -   [Override espliciti](../cpp/explicit-overrides-cpp.md)  
   

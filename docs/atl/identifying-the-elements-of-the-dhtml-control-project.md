@@ -1,30 +1,25 @@
 ---
 title: Identificazione degli elementi del progetto controllo DHTML | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-atl
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - HTML controls, ATL support
 - DHTML controls, ATL support
 ms.assetid: b627547a-3768-4346-9900-4b7a21fb8e27
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 74b271f56fe7c8d3345ce53de06a18a2700175f2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 525ad4e073607064234641f6544a11901ded0096
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="identifying-the-elements-of-the-dhtml-control-project"></a>Identificazione degli elementi del progetto controllo DHTML
 Gran parte del codice DHTML controllo esattamente come il viene creata per qualsiasi controllo ATL. Per una conoscenza di base del codice generico, utilizzare il [esercitazione ATL](../atl/active-template-library-atl-tutorial.md), e la lettura delle sezioni [creazione di un progetto ATL](../atl/reference/creating-an-atl-project.md) e [nozioni fondamentali su oggetti COM ATL](../atl/fundamentals-of-atl-com-objects.md).  
@@ -56,7 +51,7 @@ Gran parte del codice DHTML controllo esattamente come il viene creata per quals
   
 -   **IDR_CTL1** l'ID risorsa della risorsa HTML. Il nome di file, in questo caso, è DHCTL1UI. Il controllo DHTML utilizza una risorsa HTML che contiene tag HTML standard e finestra esterna invia i comandi che è possibile modificare tramite l'editor di testo.  
   
--   **Browser Web** browser Web Visualizza un'interfaccia utente del controllo, basata su HTML nella risorsa HTML. Un puntatore al browser **IWebBrowser2** interfaccia è disponibile nel controllo DHTML per consentire l'accesso al modello a oggetti DHTML.  
+-   **Browser Web** browser Web consente di visualizzare la propria interfaccia utente, in base a HTML nella risorsa HTML. Un puntatore al browser **IWebBrowser2** interfaccia è disponibile nel controllo DHTML per consentire l'accesso al modello a oggetti DHTML.  
   
  Creazione guidata controllo ATL genera un controllo con il codice predefinito sia la risorsa HTML e il file con estensione cpp. È possibile compilare eseguire il controllo generato dalla procedura guidata e quindi visualizzare il controllo nel Web browser o di ActiveX Control Test Container. Nell'immagine seguente mostra il valore predefinito di un controllo DHTML ATL con tre pulsanti visualizzati nel contenitore di Test:  
   

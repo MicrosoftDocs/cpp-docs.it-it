@@ -1,13 +1,10 @@
 ---
 title: Definizione di modulo (. File def) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - module definition files
 - .def files
 ms.assetid: 08c0bc28-c5d2-47aa-9624-7fc68bcaa4d8
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 49f5eb5b75bad22b59cb4fbb98554bbfd44d13b8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 57bad3a63e910918b6a22b6263f0df3faca0dcd1
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="module-definition-def-files"></a>File di definizione moduli (DEF)
 File di definizione moduli (def) forniscono il linker con le informazioni sull'esportazione, attributi e altre informazioni sul programma da collegare. Un file. def è molto utile quando si compila una DLL. Poiché esistono [opzioni del linker](../../build/reference/linker-options.md) che può essere usato invece di istruzioni di definizione moduli, def (file) in genere non sono necessari. È inoltre possibile utilizzare [dllexport](../../build/exporting-from-a-dll-using-declspec-dllexport.md) come un modo per specificare le funzioni esportate.  

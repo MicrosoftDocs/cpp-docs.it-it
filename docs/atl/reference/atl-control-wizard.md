@@ -1,12 +1,9 @@
 ---
 title: Creazione guidata controllo ATL | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - vc.codewiz.class.atl.control.overview
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - controls [ATL], adding to projects
 - ATL Control Wizard
 ms.assetid: 991f8e72-ffbc-4382-a4ce-e255acfba5b6
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5a9167153c2b827e1bc2597e830e9b3c82ee31b7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1df64cd0661a7f905ebcc068efb698306ac9007e
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="atl-control-wizard"></a>Creazione guidata controllo ATL
 Inserimenti in un progetto ATL (o un progetto MFC con supporto ATL) un controllo ATL. È possibile utilizzare questa procedura guidata per inserire uno dei tre tipi di controlli:  
@@ -80,7 +75,7 @@ Inserimenti in un progetto ATL (o un progetto MFC con supporto ATL) un controllo
 ### <a name="com"></a>COM  
  Fornisce informazioni sulle funzionalità COM per l'oggetto.  
   
- **Coclasse**  
+ **coclasse**  
  Imposta il nome della classe del componente che contiene un elenco delle interfacce supportate dall'oggetto.  
   
 > [!NOTE]

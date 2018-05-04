@@ -1,13 +1,10 @@
 ---
 title: '-FU (Name Forced #using File) | Documenti Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VC.Project.VCCLCompilerTool.ForcedUsingFiles
 - /FU
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - FU compiler option [C++]
 - /FU compiler option [C++]
 ms.assetid: 698f8603-457f-435a-baff-5ac9243d6ca1
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 17b62859aaf0c9dc6b3313fbb726602b5b83a82c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7c9a27d8c689b198bde47047969d38cf14b41c46
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="fu-name-forced-using-file"></a>/FU (Specifica file #using da utilizzare)
 Un'opzione del compilatore che è possibile utilizzare in alternativa al passaggio di un nome di file per [# direttiva using](../../preprocessor/hash-using-directive-cpp.md) nel codice sorgente.  

@@ -1,12 +1,9 @@
 ---
 title: 'Operatore di riferimento indiretto: * | Documenti Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - operators [C++], indirection
 - indirection operator [C++], syntax
 ms.assetid: c50309e1-6c02-4184-9fcb-2e13c1f4ac03
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2c87c279ae1f45899dfa4525c3bdc65bfa5acc2c
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: d63fbe4042bb86f1ac7810302eeaa1b7978422b8
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="indirection-operator-"></a>Operatore di riferimento indiretto: *
 ## <a name="syntax"></a>Sintassi  
@@ -37,7 +32,7 @@ ms.lasthandoff: 03/16/2018
 ```  
   
 ## <a name="remarks"></a>Note  
- L'operatore di riferimento indiretto unario (**\***) dereferenzia un puntatore; ovvero converte un valore di puntatore in un l-value. L'operando dell'operatore di riferimento indiretto deve essere un puntatore a un tipo. Il risultato dell'espressione di riferimento indiretto è il tipo da cui il tipo di puntatore è derivato. L'utilizzo del  **\***  operatore in questo contesto è diverso dal relativo significato come operatore binario, ovvero la moltiplicazione.  
+ L'operatore di riferimento indiretto unario (**\***) dereferenzia un puntatore; ovvero converte un valore di puntatore in un l-value. L'operando dell'operatore di riferimento indiretto deve essere un puntatore a un tipo. Il risultato dell'espressione di riferimento indiretto è il tipo da cui il tipo di puntatore è derivato. L'utilizzo del **\*** operatore in questo contesto è diverso dal relativo significato come operatore binario, ovvero la moltiplicazione.  
   
  Se l'operando punta a una funzione, il risultato è un indicatore di funzione. Se invece punta a un percorso di archiviazione, il risultato è un valore l-value che definisce il percorso di archiviazione.  
   

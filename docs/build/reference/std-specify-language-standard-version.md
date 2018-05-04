@@ -2,10 +2,7 @@
 title: std-(specifica la versione Standard di linguaggio) | Documenti Microsoft
 ms.custom: ''
 ms.date: 11/16/2017
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - /std
 - -std
@@ -13,17 +10,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 0acb74ba-1aa8-4c05-b96c-682988dc19bd
-caps.latest.revision: 5
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cb248f4c7ce1d9520bc328ed59b75ff081659996
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7fed80f0f9763b7e988c40a9d9f38f4e0f18eeb1
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="std-specify-language-standard-version"></a>/std (specifica lingua della versione Standard)
 
@@ -51,7 +46,7 @@ Il valore predefinito **/std:c + + 14** opzione Abilita il set di C + + 14 funzi
 
 Per ulteriori informazioni su quali C + + 14 e C++ 17 funzionalità sono abilitate quando **/std:c + + 14** è specificato, vedere le note di [conformità al linguaggio Visual C++](../../visual-cpp-language-conformance.md).
   
-Il **/std:c + + 17** opzione Abilita il set completo di C++ 17 funzionalità implementate dal compilatore Visual C++. Questa opzione Disabilita il supporto del compilatore e librerie standard per le funzionalità che sono state modificate o nuove versioni degli aggiornamenti Working Draft e defect dello Standard C++ dopo C++ 17.  
+Il **/std:c + + 17** opzione Abilita il set completo di C++ 17 funzionalità implementate dal compilatore Visual C++. Questa opzione disabilita il supporto del compilatore e della libreria standard per le funzionalità modificate o nuove nelle versioni del documento di lavoro, nonché degli aggiornamenti per i difetti dello standard C++ dopo C++17.  
   
 Il **/std:c + + più recente** opzione Abilita il set di funzionalità di linguaggio e libreria di C++ implementato da Visual C++ per tenere traccia più recenti C + + 20 Working Draft e defect aggiornamenti dello Standard C++ che non sono inclusi in C++ 17. Utilizzare questa opzione per ottenere il post-funzionalità di linguaggio C++ 17 supportate dal compilatore e della libreria standard. Per un elenco di lingue e funzionalità della libreria, vedere [novità per Visual C++](../../what-s-new-for-visual-cpp-in-visual-studio.md). Il **/std:c + + più recente** funzionalità controllata dal non abilita l'opzione di **/ sperimentale** passare.  
   

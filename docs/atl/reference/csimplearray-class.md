@@ -1,12 +1,9 @@
 ---
 title: Classe CSimpleArray | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CSimpleArray
@@ -25,17 +22,15 @@ dev_langs:
 helpviewer_keywords:
 - CSimpleArray class
 ms.assetid: ee0c9f39-b61c-4c18-bc43-4eada21dca3a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9ea081d3868c1226638d01be9505eb9d0e01ed10
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 187dee79cd09e366fb56d9cd0e71395589476a69
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="csimplearray-class"></a>Classe CSimpleArray
 Questa classe fornisce metodi per la gestione di una matrice semplice.  
@@ -85,11 +80,11 @@ class CSimpleArray
 
   
 ## <a name="remarks"></a>Note  
- `CSimpleArray`fornisce metodi per la creazione e gestione di una semplice matrice, di un tipo specificato `T`.  
+ `CSimpleArray` fornisce metodi per la creazione e gestione di una semplice matrice, di un tipo specificato `T`.  
   
  Il parametro `TEqual` consente di definire una funzione di uguaglianza per due elementi di tipo `T`. Creando una classe simile a [CSimpleArrayEqualHelper](../../atl/reference/csimplearrayequalhelper-class.md), è possibile modificare il comportamento del test di uguaglianza per qualsiasi matrice specificata. Ad esempio, quando si lavora con una matrice di puntatori, può risultare utile definire l'uguaglianza come a seconda dei valori che di puntatori di riferimento. L'implementazione predefinita utilizza **operator=()**.  
   
- Entrambi `CSimpleArray` e [CSimpleMap](../../atl/reference/csimplemap-class.md) sono progettati per un numero ridotto di elementi. [CAtlArray](../../atl/reference/catlarray-class.md) e [CAtlMap](../../atl/reference/catlmap-class.md) deve essere utilizzata quando la matrice contiene un numero elevato di elementi.  
+ Entrambi `CSimpleArray` e [CSimpleMap](../../atl/reference/csimplemap-class.md) sono progettati per un numero ridotto di elementi. [CAtlArray](../../atl/reference/catlarray-class.md) e [CAtlMap](../../atl/reference/catlmap-class.md) deve essere utilizzato quando la matrice contiene un numero elevato di elementi.  
   
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** atlsimpcoll. h  
@@ -97,7 +92,7 @@ class CSimpleArray
 ## <a name="example"></a>Esempio  
  [!code-cpp[NVC_ATL_Utilities#86](../../atl/codesnippet/cpp/csimplearray-class_1.cpp)]  
   
-##  <a name="add"></a>CSimpleArray::Add  
+##  <a name="add"></a>  CSimpleArray::Add  
  Aggiunge un nuovo elemento nella matrice.  
   
 ```
@@ -114,7 +109,7 @@ BOOL Add(const T& t);
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_ATL_Utilities#87](../../atl/codesnippet/cpp/csimplearray-class_2.cpp)]  
   
-##  <a name="csimplearray"></a>CSimpleArray::CSimpleArray  
+##  <a name="csimplearray"></a>  CSimpleArray::CSimpleArray  
  Costruttore dell'oggetto matrice.  
   
 ```
@@ -129,7 +124,7 @@ CSimpleArray();
 ### <a name="remarks"></a>Note  
  Inizializza i membri di dati, la creazione di un nuovo vuoto `CSimpleArray` oggetto o una copia di un oggetto esistente `CSimpleArray` oggetto.  
   
-##  <a name="dtor"></a>CSimpleArray:: ~ CSimpleArray  
+##  <a name="dtor"></a>  CSimpleArray:: ~ CSimpleArray  
  Distruttore.  
   
 ```
@@ -139,7 +134,7 @@ CSimpleArray();
 ### <a name="remarks"></a>Note  
  Libera tutte le risorse allocate.  
   
-##  <a name="find"></a>CSimpleArray::Find  
+##  <a name="find"></a>  CSimpleArray::Find  
  Trova un elemento nella matrice.  
   
 ```
@@ -156,7 +151,7 @@ int Find(const T& t) const;
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_ATL_Utilities#88](../../atl/codesnippet/cpp/csimplearray-class_3.cpp)]  
   
-##  <a name="getdata"></a>CSimpleArray::GetData  
+##  <a name="getdata"></a>  CSimpleArray::GetData  
  Restituisce un puntatore ai dati memorizzati nella matrice.  
   
 ```
@@ -166,7 +161,7 @@ T* GetData() const;
 ### <a name="return-value"></a>Valore restituito  
  Restituisce un puntatore ai dati nella matrice.  
   
-##  <a name="getsize"></a>CSimpleArray::GetSize  
+##  <a name="getsize"></a>  CSimpleArray::GetSize  
  Restituisce il numero di elementi archiviati nella matrice.  
   
 ```
@@ -176,7 +171,7 @@ int GetSize() const;
 ### <a name="return-value"></a>Valore restituito  
  Restituisce il numero di elementi archiviati nella matrice.  
   
-##  <a name="operator_at"></a>CSimpleArray::operator\[\]  
+##  <a name="operator_at"></a>  CSimpleArray::operator \[\]  
  Recupera un elemento da una matrice.  
   
 ```
@@ -193,7 +188,7 @@ T& operator[](int nindex);
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_ATL_Utilities#89](../../atl/codesnippet/cpp/csimplearray-class_4.cpp)]  
   
-##  <a name="operator_eq"></a>CSimpleArray::operator =  
+##  <a name="operator_eq"></a>  CSimpleArray::operator =  
  Operatore di assegnazione.  
   
 ```
@@ -215,7 +210,7 @@ CSimpleArray<T, TEqual>
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_ATL_Utilities#90](../../atl/codesnippet/cpp/csimplearray-class_5.cpp)]  
   
-##  <a name="remove"></a>CSimpleArray::Remove  
+##  <a name="remove"></a>  CSimpleArray::Remove  
  Rimuove un elemento specificato della matrice.  
   
 ```
@@ -232,7 +227,7 @@ BOOL Remove(const T& t);
 ### <a name="remarks"></a>Note  
  Quando un elemento viene rimosso, gli elementi rimanenti nella matrice vengono numerati per riempire lo spazio vuoto.  
   
-##  <a name="removeall"></a>CSimpleArray::RemoveAll  
+##  <a name="removeall"></a>  CSimpleArray::RemoveAll  
  Rimuove tutti gli elementi della matrice.  
   
 ```
@@ -242,7 +237,7 @@ void RemoveAll();
 ### <a name="remarks"></a>Note  
  Rimuove tutti gli elementi attualmente archiviati nella matrice.  
   
-##  <a name="removeat"></a>CSimpleArray::RemoveAt  
+##  <a name="removeat"></a>  CSimpleArray::RemoveAt  
  Rimuove l'elemento specificato della matrice.  
   
 ```
@@ -259,7 +254,7 @@ BOOL RemoveAtint nIndex);
 ### <a name="remarks"></a>Note  
  Quando un elemento viene rimosso, gli elementi rimanenti nella matrice vengono numerati per riempire lo spazio vuoto.  
   
-##  <a name="setatindex"></a>CSimpleArray::SetAtIndex  
+##  <a name="setatindex"></a>  CSimpleArray::SetAtIndex  
  Impostare l'elemento specificato nella matrice.  
   
 ```

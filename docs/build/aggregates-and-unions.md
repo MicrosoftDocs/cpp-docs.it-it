@@ -1,29 +1,24 @@
 ---
 title: Aggregati e unioni | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - aggregates [C++], and unions
 ms.assetid: 859fc211-b111-4f12-af98-de78e48f9b92
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: db5e8551adff9752cbcaca3f4dc7d3c4a7fca908
-ms.sourcegitcommit: c770a343def04ae77522708387c3f7c470e49969
+ms.openlocfilehash: 5b1afd3be89e1d18da9889d88dbbbef3fb104e02
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="aggregates-and-unions"></a>Aggregati e unioni
 Altri tipi, ad esempio matrici, strutture e unioni, hanno requisiti di allineamento più vincolanti per garantire coerenza unione e aggregazione archiviazione e recupero dei dati. Di seguito sono riportate le definizioni per la matrice, struttura e unione:  
@@ -46,14 +41,14 @@ Altri tipi, ad esempio matrici, strutture e unioni, hanno requisiti di allineame
 |**UINT8**|`unsigned char`|Byte|  
 |**INT16**|**short**|Word|  
 |**UINT16**|**unsigned short**|Word|  
-|**INT32**|**int, long**|Doubleword|  
-|**UINT32**|**valore unsigned int, long senza segno**|Doubleword|  
-|**INT64**|`__int64`|Quadword|  
-|**UINT64**|**unsigned __int64**|Quadword|  
-|**FP32 (precisione singola)**|**float**|Doubleword|  
-|**FP64 (precisione doppia)**|**double**|Quadword|  
-|**PUNTATORE**|**\***|Quadword|  
-|`__m64`|**struct __m64**|Quadword|  
+|**INT32**|**int, long**|Double Word|  
+|**UINT32**|**valore unsigned int, long senza segno**|Double Word|  
+|**INT64**|`__int64`|Parola quadrupla|  
+|**UINT64**|**unsigned __int64**|Parola quadrupla|  
+|**FP32 (precisione singola)**|**float**|Double Word|  
+|**FP64 (precisione doppia)**|**double**|Parola quadrupla|  
+|**PUNTATORE**|**\***|Parola quadrupla|  
+|`__m64`|**struct __m64**|Parola quadrupla|  
 |`__m128`|**struct __m128**|Octaword|  
   
  Si applicano le regole di allineamento di aggregazione seguenti:  

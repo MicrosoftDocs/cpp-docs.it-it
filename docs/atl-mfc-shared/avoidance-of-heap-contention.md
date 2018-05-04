@@ -1,29 +1,24 @@
 ---
 title: Prevenzione dei conflitti nell'Heap | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - heap contention
 ms.assetid: 797129d7-5f8c-4b0e-8974-bb93217e9ab5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f17f73efc8fba19bb129e3b118f8a4357444aad0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 731fcb2328f789e5c487dc56510bbd6f7ec049ea
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="avoidance-of-heap-contention"></a>Prevenzione dei conflitti nell'Heap
 I gestori di stringa predefinita forniti da MFC e ATL sono semplici wrapper su un heap globale. Questo heap globale è completamente thread-safe, vale a dire che più thread può allocare e liberare memoria da esso contemporaneamente senza danneggiare l'heap. Per facilitare la protezione dei thread, l'heap deve serializzare l'accesso a se stessa. Questa operazione viene in genere eseguita con una sezione critica o un meccanismo di blocco simile. Ogni volta che due thread tentano di accedere all'heap simultaneamente, un thread viene bloccato fino al termine di richiesta del thread. Per molte applicazioni, questa situazione si verifica raramente e l'impatto sulle prestazioni del meccanismo di blocco dell'heap è irrilevante. Tuttavia, per le applicazioni che si accedono di frequente l'heap da più thread contesa di blocco dell'heap può provocare l'esecuzione più lenta rispetto a quello a thread singolo (anche in computer con più CPU) dell'applicazione.  

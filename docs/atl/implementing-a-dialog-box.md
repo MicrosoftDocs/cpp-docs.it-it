@@ -1,13 +1,10 @@
 ---
 title: Implementazione di una finestra di dialogo | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-atl
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - CAxDialogImpl class, implementing dialog boxes in ATL
 - ATL, dialog boxes
 ms.assetid: 478525f2-aa6a-435a-b162-68fc8aa98a8e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9b3ff0e58623a241160da21266d085753be1c457
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 672696027a43cd5a50e2ad630824d305f7ca4b68
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="implementing-a-dialog-box"></a>Implementazione di una finestra di dialogo
 Esistono due modi per aggiungere una finestra di dialogo per il progetto ATL: utilizzare la creazione guidata finestra di dialogo ATL o aggiungerla manualmente.  
@@ -45,7 +40,7 @@ Esistono due modi per aggiungere una finestra di dialogo per il progetto ATL: ut
 > [!NOTE]
 >  Quando si crea una finestra di dialogo mediante la creazione guidata finestra di dialogo ATL, la procedura guidata aggiunge automaticamente il `IDD` membro come un `enum` tipo.  
   
- `CDialogImpl`Consente di implementare modale o una finestra di dialogo non modale che ospita i controlli di Windows. `CAxDialogImpl`Consente di implementare modale o una finestra di dialogo non modale che ospita controlli ActiveX sia di Windows.  
+ `CDialogImpl` Consente di implementare modale o una finestra di dialogo non modale che ospita i controlli di Windows. `CAxDialogImpl` Consente di implementare modale o una finestra di dialogo non modale che ospita i controlli ActiveX sia di Windows.  
   
  Per creare una finestra di dialogo modale, creare un'istanza del `CDialogImpl`-derivato (o `CAxDialogImpl`-derivato) classe e quindi chiamare il [DoModal](../atl/reference/cdialogimpl-class.md#domodal) metodo. Per chiudere una finestra di dialogo modale, chiamare il [EndDialog](../atl/reference/cdialogimpl-class.md#enddialog) metodo da un gestore di messaggi. Per creare una finestra di dialogo non modale, chiamare il [crea](../atl/reference/cdialogimpl-class.md#create) anziché `DoModal`. Per eliminare una finestra di dialogo non modale, chiamare [DestroyWindow](../atl/reference/cdialogimpl-class.md#destroywindow).  
   

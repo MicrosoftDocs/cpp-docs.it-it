@@ -1,13 +1,10 @@
 ---
 title: Specifica delle DLL per il caricamento ritardato | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - delayed loading of DLLs, specifying
 - /DELAYLOAD linker option
 ms.assetid: 94cbecfe-7a42-40d1-a618-9f2786bac0d8
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d7c04b0885228bcef65b1b53cda6d28dc6755379
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a7756499ddf24055feb1c540df13fbe8249edf42
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="specifying-dlls-to-delay-load"></a>Specifica delle DLL per il caricamento ritardato
 È possibile specificare quale caricare le DLL di ritardo con il [/delayload](../../build/reference/delayload-delay-load-import.md):`dllname` l'opzione del linker. Se non si intende usare una versione personalizzata di una funzione di supporto, è necessario anche collegare il programma a delayimp.lib (per le applicazioni desktop) o a dloadhelper.lib (per le app dello Store).  

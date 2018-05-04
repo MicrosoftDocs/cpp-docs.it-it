@@ -1,13 +1,10 @@
 ---
 title: Problemi di migrazione a 64 bit di Visual C++ | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - 64-bit compiler [C++], porting 32-bit code
 - Win64 [C++]
 ms.assetid: d17fb838-7513-4e2d-8b27-a1666f17ad76
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b9ea3690e04106f0836d236eefee4acd9dda3a82
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ab4b8a8e693a9e1a87ddb3a06fe609416808d3dc
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="common-visual-c-64-bit-migration-issues"></a>Problemi comuni relativi alla migrazione di Visual C++ a 64 bit
 
@@ -39,7 +34,7 @@ Quando si usa Visual C++ per creare applicazioni da eseguire su un sistema opera
   
 -   Nei sistemi operativi Windows a 64 bit gli oggetti `int` e `long` sono valori a 32 bit.  Per i programmi che si prevede di compilare per le piattaforme a 64 bit, assicurarsi di non assegnare puntatori alle variabili a 32 bit. Nelle piattaforme a 64 bit i puntatori sono valori a 64 bit e, se vengono assegnati a una variabile a 32 bit, il valore del puntatore verrà troncato.  
   
--   `size_t`, `time_t`, e `ptrdiff_t` sono valori a 64 bit su sistemi operativi Windows a 64 bit.  
+-   `size_t`, `time_t`, e `ptrdiff_t` sono valori a 64 bit nei sistemi operativi Windows a 64 bit.  
   
 -   Nei sistemi operativi Windows a 32 bit, `time_t` è un valore a 32 bit nelle versioni di Visual C++ antecedenti a Visual C++ 2005. `time_t` è ora un valore Integer a 64 bit per impostazione predefinita. Per ulteriori informazioni, vedere [gestione del tempo](../c-runtime-library/time-management.md).  
   
@@ -57,7 +52,7 @@ Per altre informazioni, vedere:
   
 -   [Opzioni del compilatore](../build/reference/compiler-options.md)  
   
--   [Suggerimenti sulla migrazione](http://msdn.microsoft.com/library/windows/desktop/aa384214)  
+-   [Suggerimenti per la migrazione](http://msdn.microsoft.com/library/windows/desktop/aa384214)  
   
 ## <a name="see-also"></a>Vedere anche  
 

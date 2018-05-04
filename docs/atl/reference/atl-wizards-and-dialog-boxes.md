@@ -1,29 +1,24 @@
 ---
 title: Finestre di dialogo e procedure guidate ATL | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - ATL, class wizards
 ms.assetid: 51cf002a-83bc-41ba-aeb8-364ea2331375
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c2fd2a7295b702726e9be30e0f3009c627727cd6
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: bfdb246f5d331936993093fce068efdcdceee5c2
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="atl-wizards-and-dialog-boxes"></a>Finestre di dialogo e procedure guidate ATL
 Le procedure guidate Active Template Library (ATL) generano codice di boilerplate per diversi tipi di oggetti COM. È possibile eseguire le procedure guidate aprendo il menu di scelta rapida per un progetto in **Esplora** e scegliendo **Aggiungi**, **classe**.  

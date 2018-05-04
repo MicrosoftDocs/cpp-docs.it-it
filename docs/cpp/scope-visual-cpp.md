@@ -1,12 +1,9 @@
 ---
 title: Ambito (Visual C++) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -19,22 +16,20 @@ helpviewer_keywords:
 - functions [C++], scope
 - scope, C++ names
 ms.assetid: 81fecbb0-338b-4325-8332-49f33e716352
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 55baa4496522336a5a64ee81daa7a8ce484534c0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 469fc76701161fda8116627c2b16fb4dfa63224e
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="scope-visual-c"></a>Ambito (Visual C++)
 I nomi in C++ possono essere usati solo in alcune aree del programma. Quest'area viene denominata "l'ambito" del nome. L'ambito determina la "durata" di un nome che non indica un oggetto con estensione statica. L'ambito determina inoltre la visibilità di un nome quando vengono chiamati i costruttori e i distruttori di classe e quando vengono inizializzate le variabili locali per l'ambito. (Per ulteriori informazioni, vedere [costruttori](../cpp/constructors-cpp.md) e [distruttori](../cpp/destructors-cpp.md).) Esistono cinque tipi di ambito:  
   
--   **Ambito locale** un nome dichiarato all'interno di un blocco è accessibile solo all'interno di tale blocco e i blocchi racchiusi da essa e solo dopo il punto di dichiarazione. I nomi degli argomenti formali di una funzione nell'ambito del relativo blocco più esterno hanno ambito locale, come se fossero stati dichiarati all'interno del blocco che racchiude il corpo della funzione. Si consideri il frammento di codice riportato di seguito.  
+-   **Ambito locale** un nome dichiarato all'interno di un blocco è accessibile solo all'interno di tale blocco e blocchi racchiusi da essa e solo dopo il punto di dichiarazione. I nomi degli argomenti formali di una funzione nell'ambito del relativo blocco più esterno hanno ambito locale, come se fossero stati dichiarati all'interno del blocco che racchiude il corpo della funzione. Si consideri il frammento di codice riportato di seguito.  
   
     ```  
     {  
@@ -44,13 +39,13 @@ I nomi in C++ possono essere usati solo in alcune aree del programma. Quest'area
   
      Poiché la dichiarazione di `i` si trova in un blocco racchiuso tra parentesi graffe, `i` ha ambito locale e non è mai accessibile perché nessun codice vi accede prima della parentesi graffa chiusa.  
   
--   **Ambito funzione** le etichette sono gli unici nomi con ambito di funzione. Possono essere usate in qualsiasi punto di una funzione, ma non sono accessibili all'esterno della stessa funzione. Gli argomenti formali delle funzioni, ovvero argomenti specificati nelle definizioni di funzione, sono considerati nell'ambito del blocco più esterno del corpo della funzione.  
+-   **Ambito funzione** le etichette sono gli unici nomi con ambito della funzione. Possono essere usate in qualsiasi punto di una funzione, ma non sono accessibili all'esterno della stessa funzione. Gli argomenti formali delle funzioni, ovvero argomenti specificati nelle definizioni di funzione, sono considerati nell'ambito del blocco più esterno del corpo della funzione.  
   
 -   **Ambito file** qualsiasi nome dichiarato all'esterno di tutti i blocchi o le classi con ambito file. È accessibile da qualsiasi punto dell'unità di conversione dopo la relativa dichiarazione. I nomi con ambito file che non dichiarano oggetti statici vengono spesso denominati nomi globali.  
   
      In C++, l'ambito file è anche noto come ambito dello spazio dei nomi.  
   
--   **Ambito di classe** nomi dei membri della classe hanno ambito di classe. Funzioni membro della classe è accessibile solo tramite gli operatori di selezione dei membri (**.** o  **->** ) o gli operatori puntatore a membro (**.\***  o  **-> \*** ) su un oggetto o un puntatore a un oggetto di tale classe; i dati membro di classe non statica viene considerati locali per l'oggetto di tale classe. Si consideri la seguente dichiarazione di classe:  
+-   **Ambito di classe** nomi dei membri della classe hanno ambito di classe. Funzioni membro della classe è accessibile solo tramite gli operatori di selezione dei membri (**.** o **->**) o gli operatori puntatore a membro (**.\***  o **-> \***) su un oggetto o un puntatore a un oggetto di tale classe; i dati membro di classe non statica viene considerati locali per l'oggetto di tale classe. Si consideri la seguente dichiarazione di classe:  
   
     ```  
     class Point  
@@ -62,7 +57,7 @@ I nomi in C++ possono essere usati solo in alcune aree del programma. Quest'area
   
      I membri della classe `x` e `y` vengono considerati nell'ambito della classe `Point`.  
   
--   **Ambito prototipo** i nomi dichiarati in un prototipo di funzione sono visibili solo fino alla fine del prototipo. Il prototipo riportato di seguito dichiara tre nomi (`strDestination`, `numberOfElements` e `strSource`); questi nomi escono dall'ambito alla fine del prototipo:  
+-   **Ambito del prototipo** i nomi dichiarati in un prototipo di funzione sono visibili solo fino alla fine del prototipo. Il prototipo riportato di seguito dichiara tre nomi (`strDestination`, `numberOfElements` e `strSource`); questi nomi escono dall'ambito alla fine del prototipo:  
   
     ```  
     errno_t strcpy_s( char *strDestination, size_t numberOfElements, const char *strSource );  
@@ -71,7 +66,7 @@ I nomi in C++ possono essere usati solo in alcune aree del programma. Quest'area
 ## <a name="hiding-names"></a>Nascondere nomi  
  È possibile nascondere un nome dichiarandolo in un blocco chiuso. Nella figura seguente `i` viene ridichiarato nel blocco interno, quindi nascondendo la variabile associata a `i` nell'ambito blocco esterno.  
   
- ![Nascondere il nome dell'ambito di blocco &#45;](../cpp/media/vc38sf1.png "vc38SF1")  
+ ![Blocco&#45;nascondere il nome di ambito](../cpp/media/vc38sf1.png "vc38SF1")  
 Nascondere il nome e l'ambito del blocco  
   
  L'output del programma illustrato nella figura è:  

@@ -1,13 +1,10 @@
 ---
 title: Importazioni reciproche | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - extension DLLs [C++], mutual imports
 - exporting DLLs [C++], mutual imports
 ms.assetid: 2cc29537-92ee-4d92-af39-8b8b3afd808f
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bfd31cd4e5776555137daf002c076e14d4031f89
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4b43977f86be409698d8fbdba16fc63d85acfac5
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mutual-imports"></a>Importazioni reciproche
 Esportazione o importazione in un altro file eseguibile presenta complicazioni quando le importazioni sono reciproca (o circolare). Ad esempio, due DLL importare simboli tra loro, simili alle funzioni ricorsive.  
@@ -87,7 +82,7 @@ class CLASS_DECL_B CExampleB : public CExampleA
 ...  
 ```  
   
- DLL viene compilata con `/D A_IMPL` e DLL viene compilata con `/D B_IMPL`. Utilizzando simboli distinti per ogni DLL, `CExampleB` viene esportato e `CExampleA` viene importato quando si compila una DLL. `CExampleA`viene esportato quando si compila una DLL e importato quando viene utilizzato dalla DLL (o un altro client).  
+ DLL viene compilata con `/D A_IMPL` e DLL viene compilata con `/D B_IMPL`. Utilizzando simboli distinti per ogni DLL, `CExampleB` viene esportato e `CExampleA` viene importato quando si compila una DLL. `CExampleA` viene esportato quando si compila una DLL e importato quando viene utilizzato dalla DLL (o un altro client).  
   
  Questo tipo di disposizione non può essere eseguito quando si utilizza l'elemento predefinito **AFX_EXT_CLASS** e `_AFXEXT` simboli del preprocessore. La tecnica sopra descritta risolve questo problema in modo diversamente da quanto accade non che viene utilizzato il meccanismo di MFC quando si compila la tecnologia Active, Database e DLL di estensione MFC di rete.  
   
@@ -130,9 +125,9 @@ class CExampleA : public CObject
   
 -   [Esportazione di funzioni C++ per l'utilizzo in eseguibili in linguaggio C](../build/exporting-cpp-functions-for-use-in-c-language-executables.md)  
   
--   [Metodo di esportazione da utilizzare](../build/determining-which-exporting-method-to-use.md)  
+-   [Determinare quale metodo di esportazione da utilizzare](../build/determining-which-exporting-method-to-use.md)  
   
--   [Importazione in un'applicazione utilizzando declspec](../build/importing-into-an-application-using-declspec-dllimport.md)  
+-   [Importare un'applicazione che utilizza declspec](../build/importing-into-an-application-using-declspec-dllimport.md)  
   
 ### <a name="what-do-you-want-to-know-more-about"></a>Scegliere l'argomento su cui visualizzare maggiori informazioni  
   

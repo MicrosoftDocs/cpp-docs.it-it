@@ -1,29 +1,24 @@
 ---
 title: Cenni preliminari sui dichiaratori | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - declarators, about declarators
 ms.assetid: 0f2e2312-80bd-4154-8345-718bd9ed2173
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 18a3f12ac87f0165c74aaa487913f679f1a9941e
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: 81ba4ff8e50d646a6a3918c2104756c4378a1aea
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="overview-of-declarators"></a>Cenni preliminari sui dichiaratori
 I dichiaratori sono componenti di una dichiarazione che specifica i nomi di oggetti o funzioni. I dichiaratori specificano anche se l'oggetto denominato è un oggetto, un puntatore, un riferimento o una matrice o meno.  Mentre i dichiaratori non specificano il tipo di base, modificano tuttavia le informazioni sul tipo nel tipo di base per specificare i tipi derivati come puntatori, riferimenti e matrici.  Applicato alle funzioni, il dichiaratore funziona con l'identificatore di tipo per specificare completamente il tipo restituito di una funzione come oggetto, puntatore o riferimento. (Gli identificatori, descritti in [dichiarazioni e definizioni](declarations-and-definitions-cpp.md), trasferiscono proprietà come tipo e classe di archiviazione. I modificatori, descritti in questa sezione e in [modificatori specifici Microsoft](../cpp/microsoft-specific-modifiers.md), modificano i dichiaratori.) Nella figura seguente viene illustrata una dichiarazione completa di `MyFunction` e vengono indicati i componenti della dichiarazione.  
@@ -57,7 +52,7 @@ const char *pch, ch;
   
  **Dichiaratori per puntatori, riferimenti e matrici**  
   
- Gli operatori puntatore inseriti davanti al nome indicano che l'oggetto diventa un puntatore o un riferimento.  Il  **\***  operatore dichiara il nome come puntatore, mentre il  **&**  operatore dichiara come riferimento.  
+ Gli operatori puntatore inseriti davanti al nome indicano che l'oggetto diventa un puntatore o un riferimento.  Il **\*** operatore dichiara il nome come puntatore, mentre il **&** operatore dichiara come riferimento.  
   
 ```  
 int *i; // declarator is *i  

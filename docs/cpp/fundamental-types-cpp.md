@@ -1,12 +1,9 @@
 ---
 title: Tipi fondamentali (C++) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - __int128_cpp
@@ -52,17 +49,15 @@ helpviewer_keywords:
 - storing types [C++]
 - data types [C++], void
 ms.assetid: 58b0106a-0406-4b74-a430-7cbd315c0f89
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1bb52d6a987289ed77d7b63a5497323ddad2b467
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8c24ee360f1c14aa9b355f45ec1c12877efa306c
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="fundamental-types--c"></a>Tipi fondamentali (C++)
 I tipi fondamentali in C++ sono suddivisi in tre categorie: integrali, a virgola mobile e void. I tipi integrali possono gestire numeri interi. I tipi a virgola mobile possono specificare i valori che possono contenere parti frazionarie.  
@@ -85,9 +80,9 @@ I tipi fondamentali in C++ sono suddivisi in tre categorie: integrali, a virgola
 ||`bool`|Il tipo `bool` è un tipo integrale che può assumere uno dei due valori `true` o `false`. La relativa dimensione non è specificata.|  
 ||`short`|Il tipo `short` `int` (o semplicemente `short`) è un tipo integrale di dimensione maggiore o uguale alla dimensione del tipo `char`e di dimensione minore o uguale alla dimensione del tipo `int`.<br /><br /> Gli oggetti di tipo `short` possono essere dichiarati come `signed` `short` o come `unsigned short`. `Signed short` è un sinonimo di `short`.|  
 ||`int`|Il tipo `int` è un tipo integrale di dimensione maggiore o uguale alla dimensione del tipo `short` `int`e di dimensione minore o uguale alla dimensione del tipo `long`.<br /><br /> Gli oggetti di tipo `int` possono essere dichiarati come `signed` `int` o come `unsigned` `int`. `Signed` `int` è un sinonimo di `int`.|  
-||`__int8`, `__int16`, `__int32`, `__int64`|Intero con dimensione `__int n`, dove `n` è la dimensione in bit della variabile di tipo intero. `__int8`, `__int16`, `__int32` e `__int64` sono parole chiave specifiche di Microsoft. Non tutti i tipi sono disponibili in tutte le architetture. `(__int128`non è supportata.)|  
+||`__int8`, `__int16`, `__int32`, `__int64`|Intero con dimensione `__int n`, dove `n` è la dimensione in bit della variabile di tipo intero. `__int8`, `__int16`, `__int32` e `__int64` sono parole chiave specifiche di Microsoft. Non tutti i tipi sono disponibili in tutte le architetture. `(__int128` non è supportata.)|  
 ||`long`|Il tipo `long` (o `long` `int`) è un tipo integrale che è maggiore o uguale alla dimensione del tipo `int`.<br /><br /> Gli oggetti di tipo `long` possono essere dichiarati come `signed` `long` o come `unsigned` `long`. `Signed` `long` è un sinonimo di `long`.|  
-||`long` `long`|Di dimensione maggiore di un tipo `long`senza segno.<br /><br /> Gli oggetti di tipo `long long` possono essere dichiarati come `signed` `long long` o come `unsigned` `long long`. `signed``long long` è un sinonimo di `long long`.|  
+||`long` `long`|Di dimensione maggiore di un tipo `long`senza segno.<br /><br /> Gli oggetti di tipo `long long` possono essere dichiarati come `signed` `long long` o come `unsigned` `long long`. `signed` `long long` è un sinonimo di `long long`.|  
 ||`wchar_t`, `__wchar_t`|Una variabile di tipo `wchar_t` designa un tipo di carattere wide o multibyte. Per impostazione predefinita, `wchar_t` è un tipo nativo, ma è possibile usare [/Zc:wchar_t-](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) per rendere `wchar_t` un typedef per un tipo `unsigned short`. Il tipo `__wchar_t` è un sinonimo specifico di Microsoft per il tipo `wchar_t` nativo.<br /><br /> Usare il prefisso L prima di un valore letterale carattere o stringa per designare il tipo di carattere wide.|  
 |A virgola mobile|`float`|Il tipo `float` è il tipo a virgola mobile più piccolo.|  
 ||`double`|Il tipo `double` è un tipo a virgola mobile che è maggiore o uguale a `float`, ma minore o uguale alla dimensione del tipo `long` `double`.<br /><br /> Specifico di Microsoft: la rappresentazione di `long double` e `double` è identica. Tuttavia, `long double` e `double` sono tipi distinti.|  

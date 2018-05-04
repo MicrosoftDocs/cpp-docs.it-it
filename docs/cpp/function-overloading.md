@@ -1,12 +1,9 @@
 ---
 title: Overload di funzioni | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 1/25/2018
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - function overloading
 - declaring functions [C++], overloading
 ms.assetid: 3c9884cb-1d5e-42e8-9a49-6f46141f929e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d21ecfb649748c9bf7e190d4857ce93ebee61dd1
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: 07b7209c890ce3eeadb2db346445802576674bfd
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="function-overloading"></a>Overload di funzioni
 C++ consente la specifica di più funzioni con lo stesso nome nello stesso ambito. Questi sono denominati *overload* funzioni. Le funzioni in overload consentono di fornire diverse semantiche per una funzione, a seconda del tipo e il numero di argomenti. 
@@ -263,24 +258,24 @@ volatile Over&
 |-----------------------|---------------------|  
 |*type-name*|*type-name* **&**|  
 |*type-name* **&**|*type-name*|  
-|*type-name* **[ ]**|*type-name\**|  
-|*type-name* **(** *argument-list* **)**|**(** *\*type-name* **) (** *argument-list* **)**|  
-|*type-name*|**const** *type-name*|  
-|*type-name*|`volatile` *type-name*|  
-|*type-name\**|**const** *type-name\**|  
+|*nome di tipo* **]**|*type-name\**|  
+|*nome di tipo* **(** *elenco di argomenti* **)**|**(**  *\*nome di tipo* **) (** *elenco di argomenti* **)**|  
+|*type-name*|**const** *-nome del tipo*|  
+|*type-name*|`volatile` *nome del tipo*|  
+|*type-name\**|**const** *-nome del tipo\**|  
 |*type-name\**|`volatile` *type-name\**|  
   
  La sequenza in cui vengono tentate le conversioni è la seguente:  
   
 1.  Corrispondenza esatta. Una corrispondenza esatta tra i tipi con cui viene chiamata la funzione e i tipi dichiarati nel prototipo di funzione è sempre la corrispondenza ottimale. Le sequenze di conversioni semplici vengono classificate come corrispondenze esatte. Tuttavia, le sequenze che non eseguono queste conversioni vengono considerate migliori rispetto alle sequenze che eseguono la conversione:  
   
-    -   Dal puntatore, al puntatore a **const** (`type`  **\***  a **const** `type`  **\***  ).  
+    -   Dal puntatore, al puntatore a **const** (`type` **\*** a **const** `type` **\*** ).  
   
-    -   Dal puntatore, al puntatore a `volatile` (`type`  **\***  a `volatile` `type`  **\*** ).  
+    -   Dal puntatore, al puntatore a `volatile` (`type` **\*** a `volatile` `type` **\***).  
   
-    -   Dal riferimento al riferimento a **const** (`type`  **&**  a **const** `type`  **&** ).  
+    -   Dal riferimento al riferimento a **const** (`type` **&** a **const** `type` **&**).  
   
-    -   Dal riferimento al riferimento a `volatile` (`type`  **&**  a `volatile` `type`  **&** ).  
+    -   Dal riferimento al riferimento a `volatile` (`type` **&** a `volatile` `type` **&**).  
   
 2.  Corrispondenza mediante le promozioni. Qualsiasi sequenza non classificata come una corrispondenza esatta che contiene solo le promozioni integrali, le conversioni da **float** a **doppie**, e conversioni semplici viene classificata come corrispondenza che usa promozioni. Sebbene non sia ottimale come una corrispondenza esatta, l'utilizzo delle promozioni è preferibile rispetto a una corrispondenza che usa le conversioni standard.  
   

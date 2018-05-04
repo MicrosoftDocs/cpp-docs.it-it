@@ -2,11 +2,8 @@
 title: Macro della mappa del servizio | Documenti Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - atlcom/ATL::BEGIN_SERVICE_MAP
@@ -16,17 +13,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: ca02a125-454a-4cf6-aac2-1c5585025ed4
-caps.latest.revision: 16
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 444d89833d84f23099ff0de8bce29bfc9d0a1344
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d2d2fa313c574951a8f8ba7c85d5b405707ec220
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="service-map-macros"></a>Macro della mappa servizio
 Queste macro definiscono le mappe dei servizi e le voci.  
@@ -41,7 +36,7 @@ Queste macro definiscono le mappe dei servizi e le voci.
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** atlcom. h  
    
-##  <a name="begin_service_map"></a>BEGIN_SERVICE_MAP  
+##  <a name="begin_service_map"></a>  BEGIN_SERVICE_MAP  
  Contrassegna l'inizio della mappa del servizio.  
   
 ```
@@ -62,7 +57,7 @@ BEGIN_SERVICE_MAP(theClass)
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_ATL_COM#57](../../atl/codesnippet/cpp/service-map-macros_1.h)]  
   
-##  <a name="end_service_map"></a>END_SERVICE_MAP  
+##  <a name="end_service_map"></a>  END_SERVICE_MAP  
  Contrassegna la fine della mappa del servizio.  
   
 ```
@@ -72,7 +67,7 @@ END_SERVICE_MAP()
 ### <a name="example"></a>Esempio  
  Per vedere l'esempio [BEGIN_SERVICE_MAP](#begin_service_map).  
   
-##  <a name="service_entry"></a>SERVICE_ENTRY  
+##  <a name="service_entry"></a>  SERVICE_ENTRY  
  Indica che l'oggetto supporta l'id del servizio specificato da *SID*.  
   
 ```
@@ -86,7 +81,7 @@ SERVICE_ENTRY( SID )
 ### <a name="example"></a>Esempio  
  Per vedere l'esempio [BEGIN_SERVICE_MAP](#begin_service_map).  
   
-##  <a name="service_entry_chain"></a>SERVICE_ENTRY_CHAIN  
+##  <a name="service_entry_chain"></a>  SERVICE_ENTRY_CHAIN  
  Indica [IServiceProviderImpl::QueryService](#queryservice) a catena per l'oggetto specificato da `punk`.  
   
 ```
@@ -100,7 +95,7 @@ SERVICE_ENTRY_CHAIN( punk )
 ### <a name="example"></a>Esempio  
  Per vedere l'esempio [BEGIN_SERVICE_MAP](#begin_service_map).  
   
-##  <a name="queryservice"></a>IServiceProviderImpl::QueryService  
+##  <a name="queryservice"></a>  IServiceProviderImpl::QueryService  
  Crea o accede al servizio specificato e restituisce un puntatore a interfaccia per l'interfaccia specificata per il servizio.  
   
 ```
@@ -111,13 +106,13 @@ STDMETHOD(QueryService)(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [IN]`guidService`  
+ [IN] `guidService`  
  Puntatore a un identificatore di servizio (SID).  
   
- [IN]`riid`  
+ [IN] `riid`  
  Identificatore dell'interfaccia a cui il chiamante è per ottenere l'accesso.  
   
- [OUT]`ppvObj`  
+ [OUT] `ppvObj`  
  Puntatore indiretto all'interfaccia richiesta.  
   
 ### <a name="return-value"></a>Valore restituito  
@@ -132,7 +127,7 @@ STDMETHOD(QueryService)(
 |E_NOINTERFACE|L'interfaccia richiesta non fa parte di questo servizio, oppure il servizio è sconosciuto.|  
   
 ### <a name="remarks"></a>Note  
- `QueryService`Restituisce un puntatore indiretto all'interfaccia richiesta nel servizio specificato. Il chiamante è responsabile del rilascio di questo puntatore quando non è più necessario.  
+ `QueryService` Restituisce un puntatore indiretto all'interfaccia richiesta nel servizio specificato. Il chiamante è responsabile del rilascio di questo puntatore quando non è più necessario.  
   
  Quando si chiama `QueryService`, si passa un identificatore di servizio ( `guidService`) e un identificatore di interfaccia ( `riid`). Il `guidService` specifica il servizio a cui si desidera accedere, e `riid` identifica un'interfaccia che fa parte del servizio. In cambio, si riceve un puntatore all'interfaccia indiretto.  
   

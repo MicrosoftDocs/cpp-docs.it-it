@@ -1,12 +1,9 @@
 ---
 title: Provare-except Statement | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - _abnormal_termination_cpp
@@ -34,17 +31,15 @@ helpviewer_keywords:
 - _exception_info keyword [C++]
 - _abnormal_termination keyword [C++]
 ms.assetid: 30d60071-ea49-4bfb-a8e6-7a420de66381
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 24be4e7fd6b4dc95d9964e69943a94ecad947a47
-ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
+ms.openlocfilehash: 3bd1e8139af64539974ad942f60a19e31b14d7f3
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="try-except-statement"></a>Istruzione try-except
 
@@ -57,7 +52,7 @@ Il **provare-tranne** istruzione è un'estensione Microsoft c e linguaggi C++ ch
 > {  
 >    codice controllato  
 > }  
-> **__except** ( *expression* )  
+> **except** ( *espressione* )  
 > {  
 >    codice del gestore eccezioni  
 > }  
@@ -105,7 +100,7 @@ Oggetto `goto` istruzione può inoltre passare dalla sezione protetta e non le p
 
 Gestione delle eccezioni strutturata fornisce due funzioni intrinseche disponibili per l'utilizzo di **provare-tranne** istruzione: `GetExceptionCode` e `GetExceptionInformation`.
 
-`GetExceptionCode`Restituisce il codice (un intero a 32 bit) dell'eccezione.
+`GetExceptionCode` Restituisce il codice (un intero a 32 bit) dell'eccezione.
 
 La funzione intrinseca `GetExceptionInformation` restituisce un puntatore a una struttura contenente informazioni aggiuntive sull'eccezione. Tramite questo puntatore, è possibile accedere allo stato del computer esistente al momento di un'eccezione hardware. La struttura è la seguente:
 
@@ -124,11 +119,11 @@ La funzione intrinseca `AbnormalTermination` è disponibile all'interno di un ge
 
 excpt. h definisce alcuni nomi alternativi per questi intrinseci:
 
-`GetExceptionCode`equivale a`_exception_code`
+`GetExceptionCode` equivale a `_exception_code`
 
- `GetExceptionInformation`equivale a`_exception_info`
+ `GetExceptionInformation` equivale a `_exception_info`
 
- `AbnormalTermination`equivale a`_abnormal_termination`
+ `AbnormalTermination` equivale a `_abnormal_termination`
   
 ## <a name="example"></a>Esempio
 

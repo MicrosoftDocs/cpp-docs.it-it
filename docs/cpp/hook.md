@@ -1,12 +1,9 @@
 ---
 title: hook | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - __hook_cpp
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - __hook keyword [C++]
 - event handlers [C++], connecting events to
 ms.assetid: f4cabb10-d293-4c0e-a1d2-4745ef9cc22c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dfc9112c79279e3e5c419efbd12f5883349c0e94
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d46a9c593826e804c62ab67b8afa894912d15bd8
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="hook"></a>__hook
 Associa un metodo del gestore a un evento.  
@@ -48,7 +43,7 @@ long __hook(
 ```  
   
 #### <a name="parameters"></a>Parametri  
- **&***SourceClass* `::` *EventMethod*  
+ **&** *SourceClass* `::` *EventMethod*  
  Puntatore al metodo di eventi cui associare il metodo del gestore eventi:  
   
 -   Eventi C++ nativi: *SourceClass* è la classe di origine evento e *EventMethod* è l'evento.  
@@ -60,7 +55,7 @@ long __hook(
  `interface`  
  Il nome dell'interfaccia associato a `receiver`, solo per i ricevitori di eventi COM in cui il *layout_dependent* parametro del [event_receiver](../windows/event-receiver.md) attributo **true**.  
   
- *origine*  
+ *Origine*  
  Puntatore a un'istanza dell'origine evento. A seconda del codice `type` specificato in **event_receiver**, *origine* può essere uno dei seguenti:  
   
 -   Un puntatore a un oggetto di origine dell'evento nativo.  
@@ -69,7 +64,7 @@ long __hook(
   
 -   Un puntatore a un oggetto gestito (per gli eventi gestiti).  
   
- **&***ReceiverClass* `::``HandlerMethod`  
+ **&** *ReceiverClass* `::` `HandlerMethod`  
  Puntatore al metodo del gestore eventi da associare a un evento. Il gestore viene specificato come metodo di una classe o come un riferimento alla stessa; se non si specifica il nome della classe, `__hook` presuppone che la classe sia la stessa nella quale viene chiamato.  
   
 -   Eventi C++ nativi: *ReceiverClass* è la classe del ricevitore di eventi e `HandlerMethod` è il gestore.  
@@ -89,7 +84,7 @@ long __hook(
   
  Esistono due tipologie di `__hook`. È possibile utilizzare la prima tipologia (a quattro argomenti) nella maggior parte dei casi, in particolare, per i ricevitori di eventi COM in cui il *layout_dependent* parametro il [event_receiver](../windows/event-receiver.md) attributo **false** .  
   
- In questi casi non è necessario associare tutti i metodi in un'interfaccia prima di generare un evento a uno dei metodi; solo il metodo che gestisce l'evento deve essere associato. È possibile utilizzare la seconda forma (a due argomenti) di `__hook` solo per i ricevitori di eventi COM in cui *layout_dependent***= true**.  
+ In questi casi non è necessario associare tutti i metodi in un'interfaccia prima di generare un evento a uno dei metodi; solo il metodo che gestisce l'evento deve essere associato. È possibile utilizzare la seconda tipologia (a due argomenti) di `__hook` solo per i ricevitori di eventi COM in cui * layout_dependent ***= true**.  
   
  `__hook` restituisce un valore long. Un valore restituito diverso da zero indica che si è verificato un errore (gli eventi gestiti generano un'eccezione).  
   

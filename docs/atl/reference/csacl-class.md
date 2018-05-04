@@ -1,12 +1,9 @@
 ---
 title: Classe CSacl | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CSacl
@@ -21,17 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - CSacl class
 ms.assetid: 8624889b-aebc-4183-9d29-a20f07837f05
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f4308211dd22c39311b4d767c4c4487d9bf23971
-ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
+ms.openlocfilehash: 116e66d36dde016ef902a0b345eec33e46177b6c
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="csacl-class"></a>Classe CSacl
 Questa classe è un wrapper per una struttura SACL (elenco di controllo di accesso di sistema).  
@@ -52,7 +47,7 @@ class CSacl : public CAcl
 |Nome|Descrizione|  
 |----------|-----------------|  
 |[CSacl::CSacl](#csacl)|Costruttore.|  
-|[CSacl::~CSacl](#dtor)|Distruttore.|  
+|[CSacl:: ~ CSacl](#dtor)|Distruttore.|  
   
 ### <a name="public-methods"></a>Metodi pubblici  
   

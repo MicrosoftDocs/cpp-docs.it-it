@@ -1,29 +1,24 @@
 ---
 title: Modifica il codice del disegno (ATL Tutorial, parte 4) | Documenti Microsoft
-ms.custom: 
+ms.custom: get-started-article
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: get-started-article
+- cpp-atl
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - _ATL_MIN_CRT macro
 ms.assetid: 08ff14e8-aa49-4139-a110-5d071939cf1e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ccbf7dab7d39a80efa2b0b0b88b615c55cd9e56d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c077aca8c3276fac963eda8cdd2c413a9d6d5f5b
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="changing-the-drawing-code-atl-tutorial-part-4"></a>Modifica del codice del disegno (Esercitazione di ATL, parte 4)
 Per impostazione predefinita, il codice di creazione del controllo viene visualizzato un quadrato e il testo **PolyCtl**. In questo passaggio si modificherà il codice per visualizzare più interessante. Sono coinvolte le attività seguenti:  
@@ -125,7 +120,7 @@ Per impostazione predefinita, il codice di creazione del controllo viene visuali
   
  Nel passaggio successivo, si aggiungerà un evento.  
   
- [Al passaggio 3](../atl/adding-a-property-to-the-control-atl-tutorial-part-3.md) &#124; [Al passaggio 5](../atl/adding-an-event-atl-tutorial-part-5.md)  
+ [Al passaggio 3](../atl/adding-a-property-to-the-control-atl-tutorial-part-3.md) &#124; [al passaggio 5](../atl/adding-an-event-atl-tutorial-part-5.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Esercitazione](../atl/active-template-library-atl-tutorial.md)   

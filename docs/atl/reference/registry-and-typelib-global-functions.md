@@ -1,12 +1,9 @@
 ---
 title: Funzioni globali Registry e TypeLib | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - atlbase/ATL::AtlGetPerUserRegistration
@@ -26,17 +23,15 @@ dev_langs:
 helpviewer_keywords:
 - RegistryDataExchange function, global functions
 ms.assetid: d58b8a4e-975c-4417-8b34-d3c847f679b3
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dbb919cb2fe4d91f5665fbea3dcfd2140d178341
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: cb0a89ecf8bb81e515703abe819bb1edfbf80d59
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="registry-and-typelib-global-functions"></a>Funzioni globali Registry e TypeLib
 Queste funzioni forniscono il supporto per il caricamento e la registrazione di una libreria dei tipi.  
@@ -68,7 +63,7 @@ Queste funzioni forniscono il supporto per il caricamento e la registrazione di 
 ### <a name="requirements"></a>Requisiti  
  **Intestazione:** atlbase. h
 
-## <a name="atlgetperuserregistration"></a>AtlGetPerUserRegistration
+## <a name="atlgetperuserregistration"></a> AtlGetPerUserRegistration
 Utilizzare questa funzione per determinare se l'applicazione reindirizza l'accesso al registro per il **HKEY_CURRENT_USER** (**HKCU**) nodo.  
   
 ### <a name="syntax"></a>Sintassi  
@@ -79,10 +74,10 @@ ATLINLINE ATLAPI AtlGetPerUserRegistration(bool* pEnabled);
   
 ### <a name="parameters"></a>Parametri  
  [out] `pEnabled`  
- `TRUE`indica che le informazioni del Registro di sistema viene indirizzate al **HKCU** nodo; `FALSE` indica che l'applicazione scrive le informazioni del Registro di sistema per il nodo predefinito. Il nodo di valore predefinito è **HKEY_CLASSES_ROOT** (**HKCR**).  
+ `TRUE` indica che le informazioni del Registro di sistema viene indirizzate per il **HKCU** nodo; `FALSE` indica che l'applicazione scrive le informazioni del Registro di sistema per il nodo predefinito. Il nodo di valore predefinito è **HKEY_CLASSES_ROOT** (**HKCR**).  
   
 ### <a name="return-value"></a>Valore restituito  
- `S_OK`Se il metodo ha esito positivo, in caso contrario il `HRESULT` codice di errore se si verifica un errore.  
+ `S_OK` Se il metodo ha esito positivo, in caso contrario il `HRESULT` codice di errore se si verifica un errore.  
   
 ### <a name="remarks"></a>Note  
  Reindirizzamento del Registro di sistema non è abilitato per impostazione predefinita. Se si abilita questa opzione, l'accesso al registro viene reindirizzato a **HKEY_CURRENT_USER\Software\Classes**.  
@@ -92,7 +87,7 @@ ATLINLINE ATLAPI AtlGetPerUserRegistration(bool* pEnabled);
 ### <a name="requirements"></a>Requisiti  
  **Intestazione:** atlbase. h  
 
- ## <a name="afxregcreatekey"></a>AfxRegCreateKey
+ ## <a name="afxregcreatekey"></a> AfxRegCreateKey
  Crea la chiave del Registro di sistema.  
   
 ### <a name="syntax"></a>Sintassi  
@@ -120,7 +115,7 @@ LONG AFXAPI AfxRegCreateKey(HKEY hKey, LPCTSTR lpSubKey, PHKEY phkResult, CAtlTr
 ### <a name="requirements"></a>Requisiti  
  **Intestazione:** afxpriv.h  
 
-## <a name="afxregdeletekey"></a>AfxRegDeleteKey
+## <a name="afxregdeletekey"></a> AfxRegDeleteKey
 Elimina la chiave del Registro di sistema.  
   
 ### <a name="syntax"></a>Sintassi  
@@ -167,7 +162,7 @@ BOOL AFXAPI AfxRegisterPreviewHandler(LPCTSTR lpszCLSID, LPCTSTR lpszShortTypeNa
 ### <a name="requirements"></a>Requisiti  
  **Intestazione:** afxdisp.h   
 
-##  <a name="atlregistertypelib"></a>AtlRegisterTypeLib  
+##  <a name="atlregistertypelib"></a>  AtlRegisterTypeLib  
  Questa funzione viene chiamata per registrare una libreria dei tipi.  
   
   
@@ -190,7 +185,7 @@ ATLAPI AtlRegisterTypeLib(HINSTANCE hInstTypeLib, LPCOLESTR lpszIndex);
 ### <a name="requirements"></a>Requisiti  
  **Intestazione:** atlbase. h
 
- ## <a name="afxregopenkey"></a>AfxRegOpenKey
+ ## <a name="afxregopenkey"></a> AfxRegOpenKey
  Apre la chiave del Registro di sistema.  
   
 ### <a name="syntax"></a>Sintassi  
@@ -218,7 +213,7 @@ LONG AFXAPI AfxRegOpenKey(HKEY hKey, LPCTSTR lpSubKey, PHKEY phkResult, CAtlTran
 ### <a name="requirements"></a>Requisiti  
  **Intestazione:** afxpriv.h  
 
-## <a name="afxregopenkeyex"></a>AfxRegOpenKeyEx
+## <a name="afxregopenkeyex"></a>  AfxRegOpenKeyEx
 Apre la chiave del Registro di sistema. 
 
 ### <a name="syntax"></a>Sintassi  
@@ -252,7 +247,7 @@ LONG AFXAPI AfxRegOpenKeyEx(HKEY hKey, LPCTSTR lpSubKey, DWORD ulOptions, REGSAM
 ### <a name="requirements"></a>Requisiti  
  **Intestazione:** afxpriv.h  
 
- ## <a name="afxunregisterpreviewhandler"></a>AfxUnregisterPreviewHandler
+ ## <a name="afxunregisterpreviewhandler"></a> AfxUnregisterPreviewHandler
  Supporto per annullare la registrazione di un gestore di anteprima.  
   
 ### <a name="syntax"></a>Sintassi  
@@ -268,7 +263,7 @@ BOOL AFXAPI AfxUnRegisterPreviewHandler(LPCTSTR lpszCLSID);
 ### <a name="requirements"></a>Requisiti  
  **Intestazione:** afxdisp.h  
 
-## <a name="atlsetperuserregistration"></a>AtlSetPerUserRegistration
+## <a name="atlsetperuserregistration"></a> AtlSetPerUserRegistration
 Imposta se l'applicazione reindirizza l'accesso al registro per il **HKEY_CURRENT_USER** (**HKCU**) nodo.  
   
 ### <a name="syntax"></a>Sintassi  
@@ -279,10 +274,10 @@ ATLINLINE ATLAPI AtlSetPerUserRegistration(bool bEnable);
   
 ### <a name="parameters"></a>Parametri  
  [in] `bEnable`  
- `TRUE`indica che le informazioni del Registro di sistema viene indirizzate al **HKCU** nodo; `FALSE` indica che l'applicazione scrive le informazioni del Registro di sistema per il nodo predefinito. Il nodo di valore predefinito è **HKEY_CLASSES_ROOT** (**HKCR**).  
+ `TRUE` indica che le informazioni del Registro di sistema viene indirizzate per il **HKCU** nodo; `FALSE` indica che l'applicazione scrive le informazioni del Registro di sistema per il nodo predefinito. Il nodo di valore predefinito è **HKEY_CLASSES_ROOT** (**HKCR**).  
   
 ### <a name="return-value"></a>Valore restituito  
- `S_OK`Se il metodo ha esito positivo, in caso contrario il `HRESULT` codice di errore se si verifica un errore.  
+ `S_OK` Se il metodo ha esito positivo, in caso contrario il `HRESULT` codice di errore se si verifica un errore.  
   
 ### <a name="remarks"></a>Note  
  Reindirizzamento del Registro di sistema non è abilitato per impostazione predefinita. Se si abilita questa opzione, l'accesso al registro viene reindirizzato a **HKEY_CURRENT_USER\Software\Classes**.  
@@ -291,7 +286,7 @@ ATLINLINE ATLAPI AtlSetPerUserRegistration(bool bEnable);
 ### <a name="requirements"></a>Requisiti  
  **Intestazione:** atlbase. h  
 
-##  <a name="atlunregistertypelib"></a>AtlUnRegisterTypeLib  
+##  <a name="atlunregistertypelib"></a>  AtlUnRegisterTypeLib  
  Questa funzione viene chiamata per annullare la registrazione di una libreria dei tipi.  
   
 ### <a name="syntax"></a>Sintassi  
@@ -316,7 +311,7 @@ ATLAPI AtlUnRegisterTypeLib(
 ### <a name="requirements"></a>Requisiti  
  **Intestazione:** atlbase. h
 
-##  <a name="atlloadtypelib"></a>AtlLoadTypeLib  
+##  <a name="atlloadtypelib"></a>  AtlLoadTypeLib  
  Questa funzione viene chiamata per caricare una libreria dei tipi.  
   
 ### <a name="syntax"></a>Sintassi  
@@ -347,7 +342,7 @@ ATLINLINE ATLAPI AtlLoadTypeLib(
 ### <a name="remarks"></a>Note  
  Questa funzione di supporto usata da [AtlRegisterTypeLib](#atlregistertypelib) e [AtlUnRegisterTypeLib](#atlunregistertypelib).  
   
-##  <a name="atlupdateregistryfromresourced"></a>AtlUpdateRegistryFromResourceD  
+##  <a name="atlupdateregistryfromresourced"></a>  AtlUpdateRegistryFromResourceD  
  Questa funzione è stata deprecata in Visual Studio 2013 ed è stata rimossa in Visual Studio 2015.  
   
 ```
@@ -356,7 +351,7 @@ ATLINLINE ATLAPI AtlLoadTypeLib(
   
 
   
-##  <a name="registrydataexchange"></a>RegistryDataExchange  
+##  <a name="registrydataexchange"></a>  RegistryDataExchange  
  Questa funzione viene chiamata per leggere o scrivere nel Registro di sistema.  
 
 ### <a name="syntax"></a>Sintassi  
@@ -395,7 +390,7 @@ HRESULT RegistryDataExchange(
  **Intestazione:** atlbase. h
 
 ## <a name="see-also"></a>Vedere anche  
- [Funzioni](atl-functions.md) [macro di scambio di dati del Registro di sistema](registry-data-exchange-macros.md)
+ [Le funzioni](atl-functions.md) [macro di scambio di dati del Registro di sistema](registry-data-exchange-macros.md)
 
 
 

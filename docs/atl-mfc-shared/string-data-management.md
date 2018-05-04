@@ -2,28 +2,23 @@
 title: Gestione dei dati di stringa | Documenti Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-mfc
 ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - Unicode, string objects
 ms.assetid: 0b53a542-eeb1-4108-9ada-6700645b6f8f
-caps.latest.revision: 15
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ad7a17b1b34375fcb45019bcaf8878757288a290
-ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
+ms.openlocfilehash: acf14ebec5417179a94d0a6ffefdb473966f0c2e
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="string-data-management"></a>Gestione dei dati di tipo stringa
 Visual C++ fornisce diversi modi per gestire i dati di tipo stringa:  

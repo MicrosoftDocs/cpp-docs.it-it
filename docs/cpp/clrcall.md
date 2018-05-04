@@ -1,12 +1,9 @@
 ---
 title: clrcall | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - __clrcall_cpp
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - __clrcall keyword [C++]
 ms.assetid: 92096695-683a-40ed-bf65-0c8443572152
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d11211e90f0517c11213d7bdd2815c2f937fc79a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 02af89a99b78ba17e6c5a7463073d314ee8d2a03
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="clrcall"></a>__clrcall
 **Sezione specifica Microsoft**  
@@ -40,9 +35,9 @@ ms.lasthandoff: 12/21/2017
   
  Quando **/clr** (non **/clr: pure** o **/CLR: safe**) viene utilizzato e `__clrcall` non è utilizzato, richiede sempre l'indirizzo di una funzione restituisce l'indirizzo di ingresso nativo funzione di punto. Quando `__clrcall` viene utilizzato, la funzione nativa del punto di ingresso non viene creata, in questo modo si ottiene l'indirizzo della funzione gestita e non una funzione thunk di punto di ingresso. Per ulteriori informazioni, vedere [doppio thunk](../dotnet/double-thunking-cpp.md). Le opzioni del compilatore **/clr:pure** e **/clr:safe** sono deprecate in Visual Studio 2015.  
   
- [/CLR (compilazione common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md) implica che tutte le funzioni e i puntatori a funzione sono `__clrcall` e il compilatore non consente una funzione all'interno del modulo da contrassegnare qualsiasi elemento diverso da `__clrcall`. Quando **/clr: pure** viene utilizzato, `__clrcall` può essere specificato solo sui puntatori di funzione e dichiarazioni esterne.  
+ [/CLR (compilazione common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md) implica che tutti i puntatori a funzioni e le funzioni sono `__clrcall` e il compilatore non consente una funzione all'interno del modulo da contrassegnare qualsiasi elemento diverso da `__clrcall`. Quando **/clr: pure** viene utilizzato, `__clrcall` può essere specificato solo sui puntatori di funzione e dichiarazioni esterne.  
   
- È possibile chiamare direttamente `__clrcall` funzioni da codice C++ esistente che è stato compilato utilizzando **/clr** fino a quando tale funzione è un'implementazione MSIL. `__clrcall`funzioni non possono essere chiamate direttamente da funzioni che hanno l'assembly inline e chiamano intrinseci specifici della CPU, ad esempio, anche se tali funzioni vengono compilate con **/clr**.  
+ È possibile chiamare direttamente `__clrcall` funzioni da codice C++ esistente che è stato compilato utilizzando **/clr** fino a quando tale funzione è un'implementazione MSIL. `__clrcall` funzioni non possono essere chiamate direttamente da funzioni che hanno l'assembly inline e chiamano intrinseci specifici della CPU, ad esempio, anche se tali funzioni vengono compilate con **/clr**.  
   
  I puntatori a funzione`__clrcall` sono destinati ad essere utilizzati solo nel dominio dell'applicazione in cui sono stati creati.  Invece di passare i puntatori a funzione `__clrcall` tra i domini delle applicazioni, utilizzare <xref:System.CrossAppDomainDelegate>. Per ulteriori informazioni, vedere [domini applicazione e Visual C++](../dotnet/application-domains-and-visual-cpp.md).  
   

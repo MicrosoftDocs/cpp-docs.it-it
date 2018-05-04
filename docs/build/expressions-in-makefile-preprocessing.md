@@ -1,13 +1,10 @@
 ---
 title: Le espressioni nella pre-elaborazione di Makefile | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - expressions [C++], makefile preprocessing
 - makefiles, preprocessing
 ms.assetid: 37f0f413-97e0-452c-a83f-3c9002c44c92
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7bea4f0c4fea2c2d04681674734bc989424c7951
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 04a53e5e6fe45c2c846cae3fb9e973fe1c712107
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="expressions-in-makefile-preprocessing"></a>Espressioni nella pre-elaborazione di makefile
 Il **! Se** o **! ELSE IF** `constantexpression` composta costanti integer (in notazione decimale o in linguaggio C), le costanti di stringa o comandi. Utilizzare le parentesi per raggruppare le espressioni. Le espressioni utilizzano tipo C unsigned long integer aritmetici; i numeri sono nel formato a 32 bit in complemento a due nell'intervallo - 2147483648 e 2147483647.  

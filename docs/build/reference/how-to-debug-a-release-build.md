@@ -1,30 +1,25 @@
 ---
 title: 'Procedura: eseguire il Debug di una Build di rilascio | Documenti Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - debugging [C++], release builds
 - release builds, debugging
 ms.assetid: d333e4d1-4e6c-4384-84a9-cb549702da25
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 31113d9a5935536ac10b22c7b5f5af27b0d29970
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7e733375f01d4b2b8ec7090f7f70ad1ec5280cd9
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-debug-a-release-build"></a>Procedura: eseguire il debug di una build di rilascio
 È possibile eseguire il debug di una build di rilascio di un'applicazione.  

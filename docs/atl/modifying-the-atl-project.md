@@ -1,13 +1,10 @@
 ---
 title: Modifica il progetto ATL | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-atl
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - Dialog editor, working with composite controls
 - composite controls, adding controls
 ms.assetid: 59984518-748f-4b8b-875f-3e97d22d0b0f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7de670642e80a32158b84c739d7081ca02d483a4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0a8594c2d98b05750d6e43138101894fb8fc4b72
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="modifying-the-atl-project"></a>Modifica il progetto ATL
 A questo punto, il progetto di controllo composito implementa gli oggetti necessari per il controllo composito. Il passaggio successivo consiste nell'aggiungere tutti i controlli che conterrà il controllo composito e gestire gli eventi necessari.  

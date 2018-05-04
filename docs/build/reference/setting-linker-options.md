@@ -1,13 +1,10 @@
 ---
 title: Impostazione delle opzioni del Linker | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,24 +15,22 @@ helpviewer_keywords:
 - input files [C++]
 - object/library modules
 ms.assetid: e08fb487-0f2e-4f24-87db-232dbc8bd2e2
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8ba42921f1e192c90e302b437b9a7d1b4e5eb34e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 18728994be3f44152a263fb8a6009728e33a42a0
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="setting-linker-options"></a>Impostazione delle opzioni del linker
 All'interno o all'esterno dell'ambiente di sviluppo, è possono impostare le opzioni del linker. Questo argomento per ogni opzione del linker illustra come è possibile impostare nell'ambiente di sviluppo. Vedere [opzioni del Linker](../../build/reference/linker-options.md) per un elenco completo.  
   
  Quando si esegue collegamento all'esterno dell'ambiente di sviluppo, è possibile specificare l'input in uno o più modi:  
   
--   Nel [della riga di comando](../../build/reference/linker-command-line-syntax.md)  
+-   Nel [riga di comando](../../build/reference/linker-command-line-syntax.md)  
   
 -   Utilizzando [file di comando](../../build/reference/link-command-files.md)  
   

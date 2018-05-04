@@ -1,29 +1,24 @@
 ---
 title: Generazione di manifesti in Visual Studio | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - manifests [C++]
 ms.assetid: 0af60aa9-d223-42cd-8426-b3fc543a2a81
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3d701d73103ee2c5ac72eb36d9919132f0578b1b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 73b5cbe631d078dd6ee27b4f7e0a97503c36638b
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="manifest-generation-in-visual-studio"></a>Generazione di manifesti in Visual Studio
 La generazione di un file manifesto per un particolare progetto può essere controllata nel progetto **pagine delle proprietà** finestra di dialogo. Nel **le proprietà di configurazione** scheda, fare clic su **Linker**, quindi **File manifesto**, quindi **Genera manifesto**. Per impostazione predefinita, le proprietà del progetto di nuovi progetti sono per generare un file manifesto. Tuttavia è possibile disabilitare la generazione del manifesto per un progetto utilizzando il **Genera manifesto** proprietà del progetto. Quando questa proprietà è impostata su **Sì**, viene generato il manifesto per il progetto. In caso contrario il linker ignora le informazioni sull'assembly durante la risoluzione delle dipendenze del codice dell'applicazione e non genera il manifesto.  
@@ -43,7 +38,7 @@ La generazione di un file manifesto per un particolare progetto può essere cont
  Il manifesto è incorporato nel file binario finale come risorsa di testo e possono essere visualizzato aprendo il file binario finale come file in Visual Studio. Per verificare che il manifesto punti alle librerie corrette, seguire i passaggi descritti in [le dipendenze di un'applicazione Visual C++](../ide/understanding-the-dependencies-of-a-visual-cpp-application.md) o le indicazioni descritte nel [allarisoluzionedeiproblemi](../build/troubleshooting-c-cpp-isolated-applications-and-side-by-side-assemblies.md) sezione.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Procedura: incorporare un manifesto all'interno di un'applicazione C/C++](../build/how-to-embed-a-manifest-inside-a-c-cpp-application.md)   
- [Informazioni sugli assembly privato](http://msdn.microsoft.com/library/ff951638)   
+ [Procedura: incorporare un manifesto in un'applicazione C/C++](../build/how-to-embed-a-manifest-inside-a-c-cpp-application.md)   
+ [Informazioni sugli assembly privati](http://msdn.microsoft.com/library/ff951638)   
  [Strumento manifesto](http://msdn.microsoft.com/library/aa375649)   
  [Informazioni sulla generazione di manifesti per programmi C/C++](../build/understanding-manifest-generation-for-c-cpp-programs.md)

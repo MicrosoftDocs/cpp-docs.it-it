@@ -1,12 +1,9 @@
 ---
 title: Overload dell'operatore | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - operator_cpp
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - operators [C++], overloading
 - operator overloading
 ms.assetid: 56ad4c4f-dd0c-45e0-adaa-08fe98cb1f8e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 617236d30f3c4473f6c7785db97789105d6cd565
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7c7e80167c2022d5871d52879036dc9fef0d29f2
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="operator-overloading"></a>Overload degli operatori
 La parola chiave `operator` dichiara una funzione che specifica il significato di `operator-symbol` quando viene applicato a istanze di una classe. In tal modo è possibile assegnare più significati all'operatore, che diventa quindi operatore di overload. Il compilatore distingue tra i diversi significati di un operatore esaminando i tipi degli operandi.  
@@ -116,7 +111,7 @@ type operator operator-symbol ( parameter-list )
   
 -   [Incremento e decremento](../cpp/increment-and-decrement-operator-overloading-cpp.md).  
   
--   [Conversioni di tipo definito dall'utente](../cpp/user-defined-type-conversions-cpp.md)  
+-   [Conversioni di tipo definite dall'utente](../cpp/user-defined-type-conversions-cpp.md)  
   
  Gli operatori elencati nella tabella seguente non possono essere sottoposti a overload. La tabella include i simboli del preprocessore `#` e `##`.  
   

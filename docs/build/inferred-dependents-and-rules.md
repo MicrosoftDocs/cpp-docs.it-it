@@ -1,13 +1,10 @@
 ---
 title: Dedurre dipendenti e le regole | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,26 +13,24 @@ helpviewer_keywords:
 - inferred rules in NMAKE
 - dependents, inferred
 ms.assetid: 9381e74a-53d9-445c-836d-0ff7ef6112d9
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fe7c49607f466d8fd1d333883414b24d7837432b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: aae09fd756e0eb4eab3031beb5b4cba8c4d35a40
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="inferred-dependents-and-rules"></a>Dipendenti dedotti e regole
 NMAKE presuppone un dipendente dedotto per una destinazione se esiste una regola di inferenza è applicabile. Una regola viene applicata se:  
   
--   *toext* corrisponde all'estensione della destinazione.  
+-   *toext* corrisponda a quella del database di destinazione.  
   
--   *fromext* corrispondenze l'estensione di un file con nome di base del database di destinazione e che si trova nella directory correnti o specificate.  
+-   *fromext* corrispondenze l'estensione di un file con nome di base del database di destinazione e che esiste nella directory correnti o specificate.  
   
--   *fromext* in [. SUFFISSI](../build/dot-directives.md); nessun altro *fromext* in una regola di corrispondenza è un valore più alto **. SUFFISSI** priorità.  
+-   *fromext* è in [. SUFFISSI](../build/dot-directives.md); nessun altro *fromext* in una regola di corrispondenza è un valore più alto **. SUFFISSI** priorità.  
   
 -   Nessun dipendente esplicito ha un valore più alto **. SUFFISSI** priorità.  
   

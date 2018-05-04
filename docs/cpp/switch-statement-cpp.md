@@ -1,12 +1,9 @@
 ---
 title: Istruzione switch (C++) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - default_cpp
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - case keyword [C++], in switch statements
 - default keyword [C++]
 ms.assetid: 6c3f3ed3-5593-463c-8f4b-b33742b455c6
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e668756e8cabafbdef522d6754487efe452f96de
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5cea2c7e4bff895f9ccabc044ed5b7f5ae506b32
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="switch-statement-c"></a>Istruzione switch (C++)
 Consente la selezione tra più sezioni di codice, in base al valore di un'espressione integrale.  
@@ -90,7 +85,7 @@ int main() {
   
  Nell'esempio precedente `capa` viene incrementato se `c` è una `A` maiuscola. L'istruzione `break` dopo `capa++` termina l'esecuzione del corpo dell'istruzione `switch` e il controllo passa al ciclo `while`. Senza il `break` istruzione esecuzione sarebbe "passaggio" alla successiva istruzione con etichetta, in modo che `lettera` e `nota` potrebbe anche essere incrementato. Uno scopo simile viene utilizzato dall'istruzione `break` per `case 'a'`. Se `c` è una `a` minuscola, `lettera` viene incrementata e l'istruzione `break` termina il corpo dell'istruzione `switch`. Se `c` non è `a` o `A`, l'istruzione `default` viene eseguita.  
 
- **Visual Studio 2017 e versioni successiva:** (disponibile con [/std:c + + 17](../build/reference/std-specify-language-standard-version.md)) il `[[fallthrough]]` attributo viene specificato il 17 C++ standard. E può essere utilizzato un `switch` istruzione come un suggerimento al compilatore (o a chiunque legga il codice) è destinato questo comportamento del passaggio. Il compilatore Visual C++ attualmente non avvisa in caso di fallthrough comportamento, in modo da questo attributo non è il comportamento del compilatore alcun effetto. Si noti che l'attributo viene applicato a un'istruzione vuota all'interno dell'istruzione con etichetta; in altre parole il punto e virgola è necessario.
+ **Visual Studio 2017 e versioni successiva:** (disponibile con [/std:c + + 17](../build/reference/std-specify-language-standard-version.md)) il `[[fallthrough]]` attributo viene specificato il c++17 standard. E può essere utilizzato un `switch` istruzione come un suggerimento al compilatore (o a chiunque legga il codice) è destinato questo comportamento del passaggio. Il compilatore Visual C++ attualmente non avvisa in caso di fallthrough comportamento, in modo da questo attributo non è il comportamento del compilatore alcun effetto. Si noti che l'attributo viene applicato a un'istruzione vuota all'interno dell'istruzione con etichetta; in altre parole il punto e virgola è necessario.
 
 ```cpp
 int main()

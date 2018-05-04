@@ -2,11 +2,8 @@
 title: Classe CA2CAEX | Documenti Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CA2CAEX
@@ -18,17 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - CA2CAEX class
 ms.assetid: 388e7c1d-a144-474c-a182-b15f69a74bd8
-caps.latest.revision: 20
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f579716cff70d0c9f20ea0fa0133dcb4d86c8db3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8aa16122a1cb3a5f8378397363a45cd28ddaef6d
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ca2caex-class"></a>Classe CA2CAEX
 Questa classe è utilizzata dalla macro di conversione di stringhe `CA2CTEX` e `CT2CAEX`e typedef **CA2CA**.  
@@ -91,7 +86,7 @@ class CA2CAEX
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** atlconv. h  
   
-##  <a name="ca2caex"></a>CA2CAEX::CA2CAEX  
+##  <a name="ca2caex"></a>  CA2CAEX::CA2CAEX  
  Costruttore.  
   
 ```
@@ -109,7 +104,7 @@ CA2CAEX(LPCSTR psz) throw(...);
 ### <a name="remarks"></a>Note  
  Crea il buffer necessario per la traduzione.  
   
-##  <a name="dtor"></a>CA2CAEX:: ~ CA2CAEX  
+##  <a name="dtor"></a>  CA2CAEX:: ~ CA2CAEX  
  Distruttore.  
   
 ```
@@ -119,14 +114,14 @@ CA2CAEX(LPCSTR psz) throw(...);
 ### <a name="remarks"></a>Note  
  Consente di liberare il buffer allocato.  
   
-##  <a name="m_psz"></a>CA2CAEX::m_psz  
+##  <a name="m_psz"></a>  CA2CAEX::m_psz  
  Il membro dati che archivia la stringa di origine.  
   
 ```
 LPCSTR m_psz;
 ```  
   
-##  <a name="operator_lpcstr"></a>CA2CAEX::operator LPCSTR  
+##  <a name="operator_lpcstr"></a>  CA2CAEX::operator LPCSTR  
  Operatore di conversione.  
   
 ```  

@@ -1,12 +1,9 @@
 ---
 title: 'Operatori di addizione: + e - | Documenti Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - +
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - arithmetic operators [C++], additive operators
 - '- operator [C++], additive operators in C++'
 ms.assetid: d4afafe7-e201-4c69-a649-37f17756e784
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d1096565843cfe150530a825254e9ad6c24b5ec8
-ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
+ms.openlocfilehash: 5f265bf915d9ba0c984b85235bd502d6ea0a5a77
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="additive-operators--and--"></a>Operatori di addizione: + e -
 ## <a name="syntax"></a>Sintassi  
@@ -60,7 +55,7 @@ expression - expression
 |----------|-------------|  
 |*arithmetic*|I tipi integrali e mobili collettivamente sono denominati tipi "aritmetici".|  
 |*integral*|I tipi char e int di tutte le dimensioni (long e short) e le enumerazioni sono tipi "integrali".|  
-|*scalar*|Gli operandi scalari sono operandi di tipo aritmetico o di tipo puntatore.|  
+|*scalare*|Gli operandi scalari sono operandi di tipo aritmetico o di tipo puntatore.|  
   
  Le combinazioni valide per questi operatori sono:  
   
@@ -121,7 +116,7 @@ for( int i = 0; i < 10; ++i )
 ## <a name="pointer-subtraction"></a>Sottrazione di puntatori  
  Se entrambi gli operandi sono puntatori, il risultato di una sottrazione è la differenza (in elementi di matrice) tra gli operandi. L'espressione di sottrazione restituisce un risultato integrale con segno di tipo ptrdiff_t (definito nel file di inclusione standard \<STDDEF. h >).  
   
- Uno degli operandi può essere di tipo integrale purché sia il secondo operando. Il risultato della sottrazione è dello stesso tipo del puntatore originale. Il valore della sottrazione è un puntatore al (*n* - *si*) elemento di matrice th, in cui  *n*  è l'elemento a cui fa riferimento il puntatore originale e *si* è il valore integrale del secondo operando.  
+ Uno degli operandi può essere di tipo integrale purché sia il secondo operando. Il risultato della sottrazione è dello stesso tipo del puntatore originale. Il valore della sottrazione è un puntatore al (*n* - *si*) elemento della matrice th, dove *n* è l'elemento a cui punta il puntatore originale e il *si* è il valore integrale del secondo operando.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Espressioni con operatori binari](../cpp/expressions-with-binary-operators.md)   

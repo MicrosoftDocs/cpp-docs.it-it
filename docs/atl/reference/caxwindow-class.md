@@ -1,12 +1,9 @@
 ---
 title: Classe CAxWindow | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CAxWindow
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - CAxWindow class
 - ATL, hosting ActiveX controls
 ms.assetid: 85e79261-43e4-4770-bde0-1ff87f222b0f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8848e8ecf85b073032561e2db52a0db1889911e6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 052e7ad2bfa8cc03c4eadd4926dbd84c4fd60223
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="caxwindow-class"></a>Classe CAxWindow
 Questa classe fornisce metodi per la modifica di una finestra di hosting di controlli ActiveX.  
@@ -83,7 +78,7 @@ class CAxWindow : public CWindow
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** atlwin. h  
   
-##  <a name="attachcontrol"></a>CAxWindow::AttachControl  
+##  <a name="attachcontrol"></a>  CAxWindow::AttachControl  
  Crea un nuovo oggetto host se non è già presente e associa il controllo specificato nell'host.  
   
 ```
@@ -105,7 +100,7 @@ HRESULT AttachControl(
 ### <a name="remarks"></a>Note  
  Dell'oggetto di controllo associato deve essere correttamente inizializzato prima di chiamare `AttachControl`.  
   
-##  <a name="caxwindow"></a>CAxWindow::CAxWindow  
+##  <a name="caxwindow"></a>  CAxWindow::CAxWindow  
  Costruisce un `CAxWindow` utilizzando un handle dell'oggetto finestra esistente.  
   
 ```
@@ -116,7 +111,7 @@ CAxWindow(HWND hWnd = NULL);
  `hWnd`  
  Un handle a un oggetto finestra esistente.  
   
-##  <a name="createcontrol"></a>CAxWindow::CreateControl  
+##  <a name="createcontrol"></a>  CAxWindow::CreateControl  
  Crea un controllo ActiveX, lo inizializza e lo ospita nella finestra specificata.  
   
 ```
@@ -172,7 +167,7 @@ HRESULT CreateControl(
 ### <a name="example"></a>Esempio  
  Vedere [Hosting ActiveX controlli tramite ATL AXHost](../../atl/hosting-activex-controls-using-atl-axhost.md) per un esempio che utilizza `CreateControl`.  
   
-##  <a name="createcontrolex"></a>CAxWindow::CreateControlEx  
+##  <a name="createcontrolex"></a>  CAxWindow::CreateControlEx  
  Crea un controllo ActiveX, lo inizializza e lo ospita nella finestra specificata.  
   
 ```
@@ -239,7 +234,7 @@ HRESULT CreateControlEx(
 ### <a name="example"></a>Esempio  
  Vedere [Hosting ActiveX controlli tramite ATL AXHost](../../atl/hosting-activex-controls-using-atl-axhost.md) per un esempio che utilizza `CreateControlEx`.  
   
-##  <a name="getwndclassname"></a>CAxWindow::GetWndClassName  
+##  <a name="getwndclassname"></a>  CAxWindow::GetWndClassName  
  Recupera il nome della classe della finestra.  
   
 ```
@@ -249,7 +244,7 @@ static LPCTSTR GetWndClassName();
 ### <a name="return-value"></a>Valore restituito  
  Un puntatore a una stringa contenente il nome della classe della finestra che può ospitare controlli ActiveX in licenza.  
   
-##  <a name="operator_eq"></a>CAxWindow::operator =  
+##  <a name="operator_eq"></a>  CAxWindow::operator =  
  Assegna un `HWND` esistente `CAxWindow` oggetto.  
   
 ```
@@ -263,7 +258,7 @@ CAxWindow<TBase>& operator=(HWND hWnd);
 ### <a name="return-value"></a>Valore restituito  
  Restituisce un riferimento all'oggetto `CAxWindow` corrente.  
   
-##  <a name="querycontrol"></a>CAxWindow:: QueryControl  
+##  <a name="querycontrol"></a>  CAxWindow:: QueryControl  
  Recupera l'interfaccia specificata del controllo ospitato.  
   
 ```
@@ -285,7 +280,7 @@ HRESULT QueryControl(Q** ppUnk);
 ### <a name="return-value"></a>Valore restituito  
  Un valore `HRESULT` standard.  
   
-##  <a name="queryhost"></a>CAxWindow:: QueryHost  
+##  <a name="queryhost"></a>  CAxWindow:: QueryHost  
  Restituisce l'interfaccia dell'host specificato.  
   
 ```
@@ -310,7 +305,7 @@ HRESULT QueryHost(Q** ppUnk);
 ### <a name="remarks"></a>Note  
  L'interfaccia dell'host consente l'accesso per la funzionalità sottostante del codice finestra di hosting, implementata da **AxWin**.  
   
-##  <a name="setexternaldispatch"></a>CAxWindow::SetExternalDispatch  
+##  <a name="setexternaldispatch"></a>  CAxWindow::SetExternalDispatch  
  Imposta l'interfaccia dispatch esterna per il `CAxWindow` oggetto.  
   
 ```
@@ -324,7 +319,7 @@ HRESULT SetExternalDispatch(IDispatch* pDisp);
 ### <a name="return-value"></a>Valore restituito  
  Un valore `HRESULT` standard.  
   
-##  <a name="setexternaluihandler"></a>CAxWindow::SetExternalUIHandler  
+##  <a name="setexternaluihandler"></a>  CAxWindow::SetExternalUIHandler  
  Imposta esterno [IDocHostUIHandlerDispatch](../../atl/reference/idochostuihandlerdispatch-interface.md) interfaccia per il `CAxWindow` oggetto.  
   
 ```

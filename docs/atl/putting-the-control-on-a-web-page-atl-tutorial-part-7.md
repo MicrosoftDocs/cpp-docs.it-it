@@ -1,27 +1,22 @@
 ---
 title: Inserimento del controllo in una pagina Web (ATL Tutorial, parte 7) | Documenti Microsoft
-ms.custom: 
+ms.custom: get-started-article
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: get-started-article
+- cpp-atl
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 50dc4c95-c95b-4006-b88a-9826f7bdb222
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 523086c70d9f974c014f5d33a71bf9309b8e017d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0cd4076ac34af6ee4b19687f401376265bf0e872
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="putting-the-control-on-a-web-page-atl-tutorial-part-7"></a>Inserimento del controllo in una pagina Web (Esercitazione di ATL, parte 7)
 Il controllo è terminato. Per visualizzare il controllo funziona in una situazione reale, inserirlo in una pagina Web. Un file HTML che contiene il controllo è stato creato al momento di definire il controllo. Aprire il file PolyCtl da **Esplora**, ed è possibile visualizzare il controllo in una pagina Web.  

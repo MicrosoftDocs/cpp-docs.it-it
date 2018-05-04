@@ -1,12 +1,9 @@
 ---
 title: unhook | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - __unhook
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - event handlers [C++], dissociating events
 - __unhook keyword [C++]
 ms.assetid: 953a14f3-5199-459d-81e5-fcf015a19878
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1513391aedf9a08cd1ece971d79fd5f6913d406d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b95ff49c9b1f088ac38ffb0791f18f249b211e72
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="unhook"></a>__unhook
 Dissocia un metodo del gestore da un evento.  
@@ -52,7 +47,7 @@ long  __unhook(
 ```  
   
 #### <a name="parameters"></a>Parametri  
- **&***SourceClass* `::` *EventMethod*  
+ **&** *SourceClass* `::` *EventMethod*  
  Puntatore al metodo dell'evento da cui eseguire l'unhook del metodo del gestore eventi:  
   
 -   Eventi C++ nativi: *SourceClass* è la classe di origine evento e *EventMethod* è l'evento.  
@@ -64,7 +59,7 @@ long  __unhook(
  `interface`  
  Il nome dell'interfaccia è sottoposto ad unhook da `receiver`, solo per i ricevitori di eventi COM in cui il *layout_dependent* parametro del [event_receiver](../windows/event-receiver.md) attributo **true**.  
   
- *origine*  
+ *Origine*  
  Puntatore a un'istanza dell'origine evento. A seconda del codice `type` specificato in **event_receiver**, *origine* può essere uno dei seguenti:  
   
 -   Un puntatore a un oggetto di origine dell'evento nativo.  
@@ -73,7 +68,7 @@ long  __unhook(
   
 -   Un puntatore a un oggetto gestito (per gli eventi gestiti).  
   
- **&***ReceiverClass* `::``HandlerMethod`  
+ **&** *ReceiverClass* `::` `HandlerMethod`  
  Puntatore al metodo del gestore eventi per cui eseguire l'unhook da un evento. Il gestore viene specificato come metodo di una classe o come un riferimento alla stessa; se non si specifica il nome della classe, `__unhook` presuppone che la classe sia la stessa nella quale viene chiamato.  
   
 -   Eventi C++ nativi: *ReceiverClass* è la classe del ricevitore di eventi e `HandlerMethod` è il gestore.  

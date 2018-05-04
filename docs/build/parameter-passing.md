@@ -2,33 +2,28 @@
 title: Passaggio dei parametri | Documenti Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: e838ee5f-c2fe-40b0-9a23-8023c949c820
-caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0359a6cbbb1f646432b03722cdf4ba3010cffa72
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5ec0c5b6fe00430c8b08fefdd8781b677004085e
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="parameter-passing"></a>Passaggio dei parametri
 I primi quattro argomenti integer vengono passati nei registri. I valori interi vengono passati (in ordine da sinistra a destra) in RCX, RDX, R8 e R9. Argomenti 5 e versioni successive vengono passati nello stack. Tutti gli argomenti sono giustificati a destra nei registri. In questo modo il chiamato può ignorare i bit superiori del registro, se necessario e può accedere solo la parte del registro necessaria.  
   
  Gli argomenti a virgola mobile e precisione doppia vengono passati in XMM0 - XMM3 (fino a 4) con lo slot di integer (ovvero RCX, RDX, R8 e R9) che in genere utilizzato per lo slot cardinale da ignorato (vedere l'esempio) e viceversa.  
   
- [m128](../cpp/m128.md) tipi, le matrici e le stringhe non vengono mai passate per valore immediato, ma invece viene passato un puntatore alla memoria allocata dal chiamante. Le strutture o unioni di dimensioni di 8, 16, 32 o 64 bit a e m64 vengono passate come se fossero interi delle stesse dimensioni. Le strutture o unioni diverso da queste dimensioni vengono passate come un puntatore alla memoria allocata dal chiamante. Per questi tipi di aggregazione passata come un puntatore (inclusi \_m128), la memoria temporanea allocata dal chiamante verrà allineata a 16 byte.  
+ [__m128](../cpp/m128.md) tipi, le matrici e le stringhe non vengono passate per valore immediato, ma piuttosto viene passato un puntatore alla memoria allocata dal chiamante. Le strutture o unioni di dimensioni di 8, 16, 32 o 64 bit a e m64 vengono passate come se fossero interi delle stesse dimensioni. Le strutture o unioni diverso da queste dimensioni vengono passate come un puntatore alla memoria allocata dal chiamante. Per questi tipi di aggregazione passata come un puntatore (inclusi \_m128), la memoria temporanea allocata dal chiamante verrà allineata a 16 byte.  
   
  Funzioni intrinseche che non si allocano spazio dello stack e non chiamano altre funzioni è possono utilizzare altri registri volatili per passare gli argomenti di registro aggiuntivi, poiché non esiste una stretta associazione tra il compilatore e l'implementazione di una funzione intrinseca. Si tratta di un'ulteriore opportunità per migliorare le prestazioni.  
   

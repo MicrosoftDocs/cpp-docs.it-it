@@ -1,30 +1,25 @@
 ---
 title: 'Procedura dettagliata: Creare e usare la propria libreria a collegamento dinamico (C++) | Documenti Microsoft'
-ms.custom: 
+ms.custom: conceptual
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: get-started-article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - libraries [C++], DLLs
 - DLLs [C++], walkthroughs
 ms.assetid: 3ae94848-44e7-4955-bbad-7d40f493e941
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bdcc02cf7c86b85684df0e8d8b7a1f0049ff7e25
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 19c9c013d591f4c6de14ecd4a2c582d8f0f3e4d3
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="walkthrough-create-and-use-your-own-dynamic-link-library-c"></a>Procedura dettagliata: Creare e usare la propria libreria a collegamento dinamico (C++)
 
@@ -78,7 +73,7 @@ In questo set di attività, creare un progetto per la DLL, aggiungere il codice 
 
 1. Nel **progetto Desktop di Windows** procedura guidata, in **tipo di applicazione**selezionare **libreria a collegamento dinamico (DLL)**.
 
-   ![Creare una DLL nella creazione guidata progetto Desktop di Windows](media/mathlibrary-desktop-project-wizard-dll.png "creare DLL nella creazione guidata progetto Desktop di Windows")
+   ![Crea DLL nella creazione guidata progetto Desktop di Windows](media/mathlibrary-desktop-project-wizard-dll.png "creare DLL nella creazione guidata progetto Desktop di Windows")
 
 1. Scegliere il pulsante **OK** per creare il progetto.
 
@@ -89,7 +84,7 @@ In questo set di attività, creare un progetto per la DLL, aggiungere il codice 
 >
 >1. Sulla barra dei menu scegliere **Progetto**, **Proprietà**.
 >
->1. Nel riquadro sinistro della finestra di **pagine delle proprietà** nella finestra di dialogo **preprocessore** in **le proprietà di configurazione**, **C/C++**. Verificare i contenuti del **definizioni preprocessore** proprietà.<br/><br/>![Controllare la proprietà definizioni preprocessore](media/mathlibrary-153bug-preprocessor-definitions-check.png "controllare la proprietà definizioni preprocessore")<br/><br/>Se viene visualizzato **MATHLIBRARY &#95; ESPORTAZIONI** nel **definizioni preprocessore** elenco, quindi non è necessario apportare alcuna modifica. Se viene visualizzato **MathLibrary &#95; ESPORTAZIONI** , invece, quindi continuare a eseguire la procedura seguente.
+>1. Nel riquadro sinistro della finestra di **pagine delle proprietà** nella finestra di dialogo **preprocessore** in **le proprietà di configurazione**, **C/C++**. Verificare i contenuti del **definizioni preprocessore** proprietà.<br/><br/>![Controllare la proprietà definizioni preprocessore](media/mathlibrary-153bug-preprocessor-definitions-check.png "controllare la proprietà definizioni preprocessore")<br/><br/>Se viene visualizzato **MATHLIBRARY&#95;esportazioni** nel **definizioni preprocessore** elenco, quindi non è necessaria alcuna modifica. Se viene visualizzato **MathLibrary&#95;esportazioni** , quindi continuare a seguire questi passaggi.
 >
 >1. Nella parte superiore del **pagine delle proprietà** finestra di dialogo Modifica il **configurazione** elenco a discesa per **tutte le configurazioni**.
 >
@@ -103,17 +98,17 @@ In questo set di attività, creare un progetto per la DLL, aggiungere il codice 
 
 1. Nella barra dei menu scegliere **File**, **Nuovo**, **Progetto**.
 
-1. Nel riquadro a sinistra del **nuovo progetto** finestra di dialogo espandere **installato**, **modelli**e selezionare **Visual C++**e quindi al centro riquadro, selezionare **applicazione Console Win32**. Immettere `MathLibrary` nel **nome** casella di testo per specificare un nome per il progetto.
+1. Nel riquadro a sinistra del **nuovo progetto** finestra di dialogo espandere **installato**, **modelli**e selezionare **Visual C++** e quindi al centro riquadro, selezionare **applicazione Console Win32**. Immettere `MathLibrary` nel **nome** casella di testo per specificare un nome per il progetto.
 
    ![Denominare il progetto MathLibrary](media/mathlibrary-project-name.png "denominare il progetto MathLibrary")
 
 1. Scegliere il **OK** per chiudere la **nuovo progetto** finestra di dialogo e avviare il **Creazione guidata applicazione Win32**.
 
-   ![Panoramica di creazione guidata applicazione Win32](media/mathlibrary-project-wizard-1.png "Panoramica di creazione guidata applicazione Win32")
+   ![Cenni preliminari sulla creazione guidata applicazione Win32](media/mathlibrary-project-wizard-1.png "Cenni preliminari sulla creazione guidata applicazione Win32")
 
 1. Fare clic su **Avanti**. Nel **le impostazioni dell'applicazione** pagina **tipo di applicazione**selezionare **DLL**.
 
-   ![Creare una DLL nella creazione guidata applicazione Win32](media/mathlibrary-project-wizard-2.png "creare DLL nella creazione guidata applicazione Win32")
+   ![Crea DLL nella creazione guidata applicazione Win32](media/mathlibrary-project-wizard-2.png "creare DLL in Creazione guidata applicazione Win32")
 
 1. Scegliere il pulsante **Fine** per creare il progetto.
 
@@ -176,9 +171,9 @@ Destra a questo punto, la DLL non serve a molto. È quindi necessario creare un 
 
 Questo file di intestazione dichiara alcune funzioni per produrre una sequenza di Fibonacci generalizzata, determinati due valori iniziali. Una chiamata a `fibonacci_init(1, 1)` genera la sequenza di numero di Fibonacci familiarità.
 
-Notare le istruzioni del preprocessore nella parte superiore del file. Per impostazione predefinita, il modello di progetto per una DLL aggiunge  ***PROJECTNAME*&#95; ESPORTAZIONI** per le macro del preprocessore definite per il progetto DLL. In questo esempio, Visual Studio definisce **MATHLIBRARY &#95; ESPORTAZIONI** quando viene compilato il progetto di DLL MathLibrary. (La procedura guidata in Visual Studio 2017 versione 15.3 non impone tale definizione in lettere maiuscole. Il nome del progetto "MathLibrary" quindi il simbolo definito è MathLibrary &#95; ESPORTAZIONI anziché MATHLIBRARY &#95; ESPORTA. That's perché sono presenti ulteriori passaggi precedenti per aggiungere questo simbolo.)
+Notare le istruzioni del preprocessore nella parte superiore del file. Per impostazione predefinita, il modello di progetto per una DLL aggiunge ***PROJECTNAME *&#95;esportazioni** per le macro del preprocessore definite per il progetto DLL. In questo esempio, Visual Studio definisce **MATHLIBRARY&#95;esportazioni** quando viene compilato il progetto DLL MathLibrary. (La procedura guidata in Visual Studio 2017 versione 15.3 non impone tale definizione in lettere maiuscole. Se si denominare il progetto "MathLibrary", il simbolo definito è MathLibrary&#95;esportazioni anziché MATHLIBRARY&#95;le esportazioni. That's perché sono presenti ulteriori passaggi precedenti per aggiungere questo simbolo.)
 
-Quando il **MATHLIBRARY &#95; ESPORTAZIONI** macro viene definita, il **MATHLIBRARY &#95; API** set di macro di `__declspec(dllexport)` modificatore nelle dichiarazioni della funzione. Questo modificatore indica al compilatore e nel linker per esportare una funzione o una variabile dalla DLL in modo che può essere utilizzato da altre applicazioni. Quando **MATHLIBRARY &#95; ESPORTAZIONI** è definito, ad esempio, quando il file di intestazione è incluso da un'applicazione client, **MATHLIBRARY &#95; API** si applica il `__declspec(dllimport)` modificatore per le dichiarazioni. Questo modificatore Ottimizza l'importazione della funzione o variabile in un'applicazione. Per ulteriori informazioni, vedere [dllexport, dllimport](../cpp/dllexport-dllimport.md).
+Quando il **MATHLIBRARY&#95;esportazioni** macro viene definita, il **MATHLIBRARY&#95;API** macro imposta il `__declspec(dllexport)` modificatore nelle dichiarazioni della funzione. Questo modificatore indica al compilatore e nel linker per esportare una funzione o una variabile dalla DLL in modo che può essere utilizzato da altre applicazioni. Quando si **MATHLIBRARY&#95;esportazioni** non è definito, ad esempio, quando il file di intestazione è incluso da un'applicazione client, **MATHLIBRARY&#95;API** si applica la `__declspec(dllimport)` modificatore per il dichiarazioni. Questo modificatore Ottimizza l'importazione della funzione o variabile in un'applicazione. Per ulteriori informazioni, vedere [dllexport, dllimport](../cpp/dllexport-dllimport.md).
 
 ### <a name="to-add-an-implementation-to-the-dll"></a>Per aggiungere un'implementazione della DLL
 
@@ -355,7 +350,7 @@ Questo codice può essere compilato, ma non collegato, poiché il linker non è 
 
 1. Nel **dipendenze aggiuntive** finestra di dialogo, aggiungere `MathLibrary.lib` all'elenco nella parte superiore di controllo di modifica.
 
-   ![Aggiungere la dipendenza della libreria](media/mathclient-additional-dependencies.png "aggiunge la dipendenza della libreria")
+   ![Aggiungere la dipendenza della libreria](media/mathclient-additional-dependencies.png "aggiungere la dipendenza della libreria")
 
 1. Scegliere **OK** per tornare al **pagine delle proprietà** la finestra di dialogo.
 
@@ -367,7 +362,7 @@ Questo codice può essere compilato, ma non collegato, poiché il linker non è 
 
    `..\..\MathLibrary\$(IntDir)`
 
-   ![Aggiungere la directory delle librerie](media/mathclient-additional-library-directories.png "aggiungere la directory di libreria")
+   ![Aggiungere la directory delle librerie](media/mathclient-additional-library-directories.png "aggiungere la directory delle librerie")
 
 1. Dopo aver immesso il percorso del file di libreria nel **Directory librerie aggiuntive** finestra di dialogo scegliere la **OK** pulsante per tornare al **pagine delle proprietà** la finestra di dialogo.
 

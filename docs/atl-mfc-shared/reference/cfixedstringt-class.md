@@ -1,12 +1,9 @@
 ---
 title: Classe CFixedStringT | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CFixedStringT
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - CFixedStringT class
 - shared classes, CFixedStringT
 ms.assetid: 6d4171ba-3104-493a-a6cc-d515f4ba9a4b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3f66749272649fe230b31e770a175e0b94441b90
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 93125d15be32a95d71c763f476fad700dab65a3b
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cfixedstringt-class"></a>CFixedStringT (classe)
 Questa classe rappresenta un oggetto stringa con un buffer di caratteri predefinito.  
@@ -68,7 +63,7 @@ class CFixedStringT : private CFixedStringMgr, public StringType
   
 -   Il buffer di caratteri per un `CFixedStringT` oggetto è sempre la stessa lunghezza ( *t_nChars*). Non sussiste alcuna limitazione sulla dimensione del buffer per `CStringT` oggetti.  
   
--   Il gestore della memoria per `CFixedStringT` personalizzato in modo che la condivisione di un [CStringData](../../atl-mfc-shared/reference/cstringdata-class.md) oggetto tra due o più `CFixedStringT` objectsis non consentito. `CStringT`gli oggetti non viene applicata questa limitazione.  
+-   Il gestore della memoria per `CFixedStringT` personalizzato in modo che la condivisione di un [CStringData](../../atl-mfc-shared/reference/cstringdata-class.md) oggetto tra due o più `CFixedStringT` objectsis non consentito. `CStringT` gli oggetti non viene applicata questa limitazione.  
   
  Per ulteriori informazioni sulla personalizzazione di `CFixedStringT` e gestione della memoria per oggetti stringa in generale, vedere [gestione della memoria e CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md).  
   
@@ -84,7 +79,7 @@ class CFixedStringT : private CFixedStringMgr, public StringType
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** CStringT. h  
   
-##  <a name="cfixedstringt"></a>CFixedStringT::CFixedStringT  
+##  <a name="cfixedstringt"></a>  CFixedStringT::CFixedStringT  
  Costruisce un oggetto `CFixedStringT`.  
   
 ```
@@ -110,7 +105,7 @@ explicit CFixedStringT(const unsigned char* psz);
 ### <a name="remarks"></a>Note  
  Poiché i costruttori di copiano i dati di input in nuova risorsa di archiviazione allocato, è necessario essere consapevoli che possono comportare eccezioni di memoria. Si noti che alcuni di questi costruttori fungono da funzioni di conversione.  
   
-##  <a name="operator__eq"></a>CFixedStringT::operator =  
+##  <a name="operator__eq"></a>  CFixedStringT::operator =  
  Reinizializza esistente `CFixedStringT` oggetto con i nuovi dati.  
   
 ```

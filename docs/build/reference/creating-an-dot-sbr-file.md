@@ -2,12 +2,9 @@
 title: Creazione di un. File SBR | Documenti Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,24 +15,22 @@ helpviewer_keywords:
 - local symbols in browse information
 - symbols
 ms.assetid: bdb4b93c-a88a-441a-84fd-01087d03be25
-caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d87b71daaf5d7b37e67c2c0e56e844bd5251a490
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bdada1f4d07d02988da388e39e332c832f633adb
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="creating-an-sbr-file"></a>Creazione di un file SBR
 I file di input per BSCMAKE sono file SBR. Il compilatore crea un file sbr per ogni file oggetto (obj), che la compilazione. Quando si compila o aggiornamento del file di informazioni di visualizzazione, tutti i file sbr per il progetto devono essere disponibili su disco.  
   
  Per creare un file sbr con tutte le informazioni possibili, specificare [/FR](../../build/reference/fr-fr-create-dot-sbr-file.md).  
   
- Per creare un file sbr che non contiene simboli locali, specificare [/Fr](../../build/reference/fr-fr-create-dot-sbr-file.md). Se i file SBR contengono simboli locali, è comunque possibile ometterli dal file BSC usando BSCMAKE [/El (opzione)](../../build/reference/bscmake-options.md)`.`  
+ Per creare un file sbr che non contiene simboli locali, specificare [/Fr](../../build/reference/fr-fr-create-dot-sbr-file.md). Se i file SBR contengono i simboli locali, è comunque possibile ometterli dal file BSC usando BSCMAKE [/El (opzione)](../../build/reference/bscmake-options.md)`.`  
   
  È possibile creare un file sbr senza eseguire una compilazione completa. Ad esempio, è possibile specificare l'opzione /Zs al compilatore di eseguire un controllo della sintassi e ancora generare un file SBR se si specifica /FR o /Fr.  
   

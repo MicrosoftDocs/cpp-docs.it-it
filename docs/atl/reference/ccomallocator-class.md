@@ -2,11 +2,8 @@
 title: Classe CComAllocator | Documenti Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CComAllocator
@@ -19,17 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - CComAllocator class
 ms.assetid: 0cd706fd-0c7b-42d3-9054-febe2966fc8e
-caps.latest.revision: 19
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 370a52e87bcbb4849883ea03016cc462030ad028
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3606df325bfd41dabf99bb790ff154b383ab987f
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ccomallocator-class"></a>Classe CComAllocator
 Questa classe fornisce metodi per la gestione della memoria, utilizzo della memoria COM delle routine.  
@@ -56,7 +51,7 @@ class CComAllocator
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** atlbase. h  
   
-##  <a name="allocate"></a>CComAllocator::Allocate  
+##  <a name="allocate"></a>  CComAllocator::Allocate  
  Chiamare questa funzione statica per allocare la memoria.  
   
 ```
@@ -73,7 +68,7 @@ static void* Allocate(size_t nBytes) throw();
 ### <a name="remarks"></a>Note  
  Alloca memoria. Vedere [CoTaskMemAlloc](http://msdn.microsoft.com/library/windows/desktop/ms692727) per altri dettagli.  
   
-##  <a name="free"></a>CComAllocator::Free  
+##  <a name="free"></a>  CComAllocator::Free  
  Chiamare questa funzione statica per liberare memoria allocata.  
   
 ```
@@ -87,7 +82,7 @@ static void Free(void* p) throw();
 ### <a name="remarks"></a>Note  
  Libera la memoria allocata. Vedere [CoTaskMemFree](http://msdn.microsoft.com/library/windows/desktop/ms680722) per altri dettagli.  
   
-##  <a name="reallocate"></a>CComAllocator::Reallocate  
+##  <a name="reallocate"></a>  CComAllocator::Reallocate  
  Chiamare questa funzione statica per riallocare la memoria.  
   
 ```

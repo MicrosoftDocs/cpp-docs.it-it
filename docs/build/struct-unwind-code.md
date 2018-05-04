@@ -1,27 +1,22 @@
 ---
 title: struct UNWIND_CODE | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 104955d8-7e33-4c5a-b0c6-3254648f0af3
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 76059ff24b46fd537db0c2670a30cf3f42ee2166
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 068acacf88e9ac968b34c26bf76657fd33adf4f3
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="struct-unwindcode"></a>struct UNWIND_CODE
 Matrice di codice di rimozione viene utilizzata per registrare la sequenza di operazioni nel prologo che interessano il RSP e i registri non volatili. Ogni elemento di codice presenta il formato seguente:  
@@ -62,7 +57,7 @@ Matrice di codice di rimozione viene utilizzata per registrare la sequenza di op
   
 |||  
 |-|-|  
-|**Dimensione di allocazione**|**Codice di rimozione**|  
+|**Dimensioni di allocazione**|**Codice di rimozione**|  
 |da 8 a 128 byte|VOCE UWOP_ALLOC_SMALL|  
 |136 a 512 KB - 8 byte|UWOP_ALLOC_LARGE, informazioni sull'operazione = 0|  
 |G 512 KB e 4-8 byte|UWOP_ALLOC_LARGE, informazioni sull'operazione = 1|  
@@ -112,7 +107,7 @@ Matrice di codice di rimozione viene utilizzata per registrare la sequenza di op
   
  Questo codice di rimozione verrà sempre visualizzate in un prologo fittizio, che non viene mai eseguito ma si precede il punto di ingresso reale di una routine di interrupt ed esiste solo per fornire una posizione per simulare il push di una cornice della macchina. UWOP_PUSH_MACHFRAME registra tale simulazione, che indica che la macchina concettualmente ha eseguito le operazioni seguenti:  
   
- Indirizzo del mittente RIP dall'inizio dello stack nel POP *Temp*  
+ Prelevare l'indirizzo del mittente RIP dall'inizio dello stack in *Temp*  
   
  SS push  
   

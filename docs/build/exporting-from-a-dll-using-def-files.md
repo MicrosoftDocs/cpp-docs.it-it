@@ -1,13 +1,10 @@
 ---
 title: Esportazione da una DLL tramite i file DEF | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - .def files [C++], exporting from DLLs
 - exporting DLLs [C++], DEF files
 ms.assetid: 9d31eda2-184e-47de-a2ee-a93ebd603f8e
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 15806c3e40d45588ec27f1351e583fc5e8e897e9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a870df7ea803813a8403cd807c0f0612873d4576
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="exporting-from-a-dll-using-def-files"></a>Esportazione da una DLL tramite i file DEF
 Un file di definizione moduli (def) è un file di testo che contiene uno o più istruzioni di modulo che descrivono i vari attributi di una DLL. Se non si utilizza il **dllexport** (parola chiave) per esportare le funzioni della DLL, è necessario un file def.  
@@ -77,9 +72,9 @@ EXPORTS
   
 -   [Esportazione di funzioni C per l'utilizzo in eseguibili in linguaggio C o C++](../build/exporting-c-functions-for-use-in-c-or-cpp-language-executables.md)  
   
--   [Metodo di esportazione da utilizzare](../build/determining-which-exporting-method-to-use.md)  
+-   [Determinare quale metodo di esportazione da utilizzare](../build/determining-which-exporting-method-to-use.md)  
   
--   [Importazione in un'applicazione utilizzando declspec](../build/importing-into-an-application-using-declspec-dllimport.md)  
+-   [Importare un'applicazione che utilizza declspec](../build/importing-into-an-application-using-declspec-dllimport.md)  
   
 -   [Inizializzazione di una DLL](../build/run-time-library-behavior.md#initializing-a-dll)  
   

@@ -1,12 +1,9 @@
 ---
 title: Classe CSimpleDialog | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CSimpleDialog
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - dialog boxes, modal
 - modal dialog boxes, ATL
 ms.assetid: 2ae65cc9-4f32-4168-aecd-200b4a480fdf
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5e497d5f1646ab890b7dafa3e1fb7e1c711a8a09
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f3a8f6cb2ead8798b86d65a1fa875a42a68cdd77
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="csimpledialog-class"></a>CSimpleDialog (classe)
 Questa classe implementa una finestra di dialogo modale base.  
@@ -59,9 +54,9 @@ class CSimpleDialog : public CDialogImplBase
 |[CSimpleDialog::DoModal](#domodal)|Crea una finestra di dialogo modale.|  
   
 ## <a name="remarks"></a>Note  
- Implementa una finestra di dialogo modale con funzionalità di base. `CSimpleDialog`fornisce supporto per controlli comuni di Windows solo. Per creare e visualizzare una finestra di dialogo modale, creare un'istanza di questa classe, specificando il nome di un modello di risorsa esistente per la finestra di dialogo. L'oggetto finestra di dialogo si chiude quando l'utente fa clic su qualsiasi controllo con un valore predefinito (ad esempio IDOK o IDCANCEL).  
+ Implementa una finestra di dialogo modale con funzionalità di base. `CSimpleDialog` fornisce supporto per controlli comuni di Windows solo. Per creare e visualizzare una finestra di dialogo modale, creare un'istanza di questa classe, specificando il nome di un modello di risorsa esistente per la finestra di dialogo. L'oggetto finestra di dialogo si chiude quando l'utente fa clic su qualsiasi controllo con un valore predefinito (ad esempio IDOK o IDCANCEL).  
   
- `CSimpleDialog`Consente di creare solo le finestre di dialogo modale. `CSimpleDialog`fornisce la routine della finestra di dialogo, che utilizza la mappa messaggi predefinita per indirizzare i messaggi per i gestori appropriati.  
+ `CSimpleDialog` Consente di creare solo le finestre di dialogo modale. `CSimpleDialog` fornisce la routine di finestra di dialogo, che utilizza la mappa dei messaggi predefinita per indirizzare i messaggi per i gestori appropriati.  
   
  Vedere [implementazione di una finestra di dialogo](../../atl/implementing-a-dialog-box.md) per ulteriori informazioni.  
   
@@ -73,7 +68,7 @@ class CSimpleDialog : public CDialogImplBase
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** atlwin. h  
   
-##  <a name="domodal"></a>CSimpleDialog::DoModal  
+##  <a name="domodal"></a>  CSimpleDialog::DoModal  
  Richiama una finestra di dialogo modale e restituisce il risultato della finestra di dialogo al termine.  
   
 ```

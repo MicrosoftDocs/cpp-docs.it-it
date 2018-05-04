@@ -2,11 +2,8 @@
 title: Structured Exception Handling (C/C++) | Documenti Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - try-catch keyword [C++], termination handlers
 - C++ exception handling, exception handlers
 ms.assetid: dd3b647d-c269-43a8-aab9-ad1458712976
-caps.latest.revision: 14
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 37d5a89ebf95d8852664dcd50e44e82009ebd95e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b5b6aafa91ecfde27cc38cccc52f36af43ad21ae
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="structured-exception-handling-cc"></a>Structured Exception Handling (C/C++)
 Anche se Windows e Visual C++ supportano la gestione delle eccezioni strutturata (SEH, Structured Exception Handling), è consigliabile usare la gestione delle eccezioni C++ conforme allo standard ISO, poiché rende il codice più portabile e flessibile. Tuttavia, nel codice esistente per tipi specifici di programmi, potrebbe essere necessario usare la gestione delle eccezioni strutturata.  
@@ -38,9 +33,9 @@ Anche se Windows e Visual C++ supportano la gestione delle eccezioni strutturata
 ## <a name="grammar"></a>Grammatica  
  *try-except-statement* :  
   
- `__try`*composta-istruzione*  
+ `__try` *Compound-statement*  
   
- `__except`( `expression` ) *composta-istruzione*  
+ `__except` ( `expression` ) *compound-statement*  
   
 ## <a name="remarks"></a>Note  
  La gestione delle eccezioni strutturata permette di assicurare che risorse quali i blocchi di memoria e i file siano corretti in caso di arresto imprevisto dell'esecuzione. È anche possibile gestire problemi specifici, ad esempio la memoria insufficiente, usando codice strutturato conciso che non si basa su istruzioni `goto` o test complessi dei codici restituiti.  
@@ -157,5 +152,5 @@ Executing SEH __except block
  [Gestione delle eccezioni](../cpp/exception-handling-in-visual-cpp.md)   
  [Parole chiave](../cpp/keywords-cpp.md)   
  [\<exception>](../standard-library/exception.md)   
- [Errori e la gestione delle eccezioni](../cpp/errors-and-exception-handling-modern-cpp.md)   
+ [Errori ed eccezioni](../cpp/errors-and-exception-handling-modern-cpp.md)   
  [Strutturata delle eccezioni (Windows)](http://msdn.microsoft.com/library/windows/desktop/ms680657.aspx)

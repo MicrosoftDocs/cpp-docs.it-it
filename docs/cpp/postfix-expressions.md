@@ -1,12 +1,9 @@
 ---
 title: Espressioni in forma suffissa | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - postfix expressions
 - expressions [C++], postfix
 ms.assetid: 7ac62a57-06df-422f-b012-a75b37d7cb9b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8b965027e67cc2b2581c2ab00e51d2be7a899302
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a116e4f1c937a1656f337396a8b10206e0776c0e
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="postfix-expressions"></a>Espressioni in forma suffissa
 Le espressioni di suffisso sono costituite da espressioni primarie o da espressioni in cui gli operatori di suffisso seguono un'espressione primaria. Nella tabella riportata di seguito vengono elencati gli operatori di suffisso.  
@@ -36,8 +31,8 @@ Le espressioni di suffisso sono costituite da espressioni primarie o da espressi
 |-------------------|-----------------------|  
 |[Operatore di indice](../cpp/subscript-operator.md)|**[ ]**|  
 |[Operatore di chiamata di funzione](../cpp/function-call-operator-parens.md)|**( )**|  
-|[Operatore di conversione esplicita di tipi](../cpp/explicit-type-conversion-operator-parens.md)|*nome del tipo* **)**|  
-|[Operatore di accesso al membro](../cpp/member-access-operators-dot-and.md)|**.** o**->**|  
+|[Operatore di conversione esplicita di tipi](../cpp/explicit-type-conversion-operator-parens.md)|*nome di tipo* **)**|  
+|[Operatore di accesso al membro](../cpp/member-access-operators-dot-and.md)|**.** O **->**|  
 |[Operatore di incremento suffisso](../cpp/postfix-increment-and-decrement-operators-increment-and-decrement.md)|`++`|  
 |[Operatore di decremento suffisso](../cpp/postfix-increment-and-decrement-operators-increment-and-decrement.md)|**--**|  
   

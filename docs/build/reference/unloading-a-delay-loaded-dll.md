@@ -1,30 +1,25 @@
 ---
 title: Scaricamento di una DLL a caricamento ritardato | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - __FUnloadDelayLoadedDLL2
 - delayed loading of DLLs, unloading
 ms.assetid: 6463bc71-020e-4aff-a4ca-90360411c54e
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8b47969da4c560f28c07ac09caef83873e362ddc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 724ee2ac3987c855f5e2102dee35d12785726641
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="unloading-a-delay-loaded-dll"></a>Scaricamento di una DLL a caricamento ritardato
 L'helper di caricamento ritardato predefinito consente di verificare se i descrittori di caricamento ritardato di disporre di un puntatore e una copia della tabella di indirizzi di importazione (IAT) originale nel campo pUnloadIAT. In questo caso, salverà un puntatore in un elenco al descrittore di ritardo di importazione. In questo modo la funzione di supporto trovare la DLL in base al nome di supportare lo scaricamento di DLL in modo esplicito.  

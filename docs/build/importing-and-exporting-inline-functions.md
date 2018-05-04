@@ -1,13 +1,10 @@
 ---
 title: Importazione ed esportazione di funzioni Inline | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - functions [C++], importing
 - functions [C++], exporting
 ms.assetid: 89f488f8-b078-40fe-afd7-80bd7840057b
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a6f8d159a1537cdfee02d45805632ba9ad4afa7e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b666d450766a5a285f02517d92d5eb4dc3f29c68
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="importing-and-exporting-inline-functions"></a>Importazione ed esportazione di funzioni inline
 Funzioni importate possono essere definite come inline. L'effetto è simile alla definizione inline una funzione standard. le chiamate alla funzione vengono espanse nel codice inline, analogamente a una macro. Questa funzionalità è particolarmente utile per un metodo di supporto C++ classi in una DLL che può rendere inline alcune delle loro membro funzioni per efficienza.  
@@ -53,9 +48,9 @@ Funzioni importate possono essere definite come inline. L'effetto è simile alla
   
 -   [Esportazione di funzioni C++ per l'utilizzo in eseguibili in linguaggio C](../build/exporting-cpp-functions-for-use-in-c-language-executables.md)  
   
--   [Metodo di esportazione da utilizzare](../build/determining-which-exporting-method-to-use.md)  
+-   [Determinare quale metodo di esportazione da utilizzare](../build/determining-which-exporting-method-to-use.md)  
   
--   [Importazione in un'applicazione utilizzando declspec](../build/importing-into-an-application-using-declspec-dllimport.md)  
+-   [Importare un'applicazione che utilizza declspec](../build/importing-into-an-application-using-declspec-dllimport.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Importazione ed esportazione](../build/importing-and-exporting.md)

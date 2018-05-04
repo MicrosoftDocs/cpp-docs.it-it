@@ -1,13 +1,10 @@
 ---
 title: Esportazione di funzioni C++ per l'utilizzo in eseguibili in linguaggio C | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - exporting functions [C++], C++ functions in C executables
 - functions [C++], exporting
 ms.assetid: 80b9e982-f52d-4312-a891-f73cc69f3c2b
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0511ae4c16332b2a8e98c2319e148249b66c8461
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: cf5f348675752ff9c0b548693c442812fa6be697
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="exporting-c-functions-for-use-in-c-language-executables"></a>Esportazione di funzioni C++ per l'utilizzo in eseguibili in linguaggio C  
   
@@ -40,7 +35,7 @@ extern "C" __declspec( dllexport ) int MyFunc(long parm1);
   
 ## <a name="what-do-you-want-to-do"></a>Selezionare l'operazione da eseguire.  
   
--   [Esportazione da una DLL tramite i file def](../build/exporting-from-a-dll-using-def-files.md)  
+-   [Esportazione da una DLL tramite DEF (file)](../build/exporting-from-a-dll-using-def-files.md)  
   
 -   [Esportazione da una DLL tramite dllexport](../build/exporting-from-a-dll-using-declspec-dllexport.md)  
   
@@ -48,9 +43,9 @@ extern "C" __declspec( dllexport ) int MyFunc(long parm1);
   
 -   [Esportazione di funzioni C per l'utilizzo in eseguibili in linguaggio C o C++](../build/exporting-c-functions-for-use-in-c-or-cpp-language-executables.md)  
   
--   [Metodo di esportazione da utilizzare](../build/determining-which-exporting-method-to-use.md)  
+-   [Determinare quale metodo di esportazione da utilizzare](../build/determining-which-exporting-method-to-use.md)  
   
--   [Importazione in un'applicazione utilizzando declspec](../build/importing-into-an-application-using-declspec-dllimport.md)  
+-   [Importare un'applicazione che utilizza declspec](../build/importing-into-an-application-using-declspec-dllimport.md)  
   
 -   [Inizializzazione di una DLL](../build/run-time-library-behavior.md#initializing-a-dll)  
   

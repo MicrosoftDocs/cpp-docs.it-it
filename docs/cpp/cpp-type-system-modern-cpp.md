@@ -2,26 +2,21 @@
 title: Il sistema di tipi C++ (C++ moderno) | Documenti Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 553c0ed6-77c4-43e9-87b1-c903eec53e80
-caps.latest.revision: 24
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7abede5a7370461b0e77bd51ea12f7ab9b184e5c
-ms.sourcegitcommit: cff1a8a49f0cd50f315a250c5dd27e15c173845f
+ms.openlocfilehash: 82c017b7048c8b62f58068d22b8efefd72f31d4f
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="c-type-system-modern-c"></a>Sistema di tipi C++ (C++ moderno)
 Il concetto di *tipo* è molto importante in C++. Per poter essere compilati è necessario che a ogni variabile, argomento di funzione e valore restituito di una funzione siano associati tipi. A ogni espressione (compresi i valori letterali) viene inoltre assegnato un tipo in modo implicito prima della restituzione di un risultato. Alcuni esempi di tipi `int` per archiviare i valori integrali, `double` per archiviare valori a virgola mobile (noto anche come *scalare* tipi di dati), la classe della libreria Standard o [std:: basic_string](../standard-library/basic-string-class.md) per archiviare testo. È possibile creare un tipo personalizzato definendo una `class` o uno `struct`. Il tipo specifica la quantità di memoria che verrà allocata per la variabile (o risultato dell'espressione), i tipi di valori che è possibile archiviare in tale variabile, la modalità di interpretazione di questi valori (come schemi di bit) e le operazioni che è possibile eseguire su di essi. In questo articolo viene offerta una panoramica informale delle principali funzionalità del sistema di tipi C++.  

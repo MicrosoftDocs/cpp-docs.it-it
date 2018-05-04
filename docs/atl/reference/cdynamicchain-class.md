@@ -2,11 +2,8 @@
 title: Classe CDynamicChain | Documenti Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CDynamicChain
@@ -22,17 +19,15 @@ helpviewer_keywords:
 - chaining message maps
 - CDynamicChain class
 ms.assetid: f084b2be-0e77-4836-973d-ae278a1e9da8
-caps.latest.revision: 21
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f57da02b764c1cbce6a97ecbea8aa84e4ffcce9e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 08f6d09546d4514950b5b45ffb9494116294d051
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cdynamicchain-class"></a>Classe CDynamicChain
 Questa classe fornisce metodi che supportano la concatenazione dinamica delle mappe messaggi.  
@@ -64,13 +59,13 @@ class CDynamicChain
 |[CDynamicChain::](#setchainentry)|Aggiunge una voce della mappa messaggi per la raccolta o modifica una voce esistente.|  
   
 ## <a name="remarks"></a>Note  
- `CDynamicChain`gestisce una raccolta di mappe messaggi, l'abilitazione di un messaggio di Windows da indirizzare in fase di esecuzione alla mappa messaggi di un altro oggetto.  
+ `CDynamicChain` gestisce una raccolta di mappe messaggi, l'abilitazione di un messaggio di Windows da indirizzare, in fase di esecuzione alla mappa messaggi di un altro oggetto.  
   
  Per aggiungere supporto per la concatenazione dinamica delle mappe messaggi, eseguire le operazioni seguenti:  
   
 -   Derivare la classe da `CDynamicChain`. Nella mappa messaggi, specificare il [CHAIN_MSG_MAP_DYNAMIC](message-map-macros-atl.md#chain_msg_map_dynamic) macro a catena alla mappa messaggi predefinito di un altro oggetto.  
   
--   Ogni classe che si desidera concatenare da derivare [CMessageMap](../../atl/reference/cmessagemap-class.md). `CMessageMap`consente a un oggetto per esporre le mappe messaggi ad altri oggetti.  
+-   Ogni classe che si desidera concatenare da derivare [CMessageMap](../../atl/reference/cmessagemap-class.md). `CMessageMap` consente a un oggetto per esporre le mappe messaggi ad altri oggetti.  
   
 -   Chiamare `CDynamicChain::SetChainEntry` per identificare quale oggetto ed eseguire il mapping il messaggio che si vuole catena.  
   
@@ -89,7 +84,7 @@ class CDynamicChain
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** atlwin. h  
   
-##  <a name="callchain"></a>CDynamicChain::CallChain  
+##  <a name="callchain"></a>  CDynamicChain::CallChain  
  Indirizza il messaggio di Windows alla mappa messaggi di un altro oggetto.  
   
 ```
@@ -127,16 +122,16 @@ BOOL CallChain(
 ### <a name="remarks"></a>Note  
  Per la procedura di finestra richiamare `CallChain`, è necessario specificare il [CHAIN_MSG_MAP_DYNAMIC](message-map-macros-atl.md#chain_msg_map_dynamic) macro della mappa del messaggio. Per un esempio, vedere il [CDynamicChain](../../atl/reference/cdynamicchain-class.md) Panoramica.  
   
- `CallChain`richiede una chiamata precedente a [SetChainEntry](#setchainentry) per associare il `dwChainID` valore con un oggetto e la mappa messaggi.  
+ `CallChain` richiede una chiamata precedente a [SetChainEntry](#setchainentry) per associare il `dwChainID` valore con un oggetto e propria mappa messaggi.  
   
-##  <a name="cdynamicchain"></a>CDynamicChain::CDynamicChain  
+##  <a name="cdynamicchain"></a>  CDynamicChain::CDynamicChain  
  Costruttore.  
   
 ```
 CDynamicChain();
 ```  
   
-##  <a name="dtor"></a>CDynamicChain:: ~ CDynamicChain  
+##  <a name="dtor"></a>  CDynamicChain:: ~ CDynamicChain  
  Distruttore.  
   
 ```
@@ -146,7 +141,7 @@ CDynamicChain();
 ### <a name="remarks"></a>Note  
  Libera tutte le risorse allocate.  
   
-##  <a name="removechainentry"></a>CDynamicChain::RemoveChainEntry  
+##  <a name="removechainentry"></a>  CDynamicChain::RemoveChainEntry  
  Rimuove la mappa del messaggio specificato dalla raccolta.  
   
 ```
@@ -158,9 +153,9 @@ BOOL RemoveChainEntry(DWORD dwChainID);
  [in] L'identificatore univoco associato all'oggetto concatenata e propria mappa messaggi. È originariamente definire questo valore tramite una chiamata a [SetChainEntry](#setchainentry).  
   
 ### <a name="return-value"></a>Valore restituito  
- **TRUE** se la mappa dei messaggi è stato rimosso correttamente dalla raccolta. In caso contrario, **FALSE**.  
+ **TRUE** se la mappa dei messaggi viene rimosso correttamente dalla raccolta. In caso contrario, **FALSE**.  
   
-##  <a name="setchainentry"></a>CDynamicChain::  
+##  <a name="setchainentry"></a>  CDynamicChain::  
  Aggiunge la mappa del messaggio specificato alla raccolta.  
   
 ```

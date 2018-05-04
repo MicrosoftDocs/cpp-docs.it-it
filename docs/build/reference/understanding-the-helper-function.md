@@ -2,12 +2,9 @@
 title: Informazioni sulla funzione di supporto | Documenti Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - delayimp.h
 - helper functions
 ms.assetid: 6279c12c-d908-4967-b0b3-cabfc3e91d3d
-caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c3a013cf584c37f84331a5ab5dfe74eaa213c851
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 54ed331022c29ecc47d61bbcccbfac82000cb235
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="understanding-the-helper-function"></a>Informazioni sulla funzione di supporto
 La funzione di supporto per il caricamento ritardato supportato dal linker è ciò che effettivamente carica la DLL in fase di esecuzione. È possibile modificare la funzione di supporto per personalizzare il comportamento scrivendo una funzione personalizzata e collegarla al programma anziché utilizzare la funzione di supporto fornito in Delayimp. Una funzione di supporto serve tutte le DLL a caricamento ritardato.  

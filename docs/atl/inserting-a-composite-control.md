@@ -1,13 +1,10 @@
 ---
 title: Inserimento di un controllo composito | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-atl
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - composite controls
 - ATL Control Wizard
 ms.assetid: f10b1927-9fc6-40a7-ac29-efdac70584fe
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8c733c02a3855c02803be242a6bfc8ddd13abd75
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 796974bb9fb7ab7965fd2af0b62378d62d621652
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="inserting-a-composite-control"></a>Inserimento di un controllo composito
 Il **Aggiungi classe** la finestra di dialogo consente di inserire un oggetto ATL in un progetto. Accedere a questa finestra di dialogo facendo clic con il nome del progetto in Esplora soluzioni, scegliendo **Aggiungi**e quindi fare clic su **Aggiungi classe**.  

@@ -1,13 +1,10 @@
 ---
 title: -Ob (espansione funzioni Inline) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 09/25/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VC.Project.VCCLWCECompilerTool.InlineFunctionExpansion
 - VC.Project.VCCLCompilerTool.InlineFunctionExpansion
@@ -33,17 +30,15 @@ helpviewer_keywords:
 - Ob0 compiler option [C++]
 - inline expansion, compiler option
 ms.assetid: f134e6df-e939-4980-a01d-47425dbc562a
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b83d470eaf6a30698d8c2836620a0688daa35cc1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fb7c31dca2d95232850140576be3ddc0ac695cac
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ob-inline-function-expansion"></a>/Ob (Espansione funzioni inline)
 
@@ -64,7 +59,7 @@ Consente l'espansione solo delle funzioni contrassegnate come [inline](../../cpp
 **2**  
 Il valore predefinito. Consente l'espansione delle funzioni contrassegnate come `inline`, `__inline`, o `__forceinline` e di qualsiasi altra funzione scelta dal compilatore.
 
-**/Ob2** è attiva quando [/O1, /O2 (Riduci dimensione, Ottimizza velocità)](../../build/reference/o1-o2-minimize-size-maximize-speed.md) o [/Ox (abilitare più velocità ottimizzazioni)](../../build/reference/ox-full-optimization.md) viene utilizzato.
+**/ Ob2** è attiva quando [/O1, / O2 (Riduci dimensione, Ottimizza velocità)](../../build/reference/o1-o2-minimize-size-maximize-speed.md) o [/Ox (abilitare più velocità ottimizzazioni)](../../build/reference/ox-full-optimization.md) viene utilizzato.
 
 Questa opzione richiede l'abilitazione delle ottimizzazioni mediante **/O1**, **/O2**, **/Ox**, o **/Og**.  
 
@@ -81,7 +76,7 @@ Il compilatore considera come suggerimenti le opzioni di espansione inline e le 
 
 1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [funziona con le proprietà del progetto](../../ide/working-with-project-properties.md).
 
-1. Espandere **le proprietà di configurazione**, **C/C++**e selezionare **ottimizzazione**.
+1. Espandere **le proprietà di configurazione**, **C/C++** e selezionare **ottimizzazione**.
 
 1. Modificare il **espansione funzioni Inline** proprietà.
 
@@ -91,6 +86,6 @@ Il compilatore considera come suggerimenti le opzioni di espansione inline e le 
 
 ## <a name="see-also"></a>Vedere anche
 
-[Opzioni /O (Ottimizza codice)](../../build/reference/o-options-optimize-code.md)  
+[Opzioni /O (ottimizza codice)](../../build/reference/o-options-optimize-code.md)  
 [Opzioni del compilatore](../../build/reference/compiler-options.md)  
 [Impostazione delle opzioni del compilatore](../../build/reference/setting-compiler-options.md)

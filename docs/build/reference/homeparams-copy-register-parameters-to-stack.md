@@ -1,13 +1,10 @@
 ---
 title: -/homeparams (copia i parametri del registro nello stack) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - /homeparams
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - /homeparams compiler option [C++]
 - -homeparams compiler option [C++]
 ms.assetid: 51067de4-24f7-436b-b8d9-bc867a7d53aa
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fff1b206620ef9efee3fc22c83c8d5317e99b607
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3ffc9b37ebdcbb380186c7840f5ebd956708a2dc
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="homeparams-copy-register-parameters-to-stack"></a>/homeparams (Copia i parametri del registro nello stack)
 Forza la scrittura di parametri passati nei registri nei rispettivi percorsi nello stack quando vengono immesse funzioni.  
@@ -42,7 +37,7 @@ Forza la scrittura di parametri passati nei registri nei rispettivi percorsi nel
   
  Quando i parametri vengono passati un [!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)] compilazione, le convenzioni di chiamata richiedono che per i parametri, anche per i parametri passati nei registri. Per ulteriori informazioni, vedere [passaggio dei parametri](../../build/parameter-passing.md). Tuttavia, per impostazione predefinita in una build di rilascio, i parametri del registro verranno non scrivere lo stack, nello spazio già fornito per i parametri. Questo rende difficile eseguire il debug di una build di rilascio ottimizzata del programma.  
   
- Per una build di rilascio, usare **/homeparams** per garantire che è possibile eseguire il debug dell'applicazione. **/homeparams** comporta prestazioni perché è necessario un ciclo per caricare i parametri del registro nello stack.  
+ Per una build di rilascio, usare **/homeparams** per garantire che è possibile eseguire il debug dell'applicazione. **/homeparams** comporta delle prestazioni, perché è necessario un ciclo per caricare i parametri del registro nello stack.  
   
  In una build di debug, lo stack è sempre popolato con i parametri passati nei registri.  
   

@@ -1,12 +1,9 @@
 ---
 title: Classe CWorkerThread | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CWorkerThread
@@ -24,17 +21,15 @@ dev_langs:
 helpviewer_keywords:
 - CWorkerThread class
 ms.assetid: be79a832-1345-4a36-a13e-a406cc65286f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: be7a000e48cb044a67f7eee120206f46ecaef2ce
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e87001ca341ae27cb173357f74e06e543f5eb262
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cworkerthread-class"></a>Classe CWorkerThread
 Questa classe crea un thread di lavoro o utilizza uno esistente, è in attesa su una o più handle di oggetto kernel ed esegue una funzione di client specificato quando uno degli handle viene segnalato.  
@@ -103,7 +98,7 @@ class CWorkerThread
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** atlutil. h  
   
-##  <a name="addhandle"></a>CWorkerThread::AddHandle  
+##  <a name="addhandle"></a>  CWorkerThread::AddHandle  
  Chiamare questo metodo per aggiungere l'handle dell'oggetto waitable all'elenco gestito dal thread di lavoro.  
   
 ```
@@ -127,9 +122,9 @@ HRESULT AddHandle(
  Restituisce S_OK se l'operazione riesce, o un errore HRESULT in caso di errore.  
   
 ### <a name="remarks"></a>Note  
- [IWorkerThreadClient::Execute](../../atl/reference/iworkerthreadclient-interface.md#execute) verrà chiamato tramite `pClient` quando l'handle, `hObject`, viene segnalato.  
+ [IWorkerThreadClient::Execute](../../atl/reference/iworkerthreadclient-interface.md#execute) verrà chiamato attraverso `pClient` quando l'handle, `hObject`, viene segnalato.  
   
-##  <a name="addtimer"></a>CWorkerThread::AddTimer  
+##  <a name="addtimer"></a>  CWorkerThread::AddTimer  
  Chiamare questo metodo per aggiungere un timer waitable periodico all'elenco gestito dal thread di lavoro.  
   
 ```
@@ -157,18 +152,18 @@ HRESULT AddTimer(
  Restituisce S_OK se l'operazione riesce, o un errore HRESULT in caso di errore.  
   
 ### <a name="remarks"></a>Note  
- [IWorkerThreadClient::Execute](../../atl/reference/iworkerthreadclient-interface.md#execute) verrà chiamato tramite `pClient` segnalato quando il timer.  
+ [IWorkerThreadClient::Execute](../../atl/reference/iworkerthreadclient-interface.md#execute) verrà chiamato tramite `pClient` quando viene segnalato il timer.  
   
  Passare l'handle di timer da `phTimer` a [CWorkerThread::RemoveHandle](#removehandle) per chiudere il timer.  
   
-##  <a name="cworkerthread"></a>CWorkerThread::CWorkerThread  
+##  <a name="cworkerthread"></a>  CWorkerThread::CWorkerThread  
  Costruttore.  
   
 ```
 CWorkerThread() throw();
 ```  
   
-##  <a name="dtor"></a>CWorkerThread:: ~ CWorkerThread  
+##  <a name="dtor"></a>  CWorkerThread:: ~ CWorkerThread  
  Distruttore.  
   
 ```
@@ -178,7 +173,7 @@ CWorkerThread() throw();
 ### <a name="remarks"></a>Note  
  Chiamate [CWorkerThread::Shutdown](#shutdown).  
   
-##  <a name="getthreadhandle"></a>CWorkerThread::GetThreadHandle  
+##  <a name="getthreadhandle"></a>  CWorkerThread::GetThreadHandle  
  Chiamare questo metodo per ottenere l'handle del thread del thread di lavoro.  
   
 ```
@@ -188,7 +183,7 @@ HANDLE GetThreadHandle() throw();
 ### <a name="return-value"></a>Valore restituito  
  Restituisce l'handle del thread o NULL se il thread di lavoro non è stato inizializzato.  
   
-##  <a name="getthreadid"></a>CWorkerThread::GetThreadId  
+##  <a name="getthreadid"></a>  CWorkerThread::GetThreadId  
  Chiamare questo metodo per ottenere l'ID di thread del thread di lavoro.  
   
 ```
@@ -198,7 +193,7 @@ DWORD GetThreadId() throw();
 ### <a name="return-value"></a>Valore restituito  
  Restituisce l'ID del thread o NULL se il thread di lavoro non è stato inizializzato.  
   
-##  <a name="initialize"></a>CWorkerThread::Initialize  
+##  <a name="initialize"></a>  CWorkerThread::Initialize  
  Chiamare questo metodo per inizializzare il thread di lavoro.  
   
 ```
@@ -221,7 +216,7 @@ HRESULT Initialize(CWorkerThread<ThreadTraits>* pThread) throw();
   
  Vedere [CWorkerThread::Shutdown](#shutdown) per informazioni su come comportamento del metodo cambia durante l'inizializzazione mediante un puntatore a un oggetto esistente.  
   
-##  <a name="removehandle"></a>CWorkerThread::RemoveHandle  
+##  <a name="removehandle"></a>  CWorkerThread::RemoveHandle  
  Chiamare questo metodo per rimuovere un handle dall'elenco di oggetti awaitable.  
   
 ```
@@ -238,7 +233,7 @@ HRESULT RemoveHandle(HANDLE hObject) throw();
 ### <a name="remarks"></a>Note  
  Quando viene rimosso l'handle [IWorkerThreadClient::CloseHandle](../../atl/reference/iworkerthreadclient-interface.md#closehandle) verrà chiamato sull'oggetto associato è stato passato a [AddHandle](#addhandle). Se la chiamata ha esito negativo, `CWorkerThread` chiamerà Windows [CloseHandle](http://msdn.microsoft.com/library/windows/desktop/ms724211) funzione dell'handle.  
   
-##  <a name="shutdown"></a>CWorkerThread::Shutdown  
+##  <a name="shutdown"></a>  CWorkerThread::Shutdown  
  Chiamare questo metodo per arrestare il thread di lavoro.  
   
 ```

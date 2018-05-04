@@ -1,10 +1,10 @@
 ---
 title: '/Zc: strictstrings (disabilitare la conversione del tipo di valore letterale stringa) | Documenti Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 03/06/2018
 ms.technology:
 - cpp-tools
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - /Zc:strictStrings
 - strictStrings
@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: b7eb3f3b-82c1-48a2-8e63-66bad7397b46
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 61ae45d6a067b45d625055d92900b17e69a366e7
-ms.sourcegitcommit: eeb2b5ad8d3d22514a7b9bd7d756511b69ae0ccf
+ms.openlocfilehash: 7025a4bae2d4a7474cb366b041a3c62f3d7db819
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="zcstrictstrings-disable-string-literal-type-conversion"></a>/Zc:strictStrings (Disabilitare la conversione del tipo di valore letterale stringa)
 

@@ -1,12 +1,9 @@
 ---
 title: Classe IPersistStreamInitImpl | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - IPersistStreamInitImpl
@@ -24,17 +21,15 @@ helpviewer_keywords:
 - IPersistStreamInitImpl class
 - streams, ATL
 ms.assetid: ef217c3c-020f-4cf8-871e-ef68e57865b8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1fe1bcd8d8198304c92584f01522048c4d29b827
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a51dd5e198a86b7bb17a6182c1edb098f23a8e47
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ipersiststreaminitimpl-class"></a>Classe IPersistStreamInitImpl
 Questa classe implementa **IUnknown** e fornisce un'implementazione predefinita del [IPersistStreamInit](http://msdn.microsoft.com/library/windows/desktop/ms682273) interfaccia.  
@@ -80,7 +75,7 @@ class ATL_NO_VTABLE IPersistStreamInitImpl
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** atlcom. h  
   
-##  <a name="getclassid"></a>IPersistStreamInitImpl::GetClassID  
+##  <a name="getclassid"></a>  IPersistStreamInitImpl::GetClassID  
  Recupera il CLSID dell'oggetto.  
   
 ```
@@ -90,7 +85,7 @@ STDMETHOD(GetClassID)(CLSID* pClassID);
 ### <a name="remarks"></a>Note  
  Vedere [IPersist:: GetClassID](http://msdn.microsoft.com/library/windows/desktop/ms688664) in Windows SDK.  
   
-##  <a name="getsizemax"></a>IPersistStreamInitImpl::GetSizeMax  
+##  <a name="getsizemax"></a>  IPersistStreamInitImpl::GetSizeMax  
  Recupera la dimensione del flusso necessario per salvare i dati dell'oggetto.  
   
 ```
@@ -103,7 +98,7 @@ STDMETHOD(GetSizeMax)(ULARGE_INTEGER FAR* pcbSize);
 ### <a name="remarks"></a>Note  
  Vedere [IPersistStreamInit::GetSizeMax](http://msdn.microsoft.com/library/windows/desktop/ms687287) in Windows SDK.  
   
-##  <a name="initnew"></a>IPersistStreamInitImpl::InitNew  
+##  <a name="initnew"></a>  IPersistStreamInitImpl::InitNew  
  Inizializza un oggetto appena creato.  
   
 ```
@@ -113,7 +108,7 @@ STDMETHOD(InitNew)();
 ### <a name="remarks"></a>Note  
  Vedere [IPersistStreamInit::InitNew](http://msdn.microsoft.com/library/windows/desktop/ms690234) in Windows SDK.  
   
-##  <a name="isdirty"></a>IPersistStreamInitImpl::IsDirty  
+##  <a name="isdirty"></a>  IPersistStreamInitImpl::IsDirty  
  Controlla se i dati dell'oggetto è stato modificato dopo l'ultimo salvataggio.  
   
 ```
@@ -123,7 +118,7 @@ STDMETHOD(IsDirty)();
 ### <a name="remarks"></a>Note  
  Vedere [IPersistStreamInit::IsDirty](http://msdn.microsoft.com/library/windows/desktop/ms680092) in Windows SDK.  
   
-##  <a name="load"></a>IPersistStreamInitImpl::Load  
+##  <a name="load"></a>  IPersistStreamInitImpl::Load  
  Carica le proprietà dell'oggetto dal flusso specificato.  
   
 ```
@@ -135,7 +130,7 @@ STDMETHOD(Load)(LPSTREAM pStm);
   
  Vedere [IPersistStreamInit::Load](http://msdn.microsoft.com/library/windows/desktop/ms680730) in Windows SDK.  
   
-##  <a name="save"></a>IPersistStreamInitImpl::Save  
+##  <a name="save"></a>  IPersistStreamInitImpl::Save  
  Salva le proprietà dell'oggetto nel flusso specificato.  
   
 ```

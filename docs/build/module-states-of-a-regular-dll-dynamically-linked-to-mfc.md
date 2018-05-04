@@ -2,12 +2,9 @@
 title: Stati dei moduli di una DLL MFC regolare collegata in modo dinamico a MFC | Documenti Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - module states [C++], regular MFC DLLs dynamically linked to
 - DLLs [C++], module states
 ms.assetid: b4493e79-d25e-4b7f-a565-60de5b32c723
-caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8b88f895255c698f04b6988e63b8b75372fa59b0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d15f533473ebe90d6d105ddeb57dcdcddd90e87b
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="module-states-of-a-regular-mfc-dll-dynamically-linked-to-mfc"></a>Stati dei moduli di una DLL MFC regolare collegata in modo dinamico a MFC
 La possibilità di collegare in modo dinamico una DLL MFC normale alla DLL MFC consente alcune configurazioni molto complesse. Ad esempio, DLL regolare MFC e il file eseguibile che lo utilizza può entrambi collegamento dinamico alla DLL MFC e a qualsiasi estensione DLL di MFC.  

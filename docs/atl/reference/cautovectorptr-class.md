@@ -2,11 +2,8 @@
 title: Classe CAutoVectorPtr | Documenti Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CAutoVectorPtr
@@ -22,17 +19,15 @@ dev_langs:
 helpviewer_keywords:
 - CAutoVectorPtr class
 ms.assetid: 0030362b-6bc4-4a47-9b5b-3c3899dceab4
-caps.latest.revision: 20
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b01bb9f74793e739ff0930bae070f00cb909dd61
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: df21eabe70c1d9ed8684fa1409e24dcdc76ffec0
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cautovectorptr-class"></a>Classe CAutoVectorPtr
 Questa classe rappresenta un oggetto del puntatore intelligente usando il vettore di nuovo ed Elimina gli operatori.  
@@ -83,7 +78,7 @@ class CAutoVectorPtr
 |[CAutoVectorPtr::m_p](#m_p)|La variabile membro di dati puntatore.|  
   
 ## <a name="remarks"></a>Note  
- Questa classe fornisce metodi per la creazione e gestione di un puntatore intelligente, che consentirà di evitare perdite di memoria automaticamente liberando risorse quando rientra dall'ambito. `CAutoVectorPtr`è simile a `CAutoPtr`, la sola differenza che `CAutoVectorPtr` Usa [vettore new &#91; &#93;](../../standard-library/new-operators.md#op_new_arr) e [vettore delete &#91; &#93;](../../standard-library/new-operators.md#op_delete_arr) per allocare e liberare memoria invece di C++ **nuova** e **eliminare** operatori. Vedere [CAutoVectorPtrElementTraits](../../atl/reference/cautovectorptrelementtraits-class.md) se le classi di raccolte di `CAutoVectorPtr` sono necessari.  
+ Questa classe fornisce metodi per la creazione e gestione di un puntatore intelligente, che consentirà di evitare perdite di memoria automaticamente liberando risorse quando rientra dall'ambito. `CAutoVectorPtr` è simile a `CAutoPtr`, la sola differenza che `CAutoVectorPtr` Usa [vettore new&#91; &#93; ](../../standard-library/new-operators.md#op_new_arr) e [vettore delete&#91; &#93; ](../../standard-library/new-operators.md#op_delete_arr) per allocare e liberare memoria anziché C++ **nuove** e **eliminare** operatori. Vedere [CAutoVectorPtrElementTraits](../../atl/reference/cautovectorptrelementtraits-class.md) se le classi di raccolte di `CAutoVectorPtr` sono necessari.  
 
   
  Vedere [su CAutoPtr](../../atl/reference/cautoptr-class.md) per un esempio di utilizzo di una classe del puntatore intelligente.  
@@ -91,7 +86,7 @@ class CAutoVectorPtr
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** atlbase. h  
   
-##  <a name="allocate"></a>CAutoVectorPtr::Allocate  
+##  <a name="allocate"></a>  CAutoVectorPtr::Allocate  
  Chiamare questo metodo per allocare la memoria necessaria per la matrice di oggetti a cui puntata `CAutoVectorPtr`.  
   
 ```
@@ -108,7 +103,7 @@ bool Allocate(size_t nElements) throw();
 ### <a name="remarks"></a>Note  
  Nelle build di debug, un errore di asserzione si verificherà se il [CAutoVectorPtr::m_p](#m_p) variabile membro attualmente fa riferimento a un valore esistente; ovvero, non è uguale a NULL.  
   
-##  <a name="attach"></a>CAutoVectorPtr::Attach  
+##  <a name="attach"></a>  CAutoVectorPtr::Attach  
  Chiamare questo metodo per assumere la proprietà di un indicatore di misura esistente.  
   
 ```
@@ -124,7 +119,7 @@ void Attach(T* p) throw();
   
  Nelle build di debug, un errore di asserzione si verificherà se il [CAutoVectorPtr::m_p](#m_p) variabile membro attualmente fa riferimento a un valore esistente; ovvero, non è uguale a NULL.  
   
-##  <a name="cautovectorptr"></a>CAutoVectorPtr::CAutoVectorPtr  
+##  <a name="cautovectorptr"></a>  CAutoVectorPtr::CAutoVectorPtr  
  Costruttore.  
   
 ```
@@ -140,7 +135,7 @@ CAutoVectorPtr(CAutoVectorPtr<T>& p) throw();
 ### <a name="remarks"></a>Note  
  Il `CAutoVectorPtr` oggetto può essere creato utilizzando un indicatore di misura esistente, nel qual caso trasferisce la proprietà dell'indicatore di misura.  
   
-##  <a name="dtor"></a>CAutoVectorPtr:: ~ CAutoVectorPtr  
+##  <a name="dtor"></a>  CAutoVectorPtr:: ~ CAutoVectorPtr  
  Distruttore.  
   
 ```
@@ -150,7 +145,7 @@ CAutoVectorPtr(CAutoVectorPtr<T>& p) throw();
 ### <a name="remarks"></a>Note  
  Libera tutte le risorse allocate. Chiamate [CAutoVectorPtr::Free](#free).  
   
-##  <a name="detach"></a>CAutoVectorPtr::Detach  
+##  <a name="detach"></a>  CAutoVectorPtr::Detach  
  Chiamare questo metodo per rilasciare la proprietà di un puntatore.  
   
 ```
@@ -163,7 +158,7 @@ T* Detach() throw();
 ### <a name="remarks"></a>Note  
  Rilascia la proprietà di un puntatore, imposta il [CAutoVectorPtr::m_p](#m_p) variabile membro su NULL e restituisce una copia dell'indicatore di misura. Dopo la chiamata **scollegamento**, è fino al programmatore di liberare le risorse allocata su cui il `CAutoVectorPtr` potrebbe avere precedentemente utilizzato oggetto responsabilità.  
   
-##  <a name="free"></a>CAutoVectorPtr::Free  
+##  <a name="free"></a>  CAutoVectorPtr::Free  
  Chiamare questo metodo per eliminare un oggetto a cui fa riferimento un `CAutoVectorPtr`.  
   
 ```
@@ -173,7 +168,7 @@ void Free() throw();
 ### <a name="remarks"></a>Note  
  L'oggetto a cui punta il `CAutoVectorPtr` viene liberato e [CAutoVectorPtr::m_p](#m_p) variabile membro è impostata su NULL.  
   
-##  <a name="m_p"></a>CAutoVectorPtr::m_p  
+##  <a name="m_p"></a>  CAutoVectorPtr::m_p  
  La variabile membro di dati puntatore.  
   
 ```
@@ -183,7 +178,7 @@ T* m_p;
 ### <a name="remarks"></a>Note  
  Questa variabile membro contiene le informazioni di puntatore.  
   
-##  <a name="operator_eq"></a>CAutoVectorPtr::operator =  
+##  <a name="operator_eq"></a>  CAutoVectorPtr::operator =  
  L'operatore di assegnazione.  
   
 ```
@@ -200,7 +195,7 @@ CAutoVectorPtr<T>& operator= (CAutoVectorPtr<T>& p) throw();
 ### <a name="remarks"></a>Note  
  L'operatore di assegnazione scollega il `CAutoVectorPtr` oggetto da qualsiasi puntatore corrente e associa il nuovo puntatore `p`, al suo posto.  
   
-##  <a name="operator_t__star"></a>CAutoVectorPtr::operator T *  
+##  <a name="operator_t__star"></a>  CAutoVectorPtr::operator T *  
  L'operatore di cast.  
   
 ```  

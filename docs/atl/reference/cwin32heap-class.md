@@ -2,11 +2,8 @@
 title: Classe CWin32Heap | Documenti Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CWin32Heap
@@ -25,17 +22,15 @@ dev_langs:
 helpviewer_keywords:
 - CWin32Heap class
 ms.assetid: 69176022-ed98-4e3b-96d8-116b0c58ac95
-caps.latest.revision: 19
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 67856242c63639101185eb6f6dcfd4902f0ef48c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9b26d979ccb99d3d99bc91af03c4836603d31c01
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cwin32heap-class"></a>Classe di CWin32Heap
 Questa classe implementa [IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md) utilizzando le funzioni di allocazione di heap Win32.  
@@ -62,12 +57,12 @@ class CWin32Heap : public IAtlMemMgr
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[CWin32Heap:: allocate](#allocate)|Alloca un blocco di memoria dall'oggetto heap.|  
-|[CWin32Heap:: Attach](#attach)|Collega l'oggetto heap a un heap esistente.|  
+|[CWin32Heap::Allocate](#allocate)|Alloca un blocco di memoria dall'oggetto heap.|  
+|[CWin32Heap::Attach](#attach)|Collega l'oggetto heap a un heap esistente.|  
 |[CWin32Heap::Detach](#detach)|Scollega l'oggetto heap da un heap esistente.|  
-|[CWin32Heap:: Free](#free)|Libera la memoria precedentemente allocata dall'heap.|  
+|[CWin32Heap::Free](#free)|Libera la memoria precedentemente allocata dall'heap.|  
 |[CWin32Heap::GetSize](#getsize)|Restituisce le dimensioni di un blocco di memoria allocata dall'oggetto heap.|  
-|[CWin32Heap:: ReAllocate](#reallocate)|Rialloca un blocco di memoria dall'oggetto heap.|  
+|[CWin32Heap::Reallocate](#reallocate)|Rialloca un blocco di memoria dall'oggetto heap.|  
   
 ### <a name="public-data-members"></a>Membri dati pubblici  
   
@@ -77,7 +72,7 @@ class CWin32Heap : public IAtlMemMgr
 |[CWin32Heap::m_hHeap](#m_hheap)|Handle per l'oggetto heap.|  
   
 ## <a name="remarks"></a>Note  
- `CWin32Heap`implementa metodi di allocazione di memoria utilizzando le funzioni di allocazione heap Win32, tra cui [HeapAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366597) e [HeapFree](http://msdn.microsoft.com/library/windows/desktop/aa366701). Diversamente da altre classi di Heap, `CWin32Heap` richiede un handle heap valido specificare prima che la memoria viene allocata: per le altre classi predefiniti usando l'heap del processo. L'handle può essere fornito al costruttore o al [CWin32Heap:: Attach](#attach) metodo. Vedere il [CWin32Heap::CWin32Heap](#cwin32heap) metodo per altri dettagli.  
+ `CWin32Heap` implementa metodi di allocazione di memoria utilizzando le funzioni di allocazione heap Win32, inclusi [HeapAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366597) e [HeapFree](http://msdn.microsoft.com/library/windows/desktop/aa366701). Diversamente da altre classi di Heap, `CWin32Heap` richiede un handle heap valido specificare prima che la memoria viene allocata: per le altre classi predefiniti usando l'heap del processo. L'handle può essere fornito al costruttore o al [CWin32Heap:: Attach](#attach) metodo. Vedere il [CWin32Heap::CWin32Heap](#cwin32heap) metodo per altri dettagli.  
   
 ## <a name="example"></a>Esempio  
  Per vedere l'esempio [IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md).  
@@ -90,7 +85,7 @@ class CWin32Heap : public IAtlMemMgr
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** atlmem. h  
   
-##  <a name="allocate"></a>CWin32Heap:: allocate  
+##  <a name="allocate"></a>  CWin32Heap::Allocate  
  Alloca un blocco di memoria dall'oggetto heap.  
   
 ```
@@ -109,7 +104,7 @@ virtual __declspec(allocator) void* Allocate(size_t nBytes) throw();
   
  Implementato mediante [HeapAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366597).  
   
-##  <a name="attach"></a>CWin32Heap:: Attach  
+##  <a name="attach"></a>  CWin32Heap::Attach  
  Collega l'oggetto heap a un heap esistente.  
   
 ```
@@ -126,7 +121,7 @@ void Attach(HANDLE hHeap, bool bTakeOwnership) throw();
 ### <a name="remarks"></a>Note  
  Se `bTakeOwnership` è TRUE, il `CWin32Heap` oggetto è responsabile dell'eliminazione l'handle dell'heap.  
   
-##  <a name="cwin32heap"></a>CWin32Heap::CWin32Heap  
+##  <a name="cwin32heap"></a>  CWin32Heap::CWin32Heap  
  Costruttore.  
   
 ```
@@ -168,7 +163,7 @@ CWin32Heap(
   
  Il terzo parametro viene impostato sul valore predefinito 0 che consente all'heap di crescere come necessario. Vedere [HeapCreate](http://msdn.microsoft.com/library/windows/desktop/aa366599\(v=vs.85\).aspx) per una spiegazione del flag e le dimensioni di memoria.  
   
-##  <a name="dtor"></a>CWin32Heap:: ~ CWin32Heap  
+##  <a name="dtor"></a>  CWin32Heap:: ~ CWin32Heap  
  Distruttore.  
   
 ```
@@ -178,7 +173,7 @@ CWin32Heap(
 ### <a name="remarks"></a>Note  
  Elimina l'handle heap se la `CWin32Heap` oggetto dispone di proprietà dell'heap.  
   
-##  <a name="detach"></a>CWin32Heap::Detach  
+##  <a name="detach"></a>  CWin32Heap::Detach  
  Scollega l'oggetto heap da un heap esistente.  
   
 ```
@@ -188,7 +183,7 @@ HANDLE Detach() throw();
 ### <a name="return-value"></a>Valore restituito  
  Restituisce l'handle all'heap in cui l'oggetto è stato collegato in precedenza.  
   
-##  <a name="free"></a>CWin32Heap:: Free  
+##  <a name="free"></a>  CWin32Heap::Free  
  Libera la memoria precedentemente allocata dall'heap da [CWin32Heap:: allocate](#allocate) o [CWin32Heap:: ReAllocate](#reallocate).  
   
 ```
@@ -199,7 +194,7 @@ virtual void Free(void* p) throw();
  `p`  
  Puntatore al blocco di memoria da liberare. NULL è un valore valido e non esegue alcuna operazione.  
   
-##  <a name="getsize"></a>CWin32Heap::GetSize  
+##  <a name="getsize"></a>  CWin32Heap::GetSize  
  Restituisce le dimensioni di un blocco di memoria allocata dall'oggetto heap.  
   
 ```
@@ -213,14 +208,14 @@ virtual size_t GetSize(void* p) throw();
 ### <a name="return-value"></a>Valore restituito  
  Restituisce le dimensioni, in byte, del blocco di memoria allocata.  
   
-##  <a name="m_bownheap"></a>CWin32Heap::m_bOwnHeap  
+##  <a name="m_bownheap"></a>  CWin32Heap::m_bOwnHeap  
  Flag utilizzato per determinare la proprietà corrente dell'handle heap archiviato in [m_hHeap](#m_hheap).  
   
 ```
 bool m_bOwnHeap;
 ```  
   
-##  <a name="m_hheap"></a>CWin32Heap::m_hHeap  
+##  <a name="m_hheap"></a>  CWin32Heap::m_hHeap  
  Handle per l'oggetto heap.  
   
 ```
@@ -230,7 +225,7 @@ HANDLE m_hHeap;
 ### <a name="remarks"></a>Note  
  Una variabile utilizzata per archiviare un handle a oggetto heap.  
   
-##  <a name="reallocate"></a>CWin32Heap:: ReAllocate  
+##  <a name="reallocate"></a>  CWin32Heap::Reallocate  
  Rialloca un blocco di memoria dall'oggetto heap.  
   
 ```

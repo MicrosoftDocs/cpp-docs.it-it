@@ -2,11 +2,8 @@
 title: Le macro di mapping di proprietà | Documenti Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - atlcom/ATL::BEGIN_PROP_MAP
@@ -20,17 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - property maps
 ms.assetid: 128bc742-2b98-4b97-a243-684dbb83db77
-caps.latest.revision: 17
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dfd99fa59fc5e1d97011ac3dba4d16dd222c35b6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 718028385b3910b955c49ab9e0abddf23b443967
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="property-map-macros"></a>Macro di mapping di proprietà
 Queste macro definiscono i mapping di proprietà e le voci.  
@@ -47,7 +42,7 @@ Queste macro definiscono i mapping di proprietà e le voci.
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** atlcom. h  
    
-##  <a name="begin_prop_map"></a>BEGIN_PROP_MAP  
+##  <a name="begin_prop_map"></a>  BEGIN_PROP_MAP  
  Contrassegna l'inizio del mapping di proprietà dell'oggetto.  
   
 ```
@@ -63,12 +58,12 @@ BEGIN_PROP_MAP(theClass)
   
  Quando si crea un oggetto con la creazione guidata progetto ATL, la procedura guidata creerà un mapping di proprietà vuoto specificando `BEGIN_PROP_MAP` seguito da [END_PROP_MAP](#end_prop_map).  
   
- `BEGIN_PROP_MAP`non salvare l'extent (vale a dire le dimensioni) di un mapping di proprietà, perché un oggetto utilizzando un mapping di proprietà non potrebbe essere un'interfaccia utente, in modo non avrebbe alcun extent. Se l'oggetto è un controllo ActiveX con un'interfaccia utente, dispone di un extent. In questo caso, è necessario specificare [PROP_DATA_ENTRY](#prop_data_entry) nella mappa proprietà per specificare l'estensione.  
+ `BEGIN_PROP_MAP` non salvare l'extent (vale a dire, le dimensioni) di un mapping di proprietà, perché un oggetto tramite una mappa di proprietà non può avere un'interfaccia utente, in modo non avrebbe alcun extent. Se l'oggetto è un controllo ActiveX con un'interfaccia utente, dispone di un extent. In questo caso, è necessario specificare [PROP_DATA_ENTRY](#prop_data_entry) nella mappa proprietà per specificare l'estensione.  
   
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_ATL_Windowing#103](../../atl/codesnippet/cpp/property-map-macros_1.h)]  
   
-##  <a name="prop_data_entry"></a>PROP_DATA_ENTRY  
+##  <a name="prop_data_entry"></a>  PROP_DATA_ENTRY  
  Indica l'extent o dimensioni, di un controllo ActiveX.  
   
 ```
@@ -97,7 +92,7 @@ PROP_DATA_ENTRY( szDesc, member, vt)
   
  [!code-cpp[NVC_ATL_Windowing#132](../../atl/codesnippet/cpp/property-map-macros_3.h)]  
   
-##  <a name="prop_entry_type"></a>PROP_ENTRY_TYPE  
+##  <a name="prop_entry_type"></a>  PROP_ENTRY_TYPE  
  Utilizzare questa macro per immettere una descrizione, proprietà DISPID e pagina delle proprietà CLSID nel mapping di proprietà dell'oggetto.  
   
 ```
@@ -125,7 +120,7 @@ PROP_ENTRY_TYPE( szDesc, dispid, clsid, vt)
 ### <a name="example"></a>Esempio  
  Per vedere l'esempio [BEGIN_PROP_MAP](#begin_prop_map).  
   
-##  <a name="prop_entry_type_ex"></a>PROP_ENTRY_TYPE_EX  
+##  <a name="prop_entry_type_ex"></a>  PROP_ENTRY_TYPE_EX  
  Simile a [PROP_ENTRY_TYPE](#prop_entry_type), ma è possibile specificare un particolare IID se l'oggetto supporta più interfacce duali.  
   
 ```
@@ -158,7 +153,7 @@ PROP_ENTRY_TYPE_EX( szDesc, dispid, clsid, iidDispatch, vt)
   
  [!code-cpp[NVC_ATL_Windowing#133](../../atl/codesnippet/cpp/property-map-macros_4.h)]  
   
-##  <a name="prop_page"></a>PROP_PAGE  
+##  <a name="prop_page"></a>  PROP_PAGE  
  Utilizzare questa macro per immettere una pagina delle proprietà CLSID nel mapping di proprietà dell'oggetto.  
   
 ```
@@ -170,7 +165,7 @@ PROP_PAGE(clsid)
  [in] Il CLSID di una pagina delle proprietà.  
   
 ### <a name="remarks"></a>Note  
- `PROP_PAGE`è simile a [PROP_ENTRY_TYPE](#prop_entry_type), ma non richiede una descrizione della proprietà o un DISPID.  
+ `PROP_PAGE` è simile a [PROP_ENTRY_TYPE](#prop_entry_type), ma non richiede una descrizione della proprietà o DISPID.  
   
 > [!NOTE]
 >  Se è già stato immesso un CLSID con `PROP_ENTRY_TYPE` o [PROP_ENTRY_TYPE_EX](#prop_entry_type_ex), non è necessario immettere una voce aggiuntiva con `PROP_PAGE`.  
@@ -180,7 +175,7 @@ PROP_PAGE(clsid)
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_ATL_Windowing#134](../../atl/codesnippet/cpp/property-map-macros_5.h)]  
   
-##  <a name="end_prop_map"></a>END_PROP_MAP  
+##  <a name="end_prop_map"></a>  END_PROP_MAP  
  Contrassegna la fine del mapping di proprietà dell'oggetto.  
   
 ```

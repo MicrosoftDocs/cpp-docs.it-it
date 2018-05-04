@@ -2,11 +2,8 @@
 title: Creazione guidata Consumer OLE DB ATL | Documenti Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - vc.codewiz.class.atl.consumer.overview
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - connection strings [C++], OLE DB consumers
 - ATL OLE DB Consumer Wizard
 ms.assetid: dcb68ed1-2224-422f-9f7b-108a74864204
-caps.latest.revision: 13
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d12020b6adfca2c23dc610b5e596ff883bb9e7ff
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0d51569eaece5e3fac59c7cc2ff82a8454a5f959
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="atl-ole-db-consumer-wizard"></a>Creazione guidata consumer OLE DB ATL
 Questa procedura guidata imposta una classe consumer OLE DB con le associazioni dati necessaria per accedere all'origine dati specificata tramite il provider OLE DB specificato.  
@@ -50,7 +45,7 @@ Questa procedura guidata imposta una classe consumer OLE DB con le associazioni 
   
 - **Advanced** scheda  
   
-- **Tutti** scheda  
+- **Tutti i** scheda  
   
      Le informazioni aggiuntive seguenti vengono descritte le schede di **proprietà di Data Link** la finestra di dialogo.  
   
@@ -64,15 +59,15 @@ Questa procedura guidata imposta una classe consumer OLE DB con le associazioni 
   
      Per i dati SQL:  
   
-    1. **Selezionare o immettere un nome server:** fare clic sul menu a discesa per visualizzare tutti i server registrati i dati sulla rete e selezionarne uno.  
+    1. **Selezionare o immettere un nome server:** fare clic sul menu elenco a discesa per visualizzare tutti i server registrati i dati nella rete e selezionarne uno.  
   
-    2. **Immettere le informazioni per accedere al server:** immettere un nome utente e password per accedere al server di dati.  
+    2. **Immettere le informazioni per l'accesso al server:** immettere un nome utente e una password per accedere al server di dati.  
   
-    3. **Selezionare il database nel server:** fare clic sul menu a discesa per visualizzare tutti i database registrati nel server di dati e selezionare uno.  
+    3. **Selezionare il database nel server:** fare clic sul menu a discesa per visualizzare tutti i database registrati nel server del data e selezionare uno.  
   
          oppure  
   
- **Collegare un file di database come un nome di database:** specificare un file da utilizzare come database, immettere il nome percorso esplicito.  
+ **Collegare un file di database come un nome di database:** specificare un file da utilizzare come database, immettere il nome del percorso esplicito.  
   
         > [!NOTE]
         >  There is a security problem with the "Allow saving of password" feature of the Data Link Properties dialog box. In "Enter information to log on to the server," there are two radio buttons:  
@@ -89,7 +84,7 @@ Questa procedura guidata imposta una classe consumer OLE DB con le associazioni 
   
          1. **Specify the source of data:** You can use a data source name or a connection string.  
   
- **Usa nome origine dati:** questo elenco a discesa consente di visualizzare origini dati registrate nel computer. È possibile impostare le origini dati anticipo tramite Amministrazione origine dati ODBC- o -**Usa stringa di connessione:** immettere una stringa di connessione possiede già, oppure fare clic su di **compilare** pulsante; il **Seleziona origine dati** viene visualizzata la finestra di dialogo. Selezionare un'origine dati macchina o di file e fare clic su **OK**.  
+ **Usa nome origine dati:** questo elenco a discesa vengono visualizzate origini dati registrate nel computer. È possibile impostare le origini dati anticipo tramite Amministrazione origine dati ODBC- o -**Usa stringa di connessione:** immettere una stringa di connessione possiede già, oppure fare clic su di **compilare** pulsante; il **Seleziona origine dati** viene visualizzata la finestra di dialogo. Selezionare un'origine dati macchina o di file e fare clic su **OK**.  
   
         > [!NOTE]
         >  You can obtain a connection string by viewing the properties of an existing connection in Server Explorer, or you can create a connection by double-clicking **Add Connection** in Server Explorer.  
@@ -103,7 +98,7 @@ Questa procedura guidata imposta una classe consumer OLE DB con le associazioni 
  **Avanzate**  
  **Le impostazioni di rete:** specificare il **livello di rappresentazione** (il livello di rappresentazione che il server è possibile utilizzare per rappresentare il client; corrisponde direttamente a livelli di rappresentazione RPC) e  **Livello di protezione** (il livello di protezione dei dati inviati tra client e server; corrisponde direttamente a livelli di protezione RPC).  
   
- **Altro:** In **timeout connessione**, specificare il numero di secondi di inattività prima che si verifichi un timeout. In **le autorizzazioni di accesso**, specifica le autorizzazioni di accesso per la connessione dati.  
+ **Altro:** In **timeout connessione**, specificare il numero di secondi del tempo di inattività consentito prima che si verifichi un timeout. In **le autorizzazioni di accesso**, specifica le autorizzazioni di accesso per la connessione dati.  
   
      Per ulteriori informazioni sulle proprietà avanzate di inizializzazione, consultare la documentazione fornita con ogni provider OLE DB specifico.  
   
@@ -194,4 +189,4 @@ Questa procedura guidata imposta una classe consumer OLE DB con le associazioni 
 ## <a name="see-also"></a>Vedere anche  
  [Consumer OLE DB ATL](../../atl/reference/adding-an-atl-ole-db-consumer.md)   
  [Aggiunta di funzionalità con creazioni guidate codice](../../ide/adding-functionality-with-code-wizards-cpp.md)   
- [Stringhe di connessione e i collegamenti dati (OLE DB)](https://msdn.microsoft.com/library/ms718376.aspx)
+ [Le stringhe di connessione e i collegamenti dati (OLE DB)](https://msdn.microsoft.com/library/ms718376.aspx)

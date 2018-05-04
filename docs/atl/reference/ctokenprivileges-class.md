@@ -1,12 +1,9 @@
 ---
 title: Classe CTokenPrivileges | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CTokenPrivileges
@@ -27,17 +24,15 @@ dev_langs:
 helpviewer_keywords:
 - CTokenPrivileges class
 ms.assetid: 89590105-f001-4014-870d-142926091231
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e48ff04428d6cde6501c2782894c4132157a02b9
-ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
+ms.openlocfilehash: f6c9886b79739f42329b0f306c8bce6afc2d9fa0
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ctokenprivileges-class"></a>Classe CTokenPrivileges
 Questa classe è un wrapper per il **TOKEN_PRIVILEGES** struttura.  
@@ -79,7 +74,7 @@ class CTokenPrivileges
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[TOKEN_PRIVILEGES const CTokenPrivileges::operator *](#operator_const_token_privileges__star)|Esegue il cast di un valore a un puntatore per il **TOKEN_PRIVILEGES** struttura.|  
+|[CTokenPrivileges::operator TOKEN_PRIVILEGES const *](#operator_const_token_privileges__star)|Esegue il cast di un valore a un puntatore per il **TOKEN_PRIVILEGES** struttura.|  
 |[CTokenPrivileges::operator =](#operator_eq)|Operatore di assegnazione.|  
   
 ## <a name="remarks"></a>Note  
@@ -134,7 +129,7 @@ CTokenPrivileges(const TOKEN_PRIVILEGES& rPrivileges) throw(...);
 ### <a name="remarks"></a>Note  
  Il `CTokenPrivileges` oggetto può essere creato facoltativamente utilizzando un **TOKEN_PRIVILEGES** struttura o definita in precedenza `CTokenPrivileges` oggetto.  
   
-##  <a name="dtor"></a>  CTokenPrivileges::~CTokenPrivileges  
+##  <a name="dtor"></a>  CTokenPrivileges:: ~ CTokenPrivileges  
  Distruttore.  
   
 ```
@@ -180,7 +175,7 @@ void GetDisplayNames(CNames* pDisplayNames) const throw(...);
   
 ### <a name="parameters"></a>Parametri  
  `pDisplayNames`  
- Puntatore a una matrice di oggetti `CString`. **Record CNAME** è definito come un typedef: **CTokenPrivileges::CAtlArray\<CString >**.  
+ Puntatore a una matrice di oggetti `CString`. **Record CNAME** viene definito come un typedef: **CTokenPrivileges::CAtlArray\<CString >**.  
   
 ### <a name="remarks"></a>Note  
  Il parametro `pDisplayNames` è un puntatore a una matrice di `CString` gli oggetti che riceveranno i nomi visualizzati corrispondente ai privilegi contenuti nel `CTokenPrivileges` oggetto. Questo metodo recupera i nomi visualizzati solo per i privilegi specificati nella sezione di WINNT privilegi definito. H.  
@@ -294,7 +289,7 @@ CTokenPrivileges& operator= (const CTokenPrivileges& rhs) throw(...);
 ### <a name="return-value"></a>Valore restituito  
  Restituisce l'aggiornamento `CTokenPrivileges` oggetto.  
   
-##  <a name="operator_const_token_privileges__star"></a>TOKEN_PRIVILEGES const CTokenPrivileges::operator *  
+##  <a name="operator_const_token_privileges__star"></a>  CTokenPrivileges::operator TOKEN_PRIVILEGES const *  
  Esegue il cast di un valore a un puntatore per il **TOKEN_PRIVILEGES** struttura.  
   
 ```  
@@ -307,7 +302,7 @@ operator const TOKEN_PRIVILEGES *() const throw(...);
 ## <a name="see-also"></a>Vedere anche  
  [Esempio di sicurezza](../../visual-cpp-samples.md)   
  [TOKEN_PRIVILEGES](http://msdn.microsoft.com/library/windows/desktop/aa379630)   
- [LUID](http://msdn.microsoft.com/library/windows/desktop/aa379261)   
+ [IDENTIFICATORE UNIVOCO LOCALE](http://msdn.microsoft.com/library/windows/desktop/aa379261)   
  [LUID_AND_ATTRIBUTES](http://msdn.microsoft.com/library/windows/desktop/aa379263)   
  [Cenni preliminari sulla classe](../../atl/atl-class-overview.md)   
  [Funzioni globali di sicurezza](../../atl/reference/security-global-functions.md)

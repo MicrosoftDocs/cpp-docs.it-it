@@ -1,27 +1,22 @@
 ---
 title: Panoramica delle convenzioni ABI ARM | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 23f4ae8c-3148-4657-8c47-e933a9f387de
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 073fe113c1915913d06a63c7feabcb7808896188
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f78e5731e6c8d4125fb8afc184cd6e4f2a74cb7a
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="overview-of-arm-abi-conventions"></a>Panoramica delle convenzioni ABI ARM
 L'interfaccia applicativa binaria (ABI, Application Binary Interface) per il codice compilato per Windows su processori ARM si basa sull'interfaccia EABI ARM standard. Questo articolo evidenzia le principali differenze tra Windows su ARM e lo standard. Per ulteriori informazioni sull'interfaccia EABI ARM standard, vedere [Application Binary Interface (ABI) for l'architettura ARM](http://infocenter.arm.com/help/index.jsp?topic=/com.arm.doc.subset.swdev.abi/index.html).  

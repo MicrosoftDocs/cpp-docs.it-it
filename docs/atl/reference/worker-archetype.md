@@ -1,29 +1,24 @@
 ---
 title: Sistema di rilevazione lavoro | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - Worker archetype
 ms.assetid: 834145cd-09d3-4149-bc99-620e1871cbfb
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 44f275568df9b4f8200a3fac1d77520bab38e8d1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 42ff0e71e15c70d8d5d9dee0b398d4f0c075eb47
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="worker-archetype"></a>Sistema di rilevazione di lavoro
 Classi conformi al *lavoro* sistema per fornire il codice per gli elementi di lavoro di processo in coda in un pool di thread.  
@@ -88,7 +83,7 @@ void Execute(
  `pOverlapped`  
  Un puntatore al [OVERLAPPED](http://msdn.microsoft.com/library/windows/desktop/ms684342) struttura utilizzata per creare la coda in cui sono stati accodati.  
   
-## <a name="initialize"></a>WorkerArchetype::Initialize
+## <a name="initialize"></a> WorkerArchetype::Initialize
 Chiamato per inizializzare l'oggetto di lavoro prima di tutte le richieste vengono passate a `WorkerArchetype::Execute`.  
 ```
 BOOL Initialize(void* pvParam) throw();
@@ -101,7 +96,7 @@ BOOL Initialize(void* pvParam) throw();
 ### <a name="return-value"></a>Valore restituito  
  Restituire **TRUE** in caso di esito positivo **FALSE** in caso di errore.  
   
-## <a name="requesttype"></a>WorkerArchetype::RequestType
+## <a name="requesttype"></a> WorkerArchetype::RequestType
 Typedef per il tipo di elemento di lavoro che può essere elaborato dalla classe di lavoro.  
   
 ```  
@@ -111,7 +106,7 @@ typedef MyRequestType RequestType;
 ### <a name="remarks"></a>Note  
  Questo tipo deve essere utilizzato come primo parametro di `WorkerArchetype::Execute` e deve essere in grado di sottoposto a cast da e verso un ULONG_PTR.  
   
-## <a name="terminate"></a>WorkerArchetype::Terminate
+## <a name="terminate"></a> WorkerArchetype::Terminate
 Chiamato per annullare l'inizializzazione dell'oggetto worker dopo tutte le richieste sono state passate `WorkerArchetype::Execute`).  
     
 ``` 

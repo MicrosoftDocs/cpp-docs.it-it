@@ -1,13 +1,10 @@
 ---
 title: Esportazione da una DLL tramite dllexport | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - dllexport
 - __declspec
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - export directives [C++]
 - exporting DLLs [C++], __declspec(dllexport) keyword
 ms.assetid: a35e25e8-7263-4a04-bad4-00b284458679
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 51f20e47724a6d32dad014fbaf025cd283112c54
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e6ab1d11c117c75633ce4ab836965449c4cc6ca1
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="exporting-from-a-dll-using-declspecdllexport"></a>Esportazione da una DLL tramite __declspec(dllexport)
 Microsoft ha introdotto **Export** nella versione di Visual C++ per consentire al compilatore di generare automaticamente i nomi di esportazione e inserirle in un file con estensione LIB del compilatore a 16 bit. Questo file con estensione LIB quindi utilizzabile come un lib statico per il collegamento a una DLL.  
@@ -54,7 +49,7 @@ class __declspec(dllexport) CExampleExport : public CObject
 ```  
   
 > [!NOTE]
->  `__declspec(dllexport)`non è possibile applicare a una funzione con il `__clrcall` convenzione di chiamata.  
+>  `__declspec(dllexport)` non è possibile applicare a una funzione con il `__clrcall` convenzione di chiamata.  
   
  Quando si compila la DLL, è in genere creare un file di intestazione che contiene i prototipi di funzione e/o sta esportando e aggiungere classi **dllexport** alle dichiarazioni nel file di intestazione. Per rendere il codice più leggibile, definire una macro per **dllexport** e usare la macro con ogni simbolo da esportare:  
   
@@ -71,7 +66,7 @@ class __declspec(dllexport) CExampleExport : public CObject
   
 ## <a name="what-do-you-want-to-do"></a>Selezionare l'operazione da eseguire.  
   
--   [Esportazione da una DLL tramite i file def](../build/exporting-from-a-dll-using-def-files.md)  
+-   [Esportazione da una DLL tramite DEF (file)](../build/exporting-from-a-dll-using-def-files.md)  
   
 -   [Esportazione e importazione tramite AFX_EXT_CLASS](../build/exporting-and-importing-using-afx-ext-class.md)  
   
@@ -79,9 +74,9 @@ class __declspec(dllexport) CExampleExport : public CObject
   
 -   [Esportazione di funzioni C per l'utilizzo in eseguibili in linguaggio C o C++](../build/exporting-c-functions-for-use-in-c-or-cpp-language-executables.md)  
   
--   [Metodo di esportazione da utilizzare](../build/determining-which-exporting-method-to-use.md)  
+-   [Determinare quale metodo di esportazione da utilizzare](../build/determining-which-exporting-method-to-use.md)  
   
--   [Importazione in un'applicazione utilizzando declspec](../build/importing-into-an-application-using-declspec-dllimport.md)  
+-   [Importare un'applicazione che utilizza declspec](../build/importing-into-an-application-using-declspec-dllimport.md)  
   
 -   [Inizializzazione di una DLL](../build/run-time-library-behavior.md#initializing-a-dll)  
   

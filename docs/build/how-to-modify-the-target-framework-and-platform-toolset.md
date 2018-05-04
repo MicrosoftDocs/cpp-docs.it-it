@@ -1,13 +1,10 @@
 ---
 title: 'Procedura: modificare il Framework di destinazione e un set di strumenti della piattaforma | Documenti Microsoft'
-ms.custom: ''
+ms.custom: conceptual
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: get-started-article
+ms.topic: conceptual
 f1_keywords:
 - msbuild.cpp.howto.modifytargetframeworkandplatformtoolset
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - 'msbuild (c++), howto: modify target framework and platform toolset'
 ms.assetid: 031b1d54-e6e1-4da7-9868-3e75a87d9ffe
-caps.latest.revision: 32
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7ed85e0f1e1ce94401c505281c0e693a4904f92d
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: f21ec9d205e009438fac97914ec4b684713102a3
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-modify-the-target-framework-and-platform-toolset"></a>Procedura: modificare il framework di destinazione e il set di strumenti della piattaforma
 È possibile modificare le impostazioni di progetto Visual C++ per versioni diverse di .NET Framework di destinazione e utilizzare i set di strumenti della piattaforma diversa. Per impostazione predefinita, il sistema del progetto usa la versione .NET Framework e la versione del set di strumenti corrispondenti alla versione di Visual Studio usata per creare il progetto. È possibile modificare il set di strumenti della piattaforma di destinazione modificando le proprietà del progetto. È possibile modificare il framework di destinazione modificando il file del progetto (vcxproj). Non è necessario mantenere una codebase separata per ogni destinazione di compilazione.  

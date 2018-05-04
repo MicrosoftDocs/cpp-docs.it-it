@@ -1,27 +1,22 @@
 ---
-title: "Riferimenti sulle utilità ATL | Documenti Microsoft"
-ms.custom: 
+title: Riferimenti sulle utilità ATL | Documenti Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-atl
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: dd8a2888-34f4-461e-9bf4-834218f9b95b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 69f085df8b5dadbd0ba9d20596d37cb6313bb3f0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9b802d8764dda321e2e313f793f4f2e4745dbcc7
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="atl-utilities-reference"></a>Riferimenti sulle utilità ATL
 ATL fornisce codice per la modifica dei percorsi e gli URL nel formato [CPathT](../atl/reference/cpatht-class.md) e [CUrl](../atl/reference/curl-class.md). Un pool di thread, [CThreadPool](../atl/reference/cthreadpool-class.md), può essere utilizzato nelle applicazioni. Questo codice è reperibile in atlpath. h e atlutil. h.  

@@ -2,11 +2,8 @@
 title: Dichiarazione using | Documenti Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - using keyword [C++]
 - declarations [C++], namespaces
 ms.assetid: 4184e2b1-3adc-408e-b5f3-0b3f8b554723
-caps.latest.revision: 12
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c6bf39dfdb4f59bcf54ce1ddd5174f1e3a55e3a0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c4cb07e2d56527ad4907b7b144ba5f3bc04196a9
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-declaration"></a>dichiarazione using
 La dichiarazione using introduce un nome nell'area dichiarativa in cui la dichiarazione using viene visualizzata.  
@@ -45,7 +40,7 @@ using declarator-list ;
 *Identificatore di nome annidati*  
     Una sequenza di spazio dei nomi, classe o i nomi di enumerazione e operatori di risoluzione ambito (:), terminata da un operatore di risoluzione dell'ambito. Un operatore di risoluzione ambito singolo può essere utilizzato per introdurre un nome dello spazio dei nomi globale. La parola chiave `typename` è facoltativo e può essere utilizzato per risolvere i nomi dipendenti quando introdotti in un modello di classe da una classe base.  
   
-*-id non qualificato*  
+*id non qualificato*  
     Non qualificata id-espressione che può essere un identificatore, un nome di operatore di overload, definiti dall'utente letterale Conversione o operatore di nome di una funzione, un nome di distruttore di classe o un elenco di nome e l'argomento di modello.  
   
 *elenco di dichiaratori*  

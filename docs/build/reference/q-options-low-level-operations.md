@@ -1,13 +1,10 @@
 ---
 title: Opzioni -Q (operazioni di basso livello) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 1/23/2018
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - /q
 dev_langs:
@@ -18,14 +15,13 @@ helpviewer_keywords:
 - /Q compiler option [C++]
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7636b042669c7f7b04d2bc662bcaa2fbe4bdc82a
-ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
+ms.openlocfilehash: c8a18c5d790cf21e8eb130a2b2baa152e20d79a1
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="q-options-low-level-operations"></a>Opzioni /Q (Operazioni di basso livello)
 
@@ -37,13 +33,13 @@ ms.lasthandoff: 01/25/2018
 
 - [/Qimprecise_fwaits (rimozione di fwait nei blocchi Try)](../../build/reference/qimprecise-fwaits-remove-fwaits-inside-try-blocks.md): rimuove `fwait` comandi all'interno di `try` blocchi.
 
-- [/Qpar (parallelizzazione automatica)](../../build/reference/qpar-auto-parallelizer.md): abilita la parallelizzazione automatica dei cicli contrassegnati con il [loop () #pragma](../../preprocessor/loop.md) direttiva.
+- [/Qpar (parallelizzazione)](../../build/reference/qpar-auto-parallelizer.md): abilita la parallelizzazione automatica dei cicli contrassegnati con il [loop () #pragma](../../preprocessor/loop.md) direttiva.
 
 - [/Qvec-report (livello di segnalazione parallelizzazione automatica)](../../build/reference/qpar-report-auto-parallelizer-reporting-level.md): Abilita creazione rapporti di livelli per la parallelizzazione automatica.
 
-- [/Qsafe_fp_loads](../../build/reference/qsafe-fp-loads.md): eliminano le ottimizzazioni per registro a virgola mobile viene caricato e per gli spostamenti tra memoria e MMX Registra.
+- [/Qsafe_fp_loads](../../build/reference/qsafe-fp-loads.md): eliminano le ottimizzazioni per registro a virgola mobile carica e per gli spostamenti tra memoria e MMX Registra.
 
-- [/ Qspectre](../../build/reference/qspectre.md): genera istruzioni per limitare determinate vulnerabilità della sicurezza Spectre.
+- [/ Qspectre](../../build/reference/qspectre.md): genera le istruzioni per ridurre le vulnerabilità di sicurezza determinati Spectre.
 
 - [/Qvec-report (livello di segnalazione vettorizzazione automatica)](../../build/reference/qvec-report-auto-vectorizer-reporting-level.md): Abilita creazione rapporti di livelli per la vettorializzazione automatica.
 

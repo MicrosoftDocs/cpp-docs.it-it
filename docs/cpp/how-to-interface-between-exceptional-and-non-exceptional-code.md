@@ -1,27 +1,22 @@
 ---
 title: 'Procedura: interfaccia tra codice eccezionale e Non eccezionale | Documenti Microsoft'
-ms.custom: 
+ms.custom: how-to
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: fd5bb4af-5665-46a1-a321-614b48d4061e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 59838fa1797fc87561b081d40143693dea385668
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f2cf2216ba75912520f744f0f0331a50520aa895
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-interface-between-exceptional-and-non-exceptional-code"></a>Procedura: interfaccia tra codice eccezionale e non eccezionale
 In questo articolo viene descritto come implementare una gestione delle eccezioni coerente in un modulo C++ e viene illustrato come convertire tali eccezioni da e verso i codici di errore ai limiti della eccezione.  
@@ -247,5 +242,5 @@ bool DiffFiles3(const string& file1, const string& file2)
  Per altre informazioni sulle espressioni lambda, vedere [Espressioni lambda in C++](../cpp/lambda-expressions-in-cpp.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Errori e la gestione delle eccezioni](../cpp/errors-and-exception-handling-modern-cpp.md)   
+ [Errori ed eccezioni](../cpp/errors-and-exception-handling-modern-cpp.md)   
  [Procedura: Progettare la sicurezza dell'eccezione](../cpp/how-to-design-for-exception-safety.md)

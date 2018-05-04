@@ -1,27 +1,22 @@
 ---
 title: Tipi scalari | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 07c9195e-b6c7-4083-8ef0-8a93032e4d1e
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 15b0915637025e176ee98d01be3991b30b4e6544
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5490bb33cafd8d2942e434ab9c50e34441506463
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="scalar-types"></a>Tipi scalari
 Anche se l'accesso ai dati può derivare da alcun allineamento, è consigliabile che i dati vengano allineati sul relativo limite naturale per evitare la perdita di prestazioni (o un multiplo,). Le enumerazioni sono numeri interi costanti e vengono trattate come interi a 32 bit. La tabella seguente descrive la definizione del tipo e l'archiviazione consigliato per tale relativamente all'allineamento con i valori di allineamento seguenti:  
@@ -50,8 +45,8 @@ Anche se l'accesso ai dati può derivare da alcun allineamento, è consigliabile
 |**FP32 (precisione singola)**|**float**|4|Double Word|  
 |**FP64 (precisione doppia)**|**double**|8|Parola quadrupla|  
 |**PUNTATORE**|**\***|8|Parola quadrupla|  
-|`__m64`|**m64 struct**|8|Parola quadrupla|  
-|`__m128`|**m128 struct**|16|Octaword|  
+|`__m64`|**struct __m64**|8|Parola quadrupla|  
+|`__m128`|**struct __m128**|16|Octaword|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Tipi e archiviazione](../build/types-and-storage.md)

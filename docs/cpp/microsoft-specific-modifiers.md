@@ -1,34 +1,29 @@
 ---
 title: Modificatori specifici Microsoft | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
 ms.assetid: 22c7178c-f854-47fa-9de6-07d23fda58e1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f9533ffc2d21c3e8ee006fc97f7c61f4cb41115
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8490a50f30d366a53a9e3288417a8d83032c556d
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="microsoft-specific-modifiers"></a>Modificatori specifici Microsoft
 In questa sezione vengono descritte le estensioni di C++ specifiche di Microsoft nelle aree seguenti:  
   
 -   [Indirizzamento di base](../cpp/based-addressing.md), la pratica dell'utilizzo di un puntatore come base da cui è possibile spostare altri puntatori  
   
--   [Convenzioni di chiamata di funzione](../cpp/calling-conventions.md)  
+-   [Convenzioni di chiamata della funzione](../cpp/calling-conventions.md)  
   
 -   Estesi dichiarati con attributi di classe di archiviazione di [declspec](../cpp/declspec.md) (parola chiave)  
   

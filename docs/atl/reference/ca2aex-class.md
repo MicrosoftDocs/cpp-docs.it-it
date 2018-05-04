@@ -1,12 +1,9 @@
 ---
 title: Classe CA2AEX | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CA2AEX
@@ -19,17 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - CA2AEX class
 ms.assetid: 57dc65df-d9cf-4a84-99d3-6e031dde3664
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ec54e698723b801823d58a3bad2a53e6f1708369
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bdbdebb1ab79ceab44a408fc182b6037f2d32fae
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ca2aex-class"></a>Classe CA2AEX
 Questa classe viene utilizzata per le macro di conversione di stringhe `CA2TEX` e `CT2AEX`e typedef **CA2A**.  
@@ -97,7 +92,7 @@ class CA2AEX
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** atlconv. h  
   
-##  <a name="ca2aex"></a>CA2AEX::CA2AEX  
+##  <a name="ca2aex"></a>  CA2AEX::CA2AEX  
  Costruttore.  
   
 ```
@@ -115,7 +110,7 @@ CA2AEX(LPCSTR psz) throw(...);
 ### <a name="remarks"></a>Note  
  Crea il buffer necessario per la traduzione.  
   
-##  <a name="dtor"></a>CA2AEX:: ~ CA2AEX  
+##  <a name="dtor"></a>  CA2AEX:: ~ CA2AEX  
  Distruttore.  
   
 ```
@@ -125,21 +120,21 @@ CA2AEX(LPCSTR psz) throw(...);
 ### <a name="remarks"></a>Note  
  Consente di liberare il buffer allocato.  
   
-##  <a name="m_psz"></a>CA2AEX::m_psz  
+##  <a name="m_psz"></a>  CA2AEX::m_psz  
  Il membro dati che archivia la stringa di origine.  
   
 ```
 LPSTR m_psz;
 ```  
   
-##  <a name="m_szbuffer"></a>CA2AEX::m_szBuffer  
+##  <a name="m_szbuffer"></a>  CA2AEX::m_szBuffer  
  Il buffer statico, utilizzato per archiviare la stringa convertita.  
   
 ```
 char m_szBuffer[ t_nBufferLength];
 ```  
   
-##  <a name="operator_lpstr"></a>CA2AEX::operator LPSTR  
+##  <a name="operator_lpstr"></a>  CA2AEX::operator LPSTR  
  Operatore di conversione.  
   
 ```

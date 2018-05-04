@@ -1,13 +1,10 @@
 ---
 title: Funzione CAtlServiceModuleT | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-atl
+ms.topic: conceptual
 f1_keywords:
 - CServiceModule::Run
 - CServiceModule.Run
@@ -17,22 +14,20 @@ dev_langs:
 helpviewer_keywords:
 - ATL services, security
 ms.assetid: 42c010f0-e60e-459c-a63b-a53a24cda93b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7ff3efe9298b7a2c11e7f83ef58640b2947519b8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a07ad6b09fa10a81b500625531226dc18fc6281a
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="catlservicemoduletrun-function"></a>CAtlServiceModuleT (funzione)
-**Eseguire** contiene chiamate al `PreMessageLoop`, `RunMessageLoop`, e `PostMessageLoop`. Dopo la chiamata `PreMessageLoop` Archivia prima l'ID del thread. del servizio Questo ID verrà utilizzato dal servizio per la chiusura inviando un **WM_QUIT** messaggio utilizzando la funzione API Win32, [PostThreadMessage](http://msdn.microsoft.com/library/windows/desktop/ms644946).  
+**Eseguire** contiene le chiamate a `PreMessageLoop`, `RunMessageLoop`, e `PostMessageLoop`. Dopo la chiamata `PreMessageLoop` Archivia prima l'ID del thread. del servizio Questo ID verrà utilizzato dal servizio per la chiusura inviando un **WM_QUIT** messaggio utilizzando la funzione API Win32, [PostThreadMessage](http://msdn.microsoft.com/library/windows/desktop/ms644946).  
   
- `PreMessageLoop`chiama quindi `InitializeSecurity`. Per impostazione predefinita, `InitializeSecurity` chiamate [CoInitializeSecurity](http://msdn.microsoft.com/library/windows/desktop/ms693736) con il descrittore di sicurezza impostato su NULL, il che significa che qualsiasi utente che disponga dell'accesso all'oggetto.  
+ `PreMessageLoop` chiama quindi `InitializeSecurity`. Per impostazione predefinita, `InitializeSecurity` chiamate [CoInitializeSecurity](http://msdn.microsoft.com/library/windows/desktop/ms693736) con il descrittore di sicurezza impostato su NULL, il che significa che qualsiasi utente che disponga dell'accesso all'oggetto.  
   
  Se si desidera il servizio per specificare la propria sicurezza, eseguire l'override `PreMessageLoop` e non chiamare `InitializeSecurity`, COM verrà quindi determinare le impostazioni di sicurezza dal Registro di sistema. È un modo pratico per configurare le impostazioni del Registro di sistema con il [DCOMCNFG](../atl/dcomcnfg.md) utilità illustrato più avanti in questa sezione.  
   

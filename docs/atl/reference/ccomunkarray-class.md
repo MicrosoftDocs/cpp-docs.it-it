@@ -1,12 +1,9 @@
 ---
 title: Classe CComUnkArray | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CComUnkArray
@@ -24,17 +21,15 @@ helpviewer_keywords:
 - connection points [C++], managing
 - CComUnkArray class
 ms.assetid: 5fd4b378-a7b5-4cc1-8866-8ab72a73639e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3ca462648a43869b11984e4582c8eb2c3dfaece7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0de49180052a6fdb7bde32274e032ea1dd9bfb87
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ccomunkarray-class"></a>CComUnkArray (classe)
 Questa classe Archivia **IUnknown** puntatori ed è progettato per essere utilizzato come parametro per il [IConnectionPointImpl](../../atl/reference/iconnectionpointimpl-class.md) classe modello.  
@@ -70,19 +65,19 @@ class CComUnkArray
 |[CComUnkArray::Remove](#remove)|Chiamare questo metodo per rimuovere un **IUnknown** puntatore dalla matrice.|  
   
 ## <a name="remarks"></a>Note  
- **CComUnkArray** contiene un numero fisso di **IUnknown** puntatori, ogni punto di un'interfaccia in una connessione. **CComUnkArray** può essere utilizzato come parametro per il [IConnectionPointImpl](../../atl/reference/iconnectionpointimpl-class.md) classe modello. **CComUnkArray\<1 >** è una specializzazione di modello di **CComUnkArray** che è stata ottimizzata per un punto di connessione.  
+ **CComUnkArray** contiene un numero fisso di **IUnknown** puntatori, ognuno scegliere un'interfaccia in una connessione. **CComUnkArray** può essere utilizzato come parametro per il [IConnectionPointImpl](../../atl/reference/iconnectionpointimpl-class.md) classe modello. **CComUnkArray\<1 >** è una specializzazione di modello della **CComUnkArray** che è stata ottimizzata per un punto di connessione.  
   
  Il **CComUnkArray** metodi [iniziare](#begin) e [fine](#end) può essere utilizzato per scorrere tutti i punti di connessione (ad esempio, quando viene generato un evento).  
   
  Vedere [aggiunta di punti di connessione a un oggetto](../../atl/adding-connection-points-to-an-object.md) per informazioni dettagliate su come automatizzare la creazione della connessione puntare proxy.  
   
 > [!NOTE]
-> **Nota** la classe [CComDynamicUnkArray](../../atl/reference/ccomdynamicunkarray-class.md) viene utilizzato il **Aggiungi classe** procedura guidata durante la creazione di un controllo che dispone di punti di connessione. Se si desidera specificare manualmente il numero di punti di connessione, modificare il riferimento da **CComDynamicUnkArray** a `CComUnkArray<`  *n*  `>`, dove  *n*  è il numero di punti di connessione necessarie.  
+> **Nota** della classe [CComDynamicUnkArray](../../atl/reference/ccomdynamicunkarray-class.md) viene utilizzato il **Aggiungi classe** procedura guidata durante la creazione di un controllo che dispone di punti di connessione. Se si desidera specificare manualmente il numero di punti di connessione, modificare il riferimento da **CComDynamicUnkArray** alla `CComUnkArray<` *n* `>`, dove *n*è il numero di punti di connessione necessarie.  
   
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** atlcom. h  
   
-##  <a name="add"></a>CComUnkArray::Add  
+##  <a name="add"></a>  CComUnkArray::Add  
  Chiamare questo metodo per aggiungere un **IUnknown** puntatore alla matrice.  
   
 ```
@@ -96,7 +91,7 @@ DWORD Add(IUnknown* pUnk);
 ### <a name="return-value"></a>Valore restituito  
  Restituisce il cookie associato con il puntatore appena aggiunto, oppure 0 se la matrice non è sufficientemente grande da contenere il nuovo puntatore.  
   
-##  <a name="begin"></a>CComUnkArray::begin  
+##  <a name="begin"></a>  CComUnkArray::begin  
  Restituisce un puntatore all'inizio dell'insieme di **IUnknown** i puntatori a interfaccia.  
   
 ```
@@ -112,7 +107,7 @@ IUnknown**
   
  Prima di utilizzare il **IUnknown** interfaccia, è necessario controllare che non sia **NULL**.  
   
-##  <a name="ccomunkarray"></a>CComUnkArray::CComUnkArray  
+##  <a name="ccomunkarray"></a>  CComUnkArray::CComUnkArray  
  Costruttore.  
   
 ```
@@ -122,7 +117,7 @@ CComUnkArray();
 ### <a name="remarks"></a>Note  
  Imposta la raccolta per contenere `nMaxSize` **IUnknown** puntatori e inizializza i puntatori ai **NULL**.  
   
-##  <a name="end"></a>CComUnkArray::end  
+##  <a name="end"></a>  CComUnkArray::end  
  Restituisce un puntatore oltre l'ultimo **IUnknown** puntatore nella raccolta.  
   
 ```
@@ -138,7 +133,7 @@ IUnknown**
   
  [!code-cpp[NVC_ATL_COM#44](../../atl/codesnippet/cpp/ccomunkarray-class_1.cpp)]  
   
-##  <a name="getcookie"></a>CComUnkArray::GetCookie  
+##  <a name="getcookie"></a>  CComUnkArray::GetCookie  
  Chiamare questo metodo per ottenere il cookie associato a un determinato **IUnknown** puntatore.  
   
 ```
@@ -155,7 +150,7 @@ DWORD WINAPI GetCookie(IUnknown** ppFind);
 ### <a name="remarks"></a>Note  
  Se è presente più di un'istanza dello stesso **IUnknown** puntatore, questa funzione restituisce il cookie per la prima.  
   
-##  <a name="getunknown"></a>CComUnkArray::GetUnknown  
+##  <a name="getunknown"></a>  CComUnkArray::GetUnknown  
  Chiamare questo metodo per ottenere il **IUnknown** puntatore associata a un cookie specificato.  
   
 ```
@@ -169,7 +164,7 @@ IUnknown* WINAPI GetUnknown(DWORD dwCookie);
 ### <a name="return-value"></a>Valore restituito  
  Restituisce il **IUnknown** puntatore o NULL se viene rilevato alcun cookie corrispondente.  
   
-##  <a name="remove"></a>CComUnkArray::Remove  
+##  <a name="remove"></a>  CComUnkArray::Remove  
  Chiamare questo metodo per rimuovere un **IUnknown** puntatore dalla matrice.  
   
 ```

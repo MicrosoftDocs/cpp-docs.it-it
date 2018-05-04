@@ -2,12 +2,9 @@
 title: -OPT (ottimizzazioni) | Documenti Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VC.Project.VCLinkerTool.OptimizeReferences
 - /opt
@@ -26,17 +23,15 @@ helpviewer_keywords:
 - optimization, linker
 - /OPT linker option
 ms.assetid: 8f229863-5f53-48a8-9478-243a647093ac
-caps.latest.revision: 23
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 928968803dc008eb39b3d0c52152c1f3b631a852
-ms.sourcegitcommit: 770f6c4a57200aaa9e8ac6e08a3631a4b4bdca05
+ms.openlocfilehash: f8ac107f8a5654601f0c974f82fa83ae6aa83518
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="opt-optimizations"></a>/OPT (Ottimizzazioni)
 Controlla le ottimizzazioni eseguite da LINK durante una compilazione.  
@@ -63,7 +58,7 @@ Controlla le ottimizzazioni eseguite da LINK durante una compilazione.
   
  Specifica di **/OPT: ICF** non abilita il **/OPT: ref** opzione.  
   
- **ICF [=** `iterations` **] &AMP;#124; NOICF**   
+ **ICF [=** `iterations` **] &AMP;#124; NOICF**  
  Utilizzare **/OPT: ICF [=**`iterations`**]** per eseguire la riduzione di COMDAT identici. I dati COMDAT ridondanti possono essere rimossi dall'output del linker. Il parametro `iterations` facoltativo specifica il numero di volte in cui scorrere i simboli per individuare eventuali duplicati. Il numero predefinito di iterazioni è due. Attraverso iterazioni aggiuntive si potrebbero trovare più duplicati rivelati attraverso la riduzione nell'iterazione precedente.  
   
  Il linker si comporta in modo diverso quando **/OPT: ref** è specificato, e **ICF** è attiva per impostazione predefinita, rispetto a quando **/OPT: REF, ICF** è specificato in modo esplicito. Il modulo di **ICF** abilitato con **/OPT: ref** da solo non comporta la riduzione dei dati di sola lettura, inclusi rdata, pdata e xdata. Di conseguenza, viene ridotto un numero inferiore di funzioni quando vengono prodotte immagini per [!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)] perché le funzioni in questi moduli presentano una maggiore dipendenza dai dati di sola lettura, ad esempio PDATA e XDATA. Per ottenere la funzionalità completa **ICF** riduzione comportamento, specificare in modo esplicito **/OPT: ICF**.  

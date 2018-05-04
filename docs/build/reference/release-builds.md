@@ -1,13 +1,10 @@
 ---
 title: Build di rilascio | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - release builds
 - debug builds, converting to release build
 ms.assetid: fa9a78fa-f4b5-4722-baf4-aec655c4ff0f
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 12e81b26cd83214a5d62a42689bfc3a866ef1c10
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f3ae18c5e2dcdb735880509fd158dac4ccaa1462
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="release-builds"></a>Build di rilascio
 Una build di rilascio Usa le ottimizzazioni. Quando si usa le ottimizzazioni per creare una build di rilascio, il compilatore non genererà le informazioni sui simboli di debug. Chiama l'assenza di informazioni di debug sui simboli, nonché il fatto che il codice non viene generato per traccia e ASSERT, significa che le dimensioni del file eseguibile viene ridotto e pertanto è più veloce.  

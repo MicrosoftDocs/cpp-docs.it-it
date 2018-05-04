@@ -4,20 +4,19 @@ ms.custom: ''
 ms.date: 03/14/2018
 ms.technology:
 - cpp-tools
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - C++
 ms.assetid: dc3a1914-dbb6-4401-bc63-10665a8c8943
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 98933630a2cc8b5dfb5c4d1d7b24ceac3ec2937b
-ms.sourcegitcommit: ee7d74683af7631441c8c7f65ef5ceceaee4a5ee
+ms.openlocfilehash: f8a586ef48f87f90dd5f191f9fcaea6f30af5c56
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="profile-guided-optimization-in-the-visual-studio-2013-performance-and-diagnostics-hub"></a>In Visual Studio 2013 Hub prestazioni e diagnostica di ottimizzazione PGO
 
@@ -37,7 +36,7 @@ Innanzitutto, verrà creata un'applicazione desktop Win32 di base in Visual Stud
 
 1. Nella barra dei menu scegliere **File**, **Nuovo**, **Progetto**.
 
-1. Nel riquadro sinistro della finestra di **nuovo progetto** finestra di dialogo espandere **installato**, **modelli**, **Visual C++**e quindi selezionare  **MFC**.
+1. Nel riquadro sinistro della finestra di **nuovo progetto** finestra di dialogo espandere **installato**, **modelli**, **Visual C++** e quindi selezionare  **MFC**.
 
 1. Nel riquadro centrale selezionare **applicazione MFC**.
 

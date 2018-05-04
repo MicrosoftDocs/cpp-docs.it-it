@@ -1,6 +1,6 @@
 ---
 title: -Z7, - Zi, - ZI (formato informazioni di Debug) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 02/22/2018
 ms.technology:
 - cpp-tools
@@ -31,14 +31,13 @@ helpviewer_keywords:
 - -Z7 compiler option [C++]
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3b55c5ea77b752d4adac8d74abaed245b4d19821
-ms.sourcegitcommit: 3038840ca6e4dea01accf733436b99d19ff6c930
+ms.openlocfilehash: a86605b8fd47c0febedfc9ab022dfc2c2728822a
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="z7-zi-zi-debug-information-format"></a>/Z7, /Zi, /ZI (Formato informazioni di debug)
 
@@ -52,7 +51,7 @@ Specifica il tipo di informazioni di debug create per il programma e indica se q
 
 Quando il codice viene compilato e compilato in modalità di debug, il compilatore genera i nomi dei simboli per funzioni e variabili, le informazioni sul tipo e percorsi di numeri di riga per l'utilizzo dal debugger. Queste informazioni di debug sui simboli possono essere incluse nei file oggetto (file con estensione obj) generati dal compilatore, o in un file PDB (file con estensione pdb) separato per il file eseguibile.  Le opzioni di formato informazioni di debug sono descritte nelle sezioni seguenti.  
   
-### <a name="none"></a>nessuno
+### <a name="none"></a>Nessuno
 
 Per impostazione predefinita, se è specificata alcuna opzione di formato di informazioni di debug, il compilatore non produce alcuna informazione di debug, pertanto la compilazione è più veloce.  
   
@@ -79,7 +78,7 @@ Se si crea una raccolta di oggetti che sono stati compilati utilizzando **/Zi**,
 
 ### <a name="zi"></a>/ZI
 
-Il **/ZI** ed è simile al **/Zi**, ma genera un file PDB in un formato che supporta il [modifica e continuazione](/visualstudio/debugger/edit-and-continue-visual-cpp) funzionalità. Per utilizzare Modifica e continuazione le funzionalità di debug, è necessario utilizzare questa opzione. La funzionalità Modifica e continuazione è utile per la produttività degli sviluppatori, ma può causare problemi in conformità di dimensioni, prestazioni e del compilatore di codice. Poiché la maggior parte delle ottimizzazioni non sono compatibili con modifica e continuazione, l'utilizzo **/ZI** disabilita qualsiasi `#pragma optimize` istruzioni nel codice. Il **/ZI** opzione è incompatibile con uso di anche il [&#95; &#95; RIGA &#95; &#95; la macro](../../preprocessor/predefined-macros.md); il codice compilato con **/ZI** non è possibile utilizzare **&#95; &#95; RIGA &#95; &#95;**  come argomento di modello non di tipo, sebbene **&#95; &#95; RIGA &#95; &#95;**  può essere usato in espansioni della macro.
+Il **/ZI** ed è simile al **/Zi**, ma genera un file PDB in un formato che supporta il [modifica e continuazione](/visualstudio/debugger/edit-and-continue-visual-cpp) funzionalità. Per utilizzare Modifica e continuazione le funzionalità di debug, è necessario utilizzare questa opzione. La funzionalità Modifica e continuazione è utile per la produttività degli sviluppatori, ma può causare problemi in conformità di dimensioni, prestazioni e del compilatore di codice. Poiché la maggior parte delle ottimizzazioni non sono compatibili con modifica e continuazione, l'utilizzo **/ZI** disabilita qualsiasi `#pragma optimize` istruzioni nel codice. Il **/ZI** opzione è incompatibile con uso di anche il [ &#95; &#95;riga&#95; &#95; macro predefinita](../../preprocessor/predefined-macros.md); codice compilato con **/ZI** non è possibile utilizzare **&#95; &#95;Riga&#95; &#95;** come argomento di modello non di tipo, anche se **&#95; &#95;riga&#95; &#95;** può essere usato in espansioni della macro.
 
 Il **/ZI** opzione impone entrambi il [/Gy (Attiva collegamento a livello di funzione)](../../build/reference/gy-enable-function-level-linking.md) e [/FC (completo percorso del File di codice sorgente nella diagnostica)](../../build/reference/fc-full-path-of-source-code-file-in-diagnostics.md) le opzioni da utilizzare nella compilazione.
 

@@ -1,12 +1,9 @@
 ---
 title: Aggiunta di un componente ASP ATL | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 dev_langs:
 - C++
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - ATL, ASP components
 - ATL ASP components
 ms.assetid: 7be2204c-6e58-4099-8892-001b848c8987
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dd79d4bc3370caf153e29a3305dc6dad1d8b97de
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b49db13f4067ee595896ace808213a11256f7ff7
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="adding-an-atl-active-server-page-component"></a>Aggiunta di un componente ASP ATL
 Per aggiungere un oggetto Active Template Library (ATL) al progetto, è necessario avere questo sia stato creato come un'applicazione COM ATL o di un'applicazione MFC con supporto ATL. È possibile utilizzare il [Creazione guidata progetto ATL](../../atl/reference/atl-project-wizard.md) per creare un'applicazione ATL, è possibile selezionare **Aggiungi supporto ATL a MFC** dal [dialogo Aggiungi classe](../../ide/add-class-dialog-box.md) la finestra di dialogo alternativa, è possibile [aggiungere un oggetto ATL all'applicazione MFC](../../mfc/reference/adding-atl-support-to-your-mfc-project.md) per implementare il supporto ATL per un'applicazione MFC.  

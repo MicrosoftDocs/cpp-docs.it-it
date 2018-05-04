@@ -2,11 +2,8 @@
 title: _com_ptr_t::Attach | Documenti Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - _com_ptr_t::Attach
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - COM interfaces, attach pointer
 - Attach method [C++]
 ms.assetid: 94c18e0a-06be-4ca7-bdaf-cd54ec0a645e
-caps.latest.revision: 6
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d8b9eac88c9387c6aeedd140159bb24482c829dd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7341695ad0cbc8384da859b80a72a63d8d52215f
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="comptrtattach"></a>_com_ptr_t::Attach
 **Sezione specifica Microsoft**  
@@ -55,9 +50,9 @@ void Attach(
   
 ## <a name="remarks"></a>Note  
   
--   **Collegare (**`pInterface`**)** `AddRef` non viene chiamato. La proprietà dell'interfaccia viene passata a questo oggetto `_com_ptr_t`. **Versione** viene chiamato per diminuire il conteggio dei riferimenti per il puntatore incapsulato in precedenza.  
+-   **Collegamento (**`pInterface`**)** `AddRef` non viene chiamato.     La proprietà dell'interfaccia viene passata a questo oggetto `_com_ptr_t`. **Versione** viene chiamato per diminuire il conteggio dei riferimenti per il puntatore incapsulato in precedenza.  
   
--   **Collegare (** `pInterface` **,**`fAddRef`**)** se `fAddRef` è **true**, `AddRef` viene chiamato per incrementare il riferimento conteggio per il puntatore a interfaccia incapsulato. Se `fAddRef` è **false**, questo `_com_ptr_t` oggetto acquisisce la proprietà del puntatore a interfaccia raw senza chiamare `AddRef`. **Versione** viene chiamato per diminuire il conteggio dei riferimenti per il puntatore incapsulato in precedenza.  
+-   **Collegamento (** `pInterface` **,**`fAddRef`**)** se `fAddRef` è **true**, `AddRef` viene chiamato per incrementare il riferimento conteggio per il puntatore a interfaccia incapsulato.       Se `fAddRef` è **false**, questo `_com_ptr_t` oggetto acquisisce la proprietà del puntatore a interfaccia raw senza chiamare `AddRef`. **Versione** viene chiamato per diminuire il conteggio dei riferimenti per il puntatore incapsulato in precedenza.  
   
  **Fine sezione specifica Microsoft**  
   

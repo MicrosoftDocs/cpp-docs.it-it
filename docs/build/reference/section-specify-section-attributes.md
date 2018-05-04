@@ -1,13 +1,10 @@
 ---
 title: /Section (specifica attributi di sezione) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 12/29/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - /section
 dev_langs:
@@ -19,14 +16,13 @@ helpviewer_keywords:
 - /SECTION linker option
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aa214c7efeeee595300204df900a333258052772
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: 6d9b0a724f0e9156c81db20bf283e4418dd2f22d
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="section-specify-section-attributes"></a>/SECTION (Specifica attributi di sezione)
 

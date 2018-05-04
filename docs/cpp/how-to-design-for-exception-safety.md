@@ -1,27 +1,22 @@
 ---
-title: 'Procedura: progettazione di sicurezza dell''eccezione | Documenti Microsoft'
-ms.custom: 
+title: "Procedura: progettazione di sicurezza dell'eccezione | Documenti Microsoft"
+ms.custom: how-to
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 19ecc5d4-297d-4c4e-b4f3-4fccab890b3d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7d15df2f810848bb9349bc98c722ac02ff8cda17
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: cbad81c5014c2aa3bcf10b083fa974615e4669e9
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-design-for-exception-safety"></a>Procedura: progettare la sicurezza dell'eccezione
 Uno dei vantaggi del meccanismo di eccezione è che l'esecuzione, insieme ai dati sull'eccezione, passa direttamente dall'istruzione che genera l'eccezione alla prima istruzione catch che gestisce. Il gestore può essere un numero qualsiasi di livelli nello stack di chiamate. Le funzioni chiamate tra l'istruzione try e l'istruzione throw non sono necessarie per ottenere informazioni sull'eccezione gestita.  Tuttavia, devono essere progettate in modo tale da poter uscire dall'ambito "in modo imprevisto" in qualsiasi punto in cui un'eccezione può propagarsi dal basso, ed essere eseguite senza lasciarsi dietro oggetti parzialmente creati, memoria persa o strutture di dati in stati non utilizzabili.  
@@ -124,5 +119,5 @@ public:
 -   Non consentire alle eccezioni di uscire da un distruttore. Un assioma di base del linguaggio C++ afferma che i distruttori non dovrebbero mai consentire che un'eccezione si propaghi nello stack di chiamate. Se un distruttore deve eseguire un'operazione che potenzialmente genera un'eccezione, deve farlo in un blocco try-catch e inghiottire l'eccezione. La libreria standard garantisce questo comportamento per tutti i distruttori che definisce.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Errori e la gestione delle eccezioni](../cpp/errors-and-exception-handling-modern-cpp.md)   
+ [Errori ed eccezioni](../cpp/errors-and-exception-handling-modern-cpp.md)   
  [Procedura: Interfaccia tra codice eccezionale e non eccezionale](../cpp/how-to-interface-between-exceptional-and-non-exceptional-code.md)

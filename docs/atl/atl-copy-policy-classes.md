@@ -1,13 +1,10 @@
 ---
 title: Classi di criteri di copia ATL | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-atl
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - _Copy class
 - _CopyInterface class
 ms.assetid: 06704b68-d318-4c5d-a65b-71457fe9d00d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 54ac3c9d53c3b6d2b295643001fd15b1e4c6c46d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 34b9ed5dca45633a5ab980d38b8a7cda151f5dc7
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="atl-copy-policy-classes"></a>Classi di criteri di copia ATL
 Classi di criteri di copia sono [classi di utilità](../atl/utility-classes.md) utilizzato per inizializzare, copiare ed eliminare dati. Classi di criteri di copia consentono di definire semantica di copia per qualsiasi tipo di dati e per definire le conversioni tra tipi di dati diversi.  
@@ -62,7 +57,7 @@ Classi di criteri di copia sono [classi di utilità](../atl/utility-classes.md) 
   
 -   Il primo parametro **copia** deve ricevere solo un puntatore ai dati che sono inizializzati in precedenza utilizzando **init**.  
   
--   **Eliminare definitivamente** deve ricevere solo un puntatore ai dati che sono inizializzati in precedenza utilizzando **init** o copiati tramite **copia**.  
+-   **Eliminare definitivamente** deve ricevere solo un puntatore ai dati che in precedenza sono inizializzate utilizzando **init** o copiati tramite **copia**.  
   
 ## <a name="standard-implementations"></a>Implementazioni standard  
  ATL fornisce due classi di criteri di copia nel formato di **Copy** e **CopyInterface** classi modello:  
@@ -75,14 +70,14 @@ Classi di criteri di copia sono [classi di utilità](../atl/utility-classes.md) 
  In genere, è necessario definire le classi di criteri di copia per la copia eterogenea (conversione tra tipi di dati). Per alcuni esempi di classi di criteri di copia personalizzata, esaminare i file VCUE_Copy. h e VCUE_CopyString. h nel [ATLCollections](../visual-cpp-samples.md) esempio. Questi file contengono le classi dei criteri di copia, due modello `GenericCopy` e `MapCopy`, oltre a una serie di specializzazioni di `GenericCopy` per diversi tipi di dati.  
   
 ### <a name="genericcopy"></a>GenericCopy  
- `GenericCopy`Consente di specificare il *SourceType* e `DestinationType` come argomenti di modello. Ecco la forma più generale del `GenericCopy` classe da VCUE_Copy:  
+ `GenericCopy` Consente di specificare il *SourceType* e `DestinationType` come argomenti di modello. Ecco la forma più generale del `GenericCopy` classe da VCUE_Copy:  
   
  [!code-cpp[NVC_ATL_COM#30](../atl/codesnippet/cpp/atl-copy-policy-classes_1.h)]  
   
  VCUE_Copy contiene anche le seguenti specializzazioni di questa classe: `GenericCopy<BSTR>`, `GenericCopy<VARIANT, BSTR>`, `GenericCopy<BSTR, VARIANT>`. VCUE_CopyString. h contiene specializzazioni per la copia da **std:: String**s: `GenericCopy<std::string>`, `GenericCopy<VARIANT, std::string>`, e `GenericCopy<BSTR, std::string>`. È possibile migliorare `GenericCopy` fornendo ulteriori specializzazioni personalizzate.  
   
 ### <a name="mapcopy"></a>MapCopy  
- `MapCopy`si presuppone che i dati da copiare sono archiviati in una mappa di tipo libreria Standard C++, pertanto consente di specificare il tipo di mappa in cui sono archiviati i dati e il tipo di destinazione. L'implementazione della classe vengono utilizzati solo i typedef forniti dal *MapType (TipoMappa)* classe per determinare il tipo di dati di origine e di chiamare appropriata `GenericCopy` classe. Non sono necessari specializzazioni di questa classe.  
+ `MapCopy` si presuppone che i dati copiati vengono archiviati in una mappa di tipo libreria Standard C++, pertanto consente di specificare il tipo di mappa in cui sono archiviati i dati e il tipo di destinazione. L'implementazione della classe vengono utilizzati solo i typedef forniti dal *MapType (TipoMappa)* classe per determinare il tipo di dati di origine e di chiamare appropriata `GenericCopy` classe. Non sono necessari specializzazioni di questa classe.  
   
  [!code-cpp[NVC_ATL_COM#31](../atl/codesnippet/cpp/atl-copy-policy-classes_2.h)]  
   

@@ -38,14 +38,13 @@ helpviewer_keywords:
 - hyperbolic functions
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6e7ab81b64012ec7f7edca7bb194a13c9d563ddb
-ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
+ms.openlocfilehash: 438c587099edafedbb2cc3feb4b3a285aa155a0d
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="tanh-tanhf-tanhl"></a>Tanh, tanhf, tanhl
 

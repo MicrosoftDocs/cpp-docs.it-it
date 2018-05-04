@@ -2,12 +2,9 @@
 title: Campi di Bit C++ | Documenti Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - fields [C++], bit
 - bit fields
 ms.assetid: 6f4b62e3-cc1d-4e5d-bf34-05904104f71a
-caps.latest.revision: 8
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ff6b2a37c511313bd129705da38e66380e89edae
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: db5ecac0263f1e8ebbfe41f654f2ef2e03b2395f
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="c-bit-fields"></a>Campi di bit C++
 Le classi e le strutture possono contenere membri che occupano uno spazio di archiviazione minore rispetto a un valore di tipo integrale. Questi membri vengono specificati come campi di bit. La sintassi per il campo di bit *dichiaratore di membro* seguente:  
@@ -58,7 +53,7 @@ struct Date {
   
  Il layout concettuale di memoria di un oggetto di tipo `Date` viene illustrato nella figura seguente.  
   
- ![Layout di memoria di un oggetto data](../cpp/media/vc38uq1.png "vc38UQ1")  
+ ![Layout della memoria di un oggetto data](../cpp/media/vc38uq1.png "vc38UQ1")  
 Layout a memoria fissa dell'oggetto Data  
   
  Si noti che `nYear` è lungo 8 bit ed eccederebbe il confine di parola del tipo dichiarato, **unsigned short**. Pertanto, viene inizializzato all'inizio di un nuovo **unsigned short**. Non è necessario che tutti i campi di bit si adattino a un oggetto del tipo sottostante e le nuove unità di archiviazione vengono allocate a seconda del numero di bit necessari per la dichiarazione.  
@@ -85,7 +80,7 @@ struct Date {
   
  il layout di memoria è analogo a quello illustrato nella figura seguente.  
   
- ![Layout dell'oggetto data con zero &#45; il campo di bit di lunghezza](../cpp/media/vc38uq2.png "vc38UQ2")  
+ ![Layout dell'oggetto data con zero&#45;il campo di bit di lunghezza](../cpp/media/vc38uq2.png "vc38UQ2")  
 Layout dell'oggetto Data con campo bit a lunghezza 0  
   
  Il tipo sottostante di un campo di bit deve essere un tipo integrale, come descritto [tipi fondamentali](../cpp/fundamental-types-cpp.md).  

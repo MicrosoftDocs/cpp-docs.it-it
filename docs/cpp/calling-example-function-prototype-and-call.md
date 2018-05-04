@@ -1,12 +1,9 @@
 ---
 title: 'Esempio di chiamata: Prototipo e chiamata di funzione | Documenti Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -14,17 +11,15 @@ helpviewer_keywords:
 - calling conventions, examples [C++]
 - examples [C++], calling conventions
 ms.assetid: e4275d1f-df2e-4bfc-a162-eb43ec69554a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: afdc7d91e11936ebfd1775477f8c684ae4ff6d62
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2fcfda308ed3a5723b32729e7986a7063e9928fd
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="calling-example-function-prototype-and-call"></a>Esempio di chiamata - Prototipo e chiamata di funzione
 ## <a name="microsoft-specific"></a>Sezione specifica Microsoft  

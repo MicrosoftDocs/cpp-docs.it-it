@@ -2,12 +2,9 @@
 title: -Consente di IGNORARE (ignorare determinati avvisi) | Documenti Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - /OVERWRITE
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - /IGNORE linker option
 ms.assetid: 37e77387-8838-4697-898f-d376ac641124
-caps.latest.revision: 3
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0d8815438ce56629bd120c30b0d0db9fef96916d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b096fc12f69fbe637a3067646c20f6d520a9250f
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ignore-ignore-specific-warnings"></a>/IGNORE (ignorare determinati avvisi)
 ```  

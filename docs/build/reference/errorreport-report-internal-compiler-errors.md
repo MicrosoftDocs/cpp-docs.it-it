@@ -1,13 +1,10 @@
 ---
 title: -errorReport (errori interni del compilatore Report) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VC.Project.VCCLCompilerTool.ErrorReporting
 - /errorreport
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - /errorReport compiler option [C++]
 - -errorReport compiler option [C++]
 ms.assetid: 819828f8-b0a5-412c-9c57-bf822f17e667
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9b34df09ca53441789fc90061748ad591149d6b2
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: 67e87143d31de98039f5d679c102a5815dd87abb
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="errorreport-report-internal-compiler-errors"></a>/errorReport (Segnala gli errori interni del compilatore)
 Consente di inviare informazioni sugli errori interni del compilatore direttamente a Microsoft.  
@@ -43,10 +38,10 @@ Consente di inviare informazioni sugli errori interni del compilatore direttamen
  Le segnalazioni sugli errori interni del compilatore non verranno raccolte o inviate a Microsoft.  
   
  **prompt**  
- Chiede di inviare una segnalazione quando si riceve un errore interno del compilatore. **prompt dei comandi** è l'impostazione predefinita, quando si compila un'applicazione nell'ambiente di sviluppo.  
+ Chiede di inviare una segnalazione quando si riceve un errore interno del compilatore. **prompt dei comandi** è l'impostazione predefinita quando viene compilata un'applicazione nell'ambiente di sviluppo.  
   
  **queue**  
- Accoda la segnalazione errori. Quando si accede con privilegi di amministratore, viene visualizzata una finestra in modo che è possibile segnalare gli eventuali errori dall'ultima volta in cui è stato effettuato (non verrà richiesto di inviare segnalazioni errori più di una volta ogni tre giorni). **coda** è l'impostazione predefinita, quando si compila un'applicazione a un prompt dei comandi.  
+ Accoda la segnalazione errori. Quando si accede con privilegi di amministratore, viene visualizzata una finestra in modo che è possibile segnalare gli eventuali errori dall'ultima volta in cui è stato effettuato (non verrà richiesto di inviare segnalazioni errori più di una volta ogni tre giorni). **coda** è l'impostazione predefinita quando si compila un'applicazione da un prompt dei comandi.  
   
  **send**  
  Se reporting è abilitato per le impostazioni di sistema di segnalazione errori Windows, invia automaticamente segnalazioni di errori interni del compilatore a Microsoft.  

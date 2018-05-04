@@ -1,10 +1,10 @@
 ---
-title: /Zc (Conformance) | Microsoft Docs
-ms.custom: 
+title: /Zc (conformità) | Documenti Microsoft
+ms.custom: ''
 ms.date: 03/06/2018
 ms.technology:
 - cpp-tools
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - /zc
 dev_langs:
@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: db1cc175-6e93-4a2e-9396-c3725d2d8f71
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dda62dc6644fd49cf9213b176a4efe563474f740
-ms.sourcegitcommit: eeb2b5ad8d3d22514a7b9bd7d756511b69ae0ccf
+ms.openlocfilehash: b8b87774b9c011d6ea5ab92d3c1b44e4af2b6091
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="zc-conformance"></a>/Zc (Conformità)
 
@@ -53,7 +52,7 @@ Si tratta di `/Zc` opzioni del compilatore:
 |[rvalueCast\[-\]](zc-rvaluecast-enforce-type-conversion-rules.md)|Applicare le regole di conversione esplicita di tipi Standard di C++ (disattivato per impostazione predefinita).|
 |[sizedDealloc\[-\]](zc-sizeddealloc-enable-global-sized-dealloc-functions.md)|Abilitare C++ 14 deallocazione con dimensione globale funzioni (in per impostazione predefinita).|
 |[strictStrings\[-\]](zc-strictstrings-disable-string-literal-type-conversion.md)|Valore letterale stringa a Disable `char*` o `wchar_t*` conversione (disattivato per impostazione predefinita).|
-|[ternary\[-\]](zc-ternary.md)|Applicare le regole sui tipi di operando dell'operatore condizionale (disattivato per impostazione predefinita).|
+|[ternario\[-\]](zc-ternary.md)|Applicare le regole sui tipi di operando dell'operatore condizionale (disattivato per impostazione predefinita).|
 |[threadSafeInit\[-\]](zc-threadsafeinit-thread-safe-local-static-initialization.md)|Abilitare l'inizializzazione statica locale thread-safe (in per impostazione predefinita).|
 |[throwingNew\[-\]](zc-throwingnew-assume-operator-new-throws.md)|Si supponga `operator new` genera un'eccezione in caso di errore (disattivato per impostazione predefinita).|
 |[trigraphs\[-\]](zc-trigraphs-trigraphs-substitution.md)|Abilita i trigrammi (obsoleti, disattivata per impostazione predefinita).|

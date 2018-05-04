@@ -1,13 +1,10 @@
 ---
 title: Operatori di pre-elaborazione di makefile | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - DEFINED operator
 - makefiles, preprocessing operators
 ms.assetid: a46e4d39-afdb-43c1-ac3b-025d33e6ebdb
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 59007bdabc81b5fe49aa4b5265dc0fc73ef4f0b3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d9a99bf6388a4aa15b2126aca8e09210b7202d46
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="makefile-preprocessing-operators"></a>Operatori di pre-elaborazione di makefile
 Nelle espressioni della pre-elaborazione di makefile è possibile usare operatori che agiscono sui valori delle costanti, sui codici di uscita dei comandi, su stringhe, macro e percorsi del file system. Per valutare l'espressione, il preprocessore prima di tutto espande le macro ed esegue i comandi e quindi esegue le operazioni. Le operazioni vengono valutate per raggruppamento tra parentesi esplicito e quindi per la precedenza degli operatori. Il risultato è un valore costante.  
@@ -45,8 +40,8 @@ Nelle espressioni della pre-elaborazione di makefile è possibile usare operator
   
 |Operatore|Descrizione|  
 |--------------|-----------------|  
-|`DEFINED(`*nomemacro*`)`|Produce un valore logico per lo stato corrente di definizione di *nomemacro*.|  
-|`EXIST(`*percorso*`)`|Produce un valore logico per l'esistenza del file di *percorso*.|  
+|`DEFINED(` *nomemacro* `)`|Produce un valore logico per lo stato corrente di definizione di *nomemacro*.|  
+|`EXIST(` *Percorso* `)`|Produce un valore logico per l'esistenza del file di *percorso*.|  
 |||  
 |`!`|NOT logico unario.|  
 |`~`|Complemento di uno unario.|  

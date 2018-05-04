@@ -1,13 +1,10 @@
 ---
 title: Riferimenti al linguaggio C++ | Documenti Microsoft
-ms.custom: ''
+ms.custom: index-page
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
-ms.topic: 'index-page '
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - language reference, Visual C++
 - Visual C++, language reference
 ms.assetid: 4be9cacb-c862-4391-894a-3a118c9c93ce
-caps.latest.revision: 14
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 852f4522ecf32643611f6bbd4d86028e883bb6eb
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 25315121d3004601914c5b8872b496e57acec99f
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="c-language-reference"></a>Riferimenti al linguaggio C++
 Nella guida di riferimento viene illustrato il linguaggio di programmazione C++ implementato in Microsoft Visual C++. L'organizzazione si basa su *The Annotated C++ Reference Manual* di Margaret Ellis e Bjarne Stroustrup e sullo standard ANSI/ISO internazionale Standard C++ (ISO/IEC FDIS 14882). Sono incluse le implementazioni specifiche di Microsoft delle funzionalità del linguaggio C++.  
@@ -107,7 +102,7 @@ Per una panoramica delle procedure di programmazione C++ moderna, vedere [inizia
  [Comportamento non standard](../cpp/nonstandard-behavior.md)  
  Informazioni sul comportamento non standard del compilatore Visual C++.  
 
- [Benvenuti al C++](welcome-back-to-cpp-modern-cpp.md) una panoramica della programmazione C++ moderna consigliate per la scrittura di programmi sicuri, corretti ed efficienti.
+ [Benvenuti al C++](welcome-back-to-cpp-modern-cpp.md) una panoramica della programmazione moderna in C++ per procedure consigliate per la scrittura di programmi sicuri, corretti ed efficienti.
   
 ## <a name="related-sections"></a>Sezioni correlate  
  [Estensioni componenti per le piattaforme runtime](../windows/component-extensions-for-runtime-platforms.md)  

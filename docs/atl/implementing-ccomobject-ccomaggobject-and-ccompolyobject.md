@@ -1,13 +1,10 @@
 ---
 title: Implementazione di CComObject, CComAggObject e CComPolyObject | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-atl
+ms.topic: conceptual
 f1_keywords:
 - CComPolyObject
 - CComAggObject
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - CComAggObject class
 - CComObject class, implementing
 ms.assetid: 5aabe938-104d-492e-9c41-9f7fb1c62098
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 54f237a629c4af9ea7ae30aeca21c03786abcd97
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5ac45a6edbe606ba445ed3ae58cfde348f83e4de
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="implementing-ccomobject-ccomaggobject-and-ccompolyobject"></a>Implementazione di CComObject, CComAggObject e CComPolyObject
 Classi modello [CComObject](../atl/reference/ccomobject-class.md), [CComAggObject](../atl/reference/ccomaggobject-class.md), e [CComPolyObject](../atl/reference/ccompolyobject-class.md) sono sempre le classi nella catena di ereditarietà. È responsabilità di gestire tutti i metodi in **IUnknown**: `QueryInterface`, `AddRef`, e **versione**. Inoltre, `CComAggObject` e `CComPolyObject` (quando viene utilizzato per gli oggetti aggregati) fornisce il conteggio speciale e `QueryInterface` semantica necessaria per l'inner unknown.  
@@ -40,7 +35,7 @@ Classi modello [CComObject](../atl/reference/ccomobject-class.md), [CComAggObjec
 |Macro|Effetto|  
 |-----------|------------|  
 |`DECLARE_NOT_AGGREGATABLE`|Usa sempre `CComObject`.|  
-|`DECLARE_AGGREGATABLE`|Usa `CComAggObject` se l'oggetto è aggregato e `CComObject` in caso contrario. `CComCoClass`contiene la macro se nessuno del **viene\*Aggregatable** macro vengono dichiarati nella classe, questo sarà il valore predefinito.|  
+|`DECLARE_AGGREGATABLE`|Usa `CComAggObject` se l'oggetto è aggregato e `CComObject` in caso contrario. `CComCoClass` Questa macro contiene pertanto se nessuno del **viene\*Aggregatable** macro vengono dichiarate nella classe, si tratterà il valore predefinito.|  
 |`DECLARE_ONLY_AGGREGATABLE`|Usa sempre `CComAggObject`. Restituisce un errore se l'oggetto non è aggregato.|  
 |`DECLARE_POLY_AGGREGATABLE`|ATL crea un'istanza di **CComPolyObject\<CClasse >** quando **IClassFactory::CreateInstance** viene chiamato. Durante la creazione, viene controllato il valore unknown esterno. Se è **NULL**, **IUnknown** è implementata per un oggetto non aggregato. Se non è unknown esterno **NULL**, **IUnknown** è implementata per un oggetto aggregato.|  
   

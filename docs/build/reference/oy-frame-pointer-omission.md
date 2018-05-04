@@ -1,13 +1,10 @@
 ---
 title: -Oy (omissione dei puntatori Frame) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 09/22/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VC.Project.VCCLCompilerTool.OmitFramePointers
 - /oy
@@ -22,17 +19,15 @@ helpviewer_keywords:
 - suppress frame pointer creation
 - /Oy compiler option [C++]
 ms.assetid: c451da86-5297-4c5a-92bc-561d41379853
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 15a760d1a9df383356ead2eb2d1e1b08e8b9ca57
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b6feb682d364c4c40fd01e4aff33404c4506d9c1
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="oy-frame-pointer-omission"></a>/Oy (Omissione dei puntatori ai frame)
 
@@ -46,7 +41,7 @@ Disabilita la creazione di puntatori ai frame nello stack di chiamate.
 
 Questa opzione consente di velocizzare l'esecuzione delle chiamate di funzione in quanto non è necessario impostare e rimuovere alcun puntatore ai frame. Libera inoltre un ulteriore registro, EBP sul processore Intel 386 o versioni successive, per l'archiviazione delle variabili e delle sottoespressioni utilizzate di frequente.
 
-**/Oy** consente l'omissione dei puntatori di frame e **/Oy-** Disabilita omissione. **/Oy** è disponibile solo in x86 compilatori.
+**/Oy** Abilita l'omissione dei puntatori ai frame e **/Oy-** Disabilita omissione. **/Oy** è disponibile solo in x86 compilatori.
 
 Se il codice richiede l'indirizzamento basato su EBP, è possibile specificare il **/Oy-** dopo il **/Ox** o utilizzare [ottimizzare](../../preprocessor/optimize.md) con la "**y**" e **off** argomenti per ottenere la massima ottimizzazione con l'indirizzamento basato su EBP. Il compilatore rileva la maggior parte dei casi in cui l'indirizzamento basato su EBP è necessario, ad esempio con le funzioni `_alloca` e `setjmp` e con la gestione delle eccezioni strutturate.
 

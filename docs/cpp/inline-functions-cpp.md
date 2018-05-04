@@ -1,12 +1,9 @@
 ---
 title: Funzioni inline (C++) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - __forceinline_cpp
@@ -17,17 +14,15 @@ dev_langs:
 helpviewer_keywords:
 - inline functions [C++], class members
 ms.assetid: 355f120c-2847-4608-ac04-8dda18ffe10c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: de370d8dbff1f1340539adc825f7f5316c59a468
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6661996669e454e655d0149f1dbb1df505116469
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="inline-functions-c"></a>Funzioni inline (C++)
 Una funzione definita nel corpo di una dichiarazione di classe è una funzione inline.  
@@ -99,7 +94,7 @@ int main()
   
  Il [/Ob](../build/reference/ob-inline-function-expansion.md) opzione di ottimizzazione del compilatore consente di determinare se espansione funzioni inline viene effettivamente eseguita.  
   
- [L'opzione /LTCG](../build/reference/ltcg-link-time-code-generation.md) esegue intramodulo indipendentemente dal fatto che è stata richiesta nel codice sorgente.  
+ [/LTCG](../build/reference/ltcg-link-time-code-generation.md) esegue intramodulo indipendentemente dal fatto è stata richiesta nel codice sorgente.  
   
 ### <a name="example-1"></a>Esempio 1  
   
@@ -163,7 +158,7 @@ private:
 **Fine sezione specifica Microsoft**  
  Per ulteriori informazioni sull'utilizzo di **inline** identificatore, vedere:  
   
--   [Funzioni membro delle classi inline](../cpp/inline-functions-cpp.md)  
+-   [Funzioni membro di classi inline](../cpp/inline-functions-cpp.md)  
   
 -   [Definizione delle funzioni C++ inline con dllexport e dllimport](../cpp/defining-inline-cpp-functions-with-dllexport-and-dllimport.md)  
   

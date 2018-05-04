@@ -1,12 +1,9 @@
 ---
 title: Operazioni di CString relative alle stringhe di tipo C | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 dev_langs:
 - C++
@@ -24,20 +21,18 @@ helpviewer_keywords:
 - strings [C++], class CString
 - casting CString objects
 ms.assetid: 5048de8a-5298-4891-b8a0-c554b5a3ac1b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 04be31fa3209aace6fd5446532510e2a27e6bdce
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7d0683f82204b11d06b1952913d4dbdb1e4a468d
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cstring-operations-relating-to-c-style-strings"></a>Operazioni di CString relative alle stringhe in formato C
-Oggetto [CString](../atl-mfc-shared/using-cstring.md) oggetto contiene dati stringa di caratteri. `CString`eredita il set del [metodi e gli operatori](../atl-mfc-shared/reference/cstringt-class.md) che sono definiti nel modello di classe [CStringT](../atl-mfc-shared/reference/cstringt-class.md) per funzionare con i dati di stringa. (`CString` è un `typedef` che specializza `CStringT` per funzionare con il tipo di dati di tipo carattere che `CString` supporta.)  
+Oggetto [CString](../atl-mfc-shared/using-cstring.md) oggetto contiene dati stringa di caratteri. `CString` eredita il set del [metodi e gli operatori](../atl-mfc-shared/reference/cstringt-class.md) che sono definiti nel modello di classe [CStringT](../atl-mfc-shared/reference/cstringt-class.md) per operare sui dati di stringa. (`CString` è un `typedef` che specializza `CStringT` per funzionare con il tipo di dati di tipo carattere che `CString` supporta.)  
   
  `CString` non archivia i dati di tipo carattere internamente come stringa in formato C con terminazione null. `CString` tiene invece traccia della lunghezza dei dati di tipo carattere in modo da poter controllare con maggiore sicurezza i dati e lo spazio necessario.  
   
@@ -45,15 +40,15 @@ Oggetto [CString](../atl-mfc-shared/using-cstring.md) oggetto contiene dati stri
   
 - [La conversione in stringhe in formato C con terminazione null](#_core_using_cstring_as_a_c.2d.style_null.2d.terminated_string)  
   
-- [Utilizzo di funzioni della libreria di runtime standard](#_core_working_with_standard_run.2d.time_library_string_functions)  
+- [Utilizzo di funzioni della libreria runtime standard](#_core_working_with_standard_run.2d.time_library_string_functions)  
   
 - [Modifica diretta del contenuto di CString](#_core_modifying_cstring_contents_directly)  
   
-- [Utilizzo di oggetti CString con funzioni con argomenti variabili](#_core_using_cstring_objects_with_variable_argument_functions)  
+- [Uso di oggetti CString con funzioni con argomenti variabili](#_core_using_cstring_objects_with_variable_argument_functions)  
   
 - [Specifica dei parametri formali di CString](#_core_specifying_cstring_formal_parameters)  
   
-##  <a name="_core_using_cstring_as_a_c.2d.style_null.2d.terminated_string"></a>Uso di CString come una stringa in formato C con terminazione Null  
+##  <a name="_core_using_cstring_as_a_c.2d.style_null.2d.terminated_string"></a> Uso di CString come una stringa in formato C con terminazione Null  
  Per usare un oggetto `CString` come stringa in formato C, eseguire il cast dell'oggetto a `LPCTSTR`. Nell'esempio seguente, `CString` restituisce un puntatore a una stringa in formato C con terminazione null di sola lettura. La funzione `strcpy` inserisce una copia della stringa in formato C nella variabile `myString`.  
   
 ```  
@@ -71,12 +66,12 @@ strcpy(myString, (LPCTSTR)aCString);
 > [!NOTE]
 >  Il terzo argomento `strcpy_s` (o il portabile Unicode/MBCS `_tcscpy_s`) è un `const wchar_t*` (Unicode) o un `const char*` (ANSI). L'esempio precedente passa un oggetto `CString` per questo argomento. Il compilatore C++ applica automaticamente la funzione di conversione definita per la classe `CString` che converte `CString` in `LPCTSTR`. La possibilità di definire le operazioni di cast da un tipo a un altro è una delle funzionalità più utili di C++.  
   
-##  <a name="_core_working_with_standard_run.2d.time_library_string_functions"></a>Utilizzo di funzioni della libreria di runtime Standard  
+##  <a name="_core_working_with_standard_run.2d.time_library_string_functions"></a> Utilizzo di funzioni della libreria runtime Standard  
  È consigliabile trovare un metodo `CString` per eseguire un'operazione di stringa per cui potrebbe essere necessario usare le funzioni della libreria run-time C standard come `strcmp` (o `_tcscmp` per il formato portabile Unicode/MBCS).  
   
  Se è necessario utilizzare le funzioni di stringa di runtime C, è possibile utilizzare le tecniche descritte in _core_using_cstring_as_a_c.2d.style_null.2d.terminated_string. È possibile copiare l'oggetto `CString` in un buffer di stringa in formato C equivalente, eseguire le operazioni nel buffer e quindi riassegnare la stringa in formato C risultante a un oggetto `CString`.  
   
-##  <a name="_core_modifying_cstring_contents_directly"></a>Modifica diretta del contenuto di CString  
+##  <a name="_core_modifying_cstring_contents_directly"></a> Modifica diretta del contenuto di CString  
  Nella maggior parte dei casi, è consigliabile usare le funzioni membro di `CString` per modificare il contenuto di un oggetto `CString` o per convertire l'oggetto `CString` in una stringa di caratteri in formato C.  
   
  Ci sono casi in cui è opportuno modificare direttamente il contenuto di `CString`, ad esempio quando si usano le funzioni del sistema operativo che richiedono un buffer di caratteri.  
@@ -91,14 +86,14 @@ strcpy(myString, (LPCTSTR)aCString);
   
 3.  Chiamare `ReleaseBuffer` per l'oggetto `CString` per aggiornare tutte le informazioni interne sullo stato di `CString`, ad esempio la lunghezza della stringa. Dopo aver modificato direttamente il contenuto di un oggetto `CString`, è necessario chiamare `ReleaseBuffer` prima di poter chiamare altre funzioni membro di `CString`.  
   
-##  <a name="_core_using_cstring_objects_with_variable_argument_functions"></a>Utilizzo di oggetti CString con funzioni con argomenti variabili  
+##  <a name="_core_using_cstring_objects_with_variable_argument_functions"></a> Uso di oggetti CString con funzioni con argomenti variabili  
  Alcune funzioni C accettano un numero variabile di argomenti. Un esempio rilevante è `printf_s`. A causa del modo in cui questo tipo di funzione è dichiarato, il compilatore non può essere certo del tipo di argomenti né determinare l'operazione di conversione da eseguire per ogni argomento. Pertanto, è essenziale usare un cast di tipo esplicito per passare un oggetto `CString` a una funzione che accetta un numero variabile di argomenti.  
   
  Per usare un oggetto `CString` in una funzione con argomenti variabili, eseguire il cast in modo esplicito di `CString` a una stringa `LPCTSTR`, come mostrato nell'esempio seguente.  
   
  [!code-cpp[NVC_ATLMFC_Utilities#190](../atl-mfc-shared/codesnippet/cpp/cstring-operations-relating-to-c-style-strings_2.cpp)]  
   
-##  <a name="_core_specifying_cstring_formal_parameters"></a>Specifica dei parametri formali di CString  
+##  <a name="_core_specifying_cstring_formal_parameters"></a> Specifica dei parametri formali di CString  
  Per la maggior parte delle funzioni che richiedono un argomento stringa è consigliabile specificare il parametro formale nel prototipo di funzione come un puntatore `const` a un carattere (`LPCTSTR`) anziché `CString`. Quando si specifica un parametro formale come un puntatore `const` a un carattere, è possibile passare un puntatore a una matrice `TCHAR`, una stringa letterale [`"hi there"`] o un oggetto `CString`. L'oggetto `CString` verrà convertito automaticamente in `LPCTSTR`. In qualsiasi punto in cui è possibile usare `LPCTSTR`, sarà possibile usare anche un oggetto `CString`.  
   
  È anche possibile specificare un parametro formale come riferimento a una costante stringa (vale a dire `const CString&`) se l'argomento non verrà modificato. Eliminare il modificatore `const` se la stringa verrà modificata dalla funzione. Per avere un valore null predefinito, inizializzarlo a una stringa null [`""`], come mostrato di seguito:  

@@ -1,13 +1,10 @@
 ---
 title: Opzioni di LINK controllate dal compilatore | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - link
 dev_langs:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - cl.exe compiler [C++], features that affect linking
 - cl.exe compiler [C++], controlling linker
 ms.assetid: e4c03896-c99c-4599-8502-e0f4bebe69d0
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cc899fc7f1fc8c1805648e72e14ef13853841c90
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8d99a05b5f9c4d97fd42328a41ad3fe054ab42cd
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="compiler-controlled-link-options"></a>Compiler-Controlled LINK Options
 Il compilatore CL chiama automaticamente i collegamenti a meno che non si specifica l'opzione/c. CL consente di controllare il linker attraverso le opzioni della riga di comando e gli argomenti. Nella tabella seguente sono riepilogate le funzionalità CL che hanno effetto sul collegamento.  

@@ -1,13 +1,10 @@
 ---
 title: -SAFESEH (l'immagine ha gestori delle eccezioni sicuri) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - /SAFESEH
 dev_langs:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - -SAFESEH linker option
 - SAFESEH linker option
 ms.assetid: 7722ff99-b833-4c65-a855-aaca902ffcb7
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1c57a882e3a421d03b2edf97c9fb4bf2f352e5d5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 54d13e6922650f0193d4bbc3469d4acf25904234
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="safeseh-image-has-safe-exception-handlers"></a>/SAFESEH (L'immagine ha gestori delle eccezioni sicuri)
 ```  
@@ -36,7 +31,7 @@ ms.lasthandoff: 12/21/2017
   
  Quando **/SAFESEH** viene specificato, il linker produrrà un'immagine solo se è possibile creare anche una tabella di gestori eccezioni sicuri dell'immagine. Questa tabella è specifica per il sistema operativo i gestori di eccezioni sono validi per l'immagine.  
   
- **/SAFESEH** è valido solo quando il collegamento per x86 destinazioni. **/SAFESEH** non è supportata per le piattaforme che dispongono già di gestori delle eccezioni. Ad esempio, in [!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)] e ARM, tutti i gestori di eccezioni sono indicati nella sezione PDATA. Ml64.exe è supportata l'aggiunta di annotazioni che generano informazioni SEH (XDATA e PDATA) nell'immagine, consentendo di funzioni ml64. Vedere [MASM per x64 (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md) per ulteriori informazioni.  
+ **/SAFESEH** è valido solo durante il collegamento per x86 destinazioni. **/SAFESEH** non è supportata per le piattaforme che dispongono già di gestori delle eccezioni. Ad esempio, in [!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)] e ARM, tutti i gestori di eccezioni sono indicati nella sezione PDATA. Ml64.exe è supportata l'aggiunta di annotazioni che generano informazioni SEH (XDATA e PDATA) nell'immagine, consentendo di funzioni ml64. Vedere [MASM per x64 (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md) per ulteriori informazioni.  
   
  Se **/SAFESEH** non viene specificato, il linker produrrà un'immagine con una tabella di gestori eccezioni sicuri se tutti i moduli sono compatibili con la funzionalità di gestione delle eccezioni sicuri. Se tutti i moduli non sono compatibili con funzionalità di gestione sicura delle eccezioni, l'immagine risultante non conterrà una tabella di gestori eccezioni sicuri. Se [/SUBSYSTEM](../../build/reference/subsystem-specify-subsystem.md) specifica WINDOWSCE o una delle opzioni EFI _ *, il linker non tenterà di ottenere un'immagine con una tabella di gestori eccezioni sicuri, poiché nessuno di tali sottosistemi può utilizzare le informazioni.  
   

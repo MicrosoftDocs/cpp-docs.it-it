@@ -1,27 +1,22 @@
 ---
 title: Errori ed eccezioni (C++ moderno) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: a6c111d0-24f9-4bbb-997d-3db4569761b7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5b1ee1c7307f4e19db4ca0b7d03e218b0916538c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5eab4199415974c995aa9b71ad53db41b7695827
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="errors-and-exception-handling-modern-c"></a>Gestione di errori ed eccezioni (C++ moderno)
 Nel linguaggio C++ moderno, nella maggior parte degli scenari, la modalità preferita per i report e la gestione di errori logici e errori di runtime è utilizzare eccezioni. Ciò vale soprattutto quando lo stack potrebbe contenere più chiamate di funzione tra la funzione che rileva l'errore e la funzione che ha il contesto in grado di gestirlo. Eccezioni forniscono un modo formale, ben definito per il codice che rileva gli errori per passare le informazioni sullo stack.  

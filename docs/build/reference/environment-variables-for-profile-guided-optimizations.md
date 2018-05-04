@@ -12,14 +12,13 @@ helpviewer_keywords:
 ms.assetid: f95a6d1e-49a4-4802-a144-092026b600a3
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 701f0292d9960801139abc698946122718247645
-ms.sourcegitcommit: ee7d74683af7631441c8c7f65ef5ceceaee4a5ee
+ms.openlocfilehash: 19edc9c8a2702e5b7ac9ae4a49364718f19d3900
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="environment-variables-for-profile-guided-optimizations"></a>Variabili d'ambiente per le ottimizzazioni GPO
 
@@ -47,7 +46,7 @@ Per eseguire la profilazione in modalità provvisoria, è necessario utilizzare 
 
 ### <a name="pogosafemode-syntax"></a>Sintassi PogoSafeMode
 
-> **set PogoSafeMode**[**=**_value_]
+> **impostare PogoSafeMode**[**=**_valore_]
 
 Impostare **PogoSafeMode** qualsiasi valore per attivare la modalità provvisoria. Impostare senza un valore per cancellare un valore precedente e abilitare di nuovo la modalità veloce.
 
@@ -59,7 +58,7 @@ Modificare il **VCPROFILE_ALLOC_SCALE** variabile di ambiente per modificare la 
 
 ### <a name="vcprofileallocscale-syntax"></a>Sintassi VCPROFILE_ALLOC_SCALE
 
-> **set VCPROFILE_ALLOC_SCALE**[__=__*scale_value*]
+> **impostare VCPROFILE_ALLOC_SCALE**[__=__*scale_value*]
 
 Il *scale_value* parametro è un fattore di scala per la quantità di memoria desiderata per l'esecuzione di scenari di test.  Il valore predefinito è 1. Ad esempio, questa riga di comando imposta il fattore di scala di 2:
 

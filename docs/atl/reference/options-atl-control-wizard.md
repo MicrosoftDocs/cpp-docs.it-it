@@ -1,12 +1,9 @@
 ---
 title: Opzioni, creazione guidata controllo ATL | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - vc.codewiz.class.atl.control.options
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - ATL Control Wizard, options
 ms.assetid: 4607c51a-992d-433e-9281-919c6f519a3d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 60cc90ca5d5c374c223f9fe350d1a6a7357329ee
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ab1062d32aadc2ec4af68cda8bca02ac1a45a526
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="options-atl-control-wizard"></a>Opzioni, Creazione guidata controllo ATL
 Inserire qui "Riepilogo risultati di ricerca".  
@@ -78,9 +73,9 @@ Inserire qui "Riepilogo risultati di ricerca".
  **Interface**  
  Il tipo di interfaccia di che questo controllo espone al contenitore.  
   
--   **Doppia**: creare un'interfaccia che espone proprietà e metodi tramite `IDispatch` e direttamente tramite VTBL.  
+-   **Dual**: crea un'interfaccia che espone proprietà e metodi tramite `IDispatch` e direttamente tramite VTBL.  
   
--   **Custom**: creare un'interfaccia che espone metodi direttamente tramite VTBL.  
+-   **Custom**: creare un'interfaccia che espone i metodi direttamente tramite VTBL.  
   
      Se si seleziona **personalizzato**, è possibile specificare che il controllo è **compatibile con l'automazione**. Se si seleziona **compatibile con l'automazione**, quindi la procedura guidata aggiunge il [oleautomation](../../windows/oleautomation.md) attributo per l'interfaccia nell'IDL e l'interfaccia può essere sottoposto a marshalling dal gestore di marshalling universale in oleaut32.dll. Vedere [marshalling dettagli](http://msdn.microsoft.com/library/windows/desktop/ms692621) in Windows SDK per ulteriori informazioni.  
   

@@ -1,13 +1,10 @@
 ---
 title: Dipendenti | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - NMAKE program, dependents
 - dependents, NMAKE
 ms.assetid: 0a7b4499-ac6e-4c99-a304-027dd3818ab2
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 99d1bae16c79d5714cf7ca6488853b9c5d2a6d21
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2222f063969ff1c93d68ef8f8fd494c176005529
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="dependents"></a>Dipendenti
 In una riga di dipendenze, specificare zero o più dipendenti dopo i due punti (:) oppure un doppio carattere due punti (:), tramite qualsiasi nome file valido o [pseudo](../build/pseudotargets.md). Separare più dipendenti con uno o più spazi o tabulazioni. Oggetti dipendenti non sono tra maiuscole e minuscole. I percorsi sono consentiti con i nomi di file.  

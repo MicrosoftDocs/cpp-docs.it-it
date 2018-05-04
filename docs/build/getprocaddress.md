@@ -1,13 +1,10 @@
 ---
 title: GetProcAddress | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - GetProcAddress
 dev_langs:
@@ -17,20 +14,18 @@ helpviewer_keywords:
 - ordinal exports [C++]
 - GetProcAddress method
 ms.assetid: 48d14ae0-47ea-4c5d-96b1-2c158f1a26af
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2bc32c5f6b6ae4ee80c69dff028f05d2b334d920
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: cec73a7d7aa212c6f53bc2654db6fe40ff96472a
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="getprocaddress"></a>GetProcAddress
-I processi in modo esplicito il collegamento a una chiamata DLL [GetProcAddress](http://msdn.microsoft.com/library/windows/desktop/ms683212) per ottenere l'indirizzo di una funzione esportata nella DLL. Utilizzare il puntatore a funzione restituito per chiamare la funzione DLL. **GetProcAddress** accetta come parametri l'handle del modulo DLL (restituito da **LoadLibrary**, `AfxLoadLibrary`, o **GetModuleHandle**) e il nome della funzione è desidera chiamata o l'esportazione della funzione ordinale.  
+I processi in modo esplicito il collegamento a una chiamata DLL [GetProcAddress](http://msdn.microsoft.com/library/windows/desktop/ms683212) per ottenere l'indirizzo di una funzione esportata nella DLL. Utilizzare il puntatore a funzione restituito per chiamare la funzione DLL. **GetProcAddress** accetta come parametri l'handle del modulo DLL (restituito da **LoadLibrary**, `AfxLoadLibrary`, o **GetModuleHandle**) e accetta il nome della funzione desiderato a chiamata o numero ordinale di esportazione della funzione.  
   
  Poiché si sta chiamando la funzione DLL tramite un puntatore e non esiste alcun controllo dei tipi in fase di compilazione, assicurarsi che i parametri della funzione siano corretti, in modo che non si oltrepassare la memoria allocata nello stack e provocare una violazione di accesso. Un modo per garantire l'indipendenza dai tipi è per osservare i prototipi delle funzioni esportate e creare oggetti typedef corrispondenti per i puntatori di funzione. Ad esempio:  
   

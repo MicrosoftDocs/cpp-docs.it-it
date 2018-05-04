@@ -1,12 +1,9 @@
 ---
 title: Classe IOleInPlaceActiveObjectImpl | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - IOleInPlaceActiveObjectImpl
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - ActiveX controls [C++], communication between container and control
 - IOleInPlaceActiveObject, ATL implementation
 ms.assetid: 44e6cc6d-a2dc-4187-98e3-73cf0320dea9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6d88f85e83a88b0a1ce2bd4566e3ca479dddc1af
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a0d98b8dd082a09de461452b43b70ddeb9431abe
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ioleinplaceactiveobjectimpl-class"></a>Classe IOleInPlaceActiveObjectImpl
 Questa classe fornisce metodi per facilitare la comunicazione tra un controllo sul posto e il relativo contenitore.  
@@ -82,7 +77,7 @@ class IOleInPlaceActiveObjectImpl
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** atlctl. h  
   
-##  <a name="contextsensitivehelp"></a>IOleInPlaceActiveObjectImpl::ContextSensitiveHelp  
+##  <a name="contextsensitivehelp"></a>  IOleInPlaceActiveObjectImpl::ContextSensitiveHelp  
  Abilita Guida sensibile al contesto.  
   
 ```
@@ -95,7 +90,7 @@ HRESULT ContextSensitiveHelp(BOOL fEnterMode);
 ### <a name="remarks"></a>Note  
  Vedere [IOleWindow::ContextSensitiveHelp](http://msdn.microsoft.com/library/windows/desktop/ms680059) in Windows SDK.  
   
-##  <a name="enablemodeless"></a>IOleInPlaceActiveObjectImpl::EnableModeless  
+##  <a name="enablemodeless"></a>  IOleInPlaceActiveObjectImpl::EnableModeless  
  Abilita le finestre di dialogo non modale.  
   
 ```
@@ -108,7 +103,7 @@ HRESULT EnableModeless(BOOL fEnable);
 ### <a name="remarks"></a>Note  
  Vedere [IOleInPlaceActiveObject::EnableModeless](http://msdn.microsoft.com/library/windows/desktop/ms680115) in Windows SDK.  
   
-##  <a name="getwindow"></a>IOleInPlaceActiveObjectImpl::GetWindow  
+##  <a name="getwindow"></a>  IOleInPlaceActiveObjectImpl::GetWindow  
  Il contenitore chiama questa funzione per ottenere l'handle della finestra del controllo.  
   
 ```
@@ -120,7 +115,7 @@ HRESULT GetWindow(HWND* phwnd);
   
  Vedere [IOleWindow::GetWindow](http://msdn.microsoft.com/library/windows/desktop/ms687282) in Windows SDK.  
   
-##  <a name="ondocwindowactivate"></a>IOleInPlaceActiveObjectImpl::OnDocWindowActivate  
+##  <a name="ondocwindowactivate"></a>  IOleInPlaceActiveObjectImpl::OnDocWindowActivate  
  Notifica al controllo quando la finestra di documento del contenitore è attivata o disattivata.  
   
 ```
@@ -133,7 +128,7 @@ HRESULT OnDocWindowActivate(BOOL fActivate);
 ### <a name="remarks"></a>Note  
  Vedere [OnDocWindowActivate](http://msdn.microsoft.com/library/windows/desktop/ms687281) in Windows SDK.  
   
-##  <a name="onframewindowactivate"></a>IOleInPlaceActiveObjectImpl::OnFrameWindowActivate  
+##  <a name="onframewindowactivate"></a>  IOleInPlaceActiveObjectImpl::OnFrameWindowActivate  
  Notifica al controllo quando la finestra cornice di primo livello del contenitore è attivata o disattivata.  
   
 ```
@@ -146,7 +141,7 @@ HRESULT OnFrameWindowActivate(BOOL fActivate);
 ### <a name="remarks"></a>Note  
  Vedere [IOleInPlaceActiveObject:: OnFrameWindowActivate](http://msdn.microsoft.com/library/windows/desktop/ms683969) in Windows SDK.  
   
-##  <a name="resizeborder"></a>IOleInPlaceActiveObjectImpl::ResizeBorder  
+##  <a name="resizeborder"></a>  IOleInPlaceActiveObjectImpl::ResizeBorder  
  Indica al controllo, che è necessario ridimensionare i bordi.  
   
 ```
@@ -162,7 +157,7 @@ HRESULT ResizeBorder(
 ### <a name="remarks"></a>Note  
  Vedere [IOleInPlaceActiveObject:: ResizeBorder](http://msdn.microsoft.com/library/windows/desktop/ms680053) in Windows SDK.  
   
-##  <a name="translateaccelerator"></a>IOleInPlaceActiveObjectImpl::TranslateAccelerator  
+##  <a name="translateaccelerator"></a>  IOleInPlaceActiveObjectImpl::TranslateAccelerator  
  Elabora i messaggi di tasto di scelta rapida di menu dal contenitore.  
   
 ```
@@ -172,7 +167,7 @@ HRESULT TranslateAccelerator(LPMSG lpmsg);
 ### <a name="return-value"></a>Valore restituito  
  Questo metodo supporta i valori restituiti riportati di seguito:  
   
- `S_OK`Se il messaggio è stato convertito correttamente.  
+ `S_OK` Se il messaggio è stato convertito correttamente.  
   
  **S_FALSE** se il messaggio non è stato tradotto.  
   

@@ -1,27 +1,22 @@
 ---
 title: Indietro di C++ (C++ moderno) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 1cb1b849-ed9c-4721-a972-fd8f3dab42e2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4e45c48671a0df62103a58a89d0c351209c71ed2
-ms.sourcegitcommit: ff9bf140b6874bc08718674c07312ecb5f996463
+ms.openlocfilehash: 63e73657c7e018d2a4eb71170561e310aeba9d5b
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="welcome-back-to-c-modern-c"></a>C++ (C++ moderno)
 C++ è uno dei linguaggi di programmazione più ampiamente adottati nel mondo. I programmi in C++ ben scritti sono veloci ed efficienti. Il linguaggio è più flessibile di altri linguaggi, in quanto è possibile utilizzarlo per creare un'ampia gamma di applicazioni: da giochi divertenti ed emozionanti, a software scientifico a elevate prestazioni, fino a driver di dispositivo, programmi incorporati e applicazioni client Windows. Per più di 20 anni C++ è stato utilizzato per risolvere problemi come questi e molti altri. Molti non sanno che un numero sempre maggiore di programmatori in C++ ha abbandonato la vecchia programmazione di tipo C per ripiegare sul moderno C++.  
@@ -36,7 +31,7 @@ C++ è uno dei linguaggi di programmazione più ampiamente adottati nel mondo. I
   
 -   Puntatori intelligenti anziché puntatori non elaborati.  
   
--   `std::string`e `std::wstring` tipi (vedere [ \<stringa >](../standard-library/string.md)) anziché raw `char[]` matrici.  
+-   `std::string` e `std::wstring` i tipi (vedere [ \<stringa >](../standard-library/string.md)) anziché raw `char[]` matrici.  
   
 -   [Libreria Standard C++](../standard-library/cpp-standard-library-header-files.md) come contenitori `vector`, `list`, e `map` anziché contenitori personalizzati o matrici non elaborate. Vedere [ \<vettore >](../standard-library/vector.md), [ \<elenco >](../standard-library/list.md), e [ \<mappa >](../standard-library/map.md).  
   
@@ -136,11 +131,11 @@ void f()
   
 -   [Stringa e i/o la formattazione (C++ moderno)](../cpp/string-and-i-o-formatting-modern-cpp.md)  
   
--   [Errori e la gestione delle eccezioni](../cpp/errors-and-exception-handling-modern-cpp.md)  
+-   [Errori ed eccezioni](../cpp/errors-and-exception-handling-modern-cpp.md)  
   
 -   [Portabilità in base ai limiti ABI](../cpp/portability-at-abi-boundaries-modern-cpp.md)  
   
- Per ulteriori informazioni, vedere l'articolo di StackOverflow [idiomatiche di C++ sono deprecati in C++ 11](http://go.microsoft.com/fwlink/p/?linkid=402836)  
+ Per altre informazioni, vedere l'articolo di StackOverflow [quali idiomi C++ sono deprecate in c++11](http://go.microsoft.com/fwlink/p/?linkid=402836)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Riferimenti al linguaggio C++](../cpp/cpp-language-reference.md)   

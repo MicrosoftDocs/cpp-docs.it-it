@@ -2,12 +2,9 @@
 title: Chiamata di funzioni DLL dalle applicazioni Visual Basic | Documenti Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,22 +16,20 @@ helpviewer_keywords:
 - __stdcall keyword [C++]
 - DLL functions [C++], calling
 ms.assetid: 282f7fbf-a0f2-4b9f-b277-1982710be56c
-caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ed99b0ebe41a8f1bc9684638fa74e18556dd51f5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9877544635dc894bbe379c751de35297add91c9d
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="calling-dll-functions-from-visual-basic-applications"></a>Chiamata di funzioni DLL da applicazioni Visual Basic
 Per le applicazioni Visual Basic (o le applicazioni in altri linguaggi come Pascal o Fortran) chiamare le funzioni in una DLL di C/C++, le funzioni devono essere esportate utilizzando la convenzione di chiamata corretta senza alcun decorazione dei nomi eseguita dal compilatore.  
   
- `__stdcall`Crea la convenzione di chiamata corretta per la funzione (la funzione chiamata pulisce lo stack e i parametri vengono passati da destra a sinistra), ma decora il nome della funzione in modo diverso. In questo caso, quando **dllexport** viene utilizzato in una funzione esportata in una DLL, il nome decorato viene esportato.  
+ `__stdcall` Crea la convenzione di chiamata corretta per la funzione (la funzione chiamata pulisce lo stack di e i parametri vengono passati da destra a sinistra), ma decora il nome della funzione in modo diverso. In questo caso, quando **dllexport** viene utilizzato in una funzione esportata in una DLL, il nome decorato viene esportato.  
   
  Il `__stdcall` decorazione dei nomi al nome del simbolo con un carattere di sottolineatura (_) e aggiunge il simbolo con un simbolo di chiocciola (@) seguito dal numero di byte nell'elenco di argomenti (lo spazio dello stack richiesto). Di conseguenza, la funzione dichiarata come:  
   
@@ -83,7 +78,7 @@ EXPORTS
   
 -   [Esportazione di funzioni C++ per l'utilizzo in eseguibili in linguaggio C](../build/exporting-cpp-functions-for-use-in-c-language-executables.md)  
   
--   [Metodo di esportazione da utilizzare](../build/determining-which-exporting-method-to-use.md)  
+-   [Scelta del metodo di esportazione da utilizzare](../build/determining-which-exporting-method-to-use.md)  
   
 -   [Nomi decorati](../build/reference/decorated-names.md)  
   

@@ -1,12 +1,9 @@
 ---
 title: Classe CAutoVectorPtrElementTraits | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CAutoVectorPtrElementTraits
@@ -18,17 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - CAutoVectorPtrElementTraits class
 ms.assetid: 16b81a56-55fb-46ca-b376-66a1884231a6
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e69be3fa7136b0d411b92299d99d877710d5f118
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 52c450a1a261224cf87ea125a6f01259da0e9f1b
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cautovectorptrelementtraits-class"></a>Classe CAutoVectorPtrElementTraits
 Questa classe fornisce metodi e funzioni statiche typedef utile durante la creazione di raccolte di puntatori intelligenti usando il vettore di nuovi operatori e delete.  
@@ -74,14 +69,14 @@ class CAutoVectorPtrElementTraits :
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** atlcoll. h  
   
-##  <a name="inargtype"></a>CAutoVectorPtrElementTraits::INARGTYPE  
+##  <a name="inargtype"></a>  CAutoVectorPtrElementTraits::INARGTYPE  
  Il tipo di dati da utilizzare per l'aggiunta di elementi per l'oggetto di classe di raccolta.  
   
 ```
 typedef CAutoVectorPtr<T>& INARGTYPE;
 ```  
   
-##  <a name="outargtype"></a>CAutoVectorPtrElementTraits::OUTARGTYPE  
+##  <a name="outargtype"></a>  CAutoVectorPtrElementTraits::OUTARGTYPE  
  Il tipo di dati da utilizzare per recuperare gli elementi dall'oggetto della classe di raccolta.  
   
 ```

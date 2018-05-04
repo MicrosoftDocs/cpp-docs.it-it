@@ -2,26 +2,21 @@
 title: Valori letterali (C++) definiti dall'utente | Documenti Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
 ms.assetid: ff4a5bec-f795-4705-a2c0-53788fd57609
-caps.latest.revision: 6
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a461f4ca384585008ccf47fa2bfda91d36e724ab
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bbbe3819d2271db85696825d82ba26335e380163
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="user-defined-literals--c"></a>Valori letterali definiti dall'utente (C++)
 Esistono sei categorie principali di valori letterali: Integer, carattere, a virgola mobile, stringa, booleano e puntatore.  A partire da C++ 11, è possibile definire valori letterali personalizzati basati su queste categorie per fornire collegamenti sintattici per idiomi comuni e aumentare l'indipendenza dai tipi. Ad esempio, si supponga che sia disponibile una classe Distance. È possibile definire un valore letterale per i chilometri e uno per le miglia e incoraggiare l'utente a esprimere esplicitamente le unità di misura, scrivendo semplicemente: auto d = 42.0_km o auto d = 42.0_mi. I valori letterali definiti dall'utente non presentano vantaggi o svantaggi a livello di prestazioni. Vengono usati solo per comodità o per deduzioni dei tipi in fase di compilazione. La libreria Standard include valori letterali definiti dall'utente per std: String, std:: Complex e per le unità in operazioni di tempo e la durata del \<chrono > intestazione:  

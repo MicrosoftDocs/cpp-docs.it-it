@@ -1,12 +1,9 @@
 ---
 title: Classe CStringElementTraitsI | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CStringElementTraitsI
@@ -21,17 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - CStringElementTraitsI class
 ms.assetid: c23f92b1-91e5-400f-96ed-258b02622b7a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7803d85c7adf346a06f87d35aba7f42e47f77b2a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1544a2fec1c4567c301eb2c051f7455c8ca393c2
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cstringelementtraitsi-class"></a>Classe CStringElementTraitsI
 Questa classe fornisce funzioni statiche relative alle stringhe archiviate in oggetti di classe di raccolta. È simile a [CStringElementTraits](../../atl/reference/cstringelementtraits-class.md), ma consente di eseguire confronti tra maiuscole e minuscole.  
@@ -77,7 +72,7 @@ class CStringElementTraitsI : public CElementTraitsBase<T>
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** atlcoll. h  
   
-##  <a name="compareelements"></a>CStringElementTraitsI::CompareElements  
+##  <a name="compareelements"></a>  CStringElementTraitsI::CompareElements  
  Chiamare questa funzione statica per confrontare due elementi della stringa per verificarne l'uguaglianza, ignorando tra maiuscole e minuscole.  
   
 ```
@@ -97,7 +92,7 @@ static bool CompareElements(INARGTYPE str1, INARGTYPE str2) throw();
 ### <a name="remarks"></a>Note  
  I confronti viene fatta distinzione tra maiuscole e minuscole.  
   
-##  <a name="compareelementsordered"></a>CStringElementTraitsI::CompareElementsOrdered  
+##  <a name="compareelementsordered"></a>  CStringElementTraitsI::CompareElementsOrdered  
  Chiamare questa funzione statica per confrontare due elementi della stringa, ignorando tra maiuscole e minuscole.  
   
 ```
@@ -118,7 +113,7 @@ static int CompareElementsOrdered(INARGTYPE str1, INARGTYPE str2) throw();
 ### <a name="remarks"></a>Note  
  I confronti viene fatta distinzione tra maiuscole e minuscole.  
   
-##  <a name="hash"></a>CStringElementTraitsI::Hash  
+##  <a name="hash"></a>  CStringElementTraitsI::Hash  
  Chiamare questa funzione statica per calcolare un valore hash per l'elemento della stringa specificata.  
   
 ```
@@ -132,14 +127,14 @@ static ULONG Hash(INARGTYPE str) throw();
 ### <a name="return-value"></a>Valore restituito  
  Restituisce un valore hash, calcolato usando il contenuto della stringa.  
   
-##  <a name="inargtype"></a>CStringElementTraitsI::INARGTYPE  
+##  <a name="inargtype"></a>  CStringElementTraitsI::INARGTYPE  
  Il tipo di dati da utilizzare per l'aggiunta di elementi per l'oggetto di classe di raccolta.  
   
 ```
 typedef T::PCXSTR INARGTYPE;
 ```  
   
-##  <a name="outargtype"></a>CStringElementTraitsI::OUTARGTYPE  
+##  <a name="outargtype"></a>  CStringElementTraitsI::OUTARGTYPE  
  Il tipo di dati da utilizzare per recuperare gli elementi dall'oggetto della classe di raccolta.  
   
 ```

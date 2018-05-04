@@ -2,31 +2,26 @@
 title: vectorcall | Documenti Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
 ms.assetid: 1c95ed59-86c6-4857-b4ed-10519193f851
-caps.latest.revision: 11
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 54c1473e2341c783ebf73883680d51f161d99163
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 29c202a888d4c741a9a9fb54a84109100038d32a
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="vectorcall"></a>__vectorcall
 **Sezione specifica Microsoft**  
   
- La convenzione di chiamata `__vectorcall` specifica che gli argomenti alle funzioni devono essere passati nei registri, quando possibile. `__vectorcall`utilizza per gli argomenti di registri più [fastcall](../cpp/fastcall.md) o il valore predefinito [convenzione di chiamata x64](../build/overview-of-x64-calling-conventions.md) utilizzare. La convenzione di chiamata `__vectorcall` è supportata solo nel codice nativo su processori x86 e x64 che includono Streaming SIMD Extensions 2 (SSE2) e versioni successive. Utilizzare `__vectorcall` per velocizzare le funzioni che passano più argomenti a virgola mobile o vettoriali SIMD ed eseguono operazioni che sfruttano gli argomenti caricati nei registri. Nell'elenco seguente sono indicate le funzionalità comuni alle implementazioni x86 e x64 di `__vectorcall`. Le differenze sono descritte più avanti in questo articolo.  
+ La convenzione di chiamata `__vectorcall` specifica che gli argomenti alle funzioni devono essere passati nei registri, quando possibile. `__vectorcall` utilizza per gli argomenti di più registri [fastcall](../cpp/fastcall.md) o il valore predefinito [convenzione di chiamata x64](../build/overview-of-x64-calling-conventions.md) utilizzare. La convenzione di chiamata `__vectorcall` è supportata solo nel codice nativo su processori x86 e x64 che includono Streaming SIMD Extensions 2 (SSE2) e versioni successive. Utilizzare `__vectorcall` per velocizzare le funzioni che passano più argomenti a virgola mobile o vettoriali SIMD ed eseguono operazioni che sfruttano gli argomenti caricati nei registri. Nell'elenco seguente sono indicate le funzionalità comuni alle implementazioni x86 e x64 di `__vectorcall`. Le differenze sono descritte più avanti in questo articolo.  
   
 |Elemento|Implementazione|  
 |-------------|--------------------|  

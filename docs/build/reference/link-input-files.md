@@ -1,13 +1,10 @@
 ---
 title: File di Input di collegamento | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - link
 dev_langs:
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - import libraries [C++], linker files
 - command input to linker files [C++]
 ms.assetid: bb26fcc5-509a-4620-bc3e-b6c6e603a412
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1d0cae9498d2c9b49e52cf56991d2425de39d7e1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8d61a24916c3b56cf666a85483414f86753f7f59
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="link-input-files"></a>File di input LINK
 Fornire il linker con i file che contengono oggetti, importazione e librerie standard, risorse, le definizioni del modulo e comandi di input. COLLEGAMENTO non utilizza estensioni di file per presupporre il contenuto di un file. In alternativa, collegamento esamina ogni file di input per determinare il tipo di file è.  

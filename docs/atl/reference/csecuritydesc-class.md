@@ -1,12 +1,9 @@
 ---
 title: Classe CSecurityDesc | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CSecurityDesc
@@ -43,17 +40,15 @@ dev_langs:
 helpviewer_keywords:
 - CSecurityDesc class
 ms.assetid: 3767a327-378f-4690-ba40-4d9f6a1f5ee4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 64f286a02729a5fd39885a449056973381e52611
-ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
+ms.openlocfilehash: a6963c04e3bd0ba06f8cc2beb9cb77447e2acd81
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="csecuritydesc-class"></a>Classe CSecurityDesc
 Questa classe è un wrapper per il **SECURITY_DESCRIPTOR** struttura.  
@@ -74,7 +69,7 @@ class CSecurityDesc
 |Nome|Descrizione|  
 |----------|-----------------|  
 |[CSecurityDesc::CSecurityDesc](#csecuritydesc)|Costruttore.|  
-|[CSecurityDesc:: ~ CSecurityDesc](#dtor)|Distruttore.|  
+|[Ci CSecurityDesc:: ~ CSecurityDesc](#dtor)|Distruttore.|  
   
 ### <a name="public-methods"></a>Metodi pubblici  
   
@@ -111,7 +106,7 @@ class CSecurityDesc
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[SECURITY_DESCRIPTOR const CSecurityDesc::operator *](#operator_const_security_descriptor__star)|Restituisce un puntatore al **SECURITY_DESCRIPTOR** struttura.|  
+|[CSecurityDesc::operator SECURITY_DESCRIPTOR const *](#operator_const_security_descriptor__star)|Restituisce un puntatore al **SECURITY_DESCRIPTOR** struttura.|  
 |[CSecurityDesc::operator =](#operator_eq)|Operatore di assegnazione.|  
   
 ## <a name="remarks"></a>Note  
@@ -475,7 +470,7 @@ CSecurityDesc& operator= (const CSecurityDesc& rhs) throw(...);
 ### <a name="return-value"></a>Valore restituito  
  Restituisce l'aggiornamento `CSecurityDesc` oggetto.  
   
-##  <a name="operator_const_security_descriptor__star"></a>SECURITY_DESCRIPTOR const CSecurityDesc::operator *  
+##  <a name="operator_const_security_descriptor__star"></a>  CSecurityDesc::operator SECURITY_DESCRIPTOR const *  
  Esegue il cast di un valore a un puntatore per il **SECURITY_DESCRIPTOR** struttura.  
   
 ```  
@@ -518,7 +513,7 @@ inline void SetDacl(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- *Dacl*  
+ *DACL*  
  Riferimento a un `CDacl` oggetto che specifica l'elenco DACL per il descrittore di sicurezza. Questo parametro non deve essere NULL. Per impostare un elenco DACL nel descrittore di sicurezza, il primo form del metodo deve essere utilizzato con `bPresent` impostato su false.  
   
  `bPresent`  

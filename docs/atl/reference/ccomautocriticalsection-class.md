@@ -2,11 +2,8 @@
 title: Classe CComAutoCriticalSection | Documenti Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CComAutoCriticalSection
@@ -17,20 +14,18 @@ dev_langs:
 helpviewer_keywords:
 - CComAutoCriticalSection class
 ms.assetid: 491a9d90-3398-4f90-88f5-fd2172a46b30
-caps.latest.revision: 19
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d12abfceeebeb1cac89b510c14d7a9211173406e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ae0c3cd1d00ce83a4e952d60a978663bfa76f814
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ccomautocriticalsection-class"></a>Classe CComAutoCriticalSection
-`CComAutoCriticalSection`fornisce metodi per ottenere e rilasciare la proprietà di un oggetto sezione critica.  
+`CComAutoCriticalSection` fornisce metodi per ottenere e rilasciare la proprietà di un oggetto sezione critica.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -48,7 +43,7 @@ class CComAutoCriticalSection : public CComCriticalSection
 |[CComAutoCriticalSection:: ~ CComAutoCriticalSection](#dtor)|Distruttore.|  
   
 ## <a name="remarks"></a>Note  
- `CComAutoCriticalSection`è simile alla classe [CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md), ad eccezione di `CComAutoCriticalSection` automaticamente Inizializza l'oggetto sezione critica nel costruttore.  
+ `CComAutoCriticalSection` è simile alla classe [CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md), eccetto `CComAutoCriticalSection` automaticamente Inizializza l'oggetto sezione critica nel costruttore.  
   
  In genere, si utilizza `CComAutoCriticalSection` tramite il `typedef` nome [AutoCriticalSection](ccommultithreadmodel-class.md#autocriticalsection). Questo nome fa riferimento a `CComAutoCriticalSection` quando [CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md) è in uso.  
 
@@ -63,7 +58,7 @@ class CComAutoCriticalSection : public CComCriticalSection
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** atlcore  
   
-##  <a name="ccomautocriticalsection"></a>CComAutoCriticalSection::CComAutoCriticalSection  
+##  <a name="ccomautocriticalsection"></a>  CComAutoCriticalSection::CComAutoCriticalSection  
  Costruttore.  
   
 ```
@@ -73,7 +68,7 @@ CComAutoCriticalSection();
 ### <a name="remarks"></a>Note  
  Chiama la funzione Win32 [InitializeCriticalSection](http://msdn.microsoft.com/library/windows/desktop/ms683472), che inizializza l'oggetto sezione critica.  
   
-##  <a name="dtor"></a>CComAutoCriticalSection:: ~ CComAutoCriticalSection  
+##  <a name="dtor"></a>  CComAutoCriticalSection:: ~ CComAutoCriticalSection  
  Distruttore.  
   
 ```

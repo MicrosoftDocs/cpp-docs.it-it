@@ -1,12 +1,9 @@
 ---
 title: Creazione di un progetto ATL | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - vc.appwiz.ATL.project
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - _ATL_MIN_CRT macro
 - distributing files with ATL components
 ms.assetid: 061d5f98-f669-440e-9380-42f017a0f9e8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 96bf13867299ee6cc1be83657f9862412fa5fa1b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 37badfba693357cb14b34e0f26f717b2ebe8f024
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="creating-an-atl-project"></a>Creazione di un progetto ATL
 Il modo più semplice per creare un progetto ATL consiste nell'utilizzare la creazione guidata progetto ATL, si trova nella cartella progetti Win32 del **la finestra di dialogo Nuovo progetto**.  

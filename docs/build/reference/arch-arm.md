@@ -2,26 +2,21 @@
 title: -arch (ARM) | Documenti Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - C++
 ms.assetid: 4f1406ff-f174-487c-a126-8ab06cf447c1
-caps.latest.revision: 5
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 468401bcee2d627149175d022c420b8bb905c4ed
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2a411d0c7d07fb7392baaaa4fb8a8377fcb36598
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="arch-arm"></a>/arch (ARM)
 Specifica l'architettura per la generazione di codice in ARM. Vedere anche [/arch (x86)](../../build/reference/arch-x86.md) e [/arch (x64)](../../build/reference/arch-x64.md).  
@@ -33,16 +28,16 @@ Specifica l'architettura per la generazione di codice in ARM. Vedere anche [/arc
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- **armv7ve**  
+ **arch:armv7ve**  
  Abilita l'utilizzo di istruzioni delle estensioni di virtualizzazione di ARMv7VE.  
   
- **vfpv4**  
+ **/ arch:vfpv4**  
  Consente l'utilizzo di istruzioni ARM VFPv4. Se questa opzione non è specificata, VFPv3 è l'impostazione predefinita.  
   
 ## <a name="remarks"></a>Note  
  Il `_M_ARM_FP` macro (solo per ARM) indica che, se presente, **/arch** è stata utilizzata l'opzione del compilatore. Per altre informazioni, vedere [Predefined Macros](../../preprocessor/predefined-macros.md).  
   
- Quando si utilizza [/clr](../../build/reference/clr-common-language-runtime-compilation.md) da compilare, **/arch** non ha alcun effetto sulla generazione di codice per le funzioni gestite. **/arch** solo influisce sul codice di generazione per le funzioni native.  
+ Quando si utilizza [/clr](../../build/reference/clr-common-language-runtime-compilation.md) da compilare, **/arch** non ha alcun effetto sulla generazione di codice per le funzioni gestite. **/arch** solo influisce sul codice generazione per le funzioni native.  
   
 ### <a name="to-set-the-archarmv7ve-or-archvfpv4-compiler-option-in-visual-studio"></a>Impostare l'opzione del compilatore /arch:ARMv7VE o /arch:VFPv4 in Visual Studio  
   

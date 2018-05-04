@@ -1,12 +1,9 @@
 ---
 title: Creazione guidata Provider OLE DB ATL | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - vc.codewiz.class.atl.provider.overview
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - ATL OLE DB Provider Wizard
 - ATL projects, adding ATL OLE DB providers
 ms.assetid: cf91ba78-01d1-4d12-b673-e95d96bfbebe
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 660f70be8ec4ac1efcec056c694d0e2fc3256071
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 827b46de299341f23d0b799a5ed44b8923bbc182
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="atl-ole-db-provider-wizard"></a>Creazione guidata provider OLE DB ATL
 Questa procedura guidata crea le classi che compongono un provider OLE DB.  
@@ -39,7 +34,7 @@ Questa procedura guidata crea le classi che compongono un provider OLE DB.
  **Nome breve**  
  Digitare il nome breve del provider da creare. Le altre caselle di modifica della procedura guidata verranno inseriti automaticamente in base a quanto digitato. Se si desidera, è possibile modificare le altre caselle di nome.  
   
- **Coclasse**  
+ **coclasse**  
  Il nome della coclasse. Il nome del ProgID verrà modificato in base a questo nome.  
   
  **Con attributi**  
@@ -53,16 +48,16 @@ Questa procedura guidata crea le classi che compongono un provider OLE DB.
  **Version**  
  Il numero di versione del provider. Il valore predefinito è 1.  
   
- **Classe di origine dati**  
+ **Classe DataSource**  
  Il nome della classe di origine dati, nel formato C*Shortname*origine.  
   
- **File di origine dati. h**  
+ **File di origine dati con estensione h**  
  Il file di intestazione per la classe di origine dati. È possibile modificare questo nome file o selezionare un file di intestazione esistente.  
   
  **Classe di sessione**  
  Il nome della classe di sessione, nel formato C*Shortname*sessione.  
   
- **File di sessione. h**  
+ **File con estensione h di sessione**  
  Il file di intestazione per la classe di sessione. È possibile modificare questo nome file o selezionare un file di intestazione esistente.  
   
  **Classe di comando**  
@@ -74,7 +69,7 @@ Questa procedura guidata crea le classi che compongono un provider OLE DB.
  **Classe di rowset**  
  Il nome della classe di rowset, nel formato C*Shortname*set di righe.  
   
- **File di set di righe. h**  
+ **File con estensione h set di righe**  
  Il file di intestazione per la classe di rowset. È possibile modificare questo nome file o selezionare un file di intestazione esistente.  
   
  **File con estensione cpp set di righe**  

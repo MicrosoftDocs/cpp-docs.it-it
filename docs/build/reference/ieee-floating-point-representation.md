@@ -1,13 +1,10 @@
 ---
 title: A virgola mobile IEEE | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - long double
 - real*4 value
 ms.assetid: 537833e8-fe05-49fc-8169-55fd0314b195
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 17fae0cbb16208d5c7e7346f354f3501e4803d96
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: d209d1c2a7429515383f8ebe80c621d6f2b15890
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ieee-floating-point-representation"></a>Formato a virgola mobile IEEE
 Microsoft Visual C++ è coerente con gli standard numerici IEEE. Esistono tre varietà interne di numeri reali. Reale\*4 e real\*8 vengono utilizzati in Visual C++. Reale\*4 viene dichiarata utilizzando la parola **float**. Reale\*8 viene dichiarata utilizzando la parola **double**. Nella programmazione Windows a 32 bit, il `long double` esegue il mapping al tipo di dati **double**. È, tuttavia, supporto del linguaggio assembly per i calcoli utilizzando il reale * il tipo di dati di 10.  
@@ -39,7 +34,7 @@ Microsoft Visual C++ è coerente con gli standard numerici IEEE. Esistono tre va
   
 |Valore|Archiviato come|  
 |-----------|---------------|  
-|real*4|il segno, esponente a 8 bit, mantissa a 23 bit.|  
+|real * 4|il segno, esponente a 8 bit, mantissa a 23 bit.|  
 |real * 8|il segno, esponente a 11 bit, mantissa a 52 bit|  
 |real*10|il segno, esponente a 15 bit, 64-bit mantissa|  
   
@@ -63,7 +58,7 @@ Microsoft Visual C++ è coerente con gli standard numerici IEEE. Esistono tre va
   
 |Formato|BYTE 1|2 BYTE|BYTE 3|4 BYTE|...|N BYTE|  
 |------------|------------|------------|------------|------------|---------|------------|  
-|real*4|`SXXX XXXX`|`XMMM MMMM`|`MMMM MMMM`|`MMMM MMMM`|||  
+|real * 4|`SXXX XXXX`|`XMMM MMMM`|`MMMM MMMM`|`MMMM MMMM`|||  
 |real * 8|`SXXX XXXX`|`XXXX MMMM`|`MMMM MMMM`|`MMMM MMMM`|...|`MMMM MMMM`|  
 |real*10|`SXXX XXXX`|`XXXX XXXX`|`1MMM MMMM`|`MMMM MMMM`|...|`MMMM MMMM`|  
   

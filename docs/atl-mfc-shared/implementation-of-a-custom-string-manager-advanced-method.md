@@ -1,29 +1,24 @@
 ---
 title: Implementazione di un gestore di stringa di personalizzata (metodo avanzate) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - IAtlStringMgr class, using
 ms.assetid: 64ab7da9-47c1-4c4a-9cd7-4cc37e7f3f57
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7e76edc65e5f30fee90f346d5434ecbee320a37a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 23798a4e3c1a5d3c46ea28dec39b37697aae640f
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="implementation-of-a-custom-string-manager-advanced-method"></a>Implementazione di un gestore di stringa personalizzato (metodo avanzato)
 In situazioni specifiche, si potrebbe voler implementare un gestore di stringa personalizzato che è sufficiente modificare dell'heap è utilizzato per allocare memoria. In questo caso, è necessario implementare manualmente il [IAtlStringMgr](../atl-mfc-shared/reference/iatlstringmgr-class.md) interfaccia come gestore di stringhe personalizzato.  
@@ -32,11 +27,11 @@ In situazioni specifiche, si potrebbe voler implementare un gestore di stringa p
   
  Il `CStringData` struttura è costituito da quattro campi:  
   
--   [pStringMgr](../atl-mfc-shared/reference/cstringdata-class.md#pstringmgr) punta questo campo per il `IAtlStringMgr` interfaccia utilizzata per gestire i dati della stringa. Quando `CStringT` è necessario riallocare o liberare il buffer di stringa chiama il Reallocate o Free di questa interfaccia, passando il `CStringData` struttura come parametro. Quando si alloca una `CStringData` struttura nel gestore di stringhe, è necessario impostare questo campo per puntare al gestore di stringhe personalizzato.  
+-   [pStringMgr](../atl-mfc-shared/reference/cstringdata-class.md#pstringmgr) questo campo punta al `IAtlStringMgr` interfaccia utilizzata per gestire questi dati di stringa. Quando `CStringT` è necessario riallocare o liberare il buffer di stringa chiama il Reallocate o Free di questa interfaccia, passando il `CStringData` struttura come parametro. Quando si alloca una `CStringData` struttura nel gestore di stringhe, è necessario impostare questo campo per puntare al gestore di stringhe personalizzato.  
   
--   [nDataLength](../atl-mfc-shared/reference/cstringdata-class.md#ndatalength) questo campo contiene la lunghezza logica corrente della stringa di cui è memorizzata nel buffer escluso il carattere di terminazione null. `CStringT`Aggiorna questo campo quando viene modificata la lunghezza della stringa. Quando si alloca una `CStringData` struttura, il gestore di stringhe deve impostare questo campo su zero. Durante la riallocazione di un `CStringData` struttura, il gestore di stringa personalizzato necessario lasciare questo campo.  
+-   [nDataLength](../atl-mfc-shared/reference/cstringdata-class.md#ndatalength) questo campo contiene la quantità di logica corrente della stringa memorizzata nel buffer escluso il carattere di terminazione null. `CStringT` Aggiorna questo campo quando viene modificata la lunghezza della stringa. Quando si alloca una `CStringData` struttura, il gestore di stringhe deve impostare questo campo su zero. Durante la riallocazione di un `CStringData` struttura, il gestore di stringa personalizzato necessario lasciare questo campo.  
   
--   [nAllocLength](../atl-mfc-shared/reference/cstringdata-class.md#nalloclength) questo campo contiene il numero massimo di caratteri (escluso il carattere di terminazione null) che possono essere archiviati nel buffer di stringhe senza. Ogni volta che `CStringT` è necessario aumentare la lunghezza della stringa, logica, viene controllato innanzitutto questo campo per verificare che lo spazio sia sufficiente nel buffer. Se il controllo ha esito negativo, `CStringT` chiamate nel gestore di stringhe personalizzato per riallocare il buffer. Quando allocare o riallocare un `CStringData` struttura, è necessario impostare questo campo per almeno il numero di caratteri richiesti nel **nChars** parametro [IAtlStringMgr:: allocate](../atl-mfc-shared/reference/iatlstringmgr-class.md#allocate) o [IAtlStringMgr:: ReAllocate](../atl-mfc-shared/reference/iatlstringmgr-class.md#reallocate). Se è presente più spazio nel buffer di quella richiesta, è possibile impostare questo valore in modo da riflettere la quantità effettiva di spazio disponibile. In questo modo `CStringT` per aumentare la stringa a occupare tutto lo spazio allocato prima di chiamare nuovamente il gestore di stringhe per riallocare il buffer.  
+-   [nAllocLength](../atl-mfc-shared/reference/cstringdata-class.md#nalloclength) questo campo contiene il numero massimo di caratteri (escluso il carattere di terminazione null) che possono essere archiviati in questo buffer di stringa senza. Ogni volta che `CStringT` è necessario aumentare la lunghezza della stringa, logica, viene controllato innanzitutto questo campo per verificare che lo spazio sia sufficiente nel buffer. Se il controllo ha esito negativo, `CStringT` chiamate nel gestore di stringhe personalizzato per riallocare il buffer. Quando allocare o riallocare un `CStringData` struttura, è necessario impostare questo campo per almeno il numero di caratteri richiesti nel **nChars** parametro [IAtlStringMgr:: allocate](../atl-mfc-shared/reference/iatlstringmgr-class.md#allocate) o [IAtlStringMgr:: ReAllocate](../atl-mfc-shared/reference/iatlstringmgr-class.md#reallocate). Se è presente più spazio nel buffer di quella richiesta, è possibile impostare questo valore in modo da riflettere la quantità effettiva di spazio disponibile. In questo modo `CStringT` per aumentare la stringa a occupare tutto lo spazio allocato prima di chiamare nuovamente il gestore di stringhe per riallocare il buffer.  
   
 -   [nRefs](../atl-mfc-shared/reference/cstringdata-class.md#nrefs) questo campo contiene il conteggio dei riferimenti corrente del buffer di stringa. Se il valore è uno, quindi una singola istanza di `CStringT` utilizza il buffer. Inoltre, l'istanza è consentito leggere e modificare il contenuto del buffer. Se il valore è maggiore di uno, più istanze di `CStringT` può utilizzare il buffer. Perché il buffer di caratteri è condiviso, `CStringT` istanze possono solo leggere il contenuto del buffer. Per modificare il contenuto, `CStringT` crea innanzitutto una copia del buffer. Se il valore è negativo, solo un'istanza di `CStringT` utilizza il buffer. In questo caso, il buffer viene considerato bloccato. Quando un `CStringT` istanza non utilizza un buffer bloccato altre istanze di `CStringT` possono condividere il buffer. Queste istanze, invece, creare una copia del buffer prima la modifica del contenuto. Inoltre, il `CStringT` istanza utilizzando il buffer bloccato non tenta di condividere il buffer di qualsiasi altro `CStringT` assegnata a tale istanza. In questo caso, il `CStringT` istanza copia di altra stringa nel buffer bloccato.  
   

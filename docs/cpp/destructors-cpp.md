@@ -1,12 +1,9 @@
 ---
 title: Distruttori (C++) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - destructors, about destructors
 - destructors, C++
 ms.assetid: afa859b0-f3bc-4c4d-b250-c68b335b6004
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 37aa5ab5cad2367bfc37e2e1b6fd886540eada8e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ae1ca6923bc7e67218e35c5a6c86b9f4ac112e59
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="destructors-c"></a>Distruttori (C++)
 Un distruttore è una funzione membro che viene richiamata automaticamente quando l'oggetto esce dall'ambito o viene eliminato in modo esplicito da una chiamata a `delete`. Un distruttore è lo stesso nome di classe, preceduto da una tilde (`~`). Ad esempio, il distruttore per la classe `String` viene dichiarato con `~String()`. Se non si definisce un distruttore, il compilatore fornirà un valore predefinito. Per molte classi di ciò è sufficiente. È necessario definire un distruttore personalizzato quando la classe archivia l'handle di risorse di sistema che devono essere rilasciate o puntatori che possiedono la memoria facciano riferimento.

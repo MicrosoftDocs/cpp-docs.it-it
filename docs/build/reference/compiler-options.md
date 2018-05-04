@@ -1,13 +1,10 @@
 ---
 title: Opzioni del compilatore | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/29/2018
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - compiler options, C++
 - x64 Visual C++ compiler
 ms.assetid: ed3376c8-bef4-4c9a-80e9-3b5da232644c
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4addd9f5dce819f554e6ab04707929a32f7b7d9d
-ms.sourcegitcommit: 30ab99c775d99371ed22d1a46598e542012ed8c6
+ms.openlocfilehash: bea07361a292ee5e7cde99cedad2d5ac4c8a53aa
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="compiler-options"></a>Opzioni del compilatore
 
@@ -62,7 +57,7 @@ Questo argomento per ciascuna opzione del compilatore illustra come è possibile
 
 ## <a name="related-build-tools"></a>Strumenti di compilazione correlati
 
-[Opzioni del linker](../../build/reference/linker-options.md) influenzare la modalità di compilazione del programma.
+[Opzioni del linker](../../build/reference/linker-options.md) influire anche sul modo in cui il programma viene compilato.
 
 ## <a name="see-also"></a>Vedere anche
 

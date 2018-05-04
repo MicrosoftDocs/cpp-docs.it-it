@@ -2,12 +2,9 @@
 title: 'Procedura: utilizzare gli eventi di compilazione in progetti MSBuild | Documenti Microsoft'
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - msbuild.cpp.howto.usebuildevents
 dev_langs:
@@ -15,24 +12,22 @@ dev_langs:
 helpviewer_keywords:
 - 'msbuild (c++), howto: use build events in projects'
 ms.assetid: 2a58dc9d-3d50-4e49-97c1-86c5a05ce218
-caps.latest.revision: 23
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cc8b3b21cdc9aad183f39bf709f93e022e790eef
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2367c85dbd4a4ef7b10d927592c0fb10a417f0e6
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-use-build-events-in-msbuild-projects"></a>Procedura: utilizzo di eventi di compilazione in progetti MSBuild
 Un evento di compilazione è un comando che [!INCLUDE[vstecmsbuild](../build/includes/vstecmsbuild_md.md)] esegue in una determinata fase nel processo di compilazione. Il *pre-compilazione* evento si verifica prima dell'avvio della compilazione; *pre-collegamento* evento si verifica prima dell'inizio del collegamento; e *post-compilazione* evento si verifica al termine della compilazione termina correttamente. Un evento di compilazione si verifica solo se viene eseguito il passaggio di compilazione associato. Ad esempio, l'evento di pre-collegamento non si verifica se il passaggio di collegamento non eseguito.  
   
  Ciascuno dei tre eventi di compilazione è rappresentato in un gruppo di definizione di elemento da un elemento di comando (`<Command>`) che viene eseguito e un elemento del messaggio (`<Message>`) che è visualizzato quando **MSBuild** esegue l'evento di compilazione. Ogni elemento è facoltativo e, se si specifica lo stesso elemento più volte, l'ultima occorrenza ha la precedenza.  
   
- Facoltativo *Usa in compilazione* elemento (`<`*evento di compilazione***UseInBuild**`>`) può essere specificato in un gruppo di proprietà per indicare se la evento di compilazione viene eseguita. Il valore del contenuto di un *Usa in compilazione* è `true` o `false`. Per impostazione predefinita, un evento di compilazione viene eseguito se non corrispondente *Usa in compilazione* è impostato su `false`.  
+ Un parametro facoltativo *Usa in compilazione* elemento (`<`* compilare-evento ***UseInBuild**`>`) può essere specificato in un gruppo di proprietà per indicare se l'evento di compilazione viene eseguita. Il valore del contenuto di un *Usa in compilazione* è `true` o `false`. Per impostazione predefinita, un evento di compilazione viene eseguito se non corrispondente *Usa in compilazione* è impostato su `false`.  
   
  La tabella seguente elenca ogni elemento XML eventi di compilazione:  
   

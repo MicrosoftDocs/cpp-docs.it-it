@@ -1,12 +1,9 @@
 ---
-title: "Opzioni, creazione guidata pagina delle proprietà ATL | Documenti Microsoft"
-ms.custom: 
+title: Opzioni, creazione guidata pagina delle proprietà ATL | Documenti Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - vc.codewiz.class.atl.ppg.options
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - ATL Property Page Wizard, options
 ms.assetid: a7107779-b2ea-4f99-b84b-7f3e0c504bc8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cbc27457fa3ace7b1cdfad4894bbd296739de2ab
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a8e7edfb2cb4040238985c6cd78e8f1e5756f4d6
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="options-atl-property-page-wizard"></a>Opzioni, Creazione guidata pagina delle proprietà ATL
 Utilizzare questa pagina della procedura guidata per definire il livello di aggregazione e modello di threading della pagina delle proprietà che si sta creando.  

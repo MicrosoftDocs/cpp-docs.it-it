@@ -2,11 +2,8 @@
 title: Più classi Base | Documenti Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - multiple inheritance, class declaration
 - multiple base classes [C++]
 ms.assetid: a30c69fe-401c-4a87-96a0-e0da70c7c740
-caps.latest.revision: 7
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b765fabe8b83169353650286d05d02301dcb4807
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d48c373f0753a787aa8e59c7ead5a8f94bfc7846
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="multiple-base-classes"></a>Più classi base
 Come descritto in [ereditarietà multipla](http://msdn.microsoft.com/en-us/3b74185e-2beb-4e29-8684-441e51d2a2ca), una classe può essere derivata da più di una classe base. In un modello di ereditarietà multipla (in cui le classi sono derivate da più di una classe base), le classi di base vengono specificate utilizzando il *base-list* elemento grammatica. Ad esempio, la dichiarazione di classe per `CollectionOfBook`, derivata da `Collection` e `Book`, può essere specificata come segue:  
@@ -64,12 +59,12 @@ class CollectionOfBook : public Book, public Collection {
   
  Si consideri la gerarchia di classi nella figura seguente, che illustra un oggetto Lunch-Line simulato.  
   
- ![Grafico di Lunch-line simulato](../cpp/media/vc38xp1.gif "vc38XP1")  
+ ![Grafico della riga lunch simulato](../cpp/media/vc38xp1.gif "vc38XP1")  
 Rappresentazione grafica di un oggetto Lunch-line simulato  
   
  Nella figura `Queue` è la classe base sia per `CashierQueue` che per `LunchQueue`. Tuttavia, quando entrambe le classi vengono combinate per formare `LunchCashierQueue`, si verifica il problema seguente: la nuova classe contiene due oggetti secondari di tipo `Queue`, uno da `CashierQueue` e l'altro da `LunchQueue`. Nella figura seguente viene illustrato il layout di memoria concettuale (il layout di memoria effettivo può essere ottimizzato).  
   
- ![Pranzo simulato &#45; oggetto riga](../cpp/media/vc38xp2.gif "vc38XP2")  
+ ![Simulate lunch&#45;oggetto line](../cpp/media/vc38xp2.gif "vc38XP2")  
 Oggetto Lunch-line simulato  
   
  Si noti che sono presenti due oggetti secondari `Queue` nell'oggetto `LunchCashierQueue`. Nel codice seguente `Queue` viene dichiarato come una classe base virtuale:  
@@ -85,7 +80,7 @@ class LunchCashierQueue : public LunchQueue, public CashierQueue {};
   
  La parola chiave `virtual` garantisce che sia inclusa solo una copia dell'oggetto subordinato `Queue` (vedere la figura seguente).  
   
- ![Pranzo simulato &#45; oggetto line, le classi base virtuali](../cpp/media/vc38xp3.gif "vc38XP3")  
+ ![Simulate lunch&#45;oggetto line, le classi base virtuali](../cpp/media/vc38xp3.gif "vc38XP3")  
 Oggetto Lunch-line simulato con classi di base virtuali  
   
  Alla classe possono essere associati sia un componente virtuale che uno non virtuale di un tipo specifico. Ciò si verifica in condizioni illustrate nella figura seguente.  
@@ -95,7 +90,7 @@ Componenti virtuali e non virtuali della stessa classe
   
  Nella figura `CashierQueue` e `LunchQueue` usano `Queue` come classe base virtuale. Tuttavia, `TakeoutQueue` specifica `Queue` come classe base, non come classe base virtuale. Di conseguenza, `LunchTakeoutCashierQueue` dispone di due oggetti secondari di tipo `Queue`: uno dal percorso di ereditarietà che include `LunchCashierQueue` e uno dal percorso che include `TakeoutQueue`. Questa situazione viene illustrata nella figura seguente.  
   
- ![Ereditarietà virtuale e nel layout oggetto](../cpp/media/vc38xp5.gif "vc38XP5")  
+ ![Ereditarietà virtuale e nel layout dell'oggetto](../cpp/media/vc38xp5.gif "vc38XP5")  
 Layout dell'oggetto con ereditarietà virtuale e non virtuale  
   
 > [!NOTE]

@@ -2,11 +2,8 @@
 title: decltype (C++) | Documenti Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - decltype_cpp
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - operators [C++], type of an expression
 - operators [C++], deduce expression type
 ms.assetid: 6dcf8888-8196-4f13-af50-51e3797255d4
-caps.latest.revision: 14
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ee3c83512929e4592a5ee75b954bc6c19f52f448
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ac9fe7ebf3d3e406854308e56d38e37567acc07a
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="decltype--c"></a>decltype (C++)
 L'identificatore di tipo `decltype` restituisce il tipo di un'espressione specificata. Il `decltype` identificatore di tipo con il [parola chiave auto](../cpp/auto-cpp.md), è utile principalmente per gli sviluppatori che scrivono librerie di modelli. È, ad esempio, possibile usare le parole chiave `auto` e `decltype` per dichiarare una funzione di modello il cui tipo restituito dipende dai tipi dei relativi argomenti di modello. In alternativa, è possibile usare le parole chiave `auto` e `decltype` per dichiarare una funzione di modello che esegua il wrapping di una chiamata a un'altra funzione e che quindi restituisca il tipo restituito della funzione di cui è stato eseguito il wrapping.  
@@ -91,7 +86,7 @@ UNKNOWN func(T&& t, U&& u){ return t + u; };
   
  Il prototipo indicato di seguito mostra la sintassi per la dichiarazione di una funzione alternativa. Si noti che il `const` e `volatile` qualificatori e `throw` [specifica di eccezione](../cpp/exception-specifications-throw-cpp.md) sono facoltativi. Il *function_body* segnaposto rappresenta un'istruzione composta che specifica ciò che svolge la funzione. Come procedura di codifica, ottimale il *espressione* segnaposto nel `decltype` istruzione deve corrispondere all'espressione specificata per il `return` istruzione, se presente, nel *function_body*.  
   
- **Auto** *nome_funzione* **(** *parametri*<sub>opt</sub> **)**  **const**<sub>opt</sub> **volatile**<sub>opt</sub>  **->**  **decltype (** *espressione* **)** **generare**<sub>opt</sub> **{** *function_body* **};**  
+ **Auto** *nome_funzione* **(** *parametri*<sub>scegliere</sub> **)**  **const**<sub>opt</sub> **volatile**<sub>opt</sub> **->** **decltype (** *espressione* **)** **throw**<sub>opt</sub> **{** *function_body* **};**  
   
  Nel seguente esempio di codice il tipo restituito ritardo-specificato della funzione di modello `myFunc` dipende dai tipi di argomenti di modello `t` e `u`. Come procedura di codifica ottimale, il codice di esempio Usa anche i riferimenti rvalue e `forward` modello di funzione, che supporta *un inoltro perfetto*. Per altre informazioni, vedere [Dichiaratore di riferimento rvalue: &&](../cpp/rvalue-reference-declarator-amp-amp.md).  
   
@@ -213,5 +208,5 @@ static_assert(test2, "PASS2");
 ## <a name="requirements"></a>Requisiti  
  Visual C++ 2010 o versioni successive.  
   
- `decltype(auto)`richiede Visual Studio 2015 o versione successiva.  
+ `decltype(auto)` richiede Visual Studio 2015 o versione successiva.  
   

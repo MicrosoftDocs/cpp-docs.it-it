@@ -1,13 +1,10 @@
 ---
 title: -REBASE | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - /rebase
 dev_langs:
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - executable files [C++], base address
 - /REBASE editbin option [C++]
 ms.assetid: 3f89d874-af5c-485b-974b-fd205f6e1a4b
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 50bb10acda1175d2cca12e7e4aff6fc9e5bae73a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4a5e2b68768b01d71532c358a14c53d8a033e1ed
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="rebase"></a>/REBASE
 ```  
@@ -44,7 +39,7 @@ ms.lasthandoff: 12/21/2017
   
 |Modificatore|Operazione|  
 |--------------|------------|  
-|BASE**=***indirizzo*|Fornisce un indirizzo iniziale per la riassegnazione di indirizzi di base per i file. Specificare *indirizzo* in notazione decimale o in linguaggio C. Se non si specifica BASE, il valore predefinito l'indirizzo di base iniziale è 0x400000. Specificare se verso il basso viene utilizzato, BASE, e *indirizzo* imposta la fine dell'intervallo di indirizzi di base.|  
+|BASE **= * * * indirizzo*|Fornisce un indirizzo iniziale per la riassegnazione di indirizzi di base per i file. Specificare *indirizzo* in notazione decimale o in linguaggio C. Se non si specifica BASE, il valore predefinito l'indirizzo di base iniziale è 0x400000. Specificare se verso il basso viene utilizzato, BASE, e *indirizzo* imposta la fine dell'intervallo di indirizzi di base.|  
 |BASEFILE|Crea un file denominato COFFBASE. TXT, che è un file di testo nel formato previsto dal collegamento/opzione di BASE.|  
 |GIÙ|Indica a EDITBIN riassegnare gli indirizzi di base verso il basso da un indirizzo finale. I file vengono riassegnati nell'ordine specificato, con il primo file che si trova nell'indirizzo più alto possibile oltre la fine dell'intervallo di indirizzi. BASE deve essere utilizzata con verso il basso per garantire una sufficiente spazio di indirizzi per basare i file. Per determinare lo spazio di indirizzi necessario per i file specificati, eseguire EDITBIN con /REBASE nei file e aggiungere 64 KB per le dimensioni totali visualizzate.|  
   
