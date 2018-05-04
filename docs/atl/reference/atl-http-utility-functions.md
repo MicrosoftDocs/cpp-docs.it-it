@@ -1,22 +1,18 @@
 ---
-title: "Funzioni di utilità ATL HTTP | Documenti Microsoft"
-ms.custom: 
+title: Funzioni di utilità ATL HTTP | Documenti Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 4db57ef2-31fa-4696-bbeb-79a9035033ed
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 88bae92c568285e44965d6bfaca399709105d323
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 476ca29de5a44e8ebb20d53ec0b88834c7b03eea
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="atl-http-utility-functions"></a>Funzioni di utilità HTTP ATL
 
@@ -180,7 +176,7 @@ inline BOOL AtlIsUnsafeUrlChar(char chIn) throw();
 ### <a name="remarks"></a>Note  
  I caratteri che non devono essere utilizzati negli URL può essere testati mediante questa funzione e convertire mediante [AtlCanonicalizeUrl](#atlcanonicalizeurl).  
   
-## <a name="atlunescapeurl">AtlUnescapeUrl</a>
+## <a name="atlunescapeurl"></a> AtlUnescapeUrl
  Chiamare questa funzione per convertire i caratteri di escape nei relativi valori originali.  
   
 ```    
@@ -256,7 +252,7 @@ inline void SystemTimeToHttpDate(
  L'ora di sistema per essere ottenuti come una stringa di formato HTTP.  
   
  *strTime*  
- Un riferimento a una variabile di stringa per la ricezione ora HTTP come definito in RFC 2616 ([http://www.ietf.org/rfc/rfc2616.txt](http://www.ietf.org/rfc/rfc2616.txt)) e lo standard RFC 1123 ([http://www.ietf.org/rfc/rfc1123.txt](http://www.ietf.org/rfc/rfc1123.txt)).  
+ Un riferimento a una variabile di stringa per la ricezione HTTP data ora come definito in RFC 2616 ([http://www.ietf.org/rfc/rfc2616.txt](http://www.ietf.org/rfc/rfc2616.txt)) e lo standard RFC 1123 ([http://www.ietf.org/rfc/rfc1123.txt](http://www.ietf.org/rfc/rfc1123.txt)).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Concetti](../../atl/active-template-library-atl-concepts.md)   

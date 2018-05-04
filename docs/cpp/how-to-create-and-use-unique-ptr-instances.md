@@ -1,36 +1,31 @@
 ---
 title: 'Procedura: creare e utilizzare istanze unique_ptr | Documenti Microsoft'
-ms.custom: 
+ms.custom: how-to
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 9a373030-e587-452f-b9a5-c5f9d58b7673
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ae4610e7b26eecd6ef444f3c7c73e95af365ca71
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 82cf4fb475f9c89a4a088cac9d5ee0e1231d436e
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-create-and-use-uniqueptr-instances"></a>Procedura: creare e utilizzare istanze unique_ptr
 Oggetto [unique_ptr](../standard-library/unique-ptr-class.md) non condivide il puntatore. Non può essere copiato in un altro `unique_ptr`, passato per valore a una funzione o utilizzato in qualsiasi algoritmo della libreria Standard C++ che richiede di copie da eseguire. È possibile solo spostare un oggetto `unique_ptr`. Ciò significa che la proprietà della risorsa di memoria viene trasferita a un altro `unique_ptr` e l'oggetto `unique_ptr` originale non è più proprietario della risorsa. Si consiglia di limitare un oggetto a un solo proprietario, poiché la proprietà multipla rende più complessa la logica del programma. Pertanto, quando è necessario un puntatore intelligente per un oggetto C++ normale, usare `unique_ptr`, e quando si costruisce un `unique_ptr`, utilizzare il [make_unique](../standard-library/memory-functions.md#make_unique) funzione di supporto.  
   
  Nel diagramma seguente è illustrato il passaggio di proprietà tra due istanze di `unique_ptr`.  
   
- ![Trasferimento della proprietà di un univoco &#95; ptr](../cpp/media/unique_ptr.png "unique_ptr")  
+ ![Trasferimento della proprietà di un&#95;ptr](../cpp/media/unique_ptr.png "unique_ptr")  
   
- `unique_ptr`è definito nel `<memory>` intestazione della libreria Standard C++. È esattamente efficiente come un puntatore non elaborato e può essere utilizzato nei contenitori della libreria Standard C++. L'aggiunta di `unique_ptr` istanze ai contenitori della libreria Standard C++ è efficiente poiché il costruttore di spostamento del `unique_ptr` Elimina la necessità di un'operazione di copia.  
+ `unique_ptr` è definito nel `<memory>` intestazione della libreria Standard C++. È esattamente efficiente come un puntatore non elaborato e può essere utilizzato nei contenitori della libreria Standard C++. L'aggiunta di `unique_ptr` istanze ai contenitori della libreria Standard C++ è efficiente poiché il costruttore di spostamento del `unique_ptr` Elimina la necessità di un'operazione di copia.  
   
 ## <a name="example"></a>Esempio  
  Nell'esempio seguente viene illustrato come creare istanze di `unique_ptr` e passarle tra funzioni.  

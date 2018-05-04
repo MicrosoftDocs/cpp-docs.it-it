@@ -2,12 +2,9 @@
 title: -GR (Attiva informazioni di Run-Time Type) | Documenti Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - /gr
 - VC.Project.VCCLWCECompilerTool.RuntimeTypeInfo
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - /Gr compiler option [C++]
 - enable run-time type information compiler option [C++]
 ms.assetid: d1f9f850-dcec-49fd-96ef-e72d01148906
-caps.latest.revision: 18
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 993465bd1666e624777e52cb1c3d3a54545589dd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 79e91f11fa6397d2ba8279998726249182c541d4
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="gr-enable-run-time-type-information"></a>/GR (Attiva informazioni sui tipi in fase di esecuzione)
 Aggiunge codice per controllare i tipi di oggetto in fase di esecuzione.  
@@ -43,7 +38,7 @@ Aggiunge codice per controllare i tipi di oggetto in fase di esecuzione.
 ```  
   
 ## <a name="remarks"></a>Note  
- Quando **/GR** è abilitato, il compilatore definisce il `_CPPRTTI` macro del preprocessore. Per impostazione predefinita, **/GR** si trova in. **/GR-** disabilita le informazioni sul tipo in fase di esecuzione.  
+ Quando **/GR** è abilitato, il compilatore definisce il `_CPPRTTI` macro del preprocessore. Per impostazione predefinita, **/GR** si trova in. **/GR-** disabilita le informazioni sul tipo di runtime.  
   
  Utilizzare **/GR** se il compilatore non può risolvere staticamente un tipo di oggetto nel codice. In genere è necessario il **/GR** opzione quando il codice utilizza [operatore dynamic_cast](../../cpp/dynamic-cast-operator.md) o [typeid](../../cpp/typeid-operator.md). Tuttavia, **/GR** aumenta le dimensioni delle sezioni. rdata dell'immagine. Se il codice non usa **dynamic_cast** o **typeid**, **/GR-** può produrre un'immagine più piccola.  
   

@@ -2,28 +2,23 @@
 title: Cenni preliminari su MSBuild (Visual C++) | Documenti Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - MSBuild overview
 ms.assetid: dd258f6f-ab51-48d9-b274-f7ba911d05ca
-caps.latest.revision: 17
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f250443e0e5da2cf399282f19a5fde58c4c4b089
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ae6e6d826f4bc1e8c9ab6cc28686e4ad1e6e3b02
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="msbuild-visual-c-overview"></a>Cenni preliminari su MSBuild (Visual C++)  
   
@@ -74,7 +69,7 @@ Il sistema MSBuild è può eseguire in modo condizionale una destinazione prima 
   
 ## <a name="msbuild-in-the-ide"></a>MSBuild nell'IDE  
   
-Quando si impostano le proprietà del progetto nell'IDE e quindi salvare il progetto, Visual C++ scrive le impostazioni del progetto al file di progetto. Il file di progetto contiene impostazioni che sono univoche per il progetto, ma non contiene tutte le impostazioni necessarie per compilare il progetto. Il file di progetto contiene `Import` gli elementi che includono una rete di altri *i file di supporto.* I file di supporto contengono le proprietà rimanenti, destinazioni e le impostazioni necessarie per compilare il progetto.  
+Quando si impostano le proprietà del progetto nell'IDE e quindi salvare il progetto, Visual C++ scrive le impostazioni del progetto al file di progetto. Il file di progetto contiene impostazioni che sono univoche per il progetto, ma non contiene tutte le impostazioni necessarie per compilare il progetto. Contiene il file di progetto `Import` gli elementi che includono una rete di altri *i file di supporto.* I file di supporto contengono le proprietà rimanenti, destinazioni e le impostazioni necessarie per compilare il progetto.  
   
 La maggior parte delle destinazioni e le proprietà nei file di supporto esistono esclusivamente per implementare il sistema di compilazione. La sezione seguente illustra alcune destinazioni utili e le proprietà che è possibile specificare nella riga di comando di MSBuild. Per individuare altre destinazioni e le proprietà, esaminare i file nella directory dei file di supporto.  
   
@@ -84,9 +79,9 @@ Per impostazione predefinita, i file di supporto di Visual C++ primari si trovan
   
 |Directory|Descrizione|  
 |---------------|-----------------|  
-|*unità*: il file \Programmi *(x86)*\Microsoft Visual Studio\\*anno*\\*edition*\Common7\IDE\VC\VCTargets\ <br /><br />*unità*: il file \Programmi *(x86)*\MSBuild\Microsoft.Cpp (x86) \v4.0\\*versione*\ |Contiene i file di destinazione primario (con estensione targets) e i file delle proprietà (con estensione props) utilizzate dalle destinazioni. Per impostazione predefinita, la macro $(VCTargetsPath) fa riferimento a questa directory.|  
-|*unità*: il file \Programmi *(x86)*\Microsoft Visual Studio\\*anno*\\*edition*\Common7\IDE\VC\VCTargets\ Piattaforme\\*piattaforma*\ <br /><br />*unità*: il file \Programmi *(x86)*\MSBuild\Microsoft.Cpp\v4.0\\*versione*\Platforms\\*piattaforma*\ |Contiene i file di destinazione e proprietà specifiche della piattaforma che eseguono l'override di destinazioni e le proprietà nella directory padre. Questa directory contiene anche una DLL che definisce le attività che vengono utilizzate dalle destinazioni in questa directory.<br /><br /> Il *piattaforma* segnaposto rappresenta lo strumento Win32 o x64 sottodirectory.|  
-|*unità*: il file \Programmi *(x86)*\Microsoft Visual Studio\\*anno*\\*edition*\Common7\IDE\VC\VCTargets\ Piattaforme\\*piattaforma*\PlatformToolsets\\*set di strumenti*\ <br /><br />*unità*: il file \Programmi *(x86)*\MSBuild\Microsoft.Cpp\v4.0\\*versione*\Platforms\\*piattaforma*\ PlatformToolsets set\\*set di strumenti*\ <br /><br />*unità*: il file \Programmi *(x86)*\MSBuild\Microsoft.Cpp\v4.0\Platforms\\*piattaforma*\PlatformToolsets\\*set di strumenti*\ |Contiene la directory che consentono la compilazione generare applicazioni Visual C++ utilizzando l'oggetto specificato *set di strumenti*.<br /><br /> Il *anno* e *edition* segnaposto vengono utilizzati da Visual Studio 2017 e versioni successive. Il *versione* segnaposto è V110 per Visual Studio 2012, V120 per Visual Studio 2013 o V140 per Visual Studio 2015. Il *piattaforma* segnaposto rappresenta lo strumento Win32 o x64 sottodirectory. Il *set di strumenti* segnaposto rappresenta la sottodirectory del set di strumenti, ad esempio, v140 per la compilazione di App di Windows utilizzando il set di strumenti di Visual Studio 2015, v120_xp da compilare per Windows XP utilizzando il set di strumenti di Visual Studio 2013 o v110_wp80 per compilare le app di Windows Phone 8.0 tramite il set di strumenti di Visual Studio 2012.<br /><br />Il percorso che contiene la directory che consentono la compilazione generare applicazioni Visual C++ 2008 o Visual C++ 2010 non include il *versione*e *piattaforma* segnaposto rappresenta x64, Itanium o Win32 sottodirectory. Il *set di strumenti* segnaposto rappresenta la sottodirectory di set di strumenti v90 o v100.|  
+|*unità*: il file \Programmi *(x86)* \Microsoft Visual Studio\\*anno*\\*edition*\Common7\IDE\VC\VCTargets\ <br /><br />*unità*: il file \Programmi *(x86)* \MSBuild\Microsoft.Cpp (x86) \v4.0\\*versione*\ |Contiene i file di destinazione primario (con estensione targets) e i file delle proprietà (con estensione props) utilizzate dalle destinazioni. Per impostazione predefinita, la macro $(VCTargetsPath) fa riferimento a questa directory.|  
+|*unità*: il file \Programmi *(x86)* \Microsoft Visual Studio\\*anno*\\*edition*\Common7\IDE\VC\VCTargets\ Piattaforme\\*piattaforma*\ <br /><br />*unità*: il file \Programmi *(x86)* \MSBuild\Microsoft.Cpp\v4.0\\*versione*\Platforms\\*piattaforma*\ |Contiene i file di destinazione e proprietà specifiche della piattaforma che eseguono l'override di destinazioni e le proprietà nella directory padre. Questa directory contiene anche una DLL che definisce le attività che vengono utilizzate dalle destinazioni in questa directory.<br /><br /> Il *piattaforma* segnaposto rappresenta lo strumento Win32 o x64 sottodirectory.|  
+|*unità*: il file \Programmi *(x86)* \Microsoft Visual Studio\\*anno*\\*edition*\Common7\IDE\VC\VCTargets\ Piattaforme\\*piattaforma*\PlatformToolsets\\*set di strumenti*\ <br /><br />*unità*: il file \Programmi *(x86)* \MSBuild\Microsoft.Cpp\v4.0\\*versione*\Platforms\\*platform*\ PlatformToolsets set\\*set di strumenti*\ <br /><br />*unità*: il file \Programmi *(x86)* \MSBuild\Microsoft.Cpp\v4.0\Platforms\\*piattaforma*\PlatformToolsets\\*set di strumenti*\ |Contiene la directory che consentono la compilazione generare applicazioni Visual C++ utilizzando l'oggetto specificato *set di strumenti*.<br /><br /> Il *anno* e *edition* segnaposto vengono utilizzati da Visual Studio 2017 e versioni successive. Il *versione* segnaposto è V110 per Visual Studio 2012, V120 per Visual Studio 2013 o V140 per Visual Studio 2015. Il *piattaforma* segnaposto rappresenta lo strumento Win32 o x64 sottodirectory. Il *set di strumenti* segnaposto rappresenta la sottodirectory del set di strumenti, ad esempio, v140 per la compilazione di App di Windows utilizzando il set di strumenti di Visual Studio 2015, v120_xp da compilare per Windows XP utilizzando il set di strumenti di Visual Studio 2013 o v110_wp80 per compilare le app di Windows Phone 8.0 tramite il set di strumenti di Visual Studio 2012.<br /><br />Il percorso che contiene la directory che consentono la compilazione generare applicazioni Visual C++ 2008 o Visual C++ 2010 non include il *versione*e *piattaforma* segnaposto rappresenta x64, Itanium o Win32 sottodirectory. Il *set di strumenti* segnaposto rappresenta la sottodirectory di set di strumenti v90 o v100.|  
   
 ### <a name="support-files"></a>File di supporto  
   

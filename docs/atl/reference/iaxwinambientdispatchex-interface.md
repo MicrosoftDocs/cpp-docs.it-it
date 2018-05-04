@@ -1,12 +1,9 @@
 ---
 title: Interfaccia IAxWinAmbientDispatchEx | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - IAxWinAmbientDispatchEx
@@ -17,17 +14,15 @@ dev_langs:
 helpviewer_keywords:
 - IAxWinAmbientDispatchEx interface
 ms.assetid: 2c25e079-6128-4278-bc72-b2c6195ba7ef
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3fd212417a00335bfc02699cf5e38eeacc6451ad
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 22815ddf3131b9d262d68a3202f4f500b7edf807
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="iaxwinambientdispatchex-interface"></a>Interfaccia IAxWinAmbientDispatchEx
 Questa interfaccia implementa le proprietà di ambiente supplementare per un controllo ospitato.  
@@ -54,7 +49,7 @@ MIDL_INTERFACE("B2D0778B - AC99 - 4c58 - A5C8 - E7724E5316B5") IAxWinAmbientDisp
   
  Questa interfaccia viene esposta dal controllo ActiveX ATL che ospita gli oggetti. Derivata da [IAxWinAmbientDispatch](../../atl/reference/iaxwinambientdispatch-interface.md), `IAxWinAmbientDispatchEx` aggiunge un metodo che consente di integrare l'interfaccia di proprietà di ambiente fornito da ATL con uno proprio.  
   
- [AXHost](https://msdn.microsoft.com/library/system.windows.forms.axhost.aspx) tenterà di caricare le informazioni sul tipo su `IAxWinAmbientDispatch` e `IAxWinAmbientDispatchEx` dalla libreria dei tipi che contiene il codice.  
+ [AXHost](https://msdn.microsoft.com/library/system.windows.forms.axhost.aspx) tenterà di caricare le informazioni sul tipo sulle `IAxWinAmbientDispatch` e `IAxWinAmbientDispatchEx` dalla libreria dei tipi che contiene il codice.  
   
  Se si collega a ATL90, **AXHost** caricherà le informazioni sul tipo dalla libreria dei tipi nella DLL.  
   
@@ -69,7 +64,7 @@ MIDL_INTERFACE("B2D0778B - AC99 - 4c58 - A5C8 - E7724E5316B5") IAxWinAmbientDisp
 |Libreria dei tipi|ATL|  
 |C++|atliface.h (incluso anche in atlbase. H)|  
   
-##  <a name="setambientdispatch"></a>IAxWinAmbientDispatchEx::SetAmbientDispatch  
+##  <a name="setambientdispatch"></a>  IAxWinAmbientDispatchEx::SetAmbientDispatch  
  Questo metodo viene chiamato per completare l'interfaccia di proprietà di ambiente predefinita con un'interfaccia definita dall'utente.  
   
 ```

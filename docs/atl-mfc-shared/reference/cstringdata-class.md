@@ -1,12 +1,9 @@
 ---
 title: Classe CStringData | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CStringData
@@ -28,17 +25,15 @@ helpviewer_keywords:
 - CStringData class
 - shared classes, CStringData
 ms.assetid: 4e31b5ca-3dbe-4fd5-b692-8211fbfb2593
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7523ca52c0ded8ec9b3cf02dd6798beca8be5cf8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 187892b74536de47079324d90bb21b2569e00498
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cstringdata-class"></a>Classe CStringData
 Questa classe rappresenta i dati di un oggetto stringa.  
@@ -59,9 +54,9 @@ struct CStringData
 |[data](#data)|Recupera i dati di carattere di un oggetto stringa.|  
 |[IsLocked](#islocked)|Determina se il buffer dell'oggetto string associato è bloccato.|  
 |[IsShared](#isshared)|Determina se il buffer dell'oggetto string associato è attualmente condivisa.|  
-|[Blocco](#lock)|Blocca il buffer dell'oggetto string associato.|  
+|[blocco](#lock)|Blocca il buffer dell'oggetto string associato.|  
 |[Rilascio](#release)|Rilascia l'oggetto stringa specificato.|  
-|[Lo sblocco](#unlock)|Sblocca il buffer dell'oggetto string associato.|  
+|[lo sblocco](#unlock)|Sblocca il buffer dell'oggetto string associato.|  
   
 ### <a name="data-members"></a>Membri di dati  
   
@@ -98,7 +93,7 @@ struct CStringData
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** atlsimpstr.h  
   
-##  <a name="addref"></a>CStringData::AddRef  
+##  <a name="addref"></a>  CStringData::AddRef  
  Incrementa il conteggio dei riferimenti dell'oggetto string.  
   
 ```
@@ -111,7 +106,7 @@ void AddRef() throw();
 > [!NOTE]
 >  Non chiamare questo metodo in una stringa con un conteggio dei riferimenti negativo, poiché un numero negativo indica che il buffer di stringa viene bloccato.  
   
-##  <a name="data"></a>CStringData::data  
+##  <a name="data"></a>  CStringData::data  
  Restituisce un puntatore al buffer di caratteri di un oggetto stringa.  
   
 ```
@@ -127,7 +122,7 @@ void* data() throw();
 > [!NOTE]
 >  Il buffer non è allocato dal `CStringData` oggetto ma dal gestore di stringa quando necessario. Quando allocato, il buffer viene aggiunto all'oggetto dati stringa.  
   
-##  <a name="islocked"></a>CStringData::IsLocked  
+##  <a name="islocked"></a>  CStringData::IsLocked  
  Determina se il buffer di caratteri è bloccato.  
   
 ```
@@ -140,7 +135,7 @@ bool IsLocked() const throw();
 ### <a name="remarks"></a>Note  
  Chiamare questa funzione per determinare se il buffer di caratteri di un oggetto string è attualmente bloccato.  
   
-##  <a name="isshared"></a>CStringData::IsShared  
+##  <a name="isshared"></a>  CStringData::IsShared  
  Determina se il buffer di caratteri è condiviso.  
   
 ```
@@ -153,7 +148,7 @@ bool IsShared() const throw();
 ### <a name="remarks"></a>Note  
  Chiamare questa funzione per determinare se il buffer di caratteri di un oggetto dati di stringa è attualmente condivisa tra più oggetti stringa.  
   
-##  <a name="lock"></a>CStringData::Lock  
+##  <a name="lock"></a>  CStringData::Lock  
  Blocca il buffer di caratteri dell'oggetto string associato.  
   
 ```
@@ -166,7 +161,7 @@ void Lock() throw();
 > [!NOTE]
 >  È possibile bloccare un buffer di caratteri solo se il buffer non è condivisa tra oggetti stringa superiore.  
   
-##  <a name="nalloclength"></a>CStringData::nAllocLength  
+##  <a name="nalloclength"></a>  CStringData::nAllocLength  
  Lunghezza del buffer allocato carattere.  
   
 ```
@@ -176,7 +171,7 @@ int nAllocLength;
 ### <a name="remarks"></a>Note  
  Archivia la lunghezza del buffer di dati allocati in `XCHAR`s (esclusi carattere di terminazione null).  
   
-##  <a name="ndatalength"></a>CStringData::nDataLength  
+##  <a name="ndatalength"></a>  CStringData::nDataLength  
  Lunghezza corrente dell'oggetto string.  
   
 ```
@@ -186,7 +181,7 @@ int nDataLength;
 ### <a name="remarks"></a>Note  
  Archivia la lunghezza dei dati attualmente in uso in `XCHAR`s (esclusi carattere di terminazione null).  
   
-##  <a name="nrefs"></a>CStringData::nRefs  
+##  <a name="nrefs"></a>  CStringData::nRefs  
  Conteggio dei riferimenti dell'oggetto dati stringa.  
   
 ```
@@ -196,7 +191,7 @@ long nRefs;
 ### <a name="remarks"></a>Note  
  Archivia il conteggio dei riferimenti dell'oggetto dati stringa. Questo conteggio indica il numero di oggetti stringa superiore che sono associati all'oggetto dati di stringa. Un valore negativo indica che l'oggetto dati di stringa è attualmente bloccato.  
   
-##  <a name="pstringmgr"></a>CStringData::pStringMgr  
+##  <a name="pstringmgr"></a>  CStringData::pStringMgr  
  Il gestore della memoria dell'oggetto string associato.  
   
 ```
@@ -206,7 +201,7 @@ IAtlStringMgr* pStringMgr;
 ### <a name="remarks"></a>Note  
  Archivia il gestore della memoria per l'oggetto stringa associato. Per ulteriori informazioni su stringhe e i gestori di memoria, vedere [gestione della memoria e CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md).  
   
-##  <a name="release"></a>CStringData::Release  
+##  <a name="release"></a>  CStringData::Release  
  Decrementa il conteggio dei riferimenti dell'oggetto dati stringa.  
   
 ```
@@ -220,7 +215,7 @@ void Release() throw();
   
  [!code-cpp[NVC_ATLMFC_Utilities#104](../../atl-mfc-shared/codesnippet/cpp/cstringdata-class_1.cpp)]  
   
-##  <a name="unlock"></a>CStringData::Unlock  
+##  <a name="unlock"></a>  CStringData::Unlock  
  Sblocca il buffer di caratteri dell'oggetto string associato.  
   
 ```

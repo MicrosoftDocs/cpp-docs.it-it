@@ -1,12 +1,9 @@
 ---
 title: 'Operatore AND logico: &amp; &amp; | Documenti Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - '&&'
@@ -17,19 +14,17 @@ helpviewer_keywords:
 - AND operator
 - '&& operator'
 ms.assetid: 50cfa664-a8c4-4b31-9bab-2f80d7cd2d1f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0612b9c2430d316aa9ba3a6d2dd9351342b5d352
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f683b7ff17a1dd3945f5cb554a7440ab47fad454
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="logical-and-operator-ampamp"></a>Operatore AND logico:&amp;&amp;
+# <a name="logical-and-operator-ampamp"></a>Operatore AND logico: &amp;&amp;
 ## <a name="syntax"></a>Sintassi  
   
 ```  
@@ -58,7 +53,7 @@ char *pch = 0;
  Se `pch` è null (0), il lato destro dell'espressione non viene mai valutato. Di conseguenza, l'assegnazione mediante un puntatore null non è possibile.  
   
 ## <a name="operator-keyword-for-"></a>Parola chiave operator per &&  
- Il **e** operatore è il testo equivalente di  **&&** . Esistono due modi per accedere il **e** operatore nei programmi: includere il file di intestazione `iso646.h`, o compilare il [/Za](../build/reference/za-ze-disable-language-extensions.md) l'opzione del compilatore (Disabilita estensioni linguaggio).  
+ Il **e** operatore è il testo equivalente di **&&**. Esistono due modi per accedere il **e** operatore nei programmi: includere il file di intestazione `iso646.h`, o compilare il [/Za](../build/reference/za-ze-disable-language-extensions.md) l'opzione del compilatore (Disabilita estensioni linguaggio).  
   
 ## <a name="example"></a>Esempio  
   

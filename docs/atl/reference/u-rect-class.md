@@ -1,12 +1,9 @@
 ---
 title: Classe _U_RECT | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - ATL::_U_RECT
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - U_RECT class
 - _U_RECT class
 ms.assetid: 5f880a2d-09cf-4327-bf32-a3519c4dcd63
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1b7efb94f5afdd2f6daa6fa047d36ea51c957d31
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 93d067daf34538e3745e9a4efdd91fda65ef4de9
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="urect-class"></a>Classe _U_RECT
 Classe di adattatori di questo argomento consente di utilizzare `RECT` puntatori o riferimenti deve essere passato a una funzione che viene implementata in termini di puntatori.  

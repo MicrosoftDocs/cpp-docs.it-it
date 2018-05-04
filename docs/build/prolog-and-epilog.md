@@ -1,27 +1,22 @@
 ---
 title: Prologo ed epilogo | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 0453ed1a-3ff1-4bee-9cc2-d6d3d6384984
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 700b467065d17a61dcfabf9dcaa6577a7ecffc11
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2939293fe5fbdfd07cb12470790de5b064489d7f
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="prolog-and-epilog"></a>Prologo ed epilogo
 Ogni funzione alloca spazio dello stack, chiama altre funzioni, consente di salvare i registri non volatili o utilizza la gestione delle eccezioni deve essere un prologo, i cui indirizzi limite sono descritti nei dati di rimozione associati alla voce di tabella rispettiva funzione (vedere [Eccezioni (x64)](../build/exception-handling-x64.md)). Il prologo Salva argomento registri nei relativi indirizzi iniziali se necessario, inserisce i registri non volatili nello stack, alloca la parte fissa dello stack per le variabili locali e i temporanei e facoltativamente stabilisce un puntatore ai frame. I dati di rimozione deve descrivere l'azione del prologo e deve fornire le informazioni necessarie per annullare gli effetti del codice di prologo.  

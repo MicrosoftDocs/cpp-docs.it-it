@@ -1,13 +1,10 @@
 ---
 title: Scaricamento esplicito di una DLL a caricamento ritardato | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - __FUnloadDelayLoadedDLL2
 - delayed loading of DLLs, unloading
 ms.assetid: 1c4c5172-fd06-45d3-9e4f-f12343176b3c
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b26a1a17952693be9db6a80649aad2c40227d53e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 171acf9689c01649b86c2383d17136c926e25c57
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="explicitly-unloading-a-delay-loaded-dll"></a>Scaricamento esplicito di una DLL a caricamento ritardato
 Il [/Delay](../../build/reference/delay-delay-load-import-settings.md): l'opzione del linker unload consente di scaricare una DLL a caricamento ritardato. Per impostazione predefinita, quando il codice viene scaricata la DLL (utilizzando /delay: unload e **FUnloadDelayLoadedDLL2**), le importazioni a caricamento ritardato rimangono nella tabella di indirizzi di importazione (IAT). Tuttavia, se si utilizza /delay: unload nella riga di comando del linker, la funzione di supporto supporterà anche lo scaricamento esplicito della DLL, la IAT verrà reimpostato il formato originale; i puntatori di ora non valido verranno sovrascritto. IAT è un campo di [ImgDelayDescr](../../build/reference/calling-conventions-parameters-and-return-type.md) che contiene l'indirizzo di una copia della tabella IAT originale (se presente).  

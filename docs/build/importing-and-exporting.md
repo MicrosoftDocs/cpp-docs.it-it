@@ -1,13 +1,10 @@
 ---
 title: Importazione ed esportazione | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - DLLs [C++], exporting from
 - __declspec(dllimport) keyword [C++]
 ms.assetid: 7c44c2aa-2117-4cec-9615-a65bfd3f8f7b
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6c0727002e264f3b0cfe39b763c29fd70725b982
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9ee3ffe33dbb99f1f9b4124e2695d2e56dbe5544
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="importing-and-exporting"></a>Importazione ed esportazione
 È possibile importare simboli pubblici in un'applicazione o esportare funzioni da una DLL tramite due metodi:  
@@ -46,7 +41,7 @@ ms.lasthandoff: 12/21/2017
   
  Non è necessario utilizzare **declspec** per il codice venga compilato correttamente, ma in questo modo consente al compilatore di generare codice più efficiente. Il compilatore è in grado di generare codice più efficiente poiché può determinare se esiste una funzione in una DLL o non, che consente il compilatore genera codice che ignora un livello di riferimento indiretto che normalmente sarebbe presente in una chiamata di funzione che attraversa i limiti di una DLL. Tuttavia, è necessario utilizzare **declspec** per importare le variabili utilizzate in una DLL.  
   
- Con la sezione EXPORTS file def appropriato, **dllexport** non è obbligatorio. **dllexport** è stata aggiunta per fornire un modo semplice per l'esportazione di funzioni da un file .exe o DLL senza utilizzare un file def.  
+ Con la sezione EXPORTS file def appropriato, **dllexport** non è obbligatorio. **dllexport** è stata aggiunta per fornire un modo semplice per esportare funzioni da un file con estensione dll o .exe senza utilizzare un file. def.  
   
  Il formato del file eseguibile portabile Win32 è progettato per ridurre al minimo il numero di pagine che devono essere modificate per risolvere le importazioni. A tale scopo, inserisce tutti gli indirizzi di importazione per qualsiasi programma in un'unica posizione denominata tabella di indirizzi di importazione. Il caricatore può modificare solo una o due pagine quando si accede a tali importazioni.  
   

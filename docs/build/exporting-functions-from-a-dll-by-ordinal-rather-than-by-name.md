@@ -1,13 +1,10 @@
 ---
-title: "Esportazione di funzioni da una DLL in base al numero ordinale anziché dal nome | Documenti Microsoft"
-ms.custom: 
+title: Esportazione di funzioni da una DLL in base al numero ordinale anziché dal nome | Documenti Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - NONAME
 dev_langs:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - exporting DLLs [C++], ordinal values
 - NONAME attribute
 ms.assetid: 679719fd-d965-4df3-9f7a-7d86ad831702
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 17b49cc54336f596d6815a2ebe53e60ed2dd51e8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b05f3e429406b3c24c7a21ce9ee8e10fe19c14b8
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="exporting-functions-from-a-dll-by-ordinal-rather-than-by-name"></a>Esportazione di funzioni da una DLL in base al numero ordinale anziché al nome
 Il modo più semplice per esportare le funzioni dalla DLL di è esportarli in base al nome. Questo è ciò che accade quando si utilizza **dllexport**, ad esempio. Ma è invece possibile esportare funzioni per ordinale. Con questa tecnica, è necessario utilizzare un file con estensione def anziché **dllexport**. Per specificare un valore ordinale di funzione, aggiungere il nome della funzione nel file con estensione def al relativo ordinale. Per informazioni sulla specifica degli ordinali, vedere [esportazione da una DLL tramite i file def](../build/exporting-from-a-dll-using-def-files.md).  
@@ -38,7 +33,7 @@ Il modo più semplice per esportare le funzioni dalla DLL di è esportarli in ba
   
 ## <a name="what-do-you-want-to-do"></a>Selezionare l'operazione da eseguire.  
   
--   [Utilizzare un file. def per esportare mediante valori ordinali](../build/exporting-from-a-dll-using-def-files.md)  
+-   [Utilizzare un file. def per esportare dall'ordinale](../build/exporting-from-a-dll-using-def-files.md)  
   
 -   [Utilizzare dllexport](../build/exporting-from-a-dll-using-declspec-dllexport.md)  
   

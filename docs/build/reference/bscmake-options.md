@@ -2,12 +2,9 @@
 title: Opzioni di BSCMAKE | Documenti Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VC.Project.VCBscMakeTool.OutputFile
 - VC.Project.VCBscMakeTool.SuppressStartupBanner
@@ -38,17 +35,15 @@ helpviewer_keywords:
 - /Es BSCMAKE option
 - Ei BSCMAKE option
 ms.assetid: fa2f1e06-c684-41cf-80dd-6a554835ebd2
-caps.latest.revision: 9
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 46c258a5591615bb277823ccc5261fade3c5e2af
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 16fd9bc8813179d23e83ab0a21a84ad815501bf6
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="bscmake-options"></a>Opzioni di BSCMAKE
 In questa sezione vengono descritte le opzioni disponibili per il controllo di BSCMAKE. Diverse opzioni controllano il contenuto del file di informazioni di visualizzazione escludendo o includendo determinate informazioni. Le opzioni di esclusione consentono BSCMAKE per velocizzare l'esecuzione e possono comportare un file BSC più piccolo. I nomi delle opzioni sono sensibili alle maiuscole (ad eccezione di **/Help** e **/NOLOGO**).  
@@ -70,7 +65,7 @@ In questa sezione vengono descritte le opzioni disponibili per il controllo di B
  /Es  
  Esclude dal file di informazioni di visualizzazione ogni file di inclusione specificato con un percorso assoluto o trovato in un percorso assoluto specificato nella variabile di ambiente INCLUDE. (In genere, si tratta il sistema di file di inclusione, contenenti numerose informazioni che potrebbero non essere necessario nel file di informazioni di esplorazione.) Questa opzione non esclude i file specificati senza un percorso o con i percorsi relativi o i file trovati in un percorso relativo in INCLUDE. È possibile utilizzare il **/Ei** opzione insieme a **/Es** per escludere i file **/Es** non esclusi. Se si desidera escludere solo alcuni dei file che **/Es** esclude, utilizzare **/Ei** anziché **/Es** ed elencare i file che si desidera escludere.  
   
- /errorreport: [Nessuno &#124; prompt dei comandi &#124; coda &#124; invio]  
+ /errorreport: [none &#124; prompt &#124; code &#124; di trasmissione]  
  Consente di inviare a Microsoft informazioni sugli errori interni in bscmake.exe.  
   
  Per ulteriori informazioni su **/errorreport**, vedere [/errorReport (segnala interni del compilatore gli errori)](../../build/reference/errorreport-report-internal-compiler-errors.md).  
@@ -82,12 +77,12 @@ In questa sezione vengono descritte le opzioni disponibili per il controllo di B
  Sono presenti simboli senza riferimenti. Per impostazione predefinita, BSCMAKE non registra i simboli definiti ma non viene fatto riferimento. Se un file SBR è stato compresso, questa opzione non ha effetto per tale file di input perché il compilatore è già rimosso i simboli senza riferimenti.  
   
  /n  
- Forza una compilazione non incrementale. Utilizzare  **/n**  per forzare una compilazione completa del file di informazioni di visualizzazione o se non è presente un file BSC e per impedire che i file SBR vengano troncati. Vedere [la modalità di compilazione di un File BSC in BSCMAKE](../../build/reference/how-bscmake-builds-a-dot-bsc-file.md).  
+ Forza una compilazione non incrementale. Uso **/n** per forzare una build completa del file di informazioni di visualizzazione o meno un file BSC esiste e per evitare che i file SBR vengano troncati. Vedere [la modalità di compilazione di un File BSC in BSCMAKE](../../build/reference/how-bscmake-builds-a-dot-bsc-file.md).  
   
  /NOLOGO  
  Elimina il messaggio di copyright BSCMAKE.  
   
- /o`filename`  
+ /o `filename`  
  Specifica un nome per il file di informazioni. Per impostazione predefinita, il file di informazioni viene assegnato il nome base del primo file sbr e l'estensione bsc.  
   
  /S ( `filename`...)  

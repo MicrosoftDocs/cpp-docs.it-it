@@ -1,13 +1,10 @@
 ---
 title: /FA, /Fa (File di listato) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VC.Project.VCCLWCECompilerTool.AssemblerListingLocation
 - VC.Project.VCCLCompilerTool.ConfigureASMListing
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - listing file type
 - assembly-only listing
 ms.assetid: c7507d0e-c69d-44f9-b8e2-d2c398697402
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e0cd569cf16e7b2a14faaa119eacaef0994d09dc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1840d2f2ff7d968fdcc19e2013a89af9cec32d24
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="fa-fa-listing-file"></a>/FA, /Fa (File di listato)
 Crea un file di listato contenente codice assembler.  
@@ -60,7 +55,7 @@ Facoltativo. Include codice macchina nell'elenco.
 `s`  
 Facoltativo. Contiene il codice sorgente nell'elenco.  
   
-`u`Parametro facoltativo. Consente di codificare il file di elenco in formato UTF-8 e include un indicatore dell'ordine di byte. Per impostazione predefinita, il file è codificato in formato ANSI. Utilizzare `u` per creare un file di listato che venga visualizzato correttamente in qualsiasi sistema, o se si utilizza Unicode file di codice sorgente come input per il compilatore.  
+`u` Parametro facoltativo. Consente di codificare il file di elenco in formato UTF-8 e include un indicatore dell'ordine di byte. Per impostazione predefinita, il file è codificato in formato ANSI. Utilizzare `u` per creare un file di listato che venga visualizzato correttamente in qualsiasi sistema, o se si utilizza Unicode file di codice sorgente come input per il compilatore.  
   
 Se entrambi `s` e `u` vengono specificati e, se un'origine dei file di codice Usa una codifica Unicode diversa da UTF-8, quindi le righe di codice nel file di ASM non vengano visualizzati correttamente.  
   
@@ -68,7 +63,7 @@ Se entrambi `s` e `u` vengono specificati e, se un'origine dei file di codice Us
 none  
 Un *origine*ASM file viene creato per ogni file di codice sorgente nella compilazione.  
   
-*nome del file* un file di listato denominato *filename*asm viene inserito nella directory corrente. Ciò è valido solo durante la compilazione di un file di codice sorgente singolo.  
+*filename* un file di listato denominato *filename*asm viene inserito nella directory corrente. Ciò è valido solo durante la compilazione di un file di codice sorgente singolo.  
   
 *nome file. estensione*  
 Un file di listato denominato *nome file. estensione* viene inserito nella directory corrente. Ciò è valido solo durante la compilazione di un file di codice sorgente singolo.  

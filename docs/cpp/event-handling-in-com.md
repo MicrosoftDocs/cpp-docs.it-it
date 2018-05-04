@@ -1,12 +1,9 @@
 ---
 title: Gestione degli eventi in COM | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - declaring events, in COM
 - declaring events, event handling in COM
 ms.assetid: 6b4617d4-a58e-440c-a8a6-1ad1c715b2bb
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1c57b8429a05ab3989dce318f4c16a58475560a1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3ccf5ad83afe2151ac9ceb90029780989ca33487
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="event-handling-in-com"></a>Gestione di eventi in COM
 Nella gestione degli eventi COM, impostare un ricevitore di origine e di evento di eventi utilizzando il [event_source](../windows/event-source.md) e [event_receiver](../windows/event-receiver.md) rispettivamente gli attributi, specificare `type` = **com**. Questi attributi inseriscono il codice appropriato per le interfacce personalizzate, dispatch e duali al fine di consentire alle classi a cui vengono applicati di generare eventi e gestirli dai punti di connessione COM.  
@@ -165,7 +160,7 @@ MyHandler1 was called with value 123.
 MyHandler2 was called with value 123.  
 ```  
   
-##  <a name="vcconeventhandlingincomanchorlayoutdependentcomevents"></a>Eventi COM dipendenti del layout  
+##  <a name="vcconeventhandlingincomanchorlayoutdependentcomevents"></a> Eventi COM dipendenti del layout  
  La dipendenza del layout è solo un problema per la programmazione COM. Nella funzione di gestione degli eventi nativa e gestita, le firme (tipo restituito, convenzione di chiamata e argomenti) dei gestori devono corrispondere ai relativi eventi, mentre tale corrispondenza non è necessaria per i nomi dei gestori.  
   
  Tuttavia, nella gestione degli eventi COM, quando si imposta la *layout_dependent* parametro di **event_receiver** a **true**, il nome e una firma corrispondente viene applicata. Ciò significa che i nomi e le firme dei gestori nel ricevitore di eventi devono corrispondere esattamente ai nomi e alle firme degli eventi per il quale è stato eseguito l'hook.  

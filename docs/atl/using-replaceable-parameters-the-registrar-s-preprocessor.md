@@ -1,13 +1,10 @@
 ---
 title: Utilizzo dei parametri sostituibili (ATL (Registrar)) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-atl
+ms.topic: conceptual
 f1_keywords:
 - AddReplacement
 - ClearReplacements
@@ -16,22 +13,20 @@ dev_langs:
 helpviewer_keywords:
 - '%MODULE%'
 ms.assetid: 0b376994-84a6-4967-8d97-8c01dfc94efe
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b06333ba51b74501f3b7cd68248e5fb7e51ca94f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 91deabfd14d89c4a26384a14445fc51edbb3ac94
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="using-replaceable-parameters-the-registrar39s-preprocessor"></a>Utilizzo dei parametri sostituibili (il Registrar &#39; s preprocessore)
+# <a name="using-replaceable-parameters-the-registrar39s-preprocessor"></a>Utilizzo dei parametri sostituibili (programma di registrazione&#39;s preprocessore)
 Parametri sostituibili consentono un client di registrazione specificare i dati in fase di esecuzione. A tale scopo, il programma di registrazione gestisce una mappa di sostituzione in cui vengono immessi i valori associati ai parametri sostituibili nello script. Queste voci vengono poi create in fase di esecuzione.  
   
-##  <a name="_atl_using_.25.module.25"></a>Utilizzo di % % di modulo  
+##  <a name="_atl_using_.25.module.25"></a> Utilizzo di % % di modulo  
  Il [Creazione guidata controllo ATL](../atl/reference/atl-control-wizard.md) genera automaticamente uno script che utilizza `%MODULE%`. ATL Usa questo parametro sostituibile per il percorso effettivo del file DLL o EXE del server.  
   
 ## <a name="concatenating-run-time-data-with-script-data"></a>Concatenazione di dati in fase di esecuzione con i dati di Script  

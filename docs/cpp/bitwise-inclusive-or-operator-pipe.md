@@ -2,11 +2,8 @@
 title: 'Bit per bit inclusivo o operatore: | | Documenti Microsoft'
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - bitor
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - inclusive OR operator
 - '| operator'
 ms.assetid: 4c8a6a68-d828-447d-875a-aedb4ce3aa9a
-caps.latest.revision: 7
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eaef650cc747cdb9e628ae3b786bc1c1e21b5bdf
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fc43460bc2c20262156bfdc6bd7f69a693c222f0
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="bitwise-inclusive-or-operator-"></a>Operatore OR bit per bit inclusivo: |
 ## <a name="syntax"></a>Sintassi  
@@ -47,7 +42,7 @@ expression
   
  Entrambi gli operandi all'operatore OR bit per bit inclusivo devono essere tipi integrali. Le conversioni aritmetiche consuete analizzate [conversioni Standard](standard-conversions.md) vengono applicate agli operandi.  
   
-## <a name="operator-keyword-for-124"></a>Parola chiave operator per &#124;  
+## <a name="operator-keyword-for-124"></a>Parola chiave operator per&#124;  
  Il `bitor` operatore è il testo equivalente di **&#124;**. Esistono due modi per accedere il `bitor` operatore nei programmi: includere il file di intestazione `iso646.h`, o compilare il [/Za](../build/reference/za-ze-disable-language-extensions.md) l'opzione del compilatore (Disabilita estensioni linguaggio).  
   
 ## <a name="example"></a>Esempio  

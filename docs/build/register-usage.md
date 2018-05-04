@@ -2,26 +2,21 @@
 title: Registrare l'utilizzo | Documenti Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: ce58e2cf-afd3-4068-980e-28a209298265
-caps.latest.revision: 10
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 705a8fef3043498c041ea7e5490a7b22c1db8e5d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6792fcf035ee698767c9dd099cb7b84f5b784616
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="register-usage"></a>Utilizzo dei registri
 L'architettura [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)] fornisce 16 registri di uso generale (in seguito indicati come registri Integer) e 16 registri XMM/YMM disponibili per l'uso con virgola mobile. I registri volatili sono registri temporanei che il chiamante suppone vengano eliminati con una chiamata. I registri non volatili devono conservare i relativi valori durante le chiamate di funzione e, se usati, devono essere salvati dal chiamante.  

@@ -1,12 +1,9 @@
 ---
 title: Istruzione if-else (C++) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 07/17/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - else_cpp
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - else keyword [C++]
 - if keyword [C++], if-else
 ms.assetid: f8c45cde-6bce-42ae-81db-426b3dbd4caa
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 96233323e5a95f88a43fb56162393238f8c2e091
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8de2511096766cc4852c1c612eccb7dc65713218
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="if-else-statement-c"></a>Istruzione if-else (C++)
 Controlla la creazione di un ramo condizionale. Istruzioni di *blocco se* vengono eseguiti solo se il *se espressione* restituisce un valore diverso da zero (o `true`). Se il valore di *espressione* è diverso da zero, *statement1* e vengono eseguite le altre istruzioni nel blocco e l'altro blocco, se presente, viene ignorato. Se il valore di *espressione* è zero, quindi il blocco se viene ignorato ed else-blocco, se presente, viene eseguito. Le espressioni che restituiscono diverso da zero sono
@@ -176,7 +171,7 @@ int main()
  Il **else** clausola di un `if...else` istruzione è associata a più vicina precedente **se** nello stesso ambito che non esiste un corrispondente istruzione **else** istruzione.   
 
 ## <a name="constexpr-if-statements"></a>constexpr se le istruzioni
-**Visual Studio 2017 15.3 e versioni successive** (disponibile con [/std:c + + 17](../build/reference/std-specify-language-standard-version.md)): nei modelli di funzione, è possibile utilizzare un **constexpr se** istruzione per prendere decisioni di diramazione in fase di compilazione senza dover ricorrere al più overload di funzione. Ad esempio, è possibile scrivere una singola funzione tale parametro handle disimballaggio (non è necessario alcun overload di parametro da zero): 
+**Visual Studio 2017 15.3 e versioni successive** (disponibile con [/std:c + + 17](../build/reference/std-specify-language-standard-version.md)): nei modelli di funzione, è possibile utilizzare un **constexpr se** istruzione per prendere decisioni di diramazione in fase di compilazione senza la necessità di ricorrere al più overload di funzione. Ad esempio, è possibile scrivere una singola funzione tale parametro handle disimballaggio (non è necessario alcun overload di parametro da zero): 
 
 ```cpp
 template <class T, class... Rest>

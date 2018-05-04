@@ -1,12 +1,9 @@
 ---
 title: Aggiunta di oggetti e i controlli a un progetto ATL | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - vc.appwiz.ATL.controls
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - objects [C++], adding to ATL projects
 - ATL Control Wizard
 ms.assetid: c0adcbd0-07fe-4c55-a8fd-8c2c65ecdaad
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 319d130b9d8f17875aaa8bac15f546401457b963
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5a6f9102aeebd0cc60765c70cf74fb2329bc801f
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="adding-objects-and-controls-to-an-atl-project"></a>Aggiunta di oggetti e i controlli a un progetto ATL
 È possibile utilizzare una delle procedure guidate di codice ATL per aggiungere un oggetto o un controllo ai progetti basati su ATL o MFC. Per ogni oggetto COM o un controllo aggiungere, la procedura guidata genera file con estensione h e cpp, nonché un file con estensione RGS per il supporto del Registro di sistema basato su script. Le creazioni guidate codice ATL seguenti sono disponibili in Visual Studio:  

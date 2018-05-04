@@ -1,12 +1,9 @@
 ---
 title: 'Operatori di incremento e decremento in forma suffissa: + + e -| Documenti Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - --
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - operators [C++], postfix
 - decrement operators [C++]
 ms.assetid: 0204d5c8-51b0-4108-b8a1-074c5754d89c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5e1d6c13da3023073f3d8b3e9625fa141253ba2c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: edfbb5076dfcbcbe511f8ec25c74f698cb82f33e
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="postfix-increment-and-decrement-operators--and---"></a>Operatori di incremento e decremento in forma suffissa: ++ e --
 ## <a name="syntax"></a>Sintassi  
@@ -44,7 +39,7 @@ postfix-expression --
 ```  
   
 ## <a name="remarks"></a>Note  
- In C++ sono disponibili operatori di incremento e decremento prefisso e suffisso. In questa sezione verranno descritti solo gli operatori di incremento e decremento suffisso. (Per ulteriori informazioni, vedere [prefisso operatori di incremento e decremento](../cpp/prefix-increment-and-decrement-operators-increment-and-decrement.md).) La differenza tra i due è che in notazione suffissa l'operatore viene visualizzato dopo *postfix-expression*, mentre nella notazione prefissa, l'operatore viene visualizzato prima *espressione.* Nell'esempio seguente viene illustrato un operatore di decremento suffisso:  
+ In C++ sono disponibili operatori di incremento e decremento prefisso e suffisso. In questa sezione verranno descritti solo gli operatori di incremento e decremento suffisso. (Per ulteriori informazioni, vedere [prefisso operatori di incremento e decremento](../cpp/prefix-increment-and-decrement-operators-increment-and-decrement.md).) La differenza tra i due è che in notazione suffissa l'operatore viene visualizzato dopo *postfix-expression*, mentre nella notazione prefissa l'operatore si trova prima *espressione.* Nell'esempio seguente viene illustrato un operatore di decremento suffisso:  
   
 ```  
 i++;  
@@ -56,11 +51,11 @@ i++;
   
  Quando un operatore suffisso viene applicato a un argomento di funzione, non è garantito che il valore dell'argomento venga incrementato o decrementato prima di essere passato alla funzione.  Per ulteriori informazioni, vedere la sezione 1.9.17 in C++ standard.  
   
- Applicare l'operatore di incremento suffisso a un puntatore a una matrice di oggetti di tipo **lungo** incrementata di quattro per la rappresentazione interna del puntatore. Questo comportamento fa sì che il puntatore, definita in precedenza il  *n* elemento della matrice, per fare riferimento al (*n*+ 1) elemento th.  
+ Applicare l'operatore di incremento suffisso a un puntatore a una matrice di oggetti di tipo **lungo** incrementata di quattro per la rappresentazione interna del puntatore. Questo comportamento fa sì che il puntatore, che in precedenza faceva riferimento per il *n*elemento th della matrice, per fare riferimento al (*n*+ 1) elemento th.  
   
  Gli operandi di incremento e operatori di decremento suffisso devono essere modificabili (non **const**) l-value di tipo aritmetico o puntatore. Il tipo del risultato è uguale a quello del *postfix-expression*, ma non è un l-value.  
   
-**Visual Studio 2017 15.3 e versioni successive** (disponibile con [/std:c + + 17](../build/reference/std-specify-language-standard-version.md)): l'operando di un incremento o decremento operatore non può essere di tipo `bool`.
+**Visual Studio 2017 15.3 e versioni successive** (disponibile con [/std:c + + 17](../build/reference/std-specify-language-standard-version.md)): l'operando di un incremento o decremento operatore potrebbe non essere di tipo `bool`.
   
  Il codice seguente illustra l'operatore di incremento suffisso:  
   

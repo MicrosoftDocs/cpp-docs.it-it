@@ -1,27 +1,22 @@
 ---
 title: Problemi comuni relativi alla migrazione di Visual C++ ARM | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 0f4c434e-0679-4331-ba0a-cc15dd435a46
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bcc34d472fb6db02eb902001ad5aac77dea5baf0
-ms.sourcegitcommit: 30ab99c775d99371ed22d1a46598e542012ed8c6
+ms.openlocfilehash: 04253b5d71de75f6a06f2934dae24df2e6d4e3e2
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="common-visual-c-arm-migration-issues"></a>Problemi comuni relativi alla migrazione di Visual C++ ARM
 
@@ -31,7 +26,7 @@ Quando si utilizza Microsoft Visual C++ (opzioni: MSVC), lo stesso codice sorgen
 
 Molti problemi che potrebbero verificarsi quando si esegue la migrazione di codice dalle architetture x86 o x64 per l'architettura ARM riguardano i costrutti di codice sorgente che potrebbero richiamare un comportamento indefinito, definito dall'implementazione o non specificato.
 
-*Un comportamento indefinito* comportamento che lo standard C++ definisce e che è causato da un'operazione che non produce alcun risultato ragionevole: ad esempio, la conversione di un valore a virgola mobile in un intero senza segno o lo spostamento di un valore di un numero di posizioni che è negativo o maggiore del numero di bit nel relativo tipo promosso.
+*Genera un comportamento indefinito* è comportamento che lo standard C++ non definisce e che è causato da un'operazione con nessun risultato ragionevole: ad esempio, la conversione di un valore a virgola mobile in un intero senza segno o lo spostamento di un valore di un numero di posizioni che è un valore negativo o supera il numero di bit nel relativo tipo promosso.
 
 *Comportamento definito dall'implementazione* comportamento che lo standard C++ richiede il fornitore del compilatore definire e documentare. Un programma può fare affidamento sul comportamento definito dall'implementazione, anche se in tal modo potrebbe non essere portabile. Le dimensioni dei tipi di dati incorporati e i relativi requisiti di allineamento sono esempi di comportamento definito dall'implementazione. Un esempio di un'operazione che potrebbe dipendere dal comportamento definito dall'implementazione è accesso all'elenco di argomenti variabili.
 

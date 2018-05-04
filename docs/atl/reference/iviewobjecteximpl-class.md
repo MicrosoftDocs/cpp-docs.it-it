@@ -1,12 +1,9 @@
 ---
 title: Classe IViewObjectExImpl | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - IViewObjectExImpl
@@ -31,17 +28,15 @@ helpviewer_keywords:
 - advise sinks
 - IViewObjectExImpl class
 ms.assetid: ad6de760-1ee5-4883-b033-ae57beffc369
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 742198b0bf6c5c615baed033e8a0fab7e73b06ac
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c51bc9e5feb02d837c37341b82a1fc19a3cea558
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="iviewobjecteximpl-class"></a>Classe IViewObjectExImpl
 Questa classe implementa **IUnknown** e fornisce le implementazioni predefinite del [IViewObject](http://msdn.microsoft.com/library/windows/desktop/ms680763), [IViewObject2](http://msdn.microsoft.com/library/windows/desktop/ms691318), e [IViewObjectEx](http://msdn.microsoft.com/library/windows/desktop/ms682375)interfacce.  
@@ -91,7 +86,7 @@ class ATL_NO_VTABLE IViewObjectExImpl
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** atlctl. h  
   
-##  <a name="draw"></a>IViewObjectExImpl::Draw  
+##  <a name="draw"></a>  IViewObjectExImpl::Draw  
  Disegna una rappresentazione del controllo in un contesto di dispositivo.  
   
 ```
@@ -112,7 +107,7 @@ STDMETHOD(Draw)(
   
  Vedere [IViewObject](http://msdn.microsoft.com/library/windows/desktop/ms688655) in Windows SDK.  
   
-##  <a name="freeze"></a>IViewObjectExImpl::Freeze  
+##  <a name="freeze"></a>  IViewObjectExImpl::Freeze  
  Blocca la rappresentazione di un controllo creata in modo che non cambia finché un `Unfreeze`. Restituisce l'implementazione di ATL **E_NOTIMPL**.  
   
 ```
@@ -126,7 +121,7 @@ STDMETHOD(Freeze)(
 ### <a name="remarks"></a>Note  
  Vedere [IViewObject::Freeze](http://msdn.microsoft.com/library/windows/desktop/ms688728) in Windows SDK.  
   
-##  <a name="getadvise"></a>IViewObjectExImpl::GetAdvise  
+##  <a name="getadvise"></a>  IViewObjectExImpl::GetAdvise  
  Recupera una connessione esistente sink consultivo sul controllo, se presente.  
   
 ```
@@ -141,7 +136,7 @@ STDMETHOD(GetAdvise)(
   
  Vedere [IViewObject::GetAdvise](http://msdn.microsoft.com/library/windows/desktop/ms692772) in Windows SDK.  
   
-##  <a name="getcolorset"></a>IViewObjectExImpl::GetColorSet  
+##  <a name="getcolorset"></a>  IViewObjectExImpl::GetColorSet  
  Restituisce la tavolozza logica utilizzata dal controllo per il disegno. Restituisce l'implementazione di ATL **E_NOTIMPL**.  
   
 ```
@@ -157,7 +152,7 @@ STDMETHOD(GetColorSet)(
 ### <a name="remarks"></a>Note  
  Vedere [IViewObject::GetColorSet](http://msdn.microsoft.com/library/windows/desktop/ms686553) in Windows SDK.  
   
-##  <a name="getextent"></a>IViewObjectExImpl::GetExtent  
+##  <a name="getextent"></a>  IViewObjectExImpl::GetExtent  
  Recupera la dimensione del controllo visualizzato in unità HIMETRIC (0,01 millimetri per unità) dal membro dati classe controllo [CComControlBase::m_sizeExtent](../../atl/reference/ccomcontrolbase-class.md#m_sizeextent).  
   
 ```
@@ -171,7 +166,7 @@ STDMETHOD(GetExtent)(
 ### <a name="remarks"></a>Note  
  Vedere [IViewObject2::GetExtent](http://msdn.microsoft.com/library/windows/desktop/ms684032) in Windows SDK.  
   
-##  <a name="getnaturalextent"></a>IViewObjectExImpl::GetNaturalExtent  
+##  <a name="getnaturalextent"></a>  IViewObjectExImpl::GetNaturalExtent  
  Fornisce suggerimenti dal contenitore per l'oggetto da utilizzare durante il ridimensionamento.  
   
 ```
@@ -189,7 +184,7 @@ STDMETHOD(GetNaturalExtent)(
   
  Vedere [IViewObjectEx::GetNaturalExtent](http://msdn.microsoft.com/library/windows/desktop/ms683718) in Windows SDK.  
   
-##  <a name="getrect"></a>IViewObjectExImpl::GetRect  
+##  <a name="getrect"></a>  IViewObjectExImpl::GetRect  
  Restituisce un rettangolo che descrive una caratteristica di disegno richiesta. Restituisce l'implementazione di ATL **E_NOTIMPL**.  
   
 ```
@@ -199,7 +194,7 @@ STDMETHOD(GetRect)(DWORD /* dwAspect */, LPRECTL /* pRect */);
 ### <a name="remarks"></a>Note  
  Vedere [IViewObjectEx::GetRect](http://msdn.microsoft.com/library/windows/desktop/ms695246) in Windows SDK.  
   
-##  <a name="getviewstatus"></a>IViewObjectExImpl::GetViewStatus  
+##  <a name="getviewstatus"></a>  IViewObjectExImpl::GetViewStatus  
  Restituisce informazioni sull'opacità dell'oggetto e sulle caratteristiche di disegno sono supportate.  
   
 ```
@@ -211,7 +206,7 @@ STDMETHOD(GetViewStatus)(DWORD* pdwStatus);
   
  Vedere [IViewObjectEx::GetViewStatus](http://msdn.microsoft.com/library/windows/desktop/ms693371) in Windows SDK.  
   
-##  <a name="queryhitpoint"></a>IViewObjectExImpl::QueryHitPoint  
+##  <a name="queryhitpoint"></a>  IViewObjectExImpl::QueryHitPoint  
  Controlla se il punto specificato è nel rettangolo specificato e restituisce un [HITRESULT](http://msdn.microsoft.com/library/windows/desktop/ms682187) valore `pHitResult`.  
   
 ```
@@ -230,7 +225,7 @@ STDMETHOD(QueryHitPoint)(
   
  Vedere [IViewObjectEx::QueryHitPoint](http://msdn.microsoft.com/library/windows/desktop/ms691209) in Windows SDK.  
   
-##  <a name="queryhitrect"></a>IViewObjectExImpl::QueryHitRect  
+##  <a name="queryhitrect"></a>  IViewObjectExImpl::QueryHitRect  
  Controlla se il rettangolo di visualizzazione del controllo si sovrappone a un punto qualsiasi del rettangolo di posizione specificata e restituisce un [HITRESULT](http://msdn.microsoft.com/library/windows/desktop/ms682187) valore `pHitResult`.  
   
 ```
@@ -249,7 +244,7 @@ STDMETHOD(QueryHitRect)(
   
  Vedere [IViewObjectEx::QueryHitRect](http://msdn.microsoft.com/library/windows/desktop/ms693797) in Windows SDK.  
   
-##  <a name="setadvise"></a>IViewObjectExImpl::SetAdvise  
+##  <a name="setadvise"></a>  IViewObjectExImpl::SetAdvise  
  Imposta una connessione tra il controllo e un sink di notifica in modo che il sink può ricevere una notifica sulle modifiche nella visualizzazione del controllo.  
   
 ```
@@ -266,7 +261,7 @@ STDMETHOD(SetAdvise)(
   
  Vedere [IViewObject::SetAdvise](http://msdn.microsoft.com/library/windows/desktop/ms683950) in Windows SDK.  
   
-##  <a name="unfreeze"></a>IViewObjectExImpl::Unfreeze  
+##  <a name="unfreeze"></a>  IViewObjectExImpl::Unfreeze  
  Sblocca la rappresentazione di disegnata del controllo. Restituisce l'implementazione di ATL **E_NOTIMPL**.  
   
 ```
@@ -276,7 +271,7 @@ STDMETHOD(Unfreeze)(DWORD /* dwFreeze */);
 ### <a name="remarks"></a>Note  
  Vedere [IViewObject::Unfreeze](http://msdn.microsoft.com/library/windows/desktop/ms686641) in Windows SDK.  
   
-##  <a name="closehandle"></a>IWorkerThreadClient::CloseHandle  
+##  <a name="closehandle"></a>  IWorkerThreadClient::CloseHandle  
  Implementare questo metodo per chiudere l'handle associato all'oggetto.  
   
 ```
@@ -298,7 +293,7 @@ HRESULT CloseHandle(HANDLE hHandle);
   
  [!code-cpp[NVC_ATL_Utilities#135](../../atl/codesnippet/cpp/iviewobjecteximpl-class_1.cpp)]  
   
-##  <a name="execute"></a>IWorkerThreadClient::Execute  
+##  <a name="execute"></a>  IWorkerThreadClient::Execute  
  Implementare questo metodo per eseguire codice quando viene segnalato l'handle associato all'oggetto.  
   
 ```

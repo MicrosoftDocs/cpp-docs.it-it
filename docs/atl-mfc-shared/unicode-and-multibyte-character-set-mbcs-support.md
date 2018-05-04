@@ -1,12 +1,9 @@
 ---
 title: Caratteri Unicode e Multibyte (MBCS) supporto per Set | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 1/09/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 dev_langs:
 - C++
@@ -21,22 +18,21 @@ helpviewer_keywords:
 - strings [C++], character set support
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: adbe6ca25afd31c0aba853fde8b503dc333f63f4
-ms.sourcegitcommit: 56f6fce7d80e4f61d45752f4c8512e4ef0453e58
+ms.openlocfilehash: 8492e4a6777e4d609e3b457cfc77d1b8a691eed3
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/12/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="unicode-and-multibyte-character-set-mbcs-support"></a>Supporto per set di caratteri Unicode e multibyte (MBCS)
 
 Alcuni linguaggi, ad esempio, il giapponese e cinese, dispongono di set di caratteri di grandi dimensioni. Per supportare la programmazione per i mercati, Microsoft Foundation classe libreria (MFC) consente due diversi approcci alla gestione di set di caratteri di grandi dimensioni:
 
-- [Unicode](#mfc-support-for-unicode-strings), `wchar_t` in base a caratteri wide e le stringhe codificate come UTF-16.
+- [Unicode](#mfc-support-for-unicode-strings), `wchar_t` basati su caratteri "wide" e le stringhe codificate come UTF-16.
 
-- [Set di caratteri multibyte (MBCS)](#mfc-support-for-mbcs-strings), `char` basato su stringhe codificate in un set di caratteri specifiche delle impostazioni internazionali e caratteri di singole o a byte doppio.
+- [Set di caratteri multibyte (MBCS)](#mfc-support-for-mbcs-strings), `char` basato su singole o a byte doppio caratteri e stringhe codificate in un set di caratteri specifiche delle impostazioni locali.
 
 Microsoft consiglia le librerie MFC Unicode per tutte le nuove attività di sviluppo e le librerie MBCS sono state deprecate in Visual Studio 2013 e Visual Studio 2015. Questa procedura non è più necessaria. Gli avvisi di deprecazione di MBCS sono state rimosse in Visual Studio 2017.
 
@@ -48,7 +44,7 @@ Questi library, debugger e file DLL vengono utilizzati per il supporto Unicode i
 
 |||||
 |-|-|-|-|
-|UAFXCW. LIB|UAFXCW. PDB|UAFXCWD. LIB|UAFXCWD. PDB|
+|UAFXCW.LIB|UAFXCW. PDB|UAFXCWD.LIB|UAFXCWD. PDB|
 |MFC*versione*U.LIB|MFC*versione*U.PDB|MFC*versione*U.DLL|MFC*versione*UD. LIB|
 |MFC*versione*UD. PDB|MFC*versione*UD. DLL|MFCS*versione*U.LIB|MFCS*versione*U.PDB|
 |MFCS*versione*UD. LIB|MFCS*versione*UD. PDB|MFCM*versione*U.LIB|MFCM*versione*U.PDB|
@@ -56,7 +52,7 @@ Questi library, debugger e file DLL vengono utilizzati per il supporto Unicode i
 
 (*versione* rappresenta il numero di versione del file; significa, ad esempio, '140' versione 14.0.)
 
-`CString`si basa sul `TCHAR` tipo di dati. Se il simbolo `_UNICODE` è definito per una compilazione del programma, `TCHAR` è definito come tipo `wchar_t`, un tipo di codifica dei caratteri a 16 bit. In caso contrario, `TCHAR` è definito come `char`, la codifica di caratteri a 8 bit normale. Pertanto, in modalità Unicode, un `CString` è costituito da caratteri a 16 bit. Non Unicode, è composta da caratteri di tipo `char`.
+`CString` basa il `TCHAR` tipo di dati. Se il simbolo `_UNICODE` è definito per una compilazione del programma, `TCHAR` è definito come tipo `wchar_t`, un tipo di codifica dei caratteri a 16 bit. In caso contrario, `TCHAR` è definito come `char`, la codifica di caratteri a 8 bit normale. Pertanto, in modalità Unicode, un `CString` è costituito da caratteri a 16 bit. Non Unicode, è composta da caratteri di tipo `char`.
 
 Programmazione Unicode completo dell'applicazione, è inoltre necessario:
 
@@ -72,9 +68,9 @@ Programmazione Unicode completo dell'applicazione, è inoltre necessario:
 
    - Utilizzare `LPTSTR` in cui si utilizzerebbe `char*`.
 
-   - Utilizzare `LPCTSTR` in cui si utilizzerebbe `const char*`. `CString`fornisce un operatore `LPCTSTR` per la conversione tra `CString` e `LPCTSTR`.
+   - Utilizzare `LPCTSTR` in cui si utilizzerebbe `const char*`. `CString` fornisce un operatore `LPCTSTR` per eseguire la conversione tra `CString` e `LPCTSTR`.
 
-`CString`fornisce inoltre costruttori, gli operatori di assegnazione e operatori di confronto compatibili con Unicode.
+`CString` fornisce inoltre costruttori, gli operatori di assegnazione e operatori di confronto compatibili con Unicode.
 
 Il [riferimenti alla libreria di Run-Time](../c-runtime-library/c-run-time-library-reference.md) definisce portabile versioni di tutte le funzioni di gestione delle stringhe. Per ulteriori informazioni, vedere la categoria [internazionali](../c-runtime-library/internationalization.md).
 
@@ -91,12 +87,12 @@ In DBCS, una determinata stringa può contenere tutti i caratteri ANSI a byte si
 > [!NOTE]
 > La serializzazione della stringa Unicode in MFC è possibile leggere le stringhe Unicode e MBCS indipendentemente dalla versione dell'applicazione in cui è in esecuzione. I file di dati sono portabili tra le versioni di Unicode e MBCS del programma.
 
-`CString`le funzioni membro utilizzare versioni speciali "testo generico" chiamano le funzioni di runtime C, o usano funzioni compatibili con Unicode. Pertanto, ad esempio, se un `CString` verrebbe in genere chiamata di funzione `strcmp`, chiama la funzione di testo generico corrispondente `_tcscmp` invece. A seconda di come i simboli `_MBCS` e `_UNICODE` sono definiti, `_tcscmp` esegue il mapping come indicato di seguito:
+`CString` le funzioni membro utilizzare versioni speciali "testo generico" che chiamano le funzioni di runtime C, o usano funzioni compatibili con Unicode. Pertanto, ad esempio, se un `CString` verrebbe in genere chiamata di funzione `strcmp`, chiama la funzione di testo generico corrispondente `_tcscmp` invece. A seconda di come i simboli `_MBCS` e `_UNICODE` sono definiti, `_tcscmp` esegue il mapping come indicato di seguito:
 
 |||
 |-|-|
-|`_MBCS`definito|`_mbscmp`|
-|`_UNICODE`definito|`wcscmp`|
+|`_MBCS` definito|`_mbscmp`|
+|`_UNICODE` definito|`wcscmp`|
 |Nessun simbolo definito|`strcmp`|
 
 > [!NOTE]

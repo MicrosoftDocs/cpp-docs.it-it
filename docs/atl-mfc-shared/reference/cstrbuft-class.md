@@ -2,11 +2,8 @@
 title: Classe CStrBufT | Documenti Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CStrBufT
@@ -22,17 +19,15 @@ helpviewer_keywords:
 - CStrBufT class
 - shared classes, CStrBufT
 ms.assetid: 6b50fa8f-87e8-4ed4-a229-157ce128710f
-caps.latest.revision: 17
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8df7f6c1dbd9987a9f83ed5b33a4c97fd90fec7f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 695c3bc4c5e03f2ff6c1865f456b1ef358e3dcf4
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cstrbuft-class"></a>Classe CStrBufT
 Questa classe fornisce la pulizia automatica di risorsa per `GetBuffer` e `ReleaseBuffer` viene chiamato su un oggetto esistente `CStringT` oggetto.  
@@ -48,9 +43,9 @@ class CStrBufT
  *TCharType*  
  Il tipo di carattere della `CStrBufT` classe. Può essere uno dei seguenti:  
   
-- `char`(per le stringhe di caratteri ANSI)  
+- `char` (per le stringhe di caratteri ANSI)  
   
-- `wchar_t`(per le stringhe di caratteri Unicode)  
+- `wchar_t` (per le stringhe di caratteri Unicode)  
   
 - **TCHAR** (per le stringhe di caratteri sia ANSI e Unicode)  
   
@@ -98,7 +93,7 @@ class CStrBufT
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** atlsimpstr.h  
   
-##  <a name="auto_length"></a>CStrBufT::AUTO_LENGTH  
+##  <a name="auto_length"></a>  CStrBufT::AUTO_LENGTH  
  Consente di determinare automaticamente la nuova lunghezza della stringa di versione.  
   
 ```
@@ -108,7 +103,7 @@ static const DWORD AUTO_LENGTH = 0x01;
 ### <a name="remarks"></a>Note  
  Consente di determinare automaticamente la nuova lunghezza della stringa di versione. La stringa deve essere con terminazione null.  
   
-##  <a name="cstrbuft"></a>CStrBufT::CStrBufT  
+##  <a name="cstrbuft"></a>  CStrBufT::CStrBufT  
  Costruisce un oggetto di buffer.  
   
 ```
@@ -126,16 +121,16 @@ explicit CStrBufT(StringType& str) throw(...);
  `dwFlags`  
  Determina se la lunghezza della stringa viene determinata automaticamente. Può essere uno dei seguenti:  
   
-- **AUTO_LENGTH** lunghezza della stringa viene automaticamente determinato quando [CSimpleStringT::Release](../../atl-mfc-shared/reference/csimplestringt-class.md#releasebuffer) viene chiamato. La stringa deve essere con terminazione null. Valore predefinito.  
+- **AUTO_LENGTH** la lunghezza della stringa viene automaticamente determinato quando [CSimpleStringT::Release](../../atl-mfc-shared/reference/csimplestringt-class.md#releasebuffer) viene chiamato. La stringa deve essere con terminazione null. Valore predefinito.  
   
-- **SET_LENGTH** viene impostata la lunghezza della stringa quando [CSimpleStringT::GetBuffer](../../atl-mfc-shared/reference/csimplestringt-class.md#getbuffer) viene chiamato.  
+- **SET_LENGTH** viene impostata quando la lunghezza della stringa [CSimpleStringT::GetBuffer](../../atl-mfc-shared/reference/csimplestringt-class.md#getbuffer) viene chiamato.  
   
 ### <a name="remarks"></a>Note  
  Crea un buffer di stringa per l'oggetto stringa associato. Durante la costruzione, [CSimpleStringT::GetBuffer](../../atl-mfc-shared/reference/csimplestringt-class.md#getbuffer) o [CSimpleStringT::GetBufferSetLength](../../atl-mfc-shared/reference/csimplestringt-class.md#getbuffersetlength) viene chiamato.  
   
  Si noti che il costruttore di copia è `private`.  
   
-##  <a name="operator_pcxstr"></a>CStrBufT::operator PCXSTR  
+##  <a name="operator_pcxstr"></a>  CStrBufT::operator PCXSTR  
  Si accede direttamente ai caratteri archiviati nell'oggetto string associato come una stringa in formato C.  
   
 ```  
@@ -148,7 +143,7 @@ operator PCXSTR() const throw();
 ### <a name="remarks"></a>Note  
  Chiamare questa funzione per restituire un puntatore al buffer di caratteri di un oggetto stringa. Impossibile modificare il contenuto dell'oggetto string con l'indicatore di misura.  
   
-##  <a name="operator_pxstr"></a>CStrBufT::operator PXSTR  
+##  <a name="operator_pxstr"></a>  CStrBufT::operator PXSTR  
  Si accede direttamente ai caratteri archiviati nell'oggetto string associato come una stringa in formato C.  
   
 ```
@@ -161,21 +156,21 @@ operator PXSTR() throw();
 ### <a name="remarks"></a>Note  
  Chiamare questa funzione per restituire un puntatore al buffer di caratteri di un oggetto stringa. Lo sviluppatore può modificare il contenuto dell'oggetto string con l'indicatore di misura.  
   
-##  <a name="pcxstr"></a>CStrBufT::PCXSTR  
+##  <a name="pcxstr"></a>  CStrBufT::PCXSTR  
  Puntatore a una stringa costante.  
   
 ```
 typedef CSimpleStringT<TCharType>::PCXSTR PCXSTR;
 ```  
   
-##  <a name="pxstr"></a>CStrBufT::PXSTR  
+##  <a name="pxstr"></a>  CStrBufT::PXSTR  
  Un puntatore a una stringa.  
   
 ```
 typedef CSimpleStringT<TCharType>::PXSTR PXSTR;
 ```  
   
-##  <a name="set_length"></a>CStrBufT::SET_LENGTH  
+##  <a name="set_length"></a>  CStrBufT::SET_LENGTH  
  Impostare la lunghezza dell'oggetto string in `GetBuffer` ora.  
   
 ```
@@ -187,7 +182,7 @@ static const DWORD SET_LENGTH = 0x02;
   
  Determina se [CSimpleStringT::GetBuffer](../../atl-mfc-shared/reference/csimplestringt-class.md#getbuffer) e [CSimpleStringT::GetBufferSetLength](../../atl-mfc-shared/reference/csimplestringt-class.md#getbuffersetlength) vengono chiamati quando viene creato l'oggetto buffer di stringa.  
   
-##  <a name="setlength"></a>CStrBufT::SetLength  
+##  <a name="setlength"></a>  CStrBufT::SetLength  
  Imposta la lunghezza del buffer di caratteri.  
   
 ```
@@ -204,7 +199,7 @@ void SetLength(int nLength);
 ### <a name="remarks"></a>Note  
  Chiamare questa funzione per impostare la lunghezza della stringa rappresentata dall'oggetto buffer.  
   
-##  <a name="stringtype"></a>CStrBufT::StringType  
+##  <a name="stringtype"></a>  CStrBufT::StringType  
  Tipo stringa il cui buffer deve essere modificati da specializzazioni di questo modello di classe.  
   
 ```

@@ -1,6 +1,6 @@
 ---
-title: "/MP (compilazione con più processi) | Documenti Microsoft"
-ms.custom: 
+title: /MP (compilazione con più processi) | Documenti Microsoft
+ms.custom: ''
 ms.date: 02/22/2018
 ms.technology:
 - cpp-tools
@@ -16,14 +16,13 @@ helpviewer_keywords:
 - cl.exe compiler, multi-process build
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5aa190d2cb2d1e0b0d13979d5e0044291d7cd8a7
-ms.sourcegitcommit: d24de38f9da844f824acb9d200a3f263077145fc
+ms.openlocfilehash: 29f7fd00a9d24b1941830690633befc75c39eb32
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mp-build-with-multiple-processes"></a>/MP (compilazione con più processi)
 
@@ -123,7 +122,7 @@ Il compilatore non supporta l'uso della direttiva [#import](../../preprocessor/h
 
 #### <a name="the-msbuildexe-tool"></a>Strumento MSBUILD.exe
 
-[!INCLUDE[vsprvs](../../assembler/masm/includes/vsprvs_md.md)] Usa il [MSBuild.exe](/visualstudio/msbuild/msbuild-reference) strumento per compilare soluzioni e progetti. Il **/maxcpucount:**_numero_ (o **/m:**_numero_) opzione della riga di comando dello strumento MSBuild.exe possibile compilare progetti di più di contemporaneamente. Inoltre, l'opzione **/MP** del compilatore consente di compilare più unità di compilazione contemporaneamente. Se l'operazione è appropriata per l'applicazione, migliorare il tempo di compilazione della soluzione usando **/MP** e/o **/maxcpucount**.
+[!INCLUDE[vsprvs](../../assembler/masm/includes/vsprvs_md.md)] usa lo strumento [MSBuild.exe](/visualstudio/msbuild/msbuild-reference) per creare soluzioni e progetti. Il **/maxcpucount:**_numero_ (o **/m:**_numero_) opzione della riga di comando dello strumento MSBuild.exe possibile compilare progetti di più di contemporaneamente. Inoltre, l'opzione **/MP** del compilatore consente di compilare più unità di compilazione contemporaneamente. Se l'operazione è appropriata per l'applicazione, migliorare il tempo di compilazione della soluzione usando **/MP** e/o **/maxcpucount**.
 
 Il tempo di compilazione della soluzione dipende in parte dal numero di processi che eseguono la compilazione. Il *numero* argomento del [/maxcpucount](/visualstudio/msbuild/msbuild-command-line-reference) MSBuild opzione specifica il numero massimo di progetti da compilare contemporaneamente. Analogamente, il *processMax* argomento del **/MP** opzione del compilatore specifica il numero massimo di unità di compilazione per compilare nello stesso momento. Se il **/maxcpucount** opzione specifica *P* progetti e **/MP** opzione specifica *C* processi, un massimo di *P*  x *C* esecuzione dei processi nello stesso momento.
 
@@ -141,6 +140,6 @@ Per impostazione predefinita, la compilazione di un progetto abilita l'opzione *
 
 ## <a name="see-also"></a>Vedere anche
 
-[#import Directive](../../preprocessor/hash-import-directive-cpp.md)<br/>
+[#import (direttiva)](../../preprocessor/hash-import-directive-cpp.md)<br/>
 [Riferimenti alla riga di comando](/visualstudio/msbuild/msbuild-command-line-reference)<br/>
-[/Zf (generazione più velocemente PDB)](zf.md)<br/>
+[/Zf (generazione più veloce di file PDB)](zf.md)<br/>

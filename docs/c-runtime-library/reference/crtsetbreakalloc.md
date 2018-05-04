@@ -2,11 +2,8 @@
 title: _CrtSetBreakAlloc | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _CrtSetBreakAlloc
@@ -31,17 +28,15 @@ helpviewer_keywords:
 - CrtSetBreakAlloc function
 - _CrtSetBreakAlloc function
 ms.assetid: 33bfc6af-a9ea-405b-a29f-1c2d4d9880a1
-caps.latest.revision: 12
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e14e1d40d5d20b9759d115eaf2fd29b3cae57172
-ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
+ms.openlocfilehash: 32e8fedcd70d0e901c63cd5e794773451f436326
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="crtsetbreakalloc"></a>_CrtSetBreakAlloc
 
@@ -68,7 +63,7 @@ Restituisce il precedente numero di ordine di allocazione dell'oggetto che prese
 
 **CrtSetBreakAlloc** consente a un'applicazione eseguire il rilevamento di perdite di memoria tramite l'interruzione in un punto specifico dell'allocazione di memoria e risalendo all'origine della richiesta. La funzione usa il numero di ordine di allocazione dell'oggetto assegnato al blocco di memoria al momento dell'allocazione nell'heap. Quando si [debug](../../c-runtime-library/debug.md) non è definito, le chiamate a **CrtSetBreakAlloc** vengono rimosse durante la pre-elaborazione.
 
-Il numero di ordine di allocazione dell'oggetto è archiviato nel campo *lRequest* della struttura **_CrtMemBlockHeader**, definito in Crtdbg.h. Quando le informazioni relative a un blocco di memoria vengono restituite da una delle funzioni di dump del debug, tale numero viene racchiuso tra parentesi graffe, ad esempio {36}.
+Il numero di ordine di allocazione dell'oggetto è archiviato nel campo *lRequest* della struttura **_CrtMemBlockHeader**, definito in Crtdbg.h. Quando vengono restituite informazioni relative a un blocco di memoria da una delle funzioni di dump di debug, questo numero viene racchiuso tra parentesi graffe, ad esempio {36}.
 
 Per ulteriori informazioni sul **CrtSetBreakAlloc** può essere utilizzato con altre funzioni di gestione della memoria, vedere [rilevamento delle richieste di allocazione Heap](/visualstudio/debugger/crt-debug-heap-details). Per altre informazioni sulle modalità di allocazione, inizializzazione e gestione dei blocchi di memoria nella versione di debug dell'heap di base, vedere [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details).
 

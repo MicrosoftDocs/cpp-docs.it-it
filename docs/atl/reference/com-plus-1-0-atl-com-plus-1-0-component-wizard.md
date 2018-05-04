@@ -1,29 +1,24 @@
 ---
 title: COM+ 1.0, creazione guidata componente ATL COM+ 1.0 | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - vc.codewiz.class.atl.mts.options
 dev_langs:
 - C++
 ms.assetid: 2fbe259c-6be1-4d0e-9cfe-721c75c97cb1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 102e6a0a9b7055000d051f5fb729dd45863a16cd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9a23f148fbdc611c8a11d8116b2e7dff34fc9d8f
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="com-10-atl-com-10-component-wizard"></a>COM+ 1.0, Creazione guidata componente ATL COM+ 1.0
 Utilizzare questa pagina della procedura guidata componente ATL COM+ 1.0 per specificare il tipo di interfaccia e ulteriori interfacce devono essere supportati.  
@@ -58,7 +53,7 @@ Utilizzare questa pagina della procedura guidata componente ATL COM+ 1.0 per spe
 |**Supportato**|Specifica che l'oggetto non è mai la radice di un flusso di transazione mediante l'aggiunta di custom(TLBATTR_TRANS_SUPPORTED,0) macro attributo componente al file h (progetti con attributi) o al file IDL (progetti senza attributi).|  
 |**Obbligatorio**|Specifica che l'oggetto può o non sia la radice di un flusso di transazione mediante l'aggiunta di custom(TLBATTR_TRANS_REQUIRED,0) macro attributo componente al file h (progetti con attributi) o al file IDL (progetti senza attributi).|  
 |**Non è supportato**|Specifica che l'oggetto esclude le transazioni. Aggiunge il custom(TLBATTR_TRANS_NOTSUPP,0) macro attributo componente per il file con estensione h (progetti con attributi) o al file IDL (progetti senza attributi).|  
-|**Richiede nuovi**|Specifica che l'oggetto è sempre la radice di un flusso di transazione mediante l'aggiunta di custom(TLBATTR_TRANS_REQNEW,0) macro attributo componente al file h (progetti con attributi) o al file IDL (progetti senza attributi).|  
+|**È necessario nuovo**|Specifica che l'oggetto è sempre la radice di un flusso di transazione mediante l'aggiunta di custom(TLBATTR_TRANS_REQNEW,0) macro attributo componente al file h (progetti con attributi) o al file IDL (progetti senza attributi).|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Creazione guidata 1.0 componente ATL COM+](../../atl/reference/atl-com-plus-1-0-component-wizard.md)   

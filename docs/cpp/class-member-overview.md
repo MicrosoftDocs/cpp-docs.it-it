@@ -1,12 +1,9 @@
 ---
 title: Panoramica del membro di classe | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - class members [C++], types of
 - class members
 ms.assetid: 8802cfa9-705d-4f37-acde-245d6838010c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2d9a8d274f162e64dc20c5f257d09c84e9871d0b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fd280255afe98aa5ca512c63bb00623891eafc4f
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="class-member-overview"></a>Panoramica dei membri di classe
 Una classe o uno struct è costituito dai rispettivi membri. Il lavoro effettuato da una classe viene eseguito dalle rispettive funzioni membro. Lo stato mantenuto viene archiviato nei rispettivi membri dati. L'inizializzazione dei membri viene eseguita dai costruttori e operazioni di pulitura, ad esempio la liberazione di memoria e il rilascio delle risorse avviene mediante i distruttori. In C++11 e versioni successive i membri dati possono e in genere devono essere inizializzati in corrispondenza del momento della dichiarazione.  
@@ -48,7 +43,7 @@ Una classe o uno struct è costituito dai rispettivi membri. Il lavoro effettuat
   
 -   [Enumerazioni](../cpp/enumerations-cpp.md).  
   
--   [I campi di bit](../cpp/cpp-bit-fields.md).  
+-   [Campi di bit](../cpp/cpp-bit-fields.md).  
   
 -   [Elementi Friend](../cpp/friend-cpp.md).  
   
@@ -114,11 +109,11 @@ int TestRun::_instances{ 0 };
   
 2.  Costruttore di copia  
   
-3.  **(C + + 11)**  Costruttore di spostamento  
+3.  **(C++11)**  Costruttore di spostamento  
   
 4.  Operatore di assegnazione di copia  
   
-5.  **(C + + 11)**  Operatore di assegnazione di spostamento  
+5.  **(C++11)**  Operatore di assegnazione di spostamento  
   
 6.  Distruttore  
   

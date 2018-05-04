@@ -3,8 +3,7 @@ title: /TC, /Tp, /TC, /TP (specifica il tipo di File di origine) | Documenti Mic
 ms.date: 1/11/2018
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VC.Project.VCCLWCECompilerTool.CompileAs
 - VC.Project.VCCLCompilerTool.CompileAs
@@ -22,14 +21,13 @@ helpviewer_keywords:
 - -Tp compiler option [C++]
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b3d51e4c6bbf6a77f86be5cabde9b65f8e4f8c9f
-ms.sourcegitcommit: ff9bf140b6874bc08718674c07312ecb5f996463
+ms.openlocfilehash: 9cb612d5c26fd4db51222c480539867d5e506b70
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="tc-tp-tc-tp-specify-source-file-type"></a>/Tc, /Tp, /TC, /TP (Specifica il tipo di file di origine)
 
@@ -71,11 +69,11 @@ Quando entrambi i **TC** o **Tc** è specificata l'opzione, qualsiasi specifica 
 
 Questa riga di comando di CL specifica che Main. c e prg prg sono tutti i file di origine C. CL non riconoscerà prg.
 
-> CL MAIN.C /TcTEST.PRG /TcCOLLATE.PRG PRINT.PRG
+> CL PRINCIPALE. C /TcTEST.PRG /TcCOLLATE.PRG stampa. COMPONGONO
 
 Questa riga di comando di CL specifica che Test1, TEST2.cxx, TEST3.huh e TEST4 vengono compilate come file C++ e TEST5. z viene compilato come file C.
 
-> CL TEST1.C TEST2.CXX TEST3.HUH TEST4.O /Tc TEST5.Z /TP
+> CL TEST1. C TEST2. TEST3 CXX. EH TEST4. TEST5 /Tc O. /TP Z
 
 ## <a name="see-also"></a>Vedere anche
 

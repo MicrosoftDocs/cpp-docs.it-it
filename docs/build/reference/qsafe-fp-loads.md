@@ -1,25 +1,21 @@
 ---
-title: /Qsafe_fp_loads | Microsoft Docs
-ms.custom: 
+title: /Qsafe_fp_loads | Documenti Microsoft
+ms.custom: ''
 ms.date: 01/24/2018
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - C++
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e079e084c641318c9bec0820263487139b4d5076
-ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
+ms.openlocfilehash: 1462303f9e178c70a845066bc7a0a3ce78a99e15
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="qsafefploads"></a>/Qsafe_fp_loads
 
@@ -31,13 +27,13 @@ Richiede le istruzioni di spostamento Integer per i valori a virgola mobile e di
 
 ## <a name="remarks"></a>Note
 
-**/Qsafe_fp_loads** disponibile solo nei compilatori piattaforma x86; non è disponibile nei compilatori x64 o ARM.
+**/Qsafe_fp_loads** è solo nei compilatori per piattaforma x86; non è disponibile nei compilatori destinati a x64 o ARM.
 
-**/Qsafe_fp_loads** impone al compilatore di utilizzare istruzioni di spostamento integer anziché istruzioni di spostamento a virgola mobile per spostare dati tra memoria e MMX Registra. Questa opzione inoltre disabilita l'ottimizzazione del caricamento del registro per i valori in virgola mobile che possono essere caricati in più percorsi di controllo quando il valore può generare un'eccezione in fase di caricamento, ad esempio un valore NaN.
+**/Qsafe_fp_loads** impone al compilatore di usare istruzioni di spostamento integer anziché istruzioni di spostamento a virgola mobile per spostare i dati tra memoria e MMX Registra. Questa opzione inoltre disabilita l'ottimizzazione del caricamento del registro per i valori in virgola mobile che possono essere caricati in più percorsi di controllo quando il valore può generare un'eccezione in fase di caricamento, ad esempio un valore NaN.
 
 Questa opzione viene ignorata da [/fp: tranne](../../build/reference/fp-specify-floating-point-behavior.md). **/Qsafe_fp_loads** specifica un subset del comportamento del compilatore specificato da **/fp: tranne**.
 
-**/Qsafe_fp_loads** non è compatibile con [/clr](../../build/reference/clr-common-language-runtime-compilation.md) e [Fast](../../build/reference/fp-specify-floating-point-behavior.md). Per ulteriori informazioni sulle opzioni del compilatore a virgola mobile, vedere [/fp (specifica il comportamento a virgola mobile)](../../build/reference/fp-specify-floating-point-behavior.md).
+**/Qsafe_fp_loads** non è compatibile con [/clr](../../build/reference/clr-common-language-runtime-compilation.md) e [/fp: fast](../../build/reference/fp-specify-floating-point-behavior.md). Per ulteriori informazioni sulle opzioni del compilatore a virgola mobile, vedere [/fp (specifica il comportamento a virgola mobile)](../../build/reference/fp-specify-floating-point-behavior.md).
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio
 

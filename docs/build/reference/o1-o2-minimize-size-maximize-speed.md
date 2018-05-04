@@ -2,12 +2,9 @@
 title: -/O1, /O2 (Riduci dimensione, Ottimizza velocità) | Documenti Microsoft
 ms.custom: ''
 ms.date: 09/25/2017
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - /o2
 - /o1
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - O1 compiler option [C++]
 - /O1 compiler option [C++]
 ms.assetid: 2d1423f5-53d9-44da-8908-b33a351656c2
-caps.latest.revision: 16
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f880b3cb806efa63299bf6cfa4aab4c72df23817
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d6bbe16cb3f33e048c08d36cb9cd3d5016d7987c
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="o1-o2-minimize-size-maximize-speed"></a>/O1, /O2 (Riduci dimensione, Ottimizza velocità)
 
@@ -52,10 +47,10 @@ Il **/O1** e **/O2** opzioni del compilatore sono un modo rapido per impostare d
 
 |Opzione|Equivale a|
 |------------|-------------------|
-|**/O1** (Riduci dimensione)|[/Og](../../build/reference/og-global-optimizations.md) [/Os](../../build/reference/os-ot-favor-small-code-favor-fast-code.md) [/Oy](../../build/reference/oy-frame-pointer-omission.md) [/Ob2](../../build/reference/ob-inline-function-expansion.md) [/Gs](../../build/reference/gs-control-stack-checking-calls.md) [/GF](../../build/reference/gf-eliminate-duplicate-strings.md) [/Gy](../../build/reference/gy-enable-function-level-linking.md)|
-|**/O2** (Ottimizza velocità)|[/Og](../../build/reference/og-global-optimizations.md) [/Oi](../../build/reference/oi-generate-intrinsic-functions.md) [/Ot](../../build/reference/os-ot-favor-small-code-favor-fast-code.md) [/Oy](../../build/reference/oy-frame-pointer-omission.md) [/Ob2](../../build/reference/ob-inline-function-expansion.md) [/Gs](../../build/reference/gs-control-stack-checking-calls.md) [/GF](../../build/reference/gf-eliminate-duplicate-strings.md) [/Gy](../../build/reference/gy-enable-function-level-linking.md)|
+|**/ O1** (Riduci dimensione)|[/Og](../../build/reference/og-global-optimizations.md) [/Os](../../build/reference/os-ot-favor-small-code-favor-fast-code.md) [/Oy](../../build/reference/oy-frame-pointer-omission.md) [/Ob2](../../build/reference/ob-inline-function-expansion.md) [/Gs](../../build/reference/gs-control-stack-checking-calls.md) [/GF](../../build/reference/gf-eliminate-duplicate-strings.md) [/Gy](../../build/reference/gy-enable-function-level-linking.md)|
+|**/ O2** (Ottimizza velocità)|[/Og](../../build/reference/og-global-optimizations.md) [/Oi](../../build/reference/oi-generate-intrinsic-functions.md) [/Ot](../../build/reference/os-ot-favor-small-code-favor-fast-code.md) [/Oy](../../build/reference/oy-frame-pointer-omission.md) [/Ob2](../../build/reference/ob-inline-function-expansion.md) [/Gs](../../build/reference/gs-control-stack-checking-calls.md) [/GF](../../build/reference/gf-eliminate-duplicate-strings.md) [/Gy](../../build/reference/gy-enable-function-level-linking.md)|
 
-**/O1** e **/O2** si escludono a vicenda.
+**/ O1** e **/O2** si escludono a vicenda.
 
 > [!NOTE]  
 > **x86 specifico**  
@@ -75,7 +70,7 @@ Il **/O1** e **/O2** opzioni del compilatore sono un modo rapido per impostare d
 
 ## <a name="see-also"></a>Vedere anche
 
-[Opzioni /O (Ottimizza codice)](../../build/reference/o-options-optimize-code.md)  
+[Opzioni /O (ottimizza codice)](../../build/reference/o-options-optimize-code.md)  
 [Opzioni del compilatore](../../build/reference/compiler-options.md)  
 [Impostazione delle opzioni del compilatore](../../build/reference/setting-compiler-options.md)  
 [/EH (modello di gestione delle eccezioni)](../../build/reference/eh-exception-handling-model.md)

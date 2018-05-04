@@ -1,13 +1,10 @@
 ---
 title: Active Template Library (ATL) esercitazione | Documenti Microsoft
-ms.custom: 
+ms.custom: get-started-article
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: get-started-article
+- cpp-atl
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - tutorials [ATL]
 - ATL, tutorials
 ms.assetid: f921a121-09c8-4812-9317-e15b2f1471fa
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3a7737728668adddbf3ca8ed0c41cdbf5e6bb61d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 069d5d84b06850705db5c48f09bb0d0122f58fa3
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="active-template-library-atl-tutorial"></a>Esercitazione relativa alla Libreria ATL (Active Template Library)
 ATL è progettato per semplificare il processo di creazione di controlli efficienti, flessibile e semplici. In questa esercitazione illustra la creazione di un controllo ActiveX, che illustra molti nozioni fondamentali su ATL e COM.  
@@ -40,7 +35,7 @@ ATL è progettato per semplificare il processo di creazione di controlli efficie
   
 -   [Passaggio 2: Aggiunta di un controllo al progetto](../atl/adding-a-control-atl-tutorial-part-2.md)  
   
--   [Passaggio 3. Aggiunta di una proprietà al controllo](../atl/adding-a-property-to-the-control-atl-tutorial-part-3.md)  
+-   [Passaggio 3. Aggiunta di una proprietà al controllo del codice](../atl/adding-a-property-to-the-control-atl-tutorial-part-3.md)  
   
 -   [Passaggio 4: Modificare il codice di disegno del controllo](../atl/changing-the-drawing-code-atl-tutorial-part-4.md)  
   

@@ -1,32 +1,27 @@
 ---
 title: 'CFixedStringT: Esempio di un gestore di stringa personalizzato | Documenti Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - CFixedStringT class, using a custom string manager
 ms.assetid: 1cf11fd7-51b8-4b94-87af-02bc25f47dd6
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7164d2313f5610d1d7e56f5449c81ea9e2282981
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f841124fd12497fdb4dd4b813de2d803e43ff60b
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cfixedstringt-example-of-a-custom-string-manager"></a>CFixedStringT: Esempio di una gestione stringa personalizzata
-La libreria ATL implementa un esempio di un gestore di stringa personalizzato usato dalla classe [CFixedStringT](../atl-mfc-shared/reference/cfixedstringt-class.md), denominato **CFixedStringMgr**. `CFixedStringT`derivato da [CStringT](../atl-mfc-shared/reference/cstringt-class.md) e implementa una stringa che alloca i caratteri come parte di `CFixedStringT` oggetto stesso, purché la stringa è minore della lunghezza specificata dal **t_nChars** parametro di modello di `CFixedStringT`. Con questo approccio, la stringa non è necessario l'heap, a meno che la lunghezza della stringa di dimensioni superano le dimensioni del buffer fisso. Poiché `CFixedStringT` non utilizza sempre un heap per allocare i dati delle stringhe, non sarà possibile utilizzare **CAtlStringMgr** come gestore delle stringhe. Viene utilizzato un gestore di stringa personalizzato (**CFixedStringMgr**), che implementa il [IAtlStringMgr](../atl-mfc-shared/reference/iatlstringmgr-class.md) interfaccia. Questa interfaccia, vedere [implementazione di un gestore di stringa personalizzato (metodo avanzato)](../atl-mfc-shared/implementation-of-a-custom-string-manager-advanced-method.md).  
+La libreria ATL implementa un esempio di un gestore di stringa personalizzato usato dalla classe [CFixedStringT](../atl-mfc-shared/reference/cfixedstringt-class.md), denominato **CFixedStringMgr**. `CFixedStringT` derivato da [CStringT](../atl-mfc-shared/reference/cstringt-class.md) e implementa una stringa che alloca i caratteri come parte del `CFixedStringT` dell'oggetto stesso, purché la stringa è minore della lunghezza specificata dal **t_nChars** parametro del modello di `CFixedStringT`. Con questo approccio, la stringa non è necessario l'heap, a meno che la lunghezza della stringa di dimensioni superano le dimensioni del buffer fisso. Poiché `CFixedStringT` non utilizza sempre un heap per allocare i dati delle stringhe, non sarà possibile utilizzare **CAtlStringMgr** come gestore delle stringhe. Viene utilizzato un gestore di stringa personalizzato (**CFixedStringMgr**), che implementa il [IAtlStringMgr](../atl-mfc-shared/reference/iatlstringmgr-class.md) interfaccia. Questa interfaccia, vedere [implementazione di un gestore di stringa personalizzato (metodo avanzato)](../atl-mfc-shared/implementation-of-a-custom-string-manager-advanced-method.md).  
   
  Il costruttore per **CFixedStringMgr** accetta tre parametri:  
   

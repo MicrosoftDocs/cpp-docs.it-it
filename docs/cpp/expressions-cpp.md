@@ -1,29 +1,24 @@
 ---
 title: Espressioni (C++) | Documenti Microsoft
-ms.custom: 
+ms.custom: index-page
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: 'index-page '
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - expressions [C++]
 ms.assetid: aaa1f250-7185-4113-b682-3f5e995943d1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 73f06fc8b0a37d0e8a2362735b6d80f1e4ee11f6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8ada34aae858d8e29b119fa08d363a0c26013567
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="expressions-c"></a>Espressioni (C++)
 In questa sezione vengono descritte le espressioni C++. Le espressioni sono sequenze di operatori e operandi utilizzate per uno o più dei seguenti scopi:  
@@ -50,11 +45,11 @@ In questa sezione vengono descritte le espressioni C++. Le espressioni sono sequ
   
 -   [Espressioni costanti](../cpp/cpp-constant-expressions.md)  
   
--   [Espressioni con conversioni esplicite](http://msdn.microsoft.com/en-us/060ad6b4-9592-4f3e-8509-a20ac84a85ae)  
+-   [Espressioni con conversioni del tipo esplicite](http://msdn.microsoft.com/en-us/060ad6b4-9592-4f3e-8509-a20ac84a85ae)  
   
 -   [Operatori di cast](../cpp/casting-operators.md)  
   
--   [Informazioni sul tipo in fase di esecuzione](../cpp/run-time-type-information.md)  
+-   [Informazioni sui tipi in fase di esecuzione](../cpp/run-time-type-information.md)  
   
  Argomenti sugli operatori presenti in altre sezioni:  
   

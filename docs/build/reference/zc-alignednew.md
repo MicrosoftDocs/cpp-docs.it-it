@@ -3,7 +3,7 @@ title: /Zc:alignedNew (C++ 17 eccessiva allocazione allineata) | Documenti Micro
 ms.date: 02/28/2018
 ms.technology:
 - cpp-tools
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - /Zc:alignedNew
 dev_langs:
@@ -14,12 +14,11 @@ helpviewer_keywords:
 - -Zc:alignedNew
 author: corob-msft
 ms.author: corob
-manager: ghogen
-ms.openlocfilehash: d645534c398628afa533770d44094d23ca0325a5
-ms.sourcegitcommit: eeb2b5ad8d3d22514a7b9bd7d756511b69ae0ccf
+ms.openlocfilehash: 5f9527d63a9843bd4df90520e5b4759126d72fe1
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="zcalignednew-c17-over-aligned-allocation"></a>/Zc:alignedNew (C++ 17 eccessiva allocazione allineata)
 

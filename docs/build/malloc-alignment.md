@@ -1,27 +1,22 @@
 ---
 title: Allineamento malloc | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: a8d1d1b4-5122-456f-9a64-a50e105e55a5
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4d9acaf1c8912e1b563bb5d05ae600d1430049e6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d503d0dd891c651a405cb79bb5ce50996f46cff6
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="malloc-alignment"></a>Allineamento malloc
 [malloc](../c-runtime-library/reference/malloc.md) garantisce la restituzione di memoria che viene corretto allineamento per l'archiviazione di qualsiasi oggetto con un allineamento fondamentale e che potrebbero rientrare nella quantità di memoria allocata. Oggetto *allineamento fondamentale* è un tipo di allineamento è minore o uguale al maggiore allineamento supportato dall'implementazione senza una specifica di allineamento. (In Visual C++, si tratta dell'allineamento richiesto per un `double`, o 8 byte. Nel codice destinato a piattaforme a 64 bit, è 16 byte.) Ad esempio, un'allocazione di quattro byte verrà allineata a un limite che supporta tutti gli oggetti più piccoli o di quattro byte.  

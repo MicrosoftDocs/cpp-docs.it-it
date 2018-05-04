@@ -1,10 +1,7 @@
 ---
 title: Funzioni percorso ATL | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
 - ATL, path
@@ -46,16 +43,15 @@ f1_keywords:
 - ATLPATH/ATL::ATLPath::StripToRoot
 - ATLPATH/ATL::ATLPath::UnquoteSpaces
 ms.assetid: d1ec2b8d-7ec7-43ea-90dd-0a740d2a742b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9fa9795af90e28b2c021b179876a9f69609c7884
-ms.sourcegitcommit: a5a69d2dc3513261e9e28320e4e067aaf40d2ef2
+ms.openlocfilehash: 38286d169591dd55f7a2618332b6f5d5c9c86719
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="atl-path-functions"></a>Funzioni percorso ATL
 
@@ -304,7 +300,7 @@ inline BOOL FileExists(const wchar_t* pszPath);
  
   
 
-## <a name="findextension">ATLPath::FindExtension</a>
+## <a name="findextension"></a> ATLPath::FindExtension
  Questa funzione è un wrapper di overload per [PathFindExtension](http://msdn.microsoft.com/library/windows/desktop/bb773587).  
   
 ### <a name="syntax"></a>Sintassi  
@@ -394,7 +390,7 @@ inline BOOL IsPrefix(const wchar_t* pszPrefix, const wchar_t* pszPath);
  
   
 
-## <a name="isrelative">ATLPath::IsRelative</a>
+## <a name="isrelative"></a> ATLPath::IsRelative
  Questa funzione è un wrapper di overload per [PathIsRelative](http://msdn.microsoft.com/library/windows/desktop/bb773660).  
   
 ### <a name="syntax"></a>Sintassi  
@@ -597,7 +593,7 @@ inline wchar_t* RemoveBackslash(wchar_t* pszPath);
  
   
 
-## <a name="removeblanks">ATLPath::RemoveBlanks</a>
+## <a name="removeblanks"></a> ATLPath::RemoveBlanks
  Questa funzione è un wrapper di overload per [PathRemoveBlanks](http://msdn.microsoft.com/library/windows/desktop/bb773745).  
   
 ### <a name="syntax"></a>Sintassi  
@@ -645,7 +641,7 @@ inline BOOL RemoveFileSpec(wchar_t* pszPath);
  
   
 
-## <a name="renameextension">ATLPath::RenameExtension</a>
+## <a name="renameextension"></a> ATLPath::RenameExtension
  Questa funzione è un wrapper di overload per [PathRenameExtension](http://msdn.microsoft.com/library/windows/desktop/bb773749).  
   
 ### <a name="syntax"></a>Sintassi  

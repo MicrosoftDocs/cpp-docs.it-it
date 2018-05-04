@@ -1,13 +1,10 @@
 ---
 title: DLL regolari collegate in modo dinamico a MFC | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - shared DLL versions [C++]
 - dynamically linked DLLs [C++]
 ms.assetid: b4f7ab92-8723-42a5-890e-214f4e29dcd0
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 930d56f7bc296225e6fefcf92e49087a2aed99cb
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0e20a3937786d65945256eeadcf0bf08b0314470
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="regular-mfc-dlls-dynamically-linked-to-mfc"></a>DLL regolari collegate in modo dinamico a MFC
 Una normale che DLL MFC collegato in modo dinamico a MFC è una DLL che utilizza MFC internamente e le funzioni esportate nella DLL possono essere chiamate da file eseguibili MFC o non MFC. Come viene descritto il nome, questo tipo di DLL viene creato utilizzando la versione di libreria a collegamento dinamico di MFC (noto anche come la versione di MFC condivisa). In genere vengono esportate da una DLL MFC mediante l'interfaccia standard di C normale.  
@@ -100,7 +95,7 @@ AFX_MANAGE_STATE(AfxGetStaticModuleState( ))
   
 ## <a name="what-do-you-want-to-know-more-about"></a>Scegliere l'argomento su cui visualizzare maggiori informazioni  
   
--   [Gli stati di modulo di DLL regolare MFC collegata in modo dinamico a MFC](../build/module-states-of-a-regular-dll-dynamically-linked-to-mfc.md)  
+-   [Stati dei moduli di una DLL regolare MFC collegata in modo dinamico a MFC](../build/module-states-of-a-regular-dll-dynamically-linked-to-mfc.md)  
   
 -   [Gestione dei dati dello stato dei moduli MFC](../mfc/managing-the-state-data-of-mfc-modules.md)  
   

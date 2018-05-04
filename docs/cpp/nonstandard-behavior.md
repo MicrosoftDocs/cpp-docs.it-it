@@ -1,12 +1,9 @@
 ---
 title: Comportamento non standard | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - Microsoft-specific, compiler behavior
 - nonstandard behavior, compliance and compatibility
 ms.assetid: a57dea27-dc79-4f64-8a83-017e84841773
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 967f182451c712b46c5f2da545d2fed7ffd59bca
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 54d421f00839d21236741e8d33f1415fe129b18c
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="nonstandard-behavior"></a>Comportamento non standard
 Negli sezioni seguenti sono elencate alcune parti in cui l'implementazione Visual C++ di C++ non si conforma allo standard C++. I numeri delle sezioni indicati di seguito fanno riferimento ai numeri delle sezioni nello standard C++ 11 (ISO/IEC 14882:2011(E)).  
@@ -33,7 +28,7 @@ Negli sezioni seguenti sono elencate alcune parti in cui l'implementazione Visua
  L'elenco dei limiti del compilatore che differiscono da quelli definiti nello standard C++ è specificato in [limiti del compilatore](../cpp/compiler-limits.md).  
   
 ## <a name="covariant-return-types"></a>Tipi restituiti covarianti  
- Le classi base virtuali non sono supportate come tipi restituiti covarianti quando la funzione virtuale dispone di un numero variabile di argomenti. Questo non è conforme alla sezione 10.3, paragrafo 7 della specifica C++ ISO. L'esempio seguente non viene compilato, un errore del compilatore [C2688](../error-messages/compiler-errors-2/compiler-error-c2688.md)  
+ Le classi base virtuali non sono supportate come tipi restituiti covarianti quando la funzione virtuale dispone di un numero variabile di argomenti. Questo non è conforme alla sezione 10.3, paragrafo 7 della specifica C++ ISO. L'esempio seguente non viene compilato errore del compilatore [C2688](../error-messages/compiler-errors-2/compiler-error-c2688.md)  
   
 ```cpp  
 // CovariantReturn.cpp  

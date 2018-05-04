@@ -2,11 +2,8 @@
 title: Classe CSnapInPropertyPageImpl | Documenti Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CSnapInPropertyPageImpl
@@ -34,17 +31,15 @@ helpviewer_keywords:
 - property pages, ATL
 - CSnapInPropertyPageImpl class
 ms.assetid: 75bdce5a-985e-4166-bd44-493132e023c4
-caps.latest.revision: 20
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5fc1135f02c31c644d7d149900bbaa755a52c579
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 13714553bdf926b00bd4dd76e039d89c7f78f959
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="csnapinpropertypageimpl-class"></a>Classe CSnapInPropertyPageImpl
 Questa classe fornisce metodi per l'implementazione di un oggetto della pagina proprietà snap-in.  
@@ -91,7 +86,7 @@ CSnapInPropertyPageImpl : public CDialogImplBase
 |[CSnapInPropertyPageImpl::m_psp](#m_psp)|Le finestre **PROPSHEETPAGE** struttura utilizzata per il `CSnapInPropertyPageImpl` oggetto.|  
   
 ## <a name="remarks"></a>Note  
- `CSnapInPropertyPageImpl`fornisce un'implementazione di base per un oggetto della pagina proprietà snap-in. Funzionalità di base di una pagina delle proprietà snap-in vengono implementate tramite diverse interfacce diverse e mapping di tipi.  
+ `CSnapInPropertyPageImpl` fornisce un'implementazione di base per un oggetto pagina delle proprietà snap-in. Funzionalità di base di una pagina delle proprietà snap-in vengono implementate tramite diverse interfacce diverse e mapping di tipi.  
   
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  `CDialogImplBase`  
@@ -101,7 +96,7 @@ CSnapInPropertyPageImpl : public CDialogImplBase
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** atlsnap.h  
   
-##  <a name="canceltoclose"></a>CSnapInPropertyPageImpl::CancelToClose  
+##  <a name="canceltoclose"></a>  CSnapInPropertyPageImpl::CancelToClose  
  Chiamare questa funzione dopo un'errore irreversibile modifica apportata ai dati in una pagina di una finestra delle proprietà modale.  
   
 ```
@@ -113,7 +108,7 @@ void CancelToClose();
   
  Il `CancelToClose` funzione membro non esegue alcuna operazione in una finestra delle proprietà non modale, perché non dispone di una finestra delle proprietà non modale un **Annulla** per impostazione predefinita.  
   
-##  <a name="csnapinpropertypageimpl"></a>CSnapInPropertyPageImpl::CSnapInPropertyPageImpl  
+##  <a name="csnapinpropertypageimpl"></a>  CSnapInPropertyPageImpl::CSnapInPropertyPageImpl  
  Costruisce un oggetto `CSnapInPropertyPageImpl`.  
   
 ```
@@ -127,7 +122,7 @@ CSnapInPropertyPageImpl(LPCTSTR lpszTitle = NULL);
 ### <a name="remarks"></a>Note  
  Per inizializzare la struttura sottostante, chiamare [CSnapInPropertyPageImpl::Create](#create).  
   
-##  <a name="create"></a>CSnapInPropertyPageImpl::Create  
+##  <a name="create"></a>  CSnapInPropertyPageImpl::Create  
  Chiamare questa funzione per inizializzare la struttura sottostante della pagina delle proprietà.  
   
 ```
@@ -140,8 +135,8 @@ HPROPSHEETPAGE Create();
 ### <a name="remarks"></a>Note  
  È opportuno chiamare dapprima [CSnapInPropertyPageImpl::CSnapInPropertyPageImpl](#csnapinpropertypageimpl) prima di chiamare questa funzione.  
   
-##  <a name="m_psp"></a>CSnapInPropertyPageImpl::m_psp  
- `m_psp`è una struttura i cui membri archiviano le caratteristiche di **PROPSHEETPAGE**.  
+##  <a name="m_psp"></a>  CSnapInPropertyPageImpl::m_psp  
+ `m_psp` è una struttura i cui membri archiviano le caratteristiche di **PROPSHEETPAGE**.  
   
 ```
 PROPSHEETPAGE m_psp;
@@ -152,7 +147,7 @@ PROPSHEETPAGE m_psp;
   
  Per ulteriori informazioni su tale struttura, compreso un elenco dei relativi membri, vedere [PROPSHEETPAGE](http://msdn.microsoft.com/library/aa815151) in Windows SDK.  
   
-##  <a name="onapply"></a>CSnapInPropertyPageImpl::OnApply  
+##  <a name="onapply"></a>  CSnapInPropertyPageImpl::OnApply  
  Questa funzione membro viene chiamata quando l'utente sceglie il **OK** o **applica** pulsante.  
   
 ```
@@ -169,7 +164,7 @@ BOOL OnApply();
   
  L'implementazione predefinita di `OnApply` restituisce **TRUE**.  
   
-##  <a name="onhelp"></a>CSnapInPropertyPageImpl::OnHelp  
+##  <a name="onhelp"></a>  CSnapInPropertyPageImpl::OnHelp  
  Questa funzione membro viene chiamata quando l'utente sceglie il **Guida** pulsante per la pagina delle proprietà.  
   
 ```
@@ -179,7 +174,7 @@ void OnHelp();
 ### <a name="remarks"></a>Note  
  Eseguire l'override di questa funzione membro per visualizzare la Guida per la pagina delle proprietà.  
   
-##  <a name="onkillactive"></a>CSnapInPropertyPageImpl::OnKillActive  
+##  <a name="onkillactive"></a>  CSnapInPropertyPageImpl::OnKillActive  
  Questa funzione membro viene chiamata quando la pagina non è più la pagina attiva.  
   
 ```
@@ -192,7 +187,7 @@ BOOL OnKillActive();
 ### <a name="remarks"></a>Note  
  Eseguire l'override di questa funzione membro per eseguire attività di convalida di dati speciali.  
   
-##  <a name="onquerycancel"></a>CSnapInPropertyPageImpl::OnQueryCancel  
+##  <a name="onquerycancel"></a>  CSnapInPropertyPageImpl::OnQueryCancel  
  Questa funzione membro viene chiamata quando l'utente sceglie il **Annulla** pulsante e l'annullamento prima dell'azione è stata eseguita.  
   
 ```
@@ -207,7 +202,7 @@ BOOL OnQueryCancel();
   
  L'implementazione predefinita di `OnQueryCancel` restituisce **TRUE**.  
   
-##  <a name="onreset"></a>CSnapInPropertyPageImpl::OnReset  
+##  <a name="onreset"></a>  CSnapInPropertyPageImpl::OnReset  
  Questa funzione membro viene chiamata quando l'utente sceglie il **Annulla** pulsante.  
   
 ```
@@ -219,7 +214,7 @@ void OnReset();
   
  Eseguire l'override di questa funzione membro per specificare l'azione che il programma accetta quando l'utente sceglie il **Annulla** pulsante.  
   
-##  <a name="onsetactive"></a>CSnapInPropertyPageImpl::OnSetActive  
+##  <a name="onsetactive"></a>  CSnapInPropertyPageImpl::OnSetActive  
  Questa funzione membro viene chiamata quando la pagina viene scelto dall'utente e diventa la pagina attiva.  
   
 ```
@@ -234,7 +229,7 @@ BOOL OnSetActive();
   
  L'implementazione predefinita restituisce **TRUE**.  
   
-##  <a name="onwizardback"></a>CSnapInPropertyPageImpl::OnWizardBack  
+##  <a name="onwizardback"></a>  CSnapInPropertyPageImpl::OnWizardBack  
  Questa funzione membro viene chiamata quando l'utente sceglie il **nuovamente** pulsante in una procedura guidata.  
   
 ```
@@ -252,7 +247,7 @@ BOOL OnWizardBack();
 ### <a name="remarks"></a>Note  
  Eseguire l'override di questa funzione membro per specificare un'azione che l'utente deve eseguire quando il **nuovamente** si fa clic sul pulsante.  
   
-##  <a name="onwizardfinish"></a>CSnapInPropertyPageImpl::OnWizardFinish  
+##  <a name="onwizardfinish"></a>  CSnapInPropertyPageImpl::OnWizardFinish  
  Questa funzione membro viene chiamata quando l'utente sceglie il **fine** pulsante in una procedura guidata.  
   
 ```
@@ -265,7 +260,7 @@ BOOL OnWizardFinish();
 ### <a name="remarks"></a>Note  
  Eseguire l'override di questa funzione membro per specificare un'azione che l'utente deve eseguire quando il **fine** si fa clic sul pulsante.  
   
-##  <a name="onwizardnext"></a>CSnapInPropertyPageImpl::OnWizardNext  
+##  <a name="onwizardnext"></a>  CSnapInPropertyPageImpl::OnWizardNext  
  Questa funzione membro viene chiamata quando l'utente sceglie il `Next` pulsante in una procedura guidata.  
   
 ```
@@ -283,7 +278,7 @@ BOOL OnWizardNext();
 ### <a name="remarks"></a>Note  
  Eseguire l'override di questa funzione membro per specificare un'azione che l'utente deve eseguire quando il `Next` si fa clic sul pulsante.  
   
-##  <a name="querysiblings"></a>CSnapInPropertyPageImpl::QuerySiblings  
+##  <a name="querysiblings"></a>  CSnapInPropertyPageImpl::QuerySiblings  
  Chiamare questa funzione membro per inoltrare un messaggio a ogni pagina nella finestra delle proprietà.  
   
 ```
@@ -303,7 +298,7 @@ LRESULT QuerySiblings(WPARAM wParam, LPARAM lParam);
 ### <a name="remarks"></a>Note  
  Se una pagina restituisce un valore diverso da zero, la finestra delle proprietà non invia il messaggio per le pagine successive.  
   
-##  <a name="setmodified"></a>CSnapInPropertyPageImpl::SetModified  
+##  <a name="setmodified"></a>  CSnapInPropertyPageImpl::SetModified  
  Chiamare questa funzione membro per abilitare o disabilitare il **applica** pulsante, in base a se le impostazioni nella pagina delle proprietà devono essere applicate all'oggetto esterno appropriato.  
   
 ```

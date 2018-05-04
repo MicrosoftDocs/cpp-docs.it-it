@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/14/2018
 ms.technology:
 - cpp-tools
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - GENPROFILE
 - FASTGENPROFILE
@@ -16,14 +16,13 @@ helpviewer_keywords:
 ms.assetid: deff5ce7-46f5-448a-b9cd-a7a83a6864c6
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b6174c1fdd53ec14f0cb63292a9036caabc98a7d
-ms.sourcegitcommit: ee7d74683af7631441c8c7f65ef5ceceaee4a5ee
+ms.openlocfilehash: 05d7961ff46661b8f6df2768591932699c3965d4
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="genprofile-fastgenprofile-generate-profiling-instrumented-build"></a>/GENPROFILE, /FASTGENPROFILE (Generare la build instrumentata di profilatura)
 
@@ -38,7 +37,7 @@ Specifica la generazione di un file PDG dal linker per supportare l'ottimizzazio
 
 Uno dei seguenti argomenti, può essere specificato per **/GENPROFILE** oppure **/FASTGENPROFILE**. Gli argomenti elencati di seguito separati da una barra verticale (**|**) carattere si escludono a vicenda. Utilizzare la virgola (**,**) carattere per separare le opzioni.
 
-**COUNTER32** &#124; **COUNTER64**<br/>
+**COUNTER32** &AMP;#124; **COUNTER64**<br/>
 Utilizzare **COUNTER32** per specificare l'utilizzo di contatori di probe a 32 bit, e **COUNTER64** per specificare i contatori di probe a 64 bit. Quando si specifica **/GENPROFILE**, il valore predefinito è **COUNTER64**. Quando si specifica **/FASTGENPROFILE**, il valore predefinito è **COUNTER32**.
 
 **ESATTO** &AMP;#124; **NOEXACT**<br/>
@@ -50,7 +49,7 @@ Uso **MEMMAX** e **MEMMIN** per specificare le dimensioni di prenotazione minime
 **PATH**  &#124; **NOPATH** <br/>
 Uso **percorso** per specificare un set separato di contatori PGO per ogni percorso univoco a una funzione. Uso **NOPATH** per specificare un solo set di contatori per ogni funzione. Quando si specifica **/GENPROFILE**, il valore predefinito è **percorso** . Quando si specifica **/FASTGENPROFILE**, il valore predefinito è **NOPATH** .
 
-**TRACKEH**  &#124; **NOTRACKEH** <br/>
+**TRACKEH** &AMP;#124; **NOTRACKEH**  <br/>
 Specifica se usare i contatori aggiuntivi per mantenere un conteggio accurato quando vengono generate eccezioni durante il training. Uso **TRACKEH** per specificare i contatori aggiuntivi per un conteggio esatto. Utilizzare **NOTRACKEH** per specificare i contatori singoli per il codice che non usa l'eccezione gestione o che non riscontra eccezioni negli scenari di training.  Quando si specifica **/GENPROFILE**, il valore predefinito è **TRACKEH** . Quando si specifica **/FASTGENPROFILE**, il valore predefinito è **NOTRACKEH** .
 
 **PGD**=*filename*<br/>

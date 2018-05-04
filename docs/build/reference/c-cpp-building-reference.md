@@ -2,12 +2,9 @@
 title: Riferimenti alla compilazione in C/C++ | Documenti Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - linker [C++], building reference
 - builds [C++], additional information
 ms.assetid: 100b4ccf-572c-4d1f-970c-fa0bc0cc0d2d
-caps.latest.revision: 10
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9e2269be27dd039357c11d38a2be83b5fc9d6504
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2d26f729f660b3e51677303bb91b99e665a1a950
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cc-building-reference"></a>Riferimenti alla compilazione in C/C++
 Visual C++ fornisce due modalità di creazione di un programma C/C++. Il modo più semplice (e più comune) è [compilazione all'interno dell'ambiente di sviluppo di Visual C++](../../ide/building-cpp-projects-in-visual-studio.md). L'altro consiste nel [da un prompt dei comandi utilizzando gli strumenti da riga di comando di compilazione](../../build/building-on-the-command-line.md). In entrambi i casi, è possibile creare i file di origine utilizzando l'editor di origine Visual C++ o in un editor di terze parti di propria scelta.  

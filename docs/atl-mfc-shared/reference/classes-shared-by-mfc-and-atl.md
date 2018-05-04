@@ -1,29 +1,24 @@
 ---
 title: Le classi condivise da MFC e ATL | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - shared classes, classes
 ms.assetid: ca8b4b6b-744d-430b-b31f-d5b2f17bf210
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e881c303fc61ee7b72f067b0c9c3378e1e2c1858
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ea651297503210a78f3ee189c57e37bcc3e99c6a
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="classes-shared-by-mfc-and-atl"></a>Classi condivise da MFC e ATL
 Nella tabella seguente sono elencate le classi condivise da MFC e ATL.  
@@ -32,7 +27,7 @@ Nella tabella seguente sono elencate le classi condivise da MFC e ATL.
 |-----------|-----------------|-----------------|  
 |[CFileTime](../../atl-mfc-shared/reference/cfiletime-class.md)|Fornisce metodi per la gestione dei valori di data e ora associati a un file.|atltime. h|  
 |[CFileTimeSpan](../../atl-mfc-shared/reference/cfiletimespan-class.md)|Fornisce metodi per la gestione dei relativo valori di data e ora associati a un file.|atltime. h|  
-|[CFixedStringT](../../atl-mfc-shared/reference/cfixedstringt-class.md)|Rappresenta un oggetto stringa con un buffer di caratteri predefinito.|CStringT. h|  
+|[CFixedStringT](../../atl-mfc-shared/reference/cfixedstringt-class.md)|Rappresenta un oggetto stringa con un buffer di caratteri predefinito.|cstringt.h|  
 |[CImage](../../atl-mfc-shared/reference/cimage-class.md)|Fornisce il supporto avanzato per le bitmap, inclusa la possibilità di caricare e salvare le immagini in formato JPEG, GIF, BMP e grafica PNG (Portable Network).|atlimage.h|  
 |[COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md)|Incapsula il **data** tipo di dati utilizzato nell'automazione OLE.|atlcomtime.h|  
 |[COleDateTimeSpan](../../atl-mfc-shared/reference/coledatetimespan-class.md)|Rappresenta un'ora relativa, un intervallo di tempo.|atlcomtime.h|  

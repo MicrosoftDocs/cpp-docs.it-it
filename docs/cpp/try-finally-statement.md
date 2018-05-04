@@ -2,11 +2,8 @@
 title: Istruzione try-finally | Documenti Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - __try
@@ -27,17 +24,15 @@ helpviewer_keywords:
 - __leave keyword [C++], try-finally statement
 - structured exception handling [C++], try-finally
 ms.assetid: 826e0347-ddfe-4f6e-a7bc-0398e0edc7c2
-caps.latest.revision: 14
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c57676cace8451de266d30d4c146e3ae0c3cb1b5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6a6457e92b7f4b57c7c181705e369e8582fb54f9
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="try-finally-statement"></a>Istruzione try-finally
 **Sezione specifica Microsoft**  
@@ -55,9 +50,9 @@ __finally {
   
 ## <a name="grammar"></a>Grammatica  
  *try-finally-statement*:  
- `__try`*composta-istruzione*  
+ `__try` *Compound-statement*  
   
- `__finally`*composta-istruzione*  
+ `__finally` *Compound-statement*  
   
  L'istruzione `try-finally` è un'estensione Microsoft dei linguaggi C e C++ che consente alle applicazioni di destinazione di garantire l'esecuzione del codice di pulizia quando l'esecuzione di un blocco di codice viene interrotta. La pulizia è costituita da attività quali la deallocazione della memoria, la chiusura dei file e il rilascio di handle di file. L'istruzione `try-finally` è particolarmente utile per le routine che presentano vari punti in cui viene eseguito un controllo per verificare la presenza di un errore che potrebbe causare la restituzione prematura dalla routine.  
   
@@ -80,7 +75,7 @@ __finally {
   
  Si supponga ad esempio che una serie di chiamate di funzione colleghi la funzione A alla funzione D, come illustrato di seguito. Ogni funzione dispone di un gestore di terminazione. Se un'eccezione viene generata nella funzione D e gestita in A, i gestori di terminazione, man mano che il sistema rimuove lo stack, vengono chiamati nell'ordine seguente: D, C, B.  
   
- ![Ordine di terminazione &#45; esecuzione del gestore](../cpp/media/vc38cx1.gif "vc38CX1")  
+ ![Ordine di terminazione&#45;l'esecuzione del gestore](../cpp/media/vc38cx1.gif "vc38CX1")  
 Ordine di terminazione esecuzione del gestore  
   
 > [!NOTE]
@@ -104,4 +99,4 @@ Ordine di terminazione esecuzione del gestore
  [Scrittura di un gestore di terminazione](../cpp/writing-a-termination-handler.md)   
  [Strutturata delle eccezioni (C/C++)](../cpp/structured-exception-handling-c-cpp.md)   
  [Parole chiave](../cpp/keywords-cpp.md)   
- [Sintassi del gestore di terminazione](http://msdn.microsoft.com/library/windows/desktop/ms681393)
+ [Sintassi di gestore di terminazione](http://msdn.microsoft.com/library/windows/desktop/ms681393)

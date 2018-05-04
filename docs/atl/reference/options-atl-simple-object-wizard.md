@@ -1,12 +1,9 @@
 ---
 title: Opzioni, creazione guidata oggetto semplice ATL | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - vc.codewiz.class.atl.simple.options
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - ATL Simple Object Wizard, options
 ms.assetid: 125fe179-942d-4181-8b82-33e92e1fd779
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 37341dc23f95e1863aeae4a1b57c01d24d6ad365
-ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
+ms.openlocfilehash: ffc38f5359b68b90f91a2643e1fbaa743a94e559
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="options-atl-simple-object-wizard"></a>Opzioni, Creazione guidata oggetto semplice ATL
 Utilizzare questa pagina della creazione guidata oggetto semplice ATL per aumentare l'efficienza e supporto per gli errori per l'oggetto.  
@@ -60,7 +55,7 @@ Utilizzare questa pagina della creazione guidata oggetto semplice ATL per aument
 |Opzione|Descrizione|  
 |------------|-----------------|  
 |**Doppio**|Specifica che l'oggetto supporta un'interfaccia duale (la vtable dell'oggetto ha funzionalità di interfaccia personalizzata oltre ad associazione tardiva `IDispatch` metodi). Consente di entrambi i client COM e [i controller di automazione](../../mfc/automation-clients.md) per accedere all'oggetto. Valore predefinito.|  
-|**Personalizzato**|Specifica che l'oggetto supporta un'interfaccia personalizzata (la vtable dell'oggetto ha funzioni di interfaccia personalizzata). Un'interfaccia personalizzata può essere più veloce rispetto a un'interfaccia duale, in particolare attraverso i limiti di processo.<br /><br /> -   **Compatibile con l'automazione** controller di automazione consente di accedere a un oggetto con il supporto di interfaccia personalizzata.|  
+|**Personalizzato**|Specifica che l'oggetto supporta un'interfaccia personalizzata (la vtable dell'oggetto ha funzioni di interfaccia personalizzata). Un'interfaccia personalizzata può essere più veloce rispetto a un'interfaccia duale, in particolare attraverso i limiti di processo.<br /><br /> -   **Compatibile con l'automazione** i controller di automazione consente l'accesso a un oggetto con il supporto di interfaccia personalizzata.|  
   
  **Supporto**  
  Indica il supporto aggiuntivo per l'oggetto.  
@@ -70,7 +65,7 @@ Utilizzare questa pagina della creazione guidata oggetto semplice ATL per aument
 |**ISupportErrorInfo**|Per creare il supporto per il [ISupportErrorInfo](../../atl/reference/isupporterrorinfoimpl-class.md) interfaccia in modo che l'oggetto può restituire informazioni sugli errori al client.|  
 |**Punti di connessione**|Abilita punti di connessione per l'oggetto mediante derivazione dalla classe dell'oggetto [IConnectionPointContainerImpl](../../atl/reference/iconnectionpointcontainerimpl-class.md).|  
 |**Gestore di marshalling a thread libero**|Crea un oggetto gestore del marshalling a thread libero per effettuare il marshalling di puntatori di interfaccia in modo efficiente tra thread nello stesso processo. Disponibile per l'oggetto che specifica **entrambi** come il modello di threading.|  
-|**IObjectWithSite (supporto oggetto IE)**|Implementa [IObjectWithSiteImpl](../../atl/reference/iobjectwithsiteimpl-class.md), che fornisce un modo semplice per supportare la comunicazione tra un oggetto e il sito in un contenitore.|  
+|**IObjectWithSite (supporto di oggetto di inserimento/espulsione)**|Implementa [IObjectWithSiteImpl](../../atl/reference/iobjectwithsiteimpl-class.md), che fornisce un modo semplice per supportare la comunicazione tra un oggetto e il sito in un contenitore.|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Creazione guidata oggetto semplice ATL](../../atl/reference/atl-simple-object-wizard.md)   

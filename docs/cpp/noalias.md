@@ -1,12 +1,9 @@
 ---
 title: noalias | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 02/09/2018
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - noalias_cpp
@@ -16,23 +13,21 @@ helpviewer_keywords:
 - noalias __declspec keyword
 - __declspec keyword [C++], noalias
 ms.assetid: efafa8b0-7f39-4edc-a81e-d287ae882c9b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6fd57b10aba4298ff7facd725ab3ce1934ccf1ab
-ms.sourcegitcommit: f3c398b1c7dbf36ab71b5ca89d365b1913afa307
+ms.openlocfilehash: 1cbb5c1b4162f3326aade092c7e20ca42a825d13
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="noalias"></a>noalias
 
 **Sezione specifica Microsoft**
 
-`noalias`di conseguenza, una chiamata di funzione non modificare o fare riferimento allo stato complessivo visibile e modifica solo la memoria a cui puntata *direttamente* i parametri del puntatore (riferimenti indiretti di primo livello).
+`noalias` di conseguenza, una chiamata di funzione non modificare o fare riferimento a stato complessivo visibile e modifica solo la memoria a cui puntata *direttamente* i parametri del puntatore (riferimenti indiretti di primo livello).
 
 Se una funzione è annotata come `noalias`, l'utilità di ottimizzazione può supporre che, oltre ai parametri stessi, viene fatto riferimento solo ai riferimenti indiretti di primo livello dei parametri del puntatore o questi vengono modificati nella funzione. Lo stato complessivo visibile è il set di tutti i dati non definiti o a cui non si fa riferimento al di fuori dell'ambito di compilazione e il cui indirizzo non viene rilevato. L'ambito di compilazione è tutti i file di origine ([/LTCG (generazione di codice in fase di collegamento)](../build/reference/ltcg-link-time-code-generation.md) compilazioni) o un singolo file di origine (non -**/LTCG** compilazione).
 
