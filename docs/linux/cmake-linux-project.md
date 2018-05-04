@@ -1,11 +1,12 @@
 ---
 title: Configurare un progetto CMake per Linux in Visual Studio | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 10/25/2107
-ms.reviewer: 
-ms.suite: 
-ms.technology: cpp-linux
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- cpp-linux
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: f8707b32-f90d-494d-ae0b-1d44425fdc25
 author: corob-msft
@@ -14,11 +15,11 @@ manager: ghogen
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: 67665f3271caf71d16788b2e102d0e756d9f702f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 961419e9ffcd5dede0db01f81e1b1eedc3290436
+ms.sourcegitcommit: dd1a509526fa8bb18e97ab7bc7b91cbdb3ec7059
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="configure-a-linux-cmake-project"></a>Configurare un progetto CMake per Linux
   
@@ -103,19 +104,13 @@ cmake -E capabilities
 
 Nell'output cercare "serverMode":true. Si noti che, anche quando si compila CMake dall'origine come illustrato sotto, è consigliabile controllare le funzionalità al termine. Il sistema Linux può avere limitazioni che impediscono l'abilitazione della modalità server.
 
-Per iniziare la compilazione dall'origine nella shell per il sistema Linux, verificare che la gestione pacchetti sia aggiornata e che git e cmake siano disponibili. Clonare prima di tutto le origini CMake:
+Per iniziare la compilazione dall'origine nella shell per il sistema Linux, verificare che la gestione pacchetti sia aggiornata e che git e cmake siano disponibili. Clonare prima di tutto le origini CMake dal repository Microsoft usato per il supporto di CMake di Visual Studio:
 
 ```cmd
 sudo apt-get update
 sudo apt-get install -y git cmake
-git clone https://github.com/Kitware/CMake.git
+git clone https://github.com/Microsoft/CMake.git
 cd CMake
-```
-
-Verificare quindi di usare una versione supportata di CMake per Visual Studio. Microsoft tiene traccia dello sviluppo di CMake, ma non può garantire di supportare la versione più recente. Per compilare CMake 3.9.0 (ad esempio), eseguire prima:
-
-```cmd
-git checkout tags/v3.9.0
 ```
 
 Eseguire quindi i comandi seguenti:

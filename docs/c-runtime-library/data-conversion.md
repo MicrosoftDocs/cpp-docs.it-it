@@ -18,11 +18,11 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 12574f9a8a2da2072d1196cbd769ac87cf31c2f7
-ms.sourcegitcommit: 604907f77eb6c5b1899194a9877726f3e8c2dabc
+ms.openlocfilehash: f06153b4c4f037172e96e3ce1222311a82c71772
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="data-conversion"></a>Conversione dei dati
 
@@ -71,4 +71,4 @@ Queste routine convertono i dati da un formato a un altro. In genere l'esecuzion
 
 ## <a name="see-also"></a>Vedere anche
 
-[Routine di runtime per categoria](../c-runtime-library/run-time-routines-by-category.md)<br/>
+[Routine di Universal C Runtime per categoria](../c-runtime-library/run-time-routines-by-category.md)<br/>

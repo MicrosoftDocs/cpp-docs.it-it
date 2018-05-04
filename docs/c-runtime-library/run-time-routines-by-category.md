@@ -1,5 +1,5 @@
 ---
-title: Routine di runtime per categoria | Microsoft Docs
+title: Routine di Universal C Runtime per categoria | Microsoft Docs
 ms.custom: ''
 ms.date: 04/06/2018
 ms.technology:
@@ -20,17 +20,19 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3ff178238e457d4a9346ba3659509c295bcf3794
-ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
+ms.openlocfilehash: 01bdb786c003894b4ab1bf6418aa9c492e909602
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2018
+ms.lasthandoff: 04/20/2018
 ---
-# <a name="run-time-routines-by-category"></a>Routine di runtime per categoria
+# <a name="universal-c-runtime-routines-by-category"></a>Routine di Universal C Runtime per categoria
 
-In questa sezione vengono elencate e descritte le routine di libreria di runtime Microsoft per categoria. Per praticità di riferimento, alcune routine sono elencate in più categorie. Le routine di caratteri multibyte e le routine di caratteri wide vengono raggruppate con le controparti di caratteri a un byte, se presenti.
+In questa sezione vengono elencate e descritte le routine di libreria Universal C runtime (UCRT) per categoria. Per praticità di riferimento, alcune routine sono elencate in più categorie. Le routine di caratteri multibyte e le routine di caratteri wide vengono raggruppate con le controparti di caratteri a un byte, se presenti.
 
-## <a name="routine-categories"></a>Categorie di routine
+## <a name="ucrt-library-routine-categories"></a>Categorie di routine di libreria UCRT
+
+Le categorie principali di routine di libreria UCRT sono:
 
 |||
 |-|-|
