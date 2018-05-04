@@ -1,29 +1,24 @@
 ---
 title: Scrittura di un filtro eccezioni | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - exception handling [C++], filters
 ms.assetid: 47fc832b-a707-4422-b60a-aaefe14189e5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 40afc6872ac04522c4c42f0a0d890b791ac03d53
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 138bb17b8ccbb13371a1c31e4f7347a9bbdbf64b
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="writing-an-exception-filter"></a>Scrittura di un filtro eccezioni
 È possibile gestire un'eccezione passando al livello del gestore eccezioni o continuando l'esecuzione. Anziché utilizzare il codice del gestore eccezioni per gestire l'eccezione e passare, è possibile utilizzare *filtro* per risolvere il problema e quindi, restituendo -1, ripristinare il flusso normale senza cancellare lo stack.  
@@ -60,7 +55,7 @@ int Eval_Exception ( int n_except ) {
   
  È consigliabile utilizzare una chiamata di funzione nel *filtro* espressione ogni volta che *filtro* deve eseguire operazioni complesse. La valutazione dell'espressione comporta l'esecuzione della funzione, in questo caso, `Eval_Exception`.  
   
- Si noti l'uso di [GetExceptionCode](http://msdn.microsoft.com/library/windows/desktop/ms679356) per determinare l'eccezione. È necessario chiamare questa funzione all'interno del filtro stesso. `Eval_Exception`Impossibile chiamare **GetExceptionCode**, ma deve essere il codice di eccezione passato.  
+ Si noti l'uso di [GetExceptionCode](http://msdn.microsoft.com/library/windows/desktop/ms679356) per determinare l'eccezione. È necessario chiamare questa funzione all'interno del filtro stesso. `Eval_Exception` non è possibile chiamare **GetExceptionCode**, ma deve essere il codice di eccezione passato a esso.  
   
  Questo gestore passa il controllo a un altro gestore a meno che l'eccezione non sia un Integer o un overflow a virgola mobile. In tal caso, il gestore chiama una funzione (`ResetVars` è solo un esempio, non una funzione API) per reimpostare alcune variabili globali. *Istruzione-block-2*, che in questo esempio non è vuoto, può mai essere eseguito perché `Eval_Exception` non restituisce mai EXCEPTION_EXECUTE_HANDLER (1).  
   

@@ -3,7 +3,7 @@ title: Installare il supporto per C++ in Visual Studio | Documenti Microsoft
 description: Installare il supporto di Visual Studio per Visual C++
 ms.custom: mvc
 ms.date: 12/12/2017
-ms.topic: get-started-article
+ms.topic: tutorial
 ms.technology:
 - devlang-C++
 ms.devlang: C++
@@ -12,14 +12,13 @@ dev_langs:
 ms.assetid: 45138d70-719d-42dc-90d7-1d0ca31a2f54
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b895569e5535fb05c1e2383df224f149815dd47f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 69092cdd6d79197fb7a2cbdc60b783174b70950b
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="install-c-support-in-visual-studio"></a>Installare il supporto per C++ in Visual Studio
 
@@ -55,7 +54,7 @@ Per informazioni dettagliate di spazio su disco e requisiti del sistema operativ
 
     Per C++, selezionare il **sviluppo di applicazioni Desktop con C++** carico di lavoro e quindi scegliere **installare**.
 
-   ![Installare lo sviluppo Desktop con carico di lavoro di C++](../build/media/vscpp-concierge-choose-workload.gif "installare lo sviluppo Desktop con carico di lavoro di C++")
+   ![Installare lo sviluppo Desktop con carico di lavoro C++](../build/media/vscpp-concierge-choose-workload.gif "installare lo sviluppo Desktop con carico di lavoro di C++")
 
 1. Al termine dell'installazione, scegliere il **avviare** pulsante per avviare Visual Studio.
 
@@ -63,13 +62,13 @@ Per informazioni dettagliate di spazio su disco e requisiti del sistema operativ
 
    Visual Studio potrebbe richiedere diversi minuti per preparare alla prima di eseguirla. Ecco cosa appare in una rapida personalizzando:
 
-   ![Visual Studio 2017 Accedi](../build/media/vscpp-quickstart-first-run.gif "Accedi 2017 di Visual Studio")
+   ![Visual Studio 2017 Accedi](../build/media/vscpp-quickstart-first-run.gif "Visual Studio 2017 Accedi")
 
    Visual Studio avvia più velocemente quando si esegue nuovamente.
 
 1. Quando si apre Visual Studio, verificare se l'icona del flag nella barra del titolo è evidenziato:
 
-   ![Flag di notifica Visual Studio 2017](../build/media/vscpp-first-start-page-flag.png "Visual Studio 2017 flag di notifica")
+   ![Contrassegno di notifica di Visual Studio 2017](../build/media/vscpp-first-start-page-flag.png "flag di notifica di Visual Studio 2017")
 
    Se è evidenziato, selezionarla per aprire la **notifiche** finestra. Se sono disponibili aggiornamenti per Visual Studio, è consigliabile che li installa. Al termine dell'installazione, riavviare Visual Studio.
 

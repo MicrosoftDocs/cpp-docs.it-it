@@ -1,12 +1,9 @@
 ---
 title: Espressioni lambda in C++ | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 07/19/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - lambda expressions [C++], overview
 - lambda expressions [C++], vs. function objects
 ms.assetid: 713c7638-92be-4ade-ab22-fa33417073bf
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 035fe5c222f6de5b3f0d71c0ce9133c1101f2993
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c1cfcb210d3de7ce818d39ecf1703299defedc5d
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lambda-expressions-in-c"></a>Espressioni lambda in C++
 In C++ 11 e versioni successive, un'espressione lambda, spesso chiamato un *lambda*, è utile definire un oggetto funzione anonima (un *chiusura*) nella posizione in cui viene richiamato o passato come argomento a una funzione. In genere le lambda vengono usate per incapsulare alcune righe di codice passate agli algoritmi o ai metodi asincroni. In questo articolo vengono definite le espressioni lambda confrontandole con altre tecniche di programmazione, vengono illustrati i vantaggi che offrono e viene fornito un esempio di base.  
@@ -57,7 +52,7 @@ void abssort(float* x, unsigned n) {
   
  ![Elementi strutturali di un'espressione lambda](../cpp/media/lambdaexpsyntax.png "LambdaExpSyntax")  
   
-1.  *clausola di acquisizione* (noto anche come il *lambda-introducer* della specifica C++.)  
+1.  *clausola di acquisizione* (nota anche come il *lambda-introducer* nelle specifiche di C++.)  
   
 2.  *elenco di parametri* facoltativo. (Noto anche come il *dichiaratore lambda*)  
   
@@ -330,7 +325,7 @@ vector v after 2nd call to fillVector(): 10 11 12 13 14 15 16 17 18
  Per ulteriori informazioni, vedere [generate_n](../standard-library/algorithm-functions.md#generate_n).  
 
 ## <a name="constexpr-lambda-expressions"></a>espressioni lambda constexpr
-**Visual Studio 2017 15.3 e versioni successive** (disponibile con [/std:c + + 17](../build/reference/std-specify-language-standard-version.md)): un'espressione lambda può essere dichiarata come `constexpr` o utilizzato in un'espressione costante durante l'inizializzazione di ciascun membro dati che acquisisce o introduce è consentita all'interno di un'espressione costante.  
+**Visual Studio 2017 15.3 e versioni successive** (disponibile con [/std:c + + 17](../build/reference/std-specify-language-standard-version.md)): un'espressione lambda può essere dichiarata come `constexpr` o utilizzato in un'espressione costante durante l'inizializzazione di ciascun membro dati che Consente di acquisire o introduce è consentita all'interno di un'espressione costante.  
 
 ```cpp
     int y = 32;

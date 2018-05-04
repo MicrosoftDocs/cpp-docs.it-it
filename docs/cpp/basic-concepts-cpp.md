@@ -1,29 +1,24 @@
 ---
 title: Concetti di base (C++) | Documenti Microsoft
-ms.custom: ''
+ms.custom: index-page
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
-ms.topic: 'index-page '
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - C++, basic language concepts
 ms.assetid: 961801e6-2ffd-4bf1-bb71-7f55e48d9c79
-caps.latest.revision: 8
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3f47ef027e2ca13e02ed10f186853cb0eb6845ef
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 17eb18438f4b39c7f07d144dad2c16db2f49553b
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="basic-concepts--c"></a>Concetti di base (C++)
 In questa sezione vengono illustrati i concetti chiave per comprendere C++. I programmatori di C avranno familiarità con molti di questi concetti, ma esistono alcune differenze meno evidenti che possono provocare risultati imprevisti del programma. Sono inclusi i seguenti argomenti:  
@@ -32,7 +27,7 @@ In questa sezione vengono illustrati i concetti chiave per comprendere C++. I pr
   
 -   [Ambito di una funzione o un oggetto C++](../cpp/scope-visual-cpp.md)  
   
--   [Regole di definizione e di collegamento del programma](../cpp/program-and-linkage-cpp.md)  
+-   [Regole di definizione e un collegamento del programma](../cpp/program-and-linkage-cpp.md)  
   
 -   [Avvio e terminazione](../cpp/startup-and-termination-cpp.md)  
   
@@ -44,7 +39,7 @@ In questa sezione vengono illustrati i concetti chiave per comprendere C++. I pr
   
 -   [alignof e alignas](../cpp/alignof-and-alignas-cpp.md)  
   
--   [Trivial, layout standard e tipi POD](../cpp/trivial-standard-layout-and-pod-types.md)  
+-   [Trivial, layout standard e i tipi POD](../cpp/trivial-standard-layout-and-pod-types.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Riferimenti al linguaggio C++](../cpp/cpp-language-reference.md)

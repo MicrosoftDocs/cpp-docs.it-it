@@ -1,25 +1,23 @@
 ---
 title: Opzioni del compilatore elencate in ordine alfabetico | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 02/22/2018
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - compiler options, C++
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7906893c1dce20344a9da805ad508a7836b1291d
-ms.sourcegitcommit: d24de38f9da844f824acb9d200a3f263077145fc
+ms.openlocfilehash: 259958d789ed189c38b75fe708034fb0d76fc35c
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="compiler-options-listed-alphabetically"></a>Opzioni del compilatore elencate in ordine alfabetico
 
@@ -108,7 +106,7 @@ Di seguito viene riportato un elenco completo in ordine alfabetico delle opzioni
 |[/Og](og-global-optimizations.md)|Deprecato. Usa le ottimizzazioni globali.|
 |[/Oi](oi-generate-intrinsic-functions.md)|Genera funzioni intrinseche.|
 |[/openmp](openmp-enable-openmp-2-0-support.md)|Attiva [#pragma omp](../../preprocessor/omp.md) nel codice sorgente.|
-|[/Os](os-ot-favor-small-code-favor-fast-code.md)|Ottimizza per dimensione codice.|
+|[/OS](os-ot-favor-small-code-favor-fast-code.md)|Ottimizza per dimensione codice.|
 |[/Ot](os-ot-favor-small-code-favor-fast-code.md)|Ottimizza per velocità codice.|
 |[/Ox](ox-full-optimization.md)|Usa la massima ottimizzazione (/Ob2gity /Gs).|
 |[/Oy](oy-frame-pointer-omission.md)|Omette il puntatore a frame (solo x86).|
@@ -140,7 +138,7 @@ Di seguito viene riportato un elenco completo in ordine alfabetico delle opzioni
 |[/vmm](vmm-vms-vmv-general-purpose-representation.md)|Dichiara l'ereditarietà multipla.|
 |[/vms](vmm-vms-vmv-general-purpose-representation.md)|Dichiara l'ereditarietà singola.|
 |[/vmv](vmm-vms-vmv-general-purpose-representation.md)|Dichiara l'ereditarietà virtuale.|
-|[/volatile](volatile-volatile-keyword-interpretation.md)|Seleziona la modalità di interpretazione della parola chiave volatile.|
+|[/ volatile](volatile-volatile-keyword-interpretation.md)|Seleziona la modalità di interpretazione della parola chiave volatile.|
 |[/w](compiler-option-warning-level.md)|Disabilita tutti gli avvisi.|
 |[/W0, /W1, /W2, /W3, /W4](compiler-option-warning-level.md)|Imposta il livello di avviso per l'output.|
 |[/w1, /w2, /w3, /w4](compiler-option-warning-level.md)|Imposta il livello di avviso per l'avviso specificato.|

@@ -1,13 +1,10 @@
 ---
 title: -Fp (nome. File PCH) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VC.Project.VCCLCompilerTool.PrecompiledHeaderFile
 - /fp
@@ -24,17 +21,15 @@ helpviewer_keywords:
 - precompiled header files, naming
 - /Fp compiler option [C++]
 ms.assetid: 0fcd9cbd-e09f-44d3-9715-b41efb5d0be2
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 77ba54705ec4037f1c98a2ae1832dddcc551956e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 80f59477695b83b33dd3cfa2b37837c5b52c8002
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="fp-name-pch-file"></a>/Fp (Specifica file pch)
 Fornisce un nome di percorso per un'intestazione precompilata anziché il nome di percorso predefinito.  
@@ -44,7 +39,7 @@ Fornisce un nome di percorso per un'intestazione precompilata anziché il nome d
 > **/Fp**_pathname_  
   
 ## <a name="remarks"></a>Note  
- Utilizzare questa opzione con [/Yc (Crea precompilata File di intestazione)](../../build/reference/yc-create-precompiled-header-file.md) o [/Yu (utilizza il File intestazione precompilata)](../../build/reference/yu-use-precompiled-header-file.md) per fornire un nome di percorso per un'intestazione precompilata anziché il nome di percorso predefinito. È inoltre possibile utilizzare **/Fp** con **/Yc** per specificare l'utilizzo di un file di intestazione precompilata che differiscono di **/Yc***filename* argomento e dal nome di base del file di origine.  
+ Utilizzare questa opzione con [/Yc (Crea precompilata File di intestazione)](../../build/reference/yc-create-precompiled-header-file.md) o [/Yu (utilizza il File intestazione precompilata)](../../build/reference/yu-use-precompiled-header-file.md) per fornire un nome di percorso per un'intestazione precompilata anziché il nome di percorso predefinito. È anche possibile usare **/Fp** con **/Yc** per specificare l'utilizzo di un file di intestazione precompilata che differisce dal **/Yc * * * filename* argomento e dal nome di base del file di origine.  
   
  Se non si specifica un'estensione come parte del nome del percorso, viene utilizzata un'estensione di PCH. Se si specifica una directory senza un nome di file, il nome file predefinito è VC*x*0.pch, in cui *x* è il numero di versione principale di Visual C++ in uso.  
   

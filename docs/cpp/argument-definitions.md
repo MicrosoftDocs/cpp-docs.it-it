@@ -2,11 +2,8 @@
 title: Definizioni di argomenti | Documenti Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - argv argument
 - argc argument
 ms.assetid: 6148cbf3-ebe8-44f2-b277-de4b723991c7
-caps.latest.revision: 13
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d30dd0c58cd4967065ee3e3c3c4df9538ea194a0
-ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
+ms.openlocfilehash: ca012d7b391e011d9658b0b74e0f4433d5dc9fd4
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="argument-definitions"></a>Definizioni di argomenti
 Gli argomenti nel prototipo  
@@ -46,14 +41,14 @@ int wmain( int argc, wchar_t* argv[], wchar_t* envp[]);
  `argv`  
  Una matrice di stringhe con terminazione null che rappresentano gli argomenti della riga di comando immessi dall'utente del programma. Per convenzione, `argv` **[0]** è il comando con cui viene richiamato il programma, `argv` **[1]** è il primo argomento della riga di comando e così via, fino a `argv`  **[**`argc`**]**, che è sempre **NULL**. Vedere [personalizzazione dell'elaborazione della riga di comando](../cpp/customizing-cpp-command-line-processing.md) per informazioni sull'elaborazione della riga di comando di eliminazione.  
   
- Il primo argomento della riga di comando è sempre `argv` **[1]** e l'ultimo è `argv` **[** `argc` - 1**]**.  
+ Il primo argomento della riga di comando è sempre `argv` **[1]** e l'ultimo è `argv` **[** `argc` - 1 **]**.  
   
 > [!NOTE]
 >  Per convenzione, `argv`**[0]** è il comando con cui il programma viene chiamato.  Tuttavia, è possibile generare un processo utilizzando [CreateProcess](http://msdn.microsoft.com/library/windows/desktop/ms683197) e se si utilizza sia il primo e secondo argomento (`lpApplicationName` e `lpCommandLine`), `argv` **[0]** potrebbe non essere il nome del file eseguibile; Utilizzare [GetModuleFileName](http://msdn.microsoft.com/library/windows/desktop/ms683197) per recuperare il nome del file eseguibile e il relativo percorso completo.  
   
 ## <a name="microsoft-specific"></a>Sezione specifica Microsoft  
  `envp`  
- La matrice `envp`, che è un'estensione comune in molti sistemi UNIX, viene utilizzata in Microsoft C++. È una matrice di stringhe che rappresentano le variabili impostate nell'ambiente dell'utente. Questa matrice viene terminata da un **NULL** voce. Può essere dichiarata come matrice di puntatori a **char (char** \*envp []**)** o come un puntatore a puntatori a **char (char** \* \* envp**)**. Se il programma utilizza **wmain** anziché **principale**, utilizzare il `wchar_t` del tipo di dati anziché `char`. Il blocco di ambiente passato a **principale** e **wmain** è una copia "bloccata" dell'ambiente corrente. Se successivamente si modifica l'ambiente tramite una chiamata a **putenv** o `_wputenv`, l'ambiente corrente (come restituito da `getenv` / `_wgetenv` e `_environ` /  `_wenviron` variabile) verrà modifica, ma il blocco a cui fa riferimento a envp non cambierà. Vedere [personalizzazione dell'elaborazione della riga di comando](../cpp/customizing-cpp-command-line-processing.md) per informazioni su soppressione elaborazione ambiente. Questo argomento è compatibile con ANSI in C, ma non in C++.  
+ La matrice `envp`, che è un'estensione comune in molti sistemi UNIX, viene utilizzata in Microsoft C++. È una matrice di stringhe che rappresentano le variabili impostate nell'ambiente dell'utente. Questa matrice viene terminata da un **NULL** voce. Può essere dichiarata come matrice di puntatori a **char (char** \*envp []**)** o come un puntatore a puntatori a **char (char** \* \* envp **)**. Se il programma utilizza **wmain** anziché **principale**, utilizzare il `wchar_t` del tipo di dati anziché `char`. Il blocco di ambiente passato a **principale** e **wmain** è una copia "bloccata" dell'ambiente corrente. Se successivamente si modifica l'ambiente tramite una chiamata a **putenv** o `_wputenv`, l'ambiente corrente (come restituito da `getenv` / `_wgetenv` e `_environ` /  `_wenviron` variabile) verrà modifica, ma il blocco a cui fa riferimento a envp non cambierà. Vedere [personalizzazione dell'elaborazione della riga di comando](../cpp/customizing-cpp-command-line-processing.md) per informazioni su soppressione elaborazione ambiente. Questo argomento è compatibile con ANSI in C, ma non in C++.  
   
 **Fine sezione specifica Microsoft**  
   

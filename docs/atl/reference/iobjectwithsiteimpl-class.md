@@ -1,12 +1,9 @@
 ---
 title: Classe IObjectWithSiteImpl | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - IObjectWithSiteImpl
@@ -20,17 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - IObjectWithSiteImpl class
 ms.assetid: 4e1f774f-bc3d-45ee-9a1c-c3533a511588
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 49574d31ef0c606528f29c0045506e5febe69b28
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6c626db62a02fba70f926776ea214e664d2f7f82
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="iobjectwithsiteimpl-class"></a>Classe IObjectWithSiteImpl
 Questa classe fornisce metodi di consentire a un oggetto comunicare con il relativo sito.  
@@ -66,7 +61,7 @@ template <class T>
 ## <a name="remarks"></a>Note  
  Il [IObjectWithSite](http://msdn.microsoft.com/library/windows/desktop/ms693765) interfaccia consente a un oggetto comunicare con il relativo sito. Classe `IObjectWithSiteImpl` fornisce un'implementazione predefinita di questa interfaccia e implementa **IUnknown** per l'invio di informazioni per il dump Crea dispositivo in modalità debug.  
   
- `IObjectWithSiteImpl`Specifica i due metodi. Il client chiama prima `SetSite`, passando il sito **IUnknown** puntatore. L'indicatore di misura vengono archiviati all'interno dell'oggetto e versioni successive possono essere recuperate tramite una chiamata a `GetSite`.  
+ `IObjectWithSiteImpl` specifica due metodi. Il client chiama prima `SetSite`, passando il sito **IUnknown** puntatore. L'indicatore di misura vengono archiviati all'interno dell'oggetto e versioni successive possono essere recuperate tramite una chiamata a `GetSite`.  
   
  In genere, si deriva dalla classe `IObjectWithSiteImpl` quando si crea un oggetto che non è un controllo. Per i controlli, derivare la classe da [IOleObjectImpl](../../atl/reference/ioleobjectimpl-class.md), che fornisce anche un puntatore di sito. Derivare la classe non sia da `IObjectWithSiteImpl` e `IOleObjectImpl`.  
   
@@ -78,7 +73,7 @@ template <class T>
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** atlcom. h  
   
-##  <a name="getsite"></a>IObjectWithSiteImpl::GetSite  
+##  <a name="getsite"></a>  IObjectWithSiteImpl::GetSite  
  Il sito per un puntatore a interfaccia identificato da una query `riid`.  
   
 ```
@@ -92,7 +87,7 @@ STDMETHOD(GetSite)(
   
  Vedere [IObjectWithSite::GetSite](http://msdn.microsoft.com/library/windows/desktop/ms694452) in Windows SDK.  
   
-##  <a name="m_spunksite"></a>IObjectWithSiteImpl::m_spUnkSite  
+##  <a name="m_spunksite"></a>  IObjectWithSiteImpl::m_spUnkSite  
  Gestisce il sito **IUnknown** puntatore.  
   
 ```
@@ -100,9 +95,9 @@ CComPtr<IUnknown> m_spUnkSite;
 ```  
   
 ### <a name="remarks"></a>Note  
- `m_spUnkSite`inizialmente riceve l'indicatore di misura tramite una chiamata a [SetSite](#setsite).  
+ `m_spUnkSite` inizialmente riceve l'indicatore di misura tramite una chiamata a [SetSite](#setsite).  
   
-##  <a name="setchildsite"></a>IObjectWithSiteImpl::SetChildSite  
+##  <a name="setchildsite"></a>  IObjectWithSiteImpl::SetChildSite  
  Fornisce l'oggetto con il sito **IUnknown** puntatore.  
   
 ```
@@ -116,7 +111,7 @@ HRESULT SetChildSite(IUnknown* pUnkSite);
 ### <a name="return-value"></a>Valore restituito  
  Restituisce `S_OK`.  
   
-##  <a name="setsite"></a>IObjectWithSiteImpl::SetSite  
+##  <a name="setsite"></a>  IObjectWithSiteImpl::SetSite  
  Fornisce l'oggetto con il sito **IUnknown** puntatore.  
   
 ```

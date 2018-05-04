@@ -2,11 +2,8 @@
 title: Classe CAxDialogImpl | Documenti Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CAxDialogImpl
@@ -26,17 +23,15 @@ helpviewer_keywords:
 - CAxDialogImpl class
 - ATL, dialog boxes
 ms.assetid: 817df483-3fa8-44e7-8487-72ba0881cd27
-caps.latest.revision: 21
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2db97c0de9f262936212cf7f38abddf7c91eb5a6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e3e1b7d4f88428060f4aa4d01180bce1e970b650
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="caxdialogimpl-class"></a>CAxDialogImpl (classe)
 Questa classe implementa una finestra di dialogo (modale o non modale) che ospita controlli ActiveX.  
@@ -80,9 +75,9 @@ class ATL_NO_VTABLE CAxDialogImpl : public CDialogImplBaseT<TBase>
 |[CAxDialogImpl::m_bModal](#m_bmodal)|Una variabile che esiste solo in modalità debug compila e viene impostata su true se la finestra di dialogo modale.|  
   
 ## <a name="remarks"></a>Note  
- `CAxDialogImpl`Consente di creare una finestra di dialogo modale o non modale. `CAxDialogImpl`fornisce la routine della finestra di dialogo, che utilizza la mappa messaggi predefinita per indirizzare i messaggi per i gestori appropriati.  
+ `CAxDialogImpl` Consente di creare una finestra di dialogo modale o non modale. `CAxDialogImpl` fornisce la routine di finestra di dialogo, che utilizza la mappa dei messaggi predefinita per indirizzare i messaggi per i gestori appropriati.  
   
- `CAxDialogImpl`deriva da `CDialogImplBaseT`, che a sua volta deriva da *TBase* (per impostazione predefinita, `CWindow`) e `CMessageMap`.  
+ `CAxDialogImpl` deriva da `CDialogImplBaseT`, che a sua volta deriva da *TBase* (per impostazione predefinita `CWindow`) e `CMessageMap`.  
   
  La classe deve definire un membro IDD che specifica l'ID di risorsa modello di finestra di dialogo. Ad esempio, aggiungendo un oggetto finestra di dialogo ATL tramite il **Aggiungi classe** la finestra di dialogo aggiunge automaticamente la riga seguente alla classe:  
   
@@ -110,7 +105,7 @@ class ATL_NO_VTABLE CAxDialogImpl : public CDialogImplBaseT<TBase>
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** atlwin. h  
   
-##  <a name="advisesinkmap"></a>CAxDialogImpl::  
+##  <a name="advisesinkmap"></a>  CAxDialogImpl::  
  Chiamare questo metodo per inviare o annullare gli avvisi per tutte le voci nella mappa di eventi mappa sink dell'oggetto.  
   
 ```
@@ -124,7 +119,7 @@ HRESULT AdviseSinkMap(bool bAdvise);
 ### <a name="return-value"></a>Valore restituito  
  Restituisce S_OK se l'operazione riesce, o un errore HRESULT in caso di errore.  
   
-##  <a name="create"></a>CAxDialogImpl::Create  
+##  <a name="create"></a>  CAxDialogImpl::Create  
  Chiamare questo metodo per creare una finestra di dialogo non modale.  
   
 ```
@@ -139,7 +134,7 @@ HWND Create(HWND hWndParent, RECT&, LPARAM dwInitParam = NULL);
  `dwInitParam`  
  [in] Specifica il valore da passare alla finestra di dialogo di `lParam` parametro del **WM_INITDIALOG** messaggio.  
   
- **RECT &**  
+ **RECT &AMP;**  
  Questo parametro non viene usato. Questo parametro viene passato dal `CComControl`.  
   
 ### <a name="return-value"></a>Valore restituito  
@@ -150,7 +145,7 @@ HWND Create(HWND hWndParent, RECT&, LPARAM dwInitParam = NULL);
   
  Il secondo override viene fornito solo in modo da finestre di dialogo possono essere utilizzate con [CComControl](../../atl/reference/ccomcontrol-class.md).  
   
-##  <a name="destroywindow"></a>CAxDialogImpl::DestroyWindow  
+##  <a name="destroywindow"></a>  CAxDialogImpl::DestroyWindow  
  Chiamare questo metodo per eliminare una finestra di dialogo non modale.  
   
 ```
@@ -163,7 +158,7 @@ BOOL DestroyWindow();
 ### <a name="remarks"></a>Note  
  Non chiamare `DestroyWindow` eliminare la finestra di dialogo modale. Chiamare [EndDialog](#enddialog) invece.  
   
-##  <a name="domodal"></a>CAxDialogImpl::DoModal  
+##  <a name="domodal"></a>  CAxDialogImpl::DoModal  
  Chiamare questo metodo per creare una finestra di dialogo modale.  
   
 ```
@@ -187,7 +182,7 @@ INT_PTR DoModal(
   
  Per creare una finestra di dialogo non modale, chiamare [crea](#create).  
   
-##  <a name="enddialog"></a>CAxDialogImpl::EndDialog  
+##  <a name="enddialog"></a>  CAxDialogImpl::EndDialog  
  Chiamare questo metodo per eliminare una finestra di dialogo modale.  
   
 ```
@@ -202,12 +197,12 @@ BOOL EndDialog(int nRetCode);
  TRUE se la finestra di dialogo viene eliminato definitivamente; in caso contrario, FALSE.  
   
 ### <a name="remarks"></a>Note  
- `EndDialog`devono essere chiamati tramite la routine della finestra di dialogo. Dopo che la finestra di dialogo viene eliminato definitivamente, Windows Usa il valore di `nRetCode` come valore restituito per `DoModal`, che creato la finestra di dialogo.  
+ `EndDialog` deve essere chiamato tramite la procedura di finestra di dialogo. Dopo che la finestra di dialogo viene eliminato definitivamente, Windows Usa il valore di `nRetCode` come valore restituito per `DoModal`, che creato la finestra di dialogo.  
   
 > [!NOTE]
 >  Non chiamare `EndDialog` eliminare definitivamente una finestra di dialogo non modale. Chiamare [DestroyWindow](#destroywindow) invece.  
   
-##  <a name="getdialogproc"></a>CAxDialogImpl::GetDialogProc  
+##  <a name="getdialogproc"></a>  CAxDialogImpl::GetDialogProc  
  Chiamare questo metodo per ottenere un puntatore per il `DialogProc` funzione di callback.  
   
 ```
@@ -220,7 +215,7 @@ virtual DLGPROC GetDialogProc();
 ### <a name="remarks"></a>Note  
  Il `DialogProc` funzione è una funzione di callback definita dall'applicazione.  
   
-##  <a name="getidd"></a>CAxDialogImpl::GetIDD  
+##  <a name="getidd"></a>  CAxDialogImpl::GetIDD  
  Chiamare questo metodo per ottenere l'ID di risorsa modello di finestra di dialogo.  
   
 ```
@@ -230,7 +225,7 @@ int GetIDD();
 ### <a name="return-value"></a>Valore restituito  
  Restituisce l'ID di risorsa modello di finestra di dialogo.  
   
-##  <a name="isdialogmessage"></a>CAxDialogImpl::IsDialogMessage  
+##  <a name="isdialogmessage"></a>  CAxDialogImpl::IsDialogMessage  
  Chiamare questo metodo per determinare se un messaggio è destinato a questa finestra di dialogo e, se si tratta, elaborare il messaggio.  
   
 ```
@@ -247,7 +242,7 @@ BOOL IsDialogMessage(LPMSG pMsg);
 ### <a name="remarks"></a>Note  
  Questo metodo è destinato a essere chiamato dall'interno di un ciclo di messaggi.  
   
-##  <a name="m_bmodal"></a>CAxDialogImpl::m_bModal  
+##  <a name="m_bmodal"></a>  CAxDialogImpl::m_bModal  
  Una variabile che esiste solo in modalità debug compila e viene impostata su true se la finestra di dialogo modale.  
   
 ```

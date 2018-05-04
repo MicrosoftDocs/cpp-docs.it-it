@@ -1,13 +1,10 @@
 ---
 title: -vmm,. - le macchine virtuali, - /vmv (rappresentazione generale) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - /vms
 - /vmm
@@ -28,17 +25,15 @@ helpviewer_keywords:
 - Single Inheritance compiler option
 - -vmv compiler option [C++]
 ms.assetid: 0fcd7ae0-3031-4c62-a2a8-e154c8685dae
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d54ea3cabbbe631006cc22a80fdbf500585ff20f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: dd2f79238c890d43678332203acbe9d935a54102
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="vmm-vms-vmv-general-purpose-representation"></a>/vmm, /vms, /vmv (Rappresentazione generale)
 Utilizzato quando [/vmb, /vmg (metodo di rappresentazione)](../../build/reference/vmb-vmg-representation-method.md) sia selezionato come il [metodo di rappresentazione](../../build/reference/vmb-vmg-representation-method.md). Queste opzioni indicano il modello di ereditarietà della definizione di classe non ancora rilevata.  
@@ -56,8 +51,8 @@ Utilizzato quando [/vmb, /vmg (metodo di rappresentazione)](../../build/referenc
   
 |Opzione|Descrizione|  
 |------------|-----------------|  
-|**/VMM**|Specifica la rappresentazione più generale di un puntatore a un membro di una classe con una che utilizza l'ereditarietà multipla.<br /><br /> Corrispondente [parola chiave di ereditarietà](../../cpp/inheritance-keywords.md) e l'argomento di [#pragma pointers_to_members](../../preprocessor/pointers-to-members.md) è **multiple_inheritance**.<br /><br /> Questa rappresentazione è supera a quello richiesto per l'ereditarietà singola.<br /><br /> Se il modello di ereditarietà di una definizione di classe per cui viene dichiarato un puntatore a un membro è virtuale, il compilatore genera un errore.|  
-|**/VMS**|Specifica la rappresentazione più generale di un puntatore a un membro di una classe che viene utilizzato alcun ereditarietà o ereditarietà singola.<br /><br /> Corrispondente [parola chiave di ereditarietà](../../cpp/inheritance-keywords.md) e l'argomento di [#pragma pointers_to_members](../../preprocessor/pointers-to-members.md) è **dell'ereditarietà singola**.<br /><br /> Questa è la più piccola rappresentazione possibile di un puntatore a un membro di una classe.<br /><br /> Se il modello di ereditarietà di una definizione di classe per cui viene dichiarato un puntatore a un membro è multiplo o virtuale, il compilatore genera un errore.|  
+|**/vmm**|Specifica la rappresentazione più generale di un puntatore a un membro di una classe con una che utilizza l'ereditarietà multipla.<br /><br /> Corrispondente [parola chiave di ereditarietà](../../cpp/inheritance-keywords.md) e l'argomento di [#pragma pointers_to_members](../../preprocessor/pointers-to-members.md) è **multiple_inheritance**.<br /><br /> Questa rappresentazione è supera a quello richiesto per l'ereditarietà singola.<br /><br /> Se il modello di ereditarietà di una definizione di classe per cui viene dichiarato un puntatore a un membro è virtuale, il compilatore genera un errore.|  
+|**/vms**|Specifica la rappresentazione più generale di un puntatore a un membro di una classe che viene utilizzato alcun ereditarietà o ereditarietà singola.<br /><br /> Corrispondente [parola chiave di ereditarietà](../../cpp/inheritance-keywords.md) e l'argomento di [#pragma pointers_to_members](../../preprocessor/pointers-to-members.md) è **dell'ereditarietà singola**.<br /><br /> Questa è la più piccola rappresentazione possibile di un puntatore a un membro di una classe.<br /><br /> Se il modello di ereditarietà di una definizione di classe per cui viene dichiarato un puntatore a un membro è multiplo o virtuale, il compilatore genera un errore.|  
 |**/vmv**|Specifica la rappresentazione più generale di un puntatore a un membro di una classe con una che utilizza l'ereditarietà virtuale. Mai causa un errore e il valore predefinito.<br /><br /> Corrispondente [parola chiave di ereditarietà](../../cpp/inheritance-keywords.md) e l'argomento di [#pragma pointers_to_members](../../preprocessor/pointers-to-members.md) è **virtual_inheritance**.<br /><br /> Questa opzione richiede un puntatore più grande e codice aggiuntivo per interpretare il puntatore rispetto alle altre opzioni.|  
   
  Quando si specifica una di queste opzioni del modello di ereditarietà, tale modello viene utilizzato per tutti i puntatori ai membri della classe, indipendentemente dal tipo di ereditarietà o se il puntatore viene dichiarato prima o dopo la classe. Pertanto, se si utilizzano sempre classi a ereditarietà singola, è possibile ridurre le dimensioni del codice mediante la compilazione con **/vms**; tuttavia, se si desidera utilizzare il caso più generale (a scapito della rappresentazione dei dati più grande), eseguire la compilazione con **/vmv**.  

@@ -1,13 +1,10 @@
 ---
 title: -Gs (verifica le chiamate ai controlli di Stack) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - /GS
 dev_langs:
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - -GS compiler option [C++]
 - stack checking calls
 ms.assetid: 40daed7c-f942-4085-b872-01e12b37729e
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ff02465b4e1b1a727a2367c8d5e038f30854ecc6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c5665187548b1f8ace41bed281684f1a830c0ad4
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="gs-control-stack-checking-calls"></a>/Gs (Verifica le chiamate ai controlli di stack)
 Controlla le ricerche dello stack.  
@@ -56,9 +51,9 @@ Controlla le ricerche dello stack.
   
  Alcuni programmi, quali i driver di dispositivo virtuali, non necessitano di questo meccanismo di aumento delle dimensioni dello stack. In questi casi, i probe dello stack non sono necessari. È possibile interrompere la generazione dei probe dello stack da parte del compilatore impostando `size` su un valore maggiore di quanto qualsiasi funzione richiederà per l'archiviazione delle variabili locali. Non sono consentiti spazi tra **/Gs** e `size`.  
   
- **/Gs0** attiva ricerche dello stack per ogni chiamata di funzione che richiede l'archiviazione per le variabili locali. Ciò può influire in modo negativo sulle prestazioni.  
+ **/ /Gs0** attiva le ricerche dello stack per ogni chiamata di funzione che richiede l'archiviazione per le variabili locali. Ciò può influire in modo negativo sulle prestazioni.  
   
- È possibile attivare o disattivare le ricerche dello stack utilizzando [check_stack](../../preprocessor/check-stack.md). **/GS** e `check_stack` pragma non hanno alcun effetto sulle routine di libreria C standard, ma influiscono sul solo le funzioni di cui si esegue la compilazione.  
+ È possibile attivare o disattivare le ricerche dello stack utilizzando [check_stack](../../preprocessor/check-stack.md). **/GS** e il `check_stack` pragma non hanno alcun effetto sulle routine di libreria C standard, ma influiscono sul solo le funzioni di cui si esegue la compilazione.  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio  
   

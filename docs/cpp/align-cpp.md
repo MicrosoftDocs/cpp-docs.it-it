@@ -1,12 +1,9 @@
 ---
 title: align (C++) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - align_cpp
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - align __declspec keyword
 - __declspec keyword [C++], align
 ms.assetid: 9cb63f58-658b-4425-ac47-af8eabfc5878
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 10c83ebb195cf4ee75c7be15b4d2ab9607f46743
-ms.sourcegitcommit: 30ab99c775d99371ed22d1a46598e542012ed8c6
+ms.openlocfilehash: ae88262724dfec5702e2769eb10e076502c09342
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="align-c"></a>align (C++)
 
@@ -38,13 +33,13 @@ Usare `__declspec(align(#))` per controllare con precisione l'allineamento dei d
 
 ## <a name="syntax"></a>Sintassi
 
-> **declspec (align (**  *#*  **))** *dichiaratore*  
+> **declspec (align (** *#* **))** *dichiaratore*  
 
 ## <a name="remarks"></a>Note
 
 La scrittura di applicazioni che usano le più recenti istruzioni del processore porta alla luce nuovi vincoli e problemi. In particolare, numerose nuove istruzioni richiedono l'allineamento dei dati su limiti di 16 byte. Allineando i dati usati di frequente alle dimensioni di riga della cache di un processore specifico, è inoltre possibile migliorare le prestazioni della cache. Ad esempio, se si definisce una struttura la cui dimensione è minore di 32 byte, è possibile allinearla a 32 byte per garantire che gli oggetti di tale struttura siano archiviati nella cache in modo efficiente.
 
-\#è il valore di allineamento. Le voci valide sono numeri interi potenze di 2, da 1 a 8192 (byte), ad esempio 2, 4, 8, 16, 32 o 64. `declarator` rappresenta i dati che si stanno dichiarando come allineati.
+\# è il valore di allineamento. Le voci valide sono numeri interi potenze di 2, da 1 a 8192 (byte), ad esempio 2, 4, 8, 16, 32 o 64. `declarator` rappresenta i dati che si stanno dichiarando come allineati.
 
 Per informazioni su come restituire un valore di tipo `size_t` che corrisponde al requisito di allineamento del tipo, vedere [alignof](../cpp/alignof-operator.md). Per informazioni su come dichiarare i puntatori non allineati quando la destinazione processori a 64 bit, vedere [unaligned](../cpp/unaligned.md).
 
@@ -88,13 +83,13 @@ Per altre informazioni, vedere:
 
 - [Definizione di nuovi tipi con __declspec(align(#))](#vclrf_declspecaligntypedef)
 
-- [Allineamento dei dati nell'archiviazione locale di Thread](#vclrfthreadlocalstorageallocation)
+- [Allineamento dei dati nell'archiviazione Thread-Local](#vclrfthreadlocalstorageallocation)
 
-- [Compressione dati funzionamento dell'allineamento](#vclrfhowalignworkswithdatapacking)
+- [Funzionamento con compressione dei dati dell'allineamento](#vclrfhowalignworkswithdatapacking)
 
 - [Esempi di allineamento della struttura](../build/examples-of-structure-alignment.md) (specifico per x64)
 
-##  <a name="vclrfalignexamples"></a>Esempi di allineamento
+##  <a name="vclrfalignexamples"></a> Esempi di allineamento
 
 Negli esempi seguenti viene illustrato come `__declspec(align(#))` influisce sulla dimensione e sull'allineamento delle strutture di dati. Negli esempi si presuppongono le seguenti definizioni:
 
@@ -185,7 +180,7 @@ void fn() {
 
 Se la memoria viene allocata nell'heap, l'allineamento dipende dalla funzione di allocazione che viene chiamata.  Ad esempio, se si usa `malloc`, il risultato dipende dalla dimensione dell'operando. Se *arg* > = 8, la memoria restituita verrà allineata a 8 byte. Se *arg* < 8, l'allineamento della memoria restituita sarà la prima potenza di 2 minore di *arg*. Ad esempio, se si usa malloc(7), l'allineamento sarà a 4 byte.
 
-##  <a name="vclrf_declspecaligntypedef"></a>Definizione di nuovi tipi con __declspec(align(#))
+##  <a name="vclrf_declspecaligntypedef"></a> Definizione di nuovi tipi con __declspec(align(#))
 
 È possibile definire un tipo con una caratteristica di allineamento.
 
@@ -198,7 +193,7 @@ typedef __declspec(align(32)) struct aType bType;
 
 A questo punto, `aType` e `bType` sono le stesse dimensioni (8 byte), ma le variabili di tipo `bType` sono allineati a 32 byte.
 
-##  <a name="vclrfthreadlocalstorageallocation"></a>Allineamento dei dati nell'archiviazione locale di Thread
+##  <a name="vclrfthreadlocalstorageallocation"></a> Allineamento dei dati nell'archiviazione Thread-Local
 
 L'archiviazione locale di thread (TLS, Thread-Local Storage) statici creata con l'attributo `__declspec(thread)` e inserita nella sezione TLS dell'immagine funziona per l'allineamento esattamente come i dati statici normali. Per creare dati TLS, il sistema operativo alloca memoria con la stessa dimensione della sezione TLS e rispetta l'attributo di allineamento della sezione TLS.
 
@@ -221,7 +216,7 @@ struct CACHE_ALIGN S9 {
 __declspec(thread) struct S9 a;
 ```
 
-##  <a name="vclrfhowalignworkswithdatapacking"></a>Compressione dati funzionamento dell'allineamento
+##  <a name="vclrfhowalignworkswithdatapacking"></a> Funzionamento con compressione dei dati dell'allineamento
 
 Il **/Zp** l'opzione del compilatore e `pack` pragma abbiano l'effetto della compressione dei dati per i membri di struttura e unione. Questo esempio viene illustrato come **/Zp** e `__declspec(align(#))` interagiscono tra di loro:
 

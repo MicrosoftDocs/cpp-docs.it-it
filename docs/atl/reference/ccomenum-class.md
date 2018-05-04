@@ -1,12 +1,9 @@
 ---
 title: Classe CComEnum | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CComEnum
@@ -16,17 +13,15 @@ dev_langs:
 helpviewer_keywords:
 - CComEnum class
 ms.assetid: bff7dd7b-eb6e-4d6e-96ed-2706e66c8b3b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 792c5ff95858936d38d9a87350dd3ca405c5ec66
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 17046239cf4ca5cc95afbc709f10b9c8aedaa9fb
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ccomenum-class"></a>Classe CComEnum
 Questa classe definisce un oggetto enumeratore COM basato su una matrice.  
@@ -59,11 +54,11 @@ class ATL_NO_VTABLE CComEnum : public CComEnumImpl<Base, piid,
  Il modello di threading della classe. Questo parametro per impostazione predefinita il modello oggetto globale di thread utilizzato nel progetto.  
   
 ## <a name="remarks"></a>Note  
- `CComEnum`definisce un oggetto enumeratore COM basato su una matrice. Questa classe è analoga a [CComEnumOnSTL](../../atl/reference/ccomenumonstl-class.md) che implementa un enumeratore in base a un contenitore della libreria Standard C++. Di seguito sono descritti i passaggi tipici per l'utilizzo di questa classe. Per ulteriori informazioni, vedere [insiemi ed enumeratori ATL](../../atl/atl-collections-and-enumerators.md).  
+ `CComEnum` definisce un oggetto enumeratore COM basato su una matrice. Questa classe è analoga a [CComEnumOnSTL](../../atl/reference/ccomenumonstl-class.md) che implementa un enumeratore in base a un contenitore della libreria Standard C++. Di seguito sono descritti i passaggi tipici per l'utilizzo di questa classe. Per ulteriori informazioni, vedere [insiemi ed enumeratori ATL](../../atl/atl-collections-and-enumerators.md).  
   
 ## <a name="to-use-this-class"></a>Utilizzare questa classe:  
   
-- `typedef`una specializzazione di questa classe.  
+- `typedef` una specializzazione di questa classe.  
   
 -   Utilizzare il `typedef` come argomento del modello in una specializzazione di `CComObject`.  
   

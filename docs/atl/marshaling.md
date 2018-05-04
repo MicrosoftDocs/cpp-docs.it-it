@@ -1,13 +1,10 @@
 ---
 title: Marshalling | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-atl
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - marshaling
 - COM interfaces, marshaling
 ms.assetid: 40644b0a-1106-4fc8-9dfb-9bee9915d825
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f89b64794c50e381c07749984ce61579951fa02f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d2b8b82d5369aa536dab638efa379089325d10b1
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="marshaling"></a>marshalling
 La tecnica del marshalling COM consente le interfacce esposte da un oggetto in un processo da utilizzare in un altro processo. Effettuare il marshalling, COM fornisce il codice (o utilizza codice fornito dall'implementatore interfaccia) per comprimere i parametri del metodo in un formato che può essere spostato tra processi (nonché attraverso la rete per i processi in esecuzione su altri computer) e decomprimere i parametri a altra estremità. Analogamente, COM è necessario eseguire questi stessi passaggi in restituito dalla chiamata.  
@@ -35,5 +30,5 @@ La tecnica del marshalling COM consente le interfacce esposte da un oggetto in u
   
 ## <a name="see-also"></a>Vedere anche  
  [Introduzione a COM](../atl/introduction-to-com.md)   
- [Dettagli sul marshalling](http://msdn.microsoft.com/library/windows/desktop/ms692621)
+ [Marshalling dei dettagli](http://msdn.microsoft.com/library/windows/desktop/ms692621)
 

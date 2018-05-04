@@ -39,14 +39,13 @@ helpviewer_keywords:
 - hyperbolic functions
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 96d71b77e5abc91136d8c9cc36d1ad6821c2d059
-ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
+ms.openlocfilehash: 220bbeb1d78957be153e23b578f217c8098f7e7d
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sinh-sinhf-sinhl"></a>sinh, sinhf, sinhl
 

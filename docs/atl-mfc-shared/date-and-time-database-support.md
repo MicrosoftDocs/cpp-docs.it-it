@@ -1,12 +1,9 @@
 ---
 title: 'Data e ora: supporto per Database | Documenti Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 dev_langs:
 - C++
@@ -20,24 +17,22 @@ helpviewer_keywords:
 - databases [C++], date/time data
 - COleDateTimeSpan class, database programming
 ms.assetid: 4a57a1bb-fad5-4b70-b32c-42ad75c710c8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 83de3c9fc55b9eafb3863b70dfb1cd6fa6c23de7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5e5047dfb2d8a162cf6d82c07007504df897afa1
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="date-and-time-database-support"></a>Data e ora: supporto per Database
 A partire dalla versione 4.0, MFC database programmazione utilizza il [COleDateTime](../atl-mfc-shared/reference/coledatetime-class.md) e [COleDateTimeSpan](../atl-mfc-shared/reference/coledatetimespan-class.md) classi che rappresentano data e ora. Queste classi, utilizzate anche in Automation, sono derivate dalla classe [COleVariant](../mfc/reference/colevariant-class.md). Offrono un migliore supporto per la gestione di data e ora rispetto a [CTime](../atl-mfc-shared/reference/ctime-class.md) e [CTimeSpan](../atl-mfc-shared/reference/ctimespan-class.md).  
   
 ## <a name="what-do-you-want-to-know-more-about"></a>Ciò che si desidera saperne di più  
   
--   [Supporto di automazione della programmazione di ora e data](../atl-mfc-shared/date-and-time-automation-support.md)  
+-   [Supporto di automazione di data e ora programmazione](../atl-mfc-shared/date-and-time-automation-support.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Data e ora](../atl-mfc-shared/date-and-time.md)

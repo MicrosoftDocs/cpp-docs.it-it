@@ -1,13 +1,10 @@
 ---
-title: "-Os -/Ot (Ottimizza per dimensione codice, Ottimizza per velocità codice) | Documenti Microsoft"
-ms.custom: 
+title: -Os -/Ot (Ottimizza per dimensione codice, Ottimizza per velocità codice) | Documenti Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VC.Project.VCCLWCECompilerTool.FavorSizeOrSpeed
 - /os
@@ -26,17 +23,15 @@ helpviewer_keywords:
 - Os compiler option [C++]
 - -Os compiler option [C++]
 ms.assetid: 9a340806-fa15-4308-892c-355d83cac0f2
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 02ce4b7d5c9617a88450fd90b4ac6c75d41148ea
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9f97ab0a53eb82b65149ea0f27139743e065f7ea
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="os-ot-favor-small-code-favor-fast-code"></a>/Os, /Ot (Ottimizza per dimensione codice, Ottimizza per velocità codice)
 Riduce a icona o ingrandita le dimensioni del file exe e DLL.  
@@ -49,9 +44,9 @@ Riduce a icona o ingrandita le dimensioni del file exe e DLL.
 ```  
   
 ## <a name="remarks"></a>Note  
- **/OS** (Ottimizza codice) riduce le dimensioni dei file exe e DLL indicando al compilatore di privilegiare la velocità di dimensione. Il compilatore può ridurre molti costrutti C e C++ per le sequenze simili a livello funzionale del codice macchina. In alcuni casi queste differenze rappresentano un compromesso tra la dimensione e velocità. Il **/Os** e **/Ot** opzioni consentono di specificare una preferenza per uno di essi:  
+ **/OS** (Ottimizza per dimensione codice) riduce al minimo le dimensioni dei file exe e DLL indicando al compilatore di privilegiare la velocità di dimensione. Il compilatore può ridurre molti costrutti C e C++ per le sequenze simili a livello funzionale del codice macchina. In alcuni casi queste differenze rappresentano un compromesso tra la dimensione e velocità. Il **/Os** e **/Ot** opzioni consentono di specificare una preferenza per uno di essi:  
   
- **/Ot** (Ottimizza per velocità codice) ottimizza la velocità di exe e DLL indicando al compilatore di privilegiare la velocità rispetto alla dimensione. (Questo è il valore predefinito). Il compilatore può ridurre molti costrutti C e C++ per le sequenze simili a livello funzionale del codice macchina. In alcuni casi, queste differenze rappresentano un compromesso tra la dimensione e velocità. L'opzione /Ot implicito Ottimizza velocità ([/O2](../../build/reference/o1-o2-minimize-size-maximize-speed.md)) opzione. Il **/O2** opzione combina diverse opzioni per produrre codice molto veloce.  
+ **/Ot** (Ottimizza per velocità codice) ottimizza la velocità di exe e DLL indicando al compilatore di privilegiare velocità dimensioni. (Questo è il valore predefinito). Il compilatore può ridurre molti costrutti C e C++ per le sequenze simili a livello funzionale del codice macchina. In alcuni casi, queste differenze rappresentano un compromesso tra la dimensione e velocità. L'opzione /Ot implicito Ottimizza velocità ([/O2](../../build/reference/o1-o2-minimize-size-maximize-speed.md)) opzione. Il **/O2** opzione combina diverse opzioni per produrre codice molto veloce.  
   
  Se si utilizza **/Os** o **/Ot**, è necessario specificare anche [/Og](../../build/reference/og-global-optimizations.md) per ottimizzare il codice.  
   

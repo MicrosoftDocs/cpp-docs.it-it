@@ -1,12 +1,9 @@
 ---
 title: estrattori variant_t | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - _variant_t.operatordouble
@@ -57,17 +54,15 @@ helpviewer_keywords:
 - operator BYTE
 - operator IUnknown
 ms.assetid: 33c1782f-045a-4673-9619-1d750efc83a9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8876cd486662ec1c20aea7148563fd28e8790a47
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 65049a473f62e728fcb4d74b581a08c0f1723fc9
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="variantt-extractors"></a>Estrattori _variant_t
 **Sezione specifica Microsoft**  
@@ -101,7 +96,7 @@ operator unsigned __int64() const;
 ## <a name="remarks"></a>Note  
  Estrae i dati non elaborati da un incapsulato **VARIANT**. Se il **VARIANT** non è già il tipo appropriato, **VariantChangeType** viene utilizzato per cercare una conversione e viene generato un errore in caso di errore:  
   
--   **operatore short ()** estrae un **breve** valore intero.  
+-   **operator short ()** estrae un **breve** valore intero.  
   
 -   **operator long ()** estrae un **lungo** valore intero.  
   
@@ -113,15 +108,15 @@ operator unsigned __int64() const;
   
 -   **operator bool ()** estrae un `bool` valore.  
   
--   **operator (decimale)** estrae un **decimale** valore.  
+-   **operator DECIMAL ()** estrae un **decimale** valore.  
   
 -   **operator BYTE ()** estrae un **BYTE** valore.  
   
 -   **operatore bstr_t ()** estrae una stringa, che viene incapsulata in un `_bstr_t` oggetto.  
   
--   **operatore IDispatch\*()** estrae un puntatore a interfaccia dispatch da un incapsulato **VARIANT**. `AddRef`viene chiamato sul puntatore risultante, pertanto è responsabilità dell'utente chiamare **versione** per liberarlo.  
+-   **operatore IDispatch\*()** estrae un puntatore a interfaccia dispatch da un incapsulato **VARIANT**. `AddRef` viene chiamato sul puntatore risultante, pertanto è responsabilità dell'utente per chiamare **versione** per liberarlo.  
   
--   **operatore IUnknown\*()** estrae un puntatore a interfaccia COM da un incapsulato **VARIANT**. `AddRef`viene chiamato sul puntatore risultante, pertanto è responsabilità dell'utente chiamare **versione** per liberarlo.  
+-   **operatore IUnknown\*()** estrae un puntatore a interfaccia COM da un incapsulato **VARIANT**. `AddRef` viene chiamato sul puntatore risultante, pertanto è responsabilità dell'utente per chiamare **versione** per liberarlo.  
   
  **Fine sezione specifica Microsoft**  
   

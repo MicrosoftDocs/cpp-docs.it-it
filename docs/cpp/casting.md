@@ -1,12 +1,9 @@
 ---
 title: Esegue il cast | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -19,29 +16,27 @@ helpviewer_keywords:
 - polymorphic classes [C++]
 - classes [C++], polymorphism
 ms.assetid: 3dbeb06e-2f4b-4693-832d-624bc8ec95de
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9974b86f99164257e854bffd07393b96998040ff
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 07abd7c6a6a5c646dade15299fe6cfe78d9ff1d8
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="casting"></a>Cast
 Nel linguaggio C++ se una classe è derivata da una classe base che contiene funzioni virtuali, un puntatore a quel tipo della classe base può essere utilizzato per chiamare le implementazioni delle funzioni virtuali che si trovano nell'oggetto classe derivata. La classe che contiene le funzioni virtuali è talvolta detta "classe polimorfica".  
   
  Poiché una classe derivata completamente contiene le definizioni di tutte le classi di base da cui deriva, è possibile eseguire il cast di un puntatore alla gerarchia di classi a una di queste classi base. Dato un puntatore a una classe base, è possibile eseguire la riduzione del puntatore nella gerarchia. Questo è possibile se l'oggetto a cui si sta puntando è effettivamente di un tipo derivato dalla classe base. In questo caso, l'oggetto effettivo è definito "oggetto completo". Al puntatore alla classe base viene detto di puntare a un "oggetto secondario" dell'intero oggetto. Si consideri ad esempio la gerarchia di classe illustrata nella figura che segue.  
   
- ![Gerarchia di classi](../cpp/media/vc38zz1.gif "vc38ZZ1")  
+ ![Gerarchia delle classi](../cpp/media/vc38zz1.gif "vc38ZZ1")  
 Gerarchia di classi  
   
  Un oggetto di tipo `C` potrebbe essere visualizzato come illustrato di seguito.  
   
- ![Classe C con sub &#45; oggetti B e A](../cpp/media/vc38zz2.gif "vc38ZZ2")  
+ ![Classe C con sub&#45;gli oggetti A e B](../cpp/media/vc38zz2.gif "vc38ZZ2")  
 La classe C con oggetto secondario B e oggetto secondario A  
   
  Data un'istanza della classe `C`, esiste un oggetto secondario `B` e un oggetto secondario `A`. L'istanza di `C`, inclusi gli oggetti secondari `A` e `B`, è "l'oggetto completo".  
@@ -54,7 +49,7 @@ La classe C con oggetto secondario B e oggetto secondario A
   
 -   [Operatori di cast](../cpp/casting-operators.md)  
   
--   [Informazioni sul tipo in fase di esecuzione](../cpp/run-time-type-information.md)  
+-   [Informazioni sui tipi in fase di esecuzione](../cpp/run-time-type-information.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Espressioni](../cpp/expressions-cpp.md)

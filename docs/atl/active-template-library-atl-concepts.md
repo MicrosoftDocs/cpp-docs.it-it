@@ -1,29 +1,24 @@
 ---
 title: Concetti di Active Template Library (ATL) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-atl
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - ATL, about ATL
 ms.assetid: a3960991-4d76-4da5-9568-3fa7fde53ff4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c7cf2568005049cfabd9178ea4c8732a5a985954
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5636f92df42116b838c24c21d81f0b320f7d69c1
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="active-template-library-atl-concepts"></a>Concetti relativi alla Libreria ATL (Active Template Library)
 La libreria ATL (Active Template) è un set di classi C++ basate su modelli che consentono di creare gli oggetti modello COM (Component Object) di piccola e veloce. Include un supporto speciale per le principali funzionalità COM, incluse le implementazioni predefinite, le interfacce duali, interfacce di enumeratore COM standard, punti di connessione, interfacce tear-off e controlli ActiveX.  
@@ -67,7 +62,7 @@ La libreria ATL (Active Template) è un set di classi C++ basate su modelli che 
  [ATL e il gestore del marshalling con modello di threading Free](../atl/atl-and-the-free-threaded-marshaler.md)  
  Fornisce informazioni dettagliate sull'opzione ATL semplice oggetto della procedura guidata che consente la classe di aggregazione gestore (FTM).  
   
- [Specifica il modello di Threading del progetto](../atl/specifying-the-threading-model-for-a-project-atl.md)  
+ [Specifica modello di Threading del progetto](../atl/specifying-the-threading-model-for-a-project-atl.md)  
  Descrive le macro che è possibile controllare le prestazioni in fase di esecuzione correlate al threading nel progetto.  
   
  [Classi di modulo ATL](../atl/atl-module-classes.md)  

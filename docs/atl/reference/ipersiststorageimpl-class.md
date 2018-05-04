@@ -1,12 +1,9 @@
 ---
 title: Classe IPersistStorageImpl | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - IPersistStorageImpl
@@ -24,17 +21,15 @@ helpviewer_keywords:
 - storage, ATL
 - IPersistStorageImpl class
 ms.assetid: d652f02c-239c-47c7-9a50-3e9fc3014fff
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0bb02425c906a9d468d53691469dd7e418afcad3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 18f03ba235fdfc14dba22f1759240bd5fb72bafd
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ipersiststorageimpl-class"></a>Classe IPersistStorageImpl
 Questa classe implementa il [IPersistStorage](http://msdn.microsoft.com/library/windows/desktop/ms679731) interfaccia.  
@@ -68,7 +63,7 @@ class ATL_NO_VTABLE IPersistStorageImpl : public IPersistStorage
 |[IPersistStorageImpl::SaveCompleted](#savecompleted)|Notifica a un oggetto che è possibile restituire in modalità normale in cui scrivere il relativo oggetto di archiviazione. Restituisce l'implementazione di ATL `S_OK`.|  
   
 ## <a name="remarks"></a>Note  
- `IPersistStorageImpl`implementa il [IPersistStorage](http://msdn.microsoft.com/library/windows/desktop/ms679731) interfaccia, che consente a un client di richiedere che il carico di oggetto e salvare i dati persistenti con uno spazio di archiviazione.  
+ `IPersistStorageImpl` implementa il [IPersistStorage](http://msdn.microsoft.com/library/windows/desktop/ms679731) interfaccia, che consente a un client di richiedere che il carico di oggetto e salvare i dati persistenti utilizzando uno spazio di archiviazione.  
   
  L'implementazione di questa classe richiede classe `T` per un'implementazione di rendere il `IPersistStreamInit` interfaccia disponibile tramite `QueryInterface`. In genere ciò significa che classe `T` deve derivare da [IPersistStreamInitImpl](../../atl/reference/ipersiststreaminitimpl-class.md), fornire una voce per `IPersistStreamInit` nel [mappa COM](http://msdn.microsoft.com/library/ead2a1e3-334d-44ad-bb1f-b94bb14c2333)e utilizzare un [mappingdiproprietà](http://msdn.microsoft.com/library/bfe30be6-62c3-4dc2-bd49-21ef96f15427) per descrivere i dati della classe.  
   
@@ -82,7 +77,7 @@ class ATL_NO_VTABLE IPersistStorageImpl : public IPersistStorage
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** atlcom. h  
   
-##  <a name="getclassid"></a>IPersistStorageImpl::GetClassID  
+##  <a name="getclassid"></a>  IPersistStorageImpl::GetClassID  
  Recupera il CLSID dell'oggetto.  
   
 ```
@@ -92,7 +87,7 @@ STDMETHOD(GetClassID)(CLSID* pClassID);
 ### <a name="remarks"></a>Note  
  Vedere [IPersist:: GetClassID](http://msdn.microsoft.com/library/windows/desktop/ms688664) in Windows SDK.  
   
-##  <a name="handsoffstorage"></a>IPersistStorageImpl::HandsOffStorage  
+##  <a name="handsoffstorage"></a>  IPersistStorageImpl::HandsOffStorage  
  Indica l'oggetto per rilasciare tutti gli oggetti di archiviazione e passare alla modalità HandsOff.  
   
 ```
@@ -105,7 +100,7 @@ STDMETHOD(HandsOffStorage)(void);
 ### <a name="remarks"></a>Note  
  Vedere [IPersistStorage::HandsOffStorage](http://msdn.microsoft.com/library/windows/desktop/ms679742) in Windows SDK.  
   
-##  <a name="initnew"></a>IPersistStorageImpl::InitNew  
+##  <a name="initnew"></a>  IPersistStorageImpl::InitNew  
  Inizializza una nuova risorsa di archiviazione.  
   
 ```
@@ -117,7 +112,7 @@ STDMETHOD(InitNew)(IStorage*);
   
  Vedere [IPersistStorage:InitNew](http://msdn.microsoft.com/library/windows/desktop/ms687194) in Windows SDK.  
   
-##  <a name="isdirty"></a>IPersistStorageImpl::IsDirty  
+##  <a name="isdirty"></a>  IPersistStorageImpl::IsDirty  
  Controlla se i dati dell'oggetto è stato modificato dopo l'ultimo salvataggio.  
   
 ```
@@ -129,7 +124,7 @@ STDMETHOD(IsDirty)(void);
   
  Vedere [IPersistStorage:IsDirty](http://msdn.microsoft.com/library/windows/desktop/ms683910) in Windows SDK.  
   
-##  <a name="load"></a>IPersistStorageImpl::Load  
+##  <a name="load"></a>  IPersistStorageImpl::Load  
  Carica le proprietà dell'oggetto dalla risorsa di archiviazione specificato.  
   
 ```
@@ -141,7 +136,7 @@ STDMETHOD(Load)(IStorage* pStorage);
   
  Vedere [IPersistStorage:Load](http://msdn.microsoft.com/library/windows/desktop/ms680557) in Windows SDK.  
   
-##  <a name="save"></a>IPersistStorageImpl::Save  
+##  <a name="save"></a>  IPersistStorageImpl::Save  
  Salva le proprietà dell'oggetto di archiviazione specificato.  
   
 ```
@@ -153,7 +148,7 @@ STDMETHOD(Save)(IStorage* pStorage, BOOL fSameAsLoad);
   
  Vedere [IPersistStorage:Save](http://msdn.microsoft.com/library/windows/desktop/ms680680) in Windows SDK.  
   
-##  <a name="savecompleted"></a>IPersistStorageImpl::SaveCompleted  
+##  <a name="savecompleted"></a>  IPersistStorageImpl::SaveCompleted  
  Notifica a un oggetto che è possibile restituire in modalità normale in cui scrivere il relativo oggetto di archiviazione.  
   
 ```

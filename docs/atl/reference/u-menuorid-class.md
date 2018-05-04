@@ -1,12 +1,9 @@
 ---
 title: Classe _U_MENUorID | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - ATL._U_MENUorID
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - U_MENUorID class
 - _U_MENUorID class
 ms.assetid: cfc8032b-61b4-4a68-ba3a-92b82500ccae
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7ddde6ff5d45c90e675bd2e44ac421e840d1357b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 847a735cdba6b9ff4173e23acf78ea7dc4d3034c
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="umenuorid-class"></a>Classe _U_MENUorID
 Questa classe fornisce wrapper per **CreateWindow** e **CreateWindowEx**.  
@@ -67,14 +62,14 @@ class _U_MENUorID
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** atlwin. h  
   
-##  <a name="_u_menuorid__m_hmenu"></a>_U_MENUorID::m_hMenu  
+##  <a name="_u_menuorid__m_hmenu"></a>  _U_MENUorID::m_hMenu  
  La classe contiene il valore passato a uno dei suoi costruttori come pubblica `HMENU` (membro dati).  
   
 ```
 HMENU m_hMenu;
 ```  
   
-##  <a name="_u_menuorid___u_menuorid"></a>_U_MENUorID::_U_MENUorID  
+##  <a name="_u_menuorid___u_menuorid"></a>  _U_MENUorID::_U_MENUorID  
  Il **UINT** argomento è sufficiente eseguire il cast a un `HMENU` nel costruttore e il risultato memorizzato nel membro dati della classe, [m_hMenu](#_u_menuorid__m_hmenu).  
   
 ```

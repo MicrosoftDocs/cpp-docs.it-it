@@ -1,12 +1,9 @@
 ---
 title: Classe CNonStatelessWorker | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CNonStatelessWorker
@@ -20,17 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - CNonStatelessWorker class
 ms.assetid: d00936c6-9e7d-49fb-b87d-417b963367d1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 565324b4853880f8dcfafd83f9ba03439b4a7efa
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: de03ded4bc0021a8884f608d10368e3d09c11cf8
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cnonstatelessworker-class"></a>Classe CNonStatelessWorker
 Riceve richieste da un pool di thread e li passa un oggetto di lavoro che viene creato ed eliminato in ogni richiesta.  
@@ -68,12 +63,12 @@ class CNonStatelessWorker
 ## <a name="remarks"></a>Note  
  Questa classe è un thread di lavoro semplice per l'utilizzo con [CThreadPool](../../atl/reference/cthreadpool-class.md). Questa classe non fornisce tutte le funzionalità della propria gestione delle richieste. Al contrario, viene creata un'istanza di un'istanza di *lavoro* per ogni richiesta e delegati di implementazione dei metodi a tale istanza.  
   
- Il vantaggio di questa classe è che fornisce un modo pratico per modificare il modello di stato per le classi di thread di lavoro esistenti. `CThreadPool`verrà creato un singolo lavoro per la durata del thread, pertanto se la classe di lavoro contiene stato, che esso può contenere più richieste. Eseguendo semplicemente il wrapping di tale classe nel `CNonStatelessWorker` modello prima di utilizzarlo con `CThreadPool`, la durata del thread di lavoro e lo stato, contiene è limitato a una singola richiesta.  
+ Il vantaggio di questa classe è che fornisce un modo pratico per modificare il modello di stato per le classi di thread di lavoro esistenti. `CThreadPool` verrà creato un singolo lavoro per la durata del thread, pertanto se la classe di lavoro contiene stato, che esso può contenere più richieste. Eseguendo semplicemente il wrapping di tale classe nel `CNonStatelessWorker` modello prima di utilizzarlo con `CThreadPool`, la durata del thread di lavoro e lo stato, contiene è limitato a una singola richiesta.  
   
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** atlutil. h  
   
-##  <a name="execute"></a>CNonStatelessWorker::Execute  
+##  <a name="execute"></a>  CNonStatelessWorker::Execute  
  Implementazione di [WorkerArchetype::Execute](worker-archetype.md#execute).  
 
   
@@ -88,7 +83,7 @@ void Execute(
  Questo metodo crea un'istanza di *lavoro* classe stack e chiamate [inizializzare](worker-archetype.md#initialize) su tale oggetto. Se l'inizializzazione ha esito positivo, questo metodo chiama anche [Execute](worker-archetype.md#execute) e [Terminate](worker-archetype.md#terminate) sullo stesso oggetto.  
 
   
-##  <a name="initialize"></a>CNonStatelessWorker::Initialize  
+##  <a name="initialize"></a>  CNonStatelessWorker::Initialize  
  Implementazione di [WorkerArchetype::Initialize](worker-archetype.md#initialize).  
   
 ```
@@ -101,7 +96,7 @@ BOOL Initialize(void* /* pvParam */) throw();
 ### <a name="remarks"></a>Note  
  Questa classe non esegue le operazioni di inizializzazione `Initialize`.  
   
-##  <a name="requesttype"></a>CNonStatelessWorker::RequestType  
+##  <a name="requesttype"></a>  CNonStatelessWorker::RequestType  
  Implementazione di [WorkerArchetype::RequestType](worker-archetype.md#requesttype).  
   
 ```
@@ -111,7 +106,7 @@ typedef Worker::RequestType RequestType;
 ### <a name="remarks"></a>Note  
  Questa classe gestisce lo stesso tipo di elemento di lavoro utilizzata per la *lavoro* parametro di modello. Vedere [CNonStatelessWorker Panoramica](../../atl/reference/cnonstatelessworker-class.md) per informazioni dettagliate.  
   
-##  <a name="terminate"></a>CNonStatelessWorker::Terminate  
+##  <a name="terminate"></a>  CNonStatelessWorker::Terminate  
  Implementazione di [WorkerArchetype::Terminate](worker-archetype.md#terminate).  
   
 ```

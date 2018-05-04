@@ -1,30 +1,25 @@
 ---
 title: Riferimento a ERRLOOK | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - ErrLook tool
 - Error lookup tool
 ms.assetid: 6040ffc1-2355-4a45-8998-84cbcba4ca91
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b35e0fa4c11c0cf2b42990f8265281acaa70ed18
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0ab70e590c0dd4db67f97f170f4e6ead05318704
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="errlook-reference"></a>Riferimento a ERRLOOK
 L'utilità ERRLOOK, accessibile dal menu Strumenti come **ricerca errori**, recupera un messaggio di errore di sistema o di un messaggio di errore modulo in base al valore immesso. ERRLOOK recupera automaticamente il testo del messaggio di errore se si trascina un valore esadecimale o decimale dal debugger di Visual Studio nel **valore** controllo edit. È possibile immettere un valore una digitandolo il **valore** controllo di modifica o si incolla dagli Appunti e facendo clic su **Cerca**.  

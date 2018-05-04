@@ -1,13 +1,10 @@
 ---
 title: Parole chiave (C++) | Documenti Microsoft
-ms.custom: 
+ms.custom: index-page
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: 'index-page '
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - Microsoft-specific keywords
 - __identifer keyword [C++]
 ms.assetid: d7ca94a8-f785-41ce-9f73-d3c4fd508489
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: db9cd28719b1ced8efee124a4b75fbd362de60e1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 547a38b0adfd6f1dac5d8c181ed98ccfe07aea32
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="keywords-c"></a>Parole chiave (C++)
 Le parole chiave sono identificatori riservati predefiniti che hanno un significato particolare. Nel programma non è possibile usarle come identificatori. Le seguenti parole chiave sono riservate a Microsoft C++. I nomi con caratteri di sottolineatura iniziali sono estensioni Microsoft.  
@@ -62,27 +57,27 @@ Le parole chiave sono identificatori riservati predefiniti che hanno un signific
 |[enum struct](../windows/enum-class-cpp-component-extensions.md)|[event](../windows/event-cpp-component-extensions.md)|[explicit](../cpp/user-defined-type-conversions-cpp.md)|  
 |[extern](../cpp/using-extern-to-specify-linkage.md)|[false](../cpp/false-cpp.md)|[finally](../dotnet/finally.md)|  
 |[float](../cpp/fundamental-types-cpp.md)|[for](../cpp/for-statement-cpp.md)|[for each, in](../dotnet/for-each-in.md)|  
-|[Friend](../cpp/friend-cpp.md)|[friend_as](../preprocessor/hash-using-directive-cpp.md)|[gcnew](../windows/ref-new-gcnew-cpp-component-extensions.md)|  
-|[generico](../windows/generics-cpp-component-extensions.md)|[goto](../cpp/goto-statement-cpp.md)|[if](../cpp/if-else-statement-cpp.md)|  
-|[initonly](../dotnet/initonly-cpp-cli.md)|[inline](../cpp/inline-functions-cpp.md)|[int](../cpp/fundamental-types-cpp.md)|  
+|[friend](../cpp/friend-cpp.md)|[friend_as](../preprocessor/hash-using-directive-cpp.md)|[gcnew](../windows/ref-new-gcnew-cpp-component-extensions.md)|  
+|[Generico](../windows/generics-cpp-component-extensions.md)|[goto](../cpp/goto-statement-cpp.md)|[if](../cpp/if-else-statement-cpp.md)|  
+|[initonly](../dotnet/initonly-cpp-cli.md)|[Inline](../cpp/inline-functions-cpp.md)|[int](../cpp/fundamental-types-cpp.md)|  
 |[classe di interfaccia](../windows/interface-class-cpp-component-extensions.md)|[struct di interfaccia](../windows/interface-class-cpp-component-extensions.md)|[interior_ptr](../windows/interior-ptr-cpp-cli.md)|  
-|[valore letterale](../windows/literal-cpp-component-extensions.md)|[long](../cpp/fundamental-types-cpp.md)|[modificabile](../cpp/mutable-data-members-cpp.md)|  
+|[Valore letterale](../windows/literal-cpp-component-extensions.md)|[long](../cpp/fundamental-types-cpp.md)|[Modificabile](../cpp/mutable-data-members-cpp.md)|  
 |[naked](../cpp/naked-cpp.md) <sup>1</sup>|[namespace](namespaces-cpp.md)|[new](../windows/new-new-slot-in-vtable-cpp-component-extensions.md)|  
 |[new](../cpp/new-operator-cpp.md)|[noinline](../cpp/noinline.md) <sup>1</sup>|[noreturn](../cpp/noreturn.md) <sup>1</sup>|  
 |[nothrow](../cpp/nothrow-cpp.md) <sup>1</sup>|[novtable](../cpp/novtable.md) <sup>1</sup>|[nullptr](../cpp/nullptr.md)|  
 |[operator](../cpp/operator-overloading.md)|[private](../cpp/private-cpp.md)|[proprietà](../windows/property-cpp-component-extensions.md)|  
 |[proprietà](../cpp/property-cpp.md) <sup>1</sup>|[protected](../cpp/protected-cpp.md)|[public](../cpp/public-cpp.md)|  
-|[classe di riferimento](../windows/classes-and-structs-cpp-component-extensions.md)|[uno struct di riferimento](../windows/classes-and-structs-cpp-component-extensions.md)|[register](../cpp/storage-classes-cpp.md#register)|  
+|[classe di riferimento](../windows/classes-and-structs-cpp-component-extensions.md)|[struct di riferimento](../windows/classes-and-structs-cpp-component-extensions.md)|[register](../cpp/storage-classes-cpp.md#register)|  
 |[reinterpret_cast](../cpp/reinterpret-cast-operator.md)|[return](../cpp/return-statement-cpp.md)|[safecast](../windows/safe-cast-cpp-component-extensions.md)|  
 |[sealed](../windows/sealed-cpp-component-extensions.md)|[selectany](../cpp/selectany.md) <sup>1</sup>|[short](../cpp/fundamental-types-cpp.md)|  
 |[signed](../cpp/fundamental-types-cpp.md)|[sizeof](../cpp/sizeof-operator.md)|[static](storage-classes-cpp.md)|  
 |[static_assert](../cpp/static-assert.md)|[static_cast](../cpp/static-cast-operator.md)|[struct](../cpp/struct-cpp.md)|  
-|[switch](../cpp/switch-statement-cpp.md)|[modello](templates-cpp.md)|[this](../cpp/this-pointer.md)|  
+|[switch](../cpp/switch-statement-cpp.md)|[Modello](templates-cpp.md)|[this](../cpp/this-pointer.md)|  
 |[thread](../cpp/thread.md) <sup>1</sup>|[throw](../cpp/try-throw-and-catch-statements-cpp.md)|[true](../cpp/true-cpp.md)|  
 |[try](../cpp/try-throw-and-catch-statements-cpp.md)|[typedef](aliases-and-typedefs-cpp.md)|[typeid](../cpp/typeid-operator.md)|  
 |[typeid](../windows/typeid-cpp-component-extensions.md)|[typename](../cpp/typename.md)|[union](../cpp/unions.md)|  
-|[unsigned](../cpp/fundamental-types-cpp.md)|[utilizzando](../cpp/using-declaration.md) dichiarazione, [utilizzando](namespaces-cpp.md#using_directives) (direttiva)|[UUID](../cpp/uuid-cpp.md) <sup>1</sup>|  
-|[classe di valore](../windows/classes-and-structs-cpp-component-extensions.md)|[struct di valore](../windows/classes-and-structs-cpp-component-extensions.md)|[virtual](../cpp/virtual-cpp.md)|  
+|[unsigned](../cpp/fundamental-types-cpp.md)|[utilizzo](../cpp/using-declaration.md) dichiarazione [utilizzando](namespaces-cpp.md#using_directives) (direttiva)|[UUID](../cpp/uuid-cpp.md) <sup>1</sup>|  
+|[classe di valori](../windows/classes-and-structs-cpp-component-extensions.md)|[struct di valore](../windows/classes-and-structs-cpp-component-extensions.md)|[virtual](../cpp/virtual-cpp.md)|  
 |[void](../cpp/void-cpp.md)|[volatile](../cpp/volatile-cpp.md)|[while](../cpp/while-statement-cpp.md)|  
   
  1 attributi estesi per il `__declspec` (parola chiave).  

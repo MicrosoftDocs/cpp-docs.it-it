@@ -1,12 +1,9 @@
 ---
 title: Conversioni di tipi (C++) definito dall'utente | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - explicit_cpp
@@ -31,20 +28,18 @@ helpviewer_keywords:
 - conversions [C++], by constructors
 - data type conversion [C++], explicit
 ms.assetid: d40e4310-a190-4e95-a34c-22c5c20aa0b9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 561730527a215d5314f7239affc764d9f5925f67
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: dfe76a74a46a6da48e22cc07232457f8c0957fbc
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="user-defined-type-conversions-c"></a>Conversioni di tipi definite dall'utente (C++)
-Oggetto *conversione* produce un nuovo valore di un tipo da un valore di un tipo diverso. *Conversioni standard* sono incorporate nel linguaggio C++ e supporto relativi tipi incorporati ed è possibile creare *conversioni definite dall'utente* per eseguire conversioni a, da oppure tra tipi definiti dall'utente.  
+Oggetto *conversione* produce un nuovo valore di un tipo da un valore di un tipo diverso. *Conversioni standard* sono incorporate nel linguaggio C++ e supporto relativi tipi incorporati ed è possibile creare *le conversioni definite dall'utente* per eseguire conversioni a, da oppure tra tipi definiti dall'utente.  
   
  Le conversioni standard avvengono tra tipi incorporati, tra puntatori o riferimenti ai tipi correlati per ereditarietà, a e da puntatori void e al puntatore null. Per ulteriori informazioni, vedere [conversioni Standard](../cpp/standard-conversions.md). Le conversioni definite dall'utente avvengono tra tipi definiti dall'utente oppure tra tipi definiti dall'utente e tipi incorporati. È possibile implementare come [costruttori di conversione](#ConvCTOR) o come [funzioni di conversione](#ConvFunc).  
   
@@ -83,7 +78,7 @@ Oggetto *conversione* produce un nuovo valore di un tipo da un valore di un tipo
   
  È possibile applicare la parola chiave `explicit` ai costruttori di conversione fin da C++98 e alle funzioni di conversione fin da C++11. Nelle sezioni seguenti sono fornite altre informazioni sull'uso della parola chiave `explicit`.  
   
-##  <a name="ConvCTOR"></a>Costruttori di conversione  
+##  <a name="ConvCTOR"></a> Costruttori di conversione  
  I costruttori di conversione definiscono le conversioni da tipi definiti dall'utente o incorporati in un tipo definito dall'utente. L'esempio seguente dimostra un costruttore di conversione che consente di eseguire una conversione dal tipo incorporato `double` a un tipo definito dall'utente `Money`.  
   
 ```  
@@ -164,7 +159,7 @@ int main(int argc, char* argv[])
   
  Benché la comodità di consentire conversioni implicite sia allettante, ciò potrebbe introdurre bug difficili da risolvere. La regola empirica consiste nel rendere espliciti tutti i costruttori di conversione, tranne quando si è sicuri di volere che una specifica conversione avvenga in maniera implicita.  
   
-##  <a name="ConvFunc"></a>Funzioni di conversione  
+##  <a name="ConvFunc"></a> Funzioni di conversione  
  Le funzioni di conversione consentono di definire le conversioni da un tipo definiti dall'utente verso altri tipi. Queste funzioni sono spesso denominate "operatori di cast" perché, assieme ai costruttori, vengono chiamate quando un valore viene sottoposto a cast di un tipo differente. L'esempio seguente dimostra una funzione di conversione che consente di eseguire una conversione dal tipo definito dall'utente `Money` a un tipo incorporato `double`.  
   
 ```  

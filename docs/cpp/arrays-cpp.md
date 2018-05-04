@@ -1,12 +1,9 @@
 ---
 title: Matrici (C++) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - multidimensional arrays [C++]
 - arrays [C++]
 ms.assetid: 3f5986aa-485c-4ba4-9502-67e2ef924238
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b23727d7f6f5e8adcc220d57907a1d61f430bde3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0fe8e5f53d05ac159fd577b260268f297b59d146
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="arrays-c"></a>Matrici (C++)
 Una matrice è una raccolta di oggetti simili. Il caso più semplice di una matrice è un vettore che può essere dichiarato dalla seguente sequenza:  
@@ -57,7 +52,7 @@ decl-specifier identifier [ constant-expression ]
   
  3. Inizializzatore facoltativo.  Vedere [inizializzatori](../cpp/initializers.md).  
   
- Il numero di elementi nella matrice è dato dall'espressione costante. Il primo elemento nella matrice è l'elemento 0 e l'ultimo elemento è il (*n*-1) elemento, in cui  *n*  è il numero di elementi della matrice può contenere. Il *espressione costante* deve essere di tipo integrale e deve essere maggiore di 0. Una matrice con dimensione zero è valida solo quando la matrice è l'ultimo campo in un `struct` o **unione** e quando le estensioni Microsoft (/Ze) sono abilitate.  
+ Il numero di elementi nella matrice è dato dall'espressione costante. Il primo elemento nella matrice è l'elemento 0 e l'ultimo elemento è il (*n*-1) elemento, in cui *n* è il numero di elementi della matrice può contenere. Il *espressione costante* deve essere di tipo integrale e deve essere maggiore di 0. Una matrice con dimensione zero è valida solo quando la matrice è l'ultimo campo in un `struct` o **unione** e quando le estensioni Microsoft (/Ze) sono abilitate.  
   
  Nell'esempio seguente viene illustrato come definire una matrice in fase di esecuzione:  
   
@@ -92,7 +87,7 @@ int i2[5][7];
   
  Specifica una matrice di tipo `int`, disposta concettualmente in una matrice bidimensionale di cinque righe e sette colonne, come illustrato nella seguente immagine:  
   
- ![Layout concettuale di un multiplo &#45; matrice dimensionale](../cpp/media/vc38rc1.gif "vc38RC1")  
+ ![Layout concettuale di un multi&#45;una matrice unidimensionale](../cpp/media/vc38rc1.gif "vc38RC1")  
 Layout concettuale di matrice multidimensionale  
   
  Nelle dichiarazioni di matrici a più dimensioni contenenti un elenco di inizializzatori (come descritto in [inizializzatori](../cpp/initializers.md)), l'espressione costante che specifica i limiti per la prima dimensione può essere omesso. Ad esempio:  

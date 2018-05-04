@@ -36,14 +36,13 @@ helpviewer_keywords:
 - hyperbolic functions
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b2482a6e6e51efea50cac6a5a56154f5dc85663d
-ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
+ms.openlocfilehash: d77bb1d1b8f055bb4fe11d4c44c48fb3bf3be535
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cosh-coshf-coshl"></a>cosh, coshf, coshl
 

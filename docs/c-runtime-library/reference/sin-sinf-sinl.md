@@ -39,14 +39,13 @@ helpviewer_keywords:
 ms.assetid: 737de73e-3590-45f9-8257-dc1c0c489dfc
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 08d88f871ee1b5d9d89004ed6874bbe44d12fb5a
-ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
+ms.openlocfilehash: f99e7792e177c6203d38a368f3dd4125fe848a76
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sin-sinf-sinl"></a>sin, sinf, sinl
 

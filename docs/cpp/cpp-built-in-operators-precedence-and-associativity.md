@@ -2,11 +2,8 @@
 title: Operatori C++ predefiniti, precedenza e associatività | Documenti Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - evaluation order
 - hierarchy, operator
 ms.assetid: 95c1f0ba-dad8-4034-b039-f79a904f112f
-caps.latest.revision: 13
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 95cbb68740fe43fa8a76624abb57284cb68e7805
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d4d2bb339d4147e6ea82c713d83a046e0e9780bb
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="c-built-in-operators-precedence-and-associativity"></a>Operatori C++ predefiniti, precedenza e associazione
 
@@ -43,20 +38,20 @@ Operatore *precedenza* specifica l'ordine delle operazioni nelle espressioni che
 
 |Descrizione dell'operatore|Operatore|
 |--------------------------|--------------|
-|**Gruppo 1 precedenza, non associatività**|
+|**Gruppo 1 precedenza, non un'associatività da**|
 |[Risoluzione ambito](../cpp/scope-resolution-operator.md)|[::](../cpp/scope-resolution-operator.md)|
 |**Precedenza gruppo 2, per un'associatività da destra a sinistra**|
-|[Selezione membro (oggetto o puntatore)](../cpp/member-access-operators-dot-and.md)|[. - >](../cpp/member-access-operators-dot-and.md)|
+|[Selezione dei membri (oggetto o puntatore)](../cpp/member-access-operators-dot-and.md)|[. - >](../cpp/member-access-operators-dot-and.md)|
 |[Indice di matrice](../cpp/subscript-operator.md)|[&#91;&#93;](../cpp/subscript-operator.md)|
 |[Chiamata di funzione](../cpp/function-call-operator-parens.md)|[()](../cpp/function-call-operator-parens.md)|
 |[Incremento suffisso](../cpp/postfix-increment-and-decrement-operators-increment-and-decrement.md)|[++](../cpp/postfix-increment-and-decrement-operators-increment-and-decrement.md)|
 |[Decremento suffisso](../cpp/postfix-increment-and-decrement-operators-increment-and-decrement.md)|[--](../cpp/postfix-increment-and-decrement-operators-increment-and-decrement.md)|
 |[Nome del tipo](../cpp/typeid-operator.md)|[typeid](../cpp/typeid-operator.md)|
 |[Conversione di tipi costanti](../cpp/const-cast-operator.md)|[const_cast](../cpp/const-cast-operator.md)|
-|[Conversione di tipo dinamico](../cpp/dynamic-cast-operator.md)|[dynamic_cast](../cpp/dynamic-cast-operator.md)|
+|[Conversioni di tipi dinamici](../cpp/dynamic-cast-operator.md)|[dynamic_cast](../cpp/dynamic-cast-operator.md)|
 |[Conversione di tipi reinterpretati](../cpp/reinterpret-cast-operator.md)|[reinterpret_cast](../cpp/reinterpret-cast-operator.md)|
-|[Conversione di tipo statico](../cpp/static-cast-operator.md)|[static_cast](../cpp/static-cast-operator.md)|
-|**Precedenza gruppo 3, da destra a sinistra associatività**|
+|[Conversioni di tipi statici](../cpp/static-cast-operator.md)|[static_cast](../cpp/static-cast-operator.md)|
+|**Precedenza gruppo 3, da destra a un'associatività da sinistra**|
 |[Dimensione dell'oggetto o tipo](../cpp/sizeof-operator.md)|[sizeof](../cpp/sizeof-operator.md)|
 |[Incremento prefisso](../cpp/prefix-increment-and-decrement-operators-increment-and-decrement.md)|[++](../cpp/prefix-increment-and-decrement-operators-increment-and-decrement.md)|
 |[Decremento prefisso](../cpp/prefix-increment-and-decrement-operators-increment-and-decrement.md)|[--](../cpp/prefix-increment-and-decrement-operators-increment-and-decrement.md)|
@@ -64,17 +59,17 @@ Operatore *precedenza* specifica l'ordine delle operazioni nelle espressioni che
 |[Not logico](../cpp/logical-negation-operator-exclpt.md)|[!](../cpp/logical-negation-operator-exclpt.md)|
 |[Negazione unaria](../cpp/unary-plus-and-negation-operators-plus-and.md)|[-](../cpp/unary-plus-and-negation-operators-plus-and.md)|
 |[Operatore più unario](../cpp/unary-plus-and-negation-operators-plus-and.md)|[+](../cpp/unary-plus-and-negation-operators-plus-and.md)|
-|[AddressOf](../cpp/address-of-operator-amp.md)|[&amp;](../cpp/address-of-operator-amp.md)|
+|[Indirizzo di](../cpp/address-of-operator-amp.md)|[&amp;](../cpp/address-of-operator-amp.md)|
 |[Riferimento indiretto](../cpp/indirection-operator-star.md)|[&#42;](../cpp/indirection-operator-star.md)|
 |[Creare l'oggetto](../cpp/new-operator-cpp.md)|[new](../cpp/new-operator-cpp.md)|
 |[Eliminare oggetto](../cpp/delete-operator-cpp.md)|[delete](../cpp/delete-operator-cpp.md)|
 |[Cast](../cpp/cast-operator-parens.md)|[()](../cpp/cast-operator-parens.md)|
-|**Precedenza di gruppo, 4, per un'associatività da destra a sinistra**|
-|[Puntatore a membro (oggetti o puntatori)](../cpp/pointer-to-member-operators-dot-star-and-star.md)|[. &#42; - > &#42;](../cpp/pointer-to-member-operators-dot-star-and-star.md)|
+|**Precedenza di gruppo 4, per un'associatività da destra a sinistra**|
+|[Puntatore a membro (oggetti o puntatori)](../cpp/pointer-to-member-operators-dot-star-and-star.md)|[. &#42; o ->&#42;](../cpp/pointer-to-member-operators-dot-star-and-star.md)|
 |**Precedenza gruppo 5, per un'associatività da destra a sinistra**|
 |[Moltiplicazione](../cpp/multiplicative-operators-and-the-modulus-operator.md)|[&#42;](../cpp/multiplicative-operators-and-the-modulus-operator.md)|
 |[Divisione](../cpp/multiplicative-operators-and-the-modulus-operator.md)|[/](../cpp/multiplicative-operators-and-the-modulus-operator.md)|
-|[Modulo](../cpp/multiplicative-operators-and-the-modulus-operator.md)|[%](../cpp/multiplicative-operators-and-the-modulus-operator.md)|
+|[modulo](../cpp/multiplicative-operators-and-the-modulus-operator.md)|[%](../cpp/multiplicative-operators-and-the-modulus-operator.md)|
 |**Precedenza gruppo 6, per un'associatività da destra a sinistra**|
 |[Addizione](../cpp/additive-operators-plus-and.md)|[+](../cpp/additive-operators-plus-and.md)|
 |[Sottrazione](../cpp/additive-operators-plus-and.md)|[-](../cpp/additive-operators-plus-and.md)|
@@ -99,9 +94,9 @@ Operatore *precedenza* specifica l'ordine delle operazioni nelle espressioni che
 |[AND logico](../cpp/logical-and-operator-amp-amp.md)|[&amp;&amp;](../cpp/logical-and-operator-amp-amp.md)|
 |**Precedenza gruppo 14, per un'associatività da destra a sinistra**|
 |[OR logico](../cpp/logical-or-operator-pipe-pipe.md)|[&#124;&#124;](../cpp/logical-or-operator-pipe-pipe.md)|
-|**Precedenza gruppo 15, da destra a sinistra associatività**|
+|**Precedenza gruppo 15, da destra a un'associatività da sinistra**|
 |[Condizionale](../cpp/conditional-operator-q.md)|[? :](../cpp/conditional-operator-q.md)|
-|**Precedenza gruppo 16, da destra a sinistra associatività**|
+|**Precedenza gruppo 16, da destra a un'associatività da sinistra**|
 |[Assegnazione](../cpp/assignment-operators.md)|[=](../cpp/assignment-operators.md)|
 |[Assegnazione di moltiplicazione](../cpp/assignment-operators.md)|[&#42;=](../cpp/assignment-operators.md)|
 |[Assegnazione di divisione](../cpp/assignment-operators.md)|[/=](../cpp/assignment-operators.md)|
@@ -111,9 +106,9 @@ Operatore *precedenza* specifica l'ordine delle operazioni nelle espressioni che
 |[Assegnazione di spostamento a sinistra](../cpp/assignment-operators.md)|[<<=](../cpp/assignment-operators.md)|
 |[Assegnazione di spostamento a destra](../cpp/assignment-operators.md)|[>>=](../cpp/assignment-operators.md)|
 |[Assegnazione AND bit per bit](../cpp/assignment-operators.md)|[&amp;=](../cpp/assignment-operators.md)|
-|[Bit per bit inclusivo assegnazione](../cpp/assignment-operators.md)|[&#124;=](../cpp/assignment-operators.md)|
+|[Bit per bit assegnazione OR inclusivo](../cpp/assignment-operators.md)|[&#124;=](../cpp/assignment-operators.md)|
 |[Bit per bit assegnazione OR esclusivo](../cpp/assignment-operators.md)|[^=](../cpp/assignment-operators.md)|
-|**Precedenza gruppo 17, da destra a sinistra associatività**|
+|**Precedenza gruppo 17, da destra a un'associatività da sinistra**|
 |[espressione throw](../cpp/try-throw-and-catch-statements-cpp.md)|[throw](../cpp/try-throw-and-catch-statements-cpp.md)|
 |**Precedenza gruppo 18, per un'associatività da destra a sinistra**|
 |[Virgola](../cpp/comma-operator.md)|[,](../cpp/comma-operator.md)|

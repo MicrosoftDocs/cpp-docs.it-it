@@ -2,12 +2,9 @@
 title: Utilizzando le DLL di estensione Database, OLE e Sockets MFC nella DLL di MFC regolari | Documenti Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - DLLs [C++], extension
 - DLLs [C++], regular
 ms.assetid: 9f1d14a7-9e2a-4760-b3b6-db014fcdb7ff
-caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0042dd5dc6049447868cf5ca5ea1112b3695f3a3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f902f3b512b5684cf185829fdf4346b8851ff8ba
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-database-ole-and-sockets-mfc-extension-dlls-in-regular-mfc-dlls"></a>Utilizzando le DLL di estensione Database, OLE e Sockets MFC nella DLL regolari
 Quando si utilizza un'estensione MFC DLL da una DLL regolare MFC, se l'estensione MFC DLL non è connessa la **CDynLinkLibrary** oggetto catena della DLL regolare MFC, è possibile eseguire in una o più di un set di problemi correlati. Poiché le versioni di debug del Database MFC, OLE e Sockets supportano le DLL vengono implementate come DLL di estensione MFC, è possibile che problemi simili, se si usano questi MFC, funzionalità, anche se non si in modo esplicito utilizza una delle DLL di estensione MFC. Alcuni sintomi sono:  
@@ -36,9 +31,9 @@ Quando si utilizza un'estensione MFC DLL da una DLL regolare MFC, se l'estension
   
 -   Le risorse memorizzate nella DLL di estensione MFC non caricare perché `AfxFindResourceHandle` restituisce **NULL** o un handle di risorsa non corretto.  
   
--   `DllGetClassObject`, `DllCanUnloadNow`e `UpdateRegistry`, `Revoke`, `RevokeAll`, e `RegisterAll` funzioni membro di `COleObjectFactory` non riescono a individuare una class factory definita nella DLL di estensione MFC.  
+-   `DllGetClassObject`, `DllCanUnloadNow`e il `UpdateRegistry`, `Revoke`, `RevokeAll`, e `RegisterAll` funzioni membro di `COleObjectFactory` non riescono a individuare una class factory definite nella DLL di estensione MFC.  
   
--   `AfxDoForAllClasses`non funziona per tutte le classi nella DLL di estensione MFC.  
+-   `AfxDoForAllClasses` non funziona per tutte le classi nella DLL di estensione MFC.  
   
 -   Database standard di MFC, sockets o risorse OLE non caricato. Ad esempio, **AfxLoadString**(**AFX_IDP_SQL_CONNECT_FAIL**) restituisce una stringa vuota, anche quando la DLL regolare MFC utilizza correttamente le classi di Database MFC.  
   

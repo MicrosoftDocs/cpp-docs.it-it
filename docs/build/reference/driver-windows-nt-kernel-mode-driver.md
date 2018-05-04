@@ -2,12 +2,9 @@
 title: -DRIVER (Driver in modalità Kernel di Windows NT) | Documenti Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VC.Project.VCLinkerTool.driver
 - /driver
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - DRIVER linker option
 - /DRIVER linker option
 ms.assetid: aeee8e28-5d97-40f5-ba16-9f370fe8a1b8
-caps.latest.revision: 10
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 29234e3c0e368c7710f9071c753422bc4e6ef2b5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 66291391ed38c27ce7446eccc6fca227c7c2c2d7
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="driver-windows-nt-kernel-mode-driver"></a>/DRIVER (Driver in modalità kernel di Windows NT)
 
@@ -39,9 +34,9 @@ ms.lasthandoff: 12/21/2017
 
 Utilizzare il **/DRIVER** l'opzione del linker per compilare un driver in modalità kernel di Windows NT.
 
-**/Driver: UPONLY** indica al linker di aggiungere il **IMAGE_FILE_UP_SYSTEM_ONLY** alle caratteristiche nell'intestazione di output per specificare che si tratta di un computer monoprocessore (UP). Il sistema operativo non caricherà un driver MONOPROCESSORE su un sistema di multiprocessore (MP).
+**UPONLY** indica al linker di aggiungere il **IMAGE_FILE_UP_SYSTEM_ONLY** bit alle caratteristiche nell'intestazione di output per specificare che si tratta di un computer monoprocessore (UP). Il sistema operativo non caricherà un driver MONOPROCESSORE su un sistema di multiprocessore (MP).
 
-**/Driver: WDM** indica al linker di impostare il **IMAGE_DLLCHARACTERISTICS_WDM_DRIVER** bit nel campo DllCharacteristics dell'intestazione facoltativa.
+**/DRIVER** fa sì che il linker imposti il **IMAGE_DLLCHARACTERISTICS_WDM_DRIVER** bit nel campo DllCharacteristics dell'intestazione facoltativa.
 
 Se **/DRIVER** non viene specificato, questi bit non sono impostati dal linker.
 

@@ -1,12 +1,9 @@
 ---
 title: Classe CComApartment | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CComApartment
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - apartments in ATL EXE modules
 - CComApartment class
 ms.assetid: dbc177d7-7ee4-45f2-b563-d578a467ca93
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a3fecd77e93c0c51a37d7363e6ec1472d157d6d1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 88e08d50cec36366df2423d31082b97d41b5061f
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ccomapartment-class"></a>Classe CComApartment
 Questa classe fornisce supporto per la gestione di un appartamento in un modulo EXE pool di thread.  
@@ -75,12 +70,12 @@ class CComApartment
 |[CComApartment::m_nLockCnt](#m_nlockcnt)|Contiene conteggio dei blocchi del thread corrente.|  
   
 ## <a name="remarks"></a>Note  
- `CComApartment`viene utilizzato da [CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md) per gestire un apartment di un modulo EXE pool di thread. `CComApartment`fornisce metodi per l'incremento e decremento il blocco numero in un thread.  
+ `CComApartment` viene utilizzato [CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md) per gestire un apartment di un modulo EXE pool di thread. `CComApartment` fornisce metodi per l'incremento e decremento del blocco contare su un thread.  
   
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** atlbase. h  
   
-##  <a name="apartment"></a>CComApartment::Apartment  
+##  <a name="apartment"></a>  CComApartment::Apartment  
  Contrassegna l'indirizzo iniziale del thread.  
   
 ```
@@ -93,7 +88,7 @@ DWORD Apartment();
 ### <a name="remarks"></a>Note  
  Viene impostato automaticamente durante [CComAutoThreadModule::Init](../../atl/reference/ccomautothreadmodule-class.md#init).  
   
-##  <a name="ccomapartment"></a>CComApartment::CComApartment  
+##  <a name="ccomapartment"></a>  CComApartment::CComApartment  
  Costruttore.  
   
 ```
@@ -103,7 +98,7 @@ CComApartment();
 ### <a name="remarks"></a>Note  
  Inizializza il `CComApartment` membri dati [m_nLockCnt](#m_nlockcnt) e [m_hThread](#m_hthread).  
   
-##  <a name="getlockcount"></a>CComApartment::GetLockCount  
+##  <a name="getlockcount"></a>  CComApartment::GetLockCount  
  Restituisce conteggio dei blocchi del thread corrente.  
   
 ```
@@ -113,7 +108,7 @@ LONG GetLockCount();
 ### <a name="return-value"></a>Valore restituito  
  Il conteggio dei blocchi sul thread.  
   
-##  <a name="lock"></a>CComApartment::Lock  
+##  <a name="lock"></a>  CComApartment::Lock  
  Incrementa il conteggio di blocco del thread.  
   
 ```
@@ -128,28 +123,28 @@ LONG Lock();
   
  Il conteggio dei blocchi sul thread viene utilizzato per scopi statistici.  
   
-##  <a name="m_dwthreadid"></a>CComApartment::m_dwThreadID  
+##  <a name="m_dwthreadid"></a>  CComApartment::m_dwThreadID  
  Contiene l'identificatore del thread.  
   
 ```
 DWORD m_dwThreadID;
 ```  
   
-##  <a name="m_hthread"></a>CComApartment::m_hThread  
+##  <a name="m_hthread"></a>  CComApartment::m_hThread  
  Contiene l'handle del thread.  
   
 ```
 HANDLE m_hThread;
 ```  
   
-##  <a name="m_nlockcnt"></a>CComApartment::m_nLockCnt  
+##  <a name="m_nlockcnt"></a>  CComApartment::m_nLockCnt  
  Contiene conteggio dei blocchi del thread corrente.  
   
 ```
 LONG m_nLockCnt;
 ```  
   
-##  <a name="unlock"></a>CComApartment::Unlock  
+##  <a name="unlock"></a>  CComApartment::Unlock  
  Decrementa conteggio dei blocchi del thread.  
   
 ```

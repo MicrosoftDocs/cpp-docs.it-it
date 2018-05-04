@@ -1,13 +1,10 @@
 ---
 title: Riferimenti a NMAKE | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - program execution [C++]
 - NMAKE program
 ms.assetid: 24fab6e3-7e43-4da4-957a-88afbbcf8661
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 326f54db7f9edc30e924750143fdcdb78c02357b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 07ffd955400b1b27efc192a7fe0df4ef31164cda
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="nmake-reference"></a>Riferimenti a NMAKE
 Microsoft Program Maintenance Utility (NMAKE.EXE) è uno strumento da riga di comando incluso in [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] che compila i progetti in base ai comandi contenuti in un file di descrizione.  
@@ -48,7 +43,7 @@ Microsoft Program Maintenance Utility (NMAKE.EXE) è uno strumento da riga di co
   
  [Direttive con il punto](../build/dot-directives.md)  
   
- [Pre-elaborazione di makefile](../build/makefile-preprocessing.md)  
+ [La pre-elaborazione di makefile](../build/makefile-preprocessing.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Compilare il codice C/C++ nella riga di comando](../build/building-on-the-command-line.md)   

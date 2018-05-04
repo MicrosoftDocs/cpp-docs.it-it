@@ -1,12 +1,9 @@
 ---
 title: Modelli (C++) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - template_cpp
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - templates, C++
 - templates [C++]
 ms.assetid: 90fcc14a-2092-47af-9d2e-dba26d25b872
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 935bee8447ad0d49ae965fb92538d2e260ec68ef
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f5aa532246054ff0a0b67b9560e40ae704a40fc8
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="templates-c"></a>Modelli (C++)
 I modelli costituiscono la base per la programmazione generica in C++. In C++ è necessario come un linguaggio fortemente tipizzato, tutte le variabili per un tipo specifico, in modo esplicito dichiarata dal programmatore o dedotto dal compilatore. Tuttavia, molte strutture di dati e algoritmi lo stesso aspetto indipendentemente dal tipo operino su. Attivazione modelli di definire le operazioni di una classe o funzione e consentono di specificare quali concreto tipi tali operazioni dovrebbe funzionare in.  
@@ -42,7 +37,7 @@ T minimum(const T& lhs, const T& rhs)
 }  
 ```  
   
- Il codice sopra riportato descrive un modello per una funzione generica con un parametro di tipo `T`, il cui valore restituito e chiamare parametri (lhs e rhs) sono tutti di questo tipo. È possibile assegnare nome un parametro di tipo che è simile, ma per convenzione singolo lettere maiuscole utilizzati più frequentemente. `T`rappresenta un parametro di modello. il `typename` parola chiave indica che questo parametro è un segnaposto per un tipo. Quando la funzione viene chiamata, il compilatore sostituisce tutte le istanze di `T` con l'argomento di tipo concreto che viene specificato dall'utente o dedotto dal compilatore. Il processo in cui il compilatore genera una classe o funzione da un modello è detto *del template*;   `minimum<int>` è un'istanza del modello `minimum<T>`.  
+ Il codice sopra riportato descrive un modello per una funzione generica con un parametro di tipo `T`, il cui valore restituito e chiamare parametri (lhs e rhs) sono tutti di questo tipo. È possibile assegnare nome un parametro di tipo che è simile, ma per convenzione singolo lettere maiuscole utilizzati più frequentemente. `T` è un parametro di modello. il `typename` parola chiave indica che questo parametro è un segnaposto per un tipo. Quando la funzione viene chiamata, il compilatore sostituisce tutte le istanze di `T` con l'argomento di tipo concreto che viene specificato dall'utente o dedotto dal compilatore. Il processo in cui il compilatore genera una classe o funzione da un modello è detto *del template*;   `minimum<int>` è un'istanza del modello `minimum<T>`.  
   
  In un' posizione, un utente può dichiarare un'istanza del modello specializzato per int. Si supponga che get_a() e get_b() sono funzioni che restituiscono un valore int:  
   
@@ -70,7 +65,7 @@ int i = minimum(a, b);
   
  Le regole per la modalità con cui il compilatore esegue la deduzione del tipo nei modelli di funzione sono in base alle regole per le normali funzioni. Per ulteriori informazioni, vedere [Overload risoluzione del modello di chiamate di funzione](../cpp/overload-resolution-of-function-template-calls.md).  
   
-## <a id="type_parameters"></a>Parametri di tipo  
+## <a id="type_parameters"></a> Parametri di tipo  
  Nel `minimum` modello precedente, si noti che il parametro di tipo `T` non è qualificato in alcun modo fino a quando non viene utilizzato nei parametri di chiamata di funzione, in cui vengono aggiunte le const e qualificatori di riferimento.  
   
  Non sussiste alcun limite pratico al numero di parametri di tipo. Separare più parametri da una virgola:  
@@ -153,7 +148,7 @@ MyArray<MyClass*, 10> arr;
   
  Altri tipi di valori inclusi puntatori e riferimenti possono essere passati come parametri non di tipo. Ad esempio, è possibile passare un puntatore a una funzione o un oggetto funzione per personalizzare alcune operazioni all'interno del codice del modello.  
   
-## <a id="template_parameters"></a>Modelli come parametri di modello  
+## <a id="template_parameters"></a> Modelli come parametri di modello  
  Un modello può essere un parametro di modello. In questo esempio, MyClass2 presenta due parametri: un parametro typename `T` e un parametro di modello `Arr`:  
   
 ```cpp  
