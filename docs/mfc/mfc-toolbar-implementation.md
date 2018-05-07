@@ -1,13 +1,10 @@
 ---
 title: Implementazione della barra degli strumenti MFC | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -26,17 +23,15 @@ helpviewer_keywords:
 - toolbars [MFC]
 - toolbars [MFC], implementing MFC toolbars
 ms.assetid: af3319ad-c430-4f90-8361-e6a2c06fd084
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 540f3240588b8e6fde119a167eace8103ef58c5a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b0fd3a41d7574d627ebd374af170ce47801cd351
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mfc-toolbar-implementation"></a>Implementazione della barra degli strumenti MFC
 Una barra degli strumenti è un [barra di controllo](../mfc/control-bars.md) che contiene le immagini bitmap dei controlli. Queste immagini possono comportarsi come pulsanti, caselle di controllo o pulsanti di opzione. MFC fornisce la classe [CToolbar](../mfc/reference/ctoolbar-class.md) per gestire le barre degli strumenti.  
@@ -64,12 +59,12 @@ Una barra degli strumenti è un [barra di controllo](../mfc/control-bars.md) che
   
 -   [La bitmap della barra degli strumenti](#_core_the_toolbar_bitmap)  
   
-##  <a name="_core_toolbar_buttons"></a>Pulsanti della barra degli strumenti  
+##  <a name="_core_toolbar_buttons"></a> Pulsanti della barra degli strumenti  
  I pulsanti della barra degli strumenti sono analoghi agli elementi in un menu. Entrambi i tipi di oggetti dell'interfaccia utente generano comandi, che gestisce il programma fornendo funzioni di gestione. Spesso i pulsanti della barra degli strumenti duplicano la funzionalità dei comandi di menu, fornendo un'interfaccia utente alternative per la stessa funzionalità. Tale funzionalità è disposta semplicemente specificando il pulsante e la voce di menu lo stesso ID.  
   
  È possibile rendere i pulsanti della barra degli strumenti vengono visualizzati e si comportino come pulsanti, caselle di controllo o pulsanti di opzione. Per ulteriori informazioni, vedere la classe [CToolBar](../mfc/reference/ctoolbar-class.md).  
   
-##  <a name="_core_docking_and_floating_toolbars"></a>Ancoraggio e barre degli strumenti mobili  
+##  <a name="_core_docking_and_floating_toolbars"></a> Ancoraggio e barre degli strumenti mobili  
  Una barra degli strumenti MFC può:  
   
 -   Soffermarsi un lato della finestra padre.  
@@ -82,10 +77,10 @@ Una barra degli strumenti è un [barra di controllo](../mfc/control-bars.md) che
   
  Per ulteriori informazioni, vedere l'articolo [ancorate e mobili barre degli strumenti](../mfc/docking-and-floating-toolbars.md).  
   
-##  <a name="_core_toolbars_and_tool_tips"></a>Barre degli strumenti e le descrizioni comandi  
+##  <a name="_core_toolbars_and_tool_tips"></a> Barre degli strumenti e le descrizioni comandi  
  Barre degli strumenti MFC può inoltre essere create per visualizzare "descrizione", ovvero piccole finestre popup contenente una breve descrizione dello scopo del pulsante della barra degli strumenti. Quando l'utente sposta il puntatore del mouse su un pulsante della barra degli strumenti, la descrizione comandi viene visualizzata per offrire un suggerimento. Per ulteriori informazioni, vedere l'articolo [descrizione comandi](../mfc/toolbar-tool-tips.md).  
   
-##  <a name="_core_the_ctoolbar_and_ctoolbarctrl_classes"></a>Le classi CToolBar e CToolBarCtrl  
+##  <a name="_core_the_ctoolbar_and_ctoolbarctrl_classes"></a> Le classi CToolBar e CToolBarCtrl  
  Per gestire le barre degli strumenti dell'applicazione tramite la classe [CToolBar](../mfc/reference/ctoolbar-class.md). A partire dalla versione 4.0, MFC `CToolBar` è stata reimplementata per usare il controllo comune barra degli strumenti disponibile in Windows 95 o versioni successive e Windows NT versione 3.51 o versioni successive.  
   
  Questo nuove implementazione comporta meno codice MFC per barre degli strumenti, perché rende MFC utilizza il supporto del sistema operativo. Inoltre, sono state migliorate le funzionalità. È possibile utilizzare `CToolBar` funzioni membro per modificare le barre degli strumenti oppure è possano ottenere un riferimento a sottostante [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md) e chiamare il relativo membro funzioni per la personalizzazione della barra degli strumenti e funzionalità aggiuntive.  
@@ -95,7 +90,7 @@ Una barra degli strumenti è un [barra di controllo](../mfc/control-bars.md) che
   
  Vedere anche l'esempio MFC generale [DOCKTOOL](../visual-cpp-samples.md).  
   
-##  <a name="_core_the_toolbar_bitmap"></a>La Bitmap della barra degli strumenti  
+##  <a name="_core_the_toolbar_bitmap"></a> La Bitmap della barra degli strumenti  
  Una volta creato, un `CToolBar` oggetto crea l'immagine della barra degli strumenti mediante il caricamento di una singola bitmap contenente un'immagine per ogni pulsante. La creazione guidata applicazione crea un'immagine bitmap della barra degli strumenti standard che è possibile personalizzare con Visual C++ [editor barra degli strumenti](../windows/toolbar-editor.md).  
   
 ### <a name="what-do-you-want-to-know-more-about"></a>Ciò che si desidera saperne di più  
@@ -104,7 +99,7 @@ Una barra degli strumenti è un [barra di controllo](../mfc/control-bars.md) che
   
 -   [Ancoraggio e barre degli strumenti mobili](../mfc/docking-and-floating-toolbars.md)  
   
--   [Descrizione comandi](../mfc/toolbar-tool-tips.md)  
+-   [Descrizioni comandi barra degli strumenti](../mfc/toolbar-tool-tips.md)  
   
 -   [Uso del controllo Toolbar](../mfc/working-with-the-toolbar-control.md)  
   

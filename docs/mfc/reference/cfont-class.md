@@ -1,12 +1,9 @@
 ---
 title: CFont (Class) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CFont
@@ -29,17 +26,15 @@ helpviewer_keywords:
 - CFont [MFC], FromHandle
 - CFont [MFC], GetLogFont
 ms.assetid: 3fad6bfe-d6ce-4ab9-967a-5ce0aa102800
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5431461c7c2cc33131f72f059edcfbd984eae5fb
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c26cf70ad52037b4ebe88b983e6d9a91273897cf
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cfont-class"></a>CFont (Class)
 Incapsula un tipo di carattere GDI (Graphics Device Interface) di Windows e fornisce funzioni membro per la modifica del tipo di carattere.  
@@ -73,7 +68,7 @@ class CFont : public CGdiObject
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[HFONT CFont::operator](#operator_hfont)|Restituisce l'handle del tipo di carattere GDI di Windows collegata la `CFont` oggetto.|  
+|[CFont::operator HFONT](#operator_hfont)|Restituisce l'handle del tipo di carattere GDI di Windows collegata la `CFont` oggetto.|  
   
 ## <a name="remarks"></a>Note  
  Per utilizzare un `CFont` dell'oggetto, creare un `CFont` dell'oggetto e connettersi con un tipo di carattere Windows [CreateFont](#createfont), [CreateFontIndirect](#createfontindirect), [CreatePointFont](#createpointfont), o [CreatePointFontIndirect](#createpointfontindirect)e quindi utilizzare le funzioni membro dell'oggetto per modificare il tipo di carattere.  
@@ -92,7 +87,7 @@ class CFont : public CGdiObject
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** afxwin.h  
   
-##  <a name="cfont"></a>CFont::CFont  
+##  <a name="cfont"></a>  CFont::CFont  
  Costruisce un oggetto `CFont`.  
   
 ```  
@@ -105,7 +100,7 @@ CFont();
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFCDocView#70](../../mfc/codesnippet/cpp/cfont-class_1.cpp)]  
   
-##  <a name="createfont"></a>CFont::  
+##  <a name="createfont"></a>  CFont::  
  Inizializza un `CFont` oggetto con le caratteristiche specificate.  
   
 ```  
@@ -194,7 +189,7 @@ BOOL CreateFont(
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFCDocView#71](../../mfc/codesnippet/cpp/cfont-class_2.cpp)]  
   
-##  <a name="createfontindirect"></a>CFont:: CreateFontIndirect  
+##  <a name="createfontindirect"></a>  CFont:: CreateFontIndirect  
  Inizializza un `CFont` oggetto con le caratteristiche di base un [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037)struttura.  
   
 ```  
@@ -218,7 +213,7 @@ BOOL CreateFontIndirect(const LOGFONT* lpLogFont);
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFCDocView#72](../../mfc/codesnippet/cpp/cfont-class_3.cpp)]  
   
-##  <a name="createpointfont"></a>Cfont  
+##  <a name="createpointfont"></a>  Cfont  
  Questa funzione fornisce un modo semplice per creare un tipo di carattere di un tipo di carattere specificato e la dimensione.  
   
 ```  
@@ -249,7 +244,7 @@ BOOL CreatePointFont(
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFCDocView#73](../../mfc/codesnippet/cpp/cfont-class_4.cpp)]  
   
-##  <a name="createpointfontindirect"></a>CFont::CreatePointFontIndirect  
+##  <a name="createpointfontindirect"></a>  CFont::CreatePointFontIndirect  
  Questa funzione è analoga [CreateFontIndirect](#createfontindirect) ad eccezione del fatto che il **lfHeight** appartenente il `LOGFONT` viene interpretato in decimi di un'unità punto anziché dispositivo.  
   
 ```  
@@ -276,7 +271,7 @@ BOOL CreatePointFontIndirect(
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFCDocView#74](../../mfc/codesnippet/cpp/cfont-class_5.cpp)]  
   
-##  <a name="fromhandle"></a>CFont::FromHandle  
+##  <a name="fromhandle"></a>  CFont::FromHandle  
  Restituisce un puntatore a un `CFont` oggetto quando viene specificato un **HFONT** handle per un oggetto di tipo di carattere GDI di Windows.  
   
 ```  
@@ -296,7 +291,7 @@ static CFont* PASCAL FromHandle(HFONT hFont);
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFCDocView#75](../../mfc/codesnippet/cpp/cfont-class_6.cpp)]  
   
-##  <a name="getlogfont"></a>CFont::GetLogFont  
+##  <a name="getlogfont"></a>  CFont::GetLogFont  
  Chiamare questa funzione per recuperare una copia del `LOGFONT` struttura `CFont`.  
   
 ```  
@@ -313,7 +308,7 @@ int GetLogFont(LOGFONT* pLogFont);
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFCDocView#76](../../mfc/codesnippet/cpp/cfont-class_7.cpp)]  
   
-##  <a name="operator_hfont"></a>HFONT CFont::operator  
+##  <a name="operator_hfont"></a>  CFont::operator HFONT  
  Utilizzare questo operatore per ottenere l'handle GDI di Windows del tipo di carattere collegato il `CFont` oggetto.  
   
 ```  

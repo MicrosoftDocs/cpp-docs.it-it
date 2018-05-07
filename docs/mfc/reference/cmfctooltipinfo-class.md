@@ -1,12 +1,9 @@
 ---
 title: Classe CMFCToolTipInfo | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCToolTipInfo
@@ -41,17 +38,15 @@ helpviewer_keywords:
 - CMFCToolTipInfo [MFC], m_nGradientAngle
 - CMFCToolTipInfo [MFC], m_nMaxDescrWidth
 ms.assetid: f9d3d7f8-1f08-4342-a7b2-683860e5d2a5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cda5da1b989ccc41a2f3136473dbe08200e091bd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 325650f35d097b54eda160bbdbbd5c877dbd0242
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfctooltipinfo-class"></a>Classe CMFCToolTipInfo
 Memorizza informazioni sull'aspetto visivo delle descrizioni comandi.  
@@ -102,7 +97,7 @@ class CMFCToolTipInfo
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** afxtooltipctrl. h  
   
-##  <a name="m_bballoontooltip"></a>CMFCToolTipInfo::m_bBalloonTooltip  
+##  <a name="m_bballoontooltip"></a>  CMFCToolTipInfo::m_bBalloonTooltip  
  Specifica lo stile di visualizzazione di tutte le descrizioni comandi.  
   
 ```  
@@ -110,9 +105,9 @@ BOOL m_bBalloonTooltip;
 ```  
   
 ### <a name="remarks"></a>Note  
- `TRUE`indica che le descrizioni comandi utilizzano lo stile del fumetto, `FALSE` indica che le descrizioni comandi utilizzano lo stile rettangolare.  
+ `TRUE` indica che le descrizioni comandi utilizzano lo stile di fumetto `FALSE` indica che le descrizioni comandi utilizzano lo stile rettangolare.  
   
-##  <a name="m_bboldlabel"></a>CMFCToolTipInfo::m_bBoldLabel  
+##  <a name="m_bboldlabel"></a>  CMFCToolTipInfo::m_bBoldLabel  
  Specifica se il tipo di carattere del testo della descrizione comando è in grassetto.  
   
 ```  
@@ -122,7 +117,7 @@ BOOL m_bBoldLabel;
 ### <a name="remarks"></a>Note  
  Impostare il membro `TRUE` per visualizzare testo della descrizione comando con il tipo di carattere grassetto o `FALSE` per visualizzare le etichette di descrizione comando con tipo di carattere non in grassetto.  
   
-##  <a name="m_bdrawdescription"></a>CMFCToolTipInfo::m_bDrawDescription  
+##  <a name="m_bdrawdescription"></a>  CMFCToolTipInfo::m_bDrawDescription  
  Specifica se ogni descrizione comando Visualizza il testo di descrizione.  
   
 ```  
@@ -132,7 +127,7 @@ BOOL m_bDrawDescription;
 ### <a name="remarks"></a>Note  
  Impostare il membro `TRUE` per visualizzare la descrizione, o `FALSE` per nascondere la descrizione. È possibile specificare la descrizione in una descrizione comando chiamando [CMFCToolTipCtrl::SetDescription](../../mfc/reference/cmfctooltipctrl-class.md#setdescription)  
   
-##  <a name="m_bdrawicon"></a>CMFCToolTipInfo::m_bDrawIcon  
+##  <a name="m_bdrawicon"></a>  CMFCToolTipInfo::m_bDrawIcon  
  Specifica se tutte le descrizioni comandi visualizzate icone.  
   
 ```  
@@ -142,7 +137,7 @@ BOOL m_bDrawIcon;
 ### <a name="remarks"></a>Note  
  Impostare il membro `TRUE` per visualizzare un'icona nella descrizione di ogni comando, o `FALSE` per visualizzare le descrizioni comandi senza icone.  
   
-##  <a name="m_bdrawseparator"></a>CMFCToolTipInfo::m_bDrawSeparator  
+##  <a name="m_bdrawseparator"></a>  CMFCToolTipInfo::m_bDrawSeparator  
  Specifica se ogni descrizione comando contiene un separatore tra l'etichetta e la relativa descrizione.  
   
 ```  
@@ -152,7 +147,7 @@ BOOL m_bDrawSeparator;
 ### <a name="remarks"></a>Note  
  Impostare il membro `TRUE` separatore tra l'etichetta e descrizione, visualizzare o `FALSE` per visualizzare le descrizioni comandi con nessun separatore.  
   
-##  <a name="m_broundedcorners"></a>CMFCToolTipInfo::m_bRoundedCorners  
+##  <a name="m_broundedcorners"></a>  CMFCToolTipInfo::m_bRoundedCorners  
  Specifica se tutte le descrizioni comandi abbia gli angoli arrotondati.  
   
 ```  
@@ -162,14 +157,14 @@ BOOL m_bRoundedCorners;
 ### <a name="remarks"></a>Note  
  Impostare il membro `TRUE` per visualizzare gli angoli arrotondati sulle descrizioni comandi, o `FALSE` per visualizzare gli angoli rettangolari sulle descrizioni comandi.  
   
-##  <a name="m_clrborder"></a>CMFCToolTipInfo::m_clrBorder  
+##  <a name="m_clrborder"></a>  CMFCToolTipInfo::m_clrBorder  
  Specifica il colore dei bordi in tutte le descrizioni comandi.  
   
 ```  
 COLORREF m_clrBorder;  
 ```  
   
-##  <a name="m_clrfill"></a>CMFCToolTipInfo::m_clrFill  
+##  <a name="m_clrfill"></a>  CMFCToolTipInfo::m_clrFill  
  Specifica il colore di sfondo della descrizione comando.  
   
 ```  
@@ -179,7 +174,7 @@ COLORREF m_clrFill;
 ### <a name="remarks"></a>Note  
  Se [CMFCToolTipInfo::m_clrFillGradient](#m_clrfillgradient) è -1, il colore di sfondo della descrizione comando è `m_clrFill`. In caso contrario, `m_clrFill` specifica il colore iniziale della sfumatura e `m_clrFillGradient` specifica il colore della fine della sfumatura. [CMFCToolTipInfo::m_nGradientAngle](#m_ngradientangle) determina la direzione della sfumatura.  
   
-##  <a name="m_clrfillgradient"></a>CMFCToolTipInfo::m_clrFillGradient  
+##  <a name="m_clrfillgradient"></a>  CMFCToolTipInfo::m_clrFillGradient  
  Specifica il colore finale per un sfumato sfondo per le descrizioni comandi.  
   
 ```  
@@ -189,14 +184,14 @@ COLORREF m_clrFillGradient;
 ### <a name="remarks"></a>Note  
  Se `m_clrFillGradient` è -1, non vi è alcuna sfumatura. In caso contrario, il colore iniziale della sfumatura è specificato da [CMFCToolTipInfo::m_clrFill](#m_clrfill) e il colore finale sfumatura specificato da `m_clrFillGradient`. [CMFCToolTipInfo::m_nGradientAngle](#m_ngradientangle) determina la direzione della sfumatura.  
   
-##  <a name="m_clrtext"></a>CMFCToolTipInfo::m_clrText  
+##  <a name="m_clrtext"></a>  CMFCToolTipInfo::m_clrText  
  Specifica il colore del testo di tutte le descrizioni comandi.  
   
 ```  
 COLORREF m_clrText;  
 ```  
   
-##  <a name="m_ngradientangle"></a>CMFCToolTipInfo::m_nGradientAngle  
+##  <a name="m_ngradientangle"></a>  CMFCToolTipInfo::m_nGradientAngle  
  Specifica l'angolo, in corrispondenza del quale viene disegnata una sfumatura dello sfondo della descrizione comandi.  
   
 ```  
@@ -204,18 +199,18 @@ int m_nGradientAngle;
 ```  
   
 ### <a name="remarks"></a>Note  
- `m_nGradientAngle`Specifica l'angolo, espresso in gradi, di scostamento della sfumatura dello sfondo della descrizione comandi da orizzontale. Se `m_nGradientAngle` è 0, viene disegnata della sfumatura da sinistra a destra. Se `m_nGradientAngle` è compreso tra 1 e 360, la sfumatura è rotazione in senso orario dal numero di gradi. Se `m_nGradientAngle` è -1, ovvero il valore predefinito, viene disegnata sfumatura dall'alto verso il basso. Questa è la stessa impostazione `m_nGradientAngle` su 90.  
+ `m_nGradientAngle` Specifica l'angolo, espresso in gradi, che la sfumatura dello sfondo della descrizione comandi ha uno scarto rispetto orizzontale. Se `m_nGradientAngle` è 0, viene disegnata della sfumatura da sinistra a destra. Se `m_nGradientAngle` è compreso tra 1 e 360, la sfumatura è rotazione in senso orario dal numero di gradi. Se `m_nGradientAngle` è -1, ovvero il valore predefinito, viene disegnata sfumatura dall'alto verso il basso. Questa è la stessa impostazione `m_nGradientAngle` su 90.  
   
- [CMFCToolTipInfo::m_clrFill](#m_clrfill) `clrFill` specifica il colore iniziale della sfumatura e [CMFCToolTipInfo::m_clrFillGradient](#m_clrfillgradient) `clrFillGradient` specifica il colore della fine della sfumatura. Se `m_clrFillGradient` è -1, non vi è alcuna sfumatura.  
+ [CMFCToolTipInfo::m_clrFill](#m_clrfill) `clrFill` specifica il colore dell'inizio della sfumatura e [CMFCToolTipInfo::m_clrFillGradient](#m_clrfillgradient) `clrFillGradient` specifica il colore dell'entità finale della sfumatura. Se `m_clrFillGradient` è -1, non vi è alcuna sfumatura.  
   
-##  <a name="m_nmaxdescrwidth"></a>CMFCToolTipInfo::m_nMaxDescrWidth  
+##  <a name="m_nmaxdescrwidth"></a>  CMFCToolTipInfo::m_nMaxDescrWidth  
  Specifica la larghezza massima della descrizione che visualizzato nella descrizione di ogni comando. Se la larghezza della descrizione supera il valore specificato, il testo viene eseguito il wrapping.  
   
 ```  
 int m_nMaxDescrWidth;  
 ```  
   
-##  <a name="m_bvislmanagertheme"></a>CMFCToolTipInfo::m_bVislManagerTheme  
+##  <a name="m_bvislmanagertheme"></a>  CMFCToolTipInfo::m_bVislManagerTheme  
  Specifica se il gestore visualizzazione dell'applicazione determina l'aspetto di tutte le descrizioni comandi.  
   
 ```  
@@ -225,7 +220,7 @@ BOOL m_bVislManagerTheme;
 ### <a name="remarks"></a>Note  
  Se `m_bVislManagerTheme` è `TRUE`, ogni descrizione comando richiede un nuovo [CMFCToolTipInfo](../../mfc/reference/cmfctooltipinfo-class.md) dal gestore dell'applicazione prima che vengono visualizzati sullo schermo e utilizza i valori in tale oggetto per determinare l'aspetto visivo. Gli altri membri del [CMFCToolTipInfo](../../mfc/reference/cmfctooltipinfo-class.md) vengono ignorati.  
   
-##  <a name="operator_eq"></a>CMFCToolTipInfo::operator =  
+##  <a name="operator_eq"></a>  CMFCToolTipInfo::operator =  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  

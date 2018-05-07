@@ -1,13 +1,10 @@
 ---
 title: 'TN053: Routine DFX personalizzate per DAO classi di Database | Documenti Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.mfc.dfx
 dev_langs:
@@ -22,17 +19,15 @@ helpviewer_keywords:
 - DFX (DAO record field exchange) [MFC]
 - custom DFX routines [MFC]
 ms.assetid: fdcf3c51-4fa8-4517-9222-58aaa4f25cac
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c6935e4b3f2c8159677d1d322f6f875246160da2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 47d1c9769055e0ab69f57f58b136b7844cb1f860
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn053-custom-dfx-routines-for-dao-database-classes"></a>TN053: routine DFX personalizzate per le classi database DAO
 > [!NOTE]
@@ -44,11 +39,11 @@ ms.lasthandoff: 12/21/2017
   
 -   Panoramica DFX  
   
-- [Esempi di](#_mfcnotes_tn053_examples) con campi di Record DAO e Binding dinamico  
+- [Esempi](#_mfcnotes_tn053_examples) con campi di Record DAO e Binding dinamico  
   
 - [Funzionamento di DFX](#_mfcnotes_tn053_how_dfx_works)  
   
-- [Funzionamento di una Routine DFX personalizzate](#_mfcnotes_tn053_what_your_custom_dfx_routine_does)  
+- [Significato di una Routine DFX personalizzate](#_mfcnotes_tn053_what_your_custom_dfx_routine_does)  
   
 - [Dettagli di DFX_Text](#_mfcnotes_tn053_details_of_dfx_text)  
   
@@ -59,7 +54,7 @@ ms.lasthandoff: 12/21/2017
 > [!NOTE]
 >  Associazione dinamica e DFX non sono si escludono a vicenda, pertanto può essere utilizzato un uso ibrido dei binding statici e dinamici.  
   
-## <a name="_mfcnotes_tn053_examples"></a>Esempio 1: Utilizzo di DAO Record Field Exchange solo  
+## <a name="_mfcnotes_tn053_examples"></a> Esempio 1: Utilizzo di DAO Record Field Exchange solo  
   
  (si presuppone `CDaoRecordset` -classe derivata `CMySet` già aperto)  
   
@@ -99,7 +94,7 @@ rs.SetFieldValue(_T("Customer_Name"),
 rs.Update();
 ```  
   
- **Esempio 3: Utilizzo di DAO Record Field Exchange e binding dinamico**  
+ **Esempio 3: Utilizzo di DAO Record Field Exchange e associazione dinamica**  
   
  (presuppone l'esplorazione di dati dipendenti con `CDaoRecordset`-classe derivata `emp`)  
   
@@ -122,7 +117,7 @@ PopUpEmployeeData(emp.m_strFirstName,
     varPhoto);
 ```  
   
-## <a name="_mfcnotes_tn053_how_dfx_works"></a>Funzionamento di DFX  
+## <a name="_mfcnotes_tn053_how_dfx_works"></a> Funzionamento di DFX  
   
  Il meccanismo DFX funziona in modo analogo al meccanismo di campi di record di RFX (exchange) utilizzato dalle classi ODBC MFC. I principi di DFX e RFX sono gli stessi, ma vi sono numerose differenze interne. La progettazione delle funzioni DFX è tale che quasi tutto il codice è condiviso dalle routine DFX singoli. Al massimo livello DFX solo esegue alcune operazioni.  
   
@@ -164,12 +159,12 @@ PopUpEmployeeData(emp.m_strFirstName,
   
 -   DAO verrà anche "richiamare il" chiamante per le colonne di lunghezza variabile per consentire al chiamante di allocare memoria. Questa funzionalità secondo presenta il vantaggio di ridurre al minimo il numero di copie di dati, nonché consentire l'archiviazione diretta dei dati in membri di una classe (il `CDaoRecordset` classe derivata). Questo meccanismo secondo è il metodo usato da MFC da associare ai membri dati `CDaoRecordset` classi derivate.  
   
-##  <a name="_mfcnotes_tn053_what_your_custom_dfx_routine_does"></a>Funzionamento di una Routine DFX personalizzate  
+##  <a name="_mfcnotes_tn053_what_your_custom_dfx_routine_does"></a> Significato di una Routine DFX personalizzate  
  È evidente da questa discussione che l'operazione più importante implementata in qualsiasi funzione DFX deve essere la possibilità di impostare le strutture di dati necessari per chiamare correttamente `GetRows`. Esistono una serie di altre operazioni che deve essere supportati anche una funzione DFX, ma nessuno come importanti o complesse, ad esempio correttamente la preparazione per la `GetRows` chiamare.  
   
  L'utilizzo di DFX è descritto nella documentazione online. In pratica, esistono due requisiti. In primo luogo, è necessario aggiungere i membri per la `CDaoRecordset` classe derivata per ogni campo associato e un parametro. In questo `CDaoRecordset::DoFieldExchange` deve essere sottoposto a override. Si noti che il tipo di dati del membro sono importanti. Deve corrispondere ai dati del campo nel database o almeno essere convertibile in quel tipo. Ad esempio un campo numerico nel database, ad esempio un valore long integer può sempre essere convertito in testo e associato a un `CString` membro, ma un campo di testo in un database non necessariamente può essere convertiti in una rappresentazione numerica, ad esempio integer long e associato a un tempo Integr er membro. DAO e il motore di database Microsoft Jet sono responsabili per la conversione (anziché MFC).  
   
-##  <a name="_mfcnotes_tn053_details_of_dfx_text"></a>Dettagli di DFX_Text  
+##  <a name="_mfcnotes_tn053_details_of_dfx_text"></a> Dettagli di DFX_Text  
  Come accennato in precedenza, il modo migliore per illustrare il funzionamento DFX è di eseguire un esempio. A questo scopo passare attraverso le caratteristiche interne di `DFX_Text` dovrebbe funzionare bene per fornire una conoscenza di base di DFX.  
   
  **AddToParameterList**  

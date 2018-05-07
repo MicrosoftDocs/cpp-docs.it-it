@@ -1,12 +1,9 @@
 ---
 title: CRichEditDoc (classe) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CRichEditDoc
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - CRichEditDoc [MFC], GetView
 - CRichEditDoc [MFC], m_bRTF
 ms.assetid: c936ec18-d516-49d4-b7fb-c9aa0229eddc
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c427dc034a37bf3b0686b0fd95e62c3b718fbaea
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 28b84747a694a62139546f3105f84c9e799b292a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cricheditdoc-class"></a>CRichEditDoc (classe)
 Con [CRichEditView](../../mfc/reference/cricheditview-class.md) e [CRichEditCntrItem](../../mfc/reference/cricheditcntritem-class.md), fornisce la funzionalità del controllo rich edit nel contesto dell'architettura documento/visualizzazione MFC.  
@@ -63,7 +58,7 @@ class CRichEditDoc : public COleServerDoc
 ## <a name="remarks"></a>Note  
  Un "controllo rich edit" è una finestra in cui l'utente può immettere e modificare il testo. Il testo può essere assegnato formattazione di carattere e paragrafo e può includere oggetti OLE incorporati. I controlli rich edit forniscono un'interfaccia di programmazione per la formattazione del testo. Tuttavia, un'applicazione deve implementare qualsiasi componenti dell'interfaccia utente necessari per rendere disponibili le operazioni di formattazione per l'utente.  
   
- `CRichEditView`gestisce il testo e la caratteristica di formattazione di testo. `CRichEditDoc`gestisce l'elenco degli elementi di client che sono nella vista. `CRichEditCntrItem`fornisce l'accesso lato contenitore per gli elementi client OLE.  
+ `CRichEditView` mantiene il testo e la caratteristica di formattazione del testo. `CRichEditDoc` gestisce l'elenco degli elementi di client che sono nella vista. `CRichEditCntrItem` fornisce l'accesso lato contenitore per gli elementi client OLE.  
   
  Questo controllo comune di Windows (e pertanto il [CRichEditCtrl](../../mfc/reference/cricheditctrl-class.md) e le classi correlate) è disponibile solo per i programmi in esecuzione in Windows 95/98 e Windows NT versione 3.51 e successive.  
   
@@ -87,7 +82,7 @@ class CRichEditDoc : public COleServerDoc
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** afxrich.h  
   
-##  <a name="createclientitem"></a>CRichEditDoc::CreateClientItem  
+##  <a name="createclientitem"></a>  CRichEditDoc::CreateClientItem  
  Chiamare questa funzione per creare un `CRichEditCntrItem` dell'oggetto e aggiungerlo a questo documento.  
   
 ```  
@@ -106,7 +101,7 @@ virtual CRichEditCntrItem* CreateClientItem(REOBJECT* preo = NULL) const = 0;
   
  Per ulteriori informazioni, vedere il [REOBJECT](http://msdn.microsoft.com/library/windows/desktop/bb787946) struttura in Windows SDK.  
   
-##  <a name="getstreamformat"></a>CRichEditDoc::GetStreamFormat  
+##  <a name="getstreamformat"></a>  CRichEditDoc::GetStreamFormat  
  Chiamare questa funzione per determinare il formato di testo per lo streaming il contenuto della modifica avanzata.  
   
 ```  
@@ -116,14 +111,14 @@ int GetStreamFormat() const;
 ### <a name="return-value"></a>Valore restituito  
  Uno dei flag seguenti:  
   
-- `SF_TEXT`Indica che il controllo rich edit non mantiene le informazioni di formattazione.  
+- `SF_TEXT` Indica che il controllo rich edit non mantiene le informazioni di formattazione.  
   
-- `SF_RTF`Indica che il controllo rich edit mantiene le informazioni di formattazione.  
+- `SF_RTF` Indica che il controllo rich edit mantiene le informazioni di formattazione.  
   
 ### <a name="remarks"></a>Note  
  Il valore restituito è basato sul [m_bRTF](#m_brtf) (membro dati). Questa funzione restituisce `SF_RTF` se `m_bRTF` è **TRUE**; in caso contrario, `SF_TEXT`.  
   
-##  <a name="getview"></a>CRichEditDoc::GetView  
+##  <a name="getview"></a>  CRichEditDoc::GetView  
  Chiamare questa funzione per accedere il [CRichEditView](../../mfc/reference/cricheditview-class.md) associato a questo oggetto `CRichEditDoc` oggetto.  
   
 ```  
@@ -136,7 +131,7 @@ virtual CRichEditView* GetView() const;
 ### <a name="remarks"></a>Note  
  Il testo e le informazioni di formattazione sono contenuti all'interno di `CRichEditView` oggetto. Il `CRichEditDoc` gestisce gli elementi OLE per la serializzazione. Deve essere presente solo una `CRichEditView` per ogni `CRichEditDoc`.  
   
-##  <a name="m_brtf"></a>M_brtf  
+##  <a name="m_brtf"></a>  M_brtf  
  Quando **TRUE**, indica che [CRichEditCtrl::StreamIn](../../mfc/reference/cricheditctrl-class.md#streamin) e [CRichEditCtrl::StreamOut](../../mfc/reference/cricheditctrl-class.md#streamout) deve archiviare caratteristiche di formattazione di carattere e paragrafo.  
   
 ```  

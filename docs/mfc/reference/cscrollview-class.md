@@ -1,12 +1,9 @@
 ---
 title: Classe CScrollView | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CScrollView
@@ -37,17 +34,15 @@ helpviewer_keywords:
 - CScrollView [MFC], SetScaleToFitSize
 - CScrollView [MFC], SetScrollSizes
 ms.assetid: 4ba16dac-1acb-4be0-bb55-5fb695b6948d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fc0ef44371a4ade68e80f3169778b9e867c15b17
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 82ffdb26c5766a0ff7cbada511c9bc9c82ebfd93
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cscrollview-class"></a>CScrollView (classe)
 Oggetto [CView](../../mfc/reference/cview-class.md) con funzionalità di scorrimento.  
@@ -130,7 +125,7 @@ class CScrollView : public CView
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** afxwin.h  
   
-##  <a name="checkscrollbars"></a>CScrollView::CheckScrollBars  
+##  <a name="checkscrollbars"></a>  CScrollView::CheckScrollBars  
  Chiamare questa funzione membro per determinare se la visualizzazione a scorrimento dispone di barre orizzontali e verticali.  
   
 ```  
@@ -146,7 +141,7 @@ void CheckScrollBars(
  *bHasVertBar*  
  Indica che l'applicazione dispone di una barra di scorrimento verticale.  
   
-##  <a name="cscrollview"></a>CScrollView::CScrollView  
+##  <a name="cscrollview"></a>  CScrollView::CScrollView  
  Costruisce un oggetto `CScrollView`.  
   
 ```  
@@ -156,7 +151,7 @@ CScrollView();
 ### <a name="remarks"></a>Note  
  È necessario chiamare `SetScrollSizes` o `SetScaleToFitSize` prima lo scorrimento Vista è utilizzabile.  
   
-##  <a name="filloutsiderect"></a>CScrollView::FillOutsideRect  
+##  <a name="filloutsiderect"></a>  CScrollView::FillOutsideRect  
  Chiamare `FillOutsideRect` per riempire l'area della vista che viene visualizzata all'esterno dell'area di scorrimento.  
   
 ```  
@@ -178,7 +173,7 @@ void FillOutsideRect(
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFCDocView#164](../../mfc/codesnippet/cpp/cscrollview-class_1.cpp)]  
   
-##  <a name="getdevicescrollposition"></a>CScrollView::GetDeviceScrollPosition  
+##  <a name="getdevicescrollposition"></a>  CScrollView::GetDeviceScrollPosition  
  Chiamare `GetDeviceScrollPosition` quando è necessario il corrente posizioni orizzontali e verticali delle finestre di scorrimento nelle barre di scorrimento.  
   
 ```  
@@ -191,10 +186,10 @@ CPoint GetDeviceScrollPosition() const;
 ### <a name="remarks"></a>Note  
  Questa coppia di coordinate corrispondente al percorso del documento a cui scorrimento nell'angolo superiore sinistro della vista. Ciò è utile per posizioni dispositivo mouse da posizioni di dispositivo di scorrimento visualizza l'offset.  
   
- `GetDeviceScrollPosition`Restituisce i valori in unità di dispositivo. Se si desidera che le unità logiche, utilizzare `GetScrollPosition` invece.  
+ `GetDeviceScrollPosition` Restituisce i valori in unità di dispositivo. Se si desidera che le unità logiche, utilizzare `GetScrollPosition` invece.  
   
-##  <a name="getdevicescrollsizes"></a>CScrollView::GetDeviceScrollSizes  
- `GetDeviceScrollSizes`Ottiene la modalità di mapping corrente, la dimensione totale e le dimensioni di riga e pagina di visualizzazione scorrevole.  
+##  <a name="getdevicescrollsizes"></a>  CScrollView::GetDeviceScrollSizes  
+ `GetDeviceScrollSizes` Ottiene la modalità di mapping corrente, la dimensione totale e le dimensioni di riga e pagina di visualizzazione scorrevole.  
   
 ```  
 void GetDeviceScrollSizes(
@@ -220,7 +215,7 @@ void GetDeviceScrollSizes(
 ### <a name="remarks"></a>Note  
  Le dimensioni sono espresso in unità di dispositivo. Questa funzione membro viene raramente chiamata.  
   
-##  <a name="getscrollposition"></a>CScrollView::GetScrollPosition  
+##  <a name="getscrollposition"></a>  CScrollView::GetScrollPosition  
  Chiamare `GetScrollPosition` quando è necessario il corrente posizioni orizzontali e verticali delle finestre di scorrimento nelle barre di scorrimento.  
   
 ```  
@@ -233,9 +228,9 @@ CPoint GetScrollPosition() const;
 ### <a name="remarks"></a>Note  
  Questa coppia di coordinate corrispondente al percorso del documento a cui scorrimento nell'angolo superiore sinistro della vista.  
   
- `GetScrollPosition`Restituisce i valori in unità logiche. Se si desidera unità della periferica, utilizzare `GetDeviceScrollPosition` invece.  
+ `GetScrollPosition` Restituisce i valori in unità logiche. Se si desidera unità della periferica, utilizzare `GetDeviceScrollPosition` invece.  
   
-##  <a name="gettotalsize"></a>CScrollView::GetTotalSize  
+##  <a name="gettotalsize"></a>  CScrollView::GetTotalSize  
  Chiamare `GetTotalSize` per recuperare le dimensioni orizzontali e verticali corrente della visualizzazione scorrevole.  
   
 ```  
@@ -245,7 +240,7 @@ CSize GetTotalSize() const;
 ### <a name="return-value"></a>Valore restituito  
  Le dimensioni totali della visualizzazione scorrevole in unità logiche. La dimensione orizzontale è il **cx** membro del `CSize` valore restituito. È la dimensione verticale di **cy** membro.  
   
-##  <a name="resizeparenttofit"></a>CScrollView::ResizeParentToFit  
+##  <a name="resizeparenttofit"></a>  CScrollView::ResizeParentToFit  
  Chiamare `ResizeParentToFit` per consentire la dimensione della visualizzazione determinano le dimensioni della finestra cornice.  
   
 ```  
@@ -259,11 +254,11 @@ void ResizeParentToFit(BOOL bShrinkOnly = TRUE);
 ### <a name="remarks"></a>Note  
  Questa è consigliata solo per le viste in finestre cornice figlio MDI. Utilizzare `ResizeParentToFit` nel `OnInitialUpdate` funzione del gestore di classe derivata `CScrollView` classe. Per un esempio di questa funzione membro, vedere [CScrollView::SetScrollSizes](#setscrollsizes).  
   
- `ResizeParentToFit`si presuppone che le dimensioni della finestra di visualizzazione sono stata impostata. Se la dimensione della finestra di visualizzazione non è stata impostata quando `ResizeParentToFit` viene chiamato, si otterrà un'asserzione. Per garantire che ciò non accada, effettuare la chiamata seguente prima di chiamare `ResizeParentToFit`:  
+ `ResizeParentToFit` si presuppone che le dimensioni della finestra di visualizzazione sono stata impostata. Se la dimensione della finestra di visualizzazione non è stata impostata quando `ResizeParentToFit` viene chiamato, si otterrà un'asserzione. Per garantire che ciò non accada, effettuare la chiamata seguente prima di chiamare `ResizeParentToFit`:  
   
  [!code-cpp[NVC_MFCDocView#165](../../mfc/codesnippet/cpp/cscrollview-class_2.cpp)]  
   
-##  <a name="scrolltoposition"></a>CScrollView::ScrollToPosition  
+##  <a name="scrolltoposition"></a>  CScrollView::ScrollToPosition  
  Chiamare `ScrollToPosition` scorrere fino a un determinato punto di vista.  
   
 ```  
@@ -277,7 +272,7 @@ void ScrollToPosition(POINT pt);
 ### <a name="remarks"></a>Note  
  La vista verrà scorso in modo che questo punto si trova nell'angolo superiore sinistro della finestra. Questa funzione membro non deve essere chiamata se la vista viene adattata.  
   
-##  <a name="setscaletofitsize"></a>CScrollView::SetScaleToFitSize  
+##  <a name="setscaletofitsize"></a>  CScrollView::SetScaleToFitSize  
  Chiamare `SetScaleToFitSize` quando si desidera scalare automaticamente le dimensioni del riquadro di visualizzazione per le dimensioni della finestra corrente.  
   
 ```  
@@ -293,13 +288,13 @@ void SetScaleToFitSize(SIZE sizeTotal);
   
  Verranno inseriti in genere la chiamata a `SetScaleToFitSize` nell'override della vista `OnInitialUpdate` funzione membro. Se si desidera il ridimensionamento automatico, chiamare il `SetScrollSizes` funzione membro.  
   
- `SetScaleToFitSize`può essere utilizzato per implementare un'operazione "Zoom e adatta". Utilizzare `SetScrollSizes` per reinizializzare lo scorrimento.  
+ `SetScaleToFitSize` può essere utilizzato per implementare un'operazione "Zoom adatta". Utilizzare `SetScrollSizes` per reinizializzare lo scorrimento.  
   
- `SetScaleToFitSize`si presuppone che le dimensioni della finestra di visualizzazione sono stata impostata. Se la dimensione della finestra di visualizzazione non è stata impostata quando `SetScaleToFitSize` viene chiamato, si otterrà un'asserzione. Per garantire che ciò non accada, effettuare la chiamata seguente prima di chiamare `SetScaleToFitSize`:  
+ `SetScaleToFitSize` si presuppone che le dimensioni della finestra di visualizzazione sono stata impostata. Se la dimensione della finestra di visualizzazione non è stata impostata quando `SetScaleToFitSize` viene chiamato, si otterrà un'asserzione. Per garantire che ciò non accada, effettuare la chiamata seguente prima di chiamare `SetScaleToFitSize`:  
   
  [!code-cpp[NVC_MFCDocView#165](../../mfc/codesnippet/cpp/cscrollview-class_2.cpp)]  
   
-##  <a name="setscrollsizes"></a>CScrollView::SetScrollSizes  
+##  <a name="setscrollsizes"></a>  CScrollView::SetScrollSizes  
  Chiamare `SetScrollSizes` quando la vista sta per essere aggiornato.  
   
 ```  
@@ -353,7 +348,7 @@ void SetScrollSizes(
  [!code-cpp[NVC_MFCDocView#169](../../mfc/codesnippet/cpp/cscrollview-class_6.cpp)]  
   
 ## <a name="see-also"></a>Vedere anche  
- [Esempio MFC viene](../../visual-cpp-samples.md)   
+ [Esempio MFC immagine](../../visual-cpp-samples.md)   
  [CView (classe)](../../mfc/reference/cview-class.md)   
  [Grafico delle gerarchie](../../mfc/hierarchy-chart.md)   
  [CView (classe)](../../mfc/reference/cview-class.md)   

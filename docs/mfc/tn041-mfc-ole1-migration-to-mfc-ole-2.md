@@ -1,13 +1,10 @@
 ---
 title: 'TN041: Migrazione di MFC OLE1 a MFC-OLE 2 | Documenti Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.mfc.ole
 dev_langs:
@@ -22,17 +19,15 @@ helpviewer_keywords:
 - upgrading Visual C++ applications [MFC], OLE1 to OLE2
 - TN041
 ms.assetid: 67f55552-4b04-4ddf-af0b-4d9eaf5da957
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 894c171c025ef125495faad21dba2a98c08e8b88
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 78faa19263ff0ea03aac891c9be3a6114f7f9a48
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn041-mfcole1-migration-to-mfcole-2"></a>TN041: migrazione da MFC/OLE1 a MFC/OLE 2
 > [!NOTE]
@@ -54,13 +49,13 @@ ms.lasthandoff: 12/21/2017
 ## <a name="examine-the-mfc-sample-code"></a>Esaminare il codice di esempio MFC  
  Esistono diversi esempi MFC che includono funzionalità OLE. Ognuna di queste applicazioni implementa OLE da un angolo diverso:  
   
-- [HIERSVR](../visual-cpp-samples.md) principalmente progettata per essere utilizzata come applicazione server. È stato incluso in MFC 2.0 come applicazione MFC/OLE1 ed è stata trasferita a MFC/OLE 2 e quindi esteso in modo che implementi molte funzionalità OLE è disponibile in OLE 2.  
+- [HIERSVR](../visual-cpp-samples.md) principalmente progettata per essere utilizzata come un'applicazione server. È stato incluso in MFC 2.0 come applicazione MFC/OLE1 ed è stata trasferita a MFC/OLE 2 e quindi esteso in modo che implementi molte funzionalità OLE è disponibile in OLE 2.  
   
-- [OCLIENT](../visual-cpp-samples.md) è un'applicazione contenitore autonomo, progettata per illustrare molte delle funzionalità di OLE da un punto di vista del contenitore. Troppo è stato trasferito da MFC 2.0 e quindi esteso per supportare molte delle funzionalità più avanzate OLE, ad esempio i formati degli Appunti personalizzati e i collegamenti agli elementi incorporati.  
+- [OCLIENT](../visual-cpp-samples.md) si tratta di un'applicazione contenitore autonomo, destinata a illustrare molte delle funzionalità di OLE da un punto di vista di contenitore. Troppo è stato trasferito da MFC 2.0 e quindi esteso per supportare molte delle funzionalità più avanzate OLE, ad esempio i formati degli Appunti personalizzati e i collegamenti agli elementi incorporati.  
   
 - [DRAWCLI](../visual-cpp-samples.md) questa applicazione implementa il supporto di contenitore OLE molto simile OCLIENT, ad eccezione del fatto che vengono eseguite nell'ambito di un programma di disegno esistente orientata agli oggetti. Illustra come implementare il supporto di contenitore OLE e integrarlo nell'applicazione esistente.  
   
-- [SUPERPAD](../visual-cpp-samples.md) questa applicazione, nonché da un'applicazione autonoma correttamente, è anche un server OLE. Implementa il supporto di server è ancora pronti scarna. Di particolare interesse è come Usa servizi Appunti OLE per copiare i dati negli Appunti, ma usa le funzionalità incorporate nel controllo di Windows "Modifica" per implementare la funzionalità incolla negli Appunti. Visualizza una combinazione di utilizzo delle API di Windows tradizionali, nonché l'integrazione con le nuove API OLE interessano.  
+- [SUPERPAD](../visual-cpp-samples.md) questa applicazione, nonché da un'applicazione autonoma fine, è anche un server OLE. Implementa il supporto di server è ancora pronti scarna. Di particolare interesse è come Usa servizi Appunti OLE per copiare i dati negli Appunti, ma usa le funzionalità incorporate nel controllo di Windows "Modifica" per implementare la funzionalità incolla negli Appunti. Visualizza una combinazione di utilizzo delle API di Windows tradizionali, nonché l'integrazione con le nuove API OLE interessano.  
   
  Per ulteriori informazioni sulle applicazioni di esempio, vedere la "MFC esempio Guida".  
   
@@ -312,7 +307,7 @@ ON_COMMAND(ID_OLE_EDIT_CONVERT,
 ## <a name="adding-visual-editing"></a>Aggiunta di "Modifica visiva"  
  Una delle funzionalità più interessanti di OLE è attivazione sul posto (o "Modifica visiva"). Questa funzionalità consente all'applicazione server di assumere le parti dell'interfaccia utente del contenitore di fornire un'interfaccia di modifica più trasparente per l'utente. Per implementare l'attivazione sul posto a OCLIENT, è necessario aggiungere, nonché del codice aggiuntivo alcune risorse speciali. Queste risorse e il codice in genere vengono forniti per la creazione guidata applicazione, in realtà, gran parte del codice di stato presa in prestito direttamente da un'applicazione di creazione guidata applicazione aggiornata con il supporto "Container".  
   
- Prima di tutto, è necessario aggiungere una risorsa di menu da utilizzare quando è presente un elemento che è attivo sul posto. Copiare la risorsa IDR_OCLITYPE e rimuovendo tutto tranne il File e finestra popup, è possibile creare la risorsa di menu aggiuntive in Visual C++. Tra i File e finestra popup per indicare la separazione dei gruppi sono inserite due barre di separazione (dovrebbe essere simile: File &#124; &#124; Finestra). Per ulteriori informazioni sul significato di questi separatori e modo in cui vengono uniti i menu di server e il contenitore vedere "Menu e risorse: unione di Menu" in *classi OLE 2*.  
+ Prima di tutto, è necessario aggiungere una risorsa di menu da utilizzare quando è presente un elemento che è attivo sul posto. Copiare la risorsa IDR_OCLITYPE e rimuovendo tutto tranne il File e finestra popup, è possibile creare la risorsa di menu aggiuntive in Visual C++. Tra i File e finestra popup per indicare la separazione dei gruppi sono inserite due barre di separazione (dovrebbe risultare simile: File &#124; &#124; finestra). Per ulteriori informazioni sul significato di questi separatori e modo in cui vengono uniti i menu di server e il contenitore vedere "Menu e risorse: unione di Menu" in *classi OLE 2*.  
   
  Dopo aver creato questi menu creati, è necessario informare il framework su di essi. Questa operazione viene eseguita chiamando `CDocTemplate::SetContainerInfo` per il modello di documento prima di aggiungerlo all'elenco di modelli di documento in InitInstance. Il nuovo codice per registrare il modello di documento è simile al seguente:  
   
@@ -456,7 +451,7 @@ void CMainView::OnSize(UINT nType,
 ```  
   
 ## <a name="case-study-hiersvr-from-mfc-20"></a>Case Study: HIERSVR da MFC 2.0  
- [HIERSVR](../visual-cpp-samples.md) è inclusa anche in MFC 2.0 e implementato OLE con MFC/OLE1. Questa nota descrive brevemente i passaggi da cui l'applicazione è stato inizialmente convertita per utilizzare le classi MFC/OLE 2. Dopo che la porta iniziale è stata completata per illustrare meglio le classi MFC/OLE 2, sono state aggiunte numerose funzionalità. Queste funzionalità non trattate in questo contesto. vedere l'esempio per ulteriori informazioni su queste funzionalità avanzate.  
+ [HIERSVR](../visual-cpp-samples.md) anche in dotazione con MFC 2.0 e implementato OLE con MFC/OLE1. Questa nota descrive brevemente i passaggi da cui l'applicazione è stato inizialmente convertita per utilizzare le classi MFC/OLE 2. Dopo che la porta iniziale è stata completata per illustrare meglio le classi MFC/OLE 2, sono state aggiunte numerose funzionalità. Queste funzionalità non trattate in questo contesto. vedere l'esempio per ulteriori informazioni su queste funzionalità avanzate.  
   
 > [!NOTE]
 >  Gli errori del compilatore e procedura dettagliata è stato creato con Visual C++ 2.0. Percorsi e i messaggi di errore sia stato modificato con Visual C++ 4.0, ma le informazioni concettuali rimangono valide.  
@@ -672,7 +667,7 @@ CSize CServerItem::CalcNodeSize()
 \hiersvr\svrview.cpp(325) : error C2660: 'CopyToClipboard' : function does not take 2 parameters  
 ```  
   
- `COleServerItem::CopyToClipboard`non supporta più il flag 'bIncludeNative'. Viene sempre copiati i dati nativi (i dati scritti dalla funzione Serialize dell'elemento server), quindi si rimuove il primo parametro. Inoltre, `CopyToClipboard` genererà un'eccezione quando si verifica un errore anziché restituire FALSE. Modificare il codice per CServerView::OnEditCopy come segue:  
+ `COleServerItem::CopyToClipboard` non supporta più il flag 'bIncludeNative'. Viene sempre copiati i dati nativi (i dati scritti dalla funzione Serialize dell'elemento server), quindi si rimuove il primo parametro. Inoltre, `CopyToClipboard` genererà un'eccezione quando si verifica un errore anziché restituire FALSE. Modificare il codice per CServerView::OnEditCopy come segue:  
   
 ```  
 void CServerView::OnEditCopy()  
@@ -710,7 +705,7 @@ void CServerView::OnEditCopy()
   
 -   È necessario indicare al framework su queste risorse speciali e classi.  
   
- La risorsa di menu è possibile creare con facilità. Esecuzione di Visual C++, copiare la risorsa di menu IDR_HIERSVRTYPE chiamata IDR_HIERSVRTYPE_SRVR_IP una risorsa di menu. Modificare il menu in modo che vengono mantenuti solo i popup di menu Modifica e la Guida. Aggiungere due separatori di menu tra i menu Modifica e della Guida (dovrebbe essere simile: Modifica &#124; &#124; Guida in linea). Per ulteriori informazioni sul significato di questi separatori e modo in cui vengono uniti i menu di server e il contenitore, vedere "Menu e risorse: unione di Menu" in *classi OLE 2*.  
+ La risorsa di menu è possibile creare con facilità. Esecuzione di Visual C++, copiare la risorsa di menu IDR_HIERSVRTYPE chiamata IDR_HIERSVRTYPE_SRVR_IP una risorsa di menu. Modificare il menu in modo che vengono mantenuti solo i popup di menu Modifica e la Guida. Aggiungere due separatori di menu tra i menu Modifica e la Guida (dovrebbe risultare simile: modificare &#124; &#124; della Guida). Per ulteriori informazioni sul significato di questi separatori e modo in cui vengono uniti i menu di server e il contenitore, vedere "Menu e risorse: unione di Menu" in *classi OLE 2*.  
   
  È possibile creare facilmente la bitmap della barra degli strumenti subset copiando quello da un'applicazione la creazione guidata applicazione generata aggiornata con l'opzione "Server". Questa bitmap può quindi essere importata in Visual C++. Assicurarsi di assegnare un ID di IDR_HIERSVRTYPE_SRVR_IP di bitmap.  
   
@@ -750,7 +745,7 @@ pMenu->TrackPopupMenu(TPM_CENTERALIGN | TPM_RIGHTBUTTON,
   
 -   Lo scorrimento della finestra del contenitore come la selezione viene modificato.  
   
- L'esempio HIERSVR in MFC 3.0 utilizza inoltre una progettazione leggermente diversa per gli elementi del server. Questo consente di conservare la memoria e i collegamenti più flessibile. Con la versione 2.0 di HIERSVR ogni nodo della struttura *è* `COleServerItem`. `COleServerItem`esegue un overhead maggiore rispetto a quelle strettamente necessarie per ognuno di questi nodi, ma un `COleServerItem` è necessaria per ogni collegamento attivo. Ma la maggior parte, sono presenti pochi collegamenti attivi in qualsiasi momento. Per rendere più efficiente, HIERSVR in questa versione di MFC separa il nodo di `COleServerItem`. Include sia un CServerNode e **CServerItem** classe. Il **CServerItem** (derivato da `COleServerItem`) viene creato solo in base alle esigenze. Una volta il contenitore (o i contenitori) smettere di usare tale collegamento per quel determinato nodo specifico, viene eliminato l'oggetto CServerItem associato con il CServerNode. Questa progettazione è più efficiente e flessibile. La flessibilità è disponibile in, quando si gestiscono più collegamenti di selezione. Nessuna di queste due versioni di HIERSVR supporta selezioni multiple, ma sarebbe molto più semplice per aggiungere (e per supportare i collegamenti a tali selezioni) con la versione 3.0 di MFC di HIERSVR, poiché il `COleServerItem` è separato dai dati nativi.  
+ L'esempio HIERSVR in MFC 3.0 utilizza inoltre una progettazione leggermente diversa per gli elementi del server. Questo consente di conservare la memoria e i collegamenti più flessibile. Con la versione 2.0 di HIERSVR ogni nodo della struttura *è* `COleServerItem`. `COleServerItem` provocando overhead maggiore rispetto a quanto sia strettamente necessarie per ognuno di tali nodi, ma un `COleServerItem` è necessaria per ogni collegamento attivo. Ma la maggior parte, sono presenti pochi collegamenti attivi in qualsiasi momento. Per rendere più efficiente, HIERSVR in questa versione di MFC separa il nodo di `COleServerItem`. Include sia un CServerNode e **CServerItem** classe. Il **CServerItem** (derivato da `COleServerItem`) viene creato solo in base alle esigenze. Una volta il contenitore (o i contenitori) smettere di usare tale collegamento per quel determinato nodo specifico, viene eliminato l'oggetto CServerItem associato con il CServerNode. Questa progettazione è più efficiente e flessibile. La flessibilità è disponibile in, quando si gestiscono più collegamenti di selezione. Nessuna di queste due versioni di HIERSVR supporta selezioni multiple, ma sarebbe molto più semplice per aggiungere (e per supportare i collegamenti a tali selezioni) con la versione 3.0 di MFC di HIERSVR, poiché il `COleServerItem` è separato dai dati nativi.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Note tecniche per numero](../mfc/technical-notes-by-number.md)   

@@ -1,13 +1,10 @@
 ---
 title: 'Controlli ActiveX MFC: Localizzazione di un controllo ActiveX | Documenti Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - LocaleID
 - AfxOleRegisterTypeLib
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - LocaleID ambient property [MFC]
 - LOCALIZE sample [MFC]
 ms.assetid: a44b839a-c652-4ec5-b824-04392708a5f9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fd6384507982f74e02e8e4f42c97926f9125981e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: afe134b4acdcea3ec5f1a6ce381be0ca10c321d8
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mfc-activex-controls-localizing-an-activex-control"></a>Controlli ActiveX MFC: localizzazione di un controllo ActiveX
 In questo articolo vengono illustrate le procedure per la localizzazione di interfacce di controlli ActiveX.  
@@ -52,7 +47,7 @@ In questo articolo vengono illustrate le procedure per la localizzazione di inte
   
  Il resto di questo articolo vengono descritte due strategie di localizzazione. La prima strategia [localizza l'interfaccia di programmabilità del controllo](#_core_localizing_your_control.92.s_programmability_interface) (nomi di proprietà, metodi ed eventi). La seconda strategia [localizza l'interfaccia utente del controllo](#_core_localizing_the_control.92.s_user_interface), utilizzando proprietà LocaleID dell'ambiente del contenitore. Per una dimostrazione della localizzazione del controllo, vedere l'esempio di controlli ActiveX MFC [LOCALIZE](../visual-cpp-samples.md).  
   
-##  <a name="_core_localizing_your_control.92.s_programmability_interface"></a>Localizzazione di interfaccia di programmabilità del controllo  
+##  <a name="_core_localizing_your_control.92.s_programmability_interface"></a> Localizzazione di interfaccia di programmabilità del controllo  
  Durante la localizzazione di interfaccia di programmabilità del controllo (l'interfaccia utilizzata per i programmatori che scrivono applicazioni che utilizzano il controllo), è necessario creare una versione modificata del controllo. IDL (uno script per la compilazione di libreria dei tipi di controllo) del file per ogni lingua che si intende supportare. Questo è l'unico punto che è necessario localizzare i nomi delle proprietà del controllo.  
   
  Quando si sviluppa un controllo localizzato, includere l'ID impostazioni locali come un attributo a livello di raccolta di tipo. Ad esempio, se si desidera fornire una libreria dei tipi con nomi di proprietà localizzata francese, creare una copia dell'esempio. IDL chiamarlo SAMPLEFR e file. IDL. Aggiungere un attributo ID impostazioni locali del file (ID delle impostazioni locali per il francese è 0x040c), simile al seguente:  
@@ -89,7 +84,7 @@ In questo articolo vengono illustrate le procedure per la localizzazione di inte
   
  Quando il controllo viene registrato, il `AfxOleRegisterTypeLib` funzione cerca automaticamente per l'oggetto specificato. Nella stessa directory del controllo al file TLB e di registrarla nel database di registrazione di Windows. Se il. File TLB non viene trovato, la funzione non ha alcun effetto.  
   
-##  <a name="_core_localizing_the_control.92.s_user_interface"></a>Localizzazione di interfaccia utente del controllo  
+##  <a name="_core_localizing_the_control.92.s_user_interface"></a> Localizzazione di interfaccia utente del controllo  
  Per localizzare l'interfaccia utente di un controllo, inserire tutte le risorse del controllo visibile dall'utente (ad esempio le pagine delle proprietà e i messaggi di errore) nella DLL delle risorse specifiche della lingua. È quindi possibile utilizzare proprietà LocaleID dell'ambiente del contenitore per selezionare la DLL appropriata per la lingua dell'utente.  
   
  Esempio di codice seguente viene illustrato un approccio per individuare e caricare la DLL di risorse per impostazioni locali specifiche. Questa funzione membro, chiamata `GetLocalizedResourceHandle` per questo esempio, può essere una funzione membro di classe del controllo ActiveX:  

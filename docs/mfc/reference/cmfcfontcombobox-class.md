@@ -1,12 +1,9 @@
 ---
 title: Classe CMFCFontComboBox | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCFontComboBox
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - CMFCFontComboBox [MFC], Setup
 - CMFCFontComboBox [MFC], m_bDrawUsingFont
 ms.assetid: 9a53fb0c-7b45-486d-8187-2a4c723d9fbb
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1bb549d61f147d24c2eea0a578cda3663c078eb4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4b37901bddec6a886ddb1ae538f3294bd9d28d9a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcfontcombobox-class"></a>Classe CMFCFontComboBox
 La `CMFCFontComboBox` classe crea un controllo casella combinata che contiene un elenco di tipi di carattere.  
@@ -90,7 +85,7 @@ class CMFCFontComboBox : public CComboBox
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** afxfontcombobox.h  
   
-##  <a name="cmfcfontcombobox"></a>CMFCFontComboBox::CMFCFontComboBox  
+##  <a name="cmfcfontcombobox"></a>  CMFCFontComboBox::CMFCFontComboBox  
  Costruisce un oggetto `CMFCFontComboBox`.  
   
 ```  
@@ -101,7 +96,7 @@ CMFCFontComboBox();
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="getselfont"></a>CMFCFontComboBox::GetSelFont  
+##  <a name="getselfont"></a>  CMFCFontComboBox::GetSelFont  
  Recupera le informazioni sul tipo di carattere attualmente selezionato.  
   
 ```  
@@ -113,7 +108,7 @@ CMFCFontInfo* GetSelFont() const;
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="m_bdrawusingfont"></a>CMFCFontComboBox::m_bDrawUsingFont  
+##  <a name="m_bdrawusingfont"></a>  CMFCFontComboBox::m_bDrawUsingFont  
  Indica il tipo di carattere da utilizzare per disegnare le etichette degli elementi nella casella combinata tipo di carattere corrente del Framework.  
   
 ```  
@@ -123,7 +118,7 @@ static BOOL m_bDrawUsingFont;
 ### <a name="remarks"></a>Note  
  Impostare il membro `TRUE` per indicare al framework di utilizzare lo stesso carattere per disegnare l'etichetta di ogni elemento. Impostare il membro `FALSE` per indirizzare il framework per disegnare l'etichetta di ogni elemento con il tipo di carattere il cui nome è lo stesso come etichetta. Il valore predefinito di questo membro è `FALSE`.  
   
-##  <a name="selectfont"></a>CMFCFontComboBox::SelectFont  
+##  <a name="selectfont"></a>  CMFCFontComboBox::SelectFont  
  Seleziona il tipo di carattere che corrisponde ai criteri specificati dalla casella combinata tipo di carattere.  
   
 ```  
@@ -146,7 +141,7 @@ BOOL SelectFont(
  Specifica un set di caratteri. Il valore predefinito è DEFAULT_CHARSET. Per ulteriori informazioni, vedere il `lfCharSet` appartenente il [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) struttura.  
   
 ### <a name="return-value"></a>Valore restituito  
- `TRUE`Se un elemento nella casella combinata tipo di carattere corrisponde alla oggetto descrizione tipo di carattere specificato o un nome di carattere e un set di caratteri; in caso contrario, `FALSE`.  
+ `TRUE` Se un elemento nella casella combinata tipo di carattere corrisponde l'oggetto di descrizione del carattere specificata o il nome del tipo di carattere e charset; in caso contrario, `FALSE`.  
   
 ### <a name="remarks"></a>Note  
  Utilizzare questo metodo per selezionare e scorrere fino all'elemento nella casella combinata tipo di carattere che corrisponde al tipo di carattere specificata.  
@@ -157,7 +152,7 @@ BOOL SelectFont(
  [!code-cpp[NVC_MFC_NewControls#34](../../mfc/reference/codesnippet/cpp/cmfcfontcombobox-class_1.h)]  
 [!code-cpp[NVC_MFC_NewControls#35](../../mfc/reference/codesnippet/cpp/cmfcfontcombobox-class_2.cpp)]  
   
-##  <a name="setup"></a>CMFCFontComboBox::Setup  
+##  <a name="setup"></a>  CMFCFontComboBox::Setup  
  Inizializza l'elenco di elementi nella casella combinata tipo di carattere.  
   
 ```  
@@ -178,7 +173,7 @@ BOOL Setup(
  Specifica un tipo di carattere passo e famiglia. Il valore predefinito è DEFAULT_PITCH.  
   
 ### <a name="return-value"></a>Valore restituito  
- `TRUE`Se la casella combinata tipo di carattere è stata inizializzata correttamente. in caso contrario, `FALSE`.  
+ `TRUE` Se la casella combinata tipo di carattere è stata inizializzata correttamente. in caso contrario, `FALSE`.  
   
 ### <a name="remarks"></a>Note  
  Questo metodo inizializza la casella combinata tipo di carattere enumerando i tipi di carattere attualmente installati che corrispondono ai parametri specificati e l'inserimento di tali nomi di caratteri nella casella combinata tipo di carattere.  
