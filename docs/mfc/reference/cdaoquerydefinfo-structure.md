@@ -1,13 +1,10 @@
 ---
 title: Struttura CDaoQueryDefInfo | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - CDaoQueryDefInfo
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - DAO (Data Access Objects), QueryDefs collection
 - CDaoQueryDefInfo structure [MFC]
 ms.assetid: e20837dc-e78d-4171-a195-1b4075fb5d2a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e476fd8e95b48b59bbb3bae41d9ad84829ca8fa9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e0b3e5834aa8b338448c2024603783cedb6f6cae
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdaoquerydefinfo-structure"></a>Struttura CDaoQueryDefInfo
 Il `CDaoQueryDefInfo` struttura contiene informazioni su un oggetto querydef definito per l'accesso oggetti DAO (data).  
@@ -55,27 +50,27 @@ struct CDaoQueryDefInfo
  `m_nType`  
  Un valore che indica il tipo di un oggetto querydef operativo. Il valore può essere uno dei seguenti:  
   
-- **dbQSelect** selezionare, la query Seleziona record.  
+- **dbQSelect** selezionare, ovvero la query Seleziona record.  
   
-- **dbQAction** azione, la query viene spostato o modifica i dati ma non restituisce i record.  
+- **dbQAction** azione, ovvero la query viene spostato o modifica dati ma non restituisce i record.  
   
-- **dbQCrosstab** a campi incrociati, la query restituisce i dati in un formato di foglio di calcolo.  
+- **dbQCrosstab** a campi incrociati, ovvero la query restituisce i dati in un formato di foglio di calcolo.  
   
 - **dbQDelete** Elimina, la query consente di eliminare un set di righe specificate.  
   
-- **dbQUpdate** aggiornamento, la query diventa un set di record.  
+- **dbQUpdate** Update, ovvero la query diventa un set di record.  
   
-- **dbQAppend** accodamento, la query aggiunge nuovi record alla fine di una tabella o query.  
+- **dbQAppend** Append, ovvero la query aggiunge i nuovi record alla fine di una tabella o query.  
   
 - **dbQMakeTable** tabella: la query crea una nuova tabella da un oggetto recordset.  
   
-- **dbQDDL** definizione dei dati, la query interessa la struttura delle tabelle o le relative parti.  
+- **dbQDDL** definizione dei dati, ovvero la query interessa la struttura delle tabelle o le relative parti.  
   
 - **dbQSQLPassThrough** pass-through, l'istruzione SQL viene passata direttamente al database back-end, senza elaborazione intermedia.  
   
-- **dbQSetOperation** unione, la query viene creato un oggetto recordset di tipo snapshot contenente dati dai record specificati completamente in due o più tabelle con record duplicati rimossi. Per includere i duplicati, aggiungere la parola chiave **tutti** nell'istruzione SQL dell'oggetto querydef.  
+- **dbQSetOperation** unione, la query viene creato un oggetto recordset di tipo snapshot che contiene i dati dai record specificati completamente in due o più tabelle con record duplicati rimossi. Per includere i duplicati, aggiungere la parola chiave **tutti** nell'istruzione SQL dell'oggetto querydef.  
   
-- **dbQSPTBulk** utilizzato con **dbQSQLPassThrough** per specificare una query che non restituisce i record.  
+- **dbQSPTBulk** abbinata **dbQSQLPassThrough** per specificare una query che non restituisce i record.  
   
 > [!NOTE]
 >  Per creare una query pass-through SQL, non si imposta la **dbQSQLPassThrough** costante. Questo viene impostato automaticamente dal motore di database Microsoft Jet quando si crea un oggetto querydef e impostare la proprietà di connessione.  
@@ -106,7 +101,7 @@ struct CDaoQueryDefInfo
 ## <a name="remarks"></a>Note  
  L'oggetto querydef è un oggetto della classe [CDaoQueryDef](../../mfc/reference/cdaoquerydef-class.md). I riferimenti al database primario, secondario e tutti sopra indicano la modalità in cui vengono restituite le informazioni per il [funzione membro GetQueryDefInfo](../../mfc/reference/cdaodatabase-class.md#getquerydefinfo) funzione membro nella classe `CDaoDatabase`.  
   
- Le informazioni recuperate dal [CDaoDatabase::GetQueryDefInfo](../../mfc/reference/cdaodatabase-class.md#getquerydefinfo) le funzioni membro vengono archiviate un `CDaoQueryDefInfo` struttura. Chiamare `GetQueryDefInfo` per l'oggetto di database in cui raccolta QueryDefs è archiviato l'oggetto querydef. `CDaoQueryDefInfo`definisce inoltre un `Dump` compila la funzione membro in modalità debug. È possibile utilizzare `Dump` per scaricare il contenuto di un `CDaoQueryDefInfo` oggetto. Classe `CDaoDatabase` fornisce inoltre funzioni membro per accedere direttamente a tutte le proprietà restituite in un `CDaoQueryDefInfo` dell'oggetto, pertanto è necessario chiamare probabilmente raramente `GetQueryDefInfo`.  
+ Le informazioni recuperate dal [CDaoDatabase::GetQueryDefInfo](../../mfc/reference/cdaodatabase-class.md#getquerydefinfo) le funzioni membro vengono archiviate un `CDaoQueryDefInfo` struttura. Chiamare `GetQueryDefInfo` per l'oggetto di database in cui raccolta QueryDefs è archiviato l'oggetto querydef. `CDaoQueryDefInfo` definisce inoltre un `Dump` compila la funzione membro in modalità debug. È possibile utilizzare `Dump` per scaricare il contenuto di un `CDaoQueryDefInfo` oggetto. Classe `CDaoDatabase` fornisce inoltre funzioni membro per accedere direttamente a tutte le proprietà restituite in un `CDaoQueryDefInfo` dell'oggetto, pertanto è necessario chiamare probabilmente raramente `GetQueryDefInfo`.  
   
  Quando si aggiunge un nuovo campo o un oggetto parametro alla raccolta di parametri o campi di un oggetto querydef, viene generata un'eccezione se il database sottostante non supporta il tipo di dati specificato per il nuovo oggetto.  
   

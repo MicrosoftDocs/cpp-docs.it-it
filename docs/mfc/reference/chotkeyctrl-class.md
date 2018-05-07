@@ -2,11 +2,8 @@
 title: CHotKeyCtrl (classe) | Documenti Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CHotKeyCtrl
@@ -31,17 +28,15 @@ helpviewer_keywords:
 - CHotKeyCtrl [MFC], SetHotKey
 - CHotKeyCtrl [MFC], SetRules
 ms.assetid: 896f9766-0718-4f58-aab2-20325e118ca6
-caps.latest.revision: 23
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 982d4dec9c00490248da0b0e0dec7fd44376c218
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 590914ac312a4f998eb759beb08ed2e7935874fb
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="chotkeyctrl-class"></a>CHotKeyCtrl (classe)
 Fornisce la funzionalità del controllo tasto di scelta comune di Windows.  
@@ -95,14 +90,14 @@ class CHotKeyCtrl : public CWnd
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** afxcmn.h  
   
-##  <a name="chotkeyctrl"></a>CHotKeyCtrl::CHotKeyCtrl  
+##  <a name="chotkeyctrl"></a>  CHotKeyCtrl::CHotKeyCtrl  
  Costruisce un oggetto `CHotKeyCtrl`.  
   
 ```  
 CHotKeyCtrl();
 ```  
   
-##  <a name="create"></a>CHotKeyCtrl::Create  
+##  <a name="create"></a>  CHotKeyCtrl::Create  
  Crea un controllo tasto di scelta e la collega a un `CHotKeyCtrl` oggetto.  
   
 ```  
@@ -134,7 +129,7 @@ virtual BOOL Create(
   
  Se si desidera utilizzare gli stili estesi windows con il controllo, chiamare [CreateEx](#createex) anziché **crea**.  
   
-##  <a name="createex"></a>CHotKeyCtrl::CreateEx  
+##  <a name="createex"></a>  CHotKeyCtrl::CreateEx  
  Chiamare questa funzione per creare un controllo (una finestra figlio) e associarlo con il `CHotKeyCtrl` oggetto.  
   
 ```  
@@ -168,7 +163,7 @@ virtual BOOL CreateEx(
 ### <a name="remarks"></a>Note  
  Utilizzare `CreateEx` anziché [crea](#create) per applicare stili estesi di Windows, specificati per il prefisso di stile esteso di Windows **WS_EX _**.  
   
-##  <a name="gethotkey"></a>CHotKeyCtrl::GetHotKey  
+##  <a name="gethotkey"></a>  CHotKeyCtrl::GetHotKey  
  Recupera i flag di codice e il modificatore chiavi virtuali di un tasto di scelta rapida da un controllo tasto di scelta.  
   
 ```  
@@ -201,7 +196,7 @@ void GetHotKey(
 ### <a name="remarks"></a>Note  
  Il codice tasto virtuale e i tasti di modifica insieme definiscono il tasto di scelta rapida.  
   
-##  <a name="gethotkeyname"></a>CHotKeyCtrl::GetHotKeyName  
+##  <a name="gethotkeyname"></a>  CHotKeyCtrl::GetHotKeyName  
  Chiamare questa funzione membro per ottenere il nome localizzato del tasto di scelta.  
   
 ```  
@@ -214,7 +209,7 @@ CString GetHotKeyName() const;
 ### <a name="remarks"></a>Note  
  Il nome restituito da questa funzione membro proviene dal driver della tastiera. È possibile installare un driver non localizzato della tastiera in una versione localizzata di Windows e viceversa.  
   
-##  <a name="getkeyname"></a>CHotKeyCtrl::GetKeyName  
+##  <a name="getkeyname"></a>  CHotKeyCtrl::GetKeyName  
  Chiamare questa funzione membro per ottenere il nome localizzato della chiave di cui è assegnato a un codice tasto virtuale specificato.  
   
 ```  
@@ -239,7 +234,7 @@ static CString GetKeyName(
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFCControlLadenDialog#69](../../mfc/codesnippet/cpp/chotkeyctrl-class_1.cpp)]  
   
-##  <a name="sethotkey"></a>CHotKeyCtrl::SetHotKey  
+##  <a name="sethotkey"></a>  CHotKeyCtrl::SetHotKey  
  Imposta il tasto di scelta rapida per un controllo tasto di scelta.  
   
 ```  
@@ -267,7 +262,7 @@ void SetHotKey(
 ### <a name="remarks"></a>Note  
  Il codice tasto virtuale e i tasti di modifica insieme definiscono il tasto di scelta rapida.  
   
-##  <a name="setrules"></a>CHotKeyCtrl::SetRules  
+##  <a name="setrules"></a>  CHotKeyCtrl::SetRules  
  Chiamare questa funzione consente di definire le combinazioni non valide e la combinazione di modificatore predefinito per un controllo tasto di scelta.  
   
 ```  
@@ -280,21 +275,21 @@ void SetRules(
  `wInvalidComb`  
  Matrice di flag che specifica le combinazioni di tasti non valide. Può essere una combinazione dei valori seguenti:  
   
-- `HKCOMB_A`ALT  
+- `HKCOMB_A` ALT  
   
-- `HKCOMB_C`CTRL  
+- `HKCOMB_C` CTRL  
   
-- `HKCOMB_CA`CTRL + ALT  
+- `HKCOMB_CA` CTRL + ALT  
   
-- `HKCOMB_NONE`Chiavi non modificate  
+- `HKCOMB_NONE` Chiavi non modificate  
   
-- `HKCOMB_S`MAIUSC  
+- `HKCOMB_S` MAIUSC  
   
-- `HKCOMB_SA`MAIUSC + ALT  
+- `HKCOMB_SA` MAIUSC + ALT  
   
-- `HKCOMB_SC`MAIUSC + CTRL  
+- `HKCOMB_SC` MAIUSC + CTRL  
   
-- `HKCOMB_SCA`MAIUSC + CTRL + ALT  
+- `HKCOMB_SCA` MAIUSC + CTRL + ALT  
   
  `wModifiers`  
  Matrice di flag che specifica la combinazione di tasti da utilizzare quando l'utente immette una combinazione non valida. Per ulteriori informazioni sui flag di modifica, vedere [GetHotKey](#gethotkey).  

@@ -1,13 +1,10 @@
 ---
 title: Classi di finestra di dialogo | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.classes.dialog
 dev_langs:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - common dialog classes [MFC]
 - tab dialog boxes
 ms.assetid: db75da23-4eff-4c6c-beae-79cf046fbce9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6d51529e5d04a8297c0d3824ab38c7d2045bc866
-ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
+ms.openlocfilehash: 60d33289d8025d7cdcaf4f6f69062230730b958c
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dialog-box-classes"></a>Classi di finestre di dialogo
 Classe `CDialog` e le relative classi derivate incapsulano la funzionalità di finestra di dialogo. Poiché una finestra di dialogo è un tipo speciale di finestra, `CDialog` è derivato da `CWnd`. Derivare le classi di finestra di dialogo da `CDialog` o utilizzare una delle classi di finestra di dialogo comune per le finestre di dialogo standard, ad esempio l'apertura o salvataggio di un file, stampa, la selezione di un tipo di carattere o un colore, avvia un'operazione di ricerca e sostituzione o l'esecuzione di varie correlate a OLE operazioni.  
@@ -55,7 +50,7 @@ Classe `CDialog` e le relative classi derivate incapsulano la funzionalità di f
  [CFontDialog](../mfc/reference/cfontdialog-class.md)  
  Fornisce una finestra di dialogo standard per la selezione di un tipo di carattere.  
   
- [CFindReplaceDialog](../mfc/reference/cfindreplacedialog-class.md)  
+ [CFindReplaceDialog.](../mfc/reference/cfindreplacedialog-class.md)  
  Fornisce una finestra di dialogo standard per un'operazione di ricerca e sostituzione.  
   
  [CPrintDialog](../mfc/reference/cprintdialog-class.md)  
@@ -71,9 +66,9 @@ Classe `CDialog` e le relative classi derivate incapsulano la funzionalità di f
  OLE aggiunge diverse finestre di dialogo comuni di Windows. Tali classi includono finestre di dialogo comuni OLE.  
   
  [COleDialog](../mfc/reference/coledialog-class.md)  
- Utilizzata dal framework per contenere le implementazioni comuni per tutte le finestre di dialogo OLE. Tutte le classi di finestra di dialogo nella categoria dell'interfaccia utente derivano da questa classe di base. `COleDialog`non può essere utilizzata direttamente.  
+ Utilizzata dal framework per contenere le implementazioni comuni per tutte le finestre di dialogo OLE. Tutte le classi di finestra di dialogo nella categoria dell'interfaccia utente derivano da questa classe di base. `COleDialog` non può essere utilizzata direttamente.  
   
- [COleInsertDialog](../mfc/reference/coleinsertdialog-class.md)  
+ [Classe COleInsertDialog](../mfc/reference/coleinsertdialog-class.md)  
  Consente di visualizzare la finestra di dialogo Inserisci oggetto, l'interfaccia utente standard per l'inserimento di nuovi OLE elementi collegati o incorporati.  
   
  [COlePasteSpecialDialog](../mfc/reference/colepastespecialdialog-class.md)  
@@ -91,7 +86,7 @@ Classe `CDialog` e le relative classi derivate incapsulano la funzionalità di f
  [COlePropertiesDialog](../mfc/reference/colepropertiesdialog-class.md)  
  Incapsula la finestra di dialogo Windows comune delle proprietà OLE. Finestre di dialogo comuni OLE proprietà forniscono un modo semplice per visualizzare e modificare le proprietà di un elemento del documento OLE in modo coerente con gli standard di Windows.  
   
- [COleUpdateDialog](../mfc/reference/coleupdatedialog-class.md)  
+ [Classe COleUpdateDialog](../mfc/reference/coleupdatedialog-class.md)  
  Consente di visualizzare la finestra di dialogo aggiornamento, l'interfaccia utente standard per l'aggiornamento di tutti i collegamenti in un documento. Nella finestra di dialogo contiene un indicatore di stato per indicare come chiudere la procedura di aggiornamento fino al completamento.  
   
  [COleChangeSourceDialog](../mfc/reference/colechangesourcedialog-class.md)  

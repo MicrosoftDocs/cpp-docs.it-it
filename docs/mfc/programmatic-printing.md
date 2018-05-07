@@ -1,13 +1,10 @@
 ---
 title: Stampa a livello di codice | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - IPrint interface
 - printing [MFC]
 ms.assetid: 3db0945b-5e13-4be4-86a0-6aecdae565bd
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 927a5d9b4bea41157c8cfac6f3dbfe42fc323bb2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a439080cec7f3ae96014e9df6ddc65782686bf0e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="programmatic-printing"></a>Stampa a livello di codice
 OLE fornito i mezzi per identificare in modo permanente documenti (**GetClassFile**) e caricarli nel relativo codice associato (`CoCreateInstance`, **QueryInterface**, **Iid_ipersiststorage**, **IPersistFile:: Load**, e **IPersistStorage:: Load**). Per migliorare ulteriormente la stampa di documenti, contenimento dei documenti attivi (tramite una progettazione OLE esistente non fornita con OLE 2.0 originariamente) introdotta un'interfaccia di stampa standard di base, `IPrint`, in genere disponibili tramite qualsiasi oggetto in grado di caricare il stato persistente del tipo di documento. Ogni vista di un documento attivo può supportare facoltativamente il **IPrint** interfaccia per fornire queste funzionalità.  
@@ -55,13 +50,13 @@ interface IPrint : IUnknown
   
  I client e i contenitori utilizzano semplicemente **IPrint:: Print** per indicare il documento Stampa una volta che il documento viene caricato, che specifica i flag di controllo di stampa, il dispositivo di destinazione, le pagine da stampare e altre opzioni. Il client può anche controllare la continuazione di stampa tramite l'interfaccia `IContinueCallback` (vedere sotto).  
   
- Inoltre, **IPrint::SetInitialPageNum** supporta la possibilità di stampare una serie di documenti, come una numerazione di pagine senza problemi, ovviamente un vantaggio per contenitori documenti attivi come Raccoglitore di Office. **IPrint:: GetPageInfo** in precedenza è stato passato al numero di pagina rende la visualizzazione di informazioni sull'impaginazione semplice consentendo al chiamante di recuperare il tipo di avvio **SetInitialPageNum** (o valore predefinito interno del documento numero di pagina iniziale) e il numero di pagine del documento.  
+ Inoltre, **IPrint::SetInitialPageNum** supporta la possibilità di stampare una serie di documenti, come una numerazione di pagine senza problemi, ovviamente un vantaggio per contenitori documenti attivi come Raccoglitore di Office. **IPrint:: GetPageInfo** rende visualizzazione di informazioni di paginazione semplice consentendo al chiamante per il recupero di inizio pagina numero precedentemente passato a **SetInitialPageNum** (o valore predefinito interno del documento numero di pagina iniziale) e il numero di pagine del documento.  
   
  Gli oggetti che supportano `IPrint` sono contrassegnati nel Registro di sistema con la chiave "Printable" archiviata sotto il CLSID dell'oggetto:  
   
  HKEY_CLASSES_ROOT\CLSID\\{...} \Printable  
   
- `IPrint`in genere è implementato nello stesso oggetto che supporta uno `IPersistFile` o `IPersistStorage`. I chiamanti si noti la funzionalità di stampa a livello di codice lo stato persistente di alcune classi cercando nel Registro di sistema per la chiave "Printable". Attualmente, "Stampabili" indica il supporto per almeno `IPrint`; le altre interfacce possono essere definite in futuro saranno rese disponibili tramite `QueryInterface` in **IPrint** rappresenta semplicemente il livello di base del supporto.  
+ `IPrint` in genere è implementato nello stesso oggetto che supporta uno `IPersistFile` o `IPersistStorage`. I chiamanti si noti la funzionalità di stampa a livello di codice lo stato persistente di alcune classi cercando nel Registro di sistema per la chiave "Printable". Attualmente, "Stampabili" indica il supporto per almeno `IPrint`; le altre interfacce possono essere definite in futuro saranno rese disponibili tramite `QueryInterface` in **IPrint** rappresenta semplicemente il livello di base del supporto.  
   
  Durante una procedura di stampa è il client o il contenitore che ha avviato la stampa per controllare o meno la stampa è deve continuare. Ad esempio, il contenitore può supportare un comando "Arresta Print" che deve terminare il processo di stampa appena possibile. Per supportare questa funzionalità, il client di un oggetto stampabile può implementare un oggetto sink di notifica di piccole dimensioni con l'interfaccia `IContinueCallback`:  
   

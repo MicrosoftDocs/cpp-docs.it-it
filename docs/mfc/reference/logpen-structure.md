@@ -1,13 +1,10 @@
 ---
 title: Struttura LOGPEN | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - LOGPEN
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - LOGPEN structure [MFC]
 ms.assetid: a89e8690-6b61-4af5-990c-7c82da24f3b0
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b7bfa598a59f62c11dbda13356559816b5bd47ad
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4c0e07ce3a38eaca54e860ebe821924c0f564c69
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="logpen-structure"></a>Struttura LOGPEN
 Il `LOGPEN` struttura definisce stile, la larghezza e il colore di un oggetto pen, un oggetto utilizzato per disegnare linee e i bordi. Il [CPen::CreatePenIndirect](../../mfc/reference/cpen-class.md#createpenindirect) funzione Usa il `LOGPEN` struttura.  
@@ -44,17 +39,17 @@ typedef struct tagLOGPEN {  /* lgpn */
  *lopnStyle*  
  Specifica il tipo della penna. Questo membro può essere uno dei valori seguenti:  
   
-- **PS_SOLID** crea una penna a tinta unita.  
+- **PS_SOLID** crea un oggetto pen a tinta unita.  
   
 - **PS_DASH** crea una penna tratteggiata. (Valido solo quando la larghezza della penna è 1.)  
   
-- **PS_DOT** crea una penna tratteggiata. (Valido solo quando la larghezza della penna è 1.)  
+- **PS_DOT** crea un oggetto pen punteggiato. (Valido solo quando la larghezza della penna è 1.)  
   
 - **PS_DASHDOT** crea un oggetto pen con alternati trattini e punti. (Valido solo quando la larghezza della penna è 1.)  
   
-- **PS_DASHDOTDOT** crea un oggetto pen con trattini e punti doppio alternati. (Valido solo quando la larghezza della penna è 1.)  
+- **PS_DASHDOTDOT** crea un oggetto pen con trattini e punti doppi alternati. (Valido solo quando la larghezza della penna è 1.)  
   
-- **PS_NULL** crea una penna null.  
+- **PS_NULL** crea un oggetto pen null.  
   
 - **PS_INSIDEFRAME** crea un oggetto pen che disegna una linea all'interno della cornice di forme chiuse prodotta dalle funzioni di output GDI che specificano un rettangolo di delimitazione (ad esempio, il **ellisse**, **rettangolo**, `RoundRect`, `Pie`, e `Chord` funzioni membro). Quando questo stile viene utilizzato con GDI output funzioni che non si specifica un rettangolo di delimitazione (ad esempio, il `LineTo` funzione membro), l'area di disegno della penna non è limitato da un frame.  
   

@@ -1,12 +1,9 @@
 ---
 title: Errore irreversibile C1083 | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 09/01/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C1083
@@ -15,21 +12,19 @@ dev_langs:
 helpviewer_keywords:
 - C1083
 ms.assetid: 97e52df3-e79c-4f85-8f1e-bbd1057d55e7
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bd929403afc86beabf185d099a79bfab5578482a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8d25914a6b391f54be5b4b60dbbf716436dc4d2d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="fatal-error-c1083"></a>Errore irreversibile C1083
 
-> Impossibile aprire *filetype* file: '*file*': *messaggio*
+> Non è possibile aprire *filetype* file: '*file*': *messaggio*
 
 Il compilatore genera un errore C1083 quando non è possibile trovare un file che necessario. Esistono molte possibili cause di questo errore. Una ricerca di inclusione non corretto del file di intestazione mancante o nome non corretto o del percorso sono riportate le cause più comuni, ma altri tipi di file e i problemi possono causare C1083. Ecco alcuni dei motivi comuni per cui il compilatore genera questo errore.
 

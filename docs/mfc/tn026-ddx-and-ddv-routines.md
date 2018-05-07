@@ -1,13 +1,10 @@
 ---
 title: 'Tn026: routine DDX e DDV | Documenti Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - DDX
 - DDV
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - TN026
 - DDV (dialog data validation), procedures
 ms.assetid: c2eba87a-4b47-4083-b28b-e2fa77dfb4c4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 15c2309e8080892bdca2753c1ea6128ce419862f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 44a946b21908f45b595056a956c75b234fdbb886
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn026-ddx-and-ddv-routines"></a>TN026: routine DDX e DDV
 > [!NOTE]
@@ -78,7 +73,7 @@ DDV_Custom(pDX,
   
  I valori iniziali di dati vengono impostati nel costruttore standard di C++, in genere in un blocco con `//{{AFX_DATA_INIT` e `//}}AFX_DATA_INIT` commenti.  
   
- `CWnd::UpdateData`è l'operazione che esegue l'inizializzazione e l'errore di gestione nella chiamata alla `DoDataExchange`.  
+ `CWnd::UpdateData` è l'operazione che esegue l'inizializzazione e l'errore gestione nella chiamata alla `DoDataExchange`.  
   
  È possibile chiamare `CWnd::UpdateData` in qualsiasi momento per eseguire la convalida e scambio di dati. Per impostazione predefinita `UpdateData`(TRUE) viene chiamato nel predefinito `CDialog::OnOK` gestore e `UpdateData`(FALSE) viene chiamata nel predefinito `CDialog::OnInitDialog`.  
   
@@ -99,7 +94,7 @@ DDV_Custom(pDX,
   
 - `m_pDlgWnd`: La finestra (in genere una finestra di dialogo) che contiene i controlli. Equivale a impedisce ai chiamanti delle funzioni globali _ e DDV _ di dover passare 'this' per tutte le routine DDX/DDV.  
   
-- `PrepareCtrl`, e `PrepareEditCtrl`: Prepara un controllo di finestra di dialogo per lo scambio di dati. Archivia l'handle del controllo per impostare lo stato attivo, se una convalida non riesce. `PrepareCtrl`viene utilizzato per i controlli nonedit e `PrepareEditCtrl` viene utilizzato per i controlli di modifica.  
+- `PrepareCtrl`, e `PrepareEditCtrl`: Prepara un controllo di finestra di dialogo per lo scambio di dati. Archivia l'handle del controllo per impostare lo stato attivo, se una convalida non riesce. `PrepareCtrl` viene utilizzato per i controlli nonedit e `PrepareEditCtrl` viene utilizzato per i controlli di modifica.  
   
 - **Esito negativo**: chiamato dopo la reimpostazione di una finestra di messaggio che avverte l'utente all'errore di input. Questa routine ripristinerà lo stato attivo all'ultimo controllo (l'ultima chiamata a `PrepareCtrl` / `PrepareEditCtrl`) e genera un'eccezione. Questa funzione membro può essere chiamata da routine sia _ e DDV _.  
   
@@ -194,7 +189,7 @@ ExtraDDX=<keys>;<vb-keys>; <prompt>; <type>; <initValue>; <DDX_Proc>
   
  Ogni campo è delimitata da un carattere ';'. I campi e il loro scopo sono descritti di seguito.  
   
- \<chiavi >  
+ \<le chiavi >  
  = elenco di singoli caratteri che indica per quali controlli di finestra di dialogo è consentito in questo tipo di variabile.  
   
  E = modifica  
@@ -217,7 +212,7 @@ ExtraDDX=<keys>;<vb-keys>; <prompt>; <type>; <initValue>; <DDX_Proc>
   
  1 = se l'inserimento DDX deve essere aggiunti a elemento head dell'elenco (impostazione predefinita viene aggiunto alla parte finale) viene in genere utilizzato per le routine DDX che trasferire la proprietà 'Control'.  
   
- \<le chiavi di VB >  
+ \<le chiavi VB >  
  Questo campo viene usato solo nel prodotto a 16 bit per i controlli VBX (VBX controlli non sono supportati all'interno del prodotto a 32 bit)  
   
  \<prompt dei comandi >  
@@ -226,7 +221,7 @@ ExtraDDX=<keys>;<vb-keys>; <prompt>; <type>; <initValue>; <DDX_Proc>
  \<type>  
  Singolo identificatore di tipo da creare nel file di intestazione. Nell'esempio sopra con DDX_Time, questa potrebbe essere impostata su CTime.  
   
- \<le chiavi di VB >  
+ \<le chiavi VB >  
  Non utilizzato in questa versione e deve essere sempre vuoto  
   
  \<initValue >  

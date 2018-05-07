@@ -1,13 +1,10 @@
 ---
 title: Stampa | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,22 +13,20 @@ helpviewer_keywords:
 - printing [MFC], from framework
 - printing [MFC]
 ms.assetid: be465e8d-b0c9-4fc5-9fa8-d10486064f76
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 01ee396a7866179bd140f203192d1bdcbfb4681e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a7df782e3c30b9120fe7eb6728f1b622750d160f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="printing"></a>Stampa
 Microsoft Windows implementa visualizzazione indipendenti dal dispositivo. In MFC, ciò significa che le stesse chiamate di disegnare, nel `OnDraw` funzione membro di classe di visualizzazione sono responsabili del disegno sullo schermo e su altri dispositivi, ad esempio le stampanti. Anteprima di stampa, il dispositivo di destinazione è un output su stampante simulato sullo schermo.  
   
-##  <a name="_core_your_role_in_printing_vs.._the_framework.92.s_role"></a>Il ruolo nella stampa e il ruolo del Framework  
+##  <a name="_core_your_role_in_printing_vs.._the_framework.92.s_role"></a> Il ruolo nella stampa e il ruolo del Framework  
  Classe di visualizzazione ha le responsabilità seguenti:  
   
 -   Il framework che indicano il numero di pagine è nel documento.  
@@ -58,11 +53,11 @@ Microsoft Windows implementa visualizzazione indipendenti dal dispositivo. In MF
   
 ### <a name="what-do-you-want-to-know-more-about"></a>Ciò che si desidera saperne di più  
   
--   [Procedura di stampa predefinita](../mfc/how-default-printing-is-done.md)  
+-   [La modalità di stampa predefinita](../mfc/how-default-printing-is-done.md)  
   
 -   [Documenti con più pagine](../mfc/multipage-documents.md)  
   
--   [Intestazioni e piè di pagina](../mfc/headers-and-footers.md)  
+-   [Informazioni sulle intestazioni e piè di pagina](../mfc/headers-and-footers.md)  
   
 -   [Allocazione di risorse GDI per la stampa](../mfc/allocating-gdi-resources.md)  
   

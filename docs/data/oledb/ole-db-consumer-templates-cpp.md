@@ -1,12 +1,9 @@
 ---
 title: Modelli Consumer OLE DB (C++) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 dev_langs:
 - C++
@@ -16,18 +13,16 @@ helpviewer_keywords:
 - OLE DB consumer templates [C++]
 - databases [C++], consumers
 ms.assetid: d3e42612-0bc0-4d65-9c32-0e8a7b219e82
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 953711a6fd026c0b5409392393d854917c650cbf
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 39264ed7485e67377963316730689645c73f185f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ole-db-consumer-templates-c"></a>Modelli consumer OLE DB (C++)
 I modelli consumer OLE DB supportano la specifica di OLE DB versione 2.6. Si noti tuttavia che, pur essendo stati testati con OLE DB 2.6, non supportano tutte le interfacce disponibili nella specifica. I modelli consumer consentono di ridurre notevolmente la quantità di codice da scrivere per implementare un consumer OLE DB. I vantaggi connessi al loro uso sono i seguenti:  

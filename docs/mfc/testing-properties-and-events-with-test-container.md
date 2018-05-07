@@ -1,13 +1,10 @@
 ---
-title: "Test di proprietà ed eventi con Test Container | Documenti Microsoft"
-ms.custom: 
+title: Test di proprietà ed eventi con Test Container | Documenti Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - ActiveX controls [MFC], testing
 - properties [MFC], testing
 ms.assetid: 626867cf-fe53-4c30-8973-55bb93ef3917
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 381f4e421b63b2ba48fe649a30e5bf7648b50d27
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fbf2b7c26b7fc44a526381f4fb3e4dee5c94ba8d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="testing-properties-and-events-with-test-container"></a>Test di proprietà ed eventi con Test Container
 L'applicazione contenitore di Test, fornito con Visual C++, è un contenitore di controlli ActiveX per i test e debug dei controlli ActiveX. Test Container consente allo sviluppatore di controllo di testare la funzionalità del controllo modificandone le proprietà, richiamare i metodi e generazione di eventi. Test Container consente di visualizzare i registri delle notifiche di associazione di dati e fornisce anche funzionalità per il test della funzionalità di persistenza di un controllo ActiveX: è possibile salvare le proprietà in un flusso o in un sottoarchivio, ricaricarle e analizzare i dati del flusso archiviato. In questa sezione viene descritto come utilizzare le funzionalità di base del contenitore di Test. Per ulteriori informazioni, selezionare il **Guida** menu durante l'esecuzione di Test Container.  

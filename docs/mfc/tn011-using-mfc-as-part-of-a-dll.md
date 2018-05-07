@@ -1,13 +1,10 @@
 ---
 title: 'TN011: Utilizzo di MFC come parte di una DLL | Documenti Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.mfc.dll
 dev_langs:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - DLLs [MFC], linking
 - MFC DLLs [MFC], linking regular MFC DLLs to MFC
 ms.assetid: 76753e9c-59dc-40f6-b6a7-f6bb9a7c4190
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0d0ac05e314f3f8354ba289695afa672b1e28881
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0dcaa0aaf903787549cc91ffd19a34aa4aa066bd
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn011-using-mfc-as-part-of-a-dll"></a>TN011: utilizzo di MFC come parte di una DLL
 Questa nota descrive le DLL MFC regolari, che consentono di utilizzare la libreria MFC come parte di una libreria di collegamento dinamico (DLL) di Windows. Si presuppone che si ha familiarità con le DLL di Windows e su come crearle. Per informazioni sulle DLL di estensione MFC, con cui è possibile creare estensioni per la libreria MFC, di vedere [versione DLL di MFC](../mfc/tn033-dll-version-of-mfc.md).  
@@ -57,13 +52,13 @@ Questa nota descrive le DLL MFC regolari, che consentono di utilizzare la librer
 ## <a name="building-your-dll"></a>Generazione della DLL  
  Durante la compilazione di DLL di MFC regolari collegate in modo statico a MFC, i simboli `_USRDLL` e `_WINDLL` deve essere definita. Il codice della DLL deve essere compilato anche con le opzioni del compilatore seguenti:  
   
-- **/ D_WINDLL** indica la compilazione di una DLL  
+- **/ D_WINDLL** indica la compilazione per una DLL  
   
-- **/ D_USRDLL** specifica si compila una DLL MFC regolare  
+- **/ D_USRDLL** specifica si compila una DLL regolare MFC  
   
  È inoltre necessario definire questi simboli e utilizzare queste opzioni del compilatore quando si compila una DLL MFC regolari collegate a MFC in modo dinamico. Inoltre, il simbolo `_AFXDLL` deve essere definito e il codice della DLL deve essere compilato con:  
   
-- **/ /D_AFXDLL** specifica che si compila una DLL MFC regolare collegata a MFC in modo dinamico  
+- **/ /D_AFXDLL** specifica che si compila una DLL MFC regolare collegata in modo dinamico a MFC  
   
  Le interfacce (API) tra l'applicazione e la DLL devono essere esportate in modo esplicito. È consigliabile definire le interfacce di larghezza di banda ridotta e, se possibile, utilizzare solo le interfacce di C. Interfacce di C dirette sono più semplici da gestire rispetto alle classi C++ più complesse.  
   

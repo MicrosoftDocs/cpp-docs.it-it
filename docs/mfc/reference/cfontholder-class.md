@@ -1,12 +1,9 @@
 ---
 title: Classe CFontHolder | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CFontHolder
@@ -35,17 +32,15 @@ helpviewer_keywords:
 - CFontHolder [MFC], SetFont
 - CFontHolder [MFC], m_pFont
 ms.assetid: 728ab472-0c97-440d-889f-1324c6e1b6b8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dd5f13f2ec48f38fde140361d31a5e08ae6228b9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d5cb28b738822b3e35aa840c731eb11bc2c2b83d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cfontholder-class"></a>Classe CFontHolder
 Implementa la proprietà predefinita e incapsula la funzionalità di un oggetto tipo di carattere di Windows e l'interfaccia `IFont` .  
@@ -84,7 +79,7 @@ class CFontHolder
 |[CFontHolder::m_pFont](#m_pfont)|Un puntatore al `CFontHolder` dell'oggetto `IFont` interfaccia.|  
   
 ## <a name="remarks"></a>Note  
- `CFontHolder`non dispone di una classe di base.  
+ `CFontHolder` non dispone di una classe basa.  
   
  Utilizzare questa classe per implementare le proprietà di tipo di carattere personalizzato per il controllo. Per informazioni sulla creazione di tali proprietà, vedere l'articolo [controlli ActiveX: utilizzo dei tipi di carattere](../../mfc/mfc-activex-controls-using-fonts.md).  
   
@@ -94,7 +89,7 @@ class CFontHolder
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** afxctl. h  
   
-##  <a name="cfontholder"></a>CFontHolder::CFontHolder  
+##  <a name="cfontholder"></a>  CFontHolder::CFontHolder  
  Costruisce un oggetto `CFontHolder`.  
   
 ```  
@@ -108,7 +103,7 @@ explicit CFontHolder(LPPROPERTYNOTIFYSINK pNotify);
 ### <a name="remarks"></a>Note  
  È necessario chiamare `InitializeFont` per inizializzare l'oggetto risulta prima di utilizzarlo.  
   
-##  <a name="getdisplaystring"></a>CFontHolder::GetDisplayString  
+##  <a name="getdisplaystring"></a>  CFontHolder::GetDisplayString  
  Recupera una stringa che può essere visualizzata nel Visualizzatore di proprietà di un contenitore.  
   
 ```  
@@ -122,7 +117,7 @@ BOOL GetDisplayString(CString& strValue);
 ### <a name="return-value"></a>Valore restituito  
  Diverso da zero se la stringa viene recuperata correttamente. in caso contrario 0.  
   
-##  <a name="getfontdispatch"></a>CFontHolder::GetFontDispatch  
+##  <a name="getfontdispatch"></a>  CFontHolder::GetFontDispatch  
  Chiamare questa funzione per recuperare un puntatore a interfaccia dispatch del tipo di carattere.  
   
 ```  
@@ -135,7 +130,7 @@ LPFONTDISP GetFontDispatch();
 ### <a name="remarks"></a>Note  
  Chiamare `InitializeFont` prima di chiamare `GetFontDispatch`.  
   
-##  <a name="getfonthandle"></a>CFontHolder::GetFontHandle  
+##  <a name="getfonthandle"></a>  CFontHolder::GetFontHandle  
  Chiamare questa funzione per ottenere un handle per un tipo di carattere Windows.  
   
 ```  
@@ -164,7 +159,7 @@ HFONT GetFontHandle(
   
  La versione senza parametri restituisce un handle a un carattere di dimensioni corrette per la schermata.  
   
-##  <a name="initializefont"></a>CFontHolder::InitializeFont  
+##  <a name="initializefont"></a>  CFontHolder::InitializeFont  
  Inizializza un `CFontHolder` oggetto.  
   
 ```  
@@ -187,14 +182,14 @@ void InitializeFont(
   
  Chiamare questa funzione dopo la costruzione di un `CFontHolder` oggetto.  
   
-##  <a name="m_pfont"></a>CFontHolder::m_pFont  
+##  <a name="m_pfont"></a>  CFontHolder::m_pFont  
  Un puntatore al `CFontHolder` dell'oggetto `IFont` interfaccia.  
   
 ```  
 LPFONT m_pFont;  
 ```  
   
-##  <a name="querytextmetrics"></a>CFontHolder::QueryTextMetrics  
+##  <a name="querytextmetrics"></a>  CFontHolder::QueryTextMetrics  
  Recupera le informazioni sul tipo di carattere fisica rappresentata dal `CFontHolder` oggetto.  
   
 ```  
@@ -205,14 +200,14 @@ void QueryTextMetrics(LPTEXTMETRIC lptm);
  `lptm`  
  Un puntatore a un [TEXTMETRIC](http://msdn.microsoft.com/library/windows/desktop/dd145132) struttura che riceverà le informazioni.  
   
-##  <a name="releasefont"></a>CFontHolder::ReleaseFont  
+##  <a name="releasefont"></a>  CFontHolder::ReleaseFont  
  Questa funzione consente di disconnettere il `CFontHolder` oggetto dal relativo `IFont` interfaccia.  
   
 ```  
 void ReleaseFont();
 ```  
   
-##  <a name="select"></a>CFontHolder::Select  
+##  <a name="select"></a>  CFontHolder::Select  
  Chiamare questa funzione per selezionare i tipi di carattere del controllo nel contesto di dispositivo specificato.  
   
 ```  
@@ -238,7 +233,7 @@ CFont* Select(
 ### <a name="remarks"></a>Note  
  Vedere [GetFontHandle](#getfonthandle) per una discussione sul `cyLogical` e `cyHimetric` parametri.  
   
-##  <a name="setfont"></a>CFontHolder::SetFont  
+##  <a name="setfont"></a>  CFontHolder::SetFont  
  Rilascia qualsiasi tipo di carattere esistente e si connette il `CFontHolder` l'oggetto in un `IFont` interfaccia.  
   
 ```  

@@ -1,13 +1,10 @@
 ---
 title: Stili del controllo albero | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - TVS_SINGLEEXPAND
 - TVS_LINESATROOT
@@ -28,17 +25,15 @@ helpviewer_keywords:
 - TVS_HASBUTTONS [MFC]
 - tree controls [MFC], styles
 ms.assetid: f43faebd-a355-479e-888a-bf0673d5e1b4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c141a2b0db673f8d3c5f2c116de5b5d2ec81a8ad
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3c0158bfc24eb86f88695b58943989fbb7cac435
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tree-control-styles"></a>Stili del controllo Tree
 Controllo struttura ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)), determinano gli stili dell'aspetto di un controllo struttura ad albero. Impostare gli stili iniziali quando si crea il controllo struttura ad albero. È possibile recuperare e modificare gli stili dopo aver creato il controllo struttura ad albero utilizzando il [GetWindowLong](http://msdn.microsoft.com/library/windows/desktop/ms633584) e [SetWindowLong](http://msdn.microsoft.com/library/windows/desktop/ms633591) funzioni di Windows, specificare **GWL_STYLE** per il `nIndex` parametro. Per un elenco completo degli stili, vedere [stili finestra del controllo di visualizzazione albero](http://msdn.microsoft.com/library/windows/desktop/bb760013) in Windows SDK.  
@@ -47,7 +42,7 @@ Controllo struttura ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)), determin
   
  L'utente può espandere o comprimere l'elenco di un elemento padre degli elementi figlio facendo doppio clic su elemento padre. Un controllo struttura ad albero che ha il **TVS_SINGLEEXPAND** stile fa sì che l'elemento selezionato viene espanso e l'elemento deselezionato viene compresso. Se il mouse viene utilizzato per l'elemento selezionato a singolo clic e tale elemento viene chiusa, verrà espanso. Se l'elemento selezionato è fatto clic quando è aperta, verrà compresso.  
   
- Un controllo struttura ad albero che ha il **TVS_HASBUTTONS** stile viene aggiunto un pulsante a sinistra di ogni elemento padre. L'utente può fare clic sul pulsante per espandere o comprimere gli elementi figlio in alternativa fare doppio clic sull'elemento padre. **TVS_HASBUTTONS** non aggiunge elementi alla radice della gerarchia di pulsanti. A tale scopo, è necessario combinare **TVS_HASLINES**, **TVS_LINESATROOT**, e **TVS_HASBUTTONS**.  
+ Un controllo struttura ad albero che ha il **TVS_HASBUTTONS** stile viene aggiunto un pulsante a sinistra di ogni elemento padre. L'utente può fare clic sul pulsante per espandere o comprimere gli elementi figlio in alternativa fare doppio clic sull'elemento padre. **TVS_HASBUTTONS** non aggiungere pulsanti a elementi alla radice della gerarchia. A tale scopo, è necessario combinare **TVS_HASLINES**, **TVS_LINESATROOT**, e **TVS_HASBUTTONS**.  
   
  Il **TVS_EDITLABELS** stile consente all'utente di modificare le etichette degli elementi del controllo albero. Per ulteriori informazioni sulla modifica delle etichette, vedere [modificare l'albero controllo etichetta](../mfc/tree-control-label-editing.md) più avanti in questo argomento.  
   

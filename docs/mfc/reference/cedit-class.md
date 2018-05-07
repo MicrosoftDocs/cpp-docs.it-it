@@ -1,12 +1,9 @@
 ---
 title: Classe CEdit | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CEdit
@@ -103,17 +100,15 @@ helpviewer_keywords:
 - CEdit [MFC], ShowBalloonTip
 - CEdit [MFC], Undo
 ms.assetid: b1533c30-7f10-4663-88d3-8b7f2c9f7024
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3e14a675f3dac5f2431622f0dfd6002228abe4d2
-ms.sourcegitcommit: a5a69d2dc3513261e9e28320e4e067aaf40d2ef2
+ms.openlocfilehash: 72bf4ffb56ad34926b3a47d86d7609aae5dff4f5
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cedit-class"></a>CEdit Class
 Fornisce la funzionalità di un controllo di modifica di Windows.  
@@ -193,7 +188,7 @@ class CEdit : public CWnd
   
  Ogni voce della mappa messaggi assume il formato seguente:  
   
- **On _**notifica **(** *id, memberFxn * * *)**  
+ **On _** notifica **(** *id, memberFxn * * *)**  
   
  dove `id` specifica l'ID di finestra figlio di invio della notifica, il controllo di modifica e `memberFxn` è il nome della funzione membro padre scritta per gestire la notifica.  
   
@@ -1077,7 +1072,7 @@ void SetPasswordChar(TCHAR ch);
   
  Quando il `SetPasswordChar` viene chiamata la funzione membro `CEdit` verrà ridisegnato utilizzando il carattere specificato da tutti i caratteri visibili *ch*.  
   
- Se il controllo di modifica viene creato con la [ES_PASSWORD](styles-used-by-mfc.md#edit-styles) stile, carattere predefinito della password è impostato su un asterisco (  **\*** ). Questo stile viene rimosso se `SetPasswordChar` viene chiamato con *ch* impostato su 0.  
+ Se il controllo di modifica viene creato con la [ES_PASSWORD](styles-used-by-mfc.md#edit-styles) stile, carattere predefinito della password è impostato su un asterisco ( **\***). Questo stile viene rimosso se `SetPasswordChar` viene chiamato con *ch* impostato su 0.  
   
  Per ulteriori informazioni, vedere [EM_SETPASSWORDCHAR](http://msdn.microsoft.com/library/windows/desktop/bb761653) in Windows SDK.  
   

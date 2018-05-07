@@ -1,12 +1,9 @@
 ---
 title: Classe CPrintDialog | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CPrintDialog
@@ -49,17 +46,15 @@ helpviewer_keywords:
 - CPrintDialog [MFC], PrintSelection
 - CPrintDialog [MFC], m_pd
 ms.assetid: 5bdb2424-adf8-433d-a97c-df11a83bc4e4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d7834351533cac7f518f5ce5f5558a6be2da34be
-ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
+ms.openlocfilehash: 842565b460ff88ae70d108bc1b1db71b22674eb2
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cprintdialog-class"></a>Classe CPrintDialog
 Incapsula i servizi forniti dalla finestra di dialogo comune di Windows per la stampa.  
@@ -110,7 +105,7 @@ class CPrintDialog : public CCommonDialog
 > [!NOTE]
 >  La `CPrintDialogEx` classe incapsula i servizi forniti dalla finestra delle proprietà di stampa Windows. Per ulteriori informazioni, vedere il [CPrintDialogEx](../../mfc/reference/cprintdialogex-class.md) Panoramica.  
   
- `CPrintDialog`della funzionalità è stata sostituita da quella di [CPageSetupDialog](../../mfc/reference/cpagesetupdialog-class.md), progettato per fornire una finestra di dialogo comune per entrambi il programma di installazione e impostazione della pagina di stampa.  
+ `CPrintDialog`della funzionalità è stata sostituita da quella del [CPageSetupDialog](../../mfc/reference/cpagesetupdialog-class.md), che è progettato per fornire una finestra di dialogo comune per entrambi stampa programma di installazione e pagina.  
   
  È possibile basarsi su framework per gestire molti aspetti del processo di stampa per l'applicazione. In questo caso, il framework visualizza automaticamente nella finestra di dialogo comune per la stampa. Anche avere l'handle del framework stampa per l'applicazione è possibile eseguire l'override di finestra di dialogo Stampa comune con la propria finestra di dialogo Stampa. Per ulteriori informazioni sull'utilizzo di framework per gestire le attività di stampa, vedere l'articolo [stampa](../../mfc/printing.md).  
   
@@ -120,7 +115,7 @@ class CPrintDialog : public CCommonDialog
   
  Se non si fornisce i proprio handle `m_pd` per il **hDevMode** e **hDevNames** membri, assicurarsi di chiamare la funzione Windows **GlobalFree** per i punti di controllo al termine con la finestra di dialogo. Quando si utilizza l'implementazione di impostazioni di stampa del framework fornito da `CWinApp::OnFilePrintSetup`, non è necessario liberare gli handle. Gli handle vengono mantenuti dal `CWinApp` e vengono liberati `CWinApp`del distruttore. È necessario liberare gli handle quando si utilizza solo `CPrintDialog` autonomo.  
   
- Dopo l'inizializzazione di controlli di finestra di dialogo, chiamare il `DoModal` funzione membro per visualizzare la finestra di dialogo e consentire all'utente di selezionare le opzioni di stampa. `DoModal`indica se l'utente selezionato OK ( **IDOK**) o annullare ( **IDCANCEL**) pulsante.  
+ Dopo l'inizializzazione di controlli di finestra di dialogo, chiamare il `DoModal` funzione membro per visualizzare la finestra di dialogo e consentire all'utente di selezionare le opzioni di stampa. `DoModal` indica se l'utente selezionato OK ( **IDOK**) o su Annulla ( **IDCANCEL**) pulsante.  
   
  Se `DoModal` restituisce **IDOK**, è possibile utilizzare uno dei `CPrintDialog`di funzioni membro per recuperare le informazioni di input dall'utente.  
   
@@ -128,7 +123,7 @@ class CPrintDialog : public CCommonDialog
   
  È possibile utilizzare le finestre **CommDlgExtendedError** funzione per determinare se si è verificato un errore durante l'inizializzazione della finestra di dialogo e per ulteriori informazioni sull'errore. Per ulteriori informazioni su questa funzione, vedi il Windows SDK.  
   
- `CPrintDialog`si basa sul COMMDLG. File DLL che viene fornito con Windows 3.1 e versioni successive.  
+ `CPrintDialog` si basa sul COMMDLG. File DLL fornito con Windows 3.1 e versioni successive.  
   
  Per personalizzare la finestra di dialogo, derivare una classe da `CPrintDialog`, fornire un modello di finestra di dialogo personalizzata e aggiungere una mappa messaggi per elaborare i messaggi di notifica da controlli estesi. Eventuali messaggi non elaborati devono essere passati alla classe di base. La funzione hook di personalizzazione non è necessaria.  
   
@@ -204,9 +199,9 @@ virtual INT_PTR DoModal();
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- **IDOK** o **IDCANCEL**. Se **IDCANCEL** viene restituito, chiamare il Windows [CommDlgExtendedError](http://msdn.microsoft.com/library/windows/desktop/ms646916) funzione per determinare se si è verificato un errore.  
+ **IDOK** oppure **IDCANCEL**. Se **IDCANCEL** viene restituito, chiamare il Windows [CommDlgExtendedError](http://msdn.microsoft.com/library/windows/desktop/ms646916) funzione per determinare se si è verificato un errore.  
   
- **IDOK** e **IDCANCEL** sono le costanti che indicano se l'utente ha selezionato il pulsante OK o Annulla.  
+ **IDOK** e **IDCANCEL** sono costanti che indicano se l'utente ha selezionato il pulsante OK o Annulla.  
   
 ### <a name="remarks"></a>Note  
  Se si desidera inizializzare le varie opzioni della finestra di dialogo Stampa impostando i membri del `m_pd` struttura, è consigliabile farlo prima di chiamare `DoModal`, ma dopo che l'oggetto finestra di dialogo.  
@@ -450,7 +445,7 @@ BOOL PrintSelection() const;
   Per vedere l'esempio [CPrintDialog:: M_pd](#m_pd).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Esempio MFC viene](../../visual-cpp-samples.md)   
+ [Esempio MFC immagine](../../visual-cpp-samples.md)   
  [Classe CCommonDialog](../../mfc/reference/ccommondialog-class.md)   
  [Grafico delle gerarchie](../../mfc/hierarchy-chart.md)   
  [Struttura CPrintInfo](../../mfc/reference/cprintinfo-structure.md)

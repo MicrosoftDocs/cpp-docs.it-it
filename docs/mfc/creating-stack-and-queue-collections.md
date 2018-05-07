@@ -1,13 +1,10 @@
 ---
 title: Creazione di raccolte di Stack e coda | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -20,22 +17,20 @@ helpviewer_keywords:
 - stack collections
 - collections, queue
 ms.assetid: 3c7bc198-35f0-4fc3-aaed-6005a0f22638
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dd3c4d587f64fc89bf25cfd127e6b7efc490df8a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5545a1803675965cdea716e009ab70d2d72a31f4
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="creating-stack-and-queue-collections"></a>Creazione di raccolta Stack e Code
 In questo articolo viene illustrato come creare altre strutture di dati, ad esempio [stack](#_core_stacks) e [code](#_core_queues), elenco classi MFC. Negli esempi vengono utilizzate le classi derivate da `CList`, ma è possibile utilizzare `CList` direttamente a meno che non è necessario aggiungere la funzionalità.  
   
-##  <a name="_core_stacks"></a>Stack  
+##  <a name="_core_stacks"></a> Stack  
  Poiché la raccolta dell'elenco standard ha un'intestazione e da una coda, è facile creare una raccolta derivata che simula il comportamento di un oggetto stack last-in-first-out. Uno stack è simile a una pila di cassetti in un self-service:. Se cassetti vengono aggiunti allo stack, escono all'inizio dello stack. L'ultimo vassoio aggiunto è il primo da rimuovere. Le funzioni membro di raccolta elenco `AddHead` e `RemoveHead` può essere utilizzato per aggiungere e rimuovere elementi dalla head dell'elenco; in questo modo, l'ultimo aggiunto elemento è il primo da rimuovere.  
   
 #### <a name="to-create-a-stack-collection"></a>Per creare una raccolta di stack  
@@ -48,7 +43,7 @@ In questo articolo viene illustrato come creare altre strutture di dati, ad esem
   
  Si noti che questo approccio espone sottostante `CObList` classe. L'utente può chiamare qualsiasi `CObList` funzione membro, se è utile per lo stack o non.  
   
-##  <a name="_core_queues"></a>Code  
+##  <a name="_core_queues"></a> Code  
  Poiché la raccolta dell'elenco standard ha un'intestazione e da una coda, è facile creare una raccolta derivata che simula il comportamento di una coda first-in-first-out. Una coda è una linea di persone in un self-service:. Il primo utente nella riga è la prima di essere servite. I nuovi arrivati, passano alla fine della riga di attesa a loro volta. Le funzioni membro di raccolta elenco `AddTail` e `RemoveHead` può essere utilizzato per aggiungere e rimuovere elementi dalla testa o dalla coda dell'elenco; in questo modo, l'ultimo aggiunto elemento è sempre l'ultimo da rimuovere.  
   
 #### <a name="to-create-a-queue-collection"></a>Per creare un insieme di code  

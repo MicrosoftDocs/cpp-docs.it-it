@@ -1,13 +1,10 @@
 ---
 title: Procedure guidate ed editor risorse | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -21,25 +18,23 @@ helpviewer_keywords:
 - MFC, wizards
 - Class View tool, managing Windows messages
 ms.assetid: f5dd4d13-9dc1-4a49-b6bf-5b3cb45fa8ba
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1fd81a8548dbb746da4afa5b89bc49ee801cbaeb
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 33fb1caa496c34111de133a113433a614ff5eb22
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wizards-and-the-resource-editors"></a>Procedure guidate ed editor risorse
 Visual C++ include diverse procedure guidate per l'utilizzo nella programmazione MFC, insieme a molti editor di risorse integrata. Per la programmazione, i controlli ActiveX di [Creazione guidata controllo ActiveX](../mfc/reference/mfc-activex-control-wizard.md) svolge una funzione simile a quella della creazione guidata applicazione MFC. Sebbene sia possibile scrivere applicazioni MFC senza la maggior parte di questi strumenti, gli strumenti notevolmente semplificano e velocizzare il lavoro.  
   
-##  <a name="_core_use_appwizard_to_create_an_mfc_application"></a>Utilizzare la creazione guidata applicazione MFC per creare un'applicazione MFC  
+##  <a name="_core_use_appwizard_to_create_an_mfc_application"></a> Utilizzare la creazione guidata applicazione MFC per creare un'applicazione MFC  
  Utilizzare il [Creazione guidata applicazione MFC](../mfc/reference/mfc-application-wizard.md) per creare un progetto MFC in Visual C++, che può includere OLE e il supporto per database. I file del progetto contengono dell'applicazione, documenti, visualizzazione e le classi finestra cornice. risorse standard, compresi i menu e una barra degli strumenti facoltativo. altri necessari file di Windows; e i file RTF facoltativo contenente gli argomenti della Guida di Windows standard che è possibile modificare ed estendere per creare i file della Guida del programma.  
   
-##  <a name="_core_use_classwizard_to_manage_classes_and_windows_messages"></a>Utilizzare Visualizzazione classi per gestire le classi e i messaggi di Windows  
+##  <a name="_core_use_classwizard_to_manage_classes_and_windows_messages"></a> Utilizzare Visualizzazione classi per gestire le classi e i messaggi di Windows  
  Consente di visualizzare classe creare funzioni di gestione per i messaggi di Windows e i comandi, creare e gestire le classi, creare le variabili membro di classe, creare proprietà e metodi di automazione, creare classi di database e altro ancora.  
   
 > [!NOTE]
@@ -53,7 +48,7 @@ Visual C++ include diverse procedure guidate per l'utilizzo nella programmazione
   
  La finestra Proprietà creerà funzioni membro di gestore di messaggi vuota e utilizzare l'editor del codice sorgente per implementare il corpo del gestore. È anche possibile creare o modificare classi (incluse le classi personalizzate, non è derivate dalle classi MFC) e i relativi membri con Visualizzazione classi. Per ulteriori informazioni sull'utilizzo di visualizzazione classi e sulle procedure guidate che aggiungere codice a un progetto, vedere [aggiunta di funzionalità con creazioni guidate codice](../ide/adding-functionality-with-code-wizards-cpp.md).  
   
-##  <a name="_core_use_the_resource_editors_to_create_and_edit_resources"></a>Utilizzare gli editor di risorse per creare e modificare le risorse  
+##  <a name="_core_use_the_resource_editors_to_create_and_edit_resources"></a> Utilizzare gli editor di risorse per creare e modificare le risorse  
  Usare Visual C++ [editor risorse](../windows/resource-editors.md) per creare e modificare i menu, finestre di dialogo, i controlli personalizzati, tasti di scelta rapida, bitmap, icone, cursori, stringhe e le risorse di versione. A partire da Visual C++ versione 4.0, un editor barra degli strumenti semplifica la creazione di barre degli strumenti.  
   
  Per semplificare ulteriormente, la libreria Microsoft Foundation Class fornisce un file denominato COMMON. RES, che contiene risorse "ClipArt" che è possibile copiare da comuni. RES e incollare nel file di risorsa. COMUNI. RES include i pulsanti della barra degli strumenti, comuni cursori, icone e molto altro. È possibile utilizzare, modificare e ridistribuire queste risorse nell'applicazione. Per altre informazioni comuni. RES, vedere il [esempio Clipart](../visual-cpp-samples.md).  

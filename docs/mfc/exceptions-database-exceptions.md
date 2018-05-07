@@ -1,13 +1,10 @@
 ---
 title: 'Eccezioni: Eccezioni di Database | Documenti Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - databases [MFC], exception handling
 - error codes [MFC], database exception handling
 ms.assetid: 28daf260-f824-4be6-aecc-1f859e6dec26
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e853f2bd6f57c7ccc63e802f013661efb85d9796
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2168bc530accfdde6fad4d41cd68e94d3088f153
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="exceptions-database-exceptions"></a>Eccezioni: eccezioni di database
 In questo articolo viene illustrato come gestire le eccezioni di database. La maggior parte del materiale in questo articolo si applica se si lavora con le classi MFC per Open Database Connectivity (ODBC) o le classi MFC per oggetti DAO (Data Access). Verrà esplicitamente contrassegnato come materiale specifico a uno o l'altro modello. Gli argomenti trattati includono:  
@@ -39,7 +34,7 @@ In questo articolo viene illustrato come gestire le eccezioni di database. La ma
   
 -   [Un esempio di gestione delle eccezioni di database](#_core_a_database_exception.2d.handling_example)  
   
-##  <a name="_core_approaches_to_exception_handling"></a>Approcci per la gestione delle eccezioni  
+##  <a name="_core_approaches_to_exception_handling"></a> Approcci per la gestione delle eccezioni  
  Se si lavora con DAO o ODBC, l'approccio è lo stesso.  
   
  È necessario scrivere sempre i gestori di eccezioni per gestire le condizioni eccezionali.  
@@ -54,15 +49,15 @@ In questo articolo viene illustrato come gestire le eccezioni di database. La ma
 ### <a name="error-codes-used-for-dao-exceptions"></a>Codici di errore utilizzati per le eccezioni di DAO  
  Per le eccezioni di DAO, sono in genere disponibili ulteriori informazioni. È possibile accedere a informazioni sugli errori tramite i tre membri dati di un elemento intercettato [CDaoException](../mfc/reference/cdaoexception-class.md) oggetto:  
   
--   [m_pErrorInfo](../mfc/reference/cdaoexception-class.md#m_perrorinfo) contiene un puntatore a un [CDaoErrorInfo](../mfc/reference/cdaoerrorinfo-structure.md) oggetto che incapsula le informazioni di errore nella raccolta di DAO di oggetti di errore associati al database.  
+-   [m_pErrorInfo](../mfc/reference/cdaoexception-class.md#m_perrorinfo) contiene un puntatore a un [CDaoErrorInfo](../mfc/reference/cdaoerrorinfo-structure.md) oggetto che incapsula le informazioni di errore nella raccolta di DAO degli oggetti di errore associati al database.  
   
 -   [m_nAfxDaoError](../mfc/reference/cdaoexception-class.md#m_nafxdaoerror) contiene un codice di errore esteso dalle classi DAO MFC. Questi codici di errore, che hanno il formato dei nomi **AFX_DAO_ERROR_XXX**, sono documentati nel membro dati in `CDaoException`.  
   
--   [m_scode](../mfc/reference/cdaoexception-class.md#m_scode) contiene OLE `SCODE` da DAO, se applicabile. Raramente è necessario usare questo codice di errore, tuttavia. In genere ulteriori informazioni sono disponibili in altri membri di dati di due. Vedere il membro dei dati per altre informazioni sulle `SCODE` valori.  
+-   [m_scode](../mfc/reference/cdaoexception-class.md#m_scode) contiene un OLE `SCODE` da DAO, se applicabile. Raramente è necessario usare questo codice di errore, tuttavia. In genere ulteriori informazioni sono disponibili in altri membri di dati di due. Vedere il membro dei dati per altre informazioni sulle `SCODE` valori.  
   
  Informazioni aggiuntive sugli errori, il tipo di oggetto errore DAO e la raccolta di errori di DAO DAO sono disponibili nella classe [CDaoException](../mfc/reference/cdaoexception-class.md).  
   
-##  <a name="_core_a_database_exception.2d.handling_example"></a>Un esempio di gestione delle eccezioni di Database  
+##  <a name="_core_a_database_exception.2d.handling_example"></a> Un esempio di gestione delle eccezioni di Database  
  Nell'esempio seguente si tenta di costruire un [CRecordset](../mfc/reference/crecordset-class.md)-oggetto sull'heap con derivato il **nuova** operatore e quindi aprire il recordset (per un'origine dati ODBC). Per un esempio simile per le classi DAO, vedere "Esempio di eccezione DAO" riportata di seguito.  
   
 ### <a name="odbc-exception-example"></a>Esempio di eccezione ODBC  

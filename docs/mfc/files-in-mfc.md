@@ -1,13 +1,10 @@
 ---
 title: File in MFC | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - files [MFC], manipulating
 - binary access [MFC]
 ms.assetid: ae25e2c5-2859-4679-ab97-438824e93ce1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4d2cd6344f11a9c32ade0fc3241225a8763c18b9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 30d220c928f2ca3fe0594d03d558d2d6dcfce773
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="files-in-mfc"></a>File in MFC
 Classe in di Microsoft Foundation libreria MFC (Class), [CFile](../mfc/reference/cfile-class.md) gestisce le operazioni dei / o file normali. Questa serie di articoli viene illustrato come aprire e chiudere i file, nonché leggere e scrivere dati in tali file. Illustra anche le operazioni di stato di file. Per una descrizione di come utilizzare le funzionalità di serializzazione basato su oggetti di MFC come metodo alternativo di lettura e scrittura dei dati nei file, vedere l'articolo [serializzazione](../mfc/serialization-in-mfc.md).  
@@ -56,9 +51,9 @@ Classe in di Microsoft Foundation libreria MFC (Class), [CFile](../mfc/reference
   
 -   [Chiudere un file con CFile](../mfc/closing-files.md)  
   
--   [Stato del file di Access con CFile](../mfc/accessing-file-status.md)  
+-   [Stato di file di Access con CFile](../mfc/accessing-file-status.md)  
   
- *Utilizzare la serializzazione di MFC (persistenza degli oggetti)*  
+ *Utilizzare la serializzazione di MFC (la persistenza degli oggetti)*  
   
 -   [Creare una classe serializzabile](../mfc/serialization-making-a-serializable-class.md)  
   

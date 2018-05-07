@@ -1,13 +1,10 @@
 ---
 title: OLE trascinamento e rilascio di trasferimento dati e le classi | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.classes.ole
 dev_langs:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - data transfer [MFC], OLE
 - data transfer classes [MFC]
 ms.assetid: c8ab2825-ed69-4b88-8ae6-f368b94726b8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0e8c5a54184bcf6450bf39b39a6b90d7865c09d3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d55d6d171f490631afe17a605f50607fb55f070b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ole-drag-and-drop-and-data-transfer-classes"></a>Classi di trasferimento dati e trascinamento della selezione OLE
 Queste classi vengono utilizzate nei trasferimenti di dati OLE. Consentono il trasferimento tra applicazioni utilizzando negli Appunti o mediante trascinamento e rilascio di dati.  
@@ -38,13 +33,13 @@ Queste classi vengono utilizzate nei trasferimenti di dati OLE. Consentono il tr
  Controlla l'operazione di trascinamento e rilascio dall'inizio alla fine. Questa classe determina l'avvio dell'operazione di trascinamento e alla data di fine. Visualizza anche i commenti e suggerimenti del cursore durante l'operazione di trascinamento e rilascio.  
   
  [COleDataSource](../mfc/reference/coledatasource-class.md)  
- Utilizzato quando un'applicazione fornisce dati per un trasferimento di dati. `COleDataSource`può essere considerato come un oggetto Clipboard orientata agli oggetti.  
+ Utilizzato quando un'applicazione fornisce dati per un trasferimento di dati. `COleDataSource` può essere considerato come un oggetto di Appunti orientata agli oggetti.  
   
  [COleDropTarget](../mfc/reference/coledroptarget-class.md)  
  Rappresenta la destinazione di un'operazione di trascinamento e rilascio. Oggetto `COleDropTarget` oggetto corrisponde a una finestra sullo schermo. Determina se accettare tutti i dati trascinati su di esso e implementa l'operazione di rilascio effettivo.  
   
  [COleDataObject](../mfc/reference/coledataobject-class.md)  
- Utilizzato come lato ricevitore `COleDataSource`. `COleDataObject`oggetti forniscono l'accesso ai dati archiviati da un `COleDataSource` oggetto.  
+ Utilizzato come lato ricevitore `COleDataSource`. `COleDataObject` gli oggetti forniscono l'accesso ai dati archiviati da un `COleDataSource` oggetto.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Cenni preliminari sulla classe](../mfc/class-library-overview.md)

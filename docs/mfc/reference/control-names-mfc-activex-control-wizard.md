@@ -1,13 +1,10 @@
 ---
 title: Nomi controllo, creazione guidata controllo ActiveX MFC | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.appwiz.mfc.ctl.names
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - MFC ActiveX Control Wizard, control names
 ms.assetid: 9b8b81d2-36df-48ed-b58a-a771a0e269ee
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5f3444ec69ea96ee89ed7a0965f3575fc79e3b9c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 08a406bf633715f6a6e9546295da3b02a41f0063
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="control-names-mfc-activex-control-wizard"></a>Nomi controllo, Creazione guidata controllo ActiveX MFC
 Specificare i nomi per la classe di controllo e una classe delle pagine di proprietà, i nomi dei tipi e digitare gli identificatori per il controllo. Ad eccezione di **nome breve**, tutti gli altri campi possono essere modificati in modo indipendente. Se si modifica il testo per **nome breve**, la modifica viene riflessa nei nomi di tutti gli altri campi in questa pagina. Questo comportamento di denominazione è progettato per rendere facilmente identificabile tutti i nomi per l'utente quando si sviluppa il controllo.  
@@ -45,7 +40,7 @@ Specificare i nomi per la classe di controllo e una classe delle pagine di propr
  **Nome del tipo di controllo**  
  Per impostazione predefinita, il nome del tipo di controllo è basato sul nome breve, seguito da `Control`. Ad esempio, se il controllo breve del nome è `Price`, il nome di tipo classe control `Price Control`. Se si modifica il valore in questo campo, verificare che il nome indica un'ereditarietà.  
   
- **ID del tipo di controllo**  
+ **ID tipo di controllo**  
  Imposta l'ID del tipo di controllo della classe del controllo. Il controllo, questa stringa viene scritta nel Registro di sistema quando viene aggiunto a un progetto. Applicazioni contenitore questa stringa viene utilizzata per creare un'istanza del controllo.  
   
  Per impostazione predefinita, l'ID del tipo di controllo è basato sul nome del progetto, è indicato nella finestra di **nuovo progetto** la finestra di dialogo e il nome breve. Questo nome deve corrispondere al nome di tipo.  
@@ -58,7 +53,7 @@ Specificare i nomi per la classe di controllo e una classe delle pagine di propr
   
  *ProjectName. NewShortName*CTRL. 1  
   
- **Nome di classe delle pagine delle proprietà**  
+ **Nome di classe di pagine delle proprietà**  
  Per impostazione predefinita, il nome della classe della pagina delle proprietà è basato sul nome breve, con `C` come prefisso e `PropPage` come suffisso. Ad esempio, se il controllo breve del nome è `Price`, il nome di classe di pagine di proprietà `CPricePropPage`. Questo nome deve corrispondere al nome di classe del controllo, verrà aggiunto `PropPage`.  
   
  **File con estensione h pagine delle proprietà**  
@@ -70,7 +65,7 @@ Specificare i nomi per la classe di controllo e una classe delle pagine di propr
  **Nome del tipo di pagine delle proprietà**  
  Per impostazione predefinita, il nome del tipo di pagina di proprietà si basa sul nome breve, seguito da `Property Page`. Ad esempio, se il controllo breve del nome è `Price`, il nome del tipo di pagina di proprietà `Price Property Page`. Se si modifica il valore in questo campo, verificare che il nome indica la classe del controllo.  
   
- **ID tipo pagine delle proprietà**  
+ **ID tipo di pagine delle proprietà**  
  Imposta l'ID della classe della pagina delle proprietà. Il controllo, questa stringa viene scritta nel Registro di sistema quando viene applicato a un progetto. Un'applicazione contenitore utilizza questa stringa per creare un'istanza del controllo pagina delle proprietà.  
   
  Per impostazione predefinita, l'ID del tipo di pagina di proprietà è basato sul nome del progetto, è indicato nella finestra di **nuovo progetto** la finestra di dialogo e il nome breve. Questo nome deve corrispondere al nome di tipo.  

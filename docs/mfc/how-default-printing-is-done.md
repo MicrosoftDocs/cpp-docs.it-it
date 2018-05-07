@@ -1,13 +1,10 @@
 ---
 title: Procedura di stampa predefinita | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,22 +12,20 @@ helpviewer_keywords:
 - printing [MFC], default
 - defaults, printing
 ms.assetid: 0f698459-0fc9-4d43-97da-29cf0f65daa2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5001026f1e5fe9e1fed86a49b0565b09ddd6b555
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d2cf5b4a9bda3506a9558d5b723020dfe6d43396
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-default-printing-is-done"></a>Procedura di stampa predefinita
 In questo articolo viene illustrato il processo di stampa predefinito in Windows a livello del framework MFC.  
   
- Nelle applicazioni MFC, la classe di visualizzazione dispone di una funzione membro denominata `OnDraw` contenente tutto il codice di disegno. `OnDraw`accetta un puntatore a un [CDC](../mfc/reference/cdc-class.md) oggetto come parametro. L'oggetto `CDC` rappresenta il contesto di dispositivo che deve ricevere l'immagine prodotta da `OnDraw`. Quando la finestra Visualizza il documento riceve un [WM_PAINT](http://msdn.microsoft.com/library/windows/desktop/dd145213) del messaggio, il framework chiama `OnDraw` e lo passa a un contesto di dispositivo per la schermata (un [CPaintDC](../mfc/reference/cpaintdc-class.md) oggetto specifico). Pertanto, l'output di `OnDraw` sarà inviato allo schermo.  
+ Nelle applicazioni MFC, la classe di visualizzazione dispone di una funzione membro denominata `OnDraw` contenente tutto il codice di disegno. `OnDraw` accetta un puntatore a un [CDC](../mfc/reference/cdc-class.md) oggetto come parametro. L'oggetto `CDC` rappresenta il contesto di dispositivo che deve ricevere l'immagine prodotta da `OnDraw`. Quando la finestra Visualizza il documento riceve un [WM_PAINT](http://msdn.microsoft.com/library/windows/desktop/dd145213) del messaggio, il framework chiama `OnDraw` e lo passa a un contesto di dispositivo per la schermata (un [CPaintDC](../mfc/reference/cpaintdc-class.md) oggetto specifico). Pertanto, l'output di `OnDraw` sarà inviato allo schermo.  
   
  Nella programmazione per Windows, l'invio di output alla stampante è molto simile all'invio di output allo schermo. Questo perché la Graphics Device Interface (GDI) di Windows è indipendente dall'hardware. È possibile utilizzare le stesse funzioni GDI per la visualizzazione su schermo o per la stampa utilizzando semplicemente il contesto di dispositivo appropriato. Se l'oggetto `CDC` ricevuto da `OnDraw` rappresenta la stampante, l'output di `OnDraw` sarà inviato alla stampante.  
   

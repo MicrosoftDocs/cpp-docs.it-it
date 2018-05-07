@@ -1,29 +1,24 @@
 ---
 title: Sequenza di operazioni per la compilazione di applicazioni MFC | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - applications [MFC], developing
 ms.assetid: 6973c714-fe20-48c6-926b-de88356b3a3d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ae1169b438a181e22696502352c19353421469b1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1bafcec75643c292a887b54de1b852609dd251c0
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sequence-of-operations-for-building-mfc-applications"></a>Sequenza delle operazioni per la compilazione di applicazioni MFC
 La tabella seguente illustra la sequenza generale che è possibile seguire in genere quando si sviluppa l'applicazione MFC.  
@@ -50,7 +45,7 @@ La tabella seguente illustra la sequenza generale che è possibile seguire in ge
 |Aggiungere lo scorrimento.|Se è necessario supportare lo scorrimento, derivare la classe o Visualizzazione classi dal [CScrollView](../mfc/reference/cscrollview-class.md).|La vista aggiunge automaticamente le barre di scorrimento quando la finestra di visualizzazione diventa troppo piccola.|  
 |Creare visualizzazioni di form.|Se si desidera basare le visualizzazioni su risorse modello di finestra, derivare la classe o Visualizzazione classi dal [CFormView](../mfc/reference/cformview-class.md).|La vista utilizza la risorsa modello di finestra di dialogo per visualizzare i controlli. L'utente può spostarsi dal controllo del controllo nella visualizzazione.|  
 |Creazione di form di database.|Se si desidera che un'applicazione di accesso ai dati basato su form, derivare la classe di visualizzazione da [CRecordView](../mfc/reference/crecordview-class.md) (per la programmazione ODBC).|La vista funziona come una visualizzazione form, ma i relativi controlli connessi ai campi di un [CRecordset](../mfc/reference/crecordset-class.md) oggetto che rappresenta una tabella di database. MFC Sposta i dati tra i controlli e recordset per l'utente.|  
-|Creare editor di testo semplice.|Se si desidera la visualizzazione sia un semplice editor di testo, derivare la classe o Visualizzazione classi dal [CEditView](../mfc/reference/ceditview-class.md) o [CRichEditView](../mfc/reference/cricheditview-class.md).|La vista fornisce la modifica delle funzioni, supporto per gli Appunti e file di input/output. `CRichEditView`fornisce il testo con stile.|  
+|Creare editor di testo semplice.|Se si desidera la visualizzazione sia un semplice editor di testo, derivare la classe o Visualizzazione classi dal [CEditView](../mfc/reference/ceditview-class.md) o [CRichEditView](../mfc/reference/cricheditview-class.md).|La vista fornisce la modifica delle funzioni, supporto per gli Appunti e file di input/output. `CRichEditView` viene fornito con stile di testo.|  
 |Aggiungere finestre con separatore.|Se si desidera supportare la divisione di finestra, aggiungere un [CSplitterWnd](../mfc/reference/csplitterwnd-class.md) la finestra cornice SDI o alla finestra figlio MDI e associare la finestra [OnCreateClient](../mfc/reference/cframewnd-class.md#oncreateclient) funzione membro.|Il framework fornisce i controlli casella di divisione accanto le barre di scorrimento e gestisce la suddivisione della visualizzazione in più riquadri. Se l'utente si divide una finestra, il framework crea e collega gli oggetti di visualizzazione aggiuntive per il documento.|  
 |Compilare, testare e il debug dell'applicazione.|Utilizzare le funzionalità di Visual C++ per compilare, testare e il debug dell'applicazione.|Visual C++ consente di impostare altre opzioni, collegamento e la compilazione. È anche possibile esplorare la struttura di classe e codice sorgente.|  
   

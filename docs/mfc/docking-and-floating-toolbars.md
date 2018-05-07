@@ -1,13 +1,10 @@
 ---
 title: Ancoraggio e barre degli strumenti mobili | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - CBRS_SIZE_DYNAMIC
 - CBRS_SIZE_FIXED
@@ -30,17 +27,15 @@ helpviewer_keywords:
 - toolbars [MFC], wrapping
 - floating palettes
 ms.assetid: b7f9f9d4-f629-47d2-a3c4-2b33fa6b51e4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d6646fa33c0a78e8194faa5d511e107febca6d6f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 430af2344888696e3cbf053677ef59c7249b50bd
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="docking-and-floating-toolbars"></a>Ancoraggio e barre degli strumenti mobili
 La libreria Microsoft Foundation Class supporta le barre degli strumenti ancorabile. Una barra degli strumenti ancorata possa essere collegato o ancorata, a qualsiasi lato della finestra padre, oppure può essere scollegato, o resa mobile, in una finestra con mini-cornice. In questo articolo viene illustrato come utilizzare le barre degli strumenti ancorabile nelle applicazioni.  
@@ -51,7 +46,7 @@ La libreria Microsoft Foundation Class supporta le barre degli strumenti ancorab
   
 -   [Attivare l'ancoraggio per una barra degli strumenti](#_core_enabling_docking_for_a_toolbar).  
   
--   [Ancorare la barra degli strumenti (finestra cornice)](#_core_docking_the_toolbar).  
+-   [Ancorare la barra degli strumenti (alla finestra cornice)](#_core_docking_the_toolbar).  
   
  Se uno di questi passaggi sono mancante, l'applicazione verrà visualizzata una barra degli strumenti standard. Gli ultimi due passaggi da eseguire per ogni barra degli strumenti ancorata nell'applicazione.  
   
@@ -59,33 +54,33 @@ La libreria Microsoft Foundation Class supporta le barre degli strumenti ancorab
   
 -   [La barra degli strumenti mobile](#_core_floating_the_toolbar)  
   
--   [La barra degli strumenti di ridimensionamento dinamico](#_core_dynamically_resizing_the_toolbar)  
+-   [Ridimensionamento dinamico barra degli strumenti](#_core_dynamically_resizing_the_toolbar)  
   
--   [Posizioni di incapsulamento di impostazione per una barra degli strumenti stile predefinito](#_core_setting_wrap_positions_for_a_fixed_style_toolbar)  
+-   [Posizioni incapsulamento di impostazione di una barra degli strumenti lo stile predefinito](#_core_setting_wrap_positions_for_a_fixed_style_toolbar)  
   
  Vedere l'esempio MFC generale [DOCKTOOL](../visual-cpp-samples.md) per gli esempi.  
   
-##  <a name="_core_enabling_docking_in_a_frame_window"></a>Attivazione dell'ancoraggio in una finestra cornice  
+##  <a name="_core_enabling_docking_in_a_frame_window"></a> Attivazione dell'ancoraggio in una finestra cornice  
  Per ancorare le barre degli strumenti in una finestra cornice, è necessario attivare la finestra cornice (o destinazione) per consentire di ancoraggio. Questa operazione viene eseguita utilizzando il [CFrameWnd:: EnableDocking](../mfc/reference/cframewnd-class.md#enabledocking) funzione che accetta uno `DWORD` parametro che è un set di stile bit che indica il lato della finestra cornice accetta di ancoraggio. Se una barra degli strumenti sta per essere ancorato e sono presenti più lati che può essere ancorata a, i lati indicati nel parametro passato a `EnableDocking` vengono utilizzati nell'ordine seguente: superiore, inferiore, sinistra, destro. Se si desidera essere in grado di ancorare controllo barre ovunque, passare `CBRS_ALIGN_ANY` a `EnableDocking`.  
   
-##  <a name="_core_enabling_docking_for_a_toolbar"></a>Attivazione dell'ancoraggio per una barra degli strumenti  
+##  <a name="_core_enabling_docking_for_a_toolbar"></a> L'abilitazione di ancoraggio per una barra degli strumenti  
  Dopo avere preparato la posizione di ancoraggio, è necessario preparare la barra degli strumenti (o origine) in modo simile. Chiamare [CControlBar:: EnableDocking](../mfc/reference/ccontrolbar-class.md#enabledocking) per ogni barra degli strumenti che si desidera ancorare, specificare la destinazione lati a cui deve essere ancorata. Se nessuno dei lati specificati nella chiamata a `CControlBar::EnableDocking` corrisponde ai lati abilitati per l'ancoraggio della finestra cornice, non è possibile ancorare la barra degli strumenti, e rimarrà mobile. Una volta reso mobile rimane barra mobile, non è possibile ancorare la finestra cornice.  
   
  Se l'effetto desiderato è una barra degli strumenti mobile in modo permanente, chiamare `EnableDocking` con un parametro di 0. Chiamare quindi [CFrameWnd:: FloatControlBar](../mfc/reference/cframewnd-class.md#floatcontrolbar). La barra degli strumenti rimarrà mobile e non potrà essere ancorata in qualsiasi punto.  
   
-##  <a name="_core_docking_the_toolbar"></a>La barra degli strumenti di ancoraggio  
+##  <a name="_core_docking_the_toolbar"></a> La barra degli strumenti di ancoraggio  
  Il framework chiama [CFrameWnd:: DockControlBar](../mfc/reference/cframewnd-class.md#dockcontrolbar) quando l'utente tenta di eliminare la barra degli strumenti su un lato della finestra cornice che consente di ancoraggio.  
   
  Inoltre, è possibile chiamare questa funzione in qualsiasi momento per ancorare le barre di controllo alla finestra cornice. Questa operazione viene in genere eseguita durante l'inizializzazione. Più di una barra degli strumenti può essere ancorato a un lato della finestra cornice.  
   
-##  <a name="_core_floating_the_toolbar"></a>La barra degli strumenti mobile  
+##  <a name="_core_floating_the_toolbar"></a> La barra degli strumenti mobile  
  Scollegamento di una barra degli strumenti ancorata dalla finestra cornice viene chiamato la barra degli strumenti mobile. Chiamare [CFrameWnd:: FloatControlBar](../mfc/reference/cframewnd-class.md#floatcontrolbar) per eseguire questa operazione. Specificare la barra degli strumenti per essere resa mobile, il punto in cui deve essere inserito e stile di allineamento che determina se la barra degli strumenti mobile è orizzontale o verticale.  
   
  Il framework chiama questa funzione quando un utente trascina una barra degli strumenti off posizione di ancoraggio e lo rilascia in una posizione in cui ancoraggio non è abilitato. Può essere un punto qualsiasi all'interno o all'esterno della finestra cornice. Come con `DockControlBar`, è inoltre possibile chiamare questa funzione durante l'inizializzazione.  
   
  L'implementazione MFC di barre degli strumenti ancorabili non fornisce alcune funzioni estese disponibili in alcune applicazioni che supportano le barre degli strumenti ancorabile. Non sono fornite le funzionalità, ad esempio le barre degli strumenti personalizzabile.  
   
-##  <a name="_core_dynamically_resizing_the_toolbar"></a>La barra degli strumenti di ridimensionamento dinamico  
+##  <a name="_core_dynamically_resizing_the_toolbar"></a> Ridimensionamento dinamico barra degli strumenti  
  A partire da Visual C++ versione 4.0, è possibile renderlo possibili per gli utenti dell'applicazione per ridimensionare in modo dinamico le barre degli strumenti mobile. In genere, una barra degli strumenti dispone di una forma e lineare visualizzata orizzontalmente. Ma è possibile modificare l'orientamento della barra degli strumenti e la relativa forma. Ad esempio, quando l'utente è ancora una barra degli strumenti su uno dei lati verticali della finestra cornice, la forma viene modificato un layout verticale. È inoltre possibile modificare la forma barra degli strumenti in un rettangolo con più righe di pulsanti.  
   
  È possibile:  
@@ -106,7 +101,7 @@ La libreria Microsoft Foundation Class supporta le barre degli strumenti ancorab
   
  È inoltre possibile utilizzare [CToolBar:: GetButtonStyle](../mfc/reference/ctoolbar-class.md#getbuttonstyle) per restituire uno stato e lo stile per i pulsanti nella barra degli strumenti. Stile del pulsante determina l'aspetto del pulsante e la modalità di risposta all'input dell'utente; lo stato indica se il pulsante è stato eseguito.  
   
-##  <a name="_core_setting_wrap_positions_for_a_fixed_style_toolbar"></a>Posizioni di incapsulamento di impostazione per una barra degli strumenti stile predefinito  
+##  <a name="_core_setting_wrap_positions_for_a_fixed_style_toolbar"></a> Impostazione delle posizioni di incapsulamento per una barra degli strumenti lo stile predefinito  
  Per una barra degli strumenti con una dimensione fissato di stile, designare barra degli strumenti indici pulsante in corrispondenza del quale la barra degli strumenti eseguirà il wrapping. Il codice seguente viene illustrato come eseguire questa operazione in della finestra cornice principale `OnCreate` eseguire l'override:  
   
  [!code-cpp[NVC_MFCDocViewSDI#10](../mfc/codesnippet/cpp/docking-and-floating-toolbars_1.cpp)]  
@@ -117,7 +112,7 @@ La libreria Microsoft Foundation Class supporta le barre degli strumenti ancorab
   
 -   [Nozioni fondamentali sulla barra degli strumenti](../mfc/toolbar-fundamentals.md)  
   
--   [Descrizione comandi](../mfc/toolbar-tool-tips.md)  
+-   [Descrizioni comandi barra degli strumenti](../mfc/toolbar-tool-tips.md)  
   
 -   [Utilizzo delle barre degli strumenti precedente](../mfc/using-your-old-toolbars.md)  
   

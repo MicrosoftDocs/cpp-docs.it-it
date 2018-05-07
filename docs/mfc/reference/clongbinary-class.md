@@ -1,12 +1,9 @@
 ---
 title: CLongBinary (classe) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CLongBinary
@@ -19,17 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - CLongBinary class [MFC]
 ms.assetid: f4320059-aeb4-4ee5-bc2b-25f19d898ef5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 49661932192a32550d50edfbbc52d7967cb78dcd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f7030fdcb59166c0e70a7b2c2471273c913fe459
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="clongbinary-class"></a>CLongBinary (classe)
 Semplifica l'utilizzo di oggetti dati binari di grandi dimensioni (spesso chiamati BLOB) in un database.  
@@ -75,14 +70,14 @@ class CLongBinary : public CObject
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** afxdb_.h  
   
-##  <a name="clongbinary"></a>CLongBinary::CLongBinary  
+##  <a name="clongbinary"></a>  CLongBinary::CLongBinary  
  Costruisce un oggetto `CLongBinary`.  
   
 ```  
 CLongBinary();
 ```  
   
-##  <a name="m_dwdatalength"></a>CLongBinary::m_dwDataLength  
+##  <a name="m_dwdatalength"></a>  CLongBinary::m_dwDataLength  
  Archivia le dimensioni effettive in byte dei dati archiviati nel `HGLOBAL` gestire nel `m_hData`.  
   
 ```  
@@ -92,7 +87,7 @@ SQLULEN m_dwDataLength;
 ### <a name="remarks"></a>Note  
  Questa dimensione può essere inferiore alla dimensione del blocco di memoria allocata per i dati. Chiamare Win32 [GLobalSize](http://msdn.microsoft.com/library/windows/desktop/aa366593) funzione per ottenere le dimensioni allocate.  
   
-##  <a name="m_hdata"></a>CLongBinary::m_hData  
+##  <a name="m_hdata"></a>  CLongBinary::m_hData  
  Archivia un Windows `HGLOBAL` handle di dati effettivo oggetto BLOB.  
   
 ```  

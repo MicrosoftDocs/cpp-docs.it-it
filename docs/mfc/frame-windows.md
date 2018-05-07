@@ -1,13 +1,10 @@
 ---
 title: Finestre cornice | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -24,17 +21,15 @@ helpviewer_keywords:
 - MDI [MFC], frame windows
 - splitter windows [MFC], and frame windows
 ms.assetid: 40677339-8135-4f5e-aba6-3fced3078077
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 14dabd345f47b064f78a4e9a3dede834bddeb9d3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 515df19bcc11f7a6706985014fc44bc4ff315f36
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="frame-windows"></a>Finestre cornice
 Quando un'applicazione viene eseguita in Windows, l'utente interagisce con i documenti visualizzati nelle finestre cornice. Una finestra cornice documento ha due componenti principali: il frame e il contenuto che frame. Una finestra cornice di documento può essere un [interfaccia a documento singolo](../mfc/sdi-and-mdi.md) finestra cornice (SDI) o un [interfaccia a documenti multipli](../mfc/sdi-and-mdi.md) finestra figlio (MDI). Windows gestisce la maggior parte dell'interazione dell'utente con la finestra cornice: lo spostamento e il ridimensionamento della finestra, chiuderla e ridurre al minimo e averla. Per gestire il contenuto all'interno del frame.  
@@ -49,7 +44,7 @@ Finestra cornice e visualizzazione
  Sono un altro accordo comune per la finestra cornice a più visualizzazioni, in genere utilizzando un [finestra con separatore](../mfc/multiple-document-types-views-and-frame-windows.md). In una finestra con separatore, l'area client della finestra cornice è occupato da una finestra con separatore, che a sua volta ha più finestre figlio, denominate riquadri, che costituiscono le visualizzazioni.  
   
 ### <a name="what-do-you-want-to-know-more-about"></a>Ciò che si desidera saperne di più  
- **Argomenti sulle finestre cornice generale**  
+ **Negli argomenti di finestra cornice generale**  
   
 -   [Oggetti finestra](../mfc/window-objects.md)  
   
@@ -57,7 +52,7 @@ Finestra cornice e visualizzazione
   
 -   [Le classi Frame-Window create dalla creazione guidata applicazione](../mfc/frame-window-classes-created-by-the-application-wizard.md)  
   
--   [Stili della finestra cornice](../mfc/frame-window-styles-cpp.md)  
+-   [Stili finestra cornice](../mfc/frame-window-styles-cpp.md)  
   
 -   [Operazioni di finestre cornice](../mfc/what-frame-windows-do.md)  
   
@@ -75,7 +70,7 @@ Finestra cornice e visualizzazione
   
 -   [Gestione dei menu, barre di controllo e tasti di scelta rapida (gli altri oggetti che condividono lo spazio della finestra cornice)](../mfc/managing-menus-control-bars-and-accelerators.md)  
   
- **Argomenti relativi alla funzionalità finestra Frame speciale**  
+ **Argomenti sulle funzionalità di finestra Frame speciale**  
   
 -   [Trascinamento della selezione file](../mfc/dragging-and-dropping-files-in-a-frame-window.md) da Esplora File o File Manager in una finestra cornice  
   

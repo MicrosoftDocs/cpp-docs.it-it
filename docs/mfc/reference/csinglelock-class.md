@@ -1,12 +1,9 @@
 ---
 title: Classe CSingleLock | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CSingleLock
@@ -23,15 +20,13 @@ helpviewer_keywords:
 - CSingleLock [MFC], Lock
 - CSingleLock [MFC], Unlock
 ms.assetid: 7dae7288-8066-4a3e-85e0-78d28bfc6bc8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
-ms.openlocfilehash: 0dd07d79c97a9fb3368d20ee68df2332ba7ce5cf
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.openlocfilehash: 1ae72b7c9c2acf4fa8600903061869ba049cd58c
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="csinglelock-class"></a>CSingleLock (classe)
 Rappresenta il meccanismo di controllo di accesso utilizzato per controllare l'accesso a una risorsa di un programma multithread.  
@@ -59,13 +54,13 @@ class CSingleLock
 |[CSingleLock::Unlock](#unlock)|Rilascia un oggetto di sincronizzazione.|  
   
 ## <a name="remarks"></a>Note  
- `CSingleLock`non dispone di una classe di base.  
+ `CSingleLock` non dispone di una classe basa.  
   
  Per utilizzare le classi di sincronizzazione [CSemaphore](../../mfc/reference/csemaphore-class.md), [CMutex](../../mfc/reference/cmutex-class.md), [CCriticalSection](../../mfc/reference/ccriticalsection-class.md), e [CEvent](../../mfc/reference/cevent-class.md), è necessario creare un `CSingleLock` o [CMultiLock](../../mfc/reference/cmultilock-class.md) oggetto di attesa e rilasciare l'oggetto di sincronizzazione. Utilizzare `CSingleLock` quando è necessario solo in attesa di un oggetto alla volta. Utilizzare **CMultiLock** quando sono presenti più oggetti che è possibile utilizzare in un momento specifico.  
   
  Per utilizzare un `CSingleLock` di oggetto, chiamare il relativo costruttore all'interno di una funzione membro nella classe della risorsa controllata. Chiamare quindi il [IsLocked](#islocked) funzione membro per determinare se la risorsa è disponibile. Se si tratta, continuare con il resto della funzione membro. Se la risorsa è disponibile, attendere un determinato periodo di tempo per la risorsa deve essere rilasciato o restituito un errore. Dopo l'uso della risorsa è stata completata, chiamare il [Unlock](#unlock) funzionare se il `CSingleLock` oggetto è per essere usata nuovamente o consentire il `CSingleLock` oggetto di essere eliminati.  
   
- `CSingleLock`gli oggetti richiedono la presenza di un oggetto derivato da [CSyncObject](../../mfc/reference/csyncobject-class.md). In genere si tratta di un membro di dati della classe della risorsa controllata. Per ulteriori informazioni su come usare `CSingleLock` oggetti, vedere l'articolo [Multithreading: utilizzo delle classi di sincronizzazione](../../parallel/multithreading-how-to-use-the-synchronization-classes.md).  
+ `CSingleLock` gli oggetti richiedono la presenza di un oggetto derivato dalla [CSyncObject](../../mfc/reference/csyncobject-class.md). In genere si tratta di un membro di dati della classe della risorsa controllata. Per ulteriori informazioni su come usare `CSingleLock` oggetti, vedere l'articolo [Multithreading: utilizzo delle classi di sincronizzazione](../../parallel/multithreading-how-to-use-the-synchronization-classes.md).  
   
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  `CSingleLock`  
@@ -73,7 +68,7 @@ class CSingleLock
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** afxmt. h  
   
-##  <a name="csinglelock"></a>CSingleLock::CSingleLock  
+##  <a name="csinglelock"></a>  CSingleLock::CSingleLock  
  Costruisce un oggetto `CSingleLock`.  
   
 ```  
@@ -95,7 +90,7 @@ explicit CSingleLock(
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFC_Utilities#19](../../mfc/codesnippet/cpp/csinglelock-class_1.h)]  
   
-##  <a name="islocked"></a>CSingleLock::IsLocked  
+##  <a name="islocked"></a>  CSingleLock::IsLocked  
  Determina se l'oggetto è associato il `CSingleLock` oggetto è impostato su non segnalato (non disponibile).  
   
 ```  
@@ -108,7 +103,7 @@ BOOL IsLocked();
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFC_Utilities#20](../../mfc/codesnippet/cpp/csinglelock-class_2.h)]  
   
-##  <a name="lock"></a>CSingleLock::Lock  
+##  <a name="lock"></a>  CSingleLock::Lock  
  Chiamare questa funzione per ottenere l'accesso alla risorsa controllata per l'oggetto di sincronizzazione fornito per il `CSingleLock` costruttore.  
   
 ```  
@@ -128,7 +123,7 @@ BOOL Lock(DWORD dwTimeOut = INFINITE);
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFC_Utilities#21](../../mfc/codesnippet/cpp/csinglelock-class_3.h)]  
   
-##  <a name="unlock"></a>CSingleLock::Unlock  
+##  <a name="unlock"></a>  CSingleLock::Unlock  
  Rilascia l'oggetto di sincronizzazione di proprietà `CSingleLock`.  
   
 ```  

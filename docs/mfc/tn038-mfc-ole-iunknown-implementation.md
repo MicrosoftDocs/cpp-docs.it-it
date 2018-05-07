@@ -1,13 +1,10 @@
 ---
 title: 'TN038: Implementazione di IUnknown MFC OLE | Documenti Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.mfc.ole
 dev_langs:
@@ -27,17 +24,15 @@ helpviewer_keywords:
 - END_INTERFACE_PART macro [MFC]
 - INTERFACE_PART macro
 ms.assetid: 19d946ba-beaf-4881-85c6-0b598d7f6f11
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a17ce210dffd13e0ffdac142c6121954eec1045d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e93c4e9d8707d3960e768b6929bb2b1c16d60b42
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn038-mfcole-iunknown-implementation"></a>TN038: implementazione di IUnknown MFC/OLE
 > [!NOTE]
@@ -120,7 +115,7 @@ virtual void PrintObject();
 };  
 ```  
   
- Le implementazioni di [AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379) e [versione](http://msdn.microsoft.com/library/windows/desktop/ms682317) sarebbe esattamente identiche a quelle indicate sopra. **Cprintobj** avrà un aspetto simile al seguente:  
+ Le implementazioni di [AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379) e [versione](http://msdn.microsoft.com/library/windows/desktop/ms682317) sarebbe esattamente identiche a quelle indicate sopra. **Cprintobj** sarebbe simile al seguente:  
   
 ```  
 HRESULT CPrintObj::QueryInterface(REFIID iid, void FAR* FAR* ppvObj)  
@@ -295,7 +290,7 @@ HRESULT CEditPrintObj::CPrintObj::QueryInterface(
   
  Per ulteriori informazioni sull'aggregazione, vedere il [aggregazione](http://msdn.microsoft.com/library/windows/desktop/ms686558\(v=vs.85\).aspx) argomento.  
   
- Il supporto delle mappe dell'interfaccia di MFC è radicato nella classe `CCmdTarget`. `CCmdTarget`"*ha*" fanno riferimento a conteggio, nonché tutte le funzioni membro è associate il [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) implementazione (il conteggio dei riferimenti è ad esempio in `CCmdTarget`). Per creare una classe che supporta OLE COM, è necessario derivare una classe da `CCmdTarget` e usare diverse macro e funzioni membro di `CCmdTarget` per implementare le interfacce desiderate. L'implementazione di MFC usa classi annidate per definire l'implementazione di ogni interfaccia in modo molto simile all'esempio precedente. Questa operazione viene resa più semplice con un'implementazione standard di IUnknown e con alcune macro che eliminano parte del codice ripetitivo.  
+ Il supporto delle mappe dell'interfaccia di MFC è radicato nella classe `CCmdTarget`. `CCmdTarget` "*ha*" fanno riferimento a conteggio, nonché tutte le funzioni membro associate con il [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) implementazione (il conteggio dei riferimenti è ad esempio in `CCmdTarget`). Per creare una classe che supporta OLE COM, è necessario derivare una classe da `CCmdTarget` e usare diverse macro e funzioni membro di `CCmdTarget` per implementare le interfacce desiderate. L'implementazione di MFC usa classi annidate per definire l'implementazione di ogni interfaccia in modo molto simile all'esempio precedente. Questa operazione viene resa più semplice con un'implementazione standard di IUnknown e con alcune macro che eliminano parte del codice ripetitivo.  
   
 ## <a name="interface-map-basics"></a>Nozioni di base sulle mappe dell'interfaccia  
   
@@ -315,7 +310,7 @@ HRESULT CEditPrintObj::CPrintObj::QueryInterface(
   
 7.  Usare la macro `METHOD_PROLOGUE` per accedere all'oggetto padre derivato da `CCmdTarget`.  
   
-8. [AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379), [versione](http://msdn.microsoft.com/library/windows/desktop/ms682317), e [QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521) possibile delegare il `CCmdTarget` implementazione di queste funzioni (`ExternalAddRef`, `ExternalRelease`, e `ExternalQueryInterface` ).  
+8. [AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379), [Release](http://msdn.microsoft.com/library/windows/desktop/ms682317), e [QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521) possono delegare la `CCmdTarget` implementazione di queste funzioni (`ExternalAddRef`, `ExternalRelease`, e `ExternalQueryInterface`).  
   
  L'esempio di CPrintEditObj precedente potrebbe essere implementato in questo modo:  
   

@@ -1,29 +1,24 @@
 ---
-title: "File delle regole di proprietà XML Page | Documenti Microsoft"
-ms.custom: 
+title: File delle regole di proprietà XML Page | Documenti Microsoft
+ms.custom: ''
 ms.date: 04/27/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - property page XML files
 ms.assetid: dd9d9734-4387-4098-8ba6-85b93507731d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b81e8965773c64144059fa433b54484c786159a5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fcee2c416fba6a959785826781aefd96b0d06d75
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="property-page-xml-rule-files"></a>File delle regole di proprietà XML Page
 File XML nella cartella VCTargets vengono configurate le pagine delle proprietà di progetto nell'IDE. Il percorso esatto dipende da quali edizioni di Visual Studio siano installati e la lingua del prodotto. Per Visual Studio 2017 Enterprise Edition in lingua inglese, il percorso è `%ProgramFiles%\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\1033`. I file XML vengono descritti i nomi delle regole, le categorie e le singole proprietà, tipo di dati, i valori predefiniti e come devono essere visualizzati. Quando si imposta una proprietà nell'IDE, il nuovo valore viene archiviato nel file di progetto.
@@ -101,26 +96,26 @@ Nella sezione seguente viene descritto ogni elementi principali e alcuni dei met
 
    b. **PageTemplate:** il valore di questo attributo viene utilizzato dall'interfaccia utente di scegliere da una raccolta di modelli di interfaccia utente. Il modello "strumento" esegue il rendering le proprietà in un formato griglia standard. Altri valori nella compilazione per questo attributo sono "debugger" e "generico". Vedere il nodo Debug e generale, rispettivamente, per visualizzare il formato dell'interfaccia utente risultante dall'impostazione di questi valori. L'interfaccia utente per il modello di pagina "debugger" utilizza una casella di riepilogo a discesa per passare tra le proprietà di un debugger differente, mentre il modello "generico" Visualizza le categorie di proprietà diverse in una pagina anziché più nodi secondari categoria sotto la regola nodo. Questo attributo è solo un suggerimento per l'interfaccia utente. il file xml è progettato per essere indipendente dell'interfaccia utente. Un'interfaccia utente diversa è possibile utilizzare questo attributo per scopi diversi.
 
-  c. **SwitchPrefix:** questo è il prefisso utilizzato nella riga di comando per i parametri. Un valore di "/" darà origine a commutatori simili /ZI /nologo, /W3, e così via.
+  c. **SwitchPrefix:** si tratta del prefisso utilizzato nella riga di comando per i commutatori. Un valore di "/" darà origine a commutatori simili /ZI /nologo, /W3, e così via.
 
-  d. **Ordine:** si tratta di un suggerimento per un potenziale client dell'interfaccia utente il relativo percorso di questa regola rispetto a tutte le altre regole nel sistema.
+  d. **Ordine:** si tratta di un suggerimento a un potenziale cliente dell'interfaccia utente nel percorso relativo di questa regola rispetto a tutte le altre regole nel sistema.
 
   e. **xmlns:** si tratta di un elemento XAML standard. È possibile visualizzare tre spazi dei nomi elencati. Questi corrispondono agli spazi dei nomi per la deserializzazione di XAML classi, nomi di sistema e dello schema XAML, rispettivamente.
 
   f. **DisplayName:** si tratta del nome che viene visualizzato nella pagina delle proprietà dell'interfaccia utente per il nodo di regola. Questo valore viene localizzato. È stato creato DisplayName come elemento figlio della regola anziché come un attributo (ad esempio nome o SwitchPrefix) a causa di localizzazione interno requisiti dello strumento. Dalla prospettiva di XAML, entrambi sono equivalenti. In tal caso, è possibile semplicemente renderlo un attributo per evitare confusione o rimane invariato.
 
-  g. **Origine dati:** molto importante proprietà che indica al sistema di progetto, la posizione da cui il valore della proprietà deve leggere e scrivere e il raggruppamento (illustrato di seguito). Per cl.xml, questi valori sono:
+  g. **Origine dati:** si tratta di una proprietà molto importante che indica al sistema di progetto, il percorso da cui il valore della proprietà deve leggere e scrivere e il raggruppamento (illustrato di seguito). Per cl.xml, questi valori sono:
 
 ```xml  
        <DataSource Persistence="ProjectFile" ItemType="ClCompile" Label="" HasConfigurationCondition="true" />
 ```  
-   - `Persistence="ProjectFile`indica il sistema del progetto che tutte le proprietà per la regola devono essere scritta nel file di progetto o il file della finestra delle proprietà (a seconda di quale nodo è stato utilizzato per generare le pagine delle proprietà). L'altro valore possibile è "UserFile" che verrà scritto il valore per il file con estensione User.
+   - `Persistence="ProjectFile` segnala il sistema del progetto che tutte le proprietà per la regola devono essere scritta nel file di progetto o il file della finestra delle proprietà (a seconda di quale nodo è stato utilizzato per generare le pagine delle proprietà). L'altro valore possibile è "UserFile" che verrà scritto il valore per il file con estensione User.
 
-   - `ItemType="ClCompile"`indica che le proprietà vengono archiviate come metadati ItemDefinition o metadati degli elementi (quest'ultimo solo se le pagine delle proprietà sono state generate da un nodo del file in Esplora soluzioni) di questo tipo di elemento. Se questo campo non è impostato, la proprietà viene scritta come una proprietà comune in un elemento PropertyGroup.
+   - `ItemType="ClCompile"` è indicato che le proprietà vengono archiviate come metadati ItemDefinition o metadati degli elementi (quest'ultimo solo se le pagine delle proprietà sono state generate da un nodo del file in Esplora soluzioni) di questo tipo di elemento. Se questo campo non è impostato, la proprietà viene scritta come una proprietà comune in un elemento PropertyGroup.
 
-   - `Label=""`che indica se le proprietà sono scritte come `ItemDefinition` metadati, l'etichetta dell'elemento padre ItemDefinitionGroup sarà vuoto (ogni elemento MSBuild può avere un'etichetta). Visual Studio 2017 Usa i gruppi con etichettati per passare il file di progetto con estensione vcxproj. Si noti che i gruppi che contengono la maggior parte delle proprietà di regola dispongano di una stringa vuota come un'etichetta.
+   - `Label=""` indica che le proprietà sono scritte come `ItemDefinition` metadati, l'etichetta dell'elemento padre ItemDefinitionGroup sarà vuoto (tutti gli elementi MSBuild possono avere un'etichetta). Visual Studio 2017 Usa i gruppi con etichettati per passare il file di progetto con estensione vcxproj. Si noti che i gruppi che contengono la maggior parte delle proprietà di regola dispongano di una stringa vuota come un'etichetta.
 
-   - `HasConfigurationCondition="true"`indica al sistema di progetto di apporre una condizione di configurazione per il valore in modo che abbia effetto solo per la configurazione di progetto corrente (stato apposto la condizione per il gruppo padre o il valore stesso). Ad esempio, aprire le pagine delle proprietà dal nodo di progetto e impostare il valore della proprietà **considera gli avvisi come errori** in **le proprietà di configurazione > generali di C/C++** su "Sì". Il valore seguente viene scritto nel file di progetto. Si noti la condizione di configurazione associato al padre ItemDefinitionGroup.
+   - `HasConfigurationCondition="true"` indica al sistema di progetto per apporre una condizione di configurazione con il valore in modo che verrà applicato solo per la configurazione di progetto corrente (è stato apposto la condizione per il gruppo padre o il valore stesso). Ad esempio, aprire le pagine delle proprietà dal nodo di progetto e impostare il valore della proprietà **considera gli avvisi come errori** in **le proprietà di configurazione > generali di C/C++** su "Sì". Il valore seguente viene scritto nel file di progetto. Si noti la condizione di configurazione associato al padre ItemDefinitionGroup.
 
 ```xml  
      <ItemDefinitionGroup Condition="‘$(Configuration)|$(Platform)’==’Debug|Win32’">
@@ -144,7 +139,7 @@ Nella sezione seguente viene descritto ogni elementi principali e alcuni dei met
 
    h. Esistono altri attributi di una regola, ad esempio descrizione SupportsFileBatching, e così via che non sono riportate di seguito. Esplorando la documentazione per questi tipi, è possibile ottenere il set completo di attributi applicabili a una regola o su qualsiasi altro elemento. In alternativa, è possibile esaminare le proprietà pubbliche nei tipi nel `Microsoft.Build.Framework.XamlTypes` spazio dei nomi nel `Microsoft.Build.Framework .dll` assembly.
 
-   i. **DisplayName**, **PageTemplate**, e **ordine** sono in caso contrario le proprietà correlate all'interfaccia utente che sono presenti in questo modello di dati dell'interfaccia utente indipendente. Queste proprietà sono quasi sicuramente utilizzabile da qualsiasi interfaccia utente che consente di visualizzare le pagine delle proprietà. **DisplayName** e **descrizione** sono due proprietà che sono presenti in quasi tutti gli elementi nel file xml. E sono solo due proprietà che sono localizzate (localizzazione di queste stringhe descritto nel post di versioni successive).
+   i. **DisplayName**, **PageTemplate**, e **ordine** sono in caso contrario proprietà relative all'interfaccia utente che sono presenti in questo modello di dati indipendenti dall'interfaccia utente. Queste proprietà sono quasi sicuramente utilizzabile da qualsiasi interfaccia utente che consente di visualizzare le pagine delle proprietà. **DisplayName** e **descrizione** disponibili due proprietà che sono presenti in quasi tutti gli elementi nel file xml. E sono solo due proprietà che sono localizzate (localizzazione di queste stringhe descritto nel post di versioni successive).
 
 2.  **Categoria:** una regola può avere più categorie. L'ordine in cui le categorie sono elencate nel file xml è un suggerimento per l'interfaccia utente per visualizzare le categorie nello stesso ordine. Ad esempio, l'ordine delle categorie nel nodo C/C++, come illustrato nell'interfaccia utente: generale, l'ottimizzazione, per il preprocessore,...  -corrisponde al tale cl.xml in. Una categoria di esempio è simile al seguente:
 
@@ -171,18 +166,18 @@ Illustrato nel frammento di codice precedente il **nome** e **DisplayName** gli 
 ```
 La maggior parte degli attributi nel frammento di sono state descritte prima. I nuovi file vengono sottotipo, categoria e Switch.
 
-   a. **Sottotipo** è disponibile solo per un attributo **StringProperty** e **StringListProperty**; fornisce informazioni contestuali. Ad esempio, il valore di "file" indica che la proprietà rappresenta un percorso di file. Tali informazioni contestuali viene utilizzate per migliorare l'esperienza di modifica, fornendo una finestra di esplorazione di Windows come editor della proprietà che consente all'utente di scegliere il file in modo visivo.
+   a. **Il sottotipo** è disponibile solo per un attributo **StringProperty** e **StringListProperty**; fornisce le informazioni contestuali. Ad esempio, il valore di "file" indica che la proprietà rappresenta un percorso di file. Tali informazioni contestuali viene utilizzate per migliorare l'esperienza di modifica, fornendo una finestra di esplorazione di Windows come editor della proprietà che consente all'utente di scegliere il file in modo visivo.
 
    b. **Categoria:** viene dichiarata la categoria in cui rientra questa proprietà. Provare a cercare di questa proprietà con il **i file di Output** categoria nell'interfaccia utente.
 
-   c. **Opzione:** quando una regola rappresenta uno strumento,:, ad esempio lo strumento compilatore in questo caso, la maggior parte delle proprietà della regola vengono passate come parametri allo strumento eseguibile durante la fase di compilazione. Il valore di questo attributo indica il commutatore letterale da utilizzare. La proprietà precedente specifica che deve essere lo switch **Fo**. Combinato con il **SwitchPrefix** attributo nell'elemento padre, regole, questa proprietà viene passato per il file eseguibile come **/Fo "Debug\"**  (visibile nella riga di comando per C/C++ nella pagina delle proprietà dell'interfaccia utente).
+   c. **Opzione:** quando una regola rappresenta uno strumento, ad esempio lo strumento compilatore in questo caso: la maggior parte delle proprietà della regola vengono passate come parametri allo strumento eseguibile durante la fase di compilazione. Il valore di questo attributo indica il commutatore letterale da utilizzare. La proprietà precedente specifica che deve essere lo switch **Fo**. Combinato con il **SwitchPrefix** attributo nell'elemento padre, regole, questa proprietà viene passato per il file eseguibile come **/Fo "Debug\"**  (visibile nella riga di comando per C/C++ nella pagina delle proprietà dell'interfaccia utente).
 
    Altri attributi della proprietà includono:
 
-   d. **Visible:** se per qualche motivo, non si desidera visualizzati nelle pagine delle proprietà (ma è comunque disponibile durante la fase di compilazione), impostare questo attributo su false la proprietà.
+   d. **Visible:** se per qualche motivo, non si desidera la proprietà visualizzati nelle pagine delle proprietà (ma probabilmente è ancora disponibile durante la fase di compilazione), impostare questo attributo su false.
 
    e. **Sola lettura:** se si desidera fornire una visualizzazione di sola lettura del valore di questa proprietà nelle pagine delle proprietà, impostare questo attributo su true.
 
-   f. **IncludeInCommandLine:** alcune proprietà non è necessario essere passato a uno strumento durante la fase di compilazione. Impostazione di questo attributo su false ne impedirà passati.
+   f. **IncludeInCommandLine:** alcune proprietà possono non devono essere passati a uno strumento durante la fase di compilazione. Impostazione di questo attributo su false ne impedirà passati.
 
 

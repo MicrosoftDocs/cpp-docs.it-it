@@ -1,13 +1,10 @@
 ---
 title: Aggiunta classe da Creazione guidata controllo ActiveX | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.codewiz.class.axcontrol
 dev_langs:
@@ -16,22 +13,20 @@ helpviewer_keywords:
 - ActiveX Control Wizard
 - Add Class from ActiveX Control Wizard [C++]
 ms.assetid: 668d801c-5fb6-4176-9191-5c38995a4713
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e2b3b1d2b15db47eea8ebc10b2a73cafba5d6952
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7ab96943e47287c9b54753c8d3a1edb868804274
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="add-class-from-activex-control-wizard"></a>Aggiunta guidata classe da controllo ActiveX
 Utilizzare questa procedura guidata per aggiungere una classe MFC da controllo ActiveX disponibile. La procedura guidata crea una classe per ogni interfaccia che aggiunta dal controllo ActiveX selezionato.  
   
- **Classe da aggiungere**  
+ **Aggiungi classe da**  
  Specifica il percorso della libreria dei tipi, da cui viene creata la classe.  
   
 |Opzione|Descrizione|  
@@ -44,7 +39,7 @@ Utilizzare questa procedura guidata per aggiungere una classe MFC da controllo A
   
  Se si fa clic **File** in **Aggiungi classe da**, questa casella è disponibile per la modifica.  
   
- **Percorso**  
+ **Posizione**  
  Specifica il percorso del controllo ActiveX. Se si fa clic **File** in **Aggiungi classe da**, è possibile specificare il percorso del file contenente la libreria dei tipi. Per passare al percorso del file, fare clic sul pulsante con puntini di sospensione.  
   
  Se si fa clic **Registro di sistema** in **Aggiungi classe da**, questa casella è disponibile per la modifica.  
@@ -60,9 +55,9 @@ Utilizzare questa procedura guidata per aggiungere una classe MFC da controllo A
 |**<\<**|Rimuove tutte le classi di **classi generate** elenco. Non disponibile se il **classi generate** elenco è vuoto.|  
   
  **Classi generate**  
- Specifica i nomi di classe da generare dalle interfacce aggiunte mediante il  **>**  o  **>>**  pulsante. È possibile fare clic su questa casella per selezionare una classe, quindi utilizzare le frecce su o giù per scorrere l'elenco, visualizzare il nome di ogni classe nel `Class` casella e il nome file nel **file con estensione h** casella che viene generato quando si fa clic  **Fine**. È possibile selezionare solo una classe in un momento in questa casella.  
+ Specifica i nomi di classe da generare dalle interfacce aggiunte mediante il **>** o **>>** pulsante. È possibile fare clic su questa casella per selezionare una classe, quindi utilizzare le frecce su o giù per scorrere l'elenco, visualizzare il nome di ogni classe nel `Class` casella e il nome file nel **file con estensione h** casella che viene generato quando si fa clic  **Fine**. È possibile selezionare solo una classe in un momento in questa casella.  
   
- È possibile rimuovere una classe selezionandolo nell'elenco e fare clic su  **<** . Non è necessario selezionare una classe nel **classi generate** casella per rimuovere tutte le classi; facendo clic sul  **<<** , rimuovere tutte le classi di **classi generate** casella.  
+ È possibile rimuovere una classe selezionandolo nell'elenco e fare clic su **<**. Non è necessario selezionare una classe nel **classi generate** casella per rimuovere tutte le classi; facendo clic sul **<<**, rimuovere tutte le classi di **classi generate** casella.  
   
  `Class`  
  Specifica il nome della classe selezionata nel **classi generate** casella che consente di aggiungere la procedura guidata quando si fa clic **fine**. È possibile modificare il nome di `Class` casella.  

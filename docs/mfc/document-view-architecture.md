@@ -1,13 +1,10 @@
 ---
 title: Architettura documento / visualizzazione | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - documents [MFC], MFC document/view model
 - document objects [MFC], document/view architecture
 ms.assetid: 6127768a-553f-462a-b01b-a5ee6068c81e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 45c595b78b17ed00691533369ec4837345fcce03
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c9554af9443bbd6a6394789343294630104c96f1
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="documentview-architecture"></a>Architettura documento/visualizzazione
 Per impostazione predefinita, la creazione guidata applicazione MFC crea uno scheletro di applicazione con una classe di documento e una classe di visualizzazione. MFC separa la gestione dei dati in queste due classi. Il documento archivia i dati e gestisce i dati di stampa e coordina l'aggiornamento di più visualizzazioni dei dati. La vista vengono visualizzati i dati e gestisce l'interazione dell'utente con esso, ad esempio la scelta e la modifica.  
@@ -56,7 +51,7 @@ Per impostazione predefinita, la creazione guidata applicazione MFC crea uno sch
   
  [CFrameWnd](../mfc/reference/cframewnd-class.md) (o una delle sue varianti) supporta gli oggetti che fornisce il frame intorno a uno o più viste di un documento.  
   
- [CDocTemplate](../mfc/reference/cdoctemplate-class.md) (o [CSingleDocTemplate](../mfc/reference/csingledoctemplate-class.md) o [CMultiDocTemplate](../mfc/reference/cmultidoctemplate-class.md)) supporta un oggetto che coordina i documenti esistenti a uno o più di un determinato tipo e gestisce la creazione corretta documento, visualizzazione e oggetti della finestra cornice per quel tipo.  
+ [CDocTemplate](../mfc/reference/cdoctemplate-class.md) (o [CSingleDocTemplate](../mfc/reference/csingledoctemplate-class.md) o [CMultiDocTemplate](../mfc/reference/cmultidoctemplate-class.md)) supporta un oggetto che coordina uno o più documenti esistenti di un determinato tipo e gestisce la creazione corretta documento, visualizzazione e oggetti delle finestre frame per quel tipo.  
   
  Nella figura seguente viene illustrata la relazione tra un documento e la relativa visualizzazione.  
   
@@ -87,7 +82,7 @@ Documento e visualizzazione
   
 -   [Inizializzazione e pulizia di documenti e visualizzazioni](../mfc/initializing-and-cleaning-up-documents-and-views.md)  
   
--   [Inizializzazione delle classi documento e visualizzazione](../mfc/creating-new-documents-windows-and-views.md)  
+-   [Inizializzazione delle aggiunte alle classi documento e visualizzazione](../mfc/creating-new-documents-windows-and-views.md)  
   
 -   [Utilizzo di classi di database con documenti e visualizzazioni](../data/mfc-using-database-classes-with-documents-and-views.md)  
   
