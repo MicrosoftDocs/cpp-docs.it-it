@@ -1,12 +1,9 @@
 ---
 title: Classe CRichEditCntrItem | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CRichEditCntrItem
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - CRichEditCntrItem [MFC], CRichEditCntrItem
 - CRichEditCntrItem [MFC], SyncToRichEditObject
 ms.assetid: 6c0b4efe-0fb8-4621-b5e1-fdcb8ec48c3b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ebb8cf92a522b63fb88338fe9befacc7d5f1d506
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9a64950bcb0cc931b4528276e85f5d60e3b5cb08
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cricheditcntritem-class"></a>Classe CRichEditCntrItem
 Con [CRichEditView](../../mfc/reference/cricheditview-class.md) e [CRichEditDoc](../../mfc/reference/cricheditdoc-class.md), fornisce la funzionalità del controllo rich edit nel contesto dell'architettura documento/visualizzazione MFC.  
@@ -57,7 +52,7 @@ class CRichEditCntrItem : public COleClientItem
 ## <a name="remarks"></a>Note  
  Un "controllo rich edit" è una finestra in cui l'utente può immettere e modificare il testo. Il testo può essere assegnato formattazione di carattere e paragrafo e può includere oggetti OLE incorporati. I controlli rich edit forniscono un'interfaccia di programmazione per la formattazione del testo. Tuttavia, un'applicazione deve implementare qualsiasi componenti dell'interfaccia utente necessari per rendere disponibili le operazioni di formattazione per l'utente.  
   
- `CRichEditView`gestisce il testo e la caratteristica di formattazione di testo. `CRichEditDoc`gestisce l'elenco di elementi client OLE che sono nella vista. `CRichEditCntrItem`fornisce l'accesso lato contenitore per l'elemento client OLE.  
+ `CRichEditView` mantiene il testo e la caratteristica di formattazione del testo. `CRichEditDoc` gestisce l'elenco di elementi OLE sul client che sono nella vista. `CRichEditCntrItem` fornisce accesso a elemento client OLE lato contenitore.  
   
  Questo controllo comune di Windows (e pertanto il [CRichEditCtrl](../../mfc/reference/cricheditctrl-class.md) e le classi correlate) è disponibile solo per i programmi in esecuzione in Windows 95/98 e Windows NT versione 3.51 e successive.  
   
@@ -77,7 +72,7 @@ class CRichEditCntrItem : public COleClientItem
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** afxrich.h  
   
-##  <a name="cricheditcntritem"></a>CRichEditCntrItem::CRichEditCntrItem  
+##  <a name="cricheditcntritem"></a>  CRichEditCntrItem::CRichEditCntrItem  
  Chiamare questa funzione per creare un `CRichEditCntrItem` dell'oggetto e aggiungerlo al documento contenitore.  
   
 ```  
@@ -98,7 +93,7 @@ CRichEditCntrItem(
   
  Per ulteriori informazioni, vedere il [REOBJECT](http://msdn.microsoft.com/library/windows/desktop/bb787946) struttura in Windows SDK.  
   
-##  <a name="synctoricheditobject"></a>CRichEditCntrItem::SyncToRichEditObject  
+##  <a name="synctoricheditobject"></a>  CRichEditCntrItem::SyncToRichEditObject  
  Chiamare questa funzione per sincronizzare l'aspetto del dispositivo, [DVASPECT](http://msdn.microsoft.com/library/windows/desktop/ms690318), di questo **CRichEditCntrltem** a quello specificato da *reo*.  
   
 ```  

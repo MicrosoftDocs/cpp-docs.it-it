@@ -2,7 +2,7 @@
 title: Compilatore (livello 3) Avviso C4839 | Documenti Microsoft
 ms.date: 10/25/2017
 ms.technology:
-- cpp-tools
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C4839
@@ -13,14 +13,13 @@ helpviewer_keywords:
 ms.assetid: f4f99066-9258-4330-81a8-f4a75a1d95ee
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aee1e564ffd72b9b08d883c94311c2bca72b5aef
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b72289eef03c56356865b0b62a999c417da570a6
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-warning-level-4-c4839"></a>Compilatore (livello 4) Avviso C4839
 

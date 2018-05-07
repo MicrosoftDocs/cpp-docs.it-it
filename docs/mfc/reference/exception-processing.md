@@ -1,13 +1,10 @@
 ---
 title: Eccezione durante l'elaborazione | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.mfc.macros.exceptions
 dev_langs:
@@ -22,17 +19,15 @@ helpviewer_keywords:
 - MFC, exceptions
 - exceptions [MFC], MFC throwing functions
 ms.assetid: 26d4457c-8350-48f5-916e-78f919787c30
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: adad6183d15b378feb7ec96aedff6a0013a2dd24
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5a24d78089e468a2020e0ecdb1fba34783965325
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="exception-processing"></a>Elaborazione delle eccezioni
 Quando viene eseguito un programma, possono verificarsi numerosi errori chiamati "eccezioni" e le condizioni anormali. Possono essere inclusi in esaurimento di memoria, errori di allocazione delle risorse e impossibilità di trovare i file.  
@@ -101,7 +96,7 @@ Quando viene eseguito un programma, possono verificarsi numerosi errori chiamati
 |-|-|  
 |[AfxAbort](#afxabort)|Chiamato per terminare un'applicazione di quando un errore irreversibile si verifica.|  
   
-##  <a name="try"></a>PROVARE A  
+##  <a name="try"></a>  PROVARE A  
  Consente di impostare un **PROVARE** blocco.  
   
 ```   
@@ -119,7 +114,7 @@ TRY
 ### <a name="requirements"></a>Requisiti
 Intestazione: afx.h
 
-##  <a name="catch"></a>CATCH  
+##  <a name="catch"></a>  CATCH  
  Definisce un blocco di codice che rileva il primo tipo di eccezione generato nel passaggio precedente **PROVARE** blocco.  
   
 ```   
@@ -149,7 +144,7 @@ CATCH(exception_class, exception_object_pointer_name)
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFCExceptions#26](../../mfc/codesnippet/cpp/exception-processing_1.cpp)]  
   
-##  <a name="catch_all"></a>CATCH_ALL  
+##  <a name="catch_all"></a>  CATCH_ALL  
  Definisce un blocco di codice che memorizza nella cache tutti i tipi di eccezione generati nel passaggio precedente **PROVARE** blocco.  
   
 ```   
@@ -174,7 +169,7 @@ CATCH_ALL(exception_object_pointer_name)
 ### <a name="requirements"></a>Requisiti  
   **Intestazione** AFX. h  
 
-##  <a name="and_catch"></a>AND_CATCH  
+##  <a name="and_catch"></a>  AND_CATCH  
  Definisce un blocco di codice per il rilevamento di tipi di eccezione aggiuntivo generati nel precedente **PROVARE** blocco.  
   
 ```   
@@ -191,7 +186,7 @@ AND_CATCH(exception_class, exception_object_pointer_name)
 ### <a name="remarks"></a>Note  
  Utilizzare il **CATCH** macro per intercettare un tipo di eccezione, il `AND_CATCH` macro per intercettare ogni tipo successive. Fine di **PROVARE** blocco con un `END_CATCH` (macro).  
   
- Il codice di elaborazione delle eccezioni può interrogare l'oggetto eccezione, se necessario, per ottenere ulteriori informazioni sulla causa specifica dell'eccezione. Chiamare il `THROW_LAST` (macro) all'interno di `AND_CATCH` blocca per spostare l'elaborazione sul frame esterno dell'eccezione. `AND_CATCH`Contrassegna la fine dell'oggetto precedente **CATCH** o `AND_CATCH` blocco.  
+ Il codice di elaborazione delle eccezioni può interrogare l'oggetto eccezione, se necessario, per ottenere ulteriori informazioni sulla causa specifica dell'eccezione. Chiamare il `THROW_LAST` (macro) all'interno di `AND_CATCH` blocca per spostare l'elaborazione sul frame esterno dell'eccezione. `AND_CATCH` Contrassegna la fine dell'oggetto precedente **CATCH** o `AND_CATCH` blocco.  
   
 > [!NOTE]
 >  Il `AND_CATCH` blocco viene definito come ambito C++ (definito da parentesi graffe). Se si dichiarano variabili in questo ambito, tenere presente che sono accessibili solo all'interno di tale ambito. Questo vale anche per il *nome_puntatore_oggetto_eccezione* variabile.  
@@ -201,7 +196,7 @@ AND_CATCH(exception_class, exception_object_pointer_name)
   
 ### <a name="requirements"></a>Requisiti  
   **Intestazione** AFX. h  
-##  <a name="and_catch_all"></a>AND_CATCH_ALL  
+##  <a name="and_catch_all"></a>  AND_CATCH_ALL  
  Definisce un blocco di codice per il rilevamento di tipi di eccezione aggiuntivo generati nel precedente **PROVARE** blocco.  
   
 ```   
@@ -215,7 +210,7 @@ AND_CATCH_ALL(exception_object_pointer_name)
 ### <a name="remarks"></a>Note  
  Utilizzare il **CATCH** macro per intercettare un tipo di eccezione, il `AND_CATCH_ALL` macro per intercettare tutti gli altri tipi successivi. Se si utilizza `AND_CATCH_ALL`, fine il **PROVARE** blocco con un `END_CATCH_ALL` (macro).  
   
- Il codice di elaborazione delle eccezioni può interrogare l'oggetto eccezione, se necessario, per ottenere ulteriori informazioni sulla causa specifica dell'eccezione. Chiamare il `THROW_LAST` (macro) all'interno di `AND_CATCH_ALL` blocca per spostare l'elaborazione sul frame esterno dell'eccezione. `AND_CATCH_ALL`Contrassegna la fine dell'oggetto precedente **CATCH** o `AND_CATCH_ALL` blocco.  
+ Il codice di elaborazione delle eccezioni può interrogare l'oggetto eccezione, se necessario, per ottenere ulteriori informazioni sulla causa specifica dell'eccezione. Chiamare il `THROW_LAST` (macro) all'interno di `AND_CATCH_ALL` blocca per spostare l'elaborazione sul frame esterno dell'eccezione. `AND_CATCH_ALL` Contrassegna la fine dell'oggetto precedente **CATCH** o `AND_CATCH_ALL` blocco.  
   
 > [!NOTE]
 >  Il `AND_CATCH_ALL` blocco è definito come ambito C++ (definito da parentesi graffe). Se si dichiarano variabili in questo ambito, tenere presente che sono accessibili solo all'interno di tale ambito.  
@@ -223,7 +218,7 @@ AND_CATCH_ALL(exception_object_pointer_name)
 ### <a name="requirements"></a>Requisiti  
   **Intestazione** AFX. h  
   
-##  <a name="end_catch"></a>END_CATCH  
+##  <a name="end_catch"></a>  END_CATCH  
  Contrassegna la fine dell'ultimo **CATCH** o `AND_CATCH` blocco.  
   
 ```   
@@ -236,7 +231,7 @@ END_CATCH
 ### <a name="requirements"></a>Requisiti  
   **Intestazione** AFX. h  
   
-##  <a name="end_catch_all"></a>END_CATCH_ALL  
+##  <a name="end_catch_all"></a>  END_CATCH_ALL  
  Contrassegna la fine dell'ultimo `CATCH_ALL` o `AND_CATCH_ALL` blocco.  
   
 ```   
@@ -246,7 +241,7 @@ END_CATCH_ALL
 ### <a name="requirements"></a>Requisiti  
   **Intestazione** AFX. h  
   
-##  <a name="throw"></a>THROW (MFC)  
+##  <a name="throw"></a>  THROW (MFC)  
  Genera l'eccezione specificata.  
   
 ```   
@@ -258,14 +253,14 @@ THROW(exception_object_pointer)
  Punta a un oggetto eccezione derivato da `CException`.  
   
 ### <a name="remarks"></a>Note  
- **GENERARE** interrupt l'esecuzione, passare il controllo associato del programma **CATCH** blocco nel programma. Se non è stato fornito il **CATCH** bloccare, quindi il controllo viene passato a un modulo di libreria Microsoft Foundation Class che visualizza un errore del messaggio e viene chiuso.  
+ **GENERARE** interrupt programmare l'esecuzione, passare il controllo associato **CATCH** bloccare nel programma. Se non è stato fornito il **CATCH** bloccare, quindi il controllo viene passato a un modulo di libreria Microsoft Foundation Class che visualizza un errore del messaggio e viene chiuso.  
   
  Per ulteriori informazioni, vedere l'articolo [eccezioni](../../mfc/exception-handling-in-mfc.md).  
   
 ### <a name="requirements"></a>Requisiti  
   **Intestazione** AFX. h  
   
-##  <a name="throw_last"></a>THROW_LAST  
+##  <a name="throw_last"></a>  THROW_LAST  
  Genera nuovamente l'eccezione al successivo outer **CATCH** blocco.  
   
 ```   
@@ -283,7 +278,7 @@ THROW_LAST()
 ### <a name="requirements"></a>Requisiti  
   **Intestazione** AFX. h  
   
-##  <a name="afxthrowarchiveexception"></a>AfxThrowArchiveException  
+##  <a name="afxthrowarchiveexception"></a>  AfxThrowArchiveException  
  Genera un'eccezione di archiviazione.  
   
 ```   
@@ -300,7 +295,7 @@ void  AfxThrowArchiveException(int cause, LPCTSTR lpszArchiveName);
 ### <a name="requirements"></a>Requisiti  
   **Intestazione** AFX. h  
   
-##  <a name="afxthrowfileexception"></a>AfxThrowFileException  
+##  <a name="afxthrowfileexception"></a>  AfxThrowFileException  
  Genera un'eccezione di file.  
   
 ```   
@@ -326,7 +321,7 @@ void AfxThrowFileException(
 ### <a name="requirements"></a>Requisiti  
   **Intestazione** AFX. h  
 
-## <a name="afxthrowinvalidargexception"></a>AfxThrowInvalidArgException
+## <a name="afxthrowinvalidargexception"></a>  AfxThrowInvalidArgException
 Genera un'eccezione di argomento non valido.  
    
 ### <a name="syntax"></a>Sintassi    
@@ -346,7 +341,7 @@ void AfxThrowInvalidArgException( );
  [THROW](#throw)
   
   
-##  <a name="afxthrowmemoryexception"></a>AfxThrowMemoryException  
+##  <a name="afxthrowmemoryexception"></a>  AfxThrowMemoryException  
  Genera un'eccezione di memoria.  
   
 ```   
@@ -359,7 +354,7 @@ void AfxThrowMemoryException();
 ### <a name="requirements"></a>Requisiti  
   **Intestazione** AFX. h  
   
-##  <a name="afxthrownotsupportedexception"></a>AfxThrowNotSupportedException  
+##  <a name="afxthrownotsupportedexception"></a>  AfxThrowNotSupportedException  
  Genera un'eccezione che rappresenta il risultato di una richiesta per una funzionalità non supportata.  
   
 ```  
@@ -369,7 +364,7 @@ void AfxThrowNotSupportedException();
 ### <a name="requirements"></a>Requisiti  
   **Intestazione** AFX. h  
   
-##  <a name="afxthrowresourceexception"></a>AfxThrowResourceException  
+##  <a name="afxthrowresourceexception"></a>  AfxThrowResourceException  
  Genera un'eccezione di risorse.  
   
 ```   
@@ -382,7 +377,7 @@ void  AfxThrowResourceException();
 ### <a name="requirements"></a>Requisiti  
   **Intestazione** AFX. h  
   
-##  <a name="afxthrowuserexception"></a>AfxThrowUserException  
+##  <a name="afxthrowuserexception"></a>  AfxThrowUserException  
  Genera un'eccezione per arrestare un'operazione dell'utente finale.  
   
 ```   
@@ -395,7 +390,7 @@ void AfxThrowUserException();
 ### <a name="requirements"></a>Requisiti  
   **Intestazione** AFX. h  
   
-##  <a name="afxthrowoledispatchexception"></a>AfxThrowOleDispatchException  
+##  <a name="afxthrowoledispatchexception"></a>  AfxThrowOleDispatchException  
  Utilizzare questa funzione per generare un'eccezione all'interno di una funzione di automazione OLE.  
   
 ```   
@@ -432,7 +427,7 @@ void AFXAPI AfxThrowOleDispatchException(
 ### <a name="requirements"></a>Requisiti  
   **Intestazione** AFX. h  
   
-##  <a name="afxthrowoleexception"></a>AfxThrowOleException  
+##  <a name="afxthrowoleexception"></a>  AfxThrowOleException  
  Crea un oggetto di tipo `COleException` e genera un'eccezione.  
   
 ``` 
@@ -453,7 +448,7 @@ void AFXAPI AfxThrowOleException(HRESULT hr);
 ### <a name="requirements"></a>Requisiti  
   **Intestazione** afxdao. h  
   
-##  <a name="afxthrowdaoexception"></a>AfxThrowDaoException  
+##  <a name="afxthrowdaoexception"></a>  AfxThrowDaoException  
  Chiamare questa funzione per generare un'eccezione di tipo [CDaoException](../../mfc/reference/cdaoexception-class.md) dal codice.  
   
 ```   
@@ -477,7 +472,7 @@ void AFXAPI AfxThrowDaoException(
 ### <a name="requirements"></a>Requisiti  
   **Intestazione** AFXDB. h  
   
-##  <a name="afxthrowdbexception"></a>AfxThrowDBException  
+##  <a name="afxthrowdbexception"></a>  AfxThrowDBException  
  Chiamare questa funzione per generare un'eccezione di tipo `CDBException` dal codice.  
   
 ```  
@@ -505,7 +500,7 @@ void AfxThrowDBException(
 ### <a name="requirements"></a>Requisiti  
   **Intestazione** AFX. h  
   
-##  <a name="afxabort"></a>AfxAbort  
+##  <a name="afxabort"></a>  AfxAbort  
  La funzione di terminazione predefinita fornita da MFC.  
   
 ```   
@@ -513,7 +508,7 @@ void  AfxAbort();
 ```  
   
 ### <a name="remarks"></a>Note  
- `AfxAbort`viene chiamato internamente dalle funzioni membro MFC quando si verifica un errore irreversibile, ad esempio un'eccezione non rilevata che non può essere gestito. È possibile chiamare `AfxAbort` nel raro caso quando si verifica un errore irreversibile da cui è possibile ripristinare.  
+ `AfxAbort` viene chiamato internamente dalle funzioni membro MFC quando è presente un errore irreversibile, ad esempio un'eccezione non rilevata che non può essere gestito. È possibile chiamare `AfxAbort` nel raro caso quando si verifica un errore irreversibile da cui è possibile ripristinare.  
   
 ### <a name="example"></a>Esempio  
  Per vedere l'esempio [CATCH](#catch).  

@@ -1,12 +1,9 @@
 ---
 title: Errori del compilatore C2200 C2299 | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/17/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C2202
@@ -61,17 +58,15 @@ helpviewer_keywords:
 dev_langs:
 - C++
 ms.assetid: 9b36d11b-9510-4390-96f1-0c9235124d14
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 76de03030f61e56acd2189679704ff939e6e9c8c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 567cd6a9cbb042027b13056fe50330b31f326529
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-errors-c2200-through-c2299"></a>Errori del compilatore C2200 C2299
 
@@ -117,7 +112,7 @@ Gli articoli in questa sezione della documentazione illustrano un subset dei mes
 |[Errore del compilatore C2231](compiler-error-c2231.md)|'. *identificatore*': operando sinistro punta a 'classe, struct o unione', utilizzare '->'|
 |[Errore del compilatore C2232](compiler-error-c2232.md)|' ->*identificatore*': operando sinistro ha 'il tipo classe, struct o unione'. utilizzare|
 |[Errore del compilatore C2233](compiler-error-c2233.md)|'*identificatore*': le matrici di oggetti che contengono matrici di dimensioni zero non sono validi|
-|[Errore del compilatore C2234](compiler-error-c2234.md)|*Identificatore*': le matrici di riferimenti non sono validi|
+|[Errore del compilatore C2234](compiler-error-c2234.md)|*Identificatore*': le matrici di riferimenti sono valide|
 |C2235 errore del compilatore|Obsoleta.|
 |[Errore del compilatore C2236](compiler-error-c2236.md)|token imprevisto '*token*'. È stato probabilmente omesso un ';'.|
 |C2237 errore del compilatore|dichiarazione di modulo di più|

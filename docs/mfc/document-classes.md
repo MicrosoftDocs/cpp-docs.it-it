@@ -1,13 +1,10 @@
 ---
 title: Classi documento | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.classes.document
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - document classes [MFC]
 ms.assetid: 4bf19b02-0a4f-4319-b68e-cddcba2705cb
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5a2436b46b7486bd30398dffc530d2adea3d2e48
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2073e432dd0d0792e358a3f159892aea405197c9
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="document-classes"></a>Classi documento
 Oggetti della classe documento, creati da oggetti modello di documento, gestiscono i dati dell'applicazione. Si verrà derivare una classe per i documenti da una di queste classi.  
@@ -45,7 +40,7 @@ Oggetti della classe documento, creati da oggetti modello di documento, gestisco
  Gestisce l'elenco di elementi contenuti nel controllo rich edit client OLE. Utilizzato con [CRichEditView](../mfc/reference/cricheditview-class.md) e [CRichEditCntrItem](../mfc/reference/cricheditcntritem-class.md).  
   
  [COleServerDoc](../mfc/reference/coleserverdoc-class.md)  
- Utilizzata come classe di base per le classi documento applicazione server. `COleServerDoc`gli oggetti forniscono la maggior parte del supporto di server tramite le interazioni con [COleServerItem](../mfc/reference/coleserveritem-class.md) oggetti. La funzionalità di modifica Visual è fornita mediante architettura documento/visualizzazione della libreria di classi.  
+ Utilizzata come classe di base per le classi documento applicazione server. `COleServerDoc` gli oggetti forniscono la maggior parte del supporto di server tramite le interazioni con [COleServerItem](../mfc/reference/coleserveritem-class.md) oggetti. La funzionalità di modifica Visual è fornita mediante architettura documento/visualizzazione della libreria di classi.  
   
  [CHtmlEditDoc](../mfc/reference/chtmleditdoc-class.md)  
  Fornisce, con [CHtmlEditView](../mfc/reference/chtmleditview-class.md), la funzionalità della piattaforma di modifica HTML WebBrowser nel contesto dell'architettura documento / visualizzazione MFC.  
@@ -56,7 +51,7 @@ Oggetti della classe documento, creati da oggetti modello di documento, gestisco
  [CArchive](../mfc/reference/carchive-class.md)  
  Collabora con un [CFile](../mfc/reference/cfile-class.md) oggetto per implementare un archivio permanente per gli oggetti mediante la serializzazione (vedere [CObject:: Serialize](../mfc/reference/cobject-class.md#serialize)).  
   
- Documenti possono anche contenere oggetti OLE. `CDocItem`è la classe di base degli elementi di server e client.  
+ Documenti possono anche contenere oggetti OLE. `CDocItem` è la classe di base degli elementi client e server.  
   
  [CDocItem](../mfc/reference/cdocitem-class.md)  
  Classe di base di astratta [COleClientItem](../mfc/reference/coleclientitem-class.md) e [COleServerItem](../mfc/reference/coleserveritem-class.md). Oggetti di classi derivate da `CDocItem` rappresentano parti di documenti.  

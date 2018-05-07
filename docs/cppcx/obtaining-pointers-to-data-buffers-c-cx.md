@@ -1,31 +1,26 @@
 ---
 title: Recupero di puntatori a buffer di dati (C + + CX) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: db4f9370-dd95-4896-b5b8-4b202284f579
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 07e04a1adabab004ef64ed308d1222400192f235
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 42f363cd3af602685890cb8957cf9978c88602a2
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="obtaining-pointers-to-data-buffers-ccx"></a>Recupero di puntatori a buffer di dati (C++/CX)
 In Windows Runtime l'interfaccia [Windows::Storage::Streams::IBuffer](http://msdn.microsoft.com/library/windows/apps/windows.storage.streams.ibuffer.aspx) fornisce un modo indipendente dalla lingua e basato sui flussi per accedere ai buffer di dati. In C++ puoi ottenere un puntatore non elaborato alla matrice di byte sottostante utilizzando l'interfaccia IBufferByteAccess della libreria di Windows Runtime definita in robuffer.h. Con questo approccio puoi modificare la matrice di byte sul posto senza creare inutili copie dei dati.  
   
  Il diagramma seguente mostra un elemento immagine XAML, la cui origine è [Windows::UI::Xaml::Media::Imaging WriteableBitmap](http://msdn.microsoft.com/%20library/windows/apps/windows.ui.xaml.media.imaging.writeablebitmap.aspx). Un'app client scritta in qualsiasi linguaggio può passare un riferimento a `WriteableBitmap` al codice C++, quindi C++ può utilizzare il riferimento per ottenere il buffer sottostante. In un'app Universal Windows Platform che viene scritto in C++, è possibile utilizzare la funzione nell'esempio seguente direttamente nel codice sorgente senza comprimerlo in un componente Windows Runtime.  
   
- ![C &#43; &#43; codice di accesso diretto ai dati pixel](../cppcx/media/ibufferbyteaccessdiagram.png "IBufferByteAccessDiagram")  
+ ![C&#43; &#43; accesso diretto del codice dati pixel](../cppcx/media/ibufferbyteaccessdiagram.png "IBufferByteAccessDiagram")  
   
 ## <a name="getpointertopixeldata"></a>GetPointerToPixelData  
  Il metodo seguente accetta [Windows::Storage::Streams::IBuffer](http://msdn.microsoft.com/library/windows/apps/windows.storage.streams.ibuffer.aspx) e restituisce un puntatore non elaborato alla matrice di byte sottostante. Per chiamare la funzione, passare una proprietà [WriteableBitmap::PixelBuffer](http://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.imaging.writeablebitmap.pixelbuffer.aspx) .  

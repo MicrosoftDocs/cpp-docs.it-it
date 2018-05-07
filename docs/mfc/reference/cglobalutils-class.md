@@ -1,12 +1,9 @@
 ---
 title: Classe CGlobalUtils | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CGlobalUtils
@@ -47,17 +44,15 @@ helpviewer_keywords:
 - CGlobalUtils [MFC], StringFromCy
 - CGlobalUtils [MFC], StringFromDecimal
 ms.assetid: 2c5bd1a6-f80c-4e79-a476-b4ceebabfb2f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 26d8dd803daf1d3f56239f1f4cceed00650bb1a7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 50d5e2c1938a975da956502f3b071c8c51c6ad48
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cglobalutils-class"></a>Classe CGlobalUtils
 [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
@@ -99,7 +94,7 @@ class CGlobalUtils
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** afxglobalutils. h  
   
-##  <a name="adjustrecttoworkarea"></a>CGlobalUtils::AdjustRectToWorkArea  
+##  <a name="adjustrecttoworkarea"></a>  CGlobalUtils::AdjustRectToWorkArea  
   
 ```  
 void AdjustRectToworkArea(
@@ -113,7 +108,7 @@ void AdjustRectToworkArea(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="calcexpecteddockedrect"></a>CGlobalUtils::CalcExpectedDockedRect  
+##  <a name="calcexpecteddockedrect"></a>  CGlobalUtils::CalcExpectedDockedRect  
 
   
 ```  
@@ -136,7 +131,7 @@ void CalcExpectedDockedRect(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="canbeattached"></a>CGlobalUtils::CanBeAttached  
+##  <a name="canbeattached"></a>  CGlobalUtils::CanBeAttached  
 
   
 ```  
@@ -150,7 +145,7 @@ BOOL CanBeAttached(CWnd* pWnd) const;
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="canpanebeinfloatingmultipaneframewnd"></a>CGlobalUtils::CanPaneBeInFloatingMultiPaneFrameWnd  
+##  <a name="canpanebeinfloatingmultipaneframewnd"></a>  CGlobalUtils::CanPaneBeInFloatingMultiPaneFrameWnd  
 
   
 ```  
@@ -164,7 +159,7 @@ BOOL CanPaneBeInFloatingMultiPaneFrameWnd(CWnd* pWnd) const;
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="checkalignment"></a>CGlobalUtils::CheckAlignment  
+##  <a name="checkalignment"></a>  CGlobalUtils::CheckAlignment  
 
   
 ```  
@@ -193,7 +188,7 @@ BOOL CheckAlignment(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="cyfromstring"></a>CGlobalUtils::CyFromString  
+##  <a name="cyfromstring"></a>  CGlobalUtils::CyFromString  
 
   
 ```  
@@ -210,7 +205,7 @@ BOOL CyFromString(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="decimalfromstring"></a>CGlobalUtils::DecimalFromString  
+##  <a name="decimalfromstring"></a>  CGlobalUtils::DecimalFromString  
 
   
 ```  
@@ -227,7 +222,7 @@ BOOL DecimalFromString(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="fliprect"></a>CGlobalUtils::FlipRect  
+##  <a name="fliprect"></a>  CGlobalUtils::FlipRect  
 
   
 ```  
@@ -242,7 +237,7 @@ void FlipRect(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="forceadjustlayout"></a>CGlobalUtils::ForceAdjustLayout  
+##  <a name="forceadjustlayout"></a>  CGlobalUtils::ForceAdjustLayout  
 
   
 ```  
@@ -259,7 +254,7 @@ void ForceAdjustLayout(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="getdockingmanager"></a>CGlobalUtils::GetDockingManager  
+##  <a name="getdockingmanager"></a>  CGlobalUtils::GetDockingManager  
 
   
 ```  
@@ -273,7 +268,7 @@ CDockingManager* GetDockingManager(CWnd* pWnd);
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="getoppositealignment"></a>CGlobalUtils::GetOppositeAlignment  
+##  <a name="getoppositealignment"></a>  CGlobalUtils::GetOppositeAlignment  
 
   
 ```  
@@ -287,7 +282,7 @@ DWORD GetOppositeAlignment(DWORD dwAlign);
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="getpaneandalignfrompoint"></a>CGlobalUtils::GetPaneAndAlignFromPoint  
+##  <a name="getpaneandalignfrompoint"></a>  CGlobalUtils::GetPaneAndAlignFromPoint  
 
   
 ```  
@@ -312,7 +307,7 @@ BOOL GetPaneAndAlignFromPoint(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="getwndicon"></a>CGlobalUtils::GetWndIcon  
+##  <a name="getwndicon"></a>  CGlobalUtils::GetWndIcon  
 
   
 ```  
@@ -326,7 +321,7 @@ HICON GetWndIcon(CWnd* pWnd);
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="setnewparent"></a>CGlobalUtils::SetNewParent  
+##  <a name="setnewparent"></a>  CGlobalUtils::SetNewParent  
 
   
 ```  
@@ -343,7 +338,7 @@ void SetNewParent(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="stringfromcy"></a>CGlobalUtils::StringFromCy  
+##  <a name="stringfromcy"></a>  CGlobalUtils::StringFromCy  
 
   
 ```  
@@ -360,7 +355,7 @@ BOOL StringFromCy(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="stringfromdecimal"></a>CGlobalUtils::StringFromDecimal  
+##  <a name="stringfromdecimal"></a>  CGlobalUtils::StringFromDecimal  
 
   
 ```  

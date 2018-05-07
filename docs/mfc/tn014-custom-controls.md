@@ -1,13 +1,10 @@
 ---
 title: 'TN014: Controlli personalizzati | Documenti Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.controls
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - TN014
 - custom controls [MFC]
 ms.assetid: 1917a498-f643-457c-b570-9a0af7dbf7bb
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b4ffc4f26ed365673cdfb525c2bf3653827cc4ba
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 54a7ef7f6fd9a9da92c208366ee401d55d07fd5a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn014-custom-controls"></a>TN014: controlli personalizzati
 In questa nota viene descritto il supporto MFC per i controlli di disegno automatico e personalizzati. Inoltre viene creazione di una sottoclasse dinamica e viene descritta la relazione tra [CWnd](../mfc/reference/cwnd-class.md) oggetti e `HWND`s.  

@@ -1,13 +1,10 @@
 ---
 title: Tipi di dati (MFC) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - LPCRECT
 - POSITION
@@ -33,17 +30,15 @@ helpviewer_keywords:
 - LPARAM data type [MFC]
 - LPCSTR [MFC]
 ms.assetid: 8954848b-2c01-4a4f-abf5-ee55f6a05eeb
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0dd12aabee7e7284e2f3d12f81403b9b499e8e68
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c6cdd84b9ac7547ac7c0ae0a664de0f672c10202
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="data-types-mfc"></a>Tipi di dati (MFC)
 In questo argomento elenca i tipi di dati più comunemente usati nella libreria Microsoft Foundation Class. La maggior parte dei tipi di dati sono gli stessi di quelli nel Platform Software Development Kit (SDK), mentre altre sono specifiche di MFC.  
@@ -52,9 +47,9 @@ In questo argomento elenca i tipi di dati più comunemente usati nella libreria 
   
  Tipi di dati univoci per la libreria Microsoft Foundation Class di seguito:  
   
--   **POSIZIONE** un valore usato per indicare la posizione di un elemento in una raccolta, utilizzato dalle classi di raccolta MFC.  
+-   **POSIZIONE** un valore usato per indicare la posizione di un elemento in una raccolta, da parte di classi collection MFC.  
   
--   **LPCRECT** puntatore A 32 bit a una costante (modificabile) `RECT` struttura.  
+-   **LPCRECT** puntatore A 32 bit su una costante (modificabile) `RECT` struttura.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Cenni preliminari sulla classe](../../mfc/class-library-overview.md)   

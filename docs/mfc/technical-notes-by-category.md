@@ -1,29 +1,24 @@
 ---
 title: Note tecniche per categoria | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.tables.mfc.technotes
 dev_langs:
 - C++
 ms.assetid: b9f1c953-233d-4d64-9e8e-ca69b79460b8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0507558266200af87014c67d6a5c1173aba7a164
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4cef1b09d1c57eff5f4cc35a341eb81e0dfcfa56
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="technical-notes-by-category"></a>Note tecniche per categoria
 Note tecniche sono suddivisi nelle categorie seguenti. Per un elenco numerico delle note tecniche, vedere [note tecniche per numero](../mfc/technical-notes-by-number.md).  
@@ -97,7 +92,7 @@ Note tecniche sono suddivisi nelle categorie seguenti. Per un elenco numerico de
 |-|  
 |[TN038: Implementazione di IUnknown MFC/OLE](../mfc/tn038-mfc-ole-iunknown-implementation.md)|  
 |[TN039: Implementazione di automazione MFC/OLE](../mfc/tn039-mfc-ole-automation-implementation.md)|  
-|[TN040: MFC/OLE In-ridimensionamento sul posto e zoom](../mfc/tn040-mfc-ole-in-place-resizing-and-zooming.md)|  
+|[TN040: MFC/OLE In-Place ridimensionandoli e lo zoom avanti](../mfc/tn040-mfc-ole-in-place-resizing-and-zooming.md)|  
 |[TN041: Migrazione da MFC/OLE1 a MFC/OLE2](../mfc/tn041-mfc-ole1-migration-to-mfc-ole-2.md)|  
 |[TN049: MFC/OLE MBCS a livello di conversione Unicode (MFCANS32)](../mfc/tn049-mfc-ole-mbcs-to-unicode-translation-layer-mfcans32.md)|  
 |[TN050: Finestre comuni di MFC/OLE (MFCUIx32)](../mfc/tn050-mfc-ole-common-dialogs-mfcuix32.md)|  

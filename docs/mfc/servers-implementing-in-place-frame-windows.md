@@ -1,13 +1,10 @@
 ---
 title: 'Server: Implementazione di finestre cornice sul posto | Documenti Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - frame windows [MFC], in-place
 - in-place frame windows
 ms.assetid: 09bde4d8-15e2-4fba-8d14-9b954d926b92
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7e26cbb0099f897c65ab3e39338f3c36e77112e0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1cc26e2874921d30ef233509ee46b776ec8e3e9b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="servers-implementing-in-place-frame-windows"></a>Server: implementazione di finestre cornice sul posto
 In questo articolo viene illustrata la procedura per implementare le finestre cornice sul posto in un'applicazione server di modifica visiva se non si intende utilizzare la creazione guidata dell'applicazione per creare un'applicazione server. Anziché utilizzare la procedura descritta in questo articolo, è possibile utilizzare una classe finestra cornice sul posto esistente da un'applicazione generato dalla procedura guidata o un esempio fornito con Visual C++.  

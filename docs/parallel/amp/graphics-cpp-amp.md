@@ -1,27 +1,27 @@
 ---
 title: Grafica (C++ AMP) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - C++
 ms.assetid: 190a98a4-5f7d-442e-866b-b374ca74c16f
-caps.latest.revision: 
+caps.latest.revision: 27
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c9e1b8c6205560e7ea07b529acff3ccfe9db4ea6
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
-ms.translationtype: MT
+ms.openlocfilehash: c187ebc4eeb3917ce01e63c6c0769ffa0a570368
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="graphics-c-amp"></a>Grafica (C++ AMP)
 C++ AMP contiene numerose API nel [Concurrency:: Graphics](../../parallel/amp/reference/concurrency-graphics-namespace.md) dello spazio dei nomi che è possibile utilizzare per accedere al supporto trama sulle GPU. Di seguito sono illustrati alcuni scenari:  
@@ -58,9 +58,9 @@ C++ AMP contiene numerose API nel [Concurrency:: Graphics](../../parallel/amp/re
   
 |Tipo di operatore|Tipi validi|  
 |-------------------|-----------------|  
-|Operatori binari|Validi per tutti i tipi: +, -, *, /,<br /><br /> Validi su tipi integer: %, ^, &#124; &, <\<, >><br /><br /> I due vettori devono presentare le stesse dimensioni e il risultato è un vettore di dimensioni equivalenti.|  
+|Operatori binari|Validi per tutti i tipi: +, -, *, /,<br /><br /> Valido per i tipi integer: %, ^, &#124;&, <\<, >><br /><br /> I due vettori devono presentare le stesse dimensioni e il risultato è un vettore di dimensioni equivalenti.|  
 |Operatori relazionali|Validi per tutti i tipi: == e !=|  
-|Operatore di assegnazione composta|Validi per tutti i tipi: +=, -=, *=, /=<br /><br /> Validi su tipi integer: % =, ^ =, &#124; = &, =, <\<= >> =|  
+|Operatore di assegnazione composta|Validi per tutti i tipi: +=, -=, *=, /=<br /><br /> Valido per i tipi integer: % =, ^ =, &#124;= & =, <\<=, >> =|  
 |Operatori di incremento e decremento|Validi per tutti i tipi: ++, --<br /><br /> Sono validi sia il prefisso che il suffisso.|  
 |Operatore NOT bit per bit (~)|Validi per i tipi Integer.|  
 |Operatore unario|Valido per tutti i tipi tranne `unorm` e `uint`.|  
@@ -129,12 +129,12 @@ texture<int_4, 2> aTexture(768, 1024, texels.begin(), texels.end());
  È anche possibile dichiarare e inizializzare un oggetto `texture` utilizzando un overload del costruttore che accetta un puntatore ai dati di origine, le dimensioni dei dati di origine in byte e i bit per elemento scalare.  
   
 ```cpp  
-void createTextureWithBPC() { *// Create the source data.  
+void createTextureWithBPC() { // Create the source data.  
     float source[1024* 2];   
     for (int i = 0; i <1024* 2; i++) {  
     source[i] = (float)i;  
  }  
- *// Initialize the texture by using the size of source in bytes *// and bits per scalar element.  
+ // Initialize the texture by using the size of source in bytes // and bits per scalar element.  
     texture<float_2, 1> floatTexture(1024, source, (unsigned int)sizeof(source), 32U);
 
 }  
@@ -144,7 +144,7 @@ void createTextureWithBPC() { *// Create the source data.
   
  Esistono limiti alla grandezza di ogni dimensione dell'oggetto `texture`, come illustrato nella tabella seguente. Se si superano questi limiti, viene generato un errore di runtime.  
   
-|Trama|Limitazione di grandezza|  
+|Trama|Limite per dimensione|  
 |-------------|---------------------|  
 |trama\<T, 1 >|16384|  
 |trama\<T, 2 >|16384|  
@@ -172,10 +172,10 @@ void readTexture() {
  
     const texture<int_2, 2> tex9(16, 32, src.begin(), src.end());
 
-    parallel_for_each(tex9.extent, [=, &tex9] (index<2> idx) restrict(amp) { *// Use the subscript operator.        
-    arr[idx].x += tex9[idx].x; *// Use the function () operator.        
-    arr[idx].x += tex9(idx).x; *// Use the get method.  
-    arr[idx].y += tex9.get(idx).y; *// Use the function () operator.    
+    parallel_for_each(tex9.extent, [=, &tex9] (index<2> idx) restrict(amp) { // Use the subscript operator.        
+    arr[idx].x += tex9[idx].x; // Use the function () operator.        
+    arr[idx].x += tex9(idx).x; // Use the get method.  
+    arr[idx].y += tex9.get(idx).y; // Use the function () operator.    
     arr[idx].y += tex9(idx[0], idx[1]).y;   
  });
 
@@ -189,7 +189,7 @@ void readTexture() {
  Nell'esempio di codice seguente viene illustrato come archiviare i canali di trama in uno short vector e accedere ai singoli elementi scalari come proprietà dello short vector.  
   
 ```cpp  
-void UseBitsPerScalarElement() { *// Create the image data. *// Each unsigned int (32-bit) represents four 8-bit scalar elements(r,g,b,a values).  
+void UseBitsPerScalarElement() { // Create the image data. // Each unsigned int (32-bit) represents four 8-bit scalar elements(r,g,b,a values).  
     const int image_height = 16;  
     const int image_width = 16;  
     std::vector<unsigned int> image(image_height* image_width);
@@ -197,13 +197,13 @@ void UseBitsPerScalarElement() { *// Create the image data. *// Each unsigned in
  
     extent<2> image_extent(image_height, image_width);
 
- *// By using uint_4 and 8 bits per channel, each 8-bit channel in the data source is *// stored in one 32-bit component of a uint_4.  
+ // By using uint_4 and 8 bits per channel, each 8-bit channel in the data source is // stored in one 32-bit component of a uint_4.  
     texture<uint_4, 2> image_texture(image_extent, image.data(), image_extent.size()* 4U,  8U);
 
- *// Use can access the RGBA values of the source data by using swizzling expressions of the uint_4.  
+ // Use can access the RGBA values of the source data by using swizzling expressions of the uint_4.  
     parallel_for_each(image_extent, 
  [&image_texture](index<2> idx) restrict(amp)   
- { *// 4 bytes are automatically extracted when reading.  
+ { // 4 bytes are automatically extracted when reading.  
     uint_4 color = image_texture[idx];   
     unsigned int r = color.r;   
     unsigned int g = color.g;   
@@ -258,7 +258,7 @@ void writeTexture() {
  È possibile eseguire copie tra oggetti texture utilizzando la [copia](reference/concurrency-namespace-functions-amp.md#copy) funzione o [copy_async](reference/concurrency-namespace-functions-amp.md#copy_async) funzione, come illustrato nell'esempio di codice seguente.  
   
 ```cpp  
-void copyHostArrayToTexture() { *// Copy from source array to texture object by using the copy function.  
+void copyHostArrayToTexture() { // Copy from source array to texture object by using the copy function.  
     float floatSource[1024* 2];   
     for (int i = 0; i <1024* 2; i++) {  
     floatSource[i] = (float)i;  
@@ -267,7 +267,7 @@ void copyHostArrayToTexture() { *// Copy from source array to texture object by 
 
     copy(floatSource, (unsigned int)sizeof(floatSource), floatTexture);
 
- *// Copy from source array to texture object by using the copy function.  
+ // Copy from source array to texture object by using the copy function.  
     char charSource[16* 16];   
     for (int i = 0; i <16* 16; i++) {  
     charSource[i] = (char)i;  
@@ -275,7 +275,7 @@ void copyHostArrayToTexture() { *// Copy from source array to texture object by 
     texture<int, 2> charTexture(16, 16, 8U);
 
     copy(charSource, (unsigned int)sizeof(charSource), charTexture);
-*// Copy from texture object to source array by using the copy function.  
+// Copy from texture object to source array by using the copy function.  
     copy(charTexture, charSource, (unsigned int)sizeof(charSource));
 
 }  

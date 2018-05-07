@@ -2,12 +2,9 @@
 title: Struttura CDaoFieldInfo | Documenti Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - CDaoFieldInfo
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - DAO (Data Access Objects), Fields collection
 - CDaoFieldInfo structure [MFC]
 ms.assetid: 91b13e3f-bdb8-440c-86fc-ba4181ea0182
-caps.latest.revision: 13
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 63fdab9bae7238f427ff2015beffd53570603af4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6d08dd9d877d8872c5c8a930e84ae0496c745709
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdaofieldinfo-structure"></a>Struttura CDaoFieldInfo
 Il `CDaoFieldInfo` struttura contiene informazioni su un oggetto di campo definito per l'accesso oggetti DAO (data).  
@@ -60,7 +55,7 @@ struct CDaoFieldInfo
  `m_nType`  
  Un valore che indica il tipo di dati del campo. Per informazioni dettagliate, vedere l'argomento "Proprietà di tipo" nella Guida di DAO. Il valore di questa proprietà può essere uno dei valori seguenti:  
   
-- **dbBoolean** Sì/No, come **TRUE**/**FALSE**  
+- **dbBoolean** Sì/No, uguale a **TRUE**/**FALSE**  
   
 - **dbByte** Byte  
   
@@ -78,11 +73,11 @@ struct CDaoFieldInfo
   
 - **dbText** testo; classe MFC vedere [CString](../../atl-mfc-shared/reference/cstringt-class.md)  
   
-- **dbLongBinary** binario lungo (oggetto OLE); è possibile utilizzare la classe MFC [CByteArray](../../mfc/reference/cbytearray-class.md) anziché classe `CLongBinary` come `CByteArray` è più completo e più facile da utilizzare.  
+- **dbLongBinary** binario lungo (oggetto OLE); è possibile utilizzare la classe MFC [CByteArray](../../mfc/reference/cbytearray-class.md) invece di classe `CLongBinary` come `CByteArray` è più completo e più facile da utilizzare.  
   
-- **dbMemo** Memo; classe MFC vedere`CString`  
+- **dbMemo** Memo; classe MFC vedere `CString`  
   
-- **dbGUID** un identificatore univoco globale o universale univoco utilizzato con chiamate di procedura remota. Per ulteriori informazioni, vedere l'argomento "Proprietà di tipo" nella Guida di DAO.  
+- **dbGUID** un identificatore univoco globale identificatore/universalmente univoco utilizzato con chiamate di procedura remota. Per ulteriori informazioni, vedere l'argomento "Proprietà di tipo" nella Guida di DAO.  
   
 > [!NOTE]
 >  Non utilizzare tipi di dati stringa per i dati binari. In questo modo i dati per il passaggio attraverso il livello di conversione Unicode/ANSI, risultante nella conversione overhead maggiore e possibilmente imprevista.  
@@ -112,13 +107,13 @@ struct CDaoFieldInfo
   
 - **dbVariableField** le dimensioni del campo sono variabile (solo per i campi di testo).  
   
-- **dbAutoIncrField** il valore del campo per i nuovi record viene incrementato automaticamente per un long integer univoco che non può essere modificato. Supportato solo per le tabelle di database Microsoft Jet.  
+- **dbAutoIncrField** il valore del campo per i nuovi record viene incrementato automaticamente a un long integer univoco che non può essere modificato. Supportato solo per le tabelle di database Microsoft Jet.  
   
 - **dbUpdatableField** può essere modificato il valore del campo.  
   
 - **dbDescending** il campo viene ordinato in ordine decrescente (a-Z o da 0 a 100) ordine (si applica solo a un oggetto di campo in una raccolta di campi di un oggetto indice, in MFC, indice autonomamente gli oggetti sono contenuti negli oggetti tabledef). Se si omette questa costante, il campo viene ordinato in ordine crescente (A - Z o da 0 - 100) ordine (impostazione predefinita).  
   
- Quando si seleziona l'impostazione di questa proprietà, è possibile utilizzare C++ bit per bit- e (operatore) (**&**) per verificare la presenza di un attributo specifico. Quando si impostano più attributi, è possibile combinare combinando le costanti appropriate con bitwise-OR (**&#124;**) (operatore). Per informazioni dettagliate, vedere l'argomento "Proprietà Attributes" nella Guida di DAO.  
+ Quando si seleziona l'impostazione di questa proprietà, è possibile utilizzare C++ bit per bit- e (operatore) (**&**) per verificare la presenza di un attributo specifico. Quando si impostano più attributi, è possibile combinarle combinando le costanti appropriate con bitwise-OR (**&#124;**) (operatore). Per informazioni dettagliate, vedere l'argomento "Proprietà Attributes" nella Guida di DAO.  
   
  *m_nOrdinalPosition*  
  Un valore che specifica l'ordine numerico in cui si desidera un campo rappresentato da un oggetto DAO di campi da visualizzare relativo altri campi. È possibile impostare questa proprietà con [CDaoTableDef:: CreateField](../../mfc/reference/cdaotabledef-class.md#createfield). Per informazioni dettagliate, vedere l'argomento "Proprietà OrdinalPosition" nella Guida di DAO.  
@@ -159,7 +154,7 @@ struct CDaoFieldInfo
   
  Oltre all'utilizzo per l'esame delle proprietà dell'oggetto, è inoltre possibile utilizzare `CDaoFieldInfo` per costruire un parametro di input per la creazione di nuovi campi in un oggetto tabledef. Per questa attività sono disponibili opzioni più semplice, ma se si desidera un maggiore controllo, è possibile utilizzare la versione di [CDaoTableDef:: CreateField](../../mfc/reference/cdaotabledef-class.md#createfield) che accetta un `CDaoFieldInfo` parametro.  
   
- Le informazioni recuperate dal `GetFieldInfo` le funzioni membro (della classe che contiene il campo) vengono archiviate un `CDaoFieldInfo` struttura. Chiamare il `GetFieldInfo` funzione membro dell'oggetto contenitore nella raccolta i cui campi è archiviato l'oggetto di campo. `CDaoFieldInfo`definisce inoltre un `Dump` compila la funzione membro in modalità debug. È possibile utilizzare `Dump` per scaricare il contenuto di un `CDaoFieldInfo` oggetto.  
+ Le informazioni recuperate dal `GetFieldInfo` le funzioni membro (della classe che contiene il campo) vengono archiviate un `CDaoFieldInfo` struttura. Chiamare il `GetFieldInfo` funzione membro dell'oggetto contenitore nella raccolta i cui campi è archiviato l'oggetto di campo. `CDaoFieldInfo` definisce inoltre un `Dump` compila la funzione membro in modalità debug. È possibile utilizzare `Dump` per scaricare il contenuto di un `CDaoFieldInfo` oggetto.  
   
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** afxdao. h  

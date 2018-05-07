@@ -19,11 +19,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 57f313f82b0b75776b9a7a06a045bef1b7002f56
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
-ms.translationtype: HT
+ms.openlocfilehash: 835d7b1b74c8d465b44ec6274926f0b06d4f1296
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="linker-options"></a>Opzioni del linker
 
@@ -116,6 +116,7 @@ Nella riga di comando, le opzioni del linker non maiuscole e minuscole; ad esemp
 |[/PDBALTPATH](../../build/reference/pdbaltpath-use-alternate-pdb-path.md)|Usa un percorso alternativo per salvare un file PDB.|
 |[/PDBSTRIPPED](../../build/reference/pdbstripped-strip-private-symbols.md)|Crea un file del database di programma (PDB) senza simboli privati.|
 |[/PGD](../../build/reference/pgd-specify-database-for-profile-guided-optimizations.md)|Specifica un file PDG per le ottimizzazioni PGO.|
+|[/POGOSAFEMODE](../../build/reference/pogosafemode-linker-option.md)|**Obsoleta** crea una build instrumentata PGO thread-safe.|
 |[/PROFILE](../../build/reference/profile-performance-tools-profiler.md)|Produce un file di output che può essere usato con il profiler di Strumenti per le prestazioni.|
 |[/RELEASE](../../build/reference/release-set-the-checksum.md)|Imposta il checksum nell'intestazione del file exe.|
 |[/SAFESEH](../../build/reference/safeseh-image-has-safe-exception-handlers.md)|Specifica che l'immagine conterrà una tabella di gestori eccezioni sicuri.|
@@ -127,6 +128,7 @@ Nella riga di comando, le opzioni del linker non maiuscole e minuscole; ad esemp
 |[/TLBID](../../build/reference/tlbid-specify-resource-id-for-typelib.md)|Specifica l'ID di risorsa della libreria dei tipi generata dal linker.|
 |[/TLBOUT](../../build/reference/tlbout-name-dot-tlb-file.md)|Specifica il nome del file TLB e di altri file di output MIDL.|
 |[/TSAWARE](../../build/reference/tsaware-create-terminal-server-aware-application.md)|Crea un'applicazione specificamente progettata per l'esecuzione in Terminal Server.|
+|[/USEPROFILE](../../build/reference/useprofile.md)|Dati di training ottimizzazione PGO viene utilizzato per creare un'immagine ottimizzata.|
 |[/VERBOSE](../../build/reference/verbose-print-progress-messages.md)|Visualizza i messaggi di stato del linker.|
 |[/VERSION](../../build/reference/version-version-information.md)|Assegna un numero di versione.|
 |[/ WHOLEARCHIVE](../../build/reference/wholearchive-include-all-library-object-files.md)|Include tutti i file oggetto da librerie statiche specificate.|

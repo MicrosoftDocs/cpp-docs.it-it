@@ -1,12 +1,9 @@
 ---
 title: Del compilatore C2800 errori a C2899 | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/17/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C2816
@@ -51,17 +48,15 @@ helpviewer_keywords:
 dev_langs:
 - C++
 ms.assetid: e5de1e92-746a-4315-a331-c5d9efb76dbb
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 00357e68e831e58057faac1b4609ac34fadc1c8c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: dc85ab15a262a5f4976fcdc7278401a0d9a128d1
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-errors-c2800-through-c2899"></a>Del compilatore C2800 errori a C2899
 
@@ -88,7 +83,7 @@ Gli articoli in questa sezione della documentazione illustrano un subset dei mes
 |[Errore del compilatore C2812](compiler-error-c2812.md)|#import non è supportato con /clr: pure e /CLR: safe|
 |[Errore del compilatore C2813](compiler-error-c2813.md)|#import non supportato con /MP|
 |[Errore del compilatore C2814](compiler-error-c2814.md)|'*membro*': un tipo nativo non può essere annidato all'interno di un tipo gestito o WinRT '*classe*'|
-|[Errore del compilatore C2815](compiler-error-c2815.md)|'operator delete': il primo parametro formale deve essere ' void *', ma '*tipo *' è stata utilizzata|
+|[Errore del compilatore C2815](compiler-error-c2815.md)|'operator delete': il primo parametro formale deve essere ' void *', ma '* tipo *' è stata utilizzata|
 |C2816 errore del compilatore|Obsoleta.|
 |[Errore del compilatore C2817](compiler-error-c2817.md)|tipo restituito per 'operator delete' deve essere 'void'|
 |[Errore del compilatore C2818](compiler-error-c2818.md)|applicazione di 'operator ->' di overload è ricorsiva tramite il tipo '*classe*'|
@@ -132,7 +127,7 @@ Gli articoli in questa sezione della documentazione illustrano un subset dei mes
 |[Errore del compilatore C2856](compiler-error-c2856.md)|#pragma hdrstop non può trovarsi all'interno di un blocco #if|
 |[Errore del compilatore C2857](compiler-error-c2857.md)|' #include ' specificata con il /Yc istruzione*filename* opzione della riga di comando non è stato trovato nel file di origine|
 |[Errore del compilatore C2858](compiler-error-c2858.md)|opzione della riga di comando ' /Yc (/Fd*filename*)' non è coerente con l'intestazione precompilata, utilizzato ' /Fd*filename*'|
-|[Errore del compilatore C2859](compiler-error-c2859.md)|*nome del file* non è il *filetype* file utilizzato quando è stata creata questa intestazione precompilata, ricreare l'intestazione precompilata.|
+|[Errore del compilatore C2859](compiler-error-c2859.md)|*filename* non è il *filetype* file che è stato utilizzato quando è stata creata questa intestazione precompilata, ricreare l'intestazione precompilata.|
 |[Errore del compilatore C2860](compiler-error-c2860.md)|'void' non può essere un tipo di argomento, ad eccezione di '(void)'|
 |[Errore del compilatore C2861](compiler-error-c2861.md)|'*dichiarazione*': non è possibile definire una funzione membro di interfaccia|
 |[Errore del compilatore C2862](compiler-error-c2862.md)|'*interfaccia*': un'interfaccia può avere solo membri pubblici|

@@ -1,12 +1,9 @@
 ---
 title: Classe CWinFormsView | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CWinFormsView
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - CWinFormsView [MFC], CWinFormsView
 - CWinFormsView [MFC], GetControl
 ms.assetid: d597e397-6529-469b-88f5-7f65a6b9e895
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cb68e906a06d18b41d97851d8d91717ac3dd78b3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fd0af17faf3eb4a7206f50d81753e1def508aed4
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cwinformsview-class"></a>Classe CWinFormsView
 Fornisce una funzionalità generica per l'hosting di un controllo Windows Form come visualizzazione MFC.  
@@ -74,7 +69,7 @@ class CWinFormsView : public CView;
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** afxwinforms. h  
   
-##  <a name="cwinformsview"></a>CWinFormsView::CWinFormsView  
+##  <a name="cwinformsview"></a>  CWinFormsView::CWinFormsView  
  Costruisce un oggetto `CWinFormsView`.  
   
 ```  
@@ -86,13 +81,13 @@ CWinFormsView(System::Type^ pManagedViewType);
  Puntatore al tipo di dati del controllo utente Windows Form.   
   
 ### <a name="example"></a>Esempio  
- Nell'esempio seguente, il `CUserView` classe eredita da `CWinFormsView` e passa il tipo di `UserControl1` per il `CWinFormsView` costruttore. `UserControl1`è un controllo personalizzato in ControlLibrary1.dll.  
+ Nell'esempio seguente, il `CUserView` classe eredita da `CWinFormsView` e passa il tipo di `UserControl1` per il `CWinFormsView` costruttore. `UserControl1` è un controllo personalizzato in ControlLibrary1.dll.  
   
  [!code-cpp[NVC_MFC_Managed#1](../../mfc/reference/codesnippet/cpp/cwinformsview-class_1.h)]  
   
  [!code-cpp[NVC_MFC_Managed#2](../../mfc/reference/codesnippet/cpp/cwinformsview-class_2.cpp)]  
   
-##  <a name="getcontrol"></a>GetControl  
+##  <a name="getcontrol"></a>  GetControl  
  Recupera un puntatore per il controllo Windows Form.  
   
 ```  
@@ -105,7 +100,7 @@ System::Windows::Forms::Control^ GetControl() const;
 ### <a name="remarks"></a>Note  
  Per un esempio di come usare Windows Form, vedere [utilizzando un controllo utente Windows Form in MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).  
   
-##  <a name="operator_control"></a>Controllo CWinFormsView::operator ^  
+##  <a name="operator_control"></a>  Controllo CWinFormsView::operator ^  
  Esegue il cast di un tipo come un puntatore a un controllo Windows Form.  
   
 ```  

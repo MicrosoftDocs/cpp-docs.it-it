@@ -1,34 +1,29 @@
 ---
-title: 'Procedura: personalizzare il pulsante dell''applicazione | Documenti Microsoft'
-ms.custom: 
+title: "Procedura: personalizzare il pulsante dell'applicazione | Documenti Microsoft"
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - application button [MFC], customizing
 ms.assetid: ebb11180-ab20-43df-a234-801feca9eb38
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4a4a150985bd5c552b361620df87e34511ef8027
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 828886e6a5c4891e1fd7e1d820ee00542e052cc2
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-customize-the-application-button"></a>Procedura: personalizzare il pulsante dell'applicazione
 Quando si fa clic sul pulsante di applicazione, viene visualizzato un menu dei comandi. In genere, il menu contiene i comandi relativi a file, ad esempio **aprire**, **salvare**, **stampa**, e **uscita**.  
   
- ![Pulsante di applicazione della barra multifunzione MFC](../mfc/media/application_button.png "application_button")  
+ ![Pulsante applicazione della barra multifunzione MFC](../mfc/media/application_button.png "application_button")  
   
  Per personalizzare il pulsante dell'applicazione, aprirlo nel **proprietà** finestra, modificarne le proprietà e quindi visualizzare in anteprima il controllo della barra multifunzione.  
   

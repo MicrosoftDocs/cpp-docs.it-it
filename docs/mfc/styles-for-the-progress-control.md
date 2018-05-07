@@ -1,13 +1,10 @@
 ---
 title: Stili per il controllo Progress | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - PBS_VERTICAL style
 - CProgressCtrl class [MFC], styles
 ms.assetid: 39eb8081-bc20-4552-91b9-e7cdd1b7d8ae
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6186372dc3ac8bc1000a71706971c9ff72078c5a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4c1044c82c2864d71047e4fe3c7461d03a17d9d3
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="styles-for-the-progress-control"></a>Stili per il controllo Progress
 Quando si crea inizialmente il controllo dello stato ([CProgressCtrl:: Create](../mfc/reference/cprogressctrl-class.md#create)), utilizzare il `dwStyle` parametro per specificare gli stili desiderati della finestra per il controllo di stato. Nell'elenco seguente sono illustrati in maniera dettagliata gli stili applicabili alla finestra. Il controllo ignora qualsiasi stile della finestra diverso da quelli elencati di seguito. Si consiglia di creare sempre il controllo come finestra figlio, in genere di una finestra di dialogo padre.  

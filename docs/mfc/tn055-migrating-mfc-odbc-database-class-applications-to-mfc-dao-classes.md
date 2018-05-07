@@ -1,13 +1,10 @@
 ---
 title: 'TN055: Migrazione di applicazioni classi di Database ODBC MFC a classi DAO MFC | Documenti Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.mfc.odbc
 dev_langs:
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - porting ODBC database applications to DAO
 - migrating database applications [MFC]
 ms.assetid: 0f858bd1-e168-4e2e-bcd1-8debd82856e4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8da778dbadf312a6fef18ec8fa0b62a1c7aa6030
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fa9c7870492fed78e65c3ac25f74726acf35b7eb
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn055-migrating-mfc-odbc-database-class-applications-to-mfc-dao-classes"></a>TN055: migrazione di applicazioni classi di database ODBC MFC a classi DAO MFC
 > [!NOTE]
@@ -43,7 +38,7 @@ ms.lasthandoff: 12/21/2017
   
  In molte situazioni potrebbe risultare utile eseguire una migrazione delle applicazioni che utilizzano le classi di database ODBC MFC alle classi di database DAO MFC. In questa nota tecnica viene illustrata in dettaglio la maggior parte delle differenze tra le classi ODBC MFC e DAO MFC. Conoscendo queste differenze, la migrazione delle applicazioni dalle classi ODBC alle classi MFC non dovrebbe risultare eccessivamente difficile.  
   
- **Perché eseguire la migrazione da ODBC a DAO**  
+ **Motivo per cui eseguire la migrazione da ODBC a DAO**  
   
  Esistono numerosi motivi per cui si potrebbe desiderare una migrazione delle applicazioni dalle classi di database ODBC alle classi di database DAO, ma la decisione non è necessariamente semplice o ovvia. È necessario tenere presente che il motore di database Microsoft Jet utilizzato da DAO è in grado di leggere qualsiasi origine dati ODBC per la quale sia disponibile un driver ODBC. Potrebbe essere più efficiente utilizzare le classi di database ODBC o chiamare direttamente ODBC, ma il motore di database Microsoft Jet è in grado di leggere i dati ODBC.  
   
@@ -69,7 +64,7 @@ ms.lasthandoff: 12/21/2017
   
  Ad esempio, in entrambi i modelli la procedura per recuperare i dati consiste nel creare e aprire un oggetto di database, creare e aprire un oggetto recordset e spostarsi attraverso i dati effettuando qualche operazione.  
   
- **Differenze tra ODBC e DAO MFC (classi)**  
+ **Differenze tra ODBC e classi DAO MFC**  
   
  Le classi DAO includono più oggetti e un set più ricco di metodi, ma in questa sezione verranno descritte in dettaglio solo le differenze nelle classi e nelle funzionalità simili.  
   
@@ -89,12 +84,12 @@ ms.lasthandoff: 12/21/2017
 ||`DFX_Currency`|  
 |`RFX_Single`|`DFX_Single`|  
 |`RFX_Double`|`DFX_Double`|  
-|**RFX_Date\***|**DFX_Date** (`COleDateTime`-base)|  
+|**RFX_Date \***|**DFX_Date** (`COleDateTime`-base)|  
 |`RFX_Text`|`DFX_Text`|  
 |`RFX_Binary`|`DFX_Binary`|  
 |`RFX_LongBinary`|`DFX_LongBinary`|  
   
- \*Il `RFX_Date` dipende dalla funzione `CTime` e **TIMESTAMP_STRUCT**.  
+ \*    Il `RFX_Date` dipende dalla funzione `CTime` e **TIMESTAMP_STRUCT**.  
   
  Le modifiche essenziali alle funzionalità che possono influenzare l'applicazione e che richiedono più di una semplice ridenominazione sono elencate di seguito.  
   
@@ -114,7 +109,7 @@ ms.lasthandoff: 12/21/2017
   
 -   La classe Exception è stata modificata. **Eccezioni CDBExceptions** vengono generate nelle classi ODBC e **CDaoException** nelle classi DAO.  
   
--   `RFX_Date`Usa `CTime` e **TIMESTAMP_STRUCT** oggetti mentre **DFX_Date** utilizza `COleDateTime`. Il `COleDateTime` è quasi identica a `CTime`, ma si basa su un OLE di 8 byte **data** anziché a 4 byte `time_t` in modo può contenere un quantità maggiore di dati.  
+-   `RFX_Date` viene utilizzato `CTime` e **TIMESTAMP_STRUCT** oggetti mentre **DFX_Date** utilizza `COleDateTime`. Il `COleDateTime` è quasi identica a `CTime`, ma si basa su un OLE di 8 byte **data** anziché a 4 byte `time_t` in modo può contenere un quantità maggiore di dati.  
   
     > [!NOTE]
     >  Gli snapshot di DAO (`CDaoRecordset`) sono di sola lettura mentre gli snapshot di ODBC (`CRecordset`) possono essere aggiornati in base al driver e all'utilizzo della libreria di cursori ODBC. Se si utilizza la libreria di cursori, gli snapshot `CRecordset` sono aggiornabili. Se si utilizza uno dei driver Microsoft da Desktop Driver Pack 3.0 senza la libreria di cursori ODBC, gli snapshot `CRecordset` sono di sola lettura. Se si utilizza un altro driver, controllare la documentazione del driver per verificare se gli snapshot (**STATIC_CURSORS**) sono di sola lettura.  

@@ -1,12 +1,9 @@
 ---
 title: Classe CMFCToolBarFontSizeComboBox | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCToolBarFontSizeComboBox
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - CMFCToolBarFontSizeComboBox [MFC], RebuildFontSizes
 - CMFCToolBarFontSizeComboBox [MFC], SetTwipSize
 ms.assetid: 72e0c44c-6a0e-4194-a71f-ab64e3afb9b5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6ba8dde4142cff3606cc2b5ad1861096637f68c7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4b2c5734618bf1bedc72fe78dbeaada8c437391f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfctoolbarfontsizecombobox-class"></a>Classe CMFCToolBarFontSizeComboBox
 Un pulsante della barra degli strumenti contenente un controllo casella combinata che consente all'utente di selezionare una dimensione del carattere.  
@@ -84,14 +79,14 @@ class CMFCToolBarFontSizeComboBox : public CMFCToolBarComboBoxButton
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** afxtoolbarfontcombobox.h  
   
-##  <a name="cmfctoolbarfontsizecombobox"></a>CMFCToolBarFontSizeComboBox::CMFCToolBarFontSizeComboBox  
+##  <a name="cmfctoolbarfontsizecombobox"></a>  CMFCToolBarFontSizeComboBox::CMFCToolBarFontSizeComboBox  
  Costruisce un oggetto `CMFCToolBarFontSizeComboBox`.  
   
 ```  
 CMFCToolBarFontSizeComboBox();
 ```  
   
-##  <a name="gettwipsize"></a>CMFCToolBarFontSizeComboBox::GetTwipSize  
+##  <a name="gettwipsize"></a>  CMFCToolBarFontSizeComboBox::GetTwipSize  
  Recupera le dimensioni del carattere, in twip, dalla casella di testo di una casella combinata di dimensioni del carattere.  
   
 ```  
@@ -101,7 +96,7 @@ int GetTwipSize() const;
 ### <a name="return-value"></a>Valore restituito  
  Se il valore restituito è positivo, è la dimensione del carattere in twip. È -1 se la casella di testo della casella combinata è vuota. Se si verifica un errore è -2.  
   
-##  <a name="rebuildfontsizes"></a>CMFCToolBarFontSizeComboBox::RebuildFontSizes  
+##  <a name="rebuildfontsizes"></a>  CMFCToolBarFontSizeComboBox::RebuildFontSizes  
  Riempie una casella combinata di dimensioni del carattere con tutte le dimensioni valide del tipo di carattere specificato.  
   
 ```  
@@ -115,7 +110,7 @@ void RebuildFontSizes(const CString& strFontName);
 ### <a name="remarks"></a>Note  
  Chiamare questa funzione quando si desidera sincronizzare tra la selezione in una casella combinata tipo di carattere e una casella combinata di dimensioni del carattere, ad esempio un [CMFCToolBarFontComboBox classe](../../mfc/reference/cmfctoolbarfontcombobox-class.md).  
   
-##  <a name="settwipsize"></a>CMFCToolBarFontSizeComboBox::SetTwipSize  
+##  <a name="settwipsize"></a>  CMFCToolBarFontSizeComboBox::SetTwipSize  
  Arrotonda specificato dimensione (in twip) per le dimensioni in punti e quindi imposta più vicino alla dimensione selezionata nella casella combinata con tale valore.  
   
 ```  

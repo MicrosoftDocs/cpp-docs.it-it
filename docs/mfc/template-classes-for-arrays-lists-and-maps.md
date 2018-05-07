@@ -1,13 +1,10 @@
 ---
 title: Modello classi per le matrici, elenchi e mappe | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.classes.template
 dev_langs:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - map classes [MFC]
 - template classes [MFC]
 ms.assetid: a8331c4b-068a-48f8-a629-b8449601e121
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f92790965ffb8cb96fd59c9333a1a99c9fcfbe5d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: feeb1b404a765e1ce24e8401ffd1163a18731780
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="template-classes-for-arrays-lists-and-maps"></a>Classi modello per matrici, elenchi e mappe
 Queste classi di raccolta sono modelli i cui parametri determinano i tipi di oggetti archiviati nelle funzioni di aggregazione. Il `CArray`, `CMap`, e `CList` classi utilizzano funzioni di supporto globale che in genere devono essere personalizzate. Per ulteriori informazioni su queste funzioni di supporto, vedere [classi Collection](../mfc/reference/collection-class-helpers.md). Le classi di puntatori sono wrapper per le altre classi nella libreria di classi. Tramite questi wrapper, si integra del compilatore-controllo dei tipi che consentono di evitare errori. Per ulteriori informazioni sull'utilizzo di queste classi, vedere [raccolte](../mfc/collections.md).  

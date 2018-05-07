@@ -1,12 +1,9 @@
 ---
 title: Errore del compilatore C2356 | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C2356
@@ -15,26 +12,24 @@ dev_langs:
 helpviewer_keywords:
 - C2356
 ms.assetid: 84d5a816-9a61-4d45-9978-38e485bbf767
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a09e44133b6bea0f79df020b359719cf1a1754c8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a9dfb13f388c6c40c6c1853ab8e87b2e39edbc1e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-error-c2356"></a>Errore del compilatore C2356
 il segmento di inizializzazione non deve essere modificato durante l'unità di conversione  
   
  Possibili cause:  
   
--   `#pragma init_seg`preceduto dal codice di inizializzazione di segmento  
+-   `#pragma init_seg` preceduto dal codice di inizializzazione segmento  
   
--   `#pragma init_seg`preceduto da un altro`#pragma init_seg`  
+-   `#pragma init_seg` preceduto da un altro `#pragma init_seg`  
   
  Per risolvere, spostare il codice di inizializzazione del segmento all'inizio del modulo. Se è necessario inizializzare più aree, spostarli per separare i moduli.  
   

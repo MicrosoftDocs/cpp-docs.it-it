@@ -1,12 +1,9 @@
 ---
 title: Classe CMFCToolBarFontComboBox | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCToolBarFontComboBox
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - CMFCToolBarFontComboBox [MFC], GetFontDesc
 - CMFCToolBarFontComboBox [MFC], SetFont
 ms.assetid: 25f8e08c-aadd-4cb5-9581-a99d49d444b1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5f499c5593460b10957c7d09e01c0f458529df0d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ea8f05c20c3a3276f51b4267b6763831dc23eacf
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfctoolbarfontcombobox-class"></a>Classe CMFCToolBarFontComboBox
 Un pulsante della barra degli strumenti contenente un controllo casella combinata che consente all'utente di selezionare un tipo di carattere da un elenco di tipi di carattere del sistema.  
@@ -88,7 +83,7 @@ class CMFCToolBarFontComboBox : public CMFCToolBarComboBoxButton
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** afxtoolbarfontcombobox.h  
   
-##  <a name="cmfctoolbarfontcombobox"></a>CMFCToolBarFontComboBox::CMFCToolBarFontComboBox  
+##  <a name="cmfctoolbarfontcombobox"></a>  CMFCToolBarFontComboBox::CMFCToolBarFontComboBox  
  Costruisce un [CMFCToolBarFontComboBox](../../mfc/reference/cmfctoolbarfontcombobox-class.md) oggetto.  
   
 ```  
@@ -152,7 +147,7 @@ CMFCToolBarFontComboBox();
   
  [!code-cpp[NVC_MFC_WordPad#7](../../mfc/reference/codesnippet/cpp/cmfctoolbarfontcombobox-class_1.cpp)]  
   
-##  <a name="getfontdesc"></a>CMFCToolBarFontComboBox::GetFontDesc  
+##  <a name="getfontdesc"></a>  CMFCToolBarFontComboBox::GetFontDesc  
  Restituisce un puntatore al `CMFCFontInfo` oggetto per un indice specificato nella casella combinata.  
   
 ```  
@@ -166,7 +161,7 @@ const CMFCFontInfo* GetFontDesc(int iIndex=-1) const;
 ### <a name="return-value"></a>Valore restituito  
  Un puntatore a un `CMFCFontInfo` oggetto. Se `iIndex` non specifica un indice di elemento valido, il valore restituito è `NULL`.  
   
-##  <a name="m_nfontheight"></a>CMFCToolBarFontComboBox::m_nFontHeight  
+##  <a name="m_nfontheight"></a>  CMFCToolBarFontComboBox::m_nFontHeight  
  Specifica l'altezza, in pixel, di caratteri nella casella combinata tipo di carattere se la casella combinata è proprietario di stile di disegno.  
   
 ```  
@@ -176,7 +171,7 @@ static int m_nFontHeight
 ### <a name="remarks"></a>Note  
  Se il `m_nFontHeight` variabile è 0, l'altezza viene calcolata automaticamente in base al tipo di carattere predefinito della casella combinata. L'altezza include sia l'ascent di caratteri di sopra la linea di base e l'ascent di caratteri di sotto la linea di base.  
   
-##  <a name="setfont"></a>CMFCToolBarFontComboBox::SetFont  
+##  <a name="setfont"></a>  CMFCToolBarFontComboBox::SetFont  
  Seleziona che set di caratteri nella casella combinata tipo di carattere in base al nome del tipo di carattere e carattere che viene specificati nei parametri.  
   
 ```  

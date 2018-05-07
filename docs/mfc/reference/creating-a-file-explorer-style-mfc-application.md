@@ -1,13 +1,10 @@
 ---
 title: Creazione di un'applicazione MFC di tipo Esplora risorse di File | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.appwiz.mfcexplorer.project
 dev_langs:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - MFC applications [MFC], Windows Explorer-style
 - Explorer-style applications [MFC], creating
 ms.assetid: f843ab5d-2d5d-41ca-88a4-badc0d2f8052
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6098e451b4ebc4caf2bb7fad99ea2e407e4872c3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a5b0f5d4bdabc987d4f4177f616ce756c351b8b5
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="creating-a-file-explorer-style-mfc-application"></a>Creazione di un'applicazione MFC di tipo Esplora file
 Molte applicazioni di sistema di Windows utilizzano l'interfaccia utente (UI) per Esplora File. Quando si avvia Esplora File, ad esempio, viene visualizzata un'applicazione con una barra di divisione verticale della barra di divisione dell'area client. La parte sinistra dell'area client offre funzionalità di esplorazione ed e il lato destro dell'area client Mostra i dettagli relativi alla selezione effettuata nel riquadro a sinistra. Quando un utente fa clic su un elemento nel riquadro a sinistra, l'applicazione ripopola il riquadro di destra. In un'applicazione MDI, è possibile utilizzare i comandi nel **vista** menu per modificare la quantità di dettagli visualizzati nel riquadro a destra. (In un'applicazione SDI o multipli documento di primo livello, è possibile modificare i dettagli utilizzando solo i pulsanti della barra degli strumenti.)  

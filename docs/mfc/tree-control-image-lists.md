@@ -1,13 +1,10 @@
 ---
 title: Struttura ad albero di elenchi di immagini di controllo | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - tree controls [MFC], image lists
 - CTreeCtrl class [MFC], image lists
 ms.assetid: f560c4f2-20d2-4d28-ac33-4017e65fb0a6
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5015a001bf2c15f3144303ba5e19b2a9ea8c34f6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ef74b656cc85fbdcc29c7965b9398a5cbd2f44e8
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tree-control-image-lists"></a>Elenchi di immagini del controllo Tree
 Ogni elemento in un controllo struttura ad albero ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) può disporre di una coppia di immagini bitmap è associato. Le immagini vengono visualizzate a sinistra dell'etichetta di un elemento. Un'immagine viene visualizzata quando l'elemento è selezionato e l'altra viene visualizzata quando l'elemento non è selezionata. Ad esempio, un elemento potrebbe visualizzare una cartella aperta quando è selezionata e una cartella chiusa quando non è selezionato.  
@@ -36,7 +31,7 @@ Ogni elemento in un controllo struttura ad albero ([CTreeCtrl](../mfc/reference/
   
  Se viene specificato un elenco di immagini di stato, un controllo albero riserva spazio a sinistra dell'icona di ciascun elemento per un'immagine di stato. Un'applicazione può utilizzare le immagini di stato, ad esempio caselle di controllo selezionate e deselezionate, per indicare gli stati degli elementi definiti dall'applicazione. Un valore diverso da zero in 12 a 15 bit specifica l'indice in base uno di un'immagine di stato (0 non indica nessuna immagine di stato).  
   
- Specificando il **I_IMAGECALLBACK** valore anziché l'indice di un'immagine, è possibile ritardare specificando l'immagine selezionata o per fino a quando l'elemento sta per essere ridisegnato. **I_IMAGECALLBACK** indirizza il controllo struttura ad albero per l'applicazione per l'indice di query mediante l'invio di [TVN_GETDISPINFO](http://msdn.microsoft.com/library/windows/desktop/bb773518) messaggio di notifica.  
+ Specificando il **I_IMAGECALLBACK** valore anziché l'indice di un'immagine, è possibile ritardare specificando l'immagine selezionata o per fino a quando l'elemento sta per essere ridisegnato. **I_IMAGECALLBACK** indirizza il controllo struttura ad albero per eseguire una query dell'applicazione per l'indice inviando il [TVN_GETDISPINFO](http://msdn.microsoft.com/library/windows/desktop/bb773518) messaggio di notifica.  
   
  Il [funzione membro GetImageList](../mfc/reference/ctreectrl-class.md#getimagelist) funzione membro recupera l'handle dell'elenco di immagini di un controllo struttura ad albero. Questa funzione è utile se è necessario aggiungere altre immagini all'elenco. Per ulteriori informazioni sugli elenchi di immagini, vedere [utilizzo di CImageList](../mfc/using-cimagelist.md), [CImageList](../mfc/reference/cimagelist-class.md) nel *riferimenti alla libreria MFC*, e [elenchi di immagini](http://msdn.microsoft.com/library/windows/desktop/bb761389) di Windows SDK.  
   

@@ -1,29 +1,24 @@
 ---
 title: Gestione visualizzazione | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Visualization Manager
 ms.assetid: c9dd1365-27ac-42e5-8caa-1004525b4129
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 654ffc0f3fb4c33f153f3389442486ffa86b74a8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 40d16e1373d347b4a715cd6f073211796913bd21
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="visualization-manager"></a>Gestione visualizzazione
 Il gestore visualizzazione è un oggetto che controlla l'aspetto di un'intera applicazione. Opera come una singola classe in cui è possibile inserire tutto il codice di disegno per l'applicazione. La libreria MFC include diversi gestori visualizzazione. È possibile creare la propria gestione visual anche se si desidera creare una visualizzazione personalizzata per l'applicazione. Le immagini seguenti mostrano la stessa applicazione quando sono abilitati i gestori di visualizzazione diverse:  
@@ -37,7 +32,7 @@ Applicazione che utilizza la gestione di visual CMFCVisualManagerVS2005
  ![Rendering mediante CMFCVisualManagerOfficeXP di MyApp](../mfc/media/vmofficexp.png "vmofficexp")  
 Applicazione che utilizza la gestione di visual CMFCVisualManagerOfficeXP  
   
- ![MyApp mediante CMFCVisualManagerOffice2003 sottoposto a rendering](../mfc/media/vmoffice2003.png "vmoffice2003")  
+ ![Rendering mediante CMFCVisualManagerOffice2003 di MyApp](../mfc/media/vmoffice2003.png "vmoffice2003")  
 Applicazione che utilizza la gestione di visual CMFCVisualManagerOffice2003  
   
  ![Rendering mediante CMFCVisualManagerOffice2007 di MyApp](../mfc/media/msoffice2007.png "msoffice2007")  

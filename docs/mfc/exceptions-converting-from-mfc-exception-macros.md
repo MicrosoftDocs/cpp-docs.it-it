@@ -1,13 +1,10 @@
 ---
 title: 'Eccezioni: Conversione da macro eccezioni MFC | Documenti Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - catch blocks [MFC], delimiting
 - exception handling [MFC], converting exceptions
 ms.assetid: bd3ac3b3-f3ce-4fdd-a168-a2cff13ed796
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 36adda235cf71d1a44218c98c109e72847ca9136
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8953cc28e35974f7a2a63754533ffd851ca62a3e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="exceptions-converting-from-mfc-exception-macros"></a>Eccezioni: conversione da macro eccezioni MFC
 Questo è un argomento avanzato.  
@@ -44,7 +39,7 @@ Questo è un argomento avanzato.
   
 -   [Conversione di codice con macro delle eccezioni per utilizzare le eccezioni C++](#_core_doing_the_conversion)  
   
-##  <a name="_core_advantages_of_converting"></a>Vantaggi della conversione  
+##  <a name="_core_advantages_of_converting"></a> Vantaggi della conversione  
  È probabile che non necessario convertire il codice esistente, anche se è necessario essere consapevoli delle differenze tra le implementazioni delle macro MFC versione 3.0 e nelle versioni precedenti. Queste differenze e le successive modifiche nel funzionamento del codice vengono illustrate [eccezioni: modifiche alle macro eccezioni nella versione 3.0](../mfc/exceptions-changes-to-exception-macros-in-version-3-0.md).  
   
  I principali vantaggi di conversione sono:  
@@ -67,7 +62,7 @@ Questo è un argomento avanzato.
   
      La dichiarazione di eccezione per il **catch** parola chiave viene utilizzata questa sintassi:  
   
-     **catch (** *tipo_eccezione* *nome_eccezione***)**  
+     **catch (** *tipo_eccezione* *nome_eccezione * * *)**  
   
      Questa istruzione di dichiarazione di eccezione indica il tipo di eccezione catch gestito dal blocco.  
   
@@ -81,7 +76,7 @@ Questo è un argomento avanzato.
   
      Utilizzano le macro `THROW_LAST` per rigenerare l'eccezione corrente. Il `throw` (parola chiave), senza alcun argomento, ha lo stesso effetto.  
   
-##  <a name="_core_doing_the_conversion"></a>Eseguire la conversione  
+##  <a name="_core_doing_the_conversion"></a> Operazioni di conversione  
   
 #### <a name="to-convert-code-using-macros-to-use-the-c-exception-handling-keywords"></a>Per convertire il codice di utilizzo di macro per utilizzare la gestione delle eccezioni C++  
   
@@ -89,17 +84,17 @@ Questo è un argomento avanzato.
   
 2.  Sostituire o eliminare tutte le occorrenze delle macro seguenti:  
   
-     **PROVARE a** (sostituirla con **provare**)  
+     **PROVARE** (sostituirla con **provare**)  
   
      **CATCH** (sostituirla con **catch**)  
   
-     `AND_CATCH`(Sostituire con **catch**)  
+     `AND_CATCH` (Sostituirla con **catch**)  
   
-     `END_CATCH`(Eliminare)  
+     `END_CATCH` (Eliminare)  
   
-     **GENERARE** (sostituirla con `throw`)  
+     **GENERARE** (sostituirlo con `throw`)  
   
-     `THROW_LAST`(Sostituire con `throw`)  
+     `THROW_LAST` (Sostituire tale riga con `throw`)  
   
 3.  Modificare gli argomenti di macro in modo da formare dichiarazioni di eccezione valido.  
   

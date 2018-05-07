@@ -1,12 +1,9 @@
 ---
 title: CHeaderCtrl (classe) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CHeaderCtrl
@@ -73,17 +70,15 @@ helpviewer_keywords:
 - CHeaderCtrl [MFC], SetItem
 - CHeaderCtrl [MFC], SetOrderArray
 ms.assetid: b847ac90-5fae-4a87-88e0-ca45f77b8b3b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3731d6d7a1455dc51ee03ea942666cbfc0f48e27
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 582ffffc4461edd41078f1a89844bdc260b2dd40
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cheaderctrl-class"></a>CHeaderCtrl (classe)
 Fornisce la funzionalità del controllo intestazione comune di Windows.  
@@ -166,7 +161,7 @@ class CHeaderCtrl : public CWnd
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** afxcmn.h  
   
-##  <a name="cheaderctrl"></a>CHeaderCtrl::CHeaderCtrl  
+##  <a name="cheaderctrl"></a>  CHeaderCtrl::CHeaderCtrl  
  Costruisce un oggetto `CHeaderCtrl`.  
   
 ```  
@@ -176,7 +171,7 @@ CHeaderCtrl();
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFC_CHeaderCtrl#1](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_1.cpp)]  
   
-##  <a name="clearallfilters"></a>CHeaderCtrl::ClearAllFilters  
+##  <a name="clearallfilters"></a>  CHeaderCtrl::ClearAllFilters  
  Cancella tutti i filtri per un controllo di intestazione.  
   
 ```  
@@ -192,7 +187,7 @@ BOOL ClearAllFilters();
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFC_CHeaderCtrl#2](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_2.cpp)]  
   
-##  <a name="clearfilter"></a>CHeaderCtrl::ClearFilter  
+##  <a name="clearfilter"></a>  CHeaderCtrl::ClearFilter  
  Cancella il filtro per un controllo di intestazione.  
   
 ```  
@@ -212,7 +207,7 @@ BOOL ClearFilter(int nColumn);
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFC_CHeaderCtrl#3](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_3.cpp)]  
   
-##  <a name="create"></a>CHeaderCtrl:: Create  
+##  <a name="create"></a>  CHeaderCtrl:: Create  
  Crea un controllo di intestazione e lo collega a un `CHeaderCtrl` oggetto.  
   
 ```  
@@ -244,17 +239,17 @@ virtual BOOL Create(
   
  Oltre agli stili del controllo intestazione, è possibile utilizzare i seguenti stili comuni di controllo per determinare come il controllo intestazione posiziona e viene ridimensionato (vedere [stili del controllo comune](http://msdn.microsoft.com/library/windows/desktop/bb775498) per altre informazioni):  
   
-- `CCS_BOTTOM`Determina il controllo di posizionarsi nella parte inferiore dell'area client della finestra padre e imposta la larghezza sia uguale all'oggetto padre larghezza della finestra.  
+- `CCS_BOTTOM` Determina il controllo di posizionarsi nella parte inferiore dell'area client della finestra padre e imposta la larghezza sia uguale all'oggetto padre larghezza della finestra.  
   
-- `CCS_NODIVIDER`Impedisce l'evidenziazione due pixel da disegnare nella parte superiore del controllo.  
+- `CCS_NODIVIDER` Impedisce l'evidenziazione due pixel da disegnare nella parte superiore del controllo.  
   
-- `CCS_NOMOVEY`Il controllo ridimensionare e spostare stesso orizzontalmente, ma non in verticale, in risposta a un `WM_SIZE` messaggio. Se il `CCS_NORESIZE` viene utilizzato lo stile, non si applica questo stile. Per impostazione predefinita, i controlli intestazione hanno questo stile.  
+- `CCS_NOMOVEY` Fa sì che il controllo ridimensionare e spostare stesso orizzontalmente, ma non in verticale, in risposta a un `WM_SIZE` messaggio. Se il `CCS_NORESIZE` viene utilizzato lo stile, non si applica questo stile. Per impostazione predefinita, i controlli intestazione hanno questo stile.  
   
-- `CCS_NOPARENTALIGN`Impedisce il controllo di spostare automaticamente all'inizio o alla parte inferiore della finestra padre. Il controllo, invece, mantiene la posizione all'interno della finestra padre nonostante le modifiche alle dimensioni della finestra padre. Se il `CCS_TOP` o `CCS_BOTTOM` stile viene inoltre utilizzato, il valore predefinito è regolata l'altezza, ma la posizione e la larghezza rimangono invariati.  
+- `CCS_NOPARENTALIGN` Impedisce il controllo automaticamente lo spostamento alla parte superiore o inferiore della finestra padre. Il controllo, invece, mantiene la posizione all'interno della finestra padre nonostante le modifiche alle dimensioni della finestra padre. Se il `CCS_TOP` o `CCS_BOTTOM` stile viene inoltre utilizzato, il valore predefinito è regolata l'altezza, ma la posizione e la larghezza rimangono invariati.  
   
-- `CCS_NORESIZE`Impedisce il controllo di utilizzare la larghezza predefinita e l'altezza, quando si imposta la dimensione iniziale o una nuova dimensione. Al contrario, il controllo utilizza la larghezza e l'altezza specificata nella richiesta di creazione o di ridimensionamento.  
+- `CCS_NORESIZE` Impedisce il controllo di usare la larghezza predefinita e l'altezza quando si imposta la dimensione iniziale o una nuova dimensione. Al contrario, il controllo utilizza la larghezza e l'altezza specificata nella richiesta di creazione o di ridimensionamento.  
   
-- `CCS_TOP`Determina il controllo di posizionarsi nella parte superiore dell'area client della finestra padre e imposta la larghezza sia uguale all'oggetto padre larghezza della finestra.  
+- `CCS_TOP` Determina il controllo di posizionarsi nella parte superiore dell'area client della finestra padre e imposta la larghezza sia uguale all'oggetto padre larghezza della finestra.  
   
  È inoltre possibile applicare gli stili di finestra seguenti a un controllo header (vedere [stili finestra](../../mfc/reference/styles-used-by-mfc.md#window-styles) per altre informazioni):  
   
@@ -266,14 +261,14 @@ virtual BOOL Create(
   
 - **WS_GROUP** specifica il primo controllo di un gruppo di controlli in cui l'utente può spostarsi da un controllo a quella successiva con i tasti di direzione. Tutti i controlli definiti con la **WS_GROUP** dopo il primo controllo appartengono allo stesso gruppo di stile. Il controllo successivo con la **WS_GROUP** stile termina il gruppo di stili e avvia il gruppo successivo (ovvero, un gruppo termina in cui inizia il successivo).  
   
-- **WS_TABSTOP** specifica una di un numero qualsiasi di controlli tramite il quale l'utente può spostarsi con il tasto TAB. Il tasto TAB sposta l'utente al controllo successivo specificato per il **WS_TABSTOP** stile.  
+- **WS_TABSTOP** specifica un numero qualsiasi di controlli tramite il quale l'utente può spostarsi utilizzando il tasto TAB. Il tasto TAB sposta l'utente al controllo successivo specificato per il **WS_TABSTOP** stile.  
   
  Se si desidera utilizzare gli stili estesi windows con il controllo, chiamare [CreateEx](#createex) anziché **crea**.  
   
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFC_CHeaderCtrl#4](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_4.cpp)]  
   
-##  <a name="createex"></a>CHeaderCtrl::CreateEx  
+##  <a name="createex"></a>  CHeaderCtrl::CreateEx  
  Crea un controllo (una finestra figlio) che verrà associato il `CHeaderCtrl` oggetto.  
   
 ```  
@@ -307,7 +302,7 @@ virtual BOOL CreateEx(
 ### <a name="remarks"></a>Note  
  Utilizzare `CreateEx` anziché **crea** per applicare stili estesi di Windows, specificati per il prefisso di stile esteso di Windows **WS_EX _**.  
   
-##  <a name="createdragimage"></a>CHeaderCtrl::CreateDragImage  
+##  <a name="createdragimage"></a>  CHeaderCtrl::CreateDragImage  
  Crea una versione trasparente dell'immagine di un elemento all'interno di un controllo di intestazione.  
   
 ```  
@@ -326,7 +321,7 @@ CImageList* CreateDragImage(int nIndex);
   
  Il `CImageList` oggetto a cui punta il puntatore restituito è un oggetto temporaneo e viene eliminato alla successiva elaborazione di tempo di inattività.  
   
-##  <a name="deleteitem"></a>CHeaderCtrl::DeleteItem  
+##  <a name="deleteitem"></a>  CHeaderCtrl::DeleteItem  
  Elimina un elemento da un controllo di intestazione.  
   
 ```  
@@ -343,7 +338,7 @@ BOOL DeleteItem(int nPos);
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFC_CHeaderCtrl#5](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_5.cpp)]  
   
-##  <a name="drawitem"></a>CHeaderCtrl::DrawItem  
+##  <a name="drawitem"></a>  CHeaderCtrl::DrawItem  
  Chiamato dal framework quando un aspetto visivo di un controllo cambia intestazione proprietario.  
   
 ```  
@@ -364,7 +359,7 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFC_CHeaderCtrl#6](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_6.cpp)]  
   
-##  <a name="editfilter"></a>CHeaderCtrl::EditFilter  
+##  <a name="editfilter"></a>  CHeaderCtrl::EditFilter  
  Inizia a modificare il filtro di un controllo di intestazione specificato.  
   
 ```  
@@ -391,7 +386,7 @@ BOOL EditFilter(
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFC_CHeaderCtrl#7](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_7.cpp)]  
   
-##  <a name="getbitmapmargin"></a>CHeaderCtrl::GetBitmapMargin  
+##  <a name="getbitmapmargin"></a>  CHeaderCtrl::GetBitmapMargin  
  Recupera la larghezza del margine di una bitmap in un controllo header.  
   
 ```  
@@ -407,7 +402,7 @@ int GetBitmapMargin() const;
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFC_CHeaderCtrl#8](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_8.cpp)]  
   
-##  <a name="getfocuseditem"></a>CHeaderCtrl::GetFocusedItem  
+##  <a name="getfocuseditem"></a>  CHeaderCtrl::GetFocusedItem  
  Ottiene l'indice dell'elemento che lo stato attivo al controllo di intestazione corrente.  
   
 ```  
@@ -430,7 +425,7 @@ int GetFocusedItem() const;
   
  [!code-cpp[NVC_MFC_CHeaderCtrl_s4#4](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_10.cpp)]  
   
-##  <a name="getimagelist"></a>CHeaderCtrl::GetImageList  
+##  <a name="getimagelist"></a>  CHeaderCtrl::GetImageList  
  Recupera l'handle di un elenco di immagini utilizzato per gli elementi di intestazione di disegno in un controllo header.  
   
 ```  
@@ -446,7 +441,7 @@ CImageList* GetImageList() const;
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFC_CHeaderCtrl#9](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_11.cpp)]  
   
-##  <a name="getitem"></a>CHeaderCtrl  
+##  <a name="getitem"></a>  CHeaderCtrl  
  Recupera le informazioni relative a un elemento di controllo di intestazione.  
   
 ```  
@@ -468,7 +463,7 @@ BOOL GetItem(
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFC_CHeaderCtrl#10](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_12.cpp)]  
   
-##  <a name="getitemcount"></a>CHeaderCtrl::GetItemCount  
+##  <a name="getitemcount"></a>  CHeaderCtrl::GetItemCount  
  Recupera un numero di elementi in un controllo header.  
   
 ```  
@@ -481,7 +476,7 @@ int GetItemCount() const;
 ### <a name="example"></a>Esempio  
   Per vedere l'esempio [CHeaderCtrl::DeleteItem](#deleteitem).  
   
-##  <a name="getitemdropdownrect"></a>CHeaderCtrl::GetItemDropDownRect  
+##  <a name="getitemdropdownrect"></a>  CHeaderCtrl::GetItemDropDownRect  
  Ottiene il rettangolo di delimitazione del pulsante di menu a discesa per un elemento dell'intestazione del controllo intestazione corrente.  
   
 ```  
@@ -498,7 +493,7 @@ BOOL GetItemDropDownRect(
 |[out] `lpRect`|Puntatore a un [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) struttura per ricevere le informazioni sul rettangolo di delimitazione.|  
   
 ### <a name="return-value"></a>Valore restituito  
- `true`Se la funzione ha esito positivo. in caso contrario, `false`.  
+ `true` Se questa funzione ha esito positivo; in caso contrario, `false`.  
   
 ### <a name="remarks"></a>Note  
  Questo metodo invia il [HDM_GETITEMDROPDOWNRECT](http://msdn.microsoft.com/library/windows/desktop/bb775339) messaggio, come descritto in Windows SDK.  
@@ -513,7 +508,7 @@ BOOL GetItemDropDownRect(
   
  [!code-cpp[NVC_MFC_CHeaderCtrl_s4#2](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_13.cpp)]  
   
-##  <a name="getitemrect"></a>CHeaderCtrl::GetItemRect  
+##  <a name="getitemrect"></a>  CHeaderCtrl::GetItemRect  
  Recupera il rettangolo di delimitazione per un determinato elemento in un controllo header.  
   
 ```  
@@ -535,7 +530,7 @@ BOOL GetItemRect(
 ### <a name="remarks"></a>Note  
  Questo metodo implementa il comportamento del messaggio Win32 [HDM_GETITEMRECT](http://msdn.microsoft.com/library/windows/desktop/bb775341), come descritto in Windows SDK.  
   
-##  <a name="getorderarray"></a>CHeaderCtrl:: GetOrderArray  
+##  <a name="getorderarray"></a>  CHeaderCtrl:: GetOrderArray  
  Recupera l'ordine da sinistra a destra degli elementi in un controllo header.  
   
 ```  
@@ -560,7 +555,7 @@ BOOL GetOrderArray(
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFC_CHeaderCtrl#11](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_14.cpp)]  
   
-##  <a name="getoverflowrect"></a>CHeaderCtrl::GetOverflowRect  
+##  <a name="getoverflowrect"></a>  CHeaderCtrl::GetOverflowRect  
  Ottiene il rettangolo di delimitazione del pulsante di overflow del controllo intestazione corrente.  
   
 ```  
@@ -574,7 +569,7 @@ BOOL GetOverflowRect(LPRECT lpRect) const;
 |[out] `lpRect`|Puntatore a un [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) struttura che riceve le informazioni sul rettangolo di delimitazione.|  
   
 ### <a name="return-value"></a>Valore restituito  
- `true`Se la funzione ha esito positivo. in caso contrario, `false`.  
+ `true` Se questa funzione ha esito positivo; in caso contrario, `false`.  
   
 ### <a name="remarks"></a>Note  
  Se il controllo intestazione contiene più elementi possono essere visualizzati contemporaneamente, il controllo può visualizzare un pulsante di overflow scorre agli elementi che non sono visibili. Il controllo intestazione deve avere il `HDS_OVERFLOW` e `HDF_SPLITBUTTON` stili per visualizzare il pulsante di overflow. Nel rettangolo che racchiude il pulsante di overflow e si verifica solo quando viene visualizzato il pulsante di overflow. Per ulteriori informazioni, vedere [stili del controllo intestazione](http://msdn.microsoft.com/library/windows/desktop/bb775241).  
@@ -591,7 +586,7 @@ BOOL GetOverflowRect(LPRECT lpRect) const;
   
  [!code-cpp[NVC_MFC_CHeaderCtrl_s4#3](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_15.cpp)]  
   
-##  <a name="hittest"></a>CHeaderCtrl::HitTest  
+##  <a name="hittest"></a>  CHeaderCtrl::HitTest  
  Determina quale elemento di intestazione, se presente, si trova in un punto specificato.  
   
 ```  
@@ -620,7 +615,7 @@ int HitTest(LPHDHITTESTINFO* phdhti);
   
  [!code-cpp[NVC_MFC_CHeaderCtrl_s4#1](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_16.cpp)]  
   
-##  <a name="insertitem"></a>CHeaderCtrl:: InsertItem  
+##  <a name="insertitem"></a>  CHeaderCtrl:: InsertItem  
  Inserisce un nuovo elemento in un controllo di intestazione in corrispondenza dell'indice specificato.  
   
 ```  
@@ -642,7 +637,7 @@ int InsertItem(
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFC_CHeaderCtrl#12](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_17.cpp)]  
   
-##  <a name="layout"></a>CHeaderCtrl:: layout  
+##  <a name="layout"></a>  CHeaderCtrl:: layout  
  Recupera le dimensioni e la posizione di un controllo di intestazione all'interno di un rettangolo specificato.  
   
 ```  
@@ -662,7 +657,7 @@ BOOL Layout(HDLAYOUT* pHeaderLayout);
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFC_CHeaderCtrl#13](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_18.cpp)]  
   
-##  <a name="ordertoindex"></a>CHeaderCtrl::OrderToIndex  
+##  <a name="ordertoindex"></a>  CHeaderCtrl::OrderToIndex  
  Recupera il valore di indice per un elemento basato sull'ordine nel controllo header.  
   
 ```  
@@ -679,7 +674,7 @@ int OrderToIndex(int nOrder) const;
 ### <a name="remarks"></a>Note  
  Questa funzione membro implementa il comportamento della macro Win32 [HDM_ORDERTOINDEX](http://msdn.microsoft.com/library/windows/desktop/bb775355), come descritto in Windows SDK. Viene fornito per supportare l'ordinamento degli elementi dell'intestazione.  
   
-##  <a name="setbitmapmargin"></a>CHeaderCtrl::SetBitmapMargin  
+##  <a name="setbitmapmargin"></a>  CHeaderCtrl::SetBitmapMargin  
  Imposta la larghezza del margine di una bitmap in un controllo header.  
   
 ```  
@@ -699,7 +694,7 @@ int SetBitmapMargin(int nWidth);
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFC_CHeaderCtrl#14](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_19.cpp)]  
   
-##  <a name="setfilterchangetimeout"></a>CHeaderCtrl::SetFilterChangeTimeout  
+##  <a name="setfilterchangetimeout"></a>  CHeaderCtrl::SetFilterChangeTimeout  
  Imposta l'intervallo di timeout tra il tempo impiegato da una modifica sul posto negli attributi di filtro e la registrazione di un [HDN_FILTERCHANGE](http://msdn.microsoft.com/library/windows/desktop/bb775277) notifica.  
   
 ```  
@@ -719,7 +714,7 @@ int SetFilterChangeTimeout(DWORD dwTimeOut);
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFC_CHeaderCtrl#15](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_20.cpp)]  
   
-##  <a name="setfocuseditem"></a>CHeaderCtrl::SetFocusedItem  
+##  <a name="setfocuseditem"></a>  CHeaderCtrl::SetFocusedItem  
  Imposta lo stato attivo a un elemento di intestazione specificato nel controllo intestazione corrente.  
   
 ```  
@@ -748,7 +743,7 @@ BOOL SetFocusedItem(int iItem);
   
  [!code-cpp[NVC_MFC_CHeaderCtrl_s4#4](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_10.cpp)]  
   
-##  <a name="sethotdivider"></a>CHeaderCtrl::SetHotDivider  
+##  <a name="sethotdivider"></a>  CHeaderCtrl::SetHotDivider  
  Trascinare il divisore tra gli elementi di intestazione per indicare un manuale di modifiche e rilascio di un elemento dell'intestazione.  
   
 ```  
@@ -772,7 +767,7 @@ int SetHotDivider(int nIndex);
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFC_CHeaderCtrl#16](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_21.cpp)]  
   
-##  <a name="setimagelist"></a>CHeaderCtrl:: SetImageList  
+##  <a name="setimagelist"></a>  CHeaderCtrl:: SetImageList  
  Assegna un elenco di immagini a un controllo di intestazione.  
   
 ```  
@@ -792,7 +787,7 @@ CImageList* SetImageList(CImageList* pImageList);
 ### <a name="example"></a>Esempio  
   Per vedere l'esempio [CHeaderCtrl::GetImageList](#getimagelist).  
   
-##  <a name="setitem"></a>CHeaderCtrl::SetItem  
+##  <a name="setitem"></a>  CHeaderCtrl::SetItem  
  Imposta gli attributi dell'elemento specificato in un controllo header.  
   
 ```  
@@ -814,7 +809,7 @@ BOOL SetItem(
 ### <a name="example"></a>Esempio  
   Per vedere l'esempio [CHeaderCtrl](#getitem).  
   
-##  <a name="setorderarray"></a>CHeaderCtrl::SetOrderArray  
+##  <a name="setorderarray"></a>  CHeaderCtrl::SetOrderArray  
  Imposta l'ordine da sinistra a destra degli elementi in un controllo header.  
   
 ```  

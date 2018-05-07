@@ -1,13 +1,10 @@
 ---
 title: AFX (messaggi) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - SB_LINELEFT
 - SB_THUMBTRACK
@@ -73,17 +70,15 @@ dev_langs:
 helpviewer_keywords:
 - AFX messages [MFC]
 ms.assetid: 3d601f3c-af6d-47d3-8553-34f1318fa74f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 41f300f285fb4eaf1a6154a21cbbabc0253fc730
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: cc11b3eb79f0d535775f073c772e40c4ed9e822c
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="afx-messages"></a>AFX (messaggi)
 Questi messaggi vengono utilizzati in MFC.  
@@ -93,7 +88,7 @@ Questi messaggi vengono utilizzati in MFC.
   
 ||||||  
 |-|-|-|-|-|  
-|Messaggio|Descrizione|[in] `wParam`|`lParam`(Tutti i parametri sono [in] Se non diversamente specificato)|Valore restituito|  
+|Messaggio|Descrizione|[in] `wParam`|`lParam` (Tutti i parametri sono [in] Se non diversamente specificato)|Valore restituito|  
 |AFX_WM_ACCGETOBJECT|Non usato.|Non usato.|Non applicabile.|Non applicabile.|  
 |AFX_WM_ACCGETSTATE|Usato per il supporto di accessibilità. Inviare il messaggio a `CMFCPopupMenu` o `CMFCRibbonPanelMenu` per recuperare lo stato dell'elemento corrente.|Indice dell'elemento, che può essere un pulsante di menu o un separatore.|Non usato.|Lo stato dell'elemento. È -1 se l'indice non è valido, 0 se il pulsante di menu non dispone di nessun attributo speciale. In caso contrario è una combinazione dei flag seguenti:<br /><br /> TBBS_DISABLED: l'elemento è disabilitato<br /><br /> TBBS_CHECKED: l'elemento è selezionato<br /><br /> TBBS_BUTTON: l'elemento è un pulsante standard<br /><br /> TBBS_PRESSED: pulsante<br /><br /> TBBS_INDETERMINATE: stato non definito<br /><br /> TBBS_SEPARATOR - piuttosto che un pulsante di menu, il form dell'elemento una separazione tra altre voci di menu|  
 |AFX_WM_CHANGE_ACTIVE_TAB|Il framework invia il messaggio per il controllo barra di controllo ridimensionabile. Per elaborare questo messaggio per ricevere notifiche da `CMFCTabCtrl` oggetti quando un utente modifica una scheda attiva.|L'indice di una scheda.|Non usato.|Diverso da zero.|  
@@ -103,13 +98,13 @@ Questi messaggi vengono utilizzati in MFC.
 |AFX_WM_CHECKEMPTYMINIFRAME|Solo per uso interno.|Non applicabile.|Non applicabile.|Non applicabile.|  
 |AFX_WM_CREATETOOLBAR|Inviato da `CMFCToolBarsListPropertyPage` quando un utente crea una nuova barra degli strumenti durante il processo di personalizzazione. È possibile elaborare questo messaggio per creare un'istanza di un oggetto personalizzato derivato CMFCToolBar. Se si gestisce questo messaggio e crea una barra degli strumenti personalizzata, è possibile omettere la chiamata al gestore predefinito.|Non usato.|Un puntatore a una stringa che contiene il nome della barra degli strumenti.|Puntatore alla barra degli strumenti appena creato. NULL indica che la creazione della barra degli strumenti è stata annullata.|  
 |AFX_WM_CUSTOMIZEHELP|Inviato alla finestra cornice principale dalla finestra delle proprietà di personalizzazione `CMFCToolbarCustomize Dialog` quando l'utente preme il **Guida** pulsante o il tasto F1.|Specifica la pagina attiva della finestra delle proprietà di personalizzazione.|Un puntatore a un `CMFCToolbarCustomize Dialog` oggetto.|Zero.|  
-|AFX_WM_CUSTOMIZETOOLBAR|Il `CMFCToolbarCustomize Dialog` invia il messaggio per informare il frame padre che l'utente crea una nuova barra degli strumenti.|`TRUE`Quando viene avviata la personalizzazione, `FALSE` al termine della personalizzazione.|Non usato.|Zero.|  
+|AFX_WM_CUSTOMIZETOOLBAR|Il `CMFCToolbarCustomize Dialog` invia il messaggio per informare il frame padre che l'utente crea una nuova barra degli strumenti.|`TRUE` Quando viene avviata la personalizzazione, `FALSE` al termine della personalizzazione.|Non usato.|Zero.|  
 |AFX_WM_DELETETOOLBAR|Inviato alla finestra cornice principale quando l'utente sta per eliminare una barra degli strumenti nella modalità di personalizzazione.<br /><br /> Elaborare il messaggio per eseguire azioni aggiuntive quando un utente elimina una barra degli strumenti in modalità di personalizzazione. È inoltre necessario chiamare il gestore predefinito (`OnToolbarDelete`), che consente di eliminare la barra degli strumenti. Il gestore predefinito restituisce un valore che indica se è possibile eliminare la barra degli strumenti.|Non usato.|Puntatore a un `CMFCToolBar` oggetto da eliminare.|Diverso da zero se non è possibile eliminare una barra degli strumenti; in caso contrario 0.|  
-|AFX_WM_GETDOCUMENTCOLORS|`CMFCColorMenuButton`Invia il messaggio alla finestra cornice principale per recuperare i colori del documento.|Non usato.|[in, out] Puntatore a un `CList<COLORREF, COLORREF>` oggetto.|Zero.|  
+|AFX_WM_GETDOCUMENTCOLORS|`CMFCColorMenuButton` Invia il messaggio alla finestra cornice principale per recuperare i colori del documento.|Non usato.|[in, out] Puntatore a un `CList<COLORREF, COLORREF>` oggetto.|Zero.|  
 |AFX_WM_GETDRAGBOUNDS|Solo per uso interno.|Non applicabile.|Non applicabile.|Non applicabile.|  
-|AFX_WM_HIGHLIGHT_RIBBON_LIST_ITEM|Inviato alla finestra cornice principale quando un utente evidenzia una voce di elenco della barra multifunzione.|Indice dell'elemento evidenziato|Un puntatore a`CMFCBaseRibbonElement`|Non usato.|  
+|AFX_WM_HIGHLIGHT_RIBBON_LIST_ITEM|Inviato alla finestra cornice principale quando un utente evidenzia una voce di elenco della barra multifunzione.|Indice dell'elemento evidenziato|un puntatore a `CMFCBaseRibbonElement`|Non usato.|  
 |AFX_WM_ON_AFTER_SHELL_COMMAND|Inviato a un elemento padre di `CMFCShellListCtrl` o `CMFCShellTreeCtrl` controlla quando un utente termina l'esecuzione di un comando della shell.|L'ID di comando che l'utente ha eseguito|Non usato.|Se l'applicazione elabora il messaggio, deve restituire zero.|  
-|AFX_WM_ON_BEFORE_SHOW_RIBBON_ITEM_MENU|Il framework invia il messaggio al padre della barra multifunzione prima di visualizzare il menu a comparsa. È possibile elaborare questo messaggio e modificare i menu a comparsa in qualsiasi momento.|Non usato.|Un puntatore a`CMFCBaseRibbonElement`|Non usato.|  
+|AFX_WM_ON_BEFORE_SHOW_RIBBON_ITEM_MENU|Il framework invia il messaggio al padre della barra multifunzione prima di visualizzare il menu a comparsa. È possibile elaborare questo messaggio e modificare i menu a comparsa in qualsiasi momento.|Non usato.|un puntatore a `CMFCBaseRibbonElement`|Non usato.|  
 |AFX_WM_ON_CANCELTABMOVE|Solo per uso interno.|Non applicabile.|Non applicabile.||  
 |AFX_WM_ON_CHANGE_RIBBON_CATEGORY|Quando l'utente modifica la categoria di controllo della barra multifunzione attiva, il framework invia il messaggio per la cornice principale.|Non usato.|Un puntatore al `CMFCRibbonBar` la cui categoria è stata modificata.|Non usato.|  
 |AFX_WM_ON_CLOSEPOPUPWINDOW|Il framework invia il messaggio per informare il proprietario di `CMFCDesktopAlertWnd` che la finestra sta per essere chiuso.|Non usato.|Un puntatore a `CMFCDesktopAlertWnd` oggetto.|Non usato.|  
@@ -119,21 +114,21 @@ Questi messaggi vengono utilizzati in MFC.
 |AFX_WM_ON_MOVE_TAB|Quando si trascina una scheda in una nuova posizione, inviato per l'elemento padre di una finestra a schede.|Indice in base zero della scheda nella posizione originale.|[out] Indice in base zero della scheda nella nuova posizione.|Zero.|  
 |AFX_WM_ON_MOVETABCOMPLETE|Solo per uso interno.|Non applicabile.|Non applicabile.|Non applicabile.|  
 |AFX_WM_ON_MOVETOTABGROUP|Inviato alla finestra cornice principale quando si sposta una finestra figlio MDI da un gruppo di scheda a un altro.|Handle di finestra a schede (`CMFCTabCtrl`) da cui è stata rimossa la finestra figlio MDI.|[out] Handle di finestra a schede (`CMFCTabCtrl`) a cui è stata inserita la finestra figlio MDI.|Ignorato.|  
-|AFX_WM_ON_PRESS_CLOSE_BUTTON|Inviato a un elemento padre di `CDockablePane` quando utente fa clic il **Chiudi** pulsante con la didascalia della barra di controllo.|Non usato.|Un puntatore a un riquadro ancorato in cui l'utente ha selezionato il **Chiudi** pulsante.|`TRUE`Se un riquadro non può essere chiusa. in caso contrario FALSE.|  
+|AFX_WM_ON_PRESS_CLOSE_BUTTON|Inviato a un elemento padre di `CDockablePane` quando utente fa clic il **Chiudi** pulsante con la didascalia della barra di controllo.|Non usato.|Un puntatore a un riquadro ancorato in cui l'utente ha selezionato il **Chiudi** pulsante.|`TRUE` Se un riquadro non può essere chiusa; in caso contrario, FALSE.|  
 |AFX_WM_ON_RENAME_TAB|Inviato per l'elemento padre della finestra a schede dell'utente alla ridenominazione di una scheda modificabile.|Indice in base zero della scheda rinominata.|[out] Un puntatore a una stringa che contiene il nome della nuova scheda.|Diverso da zero se l'applicazione elabora il messaggio; il framework eliminerà la chiamata a `CMFCBaseTabCtrl::SetTabLabel`.  Se viene restituito zero, quindi `CMFCBaseTabCtrl::SetTabLabel` viene chiamato dal framework.|  
 |AFX_WM_ON_RIBBON_CUSTOMIZE|Inviato al frame padre quando si inizia la personalizzazione. Elaborare il messaggio se si desidera visualizzare la propria finestra di dialogo di personalizzazione.|Non usato.|Un puntatore per il controllo della barra multifunzione per essere personalizzati.|Diverso da zero se l'applicazione elabora il messaggio e visualizza una finestra di dialogo di personalizzazione. Se l'applicazione restituisce zero, il framework visualizzerà la finestra di dialogo di personalizzazione incorporate.|  
 |AFX_WM_ON_TABGROUPMOUSEMOVE|Solo per uso interno.|Non applicabile.|Non applicabile.|Non applicabile.|  
-|AFX_WM_POSTSETPREVIEWFRAME|Inviato notificare la cornice principale che l'utente ha modificato la modalità di anteprima di stampa|`TRUE`indica che è impostata la modalità di anteprima di stampa. `FALSE`indica che la modalità di anteprima di stampa è disabilitata.|Non usato.|Non usato.|  
+|AFX_WM_POSTSETPREVIEWFRAME|Inviato notificare la cornice principale che l'utente ha modificato la modalità di anteprima di stampa|`TRUE` indica che è impostata la modalità di anteprima di stampa. `FALSE` indica che la modalità anteprima di stampa è stata disattivato.|Non usato.|Non usato.|  
 |AFX_WM_PROPERTY_CHANGED|Inviato al proprietario del controllo griglia delle proprietà (`CMFCPropertyGridCtrl`) quando l'utente modifica il valore della proprietà selezionata.|L'ID di controllo dell'elenco di proprietà.|Un puntatore alla proprietà (`CMFCPropertyGridProperty`) modificata.|Non usato.|  
 |AFX_WM_RESETCONTEXTMENU|Inviato alla finestra cornice principale quando l'utente Reimposta il menu di scelta rapida durante la personalizzazione.|L'ID di risorsa di menu di scelta rapida.|Un puntatore al menu di scelta rapida di corrente, `CMFCPopupMenu`.|Non usato.|  
 |AFX_WM_RESETKEYBOARD|Quando l'utente Reimposta tutti i tasti di scelta rapida durante la personalizzazione, il framework invia il messaggio alla finestra cornice principale.|Non usato.|Non usato.|Non usato.|  
 |AFX_WM_RESETMENU|Il framework invia il messaggio al proprietario del menu (una finestra cornice) quando l'utente Reimposta un menu di frame dell'applicazione durante la personalizzazione|L'ID di risorsa di menu.|Non usato.|Non usato.|  
 |AFX_WM_RESETPROMPT|Il framework invia il messaggio quando l'utente Reimposta una barra degli strumenti nella barra degli strumenti finestra di dialogo Personalizza. Il gestore predefinito consente di visualizzare una finestra di messaggio che chiede se l'utente desidera reimpostare la barra degli strumenti.|Non usato.|Non usato.|Non usato.|  
 |AFX_WM_RESETTOOLBAR|Oggetto `CMFCToolBar` oggetto invia il messaggio quando una barra degli strumenti viene ripristinato lo stato originale, vale a dire caricati dalle risorse. Elaborare il messaggio a reinserire i pulsanti della barra degli strumenti cui classi sono derivate da `CMFCToolbarButton`. Per altre informazioni, vedere `CMFCToolbarComboBoxButton`.|L'ID di risorsa di una barra degli strumenti il cui stato è stato ripristinato.|Non usato.|Zero.|  
-|AFX_WM_SHOWREGULARMENU|`CMFCToolbarMenuButton`oggetto invia il messaggio al relativo proprietario quando l'utente sceglie un pulsante di menu regolari. Per elaborare questo messaggio ogni volta che si utilizza `CMFCToolbarMenuButton` per visualizzare un menu popup quando l'utente sceglie un pulsante.|L'ID di comando di un pulsante che invia il messaggio.|Coordinate dello schermo del cursore. La parola meno significativa specifica la coordinata x. La parola più significativa specifica la coordinata y.|Non usato.|  
+|AFX_WM_SHOWREGULARMENU|`CMFCToolbarMenuButton` oggetto invia il messaggio al relativo proprietario quando l'utente sceglie un pulsante di menu regolari. Per elaborare questo messaggio ogni volta che si utilizza `CMFCToolbarMenuButton` per visualizzare un menu popup quando l'utente sceglie un pulsante.|L'ID di comando di un pulsante che invia il messaggio.|Coordinate dello schermo del cursore. La parola meno significativa specifica la coordinata x. La parola più significativa specifica la coordinata y.|Non usato.|  
 |AFX_WM_TOOLBARMENU|Inviato alla finestra cornice principale quando l'utente rilascia il pulsante destro del mouse mentre il puntatore del mouse si trova nell'area non client di un riquadro o client.|Non usato.|Coordinate dello schermo del puntatore del mouse. La parola meno significativa specifica la coordinata x. La parola più significativa specifica la coordinata y.|Zero se l'applicazione elabora il messaggio; in caso contrario, diverso da zero.|  
 |AFX_WM_UPDATETOOLTIPS|Inviato a tutti i proprietari della descrizione comando per indicare che i controlli descrizione comando devono essere ricreati.|Il tipo di controllo che deve elaborare questo messaggio. Vedere la tabella più avanti in questo argomento per un elenco di valori possibili.|Non usato.|Non usato.|  
-|AFX_WM_WINDOW_HELP|`CMFCWindowsManagerDialog`Invia il messaggio per il frame padre quando l'utente fa clic il **Guida** pulsante o attivata la modalità della Guida facendo clic di **Guida** pulsante didascalia o il tasto F1.|Non usato.|Un puntatore all'istanza di `CMFCWindowsManagerDialog`.|Non usato.|  
+|AFX_WM_WINDOW_HELP|`CMFCWindowsManagerDialog` Invia il messaggio per il frame padre quando l'utente fa clic il **Guida** pulsante o entra in modalità della Guida facendo clic il **Guida** pulsante didascalia o il tasto F1.|Non usato.|Un puntatore all'istanza di `CMFCWindowsManagerDialog`.|Non usato.|  
   
  Nella tabella seguente vengono illustrati i valori per la parola meno significativa del `lParam` parametro del metodo AFX_WM_HSCROLL:  
   

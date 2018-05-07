@@ -1,12 +1,9 @@
 ---
 title: Classe CMFCRibbonLabel | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCRibbonLabel
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - CMFCRibbonLabel [MFC], CMFCRibbonLabel
 - CMFCRibbonLabel [MFC], SetACCData
 ms.assetid: 0346c891-83bf-4f20-b8a1-c84cf2aadced
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 32732c08542ff766c265fda93b8cf09ad04387ea
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fcbc552560325e844cf0812a3002088f829d6c60
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcribbonlabel-class"></a>Classe CMFCRibbonLabel
 Implementa un'etichetta di testo non selezionabile per una barra multifunzione.  
@@ -74,7 +69,7 @@ class CMFCRibbonLabel : public CMFCRibbonButton
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** afxRibbonLabel.h  
   
-##  <a name="cmfcribbonlabel"></a>CMFCRibbonLabel::CMFCRibbonLabel  
+##  <a name="cmfcribbonlabel"></a>  CMFCRibbonLabel::CMFCRibbonLabel  
  Costruisce e Inizializza un [CMFCRibbonLabel](../../mfc/reference/cmfcribbonlabel-class.md) oggetto che visualizza la stringa di testo specificato.  
   
 ```  
@@ -88,9 +83,9 @@ CMFCRibbonLabel(
  Testo da visualizzare nell'etichetta.  
   
  [in] `bIsMultiLine`  
- `TRUE`Per specificare che l'etichetta è un'etichetta su più righe; in caso contrario, `FALSE`.  
+ `TRUE` Per specificare che l'etichetta è un'etichetta su più righe; in caso contrario, `FALSE`.  
   
-##  <a name="setaccdata"></a>CMFCRibbonLabel::SetACCData  
+##  <a name="setaccdata"></a>  CMFCRibbonLabel::SetACCData  
  Determina i dati di accessibilità per l'elemento etichetta della barra multifunzione corrente.  
   
 ```  
@@ -107,7 +102,7 @@ virtual BOOL SetACCData(
  Un oggetto di tipo `CAccessibilityData` che viene popolata con i dati di accessibilità dell'etichetta della barra multifunzione corrente.  
   
 ### <a name="return-value"></a>Valore restituito  
- `TRUE`Se il `data` parametro è stato popolato con i dati di accessibilità dell'etichetta della barra multifunzione corrente; in caso contrario, `FALSE`.  
+ `TRUE` Se il `data` parametro è stato popolato con i dati di accessibilità dell'etichetta della barra multifunzione corrente; in caso contrario, `FALSE`.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Grafico delle gerarchie](../../mfc/hierarchy-chart.md)   

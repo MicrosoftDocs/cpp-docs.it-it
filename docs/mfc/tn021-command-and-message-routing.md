@@ -1,13 +1,10 @@
 ---
 title: 'Comando TN021: Routing e messaggi | Documenti Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.routing
 dev_langs:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - command routing [MFC], technical note TN021
 - Windows messages [MFC], routing
 ms.assetid: b5952c8b-123e-406c-a36d-a6ac7c6df307
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1854be249db91257228e6dab70fc7ff2f50664ce
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5a1061f4a7d4394cb84c26514795c406f78146df
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn021-command-and-message-routing"></a>TN021: routing di comandi e messaggi
 > [!NOTE]
@@ -87,9 +82,9 @@ ms.lasthandoff: 12/21/2017
 ## <a name="when-onupdatecommandui-is-called"></a>Quando viene chiamato ON_UPDATE_COMMAND_UI  
  Gestione dello stato abilitato selezionata di tutti un programma voci di menu costantemente può essere un problema onerosa. Una tecnica comune è attiva o selezionare le voci di menu solo quando l'utente seleziona la finestra POPUP. L'implementazione MFC 2.0 di **CFrameWnd** handle di **WM_INITMENUPOPUP** del messaggio e utilizza l'architettura di routing di comandi per determinare gli stati dei menu tramite **ON_UPDATE_COMMAND_ Interfaccia utente** gestori.  
   
- **CFrameWnd** gestisce inoltre il **WM_ENTERIDLE** messaggio per descrivere il menu corrente nel elemento della barra di stato (noto anche come il messaggio).  
+ **CFrameWnd** gestisce inoltre il **WM_ENTERIDLE** messaggio per descrivere il menu corrente elemento selezionato della barra di stato (noto anche come il messaggio).  
   
- Struttura di menu di un'applicazione, modificata da Visual C++, viene utilizzata per rappresentare i potenziali comandi disponibili in **WM_INITMENUPOPUP** ora. **ON_UPDATE_COMMAND_UI** gestori eventi possono modificare lo stato o il testo di un menu o per utilizzi avanzati (ad esempio, l'elenco di File o il menu a comparsa verbi OLE), in realtà modifica la struttura di menu prima il menu viene disegnato.  
+ Struttura di menu di un'applicazione, modificata da Visual C++, viene utilizzata per rappresentare i potenziali comandi disponibili in **WM_INITMENUPOPUP** ora. **ON_UPDATE_COMMAND_UI** gestori eventi possono modificare lo stato o il testo di un menu o per utilizzi avanzati (ad esempio l'elenco di File MRU o il menu a comparsa OLE verbi), in realtà modifica la struttura di menu prima il menu viene disegnato.  
   
  Lo stesso tipo di **ON_UPDATE_COMMAND_UI** elaborazione viene eseguita per le barre degli strumenti e altre barre di controllo, quando l'applicazione immette il ciclo inattivo. Vedere il *riferimenti alla libreria di classi* e [Nota tecnica 31](../mfc/tn031-control-bars.md) per ulteriori informazioni sulle barre di controllo.  
   
@@ -184,9 +179,9 @@ void CMyApp::OnUpdateNewChart(CCmdUI* pCmdUI)
   
 -   Tutti i messaggi di comando (la visualizzazione attiva ottiene accesso prima).  
   
-- **WM_HSCROLL** e **WM_VSCROLL** (vedere sotto) di barre di scorrimento di messaggi dall'elemento di pari livello.  
+- **WM_HSCROLL** e **WM_VSCROLL** messaggi dall'elemento di pari livello scorrere le barre (vedere sotto).  
   
-- **WM_ACTIVATE** (e **WM_MDIACTIVATE** per MDI) ottenere convertiti in chiamate alla funzione virtuale **CView::OnActivateView**.  
+- **WM_ACTIVATE** (e **WM_MDIACTIVATE** per MDI) ottenere trasformata in chiamate alla funzione virtuale **CView::OnActivateView**.  
   
 ## <a name="cmdiframewndcmdichildwnd-issues"></a>CMDIFrameWnd/CMDIChildWnd problemi  
  Entrambe le classi di finestra cornice MDI derivano da **CFrameWnd** e pertanto sono entrambe abilitate per lo stesso tipo di comandi (routing) e l'aggiornamento dell'interfaccia utente fornita **CFrameWnd**. In una tipica applicazione MDI, solo la finestra cornice principale (vale a dire il **CMDIFrameWnd** oggetto) contiene una barra dei menu e barra di stato e pertanto è l'origine principale dell'implementazione del routing di comandi.  
@@ -200,7 +195,7 @@ void CMyApp::OnUpdateNewChart(CCmdUI* pCmdUI)
   
  In una nota, sono disponibili due **CWnd** in cui gli stili barra di scorrimento specificati al momento della creazione di classi derivate vengono intercettate e non è state passate a Windows. Quando viene passato a una routine di creazione, **WS_HSCROLL** e **WS_VSCROLL** possono essere impostate in modo indipendente, ma dopo la creazione non può essere modificata. Naturalmente, è consigliabile non direttamente test o impostare il bit di stile WS_SCROLL della finestra che hanno creato.  
   
- Per **CMDIFrameWnd** gli stili barra di scorrimento viene passato a **crea** o **LoadFrame** vengono utilizzati per creare il MDICLIENT. Se si desidera che un'area MDICLIENT scorrevole (ad esempio il programma di gestione Windows) assicurarsi di impostare gli stili della barra di scorrimento entrambi (**WS_HSCROLL** &#124; **WS_VSCROLL**) per lo stile utilizzato per creare il **CMDIFrameWnd**.  
+ Per **CMDIFrameWnd** gli stili barra di scorrimento viene passato a **crea** o **LoadFrame** vengono utilizzati per creare il MDICLIENT. Se si desidera che un'area scorrevole MDICLIENT (come il programma di gestione Windows) assicurarsi di impostare gli stili delle barre di scorrimento entrambi (**WS_HSCROLL** &#124; **WS_VSCROLL**) per lo stile utilizzato per creare il **CMDIFrameWnd**.  
   
  Per **CSplitterWnd** si applicano gli stili barra di scorrimento per le barre di scorrimento condiviso speciali per le aree della barra di divisione. Per le finestre con separatore statico, in genere non si imposteranno uno stile della barra di scorrimento. Per le finestre con separatore dinamico, è in genere lo scorrimento della barra di uno stile è impostato per la direzione in cui verrà suddivisa, vale a dire **WS_HSCROLL** se è possibile suddividere le righe, **WS_VSCROLL** che sia possibile dividere le colonne.  
   

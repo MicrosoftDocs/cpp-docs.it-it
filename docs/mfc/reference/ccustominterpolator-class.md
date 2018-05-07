@@ -1,12 +1,9 @@
 ---
 title: Classe CCustomInterpolator | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CCustomInterpolator
@@ -45,17 +42,15 @@ helpviewer_keywords:
 - CCustomInterpolator [MFC], m_initialValue
 - CCustomInterpolator [MFC], m_initialVelocity
 ms.assetid: 28d85595-989a-40a3-b003-e0e38437a94d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 26763a16c4de59f33622ea904ea8aa132fe0d5f2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b093ff87d7f2c8c52b6745be4e2a31580fce0fce
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ccustominterpolator-class"></a>Classe CCustomInterpolator
 Implementa un interpolatore di base.  
@@ -107,7 +102,7 @@ class CCustomInterpolator;
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** afxanimationcontroller.h  
   
-##  <a name="ccustominterpolator"></a>CCustomInterpolator::CCustomInterpolator  
+##  <a name="ccustominterpolator"></a>  CCustomInterpolator::CCustomInterpolator  
  Costruisce un oggetto interpolatore personalizzato e imposta tutti i valori per impostazione predefinita è 0.  
   
 ```  
@@ -128,7 +123,7 @@ CCustomInterpolator(
 ### <a name="remarks"></a>Note  
  Utilizzare CCustomInterpolator:: Init per inizializzare la durata e il valore finale in un secondo momento nel codice.  
   
-##  <a name="getdependencies"></a>CCustomInterpolator::GetDependencies  
+##  <a name="getdependencies"></a>  CCustomInterpolator::GetDependencies  
  Ottiene le dipendenze dell'interpolatore.  
   
 ```  
@@ -151,7 +146,7 @@ virtual BOOL GetDependencies(
 ### <a name="return-value"></a>Valore restituito  
  Base implementazione restituisce sempre TRUE. Restituisce FALSE dall'implementazione sottoposta a override se si desidera avere esito negativo dell'evento.  
   
-##  <a name="getduration"></a>CCustomInterpolator::GetDuration  
+##  <a name="getduration"></a>  CCustomInterpolator::GetDuration  
  Ottiene la durata dell'interpolatore.  
   
 ```  
@@ -165,7 +160,7 @@ virtual BOOL GetDuration(UI_ANIMATION_SECONDS* duration);
 ### <a name="return-value"></a>Valore restituito  
  Base implementazione restituisce sempre TRUE. Restituisce FALSE dall'implementazione sottoposta a override se si desidera avere esito negativo dell'evento.  
   
-##  <a name="getfinalvalue"></a>CCustomInterpolator::GetFinalValue  
+##  <a name="getfinalvalue"></a>  CCustomInterpolator::GetFinalValue  
  Ottiene il valore finale a cui punta l'interpolatore.  
   
 ```  
@@ -179,7 +174,7 @@ virtual BOOL GetFinalValue(DOUBLE* value);
 ### <a name="return-value"></a>Valore restituito  
  Base implementazione restituisce sempre TRUE. Restituisce FALSE dall'implementazione sottoposta a override se si desidera avere esito negativo dell'evento.  
   
-##  <a name="init"></a>CCustomInterpolator:: Init  
+##  <a name="init"></a>  CCustomInterpolator:: Init  
  Inizializza durata e il valore finale.  
   
 ```  
@@ -195,7 +190,7 @@ void Init(
  `finalValue`  
  Il valore finale di una variabile alla fine della transizione.  
   
-##  <a name="interpolatevalue"></a>CCustomInterpolator::InterpolateValue  
+##  <a name="interpolatevalue"></a>  CCustomInterpolator::InterpolateValue  
  Esegue l'interpolazione il valore a un offset specificato.  
   
 ```  
@@ -211,7 +206,7 @@ virtual BOOL InterpolateValue(
 ### <a name="return-value"></a>Valore restituito  
  Base implementazione restituisce sempre TRUE. Restituisce FALSE dall'implementazione sottoposta a override se si desidera avere esito negativo dell'evento.  
   
-##  <a name="interpolatevelocity"></a>CCustomInterpolator::InterpolateVelocity  
+##  <a name="interpolatevelocity"></a>  CCustomInterpolator::InterpolateVelocity  
  Crea un'interpolazione la velocità a un offset specificato  
   
 ```  
@@ -227,49 +222,49 @@ virtual BOOL InterpolateVelocity(
 ### <a name="return-value"></a>Valore restituito  
  Base implementazione restituisce sempre TRUE. Restituisce FALSE dall'implementazione sottoposta a override se si desidera avere esito negativo dell'evento.  
   
-##  <a name="m_currentvalue"></a>CCustomInterpolator::m_currentValue  
+##  <a name="m_currentvalue"></a>  CCustomInterpolator::m_currentValue  
  Il valore interpolato.  
   
 ```  
 DOUBLE m_currentValue;  
 ```  
   
-##  <a name="m_currentvelocity"></a>CCustomInterpolator::m_currentVelocity  
+##  <a name="m_currentvelocity"></a>  CCustomInterpolator::m_currentVelocity  
  La velocità interpolata.  
   
 ```  
 DOUBLE m_currentVelocity;  
 ```  
   
-##  <a name="m_duration"></a>CCustomInterpolator::m_duration  
+##  <a name="m_duration"></a>  CCustomInterpolator::m_duration  
  La durata della transizione.  
   
 ```  
 UI_ANIMATION_SECONDS m_duration;  
 ```  
   
-##  <a name="m_finalvalue"></a>CCustomInterpolator::m_finalValue  
+##  <a name="m_finalvalue"></a>  CCustomInterpolator::m_finalValue  
  Il valore finale di una variabile alla fine della transizione.  
   
 ```  
 DOUBLE m_finalValue;  
 ```  
   
-##  <a name="m_initialvalue"></a>CCustomInterpolator::m_initialValue  
+##  <a name="m_initialvalue"></a>  CCustomInterpolator::m_initialValue  
  Il valore della variabile all'inizio della transizione.  
   
 ```  
 DOUBLE m_initialValue;  
 ```  
   
-##  <a name="m_initialvelocity"></a>CCustomInterpolator::m_initialVelocity  
+##  <a name="m_initialvelocity"></a>  CCustomInterpolator::m_initialVelocity  
  La velocità della variabile all'inizio della transizione.  
   
 ```  
 DOUBLE m_initialVelocity;  
 ```  
   
-##  <a name="setduration"></a>CCustomInterpolator::SetDuration  
+##  <a name="setduration"></a>  CCustomInterpolator::SetDuration  
  Imposta la durata dell'interpolatore.  
   
 ```  
@@ -283,7 +278,7 @@ virtual BOOL SetDuration(UI_ANIMATION_SECONDS duration);
 ### <a name="return-value"></a>Valore restituito  
  Base implementazione restituisce sempre TRUE. Restituisce FALSE dall'implementazione sottoposta a override se si desidera avere esito negativo dell'evento.  
   
-##  <a name="setinitialvalueandvelocity"></a>CCustomInterpolator::SetInitialValueAndVelocity  
+##  <a name="setinitialvalueandvelocity"></a>  CCustomInterpolator::SetInitialValueAndVelocity  
  Imposta il valore iniziale dell'interpolatore e velocità.  
   
 ```  

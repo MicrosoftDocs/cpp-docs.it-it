@@ -1,12 +1,9 @@
 ---
 title: Classe CMFCRibbonGalleryMenuButton | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCRibbonGalleryMenuButton
@@ -27,17 +24,15 @@ helpviewer_keywords:
 - CMFCRibbonGalleryMenuButton [MFC], HasButton
 - CMFCRibbonGalleryMenuButton [MFC], IsEmptyMenuAllowed
 ms.assetid: 4d459d9b-8b1a-4371-92f6-dc4ce6cc42c8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4a50dd19b15e9510bd5d1ca504209caecaf195fc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 27d2d4e95bffa3bd074ca1c6d4bf6d9c7e095a56
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcribbongallerymenubutton-class"></a>Classe CMFCRibbonGalleryMenuButton
 Implementa un pulsante di menu della barra multifunzione contenente raccolte della barra multifunzione.  
@@ -104,7 +99,7 @@ ASSERT_VALID (pExButton);
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** afxribbonpalettegallery. H  
   
-##  <a name="copyfrom"></a>CMFCRibbonGalleryMenuButton::CopyFrom  
+##  <a name="copyfrom"></a>  CMFCRibbonGalleryMenuButton::CopyFrom  
 
   
 ```  
@@ -116,7 +111,7 @@ virtual void CopyFrom(const CMFCToolBarButton& src);
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="cmfcribbongallerymenubutton"></a>CMFCRibbonGalleryMenuButton::CMFCRibbonGalleryMenuButton  
+##  <a name="cmfcribbongallerymenubutton"></a>  CMFCRibbonGalleryMenuButton::CMFCRibbonGalleryMenuButton  
  Costruisce e Inizializza un [CMFCRibbonGalleryMenuButton](../../mfc/reference/cmfcribbongallerymenubutton-class.md) oggetto.  
   
 ```  
@@ -162,7 +157,7 @@ CMFCRibbonGalleryMenuButton(
   
  [!code-cpp[NVC_MFC_MSOffice2007Demo#8](../../mfc/reference/codesnippet/cpp/cmfcribbongallerymenubutton-class_1.cpp)]  
   
-##  <a name="createpopupmenu"></a>CMFCRibbonGalleryMenuButton::CreatePopupMenu  
+##  <a name="createpopupmenu"></a>  CMFCRibbonGalleryMenuButton::CreatePopupMenu  
 
   
 ```  
@@ -173,7 +168,7 @@ virtual CMFCPopupMenu* CreatePopupMenu();
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="getpalette"></a>CMFCRibbonGalleryMenuButton::GetPalette  
+##  <a name="getpalette"></a>  CMFCRibbonGalleryMenuButton::GetPalette  
 
   
 ```  
@@ -184,7 +179,7 @@ CMFCRibbonGallery& GetPalette();
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="hasbutton"></a>CMFCRibbonGalleryMenuButton::HasButton  
+##  <a name="hasbutton"></a>  CMFCRibbonGalleryMenuButton::HasButton  
 
   
 ```  
@@ -195,7 +190,7 @@ virtual BOOL HasButton() const;
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="isemptymenuallowed"></a>CMFCRibbonGalleryMenuButton::IsEmptyMenuAllowed  
+##  <a name="isemptymenuallowed"></a>  CMFCRibbonGalleryMenuButton::IsEmptyMenuAllowed  
 
   
 ```  

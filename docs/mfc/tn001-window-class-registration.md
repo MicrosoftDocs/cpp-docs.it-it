@@ -1,13 +1,10 @@
 ---
 title: 'TN001: Registrazione delle classi | Documenti Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.registration
 dev_langs:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - WNDCLASS [MFC]
 - AfxRegisterClass function
 ms.assetid: 1abf678e-f220-4606-85e0-03df32f64c54
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f4560905660ea80524c3e26bf14a803a2bc74344
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 245ffcb66223813c7146c50c964cd97203ed8d53
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn001-window-class-registration"></a>TN001: registrazione delle classi di finestre
 Questa nota descrive le routine MFC che registrano speciale [WNDCLASS](http://msdn.microsoft.com/library/windows/desktop/ms633576)es necessari per Microsoft Windows. Specifica `WNDCLASS` vengono descritti gli attributi utilizzati da MFC e Windows.  
@@ -50,10 +45,10 @@ Questa nota descrive le routine MFC che registrano speciale [WNDCLASS](http://ms
   
 |Campo|Descrizione|  
 |-----------|-----------------|  
-|`lpfnWndProc`|procedura di finestra, deve essere un`AfxWndProc`|  
+|`lpfnWndProc`|procedura di finestra, deve essere un `AfxWndProc`|  
 |`cbClsExtra`|non usato (deve essere zero)|  
 |`cbWndExtra`|non usato (deve essere zero)|  
-|`hInstance`|automaticamente riempita con [AfxGetInstanceHandle](../mfc/reference/application-information-and-management.md#afxgetinstancehandle)|  
+|`hInstance`|vengono inserite automaticamente con [AfxGetInstanceHandle](../mfc/reference/application-information-and-management.md#afxgetinstancehandle)|  
 |`hIcon`|icona di finestre cornice, vedere di seguito|  
 |`hCursor`|cursore per quando il mouse è sulla finestra, vedere di seguito|  
 |`hbrBackground`|colore di sfondo, vedere di seguito|  
@@ -67,9 +62,9 @@ Questa nota descrive le routine MFC che registrano speciale [WNDCLASS](http://ms
   
  Due icone supportano le applicazioni MDI con tipi di documento singolo: un'icona per l'applicazione principale, l'icona per documento sotto forma di icona/MDIChild windows. Per più tipi di documento con icone diverse, è necessario registrare ulteriori `WNDCLASS`es oppure utilizzare il [CFrameWnd::LoadFrame](../mfc/reference/cframewnd-class.md#loadframe) (funzione).  
   
- `CFrameWnd::LoadFrame`Consente di registrare un `WNDCLASS` utilizzando l'ID icona specificare come il primo parametro e gli attributi standard seguenti:  
+ `CFrameWnd::LoadFrame` Consente di registrare un `WNDCLASS` utilizzando l'ID icona si specifica come il primo parametro e gli attributi standard seguenti:  
   
--   classe di stile: CS_DBLCLKS &#124; CS_HREDRAW &#124; CS_VREDRAW;  
+-   stile di classe: CS_DBLCLKS &#124; CS_HREDRAW &#124; CS_VREDRAW;  
   
 -   icona AFX_IDI_STD_FRAME  
   
@@ -106,12 +101,12 @@ pWnd->Create(strWndClass, ...);
 ...  
 ```  
   
- `AfxRegisterWndClass`genererà un [CResourceException](../mfc/reference/cresourceexception-class.md) se la classe della finestra non è stato possibile registrare (a causa di parametri non validi, o dalla memoria di Windows).  
+ `AfxRegisterWndClass` verrà generata una [CResourceException](../mfc/reference/cresourceexception-class.md) se la classe della finestra non è stato possibile registrare (a causa di parametri non validi, o dalla memoria di Windows).  
   
 ## <a name="the-registerclass-and-afxregisterclass-functions"></a>Le funzioni AfxRegisterClass RegisterClass  
  Se si desidera eseguire alcuna operazione più sofisticati rispetto a quanto `AfxRegisterWndClass` fornisce, è possibile chiamare l'API Windows `RegisterClass` o la funzione MFC `AfxRegisterClass`. Il `CWnd`, [CFrameWnd](../mfc/reference/cframewnd-class.md) e [CMDIChildWnd](../mfc/reference/cmdichildwnd-class.md) `Create` funzioni accettano un `lpszClassName` nome di stringa per la classe di finestra come primo parametro. È possibile utilizzare qualsiasi nome di classe di finestra registrati, indipendentemente dal metodo utilizzato per la registrazione.  
   
- È importante utilizzare `AfxRegisterClass` (o `AfxRegisterWndClass`) in una DLL in Win32. Win32 automaticamente annullare la registrazione di classi registrate per una DLL, pertanto è necessario in modo esplicito annullare la registrazione di classi quando la DLL viene terminata. Utilizzando `AfxRegisterClass` anziché `RegisterClass` questa operazione viene gestita automaticamente per l'utente. `AfxRegisterClass`gestisce un elenco di classi univoche registrate per la DLL e verrà automaticamente annullarne la registrazione quando termina la DLL. Quando si utilizza `RegisterClass` in una DLL, è necessario assicurarsi che tutte le classi vengono annullate quando la DLL viene terminata (nelle [DllMain](http://msdn.microsoft.com/library/windows/desktop/ms682583) funzione). In caso contrario, potrebbe causare `RegisterClass` errore imprevisto quando un'altra applicazione client tenta di utilizzare la DLL.  
+ È importante utilizzare `AfxRegisterClass` (o `AfxRegisterWndClass`) in una DLL in Win32. Win32 automaticamente annullare la registrazione di classi registrate per una DLL, pertanto è necessario in modo esplicito annullare la registrazione di classi quando la DLL viene terminata. Utilizzando `AfxRegisterClass` anziché `RegisterClass` questa operazione viene gestita automaticamente per l'utente. `AfxRegisterClass` gestisce un elenco di classi univoche registrate per la DLL e verrà automaticamente annullarne la registrazione quando termina la DLL. Quando si utilizza `RegisterClass` in una DLL, è necessario assicurarsi che tutte le classi vengono annullate quando la DLL viene terminata (nelle [DllMain](http://msdn.microsoft.com/library/windows/desktop/ms682583) funzione). In caso contrario, potrebbe causare `RegisterClass` errore imprevisto quando un'altra applicazione client tenta di utilizzare la DLL.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Note tecniche per numero](../mfc/technical-notes-by-number.md)   

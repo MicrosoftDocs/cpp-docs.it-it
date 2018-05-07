@@ -1,12 +1,9 @@
 ---
 title: CMDIChildWnd (classe) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMDIChildWnd
@@ -31,17 +28,15 @@ helpviewer_keywords:
 - CMDIChildWnd [MFC], MDIRestore
 - CMDIChildWnd [MFC], SetHandles
 ms.assetid: 6d07f5d4-9a3e-4723-9fa5-e65bb669fdd5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: deca38c7c1fdaf9523e4186b801e5ed25042e46e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9e27551c04be5d6e985c6e7829f11f94d0aafeba
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmdichildwnd-class"></a>CMDIChildWnd (classe)
 Fornisce la funzionalità di una finestra figlio con interfaccia a documenti multipli (MDI) di Windows, insieme ai membri per gestire la finestra.  
@@ -89,7 +84,7 @@ class CMDIChildWnd : public CFrameWnd
   
  Utilizzare il **crea** funzione membro per passare i parametri di creazione del frame immediati come argomenti.  
   
- `LoadFrame`richiede meno argomenti di **crea**e recupera la maggior parte dei relativi valori predefiniti da risorse, tra cui didascalia del frame, icona, tabella di tasti di scelta rapida e menu. Deve essere accessibile da `LoadFrame`, tutte queste risorse devono avere lo stesso ID di risorsa (ad esempio, **IDR_MAINFRAME**).  
+ `LoadFrame` richiede argomenti minore rispetto a **crea**e recupera la maggior parte dei relativi valori predefiniti da risorse, tra cui didascalia del frame, icona, tabella di tasti di scelta rapida e menu. Deve essere accessibile da `LoadFrame`, tutte queste risorse devono avere lo stesso ID di risorsa (ad esempio, **IDR_MAINFRAME**).  
   
  Quando un `CMDIChildWnd` oggetto contiene documenti e visualizzazioni, vengono creati indirettamente dal framework anziché direttamente dal programmatore. Il `CDocTemplate` oggetto Orchestra la creazione del frame, la creazione delle viste che lo contiene e la connessione delle visualizzazioni per il documento appropriato. I parametri del `CDocTemplate` costruttore specificare il `CRuntimeClass` delle tre classi coinvolti (documenti, frame e visualizzazione). Oggetto `CRuntimeClass` oggetto viene usato dal framework per creare in modo dinamico i frame di nuovo quando l'utente specificato (ad esempio, usando il comando File nuovo o il comando nuova finestra di MDI).  
   
@@ -119,7 +114,7 @@ class CMDIChildWnd : public CFrameWnd
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** afxwin.h  
   
-##  <a name="cmdichildwnd"></a>CMDIChildWnd::CMDIChildWnd  
+##  <a name="cmdichildwnd"></a>  CMDIChildWnd::CMDIChildWnd  
  Chiamata per costruire un `CMDIChildWnd` oggetto.  
   
 ```  
@@ -132,7 +127,7 @@ CMDIChildWnd();
 ### <a name="example"></a>Esempio  
   Per vedere l'esempio [CMDIChildWnd::Create](#create).  
   
-##  <a name="create"></a>CMDIChildWnd::Create  
+##  <a name="create"></a>  CMDIChildWnd::Create  
  Chiamare questa funzione membro per creare una finestra figlio MDI di Windows e associarlo al `CMDIChildWnd` oggetto.  
   
 ```  
@@ -184,7 +179,7 @@ virtual BOOL Create(
   
  [!code-cpp[NVC_MFCWindowing#9](../../mfc/reference/codesnippet/cpp/cmdichildwnd-class_3.cpp)]  
   
-##  <a name="getmdiframe"></a>CMDIChildWnd::GetMDIFrame  
+##  <a name="getmdiframe"></a>  CMDIChildWnd::GetMDIFrame  
  Chiamare questa funzione per restituire il frame padre MDI.  
   
 ```  
@@ -200,7 +195,7 @@ CMDIFrameWnd* GetMDIFrame();
 ### <a name="example"></a>Esempio  
   Per vedere l'esempio [CMDIFrameWnd::MDISetMenu](../../mfc/reference/cmdiframewnd-class.md#mdisetmenu).  
   
-##  <a name="mdiactivate"></a>CMDIChildWnd::MDIActivate  
+##  <a name="mdiactivate"></a>  CMDIChildWnd::MDIActivate  
  Chiamare questa funzione membro per attivare una finestra figlio MDI indipendentemente dalla finestra cornice MDI.  
   
 ```  
@@ -213,7 +208,7 @@ void MDIActivate();
 ### <a name="example"></a>Esempio  
   Per vedere l'esempio [CMDIFrameWnd::GetWindowMenuPopup](../../mfc/reference/cmdiframewnd-class.md#getwindowmenupopup).  
   
-##  <a name="mdidestroy"></a>CMDIChildWnd::MDIDestroy  
+##  <a name="mdidestroy"></a>  CMDIChildWnd::MDIDestroy  
  Chiamare questa funzione membro per eliminare una finestra figlio MDI.  
   
 ```  
@@ -226,7 +221,7 @@ void MDIDestroy();
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFCWindowing#10](../../mfc/reference/codesnippet/cpp/cmdichildwnd-class_4.cpp)]  
   
-##  <a name="mdimaximize"></a>CMDIChildWnd::MDIMaximize  
+##  <a name="mdimaximize"></a>  CMDIChildWnd::MDIMaximize  
  Chiamare questa funzione membro per ottimizzare una finestra figlio MDI.  
   
 ```  
@@ -239,7 +234,7 @@ void MDIMaximize();
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFCWindowing#11](../../mfc/reference/codesnippet/cpp/cmdichildwnd-class_5.cpp)]  
   
-##  <a name="mdirestore"></a>CMDIChildWnd::MDIRestore  
+##  <a name="mdirestore"></a>  CMDIChildWnd::MDIRestore  
  Chiamare questa funzione membro per il ripristino di una finestra figlio MDI dalle dimensioni ingrandita o ridotta a icona.  
   
 ```  
@@ -249,7 +244,7 @@ void MDIRestore();
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFCWindowing#12](../../mfc/reference/codesnippet/cpp/cmdichildwnd-class_6.cpp)]  
   
-##  <a name="sethandles"></a>CMDIChildWnd::SetHandles  
+##  <a name="sethandles"></a>  CMDIChildWnd::SetHandles  
  Imposta l'handle per le risorse di menu e tasti di scelta rapida.  
   
 ```  

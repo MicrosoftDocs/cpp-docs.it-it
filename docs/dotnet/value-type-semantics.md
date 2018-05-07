@@ -1,13 +1,10 @@
 ---
 title: La semantica dei tipi di valore | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,18 +15,16 @@ helpviewer_keywords:
 - pin_ptr keyword [C++]
 - __pin keyword
 ms.assetid: 7f065589-ad25-4850-baf1-985142e35e52
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 21a7d6bcba2fca3fddd6f5e234663d6791398f5d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 44662f2ad8e79712b4aab17e2784a72e01ec4116
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="value-type-semantics"></a>Semantica dei tipi di valore
 La semantica dei tipi di valore è cambiate rispetto alle estensioni gestite per C++ a Visual C++.  
@@ -51,7 +46,7 @@ __box V* pvbx = 0; // Form (4) must be local
 ```  
   
 ## <a name="invoking-inherited-virtual-methods"></a>Richiamo di metodi virtuali ereditati  
- `Form (1)`è l'oggetto valore canonico e si è ragionevolmente compresi appieno, tranne quando si tenta di richiamare un metodo virtuale ereditato, ad esempio `ToString()`. Ad esempio:  
+ `Form (1)` è l'oggetto valore canonico e si è ragionevolmente compresi appieno, tranne quando si tenta di richiamare un metodo virtuale ereditato, ad esempio `ToString()`. Ad esempio:  
   
 ```  
 v.ToString(); // error!  
@@ -91,7 +86,7 @@ v.ToString(); // new syntax
  Si desidera eseguire il wrapping di una classe nativa in un tipo di valore anziché un tipo di riferimento per evitare un'allocazione di heap doppie: nell'heap nativo per il tipo nativo e l'heap di Common Language Runtime per il wrapper gestito. Il wrapping di una classe nativa all'interno di un tipo di valore consente di evitare l'heap gestito, ma non consente di automatizzare il recupero della memoria heap nativo. Tipi di riferimento sono l'unico tipo gestito all'interno del quale eseguire il wrapping delle classi native non semplice.  
   
 ## <a name="interior-pointers"></a>Puntatori interni  
- `Form (2)`e `Form (3)` possono fare riferimento a quasi tutti gli oggetti (ovvero, qualsiasi elemento gestito o nativo). In tal caso, ad esempio, tutte le seguenti opzioni sono consentite nelle estensioni gestite:  
+ `Form (2)` e `Form (3)` possono fare riferimento a quasi tutti gli oggetti (vale a dire, qualsiasi elemento gestito o nativo). In tal caso, ad esempio, tutte le seguenti opzioni sono consentite nelle estensioni gestite:  
   
 ```  
 __value struct V { int i; };  
@@ -126,7 +121,7 @@ V *pv = 0;
 interior_ptr<V> pvgc = nullptr;   
 ```  
   
- `Form (2)`e `Form (3)` delle estensioni gestite eseguire il mapping in `interior_ptr<V>`. `Form (4)`è un handle di rilevamento. Indirizza l'intero oggetto sottoposto a boxing all'interno dell'heap gestito. Viene convertito nella nuova sintassi in un `V^`,  
+ `Form (2)` e `Form (3)` delle estensioni gestite eseguire il mapping in `interior_ptr<V>`. `Form (4)` è un handle di rilevamento. Indirizza l'intero oggetto sottoposto a boxing all'interno dell'heap gestito. Viene convertito nella nuova sintassi in un `V^`,  
   
 ```  
 V^ pvbx = nullptr; // __box V* pvbx = 0;    

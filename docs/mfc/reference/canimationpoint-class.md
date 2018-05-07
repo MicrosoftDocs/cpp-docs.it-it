@@ -1,12 +1,9 @@
 ---
 title: Classe CAnimationPoint | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CAnimationPoint
@@ -35,17 +32,15 @@ helpviewer_keywords:
 - CAnimationPoint [MFC], m_xValue
 - CAnimationPoint [MFC], m_yValue
 ms.assetid: 5dc4d46f-e695-4681-b15c-544b78b3e317
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8ab685c223c4a86c35ba0feb578d93f58844734b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f7b81c49ce96fd026cd1974e505ac50dec131611
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="canimationpoint-class"></a>Classe CAnimationPoint
 Implementa la funzionalità di un punto le cui coordinate possono essere animate.  
@@ -108,7 +103,7 @@ class CAnimationPoint : public CAnimationBaseObject;
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** afxanimationcontroller.h  
   
-##  <a name="addtransition"></a>CAnimationPoint::AddTransition  
+##  <a name="addtransition"></a>  CAnimationPoint::AddTransition  
  Aggiunge le transizioni per X e Y coordinate.  
   
 ```  
@@ -127,7 +122,7 @@ void AddTransition(
 ### <a name="remarks"></a>Note  
  Chiamare questa funzione per aggiungere le transizioni specificate all'elenco interno di transizioni da applicare alle variabili di animazione per X e Y coordinate. Quando si aggiungono le transizioni, non vengono applicate immediatamente e archiviati in un elenco interno. Le transizioni vengono applicate (aggiunta di uno storyboard per un particolare valore) quando si chiama CAnimationController:: AnimateGroup. Se non è necessario applicare una transizione a uno di coordinate, è possibile passare NULL.  
   
-##  <a name="canimationpoint"></a>CAnimationPoint::CAnimationPoint  
+##  <a name="canimationpoint"></a>  CAnimationPoint::CAnimationPoint  
  Costruisce un oggetto CAnimationPoint.  
   
 ```  
@@ -157,7 +152,7 @@ CAnimationPoint(
 ### <a name="remarks"></a>Note  
  Costruisce un oggetto CAnimationPoint con le proprietà predefinite: le coordinate del punto predefinito, ID di gruppo e ID di oggetto sono impostati su 0.  
   
-##  <a name="getanimationvariablelist"></a>CAnimationPoint::GetAnimationVariableList  
+##  <a name="getanimationvariablelist"></a>  CAnimationPoint::GetAnimationVariableList  
  Inserisce le variabili dell'animazione incapsulata in un elenco.  
   
 ```  
@@ -168,7 +163,7 @@ virtual void GetAnimationVariableList(CList<CAnimationVariable*, CAnimationVaria
  `lst`  
  Quando la funzione viene restituito, contiene i puntatori a due oggetti CAnimationVariable che rappresentano le coordinate X e Y.  
   
-##  <a name="getdefaultvalue"></a>CAnimationPoint::GetDefaultValue  
+##  <a name="getdefaultvalue"></a>  CAnimationPoint::GetDefaultValue  
  Restituisce i valori predefiniti per X e Y coordinate.  
   
 ```  
@@ -181,7 +176,7 @@ CPoint GetDefaultValue();
 ### <a name="remarks"></a>Note  
  Chiamare questa funzione per recuperare il valore predefinito, che è stato impostato in precedenza dal costruttore o SetDefaultValue.  
   
-##  <a name="getvalue"></a>CAnimationPoint::GetValue  
+##  <a name="getvalue"></a>  CAnimationPoint::GetValue  
  Restituisce il valore corrente.  
   
 ```  
@@ -198,7 +193,7 @@ BOOL GetValue(CPoint& ptValue);
 ### <a name="remarks"></a>Note  
  Chiamare questa funzione per recuperare il valore corrente del punto di animazione. Se gli oggetti di questo metodo ha esito negativo o COM sottostanti per X e Y coordinate non è state inizializzate, il valore predefinito, che è stata precedentemente impostato nel costruttore o da SetDefaultValue ptValue.  
   
-##  <a name="getx"></a>CAnimationPoint::GetX  
+##  <a name="getx"></a>  CAnimationPoint::GetX  
  Fornisce l'accesso a CAnimationVariable per la coordinata X.  
   
 ```  
@@ -211,7 +206,7 @@ CAnimationVariable& GetX();
 ### <a name="remarks"></a>Note  
  È possibile chiamare questo metodo per ottenere accesso diretto alla CAnimationVariable che rappresenta X coordinate.  
   
-##  <a name="gety"></a>CAnimationPoint::GetY  
+##  <a name="gety"></a>  CAnimationPoint::GetY  
  Fornisce l'accesso a CAnimationVariable per la coordinata Y.  
   
 ```  
@@ -224,21 +219,21 @@ CAnimationVariable& GetY();
 ### <a name="remarks"></a>Note  
  È possibile chiamare questo metodo per ottenere accesso diretto alla variabile CAnimationVariable che rappresenta la coordinata Y.  
   
-##  <a name="m_xvalue"></a>CAnimationPoint::m_xValue  
+##  <a name="m_xvalue"></a>  CAnimationPoint::m_xValue  
  La variabile di animazione incapsulata che rappresenta X coordinate del punto di animazione.  
   
 ```  
 CAnimationVariable m_xValue;  
 ```  
   
-##  <a name="m_yvalue"></a>CAnimationPoint::m_yValue  
+##  <a name="m_yvalue"></a>  CAnimationPoint::m_yValue  
  La variabile di animazione incapsulata che rappresenta la coordinata Y del punto di animazione.  
   
 ```  
 CAnimationVariable m_yValue;  
 ```  
   
-##  <a name="operator_cpoint"></a>CPoint CAnimationPoint::operator  
+##  <a name="operator_cpoint"></a>  CPoint CAnimationPoint::operator  
  Converte un CAnimationPoint un CPoint.  
   
 ```  
@@ -251,7 +246,7 @@ operator CPoint();
 ### <a name="remarks"></a>Note  
  Questa funzione chiama internamente GetValue. Se GetValue per qualche motivo non riesce, il punto restituito conterrà i valori predefiniti per X e Y coordinate.  
   
-##  <a name="operator_eq"></a>CAnimationPoint::operator =  
+##  <a name="operator_eq"></a>  CAnimationPoint::operator =  
  Assegna ptSrc a CAnimationPoint.  
   
 ```  
@@ -265,7 +260,7 @@ void operator=(const CPoint& ptSrc);
 ### <a name="remarks"></a>Note  
  Assegna ptSrc a CAnimationPoint. È consigliabile per eseguire che prima dell'inizio dell'animazione perché questo operatore chiama SetDefaultValue, il componente COM sottostante che consente di ricreare oggetti per le coordinate X e Y se sono stati creati. Se si è scelto di questo oggetto di animazione agli eventi (ValueChanged o IntegerValueChanged), è necessario abilitare nuovamente questi eventi.  
   
-##  <a name="setdefaultvalue"></a>CAnimationPoint::SetDefaultValue  
+##  <a name="setdefaultvalue"></a>  CAnimationPoint::SetDefaultValue  
  Imposta il valore predefinito.  
   
 ```  

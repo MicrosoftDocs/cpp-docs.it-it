@@ -1,12 +1,9 @@
 ---
 title: Classe CMFCRibbonSeparator | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCRibbonSeparator
@@ -31,17 +28,15 @@ helpviewer_keywords:
 - CMFCRibbonSeparator [MFC], OnDraw
 - CMFCRibbonSeparator [MFC], OnDrawOnList
 ms.assetid: bedb1a53-cb07-4c3c-be12-698c5409e7cf
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 36f05d89388d8722fab7853dc3c1e5bcb4d9a2f1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b1c4c3b286f020d8d409b344c5d8c05ebc200425
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcribbonseparator-class"></a>Classe CMFCRibbonSeparator
 Implementa il separatore della barra multifunzione.  
@@ -107,7 +102,7 @@ Chiamare [CMFCRibbonPanel::AddSeparator](../../mfc/reference/cmfcribbonpanel-cla
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** afxbaseribbonelement.h  
   
-##  <a name="addtolistbox"></a>CMFCRibbonSeparator::AddToListBox  
+##  <a name="addtolistbox"></a>  CMFCRibbonSeparator::AddToListBox  
  Aggiunge un separatore di **comandi** nell'elenco il **Personalizza** la finestra di dialogo.  
   
 ```  
@@ -126,7 +121,7 @@ virtual int AddToListBox(
 ### <a name="return-value"></a>Valore restituito  
  Indice in base zero per la stringa nella casella di riepilogo specificata da `pWndListBox`.  
   
-##  <a name="cmfcribbonseparator"></a>CMFCRibbonSeparator::CMFCRibbonSeparator  
+##  <a name="cmfcribbonseparator"></a>  CMFCRibbonSeparator::CMFCRibbonSeparator  
  Costruisce un oggetto `CMFCRibbonSeparator`.  
   
 ```  
@@ -145,7 +140,7 @@ CMFCRibbonSeparator(BOOL bIsHoriz = FALSE);
   
  [!code-cpp[NVC_MFC_RibbonApp#19](../../mfc/reference/codesnippet/cpp/cmfcribbonseparator-class_1.cpp)]  
   
-##  <a name="copyfrom"></a>CMFCRibbonSeparator::CopyFrom  
+##  <a name="copyfrom"></a>  CMFCRibbonSeparator::CopyFrom  
  Un metodo di copia che imposta il membro di un separatore variabili da un altro oggetto.  
   
 ```  
@@ -156,7 +151,7 @@ virtual void CopyFrom(const CMFCRibbonBaseElement& src);
  [in] `Src`  
  Elemento della barra multifunzione di origine da copiare.  
   
-##  <a name="getregularsize"></a>CMFCRibbonSeparator::GetRegularSize  
+##  <a name="getregularsize"></a>  CMFCRibbonSeparator::GetRegularSize  
  Restituisce le dimensioni di un separatore.  
   
 ```  
@@ -170,7 +165,7 @@ virtual CSize GetRegularSize(CDC* pDC);
 ### <a name="return-value"></a>Valore restituito  
  Le dimensioni del separatore nel contesto di dispositivo specificato.  
   
-##  <a name="isseparator"></a>CMFCRibbonSeparator::IsSeparator  
+##  <a name="isseparator"></a>  CMFCRibbonSeparator::IsSeparator  
  Indica se questo è un separatore.  
   
 ```  
@@ -180,7 +175,7 @@ virtual BOOL IsSeparator() const;
 ### <a name="return-value"></a>Valore restituito  
  Sempre `TRUE` per questa classe.  
   
-##  <a name="istabstop"></a>CMFCRibbonSeparator::IsTabStop  
+##  <a name="istabstop"></a>  CMFCRibbonSeparator::IsTabStop  
  Indica se si tratta di una tabulazione.  
   
 ```  
@@ -193,7 +188,7 @@ virtual BOOL IsTabStop() const;
 ### <a name="remarks"></a>Note  
  Separatore della barra multifunzione non è una tabulazione.  
   
-##  <a name="ondraw"></a>CMFCRibbonSeparator::OnDraw  
+##  <a name="ondraw"></a>  CMFCRibbonSeparator::OnDraw  
  Chiamato dal sistema sul quale disegnare il separatore della barra multifunzione o la barra di accesso rapido.  
   
 ```  
@@ -204,7 +199,7 @@ virtual void OnDraw(CDC* pDC);
  [in] `pDC`  
  Puntatore a un contesto di dispositivo.  
   
-##  <a name="ondrawonlist"></a>CMFCRibbonSeparator::OnDrawOnList  
+##  <a name="ondrawonlist"></a>  CMFCRibbonSeparator::OnDrawOnList  
  Chiamato dal sistema sul quale disegnare il separatore di **comandi** elenco.  
   
 ```  

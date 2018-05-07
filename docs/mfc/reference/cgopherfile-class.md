@@ -1,12 +1,9 @@
 ---
 title: CGopherFile (classe) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CGopherFile
@@ -17,17 +14,15 @@ dev_langs:
 helpviewer_keywords:
 - CGopherFile [MFC], CGopherFile
 ms.assetid: 3ca9898f-8cdb-4495-bbde-46d40100feda
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ce90eb2baf4ce8f6ba0136a9efd503086b686aa6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 98fa4b2a489b8abb3951719dc74e618a054a4025
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cgopherfile-class"></a>CGopherFile (classe)
 Fornisce la funzionalità per individuare e leggere file in un server gopher.  
@@ -68,7 +63,7 @@ class CGopherFile : public CInternetFile
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** afxinet. h  
   
-##  <a name="cgopherfile"></a>CGopherFile::CGopherFile  
+##  <a name="cgopherfile"></a>  CGopherFile::CGopherFile  
  Questa funzione membro viene chiamata per costruire un `CGopherFile` oggetto.  
   
 ```  

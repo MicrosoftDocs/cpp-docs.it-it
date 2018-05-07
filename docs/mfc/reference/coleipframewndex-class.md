@@ -1,12 +1,9 @@
 ---
 title: Classe COleIPFrameWndEx | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - COleIPFrameWndEx
@@ -103,17 +100,15 @@ helpviewer_keywords:
 - COleIPFrameWndEx [MFC], WinHelpA
 - COleIPFrameWndEx [MFC], InitUserToobars
 ms.assetid: ebff1560-a1eb-4854-af00-95d4a192bd55
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 44004262d9c009ee295404dd5c8781f795eb7bc2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 71610035d029c4d8f5ca403c52d9eddd575e3a8b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="coleipframewndex-class"></a>Classe COleIPFrameWndEx
 La classe `COleIPFrameWndEx` implementa un contenitore OLE che supporta MFC. È necessario derivare la classe della finestra cornice sul posto per l'applicazione dalla classe `COleIPFrameWndEx` , anziché dalla classe [COleIPFrameWnd](../../mfc/reference/coleipframewnd-class.md). 
@@ -202,7 +197,7 @@ class COleIPFrameWndEx : public COleIPFrameWnd
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** afxoleipframewndex.h  
   
-##  <a name="adddocksite"></a>COleIPFrameWndEx::AddDockSite  
+##  <a name="adddocksite"></a>  COleIPFrameWndEx::AddDockSite  
 
   
 ```  
@@ -211,7 +206,7 @@ void AddDockSite();
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="addpane"></a>COleIPFrameWndEx::AddPane  
+##  <a name="addpane"></a>  COleIPFrameWndEx::AddPane  
 
   
 ```  
@@ -228,7 +223,7 @@ BOOL AddPane(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="adjustdockinglayout"></a>COleIPFrameWndEx::AdjustDockingLayout  
+##  <a name="adjustdockinglayout"></a>  COleIPFrameWndEx::AdjustDockingLayout  
 
   
 ```  
@@ -240,7 +235,7 @@ virtual void AdjustDockingLayout(HDWP hdwp = NULL);
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="dockpane"></a>COleIPFrameWndEx::DockPane  
+##  <a name="dockpane"></a>  COleIPFrameWndEx::DockPane  
 
   
 ```  
@@ -257,7 +252,7 @@ void DockPane(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="dockpaneleftof"></a>COleIPFrameWndEx::DockPaneLeftOf  
+##  <a name="dockpaneleftof"></a>  COleIPFrameWndEx::DockPaneLeftOf  
  Ancora un riquadro a sinistra di un altro riquadro.  
   
 ```  
@@ -279,7 +274,7 @@ BOOL DockPaneLeftOf(
 ### <a name="remarks"></a>Note  
  Chiamare questo metodo per ancorare diversi oggetti riquadro in un ordine predefinito. Questo metodo ancora il riquadro specificato da `pBar` a sinistra del riquadro specificato da `pLeftOf`.  
   
-##  <a name="enableautohidepanes"></a>COleIPFrameWndEx::EnableAutoHidePanes  
+##  <a name="enableautohidepanes"></a>  COleIPFrameWndEx::EnableAutoHidePanes  
 
   
 ```  
@@ -293,7 +288,7 @@ BOOL EnableAutoHidePanes(DWORD dwDockStyle);
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="enabledocking"></a>COleIPFrameWndEx::EnableDocking  
+##  <a name="enabledocking"></a>  COleIPFrameWndEx::EnableDocking  
 
   
 ```  
@@ -307,7 +302,7 @@ BOOL EnableDocking(DWORD dwDockStyle);
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="enablepanemenu"></a>COleIPFrameWndEx::EnablePaneMenu  
+##  <a name="enablepanemenu"></a>  COleIPFrameWndEx::EnablePaneMenu  
 
   
 ```  
@@ -330,7 +325,7 @@ void EnablePaneMenu(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="getactivepopup"></a>COleIPFrameWndEx::GetActivePopup  
+##  <a name="getactivepopup"></a>  COleIPFrameWndEx::GetActivePopup  
  Restituisce un puntatore al menu di scelta rapida attualmente visualizzato.  
   
 ```  
@@ -343,7 +338,7 @@ CMFCPopupMenu* GetActivePopup() const;
 ### <a name="remarks"></a>Note  
  Utilizzare questo metodo per ottenere un puntatore per il [CMFCPopupMenu classe](../../mfc/reference/cmfcpopupmenu-class.md) oggetto attualmente visualizzato.  
   
-##  <a name="getcontainerframewindow"></a>COleIPFrameWndEx::GetContainerFrameWindow  
+##  <a name="getcontainerframewindow"></a>  COleIPFrameWndEx::GetContainerFrameWindow  
 
   
 ```  
@@ -354,7 +349,7 @@ COleCntrFrameWndEx* GetContainerFrameWindow();
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="getdefaultresid"></a>COleIPFrameWndEx::GetDefaultResId  
+##  <a name="getdefaultresid"></a>  COleIPFrameWndEx::GetDefaultResId  
  Restituisce l'ID di risorsa di menu che è stato specificato quando la finestra cornice caricato il menu.  
   
 ```  
@@ -367,7 +362,7 @@ UINT GetDefaultResId() const;
 ### <a name="remarks"></a>Note  
  Chiamata di questa funzione per recuperare l'ID di risorsa che è stato specificato quando la finestra cornice caricato la risorsa di menu chiamando `COleIPFrameWndEx::LoadFrame`.  
   
-##  <a name="getdockframe"></a>COleIPFrameWndEx::GetDockFrame  
+##  <a name="getdockframe"></a>  COleIPFrameWndEx::GetDockFrame  
 
   
 ```  
@@ -378,7 +373,7 @@ CFrameWnd* GetDockFrame();
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="getdockingmanager"></a>COleIPFrameWndEx::GetDockingManager  
+##  <a name="getdockingmanager"></a>  COleIPFrameWndEx::GetDockingManager  
 
   
 ```  
@@ -389,7 +384,7 @@ CDockingManager* GetDockingManager();
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="getmainframe"></a>COleIPFrameWndEx::GetMainFrame  
+##  <a name="getmainframe"></a>  COleIPFrameWndEx::GetMainFrame  
 
   
 ```  
@@ -400,7 +395,7 @@ CFrameWnd* GetMainFrame();
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="getmenubar"></a>COleIPFrameWndEx::GetMenuBar  
+##  <a name="getmenubar"></a>  COleIPFrameWndEx::GetMenuBar  
  Restituisce un puntatore all'oggetto della barra dei menu collegato alla finestra cornice.  
   
 ```  
@@ -413,7 +408,7 @@ const CMFCMenuBar* GetMenuBar() const;
 ### <a name="remarks"></a>Note  
  Utilizzare questa funzione per recuperare un puntatore all'oggetto della barra dei menu a cui appartiene il `COleIPFrameWndEx` oggetto.  
   
-##  <a name="getpane"></a>COleIPFrameWndEx::GetPane  
+##  <a name="getpane"></a>  COleIPFrameWndEx::GetPane  
 
   
 ```  
@@ -427,7 +422,7 @@ CBasePane* GetPane(UINT nID);
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="gettearoffbars"></a>COleIPFrameWndEx::GetTearOffBars  
+##  <a name="gettearoffbars"></a>  COleIPFrameWndEx::GetTearOffBars  
  Restituisce un elenco di oggetti del riquadro che si trovano in uno stato a comparsa.  
   
 ```  
@@ -440,7 +435,7 @@ const CObList& GetTearOffBars() const;
 ### <a name="remarks"></a>Note  
  Il `COleIPFrameWndEx` oggetto gestisce la raccolta di menu a comparsa come un elenco di [CBasePane classe](../../mfc/reference/cbasepane-class.md)-oggetti derivati. Utilizzare questo metodo per recuperare un riferimento a questo elenco.  
   
-##  <a name="gettoolbarbuttontooltiptext"></a>COleIPFrameWndEx::GetToolbarButtonToolTipText  
+##  <a name="gettoolbarbuttontooltiptext"></a>  COleIPFrameWndEx::GetToolbarButtonToolTipText  
  Chiamato dal framework prima che venga visualizzata la descrizione comando per un pulsante.  
   
 ```  
@@ -462,7 +457,7 @@ virtual BOOL GetToolbarButtonToolTipText(
 ### <a name="remarks"></a>Note  
  Eseguire l'override di questa funzione per personalizzare la visualizzazione delle descrizioni comandi sulle barre degli strumenti.  
   
-##  <a name="initusertoobars"></a>COleIPFrameWndEx::InitUserToobars  
+##  <a name="initusertoobars"></a>  COleIPFrameWndEx::InitUserToobars  
  Specifica un intervallo ID di controllo che assegna il framework per le barre degli strumenti definite dall'utente.  
   
 ```  
@@ -485,7 +480,7 @@ void InitUserToolbars(
 ### <a name="remarks"></a>Note  
  Utilizzare questa funzione per inizializzare un intervallo di ID di controllo per l'assegnazione alle barre degli strumenti che gli utenti definiscono in modo dinamico. I parametri `uiUserToolbarFirst` e `uiUserToolbarLast` definire un intervallo di ID di controllo della barra degli strumenti consentiti. Per disabilitare la creazione di barre definito dall'utente, impostare `uiUserToolbarFirst` o `uiUserToolbarLast` su -1.  
   
-##  <a name="insertpane"></a>COleIPFrameWndEx::InsertPane  
+##  <a name="insertpane"></a>  COleIPFrameWndEx::InsertPane  
 
   
 ```  
@@ -504,7 +499,7 @@ BOOL InsertPane(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="ismenubaravailable"></a>COleIPFrameWndEx::IsMenuBarAvailable  
+##  <a name="ismenubaravailable"></a>  COleIPFrameWndEx::IsMenuBarAvailable  
  Determina se il puntatore all'oggetto della barra dei menu non è `NULL`  
   
 ```  
@@ -517,7 +512,7 @@ BOOL IsMenuBarAvailable() const;
 ### <a name="remarks"></a>Note  
  Chiamare questo metodo per determinare se la finestra cornice gestisce un non - `NULL` puntatore al relativo oggetto barra dei menu.  
   
-##  <a name="ispointneardocksite"></a>COleIPFrameWndEx::IsPointNearDockSite  
+##  <a name="ispointneardocksite"></a>  COleIPFrameWndEx::IsPointNearDockSite  
 
   
 ```  
@@ -536,7 +531,7 @@ BOOL IsPointNearDockSite(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="loadframe"></a>COleIPFrameWndEx::LoadFrame  
+##  <a name="loadframe"></a>  COleIPFrameWndEx::LoadFrame  
 
   
 ```  
@@ -557,7 +552,7 @@ virtual BOOL LoadFrame(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="onclosedockingpane"></a>COleIPFrameWndEx::OnCloseDockingPane  
+##  <a name="onclosedockingpane"></a>  COleIPFrameWndEx::OnCloseDockingPane  
 
   
 ```  
@@ -571,7 +566,7 @@ virtual BOOL OnCloseDockingPane(CDockablePane*);
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="oncloseminiframe"></a>COleIPFrameWndEx::OnCloseMiniFrame  
+##  <a name="oncloseminiframe"></a>  COleIPFrameWndEx::OnCloseMiniFrame  
 
   
 ```  
@@ -585,7 +580,7 @@ virtual BOOL OnCloseMiniFrame(CPaneFrameWnd*);
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="onclosepopupmenu"></a>COleIPFrameWndEx::OnClosePopupMenu  
+##  <a name="onclosepopupmenu"></a>  COleIPFrameWndEx::OnClosePopupMenu  
  Chiamato dal framework quando un menu a comparsa attivo elabora un `WM_DESTROY` messaggio.  
   
 ```  
@@ -599,7 +594,7 @@ virtual void OnClosePopupMenu(CMFCPopupMenu* pMenuPopup);
 ### <a name="remarks"></a>Note  
  Eseguire l'override di questo metodo per ricevere notifiche da `CMFCPopupMenu` oggetti durante l'elaborazione `WM_DESTROY` messaggi.  
   
-##  <a name="oncmdmsg"></a>COleIPFrameWndEx::OnCmdMsg  
+##  <a name="oncmdmsg"></a>  COleIPFrameWndEx::OnCmdMsg  
 
   
 ```  
@@ -620,7 +615,7 @@ virtual BOOL OnCmdMsg(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="ondrawmenuimage"></a>COleIPFrameWndEx::OnDrawMenuImage  
+##  <a name="ondrawmenuimage"></a>  COleIPFrameWndEx::OnDrawMenuImage  
  Chiamato dal framework quando viene disegnata l'immagine associata a una voce di menu.  
   
 ```  
@@ -646,7 +641,7 @@ virtual BOOL OnDrawMenuImage(
 ### <a name="remarks"></a>Note  
  Eseguire l'override di questo metodo se si desidera personalizzare per le voci di menu che appartengono alla barra dei menu di proprietà di disegno immagine di `COleIPFrameWndEx`-oggetto derivato.  
   
-##  <a name="ondrawmenulogo"></a>COleIPFrameWndEx::OnDrawMenuLogo  
+##  <a name="ondrawmenulogo"></a>  COleIPFrameWndEx::OnDrawMenuLogo  
  Chiamato dal framework quando un [CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md)oggetto processi un `WM_PAINT` messaggio.  
   
 ```  
@@ -669,7 +664,7 @@ virtual void OnDrawMenuLogo(
 ### <a name="remarks"></a>Note  
  Eseguire l'override di questo metodo per visualizzare un logo nel menu a comparsa associato a una barra dei menu di proprietà di `COleIPFrameWndEx`-oggetto derivato. L'implementazione predefinita non esegue alcuna operazione.  
   
-##  <a name="onmenubuttontoolhittest"></a>COleIPFrameWndEx::OnMenuButtonToolHitTest  
+##  <a name="onmenubuttontoolhittest"></a>  COleIPFrameWndEx::OnMenuButtonToolHitTest  
  Chiamato dal framework quando un [CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md)oggetto processi un `WM_NCHITTEST` messaggio.  
   
 ```  
@@ -691,7 +686,7 @@ virtual BOOL OnMenuButtonToolHitTest(
 ### <a name="remarks"></a>Note  
  Eseguire l'override di questo metodo per fornire informazioni di descrizione comando su una voce di menu specifiche.  
   
-##  <a name="onmoveminiframe"></a>COleIPFrameWndEx::OnMoveMiniFrame  
+##  <a name="onmoveminiframe"></a>  COleIPFrameWndEx::OnMoveMiniFrame  
 
   
 ```  
@@ -705,7 +700,7 @@ virtual BOOL OnMoveMiniFrame(CWnd* pFrame);
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="onsetpreviewmode"></a>COleIPFrameWndEx::OnSetPreviewMode  
+##  <a name="onsetpreviewmode"></a>  COleIPFrameWndEx::OnSetPreviewMode  
 
   
 ```  
@@ -720,7 +715,7 @@ virtual void OnSetPreviewMode(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="onshowcustomizepane"></a>COleIPFrameWndEx::OnShowCustomizePane  
+##  <a name="onshowcustomizepane"></a>  COleIPFrameWndEx::OnShowCustomizePane  
 
   
 ```  
@@ -737,7 +732,7 @@ virtual BOOL OnShowCustomizePane(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="onshowpanes"></a>COleIPFrameWndEx::OnShowPanes  
+##  <a name="onshowpanes"></a>  COleIPFrameWndEx::OnShowPanes  
 
   
 ```  
@@ -751,7 +746,7 @@ virtual BOOL OnShowPanes(BOOL bShow);
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="onshowpopupmenu"></a>COleIPFrameWndEx::OnShowPopupMenu  
+##  <a name="onshowpopupmenu"></a>  COleIPFrameWndEx::OnShowPopupMenu  
  Chiamato dal framework quando viene visualizzato un menu a comparsa.  
   
 ```  
@@ -768,7 +763,7 @@ virtual BOOL OnShowPopupMenu(CMFCPopupMenu* pMenuPopup);
 ### <a name="remarks"></a>Note  
  Eseguire l'override di questo metodo per personalizzare la visualizzazione di un menu a comparsa. Ad esempio, è Impossibile modificare i pulsanti di menu per i pulsanti di menu colore o inizializzare barre tear-off.  
   
-##  <a name="ontearoffmenu"></a>COleIPFrameWndEx::OnTearOffMenu  
+##  <a name="ontearoffmenu"></a>  COleIPFrameWndEx::OnTearOffMenu  
  Chiamato dal framework quando l'utente seleziona un menu che dispone di una barra a comparsa.  
   
 ```  
@@ -785,12 +780,12 @@ virtual BOOL OnTearOffMenu(
  Puntatore al riquadro che ospita il menu.  
   
 ### <a name="return-value"></a>Valore restituito  
- `TRUE`Se si desidera che il framework per attivare il menu a comparsa. in caso contrario `FALSE`. Il valore predefinito è `TRUE`.  
+ `TRUE` Se si desidera che il framework per attivare il menu a comparsa; in caso contrario `FALSE`. Il valore predefinito è `TRUE`.  
   
 ### <a name="remarks"></a>Note  
  Eseguire l'override di questa funzione se si desidera personalizzare la configurazione della barra a comparsa.  
   
-##  <a name="panefrompoint"></a>COleIPFrameWndEx::PaneFromPoint  
+##  <a name="panefrompoint"></a>  COleIPFrameWndEx::PaneFromPoint  
 
   
 ```  
@@ -818,7 +813,7 @@ CBasePane* PaneFromPoint(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="pretranslatemessage"></a>COleIPFrameWndEx::PreTranslateMessage  
+##  <a name="pretranslatemessage"></a>  COleIPFrameWndEx::PreTranslateMessage  
 
   
 ```  
@@ -832,7 +827,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="recalclayout"></a>COleIPFrameWndEx::RecalcLayout  
+##  <a name="recalclayout"></a>  COleIPFrameWndEx::RecalcLayout  
 
   
 ```  
@@ -844,7 +839,7 @@ virtual void RecalcLayout(BOOL bNotify = TRUE);
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="removepanefromdockmanager"></a>COleIPFrameWndEx::RemovePaneFromDockManager  
+##  <a name="removepanefromdockmanager"></a>  COleIPFrameWndEx::RemovePaneFromDockManager  
 
   
 ```  
@@ -865,7 +860,7 @@ void RemovePaneFromDockManager(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="setdockstate"></a>COleIPFrameWndEx::SetDockState  
+##  <a name="setdockstate"></a>  COleIPFrameWndEx::SetDockState  
  Si applica lo stato di ancoraggio specificato ai riquadri che appartengono alla finestra cornice.  
   
 ```  
@@ -879,7 +874,7 @@ void SetDockState(const CDockState& state);
 ### <a name="remarks"></a>Note  
  Utilizzare questa funzione per specificare un nuovo stato di ancoraggio per i riquadri che appartengono al `COleIPFrameWndEx` oggetto.  
   
-##  <a name="setuptoolbarmenu"></a>COleIPFrameWndEx::SetupToolbarMenu  
+##  <a name="setuptoolbarmenu"></a>  COleIPFrameWndEx::SetupToolbarMenu  
  Modifica un oggetto barra degli strumenti cercando elementi fittizi e sostituendoli con gli elementi definiti dall'utente specificati.  
   
 ```  
@@ -901,7 +896,7 @@ void SetupToolbarMenu(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="showpane"></a>COleIPFrameWndEx::ShowPane  
+##  <a name="showpane"></a>  COleIPFrameWndEx::ShowPane  
 
   
 ```  
@@ -920,7 +915,7 @@ void ShowPane(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="winhelpa"></a>COleIPFrameWndEx::WinHelpA  
+##  <a name="winhelpa"></a>  COleIPFrameWndEx::WinHelpA  
  Chiamato dal framework per avviare l'applicazione WinHelp o la Guida sensibile al contesto.  
   
 ```  

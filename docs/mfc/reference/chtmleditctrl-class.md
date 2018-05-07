@@ -1,12 +1,9 @@
 ---
 title: Classe CHtmlEditCtrl | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CHtmlEditCtrl
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - CHtmlEditCtrl [MFC], GetDHtmlDocument
 - CHtmlEditCtrl [MFC], GetStartDocument
 ms.assetid: 0fc4a238-b05f-4874-9edc-6a6701f064d9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f3ea794bfcb3d7e62a53ed8423918e5448990dae
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 71738511079427a60c9296bc75f9c1e79416d667
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="chtmleditctrl-class"></a>Classe CHtmlEditCtrl
 Fornisce la funzionalità del controllo ActiveX WebBrowser in una finestra MFC.  
@@ -78,14 +73,14 @@ class CHtmlEditCtrl: public CWnd,
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** afxhtml.h  
   
-##  <a name="chtmleditctrl"></a>CHtmlEditCtrl::CHtmlEditCtrl  
+##  <a name="chtmleditctrl"></a>  CHtmlEditCtrl::CHtmlEditCtrl  
  Costruisce un oggetto `CHtmlEditCtrl`.  
   
 ```  
 CHtmlEditCtrl();
 ```  
   
-##  <a name="create"></a>CHtmlEditCtrl::Create  
+##  <a name="create"></a>  CHtmlEditCtrl::Create  
  Crea un controllo WebBrowser ActiveX e lo collega al `CHtmlEditCtrl` oggetto. WebBrowser ActiveX controllo passa automaticamente a un documento predefinito e quindi viene inserito nella modalità di modifica da questa funzione.  
   
 ```  
@@ -120,7 +115,7 @@ virtual BOOL Create(
 ### <a name="return-value"></a>Valore restituito  
  Restituisce **TRUE** in caso di esito positivo **FALSE** in caso di errore.  
   
-##  <a name="getdhtmldocument"></a>CHtmlEditCtrl::GetDHtmlDocument  
+##  <a name="getdhtmldocument"></a>  CHtmlEditCtrl::GetDHtmlDocument  
  Recupera il [IHTMLDocument2](https://msdn.microsoft.com/library/aa752574.aspx) interfaccia nel documento attualmente caricato nel controllo WebBrowser indipendente  
   
 ```  
@@ -131,7 +126,7 @@ BOOL GetDHtmlDocument(IHTMLDocument2** ppDocument) const;
  `ppDocument`  
  L'interfaccia a documenti.  
   
-##  <a name="getstartdocument"></a>CHtmlEditCtrl::GetStartDocument  
+##  <a name="getstartdocument"></a>  CHtmlEditCtrl::GetStartDocument  
  Recupera l'URL di un documento predefinito da caricare nel controllo WebBrowser indipendente.  
   
 ```  

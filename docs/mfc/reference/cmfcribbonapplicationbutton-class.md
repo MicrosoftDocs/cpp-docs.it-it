@@ -1,12 +1,9 @@
 ---
 title: Classe CMFCRibbonApplicationButton | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCRibbonApplicationButton
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - CMFCRibbonApplicationButton [MFC], CMFCRibbonApplicationButton
 - CMFCRibbonApplicationButton [MFC], SetImage
 ms.assetid: beb81757-fabd-4641-9130-876ba8505b78
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8f5c8dac406a70edd5782e4ca1962aa36b0175ae
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3b2b2e8adccd77862b445d7e91df0b808967a31d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcribbonapplicationbutton-class"></a>Classe CMFCRibbonApplicationButton
 Implementa un pulsante speciale posizionato nell'angolo superiore sinistro della finestra dell'applicazione. Quando si fa clic sul pulsante, questo visualizza un menu che in genere contiene i comuni comandi di **File** come **Apri**, **Salva**ed **Esci**.  
@@ -74,7 +69,7 @@ class CMFCRibbonApplicationButton : public CMFCRibbonButton
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** afxribbonbar. H  
   
-##  <a name="cmfcribbonapplicationbutton"></a>CMFCRibbonApplicationButton::CMFCRibbonApplicationButton  
+##  <a name="cmfcribbonapplicationbutton"></a>  CMFCRibbonApplicationButton::CMFCRibbonApplicationButton  
  Costruisce e Inizializza un [CMFCRibbonApplicationButton](../../mfc/reference/cmfcribbonapplicationbutton-class.md) oggetto.  
   
 ```  
@@ -93,7 +88,7 @@ CMFCRibbonApplicationButton(UINT uiBmpResID);
 ### <a name="remarks"></a>Note  
  Pulsante della barra multifunzione dell'applicazione è un pulsante speciale che si trova nell'angolo superiore sinistro della finestra dell'applicazione. Quando un utente fa clic su questo pulsante, l'applicazione apre un menu che in genere contiene i comuni **File** comandi, ad esempio **aprire**, **salvare**, e **uscita**.  
   
-##  <a name="setimage"></a>CMFCRibbonApplicationButton::SetImage  
+##  <a name="setimage"></a>  CMFCRibbonApplicationButton::SetImage  
  Assegna un'immagine al pulsante dell'applicazione.  
   
 ```  

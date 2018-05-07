@@ -1,13 +1,10 @@
 ---
 title: Utilizzo di CSpinButtonCtrl | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - CSpinButtonCtrl
 dev_langs:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - spin button control
 - CSpinButtonCtrl class [MFC], using
 ms.assetid: a91db36b-e11e-42ef-8e89-51915cc486d2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bd1e652edb3501583624b068c604083f0c5d4165
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 03b1e83977c1d75070e8878dfdcc53c7afca7a86
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-cspinbuttonctrl"></a>Utilizzo di CSpinButtonCtrl
 Il *pulsante di selezione* controllo (noto anche come un *UpDown* controllo) offre una coppia di frecce che un utente può fare clic per modificare un valore. Questo valore è noto come il *posizione corrente*. La posizione rimane all'interno dell'intervallo del pulsante di selezione. Quando l'utente fa clic sulla freccia in su, la posizione si sposta verso il valore massimo; e quando l'utente fa clic sulla freccia rivolta verso il basso, la posizione si sposta verso il valore minimo.  

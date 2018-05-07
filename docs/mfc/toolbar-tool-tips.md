@@ -1,13 +1,10 @@
 ---
 title: Descrizione comandi | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -22,28 +19,26 @@ helpviewer_keywords:
 - status bars [MFC], tool tips
 - flyby status bar updates
 ms.assetid: d1696305-b604-4fad-9f09-638878371412
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 248c975c51a2f44f6c9b17094d6b05082a9016a8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c7024284a1be22aed211e8cf58f8366df88aa917
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="toolbar-tool-tips"></a>Descrizioni comandi barra degli strumenti
 Descrizioni comandi sono piccole finestre popup che visualizzano una breve descrizione dello scopo del pulsante della barra degli strumenti quando si posiziona il puntatore del mouse su un pulsante per un periodo di tempo. Quando si crea un'applicazione con la creazione guidata applicazione con una barra degli strumenti, supporto della descrizione comandi viene fornito automaticamente. Questo articolo illustra entrambi il supporto della descrizione comandi creato per la creazione guidata applicazione e come aggiungere supporto della descrizione comandi per l'applicazione.  
   
- Questo articolo descrive:  
+ Questo articolo illustra le attività seguenti:  
   
--   [L'attivazione delle descrizioni comandi](#_core_activating_tool_tips)  
+-   [L'attivazione di descrizioni comandi](#_core_activating_tool_tips)  
   
 -   [Aggiornamenti della barra di stato in tempo reale](#_core_fly_by_status_bar_updates)  
   
-##  <a name="_core_activating_tool_tips"></a>L'attivazione delle descrizioni comandi  
+##  <a name="_core_activating_tool_tips"></a> L'attivazione di descrizioni comandi  
  Per attivare le descrizioni comandi nell'applicazione, è necessario eseguire due operazioni:  
   
 -   Aggiungere il `CBRS_TOOLTIPS` stile per gli altri stili (ad esempio **WS_CHILD**, **WS_VISIBLE**e altri **CBRS _** stili) passato come il `dwStyle` parametro per il [ CToolBar:: Create](../mfc/reference/ctoolbar-class.md#create) funzione o in [SetBarStyle](../mfc/reference/ccontrolbar-class.md#setbarstyle).  
@@ -65,7 +60,7 @@ Descrizioni comandi sono piccole finestre popup che visualizzano una breve descr
   
 -   La voce della tabella di stringhe con lo stesso ID del controllo figlio nel file di risorse è una stringa di descrizione comandi.  
   
-##  <a name="_core_fly_by_status_bar_updates"></a>Aggiornamenti rapidi della barra di stato  
+##  <a name="_core_fly_by_status_bar_updates"></a> Aggiornamenti rapidi della barra di stato  
  Un è correlata alle descrizioni comandi della barra di aggiornamento di stato "in tempo reale". Per impostazione predefinita, il messaggio sulla barra di stato viene descritto solo un pulsante della barra degli strumenti specifica quando il pulsante è attivato. Includendo `CBRS_FLYBY` nell'elenco degli stili passati a `CToolBar::Create`, è possibile disporre di questi messaggi aggiornati quando il cursore del mouse viene spostato sopra la barra degli strumenti senza effettivamente attivazione del pulsante.  
   
 ### <a name="what-do-you-want-to-know-more-about"></a>Ciò che si desidera saperne di più  

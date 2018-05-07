@@ -1,13 +1,10 @@
 ---
 title: 'TN065: Supporto di interfaccia duale per i server di automazione OLE | Documenti Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.ole
 dev_langs:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - ACDUAL sample [MFC]
 - Automation servers [MFC], dual-interface support
 ms.assetid: b5c8ed09-2f7f-483c-80fc-2a47ad896063
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 959938be27e66a765ee0ae9e5aef9b3c1f1aed6f
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: 3b1c0d30938529d9eb432e6171b546a42f87905a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn065-dual-interface-support-for-ole-automation-servers"></a>TN065: supporto di interfaccia duale per i server di automazione OLE
 > [!NOTE]
@@ -329,7 +324,7 @@ AfxOleRegisterTypeLib(AfxGetInstanceHandle(), LIBID_ACDual, _T("AutoClik.TLB"));
     initIIDs.c: definisce IID per le interfacce duali  
     Questo non deve essere compilato con l'intestazione precompilata.  
       #<a name="include-ole2h"></a>includere < OLE2 >  
-      #<a name="include-initguidh"></a>include <initguid.h>  
+      #<a name="include-initguidh"></a>includere < Initguid. h >  
       #<a name="include-acdualh"></a>includere "acdual.h"  
  ```  
   
@@ -350,7 +345,7 @@ AfxOleRegisterTypeLib(AfxGetInstanceHandle(), LIBID_ACDual, _T("AutoClik.TLB"));
 ```  
 STDMETHODIMP CAutoClickDoc::XDualAClick::put_text(BSTR newText)  
 {  
-    METHOD_PROLOGUE(CAutoClickDoc, DualAClick)  
+    METHOD_PROLOGUE (CAutoClickDoc, DualAClick)  
     TRY_DUAL(IID_IDualAClick) {* / / MFC converte automaticamente da Unicode BSTR * / / Ansi CString, se necessario...  
     pThis->m_str = newText;  
     Restituisce NOERROR;  
@@ -388,28 +383,28 @@ STDMETHODIMP CAutoClickDoc::XDualAClick::put_text(BSTR newText)
  The following example implements a class defined to support **ISupportErrorInfo**. `CAutoClickDoc` is the name of your automation class and `IID_IDualAClick` is the **IID** for the interface that is the source of errors reported through the OLE Automation error object:  
   
 ```  
-STDMETHODIMP_(ULONG) CAutoClickDoc::XSupportErrorInfo::AddRef()   
+STDMETHODIMP_(ulong) CAutoClickDoc::XSupportErrorInfo::AddRef()   
 {  
-    METHOD_PROLOGUE(CAutoClickDoc, SupportErrorInfo)   
+    METHOD_PROLOGUE (CAutoClickDoc, SupportErrorInfo)   
     restituito pThis -> ExternalAddRef();
 
 }   
-STDMETHODIMP_(ULONG) CAutoClickDoc::XSupportErrorInfo::Release()   
+STDMETHODIMP_(ulong) CAutoClickDoc::XSupportErrorInfo::Release()   
 {   
-    METHOD_PROLOGUE(CAutoClickDoc, SupportErrorInfo)   
+    METHOD_PROLOGUE (CAutoClickDoc, SupportErrorInfo)   
     restituito pThis -> ExternalRelease();
 
 }   
-STDMETHODIMP CAutoClickDoc::XSupportErrorInfo::QueryInterface( REFIID iid, LPVOID* ppvObj)   
+STDMETHODIMP CAutoClickDoc::XSupportErrorInfo::QueryInterface (REFIID iid, LPVOID * ppvObj)   
 {   
-    METHOD_PROLOGUE(CAutoClickDoc, SupportErrorInfo)   
-    return pThis->ExternalQueryInterface(&iid, ppvObj);
+    METHOD_PROLOGUE (CAutoClickDoc, SupportErrorInfo)   
+    -> pThis restituito ExternalQueryInterface (& iid, ppvObj);
 
 }   
-STDMETHODIMP CAutoClickDoc::XSupportErrorInfo::InterfaceSupportsErrorInfo( REFIID iid)   
+STDMETHODIMP CAutoClickDoc::XSupportErrorInfo::InterfaceSupportsErrorInfo (REFIID iid)   
 {   
-    METHOD_PROLOGUE(CAutoClickDoc, SupportErrorInfo)   
-    return (iid == IID_IDualAClick) S_OK : S_FALSE;   
+    METHOD_PROLOGUE (CAutoClickDoc, SupportErrorInfo)   
+    restituire (iid = = IID_IDualAClick) S_OK: S_FALSE.   
 }  
 ```  
   

@@ -1,13 +1,10 @@
 ---
 title: 'TN061: Messaggi ON_NOTIFY e Wm_notify | Documenti Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - ON_NOTIFY
 - WM_NOTIFY
@@ -22,17 +19,15 @@ helpviewer_keywords:
 - notification messages
 - WM_NOTIFY message
 ms.assetid: 04a96dde-7049-41df-9954-ad7bb5587caf
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9cd99f2ff37effb1e153a759eb36c9adba5f3671
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: dc8e49ec04e1932c7bac4faa9a8737b480d8ef54
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn061-onnotify-and-wmnotify-messages"></a>TN061: messaggi ON_NOTIFY e WM_NOTIFY
 > [!NOTE]
@@ -40,7 +35,7 @@ ms.lasthandoff: 12/21/2017
   
  Questa nota tecnica vengono fornite informazioni sul nuovo **WM_NOTIFY** messaggio e viene descritta la modalità consigliata (e più comune) di gestione **WM_NOTIFY** messaggi nell'applicazione MFC.  
   
- **Messaggi di notifica in Windows 3. x**  
+ **I messaggi di notifica in Windows 3.x**  
   
  In Windows 3. x, i controlli notificare padri di eventi, ad esempio clic del mouse, viene modificato nel contenuto e di selezione e di disegno dello sfondo del controllo inviando un messaggio per l'elemento padre. Semplice notifiche speciali **WM_COMMAND** messaggi, con il codice di notifica (ad esempio **BN_CLICKED**) e ID all'interno di controllo `wParam` e l'handle del controllo in `lParam`. Si noti che poiché `wParam` e `lParam` sono full, non è possibile passare i dati aggiuntivi, questi messaggi possono essere solo la notifica semplice. Ad esempio, il **BN_CLICKED** notifica, non è possibile inviare informazioni sulla posizione del cursore del mouse quando è stato fatto clic sul pulsante.  
   
@@ -50,7 +45,7 @@ ms.lasthandoff: 12/21/2017
   
  Per i controlli presenti in Windows 3.1, l'API Win32 utilizza la maggior parte dei messaggi di notifica utilizzati in Windows 3. x. Tuttavia, Win32 aggiunge inoltre una serie di controlli sofisticate e complesse a quelli supportati in Windows 3. x. Spesso, questi controlli è necessario inviare dati aggiuntivi con i relativi messaggi di notifica. Invece di aggiungere un nuovo **WM _\***  messaggio per ogni nuova notifica che richiede dati aggiuntivi, le finestre di progettazione dell'API Win32 scelto di aggiungere un solo messaggio, **WM_NOTIFY**, che è possibile passare qualsiasi quantità di dati aggiuntivi in modo standardizzato.  
   
- **WM_NOTIFY** messaggi contengono l'ID del controllo che invia il messaggio `wParam` e un puntatore a una struttura in `lParam`. Questa struttura è un **NMHDR** struttura o una struttura più grande che dispone di un **NMHDR** struttura come il primo membro. Si noti che poiché il **NMHDR** è il primo membro, un puntatore alla struttura può essere utilizzato come puntatore a un **NMHDR** o come un puntatore alla struttura di dimensioni maggiore a seconda di come si eseguirne il cast.  
+ **WM_NOTIFY** i messaggi contengono l'ID del controllo che invia il messaggio `wParam` e un puntatore a una struttura in `lParam`. Questa struttura è un **NMHDR** struttura o una struttura più grande che dispone di un **NMHDR** struttura come il primo membro. Si noti che poiché il **NMHDR** è il primo membro, un puntatore alla struttura può essere utilizzato come puntatore a un **NMHDR** o come un puntatore alla struttura di dimensioni maggiore a seconda di come si eseguirne il cast.  
   
  Nella maggior parte dei casi, l'indicatore di misura punterà a una struttura più ampia e sarà necessario eseguire il cast quando viene utilizzata. In solo alcune notifiche, ad esempio le notifiche comuni (i cui nomi iniziano con **NM_**) e il controllo descrizione comandi **TTN_SHOW** e **TTN_POP** notifiche, è un **NMHDR** struttura effettivamente utilizzato.  
   
@@ -93,7 +88,7 @@ typedef struct tagLV_KEYDOWN {
 |**NM_KILLFOCUS**|Controllo ha perso lo stato attivo di input|  
 |**NM_OUTOFMEMORY**|Controllo non ha completato un'operazione perché non era disponibile memoria sufficiente|  
   
-##  <a name="_mfcnotes_on_notify.3a_.handling_wm_notify_messages_in_mfc_applications"></a>ON_NOTIFY: Gestione dei messaggi WM_NOTIFY in applicazioni MFC  
+##  <a name="_mfcnotes_on_notify.3a_.handling_wm_notify_messages_in_mfc_applications"></a> ON_NOTIFY: La gestione dei messaggi WM_NOTIFY in applicazioni MFC  
  La funzione `CWnd::OnNotify` gestisce i messaggi di notifica. L'implementazione predefinita controlla la mappa messaggi per i gestori di notifica chiamare. In generale, non sostituire `OnNotify`. Invece fornire una funzione del gestore e aggiungere una voce della mappa messaggi per il gestore alla mappa messaggi della classe della finestra proprietaria.  
   
  ClassWizard, tramite la finestra delle proprietà ClassWizard, possibile creare il `ON_NOTIFY` voce della mappa messaggi e di fornire una funzione del gestore di base. Per ulteriori informazioni sull'utilizzo di ClassWizard per semplificare questa operazione, vedere [Mapping di messaggi a funzioni](../mfc/reference/mapping-messages-to-functions.md).  
@@ -138,7 +133,7 @@ pNotifyStruct  , LRESULT* result);
  `pNotifyStruct`  
  Puntatore alla struttura di notifica, come descritto nella sezione precedente.  
   
- *risultato*  
+ *Risultato*  
  Un puntatore per il codice del risultato verrà impostata prima della restituzione.  
   
 ## <a name="example"></a>Esempio  
@@ -163,7 +158,7 @@ void CMessageReflectionDlg::OnKeydownList1(NMHDR* pNMHDR, LRESULT* pResult)
   
  Si noti che ClassWizard fornisce automaticamente un puntatore di tipo appropriato. È possibile accedere alla struttura di notifica tramite `pNMHDR` o `pLVKeyDow`.  
   
-##  <a name="_mfcnotes_on_notify_range"></a>ON_NOTIFY_RANGE  
+##  <a name="_mfcnotes_on_notify_range"></a> ON_NOTIFY_RANGE  
  Se è necessario elaborare lo stesso **WM_NOTIFY** messaggio per un set di controlli, è possibile utilizzare **ON_NOTIFY_RANGE** anziché `ON_NOTIFY`. Ad esempio, potrebbe essere una serie di pulsanti per il quale si desidera eseguire la stessa azione per un determinato messaggio di notifica.  
   
  Quando si utilizza **ON_NOTIFY_RANGE**, specificare un intervallo contiguo di identificatori figlio per cui si desidera gestire il messaggio di notifica che specifica l'inizio e fine identificatori figlio dell'intervallo.  
@@ -220,10 +215,10 @@ pNotifyStruct  ,
  `pNotifyStruct`  
  Puntatore alla struttura di notifica, come descritto in precedenza.  
   
- *risultato*  
+ *Risultato*  
  Un puntatore per il codice del risultato verrà impostata prima della restituzione.  
   
-##  <a name="_mfcnotes_tn061_on_notify_ex.2c_.on_notify_ex_range"></a>ON_NOTIFY_EX, ON_NOTIFY_EX_RANGE  
+##  <a name="_mfcnotes_tn061_on_notify_ex.2c_.on_notify_ex_range"></a> ON_NOTIFY_EX, ON_NOTIFY_EX_RANGE  
  Se si desidera più di un oggetto della notifica di routing per gestire un messaggio, è possibile utilizzare **ON_NOTIFY_EX** (o **ON_NOTIFY_EX_RANGE**) anziché `ON_NOTIFY` (o **ON_NOTIFY_RANGE** ). L'unica differenza tra il **EX** versione e la versione regolare è che la funzione membro chiamata per il **EX** versione restituisce un **BOOL** che indica se l'elaborazione del messaggio deve continuare. Restituzione di **FALSE** da questa funzione consente di elaborare lo stesso messaggio in più di un oggetto.  
   
  Non consente di gestire ClassWizard **ON_NOTIFY_EX** o **ON_NOTIFY_EX_RANGE**; se si desidera utilizzare una di esse, è necessario modificare manualmente la mappa messaggi.  

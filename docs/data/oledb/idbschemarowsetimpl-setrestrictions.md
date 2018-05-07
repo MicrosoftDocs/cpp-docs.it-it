@@ -1,12 +1,9 @@
 ---
 title: 'IDBSchemaRowsetImpl:: SetRestrictions | Documenti Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - IDBSchemaRowsetImpl::SetRestrictions
@@ -17,18 +14,16 @@ dev_langs:
 helpviewer_keywords:
 - SetRestrictions method
 ms.assetid: 707d5065-b853-4d38-9b67-3066b4d3b279
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: f3ac45e93e0a2561bd8ab24dc7c0c6b19b245b60
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 8b6effd432b033941d404c4935cdbad5a2336ac8
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="idbschemarowsetimplsetrestrictions"></a>IDBSchemaRowsetImpl::SetRestrictions
 Specifica le restrizioni supportate su uno specifico set di righe dello schema.  

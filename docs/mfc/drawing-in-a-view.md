@@ -1,13 +1,10 @@
 ---
 title: Disegno in una visualizzazione | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - paint messages in view class [MFC]
 - device contexts, screen drawings
 ms.assetid: e3761db6-0f19-4482-a4cd-ac38ef7c4d3a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3457597edce1b7ce36b132d1bdd16d286cb94d03
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bc716800c35aa922f7912f586d6e5b8429593615
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="drawing-in-a-view"></a>Disegno in una visualizzazione
 Quasi tutti disegno nell'applicazione all'interno della vista `OnDraw` funzione membro, che è necessario eseguire l'override nella classe di visualizzazione. (L'eccezione è il mouse di disegno, come descritto in [interpretazione utente Input tramite una vista](../mfc/interpreting-user-input-through-a-view.md).) Il `OnDraw` override:  
@@ -39,9 +34,9 @@ Quasi tutti disegno nell'applicazione all'interno della vista `OnDraw` funzione 
   
 2.  Visualizza i dati chiamando le funzioni membro di un oggetto di contesto di dispositivo passato dal framework per `OnDraw`.  
   
- Quando i dati di un documento viene modificato in qualche modo, è necessario ridisegnare la visualizzazione per riflettere le modifiche. In genere, ciò si verifica quando l'utente apporta una modifica tramite una vista nel documento. In questo caso, la visualizzazione chiama il documento [UpdateAllViews](../mfc/reference/cdocument-class.md#updateallviews) funzione membro per notificare a tutte le viste nello stesso documento eseguire l'aggiornamento. `UpdateAllViews`chiama ogni visualizzazione [OnUpdate](../mfc/reference/cview-class.md#onupdate) funzione membro. L'implementazione predefinita di `OnUpdate` invalida intera area client della visualizzazione. È possibile eseguirne l'override per invalidare solo le aree dell'area client che eseguono il mapping alle parti del documento modificate.  
+ Quando i dati di un documento viene modificato in qualche modo, è necessario ridisegnare la visualizzazione per riflettere le modifiche. In genere, ciò si verifica quando l'utente apporta una modifica tramite una vista nel documento. In questo caso, la visualizzazione chiama il documento [UpdateAllViews](../mfc/reference/cdocument-class.md#updateallviews) funzione membro per notificare a tutte le viste nello stesso documento eseguire l'aggiornamento. `UpdateAllViews` ogni visualizzazione chiamate [OnUpdate](../mfc/reference/cview-class.md#onupdate) funzione membro. L'implementazione predefinita di `OnUpdate` invalida intera area client della visualizzazione. È possibile eseguirne l'override per invalidare solo le aree dell'area client che eseguono il mapping alle parti del documento modificate.  
   
- Il `UpdateAllViews` funzione membro di classe **CDocument** e `OnUpdate` funzione membro di classe `CView` consentono di passare le informazioni che descrivono le parti del documento sono state modificate. Questo meccanismo "hint" consente di limitare l'area che è necessario ridisegnare la visualizzazione. `OnUpdate`accetta due argomenti "hint". Il primo, `lHint`, di tipo **LPARAM**, consente di passare i dati desiderati, mentre il secondo, `pHint`, di tipo `CObject`*, consente di passare un puntatore a qualsiasi oggetto derivato da `CObject`.  
+ Il `UpdateAllViews` funzione membro di classe **CDocument** e `OnUpdate` funzione membro di classe `CView` consentono di passare le informazioni che descrivono le parti del documento sono state modificate. Questo meccanismo "hint" consente di limitare l'area che è necessario ridisegnare la visualizzazione. `OnUpdate` accetta due argomenti "hint". Il primo, `lHint`, di tipo **LPARAM**, consente di passare i dati desiderati, mentre il secondo, `pHint`, di tipo `CObject`*, consente di passare un puntatore a qualsiasi oggetto derivato da `CObject`.  
   
  Quando non è più valida a una vista, Windows invia un `WM_PAINT` messaggio. La vista [OnPaint](../mfc/reference/cwnd-class.md#onpaint) funzione del gestore risponde al messaggio mediante la creazione di un oggetto di contesto di dispositivo della classe [CPaintDC](../mfc/reference/cpaintdc-class.md) e chiama la vista `OnDraw` funzione membro. Non in genere è necessario scrivere un override `OnPaint` funzione del gestore.  
   

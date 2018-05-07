@@ -1,12 +1,9 @@
 ---
 title: Classe classe COleChangeIconDialog | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - COleChangeIconDialog
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - COleChangeIconDialog [MFC], GetIconicMetafile
 - COleChangeIconDialog [MFC], m_ci
 ms.assetid: 8d6e131b-ddbb-4dff-a432-f239efda8e3d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 14e6f43ce49c5e5b51a6f69a3a8952608f5bfe49
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b675cfd635fd4dea962c30605072beec1545dda1
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="colechangeicondialog-class"></a>Classe classe COleChangeIconDialog
 Utilizzato per la finestra di dialogo di modifica dell'icona OLE.  
@@ -93,7 +88,7 @@ class COleChangeIconDialog : public COleDialog
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** afxodlgs. h  
   
-##  <a name="colechangeicondialog"></a>COleChangeIconDialog::COleChangeIconDialog  
+##  <a name="colechangeicondialog"></a>  COleChangeIconDialog::COleChangeIconDialog  
  Questa funzione crea solo un `COleChangeIconDialog` oggetto.  
   
 ```  
@@ -110,13 +105,13 @@ explicit COleChangeIconDialog(
  `dwFlags`  
  Flag di creazione, che include il numero dei valori seguenti combinati tramite bit per bit-operatore or:  
   
-- **CIF_SELECTCURRENT** specifica che il pulsante di opzione corrente verrà selezionato inizialmente quando viene chiamata nella finestra di dialogo. Questa è l'impostazione predefinita.  
+- **CIF_SELECTCURRENT** specifica che il pulsante di opzione corrente verrà selezionato inizialmente quando viene chiamata la finestra di dialogo. Questa è l'impostazione predefinita.  
   
-- **CIF_SELECTDEFAULT** specifica che il pulsante di opzione predefinito sarà selezionato inizialmente quando viene chiamata nella finestra di dialogo.  
+- **CIF_SELECTDEFAULT** specifica che il pulsante di opzione predefinito verrà selezionato inizialmente quando viene chiamata la finestra di dialogo.  
   
-- **CIF_SELECTFROMFILE** specifica che il pulsante di opzione da File sarà selezionato inizialmente quando viene chiamata nella finestra di dialogo.  
+- **CIF_SELECTFROMFILE** specifica che il pulsante di opzione da File verrà selezionato inizialmente quando viene chiamata la finestra di dialogo.  
   
-- **CIF_SHOWHELP** specifica che il pulsante della Guida verrà visualizzato quando viene chiamata nella finestra di dialogo.  
+- **CIF_SHOWHELP** specifica che il pulsante della Guida verrà visualizzato quando viene chiamata la finestra di dialogo.  
   
 - **CIF_USEICONEXE** specifica che l'icona deve essere estratti dal file eseguibile specificato nella **szIconExe** campo [m_ci](#m_ci) anziché recuperata dal tipo di. Ciò è utile per incorporare o collegare i file non OLE.  
   
@@ -128,7 +123,7 @@ explicit COleChangeIconDialog(
   
  Per ulteriori informazioni, vedere il [OLEUICHANGEICON](http://msdn.microsoft.com/library/windows/desktop/ms680098) struttura in Windows SDK.  
   
-##  <a name="dochangeicon"></a>COleChangeIconDialog::DoChangeIcon  
+##  <a name="dochangeicon"></a>  COleChangeIconDialog::DoChangeIcon  
  Chiamare questa funzione per modificare l'icona che rappresenta l'elemento selezionato nella finestra di dialogo dopo [DoModal](#domodal) restituisce **IDOK**.  
   
 ```  
@@ -142,7 +137,7 @@ BOOL DoChangeIcon(COleClientItem* pItem);
 ### <a name="return-value"></a>Valore restituito  
  Diverso da zero se ha esito positivo; modifica in caso contrario 0.  
   
-##  <a name="domodal"></a>COleChangeIconDialog::DoModal  
+##  <a name="domodal"></a>  COleChangeIconDialog::DoModal  
  Chiamare questa funzione per visualizzare la finestra di dialogo Modifica dell'icona OLE.  
   
 ```  
@@ -163,7 +158,7 @@ virtual INT_PTR DoModal();
   
  Se `DoModal` restituisce **IDOK**, è possibile chiamare le funzioni per recuperare le impostazioni o informazioni che è stato immesso dall'utente nella finestra di dialogo altri membri.  
   
-##  <a name="geticonicmetafile"></a>COleChangeIconDialog::GetIconicMetafile  
+##  <a name="geticonicmetafile"></a>  COleChangeIconDialog::GetIconicMetafile  
  Chiamare questa funzione per ottenere un handle per il metafile che contiene l'aspetto delle icone dell'elemento selezionato.  
   
 ```  
@@ -173,7 +168,7 @@ HGLOBAL GetIconicMetafile() const;
 ### <a name="return-value"></a>Valore restituito  
  L'handle del metafile contenente l'aspetto delle icone della nuova icona, se è stata chiusa la finestra di dialogo scegliendo **OK**; in caso contrario, l'icona perché era prima è stata visualizzata la finestra di dialogo.  
   
-##  <a name="m_ci"></a>COleChangeIconDialog::m_ci  
+##  <a name="m_ci"></a>  COleChangeIconDialog::m_ci  
  Struttura di tipo **OLEUICHANGEICON** consentono di controllare il comportamento della finestra di dialogo Cambia icona.  
   
 ```  

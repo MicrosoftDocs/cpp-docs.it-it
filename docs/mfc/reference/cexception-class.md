@@ -1,12 +1,9 @@
 ---
 title: CException (classe) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CException
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - CException [MFC], Delete
 - CException [MFC], ReportError
 ms.assetid: cfacf14d-bfe4-4666-a5c7-38b800512920
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 72272630dc475f2c40b8f249e969822a872015e0
-ms.sourcegitcommit: a5a69d2dc3513261e9e28320e4e067aaf40d2ef2
+ms.openlocfilehash: a152c55944fca5fa858c148c009ef6301ff0f762
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cexception-class"></a>CException (classe)
 Classe di base per tutte le eccezioni nella libreria Microsoft Foundation Class.  
@@ -67,7 +62,7 @@ class AFX_NOVTABLE CException : public CObject
 |[CSimpleException](../../mfc/reference/csimpleexception-class.md)|Classe di base per le eccezioni MFC critiche con risorse|  
 |[CInvalidArgException](../../mfc/reference/cinvalidargexception-class.md)|Condizione di eccezione di argomento non valido|  
 |[CMemoryException](../../mfc/reference/cmemoryexception-class.md)|Eccezione di memoria insufficiente|  
-|[CNotSupportedException](../../mfc/reference/cnotsupportedexception-class.md)|Richiesta per un'operazione non supportata|  
+|[Eccezione CNotSupportedException](../../mfc/reference/cnotsupportedexception-class.md)|Richiesta per un'operazione non supportata|  
 |[Eccezione CArchiveException](../../mfc/reference/carchiveexception-class.md)|Eccezione specifiche dell'archivio|  
 |[CFileException](../../mfc/reference/cfileexception-class.md)|Eccezione di file specifico|  
 |[CResourceException](../../mfc/reference/cresourceexception-class.md)|Risorse di Windows non trovata o non creabile|  
@@ -94,7 +89,7 @@ class AFX_NOVTABLE CException : public CObject
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** afx.h  
   
-##  <a name="cexception">CException::CException</a>  
+##  <a name="cexception"></a>  CException::CException  
  Questa funzione membro costruisce una `CException` oggetto.  
   
 ```  

@@ -1,12 +1,9 @@
 ---
 title: Classe CMemoryException | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMemoryException
@@ -17,17 +14,15 @@ dev_langs:
 helpviewer_keywords:
 - CMemoryException [MFC], CMemoryException
 ms.assetid: 9af0ed57-d12a-45ca-82b5-c910a60f7edf
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 18947e40aefd2820816abd419440ff929feca2a2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 12971af6bed7c04c6f6f214f0b583a4f7e6eb7a1
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmemoryexception-class"></a>Classe CMemoryException
 Rappresenta una condizione di eccezione di memoria insufficiente.  
@@ -63,7 +58,7 @@ class CMemoryException : public CSimpleException
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** afx.h  
   
-##  <a name="cmemoryexception"></a>CMemoryException::CMemoryException  
+##  <a name="cmemoryexception"></a>  CMemoryException::CMemoryException  
  Costruisce un oggetto `CMemoryException`.  
   
 ```  

@@ -1,12 +1,9 @@
 ---
 title: Classe CInternetFile | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CInternetFile
@@ -41,17 +38,15 @@ helpviewer_keywords:
 - CInternetFile [MFC], WriteString
 - CInternetFile [MFC], m_hFile
 ms.assetid: 96935681-ee71-4a8d-9783-5abc7b3e6f10
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f1e4b05e2aceb8fb4c8a4abed0dd6038fff6cfee
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 60ee6e3d23dc197f7d8114f571bd121f864701d7
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cinternetfile-class"></a>CInternetFile (classe)
 Consente l'accesso ai file nei sistemi remoti che utilizzano protocolli Internet.  
@@ -117,7 +112,7 @@ class CInternetFile : public CStdioFile
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** afxinet. h  
   
-##  <a name="abort"></a>CInternetFile::Abort  
+##  <a name="abort"></a>  CInternetFile::Abort  
  Chiude il file associato all'oggetto e il file non è disponibile per la lettura o scrittura.  
   
 ```  
@@ -129,7 +124,7 @@ virtual void Abort();
   
  Quando la gestione delle eccezioni, **Abort** è diverso da [Chiudi](#close) in due modi principali. Prima di tutto, il **Abort** funzione non genera un'eccezione in caso di errore perché ignora gli errori. In secondo luogo, **Abort** non **ASSERT** se il file non è stata aperta o chiusa in precedenza.  
   
-##  <a name="cinternetfile"></a>CInternetFile::CInternetFile  
+##  <a name="cinternetfile"></a>  CInternetFile::CInternetFile  
  Questa funzione membro viene chiamata quando un `CInternetFile` viene creato l'oggetto.  
   
 ```  
@@ -174,7 +169,7 @@ CInternetFile(
 ### <a name="remarks"></a>Note  
  Non creare mai un `CInternetFile` direttamente l'oggetto. In alternativa, creare un oggetto di una delle relative classi derivate chiamando [CGopherConnection:: OpenFile](../../mfc/reference/cgopherconnection-class.md#openfile) o [CHttpConnection:: OpenRequest](../../mfc/reference/chttpconnection-class.md#openrequest). È inoltre possibile creare un `CInternetFile` oggetto chiamando [CFtpConnection:: OpenFile](../../mfc/reference/cftpconnection-class.md#openfile).  
   
-##  <a name="close"></a>CInternetFile::Close  
+##  <a name="close"></a>  CInternetFile::Close  
  Chiude un `CInternetFile` e libera tutte le relative risorse.  
   
 ```  
@@ -184,7 +179,7 @@ virtual void Close();
 ### <a name="remarks"></a>Note  
  Se il file è stato aperto per la scrittura, è una chiamata implicita a [scaricamento](#flush) per garantire che tutti i dati memorizzati nel buffer viene scritto nell'host. È necessario chiamare **Chiudi** quando si è terminato di utilizzare un file.  
   
-##  <a name="flush"></a>CInternetFile::Flush  
+##  <a name="flush"></a>  CInternetFile::Flush  
  Chiamare questa funzione membro per cancellare il contenuto del buffer di scrittura.  
   
 ```  
@@ -192,30 +187,30 @@ virtual void Flush();
 ```  
   
 ### <a name="remarks"></a>Note  
- Utilizzare `Flush` per garantire che tutti i dati in memoria è stato scritto effettivamente nel computer di destinazione e per assicurare che la transazione con il computer host è stata completata. `Flush`è valido in solo `CInternetFile` oggetti aperti per la scrittura.  
+ Utilizzare `Flush` per garantire che tutti i dati in memoria è stato scritto effettivamente nel computer di destinazione e per assicurare che la transazione con il computer host è stata completata. `Flush` è solo effettivo nei `CInternetFile` oggetti aperta per la scrittura.  
   
-##  <a name="getlength"></a>CInternetFile::GetLength  
+##  <a name="getlength"></a>  CInternetFile::GetLength  
  Restituisce le dimensioni del file.  
   
 ```  
 virtual ULONGLONG GetLength() const;  
 ```  
   
-##  <a name="m_hfile"></a>CInternetFile::m_hFile  
+##  <a name="m_hfile"></a>  CInternetFile::m_hFile  
  Un handle al file associato all'oggetto.  
   
 ```  
 HINTERNET m_hFile;  
 ```  
   
-##  <a name="operator_hinternet"></a>CInternetFile::operator HINTERNET  
+##  <a name="operator_hinternet"></a>  CInternetFile::operator HINTERNET  
  Utilizzare questo operatore per ottenere l'handle di Windows per la sessione corrente di Internet.  
   
 ```  
 operator HINTERNET() const;  
 ```  
   
-##  <a name="read"></a>CInternetFile:: Read  
+##  <a name="read"></a>  CInternetFile:: Read  
  Chiamare questa funzione membro per leggere nella memoria specificata, a partire da `lpvBuf`, il numero specificato di byte, `nCount`.  
   
 ```  
@@ -239,7 +234,7 @@ virtual UINT Read(
   
  Per garantire il recupero di tutti i dati, un'applicazione deve continuare a chiamare il **CInternetFile:: Read** metodo fino a quando il metodo restituisce zero.  
   
-##  <a name="readstring"></a>CInternetFile::ReadString  
+##  <a name="readstring"></a>  CInternetFile::ReadString  
  Chiamare questa funzione membro per leggere un flusso di caratteri fino a quando non viene trovato un carattere di nuova riga.  
   
 ```  
@@ -271,7 +266,7 @@ virtual LPTSTR ReadString(
   
  Se si chiama `ReadString` senza prima chiamare [SetReadBufferSize](#setreadbuffersize), si otterrà un buffer di 4096 byte.  
   
-##  <a name="seek"></a>CInternetFile::Seek  
+##  <a name="seek"></a>  CInternetFile::Seek  
  Chiamare questa funzione membro per riposizionare il puntatore in un file aperto in precedenza.  
   
 ```  
@@ -287,11 +282,11 @@ virtual ULONGLONG Seek(
  `nFrom`  
  Riferimento relativo per l'offset. Deve essere uno dei valori seguenti:  
   
-- **CFile::begin** spostare il puntatore del file `lOff` inoltrare i byte dall'inizio del file.  
+- **CFile::begin** spostare il puntatore del file `lOff` inoltrare byte dall'inizio del file.  
   
 - **CFile::current** spostare il puntatore del file `lOff` byte dalla posizione corrente nel file.  
   
-- **CFile::end** spostare il puntatore del file `lOff` byte dalla fine del file. `lOff`deve essere negativo per la ricerca nel file esistente. i valori positivi cercherà oltre la fine del file.  
+- **CFile::end** spostare il puntatore del file `lOff` byte dalla fine del file. `lOff` deve essere negativo per la ricerca nel file esistente. i valori positivi cercherà oltre la fine del file.  
   
 ### <a name="return-value"></a>Valore restituito  
  Il nuovo byte offset dall'inizio del file se la posizione richiesta è valida; in caso contrario, il valore è definito e un [CInternetException](../../mfc/reference/cinternetexception-class.md) oggetto viene generato.  
@@ -309,7 +304,7 @@ virtual ULONGLONG Seek(
 ### <a name="example"></a>Esempio  
   Vedere l'esempio per l'implementazione della classe di base ( [CFile::Seek](../../mfc/reference/cfile-class.md#seek)).  
   
-##  <a name="setreadbuffersize"></a>CInternetFile::SetReadBufferSize  
+##  <a name="setreadbuffersize"></a>  CInternetFile::SetReadBufferSize  
  Chiamare questa funzione membro per impostare le dimensioni del buffer di lettura temporaneo utilizzato da un `CInternetFile`-oggetto derivato.  
   
 ```  
@@ -330,7 +325,7 @@ BOOL SetReadBufferSize(UINT nReadSize);
   
  È possibile aumentare le dimensioni del buffer in qualsiasi momento, ma la riduzione del buffer non ha alcun effetto. Se si chiama [ReadString](#readstring) senza prima chiamare `SetReadBufferSize`, si otterrà un buffer di 4096 byte.  
   
-##  <a name="setwritebuffersize"></a>CInternetFile::SetWriteBufferSize  
+##  <a name="setwritebuffersize"></a>  CInternetFile::SetWriteBufferSize  
  Chiamare questa funzione membro per impostare le dimensioni del buffer di scrittura temporaneo utilizzato da un `CInternetFile`-oggetto derivato.  
   
 ```  
@@ -349,7 +344,7 @@ BOOL SetWriteBufferSize(UINT nWriteSize);
   
  Per impostazione predefinita, un `CInternetFile` oggetto non fornisce un buffer per la scrittura. Se si chiama questa funzione membro, è necessario assicurarsi che il file è stato aperto per l'accesso in scrittura. È possibile modificare le dimensioni del buffer di scrittura in qualsiasi momento, ma in questo modo una chiamata implicita a [scaricamento](#flush).  
   
-##  <a name="write"></a>CInternetFile::Write  
+##  <a name="write"></a>  CInternetFile::Write  
  Chiamare questa funzione membro per scrivere nella memoria specificata, `lpvBuf`, il numero specificato di byte, `nCount`.  
   
 ```  
@@ -368,7 +363,7 @@ virtual void Write(
 ### <a name="remarks"></a>Note  
  Se si verifica un errore durante la scrittura dei dati, la funzione genera un [CInternetException](../../mfc/reference/cinternetexception-class.md) oggetto che descrive l'errore.  
   
-##  <a name="writestring"></a>CInternetFile::WriteString  
+##  <a name="writestring"></a>  CInternetFile::WriteString  
  Questa funzione scrive una stringa con terminazione null del file associato.  
   
 ```  

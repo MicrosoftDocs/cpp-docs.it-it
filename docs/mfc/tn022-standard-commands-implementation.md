@@ -1,13 +1,10 @@
 ---
 title: 'TN022: Implementazione di comandi Standard | Documenti Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.commands
 dev_langs:
@@ -68,17 +65,15 @@ helpviewer_keywords:
 - ID_FILE_NEW command [MFC]
 - ID_INDICATOR_NUM command
 ms.assetid: a7883b46-23f7-4870-ac3a-804aed9258b5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 05e5e927ebfcb1584913d6415349c473bde4463c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: dea42f4bd33281e65696791677bdd81a921a59e6
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn022-standard-commands-implementation"></a>TN022: implementazione di comandi standard
 > [!NOTE]
@@ -122,7 +117,7 @@ ms.lasthandoff: 12/21/2017
     > [!NOTE]
     >  È necessario connettersi a questa opzione per il `CWinApp`-derivato mappa messaggi della classe per abilitare questa funzionalità.  
   
-     `CWinApp::OnFileNew`implementa questo comando in modo diverso a seconda del numero di modelli di documento nell'applicazione. Se è presente un solo `CDocTemplate`, `CWinApp::OnFileNew` creerà un nuovo documento di quel tipo, come la classe cornice e visualizzazione appropriata.  
+     `CWinApp::OnFileNew` implementa questo comando in modo diverso a seconda del numero di modelli di documento nell'applicazione. Se è presente un solo `CDocTemplate`, `CWinApp::OnFileNew` creerà un nuovo documento di quel tipo, come la classe cornice e visualizzazione appropriata.  
   
      Se è presente più di `CDocTemplate`, `CWinApp::OnFileNew` richiederà all'utente una finestra di dialogo (**AFX_IDD_NEWTYPEDLG**) consentendo loro di selezionare il tipo di documento da utilizzare. Selezionato `CDocTemplate` viene utilizzato per creare il documento.  
   
@@ -135,7 +130,7 @@ ms.lasthandoff: 12/21/2017
     > [!NOTE]
     >  È necessario connettersi a questa opzione per il `CWinApp`-derivato mappa messaggi della classe per abilitare questa funzionalità.  
   
-     `CWinApp::OnFileOpen`è un'implementazione molto semplice chiamare **CWinApp::DoPromptFileName** seguito da `CWinApp::OpenDocumentFile` con il nome di file o il percorso del file da aprire. Il `CWinApp` routine implementazione **DoPromptFileName** viene visualizzata la finestra di dialogo standard di FileOpen e vi inserisce le estensioni di file ottenute dai modelli di documento corrente.  
+     `CWinApp::OnFileOpen` ha un'implementazione molto semplice della chiamata al metodo **CWinApp::DoPromptFileName** seguita da `CWinApp::OpenDocumentFile` con il nome file o il percorso del file da aprire. Il `CWinApp` routine implementazione **DoPromptFileName** viene visualizzata la finestra di dialogo standard di FileOpen e vi inserisce le estensioni di file ottenute dai modelli di documento corrente.  
   
      Una personalizzazione frequente applicata di `ID_FILE_OPEN` consiste nel personalizzare la finestra di dialogo FileOpen o aggiungere filtri aggiuntive del file. Il metodo consigliato per personalizzare questa impostazione consiste nel sostituire l'implementazione predefinita con la propria finestra di dialogo FileOpen e chiamare `CWinApp::OpenDocumentFile` con il nome di file o il percorso del documento. Non è necessario chiamare la classe base.  
   
@@ -144,7 +139,7 @@ ms.lasthandoff: 12/21/2017
      **CDocument::OnFileClose** chiamate `CDocument::SaveModified` per richiedere all'utente di salvare il documento, se è stato modificato e quindi chiama `OnCloseDocument`. Tutta la logica di chiusura, tra cui eliminare il documento, viene eseguita nel `OnCloseDocument` routine.  
   
     > [!NOTE]
-    >  **ID_FILE_CLOSE** agisce in modo diverso da un `WM_CLOSE` messaggio o un **SC_CLOSE** comando sistema inviato alla finestra cornice di documenti. Chiusura di una finestra chiudere il documento solo se l'ultima finestra frame che mostra il documento. Chiudere il documento con **ID_FILE_CLOSE** non chiuderà solo il documento, ma verrà chiudere tutte le finestre cornice che mostra il documento.  
+    >  **ID_FILE_CLOSE** agisce in modo diverso da un `WM_CLOSE` messaggio o un **SC_CLOSE** comando sistema inviato alla finestra cornice documenti. Chiusura di una finestra chiudere il documento solo se l'ultima finestra frame che mostra il documento. Chiudere il documento con **ID_FILE_CLOSE** non chiuderà solo il documento, ma verrà chiudere tutte le finestre cornice che mostra il documento.  
   
 -   ID_FILE_SAVE Salva il documento corrente.  
   
@@ -158,7 +153,7 @@ ms.lasthandoff: 12/21/2017
   
 -   ID_FILE_SAVE_AS Salva il documento corrente con un nome di file diverso.  
   
-     Il **CDocument::OnFileSaveAs** implementazione utilizza lo stesso **CDocument::DoSave** routine dell'helper come **OnFileSave**. Il **OnFileSaveAs** comando viene gestito come **ID_FILE_SAVE** se i documenti alcun nome file prima del salvataggio. **COleServerDoc::OnFileSaveAs** implementa la logica per salvare un file di dati del documento normale o salvare un documento di server che rappresenta un oggetto OLE incorporata in un'altra applicazione come file separato.  
+     Il **CDocument::OnFileSaveAs** implementazione utilizza lo stesso **CDocument::DoSave** routine dell'helper come **OnFileSave**. Il **OnFileSaveAs** comando viene gestito come **ID_FILE_SAVE** se i documenti alcun nome file prima del salvataggio. **COleServerDoc::OnFileSaveAs** implementa la logica per salvare un file di dati documento normale o salvare un documento del server che rappresenta un oggetto OLE incorporata in un'altra applicazione come file separato.  
   
      Se si personalizza la logica di **ID_FILE_SAVE**, si desidera personalizzare probabilmente **ID_FILE_SAVE_AS** in modo analogo o all'operazione di "Salva con nome" potrebbe non essere applicabile al documento. Se non è più necessaria, è possibile rimuovere la voce di menu dalla barra dei menu.  
   
@@ -183,7 +178,7 @@ ms.lasthandoff: 12/21/2017
   
      Questo comando Visualizza la finestra di dialogo Stampa standard che consente all'utente di personalizzare la stampante e le impostazioni di almeno il documento o al massimo tutti i documenti in questa applicazione. È necessario utilizzare il pannello di controllo per modificare le impostazioni predefinite della stampante per l'intero sistema.  
   
-     `CWinApp::OnFilePrintSetup`è un'implementazione molto semplice creare un `CPrintDialog` oggetto e la chiamata di **CWinApp::DoPrintDialog** funzione di implementazione. Consente di impostare l'impostazione della stampante dell'applicazione.  
+     `CWinApp::OnFilePrintSetup` è un'implementazione molto semplice creare un `CPrintDialog` oggetto e la chiamata di **CWinApp::DoPrintDialog** funzione di implementazione. Consente di impostare l'impostazione della stampante dell'applicazione.  
   
      La necessità di comune per la personalizzazione di questo comando è quello di consentire le impostazioni della stampante per ogni documento, che devono essere archiviate con il documento salvato. Per eseguire questa operazione è necessario aggiungere un gestore della mappa messaggi nel **CDocument** classe che crea un `CPrintDialog` oggetto, viene inizializzato con gli attributi della stampante appropriate (in genere **hDevMode** e **hDevNames**), chiamare il **CPrintDialog::DoModal,** e salvare le impostazioni della stampante modificate. Per un'implementazione efficace, è necessario controllare l'implementazione di **CWinApp::DoPrintDialog** per rilevare gli errori e **CWinApp::UpdatePrinterSelection** per la gestione delle impostazioni predefinite ragionevoli e rilevamento delle modifiche della stampante a livello di sistema.  
   
@@ -203,13 +198,13 @@ ms.lasthandoff: 12/21/2017
     > [!NOTE]
     >  È necessario connettersi a questa opzione per il `CView`-derivato mappa messaggi della classe per abilitare questa funzionalità.  
   
-     **CView::OnFilePrintPreview** avvia la modalità di anteprima di stampa chiamando la funzione di supporto documentati **CView::DoPrintPreview**. **CView::DoPrintPreview** è il motore principale per il ciclo di anteprima di stampa, come **OnFilePrint** è il motore principale per il ciclo di stampa.  
+     **CView::OnFilePrintPreview** avvia la modalità di anteprima di stampa chiamando la funzione di supporto documentate **CView::DoPrintPreview**. **CView::DoPrintPreview** è il motore principale per il ciclo di anteprima di stampa, ugualmente **OnFilePrint** è il motore principale per il ciclo di stampa.  
   
      L'operazione di anteprima di stampa può essere personalizzato in diversi modi, passando parametri diversi per **DoPrintPreview**. Consultare [30 Nota tecnica](../mfc/tn030-customizing-printing-and-print-preview.md), che illustra alcuni dettagli di anteprima di stampa e come personalizzarlo.  
   
 -   **ID_FILE_MRU_FILE1**... **FILE16** un intervallo di ID di comando per il File MRU `list`.  
   
-     **CWinApp::OnUpdateRecentFileMenu** un gestore dell'interfaccia utente di comando di aggiornamento che è uno degli usi più avanzati di `ON_UPDATE_COMMAND_UI` meccanismo. Nella risorsa menu, è necessario definire solo una singola voce di menu con ID **ID_FILE_MRU_FILE1**. La voce di menu rimane inizialmente disabilitata.  
+     **CWinApp::OnUpdateRecentFileMenu** è un gestore dell'interfaccia utente del comando update che fa parte degli utilizzi più avanzati del `ON_UPDATE_COMMAND_UI` meccanismo. Nella risorsa menu, è necessario definire solo una singola voce di menu con ID **ID_FILE_MRU_FILE1**. La voce di menu rimane inizialmente disabilitata.  
   
      Come il MRU elenco diventa troppo grande, più menu gli elementi vengono aggiunti all'elenco. Lo standard `CWinApp` implementazione per impostazione predefinita il limite di standard di quattro file utilizzati di recente. È possibile modificare il valore predefinito chiamando `CWinApp::LoadStdProfileSettings` con un valore maggiore o minore. L'elenco dei file più recenti è archiviato in dell'applicazione. File INI. L'elenco viene caricato in un'applicazione `InitInstance` funzione se si chiama `LoadStdProfileSettings`e viene salvata alla chiusura dell'applicazione. Il gestore dell'interfaccia utente comando update MRU anche convertirà i percorsi assoluti per i percorsi relativi per la visualizzazione del menu file.  
   
@@ -221,7 +216,7 @@ ms.lasthandoff: 12/21/2017
   
      Non è attualmente presente alcuna implementazione standard per questo comando. È necessario implementare questo metodo per ogni `CView`-classe derivata.  
   
-     `CEditView`fornisce un'implementazione di questo comando utilizzando `CEdit::Clear`. Il comando è disabilitato se non è stata effettuata alcuna selezione corrente.  
+     `CEditView` fornisce un'implementazione di questo comando utilizzando `CEdit::Clear`. Il comando è disabilitato se non è stata effettuata alcuna selezione corrente.  
   
      Se si sceglie di implementare questo comando, si consiglia di che usare l'ID di comando.  
   
@@ -235,7 +230,7 @@ ms.lasthandoff: 12/21/2017
   
      Non è attualmente presente alcuna implementazione standard per questo comando. È necessario implementare questo metodo per ogni `CView`-classe derivata.  
   
-     `CEditView`fornisce un'implementazione di questo comando, che copia il testo selezionato negli Appunti come CF_TEXT utilizzando `CEdit::Copy`. Il comando è disabilitato se non è stata effettuata alcuna selezione corrente.  
+     `CEditView` fornisce un'implementazione di questo comando, che copia il testo selezionato negli Appunti come CF_TEXT usando `CEdit::Copy`. Il comando è disabilitato se non è stata effettuata alcuna selezione corrente.  
   
      Se si sceglie di implementare questo comando, si consiglia di che usare l'ID di comando.  
   
@@ -243,7 +238,7 @@ ms.lasthandoff: 12/21/2017
   
      Non è attualmente presente alcuna implementazione standard per questo comando. È necessario implementare questo metodo per ogni `CView`-classe derivata.  
   
-     `CEditView`fornisce un'implementazione di questo comando, che taglia il testo selezionato negli Appunti come CF_TEXT utilizzando `CEdit::Cut`. Il comando è disabilitato se non è stata effettuata alcuna selezione corrente.  
+     `CEditView` fornisce un'implementazione di questo comando, che taglia il testo selezionato negli Appunti come CF_TEXT usando `CEdit::Cut`. Il comando è disabilitato se non è stata effettuata alcuna selezione corrente.  
   
      Se si sceglie di implementare questo comando, si consiglia di che usare l'ID di comando.  
   
@@ -251,7 +246,7 @@ ms.lasthandoff: 12/21/2017
   
      Non è attualmente presente alcuna implementazione standard per questo comando. È necessario implementare questo metodo per ogni `CView`-classe derivata.  
   
-     `CEditView`fornisce un'implementazione di questo comando, che chiama la funzione di supporto di implementazione **OnEditFindReplace** da usare e archiviare le impostazioni di ricerca/sostituzione precedenti nelle variabili di implementazione privata. La `CFindReplaceDialog` classe viene utilizzata per gestire la finestra di dialogo non modale per chiedere conferma all'utente.  
+     `CEditView` fornisce un'implementazione di questo comando, che chiama la funzione di supporto di implementazione **OnEditFindReplace** da utilizzare e archiviare le impostazioni di ricerca/sostituzione precedenti nelle variabili di implementazione privata. La `CFindReplaceDialog` classe viene utilizzata per gestire la finestra di dialogo non modale per chiedere conferma all'utente.  
   
      Se si sceglie di implementare questo comando, si consiglia di che usare l'ID di comando.  
   
@@ -259,9 +254,9 @@ ms.lasthandoff: 12/21/2017
   
      Non è attualmente presente alcuna implementazione standard per questo comando. È necessario implementare questo metodo per ogni `CView`-classe derivata.  
   
-     `CEditView`fornisce un'implementazione di questo comando, che copia i dati degli Appunti correnti sostituendo il testo selezionato tramite `CEdit::Paste`. Il comando è disabilitato se è presente alcun **CF_TEXT** negli Appunti.  
+     `CEditView` fornisce un'implementazione di questo comando, che copia i dati degli Appunti correnti sostituendo il testo selezionato tramite `CEdit::Paste`. Il comando è disabilitato se è presente alcun **CF_TEXT** negli Appunti.  
   
-     **COleClientDoc** fornisce solo un gestore del comando dell'interfaccia utente di aggiornamento per questo comando. Se gli Appunti non contengono incorporabile elemento/oggetto OLE, il comando verrà disabilitato. Si è responsabile della scrittura del gestore per il comando effettivo per eseguire l'effettiva operazione di Incolla. Se un'applicazione OLE può incollare anche altri formati, è necessario fornire il proprio gestore dell'interfaccia utente di comando di aggiornamento nella vista o nel documento (ovvero, un punto prima **COleClientDoc** nel ciclo di destinazione di comando).  
+     **COleClientDoc** fornisce solo un gestore di aggiornamento comandi dell'interfaccia utente per questo comando. Se gli Appunti non contengono incorporabile elemento/oggetto OLE, il comando verrà disabilitato. Si è responsabile della scrittura del gestore per il comando effettivo per eseguire l'effettiva operazione di Incolla. Se un'applicazione OLE può incollare anche altri formati, è necessario fornire il proprio gestore dell'interfaccia utente di comando di aggiornamento nella vista o nel documento (ovvero, un punto prima **COleClientDoc** nel ciclo di destinazione di comando).  
   
      Se si sceglie di implementare questo comando, si consiglia di che usare l'ID di comando.  
   
@@ -271,7 +266,7 @@ ms.lasthandoff: 12/21/2017
   
      Non è attualmente presente alcuna implementazione standard per questo comando. È necessario implementare questo metodo per ogni `CView`-classe derivata.  
   
-     `COleDocument`fornisce solo un gestore del comando dell'interfaccia utente di aggiornamento per questo comando. Se gli Appunti non contengono collegabile oggetto OLE, il comando verrà disabilitato. Si è responsabile della scrittura del gestore per il comando effettivo per eseguire l'effettiva operazione di Incolla. Se un'applicazione OLE può incollare anche altri formati, è necessario fornire il proprio gestore dell'interfaccia utente di comando di aggiornamento nella vista o nel documento (ovvero, un punto prima `COleDocument` nel ciclo di destinazione di comando).  
+     `COleDocument` fornisce solo un gestore di aggiornamento comandi dell'interfaccia utente per questo comando. Se gli Appunti non contengono collegabile oggetto OLE, il comando verrà disabilitato. Si è responsabile della scrittura del gestore per il comando effettivo per eseguire l'effettiva operazione di Incolla. Se un'applicazione OLE può incollare anche altri formati, è necessario fornire il proprio gestore dell'interfaccia utente di comando di aggiornamento nella vista o nel documento (ovvero, un punto prima `COleDocument` nel ciclo di destinazione di comando).  
   
      Se si sceglie di implementare questo comando, si consiglia di che usare l'ID di comando.  
   
@@ -287,7 +282,7 @@ ms.lasthandoff: 12/21/2017
   
      Non è attualmente presente alcuna implementazione standard per questo comando. È necessario implementare questo metodo per ogni `CView`-classe derivata.  
   
-     `CEditView`fornisce un'implementazione di questo comando per ripetere l'ultima operazione di ricerca. Vengono utilizzate le variabili di implementazione privata per la ricerca. Il comando è disabilitato se è Impossibile tentare di eseguire una ricerca.  
+     `CEditView` fornisce un'implementazione di questo comando per ripetere l'ultima operazione di ricerca. Vengono utilizzate le variabili di implementazione privata per la ricerca. Il comando è disabilitato se è Impossibile tentare di eseguire una ricerca.  
   
      Se si sceglie di implementare questo comando, si consiglia di che usare l'ID di comando.  
   
@@ -295,7 +290,7 @@ ms.lasthandoff: 12/21/2017
   
      Non è attualmente presente alcuna implementazione standard per questo comando. È necessario implementare questo metodo per ogni `CView`-classe derivata.  
   
-     `CEditView`fornisce un'implementazione di questo comando, che chiama la funzione di supporto di implementazione **OnEditFindReplace** da usare e archiviare le impostazioni di ricerca/sostituzione precedenti nelle variabili di implementazione privata. La `CFindReplaceDialog` classe viene utilizzata per gestire la finestra di dialogo non modale che richiede all'utente.  
+     `CEditView` fornisce un'implementazione di questo comando, che chiama la funzione di supporto di implementazione **OnEditFindReplace** da utilizzare e archiviare le impostazioni di ricerca/sostituzione precedenti nelle variabili di implementazione privata. La `CFindReplaceDialog` classe viene utilizzata per gestire la finestra di dialogo non modale che richiede all'utente.  
   
      Se si sceglie di implementare questo comando, si consiglia di che usare l'ID di comando.  
   
@@ -303,7 +298,7 @@ ms.lasthandoff: 12/21/2017
   
      Non è attualmente presente alcuna implementazione standard per questo comando. È necessario implementare questo metodo per ogni `CView`-classe derivata.  
   
-     `CEditView`fornisce un'implementazione di questo comando, che seleziona tutto il testo nel documento. Il comando è disabilitato se è disponibile alcun testo per selezionare.  
+     `CEditView` fornisce un'implementazione di questo comando, che seleziona tutto il testo nel documento. Il comando è disabilitato se è disponibile alcun testo per selezionare.  
   
      Se si sceglie di implementare questo comando, si consiglia di che usare l'ID di comando.  
   
@@ -311,7 +306,7 @@ ms.lasthandoff: 12/21/2017
   
      Non è attualmente presente alcuna implementazione standard per questo comando. È necessario implementare questo metodo per ogni `CView`-classe derivata.  
   
-     `CEditView`fornisce un'implementazione di questo comando, mediante `CEdit::Undo`. Il comando è disabilitato se `CEdit::CanUndo` restituisce FALSE.  
+     `CEditView` fornisce un'implementazione di questo comando, mediante `CEdit::Undo`. Il comando è disabilitato se `CEdit::CanUndo` restituisce FALSE.  
   
      Se si sceglie di implementare questo comando, si consiglia di che usare l'ID di comando.  
   
@@ -323,7 +318,7 @@ ms.lasthandoff: 12/21/2017
   
 -   ID_WINDOW_NEW apre un'altra finestra del documento attivo.  
   
-     **CMDIFrameWnd::OnWindowNew** implementa questa funzionalità avanzata tramite il modello di documento del documento corrente per creare un altro frame contenente un'altra visualizzazione del documento corrente.  
+     **CMDIFrameWnd::OnWindowNew** implementa questa funzionalità avanzata tramite il modello di documento del documento corrente per creare un altro frame che contiene un'altra visualizzazione del documento corrente.  
   
      Ad esempio la maggior parte delle più documenti (MDI) di interfaccia comandi del menu finestra, il comando è disabilitato se è presente alcuna finestra figlio MDI attiva.  
   
@@ -331,7 +326,7 @@ ms.lasthandoff: 12/21/2017
   
 -   ID_WINDOW_ARRANGE dispone le icone nella parte inferiore di una finestra MDI.  
   
-     `CMDIFrameWnd`implementa questo comando MDI standard in una funzione di supporto di implementazione **OnMDIWindowCmd**. Questo supporto viene eseguito il mapping degli ID di comando per i messaggi di finestre MDI e pertanto può condividere una grande quantità di codice.  
+     `CMDIFrameWnd` implementa questo comando MDI standard in una funzione di supporto di implementazione **OnMDIWindowCmd**. Questo supporto viene eseguito il mapping degli ID di comando per i messaggi di finestre MDI e pertanto può condividere una grande quantità di codice.  
   
      Ad esempio la maggior parte dei comandi di menu finestra MDI, il comando è disabilitato se è presente alcuna finestra figlio MDI attiva.  
   
@@ -339,7 +334,7 @@ ms.lasthandoff: 12/21/2017
   
 -   Windows ID_WINDOW_CASCADE a catena in modo che si sovrappongano.  
   
-     `CMDIFrameWnd`implementa questo comando MDI standard in una funzione di supporto di implementazione **OnMDIWindowCmd**. Questo supporto viene eseguito il mapping degli ID di comando per i messaggi di finestre MDI e pertanto può condividere una grande quantità di codice.  
+     `CMDIFrameWnd` implementa questo comando MDI standard in una funzione di supporto di implementazione **OnMDIWindowCmd**. Questo supporto viene eseguito il mapping degli ID di comando per i messaggi di finestre MDI e pertanto può condividere una grande quantità di codice.  
   
      Ad esempio la maggior parte dei comandi di menu finestra MDI, il comando è disabilitato se è presente alcuna finestra figlio MDI attiva.  
   
@@ -359,7 +354,7 @@ ms.lasthandoff: 12/21/2017
   
 -   Interfaccia ID_WINDOW_SPLIT tastiera per la barra di divisione.  
   
-     `CView`Questo comando per il `CSplitterWnd` implementazione. Se la vista fa parte di una finestra con separatore, questo comando verrà delegato della funzione di implementazione `CSplitterWnd::DoKeyboardSplit`. Inserire la barra di divisione in una modalità che consente agli utenti di tastiera dividere o annullare una finestra con separatore.  
+     `CView` gestisce questo comando per il `CSplitterWnd` implementazione. Se la vista fa parte di una finestra con separatore, questo comando verrà delegato della funzione di implementazione `CSplitterWnd::DoKeyboardSplit`. Inserire la barra di divisione in una modalità che consente agli utenti di tastiera dividere o annullare una finestra con separatore.  
   
      Questo comando è disabilitato se la vista non è presente in una barra di divisione.  
   
@@ -384,7 +379,7 @@ ms.lasthandoff: 12/21/2017
     > [!NOTE]
     >  È necessario connettersi a questa opzione per il `CWinApp`-derivato mappa messaggi della classe per abilitare questa funzionalità.  
   
-     `CWinApp::OnHelpIndex`gestisce il comando chiamando in modo semplice `CWinApp::WinHelp`.  
+     `CWinApp::OnHelpIndex` gestisce il comando chiamando in modo semplice `CWinApp::WinHelp`.  
   
      Personalizzazione di questo gestore del comando non è consigliata.  
   
@@ -393,7 +388,7 @@ ms.lasthandoff: 12/21/2017
     > [!NOTE]
     >  È necessario connettersi a questa opzione per il `CWinApp`-derivato mappa messaggi della classe per abilitare questa funzionalità.  
   
-     `CWinApp::OnHelpUsing`gestisce il comando chiamando in modo semplice `CWinApp::WinHelp`.  
+     `CWinApp::OnHelpUsing` gestisce il comando chiamando in modo semplice `CWinApp::WinHelp`.  
   
      Personalizzazione di questo gestore del comando non è consigliata.  
   
@@ -402,7 +397,7 @@ ms.lasthandoff: 12/21/2017
     > [!NOTE]
     >  È necessario connettersi a questa opzione per il `CWinApp`-derivato mappa messaggi della classe per abilitare questa funzionalità.  
   
-     `CWinApp::OnContextHelp`gestisce questo comando impostando il cursore di modalità della Guida, immettere un ciclo modale di e, in attesa per l'utente di selezionare una finestra per visualizzare la Guida di. Consultare [28 Nota tecnica](../mfc/tn028-context-sensitive-help-support.md) per ulteriori informazioni sull'implementazione della Guida MFC.  
+     `CWinApp::OnContextHelp` gestisce questo comando impostando il cursore di modalità della Guida, immettendo un ciclo modale di e in attesa per l'utente selezionare una finestra per visualizzare la Guida. Consultare [28 Nota tecnica](../mfc/tn028-context-sensitive-help-support.md) per ulteriori informazioni sull'implementazione della Guida MFC.  
   
      Personalizzazione di questo gestore del comando non è consigliata.  
   
@@ -411,7 +406,7 @@ ms.lasthandoff: 12/21/2017
     > [!NOTE]
     >  È necessario connettersi a questa opzione per il `CWinApp`-derivato mappa messaggi della classe per abilitare questa funzionalità.  
   
-     `CWinApp::OnHelp`gestisce questo comando ottenendo il contesto della Guida destra per il contesto dell'applicazione corrente. In grado di gestire semplice F1 Guida in linea, Guida nelle finestre di messaggio e così via. Consultare [28 Nota tecnica](../mfc/tn028-context-sensitive-help-support.md) per ulteriori informazioni su MFC consentono all'implementazione.  
+     `CWinApp::OnHelp` gestisce questo comando ottenendo il contesto della Guida destra per il contesto dell'applicazione corrente. In grado di gestire semplice F1 Guida in linea, Guida nelle finestre di messaggio e così via. Consultare [28 Nota tecnica](../mfc/tn028-context-sensitive-help-support.md) per ulteriori informazioni su MFC consentono all'implementazione.  
   
      Personalizzazione di questo gestore del comando non è consigliata.  
   
@@ -426,7 +421,7 @@ ms.lasthandoff: 12/21/2017
   
 -   ID_NEXT_PANE passa al riquadro successivo  
   
-     `CView`Questo comando per il `CSplitterWnd` implementazione. Se la vista fa parte di una finestra con separatore, questo comando verrà delegato della funzione di implementazione **CSplitterWnd::OnNextPaneCmd**. La visualizzazione attiva verrà spostata al riquadro successivo nella barra di divisione.  
+     `CView` gestisce questo comando per il `CSplitterWnd` implementazione. Se la vista fa parte di una finestra con separatore, questo comando verrà delegato della funzione di implementazione **CSplitterWnd::OnNextPaneCmd**. La visualizzazione attiva verrà spostata al riquadro successivo nella barra di divisione.  
   
      Questo comando è disabilitato se la vista non è presente in una barra di divisione o non esiste alcun riquadro successivo su cui spostarsi.  
   
@@ -434,7 +429,7 @@ ms.lasthandoff: 12/21/2017
   
 -   ID_PREV_PANE passa al riquadro precedente.  
   
-     `CView`Questo comando per il `CSplitterWnd` implementazione. Se la vista fa parte di una finestra con separatore, questo comando verrà delegato della funzione di implementazione **CSplitterWnd::OnNextPaneCmd**. La visualizzazione attiva verrà spostata al riquadro precedente nella barra di divisione.  
+     `CView` gestisce questo comando per il `CSplitterWnd` implementazione. Se la vista fa parte di una finestra con separatore, questo comando verrà delegato della funzione di implementazione **CSplitterWnd::OnNextPaneCmd**. La visualizzazione attiva verrà spostata al riquadro precedente nella barra di divisione.  
   
      Questo comando è disabilitato se la vista non è presente in una barra di divisione o non esiste alcun riquadro per passare al precedente.  
   
@@ -450,21 +445,21 @@ ms.lasthandoff: 12/21/2017
   
 -   ID_OLE_EDIT_LINKS Modifica collegamenti OLE  
   
-     `COleDocument`gestisce questo comando mediante l'implementazione fornita da MFC della finestra di dialogo collegamenti OLE standard. L'implementazione di questa finestra di dialogo è possibile accedervi tramite la `COleLinksDialog` classe. Se il documento corrente non contiene alcun collegamento, il comando è disattivato.  
+     `COleDocument` Questo comando viene gestito utilizzando l'implementazione fornita da MFC della finestra di dialogo collegamenti OLE standard. L'implementazione di questa finestra di dialogo è possibile accedervi tramite la `COleLinksDialog` classe. Se il documento corrente non contiene alcun collegamento, il comando è disattivato.  
   
      Personalizzazione di questo gestore del comando non è consigliata.  
   
 -   ID_OLE_VERB_FIRST... ULTIMO intervallo di un ID per i verbi OLE  
   
-     `COleDocument`Usa questo intervallo di ID di comando per i verbi supportati dall'oggetto attualmente selezionato OLE elemento /. Deve trattarsi di un intervallo dopo un determinato tipo di oggetto/OLE può supportare zero o più verbi personalizzati. Nel menu dell'applicazione, è una voce di menu con l'ID di **ID_OLE_VERB_FIRST**. Quando viene eseguito il programma, il menu verrà aggiornato con la descrizione di verbo di menu appropriata (o il menu a comparsa con numero di verbi). La gestione del menu OLE è garantita da `AfxOleSetEditMenu`fatto nel gestore dell'interfaccia utente di comando di aggiornamento per questo comando.  
+     `COleDocument` Usa questo intervallo di ID di comando per i verbi supportati dall'oggetto attualmente selezionato OLE elemento /. Deve trattarsi di un intervallo dopo un determinato tipo di oggetto/OLE può supportare zero o più verbi personalizzati. Nel menu dell'applicazione, è una voce di menu con l'ID di **ID_OLE_VERB_FIRST**. Quando viene eseguito il programma, il menu verrà aggiornato con la descrizione di verbo di menu appropriata (o il menu a comparsa con numero di verbi). La gestione del menu OLE è garantita da `AfxOleSetEditMenu`fatto nel gestore dell'interfaccia utente di comando di aggiornamento per questo comando.  
   
-     Esistono gestori comando esplicito per la gestione di un ID di comando in questo intervallo. **COleDocument::OnCmdMsg** è sottoposto a override per intercettare tutti gli ID di comando in questo intervallo, convertirle in numeri in base zero verbo e avviare il server per il verbo (utilizzando `COleClientItem::DoVerb`).  
+     Esistono gestori comando esplicito per la gestione di un ID di comando in questo intervallo. **COleDocument::OnCmdMsg** viene eseguito l'override per intercettare tutti gli ID di comando in questo intervallo, convertirle in numeri in base zero verbo e avviare il server per il verbo (utilizzando `COleClientItem::DoVerb`).  
   
      Personalizzazione o un altro uso di questo intervallo di ID di comando non è consigliabile.  
   
 -   ID_VIEW_TOOLBAR attiva o disattiva la barra degli strumenti e disattivare  
   
-     `CFrameWnd`gestisce il comando e il gestore di comando di aggiornamento dell'interfaccia utente per attivare o disattivare lo stato di visualizzazione della barra degli strumenti. La barra degli strumenti deve essere una finestra del frame di ID di finestra figlio di `AFX_IDW_TOOLBAR`. Il gestore del comando Alterna effettivamente la visibilità della finestra degli strumenti. `CFrameWnd::RecalcLayout`viene utilizzato per ridisegnare la finestra cornice con la barra degli strumenti nel suo nuovo stato. Il gestore dell'interfaccia utente di comando di aggiornamento verifica la voce di menu quando la barra degli strumenti è visibile.  
+     `CFrameWnd` gestisce questo comando e il gestore di comando di aggiornamento dell'interfaccia utente per attivare o disattivare lo stato di visualizzazione della barra degli strumenti. La barra degli strumenti deve essere una finestra del frame di ID di finestra figlio di `AFX_IDW_TOOLBAR`. Il gestore del comando Alterna effettivamente la visibilità della finestra degli strumenti. `CFrameWnd::RecalcLayout` Consente di ridisegnare la finestra cornice con la barra degli strumenti nel suo nuovo stato. Il gestore dell'interfaccia utente di comando di aggiornamento verifica la voce di menu quando la barra degli strumenti è visibile.  
   
      Personalizzazione di questo gestore del comando non è consigliata. Se si desidera aggiungere altre barre degli strumenti, è possibile clonare e modificare il gestore del comando e il gestore di comando di aggiornamento dell'interfaccia utente per questo comando.  
   
@@ -481,15 +476,15 @@ ms.lasthandoff: 12/21/2017
   
 -   **ID_INDICATOR_SCRL** : indicatore di blocco BLOC SCORR.  
   
--   **ID_INDICATOR_KANA** : indicatore di blocco dei caratteri KANA (applicabile solo ai sistemi giapponesi).  
+-   **ID_INDICATOR_KANA** : indicatore di blocco KANA (applicabile solo ai sistemi giapponesi).  
   
  Tutte e tre questi vengono implementati in **CFrameWnd::OnUpdateKeyIndicator**, un supporto di implementazione che utilizza l'ID di comando per eseguire il mapping alla chiave virtuale appropriata. Un'implementazione comune Abilita o disabilita (per i riquadri di stati disabilitati non = Nessun testo) il `CCmdUI` oggetto a seconda se la chiave virtuale appropriata è attualmente bloccata.  
   
  Personalizzazione di questo gestore del comando non è consigliata.  
   
--   **ID_INDICATOR_EXT: EXT**indicatore selezionare terminata.  
+-   **ID_INDICATOR_EXT: EXT**indicatore select è terminato.  
   
--   **ID_INDICATOR_OVR: Configurare**e**R**strike indicatore.  
+-   **ID_INDICATOR_OVR: Configurare**espulsione**R**strike indicatore.  
   
 -   **ID_INDICATOR_REC: REC**indicatore ording.  
   

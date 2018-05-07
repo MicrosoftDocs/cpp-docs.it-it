@@ -1,13 +1,10 @@
 ---
 title: Stili del controllo Slider | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - styles [MFC], CSliderCtrl
 - styles [MFC], slider controls
 ms.assetid: 64c491fc-5af1-4f97-ae30-854071b3dc02
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 747f5d55821c6911e80087ebbad65b2169e6fc49
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9fa099e050bd460756ff9e2584d37f9e628293f0
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="slider-control-styles"></a>Stili del controllo Slider
 Scorrimento (controlli) ([CSliderCtrl](../mfc/reference/csliderctrl-class.md)) può avere un orientamento verticale o orizzontale. Hanno segni di graduazione su entrambi i lati, entrambi i lati o nessuno. Possono inoltre essere utilizzati per specificare un intervallo di valori consecutivi. Queste proprietà vengono controllate utilizzando stili del controllo dispositivo di scorrimento, che è specificare quando si crea il dispositivo di scorrimento.  

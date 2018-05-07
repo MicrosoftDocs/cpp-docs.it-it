@@ -1,12 +1,9 @@
 ---
 title: Classe CKeyFrame | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CKeyFrame
@@ -35,17 +32,15 @@ helpviewer_keywords:
 - CKeyFrame [MFC], m_pExistingKeyFrame
 - CKeyFrame [MFC], m_pTransition
 ms.assetid: d050a562-20f6-4c65-8ce5-ccb3aef1a20e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 03cfc0766dd15a2762612cf5f41e72ffb1c1885f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9a9e9ff3d6e3e4bcccf8e9ebd46f791f60f1cc37
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ckeyframe-class"></a>Classe CKeyFrame
 Rappresenta un fotogramma chiave di animazione.  
@@ -96,7 +91,7 @@ class CKeyFrame : public CBaseKeyFrame;
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** afxanimationcontroller.h  
   
-##  <a name="addtostoryboard"></a>CKeyFrame::AddToStoryboard  
+##  <a name="addtostoryboard"></a>  CKeyFrame::AddToStoryboard  
  Aggiunge un fotogramma chiave di uno storyboard.  
   
 ```  
@@ -118,7 +113,7 @@ virtual BOOL AddToStoryboard(
 ### <a name="remarks"></a>Note  
  Questo metodo aggiunge un fotogramma chiave allo storyboard. Se dipende altri fotogrammi chiave o una transizione e bDeepAdd è impostato su TRUE, questo metodo tenta di aggiungerli in modo ricorsivo.  
   
-##  <a name="addtostoryboardaftertransition"></a>CKeyFrame::AddToStoryboardAfterTransition  
+##  <a name="addtostoryboardaftertransition"></a>  CKeyFrame::AddToStoryboardAfterTransition  
  Aggiunge un fotogramma chiave nello storyboard dopo la transizione.  
   
 ```  
@@ -140,7 +135,7 @@ BOOL AddToStoryboardAfterTransition(
 ### <a name="remarks"></a>Note  
  Questa funzione viene chiamata dal framework per aggiungere un fotogramma chiave nello storyboard dopo la transizione.  
   
-##  <a name="addtostoryboardatoffset"></a>CKeyFrame::AddToStoryboardAtOffset  
+##  <a name="addtostoryboardatoffset"></a>  CKeyFrame::AddToStoryboardAtOffset  
  Aggiunge un fotogramma chiave allo storyboard all'offset.  
   
 ```  
@@ -162,7 +157,7 @@ virtual BOOL AddToStoryboardAtOffset(
 ### <a name="remarks"></a>Note  
  Questa funzione viene chiamata dal framework per aggiungere un fotogramma chiave allo storyboard all'offset.  
   
-##  <a name="ckeyframe"></a>CKeyFrame::CKeyFrame  
+##  <a name="ckeyframe"></a>  CKeyFrame::CKeyFrame  
  Costruisce un fotogramma chiave che dipende da una transizione.  
   
 ```  
@@ -187,7 +182,7 @@ CKeyFrame(
 ### <a name="remarks"></a>Note  
  Al termine della transizione specificata, il fotogramma chiave costruito rappresenterà un momento specifico all'interno di uno storyboard.  
   
-##  <a name="getexistingkeyframe"></a>CKeyFrame::GetExistingKeyframe  
+##  <a name="getexistingkeyframe"></a>  CKeyFrame::GetExistingKeyframe  
  Restituisce un puntatore a un fotogramma chiave che dipende da questo fotogramma chiave.  
   
 ```  
@@ -200,7 +195,7 @@ CBaseKeyFrame* GetExistingKeyframe();
 ### <a name="remarks"></a>Note  
  Si tratta di una funzione di accesso a un fotogramma chiave che dipende da questo fotogramma chiave.  
   
-##  <a name="getoffset"></a>CKeyFrame::GetOffset  
+##  <a name="getoffset"></a>  CKeyFrame::GetOffset  
  Restituisce un offset da altro fotogramma chiave.  
   
 ```  
@@ -213,7 +208,7 @@ UI_ANIMATION_SECONDS GetOffset();
 ### <a name="remarks"></a>Note  
  Questo metodo deve essere chiamato per determinare un offset espresso in secondi da altro fotogramma chiave.  
   
-##  <a name="gettransition"></a>CKeyFrame::GetTransition  
+##  <a name="gettransition"></a>  CKeyFrame::GetTransition  
  Restituisce un puntatore a una transizione di che questo fotogramma chiave dipende.  
   
 ```  
@@ -226,21 +221,21 @@ CBaseTransition* GetTransition();
 ### <a name="remarks"></a>Note  
  Si tratta di una funzione di accesso a una transizione di che questo fotogramma chiave dipende.  
   
-##  <a name="m_offset"></a>CKeyFrame::m_offset  
+##  <a name="m_offset"></a>  CKeyFrame::m_offset  
  Specifica l'offset di questo fotogramma chiave da un fotogramma chiave archiviato in m_pExistingKeyFrame.  
   
 ```  
 UI_ANIMATION_SECONDS m_offset;  
 ```  
   
-##  <a name="m_pexistingkeyframe"></a>CKeyFrame::m_pExistingKeyFrame  
+##  <a name="m_pexistingkeyframe"></a>  CKeyFrame::m_pExistingKeyFrame  
  Archivia un puntatore a un fotogramma chiave esistente. Per creare uno storyboard con m_offset al fotogramma chiave esistente, viene aggiunto questo fotogramma chiave.  
   
 ```  
 CBaseKeyFrame* m_pExistingKeyFrame;  
 ```  
   
-##  <a name="m_ptransition"></a>CKeyFrame::m_pTransition  
+##  <a name="m_ptransition"></a>  CKeyFrame::m_pTransition  
  Archivia un puntatore a una transizione che inizia in corrispondenza di questo fotogramma chiave.  
   
 ```  

@@ -1,13 +1,10 @@
 ---
 title: Tipi di elenchi immagini | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - image lists [MFC], types of
 - CImageList class [MFC], types
 ms.assetid: bee5e7c3-78f5-4037-a136-9c50d67cdee5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 84a2118978d5ebd722d4fe56cdeec2aa0f74a94e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8988dc55bbbaa1d446ee14bf78a0cd799b422834
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="types-of-image-lists"></a>Tipi di elenchi immagini
 Esistono due tipi di elenchi immagini ([CImageList](../mfc/reference/cimagelist-class.md)): non mascherata e mascherati. Un "elenco di immagine non mascherata" è costituito da una bitmap a colori che contiene una o più immagini. Un "elenco di immagini mascherate" è costituito da due bitmap della stessa dimensione. La prima è una bitmap a colori che contiene le immagini e la seconda è una bitmap monocromatica che contiene una serie di maschere: uno per ogni immagine della prima bitmap.  

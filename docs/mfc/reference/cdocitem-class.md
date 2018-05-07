@@ -1,12 +1,9 @@
 ---
 title: Classe CDocItem | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CDocItem
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - CDocItem [MFC], GetDocument
 - CDocItem [MFC], IsBlank
 ms.assetid: 84fb8610-a4c8-4211-adc0-e70e8d002c11
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8a4987554965674612eaf8d9aa78c659f7f28b75
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 724e5017f51a3527e2ad81bcf707179053cc3e88
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdocitem-class"></a>Classe CDocItem
 Classe di base per elementi del documento, ovvero i componenti dei dati di un documento.  
@@ -50,7 +45,7 @@ class CDocItem : public CCmdTarget
 |[CDocItem::IsBlank](#isblank)|Determina se l'elemento contiene le informazioni.|  
   
 ## <a name="remarks"></a>Note  
- `CDocItem`gli oggetti vengono utilizzati per rappresentare gli elementi OLE nei documenti di client e server.  
+ `CDocItem` gli oggetti vengono utilizzati per rappresentare elementi OLE nei documenti di client e server.  
   
  Per ulteriori informazioni, vedere l'articolo [contenitori: implementazione di un contenitore](../../mfc/containers-implementing-a-container.md).  
   
@@ -64,7 +59,7 @@ class CDocItem : public CCmdTarget
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** AFXOLE. h  
   
-##  <a name="getdocument"></a>CDocItem::GetDocument  
+##  <a name="getdocument"></a>  CDocItem::GetDocument  
  Chiamare questa funzione per ottenere il documento che contiene l'elemento.  
   
 ```  
@@ -77,7 +72,7 @@ CDocument* GetDocument() const;
 ### <a name="remarks"></a>Note  
  Questa funzione è sottoposta a override nelle classi derivate [COleClientItem](../../mfc/reference/coleclientitem-class.md) e [COleServerItem](../../mfc/reference/coleserveritem-class.md), che restituisce un puntatore a una delle due un [COleDocument](../../mfc/reference/coledocument-class.md), [ COleLinkingDoc](../../mfc/reference/colelinkingdoc-class.md), o un [COleServerDoc](../../mfc/reference/coleserverdoc-class.md) oggetto.  
   
-##  <a name="isblank"></a>CDocItem::IsBlank  
+##  <a name="isblank"></a>  CDocItem::IsBlank  
  Chiamato dal framework quando si verifica la serializzazione predefinita.  
   
 ```  

@@ -1,12 +1,9 @@
 ---
 title: Classe CPrintDialogEx | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CPrintDialogEx
@@ -47,17 +44,15 @@ helpviewer_keywords:
 - CPrintDialogEx [MFC], PrintSelection
 - CPrintDialogEx [MFC], m_pdex
 ms.assetid: 1d506703-ee1c-44cc-b4ce-4e778fec26b8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3aefa1a0e879cbacbf3a971bff2887f72d13f303
-ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
+ms.openlocfilehash: 7f511eb1414a5cd5e22b9a3e05f81caef15b908e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cprintdialogex-class"></a>Classe CPrintDialogEx
 Incapsula i servizi forniti dalla finestra delle proprietà di stampa Windows.  
@@ -209,12 +204,12 @@ BOOL GetDefaults();
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- **TRUE** se ha esito positivo, in caso contrario **FALSE**.  
+ **TRUE** se l'operazione riesce, in caso contrario **FALSE**.  
   
 ### <a name="remarks"></a>Note  
  Crea un contesto di dispositivo stampante (DC) dal [DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565) e [DEVNAMES](../../mfc/reference/devnames-structure.md) strutture.  
   
- `GetDefaults`non viene visualizzata la finestra delle proprietà di stampa. Invece, viene impostato il **hDevNames** e **hDevMode** i membri di [m_pdex](#m_pdex) agli handle per il [DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565) e [DEVNAMES ](../../mfc/reference/devnames-structure.md) strutture che vengono inizializzate per la stampante predefinita di sistema. Entrambi **hDevNames** e **hDevMode** devono essere NULL o `GetDefaults` ha esito negativo.  
+ `GetDefaults` non viene visualizzata la finestra delle proprietà di stampa. Invece, viene impostato il **hDevNames** e **hDevMode** i membri di [m_pdex](#m_pdex) agli handle per il [DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565) e [DEVNAMES ](../../mfc/reference/devnames-structure.md) strutture che vengono inizializzate per la stampante predefinita di sistema. Entrambi **hDevNames** e **hDevMode** devono essere NULL o `GetDefaults` ha esito negativo.  
   
  Se il **PD_RETURNDC** flag è impostato, questa funzione non restituirà solo **hDevNames** e **hDevMode** (si trova **m_pdex.hDevNames** e **m_pdex.hDevMode**) al chiamante, ma restituirà anche una stampante in **m_pdex.hDC**. È responsabilità del chiamante per eliminare la stampante e chiamare Windows [GlobalFree](http://msdn.microsoft.com/library/windows/desktop/aa366579) funzione su handle quando si è concluso il `CPrintDialogEx` oggetto.  
   
@@ -317,7 +312,7 @@ BOOL PrintCurrentPage() const;
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- **TRUE** se **stampa pagina corrente** selezionato nella finestra di dialogo Stampa; in caso contrario **FALSE**.  
+ **TRUE** se **stampare pagina corrente** è selezionata nella finestra di dialogo Stampa; in caso contrario **FALSE**.  
   
 ##  <a name="printrange"></a>  CPrintDialogEx::PrintRange  
  Chiamare questa funzione dopo la chiamata `DoModal` per determinare se visualizzare solo un intervallo di pagine del documento.  
@@ -327,7 +322,7 @@ BOOL PrintRange() const;
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- **TRUE** se solo un intervallo di pagine del documento devono essere stampati; in caso contrario **FALSE**.  
+ **TRUE** se solo un intervallo di pagine nel documento vengono stampate; in caso contrario **FALSE**.  
   
 ### <a name="remarks"></a>Note  
  Gli intervalli di pagine specificato possono essere determinati da [m_pdex](#m_pdex) (vedere **nPageRanges**, **nMaxPageRanges**, e **lpPageRanges** nel [ PRINTDLGEX](http://msdn.microsoft.com/library/windows/desktop/ms646844) struttura in Windows SDK).  

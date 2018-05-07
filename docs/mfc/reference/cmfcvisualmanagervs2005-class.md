@@ -1,12 +1,9 @@
 ---
 title: Classe CMFCVisualManagerVS2005 | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCVisualManagerVS2005
@@ -47,20 +44,18 @@ helpviewer_keywords:
 - CMFCVisualManagerVS2005 [MFC], OnFillMiniFrameCaption
 - CMFCVisualManagerVS2005 [MFC], OnUpdateSystemColors
 ms.assetid: ea39b9ae-327e-4a51-bce7-dc84c78f005b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9678ef4472f2bcb44a04d3484988033542aae243
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4a48cbe09d493ecc86bf8927ad4c66fd03d7662f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcvisualmanagervs2005-class"></a>Classe CMFCVisualManagerVS2005
-`CMFCVisualManagerVS2005`fornisce a un'applicazione un aspetto di Microsoft Visual Studio 2005.  
+`CMFCVisualManagerVS2005` fornisce a un'applicazione un aspetto di Microsoft Visual Studio 2005.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -117,7 +112,7 @@ class CMFCVisualManagerVS2005 : public CMFCVisualManagerOffice2003
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** afxvisualmanagervs2005.h  
   
-##  <a name="getdockingtabsborderssize"></a>CMFCVisualManagerVS2005::GetDockingTabsBordersSize  
+##  <a name="getdockingtabsborderssize"></a>  CMFCVisualManagerVS2005::GetDockingTabsBordersSize  
 
   
 ```  
@@ -128,7 +123,7 @@ virtual int GetDockingTabsBordersSize();
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="getmditabsborderssize"></a>CMFCVisualManagerVS2005::GetMDITabsBordersSize  
+##  <a name="getmditabsborderssize"></a>  CMFCVisualManagerVS2005::GetMDITabsBordersSize  
 
   
 ```  
@@ -139,7 +134,7 @@ virtual int GetMDITabsBordersSize();
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="getpropertygridgroupcolor"></a>CMFCVisualManagerVS2005::GetPropertyGridGroupColor  
+##  <a name="getpropertygridgroupcolor"></a>  CMFCVisualManagerVS2005::GetPropertyGridGroupColor  
 
   
 ```  
@@ -153,7 +148,7 @@ virtual COLORREF GetPropertyGridGroupColor(CMFCPropertyGridCtrl* pPropList);
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="gettabframecolors"></a>CMFCVisualManagerVS2005::GetTabFrameColors  
+##  <a name="gettabframecolors"></a>  CMFCVisualManagerVS2005::GetTabFrameColors  
 
   
 ```  
@@ -182,7 +177,7 @@ virtual void GetTabFrameColors(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="hasoverlappedautohidebuttons"></a>CMFCVisualManagerVS2005::HasOverlappedAutoHideButtons  
+##  <a name="hasoverlappedautohidebuttons"></a>  CMFCVisualManagerVS2005::HasOverlappedAutoHideButtons  
 
   
 ```  
@@ -193,7 +188,7 @@ virtual BOOL HasOverlappedAutoHideButtons() const;
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="ondrawautohidebuttonborder"></a>CMFCVisualManagerVS2005::OnDrawAutoHideButtonBorder  
+##  <a name="ondrawautohidebuttonborder"></a>  CMFCVisualManagerVS2005::OnDrawAutoHideButtonBorder  
 
   
 ```  
@@ -212,7 +207,7 @@ virtual void OnDrawAutoHideButtonBorder(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="ondrawcaptionbutton"></a>CMFCVisualManagerVS2005::OnDrawCaptionButton  
+##  <a name="ondrawcaptionbutton"></a>  CMFCVisualManagerVS2005::OnDrawCaptionButton  
 
   
 ```  
@@ -237,7 +232,7 @@ virtual void OnDrawCaptionButton(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="ondrawpanecaption"></a>CMFCVisualManagerVS2005::OnDrawPaneCaption  
+##  <a name="ondrawpanecaption"></a>  CMFCVisualManagerVS2005::OnDrawPaneCaption  
 
   
 ```  
@@ -260,7 +255,7 @@ virtual COLORREF OnDrawPaneCaption(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="ondrawseparator"></a>CMFCVisualManagerVS2005::OnDrawSeparator  
+##  <a name="ondrawseparator"></a>  CMFCVisualManagerVS2005::OnDrawSeparator  
 
   
 ```  
@@ -279,7 +274,7 @@ virtual void OnDrawSeparator(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="ondrawtab"></a>CMFCVisualManagerVS2005::OnDrawTab  
+##  <a name="ondrawtab"></a>  CMFCVisualManagerVS2005::OnDrawTab  
 
   
 ```  
@@ -300,7 +295,7 @@ virtual void OnDrawTab(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="ondrawtoolboxframe"></a>CMFCVisualManagerVS2005::OnDrawToolBoxFrame  
+##  <a name="ondrawtoolboxframe"></a>  CMFCVisualManagerVS2005::OnDrawToolBoxFrame  
 
   
 ```  
@@ -315,7 +310,7 @@ virtual void OnDrawToolBoxFrame(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="onerasetabsarea"></a>CMFCVisualManagerVS2005::OnEraseTabsArea  
+##  <a name="onerasetabsarea"></a>  CMFCVisualManagerVS2005::OnEraseTabsArea  
 
   
 ```  
@@ -332,7 +327,7 @@ virtual void OnEraseTabsArea(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="onfillautohidebuttonbackground"></a>CMFCVisualManagerVS2005::OnFillAutoHideButtonBackground  
+##  <a name="onfillautohidebuttonbackground"></a>  CMFCVisualManagerVS2005::OnFillAutoHideButtonBackground  
 
   
 ```  
@@ -349,7 +344,7 @@ virtual void OnFillAutoHideButtonBackground(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="onfillhighlightedarea"></a>CMFCVisualManagerVS2005::OnFillHighlightedArea  
+##  <a name="onfillhighlightedarea"></a>  CMFCVisualManagerVS2005::OnFillHighlightedArea  
 
   
 ```  
@@ -368,7 +363,7 @@ virtual void OnFillHighlightedArea(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="onfillminiframecaption"></a>CMFCVisualManagerVS2005::OnFillMiniFrameCaption  
+##  <a name="onfillminiframecaption"></a>  CMFCVisualManagerVS2005::OnFillMiniFrameCaption  
 
   
 ```  
@@ -389,7 +384,7 @@ virtual COLORREF OnFillMiniFrameCaption(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="onupdatesystemcolors"></a>CMFCVisualManagerVS2005::OnUpdateSystemColors  
+##  <a name="onupdatesystemcolors"></a>  CMFCVisualManagerVS2005::OnUpdateSystemColors  
 
   
 ```  

@@ -1,12 +1,9 @@
 ---
 title: Classe CWaitCursor | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CWaitCursor
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - CWaitCursor [MFC], CWaitCursor
 - CWaitCursor [MFC], Restore
 ms.assetid: 5dfae2ff-d7b6-4383-b0ad-91e0868c67b3
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1cf5c850158e445e7695b85e540b1e0c162e621c
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: 1e7bc4755d2e96c78735f1b3ef175ff3603686fb
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cwaitcursor-class"></a>Classe CWaitCursor
 Fornisce un modo per mostrare in una riga un cursore di attesa, in genere visualizzato come una clessidra, mentre si sta eseguendo un'operazione di lunga durata.  
@@ -55,7 +50,7 @@ class CWaitCursor
 |[CWaitCursor::Restore](#restore)|Ripristina il cursore di attesa dopo che è stato modificato.|  
   
 ## <a name="remarks"></a>Note  
- `CWaitCursor`non dispone di una classe di base.  
+ `CWaitCursor` non dispone di una classe basa.  
   
  Windows buone pratiche di programmazione richiedono che un cursore di attesa visualizzare ogni volta che si sta eseguendo un'operazione che richiede una notevole quantità di tempo.  
   
@@ -82,7 +77,7 @@ class CWaitCursor
 ## <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFCWindowing#62](../../mfc/reference/codesnippet/cpp/cwaitcursor-class_1.cpp)]  
   
-##  <a name="cwaitcursor"></a>CWaitCursor::CWaitCursor  
+##  <a name="cwaitcursor"></a>  CWaitCursor::CWaitCursor  
  Per visualizzare un cursore di attesa, è sufficiente dichiarare un `CWaitCursor` oggetto prima che il codice che esegue l'operazione di lunga durata.  
   
 ```  
@@ -102,7 +97,7 @@ CWaitCursor();
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFCWindowing#63](../../mfc/reference/codesnippet/cpp/cwaitcursor-class_2.cpp)]  
   
-##  <a name="restore"></a>CWaitCursor::Restore  
+##  <a name="restore"></a>  CWaitCursor::Restore  
  Per ripristinare il cursore di attesa, chiamare questa funzione dopo l'esecuzione di un'operazione, ad esempio la visualizzazione di una finestra di messaggio o nella finestra di dialogo potrebbe cambiare il cursore di attesa per un altro cursore.  
   
 ```  

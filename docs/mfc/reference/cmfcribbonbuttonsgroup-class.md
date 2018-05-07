@@ -1,12 +1,9 @@
 ---
 title: Classe CMFCRibbonButtonsGroup | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCRibbonButtonsGroup
@@ -39,17 +36,15 @@ helpviewer_keywords:
 - CMFCRibbonButtonsGroup [MFC], SetImages
 - CMFCRibbonButtonsGroup [MFC], SetParentCategory
 ms.assetid: b993d93e-fc1a-472f-a87f-1d7b7b499845
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 45851ea66e324f57cb7df3daaa99eb8a1b8b9311
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f7a38e9ba4c01e5f3d92640f5ec55c63a45d70fc
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcribbonbuttonsgroup-class"></a>CMFCRibbonButtonsGroup (classe)
 La `CMFCRibbonButtonsGroup` classe consente di organizzare un set di pulsanti della barra multifunzione in un gruppo. Tutti i pulsanti nel gruppo sono direttamente adiacenti l'uno rispetto all'altro in senso orizzontale e racchiusi da un bordo.  
@@ -102,7 +97,7 @@ class CMFCRibbonButtonsGroup : public CMFCRibbonBaseElement
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** afxribbonbuttonsgroup. h  
   
-##  <a name="addbutton"></a>CMFCRibbonButtonsGroup::AddButton  
+##  <a name="addbutton"></a>  CMFCRibbonButtonsGroup::AddButton  
  Aggiunge un pulsante a un gruppo.  
   
 ```  
@@ -113,7 +108,7 @@ void AddButton(CMFCRibbonBaseElement* pButton);
  [in] `pButton`  
  Un puntatore a un pulsante da aggiungere.  
   
-##  <a name="addbuttons"></a>CMFCRibbonButtonsGroup::AddButtons  
+##  <a name="addbuttons"></a>  CMFCRibbonButtonsGroup::AddButtons  
  Aggiunge un elenco di pulsanti a un gruppo.  
   
 ```  
@@ -125,7 +120,7 @@ void AddButtons(
  [in] `lstButtons`  
  Un elenco dei puntatori ai pulsanti che si desidera aggiungere.  
   
-##  <a name="cmfcribbonbuttonsgroup"></a>CMFCRibbonButtonsGroup::CMFCRibbonButtonsGroup  
+##  <a name="cmfcribbonbuttonsgroup"></a>  CMFCRibbonButtonsGroup::CMFCRibbonButtonsGroup  
  Costruisce un oggetto `CMFCRibbonButtonsGroup`.  
   
 ```  
@@ -141,7 +136,7 @@ CMFCRibbonButtonsGroup(CMFCRibbonBaseElement* pButton);
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="getbutton"></a>CMFCRibbonButtonsGroup::GetButton  
+##  <a name="getbutton"></a>  CMFCRibbonButtonsGroup::GetButton  
  Restituisce un puntatore al pulsante che si trova in corrispondenza dell'indice specificato.  
   
 ```  
@@ -153,11 +148,11 @@ CMFCRibbonBaseElement* GetButton(int i) const;
  Un indice in base zero di un pulsante da restituire.  
   
 ### <a name="return-value"></a>Valore restituito  
- Puntatore al pulsante che si trova in corrispondenza dell'indice specificato. `NULL`Se l'indice specificato è compreso nell'intervallo.  
+ Puntatore al pulsante che si trova in corrispondenza dell'indice specificato. `NULL` Se l'indice specificato è compreso nell'intervallo.  
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="getcount"></a>CMFCRibbonButtonsGroup::GetCount  
+##  <a name="getcount"></a>  CMFCRibbonButtonsGroup::GetCount  
  Restituisce il numero di pulsanti nel gruppo.  
   
 ```  
@@ -167,7 +162,7 @@ int GetCount() const;
 ### <a name="return-value"></a>Valore restituito  
  Il numero di pulsanti nel gruppo.  
   
-##  <a name="getimagesize"></a>CMFCRibbonButtonsGroup::GetImageSize  
+##  <a name="getimagesize"></a>  CMFCRibbonButtonsGroup::GetImageSize  
  Recupera le dimensioni immagine di origine di protetto `CMFCToolBarImages` membro `m_Images`.  
   
 ```  
@@ -179,7 +174,7 @@ const CSize GetImageSize() const;
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="getregularsize"></a>CMFCRibbonButtonsGroup::GetRegularSize  
+##  <a name="getregularsize"></a>  CMFCRibbonButtonsGroup::GetRegularSize  
  Recupera le dimensioni massime dell'elemento di gruppo della barra multifunzione.  
   
 ```  
@@ -194,7 +189,7 @@ virtual CSize GetRegularSize(CDC* pDC);
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="hasimages"></a>CMFCRibbonButtonsGroup::HasImages  
+##  <a name="hasimages"></a>  CMFCRibbonButtonsGroup::HasImages  
  I report se il `CMFCRibbonButtonsGroup` oggetto contiene le immagini della barra degli strumenti.  
   
 ```  
@@ -206,7 +201,7 @@ BOOL HasImages() const;
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="ondrawimage"></a>CMFCRibbonButtonsGroup::OnDrawImage  
+##  <a name="ondrawimage"></a>  CMFCRibbonButtonsGroup::OnDrawImage  
  Disegna l'immagine appropriata per un pulsante specificato, a seconda che il pulsante sia normale, evidenziata o disabilitato.  
   
 ```  
@@ -232,7 +227,7 @@ virtual void OnDrawImage(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="removeall"></a>CMFCRibbonButtonsGroup::RemoveAll  
+##  <a name="removeall"></a>  CMFCRibbonButtonsGroup::RemoveAll  
  Rimuove tutti i pulsanti dal `CMFCRibbonButtonsGroup` oggetto.  
   
 ```  
@@ -241,7 +236,7 @@ void RemoveAll();
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="setimages"></a>CMFCRibbonButtonsGroup::SetImages  
+##  <a name="setimages"></a>  CMFCRibbonButtonsGroup::SetImages  
  Assegna le immagini per il gruppo di pulsanti della barra multifunzione.  
   
 ```  
@@ -267,7 +262,7 @@ void SetImages(
 > [!NOTE]
 >  Le immagini di frequente sono immagini che vengono visualizzate quando il puntatore viene posizionato sul pulsante. Le immagini disabilitate sono immagini che vengono visualizzate quando il pulsante è disabilitato.  
   
-##  <a name="setparentcategory"></a>CMFCRibbonButtonsGroup::SetParentCategory  
+##  <a name="setparentcategory"></a>  CMFCRibbonButtonsGroup::SetParentCategory  
  Imposta l'elemento padre `CMFCRibbonCategory` del `CMFCRibbonButtonsGroup` oggetto e tutti i pulsanti in esso contenuti.  
   
 ```  

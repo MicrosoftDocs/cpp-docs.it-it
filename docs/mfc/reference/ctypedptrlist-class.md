@@ -1,12 +1,9 @@
 ---
 title: CTypedPtrList (classe) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CTypedPtrList
@@ -35,17 +32,15 @@ helpviewer_keywords:
 - CTypedPtrList [MFC], RemoveTail
 - CTypedPtrList [MFC], SetAt
 ms.assetid: c273096e-1756-4340-864b-4a08b674a65e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 318373755ff05667d94b051dabf42822b34894b0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: afb32a662c538526c4fe26f6abf46e56a42de728
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ctypedptrlist-class"></a>Classe CTypedPtrList
 Fornisce un "wrapper" indipendente dai tipi per gli oggetti della classe `CPtrList`.  
@@ -111,7 +106,7 @@ class CTypedPtrList : public BASE_CLASS
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** afxtempl.h  
   
-##  <a name="addhead"></a>CTypedPtrList::AddHead  
+##  <a name="addhead"></a>  CTypedPtrList::AddHead  
  Questa funzione membro chiama `BASE_CLASS` **:: AddHead**.  
   
 ```  
@@ -138,7 +133,7 @@ void AddHead(CTypedPtrList<BASE_CLASS, TYPE>* pNewList);
 ### <a name="remarks"></a>Note  
  La prima versione aggiunge un nuovo elemento prima l'elemento head dell'elenco. La seconda versione aggiunge un altro elenco di elementi che precedono l'intestazione.  
   
-##  <a name="addtail"></a>CTypedPtrList::AddTail  
+##  <a name="addtail"></a>  CTypedPtrList::AddTail  
  Questa funzione membro chiama `BASE_CLASS` **:: AddTail**.  
   
 ```  
@@ -165,7 +160,7 @@ void AddTail(CTypedPtrList<BASE_CLASS, TYPE>* pNewList);
 ### <a name="remarks"></a>Note  
  La prima versione aggiunge un nuovo elemento dopo la fine dell'elenco. La seconda versione aggiunge un altro elenco di elementi dopo la fine dell'elenco.  
   
-##  <a name="getat"></a>CTypedPtrList::GetAt  
+##  <a name="getat"></a>  CTypedPtrList::GetAt  
  Una variabile di tipo **posizione** è una chiave per l'elenco.  
   
 ```  
@@ -177,7 +172,7 @@ TYPE GetAt(POSITION position) const;
  *TIPO*  
  Parametro di modello che specifica il tipo di elementi archiviati nell'elenco.  
   
- *posizione*  
+ *Posizione*  
  Oggetto **posizione** valore restituito da una precedente `GetHeadPosition` o **trovare** chiamata di funzione membro.  
   
 ### <a name="return-value"></a>Valore restituito  
@@ -186,13 +181,13 @@ TYPE GetAt(POSITION position) const;
  Se l'elenco è possibile accedere direttamente o tramite un puntatore a un `CTypedPtrList`, quindi `GetAt` restituisce un riferimento a un puntatore di tipo specificato dal parametro di modello *tipo*. Questo consente la funzione può essere utilizzata su entrambi i lati di un'istruzione di assegnazione e pertanto le voci dell'elenco da modificare.  
   
 ### <a name="remarks"></a>Note  
- Non ha lo stesso come un indice e non è possibile operare su un **posizione** valore manualmente. `GetAt`Recupera il `CObject` puntatore associata a una determinata posizione.  
+ Non ha lo stesso come un indice e non è possibile operare su un **posizione** valore manualmente. `GetAt` Recupera il `CObject` indicatore di misura associato a una determinata posizione.  
   
  È necessario assicurarsi che il **posizione** valore rappresenta una posizione valida nell'elenco. Se non è valido, la versione di Debug della libreria di classi Microsoft Foundation asserzioni.  
   
  Questa funzione inline chiama `BASE_CLASS` **:: GetAt**.  
   
-##  <a name="gethead"></a>CTypedPtrList::GetHead  
+##  <a name="gethead"></a>  CTypedPtrList::GetHead  
  Ottiene il puntatore che rappresenta l'elemento head dell'elenco.  
   
 ```  
@@ -212,7 +207,7 @@ TYPE GetHead() const;
 ### <a name="remarks"></a>Note  
  È necessario assicurarsi che l'elenco non è vuota prima di chiamare `GetHead`. Se l'elenco è vuoto, la versione di Debug della libreria di classi Microsoft Foundation asserzioni. Utilizzare [IsEmpty](../../mfc/reference/coblist-class.md#isempty) per verificare che l'elenco contiene elementi.  
   
-##  <a name="getnext"></a>CTypedPtrList::GetNext  
+##  <a name="getnext"></a>  CTypedPtrList::GetNext  
  Ottiene l'elemento di elenco, identificato da `rPosition`, quindi imposta `rPosition` per il **posizione** valore della voce successiva nell'elenco.  
   
 ```  
@@ -241,7 +236,7 @@ TYPE GetNext(POSITION& rPosition) const;
   
  È possibile rimuovere un elemento durante un'iterazione. Per vedere l'esempio [CObList::RemoveAt](../../mfc/reference/coblist-class.md#removeat).  
   
-##  <a name="getprev"></a>CTypedPtrList::GetPrev  
+##  <a name="getprev"></a>  CTypedPtrList::GetPrev  
  Ottiene l'elemento di elenco, identificato da `rPosition`, quindi imposta `rPosition` per il **posizione** valore della voce nell'elenco precedente.  
   
 ```  
@@ -268,7 +263,7 @@ TYPE GetPrev(POSITION& rPosition) const;
   
  Se l'elemento recuperato è il primo nell'elenco, quindi il nuovo valore di `rPosition` è impostato su **NULL**.  
   
-##  <a name="gettail"></a>CTypedPtrList::GetTail  
+##  <a name="gettail"></a>  CTypedPtrList::GetTail  
  Ottiene il puntatore che rappresenta l'elemento head dell'elenco.  
   
 ```  
@@ -288,7 +283,7 @@ TYPE GetTail() const;
 ### <a name="remarks"></a>Note  
  È necessario assicurarsi che l'elenco non è vuota prima di chiamare `GetTail`. Se l'elenco è vuoto, la versione di Debug della libreria di classi Microsoft Foundation asserzioni. Utilizzare [IsEmpty](../../mfc/reference/coblist-class.md#isempty) per verificare che l'elenco contiene elementi.  
   
-##  <a name="removehead"></a>CTypedPtrList::RemoveHead  
+##  <a name="removehead"></a>  CTypedPtrList::RemoveHead  
  Rimuove l'elemento head dell'elenco e lo restituisce.  
   
 ```  
@@ -305,7 +300,7 @@ TYPE RemoveHead();
 ### <a name="remarks"></a>Note  
  È necessario assicurarsi che l'elenco non è vuota prima di chiamare `RemoveHead`. Se l'elenco è vuoto, la versione di Debug della libreria di classi Microsoft Foundation asserzioni. Utilizzare [IsEmpty](../../mfc/reference/coblist-class.md#isempty) per verificare che l'elenco contiene elementi.  
   
-##  <a name="removetail"></a>CTypedPtrList::RemoveTail  
+##  <a name="removetail"></a>  CTypedPtrList::RemoveTail  
  Rimuove l'elemento dalla coda dell'elenco e lo restituisce.  
   
 ```  
@@ -322,7 +317,7 @@ TYPE RemoveTail();
 ### <a name="remarks"></a>Note  
  È necessario assicurarsi che l'elenco non è vuota prima di chiamare `RemoveTail`. Se l'elenco è vuoto, la versione di Debug della libreria di classi Microsoft Foundation asserzioni. Utilizzare [IsEmpty](../../mfc/reference/coblist-class.md#isempty) per verificare che l'elenco contiene elementi.  
   
-##  <a name="setat"></a>CTypedPtrList::SetAt  
+##  <a name="setat"></a>  CTypedPtrList::SetAt  
  Questa funzione membro chiama `BASE_CLASS` **:: SetAt**.  
   
 ```  
@@ -340,7 +335,7 @@ void SetAt(POSITION pos, TYPE newElement);
  Il puntatore all'oggetto da scrivere nell'elenco.  
   
 ### <a name="remarks"></a>Note  
- Una variabile di tipo **posizione** è una chiave per l'elenco. Non ha lo stesso come un indice e non è possibile operare su un **posizione** valore manualmente. `SetAt`Scrive il puntatore all'oggetto della posizione specificata nell'elenco.  
+ Una variabile di tipo **posizione** è una chiave per l'elenco. Non ha lo stesso come un indice e non è possibile operare su un **posizione** valore manualmente. `SetAt` Scrive il puntatore all'oggetto della posizione specificata nell'elenco.  
   
  È necessario assicurarsi che il **posizione** valore rappresenta una posizione valida nell'elenco. Se non è valido, la versione di Debug della libreria di classi Microsoft Foundation asserzioni.  
   

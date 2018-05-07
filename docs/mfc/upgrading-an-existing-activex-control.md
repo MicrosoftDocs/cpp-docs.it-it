@@ -1,13 +1,10 @@
 ---
 title: Aggiornamento di un controllo ActiveX esistente | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -21,24 +18,22 @@ helpviewer_keywords:
 - upgrading ActiveX controls
 - licensing ActiveX controls
 ms.assetid: 4d12ddfa-b491-4f9f-a0b7-b51458e05651
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1a7b9c76ffd4366522dce366a165698bd3a26173
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: e40240367d3e8350cee030b2c08dc5a48325e05f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="upgrading-an-existing-activex-control"></a>Aggiornamento di un controllo ActiveX esistente
 Controlli ActiveX esistente (precedentemente controlli OLE) può essere utilizzato su Internet senza alcuna modifica. Tuttavia, è consigliabile modificare i controlli per migliorarne le prestazioni. Quando si utilizza il controllo in una pagina Web, esistono ulteriori considerazioni. Il file ocx e tutti i file di supporto devono essere nel computer di destinazione o essere scaricati attraverso Internet. In questo modo le dimensioni del codice e una parte importante di tempi di download. Download possono essere inseriti in un file CAB con firma digitale. È possibile contrassegnare il controllo come sicuri per lo script e come sicuri per l'inizializzazione.  
   
  In questo articolo vengono illustrati gli argomenti seguenti:  
   
-- [Codice di creazione di pacchetti per il download](#_core_packaging_code_for_downloading)  
+- [Codice di creazione del pacchetto per il download](#_core_packaging_code_for_downloading)  
   
 - [Contrassegno di un controllo come sicuro per script e inizializzazione](#_core_marking_a_control_safe_for_scripting_and_initializing)  
   
@@ -52,11 +47,11 @@ Controlli ActiveX esistente (precedentemente controlli OLE) può essere utilizza
   
  È inoltre possibile aggiungere le ottimizzazioni, come descritto in [controlli ActiveX: ottimizzazione](../mfc/mfc-activex-controls-optimization.md). Moniker può essere usato per scaricare le proprietà e BLOB di grandi dimensioni in modo asincrono, come descritto in [controlli ActiveX in Internet](../mfc/activex-controls-on-the-internet.md).  
   
-##  <a name="_core_packaging_code_for_downloading"></a>Codice di creazione di pacchetti per il download  
- Per ulteriori informazioni su questo argomento, vedere l'articolo della Knowledge Base "Packaging MFC controlli per utilizzare Over the Internet" (Q167158). È possibile trovare articoli della Knowledge Base in [http://support.microsoft.com/support](http://support.microsoft.com/support).  
+##  <a name="_core_packaging_code_for_downloading"></a> Codice di creazione del pacchetto per il download  
+ Per ulteriori informazioni su questo argomento, vedere l'articolo della Knowledge Base "Packaging MFC controlli per utilizzare Over the Internet" (Q167158). È possibile trovare articoli della Knowledge Base al [ http://support.microsoft.com/support ](http://support.microsoft.com/support).  
   
 ### <a name="the-codebase-tag"></a>Il Tag CODEBASE  
- Controlli ActiveX sono incorporati nelle pagine Web mediante il `<OBJECT>` tag. Il `CODEBASE` parametro il `<OBJECT>` tag specifica la posizione da cui scaricare il controllo. `CODEBASE`possibile fare riferimento a un numero di diversi tipi di file correttamente.  
+ Controlli ActiveX sono incorporati nelle pagine Web mediante il `<OBJECT>` tag. Il `CODEBASE` parametro il `<OBJECT>` tag specifica la posizione da cui scaricare il controllo. `CODEBASE` possibile fare riferimento a un numero di diversi tipi di file correttamente.  
   
 ### <a name="using-the-codebase-tag-with-an-ocx-file"></a>Utilizzo del Tag CODEBASE con un File OCX  
   
@@ -144,7 +139,7 @@ C:\CabDevKit\cabarc.exe -s 6144 N spindial.cab spindial.ocx spindial.inf
   
  A seconda della versione specificata, è possibile forzare il download del controllo. Per specifiche complete di `OBJECT` inclusi tag di `CODEBASE` parametro, vedere il W3C di riferimento.  
   
-##  <a name="_core_marking_a_control_safe_for_scripting_and_initializing"></a>Contrassegno di un controllo come sicuro per script e inizializzazione  
+##  <a name="_core_marking_a_control_safe_for_scripting_and_initializing"></a> Contrassegno di un controllo come sicuro per script e inizializzazione  
  Controlli ActiveX utilizzati nelle pagine Web devono essere contrassegnati come sicuri per lo scripting e per l'inizializzazione se sono in realtà-safe. Non eseguire operazioni dei / o disco o accedere direttamente la memoria o i registri di una macchina controllo sicuro.  
   
  I controlli possono essere contrassegnati come sicuri per lo scripting e per l'inizializzazione tramite il Registro di sistema. Modificare `DllRegisterServer` per aggiungere voci simili al seguente per contrassegnare il controllo come sicuri per la persistenza nel Registro di sistema e di scripting. Un metodo alternativo consiste nell'implementare `IObjectSafety`.  
@@ -168,7 +163,7 @@ HKEY_CLASSES_ROOT\CLSID\{06889605-B8D0-101A-91F1-00608CEAD5B3}\Implemented Categ
 HKEY_CLASSES_ROOT\CLSID\{06889605-B8D0-101A-91F1-00608CEAD5B3}\Implemented Categories\{7DD95802-9882-11CF-9FA9-00AA006C42C4}   
 ```  
   
-##  <a name="_core_licensing_issues"></a>Problemi relativi alle licenze  
+##  <a name="_core_licensing_issues"></a> Problemi relativi alle licenze  
  Se si desidera utilizzare un controllo concesso in licenza in una pagina Web, è necessario verificare che il contratto di licenza consente l'utilizzo su Internet e creare un file delle licenze (LPK) per essa.  
   
  Un controllo ActiveX con licenza non verrà caricato correttamente in una pagina HTML se il computer che esegue Internet Explorer non è concesso in licenza per utilizzare il controllo. Ad esempio, se un controllo con licenza è stato creato con Visual C++, la pagina HTML mediante il controllo verrà caricata correttamente nel computer in cui è stato compilato il controllo, ma non verrà caricata in un altro computer a meno che non sono incluse informazioni sulle licenze.  
@@ -181,7 +176,7 @@ HKEY_CLASSES_ROOT\CLSID\{06889605-B8D0-101A-91F1-00608CEAD5B3}\Implemented Categ
   
 -   Utilizzo del parametro Codebase  
   
- Per utilizzare un controllo concesso in licenza in una pagina HTML in un computer privo di licenza, è necessario generare un file delle licenze (LPK). Il file LPK contiene licenze in fase di esecuzione per i controlli con licenza nella pagina HTML. Questo file viene generato LPK_Tool. EXE, fornito con il SDK di ActiveX. Per ulteriori informazioni, vedere il sito Web MSDN all'indirizzo [http://msdn.microsoft.com](http://msdn.microsoft.com).  
+ Per utilizzare un controllo concesso in licenza in una pagina HTML in un computer privo di licenza, è necessario generare un file delle licenze (LPK). Il file LPK contiene licenze in fase di esecuzione per i controlli con licenza nella pagina HTML. Questo file viene generato LPK_Tool. EXE, fornito con il SDK di ActiveX. Per altre informazioni, vedere il sito Web MSDN all'indirizzo [ http://msdn.microsoft.com ](http://msdn.microsoft.com).  
   
 #### <a name="to-create-an-lpk-file"></a>Per creare un file LPK  
   
@@ -222,7 +217,7 @@ HKEY_CLASSES_ROOT\CLSID\{06889605-B8D0-101A-91F1-00608CEAD5B3}\Implemented Categ
   
  Per ulteriori informazioni sulle licenze di controllo, vedere [controlli ActiveX: licenze di un controllo ActiveX](../mfc/mfc-activex-controls-licensing-an-activex-control.md).  
   
-##  <a name="_core_signing_code"></a>Firma di codice  
+##  <a name="_core_signing_code"></a> Firma di codice  
  La firma del codice è progettato per identificare l'origine del codice e per garantire che il codice non sia stato modificato perché è stato firmato. A seconda delle impostazioni di sicurezza del browser, gli utenti potrebbero essere avvisati prima che il codice venga scaricato. Gli utenti possono scegliere di considerare attendibile determinati proprietari di certificati o le società, in cui case codice firmato da questi attendibili verranno scaricati senza alcun avviso. Il codice è firma digitale per evitare manomissioni.  
   
  Verificare che il codice finale è firmato in modo che il controllo può essere scaricato automaticamente senza visualizzare i messaggi di avviso di trust. Per informazioni dettagliate su come firmare il codice, vedere la documentazione su Authenticode in ActiveX SDK e vedere [firma di un File CAB](http://msdn.microsoft.com/en-us/04d8b47a-8f1c-4b54-ab90-730fcdc03747).  
@@ -231,7 +226,7 @@ HKEY_CLASSES_ROOT\CLSID\{06889605-B8D0-101A-91F1-00608CEAD5B3}\Implemented Categ
   
  Codice garanzie di firma digitale non è stato modificato dopo essere stato firmato. Un hash del codice viene eseguito e incorporato nel certificato. Questo hash in un secondo momento viene confrontato con un hash del codice eseguito dopo il codice è stato scaricato, ma prima dell'esecuzione. Le aziende, ad esempio Verisign possono fornire le chiavi pubbliche e private necessarie firmare il codice. ActiveX SDK viene fornito con MakeCert, un'utilità per la creazione di certificati di prova.  
   
-##  <a name="_core_managing_the_palette"></a>Gestione della tavolozza  
+##  <a name="_core_managing_the_palette"></a> Gestione della tavolozza  
  Contenitori di determinare la tavolozza e renderlo disponibile come proprietà di ambiente, **DISPID_AMBIENT_PALETTE**. Un contenitore (ad esempio, Internet Explorer) sceglie una tavolozza che viene utilizzata da tutti i controlli ActiveX in una pagina per determinare i propri tavolozza. Ciò impedisce lo sfarfallio visualizzato e presenta un aspetto coerente.  
   
  Può eseguire l'override di un controllo `OnAmbientPropertyChange` per gestire la notifica delle modifiche alla tavolozza.  
@@ -242,7 +237,7 @@ HKEY_CLASSES_ROOT\CLSID\{06889605-B8D0-101A-91F1-00608CEAD5B3}\Implemented Categ
   
  Contenitori meno recenti che non utilizzano la proprietà di ambiente tavolozza invierà `WM_QUERYNEWPALETTE` e `WM_PALETTECHANGED` i messaggi. Può eseguire l'override di un controllo `OnQueryNewPalette` e `OnPaletteChanged` per gestire questi messaggi.  
   
-##  <a name="_core_internet_explorer_browser_safety_levels_and_control_behavior"></a>Livelli di sicurezza del Browser Internet Explorer e il comportamento di controllo  
+##  <a name="_core_internet_explorer_browser_safety_levels_and_control_behavior"></a> Livelli di sicurezza del Browser Internet Explorer e il comportamento di controllo  
  Opzioni per il livello di sicurezza, configurabile dall'utente da un browser. Poiché le pagine Web può contenere contenuto attivo che potrebbe danneggiare computer il, i browser consentono all'utente di selezionare le opzioni per il livello di sicurezza. A seconda della modalità di che un browser implementa i livelli di sicurezza, un controllo non può essere scaricato affatto o verrà visualizzato un certificato o un messaggio di avviso per consentire all'utente di scegliere se utilizzare o meno il download del controllo in fase di esecuzione. Il comportamento dei controlli ActiveX con i livelli di sicurezza alto, medio e basso in Internet Explorer elencato di seguito.  
   
 ### <a name="high-safety-mode"></a>Modalità a sicurezza elevata  

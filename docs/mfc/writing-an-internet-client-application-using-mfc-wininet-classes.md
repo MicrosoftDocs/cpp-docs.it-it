@@ -1,13 +1,10 @@
 ---
 title: Scrittura di un'applicazione Client Internet con classi WinInet MFC | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - Internet applications [MFC], client applications
 - MFC, Internet applications
 ms.assetid: a2c4a40c-a94e-4b3e-9dbf-f8a8dc8e5428
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 07b97d4af18ff560a48aadb3ba71b61609f82a85
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 822b75ec71d79b6e40ec6b61a77239707c32ce39
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="writing-an-internet-client-application-using-mfc-wininet-classes"></a>Scrittura di un'applicazione client Internet con classi WinInet MFC
 La base per tutte le applicazioni client Internet è la sessione di Internet. MFC implementa le sessioni Internet come gli oggetti della classe [CInternetSession](../mfc/reference/cinternetsession-class.md). Utilizzare questa classe, è possibile creare una o più sessioni simultanee.  
@@ -39,7 +34,7 @@ La base per tutte le applicazioni client Internet è la sessione di Internet. MF
   
 -   Per una sessione di Internet, è necessario creare un'istanza di [CInternetSession](../mfc/reference/cinternetsession-class.md).  
   
--   Se la sessione Internet legge o scrive i dati, è necessario creare un'istanza di `CInternetFile` (o delle relative sottoclassi [CHttpFile](../mfc/reference/chttpfile-class.md) o [CGopherFile](../mfc/reference/cgopherfile-class.md)). Il modo più semplice per leggere i dati consiste nel chiamare [CInternetSession:: OpenURL](../mfc/reference/cinternetsession-class.md#openurl). Questa funzione consente di analizzare un localizzatore URL (Universal Resource) fornito dall'utente, viene aperta una connessione al server specificato dall'URL e restituisce una proprietà di sola lettura `CInternetFile` oggetto. `CInternetSession::OpenURL`non è specifico di un tipo di protocollo, la stessa chiamata funziona per tutti gli URL gopher, HTTP o FTP. `CInternetSession::OpenURL`funziona anche con i file locali (restituendo un `CStdioFile` anziché un `CInternetFile`).  
+-   Se la sessione Internet legge o scrive i dati, è necessario creare un'istanza di `CInternetFile` (o delle relative sottoclassi [CHttpFile](../mfc/reference/chttpfile-class.md) o [CGopherFile](../mfc/reference/cgopherfile-class.md)). Il modo più semplice per leggere i dati consiste nel chiamare [CInternetSession:: OpenURL](../mfc/reference/cinternetsession-class.md#openurl). Questa funzione consente di analizzare un localizzatore URL (Universal Resource) fornito dall'utente, viene aperta una connessione al server specificato dall'URL e restituisce una proprietà di sola lettura `CInternetFile` oggetto. `CInternetSession::OpenURL` non è specifico di un tipo di protocollo, ovvero la stessa chiamata funziona per tutti gli URL gopher, HTTP o FTP. `CInternetSession::OpenURL` funziona anche con i file locali (restituzione di un `CStdioFile` anziché un `CInternetFile`).  
   
 -   Se il servizio Internet sessione non leggere o scrivere dati, ma esegue altre attività, ad esempio l'eliminazione di un file in una directory FTP, non si potrebbe essere necessario creare un'istanza di `CInternetFile`.  
   
@@ -55,9 +50,9 @@ La base per tutte le applicazioni client Internet è la sessione di Internet. MF
   
 -   [La modalità di scrittura di un'applicazione client Internet che funziona in modo generico con FTP, HTTP e gopher](../mfc/steps-in-a-typical-internet-client-application.md)  
   
--   [Come scrivere un'applicazione client FTP che apre un file](../mfc/steps-in-a-typical-ftp-client-application.md)  
+-   [La modalità di scrittura di un'applicazione client FTP che apre un file](../mfc/steps-in-a-typical-ftp-client-application.md)  
   
--   [Come scrivere un'applicazione client FTP che non si apre un file, ma esegue un'operazione di directory, ad esempio l'eliminazione di un file](../mfc/steps-in-a-typical-ftp-client-application-to-delete-a-file.md)  
+-   [La modalità di scrittura di un'applicazione client FTP che non si apre un file ma esegue un'operazione di directory, ad esempio l'eliminazione di un file](../mfc/steps-in-a-typical-ftp-client-application-to-delete-a-file.md)  
   
 -   [La modalità di scrittura di un'applicazione client gopher](../mfc/steps-in-a-typical-gopher-client-application.md)  
   

@@ -2,7 +2,7 @@
 title: Del compilatore C3500 errori C3999 | Documenti Microsoft
 ms.date: 11/17/2017
 ms.technology:
-- cpp-tools
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C3502
@@ -253,14 +253,13 @@ dev_langs:
 ms.assetid: bd6f23ad-b300-4e07-8e35-9661cab1585f
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7a34b3f3fb635cc666b0e9cca079373bb7c5636e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bbd62a4f7a8b488c74a2cad51e3f2efa296a7614
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-errors-c3500-through-c3999"></a>Del compilatore C3500 errori C3999
 
@@ -345,14 +344,14 @@ Gli articoli in questa sezione della documentazione illustrano un subset dei mes
 |C3570 errore del compilatore|utilizzo non valido di amp un ambito con restrizioni durante la compilazione con /clr|
 |C3571 errore del compilatore|'*tipo*': argomento di dominio di calcolo non valido; non è un tipo di classe|
 |C3572 errore del compilatore|'*tipo*': argomento di dominio di calcolo non valido; membro pubblico mancante: 'static const int rank' o valore di classificazione non positivo|
-|C3573 errore del compilatore|Non può superare il numero di istanze di Graphics:: sampler passate a Concurrency:: parallel_for_each *numero*|
+|C3573 errore del compilatore|Il numero di istanze di Graphics:: sampler passate a Concurrency:: parallel_for_each non può superare *numero*|
 |C3574 errore del compilatore|'*tipo*': estensioni sezione non valide: deve essere positivo (1) Z < = *numero*; (2) Z*Y*X < = *numero*|
 |C3575 errore del compilatore|'*tipo*': argomento di dominio di calcolo non valido; membro pubblico mancante: ' Concurrency:: index <*numero*> map_index (const Concurrency:: index <*numero*> &) Restrict (amp) '|
 |C3576 errore del compilatore|'*tipo*': parallel_for_each argument #*numero* è di tipo non supportato|
 |C3577 errore del compilatore|Concurrency:: parallel_for_each kernel argument non valido: Impossibile risolvere una chiamata a un membro ' void operator () (*tipo*) Restrict (amp) '|
 |C3578 errore del compilatore|Le dimensioni dell'oggetto funzione passato a Concurrency:: parallel_for_each non possono superare *numero* byte|
-|C3579 errore del compilatore|Non può superare il numero di istanze di sola lettura di Concurrency:: Array e texture passate a Concurrency:: parallel_for_each *numero*|
-|C3580 errore del compilatore|Non può superare il numero di istanze scrivibili di Concurrency:: Array e texture passate a Concurrency:: parallel_for_each *numero*|
+|C3579 errore del compilatore|Il numero di istanze di sola lettura di Concurrency:: Array e texture passate a Concurrency:: parallel_for_each non può superare *numero*|
+|C3580 errore del compilatore|Il numero di istanze scrivibili di Concurrency:: Array e texture passate a Concurrency:: parallel_for_each non può superare *numero*|
 |C3581 errore del compilatore|'*tipo*': tipo non supportato in amp codice con restrizioni|
 |C3582 errore del compilatore|Obsoleta.|
 |C3583 errore del compilatore|'*identificatore*': la dimensione della variabile (*numero* byte) è maggiore della dimensione massima (*numero* byte) è supportato in codice con restrizioni amp|
@@ -394,7 +393,7 @@ Gli articoli in questa sezione della documentazione illustrano un subset dei mes
 |[Errore del compilatore C3619](compiler-error-c3619.md)|un modello non può essere dichiarato all'interno di un tipo gestito o WinRT|
 |C3620 errore del compilatore|'*tipo*': l'allineamento non è consentita su tipi WinRT|
 |C3621 errore del compilatore|'*tipo*': solo il valore di compressione predefinito (*numero*) è consentita per i tipi WinRT|
-|[Errore del compilatore C3622](compiler-error-c3622.md)|*tipo*': una classe dichiarata come '*parola chiave*' non può essere creata un'istanza|
+|[Errore del compilatore C3622](compiler-error-c3622.md)|*tipo di*': una classe dichiarata come '*parola chiave*' non è possibile creare un'istanza|
 |[Errore del compilatore C3623](compiler-error-c3623.md)|'*identificatore*': i campi di bit non sono supportati nei tipi gestiti o WinRT|
 |[Errore del compilatore C3624](compiler-error-c3624.md)|'*tipo*': utilizzo di questo tipo richiede un riferimento all'assembly/modulo: '*identificatore*'|
 |[Errore del compilatore C3625](compiler-error-c3625.md)|'*classe*': un tipo nativo non può derivare da un tipo gestito o WinRT '*tipo*'|
@@ -519,7 +518,7 @@ Gli articoli in questa sezione della documentazione illustrano un subset dei mes
 |[Errore del compilatore C3744](compiler-error-c3744.md)|unhook deve avere almeno 3 argomenti per gli eventi gestiti|
 |[Errore del compilatore C3745](compiler-error-c3745.md)|'*funzione*': possibile 'generare' un solo evento|
 |C3746 errore del compilatore|l'attributo standard '*identificatore*' venga visualizzato al massimo una volta in un elenco di attributi|
-|[Errore del compilatore C3747](compiler-error-c3747.md)|il parametro di modello o generico predefinito mancante: parametro *numero*|
+|[Errore del compilatore C3747](compiler-error-c3747.md)|parametro di modello/generiche predefinito mancante: parametro *numero*|
 |[Errore del compilatore C3748](compiler-error-c3748.md)|'*interfaccia*': le interfacce non gestite non possono generare eventi|
 |[Errore del compilatore C3749](compiler-error-c3749.md)|'*attributo*': un attributo personalizzato non può essere utilizzato all'interno di una funzione|
 |C3750 errore del compilatore|'*token*': token imprevisto nell'elenco di attributi|
@@ -554,9 +553,9 @@ Gli articoli in questa sezione della documentazione illustrano un subset dei mes
 |C3779 errore del compilatore|'*funzione*': una funzione che restituisce '*tipo*' non può essere utilizzato prima che sia definita|
 |C3780 errore del compilatore|'*funzione*': funzione di conversione che restituisce*tipo*' non può essere utilizzato prima che sia definita|
 |C3781 errore del compilatore|'*(parola chiave)*': non può essere usato in una coroutine di tipo '*tipo*'. Entrambi *(parola chiave)* o *parola chiave* deve essere presente in promise_type associato|
-|C3782 errore del compilatore|*tipo*: promessa di una coroutine non può contenere sia *(parola chiave)* e *(parola chiave)*|
+|C3782 errore del compilatore|*tipo di*: promise una coroutine non può contenere entrambi *parola chiave* e *(parola chiave)*|
 |C3783 errore del compilatore|'*identificatore*': non può essere una coroutine|
-|C3784 errore del compilatore|*parola chiave* espressione non può trovarsi in questo contesto|
+|C3784 errore del compilatore|*parola chiave* espressione non può comparire in questo contesto|
 |C3785 errore del compilatore|il primo argomento di modello per 'std:: integer_sequence' deve essere un tipo integer|
 |C3786 errore del compilatore|il secondo argomento di modello di 'std:: make_integer_sequence' deve essere una costante integer maggiore o uguale a zero|
 |C3787 errore del compilatore|non è possibile dedurre il tipo restituito di questa coroutine|

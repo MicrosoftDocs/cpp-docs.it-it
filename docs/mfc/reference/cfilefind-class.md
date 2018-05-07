@@ -1,12 +1,9 @@
 ---
 title: Classe CFileFind | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CFileFind
@@ -65,17 +62,15 @@ helpviewer_keywords:
 - CFileFind [MFC], CloseContext
 - CFileFind [MFC], m_pTM
 ms.assetid: 9990068c-b023-4114-9580-a50182d15240
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e890e59896d1f69264ab479168385cf2a05d9fb7
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: cf77a5581dd9e8c9181c61287b6032f700d7d64b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cfilefind-class"></a>Classe CFileFind
 Esegue le ricerche di file locale e costituisce la classe base per [CGopherFileFind](../../mfc/reference/cgopherfilefind-class.md) e [CFtpFileFind](../../mfc/reference/cftpfilefind-class.md), che eseguono ricerche di file su Internet.  
@@ -108,7 +103,7 @@ class CFileFind : public CObject
 |[CFileFind::GetFileURL](#getfileurl)|Ottiene l'URL, incluso il percorso di file, del file trovato.|  
 |[CFileFind::GetLastAccessTime](#getlastaccesstime)|Ottiene l'ora dell'ultimo accesso al file.|  
 |[CFileFind::GetLastWriteTime](#getlastwritetime)|Ottiene l'ora, il file ultimo è stato modificato e salvato.|  
-|[CFileFind::GetLength](#getlength)|Ottiene la lunghezza del file trovato, in byte.|  
+|[CFileFind:: GetLength](#getlength)|Ottiene la lunghezza del file trovato, in byte.|  
 |[CFileFind::GetRoot](#getroot)|Ottiene la directory radice del file trovato.|  
 |[CFileFind::IsArchived](#isarchived)|Determina se è archiviato il file trovato.|  
 |[CFileFind::IsCompressed](#iscompressed)|Determina se il file trovato è compresso.|  
@@ -242,7 +237,7 @@ virtual BOOL FindFile(
   
 - [IsDots](#isdots)  
   
-- [IsHidden](#ishidden)  
+- [isHidden](#ishidden)  
   
 - [IsNormal](#isnormal)  
   
@@ -296,7 +291,7 @@ virtual BOOL FindNextFile();
   
 - [IsDots](#isdots)  
   
-- [IsHidden](#ishidden)  
+- [isHidden](#ishidden)  
   
 - [IsNormal](#isnormal)  
   
@@ -484,7 +479,7 @@ virtual BOOL GetLastWriteTime(CTime& refTime) const;
 ### <a name="example"></a>Esempio  
   Per vedere l'esempio [CFileFind:: GetLength](#getlength).  
   
-##  <a name="getlength"></a>  CFileFind::GetLength  
+##  <a name="getlength"></a>  CFileFind:: GetLength  
  Chiamare questa funzione membro per ottenere la lunghezza del file trovato, in byte.  
   
 ```  

@@ -1,12 +1,9 @@
 ---
 title: Classe COleIPFrameWnd | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - COleIPFrameWnd
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - COleIPFrameWnd [MFC], OnCreateControlBars
 - COleIPFrameWnd [MFC], RepositionFrame
 ms.assetid: 24abb2cb-826c-4dda-a287-d8a8900a5763
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f1833cbbbfb6706cffe73770bcd9b61ff755a645
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 466948653a5464a940a027e473e79c00dbf9a6ab
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="coleipframewnd-class"></a>Classe COleIPFrameWnd
 Base per la finestra di modifica sul posto dell'applicazione.  
@@ -76,7 +71,7 @@ class COleIPFrameWnd : public CFrameWnd
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** AFXOLE. h  
   
-##  <a name="coleipframewnd"></a>COleIPFrameWnd::COleIPFrameWnd  
+##  <a name="coleipframewnd"></a>  COleIPFrameWnd::COleIPFrameWnd  
  Costruisce un `COleIPFrameWnd` dell'oggetto e inizializza le informazioni di stato sul posto, che viene archiviate in una struttura di tipo **OLEINPLACEFRAMEINFO**.  
   
 ```  
@@ -86,7 +81,7 @@ COleIPFrameWnd();
 ### <a name="remarks"></a>Note  
  Per ulteriori informazioni, vedere [OLEINPLACEFRAMEINFO](http://msdn.microsoft.com/library/windows/desktop/ms693737) in Windows SDK.  
   
-##  <a name="oncreatecontrolbars"></a>COleIPFrameWnd::OnCreateControlBars  
+##  <a name="oncreatecontrolbars"></a>  COleIPFrameWnd::OnCreateControlBars  
  Il framework chiama la `OnCreateControlBars` funzione quando un elemento viene attivato per la modifica sul posto.  
   
 ```  
@@ -113,7 +108,7 @@ virtual BOOL OnCreateControlBars(
 ### <a name="remarks"></a>Note  
  L'implementazione predefinita non esegue alcuna operazione. Eseguire l'override di questa funzione per eseguire qualsiasi elaborazione speciale necessario quando vengono create le barre di controllo.  
   
-##  <a name="repositionframe"></a>COleIPFrameWnd::RepositionFrame  
+##  <a name="repositionframe"></a>  COleIPFrameWnd::RepositionFrame  
  Il framework chiama la `RepositionFrame` funzione membro per il layout delle barre di controllo e riposizionare la finestra di modifica sul posto, in modo da tutti i relativi visibile.  
   
 ```  

@@ -1,12 +1,9 @@
 ---
 title: Classe CMDIChildWndEx | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMDIChildWndEx
@@ -121,17 +118,15 @@ helpviewer_keywords:
 - CMDIChildWndEx [MFC], UnregisterTaskbarTab
 - CMDIChildWndEx [MFC], UpdateTaskbarTabIcon
 ms.assetid: d39fec06-0bd6-4271-917d-35aae3b24d8e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 21b302c14d2b4aa17b2818e489a1400230332521
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: eecc1a08a3e0dcf8d8b3f1c31594488901a848f0
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmdichildwndex-class"></a>CMDIChildWndEx (classe)
 La `CMDIChildWndEx` classe fornisce la funzionalità di Windows come finestra figlio MDI (interfaccia) a documenti multipli. Estende la funzionalità di [CMDIChildWnd (classe)](../../mfc/reference/cmdichildwnd-class.md). Il framework richiede questa classe quando un'applicazione MDI utilizza determinate classi MFC.  
@@ -233,7 +228,7 @@ class CMDIChildWndEx : public CMDIChildWnd
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** afxmdichildwndex. H  
   
-##  <a name="addpane"></a>CMDIChildWndEx::AddPane  
+##  <a name="addpane"></a>  CMDIChildWndEx::AddPane  
  Aggiunge un riquadro.  
   
 ```  
@@ -247,12 +242,12 @@ BOOL AddPane(
  Puntatore al riquadro.  
   
  [in] `bTail`  
- `TRUE`Per aggiungere il riquadro alla fine dell'elenco dei riquadri per il gestore di ancoraggio; in caso contrario, `FALSE`.  
+ `TRUE` Per aggiungere il riquadro alla fine dell'elenco dei riquadri per il gestore di ancoraggio; in caso contrario, `FALSE`.  
   
 ### <a name="return-value"></a>Valore restituito  
- `TRUE`Se il riquadro è stato registrato correttamente con il gestore di ancoraggio; in caso contrario, `FALSE`.  
+ `TRUE` Se il riquadro è stato registrato correttamente con il gestore di ancoraggio; in caso contrario, `FALSE`.  
   
-##  <a name="addtabbedpane"></a>CMDIChildWndEx::AddTabbedPane  
+##  <a name="addtabbedpane"></a>  CMDIChildWndEx::AddTabbedPane  
  Aggiunge un riquadro a schede.  
   
 ```  
@@ -263,7 +258,7 @@ void AddTabbedPane(CDockablePane* pControlBar);
  [in] `pControlBar`  
  Puntatore al riquadro.  
   
-##  <a name="adjustdockinglayout"></a>CMDIChildWndEx::AdjustDockingLayout  
+##  <a name="adjustdockinglayout"></a>  CMDIChildWndEx::AdjustDockingLayout  
  Regola il layout di ancoraggio.  
   
 ```  
@@ -274,7 +269,7 @@ virtual void AdjustDockingLayout(HDWP hdwp = NULL);
  [in] `hdwp`  
  Handle per una struttura di posizione finestra posticipata.  
   
-##  <a name="canshowonmditabs"></a>CMDIChildWndEx::CanShowOnMDITabs  
+##  <a name="canshowonmditabs"></a>  CMDIChildWndEx::CanShowOnMDITabs  
 
   
 ```  
@@ -285,7 +280,7 @@ virtual BOOL CanShowOnMDITabs();
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="canshowonwindowslist"></a>CMDIChildWndEx::CanShowOnWindowsList  
+##  <a name="canshowonwindowslist"></a>  CMDIChildWndEx::CanShowOnWindowsList  
  Specifica se è possibile visualizzare il nome della finestra figlio MDI nel [CMFCWindowsManagerDialog classe](../../mfc/reference/cmfcwindowsmanagerdialog-class.md) la finestra di dialogo.  
   
 ```  
@@ -293,12 +288,12 @@ virtual BOOL CanShowOnWindowsList();
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- `TRUE`Se è possibile visualizzare la finestra nel **Windows** la finestra di dialogo; in caso contrario, `FALSE`.  
+ `TRUE` Se la finestra può essere visualizzata nel **Windows** finestra di dialogo; in caso contrario, `FALSE`.  
   
 ### <a name="remarks"></a>Note  
  Eseguire l'override di questo metodo in una classe derivata e restituire `FALSE` se la finestra non deve essere visualizzata nel **Windows** la finestra di dialogo. Questa funzione viene chiamata da `CMFCWindowsManagerDialog`.  
   
-##  <a name="dockpane"></a>CMDIChildWndEx::DockPane  
+##  <a name="dockpane"></a>  CMDIChildWndEx::DockPane  
  Ancora un riquadro.  
   
 ```  
@@ -321,7 +316,7 @@ void DockPane(
 ### <a name="remarks"></a>Note  
  Il `lpRect` parametro non viene usato.  
   
-##  <a name="dockpaneleftof"></a>CMDIChildWndEx::DockPaneLeftOf  
+##  <a name="dockpaneleftof"></a>  CMDIChildWndEx::DockPaneLeftOf  
  Ancora un riquadro a sinistra di un altro riquadro.  
   
 ```  
@@ -338,14 +333,14 @@ BOOL DockPaneLeftOf(
  Puntatore al riquadro che funge da punto di riferimento.  
   
 ### <a name="return-value"></a>Valore restituito  
- `TRUE`Se l'operazione riesce, `FALSE` in caso di errore.  
+ `TRUE` Se l'operazione riesce, `FALSE` in caso di errore.  
   
 ### <a name="remarks"></a>Note  
  Questo metodo accetta il riquadro specificato da `pBar` e consente l'ancoraggio sul lato sinistro del riquadro specificato da `pLeftOf`.  
   
  Chiamare questo metodo quando si desidera ancorare i riquadri diversi in base a ordine predefinito.  
   
-##  <a name="enableautohidepanes"></a>CMDIChildWndEx::EnableAutoHidePanes  
+##  <a name="enableautohidepanes"></a>  CMDIChildWndEx::EnableAutoHidePanes  
  Abilita la modalità Nascondi automaticamente per i riquadri quando essi sono ancorate lungo i lati della finestra specificata.  
   
 ```  
@@ -365,9 +360,9 @@ BOOL EnableAutoHidePanes(DWORD dwDockStyle);
 - `CBRS_ALIGN_BOTTOM`  
   
 ### <a name="return-value"></a>Valore restituito  
- `TRUE`Se il metodo ha esito positivo. in caso contrario `FALSE`.  
+ `TRUE` Se il metodo ha esito positivo; in caso contrario `FALSE`.  
   
-##  <a name="enabledocking"></a>CMDIChildWndEx::EnableDocking  
+##  <a name="enabledocking"></a>  CMDIChildWndEx::EnableDocking  
  Consente di ancoraggio della finestra figlio per la cornice principale.  
   
 ```  
@@ -379,12 +374,12 @@ BOOL EnableDocking(DWORD dwDockStyle);
  Specifica l'allineamento di ancoraggio da abilitare.  
   
 ### <a name="return-value"></a>Valore restituito  
- `TRUE`Se il metodo ha esito positivo. in caso contrario `FALSE`.  
+ `TRUE` Se il metodo ha esito positivo; in caso contrario `FALSE`.  
   
 ### <a name="remarks"></a>Note  
  Chiamare questo metodo per consentire l'allineamento di ancoraggio per la cornice principale. È possibile passare una combinazione di flag CBRS_ALIGN_ (per ulteriori informazioni, vedere [CControlBar:: EnableDocking](../../mfc/reference/ccontrolbar-class.md#enabledocking)).  
   
-##  <a name="getdockingmanager"></a>CMDIChildWndEx::GetDockingManager  
+##  <a name="getdockingmanager"></a>  CMDIChildWndEx::GetDockingManager  
 
   
 ```  
@@ -395,7 +390,7 @@ CDockingManager* GetDockingManager();
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="getdocumentname"></a>CMDIChildWndEx::GetDocumentName  
+##  <a name="getdocumentname"></a>  CMDIChildWndEx::GetDocumentName  
  Restituisce il nome del documento che viene visualizzato nella finestra figlio MDI.  
   
 ```  
@@ -410,7 +405,7 @@ virtual LPCTSTR GetDocumentName(CObject** pObj);
   
  Se la finestra Visualizza un documento che non viene caricato da un file, eseguire l'override di questo metodo in una classe derivata e restituire un identificatore univoco di documento.  
   
- `GetDocumentName`viene chiamato dal framework quando salva lo stato di tutti i documenti aperti. La stringa restituita viene scritto nel Registro di sistema.  
+ `GetDocumentName` viene chiamato dal framework quando salva lo stato di tutti i documenti aperti. La stringa restituita viene scritto nel Registro di sistema.  
   
  Quando il framework è stato di ripristino in un secondo momento, il nome del documento è di lettura dal Registro di sistema e passato [CMDIFrameWndEx::CreateDocumentWindow](../../mfc/reference/cmdiframewndex-class.md#createdocumentwindow). Eseguire l'override di questo metodo in un [CMDIFrameWndEx](../../mfc/reference/cmdiframewndex-class.md)-classe derivata e creare o aprire un documento con questo nome e leggere il file con questo nome. Se il documento non è basato su un file, creare il documento in base all'identificatore di documento stesso. È necessario effettuare le azioni precedente solo se si desidera salvare e ripristinare i documenti.  
   
@@ -419,7 +414,7 @@ virtual LPCTSTR GetDocumentName(CObject** pObj);
   
  [!code-cpp[NVC_MFC_VisualStudioDemo#17](../../mfc/codesnippet/cpp/cmdichildwndex-class_2.cpp)]  
   
-##  <a name="getframeicon"></a>CMDIChildWndEx::GetFrameIcon  
+##  <a name="getframeicon"></a>  CMDIChildWndEx::GetFrameIcon  
  Chiamato dal framework per recuperare l'icona della finestra figlio MDI.  
   
 ```  
@@ -434,7 +429,7 @@ virtual HICON GetFrameIcon() const;
   
  Per impostazione predefinita questo metodo restituisce l'icona della finestra. Eseguire l'override `GetFrameIcon` in un `CMDIChildWndEx`-derivata per personalizzare questo comportamento.  
   
-##  <a name="getframetext"></a>CMDIChildWndEx::GetFrameText  
+##  <a name="getframetext"></a>  CMDIChildWndEx::GetFrameText  
  Chiamato dal framework per recuperare il testo per la finestra figlio MDI.  
   
 ```  
@@ -449,7 +444,7 @@ virtual CString GetFrameText() const;
   
  Per impostazione predefinita questo metodo restituisce il testo della finestra. Eseguire l'override `GetFrameText` in un `CMDIChildWndEx`-derivata per personalizzare questo comportamento.  
   
-##  <a name="getpane"></a>CMDIChildWndEx::GetPane  
+##  <a name="getpane"></a>  CMDIChildWndEx::GetPane  
  Trova un riquadro dall'ID di controllo specificato.  
   
 ```  
@@ -463,7 +458,7 @@ CBasePane* GetPane(UINT nID);
 ### <a name="return-value"></a>Valore restituito  
  Un puntatore al riquadro se trovato, in caso contrario `NULL`.  
   
-##  <a name="getrelatedtabgroup"></a>CMDIChildWndEx::GetRelatedTabGroup  
+##  <a name="getrelatedtabgroup"></a>  CMDIChildWndEx::GetRelatedTabGroup  
 
   
 ```  
@@ -474,7 +469,7 @@ CMFCTabCtrl* GetRelatedTabGroup();
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="gettabbedpane"></a>CMDIChildWndEx::GetTabbedPane  
+##  <a name="gettabbedpane"></a>  CMDIChildWndEx::GetTabbedPane  
  Restituisce un puntatore a un riquadro ancorato che fa parte di un gruppo di MDI documenti a schede.  
   
 ```  
@@ -484,7 +479,7 @@ CDockablePane* GetTabbedPane() const;
 ### <a name="return-value"></a>Valore restituito  
  Un puntatore a un riquadro ancorato che fa parte di un gruppo di MDI documenti a schede.  
   
-##  <a name="gettoolbarbuttontooltiptext"></a>CMDIChildWndEx::GetToolbarButtonToolTipText  
+##  <a name="gettoolbarbuttontooltiptext"></a>  CMDIChildWndEx::GetToolbarButtonToolTipText  
  Chiamato dal framework per recuperare una descrizione comando per un pulsante della barra degli strumenti.  
   
 ```  
@@ -494,12 +489,12 @@ virtual BOOL GetToolbarButtonToolTipText(
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- `TRUE`Se è stata visualizzata la descrizione comando. L'implementazione predefinita restituisce `FALSE`.  
+ `TRUE` Se è stata visualizzata la descrizione comando. L'implementazione predefinita restituisce `FALSE`.  
   
 ### <a name="remarks"></a>Note  
  Eseguire l'override di questo metodo se si desidera visualizzare i suggerimenti dello strumento personalizzato per i pulsanti della barra degli strumenti.  
   
-##  <a name="insertpane"></a>CMDIChildWndEx::InsertPane  
+##  <a name="insertpane"></a>  CMDIChildWndEx::InsertPane  
  Registra il riquadro specificato con il gestore di ancoraggio.  
   
 ```  
@@ -520,9 +515,9 @@ BOOL InsertPane(
  Se `TRUE`, `pControlBar` viene inserita dopo `pTarget`. Se `FALSE`, `pControlBar` viene inserita prima `pTarget`.  
   
 ### <a name="return-value"></a>Valore restituito  
- `TRUE`Se il metodo ha esito positivo, `FALSE` in caso contrario.  
+ `TRUE` Se il metodo ha esito positivo, `FALSE` in caso contrario.  
   
-##  <a name="ispointneardocksite"></a>CMDIChildWndEx::IsPointNearDockSite  
+##  <a name="ispointneardocksite"></a>  CMDIChildWndEx::IsPointNearDockSite  
  Determina se un punto specificato è vicino al sito di ancoraggio.  
   
 ```  
@@ -537,18 +532,18 @@ BOOL IsPointNearDockSite(
  Il punto specificato.  
   
  [in] `dwBarAlignment`  
- Specifica il bordo è il punto di prossimità. I valori possibili sono `CBRS_ALIGN_LEFT`, `CBRS_ALIGN_RIGHT`, `CBRS_ALIGN_TOP`, e`CBRS_ALIGN_BOTTOM`  
+ Specifica il bordo è il punto di prossimità. I valori possibili sono `CBRS_ALIGN_LEFT`, `CBRS_ALIGN_RIGHT`, `CBRS_ALIGN_TOP`, e `CBRS_ALIGN_BOTTOM`  
   
  [in] `bOuterEdge`  
- `TRUE`Se il punto si avvicina il bordo esterno del sito di ancoraggio; `FALSE` in caso contrario.  
+ `TRUE` Se il punto si avvicina al bordo esterno del sito di ancoraggio; `FALSE` in caso contrario.  
   
 ### <a name="return-value"></a>Valore restituito  
- `TRUE`Se il punto si avvicina al sito di ancoraggio; in caso contrario `FALSE`.  
+ `TRUE` Se il punto si avvicina al sito di ancoraggio; in caso contrario `FALSE`.  
   
 ### <a name="remarks"></a>Note  
  Il punto è vicino al sito di ancoraggio quando si trova all'interno della sensibilità impostata nel gestore di ancoraggio. La sensibilità del valore predefinito è 15 pixel.  
   
-##  <a name="isreadonly"></a>CMDIChildWndEx::IsReadOnly  
+##  <a name="isreadonly"></a>  CMDIChildWndEx::IsReadOnly  
  Specifica se il documento che viene visualizzato nella finestra figlio è di sola lettura.  
   
 ```  
@@ -556,7 +551,7 @@ virtual BOOL IsReadOnly();
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- `TRUE`Se il documento è di sola lettura. in caso contrario `FALSE`.  
+ `TRUE` Se il documento è di sola lettura. in caso contrario `FALSE`.  
   
 ### <a name="remarks"></a>Note  
  Questa funzione viene utilizzata per impedire il salvataggio di documenti di sola lettura.  
@@ -566,7 +561,7 @@ virtual BOOL IsReadOnly();
   
  [!code-cpp[NVC_MFC_VisualStudioDemo#2](../../mfc/codesnippet/cpp/cmdichildwndex-class_3.cpp)]  
   
-##  <a name="istabbedpane"></a>CMDIChildWndEx::IsTabbedPane  
+##  <a name="istabbedpane"></a>  CMDIChildWndEx::IsTabbedPane  
  Specifica se la finestra figlio MDI contiene un riquadro ancorato.  
   
 ```  
@@ -574,9 +569,9 @@ BOOL IsTabbedPane() const;
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- `TRUE`Se la finestra figlio MDI contiene un riquadro ancorato è stato convertito in un documento a schede. in caso contrario `FALSE`.  
+ `TRUE` Se la finestra figlio MDI contiene un riquadro ancorato è stato convertito in un documento a schede. in caso contrario `FALSE`.  
   
-##  <a name="onmoveminiframe"></a>CMDIChildWndEx::OnMoveMiniFrame  
+##  <a name="onmoveminiframe"></a>  CMDIChildWndEx::OnMoveMiniFrame  
  Chiamato dal framework per spostare una finestra con mini-cornice.  
   
 ```  
@@ -588,9 +583,9 @@ virtual BOOL OnMoveMiniFrame(CWnd* pFrame);
  Un puntatore a una finestra con mini-cornice.  
   
 ### <a name="return-value"></a>Valore restituito  
- `TRUE`Se il metodo ha esito positivo, in caso contrario `FALSE`.  
+ `TRUE` Se il metodo ha esito positivo, in caso contrario `FALSE`.  
   
-##  <a name="onsetpreviewmode"></a>CMDIChildWndEx::OnSetPreviewMode  
+##  <a name="onsetpreviewmode"></a>  CMDIChildWndEx::OnSetPreviewMode  
  Chiamato dal framework per attivare o disattivare la modalità anteprima di stampa.  
   
 ```  
@@ -606,7 +601,7 @@ virtual void OnSetPreviewMode(
  [in] `pState`  
  Puntatore alla struttura di stato di anteprima di stampa.  
   
-##  <a name="onupdateframetitle"></a>CMDIChildWndEx::OnUpdateFrameTitle  
+##  <a name="onupdateframetitle"></a>  CMDIChildWndEx::OnUpdateFrameTitle  
  Chiamato dal framework per aggiornare il titolo del frame.  
   
 ```  
@@ -617,7 +612,7 @@ virtual void OnUpdateFrameTitle(BOOL bAddToTitle);
  [in] `bAddToTitle`  
  Se `TRUE`, aggiungere il nome del documento per il titolo.  
   
-##  <a name="panefrompoint"></a>CMDIChildWndEx::PaneFromPoint  
+##  <a name="panefrompoint"></a>  CMDIChildWndEx::PaneFromPoint  
  Restituisce il riquadro che contiene il punto specificato.  
   
 ```  
@@ -642,7 +637,7 @@ CBasePane* PaneFromPoint(
  Aumentare l'area di ricerca di questo importo. Un riquadro soddisfa i criteri di ricerca se il punto specificato rientra nell'area di aumento.  
   
  [in] `bExactBar`  
- `TRUE`per ignorare la `nSensitivity` parametro; in caso contrario, `FALSE`.  
+ `TRUE` per ignorare la `nSensitivity` parametro; in caso contrario, `FALSE`.  
   
  [in] `pRTCBarType`  
  Se non `NULL`, il metodo esegue la ricerca solo i riquadri del tipo specificato.  
@@ -658,7 +653,7 @@ CBasePane* PaneFromPoint(
   
  Quando la funzione restituisce e un riquadro è stato trovato, `dwAlignment` contiene l'allineamento del punto specificato. Ad esempio, se il punto di stato più vicino alla parte superiore del riquadro, `dwAlignment` è impostato su `CBRS_ALIGN_TOP`.  
   
-##  <a name="recalclayout"></a>CMDIChildWndEx::RecalcLayout  
+##  <a name="recalclayout"></a>  CMDIChildWndEx::RecalcLayout  
  Ricalcola il layout della finestra.  
   
 ```  
@@ -669,7 +664,7 @@ virtual void RecalcLayout(BOOL bNotify = TRUE);
  [in] `bNotify`  
  Se `TRUE`, l'elemento attivo sul posto per la finestra riceve una notifica di modifica del layout.  
   
-##  <a name="removepanefromdockmanager"></a>CMDIChildWndEx::RemovePaneFromDockManager  
+##  <a name="removepanefromdockmanager"></a>  CMDIChildWndEx::RemovePaneFromDockManager  
  Rimuove il gestore di ancoraggio di un riquadro.  
   
 ```  
@@ -697,7 +692,7 @@ void RemovePaneFromDockManager(
  [in] `pBarReplacement`  
  Un puntatore a un riquadro che sostituisce il riquadro rimosso.  
   
-##  <a name="setrelatedtabgroup"></a>CMDIChildWndEx::SetRelatedTabGroup  
+##  <a name="setrelatedtabgroup"></a>  CMDIChildWndEx::SetRelatedTabGroup  
 
   
 ```  
@@ -709,7 +704,7 @@ void SetRelatedTabGroup(CMFCTabCtrl* p);
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="showpane"></a>CMDIChildWndEx::ShowPane  
+##  <a name="showpane"></a>  CMDIChildWndEx::ShowPane  
 
   
 ```  
@@ -728,7 +723,7 @@ void ShowPane(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="updatetaskbartabicon"></a>CMDIChildWndEx::UpdateTaskbarTabIcon  
+##  <a name="updatetaskbartabicon"></a>  CMDIChildWndEx::UpdateTaskbarTabIcon  
  Aggiorna l'icona di scheda della barra delle applicazioni di Windows 7.  
   
 ```  
@@ -741,7 +736,7 @@ virtual void UpdateTaskbarTabIcon(HICON hIcon);
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="unregistertaskbartab"></a>CMDIChildWndEx::UnregisterTaskbarTab  
+##  <a name="unregistertaskbartab"></a>  CMDIChildWndEx::UnregisterTaskbarTab  
  Rimuove il figlio MDI a schede sulla barra delle applicazioni di Windows 7.  
   
 ```  
@@ -754,7 +749,7 @@ void UnregisterTaskbarTab(BOOL bCheckRegisteredMDIChildCount = TRUE);
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="settaskbarthumbnailcliprect"></a>CMDIChildWndEx::SetTaskbarThumbnailClipRect  
+##  <a name="settaskbarthumbnailcliprect"></a>  CMDIChildWndEx::SetTaskbarThumbnailClipRect  
  Chiamato dal framework per impostare il rettangolo di ridimensionamento per selezionare una parte dell'area client di una finestra per visualizzare come immagine di anteprima di tale finestra nella barra delle applicazioni.  
   
 ```  
@@ -770,7 +765,7 @@ virtual BOOL SetTaskbarThumbnailClipRect(CRect rect);
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="settaskbartabproperties"></a>CMDIChildWndEx::SetTaskbarTabProperties  
+##  <a name="settaskbartabproperties"></a>  CMDIChildWndEx::SetTaskbarTabProperties  
  Imposta le proprietà per una scheda della barra delle applicazioni di Windows 7.  
   
 ```  
@@ -783,7 +778,7 @@ void SetTaskbarTabProperties(DWORD dwFlags);
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="settaskbartaborder"></a>CMDIChildWndEx::SetTaskbarTabOrder  
+##  <a name="settaskbartaborder"></a>  CMDIChildWndEx::SetTaskbarTabOrder  
  Inserisce il figlio MDI prima la finestra specificata nelle schede della barra delle applicazioni di Windows 7.  
   
 ```  
@@ -796,7 +791,7 @@ void SetTaskbarTabOrder(CMDIChildWndEx* pWndBefore = NULL);
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="settaskbartabactive"></a>CMDIChildWndEx::SetTaskbarTabActive  
+##  <a name="settaskbartabactive"></a>  CMDIChildWndEx::SetTaskbarTabActive  
  Attiva la scheda della barra delle applicazioni di Windows 7 corrispondente.  
   
 ```  
@@ -805,7 +800,7 @@ void SetTaskbarTabActive();
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="registertaskbartab"></a>CMDIChildWndEx::RegisterTaskbarTab  
+##  <a name="registertaskbartab"></a>  CMDIChildWndEx::RegisterTaskbarTab  
  Registra il figlio MDI con schede sulla barra delle applicazioni di Windows 7.  
   
 ```  
@@ -818,7 +813,7 @@ virtual void RegisterTaskbarTab(CMDIChildWndEx* pWndBefore = NULL);
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="ontaskbartabthumbnailstretch"></a>CMDIChildWndEx::OnTaskbarTabThumbnailStretch  
+##  <a name="ontaskbartabthumbnailstretch"></a>  CMDIChildWndEx::OnTaskbarTabThumbnailStretch  
  Chiamato dal framework quando è necessario per l'estensione di una bitmap per una Windows 7 della barra delle applicazioni scheda Anteprima del figlio MDI.  
   
 ```  
@@ -845,7 +840,7 @@ virtual BOOL OnTaskbarTabThumbnailStretch(
 ### <a name="remarks"></a>Note  
  Requirementher o quest'ultimo lui quest'ultimo lui quest'ultimo quest'ultimo lui **:** afxmdichildwndex. h  
   
-##  <a name="ontaskbartabthumbnailmouseactivate"></a>CMDIChildWndEx::OnTaskbarTabThumbnailMouseActivate  
+##  <a name="ontaskbartabthumbnailmouseactivate"></a>  CMDIChildWndEx::OnTaskbarTabThumbnailMouseActivate  
  Chiamato dal framework quando l'anteprima della scheda della barra delle applicazioni deve elaborare il messaggio WM_MOUSEACTIVATE.  
   
 ```  
@@ -868,7 +863,7 @@ virtual int OnTaskbarTabThumbnailMouseActivate(
 ### <a name="remarks"></a>Note  
  L'implementazione predefinita attiva il frame MDI figlio correlato.  
   
-##  <a name="ontaskbartabthumbnailactivate"></a>CMDIChildWndEx::OnTaskbarTabThumbnailActivate  
+##  <a name="ontaskbartabthumbnailactivate"></a>  CMDIChildWndEx::OnTaskbarTabThumbnailActivate  
  Chiamato dal framework quando l'anteprima della scheda della barra delle applicazioni deve elaborare il messaggio WM_ACTIVATE.  
   
 ```  
@@ -891,7 +886,7 @@ virtual void OnTaskbarTabThumbnailActivate(
 ### <a name="remarks"></a>Note  
  L'implementazione predefinita attiva il frame MDI figlio correlato.  
   
-##  <a name="onpresstaskbarthmbnailclosebutton"></a>CMDIChildWndEx::OnPressTaskbarThmbnailCloseButton  
+##  <a name="onpresstaskbarthmbnailclosebutton"></a>  CMDIChildWndEx::OnPressTaskbarThmbnailCloseButton  
  Chiamato dal framework quando l'utente preme il pulsante Chiudi l'anteprima della scheda della barra delle applicazioni.  
   
 ```  
@@ -900,7 +895,7 @@ virtual void OnPressTaskbarThmbnailCloseButton();
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="ongeticonicthumbnail"></a>CMDIChildWndEx::OnGetIconicThumbnail  
+##  <a name="ongeticonicthumbnail"></a>  CMDIChildWndEx::OnGetIconicThumbnail  
  Chiamato dal framework quando è necessario ottenere una bitmap per l'anteprima delle icone del figlio MDI.  
   
 ```  
@@ -918,7 +913,7 @@ virtual HBITMAP OnGetIconicThumbnail(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="ongeticoniclivepreviewbitmap"></a>CMDIChildWndEx::OnGetIconicLivePreviewBitmap  
+##  <a name="ongeticoniclivepreviewbitmap"></a>  CMDIChildWndEx::OnGetIconicLivePreviewBitmap  
  Chiamato dal framework quando è necessario ottenere una bitmap per l'anteprima in tempo reale del figlio MDI.  
   
 ```  
@@ -940,7 +935,7 @@ virtual HBITMAP OnGetIconicLivePreviewBitmap(
 ### <a name="remarks"></a>Note  
  Eseguire l'override di questo metodo in una classe derivata e restituiscono una bitmap a 32bpp valido per l'anteprima in tempo reale del figlio MDI. Questo metodo viene chiamato solo quando il figlio MDI viene visualizzato nelle schede della barra delle applicazioni di Windows 7. Se si restituisce `NULL`, MFC chiama i gestori predefiniti e ottiene le bitmap tramite `PrintClient` o `PrintWindow`.  
   
-##  <a name="m_dwdefaulttaskbartabpropertyflags"></a>CMDIChildWndEx::m_dwDefaultTaskbarTabPropertyFlags  
+##  <a name="m_dwdefaulttaskbartabpropertyflags"></a>  CMDIChildWndEx::m_dwDefaultTaskbarTabPropertyFlags  
  Una combinazione dei flag, che viene passata dal framework per il `SetTaskbarTabProperties` metodo, quando una scheda (figlio MDI) viene registrata con schede sulla barra delle applicazioni di Windows 7.  
   
 ```  
@@ -950,7 +945,7 @@ AFX_IMPORT_DATA static DWORD m_dwDefaultTaskbarTabPropertyFlags;
 ### <a name="remarks"></a>Note  
  La combinazione predefinita è STPF_USEAPPTHUMBNAILWHENACTIVE &#124; STPF_USEAPPPEEKWHENACTIVE.  
   
-##  <a name="istaskbarthumbnailcliprectenabled"></a>CMDIChildWndEx::IsTaskbarThumbnailClipRectEnabled  
+##  <a name="istaskbarthumbnailcliprectenabled"></a>  CMDIChildWndEx::IsTaskbarThumbnailClipRectEnabled  
  Indica se la selezione automatica di una parte dell'area client di una finestra per visualizzare come immagine di anteprima di tale finestra nella barra delle applicazioni è abilitata o disabilitata.  
   
 ```  
@@ -962,7 +957,7 @@ BOOL IsTaskbarThumbnailClipRectEnabled() const;
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="istaskbartabssupportenabled"></a>CMDIChildWndEx::IsTaskbarTabsSupportEnabled  
+##  <a name="istaskbartabssupportenabled"></a>  CMDIChildWndEx::IsTaskbarTabsSupportEnabled  
  Indica se il figlio MDI può essere visualizzati nelle schede della barra delle applicazioni di Windows 7.  
   
 ```  
@@ -970,11 +965,11 @@ BOOL IsTaskbarTabsSupportEnabled();
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- `TRUE`Se il figlio MDI può essere visualizzati nelle schede della barra delle applicazioni di Windows 7. `FALSE` se il figlio MDI non può essere visualizzati nelle schede della barra delle applicazioni di Windows 7.  
+ `TRUE` Se il figlio MDI può essere visualizzati nelle schede sulla barra delle applicazioni di Windows 7. `FALSE` se il figlio MDI non può essere visualizzati nelle schede sulla barra delle applicazioni di Windows 7.  
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="isregisteredwithtaskbartabs"></a>CMDIChildWndEx::IsRegisteredWithTaskbarTabs  
+##  <a name="isregisteredwithtaskbartabs"></a>  CMDIChildWndEx::IsRegisteredWithTaskbarTabs  
  Restituisce `TRUE` se il figlio MDI è stato registrato correttamente con le schede della barra delle applicazioni di Windows 7.  
   
 ```  
@@ -982,11 +977,11 @@ BOOL IsRegisteredWithTaskbarTabs();
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- `TRUE`Se il figlio MDI viene registrato con schede sulla barra delle applicazioni di Windows 7. in caso contrario `FALSE`.  
+ `TRUE` Se il figlio MDI viene registrato con schede sulla barra delle applicazioni di Windows 7. in caso contrario `FALSE`.  
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="invalidateiconicbitmaps"></a>CMDIChildWndEx::InvalidateIconicBitmaps  
+##  <a name="invalidateiconicbitmaps"></a>  CMDIChildWndEx::InvalidateIconicBitmaps  
  Invalida una rappresentazione sotto forma di icona bitmap di un figlio MDI.  
   
 ```  
@@ -999,7 +994,7 @@ BOOL InvalidateIconicBitmaps();
 ### <a name="remarks"></a>Note  
  Deve essere chiamato quando viene modificato il contenuto live o le dimensioni di un figlio MDI.  
   
-##  <a name="gettaskbarthumbnailcliprect"></a>CMDIChildWndEx::GetTaskbarThumbnailClipRect  
+##  <a name="gettaskbarthumbnailcliprect"></a>  CMDIChildWndEx::GetTaskbarThumbnailClipRect  
  Chiamato dal framework quando è necessario selezionare una parte dell'area client di una finestra per visualizzare come immagine di anteprima di tale finestra nella barra delle applicazioni.  
   
 ```  
@@ -1011,7 +1006,7 @@ virtual CRect GetTaskbarThumbnailClipRect() const;
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="gettaskbarpreviewwnd"></a>CMDIChildWndEx::GetTaskbarPreviewWnd  
+##  <a name="gettaskbarpreviewwnd"></a>  CMDIChildWndEx::GetTaskbarPreviewWnd  
  Chiamato dal framework quando è necessario ottenere una finestra figlio (in genere una finestra con separatore o una vista) da visualizzare in un'anteprima della scheda della barra delle applicazioni di Windows 7.  
   
 ```  
@@ -1023,7 +1018,7 @@ virtual CWnd* GetTaskbarPreviewWnd();
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="gettabproxywnd"></a>CMDIChildWndEx::GetTabProxyWnd  
+##  <a name="gettabproxywnd"></a>  CMDIChildWndEx::GetTabProxyWnd  
  Restituisce la finestra di scheda proxy registrata con schede sulla barra delle applicazioni di Windows 7.  
   
 ```  
@@ -1035,7 +1030,7 @@ CMDITabProxyWnd* GetTabProxyWnd();
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="enabletaskbarthumbnailcliprect"></a>CMDIChildWndEx::EnableTaskbarThumbnailClipRect  
+##  <a name="enabletaskbarthumbnailcliprect"></a>  CMDIChildWndEx::EnableTaskbarThumbnailClipRect  
  Abilita o disabilita la selezione automatica di una parte dell'area client di una finestra per visualizzare come immagine di anteprima di tale finestra nella barra delle applicazioni.  
   
 ```  
@@ -1048,7 +1043,7 @@ void EnableTaskbarThumbnailClipRect(BOOL bEnable = TRUE);
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="canshowontaskbartabs"></a>CMDIChildWndEx::CanShowOnTaskBarTabs  
+##  <a name="canshowontaskbartabs"></a>  CMDIChildWndEx::CanShowOnTaskBarTabs  
  Indica al framework se il figlio MDI può essere visualizzato nelle schede della barra delle applicazioni di Windows 7.  
   
 ```  
@@ -1056,12 +1051,12 @@ virtual BOOL CanShowOnTaskBarTabs();
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- `TRUE`Se il contenuto del figlio MDI può essere visualizzato nelle anteprime barra delle applicazioni di Windows 7.  
+ `TRUE` Se il contenuto del figlio MDI può essere visualizzato sulle anteprime barra delle applicazioni di Windows 7.  
   
 ### <a name="remarks"></a>Note  
  Eseguire l'override di questo metodo in una classe derivata e restituire `FALSE` per disabilitare l'aspetto dell'elemento figlio MDI nelle schede della barra delle applicazioni di Windows 7.  
   
-##  <a name="activatetoplevelframe"></a>CMDIChildWndEx::ActivateTopLevelFrame  
+##  <a name="activatetoplevelframe"></a>  CMDIChildWndEx::ActivateTopLevelFrame  
  Chiamato dal framework per attivare la cornice di primo livello quando l'applicazione viene attivata da una scheda della barra delle applicazioni.  
   
 ```  

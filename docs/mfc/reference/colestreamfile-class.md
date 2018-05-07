@@ -1,12 +1,9 @@
 ---
 title: Classe COleStreamFile | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - COleStreamFile
@@ -29,17 +26,15 @@ helpviewer_keywords:
 - COleStreamFile [MFC], GetStream
 - COleStreamFile [MFC], OpenStream
 ms.assetid: e4f93698-e17c-4a18-a7c0-4b4df8eb4d93
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: efb042f87e10bec9fff53fcb1d22d56ed3c68ef3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 805c32145d844cc1103cab7c4987c0595ff5935f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="colestreamfile-class"></a>Classe COleStreamFile
 Rappresenta un flusso di dati ( `IStream`) in un file composito come parte di un archivio strutturato OLE.  
@@ -72,7 +67,7 @@ class COleStreamFile : public CFile
 ## <a name="remarks"></a>Note  
  Un `IStorage` l'oggetto deve esistere prima che il flusso può essere aperto o creato a meno che non è un flusso di memoria.  
   
- `COleStreamFile`gli oggetti vengono modificati esattamente come [CFile](../../mfc/reference/cfile-class.md) oggetti.  
+ `COleStreamFile` gli oggetti vengono modificati esattamente come [CFile](../../mfc/reference/cfile-class.md) oggetti.  
   
  Per ulteriori informazioni sulla modifica dei flussi e archivi, vedere l'articolo [contenitori: file compositi](../../mfc/containers-compound-files.md)...  
   
@@ -88,7 +83,7 @@ class COleStreamFile : public CFile
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** AFXOLE. h  
   
-##  <a name="attach"></a>COleStreamFile::Attach  
+##  <a name="attach"></a>  COleStreamFile::Attach  
  Associa il flusso OLE fornito con il `COleStreamFile` oggetto.  
   
 ```  
@@ -104,7 +99,7 @@ void Attach(LPSTREAM lpStream);
   
  Per ulteriori informazioni, vedere [IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034) in Windows SDK.  
   
-##  <a name="colestreamfile"></a>COleStreamFile::COleStreamFile  
+##  <a name="colestreamfile"></a>  COleStreamFile::COleStreamFile  
  Crea un oggetto `COleStreamFile`.  
   
 ```  
@@ -120,7 +115,7 @@ COleStreamFile(LPSTREAM lpStream = NULL);
   
  Per ulteriori informazioni, vedere [IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034) in Windows SDK.  
   
-##  <a name="creatememorystream"></a>COleStreamFile::CreateMemoryStream  
+##  <a name="creatememorystream"></a>  COleStreamFile::CreateMemoryStream  
  In modo sicuro crea un nuovo flusso insufficiente memoria globale condivisa in cui è una condizione normale, prevista di un errore.  
   
 ```  
@@ -139,7 +134,7 @@ BOOL CreateMemoryStream(CFileException* pError = NULL);
   
  Per ulteriori informazioni, vedere [CreateStreamOnHGlobal](http://msdn.microsoft.com/library/windows/desktop/aa378980) in Windows SDK.  
   
-##  <a name="createstream"></a>COleStreamFile::CreateStream  
+##  <a name="createstream"></a>  COleStreamFile::CreateStream  
  Crea in modo sicuro un nuovo flusso dell'oggetto di archiviazione fornito in cui è una condizione normale, prevista di un errore.  
   
 ```  
@@ -171,7 +166,7 @@ BOOL CreateStream(
   
  Per ulteriori informazioni, vedere [IStorage::CreateStream](http://msdn.microsoft.com/library/windows/desktop/aa380020) in Windows SDK.  
   
-##  <a name="detach"></a>COleStreamFile::Detach  
+##  <a name="detach"></a>  COleStreamFile::Detach  
  Rimuove l'associazione dall'oggetto flusso senza chiudere il flusso.  
   
 ```  
@@ -186,7 +181,7 @@ LPSTREAM Detach();
   
  Per ulteriori informazioni, vedere [IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034) in Windows SDK.  
   
-##  <a name="getstream"></a>COleStreamFile::GetStream  
+##  <a name="getstream"></a>  COleStreamFile::GetStream  
  Chiamare questa funzione per restituire un puntatore al flusso corrente.  
   
 ```  
@@ -196,7 +191,7 @@ IStream* GetStream() const;
 ### <a name="return-value"></a>Valore restituito  
  Un puntatore all'interfaccia del flusso corrente ( [IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034)).  
   
-##  <a name="openstream"></a>COleStreamFile::OpenStream  
+##  <a name="openstream"></a>  COleStreamFile::OpenStream  
  Apre un flusso esistente.  
   
 ```  

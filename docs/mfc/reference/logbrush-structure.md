@@ -1,13 +1,10 @@
 ---
 title: LOGBRUSH (struttura) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - LOGBRUSH
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - LOGBRUSH structure [MFC]
 ms.assetid: 1bf96768-52c5-4444-9bb8-d41ba2e27e68
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ec6cc9b61f837db4c9766c077fa60f4d9c2b95bd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6e02c156619e4ca36d268870c70ba783c41a352d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="logbrush-structure"></a>Struttura LOGBRUSH
 Il `LOGBRUSH` struttura definisce lo stile, colore e motivo di un pennello fisico. Viene utilizzato da Windows [CreateBrushIndirect](http://msdn.microsoft.com/library/windows/desktop/dd183487) e [ExtCreatePen](http://msdn.microsoft.com/library/windows/desktop/dd162705) funzioni.  
@@ -52,7 +47,7 @@ typedef struct tag LOGBRUSH { /* lb */
   
 - **BS_HOLLOW** rendere cavo pennello.  
   
-- **BS_NULL** come **BS_HOLLOW**.  
+- **BS_NULL** uguale a **BS_HOLLOW**.  
   
 - **BS_PATTERN** motivo tratto definito da una bitmap in memoria.  
   
@@ -61,24 +56,24 @@ typedef struct tag LOGBRUSH { /* lb */
  `lbColor`  
  Specifica il colore in cui viene disegnato il pennello. Se `lbStyle` è il **BS_HOLLOW** o **BS_PATTERN** stile, **lbColor** viene ignorato. Se `lbStyle` è **BS_DIBPATTERN** o **BS_DIBPATTERNBT**, la parola meno significativa di **lbColor** specifica se il **bmiColors**i membri del [BITMAPINFO](../../mfc/reference/bitmapinfo-structure.md) struttura contengono esplicita rosso, verde, blu valori (RGB) o gli indici in attualmente realizzata tavolozza logica. Il **lbColor** membro deve essere uno dei valori seguenti:  
   
-- **DIB_PAL_COLORS** la tabella dei colori è costituito da una matrice di indici a 16 bit nella tavolozza logica realizzata attualmente.  
+- **DIB_PAL_COLORS** la tabella dei colori è costituito da una matrice di indici a 16 bit nella tavolozza logica attualmente realizzata.  
   
-- **DIB_RGB_COLORS** la tabella dei colori contiene i valori letterali RGB.  
+- **DIB_RGB_COLORS** la tabella color contiene valori RGB letterali.  
   
  *lbHatch*  
  Specifica uno stile di tratteggio. Il significato dipende dallo stile pennello definito da `lbStyle`. Se `lbStyle` è **BS_DIBPATTERN**, **lbHatch** membro contiene un handle a DIB compresso. Se `lbStyle` è **BS_DIBPATTERNPT**, **lbHatch** membro contiene un puntatore a DIB compresso. Se `lbStyle` è **BS_HATCHED**, **lbHatch** membro specifica l'orientamento delle linee utilizzate per creare il tratteggio. Può essere uno dei valori seguenti:  
   
-- `HS_BDIAGONAL`Un tratteggio verso l'alto, da sinistra a destra di 45 gradi  
+- `HS_BDIAGONAL` Un tratteggio verso l'alto, da sinistra a destra di 45 gradi  
   
-- `HS_CROSS`Tratteggio incrociato orizzontale e verticale  
+- `HS_CROSS` Tratteggio incrociato orizzontale e verticali  
   
-- `HS_DIAGCROSS`Tratteggio incrociato di 45 gradi  
+- `HS_DIAGCROSS` Tratteggio incrociato di 45 gradi  
   
-- `HS_FDIAGONAL`Un tratteggio verso il basso, da sinistra a destra di 45 gradi  
+- `HS_FDIAGONAL` Un tratteggio verso il basso, da sinistra a destra di 45 gradi  
   
-- `HS_HORIZONTAL`Tratteggio orizzontale  
+- `HS_HORIZONTAL` Tratteggio orizzontale  
   
-- `HS_VERTICAL`Tratteggio verticale  
+- `HS_VERTICAL` Tratteggio verticale  
   
  Se `lbStyle` è **BS_PATTERN**, **lbHatch** è un handle per la mappa di bit che definisce il modello. Se `lbStyle` è **BS_SOLID** o **BS_HOLLOW**, **lbHatch** viene ignorato.  
   

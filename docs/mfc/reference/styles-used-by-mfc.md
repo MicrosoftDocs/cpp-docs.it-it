@@ -1,13 +1,10 @@
 ---
 title: Stili utilizzati da MFC | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.mfc.styles
 dev_langs:
@@ -205,17 +202,15 @@ helpviewer_keywords:
 - WS_EX_TRANSPARENT constant [MFC]
 - WS_EX_WINDOWEDGE constant [MFC]
 ms.assetid: d3b9af37-31b5-4c97-a8ad-189fd724b04c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9ed12f793047aa4a97a31ca0f40c62896c46a358
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c1e891c8b24e52b56bd6bed8fb7f931fdd8fb863
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="styles-used-by-mfc"></a>Stili utilizzati da MFC  
   
@@ -553,7 +548,7 @@ Applicano stili finestra estesi [classe CWnd](../../mfc/reference/cwnd-class.md)
 [Stili dei pulsanti (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb775951)  
 [Stili casella combinata (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb775796)  
 [Modifica degli stili del controllo (Windows)](http://msdn.microsoft.com/library/windows/desktop/bb775464)  
-[Elenco di stili di finestra (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb775149) 
+[Elencare gli stili di finestra (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb775149) 
 [funzione MessageBox (Windows)](https://msdn.microsoft.com/library/windows/desktop/ms645505) 
 [stili del controllo barra di scorrimento (Windows)](http://msdn.microsoft.com/library/windows/desktop/bb787533)  
 [Stili del controllo statico (Windows)](http://msdn.microsoft.com/library/windows/desktop/bb760773)  

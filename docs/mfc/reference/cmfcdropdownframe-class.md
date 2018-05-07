@@ -1,12 +1,9 @@
 ---
 title: Classe CMFCDropDownFrame | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCDropDownFrame
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - CMFCDropDownFrame [MFC], RecalcLayout
 - CMFCDropDownFrame [MFC], SetAutoDestroy
 ms.assetid: 09ff81a9-de00-43ec-9df9-b626f7728c4b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 01b3e5b56621d7bf8d42aad12e216208338bbacd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1680305b359bb273ba492083dd2e99703e2d930d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcdropdownframe-class"></a>Classe CMFCDropDownFrame
 Fornisce funzionalità di finestra frame di riepilogo a discesa per le barre degli strumenti elenco a discesa e pulsanti di menu a discesa della barra degli strumenti.  
@@ -95,7 +90,7 @@ class CMFCDropDownFrame : public CMiniFrameWnd
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** afxdropdowntoolbar.h  
   
-##  <a name="create"></a>CMFCDropDownFrame::Create  
+##  <a name="create"></a>  CMFCDropDownFrame::Create  
  Crea un oggetto `CMFCDropDownFrame`.  
   
 ```  
@@ -117,14 +112,14 @@ virtual BOOL Create(
 |[in] `pWndOriginToolbar`|La barra degli strumenti è disponibili i pulsanti di menu a discesa che questo metodo viene utilizzato per popolare il nuovo oggetto elenco a discesa frame.|  
   
 ### <a name="return-value"></a>Valore restituito  
- `TRUE`Se il frame di riepilogo a discesa è stato creato correttamente; in caso contrario `FALSE`.  
+ `TRUE` Se il frame di riepilogo a discesa è stato creato correttamente; in caso contrario `FALSE`.  
   
 ### <a name="remarks"></a>Note  
  Questo metodo chiama il metodo base [CMiniFrameWnd::CreateEx](../../mfc/reference/cminiframewnd-class.md#createex) metodo per creare la finestra cornice di riepilogo a discesa con i `WS_POPUP` stile. Viene visualizzata la finestra di riepilogo a discesa frame in corrispondenza delle coordinate dello schermo specificate. Questo metodo ha esito negativo se il [CMiniFrameWnd::CreateEx](../../mfc/reference/cminiframewnd-class.md#createex) restituisce `FALSE`.  
   
  Il `CMFCDropDownFrame` classe crea una copia dell'oggetto fornito `CMFCDropDownToolBar` parametro. Questo metodo copia le immagini dei pulsanti e gli stati di pulsante dal `pWndOriginToolbar` parametro per il `m_pWndOriginToolbar` (membro dati).  
   
-##  <a name="getparentmenubar"></a>CMFCDropDownFrame::GetParentMenuBar  
+##  <a name="getparentmenubar"></a>  CMFCDropDownFrame::GetParentMenuBar  
  Recupera la barra dei menu del padre del riquadro di riepilogo a discesa.  
   
 ```  
@@ -137,7 +132,7 @@ CMFCMenuBar* GetParentMenuBar() const;
 ### <a name="remarks"></a>Note  
  Questo metodo recupera la barra dei menu del padre da padre del pulsante. Questo metodo restituisce `NULL` se il frame di riepilogo a discesa non dispone di alcun pulsante padre o padre del pulsante non dispone di alcuna barra di menu padre.  
   
-##  <a name="getparentpopupmenu"></a>CMFCDropDownFrame::GetParentPopupMenu  
+##  <a name="getparentpopupmenu"></a>  CMFCDropDownFrame::GetParentPopupMenu  
  Recupera il menu a comparsa padre del riquadro di riepilogo a discesa.  
   
 ```  
@@ -150,7 +145,7 @@ CMFCDropDownFrame* GetParentPopupMenu() const;
 ### <a name="remarks"></a>Note  
  Questo metodo recupera i menu del padre da padre del pulsante. Questo metodo restituisce `NULL` se il frame di riepilogo a discesa non dispone di alcun pulsante padre o padre del pulsante non dispone di alcun menu padre.  
   
-##  <a name="recalclayout"></a>CMFCDropDownFrame::RecalcLayout  
+##  <a name="recalclayout"></a>  CMFCDropDownFrame::RecalcLayout  
  Riposiziona il frame di riepilogo a discesa.  
   
 ```  
@@ -167,7 +162,7 @@ virtual void RecalcLayout(BOOL bNotify = TRUE);
 ### <a name="remarks"></a>Note  
  Il framework chiama questo metodo quando si crea il frame di riepilogo a discesa o la finestra padre viene ridimensionata. Questo metodo calcola la posizione e le dimensioni del riquadro di riepilogo a discesa tramite la posizione e le dimensioni della finestra padre.  
   
-##  <a name="setautodestroy"></a>CMFCDropDownFrame::SetAutoDestroy  
+##  <a name="setautodestroy"></a>  CMFCDropDownFrame::SetAutoDestroy  
  Imposta se la finestra di riepilogo a discesa della barra degli strumenti figlio viene eliminata automaticamente.  
   
 ```  
@@ -176,7 +171,7 @@ void SetAutoDestroy(BOOL bAutoDestroy = TRUE);
   
 ### <a name="parameters"></a>Parametri  
  [in] `bAutoDestroy`  
- `TRUE`Per eliminare automaticamente la finestra degli strumenti elenco a discesa associato. in caso contrario, `FALSE`.  
+ `TRUE` Per eliminare automaticamente la finestra degli strumenti elenco a discesa associato. in caso contrario, `FALSE`.  
   
 ### <a name="remarks"></a>Note  
  Se `bAutoDestroy` è `TRUE`, quindi il `CMFCDropDownFrame` distruttore Elimina la finestra degli strumenti elenco a discesa associato. Il valore predefinito è `TRUE`.  

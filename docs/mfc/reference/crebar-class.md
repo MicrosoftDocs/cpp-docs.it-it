@@ -1,12 +1,9 @@
 ---
 title: CReBar (classe) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CReBar
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - CReBar [MFC], Create
 - CReBar [MFC], GetReBarCtrl
 ms.assetid: c1ad2720-1d33-4106-8e4e-80aa84f93559
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2cd32c4df0465426d99ca6246648520d160f382e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 94fc1e0ccad8980e0ed5a1cc0f8c0262502e1398
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="crebar-class"></a>CReBar (classe)
 Barra di controllo che fornisce le informazioni su layout, persistenza e stato per i controlli Rebar.  
@@ -60,7 +55,7 @@ class CReBar : public CControlBar
 ## <a name="rebar-control"></a>Controllo Rebar  
  Un oggetto rebar si comporta in modo analogo a un oggetto barra degli strumenti. Un controllo rebar utilizza il meccanismo di fare clic e trascinare per ridimensionare proprie bande. Un controllo Rebar può contenere una o più bande, con ciascuna banda che contiene una combinazione qualsiasi di una barra verticale di ridimensionamento, una bitmap, un'etichetta di testo e una finestra figlio. Tuttavia, le bande non possono contenere più di una finestra figlio.  
   
- **CReBar** utilizza il [CReBarCtrl](../../mfc/reference/crebarctrl-class.md) classe per fornire la relativa implementazione. È possibile accedere al controllo rebar mediante [GetReBarCtrl](#getrebarctrl) per sfruttare le opzioni di personalizzazione del controllo. Per ulteriori informazioni sui controlli rebar, vedere `CReBarCtrl`. Per ulteriori informazioni sull'utilizzo dei controlli rebar, vedere [CReBarCtrl utilizzando](../../mfc/using-crebarctrl.md).  
+ **CReBar** Usa la [CReBarCtrl](../../mfc/reference/crebarctrl-class.md) classe per fornire la relativa implementazione. È possibile accedere al controllo rebar mediante [GetReBarCtrl](#getrebarctrl) per sfruttare le opzioni di personalizzazione del controllo. Per ulteriori informazioni sui controlli rebar, vedere `CReBarCtrl`. Per ulteriori informazioni sull'utilizzo dei controlli rebar, vedere [CReBarCtrl utilizzando](../../mfc/using-crebarctrl.md).  
   
 > [!CAUTION]
 >  Rebar e oggetti del controllo rebar non supportano il controllo MFC barra di ancoraggio. Se **CRebar::EnableDocking** viene chiamato, l'applicazione verrà verificata.  
@@ -79,7 +74,7 @@ class CReBar : public CControlBar
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** AFXEXT. h  
   
-##  <a name="addbar"></a>CReBar::AddBar  
+##  <a name="addbar"></a>  CReBar::AddBar  
  Chiamare questa funzione membro per aggiungere una banda per il controllo rebar.  
   
 ```  
@@ -123,7 +118,7 @@ BOOL AddBar(
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFC_CReBarCtrl#1](../../mfc/reference/codesnippet/cpp/crebar-class_1.cpp)]  
   
-##  <a name="create"></a>CReBar::Create  
+##  <a name="create"></a>  CReBar::Create  
  Chiamare questa funzione membro per creare un controllo rebar.  
   
 ```  
@@ -153,7 +148,7 @@ virtual BOOL Create(
 ### <a name="example"></a>Esempio  
   Per vedere l'esempio [CReBar::AddBar](#addbar).  
   
-##  <a name="getrebarctrl"></a>CReBar:: GetReBarCtrl  
+##  <a name="getrebarctrl"></a>  CReBar:: GetReBarCtrl  
  Questa funzione membro consente l'accesso diretto al controllo sottostante comune.  
   
 ```  

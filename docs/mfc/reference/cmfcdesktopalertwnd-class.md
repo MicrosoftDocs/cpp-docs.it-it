@@ -1,12 +1,9 @@
 ---
 title: Classe CMFCDesktopAlertWnd | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCDesktopAlertWnd
@@ -53,17 +50,15 @@ helpviewer_keywords:
 - CMFCDesktopAlertWnd [MFC], SetSmallCaption
 - CMFCDesktopAlertWnd [MFC], SetTransparency
 ms.assetid: 73a2dd7b-ea84-4ae2-9830-7cf6e8dd2425
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cfebb488921d81c36f842885ad49eae3f40a37fb
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: cf09b2f598391a599df5106fcf8933c580dd30e3
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcdesktopalertwnd-class"></a>CMFCDesktopAlertWnd Class
 La `CMFCDesktopAlertWnd` classe implementa la funzionalità di una finestra di dialogo non modale visualizzata sullo schermo per informare l'utente a un evento.  
@@ -147,7 +142,7 @@ class CMFCDesktopAlertWnd : public CWnd
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** afxDesktopAlertWnd.h  
   
-##  <a name="create"></a>Cmfcdesktopalertwnd:: Create  
+##  <a name="create"></a>  Cmfcdesktopalertwnd:: Create  
  Crea e inizializza la finestra di avviso.  
   
 ```  
@@ -167,7 +162,7 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] [out]`pWndOwner`  
+ [in] [out] `pWndOwner`  
  Specifica il proprietario della finestra di avviso. Proprietario riceverà quindi tutte le notifiche per la finestra di avviso. Questo valore non può essere `NULL`.  
   
  [in] `uiDlgResID`  
@@ -186,7 +181,7 @@ virtual BOOL Create(
  Specifica i parametri vengono utilizzati per creare una finestra.  
   
 ### <a name="return-value"></a>Valore restituito  
- `TRUE`Se la finestra di avviso è stata creata correttamente. in caso contrario, `FALSE`.  
+ `TRUE` Se la finestra di avviso è stata creata correttamente. in caso contrario, `FALSE`.  
   
 ### <a name="remarks"></a>Note  
  Chiamare questo metodo per creare una finestra di avviso. L'area client della finestra di avviso contiene una finestra di dialogo figlio che contiene tutti i controlli che vengono visualizzati all'utente.  
@@ -195,7 +190,7 @@ virtual BOOL Create(
   
  Il secondo overload del metodo crea una finestra che contiene i controlli predefiniti. È possibile specificare quali controlli per visualizzare, modificare il [classe CMFCDesktopAlertWndInfo](../../mfc/reference/cmfcdesktopalertwndinfo-class.md).  
   
-##  <a name="getanimationspeed"></a>CMFCDesktopAlertWnd::GetAnimationSpeed  
+##  <a name="getanimationspeed"></a>  CMFCDesktopAlertWnd::GetAnimationSpeed  
  Restituisce la velocità dell'animazione.  
   
 ```  
@@ -208,7 +203,7 @@ UINT GetAnimationSpeed() const;
 ### <a name="remarks"></a>Note  
  La velocità dell'animazione descrive la velocità di apre e chiude la finestra di avviso.  
   
-##  <a name="getanimationtype"></a>CMFCDesktopAlertWnd::GetAnimationType  
+##  <a name="getanimationtype"></a>  CMFCDesktopAlertWnd::GetAnimationType  
  Restituisce il tipo di animazione.  
   
 ```  
@@ -228,7 +223,7 @@ CMFCPopupMenu::ANIMATION_TYPE GetAnimationType();
   
 - `SYSTEM_DEFAULT_ANIMATION`  
   
-##  <a name="getautoclosetime"></a>CMFCDesktopAlertWnd::GetAutoCloseTime  
+##  <a name="getautoclosetime"></a>  CMFCDesktopAlertWnd::GetAutoCloseTime  
  Restituisce il valore di timeout di chiusura automatica.  
   
 ```  
@@ -241,7 +236,7 @@ int GetAutoCloseTime() const;
 ### <a name="remarks"></a>Note  
  Utilizzare questo metodo per determinare quanto tempo deve trascorrere prima che la finestra di avviso verrà chiusa automaticamente.  
   
-##  <a name="getcaptionheight"></a>CMFCDesktopAlertWnd::GetCaptionHeight  
+##  <a name="getcaptionheight"></a>  CMFCDesktopAlertWnd::GetCaptionHeight  
  Restituisce l'altezza della didascalia.  
   
 ```  
@@ -254,7 +249,7 @@ virtual int GetCaptionHeight();
 ### <a name="remarks"></a>Note  
  Questo metodo può essere sottoposto a override in una classe derivata. L'implementazione predefinita entrambi: restituisce il valore di altezza della didascalia di piccole dimensioni (pixel a 7), se la finestra popup deve essere visualizzato il titolo di piccole dimensioni o al valore ottenuto dalla funzione API di Windows `GetSystemMetrics(SM_CYSMCAPTION)`.  
   
-##  <a name="getlastpos"></a>CMFCDesktopAlertWnd::GetLastPos  
+##  <a name="getlastpos"></a>  CMFCDesktopAlertWnd::GetLastPos  
  Restituisce l'ultima posizione della finestra di avviso sullo schermo.  
   
 ```  
@@ -267,7 +262,7 @@ CPoint GetLastPos() const;
 ### <a name="remarks"></a>Note  
  Questo metodo restituisce l'ultima posizione valida della finestra di avviso sullo schermo.  
   
-##  <a name="gettransparency"></a>CMFCDesktopAlertWnd::GetTransparency  
+##  <a name="gettransparency"></a>  CMFCDesktopAlertWnd::GetTransparency  
  Restituisce il livello di trasparenza.  
   
 ```  
@@ -280,7 +275,7 @@ BYTE GetTransparency() const;
 ### <a name="remarks"></a>Note  
  Utilizzare questo metodo per recuperare il livello di trasparenza corrente della finestra di avviso.  
   
-##  <a name="hassmallcaption"></a>CMFCDesktopAlertWnd::HasSmallCaption  
+##  <a name="hassmallcaption"></a>  CMFCDesktopAlertWnd::HasSmallCaption  
  Determina se la finestra di avviso dispone di un titolo di piccole dimensioni o di una didascalia di dimensioni normali.  
   
 ```  
@@ -288,12 +283,12 @@ BOOL HasSmallCaption() const;
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- `TRUE`Se viene visualizzata la finestra popup con un titolo di piccole dimensioni; `FALSE` se viene visualizzata la finestra popup con una didascalia dimensioni normali.  
+ `TRUE` Se viene visualizzata la finestra popup con un titolo di piccole dimensioni; `FALSE` se viene visualizzata la finestra popup con una didascalia dimensioni normali.  
   
 ### <a name="remarks"></a>Note  
  Utilizzare questo metodo per determinare se la finestra popup ha una didascalia di dimensioni normali o di un titolo di piccole dimensioni. Per impostazione predefinita, il titolo di piccole dimensioni è 7 pixel di altezza. È possibile ottenere l'altezza della didascalia di dimensioni normali, chiamando la funzione API Windows `GetSystemMetrics(SM_CYCAPTION)`.  
   
-##  <a name="onbeforeshow"></a>CMFCDesktopAlertWnd::OnBeforeShow  
+##  <a name="onbeforeshow"></a>  CMFCDesktopAlertWnd::OnBeforeShow  
 
   
 ```  
@@ -307,7 +302,7 @@ virtual BOOL OnBeforeShow(CPoint&);
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="onclicklinkbutton"></a>CMFCDesktopAlertWnd::OnClickLinkButton  
+##  <a name="onclicklinkbutton"></a>  CMFCDesktopAlertWnd::OnClickLinkButton  
  Chiamato dal framework quando l'utente sceglie un pulsante di collegamento del menu avviso desktop.  
   
 ```  
@@ -324,7 +319,7 @@ virtual BOOL OnClickLinkButton(UINT uiCmdID);
 ### <a name="remarks"></a>Note  
  Eseguire l'override di questo metodo in una classe derivata se si desidera ricevere una notifica quando un utente fa clic sul collegamento nella finestra di avviso.  
   
-##  <a name="oncommand"></a>CMFCDesktopAlertWnd::OnCommand  
+##  <a name="oncommand"></a>  CMFCDesktopAlertWnd::OnCommand  
 
   
 ```  
@@ -341,7 +336,7 @@ virtual BOOL OnCommand(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="ondraw"></a>CMFCDesktopAlertWnd::OnDraw  
+##  <a name="ondraw"></a>  CMFCDesktopAlertWnd::OnDraw  
 
   
 ```  
@@ -353,7 +348,7 @@ virtual void OnDraw(CDC* pDC);
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="processcommand"></a>CMFCDesktopAlertWnd::ProcessCommand  
+##  <a name="processcommand"></a>  CMFCDesktopAlertWnd::ProcessCommand  
 
   
 ```  
@@ -367,7 +362,7 @@ BOOL ProcessCommand(HWND hwnd);
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="setanimationspeed"></a>CMFCDesktopAlertWnd::SetAnimationSpeed  
+##  <a name="setanimationspeed"></a>  CMFCDesktopAlertWnd::SetAnimationSpeed  
  Imposta la nuova velocità dell'animazione.  
   
 ```  
@@ -381,7 +376,7 @@ void SetAnimationSpeed(UINT nSpeed);
 ### <a name="remarks"></a>Note  
  Chiamare questo metodo per impostare la velocità dell'animazione per la finestra di avviso. La velocità dell'animazione predefinito è 30 millisecondi.  
   
-##  <a name="setanimationtype"></a>CMFCDesktopAlertWnd::SetAnimationType  
+##  <a name="setanimationtype"></a>  CMFCDesktopAlertWnd::SetAnimationType  
  Imposta il tipo di animazione.  
   
 ```  
@@ -405,7 +400,7 @@ void SetAnimationType(CMFCPopupMenu::ANIMATION_TYPE type);
   
 - `SYSTEM_DEFAULT_ANIMATION`  
   
-##  <a name="setautoclosetime"></a>CMFCDesktopAlertWnd::SetAutoCloseTime  
+##  <a name="setautoclosetime"></a>  CMFCDesktopAlertWnd::SetAutoCloseTime  
  Imposta il valore di timeout di chiusura automatica.  
   
 ```  
@@ -419,7 +414,7 @@ void SetAutoCloseTime(int nTime);
 ### <a name="remarks"></a>Note  
  La finestra di avviso viene chiuso automaticamente dopo il tempo specificato, se l'utente non interagisce con la finestra.  
   
-##  <a name="setsmallcaption"></a>CMFCDesktopAlertWnd::SetSmallCaption  
+##  <a name="setsmallcaption"></a>  CMFCDesktopAlertWnd::SetSmallCaption  
  Passa tra le didascalie di piccole dimensioni e dimensioni normali.  
   
 ```  
@@ -428,12 +423,12 @@ void SetSmallCaption(BOOL bSmallCaption = TRUE);
   
 ### <a name="parameters"></a>Parametri  
  [in] `bSmallCaption`  
- `TRUE`Per specificare che nella finestra di avviso viene visualizzato un titolo di piccole dimensioni; in caso contrario, `FALSE` per specificare che la finestra di avviso viene visualizzata una didascalia di dimensioni normali.  
+ `TRUE` Per specificare che la finestra di avviso consente di visualizzare un titolo di piccole dimensioni; in caso contrario, `FALSE` per specificare che la finestra di avviso consente di visualizzare una didascalia di dimensioni normali.  
   
 ### <a name="remarks"></a>Note  
  Chiamare questo metodo per visualizzare la didascalia di piccole dimensioni o dimensioni normali. Per impostazione predefinita, il titolo di piccole dimensioni è 7 pixel di altezza. È possibile ottenere la dimensione della didascalia regolare chiamando la funzione API Windows `GetSystemMetrics(SM_CYCAPTION)`.  
   
-##  <a name="settransparency"></a>CMFCDesktopAlertWnd::SetTransparency  
+##  <a name="settransparency"></a>  CMFCDesktopAlertWnd::SetTransparency  
  Imposta il livello di trasparenza della finestra popup.  
   
 ```  
@@ -447,7 +442,7 @@ void SetTransparency(BYTE nTransparency);
 ### <a name="remarks"></a>Note  
  Chiamare questa funzione per impostare il livello di trasparenza della finestra popup.  
   
-##  <a name="getdialogsize"></a>CMFCDesktopAlertWnd::GetDialogSize  
+##  <a name="getdialogsize"></a>  CMFCDesktopAlertWnd::GetDialogSize  
 
   
 ```  

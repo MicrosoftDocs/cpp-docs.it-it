@@ -1,13 +1,10 @@
 ---
 title: Due modi per creare un oggetto CArchive | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - CArchive
 dev_langs:
@@ -22,17 +19,15 @@ helpviewer_keywords:
 - data storage [MFC], CArchive class
 - CArchive class [MFC], constructor
 ms.assetid: aefa28ce-b55c-40dc-9e42-5f038030985d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1b1db549544d421600ed6dae1a8a987006c2ab6c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 87abaa5a3564c61a6944e0cc31e81375f92a3a80
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="two-ways-to-create-a-carchive-object"></a>Due modi per creare un oggetto CArchive
 Esistono due modi per creare un `CArchive` oggetto:  
@@ -41,7 +36,7 @@ Esistono due modi per creare un `CArchive` oggetto:
   
 -   [Creazione esplicita di un oggetto CArchive](#_core_explicit_creation_of_a_carchive_object)  
   
-##  <a name="_core_implicit_creation_of_a_carchive_object_via_the_framework"></a>Creazione implicita di un oggetto CArchive tramite il Framework  
+##  <a name="_core_implicit_creation_of_a_carchive_object_via_the_framework"></a> Creazione implicita di un oggetto CArchive tramite il Framework  
  È il modo più comune e più semplice, per consentire il framework di creare un `CArchive` oggetto per il documento per conto di Save, Salva con nome e i comandi Apri dal menu File.  
   
  Ecco cosa eseguite dal framework quando l'utente dell'applicazione esegue il comando Salva dal menu File:  
@@ -58,7 +53,7 @@ Esistono due modi per creare un `CArchive` oggetto:
   
  Pertanto, se si sceglie la creazione di `CArchive` dell'oggetto per il documento, è necessario eseguire è l'implementazione del documento `Serialize` funzione che scrive e legge da e verso l'archivio. È inoltre necessario implementare `Serialize` per qualsiasi `CObject`-oggetti derivati che il documento `Serialize` (funzione) serializzati a sua volta direttamente o indirettamente.  
   
-##  <a name="_core_explicit_creation_of_a_carchive_object"></a>Creazione esplicita di un oggetto CArchive  
+##  <a name="_core_explicit_creation_of_a_carchive_object"></a> Creazione esplicita di un oggetto CArchive  
  Oltre alla serializzazione di un documento tramite il framework, esistono altri casi potrebbe essere necessario un `CArchive` oggetto. Potrebbe ad esempio, si desidera serializzare i dati da e verso gli Appunti, rappresentato da un `CSharedFile` oggetto. In alternativa, si consiglia di utilizzare un'interfaccia utente per il salvataggio di un file che è diverso da quello fornito dal framework. In questo caso, è possibile creare in modo esplicito un `CArchive` oggetto. A tale scopo allo stesso modo il framework, con la procedura seguente.  
   
 #### <a name="to-explicitly-create-a-carchive-object"></a>Per creare in modo esplicito un oggetto CArchive  

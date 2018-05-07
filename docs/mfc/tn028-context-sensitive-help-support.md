@@ -1,13 +1,10 @@
 ---
 title: 'TN028: Supporto della Guida sensibile al contesto | Documenti Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.help
 dev_langs:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - TN028
 - resource identifiers, context-sensitive Help
 ms.assetid: 884f1c55-fa27-4d4c-984f-30907d477484
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d8054fe4fae4aafa88c34833a5a2a92a6b9b44bf
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 58caed14e6b7080405cceb30cfb90623d28dc83e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn028-context-sensitive-help-support"></a>TN028: supporto della guida sensibile al contesto
 Questa nota descrive le regole per l'assegnazione della Guida contesti ID e altri problemi della Guida in MFC. Supporto della Guida sensibile al contesto richiede il compilatore della Guida che è disponibile in Visual C++.  
@@ -76,7 +71,7 @@ Questa nota descrive le regole per l'assegnazione della Guida contesti ID e altr
   
  Indipendentemente dal modo in cui il `ID_HELP` comando viene generato, viene indirizzato come un normale comando fino a raggiungere un gestore del comando. Per ulteriori informazioni sull'architettura di routing dei comandi di MFC, vedere [21 Nota tecnica](../mfc/tn021-command-and-message-routing.md). Se l'applicazione è abilitata, Guida di `ID_HELP` verrà gestito dal comando [CWinApp::OnHelp](../mfc/reference/cwinapp-class.md#onhelp). L'oggetto applicazione riceve il messaggio della Guida e quindi indirizza il comando in modo appropriato. Ciò è necessario poiché il routing di comandi predefinito non è adatto per determinare il contesto più specifico.  
   
- `CWinApp::OnHelp`tenta di avviare WinHelp nell'ordine seguente:  
+ `CWinApp::OnHelp` è stato effettuato un tentativo di avviare WinHelp nell'ordine seguente:  
   
 1.  Verifica la presenza di un oggetto attivo `AfxMessageBox` chiamata con un ID della Guida. Se una finestra di messaggio è attualmente attiva, WinHelp viene avviata con il contesto appropriato per tale finestra di messaggio.  
   
@@ -99,7 +94,7 @@ afx_msg LRESULT CWnd::OnCommandHelp(WPARAM wParam, LPARAM lParam)
  WM_COMMANDHELP è un messaggio privato di Windows MFC ricevuto dalla finestra attiva quando viene richiesta la Guida. Quando la finestra riceve questo messaggio, è possibile chiamare `CWinApp::WinHelp` con contesto che corrisponde allo stato interno della finestra.  
   
  `lParam`  
- Contiene il contesto della Guida disponibile. `lParam`è uguale a zero se non è stato determinato alcun contesto. Un'implementazione di `OnCommandHelp` possibile utilizzare l'ID del contesto in `lParam` per stabilire un contesto diverso o semplicemente passare a `CWinApp::WinHelp`.  
+ Contiene il contesto della Guida disponibile. `lParam` è uguale a zero se non è stato determinato alcun contesto. Un'implementazione di `OnCommandHelp` possibile utilizzare l'ID del contesto in `lParam` per stabilire un contesto diverso o semplicemente passare a `CWinApp::WinHelp`.  
   
  `wParam`  
  Non viene utilizzato e sarà zero.  
@@ -115,7 +110,7 @@ afx_msg LRESULT CWnd::OnCommandHelp(WPARAM wParam, LPARAM lParam)
   
  Se sono presenti particolare inserire traduzioni o azioni che il `PreTranslateMessage` funzione che non si verificano durante modalità MAIUSC + F1 Guida in linea, è necessario controllare il `m_bHelpMode` membro del `CWinApp` prima di eseguire tali operazioni. Il `CDialog` implementazione di `PreTranslateMessage` si verifica prima di chiamare `IsDialogMessage`, ad esempio. Disabilita la "finestra di dialogo" tasti sulle finestre di dialogo non modali durante la modalità MAIUSC + F1. Inoltre, `CWinApp::OnIdle` viene ancora chiamato durante il ciclo.  
   
- Se l'utente sceglie un comando dal menu, viene gestita come guida per il comando (tramite **WM_COMMANDHELP**, vedere sotto). Se l'utente fa clic su un'area visibile della finestra di applicazioni, non una determinazione viene effettuata sia un clic non client o un client. `OnContextHelp`mapping di handle di non client sceglie automaticamente ai client clic. Questo caso, fare clic su un client invia quindi un **WM_HELPHITTEST** alla finestra che è stato fatto clic. Se tale finestra restituisce un valore diverso da zero, tale valore viene utilizzato come contesto per la Guida. Se viene restituito zero, `OnContextHelp` tenta la finestra padre (e in mancanza di padre e così via). Se non è possibile determinare un contesto della Guida, il valore predefinito è per inviare un **ID_DEFAULT_HELP** comando alla finestra principale (in genere) viene quindi mappata a `CWinApp::OnHelpIndex`.  
+ Se l'utente sceglie un comando dal menu, viene gestita come guida per il comando (tramite **WM_COMMANDHELP**, vedere sotto). Se l'utente fa clic su un'area visibile della finestra di applicazioni, non una determinazione viene effettuata sia un clic non client o un client. `OnContextHelp` mapping di handle di eliminazione fa clic automaticamente ai client clic. Questo caso, fare clic su un client invia quindi un **WM_HELPHITTEST** alla finestra che è stato fatto clic. Se tale finestra restituisce un valore diverso da zero, tale valore viene utilizzato come contesto per la Guida. Se viene restituito zero, `OnContextHelp` tenta la finestra padre (e in mancanza di padre e così via). Se non è possibile determinare un contesto della Guida, il valore predefinito è per inviare un **ID_DEFAULT_HELP** comando alla finestra principale (in genere) viene quindi mappata a `CWinApp::OnHelpIndex`.  
   
 ## <a name="wmhelphittest"></a>WM_HELPHITTEST  
   
@@ -125,7 +120,7 @@ afx_msg LRESULT CWnd::OnHelpHitTest(
 WPARAM, LPARAM lParam)  
 ```  
   
- **WM_HELPHITTEST** è un messaggio di windows privati MFC che viene ricevuto da una finestra attiva scelto durante la modalità MAIUSC + F1. Quando la finestra riceve questo messaggio, restituisce un ID DWORD della Guida per l'utilizzo da WinHelp.  
+ **WM_HELPHITTEST** è un messaggio di windows privati MFC che viene ricevuto da scelto durante la modalità MAIUSC + F1 della finestra attiva. Quando la finestra riceve questo messaggio, restituisce un ID DWORD della Guida per l'utilizzo da WinHelp.  
   
  LOWORD(lParam)  
  contiene la coordinata del dispositivo dell'asse x in cui il puntatore del mouse è stato fatto clic relativo all'area client della finestra.  

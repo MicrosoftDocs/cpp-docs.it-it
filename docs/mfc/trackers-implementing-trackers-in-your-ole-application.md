@@ -1,13 +1,10 @@
 ---
-title: 'Tracker: Implementazione di tracker nell''applicazione OLE | Documenti Microsoft'
-ms.custom: 
+title: "Tracker: Implementazione di tracker nell'applicazione OLE | Documenti Microsoft"
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - OLE containers [MFC], trackers
 - CRectTracker class [MFC], implementing trackers
 ms.assetid: 5103a517-65bd-441a-8a53-02915ff3ef08
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 84972615ec5cac344731ee5a4aeaefacaa46ba5d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0936c760c9528e5ed4220c2a4c46a170b84041a8
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="trackers-implementing-trackers-in-your-ole-application"></a>Tracker: implementazione di tracker nell'applicazione OLE
 Tracker forniscono un'interfaccia grafica per consentire agli utenti di interagire con gli elementi client OLE. I diversi stili di tracker OLE client elementi possono essere visualizzati con bordi tratteggiati, quadratini di ridimensionamento o un'ampia gamma di altri effetti visivi. Questo articolo descrive:  

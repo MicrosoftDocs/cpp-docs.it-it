@@ -1,13 +1,10 @@
 ---
 title: Server documenti attivi | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - servers [MFC], active document
 - active document servers [MFC]
 ms.assetid: 131fec1e-02a0-4305-a7ab-903b911232a7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3dacb923b2e51ddc031165e637b08c9614ee1bf3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7cc207541bda3084db6bc8ab3896f46761587169
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="active-document-servers"></a>Server documenti attivi
 I server di documenti attivi come i documenti host di Word, Excel o PowerPoint di altri tipi di applicazione sono denominati documenti attivi. A differenza degli oggetti incorporati OLE (che sono semplicemente visualizzati nella pagina di un altro documento), i documenti attivi forniscono l'interfaccia completa e completano la funzionalità nativa dell'applicazione server che li crea. Gli utenti possono creare i documenti utilizzando tutta la potenza delle applicazioni preferite (se sono abilitate per i documenti attivi), ma possono considerare il progetto risultante come una sola entità.  

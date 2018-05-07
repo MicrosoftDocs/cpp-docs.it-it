@@ -1,13 +1,10 @@
 ---
 title: 'TN002: Formato dati oggetto persistente | Documenti Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.data
 dev_langs:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - persistent C++ objects [MFC]
 - TN002
 ms.assetid: 553fe01d-c587-4c8d-a181-3244a15c2be9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ca6a78f19b43ded59efb56b87f9fe3f44887a31a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ca145ff871e1c5ccff27bdebe473c6cb6f39073a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn002-persistent-object-data-format"></a>TN002: formato dati oggetto persistente
 Questa nota descrive le routine MFC che supportano oggetti C++ persistenti e il formato dei dati dell'oggetto quando questo viene archiviato in un file. Si applica solo alle classi con la [DECLARE_SERIAL](../mfc/reference/run-time-object-model-services.md#declare_serial) e [IMPLEMENT_SERIAL](../mfc/reference/run-time-object-model-services.md#implement_serial) macro.  
@@ -77,7 +72,7 @@ ar>> pObj;        // calls ar.ReadObject(RUNTIME_CLASS(CObj))
   
  Se l'oggetto non è ancora stato salvato, sono disponibili due opzioni da considerare: sia l'oggetto e il tipo esatto (classe) dell'oggetto sono nuovi per questo contesto di archiviazione o l'oggetto è di tipo esatto già presente. Per determinare se il tipo è stato individuato, le query di codice il `m_pStoreMap` per un [CRuntimeClass](../mfc/reference/cruntimeclass-structure.md) oggetto corrispondente il `CRuntimeClass` oggetto associato all'oggetto salvato. Se esiste una corrispondenza, `WriteObject` inserisce un tag che è il bit per bit `OR` di `wOldClassTag` e l'indice. Se il `CRuntimeClass` è una novità di questo contesto, archivio `WriteObject` assegna un nuovo PID per quella classe e lo inserisce nell'archivio, preceduto dal `wNewClassTag` valore.  
   
- Il descrittore per questa classe viene quindi inserito nell'archivio utilizzando il `CRuntimeClass::Store` metodo. `CRuntimeClass::Store`Inserisce il numero di schema della classe (vedere sotto) e il nome di testo ASCII della classe. Si noti che l'utilizzo del nome di testo ASCII non garantisce l'univocità dell'archivio tutte le applicazioni. Pertanto, si devono contrassegnare i file di dati per evitare il danneggiamento dei. Dopo l'inserimento delle informazioni sulla classe, l'archivio inserisce nell'oggetto verso il `m_pStoreMap` e quindi chiama il `Serialize` metodo per inserire i dati specifici di una classe. Inserire l'oggetto di `m_pStoreMap` prima di chiamare `Serialize` impedisce di salvare l'archivio più copie dell'oggetto.  
+ Il descrittore per questa classe viene quindi inserito nell'archivio utilizzando il `CRuntimeClass::Store` metodo. `CRuntimeClass::Store` Inserisce il numero di schema della classe (vedere sotto) e il nome di testo ASCII della classe. Si noti che l'utilizzo del nome di testo ASCII non garantisce l'univocità dell'archivio tutte le applicazioni. Pertanto, si devono contrassegnare i file di dati per evitare il danneggiamento dei. Dopo l'inserimento delle informazioni sulla classe, l'archivio inserisce nell'oggetto verso il `m_pStoreMap` e quindi chiama il `Serialize` metodo per inserire i dati specifici di una classe. Inserire l'oggetto di `m_pStoreMap` prima di chiamare `Serialize` impedisce di salvare l'archivio più copie dell'oggetto.  
   
  Quando viene restituito al chiamante iniziale (in genere la radice della rete di oggetti), è necessario chiamare [CArchive::Close](../mfc/reference/carchive-class.md#close). Se si prevede di eseguire altre [CFile](../mfc/reference/cfile-class.md)operazioni, è necessario chiamare il `CArchive` metodo [scaricamento](../mfc/reference/carchive-class.md#flush) per impedire il danneggiamento dell'archivio.  
   

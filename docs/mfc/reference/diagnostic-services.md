@@ -1,13 +1,10 @@
 ---
 title: Servizi diagnostici | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.mfc.macros
 dev_langs:
@@ -29,17 +26,15 @@ helpviewer_keywords:
 - diagnostics [MFC], diagnostic services
 - diagnostic functions and variables [MFC]
 ms.assetid: 8d78454f-9fae-49c2-88c9-d3fabd5393e8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 45c9e8e7cd2b9396592416ea9845c97d75a7d648
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2332090032a93152b6c841336538bf9d45984300
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="diagnostic-services"></a>Servizi diagnostici
 La libreria Microsoft Foundation Class fornisce numerosi servizi di diagnostica che semplificano il debug dei programmi. I servizi di diagnostica includono macro e funzioni globali che consentono di tenere traccia delle allocazioni della memoria del programma, scaricare il contenuto degli oggetti in fase di esecuzione e stampare i messaggi di debug in fase di esecuzione. Le macro e funzioni globali per servizi di diagnostica sono raggruppate nelle categorie seguenti:  
@@ -106,7 +101,7 @@ La libreria Microsoft Foundation Class fornisce numerosi servizi di diagnostica 
 |[_AFX_SECURE_NO_WARNINGS](#afx_secure_no_warnings)|Elimina gli avvisi del compilatore per l'utilizzo di funzioni MFC obsolete.|  
 
 
-## <a name="afx_secure_no_warnings"></a>_AFX_SECURE_NO_WARNINGS
+## <a name="afx_secure_no_warnings"></a> _AFX_SECURE_NO_WARNINGS
 Elimina gli avvisi del compilatore per l'utilizzo di funzioni MFC obsolete.  
    
 ### <a name="syntax"></a>Sintassi   
@@ -128,7 +123,7 @@ char sz[256];
 pRichEdit->GetSelText(sz);
 ```
 
-## <a name="afxdebugbreak"></a>AfxDebugBreak
+## <a name="afxdebugbreak"></a> AfxDebugBreak
 Chiamare questa funzione per determinare un'interruzione (in corrispondenza della chiamata a `AfxDebugBreak`) nell'esecuzione di questa versione di debug dell'applicazione MFC.  
 
 ### <a name="syntax"></a>Sintassi    
@@ -137,7 +132,7 @@ void AfxDebugBreak( );
 ```  
    
 ### <a name="remarks"></a>Note  
- `AfxDebugBreak`nelle versioni di un'applicazione MFC non ha alcun effetto e deve essere rimossa. Questa funzione deve essere utilizzata solo in applicazioni MFC. Utilizzare la versione dell'API Win32, **DebugBreak**, in modo che un'interruzione nelle applicazioni non MFC.  
+ `AfxDebugBreak` nelle versioni di un'applicazione MFC non ha alcun effetto e deve essere rimossa. Questa funzione deve essere utilizzata solo in applicazioni MFC. Utilizzare la versione dell'API Win32, **DebugBreak**, in modo che un'interruzione nelle applicazioni non MFC.  
    
 ### <a name="requirements"></a>Requisiti  
  **Intestazione:** afxver . h   
@@ -216,7 +211,7 @@ ASSERT_VALID(pObject)
  Specifica un oggetto di una classe derivata da `CObject` con una versione di override di `AssertValid` funzione membro.  
   
 ### <a name="remarks"></a>Note  
- `ASSERT_VALID`chiamate di `AssertValid` funzione membro dell'oggetto passato come argomento.  
+ `ASSERT_VALID` chiamate di `AssertValid` funzione membro dell'oggetto passato come argomento.  
   
  Nella versione di rilascio di MFC, `ASSERT_VALID` non esegue alcuna operazione. Nella versione di Debug, convalida il puntatore, confrontato **NULL**e chiama l'oggetto `AssertValid` funzioni membro. Se uno di questi test ha esito negativo, viene visualizzato un messaggio di avviso in modo analogo [ASSERT](#assert).  
   
@@ -273,7 +268,7 @@ DEBUG_ONLY(expression)
 ### <a name="requirements"></a>Requisiti  
  **Intestazione:** afx.h
 
- ### <a name="ensure"></a>VERIFICARE ed ENSURE_VALID
+ ### <a name="ensure"></a>  VERIFICARE ed ENSURE_VALID
 Utilizzare per verificare la correttezza dei dati.  
    
 ### <a name="syntax"></a>Sintassi    
@@ -292,7 +287,7 @@ ENSURE_VALID( booleanExpression  )
   
  La macro **ENSURE_ARG** si comporta come il **verificare** (macro).  
   
- **ENSURE_VALID** chiamate di `ASSERT_VALID` macro (che ha effetto solo nelle build di Debug). Inoltre, **ENSURE_VALID** genera un'eccezione se il puntatore è NULL. Il test NULL viene eseguito in configurazioni Debug e rilascio.  
+ **ENSURE_VALID** chiama il `ASSERT_VALID` macro (che ha effetto solo nelle build di Debug). Inoltre, **ENSURE_VALID** genera un'eccezione se il puntatore è NULL. Il test NULL viene eseguito in configurazioni Debug e rilascio.  
   
  Se uno di questi test ha esito negativo, viene visualizzato un messaggio di avviso in modo analogo **ASSERT**. Se necessario, la macro genera un'eccezione di argomento non valido.  
 ### <a name="requirements"></a>Requisiti  
@@ -303,7 +298,7 @@ ENSURE_VALID( booleanExpression  )
  [VERIFICARE](#verify)   
  [ATLENSURE](#altensure)
 
-## <a name="this_file"></a>THIS_FILE
+## <a name="this_file"></a> THIS_FILE
 Si espande per il nome del file che si sta compilando.  
    
 ### <a name="syntax"></a>Sintassi    
@@ -330,7 +325,7 @@ static char THIS_FILE[] = __FILE__;
    
 ### <a name="see-also"></a>Vedere anche  
  [Macro e funzioni globali](mfc-macros-and-globals.md)   
- [ASSERT](#assert)   
+ [ASSERT)](#assert)   
  [VERIFY](#verify)
 
 
@@ -380,7 +375,7 @@ VERIFY(booleanExpression)
 ### <a name="requirements"></a>Requisiti  
  **Intestazione:** afx.h
 
-##  <a name="cdumpcontext_in_mfc"></a>afxDump (CDumpContext in MFC)  
+##  <a name="cdumpcontext_in_mfc"></a>  afxDump (CDumpContext in MFC)  
  Fornisce funzionalità base di dump di oggetti nell'applicazione.  
   
 ```   
@@ -388,7 +383,7 @@ CDumpContext  afxDump;
 ```  
   
 ### <a name="remarks"></a>Note  
- `afxDump`è un oggetto predefinito [CDumpContext](../../mfc/reference/cdumpcontext-class.md) oggetto che consente di inviare `CDumpContext` sulla finestra di output del debugger o in un terminale di debug. In genere, si fornisce `afxDump` come parametro a `CObject::Dump`.  
+ `afxDump` è un oggetto predefinito [CDumpContext](../../mfc/reference/cdumpcontext-class.md) oggetto che consente di inviare `CDumpContext` sulla finestra di output del debugger o in un terminale di debug. In genere, si fornisce `afxDump` come parametro a `CObject::Dump`.  
   
  In Windows NT e tutte le versioni di Windows, `afxDump` quando si esegue il debug dell'applicazione, l'output viene inviato alla finestra di Output di Debug di Visual C++.  
   
@@ -401,7 +396,7 @@ CDumpContext  afxDump;
  **Intestazione:** afx.h
 
 
-## <a name="afxdump"></a>AfxDump (interna)
+## <a name="afxdump"></a> AfxDump (interna)
 Funzione interna utilizzata per eseguire il dump dello stato di un oggetto durante il debug di MFC.  
 
 ### <a name="syntax"></a>Sintassi    
@@ -433,7 +428,7 @@ int  afxMemDF;
 ```  
   
 ### <a name="remarks"></a>Note  
- `afxMemDF`può avere i seguenti valori come specificato dall'enumerazione `afxMemDF`:  
+ `afxMemDF` può avere i seguenti valori come specificato dall'enumerazione `afxMemDF`:  
   
 - **allocMemDF** Attiva debug allocatore (impostazione predefinita nella libreria di Debug).  
   
@@ -502,7 +497,7 @@ BOOL  AfxCheckMemory();
 ### <a name="requirements"></a>Requisiti  
  **Intestazione:** afx.h  
  
-##  <a name="afxdump"></a>AfxDump (MFC)  
+##  <a name="afxdump"></a>  AfxDump (MFC)  
  Chiamare questa funzione quando nel debugger per eseguire il dump dello stato di un oggetto durante il debug.  
   
 ```   
@@ -535,17 +530,17 @@ void AFXAPI AfxDumpStack(DWORD dwTarget = AFX_STACK_DUMP_TARGET_DEFAULT);
   
 ### <a name="parameters"></a>Parametri  
  *dwTarget*  
- Indica la destinazione dell'output del dump. Valori possibili che possono essere combinati utilizzando bitwise-OR ( **&#124;**) (operatore), sono i seguenti:  
+ Indica la destinazione dell'output del dump. Valori possibili che possono essere combinati utilizzando l'OR ( **&#124;**) (operatore), sono i seguenti:  
   
-- **AFX_STACK_DUMP_TARGET_TRACE** invia l'output tramite il [traccia](#trace) (macro). Il **traccia** macro genera output nelle build di debug solo; nelle build di rilascio non genera alcun output. Inoltre, **traccia** possono essere reindirizzati ad altre destinazioni oltre il debugger.  
+- **AFX_STACK_DUMP_TARGET_TRACE** invia l'output tramite il [traccia](#trace) macro. Il **traccia** macro genera output nelle build di debug solo; nelle build di rilascio non genera alcun output. Inoltre, **traccia** possono essere reindirizzati ad altre destinazioni oltre il debugger.  
   
-- **AFX_STACK_DUMP_TARGET_DEFAULT** Invia dettagli per la destinazione predefinita. Per una build di debug, l'output viene inviato per la **traccia** (macro). In una build di rilascio, l'output viene inviato negli Appunti.  
+- **AFX_STACK_DUMP_TARGET_DEFAULT** invia dump output per la destinazione predefinita. Per una build di debug, l'output viene inviato per la **traccia** (macro). In una build di rilascio, l'output viene inviato negli Appunti.  
   
 - **AFX_STACK_DUMP_TARGET_CLIPBOARD** invia l'output solo negli Appunti. I dati vengono inseriti negli Appunti come testo normale utilizzando il **CF_TEXT** formato degli Appunti.  
   
-- **AFX_STACK_DUMP_TARGET_BOTH** invia l'output negli Appunti e di ottenere il **traccia** (macro), contemporaneamente.  
+- **AFX_STACK_DUMP_TARGET_BOTH** invia l'output negli Appunti e di ottenere il **traccia** (macro), simultaneamente.  
   
-- **AFX_STACK_DUMP_TARGET_ODS** invia l'output direttamente al debugger tramite la funzione Win32 **OutputDebugString()**. Questa opzione consente di generare l'output del debugger in entrambe le modalità di debug e di build di rilascio quando è collegato un debugger al processo. **AFX_STACK_DUMP_TARGET_ODS** sempre raggiunge il debugger (se è collegato) e non può essere reindirizzato.  
+- **AFX_STACK_DUMP_TARGET_ODS** invia l'output direttamente al debugger tramite la funzione Win32 **OutputDebugString()**. Questa opzione consente di generare l'output del debugger in entrambe le modalità di debug e di build di rilascio quando è collegato un debugger al processo. **AFX_STACK_DUMP_TARGET_ODS** sempre raggiunge il debugger (se è collegato) e non possono essere reindirizzati.  
   
 ### <a name="remarks"></a>Note  
  Nell'esempio seguente riflette una singola riga dell'output generato dalla chiamata `AfxDumpStack` da un gestore del pulsante in un'applicazione della finestra di dialogo MFC:  
@@ -605,7 +600,7 @@ void AFXAPI AfxDumpStack(DWORD dwTarget = AFX_STACK_DUMP_TARGET_DEFAULT);
 |`void AfxDumpStack(unsigned long)`|Il prototipo di funzione chiamata.|  
 |`+ 181 bytes`|Offset in byte dall'indirizzo del prototipo di funzione (in questo caso, `void AfxDumpStack(unsigned long)`) all'indirizzo del mittente (in questo caso, `00427D55`).|  
   
- `AfxDumpStack`è disponibile nelle versioni di debug e nondebug delle librerie MFC; Tuttavia, la funzione è sempre collegata staticamente, anche quando il file eseguibile Usa MFC in una DLL condivisa. In implementazioni di libreria condivisa, la funzione viene trovata il MFCS42. Libreria LIB (e relative varianti).  
+ `AfxDumpStack` è disponibile nelle versioni di debug e nondebug delle librerie MFC; Tuttavia, la funzione è sempre collegata staticamente, anche quando il file eseguibile Usa MFC in una DLL condivisa. In implementazioni di libreria condivisa, la funzione viene trovata il MFCS42. Libreria LIB (e relative varianti).  
   
  Per utilizzare correttamente questa funzione:  
   
@@ -615,7 +610,7 @@ void AFXAPI AfxDumpStack(DWORD dwTarget = AFX_STACK_DUMP_TARGET_DEFAULT);
 ### <a name="requirements"></a>Requisiti  
  **Intestazione:** afx.h 
 
-##  <a name="afxenablememoryleakdump"></a>AfxEnableMemoryLeakDump  
+##  <a name="afxenablememoryleakdump"></a>  AfxEnableMemoryLeakDump  
  Abilita e disabilita il dump delle perdite di memoria nel distruttore `AFX_DEBUG_STATE` .  
   
 ```  

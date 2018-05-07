@@ -1,13 +1,10 @@
 ---
 title: Aggiornamento del testo di un riquadro barra di stato | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - panes, status bar
 - status bars [MFC], updating
 ms.assetid: 4984a3f4-9905-4d8c-a927-dca19781053b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0fb0f9bdaa032340256eee4781bfd775767f62ee
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: dbb2f14f274be3c7282a897c271049fe46434f3b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="updating-the-text-of-a-status-bar-pane"></a>Aggiornamento del testo di un riquadro barra di stato
 In questo articolo viene illustrato come modificare il testo visualizzato in un riquadro barra di stato MFC. Una barra di stato, ovvero un oggetto finestra della classe [CStatusBar](../mfc/reference/cstatusbar-class.md) , ovvero, contiene diversi riquadri." Ogni riquadro è un'area rettangolare della barra di stato che è possibile utilizzare per visualizzare le informazioni. Molte applicazioni, ad esempio, visualizzare lo stato del tasto BLOC MAIUSC attivo, BLOC NUM e altri tasti nei riquadri a destra. Le applicazioni spesso visualizzano testo informativo nel riquadro di sinistra (riquadro 0), detto anche il messaggio "pane". Ad esempio, la barra di stato MFC predefinito utilizza il riquadro dei messaggi per visualizzare una stringa che spiega il menu selezionato o il pulsante. Nella figura [barre di stato](../mfc/status-bar-implementation-in-mfc.md) Mostra una barra di stato da un'applicazione di creazione guidata applicazione MFC.  
@@ -84,7 +79,7 @@ In questo articolo viene illustrato come modificare il testo visualizzato in un 
   
 ### <a name="what-do-you-want-to-know-more-about"></a>Ciò che si desidera saperne di più  
   
--   [Aggiornamento di oggetti dell'interfaccia utente (come aggiornare le voci di menu e pulsanti della barra degli strumenti come programma condizioni modifica)](../mfc/how-to-update-user-interface-objects.md)  
+-   [Aggiornamento di oggetti dell'interfaccia utente (come aggiornare i pulsanti della barra degli strumenti e voci di menu come programma condizioni modifica)](../mfc/how-to-update-user-interface-objects.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Implementazione della barra di stato in MFC](../mfc/status-bar-implementation-in-mfc.md)   

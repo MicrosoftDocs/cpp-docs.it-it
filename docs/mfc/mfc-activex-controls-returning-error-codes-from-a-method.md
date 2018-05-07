@@ -1,13 +1,10 @@
 ---
 title: 'Controlli ActiveX MFC: Restituzione di codici di errore da un metodo | Documenti Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - SCODE, MFC ActiveX controls
 - ThrowError method [MFC]
 ms.assetid: 771fb9c9-2413-4dcc-b386-7bc4c4adeafd
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5563153cdc5d90bc522c1f0b4edf48a8cc280755
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 43bf6730cf1b914405f99af6572a0a53cd942ac6
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mfc-activex-controls-returning-error-codes-from-a-method"></a>Controlli ActiveX MFC: restituzione di codici di errore da un metodo
 In questo articolo viene descritto come restituire i codici di errore da un metodo di controllo ActiveX.  
@@ -37,7 +32,7 @@ In questo articolo viene descritto come restituire i codici di errore da un meto
  Per indicare che si è verificato un errore interno di un metodo, è consigliabile utilizzare il [COleControl:: ThrowError](../mfc/reference/colecontrol-class.md#throwerror) funzione membro, che accetta un `SCODE` (codice di stato) come parametro. È possibile utilizzare un oggetto predefinito `SCODE` o definirne uno proprio.  
   
 > [!NOTE]
->  `ThrowError`è destinato a essere utilizzato solo come la restituzione di un errore dall'interno Get di una proprietà o Set di funzione o un metodo di automazione. Queste sono le uniche volte in cui il gestore di eccezioni appropriato sarà presentano nello stack.  
+>  `ThrowError` deve essere utilizzata solo come mezzo per la restituzione di un errore dall'interno Get di una proprietà o Set di funzione o un metodo di automazione. Queste sono le uniche volte in cui il gestore di eccezioni appropriato sarà presentano nello stack.  
   
  Esistono funzioni di supporto per più comuni predefinite `SCODE`s, ad esempio [COleControl:: SetNotSupported](../mfc/reference/colecontrol-class.md#setnotsupported), [COleControl::GetNotSupported](../mfc/reference/colecontrol-class.md#getnotsupported), e [COleControl:: SetNotPermitted](../mfc/reference/colecontrol-class.md#setnotpermitted).  
   

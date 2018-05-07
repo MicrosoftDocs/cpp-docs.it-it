@@ -1,12 +1,9 @@
 ---
 title: Classe CTabView | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CTabView
@@ -31,17 +28,15 @@ helpviewer_keywords:
 - CTabView [MFC], IsScrollBar
 - CTabView [MFC], OnActivateView
 ms.assetid: 8e6ecd9d-d28d-432b-8ec8-0446f0204d52
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: adbb5d92387634356f1185cee73d5969944ac27a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 08c0cff2f6586ab5e385808fb806ed435b00bfc9
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ctabview-class"></a>Classe CTabView
 Il `CTabView` classe semplifica l'utilizzo della classe del controllo scheda ( [CMFCTabCtrl](../../mfc/reference/ctabview-class.md)) nelle applicazioni che utilizzano l'architettura documento/visualizzazione MFC.  
@@ -73,11 +68,11 @@ class CTabbedView : public CView
 |[CTabView::OnActivateView](#onactivateview)|Chiamato dal framework quando viene effettuata la visualizzazione della scheda attiva o inattiva.|  
   
 ## <a name="remarks"></a>Note  
- Questa classe rende facile inserire un'applicazione di documento/visualizzazione di una visualizzazione a schede. `CTabView`è un `CView`-classe derivata che contiene un elemento incorporato `CMFCTabCtrl` oggetto. `CTabView`gestisce tutti i messaggi necessari per supportare il `CMFCTabCtrl` oggetto. È sufficiente derivare una classe da `CTabView` e inserirlo in un'applicazione, quindi aggiungere `CView`-classi derivate tramite il `AddView` (metodo). Il controllo scheda visualizzerà le visualizzazioni come schede.  
+ Questa classe rende facile inserire un'applicazione di documento/visualizzazione di una visualizzazione a schede. `CTabView` è un `CView`-classe derivata che contiene un incorporato `CMFCTabCtrl` oggetto. `CTabView` gestisce tutti i messaggi necessari per supportare il `CMFCTabCtrl` oggetto. È sufficiente derivare una classe da `CTabView` e inserirlo in un'applicazione, quindi aggiungere `CView`-classi derivate tramite il `AddView` (metodo). Il controllo scheda visualizzerà le visualizzazioni come schede.  
   
  Ad esempio, potrebbe essere un documento che può essere rappresentato in diversi modi: come un foglio di calcolo, un grafico, un modulo modificabile e così via. È possibile creare viste singole disegno i dati in base alle esigenze, inserirli nel `CTabView`-oggetto derivato e farli schede senza scrivere codice aggiuntivo.  
   
- [Esempio TabbedView: Applicazione MFC a schede Visualizza](../../visual-cpp-samples.md) viene illustrato l'utilizzo di `CTabView`.  
+ [Esempio TabbedView: Applicazione MFC schede View](../../visual-cpp-samples.md) viene illustrato come utilizzare `CTabView`.  
   
 ## <a name="example"></a>Esempio  
  L'esempio seguente mostra come `CTabView` viene utilizzato nell'esempio TabbedView.  
@@ -87,7 +82,7 @@ class CTabbedView : public CView
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** afxTabView.h  
   
-##  <a name="addview"></a>CTabView::AddView  
+##  <a name="addview"></a>  CTabView::AddView  
  Aggiunge una visualizzazione per il controllo struttura a schede.  
   
 ```  
@@ -117,7 +112,7 @@ int AddView(
 ### <a name="remarks"></a>Note  
  Chiamare questa funzione per aggiungere una visualizzazione al controllo struttura a schede che è incorporato in un frame.  
   
-##  <a name="findtab"></a>CTabView::FindTab  
+##  <a name="findtab"></a>  CTabView::FindTab  
  Restituisce l'indice della vista specificata del controllo.  
   
 ```  
@@ -134,7 +129,7 @@ int FindTab(HWND hWndView) const;
 ### <a name="remarks"></a>Note  
  Chiamare questa funzione per recuperare l'indice di una vista che include un handle specificato.  
   
-##  <a name="getactiveview"></a>CTabView::GetActiveView  
+##  <a name="getactiveview"></a>  CTabView::GetActiveView  
  Restituisce un puntatore per la visualizzazione attualmente attiva.  
   
 ```  
@@ -146,7 +141,7 @@ CView* GetActiveView() const;
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="gettabcontrol"></a>CTabView::GetTabControl  
+##  <a name="gettabcontrol"></a>  CTabView::GetTabControl  
  Restituisce un riferimento al controllo scheda associato alla visualizzazione.  
   
 ```  
@@ -156,7 +151,7 @@ DECLARE_DYNCREATE CMFCTabCtrl& GetTabControl();
 ### <a name="return-value"></a>Valore restituito  
  Un riferimento al controllo scheda associato alla visualizzazione.  
   
-##  <a name="isscrollbar"></a>CTabView::IsScrollBar  
+##  <a name="isscrollbar"></a>  CTabView::IsScrollBar  
  Chiamato dal framework quando si crea una visualizzazione scheda per determinare se la vista scheda ha una barra di scorrimento orizzontale condiviso.  
   
 ```  
@@ -164,14 +159,14 @@ virtual BOOL IsScrollBar() const;
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- `TRUE`Se la visualizzazione di scheda deve essere creata con una barra di scorrimento condiviso. In caso contrario, `FALSE`.  
+ `TRUE` Se la visualizzazione di scheda deve essere creata con una barra di scorrimento condiviso. In caso contrario, `FALSE`.  
   
 ### <a name="remarks"></a>Note  
  Il framework chiama questo metodo quando un `CTabView` viene creato l'oggetto.  
   
  Eseguire l'override di `IsScrollBar` metodo in un `CTabView`-classe derivata e restituito `TRUE` se si desidera creare una vista che include una barra di scorrimento orizzontale condiviso.  
   
-##  <a name="onactivateview"></a>CTabView::OnActivateView  
+##  <a name="onactivateview"></a>  CTabView::OnActivateView  
  Chiamato dal framework quando viene effettuata la visualizzazione della scheda attiva o inattiva.  
   
 ```  
@@ -185,7 +180,7 @@ virtual void OnActivateView(CView* view);
 ### <a name="remarks"></a>Note  
  L'implementazione predefinita non esegue alcuna operazione. Eseguire l'override di questo metodo in un `CTabView`-derivata per elaborare la notifica.  
   
-##  <a name="removeview"></a>CTabView::RemoveView  
+##  <a name="removeview"></a>  CTabView::RemoveView  
  Rimuove la visualizzazione del controllo scheda.  
   
 ```  
@@ -201,7 +196,7 @@ BOOL RemoveView(int iTabNum);
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="setactiveview"></a>CTabView::SetActiveView  
+##  <a name="setactiveview"></a>  CTabView::SetActiveView  
  Attiva una vista.  
   
 ```  
@@ -213,7 +208,7 @@ BOOL SetActiveView(int iTabNum);
  Indice in base zero della visualizzazione della scheda.  
   
 ### <a name="return-value"></a>Valore restituito  
- `TRUE`Se la visualizzazione specificata è stata attivata, `FALSE` se l'indice della vista non è valido.  
+ `TRUE` Se la visualizzazione specificata è stato reso attiva, `FALSE` se l'indice della vista non è valido.  
   
 ### <a name="remarks"></a>Note  
  Per ulteriori informazioni vedere [CMFCTabCtrl::SetActiveTab](../../mfc/reference/cmfctabctrl-class.md#setactivetab).  

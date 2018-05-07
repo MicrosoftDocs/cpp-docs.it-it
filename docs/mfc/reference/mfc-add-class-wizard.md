@@ -1,13 +1,10 @@
 ---
 title: Guidata aggiunta classe MFC | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.codewiz.class.mfc.simple.overview
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - MFC Add Class Wizard
 - wizards [MFC]
 ms.assetid: ad3b0989-d307-43b2-9417-3f9a78889024
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b4c65785008c7257fc2f3714d9bf78395f4a8e40
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9560dec12a7710076f752d5329269c844f0d3a8b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mfc-add-class-wizard"></a>Creazione guidata aggiunta classe MFC
 Utilizzare questa procedura guidata codice per aggiungere una classe a un progetto MFC esistente oppure per aggiungere una classe a un progetto ATL che supporta MFC. È anche possibile aggiungere classi MFC per i progetti Win32 che dispongono del supporto MFC. Le funzionalità specificate durante la creazione del progetto determinano le opzioni disponibili nella finestra di dialogo.  
@@ -55,7 +50,7 @@ Utilizzare questa procedura guidata codice per aggiungere una classe a un proget
   
  Mentre la finestra di dialogo può contenere entrambi i controlli di Windows e DHTML (controlli), non è consigliabile.  
   
- **ID di finestra di dialogo**  
+ **ID finestra di dialogo**  
  Specifica l'ID della finestra di dialogo, se si seleziona `CDialog`, `CFormView`, `CPropertyPage`, o `CDHtmlDialog` come il **classe di Base**.  
   
  **file con estensione h**  
@@ -74,7 +69,7 @@ Utilizzare questa procedura guidata codice per aggiungere una classe a un proget
  **ID risorsa DHTML**  
  Si applica alle classi derivate da `CDHtmlDialog` solo. Specifica l'ID risorsa della finestra di dialogo DHTML. L'ID di risorsa viene visualizzato nella sezione HTML del file RC del progetto, insieme a nome file della finestra di dialogo HTML. La risorsa DHTML identificata da questo ID è contenuta nella finestra di dialogo, identificata da **ID di finestra di dialogo**.  
   
- **. File in formato HTM**  
+ **. In formato HTM.**  
  Si applica alle classi derivate da `CDHtmlDialog` solo. Imposta il nome del file HTML per la finestra di dialogo DHTML. Per impostazione predefinita, questo nome di file è basato sul nome della classe. Il nome del file viene visualizzato nella sezione HTML del file RC del progetto, insieme all'ID di risorsa. casella finestra di dialogo DHTML  
   
  **Automazione**  
@@ -84,7 +79,7 @@ Utilizzare questa procedura guidata codice per aggiungere una classe a un proget
 |------------|-----------------|  
 |**None**|Indica che la classe non dispone di alcun supporto di automazione.|  
 |**Automazione**|Indica che la classe supporta l'automazione. Se si seleziona questa opzione, la classe appena creata è disponibile come oggetto programmabile dalle applicazioni client di automazione, ad esempio Microsoft Visual Basic e Microsoft Excel. Questa opzione non è disponibile per le classi base elencate dopo questa tabella.|  
-|**Creabile da ID tipo**|Indica che la classe e il progetto supporta altre applicazioni di creazione di oggetti di questa classe utilizzando l'automazione. Con questa opzione, i client di automazione possono creare direttamente un oggetto di automazione. L'ID di tipo nella casella di testo viene utilizzato dall'applicazione client per specificare l'oggetto da creare; è a livello di sistema e deve essere univoco. Questa opzione non è disponibile per le classi base elencate dopo questa tabella.|  
+|**Può essere creato da ID tipo**|Indica che la classe e il progetto supporta altre applicazioni di creazione di oggetti di questa classe utilizzando l'automazione. Con questa opzione, i client di automazione possono creare direttamente un oggetto di automazione. L'ID di tipo nella casella di testo viene utilizzato dall'applicazione client per specificare l'oggetto da creare; è a livello di sistema e deve essere univoco. Questa opzione non è disponibile per le classi base elencate dopo questa tabella.|  
   
  Supporto di automazione non è disponibile per le classi di base seguenti:  
   

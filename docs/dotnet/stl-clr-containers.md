@@ -1,12 +1,9 @@
 ---
 title: Contenitori STL/CLR | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 dev_langs:
 - C++
@@ -14,18 +11,16 @@ helpviewer_keywords:
 - STL/CLR, containers
 - containers, STL/CLR
 ms.assetid: 34ca8031-2041-46b9-aed9-29082d1972ea
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 1b8aa8ef5b1425d4aa41b1811dca5ec5d56acd1c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ce6a2f096e5ee24716fcffd89411ffdf926a59aa
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="stlclr-containers"></a>Contenitori STL/CLR
 La libreria STL/CLR presenta gli stessi contenitori presenti nella libreria Standard C++, ma viene eseguito all'interno dell'ambiente gestito di .NET Framework. Se si ha già familiarità con la libreria Standard C++, STL/CLR è il modo migliore per continuare a utilizzare le tecniche che è già stato creato durante l'aggiornamento del codice a common language runtime (CLR) di destinazione.  
@@ -235,7 +230,7 @@ int main()
 ### <a name="unboxed-value-types"></a>Tipi di valore unboxed  
  È inoltre possibile inserire un tipo di valore unboxed in un contenitore STL/CLR. Un tipo di valore unboxed è un tipo di valore che non è stato *boxed* in un tipo di riferimento.  
   
- Un elemento di tipo valore può essere uno dei tipi di valore standard, come ad esempio `int`, oppure può essere un tipo di valore definito dall'utente, ad esempio `value class`. Per ulteriori informazioni, vedere [classi e struct](../windows/classes-and-structs-cpp-component-extensions.md)  
+ Un elemento di tipo valore può essere uno dei tipi di valore standard, come ad esempio `int`, oppure può essere un tipo di valore definito dall'utente, ad esempio `value class`. Per altre informazioni, vedere [classi e struct](../windows/classes-and-structs-cpp-component-extensions.md)  
   
 #### <a name="example"></a>Esempio  
  Nell'esempio seguente viene modificato il primo esempio rendendo la classe Employee un tipo di valore. Questo tipo di valore viene quindi inserito in un oggetto `cliext::set` come nel primo esempio.  

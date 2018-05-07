@@ -1,12 +1,9 @@
 ---
 title: Classe CMonikerFile | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMonikerFile
@@ -27,17 +24,15 @@ helpviewer_keywords:
 - CMonikerFile [MFC], Open
 - CMonikerFile [MFC], CreateBindContext
 ms.assetid: 87be5966-f4f7-4235-bce2-1fa39e9417de
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3dfdf86a4375521d7db084b60c549b08a54dc992
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 431e743396cfc22d49c13a2a9e2f50c88c5ee036
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmonikerfile-class"></a>Classe CMonikerFile
 Rappresenta un flusso di dati ( [IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034)) denominato da un [IMoniker](http://msdn.microsoft.com/library/windows/desktop/ms679705).  
@@ -76,7 +71,7 @@ class CMonikerFile : public COleStreamFile
   
  Derivata da `COleStreamFile`, `CMonikerFile` accetta un moniker o rappresentazione di stringa può essere trasformata in un moniker e associa al flusso per il quale il moniker è un nome. Quindi, è possibile leggere e scrivere in tale flusso. Lo scopo di reale `CMonikerFile` consiste nel fornire un accesso semplice a `IStream`s denominato da `IMoniker`s in modo che non è necessario associare manualmente, in un flusso dispone ancora di `CFile` funzionalità nel flusso.  
   
- `CMonikerFile`non può essere utilizzata per associare a un valore diverso da un flusso. Se si desidera associare a un oggetto o di archiviazione, è necessario utilizzare il `IMoniker` interfaccia direttamente.  
+ `CMonikerFile` non può essere utilizzata per associare a un valore diverso da un flusso. Se si desidera associare a un oggetto o di archiviazione, è necessario utilizzare il `IMoniker` interfaccia direttamente.  
   
  Per ulteriori informazioni su moniker e flussi, vedere [COleStreamFile](../../mfc/reference/colestreamfile-class.md) nel *riferimenti alla libreria MFC* e [IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034) e [IMoniker](http://msdn.microsoft.com/library/windows/desktop/ms679705) di Windows SDK.  
   
@@ -92,7 +87,7 @@ class CMonikerFile : public COleStreamFile
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** AFXOLE. h  
   
-##  <a name="close"></a>CMonikerFile::Close  
+##  <a name="close"></a>  CMonikerFile::Close  
  Chiamare questa funzione per scollegare e rilasciare il flusso e rilasciare il moniker.  
   
 ```  
@@ -102,14 +97,14 @@ virtual void Close();
 ### <a name="remarks"></a>Note  
  Può essere chiamato su flussi non aperti o è già chiusi.  
   
-##  <a name="cmonikerfile"></a>CMonikerFile::CMonikerFile  
+##  <a name="cmonikerfile"></a>  CMonikerFile::CMonikerFile  
  Costruisce un oggetto `CMonikerFile`.  
   
 ```  
 CMonikerFile();
 ```  
   
-##  <a name="createbindcontext"></a>CMonikerFile::CreateBindContext  
+##  <a name="createbindcontext"></a>  CMonikerFile::CreateBindContext  
  Chiamare questa funzione per creare un contesto di associazione inizializzati per impostazione predefinita.  
   
 ```  
@@ -126,7 +121,7 @@ IBindCtx* CreateBindContext(CFileException* pError);
 ### <a name="remarks"></a>Note  
  Un contesto di associazione è un oggetto che archivia informazioni su un'operazione di associazione del moniker particolare. È possibile eseguire l'override di questa funzione per fornire un contesto di associazione personalizzato.  
   
-##  <a name="detach"></a>CMonikerFile::Detach  
+##  <a name="detach"></a>  CMonikerFile::Detach  
  Chiamare questa funzione per chiudere il flusso.  
   
 ```  
@@ -140,7 +135,7 @@ BOOL Detach(CFileException* pError = NULL);
 ### <a name="return-value"></a>Valore restituito  
  Diverso da zero se ha esito positivo; in caso contrario 0.  
   
-##  <a name="getmoniker"></a>CMonikerFile::GetMoniker  
+##  <a name="getmoniker"></a>  CMonikerFile::GetMoniker  
  Chiamare questa funzione per recuperare un puntatore per il moniker corrente.  
   
 ```  
@@ -153,7 +148,7 @@ IMoniker* GetMoniker() const;
 ### <a name="remarks"></a>Note  
  Poiché `CMonikerFile` non è un'interfaccia, il puntatore restituito non incrementa il conteggio dei riferimenti (tramite [AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379)), e il moniker viene rilasciato quando il `CMonikerFile` oggetto viene rilasciato. Se si desidera conservi il moniker o rilasciare manualmente, è necessario `AddRef` è.  
   
-##  <a name="open"></a>CMonikerFile::Open  
+##  <a name="open"></a>  CMonikerFile::Open  
  Chiamare questa funzione membro per aprire un oggetto file o il moniker.  
   
 ```  

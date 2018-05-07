@@ -1,13 +1,10 @@
 ---
 title: Versioni di librerie MFC | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 1/09/2018
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -20,14 +17,13 @@ helpviewer_keywords:
 - libraries [MFC], versions
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7641a970c747576fa3cfd8cd1c00602edb3541e2
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: 9fb4f73d1a0360ddad3983179415d0f7fc2d3cda
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mfc-library-versions"></a>Versioni di librerie MFC
 
@@ -129,14 +125,14 @@ Le DLL di MFC sono *versione* numeri che indicano la compatibilità binaria. Uti
 
 |DLL|Descrizione|
 |---------|-----------------|
-|MFC*version*.DLL|Versione finale di MBCS, ANSI o DLL MFC|
+|MFC*versione*. DLL|Versione finale di MBCS, ANSI o DLL MFC|
 |MFC*versione*U.DLL|DLL MFC, versione Unicode|
-|MFC*version*D.DLL|Versione DLL MFC, ANSI o MBCS di Debug|
-|MFC*version*UD.DLL|DLL MFC, versione di Unicode Debug|
-|MFCM*version*.DLL|DLL MFC con controlli Windows Form, la versione ANSI o una versione di MBCS|
+|MFC*versione*D.DLL|Versione DLL MFC, ANSI o MBCS di Debug|
+|MFC*versione*UD. DLL|DLL MFC, versione di Unicode Debug|
+|MFCM*versione*. DLL|DLL MFC con controlli Windows Form, la versione ANSI o una versione di MBCS|
 |MFCM*versione*U.DLL|DLL MFC con controlli Windows Form, la versione Unicode|
-|MFCM*version*D.DLL|DLL MFC con controlli Windows Form, la versione ANSI o MBCS di Debug|
-|MFCM*version*UD.DLL|DLL MFC con controlli Windows Form, versione di Unicode Debug|
+|MFCM*versione*D.DLL|DLL MFC con controlli Windows Form, la versione ANSI o MBCS di Debug|
+|MFCM*versione*UD. DLL|DLL MFC con controlli Windows Form, versione di Unicode Debug|
 
 Le librerie di importazione necessari per compilare applicazioni o MFC DLL di estensione che utilizzano queste DLL condivise hanno lo stesso nome di base della DLL, ma hanno un'estensione di file con estensione LIB. Quando si utilizza la DLL condivise, una libreria statica di piccole dimensioni ancora deve essere collegata con il codice. Questa raccolta è denominata MFCS*versione*lib {U} {D}.
 

@@ -2,12 +2,9 @@
 title: Funzioni di callback utilizzate da MFC | Documenti Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.mfc.functions
 dev_langs:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - functions [MFC], callback
 - callback functions [MFC]
 ms.assetid: b2a6857c-fdd3-45ec-8fd8-2e71fac77582
-caps.latest.revision: 11
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: adcde434c12c11c1df7fc1367b658114f874b3c1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ce96d90506176812ffb70b580c9d95a38c65fa19
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="callback-functions-used-by-mfc"></a>Funzioni di callback utilizzate da MFC
 Tre funzioni di callback vengono visualizzati nella libreria di classi Microsoft Foundation. Queste funzioni di callback vengono passate a [CDC:: EnumObjects](../../mfc/reference/cdc-class.md#enumobjects), [CDC:: graystring](../../mfc/reference/cdc-class.md#graystring), e [CDC:: SetAbortProc](../../mfc/reference/cdc-class.md#setabortproc). Si noti che tutte le funzioni di callback devono intercettare le eccezioni MFC prima della restituzione di Windows, poiché non possono essere generate eccezioni attraverso i limiti di callback. Per ulteriori informazioni sulle eccezioni, vedere l'articolo [eccezioni](../../mfc/exception-handling-in-mfc.md).  
@@ -42,7 +37,7 @@ Tre funzioni di callback vengono visualizzati nella libreria di classi Microsoft
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** afxwin.h 
 
-## <a name="enum_objects"></a>Funzione di callback per CDC:: EnumObjects
+## <a name="enum_objects"></a> Funzione di callback per CDC:: EnumObjects
 Il *ObjectFunc* nome è un segnaposto per il nome della funzione fornita dall'applicazione.  
   
 ### <a name="syntax"></a>Sintassi  
@@ -66,7 +61,7 @@ int CALLBACK EXPORT ObjectFunc(
 ### <a name="remarks"></a>Note  
  Il nome effettivo deve essere esportato.  
   
-## <a name="graystring"></a>Funzione di callback per CDC:: graystring
+## <a name="graystring"></a>  Funzione di callback per CDC:: graystring
 *OutputFunc* è un segnaposto per il nome di funzione di callback fornita dall'applicazione.  
   
 ### <a name="syntax"></a>Sintassi  
@@ -94,7 +89,7 @@ BOOL CALLBACK EXPORT OutputFunc(
 ### <a name="remarks"></a>Note  
  La funzione di callback (*OutputFunc*) è necessario disegnare un'immagine rispetto alle coordinate (0,0) anziché (*x*, *y*).  
 
-## <a name="setabortproc"></a>Funzione di callback per CDC:: SETABORTPROC
+## <a name="setabortproc"></a>  Funzione di callback per CDC:: SETABORTPROC
 Il nome *AbortFunc* è un segnaposto per il nome della funzione fornita dall'applicazione.  
   
 ### <a name="syntax"></a>Sintassi  

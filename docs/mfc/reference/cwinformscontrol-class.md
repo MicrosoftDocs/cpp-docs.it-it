@@ -1,12 +1,9 @@
 ---
 title: Classe CWinFormsControl | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CWinFormsControl
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - CWinFormsControl [MFC], GetControl
 - CWinFormsControl [MFC], GetControlHandle
 ms.assetid: 6406dd7b-fb89-4a18-ac3a-c010d6b6289a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f2e6bf46cf28c3bca3d71f85cdd681745a0379bd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0d126c7e6ef77142f20a9dd9d7ed68c44ede5fc1
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cwinformscontrol-class"></a>Classe CWinFormsControl
 Fornisce la funzionalità di base per l'hosting di un controllo Windows Form.  
@@ -85,7 +80,7 @@ class CWinFormsControl : public CWnd
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** afxwinforms. h  
   
-##  <a name="createmanagedcontrol"></a>CWinFormsControl::CreateManagedControl  
+##  <a name="createmanagedcontrol"></a>  CWinFormsControl::CreateManagedControl  
  Crea un controllo Windows Form in un contenitore di MFC.  
   
 ```  
@@ -144,7 +139,7 @@ inline BOOL CreateManagedControl(
 ### <a name="remarks"></a>Note  
  Questo metodo crea un'istanza di un controllo Windows Form di .NET Framework in un contenitore di MFC.  
   
- Il primo overload del metodo accetta un tipo di dati .NET Framework `pType` in modo che MFC può creare un'istanza di un nuovo oggetto di questo tipo. `pType`deve essere un [tipo](https://msdn.microsoft.com/en-us/library/system.type) tipo di dati.  
+ Il primo overload del metodo accetta un tipo di dati .NET Framework `pType` in modo che MFC può creare un'istanza di un nuovo oggetto di questo tipo. `pType` deve essere un [tipo](https://msdn.microsoft.com/en-us/library/system.type) tipo di dati.  
   
  Il secondo overload del metodo crea un controllo Windows Form in base il `TManagedControl` parametro del modello del `CWinFormsControl` classe. Le dimensioni e la posizione del controllo si basa sul `RECT` struttura passata al metodo. Solo `dwStyle` è importante per gli stili.  
   
@@ -154,7 +149,7 @@ inline BOOL CreateManagedControl(
   
  Vedere [utilizzando un controllo utente Windows Form in MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md) per esempi sull'utilizzo di Windows Form i controlli.  
   
-##  <a name="cwinformscontrol"></a>CWinFormsControl::CWinFormsControl  
+##  <a name="cwinformscontrol"></a>  CWinFormsControl::CWinFormsControl  
  Costruisce un oggetto wrapper di controllo Windows Form di MFC.  
   
 ```  
@@ -164,7 +159,7 @@ CWinFormsControl();
 ### <a name="remarks"></a>Note  
  Il controllo Windows Form viene creata un'istanza quando si chiama [CWinFormsControl::CreateManagedControl](#createmanagedcontrol).  
   
-##  <a name="getcontrol"></a>CWinFormsControl::GetControl  
+##  <a name="getcontrol"></a>  CWinFormsControl::GetControl  
  Recupera un puntatore per il controllo Windows Form.  
   
 ```  
@@ -177,7 +172,7 @@ inline TManagedControl^ GetControl() const;
 ### <a name="example"></a>Esempio  
   Vedere [CWinFormsControl::CreateManagedControl](#createmanagedcontrol).  
   
-##  <a name="getcontrolhandle"></a>CWinFormsControl::GetControlHandle  
+##  <a name="getcontrolhandle"></a>  CWinFormsControl::GetControlHandle  
  Recupera un handle per il controllo Windows Form.  
   
 ```  
@@ -188,9 +183,9 @@ inline HWND GetControlHandle() const;
  Restituisce un handle per il controllo Windows Form.  
   
 ### <a name="remarks"></a>Note  
- `GetControlHandle`è un metodo helper che restituisce l'handle di finestra archiviato nelle proprietà del controllo di .NET Framework. Il valore di handle di finestra viene copiato per [CWnd::m_hWnd](../../mfc/reference/cwnd-class.md#m_hwnd) durante la chiamata a [CWnd::Attach](../../mfc/reference/cwnd-class.md#attach).  
+ `GetControlHandle` è un metodo helper che restituisce l'handle di finestra archiviato nelle proprietà del controllo di .NET Framework. Il valore di handle di finestra viene copiato per [CWnd::m_hWnd](../../mfc/reference/cwnd-class.md#m_hwnd) durante la chiamata a [CWnd::Attach](../../mfc/reference/cwnd-class.md#attach).  
   
-##  <a name="operator_-_gt"></a>CWinFormsControl::operator-&gt;  
+##  <a name="operator_-_gt"></a>  CWinFormsControl::operator-&gt;  
  Sostituisce [CWinFormsControl::GetControl](#getcontrol) nelle espressioni.  
   
 ```  
@@ -202,7 +197,7 @@ inline TManagedControl^  operator->() const;
   
  Per ulteriori informazioni su Windows Form, vedere [utilizzando un controllo utente Windows Form in MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).  
   
-##  <a name="operator_tmanagedcontrol"></a>CWinFormsControl::operator TManagedControl ^  
+##  <a name="operator_tmanagedcontrol"></a>  CWinFormsControl::operator TManagedControl ^  
  Esegue il cast di un tipo come un puntatore a un controllo Windows Form.  
   
 ```  

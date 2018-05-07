@@ -1,13 +1,10 @@
 ---
 title: 'TN033: Versione DLL di MFC | Documenti Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.mfc.dll
 dev_langs:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - DLL version of MFC [MFC]
 - TN033
 ms.assetid: b6f1080b-b66b-4b1e-8fb1-926c5816392c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ba51ca465bec2a6400106071fcba94d36ad100e2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a247ffc36b3e0eb3e52c6f04949c693597d73064
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn033-dll-version-of-mfc"></a>TN033: versione DLL di MFC
 Questa nota viene descritto come è possibile utilizzare il condivise MFCxx.DLL e MFCxxD.DLL (dove x è il numero di versione MFC) librerie a collegamento dinamico con applicazioni MFC e DLL di estensione MFC. Per ulteriori informazioni sulle DLL di MFC regolari, vedere [utilizzo di MFC come parte di una DLL](../mfc/tn011-using-mfc-as-part-of-a-dll.md).  
@@ -40,12 +35,12 @@ Questa nota viene descritto come è possibile utilizzare il condivise MFCxx.DLL 
   
 - [Come si compila un'applicazione MFC che utilizza la versione DLL di MFC](#_mfcnotes_writing_an_application_that_uses_the_dll_version)  
   
-- [Modalità di condivisione delle librerie a collegamento dinamico MFC vengono implementate.](#_mfcnotes_how_the_mfc30.dll_is_implemented)  
+- [Modalità di condivisione delle librerie a collegamento dinamico MFC vengono implementati](#_mfcnotes_how_the_mfc30.dll_is_implemented)  
   
  Se si è interessati alla creazione di una DLL tramite MFC che può essere utilizzato con applicazioni non MFC (DLL regolare MFC è detta), fare riferimento a [Nota tecnica 11](../mfc/tn011-using-mfc-as-part-of-a-dll.md).  
   
 ## <a name="overview-of-mfcxxdll-support-terminology-and-files"></a>Panoramica del supporto MFCxx.DLL: terminologia e i file  
- **DLL MFC regolare**: utilizzare DLL regolare MFC per creare una DLL autonoma utilizzando alcune delle classi MFC. Interfacce attraverso il limite dell'applicazione o DLL sono interfacce "C" e l'applicazione client non deve essere un'applicazione MFC.  
+ **DLL regolare MFC**: utilizzare una DLL regolare MFC per creare una DLL autonoma utilizzando alcune delle classi MFC. Interfacce attraverso il limite dell'applicazione o DLL sono interfacce "C" e l'applicazione client non deve essere un'applicazione MFC.  
   
  Si tratta della versione del supporto DLL in MFC 1.0 è supportata. Viene descritto in [Nota tecnica 11](../mfc/tn011-using-mfc-as-part-of-a-dll.md) e l'esempio di concetti avanzati MFC [DLLScreenCap](../visual-cpp-samples.md).  
   
@@ -97,7 +92,7 @@ Questa nota viene descritto come è possibile utilizzare il condivise MFCxx.DLL 
   
 -   Distribuzione di un'applicazione che utilizza la libreria condivisa richiede che si effettua la spedizione di MFCxx.DLL (e altri) libreria con il programma. MFCxx.DLL può essere ridistribuito gratuitamente come numero di DLL, ma è comunque necessario installare la DLL nel programma di installazione. Inoltre, è necessario fornire il MSVCRTxx.DLL, che contiene la libreria di runtime C che viene utilizzata sia per il programma e DLL MFC.  
   
-##  <a name="_mfcnotes_how_to_write_an_mfc_extension_dll"></a>Come scrivere una DLL di estensione MFC  
+##  <a name="_mfcnotes_how_to_write_an_mfc_extension_dll"></a> Come scrivere una DLL di estensione MFC  
  Una DLL di estensione MFC è una DLL che contiene classi e funzioni scritte per arricchire le funzionalità delle classi MFC. Una DLL di estensione MFC utilizza la DLL MFC condivisa nello stesso modo che un'applicazione utilizza, con alcune considerazioni aggiuntive:  
   
 -   Il processo di compilazione è simile alla creazione di un'applicazione che utilizza le librerie MFC condivise con alcune altro opzioni del compilatore e del linker.  
@@ -146,7 +141,7 @@ Questa nota viene descritto come è possibile utilizzare il condivise MFCxx.DLL 
   
  Per eseguire questa operazione è necessario assicurarsi che tutte le funzioni membro viene contrassegnato come importare o esportare come appropriato. Ciò richiede che le dichiarazioni speciali: **dllexport** e **declspec**. Quando le classi vengono utilizzate dalle applicazioni client, si desidera possano essere dichiarati come **declspec**. Quando viene creata la DLL di estensione MFC, deve essere dichiarati come **dllexport**. Inoltre, le funzioni devono essere effettivamente esportate, in modo che i programmi client l'associazione a tali in fase di caricamento.  
   
- Per esportare l'intera classe, utilizzare **AFX_EXT_CLASS** nella definizione della classe. Questa macro viene definita dal framework come **dllexport** quando **AFXDLL** e `_AFXEXT` viene definito, ma viene definito come **declspec** quando `_AFXEXT` non è definito. `_AFXEXT`come descritto in precedenza, viene definita solo quando si compila la DLL di estensione MFC. Ad esempio:  
+ Per esportare l'intera classe, utilizzare **AFX_EXT_CLASS** nella definizione della classe. Questa macro viene definita dal framework come **dllexport** quando **AFXDLL** e `_AFXEXT` viene definito, ma viene definito come **declspec** quando `_AFXEXT` non è definito. `_AFXEXT` come descritto in precedenza, viene definita solo quando si compila la DLL di estensione MFC. Ad esempio:  
   
 ```  
 class AFX_EXT_CLASS CExampleExport : public CObject  
@@ -387,9 +382,9 @@ extern "C" extern void WINAPI InitXxxDLL()
   
  Se si desidera caricare solo le risorse da una posizione specifica, usare le API `AfxGetResourceHandle` e `AfxSetResourceHandle` per salvare l'handle precedente e impostare il nuovo handle. Prestare attenzione a ripristinare l'handle di risorsa precedente prima di tornare all'applicazione client. L'esempio TESTDLL2 utilizza questo approccio per caricamento esplicito di un menu.  
   
- Scorrere l'elenco presenta gli svantaggi che è leggermente più lenta e richiede la gestione degli intervalli di ID di risorsa. Offre il vantaggio che un'applicazione client che si collega a diverse DLL di estensione MFC è possibile utilizzare qualsiasi risorsa fornita dalla DLL senza dover specificare l'handle di istanza DLL. `AfxFindResourceHandle`è un'API utilizzata per scorrere l'elenco di risorse per cercare una corrispondenza specificata. Accetta il nome e il tipo di una risorsa e restituisce l'handle di risorsa in cui è stato rilevato prima (o NULL).  
+ Scorrere l'elenco presenta gli svantaggi che è leggermente più lenta e richiede la gestione degli intervalli di ID di risorsa. Offre il vantaggio che un'applicazione client che si collega a diverse DLL di estensione MFC è possibile utilizzare qualsiasi risorsa fornita dalla DLL senza dover specificare l'handle di istanza DLL. `AfxFindResourceHandle` è un'API utilizzata per scorrere l'elenco di risorse per cercare una corrispondenza specificata. Accetta il nome e il tipo di una risorsa e restituisce l'handle di risorsa in cui è stato rilevato prima (o NULL).  
   
-##  <a name="_mfcnotes_writing_an_application_that_uses_the_dll_version"></a>Scrittura di un'applicazione che utilizza la versione DLL  
+##  <a name="_mfcnotes_writing_an_application_that_uses_the_dll_version"></a> Scrittura di un'applicazione che utilizza la versione DLL  
   
 ### <a name="application-requirements"></a>Requisiti dell'applicazione  
  Un'applicazione che utilizza la versione di MFC condivisa è necessario seguire alcune semplici regole:  
@@ -446,7 +441,7 @@ extern "C" extern void WINAPI InitXxxDLL()
   
  Si consiglia di non ricompilare le DLL di MFC.  
   
-##  <a name="_mfcnotes_how_the_mfc30.dll_is_implemented"></a>La modalità di implementazione di MFCxx.DLL  
+##  <a name="_mfcnotes_how_the_mfc30.dll_is_implemented"></a> Modalità di implementazione di MFCxx. dll  
  Nella sezione seguente descrive come viene implementata la DLL MFC (MFCxx.DLL e MFCxxD.DLL). Comprendere che i dettagli di seguito non sono importante se si desidera eseguire è utilizzare la DLL di MFC con l'applicazione. I dettagli di seguito non sono essenziali per comprendere come scrivere una DLL di estensione MFC, ma la comprensione di questa implementazione può consentono di scrivere la propria DLL.  
   
 ### <a name="implementation-overview"></a>Panoramica dell'implementazione  

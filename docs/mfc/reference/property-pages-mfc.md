@@ -1,13 +1,10 @@
 ---
-title: "Pagine delle proprietà (MFC) | Documenti Microsoft"
-ms.custom: 
+title: Pagine delle proprietà (MFC) | Documenti Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.mfc.macros
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - property page data transfer functions in MFC
 - property pages [MFC], global MFC functions
 ms.assetid: 734f88bc-c776-4136-9b0e-f45c761a45c1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e53260457470ef75ac706779cea323aa5b73da2a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0895cd22870b3a4a266e9be12f0000fae7f7101a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="property-pages-mfc"></a>Pagine delle proprietà (MFC)
 Pagine delle proprietà di visualizzare i valori correnti delle proprietà specifiche del controllo OLE in un'interfaccia grafica personalizzabile per la visualizzazione e modifica supportando un meccanismo di mapping dei dati basato su dati DDX (dialog exchange).  
@@ -60,7 +55,7 @@ Pagine delle proprietà di visualizzare i valori correnti delle proprietà speci
 |[END_PROPPAGEIDS](#end_proppageids)|Termina l'elenco di ID di pagina delle proprietà.|  
 |[PROPPAGEID](#proppageid)|Dichiara una pagina delle proprietà della classe del controllo.|  
   
-##  <a name="ddp_cbindex"></a>DDP_CBIndex  
+##  <a name="ddp_cbindex"></a>  DDP_CBIndex  
  Chiamare questa funzione nella funzione `DoDataExchange` della pagina delle proprietà per sincronizzare il valore di una proprietà integer con l'indice della selezione corrente di una casella combinata nella pagina delle proprietà.  
   
 ```   
@@ -90,7 +85,7 @@ void AFXAPI DDP_CBIndex(
 ### <a name="requirements"></a>Requisiti  
   **Intestazione** afxctl. h  
   
-##  <a name="ddp_cbstring"></a>DDP_CBString  
+##  <a name="ddp_cbstring"></a>  DDP_CBString  
  Chiamare questa funzione nella pagina delle proprietà `DoDataExchange` (funzione) per sincronizzare il valore di una proprietà stringa con la selezione corrente in una casella combinata nella pagina delle proprietà.  
   
 ```  
@@ -120,7 +115,7 @@ void AFXAPI DDP_CBString(
 ### <a name="requirements"></a>Requisiti  
   **Intestazione** afxctl. h  
   
-##  <a name="ddp_cbstringexact"></a>DDP_CBStringExact  
+##  <a name="ddp_cbstringexact"></a>  DDP_CBStringExact  
  Chiamare questa funzione nella pagina delle proprietà `DoDataExchange` (funzione) per sincronizzare il valore di una proprietà stringa che corrisponde esattamente alla selezione corrente in una casella combinata nella pagina delle proprietà.  
   
 ```  
@@ -150,7 +145,7 @@ void AFXAPI DDP_CBStringExact(
 ### <a name="requirements"></a>Requisiti  
   **Intestazione** afxctl. h  
   
-##  <a name="ddp_check"></a>DDP_Check  
+##  <a name="ddp_check"></a>  DDP_Check  
  Chiamare questa funzione nella pagina delle proprietà `DoDataExchange` (funzione) per sincronizzare il valore della proprietà con il controllo casella di controllo pagina di proprietà associata.  
   
 ```   
@@ -180,7 +175,7 @@ void AFXAPI DDP_Check(
 ### <a name="requirements"></a>Requisiti  
   **Intestazione** afxctl. h  
   
-##  <a name="ddp_lbindex"></a>DDP_LBIndex  
+##  <a name="ddp_lbindex"></a>  DDP_LBIndex  
  Chiamare questa funzione nella pagina delle proprietà `DoDataExchange` (funzione) per sincronizzare il valore di una proprietà integer con l'indice della selezione corrente in una casella di riepilogo nella pagina delle proprietà.  
   
 ```   
@@ -210,7 +205,7 @@ void AFXAPI DDP_LBIndex(
 ### <a name="requirements"></a>Requisiti  
   **Intestazione** afxctl. h  
   
-##  <a name="ddp_lbstring"></a>DDP_LBString  
+##  <a name="ddp_lbstring"></a>  DDP_LBString  
  Chiamare questa funzione nella pagina delle proprietà `DoDataExchange` (funzione) per sincronizzare il valore di una proprietà stringa con la selezione corrente in una casella di riepilogo nella pagina delle proprietà.  
   
 ```   
@@ -240,7 +235,7 @@ void AFXAPI DDP_LBString(
 ### <a name="requirements"></a>Requisiti  
   **Intestazione** afxctl. h  
   
-##  <a name="ddp_lbstringexact"></a>DDP_LBStringExact  
+##  <a name="ddp_lbstringexact"></a>  DDP_LBStringExact  
  Chiamare questa funzione nella pagina delle proprietà `DoDataExchange` (funzione) per sincronizzare il valore di una proprietà stringa che corrisponde esattamente alla selezione corrente in una casella di riepilogo nella pagina delle proprietà.  
   
 ```   
@@ -270,7 +265,7 @@ void AFXAPI DDP_LBStringExact(
 ### <a name="requirements"></a>Requisiti  
   **Intestazione** afxctl. h  
   
-##  <a name="ddp_postprocessing"></a>DDP_PostProcessing  
+##  <a name="ddp_postprocessing"></a>  DDP_PostProcessing  
  Chiamare questa funzione nella pagina delle proprietà `DoDataExchange` (funzione), per completare il trasferimento dei valori delle proprietà dalla pagina delle proprietà del controllo quando vengono salvati i valori delle proprietà.  
   
 ```   
@@ -289,7 +284,7 @@ void AFXAPI DDP_PostProcessing(CDataExchange * pDX);
 ### <a name="requirements"></a>Requisiti  
   **Intestazione** afxctl. h  
   
-##  <a name="ddp_radio"></a>DDP_Radio  
+##  <a name="ddp_radio"></a>  DDP_Radio  
  Chiamare questa funzione del controllo `DoPropExchange` funzione per sincronizzare il valore della proprietà con il controllo pulsante di opzione pagina proprietà associata.  
   
 ```   
@@ -319,7 +314,7 @@ void AFXAPI DDP_Radio(
 ### <a name="requirements"></a>Requisiti  
   **Intestazione** afxctl. h  
   
-##  <a name="ddp_text"></a>DDP_TEXT  
+##  <a name="ddp_text"></a>  DDP_TEXT  
  Chiamare questa funzione del controllo `DoDataExchange` funzione per sincronizzare il valore della proprietà con il controllo di pagina della proprietà associata.  
   
 ```   
@@ -391,7 +386,7 @@ void AFXAPI DDP_Text(
 ### <a name="requirements"></a>Requisiti  
   **Intestazione** afxctl. h  
   
-##  <a name="begin_proppageids"></a>BEGIN_PROPPAGEIDS  
+##  <a name="begin_proppageids"></a>  BEGIN_PROPPAGEIDS  
  Inizia la definizione di elenco del controllo della pagina delle proprietà ID.  
   
 ```   
@@ -399,7 +394,7 @@ BEGIN_PROPPAGEIDS(class_name,  count)
 ```  
   
 ### <a name="parameters"></a>Parametri  
- *CLASS_NAME*  
+ *CLASS_NAME5D*  
  Il nome della classe del controllo per la cui proprietà vengono specificate le pagine.  
   
  *count*  
@@ -413,7 +408,7 @@ BEGIN_PROPPAGEIDS(class_name,  count)
 ### <a name="requirements"></a>Requisiti  
   **Intestazione** afxctl. h  
   
-##  <a name="end_proppageids"></a>END_PROPPAGEIDS  
+##  <a name="end_proppageids"></a>  END_PROPPAGEIDS  
  Termina la definizione di elenco di ID di pagina di proprietà.  
   
 ```   
@@ -421,13 +416,13 @@ END_PROPPAGEIDS(class_name)
 ```  
   
 ### <a name="parameters"></a>Parametri  
- *CLASS_NAME*  
+ *CLASS_NAME5D*  
  Il nome della classe del controllo cui appartiene la pagina delle proprietà.  
   
 ### <a name="requirements"></a>Requisiti  
   **Intestazione** afxctl. h  
   
-##  <a name="proppageid"></a>PROPPAGEID  
+##  <a name="proppageid"></a>  PROPPAGEID  
  Aggiunge una pagina delle proprietà per l'utilizzo dal controllo OLE.  
   
 ```   

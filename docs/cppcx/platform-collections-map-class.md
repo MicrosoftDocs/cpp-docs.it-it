@@ -1,11 +1,8 @@
 ---
 title: Classe platform::Collections::Map | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/18/2018
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - COLLECTION/Platform::Collections::Map::Map
@@ -22,17 +19,15 @@ dev_langs:
 helpviewer_keywords:
 - Map Class (C++/Cx)
 ms.assetid: 2b8cf968-1167-4898-a149-1195b32c1785
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e54750d02386795e46675b31a06a082bd35402f1
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 6580ccb9ca19a575bac6a9fedbb4e8f16c7060ba
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="platformcollectionsmap-class"></a>Classe Platform::Collections::Map
 
@@ -86,7 +81,7 @@ Per ulteriori informazioni, vedere [raccolte](../cppcx/collections-c-cx.md).
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[Map::Map](#ctor)|Inizializza una nuova istanza della classe Map.|
+|[Map:: Map](#ctor)|Inizializza una nuova istanza della classe Map.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
@@ -96,10 +91,10 @@ Per ulteriori informazioni, vedere [raccolte](../cppcx/collections-c-cx.md).
 |[Map::First](#first)|Restituisce un iteratore che specifica il primo elemento nella mappa.|
 |[Map:: GetView](#getview)|Restituisce una visualizzazione di sola lettura dell'oggetto Map corrente, ovvero [Platform::Collections::MapView Class](../cppcx/platform-collections-mapview-class.md).|
 |[Map::HasKey](#haskey)|Determina se l'oggetto Map corrente contiene la chiave specificata.|
-|[Map::Insert](#insert)|Aggiunge la coppia chiave-valore all'oggetto Map corrente.|
+|[Map:: Insert](#insert)|Aggiunge la coppia chiave-valore all'oggetto Map corrente.|
 |[Map::Lookup](#lookup)|Recupera l'elemento in corrispondenza della chiave specificata nell'oggetto Map corrente.|
 |[Map:: Remove](#remove)|Elimina la coppia chiave-valore specificata dall'oggetto Map corrente.|
-|[Map::Size](#size)|Restituisce il numero di elementi nell'oggetto Map corrente.|
+|[Map:: Size](#size)|Restituisce il numero di elementi nell'oggetto Map corrente.|
 
 ### <a name="events"></a>Eventi
 

@@ -1,13 +1,10 @@
 ---
 title: Struttura MEASUREITEMSTRUCT | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - MEASUREITEMSTRUCT
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - MEASUREITEMSTRUCT structure [MFC]
 ms.assetid: d141ace4-47cb-46b5-a81c-ad2c5e5a8501
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ce5221943ba1591a01ddebe2c261e4197fa18501
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ff015fdaf9e37d919459cadc8e4c35c4b795b3f8
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="measureitemstruct-structure"></a>Struttura MEASUREITEMSTRUCT
 Il `MEASUREITEMSTRUCT` struttura informa Windows delle dimensioni di un elemento di controllo o del menu creato dal proprietario.  
@@ -47,11 +42,11 @@ typedef struct tagMEASUREITEMSTRUCT {
  `CtlType`  
  Contiene il tipo di controllo. I valori per i tipi di controllo sono i seguenti:  
   
-- **ODT_COMBOBOX** casella combinata creata dal proprietario  
+- **ODT_COMBOBOX** casella combinata creato dal proprietario.  
   
-- **ODT_LISTBOX** casella di riepilogo di disegno personalizzato  
+- **ODT_LISTBOX** casella di riepilogo di disegno  
   
-- **ODT_MENU** menu creato dal proprietario  
+- **ODT_MENU** menu creato dal proprietario.  
   
  `CtlID`  
  Contiene l'ID di controllo per un pulsante, una casella di riepilogo o una casella combinata. Questo membro non viene usato per un menu.  

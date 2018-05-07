@@ -1,13 +1,10 @@
 ---
 title: Windows | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - MFC, windows
 - window objects [MFC], MFC Framework
 ms.assetid: dd92bf34-842e-40fe-8aea-3028b55314d5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e81be5ef0216f7d8a28ea7d5046c127f18670a6c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 88ba41b7bb921cc2834b4d45712be768b2d19f8e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="windows"></a>WINDOWS
 Questa serie di articoli vengono illustrati gli oggetti di finestra nel framework MFC. Tutte le finestre MFC derivano dalla classe [CWnd](../mfc/reference/cwnd-class.md), inclusi finestre cornice, visualizzazioni, finestre di dialogo e controlli.  
@@ -36,7 +31,7 @@ Questa serie di articoli vengono illustrati gli oggetti di finestra nel framewor
  Viene descritto il secondo gruppo di articoli [finestre cornice](../mfc/frame-windows.md): windows che inserire un frame intorno al contenuto, in particolare. Fare riferimento a questo gruppo per informazioni sulle modalità di gestione di finestre cornice e il contenuto che essi frame, inclusi le barre di controllo e le visualizzazioni del framework MFC.  
   
 ## <a name="what-do-you-want-to-know-more-about"></a>Ciò che si desidera saperne di più  
- *Argomenti sugli oggetti Window in generale*  
+ *Argomenti sugli oggetti di Window in generale*  
   
 -   [Oggetti finestra](../mfc/window-objects.md)  
   
@@ -58,11 +53,11 @@ Questa serie di articoli vengono illustrati gli oggetti di finestra nel framewor
   
  *Argomenti sulle finestre cornice*  
   
--   [Finestre cornice](../mfc/frame-windows.md): oggetti che forniscono una cornice delle finestre  
+-   [Finestre cornice](../mfc/frame-windows.md): oggetti delle finestre che forniscono i frame  
   
 -   [Finestre cornice e visualizzazioni](../mfc/frame-windows.md)  
   
--   [Classi di finestre cornice](../mfc/frame-window-classes.md)  
+-   [Classi frame-window](../mfc/frame-window-classes.md)  
   
 -   [Stili frame-window](../mfc/frame-window-styles-cpp.md)  
   
@@ -72,7 +67,7 @@ Questa serie di articoli vengono illustrati gli oggetti di finestra nel framewor
   
 -   [Utilizzo di finestre cornice](../mfc/using-frame-windows.md)  
   
--   [Gestione delle finestre figlio (finestra MDICLIENT)](../mfc/managing-mdi-child-windows.md)  
+-   [Gestione di finestre MD/figlio (finestra MDICLIENT)](../mfc/managing-mdi-child-windows.md)  
   
 -   [Gestione dei menu, barre di controllo e tasti di scelta rapida](../mfc/managing-menus-control-bars-and-accelerators.md)  
   
@@ -88,7 +83,7 @@ Questa serie di articoli vengono illustrati gli oggetti di finestra nel framewor
   
 -   [Messaggi (mappe e le funzioni del gestore)](../mfc/messages.md)  
   
- *Creazione ed eliminazione definitiva di Windows*  
+ *Creare e distruggere Windows*  
   
 -   [Sequenza generale di creazione finestre](../mfc/general-window-creation-sequence.md)  
   
@@ -102,15 +97,15 @@ Questa serie di articoli vengono illustrati gli oggetti di finestra nel framewor
   
 -   [Creare finestre con separatore](../mfc/multiple-document-types-views-and-frame-windows.md)  
   
- *Gestire le finestre figlio e la visualizzazione corrente*  
+ *Gestione delle finestre figlio e la visualizzazione corrente*  
   
--   [Gestire le finestre figlio MDI](../mfc/managing-mdi-child-windows.md)  
+-   [Gestione delle finestre figlio MDI](../mfc/managing-mdi-child-windows.md)  
   
 -   [Gestire la visualizzazione corrente](../mfc/managing-the-current-view.md)  
   
 -   [Gestire i menu, barre di controllo e tasti di scelta rapida](../mfc/managing-menus-control-bars-and-accelerators.md)  
   
- *Utilizzare i contesti di dispositivo e gli stili di finestra*  
+ *Utilizzo di contesti di dispositivo e stili finestra*  
   
 -   [Utilizzare penne e altri oggetti grafici in un contesto di dispositivo](../mfc/graphic-objects.md)  
   

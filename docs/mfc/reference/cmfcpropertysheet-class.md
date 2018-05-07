@@ -1,12 +1,9 @@
 ---
 title: Classe di CMFCPropertySheet | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCPropertySheet
@@ -49,17 +46,15 @@ helpviewer_keywords:
 - CMFCPropertySheet [MFC], SetIconsList
 - CMFCPropertySheet [MFC], SetLook
 ms.assetid: 01d93573-9698-440f-a6a4-5bebbee879dc
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e2684de5c72dcc755c2a75e2553eed509ce76533
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7b61adc98f6b6e84f5e2ef10f88ae41720e2fbf9
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcpropertysheet-class"></a>Classe di CMFCPropertySheet
 La classe `CMFCPropertySheet` supporta una finestra delle proprietà in cui ogni pagina delle proprietà è identificata da una scheda, un pulsante della barra degli strumenti, un nodo del controllo dell'albero o un elemento di elenco.  
@@ -147,7 +142,7 @@ class CMFCPropertySheet : public CPropertySheet
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** afxpropertysheet. h  
   
-##  <a name="addpage"></a>CMFCPropertySheet:: addPage  
+##  <a name="addpage"></a>  CMFCPropertySheet:: addPage  
  Aggiunge una pagina alla finestra delle proprietà.  
   
 ```  
@@ -163,7 +158,7 @@ void AddPage(CPropertyPage* pPage);
   
  Se la finestra delle proprietà nello stile di Microsoft Outlook, il framework visualizza un elenco di pulsanti di navigazione a sinistra della finestra delle proprietà. Dopo che questo metodo aggiunge una pagina delle proprietà, aggiunto un pulsante corrispondente all'elenco. Per visualizzare una pagina delle proprietà, fare clic sul pulsante corrispondente. Per ulteriori informazioni sugli stili di finestre delle proprietà, vedere [CMFCPropertySheet:: Setlook](#setlook).  
   
-##  <a name="addpagetotree"></a>CMFCPropertySheet::AddPageToTree  
+##  <a name="addpagetotree"></a>  CMFCPropertySheet::AddPageToTree  
  Aggiunge una nuova pagina delle proprietà al controllo albero.  
   
 ```  
@@ -190,7 +185,7 @@ void AddPageToTree(
 ### <a name="remarks"></a>Note  
  Questo metodo aggiunge una pagina delle proprietà come un nodo foglia di un controllo struttura ad albero. Per aggiungere una pagina delle proprietà, creare un `CMFCPropertySheet` dell'oggetto, chiamare il [CMFCPropertySheet:: Setlook](#setlook) metodo con il `look` parametro impostato su `CMFCPropertySheet::PropSheetLook_Tree`e quindi utilizzare questo metodo per aggiungere la pagina delle proprietà.  
   
-##  <a name="addtreecategory"></a>CMFCPropertySheet::AddTreeCategory  
+##  <a name="addtreecategory"></a>  CMFCPropertySheet::AddTreeCategory  
  Aggiunge un nuovo nodo al controllo albero.  
   
 ```  
@@ -222,7 +217,7 @@ CMFCPropertySheetCategoryInfo* AddTreeCategory(
   
  Utilizzare il valore restituito di questo metodo nelle chiamate successive a [CMFCPropertySheet::AddPageToTree](#addpagetotree) e [CMFCPropertySheet::AddTreeCategory](#addtreecategory).  
   
-##  <a name="cmfcpropertysheet"></a>CMFCPropertySheet::CMFCPropertySheet  
+##  <a name="cmfcpropertysheet"></a>  CMFCPropertySheet::CMFCPropertySheet  
  Costruisce un oggetto `CMFCPropertySheet`.  
   
 ```  
@@ -253,7 +248,7 @@ CMFCPropertySheet(
 ### <a name="remarks"></a>Note  
  Per ulteriori informazioni, vedere i parametri per il [CPropertySheet::CPropertySheet](../../mfc/reference/cpropertysheet-class.md#cpropertysheet) costruttore.  
   
-##  <a name="enablepageheader"></a>CMFCPropertySheet::EnablePageHeader  
+##  <a name="enablepageheader"></a>  CMFCPropertySheet::EnablePageHeader  
  Riserva spazio nella parte superiore di ogni pagina per creare un'intestazione personalizzata.  
   
 ```  
@@ -267,7 +262,7 @@ void EnablePageHeader(int nHeaderHeight);
 ### <a name="remarks"></a>Note  
  Per utilizzare il valore del `nHeaderHeight` parametro per creare un'intestazione personalizzata, eseguire l'override di [CMFCPropertySheet::OnDrawPageHeader](#ondrawpageheader) metodo.  
   
-##  <a name="getheaderheight"></a>CMFCPropertySheet::GetHeaderHeight  
+##  <a name="getheaderheight"></a>  CMFCPropertySheet::GetHeaderHeight  
  Recupera l'altezza dell'intestazione corrente.  
   
 ```  
@@ -280,7 +275,7 @@ int GetHeaderHeight() const;
 ### <a name="remarks"></a>Note  
  Chiamare il [CMFCPropertySheet::EnablePageHeader](#enablepageheader) metodo prima di chiamare questo metodo.  
   
-##  <a name="getlook"></a>CMFCPropertySheet::GetLook  
+##  <a name="getlook"></a>  CMFCPropertySheet::GetLook  
  Recupera il valore di enumerazione che specifica l'aspetto della finestra delle proprietà corrente.  
   
 ```  
@@ -290,7 +285,7 @@ PropSheetLook GetLook() const;
 ### <a name="return-value"></a>Valore restituito  
  Uno dei valori di enumerazione che specifica l'aspetto della finestra delle proprietà. Per un elenco di valori possibili, vedere la tabella di enumerazione nella sezione Osservazioni di [CMFCPropertySheet:: Setlook](#setlook).  
   
-##  <a name="getnavbarwidth"></a>CMFCPropertySheet::GetNavBarWidth  
+##  <a name="getnavbarwidth"></a>  CMFCPropertySheet::GetNavBarWidth  
  Ottiene la larghezza della barra di spostamento.  
   
 ```  
@@ -300,7 +295,7 @@ int GetNavBarWidth() const;
 ### <a name="return-value"></a>Valore restituito  
  Larghezza della barra di spostamento in pixel.  
   
-##  <a name="gettab"></a>CMFCPropertySheet::GetTab  
+##  <a name="gettab"></a>  CMFCPropertySheet::GetTab  
  Recupera l'oggetto del controllo Struttura a schede interno che supporta il controllo corrente della finestra delle proprietà.  
   
 ```  
@@ -317,7 +312,7 @@ CMFCTabCtrl& GetTab() const;
   
  Questo metodo effettua un'asserzione in modalità di debug, se il controllo della finestra delle proprietà non è impostato sullo stile di Microsoft OneNote.  
   
-##  <a name="initnavigationcontrol"></a>CMFCPropertySheet::InitNavigationControl  
+##  <a name="initnavigationcontrol"></a>  CMFCPropertySheet::InitNavigationControl  
  Inizializza l'aspetto del controllo corrente della finestra delle proprietà.  
   
 ```  
@@ -330,7 +325,7 @@ virtual CWnd* InitNavigationControl();
 ### <a name="remarks"></a>Note  
  Un controllo di finestra delle proprietà può essere visualizzati in diversi formati diversi, ad esempio un set di pagine a schede, un controllo albero o un elenco di pulsanti di navigazione. Utilizzare il [CMFCPropertySheet:: Setlook](#setlook) per specificare l'aspetto del controllo finestra delle proprietà.  
   
-##  <a name="onactivatepage"></a>CMFCPropertySheet::OnActivatePage  
+##  <a name="onactivatepage"></a>  CMFCPropertySheet::OnActivatePage  
  Chiamato dal framework quando una pagina delle proprietà è abilitata.  
   
 ```  
@@ -344,7 +339,7 @@ virtual void OnActivatePage(CPropertyPage* pPage);
 ### <a name="remarks"></a>Note  
  Per impostazione predefinita, questo metodo garantisce che la pagina delle proprietà abilitato lo scorrimento nella visualizzazione. Se lo stile della finestra delle proprietà corrente contiene un riquadro di Microsoft Outlook, questo metodo imposta il pulsante di Outlook corrispondente per lo stato di selezione.  
   
-##  <a name="ondrawpageheader"></a>CMFCPropertySheet::OnDrawPageHeader  
+##  <a name="ondrawpageheader"></a>  CMFCPropertySheet::OnDrawPageHeader  
  Chiamato dal framework per disegnare l'intestazione per una pagina delle proprietà personalizzate.  
   
 ```  
@@ -367,7 +362,7 @@ virtual void OnDrawPageHeader(
 ### <a name="remarks"></a>Note  
  Per impostazione predefinita, questo metodo non esegue alcuna operazione. Se si esegue l'override di questo metodo, chiamare il [CMFCPropertySheet::EnablePageHeader](#enablepageheader) metodo prima che il framework chiama questo metodo.  
   
-##  <a name="onremovetreepage"></a>CMFCPropertySheet::OnRemoveTreePage  
+##  <a name="onremovetreepage"></a>  CMFCPropertySheet::OnRemoveTreePage  
  Chiamato dal framework per rimuovere una pagina delle proprietà da un controllo albero.  
   
 ```  
@@ -381,7 +376,7 @@ virtual BOOL OnRemoveTreePage(CPropertyPage* pPage);
 ### <a name="return-value"></a>Valore restituito  
  `TRUE` se questo metodo dà esito positivo; in caso contrario, `FALSE`.  
   
-##  <a name="removecategory"></a>CMFCPropertySheet::RemoveCategory  
+##  <a name="removecategory"></a>  CMFCPropertySheet::RemoveCategory  
  Rimuove un nodo dal controllo albero.  
   
 ```  
@@ -395,7 +390,7 @@ void RemoveCategory(CMFCPropertySheetCategoryInfo* pCategory);
 ### <a name="remarks"></a>Note  
  Utilizzare questo metodo per rimuovere un nodo, che è anche definito come una categoria, da un controllo struttura ad albero. Utilizzare il [CMFCPropertySheet::AddTreeCategory](#addtreecategory) metodo per aggiungere un nodo a un controllo struttura ad albero.  
   
-##  <a name="removepage"></a>CMFCPropertySheet::RemovePage  
+##  <a name="removepage"></a>  CMFCPropertySheet::RemovePage  
  Rimuove una pagina delle proprietà dalla finestra delle proprietà.  
   
 ```  
@@ -413,7 +408,7 @@ void RemovePage(int nPage);
 ### <a name="remarks"></a>Note  
  Questo metodo rimuove la pagina delle proprietà specificato ed elimina la finestra associata. La pagina delle proprietà dell'oggetto che il `pPage` parametro specifica fino a quando non viene eliminato il [CMFCPropertySheet](../../mfc/reference/cmfcpropertysheet-class.md) finestra è chiusa.  
   
-##  <a name="seticonslist"></a>CMFCPropertySheet::SetIconsList  
+##  <a name="seticonslist"></a>  CMFCPropertySheet::SetIconsList  
  Specifica l'elenco delle immagini usate nel controllo di navigazione del riquadro di Outlook.  
   
 ```  
@@ -445,7 +440,7 @@ void SetIconsList(HIMAGELIST hIcons);
   
  Per ulteriori informazioni sui metodi che supportano questo metodo, vedere [CImageList:: Create](../../mfc/reference/cimagelist-class.md#create) e [CImageList::Add](../../mfc/reference/cimagelist-class.md#add). Per ulteriori informazioni su come impostare lo stile di una finestra delle proprietà, vedere [CMFCPropertySheet:: Setlook](#setlook).  
   
-##  <a name="setlook"></a>CMFCPropertySheet:: Setlook  
+##  <a name="setlook"></a>  CMFCPropertySheet:: Setlook  
  Specifica l'aspetto della finestra delle proprietà.  
   
 ```  

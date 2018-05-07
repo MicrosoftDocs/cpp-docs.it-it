@@ -1,12 +1,9 @@
 ---
 title: CDocument (classe) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CDocument
@@ -129,17 +126,15 @@ helpviewer_keywords:
 - CDocument [MFC], m_clrRichPreviewTextColor
 - CDocument [MFC], m_lfRichPreviewFont
 ms.assetid: e5a2891d-e1e1-4599-8c7e-afa9b4945446
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dad4a2bb3da49b0163367761aeefe85384ecdfb2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 696b0d63a7b81b550e99981f199132713fe8a6ed
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdocument-class"></a>CDocument (classe)
 Fornisce la funzionalità di base per le classi documento definite dall'utente.  
@@ -240,7 +235,7 @@ class CDocument : public CCmdTarget
   
  Documenti fanno parte dello standard del framework di routing di comandi e di conseguenza ricevono comandi da componenti dell'interfaccia utente standard (ad esempio, la voce di menu Salva). Un documento riceve comandi inoltrati per la visualizzazione attiva. Se il documento non gestisce un comando specifico, in cui viene inoltrato il comando per il modello di documento che lo gestisce.  
   
- Quando vengono modificati i dati di un documento, ognuna delle visualizzazioni deve riflettere tali modifiche. **CDocument** fornisce il [UpdateAllViews](#updateallviews) funzione membro per la notifica le visualizzazioni di tali modifiche, in modo le viste ridisegnarsi in base alle esigenze. Inoltre, il framework richiede all'utente di salvare un file modificato prima della chiusura.  
+ Quando vengono modificati i dati di un documento, ognuna delle visualizzazioni deve riflettere tali modifiche. **CDocument** fornisce il [UpdateAllViews](#updateallviews) funzione membro per la notifica le visualizzazioni di tali modifiche, in modo le viste possono ridisegnarsi in base alle esigenze. Inoltre, il framework richiede all'utente di salvare un file modificato prima della chiusura.  
   
  Per implementare i documenti in una tipica applicazione, è necessario eseguire le operazioni seguenti:  
   
@@ -252,7 +247,7 @@ class CDocument : public CCmdTarget
   
 -   Eseguire l'override di [CObject:: Serialize](../../mfc/reference/cobject-class.md#serialize) funzione membro nella classe di documento per scrivere e leggere i dati del documento al e dal disco.  
   
- **CDocument** supporta l'invio del documento tramite posta elettronica se è presente il supporto di posta elettronica (MAPI). Vedere gli articoli [MAPI](../../mfc/mapi.md) e [supporto MAPI in MFC](../../mfc/mapi-support-in-mfc.md).  
+ **CDocument** supporta l'invio al documento tramite posta elettronica se è presente il supporto di posta elettronica (MAPI). Vedere gli articoli [MAPI](../../mfc/mapi.md) e [supporto MAPI in MFC](../../mfc/mapi-support-in-mfc.md).  
   
  Per ulteriori informazioni su **CDocument**, vedere [serializzazione](../../mfc/serialization-in-mfc.md), [argomenti relativi all'architettura documento/visualizzazione](../../mfc/document-view-architecture.md), e [creazione documento/visualizzazione](../../mfc/document-view-creation.md).  
   
@@ -266,7 +261,7 @@ class CDocument : public CCmdTarget
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** afxwin.h  
   
-##  <a name="addview"></a>CDocument:: AddView  
+##  <a name="addview"></a>  CDocument:: AddView  
  Chiamare questa funzione per associare una vista al documento.  
   
 ```  
@@ -285,7 +280,7 @@ void AddView(CView* pView);
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFCDocViewSDI#12](../../mfc/codesnippet/cpp/cdocument-class_1.cpp)]  
   
-##  <a name="beginreadchunks"></a>CDocument::BeginReadChunks  
+##  <a name="beginreadchunks"></a>  CDocument::BeginReadChunks  
  Inizializza blocco lettura.  
   
 ```  
@@ -294,7 +289,7 @@ virtual void BeginReadChunks ();
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="cancloseframe"></a>CDocument::CanCloseFrame  
+##  <a name="cancloseframe"></a>  CDocument::CanCloseFrame  
  Chiamato dal framework prima della chiusura di una finestra cornice Visualizza il documento.  
   
 ```  
@@ -311,7 +306,7 @@ virtual BOOL CanCloseFrame(CFrameWnd* pFrame);
 ### <a name="remarks"></a>Note  
  L'implementazione predefinita controlla se sono presenti altre finestre cornice Visualizza il documento. Se la finestra cornice specificata è l'ultimo che consente di visualizzare il documento, la funzione richiede all'utente di salvare il documento, se è stato modificato. Eseguire l'override di questa funzione se si desidera eseguire un'elaborazione speciale quando viene chiusa una finestra cornice. Si tratta di un avanzato sottoponibile a override.  
   
-##  <a name="cdocument"></a>CDocument::CDocument  
+##  <a name="cdocument"></a>  CDocument::CDocument  
  Costruisce un **CDocument** oggetto.  
   
 ```  
@@ -321,7 +316,7 @@ CDocument();
 ### <a name="remarks"></a>Note  
  Il framework gestisce la creazione di documenti per l'utente. Eseguire l'override di [OnNewDocument](#onnewdocument) funzione membro per eseguire l'inizializzazione su una base per ogni documento; ciò è particolarmente importante in applicazioni single document interface (SDI).  
   
-##  <a name="clearchunklist"></a>CDocument::ClearChunkList  
+##  <a name="clearchunklist"></a>  CDocument::ClearChunkList  
  Cancella l'elenco di blocco.  
   
 ```  
@@ -330,7 +325,7 @@ virtual void ClearChunkList ();
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="clearpathname"></a>CDocument::ClearPathName  
+##  <a name="clearpathname"></a>  CDocument::ClearPathName  
  Cancella il percorso dell'oggetto documento.  
   
 ```  
@@ -340,7 +335,7 @@ virtual void ClearPathName();
 ### <a name="remarks"></a>Note  
  Cancellare il percorso da un `CDocument` oggetto provoca l'applicazione richiedere all'utente quando il documento viene quindi salvato. In questo modo un **salvare** comando si comportano come un **Salva con nome** comando.  
   
-##  <a name="deletecontents"></a>CDocument::DeleteContents  
+##  <a name="deletecontents"></a>  CDocument::DeleteContents  
  Chiamato dal framework per eliminare i dati del documento senza eliminare il **CDocument** oggetto stesso.  
   
 ```  
@@ -353,7 +348,7 @@ virtual void DeleteContents();
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFCDocView#57](../../mfc/codesnippet/cpp/cdocument-class_2.cpp)]  
   
-##  <a name="findchunk"></a>CDocument::FindChunk  
+##  <a name="findchunk"></a>  CDocument::FindChunk  
  Cerca un blocco con un GUID specificato.  
   
 ```  
@@ -374,7 +369,7 @@ virtual POSITION FindChunk(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="getadapter"></a>CDocument::GetAdapter  
+##  <a name="getadapter"></a>  CDocument::GetAdapter  
  Restituisce un puntatore a un oggetto che implementa il `IDocument` interfaccia.  
   
 ```  
@@ -386,7 +381,7 @@ virtual ATL::IDocument* GetAdapter();
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="getdoctemplate"></a>CDocument::GetDocTemplate  
+##  <a name="getdoctemplate"></a>  CDocument::GetDocTemplate  
  Chiamare questa funzione per ottenere un puntatore al modello di documento per questo tipo di documento.  
   
 ```  
@@ -399,7 +394,7 @@ CDocTemplate* GetDocTemplate() const;
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFCDocView#58](../../mfc/codesnippet/cpp/cdocument-class_3.cpp)]  
   
-##  <a name="getfile"></a>CDocument::GetFile  
+##  <a name="getfile"></a>  CDocument::GetFile  
  Chiamare questa funzione membro per ottenere un puntatore a un `CFile` oggetto.  
   
 ```  
@@ -417,12 +412,12 @@ virtual CFile* GetFile(
  Un puntatore a un oggetto eccezione di file esistente che indica lo stato di completamento dell'operazione.  
   
  `nOpenFlags`  
- La condivisione e modalità di accesso. Specifica l'azione da eseguire all'apertura del file. È possibile combinare le opzioni elencate nel costruttore CFile [CFile::CFile](../../mfc/reference/cfile-class.md#cfile) utilizzando l'operatore OR bit per bit (&#124;) (operatore). Sono richieste l'autorizzazione di un accesso e all'opzione di una condivisione il **modeCreate** e **modeNoInherit** modalità sono facoltative.  
+ La condivisione e modalità di accesso. Specifica l'azione da eseguire all'apertura del file. È possibile combinare le opzioni elencate nel costruttore CFile [CFile::CFile](../../mfc/reference/cfile-class.md#cfile) usando l'operatore OR (&#124;) (operatore). Sono richieste l'autorizzazione di un accesso e all'opzione di una condivisione il **modeCreate** e **modeNoInherit** modalità sono facoltative.  
   
 ### <a name="return-value"></a>Valore restituito  
  Un puntatore a un `CFile` oggetto.  
   
-##  <a name="getfirstviewposition"></a>CDocument::GetFirstViewPosition  
+##  <a name="getfirstviewposition"></a>  CDocument::GetFirstViewPosition  
  Chiamare questa funzione per ottenere la posizione della prima vista nell'elenco di viste associate al documento.  
   
 ```  
@@ -435,7 +430,7 @@ virtual POSITION GetFirstViewPosition() const;
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFCDocView#59](../../mfc/codesnippet/cpp/cdocument-class_4.cpp)]  
   
-##  <a name="getnextview"></a>CDocument::GetNextView  
+##  <a name="getnextview"></a>  CDocument::GetNextView  
  Chiamare questa funzione per scorrere tutte le visualizzazioni del documento.  
   
 ```  
@@ -455,7 +450,7 @@ virtual CView* GetNextView(POSITION& rPosition) const;
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFCDocView#59](../../mfc/codesnippet/cpp/cdocument-class_4.cpp)]  
   
-##  <a name="getpathname"></a>CDocument::GetPathName  
+##  <a name="getpathname"></a>  CDocument::GetPathName  
  Chiamare questa funzione per ottenere il percorso completo del file del documento.  
   
 ```  
@@ -465,7 +460,7 @@ const CString& GetPathName() const;
 ### <a name="return-value"></a>Valore restituito  
  Percorso completo del documento. Questa stringa è vuota se il documento non è stato salvato o non dispone di un file di disco associato.  
   
-##  <a name="getthumbnail"></a>CDocument::GetThumbnail  
+##  <a name="getthumbnail"></a>  CDocument::GetThumbnail  
  Crea una bitmap per essere utilizzato dal provider di anteprima per visualizzare l'anteprima.  
   
 ```  
@@ -490,7 +485,7 @@ virtual BOOL GetThumbnail(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="gettitle"></a>CDocument::GetTitle  
+##  <a name="gettitle"></a>  CDocument::GetTitle  
  Chiamare questa funzione per ottenere il titolo del documento, in genere derivato dal nome file del documento.  
   
 ```  
@@ -500,7 +495,7 @@ const CString& GetTitle() const;
 ### <a name="return-value"></a>Valore restituito  
  Il titolo del documento.  
   
-##  <a name="initializesearchcontent"></a>CDocument::InitializeSearchContent  
+##  <a name="initializesearchcontent"></a>  CDocument::InitializeSearchContent  
  Chiamato per inizializzare il contenuto di ricerca per il gestore di ricerca.  
   
 ```  
@@ -510,7 +505,7 @@ virtual void InitializeSearchContent ();
 ### <a name="remarks"></a>Note  
  Eseguire l'override di questo metodo in una classe derivata per inizializzare il contenuto di ricerca. Il contenuto deve essere una stringa con parti delimitate da ";". Selezionare, ad esempio,"; rettangolo; elemento OLE".  
   
-##  <a name="ismodified"></a>CDocument::IsModified  
+##  <a name="ismodified"></a>  CDocument::IsModified  
  Chiamare questa funzione per determinare se il documento è stato modificato dall'ultimo salvataggio.  
   
 ```  
@@ -520,7 +515,7 @@ virtual BOOL IsModified();
 ### <a name="return-value"></a>Valore restituito  
  Diverso da zero se il documento è stato modificato dopo l'ultimo salvataggio; in caso contrario 0.  
   
-##  <a name="issearchandorganizehandler"></a>CDocument::IsSearchAndOrganizeHandler  
+##  <a name="issearchandorganizehandler"></a>  CDocument::IsSearchAndOrganizeHandler  
  Indica se questa istanza di `CDocument` è stato creato per il gestore di ricerca & Organizza.  
   
 ```  
@@ -533,7 +528,7 @@ BOOL IsSearchAndOrganizeHandler() const;
 ### <a name="remarks"></a>Note  
  Attualmente, questa funzione restituisce `TRUE` solo per i gestori di anteprima avanzata implementati in un timeout del server di elaborazione. È possibile impostare i flag appropriati (m_bPreviewHandlerMode, m_bSearchMode, m_bGetThumbnailMode) il livello di applicazione per rendere questa funzione restituito `TRUE`.  
   
-##  <a name="loaddocumentfromstream"></a>CDocument::LoadDocumentFromStream  
+##  <a name="loaddocumentfromstream"></a>  CDocument::LoadDocumentFromStream  
  Chiamato per caricare i dati del documento da un flusso.  
   
 ```  
@@ -555,7 +550,7 @@ virtual HRESULT LoadDocumentFromStream(
 ### <a name="remarks"></a>Note  
  È possibile eseguire l'override di questo metodo in una classe derivata per personalizzare la modalità caricare i dati dal flusso.  
   
-##  <a name="m_bgetthumbnailmode"></a>CDocument::m_bGetThumbnailMode  
+##  <a name="m_bgetthumbnailmode"></a>  CDocument::m_bGetThumbnailMode  
  Specifica che il `CDocument` oggetto è stato creato da dllhost per le anteprime. Non deve essere archiviato `CView::OnDraw`.  
   
 ```  
@@ -563,9 +558,9 @@ BOOL m_bGetThumbnailMode;
 ```  
   
 ### <a name="remarks"></a>Note  
- `TRUE`indica che il documento è stato creato da dllhost per le anteprime.  
+ `TRUE` indica che il documento è stato creato da dllhost per le anteprime.  
   
-##  <a name="m_bpreviewhandlermode"></a>CDocument::m_bPreviewHandlerMode  
+##  <a name="m_bpreviewhandlermode"></a>  CDocument::m_bPreviewHandlerMode  
  Specifica che il `CDocument` oggetto è stato creato da prevhost per l'anteprima avanzata. Non deve essere archiviato `CView::OnDraw`.  
   
 ```  
@@ -573,9 +568,9 @@ BOOL m_bPreviewHandlerMode;
 ```  
   
 ### <a name="remarks"></a>Note  
- `TRUE`indica che il documento è stato creato da prevhost per l'anteprima avanzata.  
+ `TRUE` indica che il documento è stato creato da prevhost per l'anteprima avanzata.  
   
-##  <a name="m_bsearchmode"></a>CDocument::m_bSearchMode  
+##  <a name="m_bsearchmode"></a>  CDocument::m_bSearchMode  
  Specifica che il `CDocument` oggetto è stato creato dall'indicizzatore o da un'altra applicazione di ricerca.  
   
 ```  
@@ -583,9 +578,9 @@ BOOL m_bSearchMode;
 ```  
   
 ### <a name="remarks"></a>Note  
- `TRUE`indica che il documento è stato creato dall'indicizzatore o da un'altra applicazione di ricerca.  
+ `TRUE` indica che il documento è stato creato dall'indicizzatore o da un'altra applicazione di ricerca.  
   
-##  <a name="m_clrrichpreviewbackcolor"></a>CDocument::m_clrRichPreviewBackColor  
+##  <a name="m_clrrichpreviewbackcolor"></a>  CDocument::m_clrRichPreviewBackColor  
  Specifica il colore di sfondo della finestra di anteprima avanzata. Questo colore è impostato dall'host.  
   
 ```  
@@ -594,7 +589,7 @@ COLORREF m_clrRichPreviewBackColor;
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="m_clrrichpreviewtextcolor"></a>CDocument::m_clrRichPreviewTextColor  
+##  <a name="m_clrrichpreviewtextcolor"></a>  CDocument::m_clrRichPreviewTextColor  
  Specifica il colore di primo piano della finestra di anteprima avanzata. Questo colore è impostato dall'host.  
   
 ```  
@@ -603,7 +598,7 @@ COLORREF m_clrRichPreviewTextColor;
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="m_lfrichpreviewfont"></a>CDocument::m_lfRichPreviewFont  
+##  <a name="m_lfrichpreviewfont"></a>  CDocument::m_lfRichPreviewFont  
  Specifica il tipo di carattere per la finestra di anteprima avanzata. Queste informazioni di carattere viene impostate dall'host.  
   
 ```  
@@ -612,7 +607,7 @@ CFont m_lfRichPreviewFont;
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="onbeforerichpreviewfontchanged"></a>CDocument::OnBeforeRichPreviewFontChanged  
+##  <a name="onbeforerichpreviewfontchanged"></a>  CDocument::OnBeforeRichPreviewFontChanged  
  Chiamato prima che venga modificato il tipo di carattere Anteprima avanzata.  
   
 ```  
@@ -621,7 +616,7 @@ virtual void OnBeforeRichPreviewFontChanged();
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="onchangedviewlist"></a>CDocument::OnChangedViewList  
+##  <a name="onchangedviewlist"></a>  CDocument::OnChangedViewList  
  Chiamato dal framework dopo una vista viene aggiunto o rimosso dal documento.  
   
 ```  
@@ -631,7 +626,7 @@ virtual void OnChangedViewList();
 ### <a name="remarks"></a>Note  
  L'implementazione predefinita di questa funzione controlla se l'ultima visualizzazione viene rimosso e, in tal caso, Elimina il documento. Eseguire l'override di questa funzione se si desidera eseguire un'elaborazione speciale quando il framework aggiunge o rimuove una vista. Ad esempio, se si desidera che il documento rimangono aperti anche quando nessuna visualizzazione associata, l'override della funzione.  
   
-##  <a name="onclosedocument"></a>CDocument::OnCloseDocument  
+##  <a name="onclosedocument"></a>  CDocument::OnCloseDocument  
  Chiamato dal framework quando il documento viene chiuso, in genere come parte del comando File Close.  
   
 ```  
@@ -643,7 +638,7 @@ virtual void OnCloseDocument();
   
  Eseguire l'override di questa funzione se si desidera eseguire un'elaborazione speciale pulizia quando il framework chiude un documento. Ad esempio, se il documento rappresenta un record in un database, è consigliabile eseguire l'override di questa funzione per chiudere il database. È necessario chiamare la versione della classe di base di questa funzione dalla sostituzione.  
   
-##  <a name="oncreatepreviewframe"></a>CDocument::OnCreatePreviewFrame  
+##  <a name="oncreatepreviewframe"></a>  CDocument::OnCreatePreviewFrame  
  Chiamato dal framework quando è necessario creare un frame di anteprima per l'anteprima avanzata.  
   
 ```  
@@ -655,7 +650,7 @@ virtual BOOL OnCreatePreviewFrame();
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="ondocumentevent"></a>CDocument::OnDocumentEvent  
+##  <a name="ondocumentevent"></a>  CDocument::OnDocumentEvent  
  Chiamato dal framework in risposta a un evento di documento.  
   
 ```  
@@ -678,7 +673,7 @@ virtual void OnDocumentEvent(DocumentEvent deEvent);
 |`onAfterSaveDocument`|Il documento è stato salvato.|  
 |`onAfterCloseDocument`|Il documento è stato chiuso.|  
   
-##  <a name="ondrawthumbnail"></a>CDocument::OnDrawThumbnail  
+##  <a name="ondrawthumbnail"></a>  CDocument::OnDrawThumbnail  
  Eseguire l'override di questo metodo in una classe derivata per disegnare l'immagine di anteprima.  
   
 ```  
@@ -696,7 +691,7 @@ virtual void OnDrawThumbnail(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="onfilesendmail"></a>CDocument:: OnFileSendMail  
+##  <a name="onfilesendmail"></a>  CDocument:: OnFileSendMail  
  Invia un messaggio tramite l'host della posta elettronica residenti (se presente) con il documento come allegato.  
   
 ```  
@@ -704,13 +699,13 @@ void OnFileSendMail();
 ```  
   
 ### <a name="remarks"></a>Note  
- `OnFileSendMail`chiamate [OnSaveDocument](#onsavedocument) per serializzare (documenti senza nome e modificati in un file temporaneo, che viene quindi inviato tramite posta elettronica Salva). Se il documento non è stato modificato, un file temporaneo non è necessaria. viene inviato originale. `OnFileSendMail`Carica MAPI32. DLL se non è già stato caricato.  
+ `OnFileSendMail` le chiamate [OnSaveDocument](#onsavedocument) per serializzare (documenti senza nome e modificati in un file temporaneo, che viene quindi inviato tramite posta elettronica Salva). Se il documento non è stato modificato, un file temporaneo non è necessaria. viene inviato originale. `OnFileSendMail` Carica MAPI32. DLL se non è già stato caricato.  
   
  Un'implementazione speciale di `OnFileSendMail` per [COleDocument](../../mfc/reference/coledocument-class.md) gestisce correttamente i file compositi.  
   
- **CDocument** supporta l'invio del documento tramite posta elettronica se è presente il supporto di posta elettronica (MAPI). Vedere gli articoli [MAPI argomenti](../../mfc/mapi.md) e [supporto MAPI in MFC](../../mfc/mapi-support-in-mfc.md).  
+ **CDocument** supporta l'invio al documento tramite posta elettronica se è presente il supporto di posta elettronica (MAPI). Vedere gli articoli [MAPI argomenti](../../mfc/mapi.md) e [supporto MAPI in MFC](../../mfc/mapi-support-in-mfc.md).  
   
-##  <a name="onloaddocumentfromstream"></a>CDocument::OnLoadDocumentFromStream  
+##  <a name="onloaddocumentfromstream"></a>  CDocument::OnLoadDocumentFromStream  
  Chiamato dal framework quando è necessario caricare i dati del documento da un flusso.  
   
 ```  
@@ -731,7 +726,7 @@ virtual HRESULT OnLoadDocumentFromStream(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="onnewdocument"></a>CDocument::OnNewDocument  
+##  <a name="onnewdocument"></a>  CDocument::OnNewDocument  
  Chiamato dal framework come parte del comando File nuovo.  
   
 ```  
@@ -757,7 +752,7 @@ virtual BOOL OnNewDocument();
   
  [!code-cpp[NVC_MFCDocView#62](../../mfc/codesnippet/cpp/cdocument-class_7.cpp)]  
   
-##  <a name="onopendocument"></a>CDocument:: OnOpenDocument  
+##  <a name="onopendocument"></a>  CDocument:: OnOpenDocument  
  Chiamato dal framework come parte del comando File Apri.  
   
 ```  
@@ -787,7 +782,7 @@ virtual BOOL OnOpenDocument(LPCTSTR lpszPathName);
   
  [!code-cpp[NVC_MFCDocView#63](../../mfc/codesnippet/cpp/cdocument-class_8.cpp)]  
   
-##  <a name="onpreviewhandlerqueryfocus"></a>CDocument::OnPreviewHandlerQueryFocus  
+##  <a name="onpreviewhandlerqueryfocus"></a>  CDocument::OnPreviewHandlerQueryFocus  
  Indirizza il gestore di anteprima per restituire HWND recuperati dalla chiamata di `GetFocus` (funzione).  
   
 ```  
@@ -803,7 +798,7 @@ virtual HRESULT OnPreviewHandlerQueryFocus(HWND* phwnd);
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="onpreviewhandlertranslateaccelerator"></a>CDocument::OnPreviewHandlerTranslateAccelerator  
+##  <a name="onpreviewhandlertranslateaccelerator"></a>  CDocument::OnPreviewHandlerTranslateAccelerator  
  Indirizza il gestore di anteprima per gestire una sequenza di tasti passato dal message pump del processo in cui è in esecuzione il gestore di anteprima.  
   
 ```  
@@ -819,7 +814,7 @@ virtual HRESULT OnPreviewHandlerTranslateAccelerator(MSG* pmsg);
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="onrichpreviewbackcolorchanged"></a>CDocument::OnRichPreviewBackColorChanged  
+##  <a name="onrichpreviewbackcolorchanged"></a>  CDocument::OnRichPreviewBackColorChanged  
  Chiamato quando viene modificato il colore di sfondo anteprima avanzata.  
   
 ```  
@@ -828,7 +823,7 @@ virtual void OnRichPreviewBackColorChanged();
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="onrichpreviewfontchanged"></a>CDocument::OnRichPreviewFontChanged  
+##  <a name="onrichpreviewfontchanged"></a>  CDocument::OnRichPreviewFontChanged  
  Chiamato quando viene modificato il tipo di carattere Anteprima avanzata.  
   
 ```  
@@ -837,7 +832,7 @@ virtual void OnRichPreviewFontChanged();
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="onrichpreviewsitechanged"></a>CDocument::OnRichPreviewSiteChanged  
+##  <a name="onrichpreviewsitechanged"></a>  CDocument::OnRichPreviewSiteChanged  
  Chiamato quando viene modificato il sito di anteprima avanzata.  
   
 ```  
@@ -846,7 +841,7 @@ virtual void OnRichPreviewSiteChanged();
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="onrichpreviewtextcolorchanged"></a>CDocument::OnRichPreviewTextColorChanged  
+##  <a name="onrichpreviewtextcolorchanged"></a>  CDocument::OnRichPreviewTextColorChanged  
  Chiamato quando viene modificato il colore del testo Anteprima avanzata.  
   
 ```  
@@ -855,7 +850,7 @@ virtual void OnRichPreviewTextColorChanged();
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="onsavedocument"></a>CDocument::OnSaveDocument  
+##  <a name="onsavedocument"></a>  CDocument::OnSaveDocument  
  Chiamato dal framework come parte del comando File Salva o Salva con nome.  
   
 ```  
@@ -872,7 +867,7 @@ virtual BOOL OnSaveDocument(LPCTSTR lpszPathName);
 ### <a name="remarks"></a>Note  
  L'implementazione predefinita di questa funzione consente di aprire il file specificato, le chiamate [CObject:: Serialize](../../mfc/reference/cobject-class.md#serialize) per scrivere i dati del documento per file e i segni di documento come eseguire la pulizia. Eseguire l'override di questa funzione se si desidera eseguire un'elaborazione speciale quando il framework consente di salvare un documento. Ad esempio, è possibile scrivere un'applicazione in cui i documenti rappresentano i record in un database anziché in file separati.  
   
-##  <a name="onunloadhandler"></a>CDocument::OnUnloadHandler  
+##  <a name="onunloadhandler"></a>  CDocument::OnUnloadHandler  
  Chiamato dal framework quando viene scaricato il gestore di anteprima.  
   
 ```  
@@ -881,7 +876,7 @@ virtual void OnUnloadHandler();
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="onupdatefilesendmail"></a>CDocument:: OnUpdateFileSendMail  
+##  <a name="onupdatefilesendmail"></a>  CDocument:: OnUpdateFileSendMail  
  Consente di **ID_FILE_SEND_MAIL** comando se è presente il supporto di posta elettronica (MAPI).  
   
 ```  
@@ -895,9 +890,9 @@ void OnUpdateFileSendMail(CCmdUI* pCmdUI);
 ### <a name="remarks"></a>Note  
  In caso contrario la funzione rimuove il **ID_FILE_SEND_MAIL** comando dal menu, inclusi i separatori sopra o sotto il menu elemento come appropriato. MAPI è abilitata se MAPI32. DLL è presente nel percorso e, nella sezione del file WIN [posta elettronica]. File INI, MAPI = 1. La maggior parte delle applicazioni di inserire questo comando dal menu File.  
   
- **CDocument** supporta l'invio del documento tramite posta elettronica se è presente il supporto di posta elettronica (MAPI). Vedere gli articoli [MAPI argomenti](../../mfc/mapi.md) e [supporto MAPI in MFC](../../mfc/mapi-support-in-mfc.md).  
+ **CDocument** supporta l'invio al documento tramite posta elettronica se è presente il supporto di posta elettronica (MAPI). Vedere gli articoli [MAPI argomenti](../../mfc/mapi.md) e [supporto MAPI in MFC](../../mfc/mapi-support-in-mfc.md).  
   
-##  <a name="precloseframe"></a>CDocument::PreCloseFrame  
+##  <a name="precloseframe"></a>  CDocument::PreCloseFrame  
  Questa funzione membro viene chiamata dal framework prima la finestra cornice viene eliminato definitivamente.  
   
 ```  
@@ -913,7 +908,7 @@ virtual void PreCloseFrame(CFrameWnd* pFrame);
   
  Il valore predefinito di `PreCloseFrame` non esegue alcuna operazione **CDocument**. Il **CDocument**-classi derivate [COleDocument](../../mfc/reference/coledocument-class.md) e [CRichEditDoc](../../mfc/reference/cricheditdoc-class.md) utilizzare questa funzione membro.  
   
-##  <a name="readnextchunkvalue"></a>CDocument::ReadNextChunkValue  
+##  <a name="readnextchunkvalue"></a>  CDocument::ReadNextChunkValue  
  Legge il valore di blocco successivo.  
   
 ```  
@@ -929,7 +924,7 @@ virtual BOOL ReadNextChunkValue(IFilterChunkValue** ppValue);
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="releasefile"></a>CDocument::ReleaseFile  
+##  <a name="releasefile"></a>  CDocument::ReleaseFile  
  Questa funzione membro viene chiamata dal framework per rilasciare un file, rendendo disponibili per l'uso da altre applicazioni.  
   
 ```  
@@ -946,13 +941,13 @@ virtual void ReleaseFile(
  Specifica se il file deve essere rilasciato tramite `CFile::Close` o `CFile::Abort`. **FALSE** se il file deve essere liberata usando [CFile::Close](../../mfc/reference/cfile-class.md#close); **TRUE** se il file deve essere liberata usando [CFile:: Abort](../../mfc/reference/cfile-class.md#abort).  
   
 ### <a name="remarks"></a>Note  
- Se `bAbort` è **TRUE**, `ReleaseFile` chiamate `CFile::Abort`, mentre il file viene rilasciato. `CFile::Abort`non genererà un'eccezione.  
+ Se `bAbort` è **TRUE**, `ReleaseFile` chiamate `CFile::Abort`, mentre il file viene rilasciato. `CFile::Abort` non genererà un'eccezione.  
   
  Se `bAbort` è **FALSE**, `ReleaseFile` chiamate `CFile::Close` e il file viene rilasciato.  
   
  Eseguire l'override di questa funzione membro per richiedere un intervento dell'utente prima che il file viene rilasciato.  
   
-##  <a name="removechunk"></a>CDocument::RemoveChunk  
+##  <a name="removechunk"></a>  CDocument::RemoveChunk  
  Rimuove un blocco con il GUID specificato.  
   
 ```  
@@ -970,7 +965,7 @@ virtual void RemoveChunk(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="removeview"></a>CDocument::RemoveView  
+##  <a name="removeview"></a>  CDocument::RemoveView  
  Chiamare questa funzione per scollegare una vista da un documento.  
   
 ```  
@@ -988,7 +983,7 @@ void RemoveView(CView* pView);
   
  Vedere l'esempio in [AddView](#addview) per un esempio di implementazione.  
   
-##  <a name="reportsaveloadexception"></a>CDocument::ReportSaveLoadException  
+##  <a name="reportsaveloadexception"></a>  CDocument::ReportSaveLoadException  
  Chiamata eseguita se viene generata un'eccezione (in genere un [CFileException](../../mfc/reference/cfileexception-class.md) o [eccezione CArchiveException](../../mfc/reference/carchiveexception-class.md)) durante il salvataggio o il caricamento del documento.  
   
 ```  
@@ -1015,7 +1010,7 @@ virtual void ReportSaveLoadException(
 ### <a name="remarks"></a>Note  
  L'implementazione predefinita esamina l'oggetto eccezione e cerca un messaggio di errore che descrive la causa. Se non viene trovato un messaggio specifico o se *e* è **NULL**, il messaggio generale specificato il `nIDPDefault` parametro viene utilizzato. La funzione quindi visualizza una finestra di messaggio contenente il messaggio di errore. Eseguire l'override di questa funzione fornire messaggi di errore personalizzate aggiuntive. Si tratta di un avanzato sottoponibile a override.  
   
-##  <a name="savemodified"></a>CDocument:: SaveModified  
+##  <a name="savemodified"></a>  CDocument:: SaveModified  
  Chiamato dal framework prima che sia un documento modificato per essere chiuso.  
   
 ```  
@@ -1028,7 +1023,7 @@ virtual BOOL SaveModified();
 ### <a name="remarks"></a>Note  
  L'implementazione predefinita di questa funzione consente di visualizzare una finestra di messaggio che chiede all'utente se si desidera salvare le modifiche al documento, se qualsiasi sono stato apportato. Eseguire l'override di questa funzione se il programma richiede una diversa procedura richiesta. Si tratta di un avanzato sottoponibile a override.  
   
-##  <a name="setchunkvalue"></a>CDocument::SetChunkValue  
+##  <a name="setchunkvalue"></a>  CDocument::SetChunkValue  
  Imposta un valore di blocco.  
   
 ```  
@@ -1044,7 +1039,7 @@ virtual BOOL SetChunkValue (IFilterChunkValue* pValue);
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="setmodifiedflag"></a>CDocument::SetModifiedFlag  
+##  <a name="setmodifiedflag"></a>  CDocument::SetModifiedFlag  
  Dopo avere apportato le modifiche al documento, chiamare questa funzione.  
   
 ```  
@@ -1058,7 +1053,7 @@ virtual void SetModifiedFlag(BOOL bModified = TRUE);
 ### <a name="remarks"></a>Note  
  Chiamare questa funzione in modo coerente, consente di garantire che il framework richiede all'utente di salvare le modifiche prima di chiudere un documento. In genere è consigliabile utilizzare il valore predefinito di **TRUE** per il `bModified` parametro. Per contrassegnare un documento come eseguire la pulizia (non modificato), chiamare questa funzione con un valore di **FALSE**.  
   
-##  <a name="setpathname"></a>CDocument::SetPathName  
+##  <a name="setpathname"></a>  CDocument::SetPathName  
  Chiamare questa funzione per specificare il percorso completo del file del documento.  
   
 ```  
@@ -1077,7 +1072,7 @@ virtual void SetPathName(
 ### <a name="remarks"></a>Note  
  A seconda del valore di `bAddToMRU` il percorso viene aggiunto o non aggiunti all'elenco MRU gestito dall'applicazione. Si noti che alcuni documenti non sono associati a un file su disco. Chiamare questa funzione solo se si esegue l'override l'implementazione predefinita per l'apertura e salvataggio di file usati dal framework.  
   
-##  <a name="settitle"></a>CDocument::SetTitle  
+##  <a name="settitle"></a>  CDocument::SetTitle  
  Chiamare questa funzione per specificare il titolo del documento (la stringa visualizzata nella barra del titolo di una finestra cornice).  
   
 ```  
@@ -1091,7 +1086,7 @@ virtual void SetTitle(LPCTSTR lpszTitle);
 ### <a name="remarks"></a>Note  
  Chiamare questa funzione Aggiorna i titoli di tutte le finestre cornice che consentono di visualizzare il documento.  
   
-##  <a name="updateallviews"></a>UpdateAllViews  
+##  <a name="updateallviews"></a>  UpdateAllViews  
  Chiamare questa funzione dopo che il documento è stato modificato.  
   
 ```  

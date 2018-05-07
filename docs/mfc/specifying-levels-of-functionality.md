@@ -1,13 +1,10 @@
 ---
-title: "Specifica dei livelli di funzionalità | Documenti Microsoft"
-ms.custom: 
+title: Specifica dei livelli di funzionalità | Documenti Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - run-time class [MFC], information support
 - levels [MFC]
 ms.assetid: 562669ba-c858-4f66-b5f1-b3beeea4f486
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 13a2897d5e442794198870e7f6bed36196744888
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f32b9502d2e8bd1c1483d817b759ca204f5c9c1a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="specifying-levels-of-functionality"></a>Specifica dei livelli di funzionalità
 In questo articolo viene descritto come aggiungere i seguenti livelli di funzionalità per il [CObject](../mfc/reference/cobject-class.md)-classe derivata:  
@@ -43,7 +38,7 @@ In questo articolo viene descritto come aggiungere i seguenti livelli di funzion
  Per una descrizione generale di `CObject` funzionalità, vedere l'articolo [derivando una classe da CObject](../mfc/deriving-a-class-from-cobject.md).  
   
 -   [Informazioni sulle classi in fase di esecuzione](#_core_to_add_run.2d.time_class_information)  
-#### <a name="_core_to_add_run.2d.time_class_information"></a>Per aggiungere informazioni sulle classi in fase di esecuzione  
+#### <a name="_core_to_add_run.2d.time_class_information"></a> Per aggiungere informazioni sulle classi di runtime  
   
 1.  Derivare la classe da `CObject`, come descritto nel [derivando una classe da CObject](../mfc/deriving-a-class-from-cobject.md) articolo.  
   
@@ -58,7 +53,7 @@ In questo articolo viene descritto come aggiungere i seguenti livelli di funzion
 > [!NOTE]
 >  Inserire sempre `IMPLEMENT_DYNAMIC` nel file di implementazione (. CPP) per la classe. Il `IMPLEMENT_DYNAMIC` macro deve essere valutato solo una volta durante una compilazione e pertanto non devono essere utilizzata in un file di interfaccia (. H) che possano essere potenzialmente inclusi in più di un file.  
   
-#### <a name="_core_to_add_dynamic_creation_support"></a>Per aggiungere supporto per la creazione dinamica  
+#### <a name="_core_to_add_dynamic_creation_support"></a> Per aggiungere supporto per la creazione dinamica  
   
 1.  Derivare la classe da `CObject`.  
   
@@ -68,7 +63,7 @@ In questo articolo viene descritto come aggiungere i seguenti livelli di funzion
   
 4.  Utilizzare il `IMPLEMENT_DYNCREATE` macro nel file di implementazione della classe.  
   
-#### <a name="_core_to_add_serialization_support"></a>Per aggiungere il supporto della serializzazione  
+#### <a name="_core_to_add_serialization_support"></a> Per aggiungere il supporto della serializzazione  
   
 1.  Derivare la classe da `CObject`.  
   

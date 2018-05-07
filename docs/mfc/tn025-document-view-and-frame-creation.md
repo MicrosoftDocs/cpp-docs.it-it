@@ -1,13 +1,10 @@
 ---
 title: 'Tn025: creazione Di documenti, visualizzazioni e Frame creazione | Documenti Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.creation
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - documents [MFC], view and frame creation
 - TN025
 ms.assetid: 09254d72-6e1d-43db-80e9-693887dbeda2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 89ca395b19a36c42163b854c8997cce424352ead
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6a5fd603fdb45ac0f754858384df1455f559222e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn025-document-view-and-frame-creation"></a>TN025: creazione di documenti, visualizzazioni e frame
 > [!NOTE]
@@ -52,7 +47,7 @@ AddDocTemplate(pTemplate);
 ## <a name="doctemplates"></a>Modelli di documento  
  `CDocTemplate` è l'autore e il gestore dei documenti. Possiede i documenti che crea. Se l'applicazione utilizza l'approccio basato sulle risorse descritto di seguito, non necessiterà di derivare da `CDocTemplate`.  
   
- Per un'applicazione SDI, la classe `CSingleDocTemplate` tiene traccia di un documento aperto. Per un'applicazione MDI, la classe `CMultiDocTemplate` tiene un elenco (`CPtrList`) di tutti i documenti aperti creati da tale modello. `CDocTemplate::AddDocument` e `CDocTemplate::RemoveDocument` forniscono le funzioni membro virtuali per l'aggiunta o la rimozione di un documento dal modello. `CDocTemplate`è un elemento friend di **CDocument** , pertanto è possibile impostare il metodo protetto **CDocument:: M_pdoctemplate** puntatore all'indietro per scegliere il modello di documento che ha creato il documento.  
+ Per un'applicazione SDI, la classe `CSingleDocTemplate` tiene traccia di un documento aperto. Per un'applicazione MDI, la classe `CMultiDocTemplate` tiene un elenco (`CPtrList`) di tutti i documenti aperti creati da tale modello. `CDocTemplate::AddDocument` e `CDocTemplate::RemoveDocument` forniscono le funzioni membro virtuali per l'aggiunta o la rimozione di un documento dal modello. `CDocTemplate` è un elemento friend di **CDocument** , pertanto è possibile impostare il metodo protetto **CDocument:: M_pdoctemplate** puntatore all'indietro per scegliere il modello di documento che ha creato il documento.  
   
  `CWinApp` gestisce l'implementazione predefinita di `OnFileOpen`, che a sua volta eseguirà query a tutti i modelli di documento. L'implementazione include la ricerca di documenti già aperti e la decisione su quale formato utilizzare per aprire i nuovi documenti.  
   

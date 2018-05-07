@@ -1,13 +1,10 @@
 ---
 title: Sulla barra multifunzione progettazione (MFC) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.editors.ribbon.F1
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - Ribbon Designer (MFC)
 - MFC Ribbon Designer
 ms.assetid: 0806dfd6-7d11-471a-99e1-4072852231f9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0dde2c26855e8d8acd51b8c607867d9b92b3987f
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: dbde67e61a38190a2e26884659d273b55a63f89e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ribbon-designer-mfc"></a>Finestra di progettazione della barra multifunzione (MFC)
 La finestra di progettazione della barra multifunzione permette di creare e personalizzare barre multifunzione in applicazioni MFC. Una barra multifunzione è un elemento dell'interfaccia utente che organizza i comandi in gruppi logici. Questi gruppi sono visualizzati in schede separate in una striscia che occupa tutta la parte superiore della finestra. La barra multifunzione sostituisce la barra dei menu e le barre degli strumenti. Una barra multifunzione può migliorare significativamente l'usabilità delle applicazioni. Per ulteriori informazioni, vedere [barre multifunzione](http://go.microsoft.com/fwlink/p/?linkid=129233). La figura seguente mostra una barra multifunzione.  
@@ -89,7 +84,7 @@ La finestra di progettazione della barra multifunzione permette di creare e pers
   
 - **Finestra Proprietà:** vengono elencati gli attributi dell'elemento selezionato nell'area di progettazione.  
   
-- **Finestra Visualizzazione risorse:** vengono visualizzate le risorse che includono le risorse barra multifunzione, nel progetto.  
+- **Finestra Visualizzazione risorse:** vengono visualizzate le risorse che includono le risorse della barra multifunzione, nel progetto.  
   
 - **Barra degli strumenti Editor Ribbon:** contiene i comandi che consentono di visualizzare l'anteprima della barra multifunzione e modificarne il tema visivo.  
   
@@ -108,7 +103,7 @@ La finestra di progettazione della barra multifunzione permette di creare e pers
   
 - **Pulsante dell'applicazione:** pulsante visualizzato nell'angolo superiore sinistro di una barra multifunzione. Il pulsante dell'applicazione sostituisce il menu File ed è visibile anche quando la barra multifunzione è ridotta a icona. Quando si fa clic su questo pulsante, viene visualizzato un menu che contiene un elenco di comandi.  
   
-- **Barra di accesso rapido:** comandi utilizzati più di una piccola barra degli strumenti personalizzabile che viene visualizzato di frequente.  
+- **Barra di accesso rapido:** comandi utilizzati più di una piccola barra degli strumenti personalizzabile che visualizza frequentemente.  
   
 - **Categoria**: raggruppamento logico che rappresenta il contenuto di una scheda della barra multifunzione.  
   

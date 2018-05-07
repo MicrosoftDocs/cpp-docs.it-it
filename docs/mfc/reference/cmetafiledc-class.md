@@ -1,12 +1,9 @@
 ---
 title: CMetaFileDC (classe) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMetaFileDC
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - CMetaFileDC [MFC], Create
 - CMetaFileDC [MFC], CreateEnhanced
 ms.assetid: ffce60fa-4181-4d46-9832-25e46fad4db4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8bb903bb38194be5b6a72f27ed683e965d7605b4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6a588a848e7964a70f47d4cf29a5f5ef2741881d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmetafiledc-class"></a>CMetaFileDC (classe)
 Implementa un metafile di Windows che contiene una sequenza di comandi GDI (Graphics Device Interface) che è possibile riprodurre per creare un'immagine o un testo desiderato.  
@@ -70,7 +65,7 @@ class CMetaFileDC : public CDC
   
  Dopo aver inviato i comandi desiderati al metafile, chiamare il **Chiudi** funzione membro, che chiude i contesti di dispositivo metafile e restituisce un handle del metafile. Eliminare quindi la `CMetaFileDC` oggetto.  
   
- [CDC::PlayMetaFile](../../mfc/reference/cdc-class.md#playmetafile) quindi usare l'handle del metafile per riprodurre ripetutamente il metafile. Metafile può anche essere modificato dalle funzioni di Windows, ad esempio [CopyMetaFile](http://msdn.microsoft.com/library/windows/desktop/dd183480), che consente di copiare un metafile su disco.  
+ [CDC::PlayMetaFile](../../mfc/reference/cdc-class.md#playmetafile) quindi possibile utilizzare l'handle del metafile per riprodurre il metafile più volte. Metafile può anche essere modificato dalle funzioni di Windows, ad esempio [CopyMetaFile](http://msdn.microsoft.com/library/windows/desktop/dd183480), che consente di copiare un metafile su disco.  
   
  Quando il metafile non è più necessario, eliminarlo dalla memoria con il [DeleteMetaFile](http://msdn.microsoft.com/library/windows/desktop/dd183537) funzione di Windows.  
   
@@ -90,7 +85,7 @@ class CMetaFileDC : public CDC
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** AFXEXT. h  
   
-##  <a name="close"></a>CMetaFileDC::Close  
+##  <a name="close"></a>  CMetaFileDC::Close  
  Chiude il contesto di dispositivo metafile e crea un handle metafile di Windows che può essere utilizzato per riprodurre il metafile tramite il [CDC::PlayMetaFile](../../mfc/reference/cdc-class.md#playmetafile) funzione membro.  
   
 ```  
@@ -105,7 +100,7 @@ HMETAFILE Close();
   
  Eliminare il metafile dopo l'utilizzo tramite la chiamata Windows [DeleteMetaFile](http://msdn.microsoft.com/library/windows/desktop/dd183537) (funzione).  
   
-##  <a name="closeenhanced"></a>CMetaFileDC::CloseEnhanced  
+##  <a name="closeenhanced"></a>  CMetaFileDC::CloseEnhanced  
  Chiude un contesto di dispositivo metafile avanzato e restituisce un handle che identifica un metafile formato avanzato.  
   
 ```  
@@ -136,7 +131,7 @@ HENHMETAFILE CloseEnhanced();
   
  Quando l'applicazione non richiede più l'handle dell'enhanced metafile, è necessario rilasciare l'handle chiamando Win32 **DeleteEnhMetaFile** (funzione).  
   
-##  <a name="cmetafiledc"></a>CMetaFileDC::CMetaFileDC  
+##  <a name="cmetafiledc"></a>  CMetaFileDC::CMetaFileDC  
  Costruire un `CMetaFileDC` oggetto in due passaggi.  
   
 ```  
@@ -146,7 +141,7 @@ CMetaFileDC();
 ### <a name="remarks"></a>Note  
  In primo luogo, chiamare `CMetaFileDC`, quindi chiamare **crea**, che crea il contesto di dispositivo metafile di Windows e lo collega al `CMetaFileDC` oggetto.  
   
-##  <a name="create"></a>CMetaFileDC::Create  
+##  <a name="create"></a>  CMetaFileDC::Create  
  Costruire un `CMetaFileDC` oggetto in due passaggi.  
   
 ```  
@@ -163,7 +158,7 @@ BOOL Create(LPCTSTR lpszFilename = NULL);
 ### <a name="remarks"></a>Note  
  In primo luogo, chiamare il costruttore `CMetaFileDC`, quindi chiamare **crea**, che crea il contesto di dispositivo metafile di Windows e lo collega al `CMetaFileDC` oggetto.  
   
-##  <a name="createenhanced"></a>CMetaFileDC::CreateEnhanced  
+##  <a name="createenhanced"></a>  CMetaFileDC::CreateEnhanced  
  Crea un contesto di dispositivo per un metafile formato avanzato.  
   
 ```  

@@ -1,13 +1,10 @@
 ---
 title: 'Serializzazione: Creazione di una classe serializzabile | Documenti Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - serialization [MFC], serializable classes
 - no default constructor
 ms.assetid: 59a14d32-1cc8-4275-9829-99639beee27c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 22bb8144f3c83ca98bffa2f95e73eff31ddb89be
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4412e8db861ac522c0f1b1d7192bfbb83612d64c
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="serialization-making-a-serializable-class"></a>Serializzazione: creazione di una classe serializzabile
 Cinque passaggi principali sono necessarie per rendere una classe serializzabile. Vengono elencati e illustrati nelle sezioni seguenti:  
@@ -52,10 +47,10 @@ Cinque passaggi principali sono necessarie per rendere una classe serializzabile
   
  Se si chiama `Serialize` direttamente anziché tramite la >> e << operatori di [CArchive](../mfc/reference/carchive-class.md), gli ultimi tre passaggi non sono necessari per la serializzazione.  
   
-##  <a name="_core_deriving_your_class_from_cobject"></a>Derivare la classe da CObject  
+##  <a name="_core_deriving_your_class_from_cobject"></a> Derivare la classe da CObject  
  Il protocollo di serializzazione di base e le funzionalità sono definiti nel `CObject` classe. Derivando la classe da `CObject` (o da una classe derivata da `CObject`), come illustrato nella seguente dichiarazione di classe `CPerson`, è possibile accedere per il protocollo di serializzazione e la funzionalità di `CObject`.  
   
-##  <a name="_core_overriding_the_serialize_member_function"></a>Si esegue l'override di serializzare una funzione membro  
+##  <a name="_core_overriding_the_serialize_member_function"></a> Si esegue l'override di serializzare funzione membro  
  Il `Serialize` funzione membro, che è definita nel `CObject` classe, è responsabile della serializzazione effettivamente i dati necessari per acquisire lo stato corrente dell'oggetto. Il `Serialize` funzione presenta un `CArchive` argomento che viene utilizzato per leggere e scrivere i dati dell'oggetto. Il [CArchive](../mfc/reference/carchive-class.md) oggetto dispone di una funzione membro, `IsStoring`, che indica se `Serialize` è l'archiviazione (scrittura di dati) o il caricamento (lettura di dati). Utilizzo dei risultati di `IsStoring` come guida, è di inserire dati dell'oggetto di `CArchive` oggetto con l'operatore di inserimento (**<\<**) o estrarre i dati con l'operatore di estrazione ( **>>**).  
   
  Si consideri una classe derivata da `CObject` e dispone di due nuove variabili membro, tipi di `CString` e **WORD**. Il frammento di dichiarazione di classe seguente mostra il nuovo membro variabili e la dichiarazione per sottoposto a override `Serialize` funzione membro:  
@@ -74,12 +69,12 @@ Cinque passaggi principali sono necessarie per rendere una classe serializzabile
   
  È inoltre possibile utilizzare il [CArchive::Read](../mfc/reference/carchive-class.md#read) e [CArchive::Write](../mfc/reference/carchive-class.md#write) funzioni membro per leggere e scrivere grandi quantità di dati non tipizzati.  
   
-##  <a name="_core_using_the_declare_serial_macro"></a>Utilizzo della Macro DECLARE_SERIAL  
+##  <a name="_core_using_the_declare_serial_macro"></a> Utilizzando DECLARE_SERIAL (macro)  
  Il `DECLARE_SERIAL` macro è necessaria nella dichiarazione di classi che supportano la serializzazione, come illustrato di seguito:  
   
  [!code-cpp[NVC_MFCSerialization#3](../mfc/codesnippet/cpp/serialization-making-a-serializable-class_3.h)]  
   
-##  <a name="_core_defining_a_constructor_with_no_arguments"></a>Definizione di un costruttore senza argomenti  
+##  <a name="_core_defining_a_constructor_with_no_arguments"></a> Definizione di un costruttore senza argomenti  
  MFC è richiesto un costruttore predefinito per ricreare gli oggetti che vengono deserializzati (caricata dal disco). Il processo di deserializzazione verrà compilare tutte le variabili membro con i valori necessari per ricreare l'oggetto.  
   
  Questo costruttore può essere dichiarato pubblico, protetto o privato. Se si apportano protetto o privato, consente di verificare che solo essere utilizzato dalle funzioni di serializzazione. Il costruttore deve inserire l'oggetto in uno stato che consente di eliminarla se necessario.  
@@ -87,7 +82,7 @@ Cinque passaggi principali sono necessarie per rendere una classe serializzabile
 > [!NOTE]
 >  Se si dimentica di definire un costruttore senza argomenti in una classe che utilizza il `DECLARE_SERIAL` e `IMPLEMENT_SERIAL` macro, si riceverà un avviso del compilatore "disponibile alcun costruttore predefinito" nella riga in cui il `IMPLEMENT_SERIAL` macro viene usata.  
   
-##  <a name="_core_using_the_implement_serial_macro_in_the_implementation_file"></a>Utilizzo della Macro IMPLEMENT_SERIAL nel File di implementazione  
+##  <a name="_core_using_the_implement_serial_macro_in_the_implementation_file"></a> Utilizzo della Macro IMPLEMENT_SERIAL nel File di implementazione  
  Il `IMPLEMENT_SERIAL` macro viene usata per definire le varie funzioni necessarie quando si deriva una classe serializzabile da `CObject`. Utilizzare questa macro nel file di implementazione (. CPP) per la classe. I primi due argomenti per la macro sono il nome della classe e il nome della relativa classe base immediata.  
   
  Il terzo argomento di questa macro è un numero di schema. Il numero di schema è essenzialmente un numero di versione per gli oggetti della classe. Utilizzare un numero intero maggiore o uguale a 0 per il numero di schema. (Non confondere questo numero di schema con la terminologia di database).  

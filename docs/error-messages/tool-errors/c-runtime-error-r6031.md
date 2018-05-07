@@ -1,12 +1,9 @@
 ---
 title: R6031 errore di Runtime C | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - R6031
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - R6031
 ms.assetid: 805d4cd1-cb2f-43fe-87e6-e7bd5b7329c5
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 260c316ad43ce39a60cb7e54137a363754c1ddf7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 66d75fb0095b1de0fe1572d8c946823a89791740
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="c-runtime-error-r6031"></a>R6031 errore di Runtime C
 Tentativo di inizializzare la libreria CRT a più di una volta. Questo indica un bug nell'applicazione.  

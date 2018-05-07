@@ -1,13 +1,10 @@
 ---
 title: 'TN062: Reflection per i controlli di Windows del messaggio | Documenti Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.controls.messages
 dev_langs:
@@ -36,17 +33,15 @@ helpviewer_keywords:
 - WM_NOTIFY message [MFC]
 - ON_CONTROL_REFLECT macro
 ms.assetid: 53efb0ba-fcda-4fa0-a3c7-14e0b78fb494
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bdf9a0dd227cb54ba85c85901f706966326b1b66
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ba8e9cac3b7f7997da8c620966234a630b9b9fbd
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn062-message-reflection-for-windows-controls"></a>TN062: reflection messaggi per controlli Windows
 > [!NOTE]
@@ -78,7 +73,7 @@ ms.lasthandoff: 12/21/2017
   
  Vedere [TN061: messaggi ON_NOTIFY e Wm_notify](../mfc/tn061-on-notify-and-wm-notify-messages.md) per informazioni sul nuovo **WM_NOTIFY** messaggio.  
   
- **Le voci della mappa messaggi e gestore prototipi di funzione per i messaggi riflessi**  
+ **Le voci della mappa messaggi e gestore prototipi di funzione per message riflessi**  
   
  Per gestire un messaggio di notifica del controllo riflesso, utilizzare la macro di mappe messaggi e i prototipi delle funzioni elencate nella tabella seguente.  
   
@@ -103,16 +98,16 @@ ms.lasthandoff: 12/21/2017
 |**ON_CONTROL_REFLECT (** `wNotifyCode` **,** `memberFxn` **)**|**void afx_msg** `memberFxn` **();**|  
 |**ON_NOTIFY_REFLECT (** `wNotifyCode` **,** `memberFxn` **)**|**void afx_msg** `memberFxn` **(NMHDR \***  `pNotifyStruct` **, LRESULT\***  *risultato* **);**|  
 |**ON_UPDATE_COMMAND_UI_REFLECT (** `memberFxn` **)**|**void afx_msg** `memberFxn` **(CCmdUI\***  `pCmdUI` **);**|  
-|**ON_WM_CTLCOLOR_REFLECT ()**|**afx_msg CtlColor HBRUSH (CDC\***  `pDC` **, UINT** `nCtlColor` **);**|  
-|**ON_WM_DRAWITEM_REFLECT ()**|**afx_msg void DrawItem (LPDRAWITEMSTRUCT** `lpDrawItemStruct` **);**|  
-|**ON_WM_MEASUREITEM_REFLECT ()**|**afx_msg void MeasureItem (LPMEASUREITEMSTRUCT** `lpMeasureItemStruct` **);**|  
-|**ON_WM_DELETEITEM_REFLECT ()**|**afx_msg void DeleteItem (LPDELETEITEMSTRUCT** `lpDeleteItemStruct` **);**|  
-|**ON_WM_COMPAREITEM_REFLECT ()**|**int afx_msg CompareItem (LPCOMPAREITEMSTRUCT** `lpCompareItemStruct` **);**|  
-|**ON_WM_CHARTOITEM_REFLECT ()**|**int afx_msg CharToItem (UINT** `nKey` **, UINT** `nIndex` **);**|  
-|**ON_WM_VKEYTOITEM_REFLECT ()**|**int afx_msg VKeyToItem (UINT** `nKey` **, UINT** `nIndex` **);**|  
-|**ON_WM_HSCROLL_REFLECT ()**|**afx_msg void proprietà HScroll (UINT** `nSBCode` **, UINT** `nPos` **);**|  
-|**ON_WM_VSCROLL_REFLECT ()**|**afx_msg void VScroll (UINT** `nSBCode` **, UINT** `nPos` **);**|  
-|**ON_WM_PARENTNOTIFY_REFLECT ()**|**afx_msg void ParentNotify (UINT** `message` **, LPARAM** `lParam` **);**|  
+|**ON_WM_CTLCOLOR_REFLECT)**|**afx_msg CtlColor HBRUSH (CDC\***  `pDC` **, UINT** `nCtlColor` **);**|  
+|**ON_WM_DRAWITEM_REFLECT)**|**afx_msg void DrawItem (LPDRAWITEMSTRUCT** `lpDrawItemStruct` **);**|  
+|**ON_WM_MEASUREITEM_REFLECT)**|**afx_msg void MeasureItem (LPMEASUREITEMSTRUCT** `lpMeasureItemStruct` **);**|  
+|**ON_WM_DELETEITEM_REFLECT)**|**afx_msg void DeleteItem (LPDELETEITEMSTRUCT** `lpDeleteItemStruct` **);**|  
+|**ON_WM_COMPAREITEM_REFLECT)**|**int afx_msg CompareItem (LPCOMPAREITEMSTRUCT** `lpCompareItemStruct` **);**|  
+|**ON_WM_CHARTOITEM_REFLECT)**|**int afx_msg CharToItem (UINT** `nKey` **, UINT** `nIndex` **);**|  
+|**ON_WM_VKEYTOITEM_REFLECT)**|**int afx_msg VKeyToItem (UINT** `nKey` **, UINT** `nIndex` **);**|  
+|**ON_WM_HSCROLL_REFLECT)**|**afx_msg void proprietà HScroll (UINT** `nSBCode` **, UINT** `nPos` **);**|  
+|**ON_WM_VSCROLL_REFLECT)**|**afx_msg void VScroll (UINT** `nSBCode` **, UINT** `nPos` **);**|  
+|**ON_WM_PARENTNOTIFY_REFLECT)**|**afx_msg void ParentNotify (UINT** `message` **, LPARAM** `lParam` **);**|  
   
  Il **ON_NOTIFY_REFLECT** e **ON_CONTROL_REFLECT** macro sono variazioni che consentono a più di un oggetto (ad esempio il controllo e il relativo elemento padre) per gestire un determinato messaggio.  
   

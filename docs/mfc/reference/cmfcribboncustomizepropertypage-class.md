@@ -1,12 +1,9 @@
 ---
 title: Classe CMFCRibbonCustomizePropertyPage | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCRibbonCustomizePropertyPage
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - CMFCRibbonCustomizePropertyPage [MFC], AddCustomCategory
 - CMFCRibbonCustomizePropertyPage [MFC], OnOK
 ms.assetid: ea32a99a-dfbe-401e-8975-aa191552532f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2ad58cb0b062e25a52742eec5491489d3744a9ea
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6b6c5501159cfdb46107b4fef34637195d52f465
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcribboncustomizepropertypage-class"></a>Classe CMFCRibbonCustomizePropertyPage
 Implementa una pagina personalizzata per il **Personalizza** la finestra di dialogo nelle applicazioni basate sulla barra multifunzione.  
@@ -88,7 +83,7 @@ class CMFCRibbonCustomizePropertyPage: public CMFCPropertyPage
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** afxribboncustomizedialog.h  
   
-##  <a name="addcustomcategory"></a>CMFCRibbonCustomizePropertyPage::AddCustomCategory  
+##  <a name="addcustomcategory"></a>  CMFCRibbonCustomizePropertyPage::AddCustomCategory  
  Aggiunge una categoria personalizzata per il **comandi** casella combinata.  
   
 ```  
@@ -108,7 +103,7 @@ void AddCustomCategory(
 ### <a name="remarks"></a>Note  
  Questo metodo aggiunge una categoria denominata `lpszName` per il **comandi** casella combinata. Quando l'utente seleziona la categoria, i comandi specificati nella `lstIDS` vengono visualizzati nell'elenco dei comandi.  
   
-##  <a name="cmfcribboncustomizepropertypage"></a>CMFCRibbonCustomizePropertyPage::CMFCRibbonCustomizePropertyPage  
+##  <a name="cmfcribboncustomizepropertypage"></a>  CMFCRibbonCustomizePropertyPage::CMFCRibbonCustomizePropertyPage  
  Costruisce un oggetto `CMFCRibbonCustomizePropertyPage`.  
   
 ```  
@@ -119,7 +114,7 @@ CMFCRibbonCustomizePropertyPage(CMFCRibbonBar* pRibbonBar = NULL);
  [in] `pRibbonBar`  
  Un puntatore a un controllo barra multifunzione per cui le opzioni per personalizzare.  
   
-##  <a name="onok"></a>CMFCRibbonCustomizePropertyPage::OnOK  
+##  <a name="onok"></a>  CMFCRibbonCustomizePropertyPage::OnOK  
  Calleld dal sistema quando un utente fa clic **OK** sul **Personalizza** la finestra di dialogo.  
   
 ```  

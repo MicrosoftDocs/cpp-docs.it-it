@@ -1,12 +1,9 @@
 ---
 title: Classe CCheckListBox | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CCheckListBox
@@ -37,17 +34,15 @@ helpviewer_keywords:
 - CCheckListBox [MFC], SetCheck
 - CCheckListBox [MFC], SetCheckStyle
 ms.assetid: 1dd78438-00e8-441c-b36f-9c4f9ac0d019
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 64e22176d0df2408db8a8c9435fde5b4c6775d21
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4129da35eca5aecfb1e976361d1716d1cd78e906
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cchecklistbox-class"></a>Classe CCheckListBox
 Fornisce la funzionalità di una casella elenco di controllo di Windows.  
@@ -84,7 +79,7 @@ class CCheckListBox : public CListBox
 ## <a name="remarks"></a>Note  
  Una casella di elenco di controllo"" Visualizza un elenco di elementi, ad esempio i nomi di file. Ogni elemento nell'elenco include una casella di controllo accanto a tale che l'utente può selezionare o deselezionare.  
   
- `CCheckListBox`Poiché l'elenco contiene più di stringhe di testo, è solo per i controlli creati dal proprietario. Nella forma più semplice, una casella di elenco di controllo contiene stringhe di testo e caselle di controllo, ma non è necessario essere del tutto il testo. Ad esempio, è un elenco delle bitmap di piccole dimensioni con una casella di controllo accanto a ogni elemento.  
+ `CCheckListBox` è solo per i controlli creati dal proprietario perché l'elenco contiene più di stringhe di testo. Nella forma più semplice, una casella di elenco di controllo contiene stringhe di testo e caselle di controllo, ma non è necessario essere del tutto il testo. Ad esempio, è un elenco delle bitmap di piccole dimensioni con una casella di controllo accanto a ogni elemento.  
   
  Per creare la propria casella elenco di controllo, è necessario derivare la propria classe dal `CCheckListBox`. Per derivare la propria classe, scrivere un costruttore della classe derivata, quindi chiamare il metodo **crea**.  
   
@@ -92,7 +87,7 @@ class CCheckListBox : public CListBox
   
  Ogni voce della mappa messaggi assume il formato seguente:  
   
- **On _**notifica **(**`id`, `memberFxn` **)**  
+ **On _** notifica **(**`id`, `memberFxn` **)**  
   
  dove `id` specifica l'ID di finestra figlio del controllo che invia la notifica e `memberFxn` è il nome della funzione membro padre scritta per gestire la notifica.  
   
@@ -102,7 +97,7 @@ class CCheckListBox : public CListBox
   
  Non è presente solo una voce della mappa messaggi relativo in maniera specifica **CCheckListBox** (ma vedere anche le voci della mappa messaggi per [CListBox](../../mfc/reference/clistbox-class.md)):  
   
-- **ON_CLBN_CHKCHANGE** l'utente ha modificato lo stato della casella di controllo di un elemento.  
+- **ON_CLBN_CHKCHANGE** l'utente ha modificato lo stato della casella di controllo dell'elemento.  
   
  Se la casella di elenco di controllo è una casella di elenco di controllo predefinito (un elenco di stringhe con le dimensioni predefinite le caselle di controllo a sinistra di ogni), è possibile utilizzare il valore predefinito [CCheckListBox::DrawItem](#drawitem) per disegnare la casella di elenco di controllo. In caso contrario, è necessario eseguire l'override di [CListBox::CompareItem](../../mfc/reference/clistbox-class.md#compareitem) funzione e [CCheckListBox::DrawItem](#drawitem) e [CCheckListBox::MeasureItem](#measureitem) funzioni.  
   
@@ -122,7 +117,7 @@ class CCheckListBox : public CListBox
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** afxwin.h  
   
-##  <a name="cchecklistbox"></a>CCheckListBox::CCheckListBox  
+##  <a name="cchecklistbox"></a>  CCheckListBox::CCheckListBox  
  Costruisce un oggetto `CCheckListBox`.  
   
 ```  
@@ -135,7 +130,7 @@ CCheckListBox();
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFCControlLadenDialog#60](../../mfc/codesnippet/cpp/cchecklistbox-class_1.cpp)]  
   
-##  <a name="create"></a>CCheckListBox::Create  
+##  <a name="create"></a>  CCheckListBox::Create  
  Crea la casella di elenco di controllo di Windows e lo collega al `CCheckListBox` oggetto.  
   
 ```  
@@ -185,7 +180,7 @@ virtual BOOL Create(
   
 - **WS_TABSTOP** per consentire la tabulazione a questo controllo  
   
-##  <a name="drawitem"></a>CCheckListBox::DrawItem  
+##  <a name="drawitem"></a>  CCheckListBox::DrawItem  
  Chiamato dal framework quando un aspetto visivo di viene modificato un elenco di controllo creato dal proprietario.  
   
 ```  
@@ -205,7 +200,7 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
   
  Se gli elementi casella di elenco di controllo non sono tutti della stessa altezza, l'elenco di controllo casella stile (specificato in **crea**) deve essere **LBS_OWNERVARIABLE**, ed è necessario eseguire l'override di [MeasureItem](#measureitem) funzione.  
   
-##  <a name="enable"></a>CCheckListBox::Enable  
+##  <a name="enable"></a>  CCheckListBox::Enable  
  Chiamare questa funzione per abilitare o disabilitare un elemento della casella elenco di controllo.  
   
 ```  
@@ -221,7 +216,7 @@ void Enable(
  `bEnabled`  
  Specifica se l'elemento è abilitato o disabilitato.  
   
-##  <a name="getcheck"></a>CCheckListBox::GetCheck  
+##  <a name="getcheck"></a>  CCheckListBox::GetCheck  
  Recupera lo stato della casella di controllo specificato.  
   
 ```  
@@ -241,7 +236,7 @@ int GetCheck(int nIndex);
 |`BST_UNCHECKED`|La casella di controllo è deselezionata.|  
 |`BST_INDETERMINATE`|Lo stato della casella di controllo è indeterminato.|  
   
-##  <a name="getcheckstyle"></a>CCheckListBox::GetCheckStyle  
+##  <a name="getcheckstyle"></a>  CCheckListBox::GetCheckStyle  
  Chiamare questa funzione per ottenere lo stile della casella di elenco di controllo.  
   
 ```  
@@ -254,7 +249,7 @@ UINT GetCheckStyle();
 ### <a name="remarks"></a>Note  
  Per informazioni sugli stili possibili, vedere [SetCheckStyle](#setcheckstyle).  
   
-##  <a name="isenabled"></a>CCheckListBox::IsEnabled  
+##  <a name="isenabled"></a>  CCheckListBox::IsEnabled  
  Chiamare questa funzione per determinare se un elemento è abilitato.  
   
 ```  
@@ -268,7 +263,7 @@ BOOL IsEnabled(int nIndex);
 ### <a name="return-value"></a>Valore restituito  
  Diverso da zero se l'elemento è abilitato; in caso contrario 0.  
   
-##  <a name="measureitem"></a>CCheckListBox::MeasureItem  
+##  <a name="measureitem"></a>  CCheckListBox::MeasureItem  
  Chiamato dal framework quando viene creata una casella di elenco di controllo con uno stile non predefinito.  
   
 ```  
@@ -282,7 +277,7 @@ virtual void MeasureItem(LPMEASUREITEMSTRUCT lpMeasureItemStruct);
 ### <a name="remarks"></a>Note  
  Per impostazione predefinita, questa funzione membro non esegue alcuna operazione. Eseguire l'override di questa funzione membro e compilare il `MEASUREITEMSTRUCT` struttura informa Windows delle dimensioni degli elementi della casella di elenco di controllo. Se la casella di elenco di controllo viene creata con il [LBS_OWNERDRAWVARIABLE](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) stile, il framework chiama questa funzione membro per ogni elemento nella casella di riepilogo. In caso contrario, questo membro viene chiamato una sola volta.  
   
-##  <a name="ongetcheckposition"></a>CCheckListBox::OnGetCheckPosition  
+##  <a name="ongetcheckposition"></a>  CCheckListBox::OnGetCheckPosition  
  Il framework chiama questa funzione per ottenere la posizione e le dimensioni della casella di controllo in un elemento.  
   
 ```  
@@ -304,7 +299,7 @@ virtual CRect OnGetCheckPosition(
 ### <a name="remarks"></a>Note  
  L'implementazione predefinita restituisce solo la posizione predefinita e le dimensioni della casella di controllo ( `rectCheckBox`). Per impostazione predefinita, una casella di controllo è allineata nell'angolo superiore sinistro di un elemento e le dimensioni della casella di controllo standard. È possibile casi in cui si desidera che le caselle di controllo a destra o desidera che una casella di controllo maggiore o minore. In questi casi, eseguire l'override `OnGetCheckPosition` per modificare la posizione della casella di controllo e le dimensioni all'interno dell'elemento.  
   
-##  <a name="setcheck"></a>CCheckListBox::SetCheck  
+##  <a name="setcheck"></a>  CCheckListBox::SetCheck  
  Imposta lo stato della casella di controllo specificato.  
   
 ```  
@@ -329,7 +324,7 @@ void SetCheck(
 |**BST_UNCHECKED**|Deselezionare la casella di controllo specificata.|  
 |**BST_INDETERMINATE**|Impostare lo stato della casella di controllo specificata indeterminato.<br /><br /> Questo stato è disponibile solo se lo stile della casella di controllo è `BS_AUTO3STATE` o `BS_3STATE`. Per ulteriori informazioni, vedere [stili dei pulsanti](../../mfc/reference/styles-used-by-mfc.md#button-styles).|  
   
-##  <a name="setcheckstyle"></a>CCheckListBox::SetCheckStyle  
+##  <a name="setcheckstyle"></a>  CCheckListBox::SetCheckStyle  
  Chiamare questa funzione per impostare lo stile delle caselle di controllo della casella di elenco di controllo.  
   
 ```  

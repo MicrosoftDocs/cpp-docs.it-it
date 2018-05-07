@@ -1,13 +1,10 @@
 ---
 title: 'Windows Sockets: Sfondo | Documenti Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -27,17 +24,15 @@ helpviewer_keywords:
 - sequenced data flow
 - stream sockets [MFC]
 ms.assetid: f60d4ed2-bf23-4a0e-98d2-fee77e8473dd
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 446719d9d37d2930e08dc66303fd2d952fd88820
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fda86bbbeb49bcb253348ed02abef4fb8d4cff9c
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="windows-sockets-background"></a>Windows Sockets: sfondo
 Questo articolo illustra la natura e lo scopo di Windows Sockets. L'articolo inoltre:  
@@ -62,7 +57,7 @@ Questo articolo illustra la natura e lo scopo di Windows Sockets. L'articolo ino
 > [!TIP]
 >  Poiché i socket utilizzano la Suite di protocolli Internet, sono la route consigliata per le applicazioni che supportano le comunicazioni Internet in "autostrada di informazioni".  
   
-##  <a name="_core_definition_of_a_socket"></a>Definizione di Socket  
+##  <a name="_core_definition_of_a_socket"></a> Definizione di un Socket  
  Un socket è un endpoint di comunicazione, ovvero un oggetto tramite il quale un'applicazione Windows Sockets invia o riceve i pacchetti di dati attraverso una rete. Un socket dispone di un tipo e associato a un processo in esecuzione e che abbiano un nome. Socket, attualmente, in genere si scambiano dati solo con altri socket nello stesso "comunicazione dominio," che usa la Suite di protocolli Internet.  
   
  Entrambi i tipi di socket sono bidirezionali; sono flussi di dati che possono essere comunicati contemporaneamente in entrambe le direzioni (full duplex).  
@@ -84,12 +79,12 @@ Questo articolo illustra la natura e lo scopo di Windows Sockets. L'articolo ino
   
  Per informazioni su questi tipi e il tipo di socket in uso in diverse situazioni, vedere [Windows Sockets: socket di flusso](../mfc/windows-sockets-stream-sockets.md) e [Windows Sockets: socket di datagramma](../mfc/windows-sockets-datagram-sockets.md).  
   
-##  <a name="_core_the_socket_data_type"></a>Il tipo di dati SOCKET  
+##  <a name="_core_the_socket_data_type"></a> Il tipo di dati SOCKET  
  Ogni oggetto socket MFC incapsula un handle a un oggetto Windows Sockets. Il tipo di dati di questo handle è **SOCKET**. A **SOCKET** è analogo all'handle di `HWND` per una finestra. Classi socket MFC forniscono operazioni nell'handle di incapsulato.  
   
  Il **SOCKET** tipo di dati è descritte dettagliatamente in Windows SDK. Vedere "Tipo di dati di Socket e valori di errore" nella sezione Windows Sockets.  
   
-##  <a name="_core_uses_for_sockets"></a>Viene utilizzato per i socket  
+##  <a name="_core_uses_for_sockets"></a> Viene utilizzato per i socket  
  Socket sono estremamente utili in almeno tre contesti di comunicazione:  
   
 -   Modelli di client/server.  

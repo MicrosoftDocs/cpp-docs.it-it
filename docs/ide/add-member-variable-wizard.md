@@ -1,13 +1,10 @@
 ---
 title: Aggiunta guidata variabile membro | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.codewiz.variable.overview
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - Add Member Variable Wizard [C++]
 ms.assetid: 73e8fa99-ac1a-42e2-8fc2-4684b9eb6d4d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b909ec7ccd830e088df81ca0b2db8cda133c7a20
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f3ae6a3aef4bdf774b5630a9bb0b2a0b49f7f29b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="add-member-variable-wizard"></a>Aggiunta guidata variabile membro
 Questa procedura guidata consente di aggiungere una dichiarazione di variabile membro per il file di intestazione e, a seconda delle opzioni, è possibile aggiungere codice al file con estensione cpp. Dopo aver aggiunto la variabile membro utilizzando la procedura guidata, è possibile modificare il codice nell'ambiente di sviluppo.  

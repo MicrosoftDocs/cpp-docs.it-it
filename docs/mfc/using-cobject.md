@@ -1,13 +1,10 @@
 ---
 title: Utilizzo di CObject | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - CObject
 dev_langs:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - MFC, base class
 - CObject class [MFC]
 ms.assetid: d0cd19bb-2856-4b41-abbc-620fd64cb223
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 17bffb412975cfc6a97eae8b30aff2514a2e1d93
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 235bf1f4130f59a8af9548fcbf35e36d82255f14
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-cobject"></a>Utilizzo di CObject
 [CObject](../mfc/reference/cobject-class.md) è la classe base principale per la maggior parte di Microsoft Foundation classe libreria (MFC). La `CObject` classe contiene numerose funzionalità utili che è possibile incorporare gli oggetti di programma, inclusi il supporto della serializzazione, informazioni sulle classi in fase di esecuzione e output di diagnostica di oggetto. Se è necessario derivare dalla classe `CObject`, possono sfruttare queste `CObject` funzionalità.  
@@ -38,9 +33,9 @@ ms.lasthandoff: 12/21/2017
   
 -   [Derivare una classe da CObject](../mfc/deriving-a-class-from-cobject.md)  
   
--   [Aggiungere il supporto per la serializzazione, la creazione dinamica e informazioni sulle classi in fase di esecuzione per la classe derivata](../mfc/specifying-levels-of-functionality.md)  
+-   [Aggiungere il supporto per la serializzazione, la creazione dinamica e informazioni sulle classi di runtime per la classe derivata](../mfc/specifying-levels-of-functionality.md)  
   
--   [Informazioni sulla classe in fase di esecuzione di accesso](../mfc/accessing-run-time-class-information.md)  
+-   [Informazioni sulle classi in fase di esecuzione di accesso](../mfc/accessing-run-time-class-information.md)  
   
 -   [Creazione dinamica di oggetti](../mfc/dynamic-object-creation.md)  
   
@@ -48,9 +43,9 @@ ms.lasthandoff: 12/21/2017
   
 -   Convalidare lo stato dell'oggetto interno (vedere [ASSERT_VALID MFC e CObject:: AssertValid](http://msdn.microsoft.com/en-us/7654fb75-9e9a-499a-8165-0a96faf2d5e6))  
   
--   [Disporre la classe serializzata in un archivio permanente](../mfc/serialization-in-mfc.md)  
+-   [Disporre la classe serializzarsi nell'archivio permanente](../mfc/serialization-in-mfc.md)  
   
--   Visualizzare un elenco di [domande frequenti su CObject](../mfc/cobject-class-frequently-asked-questions.md)  
+-   Visualizzare un elenco di [CObject domande frequenti](../mfc/cobject-class-frequently-asked-questions.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Concetti](../mfc/mfc-concepts.md)   

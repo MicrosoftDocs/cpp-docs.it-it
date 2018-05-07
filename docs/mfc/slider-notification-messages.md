@@ -1,13 +1,10 @@
 ---
 title: Messaggi di notifica dispositivo di scorrimento | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - messages, notification
 - notifications [MFC], CSliderCtrl
 ms.assetid: b9121104-3889-4a10-92bf-f3723f1af9d0
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3a4fc9e9065017e04b6375d1e5a8e336d4366755
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b003e23a1fef2b44600b9fd15dfe4ca541df5369
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="slider-notification-messages"></a>Messaggi di notifica dispositivo di scorrimento
 Un controllo dispositivo di scorrimento comunica alla finestra padre di azioni utente inviando padre `WM_HSCROLL` o `WM_VSCROLL` messaggi, a seconda dell'orientamento del controllo dispositivo di scorrimento. Per gestire questi messaggi, aggiungere i gestori per il `WM_HSCROLL` e `WM_VSCROLL` messaggi della finestra padre. Il [OnHScroll](../mfc/reference/cwnd-class.md#onhscroll) e [OnVScroll](../mfc/reference/cwnd-class.md#onvscroll) un codice di notifica, la posizione del dispositivo di scorrimento e un puntatore a funzioni membro verranno passate il [CSliderCtrl](../mfc/reference/csliderctrl-class.md) oggetto. Si noti che il puntatore è di tipo **CScrollBar \***  anche se punta a un `CSliderCtrl` oggetto. Potrebbe essere necessario il cast di tipo puntatore ' this ' se è necessario modificare il controllo dispositivo di scorrimento.  
@@ -38,12 +33,12 @@ Un controllo dispositivo di scorrimento comunica alla finestra padre di azioni u
 |Messaggio di notifica|Evento che ha causato la notifica da inviare|  
 |--------------------------|-------------------------------------------|  
 |**TB_BOTTOM**|**VK_END**|  
-|**TB_ENDTRACK**|`WM_KEYUP`(l'utente ha rilasciato una chiave che ha inviato un codice tasto virtuale pertinente)|  
+|**TB_ENDTRACK**|`WM_KEYUP` (l'utente ha rilasciato un tasto che ha inviato un codice tasto virtuale pertinente)|  
 |**TB_LINEDOWN**|**VK_RIGHT** o **VK_DOWN**|  
 |**TB_LINEUP**|**VK_LEFT** o **VK_UP**|  
-|**TB_PAGEDOWN**|**VK_NEXT** (l'utente fa clic sul canale di sotto o a destra del dispositivo di scorrimento)|  
+|**TB_PAGEDOWN**|**VK_NEXT** (il canale inferiore o a destra del dispositivo di scorrimento scelto dall'utente)|  
 |**TB_PAGEUP**|**VK_PRIOR** (l'utente fa clic sul canale di sopra o a sinistra del dispositivo di scorrimento)|  
-|**TB_THUMBPOSITION**|`WM_LBUTTONUP`segue un **TB_THUMBTRACK** messaggio di notifica|  
+|**TB_THUMBPOSITION**|`WM_LBUTTONUP` segue un **TB_THUMBTRACK** messaggio di notifica|  
 |**TB_THUMBTRACK**|Spostamento del dispositivo (l'utente trascinata il dispositivo di scorrimento)|  
 |**TB_TOP**|**VK_HOME**|  
   

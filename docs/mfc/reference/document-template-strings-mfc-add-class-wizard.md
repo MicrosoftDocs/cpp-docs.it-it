@@ -1,13 +1,10 @@
 ---
 title: Stringhe modello documento, guidata aggiunta classe MFC | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.codewiz.class.mfc.simple.doctemp
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - MFC Add Class Wizard, document control strings
 ms.assetid: 14e1c834-5e79-4dbd-811f-ec8f0a9cdcb2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3a9d37b1a886c28d267cd7a387317edce6bf7f3a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 81b14e0c397ac9179142627bca04b647c1db96db
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="document-template-strings-mfc-add-class-wizard"></a>Stringhe modello documento, Creazione guidata aggiunta classe MFC
 Questa pagina della procedura guidata è disponibile solo per le classi che soddisfano i criteri seguenti:  
@@ -54,7 +49,7 @@ Questa pagina della procedura guidata è disponibile solo per le classi che sodd
 > [!NOTE]
 >  Se si modifica l'estensione di file predefinita, non includere il punto.  
   
- **ID del tipo di file**  
+ **ID tipo di file**  
  Imposta l'etichetta per il tipo di documento nel Registro di sistema.  
   
 ## <a name="localized-strings"></a>Stringhe localizzate  
@@ -66,7 +61,7 @@ Questa pagina della procedura guidata è disponibile solo per le classi che sodd
  **Nome filtro**  
  Imposta il nome che gli utenti possono indicare per individuare i file del tipo di file specificato. Questa opzione è disponibile il **i file di tipo** e **Salva come** opzioni standard di Windows **aprire** e **salvare come** finestre di dialogo. Per impostazione predefinita, il nome è basato sul nome del progetto più file, seguiti dall'estensione indicata **estensione**. Se il progetto viene denominato Widget e l'estensione del file è WID, ad esempio il **nome filtro** è file Widget (*. WID) per impostazione predefinita.  
   
- **Nuovo nome breve di file**  
+ **Nome breve nuovo file**  
  Imposta il nome visualizzato nelle finestre standard `New` la finestra di dialogo, se il progetto contiene più di un modello di documento. Se l'applicazione è un [server di automazione](../../mfc/automation-servers.md), questo nome viene utilizzato come il nome breve dell'oggetto di automazione. Per impostazione predefinita, questo nome è basato sul nome della classe.  
   
  **Nome lungo del tipo di file**  
@@ -76,6 +71,6 @@ Questa pagina della procedura guidata è disponibile solo per le classi che sodd
  Indica una classe documento del progetto. Per impostazione predefinita, questa classe è una classe documento principale dell'applicazione, come elencato nella [classi generate](../../mfc/reference/generated-classes-mfc-application-wizard.md) pagina della creazione guidata applicazione MFC. È possibile selezionare un'altra classe di documento nell'elenco, se sono stati aggiunti altre classi documento nel progetto.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Guidata aggiunta classe MFC](../../mfc/reference/mfc-add-class-wizard.md)   
+ [Aggiunta guidata classe MFC](../../mfc/reference/mfc-add-class-wizard.md)   
  [Classe MFC](../../mfc/reference/adding-an-mfc-class.md)   
  [Aggiunta di una classe](../../ide/adding-a-class-visual-cpp.md)

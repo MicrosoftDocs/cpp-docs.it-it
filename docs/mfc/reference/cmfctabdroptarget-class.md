@@ -1,12 +1,9 @@
 ---
 title: Classe CMFCTabDropTarget | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCTabDropTarget
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - CMFCTabDropTarget [MFC], OnDropEx
 - CMFCTabDropTarget [MFC], Register
 ms.assetid: 9777b7b6-10da-4c4b-b1d1-7ea795b0f1cb
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8ff17f7312f5e04b6ae900e792523155705a3b4a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 53988248ac183fd551d100ede29648bcecd067f5
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfctabdroptarget-class"></a>Classe CMFCTabDropTarget
 Fornisce il meccanismo di comunicazione tra un controllo struttura a schede e le librerie OLE.  
@@ -88,7 +83,7 @@ class CMFCTabDropTarget : public COleDropTarget
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** afxbasetabctrl.h  
   
-##  <a name="ondragenter"></a>CMFCTabDropTarget::OnDragEnter  
+##  <a name="ondragenter"></a>  CMFCTabDropTarget::OnDragEnter  
  Chiamato dal framework quando l'utente trascina un oggetto in una finestra a schede.  
   
 ```  
@@ -127,7 +122,7 @@ virtual DROPEFFECT OnDragEnter(
   
  Per ulteriori informazioni sulla modalità di personalizzazione, vedere [CMFCToolBar::IsCustomizeMode](../../mfc/reference/cmfctoolbar-class.md#iscustomizemode). Per ulteriori informazioni sui formati di dati negli Appunti, vedere [COleDataObject:: IsDataAvailable](../../mfc/reference/coledataobject-class.md#isdataavailable).  
   
-##  <a name="ondragleave"></a>CMFCTabDropTarget::OnDragLeave  
+##  <a name="ondragleave"></a>  CMFCTabDropTarget::OnDragLeave  
  Chiamato dal framework quando l'utente trascina un oggetto all'esterno dell'intervallo di scheda con lo stato attivo.  
   
 ```  
@@ -144,7 +139,7 @@ virtual void OnDragLeave(CWnd* pWnd);
 ### <a name="remarks"></a>Note  
  Questo metodo chiama il `CMFCBaseTabCtrl::OnDragLeave` metodo per eseguire l'operazione di trascinamento.  
   
-##  <a name="ondragover"></a>CMFCTabDropTarget::OnDragOver  
+##  <a name="ondragover"></a>  CMFCTabDropTarget::OnDragOver  
  Chiamato dal framework quando l'utente trascina un oggetto nella finestra scheda con lo stato attivo.  
   
 ```  
@@ -183,7 +178,7 @@ virtual DROPEFFECT OnDragOver(
   
  Per ulteriori informazioni sulla modalità di personalizzazione, vedere [CMFCToolBar::IsCustomizeMode](../../mfc/reference/cmfctoolbar-class.md#iscustomizemode). Per ulteriori informazioni sui formati di dati negli Appunti, vedere [COleDataObject:: IsDataAvailable](../../mfc/reference/coledataobject-class.md#isdataavailable).  
   
-##  <a name="ondropex"></a>CMFCTabDropTarget::OnDropEx  
+##  <a name="ondropex"></a>  CMFCTabDropTarget::OnDropEx  
  Chiamato dal framework quando l'utente rilascia il pulsante del mouse alla fine di un'operazione di trascinamento.  
   
 ```  
@@ -224,7 +219,7 @@ virtual DROPEFFECT OnDropEx(
   
  Per ulteriori informazioni sulla modalità di personalizzazione, vedere [CMFCToolBar::IsCustomizeMode](../../mfc/reference/cmfctoolbar-class.md#iscustomizemode). Per ulteriori informazioni sui formati di dati negli Appunti, vedere [COleDataObject:: IsDataAvailable](../../mfc/reference/coledataobject-class.md#isdataavailable).  
   
-##  <a name="register"></a>CMFCTabDropTarget::Register  
+##  <a name="register"></a>  CMFCTabDropTarget::Register  
  Registra il controllo che può essere la destinazione di un'operazione di trascinamento e rilascio OLE.  
   
 ```  

@@ -1,12 +1,9 @@
 ---
 title: Classe CWinFormsDialog | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CWinFormsDialog
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - CWinFormsDialog [MFC], GetControlHandle
 - CWinFormsDialog [MFC], OnInitDialog
 ms.assetid: e3cec000-a578-448e-b06a-8af256312f61
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c59faec7fc981cff31bea4ce6e846d89d0b8bf99
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b7596140f48b62a63189444bee6fb363552766fe
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cwinformsdialog-class"></a>Classe CWinFormsDialog
 Wrapper per una classe finestra di dialogo MFC che ospita un controllo utente Windows Form.  
@@ -74,14 +69,14 @@ class CWinFormsDialog :
 |[CWinFormsDialog::operator TManagedControl ^](#operator_tmanagedcontrol)|Esegue il cast di un tipo come un riferimento a un controllo utente Windows Form.|  
   
 ## <a name="remarks"></a>Note  
- `CWinFormsDialog`è un wrapper per una classe di finestra di dialogo MFC ( [CDialog](../../mfc/reference/cdialog-class.md)) che ospita un controllo utente Windows Form. In questo modo la visualizzazione di controlli di .NET Framework nella finestra di dialogo MFC modale o non modale.  
+ `CWinFormsDialog` è un wrapper per una classe di finestra di dialogo MFC ( [CDialog](../../mfc/reference/cdialog-class.md)) che ospita un controllo utente Windows Form. In questo modo la visualizzazione di controlli di .NET Framework nella finestra di dialogo MFC modale o non modale.  
   
  Per ulteriori informazioni sull'utilizzo di Windows Form, vedere [utilizzando un controllo utente Windows Form in MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md) e [ospita un controllo utente Windows Form come una finestra di dialogo MFC](../../dotnet/hosting-a-windows-form-user-control-as-an-mfc-dialog-box.md).  
   
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** afxwinforms. h  
   
-##  <a name="cwinformsdialog"></a>CWinFormsDialog::CWinFormsDialog  
+##  <a name="cwinformsdialog"></a>  CWinFormsDialog::CWinFormsDialog  
  Costruisce un oggetto `CWinFormsDialog`.  
   
 ```  
@@ -92,7 +87,7 @@ CWinFormsDialog(UINT nIDTemplate = IDD);
  `nIDTemplate`  
  Contiene l'ID di una risorsa modello di finestra di dialogo. Utilizzare l'editor finestre per creare il modello di finestra di dialogo e archiviarlo nel file di script di risorsa dell'applicazione. Per ulteriori informazioni sui modelli di finestra di dialogo, vedere [CDialog (classe)](../../mfc/reference/cdialog-class.md).  
   
-##  <a name="getcontrol"></a>CWinFormsDialog::GetControl  
+##  <a name="getcontrol"></a>  CWinFormsDialog::GetControl  
  Recupera un riferimento al controllo utente Windows Form.  
   
 ```  
@@ -102,7 +97,7 @@ inline TManagedControl^ GetControl() const;
 ### <a name="return-value"></a>Valore restituito  
  Restituisce un riferimento al controllo Windows Form nella finestra di dialogo MFC.  
   
-##  <a name="getcontrolhandle"></a>CWinFormsDialog::GetControlHandle  
+##  <a name="getcontrolhandle"></a>  CWinFormsDialog::GetControlHandle  
  Recupera un handle di finestra per il controllo utente Windows Form.  
   
 ```  
@@ -112,7 +107,7 @@ inline HWND GetControlHandle() const throw();
 ### <a name="return-value"></a>Valore restituito  
  Restituisce un handle di finestra per il controllo utente Windows Form.  
   
-##  <a name="oninitdialog"></a>CWinFormsDialog::OnInitDialog  
+##  <a name="oninitdialog"></a>  CWinFormsDialog::OnInitDialog  
  Inizializza la finestra di dialogo MFC mediante la creazione e l'hosting di un controllo utente Windows Form su di esso.  
   
 ```  
@@ -127,7 +122,7 @@ virtual BOOL OnInitDialog();
   
  Eseguire l'override di questa funzione membro se è necessario eseguire un'elaborazione speciale quando viene inizializzata nella finestra di dialogo. Per ulteriori informazioni sull'utilizzo di questo metodo, vedere [CDialog](../../mfc/reference/cdialog-class.md#oninitdialog).  
   
-##  <a name="operator_-_gt"></a>CWinFormsDialog::operator-&gt;  
+##  <a name="operator_-_gt"></a>  CWinFormsDialog::operator-&gt;  
  Sostituisce [CWinFormsDialog::GetControl](#getcontrol) nelle espressioni.  
   
 ```  
@@ -139,7 +134,7 @@ inline TManagedControl^  operator->() const throw();
   
  Per informazioni sull'utilizzo di Windows Form, vedere [utilizzando un controllo utente Windows Form in MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).  
   
-##  <a name="operator_tmanagedcontrol_xor"></a>CWinFormsDialog::operator TManagedControl ^  
+##  <a name="operator_tmanagedcontrol_xor"></a>  CWinFormsDialog::operator TManagedControl ^  
  Esegue il cast di un tipo come un riferimento a un controllo utente Windows Form.  
   
 ```  

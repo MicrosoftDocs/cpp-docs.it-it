@@ -1,27 +1,22 @@
 ---
 title: Intrinseci del compilatore e linguaggio dell'Assembly | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 dev_langs:
 - C++
 ms.assetid: ddd51620-d01b-44cf-853b-e11420d13137
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ee992c5e33cb29e1a499293787030b38438de6e8
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 1a195a9d3da3c474e535fe23ae75081679d383f0
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-intrinsics-and-assembly-language"></a>Intrinseci del compilatore e linguaggio dell'assembly
 In questa sezione della documentazione sono contenute informazioni sugli intrinseci del compilatore e sul linguaggio assembly.  

@@ -1,12 +1,9 @@
 ---
 title: Classe CMFCRibbonFontComboBox | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCRibbonFontComboBox
@@ -31,17 +28,15 @@ helpviewer_keywords:
 - CMFCRibbonFontComboBox [MFC], RebuildFonts
 - CMFCRibbonFontComboBox [MFC], SetFont
 ms.assetid: 33b4db50-df4f-45fa-8f05-2e6e73c31435
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fab339300de907169ab7f4471d9892feadffad81
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 86a46614cdb61e39af1016e496b12518b87f59ed
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcribbonfontcombobox-class"></a>Classe CMFCRibbonFontComboBox
 Implementa una casella combinata che contiene un elenco dei tipi di carattere. Posizionare la casella combinata in un pannello della barra multifunzione.  
@@ -99,7 +94,7 @@ class CMFCRibbonFontComboBox : public CMFCRibbonComboBox
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** afxribboncombobox. H  
   
-##  <a name="buildfonts"></a>CMFCRibbonFontComboBox::BuildFonts  
+##  <a name="buildfonts"></a>  CMFCRibbonFontComboBox::BuildFonts  
  Popola la casella combinata della barra multifunzione con tipi di carattere.  
   
 ```  
@@ -119,7 +114,7 @@ void BuildFonts(
  [in] `nPitchAndFamily`  
  Specifica il passo e famiglia dei tipi di carattere da aggiungere.  
   
-##  <a name="cmfcribbonfontcombobox"></a>CMFCRibbonFontComboBox::CMFCRibbonFontComboBox  
+##  <a name="cmfcribbonfontcombobox"></a>  CMFCRibbonFontComboBox::CMFCRibbonFontComboBox  
  Costruisce e Inizializza un [CMFCRibbonFontComboBox](../../mfc/reference/cmfcribbonfontcombobox-class.md) oggetto.  
   
 ```  
@@ -152,7 +147,7 @@ CMFCRibbonFontComboBox(
   
  Per ulteriori informazioni sui set di caratteri validi che possono essere assegnati a `nCharSet`e i valori validi che possono essere assegnati a `nPitchAndFamily`, vedere [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) nella documentazione di Windows SDK.  
   
-##  <a name="getfontdesc"></a>CMFCRibbonFontComboBox::GetFontDesc  
+##  <a name="getfontdesc"></a>  CMFCRibbonFontComboBox::GetFontDesc  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -166,7 +161,7 @@ const CMFCFontInfo* GetFontDesc(int iIndex = -1) const;
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="rebuildfonts"></a>CMFCRibbonFontComboBox::RebuildFonts  
+##  <a name="rebuildfonts"></a>  CMFCRibbonFontComboBox::RebuildFonts  
  Popola la casella combinata della barra multifunzione con tipi di carattere di tipo di carattere specificato in precedenza, set di caratteri e del passo e famiglia.  
   
 ```  
@@ -176,7 +171,7 @@ void RebuildFonts();
 ### <a name="remarks"></a>Note  
  È possibile specificare il tipo di carattere, il set di caratteri, e casella passo e famiglia dei tipi di carattere da includere nella casella combinata tipo di carattere di barra multifunzione di [costruttore](#cmfcribbonfontcombobox) per questa classe, o chiamando [CMFCRibbonFontComboBox::BuildFonts](#buildfonts).  
   
-##  <a name="setfont"></a>CMFCRibbonFontComboBox::SetFont  
+##  <a name="setfont"></a>  CMFCRibbonFontComboBox::SetFont  
  Seleziona il tipo di carattere specificato nella casella combinata.  
   
 ```  
@@ -194,14 +189,14 @@ BOOL SetFont(
  Specifica il set di caratteri per il tipo di carattere selezionato.  
   
  `bExact`  
- `TRUE`Per specificare che deve corrispondere al set di caratteri quando si seleziona un tipo di carattere. `FALSE` per specificare che il set di caratteri può essere ignorato quando si seleziona un tipo di carattere.  
+ `TRUE` Per specificare che il set di caratteri deve corrispondere quando si seleziona un tipo di carattere. `FALSE` per specificare che il set di caratteri può essere ignorato quando si seleziona un tipo di carattere.  
   
 ### <a name="return-value"></a>Valore restituito  
  Diverso da zero se il tipo di carattere specificato è stata trovata e selezionata. in caso contrario, zero.  
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="getcharset"></a>CMFCRibbonFontComboBox::GetCharSet  
+##  <a name="getcharset"></a>  CMFCRibbonFontComboBox::GetCharSet  
  Restituisce il set di caratteri specificato.  
   
 ```  
@@ -213,7 +208,7 @@ BYTE GetCharSet() const;
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="getfonttype"></a>CMFCRibbonFontComboBox::GetFontType  
+##  <a name="getfonttype"></a>  CMFCRibbonFontComboBox::GetFontType  
  Restituisce i tipi di carattere da visualizzare nella casella combinata. Le opzioni valide sono DEVICE_FONTTYPE, RASTER_FONTTYPE e TRUETYPE_FONTTYPE oppure qualsiasi altra combinazione bit per bit.  
   
 ```  
@@ -225,7 +220,7 @@ int GetFontType() const;
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="getpitchandfamily"></a>CMFCRibbonFontComboBox::GetPitchAndFamily  
+##  <a name="getpitchandfamily"></a>  CMFCRibbonFontComboBox::GetPitchAndFamily  
  Restituisce il passo e la famiglia di caratteri della barra multifunzione che vengono visualizzate nella casella combinata.  
   
 ```  

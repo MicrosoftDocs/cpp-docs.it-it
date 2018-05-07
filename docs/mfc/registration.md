@@ -1,13 +1,10 @@
 ---
 title: Registrazione | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - servers [MFC], installing
 - OLE server applications [MFC], registering servers
 ms.assetid: 991d5684-72c1-4f9e-a09a-9184ed12bbb9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 636a0c2ff254957724511a067fa64533cb4837aa
-ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
+ms.openlocfilehash: 1ab5bd34098ee1126e015e2a8368ef5b3c48fdbd
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="registration"></a>Registrazione
 Quando un utente tenta di inserire un elemento OLE in un'applicazione, OLE viene presentato un elenco di tipi di oggetti da selezionare. Tale elenco viene dal database di registrazione del sistema, che contiene le informazioni fornite da tutte le applicazioni server. Quando si registra un server, le voci che inserisce nel database di sistema di registrazione (il Registro di sistema) viene descritto ogni tipo di oggetto che fornisce, file estensioni e il percorso a se stesso, tra le altre informazioni.  
@@ -41,7 +36,7 @@ Quando un utente tenta di inserire un elemento OLE in un'applicazione, OLE viene
   
  Per informazioni dettagliate relative al database di registrazione di sistema e il formato dei file con estensione reg utilizzato per l'aggiornamento, vedere il *riferimento per programmatori OLE*.  
   
-##  <a name="_core_server_installation"></a>Installazione del server  
+##  <a name="_core_server_installation"></a> Installazione del server  
  Quando si installa prima l'applicazione server, consigliabile registrare tutti i tipi di elementi OLE che supporta. È anche possibile il server di aggiornamento del database di registrazione di sistema ogni volta che viene eseguita come applicazione autonoma. In questo modo, il database di registrazione aggiornata se il file eseguibile del server viene spostato.  
   
 > [!NOTE]
@@ -54,7 +49,7 @@ Quando un utente tenta di inserire un elemento OLE in un'applicazione, OLE viene
   
  RegEdit unisce il contenuto del file di testo con estensione reg in database di registrazione. Per verificare che il database o per il ripristino, utilizzare l'editor del Registro di sistema. Prestare attenzione per evitare l'eliminazione di voci OLE fondamentali.  
   
-##  <a name="_core_server_initialization"></a>Inizializzazione del server  
+##  <a name="_core_server_initialization"></a> Inizializzazione del server  
  Quando si crea un'applicazione server con la creazione guidata applicazione, la procedura guidata termina automaticamente per consentire tutte le attività di inizializzazione. Questa sezione vengono descritte le operazioni da eseguire se si scrive un'applicazione server manualmente.  
   
  Quando un'applicazione server viene avviata da un'applicazione contenitore, le DLL di sistema OLE aggiungere l'opzione "/Embedding" alla riga di comando del server. Comportamento di un'applicazione server varia a seconda se è stata avviata da un contenitore, pertanto la prima operazione deve eseguire un'applicazione quando inizia l'esecuzione è controllo per la "/Embedding" o "-Embedding" opzione della riga di comando. Se questa opzione è presente, caricare un diverso set di risorse che mostrano il server come un attivo sul posto o completamente aperto. Per ulteriori informazioni, vedere [menu e risorse: aggiunte di Server](../mfc/menus-and-resources-server-additions.md).  

@@ -1,13 +1,10 @@
 ---
 title: Estensioni Internet Win32 (WinInet) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - client applications [MFC], Win32 Internet
 - WinInet classes [MFC], about WinInet classes
 ms.assetid: f8c80f0b-ce14-4f0d-a3cf-4f7d8c5cca59
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8a3730c7e0ae1dbbae299ddbe6128044effa101a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 32e4f236977884924e611eed45136a76c1ad6527
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="win32-internet-extensions-wininet"></a>Estensioni Internet Win32 (WinInet)
 Un'applicazione client Internet è un programma che accede alle informazioni da un'origine dati di rete (server) mediante protocolli Internet, ad esempio HTTP, FTP o gopher. Un'applicazione client Internet potrebbe accedere a un server per recuperare i dati, ad esempio mappe meteo, i prezzi azionari o giornale titoli, ad esempio. Il client Internet possa accedere al server tramite una rete esterna (Internet) o una rete interna (talvolta definito come una rete intranet).  

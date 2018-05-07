@@ -1,13 +1,10 @@
 ---
 title: 'TN063: Debug di DLL di estensione MFC Internet | Documenti Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vs.debug.dlls
 dev_langs:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - TN063 [MFC]
 - DLLs [MFC], Internet extension
 ms.assetid: 7012d592-9d2f-491a-b417-48e5c2a7680f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cef8bd1ae2ceacaabc22a75b051565204d514da7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 68bb9ad7a16d35f7a5529bd82bb4d6547eec2e0b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn063-debugging-internet-mfc-extension-dlls"></a>TN063: Debug di DLL di estensione MFC Internet
 Queste informazioni sono obsolete ed sono stata rimossa.  

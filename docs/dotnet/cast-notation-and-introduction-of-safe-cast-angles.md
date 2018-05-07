@@ -1,13 +1,10 @@
 ---
 title: Notazione cast e introduzione di safe_cast&lt; &gt; | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,18 +12,16 @@ helpviewer_keywords:
 - C-style casts and /clr, motivation for new cast notation
 - safe_cast keyword [C++]
 ms.assetid: 4eb1d000-3b93-4394-a37b-8b8563f8dc4d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 80d1a6e8b1a1691b4e76bfdc1232c95c22d01408
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6b9432b40099f9893d7fd270faf5375646fb0493
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cast-notation-and-introduction-of-safecastltgt"></a>Notazione cast e introduzione di safe_cast&lt;&gt;
 La notazione cast è stata modificata dalle estensioni gestite per C++ a Visual C++.  
@@ -49,7 +44,7 @@ La notazione cast è stata modificata dalle estensioni gestite per C++ a Visual 
   
  Una chiamata virtuale (e una funzionalità di downcast) rappresentano usi dinamici del polimorfismo: uno esegue un'azione in base al tipo effettivo del puntatore della classe base in quell'istanza particolare durante l'esecuzione del programma.  
   
- Assegnazione di un oggetto classe derivata per il puntatore della classe di base, tuttavia, è una forma passiva di polimorfismo; Usa il polimorfismo come meccanismo di trasporto. Questo è l'utilizzo principale di `Object`, ad esempio, nella programmazione CLR pre-generica. Quando utilizzato passivamente, il puntatore della classe base scelto per l'archiviazione e di trasporto in genere offre un'interfaccia che è troppo astratta. `Object`, ad esempio, offre circa cinque metodi tramite la relativa interfaccia. qualsiasi comportamento più specifico richiede esplicita downcast. Ad esempio, se si desidera modificare l'angolo del riflettore oppure la relativa del fallback off, avremmo eseguire il downcast in modo esplicito. Un'interfaccia virtuale all'interno di una famiglia di sottotipi praticamente non può essere un superset di tutti i possibili metodi di numerosi elementi figlio, e pertanto una funzionalità di downcast sarà sempre necessario all'interno di un linguaggio orientato a oggetti.  
+ Assegnazione di un oggetto classe derivata per il puntatore della classe di base, tuttavia, è una forma passiva di polimorfismo; Usa il polimorfismo come meccanismo di trasporto. Questo è l'utilizzo principale di `Object`, ad esempio, nella programmazione CLR pre-generica. Quando utilizzato passivamente, il puntatore della classe base scelto per l'archiviazione e di trasporto in genere offre un'interfaccia che è troppo astratta. `Object`, ad esempio, fornisce circa cinque metodi tramite la relativa interfaccia. qualsiasi comportamento più specifico richiede esplicita downcast. Ad esempio, se si desidera modificare l'angolo del riflettore oppure la relativa del fallback off, avremmo eseguire il downcast in modo esplicito. Un'interfaccia virtuale all'interno di una famiglia di sottotipi praticamente non può essere un superset di tutti i possibili metodi di numerosi elementi figlio, e pertanto una funzionalità di downcast sarà sempre necessario all'interno di un linguaggio orientato a oggetti.  
   
  Se un downcast indipendente funzionalità è necessaria in un linguaggio orientato a oggetti, quindi perché richiede C++ molto tempo per aggiungere uno? Il problema è in come rendere disponibili le informazioni che indicano il tipo di runtime dell'indicatore di misura. Nel caso di una funzione virtuale, le informazioni in fase di esecuzione sia configurate in due parti dal compilatore:  
   
@@ -78,7 +73,7 @@ X x = X::X( 10 );
   
  In modo che la proposta è stata ritirata per ulteriori considerazioni e sono state valutate diverse notazioni alternative e quella ripristinata il comitato di stato del modulo (`?type`), per indicare l'indeterminato -, ovvero natura dinamica. Questo assegnato all'utente la possibilità di passare tra le due forme - statiche o dinamiche, ma non è stato particolarmente soddisfacente. Pertanto, è stata quindi la tavola da disegno. La notazione di terza e non riuscita è ora standard `dynamic_cast<type>`, che è stato generalizzato a un set di quattro nuove-notazioni di cast.  
   
- In C++ ISO `dynamic_cast` restituisce `0` quando applicato a un tipo di puntatore non appropriato e genera un `std::bad_cast` eccezione quando viene applicato a un tipo di riferimento. Nelle estensioni gestite per C++, l'applicazione `dynamic_cast` a un tipo di riferimento gestiti (a causa della rappresentazione del puntatore) sempre restituito `0`. `__try_cast<type>`è stato introdotto come un per la variante di eccezioni di `dynamic_cast`, ad eccezione del fatto che genera `System::InvalidCastException` se il cast ha esito negativo.  
+ In C++ ISO `dynamic_cast` restituisce `0` quando applicato a un tipo di puntatore non appropriato e genera un `std::bad_cast` eccezione quando viene applicato a un tipo di riferimento. Nelle estensioni gestite per C++, l'applicazione `dynamic_cast` a un tipo di riferimento gestiti (a causa della rappresentazione del puntatore) sempre restituito `0`. `__try_cast<type>` è stato introdotto come un'eccezione variante del `dynamic_cast`, ad eccezione del fatto che genera `System::InvalidCastException` se il cast ha esito negativo.  
   
 ```  
 public __gc class ItemVerb;  

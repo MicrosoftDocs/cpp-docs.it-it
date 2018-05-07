@@ -2,12 +2,9 @@
 title: 'Recordset: Ripetizione di query in un Recordset (ODBC) | Documenti Microsoft'
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - ODBC recordsets, requerying
 - refreshing recordsets
 ms.assetid: 4ebc3b5b-5b91-4f51-a967-245223c6b8e1
-caps.latest.revision: 8
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 1445273d29fc521b24fbf04ffc5abec1fadd4e59
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a3157f416cf6fb7e0fd3b5ad4797b83de218c9ef
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="recordset-requerying-a-recordset-odbc"></a>Recordset: ripetizione di una query in un recordset (ODBC)
 Questo argomento si applica alle classi ODBC MFC.  
@@ -41,16 +36,16 @@ Questo argomento si applica alle classi ODBC MFC.
   
 -   Aggiornare il recordset in base alle variazioni dei valori di parametro.  
   
-##  <a name="_core_bringing_the_recordset_up_to_date"></a>Aggiornamento dei Recordset Data  
+##  <a name="_core_bringing_the_recordset_up_to_date"></a> Aggiornamento dei Recordset alla data  
  Spesso, è necessario rieseguire una query dell'oggetto recordset per attivare la modalità aggiornato. In un ambiente di database multiutente, altri utenti possono apportare modifiche ai dati durante il ciclo di vita del recordset. Per ulteriori informazioni quando il recordset riflette le modifiche apportate da altri utenti e quando il recordset di altri utenti rifletta le modifiche, vedere [Recordset: aggiornamento dei record (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md) e [Dynaset](../../data/odbc/dynaset.md).  
   
-##  <a name="_core_requerying_based_on_new_parameters"></a>Ripetizione di query in base a nuovi parametri  
+##  <a name="_core_requerying_based_on_new_parameters"></a> Ripetizione di query in base ai nuovi parametri  
  Un altro frequenti, ugualmente importante, utilizzare [Requery](../../mfc/reference/crecordset-class.md#requery) consiste nel selezionare un nuovo set di record in base alle variazioni dei valori di parametro.  
   
 > [!TIP]
 >  Velocità delle query è probabilmente molto più rapida se si chiama **Requery** con diversi valori dei parametri anziché chiamare **aprire** nuovamente.  
   
-##  <a name="_core_requerying_dynasets_vs.._snapshots"></a>Ripetizione di query in Visual Studio i dynaset. Snapshot  
+##  <a name="_core_requerying_dynasets_vs.._snapshots"></a> Ripetizione di query in Visual Studio i dynaset. Snapshot  
  Poiché i dynaset sono utilizzati per presentare un set di record con dati aggiornati dinamici, sarà necessario ripetere dynaset spesso se si desidera riflettere le aggiunte di altri utenti. Gli snapshot, d'altra parte, sono utili perché può fare affidamento sul relativo contenuto statico mentre preparare i report, calcolare i totali e così via. Comunque, si potrebbe desiderare di requery anche uno snapshot. In un ambiente multiutente, dati dello snapshot potrebbero perdere la sincronizzazione con l'origine dati come gli altri utenti di modificare il database.  
   
 #### <a name="to-requery-a-recordset-object"></a>La query di un oggetto recordset  

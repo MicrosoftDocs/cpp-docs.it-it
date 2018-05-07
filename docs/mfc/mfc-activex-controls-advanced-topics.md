@@ -1,13 +1,10 @@
 ---
 title: 'Controlli ActiveX MFC: Argomenti avanzati | Documenti Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -21,32 +18,30 @@ helpviewer_keywords:
 - MFC ActiveX controls [MFC], parameterized property
 - ThrowError method [MFC]
 ms.assetid: e9e34abb-8e2d-461e-bb9c-a1aec5dcecbd
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2205862a438099c08801556f511ebf3c5e93a277
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: eb451abc3aabe52d9aeffbc92f80df38f02e0b99
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mfc-activex-controls-advanced-topics"></a>Controlli ActiveX MFC: argomenti avanzati
 In questo articolo illustra argomenti avanzati relativi allo sviluppo di controlli ActiveX. Sono inclusi:  
   
--   [Utilizzo di classi di Database nei controlli ActiveX](#_core_using_database_classes_in_activex_controls)  
+-   [Utilizzo delle classi di Database nei controlli ActiveX](#_core_using_database_classes_in_activex_controls)  
   
 -   [Implementazione di una proprietà con parametri](#_core_implementing_a_parameterized_property)  
   
--   [Gestione degli errori in un controllo ActiveX](#_core_handling_errors_in_your_activex_control)  
+-   [Gestione degli errori nel controllo ActiveX](#_core_handling_errors_in_your_activex_control)  
   
 -   [La gestione delle chiavi speciali nel controllo](#_core_handling_special_keys_in_your_control)  
   
 -   [Accesso ai controlli finestra di dialogo che non sono visibili in fase di esecuzione](#_core_accessing_dialog_controls_that_are_invisible_at_run_time)  
   
-##  <a name="_core_using_database_classes_in_activex_controls"></a>Utilizzo di classi di Database nei controlli ActiveX  
+##  <a name="_core_using_database_classes_in_activex_controls"></a> Utilizzo delle classi di Database nei controlli ActiveX  
  Poiché le classi di controlli ActiveX fanno parte della libreria di classi, è possibile applicare le stesse routine e le regole per l'utilizzo di classi di database in un'applicazione MFC standard per lo sviluppo di controlli ActiveX che utilizzano le classi di database MFC.  
   
  Per una panoramica generale delle classi di database MFC, vedere [classi di Database MFC (DAO e ODBC)](../data/mfc-database-classes-odbc-and-dao.md). L'articolo illustra le classi ODBC MFC e DAO MFC, classi e vengono indicati ulteriori dettagli su uno.  
@@ -54,7 +49,7 @@ In questo articolo illustra argomenti avanzati relativi allo sviluppo di control
 > [!NOTE]
 >  L'ambiente di Visual C++ e le procedure guidate non supportano DAO (anche se sono incluse le classi DAO ed è comunque possibile usarle). Microsoft consiglia di utilizzare [modelli OLE DB](../data/oledb/ole-db-programming.md) o [ODBC e MFC](../data/odbc/odbc-and-mfc.md) per i nuovi progetti. Utilizzare solo DAO di gestione delle applicazioni esistenti.  
   
-##  <a name="_core_implementing_a_parameterized_property"></a>Implementazione di una proprietà con parametri  
+##  <a name="_core_implementing_a_parameterized_property"></a> Implementazione di una proprietà con parametri  
  Una proprietà con parametri (talvolta denominata matrice di proprietà) è un metodo per esporre un insieme omogeneo di valori come una singola proprietà del controllo. Ad esempio, è possibile utilizzare una proprietà con parametri per esporre una matrice o un dizionario come una proprietà. In Visual Basic, tale proprietà è possibile accedere tramite la notazione di matrice:  
   
  [!code-vb[NVC_MFC_AxVb#1](../mfc/codesnippet/visualbasic/mfc-activex-controls-advanced-topics_1.vb)]  
@@ -106,7 +101,7 @@ In questo articolo illustra argomenti avanzati relativi allo sviluppo di control
   
  Per questa proprietà essere utile, è possibile dichiarare una variabile membro di matrice bidimensionale nella classe del controllo, di tipo **breve**, per archiviare i valori della proprietà con parametri. È quindi possibile modificare la funzione Get per restituire il valore archiviato in corrispondenza la riga appropriata e la colonna, come indicato dai parametri e modificare la funzione di Set per aggiornare il valore a cui fa riferimento i parametri della riga e colonna.  
   
-##  <a name="_core_handling_errors_in_your_activex_control"></a>Gestione degli errori in un controllo ActiveX  
+##  <a name="_core_handling_errors_in_your_activex_control"></a> Gestione degli errori nel controllo ActiveX  
  Se nel controllo si verificano condizioni di errore, si potrebbe essere necessario segnalare l'errore al contenitore del controllo. Esistono due metodi per la segnalazione degli errori, in base alla situazione in cui si verifica l'errore. Se l'errore si verifica all'interno di una proprietà Get o Set (funzione), o all'interno dell'implementazione di un metodo di automazione OLE, il controllo deve chiamare [COleControl:: ThrowError](../mfc/reference/colecontrol-class.md#throwerror), che segnala all'utente del controllo che si è verificato un errore. Se l'errore si verifica in qualsiasi momento, il controllo deve chiamare [COleControl:: FireError](../mfc/reference/colecontrol-class.md#fireerror), che viene generato un evento di errore predefinito.  
   
  Per indicare il tipo di errore che si è verificato, il controllo deve passare un codice di errore per `ThrowError` o `FireError`. Un codice di errore è un codice di stato OLE, che ha un valore a 32 bit. Quando possibile, scegliere un codice di errore dal set standard di codici definiti nel file di intestazione OLECTL. File di intestazione H. Nella tabella seguente vengono riepilogati questi codici.  
@@ -162,7 +157,7 @@ In questo articolo illustra argomenti avanzati relativi allo sviluppo di control
   
  Se si sta creando un controllo ActiveX per sostituire un controllo VBX esistente, è possibile definire i codici di errore del controllo ActiveX con gli stessi valori numerici, che il controllo VBX utilizza per assicurarsi che i codici di errore siano compatibili.  
   
-##  <a name="_core_handling_special_keys_in_your_control"></a>La gestione delle chiavi speciali nel controllo  
+##  <a name="_core_handling_special_keys_in_your_control"></a> La gestione delle chiavi speciali nel controllo  
  In alcuni casi si desidera gestire alcune combinazioni di tasti in modo speciale; ad esempio, inserire una nuova riga quando viene premuto il tasto INVIO in un testo su più righe, casella di controllo o spostare un gruppo di modifica quando viene controllato un direzionale premuto ID chiave.  
   
  Se la classe di base del controllo ActiveX è `COleControl`, è possibile eseguire l'override [CWnd:: PreTranslateMessage](../mfc/reference/cwnd-class.md#pretranslatemessage) per gestire i messaggi prima che il contenitore li elabora. Quando si utilizza questa tecnica, restituiscono sempre **TRUE** se si gestisce il messaggio nell'override di `PreTranslateMessage`.  
@@ -173,7 +168,7 @@ In questo articolo illustra argomenti avanzati relativi allo sviluppo di control
   
  Per ulteriori informazioni sulla gestione delle interfacce della tastiera per un controllo ActiveX, vedere la documentazione SDK ActiveX.  
   
-##  <a name="_core_accessing_dialog_controls_that_are_invisible_at_run_time"></a>Accesso ai controlli finestra di dialogo che non sono visibili in fase di esecuzione  
+##  <a name="_core_accessing_dialog_controls_that_are_invisible_at_run_time"></a> Accesso ai controlli finestra di dialogo che non sono visibili in fase di esecuzione  
  È possibile creare i controlli di finestra di dialogo che non dispongono di alcuna interfaccia utente e sono invisibili in fase di esecuzione. Se si aggiunge un invisibile in fase di esecuzione controllo ActiveX a una finestra di dialogo e usare [GetDlgItem](../mfc/reference/cwnd-class.md#getdlgitem) per il controllo di accesso, il controllo non funzionerà correttamente. È invece necessario utilizzare una delle tecniche seguenti per ottenere un oggetto che rappresenta il controllo:  
   
 -   Se si utilizza l'aggiunta guidata variabile membro, selezionare **controllo variabile** e quindi selezionare l'ID. del controllo Immettere un nome di variabile membro e selezionare la classe del controllo wrapper come il **tipo di controllo**.  

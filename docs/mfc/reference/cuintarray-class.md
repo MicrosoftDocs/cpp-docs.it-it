@@ -1,12 +1,9 @@
 ---
 title: Classe CUIntArray | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CUIntArray
@@ -51,17 +48,15 @@ helpviewer_keywords:
 - CObArray [MFC], SetAtGrow
 - CObArray [MFC], SetSize
 ms.assetid: d71f3d8f-ef9f-4e48-9b69-7782c0e2ddf7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5132dddcdd707d6fef63627c48e4b5619cead084
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: eb8c7d46a2ffc2d569cc123d51aaebbf43b5e328
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cuintarray-class"></a>Classe CUIntArray
 Supporta matrici di Unsigned Integer.  
@@ -118,7 +113,7 @@ class CUIntArray : public CObject
 ## <a name="remarks"></a>Note  
  Intero senza segno, o **UINT**, differisce da parole e Double Word in cui la dimensione fisica di un **UINT** può cambiare a seconda della destinazione ambiente operativo. Oggetto **UINT** è la stessa dimensione come una parola doppia.  
   
- `CUIntArray`incorpora il [IMPLEMENT_DYNAMIC](run-time-object-model-services.md#implement_dynamic) (macro) per supportare l'accesso del tipo in fase di esecuzione e il dump per un [CDumpContext](../../mfc/reference/cdumpcontext-class.md) oggetto. Se è necessario un dump di intero senza segno a singoli elementi, è necessario impostare la profondità del contesto di dump a 1 o superiore. Matrici di interi senza segno non possono essere serializzate.  
+ `CUIntArray` incorpora la [IMPLEMENT_DYNAMIC](run-time-object-model-services.md#implement_dynamic) macro per supportare l'accesso del tipo in fase di esecuzione e il dump di un [CDumpContext](../../mfc/reference/cdumpcontext-class.md) oggetto. Se è necessario un dump di intero senza segno a singoli elementi, è necessario impostare la profondità del contesto di dump a 1 o superiore. Matrici di interi senza segno non possono essere serializzate.  
   
 > [!NOTE]
 >  Prima di usare una matrice, usare `SetSize` per determinarne le dimensioni e allocare la necessaria memoria. Se non si usa `SetSize`, l'aggiunta di elementi alla matrice ne causa la riallocazione e la copia frequente. Le operazioni di riallocazione e copia frequenti sono inefficienti e possono frammentare la memoria.  

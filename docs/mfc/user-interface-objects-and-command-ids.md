@@ -1,13 +1,10 @@
 ---
 title: Oggetti dell'interfaccia utente e ID comando | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - command routing [MFC], MFC
 - command handling [MFC], user-interface objects
 ms.assetid: 4ea19e9b-ed1e-452e-bd33-7f509107a45b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e085c6d9e4d030c8db44e11e570ffa1033abee35
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6b56babf0e42dde521a6bda3a7d9713db519182c
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="user-interface-objects-and-command-ids"></a>Oggetti dell'interfaccia utente e ID comando
 Voci di menu, pulsanti della barra degli strumenti e i tasti di scelta rapida sono "oggetti dell'interfaccia utente" in grado di supportare la generazione di comandi. Ognuno di questi oggetti dell'interfaccia utente con un ID. Associare un oggetto dell'interfaccia utente con un comando assegnando lo stesso ID di oggetto e il comando. Come spiegato in [messaggi](../mfc/messages.md), i comandi vengono implementati come messaggi speciali. Nella figura "Comandi del Framework" riportata di seguito viene illustrato il modo in cui il framework gestisce i comandi. Quando un oggetto dell'interfaccia utente genera un comando, ad esempio `ID_EDIT_CLEAR_ALL`, uno degli oggetti dell'applicazione gestisce il comando, nella figura seguente, l'oggetto documento `OnEditClearAll` funzione viene chiamata tramite una mappa messaggi del documento.  

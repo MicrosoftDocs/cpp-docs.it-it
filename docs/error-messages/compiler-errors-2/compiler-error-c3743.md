@@ -1,12 +1,9 @@
 ---
 title: Errore del compilatore C3743 | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C3743
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C3743
 ms.assetid: 7ca9a76e-7b60-46d1-ab8b-18600cf1a306
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 11f4387a35bcddd919e0ce648f9409291432521f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: cc9a0bab67bb4fb15627dde42b1d538a0ecce9d5
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-error-c3743"></a>Errore del compilatore C3743
 può solo eseguire un hook/unhook un'intera interfaccia quando il parametro 'layout_dependent' di event_receiver è true  

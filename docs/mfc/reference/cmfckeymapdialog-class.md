@@ -1,12 +1,9 @@
 ---
 title: Classe CMFCKeyMapDialog | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCKeyMapDialog
@@ -35,17 +32,15 @@ helpviewer_keywords:
 - CMFCKeyMapDialog [MFC], PrintKeyMap
 - CMFCKeyMapDialog [MFC], SetColumnsWidth
 ms.assetid: 5feb4942-d636-462d-a162-0104dd320f4e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1965e5dd2d522175b3709449df9a0b8575e20c59
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 25d86a4797479fe3ee95dde162e22cde63aaa71e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfckeymapdialog-class"></a>Classe CMFCKeyMapDialog
 La `CMFCKeyMapDialog` classe supporta un controllo che associa i comandi ai tasti della tastiera.  
@@ -104,7 +99,7 @@ class CMFCKeyMapDialog : public CDialogEx
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** afxkeymapdialog.h  
   
-##  <a name="cmfckeymapdialog"></a>CMFCKeyMapDialog::CMFCKeyMapDialog  
+##  <a name="cmfckeymapdialog"></a>  CMFCKeyMapDialog::CMFCKeyMapDialog  
  Costruisce un oggetto `CMFCKeyMapDialog`.  
   
 ```  
@@ -118,7 +113,7 @@ CMFCKeyMapDialog(
  Un puntatore alla finestra padre del `CMFCKeyMapDialog` oggetto.  
   
  [in] `bEnablePrint`  
- `TRUE`Se l'elenco di tasti di scelta rapida può essere stampato; in caso contrario, `FALSE`. Il valore predefinito è `FALSE`.  
+ `TRUE` Se l'elenco di tasti di scelta rapida può essere stampato; in caso contrario, `FALSE`. Il valore predefinito è `FALSE`.  
   
 ### <a name="remarks"></a>Note  
   
@@ -127,7 +122,7 @@ CMFCKeyMapDialog(
   
  [!code-cpp[NVC_MFC_VisualStudioDemo#21](../../mfc/codesnippet/cpp/cmfckeymapdialog-class_1.cpp)]  
   
-##  <a name="domodal"></a>CMFCKeyMapDialog::DoModal  
+##  <a name="domodal"></a>  CMFCKeyMapDialog::DoModal  
  Visualizza una finestra di dialogo di mappatura della tastiera.  
   
 ```  
@@ -140,7 +135,7 @@ virtual INT_PTR DoModal();
 ### <a name="remarks"></a>Note  
  La finestra di dialogo di mappatura della tastiera consente di selezionare e assegnare i tasti di scelta rapida per diverse categorie di comandi. Inoltre, è possibile copiare negli Appunti i tasti di scelta rapida selezionato e la relativa descrizione.  
   
-##  <a name="formatitem"></a>CMFCKeyMapDialog::FormatItem  
+##  <a name="formatitem"></a>  CMFCKeyMapDialog::FormatItem  
  Chiamato dal framework per compilare una stringa che descrive un mapping delle chiavi. Per impostazione predefinita, la stringa contiene la descrizione di tasti di scelta rapida, tasti di scelta rapida utilizzate e il nome del comando.  
   
 ```  
@@ -156,7 +151,7 @@ virtual CString FormatItem(int nItem) const;
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="getcommandkeys"></a>CMFCKeyMapDialog::GetCommandKeys  
+##  <a name="getcommandkeys"></a>  CMFCKeyMapDialog::GetCommandKeys  
  Recupera un valore stringa. La stringa contiene un elenco di tasti di scelta rapida sono associati a un comando specificato.  
   
 ```  
@@ -172,7 +167,7 @@ virtual CString GetCommandKeys(UINT uiCmdID) const;
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="oninsertitem"></a>CMFCKeyMapDialog::OnInsertItem  
+##  <a name="oninsertitem"></a>  CMFCKeyMapDialog::OnInsertItem  
  Chiamato dal framework prima che venga inserito un nuovo elemento in un controllo elenco interno che supporta il controllo di mappatura della tastiera.  
   
 ```  
@@ -190,7 +185,7 @@ virtual void OnInsertItem(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="onprintheader"></a>CMFCKeyMapDialog::OnPrintHeader  
+##  <a name="onprintheader"></a>  CMFCKeyMapDialog::OnPrintHeader  
  Chiamato dal framework per stampare l'intestazione per il mapping della tastiera in una nuova pagina.  
   
 ```  
@@ -216,7 +211,7 @@ virtual int OnPrintHeader(
 ### <a name="remarks"></a>Note  
  Il framework utilizza questo metodo per stampare la mappa di tastiera. Per impostazione predefinita, questo metodo visualizza il numero di pagina, un nome dell'applicazione e un titolo della finestra di dialogo.  
   
-##  <a name="onprintitem"></a>CMFCKeyMapDialog::OnPrintItem  
+##  <a name="onprintitem"></a>  CMFCKeyMapDialog::OnPrintItem  
  Chiamato dal framework per stampare un elemento di mappatura della tastiera.  
   
 ```  
@@ -242,7 +237,7 @@ virtual int OnPrintItem(
  L'offset orizzontale tra sinistra della pagina e la posizione dell'elemento.  
   
  [in] `bCalcHeight`  
- `TRUE`per calcolare l'altezza ottimo per l'elemento di stampa. `FALSE` per l'elemento stampa verrà troncato in modo da adattarlo lo spazio predefinito.  
+ `TRUE` per calcolare l'altezza ottimo per l'elemento di stampa. `FALSE` per l'elemento stampa verrà troncato in modo che quest ' ultima rientri lo spazio predefinito.  
   
 ### <a name="return-value"></a>Valore restituito  
  Altezza dell'elemento stampato.  
@@ -250,7 +245,7 @@ virtual int OnPrintItem(
 ### <a name="remarks"></a>Note  
  Il framework chiama questo metodo per la stampa di un elemento della finestra di dialogo di mappa di chiavi. Per impostazione predefinita, questo metodo visualizza il nome di comando, tasti di scelta rapida e descrizione comando dell'elemento.  
   
-##  <a name="onsetcolumns"></a>CMFCKeyMapDialog::OnSetColumns  
+##  <a name="onsetcolumns"></a>  CMFCKeyMapDialog::OnSetColumns  
  Chiamato dal framework per impostare le didascalie per le colonne nel controllo elenco interno che supporta il controllo di mappatura della tastiera.  
   
 ```  
@@ -260,7 +255,7 @@ virtual void OnSetColumns();
 ### <a name="remarks"></a>Note  
  Per impostazione predefinita, questo metodo ottiene le didascalie per le colonne da tre risorse. La didascalia della colonna comando a IDS_AFXBARRES_COMMAND, la didascalia della colonna chiave è da IDS_AFXBARRES_KEYS, e la didascalia di colonna Descrizione è da IDS_AFXBARRES_DESCRIPTION.  
   
-##  <a name="printkeymap"></a>CMFCKeyMapDialog::PrintKeyMap  
+##  <a name="printkeymap"></a>  CMFCKeyMapDialog::PrintKeyMap  
  Chiamato dal framework quando un utente sceglie il **stampa** pulsante.  
   
 ```  
@@ -270,7 +265,7 @@ virtual void PrintKeyMap();
 ### <a name="remarks"></a>Note  
  Il `PrintKeyMap` metodo visualizza la mappa di chiavi. Avvia un nuovo processo di stampa e quindi chiama ripetutamente il [CMFCKeyMapDialog::OnPrintHeader](#onprintheader) e [CMFCKeyMapDialog::OnPrintItem](#onprintitem) metodi finché non vengono stampati tutti i mapping di chiavi.  
   
-##  <a name="setcolumnswidth"></a>CMFCKeyMapDialog::SetColumnsWidth  
+##  <a name="setcolumnswidth"></a>  CMFCKeyMapDialog::SetColumnsWidth  
  Chiamato dal framework per impostare la larghezza delle colonne nel controllo elenco interno che supporta il controllo di mappatura della tastiera.  
   
 ```  

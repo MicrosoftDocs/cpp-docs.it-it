@@ -1,13 +1,10 @@
 ---
-title: 'Procedura dettagliata: Aggiornamento dell''applicazione MFC Scribble (parte 1) | Documenti Microsoft'
-ms.custom: 
+title: "Procedura dettagliata: Aggiornamento dell'applicazione MFC Scribble (parte 1) | Documenti Microsoft"
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,22 +15,20 @@ helpviewer_keywords:
 - MFC Feature Pack, update existing application
 - walkthroughs [MFC], update existing application
 ms.assetid: aa6330d3-6cfc-4c79-8fcb-0282263025f7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 65dea486e80e4f6f1b98dffe6c387f2e530c9ef3
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: a2d55768f423feef3b5093ec0af6365aecfaafee
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-updating-the-mfc-scribble-application-part-1"></a>Procedura dettagliata: Aggiornamento dell'applicazione MFC Scribble (parte 1)
 In questa procedura dettagliata viene illustrato come modificare un'applicazione MFC esistente per utilizzare l'interfaccia utente della barra multifunzione. Visual Studio supporta sia la barra multifunzione di Office 2007 che la barra multifunzione Windows 7 Scenic. Per ulteriori informazioni sull'interfaccia utente della barra multifunzione, vedere [barre multifunzione](http://go.microsoft.com/fwlink/p/?linkid=129233) nel sito Web MSDN.  
   
- In questa procedura dettagliata viene modificato l'esempio classico di Scribble 1.0 di MFC che consente di utilizzare il mouse per disegnare delle linee. Questa parte della procedura dettagliata mostra come modificare l'esempio di Scribble in modo che mostri una barra multifunzione. [Parte 2](../mfc/walkthrough-updating-the-mfc-scribble-application-part-2.md) vengono aggiunti altri pulsanti alla barra multifunzione.  
+ In questa procedura dettagliata viene modificato l'esempio classico di Scribble 1.0 di MFC che consente di utilizzare il mouse per disegnare delle linee. Questa parte della procedura dettagliata mostra come modificare l'esempio di Scribble in modo che mostri una barra multifunzione. [Parte 2](../mfc/walkthrough-updating-the-mfc-scribble-application-part-2.md) aggiunti altri pulsanti alla barra multifunzione.  
   
 ## <a name="prerequisites"></a>Prerequisiti  
  [Esempi di Visual C++](../visual-cpp-samples.md)  
@@ -55,7 +50,7 @@ In questa procedura dettagliata viene illustrato come modificare un'applicazione
   
 - [Impostazione dell'aspetto dell'applicazione](#setlook)  
   
-##  <a name="replaceclass"></a>Sostituzione delle classi Base  
+##  <a name="replaceclass"></a> Sostituzione delle classi Base  
  Per convertire un'applicazione che supporta un menu in un'applicazione che supporta una barra multifunzione, è necessario derivare le classi dell'applicazione, della finestra cornice e della barra degli strumenti da classi base aggiornate. Si consiglia di non modificare l'esempio originale di Scribble, ma pulire invece il progetto di Scribble, copiarlo in un'altra directory e lavorare sulla copia.  
   
 #### <a name="to-replace-the-base-classes-in-the-scribble-application"></a>Per sostituire le classi base nell'applicazione Scribble  
@@ -130,7 +125,7 @@ In questa procedura dettagliata viene illustrato come modificare un'applicazione
   
  [[Sezioni](#top)]  
   
-##  <a name="addbitmap"></a>Aggiunta di bitmap al progetto  
+##  <a name="addbitmap"></a> Aggiunta di bitmap al progetto  
  I quattro passaggi successivi di questa procedura dettagliata richiedono risorse bitmap. È possibile ottenere le bitmap appropriate in diversi modi:  
   
 -   Utilizzare il [editor risorse](../windows/resource-editors.md) inventare proprio bitmap. In alternativa, utilizzare gli editor risorse per assemblare bitmap partendo da immagini con estensione png (Portable Network Graphics) che sono incluse in [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)]. Queste immagini sono nel `VS2008ImageLibrary` directory.  
@@ -175,7 +170,7 @@ In questa procedura dettagliata viene illustrato come modificare un'applicazione
   
  [[Sezioni](#top)]  
   
-##  <a name="addribbon"></a>Aggiunta di una risorsa barra multifunzione al progetto  
+##  <a name="addribbon"></a> Aggiunta di una risorsa barra multifunzione al progetto  
  Quando si converte un'applicazione che utilizza menu in un'applicazione che utilizza una barra multifunzione, non è necessario rimuovere o disabilitare i menu esistenti. Piuttosto, è possibile creare una risorsa barra multifunzione, aggiungervi dei pulsanti e successivamente associarli alle voci di menu esistenti. Sebbene i menu non risultino più visibili, i messaggi della barra multifunzione sono indirizzati attraverso i menu. Inoltre, i collegamenti dei menu continuano a funzionare.  
   
  Una barra multifunzione è costituita dal pulsante dell'applicazione, ovvero il pulsante di grandi dimensioni posto sul lato superiore sinistro della barra multifunzione, e da una o più schede di categoria. Ogni scheda di categoria contiene uno o più pannelli che fungono da contenitori per i pulsanti e i controlli della barra multifunzione. Nella procedura seguente viene illustrato come creare una risorsa barra multifunzione e come personalizzare il pulsante dell'applicazione.  
@@ -226,7 +221,7 @@ In questa procedura dettagliata viene illustrato come modificare un'applicazione
   
  [[Sezioni](#top)]  
   
-##  <a name="createinstance"></a>Creazione di un'istanza della barra multifunzione  
+##  <a name="createinstance"></a> Creazione di un'istanza della barra multifunzione  
  Nei passaggi seguenti viene illustrato come creare un'istanza della barra multifunzione quando si avvia l'applicazione. Per aggiungere una barra multifunzione a un'applicazione, dichiarare la barra multifunzione nel file mainfrm.h. Quindi, nel file mainfrm.cpp, scrivere il codice per caricare la risorsa barra multifunzione.  
   
 #### <a name="to-create-an-instance-of-the-ribbon-bar"></a>Per creare un'istanza della barra multifunzione  
@@ -250,7 +245,7 @@ In questa procedura dettagliata viene illustrato come modificare un'applicazione
   
  [[Sezioni](#top)]  
   
-##  <a name="addcategory"></a>Personalizzazione della risorsa barra multifunzione  
+##  <a name="addcategory"></a> Personalizzazione della risorsa barra multifunzione  
  Una volta creato il pulsante dell'applicazione, è possibile aggiungere gli elementi alla barra multifunzione.  
   
 > [!NOTE]
@@ -268,7 +263,7 @@ In questa procedura dettagliata viene illustrato come modificare un'applicazione
   
  [[Sezioni](#top)]  
   
-##  <a name="setlook"></a>Impostazione dell'aspetto dell'applicazione  
+##  <a name="setlook"></a> Impostazione dell'aspetto dell'applicazione  
  Oggetto *gestore visualizzazione* è un oggetto globale che controlla tutti i disegni per un'applicazione. Dal momento che l'applicazione originale Scribble utilizza lo stile dell'interfaccia utente (UI) di Office 2000, l'aspetto dell'applicazione potrebbe risultare datato. È possibile reimpostare l'applicazione in modo che utilizzi il gestore visualizzazione di Office 2007 e che risulti simile a un'applicazione di Office 2007.  
   
 #### <a name="to-set-the-look-of-the-application"></a>Per impostare l'aspetto dell'applicazione  

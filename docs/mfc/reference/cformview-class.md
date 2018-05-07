@@ -1,12 +1,9 @@
 ---
 title: Classe CFormView | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CFormView
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - CFormView [MFC], CFormView
 - CFormView [MFC], IsInitDlgCompleted
 ms.assetid: a99ec313-36f0-4f28-9d2b-de11de14ac19
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 386e28631d20721f22eb2b778ffbe2e1d4b1824d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3486285b7b6430e9cd6f0e4a936aa3341bd72e0f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cformview-class"></a>Classe CFormView
 Classe di base utilizzata per le visualizzazioni di form.  
@@ -79,7 +74,7 @@ class CFormView : public CScrollView
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** AFXEXT. h  
   
-##  <a name="cformview"></a>CFormView::CFormView  
+##  <a name="cformview"></a>  CFormView::CFormView  
  Costruisce un oggetto `CFormView`.  
   
 ```  
@@ -97,7 +92,7 @@ CFormView(UINT nIDTemplate);
 ### <a name="remarks"></a>Note  
  Quando si crea un oggetto di un tipo derivato da `CFormView`, richiamare uno dei costruttori per creare l'oggetto visualizzazione e identificare la risorsa finestra di dialogo in cui si basa la visualizzazione. È possibile identificare la risorsa in base al nome (passare una stringa come argomento al costruttore) o tramite il relativo ID (passaggio di un intero senza segno come argomento).  
   
- Il visualizzazione di form finestra e i controlli figlio vengono creati solo `CWnd::Create` viene chiamato. `CWnd::Create`viene chiamato dal framework durante il processo di creazione documento e la visualizzazione, che dipende dal modello di documento.  
+ Il visualizzazione di form finestra e i controlli figlio vengono creati solo `CWnd::Create` viene chiamato. `CWnd::Create` viene chiamato dal framework durante il processo di creazione documento e la visualizzazione, che dipende dal modello di documento.  
   
 > [!NOTE]
 >  La classe derivata *deve* fornisce il proprio costruttore. Nel costruttore, richiamare il costruttore, `CFormView::CFormView`, con il nome di risorsa o l'ID come argomento, come mostrato nella precedente Panoramica di classe.  
@@ -107,7 +102,7 @@ CFormView(UINT nIDTemplate);
   
  [!code-cpp[NVC_MFCDocView#91](../../mfc/codesnippet/cpp/cformview-class_2.cpp)]  
   
-##  <a name="isinitdlgcompleted"></a>CFormView::IsInitDlgCompleted  
+##  <a name="isinitdlgcompleted"></a>  CFormView::IsInitDlgCompleted  
  Usato da MFC per garantire il completamento dell'inizializzazione prima di eseguire altre operazioni.  
   
 ```  

@@ -1,13 +1,10 @@
 ---
 title: Etichetta del controllo Tree modifica | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - label editing in CTreeCtrl class [MFC]
 - tree controls [MFC], label editing
 ms.assetid: 6cde2ac3-43ee-468f-bac2-cf1a228ad32d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 03fb11c29b51b30b1aaffccbe3e999f1cefc3fbb
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fd2157755146606b2bdacf8ae5a1da9cd0966b21
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tree-control-label-editing"></a>Modifica dell'etichetta del controllo Tree
 L'utente può modificare direttamente le etichette degli elementi in un controllo albero ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) che ha il **TVS_EDITLABELS** stile. L'utente inizia la modifica facendo clic sull'etichetta dell'elemento con lo stato attivo. Un'applicazione inizia la modifica tramite il [funzione membro EditLabel](../mfc/reference/ctreectrl-class.md#editlabel) funzione membro. Il controllo struttura ad albero invia la notifica quando si modifica inizia e quando annullata o completata. Quando viene completata la modifica, è responsabile per l'aggiornamento dell'etichetta dell'elemento, se appropriato.  

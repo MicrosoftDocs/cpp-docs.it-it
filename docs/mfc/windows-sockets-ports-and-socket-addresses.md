@@ -1,13 +1,10 @@
 ---
 title: 'Windows Sockets: Porte e indirizzi Socket | Documenti Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,29 +16,27 @@ helpviewer_keywords:
 - sockets [MFC], addresses
 - sockets [MFC], ports
 ms.assetid: e050261a-9285-4f31-a1c5-6c8033af5b4a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0c7b2e15761815b75ba8001ad4eb5a5c276f5056
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 42ea9b8a39de8d36ecb621164d98e072a4041211
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="windows-sockets-ports-and-socket-addresses"></a>Windows Sockets: porte e indirizzi socket
 Questo articolo illustra la porta"condizioni" e "address" come utilizzato con i socket di Windows.  
   
-##  <a name="_core_port"></a>Porta  
+##  <a name="_core_port"></a> Porta  
  Una porta identifica un processo univoco per il quale può essere fornito un servizio. In questo contesto, una porta è associata a un'applicazione che supporta Windows Sockets. L'idea consiste nell'identificare in modo univoco ogni applicazione di Windows Sockets si può avere più di un'applicazione Windows Sockets in esecuzione in un computer nello stesso momento.  
   
  Alcune porte sono riservate per i servizi comuni, ad esempio FTP. È consigliabile evitare l'uso di queste porte a meno che non si specifica il tipo di servizio. La specifica Windows Sockets dettagli queste porte riservate. Il file WINSOCK. H anche li elenca.  
   
  Per consentire la DLL di socket di Windows selezionare una porta utilizzabile per l'utente, passare 0 come il valore della porta. MFC consente di selezionare un valore di porta maggiore di 1024 decimale. È possibile recuperare il valore della porta selezionato da MFC chiamando il [CAsyncSocket::GetSockName](../mfc/reference/casyncsocket-class.md#getsockname) funzione membro.  
   
-##  <a name="_core_socket_address"></a>Indirizzo del socket  
+##  <a name="_core_socket_address"></a> Indirizzo del socket  
  Ogni oggetto socket è associata a un indirizzo IP (Internet Protocol) in rete. In genere, l'indirizzo è un nome di computer, ad esempio "ftp.microsoft.com", o un numero di punti, ad esempio "128.56.22.8".  
   
  Quando si cerca di creare un socket, in genere non è necessario specificare il proprio indirizzo.  

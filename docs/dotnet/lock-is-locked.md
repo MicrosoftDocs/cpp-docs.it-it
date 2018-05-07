@@ -1,12 +1,9 @@
 ---
 title: lock::is_locked | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - is_locked
@@ -19,18 +16,16 @@ dev_langs:
 helpviewer_keywords:
 - lock::is_locked
 ms.assetid: d888827c-8052-47c6-87a2-8c42f60a688d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: f561a56b5859f6e7d0eaedeb6e6410bd4fe64a6d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: de4f7a3c92ccace542a4588b0278fd4f799459c2
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="lockislocked"></a>lock::is_locked
 Indica se è attualmente un blocco.  
@@ -42,7 +37,7 @@ bool is_locked();
 ```  
   
 ## <a name="return-value"></a>Valore restituito  
- `true`Se viene mantenuto un blocco, `false` in caso contrario.  
+ `true` Se viene mantenuto un blocco, `false` in caso contrario.  
   
 ## <a name="example"></a>Esempio  
  Questo esempio Usa una singola istanza di una classe su più thread.  Per verificare che gli accessi ai dati interni siano coerenti per ogni thread, la classe Usa un blocco su se stesso.  Il thread principale dell'applicazione utilizza un blocco sulla stessa istanza della classe per controllare periodicamente per vedere se un thread di lavoro continuano a esistere e attese per uscire dall'installazione fino a quando tutti i thread di lavoro completamento delle attività.  

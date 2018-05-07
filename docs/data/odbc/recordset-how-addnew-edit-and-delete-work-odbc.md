@@ -2,12 +2,9 @@
 title: 'Recordset: AddNew, Edit e Delete funzionamento (ODBC) | Documenti Microsoft'
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -26,25 +23,23 @@ helpviewer_keywords:
 - ODBC recordsets [C++], editing records
 - records [C++], editing
 ms.assetid: cab43d43-235a-4bed-ac05-67d10e94f34e
-caps.latest.revision: 9
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: dbbf224797bd7d2eed2b085a6a7dd8eb1865de1c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e3d9dc82f4ea31557c4ec330b9737579021a8d35
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="recordset-how-addnew-edit-and-delete-work-odbc"></a>Recordset: funzionamento dei metodi AddNew, Edit e Delete (ODBC)
 Questo argomento si applica alle classi ODBC MFC.  
   
  Questo argomento viene illustrato come la `AddNew`, **modifica**, e **eliminare** funzioni membro della classe `CRecordset` di lavoro. Gli argomenti trattati includono:  
   
--   [Aggiunta di record](#_core_adding_a_record)  
+-   [Sull'aggiunta di record](#_core_adding_a_record)  
   
 -   [Visibilità dei record aggiunti](#_core_visibility_of_added_records)  
   
@@ -57,7 +52,7 @@ Questo argomento si applica alle classi ODBC MFC.
   
  Come complemento, è possibile leggere [campi di record: funzionamento di RFX](../../data/odbc/record-field-exchange-how-rfx-works.md), che descrive il ruolo corrispondente di RFX nelle operazioni di aggiornamento.  
   
-##  <a name="_core_adding_a_record"></a>Aggiunta di un Record  
+##  <a name="_core_adding_a_record"></a> Aggiunta di un Record  
 
  Aggiungere un nuovo record a un recordset, è necessario chiamare il recordset [AddNew](../../mfc/reference/crecordset-class.md#addnew) funzione membro, impostare i valori dei membri dati di campo del nuovo record e chiamare il [aggiornamento](../../mfc/reference/crecordset-class.md#update) funzione membro da scrivere il record nell'origine dati.  
   
@@ -85,7 +80,7 @@ Questo argomento si applica alle classi ODBC MFC.
         SetFieldDirty( &m_dataMember, TRUE );  
         ```  
   
-    3.  **Aggiornamento** viene eseguito il commit del nuovo record, ovvero il **inserire** istruzione viene eseguita e il record viene eseguito il commit per la tabella in cui l'origine dati e il recordset, se non uno snapshot, a meno che non è in corso una transazione.  
+    3.  **Aggiornamento** viene eseguito il commit del nuovo record, ovvero il **inserire** istruzione viene eseguita e il record viene eseguito il commit per la tabella dell'origine dati (e il recordset, se non è uno snapshot) a meno che non è in corso una transazione.  
   
     4.  Il record memorizzato viene ripristinato nel buffer di modifica. Il record corrente prima di `AddNew` chiamata è corrente nuovamente indipendentemente dal fatto che il **inserire** istruzione è stata eseguita correttamente.  
   
@@ -95,7 +90,7 @@ Questo argomento si applica alle classi ODBC MFC.
     > [!TIP]
     >  Per rilevare quando i membri dati di recordset modificano valore, MFC utilizza un **PSEUDO_NULL** valore appropriato per ogni tipo di dati che è possibile archiviare in un recordset. Se è necessario impostare esplicitamente un campo il **PSEUDO_NULL** valore e il campo avvengono già contrassegnato come Null, è necessario chiamare anche `SetFieldNull`, passa l'indirizzo del campo nel primo parametro e **FALSE**nel secondo parametro.  
   
-##  <a name="_core_visibility_of_added_records"></a>Visibilità dei record aggiunti  
+##  <a name="_core_visibility_of_added_records"></a> Visibilità dei record aggiunti  
  Quando un record aggiunto è visibile per il recordset? Record aggiunti talvolta visualizzati e in alcuni casi non sono visibili, a seconda delle due operazioni:  
   
 -   Il driver è in grado di.  
@@ -104,7 +99,7 @@ Questo argomento si applica alle classi ODBC MFC.
   
  Se il driver ODBC supporta la **:: SQLSetPos** funzione API ODBC, MFC utilizza la funzione per aggiungere record. Con **:: SQLSetPos**, record aggiunti sono visibili per qualsiasi recordset MFC aggiornabile. Senza il supporto per la funzione, aggiungere i record non sono visibili e sarà necessario chiamare **Requery** per visualizzarli. Utilizzando **:: SQLSetPos** inoltre è più efficiente.  
   
-##  <a name="_core_editing_an_existing_record"></a>Per modificare un Record esistente  
+##  <a name="_core_editing_an_existing_record"></a> Per modificare un Record esistente  
  Per modificare un record esistente in un recordset è necessario scorrere fino al record, chiamare il recordset [modifica](../../mfc/reference/crecordset-class.md#edit) funzione membro, impostare i valori dei membri dati di campo del nuovo record e chiamare il [aggiornare](../../mfc/reference/crecordset-class.md#update)funzione membro per scrivere il record modificato all'origine dati.  
   
  Come condizione preliminare per chiamare **modifica**, il recordset deve essere aggiornabile e in un record. Il `CanUpdate` e `IsDeleted` funzioni membro consentono di determinare tali condizioni. Inoltre è necessario che il record corrente non sia già stato eliminato e che siano presenti record del recordset (entrambi `IsBOF` e `IsEOF` restituiscono 0).  
@@ -130,7 +125,7 @@ Questo argomento si applica alle classi ODBC MFC.
   
     2.  Se sono presenti modifiche, **aggiornamento** costrutti SQL **aggiornamento** istruzione. Le colonne elencate nella **aggiornamento** istruzione si basano i membri di dati di campo che sono stati modificati.  
   
-    3.  **Aggiornamento** viene eseguito il commit delle modifiche, ovvero esegue il **aggiornamento** istruzione e viene modificato il record nell'origine dati, ma non eseguito se una transazione è in corso (vedere [transazione: esecuzione di una transazione in un Recordset (ODBC)](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md) per informazioni sull'influenza l'aggiornamento da parte della transazione). ODBC mantiene una copia del record, anch ' essa modificata.  
+    3.  **Aggiornamento** conferma le modifiche, ovvero esegue il **aggiornamento** istruzione e viene modificato il record nell'origine dati, ma non eseguito se una transazione è in corso (vedere [transazione: esecuzione di una transazione in un Recordset (ODBC)](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md) per informazioni sull'impatto dell'aggiornamento da parte della transazione). ODBC mantiene una copia del record, anch ' essa modificata.  
   
     4.  A differenza del processo per `AddNew`, **modifica** processo non ripristina il record memorizzato. Il record modificato rimane attivo come record corrente.  
   
@@ -140,7 +135,7 @@ Questo argomento si applica alle classi ODBC MFC.
     > [!TIP]
     >  Se si chiama `AddNew` o **modifica** dopo aver chiamato una funzione in precedenza, ma prima di chiamare **aggiornamento**, il buffer di modifica viene aggiornato con il record memorizzato, sostituisce il record nuovo o modificato stato di avanzamento. Questo comportamento consente di interrompere un `AddNew` o **modifica** e iniziarne una nuova: se si determina che il record in corso è danneggiato, è sufficiente chiamare **modifica** o `AddNew` nuovamente.  
   
-##  <a name="_core_deleting_a_record"></a>Eliminazione di un Record  
+##  <a name="_core_deleting_a_record"></a> Eliminazione di un Record  
  Eliminazione di un record di un recordset è necessario scorrere fino al record e chiamare il recordset [eliminare](../../mfc/reference/crecordset-class.md#delete) funzione membro. A differenza di `AddNew` e **modifica**, **eliminare** non richiede una chiamata corrispondente al **aggiornamento**.  
   
  Come condizione preliminare per chiamare **eliminare**, il recordset deve essere aggiornabile e deve essere su un record. Il `CanUpdate`, `IsBOF`, `IsEOF`, e `IsDeleted` funzioni membro consentono di determinare tali condizioni.  
@@ -155,11 +150,11 @@ Questo argomento si applica alle classi ODBC MFC.
   
     1.  Il record corrente nel buffer di modifica non viene eseguito come in `AddNew` e **modifica**.  
   
-    2.  **Eliminare** costrutti SQL **eliminare** istruzione che rimuove il record.  
+    2.  **Eliminare** costruisce un database SQL **eliminare** istruzione che rimuove il record.  
   
          Il record corrente nel buffer di modifica non viene memorizzato come in `AddNew` e **modifica**.  
   
-    3.  **Eliminare** viene eseguito il commit dell'eliminazione, esegue il **eliminare** istruzione. Il record viene contrassegnato come eliminato nell'origine dati e, se il record è uno snapshot, in ODBC.  
+    3.  **Eliminare** viene eseguito il commit dell'eliminazione, viene eseguita la **eliminare** istruzione. Il record viene contrassegnato come eliminato nell'origine dati e, se il record è uno snapshot, in ODBC.  
   
     4.  I valori del record eliminato sono ancora in membri di dati di campo del recordset, ma i membri di dati di campo vengono contrassegnati come Null e il recordset `IsDeleted` funzione membro restituisce un valore diverso da zero.  
   

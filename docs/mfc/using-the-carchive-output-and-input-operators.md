@@ -1,13 +1,10 @@
 ---
 title: Utilizzare CArchive &lt; &lt; e &gt; &gt; operatori | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - CArchive
 dev_langs:
@@ -17,20 +14,18 @@ helpviewer_keywords:
 - CArchive class [MFC], storing and loading objects
 - CArchive class [MFC], operators
 ms.assetid: 56aef326-02dc-4992-8282-f0a4b78a064e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0ab2da8cc885f94bf15164ff17fdef2b2af13a41
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 82b729caaa650fde72741497d3f4ab3c131f46ab
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-the-carchive-ltlt-and-gtgt-operators"></a>Utilizzare CArchive &lt; &lt; e &gt; &gt; operatori
-`CArchive`fornisce <\< e >> operatori per la scrittura e lettura di tipi di dati semplici nonché `CObject`s a e da un file.  
+`CArchive` fornisce <\< e >> operatori per scrivere e leggere tipi di dati semplici nonché `CObject`s da e verso un file.  
   
 #### <a name="to-store-an-object-in-a-file-via-an-archive"></a>Per archiviare un oggetto in un file tramite un archivio  
   
@@ -54,12 +49,12 @@ ms.lasthandoff: 12/21/2017
   
  [!code-cpp[NVC_MFCSerialization#10](../mfc/codesnippet/cpp/using-the-carchive-output-and-input-operators_4.cpp)]  
   
- La libreria definisce  **< \<**  e  **>>**  operatori per `CArchive` come il primo operando e i seguenti tipi di dati e i tipi di classe come il secondo operando :  
+ La libreria definisce **< \<** e **>>** operatori per `CArchive` come il primo operando e i seguenti tipi di dati e i tipi di classe come il secondo operando :  
   
 ||||  
 |-|-|-|  
 |`CObject*`|**DIMENSIONI e CSize**|**float**|  
-|**WORD**|`CString`|**PUNTO** e`CPoint`|  
+|**WORD**|`CString`|**PUNTO** e `CPoint`|  
 |`DWORD`|**BYTE**|`RECT` e `CRect`|  
 |**Double**|**LONG**|`CTime` e `CTimeSpan`|  
 |`Int`|**COleCurrency**|`COleVariant`|  
@@ -68,7 +63,7 @@ ms.lasthandoff: 12/21/2017
 > [!NOTE]
 >  Memorizzazione e caricamento `CObject`tramite un archivio richiede attenzione aggiuntiva. Per ulteriori informazioni, vedere [memorizzazione e caricamento di CObjects tramite un archivio](../mfc/storing-and-loading-cobjects-via-an-archive.md).  
   
- Il **CArchive <\<**  e  **>>**  operatori restituiscono sempre un riferimento di `CArchive` oggetto, ovvero il primo operando. Ciò consente di concatenare gli operatori, come illustrato di seguito:  
+ Il **CArchive <\<**  e **>>** operatori restituiscono sempre un riferimento di `CArchive` oggetto, ovvero il primo operando. Ciò consente di concatenare gli operatori, come illustrato di seguito:  
   
  [!code-cpp[NVC_MFCSerialization#11](../mfc/codesnippet/cpp/using-the-carchive-output-and-input-operators_5.cpp)]  
   

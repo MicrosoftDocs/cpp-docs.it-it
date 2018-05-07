@@ -1,12 +1,9 @@
 ---
 title: Classe CStatic | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CStatic
@@ -37,17 +34,15 @@ helpviewer_keywords:
 - CStatic [MFC], SetEnhMetaFile
 - CStatic [MFC], SetIcon
 ms.assetid: e7c94cd9-5ebd-428a-aa30-b3e51f8efb95
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3319535bdcf3693fcf9427572e3902f96261d33e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0d3b1a5dcfc8481727bffd8b80e0bb1b230d56ff
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cstatic-class"></a>Classe CStatic
 Fornisce la funzionalità di un controllo statico di Windows.  
@@ -102,7 +97,7 @@ class CStatic : public CWnd
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** afxwin.h  
   
-##  <a name="create"></a>CStatic::Create  
+##  <a name="create"></a>  CStatic::Create  
  Crea il controllo statico di Windows e lo collega al `CStatic` oggetto.  
   
 ```  
@@ -148,18 +143,18 @@ virtual BOOL Create(
   
 - **SS_BITMAP** Usa questo stile di bitmap.  
   
-- **SS_ICON** utilizza questo stile per le icone e cursori.  
+- **SS_ICON** utilizza questo stile per icone e cursori.  
   
 - **SS_ENHMETAFILE** Usa questo stile per i metafile avanzati.  
   
  Per i cursori, bitmap o icone, può anche essere possibile utilizzare il seguente stile:  
   
-- **SS_CENTERIMAGE** utilizzare per centrare l'immagine nel controllo statico.  
+- **SS_CENTERIMAGE** consente di centrare l'immagine nel controllo statico.  
   
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFC_CStatic#1](../../mfc/reference/codesnippet/cpp/cstatic-class_1.cpp)]  
   
-##  <a name="cstatic"></a>CStatic::CStatic  
+##  <a name="cstatic"></a>  CStatic::CStatic  
  Costruisce un oggetto `CStatic`.  
   
 ```  
@@ -169,7 +164,7 @@ CStatic();
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFC_CStatic#2](../../mfc/reference/codesnippet/cpp/cstatic-class_2.cpp)]  
   
-##  <a name="drawitem"></a>CStatic::DrawItem  
+##  <a name="drawitem"></a>  CStatic::DrawItem  
  Chiamato dal framework per disegnare un controllo statico creato dal proprietario.  
   
 ```  
@@ -183,7 +178,7 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 ### <a name="remarks"></a>Note  
  Eseguire l'override di questa funzione per implementare disegno di un proprietario **CStatic** oggetto (il controllo ha lo stile **SS_OWNERDRAW**).  
   
-##  <a name="getbitmap"></a>CStatic::GetBitmap  
+##  <a name="getbitmap"></a>  CStatic::GetBitmap  
  Ottiene l'handle di bitmap, impostata in precedenza con [SetBitmap](#setbitmap), che è associata a `CStatic`.  
   
 ```  
@@ -196,7 +191,7 @@ HBITMAP GetBitmap() const;
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFC_CStatic#3](../../mfc/reference/codesnippet/cpp/cstatic-class_3.cpp)]  
   
-##  <a name="getcursor"></a>CStatic::GetCursor  
+##  <a name="getcursor"></a>  CStatic::GetCursor  
  Ottiene l'handle del cursore, impostato in precedenza con [SetCursor](#setcursor), che è associata a `CStatic`.  
   
 ```  
@@ -209,7 +204,7 @@ HCURSOR GetCursor();
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFC_CStatic#4](../../mfc/reference/codesnippet/cpp/cstatic-class_4.cpp)]  
   
-##  <a name="getenhmetafile"></a>CStatic::GetEnhMetaFile  
+##  <a name="getenhmetafile"></a>  CStatic::GetEnhMetaFile  
  Ottiene l'handle del metafile avanzato, impostato in precedenza con [SetEnhMetafile](#setenhmetafile), che è associata a `CStatic`.  
   
 ```  
@@ -222,7 +217,7 @@ HENHMETAFILE GetEnhMetaFile() const;
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFC_CStatic#5](../../mfc/reference/codesnippet/cpp/cstatic-class_5.cpp)]  
   
-##  <a name="geticon"></a>CStatic::GetIcon  
+##  <a name="geticon"></a>  CStatic::GetIcon  
  Ottiene l'handle del set di icone, in precedenza con [SetIcon](#seticon), che è associata a `CStatic`.  
   
 ```  
@@ -235,7 +230,7 @@ HICON GetIcon() const;
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFC_CStatic#6](../../mfc/reference/codesnippet/cpp/cstatic-class_6.cpp)]  
   
-##  <a name="setbitmap"></a>CStatic::SetBitmap  
+##  <a name="setbitmap"></a>  CStatic::SetBitmap  
  Associa il controllo statico di una nuova bitmap.  
   
 ```  
@@ -260,7 +255,7 @@ HBITMAP SetBitmap(HBITMAP hBitmap);
   
 -   MFC fornisce la classe `CBitmap`, che è possibile utilizzare quando si dispone di più con un'immagine bitmap di chiamare semplicemente Win32 funzionamento `LoadBitmap`. `CBitmap`, che contiene un tipo di oggetto GDI, viene spesso usato in collaborazione con `CStatic`, ovvero un `CWnd` classe utilizzata per la visualizzazione di un oggetto grafico come un controllo statico.  
   
- `CImage`è una classe ATL/MFC che consente di più facile lavorare con bitmap indipendente dalla periferica (DIB). Per ulteriori informazioni, vedere [CImage (classe)](../../atl-mfc-shared/reference/cimage-class.md).  
+ `CImage` è una classe ATL/MFC che consente di più facile lavorare con bitmap indipendente dalla periferica (DIB). Per ulteriori informazioni, vedere [CImage (classe)](../../atl-mfc-shared/reference/cimage-class.md).  
   
 -   Utilizzo tipico consiste nell'assegnare `CStatic::SetBitmap` un oggetto GDI restituito dall'operatore HBITMAP di un `CBitmap` o `CImage` oggetto. Il codice per eseguire questa operazione è simile al seguente.  
   
@@ -272,7 +267,7 @@ L'esempio seguente crea due `CStatic` oggetti sull'heap. Viene quindi caricato a
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFC_CStatic#3](../../mfc/reference/codesnippet/cpp/cstatic-class_3.cpp)]  
   
-##  <a name="setcursor"></a>CStatic::SetCursor  
+##  <a name="setcursor"></a>  CStatic::SetCursor  
  Associa il controllo statico di una nuova immagine cursore.  
   
 ```  
@@ -291,14 +286,14 @@ HCURSOR SetCursor(HCURSOR hCursor);
   
  È possibile utilizzare vari finestra e stili del controllo statico, inclusi i seguenti:  
   
-- **SS_ICON** Usa sempre questo stile per le icone e cursori.  
+- **SS_ICON** Usa sempre questo stile per icone e cursori.  
   
 - **SS_CENTERIMAGE** utilizzare per allineare al centro del controllo statico. Se l'immagine è più grande del controllo statico, verrà troncato. Se sono inferiore rispetto al controllo statico, lo spazio vuoto attorno all'immagine verrà riempito con il colore di sfondo del controllo statico.  
   
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFC_CStatic#4](../../mfc/reference/codesnippet/cpp/cstatic-class_4.cpp)]  
   
-##  <a name="setenhmetafile"></a>CStatic::SetEnhMetaFile  
+##  <a name="setenhmetafile"></a>  CStatic::SetEnhMetaFile  
  Associa il controllo statico di una nuova immagine metafile avanzato.  
   
 ```  
@@ -322,7 +317,7 @@ HENHMETAFILE SetEnhMetaFile(HENHMETAFILE hMetaFile);
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFC_CStatic#5](../../mfc/reference/codesnippet/cpp/cstatic-class_5.cpp)]  
   
-##  <a name="seticon"></a>CStatic::SetIcon  
+##  <a name="seticon"></a>  CStatic::SetIcon  
  Associa una nuova immagine icona con il controllo statico.  
   
 ```  
@@ -341,7 +336,7 @@ HICON SetIcon(HICON hIcon);
   
  È possibile utilizzare vari finestra e stili del controllo statico, inclusi i seguenti:  
   
-- **SS_ICON** Usa sempre questo stile per le icone e cursori.  
+- **SS_ICON** Usa sempre questo stile per icone e cursori.  
   
 - **SS_CENTERIMAGE** utilizzare per allineare al centro del controllo statico. Se l'immagine è più grande del controllo statico, verrà troncato. Se sono inferiore rispetto al controllo statico, lo spazio vuoto attorno all'immagine verrà riempito con il colore di sfondo del controllo statico.  
   

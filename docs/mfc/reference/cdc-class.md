@@ -2,11 +2,8 @@
 title: CDC (classe) | Documenti Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CDC
@@ -411,17 +408,15 @@ helpviewer_keywords:
 - CDC [MFC], m_hAttribDC
 - CDC [MFC], m_hDC
 ms.assetid: 715b3334-cb2b-4c9c-8067-02eb7c66c8b2
-caps.latest.revision: 21
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 97099ead68a0060862465c9c3e020da523b85b86
-ms.sourcegitcommit: a5a69d2dc3513261e9e28320e4e067aaf40d2ef2
+ms.openlocfilehash: e3a677d81343da6185ce37f1f4839f20cef3b943
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdc-class"></a>CDC (classe)
 Definisce una classe di oggetti di un contesto di dispositivo.  
@@ -490,7 +485,7 @@ class CDC : public CObject
 |[CDC::FillSolidRect](#fillsolidrect)|Riempimento di un rettangolo con un colore a tinta unita.|  
 |[CDC::FlattenPath](#flattenpath)|Trasforma le curve nel percorso selezionato nel contesto di dispositivo corrente e consente di trasformare ogni curva in una sequenza di righe.|  
 |[CDC::FloodFill](#floodfill)|Riempimento di un'area con il pennello corrente.|  
-|[CDC::FrameRect](#framerect)|Disegna un bordo intorno a un rettangolo.|  
+|[CDC:: frameRect](#framerect)|Disegna un bordo intorno a un rettangolo.|  
 |[CDC::FrameRgn](#framergn)|Disegna un bordo intorno a un'area specifica utilizzando un pennello.|  
 |[CDC::FromHandle](#fromhandle)|Restituisce un puntatore a un `CDC` oggetto quando viene specificato un handle a un contesto di dispositivo. Se all'handle non è collegato un oggetto `CDC`, viene creato e collegato un oggetto `CDC` temporaneo.|  
 |[CDC::GetArcDirection](#getarcdirection)|Restituisce la direzione di arco corrente per il contesto di dispositivo.|  
@@ -552,7 +547,7 @@ class CDC : public CObject
 |[CDC::GetWindowOrg](#getwindoworg)|Recupera le coordinate x e y dell'origine della finestra associata.|  
 |[CDC::GetWorldTransform](#getworldtransform)|Recupera lo spazio globale corrente alla trasformazione di spazio di pagina.|  
 |[CDC::GradientFill](#gradientfill)|Riempie strutture rettangolo e triangolo con un colore gradating.|  
-|[CDC::GrayString](#graystring)|Disegna disattivata (grigio) testo nella posizione specificata.|  
+|[CDC:: graystring](#graystring)|Disegna disattivata (grigio) testo nella posizione specificata.|  
 |[CDC::HIMETRICtoDP](#himetrictodp)|Converte **HIMETRIC** unità in unità di dispositivo.|  
 |[CDC::HIMETRICtoLP](#himetrictolp)|Converte **HIMETRIC** unità in unità logiche.|  
 |[CDC::IntersectClipRect](#intersectcliprect)|Crea una nuova area di ritaglio che formano l'intersezione tra l'area corrente e un rettangolo.|  
@@ -596,10 +591,10 @@ class CDC : public CObject
 |[CDC::ScrollDC](#scrolldc)|Scorre un rettangolo di bit orizzontalmente e verticalmente.|  
 |[CDC::SelectClipPath](#selectclippath)|Seleziona il percorso corrente come un'area di visualizzazione per il contesto di dispositivo, combinando la nuova area con qualsiasi area di visualizzazione esistente utilizzando la modalità specificata.|  
 |[CDC::SelectClipRgn](#selectcliprgn)|Unisce dell'area specificata con l'area di ritaglio corrente usando la modalità specificata.|  
-|[CDC::SelectObject](#selectobject)|Seleziona un oggetto di disegno, ad esempio una penna GDI.|  
+|[CDC:: SelectObject](#selectobject)|Seleziona un oggetto di disegno, ad esempio una penna GDI.|  
 |[CDC::SelectPalette](#selectpalette)|Seleziona la tavolozza logica.|  
 |[CDC::SelectStockObject](#selectstockobject)|Seleziona una delle penne azioni predefinite, pennelli, tipi di carattere forniti da Windows.|  
-|[CDC::SetAbortProc](#setabortproc)|Imposta una funzione di callback fornito dal programmatore che Windows chiama se un processo di stampa deve essere interrotta.|  
+|[CDC:: SETABORTPROC](#setabortproc)|Imposta una funzione di callback fornito dal programmatore che Windows chiama se un processo di stampa deve essere interrotta.|  
 |[CDC::SetArcDirection](#setarcdirection)|Imposta la direzione di disegno da utilizzare per le funzioni arco e il rettangolo.|  
 |[CDC::SetAttribDC](#setattribdc)|Set `m_hAttribDC`, il contesto di dispositivo di attributo.|  
 |[CDC::SetBkColor](#setbkcolor)|Imposta il colore di sfondo corrente.|  
@@ -1373,7 +1368,7 @@ void Draw3dRect(
  cx  
  Specifica la larghezza del rettangolo tridimensionale.  
   
- cy  
+ CY  
  Specifica l'altezza del rettangolo tridimensionale.  
   
 ### <a name="remarks"></a>Note  
@@ -1541,7 +1536,7 @@ BOOL DrawFrameControl(
   
     - **DFCS_MENUARROW** freccia sottomenu  
   
-    - **DFCS_MENUBULLET** Bullet  
+    - **DFCS_MENUBULLET** punto elenco  
   
     - **DFCS_MENUCHECK** segno di spunta  
   
@@ -2022,7 +2017,7 @@ int Escape(
   
 - [CDC::EndPage](#endpage)  
   
-- [CDC::SetAbortProc](#setabortproc)  
+- [CDC:: SETABORTPROC](#setabortproc)  
   
 - [CDC::StartDoc](#startdoc)  
   
@@ -2343,7 +2338,7 @@ BOOL FloodFill(
   
  Il `ExtFloodFill` funzione fornisce funzionalità simili ma maggiore flessibilità.  
   
-##  <a name="framerect"></a>  CDC::FrameRect  
+##  <a name="framerect"></a>  CDC:: frameRect  
  Disegna un bordo intorno al rettangolo specificato da `lpRect`.  
   
 ```  
@@ -3702,7 +3697,7 @@ BOOL GradientFill(
 ### <a name="remarks"></a>Note  
  Per ulteriori informazioni, vedere `GradientFill` in Windows SDK.  
   
-##  <a name="graystring"></a>  CDC::GrayString  
+##  <a name="graystring"></a>  CDC:: graystring  
  Disegna disattivata (grigio) nella posizione specificata dalla scrittura del testo in una bitmap in memoria, luminosità bitmap e quindi copiare la bitmap per la visualizzazione.  
   
 ```  
@@ -5050,7 +5045,7 @@ int SelectClipRgn(
   
  Le applicazioni che devono eseguire il ridimensionamento di oggetti grafici in GDI possono utilizzare il **GETSCALINGFACTOR** escape della stampante per determinare il fattore di scala. Questo fattore di scala influisce sulla visualizzazione. Se un'area viene utilizzata per ritagliare grafica, GDI divide le coordinate per il fattore di scala. Se l'area viene utilizzata per ritagliare il testo, GDI non effettua alcun ridimensionamento rettifica. Un fattore di scala pari a 1 determina le coordinate di essere diviso per 2. un fattore di scala di 2 fa sì che le coordinate di essere diviso per 4. E così via.  
   
-##  <a name="selectobject"></a>  CDC::SelectObject  
+##  <a name="selectobject"></a>  CDC:: SelectObject  
  Seleziona un oggetto nel contesto di dispositivo.  
   
 ```  

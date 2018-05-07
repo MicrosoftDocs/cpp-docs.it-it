@@ -1,13 +1,10 @@
 ---
 title: Funzioni globali di analisi di URL Internet e helper | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 04/03/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.mfc.macros.isapi
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - parsing, URLs
 - URLs, parsing
 ms.assetid: 46c6384f-e4a6-4dbd-9196-219c19040ec5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e29ae754e7f5b078c23f0cdf27c0a280cd28b40a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 02b7ea1a6d22d3e16230acafa25c53f8748a825a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="internet-url-parsing-globals-and-helpers"></a>Gli helper e funzioni globali di analisi di URL Internet
 Quando un client invia una query al server Internet, è possibile utilizzare l'URL globali di analisi per estrarre le informazioni sul client. Le funzioni di supporto forniscono altre funzionalità di internet.
@@ -44,7 +39,7 @@ Quando un client invia una query al server Internet, è possibile utilizzare l'U
 |[AfxThrowInternetException](#afxthrowinternetexception)|Genera un'eccezione relativa alla connessione internet.|
 |[AfxGetInternetHandleType](#afxgetinternethandletype)|Determina il tipo di un handle di Internet.|
   
-##  <a name="afxparseurl"></a>AfxParseURL  
+##  <a name="afxparseurl"></a>  AfxParseURL  
  Viene utilizzato questo globale [CInternetSession:: OpenURL](../../mfc/reference/cinternetsession-class.md#openurl).  
   
 ```   
@@ -110,13 +105,13 @@ BOOL AFXAPI AfxParseURL(
   
  Ad esempio, `AfxParseURL` analizza URL nel formato **service://server/dir/dir/object.ext:port** e restituisce i relativi componenti, come illustrato di seguito:  
   
- `strServer`= = "server"  
+ `strServer` = = "server"  
   
- `strObject`= = "/ dir/dir/object/object.ext"  
+ `strObject` = = "/ dir/dir/object/object.ext"  
   
- `nPort`= = #port  
+ `nPort` = = #port  
   
- `dwServiceType`= = #service  
+ `dwServiceType` = = #service  
   
 > [!NOTE]
 >  Per chiamare questa funzione, il progetto deve includere AFXINET. H.  
@@ -124,7 +119,7 @@ BOOL AFXAPI AfxParseURL(
 ### <a name="requirements"></a>Requisiti  
   **Intestazione** afxinet. h  
   
-##  <a name="afxparseurlex"></a>AfxParseURLEx  
+##  <a name="afxparseurlex"></a>  AfxParseURLEx  
  Questa funzione globale è la versione estesa del [AfxParseURL](#afxparseurl) e viene utilizzata per [CInternetSession:: OpenURL](../../mfc/reference/cinternetsession-class.md#openurl).  
   
 ```   
@@ -219,7 +214,7 @@ BOOL AFXAPI AfxParseURLEx(
 ## <a name="see-also"></a>Vedere anche  
  [Macro e funzioni globali](../../mfc/reference/mfc-macros-and-globals.md)
  
-## <a name="afxgetinternethandletype"></a>AfxGetInternetHandleType
+## <a name="afxgetinternethandletype"></a>  AfxGetInternetHandleType
 Utilizzare questa funzione globale per determinare il tipo di un handle di Internet.  
    
 ### <a name="syntax"></a>Sintassi  
@@ -272,7 +267,7 @@ DWORD AFXAPI AfxGetInternetHandleType(  HINTERNET hQuery );
  [Macro e funzioni globali](mfc-macros-and-globals.md)   
  [AfxParseURL](internet-url-parsing-globals.md#afxparseurl)
  
-## <a name="afxthrowinternetexception"></a>AfxThrowInternetException
+## <a name="afxthrowinternetexception"></a>  AfxThrowInternetException
 Genera un'eccezione di Internet.  
    
 ### <a name="syntax"></a>Sintassi    

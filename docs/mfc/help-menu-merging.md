@@ -1,13 +1,10 @@
 ---
 title: Unione di Menu della Guida | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - merging Help menus [MFC]
 - Help [MFC], for active document containers
 ms.assetid: 9d615999-79ba-471a-9288-718f0c903d49
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c4d3ae9509edcbe79417bb37d02f4f585b2da653
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ce8d5212f78546c08734aed6fd7e236fa4446007
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="help-menu-merging"></a>Unione di menu della Guida
 Quando un oggetto è attivo in un contenitore, il menu di protocollo di unione dei documenti OLE fornisce l'oggetto controllo completo di **Guida** menu. Di conseguenza, gli argomenti della Guida del contenitore non sono disponibili, a meno che l'utente disattiva l'oggetto. L'architettura active document containment amplia le regole per l'unione per consentire il contenitore e un documento attivo di condividere il menu dei menu sul posto. Le nuove regole sono semplicemente ulteriori convenzioni sul componente che possiede la parte del menu di scelta e modalità di costruzione di menu condiviso.  

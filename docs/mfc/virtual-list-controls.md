@@ -1,13 +1,10 @@
 ---
 title: Controlli elenco virtuali | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - list controls [MFC], List view
 - virtual list controls
 ms.assetid: 319f841f-e426-423a-8276-d93f965b0b45
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0223d9733f9290d989183a34b91779ee1f4d5e28
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0b580e455aab7ff95beb85c02b8e3ca79dfa8a46
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="virtual-list-controls"></a>Controlli List virtuali
 Un controllo elenco virtuale è un controllo visualizzazione elenco contenente il **LVS_OWNERDATA** stile. Questo stile consente al controllo di supportare fino a un conteggio elementi di un `DWORD` (numero predefinito dell'elemento è limitato a un `int`). Tuttavia, il vantaggio principale offerto da questo stile è la possibilità di avere solo un subset di elementi di dati in memoria in qualsiasi momento. In questo modo il controllo di visualizzazione elenco virtuale per cui si presta per l'utilizzo con database di grandi dimensioni di informazioni, in cui i metodi specifici di accesso ai dati sono già presenti.  
@@ -43,15 +38,15 @@ Un controllo elenco virtuale è un controllo visualizzazione elenco contenente i
   
  Nel gestore per il **LVN_GETDISPINFO** messaggio di notifica, è necessario verificare che il tipo di informazioni viene richiesto. I valori possibili sono:  
   
--   `LVIF_TEXT`Il `pszText` membro deve essere compilato.  
+-   `LVIF_TEXT` Il `pszText` membro deve essere compilato.  
   
--   `LVIF_IMAGE`Il `iImage` membro deve essere compilato.  
+-   `LVIF_IMAGE` Il `iImage` membro deve essere compilato.  
   
 -   **LVIF_INDENT** il *membro* membro deve essere compilato.  
   
--   `LVIF_PARAM`Il *lParam* membro deve essere compilato. (Non presente per gli elementi secondari).  
+-   `LVIF_PARAM` Il *lParam* membro deve essere compilato. (Non presente per gli elementi secondari).  
   
--   `LVIF_STATE`Il *stato* membro deve essere compilato.  
+-   `LVIF_STATE` Il *stato* membro deve essere compilato.  
   
  È quindi necessario fornire le informazioni richieste al Framework.  
   

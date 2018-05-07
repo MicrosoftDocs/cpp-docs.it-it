@@ -1,12 +1,9 @@
 ---
 title: Classe CVSListBox | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CVSListBox
@@ -37,17 +34,15 @@ helpviewer_keywords:
 - CVSListBox [MFC], SetItemData
 - CVSListBox [MFC], GetListHwnd
 ms.assetid: c79be7b4-46ed-4af8-a41e-68962782d8ef
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f97d55b0b23302920e71dfd35766bfa0a4294d97
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 380b470531fd28d8cfe68aa931105430111c3dbf
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cvslistbox-class"></a>Classe CVSListBox
 La `CVSListBox` classe supporta un controllo elenco modificabile.  
@@ -117,7 +112,7 @@ class CVSListBox : public CVSListBoxBase
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** afxvslistbox.h  
   
-##  <a name="additem"></a>CVSListBox::AddItem  
+##  <a name="additem"></a>  CVSListBox::AddItem  
  Aggiunge una stringa a un controllo elenco.  
   
 ```  
@@ -143,7 +138,7 @@ virtual int AddItem(
 ### <a name="remarks"></a>Note  
  Utilizzare il [CVSListBox::GetItemData](#getitemdata) metodo per recuperare il valore specificato per il `dwData` parametro. Questo valore può essere un valore integer specifico dell'applicazione o un puntatore a altri dati.  
   
-##  <a name="cvslistbox"></a>CVSListBox::CVSListBox  
+##  <a name="cvslistbox"></a>  CVSListBox::CVSListBox  
  Costruisce un oggetto `CVSListBox`.  
   
 ```  
@@ -154,7 +149,7 @@ CVSListBox();
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="edititem"></a>CVSListBox::EditItem  
+##  <a name="edititem"></a>  CVSListBox::EditItem  
  Avvia un'operazione di modifica del testo di un elemento controllo elenco.  
   
 ```  
@@ -166,12 +161,12 @@ virtual BOOL EditItem(int iIndex);
  Indice in base zero di un elemento controllo elenco.  
   
 ### <a name="return-value"></a>Valore restituito  
- `TRUE`Se l'operazione di modifica viene avviato correttamente. in caso contrario, `FALSE`.  
+ `TRUE` Se l'operazione di modifica viene avviato correttamente. in caso contrario, `FALSE`.  
   
 ### <a name="remarks"></a>Note  
  L'utente inizia un'operazione di modifica facendo doppio clic sull'etichetta di un elemento o premendo il **F2** o **barra spaziatrice** chiave quando un elemento ha lo stato attivo.  
   
-##  <a name="getcount"></a>CVSListBox::GetCount  
+##  <a name="getcount"></a>  CVSListBox::GetCount  
  Recupera il numero di stringhe in un controllo elenco modificabile.  
   
 ```  
@@ -184,7 +179,7 @@ virtual int GetCount() const;
 ### <a name="remarks"></a>Note  
  Si noti che il conteggio è maggiore del valore di indice dell'ultimo elemento in quanto l'indice in base zero.  
   
-##  <a name="getitemdata"></a>CVSListBox::GetItemData  
+##  <a name="getitemdata"></a>  CVSListBox::GetItemData  
  Recupera un valore a 32 bit specifico dell'applicazione associata a un elemento controllo elenco modificabile.  
   
 ```  
@@ -201,7 +196,7 @@ virtual DWORD_PTR GetItemData(int iIndex) const;
 ### <a name="remarks"></a>Note  
  Utilizzare il [CVSListBox::SetItemData](#setitemdata) o [CVSListBox::AddItem](#additem) metodo per associare il valore a 32 bit con l'elemento controllo elenco. Questo valore può essere un valore integer specifico dell'applicazione o un puntatore a altri dati.  
   
-##  <a name="getitemtext"></a>CVSListBox::GetItemText  
+##  <a name="getitemtext"></a>  CVSListBox::GetItemText  
  Recupera il testo di un elemento controllo elenco modificabile.  
   
 ```  
@@ -217,7 +212,7 @@ virtual CString GetItemText(int iIndex) const;
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="getlisthwnd"></a>CVSListBox::GetListHwnd  
+##  <a name="getlisthwnd"></a>  CVSListBox::GetListHwnd  
  Restituisce l'handle del controllo visualizzazione elenco incorporato corrente.  
   
 ```  
@@ -230,7 +225,7 @@ virtual HWND GetListHwnd() const;
 ### <a name="remarks"></a>Note  
  Utilizzare questo metodo per recuperare un handle del controllo visualizzazione elenco incorporato che supporta la `CVSListBox` classe.  
   
-##  <a name="getselitem"></a>CVSListBox::GetSelItem  
+##  <a name="getselitem"></a>  CVSListBox::GetSelItem  
  Recupera l'indice in base zero dell'elemento attualmente selezionato in un controllo elenco modificabile.  
   
 ```  
@@ -242,7 +237,7 @@ virtual int GetSelItem() const;
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="removeitem"></a>CVSListBox::RemoveItem  
+##  <a name="removeitem"></a>  CVSListBox::RemoveItem  
  Rimuove un elemento da un controllo elenco modificabile.  
   
 ```  
@@ -254,11 +249,11 @@ virtual BOOL RemoveItem(int iIndex);
  Indice in base zero dell'elemento controllo elenco modificabile.  
   
 ### <a name="return-value"></a>Valore restituito  
- `TRUE`Se viene rimosso l'elemento specificato. in caso contrario, `FALSE`.  
+ `TRUE` Se viene rimosso l'elemento specificato. in caso contrario, `FALSE`.  
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="selectitem"></a>CVSListBox::SelectItem  
+##  <a name="selectitem"></a>  CVSListBox::SelectItem  
  Seleziona una stringa di controllo elenco modificabile.  
   
 ```  
@@ -275,7 +270,7 @@ virtual BOOL SelectItem(int iItem);
 ### <a name="remarks"></a>Note  
  Questo metodo consente di selezionare l'elemento specificato e, se necessario, scorre l'elemento nella visualizzazione.  
   
-##  <a name="setitemdata"></a>CVSListBox::SetItemData  
+##  <a name="setitemdata"></a>  CVSListBox::SetItemData  
  Associa un elemento controllo elenco modificabile di un valore specifico dell'applicazione a 32 bit.  
   
 ```  

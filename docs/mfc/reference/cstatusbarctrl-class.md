@@ -1,12 +1,9 @@
 ---
 title: CStatusBarCtrl (classe) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CStatusBarCtrl
@@ -53,17 +50,15 @@ helpviewer_keywords:
 - CStatusBarCtrl [MFC], SetText
 - CStatusBarCtrl [MFC], SetTipText
 ms.assetid: 8504ad38-7b91-4746-aede-ac98886eb47b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3ee095257ddf3fd322a7e42e3f6fff6ac7cec76a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f34711389478997b3e2c43cb2d812b1b961df714
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cstatusbarctrl-class"></a>CStatusBarCtrl (classe)
 Fornisce la funzionalità del controllo barra di stato comune di Windows.  
@@ -124,7 +119,7 @@ class CStatusBarCtrl : public CWnd
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** afxcmn.h  
   
-##  <a name="create"></a>CStatusBarCtrl::Create  
+##  <a name="create"></a>  CStatusBarCtrl::Create  
  Crea un controllo barra di stato e lo collega a un `CStatusBarCtrl` oggetto.  
   
 ```  
@@ -161,7 +156,7 @@ virtual BOOL Create(
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFC_CStatusBarCtrl#1](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_1.cpp)]  
   
-##  <a name="createex"></a>CStatusBarCtrl::CreateEx  
+##  <a name="createex"></a>  CStatusBarCtrl::CreateEx  
  Crea un controllo (una finestra figlio) e la associa il `CStatusBarCtrl` oggetto.  
   
 ```  
@@ -195,14 +190,14 @@ virtual BOOL CreateEx(
 ### <a name="remarks"></a>Note  
  Utilizzare `CreateEx` anziché [crea](#create) per applicare stili estesi di Windows, specificati per il prefisso di stile esteso di Windows **WS_EX _**.  
   
-##  <a name="cstatusbarctrl"></a>CStatusBarCtrl::CStatusBarCtrl  
+##  <a name="cstatusbarctrl"></a>  CStatusBarCtrl::CStatusBarCtrl  
  Costruisce un oggetto `CStatusBarCtrl`.  
   
 ```  
 CStatusBarCtrl();
 ```  
   
-##  <a name="drawitem"></a>CStatusBarCtrl::DrawItem  
+##  <a name="drawitem"></a>  CStatusBarCtrl::DrawItem  
  Chiamato dal framework quando un aspetto visivo di un proprietario barra controllo di stato.  
   
 ```  
@@ -220,7 +215,7 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
   
  L'applicazione è necessario ripristinare tutti grafica device interface (GDI) gli oggetti selezionati per il contesto di visualizzazione fornito `lpDrawItemStruct` prima di questo membro funzione termina.  
   
-##  <a name="getborders"></a>CStatusBarCtrl::GetBorders  
+##  <a name="getborders"></a>  CStatusBarCtrl::GetBorders  
  Recupera larghezza corrente del controllo barra di stato dei bordi orizzontali e verticali e dello spazio tra i rettangoli.  
   
 ```  
@@ -239,7 +234,7 @@ BOOL GetBorders(
  *nHorz*  
  Riferimento a un valore integer che riceve la larghezza del bordo orizzontale.  
   
- *Verti*  
+ *Converti*  
  Riferimento a un valore integer che riceve la larghezza del bordo verticale.  
   
  *nSpacing*  
@@ -254,7 +249,7 @@ BOOL GetBorders(
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFC_CStatusBarCtrl#2](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_2.cpp)]  
   
-##  <a name="geticon"></a>CStatusBarCtrl::GetIcon  
+##  <a name="geticon"></a>  CStatusBarCtrl::GetIcon  
  Recupera l'icona per una parte (noto anche come un riquadro) nella barra di stato corrente.  
   
 ```  
@@ -285,7 +280,7 @@ HICON GetIcon(int iPart) const;
   
  [!code-cpp[NVC_MFC_CStatusBarCtrl_s1#2](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_4.cpp)]  
   
-##  <a name="getparts"></a>CStatusBarCtrl::GetParts  
+##  <a name="getparts"></a>  CStatusBarCtrl::GetParts  
  Recupera un conteggio delle parti in un controllo barra di stato.  
   
 ```  
@@ -310,7 +305,7 @@ int GetParts(
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFC_CStatusBarCtrl#3](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_5.cpp)]  
   
-##  <a name="getrect"></a>CStatusBarCtrl::GetRect  
+##  <a name="getrect"></a>  CStatusBarCtrl::GetRect  
  Recupera il rettangolo di delimitazione di una parte di un controllo barra di stato.  
   
 ```  
@@ -332,7 +327,7 @@ BOOL GetRect(
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFC_CStatusBarCtrl#4](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_6.cpp)]  
   
-##  <a name="gettext"></a>CStatusBarCtrl:: GetText  
+##  <a name="gettext"></a>  CStatusBarCtrl:: GetText  
  Recupera il testo dalla parte specificata di un controllo barra di stato.  
   
 ```  
@@ -358,11 +353,11 @@ int GetText(
   
 - **0** viene disegnato il testo con un bordo in basso rispetto al piano della barra di stato.  
   
-- `SBT_NOBORDERS`Il testo viene disegnato senza bordi.  
+- `SBT_NOBORDERS` Il testo viene disegnato senza bordi.  
   
-- `SBT_POPOUT`Il testo viene disegnato con un bordo in alto rispetto al piano della barra di stato.  
+- `SBT_POPOUT` Il testo viene disegnato con un bordo in alto rispetto al piano della barra di stato.  
   
-- `SBT_OWNERDRAW`Se il testo ha la `SBT_OWNERDRAW` , tipo di disegno `pType` riceve questo messaggio e restituisce il valore a 32 bit associato al testo anziché il tipo di lunghezza e l'operazione.  
+- `SBT_OWNERDRAW` Se il testo ha il `SBT_OWNERDRAW` , tipo di disegno `pType` riceve questo messaggio e restituisce il valore a 32 bit associato al testo anziché al tipo di lunghezza e l'operazione.  
   
 ### <a name="return-value"></a>Valore restituito  
  Lunghezza, espressa in caratteri, del testo o un [CString](../../atl-mfc-shared/reference/cstringt-class.md) contenente il testo corrente.  
@@ -370,7 +365,7 @@ int GetText(
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFC_CStatusBarCtrl#5](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_7.cpp)]  
   
-##  <a name="gettextlength"></a>CStatusBarCtrl:: Gettextlength  
+##  <a name="gettextlength"></a>  CStatusBarCtrl:: Gettextlength  
  Recupera la lunghezza, in caratteri, del testo da una parte specificata di un controllo barra di stato.  
   
 ```  
@@ -388,11 +383,11 @@ int GetTextLength(
   
 - **0** viene disegnato il testo con un bordo in basso rispetto al piano della barra di stato.  
   
-- `SBT_NOBORDERS`Il testo viene disegnato senza bordi.  
+- `SBT_NOBORDERS` Il testo viene disegnato senza bordi.  
   
-- `SBT_OWNERDRAW`Viene disegnato il testo dalla finestra padre.  
+- `SBT_OWNERDRAW` Viene disegnato il testo dalla finestra padre.  
   
-- `SBT_POPOUT`Il testo viene disegnato con un bordo in alto rispetto al piano della barra di stato.  
+- `SBT_POPOUT` Il testo viene disegnato con un bordo in alto rispetto al piano della barra di stato.  
   
 ### <a name="return-value"></a>Valore restituito  
  La lunghezza in caratteri, del testo.  
@@ -400,7 +395,7 @@ int GetTextLength(
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFC_CStatusBarCtrl#6](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_8.cpp)]  
   
-##  <a name="gettiptext"></a>CStatusBarCtrl::GetTipText  
+##  <a name="gettiptext"></a>  CStatusBarCtrl::GetTipText  
  Recupera il testo della descrizione comando per un riquadro in una barra di stato.  
   
 ```  
@@ -420,7 +415,7 @@ CString GetTipText(int nPane) const;
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFC_CStatusBarCtrl#7](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_9.cpp)]  
   
-##  <a name="issimple"></a>CStatusBarCtrl::IsSimple  
+##  <a name="issimple"></a>  CStatusBarCtrl::IsSimple  
  Verifica di un controllo di finestra di stato per determinare se è in modalità semplice.  
   
 ```  
@@ -433,7 +428,7 @@ BOOL IsSimple() const;
 ### <a name="remarks"></a>Note  
  Questa funzione membro implementa il comportamento del messaggio Win32 [SB_ISSIMPLE](http://msdn.microsoft.com/library/windows/desktop/bb760753), come descritto in Windows SDK.  
   
-##  <a name="setbkcolor"></a>CStatusBarCtrl::SetBkColor  
+##  <a name="setbkcolor"></a>  CStatusBarCtrl::SetBkColor  
  Imposta il colore di sfondo in una barra di stato.  
   
 ```  
@@ -453,7 +448,7 @@ COLORREF SetBkColor(COLORREF cr);
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFC_CStatusBarCtrl#8](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_10.cpp)]  
   
-##  <a name="seticon"></a>CStatusBarCtrl::SetIcon  
+##  <a name="seticon"></a>  CStatusBarCtrl::SetIcon  
  Imposta l'icona per un riquadro in una barra di stato.  
   
 ```  
@@ -478,7 +473,7 @@ BOOL SetIcon(
 ### <a name="example"></a>Esempio  
   Per vedere l'esempio [CStatusBarCtrl::SetBkColor](#setbkcolor).  
   
-##  <a name="setminheight"></a>CStatusBarCtrl::SetMinHeight  
+##  <a name="setminheight"></a>  CStatusBarCtrl::SetMinHeight  
  Imposta l'altezza minima di stato barra area di disegno del controllo.  
   
 ```  
@@ -495,7 +490,7 @@ void SetMinHeight(int nMin);
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFC_CStatusBarCtrl#9](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_11.cpp)]  
   
-##  <a name="setparts"></a>CStatusBarCtrl::SetParts  
+##  <a name="setparts"></a>  CStatusBarCtrl::SetParts  
  Imposta il numero di parti in un controllo e la coordinata del bordo destro di ogni parte della barra di stato.  
   
 ```  
@@ -517,7 +512,7 @@ BOOL SetParts(
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFC_CStatusBarCtrl#10](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_12.cpp)]  
   
-##  <a name="setsimple"></a>CStatusBarCtrl::SetSimple  
+##  <a name="setsimple"></a>  CStatusBarCtrl::SetSimple  
  Specifica se un controllo barra di stato viene visualizzato testo semplice o Visualizza tutte le parti di controllo set da una precedente chiamata a [SetParts](#setparts).  
   
 ```  
@@ -534,7 +529,7 @@ BOOL SetSimple(BOOL bSimple = TRUE);
 ### <a name="remarks"></a>Note  
  Se l'applicazione passa il controllo barra di stato da non semplice su simple, o viceversa, il sistema ridisegna immediatamente il controllo.  
   
-##  <a name="settext"></a>CStatusBarCtrl::SetText  
+##  <a name="settext"></a>  CStatusBarCtrl::SetText  
  Imposta il testo nella parte specificata di un controllo barra di stato.  
   
 ```  
@@ -563,7 +558,7 @@ BOOL SetText(
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFC_CStatusBarCtrl#11](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_13.cpp)]  
   
-##  <a name="settiptext"></a>CStatusBarCtrl:: SetTipText  
+##  <a name="settiptext"></a>  CStatusBarCtrl:: SetTipText  
  Imposta il testo della descrizione comando per un riquadro in una barra di stato.  
   
 ```  

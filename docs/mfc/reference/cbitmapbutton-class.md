@@ -1,12 +1,9 @@
 ---
 title: Classe CBitmapButton | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CBitmapButton
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - CBitmapButton [MFC], LoadBitmaps
 - CBitmapButton [MFC], SizeToContent
 ms.assetid: 9ad6cb45-c3c4-4fb1-96d3-1fe3df7bbcfc
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d926e538cf9f9f1cb4935a1d53ba6c1fd7f4696e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6ba2a3f54ff39341c43ee497fcccda43cd3625fa
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cbitmapbutton-class"></a>Classe CBitmapButton
 Crea controlli di tipo pulsante di comando dotati di immagini bitmap anziché di testo come etichetta.  
@@ -61,7 +56,7 @@ class CBitmapButton : public CButton
 |[CBitmapButton::SizeToContent](#sizetocontent)|Pulsante per adattare la bitmap di dimensioni.|  
   
 ## <a name="remarks"></a>Note  
- `CBitmapButton`gli oggetti contengono fino a quattro bitmap, che contengono immagini per i diversi stati di un pulsante può presupporre: attivo (o normale) verso il basso o selezionato, con stato attivo e disabilitato. Solo il primo bitmap è obbligatoria. gli altri sono facoltativi.  
+ `CBitmapButton` gli oggetti contengono le bitmap fino a quattro, che contengono le immagini per i diversi stati può presupporre un pulsante: alto (o normale) verso il basso o selezionato, con stato attivo e disabilitato. Solo il primo bitmap è obbligatoria. gli altri sono facoltativi.  
   
  Le immagini bitmap pulsante includono il bordo dell'immagine, nonché l'immagine stessa. Bordo in genere riveste un ruolo nella visualizzazione stato del pulsante. La bitmap per lo stato attivo, ad esempio, in genere è simile a quella per lo stato attivo, ma con un margine rettangolo tratteggiato dal bordo o di una linea spessa continua al bordo. La bitmap per disabili stato in genere è simile a quella per lo stato attivo ma con un contrasto inferiore (ad esempio, una selezione di menu in grigio o appare in grigio).  
   
@@ -122,7 +117,7 @@ class CBitmapButton : public CButton
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** AFXEXT. h  
   
-##  <a name="autoload"></a>CBitmapButton::AutoLoad  
+##  <a name="autoload"></a>  CBitmapButton::AutoLoad  
  Associa l'oggetto di un pulsante in una finestra di dialogo di `CBitmapButton` (classe), carica il bitmap(s) in base al nome e il pulsante Adatta la bitmap di dimensioni.  
   
 ```  
@@ -147,7 +142,7 @@ BOOL AutoLoad(
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFCControlLadenDialog#75](../../mfc/codesnippet/cpp/cbitmapbutton-class_1.cpp)]  
   
-##  <a name="cbitmapbutton"></a>CBitmapButton::CBitmapButton  
+##  <a name="cbitmapbutton"></a>  CBitmapButton::CBitmapButton  
  Crea un oggetto `CBitmapButton`.  
   
 ```  
@@ -160,7 +155,7 @@ CBitmapButton();
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFCControlLadenDialog#57](../../mfc/codesnippet/cpp/cbitmapbutton-class_2.cpp)]  
   
-##  <a name="loadbitmaps"></a>CBitmapButton::LoadBitmaps  
+##  <a name="loadbitmaps"></a>  CBitmapButton::LoadBitmaps  
  Utilizzare questa funzione quando si desidera caricare immagini bitmap identificate da ai nomi di risorse o ai numeri ID, o quando non è possibile utilizzare il `AutoLoad` funzionare perché, ad esempio, si sta creando un pulsante bitmap che non fa parte di una finestra di dialogo.  
   
 ```  
@@ -209,7 +204,7 @@ BOOL LoadBitmaps(
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFCControlLadenDialog#58](../../mfc/codesnippet/cpp/cbitmapbutton-class_3.cpp)]  
   
-##  <a name="sizetocontent"></a>CBitmapButton::SizeToContent  
+##  <a name="sizetocontent"></a>  CBitmapButton::SizeToContent  
  Chiamare questa funzione per ridimensionare un pulsante bitmap per le dimensioni dell'immagine bitmap.  
   
 ```  

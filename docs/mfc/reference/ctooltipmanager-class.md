@@ -1,12 +1,9 @@
 ---
 title: Classe CTooltipManager | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CTooltipManager
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - CTooltipManager [MFC], SetTooltipText
 - CTooltipManager [MFC], UpdateTooltips
 ms.assetid: c71779d7-8b6e-47ef-8500-d4552731fe86
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2adb62f107cb50ade529d552ce1735c57f74b171
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 78b191766e33d291317ef50a4d5373dc26428577
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ctooltipmanager-class"></a>Classe CTooltipManager
 Gestisce informazioni di runtime sulle descrizioni comandi. L'istanza della classe `CTooltipManager` viene avviata una volta per applicazione.  
@@ -54,7 +49,7 @@ class CTooltipManager : public CObject
 |----------|-----------------|  
 |[CTooltipManager::CreateToolTip](#createtooltip)|Crea un controllo ToolTip per i tipi di controllo di Windows specificati.|  
 |[CTooltipManager::DeleteToolTip](#deletetooltip)|Elimina un controllo ToolTip.|  
-|[Ctooltipmanager:: Settooltipparams](#settooltipparams)|Personalizza l'aspetto visivo del controllo ToolTip per i tipi di controllo di Windows specificati.|  
+|[Settooltipparams](#settooltipparams)|Personalizza l'aspetto visivo del controllo ToolTip per i tipi di controllo di Windows specificati.|  
 |[CTooltipManager::SetTooltipText](#settooltiptext)|Imposta il testo e la descrizione per un controllo ToolTip.|  
 |[CTooltipManager::UpdateTooltips](#updatetooltips)||  
   
@@ -69,7 +64,7 @@ class CTooltipManager : public CObject
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** afxtooltipmanager. h  
   
-##  <a name="createtooltip"></a>CTooltipManager::CreateToolTip  
+##  <a name="createtooltip"></a>  CTooltipManager::CreateToolTip  
  Crea un controllo tooltip.  
   
 ```  
@@ -113,7 +108,7 @@ static BOOL CreateToolTip(
 |AFX_TOOLTIP_TYPE_TOOLBAR|Una barra degli strumenti.|CMFCToolBar, CMFCPopupMenuBar|  
 |AFX_TOOLTIP_TYPE_TOOLBOX|Una casella degli strumenti.|Nessuno.|  
   
-##  <a name="deletetooltip"></a>CTooltipManager::DeleteToolTip  
+##  <a name="deletetooltip"></a>  CTooltipManager::DeleteToolTip  
  Elimina un controllo ToolTip.  
   
 ```  
@@ -127,7 +122,7 @@ static void DeleteToolTip(CToolTipCtrl*& pToolTip);
 ### <a name="remarks"></a>Note  
  Chiamare questo metodo per ogni [classe CToolTipCtrl](../../mfc/reference/ctooltipctrl-class.md) che è stato creato da [CTooltipManager::CreateToolTip](#createtooltip). Il controllo padre deve chiamare questo metodo dal relativo `OnDestroy` gestore. Ciò è necessario per rimuovere correttamente la descrizione comando da framework. Questo metodo imposta `pToolTip` per `NULL` prima della restituzione.  
   
-##  <a name="settooltipparams"></a>Ctooltipmanager:: Settooltipparams  
+##  <a name="settooltipparams"></a>  Settooltipparams  
  Consente di personalizzare l'aspetto del controllo tooltip per i tipi di controllo di Windows specificati.  
   
 ```  
@@ -152,14 +147,14 @@ void SetTooltipParams(
   
  Quando si chiama questo metodo, tutti i proprietari esistenti di descrizione comando visualizzato il messaggio AFX_WM_UPDATETOOLTIPS e creano nuovamente le descrizioni dei comandi utilizzando [CTooltipManager::CreateToolTip](#createtooltip).  
   
- `nTypes`può essere qualsiasi combinazione della descrizione comando valida tipi [CTooltipManager::CreateToolTip](#createtooltip) Usa o può essere AFX_TOOLTIP_TYPE_ALL. Se si passa AFX_TOOLTIP_TYPE_ALL, tutti i tipi di descrizione comando sono interessati.  
+ `nTypes` può essere qualsiasi combinazione della descrizione comando valida tipi [CTooltipManager::CreateToolTip](#createtooltip) utilizza, oppure può essere AFX_TOOLTIP_TYPE_ALL. Se si passa AFX_TOOLTIP_TYPE_ALL, tutti i tipi di descrizione comando sono interessati.  
   
 ### <a name="example"></a>Esempio  
  Nell'esempio seguente viene illustrato come utilizzare il `SetTooltipParams` metodo la `CTooltipManager` classe. Questo frammento di codice fa parte dell' [esempio Draw Client](../../visual-cpp-samples.md).  
   
  [!code-cpp[NVC_MFC_DrawClient#11](../../mfc/reference/codesnippet/cpp/ctooltipmanager-class_1.cpp)]  
   
-##  <a name="settooltiptext"></a>CTooltipManager::SetTooltipText  
+##  <a name="settooltiptext"></a>  CTooltipManager::SetTooltipText  
  Imposta il testo e la descrizione per una descrizione comandi.  
   
 ```  
@@ -190,7 +185,7 @@ static void SetTooltipText(
 ### <a name="remarks"></a>Note  
  Il valore di `nType` deve essere lo stesso valore di `nType` parametro di [CTooltipManager::CreateToolTip](#createtooltip) al momento della creazione della descrizione comando.  
   
-##  <a name="updatetooltips"></a>CTooltipManager::UpdateTooltips  
+##  <a name="updatetooltips"></a>  CTooltipManager::UpdateTooltips  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  

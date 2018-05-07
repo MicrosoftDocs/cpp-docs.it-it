@@ -1,29 +1,24 @@
 ---
 title: 'Procedura dettagliata: Utilizzo di MFC la nuova Shell controlli | Documenti Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - shell controls (MFC)
 ms.assetid: f0015caa-199d-4aaf-9501-5a239fce9095
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: be882671da836f7d96f4c726753d6235735f363d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f19939a50b5bdbf98d087450b6301a923651a433
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-using-the-new-mfc-shell-controls"></a>Procedura dettagliata: utilizzo dei nuovi controlli Shell MFC
 In questa procedura dettagliata verrà creata un'applicazione simile a Esplora risorse. Si creerà una finestra che contiene due riquadri. Riquadro a sinistra conterrà un [CMFCShellTreeCtrl](../mfc/reference/cmfcshelltreectrl-class.md) oggetto che consente di visualizzare il Desktop in una visualizzazione gerarchica. Il riquadro di destra contiene un [oggetto CMFCShellListCtrl](../mfc/reference/cmfcshelllistctrl-class.md) che vengono mostrati i file nella cartella selezionata nel riquadro a sinistra.  

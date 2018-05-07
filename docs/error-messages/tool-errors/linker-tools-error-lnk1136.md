@@ -1,12 +1,9 @@
 ---
 title: Strumenti del linker LNK1136 errore | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - LNK1136
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - LNK1136
 ms.assetid: 40c6d909-eb3f-4045-a0fc-4caa2f6db506
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1530ead978d2bb2c6883a5ab3c0f9b2c347de942
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 53cab76b186ce6fdc3aa9a5a5d581044c65616e8
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="linker-tools-error-lnk1136"></a>Errore degli strumenti del linker LNK1136
 file danneggiato o non valido  

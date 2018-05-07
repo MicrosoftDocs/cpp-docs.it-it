@@ -1,12 +1,9 @@
 ---
 title: Errore irreversibile C1017 | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C1017
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C1017
 ms.assetid: 5542e604-599d-4e36-8f83-1d454c5753c9
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e28a4b09ef4d62edd97d734e4a3ad64b8a0c2f86
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 08433109a959b324621e9c837e67cf529d9f6fdb
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="fatal-error-c1017"></a>Errore irreversibile C1017
 espressione costante integer non valida  
@@ -55,7 +50,7 @@ espressione costante integer non valida
   
  Poiché `CONSTANT_NAME` restituisce una stringa e non un numero intero, il `#if` direttiva genera un errore irreversibile C1017.  
   
- In altri casi, il preprocessore restituisce una costante definita come zero. Ciò può provocare risultati imprevisti, come illustrato nell'esempio seguente. `YES`non è definito, pertanto viene restituito zero. L'espressione `#if` `CONSTANT_NAME` restituisce false e il codice da utilizzare in `YES` viene rimosso dal preprocessore. `NO`è anche definito (zero), in modo `#elif` `CONSTANT_NAME==NO` restituisce true (`0 == 0`), il preprocessore lascia il codice nel `#elif` parte dell'istruzione, ovvero esattamente l'opposto del comportamento previsto.  
+ In altri casi, il preprocessore restituisce una costante definita come zero. Ciò può provocare risultati imprevisti, come illustrato nell'esempio seguente. `YES` non è definito, pertanto viene restituito zero. L'espressione `#if` `CONSTANT_NAME` restituisce false e il codice da utilizzare in `YES` viene rimosso dal preprocessore. `NO` è anche definito (zero), pertanto `#elif` `CONSTANT_NAME==NO` restituisce true (`0 == 0`), il preprocessore lascia il codice nel `#elif` parte dell'istruzione, ovvero esattamente l'opposto del comportamento previsto.  
   
 ```  
 // C1017c.cpp  

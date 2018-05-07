@@ -1,12 +1,9 @@
 ---
 title: Classe CMDITabInfo | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMDITabInfo
@@ -37,17 +34,15 @@ helpviewer_keywords:
 - CMDITabInfo [MFC], m_style
 - CMDITabInfo [MFC], m_tabLocation
 ms.assetid: 988ae1b7-4f7f-4239-b88f-7e28b3291c5e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2b670b26855f5edcfb955d3dd0f8150a999f3a8e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b95706603c8fe8a8f53be8cd0db405cd649271f2
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmditabinfo-class"></a>Classe CMDITabInfo
 Il `CMDITabInfo` classe viene utilizzata per passare i parametri [CMDIFrameWndEx:: Enablemditabbedgroups](../../mfc/reference/cmdiframewndex-class.md#enablemditabbedgroups) metodo. Impostare i membri di questa classe per controllare il comportamento dei gruppi MDI a schede.  
@@ -102,7 +97,7 @@ class CMDITabInfo
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** afxmdiclientareawnd.h  
   
-##  <a name="m_bactivetabclosebutton_"></a>CMDITabInfo::m_bActiveTabCloseButton;  
+##  <a name="m_bactivetabclosebutton_"></a>  CMDITabInfo::m_bActiveTabCloseButton;  
  Specifica se un **Chiudi** pulsante viene visualizzato sull'etichetta della scheda attiva.  
   
 ```  
@@ -112,7 +107,7 @@ BOOL m_bActiveTabCloseButton;
 ### <a name="remarks"></a>Note  
  Se `TRUE`, verrà visualizzata l'etichetta della scheda attiva un **Chiudi** pulsante. Il **Chiudi** pulsante verrà rimosso dall'angolo superiore destro dell'area della scheda. In caso contrario, non verrà visualizzata l'etichetta della scheda attiva un **Chiudi** pulsante. Il **Chiudi** pulsante verrà visualizzato nell'angolo superiore destro dell'area della scheda.  
   
-##  <a name="m_bautocolor"></a>CMDITabInfo::m_bAutoColor  
+##  <a name="m_bautocolor"></a>  CMDITabInfo::m_bAutoColor  
  Specifica se ogni scheda MDI con il relativo colore.  
   
 ```  
@@ -122,7 +117,7 @@ BOOL m_bAutoColor;
 ### <a name="remarks"></a>Note  
  Se `TRUE`, ogni scheda avrà il relativo colore. Il set di colori viene gestito dalla libreria MFC. In caso contrario, le schede vengono visualizzate in bianco. Il valore predefinito è `FALSE`.  
   
-##  <a name="m_bdocumentmenu"></a>CMDITabInfo::m_bDocumentMenu  
+##  <a name="m_bdocumentmenu"></a>  CMDITabInfo::m_bDocumentMenu  
  Specifica se ogni scheda Visualizza un menu di scelta rapida che viene visualizzato un elenco di documenti aperti sul bordo destro dell'area della scheda.  
   
 ```  
@@ -132,7 +127,7 @@ BOOL m_bDocumentMenu;
 ### <a name="remarks"></a>Note  
  Se `TRUE`, windows ogni scheda consente di visualizzare un menu di scelta rapida che viene visualizzato un elenco di documenti aperti sul bordo destro dell'area della scheda; In caso contrario, la finestra a schede Visualizza i pulsanti di scorrimento sul bordo destro dell'area della scheda. Il valore predefinito è `FALSE`.  
   
-##  <a name="m_benabletabswap"></a>CMDITabInfo::m_bEnableTabSwap  
+##  <a name="m_benabletabswap"></a>  CMDITabInfo::m_bEnableTabSwap  
  Specifica se l'utente è possibile scambiare le posizioni delle schede trascinando.  
   
 ```  
@@ -142,14 +137,14 @@ BOOL m_bEnableTabSwap;
 ### <a name="remarks"></a>Note  
  Se `TRUE`, l'utente può modificare le posizioni delle schede trascinando le schede. In caso contrario, l'utente non è possibile modificare le posizioni delle schede. Il valore predefinito è `TRUE`.  
   
-##  <a name="m_bflatframe"></a>CMDITabInfo::m_bFlatFrame  
+##  <a name="m_bflatframe"></a>  CMDITabInfo::m_bFlatFrame  
  Specifica se ogni finestra a schede dispone di un frame flat.  
   
 ```  
 BOOL m_bFlatFrame;  
 ```  
   
-##  <a name="m_btabclosebutton"></a>CMDITabInfo::m_bTabCloseButton  
+##  <a name="m_btabclosebutton"></a>  CMDITabInfo::m_bTabCloseButton  
  Specifica se ogni finestra a schede Visualizza una **Chiudi** pulsante.  
   
 ```  
@@ -159,7 +154,7 @@ BOOL m_bTabCloseButton;
 ### <a name="remarks"></a>Note  
  Se `TRUE`, ogni finestra a schede Visualizza le **Chiudi** pulsante sul bordo destro della scheda. In caso contrario, il **Chiudi** pulsante non viene visualizzato. Il valore predefinito è `TRUE`.  
   
-##  <a name="m_btabcustomtooltips"></a>CMDITabInfo::m_bTabCustomTooltips  
+##  <a name="m_btabcustomtooltips"></a>  CMDITabInfo::m_bTabCustomTooltips  
  Specifica se le schede visualizzano le descrizioni comandi.  
   
 ```  
@@ -169,7 +164,7 @@ BOOL m_bTabCustomTooltips;
 ### <a name="remarks"></a>Note  
  Se `TRUE`, l'applicazione invia un `AFX_WM_ON_GET_TAB_TOOLTIP` messaggio per la cornice principale. È possibile gestire questo messaggio utilizzando il `ON_REGISTERED_MESSAGE` (macro).  
   
-##  <a name="m_btabicons"></a>CMDITabInfo::m_bTabIcons  
+##  <a name="m_btabicons"></a>  CMDITabInfo::m_bTabIcons  
  Specifica se visualizzare le icone nelle schede MDI.  
   
 ```  
@@ -179,7 +174,7 @@ BOOL m_bTabIcons;
 ### <a name="remarks"></a>Note  
  Se `TRUE`, le icone vengono visualizzate in ogni scheda MDI. In caso contrario, le icone non vengono visualizzate in schede. Il valore predefinito è `FALSE`.  
   
-##  <a name="m_ntabbordersize"></a>CMDITabInfo::m_nTabBorderSize  
+##  <a name="m_ntabbordersize"></a>  CMDITabInfo::m_nTabBorderSize  
  Specifica le dimensioni del bordo, in pixel, di ogni finestra a schede.  
   
 ```  
@@ -189,7 +184,7 @@ int m_nTabBorderSize;
 ### <a name="remarks"></a>Note  
  [CMFCVisualManager::GetMDITabsBordersSize](../../mfc/reference/cmfcvisualmanager-class.md#getmditabsborderssize) restituisce il valore predefinito.  
   
-##  <a name="m_style"></a>CMDITabInfo::m_style  
+##  <a name="m_style"></a>  CMDITabInfo::m_style  
  Specifica lo stile delle etichette di scheda.  
   
 ```  
@@ -217,7 +212,7 @@ CMFCTabCtrl::Style m_style
  `STYLE_3D_ROUNDED_SCROLL`  
  Stile 3D con etichette delle schede di arrotondamento.  
   
-##  <a name="m_tablocation"></a>CMDITabInfo::m_tabLocation  
+##  <a name="m_tablocation"></a>  CMDITabInfo::m_tabLocation  
  Specifica se le etichette delle schede si trovano nella parte superiore o inferiore della pagina.  
   
 ```  
@@ -231,7 +226,7 @@ CMFCTabCtrl::Location m_tabLocation;
   
 -   LOCATION_TOP: le etichette delle schede si trovano nella parte superiore della pagina  
   
-##  <a name="serialize"></a>CMDITabInfo::Serialize  
+##  <a name="serialize"></a>  CMDITabInfo::Serialize  
  Legge o scrive l'oggetto da un archivio o in un archivio.  
   
 ```  

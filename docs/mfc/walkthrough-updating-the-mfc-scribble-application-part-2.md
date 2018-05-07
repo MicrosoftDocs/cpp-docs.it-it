@@ -1,29 +1,24 @@
 ---
-title: 'Procedura dettagliata: Aggiornamento dell''applicazione MFC Scribble (parte 2) | Documenti Microsoft'
-ms.custom: 
+title: "Procedura dettagliata: Aggiornamento dell'applicazione MFC Scribble (parte 2) | Documenti Microsoft"
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - walkthroughs [MFC]
 ms.assetid: 602df5c2-17d4-4cd9-8cf6-dff652c4cae5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 861e0b1f76fcd441ccf5da8f56d5c5dcb23a2b8d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: eae1dd3c1662aafb6b52d2ecb821e073adc0bfd5
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-updating-the-mfc-scribble-application-part-2"></a>Procedura dettagliata: aggiornamento dell'applicazione MFC Scribble (parte 2)
 [Parte 1](../mfc/walkthrough-updating-the-mfc-scribble-application-part-1.md) di questa procedura dettagliata viene illustrato come aggiungere una barra multifunzione Office Fluent classica applicazione Scribble. Questa sezione illustra come aggiungere pannelli della barra multifunzione e i controlli che gli utenti possono usare invece i menu e comandi.  
@@ -34,7 +29,7 @@ ms.lasthandoff: 12/21/2017
 ##  <a name="top"></a> Sezioni  
  In questa parte della procedura dettagliata sono incluse le seguenti sezioni:  
   
-- [Aggiunta di pannelli di nuovo alla barra multifunzione](#addnewpanel)  
+- [Aggiunta di nuovi pannelli alla barra multifunzione](#addnewpanel)  
   
 - [Aggiunta di un pannello della Guida alla barra multifunzione](#addhelppanel)  
   
@@ -44,9 +39,9 @@ ms.lasthandoff: 12/21/2017
   
 - [Aggiunta di un membro di colore per la classe di documento](#addcolormember)  
   
-- [Inizializzazione penne e salvare le preferenze](#initpensave)  
+- [L'inizializzazione penne e salvare le preferenze](#initpensave)  
   
-##  <a name="addnewpanel"></a>Aggiunta di pannelli di nuovo alla barra multifunzione  
+##  <a name="addnewpanel"></a> Aggiunta di nuovi pannelli alla barra multifunzione  
  Questi passaggi viene illustrato come aggiungere un **vista** pannello che contiene due caselle di controllo che consentono di controllare la visibilità della barra degli strumenti e barra di stato, nonché un **finestra** pannello che contiene una divisione verticale pulsante che controlla la creazione e la disposizione delle finestre di interfaccia a documenti multipli (MDI).  
   
 #### <a name="to-add-a-view-panel-and-window-panel-to-the-ribbon-bar"></a>Per aggiungere un pannello della vista e un pannello finestra alla barra multifunzione  
@@ -81,7 +76,7 @@ ms.lasthandoff: 12/21/2017
   
  [[Sezioni](#top)]  
   
-##  <a name="addhelppanel"></a>Aggiunta di un pannello della Guida alla barra multifunzione  
+##  <a name="addhelppanel"></a> Aggiunta di un pannello della Guida alla barra multifunzione  
  A questo punto, è possibile assegnare due voci di menu che vengono definiti nell'applicazione Scribble ai pulsanti della barra multifunzione denominati **argomenti della Guida** e **su Scribble**. I pulsanti vengono aggiunti a un nuovo pannello denominato **Guida**.  
   
 #### <a name="to-add-a-help-panel"></a>Per aggiungere un pannello della Guida  
@@ -101,7 +96,7 @@ ms.lasthandoff: 12/21/2017
   
  [[Sezioni](#top)]  
   
-##  <a name="addpenpanel"></a>Aggiunta di un pannello penna alla barra multifunzione  
+##  <a name="addpenpanel"></a> Aggiunta di un pannello penna alla barra multifunzione  
  A questo punto, aggiungere un pannello per visualizzare pulsanti che consentono di controllare lo spessore e il colore della penna. Questo pannello contiene una casella di controllo che attiva o disattiva tra penne spesse e spessore. La funzionalità è simile a quello del **linea spessa** voce di menu nell'applicazione Scribble.  
   
  L'applicazione originale Scribble consente all'utente di selezionare la larghezza della penna dalla finestra di dialogo che viene visualizzato quando l'utente fa clic **la larghezza della penna** del menu. Poiché la barra multifunzione dispone di sufficiente spazio per nuovi controlli, è possibile sostituire la finestra di dialogo utilizzando due caselle combinate della barra multifunzione. Una casella combinata è possibile regolare la larghezza della penna thin e casella combinata regola la larghezza della penna spessa.  
@@ -132,7 +127,7 @@ ms.lasthandoff: 12/21/2017
   
     6.  Aggiungere il seguente codice a `CScribbleDoc::OnPenThinWidth`.  
   
- ``` *Ottenere un puntatore alla barra multifunzione barra CMFCRibbonBar* pRibbon = ((CMDIFrameWndEx*) AfxGetMainWnd()) -> GetRibbonBar(); ASSERT_VALID(pRibbon); */ / Ottenere un puntatore a una casella combinata larghezza Thin CMFCRibbonComboBox* pThinComboBox = DYNAMIC_DOWNCAST (CMFCRibbonComboBox, pRibbon -> FindByID(ID_PEN_THIN_WIDTH)); * //Get il valore selezionato  
+ ``` *Ottenere un puntatore alla barra multifunzione barra CMFCRibbonBar* pRibbon = ((CMDIFrameWndEx*) AfxGetMainWnd()) -> GetRibbonBar(); ASSERT_VALID(pRibbon); */ / Ottenere un puntatore alla casella combinata larghezza Thin CMFCRibbonComboBox* pThinComboBox = DYNAMIC_DOWNCAST (CMFCRibbonComboBox, pRibbon -> FindByID(ID_PEN_THIN_WIDTH)); * //Get il valore selezionato  
     int nCurSel = pThinComboBox -> GetCurSel(); Se (nCurSel > = 0)  
 {  
 m_nThinWidth = atoi (pThinComboBox-il > GetItem(nCurSel));
@@ -177,7 +172,7 @@ if (nCurSel>= 0)
   
  [[Sezioni](#top)]  
   
-##  <a name="addcolorbutton"></a>Aggiunta di un pulsante del colore al pannello penna  
+##  <a name="addcolorbutton"></a> Aggiunta di un pulsante del colore al pannello penna  
  Successivamente, aggiungere un [CMFCRibbonColorButton](../mfc/reference/cmfcribboncolorbutton-class.md) oggetto che consente all'utente di scribble in colore.  
   
 #### <a name="to-add-a-color-button-to-the-pen-panel"></a>Per aggiungere un pulsante del colore al pannello penna  
@@ -192,8 +187,8 @@ if (nCurSel>= 0)
   
  [[Sezioni](#top)]  
   
-##  <a name="addcolormember"></a>Aggiunta di un membro di colore per la classe di documento  
- Perché l'applicazione originale Scribble non dispone di penne colore, è necessario scrivere un'implementazione per loro. Per archiviare il colore della penna del documento, aggiungere un nuovo membro alla classe di documento,`CscribbleDoc.`  
+##  <a name="addcolormember"></a> Aggiunta di un membro di colore per la classe di documento  
+ Perché l'applicazione originale Scribble non dispone di penne colore, è necessario scrivere un'implementazione per loro. Per archiviare il colore della penna del documento, aggiungere un nuovo membro alla classe di documento, `CscribbleDoc.`  
   
 #### <a name="to-add-a-color-member-to-the-document-class"></a>Per aggiungere un membro di colore per la classe di documento  
   
@@ -289,7 +284,7 @@ ASSERT_VALID(pRibbon);
   
  [[Sezioni](#top)]  
   
-##  <a name="initpensave"></a>Inizializzazione penne e salvare le preferenze  
+##  <a name="initpensave"></a> L'inizializzazione penne e salvare le preferenze  
  Inizializzare quindi il colore e larghezza delle penne. Infine, salvare e caricare un colore da un file di disegno.  
   
 #### <a name="to-initialize-controls-on-the-ribbon-bar"></a>Per inizializzare i controlli della barra multifunzione  
@@ -298,7 +293,7 @@ ASSERT_VALID(pRibbon);
   
      Aggiungere il codice seguente per ScribDoc. cpp, nel `CScribbleDoc::InitDocument` (metodo), dopo il `m_sizeDoc = CSize(200,200)` istruzione.  
   
- ```*/ / Ripristinare la barra multifunzione dell'interfaccia utente per i valori iniziali CMFCRibbonBar* pRibbon = ((CMDIFrameWndEx*) AfxGetMainWnd()) -> GetRibbonBar(); ASSERT_VALID(pRibbon);
+ ``` *Reimpostare la barra multifunzione dell'interfaccia utente per i valori iniziali CMFCRibbonBar* pRibbon = ((CMDIFrameWndEx*) AfxGetMainWnd()) -> GetRibbonBar(); ASSERT_VALID(pRibbon);
 
  CMFCRibbonColorButton * pColorBtn = DYNAMIC_DOWNCAST (CMFCRibbonColorButton, pRibbon -> FindByID(ID_PEN_COLOR)); * / / Impostare ColorButton su nero  
     pColorBtn -> SetColor (RGB (0, 0, 0));

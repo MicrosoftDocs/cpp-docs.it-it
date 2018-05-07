@@ -1,13 +1,10 @@
 ---
 title: Visualizzare le classi (Windows) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.classes.view
 dev_langs:
@@ -17,20 +14,18 @@ helpviewer_keywords:
 - splitter window classes [MFC]
 - view classes [MFC], Windows
 ms.assetid: b11683fb-9f43-4de3-9499-2b55775f9870
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3d737176df2676f543f47bb77a0d205fa7c908fc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 28dbcd246033dd53788861b97a0c678c1be2aa17
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="view-classes-windows"></a>Classi visualizzazione (Windows)
-`CView`e le relative classi derivate sono finestre figlio che rappresentano l'area client di una finestra cornice. Le visualizzazioni mostrano i dati e accettano l'input per un documento.  
+`CView` e le relative classi derivate sono finestre figlio che rappresentano l'area client di una finestra cornice. Le visualizzazioni mostrano i dati e accettano l'input per un documento.  
   
  Una classe di visualizzazione è associata a una classe di documento e una classe della finestra cornice utilizzando un oggetto modello di documento.  
   
@@ -76,7 +71,7 @@ ms.lasthandoff: 12/21/2017
  Una vista che contiene un controllo struttura ad albero di Windows (vedere [CTreeCtrl](../mfc/reference/ctreectrl-class.md)). Un controllo struttura ad albero visualizza un elenco gerarchico di icone ed etichette disposte in modo simile al riquadro sinistro di Esplora File.  
   
 ## <a name="related-classes"></a>Classi correlate  
- `CSplitterWnd`Consente di disporre di più visualizzazioni all'interno di una finestra cornice singola. `CPrintDialog`e `CPrintInfo` supportano la possibilità di stampa e anteprima di stampa di viste. `CRichEditDoc`e `CRichEditCntrItem` vengono utilizzati con `CRichEditView` per implementare funzionalità di contenitore OLE.  
+ `CSplitterWnd` Consente di disporre di più visualizzazioni all'interno di una finestra cornice singola. `CPrintDialog` e `CPrintInfo` supportano la possibilità di stampa e anteprima di stampa di viste. `CRichEditDoc` e `CRichEditCntrItem` vengono utilizzati con `CRichEditView` per implementare funzionalità di contenitore OLE.  
   
  [CSplitterWnd](../mfc/reference/csplitterwnd-class.md)  
  Una finestra che l'utente è suddiviso in più riquadri. Questi riquadri possono essere ridimensionati dall'utente o a dimensione fissa.  

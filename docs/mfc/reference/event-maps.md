@@ -1,13 +1,10 @@
 ---
 title: Mappe eventi | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.mfc.macros.maps
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - event maps [MFC]
 ms.assetid: 1ed53aee-bc53-43cd-834a-6fb935c0d29b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 130e4ecf7534b16ecabf4c35665a4dabe9eee34e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: db309833604b4e833dfd22a090a8f258333da360
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="event-maps"></a>Mappe eventi
 Ogni volta che un controllo deve notificare al relativo contenitore che si è verificata un'azione (determinata dallo sviluppatore del controllo), quale ad esempio la pressione di un tasto, il clic del mouse o una modifica allo stato del controllo, il controllo chiama una funzione che genera eventi. Questa funzione notifica al contenitore del controllo che si è verificata un'azione importante tramite la generazione dell'evento correlato.  
@@ -62,7 +57,7 @@ Ogni volta che un controllo deve notificare al relativo contenitore che si è ve
 |[ON_OLEVERB](#on_oleverb)|Indica un verbo personalizzato gestito dal controllo OLE.|  
 |[ON_STDOLEVERB](#on_stdoleverb)|Consente di eseguire l'override di un mapping dei verbi standard del controllo OLE.|  
   
-##  <a name="declare_event_map"></a>DECLARE_EVENT_MAP  
+##  <a name="declare_event_map"></a>  DECLARE_EVENT_MAP  
  Ogni `COleControl`-classe derivata in un programma può fornire una mappa eventi per specificare gli eventi viene attivato il controllo.  
   
 ```   
@@ -77,7 +72,7 @@ DECLARE_EVENT_MAP()
 ### <a name="requirements"></a>Requisiti  
   **Intestazione** afxctl. h  
   
-##  <a name="begin_event_map"></a>BEGIN_EVENT_MAP  
+##  <a name="begin_event_map"></a>  BEGIN_EVENT_MAP  
  Inizia la definizione della mappa eventi.  
   
 ```   
@@ -99,7 +94,7 @@ BEGIN_EVENT_MAP(theClass,  baseClass)
 ### <a name="requirements"></a>Requisiti  
   **Intestazione** afxctl. h  
   
-##  <a name="end_event_map"></a>END_EVENT_MAP  
+##  <a name="end_event_map"></a>  END_EVENT_MAP  
  Utilizzare il `END_EVENT_MAP` macro per terminare la definizione della mappa eventi.  
   
 ```   
@@ -109,7 +104,7 @@ END_EVENT_MAP()
 ### <a name="requirements"></a>Requisiti  
   **Intestazione** afxctl. h  
   
-##  <a name="event_custom"></a>EVENT_CUSTOM  
+##  <a name="event_custom"></a>  EVENT_CUSTOM  
  Definisce una voce di mapping degli eventi per un evento personalizzato.  
   
 ```   
@@ -144,7 +139,7 @@ EVENT_CUSTOM(pszName, pfnFire,  vtsParams)
 |**VTS_COLOR**|**OLE_COLOR**|  
 |**VTS_CY**|**VALUTA**|  
 |**VTS_DATE**|**DATE**|  
-|**VTS_BSTR**|**const char\***|  
+|**VTS_BSTR**|**char const\***|  
 |**VTS_DISPATCH**|`LPDISPATCH`|  
 |**VTS_FONT**|**IFontDispatch\***|  
 |**VTS_HANDLE**|`HANDLE`|  
@@ -171,7 +166,7 @@ EVENT_CUSTOM(pszName, pfnFire,  vtsParams)
 ### <a name="requirements"></a>Requisiti  
   **Intestazione** afxctl. h  
   
-##  <a name="event_custom_id"></a>EVENT_CUSTOM_ID  
+##  <a name="event_custom_id"></a>  EVENT_CUSTOM_ID  
  Definisce un funzione per un evento personalizzato appartenente all'ID di distribuzione specificato da la generazione di eventi `dispid`.  
   
 ```   
@@ -208,7 +203,7 @@ EVENT_CUSTOM_ID(
 ### <a name="requirements"></a>Requisiti  
   **Intestazione** afxctl. h  
   
-##  <a name="on_oleverb"></a>ON_OLEVERB  
+##  <a name="on_oleverb"></a>  ON_OLEVERB  
  Questa macro definisce una voce della mappa messaggi che esegue il mapping di un verbo personalizzato a una funzione membro specifico del controllo.  
   
 ```   
@@ -237,7 +232,7 @@ ON_OLEVERB(idsVerbName,  memberFxn)
 ### <a name="requirements"></a>Requisiti  
   **Intestazione** AFXOLE. h  
   
-##  <a name="on_stdoleverb"></a>ON_STDOLEVERB  
+##  <a name="on_stdoleverb"></a>  ON_STDOLEVERB  
  Utilizzare questa macro per eseguire l'override del comportamento predefinito di un verbo standard.  
   
 ```   

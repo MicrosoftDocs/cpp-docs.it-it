@@ -1,13 +1,10 @@
 ---
 title: 'TN030: Personalizzazione della stampa e anteprima di stampa | Documenti Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.print
 dev_langs:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - printing views [MFC]
 - print preview [MFC], customizing
 ms.assetid: 32744697-c91c-41b6-9a12-b8ec01e0d438
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aa11c30fb41630a5b293698fe3e69a80509f3f2f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 342edd56ee279de0b854c8e8ceb177b797a03f3b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn030-customizing-printing-and-print-preview"></a>TN030: personalizzazione della stampa e dell'anteprima di stampa
 > [!NOTE]
@@ -62,7 +57,7 @@ ms.lasthandoff: 12/21/2017
   
 2.  Aggiungere gestori di comandi per gli aspetti dell'interfaccia utente desiderato.  
   
-3.  Se si aggiungono gli aspetti visivi per la visualizzazione, eseguire l'override `OnDraw` ed eseguire il disegno dopo la chiamata **CPreviewView::OnDraw.**  
+3.  Se si siano aggiungendo gli aspetti visivi per la visualizzazione, eseguire l'override `OnDraw` ed eseguire il disegno dopo la chiamata **CPreviewView::OnDraw.**  
   
 ## <a name="onfileprintpreview"></a>OnFilePrintPreview  
  Questo è il gestore del comando per l'anteprima di stampa. L'implementazione predefinita è:  
@@ -90,7 +85,7 @@ void CView::OnFilePrintPreview()
 }  
 ```  
   
- **DoPrintPreview** verranno nascosti nel riquadro principale dell'applicazione. Barre di controllo, ad esempio la barra di stato, possono essere conservate specificandoli nel pState ->**dwStates** membro (si tratta di una maschera di bit e vengono definiti i bit per le barre di controllo singoli da **AFX_CONTROLBAR_MASK**(AFX_IDW_MYBAR)). La finestra pState ->**nIDMainPane** è la finestra che verrà automaticamente nascosta e reshown. **DoPrintPreview** creerà quindi una barra dei pulsanti per l'interfaccia utente di anteprima standard. Se è necessaria una gestione speciale di finestra, ad esempio per mostrare o nascondere le altre finestre, che devono essere eseguite prima **DoPrintPreview** viene chiamato.  
+ **DoPrintPreview** verranno nascosti nel riquadro principale dell'applicazione. Barre di controllo, ad esempio la barra di stato, possono essere conservate specificandoli nel pState ->**dwStates** membro (si tratta di una maschera di bit e vengono definiti i bit per le barre di controllo singoli da **AFX_CONTROLBAR_MASK**(AFX_IDW_MYBAR)). La finestra pState ->**nIDMainPane** è la finestra che verrà automaticamente nascosta e reshown. **DoPrintPreview** creerà quindi una barra dei pulsanti per l'interfaccia utente anteprima standard. Se è necessaria una gestione speciale di finestra, ad esempio per mostrare o nascondere le altre finestre, che devono essere eseguite prima **DoPrintPreview** viene chiamato.  
   
  Per impostazione predefinita, al termine dell'anteprima di stampa, restituisce le barre di controllo per gli stati originali e nel riquadro principale vengono visualizzate. Se è necessaria una gestione speciale, deve essere eseguita in un override di **EndPrintPreview.** Se **DoPrintPreview** ha esito negativo, fornire anche una gestione speciale.  
   
@@ -108,7 +103,7 @@ void CView::OnFilePrintPreview()
     >  Se una classe di visualizzazione o una vista separata è necessaria per il supporto di stampa, un puntatore all'oggetto deve essere passato come secondo parametro.  
   
 ## <a name="endprintpreview"></a>EndPrintPreview  
- Si tratta per terminare la modalità di anteprima di stampa. Spesso è consigliabile passare alla pagina del documento che è stato ultima visualizzata in anteprima di stampa. **EndPrintPreview** il possibilità dell'applicazione a tale scopo. -> PInfo`m_nCurPage` membro è la pagina visualizzata è stato ultimo (a sinistra se sono state visualizzate due pagine) e il puntatore è un hint in cui è stato interessato l'utente nella pagina. Poiché la struttura della visualizzazione dell'applicazione è sconosciuta al framework, è necessario fornire il codice per passare al punto di scelta.  
+ Si tratta per terminare la modalità di anteprima di stampa. Spesso è consigliabile passare alla pagina del documento che è stato ultima visualizzata in anteprima di stampa. **EndPrintPreview** possibilità dell'applicazione a tale scopo. -> PInfo`m_nCurPage` membro è la pagina visualizzata è stato ultimo (a sinistra se sono state visualizzate due pagine) e il puntatore è un hint in cui è stato interessato l'utente nella pagina. Poiché la struttura della visualizzazione dell'applicazione è sconosciuta al framework, è necessario fornire il codice per passare al punto di scelta.  
   
  È necessario eseguire la maggior parte delle azioni prima di chiamare **CView::EndPrintPreview**. Questa chiamata inverte gli effetti di **DoPrintPreview** ed Elimina pInfo pView e pDC.  
   

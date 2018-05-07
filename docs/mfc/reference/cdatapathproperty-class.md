@@ -1,12 +1,9 @@
 ---
 title: Classe CDataPathProperty | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CDataPathProperty
@@ -29,17 +26,15 @@ helpviewer_keywords:
 - CDataPathProperty [MFC], SetControl
 - CDataPathProperty [MFC], SetPath
 ms.assetid: 1f96efdb-54e4-460b-862c-eba5d4103488
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e4f258f5872a68931a40d21f7079e4089678baac
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f2559b4917f16bb8ddc49b73ace8bda6e1a9bafc
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdatapathproperty-class"></a>Classe CDataPathProperty
 Implementa una proprietà del controllo OLE che può essere caricata in modo asincrono.  
@@ -96,7 +91,7 @@ class CDataPathProperty : public CAsyncMonikerFile
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** afxctl. h  
   
-##  <a name="cdatapathproperty"></a>CDataPathProperty::CDataPathProperty  
+##  <a name="cdatapathproperty"></a>  CDataPathProperty::CDataPathProperty  
  Costruisce un oggetto `CDataPathProperty`.  
   
 ```  
@@ -109,12 +104,12 @@ CDataPathProperty(LPCTSTR lpszPath, COleControl* pControl = NULL);
  Un puntatore all'oggetto da associare a questo controllo OLE `CDataPathProperty` oggetto.  
   
  `lpszPath`  
- Il percorso, che può essere assoluto o relativo, utilizzato per creare un moniker asincroni che fa riferimento al percorso assoluto effettivo della proprietà. `CDataPathProperty`Usa gli URL, non nomi di file. Se si desidera un `CDataPathProperty` oggetto per un file, anteporre `file://` al percorso.  
+ Il percorso, che può essere assoluto o relativo, utilizzato per creare un moniker asincroni che fa riferimento al percorso assoluto effettivo della proprietà. `CDataPathProperty` Usa gli URL, non nomi di file. Se si desidera un `CDataPathProperty` oggetto per un file, anteporre `file://` al percorso.  
   
 ### <a name="remarks"></a>Note  
  Il `COleControl` oggetto a cui puntava `pControl` viene utilizzato da **aprire** e recuperati dalle classi derivate. Se `pControl` è **NULL**, il controllo usato con **aprire** deve essere impostato con `SetControl`. Se `lpszPath` è **NULL**, è possibile passare il percorso tramite **aprire** o impostare il valore con `SetPath`.  
   
-##  <a name="getcontrol"></a>CDataPathProperty::GetControl  
+##  <a name="getcontrol"></a>  CDataPathProperty::GetControl  
  Chiamare questa funzione membro per recuperare il `COleControl` oggetto associato di `CDataPathProperty` oggetto.  
   
 ```  
@@ -122,9 +117,9 @@ COleControl* GetControl();
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- Restituisce un puntatore per il controllo OLE è associato il `CDataPathProperty` oggetto. **NULL** se il controllo non è associato.  
+ Restituisce un puntatore per il controllo OLE è associato il `CDataPathProperty` oggetto. **NULL** se non è associato.  
   
-##  <a name="getpath"></a>CDataPathProperty::GetPath  
+##  <a name="getpath"></a>  CDataPathProperty::GetPath  
  Chiamare questa funzione membro per recuperare il percorso, impostata quando il `CDataPathProperty` oggetto è stato costruito o specificato **aprire**, o specificato in una chiamata precedente al `SetPath` funzione membro.  
   
 ```  
@@ -134,7 +129,7 @@ CString GetPath() const;
 ### <a name="return-value"></a>Valore restituito  
  Restituisce il percorso alla proprietà stessa. Può essere vuoto se non è stato specificato alcun percorso.  
   
-##  <a name="open"></a>CDataPathProperty::Open  
+##  <a name="open"></a>  CDataPathProperty::Open  
  Chiamare questa funzione membro per avviare il caricamento della proprietà asincrona del controllo associato.  
   
 ```  
@@ -164,7 +159,7 @@ virtual BOOL Open(CFileException* pError = NULL);
  Un puntatore a un'eccezione di file. In caso di errore, verrà impostata per la causa.  
   
  `lpszPath`  
- Il percorso, che può essere assoluto o relativo, utilizzato per creare un moniker asincroni che fa riferimento al percorso assoluto effettivo della proprietà. `CDataPathProperty`Usa gli URL, non nomi di file. Se si desidera un `CDataPathProperty` oggetto per un file, anteporre `file://` al percorso.  
+ Il percorso, che può essere assoluto o relativo, utilizzato per creare un moniker asincroni che fa riferimento al percorso assoluto effettivo della proprietà. `CDataPathProperty` Usa gli URL, non nomi di file. Se si desidera un `CDataPathProperty` oggetto per un file, anteporre `file://` al percorso.  
   
 ### <a name="return-value"></a>Valore restituito  
  Diverso da zero se ha esito positivo; in caso contrario 0.  
@@ -178,7 +173,7 @@ virtual BOOL Open(CFileException* pError = NULL);
   
  Tutti gli overload del [CAsyncMonikerFile::Open](../../mfc/reference/casyncmonikerfile-class.md#open) sono inoltre disponibili `CDataPathProperty`.  
   
-##  <a name="resetdata"></a>CDataPathProperty::ResetData  
+##  <a name="resetdata"></a>  CDataPathProperty::ResetData  
  Chiamare questa funzione per ottenere `CAsyncMonikerFile::OnDataAvailable` per notificare al contenitore che sono state modificate le proprietà del controllo e tutte le informazioni caricate in modo asincrono non sono più utile.  
   
 ```  
@@ -188,7 +183,7 @@ virtual void ResetData();
 ### <a name="remarks"></a>Note  
  Apertura deve essere riavviato. Le classi derivate possono eseguire l'override di questa funzione per i valori predefiniti diversi.  
   
-##  <a name="setcontrol"></a>CDataPathProperty::SetControl  
+##  <a name="setcontrol"></a>  CDataPathProperty::SetControl  
  Chiamare questa funzione membro per associare un controllo OLE asincrono con il `CDataPathProperty` oggetto.  
   
 ```  
@@ -199,7 +194,7 @@ void SetControl(COleControl* pControl);
  `pControl`  
  Puntatore al controllo OLE asincrono deve essere associato con la proprietà.  
   
-##  <a name="setpath"></a>CDataPathProperty::SetPath  
+##  <a name="setpath"></a>  CDataPathProperty::SetPath  
  Chiamare questa funzione membro per impostare il percorso della proprietà.  
   
 ```  
@@ -208,7 +203,7 @@ void SetPath(LPCTSTR lpszPath);
   
 ### <a name="parameters"></a>Parametri  
  `lpszPath`  
- Un percorso, che può essere assoluto o relativo, per la proprietà viene caricata in modo asincrono. `CDataPathProperty`Usa gli URL, non nomi di file. Se si desidera un `CDataPathProperty` oggetto per un file, anteporre `file://` al percorso.  
+ Un percorso, che può essere assoluto o relativo, per la proprietà viene caricata in modo asincrono. `CDataPathProperty` Usa gli URL, non nomi di file. Se si desidera un `CDataPathProperty` oggetto per un file, anteporre `file://` al percorso.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Immagine di esempio MFC](../../visual-cpp-samples.md)   

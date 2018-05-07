@@ -1,13 +1,10 @@
 ---
 title: 'TN043: Routine RFX | Documenti Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - RFX
 dev_langs:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - TN043
 - RFX (record field exchange)
 ms.assetid: f552d0c1-2c83-4389-b472-42c9940aa713
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 19bb44653c03505d954318a01a6e34c1a297dba7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f6a46867edc4ea2f314c167da4215b869af3ab17
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn043-rfx-routines"></a>TN043: routine RFX
 > [!NOTE]
@@ -83,35 +78,35 @@ RFX_Custom(pFX, "Col2",
   
  Il `DoFieldExchange` funzione membro è molto simile di `Serialize` funzione membro, è responsabile per ottenere o impostare i dati da e verso un modulo esterno (in questo caso colonne dal risultato di una query ODBC) da/verso i dati dei membri nella classe. Il `pFX` parametro è il contesto per eseguire l'operazione di scambio di dati ed è simile al `CArchive` parametro `CObject::Serialize`. Il `pFX` (un `CFieldExchange` oggetto) è un indicatore di operazione, è simile, ma una generalizzazione del `CArchive` flag di direzione. Una funzione RFX potrebbe avere supportare le operazioni seguenti:  
   
-- **BindParam** : indica che in ODBC deve recuperare i dati dei parametri  
+- **BindParam** : indica dove ODBC deve recuperare i dati dei parametri  
   
-- **BindFieldToColumn** : indicare dove ODBC deve recuperare/deposito outputColumn dati  
+- **BindFieldToColumn** : indica dove ODBC deve recuperare/deposito outputColumn dati  
   
 - **Correzione** , impostare **CString/CByteArray** lunghezze, impostare lo stato NULL di tipo bit  
   
 - **MarkForAddNew** -contrassegno dirty valore è stato modificato dopo chiamare AddNew  
   
-- **MarkForUpdate** -contrassegno dirty se il valore è stato modificato dopo la chiamata Modifica  
+- **MarkForUpdate** -contrassegno dirty valore è stato modificato dopo chiamare modifica  
   
 - **Nome** , aggiungere i nomi dei campi per i campi contrassegnati come modificati  
   
-- **NameValue** : Append "\<nome colonna > =" per i campi contrassegnati come modificati  
+- **NameValue** : Accodamento "\<nome colonna > =" per i campi contrassegnati come modificati  
   
 - **Valore** : Append "" seguita dal separatore, ad esempio ',' o ' '  
   
-- `SetFieldDirty`-Consente campo (ad esempio modificato) dirty bit di impostare lo stato  
+- `SetFieldDirty` -Consente campo (ad esempio modificato) dirty bit di impostare lo stato  
   
-- `SetFieldNull`-Consente di impostare il bit di stato che indica un valore null per il campo  
+- `SetFieldNull` -Consente di impostare il bit di stato che indica un valore null per il campo  
   
-- `IsFieldDirty`: Valore del bit dirty stato restituito  
+- `IsFieldDirty` : Valore del bit dirty stato restituito  
   
-- `IsFieldNull`: Valore del bit di stato null restituito  
+- `IsFieldNull` : Valore del bit di stato null restituito  
   
-- `IsFieldNullable`: Restituisce TRUE se il campo può contenere valori NULL  
+- `IsFieldNullable` : Restituisce TRUE se il campo può contenere valori NULL  
   
-- **StoreField** , archiviare il valore di campo  
+- **StoreField** , ovvero archivia il valore di campo  
   
-- **LoadField** : Ricarica archiviato il valore di campo  
+- **LoadField** -Ricarica archiviati valore del campo  
   
 - **GetFieldInfoValue** , restituire le informazioni generali su un campo  
   
@@ -168,7 +163,7 @@ RFX_Custom(pFX, "Col2",
  `RFX_LongBinary`:  
  Questa è la libreria di classi solo alle funzioni RFX che non utilizzano l'associazione di colonna per ricevere e inviare dati. Questa funzione ignora l'operazione BindFieldToColumn invece durante l'operazione di correzione, alloca spazio di archiviazione per contenere i dati in ingresso SQL_LONGVARCHAR o SQL_LONGVARBINARY, quindi esegue una chiamata di SQLGetData per recuperare il valore nell'archiviazione allocata. Quando si prepara a inviare nuovamente i valori dei dati all'origine dati (ad esempio, le operazioni di nome e valore), questa funzione utilizza le funzionalità DATA_AT_EXEC di ODBC. Vedere [Nota tecnica 45](../mfc/tn045-mfc-database-support-for-long-varchar-varbinary.md) per ulteriori informazioni sull'utilizzo di SQL_LONGVARBINARY e SQL_LONGVARCHARs.  
   
- Quando si scrive la propria **RFX_** funzione, spesso sarà in grado di utilizzare **CFieldExchange::Default** per implementare un'operazione specificata. Esaminare l'implementazione del valore predefinito per l'operazione in questione. Se esegue l'operazione sarebbe necessario scrivere **RFX_** funzione a cui è possibile delegare il **CFieldExchange::Default.** È possibile visualizzare esempi di chiamata **CFieldExchange::Default** in dbrfx.cpp  
+ Quando si scrive la propria **RFX_** funzione, spesso sarà in grado di utilizzare **CFieldExchange::Default** per implementare un'operazione specificata. Esaminare l'implementazione del valore predefinito per l'operazione in questione. Se esegue l'operazione sarebbe necessario scrivere **RFX_** funzione è possibile delegare al **CFieldExchange::Default.** È possibile visualizzare esempi di chiamata **CFieldExchange::Default** in dbrfx.cpp  
   
  È importante chiamare `IsFieldType` all'inizio della funzione RFX e restituito immediatamente se restituisce FALSE. Questo meccanismo consente di mantenere le operazioni di parametro da cui viene eseguita su **outputColumns**e viceversa (simile alla chiamata **BindParam** su un **outputColumn**). Inoltre, `IsFieldType` automaticamente tiene traccia del numero di **outputColumns** (`m_nFields`) con parametri (`m_nParams`).  
   

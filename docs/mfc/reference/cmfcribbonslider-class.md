@@ -1,12 +1,9 @@
 ---
 title: Classe CMFCRibbonSlider | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCRibbonSlider
@@ -39,17 +36,15 @@ helpviewer_keywords:
 - CMFCRibbonSlider [MFC], SetZoomButtons
 - CMFCRibbonSlider [MFC], SetZoomIncrement
 ms.assetid: 9351ac34-f234-4e42-91e2-763f1989c8ff
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e485afac346be1f21a0b3088367be5b9bf02e2ab
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4a4264f26028db4c581fe1dc143905ac0ffc8f66
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcribbonslider-class"></a>Classe CMFCRibbonSlider
 La `CMFCRibbonSlider` classe implementa un controllo dispositivo di scorrimento che è possibile aggiungere a una barra multifunzione o la barra di stato della barra multifunzione. Il controllo dispositivo di scorrimento della barra multifunzione è simile ai dispositivi di scorrimento dello zoom visualizzati nelle applicazioni di Office 2007.  
@@ -106,7 +101,7 @@ class CMFCRibbonSlider : public CMFCRibbonBaseElement
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** afxribbonslider.h  
   
-##  <a name="cmfcribbonslider"></a>CMFCRibbonSlider::CMFCRibbonSlider  
+##  <a name="cmfcribbonslider"></a>  CMFCRibbonSlider::CMFCRibbonSlider  
  Creare un dispositivo di scorrimento della barra multifunzione.  
   
 ```  
@@ -125,7 +120,7 @@ CMFCRibbonSlider(
 ### <a name="remarks"></a>Note  
  Costruisce un dispositivo di scorrimento della barra multifunzione è `nWidth` pixel nella categoria pannello in cui viene aggiunto il dispositivo di scorrimento. Per impostazione predefinita, il dispositivo di scorrimento è orizzontale.  
   
-##  <a name="getpos"></a>CMFCRibbonSlider::GetPos  
+##  <a name="getpos"></a>  CMFCRibbonSlider::GetPos  
  Restituisce la posizione corrente del controllo dispositivo di scorrimento.  
   
 ```  
@@ -135,7 +130,7 @@ int GetPos() const;
 ### <a name="return-value"></a>Valore restituito  
  La posizione corrente del controllo dispositivo di scorrimento, ovvero una posizione relativa all'inizio del dispositivo di scorrimento.  
   
-##  <a name="getrangemax"></a>CMFCRibbonSlider::GetRangeMax  
+##  <a name="getrangemax"></a>  CMFCRibbonSlider::GetRangeMax  
  Ottiene l'incremento massimo del dispositivo di scorrimento che può essere trasmesso il dispositivo di scorrimento nel controllo dispositivo di scorrimento.  
   
 ```  
@@ -145,7 +140,7 @@ int GetRangeMax() const;
 ### <a name="return-value"></a>Valore restituito  
  Incremento massimo del dispositivo di scorrimento che può essere trasmesso il dispositivo di scorrimento nel controllo dispositivo di scorrimento.  
   
-##  <a name="getrangemin"></a>CMFCRibbonSlider::GetRangeMin  
+##  <a name="getrangemin"></a>  CMFCRibbonSlider::GetRangeMin  
  Restituisce l'incremento minimo che può essere trasmesso il dispositivo di scorrimento nel controllo dispositivo di scorrimento.  
   
 ```  
@@ -155,7 +150,7 @@ int GetRangeMin() const;
 ### <a name="return-value"></a>Valore restituito  
  L'incremento minimo che può essere trasmesso il dispositivo di scorrimento nel controllo dispositivo di scorrimento.  
   
-##  <a name="getregularsize"></a>CMFCRibbonSlider::GetRegularSize  
+##  <a name="getregularsize"></a>  CMFCRibbonSlider::GetRegularSize  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -169,7 +164,7 @@ virtual CSize GetRegularSize(CDC* pDC);
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="getzoomincrement"></a>CMFCRibbonSlider::GetZoomIncrement  
+##  <a name="getzoomincrement"></a>  CMFCRibbonSlider::GetZoomIncrement  
  Ottenere l'incremento di zoom per il controllo dispositivo di scorrimento.  
   
 ```  
@@ -179,7 +174,7 @@ int GetZoomIncrement() const;
 ### <a name="return-value"></a>Valore restituito  
  L'incremento di zoom per il controllo dispositivo di scorrimento.  
   
-##  <a name="haszoombuttons"></a>CMFCRibbonSlider::HasZoomButtons  
+##  <a name="haszoombuttons"></a>  CMFCRibbonSlider::HasZoomButtons  
  Specifica se il dispositivo di scorrimento contiene pulsanti zoom.  
   
 ```  
@@ -187,9 +182,9 @@ BOOL HasZoomButtons() const;
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- `TRUE`Se il dispositivo di scorrimento ha pulsanti zoom. `FALSE` in caso contrario.  
+ `TRUE` Se il dispositivo di scorrimento è disponibili pulsanti zoom; `FALSE` in caso contrario.  
   
-##  <a name="ondraw"></a>CMFCRibbonSlider::OnDraw  
+##  <a name="ondraw"></a>  CMFCRibbonSlider::OnDraw  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -201,7 +196,7 @@ virtual void OnDraw(CDC* pDC);
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="setpos"></a>CMFCRibbonSlider::SetPos  
+##  <a name="setpos"></a>  CMFCRibbonSlider::SetPos  
  Impostare la posizione corrente del controllo dispositivo di scorrimento.  
   
 ```  
@@ -217,7 +212,7 @@ void SetPos(
  [in] `bRedraw`  
  Se `TRUE`, il dispositivo di scorrimento viene ridisegnato.  
   
-##  <a name="setrange"></a>CMFCRibbonSlider::SetRange  
+##  <a name="setrange"></a>  CMFCRibbonSlider::SetRange  
  Impostare l'intervallo di valori per il controllo dispositivo di scorrimento.  
   
 ```  
@@ -236,7 +231,7 @@ void SetRange(
 ### <a name="remarks"></a>Note  
  Specifica l'intervallo di valori per il controllo dispositivo di scorrimento impostando i valori minimi e massimo.  
   
-##  <a name="setzoombuttons"></a>CMFCRibbonSlider::SetZoomButtons  
+##  <a name="setzoombuttons"></a>  CMFCRibbonSlider::SetZoomButtons  
  Visualizzare o nascondere i pulsanti zoom.  
   
 ```  
@@ -245,9 +240,9 @@ void SetZoomButtons(BOOL bSet=TRUE);
   
 ### <a name="parameters"></a>Parametri  
  [in]. `bSet`  
- `TRUE`Per visualizzare pulsanti zoom; `FALSE` per nasconderle.  
+ `TRUE` Per visualizzare pulsanti zoom; `FALSE` per nasconderle.  
   
-##  <a name="setzoomincrement"></a>CMFCRibbonSlider::SetZoomIncrement  
+##  <a name="setzoomincrement"></a>  CMFCRibbonSlider::SetZoomIncrement  
  Impostare l'incremento di zoom per il controllo dispositivo di scorrimento.  
   
 ```  

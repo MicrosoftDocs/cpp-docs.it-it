@@ -1,13 +1,10 @@
 ---
 title: Macro MFC e funzioni globali | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.mfc.macros
 dev_langs:
@@ -22,17 +19,15 @@ helpviewer_keywords:
 - Afx naming convention
 - macros
 ms.assetid: add4e33f-0e62-4d27-be14-896cb8675d22
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eeb53dea24ccd4d34ef90045e3254915135e70c2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 189e3f272d679030c11fcd11ca4760f59944faeb
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mfc-macros-and-globals"></a>Macro e funzioni globali MFC
 La libreria Microsoft Foundation Class possono essere suddivisi in due sezioni principali: (1) le classi MFC e (2) le macro e funzioni globali. Se una funzione o una variabile non è un membro di una classe, è una funzione globale o una variabile.  
@@ -47,11 +42,11 @@ La libreria Microsoft Foundation Class possono essere suddivisi in due sezioni p
   
 -   [Cast dei tipi di oggetti classe MFC](type-casting-of-mfc-class-objects.md)  
   
--   [Servizi modelli a oggetti in fase di esecuzione](run-time-object-model-services.md)  
+-   [Servizi modelli a oggetti di runtime](run-time-object-model-services.md)  
   
 -   [Servizi di diagnostica](diagnostic-services.md)  
   
--   [Eccezione durante l'elaborazione](exception-processing.md)  
+-   [Elaborazione delle eccezioni](exception-processing.md)  
   
 -   [Formattazione CString e visualizzazione della finestra di messaggio](cstring-formatting-and-message-box-display.md)  
   
@@ -69,9 +64,9 @@ La libreria Microsoft Foundation Class possono essere suddivisi in due sezioni p
   
 -   [Funzioni di bitmap grige e retinate](gray-and-dithered-bitmap-functions.md)  
   
--   [Routine di exchange (DDX) dati della finestra di dialogo standard](standard-dialog-data-exchange-routines.md)  
+-   [Routine DDX (exchange) dei dati della finestra di dialogo standard](standard-dialog-data-exchange-routines.md)  
   
--   [Routine di convalida (DDV) di dati di finestra di dialogo standard](standard-dialog-data-validation-routines.md)  
+-   [Routine convalida (DDV) dei dati della finestra di dialogo standard](standard-dialog-data-validation-routines.md)  
   
 -   [Messaggi AFX](afx-messages.md)  
   
@@ -82,17 +77,17 @@ La libreria Microsoft Foundation Class possono essere suddivisi in due sezioni p
   
 ## <a name="database"></a>Database  
   
--   [Registrare le funzioni di campi (RFX)](record-field-exchange-functions.md) e [funzioni Bulk Record Field Exchange (RFX di massa)](record-field-exchange-functions.md) per le classi ODBC MFC  
+-   [Registrare le funzioni di campi (RFX)](record-field-exchange-functions.md) e [le funzioni di massa di campi Record (RFX di massa)](record-field-exchange-functions.md) per le classi ODBC MFC  
   
--   [Funzioni RFX (DFX) registrare](record-field-exchange-functions.md) per le classi DAO MFC  
+-   [Registrare funzioni RFX (DFX)](record-field-exchange-functions.md) per le classi DAO MFC  
   
 -   [Funzioni DDX (DDX) per CRecordView e CDaoRecordView](dialog-data-exchange-functions-for-crecordview-and-cdaorecordview.md) (classi ODBC MFC e DAO)  
   
--   [Finestra di dialogo delle funzioni di data exchange (DDX) per i controlli OLE](dialog-data-exchange-functions-for-ole-controls.md)  
+-   [Funzioni finestra di dialogo data exchange (DDX) per controlli OLE](dialog-data-exchange-functions-for-ole-controls.md)  
   
 -   [Macro e funzioni globali per facilitare la chiamata diretta delle funzioni Open Database Connectivity (ODBC) API](database-macros-and-globals.md)  
   
--   [Terminazione e l'inizializzazione del motore di database DAO](dao-database-engine-initialization-and-termination.md)  
+-   [Inizializzazione del motore di database DAO e chiusura](dao-database-engine-initialization-and-termination.md)  
   
 ## <a name="internet"></a>Internet  
   
@@ -100,7 +95,7 @@ La libreria Microsoft Foundation Class possono essere suddivisi in due sezioni p
   
 ## <a name="dhtml--dhtml-event-maps"></a>DHTML / mappe eventi DHTML  
   
--   [Macro di supporto di (DDX) di scambio di dati di finestra di dialogo DHTML](ddx-dhtml-helper-macros.md)  
+-   [Macro di helper (DDX) di scambio di dati di finestra di dialogo DHTML](ddx-dhtml-helper-macros.md)  
   
 -   [Mappe eventi DHTML](dhtml-event-maps.md)  
   
@@ -120,7 +115,7 @@ La libreria Microsoft Foundation Class possono essere suddivisi in due sezioni p
   
 -   [Accesso alla libreria dei tipi](type-library-access.md)  
   
--   [Pagine delle proprietà](property-pages-mfc.md)  
+-   [Proprietà (pagine)](property-pages-mfc.md)  
   
 -   [Mappe eventi](event-maps.md)  
   

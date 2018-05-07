@@ -1,12 +1,9 @@
 ---
 title: CBrush (classe) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CBrush
@@ -33,17 +30,15 @@ helpviewer_keywords:
 - CBrush [MFC], FromHandle
 - CBrush [MFC], GetLogBrush
 ms.assetid: e5ef2c62-dd95-4973-9090-f52f605900e1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f2c60be4501e14c1a3b55789905be1fb6e753731
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 39c5167c81d6c44fa62f9bff87c6c04f73f9f6d5
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cbrush-class"></a>CBrush (classe)
 Incapsula un pennello GDI (Graphics Device Interface) di Windows.  
@@ -79,7 +74,7 @@ class CBrush : public CGdiObject
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[HBRUSH CBrush::operator](#operator_hbrush)|Restituisce l'handle di Windows collegata la `CBrush` oggetto.|  
+|[CBrush::operator HBRUSH](#operator_hbrush)|Restituisce l'handle di Windows collegata la `CBrush` oggetto.|  
   
 ## <a name="remarks"></a>Note  
  Per utilizzare un `CBrush` oggetto, costruire un `CBrush` e passarlo a qualsiasi `CDC` funzione membro che richiede un pennello.  
@@ -98,7 +93,7 @@ class CBrush : public CGdiObject
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** afxwin.h  
   
-##  <a name="cbrush"></a>CBrush::CBrush  
+##  <a name="cbrush"></a>  CBrush::CBrush  
  Costruisce un oggetto `CBrush`.  
   
 ```  
@@ -115,23 +110,23 @@ explicit CBrush(CBitmap* pBitmap);
  `nIndex`  
  Specifica lo stile di tratteggio del pennello. Può essere uno dei valori seguenti:  
   
-- `HS_BDIAGONAL`Tratteggio verso il basso (da sinistra a destra) a 45 gradi  
+- `HS_BDIAGONAL` Tratteggio verso il basso (da sinistra a destra) a 45 gradi  
   
-- `HS_CROSS`Tratteggio incrociato orizzontale e verticale  
+- `HS_CROSS` Tratteggio incrociato orizzontale e verticali  
   
-- `HS_DIAGCROSS`Tratteggio incrociato a 45 gradi  
+- `HS_DIAGCROSS` Tratteggio incrociato a 45 gradi  
   
-- `HS_FDIAGONAL`Tratteggio verso l'alto (da sinistra a destra) a 45 gradi  
+- `HS_FDIAGONAL` Tratteggio verso l'alto (da sinistra a destra) a 45 gradi  
   
-- `HS_HORIZONTAL`Tratteggio orizzontale  
+- `HS_HORIZONTAL` Tratteggio orizzontale  
   
-- `HS_VERTICAL`Tratteggio verticale  
+- `HS_VERTICAL` Tratteggio verticale  
   
  `pBitmap`  
  Punta a un `CBitmap` oggetto che specifica una bitmap che disegna il pennello.  
   
 ### <a name="remarks"></a>Note  
- `CBrush`dispone di quattro overload costruttori. Il costruttore senza argomenti crea un valore non inizializzato `CBrush` oggetto che deve essere inizializzato prima di poter essere utilizzato.  
+ `CBrush` dispone di quattro overload costruttori. Il costruttore senza argomenti crea un valore non inizializzato `CBrush` oggetto che deve essere inizializzato prima che possa essere utilizzato.  
   
  Se si utilizza il costruttore senza argomenti, è necessario inizializzare il valore risultante `CBrush` con [CreateSolidBrush](#createsolidbrush), [CreateHatchBrush](#createhatchbrush), [CreateBrushIndirect](#createbrushindirect), [CreatePatternBrush](#createpatternbrush), o [CreateDIBPatternBrush](#createdibpatternbrush). Se si utilizza uno dei costruttori che accettano argomenti, quindi non inizializzazione è necessaria ulteriori operazioni. I costruttori con argomenti possono generare un'eccezione se vengono rilevati errori, mentre il costruttore senza argomenti avrà sempre esito positivo.  
   
@@ -144,7 +139,7 @@ explicit CBrush(CBitmap* pBitmap);
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFCDocView#21](../../mfc/codesnippet/cpp/cbrush-class_1.cpp)]  
   
-##  <a name="createbrushindirect"></a>CBrush::CreateBrushIndirect  
+##  <a name="createbrushindirect"></a>  CBrush::CreateBrushIndirect  
  Inizializza un pennello con uno stile, colore e modello specificato in un [LOGBRUSH](http://msdn.microsoft.com/library/windows/desktop/dd145035) struttura.  
   
 ```  
@@ -166,7 +161,7 @@ BOOL CreateBrushIndirect(const LOGBRUSH* lpLogBrush);
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFCDocView#22](../../mfc/codesnippet/cpp/cbrush-class_2.cpp)]  
   
-##  <a name="createdibpatternbrush"></a>CBrush::CreateDIBPatternBrush  
+##  <a name="createdibpatternbrush"></a>  CBrush::CreateDIBPatternBrush  
  Inizializza un pennello con il modello specificato da una bitmap indipendente dalla periferica (DIB).  
   
 ```  
@@ -189,7 +184,7 @@ BOOL CreateDIBPatternBrush(
   
 - **DIB_PAL_COLORS** la tabella dei colori è costituito da una matrice di indici a 16 bit.  
   
-- **DIB_RGB_COLORS** la tabella dei colori contiene i valori letterali RGB.  
+- **DIB_RGB_COLORS** la tabella color contiene valori RGB letterali.  
   
  *lpPackedDIB*  
  Punta a DIB compresso costituito da un `BITMAPINFO` struttura immediatamente seguito da una matrice di byte che definisce i pixel della bitmap.  
@@ -212,7 +207,7 @@ BOOL CreateDIBPatternBrush(
   
  Per informazioni sull'utilizzo delle funzioni seguenti di Windows, vedi il Windows SDK:  
   
-- [CreateDIBPatternBrush](http://msdn.microsoft.com/library/windows/desktop/dd183492) (questa funzione viene fornita solo per compatibilità con le applicazioni scritte per le versioni di Windows precedenti a 3.0; utilizzare il **CreateDIBPatternBrushPt** (funzione).)  
+- [CreateDIBPatternBrush](http://msdn.microsoft.com/library/windows/desktop/dd183492) (questa funzione viene fornita solo per compatibilità con le applicazioni scritte per le versioni di Windows precedenti a 3.0; usare il **CreateDIBPatternBrushPt** (funzione).)  
   
 - [CreateDIBPatternBrushPt](http://msdn.microsoft.com/library/windows/desktop/dd183493) (questa funzione deve essere utilizzata per le applicazioni basate su Win32).  
   
@@ -221,7 +216,7 @@ BOOL CreateDIBPatternBrush(
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFCDocView#23](../../mfc/codesnippet/cpp/cbrush-class_3.cpp)]  
   
-##  <a name="createhatchbrush"></a>CBrush::CreateHatchBrush  
+##  <a name="createhatchbrush"></a>  CBrush::CreateHatchBrush  
  Inizializza un pennello con il modello tratteggiato specificato e il colore.  
   
 ```  
@@ -234,17 +229,17 @@ BOOL CreateHatchBrush(
  `nIndex`  
  Specifica lo stile di tratteggio del pennello. Può essere uno dei valori seguenti:  
   
-- `HS_BDIAGONAL`Tratteggio verso il basso (da sinistra a destra) a 45 gradi  
+- `HS_BDIAGONAL` Tratteggio verso il basso (da sinistra a destra) a 45 gradi  
   
-- `HS_CROSS`Tratteggio incrociato orizzontale e verticale  
+- `HS_CROSS` Tratteggio incrociato orizzontale e verticali  
   
-- `HS_DIAGCROSS`Tratteggio incrociato a 45 gradi  
+- `HS_DIAGCROSS` Tratteggio incrociato a 45 gradi  
   
-- `HS_FDIAGONAL`Tratteggio verso l'alto (da sinistra a destra) a 45 gradi  
+- `HS_FDIAGONAL` Tratteggio verso l'alto (da sinistra a destra) a 45 gradi  
   
-- `HS_HORIZONTAL`Tratteggio orizzontale  
+- `HS_HORIZONTAL` Tratteggio orizzontale  
   
-- `HS_VERTICAL`Tratteggio verticale  
+- `HS_VERTICAL` Tratteggio verticale  
   
  `crColor`  
  Specifica il colore di primo piano del pennello come un colore RGB (il colore di tratteggi). Vedere [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) in Windows SDK per ulteriori informazioni.  
@@ -258,7 +253,7 @@ BOOL CreateHatchBrush(
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFCDocView#24](../../mfc/codesnippet/cpp/cbrush-class_4.cpp)]  
   
-##  <a name="createpatternbrush"></a>CBrush::CreatePatternBrush  
+##  <a name="createpatternbrush"></a>  CBrush::CreatePatternBrush  
  Inizializza un pennello con un modello specificato da una bitmap.  
   
 ```  
@@ -286,7 +281,7 @@ BOOL CreatePatternBrush(CBitmap* pBitmap);
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFCDocView#25](../../mfc/codesnippet/cpp/cbrush-class_5.cpp)]  
   
-##  <a name="createsolidbrush"></a>CBrush::CreateSolidBrush  
+##  <a name="createsolidbrush"></a>  CBrush::CreateSolidBrush  
  Inizializza un pennello con un colore a tinta unita specificato.  
   
 ```  
@@ -308,7 +303,7 @@ BOOL CreateSolidBrush(COLORREF crColor);
 ### <a name="example"></a>Esempio  
   Per vedere l'esempio [CBrush::CBrush](#cbrush).  
   
-##  <a name="createsyscolorbrush"></a>CBrush::CreateSysColorBrush  
+##  <a name="createsyscolorbrush"></a>  CBrush::CreateSysColorBrush  
  Inizializza il colore del pennello.  
   
 ```  
@@ -330,7 +325,7 @@ BOOL CreateSysColorBrush(int nIndex);
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFCDocView#26](../../mfc/codesnippet/cpp/cbrush-class_6.cpp)]  
   
-##  <a name="fromhandle"></a>CBrush::FromHandle  
+##  <a name="fromhandle"></a>  CBrush::FromHandle  
  Restituisce un puntatore a un `CBrush` oggetto quando viene specificato un handle a un Windows [HBRUSH](#operator_hbrush) oggetto.  
   
 ```  
@@ -339,7 +334,7 @@ static CBrush* PASCAL FromHandle(HBRUSH hBrush);
   
 ### <a name="parameters"></a>Parametri  
  `hBrush`  
- `HANDLE`per un pennello GDI di Windows.  
+ `HANDLE` per un pennello GDI di Windows.  
   
 ### <a name="return-value"></a>Valore restituito  
  Un puntatore a un `CBrush` oggetto in caso di esito positivo; in caso contrario **NULL**.  
@@ -352,7 +347,7 @@ static CBrush* PASCAL FromHandle(HBRUSH hBrush);
 ### <a name="example"></a>Esempio  
   Per vedere l'esempio [CBrush::CBrush](#cbrush).  
   
-##  <a name="getlogbrush"></a>CBrush::GetLogBrush  
+##  <a name="getlogbrush"></a>  CBrush::GetLogBrush  
  Chiamare questa funzione membro per recuperare il `LOGBRUSH` struttura.  
   
 ```  
@@ -378,7 +373,7 @@ int GetLogBrush(LOGBRUSH* pLogBrush);
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFCDocView#27](../../mfc/codesnippet/cpp/cbrush-class_7.cpp)]  
   
-##  <a name="operator_hbrush"></a>HBRUSH CBrush::operator  
+##  <a name="operator_hbrush"></a>  CBrush::operator HBRUSH  
  Utilizzare questo operatore per ottenere l'handle GDI di Windows associata del `CBrush` oggetto.  
   
 ```  

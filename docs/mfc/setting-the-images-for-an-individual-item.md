@@ -1,30 +1,25 @@
 ---
 title: Impostazione delle immagini per un singolo elemento | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - extended combo boxes [MFC], images
 - images [MFC], combo box items
 ms.assetid: bde83db8-23a7-4e35-837a-c86447d2c0af
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4d9cb74c2290292f44b8c6c9b8797890e759f315
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b7f3dbdf4d386e40802d74459dd2854035b5b7c8
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="setting-the-images-for-an-individual-item"></a>Impostazione delle immagini per un singolo elemento
 I diversi tipi di immagini utilizzato dall'elemento della casella combinata estesa vengono determinati in base ai valori di `iImage`, **iSelectedImage**, e **iOverlay** i membri del [COMBOBOXEXITEM ](http://msdn.microsoft.com/library/windows/desktop/bb775746) struttura. Ogni valore è l'indice di un'immagine nell'elenco di immagini associato del controllo. Per impostazione predefinita, questi membri impostati su 0, il controllo non visualizza alcuna immagine per l'elemento. Se si desidera utilizzare le immagini di un elemento specifico, è possibile modificare la struttura di conseguenza, quando si inserisce l'elemento casella combinata o modificando un elemento casella combinata.  

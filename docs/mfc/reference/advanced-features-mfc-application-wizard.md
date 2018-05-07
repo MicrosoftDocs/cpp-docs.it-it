@@ -2,12 +2,9 @@
 title: Funzionalità avanzate, creazione guidata applicazione MFC | Documenti Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.appwiz.mfc.exe.advanced
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - MFC Application Wizard, advanced features
 ms.assetid: 8a6681c5-6576-4b12-841a-6862beee76fa
-caps.latest.revision: 17
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5c2a9bb9ebb1837dc303e89e04ced496b52d1cdb
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c5094c18f72182929565e7c23c38b63443839da1
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="advanced-features-mfc-application-wizard"></a>Funzionalità avanzate, Creazione guidata applicazione MFC
 In questo argomento sono elencate opzioni per funzionalità aggiuntive dell'applicazione, ad esempio la Guida, il supporto di stampa e così via. In ogni sezione specificare supporto aggiuntivo per queste funzionalità avanzate.  
@@ -41,7 +36,7 @@ In questo argomento sono elencate opzioni per funzionalità aggiuntive dell'appl
  **Automazione**  
  Specifica che l'applicazione è in grado di gestire oggetti implementati in un'altra applicazione oppure espone l'applicazione ai client di automazione.  
   
- **Controlli ActiveX**  
+ **ActiveX (controlli)**  
  Supporta i controlli ActiveX (impostazione predefinita). Se si seleziona questa opzione e successivamente si vuole inserire controlli ActiveX nel progetto, è necessario aggiungere una chiamata a [AfxEnableControlContainer](ole-initialization.md#afxenablecontrolcontainer) dell'applicazione [:: InitInstance](../../mfc/reference/cwinapp-class.md#initinstance) membro funzione.  
   
  **MAPI (API di messaggistica)**  
@@ -68,7 +63,7 @@ In questo argomento sono elencate opzioni per funzionalità aggiuntive dell'appl
 |------------|-----------------|  
 |**Riquadro ancorato di Esplora**|Crea un riquadro ancorato simile a Visual Studio **Esplora** a sinistra della finestra cornice principale.|  
 |**Riquadro ancorato di tipo di output**|Crea un riquadro ancorato simile a Visual Studio **Output** riquadro che si trova sotto la finestra cornice principale.|  
-|**Riquadro ancorato di tipo di proprietà**|Crea un riquadro ancorato simile a Visual Studio **proprietà** riquadro a destra della finestra cornice principale.|  
+|**Proprietà riquadro ancorato di tipo**|Crea un riquadro ancorato simile a Visual Studio **proprietà** riquadro a destra della finestra cornice principale.|  
 |**Riquadro di spostamento**|Crea un riquadro ancorato simile alla barra di navigazione di Outlook a sinistra della finestra cornice principale.|  
 |**Barra del titolo**|Crea una barra del titolo di tipo Office sopra la finestra cornice principale.|  
   

@@ -1,13 +1,10 @@
 ---
-title: "Più tipi di documenti, visualizzazioni e finestre cornice | Documenti Microsoft"
-ms.custom: 
+title: Più tipi di documenti, visualizzazioni e finestre cornice | Documenti Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -24,17 +21,15 @@ helpviewer_keywords:
 - multiple frame windows [MFC]
 - splitter windows [MFC], static
 ms.assetid: c6b9e4e0-7c9c-45f1-a804-aeac39c9a128
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2ab8bff6484f81c482ddd8629ff33772fab1aeba
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5640c3bb66bee0641b0c153ae10dc146bb1c1dd8
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="multiple-document-types-views-and-frame-windows"></a>Tipi di documenti multipli, visualizzazioni e finestre cornice
 La relazione standard tra un documento e le relative visualizzazione e finestra cornice è descritta in [Creazione di documenti/visualizzazioni](../mfc/document-view-creation.md). Numerose applicazioni supportano un tipo di documento singolo, con più documenti aperti di quel tipo, con una singola visualizzazione del documento e una singola finestra cornice per ogni documento. In alcune applicazioni tuttavia potrebbe essere necessario modificare uno o più di questi valori predefiniti.  
@@ -75,7 +70,7 @@ La relazione standard tra un documento e le relative visualizzazione e finestra 
   
  La figura seguente, suddivisa nelle parti a, b e c, illustra i tre modelli di interfaccia utente nell'ordine presentato in precedenza.  
   
- ![Più &#45; interfacce utente con visualizzazioni](../mfc/media/vc37a71.gif "vc37a71")  
+ ![Più&#45;visualizzare interfacce utente](../mfc/media/vc37a71.gif "vc37a71")  
 Interfacce utente a più visualizzazioni  
   
  Il framework fornisce questi modelli implementando il comando Nuova finestra e fornendo la classe [CSplitterWnd](../mfc/reference/csplitterwnd-class.md), come illustrato in [Finestre con separatore](#_core_splitter_windows). Usando queste informazioni come punto di partenza, è possibile implementare altri modelli. Per programmi di esempio che illustrano diverse configurazioni di visualizzazioni, finestre cornice e con separatori, vedere [Esempi di MFC](../visual-cpp-samples.md).  

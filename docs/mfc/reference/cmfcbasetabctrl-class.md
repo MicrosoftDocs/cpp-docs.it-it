@@ -1,12 +1,9 @@
 ---
 title: Classe CMFCBaseTabCtrl | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCBaseTabCtrl
@@ -247,17 +244,15 @@ helpviewer_keywords:
 - CMFCBaseTabCtrl [MFC], m_bActivateTabOnRightClick
 - CMFCBaseTabCtrl [MFC], m_bAutoDestroyWindow
 ms.assetid: 7270c55f-6f6e-4dd2-b0d2-291afeac3882
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8dd8f70ffd2568f509b8b12be2167579c4ec4475
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 65160e196b202abd1393555a5ada001d76292e13
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcbasetabctrl-class"></a>CMFCBaseTabCtrl Class
 Implementa la funzionalità di base per le finestre a schede.  
@@ -430,7 +425,7 @@ class CMFCBaseTabCtrl : public CWnd
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** afxbasetabctrl.h  
   
-##  <a name="addicon"></a>CMFCBaseTabCtrl::AddIcon  
+##  <a name="addicon"></a>  CMFCBaseTabCtrl::AddIcon  
  Aggiunge un'icona all'elenco di icone protetto `CMap m_mapAddedIcons` membro.  
   
 ```  
@@ -485,7 +480,7 @@ virtual void AddTab(
 ### <a name="remarks"></a>Note  
  Se `pTabWnd` punta a un oggetto che non è derivato dal [classe CDockablePane](../../mfc/reference/cdockablepane-class.md) e se `bDetachable` è `TRUE`, il framework crea automaticamente un wrapper per il `pTabWnd` oggetto. Il wrapper rende il `pTabWnd` oggetto staccabile. Per impostazione predefinita, il wrapper è un'istanza di [classe CDockablePaneAdapter](../../mfc/reference/cdockablepaneadapter-class.md). Se le funzionalità offerte dal wrapper predefinito non sono accettabile, usare il [:: Setdockingbarwrapperrtc](#setdockingbarwrapperrtc) per specificare un diverso wrapper.  
   
-##  <a name="applyrestoredtabinfo"></a>CMFCBaseTabCtrl::ApplyRestoredTabInfo  
+##  <a name="applyrestoredtabinfo"></a>  CMFCBaseTabCtrl::ApplyRestoredTabInfo  
 
   
 ```  
@@ -497,7 +492,7 @@ virtual void ApplyRestoredTabInfo(BOOL bUseTabIndexes = FALSE);
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="autodestroywindow"></a>CMFCBaseTabCtrl::AutoDestroyWindow  
+##  <a name="autodestroywindow"></a>  CMFCBaseTabCtrl::AutoDestroyWindow  
 
   
 ```  
@@ -509,7 +504,7 @@ void AutoDestroyWindow(BOOL bAutoDestroy = TRUE);
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="calcrectedit"></a>CMFCBaseTabCtrl::CalcRectEdit  
+##  <a name="calcrectedit"></a>  CMFCBaseTabCtrl::CalcRectEdit  
 
   
 ```  
@@ -521,7 +516,7 @@ virtual void CalcRectEdit(CRect& rectEdit);
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="cleanup"></a>CMFCBaseTabCtrl::CleanUp  
+##  <a name="cleanup"></a>  CMFCBaseTabCtrl::CleanUp  
 
   
 ```  
@@ -530,7 +525,7 @@ virtual void CleanUp();
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="clearimagelist"></a>CMFCBaseTabCtrl::ClearImageList  
+##  <a name="clearimagelist"></a>  CMFCBaseTabCtrl::ClearImageList  
 
   
 ```  
@@ -539,7 +534,7 @@ virtual void ClearImageList();
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="createwrapper"></a>CMFCBaseTabCtrl::CreateWrapper  
+##  <a name="createwrapper"></a>  CMFCBaseTabCtrl::CreateWrapper  
  Crea un wrapper per una finestra cornice derivato dal [CWnd (classe)](../../mfc/reference/cwnd-class.md) ma non è derivato dal [classe CDockablePane](../../mfc/reference/cdockablepane-class.md).  
   
 ```  
@@ -569,7 +564,7 @@ virtual CWnd* CreateWrapper(
   
  Se `pWndToWrap` è derivato da `CDockablePane`, questo metodo non crea un wrapper. Al contrario, avrà esito negativo e restituire `pWndToWrap`.  
   
-##  <a name="detachtab"></a>CMFCBaseTabCtrl::DetachTab  
+##  <a name="detachtab"></a>  CMFCBaseTabCtrl::DetachTab  
  Il framework chiama questo metodo per disconnettere una scheda da controllo struttura a schede.  
   
 ```  
@@ -595,7 +590,7 @@ virtual BOOL DetachTab(
 ### <a name="remarks"></a>Note  
  Se la scheda specificata dal `nTabNum` è non rimovibili, questa funzione ha esito negativo e restituisce `FALSE`.  
   
-##  <a name="enableactivatelastactive"></a>CMFCBaseTabCtrl::EnableActivateLastActive  
+##  <a name="enableactivatelastactive"></a>  CMFCBaseTabCtrl::EnableActivateLastActive  
 
   
 ```  
@@ -607,7 +602,7 @@ void EnableActivateLastActive(BOOL bLastActive = TRUE);
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="enableautocolor"></a>CMFCBaseTabCtrl::EnableAutoColor  
+##  <a name="enableautocolor"></a>  CMFCBaseTabCtrl::EnableAutoColor  
  Controlla se il framework Usa i colori di sfondo automatico durante il disegno di una scheda.  
   
 ```  
@@ -623,7 +618,7 @@ void EnableAutoColor(BOOL bEnable = TRUE);
   
  Per impostazione predefinita, i colori automatici sono determinati dai colori definito libreria. È possibile fornire una matrice di colori personalizzata chiamando [CMFCBaseTabCtrl::SetAutoColors](#setautocolors).  
   
-##  <a name="enablecustomtooltips"></a>CMFCBaseTabCtrl::EnableCustomToolTips  
+##  <a name="enablecustomtooltips"></a>  CMFCBaseTabCtrl::EnableCustomToolTips  
  Abilita le descrizioni comandi personalizzate per il controllo scheda.  
   
 ```  
@@ -640,7 +635,7 @@ BOOL EnableCustomToolTips(BOOL bEnable = TRUE);
 ### <a name="remarks"></a>Note  
  Se le descrizioni comandi personalizzate sono abilitate, il controllo scheda invia il `AFX_WM_ON_GET_TAB_TOOLTIP` messaggio per la cornice principale. Se si desidera supportare le descrizioni comandi personalizzate nell'applicazione, la finestra cornice principale deve gestire questo metodo e fornire il testo della descrizione comando personalizzato. Per ulteriori informazioni su come fornire testo della descrizione comando personalizzata, vedere [CMFCTabToolTipInfo struttura](../../mfc/reference/cmfctabtooltipinfo-structure.md).  
   
-##  <a name="enableinplaceedit"></a>CMFCBaseTabCtrl::EnableInPlaceEdit  
+##  <a name="enableinplaceedit"></a>  CMFCBaseTabCtrl::EnableInPlaceEdit  
  Consente di indirizzare la modifica delle etichette scheda dall'utente.  
   
 ```  
@@ -654,7 +649,7 @@ virtual void EnableInPlaceEdit(BOOL bEnable) = 0;
 ### <a name="remarks"></a>Note  
  Per impostazione predefinita, la modifica diretta delle etichette scheda è disabilitata per i controlli struttura a schede.  
   
- È possibile abilitare la modifica diretta per un subset delle schede del controllo scheda. A tale scopo, eseguire l'override del metodo `CMFCBaseTabCtrl::StartRenameTab`. `StartRenameTab`deve restituire un valore diverso da zero per tutte le schede che supportano la modifica diretta delle etichette delle schede.  
+ È possibile abilitare la modifica diretta per un subset delle schede del controllo scheda. A tale scopo, eseguire l'override del metodo `CMFCBaseTabCtrl::StartRenameTab`. `StartRenameTab` deve restituire un valore diverso da zero per tutte le schede che supportano la modifica diretta delle etichette delle schede.  
   
  Nel `CMFCBaseTabCtrl Class`, questo metodo è una funzione virtuale pura e non contiene alcuna implementazione. Se si deriva una classe da `CMFCBaseTabCtrl`, è necessario implementare questa funzione.  
   
@@ -691,7 +686,7 @@ void EnableTabSwap(BOOL bEnable);
 ### <a name="remarks"></a>Note  
  Quando effettuare lo swapping scheda è abilitato, l'utente può trascinare una scheda e modificare la posizione relativa della scheda del controllo.  
   
-##  <a name="ensurevisible"></a>CMFCBaseTabCtrl::EnsureVisible  
+##  <a name="ensurevisible"></a>  CMFCBaseTabCtrl::EnsureVisible  
  Scorre schede fino a quando la scheda specificata è visibile.  
   
 ```  
@@ -710,7 +705,7 @@ virtual BOOL EnsureVisible(int iTab);
   
  Per impostazione predefinita, questo metodo non è supportato per il `CMFCBaseTabCtrl Class`. È necessario implementare questa funzione in una classe personalizzata derivata da `CMFCBaseTabCtrl` se il controllo scheda personalizzata supporta lo scorrimento della scheda. Questo metodo è supportato per il [classe CMFCTabCtrl](../../mfc/reference/cmfctabctrl-class.md).  
   
-##  <a name="enterdragmode"></a>CMFCBaseTabCtrl::EnterDragMode  
+##  <a name="enterdragmode"></a>  CMFCBaseTabCtrl::EnterDragMode  
 
   
 ```  
@@ -719,7 +714,7 @@ void EnterDragMode();
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="findtargetwnd"></a>CMFCBaseTabCtrl::FindTargetWnd  
+##  <a name="findtargetwnd"></a>  CMFCBaseTabCtrl::FindTargetWnd  
  Identifica il riquadro che contiene un punto specificato.  
   
 ```  
@@ -736,7 +731,7 @@ virtual CWnd* FindTargetWnd(const CPoint& pt) = 0;
 ### <a name="remarks"></a>Note  
  Nel `CMFCBaseTabCtrl` (classe), questo metodo è una funzione virtuale pura: è necessario implementare se si deriva una classe da `CMFCBaseTabCtrl`.  
   
-##  <a name="firechangeactivetab"></a>CMFCBaseTabCtrl::FireChangeActiveTab  
+##  <a name="firechangeactivetab"></a>  CMFCBaseTabCtrl::FireChangeActiveTab  
 
   
 ```  
@@ -748,7 +743,7 @@ virtual void FireChangeActiveTab(int nNewTab);
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="firechangingactivetab"></a>CMFCBaseTabCtrl::FireChangingActiveTab  
+##  <a name="firechangingactivetab"></a>  CMFCBaseTabCtrl::FireChangingActiveTab  
 
   
 ```  
@@ -762,7 +757,7 @@ virtual BOOL FireChangingActiveTab(int nNewTab);
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="getactivetab"></a>CMFCBaseTabCtrl::GetActiveTab  
+##  <a name="getactivetab"></a>  CMFCBaseTabCtrl::GetActiveTab  
  Recupera l'indice della scheda attualmente attiva.  
   
 ```  
@@ -772,7 +767,7 @@ virtual int GetActiveTab() const;
 ### <a name="return-value"></a>Valore restituito  
  L'indice in base zero della scheda attiva; -1 se è presente alcuna scheda attiva.  
   
-##  <a name="getactivetabcolor"></a>CMFCBaseTabCtrl::GetActiveTabColor  
+##  <a name="getactivetabcolor"></a>  CMFCBaseTabCtrl::GetActiveTabColor  
  Recupera il colore di sfondo della scheda attualmente attiva.  
   
 ```  
@@ -785,7 +780,7 @@ virtual COLORREF GetActiveTabColor() const;
 ### <a name="remarks"></a>Note  
  Per impostazione predefinita, il colore di sfondo della scheda attiva è `COLOR_WINDOW`. È possibile modificare il colore di sfondo per la scheda attiva utilizzando il metodo [CMFCBaseTabCtrl::SetActiveTabColor](#setactivetabcolor).  
   
-##  <a name="getactivetabtextcolor"></a>CMFCBaseTabCtrl::GetActiveTabTextColor  
+##  <a name="getactivetabtextcolor"></a>  CMFCBaseTabCtrl::GetActiveTabTextColor  
  Recupera il colore del testo per la scheda attiva.  
   
 ```  
@@ -798,7 +793,7 @@ virtual COLORREF GetActiveTabTextColor() const;
 ### <a name="remarks"></a>Note  
  Per impostazione predefinita, il colore del testo per le schede attive è `COLOR_WINDOWTEXT`. È possibile modificare il colore del testo con il metodo [CMFCBaseTabCtrl::SetActiveTabTextColor](#setactivetabtextcolor).  
   
-##  <a name="getactivewnd"></a>CMFCBaseTabCtrl::GetActiveWnd  
+##  <a name="getactivewnd"></a>  CMFCBaseTabCtrl::GetActiveWnd  
  Recupera un puntatore alla finestra della scheda attualmente attiva.  
   
 ```  
@@ -808,7 +803,7 @@ virtual CWnd* GetActiveWnd() const;
 ### <a name="return-value"></a>Valore restituito  
  Un puntatore a una finestra.  
   
-##  <a name="getautocolors"></a>CMFCBaseTabCtrl::GetAutoColors  
+##  <a name="getautocolors"></a>  CMFCBaseTabCtrl::GetAutoColors  
  Recupera la matrice di colori usati per la colorazione automatica.  
   
 ```  
@@ -821,7 +816,7 @@ const CArray<COLORREF,COLORREF>& GetAutoColors() const;
 ### <a name="remarks"></a>Note  
  Per impostazione predefinita, il framework consente di inizializzare la matrice di colori per i colori definito libreria. È possibile fornire una matrice di colori personalizzata chiamando il metodo [CMFCBaseTabCtrl::SetAutoColors](#setautocolors).  
   
-##  <a name="getfirstvisibletab"></a>CMFCBaseTabCtrl::GetFirstVisibleTab  
+##  <a name="getfirstvisibletab"></a>  CMFCBaseTabCtrl::GetFirstVisibleTab  
  Recupera un puntatore alla prima scheda visibile.  
   
 ```  
@@ -848,7 +843,7 @@ virtual CWnd* GetFirstVisibleTab(
   
  Se `iStartFrom` è maggiore o uguale al numero di schede del controllo, `GetFirstVisibleTab` automaticamente ha esito negativo.  
   
-##  <a name="getfirstvisibletabnum"></a>CMFCBaseTabCtrl::GetFirstVisibleTabNum  
+##  <a name="getfirstvisibletabnum"></a>  CMFCBaseTabCtrl::GetFirstVisibleTabNum  
 
   
 ```  
@@ -859,7 +854,7 @@ virtual int GetFirstVisibleTabNum() const;
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="gethighlightedtab"></a>CMFCBaseTabCtrl::GetHighlightedTab  
+##  <a name="gethighlightedtab"></a>  CMFCBaseTabCtrl::GetHighlightedTab  
  Recupera l'indice della scheda attualmente evidenziata.  
   
 ```  
@@ -869,7 +864,7 @@ int GetHighlightedTab() const;
 ### <a name="return-value"></a>Valore restituito  
  Indice in base zero della scheda evidenziata.  
   
-##  <a name="getimagelist"></a>CMFCBaseTabCtrl::GetImageList  
+##  <a name="getimagelist"></a>  CMFCBaseTabCtrl::GetImageList  
 
   
 ```  
@@ -880,7 +875,7 @@ virtual const CImageList* GetImageList() const;
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="getimagesize"></a>CMFCBaseTabCtrl::GetImageSize  
+##  <a name="getimagesize"></a>  CMFCBaseTabCtrl::GetImageSize  
 
   
 ```  
@@ -891,7 +886,7 @@ virtual CSize GetImageSize() const;
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="getlastvisibletab"></a>CMFCBaseTabCtrl::GetLastVisibleTab  
+##  <a name="getlastvisibletab"></a>  CMFCBaseTabCtrl::GetLastVisibleTab  
 
   
 ```  
@@ -905,7 +900,7 @@ virtual CWnd* GetLastVisibleTab(int& iTabNum);
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="getlocation"></a>CMFCBaseTabCtrl::GetLocation  
+##  <a name="getlocation"></a>  CMFCBaseTabCtrl::GetLocation  
  Recupera la posizione della parte area della scheda del controllo scheda.  
   
 ```  
@@ -918,7 +913,7 @@ Location GetLocation() const;
 ### <a name="remarks"></a>Note  
  I valori di percorso area scheda possibili sono `LOCATION_BOTTOM` e `LOCATION_TOP`.  
   
-##  <a name="getmaxwindowsize"></a>CMFCBaseTabCtrl::GetMaxWindowSize  
+##  <a name="getmaxwindowsize"></a>  CMFCBaseTabCtrl::GetMaxWindowSize  
 
   
 ```  
@@ -929,7 +924,7 @@ virtual CSize GetMaxWindowSize() const;
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="gettabarea"></a>CMFCBaseTabCtrl::GetTabArea  
+##  <a name="gettabarea"></a>  CMFCBaseTabCtrl::GetTabArea  
  Recupera le dimensioni e la posizione dell'area della scheda del controllo scheda.  
   
 ```  
@@ -940,17 +935,17 @@ virtual void GetTabArea(
   
 ### <a name="parameters"></a>Parametri  
  [in] `rectTabAreaTop`  
- Riferimento a un oggetto `CRect`. `GetTabArea`l'oggetto utilizzato per archiviare le dimensioni e la posizione dell'area della scheda superiore.  
+ Riferimento a un oggetto `CRect`. `GetTabArea` l'oggetto utilizzato per archiviare le dimensioni e posizione dell'area della scheda superiore.  
   
  [in] `rectTabAreaBottom`  
- Riferimento a un oggetto `CRect`. `GetTabArea`l'oggetto utilizzato per archiviare le dimensioni e la posizione dell'area della scheda nella parte inferiore.  
+ Riferimento a un oggetto `CRect`. `GetTabArea` l'oggetto utilizzato per archiviare le dimensioni e posizione dell'area della scheda nella parte inferiore.  
   
 ### <a name="remarks"></a>Note  
  Dopo aver `GetTabArea` restituisce, il `CRect` i parametri contengono le dimensioni e posizione dell'area della scheda nelle coordinate client del controllo scheda. Se è disponibile alcuna area della scheda nella parte superiore o inferiore del controllo scheda, `rectTabAreaTop` o `rectTabAreaBottom` sono vuoti.  
   
  Nel `CMFCBaseTabCtrl Class`, questo metodo è una funzione virtuale pura e non contiene alcuna implementazione. Se si deriva una classe da `CMFCBaseTabCtrl`, è necessario implementare questa funzione.  
   
-##  <a name="gettabbkcolor"></a>CMFCBaseTabCtrl::GetTabBkColor  
+##  <a name="gettabbkcolor"></a>  CMFCBaseTabCtrl::GetTabBkColor  
  Recupera il colore di sfondo della scheda specificata.  
   
 ```  
@@ -964,7 +959,7 @@ virtual COLORREF GetTabBkColor(int iTab) const;
 ### <a name="return-value"></a>Valore restituito  
  Oggetto [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) valore che indica il colore di sfondo della scheda specificata, -1 se `iTab` non compreso nell'intervallo.  
   
-##  <a name="gettabbordersize"></a>CMFCBaseTabCtrl::GetTabBorderSize  
+##  <a name="gettabbordersize"></a>  CMFCBaseTabCtrl::GetTabBorderSize  
  Recupera le dimensioni dei bordi del controllo.  
   
 ```  
@@ -977,7 +972,7 @@ virtual int GetTabBorderSize() const;
 ### <a name="remarks"></a>Note  
  Le dimensioni predefinite per il bordo della scheda sono tre pixel. È possibile modificare questo valore di dimensione bordo con il metodo [CMFCBaseTabCtrl::SetTabBorderSize](#settabbordersize).  
   
-##  <a name="gettabbyid"></a>CMFCBaseTabCtrl::GetTabByID  
+##  <a name="gettabbyid"></a>  CMFCBaseTabCtrl::GetTabByID  
  Recupera l'indice di una scheda in base a un ID della scheda.  
   
 ```  
@@ -994,7 +989,7 @@ virtual int GetTabByID(int id) const;
 ### <a name="remarks"></a>Note  
  La scheda gli ID vengono assegnati automaticamente quando vengono aggiunte le schede a un controllo tab.  
   
-##  <a name="gettabclosebutton"></a>CMFCBaseTabCtrl::GetTabCloseButton  
+##  <a name="gettabclosebutton"></a>  CMFCBaseTabCtrl::GetTabCloseButton  
 
   
 ```  
@@ -1005,7 +1000,7 @@ CRect GetTabCloseButton() const;
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="gettabfromhwnd"></a>CMFCBaseTabCtrl::GetTabFromHwnd  
+##  <a name="gettabfromhwnd"></a>  CMFCBaseTabCtrl::GetTabFromHwnd  
  Recupera l'indice della scheda che contiene l'oggetto HWND specificato.  
   
 ```  
@@ -1019,7 +1014,7 @@ virtual int GetTabFromHwnd(HWND hwnd) const;
 ### <a name="return-value"></a>Valore restituito  
  L'indice in base zero della scheda se ha esito positivo. -1 se nessuna scheda contiene `hwnd`.  
   
-##  <a name="gettabfrompoint"></a>CMFCBaseTabCtrl::GetTabFromPoint  
+##  <a name="gettabfrompoint"></a>  CMFCBaseTabCtrl::GetTabFromPoint  
  Recupera la scheda che contiene un punto specificato.  
   
 ```  
@@ -1033,7 +1028,7 @@ virtual int GetTabFromPoint(CPoint& pt) const;
 ### <a name="return-value"></a>Valore restituito  
  L'indice della scheda che contiene `pt`; -1 se nessuna scheda contiene `pt`.  
   
-##  <a name="gettabfullwidth"></a>CMFCBaseTabCtrl::GetTabFullWidth  
+##  <a name="gettabfullwidth"></a>  CMFCBaseTabCtrl::GetTabFullWidth  
 
   
 ```  
@@ -1047,7 +1042,7 @@ virtual int GetTabFullWidth(int iTab) const;
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="gettabhicon"></a>CMFCBaseTabCtrl::GetTabHicon  
+##  <a name="gettabhicon"></a>  CMFCBaseTabCtrl::GetTabHicon  
  Restituisce l'ICONA associata con la scheda specificata.  
   
 ```  
@@ -1061,7 +1056,7 @@ virtual HICON GetTabHicon(int iTab) const;
 ### <a name="return-value"></a>Valore restituito  
  L'ICONA associata a un'etichetta di una scheda se ha esito positivo. `NULL` se è presente alcuna ICONA o se il metodo ha esito negativo.  
   
-##  <a name="gettabicon"></a>CMFCBaseTabCtrl::GetTabIcon  
+##  <a name="gettabicon"></a>  CMFCBaseTabCtrl::GetTabIcon  
  Recupera l'icona associata con la scheda specificata.  
   
 ```  
@@ -1078,7 +1073,7 @@ virtual UINT GetTabIcon(int iTab) const;
 ### <a name="remarks"></a>Note  
  Il [CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md) oggetto archivia le icone in interno [CImageList](../../mfc/reference/cimagelist-class.md) oggetto.  
   
-##  <a name="gettabid"></a>CMFCBaseTabCtrl::GetTabID  
+##  <a name="gettabid"></a>  CMFCBaseTabCtrl::GetTabID  
  Recupera l'ID per una scheda specificata dall'indice della scheda.  
   
 ```  
@@ -1092,7 +1087,7 @@ int GetTabID(int iTab) const;
 ### <a name="return-value"></a>Valore restituito  
  ID della scheda o -1 se `iTab` non compreso nell'intervallo.  
   
-##  <a name="gettablabel"></a>CMFCBaseTabCtrl::GetTabLabel  
+##  <a name="gettablabel"></a>  CMFCBaseTabCtrl::GetTabLabel  
  Recupera il testo dell'etichetta di una scheda.  
   
 ```  
@@ -1109,14 +1104,14 @@ virtual BOOL GetTabLabel(
  Riferimento a un oggetto `CString`. In questo parametro, questo metodo archivia l'etichetta della scheda.  
   
 ### <a name="return-value"></a>Valore restituito  
- `TRUE`Se ha esito positivo. `FALSE` in caso contrario.  
+ `TRUE` Se l'operazione riesce; `FALSE` in caso contrario.  
   
 ### <a name="remarks"></a>Note  
  Questo metodo ha esito negativo se l'indice `iTab` non è valido.  
   
  Impostare l'etichetta per una scheda quando si crea la scheda con [cmfcbasetabctrl:: addTab](#addtab). È inoltre possibile modificare l'etichetta dopo la creazione con il metodo [CMFCBaseTabCtrl::SetTabLabel](#settablabel).  
   
-##  <a name="gettabrect"></a>CMFCBaseTabCtrl::GetTabRect  
+##  <a name="gettabrect"></a>  CMFCBaseTabCtrl::GetTabRect  
  Recupera le dimensioni e la posizione della scheda specificata.  
   
 ```  
@@ -1133,9 +1128,9 @@ virtual BOOL GetTabRect(
  Riferimento a un oggetto `CRect`. In questo parametro, questo metodo archivia le dimensioni e la posizione della scheda.  
   
 ### <a name="return-value"></a>Valore restituito  
- `TRUE`Se ha esito positivo. `FALSE` se l'indice di tabulazione non è valido.  
+ `TRUE` Se l'operazione riesce; `FALSE` se l'indice della scheda non è valido.  
   
-##  <a name="gettabsheight"></a>CMFCBaseTabCtrl::GetTabsHeight  
+##  <a name="gettabsheight"></a>  CMFCBaseTabCtrl::GetTabsHeight  
 
   
 ```  
@@ -1146,7 +1141,7 @@ virtual int GetTabsHeight() const;
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="gettabsnum"></a>CMFCBaseTabCtrl::GetTabsNum  
+##  <a name="gettabsnum"></a>  CMFCBaseTabCtrl::GetTabsNum  
  Recupera il numero di schede del controllo.  
   
 ```  
@@ -1156,7 +1151,7 @@ virtual int GetTabsNum() const;
 ### <a name="return-value"></a>Valore restituito  
  Il numero di schede del controllo.  
   
-##  <a name="gettabsrect"></a>CMFCBaseTabCtrl::GetTabsRect  
+##  <a name="gettabsrect"></a>  CMFCBaseTabCtrl::GetTabsRect  
 
   
 ```  
@@ -1168,7 +1163,7 @@ virtual void GetTabsRect(CRect& rect) const;
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="gettabtextcolor"></a>CMFCBaseTabCtrl::GetTabTextColor  
+##  <a name="gettabtextcolor"></a>  CMFCBaseTabCtrl::GetTabTextColor  
  Recupera il colore del testo per la scheda specificata.  
   
 ```  
@@ -1182,7 +1177,7 @@ virtual COLORREF GetTabTextColor(int iTab) const;
 ### <a name="return-value"></a>Valore restituito  
  Oggetto [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) parametro che indica il colore del testo della scheda specificata; -1 se `iTab` non compreso nell'intervallo.  
   
-##  <a name="gettabwnd"></a>CMFCBaseTabCtrl::GetTabWnd  
+##  <a name="gettabwnd"></a>  CMFCBaseTabCtrl::GetTabWnd  
  Restituisce il puntatore al riquadro che si trova nella scheda specificata.  
   
 ```  
@@ -1194,14 +1189,14 @@ virtual CWnd* GetTabWnd(int iTab) const;
  Indice in base zero di una scheda.  
   
 ### <a name="return-value"></a>Valore restituito  
- Un puntatore al [CWnd](../../mfc/reference/cwnd-class.md) oggetto che si trova nella scheda che `iTab` specifica. `NULL`Se `iTab` non è valido.  
+ Un puntatore al [CWnd](../../mfc/reference/cwnd-class.md) oggetto che si trova nella scheda che `iTab` specifica. `NULL` Se `iTab` non è valido.  
   
 ### <a name="remarks"></a>Note  
  L'oggetto restituito è quello che l'applicazione aggiunta quando una chiamata [cmfcbasetabctrl:: addTab](#addtab) o [cmfcbasetabctrl:: insertTab](#inserttab).  
   
  Se l'oggetto in una scheda è un wrapper, questo metodo restituirà il wrapper per l'oggetto. Per ulteriori informazioni sui wrapper, vedere [CMFCBaseTabCtrl::CreateWrapper](#createwrapper). Se si desidera accedere a un puntatore all'oggetto diretto senza wrapper, utilizzare il metodo [CMFCBaseTabCtrl::GetTabWndNoWrapper](#gettabwndnowrapper).  
   
-##  <a name="gettabwndnowrapper"></a>CMFCBaseTabCtrl::GetTabWndNoWrapper  
+##  <a name="gettabwndnowrapper"></a>  CMFCBaseTabCtrl::GetTabWndNoWrapper  
  Restituisce un puntatore al controllo che si trova in una scheda, anche se il controllo dispone di un wrapper.  
   
 ```  
@@ -1216,11 +1211,11 @@ virtual CWnd* GetTabWndNoWrapper(int iTab) const;
  Un puntatore al [CWnd](../../mfc/reference/cwnd-class.md) oggetto che si trova nella scheda specificata. `NULL` se `iTab` non è valido.  
   
 ### <a name="remarks"></a>Note  
- Questo metodo recupera un puntatore diretto al `CWnd` aggiunti tramite il metodo dell'oggetto [cmfcbasetabctrl:: addTab](#addtab) o [cmfcbasetabctrl:: insertTab](#inserttab). `GetTabWndNoWrapper`Recupera un puntatore a aggiunto `CWnd`, anche se il framework aggiunto un wrapper per l'oggetto. Per ulteriori informazioni sui wrapper e [classe CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md), vedere [CMFCBaseTabCtrl::CreateWrapper](#createwrapper).  
+ Questo metodo recupera un puntatore diretto al `CWnd` aggiunti tramite il metodo dell'oggetto [cmfcbasetabctrl:: addTab](#addtab) o [cmfcbasetabctrl:: insertTab](#inserttab). `GetTabWndNoWrapper` Recupera un puntatore a aggiunto `CWnd`, anche se il framework aggiunto un wrapper per l'oggetto. Per ulteriori informazioni sui wrapper e [classe CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md), vedere [CMFCBaseTabCtrl::CreateWrapper](#createwrapper).  
   
  Utilizzare il metodo [CMFCBaseTabCtrl::GetTabWnd](#gettabwnd) se non si desidera ignorare la classe wrapper.  
   
-##  <a name="gettooltipctrl"></a>CMFCBaseTabCtrl::GetToolTipCtrl  
+##  <a name="gettooltipctrl"></a>  CMFCBaseTabCtrl::GetToolTipCtrl  
  Recupera un riferimento a contorl la descrizione comando.  
   
 ```  
@@ -1230,7 +1225,7 @@ CToolTipCtrl& GetToolTipCtrl() const;
 ### <a name="return-value"></a>Valore restituito  
  Un riferimento al controllo tooltip.  
   
-##  <a name="getvisibletabsnum"></a>CMFCBaseTabCtrl::GetVisibleTabsNum  
+##  <a name="getvisibletabsnum"></a>  CMFCBaseTabCtrl::GetVisibleTabsNum  
  Recupera il numero di schede visibili.  
   
 ```  
@@ -1240,7 +1235,7 @@ virtual int GetVisibleTabsNum() const;
 ### <a name="return-value"></a>Valore restituito  
  Il numero di schede visibili.  
   
-##  <a name="hasimage"></a>CMFCBaseTabCtrl::HasImage  
+##  <a name="hasimage"></a>  CMFCBaseTabCtrl::HasImage  
 
   
 ```  
@@ -1254,7 +1249,7 @@ virtual BOOL HasImage(int iTab) const;
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="hidesingletab"></a>CMFCBaseTabCtrl::HideSingleTab  
+##  <a name="hidesingletab"></a>  CMFCBaseTabCtrl::HideSingleTab  
  Imposta l'opzione per nascondere le schede per il controllo scheda quando è presente una sola scheda visibile.  
   
 ```  
@@ -1268,7 +1263,7 @@ virtual void HideSingleTab(BOOL bHide = TRUE);
 ### <a name="remarks"></a>Note  
  Quando l'applicazione è configurata per nascondere le schede singole, il framework visualizza automaticamente le schede quando una seconda scheda viene aggiunta al controllo scheda.  
   
-##  <a name="inserttab"></a>Cmfcbasetabctrl:: insertTab  
+##  <a name="inserttab"></a>  Cmfcbasetabctrl:: insertTab  
  Inserisce una scheda del controllo struttura a schede.  
   
 ```  
@@ -1310,7 +1305,7 @@ virtual void InsertTab(
 ### <a name="remarks"></a>Note  
  Se l'oggetto indicato da `pNewWnd` non è derivato dal [classe CDockablePane](../../mfc/reference/cdockablepane-class.md) e, se il `bDetachable` parametro `TRUE`, il framework crea un wrapper speciale per la nuova scheda. Per impostazione predefinita, il wrapper è un'istanza di [classe CDockablePaneAdapter](../../mfc/reference/cdockablepaneadapter-class.md). Utilizzare il [:: Setdockingbarwrapperrtc](#setdockingbarwrapperrtc) metodo per creare una classe wrapper diversi. Qualsiasi classe wrapper personalizzata deve derivare da `CDockablePaneAdapter`.  
   
-##  <a name="invalidatetab"></a>CMFCBaseTabCtrl::InvalidateTab  
+##  <a name="invalidatetab"></a>  CMFCBaseTabCtrl::InvalidateTab  
 
   
 ```  
@@ -1322,7 +1317,7 @@ void InvalidateTab(int iTab);
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="isactivetabclosebutton"></a>CMFCBaseTabCtrl::IsActiveTabCloseButton  
+##  <a name="isactivetabclosebutton"></a>  CMFCBaseTabCtrl::IsActiveTabCloseButton  
 
   
 ```  
@@ -1333,7 +1328,7 @@ virtual BOOL IsActiveTabCloseButton() const;
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="isautocolor"></a>CMFCBaseTabCtrl::IsAutoColor  
+##  <a name="isautocolor"></a>  CMFCBaseTabCtrl::IsAutoColor  
  Determina se il controllo struttura a schede è in modalità automatico.  
   
 ```  
@@ -1341,12 +1336,12 @@ BOOL IsAutoColor() const;
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- `TRUE`Se il controllo struttura a schede è in modalità di automatico. `FALSE` in caso contrario.  
+ `TRUE` Se il controllo struttura a schede è in modalità automatico. `FALSE` in caso contrario.  
   
 ### <a name="remarks"></a>Note  
  È possibile abilitare o disabilitare la modalità automatico utilizzando il [CMFCBaseTabCtrl::EnableAutoColor](#enableautocolor) metodo.  
   
-##  <a name="isautodestroywindow"></a>CMFCBaseTabCtrl::IsAutoDestroyWindow  
+##  <a name="isautodestroywindow"></a>  CMFCBaseTabCtrl::IsAutoDestroyWindow  
 
   
 ```  
@@ -1357,7 +1352,7 @@ BOOL IsAutoDestroyWindow() const;
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="iscolored"></a>CMFCBaseTabCtrl::IsColored  
+##  <a name="iscolored"></a>  CMFCBaseTabCtrl::IsColored  
 
   
 ```  
@@ -1368,7 +1363,7 @@ virtual BOOL IsColored() const;
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="isdialogcontrol"></a>CMFCBaseTabCtrl::IsDialogControl  
+##  <a name="isdialogcontrol"></a>  CMFCBaseTabCtrl::IsDialogControl  
 
   
 ```  
@@ -1379,7 +1374,7 @@ BOOL IsDialogControl() const;
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="isdrawnoprefix"></a>CMFCBaseTabCtrl::IsDrawNoPrefix  
+##  <a name="isdrawnoprefix"></a>  CMFCBaseTabCtrl::IsDrawNoPrefix  
 
   
 ```  
@@ -1390,7 +1385,7 @@ BOOL IsDrawNoPrefix() const;
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="isflatframe"></a>CMFCBaseTabCtrl::IsFlatFrame  
+##  <a name="isflatframe"></a>  CMFCBaseTabCtrl::IsFlatFrame  
  Indica se il frame del controllo struttura a schede viene eseguito il rendering in uno stile flat o in uno stile 3D.  
   
 ```  
@@ -1398,14 +1393,14 @@ virtual BOOL IsFlatFrame() const;
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- `TRUE`Se il frame del controllo struttura a schede viene eseguito il rendering bidimensionale; `FALSE` se viene eseguito il frame in uno stile 3D.  
+ `TRUE` Se il frame del controllo struttura a schede viene eseguito il rendering in uno stile flat; `FALSE` se viene eseguito il frame in uno stile 3D.  
   
 ### <a name="remarks"></a>Note  
  Utilizzare [CMFCTabCtrl::SetFlatFrame](../../mfc/reference/cmfctabctrl-class.md#setflatframe) per modificare lo stile per il frame del controllo struttura a schede.  
   
  Impossibile eseguire il rendering di controlli struttura a schede che utilizzano lo stile di Outlook con i frame flat. Ciò include la [classe CMFCOutlookBarTabCtrl](../../mfc/reference/cmfcoutlookbartabctrl-class.md) e le classi derivate da tale classe.  
   
-##  <a name="isflattab"></a>CMFCBaseTabCtrl::IsFlatTab  
+##  <a name="isflattab"></a>  CMFCBaseTabCtrl::IsFlatTab  
 
   
 ```  
@@ -1416,7 +1411,7 @@ virtual BOOL IsFlatTab() const;
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="ishidesingletab"></a>CMFCBaseTabCtrl::IsHideSingleTab  
+##  <a name="ishidesingletab"></a>  CMFCBaseTabCtrl::IsHideSingleTab  
  Determina se il controllo struttura a schede consente di nascondere l'etichetta della scheda se è presente solo una scheda.  
   
 ```  
@@ -1424,12 +1419,12 @@ virtual BOOL IsHideSingleTab() const;
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- `TRUE`Se il controllo struttura a schede consente di nascondere l'etichetta della scheda quando dispone di una scheda; in caso contrario `FALSE`.  
+ `TRUE` Se il controllo struttura a schede consente di nascondere l'etichetta della scheda quando dispone di una sola scheda; in caso contrario `FALSE`.  
   
 ### <a name="remarks"></a>Note  
  Utilizzare il metodo [CMFCBaseTabCtrl::HideSingleTab](#hidesingletab) per consentire di nascondere l'etichetta della scheda quando è presente solo una scheda.  
   
-##  <a name="isiconadded"></a>CMFCBaseTabCtrl::IsIconAdded  
+##  <a name="isiconadded"></a>  CMFCBaseTabCtrl::IsIconAdded  
 
   
 ```  
@@ -1446,7 +1441,7 @@ BOOL IsIconAdded(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="isinplaceedit"></a>CMFCBaseTabCtrl::IsInPlaceEdit  
+##  <a name="isinplaceedit"></a>  CMFCBaseTabCtrl::IsInPlaceEdit  
  Indica se il controllo scheda è configurato per consentire all'utente di modificare dinamicamente le etichette delle schede.  
   
 ```  
@@ -1459,7 +1454,7 @@ virtual BOOL IsInPlaceEdit() const;
 ### <a name="remarks"></a>Note  
  È possibile abilitare o disabilitare la modifica sul posto, chiamare il metodo [CMFCBaseTabCtrl::EnableInPlaceEdit](#enableinplaceedit).  
   
-##  <a name="isleftrightrounded"></a>CMFCBaseTabCtrl::IsLeftRightRounded  
+##  <a name="isleftrightrounded"></a>  CMFCBaseTabCtrl::IsLeftRightRounded  
 
   
 ```  
@@ -1470,7 +1465,7 @@ virtual BOOL IsLeftRightRounded() const;
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="ismditab"></a>CMFCBaseTabCtrl::IsMDITab  
+##  <a name="ismditab"></a>  CMFCBaseTabCtrl::IsMDITab  
 
   
 ```  
@@ -1481,7 +1476,7 @@ BOOL IsMDITab() const;
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="isonenotestyle"></a>CMFCBaseTabCtrl::IsOneNoteStyle  
+##  <a name="isonenotestyle"></a>  CMFCBaseTabCtrl::IsOneNoteStyle  
  Determina se le schede vengono visualizzate nello stile di Microsoft OneNote.  
   
 ```  
@@ -1489,14 +1484,14 @@ virtual BOOL IsOneNoteStyle() const;
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- `TRUE`Se vengono visualizzate le schede nello stile di Microsoft OneNote; in caso contrario `FALSE`.  
+ `TRUE` Se vengono visualizzate le schede nello stile di Microsoft OneNote; in caso contrario `FALSE`.  
   
 ### <a name="remarks"></a>Note  
  Chiamare il metodo [CMDIFrameWndEx::EnableMDITabs](../../mfc/reference/cmdiframewndex-class.md#enablemditabs) per abilitare lo stile Microsoft OneNote. È inoltre possibile abilitare questo stile quando crea un'istanza di [classe CMFCTabCtrl](../../mfc/reference/cmfctabctrl-class.md): è sufficiente passare lo stile STYLE_3D_ONENOTE il metodo [CMFCTabCtrl::Create](../../mfc/reference/cmfctabctrl-class.md#create).  
   
  Per impostazione predefinita, lo stile Microsoft OneNote non è supportato in una classe personalizzata derivata dal `CMFCBaseTabCtrl Class`. Tuttavia, è supportato nel `CMFCTabCtrl` classe.  
   
-##  <a name="isptintabarea"></a>CMFCBaseTabCtrl::IsPtInTabArea  
+##  <a name="isptintabarea"></a>  CMFCBaseTabCtrl::IsPtInTabArea  
  Determina se un punto all'interno dell'area della scheda.  
   
 ```  
@@ -1513,7 +1508,7 @@ virtual BOOL IsPtInTabArea(CPoint point) const = 0;
 ### <a name="remarks"></a>Note  
  Nel `CMFCBaseTabCtrl Class`, questo metodo è una funzione virtuale pura e non contiene alcuna implementazione. Se si deriva una classe da `CMFCBaseTabCtrl`, è necessario implementare questa funzione.  
   
-##  <a name="istabclosebuttonhighlighted"></a>CMFCBaseTabCtrl::IsTabCloseButtonHighlighted  
+##  <a name="istabclosebuttonhighlighted"></a>  CMFCBaseTabCtrl::IsTabCloseButtonHighlighted  
 
   
 ```  
@@ -1524,7 +1519,7 @@ BOOL IsTabCloseButtonHighlighted() const;
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="istabclosebuttonpressed"></a>CMFCBaseTabCtrl::IsTabCloseButtonPressed  
+##  <a name="istabclosebuttonpressed"></a>  CMFCBaseTabCtrl::IsTabCloseButtonPressed  
 
   
 ```  
@@ -1535,7 +1530,7 @@ BOOL IsTabCloseButtonPressed() const;
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="istabdetachable"></a>CMFCBaseTabCtrl::IsTabDetachable  
+##  <a name="istabdetachable"></a>  CMFCBaseTabCtrl::IsTabDetachable  
  Determina se una scheda è rimovibile.  
   
 ```  
@@ -1547,12 +1542,12 @@ virtual BOOL IsTabDetachable(int iTab) const;
  Indice in base zero della scheda da controllare.  
   
 ### <a name="return-value"></a>Valore restituito  
- `TRUE`Se la scheda è rimovibile; `FALSE` in caso contrario.  
+ `TRUE` Se la scheda è rimovibile; `FALSE` in caso contrario.  
   
 ### <a name="remarks"></a>Note  
  Per rendere una scheda rimovibile, utilizzare il metodo [cmfcbasetabctrl:: Enabletabdetach](#enabletabdetach).  
   
-##  <a name="istabicononly"></a>CMFCBaseTabCtrl::IsTabIconOnly  
+##  <a name="istabicononly"></a>  CMFCBaseTabCtrl::IsTabIconOnly  
  Determina se l'etichetta di una scheda contiene solo le icone e alcun testo.  
   
 ```  
@@ -1564,12 +1559,12 @@ virtual BOOL IsTabIconOnly(int iTab) const;
  Indice in base zero della scheda.  
   
 ### <a name="return-value"></a>Valore restituito  
- `TRUE`Se l'etichetta di una scheda dispone solo di icone; `FALSE` in caso contrario.  
+ `TRUE` Se un'etichetta scheda dispone solo di icone; `FALSE` in caso contrario.  
   
 ### <a name="remarks"></a>Note  
  Per impostare le schede per visualizzare solo le icone in un'applicazione, chiamare il metodo [CMFCBaseTabCtrl::SetTabIconOnly](#settabicononly).  
   
-##  <a name="istabswapenabled"></a>CMFCBaseTabCtrl::IsTabSwapEnabled  
+##  <a name="istabswapenabled"></a>  CMFCBaseTabCtrl::IsTabSwapEnabled  
  Determina se il controllo struttura a schede consente all'utente di modificare le posizioni delle tabulazioni utilizzando il mouse.  
   
 ```  
@@ -1582,7 +1577,7 @@ BOOL IsTabSwapEnabled() const;
 ### <a name="remarks"></a>Note  
  Per impostazione predefinita, gli utenti non è possibile modificare l'ordine delle schede in un controllo struttura a schede. Utilizzare il [cmfcbasetabctrl:: Enabletabswap](#enabletabswap) metodo per abilitare questa funzionalità.  
   
-##  <a name="istabvisible"></a>CMFCBaseTabCtrl::IsTabVisible  
+##  <a name="istabvisible"></a>  CMFCBaseTabCtrl::IsTabVisible  
  Indica se la scheda specificata è visibile.  
   
 ```  
@@ -1596,7 +1591,7 @@ virtual BOOL IsTabVisible(int iTab) const;
 ### <a name="return-value"></a>Valore restituito  
  Diverso da zero se la scheda specificata è visibile; in caso contrario 0.  
   
-##  <a name="isvs2005style"></a>CMFCBaseTabCtrl::IsVS2005Style  
+##  <a name="isvs2005style"></a>  CMFCBaseTabCtrl::IsVS2005Style  
 
   
 ```  
@@ -1607,8 +1602,8 @@ virtual BOOL IsVS2005Style() const;
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="m_bactivatetabonrightclick"></a>CMFCBaseTabCtrl::m_bActivateTabOnRightClick  
- `m_bActivateTabOnRightClick`Determina se le schede sono in stato attivo quando l'utente fa clic sull'etichetta di una scheda con il pulsante destro del mouse.  
+##  <a name="m_bactivatetabonrightclick"></a>  CMFCBaseTabCtrl::m_bActivateTabOnRightClick  
+ `m_bActivateTabOnRightClick` Determina se le schede sono in stato attivo quando l'utente fa clic sull'etichetta di una scheda con il pulsante destro del mouse.  
   
 ```  
 BOOL m_bActivateTabOnRightClick;  
@@ -1617,8 +1612,8 @@ BOOL m_bActivateTabOnRightClick;
 ### <a name="remarks"></a>Note  
  Il valore predefinito per questo membro dati è `FALSE`.  
   
-##  <a name="m_bautodestroywindow"></a>CMFCBaseTabCtrl::m_bAutoDestroyWindow  
- `m_bAutoDestroyWindow`Determina se il framework Elimina automaticamente gli oggetti nelle schede quando le schede vengono rimossi.  
+##  <a name="m_bautodestroywindow"></a>  CMFCBaseTabCtrl::m_bAutoDestroyWindow  
+ `m_bAutoDestroyWindow` Determina se il framework Elimina automaticamente gli oggetti nelle schede quando le schede vengono rimossi.  
   
 ```  
 BOOL m_bAutoDestroyWindow;  
@@ -1627,7 +1622,7 @@ BOOL m_bAutoDestroyWindow;
 ### <a name="remarks"></a>Note  
  Per impostazione predefinita, questo membro è `FALSE`.  
   
-##  <a name="movetab"></a>CMFCBaseTabCtrl::MoveTab  
+##  <a name="movetab"></a>  CMFCBaseTabCtrl::MoveTab  
 
   
 ```  
@@ -1642,7 +1637,7 @@ virtual void MoveTab(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="onchangetabs"></a>CMFCBaseTabCtrl::OnChangeTabs  
+##  <a name="onchangetabs"></a>  CMFCBaseTabCtrl::OnChangeTabs  
  Il framework chiama questo metodo quando il numero di schede in una scheda controllare le modifiche.  
   
 ```  
@@ -1652,7 +1647,7 @@ virtual void OnChangeTabs();
 ### <a name="remarks"></a>Note  
  Per impostazione predefinita, questo metodo non esegue alcuna operazione. Eseguire l'override di questo metodo per eseguire codice personalizzato quando il numero di schede nella scheda controllare le modifiche.  
   
-##  <a name="ondrop"></a>CMFCBaseTabCtrl::OnDrop  
+##  <a name="ondrop"></a>  CMFCBaseTabCtrl::OnDrop  
 
   
 ```  
@@ -1671,7 +1666,7 @@ virtual BOOL OnDrop(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="ondragover"></a>CMFCBaseTabCtrl::OnDragOver  
+##  <a name="ondragover"></a>  CMFCBaseTabCtrl::OnDragOver  
 
   
 ```  
@@ -1690,7 +1685,7 @@ virtual DROPEFFECT OnDragOver(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="ondragleave"></a>CMFCBaseTabCtrl::OnDragLeave  
+##  <a name="ondragleave"></a>  CMFCBaseTabCtrl::OnDragLeave  
 
   
 ```  
@@ -1699,7 +1694,7 @@ virtual void OnDragLeave();
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="ondragenter"></a>CMFCBaseTabCtrl::OnDragEnter  
+##  <a name="ondragenter"></a>  CMFCBaseTabCtrl::OnDragEnter  
 
   
 ```  
@@ -1718,7 +1713,7 @@ virtual DROPEFFECT OnDragEnter(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="onrenametab"></a>CMFCBaseTabCtrl::OnRenameTab  
+##  <a name="onrenametab"></a>  CMFCBaseTabCtrl::OnRenameTab  
 
   
 ```  
@@ -1733,7 +1728,7 @@ virtual BOOL OnRenameTab(int, CString&);
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="pretranslatemessage"></a>CMFCBaseTabCtrl::PreTranslateMessage  
+##  <a name="pretranslatemessage"></a>  CMFCBaseTabCtrl::PreTranslateMessage  
 
   
 ```  
@@ -1747,7 +1742,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="recalclayout"></a>CMFCBaseTabCtrl::RecalcLayout  
+##  <a name="recalclayout"></a>  CMFCBaseTabCtrl::RecalcLayout  
  Ricalcola il layout interno del controllo scheda.  
   
 ```  
@@ -1757,7 +1752,7 @@ virtual void RecalcLayout() = 0;
 ### <a name="remarks"></a>Note  
  Nel `CMFCBaseTabCtrl Class`, questo metodo è una funzione virtuale pura. Se si deriva una classe da `CMFCBaseTabCtrl`, è necessario implementare questa funzione.  
   
-##  <a name="removealltabs"></a>CMFCBaseTabCtrl::RemoveAllTabs  
+##  <a name="removealltabs"></a>  CMFCBaseTabCtrl::RemoveAllTabs  
  Rimuove tutte le schede di controllo struttura a schede.  
   
 ```  
@@ -1767,7 +1762,7 @@ virtual void RemoveAllTabs();
 ### <a name="remarks"></a>Note  
  Se [CMFCBaseTabCtrl::m_bAutoDestroyWindow](#m_bautodestroywindow) è `TRUE`, il framework Elimina tutte le [CWnd](../../mfc/reference/cwnd-class.md) gli oggetti associati alle schede rimosse.  
   
-##  <a name="removetab"></a>CMFCBaseTabCtrl::RemoveTab  
+##  <a name="removetab"></a>  CMFCBaseTabCtrl::RemoveTab  
  Rimuove una scheda del controllo struttura a schede.  
   
 ```  
@@ -1784,12 +1779,12 @@ virtual BOOL RemoveTab(
  Un parametro booleano che specifica se ricalcolare il layout della scheda.  
   
 ### <a name="return-value"></a>Valore restituito  
- `TRUE`Se il metodo rimuove la scheda correttamente. in caso contrario `FALSE`.  
+ `TRUE` Se il metodo rimuove la scheda correttamente. in caso contrario `FALSE`.  
   
 ### <a name="remarks"></a>Note  
  Se [CMFCBaseTabCtrl::m_bAutoDestroyWindow](#m_bautodestroywindow) è `TRUE`, `RemoveTab` Elimina definitivamente il [CWnd](../../mfc/reference/cwnd-class.md) oggetto associato alla scheda specificata.  
   
-##  <a name="renametab"></a>CMFCBaseTabCtrl::RenameTab  
+##  <a name="renametab"></a>  CMFCBaseTabCtrl::RenameTab  
 
   
 ```  
@@ -1800,14 +1795,14 @@ virtual BOOL RenameTab();
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="resetimagelist"></a>CMFCBaseTabCtrl::ResetImageList  
+##  <a name="resetimagelist"></a>  CMFCBaseTabCtrl::ResetImageList  
  Reimposta l'elenco di immagini per un'istanza di [classe CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md).  
   
 ```  
 void ResetImageList();
 ```  
   
-##  <a name="serialize"></a>CMFCBaseTabCtrl::Serialize  
+##  <a name="serialize"></a>  CMFCBaseTabCtrl::Serialize  
 
   
 ```  
@@ -1819,7 +1814,7 @@ virtual void Serialize(CArchive& ar);
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="setactivetab"></a>CMFCBaseTabCtrl::SetActiveTab  
+##  <a name="setactivetab"></a>  CMFCBaseTabCtrl::SetActiveTab  
  Attiva la scheda specificata.  
   
 ```  
@@ -1836,7 +1831,7 @@ virtual BOOL SetActiveTab(int iTab) = 0;
 ### <a name="remarks"></a>Note  
  Nel `CMFCBaseTabCtrl Class`, questo metodo è una funzione virtuale pura. Se si deriva una classe da `CMFCBaseTabCtrl`, è necessario implementare questa funzione.  
   
-##  <a name="setactivetabcolor"></a>CMFCBaseTabCtrl::SetActiveTabColor  
+##  <a name="setactivetabcolor"></a>  CMFCBaseTabCtrl::SetActiveTabColor  
  Imposta il colore di sfondo per la scheda attiva.  
   
 ```  
@@ -1850,7 +1845,7 @@ virtual void SetActiveTabColor(COLORREF clr);
 ### <a name="remarks"></a>Note  
  Il framework Ottiene il colore di sfondo predefinito per le schede attive dal [GetSysColor](http://msdn.microsoft.com/library/windows/desktop/ms724371)metodo.  
   
-##  <a name="setactivetabtextcolor"></a>CMFCBaseTabCtrl::SetActiveTabTextColor  
+##  <a name="setactivetabtextcolor"></a>  CMFCBaseTabCtrl::SetActiveTabTextColor  
  Imposta il colore del testo per le schede attive.  
   
 ```  
@@ -1864,7 +1859,7 @@ virtual void SetActiveTabTextColor(COLORREF clr);
 ### <a name="remarks"></a>Note  
  Per impostazione predefinita, il framework Ottiene il colore del testo da [GetSysColor](http://msdn.microsoft.com/library/windows/desktop/ms724371). Eseguire l'override di questo colore predefinito utilizzando il `SetActiveTabTextColor` metodo.  
   
-##  <a name="setautocolors"></a>CMFCBaseTabCtrl::SetAutoColors  
+##  <a name="setautocolors"></a>  CMFCBaseTabCtrl::SetAutoColors  
  Imposta i colori del controllo struttura a schede che utilizza il framework in modalità colore automatica.  
   
 ```  
@@ -1892,9 +1887,9 @@ void SetDockingBarWrapperRTC(CRuntimeClass* pRTC);
  Le informazioni sulla classe di runtime per la nuova classe wrapper.  
   
 ### <a name="remarks"></a>Note  
- Si aggiungono schede a un controllo struttura a schede, utilizzando i metodi [cmfcbasetabctrl:: addTab](#addtab) e [cmfcbasetabctrl:: insertTab](#inserttab). Quando si aggiunge una scheda, ogni controllo in tale scheda deve essere ancorata. Tutti gli oggetti che non sono derivati da `CDockablePane` deve essere eseguito il wrapping. `AddTab`e `InsertTab` creare un wrapper per questi oggetti. La classe wrapper predefinito è il [classe CDockablePaneAdapter](../../mfc/reference/cdockablepaneadapter-class.md). Il metodo `SetDockingBarWrapperRTC` consente di modificare la classe che viene utilizzata come una classe wrapper. La classe wrapper fornito deve essere derivata da `CDockablePaneAdapter`.  
+ Si aggiungono schede a un controllo struttura a schede, utilizzando i metodi [cmfcbasetabctrl:: addTab](#addtab) e [cmfcbasetabctrl:: insertTab](#inserttab). Quando si aggiunge una scheda, ogni controllo in tale scheda deve essere ancorata. Tutti gli oggetti che non sono derivati da `CDockablePane` deve essere eseguito il wrapping. `AddTab` e `InsertTab` creare un wrapper per questi oggetti. La classe wrapper predefinito è il [classe CDockablePaneAdapter](../../mfc/reference/cdockablepaneadapter-class.md). Il metodo `SetDockingBarWrapperRTC` consente di modificare la classe che viene utilizzata come una classe wrapper. La classe wrapper fornito deve essere derivata da `CDockablePaneAdapter`.  
   
-##  <a name="setdrawnoprefix"></a>CMFCBaseTabCtrl::SetDrawNoPrefix  
+##  <a name="setdrawnoprefix"></a>  CMFCBaseTabCtrl::SetDrawNoPrefix  
  Abilita e disabilita l'elaborazione dei caratteri del prefisso in etichette delle schede.  
   
 ```  
@@ -1905,15 +1900,15 @@ void SetDrawNoPrefix(
   
 ### <a name="parameters"></a>Parametri  
  [in] `bNoPrefix`  
- `TRUE`Se si desidera elaborare i caratteri di prefisso. in caso contrario `FALSE`.  
+ `TRUE` Se si desidera elaborare caratteri di prefisso; in caso contrario `FALSE`.  
   
  [in] `bRedraw`  
- `TRUE`Se si desidera ridisegnare la finestra a schede. in caso contrario `FALSE`.  
+ `TRUE` Se si desidera ridisegnare la finestra a schede. in caso contrario `FALSE`.  
   
 ### <a name="remarks"></a>Note  
  Un carattere di prefisso è un carattere mnemonico è preceduto da una e commerciale (&).  
   
-##  <a name="setimagelist"></a>CMFCBaseTabCtrl::SetImageList  
+##  <a name="setimagelist"></a>  CMFCBaseTabCtrl::SetImageList  
  Imposta l'elenco di immagini icona per il controllo scheda.  
   
 ```  
@@ -1927,7 +1922,7 @@ virtual BOOL SetImageList(HIMAGELIST hImageList);
   
 ### <a name="parameters"></a>Parametri  
  [in] `uiID`  
- Un ID di risorsa bitmap. `SetImageList`Carica l'elenco di immagini da questa risorsa.  
+ Un ID di risorsa bitmap. `SetImageList` Carica l'elenco di immagini da questa risorsa.  
   
  [in] `cx`  
  La larghezza di ogni immagine in pixel.  
@@ -1944,11 +1939,11 @@ virtual BOOL SetImageList(HIMAGELIST hImageList);
 ### <a name="remarks"></a>Note  
  Le etichette per la scheda vengono visualizzate le immagini dall'elenco di immagini icona. Per visualizzare un'icona, è necessario specificare il relativo indice quando si chiama [cmfcbasetabctrl:: addTab](#addtab).  
   
- `SetImageList`avrà esito negativo se il controllo struttura a schede è stato creato con uno stile flat. Non verrà eseguita anche se il framework non è possibile caricare l'immagine indicata dal `uiID`.  
+ `SetImageList` avrà esito negativo se il controllo struttura a schede è stato creato con uno stile flat. Non verrà eseguita anche se il framework non è possibile caricare l'immagine indicata dal `uiID`.  
   
  Questo metodo ricalcola l'altezza della scheda in base alle dimensioni di immagine e testo.  
   
-##  <a name="setlocation"></a>CMFCBaseTabCtrl::SetLocation  
+##  <a name="setlocation"></a>  CMFCBaseTabCtrl::SetLocation  
 
   
 ```  
@@ -1960,7 +1955,7 @@ virtual void SetLocation(Location location);
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="settabbkcolor"></a>CMFCBaseTabCtrl::SetTabBkColor  
+##  <a name="settabbkcolor"></a>  CMFCBaseTabCtrl::SetTabBkColor  
  Imposta il colore di sfondo per la scheda specificata.  
   
 ```  
@@ -1977,9 +1972,9 @@ virtual BOOL SetTabBkColor(
  Il colore da impostare.  
   
 ### <a name="return-value"></a>Valore restituito  
- `TRUE`Se ha esito positivo. `FALSE` in caso contrario.  
+ `TRUE` Se l'operazione riesce; `FALSE` in caso contrario.  
   
-##  <a name="settabbordersize"></a>CMFCBaseTabCtrl::SetTabBorderSize  
+##  <a name="settabbordersize"></a>  CMFCBaseTabCtrl::SetTabBorderSize  
  Imposta una nuova dimensione bordo per il controllo scheda.  
   
 ```  
@@ -1995,7 +1990,7 @@ virtual void SetTabBorderSize(
  [in] `bRepaint`  
  Un parametro booleano che indica se il framework ridisegna il controllo.  
   
-##  <a name="settabhicon"></a>CMFCBaseTabCtrl::SetTabHicon  
+##  <a name="settabhicon"></a>  CMFCBaseTabCtrl::SetTabHicon  
  Imposta l'icona per l'etichetta di una scheda.  
   
 ```  
@@ -2014,7 +2009,7 @@ virtual BOOL SetTabHicon(
 ### <a name="return-value"></a>Valore restituito  
  `TRUE` se l'esito è positivo; in caso contrario, `FALSE`.  
   
-##  <a name="settabicon"></a>CMFCBaseTabCtrl::SetTabIcon  
+##  <a name="settabicon"></a>  CMFCBaseTabCtrl::SetTabIcon  
  Imposta l'icona per una scheda.  
   
 ```  
@@ -2033,7 +2028,7 @@ virtual BOOL SetTabIcon(
 ### <a name="return-value"></a>Valore restituito  
  `TRUE` se l'esito è positivo; in caso contrario, `FALSE`.  
   
-##  <a name="settabicononly"></a>CMFCBaseTabCtrl::SetTabIconOnly  
+##  <a name="settabicononly"></a>  CMFCBaseTabCtrl::SetTabIconOnly  
  Consente di visualizzare un'icona (e alcuna etichetta di testo) in una scheda specifica.  
   
 ```  
@@ -2059,7 +2054,7 @@ virtual BOOL SetTabIconOnly(
 ### <a name="remarks"></a>Note  
  Per impostazione predefinita, un controllo struttura a schede Visualizza l'etichetta di testo e l'icona per ogni scheda.  
   
-##  <a name="settablabel"></a>CMFCBaseTabCtrl::SetTabLabel  
+##  <a name="settablabel"></a>  CMFCBaseTabCtrl::SetTabLabel  
  Imposta il testo per un'etichetta di scheda.  
   
 ```  
@@ -2078,7 +2073,7 @@ virtual BOOL SetTabLabel(
 ### <a name="return-value"></a>Valore restituito  
  Diverso da zero se ha esito positivo. in caso contrario 0.  
   
-##  <a name="settabsheight"></a>CMFCBaseTabCtrl::SetTabsHeight  
+##  <a name="settabsheight"></a>  CMFCBaseTabCtrl::SetTabsHeight  
 
   
 ```  
@@ -2087,7 +2082,7 @@ virtual void SetTabsHeight();
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="settabsorder"></a>CMFCBaseTabCtrl::SetTabsOrder  
+##  <a name="settabsorder"></a>  CMFCBaseTabCtrl::SetTabsOrder  
  Dispone le schede nell'ordine specificato.  
   
 ```  
@@ -2099,12 +2094,12 @@ BOOL SetTabsOrder(const CArray<int,int>& arOrder);
  Matrice di indici in base zero che definisce il nuovo ordine di tabulazione.  
   
 ### <a name="return-value"></a>Valore restituito  
- `TRUE`Se ha esito positivo. `FAIL` in caso contrario.  
+ `TRUE` Se l'operazione riesce; `FAIL` in caso contrario.  
   
 ### <a name="remarks"></a>Note  
  Le dimensioni del `arOrder` matrice deve essere uguale al numero di schede del controllo.  
   
-##  <a name="settabtextcolor"></a>CMFCBaseTabCtrl::SetTabTextColor  
+##  <a name="settabtextcolor"></a>  CMFCBaseTabCtrl::SetTabTextColor  
  Imposta il colore del testo per una scheda specifica.  
   
 ```  
@@ -2123,7 +2118,7 @@ virtual BOOL SetTabTextColor(
 ### <a name="return-value"></a>Valore restituito  
  Diverso da zero se ha esito positivo. in caso contrario 0.  
   
-##  <a name="showtab"></a>CMFCBaseTabCtrl::ShowTab  
+##  <a name="showtab"></a>  CMFCBaseTabCtrl::ShowTab  
  Mostra o nasconde la scheda specificata.  
   
 ```  
@@ -2153,7 +2148,7 @@ virtual BOOL ShowTab(
 ### <a name="remarks"></a>Note  
  Il parametro `bActivate` si applica solo se `bShow` è `TRUE`. Se `bActivate` è `TRUE` e se `ShowTab` ha esito positivo, `ShowTab` invierà il messaggio AFX_WM_CHANGE_ACTIVE_TAB all'elemento padre della finestra della scheda.  
   
-##  <a name="startrenametab"></a>CMFCBaseTabCtrl::StartRenameTab  
+##  <a name="startrenametab"></a>  CMFCBaseTabCtrl::StartRenameTab  
 
   
 ```  
@@ -2167,7 +2162,7 @@ virtual BOOL StartRenameTab(int iTab);
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="swaptabs"></a>CMFCBaseTabCtrl::SwapTabs  
+##  <a name="swaptabs"></a>  CMFCBaseTabCtrl::SwapTabs  
 
   
 ```  

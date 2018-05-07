@@ -1,12 +1,9 @@
 ---
 title: Classe CMFCTabCtrl | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCTabCtrl
@@ -113,17 +110,15 @@ helpviewer_keywords:
 - CMFCTabCtrl [MFC], SynchronizeScrollBar
 - CMFCTabCtrl [MFC], m_bEnableActivate
 ms.assetid: d441385d-2c72-4203-96fa-deae2273da35
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1aa415846d8f504ef907bf4e9a041b86062853cd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ad7a5331a2826df9dd6804e5c6a0f918bfeeb9d2
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfctabctrl-class"></a>CMFCTabCtrl Class
 La `CMFCTabCtrl` classe fornisce funzionalità per un controllo struttura a schede. Il controllo scheda visualizza una finestra ancorabile con schede flat o tridimensionali nella parte superiore o inferiore. Le schede possono visualizzare testo e un'immagine e possono cambiare colore quando sono attive.  
@@ -261,7 +256,7 @@ class CMFCTabCtrl : public CMFCBaseTabCtrl
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** afxtabctrl.h  
   
-##  <a name="activatemditab"></a>CMFCTabCtrl::ActivateMDITab  
+##  <a name="activatemditab"></a>  CMFCTabCtrl::ActivateMDITab  
  Consente di visualizzare la scheda specificata del controllo scheda corrente e imposta lo stato attivo in tale scheda.  
   
 ```  
@@ -272,7 +267,7 @@ void ActivateMDITab(int nTab = -1);
  [in] `nTab`  
  Indice in base zero di una scheda per visualizzare o di -1 per specificare la scheda attualmente attiva.  
   
-##  <a name="allowdestroyemptytabbedpane"></a>CMFCTabCtrl::AllowDestroyEmptyTabbedPane  
+##  <a name="allowdestroyemptytabbedpane"></a>  CMFCTabCtrl::AllowDestroyEmptyTabbedPane  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -284,7 +279,7 @@ virtual BOOL AllowDestroyEmptyTabbedPane() const;
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="autosizewindow"></a>CMFCTabCtrl::AutoSizeWindow  
+##  <a name="autosizewindow"></a>  CMFCTabCtrl::AutoSizeWindow  
  Specifica se il framework per ridimensionare l'area client di tutte le finestre di controllo scheda quando un elemento dell'interfaccia utente del controllo scheda.  
   
 ```  
@@ -293,11 +288,11 @@ void AutoSizeWindow(BOOL bAutoSize = TRUE);
   
 ### <a name="parameters"></a>Parametri  
  [in] `bAutoSize`  
- `TRUE`Per ridimensionare automaticamente le finestre di controllo scheda. in caso contrario, `FALSE`. Il valore predefinito è `TRUE`.  
+ `TRUE` Per ridimensionare automaticamente le finestre di controllo scheda; in caso contrario, `FALSE`. Il valore predefinito è `TRUE`.  
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="create"></a>CMFCTabCtrl::Create  
+##  <a name="create"></a>  CMFCTabCtrl::Create  
  Crea il controllo scheda e lo collega al `CMFCTabCtrl` oggetto.  
   
 ```  
@@ -327,7 +322,7 @@ BOOL Create(
  La posizione delle schede. Il valore predefinito è `LOCATION_BOTTOM`. Per altre informazioni, vedere la sezione Note.  
   
  [in] `bCloseBtn`  
- `TRUE`Per visualizzare un pulsante Chiudi nella scheda. in caso contrario, `FALSE`. Il valore predefinito è `FALSE`.  
+ `TRUE` Per visualizzare un pulsante Chiudi nella scheda. in caso contrario, `FALSE`. Il valore predefinito è `FALSE`.  
   
 ### <a name="return-value"></a>Valore restituito  
  `TRUE` se riesce. In caso contrario, `FALSE`.  
@@ -358,7 +353,7 @@ BOOL Create(
  [!code-cpp[NVC_MFC_StateCollection#1](../../mfc/reference/codesnippet/cpp/cmfctabctrl-class_1.h)]  
 [!code-cpp[NVC_MFC_StateCollection#2](../../mfc/reference/codesnippet/cpp/cmfctabctrl-class_3.cpp)]  
   
-##  <a name="calcrectedit"></a>CMFCTabCtrl::CalcRectEdit  
+##  <a name="calcrectedit"></a>  CMFCTabCtrl::CalcRectEdit  
  Decompressi le dimensioni dell'area della scheda specificata.  
   
 ```  
@@ -372,7 +367,7 @@ virtual void CalcRectEdit(CRect& rectEdit);
 ### <a name="remarks"></a>Note  
  Questo metodo viene chiamato quando si modifica l'etichetta di una scheda. Questo metodo decompressi i lati sinistro e destro del rettangolo specificato da un mezzo l'altezza della scheda corrente e decompressi superiore e inferiore di un'unità.  
   
-##  <a name="enableactivetabclosebutton"></a>CMFCTabCtrl::EnableActiveTabCloseButton  
+##  <a name="enableactivetabclosebutton"></a>  CMFCTabCtrl::EnableActiveTabCloseButton  
  Mostra o nasconde il pulsante chiude ( **X**) nella scheda attiva.  
   
 ```  
@@ -381,9 +376,9 @@ void EnableActiveTabCloseButton(BOOL bEnable=TRUE);
   
 ### <a name="parameters"></a>Parametri  
  [in] `bEnable`  
- `TRUE`Per visualizzare il pulsante Chiudi nella scheda attiva. `FALSE` per visualizzare il pulsante Chiudi nell'angolo superiore destro dell'area della scheda. Il valore predefinito è `TRUE`.  
+ `TRUE` Per visualizzare il pulsante Chiudi nella scheda attiva; `FALSE` per visualizzare il pulsante Chiudi nell'angolo superiore destro dell'area della scheda. Il valore predefinito è `TRUE`.  
   
-##  <a name="enableinplaceedit"></a>CMFCTabCtrl::EnableInPlaceEdit  
+##  <a name="enableinplaceedit"></a>  CMFCTabCtrl::EnableInPlaceEdit  
  Abilita o disabilita le etichette delle schede modificabile.  
   
 ```  
@@ -392,11 +387,11 @@ virtual void EnableInPlaceEdit(BOOL bEnable);
   
 ### <a name="parameters"></a>Parametri  
  [in] `bEnable`  
- `TRUE`Per abilitare le etichette dei scheda modificabile. `FALSE` per disabilitare le etichette delle schede modificabile.  
+ `TRUE` Per abilitare le etichette delle schede modificabile; `FALSE` per disabilitare le etichette delle schede modificabile.  
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="enabletabdocumentsmenu"></a>CMFCTabCtrl::EnableTabDocumentsMenu  
+##  <a name="enabletabdocumentsmenu"></a>  CMFCTabCtrl::EnableTabDocumentsMenu  
  Consente di passare un'interfaccia utente che utilizza due pulsanti per scorrere le schede della finestra e un'interfaccia che consente di visualizzare un menu a comparsa di finestre a schede.  
   
 ```  
@@ -405,12 +400,12 @@ void EnableTabDocumentsMenu(BOOL bEnable=TRUE);
   
 ### <a name="parameters"></a>Parametri  
  [in] `bEnable`  
- `TRUE`Per visualizzare un menu a comparsa delle etichette di finestra a schede; `FALSE` per visualizzare pulsanti di scorrimento in avanti e indietro. Il valore predefinito è `TRUE`.  
+ `TRUE` Per visualizzare un menu a comparsa delle etichette di finestra a schede; `FALSE` per visualizzare pulsanti di scorrimento in avanti e indietro. Il valore predefinito è `TRUE`.  
   
 ### <a name="remarks"></a>Note  
  Quando l'utente fa clic sull'etichetta di una scheda, il framework Visualizza la finestra a schede corrispondente. Se l'etichetta della scheda è visibile, la finestra a schede viene aperto senza cambiarne la posizione. Se l'utente seleziona un documento dal menu a comparsa e la finestra a schede corrispondente è fuori dello schermo, la finestra a schede diventa la prima tabulazione.  
   
-##  <a name="ensurevisible"></a>CMFCTabCtrl::EnsureVisible  
+##  <a name="ensurevisible"></a>  CMFCTabCtrl::EnsureVisible  
  Assicura che una scheda è visibile.  
   
 ```  
@@ -422,12 +417,12 @@ virtual BOOL EnsureVisible(int iTab);
  Indice in base zero di una scheda.  
   
 ### <a name="return-value"></a>Valore restituito  
- `TRUE`in caso di esito positivo. `FALSE` se il `iTab` indice del parametro non è valido.  
+ `TRUE` Se ha esito positivo; `FALSE` se il `iTab` indice del parametro non è valido.  
   
 ### <a name="remarks"></a>Note  
  Utilizzare questo metodo per garantire che la scheda specificata è visibile. Scorre il controllo struttura a schede se necessario.  
   
-##  <a name="getdocumenticon"></a>CMFCTabCtrl::GetDocumentIcon  
+##  <a name="getdocumenticon"></a>  CMFCTabCtrl::GetDocumentIcon  
  Recupera l'immagine associata a una scheda in un menu a comparsa di finestre a schede.  
   
 ```  
@@ -441,7 +436,7 @@ static HICON __stdcall GetDocumentIcon(UINT nCmdID);
 ### <a name="return-value"></a>Valore restituito  
  L'handle di un'immagine bitmap.  
   
-##  <a name="getfirstvisibletabnum"></a>CMFCTabCtrl::GetFirstVisibleTabNum  
+##  <a name="getfirstvisibletabnum"></a>  CMFCTabCtrl::GetFirstVisibleTabNum  
  Recupera l'indice della prima scheda visibile del controllo corrente.  
   
 ```  
@@ -454,7 +449,7 @@ virtual int GetFirstVisibleTabNum() const;
 ### <a name="remarks"></a>Note  
  Utilizzare questo metodo solo quando viene visualizzato il controllo struttura a schede nello stile di Microsoft OneNote. Utilizzare il [CMFCTabCtrl::IsOneNoteStyle](#isonenotestyle) metodo per determinare lo stile.  
   
-##  <a name="getresizemode"></a>CMFCTabCtrl::GetResizeMode  
+##  <a name="getresizemode"></a>  CMFCTabCtrl::GetResizeMode  
  Recupera un valore che specifica come il controllo scheda corrente può essere ridimensionato.  
   
 ```  
@@ -464,7 +459,7 @@ ResizeMode GetResizeMode() const;
 ### <a name="return-value"></a>Valore restituito  
  Uno del `CMFCTabCtrl::ResizeMode` valori di enumerazione che specifica come è possibile ridimensionare il controllo scheda. Per un elenco di valori possibili, vedere la sezione Note del [CMFCTabCtrl::SetResizeMode](#setresizemode) metodo.  
   
-##  <a name="getscrollbar"></a>CMFCTabCtrl::GetScrollBar  
+##  <a name="getscrollbar"></a>  CMFCTabCtrl::GetScrollBar  
  Recupera un puntatore all'oggetto della barra di scorrimento che viene associato al controllo scheda.  
   
 ```  
@@ -477,7 +472,7 @@ CScrollBar* GetScrollBar();
 ### <a name="remarks"></a>Note  
  Utilizzare questo metodo per accedere a barra di scorrimento incorporato il controllo struttura a schede. Un oggetto barra di scorrimento viene creato solo quando il controllo struttura a schede di `STYLE_FLAT_SHARED_HORZ_SCROLL` stile.  
   
-##  <a name="gettabarea"></a>CMFCTabCtrl::GetTabArea  
+##  <a name="gettabarea"></a>  CMFCTabCtrl::GetTabArea  
  Recupera il rettangolo di delimitazione dell'area di etichetta della scheda nella parte superiore o inferiore del controllo scheda.  
   
 ```  
@@ -496,7 +491,7 @@ void GetTabArea(
 ### <a name="remarks"></a>Note  
  Utilizzare questo metodo per determinare le dimensioni e la posizione dell'area della scheda nella finestra a schede.  
   
-##  <a name="gettabmaxwidth"></a>CMFCTabCtrl::GetTabMaxWidth  
+##  <a name="gettabmaxwidth"></a>  CMFCTabCtrl::GetTabMaxWidth  
  Recupera la larghezza massima di una scheda.  
   
 ```  
@@ -509,7 +504,7 @@ int GetTabMaxWidth() const;
 ### <a name="remarks"></a>Note  
  Utilizzare il [CMFCTabCtrl::SetTabMaxWidth](#settabmaxwidth) per impostare la larghezza massima della scheda.  
   
-##  <a name="gettabsheight"></a>CMFCTabCtrl::GetTabsHeight  
+##  <a name="gettabsheight"></a>  CMFCTabCtrl::GetTabsHeight  
  Recupera l'altezza dell'area della scheda del controllo corrente.  
   
 ```  
@@ -519,7 +514,7 @@ virtual int GetTabsHeight() const;
 ### <a name="return-value"></a>Valore restituito  
  L'altezza dell'area della scheda, se una scheda è visibile, oppure zero se non sono visibili.  
   
-##  <a name="gettabsrect"></a>CMFCTabCtrl::GetTabsRect  
+##  <a name="gettabsrect"></a>  CMFCTabCtrl::GetTabsRect  
  Recupera un rettangolo che delimita l'area della scheda del controllo corrente.  
   
 ```  
@@ -530,7 +525,7 @@ virtual void GetTabsRect(CRect& rect) const;
  [out] `rect`  
  Quando termina, questo metodo il `rect` parametro contiene un rettangolo che delimita l'area della scheda.  
   
-##  <a name="getwndarea"></a>CMFCTabCtrl::GetWndArea  
+##  <a name="getwndarea"></a>  CMFCTabCtrl::GetWndArea  
  Recupera il limite dell'area client del controllo corrente.  
   
 ```  
@@ -543,7 +538,7 @@ void GetWndArea(CRect& rect) const;
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="hideactivewindowhorzscrollbar"></a>CMFCTabCtrl::HideActiveWindowHorzScrollBar  
+##  <a name="hideactivewindowhorzscrollbar"></a>  CMFCTabCtrl::HideActiveWindowHorzScrollBar  
  Nasconde la barra di scorrimento orizzontale, se presente, nella finestra attiva.  
   
 ```  
@@ -553,7 +548,7 @@ void HideActiveWindowHorzScrollBar();
 ### <a name="remarks"></a>Note  
  Utilizzare questo metodo per impedire che il controllo scheda lampeggia quando l'utente passa tra le pagine di controllo scheda.  
   
-##  <a name="hideinactivewindow"></a>CMFCTabCtrl::HideInactiveWindow  
+##  <a name="hideinactivewindow"></a>  CMFCTabCtrl::HideInactiveWindow  
  Specifica se il framework visualizza finestre di controllo scheda inattivo.  
   
 ```  
@@ -562,11 +557,11 @@ void HideInactiveWindow(BOOL bHide = TRUE);
   
 ### <a name="parameters"></a>Parametri  
  [in] `bHide`  
- `TRUE`Per non visualizzare una finestra inattiva; `FALSE` per visualizzare una finestra inattiva. Il valore predefinito è `TRUE`.  
+ `TRUE` non visualizzare una finestra inattiva; `FALSE` per visualizzare una finestra inattiva. Il valore predefinito è `TRUE`.  
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="hidenotabs"></a>CMFCTabCtrl::HideNoTabs  
+##  <a name="hidenotabs"></a>  CMFCTabCtrl::HideNoTabs  
  Abilita o disabilita disegno dell'area della scheda, se nessuna scheda visibile.  
   
 ```  
@@ -575,11 +570,11 @@ void HideNoTabs(BOOL bHide=TRUE);
   
 ### <a name="parameters"></a>Parametri  
  [in] `bHide`  
- `TRUE`Per abilitare l'area della scheda; disegno `FALSE` per disabilitare il disegno. Il valore predefinito è `TRUE`.  
+ `TRUE` Per abilitare l'area della scheda; di disegno `FALSE` per disabilitare il disegno. Il valore predefinito è `TRUE`.  
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="hidesingletab"></a>CMFCTabCtrl::HideSingleTab  
+##  <a name="hidesingletab"></a>  CMFCTabCtrl::HideSingleTab  
  Abilita o disabilita il disegno di scheda, se è presente una singola finestra a schede.  
   
 ```  
@@ -588,11 +583,11 @@ virtual void HideSingleTab(BOOL bHide=TRUE);
   
 ### <a name="parameters"></a>Parametri  
  [in] `bHide`  
- `TRUE`Per non creare una scheda di una singola finestra a schede; `FALSE` per disegnare una singola scheda. Il valore predefinito è `TRUE`.  
+ `TRUE` Per non creare una scheda di una singola finestra a schede; `FALSE` per disegnare una singola scheda. Il valore predefinito è `TRUE`.  
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="isactiveinmditabgroup"></a>CMFCTabCtrl::IsActiveInMDITabGroup  
+##  <a name="isactiveinmditabgroup"></a>  CMFCTabCtrl::IsActiveInMDITabGroup  
  Indica se la scheda corrente di un controllo struttura a schede è la scheda attiva in un gruppo di schede di interfaccia documento più.  
   
 ```  
@@ -600,12 +595,12 @@ BOOL IsActiveInMDITabGroup() const;
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- `TRUE`Se la scheda corrente di un controllo struttura a schede è la scheda attiva in un gruppo di schede MDI; in caso contrario, `FALSE`.  
+ `TRUE` Se la scheda corrente di un controllo struttura a schede è la scheda attiva in un gruppo di schede MDI; in caso contrario, `FALSE`.  
   
 ### <a name="remarks"></a>Note  
  È possibile organizzare più finestre di documento in entrambi i gruppi di schede verticali o orizzontali e spostare facilmente i documenti dal gruppo di una scheda a altra.  
   
-##  <a name="isactivetabboldfont"></a>CMFCTabCtrl::IsActiveTabBoldFont  
+##  <a name="isactivetabboldfont"></a>  CMFCTabCtrl::IsActiveTabBoldFont  
  Indica se viene visualizzato il testo della scheda attiva utilizzando un tipo di carattere grassetto.  
   
 ```  
@@ -613,12 +608,12 @@ BOOL IsActiveTabBoldFont() const;
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- `TRUE`Se la scheda attiva viene visualizzata utilizzando il tipo di carattere grassetto. in caso contrario, `FALSE`.  
+ `TRUE` Se la scheda attiva viene visualizzata utilizzando il tipo di carattere grassetto; in caso contrario, `FALSE`.  
   
 ### <a name="remarks"></a>Note  
  Utilizzare il [CMFCTabCtrl::SetActiveTabBoldFont](#setactivetabboldfont) metodo per modificare il tipo di carattere per la scheda attiva.  
   
-##  <a name="isactivetabclosebutton"></a>CMFCTabCtrl::IsActiveTabCloseButton  
+##  <a name="isactivetabclosebutton"></a>  CMFCTabCtrl::IsActiveTabCloseButton  
  Indica se il pulsante Chiudi ( **X**) viene visualizzato in una scheda attiva o nell'angolo superiore destro dell'area della scheda.  
   
 ```  
@@ -626,11 +621,11 @@ virtual BOOL IsActiveTabCloseButton() const;
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- `TRUE`Se il pulsante Chiudi è visualizzato nella scheda attiva. `FALSE` se il pulsante Chiudi è visualizzato nell'angolo superiore destro dell'area della scheda.  
+ `TRUE` Se il pulsante chiude è visualizzato nella scheda attiva; `FALSE` se il pulsante chiude è visualizzato nell'angolo superiore destro dell'area della scheda.  
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="isdrawframe"></a>CMFCTabCtrl::IsDrawFrame  
+##  <a name="isdrawframe"></a>  CMFCTabCtrl::IsDrawFrame  
  Indica se la finestra a schede Disegna un rettangolo di frame intorno a riquadri incorporati.  
   
 ```  
@@ -638,12 +633,12 @@ BOOL IsDrawFrame() const;
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- `TRUE`Se viene disegnato un rettangolo di frame; in caso contrario, `FALSE`.  
+ `TRUE` Se viene disegnato un rettangolo di frame; in caso contrario, `FALSE`.  
   
 ### <a name="remarks"></a>Note  
  Utilizzare il [CMFCTabCtrl::SetDrawFrame](#setdrawframe) metodo per abilitare o disabilitare la creazione di un rettangolo di frame.  
   
-##  <a name="isflatframe"></a>CMFCTabCtrl::IsFlatFrame  
+##  <a name="isflatframe"></a>  CMFCTabCtrl::IsFlatFrame  
  Indica se il frame intorno l'area della scheda è piatta o 3D.  
   
 ```  
@@ -651,12 +646,12 @@ BOOL IsFlatFrame() const;
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- `TRUE`Se il frame intorno l'area della scheda è piatto; `FALSE` se il frame è tridimensionale.  
+ `TRUE` Se il frame intorno l'area della scheda è piatto; `FALSE` se il frame è tridimensionale.  
   
 ### <a name="remarks"></a>Note  
  Utilizzare il [CMFCTabCtrl::SetFlatFrame](#setflatframe) metodo per modificare la modalità con cui il fotogramma viene disegnato.  
   
-##  <a name="isflattab"></a>CMFCTabCtrl::IsFlatTab  
+##  <a name="isflattab"></a>  CMFCTabCtrl::IsFlatTab  
  Indica se l'aspetto delle schede del controllo corrente è flat.  
   
 ```  
@@ -664,9 +659,9 @@ virtual BOOL IsFlatTab() const;
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- `TRUE`Se l'aspetto delle schede del controllo corrente è flat; in caso contrario, `FALSE`.  
+ `TRUE` Se l'aspetto delle schede del controllo struttura a schede corrente è flat; in caso contrario, `FALSE`.  
   
-##  <a name="isleftrightrounded"></a>CMFCTabCtrl::IsLeftRightRounded  
+##  <a name="isleftrightrounded"></a>  CMFCTabCtrl::IsLeftRightRounded  
  Indica se l'aspetto di sinistra e a destra di una scheda del controllo corrente viene arrotondato.  
   
 ```  
@@ -674,9 +669,9 @@ virtual BOOL IsLeftRightRounded() const;
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- `TRUE`Se i lati di ogni scheda viene arrotondato; in caso contrario, `FALSE`.  
+ `TRUE` Se i lati di ogni scheda viene arrotondato; in caso contrario, `FALSE`.  
   
-##  <a name="ismditabgroup"></a>CMFCTabCtrl::IsMDITabGroup  
+##  <a name="ismditabgroup"></a>  CMFCTabCtrl::IsMDITabGroup  
  Indica se il controllo scheda corrente è contenuto nell'area client di una finestra di interfaccia a documenti multipli.  
   
 ```  
@@ -684,9 +679,9 @@ virtual BOOL IsMDITabGroup() const;
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- `TRUE`Se il controllo scheda corrente è in una finestra di area client MDI; in caso contrario, `FALSE`.  
+ `TRUE` Se il controllo scheda corrente è in una finestra di area client MDI; in caso contrario, `FALSE`.  
   
-##  <a name="isonenotestyle"></a>CMFCTabCtrl::IsOneNoteStyle  
+##  <a name="isonenotestyle"></a>  CMFCTabCtrl::IsOneNoteStyle  
  Indica se il controllo scheda corrente viene visualizzato nello stile di Microsoft OneNote.  
   
 ```  
@@ -694,9 +689,9 @@ virtual BOOL IsOneNoteStyle() const;
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- `TRUE`Se viene visualizzato il controllo struttura a schede nello stile di Microsoft OneNote; in caso contrario, `FALSE`.  
+ `TRUE` Se il controllo scheda viene visualizzato nello stile di Microsoft OneNote; in caso contrario, `FALSE`.  
   
-##  <a name="issharedscroll"></a>CMFCTabCtrl::IsSharedScroll  
+##  <a name="issharedscroll"></a>  CMFCTabCtrl::IsSharedScroll  
  Indica se il controllo scheda corrente ha una barra di scorrimento che è possibile scorrere le schede in gruppo.  
   
 ```  
@@ -704,12 +699,12 @@ BOOL IsSharedScroll() const;
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- `TRUE`Se il controllo struttura a schede dispone di una barra di scorrimento condiviso. in caso contrario, `FALSE`.  
+ `TRUE` Se il controllo struttura a schede dispone di una barra di scorrimento condiviso. in caso contrario, `FALSE`.  
   
 ### <a name="remarks"></a>Note  
  Questo metodo restituisce `TRUE` se il `style` parametro del [CMFCTabCtrl::Create](#create) metodo è STYLE_FLAT_SHARED_HORZ_SCROLL.  
   
-##  <a name="istabdocumentsmenu"></a>CMFCTabCtrl::IsTabDocumentsMenu  
+##  <a name="istabdocumentsmenu"></a>  CMFCTabCtrl::IsTabDocumentsMenu  
  Indica se il controllo scheda Visualizza i pulsanti di scorrimento o un pulsante che visualizza un menu di finestre a schede.  
   
 ```  
@@ -717,12 +712,12 @@ BOOL IsTabDocumentsMenu() const;
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- `TRUE`Se vengono eseguito lo scorrimento finestre a schede usando un menu di scelta rapida di etichette finestra a schede; `FALSE` se finestre a schede vengono scorsi mediante pulsanti di scorrimento in avanti e indietro.  
+ `TRUE` Se queste finestre vengono scorsi mediante un menu popup delle etichette di finestra a schede; `FALSE` se finestre a schede vengono scorsi mediante pulsanti di scorrimento in avanti e indietro.  
   
 ### <a name="remarks"></a>Note  
  Utilizzare il [CMFCTabCtrl::EnableTabDocumentsMenu](#enabletabdocumentsmenu) metodo per specificare il metodo di scorrimento a schede di windows.  
   
-##  <a name="isvs2005style"></a>CMFCTabCtrl::IsVS2005Style  
+##  <a name="isvs2005style"></a>  CMFCTabCtrl::IsVS2005Style  
  Indica se le schede vengono disegnate utilizzando lo stile di Visual Studio 2005.  
   
 ```  
@@ -730,12 +725,12 @@ virtual BOOL IsVS2005Style() const;
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- `TRUE`Se le schede vengono disegnate utilizzando lo stile di Visual Studio 2005. in caso contrario, `FALSE`.  
+ `TRUE` Se le schede vengono disegnate utilizzando lo stile di Visual Studio 2005; in caso contrario, `FALSE`.  
   
 ### <a name="remarks"></a>Note  
  Utilizzare il `style` parametro del [CMFCTabCtrl::Create](#create) per specificare la modalità in cui vengono disegnate le schede.  
   
-##  <a name="m_benableactivate"></a>CMFCTabCtrl::m_bEnableActivate  
+##  <a name="m_benableactivate"></a>  CMFCTabCtrl::m_bEnableActivate  
  Impedisce la visualizzazione attiva di perde lo stato attivo quando una nuova scheda viene inserita e attivata.  
   
 ```  
@@ -745,7 +740,7 @@ static BOOL m_bEnableActivate;
 ### <a name="remarks"></a>Note  
  Lo stato attivo è in genere eseguito da una nuova finestra a schede quando la scheda viene inserita e reso attiva. Impostare il `CMFCTabCtrl::m_bEnableActivate` variabile membro in `FALSE` per mantenere lo stato attivo di originale. Il valore predefinito è `TRUE`.  
   
-##  <a name="modifytabstyle"></a>CMFCTabCtrl::ModifyTabStyle  
+##  <a name="modifytabstyle"></a>  CMFCTabCtrl::ModifyTabStyle  
  Specifica l'aspetto delle schede del controllo corrente.  
   
 ```  
@@ -773,7 +768,7 @@ BOOL ModifyTabStyle(Style style);
 |STYLE_FLAT|Consente di visualizzare le schede bidimensionale che hanno inclinato lati sinistro e destro.|  
 |STYLE_FLAT_SHARED_HORZ_SCROLL|Visualizza le schede bidimensionale. Se sono presenti più schede che possono essere visualizzate nello stesso momento, il framework Visualizza frecce di scorrimento alle estremità dell'area della scheda.|  
   
-##  <a name="ondragenter"></a>CMFCTabCtrl::OnDragEnter  
+##  <a name="ondragenter"></a>  CMFCTabCtrl::OnDragEnter  
  Chiamato dal framework durante un'operazione di trascinamento e rilascio quando il cursore entra prima la finestra del controllo corrente.  
   
 ```  
@@ -801,7 +796,7 @@ virtual DROPEFFECT OnDragEnter(
   
  Per impostazione predefinita, questo metodo chiama solo `CMFCTabCtrl::OnDragOver`, che restituisce sempre `DROPEFFECT_NONE`.  
   
-##  <a name="ondragover"></a>CMFCTabCtrl::OnDragOver  
+##  <a name="ondragover"></a>  CMFCTabCtrl::OnDragOver  
  Chiamato dal framework durante un'operazione di trascinamento quando il mouse viene spostato sopra la finestra di destinazione di rilascio.  
   
 ```  
@@ -827,7 +822,7 @@ virtual DROPEFFECT OnDragOver(
 ### <a name="remarks"></a>Note  
  Eseguire l'override di questo metodo con l'implementazione personalizzata. Per ulteriori informazioni, vedere il [CView::OnDragOver](../../mfc/reference/cview-class.md#ondragover) metodo.  
   
-##  <a name="onshowtabdocumentsmenu"></a>CMFCTabCtrl::OnShowTabDocumentsMenu  
+##  <a name="onshowtabdocumentsmenu"></a>  CMFCTabCtrl::OnShowTabDocumentsMenu  
  Visualizza un menu a comparsa di finestre a schede, attende fino a quando l'utente seleziona una scheda e rende la scheda selezionata la scheda attiva.  
   
 ```  
@@ -840,7 +835,7 @@ virtual void OnShowTabDocumentsMenu(CPoint point);
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="setactiveinmditabgroup"></a>CMFCTabCtrl::SetActiveInMDITabGroup  
+##  <a name="setactiveinmditabgroup"></a>  CMFCTabCtrl::SetActiveInMDITabGroup  
  Imposta la scheda corrente di un controllo scheda come scheda attiva in un gruppo di schede di interfaccia documento più.  
   
 ```  
@@ -849,12 +844,12 @@ void SetActiveInMDITabGroup(BOOL bActive);
   
 ### <a name="parameters"></a>Parametri  
  [in] `bActive`  
- `TRUE`Per rendere la scheda corrente la scheda attiva. `FALSE` in modo non attiva la scheda corrente.  
+ `TRUE` Per rendere la scheda corrente la scheda attiva. `FALSE` a rendere inattivo corrente la scheda.  
   
 ### <a name="remarks"></a>Note  
  È possibile organizzare più finestre di documento in entrambi i gruppi di schede verticali o orizzontali e spostare facilmente i documenti dal gruppo di una scheda a altra.  
   
-##  <a name="setactivetab"></a>CMFCTabCtrl::SetActiveTab  
+##  <a name="setactivetab"></a>  CMFCTabCtrl::SetActiveTab  
  Attiva una scheda.  
   
 ```  
@@ -866,14 +861,14 @@ virtual BOOL SetActiveTab(int iTab);
  Specifica l'indice in base zero della scheda da attivare.  
   
 ### <a name="return-value"></a>Valore restituito  
- `TRUE`Se la scheda specificata è stata attivata; `FALSE` se l'oggetto specificato `iTab` valore del parametro non è valido.  
+ `TRUE` Se la scheda specificata è stata attivata; `FALSE` se l'oggetto specificato `iTab` valore del parametro non è valido.  
   
 ### <a name="remarks"></a>Note  
  Questo metodo non invia il `AFX_WM_CHANGE_ACTIVE_TAB` notifica alla finestra padre del controllo scheda.  
   
  Il `SetActiveTab` chiama automaticamente il [CMFCTabCtrl::HideActiveWindowHorzScrollBar](#hideactivewindowhorzscrollbar) per impedire la schermata di lampeggiante.  
   
-##  <a name="setactivetabboldfont"></a>CMFCTabCtrl::SetActiveTabBoldFont  
+##  <a name="setactivetabboldfont"></a>  CMFCTabCtrl::SetActiveTabBoldFont  
  Abilita o disabilita l'uso di un tipo di carattere grassetto nelle schede attive.  
   
 ```  
@@ -882,11 +877,11 @@ void SetActiveTabBoldFont(BOOL bIsBold=TRUE);
   
 ### <a name="parameters"></a>Parametri  
  [in] `bIsBold`  
- `TRUE`Per utilizzare un tipo di carattere grassetto per visualizzare l'etichetta della scheda attiva; `FALSE` come utilizzare il tipo di carattere standard per visualizzare l'etichetta. Il valore predefinito è `TRUE`.  
+ `TRUE` Per utilizzare un tipo di carattere grassetto per visualizzare l'etichetta della scheda attiva; `FALSE` come utilizzare il tipo di carattere standard per visualizzare l'etichetta. Il valore predefinito è `TRUE`.  
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="setdrawframe"></a>CMFCTabCtrl::SetDrawFrame  
+##  <a name="setdrawframe"></a>  CMFCTabCtrl::SetDrawFrame  
  Specifica se viene disegnato un rettangolo di frame intorno a una barra incorporata.  
   
 ```  
@@ -895,11 +890,11 @@ void SetDrawFrame(BOOL bDraw=TRUE);
   
 ### <a name="parameters"></a>Parametri  
  [in] `bDraw`  
- `TRUE`Per visualizzare un rettangolo di frame intorno a una barra incorporata. in caso contrario, `FALSE`. Il valore predefinito è `TRUE`.  
+ `TRUE` Per visualizzare un rettangolo di frame intorno a una barra incorporato; in caso contrario, `FALSE`. Il valore predefinito è `TRUE`.  
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="setflatframe"></a>CMFCTabCtrl::SetFlatFrame  
+##  <a name="setflatframe"></a>  CMFCTabCtrl::SetFlatFrame  
  Specifica se creare un semplice o un frame 3D attorno all'area della scheda.  
   
 ```  
@@ -910,14 +905,14 @@ void SetFlatFrame(
   
 ### <a name="parameters"></a>Parametri  
  [in] `bFlat`  
- `TRUE`per disegnare un frame flat (2D) attorno all'area della scheda; `FALSE` per disegnare frame tridimensionale (3D). Il valore predefinito è `TRUE`.  
+ `TRUE` per disegnare un frame flat (2D) attorno all'area della scheda; `FALSE` per disegnare un frame tridimensionale (3D). Il valore predefinito è `TRUE`.  
   
  [in] `bRepaint`  
- `TRUE`Per ridisegnare la finestra immediatamente. in caso contrario, `FALSE`. Il valore predefinito è `TRUE`.  
+ `TRUE` Per ridisegnare la finestra immediatamente. in caso contrario, `FALSE`. Il valore predefinito è `TRUE`.  
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="setimagelist"></a>CMFCTabCtrl::SetImageList  
+##  <a name="setimagelist"></a>  CMFCTabCtrl::SetImageList  
  Specifica un elenco di immagini.  
   
 ```  
@@ -943,14 +938,14 @@ virtual BOOL SetImageList(HIMAGELIST hImageList);
  Handle per un elenco di immagini precaricati.  
   
 ### <a name="return-value"></a>Valore restituito  
- `TRUE`Se questo metodo dà esito positivo. `FALSE`Se il controllo struttura a schede viene creato utilizzando uno stile flat o se il primo overload di metodo non è possibile caricare la mappa di bit specificato da di `uiID` parametro.  
+ `TRUE` Se questo metodo dà esito positivo. `FALSE` Se il controllo struttura a schede viene creato utilizzando uno stile flat o se il primo overload di metodo non è possibile caricare la mappa di bit specificato dal `uiID` parametro.  
   
 ### <a name="remarks"></a>Note  
  Utilizzare questo metodo per impostare un elenco di immagini per il controllo scheda. Le immagini dall'elenco di immagini vengono visualizzate accanto all'etichetta di scheda. Questo metodo ricalcola l'altezza della scheda in modo che la scheda viene ridimensionata per contenere sia l'immagine e testo.  
   
  Utilizzare il [cmfcbasetabctrl:: addTab](../../mfc/reference/cmfcbasetabctrl-class.md#addtab) metodo ereditato dal controllo scheda per specificare l'indice dell'immagine da visualizzare.  
   
-##  <a name="setresizemode"></a>CMFCTabCtrl::SetResizeMode  
+##  <a name="setresizemode"></a>  CMFCTabCtrl::SetResizeMode  
  Specifica come può essere ridimensionato il controllo scheda corrente e quindi viene nuovamente visualizzato il controllo.  
   
 ```  
@@ -970,7 +965,7 @@ void SetResizeMode(ResizeMode resizeMode);
 |RESIZE_VERT|Può assumere il controllo struttura a schede in verticale, ma non in senso orizzontale.|  
 |RESIZE_HORIZ|Può assumere il controllo struttura a schede orizzontalmente, ma non in senso verticale.|  
   
-##  <a name="settabmaxwidth"></a>CMFCTabCtrl::SetTabMaxWidth  
+##  <a name="settabmaxwidth"></a>  CMFCTabCtrl::SetTabMaxWidth  
  Specifica la larghezza massima della scheda in una finestra a schede.  
   
 ```  
@@ -984,7 +979,7 @@ void SetTabMaxWidth(int nTabMaxWidth);
 ### <a name="remarks"></a>Note  
  Utilizzare questo metodo per limitare la larghezza di ogni scheda in una finestra a schede. Questo metodo è utile se le schede hanno etichette molto lunghi. Il [CMFCTabCtrl](../../mfc/reference/cmfctabctrl-class.md) costruttore inizializza la larghezza massima della scheda su 0, che significa che la larghezza non è limitata.  
   
-##  <a name="stopresize"></a>CMFCTabCtrl::StopResize  
+##  <a name="stopresize"></a>  CMFCTabCtrl::StopResize  
  Termina l'operazione di ridimensionamento corrente nel controllo struttura a schede.  
   
 ```  
@@ -993,9 +988,9 @@ void StopResize(BOOL bCancel);
   
 ### <a name="parameters"></a>Parametri  
  [in] `bCancel`  
- `TRUE`Per annullare l'operazione di ridimensionamento corrente; `FALSE` completamento operazione di ridimensionamento corrente. In entrambi i casi, il framework arresta disegnare il rettangolo di ridimensionamento.  
+ `TRUE` Per annullare l'operazione di ridimensionamento corrente; `FALSE` completamento operazione di ridimensionamento corrente. In entrambi i casi, il framework arresta disegnare il rettangolo di ridimensionamento.  
   
-##  <a name="synchronizescrollbar"></a>CMFCTabCtrl::SynchronizeScrollBar  
+##  <a name="synchronizescrollbar"></a>  CMFCTabCtrl::SynchronizeScrollBar  
  Disegna una barra di scorrimento orizzontale in un controllo struttura a schede che vengono visualizzate le schede flat.  
   
 ```  
@@ -1007,7 +1002,7 @@ BOOL SynchronizeScrollBar(SCROLLINFO* pScrollInfo = NULL);
  Puntatore a un [SCROLLINFO](http://msdn.microsoft.com/library/windows/desktop/bb787537) struttura o `NULL`. Quando questo metodo viene restituito, e se questo parametro non è `NULL`, la struttura contiene tutti i parametri della barra di scorrimento. Il valore predefinito è `NULL`.  
   
 ### <a name="return-value"></a>Valore restituito  
- `TRUE`Se questo metodo ha esito positivo. in caso contrario, `FALSE`.  
+ `TRUE` Se questo metodo ha esito positivo. in caso contrario, `FALSE`.  
   
 ### <a name="remarks"></a>Note  
  Questo metodo influisce solo un controllo struttura a schede che vengono visualizzate le schede flat. La barra di scorrimento influisce su tutte le schede nello stesso momento.  

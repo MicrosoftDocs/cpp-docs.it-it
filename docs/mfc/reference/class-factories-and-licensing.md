@@ -1,13 +1,10 @@
 ---
 title: Class factory e licenze | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.mfc.macros.classes
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - class factories [MFC], and licensing
 ms.assetid: 53c4856a-4062-46db-9f69-dd4339f746b3
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 79710cb1fa67ec8315fe287364126f88b4b498d7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b311d81e5e9becab2bf0ab88d30321019e5da95d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="class-factories-and-licensing"></a>Class factory e licenze
 Per creare un'istanza del controllo OLE, un'applicazione contenitore chiama una funzione membro della factory di classe del controllo. Poiché il controllo è un oggetto OLE effettivo, la class factory è responsabile per la creazione di istanze del controllo. Ogni classe del controllo OLE deve avere una class factory.  
@@ -44,7 +39,7 @@ Per creare un'istanza del controllo OLE, un'applicazione contenitore chiama una 
 |[END_OLEFACTORY](#end_olefactory)|Termina la dichiarazione di tutte le funzioni di gestione delle licenze.|  
 |[AfxVerifyLicFile](#afxverifylicfile)|Verifica se un controllo viene concesso in licenza in un computer specifico.|  
   
-##  <a name="declare_olecreate_ex"></a>DECLARE_OLECREATE_EX  
+##  <a name="declare_olecreate_ex"></a>  DECLARE_OLECREATE_EX  
  Dichiara una class factory e `GetClassID` funzione membro di classe del controllo.  
   
 ```   
@@ -52,7 +47,7 @@ DECLARE_OLECREATE_EX(class_name)
 ```  
   
 ### <a name="parameters"></a>Parametri  
- *CLASS_NAME*  
+ *CLASS_NAME5D*  
  Il nome della classe del controllo.  
   
 ### <a name="remarks"></a>Note  
@@ -65,7 +60,7 @@ DECLARE_OLECREATE_EX(class_name)
 ### <a name="requirements"></a>Requisiti  
   **Intestazione** afxctl. h  
   
-##  <a name="implement_olecreate_ex"></a>IMPLEMENT_OLECREATE_EX  
+##  <a name="implement_olecreate_ex"></a>  IMPLEMENT_OLECREATE_EX  
  Implementa una factory di classe del controllo e [GetClassID](../../mfc/reference/colecontrol-class.md#getclassid) funzione membro di classe del controllo.  
   
 ```   
@@ -86,7 +81,7 @@ IMPLEMENT_OLECREATE_EX(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- *CLASS_NAME*  
+ *CLASS_NAME5D*  
  Il nome della classe di proprietà del controllo pagina.  
   
  *external_name*  
@@ -101,7 +96,7 @@ IMPLEMENT_OLECREATE_EX(
 ### <a name="requirements"></a>Requisiti  
   **Intestazione** afxctl. h  
   
-##  <a name="begin_olefactory"></a>BEGIN_OLEFACTORY  
+##  <a name="begin_olefactory"></a>  BEGIN_OLEFACTORY  
  Inizia la dichiarazione di una factory di classe nel file di intestazione della classe del controllo.  
   
 ``` 
@@ -109,7 +104,7 @@ BEGIN_OLEFACTORY(class_name)
 ```  
   
 ### <a name="parameters"></a>Parametri  
- *CLASS_NAME*  
+ *CLASS_NAME5D*  
  Specifica il nome della classe del controllo cui factory di classe, si tratta di.  
   
 ### <a name="remarks"></a>Note  
@@ -118,7 +113,7 @@ BEGIN_OLEFACTORY(class_name)
 ### <a name="requirements"></a>Requisiti  
   **Intestazione** afxctl. h  
   
-##  <a name="end_olefactory"></a>END_OLEFACTORY  
+##  <a name="end_olefactory"></a>  END_OLEFACTORY  
  Termina la dichiarazione della factory di classe del controllo.  
   
 ```  
@@ -126,13 +121,13 @@ END_OLEFACTORY(class_name)
 ```  
   
 ### <a name="parameters"></a>Parametri  
- *CLASS_NAME*  
+ *CLASS_NAME5D*  
  Il nome della classe del controllo cui factory di classe, si tratta di.  
   
 ### <a name="requirements"></a>Requisiti  
   **Intestazione** afxctl. h  
   
-##  <a name="afxverifylicfile"></a>AfxVerifyLicFile  
+##  <a name="afxverifylicfile"></a>  AfxVerifyLicFile  
  Chiamare questa funzione per verificare che il file di licenza denominato da `pszLicFileName` è valido per il controllo OLE.  
   
 ```   

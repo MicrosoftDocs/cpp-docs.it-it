@@ -1,12 +1,9 @@
 ---
 title: CListBox (classe) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CListBox
@@ -111,17 +108,15 @@ helpviewer_keywords:
 - CListBox [MFC], SetTopIndex
 - CListBox [MFC], VKeyToItem
 ms.assetid: 7ba3c699-c286-4cd9-9066-532c41ec05d1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ecf574deed95fca6a96e8e5a5c1d1e0bebed1854
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1101e4115efa3c5c822d0d64b767cdee379a0e0b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="clistbox-class"></a>CListBox (classe)
 Fornisce la funzionalità di una casella di riepilogo di Windows.  
@@ -219,17 +214,17 @@ class CListBox : public CWnd
   
 - **ON_LBN_ERRSPACE** la casella di riepilogo non è possibile allocare memoria sufficiente per soddisfare la richiesta.  
   
-- **ON_LBN_KILLFOCUS** la casella di riepilogo sta per perdere lo stato attivo.  
+- **ON_LBN_KILLFOCUS** la casella di riepilogo perde lo stato attivo di input.  
   
 - **ON_LBN_SELCANCEL** la selezione della casella di riepilogo corrente viene annullata. Questo messaggio viene inviato solo quando si dispone di una casella di riepilogo di **LBS_NOTIFY** stile.  
   
-- **ON_LBN_SELCHANGE** è stata modificata la selezione nella casella di riepilogo. Se la selezione viene modificata da questa notifica non sarà inviata il [CListBox::SetCurSel](#setcursel) funzione membro. Questa notifica si applica solo a una casella di riepilogo che dispone di **LBS_NOTIFY** stile. Il **LBN_SELCHANGE** messaggio di notifica viene inviato per una casella di riepilogo a selezione multipla ogni volta che l'utente preme un tasto di direzione, anche se la selezione viene modificata.  
+- **ON_LBN_SELCHANGE** la selezione nella casella di riepilogo è stato modificato. Se la selezione viene modificata da questa notifica non sarà inviata il [CListBox::SetCurSel](#setcursel) funzione membro. Questa notifica si applica solo a una casella di riepilogo che dispone di **LBS_NOTIFY** stile. Il **LBN_SELCHANGE** messaggio di notifica viene inviato per una casella di riepilogo a selezione multipla ogni volta che l'utente preme un tasto di direzione, anche se la selezione viene modificata.  
   
-- **ON_LBN_SETFOCUS** la casella di riepilogo riceve lo stato attivo.  
+- **ON_LBN_SETFOCUS** la casella di riepilogo riceve lo stato attivo di input.  
   
-- **ON_WM_CHARTOITEM** riceve una casella di riepilogo di proprietario che non dispone di nessuna stringa di un `WM_CHAR` messaggio.  
+- **ON_WM_CHARTOITEM** riceve una casella di riepilogo di disegno con nessuna stringa di un `WM_CHAR` messaggio.  
   
-- **ON_WM_VKEYTOITEM** una casella di riepilogo con i **LBS_WANTKEYBOARDINPUT** stile riceve un `WM_KEYDOWN` messaggio.  
+- **ON_WM_VKEYTOITEM** casella di riepilogo con i **LBS_WANTKEYBOARDINPUT** stile riceve un `WM_KEYDOWN` messaggio.  
   
  Se si crea un `CListBox` oggetto all'interno di una finestra di dialogo (tramite una risorsa finestra di dialogo), il `CListBox` oggetto viene automaticamente distrutta quando l'utente chiude la finestra di dialogo.  
   
@@ -249,7 +244,7 @@ class CListBox : public CWnd
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** afxwin.h  
   
-##  <a name="addstring"></a>CListBox::AddString  
+##  <a name="addstring"></a>  CListBox::AddString  
  Aggiunge una stringa di una casella di riepilogo.  
   
 ```  
@@ -271,7 +266,7 @@ int AddString(LPCTSTR lpszItem);
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFC_CListBox#3](../../mfc/codesnippet/cpp/clistbox-class_1.cpp)]  
   
-##  <a name="chartoitem"></a>CListBox::CharToItem  
+##  <a name="chartoitem"></a>  CListBox::CharToItem  
  Chiamato dal framework quando finestra padre della casella di riepilogo riceve un `WM_CHARTOITEM` messaggio dalla casella di riepilogo.  
   
 ```  
@@ -308,7 +303,7 @@ virtual int CharToItem(
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFC_CListBox#4](../../mfc/codesnippet/cpp/clistbox-class_2.cpp)]  
   
-##  <a name="clistbox"></a>CListBox::CListBox  
+##  <a name="clistbox"></a>  CListBox::CListBox  
  Costruisce un oggetto `CListBox`.  
   
 ```  
@@ -321,7 +316,7 @@ CListBox();
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFC_CListBox#1](../../mfc/codesnippet/cpp/clistbox-class_3.cpp)]  
   
-##  <a name="compareitem"></a>CListBox::CompareItem  
+##  <a name="compareitem"></a>  CListBox::CompareItem  
  Chiamato dal framework per determinare la posizione relativa di un nuovo elemento in un elenco ordinato di proprietario.  
   
 ```  
@@ -349,7 +344,7 @@ virtual int CompareItem(LPCOMPAREITEMSTRUCT lpCompareItemStruct);
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFC_CListBox#5](../../mfc/codesnippet/cpp/clistbox-class_4.cpp)]  
   
-##  <a name="create"></a>CListBox::Create  
+##  <a name="create"></a>  CListBox::Create  
  Crea la casella di riepilogo di Windows e lo collega al `CListBox` oggetto.  
   
 ```  
@@ -402,7 +397,7 @@ virtual BOOL Create(
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFC_CListBox#2](../../mfc/codesnippet/cpp/clistbox-class_5.cpp)]  
   
-##  <a name="deleteitem"></a>CListBox::DeleteItem  
+##  <a name="deleteitem"></a>  CListBox::DeleteItem  
  Chiamato dal framework quando l'utente elimina un elemento da un proprietario `CListBox` dell'oggetto o Elimina definitivamente la casella di riepilogo.  
   
 ```  
@@ -421,7 +416,7 @@ virtual void DeleteItem(LPDELETEITEMSTRUCT lpDeleteItemStruct);
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFC_CListBox#6](../../mfc/codesnippet/cpp/clistbox-class_6.cpp)]  
   
-##  <a name="deletestring"></a>CListBox::DeleteString  
+##  <a name="deletestring"></a>  CListBox::DeleteString  
  Elimina l'elemento nella posizione `nIndex` dalla casella di riepilogo.  
   
 ```  
@@ -441,7 +436,7 @@ int DeleteString(UINT nIndex);
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFC_CListBox#7](../../mfc/codesnippet/cpp/clistbox-class_7.cpp)]  
   
-##  <a name="dir"></a>CListBox::Dir  
+##  <a name="dir"></a>  CListBox::Dir  
  Aggiunge un elenco di nomi di file, unità o entrambi per una casella di riepilogo.  
   
 ```  
@@ -474,7 +469,7 @@ int Dir(
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFC_CListBox#8](../../mfc/codesnippet/cpp/clistbox-class_8.cpp)]  
   
-##  <a name="drawitem"></a>CListBox::DrawItem  
+##  <a name="drawitem"></a>  CListBox::DrawItem  
  Chiamato dal framework quando un aspetto visivo di un proprietario viene modificato elenco.  
   
 ```  
@@ -495,7 +490,7 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFC_CListBox#9](../../mfc/codesnippet/cpp/clistbox-class_9.cpp)]  
   
-##  <a name="findstring"></a>CListBox:: FindString  
+##  <a name="findstring"></a>  CListBox:: FindString  
  Trova la prima stringa in una casella di riepilogo che contiene il prefisso specificato senza modificare la selezione della casella di riepilogo.  
   
 ```  
@@ -520,7 +515,7 @@ int FindString(
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFC_CListBox#10](../../mfc/codesnippet/cpp/clistbox-class_10.cpp)]  
   
-##  <a name="findstringexact"></a>CListBox::FindStringExact  
+##  <a name="findstringexact"></a>  CListBox::FindStringExact  
  Trova la prima stringa di casella di riepilogo che corrisponde alla stringa specificata `lpszFind`.  
   
 ```  
@@ -545,7 +540,7 @@ int FindStringExact(
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFC_CListBox#11](../../mfc/codesnippet/cpp/clistbox-class_11.cpp)]  
   
-##  <a name="getanchorindex"></a>CListBox::GetAnchorIndex  
+##  <a name="getanchorindex"></a>  CListBox::GetAnchorIndex  
  Recupera l'indice in base zero dell'elemento di ancoraggio corrente nella casella di riepilogo.  
   
 ```  
@@ -561,7 +556,7 @@ int GetAnchorIndex() const;
 ### <a name="example"></a>Esempio  
   Per vedere l'esempio [CListBox::SetAnchorIndex](#setanchorindex).  
   
-##  <a name="getcaretindex"></a>CListBox::GetCaretIndex  
+##  <a name="getcaretindex"></a>  CListBox::GetCaretIndex  
  Determina l'indice dell'elemento che ha il rettangolo di attivazione in una casella di riepilogo a selezione multipla.  
   
 ```  
@@ -577,7 +572,7 @@ int GetCaretIndex() const;
 ### <a name="example"></a>Esempio  
   Per vedere l'esempio [CListBox::SetCaretIndex](#setcaretindex).  
   
-##  <a name="getcount"></a>CListBox::GetCount  
+##  <a name="getcount"></a>  CListBox::GetCount  
  Recupera il numero di elementi in una casella di riepilogo.  
   
 ```  
@@ -593,7 +588,7 @@ int GetCount() const;
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFC_CListBox#12](../../mfc/codesnippet/cpp/clistbox-class_12.cpp)]  
   
-##  <a name="getcursel"></a>CListBox::GetCurSel  
+##  <a name="getcursel"></a>  CListBox::GetCurSel  
  Recupera l'indice in base zero dell'elemento attualmente selezionato, se presente, in una casella di riepilogo a selezione singola.  
   
 ```  
@@ -611,7 +606,7 @@ int GetCurSel() const;
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFC_CListBox#13](../../mfc/codesnippet/cpp/clistbox-class_13.cpp)]  
   
-##  <a name="gethorizontalextent"></a>CListBox::GetHorizontalExtent  
+##  <a name="gethorizontalextent"></a>  CListBox::GetHorizontalExtent  
  Recupera dalla casella di riepilogo la larghezza in pixel da cui è possibile scorrere orizzontalmente.  
   
 ```  
@@ -627,7 +622,7 @@ int GetHorizontalExtent() const;
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFC_CListBox#14](../../mfc/codesnippet/cpp/clistbox-class_14.cpp)]  
   
-##  <a name="getitemdata"></a>CListBox::GetItemData  
+##  <a name="getitemdata"></a>  CListBox::GetItemData  
  Recupera il valore della parola doppia fornita dall'applicazione associato all'elemento casella di elenco specificata.  
   
 ```  
@@ -647,7 +642,7 @@ DWORD_PTR GetItemData(int nIndex) const;
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFC_CListBox#15](../../mfc/codesnippet/cpp/clistbox-class_15.cpp)]  
   
-##  <a name="getitemdataptr"></a>CListBox::GetItemDataPtr  
+##  <a name="getitemdataptr"></a>  CListBox::GetItemDataPtr  
  Recupera il valore a 32 bit fornita dall'applicazione associato all'elemento casella di elenco specificata come un puntatore ( **void\***).  
   
 ```  
@@ -664,7 +659,7 @@ void* GetItemDataPtr(int nIndex) const;
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFC_CListBox#16](../../mfc/codesnippet/cpp/clistbox-class_16.cpp)]  
   
-##  <a name="getitemheight"></a>CListBox::GetItemHeight  
+##  <a name="getitemheight"></a>  CListBox::GetItemHeight  
  Determina l'altezza degli elementi in una casella di riepilogo.  
   
 ```  
@@ -681,7 +676,7 @@ int GetItemHeight(int nIndex) const;
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFC_CListBox#17](../../mfc/codesnippet/cpp/clistbox-class_17.cpp)]  
   
-##  <a name="getitemrect"></a>CListBox::GetItemRect  
+##  <a name="getitemrect"></a>  CListBox::GetItemRect  
  Recupera le dimensioni del rettangolo di tale elemento di una casella di riepilogo limiti che è attualmente visualizzato nella finestra della casella di riepilogo.  
   
 ```  
@@ -703,7 +698,7 @@ int GetItemRect(
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFC_CListBox#18](../../mfc/codesnippet/cpp/clistbox-class_18.cpp)]  
   
-##  <a name="getlistboxinfo"></a>CListBox::GetListBoxInfo  
+##  <a name="getlistboxinfo"></a>  CListBox::GetListBoxInfo  
  Recupera il numero di elementi per ogni colonna.  
   
 ```  
@@ -716,7 +711,7 @@ DWORD GetListBoxInfo() const;
 ### <a name="remarks"></a>Note  
  Questa funzione membro emula la funzionalità del [LB_GETLISTBOXINFO](http://msdn.microsoft.com/library/windows/desktop/bb775208) del messaggio, come descritto in Windows SDK.  
   
-##  <a name="getlocale"></a>CListBox::GetLocale  
+##  <a name="getlocale"></a>  CListBox::GetLocale  
  Recupera le impostazioni locali utilizzate dalla casella di riepilogo.  
   
 ```  
@@ -732,7 +727,7 @@ LCID GetLocale() const;
 ### <a name="example"></a>Esempio  
   Per vedere l'esempio [CListBox::SetLocale](#setlocale).  
   
-##  <a name="getsel"></a>CListBox::GetSel  
+##  <a name="getsel"></a>  CListBox::GetSel  
  Recupera lo stato di selezione di un elemento.  
   
 ```  
@@ -754,7 +749,7 @@ int GetSel(int nIndex) const;
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFC_CListBox#19](../../mfc/codesnippet/cpp/clistbox-class_19.cpp)]  
   
-##  <a name="getselcount"></a>CListBox::GetSelCount  
+##  <a name="getselcount"></a>  CListBox::GetSelCount  
  Recupera il numero totale di elementi selezionati in una casella di riepilogo a selezione multipla.  
   
 ```  
@@ -767,7 +762,7 @@ int GetSelCount() const;
 ### <a name="example"></a>Esempio  
   Per vedere l'esempio [CListBox::GetSelItems](#getselitems).  
   
-##  <a name="getselitems"></a>CListBox::GetSelItems  
+##  <a name="getselitems"></a>  CListBox::GetSelItems  
  Compila un buffer con una matrice di interi che specifica i numeri degli elementi selezionati in una casella di riepilogo a selezione multipla.  
   
 ```  
@@ -789,7 +784,7 @@ int GetSelItems(
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFC_CListBox#20](../../mfc/codesnippet/cpp/clistbox-class_20.cpp)]  
   
-##  <a name="gettext"></a>CListBox::GetText  
+##  <a name="gettext"></a>  CListBox::GetText  
  Ottiene una stringa da una casella di riepilogo.  
   
 ```  
@@ -821,7 +816,7 @@ void GetText(
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFC_CListBox#21](../../mfc/codesnippet/cpp/clistbox-class_21.cpp)]  
   
-##  <a name="gettextlen"></a>CListBox::GetTextLen  
+##  <a name="gettextlen"></a>  CListBox::GetTextLen  
  Ottiene la lunghezza di una stringa in un elemento della casella di riepilogo.  
   
 ```  
@@ -838,7 +833,7 @@ int GetTextLen(int nIndex) const;
 ### <a name="example"></a>Esempio  
   Per vedere l'esempio [CListBox::GetText](#gettext).  
   
-##  <a name="gettopindex"></a>CListBox::GetTopIndex  
+##  <a name="gettopindex"></a>  CListBox::GetTopIndex  
  Recupera l'indice in base zero del primo elemento visibile in una casella di riepilogo.  
   
 ```  
@@ -854,7 +849,7 @@ int GetTopIndex() const;
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFC_CListBox#22](../../mfc/codesnippet/cpp/clistbox-class_22.cpp)]  
   
-##  <a name="initstorage"></a>CListBox::InitStorage  
+##  <a name="initstorage"></a>  CListBox::InitStorage  
  Alloca memoria per archiviare gli elementi della casella di riepilogo.  
   
 ```  
@@ -883,7 +878,7 @@ int InitStorage(
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFC_CListBox#23](../../mfc/codesnippet/cpp/clistbox-class_23.cpp)]  
   
-##  <a name="insertstring"></a>CListBox::InsertString  
+##  <a name="insertstring"></a>  CListBox::InsertString  
  Inserisce una stringa nella casella di riepilogo.  
   
 ```  
@@ -908,7 +903,7 @@ int InsertString(
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFC_CListBox#24](../../mfc/codesnippet/cpp/clistbox-class_24.cpp)]  
   
-##  <a name="itemfrompoint"></a>CListBox::ItemFromPoint  
+##  <a name="itemfrompoint"></a>  CListBox::ItemFromPoint  
  Determina l'elemento casella di riepilogo più vicino al punto specificato in `pt`.  
   
 ```  
@@ -933,7 +928,7 @@ UINT ItemFromPoint(
 ### <a name="example"></a>Esempio  
   Per vedere l'esempio [CListBox::SetAnchorIndex](#setanchorindex).  
   
-##  <a name="measureitem"></a>CListBox::MeasureItem  
+##  <a name="measureitem"></a>  CListBox::MeasureItem  
  Chiamato dal framework quando viene creata una casella di riepilogo con uno stile di disegno personalizzato.  
   
 ```  
@@ -954,7 +949,7 @@ virtual void MeasureItem(LPMEASUREITEMSTRUCT lpMeasureItemStruct);
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFC_CListBox#25](../../mfc/codesnippet/cpp/clistbox-class_25.cpp)]  
   
-##  <a name="resetcontent"></a>CListBox::ResetContent  
+##  <a name="resetcontent"></a>  CListBox::ResetContent  
  Rimuove tutti gli elementi da una casella di riepilogo.  
   
 ```  
@@ -964,7 +959,7 @@ void ResetContent();
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFC_CListBox#26](../../mfc/codesnippet/cpp/clistbox-class_26.cpp)]  
   
-##  <a name="selectstring"></a>CListBox::SelectString  
+##  <a name="selectstring"></a>  CListBox::SelectString  
  Ricerche per un elemento della casella di riepilogo che corrisponde alla stringa specificata e se viene trovato un elemento corrispondente, viene selezionato l'elemento.  
   
 ```  
@@ -995,7 +990,7 @@ int SelectString(
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFC_CListBox#27](../../mfc/codesnippet/cpp/clistbox-class_27.cpp)]  
   
-##  <a name="selitemrange"></a>CListBox::SelItemRange  
+##  <a name="selitemrange"></a>  CListBox::SelItemRange  
  Consente di selezionare più elementi consecutivi in una casella di riepilogo a selezione multipla.  
   
 ```  
@@ -1024,7 +1019,7 @@ int SelItemRange(
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFC_CListBox#28](../../mfc/codesnippet/cpp/clistbox-class_28.cpp)]  
   
-##  <a name="setanchorindex"></a>CListBox::SetAnchorIndex  
+##  <a name="setanchorindex"></a>  CListBox::SetAnchorIndex  
  Imposta il punto di ancoraggio in una casella di riepilogo a selezione multipla per iniziare una selezione estesa.  
   
 ```  
@@ -1041,7 +1036,7 @@ void SetAnchorIndex(int nIndex);
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFC_CListBox#29](../../mfc/codesnippet/cpp/clistbox-class_29.cpp)]  
   
-##  <a name="setcaretindex"></a>CListBox::SetCaretIndex  
+##  <a name="setcaretindex"></a>  CListBox::SetCaretIndex  
  Imposta il rettangolo di attivazione per l'elemento in corrispondenza dell'indice specificato in una casella di riepilogo a selezione multipla.  
   
 ```  
@@ -1066,7 +1061,7 @@ int SetCaretIndex(
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFC_CListBox#30](../../mfc/codesnippet/cpp/clistbox-class_30.cpp)]  
   
-##  <a name="setcolumnwidth"></a>CListBox::SetColumnWidth  
+##  <a name="setcolumnwidth"></a>  CListBox::SetColumnWidth  
  Imposta la larghezza in pixel, di tutte le colonne in una casella di riepilogo a più colonne (creata con la [LBS_MULTICOLUMN](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) stile).  
   
 ```  
@@ -1080,7 +1075,7 @@ void SetColumnWidth(int cxWidth);
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFC_CListBox#31](../../mfc/codesnippet/cpp/clistbox-class_31.cpp)]  
   
-##  <a name="setcursel"></a>CListBox::SetCurSel  
+##  <a name="setcursel"></a>  CListBox::SetCurSel  
  Seleziona una stringa e lo scorrimento nella visualizzazione, se necessario.  
   
 ```  
@@ -1092,7 +1087,7 @@ int SetCurSel(int nSelect);
  Specifica l'indice in base zero della stringa da selezionare. Se `nSelect` è -1, la casella di riepilogo è impostata su alcuna opzione di selezione.  
   
 ### <a name="return-value"></a>Valore restituito  
- `LB_ERR`Se si verifica un errore.  
+ `LB_ERR` Se si verifica un errore.  
   
 ### <a name="remarks"></a>Note  
  Quando è selezionata la nuova stringa, la casella di riepilogo rimuove l'evidenziazione dalla stringa selezionata in precedenza.  
@@ -1104,7 +1099,7 @@ int SetCurSel(int nSelect);
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFC_CListBox#32](../../mfc/codesnippet/cpp/clistbox-class_32.cpp)]  
   
-##  <a name="sethorizontalextent"></a>CListBox:: SetHorizontalExtent  
+##  <a name="sethorizontalextent"></a>  CListBox:: SetHorizontalExtent  
  Imposta la larghezza, in pixel, che è possibile far scorrere orizzontalmente una casella di riepilogo.  
   
 ```  
@@ -1125,7 +1120,7 @@ void SetHorizontalExtent(int cxExtent);
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFC_CListBox#33](../../mfc/codesnippet/cpp/clistbox-class_33.cpp)]  
   
-##  <a name="setitemdata"></a>CListBox::SetItemData  
+##  <a name="setitemdata"></a>  CListBox::SetItemData  
  Imposta un valore a 32 bit associato all'elemento specificato in una casella di riepilogo.  
   
 ```  
@@ -1147,7 +1142,7 @@ int SetItemData(
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFC_CListBox#34](../../mfc/codesnippet/cpp/clistbox-class_34.cpp)]  
   
-##  <a name="setitemdataptr"></a>CListBox::SetItemDataPtr  
+##  <a name="setitemdataptr"></a>  CListBox::SetItemDataPtr  
  Imposta il valore a 32 bit associato con l'elemento specificato in una casella di riepilogo sia il puntatore specificato ( **void\***).  
   
 ```  
@@ -1172,7 +1167,7 @@ int SetItemDataPtr(
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFC_CListBox#35](../../mfc/codesnippet/cpp/clistbox-class_35.cpp)]  
   
-##  <a name="setitemheight"></a>CListBox::SetItemHeight  
+##  <a name="setitemheight"></a>  CListBox::SetItemHeight  
  Imposta l'altezza degli elementi in una casella di riepilogo.  
   
 ```  
@@ -1189,7 +1184,7 @@ int SetItemHeight(
  Specifica l'altezza, in pixel, dell'elemento.  
   
 ### <a name="return-value"></a>Valore restituito  
- **LB_ERR** se l'indice o l'altezza non è valido.  
+ **LB_ERR** se l'indice o dell'altezza non è valido.  
   
 ### <a name="remarks"></a>Note  
  Se la casella di riepilogo ha la [LBS_OWNERDRAWVARIABLE](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) stile, la funzione imposta l'altezza dell'elemento specificato da `nIndex`. In caso contrario, la funzione imposta l'altezza di tutti gli elementi nella casella di riepilogo.  
@@ -1197,7 +1192,7 @@ int SetItemHeight(
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFC_CListBox#36](../../mfc/codesnippet/cpp/clistbox-class_36.cpp)]  
   
-##  <a name="setlocale"></a>CListBox::SetLocale  
+##  <a name="setlocale"></a>  CListBox::SetLocale  
  Imposta l'identificatore delle impostazioni locali per questa casella di riepilogo.  
   
 ```  
@@ -1217,7 +1212,7 @@ LCID SetLocale(LCID nNewLocale);
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFC_CListBox#37](../../mfc/codesnippet/cpp/clistbox-class_37.cpp)]  
   
-##  <a name="setsel"></a>CListBox::SetSel  
+##  <a name="setsel"></a>  CListBox::SetSel  
  Seleziona una stringa in una casella di riepilogo a selezione multipla.  
   
 ```  
@@ -1234,7 +1229,7 @@ int SetSel(
  Specifica come impostare la selezione. Se `bSelect` è `TRUE`, la stringa è selezionata ed evidenziata; se `FALSE`, l'evidenziazione viene rimossa e la stringa non è più selezionata. La stringa specificata viene selezionata ed evidenziata per impostazione predefinita.  
   
 ### <a name="return-value"></a>Valore restituito  
- `LB_ERR`Se si verifica un errore.  
+ `LB_ERR` Se si verifica un errore.  
   
 ### <a name="remarks"></a>Note  
  Utilizzare questa funzione membro solo con le caselle di riepilogo a selezione multipla.  
@@ -1244,7 +1239,7 @@ int SetSel(
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFC_CListBox#38](../../mfc/codesnippet/cpp/clistbox-class_38.cpp)]  
   
-##  <a name="settabstops"></a>CListBox::SetTabStops  
+##  <a name="settabstops"></a>  CListBox::SetTabStops  
  Imposta le posizioni di tabulazione in una casella di riepilogo.  
   
 ```  
@@ -1280,7 +1275,7 @@ BOOL SetTabStops(
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFC_CListBox#39](../../mfc/codesnippet/cpp/clistbox-class_39.cpp)]  
   
-##  <a name="settopindex"></a>CListBox::SetTopIndex  
+##  <a name="settopindex"></a>  CListBox::SetTopIndex  
  Garantisce che un elemento specifico della casella di riepilogo è visibile.  
   
 ```  
@@ -1300,7 +1295,7 @@ int SetTopIndex(int nIndex);
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFC_CListBox#40](../../mfc/codesnippet/cpp/clistbox-class_40.cpp)]  
   
-##  <a name="vkeytoitem"></a>CListBox::VKeyToItem  
+##  <a name="vkeytoitem"></a>  CListBox::VKeyToItem  
  Chiamato dal framework quando finestra padre della casella di riepilogo riceve un `WM_VKEYTOITEM` messaggio dalla casella di riepilogo.  
   
 ```  

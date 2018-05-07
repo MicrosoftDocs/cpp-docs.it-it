@@ -1,12 +1,9 @@
 ---
 title: Classe CKeyboardManager | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CKeyboardManager
@@ -39,17 +36,15 @@ helpviewer_keywords:
 - CKeyboardManager [MFC], TranslateCharToUpper
 - CKeyboardManager [MFC], UpdateAccelTable
 ms.assetid: 4809ece6-89df-4479-8b53-9bf476ee107b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7547887b4ad34ecbbea32516eaf76b6f4d1ab25d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1b9d4aace502310836429ec8f8f9db74d7cf17ff
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ckeyboardmanager-class"></a>Classe CKeyboardManager
 Gestisce le tabelle di tasti di scelta rapida per la finestra cornice principale e le finestre cornice figlio.  
@@ -104,7 +99,7 @@ class CKeyboardManager : public CObject
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** afxkeyboardmanager.h  
   
-##  <a name="ckeyboardmanager"></a>CKeyboardManager::CKeyboardManager  
+##  <a name="ckeyboardmanager"></a>  CKeyboardManager::CKeyboardManager  
  Costruisce un oggetto `CKeyboardManager`.  
   
 ```  
@@ -114,7 +109,7 @@ CKeyboardManager();
 ### <a name="remarks"></a>Note  
  Nella maggior parte dei casi, non è necessario creare un `CKeyboardManager` direttamente. Per impostazione predefinita, il framework crea uno automaticamente. Per ottenere un puntatore per il `CKeyboardManager`, chiamare [CWinAppEx::GetKeyboardManager](../../mfc/reference/cwinappex-class.md#getkeyboardmanager). Se si crea manualmente uno, è necessario inizializzarlo con il metodo [CWinAppEx::InitKeyboardManager](../../mfc/reference/cwinappex-class.md#initkeyboardmanager).  
   
-##  <a name="cleanup"></a>CKeyboardManager::CleanUp  
+##  <a name="cleanup"></a>  CKeyboardManager::CleanUp  
  Libera la `CKeyboardManager` risorse e Cancella tutti i mapping dei tasti di scelta rapida.  
   
 ```  
@@ -126,7 +121,7 @@ static void CleanUp();
   
  Non è necessario chiamare questa funzione alla chiusura dell'applicazione perché il framework chiama automaticamente durante la chiusura dell'applicazione.  
   
-##  <a name="finddefaultaccelerator"></a>CKeyboardManager::FindDefaultAccelerator  
+##  <a name="finddefaultaccelerator"></a>  CKeyboardManager::FindDefaultAccelerator  
  Recupera il tasto di scelta rapida predefiniti per il comando specificato e una finestra.  
   
 ```  
@@ -156,7 +151,7 @@ static BOOL FindDefaultAccelerator(
 ### <a name="remarks"></a>Note  
  Questo metodo cerca il comando specificato da `uiCmd` e recupera il tasto di scelta rapida predefiniti. Quindi il metodo accetta la stringa associata a questo tasto di scelta rapida e scrive il valore per il `str` parametro.  
   
-##  <a name="iskeyhandled"></a>CKeyboardManager::IsKeyHandled  
+##  <a name="iskeyhandled"></a>  CKeyboardManager::IsKeyHandled  
  Determina se la chiave specificata è gestita mediante il [CKeyboardManager classe](../../mfc/reference/ckeyboardmanager-class.md).  
   
 ```  
@@ -178,12 +173,12 @@ static BOOL __stdcall IsKeyHandled(
 |[in] `bIsDefaultFrame`|Un parametro booleano che indica se `pWndFrame` è la finestra cornice predefinito.|  
   
 ### <a name="return-value"></a>Valore restituito  
- `TRUE`Se il tasto di scelta rapida viene gestito. `FALSE`Se la chiave non è gestita o `pWndFrame` è `NULL`.  
+ `TRUE` Se il tasto di scelta rapida viene gestito. `FALSE` Se la chiave non viene gestita o se `pWndFrame` è `NULL`.  
   
 ### <a name="remarks"></a>Note  
  I parametri di input devono corrispondere alla voce nella relativa tabella sia per `nKey` e `fVirt` per determinare se un tasto di scelta rapida è gestito in `pWndFrame`.  
   
-##  <a name="iskeyprintable"></a>CKeyboardManager::IsKeyPrintable  
+##  <a name="iskeyprintable"></a>  CKeyboardManager::IsKeyPrintable  
  Indica se un carattere stampabile.  
   
 ```  
@@ -203,7 +198,7 @@ static BOOL __stdcall IsKeyPrintable(const UINT nChar);
 ### <a name="remarks"></a>Note  
  Questo metodo non riesce se una chiamata a [GetKeyboardState](http://msdn.microsoft.com/library/windows/desktop/ms646299) ha esito negativo.  
   
-##  <a name="isshowallaccelerators"></a>CKeyboardManager::IsShowAllAccelerators  
+##  <a name="isshowallaccelerators"></a>  CKeyboardManager::IsShowAllAccelerators  
  Indica se i menu mostrano tutti i tasti di scelta rapida associati ai comandi di menu o solo i tasti di scelta rapida predefiniti.  
   
 ```  
@@ -216,7 +211,7 @@ static BOOL IsShowAllAccelerators();
 ### <a name="remarks"></a>Note  
  L'applicazione sono elencati i tasti di scelta rapida per i comandi di menu nella barra dei menu. Utilizzare la funzione [CKeyboardManager::ShowAllAccelerators](#showallaccelerators) per controllare se l'applicazione sono elencati tutti i tasti di scelta rapida o solo i tasti di scelta rapida predefiniti.  
   
-##  <a name="loadstate"></a>CKeyboardManager::LoadState  
+##  <a name="loadstate"></a>  CKeyboardManager::LoadState  
  Carica le tabelle di tasti di scelta rapida dal Registro di sistema Windows.  
   
 ```  
@@ -240,7 +235,7 @@ BOOL LoadState(
   
  Se non si specifica una finestra predefinito, verrà utilizzata la finestra cornice principale dell'applicazione.  
   
-##  <a name="resetall"></a>CKeyboardManager::ResetAll  
+##  <a name="resetall"></a>  CKeyboardManager::ResetAll  
  Ricarica le tabelle di tasti di scelta rapida dalla risorsa di applicazione.  
   
 ```  
@@ -250,7 +245,7 @@ void ResetAll();
 ### <a name="remarks"></a>Note  
  Questa funzione Cancella i collegamenti memorizzati nel `CKeyboardManager` istanza. Verrà quindi ricaricare lo stato del gestore della tastiera dalla risorsa di applicazione.  
   
-##  <a name="savestate"></a>CKeyboardManager::SaveState  
+##  <a name="savestate"></a>  CKeyboardManager::SaveState  
  Salva il collegamento le tabelle di chiave del Registro di sistema.  
   
 ```  
@@ -274,7 +269,7 @@ BOOL SaveState(
   
  Se non si specifica una finestra predefinito, la finestra cornice principale da utilizzare come finestra predefinita.  
   
-##  <a name="showallaccelerators"></a>CKeyboardManager::ShowAllAccelerators  
+##  <a name="showallaccelerators"></a>  CKeyboardManager::ShowAllAccelerators  
  Mostra tutti i tasti di scelta rapida associati ai comandi di menu.  
   
 ```  
@@ -295,7 +290,7 @@ static void ShowAllAccelerators(
   
  Verranno elencati i tasti di scelta rapida accanto al comando nella barra dei menu. Se vengono visualizzati tutti i tasti di scelta rapida, la stringa fornita dal `lpszDelimiter` per separare i tasti di scelta rapida singoli.  
   
-##  <a name="translatechartoupper"></a>CKeyboardManager::TranslateCharToUpper  
+##  <a name="translatechartoupper"></a>  CKeyboardManager::TranslateCharToUpper  
  Converte un carattere per il proprio registro superiore.  
   
 ```  
@@ -309,7 +304,7 @@ static UINT TranslateCharToUpper(const UINT nChar);
 ### <a name="return-value"></a>Valore restituito  
  Il carattere che è il registro superiore del parametro di input.  
   
-##  <a name="updateacceltable"></a>CKeyboardManager::UpdateAccelTable  
+##  <a name="updateacceltable"></a>  CKeyboardManager::UpdateAccelTable  
  Aggiorna una tabella di tasti di scelta rapida con una nuova tabella di tasti di scelta rapida.  
   
 ```  

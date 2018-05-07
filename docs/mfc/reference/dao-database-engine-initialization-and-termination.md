@@ -1,13 +1,10 @@
 ---
 title: Inizializzazione del motore di Database DAO e terminazione | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.mfc.macros.data
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - DAO (Data Access Objects), termination
 - DAO (Data Access Objects), initialization
 ms.assetid: a7edf31c-e7c2-4f3e-aada-63c3e48781da
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 32dbcb02615f552a2bb26ec047b0b817bb828a95
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3f28c0c166bcbf13181161d6afce484fe4a45b80
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dao-database-engine-initialization-and-termination"></a>Inizializzazione e terminazione del motore di database DAO
 Quando si utilizzano gli oggetti DAO MFC, il motore di database DAO deve prima essere inizializzato e quindi terminata prima della chiusura dell'applicazione o DLL. Due funzioni, `AfxDaoInit` e `AfxDaoTerm`, eseguire queste attività.  
@@ -38,7 +33,7 @@ Quando si utilizzano gli oggetti DAO MFC, il motore di database DAO deve prima e
 |[AfxDaoInit](#afxdaoinit)|Inizializza il motore di database DAO.|  
 |[AfxDaoTerm](#afxdaoterm)|Termina il motore di database DAO.|  
   
-##  <a name="afxdaoinit"></a>AfxDaoInit  
+##  <a name="afxdaoinit"></a>  AfxDaoInit  
  Questa funzione inizializza il motore di database DAO.  
   
 ```  
@@ -56,7 +51,7 @@ throw(CDaoException*);
 ### <a name="requirements"></a>Requisiti  
   **Intestazione** afxdao. h  
   
-##  <a name="afxdaoterm"></a>AfxDaoTerm  
+##  <a name="afxdaoterm"></a>  AfxDaoTerm  
  Questa funzione consente di terminare il motore di database DAO.  
   
 ```  

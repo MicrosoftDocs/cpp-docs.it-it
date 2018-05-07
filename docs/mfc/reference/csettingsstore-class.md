@@ -1,12 +1,9 @@
 ---
 title: Classe CSettingsStore | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CSettingsStore
@@ -31,17 +28,15 @@ helpviewer_keywords:
 - CSettingsStore [MFC], Read
 - CSettingsStore [MFC], Write
 ms.assetid: 0ea181de-a13e-4b29-b560-7c43838223ff
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e8ed7cc6c6671e85c21379c4804df4d2f3e3d99d
-ms.sourcegitcommit: 2aeb507a426fc7881ea59115b1d5139c0a30ba91
+ms.openlocfilehash: f5ed7d1dad634d330ac857f52d6ef35ef36c9c9a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="csettingsstore-class"></a>CSettingsStore Class
 Esegue il wrapping di funzioni API di Windows, fornendo un'interfaccia orientata a oggetti che è possibile utilizzare per accedere al Registro di sistema.  
@@ -88,7 +83,7 @@ class CSettingsStore : public CObject
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** afxsettingsstore.h  
   
-##  <a name="close"></a>CSettingsStore::Close  
+##  <a name="close"></a>  CSettingsStore::Close  
  Chiude la chiave del Registro di sistema aprire.  
   
 ```  
@@ -98,7 +93,7 @@ virtual void Close();
 ### <a name="remarks"></a>Note  
  Per impostazione predefinita, questo metodo viene chiamato dal distruttore del [classe CSettingsStore](../../mfc/reference/csettingsstore-class.md).  
   
-##  <a name="createkey"></a>CSettingsStore::CreateKey  
+##  <a name="createkey"></a>  CSettingsStore::CreateKey  
  Apre una chiave del Registro di sistema o la crea se non esiste.  
   
 ```  
@@ -113,9 +108,9 @@ virtual BOOL CreateKey(LPCTSTR pszPath);
  0 se ha esito positivo. in caso contrario un valore diverso da zero.  
   
 ### <a name="remarks"></a>Note  
- `CreateKey`Usa `m_hKey` come radice di richieste di informazioni del Registro di sistema. Cerca `pszPath` come sottochiave di `m_hKey`. Se la chiave non esiste, `CreateKey` lo crea. In caso contrario, viene aperta la chiave. `CreateKey`Imposta quindi `m_hKey` alla chiave creata o aperta.  
+ `CreateKey` Usa `m_hKey` come radice di richieste di informazioni del Registro di sistema. Cerca `pszPath` come sottochiave di `m_hKey`. Se la chiave non esiste, `CreateKey` lo crea. In caso contrario, viene aperta la chiave. `CreateKey` Imposta quindi `m_hKey` alla chiave creata o aperta.  
   
-##  <a name="csettingsstore"></a>CSettingsStore::CSettingsStore  
+##  <a name="csettingsstore"></a>  CSettingsStore::CSettingsStore  
  Crea un oggetto `CSettngsStore`.  
   
 ```  
@@ -138,7 +133,7 @@ CSettingsStore(
   
  Il distruttore per `CSettingsStore` rilascia `m_hKey` automaticamente.  
   
-##  <a name="deletekey"></a>CSettingsStore::DeleteKey  
+##  <a name="deletekey"></a>  CSettingsStore::DeleteKey  
  Elimina una chiave e i relativi elementi figlio dal Registro di sistema.  
   
 ```  
@@ -162,7 +157,7 @@ virtual BOOL DeleteKey(
   
  Se il parametro `bAdmin` è zero, `DeleteKey` Cerca la chiave da eliminare in `HKEY_CURRENT_USER`. Se `bAdmin` è diverso da zero, `DeleteKey` Cerca la chiave da eliminare in `HKEY_LOCAL_MACHINE`.  
   
-##  <a name="deletevalue"></a>CSettingsStore::DeleteValue  
+##  <a name="deletevalue"></a>  CSettingsStore::DeleteValue  
  Elimina un valore da `m_hKey`.  
   
 ```  
@@ -176,7 +171,7 @@ virtual BOOL DeleteValue(LPCTSTR pszValue);
 ### <a name="return-value"></a>Valore restituito  
  Diverso da zero se ha esito positivo; in caso contrario 0.  
   
-##  <a name="open"></a>CSettingsStore::Open  
+##  <a name="open"></a>  CSettingsStore::Open  
  Apre una chiave del Registro di sistema.  
   
 ```  
@@ -193,7 +188,7 @@ virtual BOOL Open(LPCTSTR pszPath);
 ### <a name="remarks"></a>Note  
  Dopo che questo metodo apre correttamente la chiave specificata, viene impostato `m_hKey` per l'handle della chiave.  
   
-##  <a name="read"></a>CSettingsStore::Read  
+##  <a name="read"></a>  CSettingsStore::Read  
  Legge un valore da una chiave del Registro di sistema.  
   
 ```  
@@ -321,9 +316,9 @@ virtual BOOL Read(
  Diverso da zero se ha esito positivo; in caso contrario 0.  
   
 ### <a name="remarks"></a>Note  
- `Read`verifica la presenza di `pszKey` come sottochiave di `m_hKey`.  
+ `Read` verifica la presenza `pszKey` come sottochiave della `m_hKey`.  
   
-##  <a name="write"></a>CSettingsStore::Write  
+##  <a name="write"></a>  CSettingsStore::Write  
  Scrive un valore di aprire la chiave del Registro di sistema.  
   
 ```  

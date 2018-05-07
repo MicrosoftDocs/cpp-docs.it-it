@@ -1,13 +1,10 @@
 ---
 title: 'TN040: MFC OLE In-ridimensionamento sul posto e zoom | Documenti Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.mfc.ole
 dev_langs:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - zooming and in-place activation
 - in-place activation, zooming and resizing
 ms.assetid: 4d7859bd-0b2e-4254-be62-2735cecf02c6
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b1113da01e58ec00cd4420aab4424b1c20e127e0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bf8b90aed96135967167c8048f775fc7530f85d6
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn040-mfcole-in-place-resizing-and-zooming"></a>TN040: ridimensionamento sul posto e zoom MFC/OLE
 > [!NOTE]
@@ -54,7 +49,7 @@ ms.lasthandoff: 12/21/2017
   
  Per un esempio dello zoom in modo corretto, vedere l'esempio OLE MFC [HIERSVR](../visual-cpp-samples.md). Lo zoom avanti HIERSVR è complicato dal fatto che venga visualizzato il testo e testo, in generale, non è scalabile in modo lineare (hint, convenzioni tipografiche, progettazione larghezze e altezze tutti complicare la questione). Comunque, HIERSVR è un riferimento ragionevole per l'implementazione di zoom correttamente e pertanto è l'esercitazione MFC [SCRIBBLE](../visual-cpp-samples.md) (passaggio 7).  
   
- `COleServerDoc::GetZoomFactor`Determina il fattore di zoom in una serie di metriche disponibili dal contenitore o dall'implementazione di base del `COleServerItem` e `COleServerDoc` classi. In breve, il fattore di zoom corrente viene determinato tramite la formula seguente:  
+ `COleServerDoc::GetZoomFactor` Determina il fattore di zoom in un numero di metriche disponibili dal contenitore o rispetto all'implementazione di base del `COleServerItem` e `COleServerDoc` classi. In breve, il fattore di zoom corrente viene determinato tramite la formula seguente:  
   
 ```  
 Position Rectangle (PR) / Container Extent (CE)  
@@ -64,7 +59,7 @@ Position Rectangle (PR) / Container Extent (CE)
   
  L'entità contenitore è leggermente più difficile da calcolare. Se il contenitore è stato chiamato `COleServerItem::OnSetExtent` (con una chiamata a `COleClientItem::SetExtent`), quindi l'entità contenitore è il valore convertito in pixel in base al numero di pixel per pollice logico. Se il contenitore non è chiamato SetExtent (che è in genere il caso), sarà l'entità contenitore della dimensione restituita da `COleServerItem::OnGetExtent`. In tal caso, se il contenitore non è chiamato SetExtent, il framework presuppone che in caso contrario il contenitore deve avere chiamato, con 100% dell'estensione naturale (il valore restituito da **COleServerItem::GetExtent**). In altre parole, il framework presuppone che il contenitore è la visualizzazione di 100% (inferiore, non di più) dell'elemento.  
   
- È importante notare che anche se `COleServerItem::OnSetExtent` e `COleServerItem::OnGetExtent` presentano nomi simili, che non modificano lo stesso attributo dell'elemento. `OnSetExtent`viene chiamato per il server di comunicare la quantità dell'oggetto è visibile nel contenitore (indipendentemente dal fattore di zoom) e `OnGetExtent` viene chiamato dal contenitore per determinare le dimensioni ideali dell'oggetto.  
+ È importante notare che anche se `COleServerItem::OnSetExtent` e `COleServerItem::OnGetExtent` presentano nomi simili, che non modificano lo stesso attributo dell'elemento. `OnSetExtent` viene chiamato per segnalare il server quanta parte dell'oggetto è visibile nel contenitore (indipendentemente dal fattore di zoom) e `OnGetExtent` viene chiamato dal contenitore per determinare le dimensioni ideali dell'oggetto.  
   
  Osservando ognuna delle API del coinvolte, è possibile ottenere un'immagine più chiara:  
   

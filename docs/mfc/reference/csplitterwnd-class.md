@@ -1,12 +1,9 @@
 ---
 title: Classe CSplitterWnd | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CSplitterWnd
@@ -81,17 +78,15 @@ helpviewer_keywords:
 - CSplitterWnd [MFC], OnDrawSplitter
 - CSplitterWnd [MFC], OnInvertTracker
 ms.assetid: fd0de258-6dbe-4552-9e47-a39de0471d51
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 706425dd8d729937d310da9cc2f09eac8ec1ad57
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 071eaeef6fbdbe4967d184936f5fb7bffb7786b7
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="csplitterwnd-class"></a>CSplitterWnd (classe)
 Fornisce la funzionalità di una finestra con separatore, ovvero una finestra che contiene più riquadri.  
@@ -207,7 +202,7 @@ class CSplitterWnd : public CWnd
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** AFXEXT. h  
   
-##  <a name="activatenext"></a>CSplitterWnd::ActivateNext  
+##  <a name="activatenext"></a>  CSplitterWnd::ActivateNext  
  Chiamato dal framework per eseguire il comando riquadro successivo o riquadro precedente.  
   
 ```  
@@ -221,7 +216,7 @@ virtual void ActivateNext(BOOL bPrev = FALSE);
 ### <a name="remarks"></a>Note  
  Questa funzione membro è un comando di alto livello che viene utilizzato il [CView](../../mfc/reference/cview-class.md) classe di delegare il `CSplitterWnd` implementazione.  
   
-##  <a name="canactivatenext"></a>CSplitterWnd::CanActivateNext  
+##  <a name="canactivatenext"></a>  CSplitterWnd::CanActivateNext  
  Chiamato dal framework per verificare se il comando riquadro successivo o riquadro precedente è attualmente possibile.  
   
 ```  
@@ -238,7 +233,7 @@ virtual BOOL CanActivateNext(BOOL bPrev = FALSE);
 ### <a name="remarks"></a>Note  
  Questa funzione membro è un comando di alto livello che viene utilizzato il [CView](../../mfc/reference/cview-class.md) classe di delegare il `CSplitterWnd` implementazione.  
   
-##  <a name="create"></a>CSplitterWnd:: Create  
+##  <a name="create"></a>  CSplitterWnd:: Create  
  Per creare una finestra con separatore dinamico, chiamare il **crea** funzione membro.  
   
 ```  
@@ -295,7 +290,7 @@ virtual BOOL Create(
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFCWindowing#125](../../mfc/reference/codesnippet/cpp/csplitterwnd-class_1.cpp)]  
   
-##  <a name="createscrollbarctrl"></a>CSplitterWnd::CreateScrollBarCtrl  
+##  <a name="createscrollbarctrl"></a>  CSplitterWnd::CreateScrollBarCtrl  
  Chiamato dal framework per creare un controllo barra di scorrimento condiviso.  
   
 ```  
@@ -317,7 +312,7 @@ virtual BOOL CreateScrollBarCtrl(
 ### <a name="remarks"></a>Note  
  Eseguire l'override `CreateScrollBarCtrl` per includere controlli aggiuntivi accanto a una barra di scorrimento. Il comportamento predefinito consiste nel creare i controlli barra di scorrimento Windows normale.  
   
-##  <a name="createstatic"></a>CSplitterWnd:: CreateStatic  
+##  <a name="createstatic"></a>  CSplitterWnd:: CreateStatic  
  Per creare una finestra con separatore statico, chiamare il `CreateStatic` funzione membro.  
   
 ```  
@@ -367,7 +362,7 @@ virtual BOOL CreateStatic(
   
  Vedere "Finestre con separatore" nell'articolo [tipi di documenti multipli, visualizzazioni e finestre cornice](../../mfc/multiple-document-types-views-and-frame-windows.md), [29 Nota tecnica](../../mfc/tn029-splitter-windows.md)e `CSplitterWnd` Cenni preliminari sulla classe per ulteriori informazioni sulle finestre con separatore statico.  
   
-##  <a name="createview"></a>CSplitterWnd:: CreateView  
+##  <a name="createview"></a>  CSplitterWnd:: CreateView  
  Crea i riquadri per una finestra con separatore statico.  
   
 ```  
@@ -406,7 +401,7 @@ virtual BOOL CreateView(
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFCWindowing#4](../../mfc/reference/codesnippet/cpp/csplitterwnd-class_2.cpp)]  
   
-##  <a name="csplitterwnd"></a>CSplitterWnd::CSplitterWnd  
+##  <a name="csplitterwnd"></a>  CSplitterWnd::CSplitterWnd  
  Chiamata per costruire un `CSplitterWnd` oggetto.  
   
 ```  
@@ -416,7 +411,7 @@ CSplitterWnd();
 ### <a name="remarks"></a>Note  
  Costruire un `CSplitterWnd` oggetto in due passaggi. In primo luogo, chiamare il costruttore, che crea il `CSplitterWnd` e quindi chiamare il [crea](#create) funzione membro, che crea la finestra con separatore e lo collega al `CSplitterWnd` oggetto.  
   
-##  <a name="deletecolumn"></a>CSplitterWnd::DeleteColumn  
+##  <a name="deletecolumn"></a>  CSplitterWnd::DeleteColumn  
  Elimina una colonna dalla finestra con separatore.  
   
 ```  
@@ -430,7 +425,7 @@ virtual void DeleteColumn(int colDelete);
 ### <a name="remarks"></a>Note  
  Questa funzione membro viene chiamata dal framework per implementare la logica della finestra con separatore dinamico (vale a dire, se la finestra con separatore di **SPLS_DYNAMIC_SPLIT** stile). Può essere personalizzato, insieme alla funzione virtuale [CreateView](#createview), per implementare più separatori dinamici avanzati.  
   
-##  <a name="deleterow"></a>CSplitterWnd::DeleteRow  
+##  <a name="deleterow"></a>  CSplitterWnd::DeleteRow  
  Elimina una riga dalla finestra con separatore.  
   
 ```  
@@ -444,7 +439,7 @@ virtual void DeleteRow(int rowDelete);
 ### <a name="remarks"></a>Note  
  Questa funzione membro viene chiamata dal framework per implementare la logica della finestra con separatore dinamico (vale a dire, se la finestra con separatore di **SPLS_DYNAMIC_SPLIT** stile). Può essere personalizzato, insieme alla funzione virtuale [CreateView](#createview), per implementare più separatori dinamici avanzati.  
   
-##  <a name="deleteview"></a>CSplitterWnd::DeleteView  
+##  <a name="deleteview"></a>  CSplitterWnd::DeleteView  
  Elimina una visualizzazione dalla finestra con separatore.  
   
 ```  
@@ -465,7 +460,7 @@ virtual void DeleteView(
   
  Questa funzione membro viene chiamata dal framework per implementare la logica della finestra con separatore dinamico (vale a dire, se la finestra con separatore di **SPLS_DYNAMIC_SPLIT** stile). Può essere personalizzato, insieme alla funzione virtuale [CreateView](#createview), per implementare più separatori dinamici avanzati.  
   
-##  <a name="dokeyboardsplit"></a>CSplitterWnd::DoKeyboardSplit  
+##  <a name="dokeyboardsplit"></a>  CSplitterWnd::DoKeyboardSplit  
  Esegue il comando, in genere "finestra Dividi." di divisione tastiera  
   
 ```  
@@ -478,7 +473,7 @@ virtual BOOL DoKeyboardSplit();
 ### <a name="remarks"></a>Note  
  Questa funzione membro è un comando di alto livello che viene utilizzato il [CView](../../mfc/reference/cview-class.md) classe di delegare il `CSplitterWnd` implementazione.  
   
-##  <a name="doscroll"></a>CSplitterWnd::DoScroll  
+##  <a name="doscroll"></a>  CSplitterWnd::DoScroll  
  Esegue lo scorrimento sincronizzato delle finestre divise.  
   
 ```  
@@ -501,9 +496,9 @@ virtual BOOL DoScroll(
   
 - **SB_LINEUP** scorre una riga verso l'alto.  
   
-- **SB_PAGEDOWN** una pagina di scorrimento verso il basso.  
+- **SB_PAGEDOWN** scorre una sola pagina verso il basso.  
   
-- **SB_PAGEUP** scorre una pagina verso l'alto.  
+- **SB_PAGEUP** scorre una sola pagina verso l'alto.  
   
 - **SB_TOP** scorre verso l'alto.  
   
@@ -516,7 +511,7 @@ virtual BOOL DoScroll(
 ### <a name="remarks"></a>Note  
  Questa funzione membro viene chiamata dal framework per eseguire lo scorrimento sincronizzato delle finestre divise quando la vista riceve un messaggio di scorrimento. Eseguire l'override per richiedere un intervento dell'utente prima di consentire lo scorrimento sincronizzato.  
   
-##  <a name="doscrollby"></a>CSplitterWnd::DoScrollBy  
+##  <a name="doscrollby"></a>  CSplitterWnd::DoScrollBy  
  Scorre le finestre divise da un determinato numero di pixel.  
   
 ```  
@@ -544,7 +539,7 @@ virtual BOOL DoScrollBy(
   
  Eseguire l'override per richiedere un intervento dell'utente prima di consentire a scorrimento.  
   
-##  <a name="getactivepane"></a>CSplitterWnd::GetActivePane  
+##  <a name="getactivepane"></a>  CSplitterWnd::GetActivePane  
  Determina il riquadro attivo lo stato attivo o della vista attiva nel frame.  
   
 ```  
@@ -566,7 +561,7 @@ virtual CWnd* GetActivePane(
 ### <a name="remarks"></a>Note  
  Questa funzione membro viene chiamata dal framework per determinare il riquadro attivo in una finestra con separatore. Eseguire l'override per richiedere un intervento dell'utente prima di ottenere il riquadro attivo.  
   
-##  <a name="getcolumncount"></a>CSplitterWnd::GetColumnCount  
+##  <a name="getcolumncount"></a>  CSplitterWnd::GetColumnCount  
  Restituisce il numero di colonne corrente del riquadro.  
   
 ```  
@@ -576,7 +571,7 @@ int GetColumnCount() const;
 ### <a name="return-value"></a>Valore restituito  
  Restituisce il numero corrente delle colonne nella barra di divisione. Per un separatore statico, sarà anche il numero massimo di colonne.  
   
-##  <a name="getcolumninfo"></a>CSplitterWnd::GetColumnInfo  
+##  <a name="getcolumninfo"></a>  CSplitterWnd::GetColumnInfo  
  Restituisce le informazioni nella colonna specificata.  
   
 ```  
@@ -596,7 +591,7 @@ void GetColumnInfo(
  `cxMin`  
  Un riferimento a un `int` da impostare per la larghezza minima corrente della colonna.  
   
-##  <a name="getpane"></a>CSplitterWnd::GetPane  
+##  <a name="getpane"></a>  CSplitterWnd::GetPane  
  Restituisce il riquadro in cui la riga specificata e la colonna.  
   
 ```  
@@ -615,7 +610,7 @@ CWnd* GetPane(
 ### <a name="return-value"></a>Valore restituito  
  Restituisce il riquadro in cui la riga specificata e la colonna. Il riquadro restituito è in genere un [CView](../../mfc/reference/cview-class.md)-classe derivata.  
   
-##  <a name="getrowcount"></a>CSplitterWnd::GetRowCount  
+##  <a name="getrowcount"></a>  CSplitterWnd::GetRowCount  
  Restituisce il numero di riga corrente del riquadro.  
   
 ```  
@@ -625,7 +620,7 @@ int GetRowCount() const;
 ### <a name="return-value"></a>Valore restituito  
  Restituisce il numero corrente di righe in una finestra con separatore. Per una finestra con separatore statico, sarà anche il numero massimo di righe.  
   
-##  <a name="getrowinfo"></a>CSplitterWnd::GetRowInfo  
+##  <a name="getrowinfo"></a>  CSplitterWnd::GetRowInfo  
  Restituisce informazioni su una riga specificata.  
   
 ```  
@@ -648,7 +643,7 @@ void GetRowInfo(
 ### <a name="remarks"></a>Note  
  Chiamare questa funzione membro per ottenere informazioni sulla riga specificata. Il `cyCur` parametro viene riempito con l'altezza corrente della riga specificata, e `cyMin` viene riempita con l'altezza minima della riga.  
   
-##  <a name="getscrollstyle"></a>CSplitterWnd::GetScrollStyle  
+##  <a name="getscrollstyle"></a>  CSplitterWnd::GetScrollStyle  
  Restituisce lo stile della barra di scorrimento condiviso per la finestra con separatore.  
   
 ```  
@@ -658,13 +653,13 @@ DWORD GetScrollStyle() const;
 ### <a name="return-value"></a>Valore restituito  
  Uno o più delle seguenti finestre, i flag di stile se ha esito positivo:  
   
-- **WS_HSCROLL** se la barra di divisione attualmente gestisce le barre di scorrimento orizzontale condiviso.  
+- **WS_HSCROLL** se la barra di divisione attualmente gestisce le barre di scorrimento orizzontale condivisa.  
   
-- **WS_VSCROLL** se la barra di divisione attualmente gestisce le barre di scorrimento verticale condiviso.  
+- **WS_VSCROLL** se la barra di divisione attualmente gestisce le barre di scorrimento verticale condivisa.  
   
  Se è zero, la finestra con separatore attualmente non gestisce le barre di scorrimento condiviso.  
   
-##  <a name="idfromrowcol"></a>CSplitterWnd::IdFromRowCol  
+##  <a name="idfromrowcol"></a>  CSplitterWnd::IdFromRowCol  
  Ottiene l'elemento figlio ID di finestra per il riquadro in cui la riga specificata e la colonna.  
   
 ```  
@@ -689,7 +684,7 @@ int IdFromRowCol(
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFCWindowing#5](../../mfc/reference/codesnippet/cpp/csplitterwnd-class_3.cpp)]  
   
-##  <a name="ischildpane"></a>CSplitterWnd::IsChildPane  
+##  <a name="ischildpane"></a>  CSplitterWnd::IsChildPane  
  Determina se `pWnd` è attualmente un riquadro figlio di questa finestra con separatore.  
   
 ```  
@@ -719,7 +714,7 @@ BOOL IsChildPane(
   
  Questa versione è obsoleta e non deve essere utilizzata.  
   
-##  <a name="istracking"></a>CSplitterWnd::IsTracking  
+##  <a name="istracking"></a>  CSplitterWnd::IsTracking  
  Chiamare questa funzione membro per determinare se la barra di divisione nella finestra viene spostata.  
   
 ```  
@@ -729,7 +724,7 @@ BOOL IsTracking();
 ### <a name="return-value"></a>Valore restituito  
  Diverso da zero se un'operazione di divisione è in corso. in caso contrario 0.  
   
-##  <a name="ondrawsplitter"></a>CSplitterWnd::OnDrawSplitter  
+##  <a name="ondrawsplitter"></a>  CSplitterWnd::OnDrawSplitter  
  Esegue il rendering di un'immagine di una finestra divisa.  
   
 ```  
@@ -746,11 +741,11 @@ virtual void OnDrawSplitter(
  `nType`  
  Il valore di **enum ESplitType**, che può essere uno dei seguenti:  
   
-- **splitBox** casella di trascinare la barra di divisione.  
+- **splitBox** trascinare la barra di divisione.  
   
-- `splitBar`La barra che viene visualizzata tra le finestre di divisione di due.  
+- `splitBar` La barra che tra le finestre due divise verrà visualizzata.  
   
-- **splitIntersection** l'intersezione delle finestre della divisione. Questo elemento non verrà chiamato quando è in esecuzione in Windows 95/98.  
+- **splitIntersection** l'intersezione delle finestre divise. Questo elemento non verrà chiamato quando è in esecuzione in Windows 95/98.  
   
 - **splitBorder** i bordi della finestra divisa.  
   
@@ -762,7 +757,7 @@ virtual void OnDrawSplitter(
   
  Per ulteriori informazioni sulle finestre con separatore dinamico, vedere "Finestre con separatore" nell'articolo [tipi di documenti multipli, visualizzazioni e finestre cornice](../../mfc/multiple-document-types-views-and-frame-windows.md), [29 Nota tecnica](../../mfc/tn029-splitter-windows.md)e `CSplitterWnd` Cenni preliminari sulla classe.  
   
-##  <a name="oninverttracker"></a>CSplitterWnd::OnInvertTracker  
+##  <a name="oninverttracker"></a>  CSplitterWnd::OnInvertTracker  
  Esegue il rendering di immagini di una finestra divisa per la stessa dimensione e forma della finestra con frame.  
   
 ```  
@@ -778,7 +773,7 @@ virtual void OnInvertTracker(const CRect& rect);
   
  Per ulteriori informazioni sulle finestre con separatore dinamico, vedere "Finestre con separatore" nell'articolo [tipi di documenti multipli, visualizzazioni e finestre cornice](../../mfc/multiple-document-types-views-and-frame-windows.md), [29 Nota tecnica](../../mfc/tn029-splitter-windows.md)e `CSplitterWnd` Cenni preliminari sulla classe.  
   
-##  <a name="recalclayout"></a>CSplitterWnd::RecalcLayout  
+##  <a name="recalclayout"></a>  CSplitterWnd::RecalcLayout  
  Chiamata eseguita per visualizzare nuovamente la finestra con separatore dopo la regolazione delle dimensioni di riga o colonna.  
   
 ```  
@@ -793,7 +788,7 @@ virtual void RecalcLayout();
 ### <a name="example"></a>Esempio  
   Per vedere l'esempio [CSplitterWnd::SetColumnInfo](#setcolumninfo).  
   
-##  <a name="setactivepane"></a>CSplitterWnd::SetActivePane  
+##  <a name="setactivepane"></a>  CSplitterWnd::SetActivePane  
  Imposta un riquadro da quello attivo nel frame.  
   
 ```  
@@ -818,7 +813,7 @@ virtual void SetActivePane(
   
  Specificare riquadro fornendo riga e colonna **o** fornendo `pWnd`.  
   
-##  <a name="setcolumninfo"></a>CSplitterWnd::SetColumnInfo  
+##  <a name="setcolumninfo"></a>  CSplitterWnd::SetColumnInfo  
  Chiamata eseguita per impostare le informazioni della colonna specificata.  
   
 ```  
@@ -846,7 +841,7 @@ void SetColumnInfo(
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFCWindowing#6](../../mfc/reference/codesnippet/cpp/csplitterwnd-class_4.cpp)]  
   
-##  <a name="setrowinfo"></a>CSplitterWnd::SetRowInfo  
+##  <a name="setrowinfo"></a>  CSplitterWnd::SetRowInfo  
  Chiamata eseguita per impostare le informazioni sulla riga specificata.  
   
 ```  
@@ -871,7 +866,7 @@ void SetRowInfo(
   
  Quando il framework visualizza una finestra con separatore, disposto i riquadri in colonne e righe in base alle dimensioni ideali, utilizzando l'angolo superiore sinistro all'angolo inferiore destro dell'area client della finestra con separatore.  
   
-##  <a name="setscrollstyle"></a>CSplitterWnd::SetScrollStyle  
+##  <a name="setscrollstyle"></a>  CSplitterWnd::SetScrollStyle  
  Specifica che il nuovo stile di scorrimento per la finestra con separatore condivisa supporto della barra di scorrimento.  
   
 ```  
@@ -889,7 +884,7 @@ void SetScrollStyle(DWORD dwStyle);
 ### <a name="remarks"></a>Note  
  Dopo aver creata una barra di scorrimento verrà eliminato anche se `SetScrollStyle` viene chiamato senza tale stile; invece vengono nascoste le barre di scorrimento. In questo modo le barre di scorrimento mantenere il proprio stato anche quando sono nascosti. Dopo la chiamata `SetScrollStyle` è necessario chiamare [RecalcLayout](#recalclayout) per tutte le modifiche abbiano effetto.  
   
-##  <a name="splitcolumn"></a>CSplitterWnd::SplitColumn  
+##  <a name="splitcolumn"></a>  CSplitterWnd::SplitColumn  
  Indica il punto di divisione verticale di una finestra cornice.  
   
 ```  
@@ -904,11 +899,11 @@ virtual BOOL SplitColumn(int cxBefore);
  Diverso da zero se ha esito positivo; in caso contrario 0.  
   
 ### <a name="remarks"></a>Note  
- Questa funzione membro viene chiamata quando viene creata una finestra con separatore verticale. `SplitColumn`indica il percorso predefinito in cui si verifica la divisione.  
+ Questa funzione membro viene chiamata quando viene creata una finestra con separatore verticale. `SplitColumn` indica il percorso predefinito in cui si verifica la divisione.  
   
- `SplitColumn`viene chiamato dal framework per implementare la logica della finestra con separatore dinamico (vale a dire, se la finestra con separatore di **SPLS_DYNAMIC_SPLIT** stile). Può essere personalizzato, insieme alla funzione virtuale [CreateView](#createview), per implementare più separatori dinamici avanzati.  
+ `SplitColumn` viene chiamato dal framework per implementare la logica della finestra con separatore dinamico (vale a dire, se la finestra con separatore ha il **SPLS_DYNAMIC_SPLIT** stile). Può essere personalizzato, insieme alla funzione virtuale [CreateView](#createview), per implementare più separatori dinamici avanzati.  
   
-##  <a name="splitrow"></a>CSplitterWnd::SplitRow  
+##  <a name="splitrow"></a>  CSplitterWnd::SplitRow  
  Indica il punto di divisione orizzontale di una finestra cornice.  
   
 ```  
@@ -923,11 +918,11 @@ virtual BOOL SplitRow(int cyBefore);
  Diverso da zero se ha esito positivo; in caso contrario 0.  
   
 ### <a name="remarks"></a>Note  
- Questa funzione membro viene chiamata quando viene creata una finestra con separatore orizzontale. `SplitRow`indica il percorso predefinito in cui si verifica la divisione.  
+ Questa funzione membro viene chiamata quando viene creata una finestra con separatore orizzontale. `SplitRow` indica il percorso predefinito in cui si verifica la divisione.  
   
- `SplitRow`viene chiamato dal framework per implementare la logica della finestra con separatore dinamico (vale a dire, se la finestra con separatore di **SPLS_DYNAMIC_SPLIT** stile). Può essere personalizzato, insieme alla funzione virtuale [CreateView](#createview), per implementare più separatori dinamici avanzati.  
+ `SplitRow` viene chiamato dal framework per implementare la logica della finestra con separatore dinamico (vale a dire, se la finestra con separatore ha il **SPLS_DYNAMIC_SPLIT** stile). Può essere personalizzato, insieme alla funzione virtuale [CreateView](#createview), per implementare più separatori dinamici avanzati.  
   
-##  <a name="ondraw"></a>CSplitterWnd::OnDraw  
+##  <a name="ondraw"></a>  CSplitterWnd::OnDraw  
  Chiamato dal framework per disegnare la finestra con separatore.  
   
 ```  

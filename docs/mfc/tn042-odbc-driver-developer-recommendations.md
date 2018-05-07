@@ -1,13 +1,10 @@
 ---
 title: 'TN042: Suggerimenti per sviluppatori di Driver ODBC | Documenti Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.odbc
 dev_langs:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - databases [MFC], ODBC
 - TN042
 ms.assetid: ecc6b5d9-f480-4582-9e22-8309fe561dad
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ad6361266ebf2f09b8f34d150de835b25c55720b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 35c75f5c5bae3a1b56abe91340de00f373663792
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn042-odbc-driver-developer-recommendations"></a>TN042: suggerimenti per gli sviluppatori di driver ODBC
 > [!NOTE]
@@ -76,12 +71,12 @@ ms.lasthandoff: 12/21/2017
  **SQLGetInfo SQL_DATABASE_NAME** verrà chiamato.  
   
 ## <a name="begintrans-committrans-rollback"></a>BeginTrans, CommitTrans e Rollback  
- **SQLSetConnectOption SQL_AUTOCOMMIT** e **SQLTransact SQL_COMMIT**, **SQL_ROLLBACK** e **SQL_AUTOCOMMIT** verrà chiamato se transazione le richieste vengono effettuate.  
+ **SQLSetConnectOption SQL_AUTOCOMMIT** e **SQLTransact SQL_COMMIT**, **SQL_ROLLBACK** e **SQL_AUTOCOMMIT** verrà chiamato se le richieste di transazione vengono apportate.  
   
 ## <a name="crecordsets"></a>CRecordsets  
- **SQLAllocStmt**, **SQLPrepare**, **SQLExecute** (per **aprire** e **Requery**), **SQLExecDirect**  (per le operazioni di aggiornamento), **SQLFreeStmt** deve essere supportato. **SQLNumResultCols** e **SQLDescribeCol** verrà chiamato su set in vari momenti di risultati.  
+ **SQLAllocStmt**, **SQLPrepare**, **SQLExecute** (per **aperti** e **Requery**), **SQLExecDirect**  (per operazioni di aggiornamento), **SQLFreeStmt** deve essere supportato. **SQLNumResultCols** e **SQLDescribeCol** verrà chiamato su set in vari momenti di risultati.  
   
- **SQLSetParam** viene ampiamente utilizzata per l'associazione di dati del parametro e **DATA_AT_EXEC** funzionalità.  
+ **SQLSetParam** viene ampiamente utilizzata per i dati dei parametri di associazione e **DATA_AT_EXEC** funzionalità.  
   
  **SQLBindCol** viene ampiamente utilizzata per registrare l'output di percorsi di archiviazione di dati di colonna con ODBC.  
   
@@ -96,7 +91,7 @@ ms.lasthandoff: 12/21/2017
   
  Se sono presenti **CLongBinarys** nel **outputColumns**, ODBC **DATA_AT_EXEC** funzionalità deve essere supportata. Ciò include la restituzione **SQL_NEED_DATA** da **SQLExecDirect**, **SQLParamData** e **SQLPutData**.  
   
- **SQLRowCount** viene chiamato dopo l'esecuzione per verificare che il record solo 1 è stato aggiornato dal **SQLExecDirect**.  
+ **SQLRowCount** viene chiamato dopo l'esecuzione per verificare che solo 1 record è stato aggiornato per il **SQLExecDirect**.  
   
 ## <a name="forwardonly-cursors"></a>Cursori ForwardOnly  
  Solo **SQLFetch** è necessaria per il **spostare** operazioni. Si noti che **forwardOnly** non supportano gli aggiornamenti.  

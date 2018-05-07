@@ -1,12 +1,9 @@
 ---
 title: Classe di CMFCImageEditorDialog | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCImageEditorDialog
@@ -17,17 +14,15 @@ dev_langs:
 helpviewer_keywords:
 - CMFCImageEditorDialog [MFC], CMFCImageEditorDialog
 ms.assetid: 6a7d08f3-1ec2-4062-9b79-a0c2776b58d1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 187373e911a91934741152110c67b7d133af827e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 795e5548e93323af389c3faeaefa7dda0bf7d80c
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcimageeditordialog-class"></a>Classe di CMFCImageEditorDialog
 La `CMFCImageEditorDialog` classe supporta una finestra di dialogo editor di immagini.  
@@ -59,7 +54,7 @@ class CMFCImageEditorDialog : public CDialogEx
   
  Nella figura seguente viene illustrato un editor di immagini la finestra di dialogo.  
   
- ![La finestra di dialogo di CMFCImageEditorDialog](../../mfc/reference/media/imageedit.png "imageedit")  
+ ![Finestra di dialogo di CMFCImageEditorDialog](../../mfc/reference/media/imageedit.png "imageedit")  
   
  Un modo per utilizzare un `CMFCImageEditorDialog` oggetto consiste nel passarlo un `CBitmap` immagine da modificare. Non creare un'immagine di grandi dimensioni perché l'immagine di area di modifica è di dimensioni limitate e la logica pixel viene ridimensionata per adattarsi all'area. Chiamare il `DoModal` metodo per avviare una finestra di dialogo modale.  
   
@@ -79,7 +74,7 @@ class CMFCImageEditorDialog : public CDialogEx
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** afximageeditordialog.h  
   
-##  <a name="cmfcimageeditordialog"></a>CMFCImageEditorDialog::CMFCImageEditorDialog  
+##  <a name="cmfcimageeditordialog"></a>  CMFCImageEditorDialog::CMFCImageEditorDialog  
  Costruisce un oggetto `CMFCImageEditorDialog`.  
   
 ```  

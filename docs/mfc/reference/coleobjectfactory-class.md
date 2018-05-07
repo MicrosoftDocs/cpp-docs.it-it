@@ -1,12 +1,9 @@
 ---
 title: COleObjectFactory (classe) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - COleObjectFactory
@@ -45,17 +42,15 @@ helpviewer_keywords:
 - COleObjectFactory [MFC], VerifyLicenseKey
 - COleObjectFactory [MFC], VerifyUserLicense
 ms.assetid: ab179c1e-4af2-44aa-a576-37c48149b427
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f853939ae7960dd865f560d480366ff95a73a990
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: dd68493c9be5eb0bff63504cf49b38b9a2f216d4
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="coleobjectfactory-class"></a>COleObjectFactory (classe)
 Implementa la class factory OLE che crea oggetti OLE come server, oggetti di automazione e documenti.  
@@ -121,7 +116,7 @@ class COleObjectFactory : public CCmdTarget
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** afxdisp.h  
   
-##  <a name="coleobjectfactory"></a>COleObjectFactory::COleObjectFactory  
+##  <a name="coleobjectfactory"></a>  COleObjectFactory::COleObjectFactory  
  Costruisce un `COleObjectFactory` oggetto, viene inizializzato come una factory di annullare la registrazione di oggetti e lo aggiunge all'elenco di factory.  
   
 ```  
@@ -153,11 +148,11 @@ COleObjectFactory(
  `nFlags`  
  Contiene uno o più dei flag seguenti:  
   
-- **afxRegDefault** imposta il modello di threading ThreadingModel = Apartment.  
+- **afxRegDefault** imposta il modello di threading per ThreadingModel = Apartment.  
   
-- **afxRegInsertable** consente il controllo venga visualizzato nel **Inserisci oggetto** la finestra di dialogo per gli oggetti OLE.  
+- **afxRegInsertable** consente il controllo venga visualizzato nel **Inserisci oggetto** finestra di dialogo per gli oggetti OLE.  
   
-- `afxRegApartmentThreading`Imposta il modello di threading nel Registro di sistema ThreadingModel = Apartment.  
+- `afxRegApartmentThreading` Imposta il modello di threading nel Registro di sistema ThreadingModel = Apartment.  
   
 - **afxRegFreeThreading** imposta il modello di threading nel Registro di sistema ThreadingModel = gratuito.  
   
@@ -171,7 +166,7 @@ COleObjectFactory(
   
  Per ulteriori informazioni, vedere [chiave CLSID](http://msdn.microsoft.com/library/windows/desktop/ms691424) in Windows SDK.  
   
-##  <a name="getclassid"></a>COleObjectFactory::GetClassID  
+##  <a name="getclassid"></a>  COleObjectFactory::GetClassID  
  Restituisce un riferimento all'ID classe OLE rappresenta questa factory.  
   
 ```  
@@ -184,7 +179,7 @@ REFCLSID GetClassID() const;
 ### <a name="remarks"></a>Note  
  Per ulteriori informazioni, vedere [chiave CLSID](http://msdn.microsoft.com/library/windows/desktop/ms691424) in Windows SDK.  
   
-##  <a name="getlicensekey"></a>COleObjectFactory::GetLicenseKey  
+##  <a name="getlicensekey"></a>  COleObjectFactory::GetLicenseKey  
  Richiede una chiave di licenza univoca di DLL del controllo e la archivia nel `BSTR` a cui puntava `pbstrKey`.  
   
 ```  
@@ -206,7 +201,7 @@ virtual BOOL GetLicenseKey(
 ### <a name="remarks"></a>Note  
  L'implementazione predefinita di questa funzione restituisce 0 e memorizzato alcun valore nel `BSTR`. Se si utilizza la creazione guidata controllo ActiveX di MFC per creare il progetto, la creazione guidata controllo fornisce un override che recupera il codice di licenza del controllo.  
   
-##  <a name="islicensevalid"></a>COleObjectFactory::IsLicenseValid  
+##  <a name="islicensevalid"></a>  COleObjectFactory::IsLicenseValid  
  Determina se la licenza del controllo è valida.  
   
 ```  
@@ -216,7 +211,7 @@ BOOL IsLicenseValid();
 ### <a name="return-value"></a>Valore restituito  
  TRUE se l'installazione; in caso contrario false.  
   
-##  <a name="isregistered"></a>COleObjectFactory::IsRegistered  
+##  <a name="isregistered"></a>  COleObjectFactory::IsRegistered  
  Restituisce un valore diverso da zero se la factory è registrata con il sistema OLE DLL.  
   
 ```  
@@ -226,7 +221,7 @@ virtual BOOL IsRegistered() const;
 ### <a name="return-value"></a>Valore restituito  
  Diverso da zero se la factory è stata registrata; in caso contrario 0.  
   
-##  <a name="oncreateobject"></a>COleObjectFactory::OnCreateObject  
+##  <a name="oncreateobject"></a>  COleObjectFactory::OnCreateObject  
  Chiamato dal framework per creare un nuovo oggetto.  
   
 ```  
@@ -239,7 +234,7 @@ virtual CCmdTarget* OnCreateObject();
 ### <a name="remarks"></a>Note  
  Eseguire l'override di questa funzione per creare l'oggetto da un elemento diverso dal [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) passato al costruttore.  
   
-##  <a name="register"></a>COleObjectFactory::Register  
+##  <a name="register"></a>  COleObjectFactory::Register  
  Registra l'object factory con il sistema OLE DLL.  
   
 ```  
@@ -252,7 +247,7 @@ virtual BOOL Register();
 ### <a name="remarks"></a>Note  
  Questa funzione viene chiamata generalmente dal [:: InitInstance](../../mfc/reference/cwinapp-class.md#initinstance) quando viene avviata l'applicazione.  
   
-##  <a name="registerall"></a>COleObjectFactory:: RegisterAll  
+##  <a name="registerall"></a>  COleObjectFactory:: RegisterAll  
  Registra tutte le factory di oggetto dell'applicazione con le DLL di sistema OLE.  
   
 ```  
@@ -265,7 +260,7 @@ static BOOL PASCAL RegisterAll();
 ### <a name="remarks"></a>Note  
  Questa funzione viene chiamata generalmente dal [:: InitInstance](../../mfc/reference/cwinapp-class.md#initinstance) quando viene avviata l'applicazione.  
   
-##  <a name="revoke"></a>COleObjectFactory::Revoke  
+##  <a name="revoke"></a>  COleObjectFactory::Revoke  
  Revoca la registrazione della factory di questo oggetto con le DLL di sistema OLE.  
   
 ```  
@@ -275,7 +270,7 @@ void Revoke();
 ### <a name="remarks"></a>Note  
  Il framework chiama questa funzione automaticamente prima della chiusura dell'applicazione. Se necessario, chiamarlo da un override di [CWinApp:: ExitInstance](../../mfc/reference/cwinapp-class.md#exitinstance).  
   
-##  <a name="revokeall"></a>COleObjectFactory::RevokeAll  
+##  <a name="revokeall"></a>  COleObjectFactory::RevokeAll  
  Revoca tutte le registrazioni di factory di oggetto dell'applicazione con le DLL di sistema OLE.  
   
 ```  
@@ -285,7 +280,7 @@ static void PASCAL RevokeAll();
 ### <a name="remarks"></a>Note  
  Il framework chiama questa funzione automaticamente prima della chiusura dell'applicazione. Se necessario, chiamarlo da un override di [CWinApp:: ExitInstance](../../mfc/reference/cwinapp-class.md#exitinstance).  
   
-##  <a name="unregisterall"></a>COleObjectFactory::UnregisterAll  
+##  <a name="unregisterall"></a>  COleObjectFactory::UnregisterAll  
  Annulla la registrazione di tutte le factory di oggetto di un'applicazione.  
   
 ```  
@@ -295,7 +290,7 @@ static BOOL PASCAL UnregisterAll();
 ### <a name="return-value"></a>Valore restituito  
  TRUE se l'operazione riesce; in caso contrario, FALSE.  
   
-##  <a name="updateregistry"></a>COleObjectFactory::UpdateRegistry  
+##  <a name="updateregistry"></a>  COleObjectFactory::UpdateRegistry  
  Registra tutte le factory di oggetto dell'applicazione con il Registro di sistema OLE.  
   
 ```  
@@ -319,7 +314,7 @@ virtual BOOL UpdateRegistry(BOOL bRegister);
   
      Se si utilizza la creazione guidata controllo ActiveX di MFC per creare il progetto, la creazione guidata controllo fornisce un override di questa funzione virtuale pura.  
   
-##  <a name="updateregistryall"></a>COleObjectFactory:: UpdateRegistryAll  
+##  <a name="updateregistryall"></a>  COleObjectFactory:: UpdateRegistryAll  
  Registra tutte le factory di oggetto dell'applicazione con il Registro di sistema OLE.  
   
 ```  
@@ -336,7 +331,7 @@ static BOOL PASCAL UpdateRegistryAll(BOOL bRegister = TRUE);
 ### <a name="remarks"></a>Note  
  Questa funzione viene chiamata generalmente dal [:: InitInstance](../../mfc/reference/cwinapp-class.md#initinstance) quando viene avviata l'applicazione.  
   
-##  <a name="verifylicensekey"></a>COleObjectFactory::VerifyLicenseKey  
+##  <a name="verifylicensekey"></a>  COleObjectFactory::VerifyLicenseKey  
  Verifica che il contenitore è concesso in licenza per l'utilizzo del controllo OLE.  
   
 ```  
@@ -357,7 +352,7 @@ virtual BOOL VerifyLicenseKey(BSTR bstrKey);
   
  La funzione [VerifyUserLicense](#verifyuserlicense) verifica la licenza in fase di progettazione.  
   
-##  <a name="verifyuserlicense"></a>COleObjectFactory::VerifyUserLicense  
+##  <a name="verifyuserlicense"></a>  COleObjectFactory::VerifyUserLicense  
  Verifica la licenza in fase di progettazione per il controllo OLE.  
   
 ```  

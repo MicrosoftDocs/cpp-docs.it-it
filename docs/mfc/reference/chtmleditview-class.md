@@ -1,12 +1,9 @@
 ---
 title: Classe CHtmlEditView | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CHtmlEditView
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - CHtmlEditView [MFC], GetDHtmlDocument
 - CHtmlEditView [MFC], GetStartDocument
 ms.assetid: 166c8ba8-3fb5-4dd7-a9ea-5bca662d00f6
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 98964a48be8b8c36a3d6d5bd708a51b9963ae105
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 10f474ce860bf5d9071a93f17654123f4777efa7
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="chtmleditview-class"></a>Classe CHtmlEditView
 Fornisce la funzionalità della piattaforma di modifica WebBrowser nel contesto dell'architettura documento/visualizzazione di MFC.  
@@ -82,14 +77,14 @@ class CHtmlEditView : public CHtmlView, public CHtmlEditCtrlBase<CHtmlEditView>
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** afxhtml.h  
   
-##  <a name="chtmleditview"></a>CHtmlEditView::CHtmlEditView  
+##  <a name="chtmleditview"></a>  CHtmlEditView::CHtmlEditView  
  Costruisce un oggetto `CHtmlEditView`.  
   
 ```  
 CHtmlEditView();
 ```  
   
-##  <a name="create"></a>CHtmlEditView::Create  
+##  <a name="create"></a>  CHtmlEditView::Create  
  Crea un nuovo oggetto finestra.  
   
 ```  
@@ -128,7 +123,7 @@ virtual BOOL Create(
 ### <a name="remarks"></a>Note  
  Questo metodo chiama anche il controllo WebBrowser indipendente **Naviga** per caricare un documento predefinito (vedere [CHtmlEditView::GetStartDocument](#getstartdocument)).  
   
-##  <a name="getdhtmldocument"></a>CHtmlEditView::GetDHtmlDocument  
+##  <a name="getdhtmldocument"></a>  CHtmlEditView::GetDHtmlDocument  
  Restituisce il **IHTMLDocument2** interfaccia nel documento corrente.  
   
 ```  
@@ -139,7 +134,7 @@ BOOL GetDHtmlDocument(IHTMLDocument2** ppDocument) const;
  `ppDocument`  
  Il [IHTMLDocument2](https://msdn.microsoft.com/library/aa752574.aspx) interfaccia.  
   
-##  <a name="getstartdocument"></a>CHtmlEditView::GetStartDocument  
+##  <a name="getstartdocument"></a>  CHtmlEditView::GetStartDocument  
  Recupera il nome del documento predefinito per questa vista.  
   
 ```  

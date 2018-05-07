@@ -1,29 +1,24 @@
 ---
 title: Supporto documenti compositi, creazione guidata applicazione MFC | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.appwiz.mfc.exe.compdoc
 dev_langs:
 - C++
 ms.assetid: 42e1af83-12c4-438d-92eb-13835afdb148
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9390f3849cd7511054f1248205c5d2c408cb7e71
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 361ad662ed0bc0f499b35c102502f86d063b8e5d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compound-document-support-mfc-application-wizard"></a>Supporto documenti compositi, Creazione guidata applicazione MFC
 In questa pagina della creazione guidata applicazione MFC, indicare a quale livello di applicazione fornisce il supporto documenti compositi e attivi. L'applicazione deve supportare l'architettura documento/visualizzazione per il supporto documenti compositi e modelli di documento.  
@@ -40,7 +35,7 @@ In questa pagina della creazione guidata applicazione MFC, indicare a quale live
 |Opzione|Descrizione|  
 |------------|-----------------|  
 |**None**|Non indica nessun supporto per Object Linking and Embedding (OLE). Per impostazione predefinita, la creazione guidata applicazione crea un'applicazione senza il supporto di ActiveX.|  
-|**Contenitore**|Contiene gli oggetti collegati e incorporati.|  
+|**contenitore**|Contiene gli oggetti collegati e incorporati.|  
 |**Server ridotto**|Indica l'applicazione è possibile creare e gestire gli oggetti di documenti compositi. Si noti che i server ridotti non è possibile eseguire singolarmente e supportano solo gli elementi incorporati.|  
 |**Server completo**|Indica l'applicazione è possibile creare e gestire gli oggetti di documenti compositi. Server completo sono in grado di eseguire applicazioni autonome e supportano entrambi collegati e incorporati gli elementi.|  
 |**Contenitore/server completo**|Indica che l'applicazione può essere sia un contenitore e un server. Un contenitore è un'applicazione che è possibile incorporare elementi incorporati o collegati dei propri documenti. Un server è un'applicazione che è possibile creare elementi di automazione per l'utilizzo da applicazioni contenitore.|  

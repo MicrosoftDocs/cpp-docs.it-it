@@ -1,29 +1,24 @@
 ---
 title: Distribuire un'applicazione Visual C++ in una cartella locale dell'App | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - deploying Visual C++ applications
 ms.assetid: 47a81c47-9dbe-47c6-96cc-fbb2fda5e6ad
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1d9a92a5fef96932f1d6a58503fe6355b5a410ce
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9a02e585dc2b82c8b8ad675907e4205db6ad7279
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-deploying-a-visual-c-application-to-an-application-local-folder"></a>Procedura dettagliata: distribuzione di un'applicazione Visual C++ in una cartella locale di un'applicazione
 Viene descritto come distribuire un'applicazione Visual C++ copiando i file nella cartella.  

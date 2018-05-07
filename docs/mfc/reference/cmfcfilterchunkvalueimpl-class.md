@@ -1,12 +1,9 @@
 ---
 title: Classe CMFCFilterChunkValueImpl | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCFilterChunkValueImpl
@@ -55,17 +52,15 @@ helpviewer_keywords:
 - CMFCFilterChunkValueImpl [MFC], SetTextValue
 - CMFCFilterChunkValueImpl [MFC], SetChunk
 ms.assetid: 3c833f23-5b88-4d08-9e09-ca6a8aec88bf
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b2f98125e8e84ec0271bb3dff2eab01e0cfef368
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9d274cbafbd50df2f577b484e433c964f1dec096
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcfilterchunkvalueimpl-class"></a>Classe CMFCFilterChunkValueImpl
 Questa è una classe che semplifica la logica di blocchi e proprietà coppia di valori.  
@@ -135,7 +130,7 @@ class CMFCFilterChunkValueImpl : public ATL::IFilterChunkValue;
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** afxwin.h  
   
-##  <a name="clear"></a>CMFCFilterChunkValueImpl::Clear  
+##  <a name="clear"></a>  CMFCFilterChunkValueImpl::Clear  
  Cancella il ChunkValue.  
   
 ```  
@@ -144,7 +139,7 @@ void Clear();
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="cmfcfilterchunkvalueimpl"></a>CMFCFilterChunkValueImpl::CMFCFilterChunkValueImpl  
+##  <a name="cmfcfilterchunkvalueimpl"></a>  CMFCFilterChunkValueImpl::CMFCFilterChunkValueImpl  
  Costruisce l'oggetto.  
   
 ```  
@@ -153,7 +148,7 @@ CMFCFilterChunkValueImpl();
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="_dtorcmfcfilterchunkvalueimpl"></a>CMFCFilterChunkValueImpl:: ~ CMFCFilterChunkValueImpl  
+##  <a name="_dtorcmfcfilterchunkvalueimpl"></a>  CMFCFilterChunkValueImpl:: ~ CMFCFilterChunkValueImpl  
  Distrugge l'oggetto.  
   
 ```  
@@ -162,7 +157,7 @@ virtual ~CMFCFilterChunkValueImpl();
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="copychunk"></a>CMFCFilterChunkValueImpl::CopyChunk  
+##  <a name="copychunk"></a>  CMFCFilterChunkValueImpl::CopyChunk  
  Copia il blocco a una struttura che descrive le caratteristiche di un blocco.  
   
 ```  
@@ -178,7 +173,7 @@ HRESULT CopyChunk(STAT_CHUNK* pStatChunk);
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="copyfrom"></a>CMFCFilterChunkValueImpl::CopyFrom  
+##  <a name="copyfrom"></a>  CMFCFilterChunkValueImpl::CopyFrom  
  Inizializza questo valore di blocco da di altro valore.  
   
 ```  
@@ -191,7 +186,7 @@ void CopyFrom (IFilterChunkValue* pValue);
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="getchunkguid"></a>CMFCFilterChunkValueImpl::GetChunkGUID  
+##  <a name="getchunkguid"></a>  CMFCFilterChunkValueImpl::GetChunkGUID  
  Recupera il GUID del blocco.  
   
 ```  
@@ -203,7 +198,7 @@ REFGUID GetChunkGUID() const;
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="getchunkpid"></a>CMFCFilterChunkValueImpl::GetChunkPID  
+##  <a name="getchunkpid"></a>  CMFCFilterChunkValueImpl::GetChunkPID  
  Recupera il blocco PID (ID di proprietà).  
   
 ```  
@@ -215,7 +210,7 @@ DWORD GetChunkPID() const;
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="getchunktype"></a>CMFCFilterChunkValueImpl::GetChunkType  
+##  <a name="getchunktype"></a>  CMFCFilterChunkValueImpl::GetChunkType  
  Recupera il tipo di blocco.  
   
 ```  
@@ -227,7 +222,7 @@ CHUNKSTATE GetChunkType() const;
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="getstring"></a>CMFCFilterChunkValueImpl::GetString  
+##  <a name="getstring"></a>  CMFCFilterChunkValueImpl::GetString  
  Recupera il valore di stringa.  
   
 ```  
@@ -239,7 +234,7 @@ CString &GetString();
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="getvalue"></a>CMFCFilterChunkValueImpl::GetValue  
+##  <a name="getvalue"></a>  CMFCFilterChunkValueImpl::GetValue  
  Recupera il valore come un propvariant allocato.  
   
 ```  
@@ -255,7 +250,7 @@ HRESULT GetValue(PROPVARIANT** ppPropVariant);
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="getvaluenoalloc"></a>CMFCFilterChunkValueImpl::GetValueNoAlloc  
+##  <a name="getvaluenoalloc"></a>  CMFCFilterChunkValueImpl::GetValueNoAlloc  
  Restituisce il valore non allocato (valore interno).  
   
 ```  
@@ -267,7 +262,7 @@ PROPVARIANT GetValueNoAlloc ();
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="isvalid"></a>CMFCFilterChunkValueImpl::IsValid  
+##  <a name="isvalid"></a>  CMFCFilterChunkValueImpl::IsValid  
  Controlla se il valore della proprietà è valido o meno.  
   
 ```  
@@ -275,11 +270,11 @@ BOOL IsValid() const;
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- `TRUE`Se il valore corrente di blocchi è valido. in caso contrario `FALSE`.  
+ `TRUE` Se il valore di blocco corrente è valido. in caso contrario `FALSE`.  
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="setboolvalue"></a>CMFCFilterChunkValueImpl::SetBoolValue  
+##  <a name="setboolvalue"></a>  CMFCFilterChunkValueImpl::SetBoolValue  
  Di overload. Imposta la proprietà chiave in un valore booleano.  
   
 ```  
@@ -330,7 +325,7 @@ HRESULT SetBoolValue(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="setchunk"></a>CMFCFilterChunkValueImpl::SetChunk  
+##  <a name="setchunk"></a>  CMFCFilterChunkValueImpl::SetChunk  
  Una funzione helper che imposta le proprietà comuni del blocco.  
   
 ```  
@@ -367,7 +362,7 @@ HRESULT SetChunk(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="setdwordvalue"></a>CMFCFilterChunkValueImpl::SetDwordValue  
+##  <a name="setdwordvalue"></a>  CMFCFilterChunkValueImpl::SetDwordValue  
  Impostare la proprietà chiave a un valore DWORD.  
   
 ```  
@@ -408,7 +403,7 @@ HRESULT SetDwordValue(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="setfiletimevalue"></a>CMFCFilterChunkValueImpl::SetFileTimeValue  
+##  <a name="setfiletimevalue"></a>  CMFCFilterChunkValueImpl::SetFileTimeValue  
  Impostare la proprietà chiave in un filetime.  
   
 ```  
@@ -449,7 +444,7 @@ HRESULT SetFileTimeValue(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="setint64value"></a>CMFCFilterChunkValueImpl::SetInt64Value  
+##  <a name="setint64value"></a>  CMFCFilterChunkValueImpl::SetInt64Value  
  Impostare la proprietà chiave in un int64.  
   
 ```  
@@ -490,7 +485,7 @@ HRESULT SetInt64Value(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="setintvalue"></a>CMFCFilterChunkValueImpl::SetIntValue  
+##  <a name="setintvalue"></a>  CMFCFilterChunkValueImpl::SetIntValue  
  Impostare la proprietà chiave a un int.  
   
 ```  
@@ -531,7 +526,7 @@ HRESULT SetIntValue(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="setlongvalue"></a>CMFCFilterChunkValueImpl::SetLongValue  
+##  <a name="setlongvalue"></a>  CMFCFilterChunkValueImpl::SetLongValue  
  Impostare la proprietà chiave su un valore LONG.  
   
 ```  
@@ -572,7 +567,7 @@ HRESULT SetLongValue(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="setsystemtimevalue"></a>CMFCFilterChunkValueImpl::SetSystemTimeValue  
+##  <a name="setsystemtimevalue"></a>  CMFCFilterChunkValueImpl::SetSystemTimeValue  
  Imposta la proprietà chiave per un oggetto SystemTime.  
   
 ```  
@@ -613,7 +608,7 @@ HRESULT SetSystemTimeValue(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="settextvalue"></a>CMFCFilterChunkValueImpl::SetTextValue  
+##  <a name="settextvalue"></a>  CMFCFilterChunkValueImpl::SetTextValue  
  Imposta la proprietà chiave in una stringa Unicode.  
   
 ```  

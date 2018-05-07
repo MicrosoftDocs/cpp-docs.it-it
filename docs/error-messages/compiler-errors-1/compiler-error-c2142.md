@@ -1,12 +1,9 @@
 ---
 title: Errore del compilatore C2142 | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C2142
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C2142
 ms.assetid: d0dbe10e-0952-49a4-8b33-e82fb7558b19
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 91823d90eeefab73c271aab4eb716433e7dada05
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 11fd3cd62b236daa93424f53a0896888a89fe33d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-error-c2142"></a>Errore del compilatore C2142
 le dichiarazioni di funzione sono diversi, parametri variabili specificati solo in uno di essi  

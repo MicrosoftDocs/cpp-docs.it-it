@@ -1,12 +1,9 @@
 ---
 title: COleDBRecordView (classe) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - COleDBRecordView
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - COleDBRecordView [MFC], OnGetRowset
 - COleDBRecordView [MFC], OnMove
 ms.assetid: 98612427-c4c9-4760-b7e1-85b17448add9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dd827d729af5186d6872536cdaa3d8863d1f8d10
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0b69aafa7f8b07d96d754d080e7fb5abd170e167
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="coledbrecordview-class"></a>COleDBRecordView (classe)
 Visualizzazione che mostra i record del database nei controlli.  
@@ -58,14 +53,14 @@ class COleDBRecordView : public CFormView
 |[COleDBRecordView::OnMove](#onmove)|Aggiorna il record corrente (se dirty) nell'origine dati e quindi passa al record specificato (successivo, precedente, primo o ultimo).|  
   
 ## <a name="remarks"></a>Note  
- La vista è un modulo connessi direttamente a un `CRowset` oggetto. La vista viene creata da una risorsa modello di finestra di dialogo e visualizza i campi del `CRowset` oggetto nei controlli del modello di finestra di dialogo. Il `COleDBRecordView` oggetto utilizza DDX (DDX) e le funzionalità di spostamento incorporata `CRowset`per automatizzare lo spostamento dei dati tra i controlli nel form e i campi del set di righe. `COleDBRecordView`inoltre fornisce un'implementazione predefinita per lo spostamento al primo, ultimo, precedente o successiva di record e un'interfaccia per l'aggiornamento del record attualmente sulla vista.  
+ La vista è un modulo connessi direttamente a un `CRowset` oggetto. La vista viene creata da una risorsa modello di finestra di dialogo e visualizza i campi del `CRowset` oggetto nei controlli del modello di finestra di dialogo. Il `COleDBRecordView` oggetto utilizza DDX (DDX) e le funzionalità di spostamento incorporata `CRowset`per automatizzare lo spostamento dei dati tra i controlli nel form e i campi del set di righe. `COleDBRecordView` inoltre fornisce un'implementazione predefinita per lo spostamento al primo, successivo, precedente o l'ultimo record e un'interfaccia per l'aggiornamento del record attualmente sulla vista.  
   
- È possibile utilizzare le funzioni DDX con **COleDbRecordView** per ottenere i dati direttamente dal recordset del database e visualizzarlo in un controllo di finestra di dialogo. È consigliabile utilizzare il **DDX _\***  metodi (ad esempio `DDX_Text`), non il **DDX_Field\***  funzioni (ad esempio `DDX_FieldText`) con **COleDbRecordView** . `DDX_FieldText`non funzionerà con **COleDbRecordView** perché `DDX_FieldText` accetta un argomento supplementare di tipo **CRecordset\***  (per `CRecordView`) o **CDaoRecordset \***  (per `CDaoRecordView`).  
+ È possibile utilizzare le funzioni DDX con **COleDbRecordView** per ottenere i dati direttamente dal recordset del database e visualizzarlo in un controllo di finestra di dialogo. È consigliabile utilizzare il **DDX _\***  metodi (ad esempio `DDX_Text`), non il **DDX_Field\***  funzioni (ad esempio `DDX_FieldText`) con **COleDbRecordView** . `DDX_FieldText` non funzionerà con **COleDbRecordView** poiché `DDX_FieldText` accetta un argomento supplementare di tipo **CRecordset\***  (per `CRecordView`) o **CDaoRecordset\***  (per `CDaoRecordView`).  
   
 > [!NOTE]
 >  Se si lavora con le classi di oggetti DAO (Data Access), anziché le classi di modelli Consumer OLE DB, utilizzare una classe [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) invece. Per ulteriori informazioni, vedere l'articolo [Panoramica: programmazione di Database](../../data/data-access-programming-mfc-atl.md).  
   
- `COleDBRecordView`tiene traccia della posizione dell'utente nel set di righe in modo che la visualizzazione di record può aggiornare l'interfaccia utente. Quando l'utente passa a delle estremità del set di righe, la visualizzazione dei record Disabilita oggetti dell'interfaccia utente, ad esempio voci di menu o pulsanti della barra degli strumenti, per lo spostamento nella stessa direzione.  
+ `COleDBRecordView` tiene traccia della posizione dell'utente nel set di righe in modo che la visualizzazione di record può aggiornare l'interfaccia utente. Quando l'utente passa a delle estremità del set di righe, la visualizzazione dei record Disabilita oggetti dell'interfaccia utente, ad esempio voci di menu o pulsanti della barra degli strumenti, per lo spostamento nella stessa direzione.  
   
  Per ulteriori informazioni sulle classi di set di righe, vedere il [utilizzando Consumer i modelli OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md) articolo.  
   
@@ -87,7 +82,7 @@ class COleDBRecordView : public CFormView
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** afxoledb.h  
   
-##  <a name="coledbrecordview"></a>COleDBRecordView::COleDBRecordView  
+##  <a name="coledbrecordview"></a>  COleDBRecordView::COleDBRecordView  
  Costruisce un oggetto `COleDBRecordView`.  
   
 ```  
@@ -108,7 +103,7 @@ COleDBRecordView(UINT nIDTemplate);
 > [!NOTE]
 >  La classe derivata *deve* fornisce il proprio costruttore. Nel costruttore, richiamare il costruttore, `COleDBRecordView::COleDBRecordView`, con il nome di risorsa o l'ID come argomento.  
   
-##  <a name="ongetrowset"></a>COleDBRecordView::OnGetRowset  
+##  <a name="ongetrowset"></a>  COleDBRecordView::OnGetRowset  
  Restituisce un handle per il **<> CRowset** oggetto associato alla visualizzazione di record.  
   
 ```  
@@ -130,7 +125,7 @@ virtual CRowset<>* OnGetRowset() = 0;
   
  Per ulteriori informazioni ed esempi, vedere l'articolo [visualizzazioni di Record: utilizzo di una visualizzazione di Record](../../data/using-a-record-view-mfc-data-access.md).  
   
-##  <a name="onmove"></a>COleDBRecordView::OnMove  
+##  <a name="onmove"></a>  COleDBRecordView::OnMove  
  Passa a un altro record nel set di righe e visualizzazione consente di visualizzare i relativi campi nei controlli del record.  
   
 ```  
@@ -141,13 +136,13 @@ virtual BOOL OnMove(UINT nIDMoveCommand);
  `nIDMoveCommand`  
  Uno dei valori di ID di comando standard seguenti:  
   
-- `ID_RECORD_FIRST`-Sposta al primo record del recordset.  
+- `ID_RECORD_FIRST` : Spostare il primo record del recordset.  
   
-- `ID_RECORD_LAST`: Spostarsi all'ultimo record del recordset.  
+- `ID_RECORD_LAST` -Sposta l'e l'ultimo record del recordset.  
   
-- `ID_RECORD_NEXT`-Sposta al record successivo nel recordset.  
+- `ID_RECORD_NEXT` -Sposta al record successivo nel recordset.  
   
-- `ID_RECORD_PREV`Passare al record precedente nel recordset.  
+- `ID_RECORD_PREV` -Sposta al record precedente nel recordset.  
   
 ### <a name="return-value"></a>Valore restituito  
  Diverso da zero se lo spostamento è stato completato. in caso contrario 0 se la richiesta di spostamento è stata negata.  

@@ -1,12 +1,9 @@
 ---
 title: Classe classe COleUpdateDialog | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - COleUpdateDialog
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - COleUpdateDialog [MFC], COleUpdateDialog
 - COleUpdateDialog [MFC], DoModal
 ms.assetid: 699ca980-52b1-4cf8-9ab1-ac6767ad5b0e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 32a7d41c507c2b7b932ba33df911151bfc417091
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 54088de4c07f1c58656aad468160ef58f0e41398
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="coleupdatedialog-class"></a>Classe classe COleUpdateDialog
 Utilizzata per un caso speciale della finestra di dialogo di modifica collegamenti OLE, che deve essere utilizzata quando è necessario aggiornare solo oggetti collegati o incorporati esistenti in un documento.  
@@ -77,7 +72,7 @@ class COleUpdateDialog : public COleLinksDialog
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** afxodlgs. h  
   
-##  <a name="coleupdatedialog"></a>COleUpdateDialog::COleUpdateDialog  
+##  <a name="coleupdatedialog"></a>  COleUpdateDialog::COleUpdateDialog  
  Costruisce un oggetto `COleUpdateDialog`.  
   
 ```  
@@ -104,7 +99,7 @@ explicit COleUpdateDialog(
 ### <a name="remarks"></a>Note  
  Questa funzione crea solo un `COleUpdateDialog` oggetto. Per visualizzare la finestra di dialogo, chiamare [DoModal](../../mfc/reference/colelinksdialog-class.md#domodal). Questa classe deve essere utilizzata al posto di `COleLinksDialog` quando si desidera aggiornare esistente solo elementi collegati o incorporati.  
   
-##  <a name="domodal"></a>COleUpdateDialog::DoModal  
+##  <a name="domodal"></a>  COleUpdateDialog::DoModal  
  Consente di visualizzare la finestra di dialogo Modifica collegamenti in modalità di aggiornamento.  
   
 ```  
