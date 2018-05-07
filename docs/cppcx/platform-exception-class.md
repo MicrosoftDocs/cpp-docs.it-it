@@ -1,11 +1,8 @@
 ---
 title: 'Classe platform:: Exception | Documenti Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - VCCORLIB/Platform::Exception::Exception
@@ -17,17 +14,15 @@ dev_langs:
 helpviewer_keywords:
 - Platform::Exception Class
 ms.assetid: ca1d5a67-3a5a-48fe-8099-f9c38a2d2dce
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 51df721524fa871b28cc7e4bcb088d4a82a0d1ad
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: e5adab38c3dc09c533c4df90f313346b22f888c0
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="platformexception-class"></a>Platform::Exception (classe)
 Rappresenta gli errori che si verificano durante l'esecuzione dell'applicazione. Le classi di eccezione personalizzate non possono essere derivate da `Platform::Exception`. Se devi utilizzare un'eccezione personalizzata, puoi utilizzare `Platform::COMException` e specificare un valore HRESULT specifico dell'applicazione.  
@@ -54,7 +49,7 @@ public ref class Exception : Object,    IException,    IPrintable,    IEquatable
   
 |Member|Descrizione|  
 |------------|-----------------|  
-|[Exception::CreateException](#createexception)|Crea un'eccezione che rappresenta il valore HRESULT specificato.|  
+|[Exception:: CreateException](#createexception)|Crea un'eccezione che rappresenta il valore HRESULT specificato.|  
   
 ### <a name="properties"></a>Proprietà  
  La classe Exception presenta inoltre le proprietà seguenti.  

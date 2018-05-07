@@ -1,30 +1,25 @@
 ---
 title: 'Campi di record: Utilizzo di RFX | Documenti Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - RFX (ODBC), implementing
 ms.assetid: ada8f043-37e6-4d41-9db3-92c997a61957
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 28f1cd743a7ede904c99590e56f08b7020f77d82
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 296ae2e4f535e08924a77b8726b93778a6da5026
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="record-field-exchange-using-rfx"></a>Trasferimento di campi di record: utilizzo di RFX
 In questo argomento viene illustrato l'utilizzo di RFX in relazione alle operazioni di framework.  
@@ -34,9 +29,9 @@ In questo argomento viene illustrato l'utilizzo di RFX in relazione alle operazi
   
  Gli argomenti seguenti contengono informazioni correlate:  
   
--   [Campi di record: Utilizzo del codice della procedura guidata](../../data/odbc/record-field-exchange-working-with-the-wizard-code.md) introduce i componenti principali di RFX e viene illustrato il codice che la creazione guidata applicazione MFC e **Aggiungi classe** (come descritto in [aggiunta di un Consumer ODBC MFC ](../../mfc/reference/adding-an-mfc-odbc-consumer.md)) per supportare RFX e modalità modificare il codice della procedura guidata.  
+-   [Trasferimento di campi di record: Utilizzo di codice della procedura guidata](../../data/odbc/record-field-exchange-working-with-the-wizard-code.md) introduce i componenti principali di RFX e viene illustrato il codice che la creazione guidata applicazione MFC e **Aggiungi classe** (come descritto in [aggiunta di un Consumer ODBC MFC ](../../mfc/reference/adding-an-mfc-odbc-consumer.md)) per supportare RFX e modo in cui si potrebbe voler modificare il codice della procedura guidata.  
   
--   [Campi di record: Utilizzo delle funzioni RFX](../../data/odbc/record-field-exchange-using-the-rfx-functions.md) illustra la scrittura delle chiamate alle funzioni RFX nel `DoFieldExchange` eseguire l'override.  
+-   [Trasferimento di campi di record: Utilizzo delle funzioni RFX](../../data/odbc/record-field-exchange-using-the-rfx-functions.md) illustra la scrittura delle chiamate alle funzioni RFX nel `DoFieldExchange` eseguire l'override.  
   
  Nella tabella seguente viene illustrato il ruolo in relazione a ciò che il framework esegue automaticamente.  
   
@@ -56,7 +51,7 @@ In questo argomento viene illustrato l'utilizzo di RFX in relazione alle operazi
   
 ## <a name="see-also"></a>Vedere anche  
  [Campi di record (RFX)](../../data/odbc/record-field-exchange-rfx.md)   
- [Scambio di campi di record: Funzionamento di RFX](../../data/odbc/record-field-exchange-how-rfx-works.md)   
+ [Trasferimento di campi di record: Funzionamento di RFX](../../data/odbc/record-field-exchange-how-rfx-works.md)   
  [Recordset: Recupero di somme e altri risultati aggregati (ODBC)](../../data/odbc/recordset-obtaining-sums-and-other-aggregate-results-odbc.md)   
  [Classe CRecordset](../../mfc/reference/crecordset-class.md)   
  [Classe CFieldExchange](../../mfc/reference/cfieldexchange-class.md)   

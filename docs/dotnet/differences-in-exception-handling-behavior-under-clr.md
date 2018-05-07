@@ -2,35 +2,30 @@
 title: Le differenze nel comportamento in CLR - gestione delle eccezioni | Documenti Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - EXCEPTION_CONTINUE_EXECUTION macro
 - set_se_translator function
 ms.assetid: 2e7e8daf-d019-44b0-a51c-62d7aaa89104
-caps.latest.revision: 20
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 56bacf88b2c633704b46c6d0de3bb313767b7b2c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f54678de9f98f68f797cd247232a8e3786ff0112
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="differences-in-exception-handling-behavior-under-clr"></a>Differenze nel comportamento di gestione delle eccezioni in /CLR
-[Concetti di base di eccezioni gestite](../dotnet/basic-concepts-in-using-managed-exceptions.md) descrive le eccezioni nelle applicazioni gestite. In questo argomento sono descritte in dettaglio le differenze dal comportamento standard della gestione delle eccezioni e alcune restrizioni. Per ulteriori informazioni, vedere [la funzione set_se_translator](../c-runtime-library/reference/set-se-translator.md).  
+[Concetti di base di utilizzo delle eccezioni gestite](../dotnet/basic-concepts-in-using-managed-exceptions.md) illustra gestione delle eccezioni nelle applicazioni gestite. In questo argomento sono descritte in dettaglio le differenze dal comportamento standard della gestione delle eccezioni e alcune restrizioni. Per ulteriori informazioni, vedere [la funzione set_se_translator](../c-runtime-library/reference/set-se-translator.md).  
   
-##  <a name="vcconjumpingoutofafinallyblock"></a>Uscita da un blocco Finally  
+##  <a name="vcconjumpingoutofafinallyblock"></a> Uscita da un blocco Finally  
  Nel codice C/C++ nativo, non è un _**infine** blocco utilizzando la gestione delle eccezioni strutturata (SEH) è consentito anche se genera un avviso.  In [/clr](../build/reference/clr-common-language-runtime-compilation.md)l'uscita da un **infine** blocco causa un errore:  
   
 ```  
@@ -44,7 +39,7 @@ int main() {
 }   // C3276  
 ```  
   
-##  <a name="vcconraisingexceptionswithinanexceptionfilter"></a>Generazione di eccezioni all'interno di un filtro eccezioni  
+##  <a name="vcconraisingexceptionswithinanexceptionfilter"></a> Generazione di eccezioni all'interno di un filtro eccezioni  
  Quando viene generata un'eccezione durante l'elaborazione di un [filtro eccezioni](../cpp/writing-an-exception-filter.md) all'interno di codice gestito, l'eccezione viene intercettata e considerato come se il filtro restituisce 0.  
   
  Ciò si differenzia dal comportamento nel codice nativo, in cui viene generata un'eccezione nidificata, il **ExceptionRecord** campo il **EXCEPTION_RECORD** struttura (come restituito da [ GetExceptionInformation](http://msdn.microsoft.com/library/windows/desktop/ms679357)) è impostata e **ExceptionFlags** campo imposta il bit 0x10. Nell'esempio riportato di seguito viene illustrata questa differenza di comportamento.  
@@ -107,8 +102,8 @@ Caught a nested exception
 We should execute this handler if compiled to native  
 ```  
   
-##  <a name="vccondisassociatedrethrows"></a>Rigenerazione con associazione rimossa  
- **/CLR** non supporta la rigenerazione di un'eccezione all'esterno di un gestore catch (nota come rigenerazione con associazione rimossa). Le eccezioni di questo tipo vengono trattate come una rigenerazione C++ standard. Se viene riscontrata una rigenerazione con associazione rimossa in presenza di un'eccezione gestita attiva, l'eccezione viene sottoposta a wrapping come un'eccezione C++, quindi viene rigenerata. Eccezioni di questo tipo possono essere rilevate solo come un'eccezione di tipo [System:: SEHException](https://msdn.microsoft.com/en-us/library/system.runtime.interopservices.sehexception.aspx).  
+##  <a name="vccondisassociatedrethrows"></a> Rigenerazione con associazione  
+ **/CLR** non supporta la rigenerazione di un'eccezione all'esterno di un gestore catch (nota come rigenerazione). Le eccezioni di questo tipo vengono trattate come una rigenerazione C++ standard. Se viene riscontrata una rigenerazione con associazione rimossa in presenza di un'eccezione gestita attiva, l'eccezione viene sottoposta a wrapping come un'eccezione C++, quindi viene rigenerata. Eccezioni di questo tipo possono essere rilevate solo come un'eccezione di tipo [System:: SEHException](https://msdn.microsoft.com/en-us/library/system.runtime.interopservices.sehexception.aspx).  
   
  Nell'esempio seguente viene illustrata un'eccezione gestita rigenerata come un'eccezione C++:  
   
@@ -158,7 +153,7 @@ int main() {
 caught an SEH Exception  
 ```  
   
-##  <a name="vcconexceptionfiltersandexception_continue_execution"></a>Filtri eccezioni ed EXCEPTION_CONTINUE_EXECUTION  
+##  <a name="vcconexceptionfiltersandexception_continue_execution"></a> Filtri eccezioni ed EXCEPTION_CONTINUE_EXECUTION  
  Se un filtro restituisce `EXCEPTION_CONTINUE_EXECUTION` in un'applicazione gestita, viene trattato come se il filtro restituisse `EXCEPTION_CONTINUE_SEARCH`. Per ulteriori informazioni su queste costanti, vedere [provare-except Statement](../cpp/try-except-statement.md).  
   
  Nell'esempio seguente viene illustrata questa differenza:  
@@ -198,7 +193,7 @@ int main() {
 Counter=-3  
 ```  
   
-##  <a name="vcconthe_set_se_translatorfunction"></a>La funzione set_se_translator  
+##  <a name="vcconthe_set_se_translatorfunction"></a> La funzione set_se_translator  
  La funzione di conversione, impostata da una chiamata a `_set_se_translator`, ha effetto solo sui catch nel codice non gestito. Nell'esempio che segue viene dimostrata questa limitazione:  
   
 ```  

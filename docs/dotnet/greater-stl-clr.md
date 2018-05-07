@@ -1,12 +1,9 @@
 ---
 title: maggiore (STL/CLR) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::greater
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - greater function [STL/CLR]
 ms.assetid: a6dfe5e3-b5a5-4ec4-8e53-8dd33a37d10d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: d4940e94619807b85050c7037976e0d47b7a66f8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 00a586998e383cbb72e4e4ef9912ff779fd2bfed
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="greater-stlclr"></a>greater (STL/CLR)
 La classe modello descrive una funzione che, quando viene chiamato, restituisce true solo se il primo argomento è maggiore del secondo. Utilizzare, specificare un oggetto funzione in relazione al relativo tipo di argomento.  
@@ -128,7 +123,7 @@ int main()
 ```  
   
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** \<cliext funzionali >  
+ **Intestazione:** \<cliext/funzionale >  
   
  **Namespace:** cliext  
   

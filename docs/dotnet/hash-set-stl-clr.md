@@ -1,12 +1,9 @@
 ---
 title: hash_set (STL/CLR) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::hash_set
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - hash_set class [STL/CLR]
 - <hash_set> header [STL/CLR]
 ms.assetid: d110e356-ba3e-4e52-9e2d-d997bf975c96
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: c46b212f200b2ef7d46afae567efdf3f5bcef0f7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 63b43a116848ff67deb9c62c04849aa5afc6dbc1
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="hashset-stlclr"></a>hash_set (STL/CLR)
 La classe modello descrive un oggetto che controlla una sequenza di lunghezza variabile di elementi che dispone di accesso bidirezionale. Utilizzare il contenitore `hash_set` per gestire una sequenza di elementi come una tabella hash, l'archiviazione di un bidirezionale ogni voce della tabella collegata elenco di nodi e ogni nodo di archiviazione di un elemento. Il valore di ogni elemento viene utilizzato come chiave per la sequenza di ordinamento.  
@@ -127,7 +122,7 @@ template<typename Key>
   
  Accedere all'oggetto delegato archiviato chiamando la funzione membro [hash_set:: key_comp (STL/CLR)](../dotnet/hash-set-key-comp-stl-clr.md)`()`. Tale oggetto delegato deve definire un ordinamento equivalente tra le chiavi di tipo [hash_set:: KEY_TYPE (STL/CLR)](../dotnet/hash-set-key-type-stl-clr.md). Pertanto, per le due chiavi `X` e `Y`:  
   
- `key_comp()(X, Y)`Restituisce il valore booleano stesso risultato a ogni chiamata.  
+ `key_comp()(X, Y)` Restituisce il valore booleano stesso risultato a ogni chiamata.  
   
  Se `key_comp()(X, Y) && key_comp()(Y, X)` è true, `X` e `Y` rientrano hanno un ordinamento equivalente.  
   
@@ -137,7 +132,7 @@ template<typename Key>
   
  L'oggetto determina quale bucket deve contenere una determinata chiave di ordinamento chiamando un oggetto delegato archiviato di tipo [hash_set::hasher (STL/CLR)](../dotnet/hash-set-hasher-stl-clr.md). L'accesso all'oggetto archiviato chiamando la funzione membro [hash_set::hash_delegate (STL/CLR)](../dotnet/hash-set-hash-delegate-stl-clr.md) `()` per ottenere un valore intero che dipende dal valore della chiave. È possibile specificare l'oggetto delegato archiviato quando si costruisce hash_set; Se non si specifica alcun oggetto delegato, il valore predefinito è la funzione `System::Object::hash_value(key_type)`. Pertanto, per le chiavi `X` e `Y`:  
   
- `hash_delegate()(X)`Restituisce lo stesso risultato di tipo integer a ogni chiamata.  
+ `hash_delegate()(X)` Restituisce lo stesso risultato di tipo integer a ogni chiamata.  
   
  Se `X` e `Y` hanno un ordinamento equivalente, quindi `hash_delegate()(X)` deve restituire lo stesso risultato intero `hash_delegate()(Y)`.  
   
