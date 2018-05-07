@@ -1,13 +1,10 @@
 ---
-title: "Pagina delle proprietà risorse gestite | Documenti Microsoft"
-ms.custom: 
+title: Pagina delle proprietà risorse gestite | Documenti Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VC.Project.VCManagedResourceCompilerTool.ResourceFileName
 - VC.Project.VCManagedResourceCompilerTool.OutputFileName
@@ -17,17 +14,15 @@ dev_langs:
 helpviewer_keywords:
 - Managed Resources property page
 ms.assetid: 80b80384-ee55-494d-9f0e-907bb98cfc19
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b8683c9212a25a5b278405c2d2c31d7fc607d0f5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2922a0a92a121d6838478daaf2c32f1c7a630d21
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="managed-resources-property-page"></a>pagina delle proprietà Risorse gestite
 Abilita le impostazioni per il compilatore di risorse.  
@@ -46,6 +41,6 @@ Abilita le impostazioni per il compilatore di risorse.
  Per informazioni su come accedere il **risorse gestite** pagina delle proprietà, vedere [funziona con le proprietà del progetto](../ide/working-with-project-properties.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Utilizzo di RC (riga di comando RC)](http://msdn.microsoft.com/library/windows/desktop/aa381055)   
+ [Utilizzando RC (riga di comando RC)](http://msdn.microsoft.com/library/windows/desktop/aa381055)   
  [Pagine delle proprietà](../ide/property-pages-visual-cpp.md)   
  [/ASSEMBLYRESOURCE (incorpora una risorsa gestita)](../build/reference/assemblyresource-embed-a-managed-resource.md)

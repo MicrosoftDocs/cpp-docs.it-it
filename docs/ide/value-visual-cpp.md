@@ -1,13 +1,10 @@
 ---
 title: '&lt;valore&gt; (Visual C++) | Documenti Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - value
 - <value>
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - value C++ XML tag
 - <value> C++ XML tag
 ms.assetid: 0ba0a0d5-bcd7-4862-a169-83f2721ad80e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3d1621a8251bddb1d4c7d1bf3f00c4ccf3ea5242
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8e78c8ace8b482baa29fbabaf102a8a1bccadd06
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ltvaluegt-visual-c"></a>&lt;valore&gt; (Visual C++)
 Il \<valore > tag consente di descrivere una proprietà e metodi della proprietà. Si noti che quando si aggiunge una proprietà con una procedura guidata codice nell'ambiente di sviluppo integrato di Visual Studio, verrà aggiunto un [ \<riepilogo >](../ide/summary-visual-cpp.md) tag per la nuova proprietà. È quindi necessario aggiungere manualmente un tag \<value> per descrivere il valore rappresentato dalla proprietà.  

@@ -1,24 +1,19 @@
 ---
 title: Le classi e struct (C + + CX) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/22/2017
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 3d736b82-0bf0-48cf-bac1-cc9d110b70d1
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5d8b7717c98ebd4bab8c0d3d8c20a594a3f4d58e
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: be0a8adbb2bf20e4f92edf16fa2217a7d2b40eab
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ref-classes-and-structs-ccx"></a>Classi e struct di riferimento (C++/CX)
 C + + supporta CX definito dall'utente *le classi di riferimento* e *struct di riferimento*, definiti dall'utente *valore classi* e *struct di valore*. Queste strutture di dati sono contenitori primari tramite i quali C + + CX supporta il sistema di tipi Windows Runtime. I relativi contenuti vengono emessi nei metadati in base ad alcune regole specifiche e ciò ne consente il passaggio tra i componenti Windows Runtime e App UWP scritte in C++ o in altri linguaggi.  

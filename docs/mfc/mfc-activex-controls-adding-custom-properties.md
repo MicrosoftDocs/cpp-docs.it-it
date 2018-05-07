@@ -1,37 +1,32 @@
 ---
-title: "Controlli ActiveX MFC: Aggiunta di proprietà personalizzate | Documenti Microsoft"
-ms.custom: 
+title: 'Controlli ActiveX MFC: Aggiunta di proprietà personalizzate | Documenti Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - MFC ActiveX controls [MFC], properties
 - properties [MFC], custom
 ms.assetid: 85af5167-74c7-427b-b8f3-e0d7b73942e5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f64154142c4c5f0fb3f24dc63120799132983880
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fc3aa3f7aa8b6f4abf28c12a11f75540f59238e4
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mfc-activex-controls-adding-custom-properties"></a>Controlli ActiveX MFC: aggiunta di proprietà personalizzate
 Proprietà personalizzate sono diverse dalle proprietà predefinite in proprietà personalizzate non sono già implementate dalla `COleControl` classe. Una proprietà personalizzata viene utilizzata per esporre un determinato stato o aspetto di un controllo ActiveX a un programmatore che utilizza il controllo.  
   
  In questo articolo viene descritto come aggiungere una proprietà personalizzata per il controllo ActiveX utilizzando l'aggiunta guidata proprietà e vengono illustrate le modifiche al codice risultante. Gli argomenti trattati includono:  
   
--   [Tramite l'aggiunta guidata proprietà per aggiungere una proprietà personalizzata](#_core_using_classwizard_to_add_a_custom_property)  
+-   [Tramite l'aggiunta guidata proprietà aggiungere una proprietà personalizzata](#_core_using_classwizard_to_add_a_custom_property)  
   
 -   [Aggiunta guidata proprietà modifiche per le proprietà personalizzate](#_core_classwizard_changes_for_custom_properties)  
   
@@ -53,7 +48,7 @@ Proprietà personalizzate sono diverse dalle proprietà predefinite in propriet�
   
      Implementazione con parametri è supportata per l'aggiunta guidata proprietà. Una proprietà con parametri (talvolta denominata matrice di proprietà) consente di accedere a un set di valori tramite una singola proprietà del controllo. La macro di voce della mappa di invio per questa implementazione è `DISP_PROPERTY_PARAM`. Per ulteriori informazioni sull'implementazione di questo tipo, vedere [implementazione di una proprietà con parametri](../mfc/mfc-activex-controls-advanced-topics.md) nell'articolo controlli ActiveX: argomenti avanzati.  
   
-##  <a name="_core_using_classwizard_to_add_a_custom_property"></a>Tramite l'aggiunta guidata proprietà per aggiungere una proprietà personalizzata  
+##  <a name="_core_using_classwizard_to_add_a_custom_property"></a> Tramite l'aggiunta guidata proprietà per aggiungere una proprietà personalizzata  
  La procedura seguente viene illustrato come aggiungere una proprietà personalizzata, CircleOffset, che utilizza l'implementazione di metodi Get/Set. La proprietà personalizzata CircleOffset consente all'offset il cerchio dal centro del rettangolo di delimitazione del controllo utente del controllo. La procedura per aggiungere proprietà personalizzate con un'implementazione diversa da metodi Get/Set è molto simile.  
   
  Questa stessa procedura consente inoltre di aggiungere altre proprietà personalizzate che si desidera. Sostituire il nome della proprietà personalizzata per i parametri e il nome della proprietà CircleOffset.  
@@ -80,7 +75,7 @@ Proprietà personalizzate sono diverse dalle proprietà predefinite in propriet�
   
 9. Scegliere **Fine**.  
   
-##  <a name="_core_classwizard_changes_for_custom_properties"></a>Aggiungere una modifica di proprietà per le proprietà personalizzate  
+##  <a name="_core_classwizard_changes_for_custom_properties"></a> Aggiunta guidata proprietà viene modificato per le proprietà personalizzate  
  Quando si aggiunge la proprietà personalizzata CircleOffset, l'aggiunta guidata proprietà apporta modifiche all'intestazione (. H) e l'implementazione (. File CPP) della classe del controllo.  
   
  Le righe seguenti vengono aggiunti per il. File H per dichiarare due funzioni denominate `GetCircleOffset` e `SetCircleOffset`:  

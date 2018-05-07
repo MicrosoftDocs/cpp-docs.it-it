@@ -1,37 +1,32 @@
 ---
 title: 'Controlli ActiveX MFC: Aggiunta di metodi personalizzati | Documenti Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - MFC ActiveX controls [MFC], methods
 - PtInCircle custom method [MFC]
 ms.assetid: 8f8dc344-44a0-4021-8db5-4cdd3d700e18
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2f79d4c5f7407e3de12ccf180a68b2b22e35bf10
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1cdf264bd0c2aa44bdeecc58b4bc8eb89c70fb91
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mfc-activex-controls-adding-custom-methods"></a>Controlli ActiveX MFC: aggiunta di metodi personalizzati
 Metodi personalizzati differiscono dai metodi predefiniti in non sono già implementati da `COleControl`. È necessario fornire l'implementazione per ogni metodo personalizzato che aggiunge al controllo.  
   
  Un utente di un controllo ActiveX è possibile chiamare un metodo personalizzato in qualsiasi momento per eseguire azioni specifiche del controllo. Voce della mappa di invio per i metodi personalizzati è nel formato `DISP_FUNCTION`.  
   
-##  <a name="_core_adding_a_custom_method_with_classwizard"></a>Aggiunta di un metodo personalizzato con l'aggiunta guidata metodo  
+##  <a name="_core_adding_a_custom_method_with_classwizard"></a> Aggiunta di un metodo personalizzato con l'aggiunta guidata metodo  
  La procedura seguente viene illustrato come aggiungere il metodo personalizzato PtInCircle al codice di base di un controllo ActiveX. PtInCircle determina se le coordinate passate al controllo sono all'interno o all'esterno del cerchio. Questa stessa procedura consente inoltre di aggiungere altri metodi personalizzati. Sostituire con il nome di metodo personalizzato e i relativi parametri per i parametri e il nome del metodo PtInCircle.  
   
 > [!NOTE]
@@ -61,7 +56,7 @@ Metodi personalizzati differiscono dai metodi predefiniti in non sono già imple
   
 10. Scegliere **Fine**.  
   
-##  <a name="_core_classwizard_changes_for_custom_methods"></a>Aggiunta guidata del metodo viene modificato per i metodi personalizzati  
+##  <a name="_core_classwizard_changes_for_custom_methods"></a> Aggiunta guidata del metodo viene modificato per i metodi personalizzati  
  Quando si aggiunge un metodo personalizzato, l'aggiunta guidata metodo apporta alcune modifiche per l'intestazione della classe controllo (. H) e implementazione (. File CPP). La riga seguente viene aggiunta alla dichiarazione della mappa di invio nell'intestazione della classe controllo (. H) file:  
   
  [!code-cpp[NVC_MFC_AxUI#18](../mfc/codesnippet/cpp/mfc-activex-controls-adding-custom-methods_1.h)]  

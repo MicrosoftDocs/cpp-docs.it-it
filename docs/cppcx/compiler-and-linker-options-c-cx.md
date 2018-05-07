@@ -1,24 +1,19 @@
 ---
 title: Opzioni del compilatore e del Linker (C + + CX) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/22/2017
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: ecfadce8-3a3f-40cc-bb01-b4731f8d2fcb
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0d8da922fd9f04bf7418094293f43b3fc501aff6
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: e43418555722090c325c85bd4e77204640791b32
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-and-linker-options-ccx"></a>Opzioni del compilatore e del linker (C++/CX)
 Una variabile di ambiente, C + +, opzioni del compilatore CX e opzioni del linker supportano la compilazione di App per Windows Runtime.  

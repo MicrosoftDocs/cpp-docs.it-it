@@ -2,12 +2,9 @@
 title: Classi di Database ATL (modelli OLE DB) | Documenti Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,18 +12,16 @@ helpviewer_keywords:
 - database classes [C++], OLE DB
 - database classes [C++], ATL
 ms.assetid: 219766aa-e18a-405f-9e36-d7a0fdb31b2b
-caps.latest.revision: 14
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: ca7607c037cdb1f6a42a2267d64ef274d1041cb2
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: fabced79232d17807d252da9dac5b066ddf69f25
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="atl-database-classes-ole-db-templates"></a>Classi di database ATL (modelli OLE DB)
 Microsoft offre varie implementazioni di OLE DB, un set di interfacce COM che forniscono un accesso uniforme ai dati in formati e origini diversi.  OLE DB sia ufficialmente deprecato; Questa documentazione è destinata agli sviluppatori che sono la gestione del codice legacy. Nuove applicazioni devono utilizzare ODBC per connettersi alle origini dati SQL.
@@ -35,9 +30,9 @@ Microsoft offre varie implementazioni di OLE DB, un set di interfacce COM che fo
   
  Questa libreria di modelli include due parti:  
   
--   [Modelli consumer OLE DB](../data/oledb/ole-db-consumer-templates-cpp.md) utilizzato per implementare un'applicazione OLE DB (consumer).  
+-   [Modelli consumer OLE DB](../data/oledb/ole-db-consumer-templates-cpp.md) permette di implementare un'applicazione OLE DB (consumer).  
   
--   [Modelli provider OLE DB](../data/oledb/ole-db-provider-templates-cpp.md) utilizzato per implementare un'applicazione server (provider) OLE DB.  
+-   [Modelli provider OLE DB](../data/oledb/ole-db-provider-templates-cpp.md) permette di implementare un'applicazione server (provider) OLE DB.  
   
  Inoltre, il [attributi del consumer OLE DB](../windows/ole-db-consumer-attributes.md) forniscono un modo pratico per creare un consumer OLE DB. Gli attributi OLE DB inseriscono il codice in base ai modelli consumer OLE DB per creare i consumer OLE DB di lavoro.  
   

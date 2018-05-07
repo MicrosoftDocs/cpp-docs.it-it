@@ -1,13 +1,10 @@
 ---
 title: Filosofia di progettazione classi generale | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.classes.mfc
 dev_langs:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - classes [MFC], MFC class design
 - Windows API [MFC], and MFC
 ms.assetid: e6861ae0-1581-4d9c-9ddf-63f9afcdb913
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c174b06b27e78ca61d2608b8e04205068ac436e9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7b2d0915c4b2940e93b781e7a56e2640c64a7f20
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="general-class-design-philosophy"></a>Filosofia di progettazione classi generale
 Microsoft Windows è stato progettato molto prima che il linguaggio C++ è diventato più diffuso. Poiché migliaia di applicazioni di utilizza il linguaggio C Windows application programming interface (API), tale interfaccia verrà mantenuta in futuro. Qualsiasi interfaccia di Windows in C++ deve pertanto essere integrata nell'API in linguaggio C procedura. In questo modo si garantisce che le applicazioni C++ sarà in grado di coesistere con le applicazioni C.  
@@ -56,7 +51,7 @@ Microsoft Windows è stato progettato molto prima che il linguaggio C++ è diven
   
  Per ulteriori informazioni sulla progettazione della libreria MFC, vedere:  
   
--   [Il Framework applicazione](../mfc/application-framework.md)  
+-   [Il Framework dell'applicazione](../mfc/application-framework.md)  
   
 -   [Relazioni con l'API in linguaggio C](../mfc/relationship-to-the-c-language-api.md)  
   

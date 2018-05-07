@@ -1,12 +1,9 @@
 ---
 title: Classe COleDialog | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - COleDialog
@@ -17,17 +14,15 @@ dev_langs:
 helpviewer_keywords:
 - COleDialog [MFC], GetLastError
 ms.assetid: b1ed0aca-3914-4b00-af34-4a4fb491aec7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ae60b9e5a0d2e79d2bf6d9cc06eebfa9df0c6e23
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2c13b5d0a3bb30e08eaaeb0250da7deef692a66d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="coledialog-class"></a>Classe COleDialog
 Fornisce la funzionalità comune alle finestre di dialogo per OLE.  
@@ -51,17 +46,17 @@ class COleDialog : public CCommonDialog
   
 - [Classe COleInsertDialog](../../mfc/reference/coleinsertdialog-class.md)  
   
-- [Classe COleConvertDialog](../../mfc/reference/coleconvertdialog-class.md)  
+- [COleConvertDialog](../../mfc/reference/coleconvertdialog-class.md)  
   
-- [Classe COleChangeIconDialog](../../mfc/reference/colechangeicondialog-class.md)  
+- [COleChangeIconDialog](../../mfc/reference/colechangeicondialog-class.md)  
   
 - [COleLinksDialog](../../mfc/reference/colelinksdialog-class.md)  
   
-- [Classe COleBusyDialog](../../mfc/reference/colebusydialog-class.md)  
+- [COleBusyDialog](../../mfc/reference/colebusydialog-class.md)  
   
 - [Classe COleUpdateDialog](../../mfc/reference/coleupdatedialog-class.md)  
   
-- [Classe COlePasteSpecialDialog](../../mfc/reference/colepastespecialdialog-class.md)  
+- [COlePasteSpecialDialog](../../mfc/reference/colepastespecialdialog-class.md)  
   
 - [COlePropertiesDialog](../../mfc/reference/colepropertiesdialog-class.md)  
   
@@ -85,7 +80,7 @@ class COleDialog : public CCommonDialog
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** afxodlgs. h  
   
-##  <a name="getlasterror"></a>COleDialog:: GetLastError  
+##  <a name="getlasterror"></a>  COleDialog:: GetLastError  
  Chiamare il `GetLastError` funzione membro per ottenere informazioni aggiuntive sull'errore quando `DoModal` restituisce **IDABORT**.  
   
 ```  

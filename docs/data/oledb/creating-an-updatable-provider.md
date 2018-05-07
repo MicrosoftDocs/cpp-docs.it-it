@@ -1,12 +1,9 @@
 ---
 title: Creazione di un Provider aggiornabile | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 dev_langs:
 - C++
@@ -15,18 +12,16 @@ helpviewer_keywords:
 - notifications, support in providers
 - OLE DB providers, creating
 ms.assetid: bdfd5c9f-1c6f-4098-822c-dd650e70ab82
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: e243c7198b479bed226d4bd035297a12fc877de6
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: 317ccd043b3a69489f9cbd2737ad7741389863c5
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="creating-an-updatable-provider"></a>Creazione di un provider aggiornabile
 Visual C++ supporta provider aggiornabile o i provider che è possibile aggiornare (scrivere) nell'archivio dati. In questo argomento viene illustrato come creare provider aggiornabili utilizzando i modelli OLE DB.  
@@ -414,7 +409,7 @@ virtual HRESULT SetDBStatus(DBSTATUS* pdbStatus, CSimpleRow* pRow,
 ```  
   
 ### <a name="column-flags"></a>Flag di colonna  
- Se si supportano i valori predefiniti le colonne, è necessario impostare utilizzando i metadati di  **\< ***classe provider***> SchemaRowset** classe. Set *m_bColumnHasDefault* = `VARIANT_TRUE`.  
+ Se si supportano i valori predefiniti le colonne, è necessario impostare utilizzando i metadati di  **\< ***classe provider***> SchemaRowset** classe. Impostare *m_bColumnHasDefault* = `VARIANT_TRUE`.  
   
  Inoltre necessario impostare i flag di colonna, vengono specificati utilizzando il **DBCOLUMNFLAGS** tipo enumerato. I flag di colonna vengono descritte le caratteristiche della colonna.  
   

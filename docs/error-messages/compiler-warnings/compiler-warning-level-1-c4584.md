@@ -1,12 +1,9 @@
 ---
 title: Compilatore avviso (livello 1) C4584 | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C4584
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C4584
 ms.assetid: ad86582f-cb8c-4d21-8c4c-a6c800059e25
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ba427de26d07851c5bf2a2dd3f599c4cbe7afc5c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: df3f92142fe42451ca7ae8272463d9347a263121
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-warning-level-1-c4584"></a>Avviso del compilatore (livello 1) C4584
 'class1': classe di base 'class2' è già una classe di base di 'class3'  

@@ -1,12 +1,9 @@
 ---
 title: Classe CConnectionPoint | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CConnectionPoint
@@ -33,17 +30,15 @@ helpviewer_keywords:
 - CConnectionPoint [MFC], OnAdvise
 - CConnectionPoint [MFC], QuerySinkInterface
 ms.assetid: f0f23a1e-5e8c-41a9-aa6c-1a4793b28e8f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f6a9e9fafc2bbee9959a939815a92c9bc63a650f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 22793706a67a3d301f88700ca6b43fb9c83e4dc3
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cconnectionpoint-class"></a>Classe CConnectionPoint
 Definisce un tipo speciale di interfaccia utilizzata per comunicare con altri oggetti OLE, denominata "punto di connessione".  
@@ -112,14 +107,14 @@ class CConnectionPoint : public CCmdTarget
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** afxdisp.h  
   
-##  <a name="cconnectionpoint"></a>CConnectionPoint::CConnectionPoint  
+##  <a name="cconnectionpoint"></a>  CConnectionPoint::CConnectionPoint  
  Costruisce un oggetto `CConnectionPoint`.  
   
 ```  
 CConnectionPoint();
 ```  
   
-##  <a name="getconnections"></a>CConnectionPoint:: GetConnections  
+##  <a name="getconnections"></a>  CConnectionPoint:: GetConnections  
  Chiamare questa funzione per recuperare tutte le connessioni attive per un punto di connessione.  
   
 ```  
@@ -129,7 +124,7 @@ const CPtrArray* GetConnections();
 ### <a name="return-value"></a>Valore restituito  
  Un puntatore a una matrice di connessioni attive (sink). Alcuni degli indicatori di misura nella matrice può essere NULL. Ogni puntatore non NULL in questa matrice può essere convertito in modo sicuro a un puntatore all'interfaccia sink tramite un operatore cast.  
   
-##  <a name="getcontainer"></a>CConnectionPoint::GetContainer  
+##  <a name="getcontainer"></a>  CConnectionPoint::GetContainer  
  Chiamato dal framework per recuperare il **IConnectionPointContainer** per il punto di connessione.  
   
 ```  
@@ -142,7 +137,7 @@ virtual LPCONNECTIONPOINTCONTAINER GetContainer();
 ### <a name="remarks"></a>Note  
  Questa funzione viene in genere implementata tramite il `BEGIN_CONNECTION_PART` (macro).  
   
-##  <a name="getiid"></a>CConnectionPoint:: GetIID  
+##  <a name="getiid"></a>  CConnectionPoint:: GetIID  
  Chiamato dal framework per recuperare l'ID di interfaccia di un punto di connessione.  
   
 ```  
@@ -155,7 +150,7 @@ virtual REFIID GetIID() = 0;
 ### <a name="remarks"></a>Note  
  Eseguire l'override di questa funzione per restituire l'ID di interfaccia per il punto di connessione.  
   
-##  <a name="getmaxconnections"></a>CConnectionPoint::GetMaxConnections  
+##  <a name="getmaxconnections"></a>  CConnectionPoint::GetMaxConnections  
  Chiamato dal framework per recuperare il numero massimo di connessioni supportate dal punto di connessione.  
   
 ```  
@@ -170,7 +165,7 @@ virtual int GetMaxConnections();
   
  Eseguire l'override di questa funzione se si desidera limitare il numero di sink che possono connettersi al controllo.  
   
-##  <a name="getnextconnection"></a>CConnectionPoint:: GetNextConnection  
+##  <a name="getnextconnection"></a>  CConnectionPoint:: GetNextConnection  
  Recupera un puntatore all'elemento di connessione in `pos`.  
   
 ```  
@@ -190,7 +185,7 @@ LPUNKNOWN GetNextConnection(POSITION& pos) const;
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFCConnectionPoints#4](../../mfc/codesnippet/cpp/cconnectionpoint-class_3.cpp)]  
   
-##  <a name="getstartposition"></a>CConnectionPoint::GetStartPosition  
+##  <a name="getstartposition"></a>  CConnectionPoint::GetStartPosition  
  Inizia un'iterazione mappa restituendo un **posizione** valore che può essere passato a un [GetNextConnection](#getnextconnection) chiamare.  
   
 ```  
@@ -206,7 +201,7 @@ POSITION GetStartPosition() const;
 ### <a name="example"></a>Esempio  
   Per vedere l'esempio [CConnectionPoint:: GetNextConnection](#getnextconnection).  
   
-##  <a name="onadvise"></a>CConnectionPoint::OnAdvise  
+##  <a name="onadvise"></a>  CConnectionPoint::OnAdvise  
  Chiamato dal framework quando una connessione viene stabilita o interrotta.  
   
 ```  
@@ -215,14 +210,14 @@ virtual void OnAdvise(BOOL bAdvise);
   
 ### <a name="parameters"></a>Parametri  
  `bAdvise`  
- **TRUE**, se una connessione viene stabilita; in caso contrario **FALSE**.  
+ **TRUE**, se una connessione è stata stabilita; in caso contrario **FALSE**.  
   
 ### <a name="remarks"></a>Note  
  L'implementazione predefinita non esegue alcuna operazione.  
   
  Eseguire l'override di questa funzione se si desidera una notifica quando il sink di connettono o disconnettersi dal punto di connessione.  
   
-##  <a name="querysinkinterface"></a>CConnectionPoint::QuerySinkInterface  
+##  <a name="querysinkinterface"></a>  CConnectionPoint::QuerySinkInterface  
  Recupera un puntatore all'interfaccia sink richiesto.  
   
 ```  

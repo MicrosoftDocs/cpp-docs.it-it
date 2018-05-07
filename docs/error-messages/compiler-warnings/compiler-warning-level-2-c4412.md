@@ -1,12 +1,9 @@
 ---
 title: Compilatore avviso (livello 2) C4412 | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C4412
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C4412
 ms.assetid: f28dc531-1a98-497b-a366-0a13e1bc81c7
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 41ecffdd760374ce5b96039e81a467572f977bcd
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 3d186a237c7eb21cdcdc51a896d58d11bc19c5b2
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-warning-level-2-c4412"></a>Avviso del compilatore (livello 2) C4412
 'function': funzione firma contiene il tipo 'type'. Gli oggetti di C++ sono non è sicuro passare tra codice pure e misto o nativo.  

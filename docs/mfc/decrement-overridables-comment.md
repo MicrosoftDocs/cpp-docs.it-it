@@ -1,13 +1,10 @@
 ---
 title: -Sottoponibili a override commento | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - overriding, Overridables comment in MFC source files
 - comments, MFC
 ms.assetid: 8968dea5-0d94-451f-bcb2-991580e65ba2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ca52bcc3846971af1811551411199785c3d4e102
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1b71d61175e5446ac33dd0ff6a011d06f601b5a1
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="-overridables-comment"></a>// Commento sui sottoponibili a override
 Il `// Overridables` sezione di una dichiarazione di classe MFC contiene funzioni virtuali che è possibile eseguire l'override in una classe derivata quando è necessario modificare il comportamento della classe di base. Sono in genere denominate a partire da "On", sebbene non sia strettamente necessario. Funzioni di seguito sono progettate per essere sottoposto a override, spesso implementare o forniscono una sorta di "callback" o "hook". In genere, questi membri sono protetti.  
@@ -46,7 +41,7 @@ Il `// Overridables` sezione di una dichiarazione di classe MFC contiene funzion
  [Utilizzo dei file di origine MFC](../mfc/using-the-mfc-source-files.md)   
  [Un esempio dei commenti](../mfc/an-example-of-the-comments.md)   
  [Commento all'implementazione](../mfc/decrement-implementation-comment.md)   
- [Commento di costruttori](../mfc/decrement-constructors-comment.md)   
- [Commento di attributi](../mfc/decrement-attributes-comment.md)   
+ [Commento sui costruttori](../mfc/decrement-constructors-comment.md)   
+ [Commento sugli attributi](../mfc/decrement-attributes-comment.md)   
  [Commento sulle operazioni](../mfc/decrement-operations-comment.md)
 

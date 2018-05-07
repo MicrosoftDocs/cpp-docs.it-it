@@ -1,13 +1,10 @@
 ---
 title: Creazione di un oggetto CToolBarCtrl | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - CToolBarCtrl
 dev_langs:
@@ -16,20 +13,18 @@ helpviewer_keywords:
 - toolbar controls [MFC], creating
 - CToolBarCtrl class [MFC], creating toolbars
 ms.assetid: a4f6bf0c-0195-4dbf-a09e-aee503e19dc3
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e86fad8191c4dea2eed3ae34ec96ed853ac1deae
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6c5e2ee8c0e2239de86252b3d0fb8ec0ab7cc182
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="creating-a-ctoolbarctrl-object"></a>Creazione di un oggetto CToolBarCtrl
-[CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md) gli oggetti contengono diverse strutture di dati interni, ovvero un elenco delle immagini bitmap, un elenco di stringhe di pulsante etichetta e un elenco di `TBBUTTON` strutture, che associare un'immagine e/o di stringa con la posizione, lo stile, lo stato, e ID di comando del pulsante. Ognuno degli elementi di queste strutture di dati viene definito un indice in base zero. Prima di poter usare un `CToolBarCtrl` dell'oggetto, è necessario impostare queste strutture di dati. Per un elenco delle strutture di dati, vedere [controlli barra degli strumenti](controls-mfc.md) in Windows SDK. L'elenco di stringhe è utilizzabile solo per le etichette di pulsante; è possibile recuperare le stringhe dalla barra degli strumenti.  
+[CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md) gli oggetti contengono diverse strutture di dati interni, ovvero un elenco delle immagini bitmap, un elenco di stringhe di etichetta pulsante e un elenco di `TBBUTTON` strutture, ovvero che associare un'immagine e/o di stringa con la posizione, lo stile, lo stato, e ID di comando del pulsante. Ognuno degli elementi di queste strutture di dati viene definito un indice in base zero. Prima di poter usare un `CToolBarCtrl` dell'oggetto, è necessario impostare queste strutture di dati. Per un elenco delle strutture di dati, vedere [controlli barra degli strumenti](controls-mfc.md) in Windows SDK. L'elenco di stringhe è utilizzabile solo per le etichette di pulsante; è possibile recuperare le stringhe dalla barra degli strumenti.  
   
  Per utilizzare un oggetto `CToolBarCtrl`, in genere vengono effettuate le seguenti operazioni:  
   

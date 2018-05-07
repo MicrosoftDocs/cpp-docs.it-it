@@ -1,12 +1,9 @@
 ---
 title: CProcedureParameters CProcedureParamInfo | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - m_szDefault
@@ -61,18 +58,16 @@ helpviewer_keywords:
 - m_nScale
 - CHARACTER_MAXIMUM_LENGTH
 ms.assetid: 61f8d55a-684a-47a3-b102-068cc3f52d84
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 1040f3a02af60afda8796ba241922d691068a5ea
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 0b314d6cabcae91ba3d6b6bfe04d5bcb40e9d0cd
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cprocedureparameters-cprocedureparaminfo"></a>CProcedureParameters CProcedureParamInfo
 Chiamare la classe typedef **CProcedureParameters** per implementare la relativa classe di parametro **CProcedureParamInfo**.  

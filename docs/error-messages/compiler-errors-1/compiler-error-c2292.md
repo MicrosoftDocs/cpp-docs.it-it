@@ -1,12 +1,9 @@
 ---
 title: Errore del compilatore C2292 | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C2292
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C2292
 ms.assetid: 256b392f-2b8f-4162-b578-e7633984e162
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 64c44b5467b404d348324749d1d888f928256846
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: be3d00af54709d697461a8424041769aed9956e1
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-error-c2292"></a>Errore del compilatore C2292
 'identifier': rappresentazione di ereditarietà caso migliore: 'representation1' dichiarata ma 'representation2' richiesto  

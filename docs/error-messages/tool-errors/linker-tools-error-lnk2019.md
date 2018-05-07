@@ -1,10 +1,9 @@
 ---
 title: Strumenti del linker LNK2019 errore | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 12/15/2017
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - LNK2019
@@ -16,14 +15,13 @@ helpviewer_keywords:
 - _check_commonlanguageruntime_version
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 20f6fdad0d26d04c6e8022f7b29dbdd7f13ac874
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4323e5f8357da046db7a9403d7c575dfdde566b6
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="linker-tools-error-lnk2019"></a>Errore degli strumenti del linker LNK2019
 

@@ -1,12 +1,9 @@
 ---
 title: Strumenti del linker LNK4253 avviso | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - LNK4253
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - LNK4253
 ms.assetid: ec7433a9-aa9c-495a-a9f2-075e7bc3e7bc
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6d1142544852980b8bd1d543783a9ffdf3361879
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bae4e88e1fe1434cd638d5c31cc8fd4d5c02c4de
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="linker-tools-warning-lnk4253"></a>Avviso degli strumenti del linker LNK4253
 sezione 'sezione1' non è unita in 'sezione2'; già unita in 'sezione3'  

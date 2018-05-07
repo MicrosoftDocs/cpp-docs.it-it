@@ -1,13 +1,10 @@
 ---
 title: 'Oggetti dati e origini dati: modifica | Documenti Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - delayed rendering [MFC]
 - OLE [MFC], data sources
 ms.assetid: f7f27e77-bb5d-4131-b819-d71bf929ebaf
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 40bd83b2e472ff1b1e5d277c27a801b0750fb160
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b4c3414734f40ee81689ffa2f160cbbab8306d2b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="data-objects-and-data-sources-manipulation"></a>Oggetti dati e origini dati: modifica
 Dopo aver creata un'origine dati o un oggetto dati, è possibile eseguire un numero di operazioni frequenti nei dati, ad esempio l'inserimento e rimozione dei dati, l'enumerazione i formati che di dati sono in e altro ancora. In questo articolo descrive le tecniche necessarie per completare le operazioni più comuni. Gli argomenti trattati includono:  
@@ -42,7 +37,7 @@ Dopo aver creata un'origine dati o un oggetto dati, è possibile eseguire un num
   
 -   [Il recupero dei dati da un oggetto dati](#_core_retrieving_data_from_a_data_object)  
   
-##  <a name="_core_inserting_data_into_a_data_source"></a>Inserimento di dati in un'origine dati  
+##  <a name="_core_inserting_data_into_a_data_source"></a> Inserimento di dati in un'origine dati  
  Inserimento dei dati in un'origine dati varia a seconda se i dati vengono forniti immediatamente o su richiesta e il supporto è specificato. I valori possibili sono i seguenti.  
   
 ### <a name="supplying-data-immediately-immediate-rendering"></a>Fornisce dati immediatamente (Rendering immediato)  
@@ -62,7 +57,7 @@ Dopo aver creata un'origine dati o un oggetto dati, è possibile eseguire un num
   
 -   Se si utilizza un `CFile` oggetto per fornire i dati, chiamare `COleDataSource::DelayRenderFileData` anziché `COleDataSource::DelayRenderData` nell'opzione precedente. Quando vengono richiesti i dati, il framework chiamerà `COleDataSource::OnRenderFileData`, che è necessario eseguire l'override.  
   
-##  <a name="_core_determining_the_formats_available_in_a_data_object"></a>Determinazione dei formati disponibili in un oggetto dati  
+##  <a name="_core_determining_the_formats_available_in_a_data_object"></a> Determinazione dei formati disponibili in un oggetto dati  
  Prima di un'applicazione consente all'utente di incollare i dati in esso, è necessario sapere se sono formati degli Appunti in grado di gestire. A tale scopo, l'applicazione deve eseguire le operazioni seguenti:  
   
 1.  Creare un `COleDataObject` oggetto e un **FORMATETC** struttura.  
@@ -79,7 +74,7 @@ Dopo aver creata un'origine dati o un oggetto dati, è possibile eseguire un num
   
  Se si utilizza `ON_UPDATE_COMMAND_UI`, è ora possibile abilitare l'Incolla e, possibilmente, elementi Incolla speciale dal menu Modifica. A tale scopo, chiamare `CMenu::EnableMenuItem` o `CCmdUI::Enable`. Per ulteriori informazioni su quali contenitore applicazioni devono eseguire con voci di menu e, vedere [menu e risorse: aggiunte di contenitori](../mfc/menus-and-resources-container-additions.md).  
   
-##  <a name="_core_retrieving_data_from_a_data_object"></a>Il recupero dei dati da un oggetto dati  
+##  <a name="_core_retrieving_data_from_a_data_object"></a> Il recupero dei dati da un oggetto dati  
  Dopo aver scelto il formato dati, è comunque per recuperare i dati dall'oggetto dati. A tale scopo, l'utente decide in cui inserire i dati e l'applicazione chiama la funzione appropriata. I dati saranno disponibili in uno dei seguenti supporti:  
   
 |Medio|Funzione da chiamare|  

@@ -1,13 +1,10 @@
 ---
 title: 'Recordset: Recupero di somme e altri risultati aggregati (ODBC) | Documenti Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,18 +16,16 @@ helpviewer_keywords:
 - SQL Server projects, retrieving aggregate values from recordsets
 - SQL aggregate values, retrieving from recordsets
 ms.assetid: 94500662-22a4-443e-82d7-acbe6eca447b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 4753193789c95b726a8770cef9a153b041fa762c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4aa6de58e7e2c530a7a353281ba5af747f48cd4e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="recordset-obtaining-sums-and-other-aggregate-results-odbc"></a>Recordset: recupero di somme e altri risultati aggregati (ODBC)
 Questo argomento si applica alle classi ODBC MFC.  
@@ -61,11 +56,11 @@ m_strFilter = "sales > 10 GROUP BY SALESPERSON_ID";
 > [!CAUTION]
 >  Alcuni operatori di aggregazione restituiscono un tipo di dati diversi dalle colonne su cui si sta eseguendo l'aggregazione.  
   
--   **SOMMA** e **AVG** potrebbe restituire il tipo di dati più grande successivo (ad esempio, la chiamata con `int` restituisce **lungo** o **doppie**).  
+-   **SOMMA** e **AVG** potrebbe restituire il tipo di dati più grande successivo (ad esempio, la chiamata con `int` restituisce **lungo** oppure **doppie**).  
   
 -   **CONTEGGIO** restituisce in genere **lungo** indipendentemente dal tipo di colonna di destinazione.  
   
--   **MAX** e **MIN** restituire lo stesso tipo di dati come colonne calcolate.  
+-   **MAX** e **MIN** restituire lo stesso tipo di dati come le colonne calcolate.  
   
      Ad esempio, il **Aggiungi classe** procedura guidata crea `long` `m_lSales` per contenere una colonna Sales, ma è necessario sostituirlo con un `double m_dblSumSales` membro dati per contenere il risultato aggregato. Vedere l'esempio seguente.  
   

@@ -1,12 +1,9 @@
 ---
 title: Classe CD2DGradientBrush | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CD2DGradientBrush
@@ -27,17 +24,15 @@ helpviewer_keywords:
 - CD2DGradientBrush [MFC], m_extendMode
 - CD2DGradientBrush [MFC], m_pGradientStops
 ms.assetid: 5bf133e6-16b7-4e3a-845d-0ce63fafe5ec
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c03d489b3059ddadf5783719f297371433a599e6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3c01dbb3b14c13182afc85412b5c3ffa3ac0e9cf
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cd2dgradientbrush-class"></a>Classe CD2DGradientBrush
 Classe di base di CD2DLinearGradientBrush e delle classi CD2DRadialGradientBrush.  
@@ -84,14 +79,14 @@ class CD2DGradientBrush : public CD2DBrush;
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** afxrendertarget. h  
   
-##  <a name="_dtorcd2dgradientbrush"></a>CD2DGradientBrush:: ~ CD2DGradientBrush  
+##  <a name="_dtorcd2dgradientbrush"></a>  CD2DGradientBrush:: ~ CD2DGradientBrush  
  Distruttore. Chiamato quando viene eliminato un oggetto di un pennello sfumato D2D.  
   
 ```  
 virtual ~CD2DGradientBrush();
 ```  
   
-##  <a name="cd2dgradientbrush"></a>CD2DGradientBrush::CD2DGradientBrush  
+##  <a name="cd2dgradientbrush"></a>  CD2DGradientBrush::CD2DGradientBrush  
  Costruisce un oggetto CD2DGradientBrush.  
   
 ```  
@@ -127,35 +122,35 @@ CD2DGradientBrush(
  `bAutoDestroy`  
  Indica che l'oggetto verrà eliminato dal proprietario (pParentTarget).  
   
-##  <a name="destroy"></a>CD2DGradientBrush:: Destroy  
+##  <a name="destroy"></a>  CD2DGradientBrush:: Destroy  
  Elimina un oggetto CD2DGradientBrush.  
   
 ```  
 virtual void Destroy();
 ```  
   
-##  <a name="m_argradientstops"></a>CD2DGradientBrush::m_arGradientStops  
+##  <a name="m_argradientstops"></a>  CD2DGradientBrush::m_arGradientStops  
  Matrice delle strutture D2D1_GRADIENT_STOP.  
   
 ```  
 CArray<D2D1_GRADIENT_STOP, D2D1_GRADIENT_STOP> m_arGradientStops;  
 ```  
   
-##  <a name="m_colorinterpolationgamma"></a>CD2DGradientBrush::m_colorInterpolationGamma  
+##  <a name="m_colorinterpolationgamma"></a>  CD2DGradientBrush::m_colorInterpolationGamma  
  Lo spazio in cui il viene eseguito l'interpolazione tra i cursori sfumatura.  
   
 ```  
 D2D1_GAMMA m_colorInterpolationGamma;  
 ```  
   
-##  <a name="m_extendmode"></a>CD2DGradientBrush::m_extendMode  
+##  <a name="m_extendmode"></a>  CD2DGradientBrush::m_extendMode  
  Il comportamento della sfumatura non compreso nell'intervallo normalizzato [0,1].  
   
 ```  
 D2D1_EXTEND_MODE m_extendMode;  
 ```  
   
-##  <a name="m_pgradientstops"></a>CD2DGradientBrush::m_pGradientStops  
+##  <a name="m_pgradientstops"></a>  CD2DGradientBrush::m_pGradientStops  
  Puntatore a una matrice di strutture D2D1_GRADIENT_STOP.  
   
 ```  

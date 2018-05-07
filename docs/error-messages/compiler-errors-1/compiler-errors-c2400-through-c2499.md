@@ -1,16 +1,12 @@
 ---
 title: Del compilatore C2400 errori a C2499 | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/17/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C2416
-- C2429
 - C2442
 - C2453
 - C2454
@@ -23,7 +19,6 @@ f1_keywords:
 - C2497
 helpviewer_keywords:
 - C2416
-- C2429
 - C2442
 - C2453
 - C2454
@@ -37,17 +32,15 @@ helpviewer_keywords:
 dev_langs:
 - C++
 ms.assetid: f1f05572-af0b-497b-bde4-4c81ec01af3b
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 27327069f687c8d3ef33c97f4efbdeaac14bf1ec
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 208698ca27cadca128ec6e4ed1f99f1b9ea713f9
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-errors-c2400-through-c2499"></a>Del compilatore C2400 errori a C2499
 
@@ -88,7 +81,7 @@ Gli articoli in questa sezione della documentazione illustrano un subset dei mes
 |[Errore del compilatore C2426](compiler-error-c2426.md)|'*token*': operatore non valido in '*contesto*'|
 |[Errore del compilatore C2427](compiler-error-c2427.md)|'*classe*': Impossibile definire la classe in questo ambito|
 |[Errore del compilatore C2428](compiler-error-c2428.md)|'*operazione*': non consentito su operando di tipo 'bool'|
-|C2429 errore del compilatore|*Contesto* '*contesto*'richiede flag del compilatore'*opzione*'|
+|[C2429 errore del compilatore](compiler-error-c2429.md)|'*funzionalità del linguaggio*'richiede flag del compilatore'*l'opzione del compilatore*'|
 |[Errore del compilatore C2430](compiler-error-c2430.md)|più di un registro di indice in '*contesto*'|
 |[Errore del compilatore C2431](compiler-error-c2431.md)|Registro di indice non valido in '*contesto*'|
 |[Errore del compilatore C2432](compiler-error-c2432.md)|riferimento non valido ai dati a 16 bit in '*contesto*'|
@@ -149,7 +142,7 @@ Gli articoli in questa sezione della documentazione illustrano un subset dei mes
 |[Errore del compilatore C2491](compiler-error-c2491.md)|'*identificatore*': definizione di dllimport *funzione* non consentito|
 |[Errore del compilatore C2492](compiler-error-c2492.md)|'*variabile*': i dati con durata di archiviazione di thread non possono avere un'interfaccia dll|
 |[Errore del compilatore C2493](compiler-error-c2493.md)|forma non valida di based|
-|[Errore del compilatore C2494](compiler-error-c2494.md)|'*parola chiave*' non può essere chiamato dall'interno di un'espressione di filtro o &#95; &#95; blocco finally/finally|
+|[Errore del compilatore C2494](compiler-error-c2494.md)|'*parola chiave*' non può essere chiamato dall'interno di un'espressione di filtro o &#95; &#95;blocco finally/finally|
 |[Errore del compilatore C2495](compiler-error-c2495.md)|'*identificatore*': '__declspec(noexcept)' può essere applicato solo a definizioni o dichiarazioni di funzione|
 |[Errore del compilatore C2496](compiler-error-c2496.md)|'*identificatore*': 'selectany' può essere applicato solo agli elementi di dati con collegamento esterno|
 |C2497 errore del compilatore|'*identificatore*': 'implementation_key' può essere applicato solo alle dichiarazioni di funzione|

@@ -2,12 +2,9 @@
 title: Assembly con nome sicuro (firma degli Assembly) (C + + CLI) | Documenti Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,18 +15,16 @@ helpviewer_keywords:
 - linker [C++], assembly signing
 - strong-named assemblies [C++]
 ms.assetid: c337cd3f-e5dd-4c6f-a1ad-437e85dba1cc
-caps.latest.revision: 6
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 2099389131145838a70b579053c65698dbc3a857
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5d7ae911d2572a35ee8dbb21d5484b4679b64c4d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="strong-name-assemblies-assembly-signing-ccli"></a>Assembly con nome sicuro (firma degli assembly) (C++/CLI)
 In questo argomento viene illustrato come è possibile firmare l'assembly, noto anche come l'assegnazione di un nome sicuro dell'assembly.  
@@ -51,11 +46,11 @@ In questo argomento viene illustrato come è possibile firmare l'assembly, noto 
   
  Le seguenti opzioni del linker supportano la firma degli assembly:  
   
--   [/DELAYSIGN (firma parzialmente un Assembly)](../build/reference/delaysign-partially-sign-an-assembly.md)  
+-   [/DELAYSIGN (firma parzialmente un assembly)](../build/reference/delaysign-partially-sign-an-assembly.md)  
   
--   [/KEYFILE (specificare una chiave o una coppia di chiavi per firmare un Assembly)](../build/reference/keyfile-specify-key-or-key-pair-to-sign-an-assembly.md)  
+-   [/KEYFILE (specifica una chiave o una coppia di chiavi per firmare un assembly)](../build/reference/keyfile-specify-key-or-key-pair-to-sign-an-assembly.md)  
   
--   [/KEYCONTAINER (specifica un contenitore di chiavi per firmare un Assembly)](../build/reference/keycontainer-specify-a-key-container-to-sign-an-assembly.md)  
+-   [/KEYCONTAINER (specifica un contenitore di chiavi per firmare un assembly)](../build/reference/keycontainer-specify-a-key-container-to-sign-an-assembly.md)  
   
  Per ulteriori informazioni sull'assembly con nome sicuro, vedere [creazione e uso degli assembly](/dotnet/framework/app-domains/create-and-use-strong-named-assemblies).  
   

@@ -1,12 +1,9 @@
 ---
 title: Classe IColumnsInfoImpl | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - ATL.IColumnsInfoImpl<T>
@@ -19,18 +16,16 @@ dev_langs:
 helpviewer_keywords:
 - IColumnsInfoImpl class
 ms.assetid: ba74c1c5-2eda-4452-8b57-84919fa0d066
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: e775e0836d27cf055990a2e9bc3bf2f07e61225e
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 93cc4c44031d2091de64f2d82c1866135d1702cd
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icolumnsinfoimpl-class"></a>Classe IColumnsInfoImpl
 Fornisce un'implementazione del [IColumnsInfo](https://msdn.microsoft.com/en-us/library/ms724541.aspx) interfaccia.  

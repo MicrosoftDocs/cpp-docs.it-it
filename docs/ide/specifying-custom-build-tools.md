@@ -1,13 +1,10 @@
 ---
 title: Strumenti di compilazione specificando | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 12/28/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VC.Project.VCCustomBuildTool.CustomBuildToolBeforeTargets
 - VC.Project.VCCustomBuildTool.Outputs
@@ -26,14 +23,13 @@ helpviewer_keywords:
 - builds (C++), custom build tools
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4edd3b1fdb2b6d09be6f5fcd9a6c9d08ba7a6994
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: 1b8fc10d2a94ab4b26a47991d3dc8923afb28ca3
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="specify-custom-build-tools"></a>Specificare gli strumenti di compilazione personalizzata
 
@@ -65,7 +61,7 @@ Per informazioni generali sugli strumenti di compilazione personalizzata e istru
 
       Possono specificare più file di input e outpui simbolicamente con le macro di MSBuild. Per informazioni su come specificare il percorso dei file o i nomi dei set di file, vedere [comuni macro per comandi di compilazione e proprietà](../ide/common-macros-for-build-commands-and-properties.md).
 
-      Poiché il carattere '% s'è riservato da MSBuild, se si specifica una variabile di ambiente sostituire ogni  **%**  con carattere di escape di **% 25** sequenza di escape esadecimale. Ad esempio, sostituire **% WINDIR %** con **25WINDIR % 25**. MSBuild sostituisce ogni **% 25** sequenza con la  **%**  carattere prima di accedere alla variabile di ambiente.
+      Poiché il carattere '% s'è riservato da MSBuild, se si specifica una variabile di ambiente sostituire ogni **%** con carattere di escape di **% 25** sequenza di escape esadecimale. Ad esempio, sostituire **% WINDIR %** con **25WINDIR % 25**. MSBuild sostituisce ogni **% 25** sequenza con la **%** carattere prima di accedere alla variabile di ambiente.
 
    - In **descrizione**, immettere un messaggio descrittivo per questo strumento di compilazione personalizzata. Il messaggio viene stampato il **Output** finestra quando il sistema di compilazione elabora questo strumento.
 

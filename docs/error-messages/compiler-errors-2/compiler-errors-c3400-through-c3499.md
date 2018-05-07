@@ -1,12 +1,9 @@
 ---
 title: Errore C3400 errori del compilatore C3499 | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/17/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C3401
@@ -107,17 +104,15 @@ helpviewer_keywords:
 dev_langs:
 - C++
 ms.assetid: a5651dfb-c402-4e01-b3ae-28f371e51d6a
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3842530bdec6a1247e8a6f5a4fc1f99d13a537ed
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bcc3a06a5c39aff2fea0850879a8d95f757e1b66
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-errors-c3400-through-c3499"></a>Errore C3400 errori del compilatore C3499
 
@@ -173,8 +168,8 @@ Gli articoli in questa sezione della documentazione illustrano un subset dei mes
 |C3441 errore del compilatore|'*dichiarazione*': '*parola chiave*' non può essere applicato dopo è stata definita la classe|
 |C3442 errore del compilatore|Inizializzazione di più membri dell'unione: '*member1*'e'*member2*'|
 |C3443 errore del compilatore|L'inizializzatore di membro predefinito di '*classe*' è ricorsivo|
-|C3444 errore del compilatore|Vuoto aggregazione classe*classe*' deve essere inizializzato con '{}'|
-|C3445 errore del compilatore|inizializzazione di elenco copia di '*tipo*' non è possibile utilizzare un costruttore esplicito|
+|C3444 errore del compilatore|Svuotare classe aggregazione*classe*'deve essere inizializzato con'{}'|
+|[C3445 errore del compilatore](compiler-error-c3445.md)|inizializzazione di elenco copia di '*tipo*' non è possibile utilizzare un costruttore esplicito|
 |[Errore del compilatore C3446](compiler-error-c3446.md)|'*classe*': non è consentito un inizializzatore di membro predefinito per un membro di una classe di valore|
 |C3447 errore del compilatore|Obsoleta.|
 |C3448 errore del compilatore|Obsoleta.|
@@ -200,7 +195,7 @@ Gli articoli in questa sezione della documentazione illustrano un subset dei mes
 |[Errore del compilatore C3468](compiler-error-c3468.md)|'*tipo*': è possibile inoltrare solo un tipo a un assembly: '*identificatore*' non è un assembly|
 |[Errore del compilatore C3469](compiler-error-c3469.md)|'*tipo*': Impossibile inoltrare una classe generica|
 |[Errore del compilatore C3470](compiler-error-c3470.md)|'*classe*': una classe non può avere sia un indicizzatore (proprietà indicizzata predefinita) e un operatore]|
-|C3471 errore del compilatore|nome del nuovo modulo *nome* (impostato nella riga di comando) è in conflitto con il nome precedente *nome*|
+|C3471 errore del compilatore|nuovo nome del modulo *nome* (impostato nella riga di comando) è in conflitto con quello precedente *nome*|
 |C3472 errore del compilatore|nuovo nome di file di output *filename* (impostato nella riga di comando) è in conflitto con il nome file precedente *filename*|
 |C3473 errore del compilatore|Nessun output percorso o modulo nome specificato.|
 |C3474 errore del compilatore|Impossibile aprire il file di output '*filename*'|

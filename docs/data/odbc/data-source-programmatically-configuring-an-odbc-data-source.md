@@ -1,13 +1,10 @@
 ---
-title: 'Origine dati: Configurazione a livello di codice di un''origine dati ODBC | Documenti Microsoft'
-ms.custom: 
+title: "Origine dati: Configurazione a livello di codice di un'origine dati ODBC | Documenti Microsoft"
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 f1_keywords:
 - SQLConfigDataSource
 dev_langs:
@@ -18,18 +15,16 @@ helpviewer_keywords:
 - ODBC connections, configuring
 - configuring ODBC data sources
 ms.assetid: b8cabe9b-9e12-4d73-ae36-7cb12dee3213
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: ac5756452a8b1c2d5dbf2f27ac7d3e1a8b069ca2
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: e1f46ad566874d80b45593e7aecfeee2d5d88841
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="data-source-programmatically-configuring-an-odbc-data-source"></a>Origine dati: configurazione di un'origine dati ODBC a livello di codice
 In questo argomento viene illustrato come configurare i nomi di origine dati Open Database Connectivity (ODBC) a livello di codice. Questo offre flessibilità per accedere ai dati senza forzare l'utente da utilizzare in modo esplicito l'amministratore ODBC o in altri programmi per specificare i nomi delle origini dati.  
@@ -105,7 +100,7 @@ BOOL SQLConfigDataSource(HWND hwndParent,UINT fRequest, LPCSTR lpszDriver, LPCST
   
     -   32 bit, trovare la chiave **HKEY_CURRENT_USER\Software\ODBC\ODBC. Origini dati INI\ODBC** nel riquadro a sinistra.  
   
-         Nel riquadro destro sono elencati le voci nel formato: "pub: REG_SZ:*<data source name>*", dove  *<data source name>*  è un'origine dati che è già stata configurata con le impostazioni desiderate per il driver da utilizzare. Selezionare l'origine dati desiderata, ad esempio, SQL Server. Gli elementi che seguono la stringa "pub:" sono, nell'ordine keyname e valore da utilizzare nel `lpszAttributes` parametro.  
+         Nel riquadro destro sono elencati le voci nel formato: "pub: REG_SZ:*<data source name>*", dove *<data source name>* è un'origine dati che è già stata configurata con le impostazioni desiderate per il driver da utilizzare. Selezionare l'origine dati desiderata, ad esempio, SQL Server. Gli elementi che seguono la stringa "pub:" sono, nell'ordine keyname e valore da utilizzare nel `lpszAttributes` parametro.  
   
     -   Per a 16 bit, individuare la sezione nel file Odbc.ini contrassegnati con [*\<nome dell'origine dati >*].  
   

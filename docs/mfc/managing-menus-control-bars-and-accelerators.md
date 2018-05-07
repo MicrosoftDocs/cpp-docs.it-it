@@ -1,13 +1,10 @@
 ---
 title: Gestione dei menu, barre di controllo e tasti di scelta rapida | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - frame windows [MFC], updating
 - status bars [MFC], updating
 ms.assetid: 97ca1997-06df-4373-b023-4f7ecd81047b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 74b026f273eec0bc689cc6959890b07beb570893
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1055fd9b1ef75b2090478d85e8251d1800b8b039
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="managing-menus-control-bars-and-accelerators"></a>Gestione di menu, barre di controllo e tasti di scelta rapida
 La finestra cornice gestisce l'aggiornamento oggetti dell'interfaccia utente, inclusi i menu, pulsanti della barra degli strumenti, la barra di stato e tasti di scelta rapida. Gestisce inoltre la barra dei menu nelle applicazioni MDI di condivisione.  
@@ -41,7 +36,7 @@ La finestra cornice gestisce l'aggiornamento oggetti dell'interfaccia utente, in
   
  Per le applicazioni MDI, la finestra cornice MDI gestisce la barra dei menu e la didascalia. Una finestra cornice MDI possiede un menu predefinito che viene utilizzato come barra dei menu quando sono non presenti attive finestre figlio MDI. Quando sono presenti elementi figlio attivi, la barra dei menu della finestra cornice MDI viene preso in carico da menu per la finestra figlio MDI attiva. Se un'applicazione MDI supporta più tipi di documento, ad esempio i documenti grafico e foglio di lavoro, ogni tipo inserisce i proprio menu nella barra dei menu e cambia la didascalia della finestra cornice principale.  
   
- [CMDIFrameWnd](../mfc/reference/cmdiframewnd-class.md) fornisce le implementazioni predefinite per i comandi standard del menu finestra che viene visualizzato per le applicazioni MDI. In particolare, il comando nuova finestra (**ID_WINDOW_NEW**) viene implementato per creare una nuova finestra cornice e visualizzazione del documento corrente. È necessario eseguire l'override di queste implementazioni solo se è necessario Personalizzazione avanzata.  
+ [CMDIFrameWnd](../mfc/reference/cmdiframewnd-class.md) fornisce le implementazioni predefinite per i comandi standard del menu finestra che viene visualizzata per le applicazioni MDI. In particolare, il comando nuova finestra (**ID_WINDOW_NEW**) viene implementato per creare una nuova finestra cornice e visualizzazione del documento corrente. È necessario eseguire l'override di queste implementazioni solo se è necessario Personalizzazione avanzata.  
   
  Più finestre figlio MDI dello stesso tipo di documento condividono le risorse di menu. Se più finestre figlio MDI vengono creati dal modello di documento stesso, viene utilizzato tutte la stessa risorsa di menu, salvare le risorse di sistema Windows.  
   

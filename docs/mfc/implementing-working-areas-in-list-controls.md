@@ -1,30 +1,25 @@
 ---
 title: Implementazione di aree di lavoro nei controlli elenco | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - list controls [MFC], working areas
 - working areas in list control [MFC]
 ms.assetid: fbbb356b-3359-4348-8603-f1cb114cadde
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cefb8007fd9b73dda4c0e8a99e9ae9daa1bfcc34
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 44b92fbda7f00c761059a44b5bf9483e2dfac814
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="implementing-working-areas-in-list-controls"></a>Implementazione di aree di lavoro nei controlli List
 Per impostazione predefinita, un controllo elenco dispone di tutti gli elementi nella griglia standard. Tuttavia, un altro metodo è supportato, aree di lavoro, che dispone gli elementi dell'elenco in gruppi rettangolari. Per un'immagine di un controllo elenco che implementa aree di lavoro, vedere Utilizzo di controlli di visualizzazione elenco in Windows SDK.  
@@ -34,7 +29,7 @@ Per impostazione predefinita, un controllo elenco dispone di tutti gli elementi 
   
  Aree di lavoro consente di visualizzare un bordo vuoto (nel, superiore e sinistro destra degli elementi), o causare da visualizzare quando sono in genere non sarebbe una barra di scorrimento orizzontale. Un altro utilizzo comune consiste nel creare più aree di lavoro a cui gli elementi possono essere spostati o eliminati. Con questo metodo, è possibile creare aree in una singola visualizzazione che hanno un significato diverso. L'utente può quindi classificare gli elementi, inserirli in un'area diversa. Un esempio sarebbe una visualizzazione di un file system che dispone di un'area per i file di lettura/scrittura e un'altra area per i file di sola lettura. Se un file viene spostato nell'area di sola lettura, diventa automaticamente in sola lettura. Spostamento di un file dall'area di sola lettura nell'area di lettura/scrittura renderebbe il file di lettura/scrittura.  
   
- `CListCtrl`fornisce diverse funzioni membro per la creazione e gestione di aree di lavoro nel controllo elenco. [GetWorkAreas](../mfc/reference/clistctrl-class.md#getworkareas) e [SetWorkAreas](../mfc/reference/clistctrl-class.md#setworkareas) recuperare e impostare una matrice di `CRect` oggetti (o `RECT` strutture), che archivia le aree di lavoro attualmente implementata per il controllo elenco. Inoltre, [GetNumberOfWorkAreas](../mfc/reference/clistctrl-class.md#getnumberofworkareas) recupera il numero corrente di aree di lavoro per il controllo elenco (per impostazione predefinita, zero).  
+ `CListCtrl` offre diverse funzioni membro per la creazione e gestione di aree di lavoro nel controllo elenco. [GetWorkAreas](../mfc/reference/clistctrl-class.md#getworkareas) e [SetWorkAreas](../mfc/reference/clistctrl-class.md#setworkareas) recuperare e impostare una matrice di `CRect` oggetti (o `RECT` strutture), che archivia le aree di lavoro attualmente implementata per il controllo elenco. Inoltre, [GetNumberOfWorkAreas](../mfc/reference/clistctrl-class.md#getnumberofworkareas) recupera il numero corrente di aree di lavoro per il controllo elenco (per impostazione predefinita, zero).  
   
 ## <a name="items-and-working-areas"></a>Gli elementi e aree di lavoro  
  Quando viene creata un'area di lavoro, gli elementi che si trovano all'interno dell'area di lavoro diventano membri della stessa. Analogamente, se un elemento viene spostato in un'area di lavoro, diventa un membro dell'area di lavoro a cui è stato spostato. Se un elemento non è compreso tra qualsiasi area di lavoro, diventa un membro dell'area di lavoro prima di (indice 0). Se si desidera creare un elemento e inserirlo all'interno di un'area di lavoro specifico, è necessario creare l'elemento e quindi spostarlo nell'area di lavoro con una chiamata a [SetItemPosition](../mfc/reference/clistctrl-class.md#setitemposition). Nel secondo esempio riportato di seguito viene illustrata questa tecnica.  

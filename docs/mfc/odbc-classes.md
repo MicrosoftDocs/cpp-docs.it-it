@@ -1,13 +1,10 @@
 ---
 title: Classi ODBC | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.classes.data
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - database classes [MFC], ODBC
 - ODBC classes [MFC]
 ms.assetid: 6c40fca8-3033-4873-9abe-7f51725de0e0
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 33fcc3453d36a2567330f60cec73383f842210c6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 98ef4509e7e7570d8c07013f0287fe01105e154a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="odbc-classes"></a>Classi ODBC
 Queste classi vengono utilizzate con le altre classi di framework applicazione per fornire facile accesso a un'ampia gamma di database per cui sono disponibili driver Open Database Connectivity (ODBC).  
@@ -50,10 +45,10 @@ Queste classi vengono utilizzate con le altre classi di framework applicazione p
   
 ## <a name="related-classes"></a>Classi correlate  
  [CLongBinary](../mfc/reference/clongbinary-class.md)  
- Incapsula un handle di archiviazione per un oggetto binario di grandi dimensioni (BLOB), ad esempio una bitmap. `CLongBinary`gli oggetti vengono utilizzati per gestire gli oggetti di grandi quantità di dati archiviati nelle tabelle di database.  
+ Incapsula un handle di archiviazione per un oggetto binario di grandi dimensioni (BLOB), ad esempio una bitmap. `CLongBinary` gli oggetti vengono utilizzati per gestire gli oggetti di grandi quantità di dati archiviati nelle tabelle di database.  
   
  [CDBVariant](../mfc/reference/cdbvariant-class.md)  
- Consente di archiviare un valore senza doversi preoccupare di tipo di dati del valore. `CDBVariant`Registra il tipo di dati del valore corrente, che viene archiviato in un'unione.  
+ Consente di archiviare un valore senza doversi preoccupare di tipo di dati del valore. `CDBVariant` Registra il tipo di dati del valore corrente, che viene archiviato in un'unione.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Cenni preliminari sulla classe](../mfc/class-library-overview.md)

@@ -1,12 +1,9 @@
 ---
 title: Errore del compilatore di risorse RC2151 | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - RC2151
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - RC2151
 ms.assetid: 3c47e535-c78d-4338-aab9-9b47e2c34728
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: beabd61c64c296bf454aa94b8f915673b5f0cfca
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8349aa14de6aec96fa1b526cbcffbe79036f804d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="resource-compiler-error-rc2151"></a>Errore del compilatore di risorse RC2151
 non è possibile riutilizzare le costanti di stringa  

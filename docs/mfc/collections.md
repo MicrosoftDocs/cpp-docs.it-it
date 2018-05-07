@@ -1,13 +1,10 @@
 ---
 title: Raccolte | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -26,17 +23,15 @@ helpviewer_keywords:
 - collection classes [MFC], lists
 - collection classes [MFC], shapes
 ms.assetid: 02586e4c-851d-41d0-a722-feb11c17c74c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0e980f3f8fe86b621cb1494b08aec3fcdcb49f54
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: beae5370c86bf0142b29f029778083f3042ae931
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="collections"></a>Raccolte
 La libreria MFC fornisce classi Collection per la gestione di gruppi di oggetti. Queste classi sono di due tipi:  
@@ -48,7 +43,7 @@ La libreria MFC fornisce classi Collection per la gestione di gruppi di oggetti.
 > [!NOTE]
 >  Se nel codice vengono già utilizzate le classi Collection non create da modelli, è possibile continuare a utilizzarle. Se si scrivono nuove classi Collection indipendenti dai tipi per i tipi di dati personalizzati, si consiglia di utilizzare le classi basate su modelli, che sono più recenti.  
   
-##  <a name="_core_collection_shapes"></a>Forme di raccolta  
+##  <a name="_core_collection_shapes"></a> Forme di raccolta  
  Una classe Collection è caratterizzata dalla "forma" e dai tipi dei relativi elementi. La forma fa riferimento al modo in cui gli oggetti sono organizzati e archiviati dalla raccolta. MFC offre tre forme base di raccolta: elenchi, matrici e mappe (denominate anche dizionari). È possibile selezionare la forma di raccolta più appropriata al problema di programmazione specifico.  
   
  Più avanti in questo argomento viene descritta brevemente ciascuna delle forme di raccolta fornite. Per confrontare le funzionalità delle forme che consentono di scegliere la soluzione migliore per il programma, vedere [suggerimenti per la scelta di una classe Collection](../mfc/recommendations-for-choosing-a-collection-class.md).  
@@ -65,7 +60,7 @@ La libreria MFC fornisce classi Collection per la gestione di gruppi di oggetti.
   
      Una mappa è una raccolta che associa un oggetto chiave a un oggetto valore.  
   
-##  <a name="_core_the_template_based_collection_classes"></a>Le classi Collection basate su modello  
+##  <a name="_core_the_template_based_collection_classes"></a> Le classi Collection basate su modello  
  Il modo più semplice per implementare una raccolta indipendente dai tipi che contiene oggetti di qualsiasi tipo consiste nell'utilizzare una delle classi MFC basate su modelli. Per esempi di queste classi, vedere l'esempio MFC [raccogliere](../visual-cpp-samples.md).  
   
  Nella tabella seguente vengono elencate le classi Collection MFC basate su modelli.  
@@ -77,7 +72,7 @@ La libreria MFC fornisce classi Collection per la gestione di gruppi di oggetti.
 |Raccolte di oggetti di qualsiasi tipo|`CArray`|`CList`|`CMap`|  
 |Raccolte di puntatori a oggetti di qualsiasi tipo|`CTypedPtrArray`|`CTypedPtrList`|`CTypedPtrMap`|  
   
-##  <a name="_core_the_collection_classes_not_based_on_templates"></a>Le classi Collection non basate su modelli  
+##  <a name="_core_the_collection_classes_not_based_on_templates"></a> Le classi Collection non basate su modelli  
  Se nell'applicazione vengono utilizzate già le classi di raccolta MFC non create da modelli, è possibile continuare a utilizzarle. Tuttavia, per le nuove raccolte, si consiglia di utilizzare le classi basate su modelli. Nella tabella seguente sono elencate le classi di raccolta MFC che non sono basate su modelli.  
   
 ### <a name="nontemplate-collection-classes"></a>Classi Collection non basate su modelli  

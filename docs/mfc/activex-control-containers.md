@@ -1,30 +1,25 @@
 ---
 title: Contenitori di controlli ActiveX | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - ActiveX control containers [MFC]
 - OLE controls [MFC], containers
 ms.assetid: 0eb1a713-e607-4c79-a0c7-67c5f1fd5fab
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ee24d39c8769eaf2216ca4f64b9856b778a51ac7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 73496f892cc55ef59b2d84228ae9ae0416d3e8a6
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="activex-control-containers"></a>Contenitori di controlli ActiveX
 Un contenitore di controlli ActiveX è un contenitore che supporta in modo completo i controlli ActiveX e può includerli nelle proprie finestre e finestre di dialogo. Un controllo ActiveX rappresenta un elemento di software riutilizzabile che è possibile utilizzare in molti progetti di sviluppo. I controlli consentono all'utente dell'applicazione di accedere ai database, di monitorare i dati e di effettuare varie selezioni all'interno delle applicazioni. Per ulteriori informazioni sui controlli ActiveX, vedere l'articolo [controlli ActiveX MFC](../mfc/mfc-activex-controls.md).  
@@ -49,7 +44,7 @@ Un contenitore di controlli ActiveX è un contenitore che supporta in modo compl
   
 -   [Contenitori di controlli ActiveX: connessione di un controllo ActiveX a una variabile membro](../mfc/activex-control-containers-connecting-an-activex-control-to-a-member-variable.md)  
   
--   [Contenitori di controlli ActiveX: Gestione di eventi da un ActiveX di controllo](../mfc/activex-control-containers-handling-events-from-an-activex-control.md)  
+-   [Contenitori di controlli ActiveX: Gestione degli eventi da un ActiveX di controllo](../mfc/activex-control-containers-handling-events-from-an-activex-control.md)  
   
 -   [Contenitori di controlli ActiveX: visualizzazione e modifica delle proprietà dei controlli](../mfc/activex-control-containers-viewing-and-modifying-control-properties.md)  
   

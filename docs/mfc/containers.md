@@ -2,12 +2,9 @@
 title: Contenitori | Documenti Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - containers [MFC], OLE container applications
 - containers [MFC], container applications
 ms.assetid: b19d7c05-4d02-44bd-b76a-4a6c25994a62
-caps.latest.revision: 9
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b7986da0ae1906293e2d107b382e4ee4e41212ec
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3d942dde74c25a40b5110b74f783d41684d1fdbe
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="containers"></a>Contenitori
 Un'applicazione contenitore è un'applicazione che è possibile incorporare elementi incorporati o collegati dei propri documenti. I documenti gestiti da un'applicazione contenitore devono essere in grado di archiviare e visualizzare i componenti di documenti compositi OLE, nonché i dati creati dall'applicazione stessa. Un'applicazione contenitore deve inoltre consentire agli utenti di inserire nuovi elementi o modificare quelli esistenti.  
@@ -39,13 +34,13 @@ Un'applicazione contenitore è un'applicazione che è possibile incorporare elem
   
  [Utilizzare i file compositi](../mfc/containers-compound-files.md)  
   
- [Contenitore problemi dell'interfaccia utente](../mfc/containers-user-interface-issues.md)  
+ [Problemi dell'interfaccia utente contenitore](../mfc/containers-user-interface-issues.md)  
   
  [Funzionalità avanzate di contenitori](../mfc/containers-advanced-features.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [OLE](../mfc/ole-in-mfc.md)   
  [Server](../mfc/servers.md)   
- [Attivazione](../mfc/activation-cpp.md)   
+ [attivazione](../mfc/activation-cpp.md)   
  [Menu e risorse (OLE)](../mfc/menus-and-resources-ole.md)
 

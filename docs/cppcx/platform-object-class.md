@@ -1,11 +1,8 @@
 ---
 title: 'Classe platform:: Object | Documenti Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - VCCORLIB/Platform::Object::Object
@@ -19,17 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - Object class
 ms.assetid: 709e84a8-0bff-471b-bc14-63e424080b5a
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aa882c22aab21fe82abb2884305bc314997f36a4
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: a7fc6dc1df1d1e22032dbe7322b9a6ead8334ddc
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="platformobject-class"></a>Classe Platform::Object
 Fornisce il comportamento comune per le classi e struct di riferimento nelle app di Windows Runtime. Tutte le istanze delle classi e degli struct di riferimento sono implicitamente convertibili a Platform::Object^ e possono eseguire l'override del relativo metodo ToString virtuale.  
@@ -46,7 +41,7 @@ public ref class Object : Object
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[Object::Object](#ctor)|Inizializza una nuova istanza della classe Object.|  
+|[Object:: Object](#ctor)|Inizializza una nuova istanza della classe Object.|  
   
 ### <a name="public-methods"></a>Metodi pubblici  
   

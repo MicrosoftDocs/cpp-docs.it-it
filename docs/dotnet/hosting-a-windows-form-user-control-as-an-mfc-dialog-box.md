@@ -1,13 +1,10 @@
 ---
 title: Hosting di un Windows Form il controllo utente come la finestra di dialogo MFC | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,21 +12,19 @@ helpviewer_keywords:
 - Windows Forms [C++], hosting as MFC Dialog
 - hosting Windows Forms control [C++]
 ms.assetid: 0434a9d7-8b14-48e6-ad69-9ba9a684677a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 7ad1d800619eb84a470dbc5e472e9191d13e8796
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b356bff4974b43445524d9bc07e1e37c62a6f8d4
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="hosting-a-windows-form-user-control-as-an-mfc-dialog-box"></a>Hosting di un controllo utente Windows Form come finestra di dialogo MFC
-MFC fornisce la classe modello [CWinFormsDialog](../mfc/reference/cwinformsdialog-class.md) in modo che è possibile ospitare un controllo utente Windows Form (<xref:System.Windows.Forms.UserControl>) in una finestra di dialogo MFC modale o non modale. `CWinFormsDialog`è derivato dalla classe MFC [CDialog](../mfc/reference/cdialog-class.md), quindi nella finestra di dialogo può essere avviata come modale o non modale.  
+MFC fornisce la classe modello [CWinFormsDialog](../mfc/reference/cwinformsdialog-class.md) in modo che è possibile ospitare un controllo utente Windows Form (<xref:System.Windows.Forms.UserControl>) in una finestra di dialogo MFC modale o non modale. `CWinFormsDialog` è derivato dalla classe MFC [CDialog](../mfc/reference/cdialog-class.md), pertanto la finestra di dialogo può essere avviata come modale o non modale.  
   
  Il processo che `CWinFormsDialog` utilizza per ospitare il controllo utente è simile a quello descritto in [ospita un controllo utente Windows Form in una finestra di dialogo MFC](../dotnet/hosting-a-windows-form-user-control-in-an-mfc-dialog-box.md). Tuttavia, `CWinFormsDialog` gestisce l'inizializzazione e l'hosting del controllo utente in modo che non deve essere programmate manualmente.  
   

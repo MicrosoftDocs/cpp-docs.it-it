@@ -1,39 +1,37 @@
 ---
 title: Percorso definizione spostamento | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/16/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- cpp-ide
+ms.topic: conceptual
 ms.assetid: c6d507ac-c61e-4da2-95c8-d504b42e2520
 author: mikeblome
 ms.author: mblome
-manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 838f3d01f5e6d8612948304b80b79cf9c7cb4720
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 44211105429e33c136999a7877ac6ee42af29f17
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="move-definition-location"></a>Percorso definizione spostamento
-**Novità:** consente di spostare immediatamente una definizione di funzione per il file di intestazione corrispondente.
+**Che cosa:** consente di spostare immediatamente una definizione di funzione per il file di intestazione corrispondente.
 
 **Quando:** una funzione che si desidera spostare in un file di intestazione.  
 
-**Motivo:** è stato possibile spostare manualmente la funzione, ma questa funzionalità verrà spostata automaticamente, la creazione del file di intestazione, se necessario.
+**Motivo:** è possibile spostare manualmente la funzione, ma questa funzionalità verrà spostata automaticamente, la creazione del file di intestazione se necessario.
 
-**Procedura:**
+**Come:**
 
 1. Posizionare il cursore di testo o il mouse tramite la funzione per cui si desidera spostare.
 
    ![Codice evidenziato](images/movedefinition_highlight.png)
 
-1. Successivamente, eseguire una delle operazioni seguenti:
+1. Eseguire quindi una delle operazioni seguenti:
    * **Tastiera**
-     * Premere **Ctrl +.** Per attivare il **azioni rapide e refactoring** dal menu **spostare percorso definizione** dal menu di scelta rapida.
+     * Premere **CTRL+.** Per attivare il **azioni rapide e refactoring** dal menu **spostare percorso definizione** dal menu di scelta rapida.
    * **Mouse**
      * Mouse e scegliere il **azioni rapide e refactoring** dal menu **spostare percorso definizione** dal menu di scelta rapida.
 

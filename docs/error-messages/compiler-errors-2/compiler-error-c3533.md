@@ -1,12 +1,9 @@
 ---
 title: Errore del compilatore C3533 | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C3533
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C3533
 ms.assetid: a68b1ba5-466e-4190-a1a4-505ccfe548b7
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e7bcd9c710ac5cdd50b966a72291918459d984be
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f184f0459e7ec2251d6ff34e2ee76559fe0dea42
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-error-c3533"></a>Errore del compilatore C3533
 'type': un parametro non può avere un tipo che contiene 'auto'  
@@ -55,5 +50,5 @@ template<auto T> class C{}; // C3533
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [parola chiave Auto](../../cpp/auto-keyword.md)   
- [/Zc: auto (deduzione del tipo di variabile)](../../build/reference/zc-auto-deduce-variable-type.md)
+ [auto Keyword](../../cpp/auto-keyword.md)   
+ [/Zc:auto (deduzione del tipo di variabile)](../../build/reference/zc-auto-deduce-variable-type.md)

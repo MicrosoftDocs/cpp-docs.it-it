@@ -1,12 +1,9 @@
 ---
 title: Errore del compilatore di risorse RC2104 | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - RC2104
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - RC2104
 ms.assetid: 792a3bd8-cb4c-4817-b288-4ce37082b582
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ce7fa189e03ec907c4b42f381096f095d5df734a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 28beaad95cc33d8b014b22035f9ed641f1b6ab6d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="resource-compiler-error-rc2104"></a>Errore del compilatore di risorse RC2104
 Parola chiave o nome di chiave non definito: chiave  

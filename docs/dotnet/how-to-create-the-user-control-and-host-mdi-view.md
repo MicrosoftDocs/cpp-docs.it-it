@@ -1,31 +1,26 @@
 ---
 title: 'Procedura: creare il controllo utente e inserirlo nella visualizzazione MDI | Documenti Microsoft'
-ms.custom: 
+ms.custom: get-started-article
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: get-started-article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - MFC [C++], Windows Forms Controls
 - Windows Forms [C++], MFC support
 ms.assetid: 625b5821-f923-4701-aca0-c1a4ceca4f63
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 8b9b3c8ff385aed22785386c035ed537d8d97e97
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 449f0026cd2d7603ceb190cc747138189313974f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-the-user-control-and-host-mdi-view"></a>Procedura: creare il controllo utente e inserirlo nella visualizzazione MDI
 La procedura seguente viene illustrato come creare un controllo utente .NET Framework, modificare il controllo utente in una libreria di classi di controllo (in particolare, un progetto libreria di controlli Windows) e quindi compilare il progetto in un assembly. Il controllo può essere quindi usato da un'applicazione MFC che utilizza le classi derivate da [classe CView](../mfc/reference/cview-class.md) e [classe CWinFormsView](../mfc/reference/cwinformsview-class.md).  

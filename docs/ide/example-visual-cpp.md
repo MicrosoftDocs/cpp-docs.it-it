@@ -1,13 +1,10 @@
 ---
 title: '&lt;esempio&gt; (Visual C++) | Documenti Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - <example>
 - example
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - <example> C++ XML tag
 - example C++ XML tag
 ms.assetid: c821aaa7-7ea7-4bee-9922-6705ad57f877
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 939c14d0a0e04ad8970dea7da7888a94bb4de08f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: cefd38a18447d0e8c9121d61c0ba963e9da39187
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ltexamplegt-visual-c"></a>&lt;esempio&gt; (Visual C++)
 Il tag \<example> consente di specificare un esempio di come usare un metodo o un altro membro della libreria. In genere, ciò comporta anche la ricorso il [ \<codice >](../ide/code-visual-cpp.md) tag.  

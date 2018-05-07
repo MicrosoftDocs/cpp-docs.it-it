@@ -1,13 +1,10 @@
 ---
 title: Aggiunta classe da libreria dei tipi guidata | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.codewiz.class.typelib
 dev_langs:
@@ -16,22 +13,20 @@ helpviewer_keywords:
 - Add Class from TypeLib Wizard [MFC]
 - COM interfaces, adding classes
 ms.assetid: 96152afd-9374-4649-a6ab-b0fa2a5592a3
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a4aad89b6f3227cac59b6429cc67975db3dad424
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a4eaf4b800fdc1954c54043aa7e2669613e6b27e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="add-class-from-typelib-wizard"></a>Aggiunta guidata classe da libreria dei tipi
 Utilizzare questa procedura guidata per aggiungere una classe MFC da una libreria dei tipi disponibili. La procedura guidata crea una classe per ogni interfaccia che aggiunta dalla libreria dei tipi selezionati.  
   
- **Classe da aggiungere**  
+ **Aggiungi classe da**  
  Specifica il percorso della libreria dei tipi, da cui viene creata la classe.  
   
 |Opzione|Descrizione|  
@@ -44,7 +39,7 @@ Utilizzare questa procedura guidata per aggiungere una classe MFC da una libreri
   
  Vedere "All'interno di Distributed COM: tipo di librerie e lingua integrazione" in MSDN library per ulteriori informazioni sulla registrazione delle librerie dei tipi.  
   
- **Percorso**  
+ **Posizione**  
  Specifica il percorso della libreria dei tipi. Se si fa clic **File** in **Aggiungi classe da**, è possibile specificare il percorso del file contenente la libreria dei tipi. Per passare al percorso del file, fare clic sul pulsante con puntini di sospensione.  
   
  **Interfacce**  
@@ -58,9 +53,9 @@ Utilizzare questa procedura guidata per aggiungere una classe MFC da una libreri
 |**<\<**|Rimuove tutte le classi di **classi generate** elenco. Se in grigio il **classi generate** elenco è vuoto.|  
   
  **Classi generate**  
- Specifica i nomi di classe da generare dalle interfacce aggiunte mediante il ** > ** o ** >> ** pulsante. È possibile fare clic su questa casella per selezionare una classe, quindi utilizzare le frecce su o giù per scorrere l'elenco, visualizzare il nome di ogni classe nel `Class` casella e il nome file nel **File** casella che viene generato quando si fa clic ** Fine**. È possibile selezionare solo una classe in un momento in questa casella.  
+ Specifica i nomi di classe da generare dalle interfacce aggiunte mediante il **>** o **>>** pulsante. È possibile fare clic su questa casella per selezionare una classe, quindi utilizzare le frecce su o giù per scorrere l'elenco, visualizzare il nome di ogni classe nel `Class` casella e il nome file nel **File** casella che viene generato quando si fa clic  **Fine**. È possibile selezionare solo una classe in un momento in questa casella.  
   
- È possibile rimuovere una classe selezionandolo nell'elenco e fare clic su ** < **. Non è necessario selezionare una classe nella casella di classi generate per rimuovere tutte le classi. facendo clic su ** << **, rimuovere tutte le classi di **classi generate** casella.  
+ È possibile rimuovere una classe selezionandolo nell'elenco e fare clic su **<**. Non è necessario selezionare una classe nella casella di classi generate per rimuovere tutte le classi. facendo clic su **<<**, rimuovere tutte le classi di **classi generate** casella.  
   
  `Class`  
  Specifica il nome della classe selezionata nel **classi generate** casella che consente di aggiungere la procedura guidata quando si fa clic **fine**. È possibile modificare il nome di `Class` casella.  

@@ -1,12 +1,9 @@
 ---
 title: Errore del compilatore C3723 | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C3723
@@ -15,22 +12,20 @@ dev_langs:
 helpviewer_keywords:
 - C3723
 ms.assetid: ef0fb1ff-3f9a-4093-a6b6-894d1ab0c4b9
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 90dd5820b38dbecc1ced5c1f393c0f1fa1c0a7ff
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b1692ee4fcd2a3ac31350dcacf568cfe132ff028
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-error-c3723"></a>Errore del compilatore C3723
 'function': Impossibile risolvere l'evento  
   
- `function`Impossibile risolvere l'evento da chiamare.  
+ `function` non è stato possibile risolvere l'evento da chiamare.  
   
  L'esempio seguente genera l'errore C3723:  
   
@@ -55,7 +50,7 @@ int main() {
 }  
 ```  
   
- `__hook`e `__unhook` non sono compatibili con la programmazione /clr.  Utilizzare gli operatori + = e -=.  
+ `__hook` e `__unhook` non sono compatibili con la programmazione /clr.  Utilizzare gli operatori + = e -=.  
   
  L'esempio seguente genera l'errore C3723:  
   

@@ -1,12 +1,9 @@
 ---
 title: Strumenti del linker LNK2001 errore | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 05/17/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - LNK2001
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - LNK2001
 ms.assetid: dc1cf267-c984-486c-abd2-fd07c799f7ef
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 51f78f436d0e19779d0ebca499a559a60d12bcf9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 78dc0c0a3a030ecb88d7138484e2c64e145f69ec
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="linker-tools-error-lnk2001"></a>Errore degli strumenti del linker LNK2001
 simbolo esterno non risolto "*simbolo*"  
@@ -76,15 +71,15 @@ Questo errore può verificarsi se si collega a librerie di modalità di rilascio
   
 Questo errore può verificarsi se il codice fa riferimento a un simbolo da una versione di una raccolta, ma è fornire una versione diversa della libreria al linker. In genere, è possibile combinare file oggetto o delle librerie compilate per versioni diverse del compilatore. Le librerie fornite con una nuova versione possono contenere simboli trovato nelle librerie con le versioni precedenti e viceversa. Per risolvere questo problema, compilare tutti i file oggetto e librerie con la stessa versione del compilatore prima collegate insieme.  
   
--  Gli strumenti di &#124; Opzioni &#124; Progetti &#124; Finestra di dialogo Directory di VC + +, in file di libreria, consente di modificare l'ordine di ricerca della libreria. Cartella Linker nella finestra di dialogo Pagine delle proprietà del progetto può contenere anche i percorsi che è stati aggiornati.  
+-  Gli strumenti di &#124; opzioni &#124; i progetti &#124; finestra di dialogo Directory di VC + + in file di libreria, consente di modificare l'ordine di ricerca di libreria. Cartella Linker nella finestra di dialogo Pagine delle proprietà del progetto può contenere anche i percorsi che è stati aggiornati.  
   
 -  Questo problema può verificarsi quando un nuovo SDK viene installato (ad esempio per un percorso diverso), e l'ordine di ricerca non viene aggiornato per puntare alla nuova posizione. In genere, è necessario inserire il percorso al nuovo SDK include e lib directory davanti a quella predefinita Visual C++. Inoltre, un progetto contenente percorsi incorporati continui a fare riferimento a percorsi precedenti validi, ma aggiornata alla nuova funzionalità aggiunta dalla nuova versione che viene installata in un percorso diverso.  
   
--   Se si compila dalla riga di comando e aver creato le proprie variabili di ambiente, verificare che i percorsi dei file di intestazione, librerie e strumenti per una versione coerente. Per ulteriori informazioni, vedere [impostare il percorso e le variabili di ambiente per la compilazione da riga di comando](../../build/setting-the-path-and-environment-variables-for-command-line-builds.md)
+-   Se si compila dalla riga di comando e aver creato le proprie variabili di ambiente, verificare che i percorsi dei file di intestazione, librerie e strumenti per una versione coerente. Per altre informazioni, vedere [impostare il percorso e le variabili di ambiente per la compilazione dalla riga di comando](../../build/setting-the-path-and-environment-variables-for-command-line-builds.md)
   
 Non è attualmente non standard per [denominazione C++](../../error-messages/tool-errors/name-decoration.md) tra i fornitori di compilatori o anche tra versioni diverse di un compilatore. Pertanto, si collegano file oggetto compilati con altri compilatori potrebbe non produrre lo stesso schema di denominazione e generare l'errore LNK2001.  
   
-[Opzioni di compilazione combinazione inline e non inline](../../error-messages/tool-errors/function-inlining-problems.md) in moduli diversi può causare l'errore LNK2001. Se si crea una libreria di C++ con attivata l'inline delle funzioni (**/Ob1** o **/Ob2**) ma il file di intestazione corrispondente che descrive le funzioni inline disattivata (Nessuna `inline` parola chiave), l'errore si verifica. Per risolvere questo problema, definire le funzioni `inline` nel file di intestazione è includere in altri file di origine.  
+[Mixing inline e non inline compilare opzioni](../../error-messages/tool-errors/function-inlining-problems.md) in moduli diversi può causare l'errore LNK2001. Se si crea una libreria di C++ con attivata l'inline delle funzioni (**/Ob1** o **/Ob2**) ma il file di intestazione corrispondente che descrive le funzioni inline disattivata (Nessuna `inline` parola chiave), l'errore si verifica. Per risolvere questo problema, definire le funzioni `inline` nel file di intestazione è includere in altri file di origine.  
   
 Se si utilizza il `#pragma inline_depth` verificare direttiva del compilatore che hanno un [valore 2 o superiore](../../error-messages/tool-errors/function-inlining-problems.md)e assicurarsi di usare anche il [/Ob1](../../build/reference/ob-inline-function-expansion.md) o [/Ob2](../../build/reference/ob-inline-function-expansion.md) l'opzione del compilatore.  
   

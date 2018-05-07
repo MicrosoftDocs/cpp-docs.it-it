@@ -1,13 +1,10 @@
 ---
 title: 'Appunti: Aggiunta di altri formati | Documenti Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,25 +15,23 @@ helpviewer_keywords:
 - registering custom Clipboard data formats
 - custom Clipboard data formats
 ms.assetid: aea58159-65ed-4385-aeaa-3d9d5281903b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6e6f7f21a64c062e2f210be9f13ce04428c397f9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c28fd1d628d0aed79028e43d9cce383f3acbb4ae
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="clipboard-adding-other-formats"></a>Appunti: aggiunta di altri formati
 In questo argomento viene illustrato come espandere l'elenco dei formati supportati, in particolare per il supporto OLE. L'argomento [negli Appunti: copiare e incollare dati](../mfc/clipboard-copying-and-pasting-data.md) viene descritta l'implementazione minimo necessario per supportare la copia e Incolla dagli Appunti. Se non si implementa, sono gli unici formati inseriti negli Appunti `CF_METAFILEPICT`, **CF_OBJECTDESCRIPTOR**, **inseriti**ed eventualmente `CF_LINKSOURCE`. La maggior parte delle applicazioni saranno necessario più formati negli Appunti di questi tre.  
   
-##  <a name="_core_registering_custom_formats"></a>Registrazione di formati personalizzati  
+##  <a name="_core_registering_custom_formats"></a> Registrazione di formati personalizzati  
  Per creare formati personalizzati, seguire la stessa procedura si utilizzerà per la registrazione di qualsiasi formato degli Appunti personalizzato: passare il nome del formato per il **RegisterClipboardFormat** funzione e utilizzare il relativo valore restituito come ID di formato.  
   
-##  <a name="_core_placing_formats_on_the_clipboard"></a>Inserimento di formati negli Appunti  
+##  <a name="_core_placing_formats_on_the_clipboard"></a> Inserimento di formati negli Appunti  
  Per aggiungere ulteriori formati negli Appunti, è necessario eseguire l'override di `OnGetClipboardData` nella classe derivata da una funzione `COleClientItem` o `COleServerItem` (a seconda se i dati da copiare sono nativi). In questa funzione, è necessario utilizzare la procedura seguente.  
   
 #### <a name="to-place-formats-on-the-clipboard"></a>Per inserire i formati negli Appunti  

@@ -1,13 +1,10 @@
 ---
 title: 'Oggetti dati e origini dati: creazione e distruzione | Documenti Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -24,17 +21,15 @@ helpviewer_keywords:
 - destruction [MFC], data objects
 - data sources [MFC], creating
 ms.assetid: ac216d54-3ca5-4ce7-850d-cd1f6a90d4f1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 28d468bef2eee05600b4d298f966533a7e6bc025
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b226c115ce148fa29b5d93cb60af8498b63fdee9
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="data-objects-and-data-sources-creation-and-destruction"></a>Oggetti dati e origini dati (OLE): creazione e distruzione
 Come illustrato nell'articolo [oggetti dati e origini dati (OLE)](../mfc/data-objects-and-data-sources-ole.md), oggetti dati e origini dati rappresentano entrambi i lati di un trasferimento di dati. Questo articolo descrive quando creare ed eliminare definitivamente questi oggetti e origini per eseguire i trasferimenti dei dati nel modo corretto, con informazioni su:  
@@ -47,7 +42,7 @@ Come illustrato nell'articolo [oggetti dati e origini dati (OLE)](../mfc/data-ob
   
 -   [Eliminazione di origini dati](#_core_destroying_data_sources)  
   
-##  <a name="_core_creating_data_objects"></a>Creazione di oggetti dati  
+##  <a name="_core_creating_data_objects"></a> Creazione di oggetti dati  
  Gli oggetti dati vengono usati dall'applicazione di destinazione, ovvero il client o il server. Un oggetto dati nell'applicazione di destinazione è un'estremità di una connessione tra l'applicazione di origine e quella di destinazione. Un oggetto dati nell'applicazione di destinazione viene usato per accedere ai dati nell'origine dati e per interagirvi.  
   
  Un oggetto dati è necessario in due situazioni comuni. La prima situazione è quella in cui nell'applicazione vengono rilasciati dati usando il trascinamento della selezione. La seconda situazione è quella in cui si sceglie Incolla o Incolla speciale dal menu Modifica.  
@@ -56,12 +51,12 @@ Come illustrato nell'articolo [oggetti dati e origini dati (OLE)](../mfc/data-ob
   
  Se l'applicazione esegue un'operazione Incolla o Incolla speciale, è consigliabile creare un oggetto `COleDataObject` e chiamarne la funzione membro `AttachClipboard`. In questo modo, l'oggetto dati viene associato ai dati negli Appunti. È quindi possibile usare questo oggetto dati nella funzione Incolla.  
   
-##  <a name="_core_destroying_data_objects"></a>Eliminazione di oggetti dati  
+##  <a name="_core_destroying_data_objects"></a> Eliminazione di oggetti dati  
  Se si segue lo schema descritto in [creazione di oggetti dati](#_core_creating_data_objects), eliminazione di oggetti dati è un aspetto poco importante dei trasferimenti di dati. L'oggetto dati creato nella funzione Incolla verrà eliminato definitivamente da MFC quando viene restituita la funzione Incolla.  
   
  Se si segue un altro metodo per gestire le operazioni Incolla, assicurarsi che l'oggetto dati venga eliminato al termine dell'operazione Incolla. Fino a quando l'oggetto dati non viene eliminato definitivamente, sarà impossibile per qualsiasi applicazione copiare correttamente dati negli Appunti.  
   
-##  <a name="_core_creating_data_sources"></a>Creazione di origini dati  
+##  <a name="_core_creating_data_sources"></a> Creazione di origini dati  
  Le origini dati vengono usate dall'origine del trasferimento dei dati, che può essere il lato client o il lato server del trasferimento. Un'origine dati nell'applicazione di origine è un'estremità di una connessione tra l'applicazione di origine e quella di destinazione. Un oggetto dati nell'applicazione di destinazione viene usato per interagire con i dati nell'origine dati.  
   
  Le origini dati vengono create quando un'applicazione deve copiare dati negli Appunti. Ecco uno scenario tipico:  
@@ -82,7 +77,7 @@ Come illustrato nell'articolo [oggetti dati e origini dati (OLE)](../mfc/data-ob
   
  Un'altra situazione in cui si potrebbe voler creare un oggetto `COleDataSource` si verifica quando si modifica il comportamento predefinito di un'operazione di trascinamento della selezione. Per ulteriori informazioni, vedere il [trascinamento della selezione: personalizzazione](../mfc/drag-and-drop-customizing.md) articolo.  
   
-##  <a name="_core_destroying_data_sources"></a>Eliminazione di origini dati  
+##  <a name="_core_destroying_data_sources"></a> Eliminazione di origini dati  
  Le origini dati devono essere eliminate definitivamente dall'applicazione che ne è attualmente responsabile. Nelle situazioni in cui si passa l'origine dati a OLE, ad esempio chiamando [COleDataSource:: DoDragDrop](../mfc/reference/coledatasource-class.md#dodragdrop), è necessario chiamare **pDataSrc -> InternalRelease**. Ad esempio:  
   
  [!code-cpp[NVC_MFCListView#1](../atl/reference/codesnippet/cpp/data-objects-and-data-sources-creation-and-destruction_1.cpp)]  

@@ -1,11 +1,8 @@
 ---
 title: 'Classe platform:: Agile | Documenti Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - AGILE/Platform::Platform
@@ -19,17 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - Platform::Agile
 ms.assetid: e34459a9-c429-4c79-97fd-030c43ca4155
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2c670ffc10858e709129caf9fabf80b656cbdb18
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 4d7d2299dd1395e93f4cd88cbeaec6c0b9467308
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="platformagile-class"></a>Classe Platform::Agile
 Rappresenta un oggetto con MashalingBehavior=Standard come oggetto Agile, che riduce fortemente le probabilità che si verifichino eccezioni di threading di runtime. `Agile<T>` consente all'oggetto non Agile di chiamare o essere chiamato dallo stesso thread o da un thread differente. Per ulteriori informazioni, vedere [Threading e marshalling](../cppcx/threading-and-marshaling-c-cx.md).  
@@ -56,7 +51,7 @@ class Agile;
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[Agile::Agile](#ctor)|Inizializza una nuova istanza della classe Agile.|  
+|[Agile:: Agile](#ctor)|Inizializza una nuova istanza della classe Agile.|  
 |[Distruttore Agile::~Agile](#dtor)|Eliminata l'istanza corrente della classe Agile.|  
   
 ### <a name="public-methods"></a>Metodi pubblici  

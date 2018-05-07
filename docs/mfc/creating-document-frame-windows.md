@@ -1,13 +1,10 @@
 ---
 title: Creazione di finestre cornice documento | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,20 +16,18 @@ helpviewer_keywords:
 - document frame windows [MFC], creating
 - MFC, frame windows
 ms.assetid: 8671e239-b76f-4dea-afa8-7024e6e58ff5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9098026c1a38f8e60093415ba1c5a2b3678b64d5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e4b27154197e4e8347e73936f319aeb416a153d0
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="creating-document-frame-windows"></a>Creazione di finestre cornice del documento
-[Creazione documento/visualizzazione](../mfc/document-view-creation.md) viene illustrato come la [CDocTemplate](../mfc/reference/cdoctemplate-class.md) oggetto gestisce la creazione, la finestra cornice, un documento e una vista e che li connettono tutti insieme. Tre [CRuntimeClass](../mfc/reference/cruntimeclass-structure.md) argomenti per il `CDocTemplate` costruttore specificare la finestra cornice, documento e le classi di visualizzazione che il modello di documento creata dinamicamente in risposta ai comandi dell'utente, ad esempio il comando Nuovo File menu o il comando nuova finestra in un menu finestra MDI. Il modello di documento memorizza queste informazioni per un uso successivo durante la creazione di una finestra cornice per una visualizzazione e il documento.  
+[Creazione documento/visualizzazione](../mfc/document-view-creation.md) viene illustrato il modo in cui [CDocTemplate](../mfc/reference/cdoctemplate-class.md) oggetto Orchestra creando la finestra cornice, documento e visualizzazione e connettendoli tutti insieme. Tre [CRuntimeClass](../mfc/reference/cruntimeclass-structure.md) argomenti per il `CDocTemplate` costruttore specificare la finestra cornice, documento e le classi di visualizzazione che il modello di documento creata dinamicamente in risposta ai comandi dell'utente, ad esempio il comando Nuovo File menu o il comando nuova finestra in un menu finestra MDI. Il modello di documento memorizza queste informazioni per un uso successivo durante la creazione di una finestra cornice per una visualizzazione e il documento.  
   
  Per il [RUNTIME_CLASS](../mfc/reference/run-time-object-model-services.md#runtime_class) meccanismo per il corretto funzionamento di classe derivata classi frame-window devono essere dichiarate con la [DECLARE_DYNCREATE](../mfc/reference/run-time-object-model-services.md#declare_dyncreate) (macro). In questo modo il framework deve creare finestre cornice utilizzando il meccanismo di costruzione dinamica della classe di documento `CObject`.  
   

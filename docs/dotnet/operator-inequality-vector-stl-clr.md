@@ -1,12 +1,9 @@
 ---
 title: operatore! = (vettore) (STL/CLR) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::vector::operator!=
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - operator!= member [STL/CLR]
 ms.assetid: 6f7b0569-b2d1-4f36-8520-31839bf6db9b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 83fde17daf1322fbd4f41a339f953118513ae6ab
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: de581c52362faf0fb9583d79238f3bb0974d0d26
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="operator-vector-stlclr"></a>operator!= (vector) (STL/CLR)
 Vettore non uguale a confronto.  
@@ -96,7 +91,7 @@ int main()
 ```  
   
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** \<cliext/vettore >  
+ **Intestazione:** \<cliext/vector >  
   
  **Namespace:** cliext  
   

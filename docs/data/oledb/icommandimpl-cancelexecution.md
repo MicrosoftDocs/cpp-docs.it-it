@@ -1,12 +1,9 @@
 ---
 title: 'ICommandImpl:: Cancelexecution | Documenti Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - ICommandImpl::CancelExecution
@@ -19,18 +16,16 @@ dev_langs:
 helpviewer_keywords:
 - CancelExecution method
 ms.assetid: ffd86b47-1a04-4460-86b2-b478455c3391
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 2afda3eb82820b43be9cf9f82b4365b71bfe8dda
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 3d9ccfdc6076625f4d020226d41f853f377bbe35
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icommandimplcancelexecution"></a>ICommandImpl::CancelExecution
 Annulla l'esecuzione del comando corrente.  
@@ -47,5 +42,5 @@ HRESULT CancelExecution();
   
 ## <a name="see-also"></a>Vedere anche  
  [ICommandImpl (classe)](../../data/oledb/icommandimpl-class.md)   
- [ICommandImpl::Execute](../../data/oledb/icommandimpl-execute.md)   
+ [ICommandImpl:: Execute](../../data/oledb/icommandimpl-execute.md)   
  [ICommandImpl::Cancel](../../data/oledb/icommandimpl-cancel.md)

@@ -1,13 +1,10 @@
 ---
-title: "Aggiunta di funzionalità con creazioni guidate codice (C++) | Documenti Microsoft"
-ms.custom: 
+title: Aggiunta di funzionalità con creazioni guidate codice (C++) | Documenti Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.codewiz.classes
 dev_langs:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - projects [C++], adding functionality
 - class wizards [C++]
 ms.assetid: 6afb7ef9-7056-423d-b244-91bb4236d1d7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c27aeb10a58c828b6503ce96ddaadf138c258f27
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 55a2bb282d19a48cfd510056e327e7abca4de4ad
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="adding-functionality-with-code-wizards-c"></a>Aggiunta di funzionalità con creazioni guidate codice (C++)
 Dopo aver creato un progetto, è possibile modificare o aggiungere funzionalità del progetto. Tali attività includono la creazione di nuove classi, aggiunta di nuove funzioni membro e variabili e l'aggiunta di metodi di automazione e proprietà. Le creazioni guidate codice sono progettate per consentire di effettuare tutte queste operazioni.  
@@ -44,9 +39,9 @@ Dopo aver creato un progetto, è possibile modificare o aggiungere funzionalità
   
      Se si seleziona una classe o un'interfaccia nel progetto in visualizzazione classi, il **progetto** menu Visualizza anche i comandi seguenti:  
   
-    -   **Implementare l'interfaccia** (da una classe solo di controllo)  
+    -   **Implementa l'interfaccia** (da una classe solo di controllo)  
   
-    -   **Add (funzione)**  
+    -   **Aggiungere (funzione)**  
   
     -   **Aggiungi variabile**  
   
@@ -56,7 +51,7 @@ Dopo aver creato un progetto, è possibile modificare o aggiungere funzionalità
   
     -   **Aggiungere proprietà** (solo da un'interfaccia)  
   
-    -   **Aggiungere l'evento** (da una classe solo di controllo)  
+    -   **Aggiungere eventi** (da una classe solo di controllo)  
   
 -   In **Esplora**, facendo clic su qualsiasi cartella e fare clic su **Aggiungi** dal collegamento menu consente di aggiungere file nuovi o esistenti, altre cartelle, gli elementi, classi, le risorse e riferimenti Web per il progetto.  
   
@@ -77,7 +72,7 @@ Dopo aver creato un progetto, è possibile modificare o aggiungere funzionalità
     |-----------------------------|-----------------|  
     |Aggiungi nuovo elemento|Le creazioni guidate codice Aggiungi nuovo elemento consente di aggiungere i file di origine al progetto. Se necessario, vengono create directory aggiuntive per i file di cui il motore di compilazione progetto prevede per individuarli. Creazioni guidate codice disponibile dall'icona Aggiungi elemento includono:<br /><br /> -Aggiungere file di origine C++ (. cpp, h, IDL, rc, SRF, def, con estensione RGS).<br />-Aggiungere file di sviluppo Web (HTML, ASP, CSS, con estensione XML).<br />-Aggiungere utilità e file di risorse (file con estensione bmp, cur, ico, RCT, con estensione SQL, con estensione txt).<br /><br /> Queste procedure guidate di codice in genere non è necessario per tutte le informazioni ma è aggiungere un file alla struttura ad albero di sviluppo. È possibile rinominare il file nella finestra delle proprietà.|  
     |Esplora soluzioni|Le creazioni guidate codice disponibili in Esplora soluzioni variano a seconda di dove si trova il cursore è quando si fa clic su un elemento. Se il **Aggiungi** opzione non viene visualizzata quando si fa clic su un elemento, quindi spostare il cursore al superiore livello nella struttura di sviluppo e riprovare. Le creazioni guidate codice saranno possibile inserire il codice aggiuntivo nella posizione appropriata all'interno della struttura di sviluppo, indipendentemente in cui il cursore si trova. Creazioni guidate codice disponibili in Esplora soluzioni includono:<br /><br /> -Aggiungere classe (apre il **Aggiungi classe** la finestra di dialogo contenente le creazioni guidate codice nuovo).<br />-Aggiungi risorsa (nuovo, importare o personalizzato).<br />-Aggiungi riferimento Web.|  
-    |Visualizzazione classi|Le creazioni guidate codice disponibile in visualizzazione classi variano a seconda di dove si trova il cursore è quando si destro del mouse su un elemento. Se il **Aggiungi** opzione non viene visualizzata quando si destro fare clic su un elemento, quindi spostare il cursore al superiore livello nella struttura della classe e riprovare. Le creazioni guidate codice saranno possibile inserire il codice aggiuntivo nella posizione appropriata all'interno della struttura di sviluppo, indipendentemente in cui il cursore si trova. Creazioni guidate codice disponibile in visualizzazione classi includono:<br /><br /> -   [Aggiungere la funzione membro](../ide/adding-a-member-function-visual-cpp.md).<br />-   [Aggiungere una variabile membro](../ide/adding-a-member-variable-visual-cpp.md).<br />-   [Aggiungi classe](../ide/adding-a-class-visual-cpp.md).<br />-   [Implementare l'interfaccia](../ide/implement-interface-wizard.md) (da una classe solo di controllo)<br />-   [Aggiungere il punto di connessione](../ide/implement-connection-point-wizard.md) (solo da una classe ATL)<br />-   [Metodo Add](../ide/add-method-wizard.md) (solo da un'interfaccia)<br />-   [Aggiungere proprietà](../ide/names-add-property-wizard.md) (solo da un'interfaccia)<br />-   [Aggiungere l'evento](../ide/add-event-wizard.md) (da una classe solo di controllo)<br /><br /> Verrà visualizzata la selezione di Aggiungi classe di **Aggiungi classe** nella finestra di dialogo consente di accedere a tutte le nuove creazioni guidate codice Aggiungi classe.|  
+    |Visualizzazione classi|Le creazioni guidate codice disponibile in visualizzazione classi variano a seconda di dove si trova il cursore è quando si destro del mouse su un elemento. Se il **Aggiungi** opzione non viene visualizzata quando si destro fare clic su un elemento, quindi spostare il cursore al superiore livello nella struttura della classe e riprovare. Le creazioni guidate codice saranno possibile inserire il codice aggiuntivo nella posizione appropriata all'interno della struttura di sviluppo, indipendentemente in cui il cursore si trova. Creazioni guidate codice disponibile in visualizzazione classi includono:<br /><br /> -   [Aggiungi funzione membro](../ide/adding-a-member-function-visual-cpp.md).<br />-   [Aggiungi variabile membro](../ide/adding-a-member-variable-visual-cpp.md).<br />-   [Aggiungi classe](../ide/adding-a-class-visual-cpp.md).<br />-   [Implementa l'interfaccia](../ide/implement-interface-wizard.md) (da una classe solo di controllo)<br />-   [Aggiungere il punto di connessione](../ide/implement-connection-point-wizard.md) (solo da una classe ATL)<br />-   [Metodo Add](../ide/add-method-wizard.md) (solo da un'interfaccia)<br />-   [Aggiungere proprietà](../ide/names-add-property-wizard.md) (solo da un'interfaccia)<br />-   [Aggiungere eventi](../ide/add-event-wizard.md) (da una classe solo di controllo)<br /><br /> Verrà visualizzata la selezione di Aggiungi classe di **Aggiungi classe** nella finestra di dialogo consente di accedere a tutte le nuove creazioni guidate codice Aggiungi classe.|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Una funzione Virtual in override](../ide/overriding-a-virtual-function-visual-cpp.md)   

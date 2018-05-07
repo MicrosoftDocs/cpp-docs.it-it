@@ -1,13 +1,10 @@
 ---
 title: Classi di supporto dell'applicazione e Thread | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.classes.support
 dev_langs:
@@ -20,24 +17,22 @@ helpviewer_keywords:
 - synchronization classes [MFC], multithreading
 - application support classes [MFC]
 ms.assetid: 3c1d14fd-c35c-48f1-86ce-1e0f9a32c36d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e443c2393d9d3a8a0f61df6adddb2c83e7672723
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f9f3877cf85e369756b15d565af1481fd6d258df
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="application-and-thread-support-classes"></a>Classi di supporto per applicazioni e thread
 Ogni applicazione dispone di un unico oggetto applicazione. questo oggetto le coordinate di altri oggetti nel programma in esecuzione ed è derivato dalla `CWinApp`.  
   
  La libreria Microsoft Foundation classe (MFC) supporta più thread di esecuzione all'interno di un'applicazione. Tutte le applicazioni devono contenere almeno un thread. il thread utilizzato per il `CWinApp` oggetto è il thread principale.  
   
- `CWinThread`Incapsula una parte delle funzionalità di threading del sistema operativo. Per rendere più semplice l'utilizzo di più thread, MFC fornisce anche la sincronizzazione le classi di oggetti per fornire un'interfaccia di C++ agli oggetti di sincronizzazione di Win32.  
+ `CWinThread` Incapsula una parte delle funzionalità di threading del sistema operativo. Per rendere più semplice l'utilizzo di più thread, MFC fornisce anche la sincronizzazione le classi di oggetti per fornire un'interfaccia di C++ agli oggetti di sincronizzazione di Win32.  
   
 ## <a name="application-and-thread-classes"></a>Classi per applicazioni e Thread  
  [CWinApp](../mfc/reference/cwinapp-class.md)  

@@ -1,13 +1,10 @@
 ---
 title: Aggiunta guidata metodo | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.codewiz.method.overview
 dev_langs:
@@ -16,24 +13,22 @@ helpviewer_keywords:
 - Add Method Wizard [C++]
 - methods [C++], adding using wizards
 ms.assetid: b9a71b0e-9ecf-40fa-9f86-4200cb23d671
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 63595fe7fda434b7ee16161bd3afdaf8a46fad82
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: cc2ebd18640f0ab778cb45252691e63206861d53
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="add-method-wizard"></a>Aggiunta guidata metodo
 Utilizzare questa procedura guidata per aggiungere un metodo su un'interfaccia. A seconda del tipo di progetto o un tipo di interfaccia a cui si sta aggiungendo un metodo, la procedura guidata consente di visualizzare diverse opzioni.  
   
 ## <a name="names"></a>Nomi  
  **Tipo restituito**  
- Il tipo di dati restituito dal metodo. `HRESULT`è consigliabile per tutti i tipi di interfaccia, perché fornisce un modo standard per restituire errori.  
+ Il tipo di dati restituito dal metodo. `HRESULT` è consigliabile per tutti i tipi di interfaccia, perché fornisce un modo standard per restituire errori.  
   
 |Tipo interfaccia|Descrizione|  
 |--------------------|-----------------|  
@@ -78,7 +73,7 @@ Utilizzare questa procedura guidata per aggiungere un metodo su un'interfaccia. 
 |-------------------------|-----------------|--------------------------|  
 |**In**|Indica che il parametro viene passato dalla routine chiamante alla routine chiamata.|**in** solo<br /><br /> **in** e **out**|  
 |**Out**|Indica che il parametro del puntatore viene restituito dalla procedura chiamata alla routine chiamante (dal server al client).|**out** solo<br /><br /> **in** e **out**<br /><br /> **out** e **retval**|  
-|**Retval**|Indica che il parametro riceve il valore restituito del membro.|**retval** e out|  
+|**retval**|Indica che il parametro riceve il valore restituito del membro.|**retval** e out|  
   
  **Tipo di parametro**  
  Imposta il tipo di dati del parametro. Selezionare il tipo dall'elenco.  
@@ -88,7 +83,7 @@ Utilizzare questa procedura guidata per aggiungere un metodo su un'interfaccia. 
   
  Quando si fa clic su **Aggiungi**, viene visualizzato il nome di parametro **elenco parametri**.  
   
- **Nota** se si specifica un nome di parametro e quindi fare clic su **fine** prima di scegliere **Aggiungi**, il parametro non viene aggiunto al metodo. È necessario trovare il metodo e inserire il parametro manualmente.  
+ **Nota** se si specifica un nome di parametro e quindi fare clic su **fine** prima di fare clic **Add**, il parametro non viene aggiunto al metodo. È necessario trovare il metodo e inserire il parametro manualmente.  
   
  **Aggiungi**  
  Aggiunge il parametro specificato in **nome del parametro**e i relativi attributi di tipo e un parametro, per **elenco parametri**. È necessario fare clic su **Aggiungi** per aggiungere un parametro all'elenco.  

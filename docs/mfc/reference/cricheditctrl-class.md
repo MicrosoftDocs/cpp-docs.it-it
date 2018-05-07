@@ -1,12 +1,9 @@
 ---
 title: CRichEditCtrl (classe) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CRichEditCtrl
@@ -161,17 +158,15 @@ helpviewer_keywords:
 - CRichEditCtrl [MFC], StreamOut
 - CRichEditCtrl [MFC], Undo
 ms.assetid: 2be52788-822c-4c27-aafd-2471231e74eb
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 03ef5135130590d142e9725e1d064b932cc7ff4d
-ms.sourcegitcommit: 2aeb507a426fc7881ea59115b1d5139c0a30ba91
+ms.openlocfilehash: 0d18e1352e0d8ba74709e2f1a5626678e81729a2
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cricheditctrl-class"></a>CRichEditCtrl (classe)
 Fornisce la funzionalità del controllo Rich Edit.  
@@ -297,7 +292,7 @@ class CRichEditCtrl : public CWnd
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** afxcmn.h  
   
-##  <a name="canpaste"></a>CRichEditCtrl::CanPaste  
+##  <a name="canpaste"></a>  CRichEditCtrl::CanPaste  
  Determina se il controllo rich edit è possibile incollare il formato degli Appunti specificato.  
   
 ```  
@@ -319,7 +314,7 @@ BOOL CanPaste(UINT nFormat = 0) const;
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFC_CRichEditCtrl#1](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_1.cpp)]  
   
-##  <a name="canredo"></a>CRichEditCtrl::CanRedo  
+##  <a name="canredo"></a>  CRichEditCtrl::CanRedo  
  Determina se la coda di rollforward contiene tutte le azioni.  
   
 ```  
@@ -334,7 +329,7 @@ BOOL CanRedo() const;
   
  Per ulteriori informazioni, vedere [EM_CANREDO](http://msdn.microsoft.com/library/windows/desktop/bb787995) in Windows SDK.  
   
-##  <a name="canundo"></a>CRichEditCtrl::CanUndo  
+##  <a name="canundo"></a>  CRichEditCtrl::CanUndo  
  Determina se l'ultima operazione di modifica può essere annullata.  
   
 ```  
@@ -350,7 +345,7 @@ BOOL CanUndo() const;
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFC_CRichEditCtrl#2](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_2.cpp)]  
   
-##  <a name="charfrompos"></a>CRichEditCtrl::CharFromPos  
+##  <a name="charfrompos"></a>  CRichEditCtrl::CharFromPos  
  Recupera le informazioni relative al carattere in corrispondenza del punto specificato dal parametro `pt`.  
   
 ```  
@@ -369,7 +364,7 @@ int CharFromPos(CPoint pt) const;
   
  Per ulteriori informazioni, vedere [EM_CHARFROMPOS](http://msdn.microsoft.com/library/windows/desktop/bb761566) in Windows SDK.  
   
-##  <a name="clear"></a>CRichEditCtrl::Clear  
+##  <a name="clear"></a>  CRichEditCtrl::Clear  
  Elimina (Elimina) la selezione corrente (se presente) in rich controllo edit.  
   
 ```  
@@ -386,7 +381,7 @@ void Clear();
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFC_CRichEditCtrl#3](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_3.cpp)]  
   
-##  <a name="copy"></a>CRichEditCtrl::Copy  
+##  <a name="copy"></a>  CRichEditCtrl::Copy  
  Copia la selezione corrente (se presente) nel controllo rich edit negli Appunti.  
   
 ```  
@@ -399,7 +394,7 @@ void Copy();
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFC_CRichEditCtrl#4](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_4.cpp)]  
   
-##  <a name="create"></a>CRichEditCtrl::Create  
+##  <a name="create"></a>  CRichEditCtrl::Create  
  Crea controllo rich edit Windows e la associa all'oggetto `CRichEditCtrl` oggetto.  
   
 ```  
@@ -443,7 +438,7 @@ virtual BOOL Create(
   
 - **WS_DISABLED** raramente.  
   
-- **WS_GROUP** per raggruppare i controlli.  
+- **WS_GROUP** ai controlli gruppo.  
   
 - **WS_TABSTOP** per includere il controllo di modifica nell'ordine di tabulazione.  
   
@@ -452,7 +447,7 @@ virtual BOOL Create(
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFC_CRichEditCtrl#5](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_5.cpp)]  
   
-##  <a name="createex"></a>CRichEditCtrl::CreateEx  
+##  <a name="createex"></a>  CRichEditCtrl::CreateEx  
  Crea un controllo (una finestra figlio) e la associa il `CRichEditCtrl` oggetto.  
   
 ```  
@@ -486,7 +481,7 @@ virtual BOOL CreateEx(
 ### <a name="remarks"></a>Note  
  Utilizzare `CreateEx` anziché **crea** per applicare stili estesi di Windows, specificati per il prefisso di stile esteso di Windows **WS_EX _**.  
   
-##  <a name="cricheditctrl"></a>CRichEditCtrl::CRichEditCtrl  
+##  <a name="cricheditctrl"></a>  CRichEditCtrl::CRichEditCtrl  
  Costruisce un oggetto `CRichEditCtrl`.  
   
 ```  
@@ -499,7 +494,7 @@ CRichEditCtrl();
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFC_CRichEditCtrl#6](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_6.cpp)]  
   
-##  <a name="cut"></a>CRichEditCtrl::Cut  
+##  <a name="cut"></a>  CRichEditCtrl::Cut  
  Eliminare (tagli) la selezione corrente (se presente) in rich controllo di modifica e copia negli Appunti il testo eliminato.  
   
 ```  
@@ -516,7 +511,7 @@ void Cut();
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFC_CRichEditCtrl#7](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_7.cpp)]  
   
-##  <a name="displayband"></a>CRichEditCtrl::DisplayBand  
+##  <a name="displayband"></a>  CRichEditCtrl::DisplayBand  
  Viene visualizzata una parte del contenuto del controllo rich edit (testo ed elementi OLE), formattata come in precedenza da [FormatRange](#formatrange).  
   
 ```  
@@ -538,7 +533,7 @@ BOOL DisplayBand(LPRECT pDisplayRect);
 ### <a name="example"></a>Esempio  
   Per vedere l'esempio [CRichEditCtrl::FormatRange](#formatrange).  
   
-##  <a name="emptyundobuffer"></a>CRichEditCtrl::EmptyUndoBuffer  
+##  <a name="emptyundobuffer"></a>  CRichEditCtrl::EmptyUndoBuffer  
  Reimposta (clear) il flag di annullamento di questo controllo rich edit.  
   
 ```  
@@ -555,7 +550,7 @@ void EmptyUndoBuffer();
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFC_CRichEditCtrl#8](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_8.cpp)]  
   
-##  <a name="findtext"></a>CRichEditCtrl::FindText  
+##  <a name="findtext"></a>  CRichEditCtrl::FindText  
  Trova il testo all'interno del controllo rich edit.  
   
 ```  
@@ -582,7 +577,7 @@ long FindText(
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFC_CRichEditCtrl#9](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_9.cpp)]  
   
-##  <a name="findwordbreak"></a>CRichEditCtrl::FindWordBreak  
+##  <a name="findwordbreak"></a>  CRichEditCtrl::FindWordBreak  
  Trova la successiva interruzione di parola prima o dopo la posizione specificata da `nStart`.  
   
 ```  
@@ -604,7 +599,7 @@ DWORD FindWordBreak(
 ### <a name="remarks"></a>Note  
  È possibile utilizzare questa funzione membro per recuperare le informazioni relative a un carattere nella posizione specificata.  
   
-##  <a name="formatrange"></a>CRichEditCtrl::FormatRange  
+##  <a name="formatrange"></a>  CRichEditCtrl::FormatRange  
  Formatta un intervallo di testo in un controllo rich edit per un dispositivo specifico.  
   
 ```  
@@ -631,7 +626,7 @@ long FormatRange(
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFC_CRichEditCtrl#10](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_10.cpp)]  
   
-##  <a name="getcharpos"></a>CRichEditCtrl::GetCharPos  
+##  <a name="getcharpos"></a>  CRichEditCtrl::GetCharPos  
  Ottiene la posizione (angolo superiore sinistro) di un carattere specifico all'interno di questa `CRichEditCtrl` oggetto.  
   
 ```  
@@ -650,7 +645,7 @@ CPoint GetCharPos(long lChar) const;
   
  Per ulteriori informazioni, vedere [EM_POSFROMCHAR](http://msdn.microsoft.com/library/windows/desktop/bb761631) in Windows SDK.  
   
-##  <a name="getdefaultcharformat"></a>CRichEditCtrl::GetDefaultCharFormat  
+##  <a name="getdefaultcharformat"></a>  CRichEditCtrl::GetDefaultCharFormat  
  Ottiene il carattere predefinito, gli attributi di questo oggetto di formattazione `CRichEditCtrl` oggetto.  
   
 ```  
@@ -672,7 +667,7 @@ DWORD GetDefaultCharFormat(CHARFORMAT& cf) const;  DWORD GetDefaultCharFormat(CH
 ### <a name="example"></a>Esempio  
   Per vedere l'esempio [SetDefaultCharFormat](#setdefaultcharformat).  
   
-##  <a name="geteventmask"></a>CRichEditCtrl::GetEventMask  
+##  <a name="geteventmask"></a>  CRichEditCtrl::GetEventMask  
  Ottiene la maschera eventi per `CRichEditCtrl` oggetto.  
   
 ```  
@@ -690,7 +685,7 @@ long GetEventMask() const;
 ### <a name="example"></a>Esempio  
   Per vedere l'esempio [CRichEditCtrl::SetEventMask](#seteventmask).  
   
-##  <a name="getfirstvisibleline"></a>CRichEditCtrl::GetFirstVisibleLine  
+##  <a name="getfirstvisibleline"></a>  CRichEditCtrl::GetFirstVisibleLine  
  Determina la prima riga visibile in questa `CRichEditCtrl` oggetto.  
   
 ```  
@@ -706,7 +701,7 @@ int GetFirstVisibleLine() const;
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFC_CRichEditCtrl#11](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_11.cpp)]  
   
-##  <a name="getiricheditole"></a>CRichEditCtrl::GetIRichEditOle  
+##  <a name="getiricheditole"></a>  CRichEditCtrl::GetIRichEditOle  
  Gli accessi di **IRichEditOle** interfaccia per questo `CRichEditCtrl` oggetto.  
   
 ```  
@@ -721,7 +716,7 @@ IRichEditOle* GetIRichEditOle() const;
   
  Per ulteriori informazioni, vedere [EM_GETOLEINTERFACE](http://msdn.microsoft.com/library/windows/desktop/bb788041) messaggio e [IRichEditOle](http://msdn.microsoft.com/library/windows/desktop/bb774306) interfaccia in Windows SDK.  
   
-##  <a name="getlimittext"></a>CRichEditCtrl::GetLimitText  
+##  <a name="getlimittext"></a>  CRichEditCtrl::GetLimitText  
  Ottiene il limite di testo per questo `CRichEditCtrl` oggetto.  
   
 ```  
@@ -739,7 +734,7 @@ long GetLimitText() const;
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFC_CRichEditCtrl#12](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_12.cpp)]  
   
-##  <a name="getline"></a>CRichEditCtrl::GetLine  
+##  <a name="getline"></a>  CRichEditCtrl::GetLine  
  Recupera una riga di testo da questo `CRichEditCtrl` oggetto.  
   
 ```  
@@ -777,7 +772,7 @@ int GetLine(
 ### <a name="example"></a>Esempio  
   Per vedere l'esempio [GetLineCount](#getlinecount).  
   
-##  <a name="getlinecount"></a>CRichEditCtrl::GetLineCount  
+##  <a name="getlinecount"></a>  CRichEditCtrl::GetLineCount  
  Recupera il numero di righe di `CRichEditCtrl` oggetto.  
   
 ```  
@@ -793,7 +788,7 @@ int GetLineCount() const;
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFC_CRichEditCtrl#13](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_13.cpp)]  
   
-##  <a name="getmodify"></a>CRichEditCtrl::GetModify  
+##  <a name="getmodify"></a>  CRichEditCtrl::GetModify  
  Determina se il contenuto di questo `CRichEditCtrl` oggetto sono state modificate.  
   
 ```  
@@ -811,7 +806,7 @@ BOOL GetModify() const;
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFC_CRichEditCtrl#14](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_14.cpp)]  
   
-##  <a name="getoptions"></a>CRichEditCtrl::GetOptions  
+##  <a name="getoptions"></a>  CRichEditCtrl::GetOptions  
  Recupera le opzioni attualmente impostate per il controllo rich edit.  
   
 ```  
@@ -821,7 +816,7 @@ UINT GetOptions() const;
 ### <a name="return-value"></a>Valore restituito  
  Una combinazione dei valori di flag di opzione corrente. Per un elenco di questi valori, vedere il *fOptions* parametro il [EM_SETOPTIONS](http://msdn.microsoft.com/library/windows/desktop/bb774254) del messaggio, come descritto in Windows SDK.  
   
-##  <a name="getparaformat"></a>CRichEditCtrl::GetParaFormat  
+##  <a name="getparaformat"></a>  CRichEditCtrl::GetParaFormat  
  Ottiene il paragrafo formattazione degli attributi della selezione corrente.  
   
 ```  
@@ -845,7 +840,7 @@ DWORD GetParaFormat(PARAFORMAT& pf) const;  DWORD GetParaFormat(PARAFORMAT2& pf)
 ### <a name="example"></a>Esempio  
   Per vedere l'esempio [CRichEditCtrl::SetParaFormat](#setparaformat).  
   
-##  <a name="getpunctuation"></a>CRichEditCtrl::GetPunctuation  
+##  <a name="getpunctuation"></a>  CRichEditCtrl::GetPunctuation  
  Ottiene i caratteri di punteggiatura corrente in un controllo rich edit.  
   
 ```  
@@ -867,7 +862,7 @@ BOOL GetPunctuation(
 ### <a name="remarks"></a>Note  
  Questa funzione membro è disponibile con solo le versioni in lingue asiatiche del sistema operativo.  
   
-##  <a name="getrect"></a>CRichEditCtrl::GetRect  
+##  <a name="getrect"></a>  CRichEditCtrl::GetRect  
  Recupera il rettangolo di formattazione per questo `CRichEditCtrl` oggetto.  
   
 ```  
@@ -876,7 +871,7 @@ void GetRect(LPRECT lpRect) const;
   
 ### <a name="parameters"></a>Parametri  
  `lpRect`  
- [CRect](../../atl-mfc-shared/reference/crect-class.md) o puntatore a un [RECT](../../mfc/reference/rect-structure1.md) per la ricezione di questo rettangolo formattazione `CRichEditCtrl` oggetto.  
+ [CRect](../../atl-mfc-shared/reference/crect-class.md) o un puntatore a un [RECT](../../mfc/reference/rect-structure1.md) per la ricezione di questo rettangolo formattazione `CRichEditCtrl` oggetto.  
   
 ### <a name="remarks"></a>Note  
  Il rettangolo di formattazione è il rettangolo di delimitazione per il testo. Questo valore è indipendente dalla dimensione del `CRichEditCtrl` oggetto.  
@@ -886,7 +881,7 @@ void GetRect(LPRECT lpRect) const;
 ### <a name="example"></a>Esempio  
   Per vedere l'esempio [LimitText](#limittext).  
   
-##  <a name="getredoname"></a>CRichEditCtrl::GetRedoName  
+##  <a name="getredoname"></a>  CRichEditCtrl::GetRedoName  
  Recupera il tipo di azione successiva disponibile nella coda di rollforward, se presente.  
   
 ```  
@@ -899,7 +894,7 @@ UNDONAMEID GetRedoName() const;
 ### <a name="remarks"></a>Note  
  I tipi di azioni che possono essere annullate o ripetute includono digitando, delete, trascinamento e rilascio, tagliare e incollare le operazioni. Queste informazioni possono essere utili per le applicazioni che forniscono un'interfaccia utente estesa per le operazioni di annullamento e ripristino, ad esempio una casella di riepilogo a discesa delle azioni redoable.  
   
-##  <a name="getsel"></a>CRichEditCtrl::GetSel  
+##  <a name="getsel"></a>  CRichEditCtrl::GetSel  
  Recupera i limiti della selezione corrente in questo `CRichEditCtrl` oggetto.  
   
 ```  
@@ -923,9 +918,9 @@ void GetSel(
 ### <a name="remarks"></a>Note  
  Le due forme di questa funzione forniscono dei metodi alternativi per ottenere i limiti per la selezione. Seguono brevi descrizioni delle forme seguenti:  
   
-- **Funzione membro GetSel (** `cr` **)** questo modulo Usa la **struttura CHARRANGE** struttura con il relativo **cpMin** e **cpMax** membri per restituire i limiti.  
+- **Funzione membro GetSel (** `cr` **)** questo modulo Usa la **struttura CHARRANGE** struttura con relativo **cpMin** e **cpMax** ai membri di restituire i limiti.  
   
-- **Funzione membro GetSel (** `nStartChar` **,** `nEndChar` **)** questo modulo restituisce i limiti nei parametri `nStartChar` e `nEndChar`.  
+- **Funzione membro GetSel (** `nStartChar` **,** `nEndChar` **)** questo modulo restituisce i limiti i parametri `nStartChar` e `nEndChar`.  
   
  La selezione include tutti gli elementi, se l'inizio ( **cpMin** o `nStartChar`) è 0 e la fine ( **cpMax** o `nEndChar`) è - 1.  
   
@@ -934,7 +929,7 @@ void GetSel(
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFC_CRichEditCtrl#15](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_15.cpp)]  
   
-##  <a name="getselectioncharformat"></a>CRichEditCtrl::GetSelectionCharFormat  
+##  <a name="getselectioncharformat"></a>  CRichEditCtrl::GetSelectionCharFormat  
  Ottiene il carattere di formattazione degli attributi della selezione corrente.  
   
 ```  
@@ -958,7 +953,7 @@ DWORD GetSelectionCharFormat(CHARFORMAT& cf) const;  DWORD GetSelectionCharForma
 ### <a name="example"></a>Esempio  
   Per vedere l'esempio [SetSelectionCharFormat](#setselectioncharformat).  
   
-##  <a name="getselectiontype"></a>CRichEditCtrl::GetSelectionType  
+##  <a name="getselectiontype"></a>  CRichEditCtrl::GetSelectionType  
  Determina il tipo di selezione in questo `CRichEditCtrl` oggetto.  
   
 ```  
@@ -968,15 +963,15 @@ WORD GetSelectionType() const;
 ### <a name="return-value"></a>Valore restituito  
  Flag che indica il contenuto della selezione corrente. Una combinazione dei flag seguenti:  
   
-- `SEL_EMPTY`Indica che non è stata effettuata alcuna selezione corrente.  
+- `SEL_EMPTY` Indica che non è stata effettuata alcuna selezione corrente.  
   
-- `SEL_TEXT`Indica che la selezione corrente contiene testo.  
+- `SEL_TEXT` Indica che la selezione corrente contiene testo.  
   
-- `SEL_OBJECT`Indica che la selezione corrente contiene almeno un elemento OLE.  
+- `SEL_OBJECT` Indica che la selezione corrente contiene almeno un elemento OLE.  
   
-- `SEL_MULTICHAR`Indica che la selezione corrente contiene più di un carattere di testo.  
+- `SEL_MULTICHAR` Indica che la selezione corrente contiene più di un carattere di testo.  
   
-- `SEL_MULTIOBJECT`Indica che la selezione corrente contiene più di un oggetto OLE.  
+- `SEL_MULTIOBJECT` Indica che la selezione corrente contiene più di un oggetto OLE.  
   
 ### <a name="remarks"></a>Note  
  Per ulteriori informazioni, vedere [EM_SELECTIONTYPE](http://msdn.microsoft.com/library/windows/desktop/bb774223) in Windows SDK.  
@@ -984,7 +979,7 @@ WORD GetSelectionType() const;
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFC_CRichEditCtrl#16](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_16.cpp)]  
   
-##  <a name="getseltext"></a>CRichEditCtrl::GetSelText  
+##  <a name="getseltext"></a>  CRichEditCtrl::GetSelText  
  Recupera il testo dalla selezione corrente in questo `CRichEditCtrl` oggetto.  
   
 ```  
@@ -998,9 +993,9 @@ long GetSelText(LPSTR lpBuf) const;  CString GetSelText() const;
 ### <a name="return-value"></a>Valore restituito  
  Dipende dal formato:  
   
-- **Funzione membro GetSelText (** `lpBuf` **)** il numero di caratteri copiati in `lpBuf`, non include la terminazione null.  
+- **Funzione membro GetSelText (** `lpBuf` **)** il numero di caratteri copiati in `lpBuf`, esclusa la terminazione null.  
   
-- **() Di funzione membro GetSelText** la stringa che contiene la selezione corrente.  
+- **Funzione membro GetSelText ()** la stringa che contiene la selezione corrente.  
   
 ### <a name="remarks"></a>Note  
  Se si utilizza il primo formato, **funzione membro GetSelText (** `lpBuf` **)**, è necessario assicurarsi che il buffer sia sufficientemente grande per il testo verrà visualizzato. Chiamare [funzione membro GetSel](#getsel) per determinare il numero di caratteri nella selezione corrente.  
@@ -1010,7 +1005,7 @@ long GetSelText(LPSTR lpBuf) const;  CString GetSelText() const;
 ### <a name="example"></a>Esempio  
   Per vedere l'esempio [CRichEditCtrl::GetSelectionType](#getselectiontype).  
   
-##  <a name="gettextlength"></a>CRichEditCtrl::GetTextLength  
+##  <a name="gettextlength"></a>  CRichEditCtrl::GetTextLength  
  Recupera la lunghezza del testo in caratteri, in questo `CRichEditCtrl` oggetto, escluso il carattere di terminazione null.  
   
 ```  
@@ -1026,7 +1021,7 @@ long GetTextLength() const;
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFC_CRichEditCtrl#17](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_17.cpp)]  
   
-##  <a name="gettextlengthex"></a>CRichEditCtrl::GetTextLengthEx  
+##  <a name="gettextlengthex"></a>  CRichEditCtrl::GetTextLengthEx  
  Calcola la lunghezza del testo nel controllo rich edit.  
   
 ```  
@@ -1046,9 +1041,9 @@ long GetTextLengthEx(
  Il numero di caratteri o byte di controllo di modifica. Se sono stati impostati i flag incompatibile `dwFlags`, questa funzione membro restituisce `E_INVALIDARG`.  
   
 ### <a name="remarks"></a>Note  
- `GetTextLengthEx`altri modi per determinare la lunghezza del testo. Supporta la funzionalità Rich Edit 2.0. Vedere [sui controlli Rich Edit](http://msdn.microsoft.com/library/windows/desktop/bb787873) in SDKfor il Windows ulteriori informazioni.  
+ `GetTextLengthEx` offre ulteriori metodi per determinare la lunghezza del testo. Supporta la funzionalità Rich Edit 2.0. Vedere [sui controlli Rich Edit](http://msdn.microsoft.com/library/windows/desktop/bb787873) in SDKfor il Windows ulteriori informazioni.  
   
-##  <a name="gettextmode"></a>CRichEditCtrl::GetTextMode  
+##  <a name="gettextmode"></a>  CRichEditCtrl::GetTextMode  
  Recupera il testo in modalità e annullamento livello corrente di un controllo rich edit.  
   
 ```  
@@ -1058,7 +1053,7 @@ UINT GetTextMode() const;
 ### <a name="return-value"></a>Valore restituito  
  Un set di flag di bit del [TEXTMODE](http://msdn.microsoft.com/library/windows/desktop/bb774364) il tipo di enumerazione, come descritto in Windows SDK. I flag indicano la modalità di testo corrente e annullare livello del controllo.  
   
-##  <a name="gettextrange"></a>CRichEditCtrl::GetTextRange  
+##  <a name="gettextrange"></a>  CRichEditCtrl::GetTextRange  
  Ottiene l'intervallo di caratteri specificato.  
   
 ```  
@@ -1084,9 +1079,9 @@ int GetTextRange(
 ### <a name="remarks"></a>Note  
  Per ulteriori informazioni, vedere [EM_GETTEXTRANGE](http://msdn.microsoft.com/library/windows/desktop/bb774199) in Windows SDK.  
   
- `GetTextRange`supporta le funzionalità Rich Edit 2.0. Vedere [sui controlli Rich Edit](http://msdn.microsoft.com/library/windows/desktop/bb787873) in SDKfor il Windows ulteriori informazioni.  
+ `GetTextRange` supporta le funzionalità Rich Edit 2.0. Vedere [sui controlli Rich Edit](http://msdn.microsoft.com/library/windows/desktop/bb787873) in SDKfor il Windows ulteriori informazioni.  
   
-##  <a name="getundoname"></a>CRichEditCtrl::GetUndoName  
+##  <a name="getundoname"></a>  CRichEditCtrl::GetUndoName  
  Recupera il tipo di azione successiva disponibile nella coda di annullamento, se presente.  
   
 ```  
@@ -1099,7 +1094,7 @@ UNDONAMEID GetUndoName() const;
 ### <a name="remarks"></a>Note  
  I tipi di azioni che possono essere annullate o ripetute includono digitando, delete, trascinamento e rilascio, tagliare e incollare le operazioni. Queste informazioni possono essere utili per le applicazioni che forniscono un'interfaccia utente estesa per le operazioni di annullamento e ripristino, ad esempio una casella di riepilogo a discesa delle azioni che possono essere annullate.  
   
-##  <a name="getwordwrapmode"></a>CRichEditCtrl::GetWordWrapMode  
+##  <a name="getwordwrapmode"></a>  CRichEditCtrl::GetWordWrapMode  
  Recupera il ritorno a capo automatico corrente e le opzioni di word breaking per il controllo rich edit.  
   
 ```  
@@ -1112,7 +1107,7 @@ UINT GetWordWrapMode() const;
 ### <a name="remarks"></a>Note  
  Questa funzione membro è disponibile solo per le versioni in lingue asiatiche del sistema operativo.  
   
-##  <a name="hideselection"></a>CRichEditCtrl::HideSelection  
+##  <a name="hideselection"></a>  CRichEditCtrl::HideSelection  
  Modificare la visibilità della selezione.  
   
 ```  
@@ -1136,7 +1131,7 @@ void HideSelection(
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFC_CRichEditCtrl#18](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_18.cpp)]  
   
-##  <a name="limittext"></a>CRichEditCtrl::LimitText  
+##  <a name="limittext"></a>  CRichEditCtrl::LimitText  
  Limita la lunghezza del testo che l'utente può immettere in un controllo di modifica.  
   
 ```  
@@ -1158,7 +1153,7 @@ void LimitText(long nChars = 0);
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFC_CRichEditCtrl#19](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_19.cpp)]  
   
-##  <a name="linefromchar"></a>CRichEditCtrl::LineFromChar  
+##  <a name="linefromchar"></a>  CRichEditCtrl::LineFromChar  
  Recupera il numero di riga della riga che contiene l'indice del carattere specificato.  
   
 ```  
@@ -1180,7 +1175,7 @@ long LineFromChar(long nIndex) const;
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFC_CRichEditCtrl#20](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_20.cpp)]  
   
-##  <a name="lineindex"></a>CRichEditCtrl::LineIndex  
+##  <a name="lineindex"></a>  CRichEditCtrl::LineIndex  
  Recupera l'indice del carattere di una riga all'interno di questa `CRichEditCtrl` oggetto.  
   
 ```  
@@ -1202,7 +1197,7 @@ int LineIndex(int nLine = -1) const;
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFC_CRichEditCtrl#21](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_21.cpp)]  
   
-##  <a name="linelength"></a>CRichEditCtrl::LineLength  
+##  <a name="linelength"></a>  CRichEditCtrl::LineLength  
  Recupera la lunghezza di una riga in un controllo rich edit.  
   
 ```  
@@ -1224,7 +1219,7 @@ int LineLength(int nLine = -1) const;
 ### <a name="example"></a>Esempio  
   Per vedere l'esempio [LineIndex](#lineindex).  
   
-##  <a name="linescroll"></a>CRichEditCtrl::LineScroll  
+##  <a name="linescroll"></a>  CRichEditCtrl::LineScroll  
  Consente di scorrere il testo di un controllo di modifica su più righe.  
   
 ```  
@@ -1243,14 +1238,14 @@ void LineScroll(
 ### <a name="remarks"></a>Note  
  Il controllo di modifica non scorre verticalmente oltre l'ultima riga di testo nel controllo di modifica. Riga corrente più il numero di righe specificato da `nLines` supera il numero totale di righe nel controllo di modifica, il valore viene modificato in modo che l'ultima riga del controllo di modifica è necessario scorrere nella parte superiore della finestra di controllo di modifica.  
   
- `LineScroll`Consente di scorrere orizzontalmente oltre l'ultimo carattere di una riga.  
+ `LineScroll` Consente di scorrere orizzontalmente oltre l'ultimo carattere di una riga.  
   
  Per ulteriori informazioni, vedere [EM_LINESCROLL](http://msdn.microsoft.com/library/windows/desktop/bb761615) in Windows SDK.  
   
 ### <a name="example"></a>Esempio  
   Per vedere l'esempio [GetFirstVisibleLine](#getfirstvisibleline).  
   
-##  <a name="paste"></a>CRichEditCtrl::Paste  
+##  <a name="paste"></a>  CRichEditCtrl::Paste  
  Inserisce i dati dagli Appunti nel `CRichEditCtrl` nel punto di inserimento, la posizione del punto di inserimento.  
   
 ```  
@@ -1265,7 +1260,7 @@ void Paste();
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFC_CRichEditCtrl#22](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_22.cpp)]  
   
-##  <a name="pastespecial"></a>CRichEditCtrl::PasteSpecial  
+##  <a name="pastespecial"></a>  CRichEditCtrl::PasteSpecial  
  Incolla i dati in un formato degli Appunti specifico in ciò `CRichEditCtrl` oggetto.  
   
 ```  
@@ -1293,7 +1288,7 @@ void PasteSpecial(
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFC_CRichEditCtrl#23](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_23.cpp)]  
   
-##  <a name="posfromchar"></a>CRichEditCtrl::PosFromChar  
+##  <a name="posfromchar"></a>  CRichEditCtrl::PosFromChar  
  Recupera le coordinate dell'area client di un carattere specificato in un controllo di modifica.  
   
 ```  
@@ -1310,7 +1305,7 @@ CPoint PosFromChar(UINT nChar) const;
 ### <a name="remarks"></a>Note  
  Per ulteriori informazioni, vedere [EM_POSFROMCHAR](http://msdn.microsoft.com/library/windows/desktop/bb761631) in Windows SDK.  
   
-##  <a name="redo"></a>CRichEditCtrl::Redo  
+##  <a name="redo"></a>  CRichEditCtrl::Redo  
  Ripete l'azione successiva nella coda di rollforward del controllo.  
   
 ```  
@@ -1323,7 +1318,7 @@ BOOL Redo();
 ### <a name="remarks"></a>Note  
  Per ulteriori informazioni, vedere [EM_REDO](http://msdn.microsoft.com/library/windows/desktop/bb774218) in Windows SDK.  
   
-##  <a name="replacesel"></a>CRichEditCtrl::ReplaceSel  
+##  <a name="replacesel"></a>  CRichEditCtrl::ReplaceSel  
  Sostituisce la selezione corrente in questo `CRichEditCtrl` oggetto con il testo specificato.  
   
 ```  
@@ -1351,7 +1346,7 @@ void ReplaceSel(
 ### <a name="example"></a>Esempio  
   Per vedere l'esempio [LineIndex](#lineindex).  
   
-##  <a name="requestresize"></a>CRichEditCtrl::RequestResize  
+##  <a name="requestresize"></a>  CRichEditCtrl::RequestResize  
  Ciò forza `CRichEditCtrl` oggetto a cui inviare **EN_REQUESTRESIZE** messaggi di notifica alla finestra padre.  
   
 ```  
@@ -1363,7 +1358,7 @@ void RequestResize();
   
  Per ulteriori informazioni, vedere il [EM_REQUESTRESIZE](http://msdn.microsoft.com/library/windows/desktop/bb774220) messaggio e **infiniti controlli Rich Edit** sezione [sui controlli Rich Edit](http://msdn.microsoft.com/library/windows/desktop/bb787873) in Windows SDK.  
   
-##  <a name="setautourldetect"></a>CRichEditCtrl::SetAutoURLDetect  
+##  <a name="setautourldetect"></a>  CRichEditCtrl::SetAutoURLDetect  
  Imposta il controllo rich edit per rilevare automaticamente un URL.  
   
 ```  
@@ -1381,9 +1376,9 @@ BOOL SetAutoURLDetect(BOOL bEnable = TRUE);
  Se abilitata, il controllo rich edit analizza il testo per determinare se corrisponde a un formato URL standard. Per un elenco dei formati di URL, vedere [EM_AUTOURLDETECT](http://msdn.microsoft.com/library/windows/desktop/bb787991) in Windows SDK.  
   
 > [!NOTE]
->  Non impostare `SetAutoURLDetect` a **TRUE** se viene utilizzato il controllo di modifica di **CFE_LINK** effetto di testo diversi da URL. `SetAutoURLDetect`Abilita questo effetto per gli URL e si disabilita per tutto il testo rimanente. Vedere [EN_LINK](http://msdn.microsoft.com/library/windows/desktop/bb787970) per ulteriori informazioni sul **CFE_LINK** effetto.  
+>  Non impostare `SetAutoURLDetect` a **TRUE** se viene utilizzato il controllo di modifica di **CFE_LINK** effetto di testo diversi da URL. `SetAutoURLDetect` Abilita questo effetto per gli URL e lo disabilita per tutte le altre stringhe di testo. Vedere [EN_LINK](http://msdn.microsoft.com/library/windows/desktop/bb787970) per ulteriori informazioni sul **CFE_LINK** effetto.  
   
-##  <a name="setbackgroundcolor"></a>CRichEditCtrl::SetBackgroundColor  
+##  <a name="setbackgroundcolor"></a>  CRichEditCtrl::SetBackgroundColor  
  Imposta il colore di sfondo per il `CRichEditCtrl` oggetto.  
   
 ```  
@@ -1410,7 +1405,7 @@ COLORREF SetBackgroundColor(
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFC_CRichEditCtrl#24](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_24.cpp)]  
   
-##  <a name="setdefaultcharformat"></a>CRichEditCtrl::SetDefaultCharFormat  
+##  <a name="setdefaultcharformat"></a>  CRichEditCtrl::SetDefaultCharFormat  
  Imposta la formattazione degli attributi per il nuovo testo in questo carattere `CRichEditCtrl` oggetto.  
   
 ```  
@@ -1435,7 +1430,7 @@ BOOL SetDefaultCharFormat(CHARFORMAT2& cf);
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFC_CRichEditCtrl#25](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_25.cpp)]  
   
-##  <a name="seteventmask"></a>CRichEditCtrl::SetEventMask  
+##  <a name="seteventmask"></a>  CRichEditCtrl::SetEventMask  
  Imposta la maschera eventi per questo `CRichEditCtrl` oggetto.  
   
 ```  
@@ -1457,7 +1452,7 @@ DWORD SetEventMask(DWORD dwEventMask);
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFC_CRichEditCtrl#26](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_26.cpp)]  
   
-##  <a name="setmodify"></a>CRichEditCtrl::SetModify  
+##  <a name="setmodify"></a>  CRichEditCtrl::SetModify  
  Imposta o Cancella il flag modificato per un controllo di modifica.  
   
 ```  
@@ -1476,7 +1471,7 @@ void SetModify(BOOL bModified = TRUE);
 ### <a name="example"></a>Esempio  
   Per vedere l'esempio [GetModify](#getmodify).  
   
-##  <a name="setolecallback"></a>CRichEditCtrl::SetOLECallback  
+##  <a name="setolecallback"></a>  CRichEditCtrl::SetOLECallback  
  Questo fornisce `CRichEditCtrl` oggetto un **IRichEditOleCallback** oggetto da usare per accedere a risorse correlate a OLE e le informazioni.  
   
 ```  
@@ -1495,7 +1490,7 @@ BOOL SetOLECallback(IRichEditOleCallback* pCallback);
   
  Per ulteriori informazioni, vedere [EM_SETOLECALLBACK](http://msdn.microsoft.com/library/windows/desktop/bb774252) messaggio e [IRichEditOleCallback](http://msdn.microsoft.com/library/windows/desktop/bb774308) interfaccia in Windows SDK.  
   
-##  <a name="setoptions"></a>CRichEditCtrl::SetOptions  
+##  <a name="setoptions"></a>  CRichEditCtrl::SetOptions  
  Imposta le opzioni per questa `CRichEditCtrl` oggetto.  
   
 ```  
@@ -1508,13 +1503,13 @@ void SetOptions(
  *wOp*  
  Indica il tipo di operazione. Uno dei valori seguenti:  
   
-- `ECOOP_SET`Impostare le opzioni a quelli specificati tramite `dwFlags`.  
+- `ECOOP_SET` Impostare le opzioni a quelli specificati tramite `dwFlags`.  
   
-- `ECOOP_OR`Combinare le opzioni correnti con quelle specificate da `dwFlags`.  
+- `ECOOP_OR` Combinare le opzioni correnti con quelle specificate dal `dwFlags`.  
   
-- `ECOOP_AND`Mantieni solo le opzioni correnti che vengono specificate anche dal `dwFlags`.  
+- `ECOOP_AND` Mantieni solo le opzioni correnti che vengono specificate anche dal `dwFlags`.  
   
-- `ECOOP_XOR`OR esclusivo logicamente le opzioni correnti con quelle specificate da `dwFlags`.  
+- `ECOOP_XOR` OR logico esclusivo le opzioni correnti con quelle specificate dal `dwFlags`.  
   
  `dwFlags`  
  Opzioni avanzate di modifica. I valori di flag sono elencati nella sezione Osservazioni.  
@@ -1522,28 +1517,28 @@ void SetOptions(
 ### <a name="remarks"></a>Note  
  Le opzioni possono essere una combinazione dei valori seguenti:  
   
-- `ECO_AUTOWORDSELECTION`Fare doppio clic sulla selezione automatica della parola.  
+- `ECO_AUTOWORDSELECTION` Fare doppio clic sulla selezione automatica della parola.  
   
-- `ECO_AUTOVSCROLL`Scorrimento automatico del testo a destra di 10 caratteri quando l'utente digita un carattere alla fine della riga. Quando l'utente preme il tasto INVIO, il controllo scorre tutto il testo nella posizione zero.  
+- `ECO_AUTOVSCROLL` Scorrimento automatico del testo a destra di 10 caratteri quando l'utente digita un carattere alla fine della riga. Quando l'utente preme il tasto INVIO, il controllo scorre tutto il testo nella posizione zero.  
   
-- `ECO_AUTOHSCROLL`Scorre automaticamente il testo verso l'alto di una pagina quando l'utente preme il tasto INVIO sull'ultima riga.  
+- `ECO_AUTOHSCROLL` Scorrimento automatico del testo alto di una pagina quando l'utente preme il tasto INVIO sull'ultima riga.  
   
-- `ECO_NOHIDESEL`Nega il comportamento predefinito per un controllo di modifica. Il comportamento predefinito nasconde la selezione, quando il controllo perde lo stato attivo di input e indicata la selezione, quando il controllo riceve lo stato attivo. Se si specifica `ECO_NOHIDESEL`, il testo selezionato viene invertito, anche se il controllo ha lo stato attivo.  
+- `ECO_NOHIDESEL` Nega il comportamento predefinito per un controllo di modifica. Il comportamento predefinito nasconde la selezione, quando il controllo perde lo stato attivo di input e indicata la selezione, quando il controllo riceve lo stato attivo. Se si specifica `ECO_NOHIDESEL`, il testo selezionato viene invertito, anche se il controllo ha lo stato attivo.  
   
-- `ECO_READONLY`Impedisce all'utente la digitazione o la modifica del testo nel controllo di modifica.  
+- `ECO_READONLY` Impedisce all'utente la digitazione o la modifica del testo nel controllo di modifica.  
   
-- `ECO_WANTRETURN`Specifica che un ritorno a capo deve essere inserito quando l'utente preme il tasto INVIO durante l'immissione di testo in un controllo RichEdit più righe in una finestra di dialogo. Se non si specifica questo stile, premendo il tasto INVIO invia un comando alla finestra padre del controllo rich edit, che riproduce facendo clic sul pulsante predefinito della finestra padre (ad esempio, il pulsante OK nella finestra di dialogo). Questo stile non ha effetto su una riga singola controllo edit.  
+- `ECO_WANTRETURN` Specifica che un ritorno a capo inserito quando l'utente preme il tasto INVIO durante l'immissione di testo in un controllo di più righe rich edit in una finestra di dialogo. Se non si specifica questo stile, premendo il tasto INVIO invia un comando alla finestra padre del controllo rich edit, che riproduce facendo clic sul pulsante predefinito della finestra padre (ad esempio, il pulsante OK nella finestra di dialogo). Questo stile non ha effetto su una riga singola controllo edit.  
   
-- `ECO_SAVESEL`Consente di mantenere la selezione durante il controllo perde lo stato attivo. Per impostazione predefinita, l'intero contenuto del controllo è selezionato quando riacquisisce lo stato attivo.  
+- `ECO_SAVESEL` Consente di mantenere la selezione durante il controllo perde lo stato attivo. Per impostazione predefinita, l'intero contenuto del controllo è selezionato quando riacquisisce lo stato attivo.  
   
-- `ECO_VERTICAL`Disegna il testo e gli oggetti in senso verticale. Questa opzione è disponibile per le lingue dell'Asia.  
+- `ECO_VERTICAL` Disegna il testo e gli oggetti in senso verticale. Questa opzione è disponibile per le lingue dell'Asia.  
   
  Per ulteriori informazioni, vedere [EM_SETOPTIONS](http://msdn.microsoft.com/library/windows/desktop/bb774254) in Windows SDK.  
   
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFC_CRichEditCtrl#27](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_27.cpp)]  
   
-##  <a name="setparaformat"></a>CRichEditCtrl::SetParaFormat  
+##  <a name="setparaformat"></a>  CRichEditCtrl::SetParaFormat  
  Imposta il formato di attributi per la selezione corrente in questo paragrafo `CRichEditCtrl` oggetto.  
   
 ```  
@@ -1568,7 +1563,7 @@ BOOL SetParaFormat(PARAFORMAT2& pf);
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFC_CRichEditCtrl#28](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_28.cpp)]  
   
-##  <a name="setpunctuation"></a>CRichEditCtrl::SetPunctuation  
+##  <a name="setpunctuation"></a>  CRichEditCtrl::SetPunctuation  
  Imposta la punteggiatura in un controllo rich edit.  
   
 ```  
@@ -1590,7 +1585,7 @@ BOOL SetPunctuation(
 ### <a name="remarks"></a>Note  
  Questa funzione membro è disponibile per lingue asiatiche solo le versioni del sistema operativo.  
   
-##  <a name="setreadonly"></a>CRichEditCtrl::SetReadOnly  
+##  <a name="setreadonly"></a>  CRichEditCtrl::SetReadOnly  
  Modifiche di `ECO_READONLY` opzione per l'oggetto `CRichEditCtrl` oggetto.  
   
 ```  
@@ -1612,7 +1607,7 @@ BOOL SetReadOnly(BOOL bReadOnly = TRUE);
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFC_CRichEditCtrl#29](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_29.cpp)]  
   
-##  <a name="setrect"></a>CRichEditCtrl::SetRect  
+##  <a name="setrect"></a>  CRichEditCtrl::SetRect  
  Imposta il rettangolo di formattazione per questo `CRichEditCtrl` oggetto.  
   
 ```  
@@ -1621,7 +1616,7 @@ void SetRect(LPCRECT lpRect);
   
 ### <a name="parameters"></a>Parametri  
  `lpRect`  
- [CRect](../../atl-mfc-shared/reference/crect-class.md) o puntatore a un [RECT](../../mfc/reference/rect-structure1.md) che indica i nuovi limiti per il rettangolo di formattazione.  
+ [CRect](../../atl-mfc-shared/reference/crect-class.md) o un puntatore a un [RECT](../../mfc/reference/rect-structure1.md) che indica i nuovi limiti per il rettangolo di formattazione.  
   
 ### <a name="remarks"></a>Note  
  Il rettangolo di formattazione è il rettangolo di limitazione per il testo. Il rettangolo di limitazione è indipendente dalla dimensione della finestra del controllo rich edit. Quando questo `CRichEditCtrl` oggetto viene creato inizialmente, il rettangolo di formattazione è delle stesse dimensioni dell'area client della finestra. Utilizzare `SetRect` per rendere il rettangolo di formattazione maggiori o minori la finestra rich edit.  
@@ -1631,7 +1626,7 @@ void SetRect(LPCRECT lpRect);
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFC_CRichEditCtrl#30](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_30.cpp)]  
   
-##  <a name="setsel"></a>CRichEditCtrl::SetSel  
+##  <a name="setsel"></a>  CRichEditCtrl::SetSel  
  Imposta la selezione all'interno di questa `CRichEditCtrl` oggetto.  
   
 ```  
@@ -1655,9 +1650,9 @@ void SetSel(CHARRANGE& cr);
 ### <a name="remarks"></a>Note  
  Le due forme di questa funzione forniscono dei metodi alternativi per impostare i limiti per la selezione. Seguono brevi descrizioni delle forme seguenti:  
   
-- **Funzione membro SetSel (** `cr` **)** questo modulo Usa la **struttura CHARRANGE** struttura con il relativo **cpMin** e **cpMax** membri per impostare i limiti.  
+- **Funzione membro SetSel (** `cr` **)** questo modulo Usa la **struttura CHARRANGE** struttura con relativo **cpMin** e **cpMax** ai membri di impostare i limiti.  
   
-- **Funzione membro SetSel (** `nStartChar` **,** `nEndChar` **)** i parametri di utilizzare questo modulo `nStartChar` e `nEndChar` per impostare i limiti.  
+- **Funzione membro SetSel (** `nStartChar` **,** `nEndChar` **)** questo modulo Usa i parametri `nStartChar` e `nEndChar` per impostare i limiti.  
   
  Il cursore viene posizionato alla fine della selezione indicata da maggiore di inizio ( **cpMin** o `nStartChar`) e di fine ( **cpMax** o `nEndChar`) degli indici. Questa funzione esegue uno scorrimento il `CRichEditCtrl` in modo che il punto di inserimento è visibile.  
   
@@ -1668,7 +1663,7 @@ void SetSel(CHARRANGE& cr);
 ### <a name="example"></a>Esempio  
   Per vedere l'esempio [funzione membro GetSel](#getsel).  
   
-##  <a name="setselectioncharformat"></a>CRichEditCtrl::SetSelectionCharFormat  
+##  <a name="setselectioncharformat"></a>  CRichEditCtrl::SetSelectionCharFormat  
  Imposta la formattazione di attributi per il testo nella selezione corrente in questo carattere `CRichEditCtrl` oggetto.  
   
 ```  
@@ -1693,7 +1688,7 @@ BOOL SetSelectionCharFormat(CHARFORMAT2& cf);
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFC_CRichEditCtrl#31](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_31.cpp)]  
   
-##  <a name="settargetdevice"></a>CRichEditCtrl::SetTargetDevice  
+##  <a name="settargetdevice"></a>  CRichEditCtrl::SetTargetDevice  
  Imposta la larghezza di dispositivo e riga di destinazione utilizzata per WYSIWYG (si tratta Ottieni) formattazione in questo `CRichEditCtrl` oggetto.  
   
 ```  
@@ -1728,7 +1723,7 @@ BOOL SetTargetDevice(
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFC_CRichEditCtrl#32](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_32.cpp)]  
   
-##  <a name="settextmode"></a>CRichEditCtrl::SetTextMode  
+##  <a name="settextmode"></a>  CRichEditCtrl::SetTextMode  
  Imposta il livello di modalità o l'annullamento e ripristino di testo per un controllo rich edit.  
   
 ```  
@@ -1747,7 +1742,7 @@ BOOL SetTextMode(UINT fMode);
   
  Questa funzione membro non riesce se il controllo contiene testo. Per assicurarsi che il controllo è vuoto, inviare un [WM_SETTEXT](http://msdn.microsoft.com/library/windows/desktop/ms632644) messaggio con una stringa vuota.  
   
-##  <a name="setundolimit"></a>CRichEditCtrl::SetUndoLimit  
+##  <a name="setundolimit"></a>  CRichEditCtrl::SetUndoLimit  
  Imposta il numero massimo di azioni che possono archiviare nella coda di annullamento.  
   
 ```  
@@ -1764,7 +1759,7 @@ UINT SetUndoLimit(UINT nLimit);
 ### <a name="remarks"></a>Note  
  Per impostazione predefinita, il numero massimo di azioni nella coda di annullamento è 100. Se si aumenta questo numero, si deve essere disponibile memoria sufficiente per contenere il nuovo numero. Per prestazioni ottimali, impostare il limite per il valore minimo possibile.  
   
-##  <a name="setwordcharformat"></a>CRichEditCtrl::SetWordCharFormat  
+##  <a name="setwordcharformat"></a>  CRichEditCtrl::SetWordCharFormat  
  Imposta la formattazione degli attributi per la parola attualmente selezionato in questo carattere `CRichEditCtrl` oggetto.  
   
 ```  
@@ -1789,7 +1784,7 @@ BOOL SetWordCharFormat(CHARFORMAT2& cf);
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFC_CRichEditCtrl#33](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_33.cpp)]  
   
-##  <a name="setwordwrapmode"></a>CRichEditCtrl::SetWordWrapMode  
+##  <a name="setwordwrapmode"></a>  CRichEditCtrl::SetWordWrapMode  
  Imposta le opzioni di word breaking e di ritorno a capo automatico per il ricco di controllo di modifica.  
   
 ```  
@@ -1806,7 +1801,7 @@ UINT SetWordWrapMode(UINT uFlags) const;
 ### <a name="remarks"></a>Note  
  Questo messaggio è disponibile solo nelle versioni in lingue asiatiche del sistema operativo.  
   
-##  <a name="stopgrouptyping"></a>CRichEditCtrl::StopGroupTyping  
+##  <a name="stopgrouptyping"></a>  CRichEditCtrl::StopGroupTyping  
  Arresta il controllo da raccogliere ulteriori digitando azioni nell'azione di annullamento corrente.  
   
 ```  
@@ -1818,7 +1813,7 @@ void StopGroupTyping();
   
  Per ulteriori informazioni, vedere [EM_STOPGROUPTYPING](http://msdn.microsoft.com/library/windows/desktop/bb774300) in Windows SDK.  
   
-##  <a name="streamin"></a>CRichEditCtrl::StreamIn  
+##  <a name="streamin"></a>  CRichEditCtrl::StreamIn  
  Sostituisce il testo in questo `CRichEditCtrl` oggetto con il testo dal flusso di input specificato.  
   
 ```  
@@ -1840,9 +1835,9 @@ long StreamIn(
 ### <a name="remarks"></a>Note  
  Il valore di `nFormat` deve essere uno dei seguenti:  
   
-- `SF_TEXT`Indica solo lettura di testo.  
+- `SF_TEXT` Indica il solo testo durante la lettura.  
   
-- `SF_RTF`Indica il testo di lettura e la formattazione.  
+- `SF_RTF` Indica di lettura di testo e formattazione.  
   
  Uno di questi valori possono essere combinato con `SFF_SELECTION`. Se `SFF_SELECTION` è specificato, `StreamIn` sostituisce la selezione corrente con il contenuto del flusso di input. Se non è specificato, `StreamIn` sostituisce l'intero contenuto di questo `CRichEditCtrl` oggetto.  
   
@@ -1855,7 +1850,7 @@ long StreamIn(
   
  [!code-cpp[NVC_MFC_CRichEditCtrl#35](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_35.cpp)]  
   
-##  <a name="streamout"></a>CRichEditCtrl::StreamOut  
+##  <a name="streamout"></a>  CRichEditCtrl::StreamOut  
  Scrive il contenuto di questo `CRichEditCtrl` oggetto nel flusso di output specificato.  
   
 ```  
@@ -1877,13 +1872,13 @@ long StreamOut(
 ### <a name="remarks"></a>Note  
  Il valore di `nFormat` deve essere uno dei seguenti:  
   
-- `SF_TEXT`Indica di scrittura di solo testo.  
+- `SF_TEXT` Indica la scrittura solo in testo.  
   
-- `SF_RTF`Indica di scrittura di testo e formattazione.  
+- `SF_RTF` Indica la formattazione di problemi e la scrittura di testo.  
   
-- `SF_RTFNOOBJS`Indica di scrittura di testo e formattazione, sostituendo gli elementi OLE con spazi.  
+- `SF_RTFNOOBJS` Indica scrittura di testo e formattazione, sostituendo gli elementi OLE con spazi.  
   
-- `SF_TEXTIZED`Indica di scrittura di testo e formattazione, con rappresentazioni di elementi OLE.  
+- `SF_TEXTIZED` Indica di scrittura di testo e formattazione, con rappresentazioni di elementi OLE.  
   
  Questi valori possono essere combinati con `SFF_SELECTION`. Se `SFF_SELECTION` è specificato, `StreamOut` scrive la selezione corrente nel flusso di output. Se non è specificato, `StreamOut` scrive l'intero contenuto di questo `CRichEditCtrl` oggetto.  
   
@@ -1896,7 +1891,7 @@ long StreamOut(
   
  [!code-cpp[NVC_MFC_CRichEditCtrl#37](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_37.cpp)]  
   
-##  <a name="undo"></a>CRichEditCtrl::Undo  
+##  <a name="undo"></a>  CRichEditCtrl::Undo  
  Annulla l'ultima operazione nel controllo rich edit.  
   
 ```  

@@ -1,13 +1,10 @@
 ---
 title: CMake progetti in Visual C++ | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 08/08/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,14 +12,13 @@ helpviewer_keywords:
 ms.assetid: 444d50df-215e-4d31-933a-b41841f186f8
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8b9f00e511be43e5a6b77abae6394013e4e33a34
-ms.sourcegitcommit: 2cca90d965f76ebf1d741ab901693a15d5b8a4df
+ms.openlocfilehash: f3a65ae6cc58f649fee5f47b33a146263a3b6c55
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/24/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmake-projects-in-visual-c"></a>CMake progetti in Visual C++
 
@@ -198,7 +194,7 @@ Nell'esempio seguente viene illustrato un esempio di configurazione, è possibil
 
 
     - "Ninja"
-    - "Visual Studio 14 2015"
+    - "Visual Studio 2015 14"
     - "Visual Studio 2015 14 ARM"
     - "Visual Studio 14 2015 Win64"
     - "Visual Studio 15 2017"

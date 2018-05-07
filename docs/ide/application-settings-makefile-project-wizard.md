@@ -1,13 +1,10 @@
 ---
 title: Impostazioni applicazione, creazione guidata progetto Makefile | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.appwiz.makefile.appset
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - Makefile Project Wizard, application settings
 ms.assetid: e0cbce59-5984-4f68-8a1d-f7fb2007c9b4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1ff4bd61f63790f7e59d2f6a1a03ea2802b9e158
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 07459cd4971ea6aec95b632e5c03618248cca401
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="application-settings-makefile-project-wizard"></a>Impostazioni applicazione, Creazione guidata progetto makefile
 Fornire le informazioni per il progetto. Le opzioni vengono applicate al progetto [pagina delle proprietà](../ide/working-with-project-properties.md). Dopo aver creato il progetto, è possibile visualizzare e modificare ognuna delle seguenti opzioni di **Nmake** pagina della pagina delle proprietà del progetto.  
@@ -39,7 +34,7 @@ Fornire le informazioni per il progetto. Le opzioni vengono applicate al progett
  **Comandi per la pulitura**  
  Specifica la riga di comando da eseguire quando l'utente seleziona **Pulisci** dal **compilare** menu. Nella **Pulisci da riga di comando** nel campo il **Nmake** pagina della pagina delle proprietà del progetto.  
   
- **Ricompila la riga di comando**  
+ **Riga di comando di ricompilare**  
  Specifica la riga di comando da eseguire quando l'utente seleziona **ricompilare** dal **compilare** menu. Nella **Ricompila tutto da riga di comando** nel campo il **Nmake** pagina della pagina delle proprietà del progetto.  
   
 ## <a name="see-also"></a>Vedere anche  

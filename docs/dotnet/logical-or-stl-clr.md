@@ -2,11 +2,8 @@
 title: logical_or (STL/CLR) | Documenti Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::logical_or
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - logical_or function [STL/CLR]
 ms.assetid: 3b5eac9b-4aaf-4395-8d76-49100487d85a
-caps.latest.revision: 16
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 7d80fd86c0426d54a803c3111911f284507bcb11
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 225064209417da2ffefbaa62fdd7d1add2267c5b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="logicalor-stlclr"></a>logical_or (STL/CLR)
 La classe modello descrive una funzione che, quando viene chiamato, restituisce true solo se il primo argomento o il secondo test come true. Utilizzare, specificare un oggetto funzione in relazione al relativo tipo di argomento.  
@@ -128,7 +123,7 @@ int main()
 ```  
   
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** \<cliext funzionali >  
+ **Intestazione:** \<cliext/funzionale >  
   
  **Namespace:** cliext  
   

@@ -1,13 +1,10 @@
 ---
 title: Classi DAO | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.classes.data
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - database classes [MFC], DAO
 - DAO [MFC], classes
 ms.assetid: b15d0cd6-328b-4288-9c19-d037a795db57
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c80351071318b88956fa3717875561bdf30232dc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f43595ca5f688372a70999231ceebec5282cd3b6
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dao-classes"></a>Classi DAO
 Queste classi vengono utilizzate con le altre classi di framework applicazione per fornire facile accesso ai database oggetto DAO (Data Access), che utilizzano lo stesso motore di database di Microsoft Visual Basic e Microsoft Access. Le classi DAO accessibile anche un'ampia gamma di database per cui sono disponibili driver Open Database Connectivity (ODBC).  
@@ -62,7 +57,7 @@ Queste classi vengono utilizzate con le altre classi di framework applicazione p
   
 ## <a name="related-classes"></a>Classi correlate  
  [CLongBinary](../mfc/reference/clongbinary-class.md)  
- Incapsula un handle di archiviazione per un oggetto binario di grandi dimensioni (BLOB), ad esempio una bitmap. `CLongBinary`gli oggetti vengono utilizzati per gestire gli oggetti di grandi quantità di dati archiviati nelle tabelle di database.  
+ Incapsula un handle di archiviazione per un oggetto binario di grandi dimensioni (BLOB), ad esempio una bitmap. `CLongBinary` gli oggetti vengono utilizzati per gestire gli oggetti di grandi quantità di dati archiviati nelle tabelle di database.  
   
  [COleCurrency](../mfc/reference/colecurrency-class.md)  
  Wrapper per il tipo di automazione OLE **valuta**, un tipo aritmetico a virgola fissa, con 15 cifre prima del separatore decimale e 4 cifre dopo.  

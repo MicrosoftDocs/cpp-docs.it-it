@@ -1,39 +1,37 @@
 ---
 title: Crea dichiarazione / definizione | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/16/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- cpp-ide
+ms.topic: conceptual
 ms.assetid: 6b1cdcb2-765e-4b93-8cef-92b861f64eba
 author: mikeblome
 ms.author: mblome
-manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 889c8acf5e0ef0ed6a7ac90088a6188658d49d75
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 60d583ec47a3f9c5b61599a5945e3cfa0d375b1d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="create-declaration--definition"></a>Crea dichiarazione/definizione
-**Novità:** consente di generare immediatamente la dichiarazione o definizione di una funzione.
+**Che cosa:** consente di generare immediatamente la dichiarazione o definizione di una funzione.
 
-**Quando:** una funzione che richiede un xsl, o viceversa.  
+**Quando:** si dispone di una funzione che richiede un xsl, o viceversa.  
 
-**Motivo:** è possibile creare manualmente la dichiarazione/definizione, ma questo verrà creata automaticamente, la creazione del file di intestazione/codice, se necessario.
+**Motivo:** è possibile creare manualmente la dichiarazione/definizione, ma questo verrà creata automaticamente, la creazione del file di intestazione/codice se necessario.
 
-**Procedura:**
+**Come:**
 
 1. La funzione per cui si desidera creare la dichiarazione o definizione, posizionare il cursore di testo o il mouse.
 
    ![Codice evidenziato](images/createdefinition_highlight.png)
 
-1. Successivamente, eseguire una delle operazioni seguenti:
+1. Eseguire quindi una delle operazioni seguenti:
    * **Tastiera**
-     * Premere **Ctrl +.** Per attivare il **azioni rapide e refactoring** dal menu **Crea dichiarazione / definizione** dal menu di scelta rapida.
+     * Premere **CTRL+.** Per attivare il **azioni rapide e refactoring** dal menu **Crea dichiarazione / definizione** dal menu di scelta rapida.
    * **Mouse**
      * Mouse e scegliere il **azioni rapide e refactoring** dal menu **Crea dichiarazione / definizione** dal menu di scelta rapida.
 

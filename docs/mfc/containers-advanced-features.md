@@ -1,13 +1,10 @@
 ---
-title: "Contenitori: Funzionalità avanzate | Documenti Microsoft"
-ms.custom: 
+title: 'Contenitori: Funzionalità avanzate | Documenti Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - server/container applications [MFC]
 - containers [MFC], container applications
 ms.assetid: 221fd99c-b138-40fa-ad6a-974e3b3ad1f8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4e79b1c88996e835a907129fa5810d4c4dca0770
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1ff48585a7f3e19939e8d951c513a8d39c0de47e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="containers-advanced-features"></a>Contenitori: funzionalità avanzate
 In questo articolo vengono descritti i passaggi necessari per incorporare funzionalità avanzate facoltative nelle applicazioni contenitore esistenti. Tali funzionalità sono:  
@@ -40,7 +35,7 @@ In questo articolo vengono descritti i passaggi necessari per incorporare funzio
   
 -   [Un collegamento OLE a un oggetto incorporato](#_core_links_to_embedded_objects)  
   
-##  <a name="_core_creating_a_container_server_application"></a>Creazione di un'applicazione contenitore/Server  
+##  <a name="_core_creating_a_container_server_application"></a> Creazione di un'applicazione contenitore/Server  
  Un'applicazione contenitore/server è un'applicazione che funge sia da contenitore che da server. Microsoft Word per Windows ne è un esempio. È possibile incorporare i documenti di Word per Windows in altre applicazioni ed è inoltre possibile importare elementi nei documenti di Word per Windows. La procedura che consente di trasformare un'applicazione sia in un contenitore che in un server completo (non è possibile creare un'applicazione contenitore/server ridotto) è analoga a quella per la creazione di un server completo.  
   
  L'articolo [server: implementazione di un Server](../mfc/servers-implementing-a-server.md) elencata una serie di attività necessarie per implementare un'applicazione server. Per convertire un'applicazione contenitore in un'applicazione contenitore/server, è necessario eseguire alcune di quelle attività, con l'aggiunta di codice al contenitore. Di seguito vengono elencati i principali aspetti da considerare:  
@@ -57,7 +52,7 @@ In questo articolo vengono descritti i passaggi necessari per incorporare funzio
   
  Notare che non è possibile inserire un'applicazione MDI in se stessa. Un'applicazione contenitore/server non può essere inserita in se stessa a meno che non sia un'applicazione SDI.  
   
-##  <a name="_core_links_to_embedded_objects"></a>Collegamenti a oggetti incorporati  
+##  <a name="_core_links_to_embedded_objects"></a> Collegamenti a oggetti incorporati  
  I collegamenti alla funzionalità Oggetti incorporati consentono all'utente di creare un documento con un collegamento OLE a un oggetto incorporato all'interno dell'applicazione contenitore. Ad esempio, è possibile creare un documento in un elaboratore di testo contenente un foglio di calcolo incorporato. Se l'applicazione supporta i collegamenti a oggetti incorporati, è possibile incollare un collegamento al foglio di calcolo contenuto nel documento dell'elaboratore di testo. Questa funzionalità consente all'applicazione di utilizzare le informazioni contenute nel foglio di lavoro senza sapere da dove provenga originariamente.  
   
 #### <a name="to-link-to-embedded-objects-in-your-application"></a>Per eseguire il collegamento a oggetti incorporati nell'applicazione  

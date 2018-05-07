@@ -1,13 +1,10 @@
 ---
 title: Gestione e Mapping dei messaggi | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,24 +12,22 @@ helpviewer_keywords:
 - message handling [MFC]
 - message maps [MFC]
 ms.assetid: 62fe2a1b-944c-449d-a0f0-63c11ee0a3cb
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1e6c13ed0bb19ef1ed2864378e151c6be8d98887
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 66171c5df636597a2ff6be0438b558dc418b72af
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="message-handling-and-mapping"></a>Gestione e mapping dei messaggi
 La famiglia di questo articolo descrive la modalità di elaborazione di messaggi e comandi nel framework MFC e come vengono collegati alle relative funzioni di gestione.  
   
  Nei programmi tradizionali per Windows, i messaggi di Windows vengono gestiti in un'istruzione switch di grandi dimensioni in una routine della finestra. MFC utilizza invece [mappe messaggi](../mfc/message-categories.md) eseguire il mapping di messaggi diretti a funzioni membro della classe distinti. Mappe messaggi sono più efficienti di funzioni virtuali per questo scopo e consentire i messaggi devono essere gestiti da oggetto C++ più appropriato, applicazione, documenti, visualizzazione e così via. È possibile eseguire il mapping di un singolo messaggio o un intervallo di messaggi, ID di comando, o ID di controllo.  
   
- **WM_COMMAND** messaggi, di solito generati dal menu, pulsanti della barra degli strumenti o i tasti di scelta rapida, anche utilizzare il meccanismo della mappa messaggi. MFC definisce uno standard [routing](../mfc/command-routing.md) dei messaggi di comando tra l'applicazione, cornice finestra, visualizzazione e i documenti attivi nel programma. È possibile eseguire l'override di questo ciclo se è necessario.  
+ **WM_COMMAND** messaggi, di solito generati dal menu, pulsanti della barra degli strumenti o i tasti di scelta rapida, ovvero anche utilizzare il meccanismo della mappa messaggi. MFC definisce uno standard [routing](../mfc/command-routing.md) dei messaggi di comando tra l'applicazione, cornice finestra, visualizzazione e i documenti attivi nel programma. È possibile eseguire l'override di questo ciclo se è necessario.  
   
  Mappe messaggi inoltre forniscono un modo per aggiornare oggetti dell'interfaccia utente (ad esempio menu e pulsanti della barra degli strumenti), abilitazione o disabilitazione in modo da soddisfare il contesto corrente.  
   
@@ -42,7 +37,7 @@ La famiglia di questo articolo descrive la modalità di elaborazione di messaggi
   
 -   [Messaggi e comandi nel framework](../mfc/messages-and-commands-in-the-framework.md)  
   
--   [La modalità con cui il framework chiama un gestore di messaggi](../mfc/how-the-framework-calls-a-handler.md)  
+-   [Modo in cui il framework chiama un gestore di messaggi](../mfc/how-the-framework-calls-a-handler.md)  
   
 -   [Come vengono cercate le mappe messaggi nel framework](../mfc/how-the-framework-searches-message-maps.md)  
   

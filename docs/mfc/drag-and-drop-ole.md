@@ -1,13 +1,10 @@
 ---
 title: Trascinamento della selezione (OLE) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - drag and drop [MFC], about OLE drag and drop
 - OLE drag and drop [MFC]
 ms.assetid: a4595350-ca06-4400-88a1-f0175c76b77b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2a852e597c06a08c3e9eb83731dc7da7df077435
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: cc23c7695bf5afa22734c382ddc72e8418ff74c5
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="drag-and-drop-ole"></a>Trascinamento della selezione (OLE)
 La funzionalità di trascinamento e rilascio OLE è principalmente un collegamento per copiare e incollare i dati. Quando si utilizzano gli Appunti per copiare o incollare i dati, è necessaria una serie di passaggi. Selezionare i dati, fare clic su **Taglia** o **copia** dal **modifica** menu, spostare il file di destinazione, una finestra o applicazione, posizionare il cursore nella posizione desiderata e fare clic su **Incolla** dal **modifica** menu.  

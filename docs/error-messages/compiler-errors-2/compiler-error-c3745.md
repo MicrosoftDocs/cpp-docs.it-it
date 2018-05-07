@@ -1,12 +1,9 @@
 ---
 title: Errore del compilatore C3745 | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C3745
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C3745
 ms.assetid: 1e64aec5-7e53-47e5-bc7d-3905230cfc66
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 154f0d48e6d276ed5873f3818dd15a0ff57c9852
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d97177fb51aecf668a041e43218ccb342f6c15b9
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-error-c3745"></a>Errore del compilatore C3745
 'function': possibile 'generare' un solo evento  

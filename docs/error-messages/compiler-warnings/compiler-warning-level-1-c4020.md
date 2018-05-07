@@ -2,11 +2,8 @@
 title: Compilatore (livello 1) Avviso C4020 | Documenti Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: ''
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C4020
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C4020
 ms.assetid: 8c4cd6be-9371-4c8c-b0ff-a5ad367bbab0
-caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8baceb4b0ad81b62a4be2bd0edc6bf4b95a4e48a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0bb7926e22802178ff3cbcb710fbc9b74e7138f4
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-warning-level-1-c4020"></a>Compilatore (livello 1) Avviso C4020
 'function': troppi parametri effettivi  

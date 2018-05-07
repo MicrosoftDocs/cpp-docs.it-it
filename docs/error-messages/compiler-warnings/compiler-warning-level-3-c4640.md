@@ -1,12 +1,9 @@
 ---
 title: Compilatore avviso (livello 3) C4640 | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C4640
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C4640
 ms.assetid: f76871f6-e436-4c35-9793-d2f22f7e1c7f
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2510a74301486c26afcf7499b1f5920d84bab644
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 34c55334b49ac325d23f73e9ceaaa8613ca9c45d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-warning-level-3-c4640"></a>Avviso del compilatore (livello 3) C4640
 'instance': la costruzione di oggetti statici locali non è thread-safe  

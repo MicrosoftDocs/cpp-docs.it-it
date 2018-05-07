@@ -1,12 +1,9 @@
 ---
 title: Compilatore avviso (livello 4) C4623 | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C4623
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C4623
 ms.assetid: e630d8d0-f6ea-469c-a74f-07b027587225
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d9a47f0cc967011465286329461abc72eccb8c80
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 61e776f38d1c17c52d06a58db3e90fdea73863c0
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-warning-level-4-c4623"></a>Avviso del compilatore (livello 4) C4623
 '`derived class`': il costruttore predefinito è stato definito in modo implicito come eliminato perché un costruttore predefinito della classe di base è inaccessibile o è stato eliminato  

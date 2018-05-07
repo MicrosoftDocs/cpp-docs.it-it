@@ -1,12 +1,9 @@
 ---
 title: Compilatore avviso (livello 4) C4514 | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C4514
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C4514
 ms.assetid: cdae966a-9cd4-4e31-af30-2a014e68f614
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b6c9ac776c108a84c813ca814bc674dec4999e31
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 89b61155b42cf6ba9106c5079ebbf74d4050cf99
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-warning-level-4-c4514"></a>Avviso del compilatore (livello 4) C4514
 'function': funzione inline senza riferimenti rimossa  

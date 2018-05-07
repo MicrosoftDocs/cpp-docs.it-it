@@ -1,13 +1,10 @@
 ---
-title: "Pagine delle proprietà MIDL | Documenti Microsoft"
-ms.custom: 
+title: Pagine delle proprietà MIDL | Documenti Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - MIDL, property pages
 - property pages, MIDL
 ms.assetid: 57498a01-fccc-4a0e-a036-6ff702f83126
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 61bf005ca65948ea347fb6fed71db108628402b4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f4b32aaa7626bcb5cfabc59e0d3b9554d73379e5
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="midl-property-pages"></a>Pagine delle proprietà MIDL
 Il **MIDL** nodo contiene diverse pagine delle proprietà. Per accedervi, Fare clic sul file idl in **Esplora**.  

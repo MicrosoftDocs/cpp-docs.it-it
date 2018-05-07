@@ -1,13 +1,10 @@
 ---
 title: Modifica del controllo Progress | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - controlling progress controls [MFC]
 - CProgressCtrl class [MFC], using
 ms.assetid: 9af561d1-980b-4003-a6da-ff79be15bf23
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c75866cdcf947745db741a6626f01215e58932e3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 415061306c5e743b9ed95ee5c7105133d2e4d340
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="manipulating-the-progress-control"></a>Modifica del controllo Progress
 Esistono tre modi per modificare la posizione corrente di un controllo di stato di avanzamento ([CProgressCtrl](../mfc/reference/cprogressctrl-class.md)).  
@@ -45,11 +40,11 @@ Esistono tre modi per modificare la posizione corrente di un controllo di stato 
 2.  Utilizzare il [StepIt](../mfc/reference/cprogressctrl-class.md#stepit) funzione membro per incrementare la posizione. In questo modo il controllo venga ricreato.  
   
     > [!NOTE]
-    >  `StepIt`provoca la posizione eseguire il wrapping. Ad esempio, dato un intervallo di 1 -100, un passaggio di 20 e una posizione di 90, `StepIt` imposterà la posizione a 10.  
+    >  `StepIt` comporterà il ritorno a capo. Ad esempio, dato un intervallo di 1 -100, un passaggio di 20 e una posizione di 90, `StepIt` imposterà la posizione a 10.  
   
 ### <a name="to-change-the-position-by-an-arbitrary-amount"></a>Per modificare la posizione da una quantità arbitraria  
   
-1.  Utilizzare il [OffsetPos](../mfc/reference/cprogressctrl-class.md#offsetpos) funzione membro per modificare la posizione. `OffsetPos`accetta valori negativi.  
+1.  Utilizzare il [OffsetPos](../mfc/reference/cprogressctrl-class.md#offsetpos) funzione membro per modificare la posizione. `OffsetPos` accetta i valori negativi.  
   
     > [!NOTE]
     >  `OffsetPos`, a differenza di `StepIt`, la posizione non andrà a capo. La nuova posizione viene adattata in modo che all'interno dell'intervallo.  

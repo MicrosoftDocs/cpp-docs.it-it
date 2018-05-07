@@ -1,12 +1,9 @@
 ---
 title: Messaggi di vettorizzazione e parallelizzazione | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C5011
@@ -17,17 +14,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: d8f4844a-f414-42ab-b9a5-925a5da9d365
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 26d33c64fd57d9f0e9f9a33de6097601e65aa67d
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: b5ae296c468ce132b4ddcebe8a8894c1ba53e751
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="vectorizer-and-parallelizer-messages"></a>Messaggi di vettorizzazione e parallelizzazione
 È possibile utilizzare le opzioni del compilatore Visual C++ [/qpar](../../build/reference/qpar-report-auto-parallelizer-reporting-level.md) e [/Qvec-report](../../build/reference/qvec-report-auto-vectorizer-reporting-level.md) per impostare il [parallelizzazione automatica e vettorizzazione automatica](../../parallel/auto-parallelization-and-auto-vectorization.md) ai codici di motivo di output e messaggi informativi sulla relativa attività. In questo articolo viene illustrato il significato dei codici e dei messaggi.  
@@ -48,7 +43,7 @@ ms.lasthandoff: 01/03/2018
   
 -   [15xx](#BKMK_ReasonCode150x)  
   
-##  <a name="BKMK_InformationalMessages"></a>Messaggi informativi  
+##  <a name="BKMK_InformationalMessages"></a> Messaggi informativi  
  A seconda del livello di creazione rapporti specificato, per ogni ciclo verrà visualizzato uno dei messaggi informativi seguenti.  
   
  Per informazioni sui codici, leggere la parte successiva di questo articolo.  
@@ -64,7 +59,7 @@ ms.lasthandoff: 01/03/2018
 ## <a name="reason-codes"></a>Codici  
  Nelle sezioni seguenti sono elencati i codici possibili per la parallelizzazione automatica e la vettorizzazione automatica.  
   
-###  <a name="BKMK_ReasonCode50x"></a>5xx  
+###  <a name="BKMK_ReasonCode50x"></a> 5xx  
  I 5*xx* codici motivo si applicano a sia la parallelizzazione automatica e vettorizzazione automatica.  
   
 |Codice motivo|Descrizione|  
@@ -227,7 +222,7 @@ void code_504(int *A) {
   
 ```  
   
-###  <a name="BKMK_ReasonCode100x"></a>10xx  
+###  <a name="BKMK_ReasonCode100x"></a> 10xx  
  Le 10*xx* codici motivo riguardano la parallelizzazione automatica.  
   
 |Codice motivo|Descrizione|  
@@ -436,7 +431,7 @@ void code_1010()
   
 ```  
   
-###  <a name="BKMK_ReasonCode110x"></a>11xx  
+###  <a name="BKMK_ReasonCode110x"></a> 11xx  
  L'11*xx* codici motivo si applicano alla vettorizzazione automatica.  
   
 |Codice motivo|Descrizione|  
@@ -584,7 +579,7 @@ void code_1106(int *A)
   
 ```  
   
-###  <a name="BKMK_ReasonCode120x"></a>12xx  
+###  <a name="BKMK_ReasonCode120x"></a> 12xx  
  Il 12*xx* codici motivo si applicano alla vettorizzazione automatica.  
   
 |Codice motivo|Descrizione|  
@@ -659,7 +654,7 @@ void code_1203(int *A)
   
 ```  
   
-###  <a name="BKMK_ReasonCode130x"></a>13xx  
+###  <a name="BKMK_ReasonCode130x"></a> 13xx  
  Il 13*xx* codici motivo si applicano alla vettorizzazione automatica.  
   
 |Codice motivo|Descrizione|  
@@ -791,16 +786,16 @@ void code_1305( S_1305 *s, S_1305 x)
   
 ```  
   
-###  <a name="BKMK_ReasonCode140x"></a>14xx  
+###  <a name="BKMK_ReasonCode140x"></a> 14xx  
  Il 14*xx* motivo codici si verificano quando viene specificata un'opzione che non è compatibile con la vettorizzazione automatica.  
   
 |Codice motivo|Descrizione|  
 |-----------------|-----------------|  
-|1400|**loop (no_vector) #pragma** specificato.|  
+|1400|**loop (no_vector) #pragma** è specificato.|  
 |1401|**/kernel** viene specificata l'opzione quando la destinazione è x86 o ARM.|  
-|1402|**/arch: SSE2** o superiore commutatore non si specifica la piattaforma x86.|  
+|1402|**/ arch:SSE2** o superiore parametro non viene specificato quando la destinazione è x86.|  
 |1403|**/arch:Atom** viene specificata l'opzione e il ciclo include operazioni su variabili Double.|  
-|1404|**/O1** o **/Os** viene specificata l'opzione.|  
+|1404|**/ O1** oppure **/Os** viene specificata l'opzione.|  
 |1405|La vettorizzazione è disabilitata per favorire l'ottimizzazione inizializzatore dinamico - inizializzatore statico.|  
   
 ```cpp  
@@ -863,7 +858,7 @@ void code_1404(int *A)
   
 ```  
   
-###  <a name="BKMK_ReasonCode150x"></a>15xx  
+###  <a name="BKMK_ReasonCode150x"></a> 15xx  
  Il blocco di 15*xx* codici riguardano l'aliasing. Si verifica una condizione di aliasing quando una posizione in memoria è accessibile da due nomi diversi  
   
 |Codice motivo|Descrizione|  
@@ -994,7 +989,7 @@ void code_1505(int *A, int *B)
 ## <a name="see-also"></a>Vedere anche  
  [Parallelizzazione automatica e vettorizzazione automatica](../../parallel/auto-parallelization-and-auto-vectorization.md)   
  [Programmazione parallela in codice nativo](http://go.microsoft.com/fwlink/p/?linkid=263662)   
- [loop () #pragma](../../preprocessor/loop.md)   
+ [#pragma loop)](../../preprocessor/loop.md)   
  [Opzioni /Q (operazioni di basso livello)](../../build/reference/q-options-low-level-operations.md)   
  [/Qvec-report (livello segnalazione parallelizzazione automatica)](../../build/reference/qpar-report-auto-parallelizer-reporting-level.md)   
  [/Qvec/report (livello di segnalazione vettorizzazione automatica)](../../build/reference/qvec-report-auto-vectorizer-reporting-level.md)

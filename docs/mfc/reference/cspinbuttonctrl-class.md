@@ -1,12 +1,9 @@
 ---
 title: CSpinButtonCtrl (classe) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CSpinButtonCtrl
@@ -41,17 +38,15 @@ helpviewer_keywords:
 - CSpinButtonCtrl [MFC], SetPos
 - CSpinButtonCtrl [MFC], SetRange
 ms.assetid: 509bfd76-1c5a-4af6-973f-e133c0b87734
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1b00fc554c6ca677756cf6a9a9c7fa83cd9d255f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 43b0967309813603e4f683f35c3ca51dce99fd8c
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cspinbuttonctrl-class"></a>CSpinButtonCtrl (classe)
 Fornisce la funzionalità del controllo pulsante di selezione comune di Windows.  
@@ -112,7 +107,7 @@ class CSpinButtonCtrl : public CWnd
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** afxcmn.h  
   
-##  <a name="create"></a>CSpinButtonCtrl::Create  
+##  <a name="create"></a>  CSpinButtonCtrl::Create  
  Crea un controllo pulsante di selezione e lo collega a un `CSpinButtonCtrl` oggetto...  
   
 ```  
@@ -144,7 +139,7 @@ virtual BOOL Create(
   
  Per creare un controllo pulsante di selezione con stili finestra estesi, chiamare [CSpinButtonCtrl::CreateEx](#createex) anziché **crea**.  
   
-##  <a name="createex"></a>CSpinButtonCtrl::CreateEx  
+##  <a name="createex"></a>  CSpinButtonCtrl::CreateEx  
  Crea un controllo (una finestra figlio) e la associa il `CSpinButtonCtrl` oggetto.  
   
 ```  
@@ -178,14 +173,14 @@ virtual BOOL CreateEx(
 ### <a name="remarks"></a>Note  
  Utilizzare `CreateEx` anziché [crea](#create) per applicare stili estesi di Windows, specificati per il prefisso di stile esteso di Windows **WS_EX _**.  
   
-##  <a name="cspinbuttonctrl"></a>CSpinButtonCtrl::CSpinButtonCtrl  
+##  <a name="cspinbuttonctrl"></a>  CSpinButtonCtrl::CSpinButtonCtrl  
  Costruisce un oggetto `CSpinButtonCtrl`.  
   
 ```  
 CSpinButtonCtrl();
 ```  
   
-##  <a name="getaccel"></a>CSpinButtonCtrl::GetAccel  
+##  <a name="getaccel"></a>  CSpinButtonCtrl::GetAccel  
  Recupera le informazioni di accelerazione per un controllo pulsante di selezione.  
   
 ```  
@@ -204,7 +199,7 @@ UINT GetAccel(
 ### <a name="return-value"></a>Valore restituito  
  Numero di strutture di tasti di scelta rapida recuperati.  
   
-##  <a name="getbase"></a>CSpinButtonCtrl::GetBase  
+##  <a name="getbase"></a>  CSpinButtonCtrl::GetBase  
  Recupera la base per un controllo pulsante di selezione corrente.  
   
 ```  
@@ -214,7 +209,7 @@ UINT GetBase() const;
 ### <a name="return-value"></a>Valore restituito  
  Il valore di base corrente.  
   
-##  <a name="getbuddy"></a>CSpinButtonCtrl::GetBuddy  
+##  <a name="getbuddy"></a>  CSpinButtonCtrl::GetBuddy  
  Recupera un puntatore alla finestra buddy corrente.  
   
 ```  
@@ -224,7 +219,7 @@ CWnd* GetBuddy() const;
 ### <a name="return-value"></a>Valore restituito  
  Puntatore alla finestra buddy corrente.  
   
-##  <a name="getpos"></a>CSpinButtonCtrl::GetPos  
+##  <a name="getpos"></a>  CSpinButtonCtrl::GetPos  
  Recupera la posizione corrente del controllo pulsante di selezione.  
   
 ```  
@@ -243,7 +238,7 @@ int GetPos() const;  int GetPos32(LPBOOL lpbError = NULL) const;
 ### <a name="remarks"></a>Note  
  Quando elabora il valore restituito, il controllo ha aggiornato la posizione corrente in base alla didascalia della finestra buddy. Il controllo restituisce un errore se nessuna finestra buddy o se la didascalia specifica un valore non valido o out-of-range.  
   
-##  <a name="getrange"></a>CSpinButtonCtrl::GetRange  
+##  <a name="getrange"></a>  CSpinButtonCtrl::GetRange  
  Recupera i limiti superiori e inferiori (intervallo) per un controllo pulsante di selezione.  
   
 ```  
@@ -259,7 +254,7 @@ void GetRange32(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- *inferiore*  
+ *Inferiore*  
  Riferimento a un valore integer che riceve il limite inferiore per il controllo.  
   
  *superiore*  
@@ -271,7 +266,7 @@ void GetRange32(
 ### <a name="remarks"></a>Note  
  La funzione membro `GetRange32` recupera l'intervallo del controllo pulsante di selezione come intero a 32 bit.  
   
-##  <a name="setaccel"></a>CSpinButtonCtrl::SetAccel  
+##  <a name="setaccel"></a>  CSpinButtonCtrl::SetAccel  
  Imposta l'accelerazione per un controllo pulsante di selezione.  
   
 ```  
@@ -290,7 +285,7 @@ BOOL SetAccel(
 ### <a name="return-value"></a>Valore restituito  
  Diverso da zero se ha esito positivo; in caso contrario 0.  
   
-##  <a name="setbase"></a>CSpinButtonCtrl::SetBase  
+##  <a name="setbase"></a>  CSpinButtonCtrl::SetBase  
  Imposta la base per un controllo pulsante di selezione.  
   
 ```  
@@ -307,7 +302,7 @@ int SetBase(int nBase);
 ### <a name="remarks"></a>Note  
  Il valore di base determina se la finestra buddy Visualizza i numeri in cifre decimale o esadecimale. I numeri esadecimali sono sempre senza segno; numeri decimali sono firmati.  
   
-##  <a name="setbuddy"></a>CSpinButtonCtrl::SetBuddy  
+##  <a name="setbuddy"></a>  CSpinButtonCtrl::SetBuddy  
  Imposta la finestra buddy per un controllo pulsante di selezione.  
   
 ```  
@@ -324,7 +319,7 @@ CWnd* SetBuddy(CWnd* pWndBuddy);
 ### <a name="remarks"></a>Note  
  Un controllo di selezione è quasi sempre associato a un'altra finestra, ad esempio un controllo di modifica, che consente di visualizzare alcuni contenuti. L'altra finestra viene chiamata "contatto" del controllo di selezione.  
   
-##  <a name="setpos"></a>CSpinButtonCtrl::SetPos  
+##  <a name="setpos"></a>  CSpinButtonCtrl::SetPos  
  Imposta la posizione corrente per un controllo pulsante di selezione.  
   
 ```  
@@ -340,9 +335,9 @@ int SetPos32(int nPos);
  La posizione precedente (16 bit di precisione per `SetPos`a 32 bit precisione per `SetPos32`).  
   
 ### <a name="remarks"></a>Note  
- `SetPos32`Imposta la posizione di 32 bit.  
+ `SetPos32` Imposta la posizione di 32 bit.  
   
-##  <a name="setrange"></a>CSpinButtonCtrl:: SetRange  
+##  <a name="setrange"></a>  CSpinButtonCtrl:: SetRange  
  Imposta i limiti superiori e inferiori (intervallo) per un controllo pulsante di selezione.  
   
 ```  
@@ -358,7 +353,7 @@ void SetRange32(
   
 ### <a name="parameters"></a>Parametri  
  `nLower` e `nUpper`  
- Limiti superiore e inferiore per il controllo. Per `SetRange`, né limite può essere maggiore di **UD_MAXVAL** o minore di **UD_MINVAL**; inoltre, non può superare la differenza tra due limiti **UD_MAXVAL**. `SetRange32`non pone limiti ai limiti; utilizzare qualsiasi integer.  
+ Limiti superiore e inferiore per il controllo. Per `SetRange`, né limite può essere maggiore di **UD_MAXVAL** o minore di **UD_MINVAL**; inoltre, non può superare la differenza tra due limiti **UD_MAXVAL**. `SetRange32` non applica alcuna restrizione sui limiti; utilizzare qualsiasi integer.  
   
 ### <a name="remarks"></a>Note  
  La funzione membro `SetRange32` imposta l'intervallo di 32 bit per il controllo pulsante di selezione.  

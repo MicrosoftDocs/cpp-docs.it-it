@@ -1,12 +1,9 @@
 ---
 title: Errore del compilatore C2496 | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C2496
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C2496
 ms.assetid: 9a25237d-5bbb-4112-98f3-29cd99d3f89f
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7ce309531c47f61bc7b45f174369491077d1c08b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0f0c6a15d1e994f563ac1539838a699745475f76
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-error-c2496"></a>Errore del compilatore C2496
 'identifier': 'selectany' può essere applicato solo agli elementi di dati con collegamento esterno  

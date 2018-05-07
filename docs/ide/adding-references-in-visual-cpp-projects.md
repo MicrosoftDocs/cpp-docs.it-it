@@ -1,13 +1,10 @@
 ---
 title: Aggiunta di riferimenti nei progetti Visual C++ | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VC.Project.References
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - Add References Dialog Box (C++)
 - .NET Framework (C++), Add References Dialog Box
 ms.assetid: 12b8f571-0f21-40b3-9404-5318a57e9cb5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7bacb5663d8e06ee5a10629c547de6f96219697e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bda420768b1ff0819ba666f71d62bfffa86e2105
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="adding-references-in-visual-c-projects"></a>Aggiunta di riferimenti nei progetti Visual C++
 È molto comune per i programmi chiamare nelle API in altri file binari, ad esempio DLL, i componenti Windows Runtime, gli SDK di estensione, i componenti COM e gli assembly .NET. Il modo in cui il programma rileva questi altri file binari dipende dal tipo di progetto e dal tipo del file binario.  
@@ -37,7 +32,7 @@ ms.lasthandoff: 12/21/2017
   
  In un progetto C++ nativo (ATL) il concetto di *riferimenti* si applica solo agli altri progetti nella soluzione, inclusi progetti condivisi, in modo che non venga visualizzato altro in **Gestione riferimenti**:  
   
- ![Visual C# 43; &#43; Gestione riferimenti &#40; ATL (progetti) &#41; ] (../ide/media/visual-c---reference-manager--atl-projects-.png "Gestione riferimenti di visual C++ (progetti ATL)")  
+ ![Visual C&#43; &#43; gestione riferimenti &#40;ATL (progetti)&#41;](../ide/media/visual-c---reference-manager--atl-projects-.png "gestione riferimenti di Visual C++ (progetti ATL)")  
   
  In un progetto C++/CLI o di Piattaforma UWP (Universal Windows Platform), il concetto di riferimenti si applica a più tipi di file binari oltre ad altri progetti nella soluzione.  Questi sono tutti esposti in **Gestione riferimenti**.
   

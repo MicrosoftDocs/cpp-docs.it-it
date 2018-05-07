@@ -1,13 +1,10 @@
 ---
 title: 'Recordset: Selezione dei record (ODBC) | Documenti Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,33 +15,31 @@ helpviewer_keywords:
 - recordsets, constructing SQL statements
 - ODBC recordsets, selecting records
 ms.assetid: 343a6a91-aa4c-4ef7-b21f-2f2bfd0d3787
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 8664c5732c0cdf1042b6af338ea388ab29ab7863
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a9ff2f1e9946eb32356eb09fa2ee216aa636a351
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="recordset-how-recordsets-select-records-odbc"></a>Recordset: selezione dei record (ODBC)
 Questo argomento si applica alle classi ODBC MFC.  
   
  Questo argomento viene illustrato:  
   
--   [Il ruolo e le opzioni di selezione di record](#_core_your_options_in_selecting_records).  
+-   [Il ruolo e le opzioni disponibili nella selezione di record](#_core_your_options_in_selecting_records).  
   
--   [Come un'istruzione SQL in recordset](#_core_how_a_recordset_constructs_its_sql_statement).  
+-   [Modo in cui un'istruzione SQL in recordset](#_core_how_a_recordset_constructs_its_sql_statement).  
   
--   [Operazioni per personalizzare la selezione](#_core_customizing_the_selection).  
+-   [Operazioni eseguibili per personalizzare la selezione](#_core_customizing_the_selection).  
   
  Recordset selezionare i record da un'origine dati tramite un driver ODBC per l'invio di istruzioni SQL per il driver. SQL inviata dipende dalla modalità di progettazione e aprire la classe del recordset.  
   
-##  <a name="_core_your_options_in_selecting_records"></a>Opzioni di selezione di record  
+##  <a name="_core_your_options_in_selecting_records"></a> Opzioni di selezione di record  
  La tabella seguente illustra le opzioni di selezione di record.  
   
 ### <a name="how-and-when-you-can-affect-a-recordset"></a>Come e quando è possibile modificare un Recordset  
@@ -59,7 +54,7 @@ Questo argomento si applica alle classi ODBC MFC.
 
 | Chiamare **Requery** per rieseguire una query nel recordset con i valori più recenti dell'origine dati | Specificare i nuovi parametri, il filtro o ordinamento. Vedere [Recordset: ripetizione di query in un Recordset (ODBC)](../../data/odbc/recordset-requerying-a-recordset-odbc.md). |  
   
-##  <a name="_core_how_a_recordset_constructs_its_sql_statement"></a>Come in un recordset istruzione SQL  
+##  <a name="_core_how_a_recordset_constructs_its_sql_statement"></a> Come in un recordset istruzione SQL  
  Quando si chiama un oggetto recordset [aprire](../../mfc/reference/crecordset-class.md#open) funzione membro, **aprire** costruisce un'istruzione SQL utilizzando alcuni o tutti i componenti seguenti:  
   
 -   Il **lpszSQL** parametro passato a **aprire**. In caso contrario **NULL**, questo parametro specifica una stringa SQL personalizzata o una parte di uno. Il framework analizza la stringa. Se la stringa è un database SQL **selezionare** o un'istruzione ODBC **CHIAMARE** istruzione, il framework utilizza la stringa come istruzione SQL del recordset. Se la stringa non inizia con "SELECT" o "{CALL", il framework utilizza gli elementi forniti per la creazione di un database SQL **FROM** clausola.  
@@ -79,13 +74,13 @@ Questo argomento si applica alle classi ODBC MFC.
   
 -   I valori di qualsiasi [membri dati di parametro](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md) specificato per la classe. Impostare i valori dei parametri prima di chiamare **aprire** o **Requery**. Il framework associa i valori dei parametri "?" segnaposto nella stringa SQL. In fase di compilazione, specificare la stringa con segnaposto. In fase di esecuzione, il framework inserisce i dettagli in base ai valori di parametro che viene passato.  
   
- **Aprire** costrutti SQL **selezionare** istruzione con questi elementi. Vedere [personalizzazione della selezione](#_core_customizing_the_selection) per informazioni dettagliate sull'utilizzo di ingredienti del framework.  
+ **Aprire** costruisce un database SQL **selezionare** istruzione con questi elementi. Vedere [personalizzazione della selezione](#_core_customizing_the_selection) per informazioni dettagliate sull'utilizzo di ingredienti del framework.  
   
  Al termine della creazione dell'istruzione, **aprire** invia l'istruzione SQL per la gestione Driver ODBC (e la libreria di cursori ODBC, se è in memoria), che invia al driver ODBC per DBMS specifici. Il driver comunica con il sistema DBMS per eseguire la selezione dell'origine dati e recupera il primo record. Il framework carica il record nei membri di dati di campo del recordset.  
   
  È possibile utilizzare una combinazione di queste tecniche per aprire [tabelle](../../data/odbc/recordset-declaring-a-class-for-a-table-odbc.md) e per creare una query basata su un [join](../../data/odbc/recordset-performing-a-join-odbc.md) di più tabelle. Con un'ulteriore personalizzazione, è possibile chiamare [query predefinite](../../data/odbc/recordset-declaring-a-class-for-a-predefined-query-odbc.md) (stored procedure), selezionare colonne non è note in fase di progettazione della tabella e [associare](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md) per i campi del recordset o si può eseguire la maggior parte delle altre attività di accesso ai dati. Attività che non è possibile eseguire per la personalizzazione dei recordset possono comunque essere completate da [chiamata di funzioni API ODBC](../../data/odbc/odbc-calling-odbc-api-functions-directly.md) o direttamente l'esecuzione di istruzioni SQL con [CDatabase:: ExecuteSQL](../../mfc/reference/cdatabase-class.md#executesql).  
   
-##  <a name="_core_customizing_the_selection"></a>Personalizzazione della selezione  
+##  <a name="_core_customizing_the_selection"></a> Personalizzazione della selezione  
  Oltre a fornire un filtro, un ordinamento o parametri, è possibile intraprendere le azioni seguenti per personalizzare la selezione del recordset:  
   
 -   Passare una stringa SQL personalizzata in **lpszSQL** quando si chiama [aprire](../../mfc/reference/crecordset-class.md#open) per il recordset. Qualsiasi elemento passato **lpsqSQL** ha la precedenza su cosa il [GetDefaultSQL](../../mfc/reference/crecordset-class.md#getdefaultsql) funzione membro restituisce.  

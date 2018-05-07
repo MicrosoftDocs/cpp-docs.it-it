@@ -1,13 +1,10 @@
 ---
 title: Nozioni fondamentali su ODBC | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,25 +14,23 @@ helpviewer_keywords:
 - ODBC, about ODBC
 - ODBC, components
 ms.assetid: ec529702-0fb2-4754-b8de-d1efa8eca18f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 26a1554fec567762810f6bd48c8674ea048ce117
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 69b3694292171f00e03cdb941def27fd9e8ffc84
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="odbc-basics"></a>Nozioni fondamentali su ODBC
 In questo argomento fornisce le nozioni di base di Open Database Connectivity (ODBC):  
   
--   [Funzionamento di ODBC con le classi di Database](../../data/odbc/odbc-and-the-database-classes.md)  
+-   [Funzionamento con le classi di Database ODBC](../../data/odbc/odbc-and-the-database-classes.md)  
   
--   [Funzionano dei driver ODBC con dynaset](../../data/odbc/odbc-driver-requirements-for-dynasets.md)  
+-   [Funzionano di driver ODBC con dynaset](../../data/odbc/odbc-driver-requirements-for-dynasets.md)  
   
 -   [È necessario ridistribuire con le applicazioni dei componenti ODBC](../../data/odbc/redistributing-odbc-components-to-your-customers.md)  
   

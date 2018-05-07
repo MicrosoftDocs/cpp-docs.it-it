@@ -1,29 +1,24 @@
 ---
-title: "Attributi IDL, aggiunta guidata proprietà | Documenti Microsoft"
-ms.custom: 
+title: Attributi IDL, aggiunta guidata proprietà | Documenti Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.codewiz.prop.idlattributes
 dev_langs:
 - C++
 ms.assetid: 356ed666-79d0-4bd9-a5e7-cda679cbadbd
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8ec158c117161c5a5c2ffd23cef0d5c79c312ae7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 77931296d8d33337c4e630b7327a1ec8fd0a458f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="idl-attributes-add-property-wizard"></a>Attributi IDL, Aggiunta guidata proprietà
 Utilizzare questa pagina dell'Aggiunta guidata proprietà per specificare eventuali impostazioni interface definition language (IDL) per la proprietà.  
@@ -49,7 +44,7 @@ Utilizzare questa pagina dell'Aggiunta guidata proprietà per specificare eventu
 |**defaultcollelem**|Indica che la proprietà è una funzione di accesso per un elemento della raccolta predefinita. Vedere [defaultcollelem](http://msdn.microsoft.com/library/windows/desktop/aa366792) nel *MIDL riferimento*.|  
 |**nonbrowsable**|Tag di un membro di interfaccia o interfaccia dispatch che non deve essere visualizzato in un visualizzatore di proprietà. Vedere [nonbrowsable](http://msdn.microsoft.com/library/windows/desktop/aa367117) nel *MIDL riferimento*.|  
 |**requestedit**|Indica che la proprietà supporta il **OnRequestEdit** notifica vedere [requestedit](http://msdn.microsoft.com/library/windows/desktop/aa367155) nel *MIDL riferimento*. Per l'implementazione predefinita della proprietà, questa opzione è impostata per impostazione predefinita e non può essere modificata.|  
-|**origine**|Indica che un membro della proprietà è un'origine di eventi. Vedere [origine](http://msdn.microsoft.com/library/windows/desktop/aa367166) nel *MIDL riferimento*.|  
+|**Origine**|Indica che un membro della proprietà è un'origine di eventi. Vedere [origine](http://msdn.microsoft.com/library/windows/desktop/aa367166) nel *MIDL riferimento*.|  
 |**hidden**|Indica che la proprietà esiste ma non deve essere visualizzata in un visualizzatore per utente. Vedere [nascosto](http://msdn.microsoft.com/library/windows/desktop/aa366861) nel *MIDL riferimento*.|  
 |**restricted**|Specifica che la proprietà non può essere chiamata in modo arbitrario. Vedere [limitato](http://msdn.microsoft.com/library/windows/desktop/aa367157) nel *MIDL riferimento*.|  
 |`local`|Specifica al compilatore MIDL che la proprietà non è remota. Vedere [locale](http://msdn.microsoft.com/library/windows/desktop/aa367071) nel *MIDL riferimento*.|  

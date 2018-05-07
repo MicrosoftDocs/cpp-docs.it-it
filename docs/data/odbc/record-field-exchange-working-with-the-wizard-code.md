@@ -1,13 +1,10 @@
 ---
 title: 'Campi di record: Utilizzo del codice della procedura guidata | Documenti Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -24,18 +21,16 @@ helpviewer_keywords:
 - overriding, DoFieldExchange
 - m_nFields data member, initializing
 ms.assetid: f00d882a-ff1b-4a75-9717-98d8762bb237
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 8909a9e933e7b3f1c59fa9ab283706f7a6d1f0c0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7d4f817ebfc3e6bb72865b4fc71fd5c5ebe5f671
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="record-field-exchange-working-with-the-wizard-code"></a>Trasferimento di campi di record: utilizzo del codice della creazione guidata
 In questo argomento viene illustrato il codice che la creazione guidata applicazione MFC e **Aggiungi classe** (come descritto in [aggiunta di un Consumer ODBC MFC](../../mfc/reference/adding-an-mfc-odbc-consumer.md)) per supportare RFX e modalità di modifica di tale codice.  
@@ -47,11 +42,11 @@ In questo argomento viene illustrato il codice che la creazione guidata applicaz
   
 -   Dichiarazioni di membri dati di campo del recordset della classe recordset  
   
--   Un override di`CRecordset::DoFieldExchange`  
+-   Un override di `CRecordset::DoFieldExchange`  
   
 -   Inizializzazione dei membri di dati di campo recordset nel costruttore della classe recordset  
   
-##  <a name="_core_the_field_data_member_declarations"></a>Dichiarazioni dei membri di campo dati  
+##  <a name="_core_the_field_data_member_declarations"></a> Dichiarazioni dei membri di campo dati  
  Le procedure guidate di scrivono una dichiarazione di classe recordset in un file con estensione h simile al seguente per la classe `CSections`:  
   
 ```  
@@ -88,9 +83,9 @@ public:
   
  Inoltre, si noti che la procedura guidata esegue l'override di `DoFieldExchange` funzione membro di classe `CRecordset`.  
   
-##  <a name="_core_the_dofieldexchange_override"></a>Override di DoFieldExchange  
+##  <a name="_core_the_dofieldexchange_override"></a> DoFieldExchange Override  
 
- [DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange) rappresenta il fulcro di RFX. Il framework chiama `DoFieldExchange` ogni volta che è necessario spostare i dati dall'origine dati al recordset o dal recordset all'origine dati. `DoFieldExchange`inoltre supporta il recupero di informazioni sul campo membri di dati tramite il [IsFieldDirty](../../mfc/reference/crecordset-class.md#isfielddirty) e [IsFieldNull](../../mfc/reference/crecordset-class.md#isfieldnull) funzioni membro.  
+ [DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange) rappresenta il fulcro di RFX. Il framework chiama `DoFieldExchange` ogni volta che è necessario spostare i dati dall'origine dati al recordset o dal recordset all'origine dati. `DoFieldExchange` inoltre supporta il recupero di informazioni sulle campo membri di dati tramite il [IsFieldDirty](../../mfc/reference/crecordset-class.md#isfielddirty) e [IsFieldNull](../../mfc/reference/crecordset-class.md#isfieldnull) funzioni membro.  
   
  Nell'esempio `DoFieldExchange` override è per la `CSections` classe. La procedura guidata scrive la funzione nel file con estensione cpp per la classe recordset.  
   
@@ -119,7 +114,7 @@ void CSections::DoFieldExchange(CFieldExchange* pFX)
   
 -   Il `pFX` puntatore a un [CFieldExchange](../../mfc/reference/cfieldexchange-class.md) oggetto passato dal framework quando viene chiamata `DoFieldExchange`. Il `CFieldExchange` oggetto specifica l'operazione che `DoFieldExchange` consiste nell'eseguire, la direzione del trasferimento e altre informazioni sul contesto.  
   
-##  <a name="_core_the_recordset_constructor"></a>Costruttore del recordset  
+##  <a name="_core_the_recordset_constructor"></a> Costruttore del recordset  
  Il costruttore del recordset creato dalla procedura guidata contiene due elementi relativi a RFX:  
   
 -   Inizializzazione di una per ogni membro dati di campo  

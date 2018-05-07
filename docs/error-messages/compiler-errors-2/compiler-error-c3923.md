@@ -1,12 +1,9 @@
 ---
 title: Errore del compilatore C3923 | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C3923
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C3923
 ms.assetid: db8838e9-6344-4cd6-83e0-a8abeb12c4c0
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1615f0ad270491fde5e4ec0285006f8f28de94e4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2d93ff388ae4ba1a97f9a194df1ca1006e05eb51
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-error-c3923"></a>Errore del compilatore C3923
 'member': le definizioni locali di classe, struct o unione non sono consentite in una funzione membro di una classe gestita o WinRT  

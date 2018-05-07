@@ -1,24 +1,19 @@
 ---
-title: "Proprietà (C + + CX) | Documenti Microsoft"
-ms.custom: 
+title: Proprietà (C + + CX) | Documenti Microsoft
+ms.custom: ''
 ms.date: 01/22/2017
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 64c7bc56-3191-4cd5-bdf4-476d07d285d5
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 446f2c4f18f68a4a52614397b697409d34b958de
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 6393b5e5849ab2198fa8d084c2c1d15838c69bdd
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="properties-ccx"></a>Proprietà (C++/CX)
 Tipi di Windows Runtime espongono i dati pubblici come proprietà. Il codice client accede alla proprietà come un membro dati pubblico. Internamente, la proprietà viene implementata come blocco contenente un metodo di funzione di accesso get, un metodo di funzione di accesso set, o entrambi. L'utilizzo dei metodi di funzione di accesso ti consente di eseguire azioni aggiuntive prima o dopo aver recuperato il valore. Puoi, ad esempio, generare un evento o eseguire controlli di convalida.  

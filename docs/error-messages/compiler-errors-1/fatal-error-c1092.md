@@ -1,12 +1,9 @@
 ---
 title: Errore irreversibile C1092 | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C1092
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C1092
 ms.assetid: bcaa87f0-fbfc-4a33-844b-3b9f5d67f279
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 92309c9299303429c61f84911e180468f6354475
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e8f5b5d903fe1fb2d3182a7b08f7bf82ddf334fb
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="fatal-error-c1092"></a>Errore irreversibile C1092
 Con Modifica e continuazione non sono supportate le modifiche ai tipi di dati. È richiesta la compilazione  

@@ -1,29 +1,24 @@
 ---
 title: File della Guida (WinHelp) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - file types [C++], WinHelp files
 ms.assetid: 4fdcbd66-66b0-4866-894a-fd7b4c2557e4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a5698f7001512c5a4f8c45b5c787f35c9ce0ca6c
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: 505506c7f3a14a73c6b0c859a70938fee3eed69e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="help-files-winhelp"></a>File della Guida (WinHelp)
 I seguenti file vengono creati quando si aggiunge il tipo di WinHelp di supporto della Guida per l'applicazione selezionando il **Guida sensibile al contesto** casella di controllo e quindi selezionando **formato WinHelp** nel [Funzionalità avanzate](../mfc/reference/advanced-features-mfc-application-wizard.md) pagina della creazione guidata applicazione MFC.  
@@ -33,7 +28,7 @@ I seguenti file vengono creati quando si aggiunge il tipo di WinHelp di supporto
 |*ProjName*HPJ|*ProjName*\hlp|File di origine|Il file di progetto della Guida utilizzato dal compilatore della Guida per creare il programma o file della Guida del controllo.|  
 |*ProjName*RTF|*ProjName*\hlp|I file della Guida|Contiene argomenti di modello che è possibile modificare e le informazioni sulla personalizzazione del file HPJ.|  
 |*ProjName*CNT|*ProjName*\hlp|I file della Guida|Fornisce la struttura per il **contenuto** finestra della Guida di Windows.|  
-|Makehelp.bat|*ProjName*|File di origine|Utilizzato dal sistema per compilare il progetto della Guida quando si compila il progetto.|  
+|MakeHelp. bat|*ProjName*|File di origine|Utilizzato dal sistema per compilare il progetto della Guida quando si compila il progetto.|  
 |Print.rtf|*ProjName*\hlp|I file della Guida|Se il progetto include il supporto di stampa (impostazione predefinita) creata. Descrive i comandi di stampa e finestre di dialogo.|  
 |*.bmp|*ProjName*\hlp|File di risorse|Contiene le immagini per gli argomenti di file della Guida generato diversi.|  
   
@@ -43,7 +38,7 @@ I seguenti file vengono creati quando si aggiunge il tipo di WinHelp di supporto
 |---------------|------------------------|--------------------------------|-----------------|  
 |*ProjName*HPJ|*ProjName*\hlp|File di origine|Il file di progetto utilizzato dal compilatore della Guida per creare il programma o file della Guida del controllo.|  
 |*ProjName*RTF|*ProjName*\hlp|Progetto|Contiene argomenti di modello che è possibile modificare e le informazioni sulla personalizzazione del file HPJ.|  
-|Makehelp.bat|*ProjName*|File di origine|Utilizzato dal sistema per compilare il progetto della Guida quando si compila il progetto.|  
+|MakeHelp. bat|*ProjName*|File di origine|Utilizzato dal sistema per compilare il progetto della Guida quando si compila il progetto.|  
 |Bullet. bmp|*ProjName*|File di risorse|Utilizzato dagli argomenti di file della Guida standard per rappresentare elenchi puntati.|  
   
 ## <a name="see-also"></a>Vedere anche  

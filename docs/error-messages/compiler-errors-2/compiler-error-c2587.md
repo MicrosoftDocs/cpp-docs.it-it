@@ -1,12 +1,9 @@
 ---
 title: Errore del compilatore C2587 | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C2587
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C2587
 ms.assetid: 7637a2c7-35d4-4b5a-a8f2-515a7bda98fd
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 127c66017fdc961c63051e67ee6a4f62b0b3e789
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 595e14f71f9e1570893111efa38155a6f97e5574
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-error-c2587"></a>Errore del compilatore C2587
 'identifier': Impossibile utilizzare una variabile locale come parametro predefinito  

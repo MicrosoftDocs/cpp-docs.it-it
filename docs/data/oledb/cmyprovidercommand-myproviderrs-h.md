@@ -1,12 +1,9 @@
 ---
 title: CMyProviderCommand (MyProviderRS. H) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - cmyprovidercommand
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - OLE DB providers, wizard-generated files
 - CMyProviderCommand class in MyProviderRS.H
 ms.assetid: b30b956e-cc91-4cf5-9fe6-f8b1ce9cc2a5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: fe0852b619dc89df4ab9a04f2e7dcbac5d308fce
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 8c18742d9b3b1039033ad8d42939e0f5a4578fbb
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmyprovidercommand-myproviderrsh"></a>CMyProviderCommand (MyProviderRS.H)
 La `CMyProviderCommand` classe è l'implementazione per l'oggetto comando provider. Fornisce l'implementazione per il `IAccessor`, `ICommandText`, e **ICommandProperties** interfacce. Il `IAccessor` interfaccia è identico a quello nel set di righe. L'oggetto comando utilizza la funzione di accesso per specificare le associazioni per i parametri. Oggetto set di righe utilizzati per specificare le associazioni per le colonne di output. Il `ICommandText` interfaccia è un modo utile per specificare un comando in formato testo. Questo esempio viene utilizzato il `ICommandText` interfaccia in un secondo momento quando aggiunge codice personalizzato, viene eseguito l'override anche di `ICommand::Execute` metodo. Il **ICommandProperties** interfaccia gestisce tutte le proprietà per gli oggetti comando e set di righe.  

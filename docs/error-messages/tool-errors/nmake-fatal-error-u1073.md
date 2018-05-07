@@ -1,12 +1,9 @@
 ---
 title: Errore irreversibile U1073 di NMAKE | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - U1073
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - U1073
 ms.assetid: d46bf2dd-400a-4802-9db2-f832e1c97f02
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: faae317df44560991a88d47ec7f123e6a8126429
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: dde9ca2f4a15edf6599dcc31b39d9411645f2a6f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="nmake-fatal-error-u1073"></a>Errore irreversibile U1073 di NMAKE 
 non sapere come effettuare 'targetname'  

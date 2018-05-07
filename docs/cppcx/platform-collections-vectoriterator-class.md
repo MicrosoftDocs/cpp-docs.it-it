@@ -1,11 +1,8 @@
 ---
 title: Classe platform::Collections::VectorIterator | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - COLLECTION/Platform::Collections::VectorIterator::VectorIterator
@@ -14,17 +11,15 @@ dev_langs:
 helpviewer_keywords:
 - VectorIterator Class
 ms.assetid: d531cb42-27e0-48a6-bf5e-c265891a18ff
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 873c4c980bc815d0eebb29050a0e2fe2f49e6e6b
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: deaab183a092a073c6681004654312485959e924
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="platformcollectionsvectoriterator-class"></a>Classe Platform::Collections::VectorIterator
 Fornisce un iteratore STL per oggetti derivati dall'interfaccia IVector di Windows Runtime.  
@@ -58,7 +53,7 @@ class VectorIterator;
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[VectorIterator::VectorIterator](#ctor)|Inizializza una nuova istanza della classe VectorIterator.|  
+|[Vectoriterator](#ctor)|Inizializza una nuova istanza della classe VectorIterator.|  
   
 ### <a name="public-operators"></a>Operatori pubblici  
   
@@ -125,7 +120,7 @@ VectorIterator operator--(int);
   
 
 
-## <a name="operator-dereference"></a>  VectorIterator::operator* Operator
+## <a name="operator-dereference"></a>  Vectoriterator:: operator * (operatore)
 Recupera l'indirizzo dell'elemento specificato dall'oggetto VectorIterator corrente.  
   
 ### <a name="syntax"></a>Sintassi  
@@ -139,7 +134,7 @@ reference operator*() const;
   
 
 
-## <a name="operator-equality"></a>  VectorIterator::operator== Operator
+## <a name="operator-equality"></a>  Vectoriterator:: operator = = (operatore)
 Indica se l'oggetto VectorIterator corrente è uguale all'oggetto VectorIterator specificato.  
   
 ### <a name="syntax"></a>Sintassi  
@@ -214,7 +209,7 @@ VectorIterator operator++(int);
   
 
 
-## <a name="operator-inequality"></a>  VectorIterator::operator!= Operator
+## <a name="operator-inequality"></a>  Vectoriterator:: operator! = (operatore)
 Indica se l'oggetto VectorIterator corrente è diverso dall'oggetto VectorIterator specificato.  
   
 ### <a name="syntax"></a>Sintassi  
@@ -294,7 +289,7 @@ difference_type operator-(const VectorIterator& other) const;
   
 
 
-## <a name="operator-plus-assign"></a>  VectorIterator::operator+= Operator
+## <a name="operator-plus-assign"></a>  Vectoriterator:: operator + = operatore
 Incrementa l'oggetto VectorIterator corrente dello spostamento specificato.  
   
 ### <a name="syntax"></a>Sintassi  
@@ -348,7 +343,7 @@ inline VectorIterator<T> operator+(
   
 
 
-## <a name="operator-minus-equals"></a>  VectorIterator::operator-= Operator
+## <a name="operator-minus-equals"></a>  Vectoriterator:: operator-= (operatore)
 Decrementa l'oggetto VectorIterator corrente dello spostamento specificato.  
   
 ### <a name="syntax"></a>Sintassi  

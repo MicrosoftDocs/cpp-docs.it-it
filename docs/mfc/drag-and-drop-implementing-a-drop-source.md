@@ -1,13 +1,10 @@
 ---
-title: 'Trascinamento della selezione: implementazione di un''origine di rilascio | Documenti Microsoft'
-ms.custom: 
+title: "Trascinamento della selezione: implementazione di un'origine di rilascio | Documenti Microsoft"
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - drag and drop [MFC], initiating drag operations
 - drag and drop [MFC], drop source
 ms.assetid: 0ed2fda0-63fa-4b1e-b398-f1f142f40035
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 301980f7f5a901aa4e2cba40357b18311eef581e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c057657605296b3ba65128f26b25aa526f45b211
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="drag-and-drop-implementing-a-drop-source"></a>Trascinamento della sezione: implementazione di un'origine di rilascio
 In questo articolo viene illustrato come ottenere l'applicazione per fornire dati a un'operazione di trascinamento e rilascio.  
@@ -45,7 +40,7 @@ In questo articolo viene illustrato come ottenere l'applicazione per fornire dat
   
 -   [Trascinamento della personalizzazione](../mfc/drag-and-drop-customizing.md)  
   
--   [Creazione e all'eliminazione di oggetti dati e origini dati](../mfc/data-objects-and-data-sources-creation-and-destruction.md)  
+-   [Creazione e distruzione di oggetti dati e origini dati](../mfc/data-objects-and-data-sources-creation-and-destruction.md)  
   
 -   [La modifica di oggetti dati e origini dati](../mfc/data-objects-and-data-sources-manipulation.md)  
   

@@ -1,13 +1,10 @@
 ---
 title: 'Eccezioni: Esame del contenuto delle eccezioni | Documenti Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - try-catch exception handling [MFC], exception contents
 - throwing exceptions [MFC], exception contents
 ms.assetid: dfda4782-b969-4f60-b867-cc204ea7f33a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 953dd61247f7d14ad04d5d5f85529c89f3aaad9d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7af858a7bd43bca2a04fac417c592f2dba979ffe
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="exceptions-examining-exception-contents"></a>Eccezioni: esame del contenuto delle eccezioni
 Sebbene un **catch** argomento del blocco può essere di qualsiasi tipo di dati, le funzioni MFC non generano eccezioni di tipi derivati dalla classe `CException`. Per rilevare un'eccezione generata da una funzione MFC, è possibile scrivere un **catch** blocco il cui argomento è un puntatore a un `CException` oggetto (o un oggetto derivato da `CException`, ad esempio `CMemoryException`). A seconda del tipo esatto dell'eccezione, è possibile esaminare i membri di dati dell'oggetto eccezione per raccogliere le informazioni sulla causa specifica dell'eccezione.  

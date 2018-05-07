@@ -1,28 +1,23 @@
 ---
-title: "Interoperabilità con altri linguaggi .NET (C + + CLI) | Documenti Microsoft"
-ms.custom: 
+title: Interoperabilità con altri linguaggi .NET (C + + CLI) | Documenti Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: a5902cf8-a14d-4559-aefb-c178615d45bb
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: a2d3ec38f4c5607b2dbb1739af9449df0f427e93
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 80f7c99cf4b4127a1b4862aae64cc604ae3e0f69
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="interoperability-with-other-net-languages-ccli"></a>Interoperabilità con altri linguaggi .NET (C++/CLI)
 Gli argomenti in questa sezione illustrano come creare gli assembly in Visual C++ che utilizzano da o offrono funzionalità agli assembly scritti in c# o Visual Basic.  

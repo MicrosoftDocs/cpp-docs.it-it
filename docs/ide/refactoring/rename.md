@@ -1,42 +1,40 @@
 ---
 title: Rinominare | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/16/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- cpp-ide
+ms.topic: conceptual
 ms.assetid: 64b42a88-3bd9-4399-8b96-75bceffc353b
 author: mikeblome
 ms.author: mblome
-manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 7ca06ef5a11d674d35aff7276e14312c456c60e9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 7a064527f6afcbf91be3fb4e51180be647c1f506
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="rename"></a>Rinomina
-**Novità:** consente di rinominare gli identificatori per i simboli del codice, ad esempio campi, le variabili locali, metodi, gli spazi dei nomi, proprietà e tipi.
+**Cosa:** consente di rinominare gli identificatori per i simboli del codice, ad esempio campi, variabili locali, metodi, spazi dei nomi, proprietà e tipi.
 
-**Quando:** che si desidera rinominare un elemento senza la necessità di trovare tutte le istanze, copia e Incolla il nuovo nome.  
+**Quando:** si vuole rinominare un elemento in modo sicuro senza dover trovare tutte le istanze e copiare/incollare il nuovo nome.  
 
-**Motivo:** copiando e incollando il nuovo nome in un intero progetto potrebbe causare errori.  Questo strumento refactoring in modo accurato eseguirà l'azione di ridenominazione.
+**Perché:** è probabile che copiare e incollare il nuovo nome in un intero progetto causi errori.  Questo strumento di refactoring eseguirà in modo accurato l'azione di ridenominazione.
 
-**Procedura:**
+**Come:**
 
-1. Evidenziare o posizionare il cursore di testo all'interno dell'elemento da rinominare:
+1. Evidenziare o posizionare il cursore del testo all'interno dell'elemento da rinominare:
 
    ![Codice evidenziato](images/rename_highlight.png)
 
-1. Successivamente, eseguire una delle operazioni seguenti:
+1. Eseguire quindi una delle operazioni seguenti:
    * **Tastiera**
-     * Premere **Ctrl + R**, quindi **Ctrl + R**.  Si noti che i tasti di scelta rapida possono essere diversi a seconda del profilo selezionato.
+     * Premere **CTRL+R** e quindi **CTRL+R**.  Si noti che i tasti di scelta rapida possono essere diversi a seconda del profilo selezionato.
    * **Mouse**
-     * Selezionare **Modifica > eseguire il refactoring > rinominare**.
-     * Il codice e scegliere **rinominare**.
+     * Selezionare **Modifica > Refactoring > Rinomina**.
+     * Fare clic con il pulsante destro del mouse sul codice e scegliere **Rinomina**.
 
 1. Nel **rinominare** finestra visualizzata, immettere il nuovo nome per l'elemento selezionato e fare clic su di **anteprima** pulsante.  Modifica il **ambito di ricerca** se si desidera ampliare o restringere l'ambito della ridenominazione.
 

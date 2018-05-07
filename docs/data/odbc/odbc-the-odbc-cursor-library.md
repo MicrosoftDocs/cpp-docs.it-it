@@ -1,13 +1,10 @@
 ---
 title: 'ODBC: Libreria di cursori ODBC | Documenti Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -25,18 +22,16 @@ helpviewer_keywords:
 - ODBC, timestamp
 - positioning cursors
 ms.assetid: 6608db92-82b1-4164-bb08-78153c227be3
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 3d849580ce3e9b264c854633c6bb9f274874c21d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e57251263738d534b7e7e22ff287607fbc5159a5
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="odbc-the-odbc-cursor-library"></a>ODBC: libreria di cursori ODBC
 In questo argomento viene descritta la libreria di cursori ODBC e viene spiegato come utilizzarlo. Per altre informazioni, vedere:  
@@ -45,11 +40,11 @@ In questo argomento viene descritta la libreria di cursori ODBC e viene spiegato
   
 -   [Gli aggiornamenti posizionati e colonne Timestamp](#_core_positioned_updates_and_timestamp_columns)  
   
--   [Utilizzando la libreria di cursori](#_core_using_the_cursor_library)  
+-   [Utilizza la libreria di cursori](#_core_using_the_cursor_library)  
   
  La libreria di cursori ODBC è una libreria a collegamento dinamico (DLL) che si trova tra gestione Driver ODBC e il driver. In termini ODBC, un driver gestisce un cursore per tenere traccia della propria posizione nel recordset. Il cursore contrassegna la posizione del recordset a cui è già eseguito lo scorrimento, il record corrente.  
   
-##  <a name="_core_the_cursor_library_and_level_1_odbc_drivers"></a>Libreria di cursori e 1 livello di driver ODBC  
+##  <a name="_core_the_cursor_library_and_level_1_odbc_drivers"></a> Libreria di cursori e 1 livello di driver ODBC  
  La libreria di cursori ODBC fornisce driver di livello 1 le nuove funzionalità seguenti:  
   
 -   Scorrimento in avanti e indietro. I driver di livello 2 non è necessaria la libreria di cursori perché sono già scorrevoli.  
@@ -58,7 +53,7 @@ In questo argomento viene descritta la libreria di cursori ODBC e viene spiegato
   
  Anche se non sono in genere supportati dal driver in uso, la libreria di cursori offre snapshot (cursori statici). Se il driver supporta già i cursori statici, non è necessario caricare la libreria di cursori per ottenere il supporto degli snapshot. Se si utilizza la libreria di cursori, è possibile utilizzare solo gli snapshot e Recordset forward-only. Se il driver supporta i dynaset (ovvero i cursori KEYSET_DRIVEN) e si desidera utilizzarli, è necessario non utilizzare la libreria di cursori. Se si desidera utilizzare sia snapshot che dynaset, devono essere basati su due diversi `CDatabase` oggetti (due connessioni differenti), a meno che il driver supporta entrambi.  
   
-##  <a name="_core_positioned_updates_and_timestamp_columns"></a>Gli aggiornamenti posizionati e colonne Timestamp  
+##  <a name="_core_positioned_updates_and_timestamp_columns"></a> Gli aggiornamenti posizionati e colonne Timestamp  
   
 > [!NOTE]
 >  Origini dati ODBC sono accessibili tramite le classi ODBC MFC, come descritto in questo argomento, oppure tramite le classi MFC oggetto DAO (Data Access).  
@@ -75,7 +70,7 @@ In questo argomento viene descritta la libreria di cursori ODBC e viene spiegato
  Il secondo problema riguarda i limiti della classe [CTime](../../atl-mfc-shared/reference/ctime-class.md) quando si utilizza il `RFX_Date` funzione per trasferire le informazioni di data e ora da o verso una tabella. L'elaborazione di `CTime` oggetto richiede un certo overhead sotto forma di elaborazione intermedia aggiuntiva durante il trasferimento dei dati. L'intervallo di date `CTime` oggetti potrebbero anche essere troppo restrittivo alcune applicazioni. Una nuova versione di `RFX_Date` funzione accetta un ODBC **TIMESTAMP_STRUCT** parametro anziché una `CTime` oggetto. Per ulteriori informazioni, vedere `RFX_Date` in [macro e funzioni globali](../../mfc/reference/mfc-macros-and-globals.md) nel *riferimenti alla libreria MFC*.  
 
   
-##  <a name="_core_using_the_cursor_library"></a>Utilizzando la libreria di cursori  
+##  <a name="_core_using_the_cursor_library"></a> Utilizza la libreria di cursori  
  Quando ci si connette a un'origine dati, ovvero chiamando [:: OpenEx](../../mfc/reference/cdatabase-class.md#openex) o [CDatabase:: Open](../../mfc/reference/cdatabase-class.md#open) , è possibile specificare se utilizzare la libreria di cursori per l'origine dati. Se si creano gli snapshot in tale origine dati, specificare il **CDatabase:: useCursorLib** opzione il `dwOptions` parametro `OpenEx` o specificare **TRUE** per il  **bUseCursorLib** parametro **aprire** (il valore predefinito è **TRUE**). Se il driver ODBC supporta i dynaset e si desidera aprire dynaset sull'origine dati, non utilizzare la libreria di cursori (maschera alcune funzionalità del driver necessari per dynaset). In tal caso, non si specifica **CDatabase:: useCursorLib** in `OpenEx` o specificare **FALSE** per il **bUseCursorLib** parametro **aprire**.  
   
 ## <a name="see-also"></a>Vedere anche  

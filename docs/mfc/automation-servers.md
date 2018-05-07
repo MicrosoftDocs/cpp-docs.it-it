@@ -1,13 +1,10 @@
 ---
 title: Server di automazione | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - dispatch maps [MFC], Automation servers
 - servers, Automation
 ms.assetid: 523fd155-51ce-4f91-b986-b74bdbdd7d92
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a33cf8113825804ac831b518e371c4150f2620ad
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 337d5a1ec25e8fc80cf867aecef0452b1d03fb2b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="automation-servers"></a>Server di automazione
 Automazione rende possibile per l'applicazione possa modificare oggetti implementati in un'altra applicazione o esporli in modo che possano essere modificati. Un server di automazione è un'applicazione che espone oggetti programmabili, denominati oggetti di automazione, ad altre applicazioni (chiamato [client di automazione](../mfc/automation-clients.md)). Server di automazione sono talvolta denominati componenti di automazione.  
@@ -40,7 +35,7 @@ Automazione rende possibile per l'applicazione possa modificare oggetti implemen
   
  Esponendo la funzionalità dell'applicazione tramite un'interfaccia comune e ben definita, automazione consente di compilare applicazioni in un singolo generale linguaggio di programmazione come Visual Basic, anziché nella macro diverse specifici dell'applicazione Lingue.  
   
-##  <a name="_core_support_for_automation_servers"></a>Supporto per i server di automazione  
+##  <a name="_core_support_for_automation_servers"></a> Supporto per i server di automazione  
  Visual C++ e il framework MFC forniscono un supporto completo per i server di automazione. Gestiscono gran parte dell'overhead causato dalla creazione di un server di automazione, pertanto è possibile concentrare l'attenzione sulle funzionalità dell'applicazione.  
   
  Il meccanismo del framework principale per il supporto di automazione è la mappa di invio, un set di macro che si espande in dichiarazioni e alle chiamate necessarie per esporre i metodi e proprietà per OLE. Una tipica mappa di invio è simile al seguente:  

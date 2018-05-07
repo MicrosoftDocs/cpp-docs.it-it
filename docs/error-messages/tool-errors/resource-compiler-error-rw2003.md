@@ -1,12 +1,9 @@
 ---
 title: Errore del compilatore di risorse RW2003 | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - RW2003
@@ -15,24 +12,22 @@ dev_langs:
 helpviewer_keywords:
 - RW2003
 ms.assetid: 9dc0ba70-6776-4aef-b316-5f1711d8e42e
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9f388ca21d95e7d675a6b9890a7368765b5c0d7e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 10cbd42d976566b1bd8388b8a42429cd7e57639d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="resource-compiler-error-rw2003"></a>Errore del compilatore di risorse RW2003
 Errore di generazione  
   
 ### <a name="to-fix-by-checking-the-following-possible-causes"></a>Per risolverlo è possibile verificare le seguenti cause possibili  
   
-1.  **Errore: File di risorse di Bitmap file non è in formato 3.00**  
+1.  **Errore: Mappa di bit risorsa di file non è in formato 3.00**  
   
      Le immagini bitmap in formato Windows versione 2. x non possono essere usate nei file di risorse della versione 3. x. La bitmap deve essere ridisegnata o convertita in formato 3. x.  
   
@@ -44,7 +39,7 @@ Errore di generazione
   
      Un'icona o cursore nella risorsa specificata utilizza un formato da una versione precedente di Windows. L'icona o cursore deve essere ridisegnato o convertiti nel formato 3. x.  
   
-4.  **Formato di intestazione DIB sconosciuto**  
+4.  **formato di intestazione DIB sconosciuto**  
   
      Intestazione della bitmap non è una struttura struttura BITMAPCOREHEADER o BITMAPINFOHEADER.  
   
@@ -52,7 +47,7 @@ Errore di generazione
   
      Questo errore si verifica solo in Visual C++. La causa probabile è che vi siano troppi file aperti o non è possibile aprire o scrivere i file di dati necessari per Visual C++ importare i simboli nello script. Visual C++ tenta di creare questi file nella directory specificata dal **TMP** variabile di ambiente o la directory corrente se non è specificato.  
   
-6.  **Impossibile salvare le informazioni sui simboli**  
+6.  **Non è possibile salvare le informazioni sui simboli**  
   
      Questo errore si verifica solo in Visual C++. La causa probabile è che vi siano troppi file aperti o non è possibile chiudere o scrivere i file di dati necessari per Visual C++ importare i simboli nello script. Visual C++ tenta di utilizzare questi file nella directory specificata dal **TMP** variabile di ambiente o la directory corrente se non è specificato.  
   

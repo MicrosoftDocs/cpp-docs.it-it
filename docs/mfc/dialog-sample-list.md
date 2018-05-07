@@ -1,29 +1,24 @@
 ---
 title: Elenco di esempio di finestra di dialogo | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - sample applications [MFC], dialog boxes
 ms.assetid: 3fc7dd7c-d758-4c43-96bb-0ea638ca1ad7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 73b1a75c8b4c903e8d0872b882426918743ea6b6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0edef5dc0c97985ba81b28c9df5233a8a2da6933
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dialog-sample-list"></a>Elenco di esempi di finestre di dialogo
 Vedere i seguenti programmi di esempio che illustrano le finestre di dialogo e finestre delle proprietà:  
@@ -32,11 +27,11 @@ Vedere i seguenti programmi di esempio che illustrano le finestre di dialogo e f
   
 -   [SCRIBBLE](../visual-cpp-samples.md)  
   
- *La finestra di dialogo non modali*  
+ *Finestra di dialogo non modali*  
   
 -   [NON MODALE](../visual-cpp-samples.md)  
   
- *Proprietà finestra (finestra di dialogo scheda)*  
+ *Finestra di dialogo Proprietà finestra (finestra di dialogo a schede)*  
   
 -   [PROPDLG](../visual-cpp-samples.md)  
   
@@ -50,7 +45,7 @@ Vedere i seguenti programmi di esempio che illustrano le finestre di dialogo e f
   
 -   [CMNCTRL2](../visual-cpp-samples.md)  
   
- *Controlli della finestra di dialogo*  
+ *Controlli di finestra di dialogo*  
   
 -   [CMNCTRL1](../visual-cpp-samples.md)  
   

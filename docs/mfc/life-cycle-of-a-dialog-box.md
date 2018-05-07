@@ -1,13 +1,10 @@
 ---
 title: Ciclo di vita di una finestra di dialogo | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - MFC dialog boxes [MFC], life cycle
 - life cycle of dialog boxes [MFC]
 ms.assetid: e16fd78e-238d-4f31-8c9d-8564f3953bd9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 743aed312008d1908701933ec642dd52b0ac3ec8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: faf204f05c03e742e0f491fb3991b56d3405ebc4
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="life-cycle-of-a-dialog-box"></a>Ciclo di vita di una finestra di dialogo
 Durante il ciclo di vita di una finestra di dialogo, l'utente richiama la finestra di dialogo, in genere all'interno di un gestore del comando che crea e inizializza l'oggetto finestra di dialogo, l'utente interagisce con la finestra di dialogo e chiude la finestra di dialogo.  
@@ -40,7 +35,7 @@ Durante il ciclo di vita di una finestra di dialogo, l'utente richiama la finest
   
 -   [Creazione e visualizzazione delle finestre di dialogo](../mfc/creating-and-displaying-dialog-boxes.md)  
   
--   [Creazione di finestre di dialogo modale](../mfc/creating-modal-dialog-boxes.md)  
+-   [Creazione di finestre di dialogo modali](../mfc/creating-modal-dialog-boxes.md)  
   
 -   [Creazione di finestre di dialogo non modali](../mfc/creating-modeless-dialog-boxes.md)  
   
@@ -48,17 +43,17 @@ Durante il ciclo di vita di una finestra di dialogo, l'utente richiama la finest
   
 -   [Impostare il colore di sfondo della finestra di dialogo](../mfc/setting-the-dialog-boxs-background-color.md)  
   
--   [Nella finestra di dialogo di inizializzazione](../mfc/initializing-the-dialog-box.md)  
+-   [Inizializzazione della finestra di dialogo](../mfc/initializing-the-dialog-box.md)  
   
--   [La gestione dei messaggi di Windows nella finestra di dialogo](../mfc/handling-windows-messages-in-your-dialog-box.md)  
+-   [Gestione dei messaggi di Windows nella finestra di dialogo](../mfc/handling-windows-messages-in-your-dialog-box.md)  
   
 -   [Il recupero dei dati da un oggetto dialog](../mfc/retrieving-data-from-the-dialog-object.md)  
   
 -   [Chiudere la finestra di dialogo](../mfc/closing-the-dialog-box.md)  
   
--   [Nella finestra di dialogo di eliminazione definitiva](../mfc/destroying-the-dialog-box.md)  
+-   [Eliminazione definitiva della finestra di dialogo](../mfc/destroying-the-dialog-box.md)  
   
--   [Dialog data exchange (DDX) e (DDV) di convalida](../mfc/dialog-data-exchange-and-validation.md)  
+-   [Dialog data exchange (DDX) e convalida DDV)](../mfc/dialog-data-exchange-and-validation.md)  
   
 -   [Finestre di dialogo Proprietà finestra](../mfc/property-sheets-and-property-pages-mfc.md)  
   

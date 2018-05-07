@@ -1,30 +1,25 @@
 ---
 title: Requisiti di compilazione per i controlli comuni di Windows Vista | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - common controls (MFC), build requirements
 - common controls (MFC)
 ms.assetid: 025f7d55-55a2-4dcd-8f62-02424e3dcc04
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 76919bcdd416ed7195e94ed1fa0b2e3f3a4d573d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 08d86af5f54fb9dfe81327b4589d60e5290b2610
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="build-requirements-for-windows-vista-common-controls"></a>Requisiti di compilazione per i controlli comuni di Windows Vista
 La libreria Microsoft Foundation Class (MFC) supporta la versione 6.1 di Windows Common Controls. I controlli comuni sono inclusi in [!INCLUDE[windowsver](../build/reference/includes/windowsver_md.md)] e la libreria è inclusa in [!INCLUDE[vsipsdk](../mfc/includes/vsipsdk_md.md)]. La libreria fornisce nuovi metodi che migliorano le classi esistenti e nuove classi e metodi che supportano [!INCLUDE[windowsver](../build/reference/includes/windowsver_md.md)] controlli comuni. Quando si compila l'applicazione, è necessario seguire i requisiti di migrazione e di compilazione descritti nelle sezioni seguenti.  

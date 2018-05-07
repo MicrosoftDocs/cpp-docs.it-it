@@ -1,13 +1,10 @@
 ---
 title: 'Trascinamento della selezione: implementazione di un obiettivo di rilascio | Documenti Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - OLE drag and drop [MFC], drop target
 - drag and drop [MFC], drop target
 ms.assetid: 0689f1ec-5326-4008-b226-4b373c881358
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9fc73eb6627e63b8013180b7608633a9ee424c92
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 414437f044869fef7ae48883a88688ad50c9ac5f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="drag-and-drop-implementing-a-drop-target"></a>Trascinamento della selezione: implementazione di un obiettivo di rilascio
 In questo articolo viene descritto come rendere l'applicazione di un obiettivo di rilascio. Implementazione di un obiettivo di rilascio leggermente più impegnativa rispetto all'implementazione di un'origine di rilascio, ma è comunque relativamente semplice. Queste tecniche si applicano anche alle applicazioni non OLE.  
@@ -34,7 +29,7 @@ In questo articolo viene descritto come rendere l'applicazione di un obiettivo d
   
 1.  Aggiungere una variabile membro per ogni visualizzazione dell'applicazione che si desidera essere una destinazione di rilascio. Questa variabile membro deve essere di tipo `COleDropTarget` o una classe derivata da esso.  
   
-2.  Dalla funzione della classe di visualizzazione che gestisce il `WM_CREATE` messaggio (in genere `OnCreate`), chiamare la nuova variabile membro `Register` funzione membro. `Revoke`verrà chiamato automaticamente per l'utente quando viene eliminata la visualizzazione.  
+2.  Dalla funzione della classe di visualizzazione che gestisce il `WM_CREATE` messaggio (in genere `OnCreate`), chiamare la nuova variabile membro `Register` funzione membro. `Revoke` verrà chiamato automaticamente per l'utente quando viene eliminata la visualizzazione.  
   
 3.  Sostituire le funzioni seguenti. Se si desidera lo stesso comportamento in tutta l'applicazione, eseguire l'override di queste funzioni nella classe di visualizzazione. Se si desidera modificare il comportamento in casi isolati o abilitare l'eliminazione nelle non`CView` windows, eseguire l'override di queste funzioni nel `COleDropTarget`-classe derivata.  
   
@@ -52,7 +47,7 @@ In questo articolo viene descritto come rendere l'applicazione di un obiettivo d
   
 -   [Implementazione di un'origine di rilascio](../mfc/drag-and-drop-implementing-a-drop-source.md)  
   
--   [Creazione e all'eliminazione di oggetti dati e origini dati](../mfc/data-objects-and-data-sources-creation-and-destruction.md)  
+-   [Creazione e distruzione di oggetti dati e origini dati](../mfc/data-objects-and-data-sources-creation-and-destruction.md)  
   
 -   [La modifica di oggetti dati e origini dati](../mfc/data-objects-and-data-sources-manipulation.md)  
   

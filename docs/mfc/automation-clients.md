@@ -1,13 +1,10 @@
 ---
 title: I client di automazione | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - type libraries, Automation clients
 - clients
 ms.assetid: 84e34a79-06f6-4752-a33b-ae0ede1d8ecf
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9cfb6aae5c947d1f36019e548c72b22a3304aa12
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 52eaae8074b984da32e115e779724fa86602b8f5
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="automation-clients"></a>client di automazione
 Automazione rende possibile per l'applicazione possa modificare oggetti implementati in un'altra applicazione o esporli in modo che possano essere modificati. Un client di automazione è un'applicazione in grado di modificare gli oggetti esposti appartenenti a un'altra applicazione. L'applicazione che espone gli oggetti viene chiamato il server di automazione. Il client consente di modificare gli oggetti dell'applicazione server accedendo alla proprietà di tali oggetti e funzioni.  
@@ -47,7 +42,7 @@ Automazione rende possibile per l'applicazione possa modificare oggetti implemen
  È quindi possibile specificare il file di libreria dei tipi che descrive le proprietà e le funzioni dell'oggetto dell'applicazione server. La finestra di dialogo Aggiungi elemento legge il file e crea il `COleDispatchDriver`-derivata con funzioni membro che l'applicazione può chiamare per accedere agli oggetti dell'applicazione server C++ in modo indipendente dai tipi. Funzionalità aggiuntive ereditato da `COleDispatchDriver` semplifica il processo di chiamata al server di automazione corretto.  
   
 ### <a name="handling-events-in-automation-clients"></a>Gestione degli eventi nel client di automazione  
- Se si desidera gestire gli eventi nel client di automazione, è necessario aggiungere un'interfaccia sink. MFC fornisce il supporto della procedura guidata per aggiungere le interfacce di sink per i controlli ActiveX, ma non supportano per gli altri server COM. Per informazioni su come aggiungere un'interfaccia sink in un client MFC per le interfacce di origine descritto dai server COM, vedere Procedura: creare un'interfaccia Sink nel Client COM MFC-Based (KB 181845) [http://support.microsoft.com/default.aspxscid=kb;en-us; 181845](http://support.microsoft.com/default.aspxscid=kb;en-us;181845).  
+ Se si desidera gestire gli eventi nel client di automazione, è necessario aggiungere un'interfaccia sink. MFC fornisce il supporto della procedura guidata per aggiungere le interfacce di sink per i controlli ActiveX, ma non supportano per gli altri server COM. Per informazioni su come aggiungere un'interfaccia sink in un client MFC per le interfacce di origine descritto dai server COM, vedere Procedura: creare un'interfaccia Sink nel Client COM MFC-Based (181845 KB) [ http://support.microsoft.com/default.aspxscid=kb; en-us; 181845](http://support.microsoft.com/default.aspxscid=kb;en-us;181845).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Client di automazione: Utilizzo delle librerie dei tipi](../mfc/automation-clients-using-type-libraries.md)   

@@ -1,12 +1,9 @@
 ---
 title: Strumenti del linker LNK1104 errore | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 05/17/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - LNK1104
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - LNK1104
 ms.assetid: 9ca6f929-0efc-4055-8354-3cf5b4e636dc
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c91853fe3310d8e577ac884545f86d1f4e1d4521
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d2b832d4bceab88fbf3fbe8325a414669d11073c
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="linker-tools-error-lnk1104"></a>Errore degli strumenti del linker LNK1104
 
@@ -101,4 +96,4 @@ Questo errore può verificarsi se si dispone di autorizzazioni file insufficient
 
 L'errore può verificarsi quando non si dispone di spazio su disco insufficiente. Il linker usa i file temporanei in vari casi. Anche se si dispone di spazio su disco sufficiente, un collegamento di dimensioni molto grande può esaurire o frammentare lo spazio disponibile su disco. È consigliabile utilizzare il [/OPT (ottimizzazioni)](../../build/reference/opt-optimizations.md) opzione; in questo letture di eliminazione COMDAT transitive tutti i file oggetto più volte.
 
-Se il *filename* denominato file LNK*nnn*, che è un nome file generato dal linker per un file temporaneo, la directory specificata nella variabile di ambiente TMP non esiste più Directory può essere specificata per la variabile di ambiente TMP. Solo un percorso di directory deve essere specificato per la variabile di ambiente TMP.
+Se il *filename* denominato LNK*nnn*, ovvero un nome file generato dal linker per un file temporaneo, la directory specificata nella variabile di ambiente TMP potrebbe non esistere o potrebbe essere più di una directory specificato per la variabile di ambiente TMP. Solo un percorso di directory deve essere specificato per la variabile di ambiente TMP.

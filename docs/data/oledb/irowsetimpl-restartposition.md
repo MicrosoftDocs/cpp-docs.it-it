@@ -1,12 +1,9 @@
 ---
 title: 'IRowsetImpl:: RestartPosition | Documenti Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - ATL.IRowsetImpl.RestartPosition
@@ -19,18 +16,16 @@ dev_langs:
 helpviewer_keywords:
 - RestartPosition method
 ms.assetid: 14de66ef-8d2c-4404-adb6-3f6c74ac6cf1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: c42e3685f1d857d60a4586544bf01a8a7d09f011
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 1c203cc19e31f22df5903f099e953fcf5663718f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="irowsetimplrestartposition"></a>IRowsetImpl::RestartPosition
 Riposiziona posizione del recupero successivo per la posizione iniziale. vale a dire la posizione quando il set di righe è stato inizialmente creato.  

@@ -1,31 +1,26 @@
 ---
 title: 'Procedura: effettuare il marshalling di SAFEARRAY per ADO.NET (C + + CLI) | Documenti Microsoft'
-ms.custom: 
+ms.custom: get-started-article
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: get-started-article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - SAFEARRAY, marshaling
 - ADO.NET [C++], marshaling SAFEARRAY types
 ms.assetid: 1034b9d7-ecf1-40f7-a9ee-53180e87a58c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 397312a5cc8ef4869f5ce8576e5787e141c1a414
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ddd6250fac293fef58ccc21894661ddf32e3fa61
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-marshal-a-safearray-for-adonet-ccli"></a>Procedura: Effettuare il marshalling di SAFEARRAY per ADO.NET (C++/CLI)
 Di seguito viene illustrato come aggiungere un nativo `SAFEARRAY` a un database e come effettuare il marshalling di una matrice gestita da un database a nativo `SAFEARRAY`.  

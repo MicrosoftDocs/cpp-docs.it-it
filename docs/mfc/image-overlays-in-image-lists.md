@@ -1,13 +1,10 @@
 ---
 title: Immagine sovrapposizioni negli elenchi di immagini | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - image lists [MFC], image overlays in
 - CImageList class [MFC], image overlays in
 ms.assetid: aaf4e1c4-cd12-42c8-9af4-1bb458889b4e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5e70365040b5f009e634a4867a4a1f974d47bd61
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 55a55a6e015a2f8c1613a85717c030737712c4da
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="image-overlays-in-image-lists"></a>Sovrapposizioni immagini negli elenchi di immagini
 Ogni elenco di immagini ([CImageList](../mfc/reference/cimagelist-class.md)) include un elenco di immagini da utilizzare come maschere di sovrapposizione. Una maschera di sovrapposizione"" è un'immagine disegnata in modo trasparente in un'altra immagine. Qualsiasi immagine utilizzabile come maschera di sovrapposizione. È possibile specificare fino a quattro maschere di sovrapposizione per ogni elenco di immagini.  

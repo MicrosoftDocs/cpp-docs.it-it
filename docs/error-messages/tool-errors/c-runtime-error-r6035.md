@@ -1,12 +1,9 @@
 ---
 title: R6035 di errore di Runtime C | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - R6035
@@ -15,22 +12,20 @@ dev_langs:
 helpviewer_keywords:
 - R6035
 ms.assetid: f8fb50b8-18bf-4258-b96a-b0a9de468d16
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6b5f9fb1f7562b26382c6b36e3947367013631bf
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: ecadf1793475e1cf5f354796c71a1894884e24e9
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="c-runtime-error-r6035"></a>R6035 di errore di Runtime C
 Microsoft Visual C++ libreria di Runtime R6035 errore - un modulo in questa applicazione sta inizializzando i cookie di sicurezza globale del modulo, mentre è attiva una funzione basarsi su tale cookie di sicurezza.  Chiamata di security_init_cookie in precedenza.  
   
- [security_init_cookie](../../c-runtime-library/reference/security-init-cookie.md) deve essere chiamato prima del primo utilizzo di cookie di sicurezza globale.  
+ [security_init_cookie](../../c-runtime-library/reference/security-init-cookie.md) deve essere chiamato prima del primo utilizzo del cookie di sicurezza globale.  
   
  Il cookie di sicurezza globale viene utilizzato per la protezione di sovraccarico del buffer nel codice compilato con [/GS (controllo sicurezza Buffer)](../../build/reference/gs-buffer-security-check.md) e nel codice che utilizza la gestione delle eccezioni strutturata. In pratica, in ingresso a una funzione protetta da sovraccarico, il cookie viene inserito nello stack e in uscita, il valore nello stack viene confrontato con il cookie globale. Eventuali differenze tra di essi indica che si è verificato un sovraccarico del buffer e che comporta l'interruzione immediata del programma.  
   

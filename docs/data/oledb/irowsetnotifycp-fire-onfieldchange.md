@@ -1,12 +1,9 @@
 ---
-title: IRowsetNotifyCP::Fire_OnFieldChange | Microsoft Docs
-ms.custom: 
+title: 'IRowsetNotifyCP:: Fire_onfieldchange | Documenti Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - Fire_OnFieldChange
@@ -19,18 +16,16 @@ dev_langs:
 helpviewer_keywords:
 - Fire_OnFieldChange method
 ms.assetid: 03dad058-8d4f-4113-aea4-ef7764eab9ec
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 3d6cfdfdc17a795f25685504dab0e23ee11b164f
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: d239f0e1bdc9f9714125a995bedbfbce25677738
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="irowsetnotifycpfireonfieldchange"></a>IRowsetNotifyCP::Fire_OnFieldChange
 Trasmette un [OnFieldChange](https://msdn.microsoft.com/en-us/library/ms715961.aspx) evento per notificare gli utenti di una modifica al valore di una colonna.  

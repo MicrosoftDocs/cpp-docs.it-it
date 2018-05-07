@@ -1,13 +1,10 @@
 ---
-title: "Manifesto dello strumento proprietà Input e Output (Visual C++) | Documenti Microsoft"
-ms.custom: 
+title: Manifesto dello strumento proprietà Input e Output (Visual C++) | Documenti Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VC.Project.VCManifestTool.OutputManifestFile
 - VC.Project.VCManifestTool.InputResourceManifests
@@ -19,17 +16,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: a8bb20f6-7ace-45ca-bab0-b4f4a5caf170
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 77137e9bc0a4af60080234aac85afa59034d2c6a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 15be7636188bb670febd7875974d683c1d78360f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="input-and-output-manifest-tool-configuration-properties-ltprojectnamegt-property-pages-dialog-box"></a>Input e Output, strumento manifesto, proprietà di configurazione, &lt;Projectname&gt; la finestra di dialogo Pagine delle proprietà
 Utilizzare questa finestra di dialogo per specificare le opzioni di input e output per [Mt.exe](http://msdn.microsoft.com/library/aa375649).  
@@ -62,7 +57,7 @@ Utilizzare questa finestra di dialogo per specificare le opzioni di input e outp
  Usa il **/makecdfs** opzione per specificare che lo strumento Manifesto genererà file di definizione di catalogo (file con estensione CDF), che vengono utilizzati per creare cataloghi.  
   
  **Genera manifesto da ManagedAssembly**  
- Genera un manifesto da un assembly gestito. (**- managedassemblyname:***file*).  
+ Genera un manifesto da un assembly gestito. (**managedassemblyname-: * * * file*).  
   
  **Eliminare l'elemento Dependency**  
  Utilizzato con il **- managedassembly** opzione. Questo tag Elimina la generazione di elementi di dipendenza nel manifesto finale.  

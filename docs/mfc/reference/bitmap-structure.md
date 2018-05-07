@@ -1,13 +1,10 @@
 ---
 title: Struttura BITMAP | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - BITMAP
 dev_langs:
@@ -15,20 +12,18 @@ dev_langs:
 helpviewer_keywords:
 - BITMAP structure [MFC]
 ms.assetid: 05d33b4d-7232-4643-a108-87dda8ff5f22
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0ed782c3e67a55797bfb2d302265924393946962
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fa8bb4ab914b4e05eb21cfc45a243328d32bb6d8
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="bitmap-structure"></a>Struttura BITMAP
-Il **BITMAP** struttura definisce l'altezza, larghezza, il formato di colore e i valori di bit di una bitmap logica**.**  
+Il **BITMAP** struttura definisce l'altezza, larghezza, il formato di colore e i valori di bit di una bitmap logica **.**  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -69,7 +64,7 @@ typedef struct tagBITMAP {  /* bm */
 ## <a name="remarks"></a>Note  
  I formati di bitmap attualmente utilizzati sono monocromatico e a colori. La bitmap monocromatica utilizza un formato a 1 bit, 1 piano. Ogni analisi è un multiplo di 16 bit.  
   
- Le analisi sono organizzate come indicato di seguito per una bitmap monocromatica di altezza  *n* :  
+ Le analisi sono organizzate come indicato di seguito per una bitmap monocromatica di altezza *n*:  
   
  `Scan 0`  
   

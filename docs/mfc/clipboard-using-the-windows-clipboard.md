@@ -1,13 +1,10 @@
 ---
 title: 'Appunti: Utilizzo degli Appunti di Windows | Documenti Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -20,24 +17,22 @@ helpviewer_keywords:
 - Windows Clipboard [MFC]
 - Clipboard [MFC], Windows Clipboard API
 ms.assetid: 24415b42-9301-4a70-b69a-44c97918319f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6063a27495d46e4b54f3133b92689e4b0faaa631
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3ed1b3e9cc0cdd368a37657a751df67bed3f72dc
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="clipboard-using-the-windows-clipboard"></a>Appunti: utilizzo degli Appunti di Windows
 In questo argomento viene descritto come utilizzare l'API Appunti di Windows standard all'interno dell'applicazione MFC.  
   
  La maggior parte delle applicazioni per Windows supportano Taglia o copia di dati negli Appunti di Windows e incollare dati dagli Appunti. I formati di dati negli Appunti possono variare tra applicazioni. Il framework supporta solo un numero limitato di formati degli Appunti per un numero limitato di classi. È in genere implementano i comandi relativi agli Appunti, le operazioni Taglia, copia e Incolla, il menu di modifica per la visualizzazione. La libreria di classi definisce gli ID di comando di questi comandi: **ID_EDIT_CUT**, **ID_EDIT_COPY**, e **ID_EDIT_PASTE**. Sono inoltre definiti i prompt della riga di messaggio.  
   
- [I messaggi e comandi nel Framework](../mfc/messages-and-commands-in-the-framework.md) viene illustrato come gestire i comandi di menu dell'applicazione eseguendo il mapping del comando di menu per una funzione del gestore. Fino a quando l'applicazione non definisce le funzioni di gestione per i comandi negli Appunti dal menu Modifica, rimangono disabilitati. Per scrivere funzioni di gestione per i comandi Taglia e copia, implementare la selezione nell'applicazione. Per scrivere una funzione del gestore per il comando Incolla, eseguire una query negli Appunti per vedere se contiene dati in un formato che può accettare l'applicazione. Ad esempio, per abilitare il comando di copia, è possibile scrivere un gestore simile al seguente:  
+ [I messaggi e comandi nel Framework](../mfc/messages-and-commands-in-the-framework.md) viene illustrato come gestire i comandi di menu nell'applicazione in uso eseguendo il mapping del comando di menu per una funzione del gestore. Fino a quando l'applicazione non definisce le funzioni di gestione per i comandi negli Appunti dal menu Modifica, rimangono disabilitati. Per scrivere funzioni di gestione per i comandi Taglia e copia, implementare la selezione nell'applicazione. Per scrivere una funzione del gestore per il comando Incolla, eseguire una query negli Appunti per vedere se contiene dati in un formato che può accettare l'applicazione. Ad esempio, per abilitare il comando di copia, è possibile scrivere un gestore simile al seguente:  
   
  [!code-cpp[NVC_MFCListView#2](../atl/reference/codesnippet/cpp/clipboard-using-the-windows-clipboard_1.cpp)]  
   
@@ -49,7 +44,7 @@ In questo argomento viene descritto come utilizzare l'API Appunti di Windows sta
   
 ## <a name="what-do-you-want-to-know-more-about"></a>Ciò che si desidera saperne di più  
   
--   [Copiare e incollare dati](../mfc/clipboard-copying-and-pasting-data.md)  
+-   [Copiando e incollando dati](../mfc/clipboard-copying-and-pasting-data.md)  
   
 -   [Utilizzo del meccanismo degli Appunti OLE](../mfc/clipboard-using-the-ole-clipboard-mechanism.md)  
   

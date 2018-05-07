@@ -1,13 +1,10 @@
 ---
 title: Impostazioni applicazione, creazione guidata DLL MFC | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.appwiz.mfc.dll.appset
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - MFC DLL Wizard, application settings
 ms.assetid: 0a96b94f-ae36-4975-951b-c9ffb3def21c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1851460d5cf9deb8a803b13ec75d92c45c03e607
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1a243b790881452a983c43fb92d8ebea18c26bcc
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="application-settings-mfc-dll-wizard"></a>Impostazioni applicazione, Creazione guidata DLL MFC
 Utilizzare questa pagina della procedura guidata DLL MFC per progettare e aggiungere funzionalità di base a un nuovo progetto di DLL MFC.  
@@ -33,10 +28,10 @@ Utilizzare questa pagina della procedura guidata DLL MFC per progettare e aggiun
 ## <a name="dll-type"></a>Tipo di DLL  
  Selezionare il tipo di DLL che si desidera creare.  
   
- **DLL regolare MFC che utilizza la DLL MFC condivisa.**  
+ **DLL regolare MFC che utilizza la DLL MFC condivisa**  
  Selezionare questa opzione per collegare la libreria MFC per il programma come DLL condivisa. Con questa opzione, è possibile condividere oggetti MFC tra la DLL e l'applicazione chiamante. Il programma effettua chiamate alla libreria MFC in fase di esecuzione. Questa opzione riduce i requisiti di memoria e disco del programma è costituito da più file eseguibili che utilizzano la libreria MFC. Applicazioni Win32 sia MFC è possono chiamare funzioni nella DLL. È necessario ridistribuire le DLL MFC con questo tipo di progetto.  
   
- **Una DLL regolare MFC con MFC collegato in modo statico**  
+ **DLL regolare MFC con MFC collegato in modo statico**  
  Selezionare questa opzione per collegare il programma in modo statico alla libreria MFC in fase di compilazione. Applicazioni Win32 sia MFC è possono chiamare funzioni nella DLL. Quando questa opzione aumenta le dimensioni del programma, non è necessario ridistribuire le DLL MFC con questo tipo di progetto. È possibile condividere oggetti MFC tra la DLL e l'applicazione chiamante.  
   
  **DLL di estensione MFC**  

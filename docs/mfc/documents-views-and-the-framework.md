@@ -1,13 +1,10 @@
 ---
 title: Documenti, visualizzazioni e Framework | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - MFC object relationships
 - thread objects [MFC]
 ms.assetid: 409ddd9b-66ad-4625-84f7-bf55a41d697b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e48872907b07b0adf18cf17cca6ec6ecabe9e2de
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f2a30f2ccf1963fe2985794a2bf8eca0c49474cb
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="documents-views-and-the-framework"></a>Documenti, visualizzazioni e framework
 Il cuore del framework MFC sono i concetti di documento e la visualizzazione. Un documento è un oggetto dati con cui l'utente interagisce in una sessione di modifica. Viene creato dal `New` o **aprire** comando il **File** menu e viene in genere salvata in un file. (Documenti MFC standard, derivati dalla classe **CDocument**, sono diversi dai documenti attivi e documenti composti OLE.) Una vista è un oggetto finestra tramite il quale l'utente interagisce con un documento.  
@@ -68,7 +63,7 @@ Il cuore del framework MFC sono i concetti di documento e la visualizzazione. Un
   
 -   Oggetti thread  
   
-     Se l'applicazione crea un thread separato di esecuzione, ad esempio, per eseguire calcoli in background, si userà le classi derivate da [CWinThread](../mfc/reference/cwinthread-class.md). [CWinApp](../mfc/reference/cwinapp-class.md) a sua volta deriva da `CWinThread` e rappresenta il thread principale di esecuzione (o il processo principale) nell'applicazione. È anche possibile utilizzare MFC in thread secondari.  
+     Se l'applicazione crea un thread separato di esecuzione, ad esempio, per eseguire calcoli in background, si userà le classi derivate da [CWinThread](../mfc/reference/cwinthread-class.md). [CWinApp](../mfc/reference/cwinapp-class.md) sua volta deriva da `CWinThread` e rappresenta il thread principale di esecuzione (o il processo principale) nell'applicazione. È anche possibile utilizzare MFC in thread secondari.  
   
  In un'applicazione in esecuzione, questi oggetti in modo cooperativo rispondono alle azioni utente, raggruppati per comandi e altri messaggi. Una singola applicazione gestisce uno o più modelli di documento. Ogni modello di documento crea e gestisce uno o più documenti (a seconda che l'applicazione sia SDI o MDI). L'utente visualizza e modifica di un documento tramite una vista contenuto all'interno di una finestra cornice. Nella figura seguente mostra le relazioni tra questi oggetti per un'applicazione SDI.  
   

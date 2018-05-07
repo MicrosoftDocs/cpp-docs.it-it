@@ -1,13 +1,10 @@
 ---
 title: 'Client di automazione: Utilizzo delle librerie dei tipi | Documenti Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - MkTypLib
 dev_langs:
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - MkTypLib tool
 - .odl files
 ms.assetid: d405bc47-118d-4786-b371-920d035b2047
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b63f6d05415b163e523589756ba2eb67ab2c61a3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 67fa0f5d164ae325caff576fb41695fc8689fda0
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="automation-clients-using-type-libraries"></a>Client di automazione: utilizzo delle librerie dei tipi
 I client di automazione devono disporre di informazioni sulle proprietà e metodi degli oggetti del server se i client sono di gestire gli oggetti dei server. Le proprietà dispongono di tipi di dati. metodi spesso restituiscono valori e accettano parametri. Il client richiede informazioni sui tipi di dati di tutti questi per associare in modo statico per il tipo di oggetto server.  

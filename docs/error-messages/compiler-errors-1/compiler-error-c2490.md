@@ -1,12 +1,9 @@
 ---
 title: Errore del compilatore C2490 | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C2490
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C2490
 ms.assetid: 9de6bddd-b2e2-4ce6-b33b-201a8c2c8c54
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d23f61e8e720e1d59ae258132e368505c44bbb13
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bc366178c31f900b031aacca278e39cc0c2eb493
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-error-c2490"></a>Errore del compilatore C2490
 'keyword' non consentito in una funzione con l'attributo 'naked'  

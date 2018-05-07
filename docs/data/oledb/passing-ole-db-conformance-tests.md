@@ -1,12 +1,9 @@
 ---
-title: "Il passaggio di test di conformità OLE DB | Documenti Microsoft"
-ms.custom: 
+title: Il passaggio di test di conformità OLE DB | Documenti Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 dev_langs:
 - C++
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - conformance testing [OLE DB]
 - OLE DB providers, testing
 ms.assetid: d1a4f147-2edd-476c-b452-0e6a0ac09891
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 38f822496bd5b257a782e9e04047e164ac9681d8
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 11677e6295956de768c7ebc0c113d775b066bb0c
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="passing-ole-db-conformance-tests"></a>Superamento dei test di conformità OLE DB
 Per rendere più coerente provider, Data Access SDK fornisce un set di test di conformità OLE DB. I test di controllare tutti gli aspetti del provider e offrono ragionevole certezza che il provider funzioni come previsto. È possibile trovare i test di conformità OLE DB in Microsoft Data Access SDK. In questa sezione sono illustrate le operazioni che è necessario eseguire per passare i test di conformità. Per informazioni sull'esecuzione dei test di conformità OLE DB, vedere il SDK.  

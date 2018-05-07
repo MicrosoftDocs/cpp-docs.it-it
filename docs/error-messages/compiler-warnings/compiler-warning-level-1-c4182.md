@@ -1,13 +1,10 @@
 ---
 title: Compilatore avviso (livello 1) C4182 | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-diagnostics
+ms.topic: error-reference
 f1_keywords:
 - C4182
 dev_langs:
@@ -15,20 +12,18 @@ dev_langs:
 helpviewer_keywords:
 - C4182
 ms.assetid: 8970f3c6-e2dd-407e-b2ec-964360eb8b43
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3ef78cebafcb07977611f92ad9f49a3d5b2c3dde
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 79e86076a9d8218d08bd7437e2a06878b6ee91ff
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-warning-level-1-c4182"></a>Avviso del compilatore (livello 1) C4182
-\#includere il livello di nidificazione profonda 'number'; possibile ricorsione infinita  
+\#includere il livello di nidificazione è 'number' deep; possibile ricorsione infinita  
   
  Il compilatore ha esaurito lo spazio nell'heap a causa del numero di file di inclusione annidati. Un file di inclusione è annidato quando viene incluso da un altro file di inclusione.  
   

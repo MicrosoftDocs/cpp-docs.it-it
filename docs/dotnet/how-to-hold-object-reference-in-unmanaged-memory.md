@@ -1,13 +1,10 @@
 ---
 title: 'Procedura: mantenere il riferimento di oggetto in memoria non gestita | Documenti Microsoft'
-ms.custom: ''
+ms.custom: get-started-article
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: get-started-article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,18 +13,16 @@ helpviewer_keywords:
 - references, to objects in native functions
 - gcroot keyword [C++], object reference in native function
 ms.assetid: a61eb8ce-3982-477d-8d3d-2173fd57166d
-caps.latest.revision: 10
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: debda931ae121e109c4b1008054ace11a714f065
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: adff91c4cbceb61a7b6d8996b6f90e7350ae637d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-hold-object-reference-in-unmanaged-memory"></a>Procedura: mantenere i riferimenti agli oggetti nella memoria non gestita
 È possibile utilizzare gcroot, che contiene <xref:System.Runtime.InteropServices.GCHandle>, per contenere un riferimento all'oggetto CLR nella memoria non gestita. In alternativa, è possibile utilizzare `GCHandle` direttamente.  
@@ -69,7 +64,7 @@ StringWrapper::x == ManagedString
 ```  
   
 ## <a name="example"></a>Esempio  
- `GCHandle`offre un mezzo per mantenere un riferimento di oggetto gestito nella memoria non gestita.  Utilizzare il <xref:System.Runtime.InteropServices.GCHandle.Alloc%2A> metodo per creare un handle a un oggetto gestito opaco e <xref:System.Runtime.InteropServices.GCHandle.Free%2A> per rilasciarlo. Inoltre, il <xref:System.Runtime.InteropServices.GCHandle.Target%2A> metodo consente di ottenere il riferimento all'oggetto dall'handle nel codice gestito.  
+ `GCHandle` offre un mezzo per mantenere un riferimento di oggetto gestito nella memoria non gestita.  Utilizzare il <xref:System.Runtime.InteropServices.GCHandle.Alloc%2A> metodo per creare un handle a un oggetto gestito opaco e <xref:System.Runtime.InteropServices.GCHandle.Free%2A> per rilasciarlo. Inoltre, il <xref:System.Runtime.InteropServices.GCHandle.Target%2A> metodo consente di ottenere il riferimento all'oggetto dall'handle nel codice gestito.  
   
 ```  
 // hold_object_reference_2.cpp  

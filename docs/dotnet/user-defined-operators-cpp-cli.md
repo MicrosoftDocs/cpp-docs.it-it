@@ -1,30 +1,25 @@
 ---
 title: Operatori definiti dall'utente (C + + CLI) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - user-defined operators under /clr
 ms.assetid: 42f93b4a-6de4-4e34-b07b-5a62ac014f2c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: b02d6806abedb407d1c53ec8022e92983ce21d28
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7cf5583b3ae896ea252d191fbeba86e202b56cef
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="user-defined-operators-ccli"></a>Operatori definiti dall'utente (C++/CLI)
 Operatori definiti dall'utente per i tipi gestiti sono consentiti come membri statici o membri di istanza o in ambito globale. Tuttavia, solo gli operatori statici sono accessibili tramite i metadati per i client che vengono scritti in un linguaggio diverso da Visual C++.  

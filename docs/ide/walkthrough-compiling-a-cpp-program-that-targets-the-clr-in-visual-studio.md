@@ -1,13 +1,10 @@
 ---
 title: Compilazione di un programma C++ destinato a CLR | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - Visual C++, managed code
 - managed code [C++]
 ms.assetid: 339f89df-a5d2-4040-831a-ddbe25b5dce4
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eca6960d23c43fbe27d753ab4f79a27dea7bd7e5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d2a7bcb0eead62730f0b70b0b1df64e5ed08f1f0
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-compiling-a-c-program-that-targets-the-clr-in-visual-studio"></a>Procedura dettagliata: compilazione di un programma C++ destinato a CLR in Visual Studio
 È possibile creare programmi Visual C++ che utilizzano classi .NET e compilarle con l'ambiente di sviluppo di Visual Studio.  
@@ -81,10 +76,10 @@ ms.lasthandoff: 12/21/2017
      Il **textfile. txt** file di testo è ora disponibile nella directory del progetto. È possibile aprire questo file utilizzando blocco note.  
   
     > [!NOTE]
-    >  Scelta di CLR vuoto modello di progetto impostata automaticamente la **/clr** l'opzione del compilatore. Per verificare questa condizione, fare clic sul progetto in **Esplora** e facendo clic su **proprietà**e quindi controllare il **supporto Common Language Runtime** opzione il ** Generale** nodo di **le proprietà di configurazione**.  
+    >  Scelta di CLR vuoto modello di progetto impostata automaticamente la **/clr** l'opzione del compilatore. Per verificare questa condizione, fare clic sul progetto in **Esplora** e facendo clic su **proprietà**e quindi controllare il **supporto Common Language Runtime** opzione il  **Generale** nodo di **le proprietà di configurazione**.  
   
 ## <a name="whats-next"></a>Argomenti successivi  
- **Precedente:** [procedura dettagliata: compilazione di un programma C++ nativo nella riga di comando](../build/walkthrough-compiling-a-native-cpp-program-on-the-command-line.md) & #124; **Avanti:**[procedura dettagliata: compilare un programma C nella riga di comando](../build/walkthrough-compile-a-c-program-on-the-command-line.md)  
+ **Precedente:** [procedura dettagliata: compilazione di un programma C++ nativo nella riga di comando](../build/walkthrough-compiling-a-native-cpp-program-on-the-command-line.md) &#124; **successivo:**[procedura dettagliata: compilare un programma C nella riga di comando](../build/walkthrough-compile-a-c-program-on-the-command-line.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Riferimenti al linguaggio C++](../cpp/cpp-language-reference.md)   

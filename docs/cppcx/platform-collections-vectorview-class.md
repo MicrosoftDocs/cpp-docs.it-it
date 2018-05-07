@@ -1,11 +1,8 @@
 ---
 title: Classe platform::Collections::VectorView | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - COLLECTION/Platform::Collections::VectorView::VectorView
@@ -19,17 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - VectorView Class
 ms.assetid: 05cd461d-dce7-49d3-b0e7-2e5c78ed8192
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5f196a1f58e5c480ef09d13a72f1c8ac3a0a50db
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 937342c340b085f2e2bdeef8ed7df21dae826152
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="platformcollectionsvectorview-class"></a>Classe Platform::Collections::VectorView
 Rappresenta una visualizzazione in sola lettura di una raccolta sequenziale di oggetti a cui è possibile accedere singolarmente attraverso l'indice. Il tipo di ciascun oggetto nella raccolta è specificato dal parametro del modello.  
@@ -57,17 +52,17 @@ template <typename T, typename E>
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[VectorView::VectorView](#ctor)|Inizializza una nuova istanza della classe VectorView.|  
+|[Vectorview](#ctor)|Inizializza una nuova istanza della classe VectorView.|  
   
 ### <a name="public-methods"></a>Metodi pubblici  
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[VectorView::First](#first)|Restituisce un iteratore che specifica il primo elemento in VectorView.|  
-|[VectorView::GetAt](#getat)|Recupera l'elemento dell'oggetto VectorView corrente indicato dall'indice specificato.|  
+|[Vectorview](#first)|Restituisce un iteratore che specifica il primo elemento in VectorView.|  
+|[GetAt](#getat)|Recupera l'elemento dell'oggetto VectorView corrente indicato dall'indice specificato.|  
 |[VectorView::GetMany](#getmany)|Recupera una sequenza di elementi dall'oggetto VectorView corrente, a partire dall'indice specificato.|  
-|[VectorView::IndexOf](#indexof)|Cerca l'elemento specificato nell'oggetto VectorView corrente e, se lo trova, restituisce l'indice dell'elemento.|  
-|[VectorView::Size](#size)|Restituisce il numero di elementi nell'oggetto VectorView corrente.|  
+|[IndexOf](#indexof)|Cerca l'elemento specificato nell'oggetto VectorView corrente e, se lo trova, restituisce l'indice dell'elemento.|  
+|[Vectorview:: Size](#size)|Restituisce il numero di elementi nell'oggetto VectorView corrente.|  
   
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  `VectorView`  

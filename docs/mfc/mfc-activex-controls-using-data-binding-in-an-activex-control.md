@@ -1,13 +1,10 @@
 ---
-title: 'Controlli ActiveX MFC: Utilizzo dell''associazione di dati in un controllo ActiveX | Documenti Microsoft'
-ms.custom: 
+title: "Controlli ActiveX MFC: Utilizzo dell'associazione di dati in un controllo ActiveX | Documenti Microsoft"
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - bindable
 - requestedit
@@ -23,35 +20,33 @@ helpviewer_keywords:
 - controls [MFC], data binding
 - bound controls [MFC], MFC ActiveX
 ms.assetid: 476b590a-bf2a-498a-81b7-dd476bd346f1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 691f832717f5a71c461316b725ee9a69d1350124
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ab5195cc2381e515688182ad73452b07afd06b98
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mfc-activex-controls-using-data-binding-in-an-activex-control"></a>Controlli ActiveX MFC: utilizzo del data binding in un controllo ActiveX
 Uno degli usi più potenti di controlli ActiveX è l'associazione di dati, che consente una proprietà del controllo da associare a un campo specifico in un database. Quando un utente modifica i dati della proprietà associata, il controllo avvisa il database e le richieste che è possibile aggiornare i campi di record. Il database quindi notifica il controllo dell'esito positivo o negativo della richiesta.  
   
  Questo articolo descrive il lato dei controlli dell'attività. Implementazione di interazioni di associazione dati con il database è responsabilità del contenitore del controllo. Modalità di gestione delle interazioni del database nel contenitore non rientra nell'ambito di questa documentazione. Nella parte restante di questo articolo è illustrato come preparare il controllo per l'associazione dati.  
   
- ![Diagramma concettuale di un tipo di dati &#45; controllo associato](../mfc/media/vc374v1.gif "vc374v1")  
+ ![Diagramma concettuale dei dati di&#45;controllo associato a](../mfc/media/vc374v1.gif "vc374v1")  
 Diagramma concettuale di un controllo con associazione a dati  
   
- La `COleControl` classe fornisce due funzioni membro che esegue un processo semplice per implementare l'associazione dati. La prima funzione [BoundPropertyRequestEdit](../mfc/reference/colecontrol-class.md#boundpropertyrequestedit), viene utilizzato per richiedere l'autorizzazione per modificare il valore della proprietà. [BoundPropertyChanged](../mfc/reference/colecontrol-class.md#boundpropertychanged), la seconda funzione, viene chiamato dopo il valore della proprietà è stato modificato correttamente.  
+ La `COleControl` classe fornisce due funzioni membro che esegue un processo semplice per implementare l'associazione dati. La prima funzione [BoundPropertyRequestEdit](../mfc/reference/colecontrol-class.md#boundpropertyrequestedit), viene utilizzato per richiedere l'autorizzazione per modificare il valore della proprietà. [BoundPropertyChanged](../mfc/reference/colecontrol-class.md#boundpropertychanged), la seconda funzione, viene chiamato dopo che il valore della proprietà è stato modificato correttamente.  
   
  In questo articolo vengono illustrati gli argomenti seguenti:  
   
--   [Creazione di una proprietà predefinita associabile](#vchowcreatingbindablestockproperty)  
+-   [Creazione di una proprietà associabile predefinita](#vchowcreatingbindablestockproperty)  
   
 -   [Creazione di un metodo Get/Set associabile](#vchowcreatingbindablegetsetmethod)  
   
-##  <a name="vchowcreatingbindablestockproperty"></a>Creazione di una proprietà predefinita associabile  
+##  <a name="vchowcreatingbindablestockproperty"></a> Creazione di una proprietà associabile predefinita  
  È possibile creare una proprietà predefinita con associazione a dati, anche se è più probabile che si desidera un [metodo get/set associabile](#vchowcreatingbindablegetsetmethod).  
   
 > [!NOTE]
@@ -79,7 +74,7 @@ Diagramma concettuale di un controllo con associazione a dati
   
  È ora possibile compilare il progetto che verrà registrato il controllo. Quando si inserisce il controllo in una finestra di dialogo di **campo dati** e **origine dati** proprietà verranno aggiunti ed è ora possibile selezionare un'origine dati e un campo da visualizzare nel controllo.  
   
-##  <a name="vchowcreatingbindablegetsetmethod"></a>Creazione di un metodo Get/Set associabile  
+##  <a name="vchowcreatingbindablegetsetmethod"></a> Creazione di un metodo Get/Set associabile  
  Oltre a un'associazione a dati get/set (metodo), è inoltre possibile creare un [proprietà predefinita associabile](#vchowcreatingbindablestockproperty).  
   
 > [!NOTE]

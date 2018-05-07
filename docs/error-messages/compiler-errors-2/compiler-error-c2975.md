@@ -1,12 +1,9 @@
 ---
 title: Errore del compilatore C2975 | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C2975
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C2975
 ms.assetid: 526f6b9d-6c76-4c12-9252-1b1d7c1e06c7
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f779ec2623b6b07f61c1e8347304288d0bcfe96a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 53cb020dc0d456f10b7cfbae82a16b2ebe5fda6b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-error-c2975"></a>Errore del compilatore C2975
 
@@ -49,7 +44,7 @@ int main() {
 }
 ```
 
-C2975 si verifica anche quando si utilizza #95; &#95; RIGA &#95; &#95; come costante in fase di compilazione con [/ZI](../../build/reference/z7-zi-zi-debug-information-format.md). Una soluzione, è possibile eseguire la compilazione con [/Zi](../../build/reference/z7-zi-zi-debug-information-format.md) anziché **/ZI**.
+C2975 si verifica anche quando si usa &#95; &#95;riga&#95; &#95; come una costante in fase di compilazione con [/ZI](../../build/reference/z7-zi-zi-debug-information-format.md). Una soluzione, è possibile eseguire la compilazione con [/Zi](../../build/reference/z7-zi-zi-debug-information-format.md) anziché **/ZI**.
 
 ```cpp
 // C2975b.cpp

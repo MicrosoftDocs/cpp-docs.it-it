@@ -1,13 +1,10 @@
 ---
 title: 'Recordset: Creazione e chiusura di recordset (ODBC) | Documenti Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,18 +15,16 @@ helpviewer_keywords:
 - ODBC recordsets, closing
 - ODBC recordsets, opening
 ms.assetid: 8d2aac23-4396-4ce2-8c60-5ecf1b360d3d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 9ec09c08aa4730c11960d675aef68c8a1007c900
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bbf020e12151e666aa8f88098865b1624403b828
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="recordset-creating-and-closing-recordsets-odbc"></a>Recordset: creazione e chiusura di recordset (ODBC)
 Questo argomento si applica alle classi ODBC MFC.  
@@ -40,11 +35,11 @@ Questo argomento si applica alle classi ODBC MFC.
   
 -   [Quando e come creare un oggetto recordset](#_core_creating_recordsets_at_run_time).  
   
--   [Quando e come è possibile qualificare il funzionamento del recordset da applicazione di parametri, il filtro, ordinamento o il blocco](#_core_setting_recordset_options).  
+-   [Quando e come è possibile qualificare il funzionamento del recordset da parametrizzata, il filtro, ordinamento o bloccarla,](#_core_setting_recordset_options).  
   
 -   [Quando e come chiudere un oggetto recordset](#_core_closing_a_recordset).  
   
-##  <a name="_core_creating_recordsets_at_run_time"></a>Creazione di recordset in fase di esecuzione  
+##  <a name="_core_creating_recordsets_at_run_time"></a> Creazione di recordset in fase di esecuzione  
  Prima di creare oggetti recordset nel programma, è in genere necessario scrivere classi recordset specifiche dell'applicazione. Per ulteriori informazioni su questo passaggio preliminare, vedere [aggiunta di un Consumer ODBC MFC](../../mfc/reference/adding-an-mfc-odbc-consumer.md).  
   
  Aprire un oggetto dynaset o snapshot quando è necessario selezionare i record da un'origine dati. Il tipo di oggetto da creare dipende è necessario eseguire con i dati nell'applicazione e su quali il driver ODBC supporta. Per ulteriori informazioni, vedere [Dynaset](../../data/odbc/dynaset.md) e [Snapshot](../../data/odbc/snapshot.md).  
@@ -89,7 +84,7 @@ if(!rsStudent.Open(CRecordset::snapshot, NULL, CRecordset::readOnly))
 > [!TIP]
 >  La stringa di connessione utilizzata durante lo sviluppo potrebbe non essere la stessa stringa di connessione necessarie per gli utenti finali. Per informazioni sulla generalizzazione dell'applicazione in proposito, vedere [origine dati: gestione delle connessioni (ODBC)](../../data/odbc/data-source-managing-connections-odbc.md).  
   
-##  <a name="_core_setting_recordset_options"></a>Impostazione delle opzioni di Recordset  
+##  <a name="_core_setting_recordset_options"></a> Impostazione delle opzioni di Recordset  
  Dopo la costruzione dell'oggetto recordset ma prima di chiamare **aprire** per selezionare i record, è possibile impostare alcune opzioni per controllare il funzionamento del recordset. Per tutti i recordset, è possibile:  
   
 -   Specificare un [filtro](../../data/odbc/recordset-filtering-records-odbc.md) di selezione dei record.  
@@ -105,7 +100,7 @@ if(!rsStudent.Open(CRecordset::snapshot, NULL, CRecordset::readOnly))
 > [!NOTE]
 >  Per influire sulla selezione di record, è necessario impostare queste opzioni prima di chiamare il **aprire** funzione membro.  
   
-##  <a name="_core_closing_a_recordset"></a>Chiusura di un Recordset  
+##  <a name="_core_closing_a_recordset"></a> Chiusura di un Recordset  
  Al termine di un oggetto Recordset, è necessario eliminarlo e deallocare la memoria.  
   
 #### <a name="to-close-a-recordset"></a>Per chiudere un recordset  

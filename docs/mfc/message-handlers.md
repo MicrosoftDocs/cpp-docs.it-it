@@ -1,13 +1,10 @@
 ---
 title: Gestori di messaggi | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - handlers [MFC], command
 - handlers [MFC], message
 ms.assetid: 51bc4e76-dbe3-4cc2-b026-3199d56b2fa9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d1b906a49d7da7ed8505252a1759d7ea00fcda1f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: be4ccf9ec33e5ddf497193c1942e9f300f8cae57
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="message-handlers"></a>Gestori di messaggi
 In MFC, una dedicata *gestore* funzione elabori ogni messaggio separato. Funzioni gestore messaggi sono funzioni membro di una classe. Questa documentazione vengono utilizzati i termini *funzione membro di gestore di messaggi*, *funzione gestore messaggi*, *gestore di messaggi*, e *gestore*in modo intercambiabile. Alcuni tipi di gestori di messaggi sono detti anche "gestori di comandi".  

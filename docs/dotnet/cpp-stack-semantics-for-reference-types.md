@@ -1,30 +1,25 @@
 ---
 title: Semantica dello Stack C++ per i tipi di riferimento | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - reference types, C++ stack semantics for
 ms.assetid: 319a1304-f4a4-4079-8b84-01cec847d531
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 8f4bf38fa6512b0dc86edad43c893d2dd09a97a4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b3ed886d1bdeb4972122049854b5d288767aa5b8
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="c-stack-semantics-for-reference-types"></a>Semantica dello stack C++ per i tipi di riferimento
 Prima di Visual C++ 2005, era possibile creare un'istanza di un tipo di riferimento solo utilizzando l'operatore `new`, il quale creava l'oggetto sull'heap sottoposto a procedura di Garbage Collection. Adesso invece è possibile creare un'istanza di un tipo di riferimento utilizzando la stessa sintassi che viene utilizzata per creare un'istanza di un tipo nativo nello stack. In tal caso, non è necessario utilizzare [ref new, gcnew](../windows/ref-new-gcnew-cpp-component-extensions.md) per creare un oggetto di un tipo riferimento. E quando l'oggetto esce dall'ambito, il compilatore chiama il distruttore dell'oggetto.  

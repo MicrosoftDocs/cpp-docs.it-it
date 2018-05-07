@@ -1,13 +1,10 @@
 ---
 title: Hint file | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - cpp.hint
 - vc.hint.file
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - cpp.stop
 - Class View, hint file
 ms.assetid: 17194f66-cf62-4523-abec-77db0675ab65
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 432b5fa5041a7997c9df0593dc511c29854387ab
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 687e5cba94693a752f934d7816e6a7c36e318354
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="hint-files"></a>File dei suggerimenti
 Oggetto *file dei suggerimenti* consente di Visual Studio ambiente di sviluppo integrato (IDE) di interpretare gli identificatori di Visual C++, ad esempio i nomi di funzioni e macro. Quando si apre un progetto Visual C++, l'IDE *l'analisi di sistema* analizza il codice in ogni file di origine nel progetto e raccoglie le informazioni su ogni identificatore. Quindi l'IDE Usa tali informazioni per supportare funzionalità quali la **Visualizzazione classi** browser e **barra di spostamento**.  
@@ -107,12 +102,12 @@ STDMETHOD(myMethod)(int parameter1);
   
 |Sintassi|Significato|  
 |------------|-------------|  
-|`#define`*nome suggerimento* *stringa di sostituzione*<br /><br /> `#define`*nome suggerimento* `(` *parametro*,... `)` *stringa di sostituzione*|Una direttiva del preprocessore che definisce un nuovo suggerimento o ridefinisce un suggerimento esistente. Dopo la direttiva, il preprocessore sostituisce ogni occorrenza del *nome suggerimento* nel codice sorgente con *stringa di sostituzione*.<br /><br /> La seconda forma della sintassi definisce un hint di tipo funzione. In caso di un hint di tipo funzione nel codice sorgente, il preprocessore prima sostituisce ogni occorrenza di *parametro* in *stringa di sostituzione* con l'argomento corrispondente nel codice sorgente e quindi sostituisce *nome suggerimento* con *stringa di sostituzione*.|  
+|`#define` *nome-suggerimento* *stringa di sostituzione*<br /><br /> `#define` *nome-suggerimento* `(` *parametro*,... `)` *stringa di sostituzione*|Una direttiva del preprocessore che definisce un nuovo suggerimento o ridefinisce un suggerimento esistente. Dopo la direttiva, il preprocessore sostituisce ogni occorrenza del *nome suggerimento* nel codice sorgente con *stringa di sostituzione*.<br /><br /> La seconda forma della sintassi definisce un hint di tipo funzione. In caso di un hint di tipo funzione nel codice sorgente, il preprocessore prima sostituisce ogni occorrenza di *parametro* in *stringa di sostituzione* con l'argomento corrispondente nel codice sorgente e quindi sostituisce *nome suggerimento* con *stringa di sostituzione*.|  
 |`@<`|Specifica un file dei suggerimenti *stringa di sostituzione* che indica l'inizio di un set di elementi della mappa.|  
 |`@=`|Specifica un file dei suggerimenti *stringa di sostituzione* che indica un elemento della mappa intermedio. Una mappa può disporre di più elementi della mappa.|  
 |`@>`|Specifica un file dei suggerimenti *stringa di sostituzione* che indica la fine di un set di elementi della mappa.|  
-|`#undef`*nome suggerimento*|La direttiva del preprocessore che elimina un suggerimento esistente. Il nome del suggerimento è fornito dal *nome suggerimento* identificatore.|  
-|`//`*commento*|Un commento a riga singola.|  
+|`#undef` *nome di suggerimento*|La direttiva del preprocessore che elimina un suggerimento esistente. Il nome del suggerimento è fornito dal *nome suggerimento* identificatore.|  
+|`//` *Commento*|Un commento a riga singola.|  
 |`/*` *comment* `*/`|Un commento su più righe.|  
   
 ## <a name="what-macros-require-a-hint"></a>Le macro richiedono un Hint?  
@@ -150,7 +145,7 @@ static void FormatWindowClassName(_Pre_notnull__Post_z_ PXSTR szBuffer)
 #define START_NAMESPACE namespace MyProject {  
 ```  
   
- **Strategia:** copia diretta  
+ **Strategia:** diretta copia  
   
  Se la semantica di una macro è fondamentale per l'esperienza di esplorazione, creare un suggerimento che è identico alla macro. Il sistema di analisi consente di risolvere la macro per la definizione nel file dei suggerimenti.  
   
@@ -179,7 +174,7 @@ static const struct ATL::_ATL_CATMAP_ENTRY pMap[] = {
    return( pMap ); }  
 ```  
   
- **Strategia:** identifica gli elementi della mappa  
+ **Strategia:** gli elementi della mappa di identità  
   
  Specificare gli hint per l'inizio, intermedio (se presente) e di fine, gli elementi di una mappa. Utilizzare le stringhe di sostituzione mappa speciale, `@<`, `@=`, e `@>`. Per ulteriori informazioni, vedere il `Syntax` in questo argomento.  
   
@@ -207,7 +202,7 @@ static const struct ATL::_ATL_CATMAP_ENTRY pMap[] = {
 #define NSandMAP START_NAMESPACE BEGIN_CATEGORY_MAP  
 ```  
   
- **Strategia:** copia diretta  
+ **Strategia:** diretta copia  
   
  Creare gli hint per la `START_NAMESPACE` e `BEGIN_CATEGORY_MAP` macro, quindi creare un suggerimento per il `NSandMAP` macro che è identico a quello illustrato in precedenza per il codice sorgente. In alternativa, se una macro composita costituito dal solo le macro che possono causare interruzioni e gli spazi vuoti, è possibile definire un hint di cui la stringa di sostituzione è una definizione di null.  
   
@@ -244,7 +239,7 @@ static const struct ATL::_ATL_CATMAP_ENTRY pMap[] = {
  La figura seguente illustra alcune delle directory fisiche in un progetto di Visual C++. File dei suggerimenti presenti il `vcpackages`, `Debug`, `A1`, e `A2` directory.  
   
 ### <a name="hint-file-directories"></a>Directory dei File dei suggerimenti  
- ![Comune e progetto &#45; directory dei file dei suggerimenti specifico. ] (../ide/media/hintfile.png "HintFile")  
+ ![Comune e progetto di&#45;directory di file dei suggerimenti specifici. ] (../ide/media/hintfile.png "HintFile")  
   
 ### <a name="directories-and-hint-file-contents"></a>Hint per il contenuto del File e directory  
  L'elenco seguente mostra le directory in questo progetto contenenti i file dei suggerimenti e il contenuto di tali file hint. Solo alcuni degli hint in molti di `vcpackages` sono elencati i file dei suggerimenti di directory.  

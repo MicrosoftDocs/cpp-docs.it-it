@@ -1,13 +1,10 @@
 ---
 title: I messaggi e comandi nel Framework | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - events [MFC], event-driven programming
 - message-driven programming [MFC]
 ms.assetid: d799ed8c-6a9f-4f05-be5d-29cb5bc6d185
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 390f094b05994dcf2b3b2351a24f163b06554f84
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 07f38fd833f6efe66dac23e25fe4a10fd5a6ca8d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="messages-and-commands-in-the-framework"></a>Messaggi e comandi nel framework
 Le applicazioni scritte per Microsoft Windows sono "messaggio basato su". In risposta a eventi, ad esempio clic del mouse, sequenze di tasti, spostamenti di tipo di finestra e così via, Windows invia i messaggi alla finestra appropriata. Applicazioni Framework elaborano i messaggi di Windows come qualsiasi altra applicazione per Windows. Ma il framework fornisce anche alcuni miglioramenti che consentono l'elaborazione dei messaggi più semplice, più facili da gestire e migliorare incapsulato.  
@@ -39,13 +34,13 @@ Le applicazioni scritte per Microsoft Windows sono "messaggio basato su". In ris
   
 -   [Categorie di messaggi](../mfc/message-categories.md)  
   
--   [I messaggi di Windows e i messaggi di notifica dei controlli](../mfc/message-categories.md)  
+-   [I messaggi di Windows e i messaggi di notifica del controllo](../mfc/message-categories.md)  
   
 -   [Messaggi di comando](../mfc/message-categories.md)  
   
 -   [Mappe messaggi](../mfc/mapping-messages.md)  
   
--   [Oggetti dell'interfaccia utente e ID di comando](../mfc/user-interface-objects-and-command-ids.md)  
+-   [Oggetti dell'interfaccia utente e ID comando](../mfc/user-interface-objects-and-command-ids.md)  
   
 -   [Destinazioni comandi](../mfc/command-targets.md)  
   

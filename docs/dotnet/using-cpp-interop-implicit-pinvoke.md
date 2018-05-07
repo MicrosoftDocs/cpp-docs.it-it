@@ -1,13 +1,10 @@
 ---
-title: "Utilizzando l'interoperabilità C++ (PInvoke implicito) | Documenti Microsoft"
-ms.custom: 
+title: Utilizzando l'interoperabilità C++ (PInvoke implicito) | Documenti Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -29,18 +26,16 @@ helpviewer_keywords:
 - C++ COM Interop
 - .NET [C++], porting C++ native to
 ms.assetid: 5f710bf1-88ae-4c4e-8326-b3f0b7c4c68a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 78d104a41f052f994a19ebe359c8d3e557274783
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: a91c9833358744730b9ad9c63f5a14729d9d0968
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-c-interop-implicit-pinvoke"></a>Utilizzo delle funzionalità di interoperabilità C++ (PInvoke implicito)
 A differenza di altri linguaggi .NET, Visual C++ include il supporto di interoperabilità che consente al codice gestito ed esista nella stessa applicazione e anche nello stesso file (con il [managed, unmanaged](../preprocessor/managed-unmanaged.md) pragma). Questo consente agli sviluppatori di Visual C++ integrare le funzionalità .NET esistente alle applicazioni di Visual C++ senza alcun impatto sul resto dell'applicazione.  

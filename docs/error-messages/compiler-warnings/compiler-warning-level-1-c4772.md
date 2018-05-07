@@ -2,7 +2,7 @@
 title: Compilatore avviso (livello 1) C4772 | Documenti Microsoft
 ms.date: 11/04/2016
 ms.technology:
-- cpp-tools
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C4772
@@ -13,18 +13,17 @@ helpviewer_keywords:
 ms.assetid: dafe6fd8-9faf-41f5-9d66-a55838742c14
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 631cd4f872c7b8912b791417c04f6c6e9e056bdd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: cbdcfec8d36568c31c291a9de8f9af3aac821fc6
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-warning-level-1-c4772"></a>Avviso del compilatore (livello 1) C4772
 
-> \#importazione a cui fa riferimento un tipo da una libreria dei tipi mancanti; '*-type mancante*' utilizzato come segnaposto
+> \#importazione di fatto riferimento a un tipo da una libreria dei tipi mancanti; '*-type mancante*' utilizzato come segnaposto
 
 Una libreria dei tipi è stato fatto riferimento con il [#import](../../preprocessor/hash-import-directive-cpp.md) direttiva. Tuttavia, la libreria dei tipi contiene un riferimento a un'altra libreria dei tipi che non esiste alcun riferimento con `#import`. L'altro file tlb non è stato trovato dal compilatore.
 

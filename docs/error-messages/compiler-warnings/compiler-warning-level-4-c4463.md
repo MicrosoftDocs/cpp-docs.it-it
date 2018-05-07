@@ -1,12 +1,9 @@
 ---
 title: Compilatore (livello 4) Avviso C4463 | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C4463
@@ -15,23 +12,21 @@ dev_langs:
 helpviewer_keywords:
 - C4463
 ms.assetid: a07ae70c-db4e-472b-8b58-9137d9997323
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 71b438de515a4fd01e7714de685ee0a89adb609e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3c13e0a79c667ecedbf3fd065338892d3af9c2ee
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-warning-level-4-c4463"></a>Compilatore (livello 4) Avviso C4463  
   
-> overflow; l'assegnazione di *valore* campo di bit che può contenere solo valori da *low_value* a *high_value*  
+> overflow; l'assegnazione *valore* al campo di bit che può contenere solo valori compresi *low_value* a *high_value*  
   
-L'oggetto assegnato *valore* è compreso nell'intervallo di valori che è possibile inserire il campo di bit. Tipi di campo di bit signed utilizzano significativo bit per il segno, pertanto se  *n*  è la dimensione del campo di bit, l'intervallo per i campi di bit con segno è -2<sup>n-1</sup> a 2<sup>n-1</sup>-1, mentre i campi di bit senza segno dispone di un intervallo da 0 a 2<sup>n</sup>-1.  
+L'oggetto assegnato *valore* è compreso nell'intervallo di valori che è possibile inserire il campo di bit. Tipi di campo di bit signed utilizzano significativo bit per il segno, pertanto, se *n* è la dimensione del campo di bit, l'intervallo per i campi di bit con segno è -2<sup>n-1</sup> 2<sup>n-1</sup>-1, mentre non firmati i campi di bit dispone di un intervallo da 0 a 2<sup>n</sup>-1.  
   
 ## <a name="example"></a>Esempio  
   

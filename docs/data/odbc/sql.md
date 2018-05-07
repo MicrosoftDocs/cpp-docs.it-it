@@ -1,13 +1,10 @@
 ---
 title: SQL | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,18 +13,16 @@ helpviewer_keywords:
 - SQL [C++], ODBC
 - ODBC [C++], SQL implementation
 ms.assetid: e3923bc4-b317-4e0b-afd8-3cd403eb0faf
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 0c4283e73b800ac0fd4d448d5137372807f893d5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: df1563d8bb3d53bb405fbb0d89b2b26cc964bd44
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sql"></a>SQL
 SQL (Structured Query Language) è un modo per comunicare con un database relazionale che consente di definire, query, modificare e controllare i dati. Utilizzando la sintassi SQL, è possibile costruire un'istruzione che estrae i record in base ai criteri specificati.  
@@ -43,14 +38,14 @@ SQL (Structured Query Language) è un modo per comunicare con un database relazi
   
 -   [La relazione tra ODBC e SQL](#_core_open_database_connectivity_.28.odbc.29).  
   
--   [Parole chiave SQL più comuni utilizzate dalle classi di database](#_core_the_database_classes).  
+-   [Le parole chiave SQL più comuni utilizzate dalle classi di database](#_core_the_database_classes).  
   
--   [Come le classi di database utilizzano SQL](#_core_how_the_database_classes_use_sql).  
+-   [Come le classi di database usano SQL](#_core_how_the_database_classes_use_sql).  
   
-##  <a name="_core_open_database_connectivity_.28.odbc.29"></a>Open Database Connectivity (ODBC)  
+##  <a name="_core_open_database_connectivity_.28.odbc.29"></a> Open Database Connectivity (ODBC)  
  Le classi di database vengono implementate con ODBC, che utilizza SQL in un'interfaccia a livello di chiamata anziché incorporare i comandi SQL nel codice. Utilizzo di ODBC SQL per comunicare con un [origine dati](../../data/odbc/data-source-odbc.md) tramite driver ODBC. Questi driver interpretano l'istruzione SQL e viene convertito, se necessario, per l'utilizzo con un formato di database specifico, ad esempio Microsoft Access. Per ulteriori informazioni sull'utilizzo di ODBC in SQL, vedere [ODBC](../../data/odbc/odbc-basics.md) e il SDK di ODBC *di riferimento per programmatori* sul CD di MSDN Library.  
   
-##  <a name="_core_the_database_classes"></a>Classi di database  
+##  <a name="_core_the_database_classes"></a> Classi di database  
  Le classi di database sono progettate per consentire di modificare e aggiornare i dati in un oggetto esistente [origine dati](../../data/odbc/data-source-odbc.md). Il [Creazione guidata applicazione MFC](../../mfc/reference/database-support-mfc-application-wizard.md), [Creazione guidata Consumer ODBC MFC](../../mfc/reference/adding-an-mfc-odbc-consumer.md) (tramite **Aggiungi classe**), e le classi di database costruire la maggior parte delle istruzioni SQL per l'utente.  
   
  Le classi di database utilizzano una parte di SQL, noto come Data Manipulation Language (DML). Questi comandi consentono di utilizzare tutta o parte dell'origine dati, aggiungere nuovi record, record di modifica ed eliminare record. Nella tabella seguente sono elencate le parole chiave SQL più comuni e le modalità con le classi di database utilizzano.  
@@ -79,7 +74,7 @@ SQL (Structured Query Language) è un modo per comunicare con un database relazi
   
  È possibile trovare altre informazioni su SQL, incluso un elenco di istruzioni SQL supportate, i tipi di dati, la sintassi di base SQL e un elenco delle pubblicazioni consigliate su SQL, il *ODBC SDK* *di riferimento per programmatori*  sul CD di MSDN Library.  
   
-##  <a name="_core_how_the_database_classes_use_sql"></a>Utilizzano di SQL le classi di Database  
+##  <a name="_core_how_the_database_classes_use_sql"></a> Utilizzano di SQL le classi di Database  
  I recordset derivati dalle classi di database utilizzano ODBC per comunicare con un'origine dati ODBC recupera i record dall'origine dati mediante l'invio di istruzioni SQL. Questo argomento illustra la relazione tra le classi di database e SQL.  
   
  Un recordset crea un'istruzione SQL compilando le parti di un'istruzione SQL in un `CString`. La stringa viene creata come un **selezionare** istruzione che restituisce un set di record.  
@@ -88,7 +83,7 @@ SQL (Structured Query Language) è un modo per comunicare con un database relazi
   
  Gli argomenti seguenti forniscono ulteriori informazioni sulla modalità di utilizzo di classi di database SQL:  
   
--   [SQL: Personalizzazione di istruzione SQL del Recordset (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md)  
+-   [SQL: Personalizzazione istruzione SQL del Recordset (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md)  
   
 -   [SQL: tipi di dati SQL e C++ (ODBC)](../../data/odbc/sql-sql-and-cpp-data-types-odbc.md)  
   

@@ -2,12 +2,9 @@
 title: Utilizzo di Visual C++ template Aggiungi nuovo elemento | Documenti Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - Add New Item command
 - templates, Add New Item
 ms.assetid: 286d1be6-0473-407f-9a51-437dff1bfab7
-caps.latest.revision: 13
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4c2326dc87c0490256972bfe23df5cc7ed13a787
-ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
+ms.openlocfilehash: 50bf1bdeeed862ecbc03270e403ccafaf32bfde8
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-visual-c-add-new-item-templates"></a>Utilizzo dei template Aggiungi nuovo elemento di Visual C++
 È possibile aggiungere facilmente gli elementi che sono comuni per i progetti di Visual C++ tramite la **Aggiungi nuovo elemento** comando. Quando si utilizza il **Aggiungi nuovo elemento** comando, il `Add New Item` la finestra di dialogo viene visualizzato un elenco di modelli di elemento, che è possibile aggiungere i file appropriati al progetto.  

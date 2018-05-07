@@ -1,13 +1,10 @@
 ---
-title: "Pagine delle proprietà HLSL: Generale | Documenti Microsoft"
-ms.custom: 
+title: 'Pagine delle proprietà HLSL: Generale | Documenti Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VC.Project.FXCompilerTool.ShaderModel
 - VC.Project.FXCompilerTool.PreprocessorDefinitions
@@ -19,17 +16,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 0e02f2a6-f123-43da-b04b-a0719a7c2b03
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: be548966f6e75afde2c137c8beab38903844667c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 77cc9a44076999633fd17b049cbcfad75f65eb7e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="hlsl-property-pages-general"></a>Pagine delle proprietà HLSL: Generale
 Per configurare le proprietà seguenti del compilatore HLSL (fxc.exe), utilizzare il relativo **generale** pagina delle proprietà. Per informazioni sulle modalità di accesso di **generale** pagina delle proprietà nella cartella HLSL, vedere [funziona con le proprietà del progetto](../ide/working-with-project-properties.md).  
@@ -46,12 +41,12 @@ Per configurare le proprietà seguenti del compilatore HLSL (fxc.exe), utilizzar
  Questa proprietà corrisponde al **/E [name]** argomento della riga di comando.  
   
  **Disabilitare le ottimizzazioni**  
- **Sì (/od)** per disabilitare le ottimizzazioni; in caso contrario, **n**. Per impostazione predefinita, il valore è **Sì (/od)** per **Debug** configurazioni e **n** per **versione** configurazioni.  
+ **Sì (/ Od)** per disabilitare le ottimizzazioni; in caso contrario, **No**. Per impostazione predefinita, il valore è **Sì (/od)** per **Debug** configurazioni e **n** per **versione** configurazioni.  
   
  Il **/Od** applica implicitamente l'argomento della riga di comando per il compilatore HLSL il **/gfp.** argomento della riga di comando, ma l'output potrebbe non essere identica all'output generato passando entrambi il **/Od**  e **/Gfp** gli argomenti della riga di comando in modo esplicito.  
   
- **Abilita informazioni di debug**  
- **Sì (/Zi)** per abilitare le informazioni di debug; in caso contrario, **n**. Per impostazione predefinita, il valore è **Sì (/Zi)** per **Debug** configurazioni e **n** per **versione** configurazioni.  
+ **Abilitare le informazioni di debug**  
+ **Sì (/Zi)** per abilitare le informazioni di debug; in caso contrario, **No**. Per impostazione predefinita, il valore è **Sì (/Zi)** per **Debug** configurazioni e **n** per **versione** configurazioni.  
   
  **Tipo di shader**  
  Specifica il tipo di shader. Diversi tipi di shader implementano diverse parti della pipeline grafica. Determinati tipi di shader sono disponibili solo nei modelli di shader più recenti (che vengono specificati dal **Shader modello** proprietà), ad esempio, compute shader sono state introdotte nel modello di shader 5.  

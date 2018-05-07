@@ -1,12 +1,9 @@
 ---
 title: Errore del Compilatores C2100 through C2199 | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/17/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C2119
@@ -33,17 +30,15 @@ helpviewer_keywords:
 dev_langs:
 - C++
 ms.assetid: 1ccab076-0954-4386-b959-d3112a6793ae
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a95a5fd1c85089c45e766fe0bc82a3896bdc3bd2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f276776028fde88e4ef1e4559f0dd4db08abfe03
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-errors-c2100-through-c2199"></a>Errore del compilatores C2100 through C2199
 
@@ -127,8 +122,8 @@ Gli articoli in questa sezione della documentazione illustrano un subset dei mes
 |[Errore del compilatore C2169](compiler-error-c2169.md)|'*funzione*': non è possibile definire una funzione intrinseca|
 |[Errore del compilatore C2170](compiler-error-c2170.md)|'*identificatore*': funzione intrinseca non dichiarata come funzione, non può essere|
 |[Errore del compilatore C2171](compiler-error-c2171.md)|'*operatore*': non valido su operandi di tipo '*tipo*'|
-|[Errore del compilatore C2172](compiler-error-c2172.md)|'*funzione*': il parametro effettivo non è un puntatore: parametro *numero*|
-|[Errore del compilatore C2173](compiler-error-c2173.md)|'*funzione*': il parametro effettivo non è un puntatore: parametro *numero*, elenco di parametri *numero*|
+|[Errore del compilatore C2172](compiler-error-c2172.md)|'*funzione*': parametro effettivo non è un puntatore: parametro *numero*|
+|[Errore del compilatore C2173](compiler-error-c2173.md)|'*funzione*': parametro effettivo non è un puntatore: parametro *numero*, elenco di parametri *numero*|
 |[Errore del compilatore C2174](compiler-error-c2174.md)|'*funzione*': il parametro effettivo ha tipo 'void': parametro *numero*, elenco di parametri *numero*|
 |[Errore del compilatore C2175](compiler-error-c2175.md)|'*internazionali*': impostazioni locali non valido|
 |C2176 errore del compilatore|un'istruzione return non può comparire nel gestore di un funzione blocco try associato a un costruttore|

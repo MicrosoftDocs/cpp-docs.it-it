@@ -2,30 +2,25 @@
 title: 'Procedura: recuperare informazioni sui File (C + + CLI) | Documenti Microsoft'
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - files [C++], retrieving information about
 - FileInfo class
 ms.assetid: 8b67f7ad-a048-4437-ac5c-b41809a6018d
-caps.latest.revision: 9
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 0536366e445995d6c4e77d58eb0a48e08207f263
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e3c103aaed184039267792c4df4544c382ef7aee
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-retrieve-file-information-ccli"></a>Procedura: recuperare informazioni sui file (C++/CLI)
 L'esempio di codice seguente illustra la <xref:System.IO.FileInfo> classe. Quando si conoscono il nome di un file, è possibile utilizzare questa classe per recuperare informazioni sul file, ad esempio le dimensioni del file, directory, il nome completo e data e ora di creazione e dell'ultima modifica.  

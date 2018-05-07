@@ -2,11 +2,8 @@
 title: negazione (STL/CLR) | Documenti Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::negate
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - negate function [STL/CLR]
 ms.assetid: 58e4c339-0dee-4db8-b2cc-de8920977039
-caps.latest.revision: 18
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: b7a9ae9fa1270a2a7f417e46681b21120eeded8f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5971bab0439f42c5abda71daae3671125b2e0b8c
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="negate-stlclr"></a>negate (STL/CLR)
 La classe modello descrive una funzione che, quando viene chiamato, restituisce il relativo argomento negato. Utilizzare, specificare un oggetto funzione in relazione al relativo tipo di argomento.  
@@ -117,7 +112,7 @@ int main()
 ```  
   
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** \<cliext funzionali >  
+ **Intestazione:** \<cliext/funzionale >  
   
  **Namespace:** cliext  
   

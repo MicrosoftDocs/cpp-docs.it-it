@@ -1,13 +1,10 @@
 ---
 title: Personalizzazione dell'aspetto di un controllo Toolbar | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - TBSTYLE_
 dev_langs:
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - CToolBarCtrl class [MFC], object styles
 - toolbar controls [MFC], style
 ms.assetid: fd0a73db-7ad1-4fe4-889b-02c3980f49e8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5c40b7e055585a11b90c2cec1fefb967b51b35cf
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 96ec459e1c956c805991f2e37d22b8260f0ffdf2
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="customizing-the-appearance-of-a-toolbar-control"></a>Personalizzazione dell'aspetto di un controllo Toolbar
 Classe `CToolBarCtrl` fornisce numerosi stili che influiscono sull'aspetto (e, in alcuni casi, il comportamento) dell'oggetto della barra degli strumenti. Modificare l'oggetto della barra degli strumenti impostando il `dwCtrlStyle` parametro del `CToolBarCtrl::Create` (o `CToolBar::CreateEx`) la funzione membro, al momento della creazione del controllo toolbar.  
@@ -41,7 +36,7 @@ Classe `CToolBarCtrl` fornisce numerosi stili che influiscono sull'aspetto (e, i
   
 -   **TBSTYLE_TRANSPARENT** crea una barra degli strumenti trasparente. Sulla barra degli strumenti trasparenti, la barra degli strumenti è trasparente, ma i pulsanti non lo sono. Testo del pulsante viene visualizzata sotto le bitmap dei pulsanti.  
   
--   **TBSTYLE_LIST** posizioni pulsante testo a destra del pulsante bitmap.  
+-   **TBSTYLE_LIST** posizioni pulsante testo a destra della bitmap di pulsanti.  
   
 > [!NOTE]
 >  Per evitare problemi, il **TBSTYLE_FLAT** e **TBSTYLE_TRANSPARENT** stili devono essere impostati prima che l'oggetto della barra degli strumenti è visibile.  
@@ -53,15 +48,15 @@ Classe `CToolBarCtrl` fornisce numerosi stili che influiscono sull'aspetto (e, i
     > [!NOTE]
     >  Il `CCS_ADJUSTABLE` stile, è necessario specificare per abilitare i pulsanti della barra degli strumenti.  
   
--   **TBSTYLE_REGISTERDROP** genera **TBN_GETOBJECT** notifica messaggi di richiesta di eliminare gli oggetti di destinazione quando si passa il puntatore del mouse sui pulsanti della barra degli strumenti.  
+-   **TBSTYLE_REGISTERDROP** genera **TBN_GETOBJECT** notifica messaggi per richiedere eliminare oggetti di destinazione quando si passa il puntatore del mouse sui pulsanti della barra degli strumenti.  
   
  Gli stili rimanenti influiscono su aspetti visivi e dell'oggetto della barra degli strumenti:  
   
--   `TBSTYLE_WRAPABLE`Crea una barra degli strumenti che può avere più righe di pulsanti. Pulsanti della barra degli strumenti possono "includere" alla riga successiva quando la barra degli strumenti diventa troppo stretta per includere tutti i pulsanti sulla stessa riga. Ritorno a capo avviene in separazione e l'invio dei limiti.  
+-   `TBSTYLE_WRAPABLE` Crea una barra degli strumenti che può avere più righe di pulsanti. Pulsanti della barra degli strumenti possono "includere" alla riga successiva quando la barra degli strumenti diventa troppo stretta per includere tutti i pulsanti sulla stessa riga. Ritorno a capo avviene in separazione e l'invio dei limiti.  
   
--   **TBSTYLE_CUSTOMERASE** genera **NM_CUSTOMDRAW** quando elabora i messaggi di notifica `WM_ERASEBKGND` messaggi.  
+-   **TBSTYLE_CUSTOMERASE** genera **NM_CUSTOMDRAW** i messaggi di notifica durante l'elaborazione `WM_ERASEBKGND` messaggi.  
   
--   `TBSTYLE_TOOLTIPS`Crea un controllo descrizione comando che un'applicazione può utilizzare per visualizzare il testo descrittivo per i pulsanti nella barra degli strumenti.  
+-   `TBSTYLE_TOOLTIPS` Crea un controllo descrizione comando che un'applicazione può utilizzare per visualizzare il testo descrittivo per i pulsanti sulla barra degli strumenti.  
   
  Per un elenco completo degli stili e gli stili estesi, vedere [controllo barra degli strumenti e stili dei pulsanti](http://msdn.microsoft.com/library/windows/desktop/bb760439) e [degli stili estesi](http://msdn.microsoft.com/library/windows/desktop/bb760430) in Windows SDK.  
   

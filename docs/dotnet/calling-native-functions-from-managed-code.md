@@ -1,13 +1,10 @@
 ---
 title: Chiamata di funzioni Native da codice gestito | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,18 +15,16 @@ helpviewer_keywords:
 - calling native functions from managed code
 - interop [C++], calling native functions from managed code
 ms.assetid: 982cef18-20d9-42b4-8242-a77fa65f2e36
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 159b80fcc015db2999309fe99e9617f7dcd409ac
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c0d7e69c95790122f44dc59d06f2843afbddfb2c
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="calling-native-functions-from-managed-code"></a>Chiamata a funzioni native da codice gestito
 Common language runtime fornisce servizi di Platform Invoke o PInvoke, che consente al codice gestito di chiamare le funzioni di tipo C in librerie native di collegamento dinamico (DLL). Ai fini dell'interoperabilità COM con il runtime e per il meccanismo di "It Just Works", o IJW, viene utilizzato il marshalling dei dati stessi.  
@@ -40,9 +35,9 @@ Common language runtime fornisce servizi di Platform Invoke o PInvoke, che conse
   
 -   [Uso delle funzionalità di interoperabilità C++ (PInvoke implicito)](../dotnet/using-cpp-interop-implicit-pinvoke.md)  
   
--   [Informazioni dettagliate su Platform Invoke](http://msdn.microsoft.com/en-us/ba9dd55b-2eaa-45cd-8afd-75cb8d64d243)  
+-   [Informazioni dettagliate su platform invoke](http://msdn.microsoft.com/en-us/ba9dd55b-2eaa-45cd-8afd-75cb8d64d243)  
   
- Gli esempi in questa sezione vengono illustrate le modalità `PInvoke` può essere utilizzato. `PInvoke`Consente di semplificare il marshalling di dati personalizzato in quanto vengono fornite le informazioni di marshalling in modo dichiarativo negli attributi invece di scrivere codice di marshalling procedurale.  
+ Gli esempi in questa sezione vengono illustrate le modalità `PInvoke` può essere utilizzato. `PInvoke` Consente di semplificare il marshalling dei dati personalizzati in quanto vengono fornite informazioni sul marshalling in modo dichiarativo negli attributi invece di scrivere codice di marshalling procedurale.  
   
 > [!NOTE]
 >  La libreria del marshalling fornisce un modo alternativo per il marshalling dei dati tra ambienti nativi e gestiti in modo ottimizzato. Vedere [Panoramica del marshalling in C++](../dotnet/overview-of-marshaling-in-cpp.md) per ulteriori informazioni sulla libreria di marshalling. La libreria del marshalling è utilizzabile solo per i dati e non per le funzioni.  

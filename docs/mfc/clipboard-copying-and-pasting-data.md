@@ -1,37 +1,32 @@
 ---
 title: 'Appunti: Copiare e incollare dati | Documenti Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Clipboard, copying data to
 - Clipboard, pasting
 ms.assetid: 580e10be-241f-4f9f-94cf-8302edc5beef
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6d76be3bd3863826391cc812f17dca88cb3a5457
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bdfd43933453e44c49d713a1565ac3f71e019de4
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="clipboard-copying-and-pasting-data"></a>Appunti: copiare e incollare dati
 Questo argomento descrive le operazioni minime necessarie per implementare copia e Incolla dagli Appunti in un'applicazione OLE. È consigliabile leggere la [oggetti dati e origini dati (OLE)](../mfc/data-objects-and-data-sources-ole.md) argomenti prima di procedere.  
   
  Prima di poter implementare di copia o Incolla, è innanzitutto necessario fornire le funzioni per gestire le opzioni di copia, Taglia e Incolla del menu Modifica.  
   
-##  <a name="_core_copying_or_cutting_data"></a>Copiare o tagliare dati  
+##  <a name="_core_copying_or_cutting_data"></a> Copiare o tagliare dati  
   
 #### <a name="to-copy-data-to-the-clipboard"></a>Per copiare dati negli Appunti  
   
@@ -47,7 +42,7 @@ Questo argomento descrive le operazioni minime necessarie per implementare copia
   
  Per un esempio di questa sequenza, vedere il **OnEditCut** e **OnEditCopy all'interno dei** i programmi di esempio di funzioni in OLE MFC [OCLIENT](../visual-cpp-samples.md) e [HIERSVR](../visual-cpp-samples.md). Si noti che questi esempi gestiscono un puntatore a dati attualmente selezionata, pertanto il passaggio 1 è già completato.  
   
-##  <a name="_core_pasting_data"></a>Incollare dati  
+##  <a name="_core_pasting_data"></a> Incollare dati  
  Incollare i dati è più complicato copiarlo, in quanto è necessario scegliere il formato da utilizzare per incollare i dati nell'applicazione.  
   
 #### <a name="to-paste-data-from-the-clipboard"></a>Per incollare dati dagli Appunti  

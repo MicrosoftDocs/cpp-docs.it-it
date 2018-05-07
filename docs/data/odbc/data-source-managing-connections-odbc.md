@@ -1,13 +1,10 @@
 ---
 title: 'Origine dati: Gestione delle connessioni (ODBC) | Documenti Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -27,18 +24,16 @@ helpviewer_keywords:
 - ODBC data sources [C++], connections
 - database connections [C++], MFC ODBC classes
 ms.assetid: c0adbcdd-c000-40c6-b199-09ffdc7b6ef2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 9b83093496d355fdba8b5d714875d08040ae28ac
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 100c06773a8f0ffa79631339384bd4ec42fa4b52
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="data-source-managing-connections-odbc"></a>Origine dati: gestione delle connessioni (ODBC)
 Questo argomento si applica alle classi ODBC MFC.  
@@ -47,9 +42,9 @@ Questo argomento si applica alle classi ODBC MFC.
   
 -   [Come configurare un'origine dati](#_core_configuring_a_data_source).  
   
--   [Impatto di un ambiente multiutente un'origine dati e il recordset](#_core_working_in_a_multiuser_environment).  
+-   [Impatto di un ambiente multiutente un'origine dati e il relativo recordset](#_core_working_in_a_multiuser_environment).  
   
--   [Generalizzazione di una stringa di connessione a un'origine dati](#_core_generalizing_the_connection_string).  
+-   [Motivo per cui si generalizza una stringa di connessione a un'origine dati](#_core_generalizing_the_connection_string).  
   
 -   [Come connettersi a un'origine dati](#_core_connecting_to_a_specific_data_source).  
   
@@ -61,7 +56,7 @@ Questo argomento si applica alle classi ODBC MFC.
   
  È possibile connettersi a qualsiasi origine dati per cui si dispone di un driver ODBC. Gli utenti dell'applicazione devono avere anche lo stesso driver ODBC per l'origine dati. Per ulteriori informazioni sulla ridistribuzione dei driver ODBC, vedere [ridistribuzione dei componenti ODBC ai clienti](../../data/odbc/redistributing-odbc-components-to-your-customers.md).  
   
-##  <a name="_core_configuring_a_data_source"></a>Configurazione di un'origine dati  
+##  <a name="_core_configuring_a_data_source"></a> Configurazione di un'origine dati  
  Amministratore ODBC viene utilizzato per configurare le origini dati. È inoltre possibile utilizzare Amministratore ODBC dopo l'installazione per aggiungere o rimuovere le origini dati. Quando si creano applicazioni, è possibile impostarla in modo gli utenti, l'amministratore ODBC per consentire di aggiungere le origini dati o è possibile compilare questa funzionalità nell'applicazione eseguendo chiamate dirette di installazione ODBC. Per ulteriori informazioni, vedere [Amministratore ODBC](../../data/odbc/odbc-administrator.md).  
   
  È possibile utilizzare un file di Excel come origine dati, e si desidera configurare il file in modo che venga registrato e visualizzato nella **Seleziona origine dati** la finestra di dialogo.  
@@ -83,10 +78,10 @@ Questo argomento si applica alle classi ODBC MFC.
   
 2.  Nel **Configurazione ODBC per Microsoft Excel** finestra di dialogo, selezionare la versione di database e una cartella di lavoro.  
   
-##  <a name="_core_working_in_a_multiuser_environment"></a>In un ambiente multiutente  
+##  <a name="_core_working_in_a_multiuser_environment"></a> In un ambiente multiutente  
  Se più utenti sono connessi a un'origine dati, è possibile modificare i dati durante la manipolazione nei recordset. Analogamente, le modifiche potrebbero influire sul recordset di altri utenti. Per ulteriori informazioni, vedere [Recordset: aggiornamento dei record (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md) e [transazione (ODBC)](../../data/odbc/transaction-odbc.md).  
   
-##  <a name="_core_generalizing_the_connection_string"></a>Generalizzare la stringa di connessione  
+##  <a name="_core_generalizing_the_connection_string"></a> La stringa di connessione la generalizzazione  
  Le procedure guidate di utilizzano una stringa di connessione predefinita per stabilire una connessione a un'origine dati. Utilizzare questa connessione per visualizzare tabelle e colonne durante lo sviluppo dell'applicazione. Tuttavia, questa stringa di connessione potrebbe non essere appropriata per le connessioni degli utenti per l'origine dati tramite l'applicazione. Le origini dati e il relativo percorso, ad esempio, potrebbe essere diversi da quelli utilizzati durante lo sviluppo dell'applicazione. In tal caso, reimplementare la [CRecordset:: GetDefaultConnect](../../mfc/reference/crecordset-class.md#getdefaultconnect) membro funzionare in modo più generico e annullare l'implementazione della procedura guidata. Ad esempio, utilizzare uno degli approcci seguenti:  
   
 -   Registrare e gestire le stringhe di connessione tramite Amministratore ODBC.  
@@ -115,7 +110,7 @@ Questo argomento si applica alle classi ODBC MFC.
         return "ODBC;DSN=mydb;UID=sa;PWD=777;";  
     ```  
   
-##  <a name="_core_connecting_to_a_specific_data_source"></a>Connessione a un'origine dati specifica  
+##  <a name="_core_connecting_to_a_specific_data_source"></a> La connessione a un'origine dati specifica  
  Per connettersi a un'origine dati specifica, l'origine dati deve che già stata configurata tramite [Amministratore ODBC](../../data/odbc/odbc-administrator.md).  
   
 #### <a name="to-connect-to-a-specific-data-source"></a>Per connettersi a un'origine dati specifica  
@@ -126,7 +121,7 @@ Questo argomento si applica alle classi ODBC MFC.
   
  Per ulteriori informazioni su come specificare l'origine dati in caso di un valore diverso da quello specificato con una procedura guidata, vedere [:: OpenEx](../../mfc/reference/cdatabase-class.md#openex) o [CDatabase:: Open](../../mfc/reference/cdatabase-class.md#open) nel *MFC Riferimento*.  
   
-##  <a name="_core_disconnecting_from_a_data_source"></a>Disconnessione da un'origine dati  
+##  <a name="_core_disconnecting_from_a_data_source"></a> Disconnessione da un'origine dati  
  È necessario chiudere tutti i recordset aperti prima di chiamare il **chiudere** funzione membro di `CDatabase`. In recordset associato il `CDatabase` dell'oggetto che si desidera chiudere qualsiasi in sospeso `AddNew` o **modifica** istruzioni vengono annullate e viene eseguito il rollback di tutte le transazioni in sospeso.  
   
 #### <a name="to-disconnect-from-a-data-source"></a>Per disconnettersi da un'origine dati  
@@ -135,7 +130,7 @@ Questo argomento si applica alle classi ODBC MFC.
   
 2.  Eliminare l'oggetto a meno che non si desidera riutilizzare.  
   
-##  <a name="_core_reusing_a_cdatabase_object"></a>Riutilizzo di un oggetto CDatabase  
+##  <a name="_core_reusing_a_cdatabase_object"></a> Riutilizzo di un oggetto CDatabase  
  È possibile riutilizzare un `CDatabase` oggetto dopo la disconnessione, se si utilizza per riconnettersi alla stessa origine dati o per connettersi a un'origine dati diversa.  
   
 #### <a name="to-reuse-a-cdatabase-object"></a>Riutilizzo di un oggetto CDatabase  

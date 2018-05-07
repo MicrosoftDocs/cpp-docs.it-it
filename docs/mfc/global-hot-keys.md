@@ -1,13 +1,10 @@
 ---
 title: Tasti di scelta rapida globali | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - access keys [MFC], hot keys
 - global hot keys [MFC]
 ms.assetid: e0b95d14-c571-4c9a-9cd1-e7fc1f0e278d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 82297507d8725e6292def759272f48d0d63e84b8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: cd597271d949770ec1a5871cad3ea7be0004e288
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="global-hot-keys"></a>Tasti di scelta rapida globali
 Un tasto di scelta rapida globale è associato a una finestra non figlio specifico. Consente all'utente di attivare la finestra di qualsiasi parte del sistema. Un'applicazione imposta un tasto di scelta rapida globale per una particolare finestra inviando il [messaggio WM_SETHOTKEY](http://msdn.microsoft.com/library/windows/desktop/ms646284) messaggio alla finestra. Ad esempio, se `m_HotKeyCtrl` è il [CHotKeyCtrl](../mfc/reference/chotkeyctrl-class.md) oggetto e `pMainWnd` è un puntatore alla finestra venga attivato quando viene premuto il tasto di scelta rapida, è possibile utilizzare il codice seguente per associare il tasto di scelta specificato nel controllo con la finestra a cui puntava `pMainWnd`.  

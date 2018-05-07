@@ -1,12 +1,9 @@
 ---
 title: Strumenti del linker LNK2008 errore | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - LNK2008
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - LNK2008
 ms.assetid: bbcd83c5-c8ae-439e-a033-63643a5bb373
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a7c2fecff55677653c25c7d87fb22fa984526159
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c4ee6a8a4c4cc6d33f47d5335daa9fccd4e5fd99
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="linker-tools-error-lnk2008"></a>Errore degli strumenti del linker LNK2008
 La destinazione della correzione non è allineata 'nome_simbolo'  

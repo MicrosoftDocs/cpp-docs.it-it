@@ -1,11 +1,8 @@
 ---
 title: 'Classe platform:: stringreference | Documenti Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - VCCORLIB/Platform::StringReference::StringReference
@@ -16,17 +13,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 2d09c7ec-0f16-458e-83ed-7225a1b9221e
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c23960e392f39c44a57176e4afb81999783bad6c
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 646a09dd46e123f0bc7eadc178e3741367e908ed
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="platformstringreference-class"></a>Classe Platform::StringReference
 Tipo di ottimizzazione che puoi usare per passare dati in formato stringa dai parametri di input di `Platform::String^` ad altri metodi con un minimo di operazioni di copia.  
@@ -45,16 +40,16 @@ class StringReference
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[StringReference::StringReference](#ctor)|Due costruttori per creare istanze di `StringReference`.|  
+|[Stringreference:: Stringreference](#ctor)|Due costruttori per creare istanze di `StringReference`.|  
   
 ### <a name="public-methods"></a>Metodi pubblici  
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[StringReference::Data](#data)|Restituisce i dati in formato stringa come matrice di valori char16.|  
+|[Stringreference:: data](#data)|Restituisce i dati in formato stringa come matrice di valori char16.|  
 |[Stringreference:: Length](#length)|Restituisce il numero di caratteri della stringa.|  
 |[Stringreference:: Gethstring](#gethstring)|Restituisce i dati in formato stringa come HSTRING.|  
-|[StringReference::GetString](#getstring)|Restituisce i dati in formato stringa come `Platform::String^`.|  
+|[Stringreference:: GetString](#getstring)|Restituisce i dati in formato stringa come `Platform::String^`.|  
   
 ### <a name="public-operators"></a>Operatori pubblici  
   
@@ -132,7 +127,7 @@ unsigned int Length() const
   
 
 
-## <a name="operator-assign"></a>  StringReference::operator= Operator
+## <a name="operator-assign"></a>  Stringreference:: operator = (operatore)
 Assegna l'oggetto specificato all'oggetto `StringReference` corrente.  
   
 ### <a name="syntax"></a>Sintassi  

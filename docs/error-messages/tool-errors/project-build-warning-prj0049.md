@@ -1,29 +1,24 @@
 ---
 title: Progetto PRJ0049 avviso di compilazione | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - PRJ0049
 ms.assetid: 8b38afa1-e080-4efd-ae89-776cfd044413
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9f87bc7e26fd7cc50defbc086594c92a3ea339ef
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8df6fcb8bc5d6517a46279e0bef5036db1e81241
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="project-build-warning-prj0049"></a>Avviso di compilazione progetto PRJ0049
 Destinazione di riferimento '\<riferimento >' richiede .NET Framework \<MinFrameworkVersion > e non verrà eseguito nel framework di destinazione del progetto  

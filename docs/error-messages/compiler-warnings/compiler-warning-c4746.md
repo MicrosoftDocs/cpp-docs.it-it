@@ -1,30 +1,25 @@
 ---
 title: C4746 di avviso del compilatore | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 dev_langs:
 - C++
 ms.assetid: 5e79ab46-6031-499a-a986-716c866b6c0e
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f92bae0e75d9a09de874cd999c044e703b3f3171
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9d00c75b2b7cdf2fdafb4e109496a701fb561cb9
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-warning-c4746"></a>C4746 di avviso del compilatore
-accesso volatile di '\<espressione >' è soggetto a /volatile: [iso &#124; ms] impostazione; considerare l'utilizzo di funzioni intrinseche iso_volatile_load/store.  
+accesso volatile di '\<espressione >' è soggetto a /volatile: [iso&#124;ms] impostazione; considerare l'utilizzo di funzioni intrinseche iso_volatile_load/store.  
   
  C4746 viene generato ogni volta che si accede ad una variabile volatile direttamente. È progettato per consentire agli sviluppatori di identificare i percorsi di codice che sono influenzati dal modello volatile attualmente specificato (che può essere controllato con i [/volatile](../../build/reference/volatile-volatile-keyword-interpretation.md) l'opzione del compilatore). In particolare, può essere utile per individuare barriere di memoria hardware generate dal compilatore quando /volatile:ms viene utilizzato.  
   

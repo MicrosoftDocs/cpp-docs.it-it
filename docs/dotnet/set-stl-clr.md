@@ -1,12 +1,9 @@
 ---
 title: set (STL/CLR) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::set
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - <set> header [STL/CLR]
 - set class [STL/CLR]
 ms.assetid: 27d3628c-741a-43a7-bef1-5085536f679e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 9624f08c54629657e7f52c2c688d2083aa557a56
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d6a7ebf4d15d85cb43a6f7101c70e444067a3f7b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="set-stlclr"></a>set (STL/CLR)
 La classe modello descrive un oggetto che controlla una sequenza di lunghezza variabile di elementi che dispone di accesso bidirezionale. Utilizzare il contenitore `set` per gestire una sequenza di elementi come una struttura ad albero ordinato bilanciato (quasi) di nodi, ognuno l'archiviazione di un elemento.  
@@ -127,7 +122,7 @@ template<typename Key>
   
  Tale oggetto delegato deve imporre un ordine debole strict sulle chiavi di tipo [set:: KEY_TYPE (STL/CLR)](../dotnet/set-key-type-stl-clr.md). Pertanto, per le due chiavi `X` e `Y`:  
   
- `key_comp()(X, Y)`Restituisce il valore booleano stesso risultato a ogni chiamata.  
+ `key_comp()(X, Y)` Restituisce il valore booleano stesso risultato a ogni chiamata.  
   
  Se `key_comp()(X, Y)` è true, `key_comp()(Y, X)` deve essere false.  
   

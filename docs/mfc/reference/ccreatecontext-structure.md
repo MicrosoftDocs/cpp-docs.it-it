@@ -1,12 +1,9 @@
 ---
 title: Struttura CCreateContext | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CCreateContext
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - CCreateContext structure [MFC]
 ms.assetid: 337a0e44-d910-49a8-afc0-c7207666a9dc
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 929ed0971f9b69bf8e98ae247957110e78ac33ba
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: af6e81b9215aa6e7bc9e5f294a1d95aee4b51321
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ccreatecontext-structure"></a>Struttura CCreateContext
 Il framework utilizza il `CCreateContext` struttura per la creazione di finestre cornice e viste associate a un documento.  
@@ -37,7 +32,7 @@ struct CCreateContext
 ```  
   
 ## <a name="remarks"></a>Note  
- `CCreateContext`è una struttura e non dispone di una classe di base.  
+ `CCreateContext` è una struttura e non dispone di una classe di base.  
   
  Quando si crea una finestra, i valori in questa struttura forniscono le informazioni utilizzate per connettere i componenti di un documento per la visualizzazione dei dati. È necessario utilizzare solo `CCreateContext` se si esegue l'override di parti del processo di creazione.  
   
@@ -45,7 +40,7 @@ struct CCreateContext
   
 |Member|Tipo|Novità di|  
 |------------|----------|--------------------|  
-|`m_pNewViewClass`|`CRuntimeClass*`|`CRuntimeClass`della nuova vista da creare.|  
+|`m_pNewViewClass`|`CRuntimeClass*`|`CRuntimeClass` della nuova vista da creare.|  
 |`m_pCurrentDoc`|`CDocument*`|Il documento esistente da associare alla nuova visualizzazione.|  
 |`m_pNewDocTemplate`|`CDocTemplate*`|Il modello di documento associato alla creazione di una nuova finestra cornice MDI.|  
 |`m_pLastView`|`CView*`|La visualizzazione originale in cui vengono modellate in altre visualizzazioni, come durante la creazione di visualizzazioni di finestra con separatore o la creazione di una seconda vista in un documento.|  
@@ -56,7 +51,7 @@ struct CCreateContext
 > [!NOTE]
 >  Tutti i puntatori in `CCreateContext` sono facoltativi e possono essere `NULL` se sconosciuto o non specificato.  
   
- `CCreateContext`viene utilizzato dalle funzioni membro elencate in "Vedere anche". Per informazioni specifiche, se si intende eseguirne l'override, vedere le descrizioni di queste funzioni.  
+ `CCreateContext` viene utilizzato dalle funzioni membro elencate in "Vedere anche". Per informazioni specifiche, se si intende eseguirne l'override, vedere le descrizioni di queste funzioni.  
   
  Di seguito sono riportate alcune indicazioni generali:  
   

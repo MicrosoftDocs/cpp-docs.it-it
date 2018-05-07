@@ -1,12 +1,9 @@
 ---
 title: 'IRowsetImpl:: ReleaseRows | Documenti Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - ATL.IRowsetImpl.ReleaseRows
@@ -19,18 +16,16 @@ dev_langs:
 helpviewer_keywords:
 - ReleaseRows method
 ms.assetid: e4d47be8-8ebf-485b-b1e9-df13e4c8ee8d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 79fc05fe6273fc46261c244b76b7ca4f54513e26
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 58657b3e4537396b363bcbdd1e4f196e56563083
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="irowsetimplreleaserows"></a>IRowsetImpl::ReleaseRows
 Rilascia le righe.  
@@ -53,5 +48,5 @@ Rilascia le righe.
   
 ## <a name="see-also"></a>Vedere anche  
  [Classe IRowsetImpl](../../data/oledb/irowsetimpl-class.md)   
- [IRowsetImpl::AddRefRows](../../data/oledb/irowsetimpl-addrefrows.md)   
+ [IRowsetImpl:: Addrefrows](../../data/oledb/irowsetimpl-addrefrows.md)   
  [IRowsetImpl::RefRows](../../data/oledb/irowsetimpl-refrows.md)

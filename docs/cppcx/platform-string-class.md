@@ -1,11 +1,8 @@
 ---
 title: 'Classe platform:: String | Documenti Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - VCCORLIB/Platform::String::String
@@ -26,17 +23,15 @@ dev_langs:
 helpviewer_keywords:
 - Platform::String
 ms.assetid: 72dd04a4-a694-40d3-b899-eaa0b503eab8
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3c665b6767ea7a7a7d97d232f5253f8e182e6b0a
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: e7a18b1a8ced533389b5938d44a73589336f717f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="platformstring-class"></a>Classe Platform::String
 Rappresenta una raccolta sequenziale di caratteri Unicode, tipicamente utilizzata per rappresentare del testo. Per ulteriori informazioni ed esempi, vedere [stringhe](../cppcx/strings-c-cx.md).  
@@ -80,12 +75,12 @@ public ref class String sealed : Object,
 |[String::CompareOrdinal](#compareordinal)|Confronta due oggetti `String` valutando i valori numerici dei caratteri corrispondenti nei due valori stringa rappresentati dagli oggetti.|  
 |[String::Concat](#concat)|Concatena i valori di due oggetti String specificati.|  
 |[String::Data](#data)|Restituisce un puntatore che punta all'inizio della stringa corrente.|  
-|[String::Dispose](#dispose)|Libera o rilascia delle risorse.|  
+|[String:: Dispose](#dispose)|Libera o rilascia delle risorse.|  
 |[String::End](#end)|Restituisce un puntatore successivo alla fine della stringa corrente.|  
 |[String:: Equals](#equals)|Indica se l'oggetto specificato è uguale all'oggetto corrente.|  
 |[String::GetHashCode](#gethashcode)|Restituisce il codice hash per l'istanza.|  
-|[String::IsEmpty](#isempty)|Indica se l'oggetto String corrente è vuoto.|  
-|[String::IsFastPass](#isfastpass)|Indica se l'oggetto String corrente è coinvolto in un'operazione di *passaggio rapido* . In questo tipo di operazione il conteggio dei riferimenti viene sospeso.|  
+|[String:: IsEmpty](#isempty)|Indica se l'oggetto String corrente è vuoto.|  
+|[String:: isfastpass](#isfastpass)|Indica se l'oggetto String corrente è coinvolto in un'operazione di *passaggio rapido* . In questo tipo di operazione il conteggio dei riferimenti viene sospeso.|  
 |[String:: Length](#length)|Recupera la lunghezza dell'oggetto String corrente.|  
 |[String::ToString](#tostring)|Restituisce un oggetto String il cui valore è uguale a quello dell'oggetto String corrente.|  
   
@@ -249,7 +244,7 @@ bool String::Equals(String^ str);
   
 
 
-## <a name="gethashcode"></a>  String::GetHashCode Method
+## <a name="gethashcode"></a>  Metodo String:: GetHashCode
 Restituisce il codice hash per l'istanza.  
   
 ### <a name="syntax"></a>Sintassi  
@@ -319,7 +314,7 @@ int len = str->Length(); //len = 5
   
 
 
-## <a name="operator-plus"></a>  String::operator+ Operator
+## <a name="operator-plus"></a>  String:: operator + (operatore)
 Concatena due [stringa](../cppcx/platform-string-class.md) oggetti in un nuovo [stringa](../cppcx/platform-string-class.md) oggetto.
   
 ### <a name="syntax"></a>Sintassi  
@@ -342,7 +337,7 @@ bool String::operator+( String^ str1, String^ str2)
 ### <a name="remarks"></a>Note  
  Questo operatore crea un oggetto `String^` contenente i dati dei due operandi. Puoi usarlo per praticità quando non è fondamentale ottenere prestazioni estreme. Alcune chiamate a "`+`" in una funzione non saranno probabilmente rilevanti, ma se modifichi oggetti di grandi dimensioni o dati di testo in un ciclo rigido, usa tipi e meccanismi C++ standard.  
   
-##  <a name="operator-equality">String:: operator = = (operatore)</a>
+##  <a name="operator-equality"></a> String:: operator = = (operatore)
 Indica se due oggetti String specificati hanno lo stesso valore di testo.  
   
 ### <a name="syntax"></a>Sintassi  
@@ -390,7 +385,7 @@ bool String::operator>( String^ str1, String^ str2)
   
 
 
-## <a name="operator-greater-than-or-equals"></a> String::operator&gt;= 
+## <a name="operator-greater-than-or-equals"></a> String:: operator&gt;= 
 Indica se il valore di un oggetto String è maggiore o uguale al valore di un secondo oggetto String.  
   
 ### <a name="syntax"></a>Sintassi  

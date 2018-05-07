@@ -1,12 +1,9 @@
 ---
 title: Errore del compilatore C3535 | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C3535
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C3535
 ms.assetid: 24449c98-f681-484d-a00b-32533dca3a88
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5797d644ec13ed89bad3ddcda23be109df067b03
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ff9935f4a46ba2c3a268ebb761153948ccd82f47
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-error-c3535"></a>Errore del compilatore C3535
 non è possibile dedurre il tipo per 'type1' da 'type2'  
@@ -79,5 +74,5 @@ auto *p = x;  // C3535
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [parola chiave Auto](../../cpp/auto-keyword.md)   
+ [auto Keyword](../../cpp/auto-keyword.md)   
  [Tipi fondamentali](../../cpp/fundamental-types-cpp.md)

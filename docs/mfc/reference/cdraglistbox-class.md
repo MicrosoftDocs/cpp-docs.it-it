@@ -1,12 +1,9 @@
 ---
 title: Classe CDragListBox | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CDragListBox
@@ -29,17 +26,15 @@ helpviewer_keywords:
 - CDragListBox [MFC], Dropped
 - CDragListBox [MFC], ItemFromPt
 ms.assetid: fee20b42-60ae-4aa9-83f9-5a3d9b96e33b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 424d9db088aa171bdbca868326eb80144a10704b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 34655c244f13cb721693208fa93353582de452e9
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdraglistbox-class"></a>Classe CDragListBox
 Oltre a fornire la funzionalità di una casella di riepilogo di Windows, la `CDragListBox` classe consente all'utente di spostare elementi casella di riepilogo, ad esempio nomi di file, nella casella di riepilogo.  
@@ -92,7 +87,7 @@ class CDragListBox : public CListBox
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** afxcmn.h  
   
-##  <a name="begindrag"></a>CDragListBox::BeginDrag  
+##  <a name="begindrag"></a>  CDragListBox::BeginDrag  
  Chiamato dal framework quando si verifica un evento che potrebbe iniziare un'operazione di trascinamento, ad esempio premendo il pulsante sinistro del mouse.  
   
 ```  
@@ -109,7 +104,7 @@ virtual BOOL BeginDrag(CPoint pt);
 ### <a name="remarks"></a>Note  
  Eseguire l'override di questa funzione se si desidera controllare cosa accade quando inizia un'operazione di trascinamento. L'implementazione predefinita acquisisce il mouse e rimane in modalità di trascinamento fino a quando l'utente fa clic sul pulsante sinistro o destro del mouse o preme ESC, momento in cui viene annullata l'operazione di trascinamento.  
   
-##  <a name="canceldrag"></a>CDragListBox::CancelDrag  
+##  <a name="canceldrag"></a>  CDragListBox::CancelDrag  
  Chiamato dal framework quando è stata annullata un'operazione di trascinamento.  
   
 ```  
@@ -123,14 +118,14 @@ virtual void CancelDrag(CPoint pt);
 ### <a name="remarks"></a>Note  
  Eseguire l'override della funzione per gestire qualsiasi elaborazione speciale per il controllo casella di riepilogo.  
   
-##  <a name="cdraglistbox"></a>CDragListBox::CDragListBox  
+##  <a name="cdraglistbox"></a>  CDragListBox::CDragListBox  
  Costruisce un oggetto `CDragListBox`.  
   
 ```  
 CDragListBox();
 ```  
   
-##  <a name="dragging"></a>CDragListBox::Dragging  
+##  <a name="dragging"></a>  CDragListBox::Dragging  
  Chiamato dal framework quando un elemento casella di riepilogo viene trascinato all'interno di `CDragListBox` oggetto.  
   
 ```  
@@ -144,16 +139,16 @@ virtual UINT Dragging(CPoint pt);
 ### <a name="return-value"></a>Valore restituito  
  L'ID di risorsa del cursore da visualizzare. Sono possibili i seguenti valori:  
   
-- `DL_COPYCURSOR`Indica che l'elemento verrà copiato.  
+- `DL_COPYCURSOR` Indica che l'elemento verrà copiato.  
   
-- `DL_MOVECURSOR`Indica che l'elemento verrà spostato.  
+- `DL_MOVECURSOR` Indica che l'elemento verrà spostato.  
   
-- `DL_STOPCURSOR`Indica che l'obiettivo di rilascio corrente non è accettabile.  
+- `DL_STOPCURSOR` Indica che l'obiettivo di rilascio corrente non è accettabile.  
   
 ### <a name="remarks"></a>Note  
  Restituisce il comportamento predefinito `DL_MOVECURSOR`. Eseguire l'override di questa funzione fornire funzionalità aggiuntive.  
   
-##  <a name="drawinsert"></a>CDragListBox::DrawInsert  
+##  <a name="drawinsert"></a>  CDragListBox::DrawInsert  
  Chiamato dal framework per disegnare la Guida di inserimento prima dell'elemento con l'indice indicato.  
   
 ```  
@@ -167,7 +162,7 @@ virtual void DrawInsert(int nItem);
 ### <a name="remarks"></a>Note  
  Un valore di - 1 viene cancellata la Guida di inserimento. Eseguire l'override di questa funzione per modificare l'aspetto o il comportamento della Guida di inserimento.  
   
-##  <a name="dropped"></a>CDragListBox::Dropped  
+##  <a name="dropped"></a>  CDragListBox::Dropped  
  Chiamato dal framework quando viene eliminato un elemento all'interno di un `CDragListBox` oggetto.  
   
 ```  
@@ -186,7 +181,7 @@ virtual void Dropped(
 ### <a name="remarks"></a>Note  
  Il comportamento predefinito copia l'elemento casella di riepilogo e i relativi dati nella nuova posizione e quindi Elimina l'elemento originale. Eseguire l'override di questa funzione per personalizzare il comportamento predefinito, ad esempio l'abilitazione di copie di elementi di casella di riepilogo da trascinare in altre posizioni all'interno dell'elenco.  
   
-##  <a name="itemfrompt"></a>CDragListBox::ItemFromPt  
+##  <a name="itemfrompt"></a>  CDragListBox::ItemFromPt  
  Questa funzione per recuperare l'indice in base zero dell'elemento casella di elenco nella chiamata `pt`.  
   
 ```  

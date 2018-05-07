@@ -1,12 +1,9 @@
 ---
 title: Classe CDynamicStringAccessor | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - CDynamicStringAccessor
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - CDynamicStringAccessor class
 ms.assetid: 138dc4de-c7c3-478c-863e-431e48249027
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: f13eb935cae82b0383e87c90bbe17d35d399fbdb
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 1b8888bdac7d605ce1832ef7074955fab4893b33
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdynamicstringaccessor-class"></a>Classe CDynamicStringAccessor
 Consente di accedere a un'origine dati quando non si conosce lo schema del database (la struttura sottostante del database).  
@@ -45,7 +40,7 @@ class CDynamicStringAccessorT : public CDynamicAccessor
 |||  
 |-|-|  
 |[GetString](../../data/oledb/cdynamicstringaccessor-getstring.md)|Recupera i dati specificati di colonna come stringa.|  
-|[SetString](../../data/oledb/cdynamicstringaccessor-setstring.md)|Imposta i dati specificati di colonna come stringa.|  
+|[setString](../../data/oledb/cdynamicstringaccessor-setstring.md)|Imposta i dati specificati di colonna come stringa.|  
   
 ## <a name="remarks"></a>Note  
  Mentre [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md) richiede i dati in formato nativo indicato dal provider, `CDynamicStringAccessor` richiede che il provider di recuperare tutti i dati dall'archivio dati come dati di tipo stringa. Ciò è particolarmente utile per eseguire semplici operazioni che non richiedono il calcolo di valori nell'archivio dati, ad esempio visualizzare o stampare il contenuto dell'archivio dati.  

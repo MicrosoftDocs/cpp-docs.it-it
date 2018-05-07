@@ -1,12 +1,9 @@
 ---
 title: mappa (STL/CLR) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::map
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - map class [STL/CLR]
 - <cliext/map> header [STL/CLR]
 ms.assetid: 8b0a7764-b5e4-4175-a802-82b72eb8662a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: c90fcb415b186257cd2aef801867918b367413b6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: cda679ed01e5266f0605639df45940d8f17e506d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="map-stlclr"></a>map (STL/CLR)
 La classe modello descrive un oggetto che controlla una sequenza di lunghezza variabile di elementi che dispone di accesso bidirezionale. Utilizzare il contenitore `map` per gestire una sequenza di elementi come una struttura ad albero ordinato bilanciato (quasi) di nodi, ognuno l'archiviazione di un elemento. Un elemento è costituito da una chiave, per ordinare la sequenza e un valore mappato, che si per il marcia.  
@@ -39,9 +34,9 @@ La classe modello descrive un oggetto che controlla una sequenza di lunghezza va
   
  dove:  
   
- `GKey`è identico `Key` , a meno che quest'ultimo è un tipo riferimento, nel qual caso è`Key^`  
+ `GKey` è identico `Key` , a meno che quest'ultimo è un tipo riferimento, nel qual caso è `Key^`  
   
- `GMapped`è identico `Mapped` , a meno che quest'ultimo è un tipo riferimento, nel qual caso è`Mapped^`  
+ `GMapped` è identico `Mapped` , a meno che quest'ultimo è un tipo riferimento, nel qual caso è `Mapped^`  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -143,7 +138,7 @@ template<typename Key,
   
  Tale oggetto delegato deve imporre un ordine debole strict sulle chiavi di tipo [Map:: KEY_TYPE (STL/CLR)](../dotnet/map-key-type-stl-clr.md). Pertanto, per le due chiavi `X` e `Y`:  
   
- `key_comp()(X, Y)`Restituisce il valore booleano stesso risultato a ogni chiamata.  
+ `key_comp()(X, Y)` Restituisce il valore booleano stesso risultato a ogni chiamata.  
   
  Se `key_comp()(X, Y)` è true, `key_comp()(Y, X)` deve essere false.  
   

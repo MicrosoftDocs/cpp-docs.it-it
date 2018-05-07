@@ -2,36 +2,31 @@
 title: Utilizzo di assembly verificabili con SQL Server (C + + CLI) | Documenti Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - verifiable assemblies [C++], with SQL Server
 ms.assetid: 5248a60d-aa88-4ff3-b30a-b791c3ea2de9
-caps.latest.revision: 21
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: d03d54dd52f95f3fbba35bb896594e90aa92e867
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f172eea3108771e129636e9aa95d721d45c99609
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-verifiable-assemblies-with-sql-server-ccli"></a>Utilizzo di assembly verificabili con SQL Server (C++/CLI)
 Stored procedure estese, incluse le librerie a collegamento dinamico (DLL), consentono di estendere le funzionalità di SQL Server attraverso funzioni sviluppate con Visual C++. Stored procedure estese vengono implementate come funzioni nelle DLL. Oltre alle funzioni, stored procedure estese possono inoltre definire [tipi definiti dall'utente](../cpp/classes-and-structs-cpp.md) e [funzioni di aggregazione](http://msdn.microsoft.com/en-us/de255454-f45e-4281-81f9-bc61893ac5da) (ad esempio SUM o AVG).  
   
  Quando un client esegue una stored procedure estesa, le ricerche di SQL Server per la DLL associata a una stored procedure estesa e carica la DLL. SQL Server chiama la stored procedure estesa richiesta e viene eseguito in un contesto di sicurezza specificato. La stored procedure estesa passa risultato imposta e restituisce parametri al server.  
   
- [!INCLUDE[sqprsqlong](../dotnet/includes/sqprsqlong_md.md)]fornisce le estensioni di Transact-SQL (T-SQL) per consentire l'installazione di assembly verificabili in SQL Server. Il set di autorizzazioni di SQL Server specifica il contesto di sicurezza, con i livelli di sicurezza seguenti:  
+ [!INCLUDE[sqprsqlong](../dotnet/includes/sqprsqlong_md.md)] fornisce le estensioni di Transact-SQL (T-SQL) per consentire l'installazione di assembly verificabili in SQL Server. Il set di autorizzazioni di SQL Server specifica il contesto di sicurezza, con i livelli di sicurezza seguenti:  
   
 -   Modalità non limitata: eseguire il codice a proprio rischio; codice non deve essere indipendente dai tipi verificabile.  
   

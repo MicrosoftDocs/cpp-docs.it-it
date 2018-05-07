@@ -1,12 +1,9 @@
 ---
 title: Errore del compilatore C2492 | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C2492
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C2492
 ms.assetid: 8c44c9bb-c366-4fe5-a0ab-882e38608aaa
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5410af24b5300b2c03aa0ed4e121abceb6d6d483
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 68b3d769c5b86be172a0a27828fb1dc3905959d5
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-error-c2492"></a>Errore del compilatore C2492
 '*variabile*': i dati con durata di archiviazione di thread non possono avere un'interfaccia dll    

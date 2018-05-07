@@ -1,12 +1,9 @@
 ---
 title: Errore del compilatore C2707 | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C2707
@@ -15,28 +12,26 @@ dev_langs:
 helpviewer_keywords:
 - C2707
 ms.assetid: 3deaf45c-74da-4c9d-acc6-b82412720b74
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 877ca1b0592625823e262f77f7f2adcfc5c04e3e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bdbd957bb1c19e28d08dd0fa5392eadd0f019756
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-error-c2707"></a>Errore del compilatore C2707
 'identifier': un contesto non valido per una funzione intrinseca  
   
  Funzioni intrinseche di gestione delle eccezioni strutturate non sono validi in determinati contesti:  
   
--   `_exception_code()`all'esterno di un filtro eccezioni o `__except` blocco  
+-   `_exception_code()` all'esterno di un filtro eccezioni o `__except` blocco  
   
--   `_exception_info()`all'esterno di un filtro eccezioni  
+-   `_exception_info()` all'esterno di un filtro eccezioni  
   
--   `_abnormal_termination()`all'esterno di un `__finally` blocco  
+-   `_abnormal_termination()` all'esterno di un `__finally` blocco  
   
  Per risolvere l'errore, assicurarsi che le funzioni intrinseche di gestione delle eccezioni vengono installate nel contesto appropriato.  
   

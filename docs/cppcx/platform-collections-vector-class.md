@@ -1,11 +1,8 @@
 ---
 title: Classe platform::Collections::Vector | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - COLLECTION/Platform::Collections::Vector::Vector
@@ -28,17 +25,15 @@ dev_langs:
 helpviewer_keywords:
 - Vector Class (C++/Cx)
 ms.assetid: aee8c076-9700-47c3-99b6-799fd3edb0ca
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 00bf369942289752f7043ce5070618260a90c7ff
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: c7433ed3d1a81704180aa724424a39d39b193f15
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="platformcollectionsvector-class"></a>Classe Platform::Collections::Vector
 
@@ -89,19 +84,19 @@ Se si tenta di utilizzare un **vettore** immettere un valore restituito pubblico
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[Vector::Append](#append)|Inserisce l'elemento specificato dopo l'ultimo elemento nel vettore corrente.|
+|[Vector:: Append](#append)|Inserisce l'elemento specificato dopo l'ultimo elemento nel vettore corrente.|
 |[Vector:: Clear](#clear)|Elimina tutti gli elementi nell'oggetto Vector corrente.|
-|[Vector::First](#first)|Restituisce un iteratore che specifica il primo elemento nell'oggetto Vector.|
-|[Vector::GetAt](#getat)|Recupera l'elemento dell'oggetto Vector corrente identificato dall'indice specificato.|
+|[Vector](#first)|Restituisce un iteratore che specifica il primo elemento nell'oggetto Vector.|
+|[Vector:: GetAt](#getat)|Recupera l'elemento dell'oggetto Vector corrente identificato dall'indice specificato.|
 |[Vector:: getmany](#getmany)|Recupera una sequenza di elementi dall'oggetto Vector corrente, a partire dall'indice specificato.|
-|[Vector::GetView](#getview)|Restituisce una visualizzazione di sola lettura di un oggetto Vector, ovvero [Platform::Collections::VectorView](../cppcx/platform-collections-vectorview-class.md).|
-|[Vector::IndexOf](#indexof)|Cerca l'elemento specificato nell'oggetto Vector corrente e, se lo trova, restituisce l'indice dell'elemento.|
-|[Vector::InsertAt](#insertat)|Inserisce l'elemento specificato nell'oggetto Vector corrente dopo l'elemento identificato dall'indice specificato.|
-|[Vector::ReplaceAll](#replaceall)|Elimina gli elementi nell'oggetto Vector corrente, quindi li inserisce dalla matrice specificata.|
-|[Vector::RemoveAt](#removeat)|Elimina l'elemento identificato dall'indice specificato dall'oggetto Vector corrente.|
-|[Vector::RemoveAtEnd](#removeatend)|Elimina l'elemento alla fine dell'oggetto Vector corrente.|
-|[Vector::SetAt](#setat)|Assegna il valore specificato all'elemento nell'oggetto Vector corrente che è identificato dall'indice specificato.|
-|[Vector::Size](#size)|Restituisce il numero di elementi nell'oggetto Vector corrente.|
+|[GetView](#getview)|Restituisce una visualizzazione di sola lettura di un oggetto Vector, ovvero [Platform::Collections::VectorView](../cppcx/platform-collections-vectorview-class.md).|
+|[IndexOf](#indexof)|Cerca l'elemento specificato nell'oggetto Vector corrente e, se lo trova, restituisce l'indice dell'elemento.|
+|[Vector:: InsertAt](#insertat)|Inserisce l'elemento specificato nell'oggetto Vector corrente dopo l'elemento identificato dall'indice specificato.|
+|[Vector:: ReplaceAll](#replaceall)|Elimina gli elementi nell'oggetto Vector corrente, quindi li inserisce dalla matrice specificata.|
+|[Vector:: RemoveAt](#removeat)|Elimina l'elemento identificato dall'indice specificato dall'oggetto Vector corrente.|
+|[Vector:: removeatend](#removeatend)|Elimina l'elemento alla fine dell'oggetto Vector corrente.|
+|[Vector:: SetAt](#setat)|Assegna il valore specificato all'elemento nell'oggetto Vector corrente che è identificato dall'indice specificato.|
+|[Vector:: Size](#size)|Restituisce il numero di elementi nell'oggetto Vector corrente.|
 
 ### <a name="events"></a>Eventi
 
@@ -132,7 +127,7 @@ virtual void Append(T item);
 
 ### <a name="parameters"></a>Parametri
 
-Indice  
+*index*  
 Elemento da inserire nel vettore. Il tipo di *elemento* è definito dal *T* typename.
 
 ## <a name="clear"></a>  Metodo Vector:: Clear
@@ -177,7 +172,7 @@ virtual T GetAt(unsigned int index);
 
 ### <a name="parameters"></a>Parametri
 
-Indice  
+*index*  
 Intero senza segno in base zero che specifica un particolare elemento nell'oggetto Vector.
 
 ### <a name="return-value"></a>Valore restituito
@@ -241,7 +236,7 @@ virtual bool IndexOf(T value, unsigned int* index);
 *valore*  
 Elemento da cercare.
 
-Indice  
+*index*  
 L'indice in base zero dell'elemento se parametro *valore* è stato trovato; in caso contrario, 0.
 
 Il *indice* parametro è 0 se l'elemento è il primo elemento del vettore o se l'elemento non è stato trovato. Se il valore restituito è `true`, l'elemento è stato trovato ed è il primo elemento; in caso contrario, l'elemento non è stato trovato.
@@ -266,7 +261,7 @@ virtual void InsertAt(unsigned int index, T item)
 
 ### <a name="parameters"></a>Parametri
 
-Indice  
+*index*  
 Intero senza segno in base zero che specifica un particolare elemento nell'oggetto Vector.
 
 *item*  
@@ -284,7 +279,7 @@ virtual void RemoveAt(unsigned int index);
 
 ### <a name="parameters"></a>Parametri
 
-Indice  
+*index*  
 Intero senza segno in base zero che specifica un particolare elemento nell'oggetto Vector.
 
 ## <a name="removeatend"></a>  Metodo Vector:: removeatend
@@ -324,7 +319,7 @@ virtual void SetAt(unsigned int index, T item);
 
 ### <a name="parameters"></a>Parametri
 
-Indice  
+*index*  
 Intero senza segno in base zero che specifica un particolare elemento nell'oggetto Vector.
 
 *item*  

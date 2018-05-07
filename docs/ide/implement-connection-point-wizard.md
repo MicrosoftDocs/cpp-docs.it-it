@@ -1,13 +1,10 @@
 ---
 title: Implementazione guidata punto di connessione | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.codewiz.impl.cp.overview
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - Implement Connection Point Wizard [C++]
 ms.assetid: c117f6c6-30f0-4adb-82b4-b1f34e0f0fa8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f29b4f25d937c2f538373ff85819f7315150e712
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ef2f7efa92de3714170e403ea50b5f486c8367d6
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="implement-connection-point-wizard"></a>Implementazione guidata punto di connessione
 Questa procedura guidata implementa un punto di connessione per un oggetto COM. Un oggetto collegabile (vale a dire un'origine) è possibile esporre un punto di connessione per le proprie interfacce o per qualsiasi interfaccia in uscita. Visual C++ e Windows forniscono librerie dei tipi che dispongono di interfacce in uscita. Ogni interfaccia in uscita può essere implementata da un client su un oggetto (vale a dire un sink).  
@@ -35,7 +30,7 @@ Questa procedura guidata implementa un punto di connessione per un oggetto COM. 
  **Librerie dei tipi disponibili**  
  Consente di visualizzare le librerie dei tipi disponibili che contiene le definizioni di interfaccia per cui è possibile implementare i punti di connessione. Fare clic sul pulsante con i puntini di sospensione per individuare un file contenente la libreria dei tipi da utilizzare.  
   
- **Percorso**  
+ **Posizione**  
  Visualizza il percorso della libreria dei tipi attualmente selezionato nel **librerie dei tipi disponibili** elenco.  
   
  **Interfacce**  

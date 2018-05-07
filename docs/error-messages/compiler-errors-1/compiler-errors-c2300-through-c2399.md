@@ -1,12 +1,9 @@
 ---
 title: Errore del compilatores C2300 Through C2399 | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/17/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C2303
@@ -65,17 +62,15 @@ helpviewer_keywords:
 dev_langs:
 - C++
 ms.assetid: 07ca45b5-b2f0-4049-837b-40a7a3caed88
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: de20e1db0165510accebc321f47bb018f882f67e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d8b758ce26897d5c2ad8baa176c8a83b2c9954df
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-errors-c2300-through-c2399"></a>Errore del compilatores C2300 Through C2399
 
@@ -99,10 +94,10 @@ Gli articoli in questa sezione della documentazione illustrano un subset dei mes
 |[Errore del compilatore C2309](compiler-error-c2309.md)|gestore catch è prevista una dichiarazione di eccezione tra parentesi|
 |[Errore del compilatore C2310](compiler-error-c2310.md)|i gestori catch devono specificare un tipo|
 |[Errore del compilatore C2311](compiler-error-c2311.md)|'*tipo*': individuato da '...' alla riga *numero*|
-|[Errore del compilatore C2312](compiler-error-c2312.md)|'*type1*': individuato da '*type2*' nella riga *numero*|
+|[Errore del compilatore C2312](compiler-error-c2312.md)|'*type1*': individuato da '*type2*' sulla riga *numero*|
 |[Errore del compilatore C2313](compiler-error-c2313.md)|'*type1*': individuato dal riferimento ('*type2*') nella riga *numero*|
 |C2314 errore del compilatore|parola chiave '*keyword1*' è obsoleto: utilizzare '*keyword2*' invece|
-|[Errore del compilatore C2315](compiler-error-c2315.md)|'*type1*': riferimento individuato da '*type2*' nella riga *numero*|
+|[Errore del compilatore C2315](compiler-error-c2315.md)|'*type1*': riferimento individuato da '*type2*' sulla riga *numero*|
 |[Errore del compilatore C2316](compiler-error-c2316.md)|'*tipo*': non può essere intercettato come distruttore e/o costruttore di copia è inaccessibili o eliminati|
 |[Errore del compilatore C2317](compiler-error-c2317.md)|'try' blocco con inizio alla riga '*numero*' senza gestori catch|
 |[Errore del compilatore C2318](compiler-error-c2318.md)|nessun blocco try associato a questo gestore catch|
@@ -125,7 +120,7 @@ Gli articoli in questa sezione della documentazione illustrano un subset dei mes
 |C2335 errore del compilatore|'*identificatore*': un tipo non può essere inserito in un elenco di parametri di funzione|
 |C2336 errore del compilatore|'*tipo*': tipo non valido|
 |[Errore del compilatore C2337](compiler-error-c2337.md)|'*attributo*': attributo non trovato|
-|[Errore del compilatore C2338](compiler-error-c2338.md)|*(messaggio di errore da provider esterni)*|
+|[Errore del compilatore C2338](compiler-error-c2338.md)|*(messaggio di errore dal provider esterno)*|
 |C2339 errore del compilatore|'*identificatore*': tipo non valido nell'IDL incorporato.|
 |C2340 errore del compilatore|'*identificatore*': 'static' può essere utilizzato solo all'interno di una definizione di classe|
 |[Errore del compilatore C2341](compiler-error-c2341.md)|'*sezione*': segmento deve essere definito utilizzando #pragma data_seg, code_seg o sezione precedente da utilizzare|

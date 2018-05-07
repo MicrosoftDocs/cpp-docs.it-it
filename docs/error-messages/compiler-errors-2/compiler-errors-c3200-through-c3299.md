@@ -1,12 +1,9 @@
 ---
 title: Del compilatore C3200 errori tramite C3299 | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/17/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C3220
@@ -43,17 +40,15 @@ helpviewer_keywords:
 dev_langs:
 - C++
 ms.assetid: 6b3104f6-63bc-4823-b6f3-b8a16be4b87f
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 339a4e0f1337e120d192515cecd4dba4e04e310e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 831f51981ff72a67a55698693514dce0a3d87535
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-errors-c3200-through-c3299"></a>Del compilatore C3200 errori tramite C3299
 
@@ -139,9 +134,9 @@ Gli articoli in questa sezione della documentazione illustrano un subset dei mes
 |[Errore del compilatore C3271](compiler-error-c3271.md)|'*campo*': valore non valido '*numero*' per l'attributo FieldOffset|
 |[Errore del compilatore C3272](compiler-error-c3272.md)|'*simbolo*': il simbolo richiede FieldOffset, poiché è un membro di struct o classe *type_name* definito con StructLayout(LayoutKind::Explicit)|
 |[Errore del compilatore C3273](compiler-error-c3273.md)|'*parola chiave*': non consentito in un blocco try C++|
-|[Errore del compilatore C3274](compiler-error-c3274.md)|Infine / &#95; &#95; infine provare senza corrispondenza|
+|[Errore del compilatore C3274](compiler-error-c3274.md)|infine /&#95;&#95;senza corrispondenza infine provare|
 |[Errore del compilatore C3275](compiler-error-c3275.md)|'*identificatore*': non è possibile utilizzare questo simbolo senza qualificatore|
-|[Errore del compilatore C3276](compiler-error-c3276.md)|'*parola chiave*': salto da infine / &#95; &#95; infine blocco produce un comportamento indefinito durante la gestione della terminazione|
+|[Errore del compilatore C3276](compiler-error-c3276.md)|'*parola chiave*': uscire da infine /&#95;&#95;infine blocco produce un comportamento indefinito durante la gestione delle terminazioni|
 |[Errore del compilatore C3277](compiler-error-c3277.md)|non è possibile definire un enum non gestito '*enumerazione*'interno gestito'*tipo*'|
 |[Errore del compilatore C3278](compiler-error-c3278.md)|chiamata dell'interfaccia o metodo puro diretta '*funzione*' avrà esito negativo in fase di esecuzione|
 |[Errore del compilatore C3279](compiler-error-c3279.md)|le specializzazioni parziali ed esplicite e le creazioni di istanze esplicite di modelli di classe dichiarati nello spazio dei nomi cli non sono consentite|

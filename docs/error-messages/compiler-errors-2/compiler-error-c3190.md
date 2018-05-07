@@ -1,12 +1,9 @@
 ---
 title: Errore del compilatore C3190 | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C3190
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C3190
 ms.assetid: 7c701afa-85a7-4f7a-8881-0662436ac244
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 09407e49503747d90afc19ad6cd5ef6f1181ab5b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 797d7299c73574db28dd5c09284602e167485204
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-error-c3190"></a>Errore del compilatore C3190
 "creazione dell'istanza' con gli argomenti di modello specificato non è la creazione di istanze esplicite di alcuna funzione membro di 'type'  

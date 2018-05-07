@@ -1,29 +1,24 @@
 ---
-title: "I nomi, aggiunta guidata proprietà | Documenti Microsoft"
-ms.custom: 
+title: I nomi, aggiunta guidata proprietà | Documenti Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.codewiz.prop.overview
 dev_langs:
 - C++
 ms.assetid: 0453b7ea-89cb-41a1-80a2-d45f61589c0a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9c1728dfda3ec29e8df2b7f5480e9bffb161da7f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 17c3fd5cfc86f76fcdc1c301bd92bb1fdfac3b9c
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="names-add-property-wizard"></a>Nomi, Aggiunta guidata proprietà
 Utilizzare questa procedura guidata per aggiungere una proprietà a un'interfaccia.  
@@ -40,7 +35,7 @@ Utilizzare questa procedura guidata per aggiungere una proprietà a un'interfacc
 |Interfaccia dispatch MFC, interfaccia dispatch del controllo ActiveX MFC|Specificare un nome di proprietà o selezionare una proprietà predefinita dall'elenco. Se si seleziona una proprietà dall'elenco, il valore appropriato viene visualizzato il **tipo di proprietà** casella. È possibile modificare questo tipo, a seconda della selezione in **tipo di implementazione**.|  
   
  **Tipo restituito**  
- Solo le interfacce ATL. Imposta il tipo restituito per la proprietà. Per le interfacce duali, `HRESULT` è sempre il tipo restituito e questa casella è disponibile. Per le interfacce personalizzate, è possibile selezionare un tipo restituito dall'elenco. `HRESULT`è comunque consigliabile, perché fornisce un modo standard per restituire errori.  
+ Solo le interfacce ATL. Imposta il tipo restituito per la proprietà. Per le interfacce duali, `HRESULT` è sempre il tipo restituito e questa casella è disponibile. Per le interfacce personalizzate, è possibile selezionare un tipo restituito dall'elenco. `HRESULT` è comunque consigliabile, perché fornisce un modo standard per restituire errori.  
   
  **Nome della variabile**  
  Solo dispatch MFC. Disponibile solo se si specificano **variabile membro** in **tipo di implementazione**. Imposta il nome della variabile membro a cui è associata la proprietà. Per impostazione predefinita, il nome della variabile è impostato su m _*PropertyName*. È possibile modificare questo nome.  
@@ -51,7 +46,7 @@ Utilizzare questa procedura guidata per aggiungere una proprietà a un'interfacc
  **Get**  
  Per le interfacce dispatch MFC. Disponibile solo se si specificano **metodi Get/Set** in **tipo di implementazione**. Imposta il nome della funzione per ottenere la proprietà. Per impostazione predefinita, il nome della funzione Get è impostato su Get*PropertyName*. È possibile modificare questo nome. Se si elimina il nome, la funzione [GetNotSupported](../mfc/reference/colecontrol-class.md#getnotsupported) viene inserito nella mappa di invio dell'interfaccia. Get*PropertyName* funzione specifica che la proprietà come leggibili.  
   
- **Set (funzione)**  
+ **set (funzione)**  
  Solo dispatch MFC. Disponibile solo se si specificano **metodi Get/Set** in **tipo di implementazione**. Imposta il nome della funzione per impostare la proprietà. Per impostazione predefinita, il nome della funzione Set è impostato a Set*PropertyName*. È possibile modificare questo nome. Se si elimina il nome, la funzione [SetNotSupported](../mfc/reference/colecontrol-class.md#setnotsupported) viene inserito nella mappa di invio dell'interfaccia. Il Set di*PropertyName* funzione specifica che la proprietà è modificabile.  
   
  **Tipo di implementazione**  

@@ -1,30 +1,25 @@
 ---
 title: Aggiunta di un metodo (Visual C++) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Add Method Wizard [C++]
 - methods [C++], adding
 ms.assetid: 4ba4e45f-fa38-4d5e-af44-cbec0a7ab558
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4412c37ed0544c276a9ff1a16c367de06c7d1e9e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b247b0e21112d6a2be2384fafbf43fc295b22c71
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="adding-a-method--visual-c"></a>Aggiunta di un metodo (Visual C++)
 È possibile utilizzare il [Aggiunta guidata metodo](../ide/add-method-wizard.md) per aggiungere un metodo su un'interfaccia nel progetto. Se il progetto contiene una classe associata all'interfaccia, la procedura guidata Modifica troppo, la classe.  

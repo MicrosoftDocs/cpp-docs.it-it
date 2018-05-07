@@ -1,13 +1,10 @@
 ---
 title: Finestre di dialogo | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - CDialog class [MFC], MFC dialog boxes
 - MFC dialog boxes
 ms.assetid: e4feea1a-8360-4ccb-9b84-507f1ccd9ef3
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8117d175d59859c97a360ca6a6d2af559b403e32
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2c8de283d81aa9d260b891f285f06555dc67895f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dialog-boxes"></a>Finestre di dialogo
 Applicazioni per Windows spesso comunicano con l'utente tramite le finestre di dialogo. Classe [CDialog](../mfc/reference/cdialog-class.md) fornisce un'interfaccia per la gestione delle finestre, l'editor di finestre di Visual C++ semplifica la progettazione di finestre di dialogo e creare le proprie risorse modello di finestra di dialogo e le creazioni guidate codice semplificano il processo di inizializzazione e convalida i controlli in una finestra di dialogo e di raccogliere i valori immessi dall'utente.  
@@ -42,7 +37,7 @@ Applicazioni per Windows spesso comunicano con l'utente tramite le finestre di d
   
  La maggior parte delle finestre di dialogo sono modale, che richiede all'utente di chiudere la finestra di dialogo prima di utilizzare qualsiasi altra parte del programma. Ma è possibile creare finestre di dialogo non modale, che consentono agli utenti di lavorare con le altre finestre mentre è aperta la finestra di dialogo. MFC supporta entrambi i tipi di finestra di dialogo con la classe `CDialog`. I controlli vengono disposti e gestiti attraverso una risorsa modello di finestra di dialogo, creata con il [editor finestre](../windows/dialog-editor.md).  
   
- [Finestre delle proprietà](../mfc/property-sheets-mfc.md), noto anche come scheda finestre di dialogo, finestre di dialogo che contengono "pagine" di controlli finestra di dialogo distinti. Ogni pagina è presente una cartella di file "scheda" nella parte superiore. Facendo clic su una scheda visualizzata la pagina all'inizio della finestra di dialogo.  
+ [Finestre delle proprietà](../mfc/property-sheets-mfc.md), noto anche come scheda finestre di dialogo, finestre di dialogo che contengono "pagine" di controlli di finestra di dialogo distinti. Ogni pagina è presente una cartella di file "scheda" nella parte superiore. Facendo clic su una scheda visualizzata la pagina all'inizio della finestra di dialogo.  
   
 ## <a name="what-do-you-want-to-know-more-about"></a>Ciò che si desidera saperne di più  
   
@@ -60,17 +55,17 @@ Applicazioni per Windows spesso comunicano con l'utente tramite le finestre di d
   
 -   [Ciclo di vita di una finestra di dialogo](../mfc/life-cycle-of-a-dialog-box.md)  
   
--   [Dialog data exchange (DDX) e (DDV) di convalida](../mfc/dialog-data-exchange-and-validation.md)  
+-   [Dialog data exchange (DDX) e convalida DDV)](../mfc/dialog-data-exchange-and-validation.md)  
   
 -   [Accesso indipendente dai tipi ai controlli in una finestra di dialogo](../mfc/type-safe-access-to-controls-in-a-dialog-box.md)  
   
--   [Mapping di messaggi di Windows a classi](../mfc/mapping-windows-messages-to-your-class.md)  
+-   [Mapping di messaggi Windows a classi](../mfc/mapping-windows-messages-to-your-class.md)  
   
 -   [Funzioni membro comunemente sottoposte a override](../mfc/commonly-overridden-member-functions.md)  
   
 -   [Funzioni membro comunemente aggiunte](../mfc/commonly-added-member-functions.md)  
   
--   [Classi di finestre di dialogo comuni](../mfc/common-dialog-classes.md)  
+-   [Classi di finestra di dialogo comuni](../mfc/common-dialog-classes.md)  
   
 -   [Finestre di dialogo in OLE](../mfc/dialog-boxes-in-ole.md)  
   

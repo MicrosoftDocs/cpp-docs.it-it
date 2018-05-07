@@ -1,13 +1,10 @@
 ---
 title: Controlli ActiveX in Internet | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,30 +15,28 @@ helpviewer_keywords:
 - Internet applications [MFC], ActiveX controls
 - networks [MFC], downloading with ActiveX controls
 ms.assetid: 7ab943c8-2022-41df-9065-d629b616eeec
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8c02d807f6b77ca7aa35ffe91b929122a3743be6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1a42a7bc042301cfbd7d62f82b7c676686146850
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="activex-controls-on-the-internet"></a>Controlli ActiveX in Internet
 Controlli ActiveX sono la versione aggiornata della specifica del controllo OLE. I controlli sono un'architettura principale per lo sviluppo di componenti software programmabili che possono essere usati in diversi contenitori diversi, inclusi browser compatibile con COM su Internet. Qualsiasi controllo ActiveX può essere un controllo di Internet e aggiungere funzionalità a un documento attivo o far parte di una pagina Web. Controlli in una pagina Web possono comunicare tra loro mediante script.  
   
  Controlli ActiveX non sono limitati a Internet. Un controllo ActiveX anche utilizzabile in tutti i contenitori, purché il controllo supporta le interfacce richieste da tale contenitore.  
   
- **Controlli ActiveX offrono numerosi vantaggi, tra cui:**  
+ **ActiveX (controlli) offrono numerosi vantaggi, tra cui:**  
   
 -   Interfacce meno necessarie rispetto ai precedenti controlli OLE.  
   
 -   La possibilità di essere privo di finestra e sempre attiva.  
   
- **Per poter essere un controllo ActiveX, è necessario un controllo:**  
+ **Affinché sia un controllo ActiveX, è necessario un controllo:**  
   
 -   Supporto di **IUnknown** interfaccia.  
   
@@ -165,9 +160,9 @@ Controlli ActiveX sono la versione aggiornata della specifica del controllo OLE.
   
  Implementare [moniker asincroni](../mfc/asynchronous-monikers-on-the-internet.md) utilizzando la `CAsyncMonikerFile` classe. Tuttavia, è possono utilizzare i controlli ActiveX di `CDataPathProperty` (classe), che deriva da `CAsyncMonikerFile`, per facilitare l'implementazione di proprietà di controllo asincrono.  
   
- L'esempio ASYNDOWN viene illustrato come impostare un ciclo asincrono usando i timer per leggere i dati. ASYNDOWN viene descritto in dettaglio nell'articolo della Knowledge Base "HOWTO: AsyncDown illustra Asynchronous Data Download" (Q177244) e per il download da Microsoft Download Center. (Per ulteriori informazioni sul download di file da Microsoft Download Center, vedere l'articolo "Modalità per ottenere Microsoft supporto file dai servizi in linea" (Q119591) nella Microsoft Knowledge Base). È possibile trovare articoli della Knowledge Base in [http://support.microsoft.com/support](http://support.microsoft.com/support).  
+ L'esempio ASYNDOWN viene illustrato come impostare un ciclo asincrono usando i timer per leggere i dati. ASYNDOWN viene descritto in dettaglio nell'articolo della Knowledge Base "HOWTO: AsyncDown illustra Asynchronous Data Download" (Q177244) e per il download da Microsoft Download Center. (Per ulteriori informazioni sul download di file da Microsoft Download Center, vedere l'articolo "Modalità per ottenere Microsoft supporto file dai servizi in linea" (Q119591) nella Microsoft Knowledge Base). È possibile trovare articoli della Knowledge Base al [ http://support.microsoft.com/support ](http://support.microsoft.com/support).  
   
- La tecnica di base utilizzata in ASYNDOWN consiste nell'impostare un timer in **CDataPathProperty:: OnDataAvailable** per indicare quando sono disponibili dati. Quando viene ricevuto il messaggio del timer, l'applicazione legge in blocchi a 128 byte di dati e viene compilato un controllo di modifica. Se i dati non sono disponibili quando il messaggio del timer viene gestito, il timer è stato disattivato. `OnDataAvailable`Attiva il timer se più dati arrivano in un secondo momento.  
+ La tecnica di base utilizzata in ASYNDOWN consiste nell'impostare un timer in **CDataPathProperty:: OnDataAvailable** per indicare quando sono disponibili dati. Quando viene ricevuto il messaggio del timer, l'applicazione legge in blocchi a 128 byte di dati e viene compilato un controllo di modifica. Se i dati non sono disponibili quando il messaggio del timer viene gestito, il timer è stato disattivato. `OnDataAvailable` Attiva il timer se più dati arrivano in un secondo momento.  
   
 ## <a name="displaying-a-control-on-a-web-page"></a>Visualizzazione di un controllo in una pagina Web  
  Di seguito è riportato un esempio di un tag object e gli attributi per l'inserimento di un controllo in una pagina Web.  

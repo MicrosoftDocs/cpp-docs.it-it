@@ -1,13 +1,10 @@
 ---
 title: 'Procedura: accedere ai caratteri in un System:: String | Documenti Microsoft'
-ms.custom: 
+ms.custom: get-started-article
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: get-started-article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,24 +12,22 @@ helpviewer_keywords:
 - examples [C++], strings
 - strings [C++], accessing characters
 ms.assetid: cfc89756-aef3-4988-907e-fb236dcb7087
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 888370cac57025418bc70b322703d8569a4be3d0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ed9682492eedc915919758d42d5594560cb4a83a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-access-characters-in-a-systemstring"></a>Procedura: accedere ai caratteri in System::String
 È possibile accedere ai caratteri di un <xref:System.String> oggetto per chiamate ad alte prestazioni a non gestito, le funzioni che accettano `wchar_t*` stringhe. Il metodo restituisce un puntatore interno al primo carattere del <xref:System.String> oggetto. L'indicatore di misura possono essere manipolati direttamente o bloccato e passato a una funzione che prevede un normale `wchar_t` stringa.  
   
 ## <a name="example"></a>Esempio  
- `PtrToStringChars`Restituisce un <xref:System.Char>, ovvero un puntatore interno (noto anche come un `byref`). Di conseguenza, è sottoposte a garbage collection. Non è necessario bloccare l'indicatore di misura a meno che non si intende passare a una funzione nativa.  
+ `PtrToStringChars` Restituisce un <xref:System.Char>, che è un puntatore interno (noto anche come un `byref`). Di conseguenza, è sottoposte a garbage collection. Non è necessario bloccare l'indicatore di misura a meno che non si intende passare a una funzione nativa.  
   
  Si consideri il codice seguente.  Il blocco non è necessario perché `ppchar` è un puntatore interno e se il garbage collector Sposta la stringa punta a, verrà aggiornato anche `ppchar`. Senza un [pin_ptr (C + + CLI)](../windows/pin-ptr-cpp-cli.md), il codice verrà eseguito correttamente e che non have il potenziale calo di prestazioni causato dal blocco.  
   

@@ -1,13 +1,10 @@
 ---
 title: 'Recordset: Applicazione di parametri a un Recordset (ODBC) | Documenti Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,18 +13,16 @@ helpviewer_keywords:
 - recordsets, parameterizing
 - passing parameters, to queries at runtime
 ms.assetid: 7d1dfeb6-5ee0-45e2-aacc-63bc52a465cd
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 38b17950a7aaf89cc041c4933768bf6b2da0c9b0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 275cd9d2ee7ccbd4c9972c00ae6fbb8f33166a0a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="recordset-parameterizing-a-recordset-odbc"></a>Recordset: applicazione di parametri a un recordset (ODBC)
 Questo argomento si applica alle classi ODBC MFC.  
@@ -40,11 +35,11 @@ Questo argomento si applica alle classi ODBC MFC.
   
 -   [Quando e perché si potrebbe voler parametri](#_core_when_to_use_parameters).  
   
--   [Come dichiarare i membri dati della classe recordset di parametro](#_core_parameterizing_your_recordset_class).  
+-   [Come dichiarare i membri dati della classe recordset parametro](#_core_parameterizing_your_recordset_class).  
   
 -   [Come passare le informazioni sui parametri a un oggetto recordset in fase di esecuzione](#_core_passing_parameter_values_at_run_time).  
   
-##  <a name="_core_parameterized_recordsets"></a>Recordset con parametri  
+##  <a name="_core_parameterized_recordsets"></a> Recordset con parametri  
  Un recordset con parametri consente di passare le informazioni di parametro in fase di esecuzione. Ciò produce due risultati importanti:  
   
 -   Ma potrebbe causare una maggiore velocità di esecuzione.  
@@ -53,7 +48,7 @@ Questo argomento si applica alle classi ODBC MFC.
   
  Quando si chiama **aprire** per eseguire la query, il recordset utilizza le informazioni sui parametri per completare il **SQL SELECT** istruzione. È possibile parametrizzare qualsiasi recordset.  
   
-##  <a name="_core_when_to_use_parameters"></a>Utilizzo dei parametri  
+##  <a name="_core_when_to_use_parameters"></a> Utilizzo dei parametri  
  Utilizzi tipici per i parametri includono:  
   
 -   Passaggio di argomenti in fase di esecuzione per una query predefinita.  
@@ -97,7 +92,7 @@ Questo argomento si applica alle classi ODBC MFC.
   
  Per ulteriori informazioni sui filtri, vedere [Recordset: applicazione di filtri dei record (ODBC)](../../data/odbc/recordset-filtering-records-odbc.md).  
   
-##  <a name="_core_parameterizing_your_recordset_class"></a>Applicazione di parametri della classe Recordset  
+##  <a name="_core_parameterizing_your_recordset_class"></a> Parametrizzazione della classe Recordset  
   
 > [!NOTE]
 >  Questa sezione si applica agli oggetti derivati da `CRecordset` in quale riga bulk recupero non è stato implementato. Se si utilizza di massa di righe recupero l'implementazione dei parametri è un processo simile. Per ulteriori informazioni, vedere [Recordset: recupero di record di massa (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
@@ -149,7 +144,7 @@ Questo argomento si applica alle classi ODBC MFC.
 
 >  La stringa da utilizzare più probabile è la stringa specificata (se presente) per la classe [m_strFilter](../../mfc/reference/crecordset-class.md#m_strfilter) (membro dati), ma alcuni driver ODBC potrebbero consentire parametri in altre clausole SQL.  
   
-##  <a name="_core_passing_parameter_values_at_run_time"></a>Passaggio di valori di parametro in fase di esecuzione  
+##  <a name="_core_passing_parameter_values_at_run_time"></a> Passaggio dei valori di parametro in fase di esecuzione  
  È necessario specificare i valori dei parametri prima di chiamare **aprire** (per un nuovo oggetto recordset) o **Requery** (per un oggetto esistente).  
   
 #### <a name="to-pass-parameter-values-to-a-recordset-object-at-run-time"></a>Per passare valori di parametro a un oggetto recordset in fase di esecuzione  

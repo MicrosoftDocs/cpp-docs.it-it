@@ -1,12 +1,9 @@
 ---
 title: C3300 errori del compilatore tramite C3399 | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/17/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C3300
@@ -109,17 +106,15 @@ helpviewer_keywords:
 dev_langs:
 - C++
 ms.assetid: 190b7d29-ffe6-4261-921d-140da1935d00
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 28ddf69b329b7daac2dab9702dd5d11aa665e05e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4c5976e57e0a3b7f51c9df3fbdf3ebebb08dd1b4
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-errors-c3300-through-c3399"></a>C3300 errori del compilatore tramite C3399
 
@@ -180,7 +175,7 @@ Gli articoli in questa sezione della documentazione illustrano un subset dei mes
 |C3346 errore del compilatore|dichiarazione esportata in ambito non spazio dei nomi|
 |[Errore del compilatore C3347](compiler-error-c3347.md)|'*argomento*': argomento obbligatorio non specificato nell'attributo *asttribute*|
 |C3348 errore del compilatore|i modelli esportati non fanno parte degli standard C++ correnti|
-|C3349 errore del compilatore|'*classe*::*membro*': attributo multicast già implementato dal provider *provider*|
+|C3349 errore del compilatore|'*classe*::*membro*': attributo multicast è già stata implementata dal provider *provider*|
 |[Errore del compilatore C3350](compiler-error-c3350.md)|' *funzione*': un costruttore di delegato richiede *numero* argomenti|
 |[Errore del compilatore C3351](compiler-error-c3351.md)|' *funzione*': se si passa un'istanza di oggetto NULL a un costruttore di delegato, è inoltre necessario passare l'indirizzo di una funzione membro statica|
 |[Errore del compilatore C3352](compiler-error-c3352.md)|'*funzione*': la funzione specificata non corrisponde al tipo delegato '*tipo*'|
@@ -191,8 +186,8 @@ Gli articoli in questa sezione della documentazione illustrano un subset dei mes
 |C3357 errore del compilatore|'*attributo*': attributo ambiguo, è necessario utilizzare il nome completo|
 |[Errore del compilatore C3358](compiler-error-c3358.md)|'*simbolo*': simbolo non trovato|
 |C3359 errore del compilatore|'*specializzazione*': Impossibile specializzare il modello|
-|[Errore del compilatore C3360](compiler-error-c3360.md)|'*stringa*': Impossibile creare *nome*|
-|C3361 errore del compilatore|Nessun contesto in cui *azione*|
+|[Errore del compilatore C3360](compiler-error-c3360.md)|'*stringa*': non è possibile creare *nome*|
+|C3361 errore del compilatore|Nessun contesto in cui si desidera *azione*|
 |C3362 errore del compilatore|'*classe*::*membro*': attributo multicast non è stata implementata|
 |[Errore del compilatore C3363](compiler-error-c3363.md)|'*identificatore*': 'typeid' può essere applicato solo a un tipo|
 |[Errore del compilatore C3364](compiler-error-c3364.md)|' *funzione*': argomento non valido per il costruttore di delegato; destinazione di delegato deve essere un puntatore a una funzione membro|

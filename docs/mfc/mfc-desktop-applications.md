@@ -1,13 +1,10 @@
 ---
 title: Applicazioni Desktop MFC | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - MFC
 - mfc
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - class libraries, MFC
 - MFC, about MFC
 ms.assetid: 7101cb18-a681-495c-8f2b-069ad20c72f7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c5f99270afc1f603b8e5e44a23cd422f96558efb
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c3afd68e8407d1e02fa39b76316da66fcfe56b8c
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mfc-desktop-applications"></a>Applicazioni desktop MFC
 La libreria MFC (Microsoft Foundation Class) fornisce un wrapper orientato a oggetti su molte delle API Win32 e COM. Sebbene possa essere utilizzata anche per creare applicazioni desktop molto semplici, risulta maggiormente utile quando è necessario compilare interfacce utente più complesse che includono più controlli. È possibile usare MFC per creare applicazioni con interfacce utente in stile Office.  
@@ -90,7 +85,7 @@ La libreria MFC (Microsoft Foundation Class) fornisce un wrapper orientato a ogg
  [Classi condivise ATL/MFC](../atl-mfc-shared/atl-mfc-shared-classes.md)  
  Fornisce collegamenti alle classi condivise da MFC e ATL.  
   
- [Esempi di MFC](../visual-cpp-samples.md)  
+ [Esempi relativi a MFC](../visual-cpp-samples.md)  
  Fornisce collegamenti a esempi che dimostrano come utilizzare MFC.  
   
  [Riferimento alle librerie di Visual C++](../standard-library/cpp-standard-library-reference.md)  

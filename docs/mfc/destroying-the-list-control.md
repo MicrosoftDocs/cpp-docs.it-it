@@ -1,30 +1,25 @@
 ---
 title: Eliminazione definitiva del controllo elenco | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - list controls [MFC], destroying
 - CListCtrl class [MFC], destroying controls
 ms.assetid: 513ec820-3a02-49d2-b073-a6a7a3fc91b3
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fdaafb8a6951050dac0022e0e6e8874b48d688e7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: edb26671ba775cfa7daf98d39c7eccc9fd4111bd
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="destroying-the-list-control"></a>Eliminazione definitiva del controllo List
 Se si incorpora il [CListCtrl](../mfc/reference/clistctrl-class.md) dell'oggetto come un membro dati di una classe di visualizzazione o della finestra di dialogo, viene eliminato quando viene eliminato il relativo proprietario. Se si utilizza un [CListView](../mfc/reference/clistview-class.md), il framework Elimina definitivamente il controllo quando elimina la vista.  

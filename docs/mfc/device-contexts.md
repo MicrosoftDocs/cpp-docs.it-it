@@ -1,13 +1,10 @@
 ---
 title: Contesti di dispositivo | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -41,24 +38,22 @@ helpviewer_keywords:
 - drawing [MFC], directly into windows
 - painting and device context
 ms.assetid: d0cd51f1-f778-4c7e-bf50-d738d10433c7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 26d4a0e32a8b24a72447cf4227be128659316c0b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 45a2f99001d45de71ca3ea8a525152d53d67ee64
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="device-contexts"></a>Contesti di dispositivo
 Un contesto di dispositivo è una struttura di dati di Windows che contiene informazioni sugli attributi di disegnati di un dispositivo, ad esempio una visualizzazione o una stampante. Tutte le chiamate di disegnare vengono effettuate tramite un oggetto contesto di dispositivo, che incapsula le API di Windows per disegno di linee, forme e testo. Contesti di dispositivo consentono disegno indipendente dal dispositivo in Windows. Contesti di dispositivo possono essere utilizzati per disegnare sullo schermo, alla stampante o in un metafile.  
   
- [CPaintDC](../mfc/reference/cpaintdc-class.md) oggetti incapsulano il linguaggio comune di Windows, la chiamata di `BeginPaint` funzione, nel contesto di dispositivo di disegno, quindi chiamare il `EndPaint` (funzione). Il `CPaintDC` chiamate al costruttore `BeginPaint` per l'utente e il distruttore chiama `EndPaint`. Il processo semplificato consiste nel creare il [CDC](../mfc/reference/cdc-class.md) dell'oggetto, creare e quindi eliminare il `CDC` oggetto. In framework, gran parte di questo processo è automatizzata. In particolare, il `OnDraw` funzione vengono passati un `CPaintDC` già preparata (tramite `OnPrepareDC`), e si disegna semplicemente al suo interno. Viene eliminato dal framework e il contesto di dispositivo sottostante viene rilasciato al Windows al momento della restituzione della chiamata al `OnDraw` (funzione).  
+ [CPaintDC](../mfc/reference/cpaintdc-class.md) oggetti incapsulano il linguaggio comune di Windows, la chiamata di `BeginPaint` funzione, di disegno nel contesto di dispositivo e quindi chiamare il `EndPaint` (funzione). Il `CPaintDC` chiamate al costruttore `BeginPaint` per l'utente e il distruttore chiama `EndPaint`. Il processo semplificato consiste nel creare il [CDC](../mfc/reference/cdc-class.md) dell'oggetto, creare e quindi eliminare il `CDC` oggetto. In framework, gran parte di questo processo è automatizzata. In particolare, il `OnDraw` funzione vengono passati un `CPaintDC` già preparata (tramite `OnPrepareDC`), e si disegna semplicemente al suo interno. Viene eliminato dal framework e il contesto di dispositivo sottostante viene rilasciato al Windows al momento della restituzione della chiamata al `OnDraw` (funzione).  
   
- [CClientDC](../mfc/reference/cclientdc-class.md) oggetti incapsulano l'utilizzo di un contesto di dispositivo che rappresenta solo l'area client di una finestra. Il `CClientDC` chiamate al costruttore il `GetDC` funzione e il distruttore chiama il `ReleaseDC` (funzione). [Gli oggetti CWindowDC](../mfc/reference/cwindowdc-class.md) oggetti incapsulano un contesto di dispositivo che rappresenta l'intera finestra, incluso il relativo frame.  
+ [CClientDC](../mfc/reference/cclientdc-class.md) oggetti incapsulano funzionante con un contesto di dispositivo che rappresenta solo l'area client di una finestra. Il `CClientDC` chiamate al costruttore il `GetDC` funzione e il distruttore chiama il `ReleaseDC` (funzione). [Gli oggetti CWindowDC](../mfc/reference/cwindowdc-class.md) oggetti incapsulano un contesto di dispositivo che rappresenta l'intera finestra, incluso il relativo frame.  
   
  [CMetaFileDC](../mfc/reference/cmetafiledc-class.md) oggetti incapsulano disegno in un metafile di Windows. Al contrario di `CPaintDC` passato a `OnDraw`, in questo caso, è necessario chiamare [OnPrepareDC](../mfc/reference/cview-class.md#onpreparedc) manualmente.  
   

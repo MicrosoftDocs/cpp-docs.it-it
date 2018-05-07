@@ -1,10 +1,10 @@
 ---
 title: Inizializzazione di assembly misti | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/09/2018
 ms.technology:
-- cpp-windows
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,15 +18,14 @@ helpviewer_keywords:
 ms.assetid: bfab7d9e-f323-4404-bcb8-712b15f831eb
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: c4d569987c20a962b0cecf22cd6888b22c920fb5
-ms.sourcegitcommit: eb246547c7c9adc7d7ac4083ef09bf6e54dec914
+ms.openlocfilehash: 389246b6b002204260170fb44680c2756cd7aa6b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="initialization-of-mixed-assemblies"></a>Inizializzazione di assembly misti
 
@@ -163,7 +162,7 @@ Per identificare la funzione MSIL specifica chiamata con il blocco del caricator
 
    Questa operazione può essere eseguita in due modi. È innanzitutto possibile aggiungere i PDB per mscoree.dll e mscorwks.dll al percorso di ricerca dei simboli. A tale scopo, aprire la finestra di dialogo contenente le opzioni del percorso di ricerca dei simboli. (Dal **strumenti** menu, scegliere **opzioni**. Nel riquadro a sinistra del **opzioni** la finestra di dialogo, aprire il **debug** nodo e scegliere **simboli**.) Aggiungere il percorso dei file PDB mscoree.dll e mscorwks.dll all'elenco di ricerca. Questi file PDB sono installati in %VSINSTALLDIR%\SDK\v2.0\symbols. Scegliere **OK**.
 
-   È anche possibile scaricare i file PDB per mscoree.dll e mscorwks.dll da Microsoft Symbol Server. Per configurare Microsoft Symbol Server, aprire la finestra di dialogo contenente le opzioni del percorso di ricerca dei simboli. (Dal **strumenti** menu, scegliere **opzioni**. Nel riquadro a sinistra del **opzioni** la finestra di dialogo, aprire il **debug** nodo e scegliere **simboli**.) Aggiungere all'elenco di ricerca il percorso seguente: http://msdl.microsoft.com/download/symbols. Aggiungere una directory cache per i simboli nella casella di testo relativa alla cache del server di simboli. Scegliere **OK**.
+   È anche possibile scaricare i file PDB per mscoree.dll e mscorwks.dll da Microsoft Symbol Server. Per configurare Microsoft Symbol Server, aprire la finestra di dialogo contenente le opzioni del percorso di ricerca dei simboli. (Dal **strumenti** menu, scegliere **opzioni**. Nel riquadro a sinistra del **opzioni** la finestra di dialogo, aprire il **debug** nodo e scegliere **simboli**.) Aggiungere il seguente percorso di ricerca all'elenco di ricerca: http://msdl.microsoft.com/download/symbols. Aggiungere una directory cache per i simboli nella casella di testo relativa alla cache del server di simboli. Scegliere **OK**.
 
 1. Impostare la modalità del debugger sulla modalità solo nativa.
 

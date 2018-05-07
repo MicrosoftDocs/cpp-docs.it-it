@@ -1,13 +1,10 @@
 ---
 title: Utilizzare le espressioni regolari per convalidare la formattazione (C + + CLI) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,21 +12,19 @@ helpviewer_keywords:
 - data [C++], formatting
 - regular expressions [C++], validating data formatting
 ms.assetid: 225775c3-3efc-4734-bde2-1fdf73e3d397
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 6e67b6de0b7769322d0b7f1176245c8f68634afb
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 59a553ac2d58f9304fce3961aa8212c33b26643a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-use-regular-expressions-to-validate-data-formatting-ccli"></a>Procedura: utilizzare espressioni regolari per convalidare la formattazione dei dati (C++/CLI)
-Esempio di codice seguente viene illustrato l'utilizzo di espressioni regolari per verificare la formattazione della stringa. Nell'esempio di codice seguente, la stringa deve contenere un numero di telefono valido. Esempio di codice seguente usa la stringa "\d{3}-\d{3}-\d{4}" per indicare che ogni campo rappresenta un numero di telefono valido. "D" nella stringa indica una cifra e l'argomento dopo ciascuna "d" indica il numero di cifre che deve essere presente. In questo caso, il numero deve essere separati da trattini.  
+Esempio di codice seguente viene illustrato l'utilizzo di espressioni regolari per verificare la formattazione della stringa. Nell'esempio di codice seguente, la stringa deve contenere un numero di telefono valido. L'esempio di codice seguente viene utilizzata la stringa "\d{3}-\d{3}-\d{4}" per indicare che ogni campo rappresenta un numero di telefono valido. "D" nella stringa indica una cifra e l'argomento dopo ciascuna "d" indica il numero di cifre che deve essere presente. In questo caso, il numero deve essere separati da trattini.  
   
 ## <a name="example"></a>Esempio  
   

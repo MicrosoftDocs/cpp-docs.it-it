@@ -1,12 +1,9 @@
 ---
 title: Strumenti del linker LNK1168 errore | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - LNK1168
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - LNK1168
 ms.assetid: 97ead151-fd99-46fe-9a1d-7e84dc0b8cc8
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 12dfce4243f0872735158df7ccd81b7c6e29efc8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bc3a7c06779cb409a39a930080199b3caf6891ca
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="linker-tools-error-lnk1168"></a>Errore degli strumenti del linker LNK1168
 impossibile aprire 'nomefile' per la scrittura  
@@ -43,4 +38,4 @@ impossibile aprire 'nomefile' per la scrittura
  Se il file eseguibile non può essere sovrascritto dal processo di compilazione, è possibile che sia bloccato da Esplora file. Se il **applicazione esperienza** servizio è stato disabilitato, Esplora File potrebbe mantenere un blocco sull'handle del file eseguibile per un periodo di tempo prolungato. Per risolvere questo problema, eseguire **services.msc** e quindi aprire il **proprietà** la finestra di dialogo per la **applicazione esperienza** servizio. Modifica il **tipo di avvio** da **disabilitato** a **manuale**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Si potrebbe ricevere un "Errore PRJ0008" o un messaggio di errore "Errore irreversibile LNK1168" quando si tenta di compilare una soluzione o un progetto ActiveX in Visual C++](http://support.microsoft.com/kb/308358)
+ [È possibile che venga visualizzato un "Errore PRJ0008" o un messaggio di errore "Errore irreversibile LNK1168" quando si prova a compilare una soluzione o un progetto ActiveX in Visual C++](http://support.microsoft.com/kb/308358)

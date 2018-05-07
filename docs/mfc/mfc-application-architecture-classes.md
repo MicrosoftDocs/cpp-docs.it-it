@@ -1,13 +1,10 @@
 ---
 title: Classi architettura dell'applicazione MFC | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.classes.mfc
 dev_langs:
@@ -18,22 +15,20 @@ helpviewer_keywords:
 - classes [MFC], MFC
 - application architecture classes [MFC]
 ms.assetid: 71b2de54-b44d-407e-9c71-9baf954e18d9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 623775d6c3306ba4afdb01eb78ea70b05f7a3365
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b1174a994f345f4b7733e82603b5a49ed8977651
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mfc-application-architecture-classes"></a>Classi architettura dell'applicazione MFC
 Le classi in questa categoria contribuiscono all'architettura di un'applicazione framework. Forniscono funzionalità comuni alla maggior parte delle applicazioni. Compilare il framework per aggiungere funzionalità specifiche dell'applicazione. In genere, non la derivazione di nuove classi dalle classi, architettura e quindi aggiungendo nuovi membri o si esegue l'override di funzioni membro esistente.  
   
- [Creazioni guidate applicazione](../mfc/reference/mfc-application-wizard.md) generare diversi tipi di applicazioni, ognuno dei quali utilizzerà il framework dell'applicazione in diversi modi. SDI (interfaccia a documento singolo) e le applicazioni MDI (interfaccia a documenti multipli) le funzionalità complete di una parte del framework chiamato architettura documento/visualizzazione. Altri tipi di applicazioni, ad esempio le applicazioni basate su finestra di dialogo, applicazioni basate su form e DLL, utilizzano solo alcune delle funzionalità di architettura documento/visualizzazione.  
+ [Creazioni guidate applicazione](../mfc/reference/mfc-application-wizard.md) generare diversi tipi di applicazioni, ognuno dei quali utilizzerà il framework dell'applicazione in modi diversi. SDI (interfaccia a documento singolo) e le applicazioni MDI (interfaccia a documenti multipli) le funzionalità complete di una parte del framework chiamato architettura documento/visualizzazione. Altri tipi di applicazioni, ad esempio le applicazioni basate su finestra di dialogo, applicazioni basate su form e DLL, utilizzano solo alcune delle funzionalità di architettura documento/visualizzazione.  
   
  Documento/visualizzazione applicazioni contengono uno o più set di documenti, visualizzazioni e finestre cornice. Un oggetto modello di documento associa le classi per ogni set di documenti/visualizzazione/frame.  
   

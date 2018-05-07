@@ -1,12 +1,9 @@
 ---
 title: BLOB_ENTRY_LENGTH_STATUS | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - BLOB_ENTRY_LENGTH_STATUS
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - BLOB_ENTRY_LENGTH_STATUS macro
 ms.assetid: 09da67de-421b-4853-9a26-760e38324502
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 6fe176d984937a39a3f76981f57388a69f21c0f9
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 437441bd99f3b9cb4c554bd17a91c236f68ec1fe
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="blobentrylengthstatus"></a>BLOB_ENTRY_LENGTH_STATUS
 Utilizzato con `BEGIN_COLUMN_MAP` e `END_COLUMN_MAP` per associare un oggetto binario di grandi dimensioni ([BLOB](https://msdn.microsoft.com/en-us/library/ms711511.aspx)). Simile a [BLOB_ENTRY](../../data/oledb/blob-entry.md), ad eccezione del fatto che questa macro ottiene anche la lunghezza e stato della colonna BLOB.  
