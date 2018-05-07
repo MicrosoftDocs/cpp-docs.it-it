@@ -1,13 +1,10 @@
 ---
 title: 'MFC: Utilizzo di classi di Database senza documenti e visualizzazioni | Documenti Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -26,31 +23,29 @@ helpviewer_keywords:
 - database applications [C++], without documents
 - user interface [C++], drawing information
 ms.assetid: 15bf52d4-91cf-4b1d-8b37-87c3ae70123a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 1691d1f90201b25cc53cd07e80626e98c447e66b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ba2e59b53524975f87e4ad7ffe99b9a4a3cc870d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mfc-using-database-classes-without-documents-and-views"></a>MFC: utilizzo di classi di database senza documenti e viste
 Talvolta si potrebbe non si desidera utilizzare l'architettura documento/visualizzazione del framework nelle applicazioni di database. Questo argomento viene illustrato:  
   
--   [Quando non è necessaria l'utilizzo di documenti](#_core_when_you_don.92.t_need_documents) , ad esempio la serializzazione di documenti.  
+-   [Quando non occorre usare i documenti](#_core_when_you_don.92.t_need_documents) , ad esempio la serializzazione di documenti.  
   
--   [Opzioni della creazione guidata applicazione](#_core_appwizard_options_for_documents_and_views) per supportare le applicazioni senza la serializzazione e relativi ai documenti **File** , ad esempio i comandi di menu **New**, **aprire**, **Salvare**, e **salvare come**.  
+-   [Opzioni della procedura guidata applicazione](#_core_appwizard_options_for_documents_and_views) per supportare le applicazioni senza la serializzazione e relativi ai documenti **File** , ad esempio i comandi di menu **nuovo**, **aprire** , **Salvare**, e **Salva con nome**.  
   
 -   [Utilizzo di un'applicazione che utilizza un documento minimo](#_core_applications_with_minimal_documents).  
   
--   [Creazione della struttura di un'applicazione senza documenti o visualizzazione](#_core_applications_with_no_document).  
+-   [Creazione della struttura di un'applicazione con alcun documento o una vista](#_core_applications_with_no_document).  
   
-##  <a name="_core_when_you_don.92.t_need_documents"></a>Quando non è necessario documenti  
+##  <a name="_core_when_you_don.92.t_need_documents"></a> Quando non è necessario documenti  
  Alcune applicazioni hanno un concetto distinto di un documento. Queste applicazioni in genere caricano tutte o la maggior parte di un file dall'archiviazione in memoria con un **Apri File** comando. Il file aggiornato viene riscritto per l'archiviazione in una sola volta con un **salvataggio File** o **Salva con nome** comando. L'utente visualizza è un file di dati.  
   
  Alcune categorie di applicazioni, tuttavia, non richiedono un documento. Le applicazioni di database funzionano in termini di transazioni. L'applicazione consente di selezionare i record da un database e li presenta all'utente, spesso una alla volta. L'utente visualizza è in genere un singolo record corrente, che potrebbe essere l'unica in memoria.  
@@ -61,22 +56,22 @@ Talvolta si potrebbe non si desidera utilizzare l'architettura documento/visuali
   
 -   Utilizzare una finestra cornice, in cui disegnare direttamente, anziché una vista. In questo caso, si omette il documento e archiviare i dati o connessioni dati nell'oggetto finestra cornice.  
   
-##  <a name="_core_appwizard_options_for_documents_and_views"></a>Opzioni di creazione guidata applicazione per documenti e visualizzazioni  
+##  <a name="_core_appwizard_options_for_documents_and_views"></a> Opzioni della procedura guidata dell'applicazione per documenti e visualizzazioni  
  La creazione guidata applicazione MFC offre diverse opzioni **supporto database**, elencate nella tabella seguente. Se si utilizza la creazione guidata applicazione MFC per creare un'applicazione, tutte queste opzioni produrranno con documenti e visualizzazioni. Alcune opzioni di forniscono i documenti e visualizzazioni che omettono le funzionalità per documenti. Per ulteriori informazioni, vedere [supporto Database, creazione guidata applicazione MFC](../mfc/reference/database-support-mfc-application-wizard.md).  
   
 |Opzione|Visualizza|Document|  
 |------------|----------|--------------|  
 |**None**|Derivata da `CView`.|Non fornisce alcun supporto del database. Questa è l'opzione predefinita.<br /><br /> Se si seleziona il **Supporto architettura documento/visualizzazione** opzione il [tipo di applicazione, creazione guidata applicazione MFC](../mfc/reference/application-type-mfc-application-wizard.md) , si ottiene supporto completo dei documenti, con la serializzazione e `New`,  **Aprire**, **salvare**, e **Salva con nome** comandi il **File** menu. Vedere [applicazioni senza documenti](#_core_applications_with_no_document).|  
 |**Solo i file di intestazione**|Derivata da `CView`.|Fornisce il livello di base del supporto di database per l'applicazione.<br /><br /> Include AFXDB. h. Aggiunge le librerie di collegamento, ma non crea tutte le classi specifiche del database. È possibile creare set di record in un secondo momento e usarli per esaminare e aggiornare i record.|  
-|**Visualizzazione database senza supporto file**|Derivato da`CRecordView`|Fornisce il supporto dei documenti, ma non per la serializzazione. Documento può memorizzare recordset e coordinare più viste. non supporta la serializzazione o la `New`, **aprire**, **salvare**, e **Salva con nome** comandi. Vedere [applicazioni con documenti minimi](#_core_applications_with_minimal_documents). Se si include una vista di database, è necessario specificare l'origine dei dati.<br /><br /> Include i file di intestazione di database, librerie di collegamento, una visualizzazione di record e un oggetto recordset. (Disponibile solo per le applicazioni con il **Supporto architettura documento/visualizzazione** opzione selezionata nel [tipo di applicazione, creazione guidata applicazione MFC](../mfc/reference/application-type-mfc-application-wizard.md) pagina.)|  
-|**Vista di database con supporto file**|Derivato da`CRecordView`|Fornisce supporto completo dei documenti, inclusi la serializzazione e relativi ai documenti **File** i comandi di menu. Applicazioni di database è in genere funzionano in base al record anziché in un singolo file e non richiedono la serializzazione. Tuttavia, potrebbe essere un utilizzo speciale per la serializzazione. Vedere [applicazioni con documenti minimi](#_core_applications_with_minimal_documents). Se si include una vista di database, è necessario specificare l'origine dei dati.<br /><br /> Include i file di intestazione di database, librerie di collegamento, una visualizzazione di record e un oggetto recordset. (Disponibile solo per le applicazioni con il **Supporto architettura documento/visualizzazione** opzione selezionata nel [tipo di applicazione, creazione guidata applicazione MFC](../mfc/reference/application-type-mfc-application-wizard.md) pagina.)|  
+|**Visualizzazione database senza supporto file**|Derivato da `CRecordView`|Fornisce il supporto dei documenti, ma non per la serializzazione. Documento può memorizzare recordset e coordinare più viste. non supporta la serializzazione o la `New`, **aprire**, **salvare**, e **Salva con nome** comandi. Vedere [applicazioni con documenti minimi](#_core_applications_with_minimal_documents). Se si include una vista di database, è necessario specificare l'origine dei dati.<br /><br /> Include i file di intestazione di database, librerie di collegamento, una visualizzazione di record e un oggetto recordset. (Disponibile solo per le applicazioni con il **Supporto architettura documento/visualizzazione** opzione selezionata nel [tipo di applicazione, creazione guidata applicazione MFC](../mfc/reference/application-type-mfc-application-wizard.md) pagina.)|  
+|**Vista di database con supporto file**|Derivato da `CRecordView`|Fornisce supporto completo dei documenti, inclusi la serializzazione e relativi ai documenti **File** i comandi di menu. Applicazioni di database è in genere funzionano in base al record anziché in un singolo file e non richiedono la serializzazione. Tuttavia, potrebbe essere un utilizzo speciale per la serializzazione. Vedere [applicazioni con documenti minimi](#_core_applications_with_minimal_documents). Se si include una vista di database, è necessario specificare l'origine dei dati.<br /><br /> Include i file di intestazione di database, librerie di collegamento, una visualizzazione di record e un oggetto recordset. (Disponibile solo per le applicazioni con il **Supporto architettura documento/visualizzazione** opzione selezionata nel [tipo di applicazione, creazione guidata applicazione MFC](../mfc/reference/application-type-mfc-application-wizard.md) pagina.)|  
   
  Per una descrizione delle alternative alla serializzazione e all'utilizzo per la serializzazione, vedere [serializzazione: serializzazione e. Database di Input/Output](../mfc/serialization-serialization-vs-database-input-output.md).  
   
-##  <a name="_core_applications_with_minimal_documents"></a>Applicazioni con documenti minimi  
+##  <a name="_core_applications_with_minimal_documents"></a> Applicazioni con documenti minimi  
  La creazione guidata applicazione MFC sono disponibili due opzioni che supportano applicazioni di accesso ai dati basato su form. Ogni opzione Crea un `CRecordView`-classe di visualizzazione e un documento derivati. Differiscono negli elementi del documento implementati.  
   
-###  <a name="_core_a_document_without_file_support"></a>Documento senza supporto File  
+###  <a name="_core_a_document_without_file_support"></a> Documento senza supporto File  
  Selezionare l'opzione di database di creazione guidata applicazione **vista Database senza supporto file** se non è necessaria la serializzazione di documenti. Il documento ha i seguenti scopi utili:  
   
 -   È una posizione comoda in cui archiviare un `CRecordset` oggetto.  
@@ -89,18 +84,18 @@ Talvolta si potrebbe non si desidera utilizzare l'architettura documento/visuali
   
  È in genere possibile utilizzare questa opzione per applicazioni semplici basate su form. La creazione guidata applicazione supporta una struttura semplice per tali applicazioni automaticamente.  
   
-###  <a name="_core_a_document_with_file_support"></a>Documento con supporto File  
+###  <a name="_core_a_document_with_file_support"></a> Documento con supporto File  
  Selezionare l'opzione di database di creazione guidata applicazione **vista con supporto file di Database** quando si dispone di un utilizzo alternativo per il documento relativi **File** i comandi di menu e la serializzazione di documenti. Per la parte di accesso ai dati del programma, è possibile utilizzare il documento nello stesso modo come descritto in [documento senza supporto File](#_core_a_document_without_file_support). È possibile utilizzare funzionalità di serializzazione del documento, ad esempio, per leggere e scrivere un documento di profilo utente serializzato che archivia le preferenze dell'utente o altre informazioni utili. Per ulteriori informazioni, vedere [serializzazione: serializzazione e. Database di Input/Output](../mfc/serialization-serialization-vs-database-input-output.md).  
   
  La creazione guidata applicazione supporta questa opzione, ma è necessario scrivere codice che serializza il documento. Archiviare le informazioni serializzate in membri dati del documento.  
   
-##  <a name="_core_applications_with_no_document"></a>Applicazioni senza documenti  
+##  <a name="_core_applications_with_no_document"></a> Applicazioni senza documenti  
  Talvolta si potrebbe scrivere un'applicazione che non vengono utilizzati documenti o viste. Senza documenti, si archiviano i dati (ad esempio un `CRecordset` oggetto) nella classe finestra cornice o dell'applicazione. Eventuali requisiti aggiuntivi dipendono se l'applicazione presenta un'interfaccia utente.  
   
-###  <a name="_core_database_support_with_a_user_interface"></a>Supporto per database con un'interfaccia utente  
+###  <a name="_core_database_support_with_a_user_interface"></a> Supporto per database con un'interfaccia utente  
  Se si dispone di un'interfaccia utente (diversa, ad esempio, un'interfaccia della riga di comando di console), l'applicazione consente di disegnare direttamente nell'area client della finestra cornice invece che in una vista. Tale applicazione non utilizza `CRecordView`, `CFormView`, o `CDialog` per l'interfaccia utente principale, ma utilizza `CDialog` per le finestre di dialogo comune.  
   
-###  <a name="_core_writing_applications_without_documents"></a>Scrittura di applicazioni senza documenti  
+###  <a name="_core_writing_applications_without_documents"></a> Scrittura di applicazioni senza documenti  
  Poiché la creazione guidata applicazione non supporta la creazione di applicazioni senza documenti, è necessario scrivere la propria `CWinApp`-classe derivata e, se necessario, creare anche un `CFrameWnd` o `CMDIFrameWnd` classe. Eseguire l'override `CWinApp::InitInstance` e dichiarare un oggetto applicazione come:  
   
 ```  
@@ -109,7 +104,7 @@ CYourNameApp theApp;
   
  Il framework fornisce ancora il meccanismo della mappa messaggi e molte altre funzionalità.  
   
-###  <a name="_core_database_support_separate_from_the_user_interface"></a>Supporto di database senza l'interfaccia utente  
+###  <a name="_core_database_support_separate_from_the_user_interface"></a> Supporto di database senza l'interfaccia utente  
  Alcune applicazioni richiedono alcuna interfaccia utente o solo una minima. Si supponga, ad esempio, che si sta scrivendo:  
   
 -   Un oggetto di accesso ai dati intermedi che chiamano altre applicazioni (client) per un'elaborazione speciale dei dati tra l'applicazione e l'origine dati.  

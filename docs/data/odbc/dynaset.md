@@ -1,13 +1,10 @@
 ---
 title: Dynaset | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,18 +16,16 @@ helpviewer_keywords:
 - recordsets [C++], dynasets
 - dynasets
 ms.assetid: 2867e6be-208e-4fe7-8bbe-b8697cb1045c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: f0f2f7ddd4a1b4021dfff8d533bb81acd84129a4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ec71b5b00b26564f9c8dc3c2d98f53f8182b0ca3
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dynaset"></a>Dynaset
 In questo argomento vengono descritti i dynaset e vengono illustrati i [disponibilità](#_core_availability_of_dynasets).  
@@ -52,7 +47,7 @@ In questo argomento vengono descritti i dynaset e vengono illustrati i [disponib
 > [!NOTE]
 >  Per dynaset aggiornabile, il driver ODBC deve supportare entrambe le istruzioni per gli aggiornamenti posizionati o **:: SQLSetPos** funzione API ODBC. Se entrambi sono supportati, MFC utilizza **:: SQLSetPos** per migliorare l'efficienza.  
   
-##  <a name="_core_availability_of_dynasets"></a>Disponibilità di dynaset  
+##  <a name="_core_availability_of_dynasets"></a> Disponibilità di dynaset  
  Le classi di database MFC supportano i dynaset se vengono soddisfatti i requisiti seguenti:  
   
 -   La libreria di cursori ODBC DLL non deve essere in uso per questa origine dati.  

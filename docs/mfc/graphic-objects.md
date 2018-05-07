@@ -1,13 +1,10 @@
 ---
 title: Oggetti grafici | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - HRGN
 - HFONT
@@ -50,23 +47,21 @@ helpviewer_keywords:
 - painting and device context [MFC]
 - CPalette class [MFC], HPALETTE handle type
 ms.assetid: 41963b25-34b7-4343-8446-34ba516b83ca
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6dfdba311ed13b1ffbd5e1f830d6fa87cfce915d
-ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
+ms.openlocfilehash: 52b8c6c5b6d27bdf4ce4c9ad46a75c21b9f47333
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="graphic-objects"></a>Oggetti grafici
 Windows offre un'ampia gamma di strumenti di disegno da usare in contesti di dispositivo, tra cui penne per tracciare linee, pennelli per riempire le aree interne e tipi di carattere per aggiungere testo. MFC offre classi di oggetti grafici equivalenti agli strumenti di disegno di Windows. La tabella seguente mostra le classi disponibili e i tipi di handle Graphics Device Interface (GDI) di Windows equivalenti.  
   
 > [!NOTE]
->  Per ulteriori informazioni, vedere la documentazione di GDI+ SDK all'indirizzo: [http://msdn.microsoft.com/library/default.aspurl=/library/gdicpp/GDIPlus/GDIPlus.asp](http://msdn.microsoft.com/library/default.aspurl=/library/gdicpp/gdiplus/gdiplus.asp).  
+>  Per altre informazioni, vedere la documentazione di GDI+ SDK all'indirizzo: [ http://msdn.microsoft.com/library/default.aspurl=/library/gdicpp/GDIPlus/GDIPlus.asp ](http://msdn.microsoft.com/library/default.aspurl=/library/gdicpp/gdiplus/gdiplus.asp).  
   
  Questo articolo descrive l'uso di queste classi di oggetti grafici:  
   
@@ -96,7 +91,7 @@ Windows offre un'ampia gamma di strumenti di disegno da usare in contesti di dis
   
 1.  Definire un oggetto grafico sullo stack frame. Inizializzare l'oggetto con la funzione di creazione specifica del tipo, ad esempio `CreatePen`. In alternativa, inizializzare l'oggetto nel costruttore. Vedere la discussione relativa [la creazione di una fase e in due fasi](../mfc/one-stage-and-two-stage-construction-of-objects.md), che fornisce il codice di esempio.  
   
-2.  [Selezionare l'oggetto nel contesto di dispositivo corrente](../mfc/selecting-a-graphic-object-into-a-device-context.md), salvando il vecchio oggetto grafico che è stata selezionata prima.  
+2.  [Selezionare l'oggetto nel contesto di dispositivo corrente](../mfc/selecting-a-graphic-object-into-a-device-context.md), salvare il vecchio oggetto grafico che è stata selezionata prima.  
   
 3.  Al termine delle operazioni sull'oggetto grafico corrente, selezionare di nuovo il vecchio oggetto grafico nel contesto di dispositivo per ripristinarne lo stato.  
   

@@ -1,12 +1,9 @@
 ---
 title: Errore del compilatore C2059 | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C2059
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C2059
 ms.assetid: 2be4eb39-3f37-4b32-8e8d-75835e07c78a
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a87f9c3dbb1405463804b7abd5c94abe04a42845
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 69182e4b27b474cafe60b71b02594a244f65a09b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-error-c2059"></a>Errore del compilatore C2059
 Errore di sintassi: 'token'  
@@ -46,7 +41,7 @@ Errore di sintassi: 'token'
   
  Se il messaggio di errore si verifica su un simbolo che segue immediatamente un `typedef` variabile, assicurarsi che la variabile è definita nel codice sorgente.  
   
- L'errore C2059 se un simbolo di valuta su nothing, come può verificarsi quando **/D** `symbol`  **=**  viene utilizzato per compilare.  
+ L'errore C2059 se un simbolo di valuta su nothing, come può verificarsi quando **/D** `symbol` **=** viene utilizzato per compilare.  
   
 ```  
 // C2059a.cpp  

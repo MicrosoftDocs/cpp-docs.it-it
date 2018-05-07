@@ -1,24 +1,19 @@
 ---
 title: Cast (C + + CX) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 5247f6c7-6a0a-4021-97c9-21c868bd9455
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5e16aacdf713d1f9ff2b40532abfd2b5d6316f7a
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 8f71be537ecc0dc0cb58a3ada13612dbe8cbd7d3
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="casting-ccx"></a>Cast (C++/CX)
 Quattro diversi operatori cast si applicano ai tipi di Windows Runtime: [operatore static_cast](../cpp/static-cast-operator.md), [operatore dynamic_cast](../cpp/dynamic-cast-operator.md), **safe_cast Operator**, e [ Operatore reinterpret_cast](../cpp/reinterpret-cast-operator.md). `safe_cast` e `static_cast` generano un'eccezione se la conversione non può essere eseguita. L'operatore [static_cast](../cpp/static-cast-operator.md) esegue inoltre il controllo dei tipi in fase di compilazione. `dynamic_cast` restituisce `nullptr` se risulta impossibile convertire il tipo. Sebbene `reinterpret_cast` restituisca un valore non Null, potrebbe non essere valido. Per questo motivo, è consigliabile non utilizzare `reinterpret_cast` a meno che tu non sappia che il cast riuscirà. Inoltre, è consigliabile non utilizzare cast di tipo C in C + + CX codice, in quanto sono identici a `reinterpret_cast`.  

@@ -1,13 +1,10 @@
 ---
 title: Operazioni di trascinamento e rilascio del controllo albero | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - drag and drop [MFC], CTreeCtrl
 - tree controls [MFC], drag and drop operations
 ms.assetid: 3cf78b4c-4579-4fe1-9bc9-c5ab876e4af1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 978c577a01b2f574009c601ca594a235e0712d71
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a620c2481b29b80f6d30dd6457716a652f51fd85
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tree-control-drag-and-drop-operations"></a>Operazioni di trascinamento del controllo Tree
 Un controllo struttura ad albero ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) invia una notifica quando l'utente inizia a trascinare un elemento. Il controllo invia un [TVN_BEGINDRAG](http://msdn.microsoft.com/library/windows/desktop/bb773504) messaggio di notifica quando l'utente inizia a trascinare un elemento con il pulsante sinistro del mouse e un [TVN_BEGINRDRAG](http://msdn.microsoft.com/library/windows/desktop/bb773509) messaggio di notifica quando l'utente inizia a trascinare con il pulsante destro del mouse. È possibile impedire l'invio di queste notifiche, assegnando il controllo struttura ad albero di un controllo struttura ad albero di **TVS_DISABLEDRAGDROP** stile.  

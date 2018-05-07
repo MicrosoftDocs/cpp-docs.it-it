@@ -1,13 +1,10 @@
 ---
 title: Aprire i progetti di cartella in Visual C++ | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 08/02/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,19 +12,18 @@ helpviewer_keywords:
 ms.assetid: abd1985e-3717-4338-9e80-869db5435175
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 721dd39cf8cda6277eb129f259b7ede2d9f0da28
-ms.sourcegitcommit: ef2a263e193410782c6dfe47d00764263439537c
+ms.openlocfilehash: 0fe4eba09f06b987ab11f35429e13796fe6baafb
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="open-folder-projects-in-visual-c"></a>Progetti di cartella aperti in Visual C++
 Visual Studio 2017 introduce la funzionalità "Apri cartella", che consente di aprire una cartella dei file di origine e avviare la codifica con il supporto per IntelliSense, esplorazione, refactoring, debug, immediatamente e così via. Nessun file sln o con estensione vcxproj caricato; Se necessario, è possibile specificare le attività personalizzate, nonché compilare e avviare i parametri tramite i file con estensione JSON semplice. Con tecnologia cartella aperta, Visual C++ ora può supportare non solo separate raccolte di file, ma anche praticamente qualsiasi sistema di compilazione, compreso CMake, avanzato, QMake (per i progetti Qt), gyp, SCons, Gradle, Buck, verificare e altro ancora. 
 
-Per utilizzare cartella, dal menu principale selezionare *File | Aprire | Cartella* o premere *Ctrl + Maiusc + Alt + O*. Esplora soluzioni consente di visualizzare immediatamente tutti i file nella cartella. È possibile fare clic su qualsiasi file per iniziare a modificarlo. In background, Visual Studio avvia l'indicizzazione dei file per abilitare IntelliSense, la navigazione e funzionalità di refactoring. Come modificare, creare, spostare o eliminare file, Visual Studio rileva automaticamente le modifiche e aggiorna continuamente il relativo indice IntelliSense. 
+Per utilizzare cartella, dal menu principale selezionare *File | Aprire | Cartella* o premere *Ctrl + Maiusc + Alt + O*. Esplora soluzioni consente di visualizzare immediatamente tutti i file nella cartella. È possibile fare clic su qualsiasi file per iniziare a modificarlo. Visual Studio avvia l'indicizzazione dei file in background per abilitare le funzionalità IntelliSense, di navigazione e di refactoring. Man mano che si modificano, creano, spostano o eliminano file, Visual Studio tiene traccia automaticamente delle modifiche e aggiorna continuamente il relativo indice IntelliSense. 
   
 ## <a name="cmake-projects"></a>Progetti CMake
 CMake è integrato nell'IDE di Visual Studio come CMake Tools per Visual C++, un componente del carico di lavoro desktop C++. Per altre informazioni, vedere [CMake Tools for Visual C++](cmake-tools-for-visual-cpp.md) (Strumenti CMake per Visual C++).
@@ -43,8 +39,8 @@ CMake è integrato nell'IDE di Visual Studio come CMake Tools per Visual C++, un
 |||
 |-|-|
 |CppProperties.json|Specificare le informazioni di configurazione personalizzati per l'esplorazione. Creare questo file, se necessario, nella cartella radice del progetto.|
-|launch.vs.json|Specificare gli argomenti della riga di comando. A cui si accede tramite il **Esplora** menu di scelta rapida **Debug e impostazioni di avvio**.|
-|tasks.vs.json|Specificare i comandi di compilazione personalizzata e le opzioni del compilatore. A cui si accede tramite il **Esplora** menu di scelta rapida **configurare attività**.|
+|launch.vs.json|Specificare gli argomenti della riga di comando. Accessibile tramite il comando **Impostazioni per debug e avvio** nel menu di scelta rapida **Esplora soluzioni**.|
+|tasks.vs.json|Specificare i comandi di compilazione personalizzata e le opzioni del compilatore. Accessibile tramite il comando **Configura attività** nel menu di scelta rapida **Esplora soluzioni**.|
 
 ### <a name="configure-intellisense-with-cpppropertiesjson"></a>Configurare IntelliSense con CppProperties.json
 IntelliSense ed esplorazione in parte il comportamento dipende dalla configurazione compilazione attiva, che definisce #include percorsi, opzioni del compilatore e altri parametri. Per impostazione predefinita, Visual Studio fornisce configurazioni Debug e rilascio. Per alcuni progetti, è necessario creare una configurazione personalizzata in ordine per IntelliSense e funzionalità di esplorazione comprendere completamente il codice. Per definire una nuova configurazione, creare un file denominato CppProperties.json nella cartella radice. Ecco un esempio:
@@ -228,7 +224,7 @@ Ad esempio, se il progetto dispone di una cartella di inclusione e include anche
 }
 ```
 
-**Nota:** `%WindowsSdkDir%` e `%VCToolsInstallDir%` non sono impostate come variabili di ambiente globali, quindi verificare che si avvia devenv.exe "Developer Prompt dei comandi di Visual Studio 2017" che definisce le variabili.
+**Nota:** `%WindowsSdkDir%` e `%VCToolsInstallDir%` non vengono impostate come variabili di ambiente globali pertanto assicurarsi di avviare devenv.exe "per sviluppatori al Prompt dei comandi di Visual Studio 2017" che consente di definire queste variabili.
 
 Per risolvere i problemi di IntelliSense gli errori causati dalla mancanza di includono i percorsi, aprire il **elenco errori** e filtrare l'output di "Solo IntelliSense" e il codice di errore E1696 "Impossibile aprire il file di origine...". 
 
@@ -249,11 +245,11 @@ Per risolvere i problemi di IntelliSense gli errori causati dalla mancanza di in
 }
 ```
 ### <a name="define-tasks-with-tasksvsjson"></a>Definire le attività con tasks.vs.json
-È possibile automatizzare gli script di compilazione o qualsiasi altra operazione esterna nei file di cui che è in un'area di lavoro mediante l'esecuzione come attività direttamente nell'IDE. È possibile configurare una nuova attività facendo clic sul file o cartella e selezionando **configurare attività**. 
+È possibile automatizzare gli script di compilazione o qualsiasi altra operazione esterna per i file inclusi nell'area di lavoro corrente eseguendoli come attività direttamente nell'IDE. Per configurare una nuova attività, è possibile fare clic con il pulsante destro del mouse su un file o una cartella e scegliere **Configura attività**. 
 
 ![Configurare le attività di cartella aperta](media/open-folder-config-tasks.png)
 
-Questo crea (o si apre) il `tasks.vs.json` file nella cartella VS che Visual Studio crea nella cartella radice del progetto. È possibile definire un'attività arbitraria in questo file e quindi richiamarlo dal **Esplora** menu di scelta rapida. Nell'esempio seguente viene illustrato un file di tasks.vs.json che definisce una singola attività. `taskName`definisce il nome visualizzato nel menu di scelta rapida. `appliesTo`definisce il comando può essere eseguito su file. Il `command` proprietà fa riferimento alla variabile di ambiente COMSPEC, che identifica il percorso per la console di (in Windows, cmd.exe). È anche possibile fare riferimento a variabili di ambiente che vengono dichiarate in CppProperties.json o CMakeSettings.json. Il `args` proprietà specifica la riga di comando da richiamare. Il `${file}` macro recupera il file selezionato in **Esplora**. Nell'esempio seguente verrà visualizzato il nome del file del file con estensione cpp attualmente selezionato.
+Questo crea (o si apre) il `tasks.vs.json` file nella cartella VS che Visual Studio crea nella cartella radice del progetto. È possibile definire un'attività arbitraria in questo file e quindi richiamarlo dal **Esplora** menu di scelta rapida. Nell'esempio seguente viene illustrato un file di tasks.vs.json che definisce una singola attività. `taskName` definisce il nome visualizzato nel menu di scelta rapida. `appliesTo` Definisce i file di comando può essere eseguito su. Il `command` proprietà fa riferimento alla variabile di ambiente COMSPEC, che identifica il percorso per la console di (in Windows, cmd.exe). È anche possibile fare riferimento a variabili di ambiente che vengono dichiarate in CppProperties.json o CMakeSettings.json. Il `args` proprietà specifica la riga di comando da richiamare. La macro `${file}` recupera il file selezionato in **Esplora soluzioni**. Nell'esempio seguente verrà visualizzato il nome del file del file con estensione cpp attualmente selezionato.
 
 ```json
 {
@@ -274,16 +270,16 @@ Dopo aver salvato tasks.vs.json, è possibile fare doppio clic su qualsiasi file
 
 
 #### <a name="appliesto"></a>appliesTo
-È possibile creare attività per ogni file o cartella specificando il nome di `appliesTo` campo, ad esempio `"appliesTo" : "hello.cpp"`. Maschere di file seguenti possono essere utilizzate come valori:
+È possibile creare attività per qualsiasi file o cartella specificandone il nome nel campo `appliesTo`, ad esempio `"appliesTo" : "hello.cpp"`. È possibile usare le maschere di file seguenti come valori:
 |||
 |-|-|
-|`"*"`| attività è disponibile per tutti i file e cartelle nell'area di lavoro|
-|`"*/"`| attività è disponibile per tutte le cartelle nell'area di lavoro|
+|`"*"`| L'attività è disponibile per tutti i file e le cartelle nell'area di lavoro|
+|`"*/"`| L'attività è disponibile per tutte le cartelle nell'area di lavoro|
 |`"*.cpp"`| attività è disponibile per tutti i file con estensione cpp estensione nell'area di lavoro|
 |`"/*.cpp"`| attività è disponibile per tutti i file con estensione cpp estensione nella radice dell'area di lavoro|
-|`"src/*/"`| attività è disponibile per tutte le sottocartelle della cartella "src"|
-|`"makefile"`| attività è disponibile a tutti i file di makefile nell'area di lavoro|
-|`"/makefile"`| attività è disponibile solo per il file di progetto nella radice dell'area di lavoro|
+|`"src/*/"`| L'attività è disponibile per tutte le sottocartelle della cartella "src"|
+|`"makefile"`| L'attività è disponibile per tutti i file makefile nell'area di lavoro|
+|`"/makefile"`| L'attività è disponibile solo per il makefile nella radice dell'area di lavoro|
 
 #### <a name="output"></a>output
 Utilizzare il `output` proprietà per specificare il file eseguibile da avvia quando si preme **F5**. Ad esempio:
@@ -296,7 +292,7 @@ Utilizzare il `output` proprietà per specificare il file eseguibile da avvia qu
 
 |||
 |-|-|
-|`${env.<VARIABLE>}`| Specifica di qualsiasi variabile di ambiente (ad esempio, ${env. PERCORSO} ${env.COMSPEC} e così via) che è impostato per il prompt dei comandi per sviluppatori. Per ulteriori informazioni, vedere [prompt dei comandi per sviluppatori per Visual Studio](/dotnet/framework/tools/developer-command-prompt-for-vs).|
+|`${env.<VARIABLE>}`| Specifica di qualsiasi variabile di ambiente (ad esempio, ${env. PERCORSO} ${env.COMSPEC} e così via) che è impostato per il prompt dei comandi per sviluppatori. Per altre informazioni, vedere [Prompt dei comandi per gli sviluppatori per Visual Studio](/dotnet/framework/tools/developer-command-prompt-for-vs).|
 |`${workspaceRoot}`| il percorso completo della cartella dell'area di lavoro (ad esempio, "C:\sources\hello")|
 |`${file}`| il percorso completo del file o della cartella selezionata per eseguire questa attività (ad esempio, "C:\sources\hello\src\hello.cpp")|
 |`${relativeFile}`| il percorso relativo al file o cartella (ad esempio, "src\hello.cpp")|

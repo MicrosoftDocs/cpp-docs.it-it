@@ -1,13 +1,10 @@
 ---
 title: Determinazione delle DLL da ridistribuire | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/13/2018
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - application deployment [C++], DLL redistribution
 - deploying applications [C++], DLL redistribution
 ms.assetid: f7a2cb42-fb48-42ab-abd2-b35e2fd5601a
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a6f942b01dd9379aea0c0ea2ab3751a6f140ef2a
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: b3ca079fc69fe10f15a55812eaa55d4ba2d2ab04
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="determining-which-dlls-to-redistribute"></a>Determinazione delle DLL da ridistribuire
 
@@ -53,18 +48,18 @@ Nella tabella seguente vengono descritte alcune DLL di Visual C++ da cui l'appli
 
 |Libreria di Visual C++|Descrizione|Si applica a|
 |--------------------------|-----------------|----------------|
-|vcruntime*version*.dll|Libreria di runtime per il codice nativo.|Applicazioni che utilizzano i normali C e C++ language avvio e terminazione servizi.|
+|vcruntime*versione*. dll|Libreria di runtime per il codice nativo.|Applicazioni che utilizzano i normali C e C++ language avvio e terminazione servizi.|
 |vccorlib*version*.dll|Libreria di runtime per il codice gestito.|Applicazioni che utilizzano i servizi di linguaggio C++ per il codice gestito.|
 |msvcp*versione*DLL e msvcp*versione*_*dotnumber*. dll|Libreria Standard C++ per il codice nativo.|Le applicazioni che utilizzano il [della libreria Standard C++](../standard-library/cpp-standard-library-reference.md).|
-|concrt*version*.dll|Libreria di Runtime di concorrenza per il codice nativo.|Le applicazioni che utilizzano il [Runtime di concorrenza](../parallel/concrt/concurrency-runtime.md).|
-|mfc*version*.dll|Libreria MFC.|Le applicazioni che utilizzano il [libreria MFC](../mfc/mfc-desktop-applications.md).|
+|concrt*versione*. dll|Libreria di Runtime di concorrenza per il codice nativo.|Le applicazioni che utilizzano il [Runtime di concorrenza](../parallel/concrt/concurrency-runtime.md).|
+|MFC*versione*. dll|Libreria MFC.|Le applicazioni che utilizzano il [libreria MFC](../mfc/mfc-desktop-applications.md).|
 |MFC*versione* *language*. dll|Microsoft Foundation Classes (MFC) risorse di libreria.|Applicazioni che utilizzano risorse di lingua specifico per MFC.|
-|mfc*version*u.dll|Libreria MFC con supporto Unicode.|Le applicazioni che utilizzano il [libreria MFC](../mfc/mfc-desktop-applications.md) e richiedono il supporto di Unicode.|
+|MFC*versione*u.dll|Libreria MFC con supporto Unicode.|Le applicazioni che utilizzano il [libreria MFC](../mfc/mfc-desktop-applications.md) e richiedono il supporto di Unicode.|
 |mfcmifc80.dll|Libreria di interfacce gestite MFC.|Le applicazioni che utilizzano il [libreria MFC](../mfc/mfc-desktop-applications.md) con [controlli Windows Form](/dotnet/framework/winforms/controls/index).|
-|mfcm*version*.dll|Libreria gestita MFC.|Le applicazioni che utilizzano il [libreria MFC](../mfc/mfc-desktop-applications.md) con [controlli Windows Form](/dotnet/framework/winforms/controls/index).|
-|mfcm*version*u.dll|Libreria gestita MFC con supporto Unicode.|Le applicazioni che utilizzano il [libreria MFC](../mfc/mfc-desktop-applications.md) con [controlli Windows Form](/dotnet/framework/winforms/controls/index) e richiedono il supporto di Unicode.|
-|vcamp*version*.dll|Libreria AMP per il codice nativo.|Le applicazioni che utilizzano il [libreria C++ AMP](../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md) codice.|
-|vcomp*version*.dll|Libreria di OpenMP per il codice nativo.|Le applicazioni che utilizzano il [della libreria C++ OpenMP](../parallel/openmp/openmp-in-visual-cpp.md) codice.|
+|mfcm*versione*. dll|Libreria gestita MFC.|Le applicazioni che utilizzano il [libreria MFC](../mfc/mfc-desktop-applications.md) con [controlli Windows Form](/dotnet/framework/winforms/controls/index).|
+|mfcm*versione*u.dll|Libreria gestita MFC con supporto Unicode.|Le applicazioni che utilizzano il [libreria MFC](../mfc/mfc-desktop-applications.md) con [controlli Windows Form](/dotnet/framework/winforms/controls/index) e richiedono il supporto di Unicode.|
+|vcamp*versione*. dll|Libreria AMP per il codice nativo.|Le applicazioni che utilizzano il [libreria C++ AMP](../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md) codice.|
+|vcomp*versione*. dll|Libreria di OpenMP per il codice nativo.|Le applicazioni che utilizzano il [della libreria C++ OpenMP](../parallel/openmp/openmp-in-visual-cpp.md) codice.|
 
 > [!NOTE]
 > Non è più necessario ridistribuire Active Template Library come DLL separata. Le sue funzionalità sono state spostate in intestazioni e in una libreria statica.

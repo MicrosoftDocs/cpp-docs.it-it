@@ -1,27 +1,22 @@
 ---
 title: Layout dinamico | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 8598cfb2-c8d4-4f5a-bf2b-59dc4653e042
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e309d8ef023346c0e37babeabe23f7e6e1762939
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7518e2fdd07254b8b1991fae8a41f26058920858
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dynamic-layout"></a>Layout dinamico
 Con MFC in Visual Studio 2015, è possibile creare finestre di dialogo che l'utente può ridimensionare ed è possibile controllare l'adattamento del layout per la modifica delle dimensioni. È ad esempio possibile collegare i pulsanti nella parte inferiore di una finestra di dialogo al bordo inferiore in modo che mantengano sempre tale posizione. È anche possibile configurare determinati controlli, come caselle di riepilogo, caselle di modifica e campi di testo in modo che si espandano quando l'utente espande la finestra di dialogo.  
@@ -46,7 +41,7 @@ Con MFC in Visual Studio 2015, è possibile creare finestre di dialogo che l'ute
   
      ![Aprire la finestra di dialogo nell'editor di risorse. ] (../mfc/media/mfcdynamiclayout3.png "mfcdynamiclayout3")  
   
-2.  Selezionare un controllo e nella finestra delle proprietà impostarne le proprietà del layout dinamico. Il **Layout dinamico** sezione nella finestra proprietà contiene le proprietà **tipo di spostamento**, **tipo di ridimensionamento**e, a seconda dei valori selezionati per tali proprietà, proprietà specifiche che definiscono la quantità controlli spostare o modificare le dimensioni. **Tipo di spostamento** determina la modalità di spostamento di un controllo come vengono modificate le dimensioni della finestra di dialogo; **Tipo di ridimensionamento** determina la modalità di ridimensionamento di un controllo come vengono modificate le dimensioni della finestra di dialogo. **Tipo di spostamento** e **tipo di ridimensionamento** potrebbe essere **orizzontali**, **verticale**, **entrambi**, o **Nessuno** a seconda delle dimensioni che si desidera modificare in modo dinamico. Il termine Orizzontale si riferisce alla dimensione X, mentre Verticale corrisponde alla direzione Y.  
+2.  Selezionare un controllo e nella finestra delle proprietà impostarne le proprietà del layout dinamico. Il **Layout dinamico** sezione nella finestra proprietà contiene le proprietà **tipo di spostamento**, **tipo di ridimensionamento**e, a seconda dei valori selezionati per tali proprietà, proprietà specifiche che definiscono la quantità controlli spostare o modificare le dimensioni. **Tipo di spostamento** determina la modalità di spostamento di un controllo come vengono modificate le dimensioni della finestra di dialogo; **Tipo di ridimensionamento** determina la modalità di ridimensionamento di un controllo come vengono modificate le dimensioni della finestra di dialogo. **Tipo di spostamento** e **tipo di ridimensionamento** può essere **orizzontale**, **verticale**, **entrambi**, o **Nessuno**a seconda delle dimensioni che si desidera modificare in modo dinamico. Il termine Orizzontale si riferisce alla dimensione X, mentre Verticale corrisponde alla direzione Y.  
   
 3.  Se si desidera un controllo, ad esempio un pulsante in una dimensione fissa e rimangono nella stessa posizione in basso a destra, come avviene comunemente per la **OK** o **Annulla** pulsanti, impostare il **tipo di ridimensionamento** a  **Nessuna**e impostare il **tipo di spostamento** a **entrambi**. Per il **spostamento X** e **lo spostamento Y** valori sotto **tipo di spostamento**, impostare 100% per fare in modo il controllo rimanga nell'angolo destro una distanza fissa dal basso.  
   

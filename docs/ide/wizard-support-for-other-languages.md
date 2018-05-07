@@ -1,13 +1,10 @@
 ---
 title: Supporto della procedura guidata per le altre lingue | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.appwiz.EastAsianLanguages
 dev_langs:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - language support for MFC projects
 - projects [C++], language support
 ms.assetid: b653c673-0687-455c-885f-15d7e2f4149d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8ef95c252621aa7f725098dfcd08c7b5b3620826
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 75aafd7177c3799c17b75419fd5ab9f54af91d35
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wizard-support-for-other-languages"></a>Supporto della procedura guidata per altre lingue
 Quando si installa Visual Studio, l'applicazione di installazione rileva le impostazioni locali del sistema e installa uno o più modelli per la lingua appropriata. Impostazioni locali europee occidentali, ad esempio, vengono installate in lingua inglese, francese, italiano, spagnolo e tedesco. Queste lingue vengono visualizzate nel **lingua della risorsa** elenco il [tipo di applicazione](../mfc/reference/application-type-mfc-application-wizard.md) pagina della creazione guidata applicazione MFC.  

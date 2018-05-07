@@ -1,13 +1,10 @@
 ---
 title: Classi e thread ODBC | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,18 +12,16 @@ helpviewer_keywords:
 - ODBC, multithreaded applications
 - threading [MFC], ODBC support
 ms.assetid: 16543926-7331-41a6-ba50-72288f2a61b7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 1d1d922dfc34fa3e5530eca77a6501ad3e331fc8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: dedd1f03bf14e0513f9f76a1e292b9180e4d60db
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="odbc-classes-and-threads"></a>Classi e thread ODBC
 A partire da MFC 4.2, è il supporto multithreading per le classi ODBC MFC. Si noti tuttavia che MFC non fornisce il supporto multithreading per le classi DAO.  
@@ -42,4 +37,4 @@ A partire da MFC 4.2, è il supporto multithreading per le classi ODBC MFC. Si n
   
 ## <a name="see-also"></a>Vedere anche  
  [Open Database Connectivity (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)   
- [Accesso ai dati di programmazione (MFC/ATL)](../../data/data-access-programming-mfc-atl.md)
+ [Accesso ai dati (MFC/ATL) di programmazione](../../data/data-access-programming-mfc-atl.md)

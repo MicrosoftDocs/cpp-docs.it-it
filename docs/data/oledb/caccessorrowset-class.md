@@ -1,12 +1,9 @@
 ---
 title: CAccessorRowset (classe) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - CAccessorRowset
@@ -17,18 +14,16 @@ dev_langs:
 helpviewer_keywords:
 - CAccessorRowset class
 ms.assetid: bd4f58ed-cebf-4d43-8985-1e5fcbf06953
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 9da490873c14ea04f55f223e38009ac1952fe6d0
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 27d2153c6f600c3a5c75c1218e8751baaabcf030
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="caccessorrowset-class"></a>Classe CAccessorRowset
 Incapsula un set di righe e le funzioni di accesso associati in un'unica classe.  
@@ -54,7 +49,7 @@ class CAccessorRowset : public TAccessor, public TRowset<TAccessor>
   
 |||  
 |-|-|  
-|[Bind](../../data/oledb/caccessorrowset-bind.md)|Consente di creare associazioni (utilizzato quando **bBind** è specificato come false in [CCommand::](../../data/oledb/ccommand-open.md)).|  
+|[Operazione di binding](../../data/oledb/caccessorrowset-bind.md)|Consente di creare associazioni (utilizzato quando **bBind** è specificato come false in [CCommand::](../../data/oledb/ccommand-open.md)).|  
 |[CAccessorRowset](../../data/oledb/caccessorrowset-caccessorrowset.md)|Costruttore.|  
 |[Chiudi](../../data/oledb/caccessorrowset-close.md)|Chiude il set di righe e le funzioni di accesso.|  
 |[FreeRecordMemory](../../data/oledb/caccessorrowset-freerecordmemory.md)|Libera tutte le colonne nel record corrente che devono essere liberate.|  

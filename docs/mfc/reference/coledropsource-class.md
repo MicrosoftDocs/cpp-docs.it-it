@@ -1,12 +1,9 @@
 ---
 title: Classe COleDropSource | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - COleDropSource
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - COleDropSource [MFC], OnBeginDrag
 - COleDropSource [MFC], QueryContinueDrag
 ms.assetid: d3eecc5f-a70b-4a01-b705-7d2c098ebe17
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 486a236075ff33093b9a734d7f368e05ed29588e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e510811fcaac81aa54699250ef37f48ffe1f40e2
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="coledropsource-class"></a>Classe COleDropSource
 Consente i dati da trascinare in una destinazione di rilascio.  
@@ -79,14 +74,14 @@ class COleDropSource : public CCmdTarget
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** AFXOLE. h  
   
-##  <a name="coledropsource"></a>COleDropSource::COleDropSource  
+##  <a name="coledropsource"></a>  COleDropSource::COleDropSource  
  Costruisce un oggetto `COleDropSource`.  
   
 ```  
 COleDropSource();
 ```  
   
-##  <a name="givefeedback"></a>COleDropSource::GiveFeedback  
+##  <a name="givefeedback"></a>  COleDropSource::GiveFeedback  
  Chiamato dal framework dopo la chiamata [COleDropTarget::OnDragOver](../../mfc/reference/coledroptarget-class.md#ondragover) o [COleDropTarget::DragEnter](../../mfc/reference/coledroptarget-class.md#ondragenter).  
   
 ```  
@@ -97,15 +92,15 @@ virtual SCODE GiveFeedback(DROPEFFECT dropEffect);
  `dropEffect`  
  L'effetto che si desidera visualizzare all'utente, in genere che indica cosa accadrebbe se si è verificato un calo a questo punto con i dati selezionati. In genere, questo è il valore restituito dalla chiamata più recente a [CView::OnDragEnter](../../mfc/reference/cview-class.md#ondragenter) o [CView::OnDragOver](../../mfc/reference/cview-class.md#ondragover). Può trattarsi di uno o più delle operazioni seguenti:  
   
-- `DROPEFFECT_NONE`Un rilascio non sarebbe consentito.  
+- `DROPEFFECT_NONE` Un calo non sarebbe consentito.  
   
-- `DROPEFFECT_COPY`Verrà eseguita un'operazione di copia.  
+- `DROPEFFECT_COPY` Verrà eseguita un'operazione di copia.  
   
-- `DROPEFFECT_MOVE`Verrà eseguita un'operazione di spostamento.  
+- `DROPEFFECT_MOVE` Verrà eseguita un'operazione di spostamento.  
   
-- `DROPEFFECT_LINK`Sarebbe possibile stabilire un collegamento dai dati ignorati per i dati originali.  
+- `DROPEFFECT_LINK` Viene stabilito un collegamento dai dati ignorati per i dati originali.  
   
-- `DROPEFFECT_SCROLL`Un'operazione di trascinamento scorrimento sta per verificarsi o si verifica nel database di destinazione.  
+- `DROPEFFECT_SCROLL` Un'operazione di trascinamento scorrimento sta per verificarsi o si verifica nel database di destinazione.  
   
 ### <a name="return-value"></a>Valore restituito  
  Restituisce **DRAGDROP_S_USEDEFAULTCURSORS** se il trascinamento è in corso, **NOERROR** in caso contrario.  
@@ -115,7 +110,7 @@ virtual SCODE GiveFeedback(DROPEFFECT dropEffect);
   
  Per ulteriori informazioni, vedere [IDropSource::GiveFeedback](http://msdn.microsoft.com/library/windows/desktop/ms693723), [IDropTarget](http://msdn.microsoft.com/library/windows/desktop/ms680129), e [IDropTarget::DragEnter](http://msdn.microsoft.com/library/windows/desktop/ms680106) in Windows SDK.  
   
-##  <a name="onbegindrag"></a>COleDropSource::OnBeginDrag  
+##  <a name="onbegindrag"></a>  COleDropSource::OnBeginDrag  
  Chiamato dal framework quando si verifica un evento che potrebbe iniziare un'operazione di trascinamento, ad esempio premendo il pulsante sinistro del mouse.  
   
 ```  
@@ -132,7 +127,7 @@ virtual BOOL OnBeginDrag(CWnd* pWnd);
 ### <a name="remarks"></a>Note  
  Eseguire l'override di questa funzione se si desidera modificare la modalità di che avvio del processo di trascinamento. L'implementazione predefinita acquisisce il mouse e rimane in modalità di trascinamento fino a quando l'utente fa clic sul pulsante sinistro o destro del mouse o preme ESC, momento in cui rilascia il puntatore del mouse.  
   
-##  <a name="querycontinuedrag"></a>COleDropSource::QueryContinueDrag  
+##  <a name="querycontinuedrag"></a>  COleDropSource::QueryContinueDrag  
  Dopo aver iniziato il trascinamento, questa funzione viene chiamata ripetutamente dal framework finché l'operazione di trascinamento viene annullata o completata.  
   
 ```  
@@ -149,7 +144,7 @@ virtual SCODE QueryContinueDrag(
  Contiene lo stato dei tasti di modifica della tastiera. Si tratta di una combinazione di un numero qualsiasi delle operazioni seguenti: **MK_CONTROL**, **MK_SHIFT**, **MK_ALT**, **MK_LBUTTON**, **MK_ MBUTTON**, e **MK_RBUTTON**.  
   
 ### <a name="return-value"></a>Valore restituito  
- **DRAGDROP_S_CANCEL** se viene premuto il tasto ESC o il pulsante destro del mouse o del pulsante sinistro viene generato prima del trascinamento viene avviato. **DRAGDROP_S_DROP** se deve essere eseguita un'operazione di rilascio. In caso contrario `S_OK`.  
+ **DRAGDROP_S_CANCEL** se viene premuto il tasto ESC o il pulsante destro del mouse o del pulsante sinistro viene generato prima di trascinarli viene avviato. **DRAGDROP_S_DROP** se deve essere eseguita un'operazione di rilascio. In caso contrario `S_OK`.  
   
 ### <a name="remarks"></a>Note  
  Si verifica l'override di che questa funzione se si desidera modificare il punto in cui il trascinamento viene annullata o un'eliminazione.  

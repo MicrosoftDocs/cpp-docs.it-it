@@ -1,13 +1,10 @@
 ---
 title: Attivazione (C++) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -27,17 +24,15 @@ helpviewer_keywords:
 - activation [MFC], embedded OLE items
 - OLE activation [MFC]
 ms.assetid: ed8357d9-e487-4aaa-aa6b-2edc4de25dfa
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 70017721fb59fa0c6d18d568546d9618257328b5
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: 34b6d6e9313092a8f9a0a11967c7c6a62ed15e15
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="activation-c"></a>Attivazione (C++)
 In questo articolo viene illustrato il ruolo dell'attivazione nella modifica visiva degli elementi OLE. Dopo che un utente, un elemento OLE è incorporato in un documento contenitore, potrebbe essere necessario da utilizzare. A tale scopo, l'utente fa doppio clic sull'elemento che attiva tale elemento. Modifica di attività più frequenti per l'attivazione. Molti elementi OLE correnti, quando è attivata per la modifica, determinano i menu e barre degli strumenti nella finestra cornice corrente per riflettere quelli che appartengono all'applicazione server che ha creato l'elemento. Questo comportamento, noto come in attivazione sul posto, consente all'utente di modificare qualsiasi elemento incorporato in un documento composito senza uscire dalla finestra del documento contenitore.  

@@ -1,13 +1,10 @@
 ---
 title: Modulo di visualizzazioni (MFC) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - forms-based applications [MFC]
 - forms [MFC], adding to applications
 ms.assetid: efbe73c1-4ca4-4613-aac2-30d916e92c0e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4e784858c17c01c8a538edebdb15a89863d16438
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 87775c8afa1fa6eec8fbbdbbaa11bc9b5e6f1faa
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="form-views-mfc"></a>Visualizzazioni Maschera (MFC)
 È possibile aggiungere forme a qualsiasi applicazione Visual C++ che supporti le librerie MFC, tra cui un [applicazione basata su form](../mfc/reference/creating-a-forms-based-mfc-application.md) (uno cui visualizzazione viene derivata da `CFormView`). Se non è stato inizialmente creato l'applicazione per supportare i form, Visual C++ aggiungerà questo supporto per l'utente quando si inserisce un nuovo modulo. In un'applicazione SDI o MDI, che implementa il valore predefinito [architettura documento/visualizzazione](../mfc/document-view-architecture.md), quando l'utente sceglie il `New` comando (per impostazione predefinita, nel **File** menu), Visual C++ richiede all'utente Scegliere uno dei form disponibili.  
@@ -35,7 +30,7 @@ ms.lasthandoff: 12/21/2017
  Con un'applicazione SDI, quando l'utente sceglie il `New` comando, l'istanza corrente del modulo continua a eseguire ma se non viene trovata, viene creata una nuova istanza dell'applicazione con il modulo selezionato. In un'applicazione MDI, l'istanza corrente del modulo continua a eseguire quando l'utente sceglie il `New` comando.  
   
 > [!NOTE]
->  È possibile inserire un form in un'applicazione basata su finestra di dialogo (la cui classe della finestra di dialogo è basato su uno `CDialog` e uno in cui nessuna visualizzazione classe è implementata). Tuttavia, senza l'architettura documento/visualizzazione, Visual C++ non implementare automaticamente i **File**&#124; **Nuovo** funzionalità. È necessario creare un modo per l'utente visualizzare ulteriori forme, ad esempio mediante l'implementazione di una finestra di dialogo a schede con varie pagine delle proprietà.  
+>  È possibile inserire un form in un'applicazione basata su finestra di dialogo (la cui classe della finestra di dialogo è basato su uno `CDialog` e uno in cui nessuna visualizzazione classe è implementata). Tuttavia, senza l'architettura documento/visualizzazione, Visual C++ non implementare automaticamente i **File**&#124;**New** funzionalità. È necessario creare un modo per l'utente visualizzare ulteriori forme, ad esempio mediante l'implementazione di una finestra di dialogo a schede con varie pagine delle proprietà.  
   
  Quando si inserisce un nuovo form nell'applicazione, Visual C++ esegue le operazioni seguenti:  
   
@@ -51,7 +46,7 @@ ms.lasthandoff: 12/21/2017
   
      **WS_VISIBLE**= Off  
   
-     **WS_CAPTION =**Off  
+     **WS_CAPTION =** Off  
   
  Per le applicazioni in base all'architettura documento/visualizzazione, il **nuovo modulo** comando (pulsante destro del mouse in visualizzazione classi) inoltre:  
   

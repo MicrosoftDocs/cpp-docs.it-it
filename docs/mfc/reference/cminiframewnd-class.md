@@ -1,12 +1,9 @@
 ---
 title: Classe CMiniFrameWnd | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMiniFrameWnd
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - CMiniFrameWnd [MFC], Create
 - CMiniFrameWnd [MFC], CreateEx
 ms.assetid: b8f534ed-0532-4d8e-9657-5595cf677749
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 75fe37703e9956c8272226d33a1bb169c23ea916
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 51fa0fc4f58a7b83267863918d3e1b46baa38e59
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cminiframewnd-class"></a>Classe CMiniFrameWnd
 Rappresenta una finestra cornice di mezza altezza visualizzata in genere intorno alle barre degli strumenti mobili.  
@@ -78,7 +73,7 @@ class CMiniFrameWnd : public CFrameWnd
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** afxwin.h  
   
-##  <a name="cminiframewnd"></a>CMiniFrameWnd::CMiniFrameWnd  
+##  <a name="cminiframewnd"></a>  CMiniFrameWnd::CMiniFrameWnd  
  Costruisce un `CMiniFrameWnd` dell'oggetto, ma non creare una finestra.  
   
 ```  
@@ -88,7 +83,7 @@ CMiniFrameWnd();
 ### <a name="remarks"></a>Note  
  Per creare la finestra, chiamare [CMiniFrameWnd::Create](#create).  
   
-##  <a name="create"></a>CMiniFrameWnd::Create  
+##  <a name="create"></a>  CMiniFrameWnd::Create  
  Crea la finestra con mini-cornice di Windows e lo collega al `CMiniFrameWnd` oggetto.  
   
 ```  
@@ -127,13 +122,13 @@ virtual BOOL Create(
   
 - **MFS_4THICKFRAME** disabilita il ridimensionamento della finestra con mini-cornice.  
   
-- **MFS_SYNCACTIVE** Sincronizza l'attivazione della finestra con mini-cornice per l'attivazione della finestra padre.  
+- **MFS_SYNCACTIVE** Sincronizza l'attivazione della finestra con mini-cornice per l'attivazione della relativa finestra padre.  
   
-- **MFS_THICKFRAME** consente la finestra con mini-cornice ridimensionata ridotto consentire il contenuto dell'area client.  
+- **MFS_THICKFRAME** consente la finestra con mini-cornice essere dimensionato piccolo consentire il contenuto dell'area client.  
   
-- **MFS_BLOCKSYSMENU** disabilita l'accesso per il sistema e il menu di controllo e li converte in una parte della didascalia (barra del titolo).  
+- **MFS_BLOCKSYSMENU** disabilita l'accesso per i menu di sistema e il controllo e li converte in parte della didascalia (barra del titolo).  
   
- Vedere [CWnd:: Create](../../mfc/reference/cwnd-class.md#create) per una descrizione dei valori di stile possibile della finestra. La combinazione tipico utilizzata per le finestre con mini-cornice è **WS_POPUP &#124; WS_CAPTION &#124; WS_SYSMENU**.  
+ Vedere [CWnd:: Create](../../mfc/reference/cwnd-class.md#create) per una descrizione dei valori di stile possibile della finestra. La combinazione tipico utilizzato per le finestre con mini-cornice **WS_POPUP&#124;WS_CAPTION&#124;WS_SYSMENU**.  
   
  `rect`  
  Oggetto `RECT` struttura che specifica le dimensioni desiderate della finestra.  
@@ -148,9 +143,9 @@ virtual BOOL Create(
  Diverso da zero se ha esito positivo; in caso contrario 0.  
   
 ### <a name="remarks"></a>Note  
- **Creare** Inizializza il nome di classe della finestra e il nome di finestra e registra i valori predefiniti per lo stile e padre.  
+ **Creare** Inizializza la finestra nome della classe e nome della finestra e registra i valori predefiniti per lo stile e padre.  
   
-##  <a name="createex"></a>CMiniFrameWnd::CreateEx  
+##  <a name="createex"></a>  CMiniFrameWnd::CreateEx  
  Crea un oggetto `CMiniFrameWnd`.  
   
 ```  
@@ -190,13 +185,13 @@ virtual BOOL CreateEx(
  Restituisce TRUE in caso di esito positivo, FALSE in caso di errore.  
   
 ### <a name="remarks"></a>Note  
- Il `CreateEx` i parametri specificano il **WNDCLASS**, stile della finestra e (facoltativamente) iniziale posizione e le dimensioni della finestra. `CreateEx`Specifica inoltre la finestra padre (se presente) e ID.  
+ Il `CreateEx` i parametri specificano il **WNDCLASS**, stile della finestra e (facoltativamente) iniziale posizione e le dimensioni della finestra. `CreateEx` Specifica inoltre la finestra padre (se presente) e ID.  
   
  Quando `CreateEx` esegue, Windows invia il [WM_GETMINMAXINFO](../../mfc/reference/cwnd-class.md#ongetminmaxinfo), [WM_NCCREATE](../../mfc/reference/cwnd-class.md#onnccreate), [WM_NCCALCSIZE](../../mfc/reference/cwnd-class.md#onnccalcsize), e [WM_CREATE](../../mfc/reference/cwnd-class.md#oncreate) messaggi nella finestra.  
   
  Per estendere la gestione dei messaggi predefinito, derivare una classe da `CMiniFrameWnd`, aggiungere una mappa messaggi per la nuova classe e forniscono funzioni membro per i messaggi precedenti. Eseguire l'override `OnCreate`, ad esempio, per eseguire l'inizializzazione necessaria per una nuova classe.  
   
- Eseguire l'override ulteriormente **su***messaggio* gestori per aggiungere ulteriori funzionalità alla classe derivata del messaggio.  
+ Eseguire l'override ulteriormente **su * * * messaggio* gestori per aggiungere ulteriori funzionalità alla classe derivata del messaggio.  
   
  Se il **WS_VISIBLE** stile viene specificato, Windows invia la finestra di tutti i messaggi necessari per attivare e visualizzare la finestra. Se lo stile della finestra consente di specificare una barra del titolo, il titolo della finestra a cui punta il `lpszWindowName` parametro viene visualizzato nella barra del titolo.  
   

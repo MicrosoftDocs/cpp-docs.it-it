@@ -1,12 +1,9 @@
 ---
 title: CObject (classe) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CObject
@@ -29,17 +26,15 @@ helpviewer_keywords:
 - CObject [MFC], IsSerializable
 - CObject [MFC], Serialize
 ms.assetid: 95e9acd3-d9eb-4ac0-b52b-ca4a501a7a3a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c0384392d42196e4365c59670537819435ce1e45
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 38c27d2fa0e04770bae69901e1164da84c2186ca
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cobject-class"></a>CObject (classe)
 Classe base principale per la libreria Microsoft Foundation Class.  
@@ -73,11 +68,11 @@ class AFX_NOVTABLE CObject
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[Eliminazione di CObject::operator](#operator_delete)|Speciali **eliminare** operatore.|  
-|[Nuovo CObject::operator](#operator_new)|Speciali **nuova** operatore.|  
+|[Delete CObject::operator](#operator_delete)|Speciali **eliminare** operatore.|  
+|[CObject::operator nuovo](#operator_new)|Speciali **nuova** operatore.|  
   
 ## <a name="remarks"></a>Note  
- Funge da radice non solo per le classi di raccolta, ad esempio `CFile` e `CObList`, ma anche per le classi che si scrivono. `CObject`fornisce servizi di base, tra cui  
+ Funge da radice non solo per le classi di raccolta, ad esempio `CFile` e `CObList`, ma anche per le classi che si scrivono. `CObject` fornisce servizi di base, tra cui  
   
 -   Supporto della serializzazione  
   
@@ -103,7 +98,7 @@ class AFX_NOVTABLE CObject
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** afx.h  
   
-##  <a name="assertvalid"></a>CObject:: AssertValid  
+##  <a name="assertvalid"></a>  CObject:: AssertValid  
  Convalida integrità di tale oggetto.  
   
 ```  
@@ -111,7 +106,7 @@ virtual void AssertValid() const;
 ```  
   
 ### <a name="remarks"></a>Note  
- `AssertValid`esegue un controllo di validità su questo oggetto controllando lo stato interno. Nella versione di Debug della libreria, `AssertValid` può dichiarare e terminare il programma con un messaggio indicante il numero di riga e il nome file in cui l'asserzione non è riuscita.  
+ `AssertValid` esegue un controllo di validità su questo oggetto controllando lo stato interno. Nella versione di Debug della libreria, `AssertValid` può dichiarare e terminare il programma con un messaggio indicante il numero di riga e il nome file in cui l'asserzione non è riuscita.  
   
  Quando si scrive una classe personalizzata, è necessario eseguire l'override di `AssertValid` funzione per fornire servizi di diagnostica per se stessi e per altri utenti della classe. Sottoposto a override `AssertValid` chiama in genere il `AssertValid` funzione della relativa classe base prima di archiviare i membri di dati univoci per la classe derivata.  
   
@@ -126,7 +121,7 @@ virtual void AssertValid() const;
   
  Per un altro esempio, vedere [AfxDoForAllObjects](diagnostic-services.md#afxdoforallobjects).  
   
-##  <a name="cobject"></a>CObject::CObject  
+##  <a name="cobject"></a>  CObject::CObject  
  Queste funzioni sono standard `CObject` costruttori.  
   
 ```  
@@ -136,7 +131,7 @@ CObject(const CObject& objectSrc);
   
 ### <a name="parameters"></a>Parametri  
  *objectSrc*  
- Un riferimento a un altro`CObject`  
+ Un riferimento a un altro `CObject`  
   
 ### <a name="remarks"></a>Note  
  La versione predefinita viene automaticamente chiamata dal costruttore della classe derivata.  
@@ -150,7 +145,7 @@ CObject(const CObject& objectSrc);
   
  [!code-cpp[NVC_MFCCObjectSample#8](../../mfc/codesnippet/cpp/cobject-class_2.cpp)]  
   
-##  <a name="dump"></a>CObject::Dump  
+##  <a name="dump"></a>  CObject::Dump  
  Esegue il dump dell'oggetto per un [CDumpContext](../../mfc/reference/cdumpcontext-class.md) oggetto.  
   
 ```  
@@ -162,25 +157,25 @@ virtual void Dump(CDumpContext& dc) const;
  Il contesto di dump di diagnostica per il dump, in genere `afxDump`.  
   
 ### <a name="remarks"></a>Note  
- Quando si scrive una classe personalizzata, è necessario eseguire l'override di `Dump` funzione per fornire servizi di diagnostica per se stessi e per altri utenti della classe. Sottoposto a override `Dump` chiama in genere il `Dump` funzione della relativa classe base prima di stampare i membri di dati univoci per la classe derivata. `CObject::Dump`Consente di visualizzare il nome della classe se la classe Usa il `IMPLEMENT_DYNAMIC` o `IMPLEMENT_SERIAL` (macro).  
+ Quando si scrive una classe personalizzata, è necessario eseguire l'override di `Dump` funzione per fornire servizi di diagnostica per se stessi e per altri utenti della classe. Sottoposto a override `Dump` chiama in genere il `Dump` funzione della relativa classe base prima di stampare i membri di dati univoci per la classe derivata. `CObject::Dump` Consente di visualizzare il nome della classe se la classe Usa il `IMPLEMENT_DYNAMIC` o `IMPLEMENT_SERIAL` macro.  
   
 > [!NOTE]
 >  Il `Dump` funzione non stampare un carattere di nuova riga alla fine del relativo output.  
   
- `Dump`chiamate ha senso solo nella versione di Debug della libreria di classi Microsoft Foundation. È necessario racchiudere tra parentesi quadre con le implementazioni delle funzioni chiamate e le dichiarazioni di funzione **debug #ifdef** /  `#endif` istruzioni per la compilazione condizionale.  
+ `Dump` chiamate ha senso solo nella versione di Debug della libreria Microsoft Foundation Class. È necessario racchiudere tra parentesi quadre con le implementazioni delle funzioni chiamate e le dichiarazioni di funzione **debug #ifdef** /  `#endif` istruzioni per la compilazione condizionale.  
   
  Poiché `Dump` è un **const** funzione, non si è autorizzati a modificare lo stato dell'oggetto durante il dump.  
   
  Il [inserimento CDumpContext (<<) operatore](../../mfc/reference/cdumpcontext-class.md#operator_lt_lt) chiamate `Dump` quando un `CObject` viene inserito l'indicatore di misura.  
   
- `Dump`consente solo "aciclico" dump di oggetti. Ad esempio, è possibile eseguire il dump di un elenco di oggetti, ma se uno degli oggetti è l'elenco stesso, si verrà infine un overflow dello stack.  
+ `Dump` consente il dump solo "aciclico diretto" degli oggetti. Ad esempio, è possibile eseguire il dump di un elenco di oggetti, ma se uno degli oggetti è l'elenco stesso, si verrà infine un overflow dello stack.  
   
 ### <a name="example"></a>Esempio  
  Vedere [CObList:: CObList](../../mfc/reference/coblist-class.md#coblist) per un elenco di `CAge` classe utilizzata in tutti `CObject` esempi.  
   
  [!code-cpp[NVC_MFCCObjectSample#9](../../mfc/codesnippet/cpp/cobject-class_3.cpp)]  
   
-##  <a name="getruntimeclass"></a>CObject::GetRuntimeClass  
+##  <a name="getruntimeclass"></a>  CObject::GetRuntimeClass  
  Restituisce il `CRuntimeClass` struttura corrispondente alla classe dell'oggetto.  
   
 ```  
@@ -193,7 +188,7 @@ virtual CRuntimeClass* GetRuntimeClass() const;
 ### <a name="remarks"></a>Note  
  È presente `CRuntimeClass` struttura per ogni `CObject`-classe derivata. I membri della struttura sono i seguenti:  
   
-- **LPCSTR m_lpszClassName** una stringa con terminazione null contenente il nome di classe ASCII.  
+- **LPCSTR m_lpszClassName** una stringa con terminazione null contenente il nome della classe ASCII.  
   
 - **int m_nObjectSize** le dimensioni dell'oggetto, in byte. Se l'oggetto dispone di membri di dati che fanno riferimento a memoria allocata, le dimensioni di tale memoria non sono inclusa.  
   
@@ -201,9 +196,9 @@ virtual CRuntimeClass* GetRuntimeClass() const;
   
 - **CObject\* (PASCAL\* m_pfnCreateObject) ()** un puntatore a funzione al costruttore predefinito che crea un oggetto della classe (valido solo se la classe supporta la creazione dinamica; in caso contrario, restituisce **NULL** ).  
   
-- **CRuntimeClass\* (PASCAL\* m_pfn_GetBaseClass) ()** se l'applicazione viene collegata in modo dinamico per la versione AFXDLL di MFC, un puntatore a una funzione che restituisce il `CRuntimeClass` struttura della classe di base.  
+- **CRuntimeClass\* (PASCAL\* m_pfn_GetBaseClass) ()** se l'applicazione viene collegata in modo dinamico per la versione AFXDLL di MFC, un puntatore a una funzione che restituisce il `CRuntimeClass` struttura della classe base.  
   
-- **CRuntimeClass\* m_pBaseClass** se l'applicazione è collegata in modo statico a MFC, un puntatore al `CRuntimeClass` struttura della classe di base.  
+- **CRuntimeClass\* m_pBaseClass** se l'applicazione è collegata in modo statico a MFC, un puntatore al `CRuntimeClass` struttura della classe base.  
   
  Questa funzione richiede l'uso del [IMPLEMENT_DYNAMIC](run-time-object-model-services.md#implement_dynamic), [IMPLEMENT_DYNCREATE](run-time-object-model-services.md#implement_dyncreate), o [IMPLEMENT_SERIAL](run-time-object-model-services.md#implement_serial) macro nell'implementazione della classe. In caso contrario si otterranno risultati non corretti.  
   
@@ -212,7 +207,7 @@ virtual CRuntimeClass* GetRuntimeClass() const;
   
  [!code-cpp[NVC_MFCCObjectSample#10](../../mfc/codesnippet/cpp/cobject-class_4.cpp)]  
   
-##  <a name="iskindof"></a>CObject:: IsKindOf  
+##  <a name="iskindof"></a>  CObject:: IsKindOf  
  Verifica la relazione dell'oggetto in una determinata classe.  
   
 ```  
@@ -236,7 +231,7 @@ BOOL IsKindOf(const CRuntimeClass* pClass) const;
   
  [!code-cpp[NVC_MFCCObjectSample#11](../../mfc/codesnippet/cpp/cobject-class_5.cpp)]  
   
-##  <a name="isserializable"></a>CObject::IsSerializable  
+##  <a name="isserializable"></a>  CObject::IsSerializable  
  Verifica se l'oggetto è idoneo per la serializzazione.  
   
 ```  
@@ -257,7 +252,7 @@ BOOL IsSerializable() const;
   
  [!code-cpp[NVC_MFCCObjectSample#12](../../mfc/codesnippet/cpp/cobject-class_6.cpp)]  
   
-##  <a name="operator_delete"></a>Eliminazione di CObject::operator  
+##  <a name="operator_delete"></a>  Delete CObject::operator  
  Per la versione della libreria, operatore **eliminare** libera la memoria allocata dall'operatore **nuova**.  
   
 ```  
@@ -293,7 +288,7 @@ void PASCAL operator delete(
   
  [!code-cpp[NVC_MFCCObjectSample#15](../../mfc/codesnippet/cpp/cobject-class_8.cpp)]  
   
-##  <a name="operator_new"></a>Nuovo CObject::operator  
+##  <a name="operator_new"></a>  CObject::operator nuovo  
  Per la versione della libreria, operatore **nuova** esegue un'allocazione di memoria ottimale in modo simile a `malloc`.  
   
 ```  
@@ -326,7 +321,7 @@ void* PASCAL operator new(
   
  [!code-cpp[NVC_MFCCObjectSample#16](../../mfc/codesnippet/cpp/cobject-class_9.h)]  
   
-##  <a name="serialize"></a>CObject:: Serialize  
+##  <a name="serialize"></a>  CObject:: Serialize  
  Legge o scrive l'oggetto corrente da o in un archivio.  
   
 ```  
@@ -344,7 +339,7 @@ virtual void Serialize(CArchive& ar);
   
  Utilizzare [CArchive::IsLoading](../../mfc/reference/carchive-class.md#isloading) o [CArchive::IsStoring](../../mfc/reference/carchive-class.md#isstoring) per determinare se l'archivio è il caricamento o l'archiviazione.  
   
- `Serialize`viene chiamato da [CArchive::ReadObject](../../mfc/reference/carchive-class.md#readobject) e [CArchive::WriteObject](../../mfc/reference/carchive-class.md#writeobject). Queste funzioni sono associate i `CArchive` operatore di inserimento (  **< \<** ) e l'operatore di estrazione (  **>>** ).  
+ `Serialize` viene chiamato dal [CArchive::ReadObject](../../mfc/reference/carchive-class.md#readobject) e [CArchive::WriteObject](../../mfc/reference/carchive-class.md#writeobject). Queste funzioni sono associate i `CArchive` operatore di inserimento ( **< \<**) e l'operatore di estrazione ( **>>**).  
   
  Per esempi di serializzazione, vedere l'articolo [serializzazione: serializzazione di un oggetto](../../mfc/serialization-serializing-an-object.md).  
   

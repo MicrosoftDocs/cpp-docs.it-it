@@ -2,30 +2,25 @@
 title: 'Procedura: recuperare testo dagli Appunti (C + + CLI) | Documenti Microsoft'
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - text, retrieving from Clipboard
 - Clipboard, retrieving text
 ms.assetid: 99e77ba0-8573-4030-92d8-de8aa7623ee4
-caps.latest.revision: 11
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 255f2fb393ecf2c2748beada4b250b60ca965e25
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ee1b2475e0d32b857ef5adfa2e75fb02e287d42f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-retrieve-text-from-the-clipboard-ccli"></a>Procedura: recuperare testo dagli Appunti (C++/CLI)
 Nell'esempio di codice viene illustrato come utilizzare il <xref:System.Windows.Forms.Clipboard.GetDataObject%2A> restituiscono un puntatore a funzione membro di <xref:System.Windows.Forms.IDataObject> interfaccia. Questa interfaccia può essere eseguita una query per il formato dei dati e utilizzata per recuperare i dati effettivi.  

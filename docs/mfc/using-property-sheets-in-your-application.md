@@ -1,13 +1,10 @@
 ---
-title: "Utilizzo di finestre delle proprietà in un'applicazione | Documenti Microsoft"
-ms.custom: 
+title: Utilizzo di finestre delle proprietà in un'applicazione | Documenti Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - Create method [MFC], property sheets
 - CPropertyPage class [MFC], styles
 ms.assetid: 240654d4-152b-4e3f-af7b-44234339206e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4247a40fa364774674c1c79845625df51ecd34ed
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 74e63faf5b1cac5e0cb841a28fd59ecee47c9970
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-property-sheets-in-your-application"></a>Utilizzo delle finestre delle proprietà nell'applicazione
 Per utilizzare una finestra delle proprietà nell'applicazione, completare i passaggi seguenti:  

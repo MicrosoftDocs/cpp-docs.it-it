@@ -1,24 +1,20 @@
 ---
 title: Implementa elementi virtuali puri | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/16/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ea9b4719-34a3-474a-b4ec-05b1859f80f1
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f311c2e5832754bfd785084b9aa930b5dbe43845
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: afce516f2718a76658846ed4f992aeabff75330b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="implement-pure-virtuals"></a>Implementa elementi virtuali puri
 **Che cosa:** consente di generare immediatamente il codice necessario per implementare tutti i metodi virtuali puri in una classe. 

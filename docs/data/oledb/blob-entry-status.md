@@ -1,12 +1,9 @@
 ---
 title: BLOB_ENTRY_STATUS | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - BLOB_ENTRY_STATUS
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - BLOB_ENTRY_STATUS macro
 ms.assetid: 191007f4-dfcc-4ae2-a7fc-6f7899accc9f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 207f42094ea62db103fb39a0057f595182a2ec9a
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: a6429a6b227cb7c06369d1a82d36e0ad513e6d0e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="blobentrystatus"></a>BLOB_ENTRY_STATUS
 Utilizzato con `BEGIN_COLUMN_MAP` o `BEGIN_ACCESSOR_MAP` per associare un oggetto binario di grandi dimensioni ([BLOB](https://msdn.microsoft.com/en-us/library/ms711511.aspx)). Simile a [BLOB_ENTRY](../../data/oledb/blob-entry.md), ad eccezione del fatto che questa macro ottiene anche lo stato della colonna BLOB.  

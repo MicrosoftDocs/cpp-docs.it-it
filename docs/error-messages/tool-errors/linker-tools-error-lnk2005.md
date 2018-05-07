@@ -1,12 +1,9 @@
 ---
 title: Strumenti del linker LNK2005 errore | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - LNK2005
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - LNK2005
 ms.assetid: d9587adc-68be-425c-8a30-15dbc86717a4
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 69b5201c3e035d1c0aca0105c136766eba3786f9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f853bec220c7d46ed2a0c44ac1e1d45fbca8318f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="linker-tools-error-lnk2005"></a>Errore degli strumenti del linker LNK2005
 *simbolo* già definito nell'oggetto  
@@ -128,9 +123,9 @@ Ecco alcune cause comuni di questo errore.
   
 Se si utilizza una versione precedente del set di strumenti, vedere gli articoli della Knowledge Base per ulteriori informazioni sulle cause dell'errore specifiche:  
   
--   [Si verifica un errore di LNK2005 quando la libreria CRT e librerie MFC sono collegate in ordine errato in Visual C++](https://support.microsoft.com/kb/148652)  
+-   [Si verifica un errore LNK2005 quando la libreria CRT e librerie MFC sono collegate in ordine errato in Visual C++](https://support.microsoft.com/kb/148652)  
   
--   [Correzione: Delete overload globale operatore cause LNK2005](https://support.microsoft.com/kb/140440)  
+-   [Correzione: Delete overload globale operatore vengono illustrate le cause LNK2005](https://support.microsoft.com/kb/140440)  
   
--   [Quando si compila un progetto .exe eseguibile ATL in Visual C++, si ricevono errori LNK2005](https://support.microsoft.com/kb/184235).  
+-   [Si ricevono errori LNK2005 quando si compila un progetto di .exe eseguibile ATL in Visual C++](https://support.microsoft.com/kb/184235).  
   

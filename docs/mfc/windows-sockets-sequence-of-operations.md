@@ -1,13 +1,10 @@
 ---
 title: 'Windows Sockets: Sequenza di operazioni | Documenti Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - sockets [MFC], operations
 - stream sockets [MFC]
 ms.assetid: 43ce76f5-aad3-4247-b8a6-16cc7d012796
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f70765d94b0104cf905130ce043c2b0e35b26a41
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 93fe2221e25951a53340d5da97f7d5c48ce477cf
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="windows-sockets-sequence-of-operations"></a>Windows Sockets: sequenza di operazioni
 Questo articolo illustra side-by-side, la sequenza di operazioni per un server e a un socket client. Poiché i socket utilizzano `CArchive` oggetti, sono necessariamente [socket di flusso](../mfc/windows-sockets-stream-sockets.md).  
@@ -63,7 +58,7 @@ Questo articolo illustra side-by-side, la sequenza di operazioni per un server e
 ## <a name="additional-notes-about-the-sequence"></a>Note aggiuntive sulla sequenza  
  La sequenza di chiamate illustrato nella tabella precedente è per un socket di flusso. I socket di datagramma, ovvero senza connessione, non richiedono la [CAsyncSocket:: Connect](../mfc/reference/casyncsocket-class.md#connect), [ascolto](../mfc/reference/casyncsocket-class.md#listen), e [Accept](../mfc/reference/casyncsocket-class.md#accept) chiamate (sebbene sia possibile utilizzare facoltativamente **Connettersi**). In alternativa, se si utilizza classe `CAsyncSocket`, i socket di datagramma utilizzano il `CAsyncSocket::SendTo` e `ReceiveFrom` funzioni membro. (Se si utilizza **Connetti** con un socket di datagramma, utilizzare **inviare** e **ricezione**.) Poiché `CArchive` non funziona con i datagrammi, non utilizzare `CSocket` con un archivio se il socket è un datagramma.  
   
- [CSocketFile](../mfc/reference/csocketfile-class.md) non supporta tutti i `CFile`della funzionalità. `CFile` membri, ad esempio `Seek`, che non è appropriata per garantire una comunicazione socket, di rendere non sono disponibili. Per questo motivo, alcuni predefinito MFC `Serialize` funzioni non sono compatibili con `CSocketFile`. Questo vale in particolare la `CEditView` classe. Non tentare di serializzare `CEditView` dati tramite un `CArchive` oggetto associato a un `CSocketFile` utilizzando `CEditView::SerializeRaw`; utilizzare **CEditView::** invece (non documentata). Il [funzione SerializeRaw](../mfc/reference/ceditview-class.md#serializeraw) funzione prevede l'oggetto file di funzioni, ad esempio `Seek`che `CSocketFile` non è supportata.  
+ [CSocketFile](../mfc/reference/csocketfile-class.md) non supporta tutte `CFile`della funzionalità. `CFile` membri, ad esempio `Seek`, che non è appropriata per garantire una comunicazione socket, di rendere non sono disponibili. Per questo motivo, alcuni predefinito MFC `Serialize` funzioni non sono compatibili con `CSocketFile`. Questo vale in particolare la `CEditView` classe. Non tentare di serializzare `CEditView` dati tramite un `CArchive` oggetto associato a un `CSocketFile` utilizzando `CEditView::SerializeRaw`; utilizzare **CEditView::** invece (non documentata). Il [funzione SerializeRaw](../mfc/reference/ceditview-class.md#serializeraw) funzione prevede l'oggetto file di funzioni, ad esempio `Seek`che `CSocketFile` non è supportata.  
   
  Per altre informazioni, vedere:  
   

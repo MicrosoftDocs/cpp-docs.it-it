@@ -2,11 +2,8 @@
 title: Classe CMFCRibbonContextCaption | Documenti Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCRibbonContextCaption
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - CMFCRibbonContextCaption [MFC], GetColor
 - CMFCRibbonContextCaption [MFC], GetRightTabX
 ms.assetid: cce2c0a2-8370-4266-997e-f8d0eeb3d616
-caps.latest.revision: 24
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fc05d791ad1d9fc51d11947686e0d6b939ef982f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2fa63de2a633b2c8a9fff975de6eaaae7cbb470c
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcribboncontextcaption-class"></a>Classe CMFCRibbonContextCaption
 Implementa una didascalia a colori visualizzata all'inizio di una categoria della barra multifunzione o di una categoria contesto.  
@@ -68,7 +63,7 @@ class CMFCRibbonContextCaption : public CMFCRibbonButton
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** afxribbonbar. H  
   
-##  <a name="getcolor"></a>CMFCRibbonContextCaption::GetColor  
+##  <a name="getcolor"></a>  CMFCRibbonContextCaption::GetColor  
  Restituisce il colore di sfondo della didascalia.  
   
 ```  
@@ -97,7 +92,7 @@ AFX_RibbonCategoryColor GetColor() const;
 ### <a name="remarks"></a>Note  
  Il colore della didascalia può essere impostato chiamando [CMFCRibbonCategory:: Settabcolor](../../mfc/reference/cmfcribboncategory-class.md#settabcolor) o [CMFCRibbonBar:: Addcontextcategory](../../mfc/reference/cmfcribbonbar-class.md#addcontextcategory).  
   
-##  <a name="getrighttabx"></a>CMFCRibbonContextCaption::GetRightTabX  
+##  <a name="getrighttabx"></a>  CMFCRibbonContextCaption::GetRightTabX  
  Recupera la posizione del bordo destro della scheda della barra multifunzione della categoria.  
   
 ```  

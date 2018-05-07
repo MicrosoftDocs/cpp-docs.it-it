@@ -2,33 +2,28 @@
 title: 'Procedura: scrivere un File binario (C + + CLI) | Documenti Microsoft'
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - binary files, writing in C++
 - files [C++], binary
 ms.assetid: 35d97ee6-fc7e-4c36-be18-8bbb3b44b3ae
-caps.latest.revision: 10
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 66d4c46fa82713e55ce39880f5e379cafcdf9ec6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 69467b913ea76b5f5e19772ee7d0d846a363c5e7
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-write-a-binary-file-ccli"></a>Procedura: scrivere un file binario (C++/CLI)
-Esempio di codice seguente viene illustrato come scrivere i dati binari in un file. Due classi di <xref:System.IO> dello spazio dei nomi vengono utilizzati: <xref:System.IO.FileStream> e <xref:System.IO.BinaryWriter>. <xref:System.IO.FileStream>rappresenta il file effettivo, mentre <xref:System.IO.BinaryWriter> fornisce un'interfaccia per il flusso che consente l'accesso binario.  
+Esempio di codice seguente viene illustrato come scrivere i dati binari in un file. Due classi di <xref:System.IO> dello spazio dei nomi vengono utilizzati: <xref:System.IO.FileStream> e <xref:System.IO.BinaryWriter>. <xref:System.IO.FileStream> rappresenta il file effettivo, mentre <xref:System.IO.BinaryWriter> fornisce un'interfaccia per il flusso che consente l'accesso binario.  
   
  Esempio di codice seguente scrive un file contenente i numeri interi in formato binario. Questo file può essere letti con il codice in [procedura: leggere un File binario (C + + CLI)](../dotnet/how-to-read-a-binary-file-cpp-cli.md).  
   

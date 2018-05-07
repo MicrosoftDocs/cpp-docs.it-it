@@ -1,12 +1,9 @@
 ---
-title: CDBPropSet::CDBPropSet | Microsoft Docs
-ms.custom: 
+title: 'CDBPropSet:: CDBPropSet | Documenti Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - CDBPropSet.CDBPropSet
@@ -18,18 +15,16 @@ dev_langs:
 helpviewer_keywords:
 - CDBPropSet class, constructor
 ms.assetid: 02ae5d9e-c067-47ca-8111-a03e86b5626b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: db118c9c814d957c43f11414ee583a2ccc7a416b
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 58c3639d6c849a4b57ba1b0a75a7840def977556
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdbpropsetcdbpropset"></a>CDBPropSet::CDBPropSet
 Costruttore. Inizializza il **rgProperties**, **cProperties**, e **guidPropertySet** campi del [DBPROPSET](https://msdn.microsoft.com/en-us/library/ms714367.aspx) struttura.  

@@ -1,13 +1,10 @@
 ---
 title: WINDOWPOS Structure1 | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - WINDOWPOS
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - WINDOWPOS structure [MFC]
 ms.assetid: a4ea7cd9-c4c2-4480-9c55-cbbff72195e1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7db3991a6767e33c73857daf40a977ac5f6f0b85
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d4abd236998f37f0d719f41827d05a17fde56fde
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="windowpos-structure1"></a>WINDOWPOS Structure1
 Il `WINDOWPOS` struttura contiene informazioni sulle dimensioni e posizione di una finestra.  
@@ -72,15 +67,15 @@ typedef struct tagWINDOWPOS { /* wp */
   
 - **SWP_HIDEWINDOW** nasconde la finestra.  
   
-- `SWP_NOACTIVATE`La finestra non è attivata.  
+- `SWP_NOACTIVATE` La finestra non è attivata.  
   
 - **SWP_NOCOPYBITS** Elimina l'intero contenuto dell'area client. Se questo flag non è specificato, il contenuto valido dell'area client venga salvato e copiato indietro nell'area client, dopo che la finestra viene ridimensionata o riposizionata.  
   
-- `SWP_NOMOVE`Mantiene la posizione corrente (ignora il **x** e **y** membri).  
+- `SWP_NOMOVE` Mantiene la posizione corrente (ignora le **x** e **y** membri).  
   
 - **SWP_NOOWNERZORDER** non modifica la posizione della finestra proprietaria nell'ordine Z.  
   
-- `SWP_NOSIZE`Consente di mantenere dimensioni correnti (ignora il **cx** e **cy** membri).  
+- `SWP_NOSIZE` Consente di mantenere dimensioni correnti (ignora le **cx** e **cy** membri).  
   
 - **SWP_NOREDRAW** non vengono aggiornate le modifiche.  
   
@@ -88,7 +83,7 @@ typedef struct tagWINDOWPOS { /* wp */
   
 - **SWP_NOSENDCHANGING** impedisce la finestra di ricezione il `WM_WINDOWPOSCHANGING` messaggio.  
   
-- `SWP_NOZORDER`Mantiene l'ordinamento corrente (ignora il **hwndInsertAfter** membro).  
+- `SWP_NOZORDER` Mantiene l'ordinamento corrente (ignora le **hwndInsertAfter** membro).  
   
 - **SWP_SHOWWINDOW** Visualizza la finestra.  
   

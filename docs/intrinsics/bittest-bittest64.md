@@ -1,12 +1,9 @@
 ---
-title: _bittest, _bittest64 | Microsoft Docs
-ms.custom: 
+title: _bittest, _bittest64 | Documenti Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - _bittest64
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - _bittest64 intrinsic
 - bt instruction
 ms.assetid: 15e62afb-abea-4ee7-a6b1-13efa2034937
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 62fb7d0f89a795956c55aa9ead4d2347ba93500c
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 71b2259e7eecd820d35527a6ab8908f274e3e287
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="bittest-bittest64"></a>_bittest, _bittest64
 **Sezione specifica Microsoft**  
@@ -64,7 +59,7 @@ Bit nella posizione specificata.
   
 |Funzione intrinseca|Architettura|Header|  
 |---------------|------------------|------------|  
-|`_bittest`|x86, ARM [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<intrin.h>|  
+|`_bittest`|x86, ARM, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<intrin.h>|  
 |`_bittest64`|ARM, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<intrin.h>|  
   
 ## <a name="remarks"></a>Note  

@@ -2,11 +2,8 @@
 title: lock::try_acquire | Documenti Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - try_acquire
@@ -19,18 +16,16 @@ dev_langs:
 helpviewer_keywords:
 - lock::try_acquire
 ms.assetid: ef0649a9-e611-4495-84bd-2784533221d9
-caps.latest.revision: 12
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: da2372f513d9799cfddbebeefa7e9160d1a6b135
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 25b5ec1ab7bb5c429538f312ee3b598d3d1d83ec
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="locktryacquire"></a>lock::try_acquire
 Acquisisce un blocco su un oggetto, in attesa di un intervallo di tempo specificato e restituisce un `bool` per segnalare l'esito positivo dell'acquisizione anziché generare un'eccezione.  
@@ -51,7 +46,7 @@ bool try_acquire(
  Valore di timeout in millisecondi o come un <xref:System.TimeSpan>.  
   
 ## <a name="return-value"></a>Valore restituito  
- `true`Se il blocco è stato acquisito, `false` in caso contrario.  
+ `true` Se è stato acquisito blocco, `false` in caso contrario.  
   
 ## <a name="remarks"></a>Note  
  Se è già stato acquisito un blocco, questa funzione non esegue alcuna operazione.  

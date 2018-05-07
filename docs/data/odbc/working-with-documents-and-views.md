@@ -2,12 +2,9 @@
 title: Utilizzo di documenti e visualizzazioni | Documenti Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,18 +13,16 @@ helpviewer_keywords:
 - views [C++], MFC
 - documents [C++], MFC
 ms.assetid: 349b142d-1c5a-4b99-9de4-241e41d3d2f1
-caps.latest.revision: 7
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 5558e106ead5b56e982c6280fecc8a8418b3ebc6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 71750507d6b3c6cf14a721971d809347f8adfd3d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="working-with-documents-and-views"></a>Gestione di documenti e visualizzazioni
 La libreria Microsoft Foundation Classes (MFC) si basa su un'architettura documento/visualizzazione per molte delle relative funzionalità. In genere, un documento memorizza i dati e visualizza all'interno dell'area client di una finestra cornice e gestisce l'interazione dell'utente con i dati di una vista. La vista comunica con il documento per ottenere e aggiornare i dati. È possibile utilizzare le classi di database con il framework o senza di esso.  

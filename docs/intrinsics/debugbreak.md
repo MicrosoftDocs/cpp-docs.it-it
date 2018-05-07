@@ -1,12 +1,9 @@
 ---
 title: DebugBreak | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - __debugbreak_cpp
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - breakpoints, __debugbreak intrinsic
 - __debugbreak intrinsic
 ms.assetid: 1d1e1c0c-891a-4613-ae4b-d790094ba830
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9e9aa50ee6cf450276dce70bfa38162a2f6392ed
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 1a3dcead3129c87b2d02f8822019af763c0fe8b8
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="debugbreak"></a>__debugbreak
 **Sezione specifica Microsoft**  
@@ -44,7 +39,7 @@ void __debugbreak();
   
 |Funzione intrinseca|Architettura|Header|  
 |---------------|------------------|------------|  
-|`__debugbreak`|x86, ARM [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<intrin.h>|  
+|`__debugbreak`|x86, ARM, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<intrin.h>|  
   
 ## <a name="remarks"></a>Note  
  Il `__debugbreak` compilatore intrinseche, in modo analogo [DebugBreak](http://msdn.microsoft.com/library/windows/desktop/ms679297.aspx), è un modo portabile Win32 per un punto di interruzione.  

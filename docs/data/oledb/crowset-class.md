@@ -1,12 +1,9 @@
 ---
 title: Classe CRowset | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - ATL.CRowset<TAccessor>
@@ -19,18 +16,16 @@ dev_langs:
 helpviewer_keywords:
 - CRowset class
 ms.assetid: b0228a90-b8dd-47cc-b397-8d4c15c1e7f4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 0774c82715ab2fd85098147ebe1697daf7d2d2fa
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 5c9a23c2e879f0d2fe1add1a970c64f6fbcc27b2
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="crowset-class"></a>Classe CRowset
 Incapsula un oggetto set di righe OLE DB e diverse relative interfacce e fornisce metodi di modifica per i dati di set di righe.  
@@ -73,7 +68,7 @@ class CRowset
 |[MoveToRatio](../../data/oledb/crowset-movetoratio.md)|Recupera le righe a partire da una posizione decimale nel set di righe.|  
 |[ReleaseRows](../../data/oledb/crowset-releaserows.md)|Chiamate [IRowset:: ReleaseRows](https://msdn.microsoft.com/en-us/library/ms719771.aspx) per rilasciare l'handle di riga corrente.|  
 |[SetData](../../data/oledb/crowset-setdata.md)|Imposta i valori dei dati in una o più colonne di una riga utilizzando [IRowsetChange:SetData](https://msdn.microsoft.com/en-us/library/ms721232.aspx).|  
-|[Undo](../../data/oledb/crowset-undo.md)|Annullare le modifiche apportate a una riga dall'ultimo recupero o [aggiornamento](../../data/oledb/crowset-update.md).|  
+|[Annulla](../../data/oledb/crowset-undo.md)|Annullare le modifiche apportate a una riga dall'ultimo recupero o [aggiornamento](../../data/oledb/crowset-update.md).|  
 |[Aggiornamento](../../data/oledb/crowset-update.md)|Consente di trasmettere le modifiche apportate alla riga corrente dopo l'ultimo recupero o l'aggiornamento in sospeso.|  
 |[UpdateAll](../../data/oledb/crowset-updateall.md)|Consente di trasmettere le modifiche apportate a tutte le righe l'ultima operazione di recupero o l'aggiornamento in sospeso.|  
   

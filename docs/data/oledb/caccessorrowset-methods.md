@@ -1,30 +1,25 @@
 ---
 title: Metodi CAccessorRowset | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - CAccessorRowset class, methods
 ms.assetid: ab29d438-a382-4bd0-85fa-55182122ca00
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 1e86054cda1fa41c630e7195f8cf154070f216a0
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 3dec8c6e6f46d495da0a6c6db9f4e3ec6f842a64
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="caccessorrowset-methods"></a>Metodi CAccessorRowset
 Per informazioni sui metodi in `CAccessorRowset`, vedere [membri CAccessorRowset](../../data/oledb/caccessorrowset-members.md).

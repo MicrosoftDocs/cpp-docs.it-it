@@ -1,12 +1,9 @@
 ---
 title: Si esegue l'override di una funzione di accesso dinamico | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 dev_langs:
 - C++
@@ -15,18 +12,16 @@ helpviewer_keywords:
 - dynamic accessors
 - overriding, dynamic accessors
 ms.assetid: cbefd156-6da5-490d-b795-c2d7d874f7ce
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: f31f2f3ec58ea7b557cc04718cf52219d0f4d9e9
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 9309180b05a6d91e6749f80c7a7b717b1bc57526
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="overriding-a-dynamic-accessor"></a>Override di una funzione di accesso dinamica
 Quando si utilizza una funzione di accesso dinamico, ad esempio `CDynamicAccessor`, il comando **aprire** metodo crea una funzione di accesso per automaticamente, in base alle informazioni di colonna del set di righe aperto. È possibile sostituire la funzione di accesso dinamico per controllare esattamente come le colonne sono associate.  

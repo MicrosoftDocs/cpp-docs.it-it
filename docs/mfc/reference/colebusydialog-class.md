@@ -1,12 +1,9 @@
 ---
 title: Classe classe COleBusyDialog | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - COleBusyDialog
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - COleBusyDialog [MFC], GetSelectionType
 - COleBusyDialog [MFC], m_bz
 ms.assetid: c881a532-9672-4c41-b51b-5ce4a7246a6b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0e57881dad305a5a0d5cec25ddcc93f82eca5f26
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b061d2cc31a67c2e6059abeaadb6062b77cacb88
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="colebusydialog-class"></a>Classe classe COleBusyDialog
 Utilizzata per la finestra di dialogo relativa al server OLE che non risponde o al server occupato.  
@@ -93,7 +88,7 @@ class COleBusyDialog : public COleDialog
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** afxodlgs. h  
   
-##  <a name="colebusydialog"></a>COleBusyDialog::COleBusyDialog  
+##  <a name="colebusydialog"></a>  COleBusyDialog::COleBusyDialog  
  Questa funzione crea solo un `COleBusyDialog` oggetto.  
   
 ```  
@@ -116,7 +111,7 @@ explicit COleBusyDialog(
   
 - **BZ_DISABLECANCELBUTTON** disabilitare il pulsante di annullamento quando si chiama la finestra di dialogo.  
   
-- **BZ_DISABLESWITCHTOBUTTON** disabilitare il pulsante di opzione per quando si chiama la finestra di dialogo.  
+- **BZ_DISABLESWITCHTOBUTTON** disabilitare il pulsante passa a quando si chiama la finestra di dialogo.  
   
 - **BZ_DISABLERETRYBUTTON** disabilitare il pulsante di ripetizione quando si chiama la finestra di dialogo.  
   
@@ -128,7 +123,7 @@ explicit COleBusyDialog(
   
  Per ulteriori informazioni, vedere il [OLEUIBUSY](http://msdn.microsoft.com/library/windows/desktop/ms682493) struttura in Windows SDK.  
   
-##  <a name="domodal"></a>COleBusyDialog::DoModal  
+##  <a name="domodal"></a>  COleBusyDialog::DoModal  
  Chiamare questa funzione per visualizzare la finestra di dialogo OLE Server occupato o di Server non risponde.  
   
 ```  
@@ -149,7 +144,7 @@ virtual INT_PTR DoModal();
   
  Se `DoModal` restituisce **IDOK**, è possibile chiamare le funzioni per recuperare le impostazioni o informazioni che è stato immesso dall'utente nella finestra di dialogo altri membri.  
   
-##  <a name="getselectiontype"></a>COleBusyDialog::GetSelectionType  
+##  <a name="getselectiontype"></a>  COleBusyDialog::GetSelectionType  
  Chiamare questa funzione per ottenere il tipo di selezione scelto dall'utente nella finestra di dialogo Server occupato.  
   
 ```  
@@ -172,13 +167,13 @@ enum Selection {
   
  Seguono brevi descrizioni dei valori seguenti:  
   
-- **COleBusyDialog::switchTo** stato premuto il pulsante di opzione a.  
+- **COleBusyDialog::switchTo** passa a pulsante premuto.  
   
 - **COleBusyDialog::retry** è stato premuto il pulsante Riprova.  
   
 - **COleBusyDialog::callUnblocked** chiamata per attivare il server è ora sbloccato.  
   
-##  <a name="m_bz"></a>COleBusyDialog::m_bz  
+##  <a name="m_bz"></a>  COleBusyDialog::m_bz  
  Struttura di tipo **OLEUIBUSY** consentono di controllare il comportamento della finestra di dialogo Server occupato.  
   
 ```  

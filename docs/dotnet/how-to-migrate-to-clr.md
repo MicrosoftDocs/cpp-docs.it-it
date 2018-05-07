@@ -1,13 +1,10 @@
 ---
 title: 'Procedura: eseguire la migrazione a clr-| Documenti Microsoft'
-ms.custom: 
+ms.custom: get-started-article
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: get-started-article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,18 +15,16 @@ helpviewer_keywords:
 - migration [C++], /clr compiler option
 - /clr compiler option [C++], porting to
 ms.assetid: c9290b8b-436a-4510-8b56-eae51f4a9afc
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: cd40443bc656b0e0ec02b1ec05b604a758628321
-ms.sourcegitcommit: 185e11ab93af56ffc650fe42fb5ccdf1683e3847
+ms.openlocfilehash: f5d7dafdc377723e33372529af1b8f125561366e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-migrate-to-clr"></a>Procedura: eseguire la migrazione a /clr
 In questo argomento vengono illustrati i problemi che si verificano durante la compilazione di codice nativo con **/clr** (vedere [/clr (compilazione Common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md) per altre informazioni). **/CLR** consente ai moduli di Visual C++ di richiamare ed essere richiamati dagli assembly .NET mantenendo la compatibilità con i moduli non gestiti. Vedere [assembly misti (nativi e gestiti)](../dotnet/mixed-native-and-managed-assemblies.md) e [interoperabilità .NET e Native](../dotnet/native-and-dotnet-interoperability.md) per ulteriori informazioni sui vantaggi di compilazione con **/clr**.  
@@ -101,7 +96,7 @@ COMObj2->Method(args);  // C++ equivalent
  Questo passaggio ha diverse implicazioni per i progetti che utilizzano i makefile. In questo caso è possibile configurare una destinazione di compilazione separata o versione specifiche di **/clr** compilazione può essere creata da una copia dell'originale.  
   
 ### <a name="change-project-settings"></a>Modificare le impostazioni di progetto  
- **/CLR** possono essere selezionati nell'ambiente di sviluppo seguendo le istruzioni in [/clr (compilazione Common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md). Come accennato in precedenza, questo passaggio disabilita automaticamente le impostazioni di progetto in conflitto.  
+ **/CLR** selezionabile nell'ambiente di sviluppo seguendo le istruzioni riportate in [/clr (compilazione Common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md). Come accennato in precedenza, questo passaggio disabilita automaticamente le impostazioni di progetto in conflitto.  
   
 > [!NOTE]
 >  Durante l'aggiornamento di una libreria gestita o un progetto di servizio web da Visual C++ 2003 le **/Zl** viene opzione del compilatore aggiunta al **riga di comando** pagina delle proprietà. Ciò provoca l'errore LNK2001. Rimuovere **/Zl** dal **riga di comando** pagina delle proprietà da risolvere. Vedere [/Zl (omette nome della libreria predefinita)](../build/reference/zl-omit-default-library-name.md) e [funziona con le proprietà del progetto](../ide/working-with-project-properties.md) per ulteriori informazioni. In alternativa, aggiungere msvcrt.lib e msvcmrt.lib al linker **dipendenze aggiuntive** proprietà.  
@@ -131,7 +126,7 @@ COMObj2->Method(args);  // C++ equivalent
  I tipi nativi sono privati per impostazione predefinita. Ciò può comportare un tipo nativo non è visibile all'esterno della DLL. Correggere l'errore aggiungendo `public` a questi tipi.  
   
 ### <a name="floating-point-and-alignment-issues"></a>A virgola mobile e problemi di allineamento  
- `__controlfp`non è supportato in common language runtime (vedere [control87, controlfp, \__control87_2](../c-runtime-library/reference/control87-controlfp-control87-2.md) per altre informazioni). CLR non rispetta inoltre [allineare](../cpp/align-cpp.md).  
+ `__controlfp` non è supportato in common language runtime (vedere [_control87, controlfp, \__control87_2](../c-runtime-library/reference/control87-controlfp-control87-2.md) per altre informazioni). CLR non rispetta inoltre [allineare](../cpp/align-cpp.md).  
   
 ### <a name="com-initialization"></a>Inizializzazione di COM  
  Common Language Runtime inizializza COM automaticamente quando viene inizializzato un modulo (quando COM viene inizializzato automaticamente tale operazione come MTA). Di conseguenza, in modo esplicito l'inizializzazione di COM genera codici restituiti, che indica che COM è già inizializzato. Il tentativo di inizializzare COM in modo esplicito con un modello di threading quando CLR è già inizializzato COM in un altro modello di threading può causare l'errore dell'applicazione.  

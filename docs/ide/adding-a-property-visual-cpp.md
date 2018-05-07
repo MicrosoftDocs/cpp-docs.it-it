@@ -1,30 +1,25 @@
 ---
-title: "Aggiunta di una proprietà (Visual C++) | Documenti Microsoft"
-ms.custom: 
+title: Aggiunta di una proprietà (Visual C++) | Documenti Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - interfaces, adding properties
 - properties [C++], adding to interfaces
 ms.assetid: 37bd4db7-efd3-4faa-87ad-64902ed16a36
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 33fc8c3b5528c0ced4e0d402aec48791b7fbcb9a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 45eda098202fdf9286905bdc967b6aa1d7bd7035
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="adding-a-property-visual-c"></a>Aggiunta di una proprietà (Visual C++)
 È possibile utilizzare il [Aggiunta guidata proprietà](../ide/names-add-property-wizard.md) per aggiungere un metodo su un'interfaccia nel progetto.  
@@ -52,6 +47,6 @@ ms.lasthandoff: 12/21/2017
   
 ## <a name="see-also"></a>Vedere anche  
  [Creazione di un'interfaccia COM](../ide/creating-a-com-interface-visual-cpp.md)   
- [La modifica di un'interfaccia COM](../ide/editing-a-com-interface.md)   
+ [Modifica di un'interfaccia COM](../ide/editing-a-com-interface.md)   
  [Component Object Model](http://msdn.microsoft.com/library/windows/desktop/ms694363)   
  [Puntatori a interfaccia e interfacce](http://msdn.microsoft.com/library/windows/desktop/ms688484)

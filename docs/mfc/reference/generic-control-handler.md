@@ -1,13 +1,10 @@
 ---
 title: Gestore dei controlli generici | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.mfc.controls
 dev_langs:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - GenericControl Handler [MFC]
 - ON_CONTROL macro [MFC]
 ms.assetid: 1e25e583-5d5a-4363-8904-839991a8570d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 504698f266c7876ea520d50155a70899c9560b2e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ae941e7a59fe673dea6068c6ca6df5feb94db239
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="generic-control-handler"></a>Gestore dei controlli generici
 La seguente voce della mappa corrisponde al prototipo di funzione.  
