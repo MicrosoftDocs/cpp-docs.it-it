@@ -1,13 +1,10 @@
 ---
 title: Supporto per MBCS in Visual C++ | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - _mbcs
 dev_langs:
@@ -31,17 +28,15 @@ helpviewer_keywords:
 - Input Method Editor [C++]
 - MBCS [C++], enabling
 ms.assetid: 6179f6b7-bc61-4a48-9267-fb7951223e38
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 92d0b737c0cfb894f87da61519f30224f6a12fc1
-ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
+ms.openlocfilehash: 41d075edb01fc139660d8e72a7fe53f03ee9e80b
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="mbcs-support-in-visual-c"></a>Supporto per MBCS in Visual C++
 Durante l'esecuzione su una versione di Windows, il sistema di sviluppo di Visual C++ (inclusi gli strumenti editor, debugger e riga di comando del codice sorgente integrato) è abilitata per MBCS, fatta eccezione per la memoria (finestra).  
@@ -50,7 +45,7 @@ Durante l'esecuzione su una versione di Windows, il sistema di sviluppo di Visua
   
  Visual C++ accetta caratteri a byte doppio, ogni volta che è opportuno eseguire questa operazione. Questo include i nomi di percorso e dei file nelle finestre di dialogo e le voci di testo nell'editor di risorse di Visual C++ (ad esempio, testo statico nell'editor finestre) e le voci di testo statico nell'editor delle icone. Inoltre, il preprocessore riconosce alcune istruzioni a byte doppio, ad esempio, nomi di file nelle `#include` istruzioni e come argomenti il **code_seg** e **data_seg** pragma. Nell'editor del codice sorgente, vengono accettate caratteri DBCS in commenti e i valori letterali stringa, anche se non è in elementi del linguaggio C/C++ (ad esempio i nomi delle variabili).  
   
-##  <a name="_core_support_for_the_input_method_editor_.28.ime.29"></a>Supporto per Input Method Editor (IME)  
+##  <a name="_core_support_for_the_input_method_editor_.28.ime.29"></a> Supporto per Input Method Editor (IME)  
  Applicazioni scritte per i mercati dell'Asia orientale, che utilizzano in genere il formato MBCS (ad esempio, Giappone) supportano IME Windows per l'immissione di entrambi i caratteri a byte singolo e doppio. Ambiente di sviluppo di Visual C++ include il supporto completo per IME. Per ulteriori informazioni, vedere [esempio IME: dimostrazione del controllo della modalità IME e dell'implementazione del livello IME 3](http://msdn.microsoft.com/en-us/87ebdf65-cef0-451d-a6fc-d5fb64178b14).  
   
  Le tastiere giapponesi non supportano direttamente i caratteri Kanji. IME converte una stringa fonetica, inserita in uno degli altri alfabeti giapponesi (Romaji, Katakana e Hiragana) relative rappresentazioni Kanji possibili. In caso di ambiguità, è possibile selezionare tra diverse alternative. Dopo aver selezionato il carattere Kanji desiderato, IME passa due `WM_CHAR` messaggi all'applicazione di controllo.  
@@ -71,5 +66,5 @@ Durante l'esecuzione su una versione di Windows, il sistema di sviluppo di Visua
  Gli strumenti basati su Windows Visual C++, ad esempio Spy + + e la risorsa, strumenti di modifica supportano completamente le stringhe IME.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Supporto per il set di caratteri Multibyte (MBCS)](../text/support-for-multibyte-character-sets-mbcss.md)   
+ [Supporto per set di caratteri Multibyte (MBCS)](../text/support-for-multibyte-character-sets-mbcss.md)   
  [Suggerimenti sulla programmazione MBCS](../text/mbcs-programming-tips.md)

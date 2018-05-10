@@ -1,27 +1,22 @@
 ---
 title: 'Guida al porting: Spy++ | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: e558f759-3017-48a7-95a9-b5b779d5e51d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5043e77826e2210f45b70d564313ae6fd976d93a
-ms.sourcegitcommit: 56f6fce7d80e4f61d45752f4c8512e4ef0453e58
+ms.openlocfilehash: f645d1202149ae2625d5a15df5be61029beb6ab1
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/12/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="porting-guide-spy"></a>Guida al porting: Spy++
 Questo case study relativo al porting contiene informazioni generali sul funzionamento di un tipico progetto di porting e sui tipi di problemi che è possibile riscontrare, oltre ad alcuni suggerimenti e trucchi per la risoluzione dei problemi di porting. Questa non intende essere una guida definitiva, perché l'esperienza del porting di un progetto dipende in larga misura dalle specifiche del codice.  
@@ -144,7 +139,7 @@ typedef std::basic_ostringstream<TCHAR> ostrstream;
   
 ```  
   
- Attualmente il progetto viene compilato usando Multi-byte Character Set, dunque `char` è il tipo di dati character appropriato. Per facilitare l'aggiornamento del codice a UTF-16 Unicode, viene tuttavia eseguito l'aggiornamento a `wchar_t`, che si risolve in  **o**  a seconda che la proprietà `TCHAR`Set di caratteri`char` nelle impostazioni del progetto sia impostata su MBCS o su Unicode.  
+ Attualmente il progetto viene compilato usando Multi-byte Character Set, dunque `char` è il tipo di dati character appropriato. Per facilitare l'aggiornamento del codice a UTF-16 Unicode, viene tuttavia eseguito l'aggiornamento a `wchar_t`, che si risolve in **o** a seconda che la proprietà `TCHAR`Set di caratteri`char` nelle impostazioni del progetto sia impostata su MBCS o su Unicode.  
   
  È necessario aggiornare alcuni altri blocchi di codice.  La classe base ios è stata sostituita da ios_base e ostream è stata sostituita da basic_ostream\<T>. Si aggiungono altre due definizioni typedef e la sezione viene compilata.  
   
