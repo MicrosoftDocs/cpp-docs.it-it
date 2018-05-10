@@ -1,13 +1,10 @@
 ---
 title: modulo (C++) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - vc-attr.module
 dev_langs:
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - module attributes
 ms.assetid: 02223b2a-62b5-4262-832f-564b1e11e58e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 75b41ea146096a60210918b5f21e7b6278e35001
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ce7925fd15a7a332dbfb18e2a22dc104783300b7
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="module-c"></a>modulo (C++)
 Definisce il blocco di libreria nel file IDL.  
@@ -73,7 +68,7 @@ Definisce il blocco di libreria nel file IDL.
  Il numero di versione da assegnare al blocco di libreria. Il valore predefinito è 1,0.  
   
  `uuid`  
- L'ID univoco per la libreria. Se si omette questo parametro, viene generato automaticamente un ID per la libreria. Potrebbe essere necessario recuperare il *uuid* del blocco di libreria ed è possibile farlo mediante l'identificatore **__uuidof(***nomelibreria***)**.  
+ L'ID univoco per la libreria. Se si omette questo parametro, viene generato automaticamente un ID per la libreria. Potrebbe essere necessario recuperare il *uuid* del blocco di libreria, è possibile ripetere l'operazione usando l'identificatore **uuidof (***NomeLibreria***)**.  
   
  **lcid**  
  Il parametro di localizzazione. Per altre informazioni, vedere [lcid](http://msdn.microsoft.com/library/windows/desktop/aa367067) .  
@@ -183,7 +178,7 @@ BOOL WINAPI DllMain(DWORD dwReason, LPVOID lpReserved) {
 |**Si applica a**|Ovunque|  
 |**Ripetibile**|No|  
 |**Attributi obbligatori**|Nessuna|  
-|**Attributi non validi**|nessuno|  
+|**Attributi non validi**|Nessuno|  
   
  Per altre informazioni, vedere [Contesti di attributi](../windows/attribute-contexts.md).  
   
@@ -193,7 +188,7 @@ BOOL WINAPI DllMain(DWORD dwReason, LPVOID lpReserved) {
  [Attributi autonomi](../windows/stand-alone-attributes.md)   
  [TypeDef, Enum, Union e Struct (attributi)](../windows/typedef-enum-union-and-struct-attributes.md)   
  [usesgetlasterror](../windows/usesgetlasterror.md)   
- [libreria](http://msdn.microsoft.com/library/windows/desktop/aa367069)   
+ [Libreria](http://msdn.microsoft.com/library/windows/desktop/aa367069)   
  [HelpContext](../windows/helpcontext.md)   
  [HelpString](../windows/helpstring.md)   
  [HelpFile](../windows/helpfile.md)   

@@ -1,13 +1,10 @@
 ---
 title: Controlli delle finestre di dialogo | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,18 +12,16 @@ helpviewer_keywords:
 - dialog box controls, about dialog box controls
 - dialog box controls
 ms.assetid: e216c4f9-2fd4-429d-889a-8ebce7bad177
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 02ca3523de9341c14d2e2a9837ba84f5625a3379
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6a837766bbbe57186f8355895c98ff04d8048bdc
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="controls-in-dialog-boxes"></a>Controlli delle finestre di dialogo
 È possibile aggiungere controlli a una finestra di dialogo utilizzando il [scheda Editor finestre](../windows/dialog-editor-tab-toolbox.md) nel [finestra Casella degli strumenti](/visualstudio/ide/reference/toolbox), che consente di scegliere il controllo desiderato e trascinarlo nella finestra di dialogo. Per impostazione predefinita, finestra Casella degli strumenti è impostata l'opzione Nascondi automaticamente. Viene visualizzata come scheda sul margine sinistro della soluzione quando l'editor della finestra di dialogo è aperta. Tuttavia, è possibile aggiungere finestra Casella degli strumenti nella posizione desiderata, fare clic su di **Nascondi automaticamente** pulsante nell'angolo superiore destro della finestra. Per ulteriori informazioni su come controllare il comportamento di questa finestra, vedere [finestra Gestione](/visualstudio/ide/customizing-window-layouts-in-visual-studio).  
@@ -66,6 +61,6 @@ ms.lasthandoff: 12/21/2017
   
 ## <a name="see-also"></a>Vedere anche  
  [Aggiunta di gestori eventi per i controlli della finestra di dialogo](../windows/adding-event-handlers-for-dialog-box-controls.md)   
- [Tipi di variabili e i controlli finestra di dialogo](../ide/dialog-box-controls-and-variable-types.md)   
+ [Tipi di variabili e controlli finestre di dialogo](../ide/dialog-box-controls-and-variable-types.md)   
  [Editor finestre](../windows/dialog-editor.md)
 

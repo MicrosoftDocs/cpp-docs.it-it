@@ -1,13 +1,10 @@
 ---
 title: safe_cast (estensioni del componente C++) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - safe_cast
 - safe_cast_cpp
@@ -17,18 +14,16 @@ dev_langs:
 helpviewer_keywords:
 - safe_cast keyword [C++]
 ms.assetid: 4fa688bf-a8ec-49bc-a4c5-f48134efa4f7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 14bcf198d527fae51a579a2aa6e072a4c57424f1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c889d39df4d900beba5c9b41015e62293fdbbcde
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="safecast-c-component-extensions"></a>safe_cast (Estensioni del componente C++)
 In caso di esito positivo, l'operazione `safe_cast` restituisce l'espressione specificata come tipo specificato. In caso contrario, genera un'eccezione `InvalidCastException`.  
@@ -73,7 +68,7 @@ expression
  Espressione che restituisce un handle a tipo riferimento o valore oppure un riferimento di rilevamento a un tipo riferimento o valore.  
   
 ### <a name="remarks"></a>Note  
- `safe_cast`Genera `InvalidCastException` se non è possibile convertire *espressione* al tipo specificato da *id tipo*. Per intercettare `InvalidCastException`, specificare il [/EH (modello di gestione delle eccezioni)](../build/reference/eh-exception-handling-model.md) l'opzione del compilatore e utilizzare un'istruzione try/catch.  
+ `safe_cast` genera un'eccezione `InvalidCastException` se non è possibile convertire *espressione* per il tipo specificato da *id tipo*. Per intercettare `InvalidCastException`, specificare il [/EH (modello di gestione delle eccezioni)](../build/reference/eh-exception-handling-model.md) l'opzione del compilatore e utilizzare un'istruzione try/catch.  
   
 ### <a name="requirements"></a>Requisiti  
  Opzione del compilatore: **/ZW**  
@@ -145,7 +140,7 @@ expression
   
  Per ulteriori informazioni sui cast, vedere [operatori di cast](../cpp/casting-operators.md).  
   
- `safe_cast`non si applica un **const_cast** (eseguire il cast **const**).  
+ `safe_cast` non si applica una **const_cast** (cast **const**).  
   
  `safe_cast` è nello spazio dei nomi cli.  Vedere [Platform, default e cli spazi dei nomi](../windows/platform-default-and-cli-namespaces-cpp-component-extensions.md) per ulteriori informazioni.  
   

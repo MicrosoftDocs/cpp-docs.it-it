@@ -1,38 +1,33 @@
 ---
 title: Gli attributi di parametro | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - attributes [C++], parameter attributes
 - parameter attributes
 ms.assetid: 024c2dd5-49d7-4ced-a17a-c56c1bc485b6
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e9856cec61b48c8cdfaf6b4e9acfe8137d8edae0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d2bd1f0d395375b09a192a68c8a60ea3a367115c
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="parameter-attributes"></a>Attributi dei parametri
 Gli attributi seguenti si applicano ai parametri di un metodo in una classe o interfaccia.  
   
 |Attributo|Descrizione|  
 |---------------|-----------------|  
-|[personalizzato](../windows/custom-cpp.md)|Consente di definire un attributo personalizzato.|  
+|[custom](../windows/custom-cpp.md)|Consente di definire un attributo personalizzato.|  
 |[defaultvalue](../windows/defaultvalue.md)|Consente di specificare un valore predefinito per un parametro facoltativo tipizzato.|  
 |[first_is](../windows/first-is.md)|Specifica l'indice del primo elemento della matrice deve essere trasmesso.|  
 |[iid_is](../windows/iid-is.md)|Specifica l'indice del primo elemento della matrice deve essere trasmesso.|  
@@ -42,7 +37,7 @@ Gli attributi seguenti si applicano ai parametri di un metodo in una classe o in
 |[lcid](../windows/lcid.md)|Consente di passare un identificatore delle impostazioni locali a una funzione.|  
 |[length_is](../windows/length-is.md)|Specifica il numero di elementi della matrice deve essere trasmesso.|  
 |[max_is](../windows/max-is.md)|Indica il valore massimo per un indice di matrice valida.|  
-|[facoltativo](../windows/optional-cpp.md)|Specifica un parametro facoltativo per una funzione membro.|  
+|[Facoltativo](../windows/optional-cpp.md)|Specifica un parametro facoltativo per una funzione membro.|  
 |[out](../windows/out-cpp.md)|Identifica i parametri dei puntatori restituiti dalla routine chiamata alla routine chiamante (dal server al client).|  
 |[intervallo](../windows/range-cpp.md)|Specifica un intervallo di valori consentiti per gli argomenti o i campi i cui valori sono impostati in fase di esecuzione.|  
 |[ref](../windows/ref-cpp.md)|Identifica un puntatore di riferimento.|  

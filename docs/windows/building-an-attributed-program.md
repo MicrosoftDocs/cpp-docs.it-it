@@ -1,13 +1,10 @@
 ---
 title: Compilazione di programmi con attributi | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -23,18 +20,16 @@ helpviewer_keywords:
 - .idl files, building
 - type libraries, linker options for building
 ms.assetid: 04997b5f-bf2c-46ec-b868-c4adebbef5f4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e3e39bbd2b630d35942c1c5107041b2fbadf7549
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9d87f95b456e3f99598f48e6ffa8ad29806aa168
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="building-an-attributed-program"></a>Compilazione di un programma con attributi
 Dopo avere implementato gli attributi di Visual C++ nel codice sorgente, è il compilatore Visual C++ per produrre un file IDL e di raccolta del tipo per l'utente. Le seguenti opzioni del linker consentono di generare file tlb e IDL:  
@@ -43,7 +38,7 @@ Dopo avere implementato gli attributi di Visual C++ nel codice sorgente, è il c
   
 -   [/IGNOREIDL](../build/reference/ignoreidl-don-t-process-attributes-into-midl.md)  
   
--   [/MIDL](../build/reference/midl-specify-midl-command-line-options.md)  
+-   [/ MIDL](../build/reference/midl-specify-midl-command-line-options.md)  
   
 -   [/TLBOUT](../build/reference/tlbout-name-dot-tlb-file.md)  
   

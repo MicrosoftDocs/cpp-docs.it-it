@@ -1,13 +1,10 @@
 ---
 title: Espressioni L-value e R-value | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - R-value expressions
 - subscript expressions
 ms.assetid: b790303e-ec6f-4d0d-bc55-df42da267172
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6fb26b4488f6c75c0d9d7b70afb68c3c1b5e3178
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
-ms.translationtype: MT
+ms.openlocfilehash: 654805750b3cd17e2157fa3710791493970b371f
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="l-value-and-r-value-expressions"></a>Espressioni L-Value e R-Value
 Le espressioni che fanno riferimento alle posizioni di memoria vengono chiamate "espressioni l-value". Con L-value si intende un valore del "localizzatore" dell'area di archiviazione o un valore "a sinistra", vale a dire che può essere visualizzato a sinistra del segno di uguale (**=**). Le espressioni L-value sono spesso identificatori.  

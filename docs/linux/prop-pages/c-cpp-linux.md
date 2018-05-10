@@ -1,55 +1,23 @@
 ---
-title: "Proprietà C/C++ (Linux C++) | Microsoft Docs"
-ms.custom: 
+title: Proprietà C/C++ (Linux C++) | Microsoft Docs
+ms.custom: ''
 ms.date: 9/26/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-general
+ms.tgt_pltfrm: Linux
+ms.topic: conceptual
 ms.assetid: 4bb8894b-c874-4a68-935e-b127d54e484f
 author: mikeblome
 ms.author: mblome
-manager: ghogen
-f1_keywords:
-- VC.Project.VCClangCompilerTool.AdditionalIncludeDirectories
-- VC.Project.VCClangCompilerTool.DebugInformationFormat
-- VC.Project.VCClangCompilerTool.ObjectFile
-- VC.Project.VCClangCompilerTool.WarningLevel
-- VC.Project.VCClangCompilerTool.WarnAsError
-- VC.Project.VCClangCompilerTool.AdditionalWarning
-- VC.Project.VCClangCompilerTool.Verbose
-- VC.Project.VCConfiguration.BuildLogFile
-- VC.Project.VCClangCompilerTool.Optimization
-- VC.Project.VCClangCompilerTool.StrictAliasing
-- VC.Project.VCClangCompilerTool.UnrollLoops
-- VC.Project.VCClangCompilerTool.LinkTimeOptimization
-- VC.Project.VCClangCompilerTool.OmitFramePointers
-- VC.Project.VCClangCompilerTool.NoCommonBlocks
-- VC.Project.VCClangCompilerTool.PIC
-- VC.Project.VCClangCompilerTool.ThreadSafeStatics
-- VC.Project.VCClangCompilerTool.RelaxIEEE
-- VC.Project.VCClangCompilerTool.HideInlineMethods
-- VC.Project.VCClangCompilerTool.SymbolsHiddenByDefault
-- VC.Project.VCClangCompilerTool.ExceptionHandling
-- VC.Project.VCClangCompilerTool.RuntimeTypeInfo
-- VC.Project.VCClangCompilerTool.CLanguageStandard
-- VC.Project.VCClangCompilerTool.CppLanguageStandard
-- VC.Project.VCClangCompilerTool.PreprocessorDefinitions
-- VC.Project.VCClangCompilerTool.UndefinePreprocessorDefinitions
-- VC.Project.VCClangCompilerTool.UndefineAllPreprocessorDefinitions
-- VC.Project.VCClangCompilerTool.ShowIncludes
-- VC.Project.VCClangCompilerTool.CompileAs
-- VC.Project.VCClangCompilerTool.ForcedIncludeFiles
-- vc.project.AdditionalOptionsPage
+f1_keywords: []
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: 096775841841574571b7ef731db52f3bbda6485f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1978c566dab949093f0ddbd2aa1aa37ad0942808
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cc-properties-linux-c"></a>Proprietà C/C++ (Linux C++)
 

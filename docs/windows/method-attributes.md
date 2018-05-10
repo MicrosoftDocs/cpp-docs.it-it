@@ -1,31 +1,26 @@
 ---
 title: Gli attributi del metodo | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - method attributes
 - attributes [C++], reference topics
 ms.assetid: b2313352-480d-488b-8c35-6242ffd3a549
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f2413543e7638f47db13799e0549a415ee92c1c2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9d2efe55058ab2ace7530afee7255b2ba08377b0
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="method-attributes"></a>Attributi del metodo
 Gli attributi seguenti si applicano ai metodi in una classe, una coclasse o interfaccia.  
@@ -34,7 +29,7 @@ Gli attributi seguenti si applicano ai metodi in una classe, una coclasse o inte
 |---------------|-----------------|  
 |[bindable](../windows/bindable.md)|Indica che la proprietà supporta l'associazione dati.|  
 |[call_as](../windows/call-as.md)|Consente a una funzione nonremotable può essere mappata a una funzione remota.|  
-|[personalizzato](../windows/custom-cpp.md)|Consente di definire un attributo personalizzato.|  
+|[custom](../windows/custom-cpp.md)|Consente di definire un attributo personalizzato.|  
 |[db_column](../windows/db-column.md)|Associa una colonna specificata al set di righe.|  
 |[db_command](../windows/db-command.md)|Crea un comando OLE DB.|  
 |[db_param](../windows/db-param.md)|Associa la variabile membro a un parametro di input o output e delimita la variabile.|  
@@ -52,7 +47,7 @@ Gli attributi seguenti si applicano ai metodi in una classe, una coclasse o inte
 |[ID](../windows/id.md)|Specifica un DISPID per una funzione membro (una proprietà o un metodo, in un'interfaccia o interfaccia dispatch).|  
 |[immediatebind](../windows/immediatebind.md)|Indica che il database verrà informato immediatamente di tutte le modifiche a una proprietà di un oggetto con associazione a dati.|  
 |[in](../windows/in-cpp.md)|Indica che un parametro deve essere passato dalla routine chiamante alla routine chiamata.|  
-|[locale](../windows/local-cpp.md)|Consente di usare il compilatore MIDL come generatore di intestazione utilizzato nell'intestazione di interfaccia. Quando utilizzato in una singola funzione, indica una procedura locale per il quale non vengono generati stub.|  
+|[local](../windows/local-cpp.md)|Consente di usare il compilatore MIDL come generatore di intestazione utilizzato nell'intestazione di interfaccia. Quando utilizzato in una singola funzione, indica una procedura locale per il quale non vengono generati stub.|  
 |[nonbrowsable](../windows/nonbrowsable.md)|Indica che un membro di interfaccia non deve essere visualizzato in un visualizzatore proprietà.|  
 |[propget](../windows/propget.md)|Specifica una funzione di accesso della proprietà.|  
 |[propput](../windows/propput.md)|Specifica una funzione di impostazione della proprietà.|  
@@ -62,7 +57,7 @@ Gli attributi seguenti si applicano ai metodi in una classe, una coclasse o inte
 |[requestedit](../windows/requestedit.md)|Indica che la proprietà supporta il **OnRequestEdit** notifica.|  
 |[restricted](../windows/restricted.md)|Specifica che un membro di un modulo, interfaccia o interfaccia dispatch non può essere chiamato in modo arbitrario.|  
 |[satype](../windows/satype.md)|Specifica il tipo di dati di **SAFEARRAY** struttura.|  
-|[origine](../windows/source-cpp.md)|Specifica le interfacce di origine del controllo per i punti di connessione in una classe. In una proprietà o metodo, il **origine** attributo indica che il membro restituisce un oggetto o una variante di un'origine di eventi.|  
+|[Origine](../windows/source-cpp.md)|Specifica le interfacce di origine del controllo per i punti di connessione in una classe. In una proprietà o metodo, il **origine** attributo indica che il membro restituisce un oggetto o una variante di un'origine di eventi.|  
 |[synchronize](../windows/synchronize.md)|Sincronizza l'accesso al metodo di destinazione.|  
 |[vararg](../windows/vararg.md)|Specifica che la funzione accetta un numero variabile di argomenti.|  
   

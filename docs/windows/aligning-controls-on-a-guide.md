@@ -1,13 +1,10 @@
 ---
 title: Allineamento di controlli su una Guida | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -23,18 +20,16 @@ helpviewer_keywords:
 - tick mark interval in Dialog editor
 - controls [C++], snap to guides/grid
 ms.assetid: 17db84ba-5288-4478-be57-afa748aa6447
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: eed9acf533939d305e42478bb87307bc0a055d3e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a7c8cc57b4d2e7150ff09858cfd5b315beb37962
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="aligning-controls-on-a-guide"></a>Allineamento di controlli su una guida
 I quadratini di ridimensionamento di controlli Blocca sulle guide quando i controlli vengono spostati e guide agganciare i controlli (se non sono presenti controlli bloccati in precedenza sulla Guida). Quando una Guida viene spostata, verranno spostati anche i controlli che vengono bloccati. I controlli bloccati per più di una Guida vengono ridimensionati quando una delle Guide viene spostata.  

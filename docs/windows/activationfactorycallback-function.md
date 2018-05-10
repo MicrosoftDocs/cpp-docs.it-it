@@ -1,12 +1,9 @@
 ---
 title: Funzione ActivationFactoryCallback | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - module/Microsoft::WRL::Details::ActivationFactoryCallback
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - ActivationFactoryCallback function
 ms.assetid: dd40c79b-1273-4f2a-8c24-ae9926fb4fd9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e88a6f9cb89746cd0380587789fbdd68f80d5e36
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2f1bae2c503f4e5f0c887a46956248184ece9a1e
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="activationfactorycallback-function"></a>ActivationFactoryCallback (funzione)
 Supporta l'infrastruttura WRL e non deve essere utilizzato direttamente dal codice.  
@@ -56,7 +51,7 @@ inline HRESULT STDAPICALLTYPE ActivationFactoryCallback(
  Windows Runtime chiama questa funzione di callback per richiedere un oggetto specificato dal nome della classe di runtime.  
   
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** module.h  
+ **Intestazione:** Implements  
   
  **Namespace:** Microsoft::WRL::Details  
   

@@ -1,13 +1,10 @@
 ---
 title: Conversioni di cast di tipo | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - type casts [C++], about type-cast conversion
 - type-cast conversions [C++]
 ms.assetid: 57ab5902-f12f-4326-a2f6-6282f1d4025a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f402eb49e86c8d6d3ce6c332172375125f577a2b
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
-ms.translationtype: MT
+ms.openlocfilehash: f48d9a013240dddc95fbd977cdf383c3ebff188b
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="type-cast-conversions"></a>Conversioni di cast di tipo
 È possibile utilizzare i cast di tipo per convertire i tipi in modo esplicito.  
@@ -53,7 +48,7 @@ ms.lasthandoff: 03/16/2018
 |A virgola mobile|Qualsiasi tipo aritmetico|  
 |Puntatore a un oggetto o (**void \***)|Qualsiasi tipo Integer (**void \***), un puntatore a un oggetto o un puntatore a funzione|  
 |Puntatore a funzione|Qualsiasi tipo di integrale (void *), un puntatore a un oggetto o un puntatore a funzione|  
-|Una struttura, un'unione o una matrice|Nessuno|  
+|Una struttura, un'unione o una matrice|nessuno|  
 |Tipo void|Qualsiasi tipo|  
   
  È possibile eseguire il cast di un identificatore al tipo `void`. Tuttavia, se il tipo specificato in un'espressione cast-tipo non è `void`, l'identificatore di cui viene eseguito il cast al tipo non può essere un'espressione `void`. È possibile eseguire il cast di qualsiasi espressione a `void`, ma non è possibile eseguire il cast di un'espressione di tipo `void` in alcun altro tipo. Ad esempio, una funzione con il tipo restituito `void` non può avere il relativo cast restituito a un altro tipo.  

@@ -1,28 +1,23 @@
 ---
 title: Chiave API WRL per categoria | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 dev_langs:
 - C++
 ms.assetid: 7367bacf-6b7c-4ecd-a0ce-a662db46fc66
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7ad38d1b24ca40b6209295f873bd44c54c3f6148
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9936c85443f893111b3c2b9de17ca80e6fb382b2
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="key-wrl-apis-by-category"></a>API WRL chiave per categoria
 Le tabelle seguenti elencano principale libreria di modelli di Windows Runtime C++ classi, struct, funzioni e macro. Sono stati omessi costrutti nelle classi e spazi dei nomi di supporto. Questi elenchi aumentano la documentazione dell'API, che è disposti dallo spazio dei nomi.  

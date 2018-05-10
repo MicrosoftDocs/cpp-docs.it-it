@@ -1,12 +1,9 @@
 ---
 title: EnableIf (struttura) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - internal/Microsoft::WRL::Details::EnableIf
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - EnableIf structure
 ms.assetid: 7825b283-e6b2-4f39-a4b9-c03bcd431b8e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e9da168cd0f715f3140a9e9c9a93d943bcee3d97
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1fec2f00c40b833cc9a65db1db58920543aa90d7
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="enableif-structure"></a>EnableIf (struttura)
 Supporta l'infrastruttura WRL e non deve essere utilizzato direttamente dal codice.  
@@ -68,7 +63,7 @@ struct EnableIf<true, T>;
  `EnableIf`  
   
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** FTM  
+ **Intestazione:** h  
   
  **Namespace:** Microsoft::WRL::Details  
   

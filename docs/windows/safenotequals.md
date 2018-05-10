@@ -1,13 +1,10 @@
 ---
 title: SafeNotEquals | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - SafeNotEquals
 dev_langs:
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - SafeNotEquals function
 ms.assetid: 032e45a8-4159-4b55-b7cc-ecd27f4e4788
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c1d4449d66f82db73b39c7b3be3ce85ba92ab88d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 61104cd55ed349131fc884951da77455aa9ca978
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="safenotequals"></a>SafeNotEquals
 Determina se due numeri non sono uguali.  
@@ -49,7 +44,7 @@ inline bool SafeNotEquals (
  Il secondo numero da confrontare. Deve essere di tipo U.  
   
 ## <a name="return-value"></a>Valore restituito  
- `true`Se `t` e `u` non sono uguali; in caso contrario `false`.  
+ `true` Se `t` e `u` non sono uguali; in caso contrario `false`.  
   
 ## <a name="remarks"></a>Note  
  Il metodo migliora `!=` perché `SafeNotEquals` consente di confrontare due tipi diversi di numeri.  

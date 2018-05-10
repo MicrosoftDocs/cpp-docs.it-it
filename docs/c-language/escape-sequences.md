@@ -1,13 +1,10 @@
 ---
 title: Sequenze di escape | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -39,17 +36,15 @@ helpviewer_keywords:
 - "	 escape sequence"
 - backspace escape sequence
 ms.assetid: 5aef377f-a76c-4d5c-aa04-8308758ad6a8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d341aa5af2b16d1a29bc4e3dfe2f97a68b73d6ba
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7cd58f7418e2e6a2ca7592c345c5d71729cf8324
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="escape-sequences"></a>Sequenze di escape
 Le sequenze di caratteri sono costituite da una barra rovesciata (**\\**) seguita da una lettera o da una combinazione di cifre denominate "caratteri di escape". Per rappresentare un carattere di nuova riga, una virgoletta singola o altri caratteri specifici in una costante carattere, è necessario utilizzare sequenze di escape. Una sequenza di escape verrà considerata come un singolo carattere ed è quindi valida come costante carattere.  

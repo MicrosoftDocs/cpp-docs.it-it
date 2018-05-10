@@ -1,29 +1,24 @@
 ---
 title: Costanti Integer C | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 02/27/2018
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - integer constants
 ms.assetid: fcf6b83c-2038-49ec-91ca-3d5ca1f83037
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e0f28b41c54b14c9e673d3fb8e7bb4947206cfd3
-ms.sourcegitcommit: d24de38f9da844f824acb9d200a3f263077145fc
+ms.openlocfilehash: eef5ba48d28b898ffc624d5790b0f414a8c112c3
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="c-integer-constants"></a>Costanti Integer C
 

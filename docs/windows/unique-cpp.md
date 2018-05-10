@@ -1,13 +1,10 @@
 ---
 title: Unique (C++) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - vc-attr.unique
 dev_langs:
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - unique attribute
 ms.assetid: abd7ed14-5ae7-44a8-8333-0058e9c92b2f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 88ba3e46a9a383ee72f3e979b23a275cc6f95d0e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ebb492d576e82c276aeb1cb464a39b558040fdc5
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="unique-c"></a>unique (C++)
 Specifica un puntatore univoco.  
@@ -51,10 +46,10 @@ Specifica un puntatore univoco.
   
 |||  
 |-|-|  
-|**Si applica a**|`typedef`, `struct`, **unione**, parametro di interfaccia, metodo di interfaccia|  
+|**Si applica a**|`typedef`, `struct`, **union**, parametro di interfaccia, metodo di interfaccia|  
 |**Ripetibile**|No|  
 |**Attributi obbligatori**|Nessuna|  
-|**Attributi non validi**|nessuno|  
+|**Attributi non validi**|Nessuno|  
   
  Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](../windows/attribute-contexts.md).  
   

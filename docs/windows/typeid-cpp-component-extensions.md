@@ -1,30 +1,25 @@
 ---
 title: typeid (estensioni del componente C++) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - typeid keyword [C++]
 ms.assetid: e9706cae-e7c4-4d6d-b474-646d73df3e70
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 20a3b1153bbb8a8502a54aa74998817abf191860
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: db1efac0a38aaa11238452e418277f78dbcd6d9d
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="typeid--c-component-extensions"></a>typeid (Estensioni del componente C++)
 Ottiene un valore che indica il tipo di oggetto.  
@@ -77,15 +72,15 @@ type::typeid
   
  **Note**  
   
- `typeid`viene utilizzato per ottenere il <xref:System.Type> per un tipo in fase di compilazione.  
+ `typeid` viene usata per ottenere il <xref:System.Type> per un tipo in fase di compilazione.  
   
- `typeid`è simile a ottenere lo System:: Type per un tipo in fase di esecuzione utilizzando <xref:System.Type.GetType%2A> o <xref:System.Object.GetType%2A>. Tuttavia, typeid accetta solo un nome di tipo come parametro.  Se si desidera utilizzare un'istanza di un tipo per ottenere il nome System:: Type, usare GetType.  
+ `typeid` è simile a come ottenere lo System:: Type per un tipo in fase di esecuzione usando <xref:System.Type.GetType%2A> o <xref:System.Object.GetType%2A>. Tuttavia, typeid accetta solo un nome di tipo come parametro.  Se si desidera utilizzare un'istanza di un tipo per ottenere il nome System:: Type, usare GetType.  
   
- `typeid`deve essere in grado di valutare un nome di tipo (tipo) in fase di compilazione, mentre GetType restituisce il tipo da restituire in fase di esecuzione.  
+ `typeid` deve essere in grado di valutare un nome di tipo (tipo) in fase di compilazione, mentre GetType restituisce il tipo da restituire in fase di esecuzione.  
   
- `typeid`può accettare un nome di tipo nativo o un alias di runtime del linguaggio comuni per il nome di tipo nativo; vedere [equivalenti di .NET Framework a tipi nativi C++ (C + + CLI)](../dotnet/dotnet-framework-equivalents-to-cpp-native-types-cpp-cli.md) per ulteriori informazioni.  
+ `typeid` può richiedere un tipo nativo nome o common language runtime alias per il nome di tipo nativo; vedere [equivalenti di .NET Framework a tipi nativi C++ (C + c++ /CLI)](../dotnet/dotnet-framework-equivalents-to-cpp-native-types-cpp-cli.md) per altre informazioni.  
   
- `typeid`funziona anche con i tipi nativi, anche se verrà comunque restituito un System:: Type.  Per ottenere una struttura type_info, utilizzare [operatore typeid](../cpp/typeid-operator.md).  
+ `typeid` funziona anche con i tipi nativi, anche se verrà comunque restituito un System:: Type.  Per ottenere una struttura type_info, utilizzare [operatore typeid](../cpp/typeid-operator.md).  
   
 ### <a name="requirements"></a>Requisiti  
  Opzione del compilatore: **/clr**  

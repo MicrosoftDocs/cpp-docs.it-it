@@ -1,13 +1,10 @@
 ---
 title: Aggiunta o eliminazione di una stringa | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.editors.string
 dev_langs:
@@ -18,18 +15,16 @@ helpviewer_keywords:
 - strings [C++], deleting in string tables
 - string tables, adding strings
 ms.assetid: 077077b4-0f4b-4633-92d6-60b321164cab
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0e485e1c689814e63c5a43edba2ded80967d576a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e15e29c99dba89ef29ba5b909c62f819bedf63f4
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="adding-or-deleting-a-string"></a>Aggiunta o eliminazione di una stringa
 È possibile inserire rapidamente nuove voci nella tabella di stringhe utilizzando l'editor di stringa. Le nuove stringhe vengono inserite alla fine della tabella e vengono assegnate il successivo identificatore disponibile. È quindi possibile modificare le proprietà ID, Value o Caption nel [finestra proprietà](/visualstudio/ide/reference/properties-window) in base alle esigenze.  

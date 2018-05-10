@@ -1,31 +1,26 @@
 ---
 title: ID simbolo predefiniti | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - symbols, predefined IDs
 - predefined symbol IDs
 ms.assetid: 91a5d610-1a04-47e8-b8a4-63ad650a90df
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e431ce20361a9a7d3d05676d1b9da01b98c07d5a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3c28d5d3d04bc48e7c79d634406d40292d869e36
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="predefined-symbol-ids"></a>ID di simbolo già definiti
 Quando si inizia un nuovo progetto, a seconda del tipo di progetto, alcuni ID simbolo sono predefiniti per l'utilizzo. Questi ID simbolo supportano diverse librerie e tipi di progetto come MFC. Rappresentano le attività comuni che sono in genere incluse in tutte le applicazioni o azioni di dispositivi hardware, ad esempio un mouse o una stampante.  

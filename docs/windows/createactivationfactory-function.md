@@ -1,12 +1,9 @@
 ---
 title: Funzione CreateActivationFactory | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - module/Microsoft::WRL::Details::CreateActivationFactory
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - CreateActivationFactory function
 ms.assetid: a1a53e04-6757-4faf-a4c8-ecf06e43b959
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b6b2fe8ad131a3cafda03f8ddb0d32fad3e56173
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e842a13461757e26dd1aed663c590df4c1ba6c74
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="createactivationfactory-function"></a>CreateActivationFactory (funzione)
 Crea una factory che produce istanze della classe specificata che può essere attivata da Windows Runtime.  
@@ -62,7 +57,7 @@ template<typename Factory>
  Viene generato un errore di asserzione se il parametro di modello `Factory` non deriva dall'interfaccia IActivationFactory.  
   
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** module.h  
+ **Intestazione:** Implements  
   
  **Spazio dei nomi:** Microsoft::WRL  
   

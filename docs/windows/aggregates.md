@@ -1,13 +1,10 @@
 ---
 title: funzioni di aggregazione | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - vc-attr.aggregates
 dev_langs:
@@ -18,18 +15,16 @@ helpviewer_keywords:
 - aggregate objects [C++], aggregates attribute
 - aggregates [C++]
 ms.assetid: 67a084c9-941f-474b-a029-9c93b38ebe9a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f3fc74f10e0b5900030d48b37d1918de8807d152
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 19dea3b078f894931002d186b20c1ffb85bb763b
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="aggregates"></a>aggregati
 Indica che l'oggetto aggrega l'oggetto specificato dal CLSID.  
@@ -102,7 +97,7 @@ struct CObject : IObject
 |**Si applica a**|**class**, `struct`|  
 |**Ripetibile**|Yes|  
 |**Attributi obbligatori**|Uno o più degli attributi seguenti: **coclass**, **progid**o **vi_progid**.|  
-|**Attributi non validi**|nessuno|  
+|**Attributi non validi**|Nessuno|  
   
  Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](../windows/attribute-contexts.md).  
   
@@ -111,6 +106,6 @@ struct CObject : IObject
  [Attributi di classe](../windows/class-attributes.md)   
  [TypeDef, Enum, Union e Struct (attributi)](../windows/typedef-enum-union-and-struct-attributes.md)   
  [Aggregazione](http://msdn.microsoft.com/library/windows/desktop/ms686558)   
- [Aggregabile](http://msdn.microsoft.com/library/windows/desktop/aa366721)   
+ [aggregabile](http://msdn.microsoft.com/library/windows/desktop/aa366721)   
  [COM_INTERFACE_ENTRY_AUTOAGGREGATE_BLIND](../atl/reference/com-interface-entry-macros.md#com_interface_entry_autoaggregate_blind)   
  

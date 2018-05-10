@@ -1,12 +1,10 @@
 ---
-title: 'Procedura dettagliata: Creare un''applicazione Windows Desktop tradizionale (C++) | Documenti Microsoft'
-ms.custom: 
+title: "Procedura dettagliata: Creare un'applicazione Windows Desktop tradizionale (C++) | Documenti Microsoft"
+ms.custom: get-started-article
 ms.date: 1/11/2018
-ms.reviewer: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: get-started-article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,15 +13,14 @@ helpviewer_keywords:
 - Windows API [C++]
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ce3c18abbace2181b2d31e0621b6e376021be68a
-ms.sourcegitcommit: c2e990450ccd528d85b2783fbc63042612987cfd
+ms.openlocfilehash: e5581292ec163a2e745802c66a87c14a8457f141
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/16/2018
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="walkthrough-create-a-traditional-windows-desktop-application-c"></a>Procedura dettagliata: Creare un'applicazione Windows Desktop tradizionale (C++)
 
@@ -74,7 +71,7 @@ Seguire questi passaggi per creare il primo progetto desktop di Windows e immett
 
 È stato creato il progetto e file di origine viene aperto nell'editor. Per continuare, ignorare [creare il codice](#create-the-code).
 
-### <a id="create-in-vs2017-rtm"></a>Per creare un progetto desktop di Windows in Visual Studio 2017 RTM
+### <a id="create-in-vs2017-rtm"></a> Per creare un progetto desktop di Windows in Visual Studio 2017 RTM
 
 1. Scegliere **Nuovo** dal menu **File** e quindi **Progetto**.
 
@@ -86,7 +83,7 @@ Seguire questi passaggi per creare il primo progetto desktop di Windows e immett
 
 1. Nel **Panoramica** pagina del **Creazione guidata applicazione Win32**, scegliere **Avanti**.
 
-   ![Creare DesktopApp in panoramica di creazione guidata applicazione Win32](../build/media/desktop-app-win32-wizard-overview-150.png "creare DesktopApp in panoramica di creazione guidata applicazione Win32")
+   ![Creare DesktopApp nei cenni preliminari sulla creazione guidata applicazione Win32](../build/media/desktop-app-win32-wizard-overview-150.png "creare DesktopApp nei cenni preliminari sulla creazione guidata applicazione Win32")
 
 1. Nel **le impostazioni dell'applicazione** pagina **tipo di applicazione**selezionare **applicazione Windows**. In **Opzioni aggiuntive**selezionare **Progetto vuoto**. Scegliere **fine** per creare il progetto.
 
@@ -124,7 +121,7 @@ Successivamente, si apprenderà come creare il codice per un'applicazione deskto
    > [!NOTE]
    > Quali sono tutte le parole aggiuntive, ad esempio **CALLBACK**, o **HINSTANCE**, o  **\_In\_**? L'API Windows tradizionale utilizza typedef e le macro del preprocessore per astrarre alcuni dettagli di tipi e specifico della piattaforma codice, ad esempio le convenzioni di chiamata **declspec** dichiarazioni e del compilatore pragma. In Visual Studio, è possibile utilizzare IntelliSense [informazioni rapide](/visualstudio/ide/using-intellisense#quick-info) funzionalità per visualizzare queste definizioni typedef e macro definiscono. Posizionare il mouse sopra la parola di interesse, oppure selezionarlo e premere ctrl-K, ctrl-I per una piccola finestra popup che contiene la definizione. Per altre informazioni, vedere [Using IntelliSense](/visualstudio/ide/using-intellisense) (Uso di IntelliSense). Tipi restituiti e parametri utilizzano spesso *annotazioni SAL* consentono di catch degli errori di programmazione. Per ulteriori informazioni, vedere [utilizzo delle annotazioni SAL per ridurre gli errori del codice C/C++](/visualstudio/code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects).
 
-1. I programmi desktop di Windows richiedono &lt;Windows. h >. &lt;Tchar. h > definisce il `TCHAR` (macro), che si risolve in definitiva per `wchar_t` se il simbolo UNICODE è definito nel progetto, in caso contrario viene risolta `char`.  Se si compila sempre con supporto per UNICODE, è necessario TCHAR e può usare direttamente solo wchar_t.
+1. I programmi desktop di Windows richiedono &lt;Windows. h >. &lt;Tchar. h > definisce le `TCHAR` (macro), che si risolve in definitiva da `wchar_t` se il simbolo UNICODE è definito nel progetto, in caso contrario, viene risolto in `char`.  Se si compila sempre con supporto per UNICODE, è necessario TCHAR e può usare direttamente solo wchar_t.
 
    ```cpp
    #include <windows.h>
@@ -369,7 +366,7 @@ Successivamente, si apprenderà come creare il codice per un'applicazione deskto
    }
    ```
 
-   `HDC`In questo codice è un handle a un contesto di dispositivo, è una struttura di dati utilizzato da Windows per consentire all'applicazione di comunicare con il sottosistema di grafica. Il `BeginPaint` e `EndPaint` funzioni assicurarsi che l'applicazione si comporta come un elemento positivo e non utilizza il contesto di dispositivo per più del necessario. In questo modo che il sottosistema di grafica è disponibile per l'utilizzo da altre applicazioni.
+   `HDC` In questo codice è un handle a un contesto di dispositivo, ovvero una struttura di data utilizzato da Windows per consentire all'applicazione di comunicare con il sottosistema di grafica. Il `BeginPaint` e `EndPaint` funzioni assicurarsi che l'applicazione si comporta come un elemento positivo e non utilizza il contesto di dispositivo per più del necessario. In questo modo che il sottosistema di grafica è disponibile per l'utilizzo da altre applicazioni.
 
 1. Un'applicazione gestisce in genere molti altri messaggi, ad esempio, [WM_CREATE](https://msdn.microsoft.com/library/windows/desktop/ms632619) quando viene creata una finestra, e [WM_DESTROY](https://msdn.microsoft.com/library/windows/desktop/ms632620) quando la finestra è chiusa. Il codice seguente illustra una funzione `WndProc` di base, ma completa.
 

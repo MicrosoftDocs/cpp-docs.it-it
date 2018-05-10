@@ -1,13 +1,10 @@
 ---
 title: Stringhe lingua | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - c.strings
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - language strings
 ms.assetid: bbee63b1-af0b-4e44-9eaf-dd3e265c05fd
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 85f0c9b06ae85128209f06d95375e09043b3f9c8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 92ad129a5703f509cfd9543497cceffae3a6e7b3
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="language-strings"></a>Language Strings
 Le funzioni `setlocale` e `_create_locale` possono utilizzare le lingue supportate dall'API NLS di Windows nei sistemi operativi che non utilizzano la tabella codici Unicode. Per l'elenco delle lingue supportate dalle singole versioni del sistema operativo, vedere [National Language Support (NLS) API Reference](https://www.microsoft.com/resources/msdn/goglobal/default.mspx). La stringa lingua può essere uno dei valori nelle colonne **Language** (Lingua) e **Language name abbreviation** (Abbreviazione nome lingua) dell'elenco delle lingue supportate. Per informazioni aggiuntive sul supporto delle lingue in base alla versione del sistema operativo, vedere [Appendix A: Product Behavior](http://msdn.microsoft.com/goglobal/bb896001.aspx) (Appendice A: comportamento del prodotto) in "[MS-LCID]: Windows Language Code Identifier (LCID) Reference" (Informazioni di riferimento sugli identificatori di lingua (LCID) di Windows).   

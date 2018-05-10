@@ -1,34 +1,29 @@
 ---
 title: Esempi di espressioni Lambda | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - lambda expressions [C++], examples
 ms.assetid: 52506b15-0771-4190-a966-2f302049ca86
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3177896b8cfdff78b0af2aeb40873f31099ce7d4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c83802dcc7382040d3b9f40bd0bbc2fe13d076f1
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="examples-of-lambda-expressions"></a>Esempi di espressioni lambda
 In questo articolo viene illustrato come utilizzare le espressioni lambda nei programmi. Per una panoramica delle espressioni lambda, vedere [espressioni Lambda](../cpp/lambda-expressions-in-cpp.md). Per ulteriori informazioni sulla struttura di un'espressione lambda, vedere [sintassi delle espressioni Lambda](../cpp/lambda-expression-syntax.md).  
   
-##  <a name="declaringLambdaExpressions"></a>Dichiarazioni di espressioni Lambda  
+##  <a name="declaringLambdaExpressions"></a> Dichiarazioni di espressioni Lambda  
   
 ### <a name="example-1"></a>Esempio 1  
  Poiché un'espressione lambda è tipizzata, è possibile assegnarla a un `auto` variabile o a un [funzione](../standard-library/function-class.md) dell'oggetto, come illustrato di seguito:  
@@ -109,7 +104,7 @@ int main()
   
  [[Contenuto dell'articolo](#top)]  
   
-##  <a name="callingLambdaExpressions"></a>Chiamata di espressioni Lambda  
+##  <a name="callingLambdaExpressions"></a> Chiamata di espressioni Lambda  
  È possibile chiamare un'espressione lambda immediatamente, come illustrato nel frammento di codice seguente. Nel secondo frammento viene illustrato come passare un'espressione lambda come argomento agli algoritmi della libreria Standard C++, ad esempio `find_if`.  
   
 ### <a name="example-1"></a>Esempio 1  
@@ -185,7 +180,7 @@ The first even number in the list is 42.
   
  [[Contenuto dell'articolo](#top)]  
   
-##  <a name="nestingLambdaExpressions"></a>Annidamento di espressioni Lambda  
+##  <a name="nestingLambdaExpressions"></a> Annidamento di espressioni Lambda  
   
 ### <a name="example"></a>Esempio  
  È possibile annidare un'espressione lambda all'interno di un'altra, come illustrato nell'esempio. L'espressione lambda interna moltiplica il relativo argomento per 2 e restituisce il risultato. L'espressione lambda esterna chiama l'espressione lambda interna con il relativo argomento e aggiunge 3 al risultato.  
@@ -222,7 +217,7 @@ int main()
   
  [[Contenuto dell'articolo](#top)]  
   
-##  <a name="higherOrderLambdaExpressions"></a>Funzioni Lambda di ordine superiore  
+##  <a name="higherOrderLambdaExpressions"></a> Funzioni Lambda di ordine superiore  
   
 ### <a name="example"></a>Esempio  
  Molti linguaggi di programmazione supportano il concetto di un *funzione di ordine superiore.* Una funzione di ordine superiore è un'espressione lambda che accetta un'altra espressione lambda come argomento o che restituisce un'espressione lambda. È possibile utilizzare il [funzione](../standard-library/function-class.md) classe per consentire un'espressione lambda C++ si comporta come una funzione di ordine superiore. Nell'esempio seguente viene illustrata un'espressione lambda che restituisce un oggetto `function` e un'espressione lambda che accetta un oggetto `function` come argomento.  
@@ -271,7 +266,7 @@ int main()
   
  [[Contenuto dell'articolo](#top)]  
   
-##  <a name="methodLambdaExpressions"></a>Utilizzo di un'espressione Lambda in una funzione  
+##  <a name="methodLambdaExpressions"></a> Tramite un'espressione Lambda in una funzione  
   
 ### <a name="example"></a>Esempio  
  È possibile usare le espressioni lambda nel corpo di una funzione. L'espressione lambda può accedere a qualsiasi funzione o membro dati a cui può accedere la funzione contenitrice. È possibile acquisire in modo esplicito o implicito il puntatore `this` per fornire l'accesso alle funzioni e ai membri dati della classe contenitrice.  
@@ -366,7 +361,7 @@ int main()
   
  [[Contenuto dell'articolo](#top)]  
   
-##  <a name="templateLambdaExpressions"></a>Utilizzo di espressioni Lambda con modelli  
+##  <a name="templateLambdaExpressions"></a> Utilizzo di espressioni Lambda con modelli  
   
 ### <a name="example"></a>Esempio  
  Poiché le espressioni lambda sono tipizzate, è possibile utilizzarle con i modelli C++. Nell'esempio seguente vengono illustrate le funzioni `negate_all` e `print_all`. La funzione `negate_all` applica l'`operator-` unario a ogni elemento dell'oggetto `vector`. La funzione `print_all` visualizza ogni elemento nell'oggetto `vector` nella console.  
@@ -430,7 +425,7 @@ After negate_all():
   
  [[Contenuto dell'articolo](#top)]  
   
-##  <a name="ehLambdaExpressions"></a>Gestione delle eccezioni  
+##  <a name="ehLambdaExpressions"></a> Gestione delle eccezioni  
   
 ### <a name="example"></a>Esempio  
  Il corpo di un'espressione lambda segue le regole per la gestione delle eccezioni strutturate (SEH) e la gestione delle eccezioni C++. È possibile gestire un'eccezione generata nel corpo di un'espressione lambda o rinviare la gestione delle eccezioni all'ambito contenitore. Nell'esempio seguente viene utilizzata la funzione `for_each` e un'espressione lambda per riempire un oggetto `vector` con i valori di un altro oggetto. Usa un `try` / `catch` blocco per gestire l'accesso non valido per il primo vettore.  
@@ -484,7 +479,7 @@ Caught 'invalid vector<T> subscript'.
   
  [[Contenuto dell'articolo](#top)]  
   
-##  <a name="managedLambdaExpressions"></a>Utilizzo di espressioni Lambda con tipi gestiti (C + c++ /CLI)  
+##  <a name="managedLambdaExpressions"></a> Utilizzo di espressioni Lambda con tipi gestiti (C + c++ /CLI)  
   
 ### <a name="example"></a>Esempio  
  La clausola di acquisizione di un'espressione lambda non può contenere una variabile che dispone di un tipo gestito. È tuttavia possibile passare un argomento che dispone di un tipo gestito all'elenco di parametri di un'espressione lambda. L'esempio seguente contiene un'espressione lambda che acquisisce la variabile locale non gestita `ch` per valore e accetta un oggetto <xref:System.String?displayProperty=fullName> come parametro.  

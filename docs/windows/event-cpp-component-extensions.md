@@ -1,13 +1,10 @@
 ---
 title: eventi (estensioni del componente C++) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - event
 - event_cpp
@@ -16,18 +13,16 @@ dev_langs:
 helpviewer_keywords:
 - event keyword [C++]
 ms.assetid: c4998e42-883c-4419-bbf4-36cdc979dd27
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bdaef6a98e080da2e1290f1191590b7509c2eccd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7859b8b58bbd8765c38daea46efea5859ba61d67
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="event--c-component-extensions"></a>evento (Estensioni del componente C++)
 Il `event` parola chiave dichiara un *evento*, ovvero una notifica agli utenti registrati (*gestori eventi*) che si è verificato qualcosa di interesse.  
@@ -53,19 +48,19 @@ modifiereventdelegate^ event_name
   
  **Parametri**  
   
- *modificatore*  
+ *Modificatore*  
  Un modificatore che può essere usato in una dichiarazione di evento o in un metodo della funzione di accesso all'evento.  I valori possibili sono `static` e `virtual`.  
   
  *delegate*  
  Il [delegato](../windows/delegate-cpp-component-extensions.md), la cui firma deve corrispondere il gestore dell'evento.  
   
- *EVENT_NAME*  
+ *event_name*  
  Nome dell'evento.  
   
  *return_value*  
  Il valore restituito del metodo della funzione di accesso all'evento.  Per essere verificabile, il tipo restituito deve essere `void`.  
   
- *parametri*  
+ *Parametri*  
  (facoltativo) Parametri per il `raise` che corrisponde alla firma del metodo di *delegato* parametro.  
   
  **Note**  
@@ -82,7 +77,7 @@ modifiereventdelegate^ event_name
   
  È possibile usare `operators+=` e `operator-=` per aggiungere e rimuovere un gestore eventi o chiamare i metodi `add()` e `remove()` in modo esplicito.  
   
- `event`è una parola chiave sensibile al contesto. vedere [parole chiave sensibili al contesto](../windows/context-sensitive-keywords-cpp-component-extensions.md) per ulteriori informazioni.  
+ `event` è una parola chiave sensibile al contesto. vedere [le parole chiave sensibili al contesto](../windows/context-sensitive-keywords-cpp-component-extensions.md) per altre informazioni.  
   
 ## <a name="windows-runtime"></a>Windows Runtime  
   
@@ -115,19 +110,19 @@ modifiereventdelegate^ event_name
   
  **Parametri**  
   
- *modificatore*  
+ *Modificatore*  
  Un modificatore che può essere usato in una dichiarazione di evento o in un metodo della funzione di accesso all'evento.  I valori possibili sono `static` e `virtual`.  
   
  *delegate*  
  Il [delegato](../windows/delegate-cpp-component-extensions.md), la cui firma deve corrispondere il gestore dell'evento.  
   
- *EVENT_NAME*  
+ *event_name*  
  Nome dell'evento.  
   
  *return_value*  
  Il valore restituito del metodo della funzione di accesso all'evento.  Per essere verificabile, il tipo restituito deve essere `void`.  
   
- *parametri*  
+ *Parametri*  
  (facoltativo) Parametri per il `raise` che corrisponde alla firma del metodo di *delegato* parametro.  
   
  **Note**  
@@ -138,7 +133,7 @@ modifiereventdelegate^ event_name
   
  Esistono due tipi di dichiarazioni eventi:  
   
- *membri dati di evento*  
+ *membri dati dell'evento*  
  L'archiviazione per l'evento, sotto forma di un membro del tipo delegato, viene creata dal compilatore per gli eventi del membro dati.  Un membro dati evento deve essere dichiarato all'interno di una classe. È anche noto come un evento semplice (vedere l'esempio di codice riportato di seguito).  
   
  *blocchi evento*  

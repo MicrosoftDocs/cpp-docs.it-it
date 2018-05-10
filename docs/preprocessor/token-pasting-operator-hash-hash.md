@@ -1,12 +1,9 @@
 ---
 title: Concatenamento dei token operatore (#) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - '##'
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - preprocessor, operators
 - '## preprocessor operator'
 ms.assetid: 4f173503-990f-4bff-aef3-ec4d1f1458ef
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d3a8c2cef3560a6823314a4edb2cba78994864ce
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: c6e224c0327a7ba50c3e13ca78d749f41ad4641f
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="token-pasting-operator-"></a>Operatore di concatenamento dei token (##)
 L'operatore doppia cancelletto o "concatenamento dei token" (**##**), talvolta denominato l'operatore di "unione" viene usato nelle macro simile a oggetto sia di tipo funzione. Consente ai token separati di essere uniti in un unico token e quindi non può essere il primo o l'ultimo token nella definizione macro.  

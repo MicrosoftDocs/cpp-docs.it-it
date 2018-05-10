@@ -1,13 +1,10 @@
 ---
 title: Creazione di un nuovo pulsante della barra degli strumenti | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.editors.toolbar
 dev_langs:
@@ -18,18 +15,16 @@ helpviewer_keywords:
 - toolbar buttons (in Toolbar editor), creating
 - toolbar buttons (in Toolbar editor)
 ms.assetid: 46c120fe-4f2a-4887-a08f-bd1fea04b3f4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6b89d88d931603f1f8dfd65f08cb78210eac19a3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d883fbb34fe45be2ad84860ea7564350346749f2
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="creating-a-new-toolbar-button"></a>Creazione di un nuovo pulsante di una barra degli strumenti
 ### <a name="to-create-a-new-toolbar-button"></a>Per creare un nuovo pulsante della barra degli strumenti  

@@ -1,30 +1,25 @@
 ---
-title: "Interpretazione di più dichiaratori complessi | Microsoft Docs"
-ms.custom: 
+title: Interpretazione di più dichiaratori complessi | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - complex declarators
 - interpreting complex declarators
 ms.assetid: dd5b7019-c86d-4645-a5cc-21f834de6f4a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 82779e423a1958c0392aebb55d29e41bdd132cc1
-ms.sourcegitcommit: 6576d4d8a768279b4d340d036581e0f8a2974ea7
+ms.openlocfilehash: 2dd51e4e8a3c6805b9facfef54565368252e87df
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="interpreting-more-complex-declarators"></a>Interpretazione di più dichiaratori complessi
 È possibile racchiudere qualsiasi dichiaratore tra parentesi per specificare un'interpretazione particolare di un "dichiaratore complesso". Un dichiaratore complesso è un identificatore qualificato da più matrici, puntatori o modificatori di funzione. È possibile applicare varie combinazioni di matrice, puntatore e modificatori di funzione a un singolo identificatore. `typedef` può essere utilizzato in genere per semplificare dichiarazioni. Vedere [Dichiarazioni typedef](../c-language/typedef-declarations.md).  

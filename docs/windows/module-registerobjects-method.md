@@ -1,12 +1,9 @@
 ---
 title: 'Metodo Module:: registerobjects | Documenti Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - module/Microsoft::WRL::Module::RegisterObjects
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - RegisterObjects method
 ms.assetid: db4077b7-068d-4534-aaa5-41b5444ccb49
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5e73a59ff18c16a898ca1a9d7919615a2dec18bc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 986dcfff49529eedd8d495f4c37e19fa2b6cb8bc
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="moduleregisterobjects-method"></a>Metodo Module::RegisterObjects
 Registra gli oggetti COM o Windows Runtime in modo da altre applicazioni di connettersi ad essi.  
@@ -50,7 +45,7 @@ HRESULT RegisterObjects(
  S_OK se ha esito positivo. in caso contrario, HRESULT che indica il motivo per l'operazione non riuscita.  
   
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** module.h  
+ **Intestazione:** Implements  
   
  **Spazio dei nomi:** Microsoft::WRL
  

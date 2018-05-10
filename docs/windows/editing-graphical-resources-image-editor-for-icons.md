@@ -1,13 +1,10 @@
 ---
 title: Modifica delle risorse grafiche (Editor di immagini per le icone) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.editors.bitmap
 dev_langs:
@@ -20,18 +17,16 @@ helpviewer_keywords:
 - graphics [C++], Image editor
 - graphics [C++], editing
 ms.assetid: 09e422c5-f712-4378-b973-c7a3bbc92b9c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8ffdc026c53a9f26e68d9f0e8626ebb03fac6ffc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1de0c53240b1b25d84ae6a61c31d4f734f5c8313
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="editing-graphical-resources-image-editor-for-icons"></a>Modifica delle risorse grafiche (Editor di immagini per le icone)
 Le risorse grafiche sono le immagini definite per l'applicazione. È possibile disegnare a mano libera o disegnare utilizzando forme. È possibile selezionare parti di un'immagine per la modifica, capovolgimento o ridimensionamento oppure è possibile creare un pennello personalizzato da una parte selezionata dell'immagine e disegnare. Si definiscono le proprietà dell'immagine, salvare le immagini in formati diversi e convertire immagini in un formato a altro.  
@@ -40,7 +35,7 @@ Le risorse grafiche sono le immagini definite per l'applicazione. È possibile d
   
 -   [Creazione di una nuova Bitmap o un'altra immagine](../windows/creating-an-icon-or-other-image-image-editor-for-icons.md)  
   
--   [Selezionando e utilizzando uno strumento di disegno](using-a-drawing-tool-image-editor-for-icons.md)  
+-   [Selezionando e usando uno strumento di disegno](using-a-drawing-tool-image-editor-for-icons.md)  
   
 -   [Disegno di linee o figure chiuse](../windows/drawing-lines-or-closed-figures-image-editor-for-icons.md)  
   
@@ -54,7 +49,7 @@ Le risorse grafiche sono le immagini definite per l'applicazione. È possibile d
   
 -   [Creazione di un pennello personalizzato](../windows/creating-a-custom-brush-image-editor-for-icons.md)  
   
--   [Modifica le proprietà dell'immagine](changing-image-properties-image-editor-for-icons.md)  
+-   [Modifica delle proprietà immagine](changing-image-properties-image-editor-for-icons.md)  
   
 -   [Salvataggio di bitmap come file GIF o JPEG.](../windows/saving-bitmaps-as-gifs-or-jpegs-image-editor-for-icons.md)  
   
@@ -64,7 +59,7 @@ Le risorse grafiche sono le immagini definite per l'applicazione. È possibile d
   
 -   [Menu immagine](../windows/image-menu-image-editor-for-icons.md)  
   
--   [Barra degli strumenti dell'Editor di immagini](../windows/toolbar-image-editor-for-icons.md)  
+-   [Barra degli strumenti Editor di immagini](../windows/toolbar-image-editor-for-icons.md)  
   
 -   [Riquadri della finestra dell'Editor di immagini](../windows/window-panes-image-editor-for-icons.md)  
   
@@ -74,7 +69,7 @@ Le risorse grafiche sono le immagini definite per l'applicazione. È possibile d
 >  Utilizzando l'Editor immagini, è possibile visualizzare, ma non modificare, immagini a 32 bit.  
   
 ## <a name="requirements"></a>Requisiti  
- nessuno  
+ Nessuno  
   
 ## <a name="see-also"></a>Vedere anche  
  [Tasti di scelta rapida](../windows/accelerator-keys-image-editor-for-icons.md)   

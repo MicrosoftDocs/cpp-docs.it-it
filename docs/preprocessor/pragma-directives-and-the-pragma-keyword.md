@@ -1,12 +1,9 @@
 ---
 title: Direttive pragma e parola chiave pragma | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - '#pragma'
@@ -22,17 +19,15 @@ helpviewer_keywords:
 - preprocessor, pragmas
 - pragma directives (#pragma)
 ms.assetid: 9867b438-ac64-4e10-973f-c3955209873f
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2ccc6ab8fe90b8b97dee213d65e19eb903249da6
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: b20a476e1701f58782b97f986ee6c3d4b310b566
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="pragma-directives-and-the-pragma-keyword"></a>Direttive pragma e parola chiave __Pragma
 Le direttive pragma specificano funzionalità del compilatore specifiche del computer o del sistema operativo. La parola chiave `__pragma`, che è specifica del compilatore Microsoft, consente di codificare direttive pragma all'interno delle definizioni di macro.  

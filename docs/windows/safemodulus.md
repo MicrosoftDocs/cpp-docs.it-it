@@ -1,13 +1,10 @@
 ---
 title: SafeModulus | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - SafeModulus
 dev_langs:
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - SafeModulus function
 ms.assetid: ae5c81eb-5dcf-45a5-aa76-465fdfe68654
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 383382de2720ac7a72403bd3578e235af7bdbe05
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 653293ac04be1e3a04e90412a9d9d8b988773329
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="safemodulus"></a>SafeModulus
 Esegue l'operazione modulo su due numeri.  
@@ -53,7 +48,7 @@ inline bool SafeModulus (
  Il parametro in cui `SafeModulus` archivia il risultato.  
   
 ## <a name="return-value"></a>Valore restituito  
- `true`Se si verifica alcun errore; `false` se si verifica un errore.  
+ `true` Se si verifica alcun errore; `false` se si verifica un errore.  
   
 ## <a name="remarks"></a>Note  
  Questo metodo fa parte di [Libreria SafeInt](../windows/safeint-library.md) ed è progettata per un'operazione modulo singolo senza creare un'istanza di [classe SafeInt](../windows/safeint-class.md).  

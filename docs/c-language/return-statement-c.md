@@ -1,36 +1,31 @@
 ---
 title: Istruzione return (C) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - ( ) parentheses in return statements
 ms.assetid: 18cd82cf-f899-4b28-83ad-4eff353ddcb4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2d5ec29b7348d858b502f292efd797020a17bfa0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 08407f26e3c3d9064fded1620538262b0c91e2ba
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="return-statement-c"></a>Istruzione return (C)
 L'istruzione `return` viene utilizzata per terminare l'esecuzione di una funzione e restituire il controllo alla funzione chiamante. Nella funzione chiamante, l'esecuzione riprende dal punto immediatamente successivo alla chiamata. Un'istruzione `return` può inoltre restituire un valore alla funzione chiamante. Per altre informazioni, vedere [Tipo restituito](../c-language/return-type.md).  
   
 ## <a name="syntax"></a>Sintassi  
  *jump-statement*:  
- **return** *expression* opt**;**  
+ **return** *expression* opt **;**  
   
  Il valore di *expression*, se presente, viene restituito alla funzione chiamante. Se *expression* non è presente, il valore restituito della funzione è indefinito. L'espressione, se presente, viene valutata e viene quindi convertita nel tipo restituito dalla funzione. Se la funzione è dichiarata con tipo restituito `void`, un'istruzione `return` che contiene un'espressione genera un avviso e l'espressione non viene valutata.  
   

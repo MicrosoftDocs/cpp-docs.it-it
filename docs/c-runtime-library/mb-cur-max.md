@@ -1,13 +1,10 @@
 ---
 title: MB_CUR_MAX | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 10/18/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - MB_CUR_MAX
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - MB_CUR_MAX constant
 ms.assetid: fab22609-c14d-4c19-991c-bd09ff30e604
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 793a2a4bcab9e037eddcdc6126554c93669aac92
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8c9b290df51d631251811d1f8a92dff980304b24
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mbcurmax"></a>MB_CUR_MAX
 

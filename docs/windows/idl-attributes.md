@@ -1,13 +1,10 @@
 ---
 title: Attributi IDL | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - IDL files, attributes
 - .idl files
 ms.assetid: 04c596f4-c97b-4952-8053-316678b1d0b6
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 447c4369d7a80348dfb6c5eee54c49d76c1e8a4c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5c522c039a0471240ba319561485e8cc7f348aaa
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="idl-attributes"></a>Attributi IDL
 In genere, la gestione di un file IDL che è infatti necessario:  
@@ -84,9 +79,9 @@ In genere, la gestione di un file IDL che è infatti necessario:
 |[lcid](../windows/lcid.md)|Consente di passare un identificatore delle impostazioni locali a una funzione.|  
 |[length_is](../windows/length-is.md)|Specifica il numero di elementi della matrice deve essere trasmesso.|  
 |[licensed](../windows/licensed.md)|Indica che la coclasse a cui si riferisce è concesso in licenza e deve essere implementata con **IClassFactory2**.|  
-|[locale](../windows/local-cpp.md)|Consente di usare il compilatore MIDL come generatore di intestazione utilizzato nell'intestazione di interfaccia. Quando utilizzato in una singola funzione, indica una procedura locale per il quale non vengono generati stub.|  
+|[local](../windows/local-cpp.md)|Consente di usare il compilatore MIDL come generatore di intestazione utilizzato nell'intestazione di interfaccia. Quando utilizzato in una singola funzione, indica una procedura locale per il quale non vengono generati stub.|  
 |[max_is](../windows/max-is.md)|Indica il valore massimo per un indice di matrice valida.|  
-|[modulo](../windows/module-cpp.md)|Definisce il blocco di libreria nel file IDL.|  
+|[Modulo](../windows/module-cpp.md)|Definisce il blocco di libreria nel file IDL.|  
 |[ms_union](../windows/ms-union.md)|Controlla l'allineamento di rappresentazione di dati di rete di unioni nonencapsulated.|  
 |[no_injected_text](../windows/no-injected-text.md)|Impedisce al compilatore di codice in seguito a uso dell'attributo.|  
 |[nonbrowsable](../windows/nonbrowsable.md)|Indica che un membro di interfaccia non deve essere visualizzato in un visualizzatore proprietà.|  
@@ -95,7 +90,7 @@ In genere, la gestione di un file IDL che è infatti necessario:
 |[object](../windows/object-cpp.md)|Identifica un'interfaccia personalizzata. sinonimo di attributo personalizzato.|  
 |[odl](../windows/odl.md)|Identifica un'interfaccia come interfaccia oggetto descrizione Language ODL ().|  
 |[oleautomation](../windows/oleautomation.md)|Indica che un'interfaccia è compatibile con l'automazione.|  
-|[facoltativo](../windows/optional-cpp.md)|Specifica un parametro facoltativo per una funzione membro.|  
+|[Facoltativo](../windows/optional-cpp.md)|Specifica un parametro facoltativo per una funzione membro.|  
 |[out](../windows/out-cpp.md)|Identifica i parametri dei puntatori restituiti dalla routine chiamata alla routine chiamante (dal server al client).|  
 |[pointer_default](../windows/pointer-default.md)|Specifica l'attributo di puntatore predefinito per tutti i puntatori ad eccezione dei puntatori di primo livello che vengono visualizzati nell'elenco di parametri.|  
 |[pragma](../windows/pragma.md)|Genera la stringa specificata, senza virgolette, nel file IDL generato.|  
@@ -112,7 +107,7 @@ In genere, la gestione di un file IDL che è infatti necessario:
 |[restricted](../windows/restricted.md)|Specifica che una libreria o un membro di un modulo, interfaccia o interfaccia dispatch non può essere chiamato in modo arbitrario.|  
 |[retval](../windows/retval.md)|Specifica il parametro che riceve il valore restituito del membro.|  
 |[size_is](../windows/size-is.md)|Specifica le dimensioni della memoria allocata per i puntatori di dimensioni, con dimensioni puntatori e unidimensionali o le matrici multidimensionali.|  
-|[origine](../windows/source-cpp.md)|Indica che un membro di una classe, una proprietà o metodo è un'origine di eventi.|  
+|[Origine](../windows/source-cpp.md)|Indica che un membro di una classe, una proprietà o metodo è un'origine di eventi.|  
 |[string](../windows/string-cpp.md)|Indica che l'oggetto unidimensionale `char`, `wchar_t`, **byte**, o equivalente matrice o del puntatore a una matrice di questo tipo deve essere considerato come una stringa.|  
 |[switch_is](../windows/switch-is.md)|Specifica l'espressione o un identificatore che agisce come l'unione discriminante che consente di selezionare il membro dell'unione.|  
 |[switch_type](../windows/switch-type.md)|Identifica il tipo della variabile utilizzata come l'unione discriminante.|  
@@ -120,7 +115,7 @@ In genere, la gestione di un file IDL che è infatti necessario:
 |[uidefault](../windows/uidefault.md)|Indica che il membro di informazioni di tipo è il membro predefinito per la visualizzazione nell'interfaccia utente.|  
 |[unique](../windows/unique-cpp.md)|Specifica un puntatore univoco.|  
 |[usesgetlasterror](../windows/usesgetlasterror.md)|Indica al chiamante se si verifica un errore quando si chiama tale funzione, il chiamante può quindi chiamare `GetLastError` per recuperare il codice di errore.|  
-|[UUID](../windows/uuid-cpp-attributes.md)|Specifica l'ID univoco per una classe o interfaccia.|  
+|[uuid](../windows/uuid-cpp-attributes.md)|Specifica l'ID univoco per una classe o interfaccia.|  
 |[v1_enum](../windows/v1-enum.md)|Indica che il tipo enumerato specificato deve essere trasmesso come un'entità a 32 bit, anziché il valore predefinito di 16 bit.|  
 |[vararg](../windows/vararg.md)|Specifica che la funzione accetta un numero variabile di argomenti.|  
 |[vi_progid](../windows/vi-progid.md)|Specifica un formato indipendente dalla versione di ProgID.|  

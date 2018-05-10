@@ -1,12 +1,9 @@
 ---
 title: 'Metodo Module:: GetClassObject | Documenti Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - module/Microsoft::WRL::Module::GetClassObject
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - GetClassObject method
 ms.assetid: 95b0de1b-f728-4f96-9f44-f6ea71ce56e4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3f234b46da1a70ee0256a9a38ebb2ef7ae0bb5bb
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9205b04fc27e1c6e0e6133a08c3c2f69ffdfc314
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="modulegetclassobject-method"></a>Metodo Module::GetClassObject
 Recupera una cache di class factory.  
@@ -61,7 +56,7 @@ Recupera una cache di class factory.
  Utilizzare questo metodo solo per COM, non il Runtime di Windows. Questo metodo espone solo IClassFactory metodi.  
   
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** module.h  
+ **Intestazione:** Implements  
   
  **Spazio dei nomi:** Microsoft::WRL
  

@@ -1,28 +1,23 @@
 ---
-title: "Visual C++: novità dalla versione 2003 alla 2015 | Microsoft Docs"
-ms.custom: 
+title: 'Visual C++: novità dalla versione 2003 alla 2015 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp
 - devlang-cpp
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: c4afde6f-3d75-40bf-986f-be57e3818e26
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e0e5090bc914648e527f335b261ad7838ad3d0bc
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 4ae41c373257202cb08b7f8760acac4ad14dff19
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="visual-c-what39s-new-2003-through-2015"></a>Visual C++: novità dalla versione 2003 alla 2015
 

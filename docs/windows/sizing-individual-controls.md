@@ -1,13 +1,10 @@
 ---
 title: Ridimensionamento di singoli controlli | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,18 +13,16 @@ helpviewer_keywords:
 - text, autosizing controls to fit text
 - controls [C++], sizing
 ms.assetid: 14ccba02-7171-463a-a121-7018cf1e2e5a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b019cd2bbf68a4321bafd6dd960ffbcdba2dddf7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 03577dbf831c21ec9878a787d937d39b5e8bcd66
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="sizing-individual-controls"></a>Ridimensionamento di singoli controlli
 Utilizzare i quadratini di ridimensionamento per ridimensionare un controllo. Quando il puntatore è posizionato su un quadratino di ridimensionamento, assume la forma per indicare le direzioni in cui il controllo può essere ridimensionato. Quadratini di ridimensionamento attivi sono pieni. Se un quadratino di ridimensionamento è vuoto, il controllo non può essere ridimensionato lungo l'asse.  

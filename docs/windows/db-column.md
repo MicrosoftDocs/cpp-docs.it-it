@@ -1,13 +1,10 @@
 ---
 title: db_column | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - vc-attr.db_column
 dev_langs:
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - db_column attribute
 ms.assetid: 58da4afc-f69c-4ae6-af9a-3f9515f56081
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5fe2d3c5edb4b90676c3880ae422c1fb507cd164
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 35ab2472ac9e46b620ca735d06b23806126871e0
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="dbcolumn"></a>db_column
 Associa una colonna specificata a una variabile nel set di righe.  
@@ -58,10 +53,10 @@ Associa una colonna specificata a una variabile nel set di righe.
  OLE DB [indicatore del tipo](https://msdn.microsoft.com/en-us/library/ms711251.aspx) per la voce di colonna.  
   
  *precisione* (facoltativo)  
- La precisione deve essere utilizzato per la voce di colonna. Per informazioni dettagliate, vedere la descrizione del `bPrecision` elemento il [struttura DBBINDING](https://msdn.microsoft.com/en-us/library/ms716845.aspx)  
+ La precisione deve essere utilizzato per la voce di colonna. Per informazioni dettagliate, vedere la descrizione del `bPrecision` elemento del [struttura DBBINDING](https://msdn.microsoft.com/en-us/library/ms716845.aspx)  
   
  *scala* (facoltativo)  
- Scala da utilizzare per la voce di colonna. Per informazioni dettagliate, vedere la descrizione di `bScale` elemento il [struttura DBBINDING](https://msdn.microsoft.com/en-us/library/ms716845.aspx)  
+ Scala da utilizzare per la voce di colonna. Per informazioni dettagliate, vedere la descrizione del `bScale` elemento del [struttura DBBINDING](https://msdn.microsoft.com/en-us/library/ms716845.aspx)  
   
  *stato* (facoltativo)  
  Una variabile membro utilizzata per contenere lo stato di questa colonna. Lo stato indica se il valore della colonna è un valore di dati o un altro valore, ad esempio **NULL**. Per i valori possibili, vedere [stato](https://msdn.microsoft.com/en-us/library/ms722617.aspx) nel *riferimento per programmatori OLE DB*.  
@@ -125,7 +120,7 @@ class CProducts {
 |**Si applica a**|**classe**, `struct`, membro, metodo|  
 |**Ripetibile**|No|  
 |**Attributi obbligatori**|Nessuna|  
-|**Attributi non validi**|nessuno|  
+|**Attributi non validi**|Nessuno|  
   
  Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](../windows/attribute-contexts.md).  
   

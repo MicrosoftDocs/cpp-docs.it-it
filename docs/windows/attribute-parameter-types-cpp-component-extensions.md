@@ -1,30 +1,25 @@
 ---
 title: Attributo di tipi di parametro (estensioni del componente C++) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - custom attributes, parameter types
 ms.assetid: d9f127a3-7f08-456f-acc6-256805632712
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 95e7ec4d1a4a6b473419c23b3565fcce9d5afed6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 64da24a9811046672c317c24bba5332bf09303f9
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="attribute-parameter-types--c-component-extensions"></a>Tipi di parametri degli attributi (Estensioni del componente C++)
 I valori passati agli attributi devono essere noti al compilatore in fase di compilazione.  I tipi dei parametri dell'attributo possono essere i seguenti:  
@@ -45,7 +40,7 @@ I valori passati agli attributi devono essere noti al compilatore in fase di com
   
 -   `wchar_t`  
   
--   `char*`o `wchar_t*` o`System::String*`  
+-   `char*` o `wchar_t*` o `System::String*`  
   
 -   `System::Type ^`  
   

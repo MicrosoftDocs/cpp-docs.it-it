@@ -1,13 +1,10 @@
 ---
 title: Modifica di dati binari | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.editors.binary
 dev_langs:
@@ -16,18 +13,16 @@ helpviewer_keywords:
 - binary data, editing
 - binary data
 ms.assetid: 0fd429de-baf1-4871-b5e4-42bf868a3261
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 689dd660a38f9e9f4f3f9231d9622d7f24f8b944
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5259adc079381ce37da704a67a69b51758cb2aef
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="editing-binary-data"></a>Modifica di dati binari
 ### <a name="to-edit-a-resource-in-the-binary-editor"></a>Per modificare una risorsa nell'editor binario  
@@ -47,7 +42,7 @@ ms.lasthandoff: 12/21/2017
   
 ### <a name="requirements"></a>Requisiti  
   
- nessuno  
+ Nessuno  
   
 ## <a name="see-also"></a>Vedere anche  
  [Binary Editor](binary-editor.md)

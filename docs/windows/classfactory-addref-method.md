@@ -1,12 +1,9 @@
 ---
 title: 'Metodo ClassFactory:: AddRef | Documenti Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - module/Microsoft::WRL::ClassFactory::AddRef
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - AddRef method
 ms.assetid: 5b091785-dea4-42b6-a502-0db5fc7a5a2e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 111bcef652660f8119d9c8dccd9345545506fe1a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4ab84f54c8fa5c4784cbdf564805bcfea29b6a93
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="classfactoryaddref-method"></a>Metodo ClassFactory::AddRef
 Incrementa il conteggio dei riferimenti per l'oggetto ClassFactory corrente.  
@@ -44,7 +39,7 @@ STDMETHOD_(
  S_OK se riesce; in caso contrario, HRESULT che descrive l'errore.  
   
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** module.h  
+ **Intestazione:** Implements  
   
  **Spazio dei nomi:** Microsoft::WRL  
   

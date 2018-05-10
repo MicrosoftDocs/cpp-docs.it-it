@@ -1,30 +1,25 @@
 ---
 title: Concatenazione di valori letterali stringa | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - concatenating strings
 - strings [C++], concatenating
 ms.assetid: 51486b1f-4b1e-4061-9add-1aa38c6cdb3c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: de245a061ed7d269aaafc856df0a422e31fd6d77
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5975e47585f3b5a995d8eb839c21d419756edd42
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="string-literal-concatenation"></a>Concatenazione di valori letterali stringa
 Per creare valori letterali stringa che accettano più righe, è possibile concatenare le due stringhe. A questo scopo, digitare una barra rovesciata, quindi premere il tasto INVIO. La barra rovesciata indica al compilatore di ignorare il successivo carattere di nuova riga. Ad esempio, il valore letterale stringa  
@@ -42,7 +37,7 @@ ken into two or more pieces."
   
  La concatenazione di stringhe può essere utilizzata in tutte le situazioni in cui in precedenza era stata utilizzata una barra rovesciata seguita da un carattere di nuova riga per immettere stringhe più lunghe di una riga.  
   
- Per forzare una nuova riga in un valore letterale stringa, immettere la sequenza di escape di nuova riga **\n** nel punto della stringa in cui si vuole interrompere la riga, come illustrato di seguito:  
+ Per forzare una nuova riga in un valore letterale stringa, immettere la sequenza di escape di nuova riga (**\n**) nel punto della stringa in cui si vuole interrompere la riga, come mostrato di seguito:  
   
 ```  
 "Enter a number between 1 and 100\nOr press Return"  

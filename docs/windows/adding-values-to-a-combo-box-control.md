@@ -1,13 +1,10 @@
 ---
 title: Aggiunta di valori a un controllo casella combinata | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.editors.dialog.combo
 dev_langs:
@@ -21,18 +18,16 @@ helpviewer_keywords:
 - Data property
 - combo boxes [C++], testing values
 ms.assetid: 22a78f98-fada-48b3-90d8-7fa0d8e4de51
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9125ad60648f6f867e1214763a6af164d0239a04
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c81e40de56970571ad78ceea86084b7ff7b82227
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="adding-values-to-a-combo-box-control"></a>Aggiunta di valori a un controllo casella combinata
 Fino a quando è aperto l'editor finestre, è possibile aggiungere valori a un controllo casella combinata.  

@@ -1,12 +1,9 @@
 ---
 title: Enumerazione CancelTransitionPolicy | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - module/Microsoft::WRL::CancelTransitionPolicy::TransitionFromCanceled
@@ -17,18 +14,16 @@ dev_langs:
 helpviewer_keywords:
 - CancelTransitionPolicy Enumeration
 ms.assetid: 5de49f7d-e5e3-43e9-bbca-666caf226cef
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 14c3016d767e38e032a745a5957fa93d51f2dae8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 64f588e67066fed690271aa7d78fcbe726c67177
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="canceltransitionpolicy-enumeration"></a>Enumerazione CancelTransitionPolicy
 Indica come un'operazione asincrona del tentativo di eseguire la transizione a uno stato finale di completamento o errore di comportamento rispetto a uno stato di annullamento della richiesta del client.  
@@ -49,7 +44,7 @@ enum CancelTransitionPolicy;
 |`TransitionFromCanceled`|Se l'operazione asincrona è attualmente in uno stato di annullamento della richiesta del client, ciò indica che lo stato dovrebbe eseguire la transizione da quello stato annullato per lo stato terminale di completamento o errore, come determinato dalla chiamata che utilizza questo flag.|  
   
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** Async  
+ **Intestazione:** Async. h  
   
  **Spazio dei nomi:** Microsoft::WRL  
   

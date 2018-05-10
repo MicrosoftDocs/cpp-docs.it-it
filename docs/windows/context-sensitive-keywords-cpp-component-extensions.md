@@ -1,13 +1,10 @@
 ---
 title: Parole chiave sensibili al contesto (estensioni del componente C++) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - internal_CPP
 dev_langs:
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - context-sensitive keywords
 ms.assetid: e33da089-f434-44e9-8cce-4668d05a8939
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1d5af53c04c6ff9ec28e7b83cd3a8f9bce8307c2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ceea3242087d89b511f6309003efe38d155735d2
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="context-sensitive-keywords--c-component-extensions"></a>Parole chiave sensibili al contesto (Estensioni del componente C++)
 *Parole chiave sensibili al contesto* sono elementi del linguaggio riconosciuti solo in contesti specifici. All'esterno del contesto specifico, una parola chiave sensibile al contesto può essere un simbolo definito dall'utente.  
@@ -50,7 +45,7 @@ ms.lasthandoff: 12/21/2017
   
 -   `internal`   
   
--   [valore letterale](../windows/literal-cpp-component-extensions.md)  
+-   [Valore letterale](../windows/literal-cpp-component-extensions.md)  
   
 -   [override](../windows/override-cpp-component-extensions.md)  
   
@@ -58,7 +53,7 @@ ms.lasthandoff: 12/21/2017
   
 -   [sealed](../windows/sealed-cpp-component-extensions.md)  
   
--   `where`(parte di [Generics](../windows/generics-cpp-component-extensions.md))  
+-   `where` (parte [Generics](../windows/generics-cpp-component-extensions.md))  
   
  Per motivi di leggibilità, si desidera limitare l'utilizzo delle parole chiave sensibili al contesto come simboli definiti dall'utente.  
   

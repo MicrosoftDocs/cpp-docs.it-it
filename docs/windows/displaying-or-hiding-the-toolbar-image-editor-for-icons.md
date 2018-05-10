@@ -1,13 +1,10 @@
 ---
 title: Visualizzare o nascondere la barra degli strumenti (Editor di immagini per le icone) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,18 +12,16 @@ helpviewer_keywords:
 - toolbars [C++], showing
 - toolbars [C++], hiding
 ms.assetid: 78d25184-a8f4-457f-aa6f-069a5a27bcf8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 85927d747735bcf66251a5112775cc5a67214cfb
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d00610d4366f76e07b6f62b5a65416bf37182e2a
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="displaying-or-hiding-the-toolbar-image-editor-for-icons"></a>Attivazione o disattivazione della barra degli strumenti (Editor di immagini per le icone)
 Poiché molti degli strumenti di disegno sono disponibili le [tastiera](../windows/accelerator-keys-image-editor-for-icons.md), è talvolta utile nascondere la barra degli strumenti dell'Editor di immagini.  
@@ -42,7 +37,7 @@ Poiché molti degli strumenti di disegno sono disponibili le [tastiera](../windo
   
  Requisiti  
   
- nessuno  
+ Nessuno  
   
 ## <a name="see-also"></a>Vedere anche  
  [Finestra colori](../windows/colors-window-image-editor-for-icons.md)   

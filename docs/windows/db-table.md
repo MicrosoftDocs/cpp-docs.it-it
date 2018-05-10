@@ -1,13 +1,10 @@
 ---
 title: db_table | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - vc-attr.db_table
 dev_langs:
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - db_table attribute
 ms.assetid: ff9eb957-4e6d-4175-afcc-fd8ea916cec0
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 37dd6fd80a0d18f1b9d93f5299fca797238a509f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f482e93f124d73d48d1de66f3feb1779146025d0
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="dbtable"></a>db_table
 Verrà visualizzata una tabella OLE DB.  
@@ -48,7 +43,7 @@ Verrà visualizzata una tabella OLE DB.
  Stringa che specifica il nome di una tabella di database (ad esempio, "prodotti").  
   
  *name* (facoltativo)  
- Il nome dell'handle consentono di lavorare con la tabella. È necessario specificare questo parametro se si desidera restituire più righe di risultati. **db_table** genera una variabile con il parametro specificato *nome* che può essere utilizzato per scorrere il set di righe o eseguire più query.  
+ Il nome dell'handle consentono di lavorare con la tabella. È necessario specificare questo parametro se si desidera restituire più righe di risultati. **db_table** genera una variabile con il parametro *nome* che può essere usato per scorrere il set di righe o eseguire più query di azione.  
   
  *source_name* (facoltativo)  
  La variabile `CSession` o l'istanza di una classe a cui è applicato l'attributo `db_source` con cui viene eseguito il comando. Vedere [db_source](../windows/db-source.md).  
@@ -88,7 +83,7 @@ class CProducts {
 |**Si applica a**|**class**, `struct`|  
 |**Ripetibile**|No|  
 |**Attributi obbligatori**|Nessuna|  
-|**Attributi non validi**|nessuno|  
+|**Attributi non validi**|Nessuno|  
   
  Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](../windows/attribute-contexts.md).  
   

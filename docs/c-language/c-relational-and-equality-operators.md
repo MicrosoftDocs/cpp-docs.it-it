@@ -1,13 +1,10 @@
 ---
 title: Operatori relazionali e operatori di uguaglianza C | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - equality operator, syntax
 - operators [C], relational
 ms.assetid: c89a3815-a65e-4e0d-8333-0e8dc7fdb30b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6860198b9acce372b710e819a17f534e793f1ead
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ac6503b2c684b5acb921fe13ebf0b0ca11adbf04
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="c-relational-and-equality-operators"></a>Operatori relazionali e operatori di uguaglianza C
 Gli operatori relazionali e di uguaglianza binari confrontano il primo operando con il secondo per testare la validità della relazione specificata. Il risultato di un'espressione relazionale è 1 se la relazione testata è true e 0 se è false. Il tipo del risultato è `int`.  

@@ -1,13 +1,10 @@
 ---
 title: Funzioni di ricerca dei nomi file | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 apilocation:
 - msvcr100.dll
 - msvcr120.dll
@@ -26,17 +23,15 @@ helpviewer_keywords:
 - find function
 - _wfind function
 ms.assetid: 2bc2f8ef-44e4-4271-b3e8-666d36fde828
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 16aff4db1a04c31b3b45c9a61f74c44d6c9465f6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 777ac61828abbdc93bdf3fe6ceda05f927472494
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="filename-search-functions"></a>Funzioni di ricerca dei nomi file
 Queste funzioni eseguono e terminano le ricerche per i nomi di file specificati:  

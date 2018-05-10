@@ -1,13 +1,10 @@
 ---
 title: Immagine di Menu (Editor di immagini per le icone) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.editors.bitmap
 dev_langs:
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - Image menu
 ms.assetid: ac2b4d53-1919-4fd1-a0af-d3c085c45af2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 49da8f90703190be068fe2d35a808b2cafed6f0c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8bfeeda8d358bf3144cd5c3168686561b3586581
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="image-menu-image-editor-for-icons"></a>Menu Immagine (Editor di immagini per le icone)
 Menu immagine, viene visualizzata solo quando è attiva l'editor di immagini, è disponibili comandi per la modifica delle immagini, la gestione di tavolozze dei colori e l'impostazione di opzioni della finestra dell'Editor di immagini. Inoltre, i comandi per l'utilizzo di immagini per i dispositivi sono disponibili quando si lavora con icone e cursori.  
@@ -52,7 +47,7 @@ Menu immagine, viene visualizzata solo quando è attiva l'editor di immagini, è
  **Copia e struttura selezione**  
  Consente di creare e strutturare una copia della selezione corrente. Se il colore di sfondo è contenuto nella selezione corrente, verrà escluso se [trasparente](../windows/choosing-a-transparent-or-opaque-background-image-editor-for-icons.md) selezionato.  
   
- **Regola colori**  
+ **Regola i colori**  
  Apre il [regola colori](../windows/custom-color-selector-dialog-box-image-editor-for-icons.md), che consente di personalizzare i colori utilizzati per l'immagine. Per ulteriori informazioni, vedere [personalizzazione o modifica dei colori](../windows/customizing-or-changing-colors-image-editor-for-icons.md).  
   
  **Carica tavolozza**  
@@ -83,7 +78,7 @@ Menu immagine, viene visualizzata solo quando è attiva l'editor di immagini, è
  Consente di visualizzare un sottomenu contenente tutti gli strumenti disponibili dal [barra degli strumenti dell'Editor di immagini](../windows/toolbar-image-editor-for-icons.md).  
   
 ## <a name="requirements"></a>Requisiti  
- nessuno  
+ Nessuno  
   
 ## <a name="see-also"></a>Vedere anche  
  [Tasti di scelta rapida](../windows/accelerator-keys-image-editor-for-icons.md)   

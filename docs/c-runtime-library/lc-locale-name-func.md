@@ -1,13 +1,10 @@
 ---
 title: ___lc_locale_name_func | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - ___lc_locale_name_func
 apilocation:
@@ -26,17 +23,15 @@ dev_langs:
 helpviewer_keywords:
 - ___lc_locale_name_func
 ms.assetid: ef858308-872e-43de-95e0-9b1b4084343e
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 243fcd75c657125e001e4dc0544e9c315df1bd07
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a88a518483e9ea668b98b054453e7f449e99048b
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lclocalenamefunc"></a>___lc_locale_name_func
 Funzione CRT interna. Recupera l'attuale nome delle impostazioni locali del thread.  

@@ -1,13 +1,10 @@
 ---
 title: Operatori C | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - associativity of operators
 - binary data, binary expressions
 ms.assetid: 13bc4c8e-2dc9-4b23-9f3a-25064e8777ed
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3d4acb0acec44d695bd4c03ffa102a0ac42971b9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9f90f25d52a2555eb92938dd29ebb7e5bfc6e96a
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="c-operators"></a>Operatori C
 Gli operatori C sono un sottoinsieme degli [operatori C++ predefiniti](../cpp/cpp-built-in-operators-precedence-and-associativity.md).  

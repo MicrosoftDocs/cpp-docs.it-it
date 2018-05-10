@@ -1,30 +1,25 @@
 ---
 title: Funzione GetModuleBase | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - implements/Microsoft::WRL::GetModuleBase
 dev_langs:
 - C++
 ms.assetid: 123d3b14-2eaf-4e02-8dcd-b6567917c6a6
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 19f575705b1f8680a68e9100f20be66ca22ec87a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 25e4bb6db6114f7d64522dfe145d51ffaabd476a
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="getmodulebase-function"></a>Funzione GetModuleBase
 Recupera un [ModuleBase](../windows/modulebase-class.md) puntatore che consente di incrementare e decrementare il conteggio dei riferimenti di un [RuntimeClass](../windows/runtimeclass-class.md) oggetto.  
@@ -44,7 +39,7 @@ inline Details::ModuleBase* GetModuleBase() throw()
  È possibile utilizzare questa funzione per controllare i conteggi dei riferimenti chiamando [modulebase:: Incrementobjectcount](../windows/modulebase-incrementobjectcount-method.md) e [modulebase:: Decrementobjectcount](../windows/modulebase-decrementobjectcount-method.md).  
   
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** h  
+ **Intestazione:** FTM.  
   
  **Spazio dei nomi:** Microsoft::WRL  
   

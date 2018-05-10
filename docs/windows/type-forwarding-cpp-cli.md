@@ -1,33 +1,28 @@
 ---
 title: Inoltro del tipo (C + + CLI) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - type forwarding, Visual C++
 ms.assetid: ae730b69-0c27-41cc-84e1-3132783866ea
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6898c011a4e2e907cd745ccb206b0e0f0b37e78f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9caa2e18a1ec851967857eb068797e092835f587
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="type-forwarding-ccli"></a>Inoltro del tipo (C++/CLI)
-*Inoltro del tipo* consente di spostare un tipo da un assembly (assembly a) in un altro assembly (assembly B), in modo che non è necessario ricompilare i client che usano l'assembly A.  
+*Inoltro del tipo* consente di spostare un tipo da un assembly (assembly a) in un altro assembly (assembly B), in modo che non è necessario ricompilare i client che usano assembly A.  
   
 ## <a name="all-platforms"></a>Tutte le piattaforme  
  Questa funzionalità non è supportata in tutti i Runtime.  

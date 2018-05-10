@@ -1,13 +1,10 @@
 ---
 title: nonextensible | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - vc-attr.nonextensible
 dev_langs:
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - nonextensible attribute
 ms.assetid: c7ef1554-809f-4ea0-a7cd-dc7786d40c3e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 31aa2bf8572a1a0e8ed785d55bb6960cfe6cf75e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 87cdbf66676ed2a3e6054006270b39ad80325857
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="nonextensible"></a>nonextensible
 Specifica che il `IDispatch` implementazione include solo le proprietà e metodi elencati nella descrizione dell'interfaccia e non possono essere esteso con altri membri in fase di esecuzione.  
@@ -70,8 +65,8 @@ __interface IFireTabCtrl
 |-|-|  
 |**Si applica a**|`interface`|  
 |**Ripetibile**|No|  
-|**Attributi obbligatori**|**doppia** e **oleautomation**, o **interfaccia dispatch**|  
-|**Attributi non validi**|nessuno|  
+|**Attributi obbligatori**|**dual** e **oleautomation**, o **interfaccia dispatch**|  
+|**Attributi non validi**|Nessuno|  
   
  Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](../windows/attribute-contexts.md).  
   

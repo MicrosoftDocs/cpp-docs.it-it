@@ -1,13 +1,10 @@
 ---
 title: ProgID | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - vc-attr.progid
 dev_langs:
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - progid attribute
 ms.assetid: afcf559c-e432-481f-aa9a-bd3bb72c02a8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 862629af7e279cf1f03a5e9adc9424b330ee1d90
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f2b2d2168b568c74c5404cc83bab1e5f77570773
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="progid"></a>progid
 Specifica il ProgID di un oggetto COM.  
@@ -51,7 +46,7 @@ Specifica il ProgID di un oggetto COM.
   
  Se un blocco di attributi che utilizza **progid** non utilizzare inoltre `uuid`, il compilatore controlla il Registro di sistema per verificare se un `uuid` esiste per l'oggetto specificato **progid**. Se **progid** non viene specificato, la versione (e il nome coclasse se la creazione di una coclasse) verrà utilizzati per generare un **progid**.  
   
- **ProgID** implica il **coclasse** attributo, ovvero, se si specifica **progid**, è lo stesso risultato che specifica il **coclasse** e  **ProgID** attributi.  
+ **ProgID** implica la **coclasse** dell'attributo, vale a dire, se si specifica **progid**, è lo stesso risultato che specifica il **coclasse** e  **ProgID** attributi.  
   
  Il **progid** attributo consente a una classe di essere registrati automaticamente con il nome specificato. Il file IDL generato non verrà visualizzato il **progid** valore.  
   
@@ -69,7 +64,7 @@ Specifica il ProgID di un oggetto COM.
 |**Si applica a**|**class**, `struct`|  
 |**Ripetibile**|No|  
 |**Attributi obbligatori**|Nessuna|  
-|**Attributi non validi**|nessuno|  
+|**Attributi non validi**|Nessuno|  
   
  Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](../windows/attribute-contexts.md).  
   

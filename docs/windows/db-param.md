@@ -1,13 +1,10 @@
 ---
 title: db_param | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - vc-attr.db_param
 dev_langs:
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - db_param attribute
 ms.assetid: a28315f5-4722-459e-92ef-32e83c0b205a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b5224c406f6e10cd4ef9f0ed64fbdbd7c5cc8e62
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ce7cf5c8e92e7fd6e6e10d7bef0519b1ced4cf62
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="dbparam"></a>db_param
 Associa la variabile membro a un parametro di input o output e delimita la variabile.  
@@ -63,10 +58,10 @@ Associa la variabile membro a un parametro di input o output e delimita la varia
  OLE DB [indicatore del tipo](https://msdn.microsoft.com/en-us/library/ms711251.aspx) per la voce di colonna.  
   
  *precisione* (facoltativo)  
- La precisione deve essere utilizzato per la voce di colonna. Per informazioni dettagliate, vedere la descrizione di **bPrecision** elemento il [struttura DBBINDING](https://msdn.microsoft.com/en-us/library/ms716845.aspx)  
+ La precisione deve essere utilizzato per la voce di colonna. Per informazioni dettagliate, vedere la descrizione del **bPrecision** dell'elemento di [struttura DBBINDING](https://msdn.microsoft.com/en-us/library/ms716845.aspx)  
   
  *scala* (facoltativo)  
- Scala da utilizzare per la voce di colonna. Per informazioni dettagliate, vedere la descrizione di **bScale** elemento il [struttura DBBINDING](https://msdn.microsoft.com/en-us/library/ms716845.aspx)  
+ Scala da utilizzare per la voce di colonna. Per informazioni dettagliate, vedere la descrizione del **bScale** dell'elemento di [struttura DBBINDING](https://msdn.microsoft.com/en-us/library/ms716845.aspx)  
   
  *stato* (facoltativo)  
  Una variabile membro utilizzata per contenere lo stato di questa colonna. Lo stato indica se il valore della colonna è un valore di dati o un altro valore, ad esempio **NULL**. Per i valori possibili, vedere [stato](https://msdn.microsoft.com/en-us/library/ms722617.aspx) nel *riferimento per programmatori OLE DB*.  
@@ -79,7 +74,7 @@ Associa la variabile membro a un parametro di input o output e delimita la varia
   
  **db_param** delimita i dati dei membri che possono partecipare in OLE DB `ICommandWithParameters`-associazione di base. Imposta il tipo di parametro (di input o output), tipo OLE DB, precisione, scala, stato e lunghezza per il parametro specificato. Questo attributo consente di inserire le macro di consumer OLE DB BEGIN_PARAM_MAP... END_PARAM_MAP. Ogni membro si contrassegna con il **db_param** attributo occupano una voce nella mappa sotto forma di un COLUMN_ENTRY.  
   
- **db_param** viene usato in combinazione con il [db_table](../windows/db-table.md) o [db_command](../windows/db-command.md) attributi.  
+ **db_param** viene utilizzata in combinazione con il [db_table](../windows/db-table.md) o [db_command](../windows/db-command.md) attributi.  
   
  Quando il provider di attributi del consumer si applica questo attributo a una classe, il compilatore Rinomina la classe per \_ *NomeClasse*funzione di accesso, in cui *NomeClasse* è il nome assegnato il classe e il compilatore creerà inoltre una classe denominata *NomeClasse*, che deriva da \_ *NomeClasse*della funzione di accesso.  In Visualizzazione classi verranno visualizzate entrambe le classi.  
   
@@ -131,7 +126,7 @@ struct CSalesbyYear {
 |**Si applica a**|**classe**, `struct`, membro, metodo, locale|  
 |**Ripetibile**|No|  
 |**Attributi obbligatori**|Nessuna|  
-|**Attributi non validi**|nessuno|  
+|**Attributi non validi**|Nessuno|  
   
  Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](../windows/attribute-contexts.md).  
   

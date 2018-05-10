@@ -1,13 +1,10 @@
 ---
 title: Gli eventi di controllo predefinito | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,18 +13,16 @@ helpviewer_keywords:
 - events [C++], controls
 - dialog box controls, events
 ms.assetid: 75556b23-18f5-4390-97a4-2ecad3309741
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 83c7b6e4d019b895973345805027d428d7af766d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a50b0deeb525481afb1da7221689924c41930bff
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="default-control-events"></a>Eventi di controllo predefiniti
 I nomi di controllo seguenti sono associati agli eventi predefiniti:  
@@ -66,8 +61,8 @@ I nomi di controllo seguenti sono associati agli eventi predefiniti:
 ## <a name="see-also"></a>Vedere anche  
  [Definizione di variabili membro per i controlli di finestra di dialogo](../windows/defining-member-variables-for-dialog-controls.md)   
  [Tipi di messaggio associati a oggetti dell'interfaccia utente](../mfc/reference/message-types-associated-with-user-interface-objects.md)   
- [La modifica di un gestore di messaggi](../mfc/reference/editing-a-message-handler.md)   
- [La definizione di un gestore di messaggi per un messaggio riprodotto](../mfc/reference/defining-a-message-handler-for-a-reflected-message.md)   
+ [Modifica di un gestore di messaggi](../mfc/reference/editing-a-message-handler.md)   
+ [Definizione di un gestore di messaggi per un messaggio riprodotto](../mfc/reference/defining-a-message-handler-for-a-reflected-message.md)   
  [Dichiarazione di una variabile in base a una nuova classe di controlli](../mfc/reference/declaring-a-variable-based-on-your-new-control-class.md)   
  [Una funzione Virtual in override](../ide/overriding-a-virtual-function-visual-cpp.md)
 

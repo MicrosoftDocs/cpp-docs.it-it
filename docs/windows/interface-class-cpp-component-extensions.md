@@ -1,13 +1,10 @@
 ---
 title: interfaccia di classe (estensioni del componente C++) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - interface_CPP
 dev_langs:
@@ -16,18 +13,16 @@ helpviewer_keywords:
 - interface class keyword
 - interface struct keyword
 ms.assetid: 3ccea701-f50b-4da7-ad6b-f0ee1203e2b9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: abe4173dabd20442b96c8e5536b040483df4f150
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 03c081abc457d025ca2818c887deeb5baf4c4de7
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="interface-class--c-component-extensions"></a>classe di interfaccia (Estensioni del componente C++)
 Dichiara un'interfaccia.  Per informazioni sulle interfacce native, vedere [Interface](../cpp/interface.md).  

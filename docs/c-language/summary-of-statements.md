@@ -1,27 +1,22 @@
 ---
 title: Riepilogo di istruzioni | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 ms.assetid: ce45d2fe-ec0e-459f-afb1-80ab6a7f0239
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ba646cbd4443d75eaf8414dbb6ce23797411ade6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4b2d3b27149344151f891e23c39bbecb8e4c1102
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="summary-of-statements"></a>Riepilogo di istruzioni
 *istruzione*:  
@@ -48,10 +43,10 @@ ms.lasthandoff: 12/21/2017
   
  **break ;**  
   
- **return**  *espressione*opt**;**  
+ **return**  *espressione*opt **;**  
   
  *compound-statement*:  
- **{**  *declaration-list*opt*statement-list*opt**}**  
+ **{**  *declaration-list*opt*statement-list*opt **}**  
   
  *declaration-list*:  
  *declaration*  
@@ -64,14 +59,14 @@ ms.lasthandoff: 12/21/2017
  *statement-list statement*  
   
  *expression-statement*:  
- *espressione*opt**;**  
+ *espressione*opt **;**  
   
  *iteration-statement*:  
  **while (**  *espressione*  **)**  *istruzione*  
   
  **do**  *istruzione*  **while (**  *espressione*  **) ;**  
   
- **for (**  *espressione*opt**;** *espressione*opt**;** *espressione*opt**)** *istruzione*  
+ **for (**  *espressione*opt **;** *espressione*opt **;** *espressione*opt **)** *istruzione*  
   
  *selection-statement*:  
  **if (**  *espressione*  **)**  *istruzione*  

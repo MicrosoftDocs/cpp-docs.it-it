@@ -1,13 +1,10 @@
 ---
 title: Usando TCHAR. I tipi di dati con codice MBCS H | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - tchar.h
 - TCHAR
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - TCHAR.H data types, mapping
 - mappings [C++], TCHAR.H
 ms.assetid: 298583c5-22c3-40f6-920e-9ec96d42abd8
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 28255b2e47c48b89b0bd6aea044fe0c15c1f2a08
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: e80ecd123e3fc47705563156e33f46ecd99a0321
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="using-tcharh-data-types-with-mbcs-code"></a>Utilizzo dei tipi di dati di TCHAR.H con il codice _MBCS
 Quando la costante manifesto **MBCS** è definito, una determinata routine di testo generico esegue il mapping a uno dei seguenti tipi di routine:  
@@ -48,7 +43,7 @@ Quando la costante manifesto **MBCS** è definito, una determinata routine di te
     char * _tcsrev(char *);  
     ```  
   
-     Nel caso predefinito, il prototipo per `_tcsrev` esegue il mapping a `_mbsrev` attraverso un thunk in LIBC. In questo modo, i tipi del `_mbsrev` parametri in entrata e in uscita restituito da **TCHAR \***  (vale a dire `char`  **\*** ) per `unsigned` `char` **\***. Questo metodo garantisce tipo corrispondente quando si utilizza **TCHAR**, ma è relativamente lenta a causa del sovraccarico di chiamata di funzione.  
+     Nel caso predefinito, il prototipo per `_tcsrev` esegue il mapping a `_mbsrev` attraverso un thunk in LIBC. In questo modo, i tipi del `_mbsrev` parametri in entrata e in uscita restituito da **TCHAR \***  (vale a dire `char` **\***) per `unsigned` `char` **\***. Questo metodo garantisce tipo corrispondente quando si utilizza **TCHAR**, ma è relativamente lenta a causa del sovraccarico di chiamata di funzione.  
   
 -   Usare l'incorporamento della funzione, incorporando nel codice l'istruzione del preprocessore seguente.  
   
@@ -77,7 +72,7 @@ Quando la costante manifesto **MBCS** è definito, una determinata routine di te
     #define _tcschr _mbschr  
     ```  
   
-     Quando si adotta questo approccio, è necessario fare attenzione a garantire l'utilizzo dei tipi di dati appropriato per gli argomenti di stringa e valori restituiti di stringa. È possibile utilizzare cast di tipo per assicurare una corrispondenza del tipo corretto oppure è possibile utilizzare il **TXCHAR** tipo di dati di testo generico. **TXCHAR** corrisponde al tipo `char` nel codice SBCS ma corrisponde al tipo `unsigned` `char` nel codice MBCS. Per ulteriori informazioni sulle macro di testo generico, vedere [mapping testo generico](../c-runtime-library/generic-text-mappings.md) nel *riferimenti alla libreria di Run-Time*.  
+     Quando si adotta questo approccio, è necessario fare attenzione a garantire l'utilizzo dei tipi di dati appropriato per gli argomenti di stringa e valori restituiti di stringa. Per garantire la corrispondenza corretta dei tipi, è possibile usare il cast dei tipi oppure il tipo di dati a testo generico **_TXCHAR**. **TXCHAR** corrisponde al tipo `char` nel codice SBCS ma corrisponde al tipo `unsigned` `char` nel codice MBCS. Per ulteriori informazioni sulle macro di testo generico, vedere [mapping testo generico](../c-runtime-library/generic-text-mappings.md) nel *riferimenti alla libreria di Run-Time*.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Mappature di testo generico in Tchar.h](../text/generic-text-mappings-in-tchar-h.md)

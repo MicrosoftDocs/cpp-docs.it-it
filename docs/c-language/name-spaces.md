@@ -1,13 +1,10 @@
 ---
 title: Spazi dei nomi | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - tags, structure tags
 - union keyword [C]
 ms.assetid: b4bda1d1-cb5e-4f60-ac2b-29af93d8a9a2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7833c7c1cfd9e7e2b408203f18cf955f6bafedd8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2b0fe8a097da3de67d149665928524395988c730
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="name-spaces"></a>Spazi dei nomi
 Il compilatore ha configurato gli "spazi dei nomi" per distinguere tra gli identificatori utilizzati per diversi tipi di elementi. I nomi all'interno di ogni spazio dei nomi devono essere univoci evitare conflitti, ma un nome identico può apparire in più spazi dei nomi. Ciò significa che è possibile utilizzare lo stesso identificatore per due o più elementi diversi, a condizione che gli elementi siano in spazi dei nomi diversi. Il compilatore può risolvere i riferimenti basati sul contesto sintattico dell'identificatore del programma.  

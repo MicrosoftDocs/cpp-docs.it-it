@@ -1,12 +1,9 @@
 ---
 title: Classe RuntimeClass | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - implements/Microsoft::WRL::RuntimeClass
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - RuntimeClass class
 ms.assetid: d52f9d1a-98e5-41f2-a143-8fb629dd0727
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d5c75492b55cd1c238798d3500e2157738c3c58f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 26c3542f5bea21d1b705cd3253e6828ff73677df
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="runtimeclass-class"></a>Classe RuntimeClass
 Rappresenta una classe COM o WinRT che eredita le interfacce specificate e fornisce il Runtime di Windows specificato, COM classico e supporto di riferimento debole.  
@@ -48,7 +43,7 @@ Parametro facoltativo. Una combinazione di uno o più [RuntimeClassType](../wind
 L'elenco delle interfacce l'oggetto implementa oltre IUnknown, IInspectable o altre interfacce controllate da [RuntimeClassType](../windows/runtimeclasstype-enumeration.md). Può elencare inoltre alle altre classi di essere derivata da, in particolare Microsoft::WRL::FtmBase per rendere l'oggetto agile in modo che venga implementare IMarshal.
   
 ## <a name="members"></a>Membri  
-`RuntimeClassInitialize`Una funzione che inizializza l'oggetto se la funzione di modello MakeAndInitialize viene utilizzata per costruire l'oggetto. Se l'inizializzazione non riuscita, viene restituito S_OK se l'oggetto è stato inizializzato correttamente oppure un codice di errore COM. Il codice di errore COM viene propagato come il valore restituito di MakeAndInitialize. Si noti che se la funzione di modello di creazione viene utilizzata per costruire l'oggetto non viene chiamato il metodo RuntimeClassInitialize.
+`RuntimeClassInitialize` Una funzione che inizializza l'oggetto se la funzione di modello MakeAndInitialize viene utilizzata per costruire l'oggetto. Se l'inizializzazione non riuscita, viene restituito S_OK se l'oggetto è stato inizializzato correttamente oppure un codice di errore COM. Il codice di errore COM viene propagato come il valore restituito di MakeAndInitialize. Si noti che se la funzione di modello di creazione viene utilizzata per costruire l'oggetto non viene chiamato il metodo RuntimeClassInitialize.
 
 ### <a name="public-constructors"></a>Costruttori pubblici  
   
@@ -61,7 +56,7 @@ L'elenco delle interfacce l'oggetto implementa oltre IUnknown, IInspectable o al
 Questo è un dettaglio di implementazione.
   
 ## <a name="requirements"></a>Requisiti  
-**Intestazione:** h  
+**Intestazione:** FTM.  
   
 **Spazio dei nomi:** Microsoft::WRL  
   

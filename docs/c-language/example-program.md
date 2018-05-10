@@ -1,27 +1,22 @@
 ---
 title: Programma di esempio | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 ms.assetid: fc22ef82-9caa-425f-b201-2891bc123d1f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 903e4890bfad23310f0663fde52af4065e78486e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9b148e14dad4df43dfe55d89172c557d6d2cc4c0
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="example-program"></a>Programma di esempio
 Il seguente programma di origine C è costituito da due file di origine. Viene fornita una panoramica di alcune delle varie dichiarazioni e definizioni possibili in un programma C. Nelle sezioni successive di questo libro viene descritto come scrivere tali dichiarazioni, definizioni e inizializzazioni e come usare le parole chiave di C come **static** e `extern`. La funzione `printf` viene dichiarata nel file di intestazione C STDIO.H.  

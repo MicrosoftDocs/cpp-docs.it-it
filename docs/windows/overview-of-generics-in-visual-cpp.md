@@ -1,13 +1,10 @@
 ---
 title: Panoramica dei Generics in Visual C++ | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -20,18 +17,16 @@ helpviewer_keywords:
 - open constructed types [C++]
 - constructed types, closed [C++]
 ms.assetid: 21f10637-0fce-4916-b925-6c86a126d3aa
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5082f603c64e796ef369044e3586ae5bfe85605a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 19200e3c3c4ed67960905b697187dbb6b37a65e9
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="overview-of-generics-in-visual-c"></a>Cenni preliminari sui generics in Visual C++
 I generics sono tipi con parametri supportati dal Common Language Runtime. Un tipo con parametri viene definito con un parametro di tipo sconosciuto specificato quando viene utilizzato il generico.  
@@ -77,7 +72,7 @@ I generics sono tipi con parametri supportati dal Common Language Runtime. Un ti
  Un vincolo è una restrizione relativa ai tipi che possono essere utilizzati come parametro di tipo. Ad esempio, in una classe generica specifica possono essere accettate solo le classi che ereditano da una determinata classe o tramite cui viene implementata un'interfaccia specificata. Per ulteriori informazioni, vedere [vincoli sui parametri di tipo generico (C + + CLI)](../windows/constraints-on-generic-type-parameters-cpp-cli.md).  
   
 ## <a name="reference-types-and-value-types"></a>Tipi di riferimento e tipi di valore  
- I tipi di handle e i tipi di valore possono essere utilizzati come argomenti tipo. Nella definizione generica, in cui può essere utilizzato qualsiasi tipo, la sintassi è quella dei tipi di riferimento. Ad esempio, il  **->**  operatore viene utilizzato per accedere ai membri del tipo di parametro di tipo, se il tipo utilizzato è un tipo riferimento o un tipo di valore o meno. Quando un tipo di valore viene utilizzato come argomento tipo, tramite il runtime viene generato un codice in cui vengono utilizzati direttamente i tipi di valore senza eseguirne il boxing.  
+ I tipi di handle e i tipi di valore possono essere utilizzati come argomenti tipo. Nella definizione generica, in cui può essere utilizzato qualsiasi tipo, la sintassi è quella dei tipi di riferimento. Ad esempio, il **->** operatore viene utilizzato per accedere ai membri del tipo di parametro di tipo, se il tipo utilizzato è un tipo riferimento o un tipo di valore o meno. Quando un tipo di valore viene utilizzato come argomento tipo, tramite il runtime viene generato un codice in cui vengono utilizzati direttamente i tipi di valore senza eseguirne il boxing.  
   
  Quando si utilizza un tipo di riferimento come argomento di tipo generico, utilizzare la sintassi di handle. Quando si utilizza un tipo di valore come argomento tipo generico, utilizzare direttamente il nome del tipo.  
   

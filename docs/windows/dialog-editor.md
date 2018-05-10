@@ -1,13 +1,10 @@
 ---
 title: Finestra di dialogo Editor | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.editors.dialog.dialog
 - vc.editors.dialog.F1
@@ -19,21 +16,19 @@ helpviewer_keywords:
 - Dialog editor
 - dialog boxes, editing
 ms.assetid: d94884ef-2cca-49d8-9b58-775f34848134
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a18ed3aad1d3a9ea697ac815658b5eba8d99bff1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7b8cb99b2002dab3fb04ffa8c5b117a49d23adc1
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="dialog-editor"></a>Editor finestre
-L'editor finestre consente di creare o modificare le risorse finestre di dialogo. Aprire l'editor della finestra di dialogo facendo doppio clic sul file RC di una finestra di dialogo nella finestra Visualizzazione risorse (**View &#124; Visualizzazione risorse**). Si noti che Visualizzazione risorse non è disponibile nelle edizioni Express.  
+L'editor finestre consente di creare o modificare le risorse finestre di dialogo. Si apre l'editor finestre facendo doppio clic sul file RC di una finestra di dialogo nella finestra Visualizzazione risorse (**View &#124; visualizzazione risorse**). Si noti che Visualizzazione risorse non è disponibile nelle edizioni Express.  
   
  Uno dei primi passaggi per creare una nuova finestra di dialogo (o un modello di finestra di dialogo) consiste nell'aggiunta dei controlli alla finestra di dialogo. Nell'editor finestre, è possibile disporre i controlli per adattarli a determinate dimensioni, forme o allineamenti o spostarli all'interno della finestra di dialogo. È inoltre facile eliminare un controllo.  
   

@@ -1,13 +1,10 @@
 ---
 title: SafeLessThanEquals | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - SafeLessThanEquals
 dev_langs:
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - SafeLessThanEquals function
 ms.assetid: cbd70526-faf2-4fbc-96a0-b61e8cf5f04a
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: cb5765d9ea353558d7a297fb7867c6889be928ea
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: dd783f5d611b6055c542f56d04e2249b71b31218
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="safelessthanequals"></a>SafeLessThanEquals
 Confronta due numeri.  
@@ -49,10 +44,10 @@ inline bool SafeLessThanEquals (
  Il secondo numero da confrontare. Deve essere di tipo U.  
   
 ## <a name="return-value"></a>Valore restituito  
- `true`Se `t` è minore o uguale a `u`; in caso contrario `false`.  
+ `true` Se `t` è minore o uguale a `u`; in caso contrario `false`.  
   
 ## <a name="remarks"></a>Note  
- `SafeLessThanEquals`estende l'operatore di confronto regolare consentendo di confrontare due tipi diversi di numeri.  
+ `SafeLessThanEquals` estende l'operatore di confronto regolare consentendo di confrontare due tipi diversi di numeri.  
   
  Questo metodo fa parte di [Libreria SafeInt](../windows/safeint-library.md) ed è progettata per un'operazione di confronto singolo senza creare un'istanza di [classe SafeInt](../windows/safeint-class.md).  
   

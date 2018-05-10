@@ -1,12 +1,9 @@
 ---
 title: Membro dati Module::releaseNotifier_ | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - module/Microsoft::WRL::Module::releaseNotifier_
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - releaseNotifier_ data member
 ms.assetid: 99bb1ceb-469c-489d-8a14-f67f410a83d5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0660077af97e26e7384dd84b0b620114a6d5d9d8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 20e3ab1df91c279951b865f9a2d10804c7dbfd1a
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="modulereleasenotifier-data-member"></a>Membro dati Module::releaseNotifier_
 Contiene un puntatore a un oggetto ReleaseNotifier.  
@@ -38,7 +33,7 @@ ReleaseNotifier *releaseNotifier_;
 ```  
   
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** module.h  
+ **Intestazione:** Implements  
   
  **Spazio dei nomi:** Microsoft::WRL
  

@@ -1,25 +1,22 @@
 ---
-title: "Proprietà Istruzione di compilazione personalizzata (Linux C++) | Microsoft Docs"
-ms.custom: 
+title: Proprietà Istruzione di compilazione personalizzata (Linux C++) | Microsoft Docs
+ms.custom: ''
 ms.date: 10/17/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: Linux
+ms.topic: conceptual
 ms.assetid: 77a9c1fb-7c41-4a9b-9418-18ac17ce4e74
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: b46ee18fce79c0e1954d37a87f6380c73870fa12
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 0ec787826a09379732ac00fa858d32f05cf8025b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="custom-build-step-properties-linux-c"></a>Proprietà Istruzione di compilazione personalizzata (Linux C++)
 

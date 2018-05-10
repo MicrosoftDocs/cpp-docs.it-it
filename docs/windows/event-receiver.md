@@ -1,13 +1,10 @@
 ---
 title: event_receiver | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - vc-attr.event_receiver
 dev_langs:
@@ -21,18 +18,16 @@ helpviewer_keywords:
 - event sinks, creating
 - event sinks
 ms.assetid: bf8fe770-3ea2-4128-b46b-166222ee4097
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 50ea26172e2f5112e760aa02d9247d07afbead2b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 01ab5aeee7d706da7016cb1ea1f01ff7367de888
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="eventreceiver"></a>event_receiver
 Crea un ricevitore di eventi (sink).  
@@ -51,7 +46,7 @@ Crea un ricevitore di eventi (sink).
  `type`  
  Un'enumerazione di uno dei valori seguenti:  
   
--   `native`per il codice C/C++ non gestito (impostazione predefinita per le classi native).  
+-   `native` per il codice C/C++ non gestito (impostazione predefinita per le classi native).  
   
 -   `com` per il codice COM. Questo valore richiedere che si includano i file di intestazione seguente:  
   
@@ -64,14 +59,14 @@ Crea un ricevitore di eventi (sink).
  **layout_dependent**  
  Specificare *layout_dependent* solo se `type` = **com**. *layout_dependent* è un valore booleano:  
   
--   **true** significa che la firma dei delegati nel ricevitore deve corrispondere esattamente a quelli a cui sono associati nell'evento origine eventi. I nomi dei gestori di ricevitore di eventi deve corrispondere ai nomi specificati nell'interfaccia di origine eventi rilevanti. È necessario utilizzare **coclasse** quando *layout_dependent* è **true**. È leggermente più efficiente specificare **true**.  
+-   **true** significa che la firma dei delegati nel caso in cui ricevitore deve corrispondere esattamente a quelli a cui sono associati nell'evento origine. I nomi dei gestori di ricevitore di eventi deve corrispondere ai nomi specificati nell'interfaccia di origine eventi rilevanti. È necessario utilizzare **coclasse** quando *layout_dependent* è **true**. È leggermente più efficiente specificare **true**.  
   
--   **false** (predefinito) indica che la convenzione di chiamata o una classe archiviazione (virtuale, statici e altri) non devono corrispondere il metodo di evento e i gestori; né richiedono i nomi dei gestori corrispondano ai nomi di metodo di interfaccia di origine evento.  
+-   **false** (valore predefinito) indica che la convenzione di chiamata o una classe archiviazione (virtuale, statici e altri) non dispone in modo che corrisponda il metodo di evento e i gestori; né sia i nomi dei gestori corrispondano ai nomi di metodo di interfaccia di origine evento.  
   
 ## <a name="remarks"></a>Note  
  Il **event_receiver** attributo C++ specifica che la classe o struttura in cui viene applicato sarà un ricevitore di eventi, utilizzando il modello di eventi unificato di Visual C++.  
   
- **event_receiver** viene utilizzato con il [event_source](../windows/event-source.md) attributo e [hook](../cpp/hook.md) e [unhook](../cpp/unhook.md) parole chiave. Utilizzare **event_source** per creare le origini eventi. Utilizzare `__hook` all'interno di metodi del ricevitore di eventi per associare i metodi di ricevitore di eventi ("hook") per gli eventi di un'origine evento. Utilizzare `__unhook` annullare l'associazione di essi.  
+ **event_receiver** viene usato con il [event_source](../windows/event-source.md) attributo e il [hook](../cpp/hook.md) e [unhook](../cpp/unhook.md) parole chiave. Utilizzare **event_source** per creare le origini eventi. Utilizzare `__hook` all'interno di metodi del ricevitore di eventi per associare i metodi di ricevitore di eventi ("hook") per gli eventi di un'origine evento. Utilizzare `__unhook` annullare l'associazione di essi.  
   
  *layout_dependent* viene specificato solo per i ricevitori di eventi COM (`type`=**com**). Il valore predefinito per *layout_dependent* è **false**.  
   
@@ -87,7 +82,7 @@ Crea un ricevitore di eventi (sink).
 |**Si applica a**|**class**, `struct`|  
 |**Ripetibile**|No|  
 |**Attributi obbligatori**|**Coclasse** quando *layout_dependent*=**true**|  
-|**Attributi non validi**|nessuno|  
+|**Attributi non validi**|Nessuno|  
   
  Per altre informazioni, vedere [Contesti di attributi](../windows/attribute-contexts.md).  
   

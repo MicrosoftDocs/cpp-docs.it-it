@@ -1,13 +1,10 @@
 ---
-title: "Pagina delle proprietà Generale (progetto) | Documenti Microsoft"
-ms.custom: 
+title: Pagina delle proprietà Generale (progetto) | Documenti Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VC.Project.VCConfiguration.IntermediateDirectory
 - VC.Project.VCConfiguration.ConfigurationType
@@ -36,14 +33,13 @@ helpviewer_keywords:
 - Unicode, creating C++ build configuration
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 772192a4b367760e85bb1631f1ef7b50650af0c1
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: ba98f7d9ed14df1e017f8b83e73cf5d318610f9f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="general-property-page-project"></a>Pagina delle proprietà Generale (Progetto)
 

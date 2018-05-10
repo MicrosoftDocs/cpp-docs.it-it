@@ -1,13 +1,10 @@
 ---
 title: Disposizione di pulsanti di comando lungo il bordo destro o inferiore di una finestra di dialogo | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,18 +13,16 @@ helpviewer_keywords:
 - buttons, arranging push buttons in dialog boxes
 - push buttons
 ms.assetid: 2e855cbf-90f8-4ff0-9511-508cf78e2cd5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a8bec8f1f8772693b82523d01d0e14db12665be0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3bf0ccd8954884b5ed1907c752b013ab2a33840d
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="arranging-push-buttons-along-the-right-or-bottom-of-a-dialog-box"></a>Disposizione di pulsanti di comando lungo il bordo destro o inferiore di una finestra di dialogo
 ### <a name="to-arrange-push-buttons-along-the-right-or-bottom-of-a-dialog-box"></a>Per disporre i pulsanti di comando lungo il bordo destro o inferiore di una finestra di dialogo  
@@ -36,9 +31,9 @@ ms.lasthandoff: 12/21/2017
   
 2.  Dal **formato** menu, scegliere **Disponi pulsanti**, quindi scegliere una delle modalità seguenti:  
   
-    -   **Destra**: consente di allineare i pulsanti di comando lungo il bordo destro della finestra di dialogo.  
+    -   **Destra**: Allinea pulsanti di comando lungo il bordo destro della finestra di dialogo.  
   
-    -   **Nella parte inferiore**: consente di allineare i pulsanti di comando lungo il bordo inferiore della finestra di dialogo.  
+    -   **Nella parte inferiore**: Allinea pulsanti di comando lungo il bordo inferiore della finestra di dialogo.  
   
          Se si seleziona un controllo diverso da un pulsante di comando, la posizione non è interessata.  
   

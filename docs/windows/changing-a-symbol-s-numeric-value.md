@@ -1,13 +1,10 @@
 ---
-title: La modifica di un simbolo &#39; valore numerico s | Documenti Microsoft
-ms.custom: 
+title: Modifica di un simbolo&#39;valore numerico s | Documenti Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.editors.symbol.changing.value
 dev_langs:
@@ -17,20 +14,18 @@ helpviewer_keywords:
 - symbols, numeric values
 - numeric values, changing symbols
 ms.assetid: 468e903b-9c07-4251-ae09-3b6cb754cc2b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ce2c846d844b79a6ff054bb6c209d1f4653a26d3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8beacf5195e108d98a0004fe79c2a66cb2b3b610
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
-# <a name="changing-a-symbol39s-numeric-value"></a>La modifica di un simbolo &#39; valore numerico s
+# <a name="changing-a-symbol39s-numeric-value"></a>Modifica di un simbolo&#39;s valore numerico
 Per i simboli associati a una singola risorsa, è possibile utilizzare il [finestra proprietà](/visualstudio/ide/reference/properties-window) per modificare il valore di simbolo. È possibile utilizzare il [la finestra di dialogo Simboli risorsa](../windows/resource-symbols-dialog-box.md) per modificare il valore dei simboli non attualmente assegnati a una risorsa. Per ulteriori informazioni, vedere [modifica di simboli non assegnati](../windows/changing-unassigned-symbols.md).  
   
 ### <a name="to-change-a-symbol-value-assigned-to-a-single-resource-or-object"></a>Per modificare il valore di un simbolo assegnato a una singola risorsa o oggetto  

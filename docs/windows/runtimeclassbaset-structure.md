@@ -1,30 +1,25 @@
 ---
 title: Struttura RuntimeClassBaseT | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - implements/Microsoft::WRL::Details::RuntimeClassBaseT
 dev_langs:
 - C++
 ms.assetid: a62775fb-3359-4f45-9ff1-c07fa8da464b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8798372b96074cb8424b4e747b188abcaf826849
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3ea147ebddff03401f6151bcdc44d96efb233f90
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="runtimeclassbaset-structure"></a>Struttura RuntimeClassBaseT
 Supporta l'infrastruttura WRL e non deve essere utilizzato direttamente dal codice.  
@@ -51,10 +46,10 @@ friend struct Details::RuntimeClassBaseT;
  `RuntimeClassBaseT`  
   
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** h  
+ **Intestazione:** FTM.  
   
  **Namespace:** Microsoft::WRL::Details  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimento (libreria di Runtime di Windows)](http://msdn.microsoft.com/en-us/00000000-0000-0000-0000-000000000000)   
+ [Riferimento (libreria Windows Runtime)](http://msdn.microsoft.com/en-us/00000000-0000-0000-0000-000000000000)   
  [Spazio dei nomi Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)

@@ -1,13 +1,10 @@
 ---
 title: L'applicazione di effetti controllo dell'Account utente (UAC) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,22 +13,20 @@ helpviewer_keywords:
 - user accounts [C++]
 - User Account Control [C++]
 ms.assetid: 0d001870-253e-4989-b689-f78035953799
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e609c16d63974506a06d6ec553cf4be09509acb9
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: 020a7a16e38ee40c99a7a5b77c88002e3135bfa1
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-user-account-control-uac-affects-your-application"></a>Effetti del Controllo dell'account utente sull'applicazione
 Il Controllo dell'account utente è una funzionalità di Windows Vista in cui gli account utente dispongono di privilegi limitati. Per informazioni dettagliate sul Controllo dell'account utente, visitare i siti seguenti:  
   
--   [Step by Step Guida per il controllo di Account utente di Windows Vista](http://go.microsoft.com/fwlink/p/?linkid=53781)  
+-   [In dettaglio Guida per il controllo di Account utente di Windows Vista](http://go.microsoft.com/fwlink/p/?linkid=53781)  
   
 -   [Procedure consigliate e linee guida per le applicazioni in un ambiente con privilegiato minimi](http://go.microsoft.com/fwlink/p/?linkid=82444)  
   

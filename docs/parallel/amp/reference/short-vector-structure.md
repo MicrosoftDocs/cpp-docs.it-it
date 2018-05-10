@@ -2,11 +2,8 @@
 title: Struttura short_vector | Documenti Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-amp
 ms.topic: reference
 f1_keywords:
 - short_vector
@@ -15,17 +12,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: e4f50b8f-1150-437d-b58c-79c5fb883708
-caps.latest.revision: 7
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d71ef4577845319bf66ef51e92afae7907526008
-ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
+ms.openlocfilehash: a79280196da13a73f8495ea79e8c9551763262be
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="shortvector-structure"></a>Struttura short_vector
 short_vector fornisce definizioni di metaprogrammazione basato su cui sono utili per la programmazione in modo generico short Vector.  
@@ -114,7 +109,7 @@ struct short_vector<double, 4>;
   
  **Namespace:** Concurrency:: Graphics  
   
-##  <a name="ctor"></a>  short_vector::short_vector Constructor  
+##  <a name="ctor"></a>  Costruttore short_vector:: short_vector  
   
 ```  
 short_vector();

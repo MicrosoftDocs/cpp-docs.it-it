@@ -1,13 +1,10 @@
 ---
 title: db_accessor | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - vc-attr.db_accessor
 dev_langs:
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - db_accessor attribute
 ms.assetid: ec407a9f-24d7-4822-96d4-7cc6a0301815
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5faa84773fbf1fe15fd0223c97f0361f1215b149
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b81e55500a8ff44c887bed592c9472c5a8d3ea1d
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="dbaccessor"></a>db_accessor
 Gruppi **db_column** gli attributi che fanno parte di `IAccessor`-associazione di base.  
@@ -49,7 +44,7 @@ Gruppi **db_column** gli attributi che fanno parte di `IAccessor`-associazione d
  Un valore booleano che specifica se la funzione di accesso viene recuperato automaticamente (**TRUE**) o non recuperati (**FALSE**).  
   
 ## <a name="remarks"></a>Note  
- **db_accessor** definisce la funzione di accesso OLE DB sottostanti per le successive **db_column** e **db_param** attributi all'interno della stessa classe o funzione. **db_accessor** è utilizzabile a livello di membro e viene utilizzata al gruppo **db_column** gli attributi che fanno parte di OLE DB `IAccessor`-associazione di base. Viene utilizzato in combinazione con il **db_table** o **db_command** attributi. La chiamata di questo attributo è simile alla chiamata di [BEGIN_ACCESSOR](../data/oledb/begin-accessor.md) e [END_ACCESSOR](../data/oledb/end-accessor.md) macro.  
+ **db_accessor** definisce la funzione di accesso OLE DB sottostanti per successivi **db_column** e **db_param** attributi all'interno della stessa classe o funzione. **db_accessor** è possibile utilizzare a livello di membro e viene utilizzata al gruppo **db_column** attributi che fanno parte di OLE DB `IAccessor`-associazione di base. Viene utilizzato in combinazione con il **db_table** o **db_command** attributi. La chiamata di questo attributo è simile alla chiamata di [BEGIN_ACCESSOR](../data/oledb/begin-accessor.md) e [END_ACCESSOR](../data/oledb/end-accessor.md) macro.  
   
  **db_accessor** genera un set di righe e li associa ai mapping di funzione di accesso corrispondente. Se non si chiama **db_accessor**, funzione di accesso 0 verrà automaticamente generato e tutte le associazioni di colonna verranno mappate a questo blocco di funzione di accesso.  
   
@@ -89,7 +84,7 @@ public:
 |**Si applica a**|Blocchi di attributi|  
 |**Ripetibile**|No|  
 |**Attributi obbligatori**|Nessuna|  
-|**Attributi non validi**|nessuno|  
+|**Attributi non validi**|Nessuno|  
   
  Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](../windows/attribute-contexts.md).  
   

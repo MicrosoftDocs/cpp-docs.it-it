@@ -1,12 +1,9 @@
 ---
 title: '#Se, #elif, #else e # #endif (C/C++) | Documenti Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - '#else'
@@ -30,17 +27,15 @@ helpviewer_keywords:
 - elif directive (#elif)
 - defined directive
 ms.assetid: c77a175f-6ca8-47d4-8df9-7bac5943d01b
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 13a684412b0b0b24cbb9067ef6ea4cf78810c37f
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: a9d4f941298159b8a3ea1aa3fe37efd1e6dc68ab
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="if-elif-else-and-endif-directives-cc"></a>Direttive #if, #elif, #else e #endif (C/C++)
 La direttiva `#if`, con le direttive `#elif`, `#else` e `#endif`, controlla la compilazione di parti di un file di origine. Se l'espressione scritta (dopo `#if`) presenta un valore diverso da zero, il gruppo di righe immediatamente successivo alla direttiva `#if` viene mantenuto nell'unità di conversione.  
@@ -55,9 +50,9 @@ La direttiva `#if`, con le direttive `#elif`, `#else` e `#endif`, controlla la c
  *Se-line* :  
  **#if**  *constant-expression*  
   
- **#ifdef**  *identifier*  
+ **#ifdef***identificatore*   
   
- **#ifndef**  *identifier*  
+ **#ifndef***identificatore*   
   
  *elif parti* :  
  *testo della riga di elif*  
@@ -88,7 +83,7 @@ La direttiva `#if`, con le direttive `#elif`, `#else` e `#endif`, controlla la c
   
  Il preprocessore elabora selezionato *testo* e lo passa al compilatore. Se *testo* contiene direttive del preprocessore, i preprocessore esegue tali direttive. Solo i blocchi di testo selezionati dal preprocessore vengono compilati.  
   
- Il preprocessore seleziona un singolo *testo* elemento valutando l'espressione costante che segue ogni `#if` o `#elif` direttiva finché trova l'espressione costante true (diverso da zero). Seleziona tutto il testo (incluse altre direttive del preprocessore che iniziano con  **#** ) fino a essa associati `#elif`, `#else`, o `#endif`.  
+ Il preprocessore seleziona un singolo *testo* elemento valutando l'espressione costante che segue ogni `#if` o `#elif` direttiva finché trova l'espressione costante true (diverso da zero). Seleziona tutto il testo (incluse altre direttive del preprocessore che iniziano con **#**) fino a essa associati `#elif`, `#else`, o `#endif`.  
   
  Se tutte le occorrenze di *espressione costante* sono false, o se nessun `#elif` direttive, il preprocessore seleziona il blocco di testo dopo il `#else` clausola. Se il `#else` clausola viene omessa e tutte le istanze di *espressione costante* nel `#if` blocco sono false, non viene selezionato alcun blocco di testo.  
   

@@ -1,12 +1,9 @@
 ---
 title: Membro dati EventSource::addRemoveLock_ | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - event/Microsoft::WRL::EventSource::addRemoveLock_
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - addRemoveLock_ data member
 ms.assetid: e2d69256-4891-4aad-ad0b-76479c0bb076
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: df0ecba622e64154479015faeba398043993db49
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 46763a6376a18ae469833c3eee6a0d5d9f15ee45
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="eventsourceaddremovelock-data-member"></a>Membro dati EventSource::addRemoveLock_
 Sincronizza l'accesso per il [targets](../windows/eventsource-targets-data-member.md) matrice durante l'aggiunta, rimozione o richiamare gestori eventi.  

@@ -1,13 +1,10 @@
 ---
 title: Prototipi di funzioni | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,24 +14,22 @@ helpviewer_keywords:
 - functions [C], return types
 - prototypes [C++], function
 ms.assetid: d152f8e6-971e-432c-93ca-5a91400653c2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ea02b5b3bb1517623a0c3fc67a752d203f81c5a8
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
-ms.translationtype: MT
+ms.openlocfilehash: 6979bb90debc1734ccadf40b5d0e814d3c28c1ac
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="function-prototypes"></a>Prototipi di funzioni
 Una dichiarazione di funzione precede la definizione di funzione e specifica il nome, il tipo restituito, la classe di archiviazione e altri attributi di una funzione. Per essere un prototipo, la dichiarazione della funzione deve inoltre stabilire i tipi e gli identificatori per gli argomenti della funzione.  
   
 ## <a name="syntax"></a>Sintassi  
  `declaration`:  
- *declaration-specifiers attribute-seq* opt*init-declarator-list* opt**;**  
+ *declaration-specifiers attribute-seq* opt*init-declarator-list* opt **;**  
   
  /\* *attribute-seq* opt è specifico di Microsoft */  
   
@@ -61,7 +56,7 @@ Una dichiarazione di funzione precede la definizione di funzione e specifica il 
  *direct-declarator*: /\* Dichiaratore di funzione \*/  
  *direct-declarator*  **(**  *parameter-type-list*  **)**  /* Dichiaratore nuovo stile \*/  
   
- *direct-declarator*  **(**  *identifier-list* opt**)** /* Dichiaratore stile obsoleto \*/  
+ *direct-declarator*  **(**  *identifier-list* opt **)** /* Dichiaratore stile obsoleto \*/  
   
  Il prototipo ha lo stesso form della definizione di funzione, ma viene terminato da un punto e virgola immediatamente dopo la parentesi di chiusura e pertanto non ha corpo. In entrambi i casi, il tipo restituito deve corrispondere al tipo restituito specificato nella definizione di funzione.  
   

@@ -1,13 +1,10 @@
 ---
 title: Ricerca di dati binari | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.editors.binary
 dev_langs:
@@ -19,18 +16,16 @@ helpviewer_keywords:
 - binary data, finding
 - ASCII characters, finding in binary data
 ms.assetid: 1675b19c-66e3-4040-82c2-5dde4b1793f8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 60e37ee1412639f68cc21e65154e4537b244ac9a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 815975ac693885842d2e4b2287e14957abe8375f
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="finding-binary-data"></a>Ricerca di dati binari
 È possibile cercare stringhe ASCII o byte esadecimali. Ad esempio, per trovare "Hello", è possibile cercare una la stringa "Hello" oppure "48 65 6C 6C 6F" (l'equivalente esadecimale).  
@@ -49,7 +44,7 @@ ms.lasthandoff: 12/21/2017
   
  Requisiti  
   
- nessuno  
+ Nessuno  
   
 ## <a name="see-also"></a>Vedere anche  
  [Binary Editor](binary-editor.md)

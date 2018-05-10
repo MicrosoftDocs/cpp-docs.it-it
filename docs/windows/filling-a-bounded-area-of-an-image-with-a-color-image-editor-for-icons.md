@@ -1,13 +1,10 @@
 ---
 title: La compilazione di un'Area delimitata di un'immagine con un colore (Editor di immagini per le icone) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,18 +13,16 @@ helpviewer_keywords:
 - Image editor [C++], colors
 - Fill tool
 ms.assetid: e647ef83-421b-4818-855d-249b4c4cb5f2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: dd951e22286b255ea504ba5764f76ba8b4020924
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f70decbfd0de1a31024482806594ca3c2b12aa8a
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="filling-a-bounded-area-of-an-image-with-a-color-image-editor-for-icons"></a>Riempimento di un'area delimitata di un'immagine con un colore (Editor di immagini per le icone)
 Editor di immagini consente di **riempimento** strumento per la compilazione di qualsiasi racchiusi area dell'immagine con il colore di disegno o il colore di sfondo corrente.  
@@ -49,7 +44,7 @@ Editor di immagini consente di **riempimento** strumento per la compilazione di 
   
  Requisiti  
   
- nessuno  
+ Nessuno  
   
 ## <a name="see-also"></a>Vedere anche  
  [Tasti di scelta rapida](../windows/accelerator-keys-image-editor-for-icons.md)   

@@ -1,13 +1,10 @@
 ---
 title: 'Procedura: aprire un File di Script di risorsa in formato testo | Documenti Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.editors.resource
 dev_langs:
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - .rc files, opening in text format
 - rc files, opening in text format
 ms.assetid: 0bc57527-f53b-40c9-99a9-4dcbc5c9af57
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 347d33a746adec1208b81fefa54c10472e68b7d6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 14af857d7727ee8df13a9eb6c438342007252950
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="how-to-open-a-resource-script-file-in-text-format"></a>Procedura: aprire un file di script di risorsa in formato testo
 Talvolta può essere utile visualizzare il contenuto del file di script di risorsa (RC) del progetto senza aprire una risorsa, quale una finestra di dialogo, all'interno dell'editor di risorse specifico. È ad esempio possibile che si desideri cercare una stringa in tutte le finestre di dialogo del file di risorse senza che sia necessario aprire separatamente ogni finestra.  
@@ -43,7 +38,7 @@ Talvolta può essere utile visualizzare il contenuto del file di script di risor
   
 ### <a name="to-open-a-resource-script-file-as-text"></a>Per aprire un file script di risorsa in formato testo  
   
-1.  Dal **File** dal menu **aprire**, quindi fare clic su **File.**  
+1.  Dal **File** dal menu **Apri**, quindi fare clic su **File.**  
   
 2.  Nel **Apri** finestra di dialogo casella, passare al file di script di risorsa che si desidera visualizzare in formato testo.  
   

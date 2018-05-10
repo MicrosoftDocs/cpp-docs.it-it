@@ -1,30 +1,25 @@
 ---
 title: Struttura RuntimeClassBase | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - implements/Microsoft::WRL::Details::RuntimeClassBase
 dev_langs:
 - C++
 ms.assetid: 6ada4f81-a857-488a-ad56-8d0b11ccbfcc
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a052d9db920074763ce92bb54b78a881b3a2a513
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d80f475cf8a50dcb084ca6e953842e91c55e4502
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="runtimeclassbase-structure"></a>Struttura RuntimeClassBase
 Supporta l'infrastruttura WRL e non deve essere utilizzato direttamente dal codice.  
@@ -44,7 +39,7 @@ struct RuntimeClassBase;
  `RuntimeClassBase`  
   
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** h  
+ **Intestazione:** FTM.  
   
  **Namespace:** Microsoft::WRL::Details  
   

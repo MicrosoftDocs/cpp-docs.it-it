@@ -1,13 +1,10 @@
 ---
-title: "Proprietà dei pulsanti della barra degli strumenti | Documenti Microsoft"
-ms.custom: 
+title: Proprietà dei pulsanti della barra degli strumenti | Documenti Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,18 +15,16 @@ helpviewer_keywords:
 - command IDs, toolbar buttons
 - width, toolbar buttons
 ms.assetid: b2705814-7c5d-4f24-8f77-07559b0cdda2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5e179cd400b0b8bcc621a7c69a4814eab098fbaa
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3e61ba7e8720c755ce26408826c56a5c1fc9d51e
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="toolbar-button-properties"></a>Proprietà dei pulsanti delle barre degli strumenti
 Le proprietà di un pulsante della barra degli strumenti sono:  

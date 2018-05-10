@@ -1,13 +1,10 @@
 ---
 title: Disegno di linee o figure chiuse (Editor di immagini per le icone) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - Image editor [C++], drawing lines
 - shapes, drawing
 ms.assetid: 7edd86db-77b1-451f-8001-bbfed9c6304f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1c2f5169c6340b756c31e1986e46b52f48b4edd5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6e2defbde7963c6e58cdfe3f4a25ea550ad88e5f
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="drawing-lines-or-closed-figures-image-editor-for-icons"></a>Disegno di linee o figure chiuse (Editor di immagini per le icone)
 L'editor di immagini degli strumenti per la creazione di righe e di lavoro figure chiuse tutte nello stesso modo: si posiziona il punto di inserimento in un punto e trascinare in un altro. Per le righe, tali punti sono gli endpoint. Figure chiuse, tali punti sono opposti angoli di un rettangolo di delimitazione nella figura.  
@@ -65,7 +60,7 @@ L'editor di immagini degli strumenti per la creazione di righe e di lavoro figur
   
  Requisiti  
   
- nessuno  
+ Nessuno  
   
 ## <a name="see-also"></a>Vedere anche  
  [Tasti di scelta rapida](../windows/accelerator-keys-image-editor-for-icons.md)   

@@ -1,31 +1,26 @@
 ---
 title: Attributi (estensioni del componente C++) definiti dall'utente | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - metadata, extending
 - custom attributes, extending metadata
 ms.assetid: 98b29048-a3ea-4698-8441-f149cdaec9fb
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9d974e8526f983801ed011520f7f78ff8c6cb564
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 22f8dfa7e78568f100b0c58c881b9e84cb47a149
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="user-defined-attributes--c-component-extensions"></a>Attributi definiti dall'utente (Estensioni del componente C++)
 Attributi personalizzati consentono di estendere i metadati di un'interfaccia, classe o struttura, metodo, parametro o enumerazione.  

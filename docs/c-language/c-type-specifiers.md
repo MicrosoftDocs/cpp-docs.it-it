@@ -1,30 +1,25 @@
 ---
 title: Identificatori di tipi C | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/29/2018
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - type specifiers, C
 - specifiers, type
 ms.assetid: fbe13441-04c3-4829-b047-06d374adc2b6
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 00d91c2f790b93e70f21557d85f2cbb8216c8ed3
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
-ms.translationtype: MT
+ms.openlocfilehash: e37ac421627d4c4503d75eaf65188bbe234af015
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="c-type-specifiers"></a>Identificatori di tipi C
 

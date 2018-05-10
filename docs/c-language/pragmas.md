@@ -1,29 +1,24 @@
 ---
 title: Pragma | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - pragmas, about pragmas
 ms.assetid: 3ce8aced-53ee-4524-87d0-f998d6977ff5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 50c59b4c6d769b37b9ee1fbf4efa58bcf8af1e86
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 924e273e7d49778c3b20c065415883488456b4a3
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="pragmas"></a>Pragma
 **ANSI 3.8.6** Il comportamento in ogni direttiva #pragma riconosciuta.  

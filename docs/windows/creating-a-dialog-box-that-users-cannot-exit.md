@@ -1,13 +1,10 @@
 ---
-title: "Creazione di una finestra di dialogo che è possibile uscire | Documenti Microsoft"
-ms.custom: 
+title: Creazione di una finestra di dialogo che è possibile uscire | Documenti Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,18 +12,16 @@ helpviewer_keywords:
 - modal dialog boxes, logon screens
 - logon screens
 ms.assetid: 54823c27-1658-4388-bd12-0a1ce8f3899e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1b53c233c13ed53f4cf2ccf489da9af90ae15796
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fc04c9ccfb0fdc74e57142bf746681411bbba495
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="creating-a-dialog-box-that-users-cannot-exit"></a>Creazione di una finestra di dialogo da cui non è possibile uscire
 È possibile creare una finestra di dialogo di runtime da cui non è possibile uscire. Una finestra di dialogo di questo tipo è utile per gli accessi e per i blocchi di applicazioni o documenti.  

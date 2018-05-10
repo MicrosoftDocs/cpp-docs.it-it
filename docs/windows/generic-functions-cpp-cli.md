@@ -1,13 +1,10 @@
 ---
 title: Funzioni generiche (C + + CLI) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - methods [C++], generic
 - generic functions
 ms.assetid: 8e409364-58f9-4360-b486-e7d555e0c218
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9ebafa409680609d6e097b803be2b539ccdc7601
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 66eb27b28a1b18942c0a8a9a77a877a2f0b2ef8c
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="generic-functions-ccli"></a>Funzioni generiche (C++/CLI)
 Una funzione generica è una funzione dichiarata con parametri di tipo. Quando viene chiamato, vengono utilizzati i tipi effettivi anziché i parametri di tipo.  
@@ -66,18 +61,18 @@ return-type identifier<type-parameter identifier(s)>
  Informazioni dichiarative aggiuntive. Per ulteriori informazioni sugli attributi e classi di attributi, vedere attributi.  
   
  *modificatori* (facoltativo)  
- Un modificatore per la funzione, ad esempio statico.  `virtual`non è consentita perché i metodi virtuali non possono essere generici.  
+ Un modificatore per la funzione, ad esempio statico.  `virtual` non è consentita perché i metodi virtuali non possono essere generici.  
   
- *tipo restituito*  
+ *Tipo restituito*  
  Tipo restituito dal metodo. Se il tipo restituito è void, nessun valore restituito è obbligatorio.  
   
  *identifier*  
  Nome della funzione.  
   
- *identificatori di parametro di tipo*  
+ *parametro di tipo identificatore/i*  
  Elenco delimitato da virgole di identificatori.  
   
- *parametri formali di* (facoltativo)  
+ *i parametri formali* (facoltativo)  
  Elenco di parametri.  
   
  *parametro di tipo-clausole di vincoli*  
@@ -153,7 +148,7 @@ ref struct MyClass {
   
  **Esempio**  
   
- L'esempio seguente usa una funzione generica per individuare il primo elemento in una matrice. Dichiara `MyClass`, che eredita dalla classe di base `MyBaseClass`. `MyClass`contiene una funzione generica, `MyFunction`, che chiama un'altra funzione generica, `MyBaseClassFunction`, all'interno della classe base. In **principale**, la funzione generica, `MyFunction`, viene chiamato utilizzando argomenti di tipo diverso.  
+ L'esempio seguente usa una funzione generica per individuare il primo elemento in una matrice. Dichiara `MyClass`, che eredita dalla classe di base `MyBaseClass`. `MyClass` contiene una funzione generica `MyFunction`, che chiama un'altra funzione generica, `MyBaseClassFunction`, all'interno della classe basa. In **principale**, la funzione generica, `MyFunction`, viene chiamato utilizzando argomenti di tipo diverso.  
   
 ```  
 // generics_generic_function_3.cpp  

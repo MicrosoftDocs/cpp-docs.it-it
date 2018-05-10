@@ -2,12 +2,9 @@
 title: pin_ptr (C + + CLI) | Documenti Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - pin_ptr_cpp
 - stdcli::language::pin_ptr
@@ -18,18 +15,16 @@ helpviewer_keywords:
 - pinning pointers
 - pin_ptr keyword [C++]
 ms.assetid: 6c2e6c73-4ec2-4dce-8e1f-ccf3a9f9d0aa
-caps.latest.revision: ''
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ce63996cc2d93f4890f54c5edda318fca55f98aa
-ms.sourcegitcommit: 1d11412c8f5e6ddf4edded89e0ef5097cc89f812
+ms.openlocfilehash: afc99a352e0bde7918cab460293ff23061377551
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="pinptr-ccli"></a>pin_ptr (C++/CLI)
 Dichiara un *puntatore di blocco*, che viene utilizzata solo con common language runtime.  

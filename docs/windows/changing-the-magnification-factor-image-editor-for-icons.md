@@ -1,13 +1,10 @@
 ---
 title: Modifica il fattore di ingrandimento (Editor di immagini per le icone) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,18 +12,16 @@ helpviewer_keywords:
 - magnification, Image editor
 - Image editor [C++], magnification
 ms.assetid: d1b0c9e0-fe54-4b2a-b75e-ffa0fa7c8cd9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8a1192219bce3fa51177f14ae1345740d0ab53a1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d7cb78eb93a5817656b6d576a7ee5f88b7aa9e9c
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="changing-the-magnification-factor-image-editor-for-icons"></a>Modifica del fattore di ingrandimento (Editor di immagini per le icone)
 Per impostazione predefinita, l'editor di immagini consente di visualizzare la vista nel riquadro sinistro alle dimensioni effettive e la visualizzazione nel riquadro di destra dimensioni effettive di 6 volte. Il fattore di ingrandimento (visualizzato nella barra di stato nella parte inferiore dell'area di lavoro) è il rapporto tra le dimensioni effettive dell'immagine e le dimensioni di visualizzazione. Il fattore di predefinito è 6 e l'intervallo è compreso tra 1 e 10.  
@@ -44,7 +39,7 @@ Per impostazione predefinita, l'editor di immagini consente di visualizzare la v
   
  Requisiti  
   
- nessuno  
+ Nessuno  
   
 ## <a name="see-also"></a>Vedere anche  
  [Tasti di scelta rapida](../windows/accelerator-keys-image-editor-for-icons.md)   

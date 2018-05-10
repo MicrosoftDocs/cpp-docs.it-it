@@ -2,7 +2,7 @@
 title: C4600 avvisi del compilatore tramite C4799 | Documenti Microsoft
 ms.date: 11/17/2017
 ms.technology:
-- cpp-tools
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C4602
@@ -68,14 +68,13 @@ dev_langs:
 ms.assetid: 22bd4392-f3be-445c-9f23-6126aebac901
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f5d7121e01b651e87630fe18bec21e3d999ed0e7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5ad29989e89bfe60f2180ee48c411ebd4d3098ce
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-warnings-c4600-through-c4799"></a>C4600 avvisi del compilatore tramite C4799
 
@@ -164,7 +163,7 @@ Gli articoli in questa sezione della documentazione illustrano un subset dei mes
 |[Avviso (errore) del compilatore C4687](../../error-messages/compiler-warnings/compiler-warning-c4687.md)|'class': una classe astratta sealed non può implementare un'interfaccia 'interface'|
 |Avviso del compilatore (livello 1) C4688|'constraint': l'elenco di vincoli contiene il tipo privato 'type' dell'assembly|
 |Avviso del compilatore (livello 1) C4689|'%c'': carattere in detect_mismatch #pragma; non supportato #pragma ignorato|
-|Avviso del compilatore (livello 4) C4690|[ emitidl( pop ) ]: più estrazioni che inserimenti|
+|Avviso del compilatore (livello 4) C4690|[ emitidl ( pop ) ]: più estrazioni che inserimenti|
 |[Avviso del compilatore (livello 1) C4691](../../error-messages/compiler-warnings/compiler-warning-level-1-c4691.md)|'type': tipo di riferimento previsto nell'assembly senza riferimenti 'file', tipo definito in unità di conversione corrente utilizzato|
 |[Avviso del compilatore (livello 1) C4692](../../error-messages/compiler-warnings/compiler-warning-level-1-c4692.md)|'funzione': la firma del membro non privato contiene il tipo nativo privato 'tipo_nativo' dell'assembly|
 |[Avviso del compilatore (livello 1, errore) C4693](../../error-messages/compiler-warnings/compiler-warning-c4693.md)|'class': una classe astratta sealed non può avere qualsiasi istanza membri 'istanza member'|
@@ -204,7 +203,7 @@ Gli articoli in questa sezione della documentazione illustrano un subset dei mes
 |[Avviso del compilatore (livello 1) C4742](../../error-messages/compiler-warnings/compiler-warning-level-1-c4742.md)|'var' ha un diverso allineamento in 'file1' e 'file2': numero e il numero|
 |[Avviso del compilatore (livello 1) C4743](../../error-messages/compiler-warnings/compiler-warning-level-1-c4743.md)|'type' ha una diversa dimensione in 'file1' e 'file2': numero e del numero di byte|
 |[Avviso del compilatore (livello 1) C4744](../../error-messages/compiler-warnings/compiler-warning-level-1-c4744.md)|'var' ha un tipo diverso in 'file1' e 'file2': 'type1' e 'type2'|
-|[Avviso del compilatore C4746](../../error-messages/compiler-warnings/compiler-warning-c4746.md)|accesso volatile di '*espressione*' è soggetto a /volatile:\<iso &#124; ms > impostazione; considerare l'utilizzo di funzioni intrinseche iso_volatile_load/store|
+|[Avviso del compilatore C4746](../../error-messages/compiler-warnings/compiler-warning-c4746.md)|accesso volatile di '*espressione*' è soggetto a /volatile:\<iso&#124;ms > impostazione; considerare l'utilizzo di funzioni intrinseche iso_volatile_load/store|
 |[Avviso del compilatore (livello 1) C4747](../../error-messages/compiler-warnings/compiler-warning-level-1-c4747.md)|La chiamata gestita 'punto di ingresso': il codice gestito potrebbe non essere eseguito in blocco del caricatore, inclusi il punto di ingresso DLL e le chiamate raggiunte dal punto di ingresso DLL|
 |Avviso del compilatore (livello 4) C4749|supportato in modo condizionale: applicata di offsetof a tipo di layout società senza standard '*tipo*'|
 |Avviso del compilatore (livello 1) C4750|'identifier': funzione con _alloca() resa inline in un ciclo|
@@ -219,7 +218,7 @@ Gli articoli in questa sezione della documentazione illustrano un subset dei mes
 |Avviso del compilatore (livello 3) C4768|gli attributi di declspec prima specifica di collegamento vengono ignorati|
 |Avviso C4770 del compilatore|parzialmente convalidata enum '*nome*' utilizzato come indice|
 |Avviso C4771 del compilatore|Limiti devono essere creati usando un puntatore di tipo semplice Funzione intrinseca MPX verrà ignorata|
-|[Compilatore (livello 1, errore) avviso C4772](../../error-messages/compiler-warnings/compiler-warning-level-1-c4772.md)|#import a cui fa riferimento un tipo da una libreria dei tipi mancanti; 'tipo_mancante' come segnaposto|
+|[Compilatore avviso (livello 1, errore) C4772](../../error-messages/compiler-warnings/compiler-warning-level-1-c4772.md)|#import a cui fa riferimento un tipo da una libreria dei tipi mancanti; 'tipo_mancante' come segnaposto|
 |Avviso del compilatore (livello 4) C4774|'*stringa*': prevista nell'argomento stringa di formato *numero* non è una stringa letterale|
 |Avviso del compilatore (livello 3) C4775|utilizzata estensione non standard nella stringa di formato '*stringa*'della funzione'*funzione*'|
 |Avviso del compilatore (livello 1) C4776|' %*carattere*'non è consentito nella stringa di formato della funzione'*funzione*'|

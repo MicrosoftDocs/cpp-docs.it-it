@@ -1,23 +1,21 @@
 ---
-title: "Conformità al linguaggio Visual C++ | Microsoft Docs"
+title: Conformità al linguaggio Visual C++ | Microsoft Docs
 ms.date: 11/15/2017
 ms.technology:
 - cpp-language
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 475da6e9-0d78-4b4e-bd23-f41c406c4efe
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 49aabbcc746470815db40f15fa00774d5e05bfe5
-ms.sourcegitcommit: 30ab99c775d99371ed22d1a46598e542012ed8c6
+ms.openlocfilehash: 722b1dadbdd5e1855ea8d8cc163de705f3e2cbcd
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="visual-c-language-conformance"></a>Conformità al linguaggio Visual C++
 

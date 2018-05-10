@@ -1,13 +1,10 @@
 ---
 title: Nuovo &lt;dispositivo&gt; finestra di dialogo tipo (Editor di immagini per le icone) immagine | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.editors.newimagetype
 dev_langs:
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - New <Device> Image Type dialog box
 ms.assetid: 9c1344f5-dea0-42cd-9042-b13032f72be2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e41f62a3668174dc9a5873d9bf16617555a96092
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 966066be4dbbce5586860dd3bb6c99893094b6ef
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="new-ltdevicegt-image-type-dialog-box-image-editor-for-icons"></a>Nuovo &lt;dispositivo&gt; immagine la finestra di dialogo tipo (Editor di immagini per le icone)
 Consente di creare una nuova immagine per dispositivo di un tipo specificato. Per aprire la **New \<dispositivo > immagine** nella finestra di dialogo fare clic su **tipo nuova immagine** sul **immagine** menu.  
@@ -50,7 +45,7 @@ Consente di creare una nuova immagine per dispositivo di un tipo specificato. Pe
  Apre il [la finestra di dialogo immagine personalizzata](custom-image-dialog-box-image-editor-for-icons.md) in cui è possibile creare una nuova immagine con dimensioni personalizzate e numero di colori.  
   
 ## <a name="requirements"></a>Requisiti  
- nessuno  
+ Nessuno  
   
 ## <a name="see-also"></a>Vedere anche  
  [Icone e cursori: risorse immagine per i dispositivi di visualizzazione](../windows/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md)   

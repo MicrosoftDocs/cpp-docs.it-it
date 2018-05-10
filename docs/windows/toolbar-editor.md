@@ -1,13 +1,10 @@
 ---
 title: Editor barra degli strumenti | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.editors.toolbar.F1
 dev_langs:
@@ -18,18 +15,16 @@ helpviewer_keywords:
 - toolbars [C++], editing
 - Toolbar editor
 ms.assetid: aa9f0adf-60f6-4f79-ab05-bc330f15ec43
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4358e01575ec7d4dfb2dea48499466f1cc0a4766
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: cc902a0bb90194c463ebb874234f65230cd502b4
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="toolbar-editor"></a>Editor barra degli strumenti
 L'editor barra degli strumenti consente di creare risorse della barra degli strumenti e convertire le bitmap in risorse della barra degli strumenti. L'editor barra degli strumenti usa un'interfaccia grafica per visualizzare una barra degli strumenti e dei pulsanti con un aspetto molto simile a quello visualizzato in un'applicazione finita.  

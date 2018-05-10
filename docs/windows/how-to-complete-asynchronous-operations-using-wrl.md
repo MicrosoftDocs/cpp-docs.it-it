@@ -1,28 +1,23 @@
 ---
 title: 'Procedura: completare operazioni asincrone mediante WRL | Documenti Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 dev_langs:
 - C++
 ms.assetid: 02173eae-731b-49bc-b412-f1f69388b99d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3b5ff1f5bd36c2cf834375ac0999db835b731284
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: fff0a6e98dd6fdd28b1fbc2e9146d5b68975e0f0
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="how-to-complete-asynchronous-operations-using-wrl"></a>Procedura: completare operazioni asincrone mediante WRL
 In questo documento viene illustrato come utilizzare la libreria di modelli C++ (WRL) di Windows Runtime per avviare le operazioni asincrone ed eseguirle quando le operazioni vengono completate.  
@@ -80,7 +75,7 @@ In questo documento viene illustrato come utilizzare la libreria di modelli C++ 
 ### <a name="compiling-the-code"></a>Compilazione del codice  
  Per compilare il codice, copiarlo e quindi incollarlo in un progetto di Visual Studio oppure incollarlo in un file denominato `wrl-consume-async.cpp` , quindi eseguire il comando seguente in una finestra del prompt dei comandi di Visual Studio.  
   
- **cl.exe wrl-consume-async.cpp runtimeobject.lib**  
+ **CL.exe async.cpp utilizzare wrl runtimeobject**  
   
 ## <a name="example-working-with-a-background-thread"></a>Esempio: Utilizzo di un Thread in Background  
  La procedura seguente avvia un thread di lavoro e definisce l'azione eseguita da tale thread. Segue un esempio completo.  
@@ -128,7 +123,7 @@ In questo documento viene illustrato come utilizzare la libreria di modelli C++ 
 ### <a name="compiling-the-code"></a>Compilazione del codice  
  Per compilare il codice, copiarlo e quindi incollarlo in un progetto di Visual Studio oppure incollarlo in un file denominato `wrl-consume-asyncOp.cpp` , quindi eseguire il comando seguente in una finestra del prompt dei comandi di Visual Studio.  
   
- **cl.exe wrl-consume-asyncOp.cpp runtimeobject.lib**  
+ **CL.exe asyncOp.cpp utilizzare wrl runtimeobject**  
   
 ## <a name="see-also"></a>Vedere anche  
  [Libreria di modelli di Windows Runtime C++ (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md)

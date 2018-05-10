@@ -1,13 +1,10 @@
 ---
 title: 'Icone e cursori: risorse immagine per i dispositivi di visualizzazione (Editor di immagini per le icone) | Documenti Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.editors.icon
 dev_langs:
@@ -24,18 +21,16 @@ helpviewer_keywords:
 - cursors [C++], hot spots
 - icons [C++], types
 ms.assetid: 8f0809a8-0cf0-4da9-b23d-51f28bf15f5b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 99ed2e99c3a08b473dcc786ed47bc088b8fd8a4f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a977629cbae140afa1463a7765f193a7519e1f68
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons"></a>Icone e cursori: risorse immagine per i dispositivi di visualizzazione (Editor di immagini per le icone)
 Icone e cursori sono risorse grafiche che possono contenere più immagini di diverse dimensioni e le combinazioni di colori per diversi tipi di dispositivi di visualizzazione. Inoltre, un cursore ha un'"area sensibile", ovvero il punto che Windows usa per rilevare la posizione. Come per le bitmap e le altre immagini, anche le icone e i cursori vengono creati e modificati usando l'editor di immagini.  
@@ -82,10 +77,10 @@ Icone e cursori sono risorse grafiche che possono contenere più immagini di div
  Per informazioni sull'aggiunta di risorse a progetti gestiti, vedere [risorse nelle applicazioni Desktop](/dotnet/framework/resources/index) nel *Guida per gli sviluppatori di .NET Framework.* Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [la creazione di file di risorse per le app Desktop](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Per informazioni sulla globalizzazione e localizzazione di risorse nelle applicazioni gestite, vedere [globalizzazione e localizzazione di applicazioni .NET Framework](/dotnet/standard/globalization-localization/index).  
   
 ## <a name="requirements"></a>Requisiti  
- nessuno  
+ Nessuno  
   
 ## <a name="see-also"></a>Vedere anche  
  [Image Editor for Icons](../windows/image-editor-for-icons.md)  (Editor di immagini per icone)  
- [Icone](http://msdn.microsoft.com/library/windows/desktop/ms646973)   
+ [icone](http://msdn.microsoft.com/library/windows/desktop/ms646973)   
  [Cursori](http://msdn.microsoft.com/library/windows/desktop/ms646970)
 

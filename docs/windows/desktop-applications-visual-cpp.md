@@ -2,27 +2,22 @@
 title: Applicazioni desktop (Visual C++) | Documenti Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: a020b534-293c-44e2-aa48-516c43ddeb8f
-caps.latest.revision: 17
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 61f52dead8ca7ecad52b1cef4f1d87ffc5830386
-ms.sourcegitcommit: 78e5e5cdbafd29e2a6ccf68d4cce215136952907
+ms.openlocfilehash: f9c8180288374711db4e6d866c73a0bc8919caf2
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/03/2018
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="desktop-applications-visual-c"></a>Applicazioni desktop (Visual C++)
 Oggetto *applicazione desktop* in C++ è un'applicazione nativa che è possibile accedere al set completo di API Windows e viene eseguito in una finestra o nella console di sistema. Applicazioni desktop c++ è possono eseguire in Windows XP e Windows 10 (anche se è non è più ufficialmente supportata di Windows XP e sono presenti molte API di Windows che sono stati introdotti da allora).   Un'applicazione desktop è diverso da un'app di Windows della piattaforma UWP (Universal), che può essere eseguita nei PC che eseguono Windows 10, nonché su XBox, Windows Phone, Surface Hub e altri dispositivi. Per ulteriori informazioni sui desktop Visual Studio. Le applicazioni UWP, vedere [scegliere la tecnologia](https://msdn.microsoft.com/en-us/library/windows/desktop/dn614993\(v=vs.85\).aspx).  

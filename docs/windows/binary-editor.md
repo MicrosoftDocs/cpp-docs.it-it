@@ -1,13 +1,10 @@
 ---
 title: Editor binario | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.editors.binary.F1
 dev_langs:
@@ -18,18 +15,16 @@ helpviewer_keywords:
 - resource editors, Binary editor
 - Binary editor
 ms.assetid: 2483c48b-1252-4dbc-826b-82e6c1a0e9cb
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4dade674fb32615e23904e6dbaf03d6c6ee0a371
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6d5deb511069830de5ea7aa542bb010f57be5af9
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="binary-editor"></a>Editor binario
 > [!WARNING]
@@ -37,7 +32,7 @@ ms.lasthandoff: 12/21/2017
   
  L'editor binario consente di modificare qualsiasi risorsa a livello binario in formato esadecimale o ASCII. È anche possibile usare il [comando Trova](/visualstudio/ide/reference/find-command) per cercare le stringhe ASCII o i byte esadecimali. Usare l'editor binario solo quando è necessario visualizzare o apportare modifiche minori alla risorse personalizzate o ai tipi di risorsa non supportati dall'ambiente di Visual Studio.  
   
- Per aprire l'Editor binario, scegliere **File &#124; Nuovo &#124; File** dal menu principale, selezionare il file che si desidera modificare, quindi fare clic sulla freccia accanto al **aprire** e scegliere **Apri con &#124; Editor binario**.  
+ Per aprire l'Editor binario, scegliere **File &#124; nuovo &#124; File** dal menu principale, selezionare il file che si desidera modificare, quindi fare clic sulla freccia accanto al **aprire** e scegliere **Aperto con &#124; Editor binario**.  
   
 > [!CAUTION]
 >  La modifica di risorse come le finestre di dialogo, le immagini o i menu nell'editor binario è rischiosa. Una modifica non corretta potrebbe danneggiare la risorsa, rendendola illeggibile nell'editor originale.  
@@ -61,7 +56,7 @@ ms.lasthandoff: 12/21/2017
  Per informazioni sull'aggiunta di risorse a progetti gestiti, vedere [risorse nelle applicazioni Desktop](/dotnet/framework/resources/index) nel *Guida per gli sviluppatori di .NET Framework.* Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [la creazione di file di risorse per le app Desktop](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Per informazioni sulla globalizzazione e localizzazione di risorse nelle applicazioni gestite, vedere [globalizzazione e localizzazione di applicazioni .NET Framework](/dotnet/standard/globalization-localization/index).  
   
 ### <a name="requirements"></a>Requisiti  
- nessuno  
+ Nessuno  
   
 ## <a name="see-also"></a>Vedere anche  
  [Editor di risorse](../windows/resource-editors.md)

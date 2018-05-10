@@ -1,13 +1,10 @@
 ---
 title: Le procedure consigliate per C++ | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - securitybestpracticesVC
 dev_langs:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - security [C++]
 - security [C++], best practices
 ms.assetid: 86acaccf-cdb4-4517-bd58-553618e3ec42
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0f1474f44b81a95c119a405dda8a91db62a08417
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
-ms.translationtype: MT
+ms.openlocfilehash: 5c7f0860daea5b2e90368c7068c6b13371af3fd8
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="security-best-practices-for-c"></a>Procedure di sicurezza consigliate per C++
 Questo articolo contiene informazioni su strumenti e procedure di sicurezza. Il loro uso non rende le applicazioni immuni da attacchi, ma riduce le probabilità che un attacco abbia successo.  

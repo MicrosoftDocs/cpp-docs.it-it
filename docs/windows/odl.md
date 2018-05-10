@@ -1,13 +1,10 @@
 ---
 title: ODL | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - vc-attr.odl
 dev_langs:
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - odl attribute
 ms.assetid: 75dcb314-b50f-4a63-9180-507ac1bc78f3
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fb7525fb57a336defd6d2d50dae4bc0ee988c1ae
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 559d149cfbe2fac7a5d648d56cb4e34d427cedc8
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="odl"></a>odl
 Identifica un'interfaccia come interfaccia oggetto descrizione Language ODL (). Il compilatore MIDL non richiede il **odl** attributo; solo per compatibilità con versioni precedenti. ODL venga riconosciuto.  
@@ -73,7 +68,7 @@ public:
 |**Si applica a**|`interface`|  
 |**Ripetibile**|No|  
 |**Attributi obbligatori**|Nessuna|  
-|**Attributi non validi**|nessuno|  
+|**Attributi non validi**|Nessuno|  
   
  Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](../windows/attribute-contexts.md).  
   

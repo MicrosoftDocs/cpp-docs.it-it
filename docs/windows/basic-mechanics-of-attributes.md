@@ -1,31 +1,26 @@
 ---
 title: Meccanismi di base degli attributi | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - attributes [C++], inserting in code
 - attributes [C++], about attributes
 ms.assetid: dc2069c3-b9f3-4a72-965c-4e5208ce8e34
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 99771e798e4957de5ff69601a5d3494e5fcacc35
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d6db2994a2606f6c4d0cb4cd581ec46d87ca3d2c
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="basic-mechanics-of-attributes"></a>Meccanismi di base degli attributi
 Esistono tre modi per inserire attributi nel progetto. In primo luogo, è possibile inserirli manualmente il codice sorgente. In secondo luogo, è possibile inserirli utilizzando la griglia delle proprietà di un oggetto nel progetto. Infine, è possibile inserirli mediante le procedure guidate di diversi. Per ulteriori informazioni sull'utilizzo di finestra proprietà e le varie procedure guidate, vedere [creazione e gestione di progetti Visual C++](../ide/creating-and-managing-visual-cpp-projects.md).  
@@ -34,7 +29,7 @@ Esistono tre modi per inserire attributi nel progetto. In primo luogo, è possib
   
  La figura seguente illustra la relazione tra il compilatore e il provider di attributi.  
   
- ![Comunicazione degli attributi componente](../windows/media/vccompattrcomm.gif "vcCompAttrComm")  
+ ![Comunicazione degli attributi di componente](../windows/media/vccompattrcomm.gif "vcCompAttrComm")  
   
 > [!NOTE]
 >  Utilizzo dell'attributo non modifica il contenuto del file di origine. L'unica volta che è visibile il codice di attributo generato è durante le sessioni di debug. Inoltre, per ogni file di origine nel progetto, è possibile generare un file di testo che visualizza i risultati della sostituzione di attributo. Per ulteriori informazioni su questa procedura, vedere [/Fx (unisce il codice)](../build/reference/fx-merge-injected-code.md) e [debug del codice inserito](/visualstudio/debugger/how-to-debug-injected-code).  

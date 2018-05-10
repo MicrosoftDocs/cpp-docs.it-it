@@ -1,13 +1,10 @@
 ---
 title: includere (C++) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - vc-attr.include
 dev_langs:
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - include attribute
 ms.assetid: d23f8b91-fe5b-48fa-9371-8bd73af7b8e3
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 31d56b56b104473ffe3edbcf8672aa8b5a92243d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a2c88dd610c1a0b8a8fee4e23da1b5ad844e989c
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="include-c"></a>include (C++)
 Specifica uno o più file di intestazione da includere nel file IDL generato.  
@@ -41,7 +36,7 @@ Specifica uno o più file di intestazione da includere nel file IDL generato.
 ```  
   
 #### <a name="parameters"></a>Parametri  
- *HEADER_FILE*  
+ *HEADER_FILE5D*  
  Il nome di un file che si desidera incluso nel file IDL generato.  
   
 ## <a name="remarks"></a>Note  
@@ -68,14 +63,14 @@ Specifica uno o più file di intestazione da includere nel file IDL generato.
 |**Si applica a**|Ovunque|  
 |**Ripetibile**|No|  
 |**Attributi obbligatori**|Nessuna|  
-|**Attributi non validi**|nessuno|  
+|**Attributi non validi**|Nessuno|  
   
  Per altre informazioni, vedere [Contesti di attributi](../windows/attribute-contexts.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Attributi IDL](../windows/idl-attributes.md)   
  [Attributi autonomi](../windows/stand-alone-attributes.md)   
- [importazione](../windows/import.md)   
+ [Importazione](../windows/import.md)   
  [importidl](../windows/importidl.md)   
  [includelib](../windows/includelib-cpp.md)   
  [importlib](../windows/importlib.md)   

@@ -1,13 +1,10 @@
 ---
 title: La finestra di dialogo Inclusioni risorsa | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.editors.resourceincludes
 dev_langs:
@@ -21,18 +18,16 @@ helpviewer_keywords:
 - symbol header files, read-only
 - symbols, symbol header files
 ms.assetid: 659a54e6-e416-4045-8411-798730ff4ce3
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 610e970ad84c6c89d91182b7a61bb759112fcd7d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 756289bb819809fed63dba579c4ad1cd1e975780
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="resource-includes-dialog-box"></a>Inclusioni risorsa (finestra di dialogo)
 È possibile utilizzare il **Inclusioni risorsa** la finestra di dialogo per modificare la disposizione dell'ambiente normale utilizzo di tutte le risorse di archiviazione nel file RC del progetto e tutti i [simboli](../windows/symbols-resource-identifiers.md) in Resource. h.  

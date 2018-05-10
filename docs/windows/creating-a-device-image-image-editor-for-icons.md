@@ -1,13 +1,10 @@
 ---
 title: Creazione di un'immagine per dispositivo (Editor di immagini per le icone) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.editors.icon
 dev_langs:
@@ -20,18 +17,16 @@ helpviewer_keywords:
 - images [C++], creating for display devices
 - icons [C++], inserting
 ms.assetid: 5a536928-32df-4ace-beb1-1521ce3b871f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d68a9d35471e43296cade829700fc6c5b311ce2a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d8fc1ce4bd5a6e125ece7461d100950f255dee44
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="creating-a-device-image-image-editor-for-icons"></a>Creazione di un'immagine per dispositivo (Editor di immagini per le icone)
 Quando si crea una nuova risorsa icona o cursore, l'immagine editor crea innanzitutto un'immagine in uno stile specifico (32 × 32 a 16 colori per le icone e 32 × 32 monocromatica per i cursori). È quindi possibile aggiungere immagini di diverse dimensioni e stili iniziale sull'icona o cursore e modificare ciascuna immagine aggiuntiva, in base alle esigenze, per i dispositivi di visualizzazione diverse. È anche possibile modificare un'immagine eseguendo un'operazione di taglia e Incolla da un tipo di immagine esistente o da una bitmap creato in un'applicazione grafica.  
@@ -53,7 +48,7 @@ Quando si crea una nuova risorsa icona o cursore, l'immagine editor crea innanzi
   
  **Requisiti**  
   
- nessuno  
+ Nessuno  
   
 ## <a name="see-also"></a>Vedere anche  
  [Icone e cursori: risorse immagine per i dispositivi di visualizzazione](../windows/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md)   

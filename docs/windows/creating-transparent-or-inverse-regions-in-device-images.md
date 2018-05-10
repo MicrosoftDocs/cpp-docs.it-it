@@ -1,13 +1,10 @@
 ---
 title: Creazione di aree trasparenti o di inversione nelle immagini per i dispositivi (Editor di immagini per le icone) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -28,18 +25,16 @@ helpviewer_keywords:
 - device projects, transparent images
 - icons [C++], screen regions
 ms.assetid: a994954b-b039-4391-a535-58d1fa10fc3b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1f416b31200352fc849fb2d1c7a43f9759da47d2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 70fd2411eefba495478baaf5fb20fe7a27031001
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="creating-transparent-or-inverse-regions-in-device-images-image-editor-for-icons"></a>Creazione di aree trasparenti o di inversione nelle immagini per i dispositivi (Editor di immagini per le icone)
 Nel [editor di immagini](../windows/image-editor-for-icons.md), l'immagine icona o cursore iniziale è un attributo trasparente. Anche se le immagini icona e cursore sono rettangolari, molti non vengono visualizzati, poiché le parti dell'immagine sono trasparenti; la figura sottostante nella schermata mostra tramite l'icona o cursore. Quando si trascina un'icona, parti dell'immagine vengano visualizzati in un colore inverso. Per creare questo effetto, impostare il colore dello schermo e inversa nel [finestra colori](../windows/colors-window-image-editor-for-icons.md).  
@@ -70,7 +65,7 @@ Nel [editor di immagini](../windows/image-editor-for-icons.md), l'immagine icona
   
  Requisiti  
   
- nessuno  
+ Nessuno  
   
 ## <a name="see-also"></a>Vedere anche  
  [Tasti di scelta rapida](../windows/accelerator-keys-image-editor-for-icons.md)   

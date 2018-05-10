@@ -1,13 +1,10 @@
 ---
 title: Utilizzo di file di risorse | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,24 +12,22 @@ helpviewer_keywords:
 - resources [C++], about resource files
 - resource files, about resource files
 ms.assetid: 2699a539-b369-4b78-80f0-df03eb7b6780
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ad7961177133e43d3c3b8d66998ec9b0d1b8f150
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: dc416561b36566235ed422cd8989b4218f34da81
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="working-with-resource-files"></a>Utilizzo di file di risorse
 > [!WARNING]
 >  Questa sezione si applica ad applicazioni desktop di Windows scritte in C++. Per informazioni sulle risorse nelle App UWP scritte in C++, vedere [definizione delle risorse dell'App](http://msdn.microsoft.com/en-us/476ea844-632c-4467-9ce3-966be1350dd4).  
 >   
->  Per informazioni sull'aggiunta di risorse di C + + progetti CLI, vedere [risorse nelle applicazioni Desktop](/dotnet/framework/resources/index) nel *Guida per gli sviluppatori di .NET Framework.*  
+>  Per informazioni sull'aggiunta di risorse in C + + / progetti CLI, vedere [risorse nelle applicazioni Desktop](/dotnet/framework/resources/index) nel *Guida per gli sviluppatori di .NET Framework.*  
   
  Le risorse possono essere costituite da una vasta gamma di elementi, inclusi elementi di interfaccia che forniscono informazioni aull'utente (ad esempio un file bitmap, un'icona o un cursore), risorse personalizzate che includono dati necessari per un'applicazione, risorse di versione usate dalle API di configurazione e risorse di menu e di finestre di dialogo.  
   

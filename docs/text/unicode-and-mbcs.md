@@ -1,13 +1,10 @@
 ---
 title: Unicode e MBCS | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - _mbcs
 dev_langs:
@@ -22,17 +19,15 @@ helpviewer_keywords:
 - multibyte characters [C++]
 - runtime [C++], language portability
 ms.assetid: 677baec6-71b4-4579-94df-64f18bc117c4
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9a841fc97715782c303065e37cbaeb8137cf0bc3
-ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
+ms.openlocfilehash: 2e10c07e11cbe940b5f7cfee460ddd33f6f5ff1f
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="unicode-and-mbcs"></a>Unicode e MBCS
 La libreria Microsoft Foundation Classes (MFC), la libreria di runtime C per Visual C++ e l'ambiente di sviluppo di Visual C++ sono abilitati per agevolare la programmazione internazionale. Forniscono:  

@@ -2,12 +2,9 @@
 title: 'Procedura: migliorare le prestazioni con i Generics (Visual C++) | Documenti Microsoft'
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,18 +13,16 @@ helpviewer_keywords:
 - Visual C++, generics
 - generics [C++], performance
 ms.assetid: f14a175b-301f-46cc-86e4-c82d35f9aa3e
-caps.latest.revision: ''
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9c16dccd78abfc4a90dc0faea534c999a52b7b79
-ms.sourcegitcommit: 1d11412c8f5e6ddf4edded89e0ef5097cc89f812
+ms.openlocfilehash: da74cce5f41c3399fb102180cfdfe8c1215c8bf9
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="how-to-improve-performance-with-generics-visual-c"></a>Procedura: migliorare le prestazioni con i generics (Visual C++)
 Con i generics, è possibile creare codice riutilizzabile basato su un parametro di tipo. Il tipo effettivo del parametro di tipo viene rinviato fino alla chiamata da parte del codice client. Per ulteriori informazioni sui generics, vedere [Generics](../windows/generics-cpp-component-extensions.md).  

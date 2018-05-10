@@ -1,12 +1,9 @@
 ---
 title: Classe ISource | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - ISource
@@ -25,17 +22,15 @@ dev_langs:
 helpviewer_keywords:
 - ISource class
 ms.assetid: c7b73463-42f6-4dcc-801a-81379b12d35a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 147623329d71da704529c12e27ce3c768c1b8145
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 27b1aa57a8c90c2f996aab3b8ee47797f15edd5b
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="isource-class"></a>Classe ISource
 La classe `ISource` corrisponde all'interfaccia per tutti i blocchi di origine. I blocchi di origine propagano messaggi ai blocchi `ITarget`.  
@@ -71,7 +66,7 @@ class ISource;
 |----------|-----------------|  
 |[accept](#accept)|Quando sottoposto a override in una classe derivata, accetta un messaggio offerto da questo `ISource` blocco, trasferendo la proprietà al chiamante.|  
 |[acquire_ref](#acquire_ref)|Quando sottoposto a override in una classe derivata, acquisisce un conteggio dei riferimenti su questo `ISource` blocco, per evitare l'eliminazione.|  
-|[consume](#consume)|Quando sottoposto a override in una classe derivata, utilizza un messaggio precedentemente offerto da questo `ISource` blocco e riservato correttamente dalla destinazione del trasferimento della proprietà al chiamante.|  
+|[Utilizzare](#consume)|Quando sottoposto a override in una classe derivata, utilizza un messaggio precedentemente offerto da questo `ISource` blocco e riservato correttamente dalla destinazione del trasferimento della proprietà al chiamante.|  
 |[link_target](#link_target)|Quando sottoposto a override in una classe derivata, è possibile collegare un blocco di destinazione a questo `ISource` blocco.|  
 |[release](#release)|Quando sottoposto a override in una classe derivata, rilascia una prenotazione corretta del messaggio precedente.|  
 |[release_ref](#release_ref)|Quando sottoposto a override in una classe derivata, rilascia un conteggio dei riferimenti su questo `ISource` blocco.|  
@@ -151,7 +146,7 @@ virtual message<T>* consume(
 ### <a name="remarks"></a>Note  
  Il `consume` è simile al metodo `accept`, ma deve sempre essere preceduto da una chiamata a `reserve` restituito `true`.  
   
-##  <a name="dtor"></a> ~ISource 
+##  <a name="dtor"></a> ~ ISource 
 
  Elimina definitivamente il `ISource` oggetto.  
   

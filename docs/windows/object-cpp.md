@@ -1,13 +1,10 @@
 ---
 title: oggetto (C++) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - vc-attr.object
 dev_langs:
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - object attribute
 ms.assetid: f2d3c231-630d-4b4c-bd15-b1c30df362dd
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5714d7c3bd029c7b1df636044ed1968f53600848
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 601d67fb48f0ae826474d33e7dca0fbffff9478c
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="object-c"></a>object (C++)
 Identifica un'interfaccia personalizzata.  
@@ -56,14 +51,14 @@ Identifica un'interfaccia personalizzata.
 |**Si applica a**|`interface`|  
 |**Ripetibile**|No|  
 |**Attributi obbligatori**|Nessuna|  
-|**Attributi non validi**|nessuno|  
+|**Attributi non validi**|Nessuno|  
   
  Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](../windows/attribute-contexts.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Attributi IDL](../windows/idl-attributes.md)   
  [Attributi di interfaccia](../windows/interface-attributes.md)   
- [doppia](../windows/dual.md)   
- [interfaccia dispatch](../windows/dispinterface.md)   
- [personalizzato](../windows/custom-cpp.md)   
+ [Doppio](../windows/dual.md)   
+ [Interfaccia dispatch](../windows/dispinterface.md)   
+ [Personalizzato](../windows/custom-cpp.md)   
  [__interface](../cpp/interface.md)   

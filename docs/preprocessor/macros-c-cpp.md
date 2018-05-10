@@ -1,12 +1,9 @@
 ---
-title: Macros (C/C++) | Microsoft Docs
-ms.custom: 
+title: Macro (C/C++) | Documenti Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 dev_langs:
 - C++
@@ -15,20 +12,18 @@ helpviewer_keywords:
 - preprocessor, macros
 - Visual C++, preprocessor macros
 ms.assetid: a7bfc5d4-2537-4fe0-bef0-70cec0b43388
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a230abc768b23afd74d1af8a9c178d39d453536a
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 6794cb56566e552a47f19d53f4092c1a9749969c
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="macros-cc"></a>Macro (C/C++)
-Pre-elaborazione espande le macro in tutte le righe che non sono le direttive del preprocessore (le righe che non dispongono di un  **#**  come primo carattere non spazio vuoto) e in parti di alcune istruzioni che non vengono ignorati come parte di un compilazione condizionale. Le direttive di "compilazione condizionale" consentono di evitare la compilazione di porzioni del file di origine grazie alla possibilità di eseguire un test di un'espressione costante o di un identificatore, in modo da determinare quali blocchi di testo vengono passati al compilatore e quali blocchi di testo vengono rimossi dal file di origine durante la pre-elaborazione.  
+Pre-elaborazione espande le macro in tutte le righe che non sono le direttive del preprocessore (le righe che non dispongono di un **#** come primo carattere non spazio vuoto) e in parti di alcune istruzioni che non vengono ignorati come parte di un compilazione condizionale. Le direttive di "compilazione condizionale" consentono di evitare la compilazione di porzioni del file di origine grazie alla possibilità di eseguire un test di un'espressione costante o di un identificatore, in modo da determinare quali blocchi di testo vengono passati al compilatore e quali blocchi di testo vengono rimossi dal file di origine durante la pre-elaborazione.  
   
  La direttiva `#define` viene generalmente utilizzata per associare identificatori significativi a costanti, parole chiave e istruzioni o espressioni di uso comune. Gli identificatori che rappresentano costanti sono talvolta denominati "costanti simboliche" o "costanti di manifesto". Gli identificatori che rappresentano istruzioni o espressioni sono denominati "macro". In questa documentazione relativa al preprocessore, viene utilizzato esclusivamente il termine "macro".  
   

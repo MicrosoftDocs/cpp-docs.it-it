@@ -1,13 +1,10 @@
 ---
 title: Modifica della griglia di Layout | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - layout grid in Dialog Editor
 - grids, changing size
 ms.assetid: ec31f595-7542-485b-806f-efbaeccc1b3d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 21cfecebe141ea99ff7d0160e74446475efe4df5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5f73b1b2e2982d02fae1de67d4e5e2947f728f02
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="modifying-the-layout-grid"></a>Modifica della griglia di layout
 Quando si posizionano o disposizione dei controlli in una finestra di dialogo, è possibile utilizzare la griglia di layout per il posizionamento più preciso. Quando è attivata la griglia, i controlli vengono visualizzati "blocco" le linee punteggiate della griglia come se magnetizzato. È possibile attivare e disattivare questa funzionalità "Blocca sulla griglia" e modificare le dimensioni delle celle della griglia di layout.  

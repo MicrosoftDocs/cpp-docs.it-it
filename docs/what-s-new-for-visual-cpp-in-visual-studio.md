@@ -1,24 +1,23 @@
 ---
-title: "Novità di Visual C++ in Visual Studio | Microsoft Docs"
+title: Novità di Visual C++ in Visual Studio | Microsoft Docs
 ms.date: 11/15/2017
 ms.technology:
-- vs-ide-general
-ms.topic: article
+- cpp-ide
+ms.topic: conceptual
 ms.assetid: 8801dbdb-ca0b-491f-9e33-01618bff5ae9
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 328862bdb85059735ef069df1c7a9be8c6651f77
-ms.sourcegitcommit: 30ab99c775d99371ed22d1a46598e542012ed8c6
+ms.openlocfilehash: 4996ce3e1943c2c76e959f54730042029e0ce518
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="whats-new-for-visual-c-in-includevsdev15mdmiscincludesvsdev15mdmd"></a>Novità di Visual C++ in [!INCLUDE[vs_dev15_md](misc/includes/vs_dev15_md.md)]
 
-[!INCLUDE[vs_dev15_md](misc/includes/vs_dev15_md.md)] introduce numerosi aggiornamenti e correzioni per l'ambiente Visual C++. Sono stati corretti più di 250 bug e problemi segnalati per il compilatore e gli strumenti, molti inviati dai clienti tramite le opzioni [Segnala un problema](/visualstudio/how-to-report-a-problem-with-visual-studio-2017) e [Invia un suggerimento](https://visualstudio.uservoice.com/) in **Commenti e suggerimenti**. Microsoft ringrazia i clienti per le segnalazioni inviate. Per altre informazioni sulle novità in tutto Visual Studio, visitare la pagina [Novità in [!INCLUDE[vs_dev15_md](misc/includes/vs_dev15_md.md)]](https://go.microsoft.com/fwlink/p/?linkid=834481).
+In [!INCLUDE[vs_dev15_md](misc/includes/vs_dev15_md.md)] sono stati inclusi numerosi aggiornamenti e correzioni per l'ambiente Visual C++. Sono stati corretti più di 250 bug e problemi segnalati per il compilatore e gli strumenti, molti inviati dai clienti tramite le opzioni [Segnala un problema](/visualstudio/how-to-report-a-problem-with-visual-studio-2017) e [Invia un suggerimento](https://visualstudio.uservoice.com/) in **Commenti e suggerimenti**. Microsoft ringrazia i clienti per le segnalazioni inviate. Per altre informazioni sulle novità in tutto Visual Studio, visitare la pagina [Novità in [!INCLUDE[vs_dev15_md](misc/includes/vs_dev15_md.md)]](https://go.microsoft.com/fwlink/p/?linkid=834481).
 
 <!--The compiler and tools version number in [!INCLUDE[vs_dev15_md](misc/includes/vs_dev15_md.md)] is 14.10.24629. -->
 

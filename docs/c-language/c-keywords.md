@@ -1,13 +1,10 @@
 ---
 title: Parole chiave C | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - redefining keywords
 - Microsoft-specific keywords
 ms.assetid: 2d932335-97bf-45cd-b367-4ae00db0ff42
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2fd746124cdfc267267bc5d6803700cca507c34d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 98d815a8b0d185ccfb2ea89f653cd34d54fbd6ed
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="c-keywords"></a>Parole chiave C
 Le parole chiave sono parole con significato particolare per il compilatore C. Nelle fasi di conversione 7 e 8 un identificatore non può avere la stessa ortografia e gli stessi caratteri maiuscoli/minuscoli di una parola chiave C. Per una descrizione delle [fasi di conversione](../preprocessor/phases-of-translation.md), vedere *Riferimenti al preprocessore*. Per informazioni sugli identificatori, vedere [Identificatori](../c-language/c-identifiers.md). Nel linguaggio C vengono utilizzate le parole chiave seguenti:  

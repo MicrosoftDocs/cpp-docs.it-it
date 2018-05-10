@@ -1,13 +1,10 @@
 ---
 title: Definizioni di funzioni C | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - function body
 - declaring functions, variables
 ms.assetid: ebab23c8-6eb8-46f3-b21d-570cd8457a80
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a58adfefc5e2b3b5085a44c38dd392d3369421c8
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
-ms.translationtype: MT
+ms.openlocfilehash: 69c9846b2ee192071b951d5b9b196d6e4b1968aa
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="c-function-definitions"></a>Definizioni di funzioni C
 Una definizione di funzione specifica il nome della funzione, i tipi e il numero di parametri che prevede di ricevere e il relativo tipo restituito. Una definizione di funzione include inoltre un corpo della funzione con le dichiarazioni delle variabili locali e le istruzioni che determinano ciò che svolge la funzione.  
@@ -72,7 +67,7 @@ Una definizione di funzione specifica il nome della funzione, i tipi e il numero
  *direct-declarator*: /\* Dichiaratore di funzione \*/  
  *direct-declarator*  **(**  *parameter-type-list*  **)** /* Dichiaratore nuovo stile \*/  
   
- *direct-declarator*  **(**  *identifier-list* opt**)** /* Dichiaratore stile obsoleto \*/  
+ *direct-declarator*  **(**  *identifier-list* opt **)** /* Dichiaratore stile obsoleto \*/  
   
  L'elenco di parametri in una definizione utilizza questa sintassi:  
   
@@ -101,7 +96,7 @@ Una definizione di funzione specifica il nome della funzione, i tipi e il numero
  La sintassi per il corpo della funzione è:  
   
  *compound-statement*: /\* Corpo della funzione \*/  
- **{**  `declaration`-*list* opt*statement-list* opt**}**  
+ **{**  `declaration`-*list* opt*statement-list* opt **}**  
   
  Gli unici identificatori della classe di archiviazione che consentono di modificare una dichiarazione di funzione sono `extern` e **static**. L'identificatore `extern` significa che è possibile far riferimento alla funzione da altri file; ovvero il nome della funzione viene esportato al linker. L'identificatore **static** significa che non è possibile far riferimento alla funzione da altri file, ovvero che il nome non viene esportato dal linker. Se in una definizione di funzione non viene visualizzata nessuna classe di archiviazione, viene previsto `extern`. Tuttavia, la funzione è sempre visibile dal punto della definizione fino alla fine del file.  
   

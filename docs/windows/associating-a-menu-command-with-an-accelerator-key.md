@@ -1,13 +1,10 @@
 ---
 title: Associazione di un comando di Menu con un tasto di scelta rapida | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,18 +12,16 @@ helpviewer_keywords:
 - commands, associating menu commands with accelerator keys
 - menu commands, associating with keyboard shortcuts
 ms.assetid: ad2de43f-b20a-4c9f-bda8-0420179da48c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 79a16cf8d67fb7a6a45043c28455a7ed22f90ffa
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c4f1aa4b80aec2e7c16485c08d2505695b21f4d5
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="associating-a-menu-command-with-an-accelerator-key"></a>Associazione di un comando di menu a un tasto di scelta rapida
 Spesso è utile che una voce di menu e una combinazione di tasti eseguano lo stesso comando del programma. A questo scopo, è possibile usare l'editor di menu per assegnare lo stesso identificatore di risorsa al comando di menu e a una voce nella tabella dei tasti di scelta rapida dell'applicazione. Quindi si modifica la [Didascalia](../windows/menu-command-properties.md) del comando di menu per visualizzare il nome del tasto di scelta rapida.  

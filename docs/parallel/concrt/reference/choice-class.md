@@ -1,12 +1,9 @@
 ---
 title: Classe Choice | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - choice
@@ -29,17 +26,15 @@ dev_langs:
 helpviewer_keywords:
 - choice class
 ms.assetid: 4157a539-d5c2-4161-b1ab-536ce2888397
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 77a02043a3a301760130b568380a0ca5d57994cc
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 56b936e1ecb3864b7a7bb95f3e552c16d2ce81d0
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="choice-class"></a>Classe choice
 Un blocco della messaggistica `choice` è un blocco multi-origine a destinazione singola che rappresenta un'interazione del flusso di controllo con un set di origini. Il blocco choice attenderà che una qualsiasi delle molteplici origini produca un messaggio e propagherà l'indice dell'origine che ha prodotto il messaggio.  
@@ -78,9 +73,9 @@ class choice: public ISource<size_t>;
 |----------|-----------------|  
 |[accept](#accept)|Accetta un messaggio offerto da questo `choice` blocco, trasferendo la proprietà al chiamante.|  
 |[acquire_ref](#acquire_ref)|Acquisisce un conteggio dei riferimenti su questo `choice` blocco della messaggistica, per evitare l'eliminazione.|  
-|[consume](#consume)|Utilizza un messaggio precedentemente offerto da questo `choice` blocco della messaggistica e riservato correttamente dalla destinazione del trasferimento della proprietà al chiamante.|  
+|[Utilizzare](#consume)|Utilizza un messaggio precedentemente offerto da questo `choice` blocco della messaggistica e riservato correttamente dalla destinazione del trasferimento della proprietà al chiamante.|  
 |[has_value](#has_value)|Controlla se questo `choice` blocco della messaggistica è ancora stato inizializzato con un valore.|  
-|[Indice](#index)|Restituisce l'indice di `tuple` che rappresenta l'elemento selezionato dal `choice` blocco della messaggistica.|  
+|[index](#index)|Restituisce l'indice di `tuple` che rappresenta l'elemento selezionato dal `choice` blocco della messaggistica.|  
 |[link_target](#link_target)|Un blocco di destinazione è collegato a questo `choice` blocco della messaggistica.|  
 |[release](#release)|Rilascia una prenotazione corretta del messaggio precedente.|  
 |[release_ref](#release_ref)|Rilascia un conteggio dei riferimenti su questo `choice` blocco della messaggistica.|  

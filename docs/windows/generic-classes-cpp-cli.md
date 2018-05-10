@@ -1,13 +1,10 @@
 ---
 title: Classi generiche (C + + CLI) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - generic classes
 - generics [C++], declaring generic classes
 ms.assetid: 0beb99e1-1ec4-4fee-9836-ce9657d67a3a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 22f2d00c4f8e07ea9d04e03c2e95190be056cbd9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 07a5cb6abaca56901af26895b1304a9b7079ced9
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="generic-classes-ccli"></a>Classi generiche (C++/CLI)
 Una classe generica viene dichiarata utilizzando il formato seguente:  
@@ -53,12 +48,12 @@ class-body
  Informazioni dichiarative aggiuntive. Per ulteriori informazioni sugli attributi e sulle classi di attributo, vedere Attributi.  
   
  *classe di chiave*  
- Sia `class` o`typename`  
+ Sia `class` o `typename`  
   
- *tipo-parametro-identificatori*,  
+ *tipo-parametro-identificatore/i*,  
  Elenco delimitato da virgole di identificatori che specifica i nomi dei parametri di tipo.  
   
- *clausole di vincolo*  
+ *clausole di vincoli*  
  Un elenco (non virgole) di **dove** clausole che specifica i vincoli per i parametri di tipo. Assume il formato:  
   
  `where`  *Identificatore di parametro di tipo*`:`*elenco di vincoli*   `...`  
@@ -75,16 +70,16 @@ class-body
  *modificatori* (facoltativo)  
  È consentito includono modificatori `sealed` e **astratta**.  
   
- *elenco di base*  
+ *base-list*  
  Un elenco che contiene la classe base e le interfacce implementate, tutti separate da virgole.  
   
  *corpo della classe*  
  Il corpo della classe, che contiene i campi, le funzioni membro e così via.  
   
- *dichiaratori*  
+ *Dichiaratori*  
  Dichiarazioni di variabili di questo tipo. Ad esempio: `^` *identificatore*[`,` ...]  
   
- È possibile dichiarare le classi generiche, ad esempio questi (si noti che la parola chiave **classe** può essere utilizzato al posto del **typename**). In questo esempio, `ItemType`, `KeyType` e `ValueType` sono tipi sconosciuti specificati nel punto in cui il tipo. `HashTable<int, int>`è un tipo di tipo generico costruito `HashTable<KeyType, ValueType>`. Un numero di tipi costruiti diversi può essere costruito da un solo tipo generico. Tipi costruiti costruiti da classi generiche vengono considerati come qualsiasi altro tipo di classe di riferimento.  
+ È possibile dichiarare le classi generiche, ad esempio questi (si noti che la parola chiave **classe** può essere utilizzato al posto del **typename**). In questo esempio, `ItemType`, `KeyType` e `ValueType` sono tipi sconosciuti specificati nel punto in cui il tipo. `HashTable<int, int>` è un tipo costruito un tipo generico `HashTable<KeyType, ValueType>`. Un numero di tipi costruiti diversi può essere costruito da un solo tipo generico. Tipi costruiti costruiti da classi generiche vengono considerati come qualsiasi altro tipo di classe di riferimento.  
   
 ```  
 // generic_classes_1.cpp  

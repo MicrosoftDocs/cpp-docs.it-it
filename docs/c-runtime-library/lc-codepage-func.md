@@ -1,13 +1,10 @@
 ---
 title: ___lc_codepage_func | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - ___lc_codepage_func
 apilocation:
@@ -27,17 +24,15 @@ dev_langs:
 helpviewer_keywords:
 - ___lc_codepage_func
 ms.assetid: 6a663bd0-5a63-4a2f-9507-872ec1582aae
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8532984c8557b095753c0e8cf30b6e63d8b01ce0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ef848de1219ae86f447ddf67efb8af6b8e184cc4
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lccodepagefunc"></a>___lc_codepage_func
 Funzione CRT interna. Recupera la pagina del codice corrente del thread.  

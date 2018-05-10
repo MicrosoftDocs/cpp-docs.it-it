@@ -1,27 +1,22 @@
 ---
 title: Trasferimento alla piattaforma UWP (Universal Windows Platform) (C++) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: f662d2e4-8940-418d-8109-cb76cb8f8569
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2ece050614481bdc0adbe417448711376666b2b9
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: f2f94e54a8525d8d633374b3a23bafdfd93fee56
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="porting-to-the-universal-windows-platform-c"></a>Trasferimento alla piattaforma UWP (Universal Windows Platform) (C++)
 In questo argomento è possibile trovare informazioni su come eseguire il porting di codice C++ esistente alla piattaforma di app Windows 10, la piattaforma UWP (Universal Windows Platform). Il termine *universale* indica che il codice può essere eseguito su uno qualsiasi dei dispositivi su cui è in esecuzione Windows 10, tra cui desktop, tablet e dispositivi futuri che eseguono Windows 10. Si crea un unico progetto e un'unica interfaccia utente basata su XAML che funziona con qualsiasi dispositivo che esegue Windows 10. È possibile usare le funzionalità di layout dinamico in XAML per consentire l'interfaccia utente dell'applicazione di adattarsi alle dimensioni del display diverse.  

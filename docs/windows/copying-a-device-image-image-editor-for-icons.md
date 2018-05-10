@@ -1,13 +1,10 @@
 ---
 title: Copia un'immagine per dispositivo (Editor di immagini per le icone) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,18 +12,16 @@ helpviewer_keywords:
 - cursors, copying
 - icons, copying
 ms.assetid: 0510c20c-f820-4770-92a5-e9263a63d8be
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fc1b9952fae493b8d6174dc88ea2a6b727fe50cf
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b48691dde50c1f0829d5393c9023509c863ed39c
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="copying-a-device-image-image-editor-for-icons"></a>Copia di un'immagine per dispositivo (Editor di immagini per le icone)
 ### <a name="to-copy-a-device-image"></a>Per copiare un'immagine per dispositivo  
@@ -43,7 +38,7 @@ ms.lasthandoff: 12/21/2017
   
  Requisiti  
   
- nessuno  
+ Nessuno  
   
 ## <a name="see-also"></a>Vedere anche  
  [Icone e cursori: risorse immagine per i dispositivi di visualizzazione](../windows/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md)   

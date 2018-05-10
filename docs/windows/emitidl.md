@@ -1,13 +1,10 @@
 ---
 title: emitidl | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - vc-attr.emitidl
 dev_langs:
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - emitidl attribute
 ms.assetid: 85b80c56-578e-4392-ac03-8443c74ebb7d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 55fc74eef3d2ead7312f7dca46f20c3a1ed7ba91
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e4c66ba8c49a405f9fdd93b1652626ab47488a53
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="emitidl"></a>emitidl
 Specifica se tutti gli attributi IDL successivi vengono elaborati e inseriti nel file IDL generato.  
@@ -49,7 +44,7 @@ Uno di questi valori possibili: **true**, **false**, **forzato**, **limitato**, 
   
 -   Se **forzato**, esegue l'override di una successiva **limitato** attributo, che richiede un file per un **modulo** attributo se esistono IDL attributi nel file.  
   
--   **push** consente di salvare corrente **emitidl** impostazioni da un interno **emitidl** stack, e **pop** consente di impostare **emitidl**per qualsiasi valore si trova all'inizio dell'oggetto interno **emitidl** dello stack.  
+-   **push** consente di salvare corrente **emitidl** le impostazioni a un interno **emitidl** stack, e **pop** consente di configurare **emitidl**a qualsiasi valore si trovi all'inizio dell'oggetto interno **emitidl** dello stack.  
   
 `defaultimports=`*booleano* \(facoltativo)  
 -   Se *booleano* è **true**, docobj.idl viene importato in un file IDL generato. Inoltre, se un file IDL con lo stesso nome di un'estensione h di file che si `#include` in origine codice si trova nella stessa directory del file con estensione h, quindi il file IDL generato contiene un'istruzione di importazione per il file IDL.  
@@ -72,7 +67,7 @@ Ogni volta che il compilatore incontra un nuovo file, **emitidl** è impostato i
 |**Si applica a**|Ovunque|  
 |**Ripetibile**|No|  
 |**Attributi obbligatori**|Nessuna|  
-|**Attributi non validi**|nessuno|  
+|**Attributi non validi**|Nessuno|  
   
 Per altre informazioni, vedere [Contesti di attributi](../windows/attribute-contexts.md).  
   

@@ -1,13 +1,10 @@
 ---
 title: Gli attributi di riferimento alfabetico | Documenti Microsoft
-ms.custom: 
+ms.custom: index-page
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: 'index-page '
+ms.topic: conceptual
 f1_keywords:
 - vc.attributes
 dev_langs:
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - attributes [C++]
 ms.assetid: fb2216ef-9fbd-44f4-afed-732aa99450e2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2420ba0d023272a1e6a66687f567bf881b8af35f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5b8e0f40e0633d0ebabbbe2f5f226e0311b1c977
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="attributes-alphabetical-reference"></a>Riferimento alfabetico agli attributi
 Gli attributi seguenti sono disponibili in Visual C++.  
@@ -45,7 +40,7 @@ Gli attributi seguenti sono disponibili in Visual C++.
 |[COM_INTERFACE_ENTRY](../windows/com-interface-entry-cpp.md)|Aggiunge una voce di interfaccia a una mappa COM.|  
 |[control](../windows/control.md)|Specifica che il tipo definito dall'utente è un controllo.|  
 |[cpp_quote](../windows/cpp-quote.md)|Genera la stringa specificata, senza virgolette, nel file di intestazione generato.|  
-|[personalizzato](../windows/custom-cpp.md)|Consente di definire attributi personalizzati.|  
+|[custom](../windows/custom-cpp.md)|Consente di definire attributi personalizzati.|  
 |[db_accessor](../windows/db-accessor.md)|Associa le colonne in un set di righe e li associa ai mapping di funzione di accesso corrispondente.|  
 |[db_column](../windows/db-column.md)|Associa una colonna specificata al set di righe.|  
 |[db_command](../windows/db-command.md)|Esegue un comando OLE DB.|  
@@ -76,7 +71,7 @@ Gli attributi seguenti sono disponibili in Visual C++.
 |[idl_quote](../windows/idl-quote.md)|Consente di utilizzare gli attributi o IDL costrutti non supportati nella versione corrente di Visual C++.|  
 |[iid_is](../windows/iid-is.md)|Specifica l'IID dell'interfaccia COM a cui fa riferimento un puntatore a interfaccia.|  
 |[immediatebind](../windows/immediatebind.md)|Indica che il database verrà informato immediatamente di tutte le modifiche a una proprietà di un oggetto con associazione a dati.|  
-|[implementa](../windows/implements-cpp.md)|Specifica le interfacce di invio che sono obbligate a essere membri della coclasse IDL.|  
+|[Implementa](../windows/implements-cpp.md)|Specifica le interfacce di invio che sono obbligate a essere membri della coclasse IDL.|  
 |[implements_category](../windows/implements-category.md)|Specifica le categorie di componenti implementato per la classe.|  
 |[import](../windows/import.md)|Specifica un altro file di intestazione, ODL o IDL contenente le definizioni che si desidera fare riferimento dal file con estensione idl principale.|  
 |[importidl](../windows/importidl.md)|Inserisce il file IDL specificato nel file IDL generato.|  
@@ -89,9 +84,9 @@ Gli attributi seguenti sono disponibili in Visual C++.
 |[length_is](../windows/length-is.md)|Specifica il numero di elementi della matrice deve essere trasmesso.|  
 |[library_block](../windows/library-block.md)|Inserisce un costrutto di blocco di libreria del file IDL.|  
 |[licensed](../windows/licensed.md)|Indica che la coclasse a cui si riferisce è concesso in licenza e deve essere implementata con **IClassFactory2**.|  
-|[locale](../windows/local-cpp.md)|Consente di usare il compilatore MIDL come generatore di intestazione utilizzato nell'intestazione di interfaccia. Quando utilizzato in una singola funzione, indica una procedura locale per il quale non vengono generati stub.|  
+|[local](../windows/local-cpp.md)|Consente di usare il compilatore MIDL come generatore di intestazione utilizzato nell'intestazione di interfaccia. Quando utilizzato in una singola funzione, indica una procedura locale per il quale non vengono generati stub.|  
 |[max_is](../windows/max-is.md)|Indica il valore massimo per un indice di matrice valida.|  
-|[modulo](../windows/module-cpp.md)|Definisce il blocco di libreria nel file IDL.|  
+|[Modulo](../windows/module-cpp.md)|Definisce il blocco di libreria nel file IDL.|  
 |[ms_union](../windows/ms-union.md)|Controlla l'allineamento di rappresentazione di dati di rete di unioni nonencapsulated.|  
 |[no_injected_text](../windows/no-injected-text.md)|Impedisce al compilatore di codice in seguito a uso dell'attributo.|  
 |[nonbrowsable](../windows/nonbrowsable.md)|Indica che un membro di interfaccia non deve essere visualizzato in un visualizzatore proprietà.|  
@@ -100,7 +95,7 @@ Gli attributi seguenti sono disponibili in Visual C++.
 |[object](../windows/object-cpp.md)|Identifica un'interfaccia personalizzata. sinonimo di attributo personalizzato.|  
 |[odl](../windows/odl.md)|Identifica un'interfaccia come interfaccia oggetto descrizione Language ODL ().|  
 |[oleautomation](../windows/oleautomation.md)|Indica che un'interfaccia è compatibile con l'automazione.|  
-|[facoltativo](../windows/optional-cpp.md)|Specifica un parametro facoltativo per una funzione membro.|  
+|[Facoltativo](../windows/optional-cpp.md)|Specifica un parametro facoltativo per una funzione membro.|  
 |[out](../windows/out-cpp.md)|Identifica i parametri dei puntatori restituiti dalla routine chiamata alla routine chiamante (dal server al client).|  
 |[pointer_default](../windows/pointer-default.md)|Specifica l'attributo di puntatore predefinito per tutti i puntatori ad eccezione dei puntatori di primo livello che vengono visualizzati nell'elenco di parametri.|  
 |[pragma](../windows/pragma.md)|Genera la stringa specificata, senza virgolette, nel file IDL generato.|  
@@ -121,7 +116,7 @@ Gli attributi seguenti sono disponibili in Visual C++.
 |[retval](../windows/retval.md)|Specifica il parametro che riceve il valore restituito del membro.|  
 |[satype](../windows/satype.md)|Specifica il tipo di dati di **SAFEARRAY**.|  
 |[size_is](../windows/size-is.md)|Specifica le dimensioni della memoria allocata per i puntatori di dimensioni, con dimensioni puntatori e unidimensionali o le matrici multidimensionali.|  
-|[origine](../windows/source-cpp.md)|Indica che un membro di una classe, una proprietà o metodo è un'origine di eventi.|  
+|[Origine](../windows/source-cpp.md)|Indica che un membro di una classe, una proprietà o metodo è un'origine di eventi.|  
 |[string](../windows/string-cpp.md)|Indica che l'oggetto unidimensionale `char`, `wchar_t`, **byte**, o equivalente matrice o del puntatore a una matrice di questo tipo deve essere considerato come una stringa.|  
 |[support_error_info](../windows/support-error-info.md)|Supporta la segnalazione errori per l'oggetto di destinazione.|  
 |[switch_is](../windows/switch-is.md)|Specifica l'espressione o un identificatore che agisce come l'unione discriminante che consente di selezionare il membro dell'unione.|  
@@ -132,7 +127,7 @@ Gli attributi seguenti sono disponibili in Visual C++.
 |[uidefault](../windows/uidefault.md)|Indica che il membro di informazioni di tipo è il membro predefinito per la visualizzazione nell'interfaccia utente.|  
 |[unique](../windows/unique-cpp.md)|Specifica un puntatore univoco.|  
 |[usesgetlasterror](../windows/usesgetlasterror.md)|Indica al chiamante se si verifica un errore quando si chiama tale funzione, il chiamante può quindi chiamare `GetLastError` per recuperare il codice di errore.|  
-|[UUID](../windows/uuid-cpp-attributes.md)|Specifica l'ID univoco per una classe o interfaccia.|  
+|[uuid](../windows/uuid-cpp-attributes.md)|Specifica l'ID univoco per una classe o interfaccia.|  
 |[v1_enum](../windows/v1-enum.md)|Indica che il tipo enumerato specificato deve essere trasmesso come un'entità a 32 bit, anziché il valore predefinito di 16 bit.|  
 |[vararg](../windows/vararg.md)|Specifica che la funzione accetta un numero variabile di argomenti.|  
 |[version](../windows/version-cpp.md)|Identifica una particolare versione tra più versioni di un'interfaccia o classe.|  

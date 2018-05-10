@@ -1,12 +1,9 @@
 ---
 title: Struttura IUMSThreadProxy | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - IUMSThreadProxy
@@ -21,17 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - IUMSThreadProxy structure
 ms.assetid: 61c69b7e-5c37-4048-bcb4-e75c536afd86
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 484c5a8fe7f730bf772fb65dee087ccbe1ff6425
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: bbba2955adc14ef73a0ba9932756ace57c4136e6
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="iumsthreadproxy-structure"></a>Struttura IUMSThreadProxy
 Astrazione per un thread di esecuzione. Se si vuole che all'utilità di pianificazione siano concessi thread UMS, impostare il valore per l'elemento dei criteri dell'utilità di pianificazione `SchedulerKind` su `UmsThreadDefault` e implementare l'interfaccia `IUMSScheduler`. I thread UMS sono supportati solo su sistemi operativi a 64 bit con Windows 7 e versioni successive.  
@@ -64,7 +59,7 @@ struct IUMSThreadProxy : public IThreadProxy;
   
  **Spazio dei nomi:** Concurrency  
   
-##  <a name="entercriticalregion"></a>  IUMSThreadProxy::EnterCriticalRegion Method  
+##  <a name="entercriticalregion"></a>  Metodo IUMSThreadProxy:: EnterCriticalRegion  
  Chiamato per entrare in un'area critica. All'interno di un'area critica, l'utilità di pianificazione non verrà considerato operazioni asincrone di blocco che si verificano nell'area. Ciò significa che l'utilità di pianificazione sarà non sarà nuovamente immessa per errori di pagina, le sospensioni di thread, chiamate asincrone di procedura del kernel (Inizializza) e così via, per un thread UMS.  
   
 ```
@@ -107,7 +102,7 @@ virtual int ExitHyperCriticalRegion() = 0;
 ### <a name="return-value"></a>Valore restituito  
  La nuova profondità dell'area di hyper-critical. Le aree critiche Hyper sono rientranti.  
   
-##  <a name="getcriticalregiontype"></a>  IUMSThreadProxy::GetCriticalRegionType Method  
+##  <a name="getcriticalregiontype"></a>  Metodo IUMSThreadProxy:: GetCriticalRegionType  
  Restituisce il tipo di area critica rientra il proxy del thread. Poiché le aree hyper critici sono un superset di aree critiche, se il codice ha immesso un'area critica e quindi un'area hyper critica, `InsideHyperCriticalRegion` verrà restituito.  
   
 ```

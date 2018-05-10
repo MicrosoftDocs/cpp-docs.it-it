@@ -1,31 +1,26 @@
 ---
 title: Modifica in una tabella di tasti di scelta rapida | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - accelerator tables [C++], editing
 - keyboard shortcuts [C++], editing in an accelerator table
 ms.assetid: 545b650b-4f26-4b20-8431-d942548443bd
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 909b5548856d5d2ffc31a4f43d5ce85e9c2f8e5e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5defa8cdd2e2fb96ceff0d333f06698154baf977
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="editing-in-an-accelerator-table"></a>Modifica in una tabella dei tasti di scelta rapida
 ### <a name="to-edit-in-an-accelerator-table"></a>Per eseguire una modifica in una tabella dei tasti di scelta rapida  

@@ -1,13 +1,10 @@
 ---
 title: Visualizzazione e modifica di risorse in un Editor di risorse | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.resourceview
 dev_langs:
@@ -22,18 +19,16 @@ helpviewer_keywords:
 - .rc files, viewing resources
 - resources [Visual Studio], editing
 ms.assetid: ba8bdc07-3f60-43c7-aa5c-d5dd11f0966e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 980264ab1857af214dcd24703980b8efa9a4d2dd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1afa1377b222789243706cf3c5e61f45b4fcd1a1
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="viewing-and-editing-resources-in-a-resource-editor"></a>Visualizzazione e modifica di risorse in un editor di risorse
 Ogni tipo di risorsa è un editor di risorse specifico per il tipo di risorsa. È possibile ridisporre, ridimensionare, aggiungere controlli e funzionalità o in caso contrario modificare alcuni aspetti di una risorsa tramite l'editor associato. È anche possibile modificare una risorsa in [formato testo](../windows/how-to-open-a-resource-script-file-in-text-format.md) e [formato binario](../windows/opening-a-resource-for-binary-editing.md).  
@@ -88,7 +83,7 @@ Ogni tipo di risorsa è un editor di risorse specifico per il tipo di risorsa. �
 1.  In Esplora soluzioni fare doppio clic sulla risorsa che si desidera eliminare e scegliere **eliminare** dal menu di scelta rapida.  
   
 ### <a name="requirements"></a>Requisiti  
- nessuno  
+ Nessuno  
   
 ## <a name="see-also"></a>Vedere anche  
  [Editor di risorse](../windows/resource-editors.md)

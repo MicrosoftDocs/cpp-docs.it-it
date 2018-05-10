@@ -1,13 +1,10 @@
 ---
 title: Impostazione delle dimensioni della casella combinata e dell'elenco a discesa | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.editors.dialog.combo
 dev_langs:
@@ -16,18 +13,16 @@ helpviewer_keywords:
 - combo boxes, sizing
 - controls [C++], sizing
 ms.assetid: 51fb53cf-9ddf-4a20-962e-8553938e55ee
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d8cac985a4cc723e2e0b5db9812e29b8b9632f26
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1ee46502fee6f37d926580863dfc91edb276a846
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="setting-the-size-of-the-combo-box-and-its-drop-down-list"></a>Impostazione della dimensione di una casella combinata e dell'elenco a discesa
 Quando viene aggiunta alla finestra di dialogo, è possibile ridimensionare una casella combinata. È inoltre possibile specificare le dimensioni della casella di riepilogo a discesa.  
@@ -52,7 +47,7 @@ Quando viene aggiunta alla finestra di dialogo, è possibile ridimensionare una 
   
 2.  Utilizzare il quadratino di ridimensionamento inferiore per modificare le dimensioni iniziali dell'area di riepilogo.  
   
-     ![Combinata &#45; ridimensionamento casella in un progetto MFC](../mfc/media/vccomboboxsizing.gif "vcComboBoxSizing")  
+     ![Combinata&#45;dimensionamento di finestra in un progetto MFC](../mfc/media/vccomboboxsizing.gif "vcComboBoxSizing")  
   
 3.  Fare clic sulla freccia a discesa per chiudere la parte a discesa della casella combinata.  
   

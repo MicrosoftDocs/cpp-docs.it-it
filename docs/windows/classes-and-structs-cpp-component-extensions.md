@@ -1,13 +1,10 @@
 ---
 title: Classi e struct (estensioni del componente C++) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,18 +13,16 @@ helpviewer_keywords:
 - value struct keyword [C++]
 - ref struct keyword [C++]
 ms.assetid: 5c360764-b229-49c6-9357-66213afbc372
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8d75bc7f0935ef7444d37f3708379598a549417e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9863786e5e017b69217f984e3aa6d1db597e74d3
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="classes-and-structs--c-component-extensions"></a>Classi e struct (Estensioni del componente C++)
 Dichiara una classe o struct i cui *durata degli oggetti* amministrata automaticamente. Quando l'oggetto non è più accessibile o esce dall'ambito, Visual C++ rimuove automaticamente la memoria allocata per l'oggetto.  
@@ -56,7 +51,7 @@ class_accessvalue structnamemodifier :  inherit_accessbase_type {};
  Nome della classe o dello struct.  
   
  *modificatore* (facoltativo)  
- [astratta](../windows/abstract-cpp-component-extensions.md) e [sealed](../windows/sealed-cpp-component-extensions.md) sono modificatori validi.  
+ [astratto](../windows/abstract-cpp-component-extensions.md) e [sealed](../windows/sealed-cpp-component-extensions.md) sono modificatori validi.  
   
  *inherit_access* (facoltativo)  
  L'accessibilità di `base_type`. L'unico valore di accessibilità consentito è `public`. Il valore predefinito è `public`.  

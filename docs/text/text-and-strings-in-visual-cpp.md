@@ -1,13 +1,10 @@
 ---
 title: Testo e stringhe in Visual C++ | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -33,17 +30,15 @@ helpviewer_keywords:
 - portability [C++], character sets
 - MBCS [C++], international programming
 ms.assetid: a1bb27ac-abe5-4c6b-867d-f761d4b93205
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a911b3a4547be409047004969043943b54bb2480
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e16c44993f3cd9598bc42f9151264e09ac3b7a53
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="text-and-strings-in-visual-c"></a>Testo e stringhe in Visual C++
 Un aspetto importante dello sviluppo di applicazioni per i mercati internazionali è la rappresentazione appropriata di set di caratteri locale. Il set di caratteri ASCII definisce i caratteri nell'intervallo da 0x00 e 0x7F. Sono presenti altri set di caratteri, principalmente europei, che definiscono i caratteri all'interno dell'intervallo da 0x00 e 0x7F in modo identico al set di caratteri ASCII e definire un carattere esteso impostare tra 0x80 e 0xFF. Pertanto, un set di 8 bit, i caratteri a byte singolo (SBCS) è sufficiente per rappresentare il set di caratteri ASCII, nonché i set di caratteri di molte lingue europee. Tuttavia, alcuni set di caratteri non europei, come il Kanji giapponese, includono molti più caratteri rispetto a uno schema di codifica a byte singolo può rappresentare e pertanto richiedono caratteri multibyte (MBCS) codifica del set.  
@@ -55,7 +50,7 @@ Un aspetto importante dello sviluppo di applicazioni per i mercati internazional
  [Supporto per Unicode](../text/support-for-unicode.md)  
  Il formato Unicode è una specifica per il supporto di tutti i set di caratteri, inclusi i set di caratteri che non possono essere rappresentati in un singolo byte.  
   
- [Supporto per il set di caratteri Multibyte (MBCS)](../text/support-for-multibyte-character-sets-mbcss.md)  
+ [Supporto per set di caratteri Multibyte (MBCS)](../text/support-for-multibyte-character-sets-mbcss.md)  
  MBCS rappresentano un'alternativa a Unicode per il supporto di set di caratteri, come quello giapponese o cinese, che non può essere rappresentato in un singolo byte.  
   
  [Mappature di testo generico in Tchar.h](../text/generic-text-mappings-in-tchar-h.md)  

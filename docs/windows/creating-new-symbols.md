@@ -1,13 +1,10 @@
 ---
 title: Creazione di nuovi simboli | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.editors.symbol.creating
 dev_langs:
@@ -16,18 +13,16 @@ helpviewer_keywords:
 - New Symbol dialog box
 - symbols, creating
 ms.assetid: 35168d31-3af6-4ecd-9362-3707d47b53f3
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7b01146297307de92d3e79844ac0488b5ff13e29
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2dd895f130161174d457b974e822b02b5ed7e8e2
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="creating-new-symbols"></a>Creazione di nuovi simboli
 Quando si inizia un nuovo progetto, può risultare utile definire i nomi dei simboli necessari prima di creare le risorse a cui verranno assegnati.  

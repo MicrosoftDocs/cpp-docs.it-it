@@ -1,12 +1,9 @@
 ---
 title: Fasi di conversione | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 dev_langs:
 - C++
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - file translation [C++], compiler process
 - files [C++], translation
 ms.assetid: a7f7a8c9-e8ba-4321-9e50-ebfbbdcce9db
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 21cf6efeba83758bed8abe45aba36f025ace16f4
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 27e8e3a84d425966908bc1be37268c91cbbd34d8
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="phases-of-translation"></a>Fasi di conversione
 I programmi in C e C++ sono costituiti da uno o più file di origine, ciascuno contenente parte del testo del programma. Un file di origine, insieme ai relativi file di inclusione (file che vengono inclusi utilizzando la direttiva per il preprocessore `#include`) e ad esclusione delle sezioni di codice rimosse dalle direttive di compilazione condizionale, come `#if`, viene chiamato "unità di conversione."  
@@ -55,7 +50,7 @@ I programmi in C e C++ sono costituiti da uno o più file di origine, ciascuno c
  *Splicing riga*  
  Tutte le righe che terminano con una barra rovesciata (**\\**) e seguito immediatamente da un carattere di nuova riga vengono unite carattere con la riga successiva nel file di origine che costituiscono le righe logiche dalle righe fisiche. A meno che non sia vuoto, un file di origine deve terminare con un carattere di nuova riga non preceduto da una barra rovesciata.  
   
- *Tokenization*  
+ *Suddivisione in token*  
  Il file di origine viene suddiviso in spazi vuoti e token di pre-elaborazione. I commenti presenti nel file di origine vengono sostituiti ognuno con uno spazio. I caratteri di nuova riga vengono mantenuti.  
   
  *Pre-elaborazione*  

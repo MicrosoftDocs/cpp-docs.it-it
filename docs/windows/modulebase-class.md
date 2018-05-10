@@ -1,12 +1,9 @@
 ---
 title: ModuleBase (classe) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - implements/Microsoft::WRL::Details::ModuleBase
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - ModuleBase class
 ms.assetid: edce7591-6893-46f7-94a7-382827775548
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b02efe3ee61234b2439c1cbbae07827d6a879b2a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bfee0c0cd7ff7bd7f4525a291184f08f1e2898e5
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="modulebase-class"></a>Classe ModuleBase
 Supporta l'infrastruttura WRL e non deve essere utilizzato direttamente dal codice.  
@@ -60,7 +55,7 @@ class ModuleBase;
  `ModuleBase`  
   
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** h  
+ **Intestazione:** FTM.  
   
  **Namespace:** Microsoft::WRL::Details  
   

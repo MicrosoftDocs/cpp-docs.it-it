@@ -1,13 +1,10 @@
 ---
 title: Operatori address-of e di riferimento indiretto | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 02/16/2018
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -24,17 +21,15 @@ helpviewer_keywords:
 - '* operator, address-of operator'
 - operators [C++], indirection
 ms.assetid: 10d62b00-12ba-4ea9-a2d5-09ac29ca2232
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d65a380194e5634d5873e9b060c49096197e48f2
-ms.sourcegitcommit: a5a69d2dc3513261e9e28320e4e067aaf40d2ef2
+ms.openlocfilehash: 75afd44b8c0a31d9f3731a4c6f9fb86c15de4328
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="indirection-and-address-of-operators"></a>Operatori address-of e di riferimento indiretto
 

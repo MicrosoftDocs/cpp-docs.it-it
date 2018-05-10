@@ -1,13 +1,10 @@
 ---
 title: Selezione di un'Area di un'immagine (Editor di immagini per le icone) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.editors.image.editing
 dev_langs:
@@ -18,18 +15,16 @@ helpviewer_keywords:
 - images [C++], selecting
 - cursors [C++], selecting areas of
 ms.assetid: 8b6ce4ad-eba1-4ece-86ba-cea92c3edff2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3060c47af46a39358ac2e8a7ab5b573f50867869
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 07cb7528e25604e873f6da92193a97cf79700799
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="selecting-an-area-of-an-image-image-editor-for-icons"></a>Selezione di un'area di immagini (Editor di immagini per le icone)
 È possibile utilizzare gli strumenti di selezione per definire un'area di un'immagine che si desidera tagliare, copiare, cancellare, invertire, ridimensionare o spostare. Con il **rettangolo di selezione** strumento è possibile definire e selezionare un'area rettangolare dell'immagine. Con il **Selezione irregolare** strumento è possibile creare una struttura a mano libera dell'area di cui si desidera selezionare per le operazioni Taglia, copia o un'altra operazione.  
@@ -57,7 +52,7 @@ ms.lasthandoff: 12/21/2017
   
  Requisiti  
   
- nessuno  
+ Nessuno  
   
 ## <a name="see-also"></a>Vedere anche  
  [Tasti di scelta rapida](../windows/accelerator-keys-image-editor-for-icons.md)   

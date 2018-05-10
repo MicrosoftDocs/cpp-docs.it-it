@@ -1,13 +1,10 @@
 ---
 title: SafeCast | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - SafeCast
 dev_langs:
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - SafeCast function
 ms.assetid: 55316729-8456-403a-9f96-59d4038f67af
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4c3c9bb208cc2be2f91d8a464787d3299cd0b386
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 95a3f8508c17936626558ecc6a8d01e21688d403
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="safecast"></a>SafeCast
 Esegue il cast di un tipo di numero in un altro tipo.  
@@ -49,7 +44,7 @@ inline bool SafeCast (
  Un riferimento al nuovo tipo di numero. Deve essere di tipo U.  
   
 ## <a name="return-value"></a>Valore restituito  
- `true`Se si verifica alcun errore; `false` se si verifica un errore.  
+ `true` Se si verifica alcun errore; `false` se si verifica un errore.  
   
 ## <a name="remarks"></a>Note  
  Questo metodo fa parte di [Libreria SafeInt](../windows/safeint-library.md) ed è progettata per un'operazione di cast singolo senza creare un'istanza di [classe SafeInt](../windows/safeint-class.md).  

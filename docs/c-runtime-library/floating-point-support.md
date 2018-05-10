@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 04/06/2018
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - c.math
 dev_langs:
@@ -17,14 +16,13 @@ helpviewer_keywords:
 ms.assetid: e4fcaf69-5c8e-4854-a9bb-1f412042131e
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 358f47716ee998d5070e226ee71f865d6bfc64a4
-ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
+ms.openlocfilehash: ddf4a6ce7e2ad98841c20fcef5fd9639a5797852
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="math-and-floating-point-support"></a>Supporto delle funzioni matematiche e a virgola mobile
 

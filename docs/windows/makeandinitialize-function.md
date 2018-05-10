@@ -1,30 +1,25 @@
 ---
 title: Funzione MakeAndInitialize | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - implements/Microsoft::WRL::Details::MakeAndInitialize
 dev_langs:
 - C++
 ms.assetid: 71ceeb12-d2a2-4317-b010-3dcde1b39467
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f759a71117d00e5f01f2f0f53f93fef2ba47a4fe
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f4bebe74ae855cf303f09dd8798fcceec0df455b
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="makeandinitialize-function"></a>Funzione MakeAndInitialize
 Inizializza la classe di Windows Runtime specificata. Utilizzare questa funzione per creare un'istanza di un componente definito nello stesso modulo.  
@@ -109,7 +104,7 @@ typename TArg9> HRESULT MakeAndInitialize(_Outptr_result_nullonfailure_ I** ppvO
  Vedere [procedura: creare un'istanza direttamente i componenti WRL](../windows/how-to-instantiate-wrl-components-directly.md) per imparare le differenze tra questa funzione e [Microsoft::WRL::Make](../windows/make-function.md)e per un esempio.  
   
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** h  
+ **Intestazione:** FTM.  
   
  **Namespace:** Microsoft::WRL::Details  
   

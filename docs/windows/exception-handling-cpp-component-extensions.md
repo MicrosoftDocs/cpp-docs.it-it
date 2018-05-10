@@ -1,13 +1,10 @@
 ---
 title: Eccezioni (estensioni del componente C++) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,18 +16,16 @@ helpviewer_keywords:
 - managed exceptions
 - System::Exception class in managed applications
 ms.assetid: ccb11fe8-6938-41ac-b477-a183e85865b9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d6f43bd1953cc13189f53d97090d3913a49072ac
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6b6dcf8e844fbb2e8e133dc5dc6f0b98a3166ac6
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="exception-handling--c-component-extensions"></a>Gestione delle eccezioni (Estensioni del componente C++)
 Le applicazioni compilate con il **/ZW** l'opzione del compilatore o **/clr** entrambi utilizzano l'opzione del compilatore *eccezioni* per gestire gli errori imprevisti durante l'esecuzione del programma. Negli argomenti seguenti viene illustrata la gestione delle eccezioni nelle applicazioni C++/CLI o C++/CX.  
@@ -39,7 +34,7 @@ Le applicazioni compilate con il **/ZW** l'opzione del compilatore o **/clr** en
  [Concetti di base per l'uso delle eccezioni gestite](../dotnet/basic-concepts-in-using-managed-exceptions.md)  
  Descrive la generazione di eccezioni e l'utilizzo `try` / `catch` blocchi.  
   
- [Differenze nel comportamento in /CLR gestione delle eccezioni](../dotnet/differences-in-exception-handling-behavior-under-clr.md)  
+ [Differenze nel comportamento in /CLR di gestione delle eccezioni](../dotnet/differences-in-exception-handling-behavior-under-clr.md)  
  Vengono illustrate le differenze rispetto al comportamento standard di gestione delle eccezioni C++.  
   
  [finally](../dotnet/finally.md)  

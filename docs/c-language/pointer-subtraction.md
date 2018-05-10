@@ -1,29 +1,24 @@
 ---
 title: Sottrazione di puntatori | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - pointer subtraction
 ms.assetid: 4d515690-088a-43f6-bb8c-57b849f7ccf7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 10d40cbac5e9320ee335fa4c8090aa11d5157ae3
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: 576a8d9252db3d5733775a7a0c348b428462aa0f
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="pointer-subtraction"></a>Sottrazione di puntatori
 **ANSI 3.3.6, 4.1.1** Il tipo di Integer necessario per mantenere la differenza tra due puntatori agli elementi della stessa matrice, **ptrdiff_t**  

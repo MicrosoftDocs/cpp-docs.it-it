@@ -1,13 +1,10 @@
 ---
 title: implements_category | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - vc-attr.implements_category
 dev_langs:
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - implements_category attribute
 ms.assetid: fb162df3-1ebe-43dc-a084-668d7ef8c03f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6ab6206851385dcf7bf73cf56730093e7fc5c48f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6770f8303af63c66f0d1a656c2b36e034cc2be83
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="implementscategory"></a>implements_category
 Specifica le categorie di componenti implementate dalla classe di destinazione.  
@@ -73,8 +68,8 @@ class CMyClass {};
 |-|-|  
 |**Si applica a**|**class**, `struct`|  
 |**Ripetibile**|Yes|  
-|**Attributi obbligatori**|Uno dei seguenti: **coclasse**, **progid**, o **vi_progid**|  
-|**Attributi non validi**|nessuno|  
+|**Attributi obbligatori**|Uno dei seguenti: **coclass**, **progid**, o **vi_progid**|  
+|**Attributi non validi**|Nessuno|  
   
  Per altre informazioni, vedere [Contesti di attributi](../windows/attribute-contexts.md).  
   

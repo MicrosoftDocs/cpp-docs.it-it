@@ -1,13 +1,10 @@
 ---
 title: HelpString | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - vc-attr.helpstring
 dev_langs:
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - helpstring attribute [C++]
 ms.assetid: 0401e905-a63e-4fad-98d0-d1efea111966
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f3df545f5d87d36c26d999dc3a5fbee8720830c6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 81a3e45c5636fd193b7880e093711b5cc584bf99
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="helpstring"></a>helpstring
 Specifica una stringa di caratteri utilizzato per descrivere l'elemento a cui viene applicata.  
@@ -59,7 +54,7 @@ Specifica una stringa di caratteri utilizzato per descrivere l'elemento a cui vi
 |**Si applica a**|`interface`, `typedef`, **classe**, metodo, proprietà|  
 |**Ripetibile**|No|  
 |**Attributi obbligatori**|Nessuna|  
-|**Attributi non validi**|nessuno|  
+|**Attributi non validi**|Nessuno|  
   
  Per altre informazioni, vedere [Contesti di attributi](../windows/attribute-contexts.md).  
   

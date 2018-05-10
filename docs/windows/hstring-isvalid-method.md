@@ -1,30 +1,25 @@
 ---
 title: 'Metodo hstring:: IsValid | Documenti Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - corewrappers/Microsoft::WRL::Wrappers::HString::IsValid
 dev_langs:
 - C++
 ms.assetid: 540e222a-0eee-4764-bd6c-8e3d12c877a2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8f4f8c5b040c5f338caf805d5b2c74f3721c9180
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fe2bea7e7971daa1c6bb169a1c049a6757d9ed8d
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="hstringisvalid-method"></a>Metodo HString::IsValid
 Indica se l'oggetto HString corrente è vuoto o non.  
@@ -36,7 +31,7 @@ bool IsValid() const throw()
 ```  
   
 #### <a name="parameters"></a>Parametri  
- `true`Se l'oggetto HString corrente non è vuota. in caso contrario, `false`.  
+ `true` Se l'oggetto HString corrente non è vuoto; in caso contrario, `false`.  
   
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** corewrappers. h  

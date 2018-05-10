@@ -1,12 +1,9 @@
 ---
 title: 'Metodo EventSource:: Add | Documenti Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - event/Microsoft::WRL::EventSource::Add
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - Add method
 ms.assetid: 8bded85b-929e-4425-a464-e5de67bb774c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6e5a39abdced8929ac1a01db596a6099c70853c7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 92af8746b4d2b5ba2f379cc8660b5345b2c5f175
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="eventsourceadd-method"></a>Metodo EventSource::Add
 Aggiunge il gestore dell'evento rappresentato dall'interfaccia del delegato specificato all'insieme di gestori eventi per l'oggetto EventSource corrente.  

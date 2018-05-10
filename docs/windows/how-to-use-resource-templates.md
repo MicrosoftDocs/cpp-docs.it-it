@@ -1,13 +1,10 @@
 ---
 title: 'Procedura: utilizzare modelli di risorse | Documenti Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,18 +16,16 @@ helpviewer_keywords:
 - resources [Visual Studio], templates
 - .rct files
 ms.assetid: bdfe7060-f98e-4859-8285-9c8570360e9d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9bace4f6d8835d9aece7679fa1bb89af3d7a20ed
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 534a86d10a4bcbc34e6cef29fbb77d7caa2c64b9
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="how-to-use-resource-templates"></a>Procedura: utilizzare modelli di risorse
 Un modello di risorsa è una risorsa personalizzata salvata come un file con estensione RCT. È quindi possibile usare un modello di risorsa come punto iniziale per la creazione di altre risorse. I modelli di risorsa garantiscono un risparmio di tempo nello sviluppo di risorse o gruppi di risorse aggiuntivi che condividono alcune funzionalità, quali controlli standard e altri elementi ripetuti. Se, ad esempio, si vuole includere un pulsante ? e un'icona di un logo aziendale in più finestre di dialogo, è possibile creare un nuovo modello di finestra di dialogo e personalizzarlo con il logo e il pulsante ?.  
@@ -61,7 +56,7 @@ Un modello di risorsa è una risorsa personalizzata salvata come un file con est
   
 1.  [Aprire il file RC come file autonomo](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md).  
   
-2.  Nel **File** menu, fare clic su  **salvare \<* il nome del file*> come * *.  
+2.  Nel **File** menu, fare clic su **salvare \< *il nome del file*> come**.  
   
 3.  Specificare un percorso e fare clic su **OK**.  
   

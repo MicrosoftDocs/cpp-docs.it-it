@@ -1,13 +1,10 @@
 ---
 title: La modifica dei file di risorsa gestita | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vb.xmldesigner.data
 dev_langs:
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - resource files, editing
 - resx files, editing
 ms.assetid: 42593030-7897-4bf3-920c-e0b2d11c5bbd
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 936f6a3bab0a5ad3c6e9cf33110ba67056a918e0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 269fc34ad67ce99ba390e41cda2510a2c84ec1da
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="editing-managed-resource-files"></a>Modifica di file di risorse gestite
 Il file di risorse gestite (resx) sono file XML. Quando si aggiunge un file di risorse gestite per il progetto dal **Aggiungi nuovo elemento** nella finestra di dialogo di **Editor risorse gestite** viene visualizzata per impostazione predefinita.  

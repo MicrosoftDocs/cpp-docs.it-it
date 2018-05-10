@@ -1,13 +1,10 @@
 ---
-title: "Pagine delle proprietà (Visual C++) | Documenti Microsoft"
-ms.custom: 
+title: Pagine delle proprietà (Visual C++) | Documenti Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VC.Project.NotAProp.Edit
 dev_langs:
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - build macro
 - user-defined macros
 ms.assetid: 13ffe3ea-1bc3-4bee-be5e-053a8a99cce4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b0c342148266dff9551d2705f8095250daf2b096
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: c1dc831dff6d1e3dbef4fc762712e8125a5b20e1
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="property-pages-visual-c"></a>Pagine delle proprietà (Visual C++)
 
@@ -60,7 +55,7 @@ Se un valore di proprietà del progetto viene modificato, verrà visualizzato in
 - L'utente specifica un valore della proprietà diverso in una pagina delle proprietà del progetto.
 
 > [!TIP]
-> Per visualizzare il set di valori di proprietà utilizzate da MSBuild per compilare il progetto finale, esaminare il file di output del preprocessore, che è possibile produrre usando questa riga di comando: **MSBuild / pre-elaborazione:** *preprocessor_output_ nome del file*<sub>opt</sub> *nomefile_progetto*<sub>consenso esplicito</sub>
+> Per visualizzare il set finale dei valori delle proprietà usato da MSBuild per compilare il progetto, esaminare il file di output del preprocessore, che è possibile produrre usando questa riga di comando: **MSBuild / pre-elaborazione:** *preprocessor_output_ filename*<sub>opt</sub> *nomefile_progetto*<sub>opt</sub>
 
 ## <a name="resetting-properties"></a>Reimpostazione delle proprietà
 
@@ -93,7 +88,7 @@ Si noti che in una pagina delle proprietà vengono visualizzate solo le impostaz
 
 ## <a name="in-this-section"></a>In questa sezione
 
-[Avanzate, strumento manifesto, proprietà di configurazione, \<Projectname > la finestra di dialogo Pagine delle proprietà](../ide/advanced-manifest-tool.md)
+[Avanzate, strumento manifesto, proprietà di configurazione, \<Projectname > finestra di dialogo Pagine delle proprietà](../ide/advanced-manifest-tool.md)
 
 [Pagine delle proprietà Riga di comando](../ide/command-line-property-pages.md)
 
@@ -105,7 +100,7 @@ Si noti che in una pagina delle proprietà vengono visualizzate solo le impostaz
 
 [Pagina delle proprietà Generale (Progetto)](../ide/general-property-page-project.md)
 
-[Generale, strumento manifesto, proprietà di configurazione, \<Projectname > la finestra di dialogo Pagine delle proprietà](../ide/general-manifest-tool-configuration-properties.md)
+[Generale, strumento manifesto, proprietà di configurazione, \<Projectname > finestra di dialogo Pagine delle proprietà](../ide/general-manifest-tool-configuration-properties.md)
 
 [Pagine delle proprietà HLSL](../ide/hlsl-property-pages.md)
 
@@ -115,9 +110,9 @@ Si noti che in una pagina delle proprietà vengono visualizzate solo le impostaz
 
 [Pagine delle proprietà HLSL: file di output](../ide/hlsl-property-pages-output-files.md)
 
-[Input e Output, strumento manifesto, proprietà di configurazione, \<Projectname > la finestra di dialogo Pagine delle proprietà](../ide/input-and-output-manifest-tool.md)
+[Input e Output, strumento manifesto, proprietà di configurazione, \<Projectname > finestra di dialogo Pagine delle proprietà](../ide/input-and-output-manifest-tool.md)
 
-[Isolamento COM, strumento manifesto, proprietà di configurazione, \<Projectname > la finestra di dialogo Pagine delle proprietà](../ide/isolated-com-manifest-tool.md)
+[Isolamento COM, strumento manifesto, proprietà di configurazione, \<Projectname > finestra di dialogo Pagine delle proprietà](../ide/isolated-com-manifest-tool.md)
 
 [Pagine delle proprietà Linker](../ide/linker-property-pages.md)
 

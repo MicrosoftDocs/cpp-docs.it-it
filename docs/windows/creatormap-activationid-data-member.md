@@ -1,12 +1,9 @@
 ---
 title: 'Membro dati creatormap:: ActivationID | Documenti Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - module/Microsoft::WRL::Details::CreatorMap::activationId
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - activationId data member
 ms.assetid: 77518b76-6e6a-4b48-8e2e-a4c7c67769e0
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 912b18ff3e1be04913cb9345e4ac5bde25d2e039
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9c4ff889f808eda00e5b2ce426cd800678b4829f
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="creatormapactivationid-data-member"></a>Membro dati CreatorMap::activationId
 Supporta l'infrastruttura WRL e non deve essere utilizzato direttamente dal codice.  
@@ -51,7 +46,7 @@ union {
  Rappresenta un ID di oggetto che è identificato da un ID di classe COM classico o un nome di runtime di Windows.  
   
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** module.h  
+ **Intestazione:** Implements  
   
  **Namespace:** Microsoft::WRL::Details  
   

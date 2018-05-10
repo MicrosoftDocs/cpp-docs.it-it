@@ -1,13 +1,10 @@
 ---
 title: Archiviazione e allineamento di strutture | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - storing structures
 - packing structures
 ms.assetid: 60ff292f-2595-4f37-ae00-4c4b4f047196
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0cb5ec55ed3125ac86b0042812ba7fc25388a155
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a4a70ab5fbeb4a1672279e7e9b617e3b4de1c1b5
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="storage-and-alignment-of-structures"></a>Archiviazione e allineamento di strutture
 **Sezione specifica Microsoft**  
@@ -39,7 +34,7 @@ ms.lasthandoff: 12/21/2017
   
  I campi di bit adiacenti vengono compressi nella stessa unità di allocazione a 1, 2 o 4 byte se i tipi integrali sono della stessa dimensione e se il campo di bit successivo rientra nell'unità di allocazione corrente senza oltrepassare il limite imposto dai requisiti di allineamento comuni dei campi di bit.  
   
- Per risparmiare spazio o per rispettare la conformità alle strutture di dati esistenti, è consigliabile archiviare le strutture in modo più o meno compatto. L'opzione del compilatore [/Zp](../build/reference/zp-struct-member-alignment.md)[*n*] e [#pragma pack](../preprocessor/pack.md) controllano il modo in cui i dati della struttura vengono "compressi" in memoria. Quando si usa l'opzione /Zp[*n*] (dove *n* è 1, 2, 4, 8 o 16), ogni membro di struttura dopo il primo viene archiviato entro i limiti di byte, ovvero in base al requisito di allineamento del campo o al requisito delle dimensioni di compressione (*n*), a seconda di quale dei due è inferiore. Espressi sotto forma di formula, i limiti dei byte sono  
+ Per risparmiare spazio o per rispettare la conformità alle strutture di dati esistenti, è consigliabile archiviare le strutture in modo più o meno compatto. L'opzione del compilatore [/Zp](../build/reference/zp-struct-member-alignment.md)[*n*] e [#pragma pack](../preprocessor/pack.md) controllano il modo in cui i dati della struttura vengono "compressi" in memoria. Quando si utilizza l'opzione /Zp[*n*] (dove *n* è 1, 2, 4, 8 o 16), ogni membro di struttura dopo il primo viene archiviato entro i limiti di byte, ovvero in base al requisito di allineamento del campo o al requisito delle dimensioni di compressione (*n*), a seconda di quale dei due è inferiore. Espressi sotto forma di formula, i limiti dei byte sono  
   
 ```  
 min( n, sizeof( item ) )  

@@ -1,13 +1,10 @@
 ---
 title: Guida alla finestra di dialogo Impostazioni | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -21,18 +18,16 @@ helpviewer_keywords:
 - controls [C++], snap to guides/grid
 - Guide Settings dialog box (Dialog editor)
 ms.assetid: 55381e1c-146a-4fa7-b1b3-b1492817615f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 47bd233e384bbe21775d02b35cb878bf6bc402b8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7d89a4a7bf0e3a8c9452c5f9d87832b8b31deb6e
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="guide-settings-dialog-box"></a>Finestra di dialogo Impostazioni guide
 ## <a name="layout-guides"></a>Guide  
@@ -53,11 +48,11 @@ ms.lasthandoff: 12/21/2017
 ## <a name="grid-spacing"></a>spaziatura di griglia  
  Visualizza le impostazioni per la spaziatura della griglia in unità della finestra di dialogo (DLU-Dialog Unit).  
   
- **Larghezza: DLU**  
+ **Larghezza: DLU-Dialog Unit**  
   
  Imposta la larghezza della griglia di layout in DLU. Una DLU orizzontale corrisponde alla larghezza media del tipo di carattere casella finestra divisa per quattro.  
   
- **Altezza: DLU**  
+ **Altezza: DLU-Dialog Unit**  
   
  Imposta l'altezza della griglia di layout in DLU. Una DLU verticale corrisponde all'altezza media del carattere nella finestra di dialogo diviso per 8.  
   

@@ -1,30 +1,25 @@
 ---
 title: Override esplicito (estensioni del componente C++) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - overriding, override [C++]
 ms.assetid: 4ec3eaf5-163b-4df8-8f16-7a2ec04c3d0f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 346dd73952934d514b2741c41d5a27816b7152ac
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4eb418a6ded829e4eeeef3bf108894f9faf3d77e
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="explicit-overrides--c-component-extensions"></a>Override esplicito (Estensioni del componente C++)
 In questo argomento viene illustrato come eseguire l'override esplicito di un membro di una classe di base o interfaccia. Override (esplicito) denominato deve essere utilizzato solo per eseguire l'override di un metodo con un metodo derivato ha un nome diverso.  
@@ -40,7 +35,7 @@ overriding-function-declarator = function { overriding-function-definition }
   
  **Parametri**  
   
- *dichiaratore di funzione viene sottoposto a override*  
+ *dichiaratore di funzione si esegue l'override*  
  Elenco di restituzione, tipo, nome e l'argomento della funzione esegue l'override.  Si noti che la funzione esegue l'override non deve avere lo stesso nome della funzione da sottoporre a override.  
   
  *type*  
@@ -49,7 +44,7 @@ overriding-function-declarator = function { overriding-function-definition }
  *function*  
  Un elenco delimitato da virgole di uno o più nomi di funzione per eseguire l'override.  
   
- *definizione di funzione viene sottoposto a override*  
+ *definizione di funzione si esegue l'override*  
  Le istruzioni di corpo di funzione che definiscono la funzione esegue l'override.  
   
  **Note**  

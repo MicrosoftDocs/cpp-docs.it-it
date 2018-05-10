@@ -1,13 +1,10 @@
 ---
 title: interfaccia dispatch | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - vc-attr.dispinterface
 dev_langs:
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - dispinterface attribute
 ms.assetid: 61c5a4a1-ae92-47e9-8ee4-f847be90172b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: cf7fb54b4059bc56aea967f03b9e4c2874f84e82
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 10f398e83650dc63c002801ac999816e48f7bdd4
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="dispinterface"></a>dispinterface
 Inserisce un'interfaccia nel file con estensione idl come interfaccia di dispatch.  
@@ -73,7 +68,7 @@ dispinterface helloPro
  [Attributi IDL](../windows/idl-attributes.md)   
  [Attributi dall'utilizzo](../windows/attributes-by-usage.md)   
  [UUID](../windows/uuid-cpp-attributes.md)   
- [doppia](../windows/dual.md)   
- [personalizzato](../windows/custom-cpp.md)   
+ [Doppio](../windows/dual.md)   
+ [Personalizzato](../windows/custom-cpp.md)   
  [object](../windows/object-cpp.md)   
  [__interface](../cpp/interface.md)   

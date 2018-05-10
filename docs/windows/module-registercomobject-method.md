@@ -1,12 +1,9 @@
 ---
 title: 'Metodo Module:: registercomobject | Documenti Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - module/Microsoft::WRL::Module::RegisterCOMObject
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - RegisterCOMObject method
 ms.assetid: 59f223dc-03c6-429d-95da-b74b3f73b702
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a2984d5950464385ea47301db356b7364707e667
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c002dd64049006c8ee74c709c585a3a9d0f253a5
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="moduleregistercomobject-method"></a>Metodo Module::RegisterCOMObject
 Registra uno o più oggetti COM in modo da altre applicazioni di connettersi ad essi.  
@@ -68,7 +63,7 @@ WRL_NOTHROW virtual HRESULT RegisterCOMObject(
  Viene specificato il tipo di connessione per gli oggetti registrati da una combinazione di corrente `comflag` parametro di modello e l'enumeratore REGCLS_SUSPENDED dell'enumerazione REGCLS.  
   
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** module.h  
+ **Intestazione:** Implements  
   
  **Spazio dei nomi:** Microsoft::WRL
  

@@ -1,28 +1,23 @@
 ---
 title: 'Procedura: creare un componente COM classico mediante WRL | Documenti Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 dev_langs:
 - C++
 ms.assetid: 5efe7690-90d5-4c3c-9e53-11a14cefcb19
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4b665ae9ce10b4fbf5bd1baa7563e0f94b7fb991
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 00f00b265128ca388a3e9d4eb77631a320fbda81
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="how-to-create-a-classic-com-component-using-wrl"></a>Procedura: creare un componente COM classico mediante WRL
 È possibile utilizzare la libreria di modelli C++ (WRL) di Windows Runtime per creare componenti COM classici base per l'utilizzo nelle App desktop, oltre a utilizzarlo per le app Universal Windows Platform (UWP). Per la creazione di componenti COM, la libreria di modelli di Windows Runtime C++ potrebbe richiedere meno codice rispetto ad ATL. Per informazioni sul subset di COM che supporta la libreria di modelli di Windows Runtime C++, vedere [libreria di modelli C++ (WRL) di Windows Runtime](../windows/windows-runtime-cpp-template-library-wrl.md).  

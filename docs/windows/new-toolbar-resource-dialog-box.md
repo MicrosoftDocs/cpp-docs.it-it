@@ -1,13 +1,10 @@
 ---
 title: Finestra di dialogo Nuova risorsa barra degli strumenti | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.editors.newtoolbarresource
 dev_langs:
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - New Toolbar Resource dialog box
 ms.assetid: 52dd01ad-e748-4ab2-b3eb-59f5df990ca6
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c30301b8887013d72e7ae2ab2d70650de7d7f0e1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6662fcfab3c9bb1d805e39147bd2838e6bbce5b2
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="new-toolbar-resource-dialog-box"></a>Nuova risorsa barra degli strumenti (finestra di dialogo)
 La finestra di dialogo Nuova risorsa barra degli strumenti consente di specificare la larghezza e altezza del pulsante per aggiungere una risorsa barra degli strumenti. Il valore predefinito è 16 × 15 pixel.  

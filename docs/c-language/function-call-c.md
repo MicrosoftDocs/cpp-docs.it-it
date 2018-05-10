@@ -1,13 +1,10 @@
 ---
 title: Chiamata di funzione (C) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,24 +12,22 @@ helpviewer_keywords:
 - functions [C], calling
 - function calls
 ms.assetid: 35c66719-3f15-4d3b-97da-4e19dc97b308
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b4275c57b26808b7fbb4497572913ccfe951fcb
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 49c9483cb6e556d5a8b174377c0dad666834c9e5
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="function-call-c"></a>Chiamata di funzione (C)
 Una "chiamata di funzione" è un'espressione che include il nome della funzione chiamata o il valore di un puntatore a funzione e, facoltativamente, gli argomenti passati alla funzione.  
   
 ## <a name="syntax"></a>Sintassi  
  *postfix-expression*:  
- *postfix-expression*  **(**  *argument-expression-list* opt**)**  
+ *postfix-expression*  **(**  *argument-expression-list* opt **)**  
   
  *argument-expression-list*:  
  *assignment-expression*  

@@ -1,31 +1,26 @@
 ---
 title: Generics e modelli (Visual C++) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - generics [C++], vs. templates
 - templates, C++
 ms.assetid: 63adec79-b1dc-4a1a-a21d-b8a72a8fce31
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 307cc39e64a6fd91f3f5f96da634e47d3e9a9030
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5d6dc0a64c5d225f6e80a21dc008e5a2486ad3d9
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="generics-and-templates-visual-c"></a>Generics e modelli (Visual C++)
 Generics e modelli sono entrambi funzionalità del linguaggio che forniscono supporto per tipi con parametri. Tuttavia, sono diversi e vengono utilizzati per scopi diversi. In questo argomento viene fornita una panoramica delle numerose differenze.  

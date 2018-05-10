@@ -1,30 +1,25 @@
 ---
 title: Riepilogo della programmazione Unicode | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Unicode [C++], programming with
 - Unicode [C++], MFC and C run-time functions
 ms.assetid: a4c9770f-6c9c-447c-996b-980920288bed
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 03ee8a4032b054eb670de160aea9ec54dcf80f4d
-ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
+ms.openlocfilehash: 2a378d46c517dfc0fbb5857ad54bc31f4c34287b
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="unicode-programming-summary"></a>Riepilogo della programmazione Unicode
 Per sfruttare il supporto di run-time C e MFC per Unicode, è necessario:  
@@ -90,13 +85,13 @@ Per sfruttare il supporto di run-time C e MFC per Unicode, è necessario:
     pDC->TextOut( str, str.GetLength( ) );  
     ```  
   
-     `CDC::TextOut`accetta un numero di caratteri, non un numero di byte.  
+     `CDC::TextOut` accetta un numero di caratteri, non un numero di byte.  
   
 -   Utilizzare [fopen_s, wfopen_s](../c-runtime-library/reference/fopen-s-wfopen-s.md) per aprire i file Unicode.  
   
  Per riepilogare, MFC e la libreria run-time forniscono il supporto per la programmazione Unicode:  
   
--   Ad eccezione delle funzioni membro di classe database, tutte le funzioni MFC sono abilitata per Unicode, tra cui `CString`. `CString`fornisce inoltre funzioni di conversione Unicode/ANSI.  
+-   Ad eccezione delle funzioni membro di classe database, tutte le funzioni MFC sono abilitata per Unicode, tra cui `CString`. `CString` fornisce inoltre funzioni di conversione Unicode/ANSI.  
   
 -   La libreria run-time fornisce versioni Unicode delle tutte le funzioni di gestione delle stringhe. (La libreria run-time fornisce anche le versioni portabili adatte per Unicode o MBCS. Si tratta di **tcs** macro.)  
   
