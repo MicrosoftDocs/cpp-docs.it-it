@@ -1,13 +1,10 @@
 ---
 title: Funzioni strcoll | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 apilocation:
 - msvcr120.dll
 - msvcr110_clr0400.dll
@@ -26,17 +23,15 @@ helpviewer_keywords:
 - strcoll functions
 - strings [C++], comparing by code page
 ms.assetid: c09eeff3-8aba-4cfb-a524-752436d85573
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e5f025d90d4ffac5f9dc293f621023591b5eb4f7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e97e16ec3360764411b36bf129c344a3455ce6a6
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="strcoll-functions"></a>Funzioni strcoll
 Ognuna delle funzioni `strcoll` e `wcscoll`confronta due stringhe in base all'impostazione della categoria di `LC_COLLATE` della tabella codici delle impostazioni locali in uso. Ognuna delle funzioni `_mbscoll` confronta due stringhe in base all'impostazione della tabella codici multibyte delle impostazioni locali in uso. Usare le funzioni `coll` per il confronto di stringhe solo quando esiste una differenza nella tabella codici corrente tra l'ordine del set di caratteri e l'ordine lessicografico dei caratteri e quando questa differenza è di particolare interesse per il confronto. Usare le funzioni `cmp` corrispondenti per eseguire il test per testare solo per l'uguaglianza di stringhe.  

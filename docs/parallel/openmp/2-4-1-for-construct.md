@@ -1,27 +1,22 @@
 ---
 title: 2.4.1 costrutto for | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-parallel
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 27d2cbce-786b-4819-91d3-d55b2cc57a5e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dd861da77b549a73edf9aeface714b0066d88344
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d5165c21f0bf6f2b9757550208d5e8e26a2bd3b1
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="241-for-construct"></a>2.4.1 Costrutto for
 Il **per** direttiva identifica un costrutto di condivisione del lavoro iterativo che specifica che le iterazioni del ciclo associato verranno eseguite in parallelo. Le iterazioni del **per** ciclo vengono distribuite tra thread già presenti nel gruppo a cui associa un costrutto parallelo in esecuzione. La sintassi del **per** costrutto è come segue:  
@@ -32,15 +27,15 @@ Il **per** direttiva identifica un costrutto di condivisione del lavoro iterativ
   
  La clausola è uno dei valori seguenti:  
   
- **private (** *elenco variabili* **)**  
+ **private (** *variabile-list* **)**  
   
- **firstprivate (** *elenco variabili* **)**  
+ **firstprivate (** *variabile-list* **)**  
   
- **lastprivate (** *elenco variabili* **)**  
+ **lastprivate(** *variable-list* **)**  
   
- **riduzione (** *operatore* **:** *elenco variabili***)**  
+ **riduzione (** *operatore* **:** *variabile-elenco * * *)**  
   
- **ordinati**  
+ **ordered**  
   
  **pianificazione (** *tipo*[, *chunk_size*]**)**  
   
@@ -48,7 +43,7 @@ Il **per** direttiva identifica un costrutto di condivisione del lavoro iterativ
   
  Il **per** direttiva inserisce restrizioni sulla struttura dei corrispondenti **per** ciclo. In particolare, il corrispondente **per** ciclo deve avere una forma canonica:  
   
- **per (** *init-expr* **;** *var logico op b*; */incr expr***)**  
+ **per (** *init-expr* **;** *var logico op b*; */incr-expr * * *)**  
   
  *Init-expr*  
  Uno dei seguenti:  
@@ -57,14 +52,14 @@ Il **per** direttiva identifica un costrutto di condivisione del lavoro iterativ
   
  *tipo integer var* = *lb*  
   
- *incr expr*  
+ *incr-expr*  
  Uno dei seguenti:  
   
- ++*var*  
+ ++*Var*  
   
  *var* ++  
   
- -- *var*  
+ -- *Var*  
   
  *var* --  
   
@@ -103,9 +98,9 @@ Il **per** direttiva identifica un costrutto di condivisione del lavoro iterativ
   
 |||  
 |-|-|  
-|statico|Quando **pianificazione (statico,** *chunk_size***)** è specificato, le iterazioni sono suddivisi in blocchi di dimensioni specificato da *chunk_size*. I blocchi vengono assegnati in modo statico per i thread del team in uno schema round-robin, nell'ordine il numero di thread. Se non si *chunk_size* è specificato, lo spazio di iterazione è suddiviso in blocchi che sono approssimativamente in dimensioni con un blocco assegnato a ogni thread.|  
-|dynamic|Quando **pianificazione (dinamica,** *chunk_size***)** è specificato, le iterazioni sono suddivisi in una serie di blocchi, ognuno dei quali contiene *chunk_size* iterazioni. Ogni blocco viene assegnato a un thread in attesa di un'assegnazione. Il thread viene eseguito il blocco di iterazioni e quindi attende la relativa assegnazione successivo, fino a quando nessun blocco rimarrà impostata per essere assegnati. Si noti che l'ultimo blocco per poter essere assegnati può avere un numero inferiore di iterazioni. Se non si *chunk_size* è specificato, l'impostazione predefinita su 1.|  
-|PGO|Quando **pianificazione (interattiva,** *chunk_size***)** viene specificato, le iterazioni sono assegnate ai thread in blocchi, con riduzione delle dimensioni. Quando un thread termina il blocco assegnato di iterazioni, in modo dinamico viene assegnato un altro blocco, fino a quando non rimane nessuna. Per un *chunk_size* pari a 1, la dimensione di ciascun blocco è approssimativamente il numero di iterazioni non assegnati diviso per il numero di thread. Queste dimensioni diminuiscono circa esponenzialmente su 1. Per un *chunk_size* con valore *k* maggiore di 1, le dimensioni di circa ridurre in modo esponenziale a *k*, ad eccezione del fatto che l'ultimo blocco potrebbe essere meno di  *k* iterazioni. Se non si *chunk_size* è specificato, l'impostazione predefinita su 1.|  
+|statico|Quando si **pianificazione (statico,** *chunk_size * * *)** viene specificato, le iterazioni sono suddivisi in blocchi di dimensioni specificato dal *chunk_size*. I blocchi vengono assegnati in modo statico per i thread del team in uno schema round-robin, nell'ordine il numero di thread. Se non si *chunk_size* è specificato, lo spazio di iterazione è suddiviso in blocchi che sono approssimativamente in dimensioni con un blocco assegnato a ogni thread.|  
+|dynamic|Quando si **pianificazione (dinamica,** *chunk_size * * *)** viene specificato, le iterazioni sono suddivisi in una serie di blocchi, ognuno dei quali contiene *chunk_size* iterazioni. Ogni blocco viene assegnato a un thread in attesa di un'assegnazione. Il thread viene eseguito il blocco di iterazioni e quindi attende la relativa assegnazione successivo, fino a quando nessun blocco rimarrà impostata per essere assegnati. Si noti che l'ultimo blocco per poter essere assegnati può avere un numero inferiore di iterazioni. Se non si *chunk_size* è specificato, l'impostazione predefinita su 1.|  
+|PGO|Quando si **pianificazione (guidati** *chunk_size * * *)** viene specificato, le iterazioni assegnate al thread in blocchi con riducendo le dimensioni. Quando un thread termina il blocco assegnato di iterazioni, in modo dinamico viene assegnato un altro blocco, fino a quando non rimane nessuna. Per un *chunk_size* pari a 1, la dimensione di ciascun blocco è approssimativamente il numero di iterazioni non assegnati diviso per il numero di thread. Queste dimensioni diminuiscono circa esponenzialmente su 1. Per un *chunk_size* con valore *k* maggiore di 1, le dimensioni di circa ridurre in modo esponenziale a *k*, ad eccezione del fatto che l'ultimo blocco potrebbe essere meno di  *k* iterazioni. Se non si *chunk_size* è specificato, l'impostazione predefinita su 1.|  
 |runtime|Quando **Schedule (Runtime)** viene specificato, le decisioni relative alla pianificazione viene posticipata fino alla fase di esecuzione. La pianificazione *tipo* e dimensione dei blocchi è possibile accedere in fase di esecuzione impostando la variabile di ambiente **OMP_SCHEDULE**. Se questa variabile di ambiente non è impostata, la pianificazione risulta è definito dall'implementazione. Quando **Schedule (Runtime)** è specificato, *chunk_size* non deve essere specificato.|  
   
  In assenza di definite in modo esplicito **pianificazione** clausola, il valore predefinito **pianificazione** è definito dall'implementazione.  
@@ -136,7 +131,7 @@ Il **per** direttiva identifica un costrutto di condivisione del lavoro iterativ
   
 ## <a name="cross-references"></a>Riferimenti:  
   
--   **privato**, **firstprivate**, **lastprivate**, e **riduzione** clausole, vedere [sezione 2.7.2](../../parallel/openmp/2-7-2-data-sharing-attribute-clauses.md) nella pagina 25.  
+-   **private**, **firstprivate**, **lastprivate**, e **riduzione** clausole, vedere [sezione 2.7.2](../../parallel/openmp/2-7-2-data-sharing-attribute-clauses.md) nella pagina 25.  
   
 -   **OMP_SCHEDULE** vedere variabile di ambiente [sezione 4.1](../../parallel/openmp/4-1-omp-schedule.md) nella pagina 48.  
   

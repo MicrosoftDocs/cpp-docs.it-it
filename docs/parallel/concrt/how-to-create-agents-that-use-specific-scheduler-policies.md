@@ -1,30 +1,25 @@
 ---
 title: "Procedura: creare agenti che utilizzano criteri dell'utilità di pianificazione specifici | Documenti Microsoft"
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - scheduler policies, agents [Concurrency Runtime]
 - creating agents that use specific policies [Concurrency Runtime]
 ms.assetid: 46a3e265-0777-4ec3-a142-967bafc49d67
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d465b39e00bee0911fb5b04bbe60af68e1f296c5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9efa40d24ed4eaee5b9fd3995a4cf9ed696eb39a
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-to-create-agents-that-use-specific-scheduler-policies"></a>Procedura: Creare agenti che usano criteri dell'utilità di pianificazione specifici
 Un agente è un componente dell'applicazione che funziona in modo asincrono con altri componenti per risolvere le attività di elaborazione maggiori. In genere, un agente è un ciclo di vita stabilito e mantiene lo stato.  
@@ -61,7 +56,7 @@ Computing all permutations of 'Grapefruit'...
 ## <a name="compiling-the-code"></a>Compilazione del codice  
  Copiare il codice di esempio e incollarlo in un progetto di Visual Studio oppure incollarlo in un file denominato `permute-strings.cpp` , quindi eseguire il comando seguente in una finestra del prompt dei comandi di Visual Studio.  
   
- **CL.exe /EHsc permute-strings. cpp**  
+ **CL.exe /EHsc permute ()-Strings. cpp**  
   
 ## <a name="see-also"></a>Vedere anche  
  [Criteri dell'utilità di pianificazione](../../parallel/concrt/scheduler-policies.md)   

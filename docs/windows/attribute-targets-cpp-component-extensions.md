@@ -1,30 +1,25 @@
 ---
 title: Attributo destinazioni (estensioni del componente C++) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - custom attributes, targets
 ms.assetid: b4e6e224-da77-4520-b6e6-b96846e0ebc1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bdf54706673a3679582b93448f420d4a63680dee
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0de383c6d97f12a1caecbc8fbc7063513a898f50
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="attribute-targets-c-component-extensions"></a>Destinazioni degli attributi (Estensioni del componente C++)
 Gli specificatori di utilizzo degli attributi consentono di specificare le destinazioni degli attributi.  Ogni attributo viene definito per essere applicato a determinati elementi del linguaggio. Ad esempio, un attributo potrebbe essere definito per essere applicato solo alle classi e agli struct.  Nell'elenco seguente vengono mostrati i possibili elementi sintattici per cui può essere utilizzato un attributo personalizzato. È possibile utilizzare combinazioni di questi valori (tramite l'OR logico).  
@@ -33,7 +28,7 @@ Gli specificatori di utilizzo degli attributi consentono di specificare le desti
   
  Di seguito è riportato un elenco di destinazioni degli attributi valide:  
   
--   `All`(si applica a tutti i costrutti)  
+-   `All` (si applica a tutti i costrutti)  
   
     ```  
   
@@ -45,7 +40,7 @@ Gli specificatori di utilizzo degli attributi consentono di specificare le desti
   
     ```  
   
--   `Assembly`(si applica a un assembly nel suo complesso)  
+-   `Assembly` (si applica a un assembly nel suo complesso)  
   
     ```  
   
@@ -57,7 +52,7 @@ Gli specificatori di utilizzo degli attributi consentono di specificare le desti
   
     ```  
   
--   `Module`(si applica a un modulo nel suo complesso)  
+-   `Module` (si applica a un modulo nel suo complesso)  
   
     ```  
   

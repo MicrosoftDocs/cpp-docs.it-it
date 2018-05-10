@@ -1,30 +1,25 @@
 ---
-title: 'Procedura dettagliata: Rimozione di lavoro da un Thread dell''interfaccia utente | Documenti Microsoft'
-ms.custom: 
+title: "Procedura dettagliata: Rimozione di lavoro da un Thread dell'interfaccia utente | Documenti Microsoft"
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - user-interface threads, removing work from [Concurrency Runtime]
 - removing work from user-interface threads [Concurrency Runtime]
 ms.assetid: a4a65cc2-b3bc-4216-8fa8-90529491de02
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7c32613aa6938b873a820fbb491fa2c507605a6d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0502ce728c35b08d927cea48ee5b82756980aec5
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="walkthrough-removing-work-from-a-user-interface-thread"></a>Procedura dettagliata: rimozione di lavoro da un thread dell'interfaccia utente
 Questo documento viene illustrato come utilizzare il Runtime di concorrenza per spostare il lavoro eseguito dal thread dell'interfaccia utente (UI) in un'applicazione di Microsoft Foundation Classes (MFC) per un thread di lavoro. Questo documento viene inoltre illustrato come migliorare le prestazioni di un'operazione di disegno di lunga durata.  
@@ -59,7 +54,7 @@ Questo documento viene illustrato come utilizzare il Runtime di concorrenza per 
   
 -   [Aggiunta del supporto per l'annullamento](#cancellation)  
   
-##  <a name="application"></a>Creazione dell'applicazione MFC  
+##  <a name="application"></a> Creazione dell'applicazione MFC  
  In questa sezione viene descritto come creare l'applicazione MFC di base.  
   
 ### <a name="to-create-a-visual-c-mfc-application"></a>Per creare un'applicazione Visual C++ MFC  
@@ -74,7 +69,7 @@ Questo documento viene illustrato come utilizzare il Runtime di concorrenza per 
   
      Verificare che l'applicazione è stato creato correttamente per la creazione e l'esecuzione. Per compilare l'applicazione, scegliere il **compilare** menu, fare clic su **Compila soluzione**. Se l'applicazione viene compilata correttamente, eseguire l'applicazione facendo clic su **Avvia debug** sul **Debug** menu.  
   
-##  <a name="serial"></a>Implementazione della versione seriale dell'applicazione di Mandelbrot  
+##  <a name="serial"></a> Implementazione della versione seriale dell'applicazione di Mandelbrot  
  In questa sezione viene descritto come disegnare il frattale di Mandelbrot. Questa versione il frattale Mandelbrot per un [!INCLUDE[ndptecgdiplus](../../parallel/concrt/includes/ndptecgdiplus_md.md)] [Bitmap](https://msdn.microsoft.com/library/ms534420.aspx) dell'oggetto e quindi copia il contenuto di tale bitmap nella finestra del client.  
   
 #### <a name="to-implement-the-serial-version-of-the-mandelbrot-application"></a>Per implementare la versione seriale dell'applicazione di Mandelbrot  
@@ -123,7 +118,7 @@ Questo documento viene illustrato come utilizzare il Runtime di concorrenza per 
   
  [[Torna all'inizio](#top)]  
   
-##  <a name="removing-work"></a>Rimozione di lavoro dal Thread UI  
+##  <a name="removing-work"></a> Rimozione di lavoro dal Thread dell'interfaccia utente  
  In questa sezione viene illustrato come rimuovere il lavoro di disegno dal thread dell'interfaccia utente nell'applicazione di Mandelbrot. Spostando il lavoro di disegno dal thread dell'interfaccia utente in un thread di lavoro, il thread dell'interfaccia utente può elaborare messaggi, come il thread di lavoro genera l'immagine in background.  
   
  Il Runtime di concorrenza fornisce tre modalità di esecuzione di attività: [gruppi di attività](../../parallel/concrt/task-parallelism-concurrency-runtime.md), [agenti asincroni](../../parallel/concrt/asynchronous-agents.md), e [attività leggere](../../parallel/concrt/task-scheduler-concurrency-runtime.md). Sebbene sia possibile utilizzare uno qualsiasi di questi meccanismi per rimuovere lavoro dal thread dell'interfaccia utente, questo esempio viene utilizzato un [Concurrency:: task_group](reference/task-group-class.md) quanto i gruppi di attività supportano l'annullamento dell'oggetto. Questa procedura dettagliata in un secondo momento verrà utilizzato l'annullamento per ridurre la quantità di lavoro che viene eseguito quando si ridimensiona la finestra del client e per eseguire la pulizia quando la finestra viene eliminata.  
@@ -162,7 +157,7 @@ Questo documento viene illustrato come utilizzare il Runtime di concorrenza per 
   
  [[Torna all'inizio](#top)]  
   
-##  <a name="performance"></a>Miglioramento delle prestazioni di disegno  
+##  <a name="performance"></a> Miglioramento delle prestazioni di disegno  
 
  La generazione del frattale di Mandelbrot è un buon candidato per la parallelizzazione perché il calcolo di ogni pixel è indipendente da tutti gli altri calcoli. Per parallelizzare la procedura di disegno, convertire esterna `for` ciclo nella `CChildView::DrawMandelbrot` una chiamata al metodo di [Concurrency:: parallel_for](reference/concurrency-namespace-functions.md#parallel_for) algoritmo, come indicato di seguito.  
 
@@ -173,7 +168,7 @@ Questo documento viene illustrato come utilizzare il Runtime di concorrenza per 
   
  [[Torna all'inizio](#top)]  
   
-##  <a name="cancellation"></a>Aggiunta del supporto per l'annullamento  
+##  <a name="cancellation"></a> Aggiunta del supporto per l'annullamento  
  In questa sezione viene descritto come gestire il ridimensionamento della finestra e su come annullare qualsiasi attività di disegno quando la finestra viene eliminata.  
   
  Il documento [annullamento nella libreria PPL](cancellation-in-the-ppl.md) viene illustrata l'annullamento in fase di esecuzione. L'annullamento è cooperativo; Pertanto, viene generato immediatamente. Per arrestare un'attività annullata, il runtime genera un'eccezione interna durante una chiamata successiva dall'attività in fase di esecuzione. Nella sezione precedente viene illustrato come utilizzare il `parallel_for` algoritmo per migliorare le prestazioni dell'attività di disegno. La chiamata a `parallel_for` consente al runtime di arrestare l'attività e pertanto consente il funzionamento dell'annullamento.  

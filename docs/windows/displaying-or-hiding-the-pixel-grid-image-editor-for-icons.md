@@ -1,13 +1,10 @@
 ---
 title: Attivazione o disattivazione della griglia in Pixel (Editor di immagini per le icone) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - Image editor [C++], grid settings
 - grid settings, Image editor
 ms.assetid: 571afcd7-94fb-433e-a652-c087d5665db1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7767136d99027584cc2ab27c0fc0bf44cf4fd6dc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: adc8738f35e3018513355275b2dda43b745b011f
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="displaying-or-hiding-the-pixel-grid-image-editor-for-icons"></a>Attivazione o disattivazione della griglia in pixel (Editor di immagini per le icone)
 Per tutti i riquadri dell'Editor di immagini con un fattore di ingrandimento pari o superiore a 4, è possibile visualizzare una griglia che delimita singoli pixel dell'immagine.  
@@ -46,7 +41,7 @@ Per tutti i riquadri dell'Editor di immagini con un fattore di ingrandimento par
   
  Requisiti  
   
- nessuno  
+ Nessuno  
   
 ## <a name="see-also"></a>Vedere anche  
  [Tasti di scelta rapida](../windows/accelerator-keys-image-editor-for-icons.md)   

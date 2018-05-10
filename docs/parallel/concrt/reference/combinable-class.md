@@ -1,12 +1,9 @@
 ---
 title: combinable (classe) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - combinable
@@ -21,17 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - combinable class
 ms.assetid: fe0bfbf6-6250-47da-b8d0-f75369f0b5be
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a9bec5ce0e6679af71d8d3372fb939223691152a
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 695081e6513965a89222d1108c632e2f22580184
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="combinable-class"></a>Classe combinable
 L'oggetto `combinable<T>` ha lo scopo di fornire copie di dati di thread privato, per eseguire calcoli secondari locali per thread senza blocco durante algoritmi paralleli. Alla fine dell'operazione parallela, è possibile unire i sub-calcoli del thread privato in un risultato finale. Questa classe può essere usata in sostituzione di una variabile condivisa e può determinare un miglioramento delle prestazioni qualora vi fosse invece molto conflitto su tale variabile condivisa.  
@@ -180,7 +175,7 @@ T& local(bool& _Exists);
 ### <a name="return-value"></a>Valore restituito  
  Un riferimento al calcolo secondario del thread privato.  
   
-##  <a name="operator_eq"></a> operator = 
+##  <a name="operator_eq"></a> operator= 
 
  Assegna a un `combinable` oggetto da un altro `combinable` oggetto.  
   

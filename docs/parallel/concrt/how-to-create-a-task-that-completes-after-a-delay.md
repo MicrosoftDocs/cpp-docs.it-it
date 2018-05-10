@@ -1,30 +1,25 @@
 ---
 title: "Procedura: creare un'attività che viene completata dopo un ritardo | Documenti Microsoft"
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - task_completion_event class, example
 - create a task that completes after a delay, example [C++]
 ms.assetid: 3fc0a194-3fdb-4eba-8b8a-b890981a985d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f9547bb5e586c20a22ce79d1227fa5f15b3ea305
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fca1ba3874f02b44f96fd795b531536a23c8d462
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-to-create-a-task-that-completes-after-a-delay"></a>Procedura: Creare un'attività che viene completata dopo un ritardo
 In questo esempio viene illustrato come utilizzare il [Concurrency:: Task](../../parallel/concrt/reference/task-class.md), [Concurrency:: cancellation_token_source](../../parallel/concrt/reference/cancellation-token-source-class.md), [cancellation_token](../../parallel/concrt/reference/cancellation-token-class.md), [ Concurrency:: task_completion_event](../../parallel/concrt/reference/task-completion-event-class.md), [Concurrency:: timer](../../parallel/concrt/reference/timer-class.md), e [Concurrency:: Call](../../parallel/concrt/reference/call-class.md) classi per creare un'attività che viene completata dopo un ritardo. È possibile utilizzare questo metodo per creare cicli in cui viene occasionalmente eseguito il polling dei dati, vengono introdotti timeout, viene ritardata la gestione dell'input utente per un tempo predeterminato e così via.  
@@ -54,7 +49,7 @@ In questo esempio viene illustrato come utilizzare il [Concurrency:: Task](../..
 ## <a name="compiling-the-code"></a>Compilazione del codice  
  Per compilare il codice, copiarlo e quindi incollarlo in un progetto di Visual Studio oppure incollarlo in un file denominato `task-delay.cpp` , quindi eseguire il comando seguente in una finestra del prompt dei comandi di Visual Studio.  
   
- **CL.exe /EHsc Task-Delay.cpp**  
+ **CL.exe /EHsc task-Delay. cpp**  
   
 ## <a name="see-also"></a>Vedere anche  
  [Parallelismo delle attività](../../parallel/concrt/task-parallelism-concurrency-runtime.md)   

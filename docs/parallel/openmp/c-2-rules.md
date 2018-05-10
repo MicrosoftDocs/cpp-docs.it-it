@@ -1,32 +1,27 @@
 ---
 title: C. 2 regole | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-parallel
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 4d52fef7-3eb7-4480-a335-8ed48681092b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e5efa8d0e7cf4118362b7695bafcd4710b4021f6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a3bdf26435fdfeea2196b9ef281d656805f51bf2
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="c2-rules"></a>C.2 Regole
 La notazione è descritta nella sezione 6.1 dello standard C. Questa appendice grammatica sono illustrate le estensioni per la grammatica del linguaggio di base per le direttive OpenMP C e C++.  
   
- **/\*in C++ (ISO/IEC 14882:1998)\*/**  
+ **/\* in C++ (ISO/IEC 14882:1998) \*/**  
   
  *istruzione-seq*:  
   
@@ -34,11 +29,11 @@ La notazione è descritta nella sezione 6.1 dello standard C. Questa appendice g
   
  *direttiva OpenMP*  
   
- *istruzione seq-istruzione*  
+ *istruzione-seq istruzione*  
   
  *istruzione-seq (direttiva openmp-)*  
   
- **/\*in C90 (ISO/IEC 9899: 1990)\*/**  
+ **/\* in C90 (ISO/IEC 9899:1990) \*/**  
   
  *statement-list*:  
   
@@ -48,9 +43,9 @@ La notazione è descritta nella sezione 6.1 dello standard C. Questa appendice g
   
  *statement-list statement*  
   
- *elenco di istruzioni direttiva openmp*  
+ *elenco di istruzioni (direttiva openmp-)*  
   
- **/\*in C99 (ISO/IEC 9899: 1999)\*/**  
+ **/\* in C99 (ISO/IEC 9899:1999) \*/**  
   
  *elemento di blocco*:  
   
@@ -62,21 +57,21 @@ La notazione è descritta nella sezione 6.1 dello standard C. Questa appendice g
   
  *istruzione*:  
   
- **/\*istruzioni standard\*/**  
+ **/\* istruzioni standard \*/**  
   
- *costrutto di OpenMP*  
+ *costrutto OpenMP*  
   
- *costrutto di OpenMP*:  
+ *costrutto OpenMP*:  
   
  *costrutto parallelo*  
   
- *per costrutto*  
+ *per un costruttore*  
   
  *costrutto di sezioni*  
   
- *singolo costrutto*  
+ *costrutto Single*  
   
- *parallelo-per-costrutto*  
+ *parallelo per costrutto*  
   
  *costrutto di sezioni parallelo*  
   
@@ -90,7 +85,7 @@ La notazione è descritta nella sezione 6.1 dello standard C. Questa appendice g
   
  *direttiva OpenMP*:  
   
- *barriera-direttiva*  
+ *direttiva Barrier*  
   
  *direttiva Flush*  
   
@@ -98,11 +93,11 @@ La notazione è descritta nella sezione 6.1 dello standard C. Questa appendice g
   
  *istruzione*  
   
- *parallelo costrutto*:  
+ *costrutto parallelo*:  
   
- *parallelo direttiva blocco strutturato*  
+ *parallelo-directive blocco strutturato*  
   
- *parallelo direttiva*:  
+ *parallelo-directive*:  
   
  **# pragma omp parallel***parallelo clausola*optseq *nuova riga*   
   
@@ -110,9 +105,9 @@ La notazione è descritta nella sezione 6.1 dello standard C. Questa appendice g
   
  *univoco parallelo-clausola*  
   
- *clausola di dati*  
+ *dati-clausola*  
   
- *univoco parallelo-clausola*:  
+ *clausola di parallelo univoco*:  
   
  **Se (** *espressione* **)**  
   
@@ -130,17 +125,17 @@ La notazione è descritta nella sezione 6.1 dello standard C. Questa appendice g
   
  *univoco per la clausola*  
   
- *clausola di dati*  
+ *dati-clausola*  
   
  **nowait**  
   
  *univoco per la clausola*:  
   
- **ordinati**  
+ **ordered**  
   
- **pianificazione (** *-tipo di pianificazione* **)**  
+ **pianificazione (** *tipo di pianificazione* **)**  
   
- **pianificazione (** *-tipo di pianificazione* **,** *espressione* **)**  
+ **pianificazione (** *tipo di pianificazione* **,** *espressione* **)**  
   
  *tipo di pianificazione*:  
   
@@ -154,7 +149,7 @@ La notazione è descritta nella sezione 6.1 dello standard C. Questa appendice g
   
  *Nelle sezioni costrutto*:  
   
- *sezione ambito sezioni-direttiva*  
+ *ambito di sezione sezioni-direttiva*  
   
  *direttiva Sections*:  
   
@@ -162,15 +157,15 @@ La notazione è descritta nella sezione 6.1 dello standard C. Questa appendice g
   
  *Nelle sezioni clausola*:  
   
- *clausola di dati*  
+ *dati-clausola*  
   
  **nowait**  
   
  *sezione ambito*:  
   
- *{sezione sequenza}*  
+ *{sezione-sequenza}*  
   
- *sezione sequenza*:  
+ *sequenza di sezione*:  
   
  *direttiva di sezione*opt *blocco strutturato*  
   
@@ -182,25 +177,25 @@ La notazione è descritta nella sezione 6.1 dello standard C. Questa appendice g
   
  *singolo costrutto*:  
   
- *singola direttiva blocco strutturato*  
+ *direttiva singolo blocco strutturato*  
   
  *singola direttiva*:  
   
- **# pragma omp singolo** *singola clausola*optseq *nuova riga*  
+ **# pragma omp single** *singola clausola*optseq *nuova riga*  
   
  *singola clausola*:  
   
- *clausola di dati*  
+ *dati-clausola*  
   
  **nowait**  
   
- *parallelo-per-costrutto*:  
+ *parallelo per costrutto*:  
   
  *istruzione di iterazione per parallelo-direttiva*  
   
  *parallelo-per-directive*:  
   
- **# pragma omp parallel per** *parallelo clausola for*optseq *nuova riga*  
+ **# pragma omp parallel per** *parallelo per clausola*optseq *nuova riga*  
   
  *clausola for parallelo*:  
   
@@ -208,11 +203,11 @@ La notazione è descritta nella sezione 6.1 dello standard C. Questa appendice g
   
  *univoco per la clausola*  
   
- *clausola di dati*  
+ *dati-clausola*  
   
  *costrutto di sezioni parallelo*:  
   
- *sezione ambito parallelo-sezioni-direttiva*  
+ *ambito di sezione parallelo-sezioni-direttiva*  
   
  *parallelo-sezioni-directive*:  
   
@@ -222,13 +217,13 @@ La notazione è descritta nella sezione 6.1 dello standard C. Questa appendice g
   
  *univoco parallelo-clausola*  
   
- *clausola di dati*  
+ *dati-clausola*  
   
- *master-costrutto*:  
+ *costrutto master*:  
   
- *direttiva master blocco strutturato*  
+ *master-directive blocco strutturato*  
   
- *direttiva master*:  
+ *master-directive*:  
   
  **master di # pragma omp** *nuova riga*  
   
@@ -244,7 +239,7 @@ La notazione è descritta nella sezione 6.1 dello standard C. Questa appendice g
   
  *(identificatore)*  
   
- *barriera direttiva*:  
+ *direttiva barriera*:  
   
  **barriera di # pragma omp** *nuova riga*  
   
@@ -256,13 +251,13 @@ La notazione è descritta nella sezione 6.1 dello standard C. Questa appendice g
   
  **# pragma omp atomic** *nuova riga*  
   
- *scaricamento direttiva*:  
+ *direttiva Flush*:  
   
- **# pragma omp scaricamento** *scaricamento var*opt *nuova riga*  
+ **# pragma omp scaricamento** *var scaricamento*opt *nuova riga*  
   
  *scaricamento var*:  
   
- *(elenco di variabili)*  
+ *(elenco di variabile)*  
   
  *costrutto ordinato*:  
   
@@ -274,39 +269,39 @@ La notazione è descritta nella sezione 6.1 dello standard C. Questa appendice g
   
  *dichiarazione*:  
   
- **/\*dichiarazioni standard\*/**  
+ **/\* dichiarazioni standard \*/**  
   
  *direttiva threadprivate*  
   
  *direttiva threadprivate*:  
   
- **# pragma omp threadprivate (** *elenco variabili***)** *nuova riga*   
+ **# pragma omp threadprivate (** *variabile-list***)** *nuova riga*   
   
  *clausola data*:  
   
- **private (** *elenco variabili* **)**  
+ **private (** *variabile-list* **)**  
   
- **copyprivate (***elenco variabili***)**   
+ **copyprivate (***variabile-list***)**   
   
- **firstprivate (***elenco variabili***)**   
+ **firstprivate (***variabile-list***)**   
   
- **lastprivate (** *elenco variabili***)**   
+ **lastprivate (** *variabile-list***)**   
   
- **condiviso (** *elenco variabili* **)**  
+ **condiviso (** *variabile-list* **)**  
   
- **predefinito (condiviso)**  
+ **valore predefinito (condiviso)**  
   
- **predefinito (nessuno)**  
+ **valore predefinito (nessuno)**  
   
  **riduzione (***operatore di riduzione***:***elenco variabili***)**   
   
- **copyin (***elenco variabili***)**   
+ **copyin (***variabile-list***)**   
   
  *operatore di riduzione*:  
   
- *Uno dei*:  **+  \* -& ^ &#124; & & &#124; &#124;**  
+ *Uno dei*:  **+  \* -& ^ &#124; & &&#124;&#124;**  
   
- **/\*in C\*/**  
+ **/\* in C \*/**  
   
  *elenco di variabili*:  
   
@@ -314,10 +309,10 @@ La notazione è descritta nella sezione 6.1 dello standard C. Questa appendice g
   
  *elenco di variabili* **,** *identificatore*  
   
- **/\*in C++\*/**  
+ **/\* in C++ \*/**  
   
  *elenco di variabili*:  
   
  *ID-expression*  
   
- *elenco di variabili* **,** *id espressione*
+ *elenco di variabili* **,** *id-expression*

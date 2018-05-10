@@ -1,13 +1,10 @@
 ---
-title: "Funzionalità di sicurezza in CRT | Microsoft Docs"
-ms.custom: 
+title: Funzionalità di sicurezza in CRT | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - _CRT_SECURE_NO_DEPRECATE
 - _CRT_NONSTDC_NO_WARNINGS
@@ -33,17 +30,15 @@ helpviewer_keywords:
 - CRT, security enhancements
 - parameters [C++], validation
 ms.assetid: d9568b08-9514-49cd-b3dc-2454ded195a3
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1d32a69e179acee501c17d96218cc4ef2e10f0c3
-ms.sourcegitcommit: 185e11ab93af56ffc650fe42fb5ccdf1683e3847
+ms.openlocfilehash: 1ce188ea5d28fa99d6133129edbace8e2886f0f5
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="security-features-in-the-crt"></a>Funzionalità di sicurezza in CRT
 Molte funzioni CRT precedenti hanno versioni più sicure e recenti. Se esiste una funzione sicura, la precedente versione, meno sicura, è contrassegnata come deprecata e la nuova versione ha il suffisso `_s` ("sicura").  

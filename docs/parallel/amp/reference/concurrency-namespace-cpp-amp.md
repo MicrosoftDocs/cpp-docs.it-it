@@ -1,12 +1,9 @@
 ---
 title: Concorrenza Namespace (C++ AMP) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-amp
 ms.topic: reference
 f1_keywords:
 - AMP/Concurrency
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - Concurrency namespace
 ms.assetid: b5aab265-3bac-42c5-8ead-f92ce05ef267
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1a9f82baade21cdbde41fc49fd0bfe6163c0f6af
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 127c1b63693b128e9cdf23813bbfe8e0ec251f9d
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="concurrency-namespace-c-amp"></a>Spazio dei nomi Concurrency (C++ AMP)
 Fornisce classi e funzioni che consente di accelerare l'esecuzione del codice C++ su hardware di dati in parallelo. Per ulteriori informazioni, vedere [Panoramica di C++ AMP](../cpp-amp-overview.md)  
@@ -118,7 +113,7 @@ namespace Concurrency;
 |Nome|Descrizione|  
 |----------|-----------------|  
 |[HLSL_MAX_NUM_BUFFERS Constant](concurrency-namespace-constants-amp.md#hlsl_max_num_buffers)|Il numero massimo di buffer consentiti da DirectX.|  
-|[MODULENAME_MAX_LENGTH Constant](concurrency-namespace-constants-amp.md#modulename_max_length)|Archivia la lunghezza massima del nome del modulo. Questo valore deve essere lo stesso per il compilatore e il runtime.|  
+|[MODULENAME_MAX_LENGTH (costante)](concurrency-namespace-constants-amp.md#modulename_max_length)|Archivia la lunghezza massima del nome del modulo. Questo valore deve essere lo stesso per il compilatore e il runtime.|  
   
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** amp.h  

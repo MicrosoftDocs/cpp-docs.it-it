@@ -1,13 +1,10 @@
 ---
 title: 'Procedura: eseguire la conversione tra i vari tipi di stringa | Documenti Microsoft'
-ms.custom: 
+ms.custom: get-started-article
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: get-started-article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - string conversion [C++]
 - strings [C++], converting
 ms.assetid: e7e4f741-3c82-45f0-b8c0-1e1e343b0e77
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 15ebbbbb08d5415cdf55d9b98b44b327dc256879
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 44b80fcafa15a472f4bfc68dd74ff0acc40bb2ad
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="how-to-convert-between-various-string-types"></a>Procedura: convertire vari tipi di stringhe
 In questo argomento viene illustrato come convertire vari tipi di stringa di Visual C++ in altre stringhe. I tipi di stringhe che vengono trattati includono `char *`, `wchar_t*`, [bstr_t](../cpp/bstr-t-class.md), [CComBSTR](../atl/reference/ccombstr-class.md), [CString](../atl-mfc-shared/using-cstring.md), [basic_string](../standard-library/basic-string-class.md), e <xref:System.String?displayProperty=fullName>. In tutti i casi, viene creata una copia della stringa quando convertito nel nuovo tipo. Tutte le modifiche apportate alla nuova stringa non influirà la stringa originale e viceversa.  
@@ -474,9 +469,9 @@ Hello, World! (System::String)
 ## <a name="example"></a>Esempio  
   
 ### <a name="description"></a>Descrizione  
- In questo esempio viene illustrato come eseguire la conversione da un `CString` per altri tipi di stringa sopra elencati. `CString`è basato sul tipo di dati TCHAR, che a sua volta dipende dal fatto che il simbolo `_UNICODE` è definito. Se `_UNICODE` non è definito, `TCHAR` viene definita come char e `CString` contiene una stringa di caratteri multibyte; se `_UNICODE` è definito, `TCHAR` viene definito come `wchar_t` e `CString` contiene un carattere wide stringa.  
+ In questo esempio viene illustrato come eseguire la conversione da un `CString` per altri tipi di stringa sopra elencati. `CString` è basato sul tipo di dati TCHAR, che a sua volta dipende dal fatto che il simbolo `_UNICODE` è definito. Se `_UNICODE` non è definito, `TCHAR` viene definita come char e `CString` contiene una stringa di caratteri multibyte; se `_UNICODE` è definito, `TCHAR` viene definito come `wchar_t` e `CString` contiene un carattere wide stringa.  
   
- `CStringA`stringa multibyte sempre versione `CString`, `CStringW` è l'unica versione della stringa di caratteri "wide". Né `CStringA` né `CStringW` utilizzare `_UNICODE` per determinare la modalità di compilazione. `CStringA`e `CStringW` vengono utilizzati in questo esempio per chiarire le differenze di allocazione delle dimensioni del buffer e nella gestione dell'output.  
+ `CStringA` stringa multibyte sempre versione `CString`, `CStringW` è l'unica versione della stringa di caratteri "wide". Né `CStringA` né `CStringW` utilizzare `_UNICODE` per determinare la modalità di compilazione. `CStringA` e `CStringW` vengono utilizzati in questo esempio per chiarire piccole differenze per quanto allocazione delle dimensioni del buffer e nella gestione dell'output.  
   
 ### <a name="code"></a>Codice  
   

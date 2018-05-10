@@ -1,35 +1,30 @@
 ---
 title: 'Procedura dettagliata: Creazione di un agente del flusso di dati | Documenti Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - creating dataflow agents [Concurrency Runtime]
 - dataflow agents, creating [Concurrency Runtime]
 ms.assetid: 9db5ce3f-c51b-4de1-b79b-9ac2a0cbd130
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5f92dc200f29f5fd20c8dd1cc27508b9c7cdf4ce
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 33f7c7cf5e64d2ddf751bb97ee1b617d09df6af3
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="walkthrough-creating-a-dataflow-agent"></a>Procedura dettagliata: Creazione di un agente del flusso di dati
 Questo documento viene illustrato come creare applicazioni basate su agente basato su flussi di dati, anziché il flusso di controllo.  
   
- *Flusso di controllo* fa riferimento all'ordine di esecuzione di operazioni in un programma. Flusso di controllo viene regolato mediante strutture di controllo, ad esempio istruzioni condizionali, cicli e così via. In alternativa, *flussi di dati* fa riferimento a un modello di programmazione in cui i calcoli vengono eseguiti solo quando sono disponibili tutti i dati necessari. Il modello di programmazione del flusso di dati è correlato al concetto di passaggio dei messaggi, in cui i componenti indipendenti di un programma di comunicano tra loro mediante l'invio di messaggi.  
+ *Flusso di controllo* si riferisce all'ordine di esecuzione di operazioni in un programma. Flusso di controllo viene regolato mediante strutture di controllo, ad esempio istruzioni condizionali, cicli e così via. In alternativa, *flussi di dati* fa riferimento a un modello di programmazione in cui i calcoli vengono eseguiti solo quando sono disponibili tutti i dati necessari. Il modello di programmazione del flusso di dati è correlato al concetto di passaggio dei messaggi, in cui i componenti indipendenti di un programma di comunicano tra loro mediante l'invio di messaggi.  
   
  Agenti asincroni supportano sia il flusso di controllo flusso di dati e modelli di programmazione. Anche se il modello di flusso di controllo è appropriato in molti casi, il modello del flusso di dati è appropriato in altri, ad esempio, quando un agente riceve i dati ed esegue un'azione che è in base al payload dei dati.  
   
@@ -51,7 +46,7 @@ Questo documento viene illustrato come creare applicazioni basate su agente basa
   
 - [Creazione di un agente di registrazione dei messaggi](#logging)  
   
-##  <a name="control-flow"></a>Creazione di un agente di base del flusso di controllo  
+##  <a name="control-flow"></a> Creazione di un agente di base del flusso di controllo  
  Si consideri l'esempio seguente che definisce la `control_flow_agent` classe. La `control_flow_agent` classe agisce sugli tre buffer dei messaggi: un buffer di input e due i buffer di output. Il `run` metodo legge dal buffer del messaggio di origine in un ciclo e utilizza un'istruzione condizionale per indirizzare il flusso dell'esecuzione del programma. L'agente incrementa un contatore per diverso da zero, i valori negativi e viene incrementato di un altro contatore per i valori diversi da zero e positivi. Dopo che l'agente riceve il valore di sentinel pari a zero, invia i valori dei contatori per il buffer dei messaggi di output. Il `negatives` e `positives` metodi consentono all'applicazione di leggere i conteggi dei valori negativi e positivi dall'agente.  
   
  [!code-cpp[concrt-dataflow-agent#1](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-dataflow-agent_1.cpp)]  
@@ -60,7 +55,7 @@ Questo documento viene illustrato come creare applicazioni basate su agente basa
   
  [[Torna all'inizio](#top)]  
   
-##  <a name="dataflow"></a>Creazione di un agente del flusso di dati di base  
+##  <a name="dataflow"></a> Creazione di un agente del flusso di dati di base  
  In questa sezione viene illustrato come convertire il `control_flow_agent` classe per utilizzare il modello del flusso di dati per eseguire la stessa attività.  
   
  L'agente del flusso di dati funziona tramite la creazione di una rete di buffer dei messaggi, ognuno dei quali svolge un ruolo specifico. Alcuni blocchi di messaggi di utilizzare una funzione di filtro per accettare o rifiutare un messaggio in base al relativo payload. Una funzione di filtro garantisce che un blocco di messaggi riceve solo determinati valori.  
@@ -130,7 +125,7 @@ There are 499477 positive numbers.
   
  [[Torna all'inizio](#top)]  
   
-##  <a name="logging"></a>Creazione di un agente di registrazione dei messaggi  
+##  <a name="logging"></a> Creazione di un agente di registrazione dei messaggi  
  Nell'esempio seguente il `log_agent` (classe), che è simile al `dataflow_agent` classe. Il `log_agent` implementa un agente di registrazione asincrona che scrive log i messaggi in un file e nella console. La `log_agent` classe consente all'applicazione di suddividere i messaggi come informativo, avviso o errore. Consente inoltre all'applicazione di specificare se ogni categoria di log viene scritto un file, la console o entrambi. In questo esempio scrive tutti i messaggi di log in un file e solo i messaggi di errore nella console.  
   
  [!code-cpp[concrt-log-filter#1](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-dataflow-agent_8.cpp)]  

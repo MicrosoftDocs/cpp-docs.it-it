@@ -2,28 +2,23 @@
 title: Classe task_options (Runtime di concorrenza) | Documenti Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - ppltasks/concurrency::task_options
 dev_langs:
 - C++
 ms.assetid: f93d146b-70f7-46ec-8c2f-c33b8bb0af69
-caps.latest.revision: 7
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6ad83e9e0a871ddc2d8f2c767cb0690da1e6f349
-ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
+ms.openlocfilehash: b01d9d5308590bead126cd623b7da0468f0df60f
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="taskoptions-class-concurrency-runtime"></a>Classe task_options (runtime di concorrenza)
 Rappresenta le opzioni consentite per la creazione di un'attività  

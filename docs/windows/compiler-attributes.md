@@ -1,31 +1,26 @@
 ---
 title: Attributi del compilatore | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - cl.exe compiler, attributes
 - attributes [C++], compiler
 ms.assetid: 53cd9bee-1521-48ec-b171-80feac2096cc
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e83743859d4c4bdfb515df6008969a9cc7b56e2e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4366b5d804275f78ef1c3b4f1dd8e8e51b01b8c2
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="compiler-attributes"></a>Attributi del compilatore
 Attributi del compilatore forniscono un'ampia gamma di funzionalità.  
@@ -36,7 +31,7 @@ Attributi del compilatore forniscono un'ampia gamma di funzionalità.
 |[event_receiver](../windows/event-receiver.md)|Crea un ricevitore di eventi.|  
 |[event_source](../windows/event-source.md)|Crea un'origine evento.|  
 |[export](../windows/export.md)|Fa sì che una struttura di dati da inserire nel file IDL.|  
-|[implementa](../windows/implements-cpp.md)|Specifica le interfacce di invio che sono obbligate a essere membri della coclasse IDL.|  
+|[Implementa](../windows/implements-cpp.md)|Specifica le interfacce di invio che sono obbligate a essere membri della coclasse IDL.|  
 |[importidl](../windows/importidl.md)|Inserisce il file IDL specificato nel file IDL generato.|  
 |[importlib](../windows/importlib.md)|Rende i tipi già compilati in un'altra libreria dei tipi disponibili per la libreria dei tipi da creare.|  
 |[includelib](../windows/includelib-cpp.md)|Fa sì che un file IDL o h da includere nel file IDL generato.|  

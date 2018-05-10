@@ -1,12 +1,9 @@
 ---
 title: Struttura IThreadProxy | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - IThreadProxy
@@ -20,17 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - IThreadProxy structure
 ms.assetid: feb89241-a555-4e61-ad48-40add54daeca
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e96f02677e3a79d1a6e15b9b22b777ca794b516d
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: fbf59302a73374f08f1c226c1e7e56202654dcfb
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="ithreadproxy-structure"></a>Struttura IThreadProxy
 Astrazione per un thread di esecuzione. A seconda della chiave di criteri `SchedulerType` dell'utilità di pianificazione che si crea, Gestione risorse concederà un proxy del thread appoggiato da un thread Win32 normale o un thread UMS in modalità utente. I thread UMS sono supportati su sistemi operativi a 64 bit con Windows versione 7 e successive.  
@@ -97,7 +92,7 @@ virtual void SwitchOut(SwitchingProxyState switchState = Blocking) = 0;
   
  Nelle librerie e nelle intestazioni fornite con Visual Studio 2010, questo metodo non accettava un parametro e non consentiva la reinizializzazione della radice del processore virtuale. Per mantenere il comportamento precedente, viene fornito il valore del parametro predefinito di `Blocking`.  
   
-##  <a name="switchto"></a>  IThreadProxy::SwitchTo Method  
+##  <a name="switchto"></a>  Metodo IThreadProxy:: SwitchTo  
  Esegue un cambio di contesto cooperativo dal contesto attualmente in esecuzione a un altro.  
   
 ```
@@ -124,7 +119,7 @@ virtual void SwitchTo(
   
  `SwitchTo` deve essere chiamato per il `IThreadProxy` interfaccia che rappresenta il thread attualmente in esecuzione o i risultati sono indefiniti. La funzione genera `invalid_argument` se il parametro `pContext` è impostato su `NULL`.  
   
-##  <a name="yieldtosystem"></a>  IThreadProxy::YieldToSystem Method  
+##  <a name="yieldtosystem"></a>  Metodo IThreadProxy:: YieldToSystem  
  Determina che il thread chiamante ceda l'esecuzione a un altro thread pronto per l'esecuzione sul processore corrente. Il sistema operativo seleziona il thread successivo da eseguire.  
   
 ```

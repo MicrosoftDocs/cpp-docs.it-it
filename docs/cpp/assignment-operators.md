@@ -43,11 +43,11 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d89363e49b2f8a1691ee897c6acae6b4f67f5b9a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4318d7913b180c3fbadcf9d655e402c9b0ad7ccc
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="assignment-operators"></a>Operatori di assegnazione
 ## <a name="syntax"></a>Sintassi  
@@ -73,15 +73,15 @@ Tutti gli operatori di assegnazione nella tabella riportata di seguito tranne la
 |--------------|-------------|  
 |**=**|Memorizza il valore del secondo operando nell'oggetto specificato dal primo operando (assegnamento semplice).|  
 |**\*=**|Moltiplica il valore del primo operando per il valore del secondo operando e memorizza il risultato nell'oggetto specificato dal primo operando.|  
-|`/=`|Divide il valore del primo operando per il valore del secondo operando e memorizza il risultato nell'oggetto specificato dal primo operando.|  
-|`%=`|Calcola il modulo del primo operando specificato per il valore del secondo operando e memorizza il risultato nell'oggetto specificato dal primo operando.|  
-|`+=`|Somma il valore del secondo operando al valore del primo operando e memorizza il risultato nell'oggetto specificato dal primo operando.|  
+|**/=**|Divide il valore del primo operando per il valore del secondo operando e memorizza il risultato nell'oggetto specificato dal primo operando.|  
+|**%=**|Calcola il modulo del primo operando specificato per il valore del secondo operando e memorizza il risultato nell'oggetto specificato dal primo operando.|  
+|**+=**|Somma il valore del secondo operando al valore del primo operando e memorizza il risultato nell'oggetto specificato dal primo operando.|  
 |**-=**|Sottrae il valore del secondo operando dal valore del primo operando e memorizza il risultato nell'oggetto specificato dal primo operando.|  
 |**<\<=**|Esegue uno spostamento a sinistra del valore del primo operando di un numero di bit specificati dal valore del secondo operando e memorizza il risultato nell'oggetto specificato dal primo operando.|  
 |**>>=**|Esegue uno spostamento a destra del valore del primo operando di un numero di bit specificati dal valore del secondo operando e memorizza il risultato nell'oggetto specificato dal primo operando.|  
 |**&=**|Ottiene l'AND bit per bit del primo e del secondo operando e memorizza il risultato nell'oggetto specificato dal primo operando.|  
-|`^=`|Ottiene l'OR esclusivo bit per bit del primo e del secondo operando e memorizza il risultato nell'oggetto specificato dal primo operando.|  
-|`&#124;=`|Ottiene l'OR inclusivo bit per bit del primo e del secondo operando e memorizza il risultato nell'oggetto specificato dal primo operando.|
+|**^=**|Ottiene l'OR esclusivo bit per bit del primo e del secondo operando e memorizza il risultato nell'oggetto specificato dal primo operando.|  
+|**\|=**|Ottiene l'OR inclusivo bit per bit del primo e del secondo operando e memorizza il risultato nell'oggetto specificato dal primo operando.|
 |**&&=**| Operatore di assegnazione di spostamento (classe solo per i tipi). Se il secondo operando è un rvalue, spostare le risorse per il primo operando (senza copiarli). Vedere [spostare i costruttori e operatori di assegnazione di spostamento](move-constructors-and-move-assignment-operators-cpp.md) per altre informazioni.|
   
  **Parole chiave per gli operatori**  
@@ -91,8 +91,8 @@ Tutti gli operatori di assegnazione nella tabella riportata di seguito tranne la
 |Operatore|Equivalente|  
 |--------------|----------------|  
 |**&=**|`and_eq`|  
-|`&#124;=`|`or_eq`|  
-|`^=`|`xor_eq`|  
+|**\|=**|`or_eq`|  
+|**^=**|`xor_eq`|  
   
  Esistono due modi per accedere a queste parole chiave per operatori nei programmi: includere il file di intestazione `iso646.h`, o compilare il [/Za](../build/reference/za-ze-disable-language-extensions.md) l'opzione del compilatore (Disabilita estensioni linguaggio).  
   

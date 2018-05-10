@@ -1,29 +1,24 @@
 ---
 title: Confronto tra Runtime di concorrenza e altri modelli di concorrenza | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Concurrency Runtime, compared to other models
 ms.assetid: d8b9a1f4-f15f-43c3-a5b4-c0991edf9c86
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e20523eb8a2c78cfa72b6c3084e9ca9f620a916c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d3fa78ac5dbb5d3872c27db3c4ab3e8778fe1668
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="comparing-the-concurrency-runtime-to-other-concurrency-models"></a>Confronto tra runtime di concorrenza e altri modelli di concorrenza
 Questo documento descrive le differenze tra le funzionalità e i modelli di programmazione del runtime di concorrenza e quelli di altre tecnologie. È importante poter confrontare i vantaggi del runtime di concorrenza con quelli di altri modelli di programmazione per poter scegliere la tecnologia che meglio soddisfa i requisiti delle applicazioni in uso.  
@@ -44,7 +39,7 @@ Questo documento descrive le differenze tra le funzionalità e i modelli di prog
  I modelli di pianificazione di tipo preemptive e cooperativa rappresentano due modalità comuni che consentono a più attività di condividere risorse di elaborazione come, ad esempio, processori o thread di hardware.  
   
 ### <a name="preemptive-and-cooperative-scheduling"></a>Pianificazione di tipo preemptive e cooperativa  
- La*pianificazione di tipo preemptive* è un meccanismo round robin basato sulle priorità che concede a ogni attività l'accesso esclusivo a una risorsa di elaborazione per un periodo di tempo specificato, per poi passare a un'altra attività. La pianificazione di tipo preemptive è comune nei sistemi operativi multitasking come Windows*. La pianificazione cooperativa* è un meccanismo che concede a ogni attività l'accesso esclusivo a una risorsa di elaborazione finché l'attività non viene completata o non restituisce l'accesso alla risorsa. Il runtime di concorrenza usa la pianificazione cooperativa con l'utilità di pianificazione di tipo preemptive del sistema operativo per ottimizzare l'utilizzo delle risorse di elaborazione.  
+ La*pianificazione di tipo preemptive* è un meccanismo round robin basato sulle priorità che concede a ogni attività l'accesso esclusivo a una risorsa di elaborazione per un periodo di tempo specificato, per poi passare a un'altra attività. La pianificazione di tipo preemptive è comune nei sistemi operativi multitasking come Windows *. La pianificazione cooperativa* è un meccanismo che concede a ogni attività l'accesso esclusivo a una risorsa di elaborazione finché l'attività non viene completata o non restituisce l'accesso alla risorsa. Il runtime di concorrenza usa la pianificazione cooperativa con l'utilità di pianificazione di tipo preemptive del sistema operativo per ottimizzare l'utilizzo delle risorse di elaborazione.  
   
 ### <a name="differences-between-preemptive-and-cooperative-schedulers"></a>Differenze tra le utilità di pianificazione di tipo preemptive e cooperativa  
  Le utilità di pianificazione di tipo preemptive cercano di concedere a più thread lo stesso tipo di accesso alle risorse di elaborazione per garantire l'avanzamento di ogni thread. Nei computer con molte risorse di elaborazione, risulta meno problematico garantire lo stesso tipo di accesso, ma più problematico garantire un utilizzo efficiente delle risorse.  

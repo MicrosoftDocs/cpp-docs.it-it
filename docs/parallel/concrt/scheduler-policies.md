@@ -1,29 +1,24 @@
 ---
-title: "Criteri dell'utilità di pianificazione | Documenti Microsoft"
-ms.custom: 
+title: Criteri dell'utilità di pianificazione | Documenti Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - scheduler policies
 ms.assetid: 58fb68bd-4a57-40a8-807b-6edb6f083cd9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6c2e669a429bebbfde19f54200610819d0849d8f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7d9c855260df34290d01f1eeeee89e8bfe8988de
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="scheduler-policies"></a>Criteri dell'utilità di pianificazione
 Questo documento descrive il ruolo dei criteri dell'utilità di pianificazione nel Runtime di concorrenza. Oggetto *criteri dell'utilità di pianificazione* controlla la strategia utilizzata l'utilità di pianificazione quando gestisce le attività. Ad esempio, si consideri un'applicazione per cui viene richiesto che alcune attività vengano eseguite in corrispondenza di `THREAD_PRIORITY_NORMAL` e altre attività in corrispondenza di `THREAD_PRIORITY_HIGHEST`.  È possibile creare due istanze dell'utilità di pianificazione: una tramite cui viene specificato che i criteri `ContextPriority` devono essere `THREAD_PRIORITY_NORMAL` e un'altra tramite cui viene specificato che gli stessi criteri devono essere `THREAD_PRIORITY_HIGHEST`.  
@@ -48,11 +43,11 @@ Questo documento descrive il ruolo dei criteri dell'utilità di pianificazione n
 |`MinConcurrency`|Un `unsigned int` valore che specifica il numero minimo di risorse di concorrenza che utilizza l'utilità di pianificazione.|`1`|  
 |`TargetOversubscriptionFactor`|Un `unsigned int` valore che specifica il numero di thread da allocare per ogni risorsa di elaborazione.|`1`|  
 |`LocalContextCacheSize`|Un `unsigned int` valore che specifica il numero massimo di contesti che possono essere memorizzati nella cache nella coda locale di ogni processore virtuale.|`8`|  
-|`ContextStackSize`|Un `unsigned int` valore che specifica la dimensione dello stack, in kilobyte, da riservare per ogni contesto.|`0`(utilizzare la dimensione predefinita)|  
+|`ContextStackSize`|Un `unsigned int` valore che specifica la dimensione dello stack, in kilobyte, da riservare per ogni contesto.|`0` (usare la dimensione predefinita)|  
 |`ContextPriority`|Un `int` valore che specifica la priorità di thread di ogni contesto. Può trattarsi di qualsiasi valore che è possibile passare a [SetThreadPriority](http://msdn.microsoft.com/library/windows/desktop/ms686277) o `INHERIT_THREAD_PRIORITY`.|`THREAD_PRIORITY_NORMAL`|  
 
-|`SchedulingProtocol`| Oggetto [Concurrency:: SchedulingProtocolType](reference/concurrency-namespace-enums.md#schedulingprotocoltype) valore che specifica l'algoritmo di pianificazione da utilizzare. |`EnhanceScheduleGroupLocality`|  
-|`DynamicProgressFeedback`| Oggetto [Concurrency:: DynamicProgressFeedbackType](reference/concurrency-namespace-enums.md#dynamicprogressfeedbacktype) valore che specifica se ribilanciare le risorse in base alle informazioni di stato di avanzamento basato sulle statistiche.<br /><br /> **Nota** questo criterio non è impostato su `ProgressFeedbackDisabled` perché è riservato per l'utilizzo dal runtime. |`ProgressFeedbackEnabled`|  
+|`SchedulingProtocol`| Un [Concurrency:: SchedulingProtocolType](reference/concurrency-namespace-enums.md#schedulingprotocoltype) valore che specifica l'algoritmo di pianificazione da utilizzare. |`EnhanceScheduleGroupLocality`|  
+|`DynamicProgressFeedback`| Un [Concurrency:: DynamicProgressFeedbackType](reference/concurrency-namespace-enums.md#dynamicprogressfeedbacktype) valore che specifica se ribilanciare le risorse in base alle informazioni di stato di avanzamento basato sulle statistiche.<br /><br /> **Nota** questo criterio non è impostato su `ProgressFeedbackDisabled` perché è riservato per l'utilizzo dal runtime. |`ProgressFeedbackEnabled`|  
 
   
  Ogni utilità di pianificazione utilizza un proprio criterio durante la programmazione di attività. I criteri associati a un'utilità di pianificazione non influiscono sul comportamento di nessun'altra utilità di pianificazione. Inoltre, non è possibile modificare i criteri dell'utilità di pianificazione dopo aver creato il `Scheduler` oggetto.  

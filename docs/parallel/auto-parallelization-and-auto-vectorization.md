@@ -1,27 +1,22 @@
 ---
 title: Parallelizzazione automatica e vettorizzazione automatica | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-parallel
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: ec71583a-287b-4599-8767-1d255e080fe3
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1b458dbe06bd69817c659c3bfec1d1ab7a216d1f
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: 0b1ec19065647f78b4d9b2665003c0aa3a2795ba
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="auto-parallelization-and-auto-vectorization"></a>Parallelizzazione automatica e vettorizzazione automatica
 Le funzioni di parallelizzazione automatica e vettorizzazione automatica sono progettate per fornire miglioramenti automatici nelle prestazioni per i cicli nel codice.  
@@ -75,7 +70,7 @@ void test() {
   
  La compilazione con il seguente comando:  
   
- **CL d:\myproject\mylooptest.cpp /O2 /Qpar /Qpar-report: 1**  
+ **CL d:\myproject\mylooptest.cpp/O2 /Qpar /Qpar-report:1**  
   
  restituisce questo output:  
   
@@ -84,7 +79,7 @@ void test() {
   
  La compilazione con il seguente comando:  
   
- **CL d:\myproject\mylooptest.cpp /O2 /Qpar /Qpar-report: 2**  
+ **CL d:\myproject\mylooptest.cpp/O2 /Qpar /Qpar-report: 2**  
   
  restituisce questo output:  
   
@@ -92,7 +87,7 @@ void test() {
  **d:\myproject\mytest.cpp(4): ciclo parallelizzato**   
  **d:\myproject\mytest.cpp(4): ciclo non parallelizzato a causa del motivo '1008'**  
   
- Si noti la differenza tra i due diversi output [/qpar (parallelizzazione automatica Reporting livello)](../build/reference/qpar-report-auto-parallelizer-reporting-level.md) opzioni. **/Qpar-report: 1** vengono generati messaggi di parallelizzazione solo per i cicli correttamente parallelizzati. **/Qpar-report: 2** vengono generati messaggi di parallelizzazione per entrambe le parallelizzazioni dei cicli riusciti e non riuscite.  
+ Si noti la differenza tra i due diversi output [/qpar (parallelizzazione automatica Reporting livello)](../build/reference/qpar-report-auto-parallelizer-reporting-level.md) opzioni. **/Qpar-report:1** restituisce i messaggi di parallelizzazione solo per i cicli correttamente parallelizzati. **/Qpar-report:2** restituisce i messaggi di parallelizzazione per entrambe le parallelizzazioni ciclo esito positivo e negativo.  
   
  Per ulteriori informazioni su codici motivo e messaggi, vedere [messaggi di vettorizzazione e parallelizzazione](../error-messages/tool-errors/vectorizer-and-parallelizer-messages.md).  
   
@@ -117,7 +112,7 @@ for (int i = 0; i < 1000; ++i)
   
  Per ulteriori informazioni su codici motivo e messaggi, vedere [messaggi di vettorizzazione e parallelizzazione](../error-messages/tool-errors/vectorizer-and-parallelizer-messages.md).  
   
- Per un esempio che illustra come la vettorizzazione funziona in pratica, vedere [progetto Austin, parte 2 di 6: pagina Curling](http://blogs.msdn.com/b/vcblog/archive/2012/09/27/10348494.aspx)  
+ Per un esempio che illustra il funzionamento della vettorizzazione in pratica, vedere [progetto Austin, parte 2 di 6: pagina Curling](http://blogs.msdn.com/b/vcblog/archive/2012/09/27/10348494.aspx)  
   
 ## <a name="see-also"></a>Vedere anche  
  [ciclo](../preprocessor/loop.md)   

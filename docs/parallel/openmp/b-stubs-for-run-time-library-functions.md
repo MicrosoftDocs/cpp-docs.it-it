@@ -1,27 +1,22 @@
 ---
 title: B. Stub per le funzioni della libreria Run-time | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-parallel
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: fdfdabe0-f678-4551-80d5-827b62354427
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 733a7cacebfcad6702d471425de7b617a241884f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1207f943560fdc6a22c62a9a8deafa213400f172
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="b-stubs-for-run-time-library-functions"></a>B. Stub per le funzioni della libreria Run-time
 In questa sezione fornisce gli stub per le funzioni della libreria run-time definite nel OpenMP C e C++ API. Gli stub vengono forniti per consentire la portabilità tra piattaforme che non supportano le API C++ OpenMP C. Su queste piattaforme, i programmi OpenMP devono essere collegati con una libreria che contiene queste funzioni stub. Le funzioni stub si presuppongono che le direttive nel programma OpenMP vengono ignorate. Di conseguenza, queste emulano la semantica seriale.  

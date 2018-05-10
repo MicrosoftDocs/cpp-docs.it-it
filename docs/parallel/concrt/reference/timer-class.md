@@ -1,12 +1,9 @@
 ---
 title: Classe Timer | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - timer
@@ -27,17 +24,15 @@ dev_langs:
 helpviewer_keywords:
 - timer class
 ms.assetid: 4f4dea51-de9f-40f9-93f5-dd724c567b49
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b5263c8bf156f190ba5572eacd8ff327be5e3f7a
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 8372e32b408b97a6ac652b0ff2ff5cc19de69b54
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="timer-class"></a>Classe timer
 Un blocco della messaggistica `timer` è un `source_block` a destinazione singola in grado di inviare un messaggio alla sua destinazione dopo che è trascorso un determinato periodo di tempo oppure ad intervalli specifici.  
@@ -59,14 +54,14 @@ class timer : public Concurrency::details::_Timer, public source_block<single_li
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[timer](#ctor)|Di overload. Costruisce un `timer` blocco della messaggistica che genererà un messaggio specificato dopo un intervallo specificato.|  
+|[Timer](#ctor)|Di overload. Costruisce un `timer` blocco della messaggistica che genererà un messaggio specificato dopo un intervallo specificato.|  
 |[~ timer distruttore](#dtor)|Elimina definitivamente un `timer` blocco della messaggistica.|  
   
 ### <a name="public-methods"></a>Metodi pubblici  
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[pause](#pause)|Arresta il `timer` blocco della messaggistica. Se è ripetuta `timer` blocco della messaggistica, può essere riavviato con una successiva `start()` chiamare. Per non ripetuto timer, questo è lo stesso effetto di un `stop` chiamare.|  
+|[Sospendi](#pause)|Arresta il `timer` blocco della messaggistica. Se è ripetuta `timer` blocco della messaggistica, può essere riavviato con una successiva `start()` chiamare. Per non ripetuto timer, questo è lo stesso effetto di un `stop` chiamare.|  
 |[start](#start)|Avvia il `timer` blocco della messaggistica. Il numero specificato di millisecondi dopo la chiamata, il valore specificato verrà propagato a valle come un `message`.|  
 |[stop](#stop)|Arresta il `timer` blocco della messaggistica.|  
   
@@ -204,7 +199,7 @@ virtual void resume_propagation();
 void start();
 ```  
   
-##  <a name="stop"></a> stop 
+##  <a name="stop"></a> Arresta 
 
  Arresta il `timer` blocco della messaggistica.  
   
@@ -260,7 +255,7 @@ timer(
 ### <a name="remarks"></a>Note  
  Il runtime utilizza l'utilità di pianificazione predefinita se non si specifica il `_Scheduler` o `_ScheduleGroup` parametri.  
   
-##  <a name="dtor"></a> ~timer 
+##  <a name="dtor"></a> ~ timer 
 
  Elimina definitivamente un `timer` blocco della messaggistica.  
   

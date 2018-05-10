@@ -2,11 +2,8 @@
 title: Classe del contesto | Documenti Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - Context
@@ -29,17 +26,15 @@ dev_langs:
 helpviewer_keywords:
 - Context class
 ms.assetid: c0d553f3-961d-4ecd-9a29-4fa4351673b8
-caps.latest.revision: 20
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9195ec68a47e2ed528a42bb018cfba6316101a0c
-ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
+ms.openlocfilehash: 4bf574fc679b879e2fa9084ed6fbd4ed82e66f70
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="context-class"></a>Classe Context
 Rappresenta un'astrazione per un contesto di esecuzione.  
@@ -240,7 +235,7 @@ static unsigned int __cdecl ScheduleGroupId();
 ### <a name="return-value"></a>Valore restituito  
  Se il contesto corrente è connesso a un'utilità di pianificazione si lavora su un gruppo di pianificazione, un identificatore per l'utilità di pianificazione di gruppi e che il contesto corrente sta lavorando; in caso contrario, il valore `-1`.  
   
-##  <a name="unblock"></a> Unblock 
+##  <a name="unblock"></a> Sbloccare 
 
  Sblocca il contesto e fa sì che diventi eseguibile.  
   

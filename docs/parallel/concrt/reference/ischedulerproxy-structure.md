@@ -1,12 +1,9 @@
 ---
 title: Struttura ISchedulerProxy | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - ISchedulerProxy
@@ -22,17 +19,15 @@ dev_langs:
 helpviewer_keywords:
 - ISchedulerProxy structure
 ms.assetid: af416973-7a1c-4c30-aa3b-4161c2aaea54
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9fa2a67b432fac1dc7ec685e6563acb87fd69087
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 65198998666391763ef32a55cd12e86529e619ed
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="ischedulerproxy-structure"></a>Struttura ISchedulerProxy
 L'interfaccia mediante la quale le utilità di pianificazione comunicano con Gestione risorse del runtime di concorrenza per negoziare l'allocazione delle risorse.  
@@ -51,7 +46,7 @@ struct ISchedulerProxy;
 |----------|-----------------|  
 |[ISchedulerProxy::BindContext](#bindcontext)|Associa un contesto di esecuzione con un proxy del thread, se non è già associato a uno.|  
 |[ISchedulerProxy::CreateOversubscriber](#createoversubscriber)|Crea una nuova radice del processore virtuale nel thread di hardware, associato a una risorsa di esecuzione esistente.|  
-|[ISchedulerProxy::RequestInitialVirtualProcessors](#requestinitialvirtualprocessors)|Richiede un'allocazione iniziale di radici del processore virtuale. Ogni radice del processore virtuale rappresenta la possibilità di eseguire un thread che è possibile eseguire lavoro per l'utilità di pianificazione.|  
+|[ISchedulerProxy:: RequestInitialVirtualProcessors](#requestinitialvirtualprocessors)|Richiede un'allocazione iniziale di radici del processore virtuale. Ogni radice del processore virtuale rappresenta la possibilità di eseguire un thread che è possibile eseguire lavoro per l'utilità di pianificazione.|  
 |[ISchedulerProxy::Shutdown](#shutdown)|Notifica al gestore di risorse che l'utilità di pianificazione è in fase di chiusura. In questo modo, il gestore delle risorse per recuperare immediatamente tutte le risorse concesse all'utilità di pianificazione.|  
 |[ISchedulerProxy::SubscribeCurrentThread](#subscribecurrentthread)|Registra il thread corrente con Gestione risorse associandolo all'utilità di pianificazione.|  
 |[ISchedulerProxy::UnbindContext](#unbindcontext)|Rimuove l'associazione dal contesto di esecuzione specificato da un proxy del thread di `pContext` parametro e lo restituisce al pool libero della factory di proxy thread. Questo metodo può essere chiamato solo su un contesto di esecuzione che è stato associato tramite il [ISchedulerProxy:: BindContext](#bindcontext) (metodo) e non è ancora stato avviato tramite il `pContext` parametro di un [IThreadProxy:: SwitchTo ](ithreadproxy-structure.md#switchto) chiamata al metodo.|  
@@ -67,7 +62,7 @@ struct ISchedulerProxy;
   
  **Spazio dei nomi:** Concurrency  
   
-##  <a name="bindcontext"></a>  ISchedulerProxy::BindContext Method  
+##  <a name="bindcontext"></a>  Metodo ISchedulerProxy:: BindContext  
  Associa un contesto di esecuzione con un proxy del thread, se non è già associato a uno.  
   
 ```
@@ -158,7 +153,7 @@ virtual IExecutionResource* SubscribeCurrentThread() = 0;
   
  L'atto di sottoscrivere un thread aumenta il livello di sottoscrizione del thread di hardware sottostante da uno. Quando la sottoscrizione viene terminata, il livello di sottoscrizione viene ridotto di uno. Per ulteriori informazioni sui livelli di sottoscrizione, vedere [IExecutionResource:: CurrentSubscriptionLevel](iexecutionresource-structure.md#currentsubscriptionlevel).  
   
-##  <a name="unbindcontext"></a>  ISchedulerProxy::UnbindContext Method  
+##  <a name="unbindcontext"></a>  Metodo ISchedulerProxy:: UnbindContext  
  Rimuove l'associazione dal contesto di esecuzione specificato da un proxy del thread di `pContext` parametro e lo restituisce al pool libero della factory di proxy thread. Questo metodo può essere chiamato solo su un contesto di esecuzione che è stato associato tramite il [ISchedulerProxy:: BindContext](#bindcontext) (metodo) e non è ancora stato avviato tramite il `pContext` parametro di un [IThreadProxy:: SwitchTo ](ithreadproxy-structure.md#switchto) chiamata al metodo.  
   
 ```

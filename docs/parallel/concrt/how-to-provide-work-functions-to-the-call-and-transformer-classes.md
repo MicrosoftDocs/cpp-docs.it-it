@@ -1,13 +1,10 @@
 ---
 title: 'Procedura: fornire funzioni lavoro alle classi call e transformer | Documenti Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - using the transformer class [Concurrency Runtime]
 - using the call class [Concurrency Runtime]
 ms.assetid: df715ce4-8507-41ca-b204-636d11707a73
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 52ab28a015fa0312a5d064401451640c2747e9db
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ca7948a1258ac1b5193d379dd37f426360edc42e
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-to-provide-work-functions-to-the-call-and-transformer-classes"></a>Procedura: Fornire funzioni lavoro alle classi call e transformer
 Questo argomento vengono illustrate diverse modalità per fornire funzioni lavoro al [Concurrency:: Call](../../parallel/concrt/reference/call-class.md) e [Concurrency:: transformer](../../parallel/concrt/reference/transformer-class.md) classi.  
@@ -66,7 +61,7 @@ Questo argomento vengono illustrate diverse modalità per fornire funzioni lavor
 ## <a name="compiling-the-code"></a>Compilazione del codice  
  Copiare il codice di esempio e incollarlo in un progetto di Visual Studio oppure incollarlo in un file denominato `call.cpp` , quindi eseguire il comando seguente in una finestra del prompt dei comandi di Visual Studio.  
   
- **CL.exe /EHsc call.cpp**  
+ **CL.exe /EHsc Call. cpp**  
   
 ## <a name="see-also"></a>Vedere anche  
  [Libreria di agenti asincroni](../../parallel/concrt/asynchronous-agents-library.md)   

@@ -1,12 +1,9 @@
 ---
 title: Classe source_block | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - source_block
@@ -42,17 +39,15 @@ dev_langs:
 helpviewer_keywords:
 - source_block class
 ms.assetid: fbdd4146-e8d0-42e8-b714-fe633f69ffbf
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 61b79d716aa836c14e18d9c0ac20210526b7fd52
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 64b9873ef6da00b4ef0fb03e43f61fa704484389
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="sourceblock-class"></a>Classe source_block
 La classe `source_block` è una classe base astratta per blocchi di sola origine. La classe fornisce funzionalità di gestione dei collegamenti di base come controlli dell'errore comune.  
@@ -92,7 +87,7 @@ class source_block : public ISource<typename _TargetLinkRegistry::type::type>;
 |----------|-----------------|  
 |[accept](#accept)|Accetta un messaggio offerto da questo `source_block` oggetto, trasferire la proprietà al chiamante.|  
 |[acquire_ref](#acquire_ref)|Acquisisce un conteggio dei riferimenti su questo `source_block` oggetto, per evitare l'eliminazione.|  
-|[consume](#consume)|Utilizza un messaggio precedentemente offerto da questo `source_block` dell'oggetto e riservato correttamente dalla destinazione del trasferimento della proprietà al chiamante.|  
+|[Utilizzare](#consume)|Utilizza un messaggio precedentemente offerto da questo `source_block` dell'oggetto e riservato correttamente dalla destinazione del trasferimento della proprietà al chiamante.|  
 |[link_target](#link_target)|Un blocco di destinazione è collegato a questo `source_block` oggetto.|  
 |[release](#release)|Rilascia una prenotazione corretta del messaggio precedente.|  
 |[release_ref](#release_ref)|Rilascia un conteggio dei riferimenti su questo `source_block` oggetto.|  

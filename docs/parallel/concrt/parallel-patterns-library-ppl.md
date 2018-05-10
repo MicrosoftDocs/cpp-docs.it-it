@@ -1,29 +1,24 @@
 ---
 title: Parallel Patterns Library (PPL) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Parallel Patterns Library (PPL)
 ms.assetid: 40fd86b2-69fa-45e5-93d8-98a75636c242
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4a13acdf07e2f6055326aea2097cb923baa153a0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7263d764014fa3532c3234bd4c7a0d4f1ff8d3c3
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="parallel-patterns-library-ppl"></a>PPL (Parallel Patterns Library)
 La libreria PPL (Parallel Patterns Library) fornisce un modello di programmazione imperativa in grado di offrire scalabilità e semplicità per lo sviluppo di applicazioni simultanee. La libreria PPL si basa sulla pianificazione e sui componenti di gestione delle risorse del runtime di concorrenza. Innalza il livello di astrazione tra il codice dell'applicazione e il meccanismo di threading sottostante fornendo algoritmi generici indipendenti dai tipi e contenitori che agiscono sui dati in parallelo. La libreria PPL consente inoltre di sviluppare applicazioni adeguate fornendo alternative allo stato condiviso.  
@@ -34,7 +29,7 @@ La libreria PPL (Parallel Patterns Library) fornisce un modello di programmazion
   
 - *Gli algoritmi paralleli*: algoritmi generici che funzionano sul Runtime di concorrenza per agire su raccolte di dati in parallelo  
   
-- *Contenitori e oggetti paralleli*: i tipi di contenitore generici che forniscono l'accesso simultaneo sicuro ai relativi elementi  
+- *Contenitori e oggetti paralleli*: i tipi di contenitore generico che forniscono l'accesso simultaneo sicuro ai relativi elementi  
   
 ## <a name="example"></a>Esempio  
  La libreria PPL fornisce un modello di programmazione che è simile a libreria Standard C++. L'esempio seguente illustra molte funzionalità della libreria PPL. Vengono calcolati diversi numeri di Fibonacci in serie e in parallelo. Entrambi i calcoli agiscono su un [std:: Array](../../standard-library/array-class-stl.md) oggetto. L'esempio inoltre visualizza nella console il tempo necessario per eseguire entrambi i calcoli.  

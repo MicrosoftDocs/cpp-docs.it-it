@@ -1,12 +1,9 @@
 ---
 title: Classe concurrent_unordered_map | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - concurrent_unordered_map
@@ -23,17 +20,15 @@ dev_langs:
 helpviewer_keywords:
 - concurrent_unordered_map class
 ms.assetid: b2d879dd-87ef-4af9-a266-a5443fd538b8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d37feb147cc0604081479bfae0afca933c251bc8
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 932cfe232b07a9020af450ad33bb34101827ac79
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="concurrentunorderedmap-class"></a>Classe concurrent_unordered_map
 La classe `concurrent_unordered_map` è un contenitore indipendente dalla concorrenza che controlla una sequenza di lunghezza variabile di elementi di tipo `std::pair<const K, _Element_type>`. La sequenza viene rappresentata in un modo che abilita le operazioni di accodamento, accesso elementi, accesso iteratori e attraversamento iteratori in modo indipendente dalla concorrenza.  
@@ -119,7 +114,7 @@ template <typename K,
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[operator[]](#operator_at)|Di overload. Trova o inserisce un elemento con la chiave specificata. Questo metodo è indipendente dalla concorrenza.|  
+|[operator]](#operator_at)|Di overload. Trova o inserisce un elemento con la chiave specificata. Questo metodo è indipendente dalla concorrenza.|  
 |[operator=](#operator_eq)|Di overload. Assegna il contenuto di un altro `concurrent_unordered_map` questo oggetto. Questo metodo non è indipendente dalla concorrenza.|  
   
 ## <a name="remarks"></a>Note  
@@ -157,7 +152,7 @@ const mapped_type& at(const key_type& KVal) const;
 ### <a name="remarks"></a>Note  
  Se il valore della chiave dell'argomento non è presente, tramite la funzione viene generato un oggetto di classe `out_of_range`.  
   
-##  <a name="begin"></a> begin 
+##  <a name="begin"></a> Begin 
 
  Restituisce un iteratore che punta al primo elemento nel contenitore simultaneo. Questo metodo è concorrenza-safe.  
   
@@ -337,7 +332,7 @@ std::pair<const_iterator,
 ### <a name="remarks"></a>Note  
  È possibile per gli inserimenti simultanei a causa di altre chiavi deve essere inserito dopo l'iteratore begin e prima dell'iteratore di fine.  
   
-##  <a name="find"></a> find 
+##  <a name="find"></a> Trova 
 
  Trova un elemento che corrisponde a una chiave specificata. Questa funzione è concorrenza-safe.  
   
@@ -515,7 +510,7 @@ mapped_type& operator[](key_type&& kval);
   
  Quando si utilizza `operator[]` per inserire gli elementi, il riferimento restituito non indica se un inserimento modifica un elemento già esistente o ne crea uno nuovo. Le funzioni membro `find` e [inserire](#insert) può essere utilizzato per determinare se un elemento con una chiave specificata è già presente prima di un inserimento.  
   
-##  <a name="operator_eq"></a> operator = 
+##  <a name="operator_eq"></a> operator= 
 
  Assegna il contenuto di un altro `concurrent_unordered_map` questo oggetto. Questo metodo non è indipendente dalla concorrenza.  
   
@@ -566,7 +561,7 @@ size_type size() const;
 ### <a name="remarks"></a>Note  
  In presenza di operazioni di inserimento simultanee, il numero di elementi presenti nel contenitore simultaneo potrebbe cambiare immediatamente dopo la chiamata a questa funzione, prima che il valore restituito venga letto.  
   
-##  <a name="swap"></a> swap 
+##  <a name="swap"></a> Swap 
 
  Scambia il contenuto di due `concurrent_unordered_map` oggetti. Questo metodo non è indipendente dalla concorrenza.  
   

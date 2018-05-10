@@ -1,27 +1,22 @@
 ---
 title: A.13 utilizzando la direttiva di scaricamento con un elenco | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-parallel
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 6c9d0736-07c2-47b1-a216-5293f03b6397
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: da5a7f10abe03364e4de9bdd2bd0258ea8a5e1a1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9db8587f0f79b8f7b3fd367e633c83aa4b351058
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="a13---using-the-flush-directive-with-a-list"></a>A.13   Utilizzo della direttiva flush con un elenco
 L'esempio seguente usa il `flush` direttiva per la sincronizzazione da punto a punto di oggetti specifici tra coppie di thread:  

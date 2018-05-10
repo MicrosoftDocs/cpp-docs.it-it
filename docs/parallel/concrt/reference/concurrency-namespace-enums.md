@@ -1,10 +1,7 @@
 ---
 title: le enumerazioni dello spazio dei nomi Concurrency | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - CONCRT/concurrency::Agents_EventType
@@ -19,17 +16,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: a40e3b2d-ad21-4229-9880-2cfa84f7ab8f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: def29c9253071bb13b2c128a0e581c14328bfa4a
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 068aa89c10e92203ce0e826e3aaca101f4786cbb
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="concurrency-namespace-enums"></a>enumerazioni dello spazio dei nomi di concorrenza
 ||||  
@@ -62,7 +57,7 @@ enum agent_status;
 ### <a name="requirements"></a>Requisiti  
  **Intestazione:** concrt. h
 
-##  <a name="agents_eventtype"></a>  Agents_EventType Enumeration  
+##  <a name="agents_eventtype"></a>  Enumerazione Agents_EventType  
  Tipi di eventi che possono essere tracciati mediante la funzionalità di tracciatura offerta dalla libreria di agenti.  
   
 ```
@@ -85,7 +80,7 @@ enum Agents_EventType;
 ### <a name="requirements"></a>Requisiti  
  **Intestazione:** concrt. h
 
-##  <a name="concrt_eventtype"></a>  ConcRT_EventType Enumeration  
+##  <a name="concrt_eventtype"></a>  Enumerazione ConcRT_EventType  
  Tipi di eventi che possono essere tracciati mediante la funzionalità di tracciatura offerta dal runtime di concorrenza.  
   
 ```
@@ -108,7 +103,7 @@ enum ConcRT_EventType;
 ### <a name="requirements"></a>Requisiti  
  **Intestazione:** concrt **Namespace:** concorrenza
 
-##  <a name="concrt_traceflags"></a>  Concrt_TraceFlags Enumeration  
+##  <a name="concrt_traceflags"></a>  Enumerazione Concrt_TraceFlags  
  Flag di analisi per i tipi di evento  
   
 ```
@@ -129,7 +124,7 @@ enum Concrt_TraceFlags;
 ### <a name="requirements"></a>Requisiti  
  **Intestazione:** concrt. h
 
-##  <a name="criticalregiontype"></a>  CriticalRegionType Enumeration  
+##  <a name="criticalregiontype"></a>  Enumerazione CriticalRegionType  
  Tipo di area critica in cui si trova un contesto.  
   
 ```
@@ -146,7 +141,7 @@ enum CriticalRegionType;
 ### <a name="requirements"></a>Requisiti  
  **Intestazione:** concrtrm. h 
 
-##  <a name="dynamicprogressfeedbacktype"></a>  DynamicProgressFeedbackType Enumeration  
+##  <a name="dynamicprogressfeedbacktype"></a>  Enumerazione DynamicProgressFeedbackType  
  Usato dai criteri `DynamicProgressFeedback` per descrivere se le risorse per l'utilità di pianificazione saranno ribilanciate sulla base di informazioni statistiche raccolte dall'utilità di pianificazione o solo sulla base di processori virtuali che passano allo stato inattivo e viceversa tramite chiamate ai metodi `Activate` e `Deactivate` sull'interfaccia `IVirtualProcessorRoot`. Per ulteriori informazioni sui criteri dell'utilità di pianificazione disponibili, vedere [PolicyElementKey](concurrency-namespace-enums.md).  
   
 ```
@@ -174,7 +169,7 @@ enum join_type;
 ### <a name="requirements"></a>Requisiti  
  **Intestazione:** agents.h  
 
-##  <a name="message_status"></a>  message_status Enumeration  
+##  <a name="message_status"></a>  Enumerazione message_status  
  Risposte valide per un'offerta di un oggetto `message` a un blocco.  
   
 ```
@@ -234,7 +229,7 @@ enum SchedulerType;
 ### <a name="requirements"></a>Requisiti  
  **Intestazione:** concrt. h  
   
-##  <a name="schedulingprotocoltype"></a>  SchedulingProtocolType Enumeration  
+##  <a name="schedulingprotocoltype"></a>  Enumerazione SchedulingProtocolType  
  Usato dai criteri `SchedulingProtocol` per descrivere quale algoritmo di pianificazione sarà usato per l'utilità di pianificazione. Per ulteriori informazioni sui criteri dell'utilità di pianificazione disponibili, vedere [PolicyElementKey](concurrency-namespace-enums.md).  
   
 ```
@@ -250,7 +245,7 @@ enum SchedulingProtocolType;
 ### <a name="requirements"></a>Requisiti  
  **Intestazione:** concrt. h  
  
-##  <a name="switchingproxystate"></a>  SwitchingProxyState Enumeration  
+##  <a name="switchingproxystate"></a>  Enumerazione SwitchingProxyState  
  Usato per indicare lo stato in cui si trova un proxy del thread, quando è in esecuzione uno scambio di contesto cooperativo per un proxy del thread diverso.  
   
 ```
@@ -269,7 +264,7 @@ enum SwitchingProxyState;
   
  Per ulteriori informazioni sull'utilizzo di questo tipo, vedere [IThreadProxy:: SwitchTo](ithreadproxy-structure.md#switchto).  
   
-##  <a name="task_group_status"></a>  task_group_status Enumeration  
+##  <a name="task_group_status"></a>  Enumerazione task_group_status  
  Descrive lo stato di esecuzione di un oggetto `task_group` o `structured_task_group`. Un valore di questo tipo viene restituito da numerosi metodi che attendono attività pianificate a un gruppo di attività da completare.  
   
 ```

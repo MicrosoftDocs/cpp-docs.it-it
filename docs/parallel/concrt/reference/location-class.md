@@ -1,12 +1,9 @@
 ---
 title: Classe Location | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - location
@@ -19,17 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - location class
 ms.assetid: c3289f51-5bf1-4dff-a18d-d0dab8e5d9c7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 16362cb8cecff32db1802dd6dea187d047d59294
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: fdfb555375df4b9f791db25fa2dee47222f79063
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="location-class"></a>Classe location
 Un'astrazione di una posizione fisica sull'hardware.  
@@ -46,7 +41,7 @@ class location;
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[location](#ctor)|Di overload. Costruisce un oggetto `location`.|  
+|[Percorso](#ctor)|Di overload. Costruisce un oggetto `location`.|  
 |[~ percorso distruttore](#dtor)|Elimina un oggetto `location`.|  
   
 ### <a name="public-methods"></a>Metodi pubblici  
@@ -147,7 +142,7 @@ bool operator!= (const location& _Rhs) const;
 ### <a name="return-value"></a>Valore restituito  
  `true` se le due posizioni sono diverse; in caso contrario `false`.  
   
-##  <a name="operator_eq"></a> operator = 
+##  <a name="operator_eq"></a> operator= 
 
  Assegna il contenuto di un oggetto `location` differente a questo oggetto.  
   
@@ -161,7 +156,7 @@ location& operator= (const location& _Rhs);
   
 ### <a name="return-value"></a>Valore restituito  
   
-##  <a name="operator_eq_eq"></a> operatore = = 
+##  <a name="operator_eq_eq"></a> operator== 
 
  Determina se due `location` oggetti rappresentano lo stesso percorso.  
   

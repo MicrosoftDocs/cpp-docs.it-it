@@ -1,27 +1,22 @@
 ---
 title: 2.6.5 direttiva flush | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-parallel
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: a2ec5f74-9c37-424a-8376-47ab4a5829a2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7607070692941606b863be9248b2d69f093f3a13
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ad3b34195015f57955c5be685807ec43f0a8f8c6
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="265-flush-directive"></a>2.6.5 Direttiva flush
 Il **scaricamento** direttiva, esplicita o implicita, specifica un punto di sequenza "cross-thread" in corrispondenza del quale l'implementazione è necessario per assicurare che tutti i thread in un team dispongano di una visualizzazione coerenza di determinati oggetti (specificati di seguito) in memoria. Ciò significa che precedenti valutazioni delle espressioni che fanno riferimento a tali oggetti siano complete e le successive valutazioni non hanno ancora iniziato. Ad esempio, compilatori necessario ripristinare i valori degli oggetti da registri in memoria e hardware potrebbe essere necessario scaricare i buffer di scrittura per la memoria e ricaricare i valori degli oggetti dalla memoria.  
@@ -40,29 +35,29 @@ Il **scaricamento** direttiva, esplicita o implicita, specifica un punto di sequ
   
 -   In entrata e l'uscita da **critico**  
   
--   In entrata e l'uscita da`ordered`  
+-   In entrata e l'uscita da `ordered`  
   
--   In entrata e l'uscita da **parallela**  
+-   In entrata e l'uscita da **paralleli**  
   
 -   AT uscire da **per**  
   
--   Per chiudere at **sezioni**  
+-   AT uscire da **sezioni**  
   
--   Per chiudere at **singolo**  
+-   AT uscire da **singolo**  
   
 -   In entrata e l'uscita da **paralleli per**  
   
--   In entrata e l'uscita da **parallela sezioni**  
+-   In entrata e l'uscita da **paralleli sezioni**  
   
  La direttiva non è implicita, se un `nowait` clausola è presente. Si noti che il **scaricamento** direttiva non è implicita per qualsiasi delle operazioni seguenti:  
   
--   Voce di **per**  
+-   Voce per **per**  
   
--   Alla voce o Esci dal **master**  
+-   Voce da o Esci dal **master**  
   
--   Voce di **sezioni**  
+-   Voce per **sezioni**  
   
--   Voce di **singolo**  
+-   Voce a **singolo**  
   
  Un riferimento che accede al valore di un oggetto con un tipo qualificato volatile si comporta come se ci fosse un **scaricamento** direttiva specifica di tale oggetto al precedente punto di sequenza. Un riferimento che modifica il valore di un oggetto con un tipo qualificato volatile si comporta come se ci fosse un **scaricamento** direttiva specifica di tale oggetto al punto di sequenza successivo.  
   

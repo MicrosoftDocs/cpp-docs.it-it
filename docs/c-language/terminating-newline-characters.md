@@ -1,27 +1,22 @@
 ---
 title: Caratteri di nuova riga di terminazione | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 ms.assetid: ab145180-a098-41b5-8db0-2520272964ba
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4afc833717c05cd6470339a943c02132fa8a459f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 835b59a16927e447cbe462add99baf0c1fa9a241
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="terminating-newline-characters"></a>Termine caratteri di nuova riga
 **ANSI 4.9.2** Se è necessario che l'ultima riga di un flusso di testo termini con un carattere di nuova riga  

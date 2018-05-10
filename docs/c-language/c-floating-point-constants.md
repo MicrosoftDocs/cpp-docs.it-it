@@ -1,13 +1,10 @@
 ---
 title: Costanti C a virgola mobile | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - floating-point constants, about floating-point constants
 - double data type, floating-point constants
 ms.assetid: e1bd9b44-d6ab-470c-93e5-07142c7a2062
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 67883acbb2a6d5c0df075c47b7eda0d40a568f38
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3608e40db2aa3eb0c49942de278c1d428e26689f
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="c-floating-point-constants"></a>Costanti C a virgola mobile
 Una costante a virgola mobile è un numero decimale che rappresenta un numero reale con segno. La rappresentazione di un numero reale con segno include una parte intera, una parte frazionaria e un esponente. Usare le costanti a virgola mobile per rappresentare valori a virgola mobile non modificabili.  

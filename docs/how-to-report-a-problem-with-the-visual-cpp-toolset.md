@@ -2,21 +2,19 @@
 title: Come segnalare un problema con il set di strumenti Visual C++ | Microsoft Docs
 ms.date: 1/11/2018
 ms.technology:
-- cpp
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-ide
+ms.topic: conceptual
 dev_langs:
 - C++
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fd7ba80e60251c56fd28a1c380d395e686fc27a4
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: e8be0a5e42caf12c4e1415cf88143b84a9971cd2
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-to-report-a-problem-with-the-visual-c-toolset"></a>Come segnalare un problema con il set di strumenti Visual C++
 
@@ -108,7 +106,7 @@ La procedura di riproduzione è un esempio di codice sorgente completo e indipen
 
 Una procedura di riproduzione esaustiva è:
 
-- **Minima.** È necessario che le procedure di riproduzione siano minime, ma devono comunque illustrare esattamente il problema riscontrato. Le procedure di riproduzione non devono essere complesse o realistiche. Devono illustrare solo il codice conforme allo standard o l'implementazione del compilatore documentata oppure, nel caso di mancanza di diagnostica, il codice non conforme. Sono preferibili procedure di riproduzione semplici e pertinenti, che contengono codice sufficiente a illustrare il problema. Se possibile, eliminare o semplificare il codice rimanendo conformi e lasciando inalterato il problema. Non è necessario includere esempi contatore di codice funzionante. 
+- **Minima.** È necessario che le procedure di riproduzione siano minime, ma devono comunque illustrare esattamente il problema riscontrato. Le procedure di riproduzione non devono essere complesse o realistiche. Devono illustrare solo il codice conforme allo standard o l'implementazione del compilatore documentata oppure, nel caso di mancanza di diagnostica, il codice non conforme. Sono preferibili procedure di riproduzione semplici e pertinenti, che contengono codice sufficiente a illustrare il problema. Se possibile, eliminare o semplificare il codice rimanendo conformi e lasciando inalterato il problema. Non è necessario includere esempi contatore di codice funzionante.
 
 - **Indipendente.** È consigliabile non includere nelle procedure di riproduzione dipendenze non necessarie. Se possibile, riprodurre il problema senza usare librerie di terzi. Se possibile, riprodurre il problema senza usare codice di libreria oltre alle semplici istruzioni di output. Usare ad esempio `puts("this shouldn't compile");`, `std::cout << value;`e `printf("%d\n", value);`. È preferibile ridurre l'esempio a un singolo file di codice sorgente senza riferimento a intestazioni utente. È molto utile ridurre la quantità di codice da analizzare come possibile responsabile del problema.
 
@@ -116,13 +114,13 @@ Una procedura di riproduzione esaustiva è:
 
 - **Confronto con altri compilatori**, se pertinente. Le procedure di riproduzione che contengono codice C++ portabile devono verificare il comportamento confrontandolo con altri compilatori se possibile. Alla fine è lo standard a determinare se il programma è corretto. Non esistono compilatori perfetti, ma quando Clang e GCC accettano il codice senza generare diagnostica e il compilatore MSVC non lo fa, è probabile che sia il compilatore Microsoft a contenere un bug. È anche possibile che vi siano differenze nel comportamento di Unix e Windows o livelli diversi di implementazione degli standard C++ e così via. Se invece tutti i compilatori rifiutano il codice, è probabile che il codice non sia corretto. Analizzare messaggi di errore diversi può aiutare l'utente a diagnosticare il problema.
 
-   In [Online C++ compilers](https://isocpp.org/blog/2013/01/online-c-compilers) (Compilatori C++ online) oppure in questo elenco dettagliato [List of Online C++ Compilers](https://arnemertz.github.io/online-compilers/) (Elenco di compilatori C++ online) in GitHub sono disponibili elenchi di compilatori online per testare e confrontare il codice. Alcuni esempi specifici sono [Wandbox](https://wandbox.org/), [Compiler Explorer](https://godbolt.org/) e [Coliru](http://coliru.stacked-crooked.com/). 
+   In [Online C++ compilers](https://isocpp.org/blog/2013/01/online-c-compilers) (Compilatori C++ online) oppure in questo elenco dettagliato [List of Online C++ Compilers](https://arnemertz.github.io/online-compilers/) (Elenco di compilatori C++ online) in GitHub sono disponibili elenchi di compilatori online per testare e confrontare il codice. Alcuni esempi specifici sono [Wandbox](https://wandbox.org/), [Compiler Explorer](https://godbolt.org/) e [Coliru](http://coliru.stacked-crooked.com/).
 
    > [!NOTE]
    > I siti Web dei compilatori online non sono associati a Microsoft. Molti di questi siti sono gestiti come progetti personali. È possibile che alcuni non siano disponibili quando si leggerà questo articolo. Tramite una ricerca è tuttavia possibile trovarne altri da usare.
 
 I problemi che riguardano compilatore, linker e librerie sono soliti manifestarsi in modi particolari. In base al tipo di problema riscontrato, è necessario scegliere il tipo di procedura di riproduzione da includere nel report. Senza una corretta procedura di riproduzione, è impossibile eseguire un'analisi. Di seguito sono elencati alcuni tipi di problemi riscontrabili e le istruzioni per la generazione dei tipi di procedura di riproduzione da usare per segnalare ogni singolo problema.
- 
+
 #### <a name="frontend-parser-crash"></a>Arresto anomalo del front-end (parser)
 
 Gli arresti anomali del front-end si verificano durante la fase di analisi del compilatore. In genere il compilatore crea l'[errore irreversibile C1001](error-messages/compiler-errors-1/fatal-error-c1001.md) e segnala il file del codice sorgente e il numero della riga in cui si è verificato l'errore. Viene spesso indicato un file msc1.cpp, dettaglio che può essere tuttavia tralasciato.

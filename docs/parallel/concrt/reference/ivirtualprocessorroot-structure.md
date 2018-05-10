@@ -1,12 +1,9 @@
 ---
 title: Struttura IVirtualProcessorRoot | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - IVirtualProcessorRoot
@@ -20,17 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - IVirtualProcessorRoot structure
 ms.assetid: 5ef371b8-9e4f-4fef-bb0d-49099693dd2b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a385bc12d3add9dd445243794135083c7cc1b3c1
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 9620ee391b525356bfdb50b00d7e76c03b480815
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="ivirtualprocessorroot-structure"></a>Struttura IVirtualProcessorRoot
 Un'astrazione per un thread hardware sulla quale un proxy del thread può eseguire.  
@@ -48,7 +43,7 @@ struct IVirtualProcessorRoot : public IExecutionResource;
 |Nome|Descrizione|  
 |----------|-----------------|  
 |[IVirtualProcessorRoot::Activate](#activate)|Fa sì che il proxy thread associato all'interfaccia di contesto di esecuzione `pContext` per avviare l'esecuzione in questa radice del processore virtuale.|  
-|[IVirtualProcessorRoot::Deactivate](#deactivate)|Fa sì che il proxy del thread attualmente in esecuzione in questa radice del processore virtuale per interrompere la distribuzione nel contesto di esecuzione. Il proxy thread verrà ripresa l'esecuzione in una chiamata al `Activate` metodo.|  
+|[IVirtualProcessorRoot:: Deactivate](#deactivate)|Fa sì che il proxy del thread attualmente in esecuzione in questa radice del processore virtuale per interrompere la distribuzione nel contesto di esecuzione. Il proxy thread verrà ripresa l'esecuzione in una chiamata al `Activate` metodo.|  
 |[IVirtualProcessorRoot::EnsureAllTasksVisible](#ensurealltasksvisible)|Fa sì che i dati archiviati nella gerarchia di memoria dei singoli processori per diventare visibile a tutti i processori nel sistema. Assicura che un limite di memoria completa è stata eseguita su tutti i processori prima il metodo restituisce.|  
 |[IVirtualProcessorRoot::GetId](#getid)|Restituisce un identificatore univoco per la radice del processore virtuale.|  
   

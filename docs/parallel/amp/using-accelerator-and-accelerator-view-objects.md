@@ -1,27 +1,22 @@
 ---
 title: Utilizzo degli oggetti accelerator e accelerator_view | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-amp
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 18f0dc66-8236-4420-9f46-1a14f2c3fba1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8cc676407a88979679a362b3d36f361614524432
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: 9e0f86467de8256eaecbfbf42765de551a1e2f6e
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="using-accelerator-and-acceleratorview-objects"></a>Utilizzo degli oggetti accelerator e accelerator_view
 È possibile utilizzare il [tasti di scelta rapida](../../parallel/amp/reference/accelerator-class.md) e [accelerator_view](../../parallel/amp/reference/accelerator-view-class.md) classi per specificare il dispositivo o l'emulatore per eseguire il codice C++ AMP. Un sistema potrebbe essere più dispositivi o gli emulatori che differiscono per quantità di memoria, supporto della memoria condivisa, il supporto del debug o il supporto e con precisione doppia. C++ Accelerated Massive Parallelism (C++ AMP) fornisce API che è possibile utilizzare per esaminare i tasti di scelta rapida disponibili, configurarne uno come impostazione predefinita, specificare più elementi accelerator_view per più chiamate a parallel_for_each ed eseguire attività di debug speciali.  
@@ -175,9 +170,9 @@ bool pick_accelerator()
 ## <a name="special-accelerators"></a>Tasti di scelta rapida speciali  
  I percorsi di dispositivo degli acceleratori speciali tre sono disponibili come proprietà della `accelerator` classe:  
   
-- [Membro dati Accelerator:: direct3d_ref](reference/accelerator-class.md#direct3d_ref): questo tasto di scelta rapida a thread singolo Usa il software di CPU per emulare una scheda grafica generico. Per impostazione predefinita viene utilizzato per il debug, ma non è utile nell'ambiente di produzione perché è più lento rispetto di acceleratori hardware. Inoltre, è disponibile solo in DirectX SDK e Windows SDK e non viene in genere essere installato nei computer dei clienti. Per ulteriori informazioni, vedere [debug del codice GPU](/visualstudio/debugger/debugging-gpu-code).  
+- [Membro dati Accelerator::direct3d_ref](reference/accelerator-class.md#direct3d_ref): questo tasto di scelta rapida a thread singolo Usa il software sulla CPU per emulare una scheda grafica generico. Per impostazione predefinita viene utilizzato per il debug, ma non è utile nell'ambiente di produzione perché è più lento rispetto di acceleratori hardware. Inoltre, è disponibile solo in DirectX SDK e Windows SDK e non viene in genere essere installato nei computer dei clienti. Per ulteriori informazioni, vedere [debug del codice GPU](/visualstudio/debugger/debugging-gpu-code).  
   
-- [Membro dati Accelerator:: direct3d_warp](reference/accelerator-class.md#direct3d_warp): questo tasto di scelta rapida fornisce una soluzione di fallback per l'esecuzione di codice C++ AMP nelle CPU multicore che utilizzano Streaming SIMD Extensions (SSE).  
+- [Membro dati Accelerator::direct3d_warp](reference/accelerator-class.md#direct3d_warp): questo tasto di scelta rapida fornisce una soluzione di fallback per l'esecuzione del codice C++ AMP nelle CPU multicore che utilizzano Streaming SIMD Extensions (SSE).  
   
 - [Membro dati Accelerator:: cpu_accelerator](reference/accelerator-class.md#cpu_accelerator): È possibile utilizzare questo tasto di scelta rapida per la configurazione di gestione temporanea di matrici. È possibile eseguire il codice C++ AMP. Per ulteriori informazioni, vedere il [matrici di gestione temporanea in C++ AMP](http://go.microsoft.com/fwlink/p/?linkId=248485) post nel codice nativo blog sulla programmazione parallela.  
   

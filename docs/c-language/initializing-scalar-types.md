@@ -1,13 +1,10 @@
 ---
 title: Inizializzazione di tipi scalari | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -21,24 +18,22 @@ helpviewer_keywords:
 - automatic storage class
 - types [C], initializing
 ms.assetid: 73c516f5-c3ad-4d56-ab3b-f2a82b621104
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e3863ea5a6edfd0c7bc605231182a8d5dfc17b9d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fef7356768a594694e0fcf3415c66ef63568a7cf
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="initializing-scalar-types"></a>Inizializzazione di tipi scalari
 Durante l'inizializzazione dei tipi scalari, il valore di *assignment-expression* viene assegnato alla variabile. Vengono applicate le regole di conversione per l'assegnazione. Per informazioni sulle regole di conversione, vedere [Conversione di tipi](../c-language/type-conversions-c.md).  
   
 ## <a name="syntax"></a>Sintassi  
  `declaration`:  
- *declaration-specifiers init-declarator-list* opt**;**  
+ *declaration-specifiers init-declarator-list* opt **;**  
   
  *declaration-specifiers*:  
  *storage-class-specifier declaration-specifiers* opt  

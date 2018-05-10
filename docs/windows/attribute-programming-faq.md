@@ -1,13 +1,10 @@
 ---
 title: Domande frequenti sulla programmazione dell'attributo | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,18 +12,16 @@ helpviewer_keywords:
 - attributes [C++], frequently asked questions
 - FAQs (frequently asked questions), attributed programming [C++]
 ms.assetid: a1b8349f-7f51-43c4-95ea-4edb6e5f243f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 76b7ad2c7acb9d232602c620a70cefabbecee531
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 35b57c8813778cf0bbf8efbfcbee8466074b87f0
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="attribute-programming-faq"></a>Domande frequenti sulla programmazione con attributi
 Questo argomento sono incluse le seguenti domande frequenti:  
@@ -35,21 +30,21 @@ Questo argomento sono incluse le seguenti domande frequenti:
   
 -   [Quando è necessario specificare il nome del parametro per un attributo?](#vcconattributeprogrammmingfaqanchor2)  
   
--   [È possibile utilizzare i commenti in un blocco di attributi?](#vcconattributeprogrammmingfaqanchor3)  
+-   [È possibile usare i commenti in un blocco di attributi](#vcconattributeprogrammmingfaqanchor3)  
   
 -   [Interagiscono di attributi con ereditarietà](#vcconattributeprogrammmingfaqanchor4)  
   
 -   [Come è possibile utilizzare gli attributi in un progetto ATL senza attributo?](#vcconattributeprogrammmingfaqanchor5)  
   
--   [Come è possibile utilizzare un file idl in un progetto con attributi?](#vcconattributeprogrammmingfaqanchor6)  
+-   [Come si possono usare un file con estensione idl in un progetto con attributo?](#vcconattributeprogrammmingfaqanchor6)  
   
 -   [È possibile modificare il codice che viene inserito da un attributo?](#vcconattributeprogrammmingfaqanchor7)  
   
--   [Come è possibile dichiarare in avanti un'interfaccia con attributi?](#vcconattributeprogrammmingfaqhowcaniforwarddeclareanattributedinterface)  
+-   [Come è possibile dichiarare rollforward un'interfaccia con attributi?](#vcconattributeprogrammmingfaqhowcaniforwarddeclareanattributedinterface)  
   
--   [È possibile utilizzare gli attributi in una classe derivata da una classe che utilizza attributi?](#vcconcaniuseattributesonclassderivedfromclassthatalsousesattributesanchor)  
+-   [È possibile utilizzare gli attributi in una classe derivata da una classe che utilizza anche attributi?](#vcconcaniuseattributesonclassderivedfromclassthatalsousesattributesanchor)  
   
-##  <a name="vcconattributeprogrammmingfaqanchor1"></a>Che cos'è un valore HRESULT?  
+##  <a name="vcconattributeprogrammmingfaqanchor1"></a> Che cos'è un valore HRESULT?  
  Un `HRESULT` è un tipo di dati semplici che viene spesso utilizzato come valore restituito da attributi e ATL in generale. Nella tabella seguente vengono descritti i diversi valori. Altri valori sono contenuti nel file Winerror. h file di intestazione.  
   
 |nome|Descrizione|Valore|  
@@ -66,7 +61,7 @@ Questo argomento sono incluse le seguenti domande frequenti:
 |E_FAIL|Errore non specificato|0x80004005|  
 |E_ACCESSDENIED|Accesso generale negato|0x80070005|  
   
-##  <a name="vcconattributeprogrammmingfaqanchor2"></a>Quando è necessario specificare il nome del parametro per un attributo?  
+##  <a name="vcconattributeprogrammmingfaqanchor2"></a> Quando è necessario specificare il nome del parametro per un attributo?  
  Nella maggior parte dei casi, se l'attributo ha un solo parametro, tale parametro è denominato. Questo nome non è obbligatorio quando si inserisce l'attributo nel codice. Ad esempio, la seguente sintassi del [aggregabile](../windows/aggregatable.md) attributo:  
   
 ```  
@@ -100,10 +95,10 @@ class CMyClass
 |[include](../windows/include-cpp.md)|[includelib](../windows/includelib-cpp.md)|[last_is](../windows/last-is.md)|  
 |[length_is](../windows/length-is.md)|[max_is](../windows/max-is.md)|[no_injected_text](../windows/no-injected-text.md)|  
 |[pointer_default](../windows/pointer-default.md)|[pragma](../windows/pragma.md)|[restricted](../windows/restricted.md)|  
-|[size_is](../windows/size-is.md)|[origine](../windows/source-cpp.md)|[switch_is](../windows/switch-is.md)|  
+|[size_is](../windows/size-is.md)|[Origine](../windows/source-cpp.md)|[switch_is](../windows/switch-is.md)|  
 |[switch_type](../windows/switch-type.md)|[transmit_as](../windows/transmit-as.md)|[wire_marshal](../windows/wire-marshal.md)|  
   
-##  <a name="vcconattributeprogrammmingfaqanchor3"></a>È possibile utilizzare i commenti in un blocco di attributi?  
+##  <a name="vcconattributeprogrammmingfaqanchor3"></a> È possibile usare i commenti in un blocco di attributi  
  È possibile utilizzare i commenti a riga singola sia su più righe all'interno di un blocco di attributi. Tuttavia, è possibile utilizzare due tipi di commento all'interno delle parentesi che contiene i parametri a un attributo.  
   
  È consentito:  
@@ -125,16 +120,16 @@ class CMyClass
 ]  
 ```  
   
-##  <a name="vcconattributeprogrammmingfaqanchor4"></a>Interagiscono di attributi con ereditarietà  
+##  <a name="vcconattributeprogrammmingfaqanchor4"></a> Interagiscono di attributi con ereditarietà  
  Da altre classi, che possono stessi essere attribuiti o non è possibile ereditare le classi con e senza Attribute. Il risultato di derivazione da una classe con attributa è quella della derivazione da tale classe dopo la trasformazione del codice con il provider di attributi. Gli attributi non vengono trasmessi alle classi derivate mediante l'ereditarietà di C++. Un provider di attributi Trasforma solo codice in prossimità dei relativi attributi.  
   
-##  <a name="vcconattributeprogrammmingfaqanchor5"></a>Come è possibile utilizzare gli attributi in un progetto ATL senza attributo?  
+##  <a name="vcconattributeprogrammmingfaqanchor5"></a> Come è possibile utilizzare gli attributi in un progetto ATL senza attributo?  
  È possibile un progetto ATL senza attributo, che dispone di un file IDL, e si consiglia di iniziare ad aggiungere oggetti con attributi. In questo caso, è possibile utilizzare l'aggiunta guidata classe per fornire il codice.  
   
-##  <a name="vcconattributeprogrammmingfaqanchor6"></a>Come è possibile utilizzare un file idl in un progetto con attributi?  
+##  <a name="vcconattributeprogrammmingfaqanchor6"></a> Come si possono usare un file con estensione idl in un progetto con attributo?  
  Potrebbe essere un file IDL che si desidera utilizzare nel progetto ATL con attributi. In questo caso, si utilizzerebbe il [importidl](../windows/importidl.md) , compilare il file idl in un file con estensione h (vedere il [pagine delle proprietà MIDL](../ide/midl-property-pages.md) nella finestra di dialogo Pagine delle proprietà del progetto) e quindi includere file h nel progetto .  
   
-##  <a name="vcconattributeprogrammmingfaqanchor7"></a>È possibile modificare il codice che viene inserito da un attributo?  
+##  <a name="vcconattributeprogrammmingfaqanchor7"></a> È possibile modificare il codice che viene inserito da un attributo?  
  Alcuni attributi di inseriscono il codice nel progetto. È possibile visualizzare il codice inserito utilizzando il [/Fx](../build/reference/fx-merge-injected-code.md) l'opzione del compilatore. È inoltre possibile copiare il file inserito codice e incollarlo nel codice sorgente. Ciò consente di modificare il comportamento dell'attributo. Tuttavia, è possibile modificare altre parti del codice anche.  
   
  L'esempio seguente è il risultato di copiare il codice inserito in un file di codice sorgente:  
@@ -257,10 +252,10 @@ public:
 int main() {}  
 ```  
   
-##  <a name="vcconattributeprogrammmingfaqhowcaniforwarddeclareanattributedinterface"></a>Come è possibile dichiarare in avanti un'interfaccia con attributi?  
+##  <a name="vcconattributeprogrammmingfaqhowcaniforwarddeclareanattributedinterface"></a> Come è possibile dichiarare rollforward un'interfaccia con attributi?  
  Se si desidera effettuare una dichiarazione con prototipo di un'interfaccia con attributa, è necessario applicare gli stessi attributi per la dichiarazione con prototipo applicabili alla dichiarazione di interfaccia effettivo. È inoltre necessario applicare il [esportare](../windows/export.md) attributo per la dichiarazione con prototipo.  
   
-##  <a name="vcconcaniuseattributesonclassderivedfromclassthatalsousesattributesanchor"></a>È possibile utilizzare gli attributi in una classe derivata da una classe che utilizza attributi?  
+##  <a name="vcconcaniuseattributesonclassderivedfromclassthatalsousesattributesanchor"></a> È possibile utilizzare gli attributi in una classe derivata da una classe che utilizza anche attributi?  
  No, l'utilizzo degli attributi in una classe derivata da una classe che utilizza gli attributi non è supportata.  
   
 ## <a name="see-also"></a>Vedere anche  

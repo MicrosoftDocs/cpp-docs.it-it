@@ -1,12 +1,9 @@
 ---
 title: Classe concurrent_unordered_set | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - concurrent_unordered_set
@@ -22,17 +19,15 @@ dev_langs:
 helpviewer_keywords:
 - concurrent_unordered_set class
 ms.assetid: c61f9a9a-4fd9-491a-9251-e300737ecf4b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 223a34c3cbc651f933b4ee7421030077ba8f878c
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: fd73b16725cfe4b30734673bb926d104af0d3264
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="concurrentunorderedset-class"></a>Classe concurrent_unordered_set
 La `concurrent_unordered_set` classe è un contenitore indipendente dalla concorrenza che controlla una sequenza di lunghezza variabile di elementi di tipo K. La sequenza viene rappresentata in modo indipendente dalla concorrenza accodamento, accesso agli elementi, accesso iteratori e operazioni traversali di iterazione.  
@@ -126,7 +121,7 @@ template <typename K,
   
  **Spazio dei nomi:** Concurrency  
   
-##  <a name="begin"></a> begin 
+##  <a name="begin"></a> Begin 
 
  Restituisce un iteratore che punta al primo elemento nel contenitore simultaneo. Questo metodo è concorrenza-safe.  
   
@@ -302,7 +297,7 @@ std::pair<const_iterator,
 ### <a name="remarks"></a>Note  
  È possibile per gli inserimenti simultanei a causa di altre chiavi deve essere inserito dopo l'iteratore begin e prima dell'iteratore di fine.  
   
-##  <a name="find"></a> find 
+##  <a name="find"></a> Trova 
 
  Trova un elemento che corrisponde a una chiave specificata. Questa funzione è concorrenza-safe.  
   
@@ -454,7 +449,7 @@ size_type max_size() const;
 ### <a name="remarks"></a>Note  
  Questo valore limite superiore effettivamente può essere superiore a ciò che effettivamente può contenere il contenitore.  
   
-##  <a name="operator_eq"></a> operator = 
+##  <a name="operator_eq"></a> operator= 
 
  Assegna il contenuto di un altro `concurrent_unordered_set` questo oggetto. Questo metodo non è indipendente dalla concorrenza.  
   
@@ -505,7 +500,7 @@ size_type size() const;
 ### <a name="remarks"></a>Note  
  In presenza di operazioni di inserimento simultanee, il numero di elementi presenti nel contenitore simultaneo potrebbe cambiare immediatamente dopo la chiamata a questa funzione, prima che il valore restituito venga letto.  
   
-##  <a name="swap"></a> swap 
+##  <a name="swap"></a> Swap 
 
  Scambia il contenuto di due `concurrent_unordered_set` oggetti. Questo metodo non è indipendente dalla concorrenza.  
   

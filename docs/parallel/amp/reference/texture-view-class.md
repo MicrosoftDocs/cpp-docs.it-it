@@ -1,12 +1,9 @@
 ---
 title: Classe texture_view | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-amp
 ms.topic: reference
 f1_keywords:
 - texture_view
@@ -23,17 +20,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 6ec2e289-1626-4727-9592-07981cf1d27d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 72f88cc10da623cbda4f3426596fe07650bf4b46
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 3db02d9cafb87c0f173546687ad01390e09b9f68
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="textureview-class"></a>Classe texture_view
 Fornisce accesso in lettura e scrittura su una trama. `texture_view` può essere utilizzato solo per leggere le trame con tipo di valore `int`, `unsigned int`, o `float` con bpse 32-bit predefinito. Per leggere altri formati di trama, utilizzare `texture_view<const value_type, _Rank>`.  
@@ -94,7 +89,7 @@ class texture_view<const value_type, _Rank>
 |Nome|Descrizione|  
 |----------|-----------------|  
 |[operator()](#operator_call)|Di overload. Ottiene il valore dell'elemento in base all'indice.|  
-|[operator[]](#operator_at)|Di overload. Ottiene il valore dell'elemento in base all'indice.|  
+|[operator]](#operator_at)|Di overload. Ottiene il valore dell'elemento in base all'indice.|  
 |[operator=](#operator_eq)|Di overload. Operatore di assegnazione.|  
   
 ### <a name="public-data-members"></a>Membri dati pubblici  
@@ -113,7 +108,7 @@ class texture_view<const value_type, _Rank>
   
  **Namespace:** Concurrency:: Graphics  
   
-##  <a name="dtor"></a> ~texture_view 
+##  <a name="dtor"></a> ~ texture_view 
 
  Elimina definitivamente il `texture_view` istanza.  
   
@@ -327,7 +322,7 @@ value_type get(
 ### <a name="return-value"></a>Valore restituito  
  Valore dell'elemento.  
   
-##  <a name="operator_eq"></a> operator = 
+##  <a name="operator_eq"></a> operator= 
 
  Assegna una vista della trama stessa specificato `texture_view` a questo `texture_view` istanza.  
   

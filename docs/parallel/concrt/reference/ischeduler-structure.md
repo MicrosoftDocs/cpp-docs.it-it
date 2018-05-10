@@ -1,12 +1,9 @@
 ---
 title: Struttura IScheduler | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - IScheduler
@@ -23,17 +20,15 @@ dev_langs:
 helpviewer_keywords:
 - IScheduler structure
 ms.assetid: 471de85a-2b1a-4b6d-ab81-2eff2737161e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0a9a90a1d02090971ccb689204492b949f72323a
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 9c78d02ccd5639369ad8b4d0183458da2ba85269
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="ischeduler-structure"></a>Struttura IScheduler
 Un'interfaccia a un'astrazione di un'utilità di pianificazione del lavoro. Gestione risorse del runtime di concorrenza usa tale interfaccia per comunicare con le utilità di pianificazione del lavoro.  
@@ -51,7 +46,7 @@ struct IScheduler;
 |Nome|Descrizione|  
 |----------|-----------------|  
 |[IScheduler:: AddVirtualProcessors](#addvirtualprocessors)|Fornisce un'utilità di pianificazione con un insieme di radici del processore virtuale per l'uso. Ogni `IVirtualProcessorRoot` interfaccia rappresenta il diritto di eseguire un solo thread che può operare per conto di utilità di pianificazione.|  
-|[IScheduler::GetId](#getid)|Restituisce un identificatore univoco per l'utilità di pianificazione.|  
+|[IScheduler:: GetID](#getid)|Restituisce un identificatore univoco per l'utilità di pianificazione.|  
 |[IScheduler::GetPolicy](#getpolicy)|Restituisce una copia dei criteri dell'utilità di pianificazione. Per ulteriori informazioni sui criteri dell'utilità di pianificazione, vedere [SchedulerPolicy](schedulerpolicy-class.md).|  
 |[IScheduler:: NotifyResourcesExternallyBusy](#notifyresourcesexternallybusy)|Invia una notifica di questa utilità di pianificazione thread di hardware rappresentati dal set di radici del processore virtuale nella matrice `ppVirtualProcessorRoots` vengono ora utilizzati da altre utilità di pianificazione.|  
 |[IScheduler:: NotifyResourcesExternallyIdle](#notifyresourcesexternallyidle)|Invia una notifica di questa utilità di pianificazione thread di hardware rappresentati dal set di radici del processore virtuale nella matrice `ppVirtualProcessorRoots` non vengono utilizzati da altre utilità di pianificazione.|  

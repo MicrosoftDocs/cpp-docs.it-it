@@ -1,13 +1,10 @@
 ---
 title: Procedure consigliate in Parallel Patterns Library | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - best practices, Parallel Patterns Library
 - Parallel Patterns Library, best practices
 ms.assetid: e43e0304-4d54-4bd8-a3b3-b8673559a9d7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 40629b25ebcc954ac19389fbc0abb3aef6e9374a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6ce3a4745b52c518484d14eafd483625eed2a0da
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="best-practices-in-the-parallel-patterns-library"></a>Procedure consigliate nella libreria PPL (Parallel Patterns Library)
 In questo documento viene descritto come ottimizzare l'uso della libreria PPL (Parallel Patterns Library). In tale libreria sono disponibili contenitori, oggetti e algoritmi di uso generale che consentono di eseguire un parallelismo accurato.  
@@ -42,9 +37,9 @@ In questo documento viene descritto come ottimizzare l'uso della libreria PPL (P
   
 - [Usare parallel_invoke per la risoluzione dei problemi di Divide et impera](#divide-and-conquer)  
   
-- [Usare l'annullamento o eccezioni per interrompere un ciclo Parallel](#breaking-loops)  
+- [Usare l'annullamento o gestione delle eccezioni per interrompere un ciclo Parallel](#breaking-loops)  
   
-- [Comprendere influenza eliminazione degli oggetti da parte di annullamento e la gestione delle eccezioni](#object-destruction)  
+- [Comprendere come annullamento e la gestione delle eccezioni influiscono sull'eliminazione degli oggetti](#object-destruction)  
   
 - [Non eseguire ripetutamente blocchi in un ciclo parallelo](#repeated-blocking)  
   
@@ -54,9 +49,9 @@ In questo documento viene descritto come ottimizzare l'uso della libreria PPL (P
   
 - [Se possibile, evitare la falsa condivisione](#false-sharing)  
   
-- [Assicurarsi che le variabili siano valide per tutta la durata di un'attività](#lifetime)  
+- [Assicurarsi che le variabili siano valide per l'intera durata di un'attività](#lifetime)  
   
-##  <a name="small-loops"></a>Non parallelizzare corpi di ciclo di dimensioni ridotte  
+##  <a name="small-loops"></a> Non parallelizzare corpi di ciclo di dimensioni ridotte  
  La parallelizzazione di corpi di ciclo di dimensioni relativamente ridotte può determinare un sovraccarico della pianificazione associata che annulla i vantaggi derivanti dall'elaborazione in parallelo. Si consideri l'esempio seguente, in cui ogni coppia di elementi viene aggiunta in due matrici.  
   
  [!code-cpp[concrt-small-loops#1](../../parallel/concrt/codesnippet/cpp/best-practices-in-the-parallel-patterns-library_1.cpp)]  
@@ -65,7 +60,7 @@ In questo documento viene descritto come ottimizzare l'uso della libreria PPL (P
   
  [[Torna all'inizio](#top)]  
   
-##  <a name="highest"></a>Parallelismo rapido al massimo livello possibile  
+##  <a name="highest"></a> Parallelismo rapido al massimo livello possibile  
  Quando il codice viene parallelizzato solo a un livello basso, è possibile introdurre un costrutto fork-join che non viene ridimensionato con l'aumento del numero di processori. Oggetto *fork-join* costrutto è un costrutto in cui un'attività suddivisione del lavoro sottoattività parallele più piccole e attende il completamento. Ciascuna sottoattività può a sua volta essere suddivisa in modo ricorsivo in ulteriori sottoattività.  
   
  Sebbene il modello fork-join possa risultare utile per risolvere vari problemi, in alcune situazioni il sovraccarico della sincronizzazione può diminuire la scalabilità. Si consideri, ad esempio, il codice seriale seguente che elabora i dati di immagine.  
@@ -92,7 +87,7 @@ In questo documento viene descritto come ottimizzare l'uso della libreria PPL (P
   
  [[Torna all'inizio](#top)]  
   
-##  <a name="divide-and-conquer"></a>Usare parallel_invoke per la risoluzione dei problemi di Divide et impera  
+##  <a name="divide-and-conquer"></a> Usare parallel_invoke per la risoluzione dei problemi di Divide et impera  
 
  Oggetto *divide et impera* problema è una forma di costrutto fork-join che usa la ricorsione per suddividere un'attività in sottoattività. Oltre al [Concurrency:: task_group](reference/task-group-class.md) e [Concurrency:: structured_task_group](../../parallel/concrt/reference/structured-task-group-class.md) classi, è inoltre possibile utilizzare il [Concurrency:: parallel_invoke](reference/concurrency-namespace-functions.md#parallel_invoke) algoritmo risolvere i problemi divide et impera. L'algoritmo `parallel_invoke` ha una sintassi più concisa rispetto agli oggetti gruppo di attività ed è utile quando è presente un numero fisso di attività parallele.  
   
@@ -106,7 +101,7 @@ In questo documento viene descritto come ottimizzare l'uso della libreria PPL (P
   
  [[Torna all'inizio](#top)]  
   
-##  <a name="breaking-loops"></a>Usare l'annullamento o eccezioni per interrompere un ciclo Parallel  
+##  <a name="breaking-loops"></a> Usare l'annullamento o gestione delle eccezioni per interrompere un ciclo Parallel  
  La libreria PPL fornisce due modi per annullare il lavoro parallelo che viene eseguito da un gruppo di attività o da un algoritmo parallelo. Un modo consiste nell'utilizzare il meccanismo di annullamento che viene eseguito il [Concurrency:: task_group](reference/task-group-class.md) e [Concurrency:: structured_task_group](../../parallel/concrt/reference/structured-task-group-class.md) classi. L'altro consiste nel generare un'eccezione nel corpo di una funzione lavoro dell'attività. Il meccanismo di annullamento è più efficace della gestione delle eccezioni per annullare un albero di lavoro parallelo. Oggetto *albero del lavoro parallelo* è un gruppo di gruppi di attività correlate in cui alcuni gruppi di attività sono inclusi altri gruppi di attività. Il meccanismo di annullamento annulla un gruppo di attività e i relativi gruppi di attività figlio dall'alto verso il basso. La gestione delle eccezioni funziona invece in ordine sequenziale dal basso verso l'alto e deve annullare ogni gruppo di attività figlio in modo indipendente in quanto l'eccezione si propaga verso l'alto.  
   
 
@@ -132,7 +127,7 @@ In questo documento viene descritto come ottimizzare l'uso della libreria PPL (P
   
  [[Torna all'inizio](#top)]  
   
-##  <a name="object-destruction"></a>Comprendere influenza eliminazione degli oggetti da parte di annullamento e la gestione delle eccezioni  
+##  <a name="object-destruction"></a> Comprendere come annullamento e la gestione delle eccezioni influiscono sull'eliminazione degli oggetti  
  In un albero di lavoro parallelo l'annullamento di un'attività impedisce l'esecuzione delle attività figlio. Ciò può comportare problemi se una delle attività figlio esegue un'operazione importante per l'applicazione, ad esempio liberare una risorsa. L'annullamento delle attività può inoltre provocare la propagazione di un'eccezione tramite un distruttore di oggetti e causare un comportamento non definito nell'applicazione.  
   
  Nell'esempio seguente la classe `Resource` descrive una risorsa e la classe `Container` descrive un contenitore che include le risorse. Nel rispettivo distruttore la classe `Container` chiama il metodo `cleanup` per due dei rispettivi membri `Resource` in parallelo, quindi chiama il metodo `cleanup` per il rispettivo terzo membro `Resource`.  
@@ -162,7 +157,7 @@ Container 1: Freeing resources...Exiting program...
   
  [[Torna all'inizio](#top)]  
   
-##  <a name="repeated-blocking"></a>Non eseguire ripetutamente blocchi in un ciclo parallelo  
+##  <a name="repeated-blocking"></a> Non eseguire ripetutamente blocchi in un ciclo parallelo  
 
  Un ciclo parallelo, ad esempio [Concurrency:: parallel_for](reference/concurrency-namespace-functions.md#parallel_for) o [Concurrency:: parallel_for_each](reference/concurrency-namespace-functions.md#parallel_for_each) dominato da operazioni di blocco operazioni possono causare il runtime crea numerosi thread in breve tempo.  
 
@@ -179,7 +174,7 @@ Container 1: Freeing resources...Exiting program...
   
  [[Torna all'inizio](#top)]  
   
-##  <a name="blocking"></a>Non eseguire operazioni di blocco quando si annulla il lavoro parallelo  
+##  <a name="blocking"></a> Non eseguire operazioni di blocco quando si annulla il lavoro parallelo  
 
  Quando possibile, eseguire le operazioni di blocco prima di chiamare il [concurrency::task_group::cancel](reference/task-group-class.md#cancel) o [structured_task_group](reference/structured-task-group-class.md#cancel) metodo per annullare un lavoro parallelo.  
 
@@ -203,7 +198,7 @@ Container 1: Freeing resources...Exiting program...
   
  [[Torna all'inizio](#top)]  
   
-##  <a name="shared-writes"></a>Non scrivere nei dati condivisi in un ciclo parallelo  
+##  <a name="shared-writes"></a> Non scrivere nei dati condivisi in un ciclo parallelo  
  Il Runtime di concorrenza fornisce diverse strutture di dati, ad esempio [Concurrency:: critical_section](../../parallel/concrt/reference/critical-section-class.md), che sincronizza l'accesso simultaneo ai dati condivisi. Queste strutture di dati sono utili in molti casi, ad esempio quando più attività richiedono raramente l'accesso condiviso a una risorsa.  
   
  Si consideri l'esempio seguente che utilizza il [Concurrency:: parallel_for_each](reference/concurrency-namespace-functions.md#parallel_for_each) algoritmo e un `critical_section` oggetto per calcolare il conteggio dei numeri primi in un [std:: Array](../../standard-library/array-class-stl.md) oggetto. Questo esempio non è scalabile poiché ogni thread deve attendere per accedere alla variabile condivisa `prime_sum`.  
@@ -224,7 +219,7 @@ Container 1: Freeing resources...Exiting program...
   
  [[Torna all'inizio](#top)]  
   
-##  <a name="false-sharing"></a>Se possibile, evitare la falsa condivisione  
+##  <a name="false-sharing"></a> Se possibile, evitare la falsa condivisione  
  *La falsa condivisione* si verifica quando più attività simultanee in esecuzione su processori separati scrivono nelle variabili che si trovano nella stessa riga della cache. Quando una sola attività scrive in una delle variabili, viene invalidata la riga della cache per entrambe le variabili. Ogni processore deve ricaricare la riga della cache ogni volta che questa viene invalidata. Pertanto, la falsa condivisione può compromettere le prestazioni nell'applicazione.  
   
  Nell'esempio di base seguente vengono illustrate due attività simultanee, ognuna delle quali incrementa una variabile di contatore condivisa.  
@@ -245,7 +240,7 @@ Container 1: Freeing resources...Exiting program...
   
  [[Torna all'inizio](#top)]  
   
-##  <a name="lifetime"></a>Assicurarsi che le variabili siano valide per tutta la durata di un'attività  
+##  <a name="lifetime"></a> Assicurarsi che le variabili siano valide per l'intera durata di un'attività  
  Quando si fornisce un'espressione lambda per un gruppo di attività o un algoritmo parallelo, la clausola di acquisizione specifica se il corpo dell'espressione lambda accede alle variabili nell'ambito di inclusione in base al valore o al riferimento. Quando si passano le variabili a un'espressione lambda in base al riferimento, è necessario garantire che tale variabile duri fino al completamento dell'attività.  
   
  Si consideri l'esempio seguente, che definisce la classe `object` e la funzione `perform_action`. La funzione `perform_action` crea una variabile `object` ed esegue una determinata azione su tale variabile in modo asincrono. Dal momento che non è sicuro che l'attività venga completata prima che la funzione `perform_action` restituisca un risultato, il programma si arresterà in modo anomalo o seguirà un comportamento non specificato se la variabile `object` viene eliminata durante l'esecuzione dell'attività.  

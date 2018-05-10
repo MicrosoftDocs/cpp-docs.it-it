@@ -1,13 +1,10 @@
 ---
 title: coclasse | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - vc-attr.coclass
 dev_langs:
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - coclass attribute
 ms.assetid: 42da6a10-3af9-4b43-9a1d-689d00b61eb3
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6bcae762c603f05ce11eae5d14eb2e182c666797
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5eb9c7e632151c039b76a0f389cd18c68c0740ab
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="coclass"></a>coclass
 Crea un oggetto COM, che è possibile implementare un'interfaccia COM.  
@@ -60,7 +55,7 @@ Crea un oggetto COM, che è possibile implementare un'interfaccia COM.
   
 -   [Classe CComCoClass](../atl/reference/ccomcoclass-class.md) fornisce il modello di factory e l'aggregazione di classe predefinito per l'oggetto.  
   
--   [Classe CComObjectRootEx](../atl/reference/ccomobjectrootex-class.md) dispone di un modello in base alla classe threading di modello specificata da di [threading](../windows/threading-cpp.md) attributo. Se il **threading** attributo non viene specificato, il valore predefinito di modello di threading è apartment.  
+-   [Classe CComObjectRootEx](../atl/reference/ccomobjectrootex-class.md) dispone di un modello in base alla classe threading di modello specificata dal [threading](../windows/threading-cpp.md) attributo. Se il **threading** attributo non viene specificato, il valore predefinito di modello di threading è apartment.  
   
 -   [IProvideClassInfo2Impl](../atl/reference/iprovideclassinfo2impl-class.md) se viene aggiunto il [noncreatable](../windows/noncreatable.md) attributo non viene specificato per l'oggetto di destinazione.  
   
@@ -68,15 +63,15 @@ Crea un oggetto COM, che è possibile implementare un'interfaccia COM.
   
  Il **coclasse** attributo sono disponibili le funzioni seguenti tramite il codice inserito, o nel caso di `GetObjectCLSID`, come metodo statico nella classe base `CComCoClass`:  
   
--   `UpdateRegistry`Registra la class factory della classe di destinazione.  
+-   `UpdateRegistry` Registra class factory della classe di destinazione.  
   
 -   `GetObjectCLSID`, correlata alla registrazione, può essere utilizzato anche per ottenere il CLSID della classe di destinazione.  
   
--   **GetObjectFriendlyName** per impostazione predefinita restituirà una stringa di formato "\<*nome classe di destinazione*> `Object`". Se questa funzione è già presente, non è aggiunto. Aggiungere questa funzione per la classe di destinazione per restituire un nome più descrittivo rispetto a quello generato automaticamente.  
+-   **GetObjectFriendlyName** per impostazione predefinita restituirà una stringa di formato "\<*il nome di classe di destinazione*> `Object`". Se questa funzione è già presente, non è aggiunto. Aggiungere questa funzione per la classe di destinazione per restituire un nome più descrittivo rispetto a quello generato automaticamente.  
   
--   **GetProgID**, correlata alla registrazione, che restituisce la stringa specificata con il [progid](../windows/progid.md) attributo.  
+-   **GetProgID**correlata alla registrazione, restituisce la stringa specificata con il [progid](../windows/progid.md) attributo.  
   
--   **GetVersionIndependentProgID** ha la stessa funzionalità come **GetProgID**, ma restituisce la stringa specificata con [vi_progid](../windows/vi-progid.md).  
+-   **GetVersionIndependentProgID** ha la stessa funzionalità **GetProgID**, ma viene restituita la stringa specificata con [vi_progid](../windows/vi-progid.md).  
   
  Le seguenti modifiche che sono correlate alla mappa COM, vengono apportate alla classe di destinazione:  
   
@@ -150,7 +145,7 @@ public:
 |**Si applica a**|**class**, `struct`|  
 |**Ripetibile**|No|  
 |**Attributi obbligatori**|Nessuna|  
-|**Attributi non validi**|nessuno|  
+|**Attributi non validi**|Nessuno|  
   
  Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](../windows/attribute-contexts.md).  
   

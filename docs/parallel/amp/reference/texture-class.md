@@ -1,12 +1,9 @@
 ---
 title: Classe texture | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-amp
 ms.topic: reference
 f1_keywords:
 - texture
@@ -26,17 +23,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 16e85d4d-e80a-474a-995d-8bf63fbdf34c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 822797fb04104b28cf72f8d8ea4291a5ad283d20
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: b16e449f3def7b4b86932e9806fa78d422466978
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="texture-class"></a>Classe texture
 Una trama è di tipo data aggregata su un `accelerator_view` nel dominio dell'extent. È una raccolta di variabili, uno per ogni elemento in un dominio di extent. Ogni variabile contiene un valore corrispondente al tipo primitivo di C++ ( `unsigned int`, `int`, `float`, `double`), un tipo scalare ( `norm`, o `unorm`), o un tipo short vector.  
@@ -88,7 +83,7 @@ class texture;
 |Nome|Descrizione|  
 |----------|-----------------|  
 |[operator()](#operator_call)|Restituisce il valore dell'elemento specificato dai parametri.|  
-|[operator[]](#operator_at)|Restituisce l'elemento in corrispondenza dell'indice specificato.|  
+|[operator]](#operator_at)|Restituisce l'elemento in corrispondenza dell'indice specificato.|  
 |[operator=](#operator_eq)|Copia l'oggetto specificato [trama](texture-class.md) questo oggetto.|  
   
 ### <a name="public-constants"></a>Costanti pubbliche  
@@ -150,7 +145,7 @@ void copy_to(writeonly_texture_view<value_type, _Rank>& _Dest) const;
  `value_type`  
  Tipo degli elementi nella trama.  
   
-##  <a name="data"></a> data 
+##  <a name="data"></a> Dati 
 
  Restituisce un puntatore di CPU per i dati non elaborati di questo tipo di trama.  
   
@@ -284,7 +279,7 @@ const value_type operator[] (int _I0) const restrict(amp);
 ### <a name="return-value"></a>Valore restituito  
  L'elemento in corrispondenza dell'indice specificato.  
   
-##  <a name="operator_eq"></a> operator = 
+##  <a name="operator_eq"></a> operator= 
 
  Copia l'oggetto specificato [trama](texture-class.md) questo oggetto.  
   

@@ -1,13 +1,10 @@
 ---
 title: Supporto per il set di caratteri Multibyte (MBCS) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - _mbcs
 dev_langs:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - multibyte characters [C++]
 - MBCS [C++]
 ms.assetid: b498733c-a1e1-45e3-8f26-d6da3cb5f2dd
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8c6c7bd1477f62e9c78b5e71dfe3723e804283d4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7b0381b570cbf9e900d44ac075876e63b6be14a8
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="support-for-multibyte-character-sets-mbcss"></a>Supporto per set di caratteri multibyte (MBCS, Multibyte Character Set)
 I set di caratteri multibyte (MBCS) rappresentano un approccio meno recente alla necessità di supportare i set di caratteri che, come quello giapponese o cinese, non possono essere rappresentati con un singolo byte. Se si sta effettuando un nuovo sviluppo, si consiglia di utilizzare il formato Unicode per tutte le stringhe di testo eccetto per le stringhe di sistema che, probabilmente, non sono visualizzate dagli utenti finali. Il formato MBCS è una tecnologia legacy e non è consigliabile per le nuove tecniche di sviluppo.  
@@ -47,7 +42,7 @@ I set di caratteri multibyte (MBCS) rappresentano un approccio meno recente alla
  I caratteri MBCS possono essere visualizzati in stringhe, ad esempio in nomi di file e directory.  
   
  Operazioni di modifica  
- Le operazioni di modifica nelle applicazioni MBCS devono intervenire sui caratteri e non sui byte. Il cursore non deve dividere un carattere, il tasto freccia DESTRA deve spostare il cursore a destra di un carattere e così via. **Eliminare** dovrebbe eliminare un carattere, **Annulla** deve reinserire.  
+ Le operazioni di modifica nelle applicazioni MBCS devono intervenire sui caratteri e non sui byte. Il cursore non deve dividere un carattere, il tasto freccia DESTRA deve spostare il cursore a destra di un carattere e così via. **Eliminare** dovrebbe eliminare un carattere, **Annullare** lo deve reinserire.  
   
  Gestione delle stringhe  
  In un'applicazione che usa MBCS la gestione delle stringhe pone problemi speciali. Poiché caratteri di entrambe le larghezze vengono combinati in un'unica stringa, è necessario ricordare di controllare i byte di apertura.  
@@ -75,7 +70,7 @@ I set di caratteri multibyte (MBCS) rappresentano un approccio meno recente alla
   
 -   [Visualizzare un riepilogo della programmazione MBCS](../text/mbcs-programming-tips.md)  
   
--   [Informazioni sulle mappature di testo generico per la portabilità della larghezza dei byte](../text/generic-text-mappings-in-tchar-h.md)  
+-   [Informazioni sulle mappature di testo generico per la portabilità della larghezza di byte](../text/generic-text-mappings-in-tchar-h.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Testo e stringhe](../text/text-and-strings-in-visual-cpp.md)   

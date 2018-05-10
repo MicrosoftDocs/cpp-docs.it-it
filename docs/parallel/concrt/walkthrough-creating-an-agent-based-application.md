@@ -1,30 +1,25 @@
 ---
-title: 'Procedura dettagliata: Creazione di un''applicazione basata su agente | Documenti Microsoft'
-ms.custom: 
+title: "Procedura dettagliata: Creazione di un'applicazione basata su agente | Documenti Microsoft"
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - asynchronous agents, creating
 - agent class, example
 ms.assetid: 730f42ce-6d58-4753-b948-fd9c9ef2ce6c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a49c8deb9185b024dfcca977ab229bf594e05101
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 78826bb9f00e77a80fb65dd3a3ceda7eedb38796
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="walkthrough-creating-an-agent-based-application"></a>Procedura dettagliata: Creazione di un'applicazione basata sugli agenti
 In questo argomento viene descritto come creare un'applicazione basata su agente base. In questa procedura dettagliata, è possibile creare un agente che legge i dati da un file di testo in modo asincrono. L'applicazione utilizza l'algoritmo di checksum Adler-32 per il calcolo del checksum del contenuto del file.  
@@ -43,13 +38,13 @@ In questo argomento viene descritto come creare un'applicazione basata su agente
 ##  <a name="top"></a> Sezioni  
  Questa procedura dettagliata viene illustrato come eseguire le attività seguenti:  
   
-- [Creazione dell'applicazione Console](#createapplication)  
+- [Creazione dell'applicazione console](#createapplication)  
   
 - [Creazione della classe file_reader](#createagentclass)  
   
 - [Utilizzo della classe file_reader nell'applicazione](#useagentclass)  
   
-##  <a name="createapplication"></a>Creazione dell'applicazione Console  
+##  <a name="createapplication"></a> Creazione dell'applicazione Console  
  In questa sezione viene illustrato come creare un'applicazione console Visual C++ che fa riferimento ai file di intestazione che verrà utilizzato il programma.  
   
 #### <a name="to-create-a-visual-c-application-by-using-the-win32-console-application-wizard"></a>Per creare un'applicazione Visual C++ tramite la creazione guidata applicazione Console Win32  
@@ -70,7 +65,7 @@ In questo argomento viene descritto come creare un'applicazione basata su agente
   
  [[Torna all'inizio](#top)]  
   
-##  <a name="createagentclass"></a>Creazione della classe file_reader  
+##  <a name="createagentclass"></a> Creazione della classe file_reader  
  In questa sezione viene illustrato come creare la `file_reader` classe. Il runtime Pianifica ogni agente per eseguire operazioni in un contesto specifico. Pertanto, è possibile creare un agente che esegue il lavoro in modo sincrono, ma che interagisce con altri componenti in modo asincrono. La `file_reader` classe legge i dati da un file di input specificato e invia i dati da tale file al componente di destinazione specificato.  
   
 #### <a name="to-create-the-filereader-class"></a>Per creare la classe file_reader  
@@ -120,7 +115,7 @@ Il `run` metodo apre il file e legge i dati da esso. Il `run` metodo utilizza la
   
  [[Torna all'inizio](#top)]  
   
-##  <a name="useagentclass"></a>Utilizzo della classe file_reader nell'applicazione  
+##  <a name="useagentclass"></a> Utilizzo della classe file_reader nell'applicazione  
  In questa sezione viene illustrato come utilizzare il `file_reader` per leggere il contenuto di un file di testo. Viene inoltre illustrato come creare un [Concurrency:: Call](../../parallel/concrt/reference/call-class.md) oggetto che riceve i dati del file e calcola il relativo checksum Adler-32.  
   
 #### <a name="to-use-the-filereader-class-in-your-application"></a>Per utilizzare la classe file_reader nell'applicazione  

@@ -1,27 +1,22 @@
 ---
 title: D. Utilizzando la clausola di pianificazione | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-parallel
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: bf3d8f51-ea05-4803-bf55-657c12e91efe
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b51eeb36a4cffafde0e90586fec08d28b9672e5d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8987c4505adfde8534d57346cd6725231efa022f
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="d-using-the-schedule-clause"></a>D. Utilizzando la clausola di pianificazione
 Un'area parallela ha almeno una barriera, alla fine, potrebbe essere ostacoli aggiuntivi all'interno di esso. In ogni barriera, gli altri membri del team devono attendere l'ultimo thread di arrivo. Per ridurre al minimo il tempo di attesa, lavoro condiviso deve essere distribuito in modo che tutti i thread arrivano alla barriera nello stesso momento. Se alcuni dei condivisi lavoro è contenuto **per** , costruisce il `schedule` clausola può essere utilizzata per questo scopo.  
@@ -84,7 +79,7 @@ for(i=0; i<n; i++) {
 }  
 ```  
   
- Ad esempio **dinamica**, **interattiva** pianificare garantisce che nessun thread rimane in attesa alla barriera più tempo servirebbe per eseguire l'iterazione finale di un altro thread o finale *k* iterazioni se una dimensione del blocco di *k* specificato. Tra tali pianificazioni, di **interattiva** pianificazione è caratterizzata dalla proprietà che richiede il minor numero di sincronizzazioni. Per le dimensioni del blocco *k*, un'implementazione tipica assegnerà *q = ceiling(n/p)* iterazioni per il primo thread disponibili, impostare  *n*  al più grande di *n-q* e *p\*k*e ripetere fino a quando non vengono assegnate tutte le iterazioni.  
+ Ad esempio **dinamica**, **interattiva** pianificare garantisce che nessun thread rimane in attesa alla barriera più tempo servirebbe per eseguire l'iterazione finale di un altro thread o finale *k* iterazioni se una dimensione del blocco di *k* specificato. Tra tali pianificazioni, di **interattiva** pianificazione è caratterizzata dalla proprietà che richiede il minor numero di sincronizzazioni. Per le dimensioni del blocco *k*, un'implementazione tipica assegnerà *q = ceiling(n/p)* iterazioni per il primo thread disponibili, impostare *n* sul valore più grande di *n-q* e *p\*k*e ripetere fino a quando non vengono assegnate tutte le iterazioni.  
   
  Quando non è più chiara come nel caso di questi esempi, la scelta della pianificazione ottimale di **runtime** pianificazione è utile per sperimentare diverse pianificazioni e le dimensioni di blocco senza dover modificare e ricompilare il programma. Inoltre, può rivelarsi utile se la pianificazione ottimale dipende (in qualche modo stimabile) dei dati di input a cui viene applicato il programma.  
   

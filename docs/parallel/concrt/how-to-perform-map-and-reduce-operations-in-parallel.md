@@ -1,13 +1,10 @@
 ---
 title: 'Procedura: eseguire mapping e riduzione delle operazioni in parallelo | Documenti Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - parallel map and reduce, example
 - parallel_reduce function, example
 ms.assetid: 9d19fac0-4ab6-4380-a375-3b18eeb87720
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 84e38dd845f3503512f48c19e226d56d9978cc21
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: cda761da013e966f91848fed01a4f96f5d373021
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-to-perform-map-and-reduce-operations-in-parallel"></a>Procedura: eseguire operazioni di mapping e riduzione in parallelo
 
@@ -41,7 +36,7 @@ In questo esempio viene illustrato come utilizzare il [Concurrency:: parallel_re
 ## <a name="compiling-the-code"></a>Compilazione del codice  
  Per compilare il codice, copiarlo e quindi incollarlo in un progetto di Visual Studio oppure incollarlo in un file denominato `parallel-map-reduce.cpp` , quindi eseguire il comando seguente in una finestra del prompt dei comandi di Visual Studio.  
   
- **CL.exe /EHsc parallelo-mappa-reduce.cpp**  
+ **CL.exe /EHsc parallelo-map-reduce. cpp**  
   
 ## <a name="robust-programming"></a>Programmazione efficiente  
  In questo esempio, è possibile usare la classe `concurrent_unordered_map`, definita in concurrent_unordered_map.h, per esegue le operazioni di mapping e di riduzione in un'unica operazione.  

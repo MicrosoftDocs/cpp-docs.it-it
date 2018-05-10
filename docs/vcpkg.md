@@ -9,17 +9,16 @@ ms.technology:
 - cpp-ide
 ms.tgt_pltfrm: windows
 ms.assetid: f50d459a-e18f-4b4e-814b-913e444cedd6
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 54d1f0cf2a6971435858a1a64bf3e163631822b5
-ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
+ms.openlocfilehash: c67b7fce0567c2c6daf18b625a2b759c31d0b040
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2018
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="vcpkg-c-package-manager-for-windows"></a>vcpkg: gestione pacchetti per C++ per Windows
 
@@ -31,7 +30,7 @@ Basta un unico comando per scaricare le origini e compilare una libreria. vcpkg 
 
 ## <a name="sources-not-binaries"></a>Origini e non file binari
 
-Per le librerie nel catalogo pubblico, vcpkg scarica origini anziché i file binari[1]. Queste origini vengono compilate con Visual Studio 2017 o Visual Studio 2015, se non è installata la versione 2017. In C++ è molto importante che tutte le librerie usate siano compilate con lo stesso compilatore e la stessa versione del compilatore del codice dell'applicazione che si collega a tali librerie. Con vcpkg è possibile evitare, o almeno ridurre notevolmente, il rischio di file binari non corrispondenti e i problemi correlati. In team che usano una versione specifica del compilatore Visual C++ come standard, un solo membro del team può usare vcpkg per scaricare le origini e compilare un set di file binari, quindi usare il comando di esportazione per comprimere i file binari e le intestazioni per gli altri membri del team. Per altre informazioni, vedere Esportare file binari compilati e intestazioni di seguito. 
+Per le librerie nel catalogo pubblico, vcpkg scarica origini anziché i file binari[1]. Queste origini vengono compilate con Visual Studio 2017 o Visual Studio 2015, se non è installata la versione 2017. In C++ è molto importante che tutte le librerie usate siano compilate con lo stesso compilatore e la stessa versione del compilatore del codice dell'applicazione che si collega a tali librerie. Con vcpkg è possibile evitare, o almeno ridurre notevolmente, il rischio di file binari non corrispondenti e i problemi correlati. In team che usano una versione specifica del compilatore Visual C++ come standard, un solo membro del team può usare vcpkg per scaricare le origini e compilare un set di file binari, quindi usare il comando di esportazione per comprimere i file binari e le intestazioni per gli altri membri del team. Per altre informazioni, vedere Esportare file binari compilati e intestazioni di seguito.
 
 Se si crea un clone di vcpkg con librerie private nella raccolta di port, è possibile aggiungere un port che scarica file binari precompilati e intestazioni, quindi scrivere un file portfile.cmake che copia semplicemente questi file nella posizione desiderata.
 
@@ -86,6 +85,7 @@ Additional packages (*) will be installed to complete this operation.
 ```
 
 ## <a name="list-the-libraries-already-installed"></a>Elencare le librerie già installate
+
 Dopo aver installato alcune librerie, è possibile usare **vcpkg list** per controllare quali sono disponibili:
 
 ```cmd
@@ -113,61 +113,63 @@ Eseguire **vcpkg integrate install** per configurare Visual Studio per individua
 
 Se è necessario usare una versione specifica di una libreria, diversa dalla versione nell'istanza attiva di vcpkg, eseguire questi passaggi:
 
-1. Creare un nuovo clone di vcpkg 
+1. Creare un nuovo clone di vcpkg
 1. Modificare il portfile per la libreria per ottenere la versione necessaria
 1. Eseguire **vcpkg install \<libreria>**.
 1. Usare **vcpkg integrate project** per creare un pacchetto NuGet che fa riferimento a tale libreria per progetti specifici.
 
 ## <a name="export-compiled-binaries-and-headers"></a>Esportare i file binari compilati e le intestazioni
 
-Richiedere a tutti i membri di un team di scaricare e compilare le librerie può non essere una soluzione efficiente. Un singolo membro del team può farsi carico di questo compito e quindi usare **vcpkg export** per creare un file ZIP con i file binari e le intestazioni, facilmente condivisibile con gli altri membri del team. 
+Richiedere a tutti i membri di un team di scaricare e compilare le librerie può non essere una soluzione efficiente. Un singolo membro del team può farsi carico di questo compito e quindi usare **vcpkg export** per creare un file ZIP con i file binari e le intestazioni, facilmente condivisibile con gli altri membri del team.
 
 ## <a name="updateupgrade-installed-libraries"></a>Aggiornare le librerie installate
 
 Il catalogo pubblico viene mantenuto aggiornato con le versioni più recenti delle librerie. Per determinare quali librerie locali non sono aggiornate, usare **vcpkg update**. Quando si è pronti per aggiornare la raccolta di port alla versione più recente del catalogo pubblico, eseguire il comando **vcpkg upgrade** per scaricare e ricompilare automaticamente una o tutte le librerie installate che non sono aggiornate.
 
-Per impostazione predefinita, il comando **upgrade** elenca solo le librerie che non sono aggiornate senza però aggiornarle. Per eseguire l'aggiornamento, usare l'opzione **--no-dry-run**. 
+Per impostazione predefinita, il comando **upgrade** elenca solo le librerie che non sono aggiornate senza però aggiornarle. Per eseguire l'aggiornamento, usare l'opzione **--no-dry-run**.
 
 ```cmd
-  vcpkg upgrade --no-dry-run 
+  vcpkg upgrade --no-dry-run
 ```
 
 ### <a name="upgrade-options"></a>Opzioni di aggiornamento
 
-- **--no-dry-run**: esegue l'aggiornamento; se omesso, il comando elenca solo i pacchetti non aggiornati. 
-- **--keep-going**: continua l'installazione di pacchetti, anche in caso di errore di uno di essi. 
-- **--triplet \<t>**: imposta la tripletta predefinita per i pacchetti non qualificati. 
-- **--vcpkg-root\<percorso>**: specifica la directory vcpkg da usare al posto della directory corrente o della directory dello strumento. 
+- **--no-dry-run**: esegue l'aggiornamento; se omesso, il comando elenca solo i pacchetti non aggiornati.
+- **--keep-going**: continua l'installazione di pacchetti, anche in caso di errore di uno di essi.
+- **--triplet \<t>**: imposta la tripletta predefinita per i pacchetti non qualificati.
+- **--vcpkg-root\<percorso>**: specifica la directory vcpkg da usare al posto della directory corrente o della directory dello strumento.
 
 ### <a name="upgrade-example"></a>Esempio di aggiornamento
 
 ### <a name="per-project"></a>Per progetto
+
 Se è necessario usare una versione specifica di una libreria, diversa dalla versione nell'istanza attiva di vcpkg, eseguire questi passaggi:
 
-1. Creare un nuovo clone di vcpkg 
+1. Creare un nuovo clone di vcpkg
 1. Modificare il portfile per la libreria per ottenere la versione necessaria
 1. Eseguire **vcpkg install \<libreria>**.
 1. Usare **vcpkg integrate project** per creare un pacchetto NuGet che fa riferimento a tale libreria per progetti specifici.
 
-
 ## <a name="export-compiled-binaries-and-headers"></a>Esportare i file binari compilati e le intestazioni
-Richiedere a tutti i membri di un team di scaricare e compilare le librerie può non essere una soluzione efficiente. Un singolo membro del team può farsi carico di questo compito e quindi usare **vcpkg export** per creare un file ZIP con i file binari e le intestazioni, facilmente condivisibile con gli altri membri del team. 
+
+Richiedere a tutti i membri di un team di scaricare e compilare le librerie può non essere una soluzione efficiente. Un singolo membro del team può farsi carico di questo compito e quindi usare **vcpkg export** per creare un file ZIP con i file binari e le intestazioni, facilmente condivisibile con gli altri membri del team.
 
 ## <a name="updateupgrade-installed-libraries"></a>Aggiornare le librerie installate
+
 Il catalogo pubblico viene mantenuto aggiornato con le versioni più recenti delle librerie. Per determinare quali librerie locali non sono aggiornate, usare **vcpkg update**. Quando si è pronti per aggiornare la raccolta di port alla versione più recente del catalogo pubblico, eseguire il comando **vcpkg upgrade** per scaricare e ricompilare automaticamente una o tutte le librerie installate che non sono aggiornate.
 
-Per impostazione predefinita, il comando **upgrade** elenca solo le librerie che non sono aggiornate senza però aggiornarle. Per eseguire l'aggiornamento, usare l'opzione **--no-dry-run**. 
+Per impostazione predefinita, il comando **upgrade** elenca solo le librerie che non sono aggiornate senza però aggiornarle. Per eseguire l'aggiornamento, usare l'opzione **--no-dry-run**.
 
 ```cmd
-  vcpkg upgrade --no-dry-run 
+  vcpkg upgrade --no-dry-run
 ```
 
 ### <a name="upgrade-options"></a>Opzioni di aggiornamento
 
-- **--no-dry-run**: esegue l'aggiornamento; se omesso, il comando elenca solo i pacchetti non aggiornati. 
-- **--keep-going**: continua l'installazione di pacchetti, anche in caso di errore di uno di essi. 
-- **--triplet \<t>**: imposta la tripletta predefinita per i pacchetti non qualificati. 
-- **--vcpkg-root\<percorso>**: specifica la directory vcpkg da usare al posto della directory corrente o della directory dello strumento. 
+- **--no-dry-run**: esegue l'aggiornamento; se omesso, il comando elenca solo i pacchetti non aggiornati.
+- **--keep-going**: continua l'installazione di pacchetti, anche in caso di errore di uno di essi.
+- **--triplet \<t>**: imposta la tripletta predefinita per i pacchetti non qualificati.
+- **--vcpkg-root\<percorso>**: specifica la directory vcpkg da usare al posto della directory corrente o della directory dello strumento.
 
 ### <a name="upgrade-example"></a>Esempio di aggiornamento
 
@@ -187,24 +189,30 @@ If you are sure you want to rebuild the above packages, run this command with th
 ```
 
 ## <a name="contribute-new-libraries"></a>Contribuire con nuove librerie
+
 È possibile includere qualsiasi libreria nella raccolta di port privata. Per suggerire una nuova libreria per il catalogo pubblico,effettuare la segnalazione nella [pagina dei problemi vcpkg di GitHub](https://github.com/Microsoft/vcpkg/issues).
 
 ## <a name="remove-a-library"></a>Rimuovere una libreria
+
 Digitare **vcpkg remove** per rimuovere una libreria installata. Se sono presenti altre librerie dipendenti, verrà richiesto di eseguire nuovamente il comando con **--recurse**, in modo che vengano rimosse tutte le librerie downstream.
 
 ## <a name="customize-vcpkg"></a>Personalizzare vcpkg
-È possibile modificare il clone di vcpkg nei modi preferiti. Si possono creare più cloni di vcpkg e modificare i portfile in ognuno, per ottenere versioni specifiche di librerie o specificare parametri della riga di comando. Ad esempio, in un'organizzazione, è possibile che un gruppo di sviluppatori lavori a software con un set di dipendenze mentre un altro gruppo usa un set diverso. È possibile configurare due cloni di vcpkg e modificare ognuno in modo da scaricare le versioni delle librerie, le opzioni di compilazione e altri elementi in base alle specifiche esigenze. 
+
+È possibile modificare il clone di vcpkg nei modi preferiti. Si possono creare più cloni di vcpkg e modificare i portfile in ognuno, per ottenere versioni specifiche di librerie o specificare parametri della riga di comando. Ad esempio, in un'organizzazione, è possibile che un gruppo di sviluppatori lavori a software con un set di dipendenze mentre un altro gruppo usa un set diverso. È possibile configurare due cloni di vcpkg e modificare ognuno in modo da scaricare le versioni delle librerie, le opzioni di compilazione e altri elementi in base alle specifiche esigenze.
 
 ## <a name="uninstall-vcpkg"></a>Disinstallare vcpkg
-È sufficiente eliminare la directory. 
+
+È sufficiente eliminare la directory.
 
 ## <a name="send-feedback-about-vcpkg"></a>Inviare commenti e suggerimenti su vcpkg
+
 Usare il comando **--survey** per inviare a Microsoft commenti e suggerimenti su vcpkg, inclusi i report sui bug e suggerimenti per le funzionalità.
 
 ## <a name="the-vcpkg-folder-hierarchy"></a>Gerarchia delle cartelle di vcpkg
-Tutti i dati e le funzionalità di vcpkg sono inclusi in una singola gerarchia di directory, detta "istanza". Non esistono impostazioni del Registro di sistema o variabili di ambiente. In un computer può esistere un qualsiasi numero di istanze di vcpkg e non ci saranno interferenze. 
 
-Il contenuto di un'istanza di vcpkg è: 
+Tutti i dati e le funzionalità di vcpkg sono inclusi in una singola gerarchia di directory, detta "istanza". Non esistono impostazioni del Registro di sistema o variabili di ambiente. In un computer può esistere un qualsiasi numero di istanze di vcpkg e non ci saranno interferenze.
+
+Il contenuto di un'istanza di vcpkg è:
 
 - buildtrees - contiene le sottocartelle delle origini da cui viene compilata ogni libreria.
 - docs - documentazione ed esempi.
@@ -240,7 +248,8 @@ Il contenuto di un'istanza di vcpkg è:
 |**vcpkg version**|Visualizza le informazioni sulla versione|
 |**vcpkg contact**|Visualizza informazioni di contatto per l'invio di commenti e suggerimenti|
 
-### <a name="options"></a>Opzioni:
+### <a name="options"></a>Opzioni
+
 |Opzione|Descrizione|
 |---------|---------|
 |**--triplet \<t>**|Specifica la tripletta dell'architettura di destinazione (impostazione predefinita: `%VCPKG_DEFAULT_TRIPLET%`, vedere anche **vcpkg help triplet**)|

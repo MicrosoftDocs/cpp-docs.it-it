@@ -1,13 +1,10 @@
 ---
 title: Suggerimenti per la scelta tra funzioni e macro | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - c.functions
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - functions [CRT], vs. macros
 - macros, vs. functions
 ms.assetid: 18a633d6-cf1c-470c-a649-fa7677473e2b
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 810a4c2dbf5c80688dd739c48df0056ab394cafd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4577ac1a0e1cac90a3436809722978d119c6b557
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="recommendations-for-choosing-between-functions-and-macros"></a>Suggerimenti per la scelta tra funzioni e macro
 La maggior parte delle routine delle librerie run-time di Microsoft è costituita da funzioni compilate o assemblate, ma alcune routine sono implementate come macro. Quando un file di intestazione dichiara sia una versione funzione che una versione macro di una routine, la versione macro ha la precedenza, perché viene sempre dopo la dichiarazione di funzione. Quando si chiama una routine implementata sia come funzione che come macro, è possibile imporre al compilatore di usare la versione funzione in due modi:  

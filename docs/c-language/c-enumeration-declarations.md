@@ -1,13 +1,10 @@
 ---
 title: Dichiarazioni di enumerazioni C | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - named constants, enumeration declarations
 - declaring enumerations
 ms.assetid: bd18f673-4dda-4bc1-92fd-d1ce10074910
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f4109bb9ed66a89765b6270fce6a3cd5821698a2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 697e4f37c8a59c40df80e29ff89f2021f61fb468
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="c-enumeration-declarations"></a>Dichiarazioni di enumerazioni C
 Un'enumerazione è un set di costanti di tipo Integer denominate. Una dichiarazione del tipo di enumerazione fornisce il nome del tag (facoltativo) di enumerazione e definisce il set di identificatori Integer denominati (denominati "set di enumerazione", "costanti di enumeratore", "enumeratori" o "membri"). Una variabile con tipo di enumerazione archivia uno dei valori del set di enumerazione definiti da quel tipo.  
@@ -39,7 +34,7 @@ Un'enumerazione è un set di costanti di tipo Integer denominate. Una dichiarazi
   
 ## <a name="syntax"></a>Sintassi  
  *enum-specifier*:  
- **enum**  *identifier* opt**{** *enumerator-list* **}**  
+ **enum**  *identifier* opt **{** *enumerator-list* **}**  
   
  **enum**  *identifier*  
   

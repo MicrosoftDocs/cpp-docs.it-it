@@ -1,13 +1,10 @@
 ---
 title: 'Procedura: usare parallel_invoke per scrivere una Routine di ordinamento parallelo | Documenti Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - structured_task_group class, example
 - improving parallel performance with task groups [Concurrency Runtime]
 ms.assetid: 53979a2a-525d-4437-8952-f1ff85b37673
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ff14294236efc26b83d31ad185dc1cfd6329dbe9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 53b9699c7ee5d2bd4775f2d6b97dc4d1c5155ce0
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-to-use-parallelinvoke-to-write-a-parallel-sort-routine"></a>Procedura: Usare parallel_invoke per scrivere una routine di ordinamento in parallelo
 Questo documento viene descritto come utilizzare il [parallel_invoke](../../parallel/concrt/parallel-algorithms.md#parallel_invoke) algoritmo per migliorare le prestazioni dell'algoritmo di ordinamento bitonico. L'in modo ricorsivo algoritmo di ordinamento bitonico divide la sequenza di input in partizioni ordinate più piccole. Algoritmo di ordinamento bitonico è possibile eseguire in parallelo poiché ogni operazione della partizione è indipendente da tutte le altre operazioni.  
@@ -40,18 +35,18 @@ Questo documento viene descritto come utilizzare il [parallel_invoke](../../para
 ##  <a name="top"></a> Sezioni  
  Questo documento descrive le attività seguenti:  
   
-- [Esecuzione dell'ordinamento bitonico in serie](#serial)  
+- [L'esecuzione di ordinamento bitonico in serie](#serial)  
   
 - [Utilizzare parallel_invoke per eseguire l'ordinamento bitonico in parallelo](#parallel)  
   
-##  <a name="serial"></a>Esecuzione dell'ordinamento bitonico in serie  
+##  <a name="serial"></a> L'esecuzione di ordinamento bitonico in serie  
  L'esempio seguente mostra la versione seriale dell'algoritmo di ordinamento bitonico. Il `bitonic_sort` funzione divide la sequenza in due partizioni, ordina tali partizioni in direzioni opposte e quindi unisce i risultati. Questa funzione chiama se stessa in modo ricorsivo due volte per ordinare ogni partizione.  
   
  [!code-cpp[concrt-parallel-bitonic-sort#1](../../parallel/concrt/codesnippet/cpp/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine_1.cpp)]  
   
  [[Torna all'inizio](#top)]  
   
-##  <a name="parallel"></a>Utilizzare parallel_invoke per eseguire l'ordinamento bitonico in parallelo  
+##  <a name="parallel"></a> Utilizzare parallel_invoke per eseguire l'ordinamento bitonico in parallelo  
  In questa sezione viene descritto come utilizzare il `parallel_invoke` algoritmo per eseguire l'algoritmo di ordinamento bitonico in parallelo.  
   
 ### <a name="procedures"></a>Procedure  
@@ -98,7 +93,7 @@ parallel time: 1248
 ## <a name="compiling-the-code"></a>Compilazione del codice  
  Per compilare il codice, copiarlo e quindi incollarlo in un progetto di Visual Studio oppure incollarlo in un file denominato `parallel-bitonic-sort.cpp` , quindi eseguire il comando seguente in una finestra del prompt dei comandi di Visual Studio.  
   
- **CL.exe /EHsc parallelo-bitonico-sort.cpp**  
+ **CL.exe /EHsc parallelo-bitonico-Sort. cpp**  
   
 ## <a name="robust-programming"></a>Programmazione efficiente  
  Questo esempio viene utilizzato il `parallel_invoke` algoritmo anziché il [Concurrency:: task_group](reference/task-group-class.md) classe affinché la durata di ogni gruppo di attività non venga estesa oltre una funzione. È consigliabile utilizzare `parallel_invoke` quando è possibile perché contiene meno il sovraccarico di esecuzione `task group` oggetti e pertanto consente di scrivere codice dalle prestazioni migliori.  

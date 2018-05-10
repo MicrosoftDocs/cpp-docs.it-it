@@ -1,12 +1,9 @@
 ---
 title: 'Metodo ftmbase:: GetUnmarshalClass | Documenti Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - ftm/Microsoft::WRL::FtmBase::GetUnmarshalClass
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - GetUnmarshalClass method
 ms.assetid: 535fc539-5b97-4967-b158-f7568f13d341
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 978379c64f22026f19dd76afa39af08402cebc65
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 09afd9f977dbc779eb1dc10e9553d2ca88538fcc
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="ftmbasegetunmarshalclass-method"></a>Metodo FtmBase::GetUnmarshalClass
 Ottiene il CLSID COM viene utilizzato per individuare la DLL contenente il codice per il proxy corrispondente. COM viene caricato la DLL per creare un'istanza del proxy non inizializzata.  
@@ -70,7 +65,7 @@ STDMETHODIMP GetUnmarshalClass(
  S_OK se ha esito positivo. in caso contrario, S_FALSE.  
   
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** ftm.h  
+ **Intestazione:** . h  
   
  **Spazio dei nomi:** Microsoft::WRL  
   

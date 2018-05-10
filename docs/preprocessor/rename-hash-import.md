@@ -1,12 +1,9 @@
 ---
-title: rename (#import) | Microsoft Docs
-ms.custom: 
+title: Rinomina (#import) | Documenti Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - Rename
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - rename attribute
 ms.assetid: 5c5c6153-1087-4b7b-87fb-fc59b90b9975
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6391f3d88a081da6e01b115389b1a9b986ae6c0f
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 5bad195e0885c18748ddd39d2ed6e7a565606398
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="rename-import"></a>rename (#import)
 **Sezione specifica C++**  
@@ -71,4 +66,4 @@ rename("GetMyParent","GetMyParentX")
   
 ## <a name="see-also"></a>Vedere anche  
  [attributi #import](../preprocessor/hash-import-attributes-cpp.md)   
- [#import Directive](../preprocessor/hash-import-directive-cpp.md)
+ [#import (direttiva)](../preprocessor/hash-import-directive-cpp.md)

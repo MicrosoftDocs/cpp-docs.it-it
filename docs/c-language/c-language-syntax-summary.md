@@ -1,13 +1,10 @@
 ---
 title: Riepilogo della sintassi del linguaggio C | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - notation in C
 - syntax
 ms.assetid: 6edccdb7-453b-4820-a5d8-075c19fb8926
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 992c3164a8adb95125d9e4be4f88f930270b08ff
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 58a4d6618aeea9cc07731ba814644cf31b4a6941
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="c-language-syntax-summary"></a>Riepilogo della sintassi del linguaggio C
 In questa sezione viene fornita la descrizione completa del linguaggio C e delle funzionalità del linguaggio C specifiche di Microsoft. In questa sezione è possibile utilizzare una notazione sintattica per determinare la sintassi corretta per ogni componente del linguaggio. La spiegazione della sintassi compare nella sezione di questo manuale in cui verrà illustrato l'argomento.  

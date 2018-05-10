@@ -1,13 +1,10 @@
 ---
 title: associabile | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - vc-attr.bindable
 dev_langs:
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - bindable attribute
 ms.assetid: a2360f92-927b-4af8-98cc-6eca7f4ec954
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5266bca832a128242bcbbc8904ad9650e4432fe2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a1cf16bfbeee2231133e60429a4a25e9d4fe85c8
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="bindable"></a>bindable
 Indica che la proprietà supporta l'associazione dati.  
@@ -44,11 +39,11 @@ Indica che la proprietà supporta l'associazione dati.
   
  Gli esempi MFC seguenti mostrano l'uso di **associabili**:  
   
--   [Esempi di controlli: Controlli ActiveX MFC basato](http://msdn.microsoft.com/en-us/a44adf86-0ba0-4504-bedb-512b6cba2e63)  
+-   [Esempi di controlli: Controlli ActiveX MFC-Based](http://msdn.microsoft.com/en-us/a44adf86-0ba0-4504-bedb-512b6cba2e63)  
   
 -   [Esempio CIRC: Controllo ActiveX](http://msdn.microsoft.com/en-us/9ba34d04-280e-49f4-90ae-41a6be44c95b)  
   
--   [Esempio TESTHELP: Controllo ActiveX Guida e le descrizioni comandi](http://msdn.microsoft.com/en-us/d822861d-c6f0-4d0a-ad11-970eebb1e8cd)  
+-   [Esempio TESTHELP: Controllo ActiveX con le descrizioni comandi e la Guida](http://msdn.microsoft.com/en-us/d822861d-c6f0-4d0a-ad11-970eebb1e8cd)  
   
 ## <a name="example"></a>Esempio  
  Nel codice seguente viene illustrato come utilizzare **associabili** su una proprietà:  
@@ -83,7 +78,7 @@ __interface IPropDemo : IDispatch {
 |**Si applica a**|Metodo di interfaccia|  
 |**Ripetibile**|No|  
 |**Attributi obbligatori**|Nessuna|  
-|**Attributi non validi**|nessuno|  
+|**Attributi non validi**|Nessuno|  
   
  Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](../windows/attribute-contexts.md).  
   

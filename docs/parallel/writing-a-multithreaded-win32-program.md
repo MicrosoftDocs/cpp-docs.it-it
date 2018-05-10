@@ -1,13 +1,10 @@
 ---
 title: Scrittura di un programma multithread Win32 | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-parallel
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -23,22 +20,20 @@ helpviewer_keywords:
 - mutex [C++]
 - threading [C++], thread stacks
 ms.assetid: 1415f47d-417f-4f42-949b-946fb28aab0e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4ede0e6dc1740f93f4905dc69b1927aee0d1a7ff
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2d88add7830316ae192a728f9c9ff10320657eaf
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="writing-a-multithreaded-win32-program"></a>Scrittura di un programma multithread Win32
 Quando si scrive un programma con più thread, è necessario coordinare il comportamento e [l'uso delle risorse del programma](#_core_sharing_common_resources_between_threads). È inoltre necessario assicurarsi che ogni thread riceva [il proprio stack](#_core_thread_stacks).  
   
-##  <a name="_core_sharing_common_resources_between_threads"></a>Condivisione di risorse comuni tra thread  
+##  <a name="_core_sharing_common_resources_between_threads"></a> Condivisione di risorse comuni tra thread  
   
 > [!NOTE]
 >  Per informazioni analoghe dal punto di vista MFC, vedere [Multithreading: suggerimenti sulla programmazione](../parallel/multithreading-programming-tips.md) e [Multithreading: quando utilizzare le classi di sincronizzazione](../parallel/multithreading-when-to-use-the-synchronization-classes.md).  
@@ -62,10 +57,10 @@ fwrite( data, sizeof( data ), 1, fp );
 ReleaseMutex( hIOMutex);  
 ```  
   
-##  <a name="_core_thread_stacks"></a>Stack di thread  
+##  <a name="_core_thread_stacks"></a> Stack di thread  
  Tutto lo spazio dello stack predefinito di un'applicazione viene allocato per il primo thread di esecuzione, è noto come thread 1. Di conseguenza, è necessario specificare la quantità di memoria da allocare per uno stack separato per ogni thread aggiuntivo il programma è necessario. Il sistema operativo alloca spazio dello stack aggiuntive per il thread, se necessario, ma è necessario specificare un valore predefinito.  
   
- Il primo argomento di `_beginthread` chiamata è un puntatore al **BounceProc** funzione che esegue il thread. Il secondo argomento specifica la dimensione predefinita per il thread. L'ultimo argomento è un numero di ID che viene passato a **BounceProc**. **BounceProc** utilizza il numero ID del generatore di numeri casuali e consentono di selezionare l'attributo color del thread e carattere da visualizzare.  
+ Il primo argomento di `_beginthread` chiamata è un puntatore al **BounceProc** funzione che esegue il thread. Il secondo argomento specifica la dimensione predefinita per il thread. L'ultimo argomento è un numero di ID che viene passato a **BounceProc**. **BounceProc** Usa il numero di ID per il seeding del generatore di numeri caso e per selezionare l'attributo color del thread e carattere da visualizzare.  
   
  I thread che chiama la libreria di run-time C e l'API Win32 devono consentire di sufficiente spazio dello stack per la libreria e funzioni API chiamate. C `printf` funzione richiede più di 500 byte di spazio dello stack e deve disporre di 2 KB di spazio nello stack, quando si chiama una routine dell'API Win32.  
   

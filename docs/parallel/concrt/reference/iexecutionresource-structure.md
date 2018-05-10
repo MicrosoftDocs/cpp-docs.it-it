@@ -1,12 +1,9 @@
 ---
 title: Struttura IExecutionResource | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - IExecutionResource
@@ -20,17 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - IExecutionResource structure
 ms.assetid: 6b27042b-b98c-4f7f-b831-566950af84cd
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eb4ad0b6f9038d78ae94b5ab1dcb148ebd628edc
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: dc69c30f30d25179427ee8e59c536bb7cb5b483d
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="iexecutionresource-structure"></a>Struttura IExecutionResource
 Un'astrazione per un thread hardware.  
@@ -50,7 +45,7 @@ struct IExecutionResource;
 |[IExecutionResource::CurrentSubscriptionLevel](#currentsubscriptionlevel)|Restituisce il numero del processore virtuale attivato radici e sottoscritto thread esterni attualmente associato al thread di hardware sottostante che rappresenta la risorsa di esecuzione.|  
 |[IExecutionResource::GetExecutionResourceId](#getexecutionresourceid)|Restituisce un identificatore univoco per il thread di hardware che rappresenta questa risorsa di esecuzione.|  
 |[IExecutionResource::GetNodeId](#getnodeid)|Restituisce un identificatore univoco per il nodo del processore a cui appartiene questa risorsa di esecuzione.|  
-|[IExecutionResource::Remove](#remove)|Restituisce la risorsa di esecuzione per il gestore delle risorse.|  
+|[IExecutionResource:: Remove](#remove)|Restituisce la risorsa di esecuzione per il gestore delle risorse.|  
   
 ## <a name="remarks"></a>Note  
  Risorse di esecuzione può essere autonomo o associata a radici del processore virtuale. Quando un thread nell'applicazione crea una sottoscrizione di thread, viene creata una risorsa di esecuzione autonomo. I metodi [ISchedulerProxy:: SubscribeThread](ischedulerproxy-structure.md#subscribecurrentthread) e [ISchedulerProxy:: RequestInitialVirtualProcessors](ischedulerproxy-structure.md#requestinitialvirtualprocessors) creare sottoscrizioni di thread e restituisce un `IExecutionResource` interfaccia che rappresenta il sottoscrizione. Creazione di una sottoscrizione di thread è un modo per informare il gestore delle risorse che farà parte di un determinato thread di lavoro in coda un'utilità di pianificazione, insieme di radici del processore virtuale Gestione risorse assegna all'utilità di pianificazione. Il gestore di risorse utilizza le informazioni per evitare la sovrascrittura della thread hardware quando possibile.  

@@ -1,13 +1,10 @@
 ---
 title: Matrici (estensioni del componente C++) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - cli::array
 - details::array
@@ -21,18 +18,16 @@ helpviewer_keywords:
 - multidimensional arrays
 - arrays [C++]
 ms.assetid: 49445812-d775-4db1-a231-869598dbb955
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 343f2369260531e828ea8db27cee5e52ea18fd31
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a17649402fa6ebe9c98d768badcf36e5700f5b75
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="arrays-c-component-extensions"></a>Matrici (Estensioni del componente C++)
 Il `Platform::Array<T>` tipo in C + + CX, o `array` parola chiave in C + + CLI, dichiara una matrice di un tipo specificato e il valore iniziale.  
@@ -64,13 +59,13 @@ Il `Platform::Array<T>` tipo in C + + CX, o `array` parola chiave in C + + CLI, 
     {initialization-list [,...]}  
 ```  
   
- *qualificatori* [facoltativo]  
+ *i qualificatori* [facoltativo]  
  Uno o più di questi identificatori di classe di archiviazione: [modificabile](../cpp/mutable-data-members-cpp.md), [volatile](../cpp/volatile-cpp.md), [const](../cpp/const-cpp.md), [extern](../cpp/using-extern-to-specify-linkage.md), [statico](../cpp/static-members-cpp.md).  
   
  `array-type`  
  Il tipo della variabile di matrice. I tipi validi sono classi di Windows Runtime e tipi fondamentali, classi di riferimento e strutture, classi di valore e le strutture e puntatori nativi (`type*`).  
   
- `rank`[facoltativo]  
+ `rank` [facoltativo]  
  Il numero di dimensioni della matrice. Deve essere 1.  
   
  `identifier`  
@@ -79,7 +74,7 @@ Il `Platform::Array<T>` tipo in C + + CX, o `array` parola chiave in C + + CLI, 
  `initialization-type`  
  Il tipo dei valori che consentono di inizializzare la matrice. In genere, `array-type` e `initialization-type` sono dello stesso tipo. Tuttavia, i tipi possono essere diversi se esiste una conversione da `initialization-type` a `array-type`, ad esempio, se `initialization-type` è derivato da `array-type`.  
   
- `initialization-list`[facoltativo]  
+ `initialization-list` [facoltativo]  
  Un elenco delimitato da virgole dei valori in parentesi graffe che inizializza gli elementi della matrice. Ad esempio, se `rank-size-list` sono stati `(3)`, che dichiara una matrice unidimensionale di 3 elementi, `initialization list` potrebbe essere `{1,2,3}`.  
   
 ### <a name="remarks"></a>Note  
@@ -118,13 +113,13 @@ int main() {
     {initialization-list [,...]}  
 ```  
   
- *qualificatori* [facoltativo]  
+ *i qualificatori* [facoltativo]  
  Uno o più di questi identificatori di classe di archiviazione: [modificabile](../cpp/mutable-data-members-cpp.md), [volatile](../cpp/volatile-cpp.md), [const](../cpp/const-cpp.md), [extern](../cpp/using-extern-to-specify-linkage.md), [statico](../cpp/static-members-cpp.md).  
   
  `array-type`  
  Il tipo della variabile di matrice. I tipi validi sono classi di Windows Runtime e tipi fondamentali, classi di riferimento e struct, classi e struct, puntatori nativi (`type*`) e i tipi nativi POD (dati non aggiornati).  
   
- `rank`[facoltativo]  
+ `rank` [facoltativo]  
  Il numero di dimensioni della matrice. Il valore predefinito è 1. il valore massimo è 32. Ogni dimensione della matrice è una matrice.  
   
  `identifier`  
@@ -136,14 +131,14 @@ int main() {
  `rank-size-list`  
  Un elenco delimitato da virgole delle dimensioni di ciascuna dimensione della matrice. In alternativa, se il `initialization-list` viene specificato, il compilatore può dedurre le dimensioni di ogni dimensione e `rank-size-list` può essere omesso. 
   
- `initialization-list`[facoltativo]  
+ `initialization-list` [facoltativo]  
  Un elenco delimitato da virgole dei valori in parentesi graffe che inizializza gli elementi della matrice. O annidato in un elenco delimitato da virgole di *elenco di inizializzazione* gli elementi che consentono di inizializzare gli elementi in una matrice multidimensionale.  
   
  Ad esempio, se `rank-size-list` sono stati `(3)`, che dichiara una matrice unidimensionale di 3 elementi, `initialization list` potrebbe essere `{1,2,3}`. Se `rank-size-list` sono stati `(3,2,4)`, che dichiara una matrice tridimensionale di 3 elementi nella prima dimensione, 2 elementi nel secondo e 4 nella terza `initialization-list` potrebbe essere `{{1,2,3},{0,0},{-5,10,-21,99}}`.)  
   
 ### <a name="remarks"></a>Note  
   
- `array`nel [Platform, default e cli spazi dei nomi](../windows/platform-default-and-cli-namespaces-cpp-component-extensions.md) dello spazio dei nomi.  
+ `array` è il [Platform, default e cli gli spazi dei nomi](../windows/platform-default-and-cli-namespaces-cpp-component-extensions.md) dello spazio dei nomi.  
   
  Ad esempio C++ standard, gli indici di una matrice sono in base zero e una matrice è con l'indice utilizzando le parentesi quadre ([]). A differenza di C++ standard, vengono specificati gli indici di una matrice multidimensionale in un elenco di indici per ogni dimensione anziché in un set di operatori tra parentesi quadre ([]) per ogni dimensione. Ad esempio, *identificatore*[*index1*, *index2*] invece di *identificatore*[*index1*] [ *index2*].  
   

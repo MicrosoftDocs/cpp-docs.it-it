@@ -1,12 +1,9 @@
 ---
 title: Classe tiled_index | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-amp
 ms.topic: reference
 f1_keywords:
 - tiled_index
@@ -28,17 +25,15 @@ dev_langs:
 helpviewer_keywords:
 - tiled_index class
 ms.assetid: 0ce2ae26-f1bb-4436-b473-a9e1b619bb38
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f1ecd2e852dd36e51b158db9a5c6cd13be5c8d5c
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: fd28ab01d0d4180cc518cff230eb7df8261f4940
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="tiledindex-class"></a>Classe tiled_index
 Fornisce un indice in un [tiled_extent](tiled-extent-class.md) oggetto. Questa classe dispone di proprietà per accedere agli elementi di origine riquadro locale e di origine globale. Per ulteriori informazioni sugli spazi affiancati, vedere [utilizzando riquadri](../../../parallel/amp/using-tiles.md).  
@@ -126,7 +121,7 @@ class tiled_index<_Dim0, 0, 0> : public _Tiled_index_base<1>;
  **Spazio dei nomi:** Concurrency  
 
 
-## <a name="tiled_index__ctor">Costruttore tiled_index</a>  
+## <a name="tiled_index__ctor"></a>  Costruttore tiled_index  
 Inizializza una nuova istanza della classe `tiled_index`.  
   
 ## <a name="syntax"></a>Sintassi  
@@ -201,7 +196,7 @@ Archivia un [indice](index-class.md) oggetto di rango 1, 2 o 3 che rappresenta l
 const index<rank> global;  
 ```  
   
-## <a name="tiled_index__local"></a>  local   
+## <a name="tiled_index__local"></a>  Locale   
 Archivia un [indice](index-class.md) oggetto dell'indice di priorità 1, 2 o 3 che rappresenta l'oggetto relativo alla sezione corrente di un [tiled_extent](tiled-extent-class.md) oggetto.  
   
 ## <a name="syntax"></a>Sintassi  
@@ -210,7 +205,7 @@ Archivia un [indice](index-class.md) oggetto dell'indice di priorità 1, 2 o 3 c
 const index<rank> local;  
 ```  
   
-## <a name="tiled_index__rank"></a>  rank   
+## <a name="tiled_index__rank"></a>  Numero di dimensioni   
 Archivia il rango di `tiled_index` oggetto.  
   
 ## <a name="syntax"></a>Sintassi  
@@ -219,7 +214,7 @@ Archivia il rango di `tiled_index` oggetto.
 static const int rank = _Rank;  
 ```  
 
-## <a name="tiled_index__tile"></a>  tile   
+## <a name="tiled_index__tile"></a>  riquadro   
 Archivia un [indice](index-class.md) oggetto di dimensioni pari a 1, 2 o 3 che rappresenta le coordinate del riquadro corrente di un [tiled_extent](tiled-extent-class.md) oggetto.  
   
 ## <a name="syntax"></a>Sintassi  

@@ -1,30 +1,25 @@
 ---
 title: 'Procedura dettagliata: Creazione di una rete di elaborazione delle immagini | Documenti Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - image-processing networks, creating [Concurrency Runtime]
 - creating image-processing networks [Concurrency Runtime]
 ms.assetid: 78ccadc9-5ce2-46cc-bd62-ce0f99d356b8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7b709179cb5bc0fefa3f342374c792656fa1e934
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e66de10879596b0e0877eb70f5ac95e082b8ae31
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="walkthrough-creating-an-image-processing-network"></a>Procedura dettagliata: creazione di una rete per l'elaborazione di immagini
 Questo documento viene illustrato come creare una rete di blocchi dei messaggi asincroni che eseguono l'elaborazione di immagini.  
@@ -53,7 +48,7 @@ Questo documento viene illustrato come creare una rete di blocchi dei messaggi a
   
 -   [Esempio completo](#complete)  
   
-##  <a name="functionality"></a>Definizione funzionalità di elaborazione delle immagini  
+##  <a name="functionality"></a> Definizione funzionalità di elaborazione delle immagini  
  Questa sezione illustra le funzioni di supporto che la rete di elaborazione di immagini utilizzato per l'utilizzo di immagini che vengono lette dal disco.  
   
  Le funzioni seguenti, `GetRGB` e `MakeColor`, estrarre e combinare i singoli componenti del colore specifico, rispettivamente.  
@@ -80,7 +75,7 @@ Questo documento viene illustrato come creare una rete di blocchi dei messaggi a
   
  [[Torna all'inizio](#top)]  
   
-##  <a name="network"></a>Creazione della rete di elaborazione di immagini  
+##  <a name="network"></a> Creazione della rete di elaborazione di immagini  
  In questa sezione viene descritto come creare una rete di blocchi dei messaggi asincroni che eseguono l'elaborazione di immagini in ogni [!INCLUDE[TLA#tla_jpeg](../../parallel/concrt/includes/tlasharptla_jpeg_md.md)] immagine (con estensione jpg) in una directory specificata. La rete esegue le operazioni di elaborazione delle immagini seguenti:  
   
 1.  Per le immagini che sono stata creata da Tom, convertire in gradazioni di grigio.  
@@ -135,7 +130,7 @@ Questo documento viene illustrato come creare una rete di blocchi dei messaggi a
 |`colormask`|Oggetto `transformer` che rimuove i componenti di colore verde e blu dalle immagini che hanno il rosso come colore dominante.|  
 |`darken`|Oggetto `transformer` che diventa più scura immagini che hanno il rosso come colore dominante.|  
 |`sepiatone`|Oggetto `transformer` che applica seppia alle immagini non vengono create da Tom e non sono prevalentemente rosso.|  
-|`save_bitmap`|Oggetto `transformer` oggetto che salva l'elaborato `image` su disco come bitmap. `save_bitmap`Recupera il nome del file originale dal `map` dell'oggetto e le modifiche di estensione di file al file con estensione bmp.|  
+|`save_bitmap`|Oggetto `transformer` oggetto che salva l'elaborato `image` su disco come bitmap. `save_bitmap` Recupera il nome del file originale dal `map` dell'oggetto e l'estensione del nome file viene modificato in file con estensione bmp.|  
 |`delete_bitmap`|Oggetto `transformer` che libera la memoria per le immagini.|  
 |`decrement`|Oggetto [Concurrency:: Call](../../parallel/concrt/reference/call-class.md) oggetto che funge da nodo terminale nella rete. Si decrementa la `countdown_event` oggetto per segnalare all'applicazione principale che è stata elaborata un'immagine.|  
   
@@ -145,7 +140,7 @@ Questo documento viene illustrato come creare una rete di blocchi dei messaggi a
   
  Nella figura seguente viene illustrata la rete di elaborazione di immagine:  
   
- ![Rete di elaborazione di immagini](../../parallel/concrt/media/concrt_imageproc.png "concrt_imageproc")  
+ ![Rete di elaborazione delle immagini](../../parallel/concrt/media/concrt_imageproc.png "concrt_imageproc")  
   
  Il `countdown_event` in questo esempio consente di rete di elaborazione immagini informare l'applicazione principale quando sono state elaborate tutte le immagini. Il `countdown_event` classe Usa un [Concurrency:: event](../../parallel/concrt/reference/event-class.md) oggetto per segnalare quando un valore del contatore raggiunge lo zero. L'applicazione principale incrementa il contatore ogni volta che si invia un nome di file alla rete. Nodo terminale della rete decrementa il contatore dopo l'elaborazione di ogni immagine. Dopo l'applicazione principale attraversa la directory specificata, attende che il `countdown_event` oggetto per segnalare che il contatore raggiunge lo zero.  
   
@@ -155,7 +150,7 @@ Questo documento viene illustrato come creare una rete di blocchi dei messaggi a
   
  [[Torna all'inizio](#top)]  
   
-##  <a name="complete"></a>L'esempio completo  
+##  <a name="complete"></a> L'esempio completo  
  Nel codice seguente viene illustrato l'esempio completo. Il `wmain` funzione gestisce il [!INCLUDE[ndptecgdiplus](../../parallel/concrt/includes/ndptecgdiplus_md.md)] libreria e chiama il `ProcessImages` funzione al processo di [!INCLUDE[TLA#tla_jpeg](../../parallel/concrt/includes/tlasharptla_jpeg_md.md)] file il `Sample Pictures` directory.  
   
  [!code-cpp[concrt-image-processing-filter#15](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-image-processing-network_14.cpp)]  
@@ -164,7 +159,7 @@ Questo documento viene illustrato come creare una rete di blocchi dei messaggi a
   
  ![Esempio di output per l'esempio](../../parallel/concrt/media/concrt_imageout.png "concrt_imageout")  
   
- `Lighthouse`viene creato da Tom Alphin e pertanto viene convertito in gradazioni di grigio. `Chrysanthemum`, `Desert`, `Koala`, e `Tulips` hanno il rosso come colore dominante e pertanto i componenti di colore verde e blu rimossi e vengono resi più scuri. `Hydrangeas`, `Jellyfish`, e `Penguins` soddisfano i criteri predefiniti e pertanto sono seppia stato applicato.  
+ `Lighthouse` creato da Tom Alphin e pertanto viene convertito in gradazioni di grigio. `Chrysanthemum`, `Desert`, `Koala`, e `Tulips` il rosso come colore dominante e pertanto con i componenti di colore verde e blu rimossi e vengono resi più scuri. `Hydrangeas`, `Jellyfish`, e `Penguins` soddisfano i criteri predefiniti e pertanto sono seppia stato applicato.  
   
  [[Torna all'inizio](#top)]  
   

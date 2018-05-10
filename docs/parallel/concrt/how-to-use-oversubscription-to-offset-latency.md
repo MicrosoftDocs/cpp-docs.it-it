@@ -1,30 +1,25 @@
 ---
-title: 'Procedura: utilizzare l''Oversubscription per compensare la latenza | Documenti Microsoft'
-ms.custom: 
+title: "Procedura: utilizzare l'Oversubscription per compensare la latenza | Documenti Microsoft"
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - oversubscription, using [Concurrency Runtime]
 - using oversubscription [Concurrency Runtime]
 ms.assetid: a1011329-2f0a-4afb-b599-dd4043009a10
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e1a8f059abffd261de2002ed5d18067c48d74876
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0c27864d040d0b6ce7b36087cff85ed750aa7ed2
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-to-use-oversubscription-to-offset-latency"></a>Procedura: Usare l'oversubscription per compensare la latenza
 L'oversubscription può migliorare l'efficienza complessiva di alcune applicazioni che contengono attività che dispone di una quantità elevata di latenza. In questo argomento viene illustrato come utilizzare l'oversubscription per compensare la latenza causata dalla lettura dei dati da una connessione di rete.  
@@ -71,9 +66,9 @@ Downloaded 1801040 bytes in 3276 ms.
 ## <a name="compiling-the-code"></a>Compilazione del codice  
  Copiare il codice di esempio e incollarlo in un progetto di Visual Studio oppure incollarlo in un file denominato `download-oversubscription.cpp` e quindi eseguire uno dei seguenti comandi in una finestra del prompt dei comandi di Visual Studio.  
   
- **CL.exe /EHsc /MD /D AFXDLL"download-oversubscription.cpp**  
+ **CL.exe /EHsc /MD /D AFXDLL"download-oversubscription. cpp**  
   
- **CL.exe /EHsc /MT download-oversubscription.cpp**  
+ **CL.exe /EHsc /MT download-oversubscription. cpp**  
   
 ## <a name="robust-programming"></a>Programmazione efficiente  
  Disattivare sempre l'oversubscription in seguito non sono più necessari. Si consideri una funzione che non gestisce un'eccezione generata da un'altra funzione. Se non si disabilita l'oversubscription prima che la funzione restituisce, tutte le operazioni parallele verranno inoltre oversubscription nel contesto corrente.  

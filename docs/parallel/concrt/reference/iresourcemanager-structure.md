@@ -1,12 +1,9 @@
 ---
 title: Struttura IResourceManager | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - IResourceManager
@@ -23,17 +20,15 @@ dev_langs:
 helpviewer_keywords:
 - IResourceManager structure
 ms.assetid: 3dd5ec2c-fe53-4121-ae77-1bc1d1167ff4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d309e057a8f829b11cc97ad60f3f5d56ff7ecaff
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: afd87a71c8f5d41e38f6a1b18be96a7bab8f3bb8
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="iresourcemanager-structure"></a>Struttura IResourceManager
 Un'interfaccia alla Gestione risorse del runtime di concorrenza. Si tratta dell'interfaccia mediante la quale le utilità di pianificazione comunicano con Gestione risorse.  
@@ -50,18 +45,18 @@ struct IResourceManager;
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[IResourceManager::OSVersion](#osversion)|Tipo enumerato che rappresenta la versione del sistema operativo.|  
+|[IResourceManager:: OSVersion](#osversion)|Tipo enumerato che rappresenta la versione del sistema operativo.|  
   
 ### <a name="public-methods"></a>Metodi pubblici  
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[IResourceManager::CreateNodeTopology](#createnodetopology)|Presente solo in modalità debug compilazioni del runtime, questo metodo è un hook di prova progettato per semplificare il test di gestione delle risorse su topologie hardware, senza che sia necessario hardware effettivo corrispondente alla configurazione. Con build in versione finale del runtime, questo metodo restituirà senza eseguire alcuna azione.|  
+|[IResourceManager:: CreateNodeTopology](#createnodetopology)|Presente solo in modalità debug compilazioni del runtime, questo metodo è un hook di prova progettato per semplificare il test di gestione delle risorse su topologie hardware, senza che sia necessario hardware effettivo corrispondente alla configurazione. Con build in versione finale del runtime, questo metodo restituirà senza eseguire alcuna azione.|  
 |[IResourceManager::GetAvailableNodeCount](#getavailablenodecount)|Restituisce il numero di nodi disponibili per Gestione risorse.|  
 |[IResourceManager::GetFirstNode](#getfirstnode)|Restituisce il primo nodo nell'ordine dell'enumerazione come definito da Gestione risorse.|  
-|[IResourceManager::Reference](#reference)|Incrementa il conteggio dei riferimenti sull'istanza del gestore di risorse.|  
+|[IResourceManager:: Reference](#reference)|Incrementa il conteggio dei riferimenti sull'istanza del gestore di risorse.|  
 |[IResourceManager::RegisterScheduler](#registerscheduler)|Registra un'utilità di pianificazione con il gestore delle risorse. Una volta registrato, l'utilità di pianificazione deve comunicare con il gestore delle risorse di `ISchedulerProxy` interfaccia restituita.|  
-|[IResourceManager::Release](#release)|Decrementa il conteggio dei riferimenti sull'istanza del gestore di risorse. Il gestore delle risorse viene eliminato quando il conteggio dei riferimenti va a `0`.|  
+|[IResourceManager:: Release](#release)|Decrementa il conteggio dei riferimenti sull'istanza del gestore di risorse. Il gestore delle risorse viene eliminato quando il conteggio dei riferimenti va a `0`.|  
   
 ## <a name="remarks"></a>Note  
  Utilizzare il [CreateResourceManager](concurrency-namespace-functions.md) funzione per ottenere un'interfaccia all'istanza singleton di gestione risorse. Il metodo incrementa un conteggio dei riferimenti su Gestione risorse ed è necessario richiamare il [IResourceManager:: Release](#release) metodo per rilasciare il riferimento al termine con Gestione risorse. In genere, ogni utilità di pianificazione creata richiamare questo metodo durante la creazione e rilasciare il riferimento a Gestione risorse dopo l'arresto.  

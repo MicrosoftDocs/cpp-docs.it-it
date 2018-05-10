@@ -1,12 +1,9 @@
 ---
 title: 'Concurrency:: precise_math Namespace | Documenti Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-amp
 ms.topic: reference
 f1_keywords:
 - AMP_MATH/Concurrency::acos
@@ -142,17 +139,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: ba653308-dc28-4384-b2fd-6cd718a72f91
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7016b2b9ff925164510644b743e0459a3011b5dc
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 181b80f97dd7ae3e44d3c7c51139d492da967ba3
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="concurrencyprecisemath-namespace"></a>Spazio dei nomi Concurrency::precise_math
 Le funzioni di `precise_math` dello spazio dei nomi sono conformi C99. Entrambi precisione singola e precisione doppia le versioni di ogni funzione sono incluse. Ad esempio, `acos` è la versione e con precisione doppia e `acosf` è la versione e con precisione singola. Queste funzioni, tra cui le funzioni e con precisione singola, richiedono il supporto esteso di e con precisione doppia nel tasto di scelta rapida. È possibile utilizzare il [Accelerator:: supports_double_precision](accelerator-class.md#supports_double_precision) per determinare se è possibile eseguire queste funzioni in un tasto di scelta rapida specifico. 

@@ -2,11 +2,8 @@
 title: Tipi di dati SBCS e MBCS | Microsoft Docs
 ms.custom: ''
 ms.date: 04/11/2018
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - MBCS
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - SBCS and MBCS data types
 - data types [C], MBCS and SBCS
 ms.assetid: 4c3ef9da-e397-48d4-800e-49dba36db171
-caps.latest.revision: 10
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f75999b1436ef350e12c47405cac911367ffda2b
-ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
+ms.openlocfilehash: ccdec81251589ba36209f878f1fa8b727d7d2b98
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sbcs-and-mbcs-data-types"></a>Tipi di dati SBCS e MBCS
 

@@ -1,29 +1,24 @@
 ---
 title: Procedure consigliate generali nel Runtime di concorrenza | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Concurrency Runtime, general best practices
 ms.assetid: ce5c784c-051e-44a6-be84-8b3e1139c18b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d5c2c626ceb0243e91e56d70f0d8ae71208b157f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a2cd9cffa76ce179f478422af9c8efce380a2465
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="general-best-practices-in-the-concurrency-runtime"></a>Procedure consigliate generali nel runtime di concorrenza
 Questo documento descrive le procedure consigliate che si applicano a più aree del Runtime di concorrenza.  
@@ -45,12 +40,12 @@ Questo documento descrive le procedure consigliate che si applicano a più aree 
   
 - [Non utilizzare gli oggetti di concorrenza in segmenti di dati condivisi](#shared-data)  
   
-##  <a name="synchronization"></a>Utilizzare la sincronizzazione cooperativa costrutti quando possibile  
+##  <a name="synchronization"></a> Utilizzare la sincronizzazione cooperativa costrutti quando possibile  
  Il Runtime di concorrenza fornisce numerosi costrutti indipendente dalla concorrenza che non richiedono un oggetto di sincronizzazione esterno. Ad esempio, il [Concurrency:: concurrent_vector](../../parallel/concrt/reference/concurrent-vector-class.md) fornisce indipendente dalla concorrenza accodare e operazioni di accesso agli elementi. Tuttavia, per i casi in cui si richiede un accesso esclusivo a una risorsa, il runtime fornisce la [Concurrency:: critical_section](../../parallel/concrt/reference/critical-section-class.md), [Concurrency:: reader_writer_lock](../../parallel/concrt/reference/reader-writer-lock-class.md), e [concorrenza :: evento](../../parallel/concrt/reference/event-class.md) classi. Questi tipi si comportano in modo cooperativo; di conseguenza, l'utilità di pianificazione può riassegnare le risorse di elaborazione in un altro contesto mentre la prima attività è in attesa per i dati. Quando possibile, è possibile utilizzare questi tipi di sincronizzazione anziché altri meccanismi di sincronizzazione, ad esempio quelli forniti dall'API di Windows, che non si comportano in modo cooperativo. Per ulteriori informazioni su questi tipi di sincronizzazione e un esempio di codice, vedere [strutture di dati di sincronizzazione](../../parallel/concrt/synchronization-data-structures.md) e [il confronto delle strutture di dati sincronizzazione all'API Windows](../../parallel/concrt/comparing-synchronization-data-structures-to-the-windows-api.md).  
   
  [[Torna all'inizio](#top)]  
   
-##  <a name="yield"></a>Evitare le attività di lunga durata che non producono  
+##  <a name="yield"></a> Evitare le attività di lunga durata che non producono  
  Poiché l'utilità di pianificazione si comporta in modo cooperativo, non fornisce l'equità tra attività. Pertanto, un'attività può impedire altre attività di avvio. Anche se ciò è accettabile in alcuni casi, in altri casi questo può causare un deadlock o l'esaurimento delle risorse.  
   
  Nell'esempio seguente consente di eseguire più attività rispetto al numero di risorse di elaborazione allocate. La prima attività non cedere l'esecuzione dell'utilità di pianificazione e pertanto la seconda attività non viene avviato fino al completamento della prima attività.  
@@ -86,7 +81,7 @@ Questo documento descrive le procedure consigliate che si applicano a più aree 
   
  [[Torna all'inizio](#top)]  
   
-##  <a name="oversubscription"></a>Usare l'Oversubscription per compensare le operazioni che bloccano o avere una latenza elevata  
+##  <a name="oversubscription"></a> Usare l'Oversubscription per compensare le operazioni che bloccano o avere una latenza elevata  
  Il Runtime di concorrenza fornisce primitive di sincronizzazione, ad esempio [Concurrency:: critical_section](../../parallel/concrt/reference/critical-section-class.md), che consentono alle attività bloccata in modo cooperativo e passarsi. Quando un'attività in modo cooperativo blocca o produce, l'utilità di pianificazione può riassegnare le risorse di elaborazione in un altro contesto mentre la prima attività è in attesa per i dati.  
   
  Vi sono casi in cui non è possibile utilizzare il meccanismo di blocco cooperativo fornito dal Runtime di concorrenza. Ad esempio, una libreria esterna si utilizza potrebbe utilizzare un meccanismo di sincronizzazione diversi. Un altro esempio è quando si esegue un'operazione che potrebbe avere una quantità elevata di latenza, ad esempio, quando si utilizza l'API Windows `ReadFile` funzione per leggere dati da una connessione di rete. In questi casi, l'oversubscription può abilitare altre attività da eseguire quando un'altra attività è inattiva. L'oversubscription consente di creare un numero di thread superiore a quello dei thread hardware disponibili.  
@@ -99,7 +94,7 @@ Questo documento descrive le procedure consigliate che si applicano a più aree 
   
  [[Torna all'inizio](#top)]  
   
-##  <a name="memory"></a>Utilizzare funzioni di gestione della memoria simultanee quando possibile  
+##  <a name="memory"></a> Utilizzare funzioni di gestione della memoria simultanee quando possibile  
 
  Utilizzare le funzioni di gestione della memoria, [Concurrency:: Alloc](reference/concurrency-namespace-functions.md#alloc) e [Concurrency:: Free](reference/concurrency-namespace-functions.md#free), quando si dispone di attività dettagliate tramite cui vengono allocati spesso piccoli oggetti la cui durata sono relativamente breve. Il Runtime di concorrenza mantiene una cache di memoria separata per ogni thread in esecuzione. Il `Alloc` e `Free` funzioni allocano e liberano memoria da queste cache senza l'utilizzo di blocchi o barriere di memoria.  
   
@@ -107,7 +102,7 @@ Questo documento descrive le procedure consigliate che si applicano a più aree 
   
  [[Torna all'inizio](#top)]  
   
-##  <a name="raii"></a>Utilizzare il modello RAII per gestire la durata degli oggetti di concorrenza  
+##  <a name="raii"></a> Utilizzare il modello RAII per gestire la durata degli oggetti di concorrenza  
  Il Runtime di concorrenza viene utilizzato per implementare funzionalità come l'annullamento di gestione delle eccezioni. Pertanto, scrivere codice indipendente dalle eccezioni quando si chiama in fase di esecuzione o chiama un'altra libreria che chiama in fase di esecuzione.  
   
  Il *Resource Acquisition Is Initialization* modello (RAII) è un modo per gestire in modo sicuro la durata di un oggetto di concorrenza in un ambito specifico. Sotto il modello RAII, una struttura di dati viene allocata nello stack. La struttura dei dati Inizializza o acquisisce una risorsa quando viene creato ed elimina o rilascia tale risorsa quando viene eliminata la struttura dei dati. Il modello RAII garantisce che il distruttore viene chiamato prima che l'ambito che lo contiene viene chiuso. Questo modello è utile quando una funzione contiene più `return` istruzioni. Questo modello consente inoltre di scrivere codice indipendente dalle eccezioni. Quando un `throw` istruzione comporta la rimozione, il distruttore viene chiamato l'oggetto RAII dello stack; pertanto, la risorsa viene sempre correttamente eliminata o rilasciata.  
@@ -138,7 +133,7 @@ Error details:
   
  [[Torna all'inizio](#top)]  
   
-##  <a name="global-scope"></a>Non creare oggetti di concorrenza in ambito globale  
+##  <a name="global-scope"></a> Non creare oggetti di concorrenza in ambito globale  
  Quando si crea un oggetto di concorrenza in ambito globale, nell'applicazione si possono verificare problemi come il deadlock o violazioni di accesso alla memoria.  
   
  Ad esempio, quando si crea un oggetto runtime di concorrenza, tramite il runtime viene creata un'utilità di pianificazione predefinita, se non è già disponibile. Un oggetto runtime creato durante la costruzione di un oggetto globale comporta la creazione di questa utilità di pianificazione predefinita da parte del runtime. Tuttavia, questo processo prevede un blocco interno, che può interferire con l'inizializzazione di altri oggetti che supportano l'infrastruttura del runtime di concorrenza. Questo blocco interno potrebbe essere richiesto da un altro oggetto dell'infrastruttura che non è ancora stato inizializzato e potrebbe verificarsi un deadlock nell'applicazione.  
@@ -151,7 +146,7 @@ Error details:
   
  [[Torna all'inizio](#top)]  
   
-##  <a name="shared-data"></a>Non utilizzare gli oggetti di concorrenza in segmenti di dati condivisi  
+##  <a name="shared-data"></a> Non utilizzare gli oggetti di concorrenza in segmenti di dati condivisi  
  Il Runtime di concorrenza non supporta l'utilizzo di oggetti di concorrenza in una sezione di dati condivisi, ad esempio, una sezione di dati creato dal [data_seg](../../preprocessor/data-seg.md) `#pragma` direttiva. Un oggetto di concorrenza che è condivisi tra più processi è possibile inserire il runtime in uno stato incoerente o non valido.  
   
  [[Torna all'inizio](#top)]  

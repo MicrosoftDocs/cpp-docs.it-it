@@ -1,30 +1,25 @@
 ---
-title: 'Procedura: utilizzare i gruppi di pianificazione per influenzare l''ordine di esecuzione | Documenti Microsoft'
-ms.custom: 
+title: "Procedura: utilizzare i gruppi di pianificazione per influenzare l'ordine di esecuzione | Documenti Microsoft"
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - schedule groups, using [Concurrency Runtime]
 - using schedule groups [Concurrency Runtime]
 ms.assetid: 73124194-fc3a-491e-a23f-fbd7b5a4455c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fcb37c1c14a9d09230bfa5d4fdce1da5eddfb4f3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c41617f562a0abefdecf74d52e7a886ad6326f9e
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-to-use-schedule-groups-to-influence-order-of-execution"></a>Procedura: Usare i gruppi di pianificazione per influenzare l'ordine di esecuzione
 Nel Runtime di concorrenza, l'ordine in cui viene pianificata l'attività è non deterministico. Tuttavia, è possibile utilizzare i criteri di pianificazione per influenzare l'ordine di esecuzione delle attività. In questo argomento viene illustrato come utilizzare i gruppi di pianificazione con il [Concurrency:: SchedulingProtocol](reference/concurrency-namespace-enums.md#policyelementkey) criteri dell'utilità di pianificazione per influenzare l'ordine di esecuzione delle attività.  
@@ -118,7 +113,7 @@ group 1,
 ## <a name="compiling-the-code"></a>Compilazione del codice  
  Copiare il codice di esempio e incollarlo in un progetto di Visual Studio oppure incollarlo in un file denominato `scheduling-protocol.cpp` , quindi eseguire il comando seguente in una finestra del prompt dei comandi di Visual Studio.  
   
- **CL.exe /EHsc pianificazione-protocol.cpp**  
+ **/EHsc CL.exe pianificazione-protocol.cpp**  
   
 ## <a name="see-also"></a>Vedere anche  
  [Gruppi di pianificazione](../../parallel/concrt/schedule-groups.md)   

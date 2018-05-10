@@ -2,9 +2,6 @@
 title: 'Funzioni dello spazio dei nomi Concurrency:: Direct3D (AMP) | Documenti Microsoft'
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - amp/Concurrency::direct3d::abs
@@ -27,17 +24,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 28943b62-52c9-42dc-baf1-ca7b095c1a19
-caps.latest.revision: 9
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b200ce8329c10fe2257ca3ce9ca8cb61125390fc
-ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
+ms.openlocfilehash: 57015cc84053216e76f3459170c3dde9a26bb43c
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="concurrencydirect3d-namespace-functions-amp"></a>Funzioni dello spazio dei nomi Concurrency:: Direct3D (AMP)
 ||||  
@@ -48,7 +43,7 @@ ms.lasthandoff: 04/10/2018
 |[firstbithigh](#firstbithigh)|[firstbitlow](#firstbitlow)|[get_buffer](#get_buffer)|  
 |[imax](#imax)|[imin](#imin)|[is_timeout_disabled](#is_timeout_disabled)|  
 |[mad](#mad)|[make_array](#make_array)|[Noise](#noise)|  
-|[radians](#radians)|[rcp](#rcp)|[reversebits](#reversebits)|  
+|[radianti](#radians)|[rcp](#rcp)|[reversebits](#reversebits)|  
 |[saturate](#saturate)|[sign](#sign)|[smoothstep](#smoothstep)|  
 |[step](#step)|[umax](#umax)|[umin](#umin)|  
 

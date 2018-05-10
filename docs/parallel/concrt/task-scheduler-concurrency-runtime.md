@@ -1,13 +1,10 @@
 ---
-title: "Utilità di pianificazione (Runtime di concorrenza) | Documenti Microsoft"
-ms.custom: 
+title: Utilità di pianificazione (Runtime di concorrenza) | Documenti Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - scheduler policies [Concurrency Runtime]
 - task scheduler [Concurrency Runtime], wait function
 ms.assetid: 9aba278c-e0c9-4ede-b7c6-fedf7a365d90
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d2d2d1fa21299867ba7a295ad9ef17759cab6c86
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: b76aaa0310e9f481ea65a0ab0600a0e3ae6aed7c
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="task-scheduler-concurrency-runtime"></a>Utilità di pianificazione (runtime di concorrenza)
 Negli argomenti contenuti in questa parte della documentazione vengono descritte le funzionalità principali dell'utilità di pianificazione del runtime di concorrenza. L'Utilità di pianificazione è utile quando si vuole ottimizzare le prestazioni del codice esistente che usa il runtime di concorrenza.  

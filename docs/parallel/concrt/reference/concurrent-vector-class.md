@@ -1,12 +1,9 @@
 ---
 title: Classe concurrent_vector | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - concurrent_vector
@@ -42,17 +39,15 @@ dev_langs:
 helpviewer_keywords:
 - concurrent_vector class
 ms.assetid: a217b4ac-af2b-4d41-94eb-09a75ee28622
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b1f196a4eaf8685a33b1ef4847e44f62015ed1ed
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: e120e072fb3f56788cbf39fbbc3887f5c816f4ef
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="concurrentvector-class"></a>Classe concurrent_vector
 La classe `concurrent_vector` è una classe contenitore di sequenze che consente un accesso casuale a qualsiasi elemento. Abilita accodamento, accesso elementi, accesso iteratori e operazioni traversali di iterazione indipendenti dalla concorrenza.  
@@ -133,7 +128,7 @@ class concurrent_vector: protected details::_Allocator_base<T,
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[operator[]](#operator_at)|Di overload. Fornisce l'accesso all'elemento in corrispondenza dell'indice specificato in un vettore simultaneo. Questo metodo è indipendente dalla concorrenza per le operazioni di lettura e anche durante la crescita del vettore, purché l'aver verificato che il valore `_Index` è inferiore alla dimensione del vettore simultaneo.|  
+|[operator]](#operator_at)|Di overload. Fornisce l'accesso all'elemento in corrispondenza dell'indice specificato in un vettore simultaneo. Questo metodo è indipendente dalla concorrenza per le operazioni di lettura e anche durante la crescita del vettore, purché l'aver verificato che il valore `_Index` è inferiore alla dimensione del vettore simultaneo.|  
 |[operator=](#operator_eq)|Di overload. Assegna il contenuto di un altro `concurrent_vector` questo oggetto. Questo metodo non è indipendente dalla concorrenza.|  
   
 ## <a name="remarks"></a>Note  
@@ -219,7 +214,7 @@ const_reference back() const;
 ### <a name="return-value"></a>Valore restituito  
  Riferimento o `const` fare riferimento all'ultimo elemento nel vettore simultaneo.  
   
-##  <a name="begin"></a> begin 
+##  <a name="begin"></a> Begin 
 
  Restituisce un iteratore di tipo `iterator` o `const_iterator` all'inizio del vettore simultaneo. Questo metodo è indipendente dalla concorrenza.  
   
@@ -483,7 +478,7 @@ size_type max_size() const;
 ### <a name="return-value"></a>Valore restituito  
  Il numero massimo di elementi di `concurrent_vector` oggetto può contenere.  
   
-##  <a name="operator_eq"></a> operator = 
+##  <a name="operator_eq"></a> operator= 
 
  Assegna il contenuto di un altro `concurrent_vector` questo oggetto. Questo metodo non è indipendente dalla concorrenza.  
   
@@ -639,7 +634,7 @@ size_type size() const;
 ### <a name="remarks"></a>Note  
  La dimensione restituita è garantita da includere tutti gli elementi aggiunti dalle chiamate alla funzione `push_back`, o l'aumento delle operazioni completate prima di richiamare questo metodo. Tuttavia, può includere anche elementi allocati ma ancora in fase di costruzione da chiamate simultanee a uno dei metodi di crescita.  
   
-##  <a name="swap"></a> swap 
+##  <a name="swap"></a> Swap 
 
  Scambia il contenuto di due vettori simultanei. Questo metodo non è indipendente dalla concorrenza.  
   

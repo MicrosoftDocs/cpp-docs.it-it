@@ -1,42 +1,37 @@
 ---
 title: Libreria di agenti asincroni | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Agents Library
 - Asynchronous Agents Library
 ms.assetid: d2a72a31-8ba6-4220-ad7a-e403a6acaa42
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: be12f47a6fb33350137a8f9b1c78ff75519c8af7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a8bb1ce7a0c449d5c09e49ad16435e7732ddfcc1
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="asynchronous-agents-library"></a>libreria di agenti asincroni
 Libreria di agenti asincroni (o semplicemente *libreria di agenti*) fornisce un modello di programmazione che consente di aumentare l'affidabilità dello sviluppo di applicazioni abilitate per la concorrenza. La libreria di agenti è una libreria di modelli di C++ che promuove un modello di programmazione basato su attori e attività di pipelining e il passaggio di un flusso di dati dei messaggi in-process. La libreria di agenti si basa sui componenti di gestione risorse e pianificazione del Runtime di concorrenza.  
   
 ## <a name="programming-model"></a>Modello di programmazione  
- La libreria di agenti offre alternative a uno stato condiviso consentendo la connessione di componenti isolati tramite un modello di comunicazione asincrona che è basato sul flusso di dati anziché il flusso di controllo. *Flussi di dati* fa riferimento a una programmazione modello in cui vengono eseguiti i calcoli quando tutti i dati necessari è disponibile. *flusso di controllo* fa riferimento a un modello di programmazione in cui i calcoli vengono eseguiti in un ordine predeterminato.  
+ La libreria di agenti offre alternative a uno stato condiviso consentendo la connessione di componenti isolati tramite un modello di comunicazione asincrona che è basato sul flusso di dati anziché il flusso di controllo. *Flussi di dati* fa riferimento a una programmazione modello in cui i calcoli vengono eseguiti quando tutti i dati necessari è disponibile. *flusso di controllo* fa riferimento a un modello di programmazione in cui i calcoli vengono eseguiti in un ordine predeterminato.  
   
  Il modello di programmazione del flusso di dati è correlato al concetto di *passaggio dei messaggi*, in base al quale i componenti indipendenti di un programma comunicano con un altro programma inviando messaggi.  
   
  La libreria di agenti è composta da tre componenti: *agenti asincroni*, *blocchi dei messaggi asincroni*, e *funzioni di passaggio dei messaggi*. Gli agenti mantengono lo stato e utilizzano i blocchi dei messaggi e funzioni di passaggio dei messaggi per comunicare tra loro e con i componenti esterni. Funzioni di passaggio dei messaggi consentono agli agenti di inviare e ricevere messaggi da e verso i componenti esterni. Blocchi dei messaggi asincroni ricezione dei messaggi e consentono agli agenti di comunicare in modo sincronizzato.  
   
- Nella figura seguente viene illustrato come due agenti utilizzare blocchi dei messaggi e funzioni di passaggio dei messaggi per comunicare. In questa illustrazione, `agent1` invia un messaggio `agent2` utilizzando il [Concurrency:: Send](reference/concurrency-namespace-functions.md#send) (funzione) e un [Concurrency:: unbounded_buffer](reference/unbounded-buffer-class.md) oggetto. `agent2`Usa il [Concurrency:: Receive](reference/concurrency-namespace-functions.md#receive) funzione per leggere il messaggio. `agent2`Usa lo stesso metodo per inviare un messaggio a `agent1`. Le frecce tratteggiate rappresentano il flusso di dati tra gli agenti. Le frecce continue connettono gli agenti ai blocchi di messaggio che scrivere o leggere.  
+ Nella figura seguente viene illustrato come due agenti utilizzare blocchi dei messaggi e funzioni di passaggio dei messaggi per comunicare. In questa illustrazione, `agent1` invia un messaggio `agent2` utilizzando il [Concurrency:: Send](reference/concurrency-namespace-functions.md#send) (funzione) e un [Concurrency:: unbounded_buffer](reference/unbounded-buffer-class.md) oggetto. `agent2` Usa il [Concurrency:: Receive](reference/concurrency-namespace-functions.md#receive) funzione per leggere il messaggio. `agent2` Usa lo stesso metodo a cui per inviare un messaggio `agent1`. Le frecce tratteggiate rappresentano il flusso di dati tra gli agenti. Le frecce continue connettono gli agenti ai blocchi di messaggio che scrivere o leggere.  
   
  ![I componenti della libreria di agenti](../../parallel/concrt/media/agent_librarycomp.png "agent_librarycomp")  
   

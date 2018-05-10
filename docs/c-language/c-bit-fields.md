@@ -1,30 +1,25 @@
 ---
 title: Campi di bit C | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - bitfields
 - bit fields
 ms.assetid: 9faf74c4-7fd5-4b44-ad18-04485193d06e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e1102c43677fd58a254f36c92698b9353c20fe32
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: af47bbebdf3b3a71e2b63b07a1fa467801728061
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="c-bit-fields"></a>Campi di bit C
 In aggiunta alle dichiarazioni dei membri di una struttura o di un'unione, un dichiaratore di struttura può anche essere un numero specificato di bit, definito campo di bit. Per il nome del campo, la lunghezza viene impostata all'esterno del dichiaratore tramite due punti. Un campo di bit viene interpretato come un tipo integrale.  
@@ -33,7 +28,7 @@ In aggiunta alle dichiarazioni dei membri di una struttura o di un'unione, un di
  *struct-declarator*:  
  *declarator*  
   
- *type-specifier declarator* opt**:** *constant-expression*  
+ *type-specifier declarator* opt **:** *constant-expression*  
   
  L'elemento *constant-expression* specifica la lunghezza del campo in bit. L'elemento *type-specifier* per `declarator` deve essere `unsigned int`, **signed int** o `int` e l'elemento *constant-expression* deve essere un valore intero non negativo. Se il valore è zero, la dichiarazione non ha un elemento `declarator`. Matrici di campi di bit, puntatori a campi di bit e funzioni che restituiscono campi di bit non sono consentiti. L'elemento `declarator` facoltativo assegna il nome al campo di bit. I campi di bit possono essere dichiarati come parte di una struttura. L'operatore address-of (**&**) non può essere applicato ai componenti di un campo di bit.  
   

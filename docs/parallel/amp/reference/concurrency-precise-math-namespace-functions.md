@@ -1,10 +1,7 @@
 ---
 title: 'Funzioni dello spazio dei nomi Concurrency:: precise_math | Documenti Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - amp_math/Concurrency::precise_math::acos
@@ -97,17 +94,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: fae53ab4-d1c5-45bb-a6a0-a74258e9aea3
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c1d329e13d686e7f378646105b4bcaed2dbb3a3a
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 31648a07ff09ba5babebda06407ccade6a5d8fad
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="concurrencyprecisemath-namespace-functions"></a>Funzioni dello spazio dei nomi Concurrency:: precise_math
 ||||  
@@ -752,7 +747,7 @@ inline double expm1(double exponent) restrict(amp);
   
 ### <a name="parameters"></a>Parametri  
  `exponent`  
- Il termine esponenziale  *n*  dell'espressione matematica `e` <sup> n </sup>, dove `e` è la base del logaritmo naturale.  
+ Il termine esponenziale *n* dell'espressione matematica `e` <sup>n</sup>, dove `e` costituisce la base del logaritmo naturale.  
   
 ### <a name="return-value"></a>Valore restituito  
  Restituisce l'esponenziale in base e dell'argomento, meno 1  
@@ -766,7 +761,7 @@ inline float expm1f(float exponent) restrict(amp);
   
 ### <a name="parameters"></a>Parametri  
  `exponent`  
- Il termine esponenziale  *n*  dell'espressione matematica `e` <sup> n </sup>, dove `e` è la base del logaritmo naturale.  
+ Il termine esponenziale *n* dell'espressione matematica `e` <sup>n</sup>, dove `e` costituisce la base del logaritmo naturale.  
   
 ### <a name="return-value"></a>Valore restituito  
  Restituisce l'esponenziale in base e dell'argomento, meno 1  
@@ -1076,7 +1071,7 @@ inline double fmod(
  Il secondo argomento a virgola mobile.  
   
 ### <a name="return-value"></a>Valore restituito  
- Il resto della `_X` diviso `_Y`; ovvero, il valore di `_X`  -  `_Y`  *n* , dove  *n*  è un numero intero tale che la grandezza del `_X`  -  `_Y`  *n*  è minore della grandezza di `_Y`.  
+ Il resto della `_X` diviso `_Y`; vale a dire, il valore di `_X`  -  `_Y` *n*, dove *n* è un integer intero tale che la grandezza del `_X`  -  `_Y` *n* è minore della grandezza di `_Y`.  
   
 ##  <a name="fmodf"></a>  fmodf  
  Calcola il resto del primo argomento specificato diviso per il secondo argomento specificato.  
@@ -1095,7 +1090,7 @@ inline float fmodf(
  Il secondo argomento a virgola mobile.  
   
 ### <a name="return-value"></a>Valore restituito  
- Il resto della `_X` diviso `_Y`; ovvero, il valore di `_X`  -  `_Y`  *n* , dove  *n*  è un numero intero tale che la grandezza del `_X`  -  `_Y`  *n*  è minore della grandezza di `_Y`.  
+ Il resto della `_X` diviso `_Y`; vale a dire, il valore di `_X`  -  `_Y` *n*, dove *n* è un integer intero tale che la grandezza del `_X`  -  `_Y` *n* è minore della grandezza di `_Y`.  
   
 ##  <a name="fpclassify"></a>  fpclassify  
  Classifica il valore dell'argomento come un valore NaN, infinito, normale, subnormal zero  
@@ -1321,7 +1316,7 @@ inline double ldexp(
  Valore intero, esponente  
   
 ### <a name="return-value"></a>Valore restituito  
- Restituisce x * 2 ^ _Exp  
+ Returns _X * 2^_Exp  
   
 ##  <a name="ldexpf"></a>  ldexpf  
  Calcola un numero reale compreso tra la mantissa specificata e un esponente.  
@@ -1340,7 +1335,7 @@ inline float ldexpf(
  Valore intero, esponente  
   
 ### <a name="return-value"></a>Valore restituito  
- Restituisce x * 2 ^ _Exp  
+ Returns _X * 2^_Exp  
   
 ##  <a name="lgamma"></a>  lgamma  
  Calcola il logaritmo naturale del valore assoluto della gamma dell'argomento  
@@ -1998,7 +1993,7 @@ inline double scalb(
  Valore a virgola mobile  
   
 ### <a name="return-value"></a>Valore restituito  
- Returns _X * (FLT_RADIX ^ _Y)  
+ Restituisce x * (FLT_RADIX ^ y)  
   
 ##  <a name="scalbf"></a>  scalbf  
  Moltiplica x da FLT_RADIX per la power y  
@@ -2017,7 +2012,7 @@ inline float scalbf(
  Valore a virgola mobile  
   
 ### <a name="return-value"></a>Valore restituito  
- Returns _X * (FLT_RADIX ^ _Y)  
+ Restituisce x * (FLT_RADIX ^ y)  
   
 ##  <a name="scalbn"></a>  scalbn  
  Moltiplica x da FLT_RADIX per la power y  
@@ -2041,7 +2036,7 @@ inline double scalbn(
  Valore Integer  
   
 ### <a name="return-value"></a>Valore restituito  
- Returns _X * (FLT_RADIX ^ _Y)  
+ Restituisce x * (FLT_RADIX ^ y)  
   
 ##  <a name="scalbnf"></a>  scalbnf  
  Moltiplica x da FLT_RADIX per la power y  
@@ -2060,7 +2055,7 @@ inline float scalbnf(
  Valore Integer  
   
 ### <a name="return-value"></a>Valore restituito  
- Returns _X * (FLT_RADIX ^ _Y)  
+ Restituisce x * (FLT_RADIX ^ y)  
   
 ##  <a name="signbit"></a>  signbit  
  Determina se il segno di x è negativo  

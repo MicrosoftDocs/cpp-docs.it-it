@@ -1,12 +1,9 @@
 ---
 title: init_seg | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - vc-pragma.init_seg
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - init_seg pragma
 - data segment initializing [C++]
 ms.assetid: 40a5898a-5c85-4aa9-8d73-3d967eb13610
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a092ed554af1b078772d53fd0cc663e250a6ea3c
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: f3be66fc2639253d1bbcfec21f544d5537e084e8
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="initseg"></a>init_seg
 **Sezione specifica C++**  
@@ -58,14 +53,14 @@ ms.lasthandoff: 02/23/2018
  **user**  
  Disponibile per qualsiasi utente. Gli oggetti in questo gruppo sono costruiti per ultimi.  
   
- *section-name*  
+ *nome di sezione*  
  Consente la specifica esplicita della sezione di inizializzazione. Gli oggetti specificati dall'utente *-nome della sezione* non vengono costruiti in modo implicito; tuttavia, gli indirizzi vengono inseriti nella sezione denominata da *-nome della sezione*.  
   
  Il nome della sezione fornita conterrà i puntatori a funzioni di supporto che costruiranno gli oggetti globali dichiarati in tale modulo dopo il pragma.  
   
  Per un elenco di nomi di non utilizzare durante la creazione di una sezione, vedere [/sezione](../build/reference/section-specify-section-attributes.md).  
   
- *func-name*  
+ *Func-nome*  
  Specifica una funzione da chiamare invece di `atexit` al termine del programma. Questa funzione di supporto chiama inoltre [atexit](../c-runtime-library/reference/atexit.md) con un puntatore al distruttore per l'oggetto globale. Se si specifica un identificatore di funzione nel pragma del modulo,  
   
 ```  

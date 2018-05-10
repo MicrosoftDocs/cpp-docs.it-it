@@ -1,12 +1,9 @@
 ---
 title: Classe unorm_2 | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-amp
 ms.topic: reference
 f1_keywords:
 - amp_short_vectors/Concurrency::graphics::unnorm_2::operator+=
@@ -37,17 +34,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 62e88ea7-e29f-4f62-95ce-61a1f39f5e34
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 80e5cf0a1a1c3e2a4e10520772ebea931fdf3634
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 678cb8a782d07b64b93f87963b0ead500136fbcf
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="unorm2-class"></a>Classe unorm_2
 Rappresenta un vettore short di due numeri normale senza segno.  
@@ -112,11 +107,11 @@ class unorm_2;
 |Nome|Descrizione|  
 |----------|-----------------|  
 |unorm_2::g||  
-|unorm_2::gr||  
+|unorm_2::GR||  
 |unorm_2::r||  
 |unorm_2::rg||  
 |unorm_2::x||  
-|unorm_2::xy||  
+|unorm_2::XY||  
 |unorm_2::y||  
 |unorm_2::yx||  
   

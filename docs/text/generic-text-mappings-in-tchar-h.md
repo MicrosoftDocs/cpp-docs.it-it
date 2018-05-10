@@ -1,13 +1,10 @@
 ---
 title: Mapping testo generico in Tchar. h | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - tchar.h
 dev_langs:
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - TCHAR.H data types, mapping
 - mappings [C++], TCHAR.H
 ms.assetid: 01e1bb74-5a01-4093-8720-68b6c1fdda80
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 405e95e9eb8fb760e2688e164178cf9270f31877
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c7ed29b03a37c9b911a954192152115b1458fd94
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="generic-text-mappings-in-tcharh"></a>Mappature di testo generico in Tchar.h
 Per semplificare il trasporto del codice a livello internazionale, il [!INCLUDE[TLA#tla_ms](../text/includes/tlasharptla_ms_md.md)] libreria run-time fornisce [!INCLUDE[TLA#tla_ms](../text/includes/tlasharptla_ms_md.md)]-mapping testo generico specifiche per molti tipi di dati, routine e altri oggetti. È possibile utilizzare questi mapping, che sono definiti in Tchar. h, per scrivere codice generico che può essere compilato per il formato a byte singolo, multibyte o [!INCLUDE[TLA#tla_unicode](../atl-mfc-shared/reference/includes/tlasharptla_unicode_md.md)] set di caratteri, a seconda delle costanti manifesto definiti tramite un `#define` istruzione. Mapping testo generico sono [!INCLUDE[TLA#tla_ms](../text/includes/tlasharptla_ms_md.md)] estensioni che non sono [!INCLUDE[vcpransi](../atl-mfc-shared/reference/includes/vcpransi_md.md)] compatibile.  
@@ -52,7 +47,7 @@ Per semplificare il trasporto del codice a livello internazionale, il [!INCLUDE[
   
 |# define|Versione compilata|Esempio|  
 |---------------|----------------------|-------------|  
-|`_UNICODE`|[!INCLUDE[TLA#tla_unicode](../atl-mfc-shared/reference/includes/tlasharptla_unicode_md.md)](caratteri wide)|`_tcsrev` viene mappata a `_wcsrev`|  
+|`_UNICODE`|[!INCLUDE[TLA#tla_unicode](../atl-mfc-shared/reference/includes/tlasharptla_unicode_md.md)] (caratteri wide)|`_tcsrev` viene mappata a `_wcsrev`|  
 |`_MBCS`|Caratteri multibyte|`_tcsrev` viene mappata a `_mbsrev`|  
 |Nessuno (il valore predefinito è Nessuno `_UNICODE` né `_MBCS` definito)|SBCS ([!INCLUDE[TLA#tla_ascii](../text/includes/tlasharptla_ascii_md.md)])|`_tcsrev` viene mappata a `strrev`|  
   
@@ -67,7 +62,7 @@ Per semplificare il trasporto del codice a livello internazionale, il [!INCLUDE[
 |`_TSCHAR`|`signed char`|`signed char`|`wchar_t`|  
 |`_TUCHAR`|`unsigned char`|`unsigned char`|`wchar_t`|  
 |`_TXCHAR`|`char`|`unsigned char`|`wchar_t`|  
-|`_T` o `_TEXT`|Nessun effetto (rimosso dal preprocessore)|Nessun effetto (rimosso dal preprocessore)|`L`(converte il carattere o la stringa seguente relativo [!INCLUDE[TLA#tla_unicode](../atl-mfc-shared/reference/includes/tlasharptla_unicode_md.md)] controparte)|  
+|`_T` o `_TEXT`|Nessun effetto (rimosso dal preprocessore)|Nessun effetto (rimosso dal preprocessore)|`L` (converte il carattere o la stringa seguente relativo [!INCLUDE[TLA#tla_unicode](../atl-mfc-shared/reference/includes/tlasharptla_unicode_md.md)] controparte)|  
   
  Per un elenco di mapping testo generico di routine, variabili e altri oggetti, vedere [mapping testo generico](../c-runtime-library/generic-text-mappings.md) in riferimenti alla libreria di Run-Time.  
   

@@ -1,12 +1,9 @@
 ---
 title: Classe source_link_manager | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - source_link_manager
@@ -26,17 +23,15 @@ dev_langs:
 helpviewer_keywords:
 - source_link_manager class
 ms.assetid: 287487cf-e0fe-4c35-aa3c-24f081d1ddae
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f6368511a7e824e6e1bb69542815fce1e864a964
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: f8e17626fc870242c97a9ad66a77e5e3b77b1ed1
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="sourcelinkmanager-class"></a>Classe source_link_manager
 L'oggetto `source_link_manager` gestisce i collegamenti di rete dei blocchi della messaggistica nei blocchi `ISource`.  
@@ -76,7 +71,7 @@ class source_link_manager;
 |----------|-----------------|  
 |[add](#add)|Aggiunge un collegamento di origine per il `source_link_manager` oggetto.|  
 |[begin](#begin)|Restituisce un iteratore al primo elemento nel file di `source_link_manager` oggetto.|  
-|[contains](#contains)|Ricerche di `network_link_registry` all'interno di questa `source_link_manager` oggetto per un blocco specificato.|  
+|[contiene](#contains)|Ricerche di `network_link_registry` all'interno di questa `source_link_manager` oggetto per un blocco specificato.|  
 |[count](#count)|Conta il numero di blocchi collegati nel `source_link_manager` oggetto.|  
 |[reference](#reference)|Acquisisce un riferimento nel `source_link_manager` oggetto.|  
 |[register_target_block](#register_target_block)|Registra il blocco di destinazione che contiene questo oggetto `source_link_manager` oggetto.|  
@@ -107,7 +102,7 @@ void add(_EType _Link);
  `_Link`  
  Un puntatore a un blocco da aggiungere.  
   
-##  <a name="begin"></a> begin 
+##  <a name="begin"></a> Begin 
 
  Restituisce un iteratore al primo elemento nel file di `source_link_manager` oggetto.  
   

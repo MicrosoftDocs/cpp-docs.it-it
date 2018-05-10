@@ -1,13 +1,10 @@
 ---
 title: Blocchi dei messaggi asincroni | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - asynchronous message blocks
 - greedy join [Concurrency Runtime]
 ms.assetid: 79c456c0-1692-480c-bb67-98f2434c1252
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 97669589af295c681fa21d6faeb31ec01be37e51
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5de4a9ed20e20c03f44f8b8d421a628f220099f7
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="asynchronous-message-blocks"></a>Blocchi dei messaggi asincroni
 
@@ -56,18 +51,18 @@ La libreria di agenti fornisce diversi tipi di blocco dei messaggi che consenton
   
 - [Classe timer](#timer)  
   
-- [Il filtro dei messaggi](#filtering)  
+- [Il filtro messaggi](#filtering)  
   
 - [Prenotazione dei messaggi](#reservation)  
   
-##  <a name="sources_and_targets"></a>Origini e destinazioni  
+##  <a name="sources_and_targets"></a> Origini e destinazioni  
  Origini e destinazioni sono due partecipanti importanti nel passaggio dei messaggi. Oggetto *origine* fa riferimento a un endpoint di comunicazione che invia messaggi. Oggetto *destinazione* fa riferimento a un endpoint di comunicazione che riceve i messaggi. È possibile considerare un'origine come un endpoint da cui si legge e una destinazione come un endpoint che si scrive in. Le applicazioni si connettono origini e destinazioni insieme modulo *le reti di messaggistica*.  
   
  La libreria di agenti utilizza due classi astratte per rappresentare le origini e destinazioni: [Concurrency:: ISource](../../parallel/concrt/reference/isource-class.md) e [Concurrency:: ITarget](../../parallel/concrt/reference/itarget-class.md). Tipi di blocchi di messaggio che agiscono come origini derivano da `ISource`; tipi di blocchi di messaggio che agiscono come destinazioni derivano da `ITarget`. Tipi di blocco di messaggi che agiscono come origini e destinazioni derivano da entrambi `ISource` e `ITarget`.  
   
  [[Torna all'inizio](#top)]  
   
-##  <a name="propagation"></a>Propagazione dei messaggi  
+##  <a name="propagation"></a> Propagazione dei messaggi  
  *La propagazione dei messaggi* è l'azione di invio di un messaggio da un componente a un altro. Quando un blocco di messaggio viene offerto un messaggio, è possibile accettare, rifiutare o posticipare il messaggio. Ogni tipo di blocco di messaggio archivia e trasmette i messaggi in modi diversi. Ad esempio, il `unbounded_buffer` classe archivia un numero illimitato di messaggi, la `overwrite_buffer` classe archivia un solo messaggio alla volta e la classe transformer archivia una versione modificata di ogni messaggio. Questi tipi di blocchi di messaggio sono descritti in dettaglio più avanti in questo documento.  
   
  Quando un messaggio viene accettato un blocco di messaggi, può facoltativamente eseguire lavoro e, se il blocco dei messaggi è un'origine, passare il messaggio risultante a un altro membro della rete. Un blocco di messaggi è possibile utilizzare una funzione di filtro per rifiutare i messaggi che non desidera ricevere. Filtri sono descritti in dettaglio più avanti in questo argomento, nella sezione [filtro messaggi](#filtering). Un blocco di messaggio che viene posticipato un messaggio consente di riservare il messaggio e di utilizzarlo in un secondo momento. La prenotazione dei messaggi è descritta in dettaglio più avanti in questo argomento, nella sezione [messaggio prenotazione](#reservation).  
@@ -79,7 +74,7 @@ La libreria di agenti fornisce diversi tipi di blocco dei messaggi che consenton
   
  [[Torna all'inizio](#top)]  
   
-##  <a name="overview"></a>Panoramica dei tipi di blocchi di messaggio  
+##  <a name="overview"></a> Panoramica dei tipi di blocchi di messaggio  
  Nella tabella seguente descrive brevemente il ruolo dei tipi di blocco dei messaggi importanti.  
   
  [unbounded_buffer](#unbounded_buffer)  
@@ -91,13 +86,13 @@ La libreria di agenti fornisce diversi tipi di blocco dei messaggi che consenton
  [single_assignment](#single_assignment)  
  Archivia un messaggio che può essere scritto una sola volta e leggere più volte.  
   
- [chiamata](#call)  
+ [call](#call)  
  Esegue il lavoro quando viene ricevuto un messaggio.  
   
- [classe Transformer](#transformer)  
+ [transformer](#transformer)  
  Esegue il lavoro quando riceve i dati e il risultato di tale lavoro viene inviato a un altro blocco di destinazione. La `transformer` classe può agire su diversi tipi di input e output.  
   
- [scelta](#choice)  
+ [choice](#choice)  
  Seleziona il primo messaggio disponibile da un set di origini.  
   
  [join e a più tipi](#join)  
@@ -110,11 +105,11 @@ La libreria di agenti fornisce diversi tipi di blocco dei messaggi che consenton
   
 - *Tipo di propagazione*: indica se il blocco di messaggio funge da un'origine dei dati, un destinatario di dati o entrambi.  
   
-- *Ordinamento dei messaggi*: indica se il blocco dei messaggi mantiene l'ordine originale in cui i messaggi vengono inviati o ricevuti. Ogni tipo di blocco di messaggi predefinito mantiene l'ordine originale in cui invia o riceve messaggi.  
+- *Ordinamento dei messaggi*: indica se il blocco di messaggio mantiene l'ordine originale in cui i messaggi vengono inviati o ricevuti. Ogni tipo di blocco di messaggi predefinito mantiene l'ordine originale in cui invia o riceve messaggi.  
   
-- *Conteggio di origine*: il numero massimo di origini che è possibile leggere il blocco dei messaggi.  
+- *Conteggio di origine*: il numero massimo di origini che può leggere il blocco di messaggi.  
   
-- *Numero di destinazione*: il numero massimo di destinazioni in cui è possibile scrivere il blocco dei messaggi.  
+- *Conteggio di destinazione*: il numero massimo di destinazioni in cui è possibile scrivere il blocco di messaggi.  
   
  La tabella seguente illustra queste caratteristiche correlazione tra i vari tipi di blocco dei messaggi.  
   
@@ -134,7 +129,7 @@ La libreria di agenti fornisce diversi tipi di blocco dei messaggi che consenton
   
  [[Torna all'inizio](#top)]  
   
-##  <a name="unbounded_buffer"></a>Classe unbounded_buffer  
+##  <a name="unbounded_buffer"></a> Classe unbounded_buffer  
  Il [Concurrency:: unbounded_buffer](reference/unbounded-buffer-class.md) classe rappresenta una struttura di messaggistica asincrona di utilizzo generale. Questa classe archivia una coda di messaggi FIFO (First In, First Out) che possono essere letti da più destinazioni o in cui possono scrivere più origini. Quando una destinazione riceve un messaggio da un `unbounded_buffer` dell'oggetto, il messaggio viene rimosso dalla coda di messaggi. Pertanto, anche se un `unbounded_buffer` oggetto può avere più destinazioni, ogni messaggio verrà ricevuto da una sola destinazione. La classe `unbounded_buffer` è utile quando si vogliono passare più messaggi a un altro componente e tale componente deve ricevere ogni messaggio.  
   
 ### <a name="example"></a>Esempio  
@@ -152,7 +147,7 @@ La libreria di agenti fornisce diversi tipi di blocco dei messaggi che consenton
   
  [[Torna all'inizio](#top)]  
   
-##  <a name="overwrite_buffer"></a>Classe overwrite_buffer  
+##  <a name="overwrite_buffer"></a> Classe overwrite_buffer  
  Il [Concurrency:: overwrite_buffer](../../parallel/concrt/reference/overwrite-buffer-class.md) classe simile di `unbounded_buffer` classe, con la differenza che un `overwrite_buffer` oggetto archivia un solo messaggio. Inoltre, quando una destinazione riceve un messaggio da un `overwrite_buffer` dell'oggetto, il messaggio non viene rimosso dal buffer. Pertanto, più destinazioni riceveranno una copia del messaggio.  
   
  La `overwrite_buffer` classe è utile quando si desidera passare più messaggi a un altro componente, ma il componente necessita solo del valore più recente. Questa classe è utile anche quando si vuole trasmettere un messaggio a più componenti.  
@@ -172,7 +167,7 @@ La libreria di agenti fornisce diversi tipi di blocco dei messaggi che consenton
   
  [[Torna all'inizio](#top)]  
   
-##  <a name="single_assignment"></a>Classe single_assignment  
+##  <a name="single_assignment"></a> Classe single_assignment  
  Il [Concurrency:: single_assignment](../../parallel/concrt/reference/single-assignment-class.md) classe simile di `overwrite_buffer` classe, con la differenza che un `single_assignment` oggetto può essere scritto una sola volta. Come per la classe `overwrite_buffer`, quando da una destinazione riceve un messaggio da un oggetto `single_assignment`, il messaggio viene rimosso dalla coda di messaggi. Pertanto, più destinazioni riceveranno una copia del messaggio. La `single_assignment` classe è utile quando si desidera trasmettere un messaggio a più componenti.  
   
 ### <a name="example"></a>Esempio  
@@ -190,7 +185,7 @@ La libreria di agenti fornisce diversi tipi di blocco dei messaggi che consenton
   
  [[Torna all'inizio](#top)]  
   
-##  <a name="call"></a>Call (classe)  
+##  <a name="call"></a> Call (classe)  
  Il [Concurrency:: Call](../../parallel/concrt/reference/call-class.md) funge da classe ricevitore del messaggio che esegue una funzione lavoro alla ricezione dei dati. Questa funzione di lavoro può essere un'espressione lambda, un oggetto funzione o un puntatore a funzione. Oggetto `call` oggetto si comporta in modo diverso da una chiamata di funzione ordinaria poiché agisce in parallelo con altri componenti che inviano messaggi a esso. Se un `call` oggetto sta eseguendo un'operazione quando viene ricevuto un messaggio, il messaggio viene aggiunto a una coda. Ogni `call` messaggi nell'ordine in cui vengono ricevuti in coda processi di oggetto.  
   
 ### <a name="example"></a>Esempio  
@@ -208,7 +203,7 @@ La libreria di agenti fornisce diversi tipi di blocco dei messaggi che consenton
   
  [[Torna all'inizio](#top)]  
   
-##  <a name="transformer"></a>Classe Transformer  
+##  <a name="transformer"></a> Classe Transformer  
  Il [Concurrency:: transformer](../../parallel/concrt/reference/transformer-class.md) classe agisce come un ricevitore di messaggi e come il mittente del messaggio. Il `transformer` classe simile di `call` classe perché esegue una funzione di lavoro definiti dall'utente alla ricezione dei dati. Tuttavia, la `transformer` classe invia anche il risultato della funzione lavoro agli oggetti destinatario. Ad esempio un `call` oggetto, un `transformer` oggetto agisce in parallelo con altri componenti che inviano messaggi a esso. Se un `transformer` oggetto sta eseguendo un'operazione quando viene ricevuto un messaggio, il messaggio viene aggiunto a una coda. Ogni `transformer` oggetto elabora i messaggi in coda nell'ordine in cui vengono ricevuti.  
   
  La `transformer` classe invia il messaggio a una sola destinazione. Se si imposta la `_PTarget` parametro nel costruttore per `NULL`, in un secondo momento, è possibile specificare la destinazione chiamando il [Concurrency:: link_target](reference/source-block-class.md#link_target) metodo.  
@@ -230,7 +225,7 @@ La libreria di agenti fornisce diversi tipi di blocco dei messaggi che consenton
   
  [[Torna all'inizio](#top)]  
   
-##  <a name="choice"></a>Classe Choice  
+##  <a name="choice"></a> Classe Choice  
  Il [Concurrency:: Choice](../../parallel/concrt/reference/choice-class.md) classe seleziona il primo messaggio disponibile da un set di origini. Il `choice` classe rappresenta un meccanismo di flusso di controllo anziché un meccanismo di flusso di dati (l'argomento [libreria di agenti asincroni](../../parallel/concrt/asynchronous-agents-library.md) vengono descritte le differenze tra flussi di dati e del flusso di controllo).  
   
  La lettura da un oggetto choice è simile alla chiamata di funzione API di Windows `WaitForMultipleObjects` quando ne ha il `bWaitAll` parametro impostato su `FALSE`. Tuttavia, la `choice` classe associa i dati dell'evento stesso anziché a un oggetto di sincronizzazione esterno.  
@@ -263,7 +258,7 @@ fib35 received its value first. Result = 9227465
   
  [[Torna all'inizio](#top)]  
   
-##  <a name="join"></a>Classi di join e multitype_join  
+##  <a name="join"></a> Classi di join e multitype_join  
  Il [Concurrency:: join](../../parallel/concrt/reference/join-class.md) e [Concurrency:: multitype_join](../../parallel/concrt/reference/multitype-join-class.md) classi consentono di attendere che ogni membro di un set di origini ricevere un messaggio. La `join` classe agisce sugli oggetti di origine che hanno un tipo di messaggio comune. La `multitype_join` classe agisce sugli oggetti di origine che dispongono di diversi tipi di messaggio.  
   
  Lettura da un `join` o `multitype_join` oggetto simile alla chiamata di funzione API di Windows `WaitForMultipleObjects` quando ne ha il `bWaitAll` parametro impostato su `TRUE`. Tuttavia, come un `choice` oggetto `join` e `multitype_join` gli oggetti utilizzano un meccanismo degli eventi che associa i dati dell'evento stesso anziché a un oggetto di sincronizzazione esterno.  
@@ -293,7 +288,7 @@ fib35 = 9227465fib37 = 24157817half_of_fib42 = 1.33957e+008
   
  [[Torna all'inizio](#top)]  
   
-##  <a name="timer"></a>Classe Timer  
+##  <a name="timer"></a> Classe Timer  
  La concorrenza::[classe timer](../../parallel/concrt/reference/timer-class.md) funge da origine di un messaggio. Oggetto `timer` oggetto invia un messaggio a una destinazione dopo che è trascorso un periodo di tempo specificato. La `timer` classe è utile quando è necessario ritardare l'invio di un messaggio o si desidera inviare un messaggio a intervalli regolari.  
   
 
@@ -319,7 +314,7 @@ Computing fib(42)..................................................result is 267
   
  [[Torna all'inizio](#top)]  
   
-##  <a name="filtering"></a>Il filtro dei messaggi  
+##  <a name="filtering"></a> Il filtro messaggi  
  Quando si crea un oggetto di blocco di messaggi, è possibile fornire un *funzione filter* che determina se il blocco dei messaggi è accettato o rifiutato un messaggio. Una funzione di filtro è utile per garantire che un blocco di messaggi riceve solo determinati valori.  
   
  Nell'esempio seguente viene illustrato come creare un `unbounded_buffer` oggetto che utilizza una funzione di filtro per accettare solo un numero pari. Il `unbounded_buffer` rifiuta i numeri dispari, oggetto e pertanto non li propaga ai relativi blocchi di destinazione.  
@@ -345,8 +340,8 @@ bool (T const &)
   
  [[Torna all'inizio](#top)]  
   
-##  <a name="reservation"></a>Prenotazione dei messaggi  
- *Messaggio di prenotazione* consente di riservare un messaggio per un uso successivo di un blocco di messaggio. In genere, la prenotazione dei messaggi non viene utilizzata direttamente. Tuttavia, il messaggio di informazioni sulla prenotazione consentono una migliore comprendere il comportamento di alcuni tipi di blocchi di messaggi predefinito.  
+##  <a name="reservation"></a> Prenotazione dei messaggi  
+ *Messaggio prenotazione* consente a un blocco di messaggi da riservare un messaggio per un uso successivo. In genere, la prenotazione dei messaggi non viene utilizzata direttamente. Tuttavia, il messaggio di informazioni sulla prenotazione consentono una migliore comprendere il comportamento di alcuni tipi di blocchi di messaggi predefinito.  
   
  Prendere in considerazione i join greedy e non greedy. Entrambi questi usare prenotazione dei messaggi per riservare i messaggi per un uso successivo. Come descritto in precedenza, un join non-greedy riceve messaggi in due fasi. Durante la prima fase, un non-greedy `join` oggetto attende che ciascuna delle sue origini per ricevere un messaggio. Un join non-greedy tenta quindi di riservare a ognuno di questi messaggi. Se è possibile prenotare ogni messaggio, utilizza tutti i messaggi e li propaga alla destinazione. In caso contrario, rilascia, o Annulla, le prenotazioni di messaggio e attende nuovamente per ogni origine di un messaggio.  
   

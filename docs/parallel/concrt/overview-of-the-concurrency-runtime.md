@@ -1,13 +1,10 @@
 ---
 title: Panoramica del Runtime di concorrenza | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - Concurrency Runtime, overview
 - Concurrency Runtime, lambda expressions
 ms.assetid: 56237d96-10b0-494a-9cb4-f5c5090436c5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5c604ebc03204ca0dff24e2ceccdf6bb6dd543df
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 67f0497f600cf5d528b2c41601b7a02c08771861
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="overview-of-the-concurrency-runtime"></a>Cenni preliminari sul runtime di concorrenza
 Questo documento fornisce i cenni preliminari sul runtime di concorrenza. Illustra i vantaggi del runtime di concorrenza, quando usarlo e che modo i relativi componenti interagiscono tra loro e con il sistema operativo e le applicazioni.  
@@ -45,7 +40,7 @@ Questo documento fornisce i cenni preliminari sul runtime di concorrenza. Illust
   
 -   [Requirements](#requirements)  
   
-##  <a name="runtime">Motivo per cui un Runtime di concorrenza è importante</a>  
+##  <a name="runtime"></a> Motivo per cui un Runtime di concorrenza è importante  
  Un runtime di concorrenza fornisce uniformità e prevedibilità alle applicazioni e ai componenti dell'applicazione eseguiti simultaneamente. Due esempi dei vantaggi del Runtime di concorrenza sono *pianificazione cooperativa delle attività* e *il blocco cooperativo*.  
   
  Il runtime di concorrenza usa un'utilità di pianificazione cooperativa che implementa un algoritmo di acquisizione del lavoro per distribuire il lavoro tra le risorse di elaborazione in modo efficiente. Si consideri, ad esempio, un'applicazione che dispone di due thread entrambi gestiti dallo stesso runtime. Se un thread termina l'attività pianificata, può scaricare il lavoro dall'altro thread. Questo meccanismo bilancia il carico di lavoro complessivo dell'applicazione.  
@@ -98,7 +93,7 @@ Questo documento fornisce i cenni preliminari sul runtime di concorrenza. Illust
   
  [[Torna all'inizio](#top)]  
   
-##  <a name="lambda">Espressioni Lambda C++</a>  
+##  <a name="lambda"></a> Espressioni Lambda C++  
  Molti dei tipi e degli algoritmi definiti dal runtime di concorrenza vengono implementati come modelli C++.  Alcuni di questi tipi e algoritmi accettano come parametro una routine che esegue il lavoro. Questo parametro può essere una funzione lambda, un oggetto funzione o un puntatore a funzione. Queste entità sono anche denominate per *le funzioni lavoro* o *routine lavoro*.  
   
  Le espressioni lambda rappresentano una nuova e importante funzionalità del linguaggio di Visual C++ perché forniscono una modalità succinta per definire le funzioni lavoro per l'elaborazione in parallelo. Gli oggetti funzione e i puntatori a funzione consentono di usare il runtime di concorrenza con il codice esistente. Tuttavia, è consigliabile usare le espressioni lambda quando si scrive nuovo codice per i vantaggi offerti in termini di produttività e sicurezza.  

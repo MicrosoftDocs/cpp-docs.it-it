@@ -1,12 +1,9 @@
 ---
 title: 'Concurrency:: Direct3D Namespace | Documenti Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-amp
 ms.topic: reference
 f1_keywords:
 - amp/Concurrency::direct3d
@@ -19,17 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - direct3d namespace
 ms.assetid: 9566a2f1-4d5f-43e4-a3ac-676643d38420
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 607a3f25c2dfea5eee833f3608021547d8cd7c44
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 9516e3f89d393405a5f71af569a50e46e381d579
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="concurrencydirect3d-namespace"></a>Spazio dei nomi Concurrency::direct3d
 Il `direct3d` dello spazio dei nomi sono disponibili funzioni che supportano l'interoperabilità D3D. Consente l'utilizzo diretto di D3D risorse per il calcolo in codice AMP nonché consentire l'utilizzo di risorse creati in AMP in codice D3D, senza creare le copie ridondanti intermedi. È possibile accelerare le sezioni con utilizzo intensivo di calcolo delle applicazioni DirectX con C++ AMP e usano l'API di D3D su dati ottenuti da calcoli AMP in modo incrementale.  

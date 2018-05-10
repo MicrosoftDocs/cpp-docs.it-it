@@ -1,13 +1,10 @@
 ---
 title: Tasti di scelta per l'Editor finestre | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.editors.dialog
 dev_langs:
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - Dialog editor, shortcut keys
 ms.assetid: 940270e9-a974-425b-a681-dfeaba0adf66
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 75e9e6cac169bfe5e5867d0c1f3c14f70d19f916
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a526cb1312a1e97eca4ad716576c009a6ae05e4f
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="accelerator-keys-for-the-dialog-editor"></a>Tasti di scelta rapida per l'editor finestre
 Di seguito è il valore predefinito per i comandi di finestra di dialogo editor tasti di scelta rapida. Per modificare i tasti di scelta rapida, fare clic su **opzioni** nel **strumenti** menu, quindi scegliere **tastiera** sotto il **ambiente** cartella. Per altre informazioni, vedere [Identificazione e personalizzazione dei tasti di scelta rapida](/visualstudio/ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio).  

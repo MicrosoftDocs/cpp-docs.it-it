@@ -1,10 +1,7 @@
 ---
 title: 'Le enumerazioni dello spazio dei nomi Concurrency:: Graphics | Documenti Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - amp_graphics/concurrency::graphics::address_mode
@@ -12,17 +9,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 1d2e1859-a3d7-4d3d-8e03-1a877a86b3e0
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7eef1db51fca369cb105fb1b5309c3d07afdac57
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: bbb02becbcfebf935107acb85ae3991476b67796
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="concurrencygraphics-namespace-enums"></a>Enumerazioni dello spazio dei nomi Concurrency:: Graphics
 |||  
@@ -36,7 +31,7 @@ ms.lasthandoff: 02/23/2018
 enum address_mode;  
 ```  
   
-##  <a name="filter_mode">Enumerazione filter_mode</a>  
+##  <a name="filter_mode"></a>  Enumerazione filter_mode  
  Tipo di enumerazione utilizzare per indicare la modalità di filtro supportate per il campionamento delle trame.  
   
 ```  

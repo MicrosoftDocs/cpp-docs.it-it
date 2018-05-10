@@ -1,12 +1,9 @@
 ---
-title: "Classe di utilità di pianificazione | Documenti Microsoft"
-ms.custom: 
+title: Classe di utilità di pianificazione | Documenti Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - Scheduler
@@ -30,17 +27,15 @@ dev_langs:
 helpviewer_keywords:
 - Scheduler class
 ms.assetid: 34cf7961-048d-4852-8a5c-a32f823e3506
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f7431776a27668fc1f1c465377f1e947eb36ab99
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 97abec33d5fa4b372bc26874fd37397a2b78bb29
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="scheduler-class"></a>Classe Scheduler
 Rappresenta un'astrazione per un'utilità di pianificazione del runtime di concorrenza.  
@@ -91,7 +86,7 @@ class Scheduler;
   
  **Spazio dei nomi:** Concurrency  
   
-##  <a name="attach"></a> Attach 
+##  <a name="attach"></a> Collegare 
 
  Collega l'utilità di pianificazione nel contesto di chiamata. Dopo che questo metodo restituisce, il contesto di chiamata è gestito dall'utilità di pianificazione e l'utilità di pianificazione diventa l'utilità di pianificazione corrente.  
   
@@ -269,7 +264,7 @@ Scheduler();
   
  È inoltre possibile creare un'utilità di pianificazione in modo esplicito tramite il `CurrentScheduler::Create` metodo o `Scheduler::Create` metodo.  
   
-##  <a name="dtor"></a> ~Scheduler 
+##  <a name="dtor"></a> ~ Scheduler 
 
  Un oggetto del `Scheduler` classe viene eliminata in modo implicito quando tutti i riferimenti esterni a esso cessano di esistere.  
   

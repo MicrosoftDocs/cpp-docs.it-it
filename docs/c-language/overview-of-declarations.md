@@ -1,37 +1,32 @@
 ---
 title: Panoramica delle dichiarazioni | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - declarations, about declarations
 - type qualifiers
 ms.assetid: fcd2364c-c2a5-4fbf-9027-19dac4144cb5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aa6285504a194d909dec7a446437ca9f584272a9
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
-ms.translationtype: MT
+ms.openlocfilehash: cd8670815b908f66a6e2ed400bc87ca07c369ee4
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="overview-of-declarations"></a>Cenni preliminari sulle dichiarazioni
 Una "dichiarazione" consente di specificare l'interpretazione e gli attributi di un set di identificatori. Una dichiarazione che causa anche la prenotazione delle risorse di archiviazione per l'oggetto o la funzione denominati dall'identificatore è chiamata "definizione". Le dichiarazioni C per variabili, funzioni e tipi hanno la sintassi seguente:  
   
 ## <a name="syntax"></a>Sintassi  
  `declaration`:  
- *declaration-specifiers* *attribute-seq*opt*init-declarator-list*opt**;**  
+ *declaration-specifiers* *attribute-seq*opt*init-declarator-list*opt **;**  
   
  /\* *attribute-seq*opt è specifico di Microsoft */  
   

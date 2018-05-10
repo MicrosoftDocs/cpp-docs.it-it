@@ -1,12 +1,9 @@
 ---
 title: Classe (C++ AMP) extent | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-amp
 ms.topic: reference
 f1_keywords:
 - extent
@@ -21,17 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - extent structure
 ms.assetid: edb5de3d-3935-4dbb-8365-4cc6c4fb0269
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9a8606b01ac5d3676b06c93c373677f2eb85d954
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 901ba590d208db7c9cf3803e77e8481a2b896ea2
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="extent-class-c-amp"></a>Classe extent (C++ AMP)
 Rappresenta un vettore di *N* valori interi che specificano i limiti di un *N*-spazio dimensionale che presenta un'origine di 0. I valori in un vettore sono ordinati dal più significativo al meno significativo.  
@@ -64,7 +59,7 @@ class extent;
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[contains](#contains)|Verifica che l'oggetto specificato `extent` oggetto con la classificazione specificata.|  
+|[contiene](#contains)|Verifica che l'oggetto specificato `extent` oggetto con la classificazione specificata.|  
 |[size](#size)|Restituisce le dimensioni totali lineare dell'extent (in unità di elementi).|  
 |[riquadro](#tile)|Produce un `tiled_extent` oggetto con il riquadro di extent specificato da dimensioni specificate.|  
   
@@ -302,7 +297,7 @@ extent<_Rank>& operator-=(int _Rhs) restrict(amp,cpu);
 ### <a name="return-value"></a>Valore restituito  
  L'oggetto `extent` risultante.  
   
-##  <a name="operator_eq"></a> operator = 
+##  <a name="operator_eq"></a> operator= 
 
 Copia il contenuto di un altro oggetto 'extent' in questo profilo.  
   
@@ -356,7 +351,7 @@ Restituisce la dimensione totale lineare del `extent` oggetto (in unità di elem
 unsigned int size() const restrict(amp,cpu);  
 ```  
   
-## <a name="tile">riquadro</a> 
+## <a name="tile"></a> riquadro 
 
 Produce un oggetto tiled_extent con le dimensioni del riquadro specificato.
 

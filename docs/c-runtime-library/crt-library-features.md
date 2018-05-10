@@ -1,10 +1,10 @@
 ---
-title: "Funzionalità libreria CRT | Microsoft Docs"
-ms.custom: 
+title: Funzionalità libreria CRT | Microsoft Docs
+ms.custom: ''
 ms.date: 03/13/2018
 ms.technology:
 - cpp-standard-libraries
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - c.runtime
 dev_langs:
@@ -26,14 +26,13 @@ helpviewer_keywords:
 ms.assetid: a889fd39-807d-48f2-807f-81492612463f
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 33e3e5f63aebfd1b169210eaa3748feb761e0422
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: 4b20fa6862a835ca913a2865a651112584966af3
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="crt-library-features"></a>Funzionalità libreria CRT
 

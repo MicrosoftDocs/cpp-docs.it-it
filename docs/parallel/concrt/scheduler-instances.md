@@ -1,29 +1,24 @@
 ---
-title: "Le istanze dell'utilità di pianificazione | Documenti Microsoft"
-ms.custom: 
+title: Le istanze dell'utilità di pianificazione | Documenti Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - scheduler instances
 ms.assetid: 4819365f-ef99-49cc-963e-50a2a35a8d6b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1688a2b689b3fc3391e617f3d65d3c681f05a84f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4f09a5708fd9140619eea60fb8e483c2e26165d1
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="scheduler-instances"></a>Istanze dell'utilità di pianificazione
 Questo documento viene descritto il ruolo delle istanze dell'utilità di pianificazione nel Runtime di concorrenza e come utilizzare il [Concurrency:: Scheduler](../../parallel/concrt/reference/scheduler-class.md) e [Concurrency:: CurrentScheduler](../../parallel/concrt/reference/currentscheduler-class.md) classi per creare e gestire istanze dell'utilità di pianificazione. Le istanze dell'utilità di pianificazione sono utili quando si desidera associare criteri di pianificazione espliciti a specifici tipi di carichi di lavoro. È possibile ad esempio creare un'istanza dell'utilità di pianificazione per eseguire alcune attività con una priorità di thread elevata e usare l'utilità di pianificazione predefinita per eseguire altre attività con una priorità di thread normale.  
@@ -43,7 +38,7 @@ Questo documento viene descritto il ruolo delle istanze dell'utilità di pianifi
   
 -   [Esempio](#example)  
   
-##  <a name="classes"></a>L'utilità di pianificazione e le classi CurrentScheduler  
+##  <a name="classes"></a> L'utilità di pianificazione e le classi CurrentScheduler  
  L'utilità di pianificazione consente alle applicazioni di utilizzare uno o più *istanze dell'utilità di pianificazione* per pianificare il lavoro. Il [Concurrency:: Scheduler](../../parallel/concrt/reference/scheduler-class.md) classe rappresenta un'istanza dell'utilità di pianificazione e incapsula la funzionalità correlate alla pianificazione delle attività.  
   
  Un thread che è collegato a un'utilità di pianificazione è noto come un *contesto di esecuzione*, o semplicemente *contesto*. Un'utilità di pianificazione può essere attivo nel contesto corrente in qualsiasi momento. Utilità di pianificazione attiva è noto anche come il *utilità di pianificazione corrente*. Il Runtime di concorrenza Usa il [Concurrency:: CurrentScheduler](../../parallel/concrt/reference/currentscheduler-class.md) classe per fornire l'accesso all'utilità di pianificazione corrente. Utilità di pianificazione corrente per un contesto può essere diverso dall'utilità di pianificazione corrente per un altro contesto. Il runtime non fornisce una rappresentazione a livello di processo dell'utilità di pianificazione corrente.  
@@ -54,7 +49,7 @@ Questo documento viene descritto il ruolo delle istanze dell'utilità di pianifi
   
  [[Torna all'inizio](#top)]  
   
-##  <a name="creating"></a>Creazione di un'istanza dell'utilità di pianificazione  
+##  <a name="creating"></a> Creazione di un'istanza dell'utilità di pianificazione  
  Sono disponibili i tre modi per creare un `Scheduler` oggetto:  
   
 -   Se non esiste alcuna utilità di pianificazione, il runtime crea un'utilità di pianificazione predefinita per l'utente quando si utilizza la funzionalità di runtime, ad esempio, un algoritmo parallelo, per eseguire il lavoro. Utilità di pianificazione predefinita diventa l'utilità di pianificazione corrente per il contesto che avvia il lavoro parallelo.  
@@ -69,7 +64,7 @@ Questo documento viene descritto il ruolo delle istanze dell'utilità di pianifi
   
  [[Torna all'inizio](#top)]  
   
-##  <a name="managing"></a>Gestione della durata di un'istanza dell'utilità di pianificazione  
+##  <a name="managing"></a> Gestione della durata di un'istanza dell'utilità di pianificazione  
  Il runtime utilizza un meccanismo di conteggio dei riferimenti per controllare la durata di `Scheduler` oggetti.  
   
 
@@ -98,7 +93,7 @@ Questo documento viene descritto il ruolo delle istanze dell'utilità di pianifi
   
  [[Torna all'inizio](#top)]  
   
-##  <a name="features"></a>Metodi e le funzionalità  
+##  <a name="features"></a> Metodi e le funzionalità  
  Questa sezione vengono riepilogati i metodi importanti del `CurrentScheduler` e `Scheduler` classi.  
   
  Si consideri la `CurrentScheduler` classe come supporto per la creazione di un'utilità di pianificazione per l'utilizzo nel contesto corrente. La `Scheduler` classe consente di controllare un'utilità di pianificazione che appartiene a un altro contesto.  

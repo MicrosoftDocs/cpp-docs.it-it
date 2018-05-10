@@ -1,30 +1,25 @@
 ---
 title: Flussi di testo e binari | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - binary streams
 - text streams
 ms.assetid: 57035e4a-955d-4e04-a560-fcf67ce68b4e
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1665ff1551ffe94b475c463d8f93eba2184eaa27
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e91881f738c1b6411179c4f8e10e30f69e7b8667
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="text-and-binary-streams"></a>Flussi di testo e binari
 Un flusso di testo è costituito da uno o più righe di testo che possono essere scritte in una visualizzazione orientata al testo in modo da poter essere lette. Durante la lettura da un flusso di testo, il programma legge un `NL` (nuova riga) alla fine di ogni riga. Quando si scrive in un flusso di testo, il programma scrive un `NL` per segnalare la fine di una riga. Per soddisfare le convenzioni diverse tra ambiente di destinazione per la rappresentazione di testo nei file, le funzioni di libreria possono alterare il numero e le rappresentazioni di caratteri trasmessi tra il programma e un flusso di testo.  

@@ -18,14 +18,13 @@ helpviewer_keywords:
 ms.assetid: cb4d2664-10f3-42f7-a516-595558075471
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7637c012b29c89352d62ac470ff635b090b719ad
-ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
+ms.openlocfilehash: 4efef4c7dfb907120778390874a5e56222889350
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="debug-routines"></a>Routine di debug
 

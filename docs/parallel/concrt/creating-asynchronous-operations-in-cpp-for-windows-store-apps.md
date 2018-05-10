@@ -1,30 +1,25 @@
 ---
 title: Creazione di operazioni asincrone in C++ per App UWP | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Windows 8.x apps, creating C++ async operations
 - Creating C++ async operations
 ms.assetid: a57cecf4-394a-4391-a957-1d52ed2e5494
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 99251cbf6627d07075dad3d7dfa3fd4d9651fea8
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 24ea9cc47ea9fa78c5efaf6c922f9f01dd3ff963
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="creating-asynchronous-operations-in-c-for-uwp-apps"></a>Creazione di operazioni asincrone in C++ per App UWP
 Questo documento illustra alcuni punti chiave da tenere presenti quando si utilizza la classe task per produrre operazioni asincrone basate sul pool di thread di Windows in un'app di Windows Runtime UWP (Universal).  
@@ -71,7 +66,7 @@ Questo documento illustra alcuni punti chiave da tenere presenti quando si utili
  [Windows::Foundation::IAsyncActionWithProgress\<TProgress>](http://msdn.microsoft.com/library/windows/apps/br206581.aspx)  
  Rappresenta un'azione asincrona che segnala lo stato di avanzamento.  
   
- [Windows::Foundation::IAsyncOperation\<TResult>](http://msdn.microsoft.com/library/windows/apps/br206598.aspx)  
+ [Windows::Foundation::IAsyncOperation\<TResult >](http://msdn.microsoft.com/library/windows/apps/br206598.aspx)  
  Rappresenta un'operazione asincrona che restituisce un risultato.  
   
  [Windows::Foundation::IAsyncOperationWithProgress\<TResult, TProgress >](http://msdn.microsoft.com/library/windows/apps/br206594.aspx)  
@@ -168,7 +163,7 @@ Questo documento illustra alcuni punti chiave da tenere presenti quando si utili
 
 >  Non chiamare [concurrency::task::wait](reference/task-class.md#wait) nel corpo di una continuazione che viene eseguita nell'apartment a thread singolo. In caso contrario, il runtime genera [concurrency::invalid_operation](../../parallel/concrt/reference/invalid-operation-class.md) poiché questo metodo blocca il thread corrente e può provocare la mancata risposta da parte dell'app. È tuttavia possibile chiamare il metodo [concurrency::task::get](reference/task-class.md#get) per ricevere il risultato dell'attività antecedente in una continuazione basata su attività.  
   
-##  <a name="example-app">Esempio: Controllo dell'esecuzione in un'App di Windows Runtime con C++ e XAML</a>  
+##  <a name="example-app"></a> Esempio: Controllo dell'esecuzione in un'App di Windows Runtime con C++ e XAML  
  Si consideri un'app XAML C++ che legge un file da disco, individua le parole più comuni in tale file e quindi mostra i risultati nell'interfaccia utente. Per creare questa app, avviare, in Visual Studio, creando un **App vuota (Windows universale)** del progetto e denominarla `CommonWords`. Nel manifesto dell'app specificare la capacità **Raccolta documenti** per permettere all'app di accedere alla cartella Documenti. Aggiungere anche il tipo di file di testo (con estensione txt) alla sezione relativa alle dichiarazioni nel manifesto dell'app. Per altre informazioni sulle funzionalità e sulle dichiarazioni delle app, vedere [Pacchetti di app e distribuzione](http://msdn.microsoft.com/library/windows/apps/hh464929.aspx).  
   
  Aggiornare l'elemento `Grid` in MainPage.xaml per includere un elemento `ProgressRing` e un elemento `TextBlock` . L'elemento `ProgressRing` indica che l'operazione è in corso e `TextBlock` mostra i risultati del calcolo.  

@@ -1,32 +1,27 @@
 ---
 title: Utilizzo di sezioni | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-amp
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: acb86a86-2b7f-43f1-8fcf-bcc79b21d9a8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aed7ed0ed32f73927f3755c0ba3733aaef084818
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4e3d1e37562e9e14bbbeda5a01198358b4615d3c
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="using-tiles"></a>Utilizzo di sezioni
 Per ottimizzare l'accelerazione dell'app, è possibile utilizzare per l'affiancamento. Affiancamento divide i thread in sottoinsiemi rettangolare uguali o *riquadri*. Se si utilizza un dimensioni riquadro appropriato e l'algoritmo affiancato, è possibile ottenere ulteriori accelerazione dal codice C++ AMP. I componenti di base di affiancamento sono:  
   
-- `tile_static`variabili. Il vantaggio principale di affiancamento è il miglioramento delle prestazioni da `tile_static` accesso. Accesso ai dati in `tile_static` memoria può essere molto più rapida di accesso ai dati nello spazio globale (`array` o `array_view` oggetti). Un'istanza di un `tile_static` variabile viene creata per ogni sezione e nel riquadro tutti i thread hanno accesso alla variabile. In un algoritmo affiancato tipico, i dati vengono copiati in `tile_static` memoria una volta dalla memoria globale e quindi accedere più volte dal `tile_static` memoria.  
+- `tile_static` Variabili. Il vantaggio principale di affiancamento è il miglioramento delle prestazioni da `tile_static` accesso. Accesso ai dati in `tile_static` memoria può essere molto più rapida di accesso ai dati nello spazio globale (`array` o `array_view` oggetti). Un'istanza di un `tile_static` variabile viene creata per ogni sezione e nel riquadro tutti i thread hanno accesso alla variabile. In un algoritmo affiancato tipico, i dati vengono copiati in `tile_static` memoria una volta dalla memoria globale e quindi accedere più volte dal `tile_static` memoria.  
   
 - [Metodo tile_barrier:: Wait](reference/tile-barrier-class.md#wait). Una chiamata a `tile_barrier::wait` sospende l'esecuzione del thread corrente finché tutti i thread nel riquadro stesso raggiunge la chiamata a `tile_barrier::wait`. Non è possibile garantire l'ordine in cui verrà eseguito il thread, solo che nessun thread nel riquadro verrà eseguito dopo la chiamata a `tile_barrier::wait` fino a quando tutti i thread hanno raggiunto la chiamata. Ciò significa che tramite il `tile_barrier::wait` (metodo), è possibile eseguire operazioni su base dal riquadro-riquadro anziché dal thread di thread. Un algoritmo di affiancamento tipico include il codice per inizializzare il `tile_static` memoria per l'intera sezione seguita da una chiamata a `tile_barrer::wait`. Codice che segue `tile_barrier::wait` contiene calcoli che richiedono l'accesso a tutti i `tile_static` valori.  
 
@@ -40,7 +35,7 @@ Per ottimizzare l'accelerazione dell'app, è possibile utilizzare per l'affianca
 ## <a name="example-of-global-tile-and-local-indices"></a>Esempio di globale, sezioni e indici locali  
  Nel diagramma seguente rappresenta una matrice di 8 x 9 di dati che sono disposti in 2 x 3 riquadri.  
   
- ![8 &#45; da &#45;matrice 9 suddiviso in 2 &#45; da &#45;3; porzioni](../../parallel/amp/media/usingtilesmatrix.png "usingtilesmatrix")  
+ ![8&#45;da&#45;matrice 9 suddivisa in 2&#45;da&#45;3 riquadri](../../parallel/amp/media/usingtilesmatrix.png "usingtilesmatrix")  
   
  L'esempio seguente mostra il riquadro globale, e affiancamento di indici locali di questa matrice. Un `array_view` oggetto viene creato utilizzando gli elementi di tipo `Description`. Il `Description` contiene globale, sezioni e indici locali dell'elemento nella matrice. Il codice nella chiamata a `parallel_for_each` imposta i valori dell'oggetto globale, riquadro e indici locali di ogni elemento. L'output visualizza i valori di `Description` strutture.  
   
@@ -307,7 +302,7 @@ t_idx.barrier.wait();
   
 - [Metodo tile_barrier:: wait_with_global_memory_fence](reference/tile-barrier-class.md#wait_with_global_memory_fence): crea un limite attorno solo la memoria globale.  
   
-- [Metodo tile_barrier:: wait_with_tile_static_memory_fence](reference/tile-barrier-class.md#wait_with_tile_static_memory_fence): crea un limite solo `tile_static` memoria.  
+- [Metodo tile_barrier:: wait_with_tile_static_memory_fence](reference/tile-barrier-class.md#wait_with_tile_static_memory_fence): crea un limite attorno solo `tile_static` memoria.  
 
   
  Chiamare il limite specifico che si richiede può migliorare le prestazioni dell'app. Il tipo di barriera influisce sul modo il compilatore e l'hardware riordinare le istruzioni. Ad esempio, se si utilizza un limite di memoria globale, si applica gli accessi alla memoria solo globali e di conseguenza, potrebbe riordinare il compilatore e l'hardware legge e scrive `tile_static` variabili su due lati della cancellata.  

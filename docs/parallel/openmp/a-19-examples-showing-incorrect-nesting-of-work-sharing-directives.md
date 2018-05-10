@@ -1,27 +1,22 @@
 ---
 title: Esempi A.19 che mostrano l'annidamento non corretto di direttive di condivisione del lavoro | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-parallel
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 906e900d-9259-44d6-a095-c1ba9135d269
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8a3f8a4e1ca62a77c16dafedd0921ca842d7a048
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6778ba61a3367cd4fc90d568508f1a039fd1f7ef
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="a19---examples-showing-incorrect-nesting-of-work-sharing-directives"></a>A.19   Esempi sull'annidamento non corretto di direttive per la condivisione del lavoro
 Gli esempi in questa sezione illustrano le regole di nidificazione della direttiva. Per ulteriori informazioni su annidamento di direttive, vedere [sezione 2.9](../../parallel/openmp/2-9-directive-nesting.md) nella pagina 33.  

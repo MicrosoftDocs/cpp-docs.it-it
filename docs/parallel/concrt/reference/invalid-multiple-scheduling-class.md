@@ -1,12 +1,9 @@
 ---
 title: Classe invalid_multiple_scheduling | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - invalid_multiple_scheduling
@@ -17,17 +14,15 @@ dev_langs:
 helpviewer_keywords:
 - invalid_multiple_scheduling class
 ms.assetid: e9a47cb7-a778-4df7-92b0-3752119fd4c7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7aed5586f58560e01b1a22f973ab7defadf49432
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 73f693c884542b93431a77e914d210f76721c5a0
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="invalidmultiplescheduling-class"></a>Classe invalid_multiple_scheduling
 Questa classe descrive un'eccezione generata quando un oggetto `task_handle` è pianificato più volte usando il metodo `run` di un oggetto `task_group` o `structured_task_group` senza una chiamata intermedia a uno dei metodi `wait` o `run_and_wait`.  
@@ -75,6 +70,6 @@ invalid_multiple_scheduling() throw();
  [Classe task_handle](task-handle-class.md)   
  [Classe task_group](task-group-class.md)   
  [run](task-group-class.md)   
- [wait](task-group-class.md)   
+ [attesa](task-group-class.md)   
  [run_and_wait](task-group-class.md)   
  [Classe structured_task_group](structured-task-group-class.md)

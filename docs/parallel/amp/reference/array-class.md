@@ -1,12 +1,9 @@
 ---
 title: Classe Array | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-amp
 ms.topic: reference
 f1_keywords:
 - array
@@ -31,17 +28,15 @@ dev_langs:
 helpviewer_keywords:
 - array class
 ms.assetid: 0832b6c1-40f0-421d-9104-6b1baa0c63a7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6a8b7fa960fab118f527d12553725af794db3f0d
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: d0a7d063d5e57d77735a33eac8ec944d41032fea
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="array-class"></a>Classe array
 Rappresenta un contenitore di dati utilizzato per spostare i dati a un tasto di scelta rapida.  
@@ -88,7 +83,7 @@ friend class array;
 |----------|-----------------|  
 |[operatore std:: Vector&lt;value_type&gt;](#operator_vec)|Usa `copy(*this, vector)` per convertire in modo implicito la matrice in un std::[vettore](../../../standard-library/vector-class.md) oggetto.|  
 |[operator()](#operator_call)|Restituisce il valore dell'elemento specificato dai parametri.|  
-|[operator[]](#operator_at)|Restituisce l'elemento in corrispondenza dell'indice specificato.|  
+|[operator]](#operator_at)|Restituisce l'elemento in corrispondenza dell'indice specificato.|  
 |[operator=](#operator_eq)|Copia il contenuto dell'oggetto specificato `array` specificato in questo oggetto.|  
   
 ### <a name="public-constants"></a>Costanti pubbliche  
@@ -131,7 +126,7 @@ friend class array;
   
  **Spazio dei nomi:** Concurrency  
   
-##  <a name="dtor"></a> ~array 
+##  <a name="dtor"></a> ~ array 
 
  Elimina definitivamente il `array` oggetto.  
   
@@ -482,7 +477,7 @@ void copy_to(
 __declspec(property(get= get_cpu_access_type)) access_type cpu_access_type;  
 ```  
   
-##  <a name="data"></a> data 
+##  <a name="data"></a> Dati 
 
  Restituisce un puntatore a dati non elaborati del `array`.  
   
@@ -627,7 +622,7 @@ typename details::_Projection_result_type<value_type,_Rank>::_Const_result_type 
 ### <a name="return-value"></a>Valore restituito  
  L'elemento in corrispondenza dell'indice specificato.  
   
-##  <a name="operator_eq"></a> operator = 
+##  <a name="operator_eq"></a> operator= 
 
  Copia il contenuto dell'oggetto specificato `array` oggetto.  
   

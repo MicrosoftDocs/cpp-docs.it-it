@@ -1,13 +1,10 @@
 ---
 title: Procedure consigliate nella libreria di agenti asincroni | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - Asynchronous Agents Library, practices to avoid
 - practices to avoid, Asynchronous Agents Library
 ms.assetid: 85f52354-41eb-4b0d-98c5-f7344ee8a8cf
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a8d4b52839675334ab343adf48790bdce390dd5e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8f1b20342ad6bb64c653a211f9af2fb9e9130286
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="best-practices-in-the-asynchronous-agents-library"></a>Procedure consigliate nella libreria di agenti asincroni
 Questo documento viene descritto come ottimizzare l'utilizzo della libreria di agenti asincroni. La libreria di agenti Alza di livello un modello di programmazione basato su attori e attività di pipelining e il passaggio di un flusso di dati dei messaggi in-process.  
@@ -42,11 +37,11 @@ Questo documento viene descritto come ottimizzare l'utilizzo della libreria di a
   
 - [Non eseguire il lavoro con granularità fine in una Pipeline di dati](#fine-grained)  
   
-- [Non passare payload di messaggi di grandi dimensioni per valore](#large-payloads)  
+- [Non passare i payload di messaggi di grandi dimensioni per valore](#large-payloads)  
   
 - [Utilizzare shared_ptr in una Data rete quando la proprietà è non definito](#ownership)  
   
-##  <a name="isolation"></a>Utilizzare gli agenti per stato isolato  
+##  <a name="isolation"></a> Utilizzare gli agenti per stato isolato  
  La libreria di agenti offre alternative a uno stato condiviso consentendo la connessione di componenti isolati tramite un meccanismo di passaggio dei messaggi asincrono. Agenti asincroni sono più efficaci quando isolano il proprio stato interno da altri componenti. Tramite l'isolamento dello stato, più componenti non vengono utilizzati in genere sui dati condivisi. L'isolamento dello stato è possibile abilitare l'applicazione per applicare la scalabilità perché riduce la contesa sulla memoria condivisa. L'isolamento dello stato riduce inoltre la possibilità di deadlock e race condition perché non dispone di componenti sincronizzare l'accesso ai dati condivisi.  
   
  È possibile isolare in genere tenendo membri dati di stato di un agente di `private` o `protected` sezioni della classe agente e utilizzando i buffer dei messaggi per comunicare le modifiche dello stato. Nell'esempio seguente il `basic_agent` classe che deriva da [Concurrency:: Agent](../../parallel/concrt/reference/agent-class.md). La `basic_agent` classe utilizza due buffer dei messaggi per comunicare con i componenti esterni. Un buffer dei messaggi contiene i messaggi in ingresso. buffer dei messaggi contiene i messaggi in uscita.  
@@ -57,7 +52,7 @@ Questo documento viene descritto come ottimizzare l'utilizzo della libreria di a
   
  [[Torna all'inizio](#top)]  
   
-##  <a name="throttling"></a>Utilizzare un meccanismo di limitazione delle richieste per limitare il numero di messaggi in una Pipeline di dati  
+##  <a name="throttling"></a> Utilizzare un meccanismo di limitazione delle richieste per limitare il numero di messaggi in una Pipeline di dati  
  Molti tipi di buffer dei messaggi, ad esempio [Concurrency:: unbounded_buffer](reference/unbounded-buffer-class.md), può contenere un numero illimitato di messaggi. Quando un producer di messaggio Invia messaggi a una pipeline di dati più velocemente di quanto il consumer può elaborare questi messaggi, l'applicazione può immettere uno stato di memoria insufficiente o di memoria insufficiente. È possibile utilizzare un meccanismo di limitazione delle richieste, ad esempio, un semaforo per limitare il numero di messaggi che sono contemporaneamente attivi in una pipeline di dati.  
   
  Nell'esempio di base seguente viene illustrato come utilizzare un semaforo per limitare il numero di messaggi in una pipeline di dati. I dati della pipeline utilizza il [Concurrency:: Wait](reference/concurrency-namespace-functions.md#wait) funzione per simulare un'operazione che richiede almeno 100 millisecondi. Perché il mittente produce messaggi più velocemente di quanto il consumer può elaborare tali messaggi, questo esempio viene definito il `semaphore` classe per consentire l'applicazione limitare il numero di messaggi attivi.  
@@ -72,14 +67,14 @@ Questo documento viene descritto come ottimizzare l'utilizzo della libreria di a
   
  [[Torna all'inizio](#top)]  
   
-##  <a name="fine-grained"></a>Non eseguire il lavoro con granularità fine in una Pipeline di dati  
+##  <a name="fine-grained"></a> Non eseguire il lavoro con granularità fine in una Pipeline di dati  
  La libreria di agenti è particolarmente utile quando il lavoro eseguito da una pipeline di dati è grossolano. Ad esempio, un componente dell'applicazione potrebbe leggere i dati da un file o una connessione di rete e inviare saltuariamente i dati a un altro componente. Il protocollo utilizzato per la libreria di agenti per propagare i messaggi determina il meccanismo di passaggio dei messaggi da un sovraccarico maggiore rispetto ai costrutti parallela di attività fornite dal [Parallel Patterns Library](../../parallel/concrt/parallel-patterns-library-ppl.md) (PPL). Pertanto, assicurarsi che il lavoro eseguito da una pipeline di dati è sufficiente per compensare tale sovraccarico.  
   
  Anche se una pipeline di dati è particolarmente efficace quando le relative attività sono con granularità grossolana, ogni fase della pipeline di dati è possibile utilizzare costrutti della libreria PPL, ad esempio gruppi di attività e algoritmi paralleli per eseguire più granulari per le operazioni. Per un esempio di una rete di dati con granularità grossolana che utilizza il parallelismo con granularità fine in ogni fase di elaborazione, vedere [procedura dettagliata: creazione di una rete di elaborazione delle immagini](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md).  
   
  [[Torna all'inizio](#top)]  
   
-##  <a name="large-payloads"></a>Non passare payload di messaggi di grandi dimensioni per valore  
+##  <a name="large-payloads"></a> Non passare i payload di messaggi di grandi dimensioni per valore  
 
  In alcuni casi, il runtime crea una copia di ogni messaggio che passa da un buffer dei messaggi a un altro buffer dei messaggi. Ad esempio, il [Concurrency:: overwrite_buffer](../../parallel/concrt/reference/overwrite-buffer-class.md) classe offre una copia di ogni messaggio ricevuto per ciascuna delle relative destinazioni. Il runtime crea anche una copia dei dati del messaggio quando si utilizzano le funzioni di passaggio dei messaggi, ad esempio [Concurrency:: Send](reference/concurrency-namespace-functions.md#send) e [Concurrency:: Receive](reference/concurrency-namespace-functions.md#receive) per scrivere e leggere messaggi da un messaggio buffer. Anche se questo meccanismo consente di eliminare il rischio di scrittura simultaneamente ai dati condivisi, potrebbe attivare le prestazioni di memoria ridotte quando il payload del messaggio è relativamente grande.  
   
@@ -100,7 +95,7 @@ took 47ms.
   
  [[Torna all'inizio](#top)]  
   
-##  <a name="ownership"></a>Utilizzare shared_ptr in una Data rete quando la proprietà è non definito  
+##  <a name="ownership"></a> Utilizzare shared_ptr in una Data rete quando la proprietà è non definito  
  Quando si inviano messaggi dal puntatore tramite una pipeline di passaggio dei messaggi o rete, in genere allocare la memoria per ogni messaggio all'inizio della rete e liberare memoria alla fine della rete. Sebbene questo meccanismo spesso funziona bene, vi sono casi in cui è difficile o non è possibile utilizzarlo. Ad esempio, si consideri il caso in cui la rete contiene più nodi finali. In questo caso, non vi è alcun percorso deseleziona per liberare la memoria per i messaggi.  
   
  Per risolvere questo problema, è possibile utilizzare un meccanismo, ad esempio, [std:: shared_ptr](../../standard-library/shared-ptr-class.md), che consente a un puntatore come di proprietà di più componenti. Quando l'elemento finale `shared_ptr` oggetto proprietario di una risorsa viene eliminato definitivamente, la risorsa viene liberata anche.  

@@ -1,13 +1,10 @@
 ---
-title: 'Procedura dettagliata: Debug di un''applicazione C++ AMP | Documenti Microsoft'
-ms.custom: 
+title: "Procedura dettagliata: Debug di un'applicazione C++ AMP | Documenti Microsoft"
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-amp
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - C++ Accelerated Massive Parallelism, debugging
 - debugging, C++ AMP
 ms.assetid: 40e92ecc-f6ba-411c-960c-b3047b854fb5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8cfc12a238ccaff90fa7c22e8a67d8e10d0796e6
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: 2f1308462133c11c8f945416a13fb5542c1d2da8
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="walkthrough-debugging-a-c-amp-application"></a>Procedura dettagliata: Debug di un'applicazione C++ AMP
 In questo argomento viene illustrato come eseguire il debug di un'applicazione che usa C++ Accelerated Massive Parallelism (C++ AMP) per poter sfruttare l'unità di elaborazione grafica (GPU). Usa un programma parallelo riduzione che sommi un'ampia gamma di valori integer. Questa procedura dettagliata illustra le attività seguenti:  
@@ -338,7 +333,7 @@ Thread attivi nella finestra Thread GPU
   
      Pulsante Mostra solo con flag su qualsiasi di windows o scegliere il **posizione di Debug** barra degli strumenti. Nella figura seguente viene illustrato il pulsante Mostra solo con flag sul **posizione di Debug** barra degli strumenti.  
   
-     ![Barra degli strumenti posizione con icona Mostra solo con contrassegno debug](../../parallel/amp/media/camph.png "camph")  
+     ![Posizione barra degli strumenti con icona Mostra solo con contrassegno debug](../../parallel/amp/media/camph.png "camph")  
 Pulsante Mostra solo con flag  
   
      Ora le finestre thread GPU, espressioni di controllo parallelo e stack in parallelo visualizzano solo i thread con flag.  

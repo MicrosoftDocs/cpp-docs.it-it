@@ -1,12 +1,9 @@
 ---
 title: Classe cancellation_token_source | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - cancellation_token_source
@@ -20,17 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - cancellation_token_source class
 ms.assetid: 3548b1a0-12b0-4334-95db-4bf57141c066
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8512ee42a86ec706626dac765a725dfb994eb3d0
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 122a60496a92b3844f4e439e40650c429035dc33
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="cancellationtokensource-class"></a>Classe cancellation_token_source
 La classe `cancellation_token_source` rappresenta la possibilità di annullare una determinata operazione annullabile.  
@@ -151,7 +146,7 @@ bool operator!= (const cancellation_token_source& _Src) const;
   
 ### <a name="return-value"></a>Valore restituito  
   
-##  <a name="operator_eq"></a> operator = 
+##  <a name="operator_eq"></a> operator= 
 
 ```
 cancellation_token_source& operator= (const cancellation_token_source& _Src);
@@ -164,7 +159,7 @@ cancellation_token_source& operator= (cancellation_token_source&& _Src);
   
 ### <a name="return-value"></a>Valore restituito  
   
-##  <a name="operator_eq_eq"></a> operatore = = 
+##  <a name="operator_eq_eq"></a> operator== 
 
 ```
 bool operator== (const cancellation_token_source& _Src) const;

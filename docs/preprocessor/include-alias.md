@@ -1,12 +1,9 @@
 ---
-title: include_alias | Microsoft Docs
-ms.custom: 
+title: include_alias | Documenti Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - vc-pragma.include_alias
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - pragmas, include_alias
 - include_alias pragma
 ms.assetid: 3256d589-12b3-4af0-a586-199e96eabacc
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5a2e3b6f6b8bbbc17073b5bf43b54fff3a619793
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 84e09b51d6f234bdc17353c358e378f18e153567
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="includealias"></a>include_alias
 
@@ -36,7 +31,7 @@ Specifica che *short_filename* deve essere utilizzato come alias per *short_file
 ## <a name="syntax"></a>Sintassi
 
 > #<a name="pragma-includealiaslongfilename-shortfilename"></a>pragma include_alias("*long_filename*", "*short_filename*")  
-> #<a name="pragma-includealiaslongfilename-shortfilename"></a>pragma include_alias(*long_filename*, *short_filename*)
+> #<a name="pragma-includealiaslongfilename-shortfilename"></a>pragma include_alias (*short_filename*, *short_filename*)
 
 ## <a name="remarks"></a>Note
 
@@ -94,7 +89,7 @@ Inoltre, la seguente diretta genera un errore:
 #pragma include_alias(<header.h>, "header.h")  // Error
 ```
 
-Si noti che il nome del file indicato nei messaggi di errore o come valore predefiniti **&#95; &#95; FILE &#95; &#95;**  (macro), è il nome del file dopo la sostituzione è stata eseguita. Ad esempio, vedere l'output dopo le direttive seguenti:
+Si noti che il nome del file indicato nei messaggi di errore o uguale al valore dell'oggetto predefinito **&#95; &#95;FILE&#95; &#95;** (macro), è il nome del file dopo che è stata eseguita la sostituzione. Ad esempio, vedere l'output dopo le direttive seguenti:
 
 ```cpp
 #pragma include_alias( "VeryLongFileName.H", "myfile.h" )

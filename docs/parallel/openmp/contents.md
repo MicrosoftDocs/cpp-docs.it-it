@@ -1,27 +1,22 @@
 ---
 title: Contenuto | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-parallel
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: b7858099-7d7f-4cd9-9fa0-fba4832f2dd2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a46a879f8509aaf0ec97346b3c7e8d8c9457cade
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b348607845f3b42e7e2bc50219384109d430161d
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="contents"></a>Sommario
 [1. Introduzione](../../parallel/openmp/1-introduction.md)  
@@ -158,7 +153,7 @@ ms.lasthandoff: 12/21/2017
   
  [Specifica di compilazione condizionale. 2](../../parallel/openmp/a-2-specifying-conditional-compilation.md)  
   
- [Utilizzo delle aree Parallel. 3](../../parallel/openmp/a-3-using-parallel-regions.md)  
+ [Utilizzo delle regioni Parallel. 3](../../parallel/openmp/a-3-using-parallel-regions.md)  
   
  [Utilizzando la clausola nowait 4](../../parallel/openmp/a-4-using-the-nowait-clause.md)  
   
@@ -170,7 +165,7 @@ ms.lasthandoff: 12/21/2017
   
  [8 specificando sezioni parallele](../../parallel/openmp/a-8-specifying-parallel-sections.md)  
   
- [A9 Using single direttive](../../parallel/openmp/a-9-using-single-directives.md)  
+ [Direttive singole utilizzo a9](../../parallel/openmp/a-9-using-single-directives.md)  
   
  [Impostazione dell'ordinamento sequenziale A.10](../../parallel/openmp/a-10-specifying-sequential-ordering.md)  
   
@@ -178,7 +173,7 @@ ms.lasthandoff: 12/21/2017
   
  [Utilizzo della direttiva atomica A.12](../../parallel/openmp/a-12-using-the-atomic-directive.md)  
   
- [Utilizzo della direttiva di scaricamento con un elenco A.13](../../parallel/openmp/a-13-using-the-flush-directive-with-a-list.md)  
+ [Utilizzo della direttiva scaricamento con un elenco A.13](../../parallel/openmp/a-13-using-the-flush-directive-with-a-list.md)  
   
  [Utilizzo della direttiva scaricamento senza un elenco di A.14](../../parallel/openmp/a-14-using-the-flush-directive-without-a-list.md)  
   
@@ -188,7 +183,7 @@ ms.lasthandoff: 12/21/2017
   
  [Blocca A.17 utilizzando Annidabile](../../parallel/openmp/a-17-using-nestable-locks.md)  
   
- [A.18 nidificati per le direttive](../../parallel/openmp/a-18-nested-for-directives.md)  
+ [A.18 annidati per le direttive](../../parallel/openmp/a-18-nested-for-directives.md)  
   
  [Esempi A.19 che mostrano l'annidamento non corretto di direttive di condivisione del lavoro](../../parallel/openmp/a-19-examples-showing-incorrect-nesting-of-work-sharing-directives.md)  
   
@@ -202,19 +197,19 @@ ms.lasthandoff: 12/21/2017
   
  [Esempio A.24 della clausola privata](../../parallel/openmp/a-24-example-of-the-private-clause.md)  
   
- [Esempi A.25 di copyprivate clausola attributo dati](../../parallel/openmp/a-25-examples-of-the-copyprivate-data-attribute-clause.md)  
+ [Esempi A.25 di copyprivate dati attributo clausola](../../parallel/openmp/a-25-examples-of-the-copyprivate-data-attribute-clause.md)  
   
  [A.26 utilizzando la direttiva threadprivate](../../parallel/openmp/a-26-using-the-threadprivate-directive.md)  
   
  [Utilizzo A.27 di matrici di lunghezza variabile C99](../../parallel/openmp/a-27-use-of-c99-variable-length-arrays.md)  
   
- [Utilizzo A.28 della clausola num_threads](../../parallel/openmp/a-28-use-of-num-threads-clause.md)  
+ [A.28 utilizzo della clausola num_threads](../../parallel/openmp/a-28-use-of-num-threads-clause.md)  
   
  [A.29 condivisione utilizzo di lavoro costruisce all'interno di un costrutto critical](../../parallel/openmp/a-29-use-of-work-sharing-constructs-inside-a-critical-construct.md)  
   
  [Utilizzo A.30 di Reprivatization](../../parallel/openmp/a-30-use-of-reprivatization.md)  
   
- [Funzioni A.31 blocco Thread-Safe](../../parallel/openmp/a-31-thread-safe-lock-functions.md)  
+ [Funzioni di blocco Thread-Safe A.31](../../parallel/openmp/a-31-thread-safe-lock-functions.md)  
   
  [B. Stub per funzioni della libreria di runtime](../../parallel/openmp/b-stubs-for-run-time-library-functions.md)  
   

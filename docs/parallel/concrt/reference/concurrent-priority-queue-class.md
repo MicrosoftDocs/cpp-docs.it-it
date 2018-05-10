@@ -1,12 +1,9 @@
 ---
 title: Classe concurrent_priority_queue | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - concurrent_priority_queue
@@ -24,17 +21,15 @@ dev_langs:
 helpviewer_keywords:
 - concurrent_priority_queue class
 ms.assetid: 3e740381-0f4e-41fc-8b66-ad0bb55f17a3
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 16a9114278cd9559a0a21191faeb87ee34b5a5df
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: ed193eea8209611640b6d125d79ffec1748a7f7f
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="concurrentpriorityqueue-class"></a>Classe concurrent_priority_queue
 La classe `concurrent_priority_queue` è un contenitore che consente a più thread di inserire e togliere elementi contemporaneamente. Gli elementi vengono prelevati secondo un ordine di priorità dove la priorità è determinata da una funzione fornita come argomento del modello.  
@@ -203,7 +198,7 @@ allocator_type get_allocator() const;
 ### <a name="return-value"></a>Valore restituito  
  Una copia dell'allocatore utilizzato per costruire il `concurrent_priority_queue` oggetto.  
   
-##  <a name="operator_eq"></a> operator = 
+##  <a name="operator_eq"></a> operator= 
 
  Assegna il contenuto di un altro `concurrent_priority_queue` questo oggetto. Questo metodo non è indipendente dalla concorrenza.  
   
@@ -248,7 +243,7 @@ size_type size() const;
 ### <a name="remarks"></a>Note  
  La dimensione restituita è garantita da includere tutti gli elementi aggiunti dalle chiamate alla funzione `push`. Tuttavia, potrebbe non riflettere i risultati di operazioni simultanee in sospeso.  
   
-##  <a name="swap"></a> swap 
+##  <a name="swap"></a> Swap 
 
  Scambia il contenuto di due code di priorità simultanee. Questo metodo non è indipendente dalla concorrenza.  
   

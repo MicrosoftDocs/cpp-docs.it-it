@@ -1,13 +1,10 @@
 ---
 title: File di inclusione per il Multithreading | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-parallel
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - include files, multithreading
 - multithreading [C++], include files
 ms.assetid: 98d764f9-71f4-4da5-8f3a-8d2d26e96799
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0f71b52bca5f636d80f2d55cc5e9ffc3e217d90a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 62b94f4a7a394b78cb7c6f23275709e4aeacc774
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="include-files-for-multithreading"></a>File di inclusione per il multithreading
 File di inclusione standard dichiarare le funzioni di libreria run-time C implementato nelle librerie. Se si utilizza il [ottimizzazione completa](../build/reference/ox-full-optimization.md) (/ Ox) o [fastcall convenzione di chiamata](../build/reference/gd-gr-gv-gz-calling-convention.md) (/ Gr) opzione, il compilatore presuppone che tutte le funzioni devono essere chiamate utilizzando la convenzione di chiamata sui registri. Le funzioni della libreria run-time sono state compilate utilizzando la convenzione di chiamata C, e le dichiarazioni nei file di inclusione standard indicano al compilatore di generare i riferimenti esterni corretti a tali funzioni.  

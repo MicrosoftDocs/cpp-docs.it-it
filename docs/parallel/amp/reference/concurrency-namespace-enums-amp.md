@@ -1,10 +1,7 @@
 ---
 title: Enumerazioni di spazio dei nomi Concurrency (AMP) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - amp/Concurrency::access_type
@@ -12,24 +9,22 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 4c87457e-184f-4992-81ab-ca75e7d524ab
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d17378a34698cc80d356983898e0023b76877140
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: a67b5e77b8ab8c52e55dea96e64a3f16a4d70e39
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="concurrency-namespace-enums-amp"></a>Enumerazioni di spazio dei nomi Concurrency (AMP)
 |||  
 |-|-|  
 |[Enumerazione access_type](#access_type)|[Enumerazione queuing_mode](#queuing_mode)|  
   
-##  <a name="access_type">Enumerazione access_type</a>  
+##  <a name="access_type"></a>  Enumerazione access_type  
  Tipo di enumerazione utilizzato per indicare i vari tipi di accesso ai dati.  
   
 ```  
@@ -46,7 +41,7 @@ enum access_type;
 |`access_type_write`|Condiviso. L'allocazione è accessibile nel tasto di scelta rapida e sia leggibile e scrivibile sulla CPU.|  
 
   
-##  <a name="queuing_mode">Enumerazione queuing_mode</a>  
+##  <a name="queuing_mode"></a>  Enumerazione queuing_mode  
  Specifica le modalità di Accodamento messaggi che sono supportate per i tasti di scelta rapida.  
   
 ```  

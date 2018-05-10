@@ -1,13 +1,10 @@
 ---
 title: 'Multithreading: Terminazione dei thread | Documenti Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-parallel
+ms.topic: conceptual
 f1_keywords:
 - CREATE_SUSPENDED
 dev_langs:
@@ -22,17 +19,15 @@ helpviewer_keywords:
 - stopping threads
 - AfxEndThread method
 ms.assetid: 4c0a8c6d-c02f-456d-bd02-0a8c8d006ecb
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c287de62169ef5d205ac791071cee4b103f60abc
-ms.sourcegitcommit: 185e11ab93af56ffc650fe42fb5ccdf1683e3847
+ms.openlocfilehash: bdf9376e9f8c9e9d74d88d0bef40dc71fd43d51f
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="multithreading-terminating-threads"></a>Multithreading: terminazione dei thread
 Due situazioni normale causano un'interruzione di thread: non termina la funzione di controllo o il thread non è consentito per l'esecuzione fino al completamento. Se un elaboratore di testo utilizzato un thread in background, la funzione di controllo termina normalmente stampa viene completata correttamente. Se l'utente decide di annullare la stampa, tuttavia, il thread in background stampa deve essere interrotto in modo anomalo. In questo argomento viene illustrato come implementare ogni situazione sia come ottenere il codice di uscita di un thread dopo la terminazione.  
@@ -43,17 +38,17 @@ Due situazioni normale causano un'interruzione di thread: non termina la funzion
   
 -   [Il recupero del codice di uscita di un Thread](#_core_retrieving_the_exit_code_of_a_thread)  
   
-##  <a name="_core_normal_thread_termination"></a>Chiusura di Thread normale  
+##  <a name="_core_normal_thread_termination"></a> Chiusura di Thread normale  
  Per un thread di lavoro, chiusura di thread normale è semplice: uscire dalla funzione di controllo e restituire un valore che indica il motivo della chiusura. È possibile utilizzare il [AfxEndThread](../mfc/reference/application-information-and-management.md#afxendthread) funzione o un `return` istruzione. In genere, 0 indica il completamento, ma che è responsabilità dell'utente.  
   
  Per un thread dell'interfaccia utente, il processo è semplice: dall'interno del thread dell'interfaccia utente, chiamare [PostQuitMessage](http://msdn.microsoft.com/library/windows/desktop/ms644945) nel [!INCLUDE[winsdkshort](../atl-mfc-shared/reference/includes/winsdkshort_md.md)]. L'unico parametro che **PostQuitMessage** è il codice di uscita del thread. Come per il thread di lavoro, 0 indica in genere il completamento.  
   
-##  <a name="_core_premature_thread_termination"></a>Chiusura anomala di Thread  
+##  <a name="_core_premature_thread_termination"></a> Chiusura anomala di Thread  
  Terminazione di un thread in modo anomalo è semplice: chiamare [AfxEndThread](../mfc/reference/application-information-and-management.md#afxendthread) dall'interno del thread. Passare il codice di uscita desiderata come unico parametro. Questo arresta l'esecuzione del thread, dealloca lo stack del thread, disconnette tutte le DLL associate al thread e consente di eliminare l'oggetto thread dalla memoria.  
   
- `AfxEndThread`deve essere chiamato dall'interno del thread da terminare. Se si desidera terminare un thread da un altro thread, è necessario configurare un metodo di comunicazione tra i due thread.  
+ `AfxEndThread` Deve essere chiamato dall'interno del thread da terminare. Se si desidera terminare un thread da un altro thread, è necessario configurare un metodo di comunicazione tra i due thread.  
   
-##  <a name="_core_retrieving_the_exit_code_of_a_thread"></a>Il recupero del codice di uscita di un Thread  
+##  <a name="_core_retrieving_the_exit_code_of_a_thread"></a> Il recupero del codice di uscita di un Thread  
  Per ottenere il codice di uscita del thread di lavoro o il thread dell'interfaccia utente, chiamare il [GetExitCodeThread](http://msdn.microsoft.com/library/windows/desktop/ms683190) (funzione). Per informazioni su questa funzione, vedere il [!INCLUDE[winsdkshort](../atl-mfc-shared/reference/includes/winsdkshort_md.md)]. Questa funzione accetta l'handle per il thread (archiviati nel `m_hThread` membro dati di `CWinThread` oggetti) e l'indirizzo di un `DWORD`.  
   
  Se il thread è ancora attivo, **GetExitCodeThread** inserisce **viene posizionato da GetExitCodeThread** in fornito `DWORD` indirizzo; in caso contrario, il codice di uscita viene inserito nell'indirizzo.  

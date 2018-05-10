@@ -1,13 +1,10 @@
 ---
 title: Annullamento nella libreria PPL | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - parallel work trees [Concurrency Runtime]
 - canceling parallel tasks [Concurrency Runtime]
 ms.assetid: baaef417-b2f9-470e-b8bd-9ed890725b35
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 340942905ce252f7e4a40d8ae5366d5d154755d1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5a0c74ad5877a5b490414d96bf0f13b32309a21a
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="cancellation-in-the-ppl"></a>Annullamento nella libreria PPL
 In questo documento viene illustrato il ruolo dell'annullamento nella libreria PPL (Parallel Patterns Library), come annullare un lavoro parallelo e come determinare quando un lavoro parallelo è annullato.  
@@ -53,7 +48,7 @@ In questo documento viene illustrato il ruolo dell'annullamento nella libreria P
 
 
   
-##  <a name="top"></a>In questo documento  
+##  <a name="top"></a> In questo documento  
   
 - [Alberi del lavoro parallelo](#trees)  
   
@@ -69,10 +64,10 @@ In questo documento viene illustrato il ruolo dell'annullamento nella libreria P
   
 - [Quando evitare l'uso dell'annullamento](#when)  
   
-##  <a name="trees"></a>Alberi del lavoro parallelo  
+##  <a name="trees"></a> Alberi del lavoro parallelo  
  La libreria PPL utilizza attività e gruppi di attività per gestire attività e calcoli in modo accurato. È possibile nidificare i gruppi di attività per modulo *alberi* del lavoro parallelo. La figura seguente illustra un albero del lavoro parallelo. In questa illustrazione, `tg1` e `tg2` rappresentano i gruppi di attività; `t1`, `t2`, `t3`, `t4` e `t5` rappresentano il lavoro eseguito dai gruppi di attività.  
   
- ![Albero del lavoro parallelo](../../parallel/concrt/media/parallelwork_trees.png "parallelwork_trees")  
+ ![Un albero del lavoro parallelo](../../parallel/concrt/media/parallelwork_trees.png "parallelwork_trees")  
   
  Nell'esempio seguente viene illustrato il codice necessario per creare l'albero dell'illustrazione. In questo esempio, `tg1` e `tg2` sono [Concurrency:: structured_task_group](../../parallel/concrt/reference/structured-task-group-class.md) oggetti; `t1`, `t2`, `t3`, `t4`, e `t5` sono [Concurrency:: task_handle](../../parallel/concrt/reference/task-handle-class.md) oggetti.  
   
@@ -82,14 +77,14 @@ In questo documento viene illustrato il ruolo dell'annullamento nella libreria P
   
  [[Torna all'inizio](#top)]  
   
-##  <a name="tasks"></a>Annullamento di attività parallele  
+##  <a name="tasks"></a> Annullamento di attività parallele  
 
  Sono disponibili più modi per annullare un lavoro parallelo. La modalità consigliata è quella che consiste nell'utilizzo di un token di annullamento. Gruppi di attività anche il supporto di [concurrency::task_group::cancel](reference/task-group-class.md#cancel) (metodo) e [structured_task_group](reference/structured-task-group-class.md#cancel) metodo. L'ultimo modo consiste nel generare un'eccezione nel corpo di una funzione lavoro dell'attività. Indipendentemente dal metodo scelto, si tenga presente che l'annullamento non si verifica immediatamente. Sebbene un nuovo lavoro non venga avviato se un'attività o un gruppo di attività viene annullato, il lavoro attivo deve controllare e rispondere all'annullamento.  
 
   
  Per ulteriori esempi di annullare l'attività in parallelo, vedere [procedura dettagliata: connessione tramite attività e richieste HTTP XML](../../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md), [procedura: usare l'annullamento per interrompere un ciclo parallelo](../../parallel/concrt/how-to-use-cancellation-to-break-from-a-parallel-loop.md), e [come: utilizzare Eccezioni per interrompere un ciclo Parallel](../../parallel/concrt/how-to-use-exception-handling-to-break-from-a-parallel-loop.md).  
   
-###  <a name="tokens"></a>Utilizzo di un Token di annullamento per annullare un lavoro parallelo  
+###  <a name="tokens"></a> Utilizzo di un Token di annullamento per annullare un lavoro parallelo  
  Le classi `task`, `task_group` e `structured_task_group` supportano l'annullamento tramite l'utilizzo di token di annullamento. La libreria PPL definisce il [Concurrency:: cancellation_token_source](../../parallel/concrt/reference/cancellation-token-source-class.md) e [cancellation_token](../../parallel/concrt/reference/cancellation-token-class.md) classi per questo scopo. Quando si usa un token di annullamento per annullare il lavoro, il runtime non avvia nuovo lavoro che sottoscrive tale token. Il lavoro già attivo è possibile utilizzare il [is_canceled](../../parallel/concrt/reference/cancellation-token-class.md#is_canceled) funzione membro per monitorare il token di annullamento e arrestarsi quando possibile.  
   
 
@@ -154,7 +149,7 @@ In questo documento viene illustrato il ruolo dell'annullamento nella libreria P
   
 #### <a name="cancellation-tokens-and-task-composition"></a>Token di annullamento e composizione di attività  
 
- Il [concurrency:: HYPERLINK "http://msdn.microsoft.com/library/system.threading.tasks.task.whenall (v=VS.110).aspx" when_all](reference/concurrency-namespace-functions.md#when_all) e [Concurrency:: when_any](reference/concurrency-namespace-functions.md#when_all) funzioni sono utili per creare più attività per implementare modelli comuni. In questa sezione viene descritto il funzionamento di queste funzioni con i token di annullamento.  
+ Il [concurrency:: HYPERLINK "http://msdn.microsoft.com/library/system.threading.tasks.task.whenall(v=VS.110).aspx" when_all](reference/concurrency-namespace-functions.md#when_all) e [Concurrency:: when_any](reference/concurrency-namespace-functions.md#when_all) funzioni possono aiutare a creare più attività per implementare modelli comuni. In questa sezione viene descritto il funzionamento di queste funzioni con i token di annullamento.  
   
  Quando si fornisce un token di annullamento alla funzione `when_all` o a `when_any`, quella funzione si annulla solo quando il token di annullamento viene annullato o quando una delle attività partecipanti termina in uno stato annullato oppure genera un'eccezione.  
   
@@ -164,7 +159,7 @@ In questo documento viene illustrato il ruolo dell'annullamento nella libreria P
   
  [[Torna all'inizio](#top)]  
   
-###  <a name="cancel"></a>Utilizzo del metodo cancel per annullare un lavoro parallelo  
+###  <a name="cancel"></a> Utilizzo del metodo cancel per annullare un lavoro parallelo  
 
  Il [concurrency::task_group::cancel](reference/task-group-class.md#cancel) e [structured_task_group](reference/structured-task-group-class.md#cancel) metodi set di un gruppo di attività sullo stato di annullamento. Dopo avere chiamato `cancel`, il gruppo di attività non avvia attività successive. I metodi `cancel` possono essere chiamati da più attività figlio. Un'attività annullata determina la [Concurrency](reference/task-group-class.md#wait) e [Concurrency](reference/structured-task-group-class.md#wait) metodi per restituire [Concurrency](reference/concurrency-namespace-enums.md#task_group_status).  
 
@@ -200,7 +195,7 @@ In questo documento viene illustrato il ruolo dell'annullamento nella libreria P
   
  [[Torna all'inizio](#top)]  
   
-###  <a name="exceptions"></a>Uso delle eccezioni per annullare un lavoro parallelo  
+###  <a name="exceptions"></a> Uso delle eccezioni per annullare un lavoro parallelo  
  L'utilizzo dei token di annullamento e del metodo `cancel` è più efficace della gestione delle eccezioni per annullare un albero di lavoro parallelo. I token di annullamento e il metodo `cancel` annullano un'attività e tutte le attività figlio dall'alto verso il basso. La gestione delle eccezioni funziona invece in ordine sequenziale dal basso verso l'alto e deve annullare ogni gruppo di attività figlio in modo indipendente in quanto l'eccezione si propaga verso l'alto. L'argomento [eccezioni](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md) viene illustrato come il Runtime di concorrenza utilizza le eccezioni per comunicare gli errori. Tuttavia, non tutte le eccezioni indicano un errore. Un algoritmo di ricerca potrebbe, ad esempio, annullare l'attività associata quando viene trovato il risultato. Tuttavia, come indicato in precedenza, la gestione delle eccezioni è meno efficiente dell'uso del metodo `cancel` per annullare un lavoro parallelo.  
   
 > [!CAUTION]
@@ -220,7 +215,7 @@ In questo documento viene illustrato il ruolo dell'annullamento nella libreria P
   
  [[Torna all'inizio](#top)]  
   
-##  <a name="algorithms"></a>Annullamento degli algoritmi paralleli  
+##  <a name="algorithms"></a> Annullamento degli algoritmi paralleli  
  Gli algoritmi paralleli nella libreria PPL, ad esempio `parallel_for`, si basano sui gruppi di attività. Pertanto, per annullare un algoritmo parallelo, è possibile usare molte delle stesse tecniche.  
   
  Negli esempi seguenti vengono illustrati diversi modi per annullare un algoritmo parallelo.  
@@ -258,7 +253,7 @@ Caught 50
   
  [[Torna all'inizio](#top)]  
   
-##  <a name="when"></a>Quando evitare l'uso dell'annullamento  
+##  <a name="when"></a> Quando evitare l'uso dell'annullamento  
  L'uso dell'annullamento è appropriato quando ogni membro di un gruppo di attività correlate può uscire in modo tempestivo. In alcuni scenari, tuttavia, l'annullamento potrebbe non essere appropriato per l'applicazione. Ad esempio, poiché l'annullamento delle attività è cooperativo, il set complessivo di attività non verrà annullato se un singola attività è bloccata. Se, ad esempio, un'attività non è ancora stata avviata, ma sblocca un'altra attività attiva, non verrà avviata se il gruppo di attività viene annullato. Ciò può causare condizioni di deadlock nell'applicazione. Un altro esempio in cui l'uso dell'annullamento potrebbe non essere appropriato è quello in cui un'attività viene annullata ma la relativa attività figlio esegue un'operazione importante, ad esempio la liberazione di una risorsa. Poiché l'annullamento dell'attività padre determina l'annullamento del set complessivo di attività, tale operazione non verrà eseguita. Per un esempio che illustra questo punto, vedere il [comprendere come eccezione eccezioni influiscono sull'oggetto eliminazione e annullamento](../../parallel/concrt/best-practices-in-the-parallel-patterns-library.md#object-destruction) sezione nelle procedure consigliate nell'argomento della libreria PPL.  
   
  [[Torna all'inizio](#top)]  

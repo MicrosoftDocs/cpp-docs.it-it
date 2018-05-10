@@ -2,11 +2,8 @@
 title: Classe completion_future | Documenti Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-amp
 ms.topic: reference
 f1_keywords:
 - completion_future
@@ -22,17 +19,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 1303c62e-546d-4b02-a578-251ed3fc0b6b
-caps.latest.revision: 8
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 24f7012f7fdd9aaeb2443665187aba4eef483e0f
-ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
+ms.openlocfilehash: 6b6aa7e9c160a7bedc6eed58a63c07ae7bb65913
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="completionfuture-class"></a>Classe completion_future
 Rappresenta un futuro corrisponde a un'operazione asincrona di C++ AMP.  
@@ -68,7 +63,7 @@ class completion_future;
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[operator std::shared_future\<void>](#operator_shared_future)|Converte in modo implicito il `completion_future` l'oggetto in un `std::shared_future` oggetto.|  
+|[operatore std::shared_future\<void >](#operator_shared_future)|Converte in modo implicito il `completion_future` l'oggetto in un `std::shared_future` oggetto.|  
 |[operator=](#operator_eq)|Copia il contenuto dell'oggetto specificato `completion_future` specificato in questo oggetto.|  
   
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
@@ -156,7 +151,7 @@ completion_future&  operator= (completion_future&& _Other );
 |`completion_future& operator=(const completion_future& _Other);`|Copia il contenuto dell'oggetto specificato `completion_future` oggetto in questo profilo, utilizzando una copia completa.|  
 |`completion_future& operator=(completion_future&& _Other);`|Copia il contenuto dell'oggetto specificato `completion_future` oggetto in questo profilo, l'utilizzo di un'assegnazione di spostamento.|  
   
-## <a name="then"></a> then 
+## <a name="then"></a> quindi 
 
 Concatena un oggetto funzione di callback per la `completion_future` oggetto da eseguire al termine dell'esecuzione dell'operazione asincrona associata.  
   

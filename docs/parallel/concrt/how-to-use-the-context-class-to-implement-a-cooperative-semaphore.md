@@ -1,30 +1,25 @@
 ---
 title: 'Procedura: utilizzare la classe Context per implementare una classe semaforo di cooperazione | Documenti Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - cooperative semaphore implementing
 - context class
 ms.assetid: 22f4b9c0-ca22-4a68-90ba-39e99ea76696
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 03884d69877053976fdaf04e507c4c1c4214026e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 481c5f092becee7f455294437bdc695a6e1e4057
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-to-use-the-context-class-to-implement-a-cooperative-semaphore"></a>Procedura: utilizzare la classe Context per implementare una classe semaforo di cooperazione
 In questo argomento viene illustrato come utilizzare la classe Concurrency:: Context per implementare una classe semaforo di cooperazione.  
@@ -84,7 +79,7 @@ In loop iteration 4...
 ## <a name="compiling-the-code"></a>Compilazione del codice  
  Copiare il codice di esempio e incollarlo in un progetto di Visual Studio oppure incollarlo in un file denominato `cooperative-semaphore.cpp` , quindi eseguire il comando seguente in una finestra del prompt dei comandi di Visual Studio.  
   
- **CL.exe /EHsc cooperative-semaphore. cpp**  
+ **CL.exe /EHsc cooperativo-Semaphore. cpp**  
   
 ## <a name="robust-programming"></a>Programmazione efficiente  
  È possibile utilizzare il *Resource Acquisition Is Initialization* modello (RAII) per limitare l'accesso a un `semaphore` oggetto a un ambito specificato. Sotto il modello RAII, una struttura di dati viene allocata nello stack. La struttura dei dati Inizializza o acquisisce una risorsa quando viene creato ed elimina o rilascia tale risorsa quando viene eliminata la struttura dei dati. Il modello RAII garantisce che il distruttore viene chiamato prima che l'ambito che lo contiene viene chiuso. Pertanto, la risorsa viene gestita correttamente quando viene generata un'eccezione oppure quando una funzione contiene più `return` istruzioni.  

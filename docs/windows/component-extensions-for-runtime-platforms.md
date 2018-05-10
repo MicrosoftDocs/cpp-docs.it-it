@@ -1,13 +1,10 @@
 ---
 title: Estensioni componenti per le piattaforme Runtime | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - keywords [C++]
 - Managed Extensions for C++, replacement syntax
 ms.assetid: 1e400ee6-3ac9-4910-a608-9d3d5993e423
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e32057e17614da98c78d877fe95180dd02500909
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e60a1285f54de6b1cbfe311d4d9cbbc547785176
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="component-extensions-for-runtime-platforms"></a>Estensioni componenti per le piattaforme runtime
 Visual C++ fornisce le estensioni del linguaggio per agevolare la programmazione per piattaforme di runtime. Utilizzando C + + CX, è possibile programmare le app Universal Windows Platform e dei componenti che possono essere compilate in codice nativo. Sebbene sia possibile creare le app Universal Windows Platform programmando direttamente con le interfacce di Windows Runtime COM, utilizzando C + + CX, è possibile utilizzare costruttori, eccezioni e altre di programmazione C++ moderni. Per abilitare la programmazione in C++ in un ambiente di esecuzione gestito sulla piattaforma .NET, è possibile usare C + + CLI.  
@@ -83,10 +78,10 @@ Visual C++ fornisce le estensioni del linguaggio per agevolare la programmazione
 |-------------|-----------------------|-------------|---------------|  
 |`finally`|Yes|Indica il comportamento di gestione delle eccezioni predefinito.|[Gestione delle eccezioni](../windows/exception-handling-cpp-component-extensions.md)|  
 |`for each, in`|No|Enumera gli elementi di una raccolta.|[for each, in](../dotnet/for-each-in.md)|  
-|`gcnew`|No|Alloca tipi sull'heap sottoposto a Garbage Collection. Usare al posto di `new` e `delete`.|[gcnew nuovi, di riferimento](../windows/ref-new-gcnew-cpp-component-extensions.md)|  
-|`ref new`|Yes|Alloca un tipo Windows Runtime. Usare al posto di `new` e `delete`.|[gcnew nuovi, di riferimento](../windows/ref-new-gcnew-cpp-component-extensions.md)|  
+|`gcnew`|No|Alloca tipi sull'heap sottoposto a Garbage Collection. Usare al posto di `new` e `delete`.|[ref new, gcnew](../windows/ref-new-gcnew-cpp-component-extensions.md)|  
+|`ref new`|Yes|Alloca un tipo Windows Runtime. Usare al posto di `new` e `delete`.|[ref new, gcnew](../windows/ref-new-gcnew-cpp-component-extensions.md)|  
 |`initonly`|Yes|Indica che un membro può essere inizializzato solo in fase di dichiarazione o in un costruttore statico.|[initonly (C++/CLI)](../dotnet/initonly-cpp-cli.md)|  
-|`literal`|Yes|Crea una variabile letterale.|[valore letterale](../windows/literal-cpp-component-extensions.md)|  
+|`literal`|Yes|Crea una variabile letterale.|[Valore letterale](../windows/literal-cpp-component-extensions.md)|  
 |`nullptr`|No|Indica che un handle o un puntatore non punta a un oggetto.|[nullptr](../windows/nullptr-cpp-component-extensions.md)|  
   
 ## <a name="template-constructs"></a>Costrutti di modello  
@@ -126,7 +121,7 @@ Visual C++ fornisce le estensioni del linguaggio per agevolare la programmazione
 |[Assembly di tipo friend (C++)](../dotnet/friend-assemblies-cpp.md)|Illustra come un assembly client può accedere a tutti i tipi in un componente di assembly.|  
 |[Conversione boxing](../windows/boxing-cpp-component-extensions.md)|Illustra le condizioni in cui i tipi di valori vengono sottoposti a boxing.|  
 |[Supporto del compilatore per tratti di tipo](../windows/compiler-support-for-type-traits-cpp-component-extensions.md)|Illustra come rilevare le caratteristiche dei tipi in fase di compilazione.|  
-|[Managed, unmanaged](../preprocessor/managed-unmanaged.md) pragma|Illustra come le funzioni gestite e non gestite possono coesistere nello stesso modulo.|  
+|[Managed, unmanaged](../preprocessor/managed-unmanaged.md) direttive pragma|Illustra come le funzioni gestite e non gestite possono coesistere nello stesso modulo.|  
 |[processo](../cpp/process.md) `__declspec` modificatore|Modificatore `__declspec` che richiede che esistano variabili globali e statiche per processo.|  
 |[Reflection (C++/CLI)](../dotnet/reflection-cpp-cli.md)|Illustra la versione CLR delle informazioni sul tipo di runtime.|  
 |[String](../windows/string-cpp-component-extensions.md)|Illustra la conversione del compilatore di valori letterali stringa in <xref:System.String>.|  

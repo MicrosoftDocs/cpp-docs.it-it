@@ -1,27 +1,22 @@
 ---
 title: 2.4.3 singolo costrutto | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-parallel
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 15c180cd-e462-4b41-bf8c-cb8b1afb1a9b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 72dc551986f149bda668c438ac5f51d01d530c51
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: db3f9ca834fb3f35c95732698fd02e16f31b4225
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="243-single-construct"></a>2.4.3 Costrutto single
 Il **singolo** direttiva identifica un costrutto che specifica che il blocco strutturato associato viene eseguito solo da un thread del team (non necessariamente il thread principale). La sintassi del **singolo** direttiva è come segue:  
@@ -32,11 +27,11 @@ Il **singolo** direttiva identifica un costrutto che specifica che il blocco str
   
  La clausola è uno dei valori seguenti:  
   
- **private (** *elenco variabili* **)**  
+ **private (** *variabile-list* **)**  
   
- **firstprivate (** *elenco variabili* **)**  
+ **firstprivate (** *variabile-list* **)**  
   
- **copyprivate (** *elenco variabili* **)**  
+ **copyprivate (** *variabile-list* **)**  
   
  **nowait**  
   
@@ -50,4 +45,4 @@ Il **singolo** direttiva identifica un costrutto che specifica che il blocco str
   
 ## <a name="cross-references"></a>Riferimenti:  
   
--   **privato**, **firstprivate**, e **copyprivate** clausole, vedere [sezione 2.7.2](../../parallel/openmp/2-7-2-data-sharing-attribute-clauses.md) nella pagina 25.
+-   **private**, **firstprivate**, e **copyprivate** clausole, vedere [sezione 2.7.2](../../parallel/openmp/2-7-2-data-sharing-attribute-clauses.md) nella pagina 25.

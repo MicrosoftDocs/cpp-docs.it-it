@@ -1,13 +1,10 @@
 ---
 title: _daylight, _dstbias, _timezone e _tzname | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - tzname
 - _timezone
@@ -30,17 +27,15 @@ helpviewer_keywords:
 - tzname function
 - time-zone variables
 ms.assetid: d06c7292-6b99-4aba-b284-16a96570c856
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 81ab3701ac99aece4710208a0a5d19ce645d287a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 944a127fb71beb7dba1ba9434cbc5d778230c055
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="daylight-dstbias-timezone-and-tzname"></a>_daylight, _dstbias, _timezone, and _tzname
 `_daylight`, `_dstbias`, `_timezone` e `_tzname` vengono utilizzati nelle routine di data e ora per apportare modifiche all'ora locale. Queste variabili globali sono state deprecate a favore di versioni funzionali più sicure che devono essere utilizzate al posto delle variabile globali.  

@@ -1,29 +1,24 @@
 ---
 title: Gruppi di pianificazione | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - schedule groups
 ms.assetid: 03523572-5891-4d17-89ce-fa795605f28b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a61566878adc539af21e1645844eff27c5a8aec0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c1395fbc58d8a4d1d06cd93eea21c0f3d2dec8c6
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="schedule-groups"></a>Gruppi di pianificazione
 Questo documento descrive il ruolo dei gruppi di pianificazione nel Runtime di concorrenza. Oggetto *gruppo di pianificazione* Raggruppa o gruppi, attività correlate tra loro. Ogni utilità di pianificazione ha uno o più gruppi di pianificazione. Usare i gruppi di pianificazione quando è necessario un livello elevato di località tra le attività, ad esempio quando un gruppo di attività correlate trae vantaggio dall'esecuzione nello stesso nodo del processore. Al contrario, utilizzare le istanze dell'utilità di pianificazione quando l'applicazione ha requisiti di qualità specifici, ad esempio, quando si desidera limitare la quantità di risorse di elaborazione che vengono allocate a un set di attività. Per ulteriori informazioni sulle istanze dell'utilità di pianificazione, vedere [istanze dell'utilità di pianificazione](../../parallel/concrt/scheduler-instances.md).  
