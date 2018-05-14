@@ -26,6 +26,7 @@
 # [Procedure di sicurezza consigliate per C++](security/security-best-practices-for-cpp.md)
 ## [Esecuzione come membro del gruppo Users](security/running-as-a-member-of-the-users-group.md)
 ## [Effetti del Controllo dell'account utente sull'applicazione](security/how-user-account-control-uac-affects-your-application.md)
+## [Materiale sussidiario per sviluppatori C++ - Minacce Speculative Execution Side Channel](security/developer-guidance-speculative-execution.md)
 # [Esempi di Visual C++](visual-cpp-samples.md)
 # [Guida e community di Visual C++](visual-cpp-help-and-community.md)
 # [Come segnalare un problema con il set di strumenti di Visual C++](how-to-report-a-problem-with-the-visual-cpp-toolset.md)
