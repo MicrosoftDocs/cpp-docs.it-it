@@ -1,11 +1,10 @@
 ---
 title: Supporto Unicode nel compilatore e del Linker | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 12/15/2017
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VC.Project.VCLinkerTool.UseUnicodeResponseFiles
 - VC.Project.VCLibrarianTool.UseUnicodeResponseFiles
@@ -17,14 +16,13 @@ helpviewer_keywords:
 - Unicode, Visual C++
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fe775a53914089648a868a94aa2c863ee87790c5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ec0b84cd62f3fcca378ab55de16006925e685b37
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="unicode-support-in-the-compiler-and-linker"></a>Supporto Unicode nel compilatore e nel linker
 
@@ -56,7 +54,7 @@ File di risposta e i file DEF possono essere UTF-16 con un BOM o ANSI.
 
 ## <a name="asm-and-cod-dumps"></a>dump asm e Cod
 
-Per impostazione predefinita per la compatibilità con MASM, dump asm e Cod sono in formato ANSI. Utilizzare [/FAu.](../../build/reference/fa-fa-listing-file.md) all'output UTF-8. Si noti che se si specifica **/FAs**, il codice sorgente, verrà stampato direttamente e potrebbe avere un aspetto confuso, ad esempio se il codice sorgente è UTF-8 e non è stato specificato **/FAsu.**.
+Per impostazione predefinita per la compatibilità con MASM, dump asm e Cod sono in formato ANSI. Utilizzare [/FAu.](../../build/reference/fa-fa-listing-file.md) all'output UTF-8. Si noti che se si specifica **/FAs**, il codice sorgente, verrà stampato direttamente e potrebbe avere un aspetto confuso, ad esempio se il codice sorgente è UTF-8 e non è stato specificato **/FAsu**.
 
 ## <a name="see-also"></a>Vedere anche
 

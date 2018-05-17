@@ -16,11 +16,11 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4d69c97294795ed2f3f0b2d82ec8caa4734fa1f7
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 03f286f21f213f5b2a193ccb824ba22b7c7c1f00
+ms.sourcegitcommit: 39585672df8874fb5df4e70de97cd7f328fe9880
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/14/2018
 ---
 # <a name="fastcall"></a>__fastcall
 **Sezione specifica Microsoft**  
@@ -31,7 +31,7 @@ ms.lasthandoff: 05/03/2018
 |-------------|--------------------|  
 |Ordine in cui gli argomenti vengono passati|I primi due argomenti DWORD o quelli più piccoli, che sono presenti nell'elenco di argomenti da sinistra a destra, vengono passati nei registri EDX e ECX; tutti gli altri argomenti vengono passati nello stack da destra a sinistra.|  
 |Responsabilità di manutenzione dello stack|La funzione chiamata estrae gli argomenti dallo stack.|  
-|Convenzione della decorazione dei nomi|Un segno di chiocciola @ è anteposto ai nomi; un segno di chiocciola @ seguito dal numero di byte (in decimali) nell'elenco di parametri è posposto ai nomi.|  
+|Convenzione della decorazione dei nomi|Simbolo di chiocciola (\@) è anteposto ai nomi; un simbolo seguito dal numero di byte (in decimale) nel parametro elenco è Posposto ai nomi.|  
 |Convenzione della conversione maiuscolo/minuscolo e viceversa|Non viene effettuata alcuna conversione maiuscole/minuscole.|  
   
 > [!NOTE]

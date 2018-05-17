@@ -1,13 +1,10 @@
 ---
-title: "-Ox (attiva la maggior parte delle ottimizzazioni di velocità) | Documenti Microsoft"
-ms.custom: 
+title: -Ox (attiva la maggior parte delle ottimizzazioni di velocità) | Documenti Microsoft
+ms.custom: ''
 ms.date: 09/25/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VC.Project.VCCLCompilerTool.ToolOptimization
 - /ox
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - /Ox compiler option [C++]
 - -Ox compiler option [C++]
 ms.assetid: 3ad7c30b-c615-428c-b1d0-2e024f81c760
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 85efa8a2beab34d0dcf1bdb74e3cf89008b10d6e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 569563bff030904988e93db749438eaeb58ce9db
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ox-enable-most-speed-optimizations"></a>/Ox (attiva la maggior parte delle ottimizzazioni di velocità)
 
@@ -53,19 +48,19 @@ Il **/Ox** opzione del compilatore è equivale a utilizzare le opzioni seguenti 
 
 - [/Ot (Ottimizza per velocità codice)](../../build/reference/os-ot-favor-small-code-favor-fast-code.md)
 
-- [/Oy (omissione dei puntatori frame)](../../build/reference/oy-frame-pointer-omission.md)
+- [/Oy (omissione dei puntatori ai frame)](../../build/reference/oy-frame-pointer-omission.md)
 
 **/Ox** si escludono a vicenda da:
 
-- [/O1 (Riduci dimensione)](../../build/reference/o1-o2-minimize-size-maximize-speed.md)
+- [/ O1 (Riduci dimensione)](../../build/reference/o1-o2-minimize-size-maximize-speed.md)
 
-- [/O2 (Ottimizza velocità)](../../build/reference/o1-o2-minimize-size-maximize-speed.md)
+- [/ O2 (Ottimizza velocità)](../../build/reference/o1-o2-minimize-size-maximize-speed.md)
 
-- [/Od (disabilita (Debug))](../../build/reference/od-disable-debug.md)
+- [/Od (disabilita (debug))](../../build/reference/od-disable-debug.md)
 
 È possibile annullare la distorsione verso velocità del **/Ox** se si specifica l'opzione del compilatore **/Oxs.**, che combina il **/Ox** con l'opzione del compilatore [/Os (Ottimizza per dimensione piccola Il codice)](../../build/reference/os-ot-favor-small-code-favor-fast-code.md). Le opzioni combinate favoriscono dimensioni del codice.
 
-Per applicare tutte le ottimizzazioni a livello di file disponibili nelle build di rilascio, è consigliabile specificare [/O2 (Ottimizza velocità)](../../build/reference/o1-o2-minimize-size-maximize-speed.md) anziché **/Ox**, e [/O1 (Riduci dimensione)](../../build/reference/o1-o2-minimize-size-maximize-speed.md) invece di **/Oxs.**. Per le build di ottimizzazione maggiore nella versione, valutare l'opportunità di [/GL (Ottimizzazione intero programma)](../../build/reference/gl-whole-program-optimization.md) l'opzione del compilatore e [/LTCG (generazione di codice in fase di collegamento)](../../build/reference/ltcg-link-time-code-generation.md) l'opzione del linker.
+Per applicare tutte le ottimizzazioni a livello di file disponibili nelle build di rilascio, è consigliabile specificare [/O2 (Ottimizza velocità)](../../build/reference/o1-o2-minimize-size-maximize-speed.md) anziché **/Ox**, e [/O1 (Riduci dimensione)](../../build/reference/o1-o2-minimize-size-maximize-speed.md) invece di **/Oxs**. Per le build di ottimizzazione maggiore nella versione, valutare l'opportunità di [/GL (Ottimizzazione intero programma)](../../build/reference/gl-whole-program-optimization.md) l'opzione del compilatore e [/LTCG (generazione di codice in fase di collegamento)](../../build/reference/ltcg-link-time-code-generation.md) l'opzione del linker.
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio
 
@@ -81,6 +76,6 @@ Per applicare tutte le ottimizzazioni a livello di file disponibili nelle build 
 
 ## <a name="see-also"></a>Vedere anche
 
-[Opzioni /O (Ottimizza codice)](../../build/reference/o-options-optimize-code.md)  
+[Opzioni /O (ottimizza codice)](../../build/reference/o-options-optimize-code.md)  
 [Opzioni del compilatore](../../build/reference/compiler-options.md)  
 [Impostazione delle opzioni del compilatore](../../build/reference/setting-compiler-options.md)
