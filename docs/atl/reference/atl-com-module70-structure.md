@@ -19,11 +19,11 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 06c0fa2af67ddd649783c9e062a1b93b87dd0b39
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5d78165481c8f2e9d8bba33ad14ebd0794f04fde
+ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="atlcommodule70-structure"></a>Struttura _ATL_COM_MODULE70
 Utilizzato da codice COM correlato in ATL.  
@@ -63,7 +63,7 @@ struct _ATL_COM_MODULE70 {
  **Intestazione:** atlbase. h  
   
 ## <a name="see-also"></a>Vedere anche  
- [Strutture](../../atl/reference/atl-structures.md)
+ [Classi e struct](../../atl/reference/atl-classes.md)
 
 
 
