@@ -1,7 +1,7 @@
 ---
 title: Distribuzione in Visual C++ | Documenti Microsoft
 ms.custom: ''
-ms.date: 03/13/2018
+ms.date: 05/11/2018
 ms.technology:
 - cpp-ide
 ms.topic: conceptual
@@ -15,15 +15,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d9880272a09cde3bec0dbbbe03bfc30821591d6b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5b9dfdcdce618df3f2bfec64892f62aec20b6db9
+ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="deployment-in-visual-c"></a>Distribuzione in Visual C++
 
 Installazione dell'applicazione in un computer diverso dal computer di sviluppo è noto come *distribuzione*. Quando si distribuisce un'applicazione Visual C++ in un altro computer, è necessario installare l'applicazione e i file di libreria che dipende. Visual Studio sono disponibili tre modi distribuire le librerie di Visual C++ insieme all'applicazione: *distribuzione centrale*, *distribuzione locale*, e *collegamento statico*. Distribuzione centrale inserisce i file di libreria nella directory di Windows, in cui il servizio Windows Update aggiornarle automaticamente. Distribuzione locale i file di libreria vengono inseriti nella stessa directory dell'applicazione. È necessario ridistribuire eventuali librerie distribuite localmente per aggiornarli. Collegamento statico associa il codice di libreria nell'applicazione. È necessario ricompilare e ridistribuire l'applicazione possa sfruttare i vantaggi di tutti gli aggiornamenti alle librerie, quando si usa il collegamento statico.
+
+In Visual Studio 2015, la libreria di Runtime C Microsoft è stata sottoposta a refactoring in componenti specifici della versione libreria locale e una nuova libreria di Runtime di C universale che fa ora parte di Windows. Per informazioni dettagliate sulla distribuzione di Universal CRT, vedere [distribuzione Universal CRT](universal-crt-deployment.md).
 
 ## <a name="central-deployment"></a>Distribuzione centrale
 
@@ -59,4 +61,5 @@ L'ordine di caricamento delle librerie di Visual C++ è dipendente dal sistema. 
 
 ## <a name="see-also"></a>Vedere anche
 
-[Distribuzione di applicazioni Desktop](../ide/deploying-native-desktop-applications-visual-cpp.md)
+- [Distribuzione di applicazioni Desktop](../ide/deploying-native-desktop-applications-visual-cpp.md)
+- [Distribuzione di CRT universale](universal-crt-deployment.md)
