@@ -1,7 +1,7 @@
 ---
 title: Stili utilizzati da MFC | Documenti Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 05/03/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -206,19 +206,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c1e891c8b24e52b56bd6bed8fb7f931fdd8fb863
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6643a1c70b6a22126222d523de4426e1aebcf85b
+ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="styles-used-by-mfc"></a>Stili utilizzati da MFC  
   
 Utilizzare i seguenti flag di stile per specificare il comportamento e l'aspetto di finestra o un controllo quando si crea l'oggetto MFC corrispondente. Nella maggior parte dei casi, gli stili vengono impostati `dwStyle` parametro della classe `Create` (funzione).  
   
-<a name="button-styles"></a>  
-  
-## <a name="button-styles"></a>Stili dei pulsanti  
+## <a name="button-styles"></a> Stili dei pulsanti  
   
 Stili dei pulsanti si applicano a [classe CButton](../../mfc/reference/cbutton-class.md) oggetti, ad esempio pulsanti, caselle di controllo e pulsanti di comando. Specificare una combinazione di stili di `dwStyle` parametro di [CButton::Create](../../mfc/reference/cbutton-class.md#create). Per ulteriori informazioni su stili dei pulsanti in Windows, vedere [stili dei pulsanti (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb775951).  
   
@@ -287,9 +285,7 @@ La tabella seguente elenca le opzioni aggiuntive che è possibile usare con qual
 |`BS_MULTILINE`|Esegue il wrapping del testo del pulsante su più righe se la stringa di testo è troppo lunga per rientrare in una singola riga nel rettangolo pulsante.|  
 |`BS_NOTIFY`|Abilita un pulsante inviare `BN_DBLCLK`, `BN_KILLFOCUS`, e `BN_SETFOCUS` i messaggi di notifica alla finestra padre. Si noti che i pulsanti di invio di `BN_CLICKED` notifica indipendentemente dal fatto se viene specificato questo stile.|  
   
-<a name="combo-box-styles"></a>  
-  
-## <a name="combo-box-styles"></a>Stili casella combinata  
+## <a name="combo-box-styles"></a>  Stili casella combinata  
   
 I seguenti stili casella combinata sono disponibili in MFC. Per ulteriori informazioni sugli stili casella combinata in Windows, vedere [stili casella combinata (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb775796).  
   
@@ -309,9 +305,7 @@ I seguenti stili casella combinata sono disponibili in MFC. Per ulteriori inform
 |`CBS_SORT`|Ordina automaticamente le stringhe immesse nella casella di riepilogo.|  
 |`CBS_UPPERCASE`|Converte in maiuscolo tutto il testo nel campo di selezione e nell'elenco.|  
   
-<a name="edit-styles"></a>  
-  
-## <a name="edit-styles"></a>Modifica stili  
+## <a name="edit-styles"></a>  Modifica stili  
   
 Modifica stili si applicano a [classe CEdit](../../mfc/reference/cedit-class.md) oggetti. Specificare una combinazione di stili di `dwStyle` parametro di [CEdit::Create](../../mfc/reference/cedit-class.md#create). Per ulteriori informazioni sulla modifica degli stili del controllo in Windows, vedere [modifica degli stili del controllo (Windows)](http://msdn.microsoft.com/library/windows/desktop/bb775464).  
   
@@ -332,9 +326,7 @@ Modifica stili si applicano a [classe CEdit](../../mfc/reference/cedit-class.md)
 |`ES_UPPERCASE`|Converte tutti i caratteri in lettere maiuscole al momento dell'immissione nel controllo di modifica.|  
 |`ES_WANTRETURN`|Specifica che un ritorno a capo deve essere inserito quando l'utente preme il tasto INVIO durante l'immissione di testo in un controllo di modifica su più righe in una finestra di dialogo. Senza questo stile, premendo il tasto INVIO ha lo stesso effetto premendo il pulsante di comando finestra di dialogo predefinita caselle. Questo stile non ha effetto su una riga singola controllo edit.|  
   
-<a name="frame-window-styles-mfc"></a>  
-  
-## <a name="frame-window-styles"></a>Stili di finestre cornice  
+## <a name="frame-window-styles-mfc"></a> Stili frame-window  
   
 Stili frame-window si applicano a [CFrameWnd (classe)](../../mfc/reference/cframewnd-class.md) oggetti. Specificare una combinazione di stili di `dwStyle` parametro di [CFrameWnd::Create](../../mfc/reference/cframewnd-class.md#create).  
   
@@ -342,11 +334,9 @@ Stili frame-window si applicano a [CFrameWnd (classe)](../../mfc/reference/cfram
 |-----------|-----------------|  
 |`FWS_ADDTOTITLE`|Specifica le informazioni da aggiungere alla fine di un titolo della finestra cornice. Ad esempio, "Microsoft disegnare – disegno in Document1". È possibile specificare le stringhe visualizzate nella scheda stringhe modello documento nella creazione guidata applicazione. Se è necessario disattivare questa opzione, eseguire l'override di `CWnd::PreCreateWindow` funzione membro.|  
 |`FWS_PREFIXTITLE`|Mostra il nome del documento prima il nome dell'applicazione in un titolo della finestra cornice. Ad esempio, "documento – WordPad". È possibile specificare le stringhe visualizzate nella scheda stringhe modello documento nella creazione guidata applicazione. Se è necessario disattivare questa opzione, eseguire l'override di `CWnd::PreCreateWindow` funzione membro.|  
-|`FWS_SNAPTOBARS`|Ridimensionamento di controlli della finestra cornice che racchiude un controllo di bar quando esso è in una finestra mobile anziché ancorata in una finestra cornice. Questo stile ridimensiona la finestra per adattarlo alla barra di controllo.|  
+|`FWS_SNAPTOBARS`|Ridimensionamento di controlli della finestra cornice che racchiude un controllo di bar quando esso è in una finestra mobile anziché ancorata in una finestra cornice. Questo stile ridimensiona la finestra per adattarlo alla barra di controllo.|
   
-<a name="list-box-styles"></a>  
-  
-## <a name="list-box-styles"></a>Stili casella di riepilogo  
+## <a name="list-box-styles"></a> Stili casella di riepilogo  
   
 Applicare gli stili di casella di riepilogo per [CListBox (classe)](../../mfc/reference/clistbox-class.md) oggetti. Specificare una combinazione di stili di `dwStyle` parametro di [CListBox::Create](../../mfc/reference/clistbox-class.md#create). Per ulteriori informazioni sugli stili casella di elenco in Windows, vedere [stili casella di riepilogo (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb775149).  
   
@@ -369,9 +359,7 @@ Applicare gli stili di casella di riepilogo per [CListBox (classe)](../../mfc/re
 |`LBS_USETABSTOPS`|Consente di riconoscere ed espandere i caratteri di tabulazione quando le relative stringhe di una casella di riepilogo. Le posizioni di scheda predefinita sono 32 unità finestra di dialogo. (Un'unità di finestra di dialogo è una distanza orizzontale o verticale. Una DLU orizzontale è uguale a un quarto dell'unità di base di larghezza di finestra di dialogo corrente. Le unità di base di finestra di dialogo vengono calcolate in base l'altezza e larghezza del carattere di sistema corrente. Di `GetDialogBaseUnits` Windows funzione restituisce la finestra di dialogo corrente unità di base in pixel.) Questo stile non deve essere utilizzato con `LBS_OWNERDRAWFIXED`.|  
 |`LBS_WANTKEYBOARDINPUT`|Il proprietario della casella di riepilogo riceve `WM_VKEYTOITEM` o `WM_CHARTOITEM` messaggi ogni volta che l'utente preme un tasto mentre la casella di riepilogo ha lo stato attivo di input. In questo modo un'applicazione per eseguire un'elaborazione speciale della tastiera di input.|  
   
-<a name="message-box-styles"></a>  
-  
-## <a name="message-box-styles"></a>Stili Message-box  
+##<a name="message-box-styles"></a>  Stili Message-box  
   
 Applicare gli stili di finestra di messaggio per [AfxMessageBox](../../mfc/reference/cstring-formatting-and-message-box-display.md#afxmessagebox) elementi. Specificare una combinazione di stili di `nType` parametro di `AfxMessageBox`. Per ulteriori informazioni sugli stili di finestra di messaggio in Windows, vedere [funzione MessageBox (Windows)](https://msdn.microsoft.com/library/windows/desktop/ms645505).  
   
@@ -412,9 +400,7 @@ Gli stili di finestra di messaggio seguenti sono disponibili.
 |`MB_DEFBUTTON2`|Il secondo pulsante è il valore predefinito.|  
 |`MB_DEFBUTTON3`|Il terzo pulsante è il valore predefinito.|  
   
-<a name="scroll-bar-styles"></a>  
-  
-## <a name="scroll-bar-styles"></a>Stili barra di scorrimento  
+## <a name="scroll-bar-styles"></a> Stili barra di scorrimento  
   
 Stili barra di scorrimento si applicano a [CScrollBar classe](../../mfc/reference/cscrollbar-class.md) oggetti. Specificare una combinazione di stili di `dwStyle` parametro di [CScrollBar::Create](../../mfc/reference/cscrollbar-class.md#create). Per ulteriori informazioni su scorrimento stili del controllo in Windows, vedere [stili del controllo barra di scorrimento (Windows)](http://msdn.microsoft.com/library/windows/desktop/bb787533).  
   
@@ -431,9 +417,7 @@ Stili barra di scorrimento si applicano a [CScrollBar classe](../../mfc/referenc
 |`SBS_TOPALIGN`|Utilizzato con il `SBS_HORZ` stile. Il bordo superiore della barra di scorrimento è allineato al bordo superiore del rettangolo specificato nella `Create` funzione membro. La barra di scorrimento è l'altezza predefinita per le barre di scorrimento di sistema.|  
 |`SBS_VERT`|Definisce una barra di scorrimento verticale. Se non si specifica il `SBS_RIGHTALIGN` né `SBS_LEFTALIGN` è specificato uno stile, la barra di scorrimento ha larghezza, altezza e posizione specificata nel `Create` funzione membro.|  
   
-<a name="static-styles"></a>  
-  
-## <a name="static-styles"></a>Stili statici  
+## <a name="static-styles"></a> Stili statici  
   
 Applicano stili statici [classe CStatic](../../mfc/reference/cstatic-class.md) oggetti. Specificare una combinazione di stili di `dwStyle` parametro di [CStatic::Create](../../mfc/reference/cstatic-class.md#create). Per ulteriori informazioni sugli stili controllo statico di Windows, vedere [stili del controllo statico (Windows)](http://msdn.microsoft.com/library/windows/desktop/bb760773).  
   
@@ -467,9 +451,7 @@ Applicano stili statici [classe CStatic](../../mfc/reference/cstatic-class.md) o
 |`SS_WHITERECT`|Specifica un rettangolo con il colore utilizzato per riempire lo sfondo della finestra. Il valore predefinito è bianco.|  
 |`SS_WORDELLIPSIS`|Tronca il testo che non rientra e aggiunge i puntini di sospensione.|  
   
-<a name="window-styles"></a>  
-  
-## <a name="window-styles"></a>Stili di finestra  
+## <a name="window-styles"></a> Stili finestra  
   
 Stili finestra si applicano a [classe CWnd](../../mfc/reference/cwnd-class.md) oggetti. Specificare una combinazione di stili di `dwStyle` parametro di [CWnd:: Create](../../mfc/reference/cwnd-class.md#create) o [CWnd::CreateEx](../../mfc/reference/cwnd-class.md#createex). Per ulteriori informazioni sugli stili di finestra di Windows, vedere [stili di finestra (Windows)](https://msdn.microsoft.com/library/windows/desktop/ms632600).  
   
@@ -503,9 +485,7 @@ Stili finestra si applicano a [classe CWnd](../../mfc/reference/cwnd-class.md) o
 |`WS_VISIBLE`|Crea una finestra che inizialmente è visibile.|  
 |`WS_VSCROLL`|Crea una finestra che ha una barra di scorrimento verticale.|  
   
-<a name="extended-window-styles"></a>  
-  
-## <a name="extended-window-styles"></a>Stili finestra estesi  
+## <a name="extended-window-styles"></a> Stili finestra estesi  
   
 Applicano stili finestra estesi [classe CWnd](../../mfc/reference/cwnd-class.md) oggetti. Specificare una combinazione di stili di `dwExStyle` parametro di [CWnd::CreateEx](../../mfc/reference/cwnd-class.md#createex). Per ulteriori informazioni sugli stili finestra estesi in Windows, vedere [stili finestra estesi (Windows)](https://msdn.microsoft.com/library/windows/desktop/ff700543).  
   
