@@ -1,6 +1,6 @@
 ---
 title: Come segnalare un problema con il set di strumenti Visual C++ | Microsoft Docs
-ms.date: 1/11/2018
+ms.date: 5/11/2018
 ms.technology:
 - cpp-ide
 ms.topic: conceptual
@@ -10,27 +10,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e8be0a5e42caf12c4e1415cf88143b84a9971cd2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 72721e6a1ee75f7e786bd059c02ede5d275b0f4e
+ms.sourcegitcommit: e1e0104486250e12259c71185b0d1c21ddd16bb1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/11/2018
 ---
-# <a name="how-to-report-a-problem-with-the-visual-c-toolset"></a>Come segnalare un problema con il set di strumenti Visual C++
+# <a name="how-to-report-a-problem-with-the-visual-c-toolset-or-documentation"></a>Come segnalare un problema con il set di strumenti Visual C++ o la documentazione
 
-Se si riscontrano problemi con il compilatore, il linker o altri strumenti e librerie di Microsoft Visual C++ è necessario inviare una segnalazione a Microsoft.
+Se si riscontrano problemi con il compilatore, il linker o altri strumenti e librerie di Microsoft Visual C++ è necessario inviare una segnalazione a Microsoft. Anche se il problema è riguarda la documentazione, è opportuno riportarlo.
+
+## <a name="how-to-report-a-c-documentation-issue"></a>Come segnalare un problema di documentazione di C++
+
+Utilizziamo i problemi GitHub per tenere traccia dei problemi segnalati nella nostra documentazione. È ora possibile creare problemi in GitHub direttamente da una pagina contenuto, che consente di interagire in modo molto più efficace con gli autori e i team di prodotto. Se si nota un problema in un documento, un esempio di codice non valido, una spiegazione confusa, una mancanza critica o semplicemente un errore di ortografia, è possibile segnalare facilmente il problema. Scorrere fino alla fine della pagina e selezionare **Sign in to give documentation feedback** (Accedi per fornire commenti e suggerimenti sulla documentazione). È necessario creare un account GitHub, se non si è già provveduto, ma una volta fatto sarà possibile visualizzare tutti i problemi relativi alla documentazione, il relativo stato e ricevere notifiche quando vengono apportate modifiche per l'errore segnalato. Per altre informazioni, vedere [A New Feedback System Is Coming to docs.microsoft.com](/teamblog/a-new-feedback-system-is-coming-to-docs) (Nuovo sistema di commenti e suggerimenti per docs.microsoft.com).
+
+Quando si segnala un problema di documentazione su GitHub usando il pulsante Commenti e suggerimenti, il problema viene automaticamente compilato con alcune informazioni relative alla pagina in cui è stato creato il problema, in modo da sapere dove si trova il problema. Non modificare queste informazioni. Aggiungere solo i dettagli sull'errore ed eventualmente suggerire una correzione. [La documentazione è open source](https://github.com/MicrosoftDocs/cpp-docs/), pertanto, se l'utente desidera apportare una correzione e proporla personalmente, può farlo. Per ulteriori informazioni su come contribuire alla documentazione, vedere la nostra [Contributing guide](https://github.com/MicrosoftDocs/cpp-docs/blob/master/CONTRIBUTING.md) (Guida ai contributi) su GitHub.
+
+## <a name="how-to-report-a-c-product-issue"></a>Come segnalare un problema di prodotto di C++
 
 Il modo migliore per segnalare un problema è inviare un report con una descrizione del problema riscontrato, informazioni dettagliate su come viene compilato il programma e una *procedura di riproduzione*, vale a dire un test case per riprodurre il problema nei computer Microsoft. In questo modo è possibile verificare rapidamente se il problema riguarda il codice Microsoft e non l'ambiente locale, determinare se ha effetto su altre versioni del compilatore e diagnosticarne la causa.
 
-In questo documento verranno trattati gli argomenti seguenti
-
-- [Come preparare il report](#how-to-prepare-your-report) con le informazioni essenziali.
-
-- [Come generare una procedura di riproduzione](#how-to-generate-a-repro) e i diversi tipi di procedure.
-
-- [Modi per inviare il report](#ways-to-send-your-report) e caratteristiche dei singoli report.
-
-I report sono strumenti importanti per tutti gli sviluppatori. Grazie per contribuire a migliorare Visual C++.
+Nelle sezioni riportate di seguito viene spiegato cosa costituisce un buon report, come generare una ripetizione per il tipo di problema individuato e come inviare il report al team di prodotto. I report sono strumenti importanti per tutti gli sviluppatori. Grazie per contribuire a migliorare Visual C++.
 
 ## <a name="how-to-prepare-your-report"></a>Come preparare il report
 
@@ -291,7 +291,7 @@ Creare la procedura di riproduzione come progetto IDE minimo, comprimere l'inter
 
 ## <a name="ways-to-send-your-report"></a>Modi per inviare il report
 
-Esistono diversi modi per inviare il report a Microsoft. È possibile usare lo strumento predefinito di Visual Studio [Segnala un problema ](/visualstudio/ide/how-to-report-a-problem-with-visual-studio-2017), o le pagine della [Community degli sviluppatori Visual Studio](https://developercommunity.visualstudio.com/). È anche possibile inviare un messaggio di posta elettronica con il report, tuttavia si prediligono i primi due metodi. La scelta dipende da come si vuole interagire con i tecnici che analizzeranno il report e se si vuole tenere traccia dello stato di avanzamento o condividere il report con la community.
+Esistono diversi modi per inviare il report a Microsoft. È possibile usare lo strumento predefinito di Visual Studio [Segnala un problema ](/visualstudio/ide/how-to-report-a-problem-with-visual-studio-2017), o le pagine della [Community degli sviluppatori Visual Studio](https://developercommunity.visualstudio.com/). È inoltre possibile accedere direttamente alle pagine della nostra community di sviluppatori scegliendo il pulsante **Commenti e suggerimenti** nella parte inferiore della pagina. È anche possibile inviare un messaggio di posta elettronica con il report, tuttavia si prediligono i primi due metodi. La scelta dipende da come si vuole interagire con i tecnici che analizzeranno il report e se si vuole tenere traccia dello stato di avanzamento o condividere il report con la community.
 
 > [!NOTE]
 > Indipendentemente dalla modalità di invio del report, Microsoft rispetta la privacy degli utenti. Per informazioni sul trattamento dei dati inviati a Microsoft, vedere l'[Informativa sulla privacy della famiglia dei prodotti Microsoft Visual Studio](https://www.visualstudio.com/dn948229).
@@ -334,4 +334,4 @@ Source code and repro steps:
 ```
 
 > [!TIP]
-> Per altri tipi di problemi che si possono verificare in Visual Studio e che non sono correlati al set di strumenti, ad esempio problemi con l'interfaccia utente, funzionalità IDE interrotte o arresti anomali generali, lo strumento Segnala un problema può essere un'ottima scelta, grazie alle sue funzionalità di screenshot e alla possibilità di registrare le azioni dell'interfaccia utente responsabili del problema riscontrato. Non segnalare mai questi altri tipi di errore tramite l'invio di messaggi di posta elettronica a compilercrash@microsoft.com.
+> Per altri tipi di problemi che si possono verificare in Visual Studio e che non sono correlati al set di strumenti, ad esempio problemi con l'interfaccia utente, funzionalità IDE interrotte o arresti anomali generali, lo strumento **Segnala un problema** può essere un'ottima scelta, grazie alle sue funzionalità di screenshot e alla possibilità di registrare le azioni dell'interfaccia utente responsabili del problema riscontrato. Questi tipi di errori possono essere segnalati anche sul sito della [community degli sviluppatori](https://developercommunity.visualstudio.com/). Non segnalare mai questi altri tipi di errore tramite l'invio di messaggi di posta elettronica a compilercrash@microsoft.com.
