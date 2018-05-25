@@ -40,11 +40,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a18b9ffe4fac351d73e0a78a6e25a71625a47b9e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e7f9814bb783c763eef6d94e9d1372316a2393a6
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="strtimes-wstrtimes"></a>_strtime_s, _wstrtime_s
 
@@ -96,7 +96,7 @@ Se si verifica una condizione di errore, viene richiamato il gestore di parametr
 
 ## <a name="security-issues"></a>Problemi relativi alla sicurezza
 
-Passando un valore diverso da NULL non valido per il buffer comporterà una violazione di accesso se il *numberOfElements* parametro è maggiore di 9.
+Passando un oggetto non valido non -**NULL** valore per il buffer comporterà una violazione di accesso se il *numberOfElements* parametro è maggiore di 9.
 
 Passa un valore per *numberOfElements* maggiore di sovraccarico del buffer comporterà la dimensione effettiva del buffer.
 

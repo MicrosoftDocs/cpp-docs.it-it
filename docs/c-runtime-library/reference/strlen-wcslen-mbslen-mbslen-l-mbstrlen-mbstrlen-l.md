@@ -58,11 +58,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1fa673de76632fbb5c4aad08a13ff269a464ff46
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 35885dfb6a7432796688e35032e06d0aec863687
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="strlen-wcslen-mbslen-mbslenl-mbstrlen-mbstrlenl"></a>strlen, wcslen, _mbslen, _mbslen_l, _mbstrlen, _mbstrlen_l
 
@@ -106,7 +106,7 @@ Impostazioni locali da usare.
 
 ## <a name="return-value"></a>Valore restituito
 
-Ognuna di queste funzioni restituisce il numero di caratteri *str*, esclusi i servizi terminal **NULL**. Nessun valore restituito è riservato per indicare un errore, ad eccezione di **mbstrlen** e **mbstrlen_l**, che restituiscono `((size_t)(-1))` se la stringa contiene un carattere multibyte non valido.
+Ognuna di queste funzioni restituisce il numero di caratteri *str*, escluso il carattere null terminale. Nessun valore restituito è riservato per indicare un errore, ad eccezione di **mbstrlen** e **mbstrlen_l**, che restituiscono `((size_t)(-1))` se la stringa contiene un carattere multibyte non valido.
 
 ## <a name="remarks"></a>Note
 
@@ -124,7 +124,7 @@ Ognuna di queste funzioni restituisce il numero di caratteri *str*, esclusi i se
 
 **mbslen** e **mbslen_l** restituiscono il numero di caratteri multibyte in una stringa di caratteri multibyte, ma non testano la validità dei caratteri multibyte. **mbstrlen** e **mbstrlen_l** testare la validità di caratteri multibyte e riconoscono le sequenze di caratteri multibyte. Se la stringa passata a **mbstrlen** oppure **mbstrlen_l** contiene un carattere multibyte non valido per la tabella codici, la funzione restituisce -1 e imposta **errno** a **EILSEQ**.
 
-Il valore di output è interessato dalla configurazione dell'impostazione delle **LC_CTYPE** categoria delle impostazioni locali, vedere [setlocale](setlocale-wsetlocale.md) per altre informazioni. Le versioni di queste funzioni senza il suffisso **_l** usano le impostazioni locali correnti per questo comportamento dipendente dalle impostazioni locali. Le versioni con il suffisso **_l** sono identiche, ma usano il parametro passato alle impostazioni locali. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
+La configurazione dell'impostazione della categoria **LC_CTYPE** delle impostazioni locali influisce sul valore di output. Per altre informazioni, vedere [setlocale](setlocale-wsetlocale.md). Le versioni di queste funzioni senza il suffisso **_l** usano le impostazioni locali correnti per questo comportamento dipendente dalle impostazioni locali. Le versioni con il suffisso **_l** sono identiche, ma usano il parametro passato alle impostazioni locali. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
 
 ## <a name="requirements"></a>Requisiti
 

@@ -48,11 +48,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 098e5760718e4e2d2a9063700b09d0381e76df1f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 48d0c3107bf2edc09017ea138e4c8024ce328dd8
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="control87-controlfp-control872"></a>_control87, _controlfp, __control87_2
 
@@ -128,7 +128,7 @@ _controlfp(_DN_FLUSH, _MCW_DN);
 // and x64 processors with SSE2 support. Ignored on other x86 platforms.
 ```
 
-Sulle piattaforme ARM, il **_control87** e **controlfp** vengono applicate le funzioni nel registro FPSCR. In x64 architetture, solo la parola di controllo SSE2 che viene archiviato nel MXCSR register è interessato. Su x86 piattaforme **_control87** e **controlfp** interessano le parole di controllo per il x87 e SSE2, se presente. La funzione **__control87_2** consente sia la x87 e le unità a virgola mobile SSE2 per essere controllato insieme o separatamente. Se si desidera influire entrambe le unità, gli indirizzi dei due numeri interi da passare **x86_cw** e **sse2_cw**. Se si vuole influire solo su un'unità, passare un indirizzo per il parametro ma passare 0 (NULL) per l'altro. Se 0 viene passato per uno di questi parametri, la funzione non ha alcun effetto su tale unità di calcolo a virgola mobile. Questa funzionalità può risultare utile nelle situazioni in cui una parte del codice usa l'unità di calcolo a virgola mobile x87 e un'altra parte del codice usa l'unità di calcolo a virgola mobile SSE2. Se si utilizza **__control87_2** in un'unica parte di un programma e impostare valori diversi per le parole di controllo a virgola mobile e quindi utilizzare **_control87** oppure **controlfp** ulteriormente modificare la parola di controllo, quindi **_control87** e **controlfp** potrebbe risultare impossibile restituire una parola di controllo solo per rappresentare lo stato di entrambe le unità a virgola mobile. In tal caso, queste funzioni impostano i **EM_AMBIGUOUS** flag nel valore integer restituito per indicare che vi sia un'incoerenza tra le parole due controllo. Si tratta di un avviso che la parola di controllo restituita potrebbe non rappresentare con precisione lo stato di entrambe le parole di controllo a virgola mobile.
+Sulle piattaforme ARM, il **_control87** e **controlfp** vengono applicate le funzioni nel registro FPSCR. In x64 architetture, solo la parola di controllo SSE2 che viene archiviato nel MXCSR register è interessato. Su x86 piattaforme **_control87** e **controlfp** interessano le parole di controllo per il x87 e SSE2, se presente. La funzione **__control87_2** consente sia la x87 e le unità a virgola mobile SSE2 per essere controllato insieme o separatamente. Se si desidera influire entrambe le unità, gli indirizzi dei due numeri interi da passare **x86_cw** e **sse2_cw**. Se si desidera solo influiscono su un'unità, passare un indirizzo per tale parametro ma passare 0 (**NULL**) per gli altri. Se 0 viene passato per uno di questi parametri, la funzione non ha alcun effetto su tale unità di calcolo a virgola mobile. Questa funzionalità può risultare utile nelle situazioni in cui una parte del codice usa l'unità di calcolo a virgola mobile x87 e un'altra parte del codice usa l'unità di calcolo a virgola mobile SSE2. Se si utilizza **__control87_2** in un'unica parte di un programma e impostare valori diversi per le parole di controllo a virgola mobile e quindi utilizzare **_control87** oppure **controlfp** ulteriormente modificare la parola di controllo, quindi **_control87** e **controlfp** potrebbe risultare impossibile restituire una parola di controllo solo per rappresentare lo stato di entrambe le unità a virgola mobile. In tal caso, queste funzioni impostano i **EM_AMBIGUOUS** flag nel valore integer restituito per indicare che vi sia un'incoerenza tra le parole due controllo. Si tratta di un avviso che la parola di controllo restituita potrebbe non rappresentare con precisione lo stato di entrambe le parole di controllo a virgola mobile.
 
 Nel ARM e x64 architetture, modificare la modalità di infinito o la precisione a virgola mobile non è supportate. Se la maschera di controllo di precisione viene utilizzata in x64 piattaforma, la funzione genera un'asserzione e viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md).
 

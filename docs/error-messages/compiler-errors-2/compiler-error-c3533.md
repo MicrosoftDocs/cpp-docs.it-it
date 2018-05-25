@@ -16,11 +16,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f184f0459e7ec2251d6ff34e2ee76559fe0dea42
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: faaf53d08512559b86c95148bc93e7b3367d2b01
+ms.sourcegitcommit: 3bb7c1c0ceeb8012418e2fff9ae5a7db0fff3877
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="compiler-error-c3533"></a>Errore del compilatore C3533
 'type': un parametro non può avere un tipo che contiene 'auto'  
@@ -32,21 +32,21 @@ ms.lasthandoff: 05/04/2018
 1.  Rimuovere il `auto` parola chiave dalla dichiarazione del parametro.  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene generato l'errore C3535 perché dichiara un parametro di funzione con il `auto` (parola chiave) e viene compilato con **/Zc: Auto**.  
+ Nell'esempio seguente produce C3533 perché dichiara un parametro di funzione con il `auto` (parola chiave) e viene compilato con **/Zc: Auto**.  
   
 ```  
 // C3533a.cpp  
 // Compile with /Zc:auto  
-void f(auto j){} // C3533  
+void f(auto j) {} // C3533  
 ```  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene generato l'errore C3535 perché dichiara un parametro di modello con il `auto` (parola chiave) e viene compilato con **/Zc: Auto**.  
+ Nell'esempio seguente produce C3533 in modalità c++14 perché dichiara un parametro di modello con il `auto` (parola chiave) e viene compilato con **/Zc: Auto**. (C++17, questa è una definizione valida di un modello di classe con un parametro singolo modello non di tipo il cui tipo è dedotto.)
   
 ```  
 // C3533b.cpp  
 // Compile with /Zc:auto  
-template<auto T> class C{}; // C3533  
+template<auto T> class C {}; // C3533  
 ```  
   
 ## <a name="see-also"></a>Vedere anche  

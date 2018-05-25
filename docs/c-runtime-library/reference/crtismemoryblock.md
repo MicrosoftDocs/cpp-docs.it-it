@@ -32,11 +32,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dee3e30e5bde5a3bed67d975c96b00568306f926
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 45331186cca5aab3c7971ba404d7b6da98139130
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="crtismemoryblock"></a>_CrtIsMemoryBlock
 
@@ -77,7 +77,7 @@ Puntatore al numero di riga nel file di origine o **NULL**.
 
 ## <a name="remarks"></a>Note
 
-Il **CrtIsMemoryBlock** funzione verifica che un blocco di memoria specificato si trova all'interno nell'heap locale dell'applicazione e che disponga di un identificatore di tipo blocco valido. Questa funzione può essere usata anche per ottenere il numero di ordine di allocazione di oggetti e il numero di riga/nome file di origine in cui era stata richiesta l'allocazione del blocco di memoria. Passando valori non NULL per il *requestNumber*, *filename*, o *linenumber* cause parametri **CrtIsMemoryBlock** impostare Questi parametri per i valori del blocco di memoria di debug intestazione, se il rilevamento del blocco nell'heap locale. Quando si [debug](../../c-runtime-library/debug.md) non è definito, le chiamate a **CrtIsMemoryBlock** vengono rimosse durante la pre-elaborazione.
+Il **CrtIsMemoryBlock** funzione verifica che un blocco di memoria specificato si trova all'interno nell'heap locale dell'applicazione e che disponga di un identificatore di tipo blocco valido. Questa funzione può essere usata anche per ottenere il numero di ordine di allocazione di oggetti e il numero di riga/nome file di origine in cui era stata richiesta l'allocazione del blocco di memoria. Passando non -**NULL** i valori per il *requestNumber*, *filename*, oppure *linenumber* vengono illustrate le cause di parametri **_ CrtIsMemoryBlock** per impostare questi parametri per i valori nell'intestazione di debug del blocco di memoria, se il rilevamento del blocco nell'heap locale. Quando si [debug](../../c-runtime-library/debug.md) non è definito, le chiamate a **CrtIsMemoryBlock** vengono rimosse durante la pre-elaborazione.
 
 Se **CrtIsMemoryBlock** ha esito negativo, viene restituito **FALSE** e i parametri di output vengono inizializzati i valori predefiniti: *requestNumber* e **lineNumber**  vengono impostati su 0 e *filename* è impostata su **NULL**.
 

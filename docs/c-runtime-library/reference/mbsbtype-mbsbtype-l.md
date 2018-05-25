@@ -38,11 +38,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 54b82eae4826bd6a359f2cf0d4e74bccd32f81b0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: be098cb1fe53e1345f0c4f40212657f4bfd97f4f
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="mbsbtype-mbsbtypel"></a>_mbsbtype, _mbsbtype_l
 
@@ -85,13 +85,13 @@ Impostazioni locali da usare.
 |**_MBC_SINGLE** (0)|Carattere a byte singolo. Ad esempio, nella tabella codici 932, **mbsbtype** restituisce 0 se il byte specificato è compreso nell'intervallo 0x20-0x7E o 0xA1 - 0xDF.|
 |**_MBC_LEAD** (1)|Byte di apertura del carattere multibyte. Ad esempio, nella tabella codici 932, **mbsbtype** restituisce 1 se il byte specificato è compreso tra 0x81-0x9F o 0xE0 - 0xFC.|
 |**_MBC_TRAIL** (2)|Byte di chiusura del carattere multibyte. Ad esempio, nella tabella codici 932, **mbsbtype** restituisce 2 se il byte specificato è compreso tra 0x40-0x7E o 0x80 - 0xFC.|
-|**_MBC_ILLEGAL** (-1)|**NULL** string, il carattere non valido, o **NULL** byte trovati prima il byte in corrispondenza dell'offset *conteggio* in *mbstr*.|
+|**_MBC_ILLEGAL** (-1)|**NULL** stringa, un carattere non valido o byte null trovati prima il byte in corrispondenza dell'offset *conteggio* in *mbstr*.|
 
 ## <a name="remarks"></a>Note
 
 Il **mbsbtype** funzione determina il tipo di byte in una stringa di caratteri multibyte. La funzione esamina solo i byte in corrispondenza dell'offset *conteggio* in *mbstr*, esclusi i caratteri non validi prima di byte specificata.
 
-Il valore di output è interessato dalla configurazione dell'impostazione delle **LC_CTYPE** categoria delle impostazioni locali, vedere [setlocale](setlocale-wsetlocale.md) per altre informazioni. La versione di questa funzione senza il **l** suffisso utilizza le impostazioni locali correnti per questo comportamento dipendente dalle impostazioni locali; la versione con il **l** suffisso è identico ad eccezione del fatto che usi il parametro delle impostazioni locali passato al In alternativa. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
+La configurazione dell'impostazione della categoria **LC_CTYPE** delle impostazioni locali influisce sul valore di output. Per altre informazioni, vedere [setlocale](setlocale-wsetlocale.md). La versione di questa funzione senza il **l** suffisso utilizza le impostazioni locali correnti per questo comportamento dipendente dalle impostazioni locali; la versione con il **l** suffisso è identico ad eccezione del fatto che usi il parametro delle impostazioni locali passato al In alternativa. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
 
 Se la stringa di input **NULL**, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, **errno** è impostata su **EINVAL** e la funzione restituisce **_MBC_ILLEGAL**.
 

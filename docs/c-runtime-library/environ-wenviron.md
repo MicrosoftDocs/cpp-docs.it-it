@@ -23,11 +23,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 98106cbcfb08f15b00ceed8b8b5f0db87da7303f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5f66e0aa847c0835290895aa7412410b2350d617
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="environ-wenviron"></a>_environ, _wenviron
 La variabile `_environ` è un puntatore ad un array di puntatori a stringhe di caratteri multibyte che costituiscono l'ambiente del processo. Questa variabile globale è stata deprecata a favore di versioni funzionali più sicure, [getenv_s, _wgetenv_s](../c-runtime-library/reference/getenv-s-wgetenv-s.md) e [_putenv_s, _wputenv_s](../c-runtime-library/reference/putenv-s-wputenv-s.md), che devono essere usate al posto della variabile globale. `_environ` viene dichiarato in Stdlib.h.  
@@ -56,9 +56,9 @@ extern wchar_t **_wenviron;
   
  è una versione a caratteri wide di `_environ`. In un programma che usa la funzione `wmain`, `_wenviron` è inizializzato all'avvio del programma in base alle impostazioni adottate dall'ambiente del sistema operativo.  
   
- In un programma che usa `main`, `_wenviron` è inizialmente `NULL` perché l'ambiente è costituito da stringhe di caratteri multibyte. Alla prima chiamata a `_wgetenv` o a `_wputenv`, viene creato un ambiente corrispondente alla stringa con caratteri wide e a cui punta `_wenviron`.  
+ In un programma che usa `main`, `_wenviron` è inizialmente  **NULL** perché l'ambiente è costituito da stringhe di caratteri multibyte. Alla prima chiamata a `_wgetenv` o a `_wputenv`, viene creato un ambiente corrispondente alla stringa con caratteri wide e a cui punta `_wenviron`.  
   
- Allo stesso modo, in un programma che usa `wmain`, `_environ` inizialmente è `NULL` perché l'ambiente è costituito da stringhe di caratteri wide. Alla prima chiamata a `_getenv` o a `_putenv`, viene creato un ambiente corrispondente alla stringa con caratteri multibyte e a cui punta `_environ`.  
+ Allo stesso modo, in un programma che usa `wmain`, `_environ` inizialmente è **NULL** perché l'ambiente è costituito da stringhe di caratteri wide. Alla prima chiamata a `_getenv` o a `_putenv`, viene creato un ambiente corrispondente alla stringa con caratteri multibyte e a cui punta `_environ`.  
   
  Quando due copie dell'ambiente (MBCS e Unicode) sono presenti contemporaneamente in un programma, il sistema runtime deve mantenere entrambe le copie, implicando tempi di esecuzione più lenti. Ad esempio, ogni volta che viene chiamato `_putenv`, viene eseguita automaticamente una chiamata anche a `_wputenv`, in modo che le due stringhe dell'ambiente corrispondano.  
   

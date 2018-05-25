@@ -39,11 +39,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f04d6bc5ab0864a1dfc27a1de8b09f1740f845d9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f8e12e25f64972335cb1a1199ae519de71d43067
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="beginthread-beginthreadex"></a>_beginthread, _beginthreadex
 
@@ -89,22 +89,22 @@ Indirizzo iniziale di una routine che avvia l'esecuzione di un nuovo thread. Per
 Dimensione dello stack per un nuovo thread, oppure 0.
 
 *arglist*<br/>
-Elenco di argomenti da passare a un nuovo thread o NULL.
+Elenco di argomenti da passare a un nuovo thread, oppure **NULL**.
 
 *Sicurezza*<br/>
-Puntatore a una struttura [SECURITY_ATTRIBUTES](http://msdn.microsoft.com/library/windows/desktop/aa379560) che determina se l'handle restituito può essere ereditato dai processi figlio. Se *sicurezza* è NULL, l'handle non può essere ereditato. Deve essere NULL per le applicazioni Windows 95.
+Puntatore a una struttura [SECURITY_ATTRIBUTES](http://msdn.microsoft.com/library/windows/desktop/aa379560) che determina se l'handle restituito può essere ereditato dai processi figlio. Se *Security* viene **NULL**, l'handle non può essere ereditata. Deve essere **NULL** per le applicazioni Windows 95.
 
 *initflag*<br/>
 Flag che controllano lo stato iniziale di un nuovo thread. Impostare *initflag* su 0 per l'esecuzione immediata o per **CREATE_SUSPENDED** per creare il thread in uno stato sospeso; usare [ResumeThread](http://msdn.microsoft.com/library/windows/desktop/ms685086.aspx) per eseguire il thread. Impostare *initflag* alla **STACK_SIZE_PARAM_IS_A_RESERVATION** contrassegno per l'utilizzo *stack_size* come dimensione dello stack in byte di riserva iniziale; se questo flag non è specificato, *stack_size* specifica la dimensione del commit.
 
 *thrdaddr*<br/>
-Punta a una variabile a 32 bit che riceve l'identificatore del thread. Se è NULL, non viene usato.
+Punta a una variabile a 32 bit che riceve l'identificatore del thread. Se si tratta **NULL**, non viene utilizzato.
 
 ## <a name="return-value"></a>Valore restituito
 
 Se completata correttamente, ognuna di queste funzioni restituisce un handle per il thread appena creato. Tuttavia, se il thread appena creato termina troppo rapidamente **beginthread** potrebbe non restituire un handle valido. Vedere la discussione nella sezione Osservazioni. In caso di errore **beginthread** restituisce-1L e **errno** è impostato su **EAGAIN** se sono presenti troppi thread, a **EINVAL** se l'argomento è non valido o la dimensione dello stack non è corretta, o a **EACCES** se sono presenti risorse insufficienti (ad esempio memoria). In caso di errore **beginthreadex** restituisce 0, e **errno** e **doserrno** sono impostati.
 
-Se *start_address* è NULL, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni impostano **errno** alla **EINVAL** e restituiscono -1.
+Se *start_address* viene **NULL**, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni impostano **errno** alla **EINVAL** e restituiscono -1.
 
 Per altre informazioni su questi e altri codici restituiti, vedere [errno, _doserrno, _sys_errlist, e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
@@ -137,7 +137,7 @@ Il **beginthreadex** funzione offre maggiore controllo sul modo in cui viene cre
 
 Il sistema operativo gestisce l'allocazione dello stack quando entrambi **beginthread** oppure **beginthreadex** viene chiamato; non è necessario passare l'indirizzo dello stack di thread a una di queste funzioni. Inoltre, il *stack_size* argomento può essere 0, nel qual caso il sistema operativo Usa lo stesso valore dello stack specificato per il thread principale.
 
-*elenco di argomenti* è un parametro da passare al thread appena creato. In genere è l'indirizzo di un elemento di dati, quale una stringa di caratteri. *arglist* può essere NULL se non è necessaria, ma **beginthread** e **beginthreadex** deve essere assegnato un valore da passare al nuovo thread. Tutti i thread vengono terminati se un thread qualsiasi chiama [abort](abort.md), **uscire**, **Exit**, oppure **ExitProcess**.
+*elenco di argomenti* è un parametro da passare al thread appena creato. In genere è l'indirizzo di un elemento di dati, quale una stringa di caratteri. *arglist* può essere **NULL** se non è necessaria, ma **beginthread** e **beginthreadex** deve essere assegnato un valore da passare al nuovo thread. Tutti i thread vengono terminati se un thread qualsiasi chiama [abort](abort.md), **uscire**, **Exit**, oppure **ExitProcess**.
 
 Le impostazioni locali del nuovo thread viene inizializzata utilizzando informazioni di impostazioni locali correnti globali per ogni processo. Se le impostazioni locali per thread vengono abilitate da una chiamata a [configthreadlocale](configthreadlocale.md) (a livello globale o per i nuovi thread solo), il thread può modificare le impostazioni locali in modo indipendente da altri thread chiamando **setlocale** o **wsetlocale**. Thread che non hanno il flag di impostazioni locali per thread impostato possono influenzare le informazioni sulle impostazioni locali in tutti gli altri thread che inoltre non impostare il flag di impostazioni locali per thread, nonché tutti i thread appena creato. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
 

@@ -34,11 +34,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1ce188ea5d28fa99d6133129edbace8e2886f0f5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8195e9a7e37ac9fa9186118889d7717698d2b784
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="security-features-in-the-crt"></a>Funzionalità di sicurezza in CRT
 Molte funzioni CRT precedenti hanno versioni più sicure e recenti. Se esiste una funzione sicura, la precedente versione, meno sicura, è contrassegnata come deprecata e la nuova versione ha il suffisso `_s` ("sicura").  
@@ -70,7 +70,7 @@ strcpy(szBuf, "test"); // warning: deprecated
   
 -   `Parameter Validation`. I parametri passati alle funzioni CRT vengono convalidati, nelle funzioni sicure e in molte versioni preesistenti di funzioni. Le convalide includono:  
   
-    -   Verifica dei valori `NULL` passati alle funzioni.  
+    -   Verifica dei valori **NULL** passati alle funzioni.  
   
     -   Verifica dei valori enumerati per la validità.  
   
@@ -82,7 +82,7 @@ strcpy(szBuf, "test"); // warning: deprecated
   
 -   `Sized Buffers`. Le funzioni sicure richiedono che le dimensioni del buffer siano passate a qualsiasi funzione che scrive in un buffer. Le versioni sicure verificano che il buffer sia sufficientemente grande prima di scriverci dentro, contribuendo ad evitare pericolosi sovraccarichi del buffer che potrebbero consentire l'esecuzione di codice dannoso. Queste funzioni in genere restituiscono un tipo `errno` di codice di errore e richiamano il gestore di parametro non valido se la dimensione del buffer è troppo piccola. Le funzioni che leggono da buffer di input, come `gets`, dispongono di versioni sicure che richiedono di specificare una dimensione massima.  
   
--   `Null termination`. Alcune funzioni che accettavano stringhe potenzialmente non terminate hanno versioni sicure che garantiscono che le stringhe abbiano terminazione null.  
+-   `Null termination`. Alcune funzioni che accettavano stringhe potenzialmente non terminate hanno versioni sicure che garantiscono che le stringhe abbiano terminazione Null.  
   
 -   `Enhanced error reporting`. Le funzioni sicure restituiscono codici di errore con più informazioni sugli errori rispetto a quelle disponibili con le funzioni preesistenti. Le funzioni sicure e molte delle funzioni preesistenti ora impostano `errno` e spesso restituiscono un tipo di codice `errno`, per fornire una segnalazione di errori migliore.  
   

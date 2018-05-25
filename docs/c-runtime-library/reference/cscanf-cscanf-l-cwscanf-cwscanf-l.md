@@ -55,11 +55,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9a61c2ecd0546162a689278cebd45fe38c92f0a7
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 851de3810008532efa6683dd29d415560146f274
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="cscanf-cscanfl-cwscanf-cwscanfl"></a>_cscanf, _cscanf_l, _cwscanf, _cwscanf_l
 
@@ -110,7 +110,7 @@ Numero di campi che sono stati convertiti ed assegnati correttamente. Il valore 
 
 Il **cscanf** funzione legge i dati direttamente dalla console di in posizioni fornite date da *argomento*. La funzione [_getche](getch-getwch.md) viene usata per leggere i caratteri. Ciascun parametro facoltativo deve essere un puntatore a una variabile con un tipo che corrisponde a un identificatore di tipo in *formato*. I controlli di formato, l'interpretazione dell'input di campi e ha lo stesso modulo e funziona come le *formato* parametro per il [scanf](scanf-scanf-l-wscanf-wscanf-l.md) (funzione). Mentre **cscanf** normalmente restituisce il carattere di input, non venga eseguita se è stata l'ultima chiamata a **ungetch**.
 
-Questa funzione convalida i relativi parametri. Se format è NULL, viene richiamato il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, **errno** è impostata su **EINVAL** e la funzione restituisce **EOF**.
+Questa funzione convalida i relativi parametri. Se il formato è **NULL**, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, **errno** è impostata su **EINVAL** e la funzione restituisce **EOF**.
 
 Le versioni di queste funzioni con il **l** suffisso sono identiche ad eccezione del fatto che usano il parametro delle impostazioni locali passato al posto di quelle del thread corrente.
 

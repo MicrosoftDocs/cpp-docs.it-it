@@ -38,11 +38,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: db4a762689907330b671e2720cf743ee957526a4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9be41a2d156a522c74349c3457295502ae6d4f43
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="createlocale-wcreatelocale"></a>_create_locale, _wcreate_locale
 
@@ -94,7 +94,7 @@ Questa funzione convalida il *categoria* e *delle impostazioni locali* parametri
 
 Il *delle impostazioni locali* argomento è un puntatore a una stringa che specifica le impostazioni locali. Per informazioni relative al formato del *delle impostazioni locali* argomento, vedere [nomi delle impostazioni locali, lingue e stringhe di paese/area geografica](../../c-runtime-library/locale-names-languages-and-country-region-strings.md).
 
-Il *delle impostazioni locali* argomento può richiedere un nome delle impostazioni locali, una stringa di lingua, una stringa di lingua e codice di paese/area geografica, una tabella codici, o una stringa di lingua, codice di paese/area geografica e tabella codici. Il set di nomi delle impostazioni locali disponibili, lingue, codici paese e tabelle codici include tutti quelli supportati dalle API NLS di Windows, ad eccezione delle tabelle codici che richiedono più di due byte per carattere, ad esempio UTF-7 e UTF-8. Se si specifica una tabella codici, ad esempio UTF-8 o UTF-7 **create_locale** avrà esito negativo e restituiscono NULL. Il set di nomi delle impostazioni locali supportate da **create_locale** descritte in [nomi delle impostazioni locali, lingue e stringhe di paese/area geografica](../../c-runtime-library/locale-names-languages-and-country-region-strings.md). Il set di stringhe lingua e paese/area geografica supportati da **create_locale** sono racchiusi [stringhe relative a lingue](../../c-runtime-library/language-strings.md) e [stringhe paese/area geografica](../../c-runtime-library/country-region-strings.md).
+Il *delle impostazioni locali* argomento può richiedere un nome delle impostazioni locali, una stringa di lingua, una stringa di lingua e codice di paese/area geografica, una tabella codici, o una stringa di lingua, codice di paese/area geografica e tabella codici. Il set di nomi delle impostazioni locali disponibili, lingue, codici paese e tabelle codici include tutti quelli supportati dalle API NLS di Windows, ad eccezione delle tabelle codici che richiedono più di due byte per carattere, ad esempio UTF-7 e UTF-8. Se si specifica una tabella codici, ad esempio UTF-8 o UTF-7 **create_locale** avrà esito negativo e restituiscono **NULL**. Il set di nomi delle impostazioni locali supportate da **create_locale** descritte in [nomi delle impostazioni locali, lingue e stringhe di paese/area geografica](../../c-runtime-library/locale-names-languages-and-country-region-strings.md). Il set di stringhe lingua e paese/area geografica supportati da **create_locale** sono racchiusi [stringhe relative a lingue](../../c-runtime-library/language-strings.md) e [stringhe paese/area geografica](../../c-runtime-library/country-region-strings.md).
 
 Per altre informazioni sulle impostazioni locali, vedere [setlocale, _wsetlocale](setlocale-wsetlocale.md).
 

@@ -33,11 +33,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 36524cc2b7794c14a6262503095b5c52f631b653
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 80d3f3a7b2b0086df6cba9654dc4365697520776
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="msizedbg"></a>_msize_dbg
 
@@ -62,7 +62,7 @@ Tipo del blocco di memoria specificato: **CLIENT_BLOCK** oppure **NORMAL_BLOCK**
 
 ## <a name="return-value"></a>Valore restituito
 
-Al termine, **msize_dbg** restituisce le dimensioni (in byte) del blocco di memoria specificato; in caso contrario, restituisce NULL.
+Al termine, **msize_dbg** restituisce le dimensioni (in byte) del blocco di memoria specificato; in caso contrario restituirà **NULL**.
 
 ## <a name="remarks"></a>Note
 

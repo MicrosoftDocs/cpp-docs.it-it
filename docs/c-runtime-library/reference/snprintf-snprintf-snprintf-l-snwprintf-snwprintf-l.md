@@ -58,11 +58,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cfaa3b8e7fd8705f23b78b7b4ba4238631cfa4cb
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 90f931153b4328c404fa4a0e6be8f0c3548c4d95
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="snprintf-snprintf-snprintfl-snwprintf-snwprintfl"></a>snprintf, _snprintf, _snprintf_l, _snwprintf, _snwprintf_l
 Scrive dati formattati in una stringa. Sono disponibili versioni più sicure di queste funzioni. Vedere [_snprintf_s, _snprintf_s_l, _snwprintf_s, _snwprintf_s_l](snprintf-s-snprintf-s-l-snwprintf-s-snwprintf-s-l.md).
@@ -174,7 +174,7 @@ Per informazioni su questi e altri codici di errore, vedere [errno, _doserrno, _
 Il **snprintf** funzione e il **snprintf** famiglia di funzioni formattano e archiviano *conteggio* o un numero inferiore di caratteri in *buffer*. Il **snprintf** funzione archivia sempre un carattere di terminazione null, troncando l'output, se necessario. Il **snprintf** famiglia di funzioni aggiunge un carattere di terminazione null solo se la lunghezza della stringa formattata è rigorosamente minore *conteggio* caratteri. Ogni *argomento* (se presenti) vengono convertiti ed emessi in base alla specifica del formato corrispondente in *formato*. Il formato è costituito da caratteri ordinari e ha lo stesso modulo e funziona come le *formato* argomento per [printf](printf-printf-l-wprintf-wprintf-l.md). Se la copia avviene tra stringhe che si sovrappongono, il comportamento non è definito.
 
 > [!IMPORTANT]
-> Assicurarsi che *format* non sia una stringa definita dall'utente. Perché il **snprintf** funzioni non garantiscono una terminazione NULL, in particolare, quando il valore restituito è *conteggio*, assicurarsi che siano seguite da un codice che aggiunge il carattere di terminazione null. Per altre informazioni, vedere [Evitare sovraccarichi del buffer](http://msdn.microsoft.com/library/windows/desktop/ms717795).
+> Assicurarsi che *format* non sia una stringa definita dall'utente. Poiché il **snprintf** funzioni non viene garantita la terminazione null, in particolare, quando il valore restituito è *conteggio*, assicurarsi che siano seguite da un codice che aggiunge il carattere di terminazione null. Per altre informazioni, vedere [Evitare sovraccarichi del buffer](http://msdn.microsoft.com/library/windows/desktop/ms717795).
 
 A partire da UCRT in Visual Studio 2015 e Windows 10 **snprintf** non è più identico a **snprintf**. Il **snprintf** comportamento della funzione è ora conforme allo standard C99.
 
@@ -234,7 +234,7 @@ int main(void)
 #else
    const double fp = 1.7320534;
 #endif
-   /* !subtract one to prevent "squeezing out" the terminal nul! */
+   /* !subtract one to prevent "squeezing out" the terminal null! */
    const int bufferSize = sizeof(buffer)/sizeof(buffer[0]) - 1;
    int bufferUsed = 0;
    int bufferLeft = bufferSize - bufferUsed;
@@ -290,8 +290,8 @@ int main(void)
    }
    else
    {
-      /* !store nul because _snprintf doesn't necessarily (if the string
-       * fits without the terminal nul, but not with it)!
+      /* !store null because _snprintf doesn't necessarily (if the string
+       * fits without the terminal null, but not with it)!
        * bufferUsed might be as large as bufferSize, which normally is
        * like going one element beyond a buffer, but in this case
        * subtracted one from bufferSize, so we're ok.

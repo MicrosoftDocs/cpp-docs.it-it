@@ -63,11 +63,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7ef98749c094165cb7cdff9f20370a55dfdaaa3a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 728c4878736d2e0cafc94660db3d9a709f87715f
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="exec-wexec-functions"></a>Funzioni _exec, _wexec
 Ogni funzione in questa famiglia carica ed esegue un nuovo processo:  
@@ -120,9 +120,9 @@ Ogni funzione in questa famiglia carica ed esegue un nuovo processo:
   
  Le chiamate `_execl`, `_execle`, `_execlp` e `_execlpe` vengono in genere usate quando il numero di parametri è noto a priori. Il parametro `arg0` è generalmente un puntatore a `cmdname`. I parametri da `arg1` a `argn` puntano alle stringhe di caratteri che costituiscono il nuovo elenco di parametri. Un puntatore null deve seguire `argn` per contrassegnare la fine dell'elenco di parametri.  
   
- Le chiamate `_execv`, `_execve`, `_execvp` e `_execvpe` sono utili quando il numero di parametri per il nuovo processo è variabile. I puntatori ai parametri vengono passati come matrice, `argv`. Il parametro `argv`[0] è generalmente un puntatore a `cmdname`. I parametri da `argv`[1] a `argv`[`n`] puntano alle stringhe di caratteri che costituiscono il nuovo elenco di parametri. Il parametro `argv`[`n`+1] deve essere un puntatore `NULL` per contrassegnare la fine dell'elenco dei parametri.  
+ Le chiamate `_execv`, `_execve`, `_execvp` e `_execvpe` sono utili quando il numero di parametri per il nuovo processo è variabile. I puntatori ai parametri vengono passati come matrice, `argv`. Il parametro `argv`[0] è generalmente un puntatore a `cmdname`. I parametri da `argv`[1] a `argv`[`n`] puntano alle stringhe di caratteri che costituiscono il nuovo elenco di parametri. Il parametro `argv`[`n`+1] deve essere un puntatore **NULL** per contrassegnare la fine dell'elenco dei parametri.  
   
- I file che vengono aperti quando viene effettuata una chiamata `_exec` rimangono aperti nel nuovo processo. Nelle chiamate `_execl`, `_execlp`, `_execv` e `_execvp` il nuovo processo eredita l'ambiente del processo chiamante. Le chiamate `_execle`, `_execlpe`, `_execve` e `_execvpe` alterano l'ambiente del nuovo processo passando un elenco delle impostazioni di ambiente tramite il parametro `envp`. `envp` è una matrice di puntatori a caratteri, ogni elemento della matrice (ad eccezione dell'elemento finale) punta alla stringa di terminazione null che definisce una variabile di ambiente. Tale stringa è in genere in formato `NAME`=`value`, dove `NAME` è il nome di una variabile di ambiente e `value` è il valore stringa su cui è impostata la variabile. (Notare che `value` non è racchiuso tra virgolette doppie.) L'elemento finale della matrice `envp` dovrebbe essere `NULL`. Quando `envp` stesso è `NULL`, il nuovo processo eredita le impostazioni di ambiente del processo chiamante.  
+ I file che vengono aperti quando viene effettuata una chiamata `_exec` rimangono aperti nel nuovo processo. Nelle chiamate `_execl`, `_execlp`, `_execv` e `_execvp` il nuovo processo eredita l'ambiente del processo chiamante. Le chiamate `_execle`, `_execlpe`, `_execve` e `_execvpe` alterano l'ambiente del nuovo processo passando un elenco delle impostazioni di ambiente tramite il parametro `envp`. `envp` è una matrice di puntatori a caratteri, ogni elemento della matrice (ad eccezione dell'elemento finale) punta alla stringa di terminazione null che definisce una variabile di ambiente. Tale stringa è in genere in formato `NAME`=`value`, dove `NAME` è il nome di una variabile di ambiente e `value` è il valore stringa su cui è impostata la variabile. (Notare che `value` non è racchiuso tra virgolette doppie.) L'elemento finale della matrice `envp` deve essere **NULL**. Quando `envp` stesso è **NULL**, il nuovo processo eredita le impostazioni di ambiente del processo chiamante.  
   
  Un programma eseguito tramite una delle funzioni `_exec` viene sempre caricato in memoria come se il campo di allocazione massima nell'intestazione del file .exe fosse stato impostato sul valore predefinito 0xFFFFH.  
   

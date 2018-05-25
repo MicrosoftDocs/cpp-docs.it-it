@@ -60,11 +60,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cf9bebda262bde4dd3bb2484a95b7b57a6960d99
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 066431205ecd7aa2b193350ccda4a83decac0458
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="strncnt-wcsncnt-mbsnbcnt-mbsnbcntl-mbsnccnt-mbsnccntl"></a>_strncnt, _wcsncnt, _mbsnbcnt, _mbsnbcnt_l, _mbsnccnt, _mbsnccnt_l
 
@@ -118,7 +118,7 @@ Impostazioni locali da usare.
 
 ## <a name="return-value"></a>Valore restituito
 
-**mbsnbcnt** e **mbsnbcnt_l** restituire il numero di byte trovato nel primo *conteggio* di caratteri multibyte di *str*. **mbsnccnt** e **mbsnccnt_l** restituire il numero dei caratteri trovati nel primo *conteggio* di byte di *str*. Se viene rilevato un carattere NULL prima l'esame delle *str* ha completato, restituiscono il numero di byte o caratteri trovati prima del carattere NULL. Se *str* è costituito da meno di *conteggio* caratteri o byte, restituiscono il numero di caratteri o byte nella stringa. Se *conteggio* è minore di zero, restituiscono 0. Nelle versioni precedenti, queste funzioni sono un valore restituito di tipo **int** anziché **size_t**.
+**mbsnbcnt** e **mbsnbcnt_l** restituire il numero di byte trovato nel primo *conteggio* di caratteri multibyte di *str*. **mbsnccnt** e **mbsnccnt_l** restituire il numero dei caratteri trovati nel primo *conteggio* di byte di *str*. Se viene rilevato un carattere null prima l'esame delle *str* ha completato, restituiscono il numero di byte o caratteri trovati prima del carattere null. Se *str* è costituito da meno di *conteggio* caratteri o byte, restituiscono il numero di caratteri o byte nella stringa. Se *conteggio* è minore di zero, restituiscono 0. Nelle versioni precedenti, queste funzioni sono un valore restituito di tipo **int** anziché **size_t**.
 
 **strncnt** restituisce il numero di caratteri nel primo *conteggio* byte della stringa a byte singolo *str*. **wcsncnt** restituisce il numero di caratteri nel primo *conteggio* caratteri "wide" della stringa di caratteri wide *str*.
 
@@ -126,11 +126,11 @@ Impostazioni locali da usare.
 
 **mbsnbcnt** e **mbsnbcnt_l** contare il numero di byte trovato nel primo *conteggio* di caratteri multibyte di *str*. **mbsnbcnt** e **mbsnbcnt_l** sostituire **mtob** e deve essere usato al posto di **mtob**.
 
-**mbsnccnt** e **mbsnccnt_l** contare il numero dei caratteri trovati nel primo *conteggio* di byte di *str*. Se **mbsnccnt** e **mbsnccnt_l** riscontra un valore NULL nel secondo byte di un carattere a byte doppio, il primo byte viene anche considerato NULL e non è incluso nel valore del conteggio restituito. **mbsnccnt** e **mbsnccnt_l** sostituire **btom** e deve essere usato al posto di **btom**.
+**mbsnccnt** e **mbsnccnt_l** contare il numero dei caratteri trovati nel primo *conteggio* di byte di *str*. Se **mbsnccnt** e **mbsnccnt_l** riscontra un carattere null nel secondo byte di un carattere a byte doppio, il primo byte viene anche considerato null e non è incluso nel valore del conteggio restituito. **mbsnccnt** e **mbsnccnt_l** sostituire **btom** e deve essere usato al posto di **btom**.
 
-Se *str* è un puntatore null o è *conteggio* è 0, queste funzioni richiamano il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md), **errno** è impostata su **EINVAL**, e la funzione restituisce 0.
+Se *str* è un **NULL** puntatore o viene *conteggio* è 0, queste funzioni richiamano il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md), **errno** è impostata su **EINVAL**, e la funzione restituisce 0.
 
-Il valore di output è interessato dalla configurazione dell'impostazione delle **LC_CTYPE** categoria delle impostazioni locali, vedere [setlocale](setlocale-wsetlocale.md) per altre informazioni. Le versioni di queste funzioni senza il suffisso **_l** usano le impostazioni locali correnti per questo comportamento dipendente dalle impostazioni locali. Le versioni con il suffisso **_l** sono identiche, ma usano il parametro passato alle impostazioni locali. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
+La configurazione dell'impostazione della categoria **LC_CTYPE** delle impostazioni locali influisce sul valore di output. Per altre informazioni, vedere [setlocale](setlocale-wsetlocale.md). Le versioni di queste funzioni senza il suffisso **_l** usano le impostazioni locali correnti per questo comportamento dipendente dalle impostazioni locali. Le versioni con il suffisso **_l** sono identiche, ma usano il parametro passato alle impostazioni locali. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 

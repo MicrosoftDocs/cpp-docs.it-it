@@ -40,11 +40,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e538ff94a6cd49e4d766dfbca2798aa0daf0e462
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b472987b0cac41c57e5fd22b2eedecef522613b4
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="fullpath-wfullpath"></a>_fullpath, _wfullpath
 
@@ -68,7 +68,7 @@ wchar_t *_wfullpath(
 ### <a name="parameters"></a>Parametri
 
 *absPath*<br/>
-Puntatore a un buffer contenente il nome del percorso assoluto o completo o NULL.
+Puntatore a un buffer contenente il nome del percorso assoluto o completo o **NULL**.
 
 *relPath*<br/>
 Nome del percorso relativo.
@@ -82,7 +82,7 @@ Ognuna di queste funzioni restituisce un puntatore a un buffer contenente il nom
 
 ## <a name="remarks"></a>Note
 
-Il **FullPath** espande il nome di percorso relativo in *relPath* per il percorso completo oppure assoluto e archivia il nome in *absPath*. Se *absPath* è NULL, **malloc** viene utilizzata per allocare un buffer di lunghezza sufficiente per contenere il nome del percorso. È responsabilità del chiamante liberare questo buffer. Un nome di percorso relativo specifica un percorso a un'altra posizione dalla posizione corrente (ad esempio la directory di lavoro corrente: "."). Un nome di percorso assoluto è l'espansione di un nome di percorso relativo che indica il percorso intero necessario per raggiungere la posizione desiderata dalla radice del file system. A differenza **makepath**, **FullPath** utilizzabile per ottenere il nome di percorso assoluto per i percorsi relativi (*relPath*) che includono ". /"o"... / "nei relativi nomi.
+Il **FullPath** espande il nome di percorso relativo in *relPath* per il percorso completo oppure assoluto e archivia il nome in *absPath*. Se *absPath* viene **NULL**, **malloc** viene utilizzata per allocare un buffer di lunghezza sufficiente per contenere il nome del percorso. È responsabilità del chiamante liberare questo buffer. Un nome di percorso relativo specifica un percorso a un'altra posizione dalla posizione corrente (ad esempio la directory di lavoro corrente: "."). Un nome di percorso assoluto è l'espansione di un nome di percorso relativo che indica il percorso intero necessario per raggiungere la posizione desiderata dalla radice del file system. A differenza **makepath**, **FullPath** utilizzabile per ottenere il nome di percorso assoluto per i percorsi relativi (*relPath*) che includono ". /"o"... / "nei relativi nomi.
 
 Per usare le routine di runtime C, ad esempio, l'applicazione deve includere i file di intestazione contenenti le dichiarazioni per le routine. L'istruzione include per ogni file di intestazione fa riferimento al percorso del file in modo relativo (dalla cartella di lavoro dell'applicazione):
 

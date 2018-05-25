@@ -39,11 +39,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6c7ff7b300473389281a7386d49843987456f116
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d04f3d7b53eca27d38a38b0bce284c17b15cae02
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="fullpathdbg-wfullpathdbg"></a>_fullpath_dbg, _wfullpath_dbg
 
@@ -96,7 +96,7 @@ Ogni funzione restituisce un puntatore a un buffer contenente il nome del percor
 
 ## <a name="remarks"></a>Note
 
-Il **fullpath_dbg** e **wfullpath_dbg** funzioni sono identici a quelli **FullPath** e **wfullpath** ad eccezione del fatto che, quando **Debug** è definito, queste funzioni usano la versione di debug **malloc**, **malloc_dbg**per allocare memoria se NULL viene passato come primo parametro. Per informazioni sulle funzionalità di debug di **malloc_dbg**, vedere [malloc_dbg](malloc-dbg.md).
+Il **fullpath_dbg** e **wfullpath_dbg** funzioni sono identici a quelli **FullPath** e **wfullpath** ad eccezione del fatto che, quando **Debug** è definito, queste funzioni usano la versione di debug **malloc**, **malloc_dbg**per allocare memoria se **NULL** viene passato come primo parametro. Per informazioni sulle funzionalità di debug di **malloc_dbg**, vedere [malloc_dbg](malloc-dbg.md).
 
 Nella maggior parte dei casi non è necessario chiamare queste funzioni in modo esplicito. In alternativa, è possibile definire il **CRTDBG_MAP_ALLOC** flag. Quando si **CRTDBG_MAP_ALLOC** è definito, le chiamate a **FullPath** e **wfullpath** vengono mappate nuovamente a **fullpath_dbg** e **wfullpath_dbg**, rispettivamente, con il *blockType* impostato su **NORMAL_BLOCK**. Quindi, non è necessario chiamare queste funzioni in modo esplicito a meno che non si vogliano contrassegnare blocchi di memoria heap come **CLIENT_BLOCK**. Per altre informazioni, vedere [Tipi di blocchi sull'heap di debug](/visualstudio/debugger/crt-debug-heap-details).
 

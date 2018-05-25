@@ -19,11 +19,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 11ea0dd92eda9aad0cb85bbd1385cdec5af349df
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 31f7fe06c46472f9919a642ecc5d6ed5a326792c
+ms.sourcegitcommit: 3bb7c1c0ceeb8012418e2fff9ae5a7db0fff3877
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="systemclock-structure"></a>Struttura system_clock
 
@@ -42,8 +42,6 @@ Un *tipo di clock* viene usato per ottenere l'ora corrente come ora UTC. Il tipo
 Un clock è *monotonico* se il valore restituito da una prima chiamata a `now()` è sempre minore o uguale al valore restituito da una chiamata successiva a `now()`.
 
 Un clock è *costante* se è *monotonico* e se il tempo tra i cicli macchina è costante.
-
-In questa implementazione, un `system_clock` è sinonimo di un `high_resolution_clock`.
 
 ## <a name="members"></a>Membri
 

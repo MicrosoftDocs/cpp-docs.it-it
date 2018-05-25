@@ -35,11 +35,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fefe9bbfc1904847af5594a4d663b1eb8299fc9b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 272b8e4ba5e57d71b4b785bceef7e5ea2f0ac7c2
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="fcvt"></a>_fcvt
 
@@ -72,7 +72,7 @@ Puntatore all'indicatore di segno archiviato.
 
 ## <a name="return-value"></a>Valore restituito
 
-**fcvt** restituisce un puntatore alla stringa di cifre, NULL in caso di errore.
+**fcvt** restituisce un puntatore alla stringa di cifre, **NULL** in caso di errore.
 
 ## <a name="remarks"></a>Note
 
@@ -86,7 +86,7 @@ La differenza tra **ecvt** e **fcvt** è l'interpretazione del *conteggio* param
 
 **ecvt** e **fcvt** per la conversione utilizzare un singolo buffer allocato in modo statico. Ogni chiamata a una di queste funzioni elimina definitivamente i risultati della chiamata precedente.
 
-Questa funzione convalida i relativi parametri. Se *dec* oppure *sign* è NULL, o *conteggio* è 0, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, **errno** è impostata su **EINVAL** e viene restituito NULL.
+Questa funzione convalida i relativi parametri. Se *dec* oppure *sign* è **NULL**, oppure *conteggio* è 0, viene richiamato il gestore di parametri non validi, come descritto in [parametro Convalida](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, **errno** è impostata su **EINVAL** e **NULL** viene restituito.
 
 ## <a name="requirements"></a>Requisiti
 

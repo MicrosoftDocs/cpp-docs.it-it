@@ -32,11 +32,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a765a6a51a050b96dfd110c21810248b3bb58e16
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 878c1c08dabe52a31a2bdf377c3e0bb167a9ae5d
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="cwait"></a>_cwait
 
@@ -58,7 +58,7 @@ intptr_t _cwait(
 ### <a name="parameters"></a>Parametri
 
 *termstat*<br/>
-Puntatore a un buffer in cui verrà archiviato il codice di risultato del processo specificato oppure NULL.
+Puntatore a un buffer in cui verrà archiviato il codice di risultato del processo specificato, oppure **NULL**.
 
 *procHandle*<br/>
 L'handle del processo in attesa di (vale a dire, il processo che deve terminare prima che **cwait** può restituire).
@@ -81,7 +81,7 @@ Per altre informazioni su questi e altri codici restituiti, vedere [errno, _dose
 
 Il **cwait** funzione attende la chiusura dell'ID processo del processo specificato fornito da *procHandle*. Il valore di *procHandle* che viene passata a **cwait** deve essere il valore restituito dalla chiamata al [spawn](../../c-runtime-library/spawn-wspawn-functions.md) funzione che ha creato il processo specificato. Se l'ID del processo termina prima **cwait** viene chiamato **cwait** restituisce immediatamente un risultato. **cwait** può essere utilizzato da qualsiasi processo per attendere qualsiasi altro processo noto per cui un handle valido (*procHandle*) esistente.
 
-*termstat* punta a un buffer in cui verrà archiviato il codice restituito del processo specificato. Il valore di *termstat* indica se il processo specificato è terminato normalmente chiamando le finestre [ExitProcess](http://msdn.microsoft.com/library/windows/desktop/ms682658.aspx) API. **ExitProcess** viene chiamato internamente se il processo specificato chiama **uscire** o **Exit**, restituisce dalla **principale**, o raggiunge la fine del **principale** . Per ulteriori informazioni sul valore che viene passata attraverso *termstat*, vedere [GetExitCodeProcess](http://msdn.microsoft.com/library/windows/desktop/ms683189.aspx). Se **cwait** viene chiamato con un valore NULL per *termstat*, non è archiviato il codice restituito del processo specificato.
+*termstat* punta a un buffer in cui verrà archiviato il codice restituito del processo specificato. Il valore di *termstat* indica se il processo specificato è terminato normalmente chiamando le finestre [ExitProcess](http://msdn.microsoft.com/library/windows/desktop/ms682658.aspx) API. **ExitProcess** viene chiamato internamente se il processo specificato chiama **uscire** o **Exit**, restituisce dalla **principale**, o raggiunge la fine del **principale** . Per ulteriori informazioni sul valore che viene passata attraverso *termstat*, vedere [GetExitCodeProcess](http://msdn.microsoft.com/library/windows/desktop/ms683189.aspx). Se **cwait** viene chiamato con un **NULL** valore per *termstat*, non è archiviato il codice restituito del processo specificato.
 
 Il *azione* parametro viene ignorato dal sistema operativo Windows perché le relazioni padre-figlio non sono implementate in questi ambienti.
 

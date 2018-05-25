@@ -14,11 +14,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 298fe2751cf25355e2075a2870c34bf17cedc222
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7308c127bebd2185429509315ebafb3d83a7efea
+ms.sourcegitcommit: b0d5557dbb57128da560a0a4634312ec4a050a90
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/24/2018
 ---
 # <a name="atomic-structure"></a>Struttura atomic
 
@@ -63,7 +63,7 @@ struct atomic;
 
 Il tipo *Ty* deve essere *facilmente copiabili*. Vale a dire usando [memcpy](../c-runtime-library/reference/memcpy-wmemcpy.md) copiare i relativi byte deve produrre un valore valido *Ty* oggetti che risultano uguali all'oggetto originale. Il [compare_exchange_weak](#compare_exchange_weak) e [compare_exchange_strong](#compare_exchange_strong) utilizzare le funzioni membro [memcmp](../c-runtime-library/reference/memcmp-wmemcmp.md) per determinare se due *Ty* valori sono uguali. Queste funzioni non utilizzerà un *Ty*-definiti **operatore = =**. Le funzioni membro **atomica** utilizzare **memcpy** per copiare i valori di tipo *Ty*.
 
-Una specializzazione parziale, * * atomica\<Ty * > * *, è destinato a tutti i tipi di puntatore. La specializzazione consente l'aggiunta o la sottrazione di un offset dal valore del puntatore gestito. Operazioni aritmetiche accettano un argomento di tipo **ptrdiff_t** e modificare tale argomento in base alle dimensioni dei *Ty* siano coerenti con l'indirizzo ordinario aritmetico.
+Una specializzazione parziale **atomica\<Ty \* >** , è destinato a tutti i tipi di puntatore. La specializzazione consente l'aggiunta o la sottrazione di un offset dal valore del puntatore gestito. Operazioni aritmetiche accettano un argomento di tipo **ptrdiff_t** e modificare tale argomento in base alle dimensioni dei *Ty* siano coerenti con l'indirizzo ordinario aritmetico.
 
 Una specializzazione esiste per ogni tipo integrale eccetto **bool**. Ogni specializzazione offre un set di metodi per le operazioni logiche e di aritmetica atomica.
 

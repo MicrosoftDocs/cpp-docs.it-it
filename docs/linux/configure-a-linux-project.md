@@ -1,7 +1,9 @@
 ---
 title: Configurare un progetto C++ Linux in Visual Studio | Microsoft Docs
 ms.custom: ''
-ms.date: 11/15/2017
+ms.date: 04/28/2018
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-linux
 ms.tgt_pltfrm: Linux
@@ -12,11 +14,11 @@ ms.author: corob
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: 799eb17ec5cb34cdd0e266f389ad77cb427c7577
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8fc0c15f4e6ff7a9969c31c4d474bb42a9797b30
+ms.sourcegitcommit: 5e932a0e110e80bc241e5f69e3a1a7504bfab1f3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/21/2018
 ---
 # <a name="configure-a-linux-project"></a>Configurare un progetto Linux
 Questo argomento illustra come configurare un progetto Linux in Visual Studio. Per informazioni sui progetti CMake per Linux, vedere [Configurare un progetto CMake per Linux](cmake-linux-project.md).
@@ -40,8 +42,10 @@ Per modificare le impostazioni relative al computer Linux remoto, configurare le
 > [!NOTE]
 > Per modificare compilatori C e C++ predefiniti o il linker e l'archiver usati per compilare il progetto, usare le voci corrispondenti nella sezione **C/C++ > Generale** e nella sezione **Linker > General**.  Ad esempio, è possibile scegliere di usare una versione specifica di GCC o persino il compiler Clang.
 
-## <a name="vc-directories"></a>Directory di VC++
-Per impostazione predefinita, Visual Studio non comprende alcun file di inclusione a livello di sistema da computer Linux.  Ad esempio, gli elementi della directory **/usr/include** non sono presenti in Visual Studio.  Per il supporto completo di [IntelliSense](/visualstudio/ide/using-intellisense), sarà necessario copiare i file in un percorso nel computer di sviluppo e configurare Visual Studio in modo che scelga tale percorso.  È possibile, ad esempio, usare SCP (Secure Copy) per copiare i file.  In Windows 10 è possibile usare [Bash in Windows](https://msdn.microsoft.com/commandline/wsl/about) per eseguire SCP.  Per le versioni precedenti di Windows, è possibile usare ad esempio [PSCP (PuTTY Secure Copy)](http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html).
+## <a name="include-directories-and-intellisense-support"></a>Directory di inclusione e supporto IntelliSense
+
+**Visual Studio 2017 versione 15.6 e precedenti:** per impostazione predefinita, Visual Studio non comprende file di inclusione a livello di sistema da computer Linux.  Ad esempio, gli elementi della directory **/usr/include** non sono presenti in Visual Studio.
+Per il supporto completo di [IntelliSense](/visualstudio/ide/using-intellisense), sarà necessario copiare i file in un percorso nel computer di sviluppo e configurare Visual Studio in modo che scelga tale percorso.  È possibile, ad esempio, usare SCP (Secure Copy) per copiare i file.  In Windows 10 è possibile usare [Bash in Windows](https://msdn.microsoft.com/commandline/wsl/about) per eseguire SCP.  Per le versioni precedenti di Windows, è possibile usare ad esempio [PSCP (PuTTY Secure Copy)](http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html).
 
 È possibile copiare i file usando un comando simile al seguente:
 
@@ -52,6 +56,8 @@ Naturalmente, sostituire i valori di **linux_username** e **remote_host** riport
 Una volta copiati i file, usare **Directory di VC++** nelle proprietà del progetto per indicare a Visual Studio dove trovare i file di inclusione aggiuntivi che sono stati appena copiati.
 
 ![Directory di VC++](media/settings_directories.png)
+
+**Visual Studio 2017 versione 15.7 e successive:** vedere la sezione relativa alla [gestione delle intestazioni remote per IntelliSense](#remote_intellisense).
 
 ## <a name="copy-sources"></a>Copia origini
 Durante la compilazione, i file origine del computer di sviluppo vengono copiati nel computer Linux dove vengono poi compilati.  Per impostazione predefinita, tutti i file di origine del progetto di Visual Studio vengono copiati nel percorso impostato sopra.  Tuttavia,è anche possibile aggiungere file di origine aggiuntivi all'elenco oppure disabilitare totalmente la copia di file di origine. Quest'ultima è l'impostazione predefinita per i progetti makefile.
@@ -68,6 +74,20 @@ Durante la compilazione, i file origine del computer di sviluppo vengono copiati
 Poiché tutta la compilazione avviene in un computer remoto, sono stati aggiunti diversi eventi alla sezione Eventi di compilazione in Proprietà del progetto.  Si tratta di **Evento pre-compilazione remota**, **Evento di pre-collegamento remoto** ed **Evento di post-compilazione remota** che verranno eseguiti nel computer remoto prima o dopo i singoli passaggi del processo.
 
 ![Eventi di compilazione](media/settings_buildevents.png)
+
+## <a name="remote_intellisense"></a> IntelliSense per le intestazioni remote (Visual Studio 2017 15.7 e versioni successive)
+
+Quando si aggiunge una nuova connessione in **Gestione connessione**, Visual Studio rileva automaticamente le directory di inclusione per il compilatore nel sistema remoto. Visual Studio quindi comprime e copia i file in una directory nel computer Windows locale. Successivamente, ogni volta che si usa la connessione in un progetto Visual Studio o CMake, le intestazioni in tali directory vengono usate per gestire IntelliSense.
+
+Questa funzionalità dipende dal computer Linux in cui è installato il file ZIP. Per installare lo ZIP usare questo comando apt-get:
+
+```cmd
+apt install zip
+```
+
+Per gestire la cache di intestazione, passare a **Strumenti > Opzioni, Multipiattaforma > Gestione connessione > Gestione intestazioni remote per IntelliSense**. Per aggiornare la cache di intestazione dopo aver apportato le modifiche nel computer Linux, selezionare la connessione remota e quindi selezionare **Aggiorna**. Selezionare **Elimina** per rimuovere le intestazioni senza eliminare la connessione stessa. Selezionare **Esplora** per aprire la directory locale in **Esplora file**. Considerare questa cartella come di sola lettura. Per scaricare le intestazioni per una connessione esistente creata prima della versione 15.3, selezionare la connessione e quindi **Scarica**.
+
+![IntelliSense per le intestazioni remote](media/remote-header-intellisense.png)
 
 ## <a name="see-also"></a>Vedere anche
 [Utilizzo di Proprietà del progetto](../ide/working-with-project-properties.md)  

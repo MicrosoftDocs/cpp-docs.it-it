@@ -45,11 +45,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a4be0a1179f5b3195d5fafbaf679311c0dcf9edd
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4bc9746d2c98f1799cbdd244e7fc4d465fd705fa
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="strxfrm-wcsxfrm-strxfrml-wcsxfrml"></a>strxfrm, wcsxfrm, _strxfrm_l, _wcsxfrm_l
 
@@ -108,7 +108,7 @@ Dopo la trasformazione, una chiamata a **strcmp** con le due stringhe trasformat
 
 **wcsxfrm** è una versione a caratteri wide **strxfrm**; gli argomenti di stringa del **wcsxfrm** sono puntatori a caratteri "wide". Per **wcsxfrm**, dopo la trasformazione di stringa, una chiamata a **wcscmp** con le due stringhe trasformate restituisce risultati identici a quelli di una chiamata a **wcscoll** applicato per il due stringhe originali. **wcsxfrm** e **strxfrm** si comportano in modo identico in caso contrario. **wcsxfrm** utilizza le impostazioni locali correnti per il relativo comportamento dipendente dalle impostazioni locali; **wcsxfrm_l** utilizza le impostazioni locali passate anziché le impostazioni locali correnti.
 
-Queste funzioni convalidano i relativi parametri. Se *strSource* è un puntatore null, o *strDest* (a meno che non conteggio è zero) è un puntatore NULL, oppure se *conteggio* è maggiore di **INT_MAX**, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md) . Se l'esecuzione può continuare, queste funzioni impostano **errno** alla **EINVAL** e restituire **INT_MAX**.
+Queste funzioni convalidano i relativi parametri. Se *strSource* è un puntatore null, o *strDest* è un **NULL** puntatore (a meno che non conteggio è zero), oppure se *conteggio* è maggiore di **INT_MAX**, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md) . Se l'esecuzione può continuare, queste funzioni impostano **errno** alla **EINVAL** e restituire **INT_MAX**.
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 

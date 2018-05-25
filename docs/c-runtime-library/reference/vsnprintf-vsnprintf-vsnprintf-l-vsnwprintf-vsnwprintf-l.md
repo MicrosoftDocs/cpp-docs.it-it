@@ -62,11 +62,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d4e394984d742ee565296a452cf553e09f37b0aa
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 738a69ad0acd1af3b400b56f0f759414b9e28578
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="vsnprintf-vsnprintf-vsnprintfl-vsnwprintf-vsnwprintfl"></a>vsnprintf, _vsnprintf, _vsnprintf_l, _vsnwprintf, _vsnwprintf_l
 
@@ -173,7 +173,7 @@ Entrambi **vsnprintf** e **vsnwprintf** funzioni restituiscono il numero di cara
 
 Il valore restituito da tutte queste funzioni non include il carattere di Null di terminazione, indipendentemente dal fatto che venga scritto o meno. Quando si *conteggio* è uguale a zero, il valore restituito è il numero di caratteri le funzioni scriverebbe, non incluso qualsiasi carattere di terminazione null. È possibile usare questo risultato per allocare spazio nel buffer sufficiente per la stringa e il carattere Null di terminazione e quindi chiamare di nuovo la funzione per riempire il buffer.
 
-Se *formato* viene **NULL**, o se *buffer* è NULL e *conteggio* non è uguale a zero, queste funzioni richiamano il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni restituiscono -1 e impostare **errno** alla **EINVAL**.
+Se *formato* viene **NULL**, o se *buffer* è **NULL** e *conteggio* non è uguale a zero, queste funzioni richiamano il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni restituiscono -1 e impostare **errno** alla **EINVAL**.
 
 ## <a name="remarks"></a>Note
 

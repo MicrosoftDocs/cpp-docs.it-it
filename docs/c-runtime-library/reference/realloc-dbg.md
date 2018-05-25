@@ -35,11 +35,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 91d04e78c6f3521c56cd74968a761a2d436e36bf
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3c4bb3eab58807805ec3c4fbc35611d268bbeee9
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="reallocdbg"></a>_realloc_dbg
 
@@ -69,16 +69,16 @@ Dimensioni richieste per il blocco riallocato (byte).
 Tipo per il blocco riallocato richiesto: **CLIENT_BLOCK** oppure **NORMAL_BLOCK**.
 
 *filename*<br/>
-Puntatore al nome del file di origine che ha richiesto la **realloc** operazione o NULL.
+Puntatore al nome del file di origine che ha richiesto la **realloc** operazione o **NULL**.
 
 *linenumber*<br/>
-Numero di riga nel file di origine in cui il **realloc** operazione è stata richiesta o NULL.
+Numero di riga nel file di origine in cui il **realloc** è stato richiesto l'operazione o **NULL**.
 
 Il *filename* e *linenumber* parametri sono disponibili solo quando **realloc_dbg** è stato chiamato in modo esplicito o [CRTDBG_MAP_ALLOC](../../c-runtime-library/crtdbg-map-alloc.md) è stata definita una costante del preprocessore.
 
 ## <a name="return-value"></a>Valore restituito
 
-Al termine, questa funzione restituisce un puntatore alla porzione utente del blocco di memoria riallocato, chiama la nuova funzione di gestione o restituisce NULL. Per una descrizione completa del comportamento di restituzione, vedere la sezione relativa alle osservazioni. Per altre informazioni sull'uso della nuova funzione di gestione, vedere la funzione [recalloc](realloc.md).
+Al termine, questa funzione restituisce un puntatore alla porzione utente del blocco di memoria riallocato, chiama la nuova funzione di gestione o restituisce **NULL**. Per una descrizione completa del comportamento di restituzione, vedere la sezione relativa alle osservazioni. Per altre informazioni sull'uso della nuova funzione di gestione, vedere la funzione [recalloc](realloc.md).
 
 ## <a name="remarks"></a>Note
 

@@ -38,11 +38,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e756ea23e32ffc9b164ccbe1a68b9fc987fe7b59
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 972d8e3f1798a7498173c3d8b0677bb57231b990
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="wctomb-wctombl"></a>wctomb, _wctomb_l
 
@@ -72,7 +72,7 @@ Carattere wide.
 
 ## <a name="return-value"></a>Valore restituito
 
-Se **wctomb** converte il carattere "wide" per un carattere multibyte, viene restituito il numero di byte (che non è mai maggiore **MB_CUR_MAX**) in caratteri "wide". Se *wchar* è il carattere null di caratteri wide (L '\0'), **wctomb** restituisce 1. Se l'indicatore di misura di destinazione *mbchar* è NULL, **wctomb** restituisce 0. Se la conversione non è possibile che in impostazioni locali correnti, **wctomb** restituisce -1 e **errno** è impostato su **EILSEQ**.
+Se **wctomb** converte il carattere "wide" per un carattere multibyte, viene restituito il numero di byte (che non è mai maggiore **MB_CUR_MAX**) in caratteri "wide". Se *wchar* è il carattere null di caratteri wide (L '\0'), **wctomb** restituisce 1. Se l'indicatore di misura di destinazione *mbchar* viene **NULL**, **wctomb** restituisce 0. Se la conversione non è possibile che in impostazioni locali correnti, **wctomb** restituisce -1 e **errno** è impostato su **EILSEQ**.
 
 ## <a name="remarks"></a>Note
 

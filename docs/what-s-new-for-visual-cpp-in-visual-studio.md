@@ -9,11 +9,11 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4996ce3e1943c2c76e959f54730042029e0ce518
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f280ed28a65db4aa71ee6dea36521b1b8606b190
+ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="whats-new-for-visual-c-in-includevsdev15mdmiscincludesvsdev15mdmd"></a>Novità di Visual C++ in [!INCLUDE[vs_dev15_md](misc/includes/vs_dev15_md.md)]
 
@@ -26,30 +26,29 @@ In [!INCLUDE[vs_dev15_md](misc/includes/vs_dev15_md.md)] sono stati inclusi nume
 ### <a name="c-conformance-improvements"></a>Miglioramenti della conformità di C++
 
 Questa versione include aggiornamenti al compilatore C++ e alla libreria standard, con supporto avanzato per funzionalità di C++11 e C++14, oltre al supporto preliminare per determinate funzionalità che si prevede verranno incluse nello standard C++17. Per informazioni dettagliate, vedere [Miglioramenti della conformità di C++ in Visual Studio 2017](cpp-conformance-improvements-2017.md).
-
-### <a name="new-compiler-options"></a>Nuove opzioni del compilatore
-
-- **/std:c++14** e **/std:c++latest**: queste opzioni del compilatore controllano il consenso esplicito per versioni specifiche del linguaggio di programmazione ISO C++ in un progetto. Per altre informazioni, vedere [/std (Specify Language Standard Version)](build/reference/std-specify-language-standard-version.md) (/std (specificare la versione standard del linguaggio)). La maggior parte delle nuove funzionalità standard in fase di progettazione è protetta dall'opzione **/std:c++latest**.
-
-   **Visual Studio 2017 versione 15.3**:
-
-   L'opzione **/std:c++17** abilita il set di funzionalità C++17 implementate dal compilatore. Questa opzione disabilita il supporto del compilatore e della libreria standard per le funzionalità modificate o nuove nelle versioni del documento di lavoro, nonché degli aggiornamenti per i difetti dello standard C++ dopo C++17. Per abilitare queste funzionalità, usare **/std:c++latest**.
-
-   **Visual Studio 2017 versione 15.5**:
+**Visual Studio 2017 versione 15.5**:  
 
    Il compilatore supporta il 75% circa delle nuove funzionalità di C++17, inclusi binding strutturati, espressioni lambda `constexpr`, `if constexpr`, variabili inline, espressioni di riduzione e aggiunta di `noexcept` al sistema di tipi. Queste funzionalità sono disponibili con l'opzione **/std:c++17**. Per altre informazioni, vedere [Miglioramenti della conformità di C++ in Visual Studio 2017](cpp-conformance-improvements-2017.md).
 
-- [/permissive-](build/reference/permissive-standards-conformance.md): consente di abilitare tutte le opzioni del compilatore relative alla conformità allo standard e di disabilitare la maggior parte delle estensioni del compilatore specifiche di Microsoft (ma non `__declspec(dllimport)`, ad esempio). Questa opzione è disattivata per impostazione predefinita ma verrà attivata per impostazione predefinita in futuro.
+**Visual Studio 2017 versione 15.7**:  
 
-   **Visual Studio 2017 versione 15.5**:
+Il set di strumenti del compilatore MSVC in Visual Studio versione 15.7 è ora conforme allo standard C++. Per altre informazioni, vedere il post di blog [Announcing: MSVC Conforms to the C++ Standard](https://blogs.msdn.microsoft.com/vcblog/2018/05/07/announcing-msvc-conforms-to-the-c-standard/) (Annuncio: MSVC è conforme allo standard C++) e [Conformità al linguaggio Visual C++](visual-cpp-language-conformance.md).
 
-   La modalità di conformità **/permissive-** include il supporto parziale della ricerca del nome in due fasi. Per altre informazioni, vedere [Miglioramenti della conformità di C++ in Visual Studio 2017](cpp-conformance-improvements-2017.md).
+### <a name="new-compiler-options"></a>Nuove opzioni del compilatore
+
+- [/permissive-](build/reference/permissive-standards-conformance.md): consente di abilitare tutte le opzioni del compilatore relative alla conformità allo standard e di disabilitare la maggior parte delle estensioni del compilatore specifiche di Microsoft (ma non `__declspec(dllimport)`, ad esempio). Questa opzione è attiva per impostazione predefinita in Visual Studio 2017 versione 15.5.  La modalità di conformità **/permissive-** include il supporto della ricerca del nome in due fasi. Per altre informazioni, vedere [Miglioramenti della conformità di C++ in Visual Studio 2017](cpp-conformance-improvements-2017.md).
 
 - [/diagnostics](build/reference/diagnostics-compiler-diagnostic-options.md): consente di abilitare la visualizzazione di numero di riga, numero di riga e colonna o numero di riga, colonna e cursore per la riga di codice per la quale è stato generato l'errore o l'avviso di diagnostica.
 
 - [/debug:fastlink](build/reference/debug-generate-debug-info.md): consente di abilitare fasi di collegamento incrementali fino al 30% più veloci (rispetto a Visual Studio 2015) evitando di copiare tutte le informazioni di debug nel file PDB. Il file PDB punta invece alle informazioni di debug per i file di libreria e oggetto usati per creare il file eseguibile. Vedere [Faster C++ build cycle in VS "15" with /Debug:fastlink](https://blogs.msdn.microsoft.com/vcblog/2016/10/05/faster-c-build-cycle-in-vs-15-with-debugfastlink/) (Ciclo di build di C++ più rapido in Visual Studio "15" con /Debug:fastlink) e [Recommendations to speed C++ builds in Visual Studio](https://blogs.msdn.microsoft.com/vcblog/2016/10/26/recommendations-to-speed-c-builds-in-visual-studio/) (Consigli per velocizzare le compilazioni di C++ in Visual Studio).
 
 - [!INCLUDE[vs_dev15_md](misc/includes/vs_dev15_md.md)] consente l'uso di [/sdl](build/reference/sdl-enable-additional-security-checks.md) con [/await](build/reference/await-enable-coroutine-support.md). È stata rimossa la limitazione [/RTC](build/reference/rtc-run-time-error-checks.md) con le coroutine.
+
+   **Visual Studio 2017 versione 15.3**:  
+- [/std:c++14 e /std:c++latest](build/reference/std-specify-language-standard-version.md): queste opzioni del compilatore controllano il consenso esplicito per versioni specifiche del linguaggio di programmazione ISO C++ in un progetto. La maggior parte delle nuove funzionalità standard in fase di progettazione è protetta dall'opzione **/std:c++latest**.
+
+- [/std:c++17](build/reference/std-specify-language-standard-version.md) abilita il set di funzionalità C++17 implementate dal compilatore. Questa opzione disabilita il supporto del compilatore e della libreria standard per le funzionalità modificate o nuove nelle versioni del documento di lavoro, nonché degli aggiornamenti per i difetti dello standard C++ dopo C++17. Per abilitare queste funzionalità, usare **/std:c++latest**.
+
 
 ### <a name="codegen-security-diagnostics-and-versioning"></a>Codegen, sicurezza, diagnostica e controllo delle versioni
 
@@ -73,6 +72,12 @@ Le prestazioni di runtime di Visual C++ continuano a migliorare grazie a una mag
 Visual C++ supporta Intel AVX-512, comprese le istruzioni per la lunghezza del vettore che offrono nuove funzioni in AVX-512 nei registri a 128 e 256 bit.
 
 L'opzione [/Zc:noexceptTypes-](build/reference/zc-noexcepttypes.md) può essere usata per ripristinare la versione C++14 di `noexcept` durante l'uso della modalità C++ 17 in generale. In questo modo è possibile aggiornare il codice sorgente per garantire la conformità a C++17 senza dover riscrivere contemporaneamente tutto il codice `throw()`. Per altre informazioni, vedere [Dynamic exception specification removal and noexcept](cpp-conformance-improvements-2017.md#noexcept_removal) (Rimozione della specifica di eccezione dinamica e noexcept).
+
+**Visual Studio 2017 versione 15.7**:
+
+- Nuova opzione del compilatore [/Qspectre ](build/reference/qspectre.md) che consente di ridurre i rischi di minacce Speculative Execution Side Channel. Per altre informazioni, vedere [Spectre mitigations in MSVC](https://blogs.msdn.microsoft.com/vcblog/2018/01/15/spectre-mitigations-in-msvc/) (Mitigazioni Spectre in MSVC).
+- Nuovo avviso di diagnostica per la mitigazione Spectre. Per altre informazioni, vedere [Spectre diagnostic in Visual Studio 2017 Version 15.7 Preview 4](https://blogs.msdn.microsoft.com/vcblog/2018/04/20/spectre-diagnostic-in-visual-studio-2017-version-15-7-preview-4/) (Diagnostica Spectre in Visual Studio 2017 versione 15.7 Preview 4).
+- Un nuovo valore per /Zc, **/Zc:__cplusplus**, consente la generazione di report corretti da parte del supporto tecnico Standard di C++. Ad esempio, quando l'opzione è impostata e il compilatore è in modalità /std:c++17 il valore si espande in **201703L**. Per altre informazioni, vedere il blog [MSVC now correctly reports __cplusplus](https://blogs.msdn.microsoft.com/vcblog/2018/04/09/msvc-now-correctly-reports-__cplusplus/) (MSVC ora segnala correttamente __cplusplus).
 
 ## <a name="c-standard-library-improvements"></a>Miglioramenti della Libreria standard C++
 
@@ -220,6 +225,28 @@ Sono state aggiunte, deprecate o rimosse diverse funzionalità della libreria st
 - `basic_string::npos` è ora disponibile come costante della fase di compilazione.
 - `std::allocator` ora gestisce correttamente l'allocazione dei tipi eccessivamente allineati (tipi il cui allineamento è maggiore di `max_align_t`) in modalità C++17 (tranne se disabilitati da **/Zc:alignedNew-**).  Ad esempio, i vettori di oggetti con allineamento a 16 o 32 byte vengono ora correttamente allineati per le istruzioni SSE e AVX.
 
+### <a name="visual-studio-2017-version-156"></a>Visual Studio 2017 versione 15.6
+
+- \<memory_resource>
+- Library Fundamentals V1
+- Eliminazione assegnazione di polymorphic_allocator
+- Miglioramento della deduzione dell'argomento del modello della classe
+
+### <a name="visual-studio-2017-version-157"></a>Visual Studio 2017 versione 15.7
+
+- il supporto per gli algoritmi paralleli non è più sperimentale
+- nuova implementazione di \<filesystem>
+- conversioni di stringhe elementari (parziale)
+- std::launder()
+- std::byte
+- hypot(x,y,z)
+- evitare il decadimento non necessario
+- funzioni matematiche speciali
+- char_traits constexpr
+- guide alla deduzione per STL
+
+Per altre informazioni, vedere [Conformità al linguaggio di Visual C++](visual-cpp-language-conformance.md).
+
 ## <a name="other-libraries"></a>Altre librerie
 
 ### <a name="open-source-library-support"></a>Supporto librerie open source
@@ -269,7 +296,7 @@ C++ supporta ora Ctrl+ clic **Vai a definizione**, semplificando lo spostamento 
 
 ## <a name="intellisense"></a>IntelliSense
 
-Il nuovo motore di database basato su SQLite viene ora usato per impostazione predefinita. Questo consente di velocizzare le operazioni sui database, ad esempio come **Vai a definizione** e **Trova tutti i riferimenti**, e migliora significativamente il tempo di analisi iniziale della soluzione. L'impostazione è stata spostata in **Strumenti > Opzioni > Editor di testo -> C/C++ -> Avanzate**. Nelle versioni precedenti si trovava in ...C/C++ > Sperimentale.
+- Il nuovo motore di database basato su SQLite viene ora usato per impostazione predefinita. Questo consente di velocizzare le operazioni sui database, ad esempio come **Vai a definizione** e **Trova tutti i riferimenti**, e migliora significativamente il tempo di analisi iniziale della soluzione. L'impostazione è stata spostata in **Strumenti > Opzioni > Editor di testo -> C/C++ -> Avanzate**. Nelle versioni precedenti si trovava in ...C/C++ > Sperimentale.
 
 - Le prestazioni di IntelliSense sono state migliorate su progetti e file senza intestazioni precompilate. Per le intestazioni nel file corrente verrà creata un'intestazione automatica precompilata.
 
@@ -284,16 +311,13 @@ Il nuovo motore di database basato su SQLite viene ora usato per impostazione pr
   ![Filtro elenco membri](media/mlfiltering.png "Filtro elenco membri")
 
 - È stata aggiunta una nuova funzionalità sperimentale IntelliSense predittivo che fornisce un elenco di risultati filtrato e compatibile con il contesto per l'elenco dei membri. Vedere [C++ IntelliSense Improvements - Predictive IntelliSense & Filtering](https://blogs.msdn.microsoft.com/vcblog/2016/10/05/c-intellisense-improvements-predictive-intellisense-filtering/) (Miglioramenti di IntelliSense per C++ - IntelliSense predittiva e filtri)
-
 - **Trova tutti i riferimenti** (Maiusc+F12) ora consente di spostarsi con facilità, anche nelle codebase complesse. Offre funzioni avanzate di raggruppamento, filtro, ordinamento, ricerca all'interno dei risultati e, per alcuni linguaggi, colorazione, che agevolano notevolmente la comprensione dei riferimenti. Per C++ la nuova interfaccia utente include informazioni che indicano se è in corso la lettura o la scrittura in una variabile.
-
 - La funzionalità IntelliSense "da punto a freccia" è passata dalla fase sperimentale alla fase avanzata ed è ora abilitata per impostazione predefinita. Anche le funzionalità dell'editor **Espandi ambito** ed **Expand Precedence** (Espandi precedenza) sono passate dalla fase sperimentale alla fase avanzata.
-
 - Le funzionalità di refactoring sperimentali **Cambia firma** ed **Estrai funzione** sono ora disponibili per impostazione predefinita.
-
 - Funzionalità sperimentale per il caricamento più rapido dei progetti C++. Alla successiva apertura di un progetto C++, questo verrà caricato più velocemente e la volta successiva ciò avverrà in modo rapidissimo.
+- Alcune di queste funzionalità sono usate anche in altri linguaggi e alcune sono specifiche di C++. Per altre informazioni su queste nuove funzionalità, vedere [Announcing Visual Studio "15"](https://blogs.msdn.microsoft.com/visualstudio/2016/10/05/announcing-visual-studio-15-preview-5/) (Annuncio di Visual Studio 15).
 
-Alcune di queste funzionalità sono usate anche in altri linguaggi e alcune sono specifiche di C++. Per altre informazioni su queste nuove funzionalità, vedere [Announcing Visual Studio "15"](https://blogs.msdn.microsoft.com/visualstudio/2016/10/05/announcing-visual-studio-15-preview-5/) (Annuncio di Visual Studio 15).
+**Visual Studio 2017 versione 15.7**: aggiunto il supporto per ClangFormat. Per altre informazioni, vedere il post sul [supporto per ClangFormat in Visual Studio 2017](https://blogs.msdn.microsoft.com/vcblog/2018/03/13/clangformat-support-in-visual-studio-2017-15-7-preview-1/).
 
 ## <a name="non-msbuild-projects-with-open-folder"></a>Progetti non MSBuild con Apri cartella
 
@@ -320,9 +344,11 @@ Visual Studio 2017 introduce il supporto per l'uso dei progetti CMake senza la c
 
   ![Apri cartella Cmake](media/cmake_cpp.png "Apri cartella Cmake")
 
-**Visual Studio 2017 versione 15.3**: è stato aggiunto il supporto per il generatore Ninja CMake. Per altre informazioni, vedere [Progetti CMake in Visual C++](ide/cmake-tools-for-visual-cpp.md).
+**Visual Studio 2017 versione 15.3**: è stato aggiunto il supporto per il generatore Ninja CMake. 
 
-**Visual Studio 2017 versione 15.5**: aggiunto il supporto per l'importazione di cache CMake esistenti. Per altre informazioni, vedere [Progetti CMake in Visual C++](ide/cmake-tools-for-visual-cpp.md).
+**Visual Studio 2017 versione 15.5**: aggiunto il supporto per l'importazione di cache CMake esistenti. 
+
+**Visual Studio 2017 versione 15.7**: aggiunto il supporto per CMake 3.11, analisi del codice nei progetti CMake, visualizzazione Destinazioni in Esplora soluzioni, opzioni per la generazione della cache e la compilazione di singoli file. Per altre informazioni, vedere il blog sul [supporto CMake in Visual Studio](https://blogs.msdn.microsoft.com/vcblog/2018/04/09/cmake-support-in-visual-studio-targets-view-single-file-compilation-and-cache-generation-settings/) e l'articolo relativo ai [progetti CMake in Visual C++](ide/cmake-tools-for-visual-cpp.md).
 
 ## <a name="windows-desktop-development-with-c"></a>Sviluppo per Windows Desktop con C++
 
@@ -348,6 +374,12 @@ Sono stati apportati miglioramenti alla condivisione del codice e alla visualizz
 - È stato aggiunto il supporto per la compilazione trasversale mirata ai microcontroller ARM. Per abilitarlo durante l'installazione, scegliere il carico di lavoro **Sviluppo di applicazioni Linux con C++** e selezionare l'opzione **Sviluppo incorporato e IoT**. In questo modo vengono aggiunti gli strumenti di compilazione incrociata ARM GCC e Make all'installazione. Per altre informazioni, vedere [ARM GCC Cross Compilation in Visual Studio](https://blogs.msdn.microsoft.com/vcblog/2017/10/23/arm-gcc-cross-compilation-in-visual-studio/) (Compilazione incrociata GCC ARM in Visual Studio).
 - Supporto aggiunto per CMake. È ora possibile lavorare sulla base di codice CMake esistente senza la necessità di convertirlo in un progetto di Visual Studio. Per altre informazioni, vedere[Configurare un progetto CMake Linux](linux/cmake-linux-project.md).
 - Supporto aggiunto per l'esecuzione di attività remote. Questa funzionalità consente di eseguire qualsiasi comando in un sistema remoto definito nella gestione connessione di Visual Studio. Le attività remote consentono anche di copiare i file nel sistema remoto.
+Per altre informazioni, vedere[Configurare un progetto CMake Linux](linux/cmake-linux-project.md).
+
+**Visual Studio 2017 versione 15.7**:
+
+- Vari miglioramenti apportati agli scenari di carico di lavoro Linux. Per altre informazioni, vedere il blog sui [miglioramenti del carico di lavoro di Linux C++ per sistema del progetto, finestra della console di Linux, rsync e Connetti a processo](https://blogs.msdn.microsoft.com/vcblog/2018/03/13/linux-c-workload-improvements-to-the-project-system-linux-console-window-rsync-and-attach-to-process/).
+- IntelliSense per le intestazioni nelle connessioni remote di Linux. Per altre informazioni, vedere il blog [IntelliSense for Remote Linux Headers](https://blogs.msdn.microsoft.com/vcblog/2018/04/09/intellisense-for-remote-linux-headers/) (IntelliSense per intestazioni remote in Linux) e l'articolo [Configurare un progetto CMake per Linux](linux/cmake-linux-project.md).
 
 ## <a name="game-development-with-c"></a>Sviluppo di giochi con C++
 
@@ -383,21 +415,36 @@ I controlli di base per C++ per l'applicazione delle [C++ Core Guidelines](https
 
 ![CppCoreCheck](media/CppCoreCheck.png "Pagina delle proprietà di CppCoreCheck")
 
-**Visual Studio 2017 versione 15.3**:
+**Visual Studio 2017 versione 15.3**: è stato aggiunto il supporto di regole correlate alla gestione delle risorse.
 
-È stato aggiunto il supporto delle regole correlate alla gestione delle risorse.
-
-**Visual Studio 2017 versione 15.5**:
-
-I nuovi controlli delle linee guida di base di C++ riguardano la correttezza del puntatore intelligente, l'uso corretto degli inizializzatori globali e l'uso di flag per i costrutti come `goto` e cast non corretti.
+**Visual Studio 2017 versione 15.5**: i nuovi controlli delle linee guida di base di C++ riguardano la correttezza del puntatore intelligente, l'uso corretto degli inizializzatori globali e gli usi flag dei costrutti come `goto` e bad cast.
 
 Alcuni numeri di avviso che potrebbero essere presenti in 15.3 non sono più disponibili in 15.5. Questi avvisi sono stati sostituiti con controlli più specifici.
+
+**Visual Studio 2017 versione 15.6**:  
+Aggiunto il supporto per l'analisi di singoli file e miglioramenti delle prestazioni dell'analisi in fase di esecuzione. Per altre informazioni, vedere il blog sui [miglioramenti dell'analisi statica di C++ per Visual Studio 2017 15.6 Preview 2](https://blogs.msdn.microsoft.com/vcblog/2018/01/10/c-static-analysis-improvements-for-visual-studio-2017-15-6-preview-2/)
+
+**Visual Studio 2017 versione 15.7**:  
+
+- Aggiunto il supporto per [/analyze: ruleset](build/reference/analyze-code-analysis.md) che consente di specificare le regole di analisi codice da eseguire.
+- Aggiunto il supporto per le regole aggiuntive delle Linee guida di base di C++.  Per altre informazioni, vedere [Using the C++ Core Guidelines checkers](/visualstudio/code-quality/using-the-cpp-core-guidelines-checkers) (Uso dei controlli delle linee guida di base per C++).
 
 ## <a name="unit-testing"></a>Testing unità
 
 **Visual Studio 2017 versione 15.5**:
 
 L'adattatore per Google Test e quello per Boost.Test sono ora disponibili come componenti del carico di lavoro **Sviluppo di applicazioni desktop con C++**. Questi adattatori sono integrati con **Esplora test**. Viene aggiunto il supporto CTest per i progetti Cmake (tramite Apri cartella) sebbene non sia ancora disponibile l'integrazione completa con **Esplora test**. Per altre informazioni, vedere [Scrittura di unit test per C/C++](/visualstudio/test/writing-unit-tests-for-c-cpp).
+
+**Visual Studio 2017 versione 15.6**:
+
+- Aggiunto il supporto per il supporto delle librerie dinamiche Boost.Test.
+- Un modello di elemento Boost.Test è ora disponibile nell'IDE.
+
+Per altre informazioni, vedere il blog [Boost.Test Unit Testing: Dynamic Library support and New Item Template](https://blogs.msdn.microsoft.com/vcblog/2018/01/10/boost-test-unit-testing-dynamic-library-support-and-new-item-template/) (Testing unità Boost.Test: supporto per librerie dinamiche e nuovo modello di elemento). 
+
+**Visual Studio 2017 versione 15.7**:
+
+[CodeLens](https://docs.microsoft.com/en-us/visualstudio/ide/find-code-changes-and-other-history-with-codelens) supportato per progetti di unit test C++. Per altre informazioni, vedere [Announcing CodeLens for C++ Unit Testing](https://blogs.msdn.microsoft.com/vcblog/2018/04/09/announcing-codelens-for-c-unit-testing/) (Annuncio di CodeLens per unit test C++).
 
 ## <a name="visual-studio-graphics-diagnostics"></a>Diagnostica della grafica di Visual Studio
 

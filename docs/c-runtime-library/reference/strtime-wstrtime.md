@@ -43,11 +43,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b2881cc0b026225674096127eba165b622483de3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3b0ca776394b47f5209fbf034cbb10461c220634
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="strtime-wstrtime"></a>_strtime, _wstrtime
 
@@ -85,7 +85,7 @@ Restituisce un puntatore alla stringa di caratteri risultante *timestr*.
 
 Il **strtime** funzione Copia l'ora locale corrente nel buffer a cui puntato *timestr*. L'ora in formato **hh.mm.ss** in cui **hh** corrisponde a due cifre che rappresenta l'ora in notazione di 24 ore, **mm** corrisponde a due cifre che rappresenta i minuti dopo l'ora e **ss** corrisponde a due cifre che rappresentano secondi. Ad esempio, la stringa **18:23:44** rappresenta 23 minuti e 44 secondi trascorsi 6 ore La lunghezza del buffer deve essere di almeno 9 byte.
 
-**wstrtime** è una versione a caratteri wide **strtime**; l'argomento e il valore restituito di **wstrtime** sono stringhe a caratteri "wide". Queste funzioni si comportano in modo identico. Se *timestr* viene **NULL** puntatore o se *timestr* è formattato in modo errato, non valido viene richiamato il gestore di parametro, come descritto in [parametro Convalida](../../c-runtime-library/parameter-validation.md). Se l'eccezione può continuare, queste funzioni restituiscono un valore NULL e set **errno** alla **EINVAL** se *timestr* è un valore NULL o impostare **errno**al **ERANGE** se *timestr* è formattato in modo errato.
+**wstrtime** è una versione a caratteri wide **strtime**; l'argomento e il valore restituito di **wstrtime** sono stringhe a caratteri "wide". A parte ciò, queste funzioni si comportano in modo identico. Se *timestr* è un **NULL** puntatore o se *timestr* è formattato in modo errato, non valido viene richiamato il gestore di parametro, come descritto in [parametro Convalida](../../c-runtime-library/parameter-validation.md). Se l'eccezione può continuare, queste funzioni restituiscono un **NULL** e impostare **errno** al **EINVAL** se *timestr* era un **NULL** o impostare **errno** a **ERANGE** se *timestr* è formattato in modo errato.
 
 In C++ queste funzioni presentano overload di modello che richiamano le relative controparti più recenti e sicure. Per altre informazioni, vedere [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 

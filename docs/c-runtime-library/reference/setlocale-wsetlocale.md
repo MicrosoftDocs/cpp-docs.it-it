@@ -40,11 +40,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 46f523ba11902f3eaa74fc649791313ee9388824
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 666cb9954569d4c5bd232f387d63e320af52818a
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="setlocale-wsetlocale"></a>setlocale, _wsetlocale
 
@@ -120,7 +120,7 @@ All'avvio del programma, viene eseguito l'equivalente dell'istruzione seguente:
 
 `setlocale( LC_ALL, "C" );`
 
-Il *delle impostazioni locali* argomento può richiedere un nome delle impostazioni locali, una stringa di lingua, una stringa di lingua e codice di paese/area geografica, una tabella codici, o una stringa di lingua, codice di paese/area geografica e tabella codici. Il set dei nomi delle impostazioni locali disponibili, le lingue, i codici paese e le tabelle codici include tutti quelli supportati dalle API NLS di Windows, ad eccezione delle tabelle codici che richiedono più di due byte per carattere, ad esempio UTF-7 e UTF-8. Se si fornisce un valore di tabella codici di UTF-8 o UTF-7 **setlocale** , verrà restituito NULL. Il set di nomi delle impostazioni locali supportate da **setlocale** descritte in [nomi delle impostazioni locali, lingue e stringhe di paese/area geografica](../../c-runtime-library/locale-names-languages-and-country-region-strings.md). Il set di stringhe lingua e paese/area geografica supportati da **setlocale** sono racchiusi [stringhe relative a lingue](../../c-runtime-library/language-strings.md) e [stringhe paese/area geografica](../../c-runtime-library/country-region-strings.md). Ai fini delle prestazioni e delle manutenibilità delle stringhe delle impostazioni locali, è consigliabile incorporare il nome delle impostazioni locali nel codice o serializzarlo nell'archiviazione. È più probabile che in seguito a un aggiornamento del sistema operativo venga modificato il formato del nome della lingua e del paese e non le stringhe del nome delle impostazioni locali.
+Il *delle impostazioni locali* argomento può richiedere un nome delle impostazioni locali, una stringa di lingua, una stringa di lingua e codice di paese/area geografica, una tabella codici, o una stringa di lingua, codice di paese/area geografica e tabella codici. Il set dei nomi delle impostazioni locali disponibili, le lingue, i codici paese e le tabelle codici include tutti quelli supportati dalle API NLS di Windows, ad eccezione delle tabelle codici che richiedono più di due byte per carattere, ad esempio UTF-7 e UTF-8. Se si fornisce un valore di tabella codici di UTF-8 o UTF-7 **setlocale** , verrà restituito **NULL**. Il set di nomi delle impostazioni locali supportate da **setlocale** descritte in [nomi delle impostazioni locali, lingue e stringhe di paese/area geografica](../../c-runtime-library/locale-names-languages-and-country-region-strings.md). Il set di stringhe lingua e paese/area geografica supportati da **setlocale** sono racchiusi [stringhe relative a lingue](../../c-runtime-library/language-strings.md) e [stringhe paese/area geografica](../../c-runtime-library/country-region-strings.md). Ai fini delle prestazioni e delle manutenibilità delle stringhe delle impostazioni locali, è consigliabile incorporare il nome delle impostazioni locali nel codice o serializzarlo nell'archiviazione. È più probabile che in seguito a un aggiornamento del sistema operativo venga modificato il formato del nome della lingua e del paese e non le stringhe del nome delle impostazioni locali.
 
 Un puntatore null passato come il *delle impostazioni locali* argomento indica **setlocale** di eseguire query anziché impostare l'ambiente internazionale. Se il *delle impostazioni locali* argomento è un puntatore null, non vengono modificate le impostazioni del programma corrente delle impostazioni locali. Al contrario, **setlocale** restituisce un puntatore alla stringa di cui è associata il *categoria* delle impostazioni locali correnti del thread. Se il *categoria* argomento **LC_ALL**, la funzione restituisce una stringa che indica l'impostazione corrente di tutte le categorie, separate da punti e virgola. Ad esempio, la sequenza di chiamate
 

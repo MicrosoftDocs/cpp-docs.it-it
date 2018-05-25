@@ -55,11 +55,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 387d8165ad157f5d4b8936b79590d8e3ebbc2810
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 45e2155f830a302f316aa96ce41b65a71709bc0d
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="strtok-strtokl-wcstok-wcstokl-mbstok-mbstokl"></a>strtok, _strtok_l, wcstok, _wcstok_l, _mbstok, _mbstok_l
 
@@ -103,7 +103,7 @@ Impostazioni locali da usare.
 
 ## <a name="return-value"></a>Valore restituito
 
-Restituisce un puntatore al token successivo nel *strToken*. Restituiscono **NULL** quando non vengono trovati alcuna ulteriore token. Ogni chiamata viene modificato *strToken* sostituendo un **NULL** carattere per il primo delimitatore che si verifica dopo che il token restituito.
+Restituisce un puntatore al token successivo nel *strToken*. Restituiscono **NULL** quando non vengono trovati alcuna ulteriore token. Ogni chiamata viene modificato *strToken* sostituendo un carattere null per il primo delimitatore che si verifica dopo che il token restituito.
 
 ## <a name="remarks"></a>Note
 
@@ -114,7 +114,7 @@ Il **strtok** funzione trova il token successivo in *strToken*. Il set di caratt
 
 La prima chiamata a **strtok**, la funzione ignora i delimitatori iniziali e restituisce un puntatore al primo token nel *strToken*, il token con un carattere null di terminazione. Più token può essere suddivisa fuori il resto della *strToken* da una serie di chiamate a **strtok**. Ogni chiamata a **strtok** modifica *strToken* inserendo un carattere null dopo la **token** restituito dalla chiamata. Per leggere il token successivo dal *strToken*, chiamare **strtok** con un **NULL** valore per il *strToken* argomento. Il **NULL** *strToken* argomento vengono illustrate le cause **strtok** per cercare il token successivo in modificato *strToken*. Il *strDelimit* argomento può accettare qualsiasi valore da una chiamata al successivo, in modo che il set di delimitatori può variare.
 
-Il valore di output è interessato dalla configurazione dell'impostazione delle **LC_CTYPE** categoria delle impostazioni locali, vedere [setlocale](setlocale-wsetlocale.md) per altre informazioni. Le versioni di queste funzioni senza il suffisso **_l** usano le impostazioni locali correnti per questo comportamento dipendente dalle impostazioni locali. Le versioni con il suffisso **_l** sono identiche, ma usano il parametro passato alle impostazioni locali. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
+La configurazione dell'impostazione della categoria **LC_CTYPE** delle impostazioni locali influisce sul valore di output. Per altre informazioni, vedere [setlocale](setlocale-wsetlocale.md). Le versioni di queste funzioni senza il suffisso **_l** usano le impostazioni locali correnti per questo comportamento dipendente dalle impostazioni locali. Le versioni con il suffisso **_l** sono identiche, ma usano il parametro passato alle impostazioni locali. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
 
 > [!NOTE]
 > Ogni funzione usa una variabile statica thread-local per la suddivisione della stringa in token. Più thread possono quindi chiamare contemporaneamente queste funzioni senza effetti indesiderati. Tuttavia, all'interno di un singolo thread, è molto probabile che l'esecuzione interleaved di chiamate a una di queste funzioni causi il danneggiamento dei dati e risultati non accurati. Quando si analizzano stringhe diverse, completare l'analisi di una stringa prima di iniziare ad analizzare la successiva. Tenere anche conto del potenziale pericolo quando si chiama una di queste funzioni da un ciclo in cui viene chiamata un'altra funzione. Se l'altra funzione usa una di queste funzioni, ne risulterà una sequenza interleaved di chiamate con conseguente danneggiamento dei dati.

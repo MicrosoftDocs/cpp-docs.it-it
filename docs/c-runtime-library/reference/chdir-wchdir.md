@@ -42,11 +42,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 92becad93e1d0375f3ecf1ec587daa877a4c8485
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b81ace9c9fe5cf21d93f7e7dd4a8b5f2f2c5d726
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="chdir-wchdir"></a>_chdir, _wchdir
 
@@ -70,7 +70,7 @@ Percorso della nuova directory di lavoro.
 
 ## <a name="return-value"></a>Valore restituito
 
-Se eseguite correttamente, queste funzioni restituiscono un valore pari a 0. Il valore restituito-1 indica un errore. Se non è stato possibile trovare il percorso specificato, **errno** è impostata su **ENOENT**. Se *dirname* è NULL, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, **errno** è impostata su **EINVAL** e la funzione restituisce -1.
+Se eseguite correttamente, queste funzioni restituiscono un valore pari a 0. Il valore restituito-1 indica un errore. Se non è stato possibile trovare il percorso specificato, **errno** è impostata su **ENOENT**. Se *dirname* viene **NULL**, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, **errno** è impostata su **EINVAL** e la funzione restituisce -1.
 
 ## <a name="remarks"></a>Note
 

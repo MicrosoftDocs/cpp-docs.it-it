@@ -39,11 +39,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: facc4855d1e36965eff7af70c5cb48f8fb77d419
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 604ca2d2172e340459d7d5cbf406f01c484750ff
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="wcstombs-wcstombsl"></a>wcstombs, _wcstombs_l
 
@@ -94,11 +94,11 @@ Impostazioni locali da usare.
 
 ## <a name="return-value"></a>Valore restituito
 
-Se **wcstombs** converte correttamente la stringa multibyte, restituisce il numero di byte scritti nella stringa multibyte di output, escluso l'interruzione del **NULL** (se presente). Se il *mbstr* argomento **NULL**, **wcstombs** restituisce le dimensioni necessarie in byte della stringa di destinazione. Se **wcstombs** rileva un carattere "wide" non è possibile convertire un carattere multibyte, restituisce -1 cast al tipo **size_t** e imposta **errno** a **EILSEQ** .
+Se **wcstombs** converte correttamente la stringa multibyte, restituisce il numero di byte scritti nella stringa multibyte di output, escluso il carattere di terminazione null (se presente). Se il *mbstr* argomento **NULL**, **wcstombs** restituisce le dimensioni necessarie in byte della stringa di destinazione. Se **wcstombs** rileva un carattere "wide" non è possibile convertire un carattere multibyte, restituisce -1 cast al tipo **size_t** e imposta **errno** a **EILSEQ** .
 
 ## <a name="remarks"></a>Note
 
-Il **wcstombs** funzione converte la stringa di caratteri wide a cui puntata *wcstr* per i caratteri multibyte corrispondente e archivia i risultati nel *mbstr* matrice. Il *conteggio* parametro indica il numero massimo di byte che possono essere archiviati nella stringa di output multibyte (vale a dire, il valore pari *mbstr*). In generale, non è possibile sapere quanti byte saranno necessari durante la conversione di stringa di caratteri wide. Alcuni caratteri wide richiederanno un solo byte nella stringa di output, altri due. Se sono presenti due byte nella stringa multibyte di output per ogni carattere "wide" nella stringa di input (incluso il carattere "wide" **NULL**), il risultato è garantito per adattarla.
+Il **wcstombs** funzione converte la stringa di caratteri wide a cui puntata *wcstr* per i caratteri multibyte corrispondente e archivia i risultati nel *mbstr* matrice. Il *conteggio* parametro indica il numero massimo di byte che possono essere archiviati nella stringa di output multibyte (vale a dire, il valore pari *mbstr*). In generale, non è possibile sapere quanti byte saranno necessari durante la conversione di stringa di caratteri wide. Alcuni caratteri wide richiederanno un solo byte nella stringa di output, altri due. Se sono presenti due byte nella stringa multibyte di output per ogni carattere "wide" nella stringa di input (incluso il valore null di caratteri "wide"), il risultato è garantito per adattarla.
 
 Se **wcstombs** rileva il carattere null di caratteri wide (L '\0') prima o quando *conteggio* si verifica, lo converte in un 0 a 8 bit, quindi si arresta. Di conseguenza, la stringa di caratteri multibyte in *mbstr* è con terminazione null solo se **wcstombs** rileva un carattere null di caratteri "wide" durante la conversione. Se le sequenze a cui punta *wcstr* e *mbstr* si sovrappongono, il comportamento di **wcstombs** è definito.
 

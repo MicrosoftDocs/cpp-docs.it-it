@@ -32,11 +32,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 794db055ad433b6f3407c056dcf182e40e24c8f8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 02b920832d462c88c13d68525a1a4038cf6720f1
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="alignedoffsetrecallocdbg"></a>_aligned_offset_recalloc_dbg
 
@@ -74,10 +74,10 @@ Valore di allineamento, che deve essere una potenza intera di 2.
 Offset nell'allocazione di memoria per imporre l'allineamento.
 
 *filename*<br/>
-Puntatore al nome del file di origine che ha richiesto l'operazione realloc o NULL.
+Puntatore al nome del file di origine che ha richiesto l'operazione realloc o **NULL**.
 
 *linenumber*<br/>
-Numero di riga nel file di origine in cui è stata richiesta l'operazione realloc o NULL.
+Numero di riga nel file di origine in cui è stata richiesta l'operazione realloc o **NULL**.
 
 ## <a name="return-value"></a>Valore restituito
 

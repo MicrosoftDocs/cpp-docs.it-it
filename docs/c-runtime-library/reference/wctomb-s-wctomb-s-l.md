@@ -39,11 +39,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bb0a44414b01d0105f911732bc3dd2662a278158
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: bdb9a1f13fcb387aeddf18cc0f734101463bd3eb
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="wctombs-wctombsl"></a>wctomb_s, _wctomb_s_l
 
@@ -102,7 +102,7 @@ Se si verifica una delle condizioni di errore precedenti, viene richiamato il ge
 
 Il **wctomb_s** funzione converte relativo *wchar* argomento nel carattere multibyte corrispondente e archivia il risultato al *mbchar*. È possibile chiamare la funzione da qualsiasi punto in un qualsiasi programma.
 
-Se **wctomb_s** converte il carattere "wide" a un carattere multibyte, tale client inserisce il numero di byte (che non è mai maggiore **MB_CUR_MAX**) in caratteri "wide" in integer a cui puntato *pRetValue*. Se *wchar* è il carattere null di caratteri wide (L '\0'), **wctomb_s** riempie *pRetValue* con 1. Se l'indicatore di misura di destinazione *mbchar* è NULL, **wctomb_s** inserisce 0 nel *pRetValue*. Se la conversione non è possibile che in impostazioni locali correnti, **wctomb_s** Inserisce -1 in *pRetValue*.
+Se **wctomb_s** converte il carattere "wide" a un carattere multibyte, tale client inserisce il numero di byte (che non è mai maggiore **MB_CUR_MAX**) in caratteri "wide" in integer a cui puntato *pRetValue*. Se *wchar* è il carattere null di caratteri wide (L '\0'), **wctomb_s** riempie *pRetValue* con 1. Se l'indicatore di misura di destinazione *mbchar* viene **NULL**, **wctomb_s** inserisce 0 in *pRetValue*. Se la conversione non è possibile che in impostazioni locali correnti, **wctomb_s** Inserisce -1 in *pRetValue*.
 
 **wctomb_s** Usa le impostazioni locali correnti per le informazioni dipendente dalle impostazioni locali; **wctomb_s_l** è identica ad eccezione del fatto che usa le impostazioni locali passate. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
 

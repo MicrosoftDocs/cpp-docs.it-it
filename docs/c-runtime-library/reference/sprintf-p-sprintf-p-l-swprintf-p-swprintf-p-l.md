@@ -52,11 +52,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e9a97dc0d1e52cb23e26eeb46e86c684b6bee9d0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 02c28da8c066f51bb4366c7ed20e04266d37b074
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="sprintfp-sprintfpl-swprintfp-swprintfpl"></a>_sprintf_p, _sprintf_p_l, _swprintf_p, _swprintf_p_l
 
@@ -118,11 +118,11 @@ Il numero di caratteri scritti o -1 se si è verificato un errore.
 
 ## <a name="remarks"></a>Note
 
-Il **sprintf_p** funzione formatta e archivia una serie di caratteri e i valori *buffer*. Ogni argomento di *argument_list* (se presente) viene convertita e restituita in base alla specifica del formato corrispondente in *formato*. Il *formato* argomento Usa il [formattare sintassi specifica per le funzioni printf e wprintf](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md). Un **NULL** carattere viene aggiunto dopo l'ultimo carattere scritto. Se la copia avviene tra stringhe che si sovrappongono, il comportamento non è definito. La differenza tra **sprintf_p** e **sprintf_s** consiste nel fatto che **sprintf_p** supporta i parametri posizionali, che consentono di specificare l'ordine in cui gli argomenti sono usato nella stringa di formato. Per altre informazioni, vedere [printf_p Positional Parameters](../../c-runtime-library/printf-p-positional-parameters.md) (Parametri posizionali printf_p).
+Il **sprintf_p** funzione formatta e archivia una serie di caratteri e i valori *buffer*. Ogni argomento di *argument_list* (se presente) viene convertita e restituita in base alla specifica del formato corrispondente in *formato*. Il *formato* argomento Usa il [formattare sintassi specifica per le funzioni printf e wprintf](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md). Un carattere Null viene aggiunto dopo l'ultimo carattere scritto. Se la copia avviene tra stringhe che si sovrappongono, il comportamento non è definito. La differenza tra **sprintf_p** e **sprintf_s** consiste nel fatto che **sprintf_p** supporta i parametri posizionali, che consentono di specificare l'ordine in cui gli argomenti sono usato nella stringa di formato. Per altre informazioni, vedere [printf_p Positional Parameters](../../c-runtime-library/printf-p-positional-parameters.md) (Parametri posizionali printf_p).
 
 **swprintf_p** è una versione a caratteri wide **sprintf_p**; gli argomenti puntatori per **swprintf_p** sono stringhe a caratteri "wide". Rilevamento degli errori in di codifica **swprintf_p** può essere diverso da quello in **sprintf_p**. **swprintf_p** e **fwprintf_p** si comportano in modo identico con la differenza che **swprintf_p** scrive l'output in una stringa anziché a una destinazione di tipo **FILE**, e **swprintf_p** richiede il *conteggio* parametro per specificare il numero massimo di caratteri da scrivere. Le versioni di queste funzioni con il **l** suffisso sono identiche ad eccezione del fatto che usano il parametro delle impostazioni locali passato al posto di quelle del thread corrente.
 
-**sprintf_p** restituisce il numero di byte archiviati nel *buffer*, senza contare la terminazione **NULL** carattere. **swprintf_p** restituisce il numero di caratteri "wide" archiviati in *buffer*, senza contare la terminazione **NULL** carattere wide. Se *buffer* oppure *formato* è un puntatore null o se la stringa di formato contiene caratteri di formattazione non validi, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri ](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni restituiscono -1 e impostare **errno** alla **EINVAL**.
+**sprintf_p** restituisce il numero di byte archiviati nel *buffer*, senza contare il carattere di terminazione null. **swprintf_p** restituisce il numero di caratteri "wide" archiviati in *buffer*, senza contare il carattere "wide" null finale. Se *buffer* oppure *formato* è un puntatore null o se la stringa di formato contiene caratteri di formattazione non validi, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri ](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni restituiscono -1 e impostare **errno** alla **EINVAL**.
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 

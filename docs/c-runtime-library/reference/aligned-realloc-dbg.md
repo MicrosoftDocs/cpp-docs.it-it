@@ -32,11 +32,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 546ad1b4bb745274894754a185c57bacb82b0061
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1fd5854bc18cecda1fd3ffee4f28ec2fa5d2a68a
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="alignedreallocdbg"></a>_aligned_realloc_dbg
 
@@ -66,10 +66,10 @@ Dimensione dell'allocazione di memoria richiesta.
 Valore di allineamento, che deve essere una potenza intera di 2.
 
 *filename*<br/>
-Puntatore al nome del file di origine che ha richiesto la **realloc** operazione o NULL.
+Puntatore al nome del file di origine che ha richiesto la **realloc** operazione o **NULL**.
 
 *linenumber*<br/>
-Numero di riga nel file di origine in cui il **realloc** operazione è stata richiesta o NULL.
+Numero di riga nel file di origine in cui il **realloc** è stato richiesto l'operazione o **NULL**.
 
 ## <a name="return-value"></a>Valore restituito
 

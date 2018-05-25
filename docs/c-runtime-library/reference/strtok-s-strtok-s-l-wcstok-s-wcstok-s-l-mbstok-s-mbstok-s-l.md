@@ -57,11 +57,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 74be09a9a852d2bfd29b40a5d63583784e3f75a6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 467184acd7ef78ee52f1605d23f2d3b80e6adb83
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="strtoks-strtoksl-wcstoks-wcstoksl-mbstoks-mbstoksl"></a>strtok_s, _strtok_s_l, wcstok_s, _wcstok_s_l, _mbstok_s, _mbstok_s_l
 
@@ -129,7 +129,7 @@ Impostazioni locali da usare.
 
 ## <a name="return-value"></a>Valore restituito
 
-Restituisce un puntatore al token successivo nel *str*. Restituisce **NULL** quando non vengono trovati alcuna ulteriore token. Ogni chiamata viene modificato *str* sostituendo un **NULL** carattere per il primo delimitatore che si verifica dopo che il token restituito.
+Restituisce un puntatore al token successivo nel *str*. Restituisce **NULL** quando non vengono trovati alcuna ulteriore token. Ogni chiamata viene modificato *str* sostituendo un carattere null per il primo delimitatore che si verifica dopo che il token restituito.
 
 ### <a name="error-conditions"></a>Condizioni di errore
 
@@ -151,7 +151,7 @@ La prima chiamata a **strtok_s** la funzione ignora i delimitatori iniziali e re
 
 Poiché il *contesto* parametro sostituisce il buffer statico utilizzato **strtok** e **strtok_l**, è possibile analizzare due stringhe contemporaneamente nello stesso thread.
 
-Il valore di output è interessato dalla configurazione dell'impostazione delle **LC_CTYPE** categoria delle impostazioni locali, vedere [setlocale](setlocale-wsetlocale.md) per altre informazioni. Le versioni di queste funzioni senza il **l** suffisso utilizzare impostazioni locali del thread corrente per questo comportamento dipendente dalle impostazioni locali. Le versioni con il **l** suffisso sono identiche ad eccezione del fatto che utilizzano il *delle impostazioni locali* parametro. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
+La configurazione dell'impostazione della categoria **LC_CTYPE** delle impostazioni locali influisce sul valore di output. Per altre informazioni, vedere [setlocale](setlocale-wsetlocale.md). Le versioni di queste funzioni senza il **l** suffisso utilizzare impostazioni locali del thread corrente per questo comportamento dipendente dalle impostazioni locali. Le versioni con il **l** suffisso sono identiche ad eccezione del fatto che utilizzano il *delle impostazioni locali* parametro. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
 
 ## <a name="requirements"></a>Requisiti
 

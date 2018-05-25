@@ -28,11 +28,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 68de7c3ab3b823c1e3d08a13a9d7363232e9712e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1c0105ccc5a40c4e5fe789814adfabe6c9749650
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="dllonexit"></a>__dllonexit
 Registra una routine da chiamare in fase di uscita.  
@@ -57,7 +57,7 @@ _onexit_t __dllonexit(   _onexit_t func,
  Puntatore a una variabile che indica la fine di un elenco di funzioni da eseguire in fase di disconnessione.  
   
 ## <a name="return-value"></a>Valore restituito  
- Se ha esito positivo, un puntatore che indica la funzione dell'utente. In caso contrario, un puntore NULL.  
+ Se ha esito positivo, un puntatore che indica la funzione dell'utente. In caso contrario, un puntatore **NULL**.  
   
 ## <a name="remarks"></a>Note  
  La funzione `__dllonexit` è analoga alla funzione [OnExit](../c-runtime-library/reference/onexit-onexit-m.md) ad eccezione delle variabili globali usate da tale funzione che non sono visibili per questa routine. Al posto di variabili globali, questa funzione usa i parametri `pbegin` e `pend`.  

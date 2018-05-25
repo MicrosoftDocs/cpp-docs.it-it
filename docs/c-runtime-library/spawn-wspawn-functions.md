@@ -55,11 +55,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 298e2a1abddc477e406bca17bce04999c6e09415
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0abf64c95e4293710226b2f4f38bc1fcf481b287
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="spawn-wspawn-functions"></a>Funzioni _spawn, _wspawn
 Ognuna delle funzioni `_spawn` crea ed esegue un nuovo processo:  
@@ -137,12 +137,12 @@ Ognuna delle funzioni `_spawn` crea ed esegue un nuovo processo:
   
  È possibile passare i puntatori dell'argomento come argomenti separati (in `_spawnl`, `_spawnle`, `_spawnlp` e `_spawnlpe`) o come una matrice di puntatori (in `_spawnv`, `_spawnve`, `_spawnvp` e `_spawnvpe`). È necessario passare almeno un argomento, `arg0` o `argv`[0], al processo generato. Per convenzione, questo argomento è il nome del programma che si digiterebbe sulla riga di comando. Un valore diverso non produce un errore.  
   
- Le chiamate `_spawnl`, `_spawnle`, `_spawnlp` e `_spawnlpe` in genere vengono utilizzate nei casi in cui il numero di argomenti è noto in anticipo. L'argomento `arg0` è solitamente un puntatore a `cmdname`. Gli argomenti da `arg1` a `argn` sono puntatori alle stringhe di caratteri che costituiscono il nuovo elenco di argomenti. Dopo `argn`, ci deve essere un puntatore `NULL` per contrassegnare la fine dell'elenco di argomenti.  
+ Le chiamate `_spawnl`, `_spawnle`, `_spawnlp` e `_spawnlpe` in genere vengono utilizzate nei casi in cui il numero di argomenti è noto in anticipo. L'argomento `arg0` è solitamente un puntatore a `cmdname`. Gli argomenti da `arg1` a `argn` sono puntatori alle stringhe di caratteri che costituiscono il nuovo elenco di argomenti. Dopo `argn`, ci deve essere un puntatore **NULL** per contrassegnare la fine dell'elenco di argomenti.  
   
- Le chiamate `_spawnv`, `_spawnve`, `_spawnvp` e `_spawnvpe` sono utili quando esiste un numero variabile di argomenti al nuovo processo. I puntatori agli argomenti vengono passati come matrice, `argv`*.* L'argomento `argv`[0] è in genere un puntatore a un percorso in modalità reale o al nome del programma in modalità protetta e `argv`[1] con `argv`[`n`] sono puntatori alle stringhe di caratteri che costituiscono il nuovo elenco di argomenti. L'argomento `argv`[`n` +1] deve essere un puntatore `NULL` per contrassegnare la fine dell'elenco di argomenti.  
+ Le chiamate `_spawnv`, `_spawnve`, `_spawnvp` e `_spawnvpe` sono utili quando esiste un numero variabile di argomenti al nuovo processo. I puntatori agli argomenti vengono passati come matrice, `argv`*.* L'argomento `argv`[0] è in genere un puntatore a un percorso in modalità reale o al nome del programma in modalità protetta e `argv`[1] con `argv`[`n`] sono puntatori alle stringhe di caratteri che costituiscono il nuovo elenco di argomenti. L'argomento `argv`[`n` +1] deve essere un puntatore **NULL** per contrassegnare la fine dell'elenco di argomenti.  
   
 ## <a name="environment-of-the-spawned-process"></a>Ambiente del processo generato  
- I file che vengono aperti quando viene effettuata una chiamata `_spawn` rimangono aperti nel nuovo processo. Nelle chiamate `_spawnl`, `_spawnlp`, `_spawnv` e `_spawnvp`, il nuovo processo eredita l'ambiente del processo chiamante. È possibile utilizzare le chiamate `_spawnle`, `_spawnlpe`, `_spawnve` e `_spawnvpe` per modificare l'ambiente per il nuovo processo passando un elenco delle impostazioni di ambiente tramite l'argomento `envp`. L'argomento `envp` è una matrice di puntatori a caratteri, ogni elemento della matrice (ad eccezione dell'elemento finale) punta alla stringa di terminazione null che definisce una variabile di ambiente. Tale stringa è in genere in formato `NAME`=`value`, dove `NAME` è il nome di una variabile di ambiente e `value` è il valore stringa su cui è impostata la variabile. (Notare che `value` non è racchiuso tra virgolette doppie.) L'elemento finale della matrice `envp` dovrebbe essere `NULL`. Quando la stessa `envp` è `NULL`, il processo generato eredita le impostazioni di ambiente del processo padre.  
+ I file che vengono aperti quando viene effettuata una chiamata `_spawn` rimangono aperti nel nuovo processo. Nelle chiamate `_spawnl`, `_spawnlp`, `_spawnv` e `_spawnvp`, il nuovo processo eredita l'ambiente del processo chiamante. È possibile utilizzare le chiamate `_spawnle`, `_spawnlpe`, `_spawnve` e `_spawnvpe` per modificare l'ambiente per il nuovo processo passando un elenco delle impostazioni di ambiente tramite l'argomento `envp`. L'argomento `envp` è una matrice di puntatori a caratteri, ogni elemento della matrice (ad eccezione dell'elemento finale) punta alla stringa di terminazione null che definisce una variabile di ambiente. Tale stringa è in genere in formato `NAME`=`value`, dove `NAME` è il nome di una variabile di ambiente e `value` è il valore stringa su cui è impostata la variabile. (Notare che `value` non è racchiuso tra virgolette doppie.) L'elemento finale della matrice `envp` deve essere **NULL**. Quando la stessa `envp` è **NULL**, il processo generato eredita le impostazioni di ambiente del processo padre.  
   
  Le funzioni `_spawn` possono passare tutte le informazioni sui file aperti, inclusa la modalità di traduzione, al nuovo processo. Queste informazioni vengono passate in modalità reale tramite la voce `C_FILE_INFO` nell'ambiente. Il codice di avvio in genere elabora questa voce, quindi la elimina dall'ambiente. Tuttavia, se una funzione `_spawn` genera un processo non C, questa voce rimane nell'ambiente. La stampa dell'ambiente indica i caratteri grafici nella stringa di definizione per la voce poiché le informazioni sull'ambiente vengono passate in forma binaria in modalità reale. Non dovrebbe avere altri effetti sulle operazioni normali. In modalità protetta, le informazioni sull'ambiente vengono passate in forma di testo e pertanto non contengono caratteri grafici.  
   

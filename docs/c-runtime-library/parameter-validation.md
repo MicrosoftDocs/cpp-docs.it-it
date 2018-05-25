@@ -14,14 +14,14 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a89ec2cd0b360f498e52af7e49bd5c6571521e2c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d39011149de0b2fb81b70d58d768a06dc8a95355
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="parameter-validation"></a>Convalida dei parametri
-La maggior parte delle funzioni CRT con sicurezza avanzata e molte delle funzioni preesistenti convalidano i propri parametri. La convalida può includere il controllo della presenza di puntatori NULL, la verifica che i numeri interi rientrino in un intervallo valido o il controllo della validità dei valori di enumerazione. Quando viene rilevato un parametro non valido, viene eseguito il gestore di parametri non validi.  
+La maggior parte delle funzioni CRT con sicurezza avanzata e molte delle funzioni preesistenti convalidano i propri parametri. La convalida può includere il controllo della presenza di puntatori **NULL**, la verifica che i numeri interi rientrino in un intervallo valido o il controllo della validità dei valori di enumerazione. Quando viene rilevato un parametro non valido, viene eseguito il gestore di parametri non validi.  
   
 ## <a name="invalid-parameter-handler-routine"></a>Routine del gestore di parametri non validi  
  Quando una funzione della libreria di runtime C rileva un parametro non valido, acquisisce alcune informazioni sull'errore e quindi chiama una macro che esegue il wrapping di una funzione di invio del gestore di parametri non validi, ovvero [_invalid_parameter](../c-runtime-library/reference/invalid-parameter-functions.md), [_invalid_parameter_noinfo](../c-runtime-library/reference/invalid-parameter-functions.md) o [_invalid_parameter_noinfo_noreturn](../c-runtime-library/reference/invalid-parameter-functions.md). La funzione di invio chiamata varia a seconda che il codice sia, rispettivamente, una compilazione di debug, una compilazione della versione finale o che l'errore sia considerato irreversibile. 
