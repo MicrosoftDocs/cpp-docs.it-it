@@ -16,33 +16,38 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d645760a15a82f502c82f4c0d0310f7826e70e45
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 40668b8b2cc1a1f85b0ad4a7ef63d89956e922b3
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34705205"
 ---
 # <a name="compiler-error-c3808"></a>Errore del compilatore C3808
-'type': una classe con l'attributo ComImport non è possibile definire il membro 'member', solo abstract o dllimport funzioni sono consentite  
-  
- Un tipo che deriva da <xref:System.Runtime.InteropServices.ComImportAttribute> non è possibile definire `member`.  
-  
- Le opzioni del compilatore **/clr:pure** e **/clr:safe** sono deprecate in Visual Studio 2015.  
-  
-## <a name="example"></a>Esempio  
- L'esempio seguente genera l'errore C3808.  
-  
-```  
-// C3808.cpp  
-// compile with: /c /clr:pure user32.lib  
-using namespace System::Runtime::InteropServices;  
-  
-[System::Runtime::InteropServices::ComImportAttribute()]  
-ref struct S1 {  
-   int f() {}   // C3808  
-   virtual int g() abstract;   // OK  
-  
-   [DllImport("msvcrt.dll")]  
-   int printf(System::String ^, int i);   // OK  
-};  
+
+> '*tipo*': una classe con l'attributo ComImport non può definire membri '*membro*', solo abstract o dllimport funzioni sono consentite
+
+## <a name="remarks"></a>Note
+
+Un tipo che deriva da <xref:System.Runtime.InteropServices.ComImportAttribute> non è possibile definire *membro*.
+
+Il **/clr: pure** e **/CLR: safe** opzioni del compilatore sono deprecate in Visual Studio 2015 e non supportate in Visual Studio 2017.
+
+## <a name="example"></a>Esempio
+
+L'esempio seguente genera l'errore C3808.
+
+```cpp
+// C3808.cpp
+// compile with: /c /clr:pure user32.lib
+using namespace System::Runtime::InteropServices;
+
+[System::Runtime::InteropServices::ComImportAttribute()]
+ref struct S1 {
+   int f() {}   // C3808
+   virtual int g() abstract;   // OK
+
+   [DllImport("msvcrt.dll")]
+   int printf(System::String ^, int i);   // OK
+};
 ```

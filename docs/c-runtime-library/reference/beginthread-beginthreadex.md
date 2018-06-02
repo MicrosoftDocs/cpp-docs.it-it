@@ -39,11 +39,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f8e12e25f64972335cb1a1199ae519de71d43067
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: d56bcc5ec779b077305d9d80e4a4e6b5e511df5e
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/22/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34704659"
 ---
 # <a name="beginthread-beginthreadex"></a>_beginthread, _beginthreadex
 
@@ -141,7 +142,7 @@ Il sistema operativo gestisce l'allocazione dello stack quando entrambi **begint
 
 Le impostazioni locali del nuovo thread viene inizializzata utilizzando informazioni di impostazioni locali correnti globali per ogni processo. Se le impostazioni locali per thread vengono abilitate da una chiamata a [configthreadlocale](configthreadlocale.md) (a livello globale o per i nuovi thread solo), il thread può modificare le impostazioni locali in modo indipendente da altri thread chiamando **setlocale** o **wsetlocale**. Thread che non hanno il flag di impostazioni locali per thread impostato possono influenzare le informazioni sulle impostazioni locali in tutti gli altri thread che inoltre non impostare il flag di impostazioni locali per thread, nonché tutti i thread appena creato. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
 
-Per codice misto e puro, **beginthread** e **beginthreadex** dispongono ognuno di due overload. Uno accetta un puntatore alla funzione nativa della convenzione di chiamata, mentre l'altro accetta un **clrcall** puntatore a funzione. Il primo overload non è indipendente dal dominio applicazione e non lo sarà mai. Se si sta scrivendo codice misto o puro, è necessario assicurarsi che il nuovo thread acceda al dominio dell'applicazione corretto prima di accedere alle risorse gestite. Questa operazione può essere eseguita, ad esempio, usando la funzione [call_in_domain](../../dotnet/call-in-appdomain-function.md). Il secondo overload è indipendente dal dominio; dell'applicazione il thread appena creato finirà sempre nel dominio dell'applicazione del chiamante del **beginthread** oppure **beginthreadex**.
+Per **/clr** codice **beginthread** e **beginthreadex** dispongono ognuno di due overload. Uno accetta un puntatore alla funzione nativa della convenzione di chiamata, mentre l'altro accetta un **clrcall** puntatore a funzione. Il primo overload non è indipendente dal dominio applicazione e non lo sarà mai. Se si sta scrivendo **/clr** codice è necessario assicurarsi che il nuovo thread acceda al dominio dell'applicazione corretto prima di accedere le risorse gestite. Questa operazione può essere eseguita, ad esempio, usando la funzione [call_in_domain](../../dotnet/call-in-appdomain-function.md). Il secondo overload è indipendente dal dominio; dell'applicazione il thread appena creato finirà sempre nel dominio dell'applicazione del chiamante del **beginthread** oppure **beginthreadex**.
 
 ## <a name="requirements"></a>Requisiti
 
@@ -330,8 +331,8 @@ Counter should be 1000000; it is-> 1000000
 
 ## <a name="see-also"></a>Vedere anche
 
-[Controllo di processi e ambiente](../../c-runtime-library/process-and-environment-control.md)<br/>
-[_endthread, _endthreadex](endthread-endthreadex.md)<br/>
-[abort](abort.md)<br/>
-[exit, _Exit, _exit](exit-exit-exit.md)<br/>
-[GetExitCodeThread](http://msdn.microsoft.com/library/windows/desktop/ms683190)<br/>
+- [Controllo di processi e ambiente](../../c-runtime-library/process-and-environment-control.md)
+- [_endthread, _endthreadex](endthread-endthreadex.md)
+- [abort](abort.md)
+- [exit, _Exit, _exit](exit-exit-exit.md)
+- [GetExitCodeThread](http://msdn.microsoft.com/library/windows/desktop/ms683190)

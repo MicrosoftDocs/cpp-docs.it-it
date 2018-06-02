@@ -1,6 +1,6 @@
 ---
 title: Del compilatore C4800 avvisi tramite C5999 | Documenti Microsoft
-ms.date: 11/17/2017
+ms.date: 05/30/2018
 ms.technology:
 - cpp-diagnostics
 ms.topic: error-reference
@@ -106,11 +106,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d13f939fcedc0d7b0c6ee132fda14a628a550dda
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 06c4d65fe7b6ab2b0238c3a4e4cd081e2dc011b5
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34704750"
 ---
 # <a name="compiler-warnings-c4800-through-c5999"></a>Del compilatore C4800 avvisi tramite C5999
 
@@ -242,10 +243,10 @@ Gli articoli in questa sezione della documentazione illustrano un subset dei mes
 |Avviso C5035 del compilatore|utilizzo della funzionalità '*funzionalità*' funzione *funzione* verrà compilato come codice guest|
 |Avviso del compilatore (livello 1) C5036|varargs funzione di conversione di puntatore durante la compilazione con /hybrid:x86arm64 '*type1*'a'*type2*'|
 |Avviso del compilatore C5037 (errore)|'*funzione membro*': una definizione out-of-line di un membro di un modello di classe non può avere argomenti predefiniti|
-|[Avviso C5038 del compilatore](c5038.md)|membro dati '*member1*'initialized dopo il membro dati'*member2*'|
-|Avviso C5039 del compilatore|'*funzione*': puntatore o riferimento a potenzialmente generare funzione passato alla funzione extern C sotto - /EHc. Se questa funzione genera un'eccezione, può verificarsi un comportamento indefinito.|
-|Avviso C5040 del compilatore|le specifiche di eccezione dinamiche sono valide solo in C++ 14 e versioni precedenti; considerando come noexcept (false)|
-|Avviso C5041 del compilatore|'*definizione*': definizione out-of-line per un membro dati statici constexpr non è necessario ed è deprecato in C++ 17|
-|Avviso C5042 del compilatore|'*dichiarazione*': le dichiarazioni di funzione nell'ambito del blocco non possono essere specificato come 'inline' in C++ standard, rimuovere l'identificatore 'inline'|
-|Avviso C5043 del compilatore|'*specifica*': specifica di eccezione non corrisponde alla dichiarazione precedente|
-|Avviso C5044 del compilatore|Un argomento per l'opzione della riga di comando *opzione* punta a un percorso '*percorso*' non esiste|
+|[Avviso del compilatore (livello 4) C5038](c5038.md)|membro dati '*member1*'initialized dopo il membro dati'*member2*'|
+|Avviso del compilatore (livello 4) C5039|'*funzione*': puntatore o riferimento a potenzialmente generare funzione passato alla funzione extern C sotto - /EHc. Se questa funzione genera un'eccezione, può verificarsi un comportamento indefinito.|
+|Avviso del compilatore (livello 3) C5040|le specifiche di eccezione dinamiche sono valide solo in C++ 14 e versioni precedenti; considerando come noexcept (false)|
+|Avviso del compilatore (livello 1) C5041|'*definizione*': definizione out-of-line per un membro dati statici constexpr non è necessario ed è deprecato in C++ 17|
+|Avviso del compilatore (livello 3) C5042|'*dichiarazione*': le dichiarazioni di funzione nell'ambito del blocco non possono essere specificato come 'inline' in C++ standard, rimuovere l'identificatore 'inline'|
+|Avviso del compilatore (livello 2) C5043|'*specifica*': specifica di eccezione non corrisponde alla dichiarazione precedente|
+|Avviso del compilatore (livello 4) C5044|Un argomento per l'opzione della riga di comando *opzione* punta a un percorso '*percorso*' non esiste|

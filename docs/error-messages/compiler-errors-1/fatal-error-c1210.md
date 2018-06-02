@@ -16,19 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: df1b970454af8ab692aea949d437e4c1cce4e0cb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4d22a34f44fb2c97fe341cb313d7917a35506cdd
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34704984"
 ---
 # <a name="fatal-error-c1210"></a>Errore irreversibile C1210
-/clr:pure e /clr:safe non supportate dalla versione del runtime installata  
-  
- Le opzioni del compilatore **/clr:pure** e **/clr:safe** sono deprecate in Visual Studio 2015.  
-  
- L'errore C1210 si verifica quando è presente un compilatore per la versione corrente, ma un Common Language Runtime di una versione precedente.  
-  
- Alcune funzionalità del compilatore potrebbero non funzionare in una versione precedente del runtime.  
-  
- Per risolvere l'errore C1210, installare la versione di Common Language Runtime che deve essere usata con il compilatore.
+
+> /clr:pure e /clr:safe non supportate dalla versione del runtime installata
+
+Il **/clr: pure** e **/CLR: safe** opzioni del compilatore sono deprecate in Visual Studio 2015 e non supportate in Visual Studio 2017.
+
+L'errore C1210 si verifica quando è presente un compilatore per la versione corrente, ma un Common Language Runtime di una versione precedente.
+
+Alcune funzionalità del compilatore potrebbero non funzionare in una versione precedente del runtime.
+
+Per risolvere l'errore C1210, installare la versione di Common Language Runtime che deve essere usata con il compilatore.

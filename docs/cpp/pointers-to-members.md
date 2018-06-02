@@ -18,11 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6312186ec47014ff11e18450543d8f98178a776b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0354d0a910db0f4237a56607a7322acb7a1b57a0
+ms.sourcegitcommit: 3c1930dc1e7e69fdbb431029cd3e9b9b00a140cc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/31/2018
+ms.locfileid: "34686851"
 ---
 # <a name="pointers-to-members"></a>Puntatori a membri
 Le dichiarazioni dei puntatori ai membri sono casi speciali di dichiarazioni del puntatore.  Le funzioni vengono dichiarate tramite la seguente sequenza:  
@@ -90,7 +91,7 @@ int main()
 }  
 ```  
   
- Nell'esempio precedente, `pwCaption` è un puntatore a un membro di classe `Window` che è di tipo **char\***. Il tipo di `pwCaption` è `char * Window::*`. Il frammento di codice seguente dichiara i puntatori alle funzioni membro `SetCaption` e `GetCaption`.  
+ Nell'esempio precedente, `pwCaption` è un puntatore a un membro di classe `Window` che è di tipo **char\***. Il tipo di `pwCaption` è `char * Window::* `. Il frammento di codice seguente dichiara i puntatori alle funzioni membro `SetCaption` e `GetCaption`.  
   
 ```  
 const char * (Window::*pfnwGC)() = &Window::GetCaption;  

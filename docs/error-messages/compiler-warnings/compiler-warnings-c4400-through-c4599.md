@@ -1,6 +1,6 @@
 ---
 title: C4400 avvisi del compilatore tramite C4599 | Documenti Microsoft
-ms.date: 11/17/2017
+ms.date: 05/30/2018
 ms.technology:
 - cpp-diagnostics
 ms.topic: error-reference
@@ -149,11 +149,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aa15d1e23178350dc8b19859db77f272492c2758
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 71dbf1817c43c5511f8ee711abf3ff3566f314c9
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34704685"
 ---
 # <a name="compiler-warnings-c4400-through-c4599"></a>C4400 avvisi del compilatore tramite C4599
 
@@ -319,7 +320,8 @@ Gli articoli in questa sezione della documentazione illustrano un subset dei mes
 |Avviso del compilatore (livello 4) C4574|'*Identificatore*'è definito per essere ' 0': si intendeva usare '#if identifier'?|
 |Avviso del compilatore (livello 1) C4575|vectorcall' incompatibile con il ' o clr' opzione: la conversione in stdcall'|
 |Avviso del compilatore (livello 1, errore) C4576|un tipo tra parentesi seguito da un elenco di inizializzatori è una sintassi di conversione di tipo esplicito non standard|
-|Avviso del compilatore (livello 1, errore) C4578|'abs': conversione da '*type1*'a'*type2*', perdita di dati (si intendeva chiamare '*funzione*' o a #include <cmath>?)|
+|Avviso del compilatore (livello 1, impostata su Off) C4577|'noexcept' utilizzato con nessun eccezioni modalità specificata. chiusura in caso di eccezione non è garantito. Specificare /EHsc|
+|Avviso del compilatore (livello 1, errore) C4578|'abs': conversione da '*type1*'a'*type2*', possibile perdita di dati (si intendeva chiamare '*funzione*' o a #include \<cmath >?)|
 |[Avviso del compilatore (livello 3) C4580](../../error-messages/compiler-warnings/compiler-warning-level-3-c4580.md)|[attribute] è deprecato; specificare System::Attribute o Platform::Metadata come classe base|
 |[Avviso del compilatore (livello 1) C4581](../../error-messages/compiler-warnings/compiler-warning-level-1-c4581.md)|comportamento deprecato: ' "*stringa*"' sostituito con '*stringa*' per elaborare l'attributo|
 |Avviso del compilatore (livello 4) C4582|'*tipo*': costruttore non viene chiamato in modo implicito|

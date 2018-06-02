@@ -19,22 +19,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 8ddb60b3fad6c230677e2098dd89a723198bea8b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b935b9a5d1561fa1c8b961ee48b92f59b98e2bd2
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34704334"
 ---
 # <a name="application-domains-and-visual-c"></a>Domini applicazione e Visual C++
-Se dispone di un `__clrcall` funzione virtuale, sarà vtable per ogni dominio dell'applicazione (appdomain). Se si crea un oggetto in un dominio applicazione, è possibile chiamare solo la funzione virtuale di tale dominio applicazione. In modalità mista (**/clr**) sarà necessario utilizzate vtable per processo se il tipo non ha alcun `__clrcall` funzioni virtuali. Le opzioni del compilatore **/clr:pure** e **/clr:safe** sono deprecate in Visual Studio 2015.  
-  
- Per altre informazioni, vedere  
-  
--   [appdomain](../cpp/appdomain.md)  
-  
--   [__clrcall](../cpp/clrcall.md)  
-  
--   [process](../cpp/process.md)  
-  
-## <a name="see-also"></a>Vedere anche  
- [Assembly misti (nativi e gestiti)](../dotnet/mixed-native-and-managed-assemblies.md)
+
+Se dispone di un `__clrcall` funzione virtuale, sarà vtable per ogni dominio dell'applicazione (appdomain). Se si crea un oggetto in un dominio applicazione, è possibile chiamare solo la funzione virtuale di tale dominio applicazione. In modalità mista (**/clr**) se il tipo non dispone ne saranno disponibili per ogni processo vtable `__clrcall` funzioni virtuali. Il **/clr: pure** e **/CLR: safe** opzioni del compilatore sono deprecate in Visual Studio 2015 e non supportate in Visual Studio 2017.
+
+Per altre informazioni, vedere:
+
+- [appdomain](../cpp/appdomain.md)
+
+- [__clrcall](../cpp/clrcall.md)
+
+- [process](../cpp/process.md)
+
+## <a name="see-also"></a>Vedere anche
+
+- [Assembly misti (nativi e gestiti)](../dotnet/mixed-native-and-managed-assemblies.md)

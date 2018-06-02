@@ -16,31 +16,36 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8ace2df75b5d2579b66a4d3930470021726ba4c9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c38ade6b75242fdd5144481e3415e914cb6773c5
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34704614"
 ---
 # <a name="compiler-warning-level-3-c4398"></a>Avviso del compilatore (livello 3) C4398
-'variabile': oggetto globale per processo potrebbe non funzionare correttamente con più domini di applicazione. è consigliabile utilizzare __declspec(appdomain)  
-  
- Una funzione virtuale con [clrcall](../../cpp/clrcall.md) convenzione di chiamata in un tipo nativo determina la creazione di una variabile di dominio di applicazione per. Tale variabile potrebbe non funzionare correttamente se utilizzato in più domini applicazione.  
-  
- È possibile risolvere il problema, contrassegnare in modo esplicito la variabile `__declspec(appdomain)`. Nelle versioni di Visual Studio precedenti a Visual Studio 2017, è possibile risolvere il problema eseguendo la compilazione con **/clr: pure**, che rende le variabili globali per dominio applicazione per impostazione predefinita.  
-  
- Per ulteriori informazioni, vedere [appdomain](../../cpp/appdomain.md) e [domini applicazione e Visual C++](../../dotnet/application-domains-and-visual-cpp.md).  
-  
-## <a name="example"></a>Esempio  
- L'esempio seguente genera l'errore C4398.  
-  
-```  
-// C4398.cpp  
-// compile with: /clr /W3 /c  
-struct S {  
-   virtual void f( System::String ^ );   // String^ parameter makes function __clrcall  
-};  
-  
-S glob_s;   // C4398  
-__declspec(appdomain) S glob_s2;   // OK  
+
+> '*variabile*': oggetto globale per processo potrebbe non funzionare correttamente con più domini di applicazione; provare a utilizzare __declspec(appdomain)
+
+## <a name="remarks"></a>Note
+
+Una funzione virtuale con [clrcall](../../cpp/clrcall.md) convenzione di chiamata in un tipo nativo determina la creazione di una variabile di dominio di applicazione per. Tale variabile potrebbe non funzionare correttamente se utilizzato in più domini applicazione.
+
+È possibile risolvere il problema, contrassegnare in modo esplicito la variabile `__declspec(appdomain)`. Nelle versioni di Visual Studio precedenti a Visual Studio 2017, è possibile risolvere il problema eseguendo la compilazione con **/clr: pure**, che rende le variabili globali per dominio applicazione per impostazione predefinita. Il **/clr: pure** opzione del compilatore è deprecato in Visual Studio 2015 e non supportata in Visual Studio 2017.
+
+Per ulteriori informazioni, vedere [appdomain](../../cpp/appdomain.md) e [domini applicazione e Visual C++](../../dotnet/application-domains-and-visual-cpp.md).
+
+## <a name="example"></a>Esempio
+
+L'esempio seguente genera l'errore C4398.
+
+```cpp
+// C4398.cpp
+// compile with: /clr /W3 /c
+struct S {
+   virtual void f( System::String ^ );   // String^ parameter makes function __clrcall
+};
+
+S glob_s;   // C4398
+__declspec(appdomain) S glob_s2;   // OK
 ```

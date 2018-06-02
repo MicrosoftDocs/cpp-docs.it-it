@@ -1,5 +1,5 @@
 ---
-title: Confronto tra le funzionalità mista, pura e verificabile (C + + CLI) | Documenti Microsoft
+title: Confronto tra le funzionalità mista, pura e verificabile (C + c++ /CLI) | Documenti Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -28,28 +28,32 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 201f2eb0979857713848a8c381ef0a31ba179c41
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8cb1b2ba71277415fd1ba5124f6120cc2f2c995d
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34704711"
 ---
-# <a name="mixed-pure-and-verifiable-feature-comparison-ccli"></a>Confronto tra le modalità mista, pura e verificabile (C++/CLI)
-In questo argomento vengono confrontate le funzionalità tra le diverse **/clr** le modalità di compilazione. Per altre informazioni, vedere [/clr (Compilazione Common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md).  
-  
- Le opzioni del compilatore **/clr:pure** e **/clr:safe** sono deprecate in Visual Studio 2015.  
-  
-## <a name="feature-comparison"></a>Confronto tra funzionalità  
-  
-|Funzionalità|Misto (o clr)|Pure (o /CLR: pure)|Sicuro (o /CLR: safe)|Informazioni correlate|  
-|-------------|---------------------|-------------------------|-------------------------|-------------------------|  
-|Libreria CRT|È supportato|deprecated||[Routine di Universal C Runtime per categoria](../c-runtime-library/run-time-routines-by-category.md)|  
-|MFC/ATL|È supportato|||[Applicazioni Desktop MFC](../mfc/mfc-desktop-applications.md) &#124; [Cenni preliminari sulla classi](../atl/atl-class-overview.md)|  
-|Funzioni non gestite|È supportato|||[Assembly misti (nativi e gestiti)](../dotnet/mixed-native-and-managed-assemblies.md)|  
-|Dati non gestiti|È supportato|deprecated||[Codice pure e verificabile (C++/CLI)](../dotnet/pure-and-verifiable-code-cpp-cli.md)|  
-|Chiamabile da funzioni non gestite|È supportato||||  
-|Supporta la chiamata di funzioni non gestite|È supportato|deprecated|deprecated|[Uso delle funzionalità di interoperabilità C++ (PInvoke implicito)](../dotnet/using-cpp-interop-implicit-pinvoke.md)|  
-|Supporta la Reflection|Solo le DLL|deprecated|deprecated|[Reflection (C++/CLI)](../dotnet/reflection-cpp-cli.md)|  
-  
-## <a name="see-also"></a>Vedere anche  
- [Codice pure e verificabile (C++/CLI)](../dotnet/pure-and-verifiable-code-cpp-cli.md)
+# <a name="mixed-pure-and-verifiable-feature-comparison-ccli"></a>Confronto tra le funzionalità mista, pura e verificabile (C + c++ /CLI)
+
+In questo argomento vengono confrontate le funzionalità tra le diverse **/clr** le modalità di compilazione. Per altre informazioni, vedere [/clr (Compilazione Common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md).
+
+> [!IMPORTANT]
+> Il **/clr: pure** e **/CLR: safe** opzioni del compilatore sono deprecate in Visual Studio 2015 e non supportate in Visual Studio 2017.
+
+## <a name="feature-comparison"></a>Confronto delle funzionalità
+
+|Funzionalità|Misto (o clr)|Pure (o /CLR: pure)|Sicuro (o /CLR: safe)|Informazioni correlate|
+|-------------|---------------------|-------------------------|-------------------------|-------------------------|
+|Libreria CRT|È supportato|deprecated||[Routine di Universal C Runtime per categoria](../c-runtime-library/run-time-routines-by-category.md)|
+|MFC/ATL|È supportato|||[Applicazioni Desktop MFC](../mfc/mfc-desktop-applications.md) &#124; [Cenni preliminari sulla classi](../atl/atl-class-overview.md)|
+|Funzioni non gestite|È supportato|||[Assembly misti (nativi e gestiti)](../dotnet/mixed-native-and-managed-assemblies.md)|
+|Dati non gestiti|È supportato|deprecated||[Codice pure e verificabile (C++/CLI)](../dotnet/pure-and-verifiable-code-cpp-cli.md)|
+|Chiamabile da funzioni non gestite|È supportato||||
+|Supporta la chiamata di funzioni non gestite|È supportato|deprecated|deprecated|[Uso delle funzionalità di interoperabilità C++ (PInvoke implicito)](../dotnet/using-cpp-interop-implicit-pinvoke.md)|
+|Supporta la Reflection|Solo le DLL|deprecated|deprecated|[Reflection (C++/CLI)](../dotnet/reflection-cpp-cli.md)|
+
+## <a name="see-also"></a>Vedere anche
+
+- [Codice pure e verificabile (C++/CLI)](../dotnet/pure-and-verifiable-code-cpp-cli.md)

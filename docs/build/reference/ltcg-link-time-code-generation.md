@@ -23,11 +23,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7d45f5b56dfb84d56bcba8ad0652ed86a8fb5223
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: dc4266e8b01201226c53584bed9f90ed9dcabef7
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34703733"
 ---
 # <a name="ltcg-link-time-code-generation"></a>/LTCG (Generazione di codice in fase di collegamento)
 
@@ -141,7 +142,7 @@ Se una funzione viene chiamata tramite un puntatore a funzione, o se viene chiam
 
 I moduli compilati con [/GL](../../build/reference/gl-whole-program-optimization.md) e [/clr](../../build/reference/clr-common-language-runtime-compilation.md) possono essere usati come input per il linker quando è specificato **/LTCG** .
 
-- **L'opzione /LTCG** misto nativo/gestito file oggetto e può accettare file oggetto nativo (compilati usando **/clr**). Le opzioni del compilatore **/clr:pure** e **/clr:safe** sono deprecate in Visual Studio 2015.
+- **L'opzione /LTCG** misto nativo/gestito file oggetto e può accettare file oggetto nativo (compilati usando **/clr**). Il **/clr: pure** e **/CLR: safe** opzioni del compilatore sono deprecate in Visual Studio 2015 e non supportate in Visual Studio 2017.
 
 - **/LTCG: PGI** non accetta i moduli nativi compilati utilizzando **/GL** e **/clr**
 
@@ -161,5 +162,5 @@ I moduli compilati con [/GL](../../build/reference/gl-whole-program-optimization
 
 ## <a name="see-also"></a>Vedere anche
 
-[Impostazione delle opzioni del linker](../../build/reference/setting-linker-options.md)<br/>
-[Opzioni del linker](../../build/reference/linker-options.md)<br/>
+- [Impostazione delle opzioni del linker](../../build/reference/setting-linker-options.md)
+- [Opzioni del linker](../../build/reference/linker-options.md)

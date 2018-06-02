@@ -14,22 +14,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0abd32f2c46f7d7b26ea617e2cf43f1dc3c124bf
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7e9cd1a0ba57b5a2f0d5afb2d02ff9c21b7e0b2c
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34705426"
 ---
 # <a name="general-rules-for-operator-overloading"></a>Regole generali per overload di operatori
 Le regole seguenti vincolano l'implementazione degli operatori di overload. Tuttavia, non si applicano al [nuova](../cpp/new-operator-cpp.md) e [eliminare](../cpp/delete-operator-cpp.md) operatori, analizzati separatamente.  
   
--   Non è possibile definire nuovi operatori, come **.  
+-   Non è possibile definire nuovi operatori, ad esempio **.**.  
   
 -   Non è possibile ridefinire il significato degli operatori se applicato a tipi di dati incorporati.  
   
 -   Operatori di overload devono essere una funzione membro della classe non statica o una funzione globale. Una funzione globale che necessita di accesso a membri della classe privata e protetta deve essere dichiarata come tipo Friend di quella classe. Una funzione globale deve accettare almeno un argomento di classe o di tipo enumerato o che sia un riferimento a una classe o a un tipo enumerato. Ad esempio:  
   
-    ```  
+    ```cpp  
     // rules_for_operator_overloading.cpp  
     class Point  
     {  
@@ -74,7 +75,7 @@ var++;
  Questa identità non può essere ritenuta attendibile per tipi di classe che sottopongono a overload gli operatori. Inoltre, alcuni dei requisiti impliciti nell'utilizzo di questi operatori per i tipi di base sono flessibili per gli operatori di overload. Ad esempio, l'operatore di assegnazione/di addizione, `+=`, richiede che l'operando di sinistra sia un l-value quando applicato a tipi di base; non vi è tale requisito quando l'operatore viene sottoposto a overload.  
   
 > [!NOTE]
->  Per coerenza, è spesso consigliabile seguire il modello di tipi incorporati quando vengono definiti gli operatori di overload. Se la semantica di un operatore di overload differisce notevolmente dal relativo significato in altri contesti, può essere più ambiguo che utile.  
+> Per coerenza, è spesso consigliabile seguire il modello di tipi incorporati quando vengono definiti gli operatori di overload. Se la semantica di un operatore di overload differisce notevolmente dal relativo significato in altri contesti, può essere più ambiguo che utile.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Overload degli operatori](../cpp/operator-overloading.md)

@@ -1,7 +1,7 @@
 ---
 title: Classe RoInitializeWrapper | Documenti Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 05/20/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -15,11 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4a4479686d3ca591a9fdd1c0659549a2e0db6e1c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: cac71857e6b472f11d1c9eaba48d181ea78fb456
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34705592"
 ---
 # <a name="roinitializewrapper-class"></a>Classe RoInitializeWrapper
 Inizializza il Runtime di Windows.  
@@ -31,7 +32,7 @@ class RoInitializeWrapper
 ```  
   
 ## <a name="remarks"></a>Note  
- RoInitializeWrapper è utile che inizializza il Runtime di Windows e restituisce un HRESULT che indica se l'operazione ha avuto esito positivo.  
+ RoInitializeWrapper è utile che inizializza il Runtime di Windows e restituisce un HRESULT che indica se l'operazione ha avuto esito positivo. Poiché chiama il distruttore della classe `::Windows::Foundation::Uninitialize`, le istanze di `RoInitializeWrapper` deve essere dichiarata in ambito globale o livello superiore.  
   
 ## <a name="members"></a>Membri  
   

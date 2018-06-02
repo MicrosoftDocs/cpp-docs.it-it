@@ -19,11 +19,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b8b87774b9c011d6ea5ab92d3c1b44e4af2b6091
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b89744235a5a2302a6550b2ffa7100511ad2e59c
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34704893"
 ---
 # <a name="zc-conformance"></a>/Zc (Conformità)
 
@@ -43,6 +44,7 @@ Si tratta di `/Zc` opzioni del compilatore:
 |---|---|
 |[alignedNew\[-\]](zc-alignednew.md)|Abilitare C++ 17 eccessiva dinamica allocazione allineata (attivato per impostazione predefinita in C++ 17).|
 |[auto\[-\]](zc-auto-deduce-variable-type.md)|Applicare il nuovo significato di C++ Standard per `auto` (in per impostazione predefinita).|
+|[cplusplus\[-\]](zc-cplusplus.md)|Abilitare il **cplusplus** macro per segnalare lo standard supportato (disattivato per impostazione predefinita).|
 |[externConstexpr\[-\]](zc-externconstexpr.md)|Abilitare il collegamento esterno per `constexpr` variabili (disattivato per impostazione predefinita).|
 |[forScope\[-\]](zc-forscope-force-conformance-in-for-loop-scope.md)|Impone C++ Standard `for` regole di ambito (in per impostazione predefinita).|
 |[implicitNoexcept\[-\]](zc-implicitnoexcept-implicit-exception-specifiers.md)|Abilita implicita `noexcept` su funzioni obbligatorie (in per impostazione predefinita).|

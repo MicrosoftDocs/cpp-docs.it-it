@@ -16,33 +16,37 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3634ecf3eb1417095cce144706838113b5ad2a0e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5e6b7a2d1617591609f75b2b07f1a94983ee22f4
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34704958"
 ---
 # <a name="compiler-error-c3768"></a>Errore del compilatore C3768
-Impossibile accettare l'indirizzo di una funzione vararg virtuale in codice gestito pure  
-  
- Il **/clr: pure** l'opzione del compilatore è deprecato in Visual Studio 2015.  
-  
- Durante la compilazione con `/clr:pure`, è possibile accettare l'indirizzo di una macchina `vararg` (funzione).  
-  
-## <a name="example"></a>Esempio  
 
- L'esempio seguente genera l'errore C3768:  
-  
-```  
-// C3768.cpp  
-// compile with: /clr:pure  
-struct A  
-{  
-   virtual void f(...);  
-};  
-  
-int main()  
-{  
-   &(A::f);   // C3768  
-}  
+> Impossibile accettare l'indirizzo di una funzione vararg virtuale in codice gestito pure
+
+## <a name="remarks"></a>Note
+
+Il **/clr: pure** opzione del compilatore è deprecato in Visual Studio 2015 e non supportata in Visual Studio 2017.
+
+Durante la compilazione con **/clr: pure**, è possibile accettare l'indirizzo di una macchina `vararg` (funzione).
+
+## <a name="example"></a>Esempio
+
+L'esempio seguente genera l'errore C3768:
+
+```cpp
+// C3768.cpp
+// compile with: /clr:pure
+struct A
+{
+   virtual void f(...);
+};
+
+int main()
+{
+   &(A::f);   // C3768
+}
 ```
