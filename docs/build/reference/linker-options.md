@@ -19,11 +19,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 835d7b1b74c8d465b44ec6274926f0b06d4f1296
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c7a7fe51c6f49af4fdd232b860b1f9243c1ea462
+ms.sourcegitcommit: d1f576a0f59678edc3d93508cf46485138332178
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34753630"
 ---
 # <a name="linker-options"></a>Opzioni del linker
 
@@ -67,6 +68,7 @@ Nella riga di comando, le opzioni del linker non maiuscole e minuscole; ad esemp
 |[/DELAY](../../build/reference/delay-delay-load-import-settings.md)|Controlla il caricamento ritardato delle DLL.|
 |[/DELAYLOAD](../../build/reference/delayload-delay-load-import.md)|Causa il caricamento ritardato della DLL specificata.|
 |[/DELAYSIGN](../../build/reference/delaysign-partially-sign-an-assembly.md)|Firma parzialmente un assembly.|
+|[/ DEPENDENTLOADFLAG](dependentloadflag.md)|Imposta flag predefiniti nei caricamenti DLL dipendenti.|
 |[/DLL](../../build/reference/dll-build-a-dll.md)|Compila una DLL.|
 |[/DRIVER](../../build/reference/driver-windows-nt-kernel-mode-driver.md)|Crea un driver in modalità kernel.|
 |[/DYNAMICBASE](../../build/reference/dynamicbase-use-address-space-layout-randomization.md)|Specifica se generare un'immagine eseguibile che può essere riassegnata in modo casuale in fase di caricamento usando la funzionalità ASLR (Address Space Layout Randomization).|
