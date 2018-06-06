@@ -19,11 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f563e318f2defcbf36139f1f6d49e3986db5f946
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ac1fac3c7f96c9f8d718efa54810f4155b1ddac5
+ms.sourcegitcommit: c0ffdff538eb961f786809eb547b35846190ee48
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34800086"
 ---
 # <a name="walkthrough-creating-a-standard-c-program-c"></a>Procedura dettagliata: Creazione di un programma Standard di C++ (C++)
 È possibile utilizzare Visual C++ nell'ambiente di sviluppo integrato (IDE) di Visual Studio per creare programmi C++ Standard. Seguendo i passaggi descritti in questa procedura dettagliata, è possibile creare un progetto, aggiungere un nuovo file al progetto, modificare il file per aggiungere il codice C++ e quindi compilare ed eseguire il programma usando [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)].  
@@ -42,7 +43,7 @@ ms.lasthandoff: 05/08/2018
   
 1.  Creare un progetto scegliendo **New** sul **File** menu e quindi fare clic su **progetto**.  
   
-2.  Nel **Visual C++** riquadro Tipi progetto, fare clic su **Win32**, quindi fare clic su **applicazione Console Win32**.  
+2.  Nel **Visual C++** riquadro tipi di progetto, fare clic su **Desktop di Windows**, quindi fare clic su **applicazione Console di Windows**.  
   
 3.  Digitare un nome per il progetto.  
   
@@ -50,11 +51,9 @@ ms.lasthandoff: 05/08/2018
   
      Fare clic su **OK** per creare il progetto.  
   
-4.  Nel **Creazione guidata applicazione Win32**, fare clic su **Avanti**selezionare **progetto vuoto**, quindi fare clic su **fine**.  
+4.  Se **Esplora** non è visualizzato, scegliere il **visualizzazione** menu, fare clic su **Esplora**.  
   
-5.  Se **Esplora** non è visualizzato, scegliere il **visualizzazione** menu, fare clic su **Esplora**.  
-  
-6.  Aggiungere un nuovo file di origine per il progetto, come indicato di seguito.  
+5.  Aggiungere un nuovo file di origine per il progetto, come indicato di seguito.  
   
     1.  In **Esplora**, fare doppio clic su di **i file di origine** cartella, scegliere **Aggiungi**e quindi fare clic su **nuovo elemento**.  
   
@@ -62,15 +61,15 @@ ms.lasthandoff: 05/08/2018
   
      Il file con estensione cpp visualizzato nella cartella file di origine in **Esplora**, e il file viene aperto nell'editor di Visual Studio.  
   
-7.  Nel file nell'editor, un programma C++ valido che utilizza la libreria Standard C++, digitare o copiare uno dei programmi di esempio e incollarlo nel file.  
+6.  Nel file nell'editor, un programma C++ valido che utilizza la libreria Standard C++, digitare o copiare uno dei programmi di esempio e incollarlo nel file.  
   
-8.  Salvare il file.  
+7.  Salvare il file.  
   
-9. Scegliere **Compila soluzione** dal menu **Compila**.  
+8. Scegliere **Compila soluzione** dal menu **Compila**.  
   
      Il **Output** finestra vengono visualizzate informazioni sullo stato di avanzamento compilazione, ad esempio, il percorso del log di compilazione e un messaggio che indica lo stato della compilazione.  
   
-10. Nel **Debug** menu, fare clic su **Avvia senza eseguire debug**.  
+9. Nel **Debug** menu, fare clic su **Avvia senza eseguire debug**.  
   
      Se si utilizza il programma di esempio, una finestra di comando viene visualizzata e se sono presenti determinati Integer nel set.  
   

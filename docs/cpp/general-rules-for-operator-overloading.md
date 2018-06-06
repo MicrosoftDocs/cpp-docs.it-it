@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7e9cd1a0ba57b5a2f0d5afb2d02ff9c21b7e0b2c
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: d6912d410018966432ef66331354213bd70dfa8b
+ms.sourcegitcommit: e3b4ef19b534a2ed48bb9091e5197a6e536f16c1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34705426"
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "34814339"
 ---
 # <a name="general-rules-for-operator-overloading"></a>Regole generali per overload di operatori
 Le regole seguenti vincolano l'implementazione degli operatori di overload. Tuttavia, non si applicano al [nuova](../cpp/new-operator-cpp.md) e [eliminare](../cpp/delete-operator-cpp.md) operatori, analizzati separatamente.  
@@ -55,7 +55,7 @@ Le regole seguenti vincolano l'implementazione degli operatori di overload. Tutt
   
 -   Gli operatori binari dichiarati come funzioni membro accettano un argomento; se dichiarati come funzioni globali, accettano due argomenti.  
   
--   Se è possibile utilizzare un operatore unario o un operatore binario (**&**, **\***, **+**, e **-**), è possibile eseguire l'overload separatamente ogni utilizzo.  
+-   Se è possibile utilizzare un operatore unario o un operatore binario (__&__, __*__, __+__, e __-__), è possibile eseguire l'overload separatamente ogni utilizzo.  
   
 -   Operatori di overload non possono avere argomenti predefiniti.  
   
