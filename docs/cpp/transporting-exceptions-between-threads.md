@@ -28,7 +28,7 @@ ms.openlocfilehash: c1066da6545a2e0689fbfed33be466e001142dc9
 ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/01/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34704646"
 ---
 # <a name="transporting-exceptions-between-threads"></a>Il trasferimento delle eccezioni tra thread

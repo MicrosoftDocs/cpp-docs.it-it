@@ -20,7 +20,7 @@ ms.openlocfilehash: 2819664fa94ca777339156dc9a31da17b991c6da
 ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/01/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34705164"
 ---
 # <a name="compiler-warning-c4959"></a>Avviso del compilatore C4959

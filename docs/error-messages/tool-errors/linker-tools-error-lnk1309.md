@@ -20,7 +20,7 @@ ms.openlocfilehash: 0ffecdc891a9fe0d1c17d6e36c87f5df10b449ec
 ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/01/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34704098"
 ---
 # <a name="linker-tools-error-lnk1309"></a>Errore degli strumenti del linker LNK1309

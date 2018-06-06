@@ -20,7 +20,7 @@ ms.openlocfilehash: c38ade6b75242fdd5144481e3415e914cb6773c5
 ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/01/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34704614"
 ---
 # <a name="compiler-warning-level-3-c4398"></a>Avviso del compilatore (livello 3) C4398

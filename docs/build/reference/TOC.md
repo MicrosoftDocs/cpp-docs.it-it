@@ -204,7 +204,7 @@
 ### [/DELAY (impostazioni dell'importazione a caricamento ritardato)](delay-delay-load-import-settings.md)
 ### [/DELAYLOAD (importazione a caricamento ritardato)](delayload-delay-load-import.md)
 ### [/DELAYSIGN (firma parzialmente un assembly)](delaysign-partially-sign-an-assembly.md)
-### [/ DEPENDENTLOADFLAGS (Set predefinito dipendente carico flag)](dependentloadflags.md)
+### [/ DEPENDENTLOADFLAG (Set predefinito dipendente carico flag)](dependentloadflag.md)
 ### [/DLL (compila una DLL)](dll-build-a-dll.md)
 ### [/DRIVER (driver in modalità kernel di Windows NT)](driver-windows-nt-kernel-mode-driver.md)
 ### [/DYNAMICBASE (uso della funzionalità ASLR)](dynamicbase-use-address-space-layout-randomization.md)

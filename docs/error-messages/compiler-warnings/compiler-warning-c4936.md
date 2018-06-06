@@ -20,7 +20,7 @@ ms.openlocfilehash: 0be4a565dd251da77174c401c23b8ed8bfc531b0
 ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/01/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34703939"
 ---
 # <a name="compiler-warning-c4936"></a>Avviso del compilatore C4936
