@@ -16,11 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8d25914a6b391f54be5b4b60dbbf716436dc4d2d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2b014ccc46434fd0c3f13689e579ed4798ebcdb2
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34569810"
 ---
 # <a name="fatal-error-c1083"></a>Errore irreversibile C1083
 
@@ -106,6 +107,8 @@ Quando un progetto è configurato per l'utilizzo di intestazioni precompilate, �
 
 - Il file viene compilato utilizzando un altro **/ANALYZE** impostazione dell'opzione del compilatore rispetto a quella utilizzata per precompilare le intestazioni. Quando le intestazioni per un progetto vengono precompilate, tutte utilizzano lo stesso **/ANALYZE** impostazioni. Per altre informazioni, vedere [/analyze (Analisi codice)](../../build/reference/analyze-code-analysis.md).
 
+- Il file o la directory è stato creato dal sottosistema di Windows per Linux, è abilitato per ogni directory distinzione maiuscole/minuscole e gli specificati file o il percorso non corrispondono a quelli nel caso di percorso o file su disco.
+
 - Il file, la directory o il disco è di sola lettura.
 
 - Visual Studio o gli strumenti da riga di comando non dispone delle autorizzazioni sufficienti per leggere il file o directory. Ciò può verificarsi, ad esempio, quando i file di progetto dispongono della proprietà diversa rispetto al processo che esegue Visual Studio o gli strumenti da riga di comando. Talvolta questo problema può essere risolto eseguendo Visual Studio o il prompt dei comandi per sviluppatori come amministratore.
@@ -127,4 +130,4 @@ Per informazioni su come compilare progetti C/C++ nell'IDE o sulla riga di coman
 
 ## <a name="see-also"></a>Vedere anche
 
-[Proprietà di MSBuild](/visualstudio/msbuild/msbuild-properties)
+- [Proprietà di MSBuild](/visualstudio/msbuild/msbuild-properties)
