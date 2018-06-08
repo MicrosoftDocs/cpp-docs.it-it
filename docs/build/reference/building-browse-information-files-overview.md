@@ -17,11 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6a2306c69c219320e11259ba6303b76588db8f7b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 463bf72c07c775ef0d4965a2023e5699cf7ec715
+ms.sourcegitcommit: b04de4e90def1d0f4aa265e96d6b73779d010e1f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34843075"
 ---
 # <a name="building-browse-information-files-overview"></a>Cenni preliminari sulla compilazione di file di informazioni di visualizzazione
 Per creare informazioni di visualizzazione per l'esplorazione di simbolo, il compilatore crea un file sbr per ogni file di origine nel progetto, quindi BSCMAKE. EXE concatena i file SBR in un unico file BSC.  
@@ -49,7 +50,7 @@ Per creare informazioni di visualizzazione per l'esplorazione di simbolo, il com
   
 1.  Non compilare il file BSC al livello del progetto oppure utilizzare l'opzione /n per impedire che i file SBR vengano troncati.  
   
-2.  Dopo che tutti i progetti vengono compilati, eseguire BSCMAKE con tutti i file sbr come input. Sono consentiti caratteri jolly. Ad esempio, se si dispone di directory di progetto C:\X C:\Y e C:\Z con i file sbr e si desidera combinarli in un unico file BSC, quindi utilizzare BSCMAKE C:\X\\*.sbr C:\Y\\\*SBR C:\Z\\\*. SBR /o c:\whatever_directory\combined.bsc per compilare il file BSC combinato.  
+2.  Dopo che tutti i progetti vengono compilati, eseguire BSCMAKE con tutti i file sbr come input. Sono consentiti caratteri jolly. Ad esempio, se si dispone di directory di progetto C:\X C:\Y e C:\Z con i file sbr e si desidera combinarli in un unico file BSC, quindi usare BSCMAKE C:\X\\\*SBR C:\Y\\\*SBR C:\Z\\ \*SBR /o c:\whatever_directory\combined.bsc per compilare il file BSC combinato.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Strumenti di compilazione di C/C++](../../build/reference/c-cpp-build-tools.md)   
