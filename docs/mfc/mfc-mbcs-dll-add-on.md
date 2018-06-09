@@ -14,11 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: df6ecf03a5b1c92dc7e435fc014615db09422638
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: efcfac98c5ff36f84ec0b7c4d2fbd6ff40cbb0d4
+ms.sourcegitcommit: 59afc95d0e494af658cf464503f7f89bd1a8d2ce
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35239450"
 ---
 # <a name="mfc-mbcs-dll-add-on"></a>Componente aggiuntivo DLL MBCS MFC
 
@@ -28,7 +29,7 @@ Supporto per MFC e le relative librerie set (MBCS) carattere multibyte prevede u
 
 **Visual Studio 2015**: sia Unicode e MBCS MFC (DLL) sono inclusi nei componenti di installazione di Visual C++, ma il supporto di MFC non è installato per impostazione predefinita. Visual C++ e MFC sono configurazioni di installazione facoltative nel programma di installazione di Visual Studio. Per assicurarsi che MFC venga installato, scegliere **Personalizzato** nel programma di installazione in **Linguaggi di programmazione**, assicurarsi che **Visual C++** e **Microsoft Foundation Classes per C++** siano selezionati. Se Visual Studio è già installato, verrà richiesto di installare Visual C++ e/o MFC quando si prova a creare un progetto MFC.
 
-**Visual Studio 2017**: DLL MFC MBCS e Unicode vengono installate con il **sviluppo di applicazioni Desktop con C++** carico di lavoro quando si seleziona **ATL e MFC supportano** dal **facoltativo Componenti** riquadro. Se l'installazione non include questi componenti, è possibile avviare il programma di installazione dal **nuovi progetti** finestra di dialogo utilizzando il **aprire Visual Studio Installer** collegamento.
+**Visual Studio 2017**: DLL MFC MBCS e Unicode vengono installate con il **sviluppo di applicazioni Desktop con C++** carico di lavoro quando si seleziona **ATL e MFC supportano** dal **facoltativo Componenti** riquadro. Se l'installazione non include questi componenti, passare al **File | I nuovi progetti** finestra di dialogo e fare clic il **aperto Visual Studio Installer** collegamento.
 
 ## <a name="see-also"></a>Vedere anche
 

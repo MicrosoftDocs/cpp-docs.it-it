@@ -48,11 +48,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 19b9c25659938e049807eb4e4b41dafd51ebe8e9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 89e508242e7318e5419656720b6dee20bed55716
+ms.sourcegitcommit: 59afc95d0e494af658cf464503f7f89bd1a8d2ce
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35239424"
 ---
 # <a name="cmap-class"></a>Classe CMap
 Classe Collection dizionario che esegue il mapping delle chiavi univoche ai valori.  
@@ -67,13 +68,13 @@ template<class KEY, class ARG_KEY, class VALUE, class ARG_VALUE>class CMap : pub
  `KEY`  
  Classe dell'oggetto utilizzato come chiave per la mappa.  
   
- `ARG` *_* `KEY`  
+ `ARG_KEY`  
  Tipo di dati utilizzato per `KEY` argomenti, in genere un riferimento a `KEY`.  
   
  `VALUE`  
  La classe dell'oggetto archiviato nella mappa.  
   
- `ARG` *_* `VALUE`  
+ `ARG_VALUE`  
  Tipo di dati utilizzato per `VALUE` argomenti, in genere un riferimento a `VALUE`.  
   
 ## <a name="members"></a>Membri  

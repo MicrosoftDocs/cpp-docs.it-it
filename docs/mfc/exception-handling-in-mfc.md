@@ -43,11 +43,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0792ddf067f6289d612a9adb0c8ffeaf8e554ed6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b246e9ed09cce2fdecf8a8d6327a912061247cad
+ms.sourcegitcommit: 59afc95d0e494af658cf464503f7f89bd1a8d2ce
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35239437"
 ---
 # <a name="exception-handling-in-mfc"></a>Gestione delle eccezioni in MFC
 Questo articolo illustra i meccanismi di gestione delle eccezioni disponibili in MFC. Sono disponibili i due meccanismi:  
@@ -63,7 +64,7 @@ Questo articolo illustra i meccanismi di gestione delle eccezioni disponibili in
  Se è già stato sviluppato un'applicazione utilizzando la macro eccezioni MFC, è possibile continuare a usare queste macro nel codice esistente, le eccezioni C++ nel nuovo codice. L'articolo [eccezioni: modifiche alle macro eccezioni nella versione 3.0](../mfc/exceptions-changes-to-exception-macros-in-version-3-0.md) fornisce linee guida per questa operazione.  
   
 > [!NOTE]
->  Per attivare eccezioni C++ nel codice, selezionare Abilita eccezioni C++ nella pagina generazione di codice nella cartella C/C++ del progetto [pagine delle proprietà](../ide/property-pages-visual-cpp.md) la finestra di dialogo oppure utilizzare l'opzione del compilatore /GX. Il valore predefinito è /GX-, che disabilita la gestione delle eccezioni.  
+>  Per abilitare delle eccezioni C++ nel codice, selezionare Abilita eccezioni C++ nella pagina generazione di codice nella cartella C/C++ del progetto [pagine delle proprietà](../ide/property-pages-visual-cpp.md) finestra di dialogo oppure utilizzare il [/EHsc](../build/reference/eh-exception-handling-model.md) opzione del compilatore.  
   
  In questo articolo vengono illustrati gli argomenti seguenti:  
   
