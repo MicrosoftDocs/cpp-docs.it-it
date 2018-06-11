@@ -9,11 +9,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f280ed28a65db4aa71ee6dea36521b1b8606b190
-ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
+ms.openlocfilehash: 9fc79d438b61fce90faf1f8548671ec882c5099a
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/17/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34569695"
 ---
 # <a name="whats-new-for-visual-c-in-includevsdev15mdmiscincludesvsdev15mdmd"></a>Novità di Visual C++ in [!INCLUDE[vs_dev15_md](misc/includes/vs_dev15_md.md)]
 
@@ -394,12 +395,10 @@ Usando Visual Studio è ora possibile creare app per dispositivi mobili destinat
 C++ viene fornito come componente facoltativo del carico di lavoro per lo sviluppo di app di Windows universale.  Attualmente l'aggiornamento di progetti C++ deve essere eseguito manualmente. Quando si apre un progetto UWP destinato a v140 in Visual Studio 2017, se Visual Studio 2015 non è installato è necessario selezionare il set di strumenti della piattaforma v141 nelle pagine delle proprietà del progetto.
 
 ## <a name="new-options-for-c-on-universal-windows-platform-uwp"></a>Nuove opzioni per C++ nella piattaforma UWP (Universal Windows Platform)
+Sono ora disponibili nuove opzioni per la scrittura e la creazione di pacchetti di applicazioni C++ per la piattaforma UWP e Windows Store: è possibile usare l'infrastruttura Desktop Bridge per creare un pacchetto dell'applicazione desktop esistente o un oggetto COM per la distribuzione tramite Windows Store o su altri canali esistenti tramite sideload. Nuove funzionalità in Windows 10 consentono di aggiungere funzionalità della piattaforma UWP all'applicazione desktop in vari modi. Per altre informazioni, vedere [Desktop Bridge](/windows/uwp/porting/desktop-to-uwp-root).
 
-Sono ora disponibili nuove opzioni per la scrittura e la creazione di pacchetti di applicazioni C++ per la piattaforma UWP (Universal Windows Platform) e Microsoft Store. È possibile usare Desktop App Converter per creare il pacchetto di un'applicazione desktop esistente per la distribuzione in Microsoft Store. Per altre informazioni, vedere i post relativi all'[uso del runtime di Visual C++ nel progetto Centennial](https://blogs.msdn.microsoft.com/vcblog/2016/07/07/using-visual-c-runtime-in-centennial-project/) e al [trasferimento dell'app desktop sulla piattaforma UWP con Desktop Bridge](/windows/uwp/porting/desktop-to-uwp-root).
-
-**Visual Studio 2017 versione 15.5**:
-
-Viene aggiunto un modello di **Progetto di creazione di pacchetti di applicazioni Windows** che supporta le applicazioni desktop di creazione pacchetti tramite Desktop Bridge. È disponibile in **File > Nuovo > Progetto** in **Installati > Visual C++ > Piattaforma UWP (Universal Windows Platform)** se è installato il carico di lavoro App di Windows universale.
+**Visual Studio 2017 versione 15.5**  
+È stato aggiunto un modello di **Progetto di creazione di pacchetti di applicazioni Windows** che semplifica notevolmente le operazioni per creare pacchetti di applicazioni desktop tramite Desktop Bridge. È disponibile in **File > Nuovo > Progetto > Installato > Visual C++ > Piattaforma UWP**. Per altre informazioni, vedere [Creare un pacchetto dell'app con Visual Studio (Desktop Bridge)](/windows/uwp/porting/desktop-to-uwp-packaging-dot-net).
 
 Quando si scrive nuovo codice, ora è possibile usare C++/WinRT, una proiezione standard del linguaggio C++ per Windows Runtime implementata esclusivamente nei file di intestazione. Consente sia di creare che di consumare le API di Windows Runtime usando qualsiasi compilatore C++ conforme agli standard. C++/WinRT è progettato per offrire agli sviluppatori C++ un accesso di prima classe all'API Windows moderna. Per altre informazioni, vedere il post sulla [disponibilità di C++/WinRT su GitHub](https://moderncpp.com/).
 

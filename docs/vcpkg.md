@@ -14,11 +14,12 @@ dev_langs:
 - C++
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ca4c672000278fcfc00ba8c08a7a160faff151aa
-ms.sourcegitcommit: 5e932a0e110e80bc241e5f69e3a1a7504bfab1f3
+ms.openlocfilehash: af51ee7c6fa4e1243b400be58ac22ba833cfae80
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/21/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34705438"
 ---
 # <a name="vcpkg-a-c-package-manager-for-windows-linux-and-macos"></a>vcpkg: utilità per la gestione dei pacchetti per C++ per Windows, Linux e MacOS
 
@@ -120,7 +121,7 @@ Eseguire **vcpkg integrate install** per configurare Visual Studio per individua
 
 È ora possibile usare #include per le intestazioni, digitando semplicemente cartella/intestazione. La funzionalità di completamento automatico faciliterà questa operazione. Non sono necessari ulteriori passaggi per il collegamento alle librerie o l'aggiunta di riferimenti a progetti. La figura seguente mostra come Visual Studio trova le intestazioni azure-storage-cpp. vcpkg inserisce le intestazioni nella sottocartella **\installed**, partizionata in base alla piattaforma di destinazione. Il diagramma seguente mostra l'elenco dei file di inclusione nella sottocartella **\was** per la libreria:
 
-![Integrazione di Intellisense in vcpkg](media/vcpkg-intellisense.png "vcpkg e Intellisense")
+![Integrazione di IntelliSense in vcpkg](media/vcpkg-intellisense.png "vcpkg e IntelliSense")
 
 ### <a name="per-project"></a>Per progetto
 

@@ -19,11 +19,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ee55abe1107e578729fe8d5a301a067afdb6c551
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f39fe3743c023bb0c4cb3130400e9bcb7b97db1b
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34704847"
 ---
 # <a name="error-handling-crt"></a>Gestione degli errori (CRT)
 
@@ -45,4 +46,4 @@ Usare queste routine per gestire gli errori del programma.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Routine di Universal C Runtime per categoria](../c-runtime-library/run-time-routines-by-category.md)<br/>
+- [Routine di Universal C Runtime per categoria](../c-runtime-library/run-time-routines-by-category.md)

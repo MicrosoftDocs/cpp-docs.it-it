@@ -28,11 +28,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b20fa6862a835ca913a2865a651112584966af3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f8ba56f0b4fa6d7d6ac56f3f118edeaad03643b5
+ms.sourcegitcommit: 0ce270566769cba76d763dd69b304a55eb375d01
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34799194"
 ---
 # <a name="crt-library-features"></a>Funzionalità libreria CRT
 
@@ -85,7 +86,7 @@ L'uso di una libreria CRT collegata in modo statico implica che tutte le informa
 
 Poiché una DLL compilata con un collegamento a una libreria CRT statica avrà un proprio stato CRT, non si consiglia di effettuare un collegamento statico alla libreria CRT in una DLL a meno che gli effetti di questa azione non siano quelli desiderati e non siano compresi appieno. Ad esempio, se si chiama [_set_se_translator](../c-runtime-library/reference/set-se-translator.md) in un file eseguibile che carica la DLL collegata alla relativa libreria CRT statica, le eccezioni hardware generate dal codice nella DLL non saranno rilevate dal convertitore, mentre saranno rilevate le eccezioni hardware generate dal codice nel file eseguibile principale.
 
-Se si usa l'opzione del compilatore **/clr** , il codice sarà collegato a una libreria statica, msvcmrt.lib. La libreria statica fornisce un proxy tra il codice gestito e la libreria CRT nativa. Non è possibile usare la libreria collegata staticamente CRT (opzioni **/MT** o **/MTd** ) con **/clr**. Usare invece le librerie collegate in modo dinamico (**/MD** o **/MDd**).
+Se si usa l'opzione del compilatore **/clr** , il codice sarà collegato a una libreria statica, msvcmrt.lib. La libreria statica fornisce un proxy tra il codice gestito e la libreria CRT nativa. Non è possibile usare la libreria collegata staticamente CRT (opzioni **/MT** o **/MTd** ) con **/clr**. Usare invece le librerie collegate in modo dinamico (**/MD** o **/MDd**). Le librerie CRT gestite in modalità pure sono deprecate in Visual Studio 2015 e non supportate in Visual Studio 2017.
 
 Per altre informazioni sull'uso di CRT con **/clr**, vedere [Assembly misti (nativi e gestiti)](../dotnet/mixed-native-and-managed-assemblies.md).
 
@@ -112,10 +113,15 @@ Per la compatibilità binaria, più file DLL possono essere specificati da una s
 
 ## <a name="what-problems-exist-if-an-application-uses-more-than-one-crt-version"></a>Quali problemi si verificano se un'applicazione usa più di una versione CRT?
 
-Se sono presenti più file DLL o EXE, possono esistere più librerie CRT, indipendentemente dal fatto che si usino versioni diverse di Visual C++. Ad esempio, il collegamento statico della libreria CRT a più DLL può produrre lo stesso problema. Agli sviluppatori che rilevano questo problema con le librerie CRT statiche sono state fornite istruzioni per eseguire la compilazione con **/MD** per usare la DLL di CRT. Se le DLL passano le risorse CRT tra i limiti DLL, potrebbe verificarsi lo stesso problema con le librerie CRT senza corrispondenza e sarà necessario ricompilare il progetto Visual C++.
+Ogni immagine di eseguibile (EXE o DLL) può avere un CRT proprio collegato staticamente o è possibile impostare un collegamento dinamico a un CRT. La versione del CRT inclusa in modo statico o caricata in modo dinamico da una particolare immagine dipende dalla versione degli strumenti e delle librerie con cui è stato creato. Un singolo processo può caricare più immagini di EXE e DLL, ognuna con un CRT proprio. Ognuno di tali CRT potrebbe usare un allocatore diverso, avere layout di struttura interna diversi oppure usare disposizioni di archiviazione differenti. Ciò significa che la memoria allocata, le risorse CRT o le classi passate oltre i limiti di una DLL possono causare problemi a livello di gestione della memoria, utilizzo statico interno o interpretazione deli layout. Ad esempio, se una classe è allocata in una DLL ma viene passata ed eliminata da un'altra, quale deallocatore CRT viene usato? Gli errori causati possono essere di minore entità fino a immediatamente irreversibili e il trasferimento diretto di tali risorse è quindi fortemente sconsigliato.
 
-Se il programma usa più versioni della libreria CRT, è necessario prestare attenzione quando si passano determinati oggetti CRT (ad esempio, handle di file, impostazioni locali e variabili di ambiente) tra i limiti DLL. Per altre informazioni su questi problemi e su come risolverli, vedere [Potenziali errori di passaggio di oggetti CRT attraverso i limiti DLL](../c-runtime-library/potential-errors-passing-crt-objects-across-dll-boundaries.md).
+È possibile evitare molti di questi problemi usando tecnologie ABI (Application Binary Interface) in alternativa, perché sono progettate per essere stabili e supportare le versioni. Progettare le interfacce di esportazione di DLL per passare le informazioni per valore o per operare su memoria passata dal chiamante anziché allocata in locale e restituita al chiamante. Usare le tecniche di marshalling per copiare dati strutturati tra le immagini eseguibili. Incapsulare le risorse in locale e consentire la modifica solo tramite handle o funzioni esposti ai client.
+
+È anche possibile evitare alcuni di questi problemi se tutte le immagini nel processo usano la stessa versione caricata in modo dinamico del CRT. Per assicurarsi che tutti i componenti usino la stessa versione DLL del CRT, crearli con l'opzione **/MD** e usare lo stesso set di strumenti del compilatore e le stesse impostazioni delle proprietà.
+
+È necessario prestare attenzione se il programma passa determinate risorse CRT (ad esempio, handle di file, impostazioni locali e variabili di ambiente) tra i limiti DLL, anche quando si usa la stessa versione del CRT. Per altre informazioni su questi problemi e su come risolverli, vedere [Potenziali errori di passaggio di oggetti CRT attraverso i limiti DLL](../c-runtime-library/potential-errors-passing-crt-objects-across-dll-boundaries.md).
+
 
 ## <a name="see-also"></a>Vedere anche
 
-[Riferimenti della libreria di runtime di C](../c-runtime-library/c-run-time-library-reference.md)
+- [Riferimenti della libreria di runtime di C](../c-runtime-library/c-run-time-library-reference.md)

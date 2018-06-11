@@ -13,11 +13,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4ae41c373257202cb08b7f8760acac4ad14dff19
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b9778a9d456ebd0fed6bc36c2c631849bcbfe11d
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34705605"
 ---
 # <a name="visual-c-what39s-new-2003-through-2015"></a>Visual C++: novità dalla versione 2003 alla 2015
 
@@ -1936,7 +1937,7 @@ Il compilatore include modifiche di rilievo in questa versione.
 - Compilatori nativi e incrociati a 64 bit.
 - Aggiunta l'opzione del compilatore /analyze (analisi codice enterprise).
 - Aggiunta l'opzione del compilatore /bigobj.
-- Aggiunte le opzioni /clr:pure, /clr:safe e /clr:oldSyntax. (Deprecate in seguito in Visual Studio 2015).
+- Aggiunte le opzioni /clr:pure, /clr:safe e /clr:oldSyntax. (Funzionalità in seguito deprecata in Visual Studio 2015 e rimossa in Visual Studio 2017.)
 - Opzioni del compilatore deprecate: molte opzioni del compilatore sono state deprecate in questa versione. Per altre informazioni, vedere Opzioni obsolete del compilatore.
 - Ridotto il doppio thunking nel codice /clr. Per altre informazioni, vedere Doppio thunk (C++).
 - Non è più possibile usare /EH (modello di gestione delle eccezioni) o /EHs per rilevare un'eccezione generata con un elemento diverso da un'istruzione throw. Usare /EHa.

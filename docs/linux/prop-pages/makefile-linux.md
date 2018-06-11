@@ -12,11 +12,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: c0e0422859bc4053ea1e8fff424ff79c3b22f8b7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6fb23d2c7275788b05fe4450613770c268ca6c64
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34705699"
 ---
 # <a name="makefile-project-properties-linux-c"></a>Proprietà di un progetto makefile (Linux C++)
 
@@ -92,7 +93,7 @@ Percorso di ricerca di inclusione | Specifica il percorso di ricerca di inclusio
 Inclusioni forzate | Specifica i file di cui è imposta l'inclusione.
 Definizioni del preprocessore | Specifica le definizioni del preprocessore usate dai file di origine.
 Rimuovi definizioni per il preprocessore | Rimuove una o più definizioni per il preprocessore.     (/U[macro])
-Opzioni aggiuntive | Specifica le opzioni aggiuntive del compilatore che Intellisense deve usare durante l'analisi dei file C++.
+Opzioni aggiuntive | Specifica le opzioni aggiuntive del compilatore che IntelliSense deve usare durante l'analisi dei file C++.
 
 ### <a name="build"></a>Compilazione
 
