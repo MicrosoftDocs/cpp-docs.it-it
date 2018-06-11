@@ -1,7 +1,7 @@
 ---
 title: 'Procedura dettagliata: Compilazione di un programma C++ nativo nella riga di comando | Documenti Microsoft'
 ms.custom: conceptual
-ms.date: 11/04/2016
+ms.date: 06/08/2018
 ms.technology:
 - cpp-tools
 ms.topic: conceptual
@@ -17,11 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c2ba3d1da27b3300f6299e902c35157cfe421f5c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3fd65dff0a354ebbed4435b8867271091211279d
+ms.sourcegitcommit: 1c2e035f98fb55d9b3c08ec3bb562179a368d0d1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35253831"
 ---
 # <a name="walkthrough-compiling-a-native-c-program-on-the-command-line"></a>Procedura dettagliata: compilazione di un programma C++ nativo nella riga di comando
 Visual C++ include un compilatore C++ da riga di comando che consente di creare da app console di base per le app Universal Windows Platform, App Desktop, i driver di dispositivo e componenti .NET.  
@@ -31,13 +32,13 @@ Visual C++ include un compilatore C++ da riga di comando che consente di creare 
  In questa procedura dettagliata è possibile usare il proprio programma Visual C++ anziché digitare quello riportato nell'esempio oppure usare esempi di codice Visual C++ di altri articoli della Guida.  
   
 ## <a name="prerequisites"></a>Prerequisiti  
- Per completare questa procedura dettagliata, è necessario avere installato Visual Studio e i componenti facoltativi di Visual C++ o Microsoft Visual C++ compila Tools.  
+ Per completare questa procedura dettagliata, è necessario avere installato Visual Studio e lo sviluppo Desktop facoltativo con carico di lavoro di C++ o gli strumenti da riga di comando di compilazione per Visual Studio.  
   
- Visual Studio è un ambiente di sviluppo integrato potente che supporta un editor completo, gestori di risorse, debugger e compilatori per molti linguaggi e piattaforme. Per informazioni su queste funzionalità e su come scaricare e installare Visual Studio, inclusi l'edizione gratuita di Visual Studio Community, vedere [VisualStudio.com](https://www.visualstudio.com/).  
+ Visual Studio è un ambiente potente di sviluppo integrato (IDE) che supporta un editor completo, i gestori di risorse, debugger e compilatori per molti linguaggi e piattaforme. Per informazioni su come scaricare e installare Visual Studio, inclusi l'edizione gratuita di Visual Studio Community e per includere il supporto per lo sviluppo di C/C++, vedere [supporto di installazione di C++ in Visual Studio](../build/vscpp-step-0-installation.md).  
   
- Strumenti di compilazione di Visual Studio installa solo i compilatori della riga di comando, strumenti e le librerie che necessarie per compilare programmi C e C++. È ideale per le esercitazioni di compilazione o classe esercita e installa relativamente rapidamente. Per installare solo gli strumenti da riga di comando, scaricare [strumenti di compilazione di Visual Studio](https://go.microsoft.com/fwlink/p/?linkid=840931) ed eseguire il programma di installazione. Per ulteriori informazioni, vedere [strumenti di compilazione di Visual C++](http://landinghub.visualstudio.com/visual-cpp-build-tools).  
+ Gli strumenti di compilazione per Visual Studio installa solo i compilatori della riga di comando, strumenti e le librerie che necessarie per compilare programmi C e C++. È ideale per le esercitazioni di compilazione o classe esercita e installa relativamente rapidamente. Per installare solo gli strumenti da riga di comando, scaricare [Build Tools per Visual Studio 2017](https://go.microsoft.com/fwlink/p/?linkid=840931).  
   
- Prima di compilare un programma C o C++ nella riga di comando, è necessario verificare che siano installati gli strumenti e che è possibile accedervi dalla riga di comando. Visual C++ è complessi requisiti per l'ambiente della riga di comando per trovare gli strumenti, intestazioni e librerie utilizzate. **Non è possibile utilizzare Visual C++ in una finestra del prompt dei comandi normale**. Fortunatamente, Visual C++ viene installato per poter avviare un prompt dei comandi per sviluppatori con l'ambiente impostato per la generazione dalla riga di comando di scelta rapida. Sfortunatamente, i nomi dei collegamenti del prompt di sviluppatore e dove si trovano sono diversi in quasi tutte le versioni di Visual C++ e in versioni diverse di Windows. La prima attività di questa procedura dettagliata consiste nel trovare quello corretto da utilizzare.  
+ Prima di compilare un programma C o C++ nella riga di comando, è necessario verificare che siano installati gli strumenti e che è possibile accedervi dalla riga di comando. Visual C++ è complessi requisiti per l'ambiente della riga di comando per trovare gli strumenti, intestazioni e librerie utilizzate. **Non è possibile utilizzare Visual C++ in una finestra del prompt dei comandi normale** senza eseguire alcune attività di preparazione. Fortunatamente, Visual C++ viene installato per poter avviare un prompt dei comandi per sviluppatori con l'ambiente impostato per la generazione dalla riga di comando di scelta rapida. Sfortunatamente, i nomi dei collegamenti del prompt di sviluppatore e dove si trovano sono diversi in quasi tutte le versioni di Visual C++ e in versioni diverse di Windows. La prima attività di questa procedura dettagliata consiste nel trovare quello corretto da utilizzare.  
   
 > [!NOTE]
 >  Un collegamento del prompt dei comandi sviluppatore imposta automaticamente i percorsi corretti per il compilatore e gli strumenti e per eventuali intestazioni obbligatorie e librerie. È necessario impostare questi valori di ambiente manualmente se si utilizza una finestra del prompt dei comandi normale. Per ulteriori informazioni, vedere [impostare il percorso e le variabili di ambiente per la compilazione da riga di comando](../build/setting-the-path-and-environment-variables-for-command-line-builds.md). È consigliabile che usare un collegamento del prompt dei comandi per sviluppatori invece di compilare la propria.  

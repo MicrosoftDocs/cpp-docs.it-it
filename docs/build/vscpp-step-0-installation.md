@@ -2,7 +2,7 @@
 title: Installare il supporto per C++ in Visual Studio | Documenti Microsoft
 description: Installare il supporto di Visual Studio per Visual C++
 ms.custom: mvc
-ms.date: 12/12/2017
+ms.date: 06/08/2018
 ms.topic: tutorial
 ms.technology:
 - devlang-C++
@@ -14,11 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 69092cdd6d79197fb7a2cbdc60b783174b70950b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4fd04450b75083152d058aef4a85d83f5635c8d9
+ms.sourcegitcommit: 1c2e035f98fb55d9b3c08ec3bb562179a368d0d1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35253756"
 ---
 # <a name="install-c-support-in-visual-studio"></a>Installare il supporto per C++ in Visual Studio
 
@@ -32,17 +33,17 @@ Se ancora stato scaricato e installato Visual Studio e gli strumenti di Visual C
 
 - Spazio libero su disco. Visual Studio richiede almeno 7GB di spazio su disco e può richiedere più di 50GB se sono presenti molte delle opzioni comuni. È consigliabile che installarlo nell'unità c:.
 
-Per informazioni dettagliate di spazio su disco e requisiti del sistema operativo, vedere [requisiti di sistema di Visual Studio 2017](https://www.visualstudio.com/productinfo/vs2017-system-requirements-vs). Il programma di installazione indica la quantità di spazio su disco necessario per le opzioni selezionate.
+Per informazioni dettagliate sui requisiti di sistema operativo e lo spazio su disco, vedere [requisiti di sistema della famiglia di Visual Studio prodotto](/visualstudio/productinfo/vs2017-system-requirements-vs). Il programma di installazione indica la quantità di spazio su disco necessario per le opzioni selezionate.
 
 ## <a name="installation"></a>Installazione
 
 1. Scaricare il programma di installazione Visual Studio 2017 più recente per Windows.
 
    > [!div class="nextstepaction"]
-   > <a target="frameTarget" href="https://www.visualstudio.com/thank-you-downloading-visual-studio/?sku=Community&rel=15&utm_source=docs&utm_medium=clickbutton">Installare Visual Studio 2017 Community</a>
+   > <a target="frameTarget" href="https://www.visualstudio.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017">Installare Visual Studio 2017 Community</a>
 
    >[!Tip]
-   > L'edizione Community è per singoli sviluppatori, per la formazione in classe, la ricerca accademica e per lo sviluppo open source. Per altri usi, installare <a target="frameTarget" href="https://www.visualstudio.com/thank-you-downloading-visual-studio/?sku=Professional&rel=15&utm_source=docs&utm_medium=clickbutton">Visual Studio 2017 Professional</a> oppure <a target="frameTarget" href="https://www.visualstudio.com/thank-you-downloading-visual-studio/?sku=Enterprise&rel=15&utm_source=docs&utm_medium=clickbutton">Visual Studio 2017 Enterprise</a>.
+   > L'edizione Community è per singoli sviluppatori, per la formazione in classe, la ricerca accademica e per lo sviluppo open source. Per altri usi, installare <a target="frameTarget" href="https://www.visualstudio.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017">Visual Studio 2017 Professional</a> oppure <a target="frameTarget" href="https://www.visualstudio.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017">Visual Studio 2017 Enterprise</a>.
 
 1. Trovare il file di programma di installazione è scaricato ed eseguirlo. Può essere visualizzato nel browser o potrebbe essere nella cartella di download. Il programma di installazione richiede privilegi di amministratore per l'esecuzione. È possibile visualizzare un **controllo dell'Account utente** finestra di dialogo in cui viene richiesto di concedere l'autorizzazione per consentire l'installazione di apportare modifiche al sistema; scegliere **Sì**. Se si riscontrano problemi, trovare il file scaricato in Esplora File, fare doppio clic sull'icona del programma di installazione e scegliere **Esegui come amministratore** dal menu di scelta rapida.
 
