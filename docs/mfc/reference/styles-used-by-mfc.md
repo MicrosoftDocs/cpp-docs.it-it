@@ -211,6 +211,7 @@ ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34283340"
 ---
 # <a name="styles-used-by-mfc"></a>Stili utilizzati da MFC  
   

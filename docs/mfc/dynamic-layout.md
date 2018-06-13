@@ -17,6 +17,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33350849"
 ---
 # <a name="dynamic-layout"></a>Layout dinamico
 Con MFC in Visual Studio 2015, è possibile creare finestre di dialogo che l'utente può ridimensionare ed è possibile controllare l'adattamento del layout per la modifica delle dimensioni. È ad esempio possibile collegare i pulsanti nella parte inferiore di una finestra di dialogo al bordo inferiore in modo che mantengano sempre tale posizione. È anche possibile configurare determinati controlli, come caselle di riepilogo, caselle di modifica e campi di testo in modo che si espandano quando l'utente espande la finestra di dialogo.  

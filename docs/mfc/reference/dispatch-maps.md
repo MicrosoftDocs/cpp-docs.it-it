@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33377096"
 ---
 # <a name="dispatch-maps"></a>Mappe di invio
 Automazione OLE fornisce metodi per chiamare i metodi e accedere alle proprietà di tutte le applicazioni. Il meccanismo fornito dalla libreria Microsoft Foundation Class per l'invio di tali richieste è "mappa di invio," che indica i nomi interni ed esterni di funzioni di oggetti e proprietà, nonché di alle stesse proprietà e i tipi di dati argomenti della funzione.  

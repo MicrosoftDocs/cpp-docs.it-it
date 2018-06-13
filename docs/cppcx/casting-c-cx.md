@@ -14,6 +14,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33090957"
 ---
 # <a name="casting-ccx"></a>Cast (C++/CX)
 Quattro diversi operatori cast si applicano ai tipi di Windows Runtime: [operatore static_cast](../cpp/static-cast-operator.md), [operatore dynamic_cast](../cpp/dynamic-cast-operator.md), **safe_cast Operator**, e [ Operatore reinterpret_cast](../cpp/reinterpret-cast-operator.md). `safe_cast` e `static_cast` generano un'eccezione se la conversione non può essere eseguita. L'operatore [static_cast](../cpp/static-cast-operator.md) esegue inoltre il controllo dei tipi in fase di compilazione. `dynamic_cast` restituisce `nullptr` se risulta impossibile convertire il tipo. Sebbene `reinterpret_cast` restituisca un valore non Null, potrebbe non essere valido. Per questo motivo, è consigliabile non utilizzare `reinterpret_cast` a meno che tu non sappia che il cast riuscirà. Inoltre, è consigliabile non utilizzare cast di tipo C in C + + CX codice, in quanto sono identici a `reinterpret_cast`.  
