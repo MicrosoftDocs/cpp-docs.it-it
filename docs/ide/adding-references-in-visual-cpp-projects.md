@@ -1,5 +1,5 @@
 ---
-title: Aggiunta di riferimenti nei progetti Visual C++ | Documenti Microsoft
+title: Aggiunta di riferimenti nei progetti Visual C++ | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,20 +19,21 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: bda420768b1ff0819ba666f71d62bfffa86e2105
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33336108"
 ---
 # <a name="adding-references-in-visual-c-projects"></a>Aggiunta di riferimenti nei progetti Visual C++
 È molto comune per i programmi chiamare nelle API in altri file binari, ad esempio DLL, i componenti Windows Runtime, gli SDK di estensione, i componenti COM e gli assembly .NET. Il modo in cui il programma rileva questi altri file binari dipende dal tipo di progetto e dal tipo del file binario.  
   
  In un progetto C++ nativo, se si usa una DLL nativa o un componente COM che non viene generato da un altro progetto nella soluzione, si usa LoadLibrary o CoCreateInstance per specificare il percorso del file binario o, in caso contrario, lasciare che il sistema lo trovi cercando in posizioni specifiche ben definite.  
   
- In altri tipi di progetti, ad esempio progetti UWP o progetti C++/CLI, oppure quando il file binario viene generato da un altro progetto nella soluzione, si aggiunge un *riferimento* all'assembly, componente o progetto.   Un riferimento è essenzialmente un set di dati che consente al programma di trovare e comunicare con il file binario.       Quando si aggiunge un riferimento, Visual Studio gestisce i dettagli di basso livello. Per impostare i riferimenti da un progetto C++ per .NET Frameworkassemblies (C + + solo CLI), componenti COM, altri progetti nella soluzione, tra cui progetti condivisi o connessi, fare clic su di **riferimenti** nodo **Esplora** per visualizzare il **gestione riferimenti**. Ciò che viene visualizzato in Gestione riferimenti varia a seconda del tipo di progetto.  
+ In altri tipi di progetti, ad esempio progetti UWP o progetti C++/CLI, oppure quando il file binario viene generato da un altro progetto nella soluzione, si aggiunge un *riferimento* all'assembly, componente o progetto.   Un riferimento è essenzialmente un set di dati che consente al programma di trovare e comunicare con il file binario.       Quando si aggiunge un riferimento, Visual Studio gestisce i dettagli di basso livello. Per impostare i riferimenti da un progetto C++ ad assembly .NET Framework (solo C++/CLI), componenti COM, altri progetti inclusi nella soluzione, tra cui i progetti condivisi o connessi, fare clic con il pulsante destro del mouse sul nodo **Riferimenti** in **Esplora soluzioni** per visualizzare **Gestione riferimenti**. Ciò che viene visualizzato in Gestione riferimenti varia a seconda del tipo di progetto.  
   
  In un progetto C++ nativo (ATL) il concetto di *riferimenti* si applica solo agli altri progetti nella soluzione, inclusi progetti condivisi, in modo che non venga visualizzato altro in **Gestione riferimenti**:  
   
- ![Visual C&#43; &#43; gestione riferimenti &#40;ATL (progetti)&#41;](../ide/media/visual-c---reference-manager--atl-projects-.png "gestione riferimenti di Visual C++ (progetti ATL)")  
+ ![Gestione riferimenti di Visual C&#43;&#43; &#40;progetti ATL&#41;](../ide/media/visual-c---reference-manager--atl-projects-.png "Gestione riferimenti di Visual C++ (progetti ATL)")  
   
  In un progetto C++/CLI o di Piattaforma UWP (Universal Windows Platform), il concetto di riferimenti si applica a più tipi di file binari oltre ad altri progetti nella soluzione.  Questi sono tutti esposti in **Gestione riferimenti**.
   
@@ -58,7 +59,7 @@ ms.lasthandoff: 05/04/2018
  Visualizza lo strumento usato per compilare l'assembly di interoperabilità dalla libreria COM a cui fa riferimento o dal controllo ActiveX.  
   
 ### <a name="assembly-reference-properties"></a>Proprietà riferimento ad assembly  
- Proprietà riferimento ad assembly sono disponibili solo per i riferimenti a Frameworkassemblies .NET in C + + progetti CLI. Queste proprietà vengono visualizzate solo quando è selezionato un Frameworkassembly .NET nel **riferimenti** riquadro. Non è possibile modificare le proprietà.  
+ Le proprietà di riferimento ad assembly sono disponibili solo per i riferimenti agli assembly .NET Framework in progetti C++/CLI. Queste proprietà vengono visualizzate solo quando è selezionato un assembly .NET Framework nel riquadro **Riferimenti**. Non è possibile modificare le proprietà.  
   
  **Percorso relativo**  
  Visualizza il percorso relativo della directory del progetto per l'assembly di riferimento.  
@@ -103,7 +104,7 @@ ms.lasthandoff: 05/04/2018
  Visualizza il percorso della directory dell'assembly di riferimento.  
   
  **Identità**  
- Per il Frameworkassemblies .NET, Visualizza il percorso completo. Per i componenti COM, viene visualizzato il GUID.  
+ Per gli assembly .NET Framework, viene visualizzato il percorso completo. Per i componenti COM, viene visualizzato il GUID.  
   
  **Etichetta**  
  Visualizza l'etichetta del riferimento.  

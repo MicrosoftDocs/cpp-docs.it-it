@@ -1,5 +1,5 @@
 ---
-title: Distribuzione ClickOnce per applicazioni Visual C++ | Documenti Microsoft
+title: Distribuzione ClickOnce per applicazioni Visual C++ | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,42 +18,43 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: e85ec0dfc011aab4d2b3ac835bbe71782b055000
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33332325"
 ---
 # <a name="clickonce-deployment-for-visual-c-applications"></a>Distribuzione ClickOnce per applicazioni Visual C++
-Visual Studio fornisce due diverse tecnologie per la distribuzione di applicazioni di Windows: la distribuzione ClickOnce o [Windows Installer](http://msdn.microsoft.com/library/cc185688) distribuzione.  
+Visual Studio offre due diverse tecnologie per la distribuzione di applicazioni Windows: la distribuzione ClickOnce o la distribuzione [Windows Installer](http://msdn.microsoft.com/library/cc185688).  
   
 ## <a name="clickonce-deployment-in-c"></a>Distribuzione ClickOnce in C++  
- Ambiente di sviluppo di Visual C++ non supporta direttamente la distribuzione dei progetti di Visual C++ con ClickOnce, ma sono disponibili strumenti per utilizzarlo.  
+ L'ambiente di sviluppo di Visual C++ non supporta direttamente la distribuzione dei progetti Visual C++ con ClickOnce, ma sono disponibili strumenti che consentono di ottenere questo risultato.  
   
 > [!NOTE]
->  Negli ambienti di sviluppo Visual c# e Visual Basic, Visual Studio supporta ClickOnce. Se il progetto di Visual C++ è una dipendenza di un progetto Visual c#, è possibile pubblicare l'applicazione (e le relative dipendenze) utilizzando la distribuzione di ClickOnce dall'ambiente di sviluppo di Visual c#.  
+>  Visual Studio non supporta ClickOnce negli ambienti di sviluppo Visual C# e Visual Basic. Se il progetto Visual C++ è una dipendenza di un progetto Visual C#, l'applicazione e le relative dipendenze potranno essere pubblicate usando la distribuzione ClickOnce dall'ambiente di sviluppo di Visual C#.  
   
- Per distribuire un'applicazione Visual C++ tramite ClickOnce, è innanzitutto necessario compilare un [manifesto dell'applicazione ClickOnce](/visualstudio/deployment/clickonce-application-manifest) e [manifesto della distribuzione ClickOnce](/visualstudio/deployment/clickonce-deployment-manifest) utilizzando il [Mage.exe (manifesto La generazione e lo strumento di modifica)](/dotnet/framework/tools/mage-exe-manifest-generation-and-editing-tool) o la versione dell'interfaccia utente grafica (per informazioni, vedere [MageUI.exe (strumento di modifica, Client grafico e la generazione del manifesto)](/dotnet/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client)).  
+ Per distribuire un'applicazione Visual C++ tramite ClickOnce, è necessario prima compilare un [manifesto dell'applicazione ClickOnce](/visualstudio/deployment/clickonce-application-manifest) e un [manifesto della distribuzione ClickOnce](/visualstudio/deployment/clickonce-deployment-manifest) usando [Mage.exe (Strumento per la generazione e la modifica di manifesti)](/dotnet/framework/tools/mage-exe-manifest-generation-and-editing-tool) o la relativa versione dell'interfaccia utente grafica (per informazioni, vedere [MageUI.exe (Strumento per la generazione e la modifica di manifesti, client grafico)](/dotnet/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client)).  
 
   
  Utilizzare innanzitutto Mage.exe per compilare il manifesto dell'applicazione. Il file risultante avrà l'estensione manifest. Ricorrere quindi a Mage.exe per compilare il manifesto di distribuzione. Il file risultante avrà l'estensione application. A questo punto, firmare i manifesti.  
   
- Il manifesto dell'applicazione deve specificare il processore di destinazione (**x86**, **x64**, o **ARM**). Vedere [prerequisiti di distribuzione per applicazioni a 64 bit](/visualstudio/deployment/deploying-prerequisites-for-64-bit-applications) per informazioni su queste opzioni.  
+ Il manifesto dell'applicazione deve specificare il processore di destinazione (**x86**, **x64** o **ARM**). Vedere [Prerequisiti per la distribuzione di applicazioni a 64 bit](/visualstudio/deployment/deploying-prerequisites-for-64-bit-applications) per informazioni su queste opzioni.  
   
  Il nome dei manifesti di applicazione e distribuzione deve inoltre differire dal nome dell'applicazione C++, in modo da evitare eventuali conflitti tra il manifesto dell'applicazione creato da Mage.exe e il manifesto esterno che fa parte dell'applicazione C++.  
   
- La distribuzione sarà necessario installare tutte le librerie di Visual C++ da cui dipende l'applicazione. Per stabilire le dipendenze di una determinata applicazione, è possibile utilizzare depends.exe o l'utilità DUMPBIN con l'opzione /DEPENDENTS. Per ulteriori informazioni sulle dipendenze, vedere [le dipendenze di un'applicazione Visual C++](../ide/understanding-the-dependencies-of-a-visual-cpp-application.md). Potrebbe essere necessario eseguire VCRedist.exe; Questa utilità vengono installate librerie di Visual C++ nel computer di destinazione.  
+ Durante la distribuzione è necessario installare tutte le librerie Visual C++ da cui l'applicazione dipende. Per stabilire le dipendenze di una determinata applicazione, è possibile utilizzare depends.exe o l'utilità DUMPBIN con l'opzione /DEPENDENTS. Per altre informazioni sulle dipendenze, vedere [Informazioni sulle dipendenze di un'applicazione Visual C++](../ide/understanding-the-dependencies-of-a-visual-cpp-application.md). Potrebbe essere necessario eseguire VCRedist.exe, l'utilità che consente di installare le librerie Visual C++ nel computer di destinazione.  
   
- È inoltre necessario compilare un programma di avvio automatico (programma di installazione prerequisiti) per l'applicazione distribuire i componenti dei prerequisiti. Per informazioni sul programma di avvio automatico, vedere [la creazione di pacchetti del programma di avvio](/visualstudio/deployment/creating-bootstrapper-packages).  
+ Potrebbe anche essere necessario compilare un programma di avvio automatico (programma di installazione dei prerequisiti) per consentire all'applicazione di distribuire i componenti richiesti. Per informazioni sul programma di avvio automatico, vedere [Creazione di pacchetti del programma di avvio automatico](/visualstudio/deployment/creating-bootstrapper-packages).  
   
- Per una descrizione più dettagliata della tecnologia, vedere [protezione di applicazioni ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment). Per un esempio dettagliato di distribuzione ClickOnce, vedere [procedura dettagliata: distribuzione manuale di un'applicazione ClickOnce](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application).  
+ Per una descrizione dettagliata della tecnologia, vedere [Sicurezza e distribuzione di ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment). Per un esempio dettagliato della distribuzione ClickOnce, vedere [Procedura dettagliata: Distribuzione manuale di un'applicazione ClickOnce](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Mage.exe (Strumento per la generazione e la modifica di manifesti)](/dotnet/framework/tools/mage-exe-manifest-generation-and-editing-tool)   
  [MageUI.exe (Manifest Generation and Editing Tool, client grafico)](/dotnet/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client)   
  [Makecert.exe (Certificate Creation Tool)](https://msdn.microsoft.com/library/windows/desktop/aa386968)  (Makecert.exe, strumento di creazione certificati)  
- [Distribuzione di applicazioni Desktop](../ide/deploying-native-desktop-applications-visual-cpp.md)   
+ [Distribuzione di applicazioni desktop](../ide/deploying-native-desktop-applications-visual-cpp.md)   
  [Distribuzione di applicazioni, servizi e componenti](/visualstudio/deployment/deploying-applications-services-and-components)   
- [Distribuzione di Windows Installer](http://msdn.microsoft.com/en-us/121be21b-b916-43e2-8f10-8b080516d2a0)   
+ [Distribuzione con Windows Installer](http://msdn.microsoft.com/en-us/121be21b-b916-43e2-8f10-8b080516d2a0)   
  [Sicurezza e distribuzione di ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment)   
- [Creazione di pacchetti del programma di avvio](/visualstudio/deployment/creating-bootstrapper-packages)   
- [Programmazione .NET con C + + CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)   
+ [Creazione di pacchetti del programma di avvio automatico](/visualstudio/deployment/creating-bootstrapper-packages)   
+ [Programmazione .NET con C++/CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)   
  [Interoperabilità .NET e nativa](../dotnet/native-and-dotnet-interoperability.md)

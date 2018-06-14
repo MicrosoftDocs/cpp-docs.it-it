@@ -1,5 +1,5 @@
 ---
-title: Aggiunta di un evento (Visual C++) | Documenti Microsoft
+title: Aggiunta di un evento (Visual C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,24 +18,25 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: 657053f33a83d67e79bea13ab87da21156bde94c
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33327489"
 ---
 # <a name="adding-an-event-visual-c"></a>Aggiunta di un evento (Visual C++)
-Dalla visualizzazione classi, è possibile aggiungere un evento usando il [Aggiunta guidata evento](../ide/add-event-wizard.md) solo alla classe del controllo nel [controllo ActiveX MFC](../mfc/reference/creating-an-mfc-activex-control.md) progetto. Se si desidera aggiungere un evento a un altro tipo di progetto, utilizzare il **eventi** pulsante il [finestra proprietà](/visualstudio/ide/reference/properties-window).  
+Dalla Visualizzazione classi è possibile aggiungere un evento usando l'[Aggiunta guidata evento](../ide/add-event-wizard.md) solo alla classe del controllo nel progetto del [controllo ActiveX MFC](../mfc/reference/creating-an-mfc-activex-control.md). Se si vuole aggiungere un evento a un altro tipo di progetto, usare il pulsante **Eventi** nella [finestra Proprietà](/visualstudio/ide/reference/properties-window).  
   
 ### <a name="to-add-an-event-to-your-mfc-activex-control-project"></a>Per aggiungere un evento al progetto del controllo ActiveX MFC  
   
-1.  In visualizzazione classi, espandere il nodo di progetto per visualizzare le classi nel progetto.  
+1.  Nella Visualizzazione classi espandere il nodo del progetto per visualizzare le classi nel progetto.  
   
-2.  Fare clic sulla classe del controllo del progetto.  
+2.  Fare clic con il pulsante destro del mouse sulla classe del controllo del progetto.  
   
-3.  Menu di scelta rapida, fare clic su **Aggiungi**, quindi fare clic su **Aggiungi evento** per visualizzare l'aggiunta guidata evento.  
+3.  Nel menu di scelta rapida fare clic su **Aggiungi** e quindi su **Aggiungi evento** per visualizzare l'Aggiunta guidata evento.  
   
-4.  Fornire le informazioni di evento nelle caselle appropriate della procedura guidata.  
+4.  Specificare le informazioni sull'evento nelle caselle appropriate della procedura guidata.  
   
-5.  Fare clic su **fine** per aggiungere l'evento al progetto.  
+5.  Fare clic su **Fine** per aggiungere l'evento al progetto.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Aggiunta di funzionalità con creazioni guidate codice](../ide/adding-functionality-with-code-wizards-cpp.md)   
@@ -43,4 +44,4 @@ Dalla visualizzazione classi, è possibile aggiungere un evento usando il [Aggiu
  [Aggiunta di una variabile membro](../ide/adding-a-member-variable-visual-cpp.md)   
  [Aggiunta di una funzione membro](../ide/adding-a-member-function-visual-cpp.md)   
  [Gestore messaggi MFC](../mfc/reference/adding-an-mfc-message-handler.md)   
- [Esplorazione della struttura di classe](../ide/navigating-the-class-structure-visual-cpp.md)
+ [Esplorazione della struttura delle classi](../ide/navigating-the-class-structure-visual-cpp.md)

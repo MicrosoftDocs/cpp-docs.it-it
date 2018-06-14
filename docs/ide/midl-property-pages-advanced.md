@@ -1,5 +1,5 @@
 ---
-title: 'Pagine delle proprietà MIDL: Avanzate | Documenti Microsoft'
+title: 'Pagine delle proprietà MIDL: Avanzate | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -28,16 +28,17 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: 5f87518c23848cea91a3e3c48361aa0a63fa88a2
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33330804"
 ---
 # <a name="midl-property-pages-advanced"></a>Pagine delle proprietà MIDL: Avanzate
-Il **avanzate** pagina delle proprietà di **MIDL** cartella consente di specificare le seguenti opzioni del compilatore MIDL:  
+La pagina delle proprietà **Avanzate** nella cartella **MIDL** consente di specificare le opzioni seguenti del compilatore MIDL:  
   
--   Abilitare il controllo degli errori ([/error](http://msdn.microsoft.com/library/windows/desktop/aa367324))  
+-   Abilita controllo errori ([/error](http://msdn.microsoft.com/library/windows/desktop/aa367324))  
   
--   Controllare le allocazioni ([/error](http://msdn.microsoft.com/library/windows/desktop/aa367324))  
+-   Controlla allocazioni ([/error](http://msdn.microsoft.com/library/windows/desktop/aa367324))  
   
 -   Controlla limiti ([/error](http://msdn.microsoft.com/library/windows/desktop/aa367324))  
   
@@ -45,19 +46,19 @@ Il **avanzate** pagina delle proprietà di **MIDL** cartella consente di specifi
   
 -   Controlla puntatori di riferimento ([/error](http://msdn.microsoft.com/library/windows/desktop/aa367324))  
   
--   Controlla dati Stub ([/error](http://msdn.microsoft.com/library/windows/desktop/aa367324))  
+-   Controlla dati stub ([/error](http://msdn.microsoft.com/library/windows/desktop/aa367324))  
   
--   La convalida dei parametri ([/robust](http://msdn.microsoft.com/library/windows/desktop/aa367363)) *  
+-   Convalida parametri ([/robust](http://msdn.microsoft.com/library/windows/desktop/aa367363)) *  
   
 -   Allineamento membri struct ([/Zp](http://msdn.microsoft.com/library/windows/desktop/aa367388))  
   
--   Reindirizzare l'Output ([/o](http://msdn.microsoft.com/library/windows/desktop/aa367351))  
+-   Reindirizza output ([/o](http://msdn.microsoft.com/library/windows/desktop/aa367351))  
   
 -   Opzioni di pre-elaborazione C ([/cpp_opt](http://msdn.microsoft.com/library/windows/desktop/aa367318))  
   
--   Rimuovi definizioni per il preprocessore ([/u](http://msdn.microsoft.com/library/windows/desktop/aa367373))  
+-   Rimuovi definizioni per il preprocessore ([/U](http://msdn.microsoft.com/library/windows/desktop/aa367373))  
   
- \* / affidabile è solo per l'utilizzo durante la compilazione per un computer successive o Windows 2000. Se si compila un progetto ATL e si desidera utilizzare /robust, modificare questa riga nel file dlldatax. c:  
+ \* /robust è applicabile solo alle compilazioni per un computer Windows 2000 o versione successiva. Se si compila un progetto ATL e si vuole usare /robust, modificare questa riga nel file dlldatax.c:  
   
 ```  
 #define _WIN32_WINNT 0x0400   //for Windows NT 4.0 or Windows 95 with DCOM  
@@ -65,7 +66,7 @@ to
 #define _WIN32_WINNT 0x0500   //for Windows NT 4.0 or Windows 95 with DCOM  
 ```  
   
- Per informazioni su come accedere il **avanzate** pagina delle proprietà di **MIDL** cartella, vedere [funziona con le proprietà del progetto](../ide/working-with-project-properties.md).  
+ Per informazioni sull'accesso alla pagina delle proprietà **Avanzate** nella cartella **MIDL**, vedere [Uso delle proprietà del progetto](../ide/working-with-project-properties.md).  
   
  Per informazioni su come accedere a livello di codice alle opzioni MIDL per i progetti C++, vedere <xref:Microsoft.VisualStudio.VCProjectEngine.VCMidlTool>.  
   

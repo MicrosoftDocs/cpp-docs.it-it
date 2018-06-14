@@ -1,5 +1,5 @@
 ---
-title: Crea dichiarazione / definizione | Documenti Microsoft
+title: Crea dichiarazione/definizione | Microsoft Docs
 ms.custom: ''
 ms.date: 11/16/2016
 ms.technology:
@@ -12,29 +12,30 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: 60d583ec47a3f9c5b61599a5945e3cfa0d375b1d
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33331283"
 ---
 # <a name="create-declaration--definition"></a>Crea dichiarazione/definizione
 **Che cosa:** consente di generare immediatamente la dichiarazione o definizione di una funzione.
 
-**Quando:** si dispone di una funzione che richiede un xsl, o viceversa.  
+**Quando:** si ha una funzione che richiede una dichiarazione o viceversa.  
 
-**Motivo:** è possibile creare manualmente la dichiarazione/definizione, ma questo verrà creata automaticamente, la creazione del file di intestazione/codice se necessario.
+**Motivo:** è possibile creare manualmente la dichiarazione o definizione, ma in questo modo la creazione avviene automaticamente e il file di intestazione/codice viene creato se necessario.
 
 **Come:**
 
-1. La funzione per cui si desidera creare la dichiarazione o definizione, posizionare il cursore di testo o il mouse.
+1. Posizionare il cursore del testo o del mouse sulla funzione per cui si vuole creare la dichiarazione o definizione.
 
    ![Codice evidenziato](images/createdefinition_highlight.png)
 
 1. Eseguire quindi una delle operazioni seguenti:
    * **Tastiera**
-     * Premere **CTRL+.** Per attivare il **azioni rapide e refactoring** dal menu **Crea dichiarazione / definizione** dal menu di scelta rapida.
+     * Premere **CTRL+.** per attivare il menu **Azioni rapide e refactoring** e selezionare **Crea dichiarazione/definizione** dal menu di scelta rapida.
    * **Mouse**
-     * Mouse e scegliere il **azioni rapide e refactoring** dal menu **Crea dichiarazione / definizione** dal menu di scelta rapida.
+     * Fare clic con il pulsante destro del mouse e selezionare **Azioni rapide e refactoring** e quindi **Crea dichiarazione/definizione** dal menu di scelta rapida.
 
-1. Dichiarazione/definizione della funzione verrà creato nel file di origine o di intestazione, che viene visualizzata in una finestra di anteprima popup.  Se il file di intestazione o di origine non esiste, viene anche essere creato e inserito nel progetto.
+1. La dichiarazione o definizione della funzione verrà creata nel file di origine o di intestazione, che viene visualizzato in una finestra popup di anteprima.  Se il file di intestazione o di origine non esiste, viene creato e inserito nel progetto.
 
-   ![Crea dichiarazione / definizione dare come risultato](images/createdefinition_result.png)
+   ![Risultato di Crea dichiarazione/definizione](images/createdefinition_result.png)

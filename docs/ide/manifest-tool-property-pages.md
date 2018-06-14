@@ -1,5 +1,5 @@
 ---
-title: Pagine delle proprietà dello strumento manifesto | Documenti Microsoft
+title: Pagine delle proprietà di Strumento Manifesto | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,22 +16,23 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: 2221430522329616dd19f32484b66dc957593c3a
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33321987"
 ---
 # <a name="manifest-tool-property-pages"></a>Pagine delle proprietà dello strumento Manifesto
-Utilizzare il **strumento manifesto** pagine delle proprietà per impostare opzioni per mt.exe di compilazione.  
+Usare le pagine delle proprietà **Strumento Manifesto** per impostare opzioni di compilazione per mt.exe.  
   
- Per ulteriori informazioni sullo strumento manifesto, vedere [Mt.exe](http://msdn.microsoft.com/library/aa375649).  
+ Per altre informazioni sullo strumento Manifesto, vedere [Mt.exe](http://msdn.microsoft.com/library/aa375649).  
   
- [Generale, strumento manifesto, proprietà di configurazione, \<Projectname > finestra di dialogo Pagine delle proprietà](../ide/general-manifest-tool-configuration-properties.md)  
+ [Generale, Strumento Manifesto, Proprietà di configurazione,\<finestra di dialogo Pagine delle proprietà di <nomeprogetto>](../ide/general-manifest-tool-configuration-properties.md)  
   
- [Input e Output, strumento manifesto, proprietà di configurazione, \<Projectname > finestra di dialogo Pagine delle proprietà](../ide/input-and-output-manifest-tool.md)  
+ [Input e output, Strumento Manifesto, Proprietà di configurazione, \<finestra di dialogo Pagine delle proprietà di <nomeprogetto>](../ide/input-and-output-manifest-tool.md)  
   
- [Isolamento COM, strumento manifesto, proprietà di configurazione, \<Projectname > finestra di dialogo Pagine delle proprietà](../ide/isolated-com-manifest-tool.md)  
+ [COM isolato, Strumento Manifesto, Proprietà di configurazione, \<finestra di dialogo Pagine delle proprietà di <nomeprogetto>](../ide/isolated-com-manifest-tool.md)  
   
- [Avanzate, strumento manifesto, proprietà di configurazione, \<Projectname > finestra di dialogo Pagine delle proprietà](../ide/advanced-manifest-tool.md)  
+ [Avanzate, Strumento Manifesto, Proprietà di configurazione, \<finestra di dialogo Pagine delle proprietà di <nomeprogetto>](../ide/advanced-manifest-tool.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Pagine delle proprietà](../ide/property-pages-visual-cpp.md)

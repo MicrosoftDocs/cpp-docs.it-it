@@ -1,5 +1,5 @@
 ---
-title: Delimitatori per tag della documentazione di Visual C++ | Documenti Microsoft
+title: Delimitatori per i tag della documentazione di Visual C++ | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,32 +16,33 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: 8fe65dfec3befa15ffebde3d074081ee11364f4d
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33337574"
 ---
 # <a name="delimiters-for-visual-c-documentation-tags"></a>Delimitatori per i tag della documentazione di Visual C++
-L'utilizzo di tag della documentazione richiede delimitatori per indicare al compilatore in un commento di documentazione inizia e finisce.  
+L'uso dei tag della documentazione richiede la specifica di delimitatori per indicare al compilatore il punto di inizio e di fine di un commento relativo alla documentazione.  
   
  È possibile usare con i tag della documentazione XML i tipi di delimitatori seguenti:  
   
  `///`  
- Questo è il modulo illustrato negli esempi di documentazione e utilizzato per i modelli di progetto Visual C++.  
+ Formato riportato negli esempi della documentazione e usato dai modelli dei progetti Visual C++.  
   
  `/** */`  
- Si tratta di delimitatori su più righe.  
+ Delimitatori di più righe.  
   
- Esistono regole di formattazione quando si utilizza il `/** */` delimitatori:  
+ Quando si usano i delimitatori `/** */` è necessario rispettare determinate regole di formattazione:  
   
--   Per la riga che contiene il `/**` delimitatore, se il resto della riga è uno spazio vuoto, la riga non verrà elaborati per i commenti. Se il primo carattere è uno spazio, tale spazio vuoto viene ignorato e viene elaborato il resto della riga. In caso contrario, l'intero testo della riga dopo il delimitatore `/**` viene elaborato come parte del commento.  
+-   Per la riga contenente il delimitatore `/**` se la parte restante della riga è rappresentata da uno spazio vuoto, la riga non viene elaborata per i commenti. Se il primo carattere è uno spazio vuoto, lo spazio vuoto viene ignorato e il resto della riga viene elaborato. In caso contrario, l'intero testo della riga dopo il delimitatore `/**` viene elaborato come parte del commento.  
   
--   Per la riga che contiene il `*/` delimitatore, se è solo spazi vuoti fino al `*/` delimitatore, la riga viene ignorato. In caso contrario, il testo contenuto nella riga fino al delimitatore `*/` viene elaborato come parte del commento, in base alle regole dei criteri di ricerca descritte nel punto che segue.  
+-   Se per la riga contenente il delimitatore `*/` sono presenti solo spazi vuoti fino al delimitatore `*/`, la riga viene ignorata. In caso contrario, il testo contenuto nella riga fino al delimitatore `*/` viene elaborato come parte del commento, in base alle regole dei criteri di ricerca descritte nel punto che segue.  
   
--   Per le righe successive a quella che inizia con il `/**` delimitatore, il compilatore cerca un modello comune all'inizio di ogni riga che include uno spazio vuoto facoltativo e un asterisco (`*`), seguito da più spazi facoltativi. Se il compilatore rileva un set comune di caratteri all'inizio di ogni riga, il criterio per tutte le righe successive verrà ignorato il `/**` delimitatore, fino a e, possibilmente, tra cui la riga che contiene il `*/` delimitatore.  
+-   Per le righe successive a quella che inizia con il delimitatore `/**`, il compilatore cerca un modello comune all'inizio di ogni riga costituito da uno spazio vuoto facoltativo e un asterisco (`*`), seguiti da altri spazi vuoti facoltativi. Se il compilatore rileva un set comune di caratteri all'inizio di ogni riga, ignorerà il modello per tutte le righe successive al delimitatore `/**` fino a, ed eventualmente includendo, la riga contenente il delimitatore `*/`.  
   
  Ecco alcuni esempi:  
   
--   La sola parte del commento riportato di seguito che verrà elaborata è la riga che inizia con `<summary>`. I formati di due tag seguente produrrà gli stessi commenti:  
+-   La sola parte del commento riportato di seguito che verrà elaborata è la riga che inizia con `<summary>`. I formati dei due tag seguenti produrranno gli stessi commenti:  
   
     ```  
     /**  
@@ -50,7 +51,7 @@ L'utilizzo di tag della documentazione richiede delimitatori per indicare al com
     /** <summary>text</summary> */  
     ```  
   
--   Il compilatore applica un modello di "*" per ignorare all'inizio delle linee secondo e terzo.  
+-   Il compilatore applica un modello " * " per ignorare la riga all'inizio della seconda e della terza riga.  
   
     ```  
     /**  
@@ -58,7 +59,7 @@ L'utilizzo di tag della documentazione richiede delimitatori per indicare al com
      *  text </summary>*/  
     ```  
   
--   Il compilatore non trova alcun criterio in questo commento perché non vi è alcun asterisco nella seconda riga. Di conseguenza, tutto il testo nelle righe di secondo e terzo fino il `*/`, verrà elaborato come parte del commento.  
+-   Il compilatore non trova alcun modello in questo commento perché non è presente alcun asterisco nella seconda riga. Di conseguenza, tutto il testo contenuto nella seconda e nella terza riga, fino al delimitatore `*/`, verrà elaborato come parte del commento.  
   
     ```  
     /**  
@@ -66,7 +67,7 @@ L'utilizzo di tag della documentazione richiede delimitatori per indicare al com
        text </summary>*/  
     ```  
   
--   In questo commento non viene rilevato alcun criterio per due motivi. In primo luogo, non vi è alcuna riga che inizia con un numero coerente di spazi prima dell'asterisco. In secondo luogo, la quinta riga inizia con una tabulazione senza corrispondenza degli spazi. Di conseguenza, tutto il testo dalla seconda riga fino a quando il `*/` verrà elaborato come parte del commento.  
+-   In questo commento il compilatore non rileva alcun modello per due motivi. In primo luogo, non vi è alcuna riga che inizia con un numero coerente di spazi prima dell'asterisco. In secondo luogo, la quinta riga inizia con una tabulazione senza corrispondenza degli spazi. Di conseguenza, tutto il testo dalla seconda riga fino al delimitatore `*/` verrà elaborato come parte del commento.  
   
     ```  
     /**  

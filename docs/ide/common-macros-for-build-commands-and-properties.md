@@ -1,5 +1,5 @@
 ---
-title: Macro comuni per le proprietà e i comandi di compilazione | Documenti Microsoft
+title: Macro comuni per i comandi e le proprietà di compilazione | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -104,60 +104,61 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: 9b94347e48a7b8b134915456c92aea3397f97a1b
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33339631"
 ---
-# <a name="common-macros-for-build-commands-and-properties"></a>Macro comuni per le proprietà e i comandi di compilazione
-A seconda le opzioni di installazione Visual Studio può rendere centinaia di macro disponibili all'utente. Questi corrispondono alle proprietà di MSBuild che vengono impostate per impostazione predefinita, o nei file con estensione props o con estensione targets o per le impostazioni del progetto. È possibile usare queste macro in qualsiasi punto della finestra di dialogo **Pagine delle proprietà** di un progetto in cui sono accettate le stringhe. Le macro non fanno distinzione tra maiuscole e minuscole.  
+# <a name="common-macros-for-build-commands-and-properties"></a>Macro comuni per i comandi e le proprietà di compilazione
+In base alle opzioni di installazione Visual Studio può mettere a disposizione dell'utente centinaia di macro. Queste corrispondono alle proprietà di MSBuild specificate per impostazione predefinita, nei file PROPS o TARGET o nelle impostazioni del progetto. È possibile usare queste macro in qualsiasi punto della finestra di dialogo **Pagine delle proprietà** di un progetto in cui sono accettate le stringhe. Le macro non fanno distinzione tra maiuscole e minuscole.  
   
  Per visualizzare le macro attualmente disponibili, fare clic sulla freccia giù nella colonna a destra di un nome di proprietà. Se **Modifica** è disponibile, fare clic su di esso, quindi scegliere **Macro**nella finestra di dialogo di modifica. Per altre informazioni, vedere la sezione **Specifying User-Defined Values** di [Pagine delle proprietà](../ide/property-pages-visual-cpp.md)nella finestra di dialogo di modifica.  
   
- Le macro contrassegnate "Deprecata" non vengono più utilizzate o sono state sostituite da un equivalente [macro di elemento dei metadati](/visualstudio/msbuild/itemmetadata-element-msbuild) (**%(***nome***)**). Anche le macro contrassegnate "Deprecata; migrata" sono deprecate. Inoltre, se per il progetto che contiene la macro viene eseguita la migrazione da Visual Studio 2008, Visual Studio converte la macro nella corrente macro equivalente.  
+ Le macro contrassegnate come deprecate non vengono più usate o sono state sostituite da una [macro dei metadati degli elementi](/visualstudio/msbuild/itemmetadata-element-msbuild) (**%(***name***)**). Anche le macro contrassegnate "Deprecata; migrata" sono deprecate. Inoltre, se per il progetto che contiene la macro viene eseguita la migrazione da Visual Studio 2008, Visual Studio converte la macro nella corrente macro equivalente.  
   
- Nella tabella seguente descrive un sottoinsieme di uso comune delle macro disponibili. Questo elenco non è completo. Per informazioni dettagliate sulla modalità di creazione e utilizzate come macro in file con estensione vcxproj. props e targets definizioni di proprietà MSBuild, vedere [proprietà MSBuild](/visualstudio/msbuild/msbuild-properties).  
+ La tabella seguente descrive un sottoinsieme delle macro disponibili di uso comune. Questo elenco non è completo. Per informazioni dettagliate su come le definizioni delle proprietà di MSBuild vengono create e usate come macro nei file PROPS, TARGETS e VCXPROJ, vedere [Proprietà di MSBuild](/visualstudio/msbuild/msbuild-properties).  
   
 |Macro|Descrizione|  
 |-----------|-----------------|  
-|**$ (RemoteMachine)**|Impostare sul valore della proprietà **Remote Machine** nella pagina delle proprietà Debug. Per altre informazioni, vedere [Modifica delle impostazioni del progetto per una configurazione di debug C/C++](/visualstudio/debugger/project-settings-for-a-cpp-debug-configuration) .|  
+|**$(RemoteMachine)**|Impostare sul valore della proprietà **Remote Machine** nella pagina delle proprietà Debug. Per altre informazioni, vedere [Modifica delle impostazioni del progetto per una configurazione di debug C/C++](/visualstudio/debugger/project-settings-for-a-cpp-debug-configuration) .|  
 |**$(Configuration)**|Nome della configurazione di progetto corrente, ad esempio "Debug".|  
-|**$(Platform)**|Nome della piattaforma di progetto corrente, ad esempio, "Win32".|  
-|**$ (ParentName)**|(Deprecata) Nome dell'elemento contenente questo elemento del progetto. Sarà il nome della cartella padre o il nome del progetto.|  
+|**$(Platform)**|Nome della piattaforma del progetto corrente, ad esempio "Win32".|  
+|**$(ParentName)**|(Deprecata) Nome dell'elemento contenente questo elemento del progetto. Sarà il nome della cartella padre o il nome del progetto.|  
 |**$(RootNameSpace)**|Eventuale spazio dei nomi contenente l'applicazione.|  
-|**$(IntDir)**|Percorso della directory specificata dei file intermedi. Se si tratta di un percorso relativo, file intermedi vengono inviati a questo percorso aggiunti alla directory del progetto. Questo percorso deve includere una barra finale. Si risolve nel valore della proprietà **Intermediate Directory** . Non usare **$(OutDir)** per definire questa proprietà.|  
+|**$(IntDir)**|Percorso della directory specificata dei file intermedi. Se si tratta di un percorso relativo, i file intermedi vengono inviati a questo percorso aggiunti alla directory di progetto. Questo percorso deve includere una barra finale. Si risolve nel valore della proprietà **Intermediate Directory** . Non usare **$(OutDir)** per definire questa proprietà.|  
 |**$(OutDir)**|Percorso della directory dei file di output. Se si tratta di un percorso relativo, i file di output vengono inviati a questo percorso aggiunti alla directory di progetto. Questo percorso deve includere una barra finale. Si risolve nel valore della proprietà **Output Directory** . Non usare **$(IntDir)** per definire questa proprietà.|  
-|**$ (Devenvdir)**|La directory di installazione di Visual Studio (definita come unità + percorso); include la barra rovesciata finale '\\'.|  
-|**$ (Inputdir)**|(Deprecata; migrata) La directory del file di input (definita come unità + percorso); include la barra rovesciata finale '\\'. Se il progetto costituisce l'input, questa macro equivale a **$(ProjectDir)**.|  
-|**InputPath**|(Deprecata; migrata) Nome del percorso assoluto del file di input (definito da unità + percorso + nome di base + estensione di file). Se il progetto costituisce l'input, questa macro equivale a **$(ProjectPath)**.|  
-|**$ (InputName)**|(Deprecata; migrata) Nome base del file di input. Se il progetto costituisce l'input, questa macro equivale a **$(ProjectName)**.|  
-|**InputFilename**|(Deprecata; migrata) Nome file del file di input (definito da nome di base + estensione di file). Se il progetto costituisce l'input, questa macro equivale a **$(ProjectFileName)**.|  
-|**$ (Inputext)**|(Deprecata; migrata) Estensione di file del file di input. È incluso il punto '.' prima dell'estensione. Se il progetto costituisce l'input, questa macro equivale a **$(ProjectExt)**.|  
-|**$(ProjectDir)**|La directory del progetto (definita come unità + percorso); include la barra rovesciata finale '\\'.|  
+|**$(DevEnvDir)**|Directory di installazione di Visual Studio (definita come unità + percorso); include la barra rovesciata finale '\\'.|  
+|**$(InputDir)**|(Deprecata; migrata) Directory del file di input (definita come unità + percorso); include la barra rovesciata finale "\\". Se il progetto costituisce l'input, questa macro equivale a **$(ProjectDir)**.|  
+|**$(InputPath)**|(Deprecata; migrata) Nome del percorso assoluto del file di input (definito da unità + percorso + nome di base + estensione di file). Se il progetto costituisce l'input, questa macro equivale a **$(ProjectPath)**.|  
+|**$(InputName)**|(Deprecata; migrata) Nome base del file di input. Se il progetto costituisce l'input, questa macro equivale a **$(ProjectName)**.|  
+|**$(InputFileName)**|(Deprecata; migrata) Nome file del file di input (definito da nome di base + estensione di file). Se il progetto costituisce l'input, questa macro equivale a **$(ProjectFileName)**.|  
+|**$(InputExt)**|(Deprecata; migrata) Estensione di file del file di input. È incluso il punto '.' prima dell'estensione. Se il progetto costituisce l'input, questa macro equivale a **$(ProjectExt)**.|  
+|**$(ProjectDir)**|Directory del progetto (definita come unità + percorso); include la barra rovesciata finale "\\".|  
 |**$(ProjectPath)**|Nome del percorso assoluto del progetto (definito da unità + percorso + nome di base + estensione di file).|  
 |**$(ProjectName)**|Nome base del progetto.|  
 |**$(ProjectFileName)**|Nome file del progetto (definito da nome di base + estensione di file).|  
 |**$(ProjectExt)**|Estensione di file del progetto. È incluso il punto '.' prima dell'estensione.|  
-|**$ (SolutionDir)**|La directory della soluzione (definita come unità + percorso); include la barra rovesciata finale '\\'. Definito solo quando si compila una soluzione nell'IDE.|  
-|**Solutionpath**|Nome del percorso assoluto della soluzione (definito da unità + percorso + nome di base + estensione di file). Definito solo quando si compila una soluzione nell'IDE.|  
-|**SolutionName**|Nome base della soluzione. Definito solo quando si compila una soluzione nell'IDE.|  
-|**$ (Solutionfilename)**|Nome file della soluzione (definito da nome di base + estensione di file). Definito solo quando si compila una soluzione nell'IDE.|  
-|**$ (Solutionext)**|Estensione di file della soluzione. È incluso il punto '.' prima dell'estensione. Definito solo quando si compila una soluzione nell'IDE.|  
-|**Targetdir**|La directory del file di output principale per la compilazione (definita come unità + percorso); include la barra rovesciata finale '\\'.|  
-|**$ (TargetPath)**|Nome del percorso assoluto del file di output principale per la compilazione (definito come unità + percorso + nome di base + estensione di file).|  
-|**$ (TargetName)**|Nome di base del file di output principale per la compilazione.|  
-|**$ (TargetFileName)**|Nome file del file di output principale per la compilazione (definito da nome di base + estensione di file).|  
-|**$ (TargetExt)**|Estensione di file del file di output principale per la compilazione. È incluso il punto '.' prima dell'estensione.|  
+|**$(SolutionDir)**|Directory della soluzione (definita come unità + percorso); include la barra rovesciata finale "\\". Definita solo quando si compila una soluzione nell'IDE.|  
+|**$(SolutionPath)**|Nome del percorso assoluto della soluzione (definito da unità + percorso + nome di base + estensione di file). Definita solo quando si compila una soluzione nell'IDE.|  
+|**$(SolutionName)**|Nome base della soluzione. Definita solo quando si compila una soluzione nell'IDE.|  
+|**$(SolutionFileName)**|Nome file della soluzione (definito da nome di base + estensione di file). Definita solo quando si compila una soluzione nell'IDE.|  
+|**$(SolutionExt)**|Estensione di file della soluzione. È incluso il punto '.' prima dell'estensione. Definita solo quando si compila una soluzione nell'IDE.|  
+|**$(TargetDir)**|Directory del file di output principale per la compilazione (definita come unità + percorso). Include la barra rovesciata "\\" finale.|  
+|**$(TargetPath)**|Nome del percorso assoluto del file di output principale per la compilazione (definito come unità + percorso + nome di base + estensione di file).|  
+|**$(TargetName)**|Nome di base del file di output principale per la compilazione.|  
+|**$(TargetFileName)**|Nome file del file di output principale per la compilazione (definito da nome di base + estensione di file).|  
+|**$(TargetExt)**|Estensione di file del file di output principale per la compilazione. È incluso il punto '.' prima dell'estensione.|  
 |**$(VSInstallDir)**|Directory nella quale è stato installato Visual Studio.<br /><br /> Questa proprietà contiene la versione di Visual Studio di destinazione che potrebbe essere diversa dalla versione di Visual Studio host. Ad esempio, in caso di compilazione con `$(PlatformToolset) = v110`, **$(VSInstallDir)** contiene il percorso dell'installazione di Visual Studio 2012.|  
-|**$(VCInstallDir)**|Directory nella quale è stato installato Visual C++.<br /><br /> Questa proprietà contiene la versione di Visual C++ di destinazione che potrebbe essere diversa dalla versione di Visual Studio host. Ad esempio, durante la compilazione con `$(PlatformToolset) = v140`, **$ (VCInstallDir)** contiene il percorso per l'installazione di Visual C++ 2015.|  
+|**$(VCInstallDir)**|Directory nella quale è stato installato Visual C++.<br /><br /> Questa proprietà contiene la versione di Visual C++ di destinazione che potrebbe essere diversa dalla versione di Visual Studio host. Ad esempio, in caso di compilazione con `$(PlatformToolset) = v140`, **$(VCInstallDir)** contiene il percorso dell'installazione di Visual C++ 2015.|  
 |**$(FrameworkDir)**|Directory nella quale è stato installato .NET Framework.|  
-|**$ (FrameworkVersion)**|Versione di .NET Framework usata da Visual Studio. Combinata con **$(FrameworkDir)**, il percorso completo della versione di .NET Framework usata da Visual Studio.|  
-|**$ (Frameworksdkdir)**|Directory nella quale è stato installato .NET Framework. .NET Framework potrebbe essere stato installato come parte di Visual Studio oppure separatamente.|  
-|**$ (WebDeployPath)**|Percorso relativo dalla radice di distribuzione Web alla posizione degli output del progetto. Restituisce lo stesso valore di <xref:Microsoft.VisualStudio.VCProjectEngine.VCWebDeploymentTool.RelativePath%2A>.|  
-|**$ (WebDeployRoot)**|Il percorso assoluto per il percorso di  **\<localhost >**. Ad esempio, c:\inetpub\wwwroot.|  
+|**$(FrameworkVersion)**|Versione di .NET Framework usata da Visual Studio. Combinata con **$(FrameworkDir)**, il percorso completo della versione di .NET Framework usata da Visual Studio.|  
+|**$(FrameworkSDKDir)**|Directory nella quale è stato installato .NET Framework. .NET Framework potrebbe essere stato installato come parte di Visual Studio oppure separatamente.|  
+|**$(WebDeployPath)**|Percorso relativo dalla radice di distribuzione Web alla posizione degli output del progetto. Restituisce lo stesso valore di <xref:Microsoft.VisualStudio.VCProjectEngine.VCWebDeploymentTool.RelativePath%2A>.|  
+|**$(WebDeployRoot)**|Percorso assoluto della posizione di **\<localhost>**. Ad esempio, c:\inetpub\wwwroot.|  
 |**$(SafeParentName)**|(Deprecata) Nome del padre diretto in un formato di nome valido. Ad esempio, un modulo è l'elemento padre di un file RESX.|  
 |**$(SafeInputName)**|(Deprecata) Nome file come nome di classe valido, meno l'estensione di file.|  
-|**$ (Saferootnamespace)**|(Deprecata) Nome dello spazio dei nomi in cui le creazioni guidate progetto aggiungono il codice. Questo spazio dei nomi contiene solo caratteri che sarebbero consentiti in un identificatore C++ valido.|  
-|**$ (FXCOPDIR)**|Percorso del file fxcop.cmd. Il file fxcop.cmd non è installato in tutte le edizioni di Visual C++.|  
+|**$(SafeRootNamespace)**|(Deprecata) Nome dello spazio dei nomi in cui le creazioni guidate progetto aggiungono il codice. Questo spazio dei nomi contiene solo caratteri che sarebbero consentiti in un identificatore C++ valido.|  
+|**$(FxCopDir)**|Percorso del file fxcop.cmd. Il file fxcop.cmd non è installato in tutte le edizioni di Visual C++.|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Compilazione di progetti C++ in Visual Studio](../ide/building-cpp-projects-in-visual-studio.md)

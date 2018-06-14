@@ -1,5 +1,5 @@
 ---
-title: Implementazione guidata interfaccia | Documenti Microsoft
+title: Implementazione guidata interfaccia | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,14 +18,15 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: bf2ddf83b7a03f8d4e01b61f82e46e0d26a5547b
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33340541"
 ---
 # <a name="implement-interface-wizard"></a>Implementazione guidata interfaccia
-Questa procedura guidata implementa un'interfaccia per un oggetto COM. Le implementazioni di interfacce sono inclusi nelle librerie COM disponibili con Visual Studio e Windows. Implementazione dell'interfaccia è associata a un oggetto quando viene creata un'istanza di tale oggetto e fornisce i servizi offerti dall'oggetto.  
+Questa procedura guidata consente di implementare un'interfaccia per un oggetto COM. Nelle librerie COM disponibili con Visual Studio e Windows sono incluse implementazioni di diverse interfacce. L'implementazione dell'interfaccia è associata a un oggetto quando viene creata un'istanza di tale oggetto e vengono offerti i relativi servizi.  
   
- Per una descrizione delle interfacce e implementazioni, vedere [interfacce e implementazioni di interfaccia](http://msdn.microsoft.com/library/windows/desktop/ms694356) in Windows SDK.  
+ Per dettagli su interfacce e implementazioni, vedere [Interfaces and Interface Implementations](http://msdn.microsoft.com/library/windows/desktop/ms694356) (Interfacce e implementazioni di interfacce) in Windows SDK.  
   
  **Implementa interfaccia da**  
  Specifica il percorso della libreria dei tipi, da cui viene creata l'interfaccia.  
@@ -33,33 +34,33 @@ Questa procedura guidata implementa un'interfaccia per un oggetto COM. Le implem
 |Opzione|Descrizione|  
 |------------|-----------------|  
 |**Progetto**|La libreria dei tipi fa parte del progetto.|  
-|**Registry**|La libreria dei tipi è registrata nel sistema. Librerie dei tipi registrati sono elencate **librerie dei tipi disponibili**.|  
-|**File**|La libreria dei tipi non è necessariamente registrata nel sistema, ma è contenuta in un file. È necessario specificare il percorso del file in **percorso**.|  
+|**Registry**|La libreria dei tipi è registrata nel sistema. Le librerie dei tipi registrate sono elencate in **Available type libraries** (Librerie dei tipi disponibili).|  
+|**File**|La libreria dei tipi non è necessariamente registrata nel sistema ma è contenuta in un file. È necessario specificare il percorso del file in **Percorso**.|  
   
- **Librerie dei tipi disponibili**  
- Consente di visualizzare le librerie dei tipi disponibili che contiene le definizioni di interfaccia che è possibile implementare. Se si fa clic **File** in **implementa interfaccia da**, questa casella è disponibile per la modifica.  
+ **Available type libraries** (Librerie dei tipi disponibili)  
+ Visualizza le librerie dei tipi disponibili contenenti le definizioni delle interfacce che è possibile implementare. Se si fa clic su **File** in **Implementa interfaccia da**, questa casella non è disponibile per la modifica.  
   
  **Posizione**  
- Visualizza il percorso della libreria dei tipi attualmente selezionato nel **librerie dei tipi disponibili** elenco. Se si seleziona **File** in **implementa interfaccia da**, fare clic sul pulsante con i puntini di sospensione per individuare un file contenente la libreria dei tipi da utilizzare.  
+ Visualizza il percorso della libreria dei tipi attualmente selezionata nell'elenco **Available type libraries** (Librerie dei tipi disponibili). Se si seleziona **File** in **Implementa interfaccia da**, fare clic sul pulsante con i puntini di sospensione per individuare un file contenente la libreria dei tipi da usare.  
   
  **Interfacce**  
- Visualizza le interfacce le cui definizioni sono contenuti nella libreria dei tipi attualmente selezionata nel **librerie dei tipi disponibili** casella.  
+ Visualizza le interfacce le cui definizioni sono contenute nella libreria dei tipi attualmente selezionata nella casella **Available type libraries** (Librerie dei tipi disponibili).  
   
 > [!NOTE]
->  Le interfacce che hanno lo stesso nome a quelle già implementate dall'oggetto selezionato non vengono visualizzate nel **interfacce** casella.  
+>  Le interfacce che hanno lo stesso nome di quelle già implementate dall'oggetto selezionato non vengono visualizzate nella casella **Interfacce**.  
   
 |Pulsante di trasferimento|Descrizione|  
 |---------------------|-----------------|  
-|**>**|Aggiunge il **implementare interfacce** il nome dell'interfaccia attualmente selezionato nell'elenco il **interfacce** elenco.|  
-|**>>**|Aggiunge il **implementare interfacce** tutti i nomi di interfaccia disponibili nell'elenco il **interfacce** elenco.|  
-|**<**|Rimuove il nome dell'interfaccia attualmente selezionato nel **implementare interfacce** elenco.|  
-|**<\<**|Rimuove tutti i nomi attualmente nell'interfaccia di **implementare interfacce** elenco.|  
+|**>**|Aggiunge all'elenco **Implementa interfacce** il nome dell'interfaccia attualmente selezionata nell'elenco **Interfacce**.|  
+|**>>**|Aggiunge all'elenco **Implementa interfacce** tutti i nomi delle interfacce disponibili nell'elenco **Interfacce**.|  
+|**<**|Rimuove il nome dell'interfaccia attualmente selezionata dall'elenco **Implementa interfacce**.|  
+|**<\<**|Rimuove tutti i nomi delle interfacce attualmente inclusi nell'elenco **Implementa interfacce**.|  
   
- **Implementare le interfacce**  
- Visualizza i nomi delle interfacce di cui si sono scelto di implementare l'oggetto.  
+ **Implementa interfacce**  
+ Visualizza i nomi delle interfacce selezionate per l'implementazione nell'oggetto.  
   
 > [!NOTE]
->  Se si include più di un'interfaccia che deriva da `IDispatch`, oppure se si tenta di implementare un'interfaccia che deriva da un'altra interfaccia già presente nella classe, quindi è necessario evitare l'ambiguità nelle voci COM_MAP. Vedere [COM_INTERFACE_ENTRY2](../atl/reference/com-interface-entry-macros.md#com_interface_entry2) per ulteriori informazioni.  
+>  Se si include più di un'interfaccia che deriva da `IDispatch`, oppure se si tenta di implementare un'interfaccia che deriva da un'altra interfaccia già presente nella classe, è necessario evitare l'ambiguità nelle voci COM_MAP. Per altre informazioni, vedere [COM_INTERFACE_ENTRY2](../atl/reference/com-interface-entry-macros.md#com_interface_entry2).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Implementazione di un'interfaccia](../ide/implementing-an-interface-visual-cpp.md)

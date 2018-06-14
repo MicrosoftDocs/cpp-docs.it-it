@@ -1,5 +1,5 @@
 ---
-title: Modifica firma | Documenti Microsoft
+title: Modifica firma | Microsoft Docs
 ms.custom: ''
 ms.date: 11/16/2016
 ms.technology:
@@ -12,30 +12,31 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: 4f913f0b3065b136f626ef15cc2a77dce8d0254f
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33335091"
 ---
 # <a name="change-signature"></a>Modifica firma
-**Che cosa:** consente di modificare i parametri della funzione.
+**Che cosa:** consente di modificare i parametri di una funzione.
 
-**Quando:** si desidera modificare l'ordine, aggiungere, rimuovere o modificare i parametri della funzione utilizzati in percorsi diversi.  
+**Quando:** si vuole riordinare, aggiungere, rimuovere o modificare i parametri di una funzione attualmente in uso in varie posizioni.  
 
-**Motivo:** è Impossibile manualmente modificare questi parametri, quindi trovare tutte le chiamate a tale funzione e modificarle uno alla volta, ma che potrebbe causare errori.  Questo strumento di refactoring eseguirà l'attività automaticamente.
+**Motivo:** è possibile modificare manualmente questi parametri e poi cercare tutte le chiamate alla funzione e modificarle una alla volta, ma si tratta di un processo soggetto a errori.  Questo strumento di refactoring eseguirà l'attività automaticamente.
 
 **Come:**
 
-1. Posizionare il cursore di testo o del mouse all'interno del nome del metodo per modificare o uno dei relativi utilizzi:
+1. Posizionare il cursore del testo o del mouse all'interno del nome del metodo da modificare o di uno dei relativi utilizzi:
 
    ![Codice evidenziato](images/changesignature_highlight.png)
 
 1. Eseguire quindi una delle operazioni seguenti:
    * **Tastiera**
-     * Premere **Ctrl + R**, quindi **Ctrl + O**.  Si noti che i tasti di scelta rapida possono essere diversi a seconda del profilo selezionato.
-     * Premere **CTRL+.** Per attivare il **azioni rapide e refactoring** dal menu **modifica della firma** dal menu di scelta rapida.
+     * Premere **CTRL+R** e quindi **CTRL+O**.  Si noti che i tasti di scelta rapida possono essere diversi a seconda del profilo selezionato.
+     * Premere **CTRL+.** per attivare il menu **Azioni rapide e refactoring** e selezionare **Modifica firma** menu di scelta rapida.
    * **Mouse**
      * Selezionare **Modifica > Refactoring > Riordina parametri**.
-     * Pulsante destro del mouse nel codice, selezionare il **azioni rapide e refactoring** dal menu **modifica della firma** dal menu di scelta rapida.
+     * Fare clic con il pulsante destro del mouse sul codice, selezionare il menu **Azioni rapide e refactoring** e selezionare **Modifica firma** dal menu di scelta rapida.
 
 1. Nella finestra di dialogo **Modifica firma** visualizzata è possibile usare i pulsanti a destra per modificare la firma del metodo:
 
@@ -44,35 +45,35 @@ ms.lasthandoff: 05/04/2018
    | Button | Descrizione
    | ------ | ---
    | **Su/Giù**    | Consente di spostare il parametro selezionato verso l'alto e verso il basso nell'elenco
-   | **Aggiungi**        | Aggiungere un nuovo parametro all'elenco
+   | **Aggiungi**        | Consente di aggiungere un nuovo parametro all'elenco
    | **Rimuovi**     | Consente di rimuovere il parametro selezionato dall'elenco
-   | **Modificare**     | Modificare il parametro selezionato impostando il tipo, nome e se è facoltativo e il relativo valore inserito sarebbe
-   | **Ripristinare**     | Ripristinare il parametro selezionato lo stato originale
-   | **Ripristina tutti** | Ripristinare tutti i parametri per lo stato originale
+   | **Modifica**     | Consente di modificare il parametro selezionato cambiandone il tipo, il nome e indicando se è facoltativo e quale deve essere il relativo valore inserito
+   | **Ripristina**     | Consente di ripristinare lo stato originale del parametro selezionato
+   | **Revert All** (Ripristina tutto) | Consente di ripristinare lo stato originale di tutti i parametri
 
    > [!TIP]
-   > Utilizzare il **Ignora Anteprima modifiche riferimento se tutti i riferimenti sono confermati** casella di controllo per apportare le modifiche immediatamente, senza la finestra di anteprima si estraggono per primo.
+   > Usare la casella di controllo **Ignora le modifiche dei riferimenti all'anteprima se tutti i riferimenti sono confermati** per apportare immediatamente le modifiche, senza prima visualizzare la finestra di anteprima.
 
-   Quando si aggiunge o modifica di un parametro, verrà visualizzato il **Aggiungi parametro** o **Modifica parametro** finestra.
+   Quando si aggiunge o si modifica un parametro viene visualizzata la finestra **Aggiungi parametro** o **Modifica parametro**.
 
    ![Aggiungi/Modifica parametro](images/changesignature_addmodify.png)
 
-   In questo caso, è possibile eseguire le operazioni seguenti:
+   Qui è possibile effettuare le seguenti operazioni:
 
    | Voce | Descrizione
    | ----- | ---
-   | **Type**               | Il tipo del parametro (int, double, float, ecc.)
-   | **Name**               | Il nome del parametro
-   | **Parametro facoltativo** | Rende il parametro specificato, facoltativamente
+   | **Type**               | Tipo del parametro (int, double, float e così via)
+   | **Name**               | Nome del parametro
+   | **Parametro facoltativo** | Rende il parametro specificato facoltativamente
    | **Valore inserito**     | Il valore inserito in tutte le chiamate alla funzione in cui non è specificato il parametro (valido solo per **Aggiungi**)
-   | **Valore predefinito**      | Il valore utilizzato dalla funzione se il chiamante non specifica uno (valido solo per **parametri facoltativi**)
+   | **Valore predefinito**      | Il valore usato dalla funzione se il chiamante non ne specifica uno (valido solo per **Parametro facoltativo**)
 
-1. Utilizzare il **ambito di ricerca** elenco a discesa selezionare se le modifiche verranno applicate al progetto o l'intera soluzione.
+1. Usare l'elenco a discesa **Ambito di ricerca** per stabilire se le modifiche verranno applicate al progetto o all'intera soluzione.
 
-1. Al termine, fare clic sul pulsante **OK** per apportare le modifiche.  Verificare che la richiesta di modifiche vengono apportate in modo appropriato.  Utilizzare le caselle di controllo nella parte superiore della finestra per attivare o disattivare la ridenominazione di un elemento.
+1. Al termine, fare clic sul pulsante **OK** per apportare le modifiche.  Verificare che le modifiche richieste vengano apportate in modo appropriato.  Usare le caselle di controllo nella parte superiore della finestra per attivare o disattivare la ridenominazione di un elemento.
 
-   ![Modificare l'anteprima di firma](images/changesignature_preview.png)
+   ![Anteprima della modifica della firma](images/changesignature_preview.png)
 
-1. Quando tutto ciò che si verificano problemi, fare clic su di **applica** pulsante e la funzione verrà modificati nel codice sorgente.
+1. Quando si è soddisfatti del risultato, fare clic sul pulsante **Applica** e la funzione verrà modificata nel codice sorgente.
 
    ![Risultato della modifica della firma](images/changesignature_result.png)

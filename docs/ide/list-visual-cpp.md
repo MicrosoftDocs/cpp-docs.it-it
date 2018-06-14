@@ -1,5 +1,5 @@
 ---
-title: '&lt;elenco&gt; (Visual C++) | Documenti Microsoft'
+title: '&lt;list&gt; (Visual C++) | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,11 +20,12 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: bff8e3588e31414f50cb6d150c0e8c9f2603586b
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33323979"
 ---
-# <a name="ltlistgt-visual-c"></a>&lt;elenco&gt; (Visual C++)
+# <a name="ltlistgt-visual-c"></a>&lt;list&gt; (Visual C++)
 Il blocco \<listheader> viene usato per definire la riga di intestazione di una tabella o di un elenco di definizioni. Per definire una tabella, è sufficiente specificare una voce per il termine nell'intestazione.  
   
 ## <a name="syntax"></a>Sintassi  

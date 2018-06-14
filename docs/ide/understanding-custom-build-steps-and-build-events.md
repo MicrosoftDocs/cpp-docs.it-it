@@ -1,5 +1,5 @@
 ---
-title: Informazioni sulle istruzioni di compilazione personalizzata e gli eventi di compilazione | Documenti Microsoft
+title: Informazioni sulle istruzioni di compilazione personalizzate e sugli eventi di compilazione | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -23,37 +23,38 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: a50c0cf224104f720a73a4830405e7114cda74ed
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33338767"
 ---
-# <a name="understanding-custom-build-steps-and-build-events"></a>Informazioni sulle istruzioni di compliazione personalizzate e sugli eventi di compilazione
-All'interno dell'ambiente di sviluppo di Visual C++, esistono tre modi principali per personalizzare il processo di compilazione:  
+# <a name="understanding-custom-build-steps-and-build-events"></a>Informazioni sulle istruzioni di compilazione personalizzate e sugli eventi di compilazione
+Nell'ambiente di sviluppo Visual C++ esistono tre modi principali per personalizzare il processo di compilazione:  
   
  **Istruzioni di compilazione personalizzate**  
- Un'istruzione di compilazione personalizzata è una regola di compilazione associata a un progetto. Un'istruzione di compilazione personalizzato è possibile specificare una riga di comando da eseguire, qualsiasi input aggiuntivo o file di output e un messaggio da visualizzare. Per ulteriori informazioni, vedere [procedura: aggiungere un'istruzione di compilazione personalizzata a progetti MSBuild](../build/how-to-add-a-custom-build-step-to-msbuild-projects.md).  
+ Un'istruzione di compilazione personalizzata è una regola di compilazione associata a un progetto. Un'istruzione di compilazione personalizzata può specificare una riga di comando da eseguire, file di input o output aggiuntivi e un messaggio da visualizzare. Per altre informazioni, vedere [Procedura: Aggiungere un'istruzione di compilazione personalizzata a progetti MSBuild](../build/how-to-add-a-custom-build-step-to-msbuild-projects.md).  
   
- **Strumenti di compilazione personalizzata**  
- Uno strumento di compilazione personalizzata è una regola di compilazione associata a uno o più file. Un'istruzione di compilazione personalizzato è possibile passare i file di input a uno strumento di compilazione personalizzata, che restituisce uno o più file di output. Ad esempio, i file della Guida in un'applicazione MFC vengono compilati con uno strumento di compilazione personalizzata. Per ulteriori informazioni, vedere [procedura: aggiungere creare strumenti personalizzati a progetti MSBuild](../build/how-to-add-custom-build-tools-to-msbuild-projects.md) e [strumenti di compilazione personalizzato specificando](../ide/specifying-custom-build-tools.md).  
+ **Strumenti di compilazione personalizzati**  
+ Uno strumento di compilazione personalizzato è una regola di compilazione associata a uno o più file. Un'istruzione di compilazione personalizzata può passare file di input a uno strumento di compilazione personalizzato, che restituisce uno o più file di output. Ad esempio, i file della Guida in un'applicazione MFC vengono compilati con uno strumento di compilazione personalizzato. Per altre informazioni, vedere [Procedura: Aggiungere uno strumento di compilazione personalizzato a progetti MSBuild](../build/how-to-add-custom-build-tools-to-msbuild-projects.md) e [Specifica di strumenti di compilazione personalizzati](../ide/specifying-custom-build-tools.md).  
   
  **Eventi di compilazione**  
- Gli eventi di compilazione consentano di personalizzare la compilazione del progetto. Esistono tre eventi di compilazione: *pre-compilazione*, *pre-collegamento*, e *post-compilazione*. Un evento di compilazione consente di specificare un'azione da eseguire in un momento specifico nel processo di compilazione. Ad esempio, è possibile utilizzare un evento di compilazione per registrare un file con **regsvr32.exe** termine della compilazione del progetto. Per ulteriori informazioni, vedere [specificare eventi di compilazione](../ide/specifying-build-events.md).  
+ Gli eventi di compilazione consentono di personalizzare la compilazione di un progetto. Esistono tre tipi di eventi di compilazione: eventi di *pre-compilazione*, *pre-collegamento* e *post-compilazione*. Un evento di compilazione consente di specificare l'esecuzione di un'azione in un momento specifico del processo di compilazione. Ad esempio è possibile usare un evento di compilazione per registrare un file con **regsvr32.exe** al termine della compilazione del progetto. Per altre informazioni, vedere [Specifica di eventi di compilazione](../ide/specifying-build-events.md).  
   
- [Risoluzione dei problemi delle personalizzazioni di compilazione](../ide/troubleshooting-build-customizations.md) consentono di verificare che le istruzioni di compilazione personalizzata e compilare gli eventi vengono eseguiti come previsto.  
+ [Risoluzione dei problemi di personalizzazione della compilazione](../ide/troubleshooting-build-customizations.md) illustra come verificare che le istruzioni di compilazione personalizzate e gli eventi di compilazione vengano eseguiti come previsto.  
   
- Il formato di output di un oggetto personalizzato di istruzione di compilazione o evento di compilazione può anche migliorare l'utilizzabilità dello strumento. Per altre informazioni, vedere [Formattazione dell'output di un'istruzione di compilazione personalizzata o un evento di compilazione](../ide/formatting-the-output-of-a-custom-build-step-or-build-event.md).  
+ Anche il formato di output di un'istruzione o un evento di compilazione personalizzato può migliorare l'usabilità dello strumento. Per altre informazioni, vedere [Formattazione dell'output di un'istruzione di compilazione personalizzata o un evento di compilazione](../ide/formatting-the-output-of-a-custom-build-step-or-build-event.md).  
   
- Gli eventi di compilazione e personalizzata di compilazione passaggi eseguiti nell'ordine seguente insieme ad altre operazioni di compilazione:  
+ Gli eventi di compilazione e le istruzioni di compilazione personalizzate vengono eseguiti nell'ordine seguente insieme ad altre operazioni di compilazione:  
   
 1.  Evento di pre-compilazione  
   
-2.  Strumenti sui singoli file di compilazione personalizzata  
+2.  Strumenti di compilazione personalizzati su file singoli  
   
 3.  MIDL  
   
 4.  Compilatore di risorse  
   
-5.  Il compilatore C/C++  
+5.  Compilatore C/C++  
   
 6.  evento di pre-collegamento  
   
@@ -67,9 +68,9 @@ All'interno dell'ambiente di sviluppo di Visual C++, esistono tre modi principal
   
 11. Evento di post-compilazione  
   
- Il `custom build step on the project` e `post-build event` eseguire in sequenza dopo la compilazione di tutti gli altri processi.  
+ `custom build step on the project` e `post-build event` vengono eseguiti in sequenza dopo il completamento di tutti gli altri processi di compilazione.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Compilazione di progetti C++ in Visual Studio](../ide/building-cpp-projects-in-visual-studio.md)   
- [Macro comuni per le proprietà e i comandi di compilazione](../ide/common-macros-for-build-commands-and-properties.md)   
- [Finestra di dialogo Strumento ordine di compilazione](http://msdn.microsoft.com/en-us/6204c5b1-7ce9-4948-9ff6-0268642ee14c)
+ [Macro comuni per i comandi e le proprietà di compilazione](../ide/common-macros-for-build-commands-and-properties.md)   
+ [Finestra di dialogo Ordine di compilazione strumento](http://msdn.microsoft.com/en-us/6204c5b1-7ce9-4948-9ff6-0268642ee14c)

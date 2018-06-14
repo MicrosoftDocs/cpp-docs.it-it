@@ -1,5 +1,5 @@
 ---
-title: Pagine delle proprietà dello strumento generatore documento XML | Documenti Microsoft
+title: Pagina delle proprietà Strumento Generatore di documenti XML | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,28 +20,29 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: 772e9dc6a296873ef27171676ebca0c185c1771c
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33339076"
 ---
 # <a name="xml-document-generator-tool-property-pages"></a>Pagina delle proprietà dello strumento generatore di documenti XML
-La pagina delle proprietà dello strumento generatore di documenti XML espone la funzionalità di xdcmake.exe. xdcmake.exe unisce file xdc in un file XML quando il codice sorgente contiene commenti della documentazione e [/doc (processo di commenti relativi alla documentazione) (C/C++)](../build/reference/doc-process-documentation-comments-c-cpp.md) è specificato. Vedere [tag consigliati per i commenti relativi alla documentazione](../ide/recommended-tags-for-documentation-comments-visual-cpp.md) per informazioni sull'aggiunta di commenti al codice sorgente.  
+La pagina delle proprietà Strumento Generatore di documenti XML espone la funzionalità di xdcmake.exe. xdcmake.exe unisce file con estensione xdc a un file con estensione xml quando il codice sorgente contiene commenti ai documenti ed è specificato [/doc (Elabora i commenti per la documentazione) (C/C++)](../build/reference/doc-process-documentation-comments-c-cpp.md). Per informazioni sull'aggiunta di commenti sulla documentazione nel codice sorgente, vedere [Tag consigliati per i commenti relativi alla documentazione](../ide/recommended-tags-for-documentation-comments-visual-cpp.md).  
   
 > [!NOTE]
->  opzioni xdcmake.exe nell'ambiente di sviluppo (pagine delle proprietà) differiscono dalle opzioni quando xdcmake.exe viene utilizzato nella riga di comando. Per informazioni sull'utilizzo di xdcmake.exe nella riga di comando, vedere [riferimento a XDCMake](../ide/xdcmake-reference.md).  
+>  Le opzioni di xdcmake.exe nell'ambiente di sviluppo (pagine delle proprietà) sono diverse rispetto alle opzioni di quando xdcmake.exe è usato nella riga di comando. Per informazioni sull'uso di xdcmake.exe nella riga di comando, vedere [Riferimento a XDCMake](../ide/xdcmake-reference.md).  
   
 ## <a name="uielement-list"></a>Elenco UIElement  
  **Non visualizzare messaggio di avvio**  
- Non visualizzare messaggio di copyright.  
+ Non visualizza le informazioni sul copyright.  
   
  **File di documentazione aggiuntivi**  
- Directory aggiuntive in cui si desidera che il sistema di progetto per cercare i file xdc. xdcmake cercherà sempre file xdc generati dal progetto. È possibile specificare più directory.  
+ Directory aggiuntive in cui si vuole che il sistema del progetto esegua la ricerca di file con estensione xdc. xdcmake eseguirà sempre la ricerca di file con estensione xdc generati dal progetto. È possibile specificare più directory.  
   
  **File di documento di output**  
- Il percorso di directory e nome del file di output XML. Vedere [comuni macro per comandi di compilazione e proprietà](../ide/common-macros-for-build-commands-and-properties.md) per informazioni sull'utilizzo di macro per specificare i percorsi di directory.  
+ Nome e percorso della directory che contiene il file di output con estensione xml. Per informazioni sull'uso di macro per specificare i percorsi delle directory, vedere [Macro comuni per i comandi e le proprietà di compilazione](../ide/common-macros-for-build-commands-and-properties.md).  
   
  **Dipendenze raccolte documenti**  
- Se il progetto presenta una dipendenza su un progetto con estensione LIB nella soluzione, è possibile elaborare file xdc dal progetto lib nei file con estensione XML per il progetto corrente.  
+ Se il progetto dipende da un progetto con estensione lib nella soluzione, è possibile elaborare file con estensione xdc dal progetto lib nei file con estensione xml per il progetto corrente.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Pagine delle proprietà](../ide/property-pages-visual-cpp.md)   

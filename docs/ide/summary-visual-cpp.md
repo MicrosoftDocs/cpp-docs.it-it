@@ -1,5 +1,5 @@
 ---
-title: '&lt;riepilogo&gt; (Visual C++) | Documenti Microsoft'
+title: '&lt;summary&gt; (Visual C++) | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,11 +20,12 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: c0dff1d6ce31f6b26c0f8a46ef2ff620a4d40f93
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33322289"
 ---
-# <a name="ltsummarygt-visual-c"></a>&lt;riepilogo&gt; (Visual C++)
+# <a name="ltsummarygt-visual-c"></a>&lt;summary&gt; (Visual C++)
 Il tag \<summary> deve essere usato per descrivere un tipo o un membro del tipo. Utilizzare [ \<osservazioni >](../ide/remarks-visual-cpp.md) per aggiungere informazioni supplementari alla descrizione di un tipo.  
   
 ## <a name="syntax"></a>Sintassi  
@@ -38,7 +39,7 @@ Il tag \<summary> deve essere usato per descrivere un tipo o un membro del tipo.
  Un riepilogo dell'oggetto.  
   
 ## <a name="remarks"></a>Note  
- Il testo per il \<riepilogo > tag è l'unica fonte di informazioni sul tipo in IntelliSense e viene visualizzato anche nella [Visualizzatore oggetti](http://msdn.microsoft.com/en-us/f89acfc5-1152-413d-9f56-3dc16e3f0470) e nel Report Web commenti del codice.  
+ Il testo del tag \<summary> rappresenta l'unica fonte di informazioni sul tipo in IntelliSense e viene visualizzato anche nella finestra [Visualizzatore oggetti](http://msdn.microsoft.com/en-us/f89acfc5-1152-413d-9f56-3dc16e3f0470) e nel report Web sui commenti del codice.  
   
  Compilare con [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) per elaborare i commenti relativi alla documentazione in un file.  
   

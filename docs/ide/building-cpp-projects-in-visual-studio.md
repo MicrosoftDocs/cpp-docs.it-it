@@ -1,5 +1,5 @@
 ---
-title: Compilazione di progetti C++ in Visual Studio | Documenti Microsoft
+title: Compilazione di progetti C++ in Visual Studio | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,38 +18,39 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: a7008e7fe670471301968482fbd4c6c758f0ff5e
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33340502"
 ---
 # <a name="building-c-projects-in-visual-studio"></a>Compilazione di progetti C++ in Visual Studio
 Nell'ambiente di sviluppo integrato (IDE, Integrated Development Environment) di Visual Studio sono disponibili vari modi per compilare un'intera soluzione o un singolo progetto. È anche possibile modificare le impostazioni di compilazione e specificare procedure di compilazione personalizzate per aumentare l'efficienza del processo di sviluppo.  
   
- Per compilare una soluzione aperta in Visual Studio e selezionata in **Esplora**, è possibile:  
+ Per compilare una soluzione aperta in Visual Studio e selezionata in **Esplora soluzioni**, è possibile seguire queste procedure:  
   
 -   Nella barra dei menu scegliere **Compilazione**, **Compila soluzione**.  
   
--   O, in **Esplora**, aprire il menu di scelta rapida per la soluzione e quindi scegliere **Compila soluzione**.  
+-   In alternativa, in **Esplora soluzioni** aprire il menu di scelta rapida della soluzione e scegliere **Compila soluzione**.  
   
 -   O ancora, premere F7. Si tratta della scelta rapida da tastiera predefinita per le impostazioni di sviluppo per C/C++.  
   
--   O, nel [finestra di comando](/visualstudio/ide/reference/command-window) (sulla barra dei menu, scegliere **vista**, **altre finestre**, **finestra di comando**), immettere `Build.BuildSolution`.  
+-   Oppure nella [finestra di comando](/visualstudio/ide/reference/command-window) (scegliere **Visualizza** **Altre finestre** **Finestra di comando** sulla barra dei menu) digitare `Build.BuildSolution`.  
   
--   In o il [veloce](/visualstudio/ide/reference/quick-launch-environment-options-dialog-box) immettere `build build solution`.  
+-   In alternativa, nella casella [Avvio veloce](/visualstudio/ide/reference/quick-launch-environment-options-dialog-box) digitare `build build solution`.  
   
- Per compilare un progetto selezionato in **Esplora**, è possibile:  
+ Per compilare un progetto selezionato in **Esplora soluzioni**, seguire queste procedure:  
   
--   Nella barra dei menu, scegliere **compilare**, **compilare \<nome progetto >**.  
+-   Nella barra dei menu scegliere **Compila** **Compila \<Nome progetto>**.  
   
--   O, in **Esplora**, aprire il menu di scelta rapida per il progetto e quindi scegliere **compilare**.  
+-   In alternativa, in **Esplora soluzioni** aprire il menu di scelta rapida del progetto e scegliere **Compila**.  
   
--   Oppure, nella finestra di comando (sulla barra dei menu, scegliere **vista**, **altre finestre**, **finestra di comando**), immettere `Build.BuildOnlyProject`.  
+-   Oppure nella finestra di comando (scegliere **Visualizza** **Altre finestre** **Finestra di comando** sulla barra dei menu) digitare `Build.BuildOnlyProject`.  
   
--   In alternativa, nella finestra di avvio veloce, immettere `build project only build only <project name>`.  
+-   In alternativa, nella casella Avvio veloce digitare `build project only build only <project name>`.  
   
- Quando si compila un'applicazione Visual C++ in Visual Studio, è possibile modificare molte impostazioni di compilazione nella finestra di dialogo Pagine delle proprietà del progetto. Per informazioni su come impostare le proprietà del progetto, vedere [funziona con le proprietà del progetto](../ide/working-with-project-properties.md).  
+ Quando si compila un'applicazione Visual C++ in Visual Studio, è possibile modificare molte impostazioni di compilazione nella finestra di dialogo Pagine delle proprietà del progetto. Per informazioni su come impostare le proprietà del progetto, vedere [Utilizzo di proprietà di progetto](../ide/working-with-project-properties.md).  
   
- Per un esempio su come usare l'IDE per creare, compilare ed eseguire il debug di un progetto C++, vedere [procedura dettagliata: esplorare l'IDE di Visual Studio con C++](/visualstudio/ide/getting-started-with-cpp-in-visual-studio). Per un esempio su come usare l'IDE per compilare C + + progetto CLR, vedere [procedura dettagliata: compilazione di un programma C++ destinato a CLR in Visual Studio](../ide/walkthrough-compiling-a-cpp-program-that-targets-the-clr-in-visual-studio.md). Per un esempio su come usare l'IDE per creare un'app di Windows Runtime, vedere [creare la prima app di Windows Runtime con C++](http://msdn.microsoft.com/library/windows/apps/hh974580.aspx).  
+ Per un esempio che illustra come usare l'ambiente IDE per creare, compilare ed eseguire il debug di un progetto C++, vedere [Procedura dettagliata: Esplorare l'IDE di Visual Studio con C++](/visualstudio/ide/getting-started-with-cpp-in-visual-studio). Per un esempio d'uso dell'IDE per compilare un progetto C++/CLR, vedere [Procedura dettagliata: Compilazione di un programma C++ destinato a CLR in Visual Studio](../ide/walkthrough-compiling-a-cpp-program-that-targets-the-clr-in-visual-studio.md). Per un esempio d'uso dell'ambiente IDE per creare un'app di Windows Runtime, vedere [Create your first Windows Runtime app using C++](http://msdn.microsoft.com/library/windows/apps/hh974580.aspx) (Creare per la prima volta un'app Windows Runtime usando C++).  
   
  Per altre informazioni su come eseguire la compilazione, modificare le impostazioni di compilazione e specificare procedure di compilazione personalizzate, vedere gli articoli seguenti.  
   
@@ -67,8 +68,8 @@ Nell'ambiente di sviluppo integrato (IDE, Integrated Development Environment) di
  Viene presentata la struttura XML di un file con estensione vcxproj.  
   
 ## <a name="related-sections"></a>Sezioni correlate  
- [VC + +, progetti di dialogo Opzioni](vcpp-directories-property-page.md)  
- (Solo progetti MSBuild) Viene descritto come modificare il percorso di ricerca per i file eseguibili e includere file, i file di libreria e file del codice sorgente durante una compilazione.  
+ [VC++ Directories, Projects, Options Dialog Box](vcpp-directories-property-page.md) (Directory di VC++, Progetti, Finestra di dialogo Opzioni)  
+ (Solo progetti MSBuild) Descrive come modificare il percorso di ricerca per i file eseguibili e includere file, file di libreria e file del codice sorgente durante una compilazione.  
   
  [Compiling and Building](/visualstudio/ide/compiling-and-building-in-visual-studio) (Compilazione e creazione)  
  Vengono fornite informazioni sulla compilazione in Visual Studio.  
@@ -80,10 +81,10 @@ Nell'ambiente di sviluppo integrato (IDE, Integrated Development Environment) di
  Vengono forniti collegamenti a una panoramica sulla compilazione di programmi in C++, sulle opzioni del compilatore e del linker e su altri strumenti di compilazione.  
   
  [Aggiornamento di progetti da versioni precedenti di Visual C++](../porting/upgrading-projects-from-earlier-versions-of-visual-cpp.md)  
- Vengono forniti collegamenti ad argomenti relativi a problemi di aggiornamento progetto C++ per le versioni più recenti del set di strumenti del compilatore.  
+ Visualizza collegamenti ad argomenti per l'aggiornamento del progetto C++ a versioni più recenti del set di strumenti del compilatore.  
   
 [Guida al porting e aggiornamento in Visual C++](../porting/visual-cpp-porting-and-upgrading-guide.md)  
-  Informazioni dettagliate su come eseguire l'aggiornamento di applicazioni C++ che sono state create in versioni precedenti di Visual Studio e come eseguire la migrazione di applicazioni che sono state create usando strumenti diversi da Visual Studio.  
+  Informazioni dettagliate per l'aggiornamento di applicazioni C++ create nelle versioni precedenti di Visual Studio, nonché per la migrazione di applicazioni create usando strumenti diversi da Visual Studio.  
   
 ## <a name="see-also"></a>Vedere anche  
  [App di Windows universale (C++)](../windows/universal-windows-apps-cpp.md)

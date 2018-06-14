@@ -1,5 +1,5 @@
 ---
-title: Specifica gli eventi di compilazione | Documenti Microsoft
+title: Specifica di eventi di compilazione | Microsoft Docs
 ms.custom: ''
 ms.date: 12/28/2017
 ms.technology:
@@ -27,39 +27,40 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: 5940f0d6efaec402a4a85ed659f42d7eab1bf91d
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33334964"
 ---
-# <a name="specifying-build-events"></a>Specifica gli eventi di compilazione
+# <a name="specifying-build-events"></a>Specifica di eventi di compilazione
 
-È possibile utilizzare gli eventi di compilazione per specificare i comandi da eseguire prima dell'avvio della compilazione, prima del processo di collegamento o al termine della compilazione.
+È possibile usare gli eventi di compilazione per specificare i comandi da eseguire prima dell'inizio della compilazione, prima del processo di collegamento o dopo il completamento della compilazione.
 
-Gli eventi di compilazione vengono eseguiti solo se la compilazione raggiunge correttamente i punti corrispondenti nel processo di compilazione. Se si verifica un errore nella compilazione, il *post-compilazione* evento non viene eseguito; se l'errore si verifica prima della fase di collegamento, né il *pre-collegamento* né la *post-compilazione* evento si verifica. Inoltre, se è necessario essere collegati, alcun file di *pre-collegamento* non vengono generati eventi. Il *pre-collegamento* evento non è inoltre disponibile nei progetti che non contengono un passaggio di collegamento.
+Gli eventi di compilazione vengono eseguiti solo se la compilazione raggiunge correttamente i punti corrispondenti nel processo di compilazione. Se si verifica un errore nella compilazione, l'evento di *post-compilazione* non si verifica. Se l'errore si verifica prima della fase di collegamento, non si verificano né l'evento di *pre-collegamento* né quello di *post-compilazione*. Inoltre, se nessun file richiede il collegamento, l'evento di *pre-collegamento* non si verifica. L'evento di *pre-collegamento* non è disponibile nei progetti che non contengono un passaggio di collegamento.
 
-Se nessun file devono essere creata, verrà generato alcun evento di compilazione.
+Se non è necessaria la compilazione di nessun file, non si verifica nessun evento di compilazione.
 
-Per informazioni generali sugli eventi di compilazione, vedere [informazioni sulle istruzioni di compilazione personalizzate e di eventi di compilazione](../ide/understanding-custom-build-steps-and-build-events.md).
+Per informazioni generali sugli eventi di compilazione, vedere [Informazioni sulle istruzioni di compilazione personalizzate e sugli eventi di compilazione](../ide/understanding-custom-build-steps-and-build-events.md).
 
 ### <a name="to-specify-a-build-event"></a>Per specificare un evento di compilazione
 
 1. In **Esplora soluzioni** selezionare il progetto per il quale si vuole specificare l'evento di compilazione.
 
-1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per ulteriori informazioni, vedere [funziona con le proprietà del progetto](../ide/working-with-project-properties.md).
+1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per altre informazioni, vedere [Working with Project Properties](../ide/working-with-project-properties.md) (Uso delle proprietà del progetto).
 
-1. Nel **eventi di compilazione** cartella, selezionare la pagina delle proprietà di un evento di compilazione.
+1. Nella cartella **Eventi di compilazione** selezionare la pagina delle proprietà di un evento di compilazione.
 
 1. Specificare le proprietà associate all'evento di compilazione:
 
-   - In **riga di comando**, specificare un comando come se si stesse specificando al prompt dei comandi. Specificare un comando valido o un file batch e qualsiasi input obbligatorio o file di output. Specificare il **chiamare** comando prima del nome di un file batch per garantire che tutti i comandi successivi vengono eseguiti batch.
+   - In **Riga di comando** specificare un comando con il formato usato al prompt dei comandi. Specificare un comando o un file batch valido e i file di input o output necessari. Specificare il comando batch **call** prima del nome di un file batch per garantire che tutti i comandi successivi vengano eseguiti.
 
-      Possono specificare più file di input e outpui simbolicamente con le macro di MSBuild. Per informazioni su come specificare il percorso dei file o i nomi dei set di file, vedere [comuni macro per comandi di compilazione e proprietà](../ide/common-macros-for-build-commands-and-properties.md).
+      Le macro di MSBuild consentono di specificare vari file di input e output in modo simbolico. Per informazioni su come specificare il percorso dei file o i nomi dei set di file, vedere [Macro comuni per i comandi e le proprietà di compilazione](../ide/common-macros-for-build-commands-and-properties.md).
 
-      Poiché il carattere '% s'è riservato da MSBuild, se si specifica una variabile di ambiente sostituire ogni **%** con carattere di escape di **% 25** sequenza di escape esadecimale. Ad esempio, sostituire **% WINDIR %** con **25WINDIR % 25**. MSBuild sostituisce ogni **% 25** sequenza con la **%** carattere prima di accedere alla variabile di ambiente.
+      Poiché il carattere "%" è riservato per MSBuild, se si specifica una variabile di ambiente sostituire ogni carattere di escape **%** con la sequenza di escape esadecimale **%25**. Ad esempio, sostituire **%WINDIR%** con **%25WINDIR%25**. MSBuild sostituisce ogni sequenza **%25** con il carattere **%** prima di accedere alla variabile di ambiente.
 
-   - In **descrizione**, digitare una descrizione per questo evento. La descrizione viene stampata il **Output** finestra quando si verifica questo evento.
+   - In **Descrizione** digitare una descrizione per l'evento. La descrizione viene visualizzata nella finestra **Output** quando si verifica l'evento.
 
-   - In **escluso dalla compilazione**, specificare **Sì** se non si desidera l'esecuzione dell'evento.
+   - In **Escluso dalla compilazione** specificare **Sì** se non si vuole che l'evento sia eseguito.
 
 ## <a name="see-also"></a>Vedere anche
 

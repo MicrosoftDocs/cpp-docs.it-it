@@ -1,5 +1,5 @@
 ---
-title: '&lt;eccezione&gt; (Visual C++) | Documenti Microsoft'
+title: '&lt;exception&gt; (Visual C++) | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,11 +20,12 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: 8d3d5b7a89a3725ae9dee2065bcd21d8f114ca00
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33323940"
 ---
-# <a name="ltexceptiongt-visual-c"></a>&lt;eccezione&gt; (Visual C++)
+# <a name="ltexceptiongt-visual-c"></a>&lt;exception&gt; (Visual C++)
 Il tag \<exception> consente di specificare le eccezioni che possono essere generate. Questo tag viene applicato a una definizione di metodo.  
   
 ## <a name="syntax"></a>Sintassi  
@@ -35,19 +36,19 @@ Il tag \<exception> consente di specificare le eccezioni che possono essere gene
   
 #### <a name="parameters"></a>Parametri  
  `member`  
- Riferimento ad un'eccezione disponibile dall'ambiente di compilazione corrente. Utilizzando le regole di ricerca di nome, il compilatore controlla che l'eccezione specificata esista e converte `member` nome canonico dell'elemento XML di output.  Il compilatore genera un avviso se non trova `member`.  
+ Riferimento ad un'eccezione disponibile dall'ambiente di compilazione corrente. Quando si usano regole di ricerca del nome, il compilatore controlla che l'eccezione specificata esista e converte `member` nel nome canonico dell'elemento nel file XML di output.  Il compilatore genera un avviso se non trova `member`.  
   
  Racchiudere il nome tra virgolette singole o doppie.  
   
  Per informazioni su come creare un riferimento cref a un tipo generico, vedere [\<see>](../ide/see-visual-cpp.md).  
   
  `description`  
- Una descrizione.  
+ Descrizione.  
   
 ## <a name="remarks"></a>Note  
  Compilare con [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) per elaborare i commenti relativi alla documentazione in un file.  
   
- Il compilatore di Visual C++ tenta di risolvere i riferimenti cref in un passaggio tramite i commenti della documentazione.  Pertanto, se si utilizzano le regole di ricerca di C++, un simbolo non viene trovato dal compilatore e il riferimento verrà contrassegnato come non risolto. Vedere [ \<seealso >](../ide/seealso-visual-cpp.md) per ulteriori informazioni.  
+ Il compilatore di Visual C++ tenta di risolvere i riferimenti cref in un passaggio tramite i commenti della documentazione.  Pertanto, se si utilizzano le regole di ricerca di C++, un simbolo non viene trovato dal compilatore e il riferimento verrà contrassegnato come non risolto. Per altre informazioni, vedere [\<seealso>](../ide/seealso-visual-cpp.md).  
   
 ## <a name="example"></a>Esempio  
   

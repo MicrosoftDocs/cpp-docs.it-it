@@ -1,5 +1,5 @@
 ---
-title: Distribuire un'applicazione Visual C++ in una cartella locale dell'App | Documenti Microsoft
+title: Distribuire un'applicazione Visual C++ in una cartella locale di un'app | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,13 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: 9a02e585dc2b82c8b8ad675907e4205db6ad7279
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33337909"
 ---
 # <a name="walkthrough-deploying-a-visual-c-application-to-an-application-local-folder"></a>Procedura dettagliata: distribuzione di un'applicazione Visual C++ in una cartella locale di un'applicazione
-Viene descritto come distribuire un'applicazione Visual C++ copiando i file nella cartella.  
+Viene descritto come distribuire un'applicazione Visual C++ copiando i file nella cartella corrispondente.  
   
 ## <a name="prerequisites"></a>Prerequisiti  
   
@@ -29,17 +30,17 @@ Viene descritto come distribuire un'applicazione Visual C++ copiando i file nell
   
 -   Un altro computer che non dispone delle librerie Visual C++.  
   
-### <a name="to-deploy-an-application-to-an-application-local-folder"></a>Per distribuire un'applicazione in una cartella locale dell'applicazione  
+### <a name="to-deploy-an-application-to-an-application-local-folder"></a>Per distribuire un'applicazione Visual C++ in una cartella locale di un'applicazione  
   
-1.  Creare e compilare un'applicazione MFC seguendo i passaggi descritti in [procedura dettagliata: distribuzione di un Visual C++ applicazione mediante un progetto di installazione](../ide/walkthrough-deploying-a-visual-cpp-application-by-using-a-setup-project.md).  
+1.  Creare e compilare un'applicazione MFC seguendo i passaggi descritti in [Procedura dettagliata: Distribuzione di un'applicazione Visual C++ tramite un progetto di installazione](../ide/walkthrough-deploying-a-visual-cpp-application-by-using-a-setup-project.md).  
   
-2.  Copiare i file di libreria MFC e di Run-Time C (CRT) appropriati, ad esempio, per x86 piattaforma e supporto Unicode, copia Mfc100u e Msvcr100. dll da \Programmi\Microsoft Visual Studio 10.0\VC\redist\x86\—and quindi incollarli nella cartella \Release\ del un progetto MFC. Per ulteriori informazioni su altri file che potrebbe essere necessario copiare, vedere [determinazione delle DLL da ridistribuire](../ide/determining-which-dlls-to-redistribute.md).  
+2.  Copiare i file di libreria MFC e i file di runtime di C (CRT) appropriati (ad esempio, per una piattaforma x86 e il supporto Unicode, copiare mfc100u.dll e msvcr100.dll da \Programmi\Microsoft Visual Studio 10.0\VC\redist\x86\) e incollarli nella cartella \Release\ del progetto MFC. Per altre informazioni sui file aggiuntivi che può essere necessario copiare, vedere [Determinazione delle DLL da ridistribuire](../ide/determining-which-dlls-to-redistribute.md).  
   
 3.  Eseguire l'applicazione MFC in un secondo computer che non dispone delle librerie Visual C++.  
   
-    1.  Copiare il contenuto della cartella \Release\ e incollarli nella cartella dell'applicazione nel secondo computer.  
+    1.  Copiare il contenuto della cartella \Release\ e incollarlo nella cartella dell'applicazione nel secondo computer.  
   
-    2.  Nel secondo computer, eseguire l'applicazione.  
+    2.  Eseguire l'applicazione nel secondo computer.  
   
      L'applicazione viene eseguita correttamente perché le librerie Visual C++ sono disponibili nella cartella locale dell'applicazione.  
   

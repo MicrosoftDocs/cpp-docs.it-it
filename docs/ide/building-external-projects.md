@@ -1,5 +1,5 @@
 ---
-title: Compilazione di progetti esterni | Documenti Microsoft
+title: Compilazione di progetti esterni | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,16 +20,17 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: 97b6aa1e5939afe55644df6529bf75ba043f20bb
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33330346"
 ---
 # <a name="building-external-projects"></a>Compilazione di progetti esterni
-Un progetto esterno è un progetto di Visual C++ che utilizza un makefile o altre funzionalità che si trovano all'esterno (esterna o all'esterno) dell'ambiente di sviluppo di Visual C++.  
+Un progetto esterno è un progetto di Visual C++ che usa un makefile o altre funzionalità che si trovano all'esterno dell'ambiente di sviluppo di Visual C++.  
   
- Se si dispone di un progetto esterno (ad esempio, un progetto makefile) che si desidera compilare nell'ambiente di sviluppo di Visual C++, creare un progetto Makefile e specificare il progetto compilare comandi e l'output nella creazione guidata applicazione Makefile. Per ulteriori informazioni, vedere [creazione di un progetto Makefile](../ide/creating-a-makefile-project.md).  
+ Se è presente un progetto esterno (ad esempio un progetto makefile) che si vuole compilare nell'ambiente di sviluppo di Visual C++, creare un progetto makefile e specificare il comando di compilazione e l'output del progetto in Makefile Application Wizard (Procedura guidata Applicazione Makefile). Per altre informazioni, vedere [Creazione di un progetto makefile](../ide/creating-a-makefile-project.md).  
   
- Si noti che Visual C++ non supporta più la possibilità di esportare un makefile per il progetto attivo dall'ambiente di sviluppo. Utilizzare [opzioni della riga di comando Devenv](/visualstudio/ide/reference/devenv-command-line-switches) per compilare i progetti di Visual Studio dalla riga di comando.  
+ Si noti che Visual C++ non supporta più la possibilità di esportare un makefile per il progetto attivo dall'ambiente di sviluppo. Usare le [Opzioni della riga di comando devenv](/visualstudio/ide/reference/devenv-command-line-switches) per compilare progetti di Visual Studio dalla riga di comando.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Compilazione di progetti C++ in Visual Studio](../ide/building-cpp-projects-in-visual-studio.md)

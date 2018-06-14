@@ -1,5 +1,5 @@
 ---
-title: Aggiunta guidata evento | Documenti Microsoft
+title: Aggiunta guidata evento | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,46 +18,47 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: f92f871f22fb01f3f0f37677c393fcd481c08120
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33325195"
 ---
 # <a name="add-event-wizard"></a>Aggiunta guidata evento
-Questa procedura guidata aggiunge un evento a un progetto controllo ActiveX MFC. È possibile specificare un evento personalizzato, è possibile personalizzare un evento in genere predefinito oppure è possibile selezionare da un elenco di eventi predefiniti.  
+Questa procedura guidata aggiunge un evento al progetto di un controllo ActiveX MFC. È possibile specificare un evento personalizzato, personalizzare un evento in genere predefinito oppure selezionare un evento da un elenco di eventi predefiniti.  
   
- **Nome dell'evento**  
+ **Nome evento**  
  Imposta il nome usato dai client di automazione per richiedere un evento dalla classe. Immettere un nome o selezionarne uno dall'elenco.  
   
- **Tipo di evento**  
- Indica il tipo di evento da aggiungere. Disponibile solo se si seleziona dal **nome evento** elenco.  
+ **Tipo evento**  
+ Indica il tipo di evento da aggiungere. Disponibile solo se si seleziona un'opzione dall'elenco **Nome evento**.  
   
 |Opzione|Descrizione|  
 |------------|-----------------|  
-|**Azionario**|Specifica che un evento predefinito, ad esempio un pulsante, viene implementato per questa classe. Eventi predefiniti sono definiti nella libreria Microsoft Foundation classe (MFC).|  
-|**Personalizzato**|Specifica che si fornisce un'implementazione personalizzata dell'evento.|  
+|**Predefinito**|Specifica l'implementazione di un evento predefinito per la classe, ad esempio il clic su un pulsante. Gli eventi predefiniti sono definiti nella libreria MFC (Microsoft Foundation Class).|  
+|**Personalizzato**|Specifica l'implementazione personalizzata dell'evento.|  
   
  **Nome interno**  
- Imposta il nome della funzione membro che invia l'evento. Disponibile solo per eventi personalizzati. Il nome è basato sul **nome evento**. Se si desidera specificare un nome diverso, è possibile modificare il nome interno **nome evento**.  
+ Imposta il nome della funzione membro che invia l'evento. Disponibile solo per gli eventi personalizzati. Il nome è basato sul **Nome evento**. Se si vuole specificare un nome diverso da **Nome evento** è possibile modificare il nome interno.  
   
- **Tipo di parametro**  
- Imposta il tipo per il **nome del parametro**. Selezionare il tipo dall'elenco.  
+ **Tipo parametro**  
+ Imposta il tipo per **Nome parametro**. Selezionare il tipo dall'elenco.  
   
- **Nome del parametro**  
- Imposta il nome di un parametro da passare attraverso l'evento. Dopo aver digitato il nome, è necessario fare clic su **Aggiungi** per aggiungerlo all'elenco dei parametri.  
+ **Nome parametro**  
+ Imposta il nome di un parametro da passare all'evento. Dopo aver digitato il nome, è necessario fare clic su **Aggiungi** per aggiungerlo all'elenco dei parametri.  
   
- Quando si fa clic su **Aggiungi**, viene visualizzato il nome di parametro **elenco parametri**.  
+ Dopo aver fatto clic su **Aggiungi**, il nome del parametro viene visualizzato nell'**Elenco parametri**.  
   
 > [!NOTE]
->  Se si specifica un nome di parametro e quindi fare clic su **fine** prima di scegliere **Aggiungi**, il parametro non viene aggiunto all'evento. È necessario trovare il metodo e inserire il parametro manualmente. **Elenco di parametri**  
+>  Se si specifica un nome di parametro e quindi si fa clic su **Fine** prima di fare clic su **Aggiungi**, il parametro non viene aggiunto all'evento. È necessario trovare il metodo e inserire il parametro manualmente. **Elenco parametri**  
   
  **Aggiungi**  
- Aggiunge il parametro specificato in **nome del parametro**e il relativo tipo, a **elenco parametri**. È necessario fare clic su **Aggiungi** per aggiungere un parametro all'elenco.  
+ Aggiunge il parametro specificato in **Nome parametro** e il relativo tipo all'**Elenco parametri**. È necessario fare clic su **Aggiungi** per aggiungere un parametro all'elenco.  
   
  **Rimuovi**  
- Rimuove il parametro selezionato nella **elenco parametri** dall'elenco.  
+ Rimuove il parametro selezionato nell'**Elenco parametri** dall'elenco.  
   
- **Elenco di parametri**  
- Visualizza tutti i parametri e i tipi aggiunti per il metodo. Quando si aggiungono parametri, la procedura guidata Aggiorna **elenco parametri** per visualizzare ogni parametro con il relativo tipo.  
+ **Elenco parametri**  
+ Visualizza tutti i parametri e i relativi tipi aggiunti per il metodo. Quando si aggiungono i parametri, la procedura guidata aggiorna l'**Elenco parametri** in modo da visualizzare ogni parametro con il relativo tipo.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Aggiunta di un evento](../ide/adding-an-event-visual-cpp.md)

@@ -1,5 +1,5 @@
 ---
-title: Estrai funzione | Documenti Microsoft
+title: Estrai funzione | Microsoft Docs
 ms.custom: ''
 ms.date: 11/16/2016
 ms.technology:
@@ -12,16 +12,17 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: 7fc4d48c972bca9352f326085574e4cf4df83aea
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33333157"
 ---
 # <a name="extract-function"></a>Estrai funzione
-**Che cosa:** consente di attivare un frammento di codice nella propria funzione.
+**Cosa:** consente di trasformare un frammento di codice in una funzione.
 
-**Quando:** si dispone di un frammento di codice esistente in una funzione che deve essere chiamata da un'altra funzione.  
+**Quando:** c'è un frammento di codice esistente in una funzione che deve essere chiamata da un'altra funzione.  
 
-**Perché:** è possibile copiare e incollare il codice, ma ciò potrebbe causare la duplicazione.  Una soluzione migliore consiste nell'effettuare il refactoring di frammento nella propria funzione che può essere chiamato liberamente da qualsiasi altra funzione.
+**Perché:** è possibile copiare e incollare il codice, ma ciò potrebbe causare la duplicazione.  Una soluzione migliore consiste nell'effettuare il refactoring del frammento nella relativa funzione, che può essere chiamato liberamente da qualsiasi altra funzione.
 
 **Come:**
 
@@ -32,16 +33,16 @@ ms.lasthandoff: 05/04/2018
 1. Eseguire quindi una delle operazioni seguenti:
    * **Tastiera**
      * Premere **CTRL+R** e quindi **CTRL+M**.  Si noti che i tasti di scelta rapida possono essere diversi a seconda del profilo selezionato.
-     * Premere **CTRL+.** Per attivare il **azioni rapide e refactoring** dal menu **Estrai funzione (sperimentale)** dal menu di scelta rapida.
+     * Premere **CTRL+.** per attivare il menu **Azioni rapide e refactoring** e selezionare **Estrai funzione (sperimentale)** dal menu di scelta rapida.
    * **Mouse**
-     * Selezionare **Modifica > eseguire il refactoring > Estrai funzione (sperimentale)**.
-     * Pulsante destro del mouse nel codice, selezionare il **azioni rapide e refactoring** dal menu **Estrai funzione (sperimentale)** dal menu di scelta rapida.
-     * Fare clic su di ![lampadina](images/bulb.png) icona che verrà visualizzata nel margine sinistro e scegliere **Estrai funzione (sperimentale)** dal menu di scelta rapida.
+     * Selezionare **Modifica > Effettua refactoring > Estrai funzione (sperimentale)**.
+     * Fare clic con il pulsante destro sul codice, selezionare il menu **Azioni rapide e refactoring** e selezionare **Estrai funzione (sperimentale)** dal menu di scelta rapida.
+     * Fare clic sull'icona ![lampadina](images/bulb.png) visualizzata nel margine sinistro e scegliere **Estrai funzione (sperimentale)** dal menu di scelta rapida.
 
-1. Nel **Estrai funzione o un metodo (sperimentale)** finestra, immettere il nuovo nome della funzione, selezionare in cui si desidera che il codice da inserire e fare clic su di **OK** pulsante.  
+1. Nella finestra **Estrai funzione/metodo (sperimentale)** immettere il nuovo nome della funzione, selezionare il punto in cui inserire il codice e fare clic sul pulsante **OK**.  
 
-   ![Estrai funzione (funzione)](images/extractfunction_dialog.png)
+   ![Funzione Estrai funzione](images/extractfunction_dialog.png)
 
-1. Verrà creata la nuova funzione in cui è specificato, un prototipo di funzione nel file di intestazione corrispondente e verrà modificato il codice originale per chiamare tale funzione.
+1. La nuova funzione verrà creata nel punto specificato, un prototipo di funzione nel file di intestazione corrispondente e il codice originale verrà modificato per chiamare tale funzione.
 
-   ![Estrarre il risultato di funzione](images/extractfunction_result.png)
+   ![Risultato di Estrai funzione](images/extractfunction_result.png)

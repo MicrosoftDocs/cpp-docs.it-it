@@ -1,5 +1,5 @@
 ---
-title: '&lt;paramref&gt; (Visual C++) | Documenti Microsoft'
+title: '&lt;paramref&gt; (Visual C++) | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,12 +20,13 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: fe6bb2d14b79e8080815967f3a666808f2b6efcc
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33326583"
 ---
 # <a name="ltparamrefgt-visual-c"></a>&lt;paramref&gt; (Visual C++)
-Il \<paramref > tag offre un modo per indicare che una parola è un parametro. Il file con estensione XML può essere elaborato per formattare questo parametro in modo specifico.  
+Il tag \<paramref > offre un modo per indicare che una parola è un parametro. Il file con estensione xml può essere elaborato per formattare questo parametro in modo specifico.  
   
 ## <a name="syntax"></a>Sintassi  
   

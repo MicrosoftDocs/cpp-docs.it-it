@@ -1,5 +1,5 @@
 ---
-title: Pagina delle proprietà risorse gestite | Documenti Microsoft
+title: Pagina delle proprietà Risorse gestite | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,27 +20,28 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: 2922a0a92a121d6838478daaf2c32f1c7a630d21
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33340359"
 ---
 # <a name="managed-resources-property-page"></a>pagina delle proprietà Risorse gestite
 Abilita le impostazioni per il compilatore di risorse.  
   
- Il **risorse gestite** pagina delle proprietà contiene le proprietà seguenti:  
+ La pagina delle proprietà **Risorse gestite** include le proprietà seguenti:  
   
- **Nome logico della risorsa**  
- Specifica il *nome logico* del file resources intermedio generato. Il nome logico è il nome utilizzato per caricare la risorsa. Se non viene specificato alcun nome logico, il nome del file di risorse (resx) viene utilizzato come il nome logico.  
+ **Nome logico risorsa**  
+ Specifica il *nome logico* del file con estensione resources intermedio generato. Il nome logico è il nome usato per caricare la risorsa. Se non viene specificato un nome logico, il nome file di risorse (con estensione resx) viene usato come nome logico.  
   
  **Nome file di output**  
- Specifica il nome del file di output finale che il file di risorse (resx) contribuisce a.  
+ Specifica il nome del file di output finale cui contribuisce il file di risorse (con estensione resx).  
   
  **Risorse localizzate predefinite**  
- Specifica se il file specificato. resx contribuisce alle risorse predefinite o a una DLL satellite.  
+ Specifica se il file con estensione resx specificato contribuisce alle risorse predefinite o a una DLL satellite.  
   
- Per informazioni su come accedere il **risorse gestite** pagina delle proprietà, vedere [funziona con le proprietà del progetto](../ide/working-with-project-properties.md).  
+ Per informazioni sull'accesso alla pagina delle proprietà **Risorse gestite**, vedere [Uso delle proprietà del progetto](../ide/working-with-project-properties.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Utilizzando RC (riga di comando RC)](http://msdn.microsoft.com/library/windows/desktop/aa381055)   
+ [Using RC (The RC Command Line)](http://msdn.microsoft.com/library/windows/desktop/aa381055)  (Uso di RC (riga di comando RC))  
  [Pagine delle proprietà](../ide/property-pages-visual-cpp.md)   
  [/ASSEMBLYRESOURCE (incorpora una risorsa gestita)](../build/reference/assemblyresource-embed-a-managed-resource.md)

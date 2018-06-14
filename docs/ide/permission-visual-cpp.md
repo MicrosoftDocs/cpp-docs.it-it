@@ -1,5 +1,5 @@
 ---
-title: '&lt;autorizzazione&gt; (Visual C++) | Documenti Microsoft'
+title: '&lt;permission&gt; (Visual C++) | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,12 +20,13 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: e13824780a5c73d4423bd544a97108b45d1b770a
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33324083"
 ---
-# <a name="ltpermissiongt-visual-c"></a>&lt;autorizzazione&gt; (Visual C++)
-Il tag \<permission> consente di documentare l'accesso a un membro. <xref:System.Security.PermissionSet> Consente di specificare l'accesso a un membro.  
+# <a name="ltpermissiongt-visual-c"></a>&lt;permission&gt; (Visual C++)
+Il tag \<permission> consente di documentare l'accesso a un membro. <xref:System.Security.PermissionSet> consente di specificare l'accesso a un membro.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -47,7 +48,7 @@ Il tag \<permission> consente di documentare l'accesso a un membro. <xref:System
 ## <a name="remarks"></a>Note  
  Compilare con [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) per elaborare i commenti relativi alla documentazione in un file.  
   
- Il compilatore di Visual C++ tenta di risolvere i riferimenti cref in un passaggio tramite i commenti della documentazione.  Pertanto, se si utilizzano le regole di ricerca di C++, un simbolo non viene trovato dal compilatore e il riferimento verrà contrassegnato come non risolto. Vedere [ \<seealso >](../ide/seealso-visual-cpp.md) per ulteriori informazioni.  
+ Il compilatore di Visual C++ tenta di risolvere i riferimenti cref in un passaggio tramite i commenti della documentazione.  Pertanto, se si utilizzano le regole di ricerca di C++, un simbolo non viene trovato dal compilatore e il riferimento verrà contrassegnato come non risolto. Per altre informazioni, vedere [\<seealso>](../ide/seealso-visual-cpp.md).  
   
 ## <a name="example"></a>Esempio  
   

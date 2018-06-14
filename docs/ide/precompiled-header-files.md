@@ -1,5 +1,5 @@
 ---
-title: File di intestazione precompilata | Documenti Microsoft
+title: File di intestazione precompilata | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,9 +22,10 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: 4595ea9ce27c40fb798ac050ce456c4d43b2cacb
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33328087"
 ---
 # <a name="precompiled-header-files"></a>File di intestazione precompilata
 Questi file vengono usati per compilare un file di intestazione precompilata denominato *Projname*.pch e un file di tipi precompilati denominato Stdafx.obj.  

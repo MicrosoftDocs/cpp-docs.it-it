@@ -1,5 +1,5 @@
 ---
-title: 'Pagina proprietà passaggio di compilazione personalizzata: Generale | Documenti Microsoft'
+title: 'Pagina delle proprietà Istruzione di compilazione personalizzata: Generale | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,14 +24,15 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: 5d88bd738711058794a525217ba2640e8d52356d
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33325929"
 ---
 # <a name="custom-build-step-property-page-general"></a>Pagina Istruzione di compilazione personalizzata: Generale
 Per ogni combinazione di configurazione del progetto e piattaforma di destinazione, è possibile specificare un'istruzione personalizzata da eseguire quando il progetto viene compilato.  
 
-Per la versione Linux di questa pagina, vedere [personalizzato passaggio proprietà di compilazione (C++ Linux)](../linux/prop-pages/custom-build-step-linux.md).
+Per la versione Linux di questa pagina, vedere [Proprietà Istruzione di compilazione personalizzata (Linux C++)](../linux/prop-pages/custom-build-step-linux.md).
   
 ## <a name="uielement-list"></a>Elenco UIElement  
  **Riga di comando**  
@@ -50,13 +51,13 @@ Per la versione Linux di questa pagina, vedere [personalizzato passaggio proprie
  Queste opzioni definiscono i tempi di esecuzione dell'istruzione personalizzata durante il processo di compilazione, relativamente alle destinazioni specificate. Le destinazioni più comunemente elencate sono BuildGenerateSources, BuildCompile e BuildLink perché rappresentano le istruzioni principali nel processo di compilazione. Altre destinazioni elencate spesso sono Midl, CLCompile e Link.  
   
  Considera output come contenuto  
- Questa opzione è significativa per le app Universal Windows Platform o Windows Phone, che includono tutti i file di contenuto nel pacchetto AppX.  
+ Questa opzione è significativa solo per le app della piattaforma UWP (Universal Windows Platform) o le app Windows Phone i cui file di contenuto sono tutti inclusi nel pacchetto appx.  
   
 ### <a name="to-specify-a-custom-build-step"></a>Per specificare un'istruzione di compilazione personalizzata  
   
-1.  Sulla barra dei menu scegliere **Progetto**, **Proprietà**. Per ulteriori informazioni, vedere [funziona con le proprietà del progetto](../ide/working-with-project-properties.md).  
+1.  Sulla barra dei menu scegliere **Progetto**, **Proprietà**. Per altre informazioni, vedere [Uso delle proprietà del progetto](../ide/working-with-project-properties.md).  
   
-2.  Nel **pagine delle proprietà** finestra di dialogo passare al **le proprietà di configurazione**, **istruzione di compilazione personalizzata**, **generale** pagina.  
+2.  Nella finestra di dialogo **Pagine delle proprietà** spostarsi nella pagina **Proprietà di configurazione**, **Istruzione di compilazione personalizzata**, **Generale**.  
   
 3.  Modificare le impostazioni.  
   

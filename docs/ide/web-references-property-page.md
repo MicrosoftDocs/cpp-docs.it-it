@@ -1,5 +1,5 @@
 ---
-title: Pagina delle proprietà riferimenti Web | Documenti Microsoft
+title: Pagina delle proprietà Riferimenti Web | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,28 +21,29 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: 94f9dfa441fd98a91b15478eadc10eaa39a08687
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33328851"
 ---
 # <a name="web-references-property-page"></a>Pagina delle proprietà Riferimenti Web
-Il **riferimenti Web** pagina delle proprietà specifica la modalità di generazione di classe proxy del servizio Web XML. Se si aggiunge un riferimento web al progetto, verrà generata una classe di proxy del servizio Web XML. Vedere [Aggiungi riferimento Web](http://msdn.microsoft.com/en-us/bdf05776-c591-40af-bfd7-e1e2aa1e87b5) per ulteriori informazioni.  
+La pagina delle proprietà **Riferimenti Web** specifica come sarà generata la classe proxy del servizio Web XML. Verrà generata una classe proxy del servizio Web XML se si aggiunge un riferimento Web al progetto. Per alte informazioni, vedere [Aggiungi riferimento Web](http://msdn.microsoft.com/en-us/bdf05776-c591-40af-bfd7-e1e2aa1e87b5).  
   
- Il **riferimenti Web** pagina delle proprietà contiene le proprietà seguenti:  
+ La pagina delle proprietà **Riferimenti Web** include le proprietà seguenti:  
   
  **File di output**  
- Il nome del file contenga una classe proxy del servizio Web XML.  
+ Nome del file che include la classe proxy del servizio Web XML.  
   
  **Non visualizzare messaggio di avvio**  
- Non viene visualizzato il banner di Web Services Description Language Tool (Wsdl.exe).  
+ Non visualizza il messaggio per lo strumento del linguaggio di descrizione dei servizi Web (Wsdl.exe).  
   
  **Spazio dei nomi**  
- Specifica il nome del proxy web generato.  
+ Specifica il nome del proxy Web generato.  
   
  **Riferimenti aggiuntivi**  
- Specifica le DLL aggiuntive a cui fa riferimento la DLL del proxy.  
+ Specifica le DLL aggiuntive a cui fa riferimento la DLL proxy.  
   
- Per informazioni su come accedere il **riferimento Web** pagina delle proprietà, vedere [funziona con le proprietà del progetto](../ide/working-with-project-properties.md).  
+ Per informazioni sull'accesso alla pagina delle proprietà **Riferimenti Web**, vedere [Uso delle proprietà del progetto](../ide/working-with-project-properties.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Pagine delle proprietà](../ide/property-pages-visual-cpp.md)

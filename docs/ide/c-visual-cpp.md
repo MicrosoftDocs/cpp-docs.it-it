@@ -1,5 +1,5 @@
 ---
-title: '&lt;c&gt; (Visual C++) | Documenti Microsoft'
+title: '&lt;c&gt; (Visual C++) | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,12 +19,13 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: f17d56601f49056144433155e0d898f56c42bdab
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33329258"
 ---
 # <a name="ltcgt-visual-c"></a>&lt;c&gt; (Visual C++)
-Il \<c > tag indica che il testo all'interno di una descrizione deve essere contrassegnato come codice. Usare [\<code>](../ide/code-visual-cpp.md) per indicare più righe come codice.  
+Il tag \<c> indica che il testo all'interno di una descrizione deve essere contrassegnato come codice. Usare [\<code>](../ide/code-visual-cpp.md) per indicare più righe come codice.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -34,7 +35,7 @@ Il \<c > tag indica che il testo all'interno di una descrizione deve essere cont
   
 #### <a name="parameters"></a>Parametri  
  `text`  
- Il testo che si desidera indicare come codice.  
+ Testo che si vuole indicare come codice.  
   
 ## <a name="remarks"></a>Note  
  Compilare con [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) per elaborare i commenti relativi alla documentazione in un file.  

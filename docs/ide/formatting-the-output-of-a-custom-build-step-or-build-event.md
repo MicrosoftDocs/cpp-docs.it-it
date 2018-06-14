@@ -1,5 +1,5 @@
 ---
-title: Formattazione dell'Output di un'istruzione di compilazione personalizzata o un evento di compilazione | Documenti Microsoft
+title: Formattazione dell'output di un'istruzione di compilazione personalizzata o un evento di compilazione | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,40 +21,41 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: 7da71e6391d2d3223b47ba528686d2fec003ab3a
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33321350"
 ---
 # <a name="formatting-the-output-of-a-custom-build-step-or-build-event"></a>Formattazione dell'output di un'istruzione di compilazione personalizzata o un evento di compilazione
-Se l'output di un'istruzione di compilazione personalizzata o un evento di compilazione è formattato correttamente, gli utenti ottengono i vantaggi seguenti:  
+Se l'output di un'istruzione di compilazione personalizzata o un evento di compilazione viene formattato correttamente, si evidenziano i vantaggi seguenti:  
   
--   Avvisi ed errori sono conteggiati **Output** finestra.  
+-   Avvisi ed errori sono conteggiati nella finestra **Output**.  
   
--   Viene visualizzato in output il **elenco attività** finestra.  
+-   L'output viene visualizzato nella finestra **Elenco attività**.  
   
--   Facendo clic sull'output nella **Output** finestra viene visualizzato l'argomento appropriato.  
+-   Facendo clic sull'output nella finestra **Output** viene visualizzato l'argomento corrispondente.  
   
--   Sono abilitate le operazioni di F1 il **elenco attività** finestra o **Output** finestra.  
+-   Le operazioni di F1 sono abilitate nella finestra **Elenco attività** o **Output**.  
   
- Il formato dell'output deve essere:  
+ Il formato dell'output sarà il seguente:  
   
- {*filename* (*riga #* [, *colonna #*]) &#124; *toolname*} **:**  
+ {*filename* (*line#* [, *column#*]) &#124; *toolname*} **:**  
   
- [*qualsiasi testo*] {**errore** &#124; **avviso**} *codice # # #***:*** stringa localizzabile*  
+ [*any text*] {**error** &#124; **warning**} *code####***:*** localizable string*  
   
- [ *qualsiasi testo* ]  
+ [ *any text* ]  
   
  Dove:  
   
--   {*un* &#124; *b*} è una scelta di uno *un* o *b*.  
+-   {*a* &#124; *b*} è una scelta tra *a* o *b*.  
   
--   [`ccc`] è un parametro stringa facoltativa.  
+-   [`ccc`] è una stinga o un parametro facoltativo.  
   
  Ad esempio:  
   
- C:\\*sourcefile.cpp*(134): errore C2143: errore di sintassi: manca ';' prima di '}'  
+ C:\\*sourcefile.cpp*(134) : error C2143: syntax error : missing ';' before '}'  
   
- LINK: errore irreversibile LNK1104: Impossibile aprire il file '*somelib.lib*'  
+ LINK : fatal error LNK1104: cannot open file '*somelib.lib*'  
   
 ## <a name="see-also"></a>Vedere anche  
  [Informazioni sulle istruzioni di compilazione personalizzate e sugli eventi di compilazione](../ide/understanding-custom-build-steps-and-build-events.md)

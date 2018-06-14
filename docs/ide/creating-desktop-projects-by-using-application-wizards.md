@@ -1,5 +1,5 @@
 ---
-title: Creazione di progetti Desktop mediante creazioni guidate applicazione | Documenti Microsoft
+title: Creazione di progetti desktop tramite le creazioni guidate applicazioni | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,12 +22,13 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: 5f4328747a594d18dd61631ddb930d8c59964452
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33334015"
 ---
 # <a name="creating-desktop-projects-by-using-application-wizards"></a>Creazione di progetti desktop tramite le creazioni guidate applicazioni
-Per ogni tipo di progetto Visual C++ è disponibile una creazione guidata applicazione in grado di generare nuovi progetti in modo semplice e rapido in base al modello di progetto.  Per aprire una creazione guidata applicazione, utilizzare il **nuovo progetto** finestra di dialogo per specificare le proprietà del progetto, ad esempio il nome della soluzione o di directory e il progetto, in cui risiederà il progetto.  
+Per ogni tipo di progetto Visual C++ è disponibile una creazione guidata applicazione in grado di generare nuovi progetti in modo semplice e rapido in base al modello di progetto.  Per aprire una creazione guidata applicazione, usare la finestra di dialogo **Nuovo progetto** per specificare le proprietà del progetto, ad esempio il nome del progetto o la directory e la soluzione in cui risiederà.  
   
 #### <a name="to-open-a-visual-c-application-wizard"></a>Per visualizzare una creazione guidata applicazione di Visual C++  
   
@@ -35,13 +36,13 @@ Per ogni tipo di progetto Visual C++ è disponibile una creazione guidata applic
   
      Verrà visualizzata la finestra di dialogo **Nuovo progetto** .  
   
-2.  Nel riquadro Tipi progetto selezionare la **progetti Visual C++** cartella. Nel riquadro Modelli verrà visualizzata un'icona per ogni tipo di progetto di C++.  
+2.  Nel riquadro Tipi progetto selezionare la cartella **Progetti di Visual C++**. Nel riquadro Modelli verrà visualizzata un'icona per ogni tipo di progetto di C++.  
   
 3.  Nel riquadro Modelli selezionare un'icona per scegliere un tipo di progetto. Al di sotto dei riquadri verrà visualizzato un messaggio che indica il tipo di progetto che si sta per creare.  
   
-4.  Specificare le proprietà del progetto o saltare questo passaggio se si desidera utilizzare le proprietà predefinite del progetto di Visual Studio. Vedere [funziona con le proprietà del progetto](../ide/working-with-project-properties.md) per informazioni dettagliate.  
+4.  Specificare le proprietà del progetto o saltare questo passaggio se si desidera utilizzare le proprietà predefinite del progetto di Visual Studio. Per informazioni dettagliate, vedere [Utilizzo di proprietà di progetto](../ide/working-with-project-properties.md).  
   
-5.  Fare clic su **OK**e la procedura guidata per il progetto viene visualizzata digitare. Se si desidera leggere l'argomento della Guida per la procedura guidata, premere **F1**.  
+5.  Scegliere **OK** per visualizzare la creazione guidata relativa al tipo di progetto. Per leggere l'argomento della Guida per la procedura guidata, premere **F1**.  
   
  Quando si crea un progetto, è possibile creare una nuova soluzione oppure utilizzarne una esistente. Per altre informazioni, vedere [Procedura: Creare un progetto C++ da codice esistente](../ide/how-to-create-a-cpp-project-from-existing-code.md).  
   

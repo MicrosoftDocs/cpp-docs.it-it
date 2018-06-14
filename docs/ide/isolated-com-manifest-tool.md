@@ -1,5 +1,5 @@
 ---
-title: Strumento manifesto isolato proprietà COM (Visual C++) | Documenti Microsoft
+title: Proprietà COM isolato dello strumento Manifesto (Visual C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,14 +19,15 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: c425a71f8bb8a7972ade29fb0d18cf3eab7debb5
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33330181"
 ---
-# <a name="isolated-com-manifest-tool-configuration-properties-ltprojectnamegt-property-pages-dialog-box"></a>Isolamento COM, strumento manifesto, proprietà di configurazione, &lt;Projectname&gt; la finestra di dialogo Pagine delle proprietà
-Utilizzare questa finestra di dialogo per specificare **COM isolato** opzioni per [Mt.exe](http://msdn.microsoft.com/library/aa375649).  
+# <a name="isolated-com-manifest-tool-configuration-properties-ltprojectnamegt-property-pages-dialog-box"></a>COM isolato, Strumento Manifesto, Proprietà di configurazione, finestra di dialogo Pagine delle proprietà di &lt;nomeprogetto&gt;
+Usare questa finestra di dialogo per specificare opzioni **COM isolato** per [Mt.exe](http://msdn.microsoft.com/library/aa375649).  
   
- Per accedere a questa finestra di dialogo pagina delle proprietà, aprire le pagine delle proprietà per il progetto o la finestra delle proprietà. Espandere il **strumento manifesto** nodo **proprietà comuni**, quindi selezionare **COM isolato**.  
+ Per accedere a questa pagina delle proprietà, aprire le pagine delle proprietà per il progetto o la finestra delle proprietà. Espandere il nodo **Strumento Manifesto** in **Proprietà comuni**, quindi selezionare **COM isolato**.  
   
 ## <a name="task-list"></a>Elenco attività  
   
@@ -34,19 +35,19 @@ Utilizzare questa finestra di dialogo per specificare **COM isolato** opzioni pe
   
 ## <a name="uielement-list"></a>Elenco UIElement  
  **File libreria dei tipi**  
- Usa l'opzione /tlb. per specificare il nome del file della libreria dei (file con estensione tlb) che lo strumento manifesto verrà utilizzato per generare il file manifesto.  
+ Usa l'opzione /tlb per specificare il nome del file della libreria dei tipi (file con estensione tlb) che lo strumento Manifesto usa per generare il file manifesto.  
   
- **File Script di registrazione**  
- Utilizza l'opzione /rgs per specificare il nome del file di script di registrazione (file con estensione RGS) che lo strumento manifesto verrà utilizzato per generare il file manifesto.  
+ **File di script registrazione**  
+ Usa l'opzione /rgs per specificare il nome del file di script registrazione (con estensione rgs) che lo strumento Manifesto usa per generare il file manifesto.  
   
- **Nome File del componente**  
- Usa l'opzione /dll per specificare il nome della risorsa che genera lo strumento manifesto. È necessario immettere un valore per questa proprietà quando un valore per **File libreria dei tipi** o **File Script registrazione** specificati.  
+ **Nome file componente**  
+ Usa l'opzione /dll per specificare il nome della risorsa generata dallo strumento Manifesto. È necessario immettere un valore per questa proprietà quando sono specificati valori per **File libreria dei tipi** o per **File di script registrazione**.  
   
  **File sostitutivo**  
- Usa l'opzione /replacements per specificare il percorso completo del file che contiene i valori per le stringhe sostituibili nel file RGS.  
+ Usa l'opzione /replacements per specificare il percorso completo del file che contiene i valori delle stringhe sostituibili nel file con estensione rgs.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Applicazioni isolate](http://msdn.microsoft.com/library/aa375190)   
  [Manifesto dell'applicazione ClickOnce](/visualstudio/deployment/clickonce-application-manifest)   
- [Pagine delle proprietà dello strumento manifesto](../ide/manifest-tool-property-pages.md)   
+ [Pagine delle proprietà dello strumento Manifesto](../ide/manifest-tool-property-pages.md)   
  [Utilizzo di Proprietà del progetto](../ide/working-with-project-properties.md)   

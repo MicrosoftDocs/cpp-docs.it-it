@@ -1,5 +1,5 @@
 ---
-title: Implementazione di un'interfaccia (Visual C++) | Documenti Microsoft
+title: Implementazione di un'interfaccia (Visual C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,36 +16,37 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: 309ae9dc576f93574836ab4916e87c5232b37a6c
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33332767"
 ---
 # <a name="implementing-an-interface-visual-c"></a>Implementazione di un'interfaccia (Visual C++)
-Per implementare un'interfaccia, è necessario avere creato un progetto come un'applicazione COM ATL o di un'applicazione MFC con supporto ATL. È possibile utilizzare il [Creazione guidata progetto ATL](../atl/reference/atl-project-wizard.md) per creare un'applicazione ATL o [aggiungere un oggetto ATL all'applicazione MFC](../mfc/reference/adding-atl-support-to-your-mfc-project.md) per implementare il supporto ATL per un'applicazione MFC.  
+Per implementare un'interfaccia, è necessario avere creato un progetto come un'applicazione ATL COM o un'applicazione MFC con supporto ATL. È possibile usare la [Creazione guidata progetto ATL](../atl/reference/atl-project-wizard.md) per creare un'applicazione ATL o [aggiungere un oggetto ATL all'applicazione MFC](../mfc/reference/adding-atl-support-to-your-mfc-project.md) per implementare il supporto ATL per un'applicazione MFC.  
   
- Dopo aver creato il progetto, per implementare un'interfaccia, è innanzitutto necessario aggiungere un oggetto ATL. Vedere [aggiunta di oggetti e i controlli a un progetto ATL](../atl/reference/adding-objects-and-controls-to-an-atl-project.md) per un elenco di procedure guidate che aggiungere oggetti al progetto ATL.  
+ Dopo aver creato il progetto, per implementare un'interfaccia è necessario per prima cosa aggiungere un oggetto ATL. Per un elenco di procedure guidate per aggiungere oggetti al progetto ATL, vedere [Aggiunta di oggetti e controlli a un progetto ATL](../atl/reference/adding-objects-and-controls-to-an-atl-project.md).  
   
 > [!NOTE]
->  La procedura guidata non supporta le finestre di dialogo ATL, servizi Web XML mediante ATL, oggetti delle prestazioni o i contatori delle prestazioni.  
+>  La procedura guidata non supporta le finestre di dialogo ATL, i servizi Web XML che usano ATL, gli oggetti prestazioni o i contatori delle prestazioni.  
   
- Se si [aggiungere un controllo ATL](../atl/reference/adding-an-atl-control.md), è possibile specificare se implementare le interfacce predefinite, elencate nel [interfacce](../atl/reference/interfaces-atl-control-wizard.md) pagina che procedura guidata e definito in atlcom. h.  
+ Se si [aggiungere un controllo ATL](../atl/reference/adding-an-atl-control.md), è possibile specificare se implementare le interfacce predefinite, elencate nella pagina [Interfacce](../atl/reference/interfaces-atl-control-wizard.md) della procedura guidata e definite in atlcom.h.  
   
- Dopo aver aggiunto l'oggetto o un controllo, è possibile implementare altre interfacce, che si trova in qualsiasi libreria dei tipi disponibili, usando l'implementazione guidata interfaccia.  
+ Dopo aver aggiunto l'oggetto o il controllo, è possibile implementare altre interfacce, incluse in qualsiasi libreria dei tipi disponibili, usando l'Implementazione guidata interfaccia.  
   
- Se si aggiunge una nuova interfaccia, è necessario aggiungerla manualmente al file IDL del progetto. Vedere [aggiunta una nuova interfaccia in un progetto ATL](../atl/reference/adding-a-new-interface-in-an-atl-project.md) per ulteriori informazioni.  
+ Se si aggiunge una nuova interfaccia, è necessario aggiungerla manualmente al file con estensione idl del progetto. Per altre informazioni, vedere [Aggiunta di una nuova interfaccia in un progetto ATL](../atl/reference/adding-a-new-interface-in-an-atl-project.md).  
   
 ### <a name="to-implement-an-interface"></a>Per implementare un'interfaccia  
   
-1.  In visualizzazione classi, fare clic sul nome della classe per l'oggetto ATL.  
+1.  In Visualizzazione classi fare clic con il pulsante destro del mouse sul nome della classe per l'oggetto ATL.  
   
-2.  Fare clic su **Aggiungi** dal menu di scelta rapida e quindi fare clic su **implementa interfaccia** per visualizzare il [implementazione guidata interfaccia](../ide/implement-interface-wizard.md).  
+2.  Fare clic su **Aggiungi** dal menu di scelta rapida e quindi fare clic su **Implementa interfaccia** per visualizzare l'[Implementazione guidata interfaccia](../ide/implement-interface-wizard.md).  
   
-3.  Selezionare le interfacce da implementare da librerie dei tipi appropriate, quindi scegliere **fine**.  
+3.  Selezionare le interfacce da implementare dalle librerie di tipi appropriate e fare clic su **Fine**.  
   
-4.  In visualizzazione classi, espandere base dell'oggetto e interfacce nodo per visualizzare l'interfaccia è stata implementata e quindi espandere il nodo dell'interfaccia per visualizzare la proprietà disponibili, metodi ed eventi.  
+4.  In Visualizzazione classi espandere il nodo relativo a basi e interfacce dell'oggetto per visualizzare l'interfaccia implementata e quindi espandere il nodo dell'interfaccia per visualizzarne le proprietà, i metodi e gli eventi disponibili.  
   
     > [!NOTE]
-    >  È inoltre possibile utilizzare il [Visualizzatore oggetti](http://msdn.microsoft.com/en-us/f89acfc5-1152-413d-9f56-3dc16e3f0470) per esaminare i membri dell'interfaccia.  
+    >  È anche possibile usare il [Visualizzatore oggetti](http://msdn.microsoft.com/en-us/f89acfc5-1152-413d-9f56-3dc16e3f0470) per esaminare i membri dell'interfaccia.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Creazione di un'interfaccia COM](../ide/creating-a-com-interface-visual-cpp.md)   

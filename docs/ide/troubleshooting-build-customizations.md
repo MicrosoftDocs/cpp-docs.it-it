@@ -1,5 +1,5 @@
 ---
-title: Risoluzione dei problemi delle personalizzazioni compilazioni | Documenti Microsoft
+title: Risoluzione dei problemi relativi alle personalizzazioni della compilazione | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,26 +22,27 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: d48e9f7bdcbf422a25fb0bdb40411e6c662fadc2
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33330273"
 ---
 # <a name="troubleshooting-build-customizations"></a>Risoluzione dei problemi relativi alle personalizzazioni della compilazione
-Se istruzioni di compilazione personalizzata o gli eventi non si comporta come previsto, esistono diverse operazioni da eseguire per cercare di identificare il problema.  
+Se le istruzioni o gli eventi di compilazione personalizzati non funzionano come previsto, è possibile provare a identificare il problema in vari modi.  
   
--   Assicurarsi che i file in cui che generano le istruzioni di compilazione personalizzata corrispondano ai file dichiarati come output.  
+-   Assicurarsi che i file generati dalle istruzioni di compilazione personalizzate corrispondano ai file dichiarati come output.  
   
--   Se le istruzioni di compilazione personalizzata generano tutti i file di input o dipendenze di altre istruzioni (personalizzati o meno) di compilazione, assicurarsi che tali file vengono aggiunti al progetto. E verificare che gli strumenti che utilizzano tali file eseguito dopo l'istruzione di compilazione personalizzata.  
+-   Se le istruzioni di compilazione personalizzate generano file che sono input o dipendenze di altre istruzioni di compilazione (personalizzate o meno), verificare che tali file siano stati aggiunti al progetto. Verificare anche che gli strumenti che usano tali file vengano eseguiti dopo l'istruzione di compilazione personalizzata.  
   
--   Per visualizzare gli effetti dell'istruzione di compilazione personalizzato, aggiungere `@echo on` come primo comando. Gli eventi di compilazione le istruzioni di compilazione sono inserire in un file con estensione bat temporaneo e quando viene compilato il progetto. Pertanto, è possibile aggiungere all'evento di compilazione di controllo degli errori o i comandi di passaggio di compilazione.  
+-   Per visualizzare gli effetti dell'istruzione di compilazione personalizzata, aggiungere `@echo on` come primo comando. Gli eventi di compilazione e le istruzioni di compilazione vengono inseriti in un file temporaneo con estensione bat ed eseguiti quando viene compilato il progetto. Pertanto è possibile aggiungere il controllo degli errori ai comandi dell'evento di compilazione o dell'istruzione di compilazione.  
   
--   Esaminare il log di compilazione nella directory dei file intermedi per verificare ciò che effettivamente eseguito. Il percorso e il nome del log di compilazione è rappresentato dal **MSBuild** espressione (macro), **$ (IntDir)\\$(MSBuildProjectName) log**.  
+-   Esaminare il log di compilazione nella directory dei file intermedi per verificare quali elementi sono stati effettivamente eseguiti. Il percorso e il nome del log di compilazione sono rappresentati dall'espressione macro **MSBuild** **$(IntDir)\\$(MSBuildProjectName).log**.  
   
--   Modificare le impostazioni del progetto per raccogliere più la quantità di informazioni nel log di compilazione predefinita. Scegliere **Opzioni** dal menu **Strumenti**. Nel **opzioni** nella finestra di dialogo fare clic su di **progetti e soluzioni** nodo e quindi fare clic su di **compilare ed eseguire** nodo. Quindi, nel **livello di dettaglio file log di MSBuild project build** fare clic su **Detailed**.  
+-   Modificare le impostazioni del progetto per raccogliere nel log di compilazione una quantità di informazioni superiore a quella predefinita. Scegliere **Opzioni** dal menu **Strumenti**. Nella finestra di dialogo **Opzioni** fare clic sul nodo **Progetti e soluzioni** e quindi fare clic sulla pagina **Compila ed esegui**. Nella casella **Livello di dettaglio file di log di compilazione progetto MSBuild** fare clic su **Dettagliato**.  
   
--   Verificare che i valori di qualsiasi file directory o nome di macro in uso. È possibile ripetere le macro singolarmente oppure è possibile aggiungere `copy %0 command.bat` all'inizio dell'istruzione di compilazione personalizzata, che verranno copiati i comandi dell'istruzione di compilazione personalizzata a bat con tutte le macro espanse.  
+-   Verificare i valori dei nomi file o delle macro di directory in uso. È possibile eseguire l'operazione echo sulle macro singolarmente oppure aggiungere `copy %0 command.bat` all'inizio dell'istruzione di compilazione personalizzata, in modo che i comandi dell'istruzione vengano copiati in command.bat con tutte le macro espanse.  
   
--   Eseguire istruzioni di compilazione personalizzate e gli eventi singolarmente per controllarne il comportamento di compilazione.  
+-   Eseguire le istruzioni di compilazione personalizzate e gli eventi di compilazione uno alla volta per verificarne il comportamento.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Informazioni sulle istruzioni di compilazione personalizzate e sugli eventi di compilazione](../ide/understanding-custom-build-steps-and-build-events.md)

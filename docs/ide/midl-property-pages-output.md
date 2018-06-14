@@ -1,5 +1,5 @@
 ---
-title: 'Pagine delle proprietà MIDL: Output | Documenti Microsoft'
+title: 'Pagine delle proprietà MIDL: Output | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,12 +24,13 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: 0ff30460ad68e6efb1abc3d84925b362cf03f551
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33325773"
 ---
 # <a name="midl-property-pages-output"></a>Pagine delle proprietà MIDL: Output
-Il **Output** pagina delle proprietà di **MIDL** cartella consente di specificare le seguenti opzioni del compilatore MIDL:  
+La pagina delle proprietà **Output** nella cartella **MIDL** consente di specificare le opzioni seguenti del compilatore MIDL:  
   
 -   Directory di output ([/out](http://msdn.microsoft.com/library/windows/desktop/aa367358))  
   
@@ -41,11 +42,11 @@ Il **Output** pagina delle proprietà di **MIDL** cartella consente di specifica
   
 -   File proxy ([/proxy](http://msdn.microsoft.com/library/windows/desktop/aa367362))  
   
--   Generare una libreria dei tipi ([/notlb](http://msdn.microsoft.com/library/windows/desktop/aa367343))  
+-   Genera libreria dei tipi ([/notlb](http://msdn.microsoft.com/library/windows/desktop/aa367343))  
   
 -   Libreria dei tipi ([/tlb](http://msdn.microsoft.com/library/windows/desktop/aa367372))  
   
- Per informazioni su come accedere il **Output** pagina delle proprietà di **MIDL** cartella, vedere [funziona con le proprietà del progetto](../ide/working-with-project-properties.md).  
+ Per informazioni sull'accesso alla pagina delle proprietà **Output** nella cartella **MIDL**, vedere [Uso delle proprietà del progetto](../ide/working-with-project-properties.md).  
   
  Per informazioni su come accedere a livello di codice alle opzioni MIDL per i progetti C++, vedere <xref:Microsoft.VisualStudio.VCProjectEngine.VCMidlTool>.  
   

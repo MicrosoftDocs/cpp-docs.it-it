@@ -1,5 +1,5 @@
 ---
-title: Pagina delle proprietà NMake (C++ di Windows) | Documenti Microsoft
+title: Pagina delle proprietà NMake (Windows C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,49 +21,50 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: f156d69467f00c4c4a62ec84d3b870e2999d7115
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33327460"
 ---
 # <a name="nmake-property-page"></a>NMake (pagina delle proprietà)
-Il **NMake** pagina delle proprietà consente di specificare le impostazioni di compilazione per i progetti NMake.  
+La pagina delle proprietà **NMake** consente di specificare le impostazioni di compilazione per i progetti NMake.  
   
- Per ulteriori informazioni sui progetti NMake, vedere [creazione di un progetto Makefile](../ide/creating-a-makefile-project.md). Per progetti MakeFile non_Windows, vedere [le proprietà del progetto MakeFile (C++ Linux)](../linux/prop-pages/makefile-linux.md), [le proprietà del progetto generale (Android C++ Makefile)](/visualstudio/cross-platform/general-makefile-android-prop-page) o [le proprietà di NMake (C++ Android)](/visualstudio/cross-platform/nmake-android-prop-page).
+ Per altre informazioni sui progetti NMake, vedere [Creazione di un progetto makefile](../ide/creating-a-makefile-project.md). Per i progetti makefile non Windows, vedere [Proprietà di un progetto makefile (Linux C++)](../linux/prop-pages/makefile-linux.md), [Proprietà dei progetti generali (makefile di Android C++)](/visualstudio/cross-platform/general-makefile-android-prop-page) o [Proprietà di NMake (Android C++)](/visualstudio/cross-platform/nmake-android-prop-page).
   
- Il **NMake** pagina delle proprietà contiene le proprietà seguenti.  
+ La pagina delle proprietà **NMake** include le proprietà seguenti.  
   
 ## <a name="uielement-list"></a>Elenco UIElement  
- **Riga di comando di compilazione**  
- Specifica il comando da eseguire quando **compilare** si fa clic su di **compilare** menu.  
+ **Riga di comando per Compila**  
+ Specifica il comando da eseguire quando è selezionata l'opzione **Compila** nel menu **Compila**.  
   
- **Ricompila tutto da riga di comando**  
- Specifica il comando da eseguire quando **Ricompila tutto** si fa clic su di **compilare** menu.  
+ **Riga di comando per Ricompila tutto**  
+ Specifica il comando da eseguire quando è selezionata l'opzione **Ricompila tutto** nel menu **Compila**.  
   
- **Eseguire la pulizia della riga di comando**  
- Specifica il comando da eseguire quando **Pulisci** si fa clic su di **compilare** menu.  
+ **Riga di comando per Pulisci**  
+ Specifica il comando da eseguire quando è selezionata l'opzione **Pulisci** nel menu **Compila**.  
   
  **Output**  
- Specifica il nome del file che conterrà l'output per la riga di comando. Per impostazione predefinita, questo nome di file è basato sul nome del progetto.  
+ Specifica il nome del file che conterrà l'output della riga di comando. Per impostazione predefinita, il nome di questo file è basato sul nome del progetto.  
   
  **Definizioni del preprocessore**  
- Specifica le definizioni del preprocessore che utilizzato dai file di origine. Il valore predefinito è la piattaforma corrente e la configurazione.  
+ Specifica tutte le definizioni del preprocessore usate dai file di origine. Il valore predefinito è determinato dalla piattaforma corrente e dalla configurazione.  
   
- **Percorso di ricerca**  
- Specifica la directory in cui il compilatore cerca i file di inclusione.  
+ **Percorso di ricerca di inclusione**  
+ Specifica le directory in cui il compilatore ricerca i file di inclusione.  
   
- **Forzato include**  
- Specifica i file che il preprocessore elabora automaticamente anche se non vengono inclusi nei file di progetto.  
+ **Inclusioni forzate**  
+ Specifica i file che il preprocessore elabora automaticamente anche se non sono inclusi nei file di progetto.  
   
  **Percorso di ricerca assembly**  
- Specifica le directory in cui .NET Framework Cerca quando si tenta di risolvere l'assembly .NET.  
+ Specifica le directory in cui .NET Framework esegue la ricerca quando tenta di risolvere gli assembly .NET.  
   
- **Forzare l'utilizzo di assembly**  
+ **Assembly a uso forzato**  
  Specifica gli assembly .NET Framework elabora automaticamente.  
   
  **Opzioni aggiuntive**  
- Specifica le opzioni aggiuntive del compilatore per IntelliSense da usare quando si analizza file C++.  
+ Specifica le opzioni aggiuntive del compilatore per IntelliSense da usare quando si analizzano file C++.  
   
- Per informazioni sulle modalità di accesso di **NMake** pagina delle proprietà, vedere [funziona con le proprietà del progetto](../ide/working-with-project-properties.md).  
+ Per informazioni sull'accesso alla pagina delle proprietà **NMake**, vedere [Uso delle proprietà del progetto](../ide/working-with-project-properties.md).  
   
  Per informazioni su come accedere a livello di codice ai membri di questo oggetto, vedere <xref:Microsoft.VisualStudio.VCProjectEngine.VCNMakeTool>.  
   

@@ -1,5 +1,5 @@
 ---
-title: . Elaborazione del File XML | Documenti Microsoft
+title: Elaborazione del file con estensione xml | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,39 +16,40 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: 1cf6f5660e1aaeaeff4050bb80009eda7d14c3ba
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33340515"
 ---
 # <a name="xml-file-processing"></a>Elaborazione del file .Xml
-Il compilatore genera una stringa identificativa (ID) per ciascun costrutto del codice che contiene tag per la creazione della documentazione. Per ulteriori informazioni, vedere [consigliato commenti relativi alla documentazione di tag](../ide/recommended-tags-for-documentation-comments-visual-cpp.md). La stringa ID identifica in modo univoco il costrutto. I programmi che elaborano il file XML è possono utilizzare la stringa di ID per identificare il corrispondente elemento di reflection o metadati di .NET Framework a cui si applica la documentazione.  
+Il compilatore genera una stringa identificativa (ID) per ciascun costrutto del codice che contiene tag per la creazione della documentazione. Per altre informazioni, vedere [Tag consigliati per i commenti relativi alla documentazione](../ide/recommended-tags-for-documentation-comments-visual-cpp.md). La stringa ID identifica in modo univoco il costrutto. I programmi che elaborano il file con estensione xml possono usare la stringa ID per identificare i metadati o l'elemento reflection di .NET Framework corrispondente a cui si applica la documentazione.  
   
- Il file XML non è una rappresentazione gerarchica del codice, è un elenco semplice con un ID generato per ogni elemento.  
+ Il file con estensione xml non è una rappresentazione gerarchica del codice, bensì un elenco semplice contenente un ID generato per ogni elemento.  
   
  Per generare gli ID, il compilatore applica le regole seguenti:  
   
--   Nessuno spazio vuoto viene inserito nella stringa.  
+-   Assenza di spazi vuoti nella stringa.  
   
--   La prima parte della stringa di ID identifica il tipo di membro specificato, con un singolo carattere seguito da due punti. Vengono usati i tipi di membri seguenti:  
+-   La prima parte della stringa ID specifica il tipo di membro, con un singolo carattere seguito dai due punti. Vengono usati i tipi di membri seguenti:  
   
     |Carattere|Descrizione|  
     |---------------|-----------------|  
-    |N|namespace<br /><br /> È possibile aggiungere commenti di documentazione a uno spazio dei nomi, i riferimenti cref in uno spazio dei nomi sono possibili.|  
+    |N|namespace<br /><br /> Non è possibile aggiungere a uno spazio dei nomi commenti relativi alla documentazione, è possibile invece aggiungere riferimenti cref.|  
     |T|tipo: classe, interfaccia, struct, enum, delegato|  
     |D|typedef|  
     |F|campo|  
     |P|proprietà (compresi gli indicizzatori o altre proprietà indicizzate)|  
     |M|metodo (compresi i metodi speciali, ad esempio costruttori, operatori e così via)|  
     |E|event|  
-    |!|stringa di errore<br /><br /> Nella parte restante della stringa vengono fornite informazioni sull'errore. Il compilatore Visual C++ genera informazioni di errore per i collegamenti che non possono essere risolti.|  
+    |!|stringa di errore<br /><br /> Nella parte restante della stringa vengono fornite informazioni sull'errore. Il compilatore Visual C++ genera informazioni sugli errori per i collegamenti che non è possibile risolvere.|  
   
--   La seconda parte della stringa identifica il nome completo dell'elemento, a partire dalla radice dello spazio dei nomi. Il nome dell'elemento, il relativo contenitore tipo o tipi e dello spazio dei nomi sono separati da punti. Se il nome dell'elemento contiene dei punti, questi verranno sostituiti con il segno di cancelletto ('#'), Si presuppone che nessun elemento contiene un segno di hash direttamente nel nome. Ad esempio, il nome completo del `String` costruttore sarebbe "# ctor".  
+-   La seconda parte della stringa identifica il nome completo dell'elemento, a partire dalla radice dello spazio dei nomi. Il nome dell'elemento, i tipi di inclusione e lo spazio dei nomi sono separati da punti. Se il nome dell'elemento contiene dei punti, questi verranno sostituiti con il segno di cancelletto ('#'), in base al presupposto che nessun nome di elemento contiene direttamente tale segno. Ad esempio, il nome completo del costruttore `String` è "System.String.#ctor".  
   
 -   Per le proprietà e i metodi, se il metodo ha degli argomenti, verrà incluso di seguito l'elenco degli argomenti racchiuso tra parentesi. Se non sono presenti argomenti, non verranno usate le parentesi. Gli argomenti sono separati da virgole. La codifica di ciascun argomento è del tutto simile alla modalità di codifica usata in una firma .NET Framework:  
   
     -   Tipi di base. I tipi regolari (ELEMENT_TYPE_CLASS o ELEMENT_TYPE_VALUETYPE) vengono rappresentati con il nome completo del tipo.  
   
-    -   Tipi intrinseci (ad esempio, ELEMENT_TYPE_I4, ELEMENT_TYPE_OBJECT, ELEMENT_TYPE_STRING, ELEMENT_TYPE_TYPEDBYREF ed ELEMENT_TYPE_VOID) sono rappresentate come il nome completo del tipo completo corrispondente, ad esempio, **System. Int32** o **System. TypedReference**.  
+    -   Tipi intrinseci (ad esempio, ELEMENT_TYPE_I4, ELEMENT_TYPE_OBJECT, ELEMENT_TYPE_STRING, ELEMENT_TYPE_TYPEDBYREF ed ELEMENT_TYPE_VOID) vengono rappresentati come nome completo del tipo completo corrispondente, come ad esempio **System.Int32** o **System.TypedReference**.  
   
     -   ELEMENT_TYPE_PTR viene rappresentato con '*' dopo il tipo modificato.  
   
@@ -76,7 +77,7 @@ Il compilatore genera una stringa identificativa (ID) per ciascun costrutto del 
   
     -   ELEMENT_TYPE_SENTINEL  
   
--   Per solo gli operatori di conversione, il valore restituito del metodo viene codificato come un ' ~' seguito dal tipo restituito, codificato come in precedenza.  
+-   Limitatamente agli operatori di conversione, il valore restituito del metodo viene codificato con '~' seguito dal tipo restituito, codificato come descritto in precedenza.  
   
 -   Nel caso di tipi generici, il nome del tipo verrà seguito da un apice inverso e quindi da un numero che indica il numero di parametri di tipo generici.  Ad esempio,  
   
@@ -84,12 +85,12 @@ Il compilatore genera una stringa identificativa (ID) per ciascun costrutto del 
     <member name="T:MyClass`2">  
     ```  
   
-     Per un tipo che viene definito come `public class MyClass<T, U>`.  
+     per un tipo che viene definito come `public class MyClass<T, U>`.  
   
-     Per i metodi che accettano tipi generici come parametri, i parametri di tipo generico vengono specificati come numeri preceduti da apici inversi (ad esempio \`0, \`1).  Ogni numero rappresenta la notazione della matrice in base zero per i parametri generici del tipo.  
+     Nel caso di metodi che accettano tipi generici come parametri, i parametri dei tipi generici sono caratterizzati da numeri preceduti da apici inversi, ad esempio \`0, \`1.  Ogni numero rappresenta la notazione della matrice in base zero per i parametri generici del tipo.  
   
 ## <a name="example"></a>Esempio  
- Gli esempi seguenti illustrano come le stringhe ID per una classe e i relativi membri, verrà generati.  
+ Negli esempi seguenti viene illustrato come vengono generate le stringhe ID per una classe e i relativi membri.  
   
 ```  
 // xml_id_strings.cpp  

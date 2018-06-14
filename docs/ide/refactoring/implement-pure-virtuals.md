@@ -1,5 +1,5 @@
 ---
-title: Implementa elementi virtuali puri | Documenti Microsoft
+title: Implementa elementi virtuali puri | Microsoft Docs
 ms.custom: ''
 ms.date: 11/16/2016
 ms.technology:
@@ -12,29 +12,30 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: afce516f2718a76658846ed4f992aeabff75330b
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33328026"
 ---
 # <a name="implement-pure-virtuals"></a>Implementa elementi virtuali puri
-**Che cosa:** consente di generare immediatamente il codice necessario per implementare tutti i metodi virtuali puri in una classe. 
+**Cosa:** consente di generare immediatamente il codice necessario per implementare tutti i metodi virtuali puri in una classe. 
 
-**Quando:** si desidera ereditare da una classe con funzioni virtuali pure.  
+**Quando:** si vuole ereditare da una classe con funzioni virtuali pure.  
 
-**Motivo:** è possibile implementare manualmente le funzioni virtuali pure tutti uno alla volta, tuttavia questa funzionalità genera automaticamente tutte le firme di metodo.
+**Perché:** è possibile implementare manualmente tutte le funzioni virtuali una alla volta, tuttavia questa funzionalità genera automaticamente tutte le firme dei metodi.
 
 **Come:**
 
-1. Posizionare il cursore di testo o del mouse sulla classe in cui si desidera implementare le funzioni virtuali pure della classe di base.
+1. Posizionare il cursore di testo o del mouse sulla classe in cui si vuole implementare le funzioni virtuali pure della classe di base.
 
    ![Codice evidenziato](images/virtuals_highlight.png)
 
 1. Eseguire quindi una delle operazioni seguenti:
    * **Tastiera**
-     * Premere **CTRL+.** Per attivare il **azioni rapide e refactoring** dal menu **implementano tutti elementi virtuali puri per la classe*ClassName*'** dal menu di scelta rapida, in cui  *ClassName* è il nome della classe selezionata.
+     * Premere **CTRL+.** per attivare il menu **Azioni rapide e refactoring** e selezionare **Implementa tutti gli elementi virtuali puri per la classe "*Nomeclasse*"** dal menu di scelta rapida, in cui *Nomeclasse* è il nome della classe selezionata.
    * **Mouse**
-     * Mouse e scegliere il **azioni rapide e refactoring** dal menu **implementano tutti elementi virtuali puri per la classe*ClassName*'** dal menu di scelta rapida, dove  *ClassName* è il nome della classe selezionata.
+     * Fare clic con il pulsante destro del mouse, selezionare il menu **Azioni rapide e refactoring** e selezionare **Implementa tutti gli elementi virtuali puri per la classe "*Nomeclasse*"** dal menu di scelta rapida, in cui *Nomeclasse* è il nome della classe selezionata.
 
-1. Le firme del metodo virtuale puro saranno creati automaticamente, pronto per essere implementato.
+1. Le firme dei metodi virtuali puri vengono create automaticamente, pronte per l'implementazione.
 
-   ![Risultato implementa elementi virtuali puri](images/virtuals_result.png)
+   ![Risultato di Implementa elementi virtuali puri](images/virtuals_result.png)

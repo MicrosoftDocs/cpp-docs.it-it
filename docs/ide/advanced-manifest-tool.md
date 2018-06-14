@@ -1,5 +1,5 @@
 ---
-title: Avanzate, strumento manifesto, proprietà di configurazione, &lt;Projectname&gt; la finestra di dialogo Pagine delle proprietà | Documenti Microsoft
+title: Avanzate, Strumento Manifesto, Proprietà di configurazione, finestra di dialogo Pagine delle proprietà di &lt;nomeprogetto&gt; | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,24 +20,25 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: 47d4dc3ab325a7346d0e787a15d69d646896827d
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33326937"
 ---
-# <a name="advanced-manifest-tool-configuration-properties-ltprojectnamegt-property-pages-dialog-box"></a>Avanzate, strumento manifesto, proprietà di configurazione, &lt;Projectname&gt; la finestra di dialogo Pagine delle proprietà
-Utilizzare questa finestra di dialogo per specificare le opzioni avanzate per [Mt.exe](http://msdn.microsoft.com/library/aa375649).  
+# <a name="advanced-manifest-tool-configuration-properties-ltprojectnamegt-property-pages-dialog-box"></a>Avanzate, Strumento Manifesto, Proprietà di configurazione, finestra di dialogo Pagine delle proprietà di &lt;nomeprogetto&gt;
+Usare questa finestra di dialogo per specificare opzioni avanzate per [Mt.exe](http://msdn.microsoft.com/library/aa375649).  
   
- Per accedere a questa finestra di dialogo pagina delle proprietà, aprire le pagine delle proprietà per il progetto o la finestra delle proprietà. Espandere il **strumento manifesto** nodo **le proprietà di configurazione**, quindi selezionare **avanzate**.  
+ Per accedere alla finestra di dialogo di questa pagina delle proprietà, aprire le pagine delle proprietà per il progetto o la finestra delle proprietà. Espandere il nodo **Strumento Manifesto** in **Proprietà di configurazione**, quindi selezionare **Avanzate**.  
   
 ## <a name="uielement-list"></a>Elenco UIElement  
- **Aggiorna hash dei File**  
- Utilizza l'opzione /hashupdate per specificare che lo strumento manifesto per calcolare l'hash del file specificati `<file>` gli elementi e quindi aggiornare gli attributi hash con il valore calcolato.  
+ **Aggiorna hash dei file**  
+ Usa l'opzione /hashupdate per specificare che lo strumento Manifesto calcolerà l'hash dei file specificati negli elementi `<file>`, quindi aggiornerà gli attributi hash usando il valore calcolato.  
   
- **Aggiornare il percorso di ricerca di File hash**  
- Specifica il percorso di ricerca per i file che fanno riferimento a `<file>` elementi. Questa opzione utilizza anche l'opzione /hashupdate.  
+ **Percorso di ricerca aggiornamento hash dei file**  
+ Specifica il percorso di ricerca dei file che fanno riferimento agli elementi `<file>`. Questa opzione usa anche l'opzione /hashupdate.  
   
 ## <a name="see-also"></a>Vedere anche  
- [\<file > elemento](/visualstudio/deployment/file-element-clickonce-application)   
+ [\<Elemento file>](/visualstudio/deployment/file-element-clickonce-application)   
  [Manifesto dell'applicazione ClickOnce](/visualstudio/deployment/clickonce-application-manifest)   
- [Pagine delle proprietà dello strumento manifesto](../ide/manifest-tool-property-pages.md)   
+ [Pagine delle proprietà dello strumento Manifesto](../ide/manifest-tool-property-pages.md)   
  [Utilizzo di Proprietà del progetto](../ide/working-with-project-properties.md)   

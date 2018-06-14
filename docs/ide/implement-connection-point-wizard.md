@@ -1,5 +1,5 @@
 ---
-title: Implementazione guidata punto di connessione | Documenti Microsoft
+title: Implementazione guidata punto di connessione | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,33 +18,34 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: ef2f7efa92de3714170e403ea50b5f486c8367d6
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33323758"
 ---
 # <a name="implement-connection-point-wizard"></a>Implementazione guidata punto di connessione
-Questa procedura guidata implementa un punto di connessione per un oggetto COM. Un oggetto collegabile (vale a dire un'origine) è possibile esporre un punto di connessione per le proprie interfacce o per qualsiasi interfaccia in uscita. Visual C++ e Windows forniscono librerie dei tipi che dispongono di interfacce in uscita. Ogni interfaccia in uscita può essere implementata da un client su un oggetto (vale a dire un sink).  
+Questa procedura guidata consente di implementare un punto di connessione per un oggetto COM. Un oggetto collegabile, ovvero un'origine, può esporre un punto di connessione per le proprie interfacce o per qualsiasi interfaccia in uscita. Visual C++ e Windows offrono entrambi librerie dei tipi con interfacce in uscita. Ogni interfaccia in uscita può essere implementata da un client in un oggetto, ovvero un sink.  
   
- Per ulteriori informazioni, vedere [punti di connessione ATL](../atl/atl-connection-points.md).  
+ Per altre informazioni, vedere [Punti di connessione ATL](../atl/atl-connection-points.md).  
   
- **Librerie dei tipi disponibili**  
- Consente di visualizzare le librerie dei tipi disponibili che contiene le definizioni di interfaccia per cui è possibile implementare i punti di connessione. Fare clic sul pulsante con i puntini di sospensione per individuare un file contenente la libreria dei tipi da utilizzare.  
+ **Available type libraries** (Librerie dei tipi disponibili)  
+ Visualizza le librerie dei tipi disponibili contenenti le definizioni delle interfacce per le quali è possibile implementare i punti di connessione. Fare clic sul pulsante con i puntini di sospensione per individuare un file contenente la libreria dei tipi da usare.  
   
  **Posizione**  
- Visualizza il percorso della libreria dei tipi attualmente selezionato nel **librerie dei tipi disponibili** elenco.  
+ Visualizza il percorso della libreria dei tipi attualmente selezionata nell'elenco **Available type libraries** (Librerie dei tipi disponibili).  
   
  **Interfacce**  
- Visualizza le interfacce le cui definizioni sono contenuti nella libreria dei tipi attualmente selezionata nel **librerie dei tipi disponibili** casella.  
+ Visualizza le interfacce le cui definizioni sono contenute nella libreria dei tipi attualmente selezionata nella casella **Available type libraries** (Librerie dei tipi disponibili).  
   
-|Pulsante di trasferimento|Descrizione|  
+|Pulsante Trasferimento|Descrizione|  
 |---------------------|-----------------|  
-|**>**|Aggiunge il **implementare i punti di connessione** il nome dell'interfaccia attualmente selezionato nell'elenco il **interfacce** elenco.|  
-|**>>**|Aggiunge il **implementare i punti di connessione** elenco i nomi di tutte le interfacce disponibili nel **interfacce** elenco.|  
-|**<**|Rimuove il nome dell'interfaccia attualmente selezionato nel **implementare i punti di connessione** elenco.|  
-|**<<**|Rimuove tutti i nomi attualmente nell'interfaccia di **implementare i punti di connessione** elenco.|  
+|**>**|Aggiunge all'elenco **Implementa punti di connessione** il nome dell'interfaccia attualmente selezionata nell'elenco **Interfacce**.|  
+|**>>**|Aggiunge all'elenco **Implementa punti di connessione** i nomi di tutte le interfacce disponibili nell'elenco **Interfacce**.|  
+|**<**|Rimuove il nome dell'interfaccia attualmente selezionata nell'elenco **Implementa punti di connessione**.|  
+|**<<**|Rimuove i nomi di tutte le interfacce presenti nell'elenco **Implementa punti di connessione**.|  
   
- **Implementare i punti di connessione**  
- Visualizza i nomi delle interfacce per cui si implementano i punti di connessione quando si fa clic **fine**.  
+ **Implementa punti di connessione**  
+ Visualizza i nomi delle interfacce per cui si implementano i punti di connessione quando si fa clic **Fine**.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Implementazione di un punto di connessione](../ide/implementing-a-connection-point-visual-cpp.md)

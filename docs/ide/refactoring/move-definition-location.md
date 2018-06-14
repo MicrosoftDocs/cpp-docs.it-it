@@ -1,5 +1,5 @@
 ---
-title: Percorso definizione spostamento | Documenti Microsoft
+title: Percorso definizione spostamento | Microsoft Docs
 ms.custom: ''
 ms.date: 11/16/2016
 ms.technology:
@@ -12,29 +12,30 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: 44211105429e33c136999a7877ac6ee42af29f17
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33327840"
 ---
 # <a name="move-definition-location"></a>Percorso definizione spostamento
-**Che cosa:** consente di spostare immediatamente una definizione di funzione per il file di intestazione corrispondente.
+**Cosa:** consente di spostare immediatamente la definizione di una funzione nel file di intestazione corrispondente.
 
-**Quando:** una funzione che si desidera spostare in un file di intestazione.  
+**Quando:** si desidera spostare una funzione in un file di intestazione.  
 
-**Motivo:** è possibile spostare manualmente la funzione, ma questa funzionalità verrà spostata automaticamente, la creazione del file di intestazione se necessario.
+**Perché:** la funzione può essere spostata manualmente, ma questa funzionalità la sposterà automaticamente, creando il file di intestazione, se necessario.
 
 **Come:**
 
-1. Posizionare il cursore di testo o il mouse tramite la funzione per cui si desidera spostare.
+1. Posizionare il cursore del testo o del mouse sulla funzione da spostare.
 
    ![Codice evidenziato](images/movedefinition_highlight.png)
 
 1. Eseguire quindi una delle operazioni seguenti:
    * **Tastiera**
-     * Premere **CTRL+.** Per attivare il **azioni rapide e refactoring** dal menu **spostare percorso definizione** dal menu di scelta rapida.
+     * Premere **CTRL+.** per attivare il menu **Azioni rapide e refactoring** e selezionare **Percorso definizione spostamento** dal menu di scelta rapida.
    * **Mouse**
-     * Mouse e scegliere il **azioni rapide e refactoring** dal menu **spostare percorso definizione** dal menu di scelta rapida.
+     * Fare clic con il pulsante destro del mouse, selezionare il menu **Azioni rapide e refactoring** e selezionare **Percorso definizione spostamento** dal menu di scelta rapida.
 
-1. La funzione verrà spostata al file di intestazione corrispondente, verrà visualizzato in una finestra di anteprima popup.  Se il file di intestazione non esiste, viene anche essere creato e inserito nel progetto.
+1. La funzione verrà spostata nel file di intestazione corrispondente, che verrà visualizzato in una finestra di anteprima popup.  Se il file di intestazione non esiste, viene creato e inserito nel progetto.
 
-   ![Crea dichiarazione / definizione dare come risultato](images/movedefinition_result.png)
+   ![Risultato di Crea dichiarazione/definizione](images/movedefinition_result.png)

@@ -1,5 +1,5 @@
 ---
-title: 'Pagine delle proprietà HLSL: Avanzate | Documenti Microsoft'
+title: 'Pagine delle proprietà HLSL: Avanzate | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,21 +17,22 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: 58dca91d5ab3bf0cf28d30a04d33ae8bf5819401
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33321194"
 ---
 # <a name="hlsl-property-pages-advanced"></a>Pagine delle proprietà HLSL: Avanzate
-Per configurare le proprietà seguenti del compilatore HLSL (fxc.exe), utilizzare il relativo **avanzate** pagina delle proprietà. Per informazioni sulle modalità di accesso di **avanzate** pagina delle proprietà nella cartella HLSL, vedere [funziona con le proprietà del progetto](../ide/working-with-project-properties.md).  
+Per configurare le proprietà seguenti del compilatore HLSL (fxc.exe), usare la relativa pagina delle proprietà **Avanzate**. Per informazioni sull'accesso alla pagina delle proprietà **Avanzate** nella cartella HLSL, vedere [Uso di proprietà del progetto](../ide/working-with-project-properties.md).  
   
 ## <a name="uielement-list"></a>Elenco UIElement  
  **Non visualizzare messaggio di avvio**  
- **Sì (/ nologo)** per visualizzare il messaggio banner e informazioni di avvio; in caso contrario, **No**. Per impostazione predefinita, il valore è **Sì (o nologo)**.  
+ **Sì (/nologo)** per evitare la visualizzazione del messaggio di avvio e dei messaggi informativi; in caso contrario, **No**. Per impostazione predefinita, il valore è **Sì (/nologo)**.  
   
  **Considera gli avvisi come errori**  
- **Sì (/WX)** considerare tutti gli avvisi del compilatore come errori; in caso contrario, **No**.  
+ **Sì (/WX)** per indicare se considerare tutti gli avvisi del compilatore come errori; in caso contrario, **No**.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Pagine delle proprietà HLSL](../ide/hlsl-property-pages.md)   
- [Pagine delle proprietà HLSL: generale](../ide/hlsl-property-pages-general.md)   
+ [Pagine delle proprietà HLSL: Generale](../ide/hlsl-property-pages-general.md)   
  [Pagine delle proprietà HLSL: file di output](../ide/hlsl-property-pages-output-files.md)

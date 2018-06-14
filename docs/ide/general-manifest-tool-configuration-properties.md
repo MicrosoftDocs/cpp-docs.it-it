@@ -1,5 +1,5 @@
 ---
-title: Manifesto le proprietà di configurazione dello strumento (Visual C++) | Documenti Microsoft
+title: Proprietà di configurazione di Strumento Manifesto (Visual C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,24 +21,25 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: 1953e7c37c07f66845510efe037015a537aa7baa
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33329088"
 ---
-# <a name="general-manifest-tool-configuration-properties-ltprojectnamegt-property-pages-dialog-box"></a>Generale, strumento manifesto, proprietà di configurazione, &lt;Projectname&gt; la finestra di dialogo Pagine delle proprietà
-Utilizzare questa finestra di dialogo per specificare le opzioni generali per [Mt.exe](http://msdn.microsoft.com/library/aa375649).  
+# <a name="general-manifest-tool-configuration-properties-ltprojectnamegt-property-pages-dialog-box"></a>Generale, Strumento Manifesto, Proprietà di configurazione, finestra di dialogo Pagine delle proprietà di &lt;nomeprogetto&gt;
+Usare questa finestra di dialogo per specificare opzioni generali per [Mt.exe](http://msdn.microsoft.com/library/aa375649).  
   
- Per accedere a questa finestra di dialogo pagina delle proprietà, aprire le pagine delle proprietà per il progetto o la finestra delle proprietà. Espandere il **strumento manifesto** nodo **le proprietà di configurazione**, quindi selezionare **generale**.  
+ Per accedere alla finestra di dialogo di questa pagina delle proprietà, aprire le pagine delle proprietà per il progetto o la finestra delle proprietà. Espandere il nodo **Strumento Manifesto** in **Proprietà di configurazione**, quindi selezionare **Generale**.  
   
 ## <a name="uielement-list"></a>Elenco UIElement  
  **Non visualizzare messaggio di avvio**  
- **Sì (/ nologo)** specifica che i dati di copyright Microsoft standard verranno nascosti quando viene avviato lo strumento manifesto. Utilizzare questa opzione per eliminare l'output indesiderato file di log, quando si esegue mt.exe come parte di un processo di compilazione o da un ambiente di compilazione.  
+ **Sì (/nologo)** specifica che le informazioni standard sul copyright Microsoft non verranno visualizzate quando sarà avviato lo strumento Manifesto. Usare questa opzione per non visualizzare l'output indesiderato nei file di log, quando si esegue mt.exe come parte di un processo di compilazione o da un ambiente di compilazione.  
   
  **Output dettagliato**  
  **Sì (/verbose)** specifica che le informazioni di compilazione aggiuntive verranno visualizzate durante la generazione del manifesto.  
   
- **Identità dell'assembly**  
- Utilizza l'opzione /identity per specificare una stringa di identità, che contiene gli attributi per il [ \<assemblyIdentity > elemento](/visualstudio/deployment/assemblyidentity-element-clickonce-application). Una stringa di identità inizia con il valore per il `name` attributo ed è seguita da *attributo* = *valore* coppie. Gli attributi in una stringa di identità sono delimitati da una virgola.  
+ **Identità assembly**  
+ Usa l'opzione /identity per specificare una stringa di identità, che contiene gli attributi per [\<assemblyIdentity> Element](/visualstudio/deployment/assemblyidentity-element-clickonce-application). Una stringa di identità inizia con il valore per l'attributo `name` ed è seguita da *attribute* = *value* pairs. Gli attributi in una stringa di identità sono delimitati dalla virgola.  
   
  Di seguito è riportato un esempio di stringa di identità:  
   
@@ -46,5 +47,5 @@ Utilizzare questa finestra di dialogo per specificare le opzioni generali per [M
   
 ## <a name="see-also"></a>Vedere anche  
  [Manifesto dell'applicazione ClickOnce](/visualstudio/deployment/clickonce-application-manifest)   
- [Pagine delle proprietà dello strumento manifesto](../ide/manifest-tool-property-pages.md)   
+ [Pagine delle proprietà dello strumento Manifesto](../ide/manifest-tool-property-pages.md)   
  [Utilizzo di Proprietà del progetto](../ide/working-with-project-properties.md)   
