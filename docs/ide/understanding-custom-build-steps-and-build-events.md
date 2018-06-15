@@ -22,13 +22,13 @@ ms.author: corob
 ms.workload:
 - cplusplus
 ms.openlocfilehash: a50c0cf224104f720a73a4830405e7114cda74ed
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "33338767"
 ---
-# <a name="understanding-custom-build-steps-and-build-events"></a>Informazioni sulle istruzioni di compilazione personalizzate e sugli eventi di compilazione
+# <a name="understanding-custom-build-steps-and-build-events"></a>Informazioni sulle istruzioni di compliazione personalizzate e sugli eventi di compilazione
 Nell'ambiente di sviluppo Visual C++ esistono tre modi principali per personalizzare il processo di compilazione:  
   
  **Istruzioni di compilazione personalizzate**  

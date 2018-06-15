@@ -15,10 +15,10 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 86bbd23f1c9fcfcc0a19d7a2c1b66f3500d84361
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "33323131"
 ---
 # <a name="hlsl-property-pages"></a>Pagine delle proprietà HLSL
@@ -32,7 +32,7 @@ ms.locfileid: "33323131"
   
      Contiene le proprietà per specificare opzioni aggiuntive per il compilatore HLSL.  
   
--   [Pagine delle proprietà HLSL: File di output](../ide/hlsl-property-pages-output-files.md)  
+-   [Pagine delle proprietà HLSL: file di output](../ide/hlsl-property-pages-output-files.md)  
   
      Contiene le proprietà per specificare l'output dei file generato dal compilatore HLSL.  
   

@@ -26,10 +26,10 @@ ms.author: corob
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 5940f0d6efaec402a4a85ed659f42d7eab1bf91d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "33334964"
 ---
 # <a name="specifying-build-events"></a>Specifica di eventi di compilazione
@@ -46,7 +46,7 @@ Per informazioni generali sugli eventi di compilazione, vedere [Informazioni sul
 
 1. In **Esplora soluzioni** selezionare il progetto per il quale si vuole specificare l'evento di compilazione.
 
-1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per altre informazioni, vedere [Working with Project Properties](../ide/working-with-project-properties.md) (Uso delle proprietà del progetto).
+1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per altre informazioni, vedere [Uso delle proprietà del progetto](../ide/working-with-project-properties.md).
 
 1. Nella cartella **Eventi di compilazione** selezionare la pagina delle proprietà di un evento di compilazione.
 

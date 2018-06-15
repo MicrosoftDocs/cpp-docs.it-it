@@ -21,10 +21,10 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 15be7636188bb670febd7875974d683c1d78360f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "33331558"
 ---
 # <a name="input-and-output-manifest-tool-configuration-properties-ltprojectnamegt-property-pages-dialog-box"></a>Input e output, Strumento Manifesto, Proprietà di configurazione, finestra di dialogo Pagine delle proprietà di &lt;nomeprogetto&gt;
@@ -70,6 +70,6 @@ Usare questa finestra di dialogo per specificare opzioni di input e output per [
  Specifica se l'applicazione è compatibile con DPI. Per impostazione predefinita, l'impostazione è **Sì** per progetti MFC e **No** in caso contrario, perché solo i progetti MFC hanno la compatibilità DPI incorporata. È possibile forzare l'impostazione su **Sì** se si aggiunge codice per gestire le impostazioni DPI diverse. L'applicazione potrebbe apparire fuzzy o piccola se la si imposta come compatibile con DPI quando in realtà non lo è.  
   
 ## <a name="see-also"></a>Vedere anche  
- [ClickOnce Application Manifest](/visualstudio/deployment/clickonce-application-manifest)   
+ [Manifesto dell'applicazione ClickOnce](/visualstudio/deployment/clickonce-application-manifest)   
  [Pagine delle proprietà dello strumento Manifesto](../ide/manifest-tool-property-pages.md)   
  [Utilizzo di Proprietà del progetto](../ide/working-with-project-properties.md)   

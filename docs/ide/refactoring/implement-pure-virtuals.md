@@ -11,10 +11,10 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: afce516f2718a76658846ed4f992aeabff75330b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "33328026"
 ---
 # <a name="implement-pure-virtuals"></a>Implementa elementi virtuali puri

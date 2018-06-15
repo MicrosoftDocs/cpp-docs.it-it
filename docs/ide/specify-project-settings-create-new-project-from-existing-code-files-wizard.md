@@ -17,10 +17,10 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: f0f59b802b5a24c1b449f78cccee4744538a5a0e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "33338946"
 ---
 # <a name="specify-project-settings-create-new-project-from-existing-code-files-wizard"></a>Specifica le impostazioni del progetto, Creazione guidata nuovo progetto da file di codice esistenti

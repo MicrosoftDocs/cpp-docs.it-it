@@ -15,16 +15,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 5ab1ed04b9890fbed8de8b59354ab36d7be063e7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "33340229"
 ---
 # <a name="mfc-program-or-control-source-and-header-files"></a>File di intestazione e di origine di un controllo o di un programma MFC
 I file seguenti vengono creati quando si crea un progetto MFC in Visual Studio, a seconda delle opzioni selezionate per il progetto creato. Ad esempio, il progetto contiene i file *Projname*dlg.cpp e *Projname*dlg.h solo se si crea un progetto o una classe basata su finestre di dialogo.  
   
- Tutti questi file si trovano nella directory *Projname* e nella cartella File di intestazione (file con estensione h) o nella cartella File di origine (file con estensione cpp) in Esplora soluzioni.  
+ Tutti questi file si trovano nella directory *Projname* e anche nella cartella File di intestazione (file con estensione h) oppure nella cartella File di origine (file con estensione cpp) in Esplora soluzioni.  
   
 |Nome file|Descrizione|  
 |---------------|-----------------|  

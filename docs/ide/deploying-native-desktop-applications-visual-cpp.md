@@ -20,10 +20,10 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 4f4aa355c132b4c94f085cbdf7aa73785357d0f0
-ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/17/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34259244"
 ---
 # <a name="deploying-native-desktop-applications-visual-c"></a>Distribuzione di applicazioni desktop native (Visual C++)
@@ -50,7 +50,7 @@ Gli articoli presenti in questa sezione della documentazione illustrano come ass
 
 - [Scelta di un metodo di distribuzione](../ide/choosing-a-deployment-method.md)
 
-- [Distribuzione di Universal CRT](universal-crt-deployment.md)
+- [Distribuzione di Universal CRT](universal-crt-deployment.md).
 
 - [Ridistribuzione di file Visual C++](../ide/redistributing-visual-cpp-files.md)
 
