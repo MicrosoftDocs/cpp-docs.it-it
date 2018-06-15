@@ -25,10 +25,10 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: c1dc831dff6d1e3dbef4fc762712e8125a5b20e1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "33339709"
 ---
 # <a name="property-pages-visual-c"></a>Pagine delle proprietà (Visual C++)
@@ -101,7 +101,7 @@ Si noti che in una pagina delle proprietà vengono visualizzate solo le impostaz
 
 [Pagina delle proprietà Generale (Progetto)](../ide/general-property-page-project.md)
 
-[Generale, Strumento Manifesto, Proprietà di configurazione, \<finestra di dialogo Pagine delle proprietà di <nomeprogetto>](../ide/general-manifest-tool-configuration-properties.md)
+[Generale, Strumento Manifesto, Proprietà di configurazione,\<finestra di dialogo Pagine delle proprietà di <nomeprogetto>](../ide/general-manifest-tool-configuration-properties.md)
 
 [Pagine delle proprietà HLSL](../ide/hlsl-property-pages.md)
 
