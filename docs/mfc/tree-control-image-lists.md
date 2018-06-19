@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382193"
 ---
 # <a name="tree-control-image-lists"></a>Elenchi di immagini del controllo Tree
 Ogni elemento in un controllo struttura ad albero ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) può disporre di una coppia di immagini bitmap è associato. Le immagini vengono visualizzate a sinistra dell'etichetta di un elemento. Un'immagine viene visualizzata quando l'elemento è selezionato e l'altra viene visualizzata quando l'elemento non è selezionata. Ad esempio, un elemento potrebbe visualizzare una cartella aperta quando è selezionata e una cartella chiusa quando non è selezionato.  

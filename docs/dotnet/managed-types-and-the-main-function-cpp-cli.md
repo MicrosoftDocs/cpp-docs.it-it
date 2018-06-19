@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33131306"
 ---
 # <a name="managed-types-and-the-main-function-ccli"></a>Tipi gestiti e funzione main (C++/CLI)
 Quando si scrive un'applicazione utilizzando **/clr**, gli argomenti del **Main ()** funzione non può essere di un tipo gestito.  

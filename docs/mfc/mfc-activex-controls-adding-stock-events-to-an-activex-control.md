@@ -57,6 +57,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33359338"
 ---
 # <a name="mfc-activex-controls-adding-stock-events-to-an-activex-control"></a>Controlli ActiveX MFC: aggiunta di eventi predefiniti a un controllo ActiveX
 Eventi predefiniti diversi da eventi personalizzati che vengono generati automaticamente dalla classe [COleControl](../mfc/reference/colecontrol-class.md). `COleControl` contiene le funzioni membro predefinite che attivano eventi risultanti da azioni comuni. Alcune azioni comuni implementate da `COleControl` includono singolo - e doppio clic semplici sul controllo, gli eventi di tastiera e le modifiche nello stato dei pulsanti del mouse. Voci della mappa eventi per eventi predefiniti sono sempre precedute dal **EVENT_STOCK** prefisso.  

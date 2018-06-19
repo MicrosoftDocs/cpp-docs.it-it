@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33356554"
 ---
 # <a name="providing-flicker-free-activation"></a>Fornitura di attivazione senza sfarfallio
 Se il controllo disegna se stesso in modo identico negli stati attivi e inattivi e non utilizzare l'attivazione senza finestra, è possibile eliminare le operazioni di disegno e lo sfarfallio visivo che in genere si verificano quando si effettua la transizione tra inattive e di stato attivo. A tale scopo, includere il **noFlickerActivate** flag nel set di flag restituiti da [COleControl:: GetControlFlags](../mfc/reference/colecontrol-class.md#getcontrolflags). Ad esempio:  

@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385271"
 ---
 # <a name="window-objects"></a>Oggetti finestra
 MFC fornisce la classe [CWnd](../mfc/reference/cwnd-class.md) per incapsulare la `HWND` handle di una finestra. L'oggetto `CWnd` è un oggetto finestra di C++, distinto da `HWND` che rappresenta una finestra di Windows, ma la prima finestra contiene la seconda. Utilizzare `CWnd` per derivare le proprie classi di finestre figlie o utilizzare una delle varie classi MFC derivate da `CWnd`. La classe `CWnd` è la classe base per tutte le finestre, incluse le finestre cornice, le finestre di dialogo, le finestre figlio, i controlli e le barre di controllo come le barre degli strumenti. Una buona conoscenza dei [la relazione tra un oggetto finestra C++ e HWND](../mfc/relationship-between-a-cpp-window-object-and-an-hwnd.md) è fondamentale per programmare in modo efficace con MFC.  

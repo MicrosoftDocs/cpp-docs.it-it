@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383149"
 ---
 # <a name="tree-control-item-states-overview"></a>Panoramica degli stati degli elementi del controllo Tree
 Ogni elemento in un controllo struttura ad albero ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) ha uno stato corrente. Ad esempio, un elemento può essere selezionato, disabilitato, espanso e così via. In genere, il controllo albero imposta automaticamente lo stato di un elemento per riflettere le azioni dell'utente, come ad esempio la selezione di un elemento. Tuttavia, è possibile impostare lo stato di un elemento utilizzando il [SetItemState](../mfc/reference/ctreectrl-class.md#setitemstate) funzione membro e recuperare lo stato corrente di un elemento utilizzando il [GetItemState](../mfc/reference/ctreectrl-class.md#getitemstate) funzione membro. Per un elenco completo degli stati degli elementi, vedere [costanti del controllo di visualizzazione albero](http://msdn.microsoft.com/library/windows/desktop/bb759985) in Windows SDK.  

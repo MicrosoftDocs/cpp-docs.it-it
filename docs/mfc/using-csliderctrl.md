@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385817"
 ---
 # <a name="using-csliderctrl"></a>Utilizzo di CSliderCtrl
 Il [CSliderCtrl](../mfc/reference/csliderctrl-class.md) classe rappresenta un controllo dispositivo di scorrimento, che è anche detto trackbar. Un "controllo dispositivo di scorrimento" è una finestra che contiene un dispositivo di scorrimento e facoltativamente dei segni di graduazione. Quando l'utente sposta il dispositivo di scorrimento utilizzando il mouse o i tasti di direzione, dal controllo dispositivo di scorrimento vengono inviati dei messaggi di notifica per indicare il cambiamento.  

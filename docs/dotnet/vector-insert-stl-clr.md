@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33172326"
 ---
 # <a name="vectorinsert-stlclr"></a>vector::insert (STL/CLR)
 Aggiunge gli elementi in una posizione specificata.  

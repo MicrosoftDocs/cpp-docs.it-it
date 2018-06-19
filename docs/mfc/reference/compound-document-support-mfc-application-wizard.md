@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33368309"
 ---
 # <a name="compound-document-support-mfc-application-wizard"></a>Supporto documenti compositi, Creazione guidata applicazione MFC
 In questa pagina della creazione guidata applicazione MFC, indicare a quale livello di applicazione fornisce il supporto documenti compositi e attivi. L'applicazione deve supportare l'architettura documento/visualizzazione per il supporto documenti compositi e modelli di documento.  

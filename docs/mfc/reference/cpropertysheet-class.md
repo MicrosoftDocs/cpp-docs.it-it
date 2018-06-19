@@ -67,6 +67,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33377462"
 ---
 # <a name="cpropertysheet-class"></a>CPropertySheet (classe)
 Rappresenta le finestre delle proprietà, note anche come finestre di dialogo a schede.  

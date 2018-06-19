@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33129697"
 ---
 # <a name="lock-class"></a>Classe lock
 Questa classe consente di automatizzare l'acquisizione di un blocco per sincronizzare l'accesso a un oggetto da più thread.  Quando costruito viene acquisito il blocco e quando si rilascia il blocco.  

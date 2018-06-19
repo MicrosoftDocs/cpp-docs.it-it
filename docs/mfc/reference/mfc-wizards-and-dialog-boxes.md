@@ -17,6 +17,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33376278"
 ---
 # <a name="mfc-wizards-and-dialog-boxes"></a>Finestre di dialogo e procedure guidate MFC
 Le procedure guidate di Microsoft Foundation Class (MFC) generano il codice di boilerplate per diversi tipi di componenti ed oggetti. È possibile eseguire le procedure guidate aprendo il menu di scelta rapida per un progetto in **Esplora** e scegliendo **Aggiungi**, **classe**.  

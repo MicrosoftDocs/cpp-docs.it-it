@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33109495"
 ---
 # <a name="graphics-operations-ccli"></a>Operazioni di grafica (C++/CLI)
 Viene illustrato l'utilizzo di manipolazione di immagine di [!INCLUDE[winsdklong](../dotnet/includes/winsdklong_md.md)].  

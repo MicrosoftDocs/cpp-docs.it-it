@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381210"
 ---
 # <a name="sequence-of-operations-for-creating-ole-applications"></a>Sequenza delle operazioni per la creazione di applicazioni OLE
 Nella tabella seguente viene illustrato il ruolo e il ruolo del framework per la creazione di collegamento e incorporamento applicazioni OLE. Questi rappresentano opzioni disponibili invece di una sequenza di passaggi da eseguire.  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33371784"
 ---
 # <a name="details-of-atl-support-added-by-the-atl-wizard"></a>Informazioni dettagliate sul supporto ATL aggiunto dalla procedura guidata
 Quando si [Aggiungi supporto ATL a un eseguibile MFC esistente o una DLL](../../mfc/reference/adding-atl-support-to-your-mfc-project.md), Visual C++ rende le modifiche seguenti al progetto MFC esistente (in questo esempio viene chiamato il progetto `MFCEXE`):  

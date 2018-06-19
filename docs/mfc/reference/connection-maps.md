@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33372838"
 ---
 # <a name="connection-maps"></a>Mappe di connessione
 OLE (controlli) sono in grado di esporre interfacce ad altre applicazioni. Queste interfacce consentono l'accesso da un contenitore solo in tale controllo. Se un controllo OLE desidera accedere alle interfacce esterne di altri oggetti OLE, è necessario stabilire un punto di connessione. Questo punto di connessione consente a un controllo in uscita di accesso alle mappe di invio esterni, ad esempio mappe eventi o funzioni di notifica.  

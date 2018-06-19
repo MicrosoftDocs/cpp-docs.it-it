@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33133181"
 ---
 # <a name="lessequal-stlclr"></a>less_equal (STL/CLR)
 La classe modello descrive una funzione che, quando viene chiamato, restituisce true solo se il primo argomento è minore o uguale al secondo. Utilizzare, specificare un oggetto funzione in relazione al relativo tipo di argomento.  

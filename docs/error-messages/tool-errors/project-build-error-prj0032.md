@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33318663"
 ---
 # <a name="project-build-error-prj0032"></a>Errore di compilazione progetto PRJ0032
 La proprietà 'Output' per il passaggio di compilazione personalizzata a livello di progetto contiene "macro" che restituisce "espansione".  

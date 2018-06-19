@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383162"
 ---
 # <a name="working-with-a-tab-control"></a>Utilizzo di un controllo Tab
 Il modo più semplice per utilizzare un controllo struttura a schede ([CTabCtrl](../mfc/reference/ctabctrl-class.md)) consiste nell'aggiungerlo a una risorsa modello di finestra di dialogo con l'editor finestre. È anche possibile utilizzare un controllo struttura a schede autonomamente. MFC chiama **InitCommonControls automaticamente** automaticamente. Come indicato di seguito sono riportate le attività principali:  

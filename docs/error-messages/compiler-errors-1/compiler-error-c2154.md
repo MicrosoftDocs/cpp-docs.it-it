@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33168932"
 ---
 # <a name="compiler-error-c2154"></a>Errore del compilatore C2154
 'type': è consentito solo un tipo di enumerazione come argomento per compilare il tratto di tipo intrinseco '__underlying_type'  

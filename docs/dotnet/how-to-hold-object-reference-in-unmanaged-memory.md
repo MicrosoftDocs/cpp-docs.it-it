@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33128732"
 ---
 # <a name="how-to-hold-object-reference-in-unmanaged-memory"></a>Procedura: mantenere i riferimenti agli oggetti nella memoria non gestita
 È possibile utilizzare gcroot, che contiene <xref:System.Runtime.InteropServices.GCHandle>, per contenere un riferimento all'oggetto CLR nella memoria non gestita. In alternativa, è possibile utilizzare `GCHandle` direttamente.  
