@@ -27,6 +27,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33841699"
 ---
 # <a name="stringizing-operator-"></a>Operatore per la creazione di stringhe (#)
 Il cancelletto o operatore "per" (**#**) converte i parametri di macro in valori letterali stringa senza espandere la definizione di parametro. Tale operatore viene utilizzato solo con le macro che accetta argomenti. Se questo operatore precede un parametro formale nella definizione della macro, l'argomento effettivo passato alla chiamata della macro viene racchiuso tra virgolette singole e considerato come un valore letterale stringa. Il valore letterale stringa sostituisce quindi ogni occorrenza di una combinazione dell'operatore per la creazione di stringhe e del parametro formale nella definizione di macro.  

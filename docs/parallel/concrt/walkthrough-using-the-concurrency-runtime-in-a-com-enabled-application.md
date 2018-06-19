@@ -20,6 +20,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33692548"
 ---
 # <a name="walkthrough-using-the-concurrency-runtime-in-a-com-enabled-application"></a>Procedura dettagliata: Uso del runtime di concorrenza in un'applicazione abilitata COM
 Questo documento viene illustrato come utilizzare il Runtime di concorrenza in un'applicazione che utilizza il modello COM (Component Object).  

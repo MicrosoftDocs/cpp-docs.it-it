@@ -20,6 +20,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33691196"
 ---
 # <a name="how-to-use-schedule-groups-to-influence-order-of-execution"></a>Procedura: Usare i gruppi di pianificazione per influenzare l'ordine di esecuzione
 Nel Runtime di concorrenza, l'ordine in cui viene pianificata l'attività è non deterministico. Tuttavia, è possibile utilizzare i criteri di pianificazione per influenzare l'ordine di esecuzione delle attività. In questo argomento viene illustrato come utilizzare i gruppi di pianificazione con il [Concurrency:: SchedulingProtocol](reference/concurrency-namespace-enums.md#policyelementkey) criteri dell'utilità di pianificazione per influenzare l'ordine di esecuzione delle attività.  

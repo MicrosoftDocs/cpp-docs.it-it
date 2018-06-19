@@ -95,6 +95,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33375924"
 ---
 # <a name="cmultipaneframewnd-class"></a>Classe CMultiPaneFrameWnd
 Il `CMultiPaneFrameWnd` classe estende [CPaneFrameWnd classe](../../mfc/reference/cpaneframewnd-class.md). Può supportare più riquadri. Anziché un singolo handle incorporato in una barra di controllo, `CMultiPaneFrameWnd` contiene un [CPaneContainerManager classe](../../mfc/reference/cpanecontainermanager-class.md) oggetto che consente all'utente di ancorare un `CMultiPaneFrameWnd` a altro e in modo dinamico creare più mobile, schede Windows.  

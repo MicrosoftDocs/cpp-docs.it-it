@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33375040"
 ---
 # <a name="cstring-formatting-and-message-box-display"></a>Formattazione CString e visualizzazione finestre di messaggio
 Viene fornita una serie di funzionalità per formattare e analizzare `CString` oggetti. È possibile utilizzare queste funzioni, ogni volta che è necessario modificare `CString` oggetti, ma sono particolarmente utili per la formattazione di stringhe che verranno visualizzato nel testo della finestra di messaggio.  

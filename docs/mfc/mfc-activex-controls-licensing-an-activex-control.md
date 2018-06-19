@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33353929"
 ---
 # <a name="mfc-activex-controls-licensing-an-activex-control"></a>Controlli ActiveX MFC: licenze di un controllo ActiveX
 Gestione delle licenze, una funzionalità facoltativa di controlli ActiveX, consente di controllare chi è in grado di utilizzare o distribuire il controllo. (Per ulteriori informazioni su problemi relativi alle licenze, vedere i problemi relativi alle licenze in [l'aggiornamento di un controllo ActiveX esistente](../mfc/upgrading-an-existing-activex-control.md).)  

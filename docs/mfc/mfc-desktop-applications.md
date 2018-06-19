@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33350235"
 ---
 # <a name="mfc-desktop-applications"></a>Applicazioni desktop MFC
 La libreria MFC (Microsoft Foundation Class) fornisce un wrapper orientato a oggetti su molte delle API Win32 e COM. Sebbene possa essere utilizzata anche per creare applicazioni desktop molto semplici, risulta maggiormente utile quando è necessario compilare interfacce utente più complesse che includono più controlli. È possibile usare MFC per creare applicazioni con interfacce utente in stile Office.  

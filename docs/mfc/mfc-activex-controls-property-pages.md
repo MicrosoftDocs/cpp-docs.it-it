@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33351745"
 ---
 # <a name="mfc-activex-controls-property-pages"></a>Controlli ActiveX MFC: pagine delle proprietà
 Pagine delle proprietà consente a un utente di un controllo ActiveX visualizzare e modificare le proprietà del controllo ActiveX. Queste proprietà sono accessibili tramite la chiamata di una controllo proprietà della finestra di dialogo che contiene uno o più pagine delle proprietà che forniscono un'interfaccia grafica personalizzata per visualizzare e modificare le proprietà del controllo.  
