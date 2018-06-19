@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33376249"
 ---
 # <a name="cmfcimageeditordialog-class"></a>Classe di CMFCImageEditorDialog
 La `CMFCImageEditorDialog` classe supporta una finestra di dialogo editor di immagini.  

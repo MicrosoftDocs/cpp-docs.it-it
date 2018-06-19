@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33373540"
 ---
 # <a name="document-template-strings-mfc-application-wizard"></a>Stringhe modello documento, Creazione guidata applicazione MFC
 In questa pagina della creazione guidata applicazione MFC, fornire o ridefinire le opzioni seguenti per la localizzazione e la gestione dei documenti. Stringhe modello documento sono disponibili per le applicazioni che includono **Supporto architettura documento/visualizzazione** nel [tipo di applicazione](../../mfc/reference/application-type-mfc-application-wizard.md). Non sono disponibili per le finestre di dialogo. Poiché la maggior parte delle stringhe di modello di documento sono visibili e utilizzate dagli utenti dell'applicazione, vengono localizzate nel **lingua della risorsa** indicato nella **tipo di applicazione** pagina della procedura guidata.  

@@ -60,6 +60,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33378969"
 ---
 # <a name="record-field-exchange-functions"></a>Funzioni di trasferimento di campi di record
 In questo argomento elenca i campi di record (DFX, RFX e RFX di massa) funzioni utilizzate per automatizzare il trasferimento dei dati tra un oggetto recordset e la relativa origine dati ed eseguire altre operazioni sui dati.  

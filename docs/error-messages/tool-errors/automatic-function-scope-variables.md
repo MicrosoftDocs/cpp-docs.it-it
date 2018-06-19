@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33295376"
 ---
 # <a name="automatic-function-scope-variables"></a>Variabili automatiche (ambito funzione)
 Una variabile dichiarata all'interno di una funzione è utilizzabile solo all'interno dell'ambito di tale funzione.  

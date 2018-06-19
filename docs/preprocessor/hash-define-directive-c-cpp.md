@@ -25,6 +25,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33846155"
 ---
 # <a name="define-directive-cc"></a>Direttiva #define (C/C++)
 Il `#define` crea un *macro*, ovvero l'associazione di un identificatore o identificatore con parametri con una stringa di token. Dopo che la macro è stata definita, il compilatore può sostituire la stringa di token per ogni occorrenza dell'identificatore presente nel file di origine.  

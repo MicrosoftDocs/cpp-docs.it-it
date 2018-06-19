@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33689376"
 ---
 # <a name="2727-copyin"></a>2.7.2.7 copyin
 Il **copyin** clausola fornisce un meccanismo per assegnare lo stesso valore per **threadprivate** variabili per ogni thread del team, l'esecuzione di tale area. Per ogni variabile specificata in un **copyin** clausola, il valore della variabile nel thread principale del team viene copiato, come se mediante assegnazione, per le copie del thread privato all'inizio di tale area. La sintassi del **copyin** clausola è il seguente:  

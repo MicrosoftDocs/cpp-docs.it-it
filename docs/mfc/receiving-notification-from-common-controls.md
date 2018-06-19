@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349713"
 ---
 # <a name="receiving-notification-from-common-controls"></a>Ricezione di notifiche da controlli comuni
 Controlli comuni sono finestre figlio che inviano messaggi di notifica alla finestra padre quando si verificano eventi, ad esempio l'input dell'utente, nel controllo.  

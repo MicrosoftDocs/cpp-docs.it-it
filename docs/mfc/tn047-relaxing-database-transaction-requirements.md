@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380934"
 ---
 # <a name="tn047-relaxing-database-transaction-requirements"></a>TN047: rilascio dei requisiti di transazione database
 Questa nota tecnica, che esaminati i requisiti della transazione delle classi di database ODBC MFC, è ora obsoleta. Prima di MFC 4.2, le classi di database necessari che cursori mantenuti nei recordset dopo un **CommitTrans** o **Rollback** operazione. Se il driver ODBC e DBMS non supporta questo livello di conservazione di cursore, le classi di database non abilitare le transazioni.  

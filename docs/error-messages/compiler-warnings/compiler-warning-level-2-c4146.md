@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33296689"
 ---
 # <a name="compiler-warning-level-2-c4146"></a>Compilatore (livello 2) avviso C4146
 operatore meno unario applicato al tipo unsigned, risultato resta unsigned  

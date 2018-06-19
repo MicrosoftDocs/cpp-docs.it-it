@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344880"
 ---
 # <a name="dialog-data-validation"></a>Convalida dei dati delle finestre di dialogo
 È possibile specificare la convalida dei dati mediante la chiamata di funzioni DDV, come illustrato nell'esempio di [Dialog Data Exchange](../mfc/dialog-data-exchange.md). Il `DDV_MaxChars` chiamata di convalida che la stringa immessa nel controllo casella di testo non è più di 20 caratteri. La funzione DDV avvisa l'utente con una finestra di messaggio se la convalida ha esito negativo e inserito lo stato attivo sul controllo all'origine del problema in modo che l'utente può immettere nuovamente i dati. Una funzione DDV per un determinato controllo deve essere chiamata immediatamente dopo la funzione DDX per il controllo stesso.  

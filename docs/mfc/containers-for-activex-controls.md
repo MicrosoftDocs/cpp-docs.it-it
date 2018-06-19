@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341446"
 ---
 # <a name="containers-for-activex-controls"></a>Contenitori per i controlli ActiveX
 È possibile utilizzare i controlli ActiveX sviluppati in Visual C++ in altre applicazioni, purché supportano contenimento dei controlli ActiveX. Un numero di applicazioni di Microsoft, che iniziano con le versioni elencate, supporta il contenimento di controlli ActiveX.  

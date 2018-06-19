@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33379874"
 ---
 # <a name="tn036-using-cformview-with-appwizard-and-classwizard"></a>TN036: utilizzo di CFormView con AppWizard e ClassWizard
 Questa nota tecnica descritto come modificare un'applicazione la creazione guidata applicazione generata e usato un `CFormView` anziché il valore predefinito `CView` della relativa classe di visualizzazione principale. Questa funzionalità è supportata direttamente con questa versione di Visual C++.  

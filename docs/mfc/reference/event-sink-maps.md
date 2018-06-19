@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33373928"
 ---
 # <a name="event-sink-maps"></a>Mappe sink di evento
 Quando un controllo OLE incorporato viene generato un evento, il contenitore del controllo riceve l'evento utilizzando un meccanismo denominato "evento sink mappa" fornita da MFC. Questa mappa del sink di evento consente di definire le funzioni del gestore per ogni evento specifico, nonché i parametri di tali eventi. Per ulteriori informazioni sulle mappe sink di evento, vedere l'articolo [contenitori dei controlli ActiveX](../../mfc/activex-control-containers.md).  

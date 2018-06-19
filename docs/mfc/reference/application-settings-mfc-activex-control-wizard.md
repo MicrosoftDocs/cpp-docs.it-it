@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33351602"
 ---
 # <a name="application-settings-mfc-activex-control-wizard"></a>Impostazioni applicazione, Creazione guidata controllo ActiveX MFC
 Questa schermata della Creazione guidata controllo ActiveX MFC può essere usata per progettare e aggiungere funzioni di base a un nuovo progetto ActiveX MFC. Queste impostazioni si applicano all'applicazione, non a funzionalità o elementi del controllo specifici.  

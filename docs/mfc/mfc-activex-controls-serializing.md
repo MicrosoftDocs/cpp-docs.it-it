@@ -30,6 +30,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33353498"
 ---
 # <a name="mfc-activex-controls-serializing"></a>Controlli ActiveX MFC: serializzazione
 In questo articolo viene illustrato come serializzare un controllo ActiveX. La serializzazione è il processo di lettura o scrittura su un supporto di archiviazione permanente, ad esempio un file su disco. La libreria Microsoft Foundation classe (MFC) fornisce supporto incorporato per la serializzazione in classe `CObject`. `COleControl` estende il supporto per controlli ActiveX tramite l'utilizzo di un meccanismo di scambio di proprietà.  

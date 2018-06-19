@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33353986"
 ---
 # <a name="print-preview-architecture"></a>Architettura dell'anteprima di stampa
 In questo articolo viene illustrata l'implementazione della funzionalità di anteprima di stampa del framework MFC. Gli argomenti trattati includono:  

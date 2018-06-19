@@ -27,6 +27,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33841660"
 ---
 # <a name="running-as-a-member-of-the-users-group"></a>Esecuzione come membro del gruppo Users
 In questo argomento viene illustrato come aumentare il livello di sicurezza e ridurre le possibilità di essere infettati da codice dannoso mediante la configurazione di account utente Windows come membri del gruppo Users, in contrapposizione al gruppo Administrators.  

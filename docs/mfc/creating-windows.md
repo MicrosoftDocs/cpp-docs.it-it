@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341898"
 ---
 # <a name="creating-windows"></a>Creazione di finestre
 Il framework crea automaticamente la maggior parte delle finestre che è necessario in un programma di framework. [Creazione documento/visualizzazione](../mfc/document-view-creation.md) viene illustrato il modo in cui il framework crea le finestre cornice associate a documenti e visualizzazioni. Ma per utilizzi specifici è possibile creare proprie finestre, incluse le proprie finestre figlio di finestre cornice o viste: oltre alle finestre fornite dal framework.  

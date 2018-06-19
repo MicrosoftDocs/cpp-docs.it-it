@@ -20,6 +20,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33687979"
 ---
 # <a name="asynchronous-agents"></a>Agenti asincroni
 Un *agente asincrono* (o semplicemente *agente*) è un componente di applicazione che funziona in modo asincrono con altri agenti per risolvere le attività di elaborazione maggiori. Un agente può essere paragonato a un'attività che dispone di un ciclo di vita stabilito. Ad esempio, un agente potrebbe leggere dati da un dispositivo di input/output (ad esempio, la tastiera, un file su disco o una connessione di rete) e un altro agente potrebbero eseguire un'azione su tali dati appena sarà disponibile. Il primo agente utilizza il passaggio di messaggio per informare il secondo agente che sono disponibili più dati. L'utilità di pianificazione di Runtime di concorrenza fornisce un meccanismo efficiente per consentire agli agenti di bloccarsi e passarsi in modo cooperativo senza interruzione meno efficiente.  

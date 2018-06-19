@@ -89,6 +89,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33357689"
 ---
 # <a name="casyncsocket-class"></a>CAsyncSocket (classe)
 Rappresenta un Socket di Windows, ovvero un endpoint di comunicazione di rete.  

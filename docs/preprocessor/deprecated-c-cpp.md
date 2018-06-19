@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33839819"
 ---
 # <a name="deprecated-cc"></a>deprecated (C/C++)
 Il **deprecato** consente di pragma si indica che una funzione, tipo o qualsiasi altro identificatore potrà non essere più supportato in future versioni o non devono più essere utilizzati.  

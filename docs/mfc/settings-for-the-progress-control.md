@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380009"
 ---
 # <a name="settings-for-the-progress-control"></a>Impostazioni per il controllo Progress
 Le impostazioni di base per il controllo progress ([CProgressCtrl](../mfc/reference/cprogressctrl-class.md)) sono l'intervallo e la posizione corrente. L'intervallo rappresenta l'intera durata dell'operazione. La posizione corrente rappresenta la percentuale di completamento dell'operazione da parte dell'applicazione. Tutte le modifiche all'intervallo o alla posizione che il controllo di stato di avanzamento ridisegni.  

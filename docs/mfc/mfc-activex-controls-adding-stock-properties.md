@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33357559"
 ---
 # <a name="mfc-activex-controls-adding-stock-properties"></a>Controlli ActiveX MFC: aggiunta di proprietà predefinite
 Proprietà predefinite sono diverse dalle proprietà personalizzate in essi sono già implementati dalla classe `COleControl`. `COleControl` contiene le funzioni membro predefinite che supportano le proprietà comuni per il controllo. Alcune proprietà comuni includono la didascalia del controllo e i colori di sfondo e primo piano. Per informazioni su altre proprietà predefinite, vedere [proprietà predefinite supportate dall'Aggiunta guidata proprietà](#_core_stock_properties_supported_by_classwizard) più avanti in questo articolo. Le voci della mappa di distribuzione per le proprietà predefinite sono sempre preceduti dal prefisso **prefisso DISP_STOCKPROP**.  

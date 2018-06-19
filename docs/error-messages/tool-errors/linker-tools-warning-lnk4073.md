@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33299201"
 ---
 # <a name="linker-tools-warning-lnk4073"></a>Avviso degli strumenti del linker LNK4073
 non è possibile creare mapping per il file ilk; il collegamento in modo non incrementale  

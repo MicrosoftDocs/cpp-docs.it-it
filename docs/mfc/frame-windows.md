@@ -30,6 +30,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33352063"
 ---
 # <a name="frame-windows"></a>Finestre cornice
 Quando un'applicazione viene eseguita in Windows, l'utente interagisce con i documenti visualizzati nelle finestre cornice. Una finestra cornice documento ha due componenti principali: il frame e il contenuto che frame. Una finestra cornice di documento può essere un [interfaccia a documento singolo](../mfc/sdi-and-mdi.md) finestra cornice (SDI) o un [interfaccia a documenti multipli](../mfc/sdi-and-mdi.md) finestra figlio (MDI). Windows gestisce la maggior parte dell'interazione dell'utente con la finestra cornice: lo spostamento e il ridimensionamento della finestra, chiuderla e ridurre al minimo e averla. Per gestire il contenuto all'interno del frame.  

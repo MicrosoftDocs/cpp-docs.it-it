@@ -31,6 +31,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33354037"
 ---
 # <a name="prerequisites-for-internet-client-classes"></a>Prerequisiti per le classi client Internet
 Alcune operazioni eseguite da un client Internet (lettura di un file, ad esempio) dispone di alcune azioni preliminari (in questo caso, viene stabilita una connessione Internet). Le tabelle seguenti elencano i prerequisiti per alcune operazioni client.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33323573"
 ---
 # <a name="resource-compiler-warning-rw4001"></a>Avviso del compilatore di risorse RW4001
 . Le opzioni di elaborazione file EXE (/L /M/p /T /K /E /31 o /30)  

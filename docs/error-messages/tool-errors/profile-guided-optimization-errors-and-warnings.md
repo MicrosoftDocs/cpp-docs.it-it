@@ -17,6 +17,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33317320"
 ---
 # <a name="profile-guided-optimization-errors-and-warnings"></a>Errori e avvisi di ottimizzazione GPO
 In questa sezione viene fornito un elenco di riferimento degli errori generati dagli strumenti di compilazione. Per informazioni su un determinato messaggio di errore, fare clic sul numero di errore nella finestra di Output e premere F1, digitare il numero di errore nel **cercare** dell'indice oppure fare clic sul collegamento appropriato:  

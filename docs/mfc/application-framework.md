@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341671"
 ---
 # <a name="application-framework"></a>Framework applicazione
 Il core della libreria di classe MFC (Microsoft Foundation) è un incapsulamento di gran parte delle API di Windows nel formato di C++. Classi della libreria rappresentano finestre, finestre di dialogo, i contesti di dispositivo, gli oggetti GDI comuni, ad esempio pennelli e penne, controlli e altri elementi di Windows standard. Queste classi forniscono una semplice interfaccia di funzione membro C++ per le strutture di Windows che incapsulano. Per ulteriori informazioni sull'utilizzo di queste classi, vedere [argomenti oggetto finestra](../mfc/window-objects.md).  

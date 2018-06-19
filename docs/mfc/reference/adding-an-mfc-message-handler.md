@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33353727"
 ---
 # <a name="adding-an-mfc-message-handler"></a>Aggiunta di un gestore messaggi MFC
 È possibile [utilizzare la finestra proprietà per aggiungere un gestore di messaggi](../../mfc/reference/mapping-messages-to-functions.md) (una funzione membro che gestisce i messaggi di Windows) per una classe e associare i messaggi di Windows per il gestore di messaggi. È inoltre possibile aggiungere [un gestore eventi per qualsiasi controllo di finestra di dialogo](../../windows/adding-event-handlers-for-dialog-box-controls.md).  

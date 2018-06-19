@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342059"
 ---
 # <a name="deprecated-ansi-apis"></a>API ANSI deprecate
 La libreria Microsoft Foundation classe (MFC) venga eseguita la migrazione verso classi e metodi che si basano sul set di caratteri Unicode. Di conseguenza, le versioni ANSI di diversi metodi MFC sono deprecate. Utilizzare le versioni Unicode di questi metodi nelle applicazioni future.  

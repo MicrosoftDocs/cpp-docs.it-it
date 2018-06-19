@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33366125"
 ---
 # <a name="classes-and-functions-generated-by-the-mfc-dll-wizard"></a>Classi e funzioni generate dalla Creazione guidata DLL MFC
 Il codice che genera la creazione guidata DLL MFC dipende dal tipo di DLL che si sta creando e le opzioni selezionate. La creazione guidata DLL MFC genera lo stesso codice per entrambe le forme di regolare le DLL MFC.  

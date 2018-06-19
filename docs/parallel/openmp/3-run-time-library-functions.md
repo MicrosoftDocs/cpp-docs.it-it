@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33688115"
 ---
 # <a name="3-run-time-library-functions"></a>3. Funzioni della libreria run-time
 In questa sezione descrive le funzioni di libreria di runtime OpenMP C e C++. L'intestazione  **\<omp.h >** dichiara due tipi, diverse funzioni che consentono di controllare l'ambiente di esecuzione parallela di query e bloccare le funzioni che possono essere usate per sincronizzare l'accesso ai dati.  

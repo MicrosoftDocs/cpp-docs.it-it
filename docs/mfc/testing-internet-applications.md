@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380070"
 ---
 # <a name="testing-internet-applications"></a>Test delle applicazioni Internet
 Esistono alcune sfide test su Internet, soprattutto per le applicazioni in esecuzione in un server Web. Il test iniziale verrà probabilmente eseguito utilizzando un client di utente singolo, la connessione a un server di prova. Ciò è utile per il debug del codice.  

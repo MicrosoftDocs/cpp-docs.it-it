@@ -20,6 +20,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33695759"
 ---
 # <a name="creating-asynchronous-operations-in-c-for-uwp-apps"></a>Creazione di operazioni asincrone in C++ per App UWP
 Questo documento illustra alcuni punti chiave da tenere presenti quando si utilizza la classe task per produrre operazioni asincrone basate sul pool di thread di Windows in un'app di Windows Runtime UWP (Universal).  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33692337"
 ---
 # <a name="265-flush-directive"></a>2.6.5 Direttiva flush
 Il **scaricamento** direttiva, esplicita o implicita, specifica un punto di sequenza "cross-thread" in corrispondenza del quale l'implementazione è necessario per assicurare che tutti i thread in un team dispongano di una visualizzazione coerenza di determinati oggetti (specificati di seguito) in memoria. Ciò significa che precedenti valutazioni delle espressioni che fanno riferimento a tali oggetti siano complete e le successive valutazioni non hanno ancora iniziato. Ad esempio, compilatori necessario ripristinare i valori degli oggetti da registri in memoria e hardware potrebbe essere necessario scaricare i buffer di scrittura per la memoria e ricaricare i valori degli oggetti dalla memoria.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33705289"
 ---
 # <a name="shortvector-structure"></a>Struttura short_vector
 short_vector fornisce definizioni di metaprogrammazione basato su cui sono utili per la programmazione in modo generico short Vector.  

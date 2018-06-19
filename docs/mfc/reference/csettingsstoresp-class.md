@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33376051"
 ---
 # <a name="csettingsstoresp-class"></a>Classe CSettingsStoreSP
 Il `CSettingsStoreSP` classe è una classe helper che è possibile utilizzare per creare istanze del [classe CSettingsStore](../../mfc/reference/csettingsstore-class.md).  

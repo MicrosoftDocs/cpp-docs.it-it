@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33690039"
 ---
 # <a name="31-execution-environment-functions"></a>3.1 Esecuzione di funzioni di ambiente
 Le funzioni descritte in questa sezione interessano e monitorare i thread, processori e ambienti paralleli:  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33691411"
 ---
 # <a name="a12---using-the-atomic-directive"></a>A.12   Utilizzo della direttiva atomic
 Nell'esempio seguente consente di evitare race condition (aggiornamenti simultanei di un elemento di *x* da più thread) utilizzando il `atomic` (direttiva) ([sezione 2.6.4](../../parallel/openmp/2-6-4-atomic-construct.md) nella pagina 19):  

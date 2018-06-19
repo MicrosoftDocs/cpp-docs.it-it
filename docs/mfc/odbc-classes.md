@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348140"
 ---
 # <a name="odbc-classes"></a>Classi ODBC
 Queste classi vengono utilizzate con le altre classi di framework applicazione per fornire facile accesso a un'ampia gamma di database per cui sono disponibili driver Open Database Connectivity (ODBC).  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33293754"
 ---
 # <a name="compiler-warning-level-4-c4460"></a>Avviso del compilatore (livello 4) C4460
 l'operatore WinRT o CLR 'operator' contiene un parametro passato per riferimento. La semantica dell'operatore WinRT o CLR 'operator' è diversa da quella dell'operatore C++ 'operator'. Si intendeva passare il parametro per valore?  

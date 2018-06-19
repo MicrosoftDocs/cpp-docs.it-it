@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346675"
 ---
 # <a name="dialog-boxes"></a>Finestre di dialogo
 Applicazioni per Windows spesso comunicano con l'utente tramite le finestre di dialogo. Classe [CDialog](../mfc/reference/cdialog-class.md) fornisce un'interfaccia per la gestione delle finestre, l'editor di finestre di Visual C++ semplifica la progettazione di finestre di dialogo e creare le proprie risorse modello di finestra di dialogo e le creazioni guidate codice semplificano il processo di inizializzazione e convalida i controlli in una finestra di dialogo e di raccogliere i valori immessi dall'utente.  

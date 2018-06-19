@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33691410"
 ---
 # <a name="a20---binding-of-barrier-directives"></a>A.20   Associazione di direttive barrier
 L'associazione di direttive regole di chiamata per un **barriera** direttiva da associare di inclusione più vicina `parallel` direttiva. Per ulteriori informazioni sull'associazione di direttive, vedere [sezione 2.8](../../parallel/openmp/2-8-directive-binding.md) nella pagina 32.  

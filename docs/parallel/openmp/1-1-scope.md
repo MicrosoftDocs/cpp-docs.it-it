@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33686802"
 ---
 # <a name="11-scope"></a>1.1 Ambito
 Questa specifica viene illustrata la parallelizzazione solo gestito dall'utente, in cui l'utente specifica in modo esplicito le azioni da intraprendere per il compilatore e il sistema di runtime per eseguire il programma in parallelo. Le implementazioni OpenMP C e C++ non è necessario verificare la presenza di dipendenze, è in conflitto, deadlock, race condition o altri problemi che comportano l'esecuzione del programma. L'utente è responsabile di garantire che l'applicazione utilizzando i costrutti OpenMP C e C++ API viene eseguita correttamente. Generato dal compilatore parallelizzazione automatica e direttive per il compilatore per agevolare la parallelizzazione questi non vengono trattate in questo documento.

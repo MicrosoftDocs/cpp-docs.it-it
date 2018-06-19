@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33371862"
 ---
 # <a name="control-settings-mfc-activex-control-wizard"></a>Impostazioni controllo, Creazione guidata controllo ActiveX MFC
 Utilizzare questa pagina della procedura guidata per specificare la modalità di controllo per il comportamento. Ad esempio, è possibile basare il controllo sui tipi di controllo di Windows standard, ottimizzare il comportamento e l'aspetto o indicare che il controllo può fungere da contenitore per altri controlli.  

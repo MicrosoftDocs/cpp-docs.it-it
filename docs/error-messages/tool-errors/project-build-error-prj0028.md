@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33317726"
 ---
 # <a name="project-build-error-prj0028"></a>Errore di compilazione progetto PRJ0028
 Il file temporaneo 'file' contenuto Unicode che non può essere tradotto in una tabella codici ANSI dell'utente.  

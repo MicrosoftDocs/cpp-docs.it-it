@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345755"
 ---
 # <a name="file-menu-in-an-mfc-database-application"></a>Menu File in un'applicazione database MFC
 Se si crea un'applicazione database MFC e non utilizzare la serializzazione, come deve interpretare l'apertura, chiusura, salvare e salvare come i comandi del menu File anche se non esistono regole stile per questa domanda, ecco alcuni suggerimenti:  

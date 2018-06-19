@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381524"
 ---
 # <a name="toolbar-sample-list"></a>Elenco di esempi di barre degli strumenti
 I programmi di esempio seguente viene illustrato l'utilizzo di barre degli strumenti MFC, vedere:  

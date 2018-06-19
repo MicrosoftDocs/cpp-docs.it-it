@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380162"
 ---
 # <a name="settings-for-the-cstatusbarctrl"></a>Impostazioni per CStatusBarCtrl
 La posizione predefinita di un [CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md) finestra di stato è nella parte inferiore della finestra padre, ma è possibile specificare il `CCS_TOP` stile affinché venga visualizzato nella parte superiore dell'area client della finestra padre.  

@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33374370"
 ---
 # <a name="colebusydialog-class"></a>Classe classe COleBusyDialog
 Utilizzata per la finestra di dialogo relativa al server OLE che non risponde o al server occupato.  

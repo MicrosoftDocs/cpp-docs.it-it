@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33375882"
 ---
 # <a name="filetime-structure"></a>Struttura FILETIME
 Il `FILETIME` struttura è un valore a 64 bit che rappresenta il numero di intervalli da 100 nanosecondi trascorsi dal 1 gennaio 1601.  

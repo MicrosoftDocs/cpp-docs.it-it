@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33297209"
 ---
 # <a name="c-runtime-error-r6027"></a>R6027 errore di Runtime C
 spazio insufficiente per l'inizializzazione lowio  

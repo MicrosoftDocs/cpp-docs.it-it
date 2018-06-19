@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381569"
 ---
 # <a name="using-cprogressctrl"></a>Utilizzo di CProgressCtrl
 È possibile utilizzare il controllo dello stato per indicare lo stato di avanzamento di un'operazione di lunga durata. Si tratta di un rettangolo che viene riempito gradualmente con il colore di sistema con l'avanzamento dell'operazione.  

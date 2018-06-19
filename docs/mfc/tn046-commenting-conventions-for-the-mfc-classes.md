@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380825"
 ---
 # <a name="tn046-commenting-conventions-for-the-mfc-classes"></a>TN046: convenzioni relative ai commenti per le classi MFC
 Questa nota tecnica descriveva originariamente le convenzioni utilizzate per commentare le classi MFC. Queste informazioni sono ora trattate in [MFC: utilizzo dei file di origine MFC](../mfc/using-the-mfc-source-files.md).  

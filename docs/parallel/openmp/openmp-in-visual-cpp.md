@@ -21,6 +21,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33691144"
 ---
 # <a name="openmp-in-visual-c"></a>OpenMP in Visual C++
 L'interfaccia di programma applicazione OpenMP C e C++ consente di scrivere applicazioni che utilizzano in modo efficace più processori. Visual C++ supporta lo standard OpenMP 2.0.  

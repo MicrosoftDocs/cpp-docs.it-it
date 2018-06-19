@@ -34,6 +34,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33355139"
 ---
 # <a name="mfc-activex-controls-using-fonts"></a>Controlli ActiveX MFC: utilizzo dei tipi di carattere
 Se il controllo ActiveX viene visualizzato il testo, è possibile consentire all'utente di controllo modificare l'aspetto del testo modificando una proprietà di tipo di carattere. Le proprietà del carattere vengono implementate come oggetti di tipo di carattere e può essere uno dei due tipi: predefinite o personalizzate. Le proprietà Font sono preimplementate che è possibile aggiungere tramite l'aggiunta guidata proprietà. Proprietà Font personalizzate non sono preimplementate e lo sviluppatore del controllo determina il comportamento e l'utilizzo della proprietà.  

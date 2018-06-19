@@ -37,6 +37,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33694706"
 ---
 # <a name="array-class"></a>Classe array
 Rappresenta un contenitore di dati utilizzato per spostare i dati a un tasto di scelta rapida.  

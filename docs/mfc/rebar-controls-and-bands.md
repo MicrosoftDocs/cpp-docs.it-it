@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349851"
 ---
 # <a name="rebar-controls-and-bands"></a>Controlli Rebar e bande
 Lo scopo principale di un controllo rebar è di agire come un contenitore per le finestre figlio, controlli comuni di finestra di dialogo, menu, barre degli strumenti e così via. Questo contenuto è supportato dal concetto di "banda". Ogni controllo rebar band può contenere qualsiasi combinazione di una barra verticale di ridimensionamento, una bitmap, un'etichetta di testo e una finestra figlio.  

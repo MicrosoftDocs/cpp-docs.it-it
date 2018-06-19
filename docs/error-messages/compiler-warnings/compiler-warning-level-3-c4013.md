@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33290868"
 ---
 # <a name="compiler-warning-level-3-c4013"></a>Compilatore (livello 3) Avviso C4013
 'function' non definita. Supponendo che restituisce un int extern  

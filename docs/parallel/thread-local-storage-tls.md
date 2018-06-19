@@ -24,6 +24,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33694550"
 ---
 # <a name="thread-local-storage-tls"></a>Archiviazione thread-local (TLS)
 L'archiviazione thread-local è il metodo attraverso il quale ogni thread incluso in un processo multithreading specifico può allocare posizioni in cui archiviare dati specifici del thread. In modo dinamico (Runtime) con associazione a dati specifici di thread sono supportate tramite le API TLS ([TlsAlloc](https://msdn.microsoft.com/en-us/library/windows/desktop/ms686801), [TlsGetValue](https://msdn.microsoft.com/en-us/library/windows/desktop/ms686812), [TlsSetValue](https://msdn.microsoft.com/en-us/library/windows/desktop/ms686818), e [TlsFree](https://msdn.microsoft.com/en-us/library/windows/desktop/ms686804)). Per ulteriori informazioni sulle modalità di implementazione di archiviazione locale di thread in Windows, vedere [archiviazione Thread-Local (Windows)](https://msdn.microsoft.com/en-us/library/windows/desktop/ms686749\(v=vs.85\).aspx).  Win32 e il compilatore  Visual C++ supportano ora dati specifici dei thread associati staticamente (in fase di caricamento) oltre all'implementazione delle API esistente.  

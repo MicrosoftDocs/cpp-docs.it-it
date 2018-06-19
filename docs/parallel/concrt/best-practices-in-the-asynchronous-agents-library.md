@@ -22,6 +22,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33692665"
 ---
 # <a name="best-practices-in-the-asynchronous-agents-library"></a>Procedure consigliate nella libreria di agenti asincroni
 Questo documento viene descritto come ottimizzare l'utilizzo della libreria di agenti asincroni. La libreria di agenti Alza di livello un modello di programmazione basato su attori e attività di pipelining e il passaggio di un flusso di dati dei messaggi in-process.  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380841"
 ---
 # <a name="tn032-mfc-exception-mechanism"></a>TN032: meccanismo di eccezioni MFC
 Le versioni precedenti di Visual C++ non supportavano il meccanismo di eccezioni standard di C++ e MFC forniva macro **TRY/CATCH/THROW** che sono stati utilizzati. Questa versione di Visual C++ supporta pienamente le eccezioni C++. In questa nota venivano trattati alcuni dettagli di implementazione avanzata delle precedenti macro, incluso come pulire automaticamente gli oggetti basati su stack. Dal momento che le eccezioni C++ supportano la rimozione dello stack per impostazione predefinita, questa nota tecnica non è più necessaria.  

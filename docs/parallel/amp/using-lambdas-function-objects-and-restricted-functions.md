@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33687452"
 ---
 # <a name="using-lambdas-function-objects-and-restricted-functions"></a>Utilizzo di espressioni lambda, oggetti funzione e funzioni con restrizioni
 Il codice C++ AMP che si desidera eseguire nel tasto di scelta rapida viene specificato come argomento in una chiamata al [parallel_for_each](reference/concurrency-namespace-functions-amp.md#parallel_for_each) metodo. È possibile fornire un'espressione lambda o un oggetto funzione (functor) come argomento. Inoltre, l'oggetto di espressione o una funzione lambda può chiamare una funzione con restrizioni AMP C++. In questo argomento Usa un algoritmo di aggiunta di matrice per illustrare le espressioni lambda, oggetti funzione e funzioni con restrizioni. Nell'esempio seguente viene illustrato l'algoritmo senza codice C++ AMP. Vengono create due matrici di 1-dimensionale di lunghezza uguale. Gli elementi di tipo integer corrispondenti vengono aggiunti e archiviati in una terza matrice dimensionale a 1. C++ AMP non viene usato.  

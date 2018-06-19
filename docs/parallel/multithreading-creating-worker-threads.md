@@ -25,6 +25,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33689272"
 ---
 # <a name="multithreading-creating-worker-threads"></a>Multithreading: creazione di thread di lavoro
 Un thread di lavoro viene comunemente utilizzato per gestire le attività in background che l'utente non dovrebbe essere in attesa per continuare a utilizzare l'applicazione. Attività, ad esempio il ricalcolo e la stampa in background sono i buoni esempi di thread di lavoro. In questo argomento illustra in dettaglio i passaggi necessari per creare un thread di lavoro. Gli argomenti trattati includono:  

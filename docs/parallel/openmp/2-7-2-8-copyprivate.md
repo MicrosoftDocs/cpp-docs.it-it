@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33691603"
 ---
 # <a name="2728-copyprivate"></a>2.7.2.8 copyprivate
 Il **copyprivate** clausola fornisce un meccanismo per l'utilizzo di una variabile privata per la trasmissione di un valore da un membro di un gruppo per gli altri membri. È un'alternativa all'utilizzo di una variabile condivisa per il valore quando tale variabile condivisa fornendo sarebbe difficile (ad esempio, in una ricorsione di richiedere una variabile diversa a ogni livello). Il **copyprivate** clausola può apparire solo il **singolo** direttiva.  

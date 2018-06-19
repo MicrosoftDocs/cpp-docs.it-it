@@ -55,6 +55,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33694758"
 ---
 # <a name="accelerator-class"></a>Classe accelerator
 Un tasto di scelta rapida è una funzionalità di hardware che è ottimizzata per l'elaborazione dati in parallelo. Un tasto di scelta rapida sia un dispositivo collegato a un bus PCIe (ad esempio una GPU), o potrebbe essere un'istruzione estesa impostato sulla CPU principale.  

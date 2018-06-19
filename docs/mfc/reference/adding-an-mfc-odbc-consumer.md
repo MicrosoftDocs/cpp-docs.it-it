@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346858"
 ---
 # <a name="adding-an-mfc-odbc-consumer"></a>Aggiunta di un consumer ODBC MFC
 Un consumer ODBC MFC è costituito da un ODBC recordset classe e i data binding necessarie per accedere a un'origine dati.  

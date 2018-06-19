@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341910"
 ---
 # <a name="creating-your-dialog-class"></a>Creazione della classe di finestre di dialogo
 Per ogni finestra di dialogo del programma, creare una nuova classe di finestra di dialogo per funzionare con la risorsa finestra di dialogo.  

@@ -123,6 +123,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33357241"
 ---
 # <a name="ccombobox-class"></a>CComboBox (classe)
 Fornisce la funzionalità di una casella combinata di Windows.  

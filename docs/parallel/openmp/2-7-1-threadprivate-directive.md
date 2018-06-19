@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33692652"
 ---
 # <a name="271-threadprivate-directive"></a>2.7.1 Direttiva threadprivate
 Il `threadprivate` direttiva rende l'ambito file denominato, ambito spazio dei nomi o variabili statiche con ambito blocco specificate nella *elenco variabili* privata di un thread. *elenco di variabili* è un elenco delimitato da virgole delle variabili che non contengono un tipo incompleto. La sintassi del `threadprivate` direttiva è come segue:  

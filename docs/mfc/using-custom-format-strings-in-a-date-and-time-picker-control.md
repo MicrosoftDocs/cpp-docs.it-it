@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382002"
 ---
 # <a name="using-custom-format-strings-in-a-date-and-time-picker-control"></a>Utilizzo di stringhe di formato personalizzate in un controllo selezione data e ora
 Per impostazione predefinita, i controlli selezione data e ora forniscono che tre tipi (ognuno dei quali corrisponde a uno stile univoco) di formato per la visualizzazione della data o ora:  

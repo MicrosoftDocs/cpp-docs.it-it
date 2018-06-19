@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33351430"
 ---
 # <a name="mfc-application-architecture-classes"></a>Classi architettura dell'applicazione MFC
 Le classi in questa categoria contribuiscono all'architettura di un'applicazione framework. Forniscono funzionalità comuni alla maggior parte delle applicazioni. Compilare il framework per aggiungere funzionalità specifiche dell'applicazione. In genere, non la derivazione di nuove classi dalle classi, architettura e quindi aggiungendo nuovi membri o si esegue l'override di funzioni membro esistente.  

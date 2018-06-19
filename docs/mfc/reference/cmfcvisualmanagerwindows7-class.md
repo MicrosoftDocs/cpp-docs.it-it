@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33373703"
 ---
 # <a name="cmfcvisualmanagerwindows7-class"></a>Classe CMFCVisualManagerWindows7
 Il `CMFCVisualManagerWindows7` fornisce a un'applicazione l'aspetto di un [!INCLUDE[win7](../../build/includes/win7_md.md)] dell'applicazione.  

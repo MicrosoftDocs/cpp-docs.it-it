@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33842231"
 ---
 # <a name="token-pasting-operator-"></a>Operatore di concatenamento dei token (##)
 L'operatore doppia cancelletto o "concatenamento dei token" (**##**), talvolta denominato l'operatore di "unione" viene usato nelle macro simile a oggetto sia di tipo funzione. Consente ai token separati di essere uniti in un unico token e quindi non può essere il primo o l'ultimo token nella definizione macro.  

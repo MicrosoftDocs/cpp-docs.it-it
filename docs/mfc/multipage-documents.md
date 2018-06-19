@@ -40,6 +40,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33355272"
 ---
 # <a name="multipage-documents"></a>Documenti con più pagine
 In questo articolo descrive il protocollo di stampa Windows e viene illustrato come stampare documenti che contengono più di una pagina. L'articolo vengono illustrati gli argomenti seguenti:  

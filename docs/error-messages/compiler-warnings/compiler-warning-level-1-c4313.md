@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33283939"
 ---
 # <a name="compiler-warning-level-1-c4313"></a>Avviso del compilatore (livello 1) C4313
 'function': 'format specifier' nella stringa di formato è in conflitto con l'argomento number di tipo 'type'  

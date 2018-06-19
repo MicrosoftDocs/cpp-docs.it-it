@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346503"
 ---
 # <a name="making-owner-drawn-tabs"></a>Creazione di schede create dal proprietario
 È possibile definire i singoli elementi di un controllo struttura a schede ([CTabCtrl](../mfc/reference/ctabctrl-class.md)) come elementi creati dal proprietario. Per ulteriori informazioni, vedere [schede create dal proprietario](http://msdn.microsoft.com/library/windows/desktop/bb760550) in Windows SDK.  

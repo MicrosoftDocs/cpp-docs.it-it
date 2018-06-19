@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33351966"
 ---
 # <a name="menus-and-resources-menu-merging"></a>Menu e risorse: unione di menu
 In questo articolo illustra in dettaglio i passaggi necessari per le applicazioni documento OLE gestire la modifica visiva e di attivazione sul posto in modo corretto. Attivazione sul posto pone un problema di contenitore e server applicazioni (componente). L'utente rimane nella stessa finestra del frame, nell'ambito del documento contenitore, ma è effettivamente in esecuzione un'altra applicazione (server). Questo richiede il coordinamento tra le risorse delle applicazioni di contenitore e server.  

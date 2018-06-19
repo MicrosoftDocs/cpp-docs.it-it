@@ -45,6 +45,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33374753"
 ---
 # <a name="cusertool-class"></a>Classe CUserTool
 Uno strumento utente è una voce di menu che esegue un'applicazione esterna. Il **strumenti** scheda della finestra di **Personalizza** la finestra di dialogo ( [CMFCToolBarsCustomizeDialog classe](../../mfc/reference/cmfctoolbarscustomizedialog-class.md)) consente all'utente di aggiungere strumenti utente e per specificare il nome, i comandi, argomenti, e directory iniziale per ogni strumento.  

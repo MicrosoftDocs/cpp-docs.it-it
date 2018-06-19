@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33371559"
 ---
 # <a name="cwinformsdialog-class"></a>Classe CWinFormsDialog
 Wrapper per una classe finestra di dialogo MFC che ospita un controllo utente Windows Form.  

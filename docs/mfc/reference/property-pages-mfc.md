@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33376558"
 ---
 # <a name="property-pages-mfc"></a>Pagine delle proprietà (MFC)
 Pagine delle proprietà di visualizzare i valori correnti delle proprietà specifiche del controllo OLE in un'interfaccia grafica personalizzabile per la visualizzazione e modifica supportando un meccanismo di mapping dei dati basato su dati DDX (dialog exchange).  

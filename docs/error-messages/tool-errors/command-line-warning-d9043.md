@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33294749"
 ---
 # <a name="command-line-warning-d9043"></a>Avviso della riga di comando D9043
 valore non valido 'livello_avviso ' non valido per 'compiler_option'; verrà utilizzato ' 4999'; Avvisi dell'analisi codice non sono associati ai livelli di avviso  

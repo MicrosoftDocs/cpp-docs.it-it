@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33299705"
 ---
 # <a name="linker-tools-error-lnk1301"></a>Errore degli strumenti del linker LNK1301
 Moduli clr LTCG incompatibile con /LTCG: parametro  
