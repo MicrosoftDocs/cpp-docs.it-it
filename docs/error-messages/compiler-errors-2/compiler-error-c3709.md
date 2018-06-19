@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33263872"
 ---
 # <a name="compiler-error-c3709"></a>Errore del compilatore C3709
 'function': sintassi non corretta per la specifica di eventi in hook /\__unhook  

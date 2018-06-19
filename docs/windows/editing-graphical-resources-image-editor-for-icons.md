@@ -27,6 +27,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33882498"
 ---
 # <a name="editing-graphical-resources-image-editor-for-icons"></a>Modifica delle risorse grafiche (Editor di immagini per le icone)
 Le risorse grafiche sono le immagini definite per l'applicazione. È possibile disegnare a mano libera o disegnare utilizzando forme. È possibile selezionare parti di un'immagine per la modifica, capovolgimento o ridimensionamento oppure è possibile creare un pennello personalizzato da una parte selezionata dell'immagine e disegnare. Si definiscono le proprietà dell'immagine, salvare le immagini in formati diversi e convertire immagini in un formato a altro.  

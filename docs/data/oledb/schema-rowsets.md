@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33104282"
 ---
 # <a name="schema-rowsets"></a>Rowset dello schema
 Schema (o metadati) sono qualsiasi informazioni sulla struttura o un'organizzazione, ad esempio le informazioni sul provider, set di righe, tabella, colonne, di un database o altre informazioni oltre il contenuto effettivo del database. OLE DB consente di ottenere tali informazioni senza aprire il set di righe dal set di righe dello schema.  

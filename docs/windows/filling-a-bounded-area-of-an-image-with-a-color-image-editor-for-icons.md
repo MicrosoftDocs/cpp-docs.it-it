@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33880569"
 ---
 # <a name="filling-a-bounded-area-of-an-image-with-a-color-image-editor-for-icons"></a>Riempimento di un'area delimitata di un'immagine con un colore (Editor di immagini per le icone)
 Editor di immagini consente di **riempimento** strumento per la compilazione di qualsiasi racchiusi area dell'immagine con il colore di disegno o il colore di sfondo corrente.  

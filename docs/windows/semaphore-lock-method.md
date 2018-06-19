@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33892475"
 ---
 # <a name="semaphorelock-method"></a>Metodo Semaphore::Lock
 Attende l'oggetto corrente o l'oggetto semaforo associato all'handle specificato, non è in stato segnalato o è trascorso l'intervallo di timeout specificato.  

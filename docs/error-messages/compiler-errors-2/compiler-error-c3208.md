@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33251648"
 ---
 # <a name="compiler-error-c3208"></a>Errore del compilatore C3208
 'function': l'elenco dei parametri di modello per il modello di classe 'class' non corrisponde all'elenco dei parametri di modello per il parametro di modello 'param'  

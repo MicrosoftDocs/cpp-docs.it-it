@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33256337"
 ---
 # <a name="compiler-error-c3487"></a>Errore del compilatore C3487
 'return type': tutte le espressioni restituite devono essere dedotte dallo stesso tipo. In precedenza era 'return type'  

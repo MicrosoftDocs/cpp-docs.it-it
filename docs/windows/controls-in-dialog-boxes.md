@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33873121"
 ---
 # <a name="controls-in-dialog-boxes"></a>Controlli delle finestre di dialogo
 È possibile aggiungere controlli a una finestra di dialogo utilizzando il [scheda Editor finestre](../windows/dialog-editor-tab-toolbox.md) nel [finestra Casella degli strumenti](/visualstudio/ide/reference/toolbox), che consente di scegliere il controllo desiderato e trascinarlo nella finestra di dialogo. Per impostazione predefinita, finestra Casella degli strumenti è impostata l'opzione Nascondi automaticamente. Viene visualizzata come scheda sul margine sinistro della soluzione quando l'editor della finestra di dialogo è aperta. Tuttavia, è possibile aggiungere finestra Casella degli strumenti nella posizione desiderata, fare clic su di **Nascondi automaticamente** pulsante nell'angolo superiore destro della finestra. Per ulteriori informazioni su come controllare il comportamento di questa finestra, vedere [finestra Gestione](/visualstudio/ide/customizing-window-layouts-in-visual-studio).  

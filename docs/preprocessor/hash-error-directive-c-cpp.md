@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33905572"
 ---
 # <a name="error-directive-cc"></a>Direttiva #error (C/C++)
 La direttiva `#error` genera un messaggio di errore definito in fase di compilazione e quindi termina la compilazione.  

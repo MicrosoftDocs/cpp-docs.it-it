@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33248773"
 ---
 # <a name="compiler-error-c3385"></a>Errore del compilatore C3385
 'class::function': una funzione che ha un attributo personalizzato DllImport non può restituire un'istanza di una classe  

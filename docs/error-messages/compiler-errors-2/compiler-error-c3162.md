@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33253800"
 ---
 # <a name="compiler-error-c3162"></a>Errore del compilatore C3162
 'type': un tipo di riferimento con un distruttore non può essere utilizzato come tipo di dati statici ' membro '  

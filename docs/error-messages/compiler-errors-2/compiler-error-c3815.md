@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33268331"
 ---
 # <a name="compiler-error-c3815"></a>Errore del compilatore C3815
 tipo restituito del metodo 'funzione_accesso_get' deve corrispondere tipo dell'ultimo parametro di un metodo set  

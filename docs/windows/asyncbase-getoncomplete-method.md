@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33865110"
 ---
 # <a name="asyncbasegetoncomplete-method"></a>Metodo AsyncBase::GetOnComplete
 Copia l'indirizzo del gestore dell'evento di completamento corrente per la variabile specificata.  

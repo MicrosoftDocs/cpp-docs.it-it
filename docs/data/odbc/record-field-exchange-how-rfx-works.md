@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33094299"
 ---
 # <a name="record-field-exchange-how-rfx-works"></a>Trasferimento di campi di record: funzionamento di RFX
 In questo argomento viene illustrato il processo RFX. Si tratta di un avanzato copertura argomento:  

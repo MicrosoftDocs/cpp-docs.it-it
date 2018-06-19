@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33249255"
 ---
 # <a name="compiler-error-c3247"></a>Errore del compilatore C3247
 'class1': una coclasse non può ereditare da un'altra coclasse 'class2'  

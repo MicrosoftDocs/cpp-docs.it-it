@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33251294"
 ---
 # <a name="compiler-error-c3217"></a>Errore del compilatore C3217
 'param': un parametro generico non può essere vincolato in questa dichiarazione  

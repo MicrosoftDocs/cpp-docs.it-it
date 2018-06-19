@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33270964"
 ---
 # <a name="compiler-error-c3849"></a>Errore del compilatore C3849
 chiamata di funzione in un'espressione di tipo 'type' perderebbe qualificatori const e/o volatili per tutti i numero overload di operatore disponibili  

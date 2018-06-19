@@ -18,6 +18,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33870302"
 ---
 # <a name="console-applications-in-visual-c"></a>Applicazioni console in Visual C++
 Un'applicazione console accetta l'input e invia l'output alla console, nota anche con il nome di prompt dei comandi. È possibile creare applicazioni console per le operazioni di base o per eseguire attività più sofisticate. È anche possibile usare un'app console per dimostrare in modo tangibile le funzionalità che in seguito si vogliono incorporare in un'applicazione desktop di Windows o in un'app della piattaforma UWP. Le applicazioni console possono comunicare con altre applicazioni desktop per mezzo di pipe o altri meccanismi RPC.  

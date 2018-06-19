@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33266516"
 ---
 # <a name="compiler-error-c3743"></a>Errore del compilatore C3743
 può solo eseguire un hook/unhook un'intera interfaccia quando il parametro 'layout_dependent' di event_receiver è true  

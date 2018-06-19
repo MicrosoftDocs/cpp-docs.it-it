@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33128579"
 ---
 # <a name="how-to-display-images-with-the-net-framework"></a>Procedura: visualizzare immagini con .NET Framework
 Esempio di codice seguente modifica il gestore dell'evento OnPaint per recuperare un puntatore per il <xref:System.Drawing.Graphics> oggetto per il form principale. Il <xref:System.Windows.Forms.Form.OnPaint%2A> funzione deve essere un'applicazione Windows Form, molto probabilmente creata con una creazione guidata applicazione Visual Studio.  

@@ -30,6 +30,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33873693"
 ---
 # <a name="defining-mnemonics-access-keys"></a>Definizione di tasti di scelta
 In genere, gli utenti di tastiera spostare lo stato attivo di input da un controllo a un'altra in una finestra di dialogo con i tasti freccia e TAB. Tuttavia, è possibile definire una chiave di accesso (nome di tasto di scelta o facile da ricordare) che consente agli utenti di scegliere un controllo premendo un tasto singolo.  

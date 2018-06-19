@@ -27,6 +27,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33867103"
 ---
 # <a name="generic-text-mappings-in-tcharh"></a>Mappature di testo generico in Tchar.h
 Per semplificare il trasporto del codice a livello internazionale, il [!INCLUDE[TLA#tla_ms](../text/includes/tlasharptla_ms_md.md)] libreria run-time fornisce [!INCLUDE[TLA#tla_ms](../text/includes/tlasharptla_ms_md.md)]-mapping testo generico specifiche per molti tipi di dati, routine e altri oggetti. È possibile utilizzare questi mapping, che sono definiti in Tchar. h, per scrivere codice generico che può essere compilato per il formato a byte singolo, multibyte o [!INCLUDE[TLA#tla_unicode](../atl-mfc-shared/reference/includes/tlasharptla_unicode_md.md)] set di caratteri, a seconda delle costanti manifesto definiti tramite un `#define` istruzione. Mapping testo generico sono [!INCLUDE[TLA#tla_ms](../text/includes/tlasharptla_ms_md.md)] estensioni che non sono [!INCLUDE[vcpransi](../atl-mfc-shared/reference/includes/vcpransi_md.md)] compatibile.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33874798"
 ---
 # <a name="making-controls-the-same-width-height-or-size"></a>Impostazione della stessa larghezza, altezza o dimensione per i controlli
 È possibile ridimensionare un gruppo di controlli in base alla dimensione del controllo dominante. È anche possibile [ridimensionare un controllo in base alle dimensioni del testo della didascalia](../windows/sizing-individual-controls.md).  

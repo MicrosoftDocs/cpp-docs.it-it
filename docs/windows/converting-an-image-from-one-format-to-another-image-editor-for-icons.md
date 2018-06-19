@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33871040"
 ---
 # <a name="converting-an-image-from-one-format-to-another-image-editor-for-icons"></a>Conversione di un'immagine in un diverso formato (Editor di immagini per le icone)
 È possibile aprire immagini GIF o JPEG nell'editor di immagini e salvarle come bitmap. Inoltre, è possibile aprire un file bitmap e salvarlo come GIF o JPEG. Le immagini utilizzate non devono essere parte di un progetto per la modifica nell'ambiente di sviluppo (vedere [modifica autonoma di immagini](../windows/editing-an-image-outside-of-a-project-image-editor-for-icons.md)).  

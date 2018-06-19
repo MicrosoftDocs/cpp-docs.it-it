@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33870845"
 ---
 # <a name="c-attributes-reference"></a>Riferimenti relativi agli attributi di C++
 Microsoft definisce un set di attributi che semplificano la programmazione COM e lo sviluppo in .NET Framework common language runtime. Quando si includono attributi nei file di origine, il compilatore funziona con provider DLL per inserire o modificare il codice nel file oggetto generati.  
