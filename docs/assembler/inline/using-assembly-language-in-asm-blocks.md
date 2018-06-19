@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32050435"
 ---
 # <a name="using-assembly-language-in-asm-blocks"></a>Utilizzo del linguaggio assembly in blocchi __asm
 ## <a name="microsoft-specific"></a>Sezione specifica Microsoft  

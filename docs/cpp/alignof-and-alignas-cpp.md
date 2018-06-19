@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32407986"
 ---
 # <a name="alignof-and-alignas-c"></a>alignof e alignas (C++)
 L'identificatore di tipo `alignas` è la soluzione standard portabile di C++ per specificare l'allineamento personalizzato di variabili e tipi definiti dall'utente. Analogamente, l'operatore `alignof` è una soluzione standard portabile per ottenere l'allineamento di un tipo o di una variabile specificata.  

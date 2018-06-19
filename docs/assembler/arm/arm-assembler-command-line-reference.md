@@ -17,6 +17,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32054611"
 ---
 # <a name="arm-assembler-command-line-reference"></a>Riferimenti alla riga di comando dell'assembler ARM
 Questo articolo fornisce informazioni della riga di comando dell'assembler ARM Microsoft, *armasm*, che consente di compilare in linguaggio assembly ARMv7 Thumb nell'implementazione Microsoft del comune oggetto formato COFF (File). Il linker può collegare il codice COFF con codice oggetto a cui viene generato dall'assembler ARM o dal compilatore C, insieme alle librerie di oggetti creati da Gestione librerie.  

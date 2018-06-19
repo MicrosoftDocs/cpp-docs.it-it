@@ -35,6 +35,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32409703"
 ---
 # <a name="sharing-constants"></a>Condivisione costanti
 Costanti per le modalità di condivisione file.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32408146"
 ---
 # <a name="additional-termination-considerations"></a>Considerazioni di terminazione aggiuntive
 È possibile terminare un programma C++ utilizzando **uscire**, `return`, o **abort**. È possibile aggiungere l'elaborazione di uscita utilizzando la funzione `atexit`. Questi argomenti vengono approfonditi nelle sezioni successive.  

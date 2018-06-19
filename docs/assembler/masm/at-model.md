@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32050662"
 ---
 # <a name="model"></a>@Model
 1 per **TINY** del modello, 2 per **SMALL** del modello, 3 per **COMPACT** del modello, 4 per **Media** del modello, 5 per **grande**del modello, 6 per **molto grandi** modello e 7 per **FLAT** modello (equivalgono numerico).  

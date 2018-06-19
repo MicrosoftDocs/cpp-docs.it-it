@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32051664"
 ---
 # <a name="fardata"></a>.FARDATA?
 Se usato con [. MODELLO](../../assembler/masm/dot-model.md), viene avviato un segmento di dati decisamente per dati non inizializzati (nome del segmento FAR_BSS o *nome*).  

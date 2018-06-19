@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32054886"
 ---
 # <a name="dosseg"></a>.DOSSEG
 Ordina i segmenti in base alla convenzione di segmento MS-DOS: codice prima di tutto, quindi segmenti non in DGROUP e quindi segmenti in DGROUP.  

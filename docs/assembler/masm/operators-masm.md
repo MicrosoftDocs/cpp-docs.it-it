@@ -17,6 +17,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32053054"
 ---
 # <a name="operators-masm"></a>Operatori (MASM)
 Per ulteriori informazioni sugli operatori nella lingua Microsoft Macro Assembler, vedere [riferimento a operatori](../../assembler/masm/operators-reference.md).  

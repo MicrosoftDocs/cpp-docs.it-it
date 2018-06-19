@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32055300"
 ---
 # <a name="popcontext"></a>POPCONTEXT
 Ripristina in parte o interamente corrente `context` (salvato per il [PUSHCONTEXT](../../assembler/masm/pushcontext.md) (direttiva)). Il `context` può essere **PRESUPPONE**, `RADIX`, **elenco**, **CPU**, o **tutti**.  

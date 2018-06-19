@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32055206"
 ---
 # <a name="savereg"></a>.SAVEREG
 Genera uno un `UWOP_SAVE_NONVOL` o `UWOP_SAVE_NONVOL_FAR` rimozione di ingresso del codice per il registro specificato (`reg`) e di offset (`offset`) utilizzando l'offset corrente di prologo. MASM sceglierà la codifica più efficiente.  

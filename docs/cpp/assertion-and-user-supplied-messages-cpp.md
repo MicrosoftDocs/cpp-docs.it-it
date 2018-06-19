@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32411705"
 ---
 # <a name="assertion-and-user-supplied-messages-c"></a>Asserzione e messaggi forniti dall'utente (C++)
 I linguaggio supporta tre la gestione degli errori meccanismi C++ che consentono di eseguire il debug dell'applicazione: il [#error direttiva](../preprocessor/hash-error-directive-c-cpp.md), [static_assert](../cpp/static-assert.md) (parola chiave) e il [assert (macro), Assert, _ wassert](../c-runtime-library/reference/assert-macro-assert-wassert.md) (macro). Tutti i tre meccanismi generano messaggi di errore e due eseguono anche il test di asserzioni software. Un'asserzione software specifica una condizione che si prevede abbia valore True in un particolare punto del programma. Se un'asserzione sull'ora di compilazione non riesce, il compilatore genera un messaggio di diagnostica e un errore di compilazione. Se un'asserzione di runtime non riesce, il sistema operativo genera un messaggio di diagnostica e chiude l'applicazione.  

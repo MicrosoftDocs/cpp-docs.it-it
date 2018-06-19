@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32051234"
 ---
 # <a name="code"></a>.CODE
 Se usato con [. MODELLO](../../assembler/masm/dot-model.md), indica l'inizio di un segmento di codice.  

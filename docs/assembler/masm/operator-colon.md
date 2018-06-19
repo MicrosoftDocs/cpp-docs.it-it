@@ -22,6 +22,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32056239"
 ---
 # <a name="operator-"></a>Operatore :
 Sostituisce il segmento predefinito di *espressione* con `segment`. Il `segment` può essere un registro di segmento, nome del gruppo, il nome del segmento o espressione di segmento. Il *espressione* deve essere una costante.  

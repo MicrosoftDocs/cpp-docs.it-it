@@ -23,6 +23,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32056353"
 ---
 # <a name="operator-lowword"></a>Operatore LOWWORD
 Restituisce i 16 bit bassi di *espressione*. Espressioni MASM sono valori a 64 bit.  

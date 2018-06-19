@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32419666"
 ---
 # <a name="portability-at-abi-boundaries-modern-c"></a>Portabilità in base ai limiti ABI (C++ moderno)
 Utilizzare tipi sufficientemente portabili e le convenzioni dei limiti interfaccia binaria. Un tipo"portatile" è un tipo incorporato C o una struttura che contiene solo i tipi predefiniti di C. Tipi di classe possono essere utilizzati solo quando chiamante e chiamato concordare layout, la chiamata convenzione e così via. Ciò è possibile solo quando entrambi sono state compilate le impostazioni del compilatore e del compilatore stesso.  

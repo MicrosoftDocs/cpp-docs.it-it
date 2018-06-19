@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32053204"
 ---
 # <a name="pushframe"></a>.PUSHFRAME
 Genera un `UWOP_PUSH_MACHFRAME` di ingresso del codice di rimozione. Se l'opzione facoltativa `code` viene specificato, la rimozione di ingresso del codice viene assegnato un modificatore di 1. In caso contrario, il modificatore è 0.  

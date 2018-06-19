@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32054390"
 ---
 # <a name="ml-warning-a4004"></a>Avviso ML A4004
 **non è possibile PRESUPPORRE CS**  

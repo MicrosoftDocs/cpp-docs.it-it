@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32354919"
 ---
 # <a name="design-principles-for-collection-and-enumerator-interfaces"></a>Principi di progettazione per la raccolta ed enumeratore (interfacce)
 Esistono diversi principi di progettazione protetti da ogni tipo di interfaccia:  
