@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345045"
 ---
 # <a name="handling-the-apply-button"></a>Gestione del pulsante Applica
 Finestre delle proprietà sono una funzionalità che non le finestre di dialogo standard: consentono all'utente di applicare le modifiche apportate prima di chiudere la finestra delle proprietà. Questa operazione viene eseguita utilizzando il pulsante Applica. In questo articolo vengono descritti i metodi che è possibile utilizzare per implementare correttamente questa funzionalità.  

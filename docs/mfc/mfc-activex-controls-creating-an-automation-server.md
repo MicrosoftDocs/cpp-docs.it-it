@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346763"
 ---
 # <a name="mfc-activex-controls-creating-an-automation-server"></a>Controlli ActiveX MFC: creazione di un server di automazione
 È possibile sviluppare un controllo ActiveX MFC come server di automazione allo scopo di incorporare tale controllo in un'altra applicazione a livello di codice e la chiamata di metodi nel controllo dall'applicazione. Ad esempio un controllo deve essere ancora disponibile per essere ospitati in un contenitore di controlli ActiveX.  

@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342979"
 ---
 # <a name="data-objects-and-data-sources-ole"></a>Oggetti dati e origini dati (OLE)
 Quando si esegue un trasferimento di dati, tramite l'utilizzo di Appunti o trascinamento della selezione dei dati hanno un'origine e una destinazione. Un'applicazione fornisce i dati per la copia e la accetta un'altra applicazione per incollare. Ogni lato del trasferimento è necessario eseguire diverse operazioni sugli stessi dati per il trasferimento venga eseguita correttamente. La libreria Microsoft Foundation classe (MFC) fornisce due classi che rappresentano ogni lato di tale trasferimento:  

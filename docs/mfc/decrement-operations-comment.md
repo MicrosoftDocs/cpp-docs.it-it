@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342271"
 ---
 # <a name="-operations-comment"></a>// Commento sulle operazioni
 Il `// Operations` sezione di una dichiarazione di classe MFC contiene funzioni membro che è possibile chiamare per l'oggetto per eseguire operazioni o eseguire azioni (operazioni). Queste funzioni sono in genere non -**const** perché in genere hanno effetti collaterali. Possono essere virtuali o non virtuali a seconda delle esigenze della classe. In genere, questi membri sono pubblici.  

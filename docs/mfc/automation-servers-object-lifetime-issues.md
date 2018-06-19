@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341800"
 ---
 # <a name="automation-servers-object-lifetime-issues"></a>Server di automazione: problemi di durata degli oggetti
 Quando un client di automazione crea o attiva un elemento OLE, il server passa al client un puntatore a tale oggetto. Il client stabilisce un riferimento all'oggetto tramite una chiamata alla funzione OLE [IUnknown:: AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379). Questo riferimento è attiva fino a quando il client chiama [IUnknown:: Release](http://msdn.microsoft.com/library/windows/desktop/ms682317). Le applicazioni client scritte con le classi OLE della libreria MFC non devono necessariamente effettuare queste chiamate; tali operazioni vengono eseguite dal framework. Il sistema OLE e il server stesso possono definire dei riferimenti all'oggetto. Un server non deve eliminare definitivamente un oggetto fintanto che rimangono attivi riferimenti esterni all'oggetto.  

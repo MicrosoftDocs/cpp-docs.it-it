@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341459"
 ---
 # <a name="allocating-and-deallocating-window-memory"></a>Allocazione e deallocazione di memoria delle finestre
 Non utilizzare C++ **eliminare** operatore da eliminare definitivamente una finestra cornice o una vista. Chiamare invece il `CWnd` funzione membro `DestroyWindow`. Finestre cornice, pertanto, devono essere allocate sull'heap con operatore **nuova**. Prestare attenzione durante l'allocazione di finestre cornice nello stack frame o a livello globale. Altre finestre devono essere allocati nel frame dello stack quando possibile.  

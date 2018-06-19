@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346282"
 ---
 # <a name="command-routing"></a>comandi (routing)
 Le responsabilità del programmatore nell'uso dei comandi si limitano alla creazione di connessioni mappa messaggi fra i comandi e le loro funzioni di gestione, un'attività per la quale si usa la finestra Proprietà. È anche necessario scrivere la maggior parte dei gestori di comando.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33293153"
 ---
 # <a name="compiler-warning-level-4-c4611"></a>Avviso del compilatore (livello 4) C4611
 interazione tra 'function' e l'eliminazione degli oggetti C++ non è portabile  

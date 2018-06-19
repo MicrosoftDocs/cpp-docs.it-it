@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33316157"
 ---
 # <a name="project-build-error-prj0014"></a>Errore di compilazione progetto PRJ0014
 L'oggetto processo utilizzato per controllare i processi compilati non è riuscita.  Impossibile continuare la compilazione.  

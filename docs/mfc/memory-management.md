@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345078"
 ---
 # <a name="memory-management"></a>Gestione della memoria
 Questo gruppo di articoli viene descritto come sfruttare i servizi generici di Microsoft Foundation classe libreria (MFC) correlate alla gestione della memoria. Allocazione di memoria può essere suddivisi in due categorie principali: frame allocazioni e allocazioni di heap.  

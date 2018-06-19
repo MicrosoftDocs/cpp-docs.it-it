@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346815"
 ---
 # <a name="isolation-of-the-mfc-common-controls-library"></a>Isolamento della libreria di controlli comuni MFC
 La libreria di controlli comuni a questo punto è isolata all'interno di MFC, consentendo di moduli diversi (ad esempio sulle DLL dell'utente) per utilizzare versioni diverse della libreria di controlli comuni, specificando la versione nei cui manifesti.  

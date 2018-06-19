@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346194"
 ---
 # <a name="exceptions-throwing-exceptions-from-your-own-functions"></a>Eccezioni: generazione di eccezioni da funzioni personalizzate
 È possibile utilizzare il paradigma comune della gestione delle eccezioni MFC unicamente per intercettare le eccezioni generate dalle funzioni MFC o in altre librerie. Oltre a intercettare le eccezioni generate dal codice di libreria, è possibile generare eccezioni dal proprio codice per la scrittura di funzioni che possono verificarsi condizioni eccezionali.  

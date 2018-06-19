@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341248"
 ---
 # <a name="commonly-added-member-functions"></a>Funzioni membro comunemente aggiunte
 Se la finestra di dialogo contiene i pulsanti di comando diverso da OK o Annulla, è necessario scrivere funzioni membro di gestore di messaggi nella classe finestra di dialogo per rispondere ai messaggi di notifica del controllo che vengono generati. Per un esempio, vedere il [Scribble](../visual-cpp-samples.md) programma di esempio. È anche possibile gestire i messaggi di notifica del controllo da altri controlli nella finestra di dialogo.  

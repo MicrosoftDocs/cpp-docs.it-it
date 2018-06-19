@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343944"
 ---
 # <a name="automation-servers"></a>Server di automazione
 Automazione rende possibile per l'applicazione possa modificare oggetti implementati in un'altra applicazione o esporli in modo che possano essere modificati. Un server di automazione è un'applicazione che espone oggetti programmabili, denominati oggetti di automazione, ad altre applicazioni (chiamato [client di automazione](../mfc/automation-clients.md)). Server di automazione sono talvolta denominati componenti di automazione.  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347360"
 ---
 # <a name="implementing-working-areas-in-list-controls"></a>Implementazione di aree di lavoro nei controlli List
 Per impostazione predefinita, un controllo elenco dispone di tutti gli elementi nella griglia standard. Tuttavia, un altro metodo è supportato, aree di lavoro, che dispone gli elementi dell'elenco in gruppi rettangolari. Per un'immagine di un controllo elenco che implementa aree di lavoro, vedere Utilizzo di controlli di visualizzazione elenco in Windows SDK.  

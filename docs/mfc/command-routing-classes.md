@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341962"
 ---
 # <a name="command-routing-classes"></a>Classi di routing dei comandi
 Mentre l'utente interagisce con l'applicazione scegliendo menu o pulsanti della barra di controllo con il mouse, l'applicazione invia messaggi a un oggetto destinazione comando appropriato dall'oggetto dell'interfaccia utente interessato. Destinazione comando classi derivate da `CCmdTarget` includono [CWinApp](../mfc/reference/cwinapp-class.md), [CWnd](../mfc/reference/cwnd-class.md), [CDocTemplate](../mfc/reference/cdoctemplate-class.md), [CDocument](../mfc/reference/cdocument-class.md), [CView](../mfc/reference/cview-class.md), e le classi derivate da essi. Il framework supporta il routing automatica dei comandi in modo che i comandi possono essere gestiti dall'oggetto più appropriato attualmente attivo nell'applicazione.  

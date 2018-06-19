@@ -113,6 +113,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33285808"
 ---
 # <a name="compiler-errors-c3400-through-c3499"></a>Errore C3400 errori del compilatore C3499
 

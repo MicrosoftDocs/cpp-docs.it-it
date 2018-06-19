@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33290491"
 ---
 # <a name="compiler-warning-level-3-c4636"></a>Avviso del compilatore (livello 3) C4636
 Commento al documento XML applicato a 'construct': il tag richiede un attributo '' non vuoto.  

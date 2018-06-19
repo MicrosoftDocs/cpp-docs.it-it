@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33339026"
 ---
 # <a name="active-document-containers"></a>Contenitore documenti attivi
 Un contenitore di documenti attivi, ad esempio il Raccoglitore Microsoft Office o Internet Explorer, consente di lavorare con più documenti di diversi tipi di applicazioni all'interno di un singolo frame (anziché dover creare e utilizzare più frame di applicazioni per ogni tipo di documento).  

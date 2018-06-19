@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345052"
 ---
 # <a name="frame-window-classes-created-by-the-application-wizard"></a>Classi Frame-Window create dalla Creazione guidata applicazione
 Quando si utilizza il [Creazione guidata applicazione](../ide/creating-desktop-projects-by-using-application-wizards.md) per creare uno scheletro di applicazione, oltre alle applicazioni, documento e visualizzazione classi, la creazione guidata applicazione crea una classe derivata della finestra cornice per la finestra cornice principale dell'applicazione. La classe viene denominata `CMainFrame` per impostazione predefinita e i file in essa contenuti sono denominati MAINFRM. H e MAINFRM. CPP.  

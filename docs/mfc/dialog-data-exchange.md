@@ -34,6 +34,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345140"
 ---
 # <a name="dialog-data-exchange"></a>DDX (Dialog Data Exchange)
 Se si utilizza il meccanismo DDX Elimina, impostare i valori iniziali della finestra di dialogo variabili membro dell'oggetto, in genere nel `OnInitDialog` gestore o il costruttore della finestra di dialogo. Immediatamente prima che venga visualizzata la finestra di dialogo, meccanismo DDX del framework trasferisce i valori delle variabili membro per i controlli nella finestra di dialogo, in cui vengono visualizzati quando la finestra di dialogo viene visualizzata in risposta a `DoModal` o **crea** . L'implementazione predefinita di `OnInitDialog` in `CDialog` chiamate di `UpdateData` funzione membro di classe `CWnd` per inizializzare i controlli nella finestra di dialogo.  

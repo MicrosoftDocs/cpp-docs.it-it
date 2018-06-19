@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33283845"
 ---
 # <a name="compiler-warning-level-1-c4838"></a>Compilatore (livello 1) Avviso C4838
 conversione da 'type_1' a 'type_2' richiede una conversione di narrowing  

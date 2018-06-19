@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345065"
 ---
 # <a name="frame-window-classes-windows"></a>Classi di finestre cornice (Windows)
 Finestre cornice sono finestre cornice intorno a un'applicazione o una parte di un'applicazione. Finestre cornice contengono in genere altre finestre, ad esempio viste, barre degli strumenti e le barre di stato. In caso di `CMDIFrameWnd`, potrebbero contenere `CMDIChildWnd` oggetti indirettamente.  

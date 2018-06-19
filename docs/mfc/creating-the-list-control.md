@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342046"
 ---
 # <a name="creating-the-list-control"></a>Creazione del controllo List
 Modalità di controllo elenco ([CListCtrl](../mfc/reference/clistctrl-class.md)) viene creato varia a seconda se si sta utilizzando il controllo direttamente o tramite una classe [CListView](../mfc/reference/clistview-class.md) invece. Se si utilizza `CListView`, il framework crea la visualizzazione come parte della relativa sequenza di creazione documento/visualizzazione. Creazione della visualizzazione elenco consente di creare il controllo elenco nonché (vi è la stessa operazione). Viene creato il controllo della visualizzazione [OnCreate](../mfc/reference/cwnd-class.md#oncreate) funzione del gestore. In questo caso, il controllo è pronto per l'aggiunta di elementi mediante una chiamata a [GetListCtrl](../mfc/reference/clistview-class.md#getlistctrl).  

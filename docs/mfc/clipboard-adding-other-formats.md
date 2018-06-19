@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342147"
 ---
 # <a name="clipboard-adding-other-formats"></a>Appunti: aggiunta di altri formati
 In questo argomento viene illustrato come espandere l'elenco dei formati supportati, in particolare per il supporto OLE. L'argomento [negli Appunti: copiare e incollare dati](../mfc/clipboard-copying-and-pasting-data.md) viene descritta l'implementazione minimo necessario per supportare la copia e Incolla dagli Appunti. Se non si implementa, sono gli unici formati inseriti negli Appunti `CF_METAFILEPICT`, **CF_OBJECTDESCRIPTOR**, **inseriti**ed eventualmente `CF_LINKSOURCE`. La maggior parte delle applicazioni saranno necessario più formati negli Appunti di questi tre.  

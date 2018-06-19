@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347663"
 ---
 # <a name="printing-in-rich-edit-controls"></a>Stampa in controlli Rich Edit
 È possibile indicare un controllo rich edit ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)) per eseguire il rendering dell'output per un dispositivo specifico, ad esempio una stampante. È inoltre possibile specificare il dispositivo di output per il quale un controllo rich edit formatta il testo.  

@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343928"
 ---
 # <a name="destroying-the-dialog-box"></a>Eliminazione definitiva della finestra di dialogo
 Finestre di dialogo modale vengono in genere create nello stack frame ed eliminati definitivamente quando termina la funzione che li ha creati. Il distruttore dell'oggetto finestra di dialogo viene chiamato quando l'oggetto esce dall'ambito.  

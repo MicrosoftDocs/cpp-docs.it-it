@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341189"
 ---
 # <a name="containers-user-interface-issues"></a>Contenitori: problemi dell'interfaccia utente
 È necessario aggiungere un numero di funzionalità all'interfaccia utente dell'applicazione di un contenitore in modo adeguato gestire gli elementi collegati e incorporati. Queste funzionalità richiedono modifiche alla struttura di menu e agli eventi che gestisce l'applicazione. Per informazioni dettagliate, vedere gli articoli seguenti:  

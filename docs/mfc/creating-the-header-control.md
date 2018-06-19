@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344513"
 ---
 # <a name="creating-the-header-control"></a>Creazione del controllo Header
 Il controllo intestazione non è disponibile direttamente nell'editor finestre (sebbene sia possibile aggiungere un controllo elenco, che include un controllo header).  

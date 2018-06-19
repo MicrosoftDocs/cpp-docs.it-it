@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342680"
 ---
 # <a name="detaching-a-cwnd-from-its-hwnd"></a>Disconnessione di CWnd da HWND
 Se è necessario aggirare object -`HWND` relazione, MFC fornisce un altro `CWnd` funzione membro, [scollegamento](../mfc/reference/cwnd-class.md#detach), che consente di disconnettere l'oggetto finestra C++ dalla finestra di Windows. Ciò impedisce al distruttore di eliminazione della finestra di Windows quando l'oggetto viene eliminato definitivamente.  

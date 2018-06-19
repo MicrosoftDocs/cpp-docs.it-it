@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344419"
 ---
 # <a name="how-to-add-ribbon-controls-and-event-handlers"></a>Procedura: aggiungere controlli Ribbon e gestori eventi
 Controlli della barra multifunzione sono elementi, ad esempio i pulsanti e caselle combinate, che aggiungono ai pannelli. I pannelli sono aree della barra multifunzione che mostrano un gruppo di controlli correlati.  

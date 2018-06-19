@@ -17,6 +17,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33339904"
 ---
 # <a name="resource-compiler-errors-rc1000-through-rc4413"></a>Errore del compilatore di risorses RC1000 through RC4413
 In questa sezione viene fornito un elenco di riferimento degli errori generati dagli strumenti di compilazione. Per ottenere informazioni su un determinato messaggio di errore, fare clic sul corrispondente numero di errore nella finestra di Output e premere F1 oppure digitare il numero di errore nel **cercare** dell'indice.

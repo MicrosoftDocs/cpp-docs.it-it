@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344243"
 ---
 # <a name="drag-and-drop-customizing"></a>Trascinamento della selezione: personalizzazione
 L'implementazione predefinita della funzionalità di trascinamento della selezione è sufficiente per la maggior parte delle applicazioni. Tuttavia, alcune applicazioni possono richiedere una modifica di questo comportamento standard. In questo articolo vengono spiegati i passaggi necessari per modificare queste impostazioni predefinite. Inoltre, è possibile utilizzare questa tecnica per stabilire le applicazioni che non supportano i documenti compositi come origini di rilascio.  

@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346269"
 ---
 # <a name="mapping-windows-messages-to-your-class"></a>Mapping di messaggi Windows a classi
 La finestra di dialogo per gestire i messaggi di Windows, eseguire l'override di funzioni gestore appropriato. A tale scopo, utilizzare la finestra proprietà per [mapping dei messaggi di](../mfc/reference/mapping-messages-to-functions.md) alla classe di finestra di dialogo. Questo viene registrata una voce della mappa messaggi per ogni messaggio e le funzioni membro di gestore di messaggi viene aggiunto alla classe. Utilizzare l'editor del codice sorgente di Visual C++ per scrivere codice nei gestori di messaggi.  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344337"
 ---
 # <a name="drag-and-drop-ole"></a>Trascinamento della selezione (OLE)
 La funzionalità di trascinamento e rilascio OLE è principalmente un collegamento per copiare e incollare i dati. Quando si utilizzano gli Appunti per copiare o incollare i dati, è necessaria una serie di passaggi. Selezionare i dati, fare clic su **Taglia** o **copia** dal **modifica** menu, spostare il file di destinazione, una finestra o applicazione, posizionare il cursore nella posizione desiderata e fare clic su **Incolla** dal **modifica** menu.  

@@ -28,6 +28,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346207"
 ---
 # <a name="how-to-update-user-interface-objects"></a>Procedura: aggiornare oggetti dell'interfaccia utente
 In genere, le voci di menu e pulsanti della barra degli strumenti dispongono di più di uno stato. Ad esempio, una voce di menu è disponibile (grigio) se non è disponibile in questo contesto. Voci di menu possono inoltre essere selezionata o deselezionata. È anche possibile disabilitare un pulsante della barra degli strumenti se non è disponibile, o può essere eseguito.  

@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343645"
 ---
 # <a name="bypassing-the-serialization-mechanism"></a>Esclusione del meccanismo di serializzazione
 Come si è visto, il framework fornisce una modalità predefinita per leggere e scrivere i dati da e verso i file. La serializzazione tramite un oggetto archivio soddisfi le esigenze di numerose applicazioni. Un'applicazione legge un file completamente in memoria, consente all'utente di aggiornare il file e quindi scrive la versione aggiornata sul disco.  

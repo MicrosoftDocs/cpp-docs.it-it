@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344780"
 ---
 # <a name="drawing-and-printing-classes"></a>Disegno e stampa di classi
 In Windows tutto l'output grafico viene disegnato su un'area di disegno virtuale denominata contesto di dispositivo (DC). In MFC sono presenti delle classi che è possibile utilizzare per incapsulare i vari tipi di DC nonché degli incapsulamenti per gli strumenti di disegno di Windows come le bitmap, i pennelli, le tavolozze e le penne.  

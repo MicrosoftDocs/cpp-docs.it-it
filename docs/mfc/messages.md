@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344104"
 ---
 # <a name="messages"></a>Messages
 Il ciclo di messaggi di **eseguire** funzione membro di classe `CWinApp` recupera i messaggi generati da vari eventi in coda. Ad esempio, quando l'utente fa clic del mouse, Windows invia molti messaggi correlati al mouse, ad esempio `WM_LBUTTONDOWN` quando viene premuto il pulsante sinistro del mouse e `WM_LBUTTONUP` quando il pulsante sinistro del mouse viene rilasciato. Implementazione del framework del ciclo di messaggi dell'applicazione invia il messaggio alla finestra appropriata.  

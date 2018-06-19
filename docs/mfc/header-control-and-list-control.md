@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346100"
 ---
 # <a name="header-control-and-list-control"></a>Controllo Header e controllo List
 Nella maggior parte dei casi, si utilizzerà il controllo intestazione incorporato in un [CListCtrl](../mfc/reference/clistctrl-class.md) o [CListView](../mfc/reference/clistview-class.md) oggetto. Tuttavia, esistono casi in cui un oggetto di controllo di intestazione separato è utile, ad esempio la modifica dei dati, disposti in colonne o righe, in un [CView](../mfc/reference/cview-class.md)-oggetto derivato. In questi casi, è necessario un maggiore controllo sull'aspetto e comportamento predefinito di un controllo header incorporato.  

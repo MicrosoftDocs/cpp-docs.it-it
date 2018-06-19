@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33373169"
 ---
 # <a name="defining-a-message-handler-for-a-reflected-message"></a>Definizione di un gestore messaggi per un messaggio riprodotto
 Dopo aver creato una nuova classe di controlli MFC, è possibile definire i gestori di messaggi per tale. Gestori di messaggi riprodotti consentono la classe di controllo gestire i propri messaggi prima che il messaggio venga ricevuto dall'elemento padre. È possibile utilizzare MFC [CWnd:: SendMessage](../../mfc/reference/cwnd-class.md#sendmessage) funzione per inviare messaggi dal controllo di una finestra padre.  

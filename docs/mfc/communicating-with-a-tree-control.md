@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341997"
 ---
 # <a name="communicating-with-a-tree-control"></a>Comunicazione con un controllo albero
 Si usano metodi diversi per chiamare le funzioni membro in un [CTreeCtrl](../mfc/reference/ctreectrl-class.md) oggetto a seconda della modalità di creazione dell'oggetto:  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343554"
 ---
 # <a name="handling-commands-in-the-document"></a>Gestione dei comandi nel documento
 La classe del documento è inoltre possibile gestire alcuni comandi generati da voci di menu, pulsanti della barra degli strumenti o i tasti di scelta rapida. Per impostazione predefinita, **CDocument** gestisce il salvataggio e Salva i comandi nel menu File, mediante la serializzazione. Altri comandi che influiscono sui dati inoltre possono essere gestiti dalle funzioni membro di un documento. Ad esempio, il programma Scribble, classe `CScribDoc` fornisce un gestore per il comando Modifica Cancella tutto, che elimina tutti i dati attualmente archiviati nel documento. Documenti è possibile specificare le mappe messaggi, ma a differenza delle visualizzazioni, in grado di gestire i messaggi di Windows standard, ovvero solo **WM_COMMAND** messaggi, o "comandi".  

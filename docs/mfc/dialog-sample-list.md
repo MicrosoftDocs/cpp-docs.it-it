@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343612"
 ---
 # <a name="dialog-sample-list"></a>Elenco di esempi di finestre di dialogo
 Vedere i seguenti programmi di esempio che illustrano le finestre di dialogo e finestre delle proprietà:  

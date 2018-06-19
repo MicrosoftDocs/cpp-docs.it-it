@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33339020"
 ---
 # <a name="compiler-intrinsics"></a>Intrinseci del compilatore
 La maggior parte delle funzioni sono contenute nelle librerie, ma alcune sono incorporate (ovvero intrinseche) al compilatore. Queste sono denominate funzioni intrinseche o intrinseci.  

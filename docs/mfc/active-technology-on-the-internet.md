@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33338588"
 ---
 # <a name="active-technology-on-the-internet"></a>Tecnologia Active in Internet
 Tecnologia Active è una piattaforma aperta che consente agli sviluppatori di creare interessanti, dinamico e di contenuto e le applicazioni per Internet globali o per una rete aziendale interna, noto come una rete intranet. Le principali tecnologie fornite da Microsoft per la programmazione Internet sono descritte di seguito.  

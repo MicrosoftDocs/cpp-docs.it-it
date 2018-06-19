@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33278578"
 ---
 # <a name="compiler-warning-level-1-c4502"></a>Avviso del compilatore (livello 1) C4502
 'specifica di collegamento' richiede l'uso della parola chiave 'extern' e deve precedere tutti gli altri identificatori  

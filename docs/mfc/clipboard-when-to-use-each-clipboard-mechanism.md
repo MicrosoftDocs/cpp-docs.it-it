@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341926"
 ---
 # <a name="clipboard-when-to-use-each-clipboard-mechanism"></a>Appunti: quando utilizzare ogni meccanismo di appunti
 Seguire le indicazioni riportate negli Appunti utilizzando:  

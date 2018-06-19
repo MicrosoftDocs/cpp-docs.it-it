@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343967"
 ---
 # <a name="dialog-box-components-in-the-framework"></a>Componenti della finestra di dialogo nel framework
 Nel framework MFC, una finestra di dialogo presenta due componenti:  

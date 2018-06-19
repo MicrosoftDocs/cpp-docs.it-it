@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342943"
 ---
 # <a name="creating-document-frame-windows"></a>Creazione di finestre cornice del documento
 [Creazione documento/visualizzazione](../mfc/document-view-creation.md) viene illustrato il modo in cui [CDocTemplate](../mfc/reference/cdoctemplate-class.md) oggetto Orchestra creando la finestra cornice, documento e visualizzazione e connettendoli tutti insieme. Tre [CRuntimeClass](../mfc/reference/cruntimeclass-structure.md) argomenti per il `CDocTemplate` costruttore specificare la finestra cornice, documento e le classi di visualizzazione che il modello di documento creata dinamicamente in risposta ai comandi dell'utente, ad esempio il comando Nuovo File menu o il comando nuova finestra in un menu finestra MDI. Il modello di documento memorizza queste informazioni per un uso successivo durante la creazione di una finestra cornice per una visualizzazione e il documento.  

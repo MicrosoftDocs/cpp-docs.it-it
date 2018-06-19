@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33276221"
 ---
 # <a name="compiler-warning-c4394"></a>Avviso del compilatore C4394
 'function': simbolo per dominio di applicazione non dovrebbe essere contrassegnato con dllexport  

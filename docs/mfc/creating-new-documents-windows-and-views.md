@@ -39,6 +39,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343415"
 ---
 # <a name="creating-new-documents-windows-and-views"></a>Creazione di nuovi documenti, finestre e visualizzazioni
 Le figure seguenti è fornita una panoramica del processo di creazione di documenti, visualizzazioni e finestre cornice. Altri articoli che lo stato attivo per gli oggetti partecipanti forniscono altri dettagli.  

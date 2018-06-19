@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33860333"
 ---
 # <a name="attribute-contexts"></a>Contesti di attributi
 Gli attributi di C++ possono essere descritte con quattro campi di base: la destinazione possono essere applicate alle (**si applica a**), se sono ripetibili o meno (**Repeatable**), la necessaria la presenza di altri attributi ( **Gli attributi obbligatori**) e le incompatibilità con gli altri attributi (**attributi non validi**). Questi campi sono elencati in una tabella associata nell'argomento di riferimento di ogni attributo. Ciascuno di questi campi è descritta di seguito.  

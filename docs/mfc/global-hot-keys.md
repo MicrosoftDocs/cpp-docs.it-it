@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344230"
 ---
 # <a name="global-hot-keys"></a>Tasti di scelta rapida globali
 Un tasto di scelta rapida globale è associato a una finestra non figlio specifico. Consente all'utente di attivare la finestra di qualsiasi parte del sistema. Un'applicazione imposta un tasto di scelta rapida globale per una particolare finestra inviando il [messaggio WM_SETHOTKEY](http://msdn.microsoft.com/library/windows/desktop/ms646284) messaggio alla finestra. Ad esempio, se `m_HotKeyCtrl` è il [CHotKeyCtrl](../mfc/reference/chotkeyctrl-class.md) oggetto e `pMainWnd` è un puntatore alla finestra venga attivato quando viene premuto il tasto di scelta rapida, è possibile utilizzare il codice seguente per associare il tasto di scelta specificato nel controllo con la finestra a cui puntava `pMainWnd`.  

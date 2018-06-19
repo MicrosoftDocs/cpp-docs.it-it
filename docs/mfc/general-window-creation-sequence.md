@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346516"
 ---
 # <a name="general-window-creation-sequence"></a>Sequenza generale di creazione finestre
 Quando si crea una finestra della finestra propria, ad esempio un elemento figlio, il framework utilizza il processo come descritto in [creazione documento/visualizzazione](../mfc/document-view-creation.md).  

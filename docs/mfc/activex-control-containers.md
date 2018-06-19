@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33338975"
 ---
 # <a name="activex-control-containers"></a>Contenitori di controlli ActiveX
 Un contenitore di controlli ActiveX è un contenitore che supporta in modo completo i controlli ActiveX e può includerli nelle proprie finestre e finestre di dialogo. Un controllo ActiveX rappresenta un elemento di software riutilizzabile che è possibile utilizzare in molti progetti di sviluppo. I controlli consentono all'utente dell'applicazione di accedere ai database, di monitorare i dati e di effettuare varie selezioni all'interno delle applicazioni. Per ulteriori informazioni sui controlli ActiveX, vedere l'articolo [controlli ActiveX MFC](../mfc/mfc-activex-controls.md).  

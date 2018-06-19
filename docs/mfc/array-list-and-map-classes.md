@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345293"
 ---
 # <a name="array-list-and-map-classes"></a>Classi Array, List e Map
 Per la gestione delle aggregazioni di dati, la libreria di classi fornisce un gruppo di classi di raccolte, le matrici, elenchi e mappe, che può contenere una varietà di oggetti e i tipi predefiniti. Le raccolte in modo dinamico vengono ridimensionate. Queste classi possono essere utilizzate in qualsiasi programma se scritte per Windows o non. Tuttavia, sono utili per implementare le strutture di dati che definiscono le classi di documento in framework applicazione. È possibile derivare facilmente classi collection specifiche da questi o è possibile crearli basati sulle classi del modello. Per ulteriori informazioni su questi approcci, vedere l'articolo [raccolte](../mfc/collections.md). Per un elenco delle classi di raccolta di modello, vedere l'articolo [classi modello per matrici, elenchi e mappe](../mfc/template-classes-for-arrays-lists-and-maps.md).  

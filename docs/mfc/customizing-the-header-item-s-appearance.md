@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342894"
 ---
 # <a name="customizing-the-header-item39s-appearance"></a>Personalizzazione dell'elemento di intestazione&#39;s aspetto
 Impostando il *dwStyle* parametro quando si crea un controllo header ([CHeaderCtrl:: Create](../mfc/reference/cheaderctrl-class.md#create)), è possibile definire l'aspetto e comportamento di intestazione degli elementi o dell'intestazione del controllo stesso.  

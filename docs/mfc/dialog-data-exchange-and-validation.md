@@ -30,6 +30,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343775"
 ---
 # <a name="dialog-data-exchange-and-validation"></a>Convalida e DDX (Dialog Data Exchange)
 DDX (DDX) è un modo semplice per inizializzare i controlli nella finestra di dialogo e per raccogliere dati di input dall'utente. La convalida dei dati di finestra di dialogo (DDV) è un modo semplice per convalidare i dati immessi in una finestra di dialogo. Per sfruttare i vantaggi di DDX e DDV nelle finestre di dialogo, utilizzare il [Aggiunta guidata variabile membro](../ide/add-member-variable-wizard.md) per creare i membri di dati e impostare i relativi tipi di dati e specificare le regole di convalida.  

@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342215"
 ---
 # <a name="common-dialog-classes"></a>Classi di finestre di dialogo comuni
 Oltre alla classe [CDialog](../mfc/reference/cdialog-class.md), MFC fornisce diverse classi derivate da `CDialog` che incapsulano le finestre di dialogo di uso comune, come illustrato nella tabella seguente. Le finestre di dialogo incapsulate vengono chiamate "finestre di dialogo comuni" e fanno parte della libreria di finestra di dialogo comune Windows (COMMDLG. DLL). Le risorse modello di finestra di dialogo e codice di queste classi sono incluse nelle finestre delle finestre di dialogo comuni che fanno parte di Windows 3.1 e versioni successive.  

@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341710"
 ---
 # <a name="declaring-message-handler-functions"></a>Dichiarazioni di funzioni gestore messaggi
 Determinate regole e convenzioni che disciplinano i nomi delle funzioni del gestore di messaggi. Che dipendono dalla categoria del messaggio, come descritto negli argomenti seguenti:  
