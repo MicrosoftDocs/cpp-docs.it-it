@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32371941"
 ---
 # <a name="lib-reference"></a>Riferimenti a LIB
 Gestione librerie Microsoft (LIB.exe) Crea e gestisce una raccolta di file oggetto comune oggetto formato COFF (File). LIB consente anche di creare file di esportazione e librerie di importazione per le definizioni di riferimento esportato.  

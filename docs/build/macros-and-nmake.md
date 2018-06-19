@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368005"
 ---
 # <a name="macros-and-nmake"></a>Macro e NMAKE
 Macro di sostituiscono una determinata stringa in makefile con un'altra stringa. Utilizzo di macro, è possibile:  

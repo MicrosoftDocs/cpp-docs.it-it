@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33112508"
 ---
 # <a name="provider-support-for-bookmarks"></a>Supporto dei bookmark nel provider
 Nell'esempio di questo argomento viene aggiunto il `IRowsetLocate` interfaccia per la `CMyProviderRowset` classe. Nella quasi totalità dei casi, si avvia tramite l'aggiunta di un'interfaccia a un oggetto COM esistente. È quindi possibile testare aggiungendo ulteriori chiamate dai modelli consumer. Nell'esempio viene illustrato come:  

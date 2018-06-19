@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32419781"
 ---
 # <a name="linkage-in-names-with-file-scope"></a>Collegamenti in nomi con ambito file
 Le regole seguenti di collegamento vengono applicate ai nomi (ad eccezione di `typedef` e dei nomi dell'enumeratore) con ambito file:  

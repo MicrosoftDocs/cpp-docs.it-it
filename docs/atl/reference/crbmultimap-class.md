@@ -28,6 +28,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32365191"
 ---
 # <a name="crbmultimap-class"></a>Classe CRBMultiMap
 Questa classe rappresenta una struttura di mapping che consente a che ogni chiave può essere associato a più di un valore, utilizzando un albero binario rosso a nero.  

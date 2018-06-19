@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32358248"
 ---
 # <a name="reference-counting"></a>Il conteggio dei riferimenti
 In COM non automaticamente tenta di rimuovere un oggetto dalla memoria quando che l'oggetto non è non è più utilizzato. Al contrario, il programmatore oggetto deve rimuovere l'oggetto inutilizzato. Il programmatore determina se un oggetto può essere rimosso in base a un conteggio dei riferimenti.  

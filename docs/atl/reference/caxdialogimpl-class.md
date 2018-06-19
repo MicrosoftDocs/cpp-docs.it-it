@@ -32,6 +32,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32365077"
 ---
 # <a name="caxdialogimpl-class"></a>CAxDialogImpl (classe)
 Questa classe implementa una finestra di dialogo (modale o non modale) che ospita controlli ActiveX.  

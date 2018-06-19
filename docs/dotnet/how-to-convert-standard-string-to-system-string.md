@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33127835"
 ---
 # <a name="how-to-convert-standard-string-to-systemstring"></a>Procedura: convertire stringhe standard in System::String
 In questo argomento viene illustrato come convertire una stringa della libreria Standard C++ ([\<stringa >](../standard-library/string.md)) a un <xref:System.String>.  

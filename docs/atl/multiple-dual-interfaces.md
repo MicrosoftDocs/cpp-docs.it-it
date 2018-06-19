@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356719"
 ---
 # <a name="multiple-dual-interfaces"></a>Più interfacce duali
 È possibile combinare i vantaggi di un'interfaccia duale (ovvero, la flessibilità di vtable e l'associazione tardiva, rendendo in tal modo la classe disponibile per i linguaggi di scripting, nonché di C++) con le tecniche di ereditarietà multipla.  

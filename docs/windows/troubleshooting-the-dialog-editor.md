@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33889904"
 ---
 # <a name="troubleshooting-the-dialog-editor"></a>Risoluzione dei problemi relativi all'editor finestre
 Di seguito sono alcuni problemi di cui occorre tener presente quando si utilizza l'editor della finestra di dialogo.  

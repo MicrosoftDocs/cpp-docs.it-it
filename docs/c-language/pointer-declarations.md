@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32391913"
 ---
 # <a name="pointer-declarations"></a>Dichiarazioni di puntatori
 Una "dichiarazione di puntatore" denomina una variabile puntatore e specifica il tipo dell'oggetto a cui fa riferimento la variabile. Una variabile dichiarata come puntatore contiene un indirizzo di memoria.  

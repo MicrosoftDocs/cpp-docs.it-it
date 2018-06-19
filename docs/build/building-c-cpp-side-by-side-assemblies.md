@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32364021"
 ---
 # <a name="building-cc-side-by-side-assemblies"></a>Compilazione di assembly side-by-side C/C++
 Oggetto [assembly side-by-side](http://msdn.microsoft.com/library/windows/desktop/ff951640) è una raccolta di risorse, ovvero un gruppo di DLL, classi windows, server COM, librerie dei tipi o interfacce, disponibile per un'applicazione può utilizzare in fase di esecuzione. Il vantaggio principale di creazione di un nuovo assembly DLL si più versioni di assembly possono essere utilizzate dalle applicazioni nello stesso momento che è possibile per gli assembly attualmente installato servizio in caso di una versione di aggiornamento.  

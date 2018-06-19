@@ -31,6 +31,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32392117"
 ---
 # <a name="storage-class-specifiers-for-external-level-declarations"></a>Identificatori di classi di archiviazione per dichiarazioni di livello esterno
 Le variabili esterne sono variabili nell'ambito file. Sono definite all'esterno di qualsiasi funzione e sono potenzialmente disponibili in molte funzioni. Le funzioni possono essere definite solo a livello esterno e, pertanto, non possono essere annidate. Per impostazione predefinita, tutti i riferimenti a variabili esterne e funzioni con lo stesso nome sono riferimenti allo stesso oggetto, ovvero presentano un "collegamento esterno". È possibile usare la parola chiave **static** per eseguire l'override di questa operazione. Per altre informazioni su **static**, vedere le informazioni più avanti in questa sezione.  

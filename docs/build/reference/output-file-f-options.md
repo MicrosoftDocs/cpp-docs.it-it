@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32373023"
 ---
 # <a name="output-file-f-options"></a>Opzioni del file di output (/F)
 Le opzioni del file di output, creare o rinominare i file di output. Questi influiscono su tutti i file di origine C o C++ specificati nella variabile di ambiente CL, nella riga di comando o in qualsiasi file di comando.  

@@ -34,6 +34,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32391379"
 ---
 # <a name="localunwind2"></a>_local_unwind2
 Funzione CRT interna. Esegue tutti i gestori di terminazione elencati nella tabella di ambito indicata.  

@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32361329"
 ---
 # <a name="collection-classes"></a>Classi Collection
 Le classi seguenti forniscono supporto per le matrici, elenchi, mappe e anche metodi tratti per consentire l'accesso agli elementi e i confronti.  

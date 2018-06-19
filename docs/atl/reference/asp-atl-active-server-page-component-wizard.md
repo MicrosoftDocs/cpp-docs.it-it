@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356139"
 ---
 # <a name="asp-atl-active-server-page-component-wizard"></a>ASP, Creazione guidata componente ASP ATL
 Utilizzare questa pagina della finestra attiva Server pagina Creazione guidata componente ATL per specificare impostazioni facoltative per la gestione delle informazioni e lo stato correlato al componente di ASP.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33127903"
 ---
 # <a name="how-to-retrieve-text-from-the-clipboard-ccli"></a>Procedura: recuperare testo dagli Appunti (C++/CLI)
 Nell'esempio di codice viene illustrato come utilizzare il <xref:System.Windows.Forms.Clipboard.GetDataObject%2A> restituiscono un puntatore a funzione membro di <xref:System.Windows.Forms.IDataObject> interfaccia. Questa interfaccia può essere eseguita una query per il formato dei dati e utilizzata per recuperare i dati effettivi.  

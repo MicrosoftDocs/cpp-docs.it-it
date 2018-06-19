@@ -31,6 +31,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32365054"
 ---
 # <a name="security-global-functions"></a>Funzioni di sicurezza globale
 Queste funzioni forniscono supporto per la modifica di oggetti SID e ACL.  

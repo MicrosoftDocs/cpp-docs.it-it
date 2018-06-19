@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32371242"
 ---
 # <a name="extracting-a-library-member"></a>Estrazione di membri dalle librerie
 È possibile utilizzare LIB per creare un file oggetto (obj) che contiene una copia di un membro di una raccolta esistente. Per estrarre una copia di un membro, utilizzare la sintassi seguente:  

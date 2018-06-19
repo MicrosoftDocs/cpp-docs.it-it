@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32369877"
 ---
 # <a name="cl-command-files"></a>File di comando di CL
 Un file di comando è un file di testo che contiene le opzioni e nomi di file in caso contrario si digiterà il [riga di comando](../../build/reference/compiler-command-line-syntax.md) o specificati utilizzando il [variabile di ambiente CL](../../build/reference/cl-environment-variables.md). CL accetta un file di comando del compilatore come argomento nella variabile di ambiente CL o sulla riga di comando. A differenza della riga di comando o della variabile di ambiente CL, un file di comando consente di utilizzare più righe di opzioni e nomi file.  

@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32354932"
 ---
 # <a name="event-handling-and-atl"></a>Gestione di eventi e ATL
 In questa sezione viene illustrato come elaborare gli eventi mediante ATL. Illustra i principi di gestione degli eventi COM e le specifiche del sink di eventi mediante il supporto fornito da ATL.  

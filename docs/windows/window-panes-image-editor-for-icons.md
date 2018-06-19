@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33892839"
 ---
 # <a name="window-panes-image-editor-for-icons"></a>Riquadri della finestra (Editor di immagini per le icone)
 La finestra dell'Editor di immagini in genere visualizza un'immagine in due riquadri separati da una barra di divisione. Una vista è di dimensioni effettive e l'altra viene ingrandita (il fattore di ingrandimento predefinito è 6). Le viste in due riquadri vengono aggiornate automaticamente: le modifiche apportate in un riquadro vengono visualizzate immediatamente in altro. I due riquadri semplificano le operazioni in una vista ingrandita dell'immagine, in cui è possibile distinguere singoli pixel e, contemporaneamente, osservare l'effetto delle operazioni eseguite nella vista dimensioni effettive dell'immagine.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33891030"
 ---
 # <a name="viewing-a-menu-as-a-pop-up-menu"></a>Visualizzazione di un menu come menu di scelta rapida
 In genere, quando si usa l'Editor dei menu, viene visualizzata una risorsa di menu come barra dei menu. Tuttavia, potrebbero esserci risorse di menu che vengono aggiunte alla barra dei menu dell'applicazione durante l'esecuzione del programma.  

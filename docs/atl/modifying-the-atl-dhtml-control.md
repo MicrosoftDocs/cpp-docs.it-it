@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356495"
 ---
 # <a name="modifying-the-atl-dhtml-control"></a>La modifica del controllo DHTML ATL
 Creazione guidata controllo ATL fornisce codice di avvio, pertanto, è possibile compilare ed eseguire il controllo e pertanto è possibile vedere come i metodi vengono scritti nei file di progetto e come DHTML effettua la chiamata a codice C++ del controllo utilizzando i metodi di invio. È possibile aggiungere qualsiasi metodo di spedizione all'interfaccia. Quindi, è possibile chiamare i metodi nella risorsa HTML.  

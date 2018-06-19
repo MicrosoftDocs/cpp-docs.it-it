@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355852"
 ---
 # <a name="implementing-a-dialog-box"></a>Implementazione di una finestra di dialogo
 Esistono due modi per aggiungere una finestra di dialogo per il progetto ATL: utilizzare la creazione guidata finestra di dialogo ATL o aggiungerla manualmente.  

@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32363713"
 ---
 # <a name="example-implementing-a-property-page"></a>Esempio: Implementazione di una pagina delle proprietà
 Questo esempio viene illustrato come compilare una pagina delle proprietà che consente di visualizzare le proprietà di (e consente di modificare) le [classi documento](../mfc/document-classes.md) interfaccia.  

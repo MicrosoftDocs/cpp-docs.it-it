@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32371684"
 ---
 # <a name="ilk-files-as-linker-input"></a>File ILK come input del linker
 Quando il collegamento incrementale, collegamento Aggiorna il file di stato ilk creati durante il primo collegamento incrementale. Questo file contiene lo stesso nome base del file .exe o il file DLL, e ha l'estensione ilk. Durante i collegamenti incrementali successivi collegamento Aggiorna il file ilk. Se il file ilk è mancante, LINK esegue un collegamento completo e crea un nuovo file ilk. Se il file ilk è inutilizzabile, LINK esegue un collegamento non incrementale. Per informazioni dettagliate sul collegamento incrementale, vedere il [collegamento incrementale (/Incremental)](../../build/reference/incremental-link-incrementally.md) opzione.  

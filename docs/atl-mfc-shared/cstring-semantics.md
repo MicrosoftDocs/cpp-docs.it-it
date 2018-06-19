@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356579"
 ---
 # <a name="cstring-semantics"></a>Semantica di CString
 Anche se [CString](../atl-mfc-shared/reference/cstringt-class.md) oggetti sono dinamica che può raggiungere, funzionano come tipi primitivi incorporati e le classi semplici. Ogni `CString` oggetto rappresenta un valore univoco. `CString` gli oggetti devono essere considerati come stringhe effettive, anziché come puntatori alle stringhe.  

@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32421059"
 ---
 # <a name="overloading-unary-operators"></a>Overload degli operatori unari
 Di seguito sono elencati gli operatori unari di cui è possibile eseguire l'overload:  

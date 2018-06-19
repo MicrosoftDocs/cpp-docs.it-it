@@ -49,6 +49,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32366276"
 ---
 # <a name="coledatetime-class"></a>COleDateTime (classe)
 Incapsula il `DATE` tipo di dati che viene utilizzato nell'automazione OLE.  

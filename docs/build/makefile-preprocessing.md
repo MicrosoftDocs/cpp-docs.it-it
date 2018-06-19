@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368226"
 ---
 # <a name="makefile-preprocessing"></a>Pre-elaborazione di makefile
 È possibile controllare la sessione NMAKE utilizzando espressioni e direttive di pre-elaborazione. Istruzioni di pre-elaborazione possono essere inserita nel makefile o Tools. Direttive using, è possibile in modo condizionale elaborare il makefile, visualizzare messaggi di errore, includere altri makefile, rimuovere la definizione di una macro e disattivare alcune opzioni.  

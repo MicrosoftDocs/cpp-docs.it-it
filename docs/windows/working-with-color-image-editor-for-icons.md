@@ -28,6 +28,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33891659"
 ---
 # <a name="working-with-color-image-editor-for-icons"></a>Utilizzo del colori (Editor di immagini per le icone)
 L'editor di immagini contiene molte funzionalità che, in particolare, gestire e personalizzare i colori. È possibile impostare un colore di primo piano o in background, Riempi aree delimitate o selezionare un colore in un'immagine da utilizzare come colore di primo piano o di sfondo corrente. È possibile utilizzare strumenti nel [barra degli strumenti dell'Editor di immagini](../windows/toolbar-image-editor-for-icons.md) con la tavolozza di colori di [finestra colori](../windows/colors-window-image-editor-for-icons.md) per creare immagini.  

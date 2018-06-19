@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32372243"
 ---
 # <a name="modules-button"></a>Moduli (pulsante)
 Fare clic su di **moduli** pulsante per visualizzare il **moduli aggiuntivi per la ricerca di errori** finestra di dialogo. Immettere il nome del file EXE o DLL desiderato nella casella di modifica e fare clic su **Aggiungi** per includere i moduli nella ricerca dei messaggi di errore. Rimuovere un modulo dall'elenco evidenziandolo e facendo clic su di **rimuovere** pulsante.  

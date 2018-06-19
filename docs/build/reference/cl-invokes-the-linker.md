@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32371915"
 ---
 # <a name="cl-invokes-the-linker"></a>CL richiama il linker
 CL richiama automaticamente il linker dopo la compilazione a meno che non viene utilizzata l'opzione/c. CL passa al linker i nomi dei file con estensione obj creati durante la compilazione e i nomi di tutti i file specificati nella riga di comando. Il linker utilizza le opzioni elencate nella variabile di ambiente LINK. È possibile utilizzare l'opzione /link per specificare le opzioni del linker nella riga di comando di CL. Opzioni che seguono l'opzione /link prevalgono su quelle nella variabile di ambiente LINK. Le opzioni nella tabella seguente disattivare il collegamento.  

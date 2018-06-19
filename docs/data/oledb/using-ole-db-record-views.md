@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33111273"
 ---
 # <a name="using-ole-db-record-views"></a>Utilizzo delle visualizzazioni di record OLE DB
 Se si desidera visualizzare i dati di set di righe OLE DB in un'applicazione MFC, è necessario utilizzare la classe MFC [COleDBRecordView](../../mfc/reference/coledbrecordview-class.md). Creare un oggetto visualizzazione di record da `COleDBRecordView` consente di visualizzare i record del database nei controlli MFC. La visualizzazione di record è direttamente connessa a un oggetto OLE DB Rowset creato da una visualizzazione di form finestra di dialogo di `CRowset` classe modello. Ottenere un handle all'oggetto set di righe è semplice:  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33111757"
 ---
 # <a name="supporting-schema-rowsets"></a>Supporto dei set di righe dello schema
 Set di righe dello schema consente agli utenti di ottenere informazioni su un archivio dati senza conoscere la struttura sottostante, o schema. Ad esempio, un archivio dati potrebbe essere tabelle organizzate in una gerarchia definita dall'utente, pertanto non vi sarà alcun modo per garantire informazioni dello schema, ad eccezione per leggerlo. (Ad esempio, si noti che le procedure guidate di Visual C++ rowset dello schema per generare le funzioni di accesso per il consumer.) Per consentire a tale scopo, l'oggetto del provider sessione espone i metodi nel [IDBSchemaRowset](https://msdn.microsoft.com/en-us/library/ms713686.aspx) interfaccia. Nelle applicazioni Visual C++, utilizzare il [IDBSchemaRowsetImpl](../../data/oledb/idbschemarowsetimpl-class.md) classe per implementare **IDBSchemaRowset**.  

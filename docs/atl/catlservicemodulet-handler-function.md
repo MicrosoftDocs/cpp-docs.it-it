@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32354994"
 ---
 # <a name="catlservicemodulethandler-function"></a>Funzione CAtlServiceModuleT:: Handler
 `CAtlServiceModuleT::Handler` è la routine che chiama Gestione controllo servizi (SCM) per recuperare lo stato del servizio e assegnargli varie istruzioni (ad esempio l'arresto o sospensione). Gestione controllo servizi passa un codice operativo da `Handler` per indicare che il servizio deve essere eseguita. Un servizio generato da ATL predefinito gestisce solo l'istruzione stop. Se il server passa l'istruzione di interruzione, il servizio comunica SCM che il programma sta per essere arrestato. Chiama quindi il servizio `PostThreadMessage` per inviare un messaggio quit a se stessa. Questo termina il ciclo di messaggi e il servizio verrà chiuso.  

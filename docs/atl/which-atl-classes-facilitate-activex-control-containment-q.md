@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32361952"
 ---
 # <a name="which-atl-classes-facilitate-activex-control-containment"></a>Quali classi ATL semplificano contenimento dei controlli ActiveX?
 Codice di hosting di controlli ATL non richiede l'utilizzo di classi ATL. è possibile creare semplicemente un **"AtlAxWin80"** finestra e utilizzare l'API di hosting di controlli eventualmente (per ulteriori informazioni, vedere **che cos'è l'API di Hosting del controllo ATL**. Tuttavia, le classi seguenti rendono le funzionalità di contenimento più facile da utilizzare.  

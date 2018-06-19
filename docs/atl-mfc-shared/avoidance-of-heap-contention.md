@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32358085"
 ---
 # <a name="avoidance-of-heap-contention"></a>Prevenzione dei conflitti nell'Heap
 I gestori di stringa predefinita forniti da MFC e ATL sono semplici wrapper su un heap globale. Questo heap globale è completamente thread-safe, vale a dire che più thread può allocare e liberare memoria da esso contemporaneamente senza danneggiare l'heap. Per facilitare la protezione dei thread, l'heap deve serializzare l'accesso a se stessa. Questa operazione viene in genere eseguita con una sezione critica o un meccanismo di blocco simile. Ogni volta che due thread tentano di accedere all'heap simultaneamente, un thread viene bloccato fino al termine di richiesta del thread. Per molte applicazioni, questa situazione si verifica raramente e l'impatto sulle prestazioni del meccanismo di blocco dell'heap è irrilevante. Tuttavia, per le applicazioni che si accedono di frequente l'heap da più thread contesa di blocco dell'heap può provocare l'esecuzione più lenta rispetto a quello a thread singolo (anche in computer con più CPU) dell'applicazione.  

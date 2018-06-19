@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32421260"
 ---
 # <a name="virtual-specifier"></a>Identificatore virtual
 Il [virtuale](../cpp/virtual-cpp.md) parola chiave può essere applicato solo a funzioni membro delle classi non statiche. Ciò significa che l'associazione delle chiamate alla funzione viene rimandata fino alla fase di esecuzione. Per ulteriori informazioni, vedere [funzioni virtuali](../cpp/virtual-functions.md).  
