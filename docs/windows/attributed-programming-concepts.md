@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33860190"
 ---
 # <a name="attributed-programming-concepts"></a>Concetti di programmazione con attributi
 Visual C++ include un'ampia gamma di materiale che consentono di utilizzare attributi nei programmi. Gli attributi, una nuova funzionalità di Visual C++, sono progettati per semplificare la programmazione COM e lo sviluppo in .NET Framework common language runtime. Quando si includono attributi nei file di origine, il compilatore interagisce con librerie a collegamento dinamico (DLL) per inserire o modificare il codice nel file oggetto generati provider. Sono presenti attributi utili per la creazione di file con estensione idl, interfacce, le librerie dei tipi e altri elementi di COM. Nell'ambiente di sviluppo integrato (IDE), gli attributi sono supportati dalle procedure guidate e dalla finestra Proprietà.  

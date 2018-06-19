@@ -37,6 +37,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385473"
 ---
 # <a name="template-based-classes"></a>Classi basate su modello
 In questo articolo vengono descritte le classi di raccolta basate su modello type-safe in MFC versione 3.0 e versioni successive. Utilizzo di questi modelli per creare raccolte indipendenti dai tipi è più conveniente e consente di fornire l'indipendenza dai tipi in modo più efficace rispetto all'utilizzo di classi collection non basate su modelli.  

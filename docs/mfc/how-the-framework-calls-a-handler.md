@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343618"
 ---
 # <a name="how-the-framework-calls-a-handler"></a>Chiamata di un gestore dal framework
 Gli argomenti seguenti vengono innanzitutto esaminare come il framework indirizza i comandi, quindi esaminare la modalità di invio di messaggi e le notifiche dei controlli per windows:  

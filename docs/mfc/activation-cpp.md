@@ -33,6 +33,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33334483"
 ---
 # <a name="activation-c"></a>Attivazione (C++)
 In questo articolo viene illustrato il ruolo dell'attivazione nella modifica visiva degli elementi OLE. Dopo che un utente, un elemento OLE è incorporato in un documento contenitore, potrebbe essere necessario da utilizzare. A tale scopo, l'utente fa doppio clic sull'elemento che attiva tale elemento. Modifica di attività più frequenti per l'attivazione. Molti elementi OLE correnti, quando è attivata per la modifica, determinano i menu e barre degli strumenti nella finestra cornice corrente per riflettere quelli che appartengono all'applicazione server che ha creato l'elemento. Questo comportamento, noto come in attivazione sul posto, consente all'utente di modificare qualsiasi elemento incorporato in un documento composito senza uscire dalla finestra del documento contenitore.  

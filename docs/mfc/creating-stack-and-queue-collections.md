@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345713"
 ---
 # <a name="creating-stack-and-queue-collections"></a>Creazione di raccolta Stack e Code
 In questo articolo viene illustrato come creare altre strutture di dati, ad esempio [stack](#_core_stacks) e [code](#_core_queues), elenco classi MFC. Negli esempi vengono utilizzate le classi derivate da `CList`, ma è possibile utilizzare `CList` direttamente a meno che non è necessario aggiungere la funzionalità.  

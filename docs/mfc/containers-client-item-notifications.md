@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344624"
 ---
 # <a name="containers-client-item-notifications"></a>Contenitori: notifiche Client-Item
 In questo articolo illustra le funzioni sottoponibili a override che il framework MFC chiama quando gli elementi nel documento dell'applicazione client di modificare le applicazioni server.  

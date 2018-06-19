@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343759"
 ---
 # <a name="frame-window-styles-c"></a>Stili Frame-Window (C++)
 Finestre cornice con il framework adatti per la maggior parte dei programmi, ma è possibile ottenere maggiore flessibilità di utilizzo delle funzioni avanzate [PreCreateWindow](../mfc/reference/cwnd-class.md#precreatewindow) e la funzione globale MFC [AfxRegisterWndClass ](../mfc/reference/application-information-and-management.md#afxregisterwndclass). `PreCreateWindow` è una funzione membro di `CWnd`.  

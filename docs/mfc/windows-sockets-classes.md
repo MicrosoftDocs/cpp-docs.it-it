@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382128"
 ---
 # <a name="windows-sockets-classes"></a>Classi Windows Sockets
 Windows Sockets forniscono un modo indipendente dal protocollo di rete per la comunicazione tra due computer. I socket di possono essere sincroni (il programma attende fino a quando non viene eseguita la comunicazione) o asincrono (il programma continua l'esecuzione mentre è in corso la comunicazione).  

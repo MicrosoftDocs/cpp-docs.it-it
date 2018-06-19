@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33861386"
 ---
 # <a name="com-attributes"></a>Attributi COM
 Gli attributi COM inseriscono codice per il supporto di numerose aree dello sviluppo COM e sviluppo in .NET Framework common language runtime. Queste aree vanno dall'implementazione personalizzata dell'interfaccia e il supporto di interfacce esistenti per il supporto degli eventi, metodi e proprietà predefinite. Inoltre, è reperibile il supporto per composito e l'implementazione del controllo ActiveX.  

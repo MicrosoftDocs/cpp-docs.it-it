@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33325916"
 ---
 # <a name="active-document-classes"></a>Classi documento attivo
 Documenti attivi possono essere visualizzati nella finestra del client intera di un Web browser, ad esempio Internet Explorer 5.5, o in un contenitore Active, ad esempio il Raccoglitore Microsoft Office che supporta i documenti attivi.  

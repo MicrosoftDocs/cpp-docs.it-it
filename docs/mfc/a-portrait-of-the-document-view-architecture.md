@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33329816"
 ---
 # <a name="a-portrait-of-the-documentview-architecture"></a>Descrizione dell'architettura documento/visualizzazione
 Documenti e visualizzazioni vengono combinate in una tipica applicazione MFC. Dati vengono archiviati nel documento, ma la vista dispone di accesso ai dati con privilegi. La separazione del documento dalla visualizzazione separa l'archiviazione e la manutenzione dei dati dalla relativa visualizzazione.  
