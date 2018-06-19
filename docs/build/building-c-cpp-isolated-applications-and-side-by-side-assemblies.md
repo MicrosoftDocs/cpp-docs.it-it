@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32361284"
 ---
 # <a name="building-cc-isolated-applications-and-side-by-side-assemblies"></a>Compilazione di applicazioni isolate C/C++ e di assembly side-by-side
 Visual C++ supporta un modello di distribuzione per applicazioni client Windows basato sui concetti di [applicazioni isolate](http://msdn.microsoft.com/library/aa375190) e [assembly side-by-side](http://msdn.microsoft.com/library/ff951640). Per impostazione predefinita, Visual C++ crea tutte le applicazioni C/C++ native come applicazioni isolate che usano [manifesti](http://msdn.microsoft.com/library/aa375365) per descrivere le relative dipendenze da librerie di Visual C++.  

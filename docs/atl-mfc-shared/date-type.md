@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32358127"
 ---
 # <a name="date-type"></a>DATE (tipo)
 Il **data** tipo viene implementato utilizzando un numero a virgola mobile a 8 byte. Giorni sono rappresentati in incrementi di numero intero a partire dal 30 dicembre 1899, mezzanotte all'ora zero. I valori di ora sono espressi come valore assoluto della parte frazionaria del numero. Nella tabella seguente vengono illustrate le diverse date insieme a loro **data** equivalente numerico di tipo:  

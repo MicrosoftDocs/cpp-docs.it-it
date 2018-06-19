@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32359045"
 ---
 # <a name="default-atl-project-configurations"></a>Configurazioni di progetto ATL predefinito
 Per impostazione predefinita, la creazione guidata progetto ATL crea due configurazioni di progetto:  

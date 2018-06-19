@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33098303"
 ---
 # <a name="cdynamicaccessor-class"></a>Classe CDynamicAccessor
 Consente di accedere a un'origine dati quando non si conosce lo schema del database (la struttura sottostante del database).  

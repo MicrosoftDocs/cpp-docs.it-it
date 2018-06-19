@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32358830"
 ---
 # <a name="understanding-parse-trees"></a>Informazioni sulle strutture di analisi
 È possibile definire uno o più strutture di analisi nello script di registrazione, in cui ogni albero di analisi ha il formato seguente:  

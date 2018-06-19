@@ -30,6 +30,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32360319"
 ---
 # <a name="catlbasemodule-class"></a>Classe CAtlBaseModule
 Questa classe viene creata un'istanza in ogni progetto ATL.  
