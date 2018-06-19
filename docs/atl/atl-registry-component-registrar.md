@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32354900"
 ---
 # <a name="atl-registry-component-registrar"></a>Componente del Registro di sistema ATL (Registrar)
 ATL (Registrar) fornisce un accesso ottimizzato nel Registro di sistema tramite un'interfaccia personalizzata. Il programma di registrazione è a thread libero e consente il collegamento statico del codice per i client di C++.  

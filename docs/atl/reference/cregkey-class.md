@@ -57,6 +57,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32366640"
 ---
 # <a name="cregkey-class"></a>Classe CRegKey
 Questa classe fornisce metodi per modificare le voci nel Registro di sistema.  

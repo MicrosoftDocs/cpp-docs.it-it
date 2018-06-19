@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32358527"
 ---
 # <a name="atl-copy-policy-classes"></a>Classi di criteri di copia ATL
 Classi di criteri di copia sono [classi di utilità](../atl/utility-classes.md) utilizzato per inizializzare, copiare ed eliminare dati. Classi di criteri di copia consentono di definire semantica di copia per qualsiasi tipo di dati e per definire le conversioni tra tipi di dati diversi.  

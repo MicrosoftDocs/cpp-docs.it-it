@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32357558"
 ---
 # <a name="adding-an-atl-ole-db-provider"></a>Aggiunta di un Provider OLE DB ATL
 Utilizzare questa procedura guidata per aggiungere un provider OLE DB ATL a un progetto. Un provider OLE DB ATL è costituito da un'origine dati, sessione, comandi e le classi di set di righe. Il progetto deve essere stato creato come un'applicazione COM ATL.  

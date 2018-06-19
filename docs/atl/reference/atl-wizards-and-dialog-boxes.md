@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356673"
 ---
 # <a name="atl-wizards-and-dialog-boxes"></a>Finestre di dialogo e procedure guidate ATL
 Le procedure guidate Active Template Library (ATL) generano codice di boilerplate per diversi tipi di oggetti COM. È possibile eseguire le procedure guidate aprendo il menu di scelta rapida per un progetto in **Esplora** e scegliendo **Aggiungi**, **classe**.  

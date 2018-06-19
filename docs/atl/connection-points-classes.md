@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355079"
 ---
 # <a name="connection-points-classes"></a>Le classi di punti di connessione
 Le classi seguenti offrono il supporto per i punti di connessione:  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32418839"
 ---
 # <a name="indirection-on-array-types"></a>Riferimento indiretto sui tipi di matrice
 Utilizzo dell'operatore di riferimento indiretto (**\***) in un *n*-tipo di matrice unidimensionale produce un *n*matrice dimensionale di-1. Se *n* è 1, viene restituito un valore scalare (o elemento della matrice).  

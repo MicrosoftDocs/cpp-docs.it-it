@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32357815"
 ---
 # <a name="implementation-of-a-custom-string-manager-advanced-method"></a>Implementazione di un gestore di stringa personalizzato (metodo avanzato)
 In situazioni specifiche, si potrebbe voler implementare un gestore di stringa personalizzato che è sufficiente modificare dell'heap è utilizzato per allocare memoria. In questo caso, è necessario implementare manualmente il [IAtlStringMgr](../atl-mfc-shared/reference/iatlstringmgr-class.md) interfaccia come gestore di stringhe personalizzato.  

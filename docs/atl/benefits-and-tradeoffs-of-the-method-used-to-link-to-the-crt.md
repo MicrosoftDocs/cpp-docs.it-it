@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355387"
 ---
 # <a name="benefits-and-tradeoffs-of-the-method-used-to-link-to-the-crt"></a>Vantaggi e gli svantaggi del metodo usato per collegare la libreria CRT
 Il progetto è possibile collegare con la libreria CRT in modo statico o dinamico. Nella tabella seguente vengono descritti i vantaggi e gli svantaggi relativi alla scelta del metodo da utilizzare.  

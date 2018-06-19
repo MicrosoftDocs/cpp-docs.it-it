@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32418972"
 ---
 # <a name="linkage-in-names-with-class-scope"></a>Collegamenti in nomi con ambito classe
 Le seguenti regole di collegamento vengono applicate ai nomi con ambito classe:  

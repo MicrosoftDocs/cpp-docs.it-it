@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32412543"
 ---
 # <a name="cc-language-and-standard-libraries"></a>Il linguaggio C/C++ e librerie Standard
 In questa sezione della documentazione sono incluse le linee guida e i contenuti di riferimento per l'implementazione Microsoft dello standard ISO per C e C++.  

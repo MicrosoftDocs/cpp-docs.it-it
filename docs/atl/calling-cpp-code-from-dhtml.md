@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355461"
 ---
 # <a name="calling-c-code-from-dhtml"></a>Chiamata di codice C++ da DHTML
 Un controllo DHTML può essere ospitato in un contenitore, ad esempio Test Container o in Internet Explorer. Vedere [test di proprietà ed eventi con Test Container](../mfc/testing-properties-and-events-with-test-container.md) per informazioni su come accedere Test Container.  

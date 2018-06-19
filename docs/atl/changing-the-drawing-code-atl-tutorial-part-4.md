@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32358912"
 ---
 # <a name="changing-the-drawing-code-atl-tutorial-part-4"></a>Modifica del codice del disegno (Esercitazione di ATL, parte 4)
 Per impostazione predefinita, il codice di creazione del controllo viene visualizzato un quadrato e il testo **PolyCtl**. In questo passaggio si modificherà il codice per visualizzare più interessante. Sono coinvolte le attività seguenti:  

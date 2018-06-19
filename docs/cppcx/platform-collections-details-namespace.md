@@ -18,6 +18,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33088128"
 ---
 # <a name="platformcollectionsdetails-namespace"></a>Spazio dei nomi Platform::Collections::Details
 Questo spazio dei nomi supporta l'infrastruttura `Platform` e non può essere utilizzato direttamente dal codice.  

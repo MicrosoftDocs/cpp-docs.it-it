@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32414594"
 ---
 # <a name="expressions-c"></a>Espressioni (C++)
 In questa sezione vengono descritte le espressioni C++. Le espressioni sono sequenze di operatori e operandi utilizzate per uno o più dei seguenti scopi:  

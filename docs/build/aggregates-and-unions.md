@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32363259"
 ---
 # <a name="aggregates-and-unions"></a>Aggregati e unioni
 Altri tipi, ad esempio matrici, strutture e unioni, hanno requisiti di allineamento più vincolanti per garantire coerenza unione e aggregazione archiviazione e recupero dei dati. Di seguito sono riportate le definizioni per la matrice, struttura e unione:  

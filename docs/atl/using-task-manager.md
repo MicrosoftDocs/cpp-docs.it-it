@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32361030"
 ---
 # <a name="using-task-manager"></a>Tramite Gestione attività
 Uno dei modi più semplici per eseguire il debug di un servizio è tramite Task Manager. Mentre il servizio è in esecuzione, avviare Gestione attività e fare clic su di **processi** scheda. Fare doppio clic il nome del file EXE e quindi fare clic su **Debug**. Verrà avviato Visual C++ associato al processo in esecuzione. A questo punto, fare clic su **interrompere** sul **Debug** menu consente di impostare punti di interruzione nel codice. Fare clic su **eseguire** per eseguire i punti di interruzione selezionati.  

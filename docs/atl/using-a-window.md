@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32358394"
 ---
 # <a name="using-a-window"></a>Utilizzare una finestra
 Classe [CWindow](../atl/reference/cwindow-class.md) consente di utilizzare una finestra. Dopo aver collegato una finestra per un `CWindow` dell'oggetto, è quindi possibile chiamare `CWindow` metodi per modificare la finestra. `CWindow` contiene anche un `HWND` operatore per convertire un `CWindow` oggetto in un `HWND`. È quindi possibile passare un `CWindow` oggetto a qualsiasi funzione che richiede un handle a una finestra. È possibile combinare facilmente `CWindow` chiamate al metodo e chiamate di funzione Win32, senza creare oggetti temporanei.  

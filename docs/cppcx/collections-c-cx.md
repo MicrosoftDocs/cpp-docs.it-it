@@ -14,6 +14,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33094257"
 ---
 # <a name="collections-ccx"></a>Raccolte (C++/CX)
 In C + + programma CX, è possibile utilizzare liberamente di contenitori di libreria di modelli standard (STL, Standard Template Library) o qualsiasi altro tipo di raccolta definita dall'utente. Tuttavia, quando si passano le raccolte e viceversa attraverso l'interfaccia di Windows Runtime applicazione binaria (ABI), ad esempio, per un controllo XAML o a un client JavaScript, è necessario utilizzare i tipi di raccolta di Windows Runtime.  

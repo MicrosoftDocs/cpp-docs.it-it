@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32359032"
 ---
 # <a name="ccomobjectroot-class"></a>CComObjectRoot (classe)
 Il typedef di [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md) trasformare in modello predefinito del server del modello di threading.  

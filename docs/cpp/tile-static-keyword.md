@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32422163"
 ---
 # <a name="tilestatic-keyword"></a>Parola chiave tile_static
 La parola chiave `tile_static` viene utilizzata per dichiarare una variabile a cui è possibile accedere da tutti i thread in una sezione dei thread. La durata della variabile inizia quando l'esecuzione raggiunge il punto di dichiarazione e termina quando la funzione kernel restituisce. Per ulteriori informazioni sull'utilizzo di riquadri, vedere [utilizzando riquadri](../parallel/amp/using-tiles.md).  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32361889"
 ---
 # <a name="registry-scripting-examples"></a>Esempi di script del Registro di sistema
 Gli esempi di script in questo argomento viene illustrato come aggiungere una chiave del Registro di sistema, registrare il server di registrazione COM e specificare più alberi di analisi.  

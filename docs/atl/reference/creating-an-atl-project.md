@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32359003"
 ---
 # <a name="creating-an-atl-project"></a>Creazione di un progetto ATL
 Il modo più semplice per creare un progetto ATL consiste nell'utilizzare la creazione guidata progetto ATL, si trova nella cartella progetti Win32 del **la finestra di dialogo Nuovo progetto**.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32364545"
 ---
 # <a name="options-atl-active-server-page-component-wizard"></a>Opzioni, Creazione guidata componente ASP ATL
 Utilizzare questa pagina della Active Server pagina Creazione guidata componente ATL per aumentare l'efficienza e supporto per gli errori per l'oggetto.  

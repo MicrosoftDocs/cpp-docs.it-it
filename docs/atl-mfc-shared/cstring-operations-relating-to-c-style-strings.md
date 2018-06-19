@@ -30,6 +30,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32361814"
 ---
 # <a name="cstring-operations-relating-to-c-style-strings"></a>Operazioni di CString relative alle stringhe in formato C
 Oggetto [CString](../atl-mfc-shared/using-cstring.md) oggetto contiene dati stringa di caratteri. `CString` eredita il set del [metodi e gli operatori](../atl-mfc-shared/reference/cstringt-class.md) che sono definiti nel modello di classe [CStringT](../atl-mfc-shared/reference/cstringt-class.md) per operare sui dati di stringa. (`CString` è un `typedef` che specializza `CStringT` per funzionare con il tipo di dati di tipo carattere che `CString` supporta.)  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32357718"
 ---
 # <a name="creating-the-project-atl-tutorial-part-1"></a>Creazione del progetto (Esercitazione di ATL, parte 1)
 Questa esercitazione vengono descritti dettagliatamente tramite un progetto ATL senza attributo che crea un oggetto ActiveX che consente di visualizzare un poligono. L'oggetto include opzioni per consentire all'utente di modificare il numero dei lati che costituiscono il poligono e il codice per aggiornare la visualizzazione.  

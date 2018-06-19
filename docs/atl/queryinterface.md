@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356961"
 ---
 # <a name="queryinterface"></a>QueryInterface
 Anche se non esistono meccanismi mediante il quale un oggetto in grado di esprimere la funzionalità fornita in modo statico (prima che ne viene creata un'istanza), il meccanismo COM fondamentale consiste nell'usare il **IUnknown** metodo chiamato [QueryInterface ](http://msdn.microsoft.com/library/windows/desktop/ms682521).  

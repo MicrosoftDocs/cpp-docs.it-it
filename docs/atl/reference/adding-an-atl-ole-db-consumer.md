@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356354"
 ---
 # <a name="adding-an-atl-ole-db-consumer"></a>Aggiunta di un Consumer ATL OLE DB
 Utilizzare questa procedura guidata per aggiungere un consumer OLE DB ATL a un progetto. Un consumer OLE DB ATL costituito un OLE DB accesso classe e i dati dalle associazioni necessarie per accedere a un'origine dati. Il progetto è necessario avere creato come un'applicazione ATL COM o come un'applicazione MFC o Win32 che contiene il supporto ATL (quali la creazione guidata Consumer OLE DB ATL aggiunge automaticamente).  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355046"
 ---
 # <a name="dual-interfaces-and-atl"></a>Interfacce duali e ATL
 Un'interfaccia duale consente ai metodi a cui accedere come metodi di interfaccia dispatch o vtable. In questa sezione vengono illustrate alcune delle funzionalità di interfacce duali dal punto di vista ATL.  

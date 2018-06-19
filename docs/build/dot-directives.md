@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367664"
 ---
 # <a name="dot-directives"></a>Direttive con il punto
 Specificare direttive con il punto all'esterno di un blocco di descrizione, all'inizio di una riga. Direttive con il punto iniziano con un punto (. ) e sono seguite da due punti (:). Sono consentiti spazi e tabulazioni. I nomi di direttiva punto sono tra maiuscole e minuscole e maiuscole.  

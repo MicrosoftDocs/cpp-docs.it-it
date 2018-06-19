@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356466"
 ---
 # <a name="adding-an-atl-active-server-page-component"></a>Aggiunta di un componente ASP ATL
 Per aggiungere un oggetto Active Template Library (ATL) al progetto, è necessario avere questo sia stato creato come un'applicazione COM ATL o di un'applicazione MFC con supporto ATL. È possibile utilizzare il [Creazione guidata progetto ATL](../../atl/reference/atl-project-wizard.md) per creare un'applicazione ATL, è possibile selezionare **Aggiungi supporto ATL a MFC** dal [dialogo Aggiungi classe](../../ide/add-class-dialog-box.md) la finestra di dialogo alternativa, è possibile [aggiungere un oggetto ATL all'applicazione MFC](../../mfc/reference/adding-atl-support-to-your-mfc-project.md) per implementare il supporto ATL per un'applicazione MFC.  

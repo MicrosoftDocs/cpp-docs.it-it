@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356547"
 ---
 # <a name="implementing-a-window-with-cwindowimpl"></a>Implementazione di una finestra con CWindowImpl
 Per implementare una finestra, derivare una classe da `CWindowImpl`. Nella classe derivata, dichiarare una mappa messaggi e le funzioni del gestore di messaggi. È ora possibile utilizzare la classe in tre modi diversi:  

@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32362368"
 ---
 # <a name="understanding-window-traits"></a>Informazioni sulle caratteristiche di finestra
 Le classi tratti finestra forniscono un metodo semplice per la standardizzazione stili utilizzati per la creazione di un oggetto finestra ATL. Tratti finestra sono accettati come parametri di modello da [CWindowImpl](../atl/reference/cwindowimpl-class.md) e altre classi di finestra ATL allo scopo di fornire stili finestra a livello di classe predefiniti.  

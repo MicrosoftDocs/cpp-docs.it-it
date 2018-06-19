@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367628"
 ---
 # <a name="long-filenames-in-a-makefile"></a>Nomi file lunghi in un makefile
 Racchiudere i nomi file lunghi tra virgolette doppie, come indicato di seguito:  

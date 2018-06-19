@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32424763"
 ---
 # <a name="keywords-c"></a>Parole chiave (C++)
 Le parole chiave sono identificatori riservati predefiniti che hanno un significato particolare. Nel programma non è possibile usarle come identificatori. Le seguenti parole chiave sono riservate a Microsoft C++. I nomi con caratteri di sottolineatura iniziali sono estensioni Microsoft.  

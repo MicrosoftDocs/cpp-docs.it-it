@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32361265"
 ---
 # <a name="adding-an-event-atl-tutorial-part-5"></a>Aggiunta di un evento (Esercitazione di ATL, parte 5)
 In questo passaggio si aggiungerà un `ClickIn` e `ClickOut` evento al controllo ATL. Verrà generato il `ClickIn` evento se l'utente fa clic all'interno di poligono e spegnimento incendi `ClickOut` se l'utente fa clic all'esterno. Come indicato di seguito sono riportate le attività per aggiungere un evento:  

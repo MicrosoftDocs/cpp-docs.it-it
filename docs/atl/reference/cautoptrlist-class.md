@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32357545"
 ---
 # <a name="cautoptrlist-class"></a>Classe CAutoPtrList
 Questa classe fornisce metodi utili durante la costruzione di un elenco di puntatori intelligenti.  

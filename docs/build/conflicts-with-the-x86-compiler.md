@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32366913"
 ---
 # <a name="conflicts-with-the-x86-compiler"></a>Conflitti con il compilatore x86
 Tipi di dati che sono maggiori di 4 byte non vengono automaticamente allineate nello stack quando si utilizza x86 compilatore per compilare un'applicazione. Poiché l'architettura di x86 compilatore è in uno stack di allineamento a 4 byte, qualsiasi valore maggiore di 4 byte, ad esempio, un intero a 64 bit, non può essere allineato automaticamente a un indirizzo di 8 byte.  

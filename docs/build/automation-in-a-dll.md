@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32360654"
 ---
 # <a name="automation-in-a-dll"></a>Automazione in una DLL
 Quando si sceglie l'opzione di automazione nella creazione guidata DLL MFC, la procedura guidata fornisce le seguenti:  

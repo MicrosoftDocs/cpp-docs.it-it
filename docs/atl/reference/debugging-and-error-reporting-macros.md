@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32365041"
 ---
 # <a name="debugging-and-error-reporting-macros"></a>Macro di debug e la segnalazione errori
 Queste macro forniscono utili funzionalità di debug e traccia.  

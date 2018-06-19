@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32419128"
 ---
 # <a name="lexical-conventions"></a>Convenzioni lessicali
 In questa sezione vengono descritti gli elementi fondamentali di un programma C++. Usare questi elementi, denominati elementi lessicali o token per creare istruzioni, definizioni, dichiarazioni e così via, che consentono di creare programmi completi. I seguenti elementi lessicali sono discussi in questa sezione:

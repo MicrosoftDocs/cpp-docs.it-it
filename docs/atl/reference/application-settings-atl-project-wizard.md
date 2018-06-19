@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32357405"
 ---
 # <a name="application-settings-atl-project-wizard"></a>Impostazioni applicazione, Creazione guidata progetto ATL
 Utilizzare il **le impostazioni dell'applicazione** pagina della creazione guidata progetto ATL per progettare e aggiungere funzionalità di base a un nuovo progetto ATL.  

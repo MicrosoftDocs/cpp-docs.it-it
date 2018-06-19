@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32419966"
 ---
 # <a name="ordering-of-c-arrays"></a>Ordine delle matrici C++
 Le matrici C++ sono archiviate per lunghezza di riga. L'ordine per lunghezza di riga significa che l'ultimo indice varia più velocemente.  

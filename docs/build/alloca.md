@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32360420"
 ---
 # <a name="alloca"></a>alloca
 [alloca](../c-runtime-library/reference/alloca.md) deve essere 16 byte allineati e inoltre richiesto di utilizzare un puntatore ai frame.  

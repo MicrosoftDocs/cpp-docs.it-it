@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32362443"
 ---
 # <a name="ccomobjectglobal-class"></a>Classe CComObjectGlobal
 Questa classe gestisce un conteggio dei riferimenti in cui il modulo contenente il `Base` oggetto.  

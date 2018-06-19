@@ -29,6 +29,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32364547"
 ---
 # <a name="ccommultithreadmodel-class"></a>Classe CComMultiThreadModel
 `CComMultiThreadModel` fornisce metodi di thread-safe per incrementare e decrementare il valore di una variabile.  

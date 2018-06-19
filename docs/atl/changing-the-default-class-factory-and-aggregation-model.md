@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355239"
 ---
 # <a name="changing-the-default-class-factory-and-aggregation-model"></a>Modifica la Class Factory predefinita e il modello di aggregazione
 Utilizza ATL [CComCoClass](../atl/reference/ccomcoclass-class.md) per definire la classe factory e l'aggregazione modello predefinito per l'oggetto. `CComCoClass` Specifica le due macro seguenti:  

@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355725"
 ---
 # <a name="implementation-of-a-custom-string-manager-basic-method"></a>Implementazione di un gestore di stringa personalizzato (metodo di base)
 Il modo più semplice per personalizzare lo schema di allocazione di memoria per i dati di stringa sono possibile utilizzare ATL fornita dal **CAtlStringMgr** classe ma fornire la propria memoria routine di allocazione. Il costruttore per **CAtlStringMgr** accetta un solo parametro: un puntatore a un `IAtlMemMgr` oggetto. `IAtlMemMgr` è una classe basa astratta che fornisce un'interfaccia generica per un heap. Utilizzando il `IAtlMemMgr` interfaccia, il **CAtlStringMgr** alloca rialloca e libera la memoria utilizzata per archiviare i dati di tipo stringa. È possibile implementare il `IAtlMemMgr` interfaccia manualmente oppure utilizzare una delle cinque classi di gestione di memoria di ATL. I gestori di memoria di ATL eseguito semplicemente il wrapping di funzioni di allocazione di memoria esistenti:  

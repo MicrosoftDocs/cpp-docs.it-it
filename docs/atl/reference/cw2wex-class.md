@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32362420"
 ---
 # <a name="cw2wex-class"></a>Classe CW2WEX
 Questa classe viene utilizzata per le macro di conversione di stringhe `CW2TEX` e `CT2WEX`e typedef `CW2W`.  

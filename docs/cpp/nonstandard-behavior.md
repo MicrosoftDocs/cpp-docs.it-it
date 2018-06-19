@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32420295"
 ---
 # <a name="nonstandard-behavior"></a>Comportamento non standard
 Negli sezioni seguenti sono elencate alcune parti in cui l'implementazione Visual C++ di C++ non si conforma allo standard C++. I numeri delle sezioni indicati di seguito fanno riferimento ai numeri delle sezioni nello standard C++ 11 (ISO/IEC 14882:2011(E)).  

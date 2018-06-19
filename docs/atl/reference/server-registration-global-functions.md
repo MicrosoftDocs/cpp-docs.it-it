@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32364705"
 ---
 # <a name="server-registration-global-functions"></a>Funzioni globali di registrazione server
 Queste funzioni forniscono il supporto per la registrazione e annullamento della registrazione di oggetti server nella mappa oggetto.  

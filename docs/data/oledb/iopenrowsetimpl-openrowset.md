@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33101861"
 ---
 # <a name="iopenrowsetimplopenrowset"></a>IOpenRowsetImpl::OpenRowset
 Apre e restituisce un set di righe che include tutte le righe da una singola tabella di base o un indice.  

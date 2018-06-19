@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32357258"
 ---
 # <a name="message-maps-atl"></a>Mappe messaggi (ATL)
 Una mappa messaggi associa una funzione del gestore con un messaggio specifico, un comando o una notifica. Con ATL [macro della mappa dei messaggi](../atl/reference/message-map-macros-atl.md), è possibile specificare una mappa messaggi per una finestra. La routine della finestra in `CWindowImpl`, `CDialogImpl`, e `CContainedWindowT` indirizzare i messaggi di una finestra alla propria mappa messaggi.  

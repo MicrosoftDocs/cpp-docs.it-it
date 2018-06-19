@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32359662"
 ---
 # <a name="ustringorid-class"></a>Classe _U_STRINGorID
 Classe di adattatori di questo argomento consente di entrambi i nomi delle risorse ( `LPCTSTR`s) o l'ID di risorsa ( **UINT**s) deve essere passato a una funzione senza richiedere al chiamante di convertire l'ID di una stringa usando il **MAKEINTRESOURCE** (macro).  

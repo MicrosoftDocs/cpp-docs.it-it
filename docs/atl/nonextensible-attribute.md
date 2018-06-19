@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355633"
 ---
 # <a name="nonextensible-attribute"></a>nonextensible (attributo)
 Se un'interfaccia duale non viene estesa in fase di esecuzione (ovvero, se non sono forniti metodi o proprietà tramite **IDispatch:: Invoke** che non sono disponibili tramite vtable), è necessario applicare il **nonextensible** attributo alla definizione di interfaccia. Questo attributo fornisce informazioni per le lingue client (ad esempio Visual Basic) che può essere usato per abilitare la verifica del codice completo in fase di compilazione. Se questo attributo viene omesso, i bug possono rimanere nascosti nel codice client in fase di esecuzione.  

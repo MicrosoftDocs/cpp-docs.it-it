@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368122"
 ---
 # <a name="inline-files-in-a-makefile"></a>File inline in un makefile
 Un file inline contiene testo specificato nel makefile. Il nome può essere utilizzato nei comandi come input (ad esempio, un file di comando LINK) o può passare i comandi al sistema operativo. Il file viene creato su disco quando si esegue un comando che crea il file.  

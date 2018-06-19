@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32363200"
 ---
 # <a name="cautoptr-class"></a>Classe su CAutoPtr
 Questa classe rappresenta un oggetto del puntatore intelligente.  

@@ -79,6 +79,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32366575"
 ---
 # <a name="cstockpropimpl-class"></a>Classe CStockPropImpl
 Questa classe fornisce metodi per il supporto di valori di proprietà predefinite.  

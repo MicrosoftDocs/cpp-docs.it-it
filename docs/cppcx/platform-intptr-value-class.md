@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33088154"
 ---
 # <a name="platformintptr-value-class"></a>Classe di valori Platform::IntPtr
 Rappresenta un puntatore o un handle con segno la cui dimensione è specifica della piattaforma (32 bit o 64 bit).  

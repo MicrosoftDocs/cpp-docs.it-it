@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367472"
 ---
 # <a name="dynamic-parameter-stack-area-construction"></a>Costruzione dinamica dell'area dello stack di parametri
 Se viene usato un puntatore ai frame, l'opzione di creare dinamicamente l'area dello stack del parametro. Questa operazione non è attualmente eseguita [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)] compilatore.  

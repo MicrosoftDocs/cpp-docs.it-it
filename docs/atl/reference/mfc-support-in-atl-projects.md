@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32360641"
 ---
 # <a name="mfc-support-in-atl-projects"></a>Supporto MFC in ATL (progetti)
 Se si seleziona **supporto MFC** nella creazione guidata progetto ATL, il progetto dichiara l'applicazione come un oggetto applicazione MFC (classe). Il progetto inizializza la libreria MFC e crea un'istanza di una classe (classe *ProjName*) che deriva da [CWinApp](../../mfc/reference/cwinapp-class.md).  

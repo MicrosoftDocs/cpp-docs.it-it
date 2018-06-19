@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32357844"
 ---
 # <a name="using-a-template-library"></a>Utilizzo di una libreria di modelli
 Un modello è simile a una macro. Come con una macro, la chiamata di un modello provoca l'espansione (con sostituzione parametro appropriato) al codice che è stato scritto. Tuttavia, un modello vada oltre questa opzione per consentire la creazione di nuove classi in base ai tipi passati come parametri. Queste nuove classi implementano modi indipendente dai tipi dell'esecuzione dell'operazione espressa nel codice del modello.  

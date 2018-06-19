@@ -29,6 +29,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32417409"
 ---
 # <a name="scanf-type-field-characters"></a>Caratteri di campo di tipo per scanf
 Le informazioni seguenti si applicano a qualsiasi famiglia di funzioni `scanf` , incluse le versioni protette, ad esempio `scanf_s`.  

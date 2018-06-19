@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32354868"
 ---
 # <a name="active-template-library-atl-tutorial"></a>Esercitazione relativa alla Libreria ATL (Active Template Library)
 ATL è progettato per semplificare il processo di creazione di controlli efficienti, flessibile e semplici. In questa esercitazione illustra la creazione di un controllo ActiveX, che illustra molti nozioni fondamentali su ATL e COM.  

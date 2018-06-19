@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32363298"
 ---
 # <a name="ccomenumonstl-class"></a>CComEnumOnSTL (classe)
 Questa classe definisce un oggetto enumeratore COM basato su una raccolta della libreria Standard C++.  

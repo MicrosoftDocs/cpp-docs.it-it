@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33089817"
 ---
 # <a name="use-database-forms-record-views-with-odbc"></a>Utilizzo di form di database (visualizzazioni di record) con ODBC
 Alcune applicazioni, ad esempio l'immissione di dati o visualizzazione di dati, richiedono una forma, una visualizzazione con controlli di stile di finestra di dialogo.  

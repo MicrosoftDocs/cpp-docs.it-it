@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356253"
 ---
 # <a name="hosting-activex-controls-using-atl-axhost"></a>Hosting di controlli ActiveX mediante AXHost ATL
 L'esempio in questo argomento viene illustrato come creare AXHost e come ospitare un controllo ActiveX utilizzando varie funzioni ATL. Viene inoltre illustrato come accedere agli eventi di controllo e il sink (utilizzando [IDispEventImpl](../atl/reference/idispeventimpl-class.md)) dal controllo ospitato. Nell'esempio viene ospitato il controllo di calendario in una finestra principale o in una finestra figlio.  

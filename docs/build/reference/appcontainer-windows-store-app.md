@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32369292"
 ---
 # <a name="appcontainer-microsoft-store-app"></a>/APPCONTAINER (applicazione di Microsoft Store)
 Specifica se il linker crea un'immagine eseguibile che deve essere eseguita in un contenitore di app.  

@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32359675"
 ---
 # <a name="implementing-a-c-standard-library-based-collection"></a>Implementazione di una raccolta basata sulla libreria Standard C++
 ATL fornisce il `ICollectionOnSTLImpl` interfaccia che consente di implementare rapidamente le interfacce di raccolta basata sulla libreria Standard C++ per gli oggetti. Per comprendere il funzionamento di questa classe, verrà illustrato un semplice esempio (sotto) che utilizza questa classe per implementare una raccolta di sola lettura per i client di automazione.  

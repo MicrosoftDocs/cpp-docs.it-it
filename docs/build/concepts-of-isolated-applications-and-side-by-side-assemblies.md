@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368174"
 ---
 # <a name="concepts-of-isolated-applications-and-side-by-side-assemblies"></a>Concetti di applicazioni isolate e assembly side-by-side
 Un'applicazione è considerata un' [applicazione isolata](http://msdn.microsoft.com/library/aa375190) se tutti i suoi componenti sono [assembly side-by-side](http://msdn.microsoft.com/library/ff951640). Un assembly affiancato è una raccolta di risorse, ovvero un gruppo di DLL, classi Windows, server COM, librerie di tipi o interfacce, distribuite insieme e rese disponibili a un'applicazione affinché vengano utilizzate in fase di esecuzione. In genere, un assembly side-by-side è costituito da una o più DLL.  

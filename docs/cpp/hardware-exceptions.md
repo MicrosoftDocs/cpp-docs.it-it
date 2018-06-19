@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32413960"
 ---
 # <a name="hardware-exceptions"></a>Eccezioni hardware
 La maggior parte delle eccezioni standard riconosciute dal sistema operativo sono quelle definite a livello hardware. In Windows vengono riconosciute alcune eccezioni software di basso livello, ma queste sono generalmente gestite meglio dal sistema operativo.  

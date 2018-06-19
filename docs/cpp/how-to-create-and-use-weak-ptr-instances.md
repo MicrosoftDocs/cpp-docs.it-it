@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32415145"
 ---
 # <a name="how-to-create-and-use-weakptr-instances"></a>Procedura: creare e utilizzare istanze weak_ptr
 In alcuni casi un oggetto necessario archiviare un modo per accedere all'oggetto sottostante di un `shared_ptr` senza causare il conteggio dei riferimenti deve essere incrementato. Questa situazione si verifica in genere, quando si dispone di riferimenti ciclici tra `shared_ptr` istanze.  

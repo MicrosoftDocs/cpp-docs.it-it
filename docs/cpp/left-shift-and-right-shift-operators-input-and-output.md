@@ -28,6 +28,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32422397"
 ---
 # <a name="left-shift-and-right-shift-operators-gtgt-and-ltlt"></a>Operatori Left Shift e Right Shift (&gt; &gt; e &lt; &lt;)
 Gli operatori shift bit per bit sono l'operatore di spostamento a destra (>>), che sposta i bit di *MAIUSC-expression* a destra e l'operatore di spostamento a sinistra (<<), che sposta i bit di *MAIUSC-expression* a sinistra. <sup>1</sup>  

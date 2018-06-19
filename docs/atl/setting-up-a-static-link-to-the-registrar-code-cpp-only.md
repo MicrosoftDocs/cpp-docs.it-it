@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32360188"
 ---
 # <a name="setting-up-a-static-link-to-the-registrar-code-c-only"></a>Impostazione di un collegamento statico per il codice di registrazione (solo C++)
 I client di C++ è possono creare un collegamento statico al codice di registrazione. Il collegamento statico del parser Registrar aggiunge circa 5 KB per una build di rilascio.  

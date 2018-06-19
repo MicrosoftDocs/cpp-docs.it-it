@@ -35,6 +35,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32365689"
 ---
 # <a name="cthreadpool-class"></a>CThreadPool (classe)
 Questa classe fornisce un pool di thread di lavoro di elaborazione di una coda di elementi di lavoro.  

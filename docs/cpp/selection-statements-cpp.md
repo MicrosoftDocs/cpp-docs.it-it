@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32421273"
 ---
 # <a name="selection-statements-c"></a>Istruzioni di selezione (C++)
 Le istruzioni di selezione C++, [se](../cpp/if-else-statement-cpp.md) e [passare](../cpp/switch-statement-cpp.md), consentono di eseguire in modo condizionale le sezioni di codice.  

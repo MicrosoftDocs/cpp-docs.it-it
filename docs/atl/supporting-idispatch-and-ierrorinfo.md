@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32360949"
 ---
 # <a name="supporting-idispatch-and-ierrorinfo"></a>Supporto di IDispatch e IErrorInfo
 È possibile utilizzare la classe modello [IDispatchImpl](../atl/reference/idispatchimpl-class.md) per fornire un'implementazione predefinita del `IDispatch Interface` parte delle interfacce duali sull'oggetto.  

@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356508"
 ---
 # <a name="memory-management-classes"></a>Classi di gestione della memoria
 Queste classi forniscono supporto per l'heap puntatori, puntatori intelligenti e altre routine di allocazione di memoria.  

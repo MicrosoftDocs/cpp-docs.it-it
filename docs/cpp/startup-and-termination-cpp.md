@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32420837"
 ---
 # <a name="startup-and-termination-c"></a>Avvio e terminazione (C++)
 Avvio del programma e chiusura sono facilitati utilizzando due funzioni: [principale](../cpp/main-program-startup.md) e [uscire](../cpp/program-termination.md). È possibile eseguire altro codice di avvio e di chiusura.  

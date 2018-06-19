@@ -31,6 +31,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32365853"
 ---
 # <a name="compiler-options-macros"></a>Macro di opzioni del compilatore
 Queste macro controllano le funzionalità del compilatore specifico.  

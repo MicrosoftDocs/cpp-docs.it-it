@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368798"
 ---
 # <a name="language-specific-handler"></a>Gestore specifico del linguaggio
 L'indirizzo relativo del gestore specifico del linguaggio è presente in UNWIND_INFO ogni volta che vengano impostati flag UNW_FLAG_EHANDLER o UNW_FLAG_UHANDLER. Come descritto nella sezione precedente, viene chiamato il gestore specifico del linguaggio come parte della ricerca per un gestore di eccezioni o come parte di un'operazione di rimozione. Contiene il prototipo seguente:  

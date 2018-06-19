@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32358899"
 ---
 # <a name="stock-properties-atl-control-wizard"></a>Proprietà predefinite, Creazione guidata controllo ATL
 Questa pagina della procedura guidata identifica le proprietà predefinite supportate per il controllo. Per impostazione predefinita, viene identificata alcuna proprietà.  

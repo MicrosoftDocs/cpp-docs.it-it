@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356830"
 ---
 # <a name="cstring-argument-passing"></a>Passaggio degli argomenti di CString
 In questo articolo viene illustrato come passare [CString](../atl-mfc-shared/reference/cstringt-class.md) oggetti in funzioni e come restituire `CString` oggetti dalle funzioni.  

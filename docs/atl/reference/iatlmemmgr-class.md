@@ -28,6 +28,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32366208"
 ---
 # <a name="iatlmemmgr-class"></a>Classe IAtlMemMgr
 Questa classe rappresenta l'interfaccia per un gestore della memoria.  
