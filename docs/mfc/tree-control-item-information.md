@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385365"
 ---
 # <a name="tree-control-item-information"></a>Informazioni sugli elementi del controllo Tree
 Struttura ad albero di controlli ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) hanno un numero di funzioni membro che recuperano informazioni su elementi nel controllo. Il [GetItem](../mfc/reference/ctreectrl-class.md#getitem) funzione membro recupera alcuni o tutti i dati associati a un elemento. Questi dati può includere il testo dell'elemento, lo stato, immagini, numero di elementi figlio e un valore di dati definito dall'applicazione a 32 bit. È inoltre disponibile un [funzione membro SetItem](../mfc/reference/ctreectrl-class.md#setitem) funzione che è possibile impostare alcuni o tutti i dati associati a un elemento.  

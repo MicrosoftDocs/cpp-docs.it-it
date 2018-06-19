@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33324538"
 ---
 # <a name="project-build-error-prj0044"></a>Errore di compilazione progetto PRJ0044
 La proprietà "Dipendenze aggiuntive" per la regola di compilazione personalizzata 'rule' assegnata al file 'file' non è valida. La proprietà contiene 'string' che restituisce 'value'.  

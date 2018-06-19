@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33298811"
 ---
 # <a name="command-line-error-d8037"></a>Errore della riga di comando D8037
 Impossibile creare il file temporaneo. svuotare la directory temporanea dei file il precedenti  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33302672"
 ---
 # <a name="linker-tools-warning-lnk4010"></a>Avviso degli strumenti del linker LNK4010
 il numero di versione del sottosistema non valido; verrà utilizzata la versione predefinita del sottosistema  

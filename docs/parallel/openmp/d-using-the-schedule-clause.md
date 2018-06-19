@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33694940"
 ---
 # <a name="d-using-the-schedule-clause"></a>D. Utilizzando la clausola di pianificazione
 Un'area parallela ha almeno una barriera, alla fine, potrebbe essere ostacoli aggiuntivi all'interno di esso. In ogni barriera, gli altri membri del team devono attendere l'ultimo thread di arrivo. Per ridurre al minimo il tempo di attesa, lavoro condiviso deve essere distribuito in modo che tutti i thread arrivano alla barriera nello stesso momento. Se alcuni dei condivisi lavoro è contenuto **per** , costruisce il `schedule` clausola può essere utilizzata per questo scopo.  

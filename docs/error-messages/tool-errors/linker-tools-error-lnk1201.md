@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33298769"
 ---
 # <a name="linker-tools-error-lnk1201"></a>Errore degli strumenti del linker LNK1201
 Errore durante la scrittura nel database di programma 'nomefile'; Verificare la presenza di spazio su disco insufficiente o percorso non valido, privilegi insufficienti  
