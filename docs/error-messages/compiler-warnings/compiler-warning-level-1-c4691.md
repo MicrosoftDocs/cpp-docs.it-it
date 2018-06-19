@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33282597"
 ---
 # <a name="compiler-warning-level-1-c4691"></a>Avviso del compilatore (livello 1) C4691
 'type': tipo di riferimento previsto nell'assembly senza riferimenti 'file', tipo definito in unità di conversione corrente utilizzato  

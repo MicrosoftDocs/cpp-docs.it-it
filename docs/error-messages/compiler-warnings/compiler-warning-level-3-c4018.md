@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33290335"
 ---
 # <a name="compiler-warning-level-3-c4018"></a>Compilatore (livello 3) Avviso C4018
 'expression': mancata corrispondenza signed e unsigned  

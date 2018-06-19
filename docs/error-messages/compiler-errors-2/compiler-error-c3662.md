@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33265909"
 ---
 # <a name="compiler-error-c3662"></a>Errore del compilatore C3662
 'member': identificatore di override 'specifier' consentito solo con funzioni membro di classi gestite o WinRT  

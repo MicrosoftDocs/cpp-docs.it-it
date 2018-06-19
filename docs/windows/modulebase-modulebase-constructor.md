@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33875890"
 ---
 # <a name="modulebasemodulebase-constructor"></a>Costruttore ModuleBase::ModuleBase
 Supporta l'infrastruttura WRL e non deve essere utilizzato direttamente dal codice.  

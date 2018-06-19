@@ -26,6 +26,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33882732"
 ---
 # <a name="how-to-use-resource-templates"></a>Procedura: utilizzare modelli di risorse
 Un modello di risorsa è una risorsa personalizzata salvata come un file con estensione RCT. È quindi possibile usare un modello di risorsa come punto iniziale per la creazione di altre risorse. I modelli di risorsa garantiscono un risparmio di tempo nello sviluppo di risorse o gruppi di risorse aggiuntivi che condividono alcune funzionalità, quali controlli standard e altri elementi ripetuti. Se, ad esempio, si vuole includere un pulsante ? e un'icona di un logo aziendale in più finestre di dialogo, è possibile creare un nuovo modello di finestra di dialogo e personalizzarlo con il logo e il pulsante ?.  

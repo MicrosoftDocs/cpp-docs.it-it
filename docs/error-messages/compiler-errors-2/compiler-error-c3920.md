@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33270280"
 ---
 # <a name="compiler-error-c3920"></a>Errore del compilatore C3920
 ' operatore ': Impossibile definire una forma suffissa incremento/decremento WinRT o un operatore CLR chiama la forma suffissa operatore WinRT o CLR, verrà chiamata al prefisso corrispondente WinRT o CLR (operatore) (op_Increment/op_Decrement) senza la semantica del suffisso  

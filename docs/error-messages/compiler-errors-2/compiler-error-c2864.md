@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33245071"
 ---
 # <a name="compiler-error-c2864"></a>Errore del compilatore C2864
 "variabile": un membro dati statico con un in-class initializer deve avere un tipo integrale const non volatile  

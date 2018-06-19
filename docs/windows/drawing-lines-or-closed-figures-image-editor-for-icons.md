@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33882775"
 ---
 # <a name="drawing-lines-or-closed-figures-image-editor-for-icons"></a>Disegno di linee o figure chiuse (Editor di immagini per le icone)
 L'editor di immagini degli strumenti per la creazione di righe e di lavoro figure chiuse tutte nello stesso modo: si posiziona il punto di inserimento in un punto e trascinare in un altro. Per le righe, tali punti sono gli endpoint. Figure chiuse, tali punti sono opposti angoli di un rettangolo di delimitazione nella figura.  

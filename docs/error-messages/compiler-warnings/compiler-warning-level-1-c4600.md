@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33287514"
 ---
 # <a name="compiler-warning-level-1-c4600"></a>Avviso del compilatore (livello 1) C4600
 \#pragma 'macro name': prevista stringa non vuota valida  

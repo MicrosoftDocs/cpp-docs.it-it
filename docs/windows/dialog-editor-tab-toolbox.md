@@ -26,6 +26,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33882576"
 ---
 # <a name="dialog-editor-tab-toolbox"></a>Scheda Editor finestre, Casella degli strumenti
 La scheda Editor finestre viene visualizzata nel [finestra Casella degli strumenti](/visualstudio/ide/reference/toolbox) quando si utilizza l'editor finestre. Per aggiungere controlli alla nuova finestra di dialogo, trascinare i controlli dalla casella degli strumenti nella finestra di dialogo creata (per ulteriori informazioni, vedere [aggiunta di un controllo alla finestra di dialogo](adding-a-control-to-a-dialog-box.md)). È quindi possibile spostare i controlli all'interno della finestra oppure modificarne la dimensione e la forma.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341525"
 ---
 # <a name="creating-the-image-lists"></a>Creazione degli elenchi di immagini
 Creazione di elenchi di immagini è lo stesso sia che si utilizzi [CListView](../mfc/reference/clistview-class.md) o [CListCtrl](../mfc/reference/clistctrl-class.md).  

@@ -18,6 +18,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33881153"
 ---
 # <a name="how-to-handle-events-using-wrl"></a>Procedura: gestire eventi mediante WRL
 Questo documento viene illustrato come utilizzare la libreria di modelli C++ (WRL) di Windows Runtime per sottoscrivere e gestire gli eventi di un oggetto Windows Runtime.  

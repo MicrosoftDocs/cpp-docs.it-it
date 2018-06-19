@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33880319"
 ---
 # <a name="modifying-the-layout-grid"></a>Modifica della griglia di layout
 Quando si posizionano o disposizione dei controlli in una finestra di dialogo, è possibile utilizzare la griglia di layout per il posizionamento più preciso. Quando è attivata la griglia, i controlli vengono visualizzati "blocco" le linee punteggiate della griglia come se magnetizzato. È possibile attivare e disattivare questa funzionalità "Blocca sulla griglia" e modificare le dimensioni delle celle della griglia di layout.  

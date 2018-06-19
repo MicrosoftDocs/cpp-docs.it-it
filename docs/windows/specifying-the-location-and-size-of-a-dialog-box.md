@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33890577"
 ---
 # <a name="specifying-the-location-and-size-of-a-dialog-box"></a>Impostazione della posizione e della dimensione di una finestra di dialogo
 La posizione e dimensioni di una finestra di dialogo, nonché la posizione e dimensioni dei controlli in esso contenuti, vengono misurati in unità di finestra di dialogo. I valori per i singoli controlli e la finestra di dialogo vengono visualizzati nella parte inferiore destra della barra quando si seleziona lo stato di Visual Studio.  

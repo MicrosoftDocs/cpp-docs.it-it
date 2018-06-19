@@ -27,6 +27,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33879594"
 ---
 # <a name="resource-editors"></a>editor di risorse
 Un editor di risorse è un ambiente specializzato per la creazione o la modifica di risorse incluse in un progetto di Visual Studio. Gli editor di risorse di Visual Studio condividono tecniche e interfacce in modo da semplificare e velocizzare la creazione e la modifica delle risorse delle applicazioni. Gli editor di risorse consentono di [visualizzare e modificare risorse nell'editor appropriato](../windows/viewing-and-editing-resources-in-a-resource-editor.md) e di [visualizzare in anteprima le risorse](../windows/previewing-resources.md).  

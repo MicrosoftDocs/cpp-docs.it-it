@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33888646"
 ---
 # <a name="selecting-foreground-or-background-colors-image-editor-for-icons"></a>Selezione dei colori di primo piano e di sfondo (Editor di immagini per le icone)
 Ad eccezione del **gomma**, strumenti di **Editor di immagini** barra degli strumenti di disegno con il colore di primo piano o di sfondo corrente quando si preme il pulsante sinistro o destro del mouse, rispettivamente.  

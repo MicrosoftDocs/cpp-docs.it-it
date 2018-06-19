@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33888419"
 ---
 # <a name="runtimeclassgetiids-method"></a>Metodo RuntimeClass::GetIids
 Ottiene una matrice che può contenere l'interfaccia implementato da ID dell'oggetto RuntimeClass corrente.  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33875734"
 ---
 # <a name="finding-a-string"></a>Ricerca di una stringa
 È possibile eseguire la ricerca di una o più stringhe nella tabella di stringhe e utilizzare [espressioni regolari](/visualstudio/ide/using-regular-expressions-in-visual-studio) con il **Cerca nei file** comando (**modifica** menu) per individuare tutte le istanze di stringhe che corrispondono a un criterio.  

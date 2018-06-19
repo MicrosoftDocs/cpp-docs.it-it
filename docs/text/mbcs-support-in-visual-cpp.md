@@ -37,6 +37,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33865836"
 ---
 # <a name="mbcs-support-in-visual-c"></a>Supporto per MBCS in Visual C++
 Durante l'esecuzione su una versione di Windows, il sistema di sviluppo di Visual C++ (inclusi gli strumenti editor, debugger e riga di comando del codice sorgente integrato) è abilitata per MBCS, fatta eccezione per la memoria (finestra).  

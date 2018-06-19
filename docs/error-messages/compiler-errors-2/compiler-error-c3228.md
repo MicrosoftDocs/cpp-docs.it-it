@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33248996"
 ---
 # <a name="compiler-error-c3228"></a>Errore del compilatore C3228
 'function': l'argomento di tipo generico per 'param' non può essere 'type'. Deve essere un tipo di valore o un tipo di handle  

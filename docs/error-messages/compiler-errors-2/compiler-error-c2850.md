@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33243970"
 ---
 # <a name="compiler-error-c2850"></a>Errore del compilatore C2850
 'construct': consentita solo in ambito file, potrebbe non essere in un costrutto annidato  

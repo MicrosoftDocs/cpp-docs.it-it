@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33882706"
 ---
 # <a name="property--c-component-extensions"></a>proprietà (Estensioni del componente C++)
 Dichiara un *proprietà*, che è una funzione membro che si comporta ed è possibile accedere come un membro dati o un elemento di matrice.  

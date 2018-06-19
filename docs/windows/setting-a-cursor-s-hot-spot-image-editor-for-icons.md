@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33889407"
 ---
 # <a name="setting-a-cursor39s-hot-spot-image-editor-for-icons"></a>L'impostazione di un cursore&#39;s area sensibile (Editor di immagini per le icone)
 L'area sensibile di un [cursore](../windows/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md) è il punto a cui fa riferimento Windows per tenere traccia della posizione del cursore. Per impostazione predefinita, l'area sensibile viene impostato nell'angolo superiore sinistro del cursore (coordinate 0,0). La proprietà Hotspot il [finestra proprietà](/visualstudio/ide/reference/properties-window) Mostra le coordinate dell'area sensibile.  

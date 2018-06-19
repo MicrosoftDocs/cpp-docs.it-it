@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33879269"
 ---
 # <a name="moving-a-string-from-one-resource-file-to-another"></a>Spostamento di una stringa da un file di risorse a un altro
 ### <a name="to-move-a-string-from-one-resource-script-file-to-another"></a>Per spostare una stringa dal file di script di una risorsa a un altro  

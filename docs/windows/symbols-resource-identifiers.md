@@ -26,6 +26,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33891844"
 ---
 # <a name="symbols-resource-identifiers"></a>Simboli: identificatori di risorsa
 Un simbolo è un identificatore (ID) di risorsa costituito da due parti: una stringa di testo (nome del simbolo) di cui viene eseguito il mapping a un valore integer (valore del simbolo). Ad esempio:  

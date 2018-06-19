@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33879503"
 ---
 # <a name="explicit-overrides--c-component-extensions"></a>Override esplicito (Estensioni del componente C++)
 In questo argomento viene illustrato come eseguire l'override esplicito di un membro di una classe di base o interfaccia. Override (esplicito) denominato deve essere utilizzato solo per eseguire l'override di un metodo con un metodo derivato ha un nome diverso.  

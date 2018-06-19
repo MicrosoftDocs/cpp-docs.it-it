@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33892335"
 ---
 # <a name="symbol-name-restrictions"></a>Restrizioni relative ai nomi dei simboli
 I nomi dei simboli sono soggetti alle restrizioni riportate di seguito.  

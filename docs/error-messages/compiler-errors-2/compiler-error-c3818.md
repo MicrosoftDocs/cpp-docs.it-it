@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33268834"
 ---
 # <a name="compiler-error-c3818"></a>Errore del compilatore C3818
 dichiarazione di proprietà di matrice 'proprietà1' non eseguire l'overload di una proprietà di indice 'proprietà2'  

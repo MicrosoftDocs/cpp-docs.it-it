@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33875045"
 ---
 # <a name="how-to-declare-interior-pointers-with-the-const-keyword-ccli"></a>Procedura: dichiarare i puntatori interni con la parola chiave const (C++/CLI)
 L'esempio seguente viene illustrato come utilizzare `const` nella dichiarazione di un puntatore interno.  

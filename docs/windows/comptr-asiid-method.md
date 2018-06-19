@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33870090"
 ---
 # <a name="comptrasiid-method"></a>Metodo ComPtr::AsIID
 Restituisce un oggetto ComPtr che rappresenta l'interfaccia identificata dall'ID dell'interfaccia specificato.  

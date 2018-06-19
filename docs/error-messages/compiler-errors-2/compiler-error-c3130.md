@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33248109"
 ---
 # <a name="compiler-error-c3130"></a>Errore del compilatore C3130
 Errore interno del compilatore: Impossibile scrivere nel PDB il blocco di codice inserito  

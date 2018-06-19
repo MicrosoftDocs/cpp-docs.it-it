@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33880797"
 ---
 # <a name="predefined-accelerator-keys"></a>Tasti di scelta rapida predefiniti
 Esistono numerosi tasti di scelta rapida predefiniti che possono far parte di un progetto di applicazione Windows. Alcune di queste chiavi sono virtuali per l'ambiente Windows. Altri supportano browser o applicazioni Unicode. È possibile usare qualsiasi di questi tipi qualsiasi tasto di scelta rapida.  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33883528"
 ---
 # <a name="creating-a-console-application"></a>Creazione di un'applicazione console
 Il modo più semplice per creare un'applicazione console Win32 è utilizzare la creazione guidata applicazione Win32.  

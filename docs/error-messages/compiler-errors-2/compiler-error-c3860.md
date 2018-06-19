@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33268318"
 ---
 # <a name="compiler-error-c3860"></a>Errore del compilatore C3860
 elenco di argomenti di tipo nome del tipo di classe seguito necessario elencare i parametri nell'ordine utilizzato nell'elenco di parametri di tipo  

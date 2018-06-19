@@ -25,6 +25,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33891311"
 ---
 # <a name="toolbar-editor"></a>Editor barra degli strumenti
 L'editor barra degli strumenti consente di creare risorse della barra degli strumenti e convertire le bitmap in risorse della barra degli strumenti. L'editor barra degli strumenti usa un'interfaccia grafica per visualizzare una barra degli strumenti e dei pulsanti con un aspetto molto simile a quello visualizzato in un'applicazione finita.  

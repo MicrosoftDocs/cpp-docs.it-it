@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33283085"
 ---
 # <a name="compiler-warning-level-1-c4650"></a>Avviso del compilatore (livello 1) C4650
 informazioni di debug non nell'intestazione precompilata. solo i simboli globali presenti l'intestazione saranno disponibili  

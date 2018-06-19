@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33878112"
 ---
 # <a name="generics--c-component-extensions"></a>Generics (Estensioni del componente C++)
 I generics sono tipi e metodi con parametri. In questa sezione sono illustrate le funzionalità generiche supportate sia da Windows Runtime sia da Common Language Runtime e quelle supportate solo da Common Language Runtime. Inoltre, viene descritto come creare i propri metodi e tipi generici in Visual C++ e come utilizzare i tipi generici creati con un linguaggio .NET Framework in Visual C++. Infine, in questa sezione viene fornito un confronto tra generics e modelli di C++.  

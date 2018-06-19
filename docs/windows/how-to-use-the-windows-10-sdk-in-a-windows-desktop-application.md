@@ -18,6 +18,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33882824"
 ---
 # <a name="how-to-use-the-windows-10-sdk-in-a-windows-desktop-application"></a>Procedura: Usare Windows 10 SDK in un'applicazione di Windows Desktop
 Quando si crea un progetto desktop Windows classico in Visual Studio 2017, si viene configurato per impostazione predefinita per compilare con la versione di Windows 10 SDK installata quando il carico di lavoro di C++ Desktop è stato installato o dell'ultimo aggiornamento. Questa versione di Windows SDK è compatibile con tutte le versioni Windows recenti. Se si desidera una versione precedente del SDK di destinazione, è possibile aprire un progetto | Le proprietà e scegliere tra le altre versioni del SDK disponibile nell'elenco a discesa versione di Windows SDK.  

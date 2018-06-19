@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33263908"
 ---
 # <a name="compiler-error-c3665"></a>Errore del compilatore C3665
 'distruttore': identificatore 'keyword' non consentito in un distruttore/finalizzatore di override  

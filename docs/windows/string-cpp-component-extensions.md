@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33889244"
 ---
 # <a name="string--c-component-extensions"></a>Stringa (Estensioni del componente C++)
 Il compilatore di Visual C++ supporta *stringhe*, che sono oggetti che rappresentano il testo come una sequenza di caratteri. Visual C++ supporta le variabili di stringa, il cui valore è implicita, e i valori letterali il cui valore è una stringa tra virgolette esplicita.  

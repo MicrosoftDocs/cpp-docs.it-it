@@ -66,6 +66,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33283354"
 ---
 # <a name="compiler-errors-c2600-through-c2699"></a>Errori del compilatore da C2600 a C2699
 

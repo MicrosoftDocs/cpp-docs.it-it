@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33890590"
 ---
 # <a name="version-information-editor"></a>Editor di informazioni sulla versione
 Le informazioni sulla versione sono costituite dall'identificazione del prodotto e della società, da un numero di versione del prodotto e dalla notifica relativa al copyright e al marchio. L'editor di informazioni sulla versione consente di creare e gestire questi dati, che sono archiviati nella risorsa di informazioni sulla versione. La risorsa di informazioni sulla versione non è necessaria per un'applicazione, ma è uno strumento utile per raccogliere le informazioni che identificano l'applicazione. Le informazioni sulla versione vengono usate anche dalle API di installazione.  

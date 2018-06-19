@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342618"
 ---
 # <a name="deriving-a-document-class-from-cdocument"></a>Derivazione di una classe documento da CDocument
 I documenti includono e gestire i dati dell'applicazione. Per utilizzare la classe di documento generata dalla creazione guidata applicazione MFC, è necessario eseguire le operazioni seguenti:  

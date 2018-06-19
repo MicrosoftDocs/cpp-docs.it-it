@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33890863"
 ---
 # <a name="sealed--c-component-extensions"></a>sealed (Estensioni del componente C++)
 `sealed` è una parola chiave sensibile al contesto per le classi di riferimento che indica che un membro virtuale non può essere sottoposto a override o che un tipo non può essere usato come tipo di base.  

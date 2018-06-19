@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33291141"
 ---
 # <a name="compiler-warning-level-3-c4738"></a>Avviso del compilatore (livello 3) C4738
 archiviazione in memoria del risultato float a 32 bit, possibile riduzione delle prestazioni  

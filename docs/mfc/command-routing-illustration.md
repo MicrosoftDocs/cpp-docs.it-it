@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341136"
 ---
 # <a name="command-routing-illustration"></a>Illustrazione del routing dei comandi
 Per illustrare, prendere in considerazione un messaggio di comando da una voce di menu Cancella tutto nel menu di modifica di un'applicazione MDI. Si supponga che la funzione del gestore per questo comando è una funzione membro di classe di documento dell'applicazione. Ecco come comando raggiunge il relativo gestore dopo che l'utente sceglie la voce di menu:  

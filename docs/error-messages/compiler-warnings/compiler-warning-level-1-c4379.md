@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33279084"
 ---
 # <a name="compiler-warning-level-1-c4379"></a>Avviso del compilatore (livello 1) C4379
 Versione di common language runtime non è supportata da questo compilatore. Utilizzando questa versione può causare risultati imprevisti.  

@@ -35,6 +35,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33882550"
 ---
 # <a name="creating-transparent-or-inverse-regions-in-device-images-image-editor-for-icons"></a>Creazione di aree trasparenti o di inversione nelle immagini per i dispositivi (Editor di immagini per le icone)
 Nel [editor di immagini](../windows/image-editor-for-icons.md), l'immagine icona o cursore iniziale è un attributo trasparente. Anche se le immagini icona e cursore sono rettangolari, molti non vengono visualizzati, poiché le parti dell'immagine sono trasparenti; la figura sottostante nella schermata mostra tramite l'icona o cursore. Quando si trascina un'icona, parti dell'immagine vengano visualizzati in un colore inverso. Per creare questo effetto, impostare il colore dello schermo e inversa nel [finestra colori](../windows/colors-window-image-editor-for-icons.md).  
