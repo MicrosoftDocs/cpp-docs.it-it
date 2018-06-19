@@ -33,6 +33,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32366588"
 ---
 # <a name="cominterfaceentry-macros"></a>Macro COM_INTERFACE_ENTRY  
  Queste macro immettere le interfacce di un oggetto nella propria mappa COM in modo che siano accessibili da `QueryInterface`. L'ordine delle voci della mappa COM è verranno controllate le interfacce di ordine per un oggetto corrispondente **IID** durante `QueryInterface`.  

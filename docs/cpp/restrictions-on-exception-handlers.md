@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32420204"
 ---
 # <a name="restrictions-on-exception-handlers"></a>Limitazioni ai gestori di eccezioni
 La limitazione principale nell'utilizzo dei gestori eccezioni è che non è possibile utilizzare un'istruzione `goto` per passare a un blocco di istruzioni `__try`. È tuttavia necessario inserire il blocco di istruzioni attraverso il normale flusso di controllo. È possibile uscire da un blocco di istruzioni `__try` e annidare i gestori di eccezione quando lo si desidera.  

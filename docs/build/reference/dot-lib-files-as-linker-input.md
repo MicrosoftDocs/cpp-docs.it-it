@@ -29,6 +29,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32374544"
 ---
 # <a name="lib-files-as-linker-input"></a>File lib come input del linker
 COLLEGAMENTO accetta librerie standard COFF e COFF librerie di importazione, che in genere dispongono di estensione. lib. Le librerie standard contengono gli oggetti e vengono create nello strumento LIB. Librerie di importazione contengono informazioni sull'esportazione in altri programmi e vengono create dal collegamento durante la compilazione di un programma che contiene esportazioni o dallo strumento LIB. Per informazioni sull'utilizzo di LIB per creare standard o librerie di importazione, vedere [riferimenti a LIB](../../build/reference/lib-reference.md). Per informazioni dettagliate sull'uso di collegamento per creare una libreria di importazione, vedere il [/DLL](../../build/reference/dll-build-a-dll.md) opzione.  

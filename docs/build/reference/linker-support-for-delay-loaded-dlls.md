@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32375584"
 ---
 # <a name="linker-support-for-delay-loaded-dlls"></a>Supporto per le DLL a caricamento ritardato nel linker
 Il linker Visual C++ supporta ora il caricamento ritardato di DLL. Questo elimina la necessità di utilizzare le funzioni di Windows SDK **LoadLibrary** e **GetProcAddress** per implementare una DLL a caricamento ritardato.  

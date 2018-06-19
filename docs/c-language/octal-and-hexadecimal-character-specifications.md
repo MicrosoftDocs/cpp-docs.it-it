@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32387388"
 ---
 # <a name="octal-and-hexadecimal-character-specifications"></a>Specifiche dei caratteri ottali ed esadecimali
 La sequenza **\\***ooo* significa che è possibile specificare qualsiasi carattere presente nel set di caratteri ASCII come codice carattere ottale a tre cifre. Il valore numerico dell'intero ottale specifica il valore del carattere o del carattere "wide" desiderato.  

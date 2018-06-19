@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32374283"
 ---
 # <a name="fm-name-mapfile"></a>/Fm (Specifica file map)
 Indica al linker di generare un file MAP contenente un elenco di segmenti nell'ordine in cui appaiono nel file .exe corrispondente o DLL.  

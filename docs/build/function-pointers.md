@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367147"
 ---
 # <a name="function-pointers"></a>Puntatori a funzione
 Puntatori a funzione sono semplicemente i puntatori all'etichetta della rispettiva funzione. Non esistono alcuna tabella dei requisiti il sommario per puntatori a funzione.  

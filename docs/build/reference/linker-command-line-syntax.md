@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32376166"
 ---
 # <a name="linker-command-line-syntax"></a>Sintassi della riga di comando del linker
 Per eseguire il collegamento. EXE, utilizzare la sintassi seguente:  

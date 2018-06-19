@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32384424"
 ---
 # <a name="lifetime-scope-visibility-and-linkage"></a>Durata, ambito, visibilità e collegamento
 Per comprendere il funzionamento di un programma C, è necessario comprendere le regole che determinano le modalità di utilizzo di variabili e funzioni nel programma. Numerosi concetti sono determinanti per comprendere le seguenti regole:  

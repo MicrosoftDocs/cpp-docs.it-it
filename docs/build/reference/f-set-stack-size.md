@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32373140"
 ---
 # <a name="f-set-stack-size"></a>/F (Imposta la dimensione dello stack)
 Imposta la dimensione dello stack di programma in byte.  

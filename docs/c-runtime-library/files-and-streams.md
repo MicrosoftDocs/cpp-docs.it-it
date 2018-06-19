@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32390518"
 ---
 # <a name="files-and-streams"></a>File e flussi
 Un programma comunica con l'ambiente di destinazione tramite la lettura e scrittura dei file. Un file può essere:  

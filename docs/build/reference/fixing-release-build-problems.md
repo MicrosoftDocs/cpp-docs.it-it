@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32372152"
 ---
 # <a name="fixing-release-build-problems"></a>Correzione dei problemi della build di rilascio
 Se il codice genera errori di compilazione dopo il passaggio dalla compilazione di debug per una build di rilascio, esistono alcune aree che è necessario controllare.  

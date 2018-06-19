@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32374726"
 ---
 # <a name="module-definition-def-files"></a>File di definizione moduli (DEF)
 File di definizione moduli (def) forniscono il linker con le informazioni sull'esportazione, attributi e altre informazioni sul programma da collegare. Un file. def è molto utile quando si compila una DLL. Poiché esistono [opzioni del linker](../../build/reference/linker-options.md) che può essere usato invece di istruzioni di definizione moduli, def (file) in genere non sono necessari. È inoltre possibile utilizzare [dllexport](../../build/exporting-from-a-dll-using-declspec-dllexport.md) come un modo per specificare le funzioni esportate.  

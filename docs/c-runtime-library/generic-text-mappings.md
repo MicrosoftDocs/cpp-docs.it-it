@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32388575"
 ---
 # <a name="generic-text-mappings"></a>Mapping testo generico
 Per semplificare la scrittura di codice per i mercati internazionali, in TCHAR. H sono definiti mapping di testo generico per:  

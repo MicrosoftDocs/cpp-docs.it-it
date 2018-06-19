@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32371177"
 ---
 # <a name="editbin-command-line"></a>Riga di comando EDITBIN
 Per eseguire EDITBIN, utilizzare la sintassi seguente:  

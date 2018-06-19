@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32375675"
 ---
 # <a name="fu-name-forced-using-file"></a>/FU (Specifica file #using da utilizzare)
 Un'opzione del compilatore che è possibile utilizzare in alternativa al passaggio di un nome di file per [# direttiva using](../../preprocessor/hash-using-directive-cpp.md) nel codice sorgente.  

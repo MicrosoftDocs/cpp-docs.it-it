@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32379198"
 ---
 # <a name="overview-of-lib"></a>Cenni preliminari su LIB
 LIB creare librerie standard e librerie di importazione è possibile utilizzare con file di esportazione [collegamento](../../build/reference/linker-options.md) quando si compila un programma. LIB viene eseguito da un prompt dei comandi.  

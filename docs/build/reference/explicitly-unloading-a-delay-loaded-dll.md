@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32374174"
 ---
 # <a name="explicitly-unloading-a-delay-loaded-dll"></a>Scaricamento esplicito di una DLL a caricamento ritardato
 Il [/Delay](../../build/reference/delay-delay-load-import-settings.md): l'opzione del linker unload consente di scaricare una DLL a caricamento ritardato. Per impostazione predefinita, quando il codice viene scaricata la DLL (utilizzando /delay: unload e **FUnloadDelayLoadedDLL2**), le importazioni a caricamento ritardato rimangono nella tabella di indirizzi di importazione (IAT). Tuttavia, se si utilizza /delay: unload nella riga di comando del linker, la funzione di supporto supporterà anche lo scaricamento esplicito della DLL, la IAT verrà reimpostato il formato originale; i puntatori di ora non valido verranno sovrascritto. IAT è un campo di [ImgDelayDescr](../../build/reference/calling-conventions-parameters-and-return-type.md) che contiene l'indirizzo di una copia della tabella IAT originale (se presente).  

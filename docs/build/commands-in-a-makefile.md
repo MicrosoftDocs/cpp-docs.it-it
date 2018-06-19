@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32366874"
 ---
 # <a name="commands-in-a-makefile"></a>Comandi di un makefile
 Una regola di blocco o inferenza descrizione specifica di un blocco di comandi da eseguire se la dipendenza non è aggiornata. NMAKE ogni comando viene visualizzato prima dell'esecuzione, a meno che non /S, **. Invisibile all'utente**, **! CMDSWITCHES**, o @ utilizzato. Se un blocco di descrizione non è seguito da un blocco di comandi, viene cercata una regola di inferenza corrispondente.  

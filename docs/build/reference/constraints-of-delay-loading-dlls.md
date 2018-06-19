@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32375916"
 ---
 # <a name="constraints-of-delay-loading-dlls"></a>Vincoli delle DLL a caricamento ritardato
 Per il caricamento ritardato delle importazioni esistono dei vincoli.  

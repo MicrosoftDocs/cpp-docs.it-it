@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367651"
 ---
 # <a name="function-types"></a>Tipi di funzioni
 Sono disponibili essenzialmente due tipi di funzioni. Una funzione che richiede uno stack frame viene chiamata una funzione di frame. Una funzione foglia viene chiamata una funzione che non richiede uno stack frame.  

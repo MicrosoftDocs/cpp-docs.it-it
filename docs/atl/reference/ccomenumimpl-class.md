@@ -33,6 +33,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32365028"
 ---
 # <a name="ccomenumimpl-class"></a>Classe CComEnumImpl
 Questa classe fornisce l'implementazione per un'interfaccia di enumeratore COM in cui gli elementi enumerati sono archiviati in una matrice.  

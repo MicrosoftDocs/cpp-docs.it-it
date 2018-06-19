@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32388240"
 ---
 # <a name="c-keywords"></a>Parole chiave C
 Le parole chiave sono parole con significato particolare per il compilatore C. Nelle fasi di conversione 7 e 8 un identificatore non può avere la stessa ortografia e gli stessi caratteri maiuscoli/minuscoli di una parola chiave C. Per una descrizione delle [fasi di conversione](../preprocessor/phases-of-translation.md), vedere *Riferimenti al preprocessore*. Per informazioni sugli identificatori, vedere [Identificatori](../c-language/c-identifiers.md). Nel linguaggio C vengono utilizzate le parole chiave seguenti:  

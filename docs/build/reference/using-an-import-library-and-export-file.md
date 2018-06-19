@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32378597"
 ---
 # <a name="using-an-import-library-and-export-file"></a>Utilizzo di una libreria di importazione e di un file di esportazione
 Quando un programma (un file eseguibile o una DLL) consente di esportare in un altro programma che importa anche da, o se più di due programmi esportare e importare tra loro, i comandi per il collegamento di tali programmi devono soddisfare esportazioni circolari.  

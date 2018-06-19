@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32371463"
 ---
 # <a name="other-lib-output"></a>Altri output di LIB
 Nella modalità predefinita, è possibile utilizzare l'opzione /LIST per visualizzare informazioni sulla raccolta risulta. È possibile reindirizzare l'output in un file.  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32377388"
 ---
 # <a name="validate-charset-validate-for-compatible-characters"></a>/Validate-CharSet (convalida per i caratteri compatibile)
 Verifica che il testo del file di origine contenga solo caratteri rappresentabili come UTF-8.  

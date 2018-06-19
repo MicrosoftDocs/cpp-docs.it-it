@@ -29,6 +29,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32374827"
 ---
 # <a name="link-input-files"></a>File di input LINK
 Fornire il linker con i file che contengono oggetti, importazione e librerie standard, risorse, le definizioni del modulo e comandi di input. COLLEGAMENTO non utilizza estensioni di file per presupporre il contenuto di un file. In alternativa, collegamento esamina ogni file di input per determinare il tipo di file è.  

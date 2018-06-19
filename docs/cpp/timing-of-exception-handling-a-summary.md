@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32422176"
 ---
 # <a name="timing-of-exception-handling-a-summary"></a>Intervallo di gestione delle eccezioni: riepilogo
 Un gestore terminazioni viene eseguito indipendentemente dalla modalità in cui il blocco di istruzioni `__try` viene terminato. Le cause possono includere l'uscita dal blocco `__try`, un'istruzione `longjmp` che trasferisce il controllo fuori dal blocco e la rimozione dello stack dovuta alla gestione delle eccezioni.  

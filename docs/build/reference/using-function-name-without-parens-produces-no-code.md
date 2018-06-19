@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32373982"
 ---
 # <a name="using-function-name-without--produces-no-code"></a>Mancata generazione di codice in seguito all'utilizzo di nomi di funzione senza ()
 Quando viene utilizzato il nome di una funzione dichiarato nel programma senza parentesi, il compilatore non genera codice. Questo errore si verifica indipendentemente dal fatto che la funzione accetta parametri perché il compilatore calcola l'indirizzo di funzione. Tuttavia, poiché l'operatore di chiamata di funzione "()" non è presente, verrà effettuata alcuna chiamata. Il risultato è simile al seguente:  

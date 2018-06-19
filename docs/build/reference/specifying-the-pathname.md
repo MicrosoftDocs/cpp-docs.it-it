@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32375662"
 ---
 # <a name="specifying-the-pathname"></a>Specifica del nome del percorso
 Ogni opzione di file di output accetta un *pathname* argomento che è possibile specificare un percorso e un nome per il file di output. L'argomento può includere un nome di unità, directory e nome file. Non è consentito spazio tra l'opzione e l'argomento.  

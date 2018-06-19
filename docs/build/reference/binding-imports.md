@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368928"
 ---
 # <a name="binding-imports"></a>Associazione di importazioni
 Il comportamento del linker predefinito consiste nel creare una tabella di indirizzi di importazione associabile per DLL a caricamento ritardato. Se la DLL è associata, la funzione di supporto tenterà di utilizzare le informazioni associate anziché chiamare **GetProcAddress** su ciascuna delle importazioni a cui viene fatto riferimento. Se il timestamp o l'indirizzo preferito non corrisponda a quelle della DLL caricata, la funzione dell'helper presupporrà che la tabella di indirizzi di importazione associati è obsoleta e procederà come se non esiste.  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32370176"
 ---
 # <a name="pdb-files-as-linker-input"></a>File PDB come input del linker
 Oggetto file (con estensione obj) compilati usando l'opzione /Zi contengono il nome di un database di programma (PDB). Non si specifica nome del file PDB dell'oggetto al linker. COLLEGAMENTO utilizza il nome incorporato per trovare il file PDB, se necessario. Questo vale anche per gli oggetti debuggable contenuti in una libreria. il file PDB per una libreria di debug deve essere disponibile per il linker insieme alla libreria.  

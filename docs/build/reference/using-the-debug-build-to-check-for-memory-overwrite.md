@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32376693"
 ---
 # <a name="using-the-debug-build-to-check-for-memory-overwrite"></a>Utilizzo della compilazione di debug per il controllo della sovrascrittura di memoria
 Per utilizzare la build di debug per controllare la sovrascrittura di memoria, è innanzitutto necessario ricompilare il progetto per il debug. Quindi, passare all'inizio di un'applicazione `InitInstance` funzione e aggiungere la riga seguente:  

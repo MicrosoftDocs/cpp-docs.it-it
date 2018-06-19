@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32391363"
 ---
 # <a name="language-strings"></a>Language Strings
 Le funzioni `setlocale` e `_create_locale` possono utilizzare le lingue supportate dall'API NLS di Windows nei sistemi operativi che non utilizzano la tabella codici Unicode. Per l'elenco delle lingue supportate dalle singole versioni del sistema operativo, vedere [National Language Support (NLS) API Reference](https://www.microsoft.com/resources/msdn/goglobal/default.mspx). La stringa lingua può essere uno dei valori nelle colonne **Language** (Lingua) e **Language name abbreviation** (Abbreviazione nome lingua) dell'elenco delle lingue supportate. Per informazioni aggiuntive sul supporto delle lingue in base alla versione del sistema operativo, vedere [Appendix A: Product Behavior](http://msdn.microsoft.com/goglobal/bb896001.aspx) (Appendice A: comportamento del prodotto) in "[MS-LCID]: Windows Language Code Identifier (LCID) Reference" (Informazioni di riferimento sugli identificatori di lingua (LCID) di Windows).   

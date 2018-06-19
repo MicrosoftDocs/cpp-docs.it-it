@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356308"
 ---
 # <a name="implementing-the-event-handling-interface"></a>Implementazione di interfaccia di gestione degli eventi
 ATL è più semplice con i tre elementi necessari per la gestione degli eventi: implementazione dell'interfaccia eventi, segnalare l'origine evento e l'origine evento di annullamento della notifica. La procedura dettagliata, che è necessario eseguire dipende dal tipo di interfaccia dell'evento e i requisiti delle prestazioni dell'applicazione.  

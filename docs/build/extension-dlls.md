@@ -30,6 +30,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32377131"
 ---
 # <a name="mfc-extension-dlls"></a>DLL di estensione MFC
 Un'estensione MFC DLL è una DLL che implementano generalmente classi riutilizzabili derivate dalle classi esistenti della libreria Microsoft Foundation Class.  

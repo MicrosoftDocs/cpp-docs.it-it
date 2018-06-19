@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32374921"
 ---
 # <a name="setting-linker-options"></a>Impostazione delle opzioni del linker
 All'interno o all'esterno dell'ambiente di sviluppo, è possono impostare le opzioni del linker. Questo argomento per ogni opzione del linker illustra come è possibile impostare nell'ambiente di sviluppo. Vedere [opzioni del Linker](../../build/reference/linker-options.md) per un elenco completo.  

@@ -28,6 +28,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32376598"
 ---
 # <a name="d-preprocessor-definitions"></a>/D (definizioni preprocessore)
 Definisce un simbolo di pre-elaborazione per un file di origine.  

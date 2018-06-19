@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32373816"
 ---
 # <a name="value-edit-control"></a>Value (controllo di modifica)
 Per utilizzare il controllo, immettere un valore, incollarlo dagli Appunti, o trascinamento della selezione, dal debugger in questo controllo di modifica. Immettere il valore in formato decimale o esadecimale e quindi fare clic su **Cerca**. Valori esadecimali devono essere preceduti da 0x; i caratteri validi sono 0-9, A-F e -f. Valori decimali possono essere preceduti dal segno meno (-). i caratteri validi sono 0-9.  

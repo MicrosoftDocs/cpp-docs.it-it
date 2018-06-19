@@ -32,6 +32,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32390619"
 ---
 # <a name="lclocalenamefunc"></a>___lc_locale_name_func
 Funzione CRT interna. Recupera l'attuale nome delle impostazioni locali del thread.  

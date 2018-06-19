@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32381057"
 ---
 # <a name="bits-per-character"></a>Carattere per bit
 **ANSI 2.2.4.2.1** Numero di bit in un carattere  

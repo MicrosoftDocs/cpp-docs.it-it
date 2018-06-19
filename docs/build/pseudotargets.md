@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368408"
 ---
 # <a name="pseudotargets"></a>Pseudo-destinazioni
 Pseudo è un'etichetta utilizzata al posto di un nome di file in una riga di dipendenza. Viene interpretato come un file che non esiste e pertanto non è aggiornata. In NMAKE che timestamp della pseudo è la più recente di tutti i relativi dipendenti. Se non sono presenti dipendenti, viene utilizzata l'ora corrente. Se una pseudo-destinazione viene usata come destinazione, i comandi vengono sempre eseguiti. Pseudo utilizzata come dipendente deve comparire anche come destinazione in un'altra dipendenza. Tuttavia, tale dipendenza non è necessario disporre di un blocco di comandi.  

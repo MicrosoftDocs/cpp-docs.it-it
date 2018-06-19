@@ -34,6 +34,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32387145"
 ---
 # <a name="ciatan2"></a>_CIatan2
 Calcola l'arcotangente di *x* / *y* dove *x* e *y* sono valori all'inizio dello stack.  

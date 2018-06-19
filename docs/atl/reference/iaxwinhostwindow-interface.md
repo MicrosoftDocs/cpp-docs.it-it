@@ -28,6 +28,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32365126"
 ---
 # <a name="iaxwinhostwindow-interface"></a>Interfaccia IAxWinHostWindow
 Questa interfaccia fornisce metodi per la modifica di un controllo e il relativo oggetto host.  

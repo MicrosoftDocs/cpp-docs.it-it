@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32414620"
 ---
 # <a name="event-handling"></a>Gestione di eventi
 La gestione degli eventi viene principalmente supportata per le classi COM (classi C++ che implementano oggetti COM, in genere utilizzando le classi ATL o [coclasse](../windows/coclass.md) attributo).  Per ulteriori informazioni, vedere [gestione degli eventi in COM](../cpp/event-handling-in-com.md).  

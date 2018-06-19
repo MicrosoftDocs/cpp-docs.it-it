@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32373829"
 ---
 # <a name="gt-support-fiber-safe-thread-local-storage"></a>/GT (Supporta archiviazione locale di thread indipendente da fiber)
 Supporta l'indipendenza da fiber per i dati allocati mediante l'archiviazione locale di thread statici, vale a dire i dati allocati con `__declspec(thread)`.  

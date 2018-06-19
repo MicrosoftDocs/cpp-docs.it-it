@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32371281"
 ---
 # <a name="doc-process-documentation-comments-cc"></a>/doc (Elabora i commenti per la documentazione) (C/C++)
 Indica al compilatore di commenti relativi alla documentazione di processo nel file di codice sorgente e di creare un file xdc per ogni file di codice sorgente con i commenti della documentazione.  

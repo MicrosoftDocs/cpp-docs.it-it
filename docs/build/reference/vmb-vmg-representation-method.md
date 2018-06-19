@@ -28,6 +28,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32377183"
 ---
 # <a name="vmb-vmg-representation-method"></a>/vmb, /vmg (Metodo di rappresentazione)
 Selezionare il metodo usato dal compilatore per rappresentare i puntatori ai membri della classe.  

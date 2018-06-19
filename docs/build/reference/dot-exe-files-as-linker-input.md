@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32372403"
 ---
 # <a name="exe-files-as-linker-input"></a>File EXE come input del linker
 Il [nome File Stub MS-DOS](../../build/reference/stub-ms-dos-stub-file-name.md) (/stub) opzione specifica il nome di un file .exe che viene eseguito con MS-DOS. COLLEGAMENTO esamina il file specificato per verificare che sia un programma MS-DOS valido.  

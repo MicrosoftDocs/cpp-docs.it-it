@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32385725"
 ---
 # <a name="compound-statement-c"></a>Istruzione composta (C)
 Un'istruzione composta (detta anche "blocco") viene in genere visualizzata come corpo di un'altra istruzione, ad esempio l'istruzione **if**. In [Dichiarazioni e tipi](../c-language/declarations-and-types.md) viene descritto il modulo e il significato delle dichiarazioni che possono essere visualizzate nell'intestazione di un'istruzione composta.  

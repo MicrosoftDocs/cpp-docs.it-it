@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32392159"
 ---
 # <a name="switch-statement-c"></a>Istruzione switch (C)
 Le istruzioni `switch` e **case** consentono di controllare le complesse operazioni condizionali e di diramazione. L'istruzione `switch` trasferisce il controllo a un'istruzione all'interno del corpo.  

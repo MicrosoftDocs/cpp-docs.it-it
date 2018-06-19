@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32366952"
 ---
 # <a name="chained-unwind-info-structures"></a>Strutture UNWIND_INFO concatenate
 Se è impostato il flag UNW_FLAG_CHAININFO, una struttura di informazioni sulla rimozione viene e uno secondario, il campo indirizzo eccezione-gestore UNWIND_INFO concatenata condiviso contiene le informazioni di rimozione primarie. Il codice seguente recupera informazioni, supponendo che di rimozione primario `unwindInfo` è la struttura con il UNW_FLAG_CHAININFO flag impostato.  

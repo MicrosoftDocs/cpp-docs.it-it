@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32373488"
 ---
 # <a name="how-bscmake-builds-a-bsc-file"></a>Modalità di compilazione di un file bsc in BSCMAKE
 BSCMAKE viene compilato o ricompilato un file BSC in modo più efficiente che possibile. Per evitare potenziali problemi, è importante comprendere il processo di compilazione.  

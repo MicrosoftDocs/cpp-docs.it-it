@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32377118"
 ---
 # <a name="profile-performance-tools-profiler"></a>/PROFILE (Profiler strumenti di prestazioni)
 Produce un file di output che può essere usato con il profiler di Strumenti per le prestazioni.  

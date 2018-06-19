@@ -30,6 +30,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32376332"
 ---
 # <a name="fp-name-pch-file"></a>/Fp (Specifica file pch)
 Fornisce un nome di percorso per un'intestazione precompilata anziché il nome di percorso predefinito.  

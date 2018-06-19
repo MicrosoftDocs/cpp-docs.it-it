@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32377538"
 ---
 # <a name="y-precompiled-headers"></a>/Y (Intestazioni precompilate)
 Le seguenti opzioni del compilatore influenzano la generazione e l'utilizzo delle intestazioni precompilate:  

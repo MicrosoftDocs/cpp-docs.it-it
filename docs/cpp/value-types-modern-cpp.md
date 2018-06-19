@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32423418"
 ---
 # <a name="value-types-modern-c"></a>Tipi di valore (C++ moderno)
 Le classi C++ sono tipi di valore predefinito. In questo argomento viene fornita una panoramica introduttiva dei tipi di valore e dei problemi relativi all'utilizzo.  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32375256"
 ---
 # <a name="guard-enable-guard-checks"></a>/GUARD (abilita i controlli di protezione)
 Specifica il supporto per i controlli di Guard flusso di controllo nell'immagine eseguibile.  

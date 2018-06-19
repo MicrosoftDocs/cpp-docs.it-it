@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32375285"
 ---
 # <a name="link-command-files"></a>File di comando di LINK
 È possibile passare argomenti della riga di comando di collegamento sotto forma di un file di comando. Per specificare un file di comando per il linker, utilizzare la sintassi seguente:  

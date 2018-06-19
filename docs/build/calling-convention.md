@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32366861"
 ---
 # <a name="calling-convention"></a>Convenzione di chiamata
 In questa sezione viene descritto il processo che rende una funzione (chiamante) chiamata in un'altra funzione (chiamato).  

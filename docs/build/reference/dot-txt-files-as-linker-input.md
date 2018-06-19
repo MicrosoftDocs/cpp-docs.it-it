@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32369903"
 ---
 # <a name="txt-files-as-linker-input"></a>File TXT come input del linker
 COLLEGAMENTO prevede diversi file di testo come input aggiuntivo. Il [del file di comando](../../build/reference/link-command-files.md) identificatore (@) e [indirizzo di Base](../../build/reference/base-base-address.md) (/base), [/DEF](../../build/reference/def-specify-module-definition-file.md), e [/ORDER](../../build/reference/order-put-functions-in-order.md) consentono di specificare i file di testo. Questi file possono avere qualsiasi estensione, non solo con estensione txt.  

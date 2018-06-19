@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32373842"
 ---
 # <a name="nologo-suppress-startup-banner-cc"></a>/nologo (Non visualizza il messaggio di avvio) (C/C++)
 Disattiva la visualizzazione dell'intestazione di copyright all'avvio il compilatore e visualizzazione dei messaggi informativi durante la compilazione.  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32390482"
 ---
 # <a name="compatibility"></a>Compatibilità
 La libreria run-time di C universale (UCRT) supporta la maggior parte delle librerie standard di C necessarie per la conformità a C++. Implementa la libreria C99 (ISO/IEC 9899:1999) con le eccezioni delle macro generiche di tipo definite in \<<tgmath.h> e la compatibilità di tipo strict in \<complex.h>. UCRT implementa anche un subset di grandi dimensioni della libreria C POSIX.1 (ISO/IEC 9945-1:1996, POSIX System Application Program Interface), ma non è completamente conforme agli standard POSIX specifici.  Inoltre, UCRT implementa diverse funzioni e macro specifiche per Microsoft non incluse in uno standard.  

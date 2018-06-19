@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32372656"
 ---
 # <a name="dumpbin-reference"></a>Riferimenti a DUMPBIN
 Microsoft COFF Binary File Dumper (DUMPBIN. Con estensione EXE) consente di visualizzare informazioni sui file binari comuni oggetto formato COFF (File). È possibile utilizzare DUMPBIN per esaminare i file oggetto COFF, librerie standard di oggetti COFF, file eseguibili e librerie a collegamento dinamico (DLL).  

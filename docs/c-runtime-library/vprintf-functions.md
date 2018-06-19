@@ -30,6 +30,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32418380"
 ---
 # <a name="vprintf-functions"></a>Funzioni vprintf
 Ognuna delle funzioni `vprintf` accetta un puntatore a un elenco di argomenti e quindi formatta e scrive i dati specificati in una destinazione particolare. Le funzioni differiscono per il tipo di convalida dei parametri eseguita, per l'uso di stringhe di caratteri di tipo wide o a byte singolo, per la destinazione di output e per il modo in cui viene specificato l'ordine in cui i parametri vengono usati nella stringa di formato.  

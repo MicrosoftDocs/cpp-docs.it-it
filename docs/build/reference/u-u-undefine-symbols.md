@@ -28,6 +28,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32378327"
 ---
 # <a name="u-u-undefine-symbols"></a>/U, /u (Annulla la definizione dei simboli)
 Il **/u** l'opzione del compilatore di non definisce il simbolo del preprocessore specificato. Il **/u** l'opzione del compilatore definizioni dei simboli Microsoft specifici definiti dal compilatore.  

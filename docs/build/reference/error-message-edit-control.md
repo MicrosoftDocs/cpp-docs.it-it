@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32369614"
 ---
 # <a name="error-message-edit-control"></a>messaggio di errore (controllo di modifica)
 Il **messaggio di errore** casella contiene il testo del messaggio di errore di sistema o il messaggio di errore modulo in base al valore immesso.  

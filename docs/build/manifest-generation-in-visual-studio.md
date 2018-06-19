@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32370449"
 ---
 # <a name="manifest-generation-in-visual-studio"></a>Generazione di manifesti in Visual Studio
 La generazione di un file manifesto per un particolare progetto può essere controllata nel progetto **pagine delle proprietà** finestra di dialogo. Nel **le proprietà di configurazione** scheda, fare clic su **Linker**, quindi **File manifesto**, quindi **Genera manifesto**. Per impostazione predefinita, le proprietà del progetto di nuovi progetti sono per generare un file manifesto. Tuttavia è possibile disabilitare la generazione del manifesto per un progetto utilizzando il **Genera manifesto** proprietà del progetto. Quando questa proprietà è impostata su **Sì**, viene generato il manifesto per il progetto. In caso contrario il linker ignora le informazioni sull'assembly durante la risoluzione delle dipendenze del codice dell'applicazione e non genera il manifesto.  

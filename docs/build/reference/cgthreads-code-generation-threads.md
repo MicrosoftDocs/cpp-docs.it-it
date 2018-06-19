@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32372439"
 ---
 # <a name="cgthreads-code-generation-threads"></a>/cgthreads (thread di generazione di codice)
 Imposta il numero di thread cl.exe da usare per l'ottimizzazione e la generazione di codice.  

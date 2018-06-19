@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380914"
 ---
 # <a name="where-to-define-macros"></a>Definizione delle macro
 Definire macro in una riga di comando, file di comando, makefile o il file Tools.  

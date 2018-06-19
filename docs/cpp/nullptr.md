@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32419643"
 ---
 # <a name="nullptr"></a>nullptr
 Definisce una costante del puntatore null di tipo `std::nullptr_t`, che è convertibile in qualsiasi tipo di puntatore raw.  Sebbene sia possibile utilizzare la parola chiave `nullptr` senza includere alcuna intestazione, se il codice utilizza il tipo `std::nullptr_t`, è necessario definirlo includendo l'intestazione `<cstddef>`.  

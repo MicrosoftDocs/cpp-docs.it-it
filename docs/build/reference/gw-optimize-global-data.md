@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32376439"
 ---
 # <a name="gw-optimize-global-data"></a>/Gw (Ottimizza dati globali)
 Creare un pacchetto di dati globali nelle sezioni COMDAT per l'ottimizzazione.  

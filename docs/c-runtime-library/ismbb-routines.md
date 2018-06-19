@@ -32,6 +32,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32392497"
 ---
 # <a name="ismbb-routines"></a>Routines _ismbb
 Testa il valore integer specificato `c` per una determinata condizione, usando le impostazioni locali correnti o una categoria di stato di conversione LC_CTYPE specificata.  

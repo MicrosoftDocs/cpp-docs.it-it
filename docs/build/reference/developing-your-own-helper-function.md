@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32371398"
 ---
 # <a name="developing-your-own-helper-function"></a>Sviluppo di una funzione di supporto personalizzata
 È possibile fornire la propria versione della routine per eseguire un'elaborazione specifica in base ai nomi delle DLL o importazioni. Esistono due metodi di questa operazione: codifica personalizzata, eventualmente in base al codice fornito, oppure l'associazione della versione fornita con gli hook di notifica dettagliati in precedenza.  

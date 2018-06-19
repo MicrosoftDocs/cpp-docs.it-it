@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32360758"
 ---
 # <a name="caxwindow2t-class"></a>Classe CAxWindow2T
 Questa classe fornisce metodi per la modifica di una finestra che ospita un controllo ActiveX, è inoltre supportata l'hosting di controlli ActiveX con licenza.  

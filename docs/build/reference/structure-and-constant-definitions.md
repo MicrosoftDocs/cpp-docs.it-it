@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32376033"
 ---
 # <a name="structure-and-constant-definitions"></a>Struttura e definizioni di costanti
 Routine di supporto predefinito utilizza diverse strutture per comunicare con le funzioni hook e durante le eccezioni. Ecco i valori di notifica e di errore, le strutture di informazioni e il tipo di puntatore a funzione hook passati agli hook:  

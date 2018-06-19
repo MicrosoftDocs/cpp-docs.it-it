@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32378340"
 ---
 # <a name="showincludes-list-include-files"></a>/showIncludes (Elenca i file di inclusione)
 Fa sì che il compilatore di generare un elenco dei file di inclusione. Annidati includono i file vengono anche visualizzati (i file inclusi dal file che vengono inclusi).  

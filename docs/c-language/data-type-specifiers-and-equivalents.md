@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32386150"
 ---
 # <a name="data-type-specifiers-and-equivalents"></a>Identificatori ed equivalenti di tipi di dati
 In questa documentazione vengono utilizzati in genere i formati degli identificatori di tipo elencati nella tabella seguente anziché i formati estesi e si presuppone che il tipo `char` sia signed per impostazione predefinita. Di conseguenza, in questa documentazione `char` equivale a **signed char**.  

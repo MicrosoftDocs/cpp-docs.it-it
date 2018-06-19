@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32391194"
 ---
 # <a name="source-files-and-source-programs"></a>File e programmi di origine
 Un programma di origine può essere suddiviso in uno o più file di origine, denominati anche unità di conversione. L'input al compilatore è definito unità di conversione.  

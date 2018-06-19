@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33111146"
 ---
 # <a name="deque-stlclr"></a>deque (STL/CLR)
 La classe modello descrive un oggetto che controlla una sequenza di lunghezza variabile di elementi che dispone di accesso casuale. Utilizzare il contenitore `deque` per gestire una sequenza di elementi che è simile a un blocco contiguo di archiviazione, ma che possibile aumentare o diminuire in delle estremità senza la necessità di copiare tutti gli elementi rimanenti. In questo modo può implementare in modo efficiente un `double-ended queue`. (Da qui il nome.)  

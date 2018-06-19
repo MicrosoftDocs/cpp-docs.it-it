@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32383228"
 ---
 # <a name="including-quoted-filenames"></a>Inclusione di nomi file tra virgolette
 **ANSI 3.8.2** Supporto di nomi tra virgolette per i file di origine che è possibile includere  

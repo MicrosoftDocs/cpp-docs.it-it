@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32384346"
 ---
 # <a name="c-comments"></a>Commenti C
 Un commento è una sequenza di caratteri che inizia con una combinazione barra/asterisco (<b>/\*</b>) considerata come un singolo spazio vuoto dal compilatore e altrimenti ignorata. Un commento può contenere qualsiasi combinazione di caratteri del set di caratteri rappresentabili, inclusi i caratteri di nuova riga, fatta eccezione per il delimitatore di fine commento (<b>\*/</b>). I commenti possono occupare più di una riga, ma non possono essere annidati.  

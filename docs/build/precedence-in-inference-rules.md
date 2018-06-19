@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368486"
 ---
 # <a name="precedence-in-inference-rules"></a>Precedenza nelle regole di inferenza
 Se una regola di inferenza non è stata definita più volte, viene utilizzata la definizione di precedenza più alta. Nell'elenco seguente viene illustrato l'ordine di precedenza dalla più alta alla più bassa:  

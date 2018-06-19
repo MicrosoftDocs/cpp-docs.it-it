@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32372721"
 ---
 # <a name="choosing-the-format-of-netmodule-input-files"></a>Scelta del formato dei file di input con estensione netmodule
 Un file con estensione obj MSIL (compilato con [/clr](../../build/reference/clr-common-language-runtime-compilation.md)) può essere utilizzato anche come file con estensione netmodule.  i file obj contengono i metadati e i simboli nativi.  I file con estensione netmodule contengono solo metadati.  

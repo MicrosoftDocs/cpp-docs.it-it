@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32424128"
 ---
 # <a name="semantics-of-expressions"></a>Semantica delle espressioni
 Le espressioni vengono valutate in base alla precedenza e al raggruppamento dei relativi operatori ([Precedenza e associatività](../cpp/cpp-built-in-operators-precedence-and-associativity.md) in [convenzioni lessicali](../cpp/lexical-conventions.md), Mostra le relazioni di C++ gli operatori impongono sulle espressioni.)  

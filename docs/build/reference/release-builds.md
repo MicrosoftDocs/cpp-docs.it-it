@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32376650"
 ---
 # <a name="release-builds"></a>Build di rilascio
 Una build di rilascio Usa le ottimizzazioni. Quando si usa le ottimizzazioni per creare una build di rilascio, il compilatore non genererà le informazioni sui simboli di debug. Chiama l'assenza di informazioni di debug sui simboli, nonché il fatto che il codice non viene generato per traccia e ASSERT, significa che le dimensioni del file eseguibile viene ridotto e pertanto è più veloce.  

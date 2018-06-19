@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32389634"
 ---
 # <a name="recommendations-for-choosing-between-functions-and-macros"></a>Suggerimenti per la scelta tra funzioni e macro
 La maggior parte delle routine delle librerie run-time di Microsoft è costituita da funzioni compilate o assemblate, ma alcune routine sono implementate come macro. Quando un file di intestazione dichiara sia una versione funzione che una versione macro di una routine, la versione macro ha la precedenza, perché viene sempre dopo la dichiarazione di funzione. Quando si chiama una routine implementata sia come funzione che come macro, è possibile imporre al compilatore di usare la versione funzione in due modi:  

@@ -15,6 +15,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32376869"
 ---
 # <a name="wholearchive-include-all-library-object-files"></a>/ WHOLEARCHIVE (che includono tutti i file oggetto libreria)
 Impone al linker di includere tutti i file oggetto della libreria statica nel file eseguibile collegato.  

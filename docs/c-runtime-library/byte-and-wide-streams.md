@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32389884"
 ---
 # <a name="byte-and-wide-streams"></a>Flussi di byte e "wide"
 Un flusso di byte considera un file come una sequenza di byte. All'interno del programma il flusso è una sequenza di byte identici.  

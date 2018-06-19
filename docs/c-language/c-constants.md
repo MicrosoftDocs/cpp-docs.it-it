@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32381655"
 ---
 # <a name="c-constants"></a>Costanti C
 Una "costante" è un numero, un carattere o una stringa di caratteri che è possibile utilizzare come valore in un programma. Utilizzare le costanti per rappresentare valori a virgola mobile, interi, di enumerazione o di caratteri che non possono essere modificati.  

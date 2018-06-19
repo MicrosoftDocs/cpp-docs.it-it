@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32385097"
 ---
 # <a name="c-floating-point-constants"></a>Costanti C a virgola mobile
 Una costante a virgola mobile è un numero decimale che rappresenta un numero reale con segno. La rappresentazione di un numero reale con segno include una parte intera, una parte frazionaria e un esponente. Usare le costanti a virgola mobile per rappresentare valori a virgola mobile non modificabili.  

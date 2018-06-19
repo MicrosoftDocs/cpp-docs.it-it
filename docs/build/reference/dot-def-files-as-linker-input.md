@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32370527"
 ---
 # <a name="def-files-as-linker-input"></a>File DEF come input del linker
 Vedere [file di definizione moduli (def)](../../build/reference/module-definition-dot-def-files.md) per ulteriori informazioni. Utilizzare il [/DEF](../../build/reference/def-specify-module-definition-file.md) opzione per specificare il nome del file. def.  

@@ -28,6 +28,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367511"
 ---
 # <a name="freelibrary-and-afxfreelibrary"></a>FreeLibrary e AfxFreeLibrary
 I processi che il collegamento esplicito a una chiamata DLL di [FreeLibrary](http://go.microsoft.com/fwlink/p/?LinkID=259188) funzione quando il modulo DLL non è più necessario. Questa funzione decrementa il conteggio di riferimento del modulo e, se il conteggio dei riferimenti è zero, ne dallo spazio degli indirizzi del processo.  

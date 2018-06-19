@@ -44,6 +44,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32377855"
 ---
 # <a name="bscmake-options"></a>Opzioni di BSCMAKE
 In questa sezione vengono descritte le opzioni disponibili per il controllo di BSCMAKE. Diverse opzioni controllano il contenuto del file di informazioni di visualizzazione escludendo o includendo determinate informazioni. Le opzioni di esclusione consentono BSCMAKE per velocizzare l'esecuzione e possono comportare un file BSC più piccolo. I nomi delle opzioni sono sensibili alle maiuscole (ad eccezione di **/Help** e **/NOLOGO**).  

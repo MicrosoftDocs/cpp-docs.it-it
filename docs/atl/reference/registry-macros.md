@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32365217"
 ---
 # <a name="registry-macros"></a>Macro del Registro di sistema
 Queste macro definiscono strutture di tipo utile libreria e del Registro di sistema.  

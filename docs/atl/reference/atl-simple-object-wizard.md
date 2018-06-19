@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32363969"
 ---
 # <a name="atl-simple-object-wizard"></a>Creazione guidata oggetto semplice ATL
 Questa procedura guidata consente di inserire nel progetto un oggetto COM minimo. Utilizzare questa pagina della procedura guidata per specificare i nomi che identificano i file per l'oggetto e la relativa funzionalità COM e la classe C++.  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32391665"
 ---
 # <a name="interpreting-more-complex-declarators"></a>Interpretazione di più dichiaratori complessi
 È possibile racchiudere qualsiasi dichiaratore tra parentesi per specificare un'interpretazione particolare di un "dichiaratore complesso". Un dichiaratore complesso è un identificatore qualificato da più matrici, puntatori o modificatori di funzione. È possibile applicare varie combinazioni di matrice, puntatore e modificatori di funzione a un singolo identificatore. `typedef` può essere utilizzato in genere per semplificare dichiarazioni. Vedere [Dichiarazioni typedef](../c-language/typedef-declarations.md).  

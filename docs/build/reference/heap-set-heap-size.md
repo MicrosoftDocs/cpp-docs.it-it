@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32374557"
 ---
 # <a name="heap-set-heap-size"></a>/HEAP (Imposta la dimensione dell'heap)
 ```  

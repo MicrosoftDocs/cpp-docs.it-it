@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32385712"
 ---
 # <a name="unrepresented-character-constants"></a>Costanti carattere non rappresentati
 **ANSI 3.1.3.4** Il valore di una costante carattere Integer contenente un carattere o una sequenza di escape non rappresentata nel set di caratteri di esecuzione di base o nel set di caratteri esteso per una costante carattere wide  

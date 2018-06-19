@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32383729"
 ---
 # <a name="pointer-subtraction"></a>Sottrazione di puntatori
 **ANSI 3.3.6, 4.1.1** Il tipo di Integer necessario per mantenere la differenza tra due puntatori agli elementi della stessa matrice, **ptrdiff_t**  

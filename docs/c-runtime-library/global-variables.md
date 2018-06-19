@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32392039"
 ---
 # <a name="global-variables"></a>Variabili globali
 La libreria di runtime Microsoft C fornisce le macro o le variabili globali seguenti. Molte di queste variabili globali o macro sono deprecate a favore di versioni funzionali più sicure ed è consigliabile usare queste ultime invece delle variabili globali.  

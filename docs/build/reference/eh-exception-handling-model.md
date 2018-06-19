@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32379107"
 ---
 # <a name="eh-exception-handling-model"></a>/EH (Modello di gestione delle eccezioni)
 Specifica il tipo di gestione delle eccezioni usato dal compilatore, quando ottimizzare i controlli delle eccezioni e se eliminare gli oggetti C++ che non rientrano nell'ambito a causa di un'eccezione. Se l'opzione **/EH** non viene specificata, il compilatore intercetta sia le eccezioni strutturate asincrone sia le eccezioni C++, ma non elimina gli oggetti C++ che non rientrano nell'ambito a causa di un'eccezione asincrona.  

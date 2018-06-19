@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32369890"
 ---
 # <a name="cc-build-tools"></a>Strumenti per la compilazione in C/C++
 Visual C++ fornisce gli strumenti da riga di comando seguenti per la visualizzazione o la modifica dell'output di compilazione:  

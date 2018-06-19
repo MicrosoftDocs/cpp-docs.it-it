@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367524"
 ---
 # <a name="dependency-side-effects"></a>Effetti collaterali delle dipendenze
 Se viene specificata una destinazione con due punti (:) in due righe di dipendenze in posizioni diverse e se i comandi vengono visualizzati solo dopo una delle righe, vengono interpretate le dipendenze come se adiacenti o combinate. Non richiama una regola di inferenza per la dipendenza che non presenta comandi, ma si presuppone che le dipendenze appartengono al blocco di una descrizione e che esegue i comandi specificati con la dipendenza da altri. Ad esempio, questo set di regole:  

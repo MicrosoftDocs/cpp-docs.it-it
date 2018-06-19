@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380288"
 ---
 # <a name="targets-in-multiple-description-blocks"></a>Destinazioni in più blocchi di descrizione
 Per aggiornare una destinazione in più blocchi di descrizione comandi diversi, specificare due punti consecutivi (:) tra le destinazioni e gli oggetti dipendenti.  

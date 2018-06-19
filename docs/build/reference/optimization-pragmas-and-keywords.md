@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32374752"
 ---
 # <a name="optimization-pragmas-and-keywords"></a>Pragma e parole chiave di ottimizzazione
 Diverse parole chiave e pragma utilizzabili nel codice C o C++ influiscono sull'ottimizzazione:  

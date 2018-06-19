@@ -40,6 +40,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32378457"
 ---
 # <a name="rtc-run-time-error-checks"></a>/RTC (Controlli di runtime)
 Consente di attivare e disattivare la funzionalità relativa ai controlli di errore di run-time, con la [runtime_checks](../../preprocessor/runtime-checks.md) pragma.  

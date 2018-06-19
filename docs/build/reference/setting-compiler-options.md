@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32375806"
 ---
 # <a name="setting-compiler-options"></a>Impostazione delle opzioni del compilatore
 Le opzioni del compilatore C e C++ possono essere impostate nell'ambiente di sviluppo o sulla riga di comando.  

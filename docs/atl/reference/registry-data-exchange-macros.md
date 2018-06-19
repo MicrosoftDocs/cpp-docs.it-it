@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32363058"
 ---
 # <a name="registry-data-exchange-macros"></a>Macro di scambio di dati del Registro di sistema
 Queste macro eseguono le operazioni di scambio di dati del Registro di sistema.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32370514"
 ---
 # <a name="dumpbin-command-line"></a>Riga di comando DUMPBIN
 Per eseguire DUMPBIN, utilizzare la sintassi seguente:  

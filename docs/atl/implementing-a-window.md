@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32357013"
 ---
 # <a name="implementing-a-window"></a>Implementazione di una finestra
 Classe [CWindowImpl](../atl/reference/cwindowimpl-class.md) consente di implementare una finestra e la gestione dei messaggi. Gestione in ATL dei messaggi si basano su una mappa messaggi. Questa sezione viene illustrato:  

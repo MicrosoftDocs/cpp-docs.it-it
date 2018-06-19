@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32373374"
 ---
 # <a name="fi-name-forced-include-file"></a>/FI (Specifica il file di inclusione da utilizzare)
 Fa sì che il preprocessore elaborare il file di intestazione specificato.  

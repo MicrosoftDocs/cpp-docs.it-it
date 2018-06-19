@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32362352"
 ---
 # <a name="interfaces-atl-control-wizard"></a>Interfacce, Creazione guidata controllo ATL
 Questa pagina della procedura guidata identifica le interfacce che supporta il controllo. Per impostazione predefinita, le interfacce supportate sono quelle utilizzate in genere dalla maggior parte dei contenitori.  

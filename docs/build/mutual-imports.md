@@ -29,6 +29,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32377757"
 ---
 # <a name="mutual-imports"></a>Importazioni reciproche
 Esportazione o importazione in un altro file eseguibile presenta complicazioni quando le importazioni sono reciproca (o circolare). Ad esempio, due DLL importare simboli tra loro, simili alle funzioni ricorsive.  

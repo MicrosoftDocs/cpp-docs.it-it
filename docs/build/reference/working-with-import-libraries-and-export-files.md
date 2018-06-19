@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32377932"
 ---
 # <a name="working-with-import-libraries-and-export-files"></a>Utilizzo di librerie di importazione e file di esportazione
 È possibile utilizzare LIB con l'opzione /DEF per creare una libreria di importazione e un file di esportazione. COLLEGAMENTO viene utilizzato il file di esportazione per compilare un programma che contiene esportazioni (in genere un collegamento dinamico (DLL)) e utilizza la libreria di importazione per risolvere i riferimenti a queste esportazioni in altri programmi.  

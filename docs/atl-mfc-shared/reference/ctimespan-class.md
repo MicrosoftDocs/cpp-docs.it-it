@@ -38,6 +38,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32365318"
 ---
 # <a name="ctimespan-class"></a>Classe CTimeSpan
 Un periodo di tempo, in cui verrà archiviato internamente come il numero di secondi nell'intervallo di tempo.  

@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32376715"
 ---
 # <a name="gx-enable-exception-handling"></a>/GX (Attiva gestione eccezioni)
 Deprecato. Consente la gestione delle eccezioni sincrona con il presupposto che le funzioni dichiarata utilizzando `extern "C"` non generano mai un'eccezione.  

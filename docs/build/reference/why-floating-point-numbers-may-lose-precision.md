@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32376137"
 ---
 # <a name="why-floating-point-numbers-may-lose-precision"></a>Causa della possibile perdita di precisione dei numeri a virgola mobile
 I valori decimali a virgola mobile in genere non sono una rappresentazione binaria esatta. Questo è un effetto collaterale del modo in cui la CPU rappresenta i dati a virgola mobile. Per questo motivo, si verifichi una perdita di precisione e alcune operazioni a virgola mobile possono produrre risultati imprevisti.  

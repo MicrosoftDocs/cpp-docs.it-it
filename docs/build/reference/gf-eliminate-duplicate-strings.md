@@ -29,6 +29,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32375893"
 ---
 # <a name="gf-eliminate-duplicate-strings"></a>/GF (Elimina stringhe duplicate)
 Consente al compilatore di creare una singola copia di stringhe identiche nell'immagine del programma e in memoria durante l'esecuzione. Si tratta di un'ottimizzazione denominata *stringhe* che consente di creare programmi di dimensioni ridotte.  
