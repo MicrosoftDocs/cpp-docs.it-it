@@ -36,6 +36,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355480"
 ---
 # <a name="strings-atlmfc"></a>Stringhe (ATL/MFC)
 Quasi tutti i programmi di lavoro con dati di tipo stringa. Visual C++ fornisce diversi modi per gestire i dati della stringa.  

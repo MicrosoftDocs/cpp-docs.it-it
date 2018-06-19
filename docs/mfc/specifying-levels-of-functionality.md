@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381147"
 ---
 # <a name="specifying-levels-of-functionality"></a>Specifica dei livelli di funzionalità
 In questo articolo viene descritto come aggiungere i seguenti livelli di funzionalità per il [CObject](../mfc/reference/cobject-class.md)-classe derivata:  

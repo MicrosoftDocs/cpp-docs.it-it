@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33373830"
 ---
 # <a name="cmfcdragframeimpl-class"></a>Classe CMFCDragFrameImpl
 La `CMFCDragFrameImpl` classe disegna il rettangolo di trascinamento visualizzato quando l'utente trascina un riquadro in modalità di ancoraggio standard.  

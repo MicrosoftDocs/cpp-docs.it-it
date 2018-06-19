@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33105764"
 ---
 # <a name="binarydelegate-stlclr"></a>binary_delegate (STL/CLR)
 La classe genereic descrive un delegato di due argomenti. Utilizzare, specificare un delegato in termini relativi tipi di argomenti e valori restituiti.  

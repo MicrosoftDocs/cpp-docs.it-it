@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33104997"
 ---
 # <a name="using-accessors"></a>Utilizzo delle funzioni di accesso
 Gli argomenti seguenti illustrano come determinare quale tipo di funzione di accesso è più adatto per l'applicazione e quindi illustrato come utilizzare i diversi tipi di funzioni di accesso disponibili:  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382219"
 ---
 # <a name="using-ctreectrl"></a>Utilizzo di CTreeCtrl
 Un controllo struttura ad albero, rappresentato dalla classe [CTreeCtrl](../mfc/reference/ctreectrl-class.md), è una finestra che visualizza un elenco gerarchico di elementi, ad esempio le intestazioni in un documento, le voci in un indice o il file e directory in un disco. Ogni elemento è costituito da un'etichetta e un'immagine bitmap facoltativa e ogni elemento può avere un elenco di elementi secondari associati. Fare clic su un elemento, l'utente può espandere e comprimere l'elenco di elementi secondari associato. L'albero di directory nel riquadro a sinistra di Esplora File è riportato un esempio di un controllo struttura ad albero.  

@@ -45,6 +45,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33369102"
 ---
 # <a name="ckeyboardmanager-class"></a>Classe CKeyboardManager
 Gestisce le tabelle di tasti di scelta rapida per la finestra cornice principale e le finestre cornice figlio.  

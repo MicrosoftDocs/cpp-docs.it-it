@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33098641"
 ---
 # <a name="creating-an-updatable-provider"></a>Creazione di un provider aggiornabile
 Visual C++ supporta provider aggiornabile o i provider che è possibile aggiornare (scrivere) nell'archivio dati. In questo argomento viene illustrato come creare provider aggiornabili utilizzando i modelli OLE DB.  

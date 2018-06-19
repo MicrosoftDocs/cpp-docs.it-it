@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33100018"
 ---
 # <a name="enhancing-the-simple-read-only-provider"></a>Miglioramento di un provider semplice in sola lettura
 In questa sezione viene illustrato come migliorare la [provider semplice in sola lettura](../../data/oledb/implementing-the-simple-read-only-provider.md) creato nella sezione precedente. `IRowsetLocateImpl` Crea un'implementazione per il `IRowsetLocate` l'interfaccia e aggiunge il supporto dei segnalibri.  

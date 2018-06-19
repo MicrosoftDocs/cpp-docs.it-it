@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383224"
 ---
 # <a name="win32-internet-classes"></a>Classi Internet Win32
 MFC esegue il wrapping di Internet Win32 (WinInet) e la tecnologia ActiveX per semplificare la programmazione Internet.  

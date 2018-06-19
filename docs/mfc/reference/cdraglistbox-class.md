@@ -35,6 +35,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33367211"
 ---
 # <a name="cdraglistbox-class"></a>Classe CDragListBox
 Oltre a fornire la funzionalità di una casella di riepilogo di Windows, la `CDragListBox` classe consente all'utente di spostare elementi casella di riepilogo, ad esempio nomi di file, nella casella di riepilogo.  

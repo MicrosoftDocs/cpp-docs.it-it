@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355432"
 ---
 # <a name="atl-window-classes"></a>Classi di finestra ATL
 ATL include diverse classi che consentono di usare e implementare le finestre. Queste classi, come le altre classi ATL, forniscono un'implementazione efficiente che non impone un overhead nel codice.  

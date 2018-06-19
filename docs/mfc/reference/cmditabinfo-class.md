@@ -43,6 +43,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33368095"
 ---
 # <a name="cmditabinfo-class"></a>Classe CMDITabInfo
 Il `CMDITabInfo` classe viene utilizzata per passare i parametri [CMDIFrameWndEx:: Enablemditabbedgroups](../../mfc/reference/cmdiframewndex-class.md#enablemditabbedgroups) metodo. Impostare i membri di questa classe per controllare il comportamento dei gruppi MDI a schede.  

@@ -35,6 +35,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33367929"
 ---
 # <a name="cmfcpropertygridtooltipctrl-class"></a>Classe CMFCPropertyGridToolTipCtrl
 Implementa una descrizione comando controllare che il [CMFCPropertyGridCtrl Class](../../mfc/reference/cmfcpropertygridctrl-class.md) viene utilizzata per visualizzare le descrizioni comandi.  

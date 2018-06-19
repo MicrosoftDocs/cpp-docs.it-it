@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33100005"
 ---
 # <a name="data-sources-and-sessions"></a>Origini dati e sessioni
 Nella figura seguente vengono illustrate le classi che supportano la connessione a e l'accesso a un'origine dati. Ogni classe si basa su un'implementazione di componente standard di OLE DB.  

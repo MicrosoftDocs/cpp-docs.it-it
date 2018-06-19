@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33103564"
 ---
 # <a name="using-an-existing-ado-recordset"></a>Utilizzo di un recordset ADO esistente
 Per combinare i modelli consumer OLE DB e Active Data Objects (ADO), utilizzare ADO per aprire un recordset (corrispondente a un set di righe dei modelli Consumer OLE DB). Quando si dispone di un recordset, eseguire le operazioni seguenti per connettersi a un set di righe OLE DB:  

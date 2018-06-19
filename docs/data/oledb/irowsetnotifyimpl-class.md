@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33106258"
 ---
 # <a name="irowsetnotifyimpl-class"></a>Classe IRowsetNotifyImpl
 Implementa e registra [IRowsetNotify](https://msdn.microsoft.com/en-us/library/ms712959.aspx) sul consumer (noto anche come "sink") in modo che possa gestire le notifiche.  

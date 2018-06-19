@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33105790"
 ---
 # <a name="find-stlclr"></a>find (STL/CLR)
 Individua la posizione della prima occorrenza di un elemento in un intervallo con un valore specificato.  

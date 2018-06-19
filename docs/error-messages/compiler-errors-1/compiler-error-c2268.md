@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33171614"
 ---
 # <a name="compiler-error-c2268"></a>Errore del compilatore C2268
 'function' è un supporto di librerie predefinito del compilatore. I supporti di librerie non possono essere usati con l'opzione /GL; compilare il file oggetto 'file' senza /GL.  

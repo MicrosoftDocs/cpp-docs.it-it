@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33170434"
 ---
 # <a name="compiler-error-c2285"></a>Errore del compilatore C2285
 puntatori a rappresentazione membri ha già determinata - pragma ignorato  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33105270"
 ---
 # <a name="countif-stlclr"></a>count_if (STL/CLR)
 Restituisce il numero di elementi di un intervallo i cui valori corrispondono a una condizione specificata.  

@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33366714"
 ---
 # <a name="cdialogbar-class"></a>CDialogBar (classe)
 Fornisce la funzionalità di una finestra di dialogo non modale di Windows in una barra di controllo.  

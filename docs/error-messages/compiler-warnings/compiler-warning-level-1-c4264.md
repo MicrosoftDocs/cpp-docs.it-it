@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33276542"
 ---
 # <a name="compiler-warning-level-1-c4264"></a>Avviso del compilatore (livello 1) C4264
 'funzione_virtuale': override non disponibile per la funzione membro virtuale dalla base 'class'; la funzione è nascosta  

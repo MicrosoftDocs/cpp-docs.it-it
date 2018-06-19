@@ -35,6 +35,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383974"
 ---
 # <a name="toolbar-fundamentals"></a>Nozioni fondamentali sulla barra degli strumenti
 In questo articolo vengono descritte l'implementazione MFC fondamentale che consente di aggiungere una barra degli strumenti predefinita per l'applicazione selezionando un'opzione nella creazione guidata applicazione. Gli argomenti trattati includono:  

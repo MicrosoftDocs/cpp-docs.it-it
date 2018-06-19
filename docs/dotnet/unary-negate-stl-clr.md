@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33169449"
 ---
 # <a name="unarynegate-stlclr"></a>unary_negate (STL/CLR)
 La classe modello descrive una funzione che, quando viene chiamato, restituisce l'operatore logico non del relativo stored funtore un solo argomento. Utilizzare, specificare un oggetto funzione in termini del funtore stored.  

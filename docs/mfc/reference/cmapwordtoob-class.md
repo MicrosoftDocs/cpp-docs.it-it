@@ -49,6 +49,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33367143"
 ---
 # <a name="cmapwordtoob-class"></a>Classe CMapWordToOb
 Supporta mappe di puntatori `CObject` con chiave fornita da parole a 16 bit.  

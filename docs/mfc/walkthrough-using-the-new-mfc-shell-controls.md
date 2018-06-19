@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385096"
 ---
 # <a name="walkthrough-using-the-new-mfc-shell-controls"></a>Procedura dettagliata: utilizzo dei nuovi controlli Shell MFC
 In questa procedura dettagliata verrà creata un'applicazione simile a Esplora risorse. Si creerà una finestra che contiene due riquadri. Riquadro a sinistra conterrà un [CMFCShellTreeCtrl](../mfc/reference/cmfcshelltreectrl-class.md) oggetto che consente di visualizzare il Desktop in una visualizzazione gerarchica. Il riquadro di destra contiene un [oggetto CMFCShellListCtrl](../mfc/reference/cmfcshelllistctrl-class.md) che vengono mostrati i file nella cartella selezionata nel riquadro a sinistra.  

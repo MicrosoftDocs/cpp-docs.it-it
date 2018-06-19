@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355535"
 ---
 # <a name="interface-pointers-classes"></a>Classi di puntatori di interfaccia
 Un puntatore a interfaccia specificato consente di gestire le classi seguenti:  

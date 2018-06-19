@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33291804"
 ---
 # <a name="compiler-warning-level-2-c4302"></a>Avviso del compilatore (livello 2) C4302
 'conversion': troncamento da 'type 1' in 'type 2'  

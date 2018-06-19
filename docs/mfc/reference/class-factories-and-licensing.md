@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33367074"
 ---
 # <a name="class-factories-and-licensing"></a>Class factory e licenze
 Per creare un'istanza del controllo OLE, un'applicazione contenitore chiama una funzione membro della factory di classe del controllo. Poiché il controllo è un oggetto OLE effettivo, la class factory è responsabile per la creazione di istanze del controllo. Ogni classe del controllo OLE deve avere una class factory.  

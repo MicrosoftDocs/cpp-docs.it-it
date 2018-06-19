@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356686"
 ---
 # <a name="introduction-to-atl-window-classes"></a>Introduzione alle classi di finestra ATL
 Le seguenti classi ATL sono progettate per l'implementazione e la modifica di windows:  

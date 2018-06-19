@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33105179"
 ---
 # <a name="iopenrowsetimplcreaterowset"></a>IOpenRowsetImpl::CreateRowset
 Crea un oggetto set di righe. Non è chiamato direttamente dall'utente. Vedere [IOpenRowset:: OPENROWSET](https://msdn.microsoft.com/en-us/library/ms716724.aspx) nel *di riferimento per programmatori OLE DB.*  

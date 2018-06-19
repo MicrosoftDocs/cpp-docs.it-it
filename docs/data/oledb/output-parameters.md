@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33104386"
 ---
 # <a name="output-parameters"></a>Parametri di output
 La chiamata di una stored procedure è simile alla chiamata a un comando SQL. La differenza principale è che le stored procedure utilizzano parametri di output (o "output") e valori restituiscono.  

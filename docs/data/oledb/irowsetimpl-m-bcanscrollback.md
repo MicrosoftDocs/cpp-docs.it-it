@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33101396"
 ---
 # <a name="irowsetimplmbcanscrollback"></a>IRowsetImpl::m_bCanScrollBack
 Indica se un provider può disporre di scorrere il cursore con le versioni precedenti.  
