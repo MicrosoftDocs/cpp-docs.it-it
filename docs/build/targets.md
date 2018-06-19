@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380262"
 ---
 # <a name="targets"></a>Destinazioni
 In una riga di dipendenze, specificare uno o più destinazioni, con qualsiasi nome file valido, il nome di directory, o [pseudo](../build/pseudotargets.md). Separare più destinazioni con uno o più spazi o tabulazioni. Le destinazioni non sono tra maiuscole e minuscole. I percorsi sono consentiti con i nomi di file. Una destinazione non può superare i 256 caratteri. Se la destinazione che precede i due punti è un carattere singolo, utilizzare uno spazio di separazione. in caso contrario, viene interpretato la combinazione di lettere virgola come identificatore di unità.  

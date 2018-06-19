@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32391626"
 ---
 # <a name="conversions-from-signed-integral-types"></a>Conversioni dai tipi integrali con segno
 Quando un intero con segno viene convertito in un intero senza segno di dimensione uguale o maggiore e il valore dell'intero con segno non è negativo, tale valore rimane invariato. La conversione viene eseguita mediante l'estensione del segno dell'intero con segno. Un intero con segno viene convertito in un intero con segno più corto troncando i bit più significativi. Il risultato viene interpretato come un valore senza segno, come illustrato in questo esempio.  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32389741"
 ---
 # <a name="c-enumeration-declarations"></a>Dichiarazioni di enumerazioni C
 Un'enumerazione è un set di costanti di tipo Integer denominate. Una dichiarazione del tipo di enumerazione fornisce il nome del tag (facoltativo) di enumerazione e definisce il set di identificatori Integer denominati (denominati "set di enumerazione", "costanti di enumeratore", "enumeratori" o "membri"). Una variabile con tipo di enumerazione archivia uno dei valori del set di enumerazione definiti da quel tipo.  

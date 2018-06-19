@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32353858"
 ---
 # <a name="data-types-classes"></a>Classi di tipi di dati
 Le seguenti classi di eseguire il wrapping come tipi di dati C++:  

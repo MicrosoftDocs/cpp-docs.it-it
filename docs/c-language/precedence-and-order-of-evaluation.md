@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32392185"
 ---
 # <a name="precedence-and-order-of-evaluation"></a>Precedenza e ordine di valutazione
 La precedenza e l'associatività degli operatori C influiscono sul raggruppamento e sulla valutazione degli operandi nelle espressioni. La precedenza d un operatore è significativa solo se sono presenti altri operatori con precedenza più alta o più bassa. Le espressioni con operatori con precedenza più alta vengono valutate per prime. La precedenza può essere descritta anche con la parola "associazione". Gli operatori con precedenza maggiore vengono definiti con associazione più forte.  

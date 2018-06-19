@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32389702"
 ---
 # <a name="crt-initialization"></a>Inizializzazione CRT
 In questo argomento viene descritto come CRT inizializza gli stati globali nel codice nativo.  

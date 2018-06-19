@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32383241"
 ---
 # <a name="struct-unwindinfo"></a>struct UNWIND_INFO
 La struttura di informazioni sulla rimozione dei dati viene utilizzata per registrare gli effetti di una funzione nel puntatore dello stack e in cui vengono salvati i registri non volatili nello stack:  

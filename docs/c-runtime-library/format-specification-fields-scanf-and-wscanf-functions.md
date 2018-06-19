@@ -36,6 +36,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32391948"
 ---
 # <a name="format-specification-fields-scanf-and-wscanf-functions"></a>Campi per la specifica di formato: funzioni scanf e wscanf
 Le informazioni riportate si applicano all'intera famiglia di funzioni `scanf`, incluse le versioni sicure e descrivono i simboli utilizzati per comunicare alle funzioni `scanf` come analizzare il flusso di input, come il flusso di input `stdin` per `scanf`, in valori che vengono inseriti nelle variabili del programma.  

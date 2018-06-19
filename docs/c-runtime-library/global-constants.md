@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32391470"
 ---
 # <a name="global-constants"></a>Costanti globali
 La libreria di runtime Microsoft contiene le definizioni per le costanti globali utilizzate dalle routine della libreria. Per utilizzare queste costanti, includere i file di intestazione appropriati come indicato nella descrizione per ciascuna costante. Le costanti globali vengono elencate nella tabella seguente.  

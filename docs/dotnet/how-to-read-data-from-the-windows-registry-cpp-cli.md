@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33132554"
 ---
 # <a name="how-to-read-data-from-the-windows-registry-ccli"></a>Procedura: leggere i dati dal Registro di sistema di Windows (C++/CLI)
 Nell'esempio di codice viene illustrato come utilizzare il <xref:Microsoft.Win32.Registry.CurrentUser> chiave per leggere i dati dal Registro di sistema Windows. In primo luogo, il sottochiavi vengono enumerate utilizzando il <xref:Microsoft.Win32.RegistryKey.GetSubKeyNames%2A> (metodo) e quindi la sottochiave identità viene aperta utilizzando il <xref:Microsoft.Win32.RegistryKey.OpenSubKey%2A> metodo. Come per le chiavi di primo livello, ogni sottochiave è rappresentata dalla <xref:Microsoft.Win32.RegistryKey> classe. Infine, il nuovo <xref:Microsoft.Win32.RegistryKey> oggetto viene utilizzato per enumerare le coppie chiave/valore.  

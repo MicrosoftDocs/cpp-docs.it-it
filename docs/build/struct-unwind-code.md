@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32390099"
 ---
 # <a name="struct-unwindcode"></a>struct UNWIND_CODE
 Matrice di codice di rimozione viene utilizzata per registrare la sequenza di operazioni nel prologo che interessano il RSP e i registri non volatili. Ogni elemento di codice presenta il formato seguente:  

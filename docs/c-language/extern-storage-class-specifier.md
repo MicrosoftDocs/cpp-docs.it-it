@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32388728"
 ---
 # <a name="extern-storage-class-specifier"></a>Identificatore di classi di archiviazione extern
 Una variabile dichiarata con l'identificatore di classe di archiviazione `extern` è un riferimento a una variabile con lo stesso nome, definita a livello esterno in un qualsiasi file di origine del programma. La dichiarazione interna `extern` viene utilizzata per rendere la definizione della variabile a livello esterno visibile all'interno del blocco. Salvo diversamente dichiarato a livello esterno, una variabile dichiarata con la parola chiave `extern` è visibile solo nel blocco in cui è dichiarata.  

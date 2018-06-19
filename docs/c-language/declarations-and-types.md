@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32384542"
 ---
 # <a name="declarations-and-types"></a>Dichiarazioni e tipi
 In questa sezione viene illustrata la dichiarazione e l'inizializzazione delle variabili, delle funzioni e dei tipi. Il linguaggio C include un set standard di tipi di dati di base. È anche possibile aggiungere i propri tipi di dati personalizzati, denominati "tipi derivati", dichiarandone di nuovi in base ai tipi già definiti. Vengono trattati i seguenti argomenti:  

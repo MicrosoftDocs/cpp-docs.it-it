@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32379432"
 ---
 # <a name="ieee-floating-point-representation"></a>Formato a virgola mobile IEEE
 Microsoft Visual C++ è coerente con gli standard numerici IEEE. Esistono tre varietà interne di numeri reali. Reale\*4 e real\*8 vengono utilizzati in Visual C++. Reale\*4 viene dichiarata utilizzando la parola **float**. Reale\*8 viene dichiarata utilizzando la parola **double**. Nella programmazione Windows a 32 bit, il `long double` esegue il mapping al tipo di dati **double**. È, tuttavia, supporto del linguaggio assembly per i calcoli utilizzando il reale * il tipo di dati di 10.  

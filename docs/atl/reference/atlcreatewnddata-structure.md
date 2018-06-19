@@ -24,6 +24,7 @@ ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34255795"
 ---
 # <a name="atlcreatewnddata-structure"></a>Struttura _AtlCreateWndData
 Questa struttura contiene dati di istanza di classe nel codice di windowing in ATL.  

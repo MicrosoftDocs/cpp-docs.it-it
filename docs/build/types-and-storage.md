@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380615"
 ---
 # <a name="types-and-storage"></a>Tipi e archiviazione
 In questa sezione vengono descritti l'enumerazione e l'archiviazione di tipi di dati per il [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)] architettura.  

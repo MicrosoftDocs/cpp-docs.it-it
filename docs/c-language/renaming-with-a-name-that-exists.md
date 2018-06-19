@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32386524"
 ---
 # <a name="renaming-with-a-name-that-exists"></a>Ridenominazione con un nome già esistente
 **ANSI 4.9.4.2** L'effetto che si verifica se un file con il nuovo nome esiste prima di una chiamata alla funzione **rename**  

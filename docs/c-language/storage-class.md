@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32391431"
 ---
 # <a name="storage-class"></a>Classe di archiviazione
 L'identificatore della classe di archiviazione in una definizione di funzione offre alla funzione una classe di archiviazione `extern` o **static**.  

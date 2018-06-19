@@ -23,6 +23,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32057123"
 ---
 # <a name="operator-this"></a>Operatore THIS
 Restituisce un operando di specificato `type` i cui valori di offset e segmento sono uguali al valore del contatore di posizione corrente.  

@@ -32,6 +32,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32390216"
 ---
 # <a name="argc-argv-wargv"></a>__argc, __argv, __wargv
 La variabile globale `__argc` è un conteggio del numero di argomenti da riga di comando passati al programma. `__argv` è un puntatore a una matrice di caratteri a byte singolo o di stringhe di caratteri multibyte che includono gli argomenti del programma e `__wargv` è un puntatore a una matrice di stringhe di caratteri wide che contengono gli argomenti del programma. Queste variabili globali forniscono gli argomenti per `main` o `wmain`.  

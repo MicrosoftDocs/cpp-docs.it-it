@@ -35,6 +35,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32392237"
 ---
 # <a name="getoutputformat"></a>_get_output_format
 Ottiene il valore corrente del flag del formato di output.  

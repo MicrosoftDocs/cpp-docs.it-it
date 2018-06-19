@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32381929"
 ---
 # <a name="c-language-syntax-summary"></a>Riepilogo della sintassi del linguaggio C
 In questa sezione viene fornita la descrizione completa del linguaggio C e delle funzionalità del linguaggio C specifiche di Microsoft. In questa sezione è possibile utilizzare una notazione sintattica per determinare la sintassi corretta per ogni componente del linguaggio. La spiegazione della sintassi compare nella sezione di questo manuale in cui verrà illustrato l'argomento.  

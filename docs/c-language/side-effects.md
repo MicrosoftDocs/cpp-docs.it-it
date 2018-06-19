@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32387011"
 ---
 # <a name="side-effects"></a>Effetti collaterali
 L'ordine di valutazione delle espressioni viene definito dall'implementazione specifica, ad eccezione di quando il linguaggio garantisce un particolare ordine di valutazione, come descritto in [Precedenza e ordine di valutazione](../c-language/precedence-and-order-of-evaluation.md). Ad esempio, gli effetti collaterali si verificano nelle chiamate di funzione seguenti:  

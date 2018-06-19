@@ -30,6 +30,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32392062"
 ---
 # <a name="dlls-and-visual-c-run-time-library-behavior"></a>DLL e il comportamento della libreria di runtime di Visual C++  
   

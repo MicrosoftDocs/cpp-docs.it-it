@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32387161"
 ---
 # <a name="arguments"></a>Argomenti
 Gli argomenti in una chiamata di funzione hanno formato seguente:  

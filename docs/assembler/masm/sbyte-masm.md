@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32057968"
 ---
 # <a name="sbyte-masm"></a>SBYTE (MASM)
 Alloca e, facoltativamente, consente di inizializzare un signed byte di spazio di archiviazione per ogni `initializer`. Può anche essere utilizzato come identificatore di tipo in qualsiasi punto un tipo è valido.  

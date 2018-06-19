@@ -55,6 +55,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32379640"
 ---
 # <a name="managing-a-library"></a>Gestione di una libreria
 La modalità predefinita di LIB è per creare o modificare una raccolta di oggetti COFF. LIB viene eseguito in questa modalità quando non si specifica /EXTRACT (per copiare un oggetto in un file) o /DEF (per generare una libreria di importazione).  

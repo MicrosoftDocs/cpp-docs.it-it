@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32389767"
 ---
 # <a name="simple-variable-declarations"></a>Dichiarazioni di variabili semplici
 La dichiarazione di una variabile semplice, il formato più semplice di un dichiaratore diretto, specifica il nome e il tipo della variabile. Specifica inoltre la classe di archiviazione e il tipo di dati della variabile.  

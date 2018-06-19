@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32383728"
 ---
 # <a name="regular-mfc-dlls-dynamically-linked-to-mfc"></a>DLL regolari collegate in modo dinamico a MFC
 Una normale che DLL MFC collegato in modo dinamico a MFC è una DLL che utilizza MFC internamente e le funzioni esportate nella DLL possono essere chiamate da file eseguibili MFC o non MFC. Come viene descritto il nome, questo tipo di DLL viene creato utilizzando la versione di libreria a collegamento dinamico di MFC (noto anche come la versione di MFC condivisa). In genere vengono esportate da una DLL MFC mediante l'interfaccia standard di C normale.  

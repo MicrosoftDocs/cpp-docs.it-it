@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380654"
 ---
 # <a name="blank-lines"></a>Righe vuote
 **ANSI 4.9.2** Indica se gli spazi scritti in un flusso di testo immediatamente prima di un carattere di nuova riga vengono visualizzati una volta letti  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380452"
 ---
 # <a name="wildcards-and-nmake"></a>Caratteri jolly e NMAKE
 NMAKE espande i caratteri jolly filename (* e?) in righe di dipendenze. Un carattere jolly specificato in un comando viene passato al comando. NMAKE espande.  

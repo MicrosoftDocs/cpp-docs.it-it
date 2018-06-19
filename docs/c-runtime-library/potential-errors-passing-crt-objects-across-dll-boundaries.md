@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32391259"
 ---
 # <a name="potential-errors-passing-crt-objects-across-dll-boundaries"></a>Potenziali errori di passaggio di oggetti CRT attraverso i limiti DLL
 Quando si passano oggetti di runtime del linguaggio C (CRT) come handle di file, impostazioni locali e variabili di ambiente all'interno o all'esterno di una DLL (chiamate di funzione oltre i limiti della DLL) può verificarsi un comportamento imprevisto se la DLL, nonché i file chiamati nella DLL, utilizzano copie diverse delle librerie CRT.  

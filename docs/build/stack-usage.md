@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32379858"
 ---
 # <a name="stack-usage"></a>Utilizzo dello stack
 Tutta la memoria oltre l'indirizzo corrente di RSP viene considerata come volatile: il sistema operativo o un debugger, potrà sovrascrivere la memoria durante una sessione di debug di utente o un gestore di interrupt. Di conseguenza, RSP deve sempre essere impostato prima di tentare di leggere o scrivere valori a uno stack frame.  

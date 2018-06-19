@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32391678"
 ---
 # <a name="initializing-aggregate-types"></a>Inizializzazione di tipi di aggregazione
 Un tipo "aggregato" può essere una struttura, un'unione o un tipo di matrice. Se un tipo aggregato contiene membri di tipi aggregati, le regole di inizializzazione vengono applicate in modo ricorsivo.  

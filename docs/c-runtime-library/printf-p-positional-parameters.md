@@ -28,6 +28,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32391314"
 ---
 # <a name="printfp-positional-parameters"></a>Parametri posizionali printf_p
 I parametri posizionali consentono di specificare in modo numerico gli argomenti da sostituire in un campo in una stringa di formato. Sono disponibili le seguenti funzioni `printf` di parametro posizionale:  

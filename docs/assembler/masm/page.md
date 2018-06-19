@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32058001"
 ---
 # <a name="page"></a>PAGE
 La direttiva prima imposta riga *lunghezza* e carattere *larghezza* della voce di programma. Se viene fornito alcun argomento, viene generata un'interruzione di pagina. La seconda direttiva incrementa il numero di sezione e reimposta il numero di pagina su 1.  

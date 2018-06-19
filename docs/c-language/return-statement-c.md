@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32391207"
 ---
 # <a name="return-statement-c"></a>Istruzione return (C)
 L'istruzione `return` viene utilizzata per terminare l'esecuzione di una funzione e restituire il controllo alla funzione chiamante. Nella funzione chiamante, l'esecuzione riprende dal punto immediatamente successivo alla chiamata. Un'istruzione `return` può inoltre restituire un valore alla funzione chiamante. Per altre informazioni, vedere [Tipo restituito](../c-language/return-type.md).  

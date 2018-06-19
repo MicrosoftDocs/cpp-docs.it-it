@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32382023"
 ---
 # <a name="unwind-procedure"></a>Procedura di rimozione
 Matrice di codice di rimozione è disposta in ordine decrescente. Quando si verifica un'eccezione, il contesto completo viene archiviato dal sistema operativo in un record di contesto. Viene quindi richiamata la logica di invio di eccezione che viene eseguita ripetutamente la procedura seguente per trovare un gestore di eccezioni.  

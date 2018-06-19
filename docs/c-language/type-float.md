@@ -29,6 +29,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32390935"
 ---
 # <a name="type-float"></a>Tipo float
 I numeri a virgola mobile utilizzano il formato IEEE (Institute of Electrical and Electronics Engineers). I valori a precisione singola con tipo float hanno 4 byte costituiti da un bit del segno, da un esponente binario a 8 bit excess-127 e da una mantissa a 23 bit. La mantissa rappresenta un numero compreso tra 1,0 e 2,0. Poiché il bit più significativo della mantissa è sempre 1, non viene archiviato nel numero. Questa rappresentazione specifica un intervallo incluso approssimativamente tra 3,4E-38 e 3,4E+38 per il tipo float.  

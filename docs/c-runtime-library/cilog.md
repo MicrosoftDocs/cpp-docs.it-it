@@ -34,6 +34,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32386985"
 ---
 # <a name="cilog"></a>_CIlog
 Calcola il logaritmo naturale del primo valore dello stack.  

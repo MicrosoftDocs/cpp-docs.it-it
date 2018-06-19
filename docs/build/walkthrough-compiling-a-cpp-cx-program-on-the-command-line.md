@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32384805"
 ---
 # <a name="walkthrough-compiling-a-ccx-program-on-the-command-line"></a>Procedura dettagliata: Compilazione di un programma in C++/CX dalla riga di comando
 È possibile creare programmi Visual C++ destinati a Windows Runtime e compilarli dalla riga di comando. Visual C++ supporta le estensioni del componente Visual C++ (C++/CX), che offrono tipi e operatori aggiuntivi per il modello di programmazione Windows Runtime. È possibile usare C + + CX di compilare applicazioni per desktop di Windows della piattaforma UWP (Universal), Windows Phone 8.1 e Windows. Per ulteriori informazioni, vedere [una presentazione di c++ + CX](http://msdn.microsoft.com/magazine/dn166929.aspx) e [estensioni componenti per le piattaforme Runtime](../windows/component-extensions-for-runtime-platforms.md).  

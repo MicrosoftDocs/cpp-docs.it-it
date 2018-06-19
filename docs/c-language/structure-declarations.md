@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32391900"
 ---
 # <a name="structure-declarations"></a>Dichiarazioni di struttura
 Una "dichiarazione di struttura" denomina un tipo e specifica una sequenza di valori variabili (denominati "membri" o " campi" della struttura) con tipi differenti. Un identificatore facoltativo, denominato "tag," fornisce il nome del tipo di struttura e può essere utilizzato nei riferimenti successivi a tale tipo. Una variabile del tipo di struttura contiene l'intera sequenza definita dal tipo specificato. Le strutture in C sono simili ai tipi noti come "record" in altri linguaggi.  

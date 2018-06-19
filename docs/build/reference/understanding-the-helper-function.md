@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32379237"
 ---
 # <a name="understanding-the-helper-function"></a>Informazioni sulla funzione di supporto
 La funzione di supporto per il caricamento ritardato supportato dal linker è ciò che effettivamente carica la DLL in fase di esecuzione. È possibile modificare la funzione di supporto per personalizzare il comportamento scrivendo una funzione personalizzata e collegarla al programma anziché utilizzare la funzione di supporto fornito in Delayimp. Una funzione di supporto serve tutte le DLL a caricamento ritardato.  

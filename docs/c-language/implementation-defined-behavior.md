@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32383438"
 ---
 # <a name="implementation-defined-behavior"></a>Comportamento definito in fase di implementazione
 Lo standard ANSI X3.159-1989, *American National Standard for Information Systems* - *linguaggio di programmazione* - *C*, contiene una sezione dedicata agli errori di portabilità. Nella sezione ANSI sono elencate le aree del linguaggio C che ANSI lascia aperte a qualsiasi implementazione specifica. In questa sezione viene descritto come Microsoft C gestisce queste aree definite in fase di implementazione del linguaggio C.  

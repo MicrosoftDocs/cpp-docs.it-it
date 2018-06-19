@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32391815"
 ---
 # <a name="locale-names-languages-and-countryregion-strings"></a>Nomi delle impostazioni locali, lingue e stringhe relative a paesi
 L'argomento *locale* delle funzioni `setlocale` e `_create_locale` può essere impostato usando i nomi delle impostazioni locali, le lingue, i codici di paese/area geografica e le tabelle codici supportati dall'API NLS di Windows. L'argomento *locale* assume il formato seguente:  

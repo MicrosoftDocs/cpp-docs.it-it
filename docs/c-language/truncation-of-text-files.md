@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32385576"
 ---
 # <a name="truncation-of-text-files"></a>Troncamento dei file di testo
 **ANSI 4.9.3** Indica se la scrittura in un flusso di testo provoca il troncamento del file associato oltre tale punto  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32385257"
 ---
 # <a name="signed-bitwise-operations"></a>Operazioni bit per bit con segno
 **ANSI 3.3**   Risultati delle operazioni bit per bit sui interi con segno  

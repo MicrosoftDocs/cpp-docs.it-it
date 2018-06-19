@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32384411"
 ---
 # <a name="fmod-function"></a>Funzione fmod
 **ANSI 4.5.6.4** Se si verifica un errore del dominio o viene restituito zero quando il secondo argomento della funzione `fmod` è zero  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33132466"
 ---
 # <a name="how-to-use-tracking-references-in-ccli"></a>Procedura: utilizzare riferimenti di rilevamento in C++/CLI
 In questo articolo viene illustrato come utilizzare un riferimento di rilevamento (%) in C + + CLI per passare a common language runtime (CLR) tipi per riferimento.  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32354433"
 ---
 # <a name="creating-registrar-scripts"></a>Creating Registrar Scripts
 Uno script di registrazione fornisce l'accesso basato sui dati, anziché sull'API nel Registro di sistema. Accesso basato sui dati è in genere più efficiente poiché solo una o due righe in uno script per aggiungere una chiave al Registro di sistema.  

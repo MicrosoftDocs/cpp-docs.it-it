@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32390413"
 ---
 # <a name="multithreaded-libraries-performance"></a>Prestazioni librerie multithread
 CRT a thread singolo non è più disponibile. In questo argomento viene illustrato come ottenere prestazioni massime dalle librerie con multithreading.  

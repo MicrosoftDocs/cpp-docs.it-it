@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32391178"
 ---
 # <a name="union-declarations"></a>Dichiarazioni di unione
 Una "Dichiarazione di unione" specifica un set di valori variabili e, facoltativamente, un tag per assegnare un nome all'unione. I valori variabili sono denominati "membri" dell'unione e possono includere diversi tipi. Le unioni sono simili ai "record variabili" presenti in altri linguaggi.  

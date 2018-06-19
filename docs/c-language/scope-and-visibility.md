@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32389189"
 ---
 # <a name="scope-and-visibility"></a>Ambito e visibilità
 La "visibilità di un identificatore determina il suo "ambito", ovvero le parti del programma in cui è possibile fare riferimento allo stesso identificatore. Un identificatore è visibile (ovvero, può essere utilizzato) solo nelle parti di programma incluse nel suo "ambito" e che, al fine di incrementare la restrittività, possono essere limitate al file, alla funzione, al blocco o al prototipo di funzione in cui viene visualizzato l'identificatore stesso. L'ambito di un identificatore corrisponde alla parte di programma in cui è possibile utilizzare il nome. Questa parte del programma viene anche chiamata "ambito lessicale." Le tipologie di ambito sono quattro: funzione, file, blocco e prototipo di funzione.  

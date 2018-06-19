@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32381668"
 ---
 # <a name="file-position-in-append-mode"></a>Percorso del file in modalità Append
 **ANSI 4.9.3** Se l'indicatore di posizione del file di un flusso della modalità di aggiunta è inizialmente posizionato all'inizio o fine del file  

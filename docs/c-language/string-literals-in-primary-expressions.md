@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32384941"
 ---
 # <a name="string-literals-in-primary-expressions"></a>Valori letterali stringa in espressioni primarie
 Un "valore letterale stringa" è un carattere, un carattere di tipo wide o una sequenza di caratteri adiacenti racchiusi tra virgolette doppie. Poiché non sono variabili, né i valori letterali stringa né i relativi elementi possono essere l'operando di sinistra in un'operazione di assegnazione. Il tipo di valore letterale stringa è una matrice di `char` (o una matrice di `wchar_t` per i valori letterali di tipo wide-string). Le matrici nelle espressioni vengono convertite in puntatori. Per altre informazioni sulle stringhe, vedere [Valori letterali stringa](../c-language/c-string-literals.md).  

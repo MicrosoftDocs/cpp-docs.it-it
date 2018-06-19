@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32057773"
 ---
 # <a name="proc"></a>PROC
 Contrassegna l'inizio e fine di un blocco di routine chiamato *etichetta*. Le istruzioni nel blocco possono essere chiamate con il **CHIAMARE** istruzione o [INVOKE](../../assembler/masm/invoke.md) direttiva.  

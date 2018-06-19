@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32385110"
 ---
 # <a name="terminating-newline-characters"></a>Termine caratteri di nuova riga
 **ANSI 4.9.2** Se è necessario che l'ultima riga di un flusso di testo termini con un carattere di nuova riga  

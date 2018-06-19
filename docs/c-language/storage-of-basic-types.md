@@ -36,6 +36,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32388115"
 ---
 # <a name="storage-of-basic-types"></a>Archiviazione di tipi di base
 Nella tabella seguente viene riepilogata l'archiviazione associata a ogni tipo di base.  

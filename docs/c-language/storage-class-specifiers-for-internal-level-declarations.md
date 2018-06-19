@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32385764"
 ---
 # <a name="storage-class-specifiers-for-internal-level-declarations"></a>Identificatori di classi di archiviazione per dichiarazioni di livello interno
 È possibile usare uno dei quattro terminali *storage-class-specifier* per le dichiarazioni delle variabili a livello interno. Quando si omette *storage-class-specifier* da tale dichiarazione, la classe di archiviazione predefinita è **auto**. Di conseguenza, la parola chiave **auto** viene vista raramente in un programma C.  

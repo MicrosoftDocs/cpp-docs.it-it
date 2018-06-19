@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32386852"
 ---
 # <a name="storage-of-arrays"></a>Archiviazione di matrici
 Lo spazio di archiviazione associato a un tipo di matrice è lo spazio di archiviazione necessario per tutti i relativi elementi. Gli elementi di una matrice vengono archiviati in posizioni di memoria contigue e crescenti, dal primo elemento all'ultimo.  

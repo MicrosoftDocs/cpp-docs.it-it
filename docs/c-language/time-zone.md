@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32385540"
 ---
 # <a name="time-zone"></a>Fuso orario
 **ANSI 4.12.1** Fuso orario locale e ora legale  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32387632"
 ---
 # <a name="example-program"></a>Programma di esempio
 Il seguente programma di origine C è costituito da due file di origine. Viene fornita una panoramica di alcune delle varie dichiarazioni e definizioni possibili in un programma C. Nelle sezioni successive di questo libro viene descritto come scrivere tali dichiarazioni, definizioni e inizializzazioni e come usare le parole chiave di C come **static** e `extern`. La funzione `printf` viene dichiarata nel file di intestazione C STDIO.H.  

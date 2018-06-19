@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32391444"
 ---
 # <a name="countryregion-strings"></a>Country/Region Strings
 Le stringhe di paese e area geografica possono essere combinate con una stringa di lingua per creare una specifica delle impostazioni locali per le funzioni `setlocale`, `_wsetlocale`, `_create_locale`e `_wcreate_locale` . Per un elenco dei nomi di paesi/aree geografiche supportati dalla versione del sistema operativo Windows, vedere [National Language Support (NLS) API Reference](https://www.microsoft.com/resources/msdn/goglobal/default.mspx) (Tabella di riferimento API NLS (National Language Support)). Negli elenchi, la stringa paese/area geografica può essere uno qualsiasi dei valori del paese nella colonna **Locale – Language Country/Region** (Impostazioni locali - Lingua Paese/Area geografica) o una qualsiasi delle abbreviazioni nella colonna **Country or Region name abbreviation** (Abbreviazione nome paese o area geografica). Per informazioni sul supporto di lingue aggiuntive nei sistemi operativi Windows in base alla versione, vedere [Appendix A: Product Behavior](http://msdn.microsoft.com/goglobal/bb896001.aspx) (Appendice A: comportamento del prodotto) in "[MS-LCID]: Windows Language Code Identifier (LCID) Reference" (Informazioni di riferimento sugli identificatori di lingua (LCID) di Windows).  

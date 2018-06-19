@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32385878"
 ---
 # <a name="rules-and-limitations-for-using-naked-functions"></a>Regole e limitazioni per l'utilizzo di funzioni naked
 Per informazioni sulle regole e sulle limitazioni di uso delle funzioni naked, vedere l'argomento corrispondente nelle informazioni di riferimento del linguaggio C++: [Regole e limitazioni per funzioni naked](../cpp/rules-and-limitations-for-naked-functions.md).  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32385153"
 ---
 # <a name="translation-diagnostics"></a>Conversione: diagnostica
 **ANSI 2.1.1.3** Come viene identificato un elemento di diagnostica  

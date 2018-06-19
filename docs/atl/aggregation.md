@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32353963"
 ---
 # <a name="aggregation"></a>Aggregazione
 Vi sono casi quando si desidera implementatore di un oggetto per sfruttare i servizi offerti da un altro oggetto predefinito. Sarebbe inoltre, il secondo oggetto da visualizzare come parte integrante del primo. Consente di ottenere COM entrambi questi obiettivi tramite il contenimento e aggregazione.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32391652"
 ---
 # <a name="typedef-declarations"></a>Dichiarazioni typedef
 La dichiarazione typedef è una dichiarazione con typedef come classe di archiviazione. Il dichiaratore diventa un nuovo tipo. È possibile utilizzare le dichiarazioni typedef per costruire nomi più brevi o più significativi per i tipi già definiti da C o per i tipi dichiarati. I nomi di typedef consentono di incapsulare dettagli di implementazione che possono cambiare.  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32382848"
 ---
 # <a name="initialization"></a>Inizializzazione
 "Inizializzatore" è un valore o una sequenza di valori da assegnare alla variabile dichiarata. È possibile impostare una variabile su un valore iniziale applicando un inizializzatore al dichiaratore nella dichiarazione di variabile. Il valore o i valori dell'inizializzazione sono assegnati alla variabile.  

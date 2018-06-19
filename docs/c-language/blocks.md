@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380940"
 ---
 # <a name="blocks"></a>Blocchi
 Una sequenza di dichiarazioni, definizioni e istruzioni racchiuse tra parentesi graffe (**{ }**) è definita "blocco". Esistono due tipi di blocchi in C: uno è l'"istruzione composta", un'istruzione costituita da una o più istruzioni (vedere [Istruzione composta](../c-language/compound-statement-c.md)). L'altro, "definizione di funzione", è costituito da un'istruzione composta (il corpo della funzione) e dall'"intestazione" associata della funzione (il nome della funzione, il tipo restituito e i parametri formali). Un blocco all'interno di altri viene definito "annidato".  

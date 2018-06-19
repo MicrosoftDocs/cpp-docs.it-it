@@ -101,6 +101,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32392146"
 ---
 # <a name="data-type-constants"></a>Costanti del tipo di dati
 Le costanti dei tipi di dati sono gli intervalli di valori dipendenti dall'implementazione consentiti per i tipi di dati integrali. Le costanti elencate di seguito specificano gli intervalli per i tipi di dati integrali e sono definite in LIMITS.H.  

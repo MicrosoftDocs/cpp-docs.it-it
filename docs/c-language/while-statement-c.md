@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32389917"
 ---
 # <a name="while-statement-c"></a>Istruzione while (C)
 L'istruzione `while` consente di ripetere un'istruzione fino a quando un'espressione specificata non restituisce false.  

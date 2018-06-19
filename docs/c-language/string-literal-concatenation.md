@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32388786"
 ---
 # <a name="string-literal-concatenation"></a>Concatenazione di valori letterali stringa
 Per creare valori letterali stringa che accettano più righe, è possibile concatenare le due stringhe. A questo scopo, digitare una barra rovesciata, quindi premere il tasto INVIO. La barra rovesciata indica al compilatore di ignorare il successivo carattere di nuova riga. Ad esempio, il valore letterale stringa  

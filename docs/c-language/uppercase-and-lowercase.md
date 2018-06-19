@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32386696"
 ---
 # <a name="uppercase-and-lowercase"></a>Caratteri maiuscoli e minuscoli
 **ANSI 3.1.2** Indica se la distinzione tra maiuscole e minuscole è significativa  

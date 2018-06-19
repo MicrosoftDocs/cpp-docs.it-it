@@ -36,6 +36,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32391457"
 ---
 # <a name="daylight-dstbias-timezone-and-tzname"></a>_daylight, _dstbias, _timezone, and _tzname
 `_daylight`, `_dstbias`, `_timezone` e `_tzname` vengono utilizzati nelle routine di data e ora per apportare modifiche all'ora locale. Queste variabili globali sono state deprecate a favore di versioni funzionali più sicure che devono essere utilizzate al posto delle variabile globali.  

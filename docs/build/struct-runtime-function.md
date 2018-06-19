@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32379926"
 ---
 # <a name="struct-runtimefunction"></a>struct RUNTIME_FUNCTION
 Gestione delle eccezioni basato su tabella richiede una voce della tabella per tutte le funzioni che allocano spazio dello stack o chiamare un'altra funzione (ad esempio, le funzioni non foglia). Le voci della tabella (funzione) hanno il formato:  

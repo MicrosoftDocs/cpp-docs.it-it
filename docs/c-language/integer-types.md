@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32386803"
 ---
 # <a name="integer-types"></a>Tipi Integer
 A ogni costante Integer viene assegnato un tipo in base al valore e al modo in cui viene espresso. È possibile imporre a qualsiasi costante Integer il tipo **long** aggiungendo la lettera **l** o **L** alla fine della costante. È possibile imporle il tipo `unsigned` aggiungendo **u** o **U** al valore. La lettera minuscola **l** può essere confusa con la cifra 1 e deve essere evitata. Di seguito alcuni formati di costanti Integer **long**:  
