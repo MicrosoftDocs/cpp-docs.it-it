@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33130425"
 ---
 # <a name="how-to-sink-windows-forms-events-from-native-c-classes"></a>Procedura: elaborare eventi di Windows Form da classi C++ native
 È possibile abilitare le classi C++ native ricevere callback da eventi gestiti generati da controlli Windows Form o in altri formati in formato di mappa macro MFC. Elaborazione di eventi in visualizzazioni e finestre di dialogo è simile alla stessa operazione per i controlli.  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33110246"
 ---
 # <a name="net-programming-with-ccli-visual-c"></a>Programmazione .NET con C++/CLI (Visual C++)
 Gli argomenti seguenti descrivono come Visual C++ può essere destinato alla piattaforma .NET.  

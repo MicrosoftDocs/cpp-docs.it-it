@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33104575"
 ---
 # <a name="issuing-a-parameterized-query"></a>Esecuzione di una query con parametri
 Nell'esempio seguente genera una semplice query con parametri che recupera i record con un campo di validità (che è maggiore di 30) da una tabella in un database Microsoft Access. Per supportare il parametro, il record dell'utente deve avere una mappa aggiuntiva. Il codice seguente, in un progetto ATL, Usa il `CCommand` classe anziché il `CTable` classe utilizzata nell'esempio precedente, [scorrimento di un Rowset semplice](../../data/oledb/traversing-a-simple-rowset.md).  

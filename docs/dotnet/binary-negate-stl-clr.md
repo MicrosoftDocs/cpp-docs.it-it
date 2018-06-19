@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33108488"
 ---
 # <a name="binarynegate-stlclr"></a>binary_negate (STL/CLR)
 La classe modello descrive una funzione che, quando viene chiamato, restituisce l'operatore logico non del relativo stored funtore di due argomenti. Utilizzare, specificare un oggetto funzione in termini del funtore stored.  

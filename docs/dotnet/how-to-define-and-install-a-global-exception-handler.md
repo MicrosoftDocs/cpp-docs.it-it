@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33129684"
 ---
 # <a name="how-to-define-and-install-a-global-exception-handler"></a>Procedura: definire e installare un gestore eccezioni globale
 L'esempio di codice seguente viene illustrato come non gestite le eccezioni possono essere acquisite. Il modulo di esempio contiene un pulsante che, quando premuti, esegue un riferimento null, generare un'eccezione generata. Questa funzionalità rappresenta un errore di codice tipico. L'eccezione risulta viene intercettata dal gestore di eccezioni di livello di applicazione installato per la funzione principale.  

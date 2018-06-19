@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33128329"
 ---
 # <a name="hashsetvaluecomp-stlclr"></a>hash_set::value_comp (STL/CLR)
 Copia il delegato di ordinamento per valori di due elementi.  

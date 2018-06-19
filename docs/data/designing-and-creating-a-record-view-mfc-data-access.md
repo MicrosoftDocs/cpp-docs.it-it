@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33089912"
 ---
 # <a name="designing-and-creating-a-record-view--mfc-data-access"></a>Progettazione e creazione di una visualizzazione di record (accesso ai dati MFC)
 È possibile creare la classe di visualizzazione di record con il [Creazione guidata applicazione MFC](../mfc/reference/database-support-mfc-application-wizard.md). Se si opta per una procedura guidata per la creazione di un'applicazione, verranno create sia la classe per la visualizzazione di record, sia la relativa risorsa modello di finestra di dialogo (senza controlli). Per aggiungere i controlli alla risorsa modello di finestra di dialogo, usare l'editor finestre di Visual C++. D'altra parte, se si utilizza **Aggiungi classe**, è necessario innanzitutto creare la risorsa modello di finestra di dialogo nella finestra di dialogo editor e quindi creare la classe di visualizzazione di record.  

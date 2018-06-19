@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33112013"
 ---
 # <a name="declaration-of-a-clr-reference-class-object"></a>Dichiarazione di un oggetto classe di riferimento CLR
 La sintassi per dichiarare e creare un'istanza di un oggetto di un tipo di classe di riferimento è stata modificata dalle estensioni gestite per C++ a Visual C++.  

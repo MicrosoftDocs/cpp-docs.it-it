@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368665"
 ---
 # <a name="malloc-alignment"></a>Allineamento malloc
 [malloc](../c-runtime-library/reference/malloc.md) garantisce la restituzione di memoria che viene corretto allineamento per l'archiviazione di qualsiasi oggetto con un allineamento fondamentale e che potrebbero rientrare nella quantità di memoria allocata. Oggetto *allineamento fondamentale* è un tipo di allineamento è minore o uguale al maggiore allineamento supportato dall'implementazione senza una specifica di allineamento. (In Visual C++, si tratta dell'allineamento richiesto per un `double`, o 8 byte. Nel codice destinato a piattaforme a 64 bit, è 16 byte.) Ad esempio, un'allocazione di quattro byte verrà allineata a un limite che supporta tutti gli oggetti più piccoli o di quattro byte.  

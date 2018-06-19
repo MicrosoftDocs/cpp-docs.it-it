@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33089845"
 ---
 # <a name="beginaccessor"></a>BEGIN_ACCESSOR
 Contrassegna l'inizio di una voce della funzione di accesso.  

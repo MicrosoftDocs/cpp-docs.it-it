@@ -14,6 +14,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33098537"
 ---
 # <a name="fundamental-types-ccx"></a>Tipi fondamentali (C++/CX)
 Oltre i tipi incorporati C++ standard, C + + CX supporta il sistema di tipo definito dall'architettura di Windows Runtime fornendo i typedef per i tipi di Windows Runtime fondamentali che eseguono il mapping ai tipi C++ standard... C + + CX implementa Boolean, carattere e i tipi numerici fondamentali. Questi typedef sono definiti nello spazio dei nomi `default` , che non deve mai essere specificato in modo esplicito. Inoltre, C + + CX fornisce wrapper e implementazioni concrete per determinati tipi di Windows Runtime e le interfacce.  

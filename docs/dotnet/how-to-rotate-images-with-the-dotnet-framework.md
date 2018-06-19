@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33129034"
 ---
 # <a name="how-to-rotate-images-with-the-net-framework"></a>Procedura: ruotare immagini con .NET Framework
 Esempio di codice seguente viene illustrato l'utilizzo del <xref:System.Drawing.Image?displayProperty=fullName> classe per caricare un'immagine dal disco, ruotare di 90 gradi e salvarlo come nuovo file con estensione jpg.  

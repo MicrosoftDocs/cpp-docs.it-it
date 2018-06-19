@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33104529"
 ---
 # <a name="comptr"></a>com::ptr
 Un wrapper per un oggetto COM che può essere utilizzato come membro di una classe CLR. Il wrapper consente anche di automatizzare la gestione della durata dell'oggetto COM, rilasciando i riferimenti di proprietà per l'oggetto quando viene chiamato il distruttore. Analogo a [classe CComPtr](../atl/reference/ccomptr-class.md).  
