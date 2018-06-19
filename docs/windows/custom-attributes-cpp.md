@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33887026"
 ---
 # <a name="custom-attributes-c"></a>Attributi personalizzati (C++)
 Un attributo personalizzato è una tecnica fortemente tipizzata che consente all'utente di estendere i metadati. In questo argomento si occupa dell'utilizzo degli attributi: specifica di parametri e destinazioni.  

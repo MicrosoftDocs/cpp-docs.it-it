@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33379707"
 ---
 # <a name="settings-for-the-toolbar-control"></a>Impostazioni per il controllo Toolbar
 I pulsanti di una barra degli strumenti possono visualizzare una bitmap, una stringa o entrambi. Per impostazione predefinita, la dimensione dell'immagine è impostata sulle dimensioni di 16 per 15 pixel. Tutti i pulsanti sono della stessa larghezza, per impostazione predefinita 24 per 22 pixel. L'altezza di una barra degli strumenti è determinata dall'altezza dei pulsanti e la larghezza di una barra degli strumenti è uguale alla larghezza dell'area client della finestra padre, anche per impostazione predefinita.  

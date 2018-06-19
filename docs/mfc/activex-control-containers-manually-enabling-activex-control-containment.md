@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33339891"
 ---
 # <a name="activex-control-containers-manually-enabling-activex-control-containment"></a>Contenitori di controlli ActiveX: attivazione manuale del contenimento dei controlli ActiveX
 Se non è stato abilitato il supporto per il controllo ActiveX a quando si utilizza la creazione guidata applicazione MFC per generare l'applicazione, è necessario aggiungere manualmente questo supporto. In questo articolo viene descritto il processo per l'aggiunta manuale di contenimento di controlli ActiveX a un'applicazione contenitore OLE esistente. Se si conosce in anticipo che si desidera supporto per il controllo ActiveX nel contenitore OLE, vedere l'articolo [la creazione di un contenitore di controlli ActiveX MFC](../mfc/reference/creating-an-mfc-activex-control-container.md).  

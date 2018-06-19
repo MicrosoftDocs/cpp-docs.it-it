@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33689298"
 ---
 # <a name="25-combined-parallel-work-sharing-constructs"></a>2.5 Costrutti per la condivisione del lavoro paralleli combinati
 Costrutti condivisione del lavoro paralleli combinati sono tasti di scelta rapida per la specifica di un'area parallela che contiene solo un costrutto di condivisione del lavoro. La semantica di queste direttive è identica a quella di specificare in modo esplicito un **parallela** direttiva seguita da un singolo costrutto di condivisione del lavoro.  

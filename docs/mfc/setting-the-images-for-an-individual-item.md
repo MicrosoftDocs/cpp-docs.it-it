@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380601"
 ---
 # <a name="setting-the-images-for-an-individual-item"></a>Impostazione delle immagini per un singolo elemento
 I diversi tipi di immagini utilizzato dall'elemento della casella combinata estesa vengono determinati in base ai valori di `iImage`, **iSelectedImage**, e **iOverlay** i membri del [COMBOBOXEXITEM ](http://msdn.microsoft.com/library/windows/desktop/bb775746) struttura. Ogni valore è l'indice di un'immagine nell'elenco di immagini associato del controllo. Per impostazione predefinita, questi membri impostati su 0, il controllo non visualizza alcuna immagine per l'elemento. Se si desidera utilizzare le immagini di un elemento specifico, è possibile modificare la struttura di conseguenza, quando si inserisce l'elemento casella combinata o modificando un elemento casella combinata.  

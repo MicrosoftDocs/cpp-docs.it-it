@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33379577"
 ---
 # <a name="serialization-serialization-vs-database-inputoutput"></a>Serializzazione: Serializzazione e. Database di Input/Output
 Questo articolo viene illustrato l'utilizzo di oggetti documento e la serializzazione per basato su file di input/output (i) e quando altre tecniche dei / o sono appropriate, in quanto l'applicazione legge e scrive i dati su base per ogni transazione, come applicazioni di database. Se non si usa la serializzazione, è anche non sarà necessario aprire il File, Salva e salvare come comandi. Gli argomenti trattati includono:  

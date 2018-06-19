@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382086"
 ---
 # <a name="tool-tips-in-windows-not-derived-from-cframewnd"></a>Descrizioni comandi in Windows non derivate da CFrameWnd
 Questo gruppo di articoli illustra l'abilitazione di descrizioni comandi per i controlli contenuti in una finestra che non è derivata da [CFrameWnd](../mfc/reference/cframewnd-class.md). L'articolo [barre degli strumenti suggerimenti](../mfc/toolbar-tool-tips.md) fornisce informazioni sulle descrizioni comandi per i controlli in un `CFrameWnd`.  

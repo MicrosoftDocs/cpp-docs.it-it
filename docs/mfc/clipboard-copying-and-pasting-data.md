@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343350"
 ---
 # <a name="clipboard-copying-and-pasting-data"></a>Appunti: copiare e incollare dati
 Questo argomento descrive le operazioni minime necessarie per implementare copia e Incolla dagli Appunti in un'applicazione OLE. È consigliabile leggere la [oggetti dati e origini dati (OLE)](../mfc/data-objects-and-data-sources-ole.md) argomenti prima di procedere.  

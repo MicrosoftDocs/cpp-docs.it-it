@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33379671"
 ---
 # <a name="servers-user-interface-issues"></a>Server: problemi dell'interfaccia utente
 Un'applicazione server dispone di numerose funzionalità che devono essere aggiunte all'interfaccia utente per fornire elementi OLE alle applicazioni contenitore. Per ulteriori informazioni sul menu e risorse aggiuntive che devono essere aggiunti a un'applicazione server, vedere [menu e risorse: aggiunte di Server](../mfc/menus-and-resources-server-additions.md).  

@@ -19,6 +19,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33690407"
 ---
 # <a name="scheduler-policies"></a>Criteri dell'utilità di pianificazione
 Questo documento descrive il ruolo dei criteri dell'utilità di pianificazione nel Runtime di concorrenza. Oggetto *criteri dell'utilità di pianificazione* controlla la strategia utilizzata l'utilità di pianificazione quando gestisce le attività. Ad esempio, si consideri un'applicazione per cui viene richiesto che alcune attività vengano eseguite in corrispondenza di `THREAD_PRIORITY_NORMAL` e altre attività in corrispondenza di `THREAD_PRIORITY_HIGHEST`.  È possibile creare due istanze dell'utilità di pianificazione: una tramite cui viene specificato che i criteri `ContextPriority` devono essere `THREAD_PRIORITY_NORMAL` e un'altra tramite cui viene specificato che gli stessi criteri devono essere `THREAD_PRIORITY_HIGHEST`.  

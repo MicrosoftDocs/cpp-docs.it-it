@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33694329"
 ---
 # <a name="a14---using-the-flush-directive-without-a-list"></a>A.13   Utilizzo della direttiva flush senza elenco
 Nell'esempio seguente (per [sezione 2.6.5](../../parallel/openmp/2-6-5-flush-directive.md) nella pagina 20) distingue gli oggetti condivisi interessati un `flush` direttiva con alcun elenco di oggetti condivisi che non sono interessati:  

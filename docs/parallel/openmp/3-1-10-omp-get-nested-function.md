@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33686721"
 ---
 # <a name="3110-ompgetnested-function"></a>3.1.10 Funzione omp_get_nested
 Il `omp_get_nested` funzione restituisce un valore diverso da zero se è abilitato il parallelismo nidificato e 0 se è disabilitato. Per ulteriori informazioni sul parallelismo nidificata, vedere sezione 3.1.9 nella pagina 40. Il formato è il seguente:  

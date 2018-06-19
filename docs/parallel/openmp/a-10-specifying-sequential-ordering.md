@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33690078"
 ---
 # <a name="a10---specifying-sequential-ordering"></a>A.10   Specifica dell'ordinamento sequenziale
 Ordinare le sezioni ([sezione 2.6.6](../../parallel/openmp/2-6-6-ordered-construct.md) nella pagina 22) sono utili per l'ordinamento in sequenza l'output dal lavoro che viene eseguita in parallelo. Il seguente programma stampa gli indici in ordine sequenziale:  

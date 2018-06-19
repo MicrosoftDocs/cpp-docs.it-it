@@ -359,6 +359,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33378982"
 ---
 # <a name="cmfcvisualmanager-class"></a>Classe CMFCVisualManager
 Fornisce supporto per modificare l'aspetto dell'applicazione a un livello globale. La classe `CMFCVisualManager` funziona insieme a una classe che fornisce le istruzioni per disegnare i controlli GUI dell'applicazione utilizzando uno stile coerente. Queste altre classi sono definite come gestori visualizzazione ed ereditano da `CMFCBaseVisualManager`.  

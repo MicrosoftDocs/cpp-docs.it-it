@@ -26,6 +26,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33877735"
 ---
 # <a name="exception-handling--c-component-extensions"></a>Gestione delle eccezioni (Estensioni del componente C++)
 Le applicazioni compilate con il **/ZW** l'opzione del compilatore o **/clr** entrambi utilizzano l'opzione del compilatore *eccezioni* per gestire gli errori imprevisti durante l'esecuzione del programma. Negli argomenti seguenti viene illustrata la gestione delle eccezioni nelle applicazioni C++/CLI o C++/CX.  

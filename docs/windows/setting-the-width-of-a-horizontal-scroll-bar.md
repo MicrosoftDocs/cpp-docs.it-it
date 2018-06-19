@@ -26,6 +26,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33892793"
 ---
 # <a name="setting-the-width-of-a-horizontal-scroll-bar"></a>Impostazione della larghezza di una barra di scorrimento orizzontale
 Quando si aggiunge una casella di riepilogo con una barra di scorrimento orizzontale per una finestra di dialogo utilizzando le classi MFC, la barra di scorrimento non verrà visualizzati automaticamente nell'applicazione.  

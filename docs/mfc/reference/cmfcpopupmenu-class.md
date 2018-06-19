@@ -175,6 +175,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33377720"
 ---
 # <a name="cmfcpopupmenu-class"></a>Classe CMFCPopupMenu
 Implementa la funzionalità del menu di scelta rapida di Windows e la estende aggiungendo funzionalità quali menu con barra a comparsa e descrizioni comandi.

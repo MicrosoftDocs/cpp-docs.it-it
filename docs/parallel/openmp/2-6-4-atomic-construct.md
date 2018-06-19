@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33688128"
 ---
 # <a name="264-atomic-construct"></a>2.6.4 Costrutto atomic
 Il `atomic` direttiva assicura che una determinata posizione di memoria viene aggiornata in modo atomico, anziché esporlo la possibilità di più thread di scrittura simultanee. La sintassi del `atomic` direttiva è come segue:  

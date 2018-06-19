@@ -17,6 +17,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347734"
 ---
 # <a name="mfc-and-atl"></a>MFC e ATL
 Microsoft Foundation Classes fornisce un wrapper basato sugli oggetti C++ in Win32 per un sviluppo rapido di applicazioni desktop native. Active Template Library (ATL) è una libreria di wrapper che semplifica lo sviluppo COM e viene usata in modo estensivo per creare controlli ActiveX.  

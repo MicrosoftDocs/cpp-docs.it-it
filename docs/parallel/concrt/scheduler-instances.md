@@ -19,6 +19,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33693861"
 ---
 # <a name="scheduler-instances"></a>Istanze dell'utilità di pianificazione
 Questo documento viene descritto il ruolo delle istanze dell'utilità di pianificazione nel Runtime di concorrenza e come utilizzare il [Concurrency:: Scheduler](../../parallel/concrt/reference/scheduler-class.md) e [Concurrency:: CurrentScheduler](../../parallel/concrt/reference/currentscheduler-class.md) classi per creare e gestire istanze dell'utilità di pianificazione. Le istanze dell'utilità di pianificazione sono utili quando si desidera associare criteri di pianificazione espliciti a specifici tipi di carichi di lavoro. È possibile ad esempio creare un'istanza dell'utilità di pianificazione per eseguire alcune attività con una priorità di thread elevata e usare l'utilità di pianificazione predefinita per eseguire altre attività con una priorità di thread normale.  

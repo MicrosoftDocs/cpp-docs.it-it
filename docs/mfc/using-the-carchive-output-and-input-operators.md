@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383332"
 ---
 # <a name="using-the-carchive-ltlt-and-gtgt-operators"></a>Utilizzare CArchive &lt; &lt; e &gt; &gt; operatori
 `CArchive` fornisce <\< e >> operatori per scrivere e leggere tipi di dati semplici nonché `CObject`s da e verso un file.  

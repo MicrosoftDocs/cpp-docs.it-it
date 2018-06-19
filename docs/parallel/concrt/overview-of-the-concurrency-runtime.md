@@ -22,6 +22,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33692428"
 ---
 # <a name="overview-of-the-concurrency-runtime"></a>Cenni preliminari sul runtime di concorrenza
 Questo documento fornisce i cenni preliminari sul runtime di concorrenza. Illustra i vantaggi del runtime di concorrenza, quando usarlo e che modo i relativi componenti interagiscono tra loro e con il sistema operativo e le applicazioni.  

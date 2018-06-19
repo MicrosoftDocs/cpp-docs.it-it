@@ -26,6 +26,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33891922"
 ---
 # <a name="switching-between-dialog-box-controls-and-code"></a>Passaggio dai controlli della finestra di dialogo al codice e viceversa
 In applicazioni MFC, è possibile fare doppio clic in controlli finestra di dialogo per passare al codice del gestore o per creare rapidamente stub di funzioni del gestore.  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33696153"
 ---
 # <a name="using-c-amp-in-uwp-apps"></a>Utilizzo di C++ AMP nelle App UWP
 È possibile utilizzare C++ AMP (C++ Accelerated Massive Parallelism) nell'app della piattaforma UWP (Universal Windows) per eseguire calcoli sul GPU (Graphics Processing Unit) o altri tasti di scelta rapida di calcolo. Tuttavia, C++ AMP non fornisce API per utilizzare direttamente i tipi Windows Runtime; inoltre, Windows Runtime non fornisce un wrapper per C++ AMP. Quando si utilizzano i tipi Windows Runtime nel codice, inclusi quelli creati dall'utente, è necessario convertirli in tipi compatibili con C++ AMP.  

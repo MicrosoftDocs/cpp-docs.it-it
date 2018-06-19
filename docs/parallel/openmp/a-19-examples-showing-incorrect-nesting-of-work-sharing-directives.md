@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33691495"
 ---
 # <a name="a19---examples-showing-incorrect-nesting-of-work-sharing-directives"></a>A.19   Esempi sull'annidamento non corretto di direttive per la condivisione del lavoro
 Gli esempi in questa sezione illustrano le regole di nidificazione della direttiva. Per ulteriori informazioni su annidamento di direttive, vedere [sezione 2.9](../../parallel/openmp/2-9-directive-nesting.md) nella pagina 33.  

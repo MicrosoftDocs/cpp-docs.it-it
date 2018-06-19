@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385911"
 ---
 # <a name="using-ctoolbarctrl"></a>Utilizzo di CToolBarCtrl
 È possibile utilizzare il controllo barra degli strumenti ([CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md)) per creare una finestra di controllo contenente pulsanti e spazi facoltativi. Ogni pulsante nella finestra del controllo Toolbar invia un messaggio di comando alla finestra padre quando l'utente la sceglie. In genere, i pulsanti in una barra degli strumenti corrispondono agli elementi nel menu dell'applicazione e forniscono all'utente un ulteriore modo più diretto di accedere ai controlli di un'applicazione.  

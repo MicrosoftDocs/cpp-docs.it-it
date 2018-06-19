@@ -20,6 +20,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33695772"
 ---
 # <a name="how-to-use-combinable-to-combine-sets"></a>Procedura: Usare l'oggetto combinable per combinare set
 In questo argomento viene illustrato come utilizzare il [Concurrency:: combinable](../../parallel/concrt/reference/combinable-class.md) classe per calcolare il set di numeri primi.  

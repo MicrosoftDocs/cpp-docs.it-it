@@ -25,6 +25,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33879061"
 ---
 # <a name="ref-new-gcnew--c-component-extensions"></a>ref new, gcnew (Estensioni del componente C++)
 Il `ref new` parola chiave aggregata alloca un'istanza di un tipo che viene sottoposto a garbage collection quando l'oggetto non è accessibile e che restituisce un handle ([^](../windows/handle-to-object-operator-hat-cpp-component-extensions.md)) all'oggetto allocato.  

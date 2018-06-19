@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33686295"
 ---
 # <a name="322-ompdestroylock-and-ompdestroynestlock-functions"></a>3.2.2 Funzioni omp_destroy_lock e omp_destroy_nest_lock
 Queste funzioni assicurarsi che la punta alla variabile di blocco *blocco* non è inizializzato. Il formato è il seguente:  

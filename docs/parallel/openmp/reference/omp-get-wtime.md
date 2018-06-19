@@ -21,6 +21,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33690663"
 ---
 # <a name="ompgetwtime"></a>omp_get_wtime
 Restituisce un valore in secondi del tempo che intercorre tra un certo punto.  

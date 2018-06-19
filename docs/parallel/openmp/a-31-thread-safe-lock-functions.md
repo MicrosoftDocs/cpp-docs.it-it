@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33690442"
 ---
 # <a name="a31---thread-safe-lock-functions"></a>A.31   Funzioni di blocco thread-safe
 Nell'esempio C++ seguente viene illustrato come inizializzare una matrice di blocchi in un'area parallela utilizzando `omp_init_lock` ([sezione 3.2.1](../../parallel/openmp/3-2-1-omp-init-lock-and-omp-init-nest-lock-functions.md) nella pagina 42).  

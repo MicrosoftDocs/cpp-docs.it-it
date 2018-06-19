@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33226350"
 ---
 # <a name="fatal-error-c1093"></a>Errore irreversibile C1093
 Chiamata API 'nome della funzione' non riuscita 'percorso di chiamata': 'text dalla fase di esecuzione'  

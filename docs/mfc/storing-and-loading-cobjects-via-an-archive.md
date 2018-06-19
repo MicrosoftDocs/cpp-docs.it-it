@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380728"
 ---
 # <a name="storing-and-loading-cobjects-via-an-archive"></a>Memorizzazione e caricamento di CObjects tramite un archivio
 Memorizzazione e caricamento `CObject`tramite un archivio richiede attenzione aggiuntiva. In alcuni casi, è necessario chiamare il `Serialize` funzione dell'oggetto, in cui il `CArchive` oggetto è un parametro del `Serialize` chiamata, anziché mediante il **< \<** o **>>** operatore il `CArchive`. L'aspetto importante da tenere presente è che il `CArchive` **>>** operatore costrutti di `CObject` in memoria in base a `CRuntimeClass` informazioni precedentemente scritte per il file dall'archivio di memorizzazione.  

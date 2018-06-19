@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348232"
 ---
 # <a name="printing"></a>Stampa
 Microsoft Windows implementa visualizzazione indipendenti dal dispositivo. In MFC, ciò significa che le stesse chiamate di disegnare, nel `OnDraw` funzione membro di classe di visualizzazione sono responsabili del disegno sullo schermo e su altri dispositivi, ad esempio le stampanti. Anteprima di stampa, il dispositivo di destinazione è un output su stampante simulato sullo schermo.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33236053"
 ---
 # <a name="compiler-error-c2818"></a>Errore del compilatore C2818
 l'applicazione di 'operator ->' di overload è ricorsiva tramite il tipo 'type'  

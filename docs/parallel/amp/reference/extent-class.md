@@ -27,6 +27,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33693250"
 ---
 # <a name="extent-class-c-amp"></a>Classe extent (C++ AMP)
 Rappresenta un vettore di *N* valori interi che specificano i limiti di un *N*-spazio dimensionale che presenta un'origine di 0. I valori in un vettore sono ordinati dal più significativo al meno significativo.  

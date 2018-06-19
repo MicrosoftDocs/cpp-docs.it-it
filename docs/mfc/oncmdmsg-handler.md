@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347029"
 ---
 # <a name="oncmdmsg-handler"></a>Gestore OnCmdMsg
 Per eseguire il routing dei comandi, ogni destinazione del comando chiama il `OnCmdMsg` funzione membro di destinazione del comando successivo nella sequenza. Destinazioni dei comandi utilizzare `OnCmdMsg` per determinare se consentire la gestione di un comando e inviarlo a un'altra destinazione di comando, se non è possibile gestirla.  

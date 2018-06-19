@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381804"
 ---
 # <a name="using-chotkeyctrl"></a>Utilizzo di CHotKeyCtrl
 Un controllo tasto di scelta, rappresentato dalla classe [CHotKeyCtrl](../mfc/reference/chotkeyctrl-class.md), è una finestra che visualizza una rappresentazione di testo della combinazione di tasti, l'utente digita, ad esempio CTRL + MAIUSC + Q. Viene mantenuta anche una rappresentazione interna di questa chiave in forma di un codice tasto virtuale e un set di flag che rappresentano lo stato di spostamento. Controllo tasto di scelta non impostato il tasto di scelta rapida, questa operazione viene effettuata dal programma. (Per un elenco di codici di tasti virtuali standard, vedere winuser. h).  

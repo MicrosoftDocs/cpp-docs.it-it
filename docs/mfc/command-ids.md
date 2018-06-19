@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341472"
 ---
 # <a name="command-ids"></a>ID comandi
 Un comando è descritto per il solo ID di comando (con codifica nel **WM_COMMAND** messaggio). Questo ID viene assegnato all'oggetto dell'interfaccia utente che genera il comando. In genere, gli ID sono denominati per la funzionalità dell'oggetto dell'interfaccia utente che sono assegnati.  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382906"
 ---
 # <a name="using-a-dialog-bar-with-a-rebar-control"></a>Utilizzo di una barra di finestra di dialogo con un controllo Rebar
 Come accennato [controlli Rebar e bande](../mfc/rebar-controls-and-bands.md), ogni band può contenere un solo figlio finestra (o controllo). Potrebbe trattarsi di una limitazione se si desidera disporre di più di una finestra figlio per ogni banda. Una pratica soluzione alternativa consiste nel creare una risorsa barra di finestra di dialogo con più controlli e quindi aggiungere un controllo rebar band (che include la barra di finestra di dialogo) per il controllo rebar.  

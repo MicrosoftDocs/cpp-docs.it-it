@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33198235"
 ---
 # <a name="compiler-error-c2526"></a>Errore del compilatore C2526
 'identifier1': funzione con collegamento C non è possibile restituire la classe C++ 'identifier2'  

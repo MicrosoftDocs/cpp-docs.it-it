@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382567"
 ---
 # <a name="what-frame-windows-do"></a>Funzione delle finestre cornice
 Oltre a incorniciare semplicemente una visualizzazione, le finestre cornice sono responsabili di numerose attività relative al coordinamento della cornice con la relativa visualizzazione e con l'applicazione. [CMDIFrameWnd](../mfc/reference/cmdiframewnd-class.md) e [CMDIChildWnd](../mfc/reference/cmdichildwnd-class.md) ereditare [CFrameWnd](../mfc/reference/cframewnd-class.md), pertanto hanno `CFrameWnd` funzionalità, nonché nuove funzionalità che i programmi RemoteApp aumentano. Esempi di finestre figlio includono le visualizzazioni, i controlli quali i pulsanti e le caselle di riepilogo, e le barre di controllo, incluse le barre degli strumenti, le barre di stato e le barre della finestra di dialogo.  

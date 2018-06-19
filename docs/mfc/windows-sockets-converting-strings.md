@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383760"
 ---
 # <a name="windows-sockets-converting-strings"></a>Windows Sockets: conversione di stringhe
 In questo articolo e nei due articoli correlati vengono illustrati diversi problemi che si presentano nella programmazione Windows Sockets. Questo articolo descrive la conversione di stringhe. Gli altri problemi vengono analizzati [Windows Sockets: blocco](../mfc/windows-sockets-blocking.md) e [Windows Sockets: ordinamento dei Byte](../mfc/windows-sockets-byte-ordering.md).  

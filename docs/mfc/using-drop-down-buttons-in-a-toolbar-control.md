@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383253"
 ---
 # <a name="using-drop-down-buttons-in-a-toolbar-control"></a>Utilizzo di pulsanti a discesa in un controllo Toolbar
 Oltre ai pulsanti di comando standard, una barra degli strumenti può anche avere pulsanti a discesa. Un pulsante di menu a discesa in genere è indicato dalla presenza di una freccia associata.  

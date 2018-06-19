@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381761"
 ---
 # <a name="using-ccomboboxex"></a>Utilizzo di CComboBoxEx
 Il controllo casella combinata estesa è un'estensione del controllo casella combinata standard che fornisce supporto nativo per le immagini degli elementi. Queste immagini possono essere utilizzate per indicare lo stato dei singoli elementi nella casella combinata, ad esempio gli elementi attualmente selezionati e deselezionati. Per rendere le immagini degli elementi facilmente accessibile, il controllo fornisce il supporto dell'elenco immagini.  

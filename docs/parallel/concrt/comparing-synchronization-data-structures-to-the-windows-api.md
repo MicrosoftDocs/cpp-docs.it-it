@@ -20,6 +20,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33687374"
 ---
 # <a name="comparing-synchronization-data-structures-to-the-windows-api"></a>Confronto delle strutture di dati di sincronizzazione con l'API Windows
 In questo argomento viene confrontato il comportamento delle strutture di dati di sincronizzazione fornite dal Runtime di concorrenza a quelli forniti dall'API di Windows.  

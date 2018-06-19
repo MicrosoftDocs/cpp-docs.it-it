@@ -45,6 +45,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382931"
 ---
 # <a name="special-cwinapp-services"></a>Servizi CWinApp speciali
 Oltre a eseguire il ciclo di messaggi e fornire la possibilità di inizializzare l'applicazione e pulirla successivamente, [CWinApp](../mfc/reference/cwinapp-class.md) fornisce molti altri servizi.  

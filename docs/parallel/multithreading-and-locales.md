@@ -22,6 +22,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33692854"
 ---
 # <a name="multithreading-and-locales"></a>Multithreading e impostazioni locali
 Libreria di Runtime C sia la libreria Standard C++ forniscono supporto per la modifica delle impostazioni locali del programma. In questo argomento vengono illustrati i problemi che si verificano quando si utilizza la funzionalità delle impostazioni locali di entrambe le librerie in un'applicazione multithreading.  

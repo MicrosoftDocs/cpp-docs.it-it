@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33384111"
 ---
 # <a name="tn020-id-naming-and-numbering-conventions"></a>TN020: convenzioni di numerazione e denominazione ID
 Questa nota descrive la denominazione degli ID e le convenzioni di numerazione MFC 2.0 utilizzate per le risorse, i comandi, stringhe, controlli e finestre figlio.  

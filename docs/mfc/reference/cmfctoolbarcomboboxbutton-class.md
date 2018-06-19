@@ -79,6 +79,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33377366"
 ---
 # <a name="cmfctoolbarcomboboxbutton-class"></a>Classe CMFCToolBarComboBoxButton
 Un pulsante della barra degli strumenti contenente un controllo casella combinata ( [CComboBox (classe)](../../mfc/reference/ccombobox-class.md)).  

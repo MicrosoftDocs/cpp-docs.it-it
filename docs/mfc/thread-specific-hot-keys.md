@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380419"
 ---
 # <a name="thread-specific-hot-keys"></a>Tasti di scelta rapida specifici di thread
 Un'applicazione imposta un tasto di scelta rapida specifici di thread ([CHotKeyCtrl](../mfc/reference/chotkeyctrl-class.md)) con Windows **RegisterHotKey** (funzione). Quando l'utente preme un tasto di scelta rapida specifici di thread, Windows invia una [WM_HOTKEY](http://msdn.microsoft.com/library/windows/desktop/ms646279) messaggio all'inizio della coda di messaggi di un particolare thread. Il **WM_HOTKEY** messaggio contiene il codice tasto virtuale, lo stato e ID definiti dall'utente del tasto di scelta specifico che è stato premuto. Per un elenco di codici di tasti virtuali standard, vedere winuser. h. Per ulteriori informazioni su questo metodo, vedere [RegisterHotKey](http://msdn.microsoft.com/library/windows/desktop/ms646309).  

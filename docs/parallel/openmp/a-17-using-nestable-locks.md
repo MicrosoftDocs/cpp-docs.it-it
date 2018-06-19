@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33689909"
 ---
 # <a name="a17---using-nestable-locks"></a>A.17   Utilizzo di blocchi annidabili
 Nell'esempio seguente (per [sezione 3.2](../../parallel/openmp/3-2-lock-functions.md) nella pagina 41) viene illustrato come un blocco annidabile può essere usato per sincronizzare gli aggiornamenti per un'intera struttura e per uno dei relativi membri.  

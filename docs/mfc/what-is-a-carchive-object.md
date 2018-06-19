@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383831"
 ---
 # <a name="what-is-a-carchive-object"></a>Definizione di oggetto CArchive
 Oggetto `CArchive` oggetto fornisce un meccanismo di memorizzazione nel buffer indipendente dai tipi per la scrittura o lettura di oggetti serializzabili a o da un `CFile` oggetto. In genere il `CFile` oggetto rappresenta un file su disco, tuttavia, può essere anche un file di memoria (`CSharedFile` oggetto), che rappresenta ad esempio negli Appunti.  

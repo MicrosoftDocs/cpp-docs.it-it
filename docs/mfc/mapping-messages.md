@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345986"
 ---
 # <a name="mapping-messages"></a>Mapping dei messaggi
 Ogni classe di framework che può ricevere messaggi o comandi ha una proprio "mappa del messaggio". Il framework utilizza le mappe messaggi per connettere le relative funzioni gestore messaggi e comandi. Qualsiasi classe derivata dalla classe `CCmdTarget` può avere una mappa messaggi. Altri articoli illustrano mappe messaggi in modo dettagliato e viene descritto come utilizzarli.  

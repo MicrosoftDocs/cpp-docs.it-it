@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383309"
 ---
 # <a name="using-crebarctrl"></a>Utilizzo di CReBarCtrl
 Un controllo Rebar funge da contenitore per le finestre figlio. Queste finestre figlio, che spesso sono altri controlli, vengono assegnate a una banda di controllo Rebar. Un controllo Rebar può contenere una o più bande, con ciascuna banda che contiene una combinazione qualsiasi di una barra verticale di ridimensionamento, una bitmap, un'etichetta di testo e una finestra figlio. Tuttavia, le bande non possono contenere più di una finestra figlio.  

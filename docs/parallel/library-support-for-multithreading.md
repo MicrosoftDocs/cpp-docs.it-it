@@ -20,6 +20,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33685673"
 ---
 # <a name="library-support-for-multithreading"></a>Supporto della libreria per il multithreading
 Tutte le versioni della libreria CRT supportano ora multithreading, fatta eccezione per le versioni non di blocco di alcune funzioni. Vedere [prestazioni librerie multithread](../c-runtime-library/multithreaded-libraries-performance.md) per ulteriori informazioni.  

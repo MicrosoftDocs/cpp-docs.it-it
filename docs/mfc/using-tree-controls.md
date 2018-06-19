@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33384869"
 ---
 # <a name="using-tree-controls"></a>Utilizzo di controlli Tree
 L'utilizzo tipico di un controllo struttura ad albero ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) segua il modello seguente:  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33686633"
 ---
 # <a name="concurrency-runtime-walkthroughs"></a>Procedure dettagliate del runtime di concorrenza
 Negli argomenti basata sullo scenario di questa sezione viene illustrato come utilizzare molte delle funzionalità del Runtime di concorrenza.  

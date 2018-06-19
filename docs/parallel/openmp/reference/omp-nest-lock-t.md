@@ -21,6 +21,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33691742"
 ---
 # <a name="ompnestlockt"></a>omp_nest_lock_t
 Un tipo che contiene le seguenti porzioni di informazioni in un blocco: se il blocco è disponibile, e l'identità del thread che possiede il blocco e un conteggio di nidificazione.  

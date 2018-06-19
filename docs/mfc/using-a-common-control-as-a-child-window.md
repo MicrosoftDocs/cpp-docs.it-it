@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382824"
 ---
 # <a name="using-a-common-control-as-a-child-window"></a>Utilizzo di un controllo comune come finestra figlio
 Uno qualsiasi dei controlli comuni di Windows può essere utilizzato come finestra figlio di un'altra finestra. La procedura seguente viene descritto come creare un controllo comune in modo dinamico e quindi utilizzarlo.  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383682"
 ---
 # <a name="using-ctabctrl"></a>Utilizzo di CTabCtrl
 Un "controllo struttura a schede" è analogo a separatori in un blocco per Appunti o le cartelle con etichette in un file CAB. Utilizzare il controllo struttura a schede, rappresentato dalla classe [CTabCtrl](../mfc/reference/ctabctrl-class.md), per visualizzare più pagine di informazioni o controlli a un utente, uno alla volta, in un formato che suggerisce un peer o una relazione logica tra ogni pagina.  

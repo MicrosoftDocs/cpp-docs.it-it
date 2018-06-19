@@ -107,6 +107,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33378697"
 ---
 # <a name="cmfcvisualmanageroffice2003-class"></a>Classe CMFCVisualManagerOffice2003
 `CMFCVisualManagerOffice2003` fornisce a un'applicazione un aspetto di Microsoft Office 2003.  

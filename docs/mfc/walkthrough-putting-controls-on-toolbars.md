@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385083"
 ---
 # <a name="walkthrough-putting-controls-on-toolbars"></a>Procedura dettagliata: inserimento di controlli nelle barre degli strumenti
 In questo argomento viene descritto come aggiungere un pulsante contenente un controllo Windows a una barra degli strumenti. In MFC, un pulsante della barra degli strumenti deve essere un [CMFCToolBarButton classe](../mfc/reference/cmfctoolbarbutton-class.md)-classe derivata, ad esempio [CMFCToolBarComboBoxButton classe](../mfc/reference/cmfctoolbarcomboboxbutton-class.md), [CMFCToolBarEditBoxButton classe](../mfc/reference/cmfctoolbareditboxbutton-class.md), [CMFCDropDownToolbarButton classe](../mfc/reference/cmfcdropdowntoolbarbutton-class.md), o [CMFCToolBarMenuButton classe](../mfc/reference/cmfctoolbarmenubutton-class.md).  

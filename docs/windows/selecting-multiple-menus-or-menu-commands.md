@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33891909"
 ---
 # <a name="selecting-multiple-menus-or-menu-commands"></a>Selezione di più menu o comandi di menu
 È possibile selezionare più nomi di menu o comandi di menu per eseguire operazioni di massa, ad esempio l'eliminazione o la modifica delle proprietà.  

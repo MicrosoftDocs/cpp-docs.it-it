@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33384465"
 ---
 # <a name="windows"></a>WINDOWS
 Questa serie di articoli vengono illustrati gli oggetti di finestra nel framework MFC. Tutte le finestre MFC derivano dalla classe [CWnd](../mfc/reference/cwnd-class.md), inclusi finestre cornice, visualizzazioni, finestre di dialogo e controlli.  

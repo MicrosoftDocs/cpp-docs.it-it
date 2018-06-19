@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380276"
 ---
 # <a name="servers-implementing-server-documents"></a>Server: implementazione di documenti server
 In questo articolo illustra i passaggi da eseguire per implementare correttamente un documento server se è necessario specificarne l'opzione Server OLE nella creazione guidata applicazione.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381917"
 ---
 # <a name="using-frame-windows"></a>Utilizzo di finestre cornice
 Il framework MFC Crea documento finestre cornice e i documenti e visualizzazioni, come parte dell'implementazione dei comandi nuovo e aprire il menu File. Poiché il framework esegue la maggior parte delle operazioni della finestra cornice per l'utente, si riprodurre solo un ruolo di piccole dimensioni nella creazione, l'utilizzo e l'eliminazione definitiva di tali finestre. È possibile, tuttavia, in modo esplicito creare proprie finestre cornice e le finestre figlio per scopi speciali.  

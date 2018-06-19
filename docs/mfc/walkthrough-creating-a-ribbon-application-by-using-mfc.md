@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385229"
 ---
 # <a name="walkthrough-creating-a-ribbon-application-by-using-mfc"></a>Procedura dettagliata: creazione di un'applicazione barra multifunzione utilizzando MFC
 Questa procedura dettagliata viene illustrato come utilizzare il **Creazione guidata applicazione MFC** per creare un'applicazione che dispone di una barra multifunzione per impostazione predefinita. È quindi possibile espandere la barra multifunzione aggiungendo una **personalizzato** categoria della barra multifunzione contenente un **Preferiti** pannello, e aggiungendo alcuni comandi al pannello utilizzati frequentemente.  

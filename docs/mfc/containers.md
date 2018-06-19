@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342186"
 ---
 # <a name="containers"></a>Contenitori
 Un'applicazione contenitore è un'applicazione che è possibile incorporare elementi incorporati o collegati dei propri documenti. I documenti gestiti da un'applicazione contenitore devono essere in grado di archiviare e visualizzare i componenti di documenti compositi OLE, nonché i dati creati dall'applicazione stessa. Un'applicazione contenitore deve inoltre consentire agli utenti di inserire nuovi elementi o modificare quelli esistenti.  

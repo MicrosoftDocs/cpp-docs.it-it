@@ -22,6 +22,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33686614"
 ---
 # <a name="avoiding-problem-areas-with-multithread-programs"></a>Suggerimenti per evitare problemi relativi ai programmi multithread
 Esistono diversi problemi che possono verificarsi nella creazione, il collegamento o l'esecuzione di un programma multithread C. Nella tabella seguente vengono descritte alcune delle più comuni. (Per informazioni analoghe dal punto di vista MFC, vedere [Multithreading: suggerimenti sulla programmazione](../parallel/multithreading-programming-tips.md).)  

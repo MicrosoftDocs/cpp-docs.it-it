@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33384088"
 ---
 # <a name="tn016-using-c-multiple-inheritance-with-mfc"></a>TN016: utilizzo dell'ereditarietà multipla C++ con MFC
 Questa nota viene descritto come utilizzare l'ereditarietà multipla (MI) con Microsoft Foundation Classes. L'uso delle MI non è necessaria con MFC. MI non viene utilizzato in tutte le classi MFC e non è necessario scrivere una libreria di classi.  

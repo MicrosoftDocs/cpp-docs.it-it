@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380432"
 ---
 # <a name="serializing-data-to-and-from-files"></a>Serializzazione dei dati da e verso i file
 L'idea di base di persistenza è che un oggetto deve essere in grado di scrivere il proprio stato corrente, indicato per i valori delle variabili membro, in un archivio permanente. In un secondo momento, l'oggetto può essere ricreato mediante la lettura, o "deserializzazione", lo stato dell'oggetto dall'archivio permanente. Un punto chiave è che l'oggetto stesso è responsabile per leggere e scrivere il proprio stato. Di conseguenza, per una classe come permanente, deve implementare le operazioni di serializzazione di base.  

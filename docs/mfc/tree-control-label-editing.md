@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381712"
 ---
 # <a name="tree-control-label-editing"></a>Modifica dell'etichetta del controllo Tree
 L'utente può modificare direttamente le etichette degli elementi in un controllo albero ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) che ha il **TVS_EDITLABELS** stile. L'utente inizia la modifica facendo clic sull'etichetta dell'elemento con lo stato attivo. Un'applicazione inizia la modifica tramite il [funzione membro EditLabel](../mfc/reference/ctreectrl-class.md#editlabel) funzione membro. Il controllo struttura ad albero invia la notifica quando si modifica inizia e quando annullata o completata. Quando viene completata la modifica, è responsabile per l'aggiornamento dell'etichetta dell'elemento, se appropriato.  

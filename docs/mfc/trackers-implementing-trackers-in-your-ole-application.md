@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381550"
 ---
 # <a name="trackers-implementing-trackers-in-your-ole-application"></a>Tracker: implementazione di tracker nell'applicazione OLE
 Tracker forniscono un'interfaccia grafica per consentire agli utenti di interagire con gli elementi client OLE. I diversi stili di tracker OLE client elementi possono essere visualizzati con bordi tratteggiati, quadratini di ridimensionamento o un'ampia gamma di altri effetti visivi. Questo articolo descrive:  

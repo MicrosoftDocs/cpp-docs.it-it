@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383393"
 ---
 # <a name="where-to-find-message-maps"></a>Dove trovare le mappe messaggi
 Quando si crea una nuova applicazione di base con la creazione guidata applicazione, la creazione guidata applicazione scrive una mappa messaggi per ogni classe di destinazione comando che viene creato automaticamente. Ciò include l'applicazione derivata, documento, visualizzazione e classi finestra cornice. Alcune di queste mappe messaggi già le voci fornite per la creazione guidata applicazione per alcuni messaggi e comandi predefiniti e alcuni sono semplicemente segnaposto per i gestori che verrà aggiunto.  

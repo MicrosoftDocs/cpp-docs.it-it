@@ -27,6 +27,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33686490"
 ---
 # <a name="tilebarrier-class"></a>Classe tile_barrier
 Sincronizza l'esecuzione del thread in esecuzione nel gruppo di thread (riquadro) con `wait` metodi. Solo il runtime può creare un'istanza di questa classe.  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381693"
 ---
 # <a name="servers-implementing-a-server"></a>Server: implementazione di un server
 In questo articolo viene illustrato il codice di che Creazione guidata applicazione MFC crea per un'applicazione server di modifica visiva. Se non si utilizza la creazione guidata applicazione, in questo articolo sono elencate le aree in cui è necessario scrivere codice per implementare un'applicazione server.  

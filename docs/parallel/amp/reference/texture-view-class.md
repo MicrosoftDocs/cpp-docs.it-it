@@ -29,6 +29,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33696266"
 ---
 # <a name="textureview-class"></a>Classe texture_view
 Fornisce accesso in lettura e scrittura su una trama. `texture_view` può essere utilizzato solo per leggere le trame con tipo di valore `int`, `unsigned int`, o `float` con bpse 32-bit predefinito. Per leggere altri formati di trama, utilizzare `texture_view<const value_type, _Rank>`.  

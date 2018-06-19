@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33889020"
 ---
 # <a name="string-c"></a>string (C++)
 Indica che l'oggetto unidimensionale `char`, `wchar_t`, **byte** (o equivalente) matrice o del puntatore a una matrice di questo tipo deve essere considerato come una stringa.  

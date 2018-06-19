@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385791"
 ---
 # <a name="using-cimagelist"></a>Utilizzo di CImageList
 Un elenco di immagini, rappresentato dalla classe [CImageList](../mfc/reference/cimagelist-class.md), è una raccolta di immagini nella stessa dimensione, ognuno dei quali può fare riferimento al relativo indice. Elenchi di immagini vengono utilizzati per gestire in modo efficace grandi set di icone o bitmap. Elenchi di immagini non fanno controlli poiché non sono windows. Tuttavia, vengono utilizzati con diversi tipi di controlli, inclusi i controlli elenco ([CListCtrl](../mfc/reference/clistctrl-class.md)), struttura ad albero di controlli ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) e i controlli delle tabelle ([CTabCtrl](../mfc/reference/ctabctrl-class.md)).  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33692990"
 ---
 # <a name="using-tiles"></a>Utilizzo di sezioni
 Per ottimizzare l'accelerazione dell'app, è possibile utilizzare per l'affiancamento. Affiancamento divide i thread in sottoinsiemi rettangolare uguali o *riquadri*. Se si utilizza un dimensioni riquadro appropriato e l'algoritmo affiancato, è possibile ottenere ulteriori accelerazione dal codice C++ AMP. I componenti di base di affiancamento sono:  

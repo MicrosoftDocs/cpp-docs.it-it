@@ -26,6 +26,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33892319"
 ---
 # <a name="saving-and-loading-different-color-palettes-image-editor-for-icons"></a>Salvataggio e caricamento di tavolozze dei colori diverse (Editor di immagini per le icone)
 È possibile salvare e caricare una tavolozza di colori che contiene [di colori personalizzati](../windows/customizing-or-changing-colors-image-editor-for-icons.md). Per impostazione predefinita, la tavolozza dei colori usata più di recente viene caricata automaticamente quando si avvia Visual Studio.  

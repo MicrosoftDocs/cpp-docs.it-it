@@ -31,6 +31,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33384134"
 ---
 # <a name="when-update-handlers-are-called"></a>Quando vengono chiamati i gestori aggiornamento
 Si supponga che l'utente fa clic del mouse nel menu File, che genera un `WM_INITMENUPOPUP` messaggio. Il meccanismo di aggiornamento del framework aggiorna tutte le voci del menu File prima che il menu verso il basso in modo che l'utente è possibile visualizzarla.  

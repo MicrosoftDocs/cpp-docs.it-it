@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341310"
 ---
 # <a name="application-and-thread-support-classes"></a>Classi di supporto per applicazioni e thread
 Ogni applicazione dispone di un unico oggetto applicazione. questo oggetto le coordinate di altri oggetti nel programma in esecuzione ed è derivato dalla `CWinApp`.  

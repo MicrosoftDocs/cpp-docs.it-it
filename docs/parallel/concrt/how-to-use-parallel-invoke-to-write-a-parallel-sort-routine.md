@@ -23,6 +23,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33689168"
 ---
 # <a name="how-to-use-parallelinvoke-to-write-a-parallel-sort-routine"></a>Procedura: Usare parallel_invoke per scrivere una routine di ordinamento in parallelo
 Questo documento viene descritto come utilizzare il [parallel_invoke](../../parallel/concrt/parallel-algorithms.md#parallel_invoke) algoritmo per migliorare le prestazioni dell'algoritmo di ordinamento bitonico. L'in modo ricorsivo algoritmo di ordinamento bitonico divide la sequenza di input in partizioni ordinate più piccole. Algoritmo di ordinamento bitonico è possibile eseguire in parallelo poiché ogni operazione della partizione è indipendente da tutte le altre operazioni.  

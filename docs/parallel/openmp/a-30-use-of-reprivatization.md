@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33689610"
 ---
 # <a name="a30---use-of-reprivatization"></a>A.30   Utilizzo della riprivatizzazione
 L'esempio seguente illustra il reprivatization delle variabili. È possibile contrassegnare le variabili private `private` nuovamente in una direttiva annidata. Non devono essere condivisi in tale area che lo contiene.  

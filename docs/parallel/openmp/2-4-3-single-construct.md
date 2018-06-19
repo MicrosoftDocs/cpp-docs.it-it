@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33690582"
 ---
 # <a name="243-single-construct"></a>2.4.3 Costrutto single
 Il **singolo** direttiva identifica un costrutto che specifica che il blocco strutturato associato viene eseguito solo da un thread del team (non necessariamente il thread principale). La sintassi del **singolo** direttiva è come segue:  

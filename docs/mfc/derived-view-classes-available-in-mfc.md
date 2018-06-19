@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345664"
 ---
 # <a name="derived-view-classes-available-in-mfc"></a>Classi visualizzazione derivate disponibili in MFC
 Nella tabella seguente mostra in visualizzazione classi MFC e le relative relazioni uno a altro. Le funzionalità di classe di visualizzazione è dipendono da cui deriva la classe di visualizzazione MFC.  

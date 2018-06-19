@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381170"
 ---
 # <a name="registration"></a>Registrazione
 Quando un utente tenta di inserire un elemento OLE in un'applicazione, OLE viene presentato un elenco di tipi di oggetti da selezionare. Tale elenco viene dal database di registrazione del sistema, che contiene le informazioni fornite da tutte le applicazioni server. Quando si registra un server, le voci che inserisce nel database di sistema di registrazione (il Registro di sistema) viene descritto ogni tipo di oggetto che fornisce, file estensioni e il percorso a se stesso, tra le altre informazioni.  

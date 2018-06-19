@@ -19,6 +19,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33687413"
 ---
 # <a name="lightweight-tasks"></a>Attività leggere
 Questo documento descrive il ruolo delle attività leggere nel Runtime di concorrenza. Oggetto *attività leggera* è un'attività pianificata direttamente da un `concurrency::Scheduler` o `concurrency::ScheduleGroup` oggetto. Un'attività leggera è simile alla funzione specificata dall'utente per l'API Windows [CreateThread](http://msdn.microsoft.com/library/windows/desktop/ms682453) (funzione). Pertanto, le attività leggere sono utili quando si adatta il codice esistente per usare la funzionalità di pianificazione del Runtime di concorrenza. Il Runtime di concorrenza stesso utilizza attività leggere per pianificare gli agenti asincroni e inviare messaggi tra blocchi dei messaggi asincroni.  

@@ -46,6 +46,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380321"
 ---
 # <a name="wm-message-handlers-d---e"></a>Gestori di messaggi WM_: D - E
 Le seguenti voci della mappa a sinistra corrispondono ai prototipi di funzione a destra:  

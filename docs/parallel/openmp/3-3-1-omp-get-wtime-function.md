@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33689493"
 ---
 # <a name="331-ompgetwtime-function"></a>3.3.1 Funzione omp_get_wtime
 Il `omp_get_wtime` funzione restituisce un valore a virgola mobile e precisione doppia corrisponde al tempo trascorso in secondi, dal "tempo nel passato".  Il "tempo effettivo in precedenza" è arbitrario, ma è sicuramente non per modificare durante l'esecuzione dell'applicazione. Il formato è il seguente:  

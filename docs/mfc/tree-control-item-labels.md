@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381511"
 ---
 # <a name="tree-control-item-labels"></a>Etichette degli elementi del controllo Tree
 È in genere specificare il testo dell'etichetta di un elemento quando si aggiunge l'elemento per il controllo struttura ad albero ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)). Il `InsertItem` funzione membro è possibile passare un [struttura TVITEM](http://msdn.microsoft.com/library/windows/desktop/bb773456) struttura che definisce le proprietà dell'elemento, inclusa una stringa contenente il testo dell'etichetta. `InsertItem` dispone di diversi overload che può essere chiamato con diverse combinazioni di parametri.  

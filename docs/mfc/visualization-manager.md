@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33384215"
 ---
 # <a name="visualization-manager"></a>Gestione visualizzazione
 Il gestore visualizzazione è un oggetto che controlla l'aspetto di un'intera applicazione. Opera come una singola classe in cui è possibile inserire tutto il codice di disegno per l'applicazione. La libreria MFC include diversi gestori visualizzazione. È possibile creare la propria gestione visual anche se si desidera creare una visualizzazione personalizzata per l'applicazione. Le immagini seguenti mostrano la stessa applicazione quando sono abilitati i gestori di visualizzazione diverse:  

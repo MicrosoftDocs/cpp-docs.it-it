@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383432"
 ---
 # <a name="tooltiptext-structure"></a>Struttura TOOLTIPTEXT
 Nella scrittura del [gestore descrizione comando notifica](../mfc/handling-ttn-needtext-notification-for-tool-tips.md), è necessario utilizzare il `TOOLTIPTEXT` struttura. I membri del `TOOLTIPTEXT` struttura sono:  

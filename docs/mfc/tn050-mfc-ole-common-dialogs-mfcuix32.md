@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380903"
 ---
 # <a name="tn050-mfcole-common-dialogs-mfcuix32"></a>TN050: finestre di dialogo comuni MFC/OLE (MFCUIx32)
 Originariamente in questa nota venivano descritti alcuni problemi e il futuro delle finestre di dialogo comuni OLE fornite e utilizzate da MFC. Le finestre di dialogo comuni OLE ora vengono fornite come componente incorporato nel sistema (OLEDLG.DLL) e sono illustrate dettagliatamente nella documentazione del prodotto.  

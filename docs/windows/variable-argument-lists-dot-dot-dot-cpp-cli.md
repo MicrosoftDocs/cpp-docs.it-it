@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33889823"
 ---
 # <a name="variable-argument-lists--ccli"></a>Elenchi di argomenti variabili (...) (C++/CLI)
 In questo esempio viene illustrato come utilizzare il `...` sintassi in Visual C++ per implementare le funzioni che hanno un numero variabile di argomenti.  

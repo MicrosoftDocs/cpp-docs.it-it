@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33693887"
 ---
 # <a name="a22---using-the-defaultnone-clause"></a>A.22   Utilizzo della clausola default(none)
 Nell'esempio seguente consente di distinguere le variabili che sono interessate i `default(none)` clausola da quelli che non sono:  

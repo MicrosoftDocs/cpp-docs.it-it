@@ -148,6 +148,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33378441"
 ---
 # <a name="cpane-class"></a>CPane Class
 Il `CPane` classe rappresenta un miglioramento del [classe CControlBar](../../mfc/reference/ccontrolbar-class.md). Se si sta aggiornando un progetto MFC esistente, sostituire tutte le occorrenze di `CControlBar` con `CPane`.  

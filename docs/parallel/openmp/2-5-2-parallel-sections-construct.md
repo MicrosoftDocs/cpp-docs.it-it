@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33689480"
 ---
 # <a name="252-parallel-sections-construct"></a>2.5.2 Costrutto parallel sections
 Il **parallela sezioni** direttiva fornisce un modulo di scelta rapida per la specifica un **parallela** contenente una sola area **sezioni** direttiva. La semantica è identica a specificare in modo esplicito un **parallela** direttiva immediatamente seguita da un **sezioni** direttiva. La sintassi del **parallela sezioni** direttiva è come segue:  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345641"
 ---
 # <a name="orchestrating-other-window-actions"></a>Orchestrazione di altre azioni della finestra
 La finestra cornice coordina gli Stati semimodali come la Guida sensibile al contesto e anteprima di stampa. Per una descrizione del ruolo della finestra cornice in anteprima di stampa, vedere [stampa e anteprima di stampa](../mfc/printing-and-print-preview.md).  

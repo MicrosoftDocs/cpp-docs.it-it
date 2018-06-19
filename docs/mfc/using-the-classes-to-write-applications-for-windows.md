@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33386145"
 ---
 # <a name="using-the-classes-to-write-applications-for-windows"></a>Utilizzo delle classi per la creazione di applicazioni per Windows
 Nel loro insieme, le classi nella libreria Microsoft Foundation classe (MFC) costituiscono un "framework applicazione," in cui si compila un'applicazione per il sistema operativo Windows. A livello generale, il framework definisce la struttura di un'applicazione e fornisce le implementazioni dell'interfaccia utente standard che possono essere inserite in tale struttura. Il compito del programmatore consiste nel compilare il resto della struttura, che sono gli elementi che sono specifici dell'applicazione. È possibile ottenere un punto di partenza per la creazione guidata applicazione MFC per creare i file per un'applicazione. Utilizzare l'editor di risorse Microsoft Visual C++ per progettare visivamente, gli elementi dell'interfaccia utente comandi Visualizzazione classi per connettere tali elementi di codice e la libreria di classi per implementare la logica specifica dell'applicazione.  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33695366"
 ---
 # <a name="graphics-c-amp"></a>Grafica (C++ AMP)
 C++ AMP contiene numerose API nel [Concurrency:: Graphics](../../parallel/amp/reference/concurrency-graphics-namespace.md) dello spazio dei nomi che è possibile utilizzare per accedere al supporto trama sulle GPU. Di seguito sono illustrati alcuni scenari:  

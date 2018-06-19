@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33379896"
 ---
 # <a name="run-member-function"></a>Funzione membro Run
 Un'applicazione framework passa la maggior parte del tempo nel [eseguire](../mfc/reference/cwinapp-class.md#run) funzione membro di classe [CWinApp](../mfc/reference/cwinapp-class.md). Dopo l'inizializzazione, `WinMain` chiamate **eseguire** per elaborare il ciclo di messaggi.  

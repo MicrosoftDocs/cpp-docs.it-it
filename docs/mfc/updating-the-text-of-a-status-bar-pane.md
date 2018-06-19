@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33384478"
 ---
 # <a name="updating-the-text-of-a-status-bar-pane"></a>Aggiornamento del testo di un riquadro barra di stato
 In questo articolo viene illustrato come modificare il testo visualizzato in un riquadro barra di stato MFC. Una barra di stato, ovvero un oggetto finestra della classe [CStatusBar](../mfc/reference/cstatusbar-class.md) , ovvero, contiene diversi riquadri." Ogni riquadro è un'area rettangolare della barra di stato che è possibile utilizzare per visualizzare le informazioni. Molte applicazioni, ad esempio, visualizzare lo stato del tasto BLOC MAIUSC attivo, BLOC NUM e altri tasti nei riquadri a destra. Le applicazioni spesso visualizzano testo informativo nel riquadro di sinistra (riquadro 0), detto anche il messaggio "pane". Ad esempio, la barra di stato MFC predefinito utilizza il riquadro dei messaggi per visualizzare una stringa che spiega il menu selezionato o il pulsante. Nella figura [barre di stato](../mfc/status-bar-implementation-in-mfc.md) Mostra una barra di stato da un'applicazione di creazione guidata applicazione MFC.  

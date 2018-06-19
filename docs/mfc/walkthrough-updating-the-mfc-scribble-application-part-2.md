@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385391"
 ---
 # <a name="walkthrough-updating-the-mfc-scribble-application-part-2"></a>Procedura dettagliata: aggiornamento dell'applicazione MFC Scribble (parte 2)
 [Parte 1](../mfc/walkthrough-updating-the-mfc-scribble-application-part-1.md) di questa procedura dettagliata viene illustrato come aggiungere una barra multifunzione Office Fluent classica applicazione Scribble. Questa sezione illustra come aggiungere pannelli della barra multifunzione e i controlli che gli utenti possono usare invece i menu e comandi.  

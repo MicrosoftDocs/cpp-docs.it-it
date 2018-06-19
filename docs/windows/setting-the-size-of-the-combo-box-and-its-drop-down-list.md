@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33889345"
 ---
 # <a name="setting-the-size-of-the-combo-box-and-its-drop-down-list"></a>Impostazione della dimensione di una casella combinata e dell'elenco a discesa
 Quando viene aggiunta alla finestra di dialogo, è possibile ridimensionare una casella combinata. È inoltre possibile specificare le dimensioni della casella di riepilogo a discesa.  

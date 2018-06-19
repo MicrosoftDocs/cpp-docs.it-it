@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33890432"
 ---
 # <a name="text-tool-font-dialog-box-image-editor-for-icons"></a>Finestra di dialogo Carattere strumento Testo (Editor di immagini per le icone)
 Specifica le impostazioni del carattere quando si utilizza il [finestra di dialogo strumento testo](../windows/text-tool-dialog-box-image-editor-for-icons.md) del [Editor di immagini](../windows/image-editor-for-icons.md).  

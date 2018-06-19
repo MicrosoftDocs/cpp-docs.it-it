@@ -23,6 +23,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33695569"
 ---
 # <a name="exception-handling-in-the-concurrency-runtime"></a>Gestione delle eccezioni nel runtime di concorrenza
 Il Runtime di concorrenza Usa per comunicare molti tipi di errori di gestione delle eccezioni di C++. Utilizzo non valido di runtime, errori di runtime, ad esempio un errore per acquisire una risorsa e gli errori che si verificano tali errori includono le funzioni di lavoro che permette alle attività e gruppi di attività. Quando un'attività o un gruppo di attività genera un'eccezione, il runtime gestisce l'eccezione e ne esegue il marshalling per il contesto in attesa per l'attività o un gruppo di attività. Per i componenti, ad esempio le attività e gli agenti, il runtime gestisce le eccezioni per l'utente. In questi casi, è necessario implementare un meccanismo di gestione delle eccezioni. In questo argomento viene descritto come il runtime gestisce le eccezioni generate dall'attività, gruppi di attività, dalle attività leggere e dagli agenti asincroni e come rispondere alle eccezioni nelle applicazioni.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33196610"
 ---
 # <a name="compiler-error-c2498"></a>Errore del compilatore C2498
 'function': 'novtable' può essere applicato solo a definizioni o dichiarazioni di classe  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33686932"
 ---
 # <a name="multithread-programs"></a>Programmi multithread
 Un thread è fondamentalmente un percorso di esecuzione tramite un programma. È anche la più piccola unità di esecuzione in Win32. Un thread è costituito da uno stack, lo stato di registri della CPU e una voce nell'elenco di esecuzione dell'utilità di pianificazione del sistema. Ogni thread condivide tutte le risorse del processo.  

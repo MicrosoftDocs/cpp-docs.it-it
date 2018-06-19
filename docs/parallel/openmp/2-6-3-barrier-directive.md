@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33689792"
 ---
 # <a name="263-barrier-directive"></a>2.6.3 Direttiva barrier
 Il **barriera** direttiva Sincronizza tutti i thread in un team. Se rilevato, ogni thread del team rimane in attesa fino a quando tutte le altre deve raggiungere questo punto. La sintassi del **barriera** direttiva è come segue:  

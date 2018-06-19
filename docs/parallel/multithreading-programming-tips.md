@@ -31,6 +31,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33689987"
 ---
 # <a name="multithreading-programming-tips"></a>Multithreading: suggerimenti sulla programmazione
 Applicazioni multithread richiedono maggiore attenzione rispetto alle applicazioni a thread singolo quando l'accesso ai dati. Perché sono presenti più indipendenti percorsi di esecuzione utilizzano contemporaneamente nelle applicazioni multithreading, gli algoritmi, i dati o entrambi deve essere compatibile con i dati potrebbero essere usate da più thread contemporaneamente. Questo argomento illustra le tecniche per evitare potenziali problemi durante la programmazione di applicazioni multithreading con la libreria di classe MFC (Microsoft Foundation).  

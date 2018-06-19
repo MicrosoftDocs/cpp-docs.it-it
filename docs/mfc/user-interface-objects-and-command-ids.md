@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385599"
 ---
 # <a name="user-interface-objects-and-command-ids"></a>Oggetti dell'interfaccia utente e ID comando
 Voci di menu, pulsanti della barra degli strumenti e i tasti di scelta rapida sono "oggetti dell'interfaccia utente" in grado di supportare la generazione di comandi. Ognuno di questi oggetti dell'interfaccia utente con un ID. Associare un oggetto dell'interfaccia utente con un comando assegnando lo stesso ID di oggetto e il comando. Come spiegato in [messaggi](../mfc/messages.md), i comandi vengono implementati come messaggi speciali. Nella figura "Comandi del Framework" riportata di seguito viene illustrato il modo in cui il framework gestisce i comandi. Quando un oggetto dell'interfaccia utente genera un comando, ad esempio `ID_EDIT_CLEAR_ALL`, uno degli oggetti dell'applicazione gestisce il comando, nella figura seguente, l'oggetto documento `OnEditClearAll` funzione viene chiamata tramite una mappa messaggi del documento.  

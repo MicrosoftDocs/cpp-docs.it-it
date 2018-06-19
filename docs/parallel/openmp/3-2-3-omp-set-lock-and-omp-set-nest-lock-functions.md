@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33689714"
 ---
 # <a name="323-ompsetlock-and-ompsetnestlock-functions"></a>3.2.3 Funzioni omp_set_lock e omp_set_nest_lock
 Ognuna di queste funzioni Blocca il thread di esecuzione della funzione fino a quando non è disponibile e quindi imposta il blocco di blocco specificato. Un semplice blocco è disponibile se è sbloccato. Un blocco annidabile è disponibile se è sbloccato o se si è già di proprietà dal thread di esecuzione della funzione. Il formato è il seguente:  

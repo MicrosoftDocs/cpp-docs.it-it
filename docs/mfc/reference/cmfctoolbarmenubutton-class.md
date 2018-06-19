@@ -107,6 +107,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33378405"
 ---
 # <a name="cmfctoolbarmenubutton-class"></a>Classe CMFCToolBarMenuButton
 Pulsante della barra degli strumenti contenente un menu di scelta rapida.  

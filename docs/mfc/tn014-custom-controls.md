@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33384582"
 ---
 # <a name="tn014-custom-controls"></a>TN014: controlli personalizzati
 In questa nota viene descritto il supporto MFC per i controlli di disegno automatico e personalizzati. Inoltre viene creazione di una sottoclasse dinamica e viene descritta la relazione tra [CWnd](../mfc/reference/cwnd-class.md) oggetti e `HWND`s.  

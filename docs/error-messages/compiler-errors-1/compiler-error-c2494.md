@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33198378"
 ---
 # <a name="compiler-error-c2494"></a>Errore del compilatore C2494
 'keyword' non può essere chiamato dall'interno di un'espressione di filtro o blocco finally/finally  

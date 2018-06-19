@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345247"
 ---
 # <a name="notifications-sent-by-animation-controls"></a>Notifiche inviate mediante controlli Animation
 Un controllo animation ([CAnimateCtrl](../mfc/reference/canimatectrl-class.md)) invia i due diversi tipi di messaggi di notifica. Le notifiche vengono inviate sotto forma di [WM_COMMAND](http://msdn.microsoft.com/library/windows/desktop/ms647591) messaggi.  

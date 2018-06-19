@@ -61,6 +61,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33379996"
 ---
 # <a name="reflected-window-message-ids"></a>ID messaggi finestra riflessi
 Un modo rapido per creare un controllo ActiveX o un altro controllo specializzato consiste nel creare una sottoclasse di una finestra. Per ulteriori informazioni, vedere [controlli ActiveX MFC: creazione di sottoclassi di un controllo Windows](../mfc/mfc-activex-controls-subclassing-a-windows-control.md).  

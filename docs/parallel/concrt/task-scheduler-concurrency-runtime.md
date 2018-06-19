@@ -31,6 +31,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33689321"
 ---
 # <a name="task-scheduler-concurrency-runtime"></a>Utilità di pianificazione (runtime di concorrenza)
 Negli argomenti contenuti in questa parte della documentazione vengono descritte le funzionalità principali dell'utilità di pianificazione del runtime di concorrenza. L'Utilità di pianificazione è utile quando si vuole ottimizzare le prestazioni del codice esistente che usa il runtime di concorrenza.  

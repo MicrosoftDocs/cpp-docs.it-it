@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383809"
 ---
 # <a name="sequence-of-operations-for-building-mfc-applications"></a>Sequenza delle operazioni per la compilazione di applicazioni MFC
 La tabella seguente illustra la sequenza generale che è possibile seguire in genere quando si sviluppa l'applicazione MFC.  

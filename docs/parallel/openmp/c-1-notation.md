@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33686815"
 ---
 # <a name="c1-notation"></a>C.1 Notazione
 Il nome di un non terminale, costituiti da regole grammaticali seguita da due punti, seguiti da alternative di sostituzione su righe separate.  

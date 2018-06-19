@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381979"
 ---
 # <a name="slider-notification-messages"></a>Messaggi di notifica dispositivo di scorrimento
 Un controllo dispositivo di scorrimento comunica alla finestra padre di azioni utente inviando padre `WM_HSCROLL` o `WM_VSCROLL` messaggi, a seconda dell'orientamento del controllo dispositivo di scorrimento. Per gestire questi messaggi, aggiungere i gestori per il `WM_HSCROLL` e `WM_VSCROLL` messaggi della finestra padre. Il [OnHScroll](../mfc/reference/cwnd-class.md#onhscroll) e [OnVScroll](../mfc/reference/cwnd-class.md#onvscroll) un codice di notifica, la posizione del dispositivo di scorrimento e un puntatore a funzioni membro verranno passate il [CSliderCtrl](../mfc/reference/csliderctrl-class.md) oggetto. Si noti che il puntatore è di tipo **CScrollBar \***  anche se punta a un `CSliderCtrl` oggetto. Potrebbe essere necessario il cast di tipo puntatore ' this ' se è necessario modificare il controllo dispositivo di scorrimento.  

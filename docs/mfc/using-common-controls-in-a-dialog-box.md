@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382691"
 ---
 # <a name="using-common-controls-in-a-dialog-box"></a>Utilizzo di controlli comuni in una finestra di dialogo
 Controlli comuni di Windows possono essere utilizzati [finestre di dialogo](../mfc/dialog-boxes.md), visualizzazioni di moduli, visualizzazioni di record e qualsiasi altra finestra basata su un modello di finestra di dialogo. La procedura riportata di seguito sarà applicabile anche ai form, dopo alcune piccole modifiche.  

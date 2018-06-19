@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33384436"
 ---
 # <a name="writing-an-internet-client-application-using-mfc-wininet-classes"></a>Scrittura di un'applicazione client Internet con classi WinInet MFC
 La base per tutte le applicazioni client Internet è la sessione di Internet. MFC implementa le sessioni Internet come gli oggetti della classe [CInternetSession](../mfc/reference/cinternetsession-class.md). Utilizzare questa classe, è possibile creare una o più sessioni simultanee.  

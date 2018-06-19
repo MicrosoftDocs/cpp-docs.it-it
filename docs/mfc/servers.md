@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381779"
 ---
 # <a name="servers"></a>Server
 Un'applicazione server (o l'applicazione componente) Crea OLE elementi (o componenti) per l'utilizzo da applicazioni contenitore. Un'applicazione server di modifica visiva supporta anche la modifica visiva o l'attivazione sul posto. Un altro tipo di server OLE è un [server di automazione](../mfc/automation-servers.md). Alcune applicazioni server supportano solo la creazione di elementi incorporati; altri supportano la creazione di elementi collegati e incorporati. Alcuni browser supportano il collegamento solo, sebbene sia raro. Tutte le applicazioni server devono supportare l'attivazione dalle applicazioni contenitore quando l'utente desidera modificare un elemento. Un'applicazione può essere sia un contenitore e un server. In altre parole, possono incorporare i dati all'interno dei documenti e creare dati che possono essere incorporati come elementi in documenti di altre applicazioni.  

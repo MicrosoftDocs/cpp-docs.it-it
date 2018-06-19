@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33891594"
 ---
 # <a name="showing-or-hiding-the-dialog-editor-toolbar"></a>Attivazione o disattivazione della visualizzazione della barra degli strumenti dell'editor finestre
 Quando si apre l'editor finestre, finestra di dialogo Editor barra degli strumenti viene visualizzato automaticamente nella parte superiore della soluzione.  

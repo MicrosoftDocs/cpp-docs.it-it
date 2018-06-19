@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382151"
 ---
 # <a name="tree-control-item-position"></a>Posizione degli elementi del controllo Tree
 Posizione iniziale di un elemento viene impostato quando l'elemento viene aggiunto al controllo struttura ad albero ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) utilizzando il `InsertItem` funzione membro. La chiamata di funzione membro specifica l'handle dell'elemento padre e l'handle dell'elemento dopo il quale è necessario inserire il nuovo elemento. Il secondo handle deve identificare un elemento figlio dell'elemento padre specificato o uno di questi valori: `TVI_FIRST`, `TVI_LAST`, o `TVI_SORT`.  
