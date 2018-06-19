@@ -31,6 +31,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33109807"
 ---
 # <a name="user-records"></a>Record utente
 Per utilizzare una funzione di accesso statica (ovvero, una funzione di accesso derivata da **CAccessor)**, il consumer deve includere un record utente. Il record dell'utente è una classe C++ che contiene gli elementi di dati per gestire l'input o output. La creazione guidata Consumer OLE DB ATL genera un record utente per il consumer. È possibile aggiungere metodi per il record utente per attività facoltative, ad esempio gestione dei comandi.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33106193"
 ---
 # <a name="ole-db-programming-overview"></a>Cenni preliminari sulla programmazione con OLE DB
 OLE DB è una tecnologia per database ad alte prestazioni, basato su COM. Fornisce un modo comune per accedere ai dati indipendentemente dal formato in cui è archiviato. In una tipica situazione aziendale, una grande quantità di informazioni viene archiviata all'esterno dei database aziendali. Queste informazioni viene trovate nel file System (come FAT o NTFS), i file indicizzati in modo sequenziale, database personali (ad esempio l'accesso), fogli di calcolo (ad esempio Excel), applicazioni per la pianificazione di progetto (ad esempio di progetto) e posta elettronica (ad esempio Outlook). OLE DB consente di accedere a qualsiasi tipo di archivio dati nello stesso modo, purché l'archivio dati è un provider OLE DB.

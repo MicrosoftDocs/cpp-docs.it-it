@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33098147"
 ---
 # <a name="cmyprovidercommand-myproviderrsh"></a>CMyProviderCommand (MyProviderRS.H)
 La `CMyProviderCommand` classe è l'implementazione per l'oggetto comando provider. Fornisce l'implementazione per il `IAccessor`, `ICommandText`, e **ICommandProperties** interfacce. Il `IAccessor` interfaccia è identico a quello nel set di righe. L'oggetto comando utilizza la funzione di accesso per specificare le associazioni per i parametri. Oggetto set di righe utilizzati per specificare le associazioni per le colonne di output. Il `ICommandText` interfaccia è un modo utile per specificare un comando in formato testo. Questo esempio viene utilizzato il `ICommandText` interfaccia in un secondo momento quando aggiunge codice personalizzato, viene eseguito l'override anche di `ICommand::Execute` metodo. Il **ICommandProperties** interfaccia gestisce tutte le proprietà per gli oggetti comando e set di righe.  

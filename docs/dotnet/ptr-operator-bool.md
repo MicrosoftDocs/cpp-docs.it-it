@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33161564"
 ---
 # <a name="ptroperator-bool"></a>ptr::operator bool
 Operatore per l'utilizzo di `com::ptr` in un'espressione condizionale.  
