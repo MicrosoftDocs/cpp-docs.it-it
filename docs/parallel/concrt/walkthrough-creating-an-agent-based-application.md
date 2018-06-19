@@ -20,6 +20,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33692626"
 ---
 # <a name="walkthrough-creating-an-agent-based-application"></a>Procedura dettagliata: Creazione di un'applicazione basata sugli agenti
 In questo argomento viene descritto come creare un'applicazione basata su agente base. In questa procedura dettagliata, è possibile creare un agente che legge i dati da un file di testo in modo asincrono. L'applicazione utilizza l'algoritmo di checksum Adler-32 per il calcolo del checksum del contenuto del file.  

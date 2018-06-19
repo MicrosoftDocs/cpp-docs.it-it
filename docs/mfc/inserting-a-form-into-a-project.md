@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344133"
 ---
 # <a name="inserting-a-form-into-a-project"></a>Inserimento di un form in un progetto
 Form fornisce un contenitore appropriato per i controlli. È possibile inserire facilmente un modulo basato su MFC nell'applicazione fino a quando l'applicazione supporta le librerie MFC.  

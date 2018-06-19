@@ -33,6 +33,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347094"
 ---
 # <a name="menus-and-resources-ole"></a>Menu e risorse (OLE)
 Questo gruppo di articoli viene illustrato l'utilizzo di menu e risorse nelle applicazioni OLE MFC documento.  

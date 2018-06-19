@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33320220"
 ---
 # <a name="project-build-warning-prj0029"></a>Avviso di compilazione progetto PRJ0029
 La proprietà 'Output' per il passaggio di compilazione personalizzata a livello di progetto non è impostata. L'istruzione di compilazione personalizzata verrà ignorata.  

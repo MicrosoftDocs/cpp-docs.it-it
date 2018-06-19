@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33856999"
 ---
 # <a name="changing-the-magnification-factor-image-editor-for-icons"></a>Modifica del fattore di ingrandimento (Editor di immagini per le icone)
 Per impostazione predefinita, l'editor di immagini consente di visualizzare la vista nel riquadro sinistro alle dimensioni effettive e la visualizzazione nel riquadro di destra dimensioni effettive di 6 volte. Il fattore di ingrandimento (visualizzato nella barra di stato nella parte inferiore dell'area di lavoro) è il rapporto tra le dimensioni effettive dell'immagine e le dimensioni di visualizzazione. Il fattore di predefinito è 6 e l'intervallo è compreso tra 1 e 10.  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33295548"
 ---
 # <a name="expression-evaluator-error-cxx0053"></a>Errore dell‘analizzatore di espressioni CXX0053
 rilevato simbolo corrisponde durante l'associazione dei punti di interruzione  

@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347886"
 ---
 # <a name="frame-window-classes"></a>Classi Frame-Window
 Ogni applicazione dispone di una "finestra cornice principale," una finestra del desktop che in genere è il nome dell'applicazione nella barra del titolo. Ogni documento è in genere una "finestra cornice di documento". Una finestra cornice del documento contiene almeno una vista, che presenta i dati del documento.  

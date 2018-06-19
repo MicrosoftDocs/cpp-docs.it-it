@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344935"
 ---
 # <a name="managing-mdi-child-windows"></a>Gestione di finestre figlio MDI
 Finestre principali MDI (una per ogni applicazione) contengono una finestra figlio speciale denominata la **MDICLIENT** finestra. Il **MDICLIENT** finestra consente di gestire l'area client della finestra cornice principale e dispone di finestre figlio: le finestre di documento, derivate da `CMDIChildWnd`. Poiché le finestre di documento sono esse stesse finestre cornice (finestre figlio MDI), possono avere a loro volta finestre figlio. In questi casi, la finestra padre gestisce le relative finestre figlio e inoltra alcuni comandi.  

@@ -31,6 +31,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346061"
 ---
 # <a name="exceptions-using-mfc-macros-and-c-exceptions"></a>Eccezioni: utilizzo di macro MFC ed eccezioni C++
 In questo articolo vengono illustrate considerazioni per la scrittura di codice che usa le macro di gestione delle eccezioni MFC e parole chiave di gestione delle eccezioni C++.  

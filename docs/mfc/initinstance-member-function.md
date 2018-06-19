@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345026"
 ---
 # <a name="initinstance-member-function"></a>Funzione membro InitInstance
 Il sistema operativo Windows consente di eseguire più copie, o "istanza" della stessa applicazione. `WinMain` le chiamate [InitInstance](../mfc/reference/cwinapp-class.md#initinstance) ogni volta che viene avviata una nuova istanza dell'applicazione.  

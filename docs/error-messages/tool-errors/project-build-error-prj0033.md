@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33317060"
 ---
 # <a name="project-build-error-prj0033"></a>Errore di compilazione progetto PRJ0033
 La proprietà "Dipendenze aggiuntive" per la generazione personalizzata istruzione del file "file" contiene "macro" che restituisce per "espansione".  

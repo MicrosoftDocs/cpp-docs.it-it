@@ -39,6 +39,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33856033"
 ---
 # <a name="text-and-strings-in-visual-c"></a>Testo e stringhe in Visual C++
 Un aspetto importante dello sviluppo di applicazioni per i mercati internazionali è la rappresentazione appropriata di set di caratteri locale. Il set di caratteri ASCII definisce i caratteri nell'intervallo da 0x00 e 0x7F. Sono presenti altri set di caratteri, principalmente europei, che definiscono i caratteri all'interno dell'intervallo da 0x00 e 0x7F in modo identico al set di caratteri ASCII e definire un carattere esteso impostare tra 0x80 e 0xFF. Pertanto, un set di 8 bit, i caratteri a byte singolo (SBCS) è sufficiente per rappresentare il set di caratteri ASCII, nonché i set di caratteri di molte lingue europee. Tuttavia, alcuni set di caratteri non europei, come il Kanji giapponese, includono molti più caratteri rispetto a uno schema di codifica a byte singolo può rappresentare e pertanto richiedono caratteri multibyte (MBCS) codifica del set.  

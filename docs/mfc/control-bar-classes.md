@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342020"
 ---
 # <a name="control-bar-classes"></a>Classi di barre di controllo
 Barre di controllo sono collegate a una finestra cornice. Contengono pulsanti, i riquadri di stato o un modello di finestra di dialogo. Barre di controllo mobile, l'acronimo di tavolozze, vengono implementate mediante l'aggiunta di un [CMiniFrameWnd](../mfc/reference/cminiframewnd-class.md) oggetto.  

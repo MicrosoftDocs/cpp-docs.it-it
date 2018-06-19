@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343808"
 ---
 # <a name="handling-windows-messages-in-your-dialog-box"></a>Gestione dei messaggi di Windows nella finestra di dialogo
 Finestre di dialogo sono windows, in grado di gestire i messaggi di Windows se si forniscono le funzioni del gestore appropriato. Quando si crea la classe di finestra di dialogo con l'aggiunta guidata classe, la procedura guidata consente di aggiungere una mappa messaggi vuota alla classe. Per eseguire il mapping di messaggi di Windows o si desidera che la classe per gestire i comandi, utilizzare la finestra Proprietà.  

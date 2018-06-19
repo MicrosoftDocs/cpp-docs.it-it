@@ -22,6 +22,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33693344"
 ---
 # <a name="walkthrough-using-join-to-prevent-deadlock"></a>Procedura dettagliata: Uso della classe join per impedire un deadlock
 Questo argomento viene utilizzato il problema dei filosofi a cena per illustrare come utilizzare il [Concurrency:: join](../../parallel/concrt/reference/join-class.md) classe per impedire un deadlock nell'applicazione. In un'applicazione software si verifica un *deadlock* quando due o più processi bloccano ognuno una risorsa e attendono entrambi che un altro processo rilasci altre risorse.  

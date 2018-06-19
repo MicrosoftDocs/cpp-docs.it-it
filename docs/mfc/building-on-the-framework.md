@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341554"
 ---
 # <a name="building-on-the-framework"></a>Compilazione nel framework
 Il ruolo nella configurazione di un'applicazione con il framework MFC è fornire il codice di origine specifici dell'applicazione e per connettere i componenti definendo i messaggi e comandi a cui rispondono. Utilizzare il linguaggio C++ e le tecniche standard di C++ per derivare le classi specifiche dell'applicazione da quelli forniti dalla libreria di classi e per eseguire l'override e ottimizzare il comportamento della classe di base.  

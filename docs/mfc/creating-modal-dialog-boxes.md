@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342429"
 ---
 # <a name="creating-modal-dialog-boxes"></a>Creazione di finestre di dialogo modali
 Per creare una finestra di dialogo modale, chiamare uno dei due costruttori pubblici dichiarati in [CDialog](../mfc/reference/cdialog-class.md). Successivamente, chiamare l'oggetto finestra di dialogo [DoModal](../mfc/reference/cdialog-class.md#domodal) funzione membro per visualizzare la finestra di dialogo e gestirne l'interazione finché l'utente sceglie OK o Annulla. È la gestione tramite `DoModal` a rendere modale la finestra di dialogo. Per le finestre di dialogo modali `DoModal` carica la risorsa finestra di dialogo.  

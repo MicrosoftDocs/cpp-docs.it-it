@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347165"
 ---
 # <a name="dragging-images-from-an-image-list"></a>Trascinamento di immagini da un elenco di immagini
 [CImageList](../mfc/reference/cimagelist-class.md) include funzioni per il trascinamento di un'immagine sullo schermo. Le funzioni di trascinamento spostare un'immagine in modo uniforme, colore e senza far lampeggiare il cursore. È possibile trascinare le immagini mascherate sia stato annullato il mascheramento.  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33855383"
 ---
 # <a name="changing-unassigned-symbols"></a>Modifica di simboli non assegnati
 Mentre nel [la finestra di dialogo Simboli risorsa](../windows/resource-symbols-dialog-box.md), è possibile modificare o eliminare i simboli esistenti che non sono già assegnati a una risorsa o un oggetto.  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345209"
 ---
 # <a name="drawing-images-from-an-image-list"></a>Disegno di immagini da un elenco di immagini
 Per disegnare un'immagine, utilizzare il [CImageList:: Draw](../mfc/reference/cimagelist-class.md#draw) funzione membro. Si specificherà un puntatore a un oggetto di contesto di dispositivo, l'indice dell'immagine da disegnare, la posizione nel contesto di dispositivo su cui disegnare l'immagine e un set di flag per indicare lo stile del disegno.  

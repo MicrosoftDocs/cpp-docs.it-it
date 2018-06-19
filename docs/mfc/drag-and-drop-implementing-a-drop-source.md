@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345612"
 ---
 # <a name="drag-and-drop-implementing-a-drop-source"></a>Trascinamento della sezione: implementazione di un'origine di rilascio
 In questo articolo viene illustrato come ottenere l'applicazione per fornire dati a un'operazione di trascinamento e rilascio.  

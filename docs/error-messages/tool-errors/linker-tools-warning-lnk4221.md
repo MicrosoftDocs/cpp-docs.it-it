@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33301008"
 ---
 # <a name="linker-tools-warning-lnk4221"></a>Avviso degli strumenti del linker LNK4221
 Questo file oggetto non definisce i simboli pubblici non definiti in precedenza, quindi non essere utilizzata da qualsiasi operazione che utilizza la libreria di collegamento  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342085"
 ---
 # <a name="creating-the-dialog-resource"></a>Creazione della risorsa finestra di dialogo
 Per progettare il [la finestra di dialogo](../mfc/dialog-boxes.md) e creare la risorsa finestra di dialogo, utilizzare il [editor finestre](../windows/dialog-editor.md). Nell'editor finestre è possibile effettuare le seguenti operazioni:  

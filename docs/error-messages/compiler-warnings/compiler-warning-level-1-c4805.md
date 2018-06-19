@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33281564"
 ---
 # <a name="compiler-warning-level-1-c4805"></a>Avviso del compilatore (livello 1) C4805
 'operation': combinazione non affidabile del tipo 'type' e del tipo 'type' nell'operazione  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385885"
 ---
 # <a name="types-of-image-lists"></a>Tipi di elenchi immagini
 Esistono due tipi di elenchi immagini ([CImageList](../mfc/reference/cimagelist-class.md)): non mascherata e mascherati. Un "elenco di immagine non mascherata" è costituito da una bitmap a colori che contiene una o più immagini. Un "elenco di immagini mascherate" è costituito da due bitmap della stessa dimensione. La prima è una bitmap a colori che contiene le immagini e la seconda è una bitmap monocromatica che contiene una serie di maschere: uno per ogni immagine della prima bitmap.  

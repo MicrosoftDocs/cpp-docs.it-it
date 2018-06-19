@@ -19,6 +19,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33691541"
 ---
 # <a name="parallel-patterns-library-ppl"></a>PPL (Parallel Patterns Library)
 La libreria PPL (Parallel Patterns Library) fornisce un modello di programmazione imperativa in grado di offrire scalabilità e semplicità per lo sviluppo di applicazioni simultanee. La libreria PPL si basa sulla pianificazione e sui componenti di gestione delle risorse del runtime di concorrenza. Innalza il livello di astrazione tra il codice dell'applicazione e il meccanismo di threading sottostante fornendo algoritmi generici indipendenti dai tipi e contenitori che agiscono sui dati in parallelo. La libreria PPL consente inoltre di sviluppare applicazioni adeguate fornendo alternative allo stato condiviso.  

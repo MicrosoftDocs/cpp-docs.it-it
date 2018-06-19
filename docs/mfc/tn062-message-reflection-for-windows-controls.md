@@ -42,6 +42,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33384962"
 ---
 # <a name="tn062-message-reflection-for-windows-controls"></a>TN062: reflection messaggi per controlli Windows
 > [!NOTE]

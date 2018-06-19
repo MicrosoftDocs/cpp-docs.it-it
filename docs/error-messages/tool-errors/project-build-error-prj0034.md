@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33319078"
 ---
 # <a name="project-build-error-prj0034"></a>Errore di compilazione progetto PRJ0034
 La proprietà "Dipendenze aggiuntive" per l'oggetto personalizzato a livello di progetto di compilazione contiene "macro" che restituisce "espansione".  

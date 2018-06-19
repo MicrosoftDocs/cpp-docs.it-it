@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343311"
 ---
 # <a name="bottomless-rich-edit-controls"></a>Controlli Rich Edit infiniti
 L'applicazione può ridimensionare un controllo rich edit ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)) in base alle esigenze in modo che sia sempre la stessa dimensione del relativo contenuto. Un controllo rich edit supporta questa funzionalità "infinita" cosiddetta inviando la relativa finestra padre un [EN_REQUESTRESIZE](http://msdn.microsoft.com/library/windows/desktop/bb787983) messaggio di notifica ogni volta che cambiano le dimensioni del relativo contenuto.  

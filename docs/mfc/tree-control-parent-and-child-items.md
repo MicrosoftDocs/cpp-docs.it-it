@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382515"
 ---
 # <a name="tree-control-parent-and-child-items"></a>Elementi padre e figlio controllo Tree
 Qualsiasi elemento in un controllo struttura ad albero ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) può avere un elenco di elementi secondari, denominati elementi figlio, è associati. Un elemento che dispone di uno o più elementi figlio viene chiamato un elemento padre. Un elemento figlio viene visualizzato sotto l'elemento padre e viene aumentato il rientro per indicare che è subordinata all'elemento padre. Un elemento che non ha elementi padre nella parte superiore della gerarchia e viene chiamato un elemento radice.  

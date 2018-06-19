@@ -28,6 +28,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33688583"
 ---
 # <a name="tiledextent-class"></a>Classe tiled_extent
 Oggetto `tiled_extent` oggetto è un `extent` oggetto di uno a tre dimensioni che suddivide l'area di extent in una, due o riquadri tridimensionale.  

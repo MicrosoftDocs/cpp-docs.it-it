@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346376"
 ---
 # <a name="handling-tool-tip-notifications"></a>Gestione delle notifiche delle descrizioni comandi
 Quando si specifica il `TBSTYLE_TOOLTIPS` stile, la barra degli strumenti crea e gestisce un controllo descrizione comando. Una descrizione comandi è una piccola finestra popup che contiene una riga di testo che descrive un pulsante della barra degli strumenti. La descrizione comando è nascosto, viene visualizzato solo quando l'utente posiziona il cursore del mouse su un pulsante della barra degli strumenti e lascia in tale posizione per circa mezzo secondo. La descrizione comando viene visualizzata accanto al cursore.  

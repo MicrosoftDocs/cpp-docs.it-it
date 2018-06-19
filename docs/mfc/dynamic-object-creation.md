@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346646"
 ---
 # <a name="dynamic-object-creation"></a>Creazione di oggetti dinamici
 In questo articolo viene illustrato come creare un oggetto in modo dinamico in fase di esecuzione. La routine utilizza informazioni di classe in fase di esecuzione, come descritto nell'articolo [l'accesso a informazioni sulle classi di Run-Time](../mfc/accessing-run-time-class-information.md).  

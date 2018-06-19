@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346165"
 ---
 # <a name="drawing-in-a-view"></a>Disegno in una visualizzazione
 Quasi tutti disegno nell'applicazione all'interno della vista `OnDraw` funzione membro, che è necessario eseguire l'override nella classe di visualizzazione. (L'eccezione è il mouse di disegno, come descritto in [interpretazione utente Input tramite una vista](../mfc/interpreting-user-input-through-a-view.md).) Il `OnDraw` override:  

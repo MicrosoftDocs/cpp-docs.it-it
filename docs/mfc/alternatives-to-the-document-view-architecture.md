@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344204"
 ---
 # <a name="alternatives-to-the-documentview-architecture"></a>Alternative all'architettura documento/visualizzazione
 Le applicazioni MFC in genere utilizzano l'architettura documento/visualizzazione per gestire le informazioni, i formati dei file e la rappresentazione visiva dei dati per gli utenti. Per la maggior parte delle applicazioni desktop, l'architettura documento/visualizzazione è un'architettura di applicazione appropriata ed efficiente. Questa architettura separa i dati dalla visualizzazione e, in molti casi, semplifica l'applicazione e riduce il codice ridondante.  

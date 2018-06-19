@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347246"
 ---
 # <a name="mfc-internet-programming-tasks"></a>Attività di programmazione Internet MFC
 In questa sezione contiene i passaggi dettagliati per aggiungere il supporto Internet per le applicazioni. Gli argomenti trattati includono come utilizzare le classi MFC per abilitare Internet per le applicazioni esistenti e come aggiungere il supporto di documenti attivi per il componente COM esistente. Si desidera creare un documento con quotazioni azionarie aggiornate, i punteggi di football del Pittsburgh, e le temperature Antartide Microsoft fornisce una serie di tecnologie che consentono di eseguire questa operazione tramite Internet.  

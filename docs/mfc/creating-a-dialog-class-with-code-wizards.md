@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342199"
 ---
 # <a name="creating-a-dialog-class-with-code-wizards"></a>Creazione di una classe di finestre di dialogo con creazioni guidate codice
 La tabella seguente elenca le attività correlate alla finestra di dialogo utili per le creazioni guidate codice che gestire.  

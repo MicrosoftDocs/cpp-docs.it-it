@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342920"
 ---
 # <a name="-attributes-comment"></a>// Commento sugli attributi
 Il `// Attributes` sezione di una dichiarazione di classe MFC contiene il pubblico attributi (o una proprietà) dell'oggetto. In genere si tratta di variabili membro, o le funzioni Get/Set. Le funzioni "Get" e "Set" possono o non possono essere virtuali. Le funzioni di "Get" sono in genere **const**, perché nella maggior parte dei casi non hanno effetti collaterali. Questi membri sono solitamente pubblici. gli attributi di protetti e privati in genere si trovano nella sezione di implementazione.  

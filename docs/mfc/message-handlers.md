@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347630"
 ---
 # <a name="message-handlers"></a>Gestori di messaggi
 In MFC, una dedicata *gestore* funzione elabori ogni messaggio separato. Funzioni gestore messaggi sono funzioni membro di una classe. Questa documentazione vengono utilizzati i termini *funzione membro di gestore di messaggi*, *funzione gestore messaggi*, *gestore di messaggi*, e *gestore*in modo intercambiabile. Alcuni tipi di gestori di messaggi sono detti anche "gestori di comandi".  

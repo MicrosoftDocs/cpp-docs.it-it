@@ -30,6 +30,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346422"
 ---
 # <a name="connection-points"></a>Punti di connessione
 In questo articolo viene illustrato come implementare i punti di connessione (precedentemente noti come punti di connessione OLE) utilizzando le classi MFC `CCmdTarget` e `CConnectionPoint`.  

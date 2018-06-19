@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347760"
 ---
 # <a name="application-design-choices"></a>Scelte di progettazione delle applicazioni
 In questo articolo vengono illustrati alcuni problemi di progettazione da prendere in considerazione durante la programmazione per Internet.  

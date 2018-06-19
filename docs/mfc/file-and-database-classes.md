@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344948"
 ---
 # <a name="file-and-database-classes"></a>Classi File e Database
 Queste classi consentono di archiviare le informazioni a un database o un file su disco. Sono disponibili tre set di classi di database, OLE DB, ODBC e DAO, che offrono funzionalità simili. Il gruppo di OLE DB viene implementato tramite OLE DB e funziona con i modelli consumer OLE DB, il gruppo DAO viene implementato utilizzando l'oggetto di accesso ai dati e il gruppo ODBC viene implementato utilizzando Open Database Connectivity. Esistono anche un set di classi per la modifica dei file standard, i flussi attivi e i flussi HTML.  

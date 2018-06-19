@@ -131,6 +131,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33377007"
 ---
 # <a name="cdhtmldialog-class"></a>Classe CDHtmlDialog
 È possibile creare finestre di dialogo che utilizzano HTML anziché le risorse di finestra di dialogo per implementare la propria interfaccia utente.  

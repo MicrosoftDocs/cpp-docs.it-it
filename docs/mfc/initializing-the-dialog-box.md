@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344711"
 ---
 # <a name="initializing-the-dialog-box"></a>Inizializzazione della finestra di dialogo
 Dopo la finestra di dialogo casella e tutti i relativi controlli vengono creati, ma prima la finestra di dialogo verrà visualizzata la (di entrambi i tipi) sullo schermo, l'oggetto finestra di dialogo [OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog) viene chiamata la funzione membro. Per una finestra di dialogo modale, ciò si verifica durante la `DoModal` chiamare. Per una finestra di dialogo non modale, `OnInitDialog` viene chiamato quando **crea** viene chiamato. È in genere di eseguire l'override `OnInitDialog` per inizializzare i controlli della finestra di dialogo, ad esempio l'impostazione il testo iniziale di una casella di modifica. È necessario chiamare il `OnInitDialog` funzione membro della classe di base, `CDialog`, dal `OnInitDialog` eseguire l'override.  

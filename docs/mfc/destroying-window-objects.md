@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343376"
 ---
 # <a name="destroying-window-objects"></a>Eliminazione definitiva di oggetti finestra
 Prestare attenzione con proprie finestre figlio da eliminare definitivamente l'oggetto finestra C++ quando l'utente viene terminato con la finestra. Se questi oggetti non vengono eliminati, l'applicazione non ripristinerà la memoria. Per fortuna, il framework gestisce distruzione di finestre, nonché la creazione di finestre cornice, visualizzazioni e finestre di dialogo. Se si creano finestre aggiuntive, è responsabile per l'eliminazione.  

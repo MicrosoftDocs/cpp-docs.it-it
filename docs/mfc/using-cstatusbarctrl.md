@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383550"
 ---
 # <a name="using-cstatusbarctrl"></a>Utilizzo di CStatusBarCtrl
 È possibile utilizzare il controllo barra di stato ([CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md)) per creare una finestra di controllo che riflette i vari tipi di informazioni sullo stato relative all'applicazione. La finestra di stato può essere suddivisa in parti che visualizzano più tipi di informazioni.  

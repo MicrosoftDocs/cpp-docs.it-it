@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347217"
 ---
 # <a name="html-basics"></a>Nozioni fondamentali su HTML
 La maggior parte dei browser hanno la possibilità di esaminare l'origine HTML delle pagine, che è esplorare. Quando si visualizza l'origine verrà visualizzato un numero di HTML (Hypertext markup) tag, racchiuso tra parentesi acute (<>), frammisti con testo.  

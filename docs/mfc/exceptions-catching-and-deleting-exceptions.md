@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345186"
 ---
 # <a name="exceptions-catching-and-deleting-exceptions"></a>Eccezioni: rilevamento ed eliminazione di eccezioni
 Le istruzioni e gli esempi seguenti viene illustrato come rilevare ed eliminare le eccezioni. Per ulteriori informazioni sul **provare**, **catch**, e `throw` parole chiave, vedere [gestione delle eccezioni C++](../cpp/cpp-exception-handling.md).  

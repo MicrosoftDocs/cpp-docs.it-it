@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33334886"
 ---
 # <a name="active-documents-on-the-internet"></a>Documenti attivi su Internet
 Documenti attivi forniscono un'estensione a oggetti incorporati tradizionale. Documenti attivi possono essere composti da e vengono visualizzati nell'intera area client. Si eseguire la negoziazione di menu tradizionali e può essere modificati sul posto, nonché in una finestra aperta nell'applicazione server. Anziché visualizzare come un piccolo rettangolo circondato da un bordo tratteggiato, i documenti attivi sono frame completo e sempre attiva.  

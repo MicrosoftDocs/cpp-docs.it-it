@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347042"
 ---
 # <a name="ole-drag-and-drop-and-data-transfer-classes"></a>Classi di trasferimento dati e trascinamento della selezione OLE
 Queste classi vengono utilizzate nei trasferimenti di dati OLE. Consentono il trasferimento tra applicazioni utilizzando negli Appunti o mediante trascinamento e rilascio di dati.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33294336"
 ---
 # <a name="compiler-warning-level-4-c4668"></a>Avviso del compilatore (livello 4) C4668
 'simbolo' non è definita come macro del preprocessore. Sostituzione con '0' per 'direttive'  

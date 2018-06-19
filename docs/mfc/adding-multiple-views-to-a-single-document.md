@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344149"
 ---
 # <a name="adding-multiple-views-to-a-single-document"></a>Aggiunta di più visualizzazioni a un singolo documento
 In un'applicazione di interfaccia a documento singolo (SDI) creata con la libreria Microsoft Foundation classe (MFC), ogni tipo di documento è associato a un solo tipo di visualizzazione. In alcuni casi, è opportuno avere la possibilità di passare dalla visualizzazione corrente di un documento con una nuova vista.  

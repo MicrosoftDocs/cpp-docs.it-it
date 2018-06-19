@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33850183"
 ---
 # <a name="macros-cc"></a>Macro (C/C++)
 Pre-elaborazione espande le macro in tutte le righe che non sono le direttive del preprocessore (le righe che non dispongono di un **#** come primo carattere non spazio vuoto) e in parti di alcune istruzioni che non vengono ignorati come parte di un compilazione condizionale. Le direttive di "compilazione condizionale" consentono di evitare la compilazione di porzioni del file di origine grazie alla possibilità di eseguire un test di un'espressione costante o di un identificatore, in modo da determinare quali blocchi di testo vengono passati al compilatore e quali blocchi di testo vengono rimossi dal file di origine durante la pre-elaborazione.  

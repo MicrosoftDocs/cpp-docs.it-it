@@ -36,6 +36,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345729"
 ---
 # <a name="changing-the-styles-of-a-window-created-by-mfc"></a>Modifica degli stili di una finestra creata da MFC
 La versione del `WinMain` (funzione), MFC la registrazione da diverse classi di finestra standard. Poiché non è in genere non modificare MFC `WinMain`, che non restituisce è alcuna possibilità di modificare gli stili di finestra predefiniti MFC. In questo articolo viene illustrato come è possibile modificare gli stili di tale classe finestra preregistrato in un'applicazione esistente.  

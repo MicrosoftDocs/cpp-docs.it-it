@@ -17,6 +17,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33847972"
 ---
 # <a name="how-to-use-existing-c-code-in-a-universal-windows-platform-app"></a>Procedura: utilizzare codice C++ esistente in un'app della piattaforma UWP (Universal Windows Platform)
 Il modo più semplice per eseguire il programma desktop nell'ambiente UWP consiste probabilmente nell'usare le tecnologie Desktop Bridge, tra cui Desktop App Converter, che consente di comprimere l'applicazione esistente come app UWP senza dover modificare il codice. Per altre informazioni, vedere [Portare un'app desktop sulla piattaforma UWP (Universal Windows Platform) con Desktop Bridge](https://msdn.microsoft.com/windows/uwp/porting/desktop-to-uwp-root).

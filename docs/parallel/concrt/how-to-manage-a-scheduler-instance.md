@@ -20,6 +20,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33687660"
 ---
 # <a name="how-to-manage-a-scheduler-instance"></a>Procedura: Gestire un'istanza dell'utilità di pianificazione
 Le istanze dell'utilità di pianificazione consentono di associare i criteri di pianificazione specifici a vari tipi di carichi di lavoro. In questo argomento contiene due esempi di base che illustrano come creare e gestire un'istanza dell'utilità di pianificazione.  

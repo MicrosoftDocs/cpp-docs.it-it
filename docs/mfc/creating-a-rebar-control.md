@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342307"
 ---
 # <a name="creating-a-rebar-control"></a>Creazione di un controllo Rebar
 [CReBarCtrl](../mfc/reference/crebarctrl-class.md) oggetti devono essere creati prima l'oggetto padre è visibile. In questo modo si riducono le possibilità che si verifichino problemi di disegno.  

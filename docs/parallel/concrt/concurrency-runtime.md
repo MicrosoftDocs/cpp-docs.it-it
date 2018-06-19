@@ -21,6 +21,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33693523"
 ---
 # <a name="concurrency-runtime"></a>Runtime di concorrenza
 Il runtime di concorrenza per C++ consente di scrivere applicazioni parallele affidabili, scalabili ed efficienti. Innalza il livello di astrazione in modo da evitare di dover gestire i dettagli dell'infrastruttura correlati alla concorrenza. È anche possibile usarlo per specificare i criteri di pianificazione che soddisfano le richieste di qualità del servizio delle applicazioni. Queste risorse permettono di iniziare a usare il runtime di concorrenza.  

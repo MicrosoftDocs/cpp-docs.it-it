@@ -28,6 +28,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33689584"
 ---
 # <a name="multithreading-terminating-threads"></a>Multithreading: terminazione dei thread
 Due situazioni normale causano un'interruzione di thread: non termina la funzione di controllo o il thread non è consentito per l'esecuzione fino al completamento. Se un elaboratore di testo utilizzato un thread in background, la funzione di controllo termina normalmente stampa viene completata correttamente. Se l'utente decide di annullare la stampa, tuttavia, il thread in background stampa deve essere interrotto in modo anomalo. In questo argomento viene illustrato come implementare ogni situazione sia come ottenere il codice di uscita di un thread dopo la terminazione.  

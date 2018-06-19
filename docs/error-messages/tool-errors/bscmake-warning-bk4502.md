@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33296250"
 ---
 # <a name="bscmake-warning-bk4502"></a>Avviso BK4502 di BSCMAKE
 troncato. File SBR 'nomefile', non nel nome file  

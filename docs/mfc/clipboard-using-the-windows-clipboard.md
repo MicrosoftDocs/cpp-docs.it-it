@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342108"
 ---
 # <a name="clipboard-using-the-windows-clipboard"></a>Appunti: utilizzo degli Appunti di Windows
 In questo argomento viene descritto come utilizzare l'API Appunti di Windows standard all'interno dell'applicazione MFC.  

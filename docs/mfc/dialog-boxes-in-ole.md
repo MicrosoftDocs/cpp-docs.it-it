@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347841"
 ---
 # <a name="dialog-boxes-in-ole"></a>Finestre di dialogo in OLE
 Mentre un utente esegue un'applicazione abilitata per OLE, vi sono casi l'applicazione richiede informazioni da parte dell'utente per eseguire l'operazione. Le classi OLE MFC forniscono un numero di finestre di dialogo per raccogliere le informazioni necessarie. Questo argomento elenca le attività gestite dalle finestre di dialogo OLE e le classi necessarie per visualizzare le finestre di dialogo. Per informazioni sulle finestre di dialogo OLE e le strutture utilizzate per personalizzare il comportamento, vedere [riferimenti alla libreria MFC](../mfc/mfc-desktop-applications.md).  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33690543"
 ---
 # <a name="a6---using-the-lastprivate-clause"></a>A.6   Utilizzo della clausola lastprivate
 Talvolta corretta esecuzione dipende dal valore assegnato a una variabile l'ultima iterazione di un ciclo. Tali programmi necessario elencare tutte le variabili come argomenti un `lastprivate` clausola ([sezione 2.7.2.3](../../parallel/openmp/2-7-2-3-lastprivate.md) nella pagina 27) in modo che i valori delle variabili sono identico quando il ciclo viene eseguito in modo sequenziale.  

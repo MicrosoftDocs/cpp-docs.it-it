@@ -25,6 +25,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33858757"
 ---
 # <a name="adding-or-deleting-a-string"></a>Aggiunta o eliminazione di una stringa
 È possibile inserire rapidamente nuove voci nella tabella di stringhe utilizzando l'editor di stringa. Le nuove stringhe vengono inserite alla fine della tabella e vengono assegnate il successivo identificatore disponibile. È quindi possibile modificare le proprietà ID, Value o Caption nel [finestra proprietà](/visualstudio/ide/reference/properties-window) in base alle esigenze.  

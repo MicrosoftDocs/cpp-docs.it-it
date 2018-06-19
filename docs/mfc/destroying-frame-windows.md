@@ -30,6 +30,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343476"
 ---
 # <a name="destroying-frame-windows"></a>Eliminazione definitiva di finestre cornice
 Il framework MFC gestisce distruzione di finestre, nonché la creazione delle finestre associate con documenti e visualizzazioni. Se si creano finestre aggiuntive, è responsabile per l'eliminazione.  

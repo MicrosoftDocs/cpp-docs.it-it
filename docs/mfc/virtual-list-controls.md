@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33384192"
 ---
 # <a name="virtual-list-controls"></a>Controlli List virtuali
 Un controllo elenco virtuale è un controllo visualizzazione elenco contenente il **LVS_OWNERDATA** stile. Questo stile consente al controllo di supportare fino a un conteggio elementi di un `DWORD` (numero predefinito dell'elemento è limitato a un `int`). Tuttavia, il vantaggio principale offerto da questo stile è la possibilità di avere solo un subset di elementi di dati in memoria in qualsiasi momento. In questo modo il controllo di visualizzazione elenco virtuale per cui si presta per l'utilizzo con database di grandi dimensioni di informazioni, in cui i metodi specifici di accesso ai dati sono già presenti.  

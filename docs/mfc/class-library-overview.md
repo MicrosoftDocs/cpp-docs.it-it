@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346900"
 ---
 # <a name="class-library-overview"></a>Cenni preliminari sulla libreria di classi
 Questa panoramica vengono suddivisi in categorie e descrive le classi in Microsoft Foundation classe libreria (MFC) versione 9.0. Le classi MFC, complessivamente, costituiscano un framework applicazione, il framework di un'applicazione scritta per l'API di Windows. Attività di programmazione consiste nel compilare il codice specifico per l'applicazione.  

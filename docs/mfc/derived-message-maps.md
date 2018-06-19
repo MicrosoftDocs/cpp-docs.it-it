@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342966"
 ---
 # <a name="derived-message-maps"></a>Mappe messaggi derivate
 Durante la gestione dei messaggi, controllare la mappa messaggi di una classe non è la fine della storia della mappa messaggi. Cosa accade se classe `CMyView` (derivato da `CView`) non dispone di alcuna voce corrispondente per un messaggio  
