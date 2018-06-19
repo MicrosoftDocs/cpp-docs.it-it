@@ -43,6 +43,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33378476"
 ---
 # <a name="message-map-macros-mfc"></a>Macro della mappa messaggi (MFC)
 Per supportare le mappe messaggi, MFC fornisce le seguenti macro:  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33199485"
 ---
 # <a name="fatal-error-c1076"></a>Errore irreversibile C1076
 limite del compilatore: raggiunto limite interno dell'heap. Utilizzare /Zm per specificare un limite maggiore  

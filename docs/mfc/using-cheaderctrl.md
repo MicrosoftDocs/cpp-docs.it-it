@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382450"
 ---
 # <a name="using-cheaderctrl"></a>Utilizzo di CHeaderCtrl
 Utilizzare un controllo di intestazione, rappresentato dalla classe [CHeaderCtrl](../mfc/reference/cheaderctrl-class.md), per visualizzare le intestazioni di colonna per un elenco di colonne. Ad esempio, un controllo di intestazione sarebbe utile per implementare i controlli di colonna in un foglio di calcolo.  

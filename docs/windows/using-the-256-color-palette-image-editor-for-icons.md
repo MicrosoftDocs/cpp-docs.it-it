@@ -25,6 +25,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33890905"
 ---
 # <a name="using-the-256-color-palette-image-editor-for-icons"></a>Utilizzo della tavolozza da 256 colori (Editor di immagini per le icone)
 Per disegnare con una selezione dalla tavolozza a 256 colori, è necessario selezionare i colori dalla tavolozza di colori di [finestra colori](../windows/colors-window-image-editor-for-icons.md).  

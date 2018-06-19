@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33882927"
 ---
 # <a name="displaying-or-hiding-the-pixel-grid-image-editor-for-icons"></a>Attivazione o disattivazione della griglia in pixel (Editor di immagini per le icone)
 Per tutti i riquadri dell'Editor di immagini con un fattore di ingrandimento pari o superiore a 4, è possibile visualizzare una griglia che delimita singoli pixel dell'immagine.  

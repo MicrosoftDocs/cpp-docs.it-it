@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33379203"
 ---
 # <a name="responding-to-dynamic-data-exchange-dde"></a>Risposta a DDE (Dynamic Data Exchange)
 La finestra cornice può rispondere alle richieste di dynamic data exchange (DDE) per aprire i file in File Manager (se l'estensione del file è registrata o associata all'applicazione). Vedere [Shell registrazione](../mfc/special-cwinapp-services.md).  

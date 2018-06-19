@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33892670"
 ---
 # <a name="safedivide"></a>SafeDivide
 Divide due numeri in modo che protegge da divisione per zero.  

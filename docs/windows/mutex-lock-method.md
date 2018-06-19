@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33880872"
 ---
 # <a name="mutexlock-method"></a>Metodo Mutex::Lock
 Attende l'oggetto corrente o l'oggetto Mutex associato all'handle specificato, il mutex rilasciato o è trascorso l'intervallo di timeout specificato.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381274"
 ---
 # <a name="steps-in-a-typical-internet-client-application"></a>Passaggi in un'applicazione client Internet tipica
 Nella tabella seguente vengono illustrati i passaggi che è possibile eseguire in una tipica applicazione client Internet.  

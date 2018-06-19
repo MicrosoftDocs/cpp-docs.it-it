@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381537"
 ---
 # <a name="trackers"></a>Tracker
 Il [CRectTracker](../mfc/reference/crecttracker-class.md) classe fornisce un'interfaccia utente tra gli elementi rettangolari nell'applicazione e l'utente, offrendo una varietà di stili di visualizzazione. Gli stili comprendono i bordi di continuo, tratteggiati o tratteggiati; un motivo tratteggiato che copre l'elemento. e quadratini di ridimensionamento che può trovarsi all'esterno o all'interno di un bordo. Tracker vengono spesso utilizzati in combinazione con gli elementi OLE, ovvero oggetti derivati da `COleClientItem`. I rettangoli tracker forniscono indicazioni visive sullo stato corrente dell'elemento.  
