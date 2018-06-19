@@ -58,7 +58,7 @@ Tramite l'architettura di Windows Runtime, è possibile utilizzare C + + CX, Vis
 ### <a name="namespaces"></a>Spazi dei nomi  
  Tutti i tipi di Windows Runtime devono essere dichiarati all'interno di uno spazio dei nomi; la stessa interfaccia API di Windows è organizzata per spazio dei nomi. Un file .winmd deve avere lo stesso nome dello spazio dei nomi radice. Ad esempio, è possibile creare un'istanza di una classe denominata A.B.C.MyClass solo se è definita in un file di metadati denominato A.winmd o A.B.winmd o A.B.C.winmd. Il nome della DLL non deve necessariamente corrispondere al nome del file con estensione winmd.  
   
- La stessa interfaccia API di Windows è stata ripensata come libreria di classi con corretto factoring organizzata per spazio dei nomi.  Tutti i componenti Windows Runtime vengono dichiarati negli spazi dei nomi Windows.  
+ La stessa interfaccia API di Windows è stata ripensata come libreria di classi con corretto factoring organizzata per spazio dei nomi.  Tutti i componenti Windows Runtime vengono dichiarati negli spazi dei nomi Windows.\*  
   
  Per ulteriori informazioni, vedere [gli spazi dei nomi e visibilità del tipo](../cppcx/namespaces-and-type-visibility-c-cx.md).  
   
