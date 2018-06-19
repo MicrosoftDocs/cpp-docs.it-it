@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33690091"
 ---
 # <a name="a27---use-of-c99-variable-length-arrays"></a>A.27   Utilizzo di matrici di lunghezza variabile C99
 Nell'esempio seguente viene illustrato come utilizzare matrici di lunghezza variabile C99 (VLAs) in un `firstprivate` (direttiva) ([sezione 2.7.2.2](../../parallel/openmp/2-7-2-2-firstprivate.md) nella pagina 26).  

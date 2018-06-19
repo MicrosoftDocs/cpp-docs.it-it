@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33295171"
 ---
 # <a name="compiler-warning-level-4-c4516"></a>Avviso del compilatore (livello 4) C4516
 'simbolo': le dichiarazioni di accesso sono deprecate. utilizzando le dichiarazioni di membri forniscono un'alternativa migliore  

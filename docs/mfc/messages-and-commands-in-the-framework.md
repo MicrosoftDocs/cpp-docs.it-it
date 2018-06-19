@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348879"
 ---
 # <a name="messages-and-commands-in-the-framework"></a>Messaggi e comandi nel framework
 Le applicazioni scritte per Microsoft Windows sono "messaggio basato su". In risposta a eventi, ad esempio clic del mouse, sequenze di tasti, spostamenti di tipo di finestra e così via, Windows invia i messaggi alla finestra appropriata. Applicazioni Framework elaborano i messaggi di Windows come qualsiasi altra applicazione per Windows. Ma il framework fornisce anche alcuni miglioramenti che consentono l'elaborazione dei messaggi più semplice, più facili da gestire e migliorare incapsulato.  

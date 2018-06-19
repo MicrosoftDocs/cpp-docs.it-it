@@ -32,6 +32,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33351353"
 ---
 # <a name="menus-and-resources-server-additions"></a>Menu e risorse: aggiunte di server
 In questo articolo vengono illustrate le modifiche da apportare ai menu e altre risorse in un'applicazione server (componente) modifica visiva. Un'applicazione server richiede di effettuare numerose aggiunte alla struttura di menu e altre risorse perché può essere avviato in una delle tre modalità: autonoma, o incorporato, sul posto. Come descritto nel [menu e risorse (OLE)](../mfc/menus-and-resources-ole.md) articolo, sono presenti un massimo di quattro gruppi di menu. Tutti e quattro viene utilizzati per un'applicazione server completo MDI, mentre solo tre sono utilizzati per un server ridotto. La creazione guidata applicazione verrà creato il layout di menu necessarie per il tipo di server desiderato. Alcune personalizzazioni potrebbero essere necessarie.  

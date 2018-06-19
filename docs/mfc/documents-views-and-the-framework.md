@@ -31,6 +31,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349519"
 ---
 # <a name="documents-views-and-the-framework"></a>Documenti, visualizzazioni e framework
 Il cuore del framework MFC sono i concetti di documento e la visualizzazione. Un documento è un oggetto dati con cui l'utente interagisce in una sessione di modifica. Viene creato dal `New` o **aprire** comando il **File** menu e viene in genere salvata in un file. (Documenti MFC standard, derivati dalla classe **CDocument**, sono diversi dai documenti attivi e documenti composti OLE.) Una vista è un oggetto finestra tramite il quale l'utente interagisce con un documento.  

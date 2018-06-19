@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348547"
 ---
 # <a name="ole-background-containers-and-servers"></a>Sfondo OLE: contenitori e server
 Un'applicazione contenitore è un'applicazione che è possibile incorporare elementi incorporati o collegati dei propri documenti. I documenti gestiti da un'applicazione contenitore devono essere in grado di archiviare e visualizzare i componenti di documenti OLE, nonché i dati creati dall'applicazione stessa. Un'applicazione contenitore deve inoltre consentire agli utenti di inserire nuovi elementi o modificare quelli esistenti tramite l'attivazione di applicazioni server, se necessario. In questo articolo sono elencati i requisiti di interfaccia utente di un'applicazione contenitore [contenitori: problemi dell'interfaccia utente](../mfc/containers-user-interface-issues.md).  

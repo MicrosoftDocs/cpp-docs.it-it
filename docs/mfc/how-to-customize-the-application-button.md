@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33351364"
 ---
 # <a name="how-to-customize-the-application-button"></a>Procedura: personalizzare il pulsante dell'applicazione
 Quando si fa clic sul pulsante di applicazione, viene visualizzato un menu dei comandi. In genere, il menu contiene i comandi relativi a file, ad esempio **aprire**, **salvare**, **stampa**, e **uscita**.  

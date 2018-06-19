@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348807"
 ---
 # <a name="dialog-bars"></a>Barra di finestra di dialogo
 Una barra di finestra di dialogo è una barra degli strumenti, un tipo di [barra di controllo](../mfc/control-bars.md) che può contenere qualsiasi tipo di controllo. Poiché presenta le caratteristiche di una finestra di dialogo non modale, un [CDialogBar](../mfc/reference/cdialogbar-class.md) oggetto fornisce una barra degli strumenti più potente.  

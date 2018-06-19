@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33351294"
 ---
 # <a name="optimizing-control-drawing"></a>Ottimizzazione del disegno dei controlli
 Quando viene richiesto a un controllo di disegnarsi in un contesto di dispositivo fornito dal contenitore, il controllo in genere seleziona gli oggetti GDI (come penne, pennelli e tipi di carattere) nel contesto di dispositivo, esegue le operazioni di disegno e ripristina gli oggetti GDI precedenti. Se il contenitore ha più controlli che devono essere disegnati nello stesso contesto di dispositivo e ogni controllo seleziona gli oggetti GDI necessari, è possibile risparmiare tempo se i controlli non ripristinano individualmente gli oggetti precedentemente selezionati. Una volta che tutti i controlli sono stati disegnati, il contenitore può automaticamente ripristinare gli oggetti originali.  

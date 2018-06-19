@@ -20,6 +20,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33685736"
 ---
 # <a name="how-to-create-agents-that-use-specific-scheduler-policies"></a>Procedura: Creare agenti che usano criteri dell'utilità di pianificazione specifici
 Un agente è un componente dell'applicazione che funziona in modo asincrono con altri componenti per risolvere le attività di elaborazione maggiori. In genere, un agente è un ciclo di vita stabilito e mantiene lo stato.  

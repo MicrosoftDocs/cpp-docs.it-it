@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33686256"
 ---
 # <a name="a5---using-the-critical-directive"></a>A.5   Utilizzo della direttiva critical
 Nell'esempio seguente sono inclusi diversi `critical` direttive ([sezione 2.6.2](../../parallel/openmp/2-6-2-critical-construct.md) a pagina 18). Nell'esempio viene illustrato un modello di Accodamento messaggi in cui un'attività viene rimosso dalla coda e di elaborazione. Per proteggersi da più thread di rimozione dalla coda la stessa attività, l'operazione di annullamento deve essere un `critical` sezione. Due code in questo esempio sono indipendenti, sono protetti da `critical` direttive con nomi diversi, *xaxis* e *AsseY*.  

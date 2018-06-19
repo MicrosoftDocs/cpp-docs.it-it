@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349909"
 ---
 # <a name="data-objects-and-data-sources-manipulation"></a>Oggetti dati e origini dati: modifica
 Dopo aver creata un'origine dati o un oggetto dati, è possibile eseguire un numero di operazioni frequenti nei dati, ad esempio l'inserimento e rimozione dei dati, l'enumerazione i formati che di dati sono in e altro ancora. In questo articolo descrive le tecniche necessarie per completare le operazioni più comuni. Gli argomenti trattati includono:  

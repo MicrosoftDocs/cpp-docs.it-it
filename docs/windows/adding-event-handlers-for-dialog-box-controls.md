@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33863699"
 ---
 # <a name="adding-event-handlers-for-dialog-box-controls"></a>Aggiunta di gestori eventi per i controlli della finestra di dialogo
 Per finestre di dialogo di progetto che sono già associati a una classe, è possibile sfruttare alcune scelte rapide durante la creazione di gestori eventi. È possibile creare rapidamente un gestore per l'evento di notifica di controllo predefinito o per qualsiasi messaggio di Windows.  

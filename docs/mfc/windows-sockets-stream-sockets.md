@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33386106"
 ---
 # <a name="windows-sockets-stream-sockets"></a>Windows Sockets: socket di flusso
 In questo articolo vengono descritti i socket di flusso, uno dei due tipi di socket Windows disponibili. (L'altro tipo è il [socket di datagramma](../mfc/windows-sockets-datagram-sockets.md).)  

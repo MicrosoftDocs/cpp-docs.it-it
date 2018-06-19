@@ -76,6 +76,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33862416"
 ---
 # <a name="compiler-support-for-type-traits-c-component-extensions"></a>Supporto del compilatore per tratti di tipo (Estensioni del componente C++)
 Il compilatore supporta *digitare tratti*, che indicano varie caratteristiche di un tipo in fase di compilazione.  

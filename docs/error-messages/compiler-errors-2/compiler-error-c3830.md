@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33267254"
 ---
 # <a name="compiler-error-c3830"></a>Errore del compilatore C3830
 'type1': non può ereditare da 'type2', valore tipi possono ereditare solo da classi di interfaccia  

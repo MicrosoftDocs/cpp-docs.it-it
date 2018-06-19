@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33861792"
 ---
 # <a name="changing-the-properties-of-a-resource"></a>Modifica delle proprietà di una risorsa
 ### <a name="to-edit-the-properties-of-a-resource"></a>Per modificare le proprietà di una risorsa  

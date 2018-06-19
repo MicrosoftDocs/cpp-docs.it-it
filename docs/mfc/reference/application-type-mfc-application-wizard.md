@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33353439"
 ---
 # <a name="application-type-mfc-application-wizard"></a>Tipo di applicazione, Creazione guidata applicazione MFC
 Utilizzare questa pagina della finestra di [Creazione guidata applicazione MFC](../../mfc/reference/mfc-application-wizard.md) per progettare e aggiungere funzionalità di base a una nuova applicazione MFC.  

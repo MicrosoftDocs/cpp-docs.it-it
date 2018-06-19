@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33860853"
 ---
 # <a name="callback-function-windows-runtime-c-template-library"></a>Funzione di callback (Libreria modelli C++ per Windows Runtime)
 Crea un oggetto la cui funzione membro è un metodo di callback.  

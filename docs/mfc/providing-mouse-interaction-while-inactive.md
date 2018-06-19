@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349675"
 ---
 # <a name="providing-mouse-interaction-while-inactive"></a>Inserimento di interazione del mouse in stato di inattività
 Se il controllo non è attivato immediatamente, può comunque desiderato per l'elaborazione `WM_SETCURSOR` e `WM_MOUSEMOVE` i messaggi, anche se il controllo non ha una finestra propria. Questo può essere eseguito abilitando `COleControl`dell'implementazione del `IPointerInactive` interfaccia, che è disabilitato per impostazione predefinita. (Vedere il *ActiveX SDK* per una descrizione di questa interfaccia.) Per abilitarlo, includere il `pointerInactive` flag nel set di flag restituiti da [COleControl:: GetControlFlags](../mfc/reference/colecontrol-class.md#getcontrolflags):  

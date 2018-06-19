@@ -47,6 +47,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348570"
 ---
 # <a name="device-contexts"></a>Contesti di dispositivo
 Un contesto di dispositivo è una struttura di dati di Windows che contiene informazioni sugli attributi di disegnati di un dispositivo, ad esempio una visualizzazione o una stampante. Tutte le chiamate di disegnare vengono effettuate tramite un oggetto contesto di dispositivo, che incapsula le API di Windows per disegno di linee, forme e testo. Contesti di dispositivo consentono disegno indipendente dal dispositivo in Windows. Contesti di dispositivo possono essere utilizzati per disegnare sullo schermo, alla stampante o in un metafile.  

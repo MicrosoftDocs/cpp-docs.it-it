@@ -22,6 +22,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33694563"
 ---
 # <a name="best-practices-in-the-parallel-patterns-library"></a>Procedure consigliate nella libreria PPL (Parallel Patterns Library)
 In questo documento viene descritto come ottimizzare l'uso della libreria PPL (Parallel Patterns Library). In tale libreria sono disponibili contenitori, oggetti e algoritmi di uso generale che consentono di eseguire un parallelismo accurato.  

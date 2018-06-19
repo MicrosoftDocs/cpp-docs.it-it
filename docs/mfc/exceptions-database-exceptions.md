@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33354302"
 ---
 # <a name="exceptions-database-exceptions"></a>Eccezioni: eccezioni di database
 In questo articolo viene illustrato come gestire le eccezioni di database. La maggior parte del materiale in questo articolo si applica se si lavora con le classi MFC per Open Database Connectivity (ODBC) o le classi MFC per oggetti DAO (Data Access). Verrà esplicitamente contrassegnato come materiale specifico a uno o l'altro modello. Gli argomenti trattati includono:  

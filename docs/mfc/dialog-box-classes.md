@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33351689"
 ---
 # <a name="dialog-box-classes"></a>Classi di finestre di dialogo
 Classe `CDialog` e le relative classi derivate incapsulano la funzionalità di finestra di dialogo. Poiché una finestra di dialogo è un tipo speciale di finestra, `CDialog` è derivato da `CWnd`. Derivare le classi di finestra di dialogo da `CDialog` o utilizzare una delle classi di finestra di dialogo comune per le finestre di dialogo standard, ad esempio l'apertura o salvataggio di un file, stampa, la selezione di un tipo di carattere o un colore, avvia un'operazione di ricerca e sostituzione o l'esecuzione di varie correlate a OLE operazioni.  

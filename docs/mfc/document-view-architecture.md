@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33350055"
 ---
 # <a name="documentview-architecture"></a>Architettura documento/visualizzazione
 Per impostazione predefinita, la creazione guidata applicazione MFC crea uno scheletro di applicazione con una classe di documento e una classe di visualizzazione. MFC separa la gestione dei dati in queste due classi. Il documento archivia i dati e gestisce i dati di stampa e coordina l'aggiornamento di più visualizzazioni dei dati. La vista vengono visualizzati i dati e gestisce l'interazione dell'utente con esso, ad esempio la scelta e la modifica.  

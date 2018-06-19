@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33371161"
 ---
 # <a name="type-casting-of-mfc-class-objects"></a>Cast di tipo degli oggetti classe MFC
 Le macro di cast di tipo forniscono un modo per eseguire il cast di un puntatore specificato a un puntatore che punta a un oggetto della classe specifico, con o senza verificare che il cast è valido.  

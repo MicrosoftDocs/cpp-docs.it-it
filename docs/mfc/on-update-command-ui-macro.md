@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348484"
 ---
 # <a name="onupdatecommandui-macro"></a>Macro ON_UPDATE_COMMAND_UI
 Utilizzare il **proprietà** finestra per la connessione a un oggetto dell'interfaccia utente a un gestore di aggiornamento di comandi in un oggetto di destinazione di comando. ID dell'oggetto dell'interfaccia utente verrà automaticamente connesso il `ON_UPDATE_COMMAND_UI` macro e creare un gestore dell'oggetto che gestirà l'aggiornamento. Vedere [Mapping di messaggi a funzioni](../mfc/reference/mapping-messages-to-functions.md) per ulteriori informazioni.  

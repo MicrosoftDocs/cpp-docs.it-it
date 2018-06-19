@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33860892"
 ---
 # <a name="changing-the-font-of-text-on-an-image-image-editor-for-icons"></a>Modifica del tipo di carattere del testo in un'immagine (Editor di immagini per le icone)
 La procedura seguente è riportato un esempio di come:  

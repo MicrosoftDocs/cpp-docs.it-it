@@ -19,6 +19,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33688791"
 ---
 # <a name="schedule-groups"></a>Gruppi di pianificazione
 Questo documento descrive il ruolo dei gruppi di pianificazione nel Runtime di concorrenza. Oggetto *gruppo di pianificazione* Raggruppa o gruppi, attività correlate tra loro. Ogni utilità di pianificazione ha uno o più gruppi di pianificazione. Usare i gruppi di pianificazione quando è necessario un livello elevato di località tra le attività, ad esempio quando un gruppo di attività correlate trae vantaggio dall'esecuzione nello stesso nodo del processore. Al contrario, utilizzare le istanze dell'utilità di pianificazione quando l'applicazione ha requisiti di qualità specifici, ad esempio, quando si desidera limitare la quantità di risorse di elaborazione che vengono allocate a un set di attività. Per ulteriori informazioni sulle istanze dell'utilità di pianificazione, vedere [istanze dell'utilità di pianificazione](../../parallel/concrt/scheduler-instances.md).  

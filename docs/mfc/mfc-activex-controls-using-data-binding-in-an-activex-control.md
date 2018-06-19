@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33353273"
 ---
 # <a name="mfc-activex-controls-using-data-binding-in-an-activex-control"></a>Controlli ActiveX MFC: utilizzo del data binding in un controllo ActiveX
 Uno degli usi più potenti di controlli ActiveX è l'associazione di dati, che consente una proprietà del controllo da associare a un campo specifico in un database. Quando un utente modifica i dati della proprietà associata, il controllo avvisa il database e le richieste che è possibile aggiornare i campi di record. Il database quindi notifica il controllo dell'esito positivo o negativo della richiesta.  

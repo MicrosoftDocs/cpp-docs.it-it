@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33355535"
 ---
 # <a name="help-menu-merging"></a>Unione di menu della Guida
 Quando un oggetto è attivo in un contenitore, il menu di protocollo di unione dei documenti OLE fornisce l'oggetto controllo completo di **Guida** menu. Di conseguenza, gli argomenti della Guida del contenitore non sono disponibili, a meno che l'utente disattiva l'oggetto. L'architettura active document containment amplia le regole per l'unione per consentire il contenitore e un documento attivo di condividere il menu dei menu sul posto. Le nuove regole sono semplicemente ulteriori convenzioni sul componente che possiede la parte del menu di scelta e modalità di costruzione di menu condiviso.  

@@ -33,6 +33,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33375973"
 ---
 # <a name="dialog-data-exchange-functions-for-ole-controls"></a>Funzioni DDX (Dialog Data Exchange) per controlli OLE
 In questo argomento elenca le funzioni DDX_OC utilizzate per scambiare dati tra una proprietà di un controllo OLE in una finestra di dialogo, la visualizzazione di form o oggetto visualizzazione controllo e un membro dati di oggetto visualizzazione controllo, la finestra di dialogo o visualizzazione form.  

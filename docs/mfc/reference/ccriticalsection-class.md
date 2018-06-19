@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33353905"
 ---
 # <a name="ccriticalsection-class"></a>CCriticalSection (classe)
 Rappresenta una "sezione critica", ovvero un oggetto di sincronizzazione che consente un solo thread alla volta per accedere a una risorsa o una sezione di codice.  

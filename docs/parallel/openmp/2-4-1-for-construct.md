@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33693549"
 ---
 # <a name="241-for-construct"></a>2.4.1 Costrutto for
 Il **per** direttiva identifica un costrutto di condivisione del lavoro iterativo che specifica che le iterazioni del ciclo associato verranno eseguite in parallelo. Le iterazioni del **per** ciclo vengono distribuite tra thread già presenti nel gruppo a cui associa un costrutto parallelo in esecuzione. La sintassi del **per** costrutto è come segue:  

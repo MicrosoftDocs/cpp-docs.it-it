@@ -20,6 +20,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33693263"
 ---
 # <a name="how-to-convert-an-openmp-loop-that-uses-cancellation-to-use-the-concurrency-runtime"></a>Procedura: Convertire un ciclo OpenMP che usa l'annullamento per l'utilizzo del runtime di concorrenza
 Alcuni cicli paralleli non richiedono che tutte le iterazioni da eseguire. Ad esempio, un algoritmo che cerca un valore può terminare dopo che il valore viene trovato. OpenMP non fornisce un meccanismo per interrompere un ciclo parallelo. Tuttavia, è possibile utilizzare un valore booleano o flag, per consentire a un'iterazione del ciclo per indicare che la soluzione è stata trovata. Il Runtime di concorrenza fornisce funzionalità che consente a un'attività di annullare altre attività che non sono ancora avviate.  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33860632"
 ---
 # <a name="attributes-by-usage"></a>Attributi in base all'utilizzo
 In questo argomento sono elencati gli attributi in base a cui si applicano gli elementi del linguaggio C++.  

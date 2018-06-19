@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33250703"
 ---
 # <a name="compiler-error-c3161"></a>Errore del compilatore C3161
 'interface': Impossibile nidificare una classe, unione, struct o interfaccia in un'interfaccia non è valida; Impossibile nidificare un'interfaccia in una classe, struct o unione non è valida  

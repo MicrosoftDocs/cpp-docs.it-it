@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33352577"
 ---
 # <a name="interface-elements"></a>Elementi dell'interfaccia utente
 Questo documento vengono descritti gli elementi di interfaccia che sono stati introdotti in [!INCLUDE[vs_orcas_long](../atl/reference/includes/vs_orcas_long_md.md)] SP1 e vengono inoltre descritte le differenze con la versione precedente della libreria.  

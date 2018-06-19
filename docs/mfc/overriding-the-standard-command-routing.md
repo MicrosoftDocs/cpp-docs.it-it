@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33352812"
 ---
 # <a name="overriding-the-standard-command-routing"></a>Override del routing dei comandi standard
 In rari casi quando è necessario implementare una variazione del routing standard framework, è possibile eseguirne l'override. Lo scopo consiste nel modificare il routing in una o più classi eseguendo l'override `OnCmdMsg` in tali classi. Scopo:  

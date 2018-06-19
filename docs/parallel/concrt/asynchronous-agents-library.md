@@ -20,6 +20,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33688996"
 ---
 # <a name="asynchronous-agents-library"></a>libreria di agenti asincroni
 Libreria di agenti asincroni (o semplicemente *libreria di agenti*) fornisce un modello di programmazione che consente di aumentare l'affidabilità dello sviluppo di applicazioni abilitate per la concorrenza. La libreria di agenti è una libreria di modelli di C++ che promuove un modello di programmazione basato su attori e attività di pipelining e il passaggio di un flusso di dati dei messaggi in-process. La libreria di agenti si basa sui componenti di gestione risorse e pianificazione del Runtime di concorrenza.  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33374800"
 ---
 # <a name="internet-url-parsing-globals-and-helpers"></a>Gli helper e funzioni globali di analisi di URL Internet
 Quando un client invia una query al server Internet, è possibile utilizzare l'URL globali di analisi per estrarre le informazioni sul client. Le funzioni di supporto forniscono altre funzionalità di internet.

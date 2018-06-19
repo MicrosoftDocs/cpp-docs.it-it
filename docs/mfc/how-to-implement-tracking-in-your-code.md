@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349736"
 ---
 # <a name="how-to-implement-tracking-in-your-code"></a>Procedura: implementare il rilevamento nel codice
 Per tenere traccia di un elemento OLE, è necessario gestire determinati eventi correlati all'elemento, ad esempio facendo clic sull'elemento o l'aggiornamento della vista del documento. In tutti i casi, è sufficiente dichiarare una variabile temporanea [CRectTracker](../mfc/reference/crecttracker-class.md) dell'oggetto e modificare l'elemento tramite questo oggetto.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33351637"
 ---
 # <a name="bitmap-structure"></a>Struttura BITMAP
 Il **BITMAP** struttura definisce l'altezza, larghezza, il formato di colore e i valori di bit di una bitmap logica **.**  

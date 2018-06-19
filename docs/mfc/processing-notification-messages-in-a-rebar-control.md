@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348416"
 ---
 # <a name="processing-notification-messages-in-a-rebar-control"></a>Elaborazione dei messaggi di notifica in un controllo Rebar
 Nella classe padre del controllo rebar, creare un `OnChildNotify` funzione del gestore con un'istruzione switch per qualsiasi controllo rebar (`CReBarCtrl`) che si desidera gestire i messaggi di notifica. Le notifiche vengono inviate alla finestra padre quando l'utente trascina oggetti tramite il controllo rebar, modifica il layout delle bande rebar, elimina bande dal controllo rebar e così via.  

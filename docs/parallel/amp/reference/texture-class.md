@@ -32,6 +32,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33692782"
 ---
 # <a name="texture-class"></a>Classe texture
 Una trama è di tipo data aggregata su un `accelerator_view` nel dominio dell'extent. È una raccolta di variabili, uno per ogni elemento in un dominio di extent. Ogni variabile contiene un valore corrispondente al tipo primitivo di C++ ( `unsigned int`, `int`, `float`, `double`), un tipo scalare ( `norm`, o `unorm`), o un tipo short vector.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349158"
 ---
 # <a name="manipulating-image-lists"></a>Modifica degli elenchi immagini
 Il [sostituire](../mfc/reference/cimagelist-class.md#replace) funzione membro sostituisce un'immagine in un elenco di immagini ([CImageList](../mfc/reference/cimagelist-class.md)) con una nuova immagine. Questa funzione è utile anche quando è necessario aumentare in modo dinamico il numero di immagini in un oggetto elenco immagini. Il [SetImageCount](../mfc/reference/cimagelist-class.md#setimagecount) funzione modificata in modo dinamico il numero di immagini archiviate nell'elenco delle immagini. Se si aumentano le dimensioni dell'elenco immagini, chiamare **sostituire** per aggiungere immagini al nuovo slot di immagine. Se si diminuisce la dimensione dell'elenco immagini, le immagini oltre la nuova dimensione vengono liberate.  

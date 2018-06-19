@@ -62,6 +62,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33353702"
 ---
 # <a name="handling-customization-notifications"></a>Gestione delle notifiche di personalizzazione
 In una comune barra degli strumenti Windows sono incorporate funzionalità di personalizzazione, inclusa una finestra di dialogo di personalizzazione definita dal sistema, che consentono all'utente di inserire, eliminare o riordinare i pulsanti della barra degli strumenti. L'applicazione determina se le funzionalità di personalizzazione sono disponibili e controlla l'ambito in cui l'utente può personalizzare la barra degli strumenti.  

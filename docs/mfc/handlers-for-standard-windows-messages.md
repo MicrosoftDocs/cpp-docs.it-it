@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348215"
 ---
 # <a name="handlers-for-standard-windows-messages"></a>Gestori per messaggi Windows standard
 I gestori predefiniti per i messaggi di Windows standard (**WM _**) sono già definiti nella classe `CWnd`. La libreria di classi basa i nomi per questi gestori sul nome del messaggio. Ad esempio, il gestore del messaggio `WM_PAINT` viene dichiarato in `CWnd` come:  

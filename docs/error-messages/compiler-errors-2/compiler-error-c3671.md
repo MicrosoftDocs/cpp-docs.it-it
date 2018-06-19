@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33263635"
 ---
 # <a name="compiler-error-c3671"></a>Errore del compilatore C3671
 'funzione_1': funzione non esegue l'override di 'funzione_2'  

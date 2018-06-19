@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33861136"
 ---
 # <a name="chaininterfaces-structure"></a>ChainInterfaces (struttura)
 Specifica le funzioni di verifica e inizializzazione che possono essere applicate a un set di ID di interfaccia.  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33686227"
 ---
 # <a name="325-omptestlock-and-omptestnestlock-functions"></a>3.2.5 Funzioni omp_test_lock e omp_test_nest_lock
 Queste funzioni tentano di impostare un blocco, ma non bloccano l'esecuzione del thread. Il formato è il seguente:  

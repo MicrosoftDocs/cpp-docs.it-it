@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33355311"
 ---
 # <a name="mfc-activex-controls-optimization"></a>Controlli ActiveX MFC: ottimizzazione
 Questo articolo illustra le tecniche che è possibile utilizzare per ottimizzare i controlli ActiveX per ottenere prestazioni migliori.  

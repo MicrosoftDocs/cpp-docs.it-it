@@ -19,6 +19,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33694069"
 ---
 # <a name="comparing-the-concurrency-runtime-to-other-concurrency-models"></a>Confronto tra runtime di concorrenza e altri modelli di concorrenza
 Questo documento descrive le differenze tra le funzionalità e i modelli di programmazione del runtime di concorrenza e quelli di altre tecnologie. È importante poter confrontare i vantaggi del runtime di concorrenza con quelli di altri modelli di programmazione per poter scegliere la tecnologia che meglio soddisfa i requisiti delle applicazioni in uso.  

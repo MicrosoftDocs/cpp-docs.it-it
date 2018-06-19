@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33695902"
 ---
 # <a name="a16---using-locks"></a>A.16   Utilizzo di blocchi
 Nell'esempio seguente (per [sezione 3.2](../../parallel/openmp/3-2-lock-functions.md) nella pagina 41) si noti che l'argomento alle funzioni di blocco deve avere tipo `omp_lock_t`, e che non è necessario scaricare il.  Le funzioni di blocco che il thread sia inattivo durante l'attesa di una voce per la prima sezione critica, ma di eseguire altre operazioni durante l'attesa di ingresso al secondo.  Il `omp_set_lock` blocchi di funzione, ma la `omp_test_lock` funzione non consentire il lavoro in skip() da eseguire.  

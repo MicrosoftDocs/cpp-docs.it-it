@@ -30,6 +30,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33356186"
 ---
 # <a name="file-io-classes"></a>Classi I/O di file
 Queste classi forniscono un'interfaccia per i file su disco tradizionali, i file in memoria, flussi attivi e Windows sockets. Tutte le classi derivate da `CFile` può essere utilizzato con un `CArchive` oggetto per eseguire la serializzazione.  

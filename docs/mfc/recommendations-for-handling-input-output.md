@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33355682"
 ---
 # <a name="recommendations-for-handling-inputoutput"></a>Suggerimenti per la gestione di input/output
 Sia con basate su file i/o che non dipende dal tipo di modalità rispondere alle domande nell'albero delle decisioni seguenti:  

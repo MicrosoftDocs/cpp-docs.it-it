@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33863406"
 ---
 # <a name="accelerator-keys-for-the-dialog-editor"></a>Tasti di scelta rapida per l'editor finestre
 Di seguito è il valore predefinito per i comandi di finestra di dialogo editor tasti di scelta rapida. Per modificare i tasti di scelta rapida, fare clic su **opzioni** nel **strumenti** menu, quindi scegliere **tastiera** sotto il **ambiente** cartella. Per altre informazioni, vedere [Identificazione e personalizzazione dei tasti di scelta rapida](/visualstudio/ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio).  

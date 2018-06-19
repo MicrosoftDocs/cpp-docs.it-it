@@ -26,6 +26,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33688869"
 ---
 # <a name="multithreading-creating-user-interface-threads"></a>Multithreading: creazione di thread dell'interfaccia utente
 Un thread dell'interfaccia utente è in genere utilizzati per gestire l'input dell'utente e rispondere agli eventi utente in modo indipendente da thread in esecuzione altre parti dell'applicazione. Il thread principale dell'applicazione (disponibile nel `CWinApp`-classe derivata) è già stato creato e avviato automaticamente. Questo argomento descrive i passaggi necessari per creare thread aggiuntivi dell'interfaccia utente.  

@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33352412"
 ---
 # <a name="memory-management-heap-allocation"></a>Gestione della memoria: allocazione di heap
 L'heap è riservato per le esigenze di allocazione di memoria del programma. È un'area oltre il codice programma e lo stack. Programmi C tipico utilizzano le funzioni `malloc` e **libero** per allocare e deallocare la memoria heap. La versione di Debug di MFC fornisce versioni modificate degli operatori C++ predefiniti **nuova** e **eliminare** per allocare e deallocare gli oggetti nella memoria heap.  

@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348179"
 ---
 # <a name="how-the-framework-calls-your-code"></a>Chiamate del codice dal framework
 È fondamentale comprendere la relazione tra il codice sorgente e il codice nel framework MFC. Quando l'applicazione è in esecuzione, la maggior parte del flusso di controllo risiede nel codice del framework. Il framework gestisce il ciclo dei messaggi che riceve i messaggi da Windows mentre l'utente sceglie i comandi e modifica i dati in una visualizzazione. Gli eventi che possono essere gestiti autonomamente dal framework non si basano affatto sul codice sorgente. Ad esempio, il framework è in grado di chiudere le finestre e di uscire da un'applicazione in risposta ai comandi dell'utente. Dal momento che gestisce tali attività, il framework utilizza gestori di messaggi e funzioni virtuali C++ per fornire le possibilità di rispondere a questi eventi. Comunque il codice non è contenuto nel controllo; il framework lo è.  

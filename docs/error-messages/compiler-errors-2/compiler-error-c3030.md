@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33245696"
 ---
 # <a name="compiler-error-c3030"></a>Errore del compilatore C3030
 'var': la variabile nella clausola/direttiva 'reduction' non può avere un tipo riferimento  

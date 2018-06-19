@@ -23,6 +23,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33695324"
 ---
 # <a name="task-parallelism-concurrency-runtime"></a>Parallelismo delle attività (runtime di concorrenza)
 Nel Runtime di concorrenza, un *attività* è un'unità di lavoro che esegue un processo specifico e in genere eseguita in parallelo con altre attività. Un'attività può essere scomposta in attività aggiuntive più precise, organizzate in un *gruppo di attività*.  

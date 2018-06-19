@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33373798"
 ---
 # <a name="user-interface-features-mfc-application-wizard"></a>Funzionalità interfaccia utente, Creazione guidata applicazione MFC
 In questo argomento illustra le opzioni che è possibile utilizzare per specificare l'aspetto dell'applicazione. Le funzionalità dell'interfaccia utente disponibili per il progetto dipendono dal tipo di applicazione specificato nella [tipo di applicazione, creazione guidata applicazione MFC](../../mfc/reference/application-type-mfc-application-wizard.md) pagina della creazione guidata applicazione MFC. Ad esempio, se si crea un'applicazione single document interface, è possibile aggiungere stili dei frame figlio.  

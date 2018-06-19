@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33370058"
 ---
 # <a name="dhtmlurleventmapentry-structure"></a>Struttura DHtmlUrlEventMapEntry
 Il `DHtmlUrlEventMapEntry` struttura fornisce il supporto di mappa eventi multi-URL.  

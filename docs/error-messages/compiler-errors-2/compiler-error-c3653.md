@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33266461"
 ---
 # <a name="compiler-error-c3653"></a>Errore del compilatore C3653
 'function': non utilizzabile come override denominato: una funzione sottoposta a override non trovata; si è omesso per il nome della funzione in modo esplicito, utilizzando un:: operatore?  

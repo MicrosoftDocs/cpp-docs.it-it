@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349344"
 ---
 # <a name="providing-drag-and-drop-support-for-header-items"></a>Fornire supporto di trascinamento della selezione per gli elementi di intestazione
 Per fornire il supporto di trascinamento e rilascio per gli elementi di intestazione, specificare il `HDS_DRAGDROP` stile. Supporto di trascinamento e rilascio per gli elementi di intestazione fornisce all'utente la possibilità di riordinare gli elementi dell'intestazione di un controllo header. Il comportamento predefinito contiene un'immagine di trascinamento semitrasparente dell'elemento dell'intestazione viene trascinato e un indicatore visivo della nuova posizione, se viene eliminato l'elemento dell'intestazione.  

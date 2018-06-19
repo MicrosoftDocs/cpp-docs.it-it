@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348606"
 ---
 # <a name="property-sheets-and-property-pages-in-mfc"></a>Finestre delle proprietà e pagine delle proprietà in MFC
 Finestra delle proprietà, noto anche come una scheda della finestra di dialogo è una finestra di dialogo che contiene le pagine delle proprietà. Ogni pagina delle proprietà è basata su una risorsa modello di finestra di dialogo e contiene i controlli. Viene racchiuso in una pagina con una scheda nella parte superiore. Il nome della pagina e indica lo scopo. Gli utenti di fare clic su una scheda nella finestra delle proprietà per selezionare un set di controlli.  

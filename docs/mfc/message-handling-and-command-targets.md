@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349467"
 ---
 # <a name="message-handling-and-command-targets"></a>Gestione dei messaggi e destinazioni comandi
 L'interfaccia dispatch comando `IOleCommandTarget` definisce un meccanismo semplice e flessibile per eseguire una query ed eseguire i comandi. Questo meccanismo è più semplice che dell'automazione `IDispatch` poiché è interamente basato su un set standard di comandi; comandi hanno raramente argomenti e informazioni sul tipo non è coinvolto (indipendenza dai tipi viene ridotto per anche gli argomenti di comando).  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33372003"
 ---
 # <a name="mfc-application-wizard"></a>Creazione guidata applicazione MFC
 La creazione guidata applicazione MFC genera un'applicazione che, quando viene compilato, implementa la funzionalità di base di un'applicazione eseguibile (.exe) di Windows. L'applicazione iniziale MFC include i file di origine (. cpp) di C++, file di risorse (RC), file di intestazione (h) e un file di progetto (vcxproj). Il codice che viene generato in questi file di avvio è basato su MFC.  

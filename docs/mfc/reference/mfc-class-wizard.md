@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33370142"
 ---
 # <a name="mfc-class-wizard"></a>Creazione guidata classe MFC
 Consente di aggiungere i messaggi e gestori di messaggi per le classi nel progetto. È anche possibile avviare altre procedure guidate o aggiungere una classe al progetto.  

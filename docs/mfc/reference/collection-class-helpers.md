@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33374838"
 ---
 # <a name="collection-class-helpers"></a>Supporti delle classi Collection
 Le classi di raccolta `CMap`, `CList`, e `CArray` utilizzare funzioni di supporto globali basati su modelli per tali scopi come il confronto, la copia e la serializzazione di elementi. Come parte dell'implementazione di classi basate su `CMap`, `CList`, e `CArray`, è necessario eseguire l'override di queste funzioni in base alle esigenze con le versioni personalizzata in base al tipo di dati archiviati nel mapping, elenco o matrice. Per informazioni sull'override di funzioni di supporto, ad esempio `SerializeElements`, vedere l'articolo [raccolte: come creare una raccolta indipendente dai tipi](../../mfc/how-to-make-a-type-safe-collection.md). Si noti che **ConstructElements** e **DestructElements** sono state deprecate.  

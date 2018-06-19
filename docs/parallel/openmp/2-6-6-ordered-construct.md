@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33690345"
 ---
 # <a name="266-ordered-construct"></a>2.6.6 Costrutto ordered
 Il seguente blocco strutturato un **ordinati** direttiva viene eseguita nell'ordine in cui vengono eseguite iterazioni in un ciclo sequenza. La sintassi del **ordinati** direttiva è come segue:  

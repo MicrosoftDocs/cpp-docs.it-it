@@ -28,6 +28,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33689025"
 ---
 # <a name="multithreading-how-to-use-the-synchronization-classes"></a>Multithreading: utilizzo delle classi di sincronizzazione
 La sincronizzazione di accesso alle risorse tra i thread è un problema comune quando si scrivono applicazioni multithreading. Presenza di due o più thread che accedono contemporaneamente che gli stessi dati possono produrre risultati indesiderati e imprevedibili. Ad esempio, un thread può essere l'aggiornamento il contenuto di una struttura mentre un altro thread sta leggendo il contenuto della stessa struttura. Non è noto a quali dati verrà visualizzato il thread di lettura: i dati precedenti, i dati appena scritti o eventualmente una combinazione di entrambi. MFC fornisce una serie di sincronizzazione e le classi di accesso di sincronizzazione per facilitare la risoluzione del problema. In questo argomento illustra le classi disponibili e come utilizzarle per creare classi thread-safe in una tipica applicazione multithread.  

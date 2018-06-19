@@ -33,6 +33,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349311"
 ---
 # <a name="memory-management-frame-allocation"></a>Gestione della memoria: allocazione di frame
 Allocazione di frame lo stesso nome "frame dello stack" è impostato ogni volta che viene chiamata una funzione. Lo stack frame è un'area di memoria che è temporaneamente contiene gli argomenti per la funzione, nonché tutte le variabili definite locali rispetto alla funzione. Variabili di frame vengono spesso denominate "automatiche" variabili perché il compilatore alloca automaticamente lo spazio per loro.  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33691908"
 ---
 # <a name="272-data-sharing-attribute-clauses"></a>2.7.2 Clausole di attributi per la condivisione di dati
 Diverse direttive accettano clausole che consentono all'utente di controllare gli attributi di condivisione delle variabili per la durata dell'area. Condivisione delle clausole di attributi si applicano solo a variabili dell'extent lessicale della direttiva in cui viene visualizzata la clausola. Non tutte le clausole seguenti sono consentite in tutte le direttive. L'elenco di clausole che sono validi in una direttiva particolare sono descritti con la direttiva.  

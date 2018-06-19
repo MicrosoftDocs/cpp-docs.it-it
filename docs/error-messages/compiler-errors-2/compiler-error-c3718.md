@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33264207"
 ---
 # <a name="compiler-error-c3718"></a>Errore del compilatore C3718
 è possibile chiamare 'event' solo nel contesto di una funzione membro della classe ricevente  

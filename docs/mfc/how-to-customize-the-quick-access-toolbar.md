@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349646"
 ---
 # <a name="how-to-customize-the-quick-access-toolbar"></a>Procedura: personalizzare la barra di accesso rapido
 La barra di accesso rapido (QAT) è una barra degli strumenti personalizzabile che contiene un set di controlli che sono visualizzati accanto al pulsante Applicazione o nelle schede di categoria. Nella figura seguente viene illustrata una barra di accesso rapido tradizionale.  

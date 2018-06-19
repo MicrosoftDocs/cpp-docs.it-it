@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33352835"
 ---
 # <a name="programmatic-printing"></a>Stampa a livello di codice
 OLE fornito i mezzi per identificare in modo permanente documenti (**GetClassFile**) e caricarli nel relativo codice associato (`CoCreateInstance`, **QueryInterface**, **Iid_ipersiststorage**, **IPersistFile:: Load**, e **IPersistStorage:: Load**). Per migliorare ulteriormente la stampa di documenti, contenimento dei documenti attivi (tramite una progettazione OLE esistente non fornita con OLE 2.0 originariamente) introdotta un'interfaccia di stampa standard di base, `IPrint`, in genere disponibili tramite qualsiasi oggetto in grado di caricare il stato persistente del tipo di documento. Ogni vista di un documento attivo può supportare facoltativamente il **IPrint** interfaccia per fornire queste funzionalità.  

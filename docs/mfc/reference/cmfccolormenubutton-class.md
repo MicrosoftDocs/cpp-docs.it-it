@@ -59,6 +59,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33370705"
 ---
 # <a name="cmfccolormenubutton-class"></a>Classe CMFCColorMenuButton
 La `CMFCColorMenuButton` classe supporta un comando di menu o un pulsante che avvia una finestra di dialogo Selezione colori.  

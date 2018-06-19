@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349617"
 ---
 # <a name="general-mfc-topics"></a>Argomenti MFC generali
 In questa serie di articoli sono inclusi dettagli tecnici sulla libreria Microsoft Foundation Class (MFC) e una panoramica del framework MFC e dei relativi componenti principali e sottosistemi.  

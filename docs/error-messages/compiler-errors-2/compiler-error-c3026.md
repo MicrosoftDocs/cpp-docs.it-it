@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33243708"
 ---
 # <a name="compiler-error-c3026"></a>Errore del compilatore C3026
 'clause': l'espressione della costante deve essere positiva  

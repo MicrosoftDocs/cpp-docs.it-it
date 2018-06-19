@@ -27,6 +27,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33689181"
 ---
 # <a name="taskcontinuationcontext-class"></a>Classe task_continuation_context
 La classe `task_continuation_context` consente di specificare dove eseguire una continuazione. È utile solo utilizzare questa classe da un'app di Windows Runtime. Per le app non di Windows Runtime, il contesto di esecuzione della continuazione attività è determinato dal runtime e non è configurabile.  

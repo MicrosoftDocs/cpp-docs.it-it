@@ -28,6 +28,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348390"
 ---
 # <a name="mfc-activex-controls-events"></a>Controlli ActiveX MFC: eventi
 Controlli ActiveX utilizzano eventi per notificare a un contenitore in cui è avvenuto qualcosa al controllo. Esempi comuni di eventi includono clic sul controllo, i dati immessi utilizzando la tastiera e le modifiche nello stato del controllo. Quando si verificano queste azioni, il controllo genera un evento per generare un avviso del contenitore.  

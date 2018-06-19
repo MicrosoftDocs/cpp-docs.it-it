@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33354780"
 ---
 # <a name="how-to-create-a-message-map-for-a-template-class"></a>Procedura: creare una mappa messaggi per una classe modello
 Mapping di messaggi in MFC fornisce un modo efficiente per indirizzare i messaggi di Windows per un'istanza dell'oggetto C++ appropriato. Le classi dell'applicazione, il documento e visualizzazione classi, classi di controlli e così via sono esempi di destinazioni di mappa messaggi MFC.  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33351115"
 ---
 # <a name="property-sheets-mfc"></a>Finestre delle proprietà (MFC)
 In questa serie di articoli viene spiegato come implementare il supporto per le finestre delle proprietà nelle applicazioni MFC. Una finestra delle proprietà, nota anche come finestra di dialogo a schede, è un mezzo per gestire molti controlli in una finestra di dialogo. La finestra delle proprietà contiene le pagine delle proprietà, ognuna basata su una risorsa distinta di modello finestra di dialogo. È possibile suddividere i comandi della finestra di dialogo in gruppi logici e inserire ogni gruppo nella relativa pagina delle proprietà.  

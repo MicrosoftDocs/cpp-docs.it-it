@@ -29,6 +29,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33864229"
 ---
 # <a name="changing-the-names-of-symbol-header-files"></a>Modifica dei nomi nei file di intestazione simboli
 In genere tutte le definizioni di simboli vengono salvate in Resource.h. Tuttavia, potrebbe essere necessario modificare il nome file di inclusione in modo da poter, ad esempio, usare più file di risorse nella stessa directory.  

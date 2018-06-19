@@ -41,6 +41,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33355162"
 ---
 # <a name="canimationpoint-class"></a>Classe CAnimationPoint
 Implementa la funzionalità di un punto le cui coordinate possono essere animate.  

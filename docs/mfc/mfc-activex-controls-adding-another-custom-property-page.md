@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33350781"
 ---
 # <a name="mfc-activex-controls-adding-another-custom-property-page"></a>Controlli ActiveX MFC: aggiunta di un'altra pagina delle proprietà personalizzata
 In alcuni casi, un controllo ActiveX può avere più di proprietà non può essere contenuta in una pagina delle proprietà. In questo caso, è possibile aggiungere le pagine delle proprietà per il controllo ActiveX per visualizzare queste proprietà.  

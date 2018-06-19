@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33374150"
 ---
 # <a name="logpen-structure"></a>Struttura LOGPEN
 Il `LOGPEN` struttura definisce stile, la larghezza e il colore di un oggetto pen, un oggetto utilizzato per disegnare linee e i bordi. Il [CPen::CreatePenIndirect](../../mfc/reference/cpen-class.md#createpenindirect) funzione Usa il `LOGPEN` struttura.  

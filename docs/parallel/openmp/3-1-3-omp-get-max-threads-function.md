@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33687511"
 ---
 # <a name="313-ompgetmaxthreads-function"></a>3.1.3 Funzione omp_get_max_threads
 Il **omp_get_max_threads** funzione restituisce un intero che deve necessariamente essere grande almeno come il numero di thread utilizzati per formare un team se un'area parallela senza un **num_threads** clausola Se si dovesse essere rilevati a questo punto nel codice. Il formato è il seguente:  

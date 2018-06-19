@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348989"
 ---
 # <a name="property-sheets-and-property-pages-mfc"></a>Finestre delle proprietà e pagine delle proprietà (MFC)
 MFC [la finestra di dialogo](../mfc/dialog-boxes.md) può assumere un aspetto "scheda finestra di dialogo" incorporando finestre delle proprietà e pagine delle proprietà. Chiamata di una finestra delle proprietà"" in MFC, questo tipo di finestra di dialogo simile a molte finestre di dialogo in Microsoft Word, Excel e Visual C++, sembra contenere una pila di finestre a schede, molto simile a una pila di cartelle di file visualizzati dal primo all'ultimo o un gruppo di finestre sovrapposte. Controlli della scheda anteriore sono visibili; solo la scheda con etichetta è visibile nelle schede posteriore. Finestre delle proprietà sono particolarmente utili per la gestione di un numero elevato di proprietà o impostazioni che possono essere suddivise in diversi gruppi. In genere, una finestra delle proprietà consente di semplificare un'interfaccia utente sostituendo diverse finestre di dialogo separate.  

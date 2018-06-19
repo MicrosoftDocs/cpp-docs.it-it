@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33372244"
 ---
 # <a name="database-support-mfc-application-wizard"></a>Supporto database, Creazione guidata applicazione MFC
 Questa pagina sono disponibili opzioni che consentono di specificare il livello di database supporta (nonché l'origine dati, se necessario) per il progetto.  

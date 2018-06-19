@@ -36,6 +36,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33352789"
 ---
 # <a name="docking-and-floating-toolbars"></a>Ancoraggio e barre degli strumenti mobili
 La libreria Microsoft Foundation Class supporta le barre degli strumenti ancorabile. Una barra degli strumenti ancorata possa essere collegato o ancorata, a qualsiasi lato della finestra padre, oppure può essere scollegato, o resa mobile, in una finestra con mini-cornice. In questo articolo viene illustrato come utilizzare le barre degli strumenti ancorabile nelle applicazioni.  

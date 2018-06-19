@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33864940"
 ---
 # <a name="basic-mechanics-of-attributes"></a>Meccanismi di base degli attributi
 Esistono tre modi per inserire attributi nel progetto. In primo luogo, è possibile inserirli manualmente il codice sorgente. In secondo luogo, è possibile inserirli utilizzando la griglia delle proprietà di un oggetto nel progetto. Infine, è possibile inserirli mediante le procedure guidate di diversi. Per ulteriori informazioni sull'utilizzo di finestra proprietà e le varie procedure guidate, vedere [creazione e gestione di progetti Visual C++](../ide/creating-and-managing-visual-cpp-projects.md).  

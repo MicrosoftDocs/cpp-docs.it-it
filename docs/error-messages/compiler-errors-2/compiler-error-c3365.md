@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33252520"
 ---
 # <a name="compiler-error-c3365"></a>Errore del compilatore C3365
 operatore 'operator': operandi differenti di tipo 'type1' e 'type2'  

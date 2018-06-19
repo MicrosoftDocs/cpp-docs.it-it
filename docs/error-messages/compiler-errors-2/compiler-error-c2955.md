@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33245949"
 ---
 # <a name="compiler-error-c2955"></a>Errore del compilatore C2955
 'identifier': l'utilizzo di modello di classe o alias generico richiede un elenco di argomenti di modello o generici  

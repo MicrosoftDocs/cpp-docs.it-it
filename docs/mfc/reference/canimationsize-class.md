@@ -41,6 +41,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33354135"
 ---
 # <a name="canimationsize-class"></a>Classe CAnimationSize
 Implementa la funzionalità di un oggetto dimensioni le cui dimensioni possono essere animate.  

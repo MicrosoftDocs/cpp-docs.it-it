@@ -31,6 +31,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33370168"
 ---
 # <a name="cmfcribbonundobutton-class"></a>Classe CMFCRibbonUndoButton
 Il `CMFCRibbonUndoButton` implementa un pulsante di elenco a discesa che contiene i comandi più recenti di utente. Gli utenti possono selezionare uno o più comandi più recenti nell'elenco di riepilogo a discesa Ripristina o annullarle.  

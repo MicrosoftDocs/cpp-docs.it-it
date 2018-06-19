@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33372447"
 ---
 # <a name="creating-a-forms-based-mfc-application"></a>Creazione di un'applicazione MFC basata su form
 Un modulo è una finestra di dialogo con i controlli che consentono agli utenti di accedere a ed eventualmente modificare dati. Si consiglia di sviluppare un'applicazione in cui l'utente seleziona da un insieme di form. In genere, un'applicazione basata su form consente il form di accesso utente facendo clic con pulsante **New** dal **File** menu. Un'applicazione basata su finestra di dialogo, che è possibile accedere a un **New** opzione il **File** menu, si tratta di un'applicazione basata su form.  

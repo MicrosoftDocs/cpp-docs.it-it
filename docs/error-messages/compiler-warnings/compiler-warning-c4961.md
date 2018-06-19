@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33269527"
 ---
 # <a name="compiler-warning-c4961"></a>Avviso del compilatore C4961
 Dati di profilo non sottoposti a merge in '.pgd file', ottimizzazioni PGO disabilitate  

@@ -148,6 +148,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33695379"
 ---
 # <a name="concurrencyprecisemath-namespace"></a>Spazio dei nomi Concurrency::precise_math
 Le funzioni di `precise_math` dello spazio dei nomi sono conformi C99. Entrambi precisione singola e precisione doppia le versioni di ogni funzione sono incluse. Ad esempio, `acos` è la versione e con precisione doppia e `acosf` è la versione e con precisione singola. Queste funzioni, tra cui le funzioni e con precisione singola, richiedono il supporto esteso di e con precisione doppia nel tasto di scelta rapida. È possibile utilizzare il [Accelerator:: supports_double_precision](accelerator-class.md#supports_double_precision) per determinare se è possibile eseguire queste funzioni in un tasto di scelta rapida specifico. 
