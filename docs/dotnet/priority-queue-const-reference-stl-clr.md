@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33159275"
 ---
 # <a name="priorityqueueconstreference-stlclr"></a>priority_queue::const_reference (STL/CLR)
 Tipo di un riferimento costante a un elemento.  

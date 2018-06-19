@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33127981"
 ---
 # <a name="how-to-test-for-equality-ccli"></a>Procedura: verificare l'uguaglianza (C++/CLI)
 Nell'esempio seguente, un test di uguaglianza che usa le estensioni gestite per C++ si basa su ciò che gli handle fanno riferimento a.  

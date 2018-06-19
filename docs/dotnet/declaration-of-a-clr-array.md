@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33112134"
 ---
 # <a name="declaration-of-a-clr-array"></a>Dichiarazione di una matrice CLR
 La sintassi di dichiarazione, creazione di un'istanza e l'inizializzazione di una matrice gestita ha modificato dalle estensioni gestite per C++ in Visual C++.  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33128280"
 ---
 # <a name="how-to-use-regular-expressions-for-simple-matching-ccli"></a>Procedura: utilizzare espressioni regolari per la corrispondenza semplice (C++/CLI)
 Esempio di codice seguente utilizza espressioni regolari per cercare le corrispondenze esatte di sottostringhe. La ricerca viene eseguita da statico <xref:System.Text.RegularExpressions.Regex.IsMatch%2A> metodo che accetta come input due stringhe. Il primo è la stringa da cercare e il secondo è il motivo per cui eseguire la ricerca.  

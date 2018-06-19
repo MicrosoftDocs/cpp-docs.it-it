@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33277404"
 ---
 # <a name="compiler-warning-level-1-c4145"></a>Avviso del compilatore (livello 1) C4145
 'espressione1': espressione relazionale come espressione switch. Possibile confusione con 'espressione2'.  

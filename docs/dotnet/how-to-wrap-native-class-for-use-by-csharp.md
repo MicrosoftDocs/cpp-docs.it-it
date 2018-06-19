@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33128693"
 ---
 # <a name="how-to-wrap-native-class-for-use-by-c"></a>Procedura: eseguire il wrapping di una classe nativa affinché possa essere utilizzata in C#
 Questo esempio viene illustrato come eseguire il wrapping di una classe C++ nativa in modo che possa essere utilizzata da codice creato in c# o altri linguaggi .NET.  

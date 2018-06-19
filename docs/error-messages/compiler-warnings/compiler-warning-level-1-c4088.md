@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33278457"
 ---
 # <a name="compiler-warning-level-1-c4088"></a>Compilatore (livello 1) Avviso C4088
 'function': errata corrispondenza del puntatore nel parametro effettivo 'number', parametro formale 'number'  

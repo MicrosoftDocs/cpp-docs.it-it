@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33224232"
 ---
 # <a name="compiler-error-c2449"></a>Errore del compilatore C2449
 trovato ' {' in ambito file (intestazione di funzione mancante)?  

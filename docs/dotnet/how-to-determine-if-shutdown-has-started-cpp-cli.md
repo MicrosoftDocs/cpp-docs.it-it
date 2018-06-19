@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33137702"
 ---
 # <a name="how-to-determine-if-shutdown-has-started-ccli"></a>Procedura: determinare se l'operazione di arresto è stata avviata (C++/CLI)
 Esempio di codice seguente viene illustrato come determinare se l'applicazione o a .NET Framework è in fase di chiusura. Ciò è utile per l'accesso a elementi statici in .NET Framework, perché durante la chiusura, questi costrutti vengono finalizzati dal sistema e non possono essere utilizzati in modo affidabile. Controllando il <xref:System.Environment.HasShutdownStarted%2A> proprietà prima di tutto, per evitare potenziali problemi, l'accesso a questi elementi.  

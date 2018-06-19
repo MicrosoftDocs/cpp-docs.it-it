@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33131342"
 ---
 # <a name="iterating-over-c-standard-library-collection-by-using-for-each"></a>L'iterazione sulla raccolta di libreria Standard C++ con for each
 Il `for each` (parola chiave) utilizzabile per scorrere una raccolta della libreria Standard C++.  

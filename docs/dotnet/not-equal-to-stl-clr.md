@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33136444"
 ---
 # <a name="notequalto-stlclr"></a>not_equal_to (STL/CLR)
 La classe modello descrive una funzione che, quando viene chiamato, restituisce true solo se il primo argomento non è uguale al secondo. Utilizzare, specificare un oggetto funzione in relazione al relativo tipo di argomento.  

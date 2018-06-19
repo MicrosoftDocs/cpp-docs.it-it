@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33130058"
 ---
 # <a name="how-to-convert-image-file-formats-with-the-net-framework"></a>Procedura: convertire formati di file immagine con .NET Framework
 L'esempio di codice seguente illustra il <xref:System.Drawing.Image?displayProperty=fullName> classe e <xref:System.Drawing.Imaging.ImageFormat?displayProperty=fullName> enumerazione utilizzata per convertire e salvare i file di immagine. Il codice seguente carica un'immagine da un file con estensione jpg e infine la salva in formato di file con estensione gif e bmp.  

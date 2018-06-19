@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33130503"
 ---
 # <a name="how-to-iterate-over-arrays-with-for-each"></a>Procedura: scorrere le matrici con for each
 In questo argomento viene illustrato come utilizzare il [per ognuno, in](../dotnet/for-each-in.md) (parola chiave) su diversi tipi di matrici.  

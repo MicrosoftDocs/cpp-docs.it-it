@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33133427"
 ---
 # <a name="how-to-diagnose-and-fix-assembly-compatibility-problems-ccli"></a>Procedura: diagnosticare e correggere i problemi di compatibilità degli assembly (C++/CLI)
 Questo argomento viene illustrato cosa può accadere quando la versione di un assembly a cui fa riferimento in fase di compilazione non corrisponde alla versione dell'assembly a cui fa riferimento in fase di esecuzione e come evitare il problema.  

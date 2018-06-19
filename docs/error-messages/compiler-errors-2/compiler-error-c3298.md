@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33250876"
 ---
 # <a name="compiler-error-c3298"></a>Errore del compilatore C3298
 'constraint_1': impossibile utilizzare 'constraint_2' come vincolo poiché 'constraint_2' contiene il vincolo ref constraint e 'constraint_1' contiene il vincolo value  

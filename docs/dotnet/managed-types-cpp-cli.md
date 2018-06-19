@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33137678"
 ---
 # <a name="managed-types-ccli"></a>Tipi gestiti (C++/CLI)
 Visual C++ consente l'accesso alle funzionalità di .NET tramite tipi gestiti, che forniscono il supporto per le funzionalità di common language runtime e sono soggetti ai vantaggi e limitazioni del runtime.  

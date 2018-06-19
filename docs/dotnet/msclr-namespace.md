@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33132908"
 ---
 # <a name="msclr-namespace"></a>Spazio dei nomi msclr
 Il `msclr` spazio dei nomi contiene tutte le classi della libreria di supporto di C++. Per ulteriori informazioni su queste classi, vedere [libreria di supporto per C++](../dotnet/cpp-support-library.md).  

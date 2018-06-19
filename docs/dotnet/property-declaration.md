@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33161577"
 ---
 # <a name="property-declaration"></a>Dichiarazione di proprietà
 Il modo per dichiarare una proprietà in una classe gestita è cambiato da estensioni gestite per C++ a Visual C++.  

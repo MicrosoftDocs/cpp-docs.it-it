@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33130705"
 ---
 # <a name="how-to-monitor-file-system-changes-ccli"></a>Procedura: monitorare le modifiche del file system (C++/CLI)
 Nell'esempio di codice viene illustrato come utilizzare <xref:System.IO.FileSystemWatcher> per registrare gli eventi corrispondenti ai file creati, modificati, eliminati o rinominati. Anziché eseguire periodicamente il polling di una directory per le modifiche ai file, è possibile utilizzare la <xref:System.IO.FileSystemWatcher> classe per generare gli eventi quando viene rilevata una modifica.  

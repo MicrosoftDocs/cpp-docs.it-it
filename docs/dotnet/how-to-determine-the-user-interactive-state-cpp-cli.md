@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33127305"
 ---
 # <a name="how-to-determine-the-user-interactive-state-ccli"></a>Procedura: determinare lo stato interattivo con l'utente (C++/CLI)
 Esempio di codice seguente viene illustrato come determinare se viene eseguito codice in un contesto utente interattivo. Se <xref:System.Environment.UserInteractive%2A> è false, il codice è in esecuzione come processo di servizio o da un'applicazione Web, nel qual caso non tentare di interagire con l'utente.  

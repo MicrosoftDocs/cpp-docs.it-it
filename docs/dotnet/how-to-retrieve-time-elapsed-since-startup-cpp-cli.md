@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33132830"
 ---
 # <a name="how-to-retrieve-time-elapsed-since-startup-ccli"></a>Procedura: recuperare il tempo trascorso dall'avvio (C++/CLI)
 Esempio di codice riportato di seguito viene illustrato come determinare il numero di segni di graduazione o numero di millisecondi trascorsi da Windows è stato avviato. Questo valore viene archiviato nel <xref:System.Environment.TickCount%2A?displayProperty=fullName> membro e, poiché si tratta di un valore a 32 bit, viene reimpostato su zero approssimativamente ogni 24,9 giorni.  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33129616"
 ---
 # <a name="how-to-use-regular-expressions-to-validate-data-formatting-ccli"></a>Procedura: utilizzare espressioni regolari per convalidare la formattazione dei dati (C++/CLI)
 Esempio di codice seguente viene illustrato l'utilizzo di espressioni regolari per verificare la formattazione della stringa. Nell'esempio di codice seguente, la stringa deve contenere un numero di telefono valido. L'esempio di codice seguente viene utilizzata la stringa "\d{3}-\d{3}-\d{4}" per indicare che ogni campo rappresenta un numero di telefono valido. "D" nella stringa indica una cifra e l'argomento dopo ciascuna "d" indica il numero di cifre che deve essere presente. In questo caso, il numero deve essere separati da trattini.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33247706"
 ---
 # <a name="compiler-error-c3166"></a>Errore del compilatore C3166
 'pointer': Impossibile dichiarare un puntatore a un puntatore gc interno come membro di 'type'  

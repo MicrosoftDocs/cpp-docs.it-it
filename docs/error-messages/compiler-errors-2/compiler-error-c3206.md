@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33247417"
 ---
 # <a name="compiler-error-c3206"></a>Errore del compilatore C3206
 'function': argomento di tipo non valido per 'param', elenco di argomenti di tipo mancante per il tipo di classe 'typename'  

@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33130114"
 ---
 # <a name="how-to-read-windows-performance-counters-ccli"></a>Procedura: leggere contatori di prestazioni di Windows (C++/CLI)
 Alcune applicazioni e i sottosistemi Windows espongono i dati sulle prestazioni tramite il sistema delle prestazioni di Windows. Questi contatori è possibile accedere tramite il <xref:System.Diagnostics.PerformanceCounterCategory> e <xref:System.Diagnostics.PerformanceCounter> classi, che si trovano nel <xref:System.Diagnostics?displayProperty=fullName> dello spazio dei nomi.  

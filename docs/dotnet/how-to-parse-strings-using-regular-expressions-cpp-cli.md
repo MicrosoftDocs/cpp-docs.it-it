@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33131098"
 ---
 # <a name="how-to-parse-strings-using-regular-expressions-ccli"></a>Procedura: analizzare le stringhe mediante espressioni regolari (C++/CLI)
 Esempio di codice riportato di seguito viene illustrato come analizzare semplici stringhe utilizzando il <xref:System.Text.RegularExpressions.Regex> classe il <xref:System.Text.RegularExpressions?displayProperty=fullName> dello spazio dei nomi. Stringa che contiene più tipi di descrittori di parole viene costruita. La stringa viene quindi analizzata utilizzando il <xref:System.Text.RegularExpressions.Regex> classe in combinazione con la <xref:System.Text.RegularExpressions.Match> classe. Quindi, ogni parola della frase viene visualizzato separatamente.  

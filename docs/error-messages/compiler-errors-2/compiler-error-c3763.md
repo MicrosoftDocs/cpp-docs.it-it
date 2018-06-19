@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33269025"
 ---
 # <a name="compiler-error-c3763"></a>Errore del compilatore C3763
 'type': 'retval' e 'out' possono apparire solo in un tipo di puntatore a dati  

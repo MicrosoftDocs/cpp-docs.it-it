@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33167892"
 ---
 # <a name="compiler-error-c2030"></a>Errore del compilatore C2030
 un distruttore con accessibilità 'protected private' non può essere membro di una classe dichiarata 'sealed'  

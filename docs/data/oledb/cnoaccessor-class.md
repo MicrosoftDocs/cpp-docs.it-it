@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33097354"
 ---
 # <a name="cnoaccessor-class"></a>Classe CNoAccessor
 Può essere utilizzato come argomento di modello (`TAccessor`) per le classi di modello, ad esempio `CCommand` e `CTable`, che richiedono un argomento di classe della funzione di accesso.  

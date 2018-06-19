@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33164050"
 ---
 # <a name="performance-considerations-for-interop-c"></a>Considerazioni sulle prestazioni per l'interoperabilità (C++)
 In questo argomento vengono fornite linee guida per ridurre l'effetto delle transizioni di interoperabilità gestito e non sulle prestazioni in fase di esecuzione.  

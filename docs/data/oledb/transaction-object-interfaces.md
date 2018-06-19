@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33104552"
 ---
 # <a name="transaction-object-interfaces"></a>Interfacce dell'oggetto Transaction
 Oggetto di transazione definisce un'unità atomica di lavoro su un'origine dati e determina come le unità di lavoro correlati tra loro. Questo oggetto non è supportato direttamente tramite i modelli di provider OLE DB (ovvero, è necessario creare un oggetto personalizzato).  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33164996"
 ---
 # <a name="static-const-int-linkage-is-no-longer-literal"></a>L'attributo di collegamento dei membri integrali di Static Const non è più Literal
 La dichiarazione di un membro costante di una classe è stata modificata dalle estensioni gestite per C++ a Visual C++.  

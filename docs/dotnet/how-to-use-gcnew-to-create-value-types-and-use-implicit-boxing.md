@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33128797"
 ---
 # <a name="how-to-use-gcnew-to-create-value-types-and-use-implicit-boxing"></a>Procedura: utilizzare gcnew per creare tipi di valore e utilizzare la conversione boxing implicita
 Utilizzando [gcnew](../windows/ref-new-gcnew-cpp-component-extensions.md) su un valore di tipo verrà creato un tipo di valore boxed, che può essere inserito nell'heap gestito e sottoposto a garbage collection.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33127851"
 ---
 # <a name="how-to-retrieve-file-information-ccli"></a>Procedura: recuperare informazioni sui file (C++/CLI)
 L'esempio di codice seguente illustra la <xref:System.IO.FileInfo> classe. Quando si conoscono il nome di un file, è possibile utilizzare questa classe per recuperare informazioni sul file, ad esempio le dimensioni del file, directory, il nome completo e data e ora di creazione e dell'ultima modifica.  

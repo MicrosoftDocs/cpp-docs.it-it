@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33163959"
 ---
 # <a name="swap-function-autohandle"></a>Funzione swap (auto_handle)
 Scambia gli oggetti tra uno `auto_handle` e un altro.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33281976"
 ---
 # <a name="compiler-warning-level-1-c4297"></a>Avviso del compilatore (livello 1) C4297
 'function': la funzione genera un'eccezione benché ciò non fosse previsto  

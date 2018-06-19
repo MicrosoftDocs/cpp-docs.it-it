@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33130769"
 ---
 # <a name="how-to-detect-clr-compilation"></a>Procedura: rilevare compilazioni /clr
 Utilizzare il `_MANAGED` o `_M_CEE` macro per vedere se un modulo compilato con **/clr**. Per altre informazioni, vedere [/clr (Compilazione Common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md).  

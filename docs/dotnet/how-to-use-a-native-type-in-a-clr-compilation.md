@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33128407"
 ---
 # <a name="how-to-use-a-native-type-in-a-clr-compilation"></a>Procedura: utilizzare un tipo nativo in una compilazione /clr
 È possibile definire un tipo nativo in un **/clr** compilazione e qualsiasi uso di tale tipo nativo dall'assembly è valido. Tuttavia, i tipi nativi non sarà disponibili per l'utilizzo dei metadati di riferimento.  

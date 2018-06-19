@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33248526"
 ---
 # <a name="compiler-error-c3190"></a>Errore del compilatore C3190
 "creazione dell'istanza' con gli argomenti di modello specificato non è la creazione di istanze esplicite di alcuna funzione membro di 'type'  

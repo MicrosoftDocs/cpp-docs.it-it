@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33111081"
 ---
 # <a name="ole-db-object-model"></a>Modello a oggetti OLE DB
 Il modello a oggetti OLE DB comprende gli oggetti o i componenti seguenti. I primi quattro oggetti o componenti elencati (origini dati, le sessioni, comandi e i set di righe) consentono di connettersi a un'origine dati e visualizzarli. Il resto, a partire da funzioni di accesso, riguardano l'utilizzo con i dati quando viene visualizzato.  

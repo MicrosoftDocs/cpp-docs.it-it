@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33137374"
 ---
 # <a name="how-to-marshal-unicode-strings-for-adonet-ccli"></a>Procedura: Effettuare il marshalling di stringhe Unicode per ADO.NET (C++/CLI)
 Viene illustrato come aggiungere una stringa Unicode nativa (`wchar_t *`) a un database e come effettuare il marshalling un <xref:System.String?displayProperty=fullName> da un database in una stringa Unicode nativa.  

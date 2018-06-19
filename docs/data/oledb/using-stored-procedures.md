@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33112238"
 ---
 # <a name="using-stored-procedures"></a>Utilizzo delle stored procedure
 Una stored procedure è un oggetto eseguibile archiviato in un database. La chiamata di una stored procedure è simile alla chiamata a un comando SQL. Utilizzo di stored procedure sull'origine dati (anziché l'esecuzione o la preparazione di un'istruzione nell'applicazione client), è possibile fornire diversi vantaggi, tra cui prestazioni superiori, overhead di rete ridotto e maggiore uniformità e accuratezza.  

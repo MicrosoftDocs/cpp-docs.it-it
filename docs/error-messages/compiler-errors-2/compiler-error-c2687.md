@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33233018"
 ---
 # <a name="compiler-error-c2687"></a>Errore del compilatore C2687
 'type': dichiarazione di eccezione non può essere 'void' o indicare un tipo incompleto o un puntatore o un riferimento a un tipo incompleto  

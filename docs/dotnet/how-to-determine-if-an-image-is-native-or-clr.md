@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33128225"
 ---
 # <a name="how-to-determine-if-an-image-is-native-or-clr"></a>Procedura: determinare se un'immagine è nativa o CLR
 Un modo per determinare se un'immagine è stata compilata per common language runtime è possibile utilizzare **dumpbin**[/CLRHEADER](../build/reference/clrheader.md).  

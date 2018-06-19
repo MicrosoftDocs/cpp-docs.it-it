@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33163010"
 ---
 # <a name="randomshuffle-stlclr"></a>random_shuffle (STL/CLR)
 Ridispone una sequenza di `N` elementi in un intervallo in una delle `N`! possibili disposizioni selezionate in modo casuale.  

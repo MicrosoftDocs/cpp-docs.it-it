@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33136565"
 ---
 # <a name="logicaland-stlclr"></a>logical_and (STL/CLR)
 La classe modello descrive una funzione che, quando viene chiamato, restituisce true solo se sia il primo argomento e il secondo test come true. Utilizzare, specificare un oggetto funzione in relazione al relativo tipo di argomento.  

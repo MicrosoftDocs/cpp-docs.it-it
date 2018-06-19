@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33128654"
 ---
 # <a name="how-to-iterate-over-a-user-defined-collection-with-for-each"></a>Procedura: scorrere una raccolta definita dall'utente con for each
 Affinché possa essere una raccolta gestita, una classe necessita di una funzione GetEnumerator non privata che restituisca un handle a una classe Enumerator o a un'interfaccia.  Una classe Enumerator deve contenere la dichiarazione della funzione non statica MoveNext e la proprietà Current.  

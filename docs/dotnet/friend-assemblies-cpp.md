@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33113759"
 ---
 # <a name="friend-assemblies-c"></a>Assembly Friend (C++)
 Per i runtime applicabili, il *assembly friend* funzionalità del linguaggio rende i tipi che sono nell'ambito dello spazio dei nomi o globale in un componente di assembly accessibile a uno o più assembly client o netmodule.  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33111208"
 ---
 # <a name="double-thunking-c"></a>Doppio thunk (C++)
 Doppio thunk fa riferimento la perdita di prestazioni che può verificarsi quando una chiamata di funzione in un contesto gestito chiama un Visual C++ funzione gestita e l'esecuzione del programma in cui viene chiamato il punto di ingresso nativo della funzione per chiamare la funzione gestita. In questo argomento viene illustrato dove si verifica il doppio thunk e come è possibile evitare in modo da migliorare le prestazioni.  

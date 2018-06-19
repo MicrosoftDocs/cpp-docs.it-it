@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33199931"
 ---
 # <a name="fatal-error-c1107"></a>Errore irreversibile C1107
 Impossibile trovare l'assembly 'file': specificare il percorso di ricerca dell'assembly utilizzando /AI o impostando la variabile d'ambiente LIBPATH  

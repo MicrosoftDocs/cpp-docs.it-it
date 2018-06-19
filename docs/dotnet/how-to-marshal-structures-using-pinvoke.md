@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33136613"
 ---
 # <a name="how-to-marshal-structures-using-pinvoke"></a>Procedura: Effettuare il marshalling di strutture tramite PInvoke
 In questo documento viene illustrato come funzioni native che accettano le strutture di tipo C possono essere chiamate da funzioni gestite da tramite P/Invoke. Sebbene sia consigliabile utilizzare la funzionalità di interoperabilità C++ anziché P/Invoke perché P/Invoke fornisce minimo in fase di compilazione segnalazione errori, non è indipendente dai tipi e può essere difficile da implementare, se l'API non gestita viene fornito come una DLL e il codice sorgente non è disponibile, P/Invoke è l'unica opzione. In caso contrario, vedere i seguenti documenti:  

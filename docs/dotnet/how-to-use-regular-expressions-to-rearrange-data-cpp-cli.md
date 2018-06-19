@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33130864"
 ---
 # <a name="how-to-use-regular-expressions-to-rearrange-data-ccli"></a>Procedura: utilizzare espressioni regolari per ridisporre i dati (C++/CLI)
 Esempio di codice seguente viene illustrato come utilizzare il supporto di espressioni regolari di .NET Framework per ridisporre o riformattare i dati. Nell'esempio di codice viene illustrato come utilizzare il <xref:System.Text.RegularExpressions.Regex> e <xref:System.Text.RegularExpressions.Match> classi per estrarre i nomi e cognomi da una stringa e quindi visualizzare questi elementi di nome in ordine inverso.  

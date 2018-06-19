@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33273628"
 ---
 # <a name="compiler-error-c3764"></a>Errore del compilatore C3764
 'funzione_override': Impossibile eseguire l'override di metodo della classe base 'funzione_classe_base'  
