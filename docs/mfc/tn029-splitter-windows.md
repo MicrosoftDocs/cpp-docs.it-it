@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33384723"
 ---
 # <a name="tn029-splitter-windows"></a>TN029: finestre con separatore
 Questa nota viene descritto il MFC [classe CSplitterWnd](../mfc/reference/csplitterwnd-class.md), che fornisce finestra divisa e gestisce il ridimensionamento di altre finestre del riquadro.  

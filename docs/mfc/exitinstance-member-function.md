@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343499"
 ---
 # <a name="exitinstance-member-function"></a>Funzione membro ExitInstance
 Il [ExitInstance](../mfc/reference/cwinapp-class.md#exitinstance) funzione membro di classe [CWinApp](../mfc/reference/cwinapp-class.md) viene chiamato ogni volta che una copia di un'applicazione termina in genere a seguito di chiudere l'applicazione.  

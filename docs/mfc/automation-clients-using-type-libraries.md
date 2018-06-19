@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342589"
 ---
 # <a name="automation-clients-using-type-libraries"></a>Client di automazione: utilizzo delle librerie dei tipi
 I client di automazione devono disporre di informazioni sulle proprietà e metodi degli oggetti del server se i client sono di gestire gli oggetti dei server. Le proprietà dispongono di tipi di dati. metodi spesso restituiscono valori e accettano parametri. Il client richiede informazioni sui tipi di dati di tutti questi per associare in modo statico per il tipo di oggetto server.  

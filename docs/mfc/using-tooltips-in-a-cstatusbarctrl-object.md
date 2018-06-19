@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385963"
 ---
 # <a name="using-tooltips-in-a-cstatusbarctrl-object"></a>Utilizzo di descrizioni comandi in un oggetto CStatusBarCtrl
 Per abilitare le descrizioni comandi per un controllo barra di stato, creare il `CStatusBarCtrl` dell'oggetto con il **SBT_TOOLTIPS** stile.  

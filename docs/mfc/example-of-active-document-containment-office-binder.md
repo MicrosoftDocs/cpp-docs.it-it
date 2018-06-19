@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345961"
 ---
 # <a name="example-of-active-document-containment-office-binder"></a>Esempio di contenimento di documenti attivi: raccoglitore di Office
 Raccoglitore di Office è un esempio di un contenitore di documenti attivi. Un raccoglitore di Office include due riquadri principali, dei contenitori. Riquadro di sinistra contiene le icone che corrispondono ai documenti attivi nel gestore di associazione. Ogni documento è definito un *sezione* entro il gestore di associazione. Ad esempio, uno strumento di associazione può contenere i documenti di Word, i file di PowerPoint, fogli di calcolo Excel e così via.  

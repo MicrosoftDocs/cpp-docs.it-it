@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342774"
 ---
 # <a name="callback-items-and-the-callback-mask"></a>Elementi di callback e maschera di callback
 Per ognuno dei relativi elementi, un controllo visualizzazione elenco in genere archivia il testo dell'etichetta, l'indice dell'elenco di icone dell'elemento, immagine e un set di bit di flag per lo stato dell'elemento. È possibile definire i singoli elementi come elementi di callback, sono utili se l'applicazione già archivia alcune informazioni per un elemento.  

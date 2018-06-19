@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33858702"
 ---
 # <a name="international-enabling"></a>Abilitazione di risorse internazionali
 Codice C e C++ più tradizionale ipotizza la modifica di tipo stringa e carattere che non funzionano anche per le applicazioni internazionali. MFC e la libreria run-time supportano Unicode e MBCS, è ancora presente lavoro per eseguire. A tal fine, in questa sezione viene illustrato il significato di "abilitazione di risorse internazionali" in Visual C++:  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33335511"
 ---
 # <a name="active-documents"></a>Documenti attivi
 I documenti attivi estendono la tecnologia dei documenti compositi di OLE. Queste estensioni vengono fornite sotto forma di interfacce aggiuntive che gestiscono le visualizzazioni, in modo che gli oggetti possano essere eseguiti all'interno di contenitori ma mantenere il controllo sulla relativa visualizzazione e sulle funzioni di stampa. Questo processo consente di visualizzare i documenti sia in frame esterni (come il Raccoglitore Microsoft Office o Microsoft Internet Explorer) sia nei frame nativi (come i viewport del prodotto).  

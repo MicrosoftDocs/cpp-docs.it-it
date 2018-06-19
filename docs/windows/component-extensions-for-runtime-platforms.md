@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33862640"
 ---
 # <a name="component-extensions-for-runtime-platforms"></a>Estensioni componenti per le piattaforme runtime
 Visual C++ fornisce le estensioni del linguaggio per agevolare la programmazione per piattaforme di runtime. Utilizzando C + + CX, è possibile programmare le app Universal Windows Platform e dei componenti che possono essere compilate in codice nativo. Sebbene sia possibile creare le app Universal Windows Platform programmando direttamente con le interfacce di Windows Runtime COM, utilizzando C + + CX, è possibile utilizzare costruttori, eccezioni e altre di programmazione C++ moderni. Per abilitare la programmazione in C++ in un ambiente di esecuzione gestito sulla piattaforma .NET, è possibile usare C + + CLI.  

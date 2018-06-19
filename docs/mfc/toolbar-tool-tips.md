@@ -28,6 +28,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383497"
 ---
 # <a name="toolbar-tool-tips"></a>Descrizioni comandi barra degli strumenti
 Descrizioni comandi sono piccole finestre popup che visualizzano una breve descrizione dello scopo del pulsante della barra degli strumenti quando si posiziona il puntatore del mouse su un pulsante per un periodo di tempo. Quando si crea un'applicazione con la creazione guidata applicazione con una barra degli strumenti, supporto della descrizione comandi viene fornito automaticamente. Questo articolo illustra entrambi il supporto della descrizione comandi creato per la creazione guidata applicazione e come aggiungere supporto della descrizione comandi per l'applicazione.  

@@ -28,6 +28,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383786"
 ---
 # <a name="using-callback-fields-in-a-date-and-time-picker-control"></a>Utilizzo dei campi callback in un controllo selezione data e ora
 Oltre ai caratteri di formato standard che definiscono i campi di selezione data e ora, è possibile personalizzare l'output specificando determinate parti di una stringa di formato personalizzata come campi callback. Per dichiarare un campo callback, includere uno o più caratteri "X" (codice ASCII 88) in un punto qualsiasi nel corpo della stringa di formato. Ad esempio, la stringa seguente "' oggi è: 'yy' / 'MM' / 'dd' (Day 'X')'", il punto di controllo di selezione data e ora visualizzare il valore corrente dell'anno seguita da mese, data e il giorno dell'anno.  

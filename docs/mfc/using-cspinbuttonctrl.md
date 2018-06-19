@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33384400"
 ---
 # <a name="using-cspinbuttonctrl"></a>Utilizzo di CSpinButtonCtrl
 Il *pulsante di selezione* controllo (noto anche come un *UpDown* controllo) offre una coppia di frecce che un utente può fare clic per modificare un valore. Questo valore è noto come il *posizione corrente*. La posizione rimane all'interno dell'intervallo del pulsante di selezione. Quando l'utente fa clic sulla freccia in su, la posizione si sposta verso il valore massimo; e quando l'utente fa clic sulla freccia rivolta verso il basso, la posizione si sposta verso il valore minimo.  
