@@ -17,6 +17,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33294586"
 ---
 # <a name="expression-evaluator-errors-cxx0000-through-cxx0072"></a>Errori dell'analizzatore di espressioni da CXX0000 a CXX0072
 

@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33863738"
 ---
 # <a name="atl-predefined-symbols"></a>Simboli predefiniti di ATL
 Questi simboli sono definiti nel file di intestazione ATL, ma supportano azioni e funzioni di applicazione Windows standard. Questi simboli vengono utilizzati principalmente con finestre di dialogo. Quando si lavora con controlli e finestre di dialogo nel [editor finestre](../windows/dialog-editor.md), questi simboli vengono visualizzati nella finestra proprietà associata ai controlli comuni. Ad esempio, se la finestra di dialogo ha un pulsante Annulla, il comando verrà associato al simbolo IDCANCEL nel [finestra proprietà](/visualstudio/ide/reference/properties-window).  

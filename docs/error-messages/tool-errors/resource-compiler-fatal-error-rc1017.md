@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33325302"
 ---
 # <a name="resource-compiler-fatal-error-rc1017"></a>Errore irreversibile del compilatore di risorse RC1017
 espressione costante integer non valida  

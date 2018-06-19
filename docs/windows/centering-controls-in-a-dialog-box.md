@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33856684"
 ---
 # <a name="centering-controls-in-a-dialog-box"></a>Allineamento al centro dei controlli in una finestra di dialogo
 ### <a name="to-center-controls-in-a-dialog-box"></a>Al centro e i controlli in una finestra di dialogo  

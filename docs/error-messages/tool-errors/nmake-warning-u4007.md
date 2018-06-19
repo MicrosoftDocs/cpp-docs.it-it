@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33320587"
 ---
 # <a name="nmake-warning-u4007"></a>Avviso U4007 di NMAKE 
 nome del file 'nomefile' troppo lungo. troncamento di 8.3  

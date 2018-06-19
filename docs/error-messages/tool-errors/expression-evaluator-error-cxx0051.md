@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33301795"
 ---
 # <a name="expression-evaluator-error-cxx0051"></a>Errore dell‘analizzatore di espressioni CXX0051
 più di un simbolo di overload specificato nel punto di interruzione  

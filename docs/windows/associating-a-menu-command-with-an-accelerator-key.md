@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33858088"
 ---
 # <a name="associating-a-menu-command-with-an-accelerator-key"></a>Associazione di un comando di menu a un tasto di scelta rapida
 Spesso è utile che una voce di menu e una combinazione di tasti eseguano lo stesso comando del programma. A questo scopo, è possibile usare l'editor di menu per assegnare lo stesso identificatore di risorsa al comando di menu e a una voce nella tabella dei tasti di scelta rapida dell'applicazione. Quindi si modifica la [Didascalia](../windows/menu-command-properties.md) del comando di menu per visualizzare il nome del tasto di scelta rapida.  

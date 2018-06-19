@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33298652"
 ---
 # <a name="linker-tools-error-lnk1223"></a>Errore degli strumenti del linker LNK1223
 file danneggiato o non valido: il file contiene contributi pdata non validi  

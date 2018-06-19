@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33299747"
 ---
 # <a name="c-runtime-error-r6035"></a>R6035 di errore di Runtime C
 Microsoft Visual C++ libreria di Runtime R6035 errore - un modulo in questa applicazione sta inizializzando i cookie di sicurezza globale del modulo, mentre è attiva una funzione basarsi su tale cookie di sicurezza.  Chiamata di security_init_cookie in precedenza.  

@@ -30,6 +30,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33862277"
 ---
 # <a name="building-an-attributed-program"></a>Compilazione di un programma con attributi
 Dopo avere implementato gli attributi di Visual C++ nel codice sorgente, è il compilatore Visual C++ per produrre un file IDL e di raccolta del tipo per l'utente. Le seguenti opzioni del linker consentono di generare file tlb e IDL:  

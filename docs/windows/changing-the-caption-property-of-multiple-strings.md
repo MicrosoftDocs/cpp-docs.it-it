@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33860281"
 ---
 # <a name="changing-the-caption-property-of-multiple-strings"></a>Modifica della proprietà Caption di più stringhe
 La procedura seguente viene illustrato come modificare la proprietà caption di più stringhe.  

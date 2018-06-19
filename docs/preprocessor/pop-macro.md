@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33849639"
 ---
 # <a name="popmacro"></a>pop_macro
 Imposta il valore della *macro_name* macro per il valore all'inizio dello stack per questa macro.  

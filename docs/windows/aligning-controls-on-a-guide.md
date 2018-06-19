@@ -30,6 +30,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33857838"
 ---
 # <a name="aligning-controls-on-a-guide"></a>Allineamento di controlli su una guida
 I quadratini di ridimensionamento di controlli Blocca sulle guide quando i controlli vengono spostati e guide agganciare i controlli (se non sono presenti controlli bloccati in precedenza sulla Guida). Quando una Guida viene spostata, verranno spostati anche i controlli che vengono bloccati. I controlli bloccati per più di una Guida vengono ridimensionati quando una delle Guide viene spostata.  

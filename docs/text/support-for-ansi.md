@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33854230"
 ---
 # <a name="support-for-ansi"></a>Supporto per ANSI
 La maggior parte dei metodi e classi MFC supportano il set di caratteri ANSI, anche se il framework MFC nel suo complesso è gradualmente evoluzione verso il supporto Unicode solo set di caratteri. Grazie ai miglioramenti in corso [!INCLUDE[windowsver](../build/reference/includes/windowsver_md.md)] e versione 6.1, supporto per diverse classi e metodi ANSI dei controlli comuni di Windows è deprecata.  Per ulteriori informazioni, vedere [le API ANSI deprecate](../mfc/deprecated-ansi-apis.md) e [il supporto per Unicode](../text/support-for-unicode.md).  

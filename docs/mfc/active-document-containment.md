@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33332673"
 ---
 # <a name="active-document-containment"></a>Contenimento dei documenti attivi
 Contenimento dei documenti attivi è una tecnologia che fornisce un singolo frame in cui si desidera lavorare con i documenti, anziché dover creare e utilizzare più frame di applicazioni per ogni tipo di documento. Differisce dalla tecnologia di base OLE in OLE funziona con oggetti incorporati all'interno di un documento composito in cui può essere attivo solo un singolo elemento di contenuto. Active document containment, si attiva un intero documento (ovvero, un'intera applicazione, inclusi menu associati, barre degli strumenti e così via) all'interno del contesto di un singolo fotogramma.  

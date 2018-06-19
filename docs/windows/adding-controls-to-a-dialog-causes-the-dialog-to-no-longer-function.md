@@ -25,6 +25,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33858994"
 ---
 # <a name="adding-controls-to-a-dialog-causes-the-dialog-to-no-longer-function"></a>Funzionamento non corretto di una finestra di dialogo in seguito all'aggiunta di controlli
 Dopo aver aggiunto un controllo comune o un controllo rich edit in una finestra di dialogo, non verrà visualizzata quando si testa la finestra di dialogo o non verrà visualizzata la finestra di dialogo.  

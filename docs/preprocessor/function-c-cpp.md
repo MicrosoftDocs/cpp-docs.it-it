@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33849483"
 ---
 # <a name="function-cc"></a>function (C/C++)
 Specifica la generazione delle chiamate alle funzioni specificate nell'elenco di argomenti del pragma.  

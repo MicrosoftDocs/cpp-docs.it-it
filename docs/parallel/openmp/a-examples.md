@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33695418"
 ---
 # <a name="a-examples"></a>Un  Esempi
 Di seguito sono riportati esempi di costrutti definiti in questo documento. Si noti che un'istruzione che segue una direttiva è composta solo quando necessario, e un'istruzione non composta viene rientrata rispetto a una direttiva precedente.

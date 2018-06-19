@@ -26,6 +26,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33856319"
 ---
 # <a name="adding-commands-to-a-menu"></a>Aggiunta di comandi a un menu
 ### <a name="to-add-commands-to-a-menu"></a>Per aggiungere comandi a un menu  

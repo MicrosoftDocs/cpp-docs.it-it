@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33856488"
 ---
 # <a name="support-for-using-wmain"></a>Supporto per l'utilizzo di wmain
 Visual C++ supporta la definizione di un **wmain** funzione e per passare argomenti a caratteri wide a un'applicazione Unicode. Dichiarare parametri formali per **wmain**, utilizzando un formato simile a **principale**. È quindi possibile passare al programma argomenti a caratteri estesi e, se lo si desidera, un puntatore di ambiente a caratteri estesi. I parametri `argv` e `envp` in **wmain** sono di tipo `wchar_t*`. Ad esempio:  

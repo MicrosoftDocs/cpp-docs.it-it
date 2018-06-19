@@ -19,6 +19,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33853323"
 ---
 # <a name="other-one-argument-output-stream-manipulators"></a>Altri manipolatori di flusso di output a un solo argomento
 

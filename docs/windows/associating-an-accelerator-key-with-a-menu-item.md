@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33854811"
 ---
 # <a name="associating-an-accelerator-key-with-a-menu-item"></a>Associazione di un tasto di scelta rapida a una voce di menu
 Molte volte si vuole che una voce di menu e una combinazione di tasti esegua lo stesso comando del programma. Ciò è possibile assegnando lo stesso identificatore di risorsa (ID) alla voce di menu e a una voce nella tabella dei tasti di scelta rapida dell'applicazione. È quindi modificare la didascalia della voce di menu per visualizzare il nome del tasto di scelta rapida. Per ulteriori informazioni sugli elementi di menu e tasti di scelta rapida, vedere [associazione di una voce di Menu con un tasto di scelta rapida](../windows/associating-a-menu-command-with-an-accelerator-key.md).  

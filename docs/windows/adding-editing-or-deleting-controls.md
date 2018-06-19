@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33856713"
 ---
 # <a name="adding-editing-or-deleting-controls"></a>Aggiunta, modifica o eliminazione di controlli
 Utilizzando la finestra di dialogo, è possibile aggiungere, ridimensionare, modificare ed eliminare i controlli nelle finestre di dialogo. È inoltre possibile modificare le proprietà di un controllo, ad esempio il relativo ID, o se è inizialmente visibile in fase di esecuzione.  

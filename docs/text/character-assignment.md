@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33856697"
 ---
 # <a name="character-assignment"></a>Assegnazione di caratteri
 Si consideri l'esempio seguente, in cui il `while` ciclo analizza una stringa, la copia di tutti i caratteri tranne 'X' in un'altra stringa:  

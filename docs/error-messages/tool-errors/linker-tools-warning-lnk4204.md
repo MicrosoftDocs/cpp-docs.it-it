@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33300592"
 ---
 # <a name="linker-tools-warning-lnk4204"></a>Avviso degli strumenti del linker LNK4204
 'nomefile' mancano informazioni di debug per il modulo di riferimento; oggetto collegato senza informazioni di debug  

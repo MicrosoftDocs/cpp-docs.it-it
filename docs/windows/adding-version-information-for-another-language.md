@@ -26,6 +26,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33857571"
 ---
 # <a name="adding-version-information-for-another-language"></a>Aggiunta di informazioni sulla versione per un'altra lingua
 ### <a name="to-add-version-information-for-another-language-new-info-block"></a>Per aggiungere informazioni sulla versione per un'altra lingua (nuovo blocco di informazioni)  

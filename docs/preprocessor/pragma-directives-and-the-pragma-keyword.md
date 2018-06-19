@@ -28,6 +28,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33846233"
 ---
 # <a name="pragma-directives-and-the-pragma-keyword"></a>Direttive pragma e parola chiave __Pragma
 Le direttive pragma specificano funzionalità del compilatore specifiche del computer o del sistema operativo. La parola chiave `__pragma`, che è specifica del compilatore Microsoft, consente di codificare direttive pragma all'interno delle definizioni di macro.  
