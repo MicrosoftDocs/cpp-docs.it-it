@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33111185"
 ---
 # <a name="ole-db-resource-pooling-and-services"></a>Servizi e pooling di risorse OLE DB
 Per funzionare bene con pool di OLE DB, o con qualsiasi servizio OLE DB, il provider deve supportare l'aggregazione di tutti gli oggetti. Questo è un requisito di OLE DB versione 1.5 o versioni successive del provider. È fondamentale per l'utilizzo dei servizi. I provider che non supportano l'aggregazione non è possibile inserire in un pool e non servizi aggiuntivi forniti.  

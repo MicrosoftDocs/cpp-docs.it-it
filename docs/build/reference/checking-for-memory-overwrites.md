@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32369851"
 ---
 # <a name="checking-for-memory-overwrites"></a>Controllo delle sovrascritture di memoria
 Se si verifica una violazione di accesso in una chiamata a una funzione di modifica di heap, è possibile che il programma ha danneggiato l'heap. Potrebbe essere un sintomo comune di questa situazione:  

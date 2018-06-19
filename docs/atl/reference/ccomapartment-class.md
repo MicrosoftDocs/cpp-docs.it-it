@@ -31,6 +31,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32362161"
 ---
 # <a name="ccomapartment-class"></a>Classe CComApartment
 Questa classe fornisce supporto per la gestione di un appartamento in un modulo EXE pool di thread.  

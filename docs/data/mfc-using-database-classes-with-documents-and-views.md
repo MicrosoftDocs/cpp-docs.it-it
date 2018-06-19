@@ -30,6 +30,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33091868"
 ---
 # <a name="mfc-using-database-classes-with-documents-and-views"></a>MFC: utilizzo di classi di database con documenti e viste
 È possibile utilizzare le classi di database MFC con o senza l'architettura documento/visualizzazione. In questo argomento viene descritto l'utilizzo di documenti e visualizzazioni. Viene spiegato:  

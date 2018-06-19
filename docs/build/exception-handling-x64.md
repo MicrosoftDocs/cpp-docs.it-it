@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367186"
 ---
 # <a name="exception-handling-x64"></a>Gestione delle eccezioni (x64)
 Questa sezione descrive la gestione delle eccezioni strutturata e comportamento di gestione delle eccezioni C++ il [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)].  

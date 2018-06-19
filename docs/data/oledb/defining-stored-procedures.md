@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33101302"
 ---
 # <a name="defining-stored-procedures"></a>Definizione delle stored procedure
 Prima di chiamare una stored procedure, è necessario innanzitutto definire, utilizzando il [DEFINE_COMMAND](../../data/oledb/define-command.md) (macro). Quando si definisce il comando, è possibile indicare i parametri con un punto interrogativo (?) come marcatore di parametro:  

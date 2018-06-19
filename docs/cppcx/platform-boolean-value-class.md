@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33086525"
 ---
 # <a name="platformboolean-value-class"></a>Classe di valori Platform::Boolean
 Rappresenta un valore booleano. Equivalente a `bool`.  

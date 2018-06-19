@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32370667"
 ---
 # <a name="res-files-as-linker-input"></a>File res come input del linker
 Durante il collegamento di un programma, è possibile specificare un file. res. Il file con estensione RES viene creato dal compilatore di risorse (RC). COLLEGAMENTO converte automaticamente i file con estensione res COFF. Lo strumento di CVTRES.exe deve essere nella stessa directory LINK.exe o in una directory specificata nella variabile di ambiente PATH.  

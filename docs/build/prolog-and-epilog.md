@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32372009"
 ---
 # <a name="prolog-and-epilog"></a>Prologo ed epilogo
 Ogni funzione alloca spazio dello stack, chiama altre funzioni, consente di salvare i registri non volatili o utilizza la gestione delle eccezioni deve essere un prologo, i cui indirizzi limite sono descritti nei dati di rimozione associati alla voce di tabella rispettiva funzione (vedere [Eccezioni (x64)](../build/exception-handling-x64.md)). Il prologo Salva argomento registri nei relativi indirizzi iniziali se necessario, inserisce i registri non volatili nello stack, alloca la parte fissa dello stack per le variabili locali e i temporanei e facoltativamente stabilisce un puntatore ai frame. I dati di rimozione deve descrivere l'azione del prologo e deve fornire le informazioni necessarie per annullare gli effetti del codice di prologo.  

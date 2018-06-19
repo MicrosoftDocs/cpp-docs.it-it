@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32369357"
 ---
 # <a name="parameter-passing"></a>Passaggio dei parametri
 I primi quattro argomenti integer vengono passati nei registri. I valori interi vengono passati (in ordine da sinistra a destra) in RCX, RDX, R8 e R9. Argomenti 5 e versioni successive vengono passati nello stack. Tutti gli argomenti sono giustificati a destra nei registri. In questo modo il chiamato può ignorare i bit superiori del registro, se necessario e può accedere solo la parte del registro necessaria.  

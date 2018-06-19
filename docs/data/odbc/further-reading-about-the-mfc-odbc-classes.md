@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33089220"
 ---
 # <a name="further-reading-about-the-mfc-odbc-classes"></a>Ulteriori informazioni sulle classi ODBC MFC
 Ulteriormente gli argomenti seguenti illustrano i concetti e tecniche introdotte in questo argomento:  

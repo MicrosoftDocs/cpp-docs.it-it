@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33088467"
 ---
 # <a name="odbc-and-the-database-classes"></a>ODBC e classi di database
 Le classi di database ODBC MFC includono le chiamate di funzione API ODBC verrebbe in genere eseguita manualmente nel membro funzioni del [CDatabase](../../mfc/reference/cdatabase-class.md) e [CRecordset](../../mfc/reference/crecordset-class.md) classi. Ad esempio, le sequenze di chiamata ODBC complesse, l'associazione di record restituito da posizioni di archiviazione, gestione delle condizioni di errore e altre operazioni vengono gestite automaticamente dalle classi di database. Di conseguenza, utilizzare un'interfaccia di classe notevolmente più semplice per modificare i record mediante un oggetto recordset.  

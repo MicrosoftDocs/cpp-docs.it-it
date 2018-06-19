@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33110169"
 ---
 # <a name="reading-strings-into-the-ole-db-provider"></a>Lettura di stringhe in un provider OLE DB
 Il `RMyProviderRowset::Execute` funzione apre un file e legge le stringhe. Il consumer passa il nome del file al provider chiamando [ICommandText:: SetCommandText](https://msdn.microsoft.com/en-us/library/ms709757.aspx). Il provider riceve il nome del file e archiviarlo nella variabile membro `m_szCommandText`. `Execute` legge il nome di file da `m_szCommandText`. Se il nome del file non è valido o non è disponibile, il file `Execute` restituisce un errore. In caso contrario, viene aperto il file e le chiamate `fgets` per recuperare le stringhe. Per ogni insieme di stringhe di letture, `Execute` crea un'istanza del record utente (`CAgentMan`) e lo inserisce in una matrice.  

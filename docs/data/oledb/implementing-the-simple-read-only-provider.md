@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33100616"
 ---
 # <a name="implementing-the-simple-read-only-provider"></a>Implementazione di un provider semplice in sola lettura
 Nell'esempio riportato in questo argomento viene illustrato come modificare i file creati dalla procedura guidata per creare un provider semplice in sola lettura che legge un set di due stringhe da un file di testo. Per creare questo provider dai file di procedura guidata, aggiungere il codice per completare le attività seguenti:  

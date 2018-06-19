@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33106544"
 ---
 # <a name="referencing-a-property-in-your-provider"></a>Riferimento a una proprietà nel provider
 Trovare il gruppo di proprietà e l'ID di proprietà per la proprietà desiderata. Per ulteriori informazioni, vedere [proprietà OLE DB](https://msdn.microsoft.com/en-us/library/ms722734.aspx) nel *riferimento per programmatori OLE DB*.  

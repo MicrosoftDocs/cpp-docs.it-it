@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33090656"
 ---
 # <a name="filling-a-list-box-from-a-second-recordset--mfc-data-access"></a>Compilazione di una casella di riepilogo da un secondo recordset (accesso ai dati MFC)
 Per impostazione predefinita, una visualizzazione di record è associata a un unico oggetto recordset i cui campi sono associati ai controlli della visualizzazione di record. In alcuni casi, può essere utile aggiungere un controllo casella di riepilogo o casella combinata nella visualizzazione di record e inserirvi valori provenienti da un secondo oggetto recordset. L'utente può usare la casella di riepilogo per selezionare una nuova categoria di informazioni da visualizzare nella visualizzazione dei record. Questo argomento spiega come e quando eseguire questa operazione.  

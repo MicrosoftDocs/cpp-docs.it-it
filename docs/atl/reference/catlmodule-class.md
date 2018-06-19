@@ -35,6 +35,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32365282"
 ---
 # <a name="catlmodule-class"></a>Classe da CAtlModule
 Questa classe fornisce i metodi utilizzati da diverse classi di modulo ATL.  

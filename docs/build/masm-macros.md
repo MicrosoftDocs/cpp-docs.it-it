@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368694"
 ---
 # <a name="masm-macros"></a>Macro MASM
 Per semplificare l'utilizzo del [Raw Pseudo operazioni](../build/raw-pseudo-operations.md), esistono una serie di macro, definite in ksamd64.inc, che può essere utilizzato per creare procedure tipiche prologhi ed epiloghi.  

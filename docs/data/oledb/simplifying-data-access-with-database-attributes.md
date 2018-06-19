@@ -34,6 +34,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33111715"
 ---
 # <a name="simplifying-data-access-with-database-attributes"></a>Semplificazione dell'accesso ai dati con gli attributi del database
 In questo argomento viene illustrato l'utilizzo degli attributi del database per semplificare le operazioni di database.  

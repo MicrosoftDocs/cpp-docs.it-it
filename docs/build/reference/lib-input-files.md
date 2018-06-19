@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32371967"
 ---
 # <a name="lib-input-files"></a>File di input LIB
 I file di input previsti da LIB dipendono dalla modalità in cui è utilizzato, come illustrato nella tabella seguente.  

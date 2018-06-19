@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33090195"
 ---
 # <a name="odbc-administrator"></a>Amministratore ODBC
 Amministratore ODBC registra e configura il [origini dati](../../data/odbc/data-source-odbc.md) disponibili localmente o in una rete. Le procedure guidate di utilizzano le informazioni fornite dall'amministratore ODBC per creare codice nelle applicazioni che si connette gli utenti a origini dati.  

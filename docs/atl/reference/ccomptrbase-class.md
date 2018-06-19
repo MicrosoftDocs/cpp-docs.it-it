@@ -32,6 +32,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32366367"
 ---
 # <a name="ccomptrbase-class"></a>Classe CComPtrBase
 Questa classe fornisce una base per le classi di puntatore intelligente utilizzo della memoria basato su COM routine.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32366936"
 ---
 # <a name="dependents"></a>Dipendenti
 In una riga di dipendenze, specificare zero o più dipendenti dopo i due punti (:) oppure un doppio carattere due punti (:), tramite qualsiasi nome file valido o [pseudo](../build/pseudotargets.md). Separare più dipendenti con uno o più spazi o tabulazioni. Oggetti dipendenti non sono tra maiuscole e minuscole. I percorsi sono consentiti con i nomi di file.  

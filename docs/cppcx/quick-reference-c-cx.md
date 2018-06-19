@@ -14,6 +14,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33092558"
 ---
 # <a name="quick-reference-ccx"></a>Riferimento rapido (C++/CX)
 Windows Runtime supporta le app Universal Windows Platform (UWP) eseguite solo in un ambiente con sistema operativo attendibile, utilizzano funzioni autorizzate, tipi di dati e dispositivi e vengono distribuite tramite Microsoft Store. C + + CX semplificano la scrittura di App per Windows Runtime. In questo articolo è un riferimento rapido. Per informazioni più complete, vedere [Type System](../cppcx/type-system-c-cx.md) e [estensioni componenti per le piattaforme Runtime](http://go.microsoft.com/fwlink/p/?linkid=228720).  

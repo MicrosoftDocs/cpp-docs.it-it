@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33089366"
 ---
 # <a name="displaying-and-manipulating-data-in-a-form"></a>Visualizzazione e modifica di dati in un form
 Molte applicazioni di accesso ai dati selezionano dati e visualizzarli nei campi in un form. La classe di database [CRecordView](../../mfc/reference/crecordview-class.md) offre un [CFormView](../../mfc/reference/cformview-class.md) oggetto direttamente connesso a un oggetto recordset. Usa la visualizzazione dei record [(DDX) dialog data exchange](../../mfc/dialog-data-exchange-and-validation.md) per spostare i valori dei campi del record corrente dal recordset ai controlli nel form e per riportare informazioni aggiornate per il recordset. Il recordset, utilizza a sua volta, il trasferimento di campi di record (RFX) per spostare dati tra i membri di dati di campo e le colonne corrispondenti in una tabella nell'origine dati.  

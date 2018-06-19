@@ -14,6 +14,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33092470"
 ---
 # <a name="strings-ccx"></a>Stringhe (C++/CX)
 Testo in Windows Runtime è rappresentato in C + + CX dal [classe platform:: String](../cppcx/platform-string-class.md). Utilizzare il `Platform::String Class` quando si passano stringhe avanti e indietro ai metodi nelle classi di Windows Runtime o quando si interagisce con altri componenti di Windows Runtime attraverso il limite dell'interfaccia binaria (ABI). L'oggetto `Platform::String Class` fornisce i metodi per numerose operazioni di stringa comuni ma non è progettato per essere una classe String completa. Nel modulo C++ utilizza i tipi di stringa C++ standard quali [wstring](../standard-library/basic-string-class.md) per l'elaborazione dei testi importanti e converti il risultato finale in [Platform::String^](../cppcx/platform-string-class.md) prima di passarlo a o da un'interfaccia pubblica. La conversione tra `wstring` o `wchar_t*` e `Platform::String`è un'operazione semplice ed efficace.  

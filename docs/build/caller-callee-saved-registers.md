@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32366796"
 ---
 # <a name="callercallee-saved-registers"></a>Registri salvati dal chiamante o dal chiamato
 I registri RAX, ovvero RCX, RDX, R8, R9, R10, R11 sono considerati volatili e deve essere considerato distrutti su chiamate di funzione (a meno che in caso contrario quindi dall'analisi, ad esempio Ottimizzazione intero programma).  

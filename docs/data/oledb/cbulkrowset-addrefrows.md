@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33095294"
 ---
 # <a name="cbulkrowsetaddrefrows"></a>CBulkRowset::AddRefRows
 Chiamate [IRowset:: Addrefrows](https://msdn.microsoft.com/en-us/library/ms719619.aspx) per incrementare il conteggio dei riferimenti per tutte le righe attualmente recuperate dal rowset di massa.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32369747"
 ---
 # <a name="exporting-from-a-dll-using-def-files"></a>Esportazione da una DLL tramite i file DEF
 Un file di definizione moduli (def) è un file di testo che contiene uno o più istruzioni di modulo che descrivono i vari attributi di una DLL. Se non si utilizza il **dllexport** (parola chiave) per esportare le funzioni della DLL, è necessario un file def.  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32362271"
 ---
 # <a name="invoking-scripts"></a>Chiamata di script
 [Utilizzo dei parametri sostituibili (il Registrar preprocessore)](../atl/using-replaceable-parameters-the-registrar-s-preprocessor.md) illustra le mappe di sostituzione e viene indicato il metodo Registrar **AddReplacement**. Il Registrar dispone di otto altri metodi specifici dello script e tutte sono descritte nella tabella seguente.  

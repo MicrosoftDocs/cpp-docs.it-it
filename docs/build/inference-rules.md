@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368421"
 ---
 # <a name="inference-rules"></a>Regole di inferenza
 Le regole di inferenza forniscono comandi per aggiornare le destinazioni e dedurre i relativi dipendenti. Estensioni in una regola di inferenza corrispondono a una singola destinazione e i dipendenti che hanno lo stesso nome di base. Le regole di inferenza sono definiti dall'utente o predefiniti; è possibile ridefinire le regole predefinite.  

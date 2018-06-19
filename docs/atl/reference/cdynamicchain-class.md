@@ -28,6 +28,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32364264"
 ---
 # <a name="cdynamicchain-class"></a>Classe CDynamicChain
 Questa classe fornisce metodi che supportano la concatenazione dinamica delle mappe messaggi.  

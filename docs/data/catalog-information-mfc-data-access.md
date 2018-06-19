@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33090053"
 ---
 # <a name="catalog-information--mfc-data-access"></a>Informazioni del catalogo (accesso ai dati MFC)
 Le informazioni sulle tabelle in un'origine dati possono comprendere i nomi delle tabelle e le relative colonne, i privilegi di tabella, i nomi delle chiavi primarie ed esterne, le informazioni sulle query o sulle stored procedure predefinite, le informazioni sugli indici delle tabelle e le statistiche relative alle tabelle.  

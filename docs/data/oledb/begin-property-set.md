@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33093760"
 ---
 # <a name="beginpropertyset"></a>BEGIN_PROPERTY_SET
 Mapping dell'insieme di segni di che imposta l'inizio di una proprietà in una proprietà.  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33104518"
 ---
 # <a name="adapter-stlclr"></a>adapter (STL/CLR)
 L'intestazione STL/CLR `<cliext/adapter>` specifica due classi di modello (`collection_adapter` e `range_adapter`), la funzione di modello e `make_collection`.  

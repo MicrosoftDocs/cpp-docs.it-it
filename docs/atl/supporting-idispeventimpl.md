@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32362219"
 ---
 # <a name="supporting-idispeventimpl"></a>Supporto di IDispEventImpl
 La classe modello [IDispEventImpl](../atl/reference/idispeventimpl-class.md) può essere utilizzato per fornire il supporto per i sink di punto di connessione della classe ATL. Un sink di punto di connessione consente la classe gestire gli eventi generati dagli oggetti COM esterni. Sink di questi punti di connessione vengono mappati a una mappa del sink di evento, fornita dalla classe.  

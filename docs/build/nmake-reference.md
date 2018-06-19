@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32372679"
 ---
 # <a name="nmake-reference"></a>Riferimenti a NMAKE
 Microsoft Program Maintenance Utility (NMAKE.EXE) è uno strumento da riga di comando incluso in [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] che compila i progetti in base ai comandi contenuti in un file di descrizione.  

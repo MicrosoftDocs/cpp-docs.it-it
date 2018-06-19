@@ -32,6 +32,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32364102"
 ---
 # <a name="ccompolyobject-class"></a>CComPolyObject (classe)
 Questa classe implementa **IUnknown** per un oggetto aggregato o aggregato.  

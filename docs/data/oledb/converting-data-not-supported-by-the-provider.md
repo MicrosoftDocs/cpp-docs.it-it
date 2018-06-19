@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33095466"
 ---
 # <a name="converting-data-not-supported-by-the-provider"></a>Conversione di dati non supportati dal provider
 Quando il consumer richiede un tipo di dati che non è supportato dal provider, il modello di provider OLE DB il codice per `IRowsetImpl::GetData` chiama Msdadc per convertire il tipo di dati.  

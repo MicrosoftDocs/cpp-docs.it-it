@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32369117"
 ---
 # <a name="localized-resources-in-mfc-applications-satellite-dlls"></a>Risorse localizzate in applicazioni MFC: DLL satellite
 Versione MFC 7.0 e versioni successive fornisce supporto avanzato per le DLL satellite, una funzionalità che aiuta a creare applicazioni localizzate in più lingue. Una DLL satellite è un [DLL di sole risorse](../build/creating-a-resource-only-dll.md) che contiene risorse di un'applicazione localizzate per una particolare lingua. Quando l'applicazione inizia l'esecuzione, MFC carica automaticamente la risorsa localizzata più appropriata per l'ambiente. Ad esempio, è un'applicazione con le risorse di lingua inglese con due DLL satellite, una che contiene una traduzione francese delle risorse e l'altro contenente una traduzione in lingua tedesca. Quando l'applicazione viene eseguita in un sistema in lingua inglese, utilizza le risorse in lingua inglese. Se eseguita in un sistema francese, Usa le risorse in francese. Se eseguita in un sistema tedesco, Usa le risorse in tedesco.  

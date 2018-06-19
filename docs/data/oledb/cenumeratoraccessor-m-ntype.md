@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33095765"
 ---
 # <a name="cenumeratoraccessormntype"></a>CEnumeratorAccessor::m_nType
 Una variabile che indica se la riga descrive un'origine dati o un enumeratore.  

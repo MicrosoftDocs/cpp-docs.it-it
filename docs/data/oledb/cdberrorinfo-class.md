@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33098615"
 ---
 # <a name="cdberrorinfo-class"></a>Classe CDBErrorInfo
 Fornisce il supporto per l'elaborazione di errore OLE DB tramite OLE DB [IErrorRecords](https://msdn.microsoft.com/en-us/library/ms718112.aspx) interfaccia.  

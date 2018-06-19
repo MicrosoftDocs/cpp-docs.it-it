@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32371083"
 ---
 # <a name="creating-an-sbr-file"></a>Creazione di un file SBR
 I file di input per BSCMAKE sono file SBR. Il compilatore crea un file sbr per ogni file oggetto (obj), che la compilazione. Quando si compila o aggiornamento del file di informazioni di visualizzazione, tutti i file sbr per il progetto devono essere disponibili su disco.  

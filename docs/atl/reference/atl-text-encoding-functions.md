@@ -32,6 +32,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32366078"
 ---
 # <a name="atl-text-encoding-functions"></a>Funzioni di codifica del testo ATL
 Queste funzioni supportano la codifica e decodifica di testo.

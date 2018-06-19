@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32362930"
 ---
 # <a name="connection-point-macros"></a>Macro di punto di connessione
 Queste macro definiscono mappe di punto di connessione e le voci.  

@@ -28,6 +28,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32362245"
 ---
 # <a name="cautovectorptr-class"></a>Classe CAutoVectorPtr
 Questa classe rappresenta un oggetto del puntatore intelligente usando il vettore di nuovo ed Elimina gli operatori.  

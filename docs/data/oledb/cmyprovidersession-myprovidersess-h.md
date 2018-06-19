@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33096535"
 ---
 # <a name="cmyprovidersession-myprovidersessh"></a>CMyProviderSession (MyProviderSess.H)
 MyProviderSess. H contiene la dichiarazione e l'implementazione per l'oggetto di sessione di OLE DB. L'oggetto origine dati crea l'oggetto di sessione e rappresenta una conversazione tra un provider e consumer. Più sessioni simultanee possono essere aperte per un'origine dati. L'elenco di ereditarietà per `CMyProviderSession` segue:  

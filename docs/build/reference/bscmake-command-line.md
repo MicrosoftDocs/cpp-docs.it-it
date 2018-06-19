@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32369497"
 ---
 # <a name="bscmake-command-line"></a>Riga di comando di BSCMAKE
 Per eseguire BSCMAKE, utilizzare la sintassi della riga di comando seguente:  

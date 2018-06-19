@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32371853"
 ---
 # <a name="changes-in-the-dll-delayed-loading-helper-function-since-visual-c-60"></a>Funzione di supporto del caricamento ritardato delle DLL: modifiche introdotte rispetto a Visual C++ 6.0
 Se si dispone di più versioni di Visual C++ nel computer in uso o se è definita una funzione di supporto, può dipendere dalle modifiche apportate alla DLL caricamento ritardato funzione di supporto. Ad esempio:  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33099563"
 ---
 # <a name="csimplerow-class"></a>Classe CSimpleRow
 Fornisce un'implementazione predefinita per l'handle di riga, viene utilizzata la [IRowsetImpl](../../data/oledb/irowsetimpl-class.md) classe.  

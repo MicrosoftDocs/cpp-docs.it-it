@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367433"
 ---
 # <a name="environment-variable-macros"></a>Macro di variabili di ambiente
 NMAKE eredita le definizioni di macro di variabili di ambiente esistano prima dell'avvio della sessione. Se nell'ambiente del sistema operativo è stata impostata una variabile, è disponibile come una macro di NMAKE. I nomi ereditati vengono convertiti in caratteri maiuscoli. Prima di pre-elaborazione viene eseguita l'ereditarietà. Utilizzare l'opzione /E per le macro ereditate dalle variabili di ambiente per eseguire l'override delle macro con lo stesso nome nel makefile.  

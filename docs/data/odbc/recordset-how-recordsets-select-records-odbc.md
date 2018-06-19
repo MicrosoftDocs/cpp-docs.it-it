@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33093230"
 ---
 # <a name="recordset-how-recordsets-select-records-odbc"></a>Recordset: selezione dei record (ODBC)
 Questo argomento si applica alle classi ODBC MFC.  

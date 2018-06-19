@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33097926"
 ---
 # <a name="cmyproviderwindowsfile"></a>CMyProviderWindowsFile
 La procedura guidata crea una classe che contiene una riga di dati. In questo caso, viene chiamato `CMyProviderWindowsFile`. Nell'esempio di codice per `CMyProviderWindowsFile` viene generato dalla procedura guidata e sono elencati tutti i file in una directory tramite il **WIN32_FIND_DATA** struttura. `CMyProviderWindowsFile` eredita il **WIN32_FIND_DATA** struttura:  

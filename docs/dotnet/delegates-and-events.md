@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33108329"
 ---
 # <a name="delegates-and-events"></a>Delegati ed eventi
 La modalità per dichiarare i delegati ed eventi è cambiato da estensioni gestite per C++ a Visual C++.  

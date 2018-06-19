@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33092946"
 ---
 # <a name="working-with-documents-and-views"></a>Gestione di documenti e visualizzazioni
 La libreria Microsoft Foundation Classes (MFC) si basa su un'architettura documento/visualizzazione per molte delle relative funzionalità. In genere, un documento memorizza i dati e visualizza all'interno dell'area client di una finestra cornice e gestisce l'interazione dell'utente con i dati di una vista. La vista comunica con il documento per ottenere e aggiornare i dati. È possibile utilizzare le classi di database con il framework o senza di esso.  

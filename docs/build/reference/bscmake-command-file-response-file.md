@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32369565"
 ---
 # <a name="bscmake-command-file-response-file"></a>File di comando di BSCMAKE (file di risposta)
 È possibile fornire parzialmente o totalmente l'input della riga di comando in un file di comando. Specificare il file di comando utilizzando la sintassi seguente:  

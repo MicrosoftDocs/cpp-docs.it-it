@@ -56,6 +56,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33094443"
 ---
 # <a name="ccharactersets-ccharactersetinfo"></a>CCharacterSets, CCharacterSetInfo
 Chiamare la classe typedef **CCharacterSets** per implementare la relativa classe di parametro **CCharacterSetInfo**.  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33091294"
 ---
 # <a name="crowsetimplgetcommandfromid"></a>CRowsetImpl::GetCommandFromID
 Controlla se uno o entrambi i parametri contengono i valori stringa e copia i valori di stringa per i membri dati [m_strCommandText](../../data/oledb/crowsetimpl-m-strcommandtext.md) e [m_strIndexText](../../data/oledb/crowsetimpl-m-strindextext.md).  

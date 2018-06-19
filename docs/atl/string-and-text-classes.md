@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32362200"
 ---
 # <a name="string-and-text-classes"></a>Classi di testo e stringa
 Queste classi forniscono supporto per le conversioni di stringa di testo e stringhe.  

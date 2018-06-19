@@ -14,6 +14,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33087381"
 ---
 # <a name="enums-ccx"></a>Enumerazioni (C++/CX)
 C + + CX supporta il `public enum class` (parola chiave), che è analoga a uno standard C++ `scoped  enum`. Quando utilizzi un enumeratore dichiarato tramite la parola chiave `public enum class` , è necessario che utilizzi l'identificatore di enumerazione per limitare l'ambito di ogni valore dell'enumeratore.  

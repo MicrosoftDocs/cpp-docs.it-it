@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33107818"
 ---
 # <a name="transactions--mfc-data-access"></a>Transazioni (accesso ai dati MFC)
 Il concetto di transazione è stato sviluppato per gestire i casi in cui lo stato risultante del database dipende dalla corretta esecuzione globale di una serie di operazioni, ad esempio quando operazioni successive potrebbero modificare i risultati di operazioni precedenti. In tali casi, se un'operazione non riesce, lo stato risultante potrebbe essere indeterminato.  

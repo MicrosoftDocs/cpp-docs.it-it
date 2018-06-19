@@ -30,6 +30,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32363751"
 ---
 # <a name="iregistrar-interface"></a>Interfaccia IRegistrar
 Questa interfaccia è definita in atliface.h e viene utilizzata internamente dalle funzioni membro da CAtlModule, ad esempio [UpdateRegistryFromResourceD](catlmodule-class.md#updateregistryfromresourced).   

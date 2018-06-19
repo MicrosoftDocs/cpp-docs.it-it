@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367992"
 ---
 # <a name="how-to-add-a-custom-build-step-to-msbuild-projects"></a>Procedura: aggiungere un'istruzione di compilazione personalizzata a progetti MSBuild
 Un'istruzione di compilazione personalizzata è un passaggio definito dall'utente in una compilazione. Un'istruzione di compilazione personalizzata si comporta come qualsiasi altro *strumento di comando* passaggio, ad esempio il passaggio di strumento di compilazione o di collegamento standard.  

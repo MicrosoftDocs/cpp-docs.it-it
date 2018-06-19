@@ -28,6 +28,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33103749"
 ---
 # <a name="idbschemarowsetimplgetrowset"></a>IDBSchemaRowsetImpl::GetRowset
 Restituisce un set di righe dello schema.  

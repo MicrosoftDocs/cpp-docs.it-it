@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32373101"
 ---
 # <a name="structure-of-a-library"></a>Struttura di una libreria
 Una libreria contiene oggetti COFF. Gli oggetti in una libreria contengono funzioni e i dati che è possono fare riferimento esternamente da altri oggetti in un programma. Un oggetto in una libreria viene talvolta indicato come membro di una libreria.  

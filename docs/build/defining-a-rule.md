@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367121"
 ---
 # <a name="defining-a-rule"></a>Definizione di una regola
 Il *fromext* rappresenta l'estensione di file, dipendente e *toext* rappresenta l'estensione di file di destinazione.  

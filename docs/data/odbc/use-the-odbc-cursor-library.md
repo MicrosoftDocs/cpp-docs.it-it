@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33092884"
 ---
 # <a name="use-the-odbc-cursor-library"></a>Utilizzo della libreria di cursori ODBC
 ODBC gestisce lo scorrimento all'interno di recordset tramite la libreria di cursori. Questi argomenti viene illustrato l'utilizzo con la libreria di cursori.  

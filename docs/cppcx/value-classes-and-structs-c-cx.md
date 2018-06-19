@@ -17,6 +17,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33090714"
 ---
 # <a name="value-classes-and-structs-ccx"></a>Classi e struct di valore (C++/CX)
 Oggetto *struct di valore* o *classe di valori* POD Runtime compatibile ("plain precedente struttura di dati") di Windows Installer. con una dimensione fissa e costituita solo da campi; a differenza di una classe di riferimento, non dispone di proprietà.  

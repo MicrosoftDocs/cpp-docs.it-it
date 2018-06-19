@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33089233"
 ---
 # <a name="odbc-driver-requirements-for-dynasets"></a>Requisiti dei driver ODBC per dynaset
 Nelle classi di database ODBC MFC, i dynaset sono Recordset le proprietà dinamiche. rimangano sincronizzati con l'origine dati in determinati modi. I dynaset MFC (ma Recordset non forward-only) richiedono un driver ODBC con conformità API di livello 2. Se il driver per il [origine dati](../../data/odbc/data-source-odbc.md) è conforme all'API di 1 livello impostato, è possibile comunque utilizzare gli snapshot aggiornabili e sola lettura e Recordset forward-only, ma non i dynaset. Tuttavia, un driver di livello 1 possa supporta i dynaset se supporta il recupero esteso e basati su keyset.  

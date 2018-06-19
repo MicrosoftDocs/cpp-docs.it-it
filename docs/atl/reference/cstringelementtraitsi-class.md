@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32362105"
 ---
 # <a name="cstringelementtraitsi-class"></a>Classe CStringElementTraitsI
 Questa classe fornisce funzioni statiche relative alle stringhe archiviate in oggetti di classe di raccolta. È simile a [CStringElementTraits](../../atl/reference/cstringelementtraits-class.md), ma consente di eseguire confronti tra maiuscole e minuscole.  

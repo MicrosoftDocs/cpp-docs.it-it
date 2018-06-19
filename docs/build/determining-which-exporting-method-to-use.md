@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368759"
 ---
 # <a name="determining-which-exporting-method-to-use"></a>Scelta del metodo di esportazione da utilizzare
 È possibile esportare funzioni in uno dei due modi, ovvero un file. def o `__declspec(dllexport)` (parola chiave). Che consentono di scegliere la soluzione migliore per la DLL, prendere in considerazione le seguenti domande:  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33099472"
 ---
 # <a name="enabling-and-disabling-ole-db-services"></a>Abilitazione e disabilitazione dei servizi OLE DB
 La gestione di componente servizio OLE DB vengono confrontate le proprietà specificate dal consumer con quelle supportate dal provider per determinare se i singoli componenti dei servizi può essere richiamati per soddisfare le funzionalità estese richieste dal consumer. Ad esempio, se un'applicazione richiede un cursore scorrevole e il provider supporta solo un cursore forward-only, Gestione componenti del servizio richiama il componente del servizio Client Cursor Engine per fornire le funzionalità di scorrimento. Se l'applicazione si basa sulla funzionalità estese supportate per impostazione predefinita nei set di righe del provider e l'applicazione non imposta in modo esplicito le proprietà per richiedere che le funzionalità, la funzionalità potrebbe non compaiono nei set di righe restituito dal Client Motore del cursore. Per garantire l'interoperabilità, le applicazioni devono sempre impostare proprietà per richiedere in modo esplicito la funzionalità estesa dove necessario.  

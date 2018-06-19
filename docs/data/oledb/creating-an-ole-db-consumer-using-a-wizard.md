@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33097000"
 ---
 # <a name="creating-an-ole-db-consumer-using-a-wizard"></a>Creazione di un consumer OLE DB mediante procedura guidata
 Questa procedura viene illustrato come è possibile utilizzare la creazione guidata progetto ATL e la creazione guidata Consumer OLE DB ATL per generare un consumer di modelli OLE DB e quindi modificare il codice dell'applicazione console per recuperare e visualizzare i dati da una tabella di database principale.  

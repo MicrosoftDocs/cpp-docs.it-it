@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33097068"
 ---
 # <a name="cdatasourceopen"></a>CDataSource::Open
 Apre una connessione a un'origine dati usando un **CLSID**, **ProgID**, o `CEnumerator` moniker o richiede all'utente la finestra di dialogo indicatore di posizione.  

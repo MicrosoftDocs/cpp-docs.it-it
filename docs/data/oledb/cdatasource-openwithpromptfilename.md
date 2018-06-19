@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33094270"
 ---
 # <a name="cdatasourceopenwithpromptfilename"></a>CDataSource::OpenWithPromptFileName
 Questo metodo visualizza all'utente una richiesta con una finestra di dialogo, quindi apre un'origine dati usando il file specificato dall'utente.  

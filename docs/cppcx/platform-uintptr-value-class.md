@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33088219"
 ---
 # <a name="platformuintptr-value-class"></a>Classe di valori Platform::UIntPtr
 Rappresenta un puntatore senza segno con dimensioni appropriate per la piattaforma (32 bit o 64 bit).  

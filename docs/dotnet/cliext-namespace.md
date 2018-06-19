@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33104152"
 ---
 # <a name="cliext-namespace"></a>Spazio dei nomi cliext
 Il `cliext` dello spazio dei nomi contiene tutti i tipi della libreria STL/CLR. Per un elenco di tutti questi tipi e i collegamenti a ulteriori informazioni sui tipi STL/CLR, vedere [riferimenti alla libreria STL/CLR](../dotnet/stl-clr-library-reference.md).  

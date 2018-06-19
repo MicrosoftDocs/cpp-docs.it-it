@@ -10,6 +10,7 @@ ms.sourcegitcommit: c770a343def04ae77522708387c3f7c470e49969
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 03/08/2018
+ms.locfileid: "29794180"
 ---
 # <a name="linux-development-with-c-documentation"></a>Documentazione per lo sviluppo per Linux con C++
 

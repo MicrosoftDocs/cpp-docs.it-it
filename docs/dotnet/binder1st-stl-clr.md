@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33108374"
 ---
 # <a name="binder1st-stlclr"></a>binder1st (STL/CLR)
 La classe modello descrive una funzione di un argomento che, quando viene chiamato, restituisce il funtore di due argomenti stored chiamato con il primo argomento archiviato e il secondo argomento fornito. Utilizzare, specificare un oggetto funzione in termini del funtore stored.  

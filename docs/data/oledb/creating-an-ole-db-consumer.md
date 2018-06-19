@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33096691"
 ---
 # <a name="creating-an-ole-db-consumer"></a>Creazione di un consumer OLE DB
 È possibile creare un consumer di modelli OLE DB con o senza la creazione guidata Consumer OLE DB ATL, anche se tramite la procedura guidata è il metodo consigliato. Un consumer può funzionare in qualsiasi applicazione che supporta ATL.  

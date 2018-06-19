@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33090510"
 ---
 # <a name="data-source-programmatically-creating-a-table-in-an-odbc-data-source"></a>Origine dati: creazione di una tabella in un'origine dati ODBC a livello di codice
 In questo argomento viene illustrato come creare una tabella per i dati di origine, utilizzando il `ExecuteSQL` funzione membro di classe `CDatabase`, passando la funzione di una stringa che contiene un **CREATE TABLE** istruzione SQL.  

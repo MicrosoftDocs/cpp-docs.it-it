@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32372809"
 ---
 # <a name="order-of-cl-options"></a>Ordine delle opzioni CL
 Le opzioni possono apparire in un punto qualsiasi nella riga di comando di CL, ad eccezione dell'opzione /link deve trovarsi per ultimo. Il compilatore inizia con le opzioni specificate nel [variabile di ambiente CL](../../build/reference/cl-environment-variables.md) e quindi legge la riga di comando da sinistra a destra, l'elaborazione dei file di comando nell'ordine vengono rilevati. Ogni opzione si applica a tutti i file nella riga di comando. Se vengono rilevate CL opzioni in conflitto, viene usata l'opzione all'estrema destra.  

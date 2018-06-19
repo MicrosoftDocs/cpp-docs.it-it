@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33089127"
 ---
 # <a name="carrayrowsetoperator"></a>CArrayRowset::operator
 Fornisce una sintassi simile a matrice per l'accesso a una riga nel set di righe.  

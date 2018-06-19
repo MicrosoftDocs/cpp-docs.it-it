@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33097692"
 ---
 # <a name="creating-a-consumer-without-using-a-wizard"></a>Creazione di un consumer senza utilizzare una procedura guidata
 Nell'esempio seguente si presuppone che si aggiunge il supporto di consumer OLE DB a un progetto ATL esistente. Se si desidera aggiungere il supporto di consumer OLE DB a un'applicazione MFC, è necessario eseguire la creazione guidata applicazione MFC, che crea il supporto necessario e richiama le routine MFC necessarie per eseguire l'applicazione.  

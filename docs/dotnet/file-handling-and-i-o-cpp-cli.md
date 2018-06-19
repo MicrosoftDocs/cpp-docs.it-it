@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33108312"
 ---
 # <a name="file-handling-and-io-ccli"></a>Gestione di file e I/O (C++/CLI)
 Illustra diverse operazioni di file utilizzando .NET Framework.  

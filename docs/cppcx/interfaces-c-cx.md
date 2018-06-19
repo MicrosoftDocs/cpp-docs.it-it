@@ -14,6 +14,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33090652"
 ---
 # <a name="interfaces-ccx"></a>Interfacce (C++/CX)
 Sebbene possa ereditare solo da una classe base concreta, una classe di riferimento può implementare qualsiasi numero di classi di interfaccia. Una classe di interfaccia (o struct di interfaccia) può ereditare (o richiedere) più classi di interfaccia, eseguire l'overload delle relative funzioni membro e avere parametri di tipo.  

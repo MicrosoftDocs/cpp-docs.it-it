@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367979"
 ---
 # <a name="intrinsics-and-inline-assembly"></a>Funzioni intrinseche e assembly inline
 Uno dei vincoli per il [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)] compilatore consiste nel non disporre di alcun supporto per l'assembler inline. Ciò significa che le funzioni che Impossibile scrivere in C o C++ sia dovranno essere scritti come subroutine o come funzioni intrinseche supportate dal compilatore. Alcune funzioni sono sensibili alle prestazioni, mentre altri no. Funzioni sensibili alle prestazioni devono essere implementate come funzioni intrinseche.  

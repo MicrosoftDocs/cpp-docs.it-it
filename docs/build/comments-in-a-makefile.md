@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32366783"
 ---
 # <a name="comments-in-a-makefile"></a>Commenti in un makefile
 Anteporre un commento con un simbolo di cancelletto (#). NMAKE ignora il testo compreso il simbolo di numero e il successivo carattere di nuova riga. Esempi:  

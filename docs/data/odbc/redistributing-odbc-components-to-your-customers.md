@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33090224"
 ---
 # <a name="redistributing-odbc-components-to-your-customers"></a>Ridistribuzione dei componenti ODBC ai clienti
 Se si incorporano le funzionalità dei programmi Amministratore ODBC in un'applicazione, è necessario anche distribuire agli utenti i file di cui eseguono tali programmi. Questi file ODBC si trovano nella directory \OS\System del CD di Visual C++. Il file REDISTRB e il contratto di licenza nella stessa directory contiene un elenco dei file ODBC che è possibile ridistribuire.  

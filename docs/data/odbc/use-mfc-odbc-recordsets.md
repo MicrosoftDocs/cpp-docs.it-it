@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33094169"
 ---
 # <a name="use-mfc-odbc-recordsets"></a>Utilizzo di recordset ODBC MFC
 Questi argomenti viene illustrato l'utilizzo con ODBC (recordset) tramite MFC.  

@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32371996"
 ---
 # <a name="compiler-controlled-link-options"></a>Compiler-Controlled LINK Options
 Il compilatore CL chiama automaticamente i collegamenti a meno che non si specifica l'opzione/c. CL consente di controllare il linker attraverso le opzioni della riga di comando e gli argomenti. Nella tabella seguente sono riepilogate le funzionalità CL che hanno effetto sul collegamento.  

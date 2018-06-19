@@ -31,6 +31,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32364115"
 ---
 # <a name="irunnableobjectimpl-class"></a>Classe IRunnableObjectImpl
 Questa classe implementa **IUnknown** e fornisce un'implementazione predefinita del [IRunnableObject](http://msdn.microsoft.com/library/windows/desktop/ms692783) interfaccia.  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32371512"
 ---
 # <a name="fi-preprocess-output-file-name"></a>/Fi (pre-elaborazione nome file di output)
 Specifica il nome del file di output a cui il [/P (pre-elabora in un File)](../../build/reference/p-preprocess-to-a-file.md) l'opzione del compilatore scrive l'output pre-elaborato.  

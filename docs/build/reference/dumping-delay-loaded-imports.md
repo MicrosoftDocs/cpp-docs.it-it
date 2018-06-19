@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32372867"
 ---
 # <a name="dumping-delay-loaded-imports"></a>Dump delle importazioni a caricamento ritardato
 Importazioni a caricamento ritardato possono essere eseguite utilizzando [dumpbin /imports](../../build/reference/imports-dumpbin.md) e comprende informazioni leggermente diverse rispetto a importazioni standard. Essi vengono separate in una sezione del dump /imports e sono etichettate in modo esplicito come importazioni a caricamento ritardato. Se non vi è scaricare informazioni presenti nell'immagine, che viene registrato. Se sono presenti informazioni di associazione presenti, l'indicatore di data e ora della DLL di destinazione viene indicato con gli indirizzi associati delle importazioni.  

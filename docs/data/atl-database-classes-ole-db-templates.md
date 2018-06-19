@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33089052"
 ---
 # <a name="atl-database-classes-ole-db-templates"></a>Classi di database ATL (modelli OLE DB)
 Microsoft offre varie implementazioni di OLE DB, un set di interfacce COM che forniscono un accesso uniforme ai dati in formati e origini diversi.  OLE DB sia ufficialmente deprecato; Questa documentazione è destinata agli sviluppatori che sono la gestione del codice legacy. Nuove applicazioni devono utilizzare ODBC per connettersi alle origini dati SQL.

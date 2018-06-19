@@ -52,6 +52,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32366130"
 ---
 # <a name="message-map-macros-atl"></a>Macro della mappa messaggi (ATL)
 Queste macro definiscono le voci e mappe messaggi.  

@@ -35,6 +35,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32362187"
 ---
 # <a name="catlpreviewctrlimpl-class"></a>Classe CAtlPreviewCtrlImpl
 Questa classe è un'implementazione di ATL di una finestra che viene inserita in una finestra host fornita dalla Shell per l'anteprima avanzata.  

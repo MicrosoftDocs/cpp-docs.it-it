@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367160"
 ---
 # <a name="floating-point-support-for-older-code-visual-c"></a>Supporto a virgola mobile per il codice precedente (Visual C++)
 I registri MMX e stack a virgola mobile (MM0-MM7/ST0-ST7) vengono mantenuti per commutazioni di contesto.  Non vi è alcuna convenzione di chiamata esplicita per questi registri.  L'utilizzo di questi registri è rigorosamente vietata nel codice in modalità kernel.  

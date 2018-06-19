@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33096938"
 ---
 # <a name="creating-a-simple-read-only-provider"></a>Creazione di un provider semplice in sola lettura
 Dopo avere creato un provider OLE DB utilizzando la creazione guidata progetto ATL e la creazione guidata Provider OLE DB ATL, è possibile aggiungere altre funzionalità che si desidera supportare. Iniziare a progettare il provider esaminando il tipo di dati saranno inviati al consumer e le condizioni. È particolarmente importante determinare se è necessario supportare i comandi, transazioni e altri oggetti facoltativi. Una buona progettazione di velocizzare l'implementazione e testing.  
