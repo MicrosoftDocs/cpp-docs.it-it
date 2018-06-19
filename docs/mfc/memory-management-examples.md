@@ -34,6 +34,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347191"
 ---
 # <a name="memory-management-examples"></a>Gestione della memoria: esempi
 In questo articolo viene descritto come MFC esegue le allocazioni di frame e allocazioni di heap per ognuno dei tre tipi di allocazioni di memoria tipico:  

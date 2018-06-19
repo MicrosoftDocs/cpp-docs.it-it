@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33690130"
 ---
 # <a name="a13---using-the-flush-directive-with-a-list"></a>A.13   Utilizzo della direttiva flush con un elenco
 L'esempio seguente usa il `flush` direttiva per la sincronizzazione da punto a punto di oggetti specifici tra coppie di thread:  

@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380253"
 ---
 # <a name="template-classes-for-arrays-lists-and-maps"></a>Classi modello per matrici, elenchi e mappe
 Queste classi di raccolta sono modelli i cui parametri determinano i tipi di oggetti archiviati nelle funzioni di aggregazione. Il `CArray`, `CMap`, e `CList` classi utilizzano funzioni di supporto globale che in genere devono essere personalizzate. Per ulteriori informazioni su queste funzioni di supporto, vedere [classi Collection](../mfc/reference/collection-class-helpers.md). Le classi di puntatori sono wrapper per le altre classi nella libreria di classi. Tramite questi wrapper, si integra del compilatore-controllo dei tipi che consentono di evitare errori. Per ulteriori informazioni sull'utilizzo di queste classi, vedere [raccolte](../mfc/collections.md).  

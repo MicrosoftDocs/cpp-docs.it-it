@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348104"
 ---
 # <a name="ole-common-dialog-classes"></a>Classi di finestre di dialogo comuni OLE
 Queste classi gestiscono comuni OLE mediante l'implementazione di un numero di finestre di dialogo OLE standard. Forniscono inoltre un'interfaccia utente coerente per la funzionalità OLE.  

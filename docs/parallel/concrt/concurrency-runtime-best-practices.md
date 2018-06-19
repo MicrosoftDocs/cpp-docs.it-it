@@ -22,6 +22,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33695642"
 ---
 # <a name="concurrency-runtime-best-practices"></a>Procedure consigliate del runtime di concorrenza
 Questa sezione descrive le procedure consigliate che consentono di ottimizzare l'uso del runtime di concorrenza. Tali procedure si applicano al [Parallel Patterns Library](../../parallel/concrt/parallel-patterns-library-ppl.md) (PPL), il [libreria di agenti asincroni](../../parallel/concrt/asynchronous-agents-library.md)e [utilità di pianificazione](../../parallel/concrt/task-scheduler-concurrency-runtime.md).  

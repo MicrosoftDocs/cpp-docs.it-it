@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33302555"
 ---
 # <a name="linker-tools-warning-lnk4006"></a>Avviso degli strumenti del linker LNK4006
 simbolo già definito nell'oggetto. seconda definizione ignorata  

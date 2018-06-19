@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347711"
 ---
 # <a name="overridable-cwinapp-member-functions"></a>Funzioni membro CWinApp sottoponibili a override
 [CWinApp](../mfc/reference/cwinapp-class.md) offre numerose funzioni membro sottoponibile a override (`CWinApp` esegue l'override di questi membri dalla classe [CWinThread](../mfc/reference/cwinthread-class.md), da cui `CWinApp` deriva):  

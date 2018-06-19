@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347695"
 ---
 # <a name="managing-the-state-data-of-mfc-modules"></a>Gestione dei dati dello stato dei moduli MFC
 Questo articolo illustra i dati dello stato dei moduli MFC e modalità di aggiornamento di questo stato quando il flusso di esecuzione (il codice di percorso richiede tramite un'applicazione durante l'esecuzione) entra ed esce da un modulo. Stati dei moduli con cambio di `AFX_MANAGE_STATE` e `METHOD_PROLOGUE` descritta anche le macro.  

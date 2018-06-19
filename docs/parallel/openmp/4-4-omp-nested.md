@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33690270"
 ---
 # <a name="44-ompnested"></a>4.4 OMP_NESTED
 Il `OMP_NESTED` variabile di ambiente Abilita o disabilita il parallelismo nidificato a meno che non parallelismo annidato è abilitato o disabilitato chiamando il `o` **mp_set_nested** routine di libreria. Se impostato su **TRUE**, parallelismo annidato è abilitato; se è impostato su **FALSE**nidificato parallelismo è disabilitato. Il valore predefinito è **FALSE**.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33691267"
 ---
 # <a name="omplockt"></a>omp_lock_t
 Tipo che contiene lo stato di un blocco, se il blocco è disponibile o se un thread proprietario di un blocco.  

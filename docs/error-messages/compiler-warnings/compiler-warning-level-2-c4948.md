@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33296211"
 ---
 # <a name="compiler-warning-level-2-c4948"></a>Avviso del compilatore (livello 2) C4948
 tipo restituito di 'accessor' non corrisponde al tipo dell'ultimo parametro della funzione set corrispondente  

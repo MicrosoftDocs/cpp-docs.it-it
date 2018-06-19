@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33691388"
 ---
 # <a name="a24---example-of-the-private-clause"></a>A.24   Esempio della clausola private
 Il `private` clausola ([sezione 2.7.2.1](../../parallel/openmp/2-7-2-1-private.md) nella pagina 25) di un'area parallela è attivo solo per l'ambito lessicale dell'area, non per l'extent dinamica dell'area.  Pertanto, nell'esempio riportato di seguito, indipendentemente dall'utilizzo della variabile *un* all'interno di `for` ciclo nella routine *f* fa riferimento a una copia privata di *un*, mentre un utilizzo in routine *g* fa riferimento a globale *un*.  

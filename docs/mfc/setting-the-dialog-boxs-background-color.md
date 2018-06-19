@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33379983"
 ---
 # <a name="setting-the-dialog-boxs-background-color"></a>Impostazione del colore di sfondo della finestra di dialogo
 È possibile impostare il colore di sfondo delle finestre di dialogo gestendo i messaggi `WM_CTLCOLOR` per la finestra della finestra di dialogo. Il colore che si imposta è utilizzato solo per la finestra di dialogo specificata.  

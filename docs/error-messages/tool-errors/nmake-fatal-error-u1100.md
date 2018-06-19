@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33319618"
 ---
 # <a name="nmake-fatal-error-u1100"></a>Errore irreversibile U1100 di NMAKE 
 la macro 'nomemacro' non è valida nel contesto della regola batch 'rule'  

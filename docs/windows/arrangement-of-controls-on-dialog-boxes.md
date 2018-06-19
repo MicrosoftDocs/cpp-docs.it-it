@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33858487"
 ---
 # <a name="arrangement-of-controls-on-dialog-boxes"></a>Disposizione dei controlli nelle finestre di dialogo
 L'editor finestre fornisce strumenti di layout che allineare e ridimensionare automaticamente i controlli. Per la maggior parte delle attività, è possibile utilizzare il [barra degli strumenti finestra di dialogo Editor](../windows/showing-or-hiding-the-dialog-editor-toolbar.md). Tutti i comandi della barra degli strumenti dell'Editor finestre sono disponibili anche nel menu Formato e la maggior parte ha [tasti di scelta rapida](../windows/accelerator-keys-for-the-dialog-editor.md).  

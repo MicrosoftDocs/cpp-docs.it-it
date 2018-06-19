@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33692749"
 ---
 # <a name="23-parallel-construct"></a>2.3 Costrutto parallel
 La direttiva seguente definisce un'area parallela, che è un'area del programma che deve essere eseguito da più thread in parallelo. Ciò è fondamentale che inizia l'esecuzione parallela.  

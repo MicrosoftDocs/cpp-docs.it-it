@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33686126"
 ---
 # <a name="a1---executing-a-simple-loop-in-parallel"></a>A.1   Esecuzione di un ciclo semplice in parallelo
 Nell'esempio riportato di seguito viene illustrato come parallelizzare un ciclo semplice tramite il `parallel for` (direttiva) ([sezione 2.5.1](../../parallel/openmp/2-5-1-parallel-for-construct.md) nella pagina 16). La variabile di iterazione del ciclo è privata per impostazione predefinita, pertanto non è necessario specificare in modo esplicito in una clausola private.  

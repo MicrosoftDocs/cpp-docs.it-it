@@ -27,6 +27,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33857899"
 ---
 # <a name="assigning-access-keys-to-menu-commands"></a>Assegnazione di tasti di scelta ai comandi di menu
 È possibile assegnare un tasto di scelta (che consente all'utente di selezionare il menu con la tastiera) ai menu e comandi di menu.  
