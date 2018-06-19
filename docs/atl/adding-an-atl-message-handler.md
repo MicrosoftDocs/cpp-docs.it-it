@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32354156"
 ---
 # <a name="adding-an-atl-message-handler"></a>Aggiunta di un gestore messaggi
 Per aggiungere un gestore di messaggi (una funzione membro che gestisce i messaggi di Windows) a un controllo, selezionare il controllo in visualizzazione classi. Aprire quindi il **proprietà** finestra, seleziona il **messaggi** icona e fare clic nella casella opposta il messaggio di richiesta di controllo elenco a discesa. Verrà aggiunta una dichiarazione per il gestore di messaggi nel file di intestazione del controllo e uno scheletro di implementazione del gestore nel file con estensione cpp del controllo. Verrà inoltre aggiunto la mappa del messaggio e aggiungere una voce per il gestore.  

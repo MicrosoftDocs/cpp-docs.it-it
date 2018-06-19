@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32354067"
 ---
 # <a name="dual-interfaces-and-events"></a>Gli eventi e le interfacce duali
 Sebbene sia possibile progettare un'interfaccia di eventi come un doppio, esistono una serie di motivi una buona progettazione non eseguire questa operazione. Il motivo principale è che l'origine dell'evento viene generato solo l'evento tramite vtable o `Invoke`, ma non entrambi. Se l'origine evento genera l'evento come una chiamata al metodo vtable diretta, la `IDispatch` metodi non verranno mai utilizzati e risulta chiaro che l'interfaccia deve essere stato interfaccia vtable pura. Se l'origine evento viene generato l'evento come una chiamata a `Invoke`, i metodi vtable non verranno mai utilizzati ed è che l'interfaccia avrebbe potuto dispatch. Se si definiscono le interfacce eventi come queste interfacce, si richiederà i client implementare una parte di un'interfaccia che non verrà mai utilizzata.  

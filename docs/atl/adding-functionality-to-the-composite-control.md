@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32354182"
 ---
 # <a name="adding-functionality-to-the-composite-control"></a>Aggiunta di funzionalità per il controllo composito
 Dopo aver inserito eventuali controlli nel controllo composito, il passaggio successivo prevede l'aggiunta di nuove funzionalità. Questa nuova funzionalità in genere può essere suddiviso in due categorie:  

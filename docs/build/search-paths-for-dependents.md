@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380485"
 ---
 # <a name="search-paths-for-dependents"></a>Percorsi di ricerca dei dipendenti
 Ogni dipendente presenta un percorso di ricerca facoltativo, specificato come indicato di seguito:  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32383449"
 ---
 # <a name="operands-and-expressions"></a>Operandi ed espressioni
 Un "operando" è un'entità su cui agisce l'operatore. Un'"espressione" è una sequenza di operatori e operandi che esegue qualsiasi combinazione delle seguenti azioni:  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380888"
 ---
 # <a name="x64-software-conventions"></a>Convenzioni del software x64
 Questa sezione vengono descritte la metodologia di convenzione di chiamata di Visual C++ [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)], estensioni a 64 bit per x86 architettura.  

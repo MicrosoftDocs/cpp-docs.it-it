@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32353950"
 ---
 # <a name="file-handling-classes"></a>Classi di gestione dei file
 Queste classi forniscono metodi per la gestione di file, i file temporanei e i file mappati alla memoria.  

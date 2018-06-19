@@ -29,6 +29,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32354707"
 ---
 # <a name="memory-management-with-cstringt"></a>Gestione della memoria con CStringT
 Classe [CStringT](../atl-mfc-shared/reference/cstringt-class.md) è una classe di modello utilizzata per modificare le stringhe di caratteri di lunghezza variabile. La memoria per queste stringhe viene allocata e rilasciata tramite gestione, un oggetto stringa associato a ogni istanza di `CStringT`. MFC e ATL forniscono creazioni di istanze predefinite di `CStringT`, denominato `CString`, `CStringA`, e `CStringW`, la quale modificare le stringhe di diversi tipi di carattere. Questi tipi di carattere sono di tipo **TCHAR**, `char`, e `wchar_t`, rispettivamente. Questi tipi di stringa del valore predefinito è utilizzare un gestore di stringhe che alloca la memoria dall'heap del processo (in ATL) o l'heap CRT (in MFC). Per applicazioni tipiche, questo schema di allocazione della memoria è sufficiente. Tuttavia, per il codice con utilizzo intensivo di rendere l'utilizzo di stringhe (o codice multithreading) i gestori di memoria predefinita potrebbero non essere ottimali. In questo argomento viene descritto come eseguire l'override del comportamento di gestione della memoria predefinito di `CStringT`, creando allocatori appositamente ottimizzato per l'attività in questione.  

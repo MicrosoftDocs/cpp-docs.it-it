@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32354169"
 ---
 # <a name="creating-an-atl-dhtml-control"></a>Creazione di un controllo DHTML ATL
 Creazione guidata controllo ATL automatizza il processo di creazione di un controllo DHTML. Genera i file di risorse necessari, tra cui un file HTML contenente il codice di esempio.  

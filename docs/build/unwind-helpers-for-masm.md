@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380249"
 ---
 # <a name="unwind-helpers-for-masm"></a>Helper di rimozione per MASM
 Per poter scrivere routine assembly corrette, esistono una serie di pseudo-operazioni che può essere usata in parallelo con le istruzioni di assembly effettivo per creare l'appropriato. pdata e xdata. Esistono anche un set di macro per semplifica l'utilizzo delle pseudo-operazioni per la maggior parte delle situazioni.  

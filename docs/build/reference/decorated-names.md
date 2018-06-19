@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32379380"
 ---
 # <a name="decorated-names"></a>Nomi decorati
 Le funzioni, i dati e gli oggetti nei programmi C e C++ sono rappresentati internamente dai nomi decorati. Oggetto *nome decorato* è una stringa codificata creata dal compilatore durante la compilazione di un oggetto, dati o definizione di funzione. Registra convenzioni di chiamata, tipi, parametri di funzione e altre informazioni insieme al nome. Questa decorazione dei nomi, nota anche come *alterazione dei nomi*, consente al linker di trovare le funzioni corrette e gli oggetti durante il collegamento di un file eseguibile.  

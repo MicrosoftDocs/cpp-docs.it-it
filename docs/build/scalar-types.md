@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32381171"
 ---
 # <a name="scalar-types"></a>Tipi scalari
 Anche se l'accesso ai dati può derivare da alcun allineamento, è consigliabile che i dati vengano allineati sul relativo limite naturale per evitare la perdita di prestazioni (o un multiplo,). Le enumerazioni sono numeri interi costanti e vengono trattate come interi a 32 bit. La tabella seguente descrive la definizione del tipo e l'archiviazione consigliato per tale relativamente all'allineamento con i valori di allineamento seguenti:  

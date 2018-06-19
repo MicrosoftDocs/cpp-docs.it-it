@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380472"
 ---
 # <a name="unprototyped-functions"></a>Funzioni senza prototipo
 Per le funzioni senza prototipo, il chiamante passerà valori interi come valori a virgola mobile e interi come precisione doppia. Per i valori a virgola mobile, sia il registro integer e il registro a virgola mobile, conterrà il valore float nel caso in cui il chiamato prevede che il valore nei registri integer.  

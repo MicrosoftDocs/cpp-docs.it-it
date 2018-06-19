@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32383865"
 ---
 # <a name="range-of-char-values"></a>Intervallo di valori char
 **ANSI 3.2.1.1** Indica se un **char** "normale" ha lo stesso intervallo di valori di un **signed char** o di un `unsigned char`  

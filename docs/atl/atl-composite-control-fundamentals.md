@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32354617"
 ---
 # <a name="atl-composite-control-fundamentals"></a>Nozioni fondamentali sul controllo composito di ATL
 Un controllo composito è un tipo di controllo ActiveX che può contenere (simile a una finestra di dialogo) altri controlli ActiveX o Windows. Una volta creato il controllo composito, può essere inserito ovunque che un controllo ActiveX può essere ospitato.  

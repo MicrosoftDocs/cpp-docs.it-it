@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32379900"
 ---
 # <a name="reusing-inline-files"></a>Riutilizzo di file inline
 Per riutilizzare un file inline, specificare <<*filename* in cui il file è definito e utilizzato prima, quindi riutilizzare *filename* senza << successive nello stesso o in un altro comando. È necessario eseguire il comando per creare il file inline prima tutti i comandi che usano il file.  

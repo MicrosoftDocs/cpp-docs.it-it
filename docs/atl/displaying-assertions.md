@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32354279"
 ---
 # <a name="displaying-assertions"></a>Visualizzazione delle asserzioni
 Se il client connesso al servizio smette di rispondere, il servizio può avere dichiarato e visualizzata una finestra di messaggio che non si riesce a vedere. È possibile verificarlo utilizzando il debugger di Visual C++ per eseguire il debug del codice (vedere [tramite Gestione attività](../atl/using-task-manager.md) più indietro in questa sezione).  

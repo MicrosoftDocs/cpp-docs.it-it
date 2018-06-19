@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32384385"
 ---
 # <a name="postfix-operators"></a>Operatori di suffisso
 Gli operatori di suffisso hanno la precedenza più elevata (l'associazione più stretta) nella valutazione di un'espressione.  

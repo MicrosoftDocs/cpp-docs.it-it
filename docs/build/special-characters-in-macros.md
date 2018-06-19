@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380173"
 ---
 # <a name="special-characters-in-macros"></a>Caratteri speciali nelle macro
 Un simbolo cancelletto (#) dopo la definizione specifica un commento. Per specificare un simbolo di cancelletto in una macro, utilizzare un accento circonflesso (^), come in ^ #.  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32383904"
 ---
 # <a name="punctuation-and-special-characters"></a>Punteggiatura e caratteri speciali
 La punteggiatura e i caratteri speciali presenti nel set di caratteri C vengono utilizzati per diversi scopi, dall'organizzazione del testo di programma alla definizione di attività eseguite dal compilatore o dal programma compilato. Questi caratteri non specificano l'esecuzione di un'operazione. Alcuni simboli di punteggiatura sono anche operatori (vedere [Operatori](../c-language/c-operators.md)). Il compilatore determina il relativo utilizzo dal contesto.  

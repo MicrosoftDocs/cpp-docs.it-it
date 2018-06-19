@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380321"
 ---
 # <a name="return-values-c"></a>Valori restituiti (C++)
 Viene restituito un valore scalare adattabile in 64 bit con RAX, che include i tipi __m64. I tipi non scalari inclusi float, Double e tipi di vettori, ad esempio [m128](../cpp/m128.md), [__m128i](../cpp/m128i.md), [__m128d](../cpp/m128d.md) vengono restituiti in XMM0. Lo stato dei bit non usati nel valore restituito in RAX o XMM0 non è definito.  

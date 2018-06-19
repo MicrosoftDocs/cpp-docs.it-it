@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32354655"
 ---
 # <a name="formatting-time-values-general-purpose-classes"></a>Formattazione di valori di ora: Classi di uso generale
 La procedura seguente viene illustrato come formattare i valori di ora.  

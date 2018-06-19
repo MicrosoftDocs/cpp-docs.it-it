@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32381785"
 ---
 # <a name="converting-multibyte-characters"></a>Conversione dei caratteri multibyte
 **ANSI 3.1.3.4** Le impostazioni locali correnti usate per convertire i caratteri multibyte nei corrispondenti caratteri wide (codici) per una costante a caratteri wide  

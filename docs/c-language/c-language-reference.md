@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32381187"
 ---
 # <a name="c-language-reference"></a>Riferimenti del linguaggio C
 In *Riferimenti del linguaggio C* viene descritto il linguaggio di programmazione C implementato in Microsoft C. L'organizzazione del manuale è basata sullo standard C ANSI (a volte indicato con C89) con altro materiale relativo alle estensioni Microsoft dello standard C ANSI.  

@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32383878"
 ---
 # <a name="null-characters"></a>Caratteri Null
 **ANSI 4.9.2** Il numero di caratteri null che è possibile associare ai dati scritti in un flusso binario  

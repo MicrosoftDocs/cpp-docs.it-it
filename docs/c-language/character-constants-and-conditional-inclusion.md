@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32381808"
 ---
 # <a name="character-constants-and-conditional-inclusion"></a>Costanti carattere e inclusione condizionale
 **ANSI 3.8.1** Indica se il valore di una costante carattere a un solo carattere in un'espressione costante che controlla l'inclusione condizionale corrisponde al valore della stessa costante carattere nel set di caratteri di esecuzione. Indica se tale costante carattere può avere un valore negativo  

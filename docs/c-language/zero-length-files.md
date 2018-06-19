@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32384967"
 ---
 # <a name="zero-length-files"></a>File di lunghezza zero
 **ANSI 4.9.3** Indica se un file di lunghezza zero esiste effettivamente  

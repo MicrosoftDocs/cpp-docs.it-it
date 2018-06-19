@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380433"
 ---
 # <a name="unwind-data-for-exception-handling-debugger-support"></a>Dati di rimozione per la gestione delle eccezioni, supporto del debugger
 Questa sezione descrive le strutture di dati necessari per la gestione e supporto per il debug delle eccezioni.  

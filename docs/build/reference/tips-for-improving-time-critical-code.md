@@ -45,6 +45,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32379510"
 ---
 # <a name="tips-for-improving-time-critical-code"></a>Suggerimenti per il miglioramento del codice critico
 Per scrivere codice che deve essere eseguito rapidamente è necessario comprendere tutti gli aspetti dell'applicazione e come essa interagisce con il sistema. In questo argomento verranno suggerite alternative ad alcune delle più comuni tecniche di scrittura del codice, al fine di garantire che le parti di codice che devono essere eseguite rapidamente offrano prestazioni soddisfacenti.  

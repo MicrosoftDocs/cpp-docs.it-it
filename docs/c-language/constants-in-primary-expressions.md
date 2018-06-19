@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32382273"
 ---
 # <a name="constants-in-primary-expressions"></a>Costanti in espressioni primarie
 Un operando costante ha il valore e il tipo del valore costante che rappresenta. Una costante carattere è di tipo `int`. Una costante Integer è di tipo `int`, **long**, `unsigned int` o `unsigned long`, a seconda della dimensione dell'Integer e del modo in cui viene specificato il valore. Per altre informazioni, vedere [Costanti](../c-language/c-constants.md).  

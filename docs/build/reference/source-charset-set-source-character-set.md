@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32379224"
 ---
 # <a name="source-charset-set-source-character-set"></a>/Source-CharSet (impostare origine Character Set)
 Consente di specificare l'origine set di caratteri per il file eseguibile.  
