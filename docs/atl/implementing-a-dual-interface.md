@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356732"
 ---
 # <a name="implementing-a-dual-interface"></a>Implementazione delle interfacce duali
 È possibile implementare un'interfaccia duale usando il [IDispatchImpl](../atl/reference/idispatchimpl-class.md) (classe), che fornisce un'implementazione predefinita del `IDispatch` metodi in un'interfaccia duale. Per altre informazioni, vedere [Implementing the IDispatch Interface](http://msdn.microsoft.com/en-us/0e171f7f-0022-4e9b-ac8e-98192828e945).  

@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32409576"
 ---
 # <a name="basic-concepts--c"></a>Concetti di base (C++)
 In questa sezione vengono illustrati i concetti chiave per comprendere C++. I programmatori di C avranno familiarità con molti di questi concetti, ma esistono alcune differenze meno evidenti che possono provocare risultati imprevisti del programma. Sono inclusi i seguenti argomenti:  

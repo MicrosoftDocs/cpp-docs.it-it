@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32412465"
 ---
 # <a name="secure-template-overloads"></a>Overload di modelli sicuri
 Microsoft ha deprecato molte funzioni della libreria di runtime C (CRT) a favore di versioni con sicurezza avanzata. `strcpy_s`, ad esempio, è la sostituzione più sicura per `strcpy`. Le funzioni deprecate generano spesso errori di protezione, poiché non impediscono operazioni che possono comportare la sovrascrittura della memoria. Per impostazione predefinita, il compilatore genera un avviso di deprecazione quando si usa una di queste funzioni. CRT fornisce overload di modelli C++ per queste funzioni per semplificare la transizione alle varianti più sicure.  

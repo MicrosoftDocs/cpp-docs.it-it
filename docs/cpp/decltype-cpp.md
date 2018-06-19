@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32418039"
 ---
 # <a name="decltype--c"></a>decltype (C++)
 L'identificatore di tipo `decltype` restituisce il tipo di un'espressione specificata. Il `decltype` identificatore di tipo con il [parola chiave auto](../cpp/auto-cpp.md), è utile principalmente per gli sviluppatori che scrivono librerie di modelli. È, ad esempio, possibile usare le parole chiave `auto` e `decltype` per dichiarare una funzione di modello il cui tipo restituito dipende dai tipi dei relativi argomenti di modello. In alternativa, è possibile usare le parole chiave `auto` e `decltype` per dichiarare una funzione di modello che esegua il wrapping di una chiamata a un'altra funzione e che quindi restituisca il tipo restituito della funzione di cui è stato eseguito il wrapping.  

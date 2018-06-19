@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32419911"
 ---
 # <a name="name-resolution-for-dependent-types"></a>Risoluzione dei nomi per tipi dipendenti
 Utilizzare **typename** per i nomi completi nelle definizioni di modello per indicare al compilatore che il nome completo specificato identifica un tipo. Per ulteriori informazioni, vedere [typename](../cpp/typename.md).  

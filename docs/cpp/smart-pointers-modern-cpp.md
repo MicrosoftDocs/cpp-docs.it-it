@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32424352"
 ---
 # <a name="smart-pointers-modern-c"></a>Puntatori intelligenti (C++ moderno)
 Nella programmazione moderna in C++, la libreria Standard include *puntatori intelligenti*, che vengono utilizzati per garantire che i programmi sono disponibili di memoria e risorse di perdite e sono indipendente dalle eccezioni.  

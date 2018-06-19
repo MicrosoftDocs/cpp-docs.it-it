@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356341"
 ---
 # <a name="implementing-ccomobject-ccomaggobject-and-ccompolyobject"></a>Implementazione di CComObject, CComAggObject e CComPolyObject
 Classi modello [CComObject](../atl/reference/ccomobject-class.md), [CComAggObject](../atl/reference/ccomaggobject-class.md), e [CComPolyObject](../atl/reference/ccompolyobject-class.md) sono sempre le classi nella catena di ereditarietà. È responsabilità di gestire tutti i metodi in **IUnknown**: `QueryInterface`, `AddRef`, e **versione**. Inoltre, `CComAggObject` e `CComPolyObject` (quando viene utilizzato per gli oggetti aggregati) fornisce il conteggio speciale e `QueryInterface` semantica necessaria per l'inner unknown.  

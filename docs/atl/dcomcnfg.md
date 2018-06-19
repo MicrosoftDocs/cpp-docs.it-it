@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32357245"
 ---
 # <a name="dcomcnfg"></a>DCOMCNFG.
 **DCOMCNFG** è un'utilità di Windows NT 4.0 che consente di configurare varie impostazioni specifiche di DCOM nel Registro di sistema. Il **DCOMCNFG** finestra dispone di tre pagine: protezione predefinita, le proprietà predefinite e applicazioni. In Windows 2000 è presente una quarta pagina protocolli predefiniti.  

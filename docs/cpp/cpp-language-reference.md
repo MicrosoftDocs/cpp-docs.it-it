@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32417203"
 ---
 # <a name="c-language-reference"></a>Riferimenti al linguaggio C++
 Nella guida di riferimento viene illustrato il linguaggio di programmazione C++ implementato in Microsoft Visual C++. L'organizzazione si basa su *The Annotated C++ Reference Manual* di Margaret Ellis e Bjarne Stroustrup e sullo standard ANSI/ISO internazionale Standard C++ (ISO/IEC FDIS 14882). Sono incluse le implementazioni specifiche di Microsoft delle funzionalità del linguaggio C++.  

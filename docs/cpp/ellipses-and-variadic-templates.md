@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32416658"
 ---
 # <a name="ellipses-and-variadic-templates"></a>Ellissi e modelli variadic
 In questo articolo viene illustrato come utilizzare i puntini di sospensione (`...`) con i modelli di variadic C++. I puntini di sospensione ha molti modi in C e C++. Sono inclusi elenchi di argomenti variabili per le funzioni. Il `printf()` funzione dalla libreria di Runtime C è uno degli esempi più noti.  

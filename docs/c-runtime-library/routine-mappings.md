@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32415494"
 ---
 # <a name="routine-mappings"></a>Mapping di routine
 I mapping di routine di testo generico sono definite in TCHAR.H. `_tccpy` e `_tclen` eseguono il mapping alle funzioni nel modello MBCS; sono mappate alle macro o alle funzioni inline nei modelli SBCS e Unicode per completezza. Per informazioni su una routine di testo generico, vedere l'argomento della Guida sulla corrispondente routine correlata a `SBCS`, `_MBCS` o `_UNICODE`.  

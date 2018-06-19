@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32420087"
 ---
 # <a name="punctuators-c"></a>Segni di punteggiatura (C++)
 In C++ i segni di punteggiatura hanno un significato semantico e sintattico per il compilatore, ma non specificano alcuna operazione che restituisce un valore. Alcuni segni di punteggiatura, singolarmente o in combinazione, possono anche essere operatori C++ o essere significativi per il preprocessore.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32360162"
 ---
 # <a name="when-do-i-need-to-call-atlaxwinterm"></a>Quando necessario chiamare AtlAxWinTerm?
 [AtlAxWinTerm](reference/composite-control-global-functions.md#atlaxwinterm) Annulla la registrazione di **"Atlaxwinlic80"** classe della finestra. È necessario chiamare questa funzione (se è non necessario non è più possibile creare finestre host), dopo tutte le finestre host esistenti sono state eliminate. Se non si chiama questa funzione, la classe della finestra verrà annullata automaticamente al termine del processo.  

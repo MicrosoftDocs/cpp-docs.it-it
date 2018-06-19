@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32423496"
 ---
 # <a name="object-lifetime-and-resource-management-modern-c"></a>Durata degli oggetti e gestione delle risorse (C++ moderno)
 A differenza dei linguaggi gestiti, non dispone di operazione di garbage collection (GC), che quale rilascia automaticamente le risorse di memoria non più lungo-utilizzati durante l'esecuzione di un programma C++. In C++, la gestione delle risorse è direttamente correlata alla durata dell'oggetto. Questo documento descrive i fattori che influiscono sulla durata dell'oggetto in C++ e modalità di gestione.  

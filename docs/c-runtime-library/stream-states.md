@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32413136"
 ---
 # <a name="stream-states"></a>Stati di flusso
 Gli stati validi e le transizioni di stato per un flusso vengono illustrati nella figura seguente.  

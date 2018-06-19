@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32418887"
 ---
 # <a name="linkage-in-names-with-block-scope"></a>Collegamenti in nomi con ambito del blocco
 Le seguenti regole di collegamento vengono applicate ai nomi con ambito del blocco (nomi locali):  

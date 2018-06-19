@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355138"
 ---
 # <a name="commandhandler"></a>CommandHandler
 `CommandHandler` viene identificata dal terzo parametro della funzione di `COMMAND_HANDLER` macro della mappa del messaggio.  

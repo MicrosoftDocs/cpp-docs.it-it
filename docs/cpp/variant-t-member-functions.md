@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32420850"
 ---
 # <a name="variantt-member-functions"></a>Funzioni membro _variant_t
 Per informazioni di `_variant_t` funzioni membro, vedere [variant_t Class](../cpp/variant-t-class.md).  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32420155"
 ---
 # <a name="pimpl-for-compile-time-encapsulation-modern-c"></a>Pimpl per incapsulamento in fase di compilazione (C++ moderno)
 Il *pimpl linguaggio* è una tecnica di C++ moderna per nascondere l'implementazione, per ridurre al minimo accoppiamento e per separare le interfacce. Pimpl è l'abbreviazione di "puntatore all'implementazione." Si potrebbero già avere familiarità con il concetto insaputa da altri nomi come scomparire o Firewall del compilatore di linguaggio.  

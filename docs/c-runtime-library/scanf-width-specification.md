@@ -29,6 +29,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32418198"
 ---
 # <a name="scanf-width-specification"></a>Specifica della larghezza per scanf
 Le informazioni si applicano all’interpretazione di stringhe di formato nella famiglia di funzioni `scanf`, incluse le versioni protette, quali `scanf_s`. Queste funzioni presumono normalmente che il flusso di input sia suddiviso in una sequenza di token. I token sono separati da spazi vuoti (spazi, tabulazioni o caratteri di nuova riga) o nel caso dei tipi numerici, dalla fine naturale di un tipo di dati numerici secondo quanto indicato dal primo carattere che non può essere convertito in testo numerico. Tuttavia, è possibile utilizzare la specifica della larghezza per fare in modo di interrompere l'analisi dell'input prima della fine naturale di un token.  
