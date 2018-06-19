@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355033"
 ---
 # <a name="modifying-the-atl-project"></a>Modifica il progetto ATL
 A questo punto, il progetto di controllo composito implementa gli oggetti necessari per il controllo composito. Il passaggio successivo consiste nell'aggiungere tutti i controlli che conterrà il controllo composito e gestire gli eventi necessari.  

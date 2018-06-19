@@ -23,6 +23,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32052050"
 ---
 # <a name="operator-ne"></a>Operatore NE
 Restituisce true (-1) se *expression1* non è uguale a *expression2*, oppure restituisce false (0), in caso affermativo.  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355448"
 ---
 # <a name="event-handling-principles"></a>Principi di gestione degli eventi
 Esistono tre passaggi comuni a tutti la gestione degli eventi. È necessario:  

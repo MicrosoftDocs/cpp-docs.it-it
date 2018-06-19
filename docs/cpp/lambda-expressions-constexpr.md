@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32418900"
 ---
 # <a name="constexpr-lambda-expressions-in-c"></a>Espressioni Lambda in C++ constexpr
 **Visual Studio 2017 15.3 e versioni successive** (disponibile con [/std:c + + 17](../build/reference/std-specify-language-standard-version.md)): un'espressione lambda può essere dichiarata come `constexpr` o utilizzati in un'espressione contant durante l'inizializzazione di ciascun membro dati che Consente di acquisire o introduce è consentita all'interno di un'espressione costante.  

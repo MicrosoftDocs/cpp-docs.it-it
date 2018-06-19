@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32417184"
 ---
 # <a name="for-statement-c"></a>Istruzione for (C++)
 Esegue ripetutamente un'istruzione finché la condizione non diventa false. Per informazioni sull'intervallo basata per istruzione, vedere [per istruzione (C++) basato su intervallo](../cpp/range-based-for-statement-cpp.md).  

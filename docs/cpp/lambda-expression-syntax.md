@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32421042"
 ---
 # <a name="lambda-expression-syntax"></a>Sintassi delle espressioni lambda
 In questo argomento vengono descritti la sintassi e gli elementi strutturali delle espressioni lambda. Per una descrizione delle espressioni lambda, vedere [espressioni Lambda](../cpp/lambda-expressions-in-cpp.md).  

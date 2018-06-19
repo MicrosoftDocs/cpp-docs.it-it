@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355646"
 ---
 # <a name="enumerators-and-collections-classes"></a>Classi di raccolte ed enumeratori
 Le classi seguenti forniscono supporto per le enumerazioni e le raccolte di COM:  
