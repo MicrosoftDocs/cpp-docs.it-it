@@ -28,6 +28,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33879672"
 ---
 # <a name="resource-includes-dialog-box"></a>Inclusioni risorsa (finestra di dialogo)
 È possibile utilizzare il **Inclusioni risorsa** la finestra di dialogo per modificare la disposizione dell'ambiente normale utilizzo di tutte le risorse di archiviazione nel file RC del progetto e tutti i [simboli](../windows/symbols-resource-identifiers.md) in Resource. h.  

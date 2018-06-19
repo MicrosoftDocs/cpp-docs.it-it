@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33172444"
 ---
 # <a name="stack-stlclr"></a>stack (STL/CLR)
 La classe modello descrive un oggetto che controlla una sequenza di lunghezza variabile di elementi che dispone dell'accesso last-in First-Out. Si utilizza l'adapter contenitore `stack` per gestire un contenitore sottostante come uno stack di push-down.  

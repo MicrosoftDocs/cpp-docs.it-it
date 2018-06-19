@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33885152"
 ---
 # <a name="editing-properties-for-an-activex-control"></a>Modifica delle proprietà di un controllo ActiveX
 Controlli ActiveX forniti da fornitori indipendenti possono sono dotati di proprietà e le caratteristiche. Nella finestra proprietà vengono visualizzate le proprietà di controlli ActiveX. Inoltre, in cui vengono visualizzate pagine delle proprietà create dai writer del controllo ActiveX nel **pagine delle proprietà** la finestra di dialogo (per visualizzare la pagina delle proprietà di un controllo ActiveX specifico, fare clic sul pulsante pagina delle proprietà di [Finestra proprietà](/visualstudio/ide/reference/properties-window)).  

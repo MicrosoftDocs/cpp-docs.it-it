@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33872042"
 ---
 # <a name="displaying-or-hiding-the-colors-window-image-editor-for-icons"></a>Attivazione o disattivazione della finestra Colori (Editor di immagini per le icone)
 ### <a name="to-display-colors-window"></a>Per visualizzare la finestra colori  

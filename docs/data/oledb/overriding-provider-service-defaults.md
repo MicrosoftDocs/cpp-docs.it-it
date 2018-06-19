@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33110080"
 ---
 # <a name="overriding-provider-service-defaults"></a>Override delle impostazioni predefinite dei servizi di un provider
 Il valore del Registro di sistema del provider per **OLEDB_SERVICES** viene restituito come valore predefinito per il [DBPROP_INIT_OLEDBSERVICES](https://msdn.microsoft.com/en-us/library/ms716898.aspx) proprietà di inizializzazione sull'oggetto origine dati.  

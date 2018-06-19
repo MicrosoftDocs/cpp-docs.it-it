@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33880384"
 ---
 # <a name="how-to-declare-pinning-pointers-and-value-types"></a>Procedura: dichiarare i puntatori di blocco e i tipi di valore
 Un tipo di valore può essere sottoposto a boxing in modo implicito. È possibile dichiarare un puntatore di blocco per l'oggetto di tipo di valore stesso e utilizzare un **pin_ptr** al tipo di valore boxed.  

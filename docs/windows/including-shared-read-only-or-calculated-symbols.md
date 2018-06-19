@@ -28,6 +28,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33879227"
 ---
 # <a name="including-shared-read-only-or-calculated-symbols"></a>Inclusione di simboli condivisi (in sola lettura) o calcolati
 La prima volta che l'ambiente di sviluppo legge un file di risorse creato da un'altra applicazione, contrassegna tutto, inclusi i file di intestazione, come di sola lettura. Successivamente, è possibile utilizzare il [finestra di dialogo Inclusioni risorsa](../windows/resource-includes-dialog-box.md) per aggiungere file di intestazione simboli di sola lettura aggiuntivi.  

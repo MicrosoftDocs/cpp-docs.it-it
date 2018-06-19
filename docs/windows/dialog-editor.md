@@ -26,6 +26,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33875858"
 ---
 # <a name="dialog-editor"></a>Editor finestre
 L'editor finestre consente di creare o modificare le risorse finestre di dialogo. Si apre l'editor finestre facendo doppio clic sul file RC di una finestra di dialogo nella finestra Visualizzazione risorse (**View &#124; visualizzazione risorse**). Si noti che Visualizzazione risorse non è disponibile nelle edizioni Express.  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33135889"
 ---
 # <a name="how-to-extend-the-marshaling-library"></a>Procedura: Estendere la libreria del marshalling
 In questo argomento viene illustrato come estendere la libreria del marshalling per fornire più conversioni tra tipi di dati. Gli utenti possono estendere la libreria del marshalling per le conversioni di dati non sono attualmente supportati dalla libreria.  

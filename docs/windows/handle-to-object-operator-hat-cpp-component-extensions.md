@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33881169"
 ---
 # <a name="handle-to-object-operator---c-component-extensions"></a>Operatore handle a oggetto (^) (Estensioni del componente C++)
 Il *gestire dichiaratore* (`^`, si pronuncia "hat"), viene modificato il tipo [identificatore](../cpp/overview-of-declarators.md) per indicare che l'oggetto dichiarato deve essere eliminato automaticamente quando il sistema determina che l'oggetto è non è più accessibile.  

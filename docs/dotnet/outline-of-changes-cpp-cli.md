@@ -18,6 +18,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33138301"
 ---
 # <a name="outline-of-changes-ccli"></a>Struttura delle modifiche (C++/CLI)
 Questa struttura vengono illustrati esempi di alcune delle modifiche nel linguaggio dalle estensioni gestite per C++ in Visual C++. Seguire il collegamento fornito con ogni elemento per altre informazioni.  

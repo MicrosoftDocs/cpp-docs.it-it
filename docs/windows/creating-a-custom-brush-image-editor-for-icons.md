@@ -25,6 +25,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33873147"
 ---
 # <a name="creating-a-custom-brush-image-editor-for-icons"></a>Creazione di un pennello personalizzato (Editor di immagini per le icone)
 Un pennello personalizzato è un'area rettangolare di un'immagine che vengono prelevati e utilizzati come uno dei pennelli pronti all'uso dell'editor di immagini. Tutte le operazioni eseguite su una selezione, è possibile eseguire su nonché un pennello personalizzato.  

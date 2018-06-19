@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33875598"
 ---
 # <a name="generic-delegates-visual-c"></a>Delegati generici (Visual C++)
 È possibile utilizzare parametri di tipo generico con i delegati. Per ulteriori informazioni sui delegati, vedere [delegato (estensioni del componente C++)](../windows/delegate-cpp-component-extensions.md).  

@@ -28,6 +28,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33880151"
 ---
 # <a name="how-to-include-resources-at-compile-time"></a>Procedura: includere risorse in fase di compilazione
 In genere è facile e comodo usare la disposizione predefinita di tutte le risorse in un file di script (RC) delle risorse. Tuttavia, è possibile aggiungere risorse in altri file al progetto corrente in fase di compilazione elencandoli nella **direttive in fase di compilazione** casella il [finestra di dialogo Inclusioni risorsa](../windows/resource-includes-dialog-box.md).  

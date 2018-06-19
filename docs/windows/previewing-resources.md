@@ -25,6 +25,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33878671"
 ---
 # <a name="previewing-resources"></a>Anteprima delle risorse
 L'anteprima delle risorse consente di visualizzare le risorse grafiche senza aprirle. Visualizzazione in anteprima è utile per i file eseguibili anche dopo che è stato compilato perché gli identificatori di risorsa modificati in numeri. Poiché tali identificatori numerici spesso non forniscono informazioni sufficienti, la visualizzazione in anteprima le risorse consente di identificare rapidamente le.  

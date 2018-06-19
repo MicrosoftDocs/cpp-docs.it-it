@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33880698"
 ---
 # <a name="nullptr--c-component-extensions"></a>nullptr (Estensioni del componente C++)
 Il `nullptr` (parola chiave) rappresenta un *il valore di puntatore null*. Utilizzare un valore di puntatore null per indicare che un handle di oggetto, un puntatore interno o un tipo di puntatore nativo non punta a un oggetto.  

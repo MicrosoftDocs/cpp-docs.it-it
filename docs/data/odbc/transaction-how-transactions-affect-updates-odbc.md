@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33098004"
 ---
 # <a name="transaction-how-transactions-affect-updates-odbc"></a>Transazione: effetti delle transazioni sugli aggiornamenti (ODBC)
 Gli aggiornamenti di [origine dati](../../data/odbc/data-source-odbc.md) gestiti durante le transazioni tramite l'utilizzo di un buffer di modifica (lo stesso metodo utilizzato di fuori di transazioni). Membri dati di campo di un recordset collettivamente fungono da un buffer di modifica che contiene il record corrente, il recordset temporaneamente durante il backup un `AddNew` o **modifica**. Durante un **eliminare** operazione, il record corrente non viene eseguito il in una transazione. Per ulteriori informazioni sui buffer di modifica e la modalità di memorizzazione del record corrente gli aggiornamenti, vedere [Recordset: aggiornamento dei record (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md).  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 96cdc2da0d8c3783cc2ce03bd280a5430e1ac01d
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "33954021"
 ---
 # <a name="autoinline"></a>auto_inline
 Esclude tutte le funzioni definite all'interno dell'intervallo in cui **off** specificato da considerarsi come candidate per l'espansione inline automatica.  

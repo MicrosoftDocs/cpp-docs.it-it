@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33875747"
 ---
 # <a name="licensed"></a>licensed
 Indica che l'oggetto COM a cui si riferisce è concesso in licenza e deve essere implementato con **IClassFactory2**.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33171150"
 ---
 # <a name="compiler-error-c2158"></a>Errore del compilatore C2158
 'type': la direttiva #pragma make_public è correntemente supportata solo per i tipi non modello nativi  

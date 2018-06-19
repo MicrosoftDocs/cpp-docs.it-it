@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33881705"
 ---
 # <a name="open-ltdevicegt-image-dialog-box-image-editor-for-icons"></a>Aprire &lt;dispositivo&gt; immagine la finestra di dialogo (Editor di immagini per le icone)
 Utilizzare questa finestra di dialogo per aprire immagini per i dispositivi. Elenca le immagini di dispositivi esistenti nella risorsa corrente (immagini che fanno parte della risorsa corrente).  

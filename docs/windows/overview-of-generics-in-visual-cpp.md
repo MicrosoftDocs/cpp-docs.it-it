@@ -27,6 +27,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33881003"
 ---
 # <a name="overview-of-generics-in-visual-c"></a>Cenni preliminari sui generics in Visual C++
 I generics sono tipi con parametri supportati dal Common Language Runtime. Un tipo con parametri viene definito con un parametro di tipo sconosciuto specificato quando viene utilizzato il generico.  

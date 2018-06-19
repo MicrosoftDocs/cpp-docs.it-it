@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33168841"
 ---
 # <a name="version-issues-for-value-types-nested-in-native-types-ccli"></a>Problemi di versione per tipi di valore annidati in tipi nativi (C++/CLI)
 Si consideri un componente di assembly firmato (nome sicuro) utilizzato per compilare un assembly client. Il componente contiene un tipo di valore utilizzato nel client come il tipo per un membro di un'unione nativa, una classe o una matrice. Se una versione futura del componente viene modificato il layout del tipo di valore o la dimensione, è necessario ricompilare il client.  

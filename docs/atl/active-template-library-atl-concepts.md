@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32358114"
 ---
 # <a name="active-template-library-atl-concepts"></a>Concetti relativi alla Libreria ATL (Active Template Library)
 La libreria ATL (Active Template) è un set di classi C++ basate su modelli che consentono di creare gli oggetti modello COM (Component Object) di piccola e veloce. Include un supporto speciale per le principali funzionalità COM, incluse le implementazioni predefinite, le interfacce duali, interfacce di enumeratore COM standard, punti di connessione, interfacce tear-off e controlli ActiveX.  

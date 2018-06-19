@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33171640"
 ---
 # <a name="compiler-error-c2143"></a>Errore del compilatore C2143
 Errore di sintassi: manca 'token1' prima di 'token2'  

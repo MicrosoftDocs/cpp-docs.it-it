@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33891425"
 ---
 # <a name="win32-application-wizard"></a>Creazione guidata applicazione Win32
 La creazione guidata applicazione Win32 di Visual C++ consente di creare uno dei quattro tipi di progetto (elencati nell'intestazione della tabella seguente). In ogni caso, è possibile specificare opzioni aggiuntive appropriate per il tipo di progetto aperto. La tabella seguente indica quali opzioni sono disponibili per ogni tipo di applicazione.  

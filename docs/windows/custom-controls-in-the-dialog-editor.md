@@ -26,6 +26,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33880244"
 ---
 # <a name="custom-controls-in-the-dialog-editor"></a>Controlli personalizzati nell'editor finestre
 L'editor finestre consente di utilizzare esistente "custom" o i controlli in un modello di finestra di dialogo "user".  

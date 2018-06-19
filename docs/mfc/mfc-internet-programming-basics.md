@@ -31,6 +31,7 @@ ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34255609"
 ---
 # <a name="mfc-internet-programming-basics"></a>Concetti di base della programmazione Internet MFC
 Microsoft fornisce molte API per la programmazione di applicazioni client e server. Molte nuove applicazioni vengono scritti per Internet, e come le tecnologie, funzionalità del browser e modifica delle opzioni di sicurezza, nuovi tipi di applicazioni verranno scritto. Browser eseguiti nei computer client, fornendo l'accesso al World Wide Web e la visualizzazione delle pagine HTML contenenti testo, immagini, controlli ActiveX e documenti. Server forniscono servizi gopher, HTTP e FTP ed eseguono applicazioni estensione server mediante il protocollo CGI. L'applicazione personalizzata può recuperare le informazioni e fornire dati su Internet.  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33168646"
 ---
 # <a name="using-verifiable-assemblies-with-sql-server-ccli"></a>Utilizzo di assembly verificabili con SQL Server (C++/CLI)
 Stored procedure estese, incluse le librerie a collegamento dinamico (DLL), consentono di estendere le funzionalità di SQL Server attraverso funzioni sviluppate con Visual C++. Stored procedure estese vengono implementate come funzioni nelle DLL. Oltre alle funzioni, stored procedure estese possono inoltre definire [tipi definiti dall'utente](../cpp/classes-and-structs-cpp.md) e [funzioni di aggregazione](http://msdn.microsoft.com/en-us/de255454-f45e-4281-81f9-bc61893ac5da) (ad esempio SUM o AVG).  

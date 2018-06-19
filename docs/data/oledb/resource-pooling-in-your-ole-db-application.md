@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33107487"
 ---
 # <a name="resource-pooling-in-your-ole-db-application"></a>Pooling di risorse in un'applicazione OLE DB
 Per sfruttare il pooling nell'applicazione, è necessario verificare che i servizi OLE DB vengono richiamati ottenendo l'origine dati tramite **IDataInitialize** o **IDBPromptInitialize**. Se si utilizza direttamente `CoCreateInstance` per richiamare il provider di base sul CLSID del provider, non viene richiamati alcun servizio OLE DB.  

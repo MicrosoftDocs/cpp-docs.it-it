@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33174150"
 ---
 # <a name="user-defined-operators-ccli"></a>Operatori definiti dall'utente (C++/CLI)
 Operatori definiti dall'utente per i tipi gestiti sono consentiti come membri statici o membri di istanza o in ambito globale. Tuttavia, solo gli operatori statici sono accessibili tramite i metadati per i client che vengono scritti in un linguaggio diverso da Visual C++.  

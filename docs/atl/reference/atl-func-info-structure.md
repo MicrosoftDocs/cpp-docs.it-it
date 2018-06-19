@@ -24,6 +24,7 @@ ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34255622"
 ---
 # <a name="atlfuncinfo-structure"></a>Le strutture ATL_FUNC_INFO struttura
 Contiene informazioni sul tipo utilizzati per descrivere una proprietà o metodo in un'interfaccia dispatch.  

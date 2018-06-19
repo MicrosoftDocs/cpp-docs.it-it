@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32369006"
 ---
 # <a name="building-a-bsc-file"></a>Compilazione di un file BSC
 BSCMAKE è possibile creare un nuovo file di informazioni dai file SBR appena creato. Consente inoltre di mantenere un file BSC esistente usando i file sbr per i file di oggetti che sono state modificate dall'ultima compilazione.  

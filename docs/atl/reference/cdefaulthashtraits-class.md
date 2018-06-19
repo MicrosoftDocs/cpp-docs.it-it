@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32361512"
 ---
 # <a name="cdefaulthashtraits-class"></a>Classe CDefaultHashTraits
 Questa classe fornisce una funzione statica per il calcolo dei valori hash.  

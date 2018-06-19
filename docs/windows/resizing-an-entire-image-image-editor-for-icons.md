@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33882654"
 ---
 # <a name="resizing-an-entire-image-image-editor-for-icons"></a>Ridimensionamento di un'immagine intera (Editor di immagini per le icone)
 ### <a name="to-resize-an-entire-image-using-the-properties-window"></a>Per ridimensionare un'intera immagine utilizzando la finestra proprietà  

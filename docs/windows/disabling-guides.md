@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33882089"
 ---
 # <a name="disabling-guides"></a>Disabilitazione delle guide
 È possibile utilizzare i tasti speciali in combinazione con il mouse per disabilitare l'effetto di blocco delle Guide. Utilizzando il tasto ALT disabilita gli effetti di blocco della Guida selezionata. Spostamento di una Guida con il tasto MAIUSC impedisce lo spostamento con la Guida di controlli bloccati.  

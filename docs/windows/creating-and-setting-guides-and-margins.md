@@ -27,6 +27,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33873511"
 ---
 # <a name="creating-and-setting-guides-and-margins"></a>Creazione e impostazione di guide e margini
 Se si desidera spostare i controlli, aggiunta di controlli o ridisporre un layout corrente, guide consentono allineare i controlli in modo accurato all'interno di una finestra di dialogo. Le guide di vengono visualizzati come linee punteggiate blu nella finestra di dialogo visualizzata nell'editor e le frecce corrispondenti righelli (nella parte superiore e lungo il lato sinistro dell'editor finestre).  

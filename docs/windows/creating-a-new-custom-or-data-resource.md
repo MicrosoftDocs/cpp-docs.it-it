@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33871832"
 ---
 # <a name="creating-a-new-custom-or-data-resource"></a>Creazione di una nuova risorsa personalizzata o di dati
 È possibile creare una nuova risorsa personalizzata o di dati inserendo tale risorsa in un file separato usando la normale sintassi dei file di script delle risorse (RC), quindi includendo tale file facendo clic con il pulsante destro del mouse sul progetto in Esplora soluzioni e scegliendo **Inclusioni risorsa** dal menu di scelta rapida.  

@@ -18,6 +18,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33872614"
 ---
 # <a name="extensions-that-are-specific-to-ccli"></a>Estensioni specifiche di C++/CLI
 Funzionalità del linguaggio seguenti, che sono descritte in questa sezione della documentazione, si applicano solo a C + + CLI.  

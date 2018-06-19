@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32361798"
 ---
 # <a name="iolecontrolimpl-class"></a>Classe IOleControlImpl
 Questa classe fornisce un'implementazione predefinita del **IOleControl** interfaccia e implementa **IUnknown**.  

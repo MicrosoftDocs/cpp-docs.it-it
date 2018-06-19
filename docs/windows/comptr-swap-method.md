@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33883485"
 ---
 # <a name="comptrswap-method"></a>Metodo ComPtr::Swap
 Scambia l'interfaccia gestita dal ComPtr corrente con l'interfaccia gestita dal ComPtr specificato.  

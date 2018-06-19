@@ -25,6 +25,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33876020"
 ---
 # <a name="ole-db-consumer-attributes"></a>Attributi del consumer OLE DB
 Gli attributi del consumer OLE DB inserire il codice, in base il [modelli Consumer OLE DB](../data/oledb/ole-db-consumer-templates-reference.md), per creare un lavoro OLE DB consumer che esegue attività, ad esempio tabelle di apertura, l'esecuzione di comandi e l'accesso ai dati.  

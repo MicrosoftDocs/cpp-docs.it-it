@@ -31,6 +31,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33871237"
 ---
 # <a name="customizing-or-changing-colors-image-editor-for-icons"></a>Personalizzazione o modifica di colori (Editor di immagini per le icone)
 L'editor di immagini [tavolozza dei colori](../windows/colors-window-image-editor-for-icons.md) inizialmente Visualizza 16 colori standard. Oltre ai colori visualizzati, è possibile creare colori personalizzati. È quindi possibile [salvare e caricare una tavolozza colori personalizzata](../windows/saving-and-loading-different-color-palettes-image-editor-for-icons.md).  

@@ -25,6 +25,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33879796"
 ---
 # <a name="how-to-add-mfc-support-to-resource-script-files"></a>Procedura: aggiungere supporto MFC ai file script di risorsa
 In genere, quando si compila un'applicazione MFC per Windows usando il [Creazione guidata applicazione MFC](../mfc/reference/mfc-application-wizard.md), la procedura guidata genera un set di file (incluso un file di script (RC) delle risorse) di base che contiene le principali funzionalità di Microsoft Foundation classi (MFC). Tuttavia, se si modifica un file RC per un'applicazione Windows che non è basata su MFC, non sono disponibili le seguenti funzionalità specifiche del framework MFC:  

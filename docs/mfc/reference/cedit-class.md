@@ -109,6 +109,7 @@ ms.sourcegitcommit: da7b7533d1a4dc141cc0f09149e4e4196f2fe329
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/23/2018
+ms.locfileid: "34463079"
 ---
 # <a name="cedit-class"></a>CEdit Class
 Fornisce la funzionalità di un controllo di modifica di Windows.  

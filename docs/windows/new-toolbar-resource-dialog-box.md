@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33877540"
 ---
 # <a name="new-toolbar-resource-dialog-box"></a>Nuova risorsa barra degli strumenti (finestra di dialogo)
 La finestra di dialogo Nuova risorsa barra degli strumenti consente di specificare la larghezza e altezza del pulsante per aggiungere una risorsa barra degli strumenti. Il valore predefinito è 16 × 15 pixel.  

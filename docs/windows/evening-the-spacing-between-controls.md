@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33872065"
 ---
 # <a name="evening-the-spacing-between-controls"></a>Spaziatura uniforme tra controlli
 L'editor finestre consente di ripartire i controlli in modo uniforme tra i controlli esterni selezionati.  

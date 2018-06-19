@@ -27,6 +27,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33890554"
 ---
 # <a name="toolbar-image-editor-for-icons"></a>Barra degli strumenti (Editor di immagini per le icone)
 Il **Editor di immagini** barra degli strumenti sono contenuti gli strumenti di disegno disegno, l'immissione di testo, la cancellazione e la modifica delle visualizzazioni. Contiene inoltre un selettore di opzioni con cui è possibile selezionare le opzioni per l'utilizzo di ogni strumento. Ad esempio, è possibile scegliere da vari larghezze pennello, fattori di ingrandimento e stili di riga.  

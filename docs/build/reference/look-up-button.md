@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32371447"
 ---
 # <a name="look-up-button"></a>pulsante di ricerca
 Fare clic su **Cerca** per recuperare il messaggio di errore che corrisponde al valore di sistema o il modulo specificato. I valori possono essere immessi in formato decimale o esadecimale (inclusi i valori decimali negativo). I moduli elencati nella **moduli aggiuntivi per la ricerca di errori** vengono cercati anche finestra di dialogo.  

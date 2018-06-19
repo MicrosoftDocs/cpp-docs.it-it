@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33873001"
 ---
 # <a name="ftmbasedisconnectobject-method"></a>Metodo FtmBase::DisconnectObject
 Forzatamente rilascia tutte le connessioni esterne a un oggetto. Server l'oggetto chiama l'implementazione dell'oggetto di questo metodo prima di arrestare.  

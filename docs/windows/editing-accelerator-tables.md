@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33872939"
 ---
 # <a name="editing-accelerator-tables"></a>Modifica delle tabelle dei tasti di scelta rapida
 In Visual C++, è possibile modificare una tabella di tasti di scelta rapida direttamente con la modifica sul posto nell'editor tasti di scelta rapida.  

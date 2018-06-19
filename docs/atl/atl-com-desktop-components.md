@@ -20,6 +20,7 @@ ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34255993"
 ---
 # <a name="atl-com-desktop-components"></a>Per altre informazioni, vedere Applicazioni desktop ATL COM.
 Il riferimento ATL documenta il modello libreria ATL (Active), un set di classi C++ basate su modelli che semplificano la programmazione di oggetti modello COM (Component Object). Per sfruttare appieno i vantaggi di ATL, è consigliabile una conoscenza del funzionamento con COM.  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33877836"
 ---
 # <a name="purpose-of-attributes"></a>Scopo degli attributi
 Gli attributi estendere C++ in direzioni non è attualmente possibile senza la classica struttura del linguaggio. Gli attributi i provider (DLL distinte) per estendere le funzionalità di linguaggio in modo dinamico. L'obiettivo principale degli attributi è per semplificare la creazione di componenti COM, oltre ad aumentare il livello di produttività dello sviluppatore. Gli attributi possono essere applicati a quasi qualsiasi costrutto C++, ad esempio classi, membri dati o le funzioni membro. Di seguito è riportato un'evidenziazione dei vantaggi offerti da questa nuova tecnologia:  

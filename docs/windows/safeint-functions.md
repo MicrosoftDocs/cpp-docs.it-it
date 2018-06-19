@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33889306"
 ---
 # <a name="safeint-functions"></a>Funzioni SafeInt
 La libreria SafeInt fornisce numerose funzioni che è possibile utilizzare senza creare un'istanza di [classe SafeInt](../windows/safeint-class.md). Se si desidera proteggere una singola operazione matematica da overflow di integer, è possibile utilizzare queste funzioni. Se si desidera proteggere più operazioni matematiche, è consigliabile creare `SafeInt` oggetti. È più efficiente per creare `SafeInt` oggetti anziché utilizzare queste funzioni più volte.  

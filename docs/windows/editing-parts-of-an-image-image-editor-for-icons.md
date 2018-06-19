@@ -28,6 +28,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33876852"
 ---
 # <a name="editing-parts-of-an-image-image-editor-for-icons"></a>Modifica delle parti di un'immagine (Editor di immagini per le icone)
 È possibile eseguire operazioni di modifica standard, ovvero le operazioni Taglia, copia, annullamento e lo spostamento, in un [selezione](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md), se la selezione è l'intera immagine o solo una parte di esso. Poiché l'editor di immagini utilizza negli Appunti di Windows, è possibile trasferire immagini tra l'editor di immagini e altre applicazioni per Windows.  

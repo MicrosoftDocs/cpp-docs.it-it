@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33879783"
 ---
 # <a name="new-new-slot-in-vtable--c-component-extensions"></a>nuovo (nuovo slot in vtable) (Estensioni del componente C++)
 Il `new` parola chiave indica che un membro virtuale verrà visualizzato un nuovo slot in vtable.  

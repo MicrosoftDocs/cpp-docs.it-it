@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33882615"
 ---
 # <a name="eventsourceinvokeall-method"></a>Metodo EventSource::InvokeAll
 Chiama ogni gestore dell'evento associato all'oggetto corrente [EventSource](../windows/eventsource-class.md) utilizzando gli argomenti e i tipi di argomenti specificati.  

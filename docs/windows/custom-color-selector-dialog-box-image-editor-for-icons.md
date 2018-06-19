@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33880257"
 ---
 # <a name="custom-color-selector-dialog-box-image-editor-for-icons"></a>Finestra di dialogo Regola colori (Editor di immagini per le icone)
 Questa finestra di dialogo consente di personalizzare i colori utilizzati per l'immagine. Per ulteriori informazioni, vedere [personalizzazione o modifica dei colori](../windows/customizing-or-changing-colors-image-editor-for-icons.md).  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33872702"
 ---
 # <a name="ftmbasemarshaller-data-member"></a>Membro dati FtmBase::marshaller_
 Contiene un riferimento al gestore del marshalling a thread libero.  

@@ -28,6 +28,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33879282"
 ---
 # <a name="image-editor-for-icons"></a>Editor di immagini per le icone
 L'editor di immagini comprende una vasta gamma di strumenti per la creazione e la modifica di immagini, nonché funzionalità che semplificano la creazione di bitmap per le barre degli strumenti. Oltre a bitmap, icone e cursori, è possibile modificare immagini in formato GIF o JPEG utilizzando i comandi del menu **Immagine** e gli strumenti disponibili sulla barra degli strumenti dell' **Editor immagini** .  

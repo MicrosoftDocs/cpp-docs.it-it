@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33873485"
 ---
 # <a name="editing-control-properties"></a>Modifica delle proprietà dei controlli
 ### <a name="to-edit-the-properties-of-a-control-or-controls"></a>Per modificare le proprietà di una o più controlli  

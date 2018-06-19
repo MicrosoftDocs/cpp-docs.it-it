@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33107939"
 ---
 # <a name="dynamically-determining-columns-returned-to-the-consumer"></a>Determinazione dinamica delle colonne restituite al consumer
 Le macro PROVIDER_COLUMN_ENTRY in genere gestiscono il **IColumnsInfo::** chiamare. Tuttavia, poiché un utente può decidere di utilizzare i segnalibri, il provider deve essere in grado di modificare le colonne restituite a seconda se il consumer richiede un segnalibro.  

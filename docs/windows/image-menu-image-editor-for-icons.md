@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33880530"
 ---
 # <a name="image-menu-image-editor-for-icons"></a>Menu Immagine (Editor di immagini per le icone)
 Menu immagine, viene visualizzata solo quando è attiva l'editor di immagini, è disponibili comandi per la modifica delle immagini, la gestione di tavolozze dei colori e l'impostazione di opzioni della finestra dell'Editor di immagini. Inoltre, i comandi per l'utilizzo di immagini per i dispositivi sono disponibili quando si lavora con icone e cursori.  

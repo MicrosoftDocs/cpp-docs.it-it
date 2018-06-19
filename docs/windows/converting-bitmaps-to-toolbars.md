@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33872627"
 ---
 # <a name="converting-bitmaps-to-toolbars"></a>Conversione di bitmap in barre degli strumenti
 È possibile creare una nuova barra degli strumenti mediante la conversione di una bitmap. L'immagine di bitmap converte le immagini dei pulsanti per una barra degli strumenti. La bitmap contiene in genere diverse immagini pulsante su una sola bitmap, con un'icona per ogni pulsante. Le immagini possono essere di qualsiasi dimensione. il valore predefinito è 16 pixel di larghezza e l'altezza dell'immagine. È possibile specificare le dimensioni delle immagini nel pulsante di [la finestra di dialogo Nuova risorsa barra degli strumenti](../windows/new-toolbar-resource-dialog-box.md) quando si sceglie di Editor barra degli strumenti dal **immagine** menu nell'editor di immagini.  

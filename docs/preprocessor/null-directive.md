@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33912979"
 ---
 # <a name="null-directive"></a>Direttiva null
 La direttiva del preprocessore null è un solo simbolo di cancelletto (**#**) da solo su una riga. Non ha alcun effetto.  

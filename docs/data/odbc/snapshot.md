@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33094764"
 ---
 # <a name="snapshot"></a>Snapshot
 Uno snapshot è un oggetto recordset riflette una visualizzazione statica dei dati in fase di che creazione dello snapshot. Quando si apre lo snapshot e spostare tutti i record, il set di record contiene e i relativi valori non cambiano fino a quando lo snapshot viene rigenerato chiamando **Requery**.  

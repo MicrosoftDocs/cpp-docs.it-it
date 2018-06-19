@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32360887"
 ---
 # <a name="urect-class"></a>Classe _U_RECT
 Classe di adattatori di questo argomento consente di utilizzare `RECT` puntatori o riferimenti deve essere passato a una funzione che viene implementata in termini di puntatori.  

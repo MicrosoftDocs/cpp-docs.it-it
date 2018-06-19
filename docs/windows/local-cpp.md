@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33877917"
 ---
 # <a name="local-c"></a>local (C++)
 Quando utilizzato nell'intestazione di interfaccia, consente di usare il compilatore MIDL come generatore di intestazione. Quando utilizzato in una singola funzione, indica una procedura locale per il quale non vengono generati stub.  

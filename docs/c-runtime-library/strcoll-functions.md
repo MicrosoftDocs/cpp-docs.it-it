@@ -32,6 +32,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32418185"
 ---
 # <a name="strcoll-functions"></a>Funzioni strcoll
 Ognuna delle funzioni `strcoll` e `wcscoll`confronta due stringhe in base all'impostazione della categoria di `LC_COLLATE` della tabella codici delle impostazioni locali in uso. Ognuna delle funzioni `_mbscoll` confronta due stringhe in base all'impostazione della tabella codici multibyte delle impostazioni locali in uso. Usare le funzioni `coll` per il confronto di stringhe solo quando esiste una differenza nella tabella codici corrente tra l'ordine del set di caratteri e l'ordine lessicografico dei caratteri e quando questa differenza è di particolare interesse per il confronto. Usare le funzioni `cmp` corrispondenti per eseguire il test per testare solo per l'uguaglianza di stringhe.  

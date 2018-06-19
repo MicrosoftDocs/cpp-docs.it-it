@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33889384"
 ---
 # <a name="swap-function-windows-runtime-c-template-library"></a>Funzione swap (Libreria modelli C++ per Windows Runtime)
 Supporta l'infrastruttura WRL e non deve essere utilizzato direttamente dal codice.  

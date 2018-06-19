@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33891166"
 ---
 # <a name="viewing-and-adding-activex-controls-to-a-dialog-box"></a>Visualizzazione e aggiunta di controlli ActiveX in una finestra di dialogo
 Visual Studio consente di inserire controlli ActiveX nella finestra di dialogo.  

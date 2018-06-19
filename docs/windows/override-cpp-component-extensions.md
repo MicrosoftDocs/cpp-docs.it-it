@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33878879"
 ---
 # <a name="override--c-component-extensions"></a>override (Estensioni del componente C++)
 Tramite la parola chiave sensibile al contesto `override` viene indicato che mediante un membro di un tipo viene eseguito l'override di una classe base o di un membro di un'interfaccia base.  

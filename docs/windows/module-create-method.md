@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33874889"
 ---
 # <a name="modulecreate-method"></a>Metodo Module::Create
 Crea un'istanza di un modulo.  

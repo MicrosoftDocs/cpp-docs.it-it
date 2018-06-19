@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33881117"
 ---
 # <a name="id-property"></a>Proprietà ID
 La proprietà ID fa riferimento a ogni voce della tabella di tasti di scelta rapida nel codice programma. Questo è il valore del comando che il programma verrà visualizzato quando l'utente preme il tasto di scelta rapida o una combinazione di tasti. Per rendere un acceleratore come una voce di menu, verificare i relativi ID lo stesso da (purché l'ID della tabella di tasti di scelta rapida è lo stesso ID per la risorsa di menu).  
