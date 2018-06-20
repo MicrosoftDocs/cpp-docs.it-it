@@ -1,7 +1,7 @@
 ---
 title: Strumenti del linker LNK1000 errore | Documenti Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 06/18/2018
 ms.technology:
 - cpp-diagnostics
 ms.topic: error-reference
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2f67df9c53b79fabfc9559380b5b57a72e64cb8a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7a01db36200995813ec4b6862e9ddd04c6f069ba
+ms.sourcegitcommit: d06966efce25c0e66286c8047726ffe743ea6be0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33298236"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36238682"
 ---
 # <a name="linker-tools-error-lnk1000"></a>Errore degli strumenti del linker LNK1000
-Errore sconosciuto. consultare la documentazione per le opzioni di supporto tecnico  
-  
- Prendere nota delle circostanze dell'errore, provare a isolare il problema e creare un test case riproducibile, quindi contattare `Microsoft Product Support Services`. Per informazioni su come individuare e segnalare questi errori, vedere [ http://support.microsoft.com/default.aspx?scid=kb; en-us; 134650](http://support.microsoft.com/default.aspx?scid=kb;en-us;134650).  
-  
- Questo errore può verificarsi se si combinano i propri file e file di intestazione standard (ad esempio, DOS). `#include` le intestazioni standard, procedere con i propri file di intestazione.
+
+> Errore sconosciuto. consultare la documentazione per le opzioni di supporto tecnico
+
+Prendere nota delle circostanze dell'errore, quindi provare a isolare il problema e creare un test case riproducibile. Per informazioni su come individuare e segnalare questi errori, vedere [come segnalare un problema con la documentazione o set di strumenti di Visual C++](../../how-to-report-a-problem-with-the-visual-cpp-toolset.md).
+
+Questo errore può verificarsi se si combinano i propri file e file di intestazione standard (ad esempio, Windows. h). Se qualsiasi, prima e quindi le intestazioni standard, seguito dal proprio file di intestazione, includere un'intestazione precompilata.

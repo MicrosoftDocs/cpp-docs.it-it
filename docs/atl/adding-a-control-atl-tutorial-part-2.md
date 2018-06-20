@@ -1,7 +1,7 @@
 ---
 title: Aggiunta di un controllo (ATL esercitazione, parte 2) | Documenti Microsoft
 ms.custom: get-started-article
-ms.date: 11/04/2016
+ms.date: 06/18/2018
 ms.technology:
 - cpp-atl
 ms.topic: conceptual
@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d3b8c7eb59579363ce3580c7319b80be2557a30d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f1547d48b5b5914d9b32ff8b476b0c007f972067
+ms.sourcegitcommit: d06966efce25c0e66286c8047726ffe743ea6be0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32358576"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36238708"
 ---
 # <a name="adding-a-control-atl-tutorial-part-2"></a>Aggiunta di un controllo (Esercitazione di ATL, parte 2)
 In questo passaggio, verrà di aggiungere un controllo al progetto, compilarlo ed eseguirne il test in una pagina Web.  
@@ -26,7 +26,7 @@ In questo passaggio, verrà di aggiungere un controllo al progetto, compilarlo e
   
 #### <a name="to-add-an-object-to-an-atl-project"></a>Per aggiungere un oggetto a un progetto ATL  
   
-1.  In visualizzazione classi, fare clic sul progetto poligono.  
+1.  In **Esplora soluzioni**, fare clic sul progetto poligono.  
   
 2.  Scegliere **Add** nel menu di scelta rapida e fare clic su **nuovo elemento** nel sottomenu.  
   
@@ -44,8 +44,8 @@ In questo passaggio, verrà di aggiungere un controllo al progetto, compilarlo e
 |-----------|--------------|  
 |**Nome breve**|Il nome che immesso per il controllo.|  
 |**Classe**|Il nome di classe C++ creato per implementare il controllo.|  
-|**file con estensione h**|Il file creato per contenere la definizione della classe C++.|  
-|**file con estensione cpp**|Il file creato per contenere l'implementazione della classe C++.|  
+|**File con estensione h**|Il file creato per contenere la definizione della classe C++.|  
+|**File con estensione cpp**|Il file creato per contenere l'implementazione della classe C++.|  
 |**Coclasse**|Il nome della classe del componente per questo controllo.|  
 |**Interface**|Il nome dell'interfaccia in cui il controllo implementerà relativi metodi e proprietà personalizzati.|  
 |**Type**|Descrizione per il controllo.|  
