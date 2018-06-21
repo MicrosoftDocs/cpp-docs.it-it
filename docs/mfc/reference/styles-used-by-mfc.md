@@ -206,12 +206,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6643a1c70b6a22126222d523de4426e1aebcf85b
-ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
+ms.openlocfilehash: ebde910e5573545c6b9b904f6db55e27f10492a3
+ms.sourcegitcommit: 05075fce8a0ed7fddb99f50f3931db966a91450d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34283340"
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36271370"
 ---
 # <a name="styles-used-by-mfc"></a>Stili utilizzati da MFC  
   
@@ -321,7 +321,7 @@ Modifica stili si applicano a [classe CEdit](../../mfc/reference/cedit-class.md)
 |`ES_NOHIDESEL`|In genere, un controllo di modifica nasconde la selezione, quando il controllo perde lo stato attivo di input e inverte la selezione, quando il controllo riceve lo stato attivo. Specifica di `ES_NOHIDESEL` Elimina l'azione predefinita.|  
 |`ES_NUMBER`|Consente solo cifre deve essere immesso nel controllo di modifica.|  
 |`ES_OEMCONVERT`|Testo immesso nel controllo di modifica viene convertito dal set di caratteri ANSI per il set di caratteri OEM e quindi di nuovo ad ANSI. In questo modo corretta conversione dei caratteri quando l'applicazione chiama il `AnsiToOem` funzione di Windows per convertire una stringa ANSI nel controllo di modifica in caratteri OEM. Questo stile è particolarmente utile per i controlli di modifica che contengono i nomi di file.|  
-|`ES_PASSWORD`|Visualizza tutti i caratteri come un asterisco (**\***) al momento dell'immissione nel controllo di modifica. Un'applicazione può utilizzare il `SetPasswordChar` funzione membro per modificare il carattere che viene visualizzato.|  
+|`ES_PASSWORD`|Visualizza tutti i caratteri come un asterisco (**\\\***) al momento dell'immissione nel controllo di modifica. Un'applicazione può utilizzare il `SetPasswordChar` funzione membro per modificare il carattere che viene visualizzato.|  
 |`ES_READONLY`|Impedisce all'utente di inserire o la modifica del testo nel controllo di modifica.|  
 |`ES_RIGHT`|Allinea a destra il testo in un controllo di modifica a riga singola o multiriga.|  
 |`ES_UPPERCASE`|Converte tutti i caratteri in lettere maiuscole al momento dell'immissione nel controllo di modifica.|  

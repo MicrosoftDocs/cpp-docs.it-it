@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7a7fbdb3baff7531aa4e391e5d7e936c39e38fc0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d920ca54c9e97273e4bda563921a144339eafd0f
+ms.sourcegitcommit: 05075fce8a0ed7fddb99f50f3931db966a91450d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33372619"
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36271347"
 ---
 # <a name="chttpfile-class"></a>Classe CHttpFile
 Fornisce la funzionalità per richiedere e leggere file in un server HTTP.  
@@ -115,7 +115,7 @@ BOOL AddRequestHeaders(
  `dwFlags`  
  Modifica la semantica delle intestazioni di nuovo. Può essere uno dei seguenti:  
   
-- `HTTP_ADDREQ_FLAG_COALESCE` Unisce le intestazioni con lo stesso nome, utilizzando il flag per aggiungere l'intestazione prima trovata per l'intestazione successivo. Ad esempio, "Accept: text / *" seguito da "Accept: audio /\*" comporta la formazione di una singola intestazione "Accept: testo /\*, audio /\*". È compito dell'applicazione chiamante per garantire uno schema coerente rispetto ai dati ricevuti dalle richieste inviate con le intestazioni fuse o separate.  
+- `HTTP_ADDREQ_FLAG_COALESCE` Unisce le intestazioni con lo stesso nome, utilizzando il flag per aggiungere l'intestazione prima trovata per l'intestazione successivo. Ad esempio, "Accept: testo /\*" seguito da "Accept: audio /\*" comporta la formazione della sola intestazione "Accept: testo /\*audio /\*". È compito dell'applicazione chiamante per garantire uno schema coerente rispetto ai dati ricevuti dalle richieste inviate con le intestazioni fuse o separate.  
   
 - `HTTP_ADDREQ_FLAG_REPLACE` Esegue un rimuovere e aggiungere per sostituire l'intestazione corrente. Il nome dell'intestazione da utilizzare per rimuovere l'intestazione corrente e il valore completo da utilizzare per aggiungere una nuova intestazione. Se il valore dell'intestazione è vuoto e viene trovata l'intestazione, verrà rimosso. Se non è vuota, viene sostituito il valore dell'intestazione.  
   
