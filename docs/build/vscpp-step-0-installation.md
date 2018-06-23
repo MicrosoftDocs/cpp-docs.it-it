@@ -2,7 +2,7 @@
 title: Installare il supporto per C++ in Visual Studio | Documenti Microsoft
 description: Installare il supporto di Visual Studio per Visual C++
 ms.custom: mvc
-ms.date: 06/08/2018
+ms.date: 06/21/2018
 ms.topic: tutorial
 ms.technology:
 - devlang-C++
@@ -14,38 +14,38 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4fd04450b75083152d058aef4a85d83f5635c8d9
-ms.sourcegitcommit: 1c2e035f98fb55d9b3c08ec3bb562179a368d0d1
+ms.openlocfilehash: 5807110caf730c72d93de7e1265199b63f1d6bff
+ms.sourcegitcommit: e013acba70aa29fed60ae7945162adee23e19c3b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35253756"
+ms.lasthandoff: 06/22/2018
+ms.locfileid: "36322485"
 ---
 # <a name="install-c-support-in-visual-studio"></a>Installare il supporto per C++ in Visual Studio
 
-Se ancora stato scaricato e installato Visual Studio e gli strumenti di Visual C++ ancora, di seguito viene illustrato come iniziare.
+Se ancora stato scaricato e installato ancora Visual Studio e gli strumenti di Visual C++, ecco come iniziare.
 
 ## <a name="prerequisites"></a>Prerequisiti
 
 - Una connessione internet a banda larga. Il programma di installazione di Visual Studio è possibile scaricare molti gigabyte di dati.
 
-- Un computer che esegue Microsoft Windows 7 o versioni successive. Si consiglia di Windows 10 per la migliore esperienza di sviluppo. Assicurarsi che gli ultimi aggiornamenti vengono applicati al sistema prima di installare Visual Studio.
+- Un computer che esegue Microsoft Windows 7 o versioni successive. È consigliabile Windows 10 per la migliore esperienza di sviluppo. Assicurarsi che gli ultimi aggiornamenti vengono applicati al sistema prima di installare Visual Studio.
 
-- Spazio libero su disco. Visual Studio richiede almeno 7GB di spazio su disco e può richiedere più di 50GB se sono presenti molte delle opzioni comuni. È consigliabile che installarlo nell'unità c:.
+- Spazio libero su disco. Visual Studio richiede almeno 7GB di spazio su disco e può richiedere più di 50GB se sono installate numerosi opzioni comuni. È consigliabile che installarlo nell'unità c:.
 
-Per informazioni dettagliate sui requisiti di sistema operativo e lo spazio su disco, vedere [requisiti di sistema della famiglia di Visual Studio prodotto](/visualstudio/productinfo/vs2017-system-requirements-vs). Il programma di installazione indica la quantità di spazio su disco necessario per le opzioni selezionate.
+Per informazioni dettagliate sui requisiti di sistema operativo e lo spazio su disco, vedere [requisiti di sistema della famiglia di Visual Studio prodotto](/visualstudio/productinfo/vs2017-system-requirements-vs). Il programma di installazione indica quanto spazio su disco è necessaria per le opzioni selezionate.
 
 ## <a name="installation"></a>Installazione
 
 1. Scaricare il programma di installazione Visual Studio 2017 più recente per Windows.
 
    > [!div class="nextstepaction"]
-   > <a target="frameTarget" href="https://www.visualstudio.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017">Installare Visual Studio 2017 Community</a>
+   > <a target="frameTarget" href="https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017">Installare Visual Studio 2017 Community</a>
 
    >[!Tip]
-   > L'edizione Community è per singoli sviluppatori, per la formazione in classe, la ricerca accademica e per lo sviluppo open source. Per altri usi, installare <a target="frameTarget" href="https://www.visualstudio.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017">Visual Studio 2017 Professional</a> oppure <a target="frameTarget" href="https://www.visualstudio.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017">Visual Studio 2017 Enterprise</a>.
+   > L'edizione Community è per singoli sviluppatori, per la formazione in classe, la ricerca accademica e per lo sviluppo open source. Per altri usi, installare <a target="frameTarget" href="https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017">Visual Studio 2017 Professional</a> oppure <a target="frameTarget" href="https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017">Visual Studio 2017 Enterprise</a>.
 
-1. Trovare il file di programma di installazione è scaricato ed eseguirlo. Può essere visualizzato nel browser o potrebbe essere nella cartella di download. Il programma di installazione richiede privilegi di amministratore per l'esecuzione. È possibile visualizzare un **controllo dell'Account utente** finestra di dialogo in cui viene richiesto di concedere l'autorizzazione per consentire l'installazione di apportare modifiche al sistema; scegliere **Sì**. Se si riscontrano problemi, trovare il file scaricato in Esplora File, fare doppio clic sull'icona del programma di installazione e scegliere **Esegui come amministratore** dal menu di scelta rapida.
+1. Trovare il file di programma di installazione è scaricato ed eseguirlo. Può essere visualizzato nel browser oppure può risultare disponibili nella cartella download. Il programma di installazione richiede privilegi di amministratore per l'esecuzione. Potrebbe essere visualizzato un **User Account Control** finestra di dialogo a cui viene richiesto di concedere l'autorizzazione per consentire l'installazione di apportare modifiche al sistema; scegliere **Sì**. Se si riscontrano, trovare il file scaricato in Esplora File, fare clic sull'icona del programma di installazione e scegliere **Esegui come amministratore** dal menu di scelta rapida.
 
    ![Eseguire il programma di installazione di Visual Studio 2017](../build/media/vscpp-concierge-run-installer.gif "eseguire il programma di installazione di Visual Studio")
 
@@ -53,7 +53,7 @@ Per informazioni dettagliate sui requisiti di sistema operativo e lo spazio su d
 
    ![Sviluppo di applicazioni desktop con C++](../build/media/desktop-development-with-cpp.png "sviluppo di applicazioni Desktop con C++")
 
-    Per C++, selezionare il **sviluppo di applicazioni Desktop con C++** carico di lavoro e quindi scegliere **installare**.
+    Per C++, selezionare il **lo sviluppo Desktop con C++** carico di lavoro e quindi scegliere **installare**.
 
    ![Installare lo sviluppo Desktop con carico di lavoro C++](../build/media/vscpp-concierge-choose-workload.gif "installare lo sviluppo Desktop con carico di lavoro di C++")
 
