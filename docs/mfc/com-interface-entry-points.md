@@ -19,21 +19,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 02aa70706df65318f2fbfd8103dff04a47ae2155
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d7f52aee6a276410ba6a90fd662a2fad8d258e92
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33341411"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929887"
 ---
 # <a name="com-interface-entry-points"></a>Punti di ingresso all'interfaccia COM
-Per le funzioni membro di un'interfaccia COM, utilizzare il [METHOD_PROLOGUE](com-interface-entry-points.md#method_prologue) macro per mantenere lo stato complessivo appropriato quando si chiamano metodi dell'interfaccia esportata.  
+Per le funzioni membro di un'interfaccia COM, usare il [METHOD_PROLOGUE](com-interface-entry-points.md#method_prologue) macro per mantenere lo stato complessivo appropriato quando si chiamano metodi dell'interfaccia esportata.  
   
- In genere, le funzioni membro delle interfacce implementate da `CCmdTarget`-oggetti derivati utilizzano già questa macro per fornire l'inizializzazione automatica del `pThis` puntatore. Ad esempio:  
+ In genere, le funzioni membro delle interfacce implementate da `CCmdTarget`-oggetti derivati già usano questa macro per fornire l'inizializzazione automatica del `pThis` puntatore. Ad esempio:  
   
  [!code-cpp[NVC_MFCConnectionPoints#5](../mfc/codesnippet/cpp/com-interface-entry-points_1.cpp)]  
   
- Per ulteriori informazioni, vedere [Nota tecnica 38](../mfc/tn038-mfc-ole-iunknown-implementation.md) su MFC/OLE **IUnknown** implementazione.  
+ Per ulteriori informazioni, vedere [Nota tecnica 38](../mfc/tn038-mfc-ole-iunknown-implementation.md) in MFC/OLE `IUnknown` implementazione.  
   
  Il `METHOD_PROLOGUE` macro viene definita come:  
   

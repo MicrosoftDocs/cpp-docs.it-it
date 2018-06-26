@@ -17,37 +17,37 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a06df0bdfe8d1b81b4285fc86378f3da99882698
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9a1d42d129ab7b7d2e98ae1126b8f32f68b1f356
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33348416"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931827"
 ---
 # <a name="processing-notification-messages-in-a-rebar-control"></a>Elaborazione dei messaggi di notifica in un controllo Rebar
-Nella classe padre del controllo rebar, creare un `OnChildNotify` funzione del gestore con un'istruzione switch per qualsiasi controllo rebar (`CReBarCtrl`) che si desidera gestire i messaggi di notifica. Le notifiche vengono inviate alla finestra padre quando l'utente trascina oggetti tramite il controllo rebar, modifica il layout delle bande rebar, elimina bande dal controllo rebar e così via.  
+Nella classe padre del controllo rebar, creare un `OnChildNotify` funzione del gestore con un'istruzione switch per qualsiasi controllo rebar (`CReBarCtrl`) dei messaggi di notifica che si desidera gestire. Le notifiche vengono inviate alla finestra padre quando l'utente trascina oggetti sopra il controllo rebar, modifica il layout delle bande rebar, eliminazioni bande dal controllo rebar e così via.  
   
  I seguenti messaggi di notifica possono essere inviati dall'oggetto controllo rebar:  
   
--   **RBN_AUTOSIZE viene** inviati da un controllo rebar (creata con il **RBS_AUTOSIZE** stile) quando il controllo rebar viene ridimensionato automaticamente.  
+-   RBN_AUTOSIZE viene inviato da un controllo rebar (creato con lo stile RBS_AUTOSIZE) quando il controllo rebar viene ridimensionato automaticamente.  
   
--   **RBN_BEGINDRAG viene** inviato da un controllo rebar quando l'utente inizia a trascinare una fuori banda.  
+-   RBN_BEGINDRAG viene inviato da un controllo rebar quando l'utente inizia a trascinare una fuori banda.  
   
--   **RBN_CHILDSIZE viene** inviato da un controllo rebar quando viene ridimensionato finestra figlio della banda.  
+-   RBN_CHILDSIZE viene inviato da un controllo rebar quando viene ridimensionato finestra figlio della banda.  
   
--   **RBN_DELETEDBAND viene** inviato da un controllo rebar dopo una banda è stata eliminata.  
+-   RBN_DELETEDBAND viene inviato da un controllo rebar dopo una banda è stata eliminata.  
   
--   **RBN_DELETINGBAND viene** inviato da un controllo rebar quando una banda sta per essere eliminato.  
+-   RBN_DELETINGBAND viene inviato da un controllo rebar quando una banda sta per essere eliminato.  
   
--   **RBN_ENDDRAG viene** inviato da un controllo rebar quando l'utente smette di trascinare una fuori banda.  
+-   RBN_ENDDRAG viene inviato da un controllo rebar quando l'utente smette di trascinare una fuori banda.  
   
--   **RBN_GETOBJECT viene** inviati da un controllo rebar (creata con il **RBS_REGISTERDROP** stile) quando un oggetto viene trascinato su una banda nel controllo.  
+-   RBN_GETOBJECT viene inviato da un controllo rebar (creato con lo stile RBS_REGISTERDROP) quando un oggetto viene trascinato su una banda nel controllo.  
   
--   **RBN_HEIGHTCHANGE viene** inviato da un controllo rebar quando l'altezza è stato modificato.  
+-   RBN_HEIGHTCHANGE viene inviato da un controllo rebar quando l'altezza è stato modificato.  
   
--   **RBN_LAYOUTCHANGED viene** inviato da un controllo rebar quando l'utente modifica il layout delle bande del controllo.  
+-   RBN_LAYOUTCHANGED viene inviato da un controllo rebar quando l'utente modifica il layout delle bande del controllo.  
   
- Per ulteriori informazioni sulle notifiche, vedere [riferimento per il controllo Rebar](http://msdn.microsoft.com/library/windows/desktop/bb774375) in Windows SDK.  
+ Per ulteriori informazioni su queste notifiche, vedere [riferimento per il controllo Rebar](http://msdn.microsoft.com/library/windows/desktop/bb774375) in Windows SDK.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Utilizzo di CReBarCtrl](../mfc/using-crebarctrl.md)   

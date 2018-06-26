@@ -22,15 +22,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cb89180db8e1a6cce2c40bbb4bae0965b972afa2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 894bb5a0b3a4c86d764fc6f4a0e4b9ae18422669
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33343525"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931853"
 ---
 # <a name="documentview-creation"></a>Creazione di documenti/visualizzazioni
-Il framework fornisce le implementazioni del `New` e **aprire** comandi (ad) la **File** menu. Creazione di un nuovo documento e la relativa finestra cornice e visualizzazione associata è un lavoro cooperativo tra l'oggetto applicazione, un modello di documento, il documento appena creato e la finestra cornice appena creato. Nella tabella seguente sono riepilogati gli oggetti creano in ciascun oggetto.  
+Il framework fornisce le implementazioni del **New** e **Open** comandi (ad) la **File** menu. La creazione di un nuovo documento e la relativa visualizzazione associata e finestra cornice è uno sforzo attivo cooperativo tra l'oggetto applicazione, un modello di documento, il documento appena creato e la finestra cornice appena creato. Nella tabella seguente sono riepilogati gli oggetti che creano cosa.  
   
 ### <a name="object-creators"></a>Creatori di oggetti  
   

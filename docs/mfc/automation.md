@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ce325073d8a1585ffa9e520cebdfc372280306d2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fdd62c73c099cbae8a21c82cca55cb8430d7fd04
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33345885"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930602"
 ---
 # <a name="automation"></a>automazione
 L'automazione (precedentemente nota come automazione OLE) fa sì che un'applicazione possa modificare oggetti implementati in un'altra applicazione o esporli in modo che possano essere modificati.  
@@ -54,10 +54,10 @@ L'automazione (precedentemente nota come automazione OLE) fa sì che un'applicaz
   
  Più importante è il supporto che l'automazione fornisce agli utenti e ai provider di soluzioni. Esponendo la funzionalità dell'applicazione tramite un'interfaccia comune e definita chiaramente, l'automazione consente di compilare soluzioni complete in un unico linguaggio di programmazione generale, come ad esempio Microsoft Visual Basic, anziché in diversi macro linguaggi specifici per applicazione.  
   
- Molte applicazioni commerciali, quali Microsoft Excel e Microsoft Visual C++, permettono di automatizzare gran parte delle funzionalità che offrono. Ad esempio, in Visual C++, è possibile scrivere macro VBScript per automatizzare compilazioni, aspetti della modifica o l'attività di debug di codice.  
+ Molte applicazioni commerciali, quali Microsoft Excel e Microsoft Visual C++, permettono di automatizzare gran parte delle funzionalità che offrono. Ad esempio, in Visual C++, è possibile scrivere macro VBScript per automatizzare compilazioni, aspetti di codice la modifica o l'attività di debug.  
   
 ##  <a name="_core_passing_parameters_in_automation"></a> Passaggio di parametri nell'automazione  
- Una difficoltà nel creare metodi di automazione consiste nel contribuire a fornire un meccanismo "sicuro" uniforme per passare dati tra i server e i client di automazione. L'automazione utilizza il tipo **VARIANT** per passare i dati. Il tipo **VARIANT** è un'unione contrassegnata. Contiene un membro dati per il valore (si tratta di un'unione anonima C++) e un membro dati che indica il tipo di informazioni archiviate nell'unione. Il tipo **VARIANT** supporta numerosi tipi di dati standard: interi a 2 e a 4 byte, numeri in virgola mobile a 4 e a 8 byte, stringhe e valori Boolean. Inoltre, supporta i tipi `HRESULT` (codici di errore OLE), **CURRENCY** (un tipo numerico a virgola fissa) e **DATA** (data e ora assolute), nonché puntatori alle interfacce **IUnknown** e `IDispatch` .  
+ Una difficoltà nel creare metodi di automazione consiste nel contribuire a fornire un meccanismo "sicuro" uniforme per passare dati tra i server e i client di automazione. L'automazione utilizza il tipo **VARIANT** per passare i dati. Il tipo **VARIANT** è un'unione contrassegnata. Contiene un membro dati per il valore (si tratta di un'unione anonima C++) e un membro dati che indica il tipo di informazioni archiviate nell'unione. Il tipo **VARIANT** supporta numerosi tipi di dati standard: interi a 2 e a 4 byte, numeri in virgola mobile a 4 e a 8 byte, stringhe e valori Boolean. Inoltre, supporta le **HRESULT** (codici di errore OLE), **valuta** (un tipo numerico a virgola fissa), e **data** tipi (data assoluta e ora), nonché puntatori alle `IUnknown` e `IDispatch` interfacce.  
   
  Il tipo **VARIANT** è incapsulato nella classe [COleVariant](../mfc/reference/colevariant-class.md) . Le classi **CURRENCY** e **DATE** di supporto sono incapsulate nelle classi [COleCurrency](../mfc/reference/colecurrency-class.md) e [COleDateTime](../atl-mfc-shared/reference/coledatetime-class.md) .  
   

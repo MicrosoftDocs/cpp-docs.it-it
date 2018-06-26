@@ -17,23 +17,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dbe72fcaf26a245d40544acaf59def9e24e0fa6e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a42d952ade479c4eb117d21921c9b0feafb81cea
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33351810"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931951"
 ---
 # <a name="providing-windowless-activation"></a>Attivazione senza finestra
-Codice di creazione finestre (ovvero tutto ciò che accade quando si chiama **CreateWindow**) è dispendioso da eseguire. Un controllo che gestisce una finestra sullo schermo deve gestire i messaggi per la finestra. I controlli privi di finestra sono quindi più veloci dei controlli con finestre.  
+Codice di creazione finestre (ovvero tutto ciò che accade quando si chiama `CreateWindow`) è dispendioso da eseguire. Un controllo che gestisce una finestra sullo schermo deve gestire i messaggi per la finestra. I controlli privi di finestra sono quindi più veloci dei controlli con finestre.  
   
  Un ulteriore vantaggio offerto dai controlli privi di finestra è che, a differenza di quelli con finestre, supportano il disegno trasparente e le aree non rettangolari dello schermo. Un esempio comune di un controllo trasparente è un controllo di testo con uno sfondo trasparente. I controlli disegnano il testo ma non lo sfondo, pertanto tutto ciò che si trova sotto il testo è visibile. I nuovi form utilizzano spesso controlli non rettangolari, quali le frecce e i pulsanti rotondi.  
   
  Spesso, un controllo non necessita di una finestra propria e, invece, può utilizzare i servizi di finestra del contenitore a cui appartiene, purché il contenitore sia stato scritto per supportare oggetti senza finestra. I controlli privi di finestra sono compatibili con le versioni precedenti di contenitori. Nei contenitori meno recenti non scritti per supportare i controlli privi di finestra, i controlli privi di finestra creano una finestra quando attivi.  
   
- Poiché i controlli privi di finestra non dispongono di finestre proprie, il contenitore (che dispone di una finestra) è responsabile di fornire servizi che sarebbero altrimenti forniti dalla finestra propria del controllo. Ad esempio, se il controllo deve eseguire una query sullo stato attivo della tastiera, acquisire il mouse o ottenere un contesto di dispositivo, queste operazioni vengono gestite dal contenitore. Il contenitore indirizza i messaggi di input dell'utente inviati alla finestra al controllo senza finestra appropriato tramite l'interfaccia `IOleInPlaceObjectWindowless`. (Vedere il *ActiveX SDK* per una descrizione di questa interfaccia.) `COleControl` questi servizi dal contenitore di richiamare le funzioni membro.  
+ Poiché i controlli privi di finestra non dispongono di finestre proprie, il contenitore (che dispone di una finestra) è responsabile di fornire servizi che sarebbero altrimenti forniti dalla finestra propria del controllo. Ad esempio, se il controllo deve eseguire una query sullo stato attivo della tastiera, acquisire il mouse o ottenere un contesto di dispositivo, queste operazioni vengono gestite dal contenitore. Il contenitore indirizza i messaggi di input dell'utente inviati alla finestra al controllo senza finestra appropriato tramite l'interfaccia `IOleInPlaceObjectWindowless`. (Vedere la *ActiveX SDK* per una descrizione di questa interfaccia.) `COleControl` funzioni membro richiamano questi servizi dal contenitore.  
   
- Per rendere il controllo di utilizzare l'attivazione senza finestra, includere il **windowlessActivate** flag nel set di flag restituiti da [COleControl:: GetControlFlags](../mfc/reference/colecontrol-class.md#getcontrolflags). Ad esempio:  
+ Per rendere il controllo di utilizzare l'attivazione senza finestra, includere il **windowlessActivate** flag nel set di flag restituito da [COleControl:: GetControlFlags](../mfc/reference/colecontrol-class.md#getcontrolflags). Ad esempio:  
   
  [!code-cpp[NVC_MFC_AxOpt#5](../mfc/codesnippet/cpp/providing-windowless-activation_1.cpp)]  
 [!code-cpp[NVC_MFC_AxOpt#6](../mfc/codesnippet/cpp/providing-windowless-activation_2.cpp)]  
@@ -41,7 +41,7 @@ Codice di creazione finestre (ovvero tutto ciò che accade quando si chiama **Cr
   
  Il codice per includere questo flag viene generato automaticamente se si seleziona il **attivazione senza finestra** opzione il [le impostazioni di controllo](../mfc/reference/control-settings-mfc-activex-control-wizard.md) pagina della creazione guidata controllo ActiveX MFC.  
   
- Se l'attivazione senza finestra è abilitata, il contenitore delegherà i messaggi di input all'interfaccia `IOleInPlaceObjectWindowless` del controllo. L'implementazione di `COleControl` di questa interfaccia invia i messaggi attraverso la mappa messaggi del controllo, dopo avere modificato le coordinate del mouse in modo appropriato. È possibile elaborare i messaggi come comuni messaggi di finestra, aggiungendo le voci corrispondenti alla mappa messaggi. Nei gestori per questi messaggi, evitare di utilizzare il `m_hWnd` variabile membro (o qualsiasi funzione membro che lo utilizza) senza prima verificare che il relativo valore non è **NULL**.  
+ Se l'attivazione senza finestra è abilitata, il contenitore delegherà i messaggi di input all'interfaccia `IOleInPlaceObjectWindowless` del controllo. L'implementazione di `COleControl` di questa interfaccia invia i messaggi attraverso la mappa messaggi del controllo, dopo avere modificato le coordinate del mouse in modo appropriato. È possibile elaborare i messaggi come comuni messaggi di finestra, aggiungendo le voci corrispondenti alla mappa messaggi. Nei gestori per questi messaggi, evitare di utilizzare il *m_hWnd* variabile membro (o qualsiasi funzione membro che la utilizzi) senza prima verificare che il relativo valore non è **NULL**.  
   
  `COleControl` fornisce funzioni membro che richiamano la cattura del mouse, lo stato attivo della tastiera e altri servizi della finestra dal contenitore in base alle esigenze, tra cui:  
   

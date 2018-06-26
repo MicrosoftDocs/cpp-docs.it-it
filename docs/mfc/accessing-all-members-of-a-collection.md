@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ec9757a463bce7ef873720f229b70da695deae8d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: cf25b84c4ee9808210d2dbf2f5115319a517c71b
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33334847"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931938"
 ---
 # <a name="accessing-all-members-of-a-collection"></a>Accesso a tutti i membri di una raccolta
 Le classi di raccolte di matrici di MFC, sia basate su modelli che non, usano indici per accedere ai loro elementi. Le classi di raccolte di liste e mappe di MFC, sia basate su modelli che non, usano un indicatore di tipo **POSITION** per descrivere una data posizione nella raccolta. Per accedere a uno o più membri di queste raccolte, è necessario innanzitutto inizializzare l'indicatore di posizione e poi passare ripetutamente quella posizione alla raccolta e chiederle di restituire l'elemento successivo. La raccolta non è responsabile di mantenere le informazioni di stato sull'avanzamento dell'iterazione. Tali informazioni vengono mantenute nell'indicatore di posizione. Tuttavia, data una particolare posizione, la raccolta è responsabile di restituire l'elemento successivo.  
@@ -51,7 +51,7 @@ Le classi di raccolte di matrici di MFC, sia basate su modelli che non, usano in
   
      In questo esempio si usa una matrice con puntatore tipizzato che contiene puntatori agli oggetti `CPerson` . La matrice è derivata dalla classe `CObArray`, una delle classi predefinite non basate su modelli. `GetAt` restituisce un puntatore a un oggetto `CPerson` . Per le classi di raccolte con puntatore tipizzato, ovvero matrici o elenchi, il primo parametro specifica la classe base e il secondo specifica il tipo da memorizzare.  
   
-     Il `CTypedPtrArray` classe anche overload di **[]** operatore in modo che è possibile utilizzare la sintassi di indice di matrice facoltativa per accedere agli elementi della matrice. Un'alternativa all'istruzione nel corpo del ciclo `for` riportato sopra è  
+     Il `CTypedPtrArray` classe anche overload il **[]** operatore in modo che è possibile utilizzare la sintassi di indice di matrice facoltativa per accedere agli elementi di una matrice. Un'alternativa all'istruzione nel corpo del **per** ciclo sopra è  
   
      [!code-cpp[NVC_MFCCollections#13](../mfc/codesnippet/cpp/accessing-all-members-of-a-collection_2.cpp)]  
   

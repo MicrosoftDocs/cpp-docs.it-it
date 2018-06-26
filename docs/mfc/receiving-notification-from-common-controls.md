@@ -24,29 +24,29 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 30e89c8d25d78477ed98bae0fd06a704e32d3906
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 80fefde054ed411dcb30836b2b89cef89cc54e64
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33349713"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36928794"
 ---
 # <a name="receiving-notification-from-common-controls"></a>Ricezione di notifiche da controlli comuni
-Controlli comuni sono finestre figlio che inviano messaggi di notifica alla finestra padre quando si verificano eventi, ad esempio l'input dell'utente, nel controllo.  
+Controlli comuni sono finestre figlio che inviano messaggi di notifica alla finestra padre quando si verificano eventi, ad esempio input dell'utente, nel controllo.  
   
- L'applicazione si basa su questi messaggi di notifica per determinare quale azione si desidera eseguire. Controlli più comuni di inviano messaggi di notifica come **WM_NOTIFY** messaggi. Controlli Windows inviano la maggior parte dei messaggi di notifica come **WM_COMMAND** messaggi. [CWnd::OnNotify](../mfc/reference/cwnd-class.md#onnotify) è il gestore per il **WM_NOTIFY** messaggio. Come con `CWnd::OnCommand`, l'implementazione di `OnNotify` invia il messaggio di notifica `OnCmdMsg` per la gestione delle mappe messaggi. La voce della mappa messaggi per la gestione delle notifiche è `ON_NOTIFY`. Per ulteriori informazioni, vedere [Nota tecnica 61: messaggi ON_NOTIFY e Wm_notify](../mfc/tn061-on-notify-and-wm-notify-messages.md).  
+ L'applicazione si basa su questi messaggi di notifica per determinare quale azione si desidera eseguire. Controlli più comuni di inviare messaggi di notifica come messaggi WM_NOTIFY. Controlli Windows inviano la maggior parte dei messaggi di notifica come WM_COMMAND (messaggi). [CWnd::OnNotify](../mfc/reference/cwnd-class.md#onnotify) è il gestore per il messaggio WM_NOTIFY. Come con `CWnd::OnCommand`, l'implementazione di `OnNotify` invia il messaggio di notifica a `OnCmdMsg` per la gestione delle mappe messaggi. La voce della mappa messaggi per la gestione delle notifiche è ON_NOTIFY. Per altre informazioni, vedere [Nota tecnica 61: messaggi ON_NOTIFY e Wm_notify](../mfc/tn061-on-notify-and-wm-notify-messages.md).  
   
- In alternativa, una classe derivata può gestire i messaggi di notifica tramite "reflection di messaggio". Per ulteriori informazioni, vedere [Nota tecnica 62: Reflection messaggi per controlli Windows](../mfc/tn062-message-reflection-for-windows-controls.md).  
+ In alternativa, una classe derivata può gestire i messaggi di notifica utilizzando "reflection di messaggio". Per altre informazioni, vedere [Nota tecnica 62: Reflection messaggi per controlli Windows](../mfc/tn062-message-reflection-for-windows-controls.md).  
   
 ## <a name="retrieving-the-cursor-position-in-a-notification-message"></a>Recuperare la posizione del cursore in un messaggio di notifica  
- In alcuni casi, è utile determinare la posizione corrente del cursore quando determinati messaggi di notifica vengono ricevuti da un controllo comune. Ad esempio, sarebbe utile determinare la posizione corrente del cursore quando un controllo comune riceve un **NM_RCLICK** messaggio di notifica.  
+ In alcuni casi, è utile determinare la posizione corrente del cursore quando determinati messaggi di notifica vengono ricevuti da un controllo comune. Ad esempio, sarebbe utile determinare la posizione corrente del cursore quando un controllo comune riceve un messaggio di notifica NM_RCLICK.  
   
- È un modo semplice per eseguire questa operazione chiamando `CWnd::GetCurrentMessage`. Tuttavia, questo metodo recupera solo la posizione del cursore in fase di che invio del messaggio. Poiché il cursore sono stato spostato perché è stato inviato il messaggio è necessario chiamare **CWnd:: GetCursorPos** per ottenere la posizione corrente del cursore.  
+ È un modo semplice per eseguire questa operazione chiamando `CWnd::GetCurrentMessage`. Tuttavia, questo metodo recupera solo la posizione del cursore in fase di che invio del messaggio. Poiché il cursore sono stato spostato dopo è stato inviato il messaggio è necessario chiamare `CWnd::GetCursorPos` per ottenere la posizione corrente del cursore.  
   
 > [!NOTE]
 >  `CWnd::GetCurrentMessage` deve essere chiamato solo all'interno di un gestore di messaggi.  
   
- Aggiungere il seguente codice al corpo del gestore del messaggio di notifica (in questo esempio, **NM_RCLICK**):  
+ Aggiungere il seguente codice al corpo del gestore del messaggio di notifica (in questo esempio, NM_RCLICK):  
   
  [!code-cpp[NVC_MFCControlLadenDialog#4](../mfc/codesnippet/cpp/receiving-notification-from-common-controls_1.cpp)]  
   

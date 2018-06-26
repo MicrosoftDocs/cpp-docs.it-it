@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1ff48585a7f3e19939e8d951c513a8d39c0de47e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d2999e82bd05d75cb8637ba7404c36cdc2be047a
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33347922"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36932172"
 ---
 # <a name="containers-advanced-features"></a>Contenitori: funzionalità avanzate
 In questo articolo vengono descritti i passaggi necessari per incorporare funzionalità avanzate facoltative nelle applicazioni contenitore esistenti. Tali funzionalità sono:  
@@ -49,7 +49,7 @@ In questo articolo vengono descritti i passaggi necessari per incorporare funzio
   
      Ad esempio, l'esempio OLE MFC [OCLIENT](../visual-cpp-samples.md) dispone di un elemento creato dall'applicazione contenitore/server incorporati. Aprire l'applicazione OCLIENT e modificare sul posto l'elemento creato dall'applicazione contenitore/server. Quando si modifica l'elemento dell'applicazione, si decide che si desidera incorporare un elemento creato dall'esempio OLE MFC [HIERSVR](../visual-cpp-samples.md). A tale scopo, non utilizzare l'attivazione sul posto. È necessario aprire completamente HIERSVR per attivare questo elemento. Poiché la libreria MFC non supporta questa funzionalità OLE, l'override di `COleClientItem::CanActivate` consente di verificare questa situazione ed evitare un possibile errore di runtime nell'applicazione.  
   
- Se si crea una nuova applicazione e si desidera che funga da applicazione contenitore/server, selezionare tale opzione nella finestra di dialogo Opzioni OLE nella creazione guidata applicazione e tale supporto verrà creato automaticamente. Per ulteriori informazioni, vedere l'articolo [Panoramica: creazione di un contenitore di controlli ActiveX](../mfc/reference/creating-an-mfc-activex-control-container.md). Per informazioni su esempi di MFC, vedere Esempi relativi a MFC.  
+ Se si crea una nuova applicazione e si desidera che funga da applicazione contenitore/server, selezionare tale opzione nella finestra di dialogo Opzioni OLE nella creazione guidata applicazione e tale supporto verrà creato automaticamente. Per altre informazioni, vedere l'articolo [Panoramica: creazione di un contenitore di controlli ActiveX](../mfc/reference/creating-an-mfc-activex-control-container.md). Per informazioni su esempi di MFC, vedere Esempi relativi a MFC.  
   
  Notare che non è possibile inserire un'applicazione MDI in se stessa. Un'applicazione contenitore/server non può essere inserita in se stessa a meno che non sia un'applicazione SDI.  
   
@@ -60,7 +60,7 @@ In questo articolo vengono descritti i passaggi necessari per incorporare funzio
   
 1.  Derivare la classe del documento da `COleLinkingDoc` anziché da `COleDocument`.  
   
-2.  Creare un ID di classe OLE (**CLSID**) per l'applicazione utilizzando il generatore di ID di classe incluso con gli strumenti di sviluppo OLE.  
+2.  Creazione di un ID di classe OLE (**CLSID**) per l'applicazione utilizzando il generatore di ID di classe incluso con gli strumenti di sviluppo OLE.  
   
 3.  Registrare l'applicazione con OLE.  
   
@@ -70,13 +70,13 @@ In questo articolo vengono descritti i passaggi necessari per incorporare funzio
   
     -   Connettere l'oggetto `COleTemplateServer` ai modelli di documento chiamando la funzione membro `ConnectTemplate` dell'oggetto.  
   
-    -   Chiamare il **COleTemplateServer:: RegisterAll** funzione membro per registrare tutti gli oggetti di classe con il sistema OLE.  
+    -   Chiamare il `COleTemplateServer::RegisterAll` funzione membro per registrare tutti gli oggetti di classe con il sistema OLE.  
   
-    -   Chiamare il metodo `COleTemplateServer::UpdateRegistry`. L'unico parametro per `UpdateRegistry` deve essere `OAT_CONTAINER` se l'applicazione non viene avviata con l'opzione "/Embedded". In questo modo l'applicazione viene registrata come contenitore in grado di supportare collegamenti a oggetti incorporati.  
+    -   Chiamare il metodo `COleTemplateServer::UpdateRegistry`. L'unico parametro per `UpdateRegistry` deve essere *OAT_CONTAINER* se l'applicazione non viene avviata con l'opzione "/Embedded". In questo modo l'applicazione viene registrata come contenitore in grado di supportare collegamenti a oggetti incorporati.  
   
          Se l'applicazione viene avviata con l'opzione "/Embedded", la finestra principale non dovrebbe venire visualizzata, analogamente a un'applicazione server.  
   
- L'esempio OLE MFC [OCLIENT](../visual-cpp-samples.md) implementa questa funzionalità. Per un esempio di come eseguire questa operazione, vedere la funzione `InitInstance` nel file OCLIENT.CPP di questa applicazione di esempio.  
+ L'esempio OLE MFC [OCLIENT](../visual-cpp-samples.md) implementata questa funzionalità. Per un esempio di questa procedura, vedere la `InitInstance` funzionano nel *OCLIENT. CPP* file di questa applicazione di esempio.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Contenitori](../mfc/containers.md)   

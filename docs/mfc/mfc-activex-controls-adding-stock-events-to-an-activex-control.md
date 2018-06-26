@@ -52,18 +52,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 210749906391ccdba2e488b75be98264bcba39cd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 41445015f30eb953675f763652fb85ef3eeb857a
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33359338"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930787"
 ---
 # <a name="mfc-activex-controls-adding-stock-events-to-an-activex-control"></a>Controlli ActiveX MFC: aggiunta di eventi predefiniti a un controllo ActiveX
-Eventi predefiniti diversi da eventi personalizzati che vengono generati automaticamente dalla classe [COleControl](../mfc/reference/colecontrol-class.md). `COleControl` contiene le funzioni membro predefinite che attivano eventi risultanti da azioni comuni. Alcune azioni comuni implementate da `COleControl` includono singolo - e doppio clic semplici sul controllo, gli eventi di tastiera e le modifiche nello stato dei pulsanti del mouse. Voci della mappa eventi per eventi predefiniti sono sempre precedute dal **EVENT_STOCK** prefisso.  
+Eventi predefiniti si differenziano dagli eventi personalizzati in vengono generati automaticamente dalla classe [COleControl](../mfc/reference/colecontrol-class.md). `COleControl` contiene le funzioni membro predefinite che attivano eventi risultanti da azioni comuni. Alcune azioni comuni implementate da `COleControl` includono singolo - e doppio clic semplici del controllo, gli eventi di tastiera e le modifiche nello stato dei pulsanti del mouse. Mappa eventi le voci per gli eventi sono sempre preceduti dal prefisso EVENT_STOCK stock.  
   
 ##  <a name="_core_stock_events_supported_by_classwizard"></a> Eventi predefiniti supportati per l'aggiunta guidata evento  
- La `COleControl` classe fornisce dieci eventi predefiniti, elencati nella tabella seguente. È possibile specificare gli eventi desiderati nel controllo utilizzando il [Aggiunta guidata evento](../ide/add-event-wizard.md).  
+ Il `COleControl` classe fornisce dieci eventi predefiniti, elencati nella tabella seguente. È possibile specificare gli eventi desiderati nel controllo utilizzando il [Aggiunta guidata evento](../ide/add-event-wizard.md).  
   
 ### <a name="stock-events"></a>Eventi predefiniti  
   
@@ -76,12 +76,12 @@ Eventi predefiniti diversi da eventi personalizzati che vengono generati automat
 |KeyPress|**void FireKeyPress (short\***`pnChar`**)** |Generato quando un `WM_CHAR` messaggio viene ricevuto.<br /><br /> Voce della mappa eventi: **EVENT_STOCK_KEYPRESS)**|  
 |KeyUp|**void FireKeyUp (short** `nChar` **breve**`nShiftState`**)** |Generato quando un `WM_SYSKEYUP` o `WM_KEYUP` messaggio viene ricevuto.<br /><br /> Voce della mappa eventi: **EVENT_STOCK_KEYUP)**|  
 |MouseDown|**void FireMouseDown (short** `nButton` **breve** `nShiftState` **, float***x* **, float** *y***)** |Viene generato se qualsiasi **BUTTONDOWN** (sinistro, centrale o a destra) viene ricevuto. Immediatamente prima di questo evento viene generato, viene acquisito il mouse.<br /><br /> Voce della mappa eventi: **EVENT_STOCK_MOUSEDOWN)**|  
-|MouseMove|**void FireMouseMove (short** `nButton` **breve** `nShiftState` **, float***x* **, float** *y***)** |Generato quando un `WM_MOUSEMOVE` messaggio viene ricevuto.<br /><br /> Voce della mappa eventi: **EVENT_STOCK_MOUSEMOVE)**|  
-|MouseUp|**void FireMouseUp (short** `nButton` **breve** `nShiftState` **, float***x* **, float** *y***)** |Viene generato se qualsiasi **BUTTONUP** (sinistro, centrale o a destra) viene ricevuto. Prima di questo evento viene generato, viene rilasciato il mouse capture.<br /><br /> Voce della mappa eventi: **EVENT_STOCK_MOUSEUP)**|  
-|ReadyStateChange|**void (FireReadyStateChange)**|Generato quando un controllo passa allo stato pronto successivo a causa della quantità di dati ricevuti.<br /><br /> Voce della mappa eventi: **EVENT_STOCK_READYSTATECHANGE)**|  
+|MouseMove|**void FireMouseMove (short** `nButton` **breve** `nShiftState` **, float***x* **, float** *y***)** |Generato quando viene ricevuto un messaggio WM_MOUSEMOVE.<br /><br /> Voce della mappa eventi: **EVENT_STOCK_MOUSEMOVE)**|  
+|MouseUp|**void FireMouseUp (short** `nButton` **breve** `nShiftState` **, float***x* **, float** *y***)** |Viene generato se qualsiasi **BUTTONUP** (sinistro, centrale o a destra) viene ricevuto. L'acquisizione del mouse viene rilasciato prima che venga generato questo evento.<br /><br /> Voce della mappa eventi: **EVENT_STOCK_MOUSEUP)**|  
+|ReadyStateChange|**void (FireReadyStateChange)**|Generato dopo la transizione di un controllo sullo stato pronto successivo a causa della quantità di dati ricevuti.<br /><br /> Voce della mappa eventi: **EVENT_STOCK_READYSTATECHANGE)**|  
   
 ##  <a name="_core_adding_a_stock_event_using_classwizard"></a> Aggiunta di un evento predefinito tramite l'aggiunta guidata evento  
- Aggiunta di eventi predefiniti richiede meno lavoro rispetto all'aggiunta di eventi personalizzati perché la generazione dell'evento effettivo viene gestita automaticamente dalla classe di base, `COleControl`. La procedura seguente aggiunge un evento predefinito per un controllo che è stato sviluppato utilizzando [Creazione guidata controllo ActiveX MFC](../mfc/reference/mfc-activex-control-wizard.md). L'evento, chiamato KeyPress, viene generato quando viene premuto un tasto e il controllo è attivo. Questa procedura può essere utilizzata anche per aggiungere altri eventi predefiniti. Sostituire il nome di evento predefinito selezionato per KeyPress.  
+ Aggiunta di eventi predefiniti richiede meno lavoro rispetto all'aggiunta di eventi personalizzati perché la generazione dell'evento effettivo viene gestita automaticamente dalla classe di base, `COleControl`. La procedura seguente consente di aggiungere un evento predefinito per un controllo che è stato sviluppato utilizzando [Creazione guidata controllo ActiveX MFC](../mfc/reference/mfc-activex-control-wizard.md). Viene generato l'evento, chiamato KeyPress, quando viene premuto un tasto e il controllo è attivo. Questa procedura può essere utilizzata anche per aggiungere altri eventi predefiniti. Sostituire il nome di evento predefinito selezionato per KeyPress.  
   
 #### <a name="to-add-the-keypress-stock-event-using-the-add-event-wizard"></a>Per aggiungere l'evento predefinito KeyPress mediante l'aggiunta guidata evento  
   
@@ -89,26 +89,26 @@ Eventi predefiniti diversi da eventi personalizzati che vengono generati automat
   
 2.  In visualizzazione classi, fare clic sulla classe del controllo ActiveX per aprire il menu di scelta rapida.  
   
-3.  Dal menu di scelta rapida, fare clic su **Aggiungi** e quindi fare clic su **Aggiungi evento**.  
+3.  Dal menu di scelta rapida, fare clic su **Add** e quindi fare clic su **Aggiungi evento**.  
   
-     Verrà visualizzata l'aggiunta guidata evento.  
+     Verrà aperta l'aggiunta guidata evento.  
   
-4.  Nel **nome evento** elenco a discesa, seleziona `KeyPress`.  
+4.  Nel **nome dell'evento** elenco a discesa, seleziona `KeyPress`.  
   
 5.  Scegliere **Fine**.  
   
 ##  <a name="_core_classwizard_changes_for_stock_events"></a> Modifiche di aggiunta evento guidata per eventi predefiniti  
- Poiché gli eventi predefiniti vengono gestiti dalla classe di base del controllo, l'aggiunta guidata evento modificare in alcun modo la dichiarazione di classe. Aggiunge l'evento alla mappa eventi del controllo e crea una voce nel relativo. File IDL. La riga seguente viene aggiunto alla mappa eventi del controllo, si trova nell'implementazione della classe controllo (. File CPP):  
+ Poiché eventi predefiniti vengono gestiti dalla classe di base del controllo, l'aggiunta guidata evento modificare la dichiarazione di classe in alcun modo. Aggiunge l'evento alla mappa eventi del controllo e crea una voce nel relativo. File IDL. La riga seguente viene aggiunto alla mappa eventi del controllo, che si trova nell'implementazione della classe di controllo (. File CPP):  
   
  [!code-cpp[NVC_MFC_AxUI#5](../mfc/codesnippet/cpp/mfc-activex-controls-adding-stock-events-to-an-activex-control_1.cpp)]  
   
- Aggiunta di questo codice genera un evento KeyPress quando un `WM_CHAR` messaggio viene ricevuto e il controllo è attivo. L'evento KeyPress può essere generato in altri momenti chiamando la funzione di generazione dell'evento (ad esempio, `FireKeyPress`) dal codice del controllo.  
+ Aggiunta di questo codice genera un evento KeyPress quando viene ricevuto un messaggio WM_CHAR e il controllo è attivo. L'evento KeyPress può essere attivato in altri momenti chiamando la funzione di generazione dell'evento (ad esempio, `FireKeyPress`) dal codice del controllo.  
   
- L'aggiunta guidata evento aggiunge la seguente riga di codice per il controllo. File IDL:  
+ L'aggiunta guidata evento consente di aggiungere la seguente riga di codice per il controllo. File IDL:  
   
  [!code-cpp[NVC_MFC_AxUI#6](../mfc/codesnippet/cpp/mfc-activex-controls-adding-stock-events-to-an-activex-control_2.idl)]  
   
- Questa riga associa l'evento KeyPress con l'ID di invio standard e consente al contenitore di prevedere l'evento.  
+ Questa riga consente di associare l'evento KeyPress con relativi ID di invio standard e consente al contenitore di prevedere l'evento KeyPress.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Controlli ActiveX MFC](../mfc/mfc-activex-controls.md)   

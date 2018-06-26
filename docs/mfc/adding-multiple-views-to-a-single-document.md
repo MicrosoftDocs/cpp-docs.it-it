@@ -17,22 +17,22 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cb40b356b5601e19c33083c7b731a1dc411de3c5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c48f4525c01149840ca74eee249263eac27c24cf
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33344149"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36928702"
 ---
 # <a name="adding-multiple-views-to-a-single-document"></a>Aggiunta di più visualizzazioni a un singolo documento
-In un'applicazione di interfaccia a documento singolo (SDI) creata con la libreria Microsoft Foundation classe (MFC), ogni tipo di documento è associato a un solo tipo di visualizzazione. In alcuni casi, è opportuno avere la possibilità di passare dalla visualizzazione corrente di un documento con una nuova vista.  
+In un'applicazione di interfacce a documento singolo (SDI) creata con la libreria Microsoft Foundation (classe) (MFC), ogni tipo di documento è associato un solo tipo di visualizzazione. In alcuni casi, è opportuno hanno la possibilità di passare dalla visualizzazione corrente di un documento con una nuova vista.  
   
 > [!TIP]
->  Per ulteriori procedure sull'implementazione di più visualizzazioni per un singolo documento, vedere [CDocument:: AddView](../mfc/reference/cdocument-class.md#addview) e [raccogliere](../visual-cpp-samples.md) esempio MFC.  
+>  Per ulteriori procedure sull'implementazione di più visualizzazioni per un singolo documento, vedere [CDocument:: AddView](../mfc/reference/cdocument-class.md#addview) e il [raccogliere](../visual-cpp-samples.md) esempio MFC.  
   
  È possibile implementare questa funzionalità aggiungendo un nuovo `CView`-classe derivata e codice aggiuntivo per alternare le visualizzazioni in modo dinamico a un'applicazione MFC esistente.  
   
- I passaggi sono come segue:  
+ I passaggi sono i seguenti:  
   
 -   [Modificare la classe dell'applicazione esistente](#vcconmodifyexistingapplicationa1)  
   
@@ -46,42 +46,42 @@ In un'applicazione di interfaccia a documento singolo (SDI) creata con la librer
   
  Il resto di questo argomento si presuppone quanto segue:  
   
--   Il nome del `CWinApp`-oggetto derivato `CMyWinApp`, e `CMyWinApp` viene dichiarato e definito in MYWINAPP. H e MYWINAPP. CPP.  
+-   Il nome del `CWinApp`-oggetto derivato `CMyWinApp`, e `CMyWinApp` viene dichiarato e definito *MYWINAPP. H* e *MYWINAPP. CPP*.  
   
--   `CNewView` è il nome della nuova `CView`-oggetto, derivato e `CNewView` viene dichiarato e definito in NEWVIEW. H e NEWVIEW. CPP.  
+-   `CNewView` è il nome della nuova `CView`-derivato, e `CNewView` viene dichiarato e definito *NEWVIEW. H* e *NEWVIEW. CPP*.  
   
 ##  <a name="vcconmodifyexistingapplicationa1"></a> Modificare la classe dell'applicazione esistente  
- Per l'applicazione passare dalla visualizzazione, è necessario modificare la classe dell'applicazione mediante l'aggiunta di variabili membro per archiviare le visualizzazioni e un metodo per modificarli.  
+ Per l'applicazione passare tra le visualizzazioni, è necessario modificare la classe dell'applicazione mediante l'aggiunta di variabili membro per archiviare le visualizzazioni e un metodo per modificarli.  
   
- Aggiungere il codice seguente alla dichiarazione di `CMyWinApp` in MYWINAPP. H:  
+ Aggiungere il codice seguente alla dichiarazione di `CMyWinApp` in *MYWINAPP. H*:  
   
  [!code-cpp[NVC_MFCDocViewSDI#1](../mfc/codesnippet/cpp/adding-multiple-views-to-a-single-document_1.h)]  
   
- Nuove variabili membro, `m_pOldView` e `m_pNewView`, scegliere la visualizzazione corrente e quello appena creato. Il nuovo metodo (`SwitchView`) attiva le viste quando richiesto dall'utente. Il corpo del metodo è illustrato più avanti in questo argomento in [implementare la funzione di commutazione](#vcconswitchingfunctiona4).  
+ Nuove variabili membro `m_pOldView` e `m_pNewView`, scegliere la visualizzazione corrente e quello appena creato. Il nuovo metodo (`SwitchView`) passa le viste quando richiesto dall'utente. Il corpo del metodo è illustrato più avanti in questo argomento nella [implementare la funzione di commutazione](#vcconswitchingfunctiona4).  
   
  Ultima modifica alla classe dell'applicazione richiede l'inclusione di un nuovo file di intestazione che definisce un messaggio di Windows (**WM_INITIALUPDATE**) che viene utilizzata nella funzione di alternanza.  
   
- Inserire la riga seguente nella sezione include di MYWINAPP. CPP:  
+ Inserire la riga seguente nella sezione inclusione di *MYWINAPP. CPP*:  
   
  [!code-cpp[NVC_MFCDocViewSDI#2](../mfc/codesnippet/cpp/adding-multiple-views-to-a-single-document_2.cpp)]  
   
  Salvare le modifiche e continuare al passaggio successivo.  
   
 ##  <a name="vcconnewviewclassa2"></a> Creare e modificare la nuova classe di visualizzazione  
- Creazione della nuova classe di visualizzazione è semplice tramite il **nuova classe** comando disponibile in visualizzazione classi. L'unico requisito per questa classe è che deriva da `CView`. Aggiungere la nuova classe all'applicazione. Per informazioni specifiche sull'aggiunta di una nuova classe al progetto, vedere [aggiunta di una classe](../ide/adding-a-class-visual-cpp.md).  
+ Creazione della nuova classe di visualizzazione è semplice tramite il **nuova classe** comando disponibile in visualizzazione classi. È l'unico requisito per questa classe che deriva da `CView`. Aggiungere la nuova classe all'applicazione. Per informazioni specifiche sull'aggiunta di una nuova classe al progetto, vedere [aggiunta di una classe](../ide/adding-a-class-visual-cpp.md).  
   
- Dopo aver aggiunto la classe al progetto, è necessario modificare l'accessibilità di alcuni membri di classe di visualizzazione.  
+ Dopo aver aggiunto la classe al progetto, è necessario modificare l'accessibilità di alcuni membri della classe visualizzazione.  
   
- Modificare NEWVIEW. H modificando l'identificatore di accesso da `protected` a **pubblica** per il costruttore e distruttore. In questo modo la classe per essere creata ed eliminata in modo dinamico e modificare l'aspetto della visualizzazione prima che sia visibile.  
+ Modificare *NEWVIEW. H* modificando l'identificatore di accesso da **protetti** a **pubblica** per il costruttore e distruttore. In questo modo la classe per essere creata ed eliminata in modo dinamico e modificare l'aspetto della visualizzazione prima che sia visibile.  
   
  Salvare le modifiche e continuare al passaggio successivo.  
   
 ##  <a name="vcconattachnewviewa3"></a> Creare e associare la nuova vista  
- Per creare e collegare la nuova vista, è necessario modificare il `InitInstance` funzione della classe dell'applicazione. La modifica aggiunge di nuovo codice che crea un nuovo oggetto di visualizzazione e quindi inizializza entrambe `m_pOldView` e `m_pNewView` con i due oggetti di visualizzazione esistente.  
+ Per creare e collegare la nuova vista, è necessario modificare il `InitInstance` funzione della classe dell'applicazione. La modifica aggiunge nuovo codice che crea un nuovo oggetto di visualizzazione e quindi inizializza entrambe `m_pOldView` e `m_pNewView` con i due oggetti di visualizzazione esistente.  
   
- Poiché la nuova vista viene creata all'interno di `InitInstance` (funzione), le viste nuove ed esistenti vengono mantenute per tutta la durata dell'applicazione. Tuttavia, l'applicazione può creare facilmente la nuova vista in modo dinamico.  
+ Poiché la nuova vista viene creata all'interno di `InitInstance` (funzione), le viste nuove ed esistenti persistono per la durata dell'applicazione. Tuttavia, l'applicazione è stato possibile creare facilmente la nuova vista in modo dinamico.  
   
- Inserire il codice dopo la chiamata a `ProcessShellCommand`:  
+ Inserire questo codice dopo la chiamata a `ProcessShellCommand`:  
   
  [!code-cpp[NVC_MFCDocViewSDI#3](../mfc/codesnippet/cpp/adding-multiple-views-to-a-single-document_3.cpp)]  
   
@@ -90,7 +90,7 @@ In un'applicazione di interfaccia a documento singolo (SDI) creata con la librer
 ##  <a name="vcconswitchingfunctiona4"></a> Implementare la funzione di commutazione  
  Nel passaggio precedente, è stato aggiunto codice creato e inizializzato un nuovo oggetto view. L'ultima operazione importante consiste nell'implementare il metodo di commutazione, `SwitchView`.  
   
- Alla fine del file di implementazione per la classe dell'applicazione (MYWINAPP. CPP), aggiungere la definizione di metodo seguenti:  
+ Alla fine del file di implementazione per la classe dell'applicazione (*MYWINAPP. CPP*), aggiungere la definizione di metodo seguenti:  
   
  [!code-cpp[NVC_MFCDocViewSDI#4](../mfc/codesnippet/cpp/adding-multiple-views-to-a-single-document_4.cpp)]  
   

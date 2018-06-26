@@ -22,17 +22,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: edcdcbad2b7b3e70988579786c1c8cf28f734a48
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 58ddef11e56da760bbecaa47f03dfa6c57dfa3ed
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33344935"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929481"
 ---
 # <a name="managing-mdi-child-windows"></a>Gestione di finestre figlio MDI
-Finestre principali MDI (una per ogni applicazione) contengono una finestra figlio speciale denominata la **MDICLIENT** finestra. Il **MDICLIENT** finestra consente di gestire l'area client della finestra cornice principale e dispone di finestre figlio: le finestre di documento, derivate da `CMDIChildWnd`. Poiché le finestre di documento sono esse stesse finestre cornice (finestre figlio MDI), possono avere a loro volta finestre figlio. In questi casi, la finestra padre gestisce le relative finestre figlio e inoltra alcuni comandi.  
+Finestre principali MDI (una per ogni applicazione) contengono una finestra figlio speciale denominata finestra MDICLIENT. La finestra MDICLIENT gestisce l'area client della finestra cornice principale e dispone di finestre figlio: le finestre di documento, derivate da `CMDIChildWnd`. Poiché le finestre di documento sono esse stesse finestre cornice (finestre figlio MDI), possono avere a loro volta finestre figlio. In questi casi, la finestra padre gestisce le relative finestre figlio e inoltra alcuni comandi.  
   
- In una finestra cornice MDI, la finestra cornice gestisce la **MDICLIENT** finestra, riposizionandola insieme alle barre di controllo. Il **MDICLIENT** finestra, a sua volta, gestisce tutte le finestre cornice figlio MDI. Nella figura seguente viene illustrata la relazione tra una finestra cornice MDI, il relativo **MDICLIENT** finestra e finestre cornice documento figlio.  
+ In una finestra cornice MDI, la finestra cornice gestisce la finestra MDICLIENT, riposizionandola insieme con le barre di controllo. La finestra MDICLIENT, a sua volta, gestisce tutte le finestre di cornice figlio MDI. Nella figura seguente viene illustrata la relazione tra una finestra cornice MDI, la finestra MDICLIENT e finestre cornice documento figlio.  
   
  ![Finestre figlio in una finestra cornice MDI](../mfc/media/vc37gb1.gif "vc37gb1")  
 Finestre cornice MDI ed elementi figli  
