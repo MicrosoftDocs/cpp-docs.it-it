@@ -14,23 +14,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8c59004f27e0f3a1c629daae621df831fe82cd7a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9c4ebbc8e792e36461f7c52c17fa23815239e323
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33347217"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929090"
 ---
 # <a name="html-basics"></a>Nozioni fondamentali su HTML
-La maggior parte dei browser hanno la possibilità di esaminare l'origine HTML delle pagine, che è esplorare. Quando si visualizza l'origine verrà visualizzato un numero di HTML (Hypertext markup) tag, racchiuso tra parentesi acute (<>), frammisti con testo.  
+La maggior parte dei browser includere la capacità di esaminare l'origine HTML delle pagine che è esplorare. Quando si visualizza l'origine verrà visualizzato un numero di tag HTML (linguaggio di markup Hypertext), racchiuso tra parentesi angolari (<>), frammisti con il testo.  
   
- La procedura seguente usa i tag HTML per compilare una semplice pagina Web. In questa procedura, sarà di testo normale in un file in blocco note, apportare alcune modifiche, salvare il file e ricaricare la pagina nel browser per visualizzare le modifiche.  
+ I passaggi seguenti usano i tag HTML per compilare una semplice pagina Web. In questi passaggi, si sarà digitare il testo normale in un file nel blocco note, apportare alcune modifiche, salvare il file e ricaricare la pagina nel browser per visualizzare le modifiche.  
   
 #### <a name="to-create-an-html-file"></a>Per creare un file HTML  
   
 1.  Aprire Blocco note o qualsiasi editor di testo normale.  
   
-2.  Dal **File** menu, scegliere `New`.  
+2.  Dal **File** menu, scegliere **New**.  
   
 3.  Digitare le righe seguenti:  
   
@@ -42,13 +42,13 @@ La maggior parte dei browser hanno la possibilità di esaminare l'origine HTML d
  </HTML>  
  ```  
   
-4.  Dal **File** menu, scegliere **salvare**e salvare il file come c:\webpages\First.htm. Lasciare il file è aperto nell'editor.  
+4.  Dal **File** menu, scegliere **salvare**e salvare il file come c:\webpages\First.htm. Lasciare il file aperto nell'editor.  
   
-5.  Commutatore nel browser e dal **File** menu, scegliere **aprire**, o tipo `file://C:/webpages/first.htm` nella casella di modifica URL del browser. Si noterà una pagina vuota con la didascalia della finestra "Top HTML Tags".  
+5.  Commutatore nel browser e dal **File** menu, scegliere **Apri**, o un tipo *file://C:/webpages/first.htm* nella casella di modifica URL del browser. Si dovrebbe essere una pagina vuota con la didascalia della finestra "Tag HTML superiore".  
   
-     Nota: i tag vengono abbinati e sono inclusi tra parentesi quadre. Non fanno distinzione tra i tag, ma l'uso delle maiuscole viene spesso utilizzato per mettere in risalto i tag.  
+     Nota: i tag sono associati e vengono inclusi parentesi angolari. Non fanno distinzione tra i tag, ma l'uso delle maiuscole viene spesso utilizzato per evidenziare i tag.  
   
-     Il tag \<HTML > consente di avviare il documento e il tag \</HTML > lo termina. Tag di fine (non è sempre obbligatorio) sono uguali ai tag di inizio, ma dispone di una barra (/) prima del tag. Non deve esistere spazi tra la parentesi angolare di (<) e l'inizio del tag.  
+     Il tag \<HTML > Avvia il documento e il tag \</HTML > lo termina. Tag di fine (non è sempre obbligatorio) corrispondono a quelle del tag di inizio, ma dispone di una barra (/) prima del tag. Non deve esistere spazi tra la parentesi angolare di (<) e l'inizio del tag.  
   
 6.  Commutatore al blocco note e dopo il  \< /HEAD >, digitare:  
   
@@ -73,7 +73,7 @@ La maggior parte dei browser hanno la possibilità di esaminare l'origine HTML d
  <H3>Here's the big picture</H3>  
  ```  
   
-10. Aggiungere un'immagine utilizzando un file con estensione gif salvato nella stessa directory della pagina:  
+10. Aggiungere un'immagine, usando un file con estensione gif salvato nella stessa directory della pagina:  
   
  ```  
  <IMG src="yourfile.gif">  
@@ -89,9 +89,9 @@ La maggior parte dei browser hanno la possibilità di esaminare l'origine HTML d
  </UL>  
  ```  
   
-12. Per numerare l'elenco, utilizzare abbinato \<OL > e \</OL > tag al posto di \<UL > e  \< /ul > tag.  
+12. Per numerare l'elenco, utilizzare abbinati \<OL > e \</OL > tag anziché il \<UL > e  \< /ul > tag.  
   
- Che deve iniziare. Se viene visualizzato una grande funzionalità in una pagina Web, è possibile scoprire come è stato creato mediante l'esame dell'origine HTML. Editor HTML, ad esempio Microsoft Front Page può essere utilizzato per creare pagine semplici e complesse.  
+ Che deve iniziare. Se viene visualizzato una grande funzionalità in una pagina Web, può scoprire come è stato creato mediante l'analisi dell'origine HTML. Editor HTML, ad esempio Microsoft Front Page può essere utilizzato per creare pagine semplici e avanzate.  
   
  Ecco l'intera origine HTML per il file che creato è la:  
   
