@@ -20,15 +20,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b51daa375c3c920443316b6e10b6415ee018fdb4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3864de8b3133fd2284b3ce57b75b30d8f41c26a7
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33385778"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36928528"
 ---
 # <a name="relationship-between-a-c-window-object-and-an-hwnd"></a>Relazione tra un oggetto finestra C++ e HWND
-La finestra *oggetto* è un oggetto di C++ `CWnd` classe (o una classe derivata) che viene creata direttamente. Viene fornito e passa in risposta alle chiamate di costruttore e distruttore del programma. Le finestre *finestra*, d'altra parte, è un handle opaco a una struttura dati interna di Windows che corrisponde a una finestra e utilizza risorse di sistema, se presente. Una finestra di Windows è identificata da un handle di finestra"" (`HWND`) e viene creato dopo il `CWnd` oggetto creato da una chiamata al **crea** funzione membro di classe `CWnd`. La finestra può essere eliminata da una chiamata del programma o da un'azione dell'utente. L'handle di finestra viene archiviato nell'oggetto finestra `m_hWnd` variabile membro. Nella figura seguente viene illustrata la relazione tra l'oggetto finestra C++ e la finestra di Windows. Creazione di finestre è descritto in [creazione Windows](../mfc/creating-windows.md). Eliminazione definitiva di windows è descritta nella [distruzione di oggetti finestra](../mfc/destroying-window-objects.md).  
+La finestra *oggetto* è un oggetto di C++ `CWnd` classe (o una classe derivata) che viene creata direttamente. Fornito e viene inviata in risposta alle chiamate di costruttore e distruttore del programma. Le finestre *finestra*, invece, è un handle opaco a una struttura dati interna di Windows che corrisponde a una finestra e utilizza le risorse di sistema quando è presente. Una finestra di Windows è identificata da un handle di finestra"" (`HWND`) e viene creato dopo il `CWnd` oggetto creato da una chiamata ai `Create` funzione membro di classe `CWnd`. La finestra può essere eliminata da una chiamata del programma o da un'azione dell'utente. L'handle di finestra viene archiviato nell'oggetto finestra *m_hWnd* variabile membro. Nella figura seguente viene illustrata la relazione tra l'oggetto finestra C++ e la finestra di Windows. Creazione di finestre verrà discusso [creazione di finestre](../mfc/creating-windows.md). Eliminazione definitiva di finestre verrà discusso [eliminazione definitiva di oggetti finestra](../mfc/destroying-window-objects.md).  
   
  ![CWnd oggetto finestra e finestra risulta](../mfc/media/vc37fj1.gif "vc37fj1")  
 Oggetto finestra e finestra di Windows  

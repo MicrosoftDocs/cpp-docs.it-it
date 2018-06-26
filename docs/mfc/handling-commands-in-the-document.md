@@ -19,15 +19,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c20ff02b2d72f1dfa6afab5a0d547b46aa55b18c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7a1e848827b46d40c1ec39f2af4788e6957932c5
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33343554"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929112"
 ---
 # <a name="handling-commands-in-the-document"></a>Gestione dei comandi nel documento
-La classe del documento è inoltre possibile gestire alcuni comandi generati da voci di menu, pulsanti della barra degli strumenti o i tasti di scelta rapida. Per impostazione predefinita, **CDocument** gestisce il salvataggio e Salva i comandi nel menu File, mediante la serializzazione. Altri comandi che influiscono sui dati inoltre possono essere gestiti dalle funzioni membro di un documento. Ad esempio, il programma Scribble, classe `CScribDoc` fornisce un gestore per il comando Modifica Cancella tutto, che elimina tutti i dati attualmente archiviati nel documento. Documenti è possibile specificare le mappe messaggi, ma a differenza delle visualizzazioni, in grado di gestire i messaggi di Windows standard, ovvero solo **WM_COMMAND** messaggi, o "comandi".  
+La classe del documento è inoltre possibile gestire alcuni comandi generati da voci di menu, pulsanti della barra degli strumenti o i tasti di scelta rapida. Per impostazione predefinita, `CDocument` gestisce il salvataggio e Salva i comandi nel menu File, mediante la serializzazione. Altri comandi che influisce sui dati inoltre possono essere gestiti dalle funzioni membro di un documento. Ad esempio, il programma Scribble, classe `CScribDoc` fornisce un gestore per il comando Modifica Cancella tutto, che elimina tutti i dati attualmente archiviati nel documento. Documenti è possibile specificare le mappe messaggi, ma a differenza delle visualizzazioni, in grado di gestire i messaggi di Windows standard, ovvero solo **WM_COMMAND** messaggi, o "comandi".  
   
 ## <a name="see-also"></a>Vedere anche  
  [Uso di documenti](../mfc/using-documents.md)

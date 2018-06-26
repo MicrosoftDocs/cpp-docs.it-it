@@ -15,19 +15,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 14979f1c5f11e9a229c408e33e7c17d8776a54a5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2a7b498ed1ddc3a3d040abde6ebcb7e27615b801
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33344217"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929343"
 ---
 # <a name="containers-client-items"></a>Contenitori: elementi client
 In questo articolo viene illustrato il significato degli elementi client e da quali classi l'applicazione dovrebbe derivare i relativi elementi client.  
   
  Gli elementi client sono elementi di dati che appartengono a un'altra applicazione in cui sono contenuti, oppure ai quali viene fatto riferimento da un documento di un'applicazione contenitore OLE. Gli elementi client i cui dati sono contenuti nel documento sono incorporati; quelli con dati archiviati in un'altra posizione a cui fa riferimento il documento contenitore sono collegati.  
   
- La classe di documento in un'applicazione OLE è derivata dalla classe [COleDocument](../mfc/reference/coledocument-class.md) piuttosto che da **CDocument**. Il `COleDocument` classe eredita da **CDocument** tutte le funzionalità necessarie per l'uso dell'architettura documento/visualizzazione su cui MFC si basano le applicazioni. `COleDocument` definisce anche un'interfaccia che tratta un documento come raccolta di oggetti `CDocItem`. Sono disponibili numerose funzioni membro `COleDocument` per l'aggiunta, il recupero e l'eliminazione di elementi della raccolta.  
+ La classe di documento in un'applicazione OLE è derivata dalla classe [COleDocument](../mfc/reference/coledocument-class.md) piuttosto che da `CDocument`. Il `COleDocument` classe eredita da `CDocument` tutte le funzionalità necessarie per l'uso dell'architettura documento/visualizzazione su quali MFC si basano le applicazioni. `COleDocument` definisce anche un'interfaccia che tratta un documento come raccolta di oggetti `CDocItem`. Sono disponibili numerose funzioni membro `COleDocument` per l'aggiunta, il recupero e l'eliminazione di elementi della raccolta.  
   
  Ogni applicazione contenitore deve derivare almeno una classe da `COleClientItem`. Gli oggetti di questa classe rappresentano elementi, incorporati o collegati, nel documento OLE. Questi oggetti esistono per la durata del documento che li contiene, a meno che non vengano eliminati dal documento.  
   

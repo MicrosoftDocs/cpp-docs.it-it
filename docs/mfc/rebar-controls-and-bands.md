@@ -15,21 +15,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b1fac5f83f19fab37604a14e239cf505891c737f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1ae83c3e41ebabf62ad98211f3943af2b535c806
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33349851"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929507"
 ---
 # <a name="rebar-controls-and-bands"></a>Controlli Rebar e bande
-Lo scopo principale di un controllo rebar è di agire come un contenitore per le finestre figlio, controlli comuni di finestra di dialogo, menu, barre degli strumenti e così via. Questo contenuto è supportato dal concetto di "banda". Ogni controllo rebar band può contenere qualsiasi combinazione di una barra verticale di ridimensionamento, una bitmap, un'etichetta di testo e una finestra figlio.  
+Lo scopo principale di un controllo rebar è funge da contenitore per le finestre figlio, controlli comuni di finestra di dialogo, menu, barre degli strumenti e così via. Questo contenuto è supportato dal concetto di "fuori banda". Ogni controllo rebar band può contenere qualsiasi combinazione di una barra verticale di ridimensionamento, una bitmap, un'etichetta di testo e una finestra figlio.  
   
- Classe `CReBarCtrl` ha molte funzioni membro che è possibile utilizzare per recuperare e modificare le informazioni di un determinato controllo rebar band:  
+ Classe `CReBarCtrl` ha molte funzioni membro che è possibile utilizzare per recuperare e modificare le informazioni per un determinato controllo rebar band:  
   
 -   [GetBandCount](../mfc/reference/crebarctrl-class.md#getbandcount) recupera il numero di bande corrente nel controllo rebar.  
   
--   [GetBandInfo](../mfc/reference/crebarctrl-class.md#getbandinfo) Inizializza un **REBARBANDINFO** struttura con le informazioni dalla banda specificata. È un corrispondente [SetBandInfo](../mfc/reference/crebarctrl-class.md#setbandinfo) funzione membro.  
+-   [GetBandInfo](../mfc/reference/crebarctrl-class.md#getbandinfo) Inizializza un **REBARBANDINFO** struttura con le informazioni dalla banda specificata. È presente un corrispondente [SetBandInfo](../mfc/reference/crebarctrl-class.md#setbandinfo) funzione membro.  
   
 -   [GetRect](../mfc/reference/crebarctrl-class.md#getrect) recupera il rettangolo di delimitazione della banda specificata.  
   
@@ -39,11 +39,11 @@ Lo scopo principale di un controllo rebar è di agire come un contenitore per le
   
 -   [GetBandBorders](../mfc/reference/crebarctrl-class.md#getbandborders) recupera i bordi di un fuori banda.  
   
- Oltre alla modifica, diverse funzioni membro sono che consentono di operare su bande rebar specifiche.  
+ Oltre alla modifica, diverse funzioni membro sono che consentono di operare su bande rebar specifico.  
   
  [InsertBand](../mfc/reference/crebarctrl-class.md#insertband) e [DeleteBand](../mfc/reference/crebarctrl-class.md#deleteband) aggiungere e rimuovere bande rebar. [MinimizeBand](../mfc/reference/crebarctrl-class.md#minimizeband) e [MaximizeBand](../mfc/reference/crebarctrl-class.md#maximizeband) influiscono sulle dimensioni correnti di un determinato controllo rebar band. [MoveBand](../mfc/reference/crebarctrl-class.md#moveband) modifica l'indice di un determinato controllo rebar band. [ShowBand](../mfc/reference/crebarctrl-class.md#showband) Mostra o nasconde un controllo rebar band da parte dell'utente.  
   
- Nell'esempio seguente viene illustrato come aggiungere una barra degli strumenti (`m_wndToolBar`) a un controllo rebar esistente (`m_wndReBar`). La banda è descritta l'inizializzazione di `rbi` struttura e chiamando quindi il `InsertBand` funzione membro:  
+ Nell'esempio seguente viene illustrato come aggiungere una barra degli strumenti (*m_wndToolBar*) a un controllo rebar esistente (*m_wndReBar*). Viene descritto il fuori banda da durante l'inizializzazione il `rbi` struttura e chiamando quindi il `InsertBand` funzione membro:  
   
  [!code-cpp[NVC_MFCControlLadenDialog#27](../mfc/codesnippet/cpp/rebar-controls-and-bands_1.cpp)]  
   

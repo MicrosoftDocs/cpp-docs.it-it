@@ -19,21 +19,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bda38c7173feeccf878ee7befc3d27c0061ddb1e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a9379fef6a1d676d6a3bc757ee51d5d27acd5f6f
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33345026"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930176"
 ---
 # <a name="initinstance-member-function"></a>Funzione membro InitInstance
 Il sistema operativo Windows consente di eseguire più copie, o "istanza" della stessa applicazione. `WinMain` le chiamate [InitInstance](../mfc/reference/cwinapp-class.md#initinstance) ogni volta che viene avviata una nuova istanza dell'applicazione.  
   
  Lo standard `InitInstance` implementazione creato dalla creazione guidata applicazione MFC vengono eseguite le attività seguenti:  
   
--   Come l'azione centrale, crea i modelli che consentono di creare documenti, visualizzazioni e finestre cornice di documento. Per una descrizione di questo processo, vedere [creazione del modello di documento](../mfc/document-template-creation.md).  
+-   Come l'azione centrale, crea i modelli di documento che a sua volta creare documenti, visualizzazioni e finestre cornice. Per una descrizione di questo processo, vedere [creazione di modelli di documento](../mfc/document-template-creation.md).  
   
--   Caricamento di opzioni di file standard da un file ini o del Registro di sistema, inclusi i nomi dei file utilizzati di recente.  
+-   Carica le opzioni standard del file da un file. ini o del Registro di sistema Windows, inclusi i nomi dei file usati di recente.  
   
 -   Consente di registrare uno o più modelli di documento.  
   
@@ -44,7 +44,7 @@ Il sistema operativo Windows consente di eseguire più copie, o "istanza" della 
  È possibile aggiungere il codice di inizializzazione o modificare il codice scritto dalla procedura guidata.  
   
 > [!NOTE]
->  MFC (applicazioni) devono essere inizializzate come apartment a thread singolo (STA). Se si chiama [CoInitializeEx](http://msdn.microsoft.com/library/windows/desktop/ms695279) nel `InitInstance` eseguire l'override, specificare `COINIT_APARTMENTTHREADED` (anziché `COINIT_MULTITHREADED`). Per altre informazioni, vedere PRB: applicazione MFC si blocca quando si inizializza l'applicazione come a multithreading Apartment (828643) nella [ http://support.microsoft.com/default.aspxscid=kb; en-us; 828643](http://support.microsoft.com/default.aspxscid=kb;en-us;828643).  
+>  MFC (applicazioni) devono essere inizializzate come apartment a thread singolo (STA). Se si chiama [CoInitializeEx](http://msdn.microsoft.com/library/windows/desktop/ms695279) nel `InitInstance` eseguire l'override, specificare COINIT_APARTMENTTHREADED (anziché COINIT_MULTITHREADED). Per altre informazioni, vedere PRB: applicazione MFC si blocca quando si inizializza l'applicazione come a multithreading Apartment (828643) nella [ http://support.microsoft.com/default.aspxscid=kb; en-us; 828643](http://support.microsoft.com/default.aspxscid=kb;en-us;828643).  
   
 ## <a name="see-also"></a>Vedere anche  
  [CWinApp: classe Application](../mfc/cwinapp-the-application-class.md)

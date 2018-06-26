@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 304b47918424a73e4feda9812c372cb28db0623e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 014c3aabb770dc35fdbf106f9a225e52285d201b
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33345852"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929676"
 ---
 # <a name="ready-to-use-list-classes"></a>Classi List pronte all'uso
 Le seguenti classi sono classi list pronte all'uso.  
@@ -32,7 +32,7 @@ Le seguenti classi sono classi list pronte all'uso.
  Archivia i puntatori agli oggetti della classe `CObject` o a oggetti di classi derivate da `CObject` in un elenco collegato.  
   
  [CPtrList](../mfc/reference/cptrlist-class.md)  
- Archivia i puntatori a `void` (o puntatori generici) in un elenco collegato.  
+ Archivia i puntatori per **void** (puntatori generici) in un elenco collegato.  
   
  [Oggetto CStringList](../mfc/reference/cstringlist-class.md)  
  Archivi `CString` oggetti in un elenco collegato.  

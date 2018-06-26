@@ -15,17 +15,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 05b5f62169d2b65010ec75ab8c8b5c30959b77b2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9b317f4c1b55e04f61aa0639bbd6953e5f36187a
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33348978"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931840"
 ---
 # <a name="handling-reflected-messages"></a>Gestione di messaggi riprodotti
-Messaggio reflection consente di gestire i messaggi per un controllo, ad esempio `WM_CTLCOLOR`, **WM_COMMAND**, e **WM_NOTIFY**, all'interno del controllo stesso. Questo rende il controllo più autonomo e portatile. Il meccanismo funziona con i controlli comuni di Windows, nonché con i controlli ActiveX, precedentemente denominati controlli OLE.  
+Messaggio reflection consente di gestire i messaggi per un controllo, ad esempio **WM_CTLCOLOR**, **WM_COMMAND**, e **WM_NOTIFY**, all'interno del controllo stesso. Questo rende il controllo più autonomo e portatile. Il meccanismo funziona con i controlli comuni di Windows, nonché con i controlli ActiveX, precedentemente denominati controlli OLE.  
   
- La reflection di messaggio consente di riutilizzare più facilmente le classi derivate da `CWnd`. Reflection di messaggio funziona tramite [CWnd:: OnChildNotify](../mfc/reference/cwnd-class.md#onchildnotify), utilizzando speciali **ON_XXX_REFLECT** voci della mappa messaggi: ad esempio, **ON_CTLCOLOR_REFLECT** e **ON_CONTROL_REFLECT**. [Nota tecnica 62](../mfc/tn062-message-reflection-for-windows-controls.md) spiega la reflection di messaggio in modo più dettagliato.  
+ La reflection di messaggio consente di riutilizzare più facilmente le classi derivate da `CWnd`. Reflection di messaggio funziona attraverso [CWnd:: OnChildNotify](../mfc/reference/cwnd-class.md#onchildnotify), usando speciale **ON_XXX_REFLECT** voci della mappa messaggi: ad esempio **ON_CTLCOLOR_REFLECT** e **ON_CONTROL_REFLECT**. [Nota tecnica 62](../mfc/tn062-message-reflection-for-windows-controls.md) spiega la reflection di messaggio in modo più dettagliato.  
   
 ## <a name="what-do-you-want-to-do"></a>Ciò che si desidera eseguire  
   

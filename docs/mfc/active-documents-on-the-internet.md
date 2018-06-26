@@ -18,33 +18,33 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 43bb54f36f57702d43cf065604641124e38ed053
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a18b84b30445060631589e72f6c158ea9b3626f0
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33334886"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930888"
 ---
 # <a name="active-documents-on-the-internet"></a>Documenti attivi su Internet
-Documenti attivi forniscono un'estensione a oggetti incorporati tradizionale. Documenti attivi possono essere composti da e vengono visualizzati nell'intera area client. Si eseguire la negoziazione di menu tradizionali e può essere modificati sul posto, nonché in una finestra aperta nell'applicazione server. Anziché visualizzare come un piccolo rettangolo circondato da un bordo tratteggiato, i documenti attivi sono frame completo e sempre attiva.  
+Documenti attivi forniscono un'estensione a oggetti incorporati tradizionale. Documenti attivi possono essere composti da e vengono visualizzati nell'intera area client. Si eseguire la negoziazione di menu tradizionali e può essere modificati sul posto, nonché una finestra aperta nell'applicazione server. Anziché visualizzare come un piccolo rettangolo circondato da un bordo tratteggiato, documenti attivi vengono frame completo e sempre attiva.  
   
- Documenti attivi possono essere visualizzati in un contenitore come il raccoglitore di Office, che fornisce un modo per creare un documento composito costituito da diversi tipi di documento ad esempio Excel, Word, e il tipo di documento personalizzato, ognuno dei quali può essere modificato frame completo. Documenti attivi possono essere visualizzati anche in un browser, ad esempio Microsoft Internet Explorer, ovvero un contenitore di documenti attivi.  
+ Documenti attivi possono essere visualizzati in un contenitore come il raccoglitore di Office, che fornisce un modo per creare un documento composito costituito da diversi tipi di documento, ad esempio Excel, Word e il tipo di documento personalizzato, ognuno dei quali può essere modificato frame completo. Documenti attivi possono essere visualizzati anche in un browser, ad esempio Microsoft Internet Explorer, ovvero un contenitore di documenti attivi.  
   
  **Vantaggi di documenti attivi:**  
   
--   I documenti possono essere visualizzati frame completa, nella finestra intera client.  
+-   I documenti possono essere visualizzati frame completa, nella finestra del client intera.  
   
 -   Documenti possono essere aperto in una finestra dell'applicazione separata.  
   
-     Per l'apertura del documento, l'applicazione di supporto deve essere presente nel client o essere scaricata separatamente prima di poter eseguire l'applicazione. Un visualizzatore può essere scritti per fornire funzionalità limitate (Word, PowerPoint ed Excel forniscono visualizzatori per i documenti). La versione completa dell'applicazione può fornire il supporto completo di modificando.  
+     Per l'apertura del documento, l'applicazione di supporto deve essere presente nel client o essere scaricata separatamente prima di poter eseguire l'applicazione. È possibile scrivere un visualizzatore per fornire funzionalità limitate (Word, PowerPoint ed Excel offrono visualizzatori per i documenti). La versione completa dell'applicazione può fornire supporto modifica completo.  
   
--   I documenti sono sempre attivi sul posto.  
+-   Documenti sono sempre attivi sul posto.  
   
 -   I comandi di menu viene richiamati dal contenitore possono essere instradati al documento.  
   
 -   I documenti possono essere visualizzati in un Web browser. In questo modo l'integrazione tra i documenti e le altre pagine Web.  
   
-     Un utente può selezionare una pagina HTML Web, quindi un foglio di calcolo Excel e a un documento che è stata scritta l'utilizzo di MFC il supporto per i documenti attivi. L'utente possa passare utilizzando la nota interfaccia Web, come le opzioni del browser tra i menu e le visualizzazioni di una pagina HTML, Excel e un documento dell'applicazione.  
+     Un utente può selezionare una pagina HTML Web, quindi un foglio di calcolo Excel e quindi a un documento che è stata scritta utilizzando MFC il supporto per i documenti attivi. L'utente possa passare tramite l'interfaccia Web comune, come i commutatori browser senza problemi tra i menu e le viste di una pagina HTML, Excel e un documento dell'applicazione.  
   
 -   Tutte le applicazioni vengono visualizzate in un frame comune.  
   
@@ -53,25 +53,25 @@ Documenti attivi forniscono un'estensione a oggetti incorporati tradizionale. Do
   
 |Un documento che...|Queste interfacce vengono implementate|  
 |-------------------------|---------------------------------|  
-|Utilizza file composti come meccanismo di archiviazione.|`IPersistStorage`.|  
-|Supporta le funzionalità di incorporamento di base dei documenti attivi, tra cui creazione da File.|`IPersistFile`, `IOleObject` e `IDataObject`.|  
-|Supporta l'attivazione sul posto.|`IOleInPlaceObject` e `IOleInPlaceActiveObject` (Usa il contenitore `IOleInPlaceSite` e **IOleInPlaceFrame** interfacce).|  
-|Supporta le estensioni del documento attivo che coinvolgono queste nuove interfacce. Alcune interfacce sono facoltativi.|`IOleDocument`, `IOleDocumentView`, `IOleCommandTarget` e `IPrint`.|  
+|Utilizza file composti come relativo meccanismo di archiviazione.|`IPersistStorage`.|  
+|Supporta la funzionalità di incorporamento di base di documenti attivi, tra cui creazione da File.|`IPersistFile`, `IOleObject` e `IDataObject`.|  
+|Supporta l'attivazione diretta.|`IOleInPlaceObject` e `IOleInPlaceActiveObject` (Usa il contenitore `IOleInPlaceSite` e `IOleInPlaceFrame` interfacce).|  
+|Supporta le estensioni di documenti attivi che coinvolgono queste nuove interfacce. Alcune interfacce sono facoltativi.|`IOleDocument`, `IOleDocumentView`, `IOleCommandTarget` e `IPrint`.|  
   
- MFC fornisce supporto per l'estensione del supporto di server incorporato esistente ai documenti attivi.  
+ MFC fornisce supporto per estendere il supporto di server incorporato esistente per i documenti attivi.  
   
 ## <a name="add-active-document-support-to-a-new-application"></a>Aggiungere il supporto documento attivo in una nuova applicazione  
- Per creare una nuova applicazione con supporto di documenti attivi: nella creazione guidata applicazione MFC, scegliere il **supporto documenti composti** pagina, scegliere "supporto documenti compositi selezionare" **server completo** o  **Contenitore/server completo**, selezionare la casella di controllo "Selezionare le opzioni aggiuntive" **server documenti attivi**.  
+ Per creare una nuova applicazione con supporto di documenti attivi: nella creazione guidata applicazione MFC, scegliere il **supporto documenti composti** pagina, se viene utilizzato "supporto documenti compositi selezionare" selezionare **server completo** o  **Contenitore/server completo**, selezionare la casella di controllo "Selezionare le opzioni aggiuntive" **server documenti attivi**.  
   
 ##  <a name="_core_convert_an_existing_mfc_in.2d.process_server_to_an_activex_document_server"></a> Convertire un Server In-Process MFC esistente in un Server di documenti attivi  
- Se l'applicazione è stata creata con una versione di Visual C++ precedenti alla versione 4.2 ed è già un server in-process, è possibile aggiungere il supporto di documenti attivi apportando modifiche alle seguenti classi:  
+ Se l'applicazione è stata creata con una versione di Visual C++ precedenti alla versione 4.2 ed è già un server in-process, è possibile aggiungere il supporto dei documenti attivi apportando modifiche per le classi seguenti:  
   
-|Tipo classe|In precedenza è derivato da|Modifica di derivare da|  
+|Tipo classe|In precedenza derivato da|Modifica da cui derivare|  
 |----------------|---------------------------|---------------------------|  
-|Cornice sul posto|`COleIPFrameWnd`|**COleDocIPFrameWnd**|  
+|Cornice sul posto|`COleIPFrameWnd`|`COleDocIPFrameWnd`|  
 |Elemento|`COleServerItem`|`CDocObjectServerItem`|  
   
- Si verranno inoltre modificare la modalità di immissione delle informazioni nel Registro di sistema e molte altre modifiche. Se l'applicazione non ha attualmente alcun supporto per i componenti COM, è possibile aggiungere il supporto del server eseguendo la procedura guidata applicazione e l'integrazione di codice specifici dei componenti COM nell'applicazione esistente.  
+ Verrà inoltre modificare la modalità di immissione delle informazioni nel Registro di sistema e apportare molte altre modifiche. Se l'applicazione non ha attualmente alcun supporto per i componenti COM, è possibile aggiungere il supporto del server eseguendo la procedura guidata applicazione e integrazione il codice specifico del componente COM con l'applicazione esistente.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Attività di programmazione Internet MFC](../mfc/mfc-internet-programming-tasks.md)   

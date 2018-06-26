@@ -1,5 +1,5 @@
 ---
-title: Messaggi | Documenti Microsoft
+title: I messaggi | Documenti Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: abd49410f9982788e9403f0cb83ca8656473417d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5d7544d92d55ec4a1f6d15f3c1d4358970bf2deb
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33344104"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36928341"
 ---
 # <a name="messages"></a>Messages
-Il ciclo di messaggi di **eseguire** funzione membro di classe `CWinApp` recupera i messaggi generati da vari eventi in coda. Ad esempio, quando l'utente fa clic del mouse, Windows invia molti messaggi correlati al mouse, ad esempio `WM_LBUTTONDOWN` quando viene premuto il pulsante sinistro del mouse e `WM_LBUTTONUP` quando il pulsante sinistro del mouse viene rilasciato. Implementazione del framework del ciclo di messaggi dell'applicazione invia il messaggio alla finestra appropriata.  
+Il ciclo di messaggi di `Run` funzione membro di classe `CWinApp` recupera i messaggi generati da vari eventi in coda. Ad esempio, quando l'utente fa clic del mouse, Windows invia molti messaggi correlati al mouse, ad esempio WM_LBUTTONDOWN quando viene premuto il pulsante sinistro del mouse e WM_LBUTTONUP quando viene rilasciato il pulsante sinistro del mouse. L'implementazione del framework del ciclo di messaggi dell'applicazione invia il messaggio alla finestra appropriata.  
   
  Le categorie di messaggi importanti sono descritti in [categorie di messaggi](../mfc/message-categories.md).  
   

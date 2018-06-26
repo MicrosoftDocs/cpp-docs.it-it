@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b226c115ce148fa29b5d93cb60af8498b63fdee9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 90143b919fde02a95df81d41845d8ecc671ced0d
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33347948"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931876"
 ---
 # <a name="data-objects-and-data-sources-creation-and-destruction"></a>Oggetti dati e origini dati (OLE): creazione e distruzione
 Come illustrato nell'articolo [oggetti dati e origini dati (OLE)](../mfc/data-objects-and-data-sources-ole.md), oggetti dati e origini dati rappresentano entrambi i lati di un trasferimento di dati. Questo articolo descrive quando creare ed eliminare definitivamente questi oggetti e origini per eseguire i trasferimenti dei dati nel modo corretto, con informazioni su:  
@@ -48,7 +48,7 @@ Come illustrato nell'articolo [oggetti dati e origini dati (OLE)](../mfc/data-ob
   
  Un oggetto dati è necessario in due situazioni comuni. La prima situazione è quella in cui nell'applicazione vengono rilasciati dati usando il trascinamento della selezione. La seconda situazione è quella in cui si sceglie Incolla o Incolla speciale dal menu Modifica.  
   
- In una situazione che prevede il trascinamento della selezione non è necessario creare un oggetto dati. Un puntatore a un oggetto dati esistente verrà passato alla funzione `OnDrop`. Questo oggetto dati viene creato dal framework come parte dell'operazione di trascinamento della selezione e verrà anche eliminato dal framework. Questo non sempre avviene quando l'operazione Incolla viene eseguita con un altro metodo. Per ulteriori informazioni, vedere [eliminazione di oggetti dati](#_core_destroying_data_objects).  
+ In una situazione che prevede il trascinamento della selezione non è necessario creare un oggetto dati. Un puntatore a un oggetto dati esistente verrà passato alla funzione `OnDrop`. Questo oggetto dati viene creato dal framework come parte dell'operazione di trascinamento della selezione e verrà anche eliminato dal framework. Questo non sempre avviene quando l'operazione Incolla viene eseguita con un altro metodo. Per altre informazioni, vedere [eliminazione di oggetti dati](#_core_destroying_data_objects).  
   
  Se l'applicazione esegue un'operazione Incolla o Incolla speciale, è consigliabile creare un oggetto `COleDataObject` e chiamarne la funzione membro `AttachClipboard`. In questo modo, l'oggetto dati viene associato ai dati negli Appunti. È quindi possibile usare questo oggetto dati nella funzione Incolla.  
   
@@ -72,20 +72,20 @@ Come illustrato nell'articolo [oggetti dati e origini dati (OLE)](../mfc/data-ob
   
 5.  L'applicazione chiama la funzione membro `SetClipboard` (o la funzione membro `DoDragDrop` se si tratta di un'operazione di trascinamento della selezione) che appartiene all'oggetto creato nel passaggio 3.  
   
-6.  Se si tratta di un **Taglia** operazione o `DoDragDrop` restituisce `DROPEFFECT_MOVE`, i dati selezionati nel passaggio 1 viene eliminati dal documento.  
+6.  Se si tratta di un **tagliare** operazione o `DoDragDrop` restituisce **DROPEFFECT_MOVE**, i dati selezionati nel passaggio 1 vengono eliminati dal documento.  
   
  Questo scenario viene implementato dagli esempi OLE MFC [OCLIENT](../visual-cpp-samples.md) e [HIERSVR](../visual-cpp-samples.md). Esaminare l'origine per ogni classe derivata da `CView` dell'applicazione per tutte le funzioni tranne `GetClipboardData` e `OnGetClipboardData`. Queste due funzioni si trovano nelle implementazioni delle classi derivate da `COleClientItem` o `COleServerItem`. Questi programmi di esempio offrono un buon esempio dell'implementazione di questi concetti.  
   
- Un'altra situazione in cui si potrebbe voler creare un oggetto `COleDataSource` si verifica quando si modifica il comportamento predefinito di un'operazione di trascinamento della selezione. Per ulteriori informazioni, vedere il [trascinamento della selezione: personalizzazione](../mfc/drag-and-drop-customizing.md) articolo.  
+ Un'altra situazione in cui si potrebbe voler creare un oggetto `COleDataSource` si verifica quando si modifica il comportamento predefinito di un'operazione di trascinamento della selezione. Per altre informazioni, vedere la [trascinamento della selezione: personalizzazione](../mfc/drag-and-drop-customizing.md) articolo.  
   
 ##  <a name="_core_destroying_data_sources"></a> Eliminazione di origini dati  
- Le origini dati devono essere eliminate definitivamente dall'applicazione che ne è attualmente responsabile. Nelle situazioni in cui si passa l'origine dati a OLE, ad esempio chiamando [COleDataSource:: DoDragDrop](../mfc/reference/coledatasource-class.md#dodragdrop), è necessario chiamare **pDataSrc -> InternalRelease**. Ad esempio:  
+ Le origini dati devono essere eliminate definitivamente dall'applicazione che ne è attualmente responsabile. Nelle situazioni in cui si passa l'origine dati a OLE, ad esempio chiamando [COleDataSource:: DoDragDrop](../mfc/reference/coledatasource-class.md#dodragdrop), è necessario chiamare `pDataSrc->InternalRelease`. Ad esempio:  
   
  [!code-cpp[NVC_MFCListView#1](../atl/reference/codesnippet/cpp/data-objects-and-data-sources-creation-and-destruction_1.cpp)]  
   
  Se l'origine dati non è stata passata a OLE, si è responsabili della sua eliminazione definitiva, come per tutti i normali oggetti C++.  
   
- Per ulteriori informazioni, vedere [trascinare e rilasciare](../mfc/drag-and-drop-ole.md), [Appunti](../mfc/clipboard.md), e [oggetti dati e origini dati](../mfc/data-objects-and-data-sources-manipulation.md).  
+ Per altre informazioni, vedere [trascinare e rilasciare](../mfc/drag-and-drop-ole.md), [Appunti](../mfc/clipboard.md), e [modifica di oggetti dati e origini dati](../mfc/data-objects-and-data-sources-manipulation.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Oggetti dati e origini dati (OLE)](../mfc/data-objects-and-data-sources-ole.md)   

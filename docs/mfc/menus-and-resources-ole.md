@@ -28,17 +28,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 54cc874fd3c95123446ab81b920bfe0fce52df5e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: cae180ca71b89732e073b9039483b8b46366a42a
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33347094"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929634"
 ---
 # <a name="menus-and-resources-ole"></a>Menu e risorse (OLE)
 Questo gruppo di articoli viene illustrato l'utilizzo di menu e risorse nelle applicazioni OLE MFC documento.  
   
- OLE modifica visiva inserisce i requisiti aggiuntivi nel menu e altre risorse fornite da applicazioni documento OLE perché esistono una serie di contenitore in cui entrambe le modalità e le applicazioni server (componente) possono essere avviate e utilizzate. Ad esempio, un'applicazione server completo può eseguire in una qualsiasi delle tre modalità:  
+ OLE modifica visiva inserisce i requisiti aggiuntivi nel menu e altre risorse fornite da applicazioni documento OLE perché esistono diversi modi contenitore in cui entrambi e possono essere avviate e utilizzate nelle applicazioni server (componente). Ad esempio, un'applicazione server completo può eseguire in una qualsiasi delle tre modalità:  
   
 -   Autonoma.  
   
@@ -46,20 +46,20 @@ Questo gruppo di articoli viene illustrato l'utilizzo di menu e risorse nelle ap
   
 -   Aperta per la modifica di un elemento all'esterno del contesto del relativo contenitore, spesso in una finestra separata.  
   
- Questa operazione richiede tre layout di menu separati, uno per ogni modalità possibili dell'applicazione. Tasti di scelta rapida sono inoltre necessarie per ogni nuova modalità. Un'applicazione contenitore può o potrebbe non supportare l'attivazione sul posto. in caso affermativo, necessarie di una nuova struttura di menu e tasti di scelta rapida associato.  
+ Questa operazione richiede tre layout di menu separati, uno per ogni modalità possibili dell'applicazione. Le tabelle di tasti di scelta rapida sono inoltre necessari per ogni nuova modalità. Un'applicazione contenitore può o potrebbe non supportare l'attivazione sul posto; In questo caso, richiede una nuova struttura di menu e associati tasti di scelta.  
   
- L'attivazione sul posto richiede che le applicazioni contenitore e server devono negoziare per lo spazio barra dei menu della barra degli strumenti e lo stato. Tutte le risorse devono essere progettate con questo presente. L'articolo [menu e risorse: unione di Menu](../mfc/menus-and-resources-menu-merging.md) illustra in dettaglio in questo argomento.  
+ L'attivazione sul posto richiede che le applicazioni contenitore e server devono negoziare per spazio barra dei menu della barra degli strumenti e lo stato. Tutte le risorse devono essere progettate con questo presente. L'articolo [menu e risorse: unione di Menu](../mfc/menus-and-resources-menu-merging.md) illustra in dettaglio in questo argomento.  
   
- A causa di questi problemi, applicazioni documento OLE create con la creazione guidata applicazione possono avere fino a quattro separati i menu e risorse di tabelle di tasti di scelta rapida. Questi vengono utilizzati per i motivi seguenti:  
+ A causa di questi problemi, le applicazioni documento OLE create con la creazione guidata applicazione possono avere fino a quattro menu separati e delle risorse di tabelle di tasti di scelta rapida. Questi vengono utilizzati per i motivi seguenti:  
   
 |Nome della risorsa|Usa|  
 |-------------------|---------|  
-|**IDR_MAINFRAME**|Utilizzato in un'applicazione MDI se è aperto alcun file o in un'applicazione SDI indipendentemente dal file aperti. Si tratta del menu standard usato nelle applicazioni non OLE.|  
-|**IDR _\<progetto > tipo**|Se sono file aperti, utilizzato in un'applicazione MDI. Utilizzato quando è in esecuzione un'applicazione autonoma. Si tratta del menu standard usato nelle applicazioni non OLE.|  
-|**IDR _\<progetto > TYPE_SRVR_IP**|Utilizzato per il server o il contenitore quando si apre un oggetto sul posto.|  
-|**IDR _\<progetto > TYPE_SRVR_EMB**|Se un oggetto viene aperto senza utilizzare l'attivazione sul posto, utilizzato da un'applicazione server.|  
+|IDR_MAINFRAME|Utilizzato in un'applicazione MDI se è aperto alcun file o in un'applicazione SDI indipendentemente da file aperti. Si tratta del menu standard usato nelle applicazioni non OLE.|  
+|IDR _\<progetto > tipo|Se sono file aperti, utilizzato in un'applicazione MDI. Utilizzato quando è in esecuzione un'applicazione autonoma. Si tratta del menu standard usato nelle applicazioni non OLE.|  
+|IDR _\<progetto > TYPE_SRVR_IP|Utilizzato per il server o il contenitore quando si apre un oggetto posto.|  
+|IDR _\<progetto > TYPE_SRVR_EMB|Utilizzato da un'applicazione server se un oggetto viene aperto senza utilizzare l'attivazione sul posto.|  
   
- Ognuno di questi nomi di risorse rappresenta un menu e, in genere, una tabella di tasti di scelta rapida. Uno schema simile da utilizzare in applicazioni MFC che non vengono create con la creazione guidata applicazione.  
+ Ognuno di questi nomi di risorse rappresenta un menu di scelta e, in genere, una tabella di tasti di scelta rapida. Uno schema analogo deve essere utilizzato in applicazioni MFC che non vengono create con la creazione guidata applicazione.  
   
  Questa sezione illustra gli argomenti relativi ai contenitori, i server e il menu di unione necessarie per implementare l'attivazione sul posto gli articoli seguenti:  
   

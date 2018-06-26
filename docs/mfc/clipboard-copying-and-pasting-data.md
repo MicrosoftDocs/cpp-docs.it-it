@@ -15,15 +15,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bdfd43933453e44c49d713a1565ac3f71e019de4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4756da7459f3e584dd02b882f5c790412c095561
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33343350"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929468"
 ---
 # <a name="clipboard-copying-and-pasting-data"></a>Appunti: copiare e incollare dati
-Questo argomento descrive le operazioni minime necessarie per implementare copia e Incolla dagli Appunti in un'applicazione OLE. È consigliabile leggere la [oggetti dati e origini dati (OLE)](../mfc/data-objects-and-data-sources-ole.md) argomenti prima di procedere.  
+Questo argomento descrive le operazioni minime necessarie per implementare a copiando e incollando dagli Appunti in un'applicazione OLE. Si consiglia di leggere il [oggetti dati e origini dati (OLE)](../mfc/data-objects-and-data-sources-ole.md) argomenti prima di procedere.  
   
  Prima di poter implementare di copia o Incolla, è innanzitutto necessario fornire le funzioni per gestire le opzioni di copia, Taglia e Incolla del menu Modifica.  
   
@@ -33,35 +33,35 @@ Questo argomento descrive le operazioni minime necessarie per implementare copia
   
 1.  Determinare se i dati da copiare sono dati nativi o un elemento incorporato o collegato.  
   
-    -   Se il tipo di dati incorporato o collegato, ottenere un puntatore per il `COleClientItem` oggetto che è stata selezionata.  
+    -   Se i dati incorporati o collegati, ottenere un puntatore al `COleClientItem` oggetto che è stata selezionata.  
   
     -   Se i dati sono nativi e l'applicazione è un server, creare un nuovo oggetto derivato da `COleServerItem` contenente i dati selezionati. In caso contrario, creare un `COleDataSource` oggetto per i dati.  
   
 2.  Chiamare l'elemento selezionato `CopyToClipboard` funzione membro.  
   
-3.  Se l'utente sceglie un'operazione di Taglia anziché un'operazione di copia, eliminare i dati selezionati dall'applicazione.  
+3.  Se l'utente ha scelto di un'operazione di taglio anziché un'operazione di copia, eliminare i dati selezionati dall'applicazione.  
   
- Per un esempio di questa sequenza, vedere il **OnEditCut** e **OnEditCopy all'interno dei** i programmi di esempio di funzioni in OLE MFC [OCLIENT](../visual-cpp-samples.md) e [HIERSVR](../visual-cpp-samples.md). Si noti che questi esempi gestiscono un puntatore a dati attualmente selezionata, pertanto il passaggio 1 è già completato.  
+ Per un esempio di questa sequenza, vedere la `OnEditCut` e `OnEditCopy` programmi di esempio di funzioni in OLE MFC [OCLIENT](../visual-cpp-samples.md) e [HIERSVR](../visual-cpp-samples.md). Si noti che questi esempi mantengono un puntatore ai dati attualmente selezionati, in modo che il passaggio 1 è già completato.  
   
 ##  <a name="_core_pasting_data"></a> Incollare dati  
- Incollare i dati è più complicato copiarlo, in quanto è necessario scegliere il formato da utilizzare per incollare i dati nell'applicazione.  
+ L'operazione Incolla dati è più complicato copiarlo, in quanto è necessario scegliere il formato da utilizzare per incollare i dati nell'applicazione.  
   
 #### <a name="to-paste-data-from-the-clipboard"></a>Per incollare dati dagli Appunti  
   
-1.  Nella classe di visualizzazione, implementare **OnEditPaste** per supportare gli utenti di scegliere l'opzione Incolla del menu Modifica.  
+1.  Nella classe di visualizzazione, implementare `OnEditPaste` per supportare gli utenti scegliendo l'opzione Incolla del menu Modifica.  
   
-2.  Nel **OnEditPaste** funzionamento, creare un `COleDataObject` oggetto e chiamare il relativo `AttachClipboard` funzione membro per collegare l'oggetto per i dati negli Appunti.  
+2.  Nel `OnEditPaste` funzionamento, creare un `COleDataObject` oggetto e chiamare il relativo `AttachClipboard` funzione membro per collegare questo oggetto per i dati negli Appunti.  
   
-3.  Chiamare `COleDataObject::IsDataAvailable` per controllare se è disponibile un formato specifico.  
+3.  Chiamare `COleDataObject::IsDataAvailable` per controllare se un particolare formato è disponibile.  
   
      In alternativa, è possibile utilizzare `COleDataObject::BeginEnumFormats` per cercare altri formati fino a individuare quello più adatto all'applicazione.  
   
 4.  Operazione Incolla del formato.  
   
- Per un esempio del funzionamento, vedere l'implementazione del **OnEditPaste** funzioni membro in classi di visualizzazione definita nei programmi di esempio OLE MFC [OCLIENT](../visual-cpp-samples.md) e [HIERSVR](../visual-cpp-samples.md).  
+ Per un esempio di funzionamento, vedere l'implementazione del `OnEditPaste` funzioni membro in classi di visualizzazione definita nei programmi di esempio OLE MFC [OCLIENT](../visual-cpp-samples.md) e [HIERSVR](../visual-cpp-samples.md).  
   
 > [!TIP]
->  Il vantaggio principale di separare l'operazione Incolla nella propria funzione è può essere utilizzato lo stesso codice incollare dati in cui vengono rilasciati dell'applicazione durante un'operazione di trascinamento e rilascio. Come OCLIENT e HIERSVR, il `OnDrop` funzione può anche chiamare **DoPasteItem**, riutilizzare il codice scritto per implementare le operazioni Incolla.  
+>  Il vantaggio principale di separare l'operazione Incolla nella propria funzione è può essere utilizzato lo stesso codice Incolla quando viene eliminati i dati nell'applicazione in uso durante un'operazione di trascinamento e rilascio. Come OCLIENT e HIERSVR, il `OnDrop` funzione è inoltre possibile chiamare `DoPasteItem`, riutilizzare il codice scritto per implementare le operazioni Incolla.  
   
  Per gestire l'opzione Incolla speciale dal menu Modifica, vedere l'argomento [finestre di dialogo in OLE](../mfc/dialog-boxes-in-ole.md).  
   

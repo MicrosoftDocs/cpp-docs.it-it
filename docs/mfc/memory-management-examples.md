@@ -29,15 +29,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 84bc2ce7c084f2951d63eee546df3bf70a2ba1fe
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 21efd095a1d8e89c140ef39072a753c300a3043b
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33347191"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929307"
 ---
 # <a name="memory-management-examples"></a>Gestione della memoria: esempi
-In questo articolo viene descritto come MFC esegue le allocazioni di frame e allocazioni di heap per ognuno dei tre tipi di allocazioni di memoria tipico:  
+In questo articolo viene descritto come MFC vengono eseguite le allocazioni di frame e allocazioni di heap per ognuno dei tre tipi più comuni delle allocazioni di memoria:  
   
 -   [Una matrice di byte](#_core_allocation_of_an_array_of_bytes)  
   
@@ -47,21 +47,21 @@ In questo articolo viene descritto come MFC esegue le allocazioni di frame e all
   
 ##  <a name="_core_allocation_of_an_array_of_bytes"></a> Allocazione di una matrice di byte  
   
-#### <a name="to-allocate-an-array-of-bytes-on-the-frame"></a>Per allocare una matrice di byte nel frame  
+#### <a name="to-allocate-an-array-of-bytes-on-the-frame"></a>Per allocare una matrice di byte sul frame  
   
-1.  Definire la matrice, come illustrato nel codice seguente. La matrice viene eliminata automaticamente e la memoria recuperata quando la variabile di matrice esce dal proprio ambito.  
+1.  Definire la matrice come illustrato nel codice seguente. La matrice viene eliminata automaticamente e la memoria recuperata quando la variabile di matrice esce dal proprio ambito.  
   
      [!code-cpp[NVC_MFC_Utilities#1](../mfc/codesnippet/cpp/memory-management-examples_1.cpp)]  
   
 #### <a name="to-allocate-an-array-of-bytes-or-any-primitive-data-type-on-the-heap"></a>Per allocare una matrice di byte (o qualsiasi tipo di dati primitivo) sull'heap  
   
-1.  Utilizzare il **nuova** operatore con la sintassi di matrice illustrata in questo esempio:  
+1.  Usare la **nuovo** operatore con la sintassi di matrice illustrata in questo esempio:  
   
      [!code-cpp[NVC_MFC_Utilities#2](../mfc/codesnippet/cpp/memory-management-examples_2.cpp)]  
   
 #### <a name="to-deallocate-the-arrays-from-the-heap"></a>Per deallocare le matrici dall'heap  
   
-1.  Utilizzare il **eliminare** operatore come indicato di seguito:  
+1.  Usare la **eliminare** operatore come indicato di seguito:  
   
      [!code-cpp[NVC_MFC_Utilities#3](../mfc/codesnippet/cpp/memory-management-examples_3.cpp)]  
   
@@ -75,15 +75,15 @@ In questo articolo viene descritto come MFC esegue le allocazioni di frame e all
   
      Quando esce dal proprio ambito, viene recuperata la memoria occupata dalla struttura.  
   
-#### <a name="to-allocate-data-structures-on-the-heap"></a>Per allocare le strutture di dati nell'heap  
+#### <a name="to-allocate-data-structures-on-the-heap"></a>Allocare le strutture di dati nell'heap  
   
-1.  Utilizzare **nuova** per allocare le strutture di dati nell'heap e **eliminare** deallocare, come illustrato negli esempi seguenti:  
+1.  Uso **nuove** allocare le strutture di dati nell'heap e **eliminare** deallocare, come illustrato negli esempi seguenti:  
   
      [!code-cpp[NVC_MFC_Utilities#5](../mfc/codesnippet/cpp/memory-management-examples_5.cpp)]  
   
 ##  <a name="_core_allocation_of_an_object"></a> Allocazione di un oggetto  
   
-#### <a name="to-allocate-an-object-on-the-frame"></a>Per allocare un oggetto nel frame  
+#### <a name="to-allocate-an-object-on-the-frame"></a>Per allocare un oggetto sul frame  
   
 1.  Dichiarare l'oggetto come segue:  
   
@@ -93,13 +93,13 @@ In questo articolo viene descritto come MFC esegue le allocazioni di frame e all
   
 #### <a name="to-allocate-an-object-on-the-heap"></a>Per allocare un oggetto nell'heap  
   
-1.  Utilizzare il **nuova** operatore, che restituisce un puntatore all'oggetto, per allocare oggetti sull'heap. Utilizzare il **eliminare** operatore per eliminarli.  
+1.  Usare la **nuovo** operatore, che restituisce un puntatore all'oggetto, per allocare oggetti sull'heap. Usare la **eliminare** operatore per eliminarli.  
   
      Gli esempi di heap e frame seguenti presuppongono che il `CPerson` costruttore non accetta argomenti.  
   
      [!code-cpp[NVC_MFC_Utilities#7](../mfc/codesnippet/cpp/memory-management-examples_7.cpp)]  
   
-     Se l'argomento per il `CPerson` costruttore è un puntatore a `char`, l'istruzione per l'allocazione di frame è:  
+     Se l'argomento per il `CPerson` costruttore è un puntatore a **char**, l'istruzione per l'allocazione di frame è:  
   
      [!code-cpp[NVC_MFC_Utilities#8](../mfc/codesnippet/cpp/memory-management-examples_8.cpp)]  
   

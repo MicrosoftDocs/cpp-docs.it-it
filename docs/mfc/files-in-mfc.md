@@ -24,24 +24,24 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 30d220c928f2ca3fe0594d03d558d2d6dcfce773
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 64a8df138ef0d581bcc93bf836ee0935a634983d
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33347081"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930503"
 ---
 # <a name="files-in-mfc"></a>File in MFC
-Classe in di Microsoft Foundation libreria MFC (Class), [CFile](../mfc/reference/cfile-class.md) gestisce le operazioni dei / o file normali. Questa serie di articoli viene illustrato come aprire e chiudere i file, nonché leggere e scrivere dati in tali file. Illustra anche le operazioni di stato di file. Per una descrizione di come utilizzare le funzionalità di serializzazione basato su oggetti di MFC come metodo alternativo di lettura e scrittura dei dati nei file, vedere l'articolo [serializzazione](../mfc/serialization-in-mfc.md).  
+Nel MFC Microsoft Foundation Class Library (), classe [CFile](../mfc/reference/cfile-class.md) gestisce le operazioni dei / o file normali. Questa serie di articoli viene illustrato come aprire e chiudere i file, nonché leggere e scrivere dati a tali file. Illustra anche le operazioni di stato file. Per una descrizione di come utilizzare le funzionalità di serializzazione basato su oggetti di MFC come un modo alternativo per la lettura e scrittura dei dati nei file, vedere l'articolo [serializzazione](../mfc/serialization-in-mfc.md).  
   
 > [!NOTE]
->  Quando si utilizza MFC **CDocument** oggetti, il framework esegue molte delle operazioni di serializzazione per l'utente. In particolare, il framework crea e Usa il `CFile` oggetto. È necessario scrivere codice nell'override del `Serialize` funzione membro di classe **CDocument**.  
+>  Quando si utilizza MFC `CDocument` oggetti, il framework vengono eseguite molte delle operazioni di serializzazione. In particolare, il framework crea e Usa il `CFile` oggetto. È sufficiente scrivere codice nell'override della `Serialize` funzione membro di classe `CDocument`.  
   
- La `CFile` classe fornisce un'interfaccia per le operazioni di file binari generica. Il `CStdioFile` e `CMemFile` le classi derivate da `CFile` e `CSharedFile` classe derivata da `CMemFile` fornire servizi di file più specializzati.  
+ Il `CFile` classe fornisce un'interfaccia per le operazioni di file binari generica. Il `CStdioFile` e `CMemFile` classi derivate da `CFile` e il `CSharedFile` classe derivata da `CMemFile` fornire più specializzata di servizi file.  
   
- Per ulteriori informazioni sulle alternative per la gestione dei file MFC, vedere [gestione File](../c-runtime-library/file-handling.md) nel *riferimenti alla libreria di Run-Time*.  
+ Per ulteriori informazioni sulle alternative disponibili per la gestione dei file MFC, vedere [gestione File](../c-runtime-library/file-handling.md) nel *riferimenti alla libreria di Run-Time*.  
   
- Per informazioni su derivato `CFile` classi, vedere il [grafico della gerarchia MFC](../mfc/hierarchy-chart.md).  
+ Per informazioni su derivato `CFile` classi, vedere la [grafico della gerarchia MFC](../mfc/hierarchy-chart.md).  
   
 ## <a name="what-do-you-want-to-do"></a>Ciò che si desidera eseguire  
  *Utilizzare CFile*  

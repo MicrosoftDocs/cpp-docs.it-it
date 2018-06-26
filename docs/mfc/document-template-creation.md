@@ -1,5 +1,5 @@
 ---
-title: La creazione di modelli di documenti | Documenti Microsoft
+title: La creazione di modelli di documento | Documenti Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,21 +18,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 36650e0ae1ce042a887c6a87d1bbe62d8b6d7fe4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3695d2795fa324051b76cf012aae7e1b1f275fa1
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33345794"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36928022"
 ---
 # <a name="document-template-creation"></a>Creazione di modelli di documento
-Quando si crea un nuovo documento in risposta a un `New` o **aprire** comando il **File** menu, il modello di documento crea anche una nuova finestra del frame tramite cui si desidera visualizzare il documento.  
+Quando si crea un nuovo documento in risposta a un **New** o **Apri** dal **File** menu, il modello di documento crea anche una nuova finestra del frame tramite cui si desidera visualizzare il documento.  
   
- Il costruttore del modello di documento specifica i tipi di documenti, finestre e il modello sarà in grado di creare viste. Ciò è determinato dagli argomenti passati al costruttore modello di documento. Il codice seguente illustra la creazione di un [CMultiDocTemplate](../mfc/reference/cmultidoctemplate-class.md) per un'applicazione di esempio:  
+ Il costruttore di modello di documento specifica i tipi di documenti, finestre e il modello sarà in grado di creare viste. Ciò è determinato dagli argomenti passati al costruttore modello di documento. Il codice seguente illustra la creazione di un [CMultiDocTemplate](../mfc/reference/cmultidoctemplate-class.md) per un'applicazione di esempio:  
   
  [!code-cpp[NVC_MFCDocView#7](../mfc/codesnippet/cpp/document-template-creation_1.cpp)]  
   
- Il puntatore a un nuovo `CMultiDocTemplate` oggetto viene utilizzato come argomento di [AddDocTemplate](../mfc/reference/cwinapp-class.md#adddoctemplate). Argomenti per il `CMultiDocTemplate` costruttore includono l'ID di risorsa associata a menu e tasti di scelta rapida del tipo di documento e tre utilizzi del [RUNTIME_CLASS](../mfc/reference/run-time-object-model-services.md#runtime_class) (macro). `RUNTIME_CLASS` Restituisce il [CRuntimeClass](../mfc/reference/cruntimeclass-structure.md) oggetto per la classe C++ denominata come relativo argomento. I tre `CRuntimeClass` oggetti passati al costruttore modello di documento è fornire le informazioni necessarie per creare nuovi oggetti di classi specificate durante il processo di creazione del documento. Nell'esempio viene illustrata la creazione di un modello di documento che crea `CScribDoc` gli oggetti con `CScribView` oggetti associati. Le viste sono racchiusi in finestre di cornice figlio MDI standard.  
+ Il puntatore a una nuova `CMultiDocTemplate` oggetto viene utilizzato come argomento al [AddDocTemplate](../mfc/reference/cwinapp-class.md#adddoctemplate). Argomenti per il `CMultiDocTemplate` costruttore includono l'ID di risorsa associato il tipo di documento i menu e tasti di scelta rapida e tre utilizzi del [RUNTIME_CLASS](../mfc/reference/run-time-object-model-services.md#runtime_class) macro. `RUNTIME_CLASS` Restituisce il [CRuntimeClass](../mfc/reference/cruntimeclass-structure.md) oggetto per la classe C++ denominata come relativo argomento. I tre `CRuntimeClass` oggetti passati al costruttore modello di documento è fornire le informazioni necessarie per creare nuovi oggetti di classi specificate durante il processo di creazione del documento. Nell'esempio viene illustrata la creazione di un modello di documento che crea `CScribDoc` gli oggetti con `CScribView` oggetti associati. Le viste sono racchiusi in finestre di cornice figlio MDI standard.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Modelli di documento e il processo di creazione documento/visualizzazione](../mfc/document-templates-and-the-document-view-creation-process.md)   

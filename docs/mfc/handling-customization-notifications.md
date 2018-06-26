@@ -57,17 +57,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3636d3db480563295213b76de06133e78e30cd0d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5b95af9c0562c4b3210cbcdd7b9ce6216a5d49fb
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33353702"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930017"
 ---
 # <a name="handling-customization-notifications"></a>Gestione delle notifiche di personalizzazione
 In una comune barra degli strumenti Windows sono incorporate funzionalità di personalizzazione, inclusa una finestra di dialogo di personalizzazione definita dal sistema, che consentono all'utente di inserire, eliminare o riordinare i pulsanti della barra degli strumenti. L'applicazione determina se le funzionalità di personalizzazione sono disponibili e controlla l'ambito in cui l'utente può personalizzare la barra degli strumenti.  
   
- È possibile rendere queste funzionalità di personalizzazione disponibili all'utente assegnando alla barra degli strumenti lo stile `CCS_ADJUSTABLE` . Le funzionalità di personalizzazione consentono all'utente di trascinare un pulsante in una nuova posizione o di rimuovere un pulsante trascinandolo dalla barra degli strumenti. L'utente può anche fare doppio clic sulla barra degli strumenti per visualizzare la finestra di dialogo **Personalizza barra degli strumenti** , che consente di aggiungere, eliminare e riordinare i pulsanti della barra degli strumenti. L'applicazione può visualizzare la finestra di dialogo con la funzione membro [Personalizza](../mfc/reference/ctoolbarctrl-class.md#customize) .  
+ È possibile rendere queste funzionalità di personalizzazione disponibili all'utente assegnando la barra degli strumenti di **CCS_ADJUSTABLE** stile. Le funzionalità di personalizzazione consentono all'utente di trascinare un pulsante in una nuova posizione o di rimuovere un pulsante trascinandolo dalla barra degli strumenti. L'utente può anche fare doppio clic sulla barra degli strumenti per visualizzare la finestra di dialogo **Personalizza barra degli strumenti** , che consente di aggiungere, eliminare e riordinare i pulsanti della barra degli strumenti. L'applicazione può visualizzare la finestra di dialogo con la funzione membro [Personalizza](../mfc/reference/ctoolbarctrl-class.md#customize) .  
   
  La barra degli strumenti invia messaggi di notifica alla finestra padre in ogni fase del processo di personalizzazione. Se l'utente tiene premuto il tasto MAIUSC e inizia a trascinare un pulsante, la barra degli strumenti gestisce automaticamente l'operazione di trascinamento. La barra degli strumenti invia il messaggio di notifica **TBN_QUERYDELETE** alla finestra padre per determinare se il pulsante può essere eliminato. L'operazione di trascinamento termina se la finestra padre restituisce **FALSE**. In caso contrario, la barra degli strumenti acquisisce gli input del mouse e attende che l'utente rilasci il pulsante del mouse.  
   
@@ -165,7 +165,7 @@ In una comune barra degli strumenti Windows sono incorporate funzionalità di pe
  Indice del pulsante associato alla notifica.  
   
  **tbButton**  
- `TBBUTTON` struttura che contiene informazioni relative al pulsante della barra degli strumenti associato alla notifica.  
+ **TBBUTTON** struttura che contiene informazioni relative al pulsante della barra degli strumenti associato alla notifica.  
   
  **cchText**  
  Numero di caratteri nel testo dei pulsanti.  

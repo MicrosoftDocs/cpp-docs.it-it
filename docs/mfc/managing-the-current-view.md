@@ -21,17 +21,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 323903d2e1285a4ee697bbd9d0c3a29c2e1248d4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 09d29f4bc0b62e5824209759d45e63c1d9e2daa6
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33349591"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36928740"
 ---
 # <a name="managing-the-current-view"></a>Gestione della visualizzazione corrente
 Come parte dell'implementazione predefinita di finestre cornice, una finestra cornice tiene traccia della visualizzazione attualmente attiva. Se la finestra cornice contiene più di una visualizzazione, come ad esempio in una finestra con barra di divisione, la visualizzazione corrente è la visualizzazione utilizzata più di recente. La visualizzazione attiva è indipendente dalla finestra attiva in Windows o dallo stato attivo per l'input corrente.  
   
- Quando viene modificata la visualizzazione attiva, il framework di notifica della visualizzazione corrente chiamando il relativo [OnActivateView](../mfc/reference/cview-class.md#onactivateview) funzione membro. È possibile stabilire se la visualizzazione viene attivata o disattivata esaminando il parametro `OnActivateView` di `bActivate`. Per impostazione predefinita, `OnActivateView` imposta lo stato attivo sulla visualizzazione corrente all'atto dell'attivazione. È possibile eseguire l'override di `OnActivateView` per eseguire qualsiasi elaborazione speciale quando la visualizzazione viene disattivata o riattivata. Ad esempio, è possibile che si desideri fornire indicazioni visive speciali per distinguere la visualizzazione attiva da altre visualizzazioni inattive.  
+ Quando viene modificata la visualizzazione attiva, il framework notificata la visualizzazione corrente chiamando il relativo [OnActivateView](../mfc/reference/cview-class.md#onactivateview) funzione membro. È possibile indicare se la vista è attivata o disattivata esaminando `OnActivateView`del *bActivate* parametro. Per impostazione predefinita, `OnActivateView` imposta lo stato attivo sulla visualizzazione corrente all'atto dell'attivazione. È possibile eseguire l'override di `OnActivateView` per eseguire qualsiasi elaborazione speciale quando la visualizzazione viene disattivata o riattivata. Ad esempio, è possibile che si desideri fornire indicazioni visive speciali per distinguere la visualizzazione attiva da altre visualizzazioni inattive.  
   
  Una finestra cornice inoltra i comandi per la relativa visualizzazione corrente (attiva), come descritto in [comandi (Routing)](../mfc/command-routing.md), come parte del routing dei comandi standard.  
   

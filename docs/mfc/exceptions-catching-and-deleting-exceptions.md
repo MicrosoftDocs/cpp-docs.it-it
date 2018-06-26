@@ -19,46 +19,46 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3527dabab96fe8f2832430f928a922941178ea97
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 29dea08d778ba91c5b8ab3a10aaff998095e7123
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33345186"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36928769"
 ---
 # <a name="exceptions-catching-and-deleting-exceptions"></a>Eccezioni: rilevamento ed eliminazione di eccezioni
-Le istruzioni e gli esempi seguenti viene illustrato come rilevare ed eliminare le eccezioni. Per ulteriori informazioni sul **provare**, **catch**, e `throw` parole chiave, vedere [gestione delle eccezioni C++](../cpp/cpp-exception-handling.md).  
+Le istruzioni e gli esempi seguenti viene illustrato come rilevare ed eliminare le eccezioni. Per ulteriori informazioni sul **provare**, **catch**, e **throw** parole chiave, vedere [gestione delle eccezioni C++](../cpp/cpp-exception-handling.md).  
   
- Gestori di eccezioni devono eliminare gli oggetti eccezione gestiti, perché è Impossibile eliminare l'eccezione determina una perdita di memoria ogni volta che tale codice rileva un'eccezione.  
+ Gestori di eccezioni devono eliminare gli oggetti eccezione gestiti, perché l'errore per eliminare l'eccezione causa una perdita di memoria ogni volta che tale codice rileva un'eccezione.  
   
- Il **catch** blocco è necessario eliminare un'eccezione quando:  
+ il **catch** blocco deve eliminare un'eccezione quando:  
   
 -   Il **catch** blocco genera una nuova eccezione.  
   
-     Naturalmente, non è necessario eliminare l'eccezione quando viene generata la stessa eccezione:  
+     Ovviamente, non è necessario eliminare l'eccezione quando viene generata nuovamente la stessa eccezione:  
   
      [!code-cpp[NVC_MFCExceptions#3](../mfc/codesnippet/cpp/exceptions-catching-and-deleting-exceptions_1.cpp)]  
   
--   Esecuzione restituisce dall'interno di **catch** blocco.  
+-   Restituisce l'esecuzione dall'interno di **catch** blocco.  
   
 > [!NOTE]
->  Quando si elimina un `CException`, utilizzare il **eliminare** funzione membro per eliminare l'eccezione. Non utilizzare il **eliminare** (parola chiave), poiché può non riuscire se l'eccezione non è nell'heap.  
+>  Quando si elimina un `CException`, utilizzare il `Delete` funzione membro per eliminare l'eccezione. Non usare la **eliminare** (parola chiave), poiché può non riuscire se l'eccezione non è nell'heap.  
   
 #### <a name="to-catch-and-delete-exceptions"></a>Per rilevare ed eliminare le eccezioni  
   
-1.  Utilizzare il **provare** (parola chiave) per impostare un **provare** blocco. Esecuzione delle istruzioni di programma che potrebbero generare un'eccezione all'interno di un **provare** blocco.  
+1.  Usare la **provare** (parola chiave) per impostare un **provare** blocco. Esecuzione delle istruzioni di programma che potrebbero generare un'eccezione all'interno di un **provare** blocco.  
   
-     Utilizzare il **catch** (parola chiave) per impostare un **catch** blocco. Inserire il codice di gestione delle eccezioni in un **catch** blocco. Il codice nel **catch** blocco viene eseguito solo se il codice all'interno di **provare** blocco genera un'eccezione del tipo specificato nel **catch** istruzione.  
+     Usare la **catch** (parola chiave) per impostare un **catch** blocco. Inserire il codice di gestione delle eccezioni in un **catch** blocco. Il codice nel **catch** blocco viene eseguito solo se il codice all'interno di **provare** blocco genera un'eccezione del tipo specificato nel **catch** istruzione.  
   
-     Nella seguente struttura come **provare** e **catch** blocchi vengono disposte in genere:  
+     La struttura seguente viene illustrato come **provare** e **catch** blocchi vengono disposte in genere:  
   
      [!code-cpp[NVC_MFCExceptions#4](../mfc/codesnippet/cpp/exceptions-catching-and-deleting-exceptions_2.cpp)]  
   
-     Quando viene generata un'eccezione, il controllo passa al primo **catch** blocco la cui dichiarazione di eccezione corrisponde al tipo dell'eccezione. È possibile gestire in modo selettivo i diversi tipi di eccezioni con sequenziale **catch** blocca come indicato di seguito:  
+     Quando viene generata un'eccezione, il controllo passa al primo **catch** blocco la cui dichiarazione di eccezione corrispondente al tipo di eccezione. È possibile gestire in modo selettivo i diversi tipi di eccezioni con sequenziale **catch** blocca come indicato di seguito:  
   
      [!code-cpp[NVC_MFCExceptions#5](../mfc/codesnippet/cpp/exceptions-catching-and-deleting-exceptions_3.cpp)]  
   
- Per ulteriori informazioni, vedere [eccezioni: conversione da macro eccezioni MFC](../mfc/exceptions-converting-from-mfc-exception-macros.md).  
+ Per altre informazioni, vedere [eccezioni: conversione da macro eccezioni MFC](../mfc/exceptions-converting-from-mfc-exception-macros.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Gestione delle eccezioni](../mfc/exception-handling-in-mfc.md)

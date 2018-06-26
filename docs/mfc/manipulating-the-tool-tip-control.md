@@ -15,17 +15,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 76976c0907d645ad945700c4d396217880712f11
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 91e2e247acb85188c1280713e9e5ad8ef8f19448
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33346438"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929828"
 ---
 # <a name="manipulating-the-tool-tip-control"></a>Modifica del controllo ToolTip
 La classe `CToolTipCtrl` fornisce un gruppo di funzioni membro che controllano i vari attributi dell'oggetto `CToolTipCtrl` e della finestra di descrizione comandi.  
   
- Iniziale, di popup e nuova visualizzazione durate per finestre di descrizioni comandi possono essere impostate e recuperate con chiamate a [GetDelayTime](../mfc/reference/ctooltipctrl-class.md#getdelaytime) e [SetDelayTime](../mfc/reference/ctooltipctrl-class.md#setdelaytime).  
+ L'iniziale, di popup e nuova visualizzazione durate per finestre di descrizioni comandi possono essere impostate e recuperate con chiamate a [GetDelayTime](../mfc/reference/ctooltipctrl-class.md#getdelaytime) e [SetDelayTime](../mfc/reference/ctooltipctrl-class.md#setdelaytime).  
   
  Modificare l'aspetto delle finestre di descrizioni comandi con le seguenti funzioni:  
   
@@ -37,7 +37,7 @@ La classe `CToolTipCtrl` fornisce un gruppo di funzioni membro che controllano i
   
 -   [GetTipTextColor](../mfc/reference/ctooltipctrl-class.md#gettiptextcolor) e [SetTipTextColor](../mfc/reference/ctooltipctrl-class.md#settiptextcolor) recuperano e impostano il colore del testo dello strumento della finestra di descrizione comandi.  
   
- Affinché il controllo descrizione comandi ricevere una notifica di messaggi importanti, ad esempio **WM_LBUTTONXXX** messaggi, è necessario trasmettere i messaggi per il controllo descrizione comandi. Il metodo migliore per l'inoltro è per effettuare una chiamata a [CToolTipCtrl:: RelayEvent](../mfc/reference/ctooltipctrl-class.md#relayevent)nella `PreTranslateMessage` funzione della finestra proprietaria. Nell'esempio seguente viene illustrato un possibile metodo (basato sulla supposizione che il controllo descrizione comandi sia denominato `m_ToolTip`):  
+ Affinché il controllo descrizione comando ricevere una notifica di messaggi importanti, ad esempio i messaggi WM_LBUTTONXXX, è necessario trasmettere i messaggi al controllo descrizione comandi. Il metodo migliore per l'inoltro è per effettuare una chiamata a [CToolTipCtrl:: RelayEvent](../mfc/reference/ctooltipctrl-class.md#relayevent)nella `PreTranslateMessage` funzione della finestra proprietaria. Nell'esempio seguente viene illustrato un possibile metodo (basato sulla supposizione che il controllo descrizione comandi sia denominato `m_ToolTip`):  
   
  [!code-cpp[NVC_MFCControlLadenDialog#41](../mfc/codesnippet/cpp/manipulating-the-tool-tip-control_1.cpp)]  
   
