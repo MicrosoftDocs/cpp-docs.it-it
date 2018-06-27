@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ba88269cf37f41cf8a594745eb2e98a57ccf64ca
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: eb8cc37396069dc7e0ea53506436b536100bdbb4
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369015"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956129"
 ---
 # <a name="cgdiobject-class"></a>Classe CGdiObject
 Fornisce una classe di base per diversi generi di oggetti GDI (Graphics Device Interface) di Windows, quali bitmap, aree, pennelli, penne, tavolozze e tipi di carattere.  
@@ -68,15 +68,15 @@ class CGdiObject : public CObject
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[CGdiObject::Attach](#attach)|Connette un oggetto GDI di Windows per un `CGdiObject` oggetto.|  
-|[CGdiObject::CreateStockObject](#createstockobject)|Recupera un handle a uno dei tipi di carattere, penne di azioni predefinite di Windows o pennelli.|  
-|[CGdiObject::DeleteObject](#deleteobject)|Elimina l'oggetto GDI di Windows associato al `CGdiObject` oggetto dalla memoria, liberando tutti gli archivi di sistema associato all'oggetto.|  
+|[CGdiObject::Attach](#attach)|Connette un oggetto GDI di Windows a un `CGdiObject` oggetto.|  
+|[CGdiObject::CreateStockObject](#createstockobject)|Recupera un handle per uno degli penne di azioni predefinite di Windows, pennelli o di tipi di carattere.|  
+|[CGdiObject::DeleteObject](#deleteobject)|Elimina l'oggetto GDI di Windows associato al `CGdiObject` oggetto dalla memoria liberando tutti gli archivi di sistema associato all'oggetto.|  
 |[CGdiObject::DeleteTempMap](#deletetempmap)|Elimina qualsiasi temporaneo `CGdiObject` degli oggetti creati da `FromHandle`.|  
-|[CGdiObject::Detach](#detach)|Rimuove un oggetto GDI di Windows da un `CGdiObject` dell'oggetto e restituisce un handle all'oggetto GDI di Windows.|  
-|[CGdiObject::FromHandle](#fromhandle)|Restituisce un puntatore a un `CGdiObject` oggetto in base a un handle a un oggetto GDI di Windows.|  
+|[CGdiObject::Detach](#detach)|Scollega un oggetto GDI di Windows da un `CGdiObject` dell'oggetto e restituisce un handle all'oggetto GDI di Windows.|  
+|[CGdiObject::FromHandle](#fromhandle)|Restituisce un puntatore a un `CGdiObject` oggetto fornito da un handle a un oggetto GDI di Windows.|  
 |[CGdiObject::GetObject](#getobject)|Compila un buffer con dati che descrive l'oggetto GDI di Windows collegata la `CGdiObject` oggetto.|  
 |[CGdiObject::GetObjectType](#getobjecttype)|Recupera il tipo dell'oggetto GDI.|  
-|[CGdiObject::GetSafeHandle](#getsafehandle)|Restituisce `m_hObject` a meno che non `this` è `NULL`, nel qual caso `NULL` viene restituito.|  
+|[CGdiObject::GetSafeHandle](#getsafehandle)|Restituisce `m_hObject` a meno che non `this` viene `NULL`, nel qual caso `NULL` viene restituito.|  
 |[CGdiObject:: UnrealizeObject](#unrealizeobject)|Reimposta l'origine di un pennello o reimposta una tavolozza logica.|  
   
 ### <a name="public-operators"></a>Operatori pubblici  
@@ -85,18 +85,18 @@ class CGdiObject : public CObject
 |----------|-----------------|  
 |[CGdiObject::operator! =](#operator_neq)|Determina se due oggetti GDI logicamente non sono uguali.|  
 |[CGdiObject::operator = =](#operator_eq_eq)|Determina se due oggetti GDI sono uguali.|  
-|[CGdiObject::operator HGDIOBJ](#operator_hgdiobj)|Recupera un `HANDLE` all'oggetto GDI di Windows.|  
+|[CGdiObject::operator HGDIOBJ](#operator_hgdiobj)|Recupera un `HANDLE` all'oggetto GDI di Windows associata.|  
   
 ### <a name="public-data-members"></a>Membri dati pubblici  
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[CGdiObject::m_hObject](#m_hobject)|Oggetto `HANDLE` contenente il `HBITMAP`, `HPALETTE`, `HRGN`, `HBRUSH`, `HPEN`, o `HFONT` associata a questo oggetto.|  
+|[CGdiObject::m_hObject](#m_hobject)|Un `HANDLE` che contiene il `HBITMAP`, `HPALETTE`, `HRGN`, `HBRUSH`, `HPEN`, o `HFONT` collegato a questo oggetto.|  
   
 ## <a name="remarks"></a>Note  
- Non creare mai un `CGdiObject` direttamente. Invece, si crea un oggetto da una delle relative classi derivate, ad esempio `CPen` o `CBrush`.  
+ È non creare mai un `CGdiObject` direttamente. Invece, si crea un oggetto da una delle relative classi derivate, ad esempio `CPen` o `CBrush`.  
   
- Per ulteriori informazioni su `CGdiObject`, vedere [oggetti grafici](../../mfc/graphic-objects.md).  
+ Per ulteriori informazioni sul `CGdiObject`, vedere [oggetti grafici](../../mfc/graphic-objects.md).  
   
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -107,15 +107,15 @@ class CGdiObject : public CObject
  **Intestazione:** afxwin.h  
   
 ##  <a name="attach"></a>  CGdiObject::Attach  
- Connette un oggetto GDI di Windows per un `CGdiObject` oggetto.  
+ Connette un oggetto GDI di Windows a un `CGdiObject` oggetto.  
   
 ```  
 BOOL Attach(HGDIOBJ hObject);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `hObject`  
- Oggetto `HANDLE` a un oggetto GDI di Windows (ad esempio, `HPEN` o `HBRUSH`).  
+ *hObject*  
+ Un `HANDLE` a un oggetto GDI di Windows (ad esempio `HPEN` o `HBRUSH`).  
   
 ### <a name="return-value"></a>Valore restituito  
  Diverso da zero se ha esito positivo; allegato in caso contrario 0.  
@@ -128,7 +128,7 @@ CGdiObject();
 ```  
   
 ### <a name="remarks"></a>Note  
- Non creare mai un `CGdiObject` direttamente. Invece, si crea un oggetto da una delle relative classi derivate, ad esempio `CPen` o **Cbrush**.  
+ È non creare mai un `CGdiObject` direttamente. Invece, si crea un oggetto da una delle relative classi derivate, ad esempio `CPen` o `Cbrush`.  
   
 ##  <a name="createstockobject"></a>  CGdiObject::CreateStockObject  
  Recupera un handle a una delle predefiniti penne GDI di Windows predefinite, pennelli, tipi di carattere e collega l'oggetto GDI per la `CGdiObject` oggetto.  
@@ -138,17 +138,17 @@ BOOL CreateStockObject(int nIndex);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `nIndex`  
- Costante che specifica il tipo di oggetto predefinito desiderato. Vedere il parametro *fnObject* per [GetStockObject](http://msdn.microsoft.com/library/windows/desktop/dd144925) in Windows SDK per una descrizione dei valori appropriati.  
+ *nIndex*  
+ Costante che specifica il tipo di oggetto azionario desiderato. Vedere il parametro *fnObject* per [GetStockObject](http://msdn.microsoft.com/library/windows/desktop/dd144925) in Windows SDK per una descrizione dei valori appropriati.  
   
 ### <a name="return-value"></a>Valore restituito  
  Diverso da zero se la funzione ha esito positivo; in caso contrario, 0.  
   
 ### <a name="remarks"></a>Note  
- Chiamata di questa funzione con uno della classe derivata, le classi che corrisponde al tipo di oggetto GDI di Windows, ad esempio `CPen` per una penna.  
+ Chiamata di questa funzione con uno della classe derivata classi che corrisponde al tipo di oggetto GDI di Windows, ad esempio `CPen` per un oggetto pen azionario.  
   
 ##  <a name="deleteobject"></a>  CGdiObject::DeleteObject  
- Elimina l'oggetto GDI di Windows associato dalla memoria, liberando tutti gli archivi di sistema associato all'oggetto GDI di Windows.  
+ Elimina l'oggetto GDI di Windows associata dalla memoria liberando tutti gli archivi di sistema associato all'oggetto GDI di Windows.  
   
 ```  
 BOOL DeleteObject();
@@ -160,10 +160,10 @@ BOOL DeleteObject();
 ### <a name="remarks"></a>Note  
  Lo spazio di archiviazione associato di `CGdiObject` oggetto non è interessato da questa chiamata. Un'applicazione non deve chiamare `DeleteObject` su un `CGdiObject` oggetto attualmente selezionato in un contesto di dispositivo.  
   
- Quando viene eliminato un pennello pattern, la bitmap associata al pennello non viene eliminata. La bitmap deve essere eliminata in modo indipendente.  
+ Quando viene eliminato un pennello pattern, la bitmap associata al pennello non viene eliminata. La mappa di bit deve essere eliminato in modo indipendente.  
   
 ##  <a name="deletetempmap"></a>  CGdiObject::DeleteTempMap  
- Chiamato automaticamente dal `CWinApp` gestore tempo di inattività, `DeleteTempMap` elimina qualsiasi temporaneo `CGdiObject` degli oggetti creati da `FromHandle`.  
+ Chiamato automaticamente dal `CWinApp` gestore, tempo di inattività `DeleteTempMap` elimina qualsiasi temporaneo `CGdiObject` degli oggetti creati da `FromHandle`.  
   
 ```  
 static void PASCAL DeleteTempMap();
@@ -176,24 +176,24 @@ static void PASCAL DeleteTempMap();
  [!code-cpp[NVC_MFCDocView#175](../../mfc/codesnippet/cpp/cgdiobject-class_1.cpp)]  
   
 ##  <a name="detach"></a>  CGdiObject::Detach  
- Rimuove un oggetto GDI di Windows da un `CGdiObject` dell'oggetto e restituisce un handle all'oggetto GDI di Windows.  
+ Scollega un oggetto GDI di Windows da un `CGdiObject` dell'oggetto e restituisce un handle all'oggetto GDI di Windows.  
   
 ```  
 HGDIOBJ Detach();
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- Oggetto `HANDLE` per GDI di Windows all'oggetto disconnesso; in caso contrario **NULL** se non è collegato alcun oggetto GDI.  
+ Un `HANDLE` GDI di Windows oggetto disconnesso; in caso contrario **NULL** se non è collegato alcun oggetto GDI.  
   
 ##  <a name="fromhandle"></a>  CGdiObject::FromHandle  
- Restituisce un puntatore a un `CGdiObject` oggetto in base a un handle a un oggetto GDI di Windows.  
+ Restituisce un puntatore a un `CGdiObject` oggetto fornito da un handle a un oggetto GDI di Windows.  
   
 ```  
 static CGdiObject* PASCAL FromHandle(HGDIOBJ hObject);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `hObject`  
+ *hObject*  
  Oggetto `HANDLE` a un oggetto GDI di Windows.  
   
 ### <a name="return-value"></a>Valore restituito  
@@ -202,7 +202,7 @@ static CGdiObject* PASCAL FromHandle(HGDIOBJ hObject);
 ### <a name="remarks"></a>Note  
  Se un `CGdiObject` oggetto non è già collegato all'oggetto GDI di Windows, una password temporanea `CGdiObject` oggetto viene creato e collegato.  
   
- Questo temporaneo `CGdiObject` oggetto è valido solo fino alla successiva esecuzione dell'applicazione è il tempo di inattività nel relativo ciclo di eventi, momento in cui vengono eliminati tutti gli oggetti grafici temporanei. In altre parole, questo è che l'oggetto temporaneo è valido solo durante l'elaborazione di una finestra di messaggio.  
+ Questa memoria temporanea `CGdiObject` oggetto è valido solo fino alla successiva esecuzione l'applicazione dispone di tempo di inattività nel relativo ciclo di eventi, momento in cui vengono eliminati tutti gli oggetti grafici temporanei. Un altro modo di ciò è che l'oggetto temporaneo è valido solo durante l'elaborazione di una finestra di messaggio.  
   
 ##  <a name="getobject"></a>  CGdiObject::GetObject  
  Inserisce un buffer dei dati che definisce un oggetto specificato.  
@@ -214,14 +214,14 @@ int GetObject(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `nCount`  
- Specifica il numero di byte da copiare nel `lpObject` buffer.  
+ *nCount*  
+ Specifica il numero di byte da copiare nel *lpObject* buffer.  
   
- `lpObject`  
+ *lpObject*  
  Punta a un buffer fornito dall'utente che sta per ricevere le informazioni.  
   
 ### <a name="return-value"></a>Valore restituito  
- Il numero di byte recuperati; in caso contrario 0 se un errore si verifica.  
+ Numero di byte recuperati; in caso contrario, 0 se un errore si verifica.  
   
 ### <a name="remarks"></a>Note  
  La funzione recupera una struttura di dati il cui tipo dipende dal tipo dell'oggetto grafico, come illustrato nell'elenco seguente:  
@@ -235,9 +235,9 @@ int GetObject(
 |`CPalette`|**WORD**|  
 |`CRgn`|Non supportato|  
   
- Se l'oggetto è un `CBitmap` oggetto `GetObject` restituisce solo la larghezza, altezza e le informazioni sul formato di colore della bitmap. I bit effettivi possono essere recuperati tramite [CBitmap::GetBitmapBits](../../mfc/reference/cbitmap-class.md#getbitmapbits).  
+ Se l'oggetto è un `CBitmap` oggetto, `GetObject` restituisce solo la larghezza, altezza e le informazioni sul formato di colore della bitmap. I bit effettivi possono essere recuperati tramite [CBitmap::GetBitmapBits](../../mfc/reference/cbitmap-class.md#getbitmapbits).  
   
- Se l'oggetto è un `CPalette` oggetto `GetObject` recupera un **WORD** che specifica il numero di voci nella tavolozza. Non è possibile recuperare la funzione di [LOGPALETTE](http://msdn.microsoft.com/library/windows/desktop/dd145040) struttura che definisce la tavolozza. Un'applicazione può ottenere informazioni sulle voci tavolozza chiamando [CPalette::GetPaletteEntries](../../mfc/reference/cpalette-class.md#getpaletteentries).  
+ Se l'oggetto è un `CPalette` oggetto `GetObject` recupera un **WORD** che specifica il numero di voci nella tavolozza. La funzione non recupera le [LOGPALETTE](http://msdn.microsoft.com/library/windows/desktop/dd145040) struttura che definisce la tavolozza. Un'applicazione può ottenere informazioni sulle voci tavolozza chiamando [CPalette::GetPaletteEntries](../../mfc/reference/cpalette-class.md#getpaletteentries).  
   
 ##  <a name="getobjecttype"></a>  CGdiObject::GetObjectType  
  Recupera il tipo dell'oggetto GDI.  
@@ -276,23 +276,23 @@ UINT GetObjectType() const;
 - **OBJ_ENHMETADC** contesto di dispositivo metafile avanzato  
   
 ##  <a name="getsafehandle"></a>  CGdiObject::GetSafeHandle  
- Restituisce `m_hObject` a meno che non **questo** è **NULL**, nel qual caso **NULL** viene restituito.  
+ Restituisce `m_hObject` a meno che non **questo** viene **NULL**, nel qual caso **NULL** viene restituito.  
   
 ```  
 HGDIOBJ GetSafeHandle() const;  
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- Oggetto `HANDLE` all'oggetto GDI di Windows; in caso contrario **NULL** se non è collegato alcun oggetto.  
+ Un `HANDLE` all'oggetto GDI di Windows associato; in caso contrario **NULL** se non è collegato alcun oggetto.  
   
 ### <a name="remarks"></a>Note  
- Questo fa parte del paradigma interfaccia handle generale e risulta utile quando **NULL** è un valore valido o speciale per un handle.  
+ Questo fa parte del paradigma interfaccia handle generale ed è utile quando **NULL** è un valore valido o speciale per un handle.  
   
 ### <a name="example"></a>Esempio  
-  Per vedere l'esempio [CWnd::IsWindowEnabled](../../mfc/reference/cwnd-class.md#iswindowenabled).  
+  Vedere l'esempio relativo [CWnd::IsWindowEnabled](../../mfc/reference/cwnd-class.md#iswindowenabled).  
   
 ##  <a name="m_hobject"></a>  CGdiObject::m_hObject  
- Oggetto `HANDLE` contenente il `HBITMAP`, **HRGN**, `HBRUSH`, `HPEN`, `HPALETTE`, o **HFONT** associata a questo oggetto.  
+ Un `HANDLE` che contiene il `HBITMAP`, **HRGN**, `HBRUSH`, `HPEN`, `HPALETTE`, o **HFONT** collegato a questo oggetto.  
   
 ```  
 HGDIOBJ m_hObject;  
@@ -306,7 +306,7 @@ BOOL operator!=(const CGdiObject& obj) const;
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `obj`  
+ *obj*  
  Un puntatore a un oggetto esistente `CGdiObject`.  
   
 ### <a name="remarks"></a>Note  
@@ -320,14 +320,14 @@ BOOL operator==(const CGdiObject& obj) const;
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `obj`  
+ *obj*  
  Un riferimento a un oggetto esistente `CGdiObject`.  
   
 ### <a name="remarks"></a>Note  
  Determina se un oggetto GDI sul lato sinistro è uguale a un oggetto GDI sul lato destro.  
   
 ##  <a name="operator_hgdiobj"></a>  CGdiObject::operator HGDIOBJ  
- Recupera un `HANDLE` all'oggetto GDI di Windows; in caso contrario **NULL** se non è collegato alcun oggetto.  
+ Recupera un `HANDLE` all'oggetto GDI di Windows associato; in caso contrario **NULL** se non è collegato alcun oggetto.  
   
 ```  
 operator HGDIOBJ() const;  
@@ -346,9 +346,9 @@ BOOL UnrealizeObject();
 ### <a name="remarks"></a>Note  
  Mentre `UnrealizeObject` è una funzione membro del `CGdiObject` (classe), deve essere richiamato solo su `CBrush` o `CPalette` oggetti.  
   
- Per `CBrush` oggetti, `UnrealizeObject` indica al sistema per reimpostare l'origine del pennello specificato al successivo è selezionata in un contesto di dispositivo. Se l'oggetto è un `CPalette` oggetto `UnrealizeObject` indica al sistema per realizzare la tavolozza come se non fosse già stata realizzata. Alla successiva, l'applicazione chiama il [CDC::RealizePalette](../../mfc/reference/cdc-class.md#realizepalette) funzione per la tavolozza specificata, il sistema completamente esegue nuovamente il mapping di tavolozza logica per la tavolozza di sistema.  
+ Per `CBrush` oggetti, `UnrealizeObject` indica al sistema per reimpostare l'origine del pennello specificato alla successiva è selezionata in un contesto di dispositivo. Se l'oggetto è un `CPalette` oggetto, `UnrealizeObject` indica al sistema per realizzare la tavolozza come se non fosse già stata realizzata. Alla successiva l'applicazione chiama il [CDC::RealizePalette](../../mfc/reference/cdc-class.md#realizepalette) funzione per la tavolozza specificata, il sistema completamente riesegue il mapping di tavolozza logica per la tavolozza di sistema.  
   
- Il `UnrealizeObject` funzione non deve essere utilizzata con gli oggetti predefiniti. Il `UnrealizeObject` funzione deve essere chiamata ogni volta che viene impostata una nuova origine pennello (mediante il [CDC::SetBrushOrg](../../mfc/reference/cdc-class.md#setbrushorg) funzione). Il `UnrealizeObject` funzione non deve essere chiamata per il pennello selezionato o nel riquadro selezionato di qualsiasi contesto di visualizzazione.  
+ Il `UnrealizeObject` funzione non deve essere usata con gli oggetti predefiniti. Il `UnrealizeObject` funzione deve essere chiamata ogni volta che viene impostata una nuova origine pennello (mediante il [CDC::SetBrushOrg](../../mfc/reference/cdc-class.md#setbrushorg) (funzione)). Il `UnrealizeObject` funzione non deve essere chiamata per il pennello selezionato o nel riquadro selezionato di qualsiasi contesto di visualizzazione.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Grafico delle gerarchie](../../mfc/hierarchy-chart.md)   
