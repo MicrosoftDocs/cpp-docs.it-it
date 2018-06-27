@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d4dbc01c83f9561c8174d2a14365a6a8c94e6ded
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ab7d4f434bf958c3bf47dc1f91101d35cf04add7
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33383162"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954959"
 ---
 # <a name="working-with-a-tab-control"></a>Utilizzo di un controllo Tab
-Il modo più semplice per utilizzare un controllo struttura a schede ([CTabCtrl](../mfc/reference/ctabctrl-class.md)) consiste nell'aggiungerlo a una risorsa modello di finestra di dialogo con l'editor finestre. È anche possibile utilizzare un controllo struttura a schede autonomamente. MFC chiama **InitCommonControls automaticamente** automaticamente. Come indicato di seguito sono riportate le attività principali:  
+Il modo più semplice per utilizzare un controllo struttura a schede ([CTabCtrl](../mfc/reference/ctabctrl-class.md)) consiste nell'aggiungerlo a una risorsa modello di finestra di dialogo con l'editor finestre. È inoltre possibile utilizzare un controllo struttura a schede autonomamente. MFC chiama `InitCommonControls` automaticamente. Le attività principali sono i seguenti:  
   
 -   [Creazione del controllo tab](../mfc/creating-the-tab-control.md)  
   
@@ -32,7 +32,7 @@ Il modo più semplice per utilizzare un controllo struttura a schede ([CTabCtrl]
   
 -   [Elaborazione dei messaggi di notifica controllo tab](../mfc/processing-tab-control-notification-messages.md)  
   
- Se l'oggetto controllo scheda è incorporato in una classe di visualizzazione o della finestra di dialogo padre, il controllo viene eliminato quando viene eliminato definitivamente l'elemento padre.  
+ Se l'oggetto controllo scheda è incorporato in una classe di finestra di dialogo o una vista padre, il controllo viene eliminato definitivamente quando viene eliminato definitivamente l'elemento padre.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Utilizzo di CTabCtrl](../mfc/using-ctabctrl.md)   

@@ -18,37 +18,37 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 47894c14e3b3d694847f94e7f981c9397383e598
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fa2628df5f446105e6b7881709a0c72c19fe230e
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33382906"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36950490"
 ---
 # <a name="using-a-dialog-bar-with-a-rebar-control"></a>Utilizzo di una barra di finestra di dialogo con un controllo Rebar
-Come accennato [controlli Rebar e bande](../mfc/rebar-controls-and-bands.md), ogni band può contenere un solo figlio finestra (o controllo). Potrebbe trattarsi di una limitazione se si desidera disporre di più di una finestra figlio per ogni banda. Una pratica soluzione alternativa consiste nel creare una risorsa barra di finestra di dialogo con più controlli e quindi aggiungere un controllo rebar band (che include la barra di finestra di dialogo) per il controllo rebar.  
+Come indicato in [controlli Rebar e bande](../mfc/rebar-controls-and-bands.md), ogni band può contenere un solo figlio finestra (o controllo). Potrebbe trattarsi di una limitazione se si desidera disporre di più di una finestra figlio per ogni fuori banda. Una pratica soluzione alternativa consiste nel creare una risorsa barra di finestra di dialogo con più controlli e quindi aggiungere un controllo rebar band (che include la barra di finestra di dialogo) per il controllo rebar.  
   
- In genere, se si desidera che la finestra di dialogo barra trasparente, impostare il **WS_EX_TRANSPARENT** extended style per l'oggetto barra di finestra di dialogo. Tuttavia, poiché **WS_EX_TRANSPARENT** presenta alcuni problemi con il disegno dello sfondo di una barra di finestra di dialogo, è necessario eseguire un lavoro supplementare per ottenere l'effetto desiderato.  
+ In genere, se si desidera che la finestra di dialogo barra trasparente, impostare lo stile per l'oggetto barra di finestra esteso WS_EX_TRANSPARENT. Tuttavia, poiché WS_EX_TRANSPARENT presenta alcuni problemi di disegno dello sfondo di una barra di finestra di dialogo, è necessario eseguire un lavoro supplementare per ottenere l'effetto desiderato.  
   
- La procedura seguente illustra in dettaglio i passaggi necessari per ottenere la trasparenza senza utilizzare il **WS_EX_TRANSPARENT** stile esteso.  
+ La procedura seguente vengono descritti i passaggi necessari per ottenere la trasparenza senza utilizzare il WS_EX_TRANSPARENT stile esteso.  
   
 ### <a name="to-implement-a-transparent-dialog-bar-in-a-rebar-band"></a>Per implementare una barra di finestra di dialogo trasparente in un controllo rebar band  
   
-1.  Utilizzo di [la finestra di dialogo Aggiungi classe](../mfc/reference/adding-an-mfc-class.md), aggiungere una nuova classe (ad esempio, `CMyDlgBar`) che implementa l'oggetto barra di finestra di dialogo.  
+1.  Utilizzando il [finestra di dialogo Aggiungi classe](../mfc/reference/adding-an-mfc-class.md), aggiungere una nuova classe (ad esempio, `CMyDlgBar`) che implementa l'oggetto barra di finestra di dialogo.  
   
-2.  Aggiungere un gestore per il `WM_ERASEBKGND` messaggio.  
+2.  Aggiungere un gestore per il messaggio WM_ERASEBKGND.  
   
 3.  Nel gestore di nuovo, modificare il codice esistente affinché corrisponda all'esempio seguente:  
   
      [!code-cpp[NVC_MFCControlLadenDialog#29](../mfc/codesnippet/cpp/using-a-dialog-bar-with-a-rebar-control_1.cpp)]  
   
-4.  Aggiungere un gestore per il `WM_MOVE` messaggio.  
+4.  Aggiungere un gestore per il messaggio WM_MOVE.  
   
 5.  Nel gestore di nuovo, modificare il codice esistente affinché corrisponda all'esempio seguente:  
   
      [!code-cpp[NVC_MFCControlLadenDialog#30](../mfc/codesnippet/cpp/using-a-dialog-bar-with-a-rebar-control_2.cpp)]  
   
- I nuovi gestori per simulare la trasparenza della barra della finestra di dialogo inoltro il `WM_ERASEBKGND` messaggio alla finestra padre e la forzatura di un aggiornamento ogni volta che viene spostato l'oggetto barra di finestra di dialogo.  
+ I nuovi gestori simulano la trasparenza della barra della finestra di dialogo per inoltrare il messaggio WM_ERASEBKGND alla finestra padre e la forzatura di un aggiornamento ogni volta che viene spostato l'oggetto barra di finestra di dialogo.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Utilizzo di CReBarCtrl](../mfc/using-crebarctrl.md)   

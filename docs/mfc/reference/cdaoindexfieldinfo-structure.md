@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7be9a6a9db842f1e80be62f48a9990cff36168e5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 759f8e6f9349fdcac61f6aca81d311e3bbc39e1d
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367256"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36957045"
 ---
 # <a name="cdaoindexfieldinfo-structure"></a>Struttura CDaoIndexFieldInfo
 Il `CDaoIndexFieldInfo` struttura contiene informazioni su un oggetto di campo indice definito per l'accesso oggetti DAO (data).  
@@ -38,18 +38,18 @@ struct CDaoIndexFieldInfo
 ```  
   
 #### <a name="parameters"></a>Parametri  
- `m_strName`  
- Identifica in modo univoco l'oggetto di campo di indice. Per informazioni dettagliate, vedere l'argomento "Proprietà di nome" nella Guida di DAO.  
+ *m_strName*  
+ Identifica in modo univoco l'oggetto di campo di indice. Per informazioni dettagliate, vedere l'argomento "Proprietà Name" nella Guida di DAO.  
   
  *m_bDescending*  
- Indica l'indice di ordinamento definito dall'oggetto index. **TRUE** se l'ordine è decrescente.  
+ Indica l'ordine di indice definito dall'oggetto index. **TRUE** se l'ordine è decrescente.  
   
 ## <a name="remarks"></a>Note  
- Un oggetto di indice può avere un numero di campi, che indica quali campi indicizzato in un oggetto tabledef (o un recordset in una tabella di base). I riferimenti al database primario precedente indicano la modalità in cui vengono restituite le informazioni nel `m_pFieldInfos` membro di un [CDaoIndexInfo](../../mfc/reference/cdaoindexinfo-structure.md) oggetto ottenuto chiamando il `GetIndexInfo` funzione membro di classe [CDaoTableDef](../../mfc/reference/cdaotabledef-class.md#getindexinfo) o [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md#getindexinfo).  
+ Un oggetto indice può avere un numero di campi, che indica quali campi indicizzato in un oggetto tabledef (o un recordset in una tabella di base). I riferimenti al database primario precedente indicano la modalità in cui vengono restituite le informazioni nel `m_pFieldInfos` membro di un [CDaoIndexInfo](../../mfc/reference/cdaoindexinfo-structure.md) oggetto ottenuto chiamando il `GetIndexInfo` funzione membro di classe [CDaoTableDef](../../mfc/reference/cdaotabledef-class.md#getindexinfo) oppure [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md#getindexinfo).  
   
- Gli oggetti indice e indice campo non sono rappresentate da una classe MFC. Invece di DAO oggetti MFC sottostanti della classe di oggetti [CDaoTableDef](../../mfc/reference/cdaotabledef-class.md) o [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) contiene una raccolta di oggetti di indice, denominato raccolta di indici. Ogni oggetto indice, a sua volta, contiene una raccolta di oggetti campo. Queste classi forniscono le funzioni membro per accedere ai singoli elementi di informazioni sugli indici, o è possibile accedere contemporaneamente con un `CDaoIndexInfo` oggetto chiamando il `GetIndexInfo` funzione membro dell'oggetto contenitore. Il `CDaoIndexInfo` oggetto, quindi, un membro dati, `m_pFieldInfos`, che punta a una matrice di `CDaoIndexFieldInfo` oggetti.  
+ Gli oggetti indice e indice campo non sono rappresentate da una classe MFC. Al contrario, il DAO oggetti oggetti MFC sottostanti della classe [CDaoTableDef](../../mfc/reference/cdaotabledef-class.md) oppure [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) contiene una raccolta di oggetti di indice, denominato raccolta di indici. Ogni oggetto indice, a sua volta, contiene una raccolta di oggetti campo. Queste classi forniscono le funzioni membro per accedere ai singoli elementi di informazioni sull'indice oppure è possibile accedervi in una sola volta con un `CDaoIndexInfo` oggetto chiamando il `GetIndexInfo` funzione membro dell'oggetto contenitore. Il `CDaoIndexInfo` oggetto, quindi, un membro dati, `m_pFieldInfos`, che punta a una matrice di `CDaoIndexFieldInfo` oggetti.  
   
- Chiamare il `GetIndexInfo` funzione membro dell'oggetto tabledef o recordset contenitore in cui gli indici è archiviato l'oggetto indice si è interessati. Accedere quindi il `m_pFieldInfos` membro del [CDaoIndexInfo](../../mfc/reference/cdaoindexinfo-structure.md) oggetto. La lunghezza di `m_pFieldInfos` matrice viene archiviata in `m_nFields`. `CDaoIndexFieldInfo` definisce inoltre un `Dump` compila la funzione membro in modalità debug. È possibile utilizzare `Dump` per scaricare il contenuto di un `CDaoIndexFieldInfo` oggetto.  
+ Chiamare il `GetIndexInfo` funzione membro dell'oggetto tabledef o un recordset contenitore in cui gli indici collection è archiviato l'oggetto indice si è interessati. Accedere quindi il `m_pFieldInfos` membro del [CDaoIndexInfo](../../mfc/reference/cdaoindexinfo-structure.md) oggetto. La lunghezza di `m_pFieldInfos` matrice viene archiviata in `m_nFields`. `CDaoIndexFieldInfo` definisce inoltre un `Dump` compila la funzione membro in modalità debug. È possibile utilizzare `Dump` per scaricare il contenuto di un `CDaoIndexFieldInfo` oggetto.  
   
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** afxdao. h  

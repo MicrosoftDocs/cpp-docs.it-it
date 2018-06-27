@@ -1,5 +1,5 @@
 ---
-title: L'impostazione della modalità di un oggetto CStatusBarCtrl | Documenti Microsoft
+title: Impostazione della modalità di un oggetto CStatusBarCtrl | Documenti Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,19 +21,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7d875f2b93309e96bc3d612a8adc55b5af387026
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bdad5073b3f566ad43d25258ca0b5e173f52fb57
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33380919"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956811"
 ---
 # <a name="setting-the-mode-of-a-cstatusbarctrl-object"></a>Impostazione della modalità di un oggetto CStatusBarCtrl
-Sono disponibili due modalità per un `CStatusBarCtrl` oggetto: semplice e non semplice. Nella maggior parte dei casi, il controllo barra di stato avrà una o più parti, insieme a testo e probabilmente un'icona o icone. Si tratta della modalità semplice. Per ulteriori informazioni su questa modalità, vedere [inizializzazione delle parti di un oggetto CStatusBarCtrl](../mfc/initializing-the-parts-of-a-cstatusbarctrl-object.md).  
+Esistono due modalità per un `CStatusBarCtrl` oggetto: semplice e non semplice. Nella maggior parte dei casi, il controllo barra di stato avrà una o più parti, insieme a testo e probabilmente un'icona o icone. Si tratta della modalità semplice. Per ulteriori informazioni su questa modalità, vedere [inizializzazione delle parti di un oggetto CStatusBarCtrl](../mfc/initializing-the-parts-of-a-cstatusbarctrl-object.md).  
   
- Tuttavia, vi sono casi in cui è necessario solo per visualizzare una singola riga di testo. In questo caso, la modalità semplice è sufficiente per le proprie esigenze. Per modificare la modalità del `CStatusBarCtrl` oggetto su simple, effettuare una chiamata al [SetSimple](../mfc/reference/cstatusbarctrl-class.md#setsimple) funzione membro. Quando il controllo barra di stato è in modalità semplice, impostare il testo chiamando il **SetText** funzione membro, passando 255 come valore per il **nPane** parametro.  
+ Tuttavia, vi sono casi in cui è necessario solo per visualizzare una singola riga di testo. In questo caso, la modalità semplice è sufficiente per le proprie esigenze. Per modificare la modalità del `CStatusBarCtrl` dell'oggetto su simple, effettuare una chiamata per il [SetSimple](../mfc/reference/cstatusbarctrl-class.md#setsimple) funzione membro. Una volta che il controllo barra di stato è in modalità semplice, impostare il testo chiamando il `SetText` funzione membro, passando 255 come valore per il *nPane* parametro.  
   
- È possibile utilizzare il [IsSimple](../mfc/reference/cstatusbarctrl-class.md#issimple) funzione per determinare la modalità di `CStatusBarCtrl` oggetto si trova in.  
+ È possibile usare il [IsSimple](../mfc/reference/cstatusbarctrl-class.md#issimple) funzione per determinare la modalità di `CStatusBarCtrl` oggetto si trova in.  
   
 > [!NOTE]
 >  Se l'oggetto barra di stato viene modificato da non semplice su simple, o viceversa, la finestra viene immediatamente ridisegnata e, se applicabile, parti eventualmente definite vengono automaticamente ripristinati.  

@@ -16,18 +16,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 60b41c31c2fa8985953515700cc2e3c802aced31
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4c087bb7782b7b140b07683b40cad358049f682c
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33381582"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36953025"
 ---
 # <a name="using-cdatetimectrl"></a>Utilizzo di CDateTimeCtrl
-Il controllo selezione data e ora ([CDateTimeCtrl](../mfc/reference/cdatetimectrl-class.md)) implementa un metodo intuitivo e riconoscibile di immettere o selezionare una data specifica. L'interfaccia principale del controllo è simile a una casella combinata. Tuttavia, se l'utente lo espande il controllo, viene visualizzato un controllo calendario mensile (per impostazione predefinita), consentendo all'utente di specificare una data specifica. Quando si sceglie una data, viene rimosso automaticamente il controllo calendario mensile.  
+Il controllo di selezione data e ora ([CDateTimeCtrl](../mfc/reference/cdatetimectrl-class.md)) implementa un metodo intuitivo e riconoscibile di immettere o selezionare una data specifica. L'interfaccia principale del controllo è simile a una casella combinata. Tuttavia, se l'utente espande il controllo, viene visualizzato un controllo calendario mensile (per impostazione predefinita), consentendo all'utente di specificare una data specifica. Quando viene scelta una data, viene rimosso automaticamente il controllo calendario mensile.  
   
 > [!NOTE]
->  Per utilizzare sia il **CDateTimePicker** e `CMonthCalCtrl` classi nel progetto, è necessario includere AFXDTCTL. H, in genere in STDAFX del progetto. File H.  
+>  Utilizzare entrambe le `CDateTimePicker` e `CMonthCalCtrl` classi nel progetto, è necessario includere AFXDTCTL. H, in genere in STDAFX del progetto. File H.  
   
 ## <a name="what-do-you-want-to-know-more-about"></a>Ciò che si desidera saperne di più  
   

@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ea3a2cb6c3d9a454c33654254fb751bfc8679696
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ce1fc576bb37a76a2dafdee47546fdf0dd49fddb
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367292"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951033"
 ---
 # <a name="cdockablepaneadapter-class"></a>Classe CDockablePaneAdapter
 Fornisce il supporto di ancoraggio per i riquadri derivati da `CWnd`.  
@@ -52,9 +52,9 @@ class CDockablePaneAdapter : public CDockablePane
 |[CDockablePaneAdapter::SetWrappedWnd](#setwrappedwnd)||  
   
 ## <a name="remarks"></a>Note  
- In genere, il framework crea istanze di oggetti di questa classe quando si utilizza il [cmfcbasetabctrl:: addTab](../../mfc/reference/cmfcbasetabctrl-class.md#addtab) o [cmfcbasetabctrl:: insertTab](../../mfc/reference/cmfcbasetabctrl-class.md#inserttab) metodi.  
+ In genere, il framework crea istanze di oggetti di questa classe quando si usa il [cmfcbasetabctrl:: addTab](../../mfc/reference/cmfcbasetabctrl-class.md#addtab) oppure [cmfcbasetabctrl:: insertTab](../../mfc/reference/cmfcbasetabctrl-class.md#inserttab) metodi.  
   
- Se si desidera personalizzare il `CDockablePaneAdapter` comportamento, è sufficiente derivarne una nuova classe e impostare le informazioni sulla classe di runtime a una finestra a schede usando [:: Setdockingbarwrapperrtc](../../mfc/reference/cmfcbasetabctrl-class.md#setdockingbarwrapperrtc).  
+ Se si desidera personalizzare il `CDockablePaneAdapter` comportamento, è sufficiente derivarne una nuova classe e impostare le informazioni sulla classe di runtime a una finestra a schede usando [cmfcbasetabctrl::](../../mfc/reference/cmfcbasetabctrl-class.md#setdockingbarwrapperrtc).  
   
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  [CObject](../../mfc/reference/cobject-class.md) [CCmdTarget](../../mfc/reference/ccmdtarget-class.md) [CWnd](../../mfc/reference/cwnd-class.md)  
@@ -67,14 +67,14 @@ class CDockablePaneAdapter : public CDockablePane
  **Intestazione:** afxdockablepaneadapter. H  
   
 ##  <a name="getwrappedwnd"></a>  CDockablePaneAdapter::GetWrappedWnd  
- Restituisce la finestra sottostante per la scheda di un riquadro ancorabile.  
+ Restituisce la finestra sottostante per l'adapter riquadro ancorabile.  
   
 ```  
 virtual CWnd* GetWrappedWnd() const;  
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- Puntatore alla finestra sottoposta a wrapping.  
+ Un puntatore alla finestra sottoposta a wrapping.  
   
 ### <a name="remarks"></a>Note  
  Utilizzare questa funzione per accedere alla finestra sottoposta a wrapping.  
@@ -90,13 +90,13 @@ virtual BOOL LoadState(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `lpszProfileName`  
+ [in] *lpszProfileName*  
  Nome del profilo.  
   
- [in] `nIndex`  
+ [in] *nIndex*  
  L'indice di profilo.  
   
- [in] `uiID`  
+ [in] *uiID*  
  L'ID del riquadro.  
   
 ### <a name="return-value"></a>Valore restituito  
@@ -114,13 +114,13 @@ virtual BOOL SaveState(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `lpszProfileName`  
+ [in] *lpszProfileName*  
  Nome del profilo.  
   
- [in] `nIndex`  
- L'indice di profilo (impostazione predefinita l'ID di controllo della finestra).  
+ [in] *nIndex*  
+ L'indice di profilo (valore predefinito è l'ID di controllo della finestra).  
   
- [in] `uiID`  
+ [in] *uiID*  
  L'ID del riquadro.  
   
 ### <a name="return-value"></a>Valore restituito  
@@ -128,15 +128,15 @@ virtual BOOL SaveState(
 ### <a name="remarks"></a>Note  
   
 ##  <a name="setwrappedwnd"></a>  CDockablePaneAdapter::SetWrappedWnd  
- Imposta la finestra sottostante per la scheda di un riquadro ancorabile.  
+ Imposta la finestra sottostante per l'adapter riquadro ancorabile.  
   
 ```  
 virtual BOOL SetWrappedWnd(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `pWnd`  
- Puntatore alla finestra per la scheda del riquadro eseguire il wrapping.  
+ [in] *pWnd*  
+ Un puntatore alla finestra per la scheda di riquadro eseguire il wrapping.  
   
 ### <a name="return-value"></a>Valore restituito  
   

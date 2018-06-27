@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1e743e7456c185acd100c898cfb946182d63ce63
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2ef473912489e9c757574545be2f8a53d7f3f9b9
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33366239"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951600"
 ---
 # <a name="cdaoparameterinfo-structure"></a>Struttura CDaoParameterInfo
 Il `CDaoParameterInfo` struttura contiene informazioni su un oggetto parametro definito per l'accesso oggetti DAO (data).  
@@ -39,21 +39,21 @@ struct CDaoParameterInfo
 ```  
   
 #### <a name="parameters"></a>Parametri  
- `m_strName`  
- Identifica in modo univoco l'oggetto parametro. Per ulteriori informazioni, vedere l'argomento "Proprietà di nome" nella Guida di DAO.  
+ *m_strName*  
+ Identifica in modo univoco l'oggetto parameter. Per altre informazioni, vedere l'argomento "Proprietà Name" nella Guida di DAO.  
   
- `m_nType`  
- Un valore che indica il tipo di dati di un oggetto parametro. Per un elenco dei possibili valori, vedere il `m_nType` appartenente il [CDaoFieldInfo](../../mfc/reference/cdaofieldinfo-structure.md) struttura. Per ulteriori informazioni, vedere l'argomento "Proprietà di tipo" nella Guida di DAO.  
+ *m_nType*  
+ Un valore che indica il tipo di dati di un oggetto parametro. Per un elenco dei possibili valori, vedere la *m_nType* appartenente il [CDaoFieldInfo](../../mfc/reference/cdaofieldinfo-structure.md) struttura. Per altre informazioni, vedere l'argomento "Proprietà di tipo" nella Guida di DAO.  
   
  *m_varValue*  
- Il valore del parametro, archiviato un [COleVariant](../../mfc/reference/colevariant-class.md) oggetto.  
+ Il valore del parametro, archiviato una [COleVariant](../../mfc/reference/colevariant-class.md) oggetto.  
   
 ## <a name="remarks"></a>Note  
  I riferimenti al database primario e secondario precedente indicano la modalità in cui vengono restituite le informazioni per il [GetParameterInfo](../../mfc/reference/cdaoquerydef-class.md#getparameterinfo) funzione membro nella classe `CDaoQueryDef`.  
   
- MFC non include gli oggetti parametro DAO in una classe. Oggetti di querydef DAO MFC sottostante `CDaoQueryDef` oggetti archiviano i parametri in raccolte di parametri. Per accedere agli oggetti parametro in un [CDaoQueryDef](../../mfc/reference/cdaoquerydef-class.md) dell'oggetto, chiamare l'oggetto querydef `GetParameterInfo` funzione membro per un nome di parametro specifico o un indice nella raccolta di parametri. È possibile utilizzare il [CDaoQueryDef::GetParameterCount](../../mfc/reference/cdaoquerydef-class.md#getparametercount) funzione membro in combinazione con `GetParameterInfo` per scorrere la raccolta di parametri.  
+ MFC non include gli oggetti parametro DAO in una classe. DAO querydef oggetti MFC sottostante `CDaoQueryDef` oggetti archiviano i parametri in raccolte di parametri. Per accedere agli oggetti parametro in un [CDaoQueryDef](../../mfc/reference/cdaoquerydef-class.md) dell'oggetto, chiamare l'oggetto querydef `GetParameterInfo` funzione membro per un nome di parametro specifico o un indice nella raccolta di parametri. È possibile usare il [CDaoQueryDef::GetParameterCount](../../mfc/reference/cdaoquerydef-class.md#getparametercount) funzione di membro in combinazione con `GetParameterInfo` per scorrere la raccolta di parametri.  
   
- Le informazioni recuperate dal [CDaoQueryDef::GetParameterInfo](../../mfc/reference/cdaoquerydef-class.md#getparameterinfo) le funzioni membro vengono archiviate un `CDaoParameterInfo` struttura. Chiamare `GetParameterInfo` per l'oggetto querydef nella raccolta i cui parametri si trova l'oggetto parametro.  
+ Le informazioni recuperate dal [CDaoQueryDef::GetParameterInfo](../../mfc/reference/cdaoquerydef-class.md#getparameterinfo) le funzioni membro vengono archiviate un `CDaoParameterInfo` struttura. Chiamare `GetParameterInfo` per l'oggetto querydef in cui raccolta di parametri è archiviato l'oggetto parameter.  
   
 > [!NOTE]
 >  Se si desidera ottenere o impostare solo il valore di un parametro, utilizzare il [GetParamValue](../../mfc/reference/cdaorecordset-class.md#getparamvalue) e [SetParamValue](../../mfc/reference/cdaorecordset-class.md#setparamvalue) funzioni membro della classe `CDaoRecordset`.  

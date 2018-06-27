@@ -96,12 +96,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8a374496c731e33d13de3ece893fe2ff046d38e7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: cb5745d5c4ccc495cd508df10f0d36e3729ecf13
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33371377"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952558"
 ---
 # <a name="cdocksite-class"></a>CDockSite Class
 [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
@@ -189,8 +189,8 @@ CDockingPanesRow* AddRow(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `pos`  
- [in] `nHeight`  
+ [in] *pos*  
+ [in] *nHeight*  
   
 ### <a name="return-value"></a>Valore restituito  
   
@@ -225,9 +225,9 @@ void AlignDockSite(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `rectToAlignBy`  
- [in] `rectResult`  
- [in] `bMoveImmediately`  
+ [in] *rectToAlignBy*  
+ [in] *rectResult*  
+ [in] *bMoveImmediately*  
   
 ### <a name="remarks"></a>Note  
   
@@ -241,8 +241,8 @@ virtual CSize CalcFixedLayout(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `bStretch`  
- [in] `bHorz`  
+ [in] *bStretch*  
+ [in] *bHorz*  
   
 ### <a name="return-value"></a>Valore restituito  
   
@@ -256,7 +256,7 @@ virtual BOOL CanAcceptPane(const CBasePane* pBar) const;
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `pBar`  
+ [in] *pBar*  
   
 ### <a name="return-value"></a>Valore restituito  
   
@@ -276,12 +276,12 @@ virtual BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `dwStyleEx`  
- [in] `dwStyle`  
- [in] `rect`  
- [in] `pParentWnd`  
- [in] `dwControlBarStyle`  
- [in] `pContext`  
+ [in] *dwStyleEx*  
+ [in] *dwStyle*  
+ [in] *rect*  
+ [in] *pParentWnd*  
+ [in] *dwControlBarStyle*  
+ [in] *pContext*  
   
 ### <a name="return-value"></a>Valore restituito  
   
@@ -298,9 +298,9 @@ virtual CDockingPanesRow* CreateRow(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `pParentDockBar`  
- [in] `nOffset`  
- [in] `nRowHeight`  
+ [in] *pParentDockBar*  
+ [in] *nOffset*  
+ [in] *nRowHeight*  
   
 ### <a name="return-value"></a>Valore restituito  
   
@@ -317,9 +317,9 @@ virtual void DockPane(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `pWnd`  
- [in] `dockMethod`  
- [in] `lpRect`  
+ [in] *pWnd*  
+ [in] *dockMethod*  
+ [in] *lpRect*  
   
 ### <a name="remarks"></a>Note  
   
@@ -333,10 +333,10 @@ virtual BOOL DockPaneLeftOf(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] [out] `pBarToDock`  
- Un puntatore al riquadro ancorato a sinistra del `pTargetBar`.  
+ [in] [out] *pBarToDock*  
+ Un puntatore al riquadro ancorato a sinistra del *pTargetBar*.  
   
- [in] [out] `pTargetBar`  
+ [in] [out] *pTargetBar*  
  Puntatore al riquadro di destinazione.  
   
 ### <a name="return-value"></a>Valore restituito  
@@ -363,7 +363,7 @@ CPane* FindPaneByID(UINT nID);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `nID`  
+ [in] *nID*  
  L'ID di comando del riquadro da trovare.  
   
 ### <a name="return-value"></a>Valore restituito  
@@ -379,7 +379,7 @@ int FindRowIndex(CDockingPanesRow* pRow);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `pRow`  
+ [in] *pRow*  
   
 ### <a name="return-value"></a>Valore restituito  
   
@@ -424,7 +424,7 @@ const CObList& GetPaneList() const;
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- Un riferimento di sola lettura per un elenco dei riquadri è attualmente ancorato nella barra di ancoraggio.  
+ Un riferimento di sola lettura all'elenco dei riquadri è attualmente ancorato nella barra di ancoraggio.  
   
 ##  <a name="isaccessibilitycompatible"></a>  CDockSite::IsAccessibilityCompatible  
 
@@ -456,7 +456,7 @@ bool IsLastRow(CDockingPanesRow* pRow) const;
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `pRow`  
+ [in] *pRow*  
   
 ### <a name="return-value"></a>Valore restituito  
   
@@ -472,8 +472,8 @@ BOOL IsRectWithinDockSite(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `rect`  
- [in] `ptDelta`  
+ [in] *rect*  
+ [in] *ptDelta*  
   
 ### <a name="return-value"></a>Valore restituito  
   
@@ -501,9 +501,9 @@ virtual BOOL MovePane(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `pWnd`  
- [in] `nFlags`  
- [in] `ptOffset`  
+ [in] *pWnd*  
+ [in] *nFlags*  
+ [in] *ptOffset*  
   
 ### <a name="return-value"></a>Valore restituito  
   
@@ -517,7 +517,7 @@ virtual void OnInsertRow(POSITION pos);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `pos`  
+ [in] *pos*  
   
 ### <a name="remarks"></a>Note  
   
@@ -531,8 +531,8 @@ virtual void OnRemoveRow(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `pos`  
- [in] `bByShow`  
+ [in] *pos*  
+ [in] *bByShow*  
   
 ### <a name="remarks"></a>Note  
   
@@ -546,8 +546,8 @@ virtual int OnResizeRow(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `pRowToResize`  
- [in] `nOffset`  
+ [in] *pRowToResize*  
+ [in] *nOffset*  
   
 ### <a name="return-value"></a>Valore restituito  
   
@@ -565,10 +565,10 @@ virtual void OnSizeParent(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `rectAvailable`  
- [in] `nSide`  
- [in] `bExpand`  
- [in] `nOffset`  
+ [in] *rectAvailable*  
+ [in] *nSide*  
+ [in] *bExpand*  
+ [in] *nOffset*  
   
 ### <a name="remarks"></a>Note  
   
@@ -583,9 +583,9 @@ virtual BOOL OnSetWindowPos(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `pWndInsertAfter`  
- [in] `rectWnd`  
- [in] `nFlags`  
+ [in] *pWndInsertAfter*  
+ [in] *rectWnd*  
+ [in] *nFlags*  
   
 ### <a name="return-value"></a>Valore restituito  
   
@@ -601,8 +601,8 @@ virtual void OnShowRow(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `pos`  
- [in] `bShow`  
+ [in] *pos*  
+ [in] *bMostra*  
   
 ### <a name="remarks"></a>Note  
   
@@ -614,11 +614,11 @@ virtual CPane* PaneFromPoint(CPoint pt);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `pt`  
+ [in] *pt*  
  Un punto, nelle coordinate dello schermo, per il riquadro da recuperare.  
   
 ### <a name="return-value"></a>Valore restituito  
- Un puntatore al riquadro si trova nel punto specificato o `NULL` se alcun riquadro non è presente nel punto specificato.  
+ Un puntatore al riquadro che si trova nel punto specificato o `NULL` se alcun riquadro non era presente nel punto specificato.  
   
 ### <a name="remarks"></a>Note  
   
@@ -632,8 +632,8 @@ static int __stdcall RectSideFromPoint(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `rect`  
- [in] `point`  
+ [in] *rect*  
+ [in] *punto*  
   
 ### <a name="return-value"></a>Valore restituito  
   
@@ -649,8 +649,8 @@ virtual void RemovePane(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `pWnd`  
- [in] `dockMethod`  
+ [in] *pWnd*  
+ [in] *dockMethod*  
   
 ### <a name="remarks"></a>Note  
   
@@ -662,7 +662,7 @@ void RemoveRow(CDockingPanesRow* pRow);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `pRow`  
+ [in] *pRow*  
   
 ### <a name="remarks"></a>Note  
   
@@ -676,8 +676,8 @@ BOOL ReplacePane(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `pOldBar`  
- [in] `pNewBar`  
+ [in] *pOldBar*  
+ [in] *pNewBar*  
   
 ### <a name="return-value"></a>Valore restituito  
   
@@ -691,7 +691,7 @@ virtual void RepositionPanes(CRect& rectNewClientArea);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `rectNewClientArea`  
+ [in] *rectNewClientArea*  
   
 ### <a name="remarks"></a>Note  
   
@@ -705,8 +705,8 @@ void ResizeDockSite(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `nNewWidth`  
- [in] `nNewHeight`  
+ [in] *nNewWidth*  
+ [in] *nNewHeight*  
   
 ### <a name="remarks"></a>Note  
   
@@ -721,9 +721,9 @@ int ResizeRow(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `pRow`  
- [in] `nNewSize`  
- [in] `bAdjustLayout`  
+ [in] *pRow*  
+ [in] *nNewSize*  
+ [in] *bAdjustLayout*  
   
 ### <a name="return-value"></a>Valore restituito  
   
@@ -741,16 +741,16 @@ virtual BOOL ShowPane(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] [out] `pBar`  
- Puntatore al riquadro per essere visualizzato o nascosto.  
+ [in] [out] *pBar*  
+ Un puntatore al riquadro per essere mostrati o nascosti.  
   
- [in] `bShow`  
+ [in] *bMostra*  
  `TRUE` Per specificare che il riquadro viene visualizzato; `FALSE` per specificare che il riquadro deve essere nascosto.  
   
- [in] `bDelay`  
+ [in] *bDelay*  
  `TRUE` Per specificare che il layout del riquadro deve essere posticipato fino al dopo che viene visualizzato il riquadro; in caso contrario, `FALSE`.  
   
- [in] `bActivate`  
+ [in] *bActivate*  
  Questo parametro non viene usato.  
   
 ### <a name="return-value"></a>Valore restituito  
@@ -770,9 +770,9 @@ void ShowRow(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `pRow`  
- [in] `bShow`  
- [in] `bAdjustLayout`  
+ [in] *pRow*  
+ [in] *bMostra*  
+ [in] *bAdjustLayout*  
   
 ### <a name="remarks"></a>Note  
   
@@ -786,8 +786,8 @@ void SwapRows(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `pFirstRow`  
- [in] `pSecondRow`  
+ [in] *pFirstRow*  
+ [in] *pSecondRow*  
   
 ### <a name="remarks"></a>Note  
   

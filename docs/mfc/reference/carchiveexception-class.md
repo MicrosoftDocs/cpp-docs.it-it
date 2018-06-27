@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ac864831e9d3a0cf0cd5e67501f1ac8396f99473
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2763335a9165c1667160864a40200dcfd44b7f34
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33352606"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36953100"
 ---
 # <a name="carchiveexception-class"></a>Classe di eccezione CArchiveException
 Rappresenta una condizione di eccezione di serializzazione  
@@ -54,7 +54,7 @@ class CArchiveException : public CException
 |[CArchiveException::m_strFileName](#m_strfilename)|Specifica il nome del file per la condizione di eccezione.|  
   
 ## <a name="remarks"></a>Note  
- La `CArchiveException` classe include un membro dati pubblico che indica la causa dell'eccezione.  
+ Il `CArchiveException` classe include un membro dati pubblico che indica la causa dell'eccezione.  
   
  `CArchiveException` gli oggetti vengono costruiti e generati all'interno [CArchive](../../mfc/reference/carchive-class.md) funzioni membro. È possibile accedere a questi oggetti all'interno dell'ambito di un **CATCH** espressione. Il codice causa è indipendente dal sistema operativo. Per ulteriori informazioni sull'elaborazione delle eccezioni, vedere [gestione delle eccezioni (MFC)](../../mfc/exception-handling-in-mfc.md).  
   
@@ -69,7 +69,7 @@ class CArchiveException : public CException
  **Intestazione:** afx.h  
   
 ##  <a name="carchiveexception"></a>  CArchiveException::CArchiveException  
- Costruisce un `CArchiveException` archiviazione di oggetti, il valore di `cause` nell'oggetto.  
+ Costruisce un `CArchiveException` archiviazione di oggetti, il valore di *causare* nell'oggetto.  
   
 ```  
 CArchiveException(
@@ -78,14 +78,14 @@ CArchiveException(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `cause`  
- Una variabile di tipo enumerato che indica il motivo dell'eccezione. Per un elenco degli enumeratori, vedere il [m_cause](#m_cause) (membro dati).  
+ *cause*  
+ Una variabile di tipo enumerato che indica il motivo dell'eccezione. Per un elenco degli enumeratori, vedere la [m_cause](#m_cause) (membro dati).  
   
- `lpszArchiveName`  
+ *lpszArchiveName*  
  Punta a una stringa contenente il nome del `CArchive` oggetto che ha causato l'eccezione.  
   
 ### <a name="remarks"></a>Note  
- È possibile creare un `CArchiveException` oggetto sull'heap e generare manualmente o si lascia la funzione globale [AfxThrowArchiveException](../../mfc/reference/exception-processing.md#afxthrowarchiveexception) gestirla automaticamente.  
+ È possibile creare una `CArchiveException` dell'oggetto nell'heap e generare manualmente o si lascia la funzione globale [AfxThrowArchiveException](../../mfc/reference/exception-processing.md#afxthrowarchiveexception) gestirla automaticamente.  
   
  Non utilizzare questo costruttore direttamente. In alternativa, chiamare la funzione globale `AfxThrowArchiveException`.  
   
@@ -97,7 +97,7 @@ int m_cause;
 ```  
   
 ### <a name="remarks"></a>Note  
- Questo membro dati è una variabile pubblica di tipo `int`. I valori sono definiti da un `CArchiveException` tipo enumerato. Di seguito sono elencati gli enumeratori e i relativi significati:  
+ Questo membro dati è una variabile pubblica di tipo **int**. I valori sono definiti da un `CArchiveException` tipo enumerato. Di seguito sono elencati gli enumeratori e i relativi significati:  
   
 - **CArchiveException::none** si è verificato alcun errore.  
   
@@ -119,7 +119,7 @@ int m_cause;
     >  Questi enumeratori di causa `CArchiveException` sono diversi dagli enumeratori di causa `CFileException`.  
   
     > [!NOTE]
-    > **CArchiveException::generic** è deprecata. Utilizzare **genericException** invece. Se **generico** viene utilizzata in un'applicazione e compilato con /clr, vi sono errori di sintassi che non sono semplici da decifrare.  
+    > **CArchiveException::generic** è deprecata. Uso **genericException** invece. Se **generico** viene utilizzata in un'applicazione e compilato con /clr, vi sono errori di sintassi che non sono facili da decifrare.  
   
 ##  <a name="m_strfilename"></a>  CArchiveException::m_strFileName  
  Specifica il nome del file per la condizione di eccezione.  

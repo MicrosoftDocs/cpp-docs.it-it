@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e53daaaa5ef4997762342cbfb74ae4d5fa96097d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8d86faf89aea0f991a9fdd27bec6bb7969404986
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33366161"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956911"
 ---
 # <a name="cdaorelationfieldinfo-structure"></a>Struttura CDaoRelationFieldInfo
 Il `CDaoRelationFieldInfo` struttura contiene informazioni su un campo in una relazione definita per l'accesso oggetti DAO (data).  
@@ -38,16 +38,16 @@ struct CDaoRelationFieldInfo
 ```  
   
 #### <a name="parameters"></a>Parametri  
- `m_strName`  
+ *m_strName*  
  Il nome del campo nella tabella primaria della relazione.  
   
- `m_strForeignName`  
+ *m_strForeignName*  
  Il nome del campo nella tabella esterna della relazione.  
   
 ## <a name="remarks"></a>Note  
- Un oggetto relation DAO specifica i campi in una tabella primaria e i campi di una tabella esterna che definiscono la relazione. I riferimenti primari nella definizione della struttura precedente indicano la modalità in cui vengono restituite le informazioni nel `m_pFieldInfos` membro di un [CDaoRelationInfo](../../mfc/reference/cdaorelationinfo-structure.md) oggetto ottenuto chiamando il [GetRelationInfo](../../mfc/reference/cdaodatabase-class.md#getrelationinfo)funzione membro di classe `CDaoDatabase`.  
+ Un oggetto relation DAO specifica i campi in una tabella primaria e i campi di una tabella esterna che definiscono la relazione. I riferimenti al primario nella definizione della struttura precedente indicano la modalità in cui vengono restituite le informazioni nel `m_pFieldInfos` membro di un [CDaoRelationInfo](../../mfc/reference/cdaorelationinfo-structure.md) oggetto ottenuto chiamando il [GetRelationInfo](../../mfc/reference/cdaodatabase-class.md#getrelationinfo)funzione membro di classe `CDaoDatabase`.  
   
- Gli oggetti della relazione e gli oggetti campo della relazione non sono rappresentati da una classe MFC. Invece di DAO oggetti MFC sottostanti della classe di oggetti [CDaoDatabase](../../mfc/reference/cdaodatabase-class.md) contengono una raccolta di oggetti di relazione, denominata la raccolta di relazioni. Ogni oggetto relation, a sua volta, contiene una raccolta di oggetti campo relazione. Ogni oggetto field relazione correla un campo nella tabella primaria con un campo nella tabella esterna. Insieme, gli oggetti campo relazione definiscono un gruppo di campi in ogni tabella, che contribuiscono a definire la relazione. `CDaoDatabase` permette di accedere a oggetti di relazione con un `CDaoRelationInfo` oggetto chiamando il `GetRelationInfo` funzione membro. Il `CDaoRelationInfo` oggetto, quindi, un membro dati, `m_pFieldInfos`, che punta a una matrice di `CDaoRelationFieldInfo` oggetti.  
+ Gli oggetti della relazione e gli oggetti campo della relazione non sono rappresentati da una classe MFC. Al contrario, il DAO oggetti oggetti MFC sottostanti della classe [CDaoDatabase](../../mfc/reference/cdaodatabase-class.md) contiene una raccolta di oggetti relazione, denominata la raccolta di relazioni. Ogni oggetto relation, a sua volta, contiene una raccolta di oggetti campo relazione. Ogni oggetto field relazione mette in correlazione un campo nella tabella primaria e un campo nella tabella esterna. Insieme, gli oggetti campo relazione definiscono un gruppo di campi in ogni tabella, che contribuiscono a definire la relazione. `CDaoDatabase` permette di accedere a oggetti di relazione con un `CDaoRelationInfo` oggetto chiamando il `GetRelationInfo` funzione membro. Il `CDaoRelationInfo` oggetto, quindi, un membro dati, `m_pFieldInfos`, che punta a una matrice di `CDaoRelationFieldInfo` oggetti.  
   
  Chiamare il [GetRelationInfo](../../mfc/reference/cdaodatabase-class.md#getrelationinfo) funzione membro dell'oggetto contenitore `CDaoDatabase` dell'oggetto in cui le relazioni di raccolta è archiviato l'oggetto di relazione si è interessati. Accedere quindi il `m_pFieldInfos` membro del [CDaoRelationInfo](../../mfc/reference/cdaorelationinfo-structure.md) oggetto. `CDaoRelationFieldInfo` definisce inoltre un `Dump` compila la funzione membro in modalità debug. È possibile utilizzare `Dump` per scaricare il contenuto di un `CDaoRelationFieldInfo` oggetto.  
   

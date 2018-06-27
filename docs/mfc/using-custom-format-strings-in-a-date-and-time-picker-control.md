@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f2b365439f1681cf72bd58218ea4f55fbb2f44c1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9aeb6c02041a4ba90f9721f23a1397e17a4cdf81
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33382002"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955758"
 ---
 # <a name="using-custom-format-strings-in-a-date-and-time-picker-control"></a>Utilizzo di stringhe di formato personalizzate in un controllo selezione data e ora
-Per impostazione predefinita, i controlli selezione data e ora forniscono che tre tipi (ognuno dei quali corrisponde a uno stile univoco) di formato per la visualizzazione della data o ora:  
+Per impostazione predefinita, controlli selezione data e ora forniscono che tre tipi (ognuno dei quali corrisponde a uno stile univoco) di formato per la visualizzazione corrente data / ora:  
   
 -   **DTS_LONGDATEFORMAT** Visualizza la data in formato esteso, un output, ad esempio "Mercoledì 3 gennaio 2000".  
   
@@ -32,9 +32,9 @@ Per impostazione predefinita, i controlli selezione data e ora forniscono che tr
   
 -   **DTS_TIMEFORMAT** Visualizza il tempo in formato esteso, un output, ad esempio "5:31:42 PM".  
   
- Tuttavia, è possibile personalizzare l'aspetto della data o ora utilizzando una stringa di formato personalizzata. La stringa personalizzata è costituita da caratteri di formato esistente, nonformat caratteri o una combinazione di entrambi. Una volta creata lo stringa personalizzato, effettuare una chiamata a [CDateTimeCtrl:: SetFormat](../mfc/reference/cdatetimectrl-class.md#setformat) passando la stringa personalizzata. Il controllo selezione data e ora visualizzerà quindi il valore corrente utilizzando la stringa di formato personalizzata.  
+ Tuttavia, è possibile personalizzare l'aspetto di data / ora utilizzando una stringa di formato personalizzata. Questa stringa personalizzato è costituita da caratteri di formato esistente, nonformat caratteri o una combinazione di entrambi. Una volta creata lo stringa personalizzato, effettuare una chiamata a [CDateTimeCtrl:: SetFormat](../mfc/reference/cdatetimectrl-class.md#setformat) passando la stringa personalizzata. Il controllo di selezione data e ora verrà quindi visualizzato il valore corrente usando la stringa di formato personalizzata.  
   
- Esempio di codice seguente (dove `m_dtPicker` è il `CDateTimeCtrl` oggetto) illustra una possibile soluzione:  
+ Esempio di codice seguente (dove *m_dtPicker* è il `CDateTimeCtrl` oggetto) illustra una possibile soluzione:  
   
  [!code-cpp[NVC_MFCControlLadenDialog#7](../mfc/codesnippet/cpp/using-custom-format-strings-in-a-date-and-time-picker-control_1.cpp)]  
   

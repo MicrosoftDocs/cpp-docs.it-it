@@ -46,12 +46,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b093ff87d7f2c8c52b6745be4e2a31580fce0fce
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f7ab45ad47ad0120fa4e04937e180841bdb5f981
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33355799"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955089"
 ---
 # <a name="ccustominterpolator-class"></a>Classe CCustomInterpolator
 Implementa un interpolatore di base.  
@@ -78,10 +78,10 @@ class CCustomInterpolator;
 |[CCustomInterpolator::GetDuration](#getduration)|Ottiene la durata dell'interpolatore.|  
 |[CCustomInterpolator::GetFinalValue](#getfinalvalue)|Ottiene il valore finale a cui punta l'interpolatore.|  
 |[CCustomInterpolator:: Init](#init)|Inizializza durata e il valore finale.|  
-|[CCustomInterpolator::InterpolateValue](#interpolatevalue)|Esegue l'interpolazione il valore a un offset specificato.|  
+|[CCustomInterpolator::InterpolateValue](#interpolatevalue)|Crea un'interpolazione il valore a un offset specificato.|  
 |[CCustomInterpolator::InterpolateVelocity](#interpolatevelocity)|Crea un'interpolazione la velocità a un offset specificato|  
 |[CCustomInterpolator::SetDuration](#setduration)|Imposta la durata dell'interpolatore.|  
-|[CCustomInterpolator::SetInitialValueAndVelocity](#setinitialvalueandvelocity)|Imposta il valore iniziale dell'interpolatore e velocità.|  
+|[CCustomInterpolator::SetInitialValueAndVelocity](#setinitialvalueandvelocity)|Imposta valore iniziale dell'interpolatore e velocità.|  
   
 ### <a name="protected-data-members"></a>Membri dati protetti  
   
@@ -95,7 +95,7 @@ class CCustomInterpolator;
 |[CCustomInterpolator::m_initialVelocity](#m_initialvelocity)|La velocità della variabile all'inizio della transizione.|  
   
 ## <a name="remarks"></a>Note  
- Derivare una classe da CCustomInterpolator ed eseguire l'override di tutti i metodi necessari per implementare un algoritmo di interpolazione personalizzata. Un puntatore a questa classe deve essere passato come parametro a CCustomTransition.  
+ Derivare una classe CCustomInterpolator ed eseguire l'override di tutti i metodi necessari per implementare un algoritmo di interpolazione personalizzata. Un puntatore a questa classe deve essere passato come parametro a CCustomTransition.  
   
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  `CCustomInterpolator`  
@@ -116,13 +116,13 @@ CCustomInterpolator(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `duration`  
+ *Durata*  
  La durata della transizione.  
   
- `finalValue`  
+ *finalValue*  
   
 ### <a name="remarks"></a>Note  
- Utilizzare CCustomInterpolator:: Init per inizializzare la durata e il valore finale in un secondo momento nel codice.  
+ Per inizializzare la durata e il valore finale in un secondo momento nel codice, utilizzare CCustomInterpolator:: Init.  
   
 ##  <a name="getdependencies"></a>  CCustomInterpolator::GetDependencies  
  Ottiene le dipendenze dell'interpolatore.  
@@ -135,13 +135,13 @@ virtual BOOL GetDependencies(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `initialValueDependencies`  
+ *initialValueDependencies*  
  Output. Gli aspetti dell'interpolatore che dipendono dal valore iniziale passato a SetInitialValueAndVelocity.  
   
- `initialVelocityDependencies`  
- Output. Gli aspetti dell'interpolatore che dipendono da velocità iniziale passati a SetInitialValueAndVelocity.  
+ *initialVelocityDependencies*  
+ Output. Gli aspetti dell'interpolatore che variano in base alla velocità iniziale passato a SetInitialValueAndVelocity.  
   
- `durationDependencies`  
+ *durationDependencies*  
  Output. Gli aspetti dell'interpolatore che dipendono dalla durata passati a SetDuration.  
   
 ### <a name="return-value"></a>Valore restituito  
@@ -155,7 +155,7 @@ virtual BOOL GetDuration(UI_ANIMATION_SECONDS* duration);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `duration`  
+ *Durata*  
  Output. La durata della transizione, in secondi.  
   
 ### <a name="return-value"></a>Valore restituito  
@@ -169,7 +169,7 @@ virtual BOOL GetFinalValue(DOUBLE* value);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `value`  
+ *valore*  
  Output. Il valore finale di una variabile alla fine della transizione.  
   
 ### <a name="return-value"></a>Valore restituito  
@@ -185,14 +185,14 @@ void Init(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `duration`  
+ *Durata*  
  La durata della transizione.  
   
- `finalValue`  
+ *finalValue*  
  Il valore finale di una variabile alla fine della transizione.  
   
 ##  <a name="interpolatevalue"></a>  CCustomInterpolator::InterpolateValue  
- Esegue l'interpolazione il valore a un offset specificato.  
+ Crea un'interpolazione il valore a un offset specificato.  
   
 ```  
 virtual BOOL InterpolateValue(
@@ -201,7 +201,7 @@ virtual BOOL InterpolateValue(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `value`  
+ *valore*  
  Output. Il valore interpolato.  
   
 ### <a name="return-value"></a>Valore restituito  
@@ -217,7 +217,7 @@ virtual BOOL InterpolateVelocity(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `velocity`  
+ *velocità*  
  Output. La velocità della variabile in corrispondenza dell'offset.  
   
 ### <a name="return-value"></a>Valore restituito  
@@ -273,14 +273,14 @@ virtual BOOL SetDuration(UI_ANIMATION_SECONDS duration);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `duration`  
+ *Durata*  
  La durata della transizione.  
   
 ### <a name="return-value"></a>Valore restituito  
  Base implementazione restituisce sempre TRUE. Restituisce FALSE dall'implementazione sottoposta a override se si desidera avere esito negativo dell'evento.  
   
 ##  <a name="setinitialvalueandvelocity"></a>  CCustomInterpolator::SetInitialValueAndVelocity  
- Imposta il valore iniziale dell'interpolatore e velocità.  
+ Imposta valore iniziale dell'interpolatore e velocità.  
   
 ```  
 virtual BOOL SetInitialValueAndVelocity(
@@ -289,10 +289,10 @@ virtual BOOL SetInitialValueAndVelocity(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `initialValue`  
+ *initialValue*  
  Il valore della variabile all'inizio della transizione.  
   
- `initialVelocity`  
+ *initialVelocity*  
  La velocità della variabile all'inizio della transizione.  
   
 ### <a name="return-value"></a>Valore restituito  

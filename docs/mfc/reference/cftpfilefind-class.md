@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 88e6916056f988a1cee52020c8ce7e9fce11e574
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6ba8f6d8cf90e7523fe4497cfc3b36c3616a8f10
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370520"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956278"
 ---
 # <a name="cftpfilefind-class"></a>CFtpFileFind (classe)
 Facilita le ricerche di file su Internet dei server FTP.  
@@ -53,13 +53,13 @@ class CFtpFileFind : public CFileFind
 |Nome|Descrizione|  
 |----------|-----------------|  
 |[CFtpFileFind:: FindFile](#findfile)|Trova un file in un server FTP.|  
-|[CFtpFileFind:: FindNextFile](#findnextfile)|Continua la ricerca di file da una precedente chiamata a [FindFile](#findfile).|  
-|[CFtpFileFind::GetFileURL](#getfileurl)|Ottiene l'URL, inclusi il percorso, del file trovato.|  
+|[CFtpFileFind:: FindNextFile](#findnextfile)|Continua la ricerca di file da una chiamata precedente a [FindFile](#findfile).|  
+|[CFtpFileFind::GetFileURL](#getfileurl)|Ottiene l'URL, incluso il percorso del file trovato.|  
   
 ## <a name="remarks"></a>Note  
  `CFtpFileFind` include funzioni membro che avviare una ricerca, individuare un file e restituisce l'URL o altre informazioni descrittive sul file.  
   
- Altre classi MFC progettati per Internet e la ricerca di file locale includono [CGopherFileFind](../../mfc/reference/cgopherfilefind-class.md) e [CFileFind](../../mfc/reference/cfilefind-class.md). Insieme a `CFtpFileFind`, queste classi forniscono un meccanismo semplice per il client trovare i file specifici, indipendentemente dal server di tipo di protocollo o i file (un computer locale o un server remoto). Si noti che nessuna classe MFC per la ricerca nei server HTTP HTTP non supporta la modifica diretta di file necessaria per le ricerche.  
+ Altre classi MFC progettati per Internet e la ricerca di file locale includono [CGopherFileFind](../../mfc/reference/cgopherfilefind-class.md) e [CFileFind](../../mfc/reference/cfilefind-class.md). Insieme a `CFtpFileFind`, queste classi forniscono un meccanismo semplice per il client trovare i file specifici, indipendentemente dal server di tipo di protocollo o un file (un computer locale o un server remoto). Si noti che non è presente alcuna classe MFC per la ricerca basata su HTTP (server) poiché HTTP non supporta la modifica diretta file necessaria per le ricerche.  
   
  Per ulteriori informazioni su come usare `CFtpFileFind` e le altre classi WinInet, vedere l'articolo [Internet programmazione con WinInet](../../mfc/win32-internet-extensions-wininet.md).  
   
@@ -88,17 +88,17 @@ explicit CFtpFileFind(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `pConnection`  
+ *pConnection*  
  Un puntatore a un `CFtpConnection` oggetto. È possibile ottenere una connessione FTP chiamando [CInternetSession:: GetFtpConnection](../../mfc/reference/cinternetsession-class.md#getftpconnection).  
   
- `dwContext`  
+ *dwContext*  
  Identificatore di contesto per il `CFtpFileFind` oggetto. Vedere **osservazioni** per ulteriori informazioni su questo parametro.  
   
 ### <a name="remarks"></a>Note  
- Il valore predefinito per `dwContext` inviato da MFC per la `CFtpFileFind` dall'oggetto di [CInternetSession](../../mfc/reference/cinternetsession-class.md) dell'oggetto che ha creato il `CFtpFileFind` oggetto. È possibile sostituire il valore predefinito per impostare l'identificatore di contesto su un valore di propria scelta. L'identificatore di contesto viene restituito al [CInternetSession:: OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) per fornire l'oggetto con cui viene identificato lo stato. Vedere l'articolo [prime operazioni in Internet: WinInet](../../mfc/wininet-basics.md) per ulteriori informazioni sull'identificatore di contesto.  
+ Il valore predefinito per *dwContext* inviato da MFC per il `CFtpFileFind` dell'oggetto dal [CInternetSession](../../mfc/reference/cinternetsession-class.md) dell'oggetto che ha creato il `CFtpFileFind` oggetto. È possibile sostituire il valore predefinito per impostare l'identificatore di contesto su un valore di propria scelta. L'identificatore di contesto viene restituito al [CInternetSession:: OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) per fornire lo stato per l'oggetto con cui viene identificato. Vedere l'articolo [prime operazioni in Internet: WinInet](../../mfc/wininet-basics.md) per ulteriori informazioni sull'identificatore di contesto.  
   
 ### <a name="example"></a>Esempio  
-  Vedere l'esempio preliminari sulla classe più indietro in questo argomento.  
+  Vedere l'esempio nella panoramica classe più indietro in questo argomento.  
   
 ##  <a name="findfile"></a>  CFtpFileFind:: FindFile  
  Chiamare questa funzione membro per trovare un file FTP.  
@@ -110,21 +110,21 @@ virtual BOOL FindFile(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `pstrName`  
+ *pstrName*  
  Un puntatore a una stringa contenente il nome del file da trovare. Se **NULL**, la chiamata eseguirà una ricerca con caratteri jolly (*).  
   
- `dwFlags`  
- Il flag che descrivono come gestire la sessione. Questi flag possono essere combinati con l'operatore OR bit per bit (&#124;) e sono i seguenti:  
+ *dwFlags*  
+ I flag che descrivono come gestire questa sessione. Questi flag possono essere combinati con l'operatore OR bit per bit (&#124;) e sono i seguenti:  
   
--   INTERNET_FLAG_RELOAD ottenere i dati dalle trasmissioni, anche se viene memorizzato localmente. Questo è l'impostazione predefinita.  
+-   INTERNET_FLAG_RELOAD ottenere i dati dalle trasmissioni, anche se viene memorizzato localmente. Questo è il flag predefinito.  
   
 -   INTERNET_FLAG_DONT_CACHE nella cache i dati, sia localmente che in tutti i gateway.  
   
 -   INTERNET_FLAG_RAW_DATA sostituire il valore predefinito per restituire i dati non elaborati ( [WIN32_FIND_DATA](http://msdn.microsoft.com/library/windows/desktop/aa365740) strutture per FTP).  
   
--   INTERNET_FLAG_SECURE consente di proteggere le transazioni in transito con Secure Sockets Layer o PERC. Questo flag è applicabile alle richieste HTTP solo.  
+-   INTERNET_FLAG_SECURE protegge le transazioni in transito con Secure Sockets Layer o PERC. Questo flag è applicabile alle solo richieste HTTP.  
   
--   INTERNET_FLAG_EXISTING_CONNECT se possibile, è possibile riutilizzare le connessioni esistenti al server per il nuovo **FindFile** richieste invece di creare una nuova sessione per ogni richiesta.  
+-   INTERNET_FLAG_EXISTING_CONNECT se possibile, è possibile riutilizzare le connessioni esistenti al server per i nuovi **FindFile** richieste invece di creare una nuova sessione per ogni richiesta.  
   
 ### <a name="return-value"></a>Valore restituito  
  Diverso da zero se ha esito positivo; in caso contrario 0. Per ottenere informazioni dettagliate sull'errore, chiamare la funzione Win32 [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360).  
@@ -133,17 +133,17 @@ virtual BOOL FindFile(
  Dopo la chiamata **FindFile** per recuperare il primo file FTP, è possibile chiamare [FindNextFile](#findnextfile) per recuperare i file successivi FTP.  
   
 ### <a name="example"></a>Esempio  
-  Vedere l'esempio precedente in questo argomento.  
+  Vedere l'esempio più indietro in questo argomento.  
   
 ##  <a name="findnextfile"></a>  CFtpFileFind:: FindNextFile  
- Chiamare questa funzione membro per continuare la ricerca di file iniziata con una chiamata al [FindFile](#findfile) funzione membro.  
+ Chiamare questa funzione membro per continuare la ricerca di file iniziata con una chiamata ai [FindFile](#findfile) funzione membro.  
   
 ```  
 virtual BOOL FindNextFile();
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- Diverso da zero se sono presenti più file; zero se il file trovato è l'ultimo nella directory o se si è verificato un errore. Per ottenere informazioni dettagliate sull'errore, chiamare la funzione Win32 [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360). Se il file trovato è l'ultimo file nella directory o se non corrisponde ad alcuna file sono disponibili, il `GetLastError` funzione restituisce ERROR_NO_MORE_FILES.  
+ Diverso da zero se sono presenti più file; zero se il file trovato è l'ultimo nella directory o se si è verificato un errore. Per ottenere informazioni dettagliate sull'errore, chiamare la funzione Win32 [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360). Se il file trovato è l'ultimo file nella directory o se non corrisponde ad alcuna è possibile trovare i file, il `GetLastError` funzione restituisce ERROR_NO_MORE_FILES.  
   
 ### <a name="remarks"></a>Note  
  È necessario chiamare questa funzione almeno una volta prima di chiamare qualsiasi funzione di attributo (vedere [CFileFind::FindNextFile](../../mfc/reference/cfilefind-class.md#findnextfile)).  

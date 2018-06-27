@@ -61,12 +61,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b92587d6cad3004c87ee6aee4716888d09c1270a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e37a8329e0afaa26b114d0ae0da53f0ec552e09e
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33354282"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954748"
 ---
 # <a name="cd2dbitmap-class"></a>Classe CD2DBitmap
 Wrapper per ID2D1Bitmap.  
@@ -84,7 +84,7 @@ class CD2DBitmap : public CD2DResource;
 |Nome|Descrizione|  
 |----------|-----------------|  
 |[CD2DBitmap::CD2DBitmap](#cd2dbitmap)|Di overload. Costruisce un oggetto CD2DBitmap da HBITMAP.|  
-|[CD2DBitmap:: ~ CD2DBitmap](#_dtorcd2dbitmap)|Distruttore. Chiamato quando viene eliminato un oggetto bitmap D2D.|  
+|[CD2DBitmap:: ~ CD2DBitmap](#_dtorcd2dbitmap)|Distruttore. Chiamata eseguita quando viene eliminata definitivamente un oggetto bitmap D2D.|  
   
 ### <a name="protected-constructors"></a>Costruttori protetti  
   
@@ -96,10 +96,10 @@ class CD2DBitmap : public CD2DResource;
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[CD2DBitmap::Attach](#attach)|Collega a esistente di interfaccia di risorsa per l'oggetto|  
+|[CD2DBitmap::Attach](#attach)|Associa esistente interfaccia risorsa per l'oggetto|  
 |[CD2DBitmap::CopyFromBitmap](#copyfrombitmap)|Copia l'area specificata nella bitmap specificata nella bitmap corrente|  
-|[CD2DBitmap::CopyFromMemory](#copyfrommemory)|Copia l'area specificata dalla memoria nella bitmap corrente|  
-|[CD2DBitmap::CopyFromRenderTarget](#copyfromrendertarget)|Copia l'area specificata dall'oggetto specificato destinazione rendering nella bitmap corrente|  
+|[CD2DBitmap::CopyFromMemory](#copyfrommemory)|Copia l'area specificata di memoria in bitmap corrente|  
+|[CD2DBitmap::CopyFromRenderTarget](#copyfromrendertarget)|Copia l'area specificata dall'elemento specificato destinazione rendering nella bitmap corrente|  
 |[CD2DBitmap::Create](#create)|Crea un CD2DBitmap. (Esegue l'override [CD2DResource:: Create](../../mfc/reference/cd2dresource-class.md#create).)|  
 |[CD2DBitmap::Destroy](#destroy)|Elimina un oggetto CD2DBitmap. (Esegue l'override [CD2DResource:: Destroy](../../mfc/reference/cd2dresource-class.md#destroy).)|  
 |[CD2DBitmap::Detach](#detach)|Disconnette l'interfaccia di risorsa dall'oggetto|  
@@ -126,7 +126,7 @@ class CD2DBitmap : public CD2DResource;
   
 |nome|Descrizione|  
 |----------|-----------------|  
-|[CD2DBitmap::m_bAutoDestroyHBMP](#m_bautodestroyhbmp)|TRUE se m_hBmpSrc deve essere eliminato; in caso contrario FALSE.|  
+|[CD2DBitmap::m_bAutoDestroyHBMP](#m_bautodestroyhbmp)|TRUE se m_hBmpSrc deve essere eliminato; in caso contrario, FALSE.|  
 |[CD2DBitmap::m_hBmpSrc](#m_hbmpsrc)|Handle di bitmap di origine.|  
 |[CD2DBitmap::m_lpszType](#m_lpsztype)|Tipo di risorsa.|  
 |[CD2DBitmap::m_pBitmap](#m_pbitmap)|Archivia un puntatore a un oggetto ID2D1Bitmap.|  
@@ -145,22 +145,22 @@ class CD2DBitmap : public CD2DResource;
  **Intestazione:** afxrendertarget. h  
   
 ##  <a name="_dtorcd2dbitmap"></a>  CD2DBitmap:: ~ CD2DBitmap  
- Distruttore. Chiamato quando viene eliminato un oggetto bitmap D2D.  
+ Distruttore. Chiamata eseguita quando viene eliminata definitivamente un oggetto bitmap D2D.  
   
 ```  
 virtual ~CD2DBitmap();
 ```  
   
 ##  <a name="attach"></a>  CD2DBitmap::Attach  
- Collega a esistente di interfaccia di risorsa per l'oggetto  
+ Associa esistente interfaccia risorsa per l'oggetto  
   
 ```  
 void Attach(ID2D1Bitmap* pResource);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `pResource`  
- Interfaccia della risorsa esistente. Non può essere NULL  
+ *pResource*  
+ Interfaccia risorsa esistente. Non può essere NULL  
   
 ##  <a name="cd2dbitmap"></a>  CD2DBitmap::CD2DBitmap  
  Costruisce un oggetto CD2DBitmap dalla risorsa.  
@@ -194,26 +194,26 @@ CD2DBitmap(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `pParentTarget`  
+ *pParentTarget*  
  Puntatore alla destinazione di rendering.  
   
- `uiResID`  
- Il numero di ID di risorsa della risorsa.  
+ *uiResID*  
+ Il numero di ID risorsa della risorsa.  
   
- `lpszType`  
+ *lpszType*  
  Puntatore a una stringa con terminazione null che contiene il tipo di risorsa.  
   
- `sizeDest`  
+ *sizeDest*  
  Dimensioni di destinazione della bitmap.  
   
- `bAutoDestroy`  
+ *flag bAutoDestroy*  
  Indica che l'oggetto verrà eliminato dal proprietario (pParentTarget).  
   
- `lpszPath`  
+ *lpszPath*  
  Puntatore a una stringa con terminazione null che contiene il nome del file.  
   
- `hbmpSrc`  
- Handle per la bitmap.  
+ *hbmpSrc*  
+ Handle per la mappa di bit.  
   
 ##  <a name="commoninit"></a>  CD2DBitmap::CommonInit  
  Inizializza l'oggetto  
@@ -233,20 +233,20 @@ HRESULT CopyFromBitmap(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `pBitmap`  
- La bitmap di origine  
+ *pBitmap*  
+ La bitmap da copiare da  
   
- `destPoint`  
- Nella mappa di bit corrente, viene copiato nell'angolo superiore sinistro dell'area a cui l'area specificata da srcRect  
+ *destPoint*  
+ Nella mappa di bit corrente, viene copiato l'angolo superiore sinistro dell'area a cui l'area specificata da srcRect  
   
- `srcRect`  
+ *srcRect*  
  L'area dell'immagine bitmap da copiare  
   
 ### <a name="return-value"></a>Valore restituito  
- Se il metodo ha esito positivo, viene restituito S_OK. In caso contrario, restituisce un codice di errore HRESULT.  
+ Se il metodo ha esito positivo, viene restituito S_OK. In caso contrario, restituirà un codice di errore HRESULT.  
   
 ##  <a name="copyfrommemory"></a>  CD2DBitmap::CopyFromMemory  
- Copia l'area specificata dalla memoria nella bitmap corrente  
+ Copia l'area specificata di memoria in bitmap corrente  
   
 ```  
 HRESULT CopyFromMemory(
@@ -256,20 +256,20 @@ HRESULT CopyFromMemory(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `srcData`  
+ *srcData*  
  I dati da copiare  
   
- `pitch`  
+ *passo*  
  Lo stride o tono, della bitmap di origine archiviati in srcData. Lo stride è il numero di byte di una linea di digitalizzazione (una riga di pixel in memoria). Lo stride può essere calcolato dalla seguente formula: la larghezza in pixel * byte per pixel + riempimento della memoria  
   
- `destRect`  
- Nella mappa di bit corrente, viene copiato nell'angolo superiore sinistro dell'area a cui l'area specificata da srcRect  
+ *destRect*  
+ Nella mappa di bit corrente, viene copiato l'angolo superiore sinistro dell'area a cui l'area specificata da srcRect  
   
 ### <a name="return-value"></a>Valore restituito  
- Se il metodo ha esito positivo, viene restituito S_OK. In caso contrario, restituisce un codice di errore HRESULT.  
+ Se il metodo ha esito positivo, viene restituito S_OK. In caso contrario, restituirà un codice di errore HRESULT.  
   
 ##  <a name="copyfromrendertarget"></a>  CD2DBitmap::CopyFromRenderTarget  
- Copia l'area specificata dall'oggetto specificato destinazione rendering nella bitmap corrente  
+ Copia l'area specificata dall'elemento specificato destinazione rendering nella bitmap corrente  
   
 ```  
 HRESULT CopyFromRenderTarget(
@@ -279,17 +279,17 @@ HRESULT CopyFromRenderTarget(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `pRenderTarget`  
+ *pRenderTarget*  
  La destinazione di rendering che contiene l'area da copiare  
   
- `destPoint`  
- Nella mappa di bit corrente, viene copiato nell'angolo superiore sinistro dell'area a cui l'area specificata da srcRect  
+ *destPoint*  
+ Nella mappa di bit corrente, viene copiato l'angolo superiore sinistro dell'area a cui l'area specificata da srcRect  
   
- `srcRect`  
- L'area di destinazione di rendering da copiare  
+ *srcRect*  
+ L'area di renderTarget da copiare  
   
 ### <a name="return-value"></a>Valore restituito  
- Se il metodo ha esito positivo, viene restituito S_OK. In caso contrario, restituisce un codice di errore HRESULT.  
+ Se il metodo ha esito positivo, viene restituito S_OK. In caso contrario, restituirà un codice di errore HRESULT.  
   
 ##  <a name="create"></a>  CD2DBitmap::Create  
  Crea un CD2DBitmap.  
@@ -299,11 +299,11 @@ virtual HRESULT Create(CRenderTarget* pRenderTarget);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `pRenderTarget`  
+ *pRenderTarget*  
  Puntatore alla destinazione di rendering.  
   
 ### <a name="return-value"></a>Valore restituito  
- Se il metodo ha esito positivo, viene restituito S_OK. In caso contrario, restituisce un codice di errore HRESULT.  
+ Se il metodo ha esito positivo, viene restituito S_OK. In caso contrario, restituirà un codice di errore HRESULT.  
   
 ##  <a name="destroy"></a>  CD2DBitmap::Destroy  
  Elimina un oggetto CD2DBitmap.  
@@ -320,7 +320,7 @@ ID2D1Bitmap* Detach();
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- Puntatore a interfaccia risorse scollegato.  
+ Puntatore a interfaccia risorsa scollegato.  
   
 ##  <a name="get"></a>  CD2DBitmap::Get  
  Restituisce l'interfaccia ID2D1Bitmap  
@@ -360,7 +360,7 @@ CD2DSizeU GetPixelSize() const;
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- Le dimensioni, in pixel, della bitmap...  
+ Le dimensioni, in pixel, della bitmap.  
   
 ##  <a name="getsize"></a>  CD2DBitmap::GetSize  
  Restituisce le dimensioni, in pixel indipendenti dal dispositivo (DIP), della bitmap  
@@ -380,10 +380,10 @@ virtual BOOL IsValid() const;
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- TRUE se la risorsa è valido. in caso contrario FALSE.  
+ TRUE se la risorsa è valido. in caso contrario, FALSE.  
   
 ##  <a name="m_bautodestroyhbmp"></a>  CD2DBitmap::m_bAutoDestroyHBMP  
- TRUE se m_hBmpSrc deve essere eliminato; in caso contrario FALSE.  
+ TRUE se m_hBmpSrc deve essere eliminato; in caso contrario, FALSE.  
   
 ```  
 BOOL m_bAutoDestroyHBMP;  

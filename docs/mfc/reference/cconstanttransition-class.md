@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aae427499f443246fe5b8e1c40ac9c3e7334c37d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 48a8ccb49001b93ded52edc732fc59222775e6f8
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33350898"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954027"
 ---
 # <a name="cconstanttransition-class"></a>Classe CConstantTransition
 Incapsula una transizione costante.  
@@ -59,7 +59,7 @@ class CConstantTransition : public CBaseTransition;
 |[CConstantTransition::m_duration](#m_duration)|La durata della transizione.|  
   
 ## <a name="remarks"></a>Note  
- Durante una transizione costante, il valore di una variabile di animazione rimane in corrispondenza del valore iniziale per la durata della transizione. Poiché tutte le transizioni vengono cancellate automaticamente, è consigliabile per assegnarle utilizzando l'operatore new. L'oggetto COM IUIAnimationTransition incapsulato viene creato da CAnimationController:: AnimateGroup, finché non è NULL. Modifica le variabili membro dopo la creazione dell'oggetto COM non ha alcun effetto.  
+ Durante una transizione costante, il valore di una variabile di animazione rimane in corrispondenza del valore iniziale per la durata della transizione. Poiché tutte le transizioni vengono cancellate automaticamente, è consigliabile per assegnarle utilizzando l'operatore new. L'oggetto COM IUIAnimationTransition incapsulato viene creato da CAnimationController:: AnimateGroup, finché non è NULL. Per modificare le variabili membro dopo la creazione di questo oggetto COM non ha alcun effetto.  
   
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -79,7 +79,7 @@ CConstantTransition (UI_ANIMATION_SECONDS duration);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `duration`  
+ *Durata*  
  La durata della transizione.  
   
 ##  <a name="create"></a>  CConstantTransition::Create  
@@ -92,11 +92,11 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `pLibrary`  
+ *pLibrary*  
  Un puntatore a un [IUIAnimationTransitionLibrary interfaccia](https://msdn.microsoft.com/library/windows/desktop/dd371897), che definisce una raccolta di transizioni standard.  
 
 ### <a name="return-value"></a>Valore restituito  
- TRUE se transizione viene creata correttamente. in caso contrario FALSE.  
+ TRUE se transizione viene creata correttamente. in caso contrario, FALSE.  
   
 ##  <a name="m_duration"></a>  CConstantTransition::m_duration  
  La durata della transizione.  

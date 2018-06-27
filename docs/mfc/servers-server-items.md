@@ -18,19 +18,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e83b75183fe226b4ff384a00b0b5260caba01efa
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 72cbf640f7886eac65762520ebc7c21f3906f0c0
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33382502"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36953087"
 ---
 # <a name="servers-server-items"></a>Server: elementi server
 Quando un contenitore avvia un server in modo che l'utente possa modificare un elemento OLE incorporato o collegato, l'applicazione server crea un "elemento server". L'elemento server, ovvero un oggetto di una classe derivata da `COleServerItem`, fornisce un'interfaccia tra il documento server e l'applicazione contenitore.  
   
  La classe `COleServerItem` definisce diverse funzioni membro di cui è possibile eseguire l'override che vengono chiamate da OLE, in genere in risposta alle richieste del contenitore. Gli elementi server possono rappresentare una parte o l'intero documento server. Quando un elemento OLE è incorporato nel documento contenitore, l'elemento server rappresenta l'intero documento server. Quando l'elemento OLE è collegato, l'elemento server può rappresentare una parte del documento server o l'intero documento, a seconda che il collegamento sia verso una parte o l'intero documento.  
   
- Nel [HIERSVR](../visual-cpp-samples.md) di esempio, ad esempio, la classe dell'elemento server, **CServerItem**, dispone di un membro che è un puntatore a un oggetto della classe **CServerNode**. Il **CServerNode** oggetto è un nodo nel documento dell'applicazione HIERSVR, ovvero una struttura ad albero. Quando il **CServerNode** oggetto è il nodo radice, il **CServerItem** oggetto rappresenta l'intero documento. Quando il **CServerNode** oggetto è un nodo figlio, il **CServerItem** oggetto rappresenta una parte del documento. Vedere l'esempio OLE MFC [HIERSVR](../visual-cpp-samples.md) per un esempio di questa interazione.  
+ Nel [HIERSVR](../visual-cpp-samples.md) di esempio, ad esempio, la classe dell'elemento server, `CServerItem`, dispone di un membro che è un puntatore a un oggetto della classe `CServerNode`. Il `CServerNode` oggetto è un nodo nel documento dell'applicazione HIERSVR, ovvero una struttura ad albero. Quando il `CServerNode` oggetto è il nodo radice, il `CServerItem` oggetto rappresenta l'intero documento. Quando il `CServerNode` oggetto è un nodo figlio, il `CServerItem` oggetto rappresenta una parte del documento. Vedere l'esempio OLE MFC [HIERSVR](../visual-cpp-samples.md) per un esempio di questa interazione.  
   
 ##  <a name="_core_implementing_server_items"></a> Implementazione di elementi Server  
  Se si utilizza la creazione guidata applicazione per scrivere il codice "di avvio" dell'applicazione, per includere gli elementi server nel codice di avvio è sufficiente scegliere una delle opzioni server dalla pagina Opzioni OLE. Se si aggiungono elementi server a un'applicazione esistente, attenersi ai passaggi indicati di seguito:  
@@ -48,13 +48,13 @@ Quando un contenitore avvia un server in modo che l'utente possa modificare un e
 4.  Implementare la funzione membro `OnGetExtent` della classe dell'elemento server. Il framework chiama questa funzione per recuperare la dimensione dell'elemento. L'implementazione predefinita non esegue alcuna operazione.  
   
 ##  <a name="_core_a_tip_for_server.2d.item_architecture"></a> Un suggerimento per l'architettura di un Server-elemento  
- Come indicato nella [implementazione di elementi Server](#_core_implementing_server_items), le applicazioni server devono essere in grado di eseguire il rendering di elementi nella visualizzazione del server e nel metafile utilizzato dall'applicazione contenitore. In applicazione, la classe di visualizzazione dell'architettura della libreria Microsoft Foundation classe `OnDraw` funzione membro esegue il rendering l'elemento quando viene modificato (vedere [CView:: OnDraw](../mfc/reference/cview-class.md#ondraw) nel *riferimenti alla libreria di classi* ). L'elemento server `OnDraw` esegue il rendering l'elemento in un metafile in tutti gli altri casi (vedere [COleServerItem:: OnDraw](../mfc/reference/coleserveritem-class.md#ondraw)).  
+ Come accennato nel [implementazione di elementi Server](#_core_implementing_server_items), le applicazioni server devono essere in grado di eseguire il rendering di elementi nella visualizzazione del server e nel metafile utilizzato dall'applicazione contenitore. In applicazione, la classe di visualizzazione dell'architettura della libreria Microsoft Foundation classe `OnDraw` funzione membro viene eseguito il rendering l'elemento quando viene modificato (vedere [CView:: OnDraw](../mfc/reference/cview-class.md#ondraw) nel *riferimenti alla libreria di classe* ). L'elemento server `OnDraw` esegue il rendering l'elemento in un metafile in tutti gli altri casi (vedere [COleServerItem:: OnDraw](../mfc/reference/coleserveritem-class.md#ondraw)).  
   
- È possibile evitare la duplicazione del codice scrivendo funzioni di supporto nella classe del documento server e chiamandole dalle funzioni `OnDraw` nelle classi dell'elemento server e di visualizzazione. L'esempio OLE MFC [HIERSVR](../visual-cpp-samples.md) utilizza questa strategia: le funzioni **CServerDoc** e **CServerItem:: OnDraw** entrambi chiamano **CServerView**  per il rendering dell'elemento.  
+ È possibile evitare la duplicazione del codice scrivendo funzioni di supporto nella classe del documento server e chiamandole dalle funzioni `OnDraw` nelle classi dell'elemento server e di visualizzazione. L'esempio OLE MFC [HIERSVR](../visual-cpp-samples.md) utilizza questa strategia: le funzioni `CServerView::OnDraw` e `CServerItem::OnDraw` entrambi chiamano `CServerDoc::DrawTree` per il rendering dell'elemento.  
   
  La visualizzazione e l'elemento hanno entrambi funzioni membro `OnDraw`, perché eseguono il disegno in circostanze diverse. La visualizzazione deve considerare fattori quali lo zoom, la dimensione e l'ambito di selezione, il ritaglio e gli elementi dell'interfaccia utente quali le barre di scorrimento. L'elemento server, invece, disegna sempre l'intero oggetto OLE.  
   
- Per ulteriori informazioni, vedere [CView:: OnDraw](../mfc/reference/cview-class.md#ondraw), [COleServerItem](../mfc/reference/coleserveritem-class.md), [COleServerItem:: OnDraw](../mfc/reference/coleserveritem-class.md#ondraw), e [COleServerDoc:: OnGetEmbeddedItem](../mfc/reference/coleserverdoc-class.md#ongetembeddeditem)nel *riferimenti alla libreria di classe*.  
+ Per altre informazioni, vedere [CView:: OnDraw](../mfc/reference/cview-class.md#ondraw), [COleServerItem](../mfc/reference/coleserveritem-class.md), [COleServerItem:: OnDraw](../mfc/reference/coleserveritem-class.md#ondraw), e [COleServerDoc:: OnGetEmbeddedItem](../mfc/reference/coleserverdoc-class.md#ongetembeddeditem)nel *classe di riferimento alla libreria*.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Server](../mfc/servers.md)

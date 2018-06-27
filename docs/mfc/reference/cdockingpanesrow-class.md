@@ -100,12 +100,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 43372dd34088b8adda3f5fc8a9f5573695f0c93c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 42680d4cd79c5079703a94361403efd858ef80f2
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370003"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955267"
 ---
 # <a name="cdockingpanesrow-class"></a>Classe CDockingPanesRow
 Gestisce un elenco dei riquadri inseriti nella stessa riga orizzontale o verticale (colonna) di un sito di ancoraggio.  
@@ -201,10 +201,10 @@ virtual void AddPane(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `pControlBar`  
- [in] `dockMethod`  
- [in] `lpRect`  
- [in] `bAddLast`  
+ [in] *pControlBar*  
+ [in] *dockMethod*  
+ [in] *lpRect*  
+ [in] *bAddLast*  
   
 ### <a name="remarks"></a>Note  
   
@@ -218,13 +218,13 @@ virtual void AddPaneFromRow(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `pControlBar`  
- [in] `dockMethod`  
+ [in] *pControlBar*  
+ [in] *dockMethod*  
   
 ### <a name="remarks"></a>Note  
   
 ##  <a name="arrangepanes"></a>  CDockingPanesRow::ArrangePanes  
- Dispone l'ancoraggio di riquadri in una riga in base al margine e spaziatura parametri.  
+ Dispone i riquadri in una riga in base a margine specificato di ancoraggio e spaziatura parametri.  
   
 ```  
 virtual void ArrangePanes(
@@ -233,10 +233,10 @@ virtual void ArrangePanes(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `nMargin`  
+ [in] *nMargin*  
  Specifica l'offset, in pixel, del primo riquadro nell'angolo superiore sinistro della riga.  
   
- [in] `nSpacing`  
+ [in] *nSpacing*  
  Specifica la spaziatura, espressi in pixel, tra i riquadri.  
   
 ### <a name="remarks"></a>Note  
@@ -252,8 +252,8 @@ virtual CSize CalcFixedLayout(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `bStretch`  
- [in] `bHorz`  
+ [in] *bStretch*  
+ [in] *bHorz*  
   
 ### <a name="return-value"></a>Valore restituito  
   
@@ -270,9 +270,9 @@ CDockingPanesRow(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `pParentDockBar`  
- [in] `nOffset`  
- [in] `nHeight`  
+ [in] *pParentDockBar*  
+ [in] *nOffset*  
+ [in] *nHeight*  
   
 ### <a name="remarks"></a>Note  
   
@@ -315,8 +315,8 @@ void FixupVirtualRects(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `bMoveBackToVirtualRect`  
- [in] `pBarToExclude`  
+ [in] *bMoveBackToVirtualRect*  
+ [in] *pBarToExclude*  
   
 ### <a name="remarks"></a>Note  
   
@@ -328,7 +328,7 @@ virtual int GetAvailableLength(BOOL bUseVirtualRect = FALSE) const;
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `bUseVirtualRect`  
+ [in] *bUseVirtualRect*  
   
 ### <a name="return-value"></a>Valore restituito  
   
@@ -342,7 +342,7 @@ virtual void GetAvailableSpace(CRect& rect);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `rect`  
+ [in] *rect*  
   
 ### <a name="remarks"></a>Note  
   
@@ -354,7 +354,7 @@ void GetClientRect(CRect& rect) const;
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `rect`  
+ [in] *rect*  
   
 ### <a name="remarks"></a>Note  
   
@@ -390,8 +390,8 @@ void GetGroupFromPane(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `pBar`  
- [in] `lst`  
+ [in] *pBar*  
+ [in] *lst*  
   
 ### <a name="remarks"></a>Note  
   
@@ -414,7 +414,7 @@ int GetMaxPaneSize(BOOL bSkipHiddenBars = TRUE) const;
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `bSkipHiddenBars`  
+ [in] *bSkipHiddenBars*  
   
 ### <a name="return-value"></a>Valore restituito  
   
@@ -494,7 +494,7 @@ void GetWindowRect(CRect& rect) const;
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `rect`  
+ [in] *rect*  
   
 ### <a name="remarks"></a>Note  
   
@@ -506,7 +506,7 @@ BOOL HasPane(CBasePane* pControlBar);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `pControlBar`  
+ [in] *pControlBar*  
   
 ### <a name="return-value"></a>Valore restituito  
   
@@ -564,7 +564,7 @@ virtual void Move(int nOffset);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `nOffset`  
+ [in] *nOffset*  
   
 ### <a name="remarks"></a>Note  
   
@@ -599,14 +599,14 @@ void MovePane(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `pControlBar`  
- [in] `ptOffset`  
- [in] `bSwapControlBars`  
- [in] `hdwp`  
- [in] `rectTarget`  
- [in] `nOffset`  
- [in] `bForward`  
- [in] `nAbsolutOffset`  
+ [in] *pControlBar*  
+ [in] *ptOffset*  
+ [in] *bSwapControlBars*  
+ [in] *hdwp*  
+ [in] *rectTarget*  
+ [in] *nOffset*  
+ [in] *bForward*  
+ [in] *nAbsolutOffset*  
   
 ### <a name="remarks"></a>Note  
   
@@ -618,7 +618,7 @@ virtual void OnResizePane(CBasePane* pControlBar);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `pControlBar`  
+ [in] *pControlBar*  
   
 ### <a name="remarks"></a>Note  
   
@@ -639,7 +639,7 @@ virtual void RemovePane(CPane* pControlBar);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `pControlBar`  
+ [in] *pControlBar*  
   
 ### <a name="remarks"></a>Note  
   
@@ -653,8 +653,8 @@ virtual BOOL ReplacePane(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `pBarOld`  
- [in] `pBarNew`  
+ [in] *pBarOld*  
+ [in] *pBarNew*  
   
 ### <a name="return-value"></a>Valore restituito  
   
@@ -672,10 +672,10 @@ virtual void RepositionPanes(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `rectNewParentBarArea`  
- [in] `nSide`  
- [in] `bExpand`  
- [in] `nOffset`  
+ [in] *rectNewParentBarArea*  
+ [in] *nSide*  
+ [in] *bExpand*  
+ [in] *nOffset*  
   
 ### <a name="remarks"></a>Note  
   
@@ -687,7 +687,7 @@ virtual int Resize(int nOffset);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `nOffset`  
+ [in] *nOffset*  
   
 ### <a name="return-value"></a>Valore restituito  
   
@@ -701,7 +701,7 @@ virtual int ResizeByPaneDivider(int);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `int`  
+ [in] *int*  
   
 ### <a name="return-value"></a>Valore restituito  
   
@@ -715,7 +715,7 @@ void ScreenToClient(CRect& rect) const;
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `rect`  
+ [in] *rect*  
   
 ### <a name="remarks"></a>Note  
   
@@ -729,8 +729,8 @@ void SetExtra(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `nExtraSpace`  
- [in] `rowExtraAlign`  
+ [in] *nExtraSpace*  
+ [in] *rowExtraAlign*  
   
 ### <a name="remarks"></a>Note  
   
@@ -744,8 +744,8 @@ virtual void ShowDockSiteRow(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `bShow`  
- [in] `bDelay`  
+ [in] *bMostra*  
+ [in] *bDelay*  
   
 ### <a name="remarks"></a>Note  
   
@@ -760,9 +760,9 @@ virtual BOOL ShowPane(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `pControlBar`  
- [in] `bShow`  
- [in] `bDelay`  
+ [in] *pControlBar*  
+ [in] *bMostra*  
+ [in] *bDelay*  
   
 ### <a name="return-value"></a>Valore restituito  
   
@@ -776,7 +776,7 @@ virtual void UpdateVisibleState(BOOL bDelay);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `bDelay`  
+ [in] *bDelay*  
   
 ### <a name="remarks"></a>Note  
   

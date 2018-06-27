@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 19f8c0aa6aaa4980466918eac2649cc246b2e6ce
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 53f53bdb19c6f40d73179b600051ecfaf6b69c94
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33351189"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36950635"
 ---
 # <a name="ccommondialog-class"></a>Classe CCommonDialog
 Classe di base per le classi che incapsulano la funzionalità delle finestre di dialogo comuni di Windows.  
@@ -83,8 +83,8 @@ explicit CCommonDialog(CWnd* pParentWnd);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `pParentWnd`  
- Punta all'oggetto finestra padre o proprietaria (di tipo [CWnd](../../mfc/reference/cwnd-class.md)) a cui appartiene l'oggetto finestra di dialogo. Se è **NULL**, finestra padre dell'oggetto finestra di dialogo è impostata per la finestra principale dell'applicazione.  
+ *pParentWnd*  
+ Punta all'oggetto finestra padre o proprietaria (di tipo [CWnd](../../mfc/reference/cwnd-class.md)) a cui appartiene l'oggetto finestra di dialogo. Se si tratta **NULL**, finestra padre dell'oggetto finestra di dialogo è impostata per la finestra principale dell'applicazione.  
   
 ### <a name="remarks"></a>Note  
  Vedere [CDialog::CDialog](../../mfc/reference/cdialog-class.md#cdialog) per informazioni complete.  

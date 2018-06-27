@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2e35fc33b26fa6bead73458a46d7c4edee1cf136
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 58646efaaa0087be2bd73e45acd8ade4a16e9767
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33350992"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36957091"
 ---
 # <a name="canimationvariablechangehandler-class"></a>Classe CAnimationVariableChangeHandler
 Implementa un callback, chiamato dall'API di animazione quando viene modificato il valore di una variabile di animazione.  
@@ -50,10 +50,10 @@ class CAnimationVariableChangeHandler : public CUIAnimationVariableChangeHandler
 |----------|-----------------|  
 |`CAnimationVariableChangeHandler::CreateInstance`|Crea un'istanza di `CAnimationVariableChangeHandler` oggetto.|  
 |[CAnimationVariableChangeHandler::OnValueChanged](#onvaluechanged)|Chiamato quando viene modificato un valore di una variabile di animazione. Esegue l'override`CUIAnimationVariableChangeHandlerBase::OnValueChanged`.|  
-|[CAnimationVariableChangeHandler::SetAnimationController](#setanimationcontroller)|Archivia un puntatore al controller di animazione per eventi della route.|  
+|[CAnimationVariableChangeHandler::SetAnimationController](#setanimationcontroller)|Archivia un puntatore accessibile al controller di animazione di eventi della route.|  
   
 ## <a name="remarks"></a>Note  
- Questo gestore eventi viene creato e passato a `IUIAnimationVariable::SetVariableChangeHandler` metodo, quando si chiama `CAnimationVariable::EnableValueChangedEvent` o `CAnimationBaseObject::EnableValueChangedEvent` (che consente di questo evento per tutte le variabili di animazione incapsulate in un oggetto di animazione).  
+ Questo gestore eventi viene creato e passato a `IUIAnimationVariable::SetVariableChangeHandler` metodo, quando si chiama `CAnimationVariable::EnableValueChangedEvent` o `CAnimationBaseObject::EnableValueChangedEvent` (consentendo di questo evento per tutte le variabili di animazione incapsulate in un oggetto di animazione).  
   
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  `CUIAnimationCallbackBase`  
@@ -77,30 +77,30 @@ IFACEMETHOD(OnValueChanged) (
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `storyboard`  
+ *storyboard*  
  Lo storyboard che è la variabile di animazione.  
   
- `variable`  
+ *Variabile*  
  La variabile di animazione che è stata aggiornata.  
   
- `newValue`  
+ *newValue*  
  Nuovo valore.  
   
- `previousValue`  
+ *previousValue*  
  Il valore precedente.  
   
 ### <a name="return-value"></a>Valore restituito  
- Se il metodo ha esito positivo, viene restituito S_OK. In caso contrario, restituisce un codice di errore HRESULT.  
+ Se il metodo ha esito positivo, viene restituito S_OK. In caso contrario, restituirà un codice di errore HRESULT.  
   
 ##  <a name="setanimationcontroller"></a>  CAnimationVariableChangeHandler::SetAnimationController  
- Archivia un puntatore al controller di animazione per eventi della route.  
+ Archivia un puntatore accessibile al controller di animazione di eventi della route.  
   
 ```  
 void SetAnimationController(CAnimationController* pAnimationController);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `pAnimationController`  
+ *pAnimationController*  
  Puntatore al controller di animazione che riceverà gli eventi.  
   
 ## <a name="see-also"></a>Vedere anche  

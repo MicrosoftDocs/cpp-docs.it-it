@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3486285b7b6430e9cd6f0e4a936aa3341bd72e0f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: aa06581dc28293073e8094dad779be0eebabbd10
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33366580"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36953490"
 ---
 # <a name="cformview-class"></a>Classe CFormView
 Classe di base utilizzata per le visualizzazioni di form.  
@@ -53,9 +53,9 @@ class CFormView : public CScrollView
 ## <a name="remarks"></a>Note  
  Una visualizzazione form è essenzialmente una visualizzazione contenente controlli. Il layout di questi controlli si basa su una risorsa modello di finestra di dialogo. Usare `CFormView` se si desidera che l'applicazione includa form. Queste visualizzazioni supportano lo scorrimento, in base alle esigenze, utilizzando il [CScrollView](../../mfc/reference/cscrollview-class.md) funzionalità.  
   
- Quando si è [creazione di un'applicazione basata su form](../../mfc/reference/creating-a-forms-based-mfc-application.md), è possibile basare la classe visualizzazione su `CFormView`, rendendola un'applicazione basata su form.  
+ Quando si stanno [creazione di un'applicazione basata su form](../../mfc/reference/creating-a-forms-based-mfc-application.md), è possibile basare la classe visualizzazione su `CFormView`, rendendola un'applicazione basata su form.  
   
- È inoltre possibile inserire nuovi [argomenti Form](../../mfc/form-views-mfc.md) nelle applicazioni basate sulla visualizzazione documento. Anche se l'applicazione inizialmente non supporta i form, Visual C++ aggiungerà questo supporto quando si inserisce un nuovo form.  
+ È inoltre possibile inserire nuovi [argomenti sui moduli](../../mfc/form-views-mfc.md) nelle applicazioni basate sulla visualizzazione documento. Anche se l'applicazione inizialmente non supporta i form, Visual C++ aggiungerà questo supporto quando si inserisce un nuovo form.  
   
  La Creazione guidata applicazione MFC e il comando Aggiungi classe rappresentano i metodi preferiti per la creazione di applicazioni basate su form. Se è necessario creare un'applicazione basata su form senza usare questi metodi, vedere [creazione di un'applicazione basata su form](../../mfc/reference/creating-a-forms-based-mfc-application.md).  
   
@@ -84,19 +84,19 @@ CFormView(UINT nIDTemplate);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `lpszTemplateName`  
+ *lpszTemplateName*  
  Contiene una stringa con terminazione null che rappresenta il nome di una risorsa modello di finestra di dialogo.  
   
- `nIDTemplate`  
+ *nIDTemplate*  
  Contiene il numero di ID di una risorsa modello di finestra di dialogo.  
   
 ### <a name="remarks"></a>Note  
- Quando si crea un oggetto di un tipo derivato da `CFormView`, richiamare uno dei costruttori per creare l'oggetto visualizzazione e identificare la risorsa finestra di dialogo in cui si basa la visualizzazione. È possibile identificare la risorsa in base al nome (passare una stringa come argomento al costruttore) o tramite il relativo ID (passaggio di un intero senza segno come argomento).  
+ Quando si crea un oggetto di un tipo derivato da `CFormView`, richiamare uno dei costruttori per creare l'oggetto visualizzazione e identificare le risorse di finestra di dialogo in cui si basa la vista. È possibile identificare la risorsa in base al nome (passare una stringa come argomento al costruttore) o tramite il relativo ID (passare un intero senza segno come argomento).  
   
  Il visualizzazione di form finestra e i controlli figlio vengono creati solo `CWnd::Create` viene chiamato. `CWnd::Create` viene chiamato dal framework durante il processo di creazione documento e la visualizzazione, che dipende dal modello di documento.  
   
 > [!NOTE]
->  La classe derivata *deve* fornisce il proprio costruttore. Nel costruttore, richiamare il costruttore, `CFormView::CFormView`, con il nome di risorsa o l'ID come argomento, come mostrato nella precedente Panoramica di classe.  
+>  La classe derivata *necessario* fornire il proprio costruttore. Nel costruttore, richiamare il costruttore, `CFormView::CFormView`, con il nome della risorsa o l'ID come argomento, come mostrato nella precedente Panoramica di classe.  
   
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFCDocView#90](../../mfc/codesnippet/cpp/cformview-class_1.h)]  

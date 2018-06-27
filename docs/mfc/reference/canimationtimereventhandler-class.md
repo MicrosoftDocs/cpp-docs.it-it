@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fc0fe5a59a5efedc00850da03be84bb212d4a51f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4dcd12f3d2f57b947beb71385327f0ad1a14975d
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33352099"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36953272"
 ---
 # <a name="canimationtimereventhandler-class"></a>Classe CAnimationTimerEventHandler
 Implementa un callback, chiamato dall'API di animazione quando si verificano eventi di temporizzazione.  
@@ -49,10 +49,10 @@ class CAnimationTimerEventHandler : public CUIAnimationTimerEventHandlerBase<CAn
 |Nome|Descrizione|  
 |----------|-----------------|  
 |[CAnimationTimerEventHandler::CreateInstance](#createinstance)|Crea un'istanza di `CAnimationTimerEventHandler` callback.|  
-|[CAnimationTimerEventHandler::OnPostUpdate](#onpostupdate)|Gestisce gli eventi che si verificano al termine dell'aggiornamento di un'animazione. Esegue l'override`CUIAnimationTimerEventHandlerBase::OnPostUpdate`.|  
+|[CAnimationTimerEventHandler::OnPostUpdate](#onpostupdate)|Gestisce gli eventi che si verificano dopo il completamento dell'aggiornamento di un'animazione. Esegue l'override`CUIAnimationTimerEventHandlerBase::OnPostUpdate`.|  
 |[CAnimationTimerEventHandler::OnPreUpdate](#onpreupdate)|Gestisce gli eventi che si verificano prima dell'inizio aggiornamento di un'animazione. Esegue l'override`CUIAnimationTimerEventHandlerBase::OnPreUpdate`.|  
-|[CAnimationTimerEventHandler::OnRenderingTooSlow](#onrenderingtooslow)|Gestisce gli eventi che si verificano quando la frequenza dei fotogrammi per il rendering di un'animazione scende sotto la frequenza di fotogrammi. Esegue l'override`CUIAnimationTimerEventHandlerBase::OnRenderingTooSlow`.|  
-|[CAnimationTimerEventHandler::SetAnimationController](#setanimationcontroller)|Archivia un puntatore al controller di animazione per eventi della route.|  
+|[CAnimationTimerEventHandler::OnRenderingTooSlow](#onrenderingtooslow)|Gestisce gli eventi che si verificano quando la frequenza dei fotogrammi per il rendering di un'animazione scende sotto la frequenza dei fotogrammi auspicabile minimo. Esegue l'override`CUIAnimationTimerEventHandlerBase::OnRenderingTooSlow`.|  
+|[CAnimationTimerEventHandler::SetAnimationController](#setanimationcontroller)|Archivia un puntatore accessibile al controller di animazione di eventi della route.|  
   
 ## <a name="remarks"></a>Note  
  Questo gestore eventi viene creato e passato a IUIAnimationTimer::SetTimerEventHandler quando si chiama CAnimationController::EnableAnimationTimerEventHandler.  
@@ -77,23 +77,23 @@ static COM_DECLSPEC_NOTHROW HRESULT CreateInstance(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `pAnimationController`  
+ *pAnimationController*  
  Puntatore al controller di animazione che riceverà gli eventi.  
   
- `ppTimerEventHandler`  
+ *ppTimerEventHandler*  
   
 ### <a name="return-value"></a>Valore restituito  
- Se il metodo ha esito positivo, viene restituito S_OK. In caso contrario, restituisce un codice di errore HRESULT.  
+ Se il metodo ha esito positivo, viene restituito S_OK. In caso contrario, restituirà un codice di errore HRESULT.  
   
 ##  <a name="onpostupdate"></a>  CAnimationTimerEventHandler::OnPostUpdate  
- Gestisce gli eventi che si verificano al termine dell'aggiornamento di un'animazione.  
+ Gestisce gli eventi che si verificano dopo il completamento dell'aggiornamento di un'animazione.  
   
 ```  
 IFACEMETHOD(OnPostUpdate)();
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- S_OK se il metodo ha esito positivo. in caso contrario E_FAIL.  
+ S_OK se il metodo ha esito positivo; in caso contrario E_FAIL.  
   
 ##  <a name="onpreupdate"></a>  CAnimationTimerEventHandler::OnPreUpdate  
  Gestisce gli eventi che si verificano prima dell'inizio aggiornamento di un'animazione.  
@@ -103,30 +103,30 @@ IFACEMETHOD(OnPreUpdate)();
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- S_OK se il metodo ha esito positivo. in caso contrario E_FAIL.  
+ S_OK se il metodo ha esito positivo; in caso contrario E_FAIL.  
   
 ##  <a name="onrenderingtooslow"></a>  CAnimationTimerEventHandler::OnRenderingTooSlow  
- Gestisce gli eventi che si verificano quando la frequenza dei fotogrammi per il rendering di un'animazione scende sotto la frequenza di fotogrammi.  
+ Gestisce gli eventi che si verificano quando la frequenza dei fotogrammi per il rendering di un'animazione scende sotto la frequenza dei fotogrammi auspicabile minimo.  
   
 ```  
 IFACEMETHOD(OnRenderingTooSlow)(UINT32 fps);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `fps`  
+ *frequenza dei fotogrammi*  
   
 ### <a name="return-value"></a>Valore restituito  
- S_OK se il metodo ha esito positivo. in caso contrario E_FAIL.  
+ S_OK se il metodo ha esito positivo; in caso contrario E_FAIL.  
   
 ##  <a name="setanimationcontroller"></a>  CAnimationTimerEventHandler::SetAnimationController  
- Archivia un puntatore al controller di animazione per eventi della route.  
+ Archivia un puntatore accessibile al controller di animazione di eventi della route.  
   
 ```  
 void SetAnimationController(CAnimationController* pAnimationController);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `pAnimationController`  
+ *pAnimationController*  
  Puntatore al controller di animazione che riceverà gli eventi.  
   
 ## <a name="see-also"></a>Vedere anche  

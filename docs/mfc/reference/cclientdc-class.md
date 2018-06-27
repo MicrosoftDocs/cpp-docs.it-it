@@ -20,15 +20,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4c51e252157b90423b35152c10a85f972feace72
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b4f013589b509781d217e521b680f1d529189a0a
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33348907"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954266"
 ---
 # <a name="cclientdc-class"></a>CClientDC (classe)
-Si occupa di chiamare le funzioni Windows [GetDC](http://msdn.microsoft.com/library/windows/desktop/dd144871) in fase di costruzione e [ReleaseDC](http://msdn.microsoft.com/library/windows/desktop/dd162920) in fase di eliminazione.  
+Si occupa di chiamare le funzioni di Windows [GetDC](http://msdn.microsoft.com/library/windows/desktop/dd144871) in fase di costruzione e [ReleaseDC](http://msdn.microsoft.com/library/windows/desktop/dd162920) in fase di eliminazione.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -42,7 +42,7 @@ class CClientDC : public CDC
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[CClientDC::CClientDC](#cclientdc)|Costruisce un `CClientDC` oggetto connesso il `CWnd`.|  
+|[CClientDC::CClientDC](#cclientdc)|Costruisce un `CClientDC` oggetto connesso al `CWnd`.|  
   
 ### <a name="protected-data-members"></a>Membri dati protetti  
   
@@ -53,7 +53,7 @@ class CClientDC : public CDC
 ## <a name="remarks"></a>Note  
  Ciò significa che il contesto di dispositivo associato un `CClientDC` oggetto rappresenta l'area client di una finestra.  
   
- Per ulteriori informazioni su `CClientDC`, vedere [contesti di dispositivo](../../mfc/device-contexts.md).  
+ Per ulteriori informazioni sul `CClientDC`, vedere [contesti di dispositivo](../../mfc/device-contexts.md).  
   
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -66,20 +66,20 @@ class CClientDC : public CDC
  **Intestazione:** afxwin.h  
   
 ##  <a name="cclientdc"></a>  CClientDC::CClientDC  
- Costruisce un `CClientDC` oggetto a cui accede l'area client del [CWnd](../../mfc/reference/cwnd-class.md) a cui puntava `pWnd`.  
+ Costruisce un `CClientDC` oggetto a cui accede l'area client del [CWnd](../../mfc/reference/cwnd-class.md) a cui punta *pWnd*.  
   
 ```  
 explicit CClientDC(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `pWnd`  
+ *pWnd*  
  Finestra cui area client accederà l'oggetto di contesto di dispositivo.  
   
 ### <a name="remarks"></a>Note  
- Il costruttore chiama la funzione Windows [GetDC](http://msdn.microsoft.com/library/windows/desktop/dd144871).  
+ Il costruttore chiama la funzione di Windows [GetDC](http://msdn.microsoft.com/library/windows/desktop/dd144871).  
   
- Un'eccezione (di tipo `CResourceException`) viene generata se Windows `GetDC` chiamata ha esito negativo. Un contesto di dispositivo potrebbe non essere disponibile se Windows è già allocato tutti i relativi contesti di dispositivo disponibile. L'applicazione in competizione per le cinque comuni contesti di visualizzazione disponibili in qualsiasi momento in Windows.  
+ Un'eccezione (di tipo `CResourceException`) viene generato se le finestre `GetDC` chiamata ha esito negativo. Un contesto di dispositivo potrebbe non essere disponibile se Windows è già allocato tutti i relativi contesti di periferica disponibile. L'applicazione in competizione per le cinque comuni contesti di visualizzazione disponibili in qualsiasi momento in Windows.  
   
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFCDocView#42](../../mfc/codesnippet/cpp/cclientdc-class_1.cpp)]  
@@ -92,10 +92,10 @@ HWND m_hWnd;
 ```  
   
 ### <a name="remarks"></a>Note  
- `m_hWnd` è una variabile protetta.  
+ *m_hWnd* è una variabile protetta.  
   
 ### <a name="example"></a>Esempio  
-  Per vedere l'esempio [CClientDC::CClientDC](#cclientdc).  
+  Vedere l'esempio relativo [CClientDC::CClientDC](#cclientdc).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Esempio MFC MDI](../../visual-cpp-samples.md)   

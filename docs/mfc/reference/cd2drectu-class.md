@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 36d960cfc0ce3d9d5632edd3a1b42903f3cdd0f6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d5faf4bb8f2ff416d90311d678543c48d212acdd
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33352018"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36953883"
 ---
 # <a name="cd2drectu-class"></a>Classe CD2DRectU
 Wrapper per `D2D1_RECT_U`.  
@@ -42,13 +42,13 @@ class CD2DRectU : public D2D1_RECT_U;
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[CD2DRectU::CD2DRectU](#cd2drectu)|Di overload. Costruisce un `CD2DRectU` oggetto `D2D1_RECT_U` oggetto.|  
+|[CD2DRectU::CD2DRectU](#cd2drectu)|Di overload. Costruisce un `CD2DRectU` dall'oggetto `D2D1_RECT_U` oggetto.|  
   
 ### <a name="public-methods"></a>Metodi pubblici  
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[CD2DRectU::IsNull](#isnull)|Restituisce un `boolean` valore che indica se un'espressione non contiene dati validi ( `null`).|  
+|[CD2DRectU::IsNull](#isnull)|Restituisce un **booleano** valore che indica se un'espressione non contiene dati validi ( **null**).|  
   
 ### <a name="public-operators"></a>Operatori pubblici  
   
@@ -65,7 +65,7 @@ class CD2DRectU : public D2D1_RECT_U;
  **Intestazione:** afxrendertarget. h  
   
 ##  <a name="cd2drectu"></a>  CD2DRectU::CD2DRectU  
- Costruisce un oggetto con CD2DRectU da un oggetto CRect.  
+ Costruisce un oggetto CD2DRectU da un oggetto CRect.  
   
 ```  
 CD2DRectU(const CRect& rect);  
@@ -81,19 +81,19 @@ CD2DRectU(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `rect`  
+ *Rect*  
  rettangolo di origine  
   
- `uLeft`  
+ *uLeft*  
  coordinata sinistra di origine  
   
- `uTop`  
+ *uTop*  
  coordinata superiore di origine  
   
- `uRight`  
+ *uRight*  
  coordinata destra di origine  
   
- `uBottom`  
+ *uBottom*  
  coordinata inferiore di origine  
   
 ##  <a name="isnull"></a>  CD2DRectU::IsNull  
@@ -104,7 +104,7 @@ BOOL IsNull() const;
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- TRUE se superiore del rettangolo, sinistro, inferiore e i valori corretti sono tutti pari a 0; in caso contrario FALSE.  
+ Restituisce TRUE se parte superiore del rettangolo, sinistro, inferiore e i valori corretti sono tutti pari a 0; in caso contrario, FALSE.  
   
 ##  <a name="operator_crect"></a>  CRect CD2DRectU::operator  
  Converte un oggetto CRect CD2DRectU.  

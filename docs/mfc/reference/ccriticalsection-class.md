@@ -24,15 +24,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1d6e713f6d5238d99af8f9311eb05a4b2dd39f7b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6aba8c9ebe1eee6ca80d17fdff20c7d3dc30e2ae
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33353905"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956863"
 ---
 # <a name="ccriticalsection-class"></a>CCriticalSection (classe)
-Rappresenta una "sezione critica", ovvero un oggetto di sincronizzazione che consente un solo thread alla volta per accedere a una risorsa o una sezione di codice.  
+Rappresenta una "sezione critica", ovvero un oggetto di sincronizzazione che consente a un solo thread alla volta per accedere a una risorsa o una sezione di codice.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -52,7 +52,7 @@ class CCriticalSection : public CSyncObject
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[CCriticalSection::Lock](#lock)|Consente di accedere al `CCriticalSection` oggetto.|  
+|[CCriticalSection::Lock](#lock)|Utilizzare per accedere al `CCriticalSection` oggetto.|  
 |[CCriticalSection::Unlock](#unlock)|Rilascia l'oggetto `CCriticalSection`.|  
   
 ### <a name="public-operators"></a>Operatori pubblici  
@@ -65,10 +65,10 @@ class CCriticalSection : public CSyncObject
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[CCriticalSection::m_sect](#m_sect)|Oggetto **CRITICAL_SECTION** oggetto.|  
+|[CCriticalSection::m_sect](#m_sect)|Un **CRITICAL_SECTION** oggetto.|  
   
 ## <a name="remarks"></a>Note  
- Le sezioni critiche sono utili quando è consentito un solo thread alla volta modificare dati o un'altra risorsa controllata. Ad esempio, l'aggiunta di nodi a un elenco collegato è un processo che deve essere consentito solo da un solo thread alla volta. Utilizzando un `CCriticalSection` oggetto da controllare nell'elenco collegato, solo un thread alla volta può accedere all'elenco.  
+ Le sezioni critiche sono utili quando un solo thread alla volta può essere autorizzato a modificare i dati o un'altra risorsa controllata. Ad esempio, l'aggiunta di nodi a un elenco collegato è un processo che deve essere solo da un solo thread alla volta. Utilizzando un `CCriticalSection` oggetto da controllare nell'elenco collegato, solo un solo thread alla volta può accedere all'elenco.  
   
 > [!NOTE]
 >  La funzionalità del `CCriticalSection` classe viene fornita da un effettivo Win32 **CRITICAL_SECTION** oggetto.  
@@ -77,9 +77,9 @@ class CCriticalSection : public CSyncObject
   
  Esistono due metodi per l'utilizzo di un `CCriticalSection` oggetto: autonoma e incorporati in una classe.  
   
--   Metodo autonomo da utilizzare autonoma `CCriticalSection` oggetto, costruire la `CCriticalSection` oggetto quando è necessario. Dopo la restituzione ha esito positivo dal costruttore, bloccare in modo esplicito l'oggetto con una chiamata a [blocco](#lock). Chiamare [Unlock](#unlock) una volta completata l'accesso alla sezione critica. Questo metodo, mentre più chiaro a un utente durante la lettura del codice sorgente, è più soggetto a errori, sarà necessario bloccare e sbloccare la sezione critica prima e dopo l'accesso.  
+-   Metodo autonomo da utilizzare autonoma `CCriticalSection` dell'oggetto, costruire la `CCriticalSection` dell'oggetto quando è necessario. Dopo la restituzione ha esito positivo dal costruttore, bloccare in modo esplicito l'oggetto con una chiamata a [blocco](#lock). Chiamare [Unlock](#unlock) dopo avere accesso alla sezione critica. Questo metodo, mentre più chiaro a un utente durante la lettura del codice sorgente, è più soggetto a errori, è necessario ricordarsi di bloccare e sbloccare la sezione critica prima e dopo l'accesso.  
   
-     Un più è preferibile utilizzare il [CSingleLock](../../mfc/reference/csinglelock-class.md) classe. Include inoltre un `Lock` e `Unlock` (metodo), ma non è necessario preoccuparsi di sblocco della risorsa, se si verifica un'eccezione.  
+     Un metodo più preferibile consiste nell'usare il [CSingleLock](../../mfc/reference/csinglelock-class.md) classe. Include anche un `Lock` e `Unlock` (metodo), ma non è necessario preoccuparsi di sblocco della risorsa, se si verifica un'eccezione.  
   
 -   Incorporati metodo è anche possibile condividere una classe con più thread aggiungendo un `CCriticalSection`-membro di dati di tipo per la classe e il blocco il membro dei dati quando necessario.  
   
@@ -103,12 +103,12 @@ CCriticalSection();
 ```  
   
 ### <a name="remarks"></a>Note  
- Per accedere o rilasciare un `CCriticalSection` dell'oggetto, creare un [CSingleLock](../../mfc/reference/csinglelock-class.md) oggetto e chiamare il relativo [blocco](../../mfc/reference/csinglelock-class.md#lock) e [Unlock](../../mfc/reference/csinglelock-class.md#unlock) funzioni membro. Se il `CCriticalSection` viene utilizzato l'oggetto autonomo, chiamare il relativo [Unlock](#unlock) funzione membro per rilasciarlo.  
+ Per accedere o rilasciare un `CCriticalSection` dell'oggetto, creare un [CSingleLock](../../mfc/reference/csinglelock-class.md) oggetto e chiamare il metodo relativo [blocco](../../mfc/reference/csinglelock-class.md#lock) e [Unlock](../../mfc/reference/csinglelock-class.md#unlock) funzioni membro. Se il `CCriticalSection` viene utilizzato l'oggetto autonomo, chiamare il relativo [Unlock](#unlock) funzione membro per rilasciarlo.  
   
  Se il costruttore non riesce ad allocare la memoria di sistema necessarie, un'eccezione di memoria (di tipo [CMemoryException](../../mfc/reference/cmemoryexception-class.md)) viene generata automaticamente.  
   
 ### <a name="example"></a>Esempio  
-  Per vedere l'esempio [CCriticalSection::Lock](#lock).  
+  Vedere l'esempio relativo [CCriticalSection::Lock](#lock).  
   
 ##  <a name="lock"></a>  CCriticalSection::Lock  
  Chiamare questa funzione membro per ottenere l'accesso all'oggetto sezione critica.  
@@ -119,7 +119,7 @@ BOOL Lock(DWORD dwTimeout);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `dwTimeout`  
+ *dwTimeout*  
  `Lock` Ignora questo valore del parametro.  
   
 ### <a name="return-value"></a>Valore restituito  
@@ -128,12 +128,12 @@ BOOL Lock(DWORD dwTimeout);
 ### <a name="remarks"></a>Note  
  `Lock` è una chiamata di blocco che non verrà restituiti fino a quando non viene segnalata l'oggetto sezione critica (diventa disponibile).  
   
- Se il tempo di attesa è necessarie, è possibile utilizzare un [CMutex](../../mfc/reference/cmutex-class.md) oggetto anziché un `CCriticalSection` oggetto.  
+ Se le attese programmate sono necessarie, è possibile utilizzare un [CMutex](../../mfc/reference/cmutex-class.md) dell'oggetto anziché un `CCriticalSection` oggetto.  
   
  Se `Lock` non riesce ad allocare la memoria di sistema necessarie, un'eccezione di memoria (di tipo [CMemoryException](../../mfc/reference/cmemoryexception-class.md)) viene generata automaticamente.  
   
 ### <a name="example"></a>Esempio  
- Questo esempio viene illustrato l'approccio della sezione critica nidificata controllando l'accesso a una risorsa condivisa (statica `_strShared` oggetto) utilizzando un oggetto condiviso `CCriticalSection` oggetto. Il `SomeMethod` funzione viene illustrato l'aggiornamento di una risorsa condivisa in modo sicuro.  
+ Questo esempio viene illustrato l'approccio nidificata sezione critica controllando l'accesso a una risorsa condivisa (statica `_strShared` oggetto) utilizzando un oggetto condiviso `CCriticalSection` oggetto. Il `SomeMethod` funzione viene illustrato l'aggiornamento di una risorsa condivisa in modo sicuro.  
   
  [!code-cpp[NVC_MFC_Utilities#11](../../mfc/codesnippet/cpp/ccriticalsection-class_1.h)]  
   
@@ -165,10 +165,10 @@ BOOL Unlock();
  Diverso da zero se la `CCriticalSection` oggetto era di proprietà del thread e la versione è stata completata; in caso contrario 0.  
   
 ### <a name="remarks"></a>Note  
- Se il `CCriticalSection` utilizzato autonomo, `Unlock` deve essere chiamato subito dopo aver completato l'uso della risorsa controllata da una sezione critica. Se un [CSingleLock](../../mfc/reference/csinglelock-class.md) viene utilizzato l'oggetto, `CCriticalSection::Unlock` verrà chiamato per l'oggetto di blocco `Unlock` funzione membro.  
+ Se il `CCriticalSection` è in uso autonomo, `Unlock` deve essere chiamato subito dopo aver completato l'uso della risorsa controllata da una sezione critica. Se un [CSingleLock](../../mfc/reference/csinglelock-class.md) viene utilizzato l'oggetto, `CCriticalSection::Unlock` verrà chiamato per l'oggetto di blocco `Unlock` funzione membro.  
   
 ### <a name="example"></a>Esempio  
-  Per vedere l'esempio [CCriticalSection::Lock](#lock).  
+  Vedere l'esempio relativo [CCriticalSection::Lock](#lock).  
   
 ## <a name="see-also"></a>Vedere anche  
  [CSyncObject (classe)](../../mfc/reference/csyncobject-class.md)   

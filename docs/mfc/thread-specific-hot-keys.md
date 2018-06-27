@@ -17,17 +17,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bdd6cf2f2bb76c30f4cc00d75eb55d7d2c01fa7e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 14da7f0e5b0adbe72b6705700c1e9298751bc345
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33380419"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36953609"
 ---
 # <a name="thread-specific-hot-keys"></a>Tasti di scelta rapida specifici di thread
-Un'applicazione imposta un tasto di scelta rapida specifici di thread ([CHotKeyCtrl](../mfc/reference/chotkeyctrl-class.md)) con Windows **RegisterHotKey** (funzione). Quando l'utente preme un tasto di scelta rapida specifici di thread, Windows invia una [WM_HOTKEY](http://msdn.microsoft.com/library/windows/desktop/ms646279) messaggio all'inizio della coda di messaggi di un particolare thread. Il **WM_HOTKEY** messaggio contiene il codice tasto virtuale, lo stato e ID definiti dall'utente del tasto di scelta specifico che è stato premuto. Per un elenco di codici di tasti virtuali standard, vedere winuser. h. Per ulteriori informazioni su questo metodo, vedere [RegisterHotKey](http://msdn.microsoft.com/library/windows/desktop/ms646309).  
+Un'applicazione imposta un tasto di scelta rapida specifici di thread ([CHotKeyCtrl](../mfc/reference/chotkeyctrl-class.md)) tramite le finestre `RegisterHotKey` (funzione). Quando l'utente preme un tasto di scelta rapida specifici di thread, Windows invia una [WM_HOTKEY](http://msdn.microsoft.com/library/windows/desktop/ms646279) messaggio all'inizio della coda di messaggi di un particolare thread. Il messaggio WM_HOTKEY contiene il codice tasto virtuale, stato di spostamento e definiti dall'utente ID del tasto di scelta specifico che è stato premuto. Per un elenco di codici di tasti virtuali standard, vedere winuser. h. Per ulteriori informazioni su questo metodo, vedere [RegisterHotKey](http://msdn.microsoft.com/library/windows/desktop/ms646309).  
   
- Si noti che lo stato di spostamento flag utilizzato nella chiamata a **RegisterHotKey** non sono uguali a quelli restituiti dal [GetHotKey](../mfc/reference/chotkeyctrl-class.md#gethotkey) funzione membro; è necessario convertire i flag prima di chiamare **RegisterHotKey**.  
+ Si noti che lo stato di spostamento flag utilizzato nella chiamata a `RegisterHotKey` non corrispondono a quelli restituiti dal [GetHotKey](../mfc/reference/chotkeyctrl-class.md#gethotkey) funzione membro; è necessario convertire questi flag prima di chiamare `RegisterHotKey`.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Utilizzo di CHotKeyCtrl](../mfc/using-chotkeyctrl.md)   

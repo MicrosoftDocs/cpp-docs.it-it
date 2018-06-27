@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8e729c01d768d7ad74673b140496433ab73cf1f8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4fa82ea58cfd5d64f6aa825fe08264cdd17c1985
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33352935"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951065"
 ---
 # <a name="cbytearray-class"></a>Classe CByteArray
 Supporta matrici di byte dinamiche.  
@@ -69,7 +69,7 @@ class CByteArray : public CObject
 ```  
   
 ## <a name="members"></a>Membri  
- Le funzioni membro di `CByteArray` sono simili alle funzioni membro della classe [CObArray](../../mfc/reference/cobarray-class.md). Grazie a questa somiglianza, per le specifiche delle funzioni membro è possibile usare la documentazione di riferimento di `CObArray`. Ogni volta che un `CObject` puntatore come parametro della funzione o valore restituito, sostituire con un **BYTE**.  
+ Le funzioni membro `CByteArray` sono simili alle funzioni membro della classe [CObArray](../../mfc/reference/cobarray-class.md). Grazie a questa somiglianza, per le specifiche delle funzioni membro è possibile usare la documentazione di riferimento di `CObArray`. Ogni volta che un `CObject` puntatore come parametro della funzione o valore restituito, sostituire con un **BYTE**.  
   
  `CObject* CObArray::GetAt( int <nIndex> ) const;`  
   
@@ -112,12 +112,12 @@ class CByteArray : public CObject
 |[[] CObArray::operator](../../mfc/reference/cobarray-class.md#operator_at)|Imposta o ottiene l'elemento in corrispondenza dell'indice specificato.|  
   
 ## <a name="remarks"></a>Note  
- `CByteArray` incorpora la macro `IMPLEMENT_SERIAL` per supportare la serializzazione e il dump dei relativi elementi. Se una matrice di byte viene archiviata in un archivio, con l'inserimento di overload ( **<<**) (operatore) o con il `Serialize` funzione membro, ogni elemento è, a sua volta, serializzato.  
+ `CByteArray` incorpora la macro IMPLEMENT_SERIAL per supportare la serializzazione e il dump dei relativi elementi. Se una matrice di byte viene archiviata in un archivio, con l'inserimento di overload ( **<<**) (operatore) o con il `Serialize` funzione membro, ogni elemento è, di conseguenza, serializzato.  
   
 > [!NOTE]
 >  Prima di usare una matrice, usare `SetSize` per determinarne le dimensioni e allocare la necessaria memoria. Se non si usa `SetSize`, l'aggiunta di elementi alla matrice ne causa la riallocazione e la copia frequente. Le operazioni di riallocazione e copia frequenti sono inefficienti e possono frammentare la memoria.  
   
- Se è necessario eseguire il debug di output da singoli elementi nella matrice, è necessario impostare la profondità del `CDumpContext` oggetto 1 o versione successiva.  
+ Se è necessario eseguire il debug di output da singoli elementi nella matrice, è necessario impostare la profondità del `CDumpContext` oggetto 1 o versioni successive.  
   
  Per ulteriori informazioni sull'utilizzo `CByteArray`, vedere l'articolo [raccolte](../../mfc/collections.md).  
   

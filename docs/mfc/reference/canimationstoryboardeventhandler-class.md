@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eb7c89e6441379949386baecbddbb30f7c01ebff
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: add30fe8bfe2c19973ff657ae05b739986965a9b
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33352223"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36957117"
 ---
 # <a name="canimationstoryboardeventhandler-class"></a>Classe CAnimationStoryboardEventHandler
 Implementa un callback, chiamato dall'API di animazione quando viene modificato lo stato di uno storyboard o viene aggiornato uno storyboard.  
@@ -56,8 +56,8 @@ class CAnimationStoryboardEventHandler : public CUIAnimationStoryboardEventHandl
 |----------|-----------------|  
 |[CAnimationStoryboardEventHandler::CreateInstance](#createinstance)|Crea un'istanza di `CAnimationStoryboardEventHandler` callback.|  
 |[CAnimationStoryboardEventHandler::OnStoryboardStatusChanged](#onstoryboardstatuschanged)|Gestisce `OnStoryboardStatusChanged` che si verificano quando cambia lo stato di uno storyboard (esegue l'override `CUIAnimationStoryboardEventHandlerBase::OnStoryboardStatusChanged`.)|  
-|[CAnimationStoryboardEventHandler::OnStoryboardUpdated](#onstoryboardupdated)|Gestisce `OnStoryboardUpdated` che si verificano quando viene aggiornato uno storyboard (esegue l'override `CUIAnimationStoryboardEventHandlerBase::OnStoryboardUpdated`.)|  
-|[CAnimationStoryboardEventHandler::SetAnimationController](#setanimationcontroller)|Archivia un puntatore al controller di animazione per eventi della route.|  
+|[CAnimationStoryboardEventHandler::OnStoryboardUpdated](#onstoryboardupdated)|Gestisce `OnStoryboardUpdated` eventi che si verificano quando viene aggiornato uno storyboard (esegue l'override `CUIAnimationStoryboardEventHandlerBase::OnStoryboardUpdated`.)|  
+|[CAnimationStoryboardEventHandler::SetAnimationController](#setanimationcontroller)|Archivia un puntatore accessibile al controller di animazione di eventi della route.|  
   
 ## <a name="remarks"></a>Note  
  Questo gestore eventi viene creato e passato a `IUIAnimationStoryboard::SetStoryboardEventHandler` metodo, quando si chiama `CAnimationController::EnableStoryboardEventHandler`.  
@@ -89,16 +89,16 @@ static COM_DECLSPEC_NOTHROW HRESULT CreateInstance(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `pAnimationController`  
+ *pAnimationController*  
  Puntatore al controller di animazione che riceverà gli eventi.  
   
- `ppHandler`  
+ *ppHandler*  
   
 ### <a name="return-value"></a>Valore restituito  
- Se il metodo ha esito positivo, viene restituito S_OK. In caso contrario, restituisce un codice di errore HRESULT.  
+ Se il metodo ha esito positivo, viene restituito S_OK. In caso contrario, restituirà un codice di errore HRESULT.  
   
 ##  <a name="onstoryboardstatuschanged"></a>  CAnimationStoryboardEventHandler::OnStoryboardStatusChanged  
- Gestisce eventi OnStoryboardStatusChanged che si verificano quando cambia lo stato di uno storyboard  
+ Gestisce gli eventi OnStoryboardStatusChanged, che si verificano quando cambia lo stato di uno storyboard  
   
 ```  
 IFACEMETHOD(OnStoryboardStatusChanged) (
@@ -108,41 +108,41 @@ IFACEMETHOD(OnStoryboardStatusChanged) (
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `storyboard`  
- Puntatore allo storyboard il cui stato è stato modificato.  
+ *storyboard*  
+ Puntatore a uno storyboard il cui stato è stato modificato.  
   
- `newStatus`  
- Specifica lo stato di nuovo storyboard.  
+ *newStatus*  
+ Specifica nuovo stato di uno storyboard.  
   
- `previousStatus`  
+ *previousStatus*  
  Specifica lo stato dello storyboard precedente.  
   
 ### <a name="return-value"></a>Valore restituito  
- S_OK se il metodo ha esito positivo. in caso contrario E_FAIL.  
+ S_OK se il metodo ha esito positivo; in caso contrario E_FAIL.  
   
 ##  <a name="onstoryboardupdated"></a>  CAnimationStoryboardEventHandler::OnStoryboardUpdated  
- Gestisce eventi OnStoryboardUpdated che si verificano quando viene aggiornato uno storyboard  
+ Gestisce gli eventi OnStoryboardUpdated, che si verificano quando viene aggiornato uno storyboard  
   
 ```  
 IFACEMETHOD(OnStoryboardUpdated) (__in IUIAnimationStoryboard* storyboard);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `storyboard`  
+ *storyboard*  
  Puntatore allo storyboard, che è stato aggiornato.  
   
 ### <a name="return-value"></a>Valore restituito  
- S_OK se il metodo ha esito positivo. in caso contrario E_FAIL.  
+ S_OK se il metodo ha esito positivo; in caso contrario E_FAIL.  
   
 ##  <a name="setanimationcontroller"></a>  CAnimationStoryboardEventHandler::SetAnimationController  
- Archivia un puntatore al controller di animazione per eventi della route.  
+ Archivia un puntatore accessibile al controller di animazione di eventi della route.  
   
 ```  
 void SetAnimationController(CAnimationController* pAnimationController);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `pAnimationController`  
+ *pAnimationController*  
  Puntatore al controller di animazione che riceverà gli eventi.  
   
 ## <a name="see-also"></a>Vedere anche  

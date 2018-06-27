@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 197fc5ecb1b9676dd1ff11327c62950992f6f06d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d3a89cb258b7208346a76cd2a59eb8da40c38087
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33359229"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36950693"
 ---
 # <a name="cd2dlayer-class"></a>Classe CD2DLayer
 Wrapper per ID2D1Layer.  
@@ -57,13 +57,13 @@ class CD2DLayer : public CD2DResource;
 |Nome|Descrizione|  
 |----------|-----------------|  
 |[CD2DLayer::CD2DLayer](#cd2dlayer)|Costruisce un oggetto CD2DLayer.|  
-|[CD2DLayer:: ~ CD2DLayer](#_dtorcd2dlayer)|Distruttore. Chiamato quando viene eliminato un oggetto di livello D2D.|  
+|[CD2DLayer:: ~ CD2DLayer](#_dtorcd2dlayer)|Distruttore. Chiamata eseguita quando viene eliminata definitivamente un oggetto di livello D2D.|  
   
 ### <a name="public-methods"></a>Metodi pubblici  
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[CD2DLayer::Attach](#attach)|Collega a esistente di interfaccia di risorsa per l'oggetto|  
+|[CD2DLayer::Attach](#attach)|Associa esistente interfaccia risorsa per l'oggetto|  
 |[CD2DLayer::Create](#create)|Crea un CD2DLayer. (Esegue l'override [CD2DResource:: Create](../../mfc/reference/cd2dresource-class.md#create).)|  
 |[CD2DLayer::Destroy](#destroy)|Elimina un oggetto CD2DLayer. (Esegue l'override [CD2DResource:: Destroy](../../mfc/reference/cd2dresource-class.md#destroy).)|  
 |[CD2DLayer::Detach](#detach)|Disconnette l'interfaccia di risorsa dall'oggetto|  
@@ -94,22 +94,22 @@ class CD2DLayer : public CD2DResource;
  **Intestazione:** afxrendertarget. h  
   
 ##  <a name="_dtorcd2dlayer"></a>  CD2DLayer:: ~ CD2DLayer  
- Distruttore. Chiamato quando viene eliminato un oggetto di livello D2D.  
+ Distruttore. Chiamata eseguita quando viene eliminata definitivamente un oggetto di livello D2D.  
   
 ```  
 virtual ~CD2DLayer();
 ```  
   
 ##  <a name="attach"></a>  CD2DLayer::Attach  
- Collega a esistente di interfaccia di risorsa per l'oggetto  
+ Associa esistente interfaccia risorsa per l'oggetto  
   
 ```  
 void Attach(ID2D1Layer* pResource);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `pResource`  
- Interfaccia della risorsa esistente. Non può essere NULL  
+ *pResource*  
+ Interfaccia risorsa esistente. Non può essere NULL  
   
 ##  <a name="cd2dlayer"></a>  CD2DLayer::CD2DLayer  
  Costruisce un oggetto CD2DLayer.  
@@ -121,10 +121,10 @@ CD2DLayer(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `pParentTarget`  
+ *pParentTarget*  
  Puntatore alla destinazione di rendering.  
   
- `bAutoDestroy`  
+ *flag bAutoDestroy*  
  Indica che l'oggetto verrà eliminato dal proprietario (pParentTarget).  
   
 ##  <a name="create"></a>  CD2DLayer::Create  
@@ -135,11 +135,11 @@ virtual HRESULT Create(CRenderTarget* pRenderTarget);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `pRenderTarget`  
+ *pRenderTarget*  
  Puntatore alla destinazione di rendering.  
   
 ### <a name="return-value"></a>Valore restituito  
- Se il metodo ha esito positivo, viene restituito S_OK. In caso contrario, restituisce un codice di errore HRESULT.  
+ Se il metodo ha esito positivo, viene restituito S_OK. In caso contrario, restituirà un codice di errore HRESULT.  
   
 ##  <a name="destroy"></a>  CD2DLayer::Destroy  
  Elimina un oggetto CD2DLayer.  
@@ -156,7 +156,7 @@ ID2D1Layer* Detach();
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- Puntatore a interfaccia risorse scollegato.  
+ Puntatore a interfaccia risorsa scollegato.  
   
 ##  <a name="get"></a>  CD2DLayer::Get  
  Restituisce l'interfaccia ID2D1Layer  
@@ -176,7 +176,7 @@ CD2DSizeF GetSize() const;
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- La dimensione corrente della destinazione di rendering in pixel indipendenti dal dispositivo  
+ Le dimensioni correnti della destinazione di rendering in pixel indipendenti dal dispositivo  
   
 ##  <a name="isvalid"></a>  CD2DLayer::IsValid  
  Verifica la validità della risorsa  
@@ -186,7 +186,7 @@ virtual BOOL IsValid() const;
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- TRUE se la risorsa è valido. in caso contrario FALSE.  
+ TRUE se la risorsa è valido. in caso contrario, FALSE.  
   
 ##  <a name="m_player"></a>  CD2DLayer::m_pLayer  
  Archivia un puntatore a un oggetto ID2D1Layer.  

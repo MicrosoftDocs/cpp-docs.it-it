@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 89c3ec260fad8b0e2f8224c639aa745a9101e8b7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 39588a6835b3484fc3961e793596c1190f85f7c4
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33358041"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952752"
 ---
 # <a name="ccustomtransition-class"></a>Classe CCustomTransition
 Implementa una transizione personalizzata.  
@@ -63,8 +63,8 @@ class CCustomTransition : public CBaseTransition;
 |Nome|Descrizione|  
 |----------|-----------------|  
 |[CCustomTransition::Create](#create)|Chiama la libreria di transizione per creare oggetti COM di transizione incapsulato. (Esegue l'override [CBaseTransition:: Create](../../mfc/reference/cbasetransition-class.md#create).)|  
-|[CCustomTransition:: SetInitialValue](#setinitialvalue)|Imposta un valore iniziale, che verrà applicato a una variabile di animazione associata a questa transizione.|  
-|[CCustomTransition:: SetInitialVelocity](#setinitialvelocity)|Imposta una velocità iniziale, che verranno applicate a una variabile di animazione associata a questa transizione.|  
+|[CCustomTransition:: SetInitialValue](#setinitialvalue)|Imposta un valore iniziale, che verrà applicato a una variabile di animazione associata con questa transizione.|  
+|[CCustomTransition:: SetInitialVelocity](#setinitialvelocity)|Imposta una velocità iniziale, che verranno applicate a una variabile di animazione associata con questa transizione.|  
   
 ### <a name="protected-data-members"></a>Membri dati protetti  
   
@@ -77,7 +77,7 @@ class CCustomTransition : public CBaseTransition;
 |[CCustomTransition::m_pInterpolator](#m_pinterpolator)|Archivia un puntatore a un interpolatore personalizzato.|  
   
 ## <a name="remarks"></a>Note  
- La classe CCustomTransitions consente agli sviluppatori di implementare le transizioni personalizzate. Viene creato e utilizzato come una transizione standard, ma il costruttore accetta come parametro un puntatore a un interpolatore personalizzato. Eseguire i passaggi seguenti per utilizzare le transizioni personalizzate: 1. Derivare una classe da CCustomInterpolator e implementare almeno il metodo InterpolateValue. 2. Verificare che la durata dell'oggetto interpolatore personalizzato deve essere maggiore della durata dell'animazione in cui viene utilizzato. 3. Creare un'istanza (utilizzando l'operatore new) di un oggetto CCustomTransition e passare un puntatore a un interpolatore personalizzato nel costruttore. 4. Chiamare CCustomTransition:: SetInitialValue e CCustomTransition:: SetInitialVelocity se questi parametri sono necessari per l'interpolazione personalizzata. 5. Passare il puntatore alla transizione personalizzato al metodo AddTransition dell'oggetto di animazione, il cui valore deve essere aggiunta un'animazione con l'algoritmo personalizzato. 6. Quando è necessario modificare il valore dell'oggetto di animazione API di animazione Windows chiamerà InterpolateValue (e altri metodi rilevanti) CCustomInterpolator.  
+ La classe CCustomTransitions consente agli sviluppatori di implementare le transizioni personalizzate. Viene creato e utilizzato come una transizione standard, ma il costruttore accetta come parametro un puntatore a un interpolatore personalizzato. Eseguire i passaggi seguenti per utilizzare le transizioni personalizzate: 1. Derivare una classe CCustomInterpolator e implementare almeno il metodo InterpolateValue. 2. Verificare che la durata dell'oggetto personalizzato interpolatore deve essere maggiore della durata dell'animazione in cui viene utilizzato. 3. Creare un'istanza (utilizzando l'operatore new) un oggetto CCustomTransition e passare un puntatore a interpolatore personalizzato nel costruttore. 4. Chiamare CCustomTransition:: SetInitialValue e CCustomTransition:: SetInitialVelocity se questi parametri sono obbligatori per l'interpolazione personalizzata. 5. Passare il puntatore alla transizione personalizzato al metodo AddTransition dell'oggetto di animazione, il cui valore deve essere aggiunta un'animazione con l'algoritmo personalizzato. 6. Quando il valore dell'oggetto di animazione deve cambiare API di animazione Windows chiamerà InterpolateValue (e altri metodi rilevanti) CCustomInterpolator.  
   
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -97,7 +97,7 @@ CCustomTransition(CCustomInterpolator* pInterpolator);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `pInterpolator`  
+ *pInterpolator*  
  Puntatore a interpolatore personalizzato.  
   
 ##  <a name="create"></a>  CCustomTransition::Create  
@@ -110,13 +110,13 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `pFactory`  
+ *pFactory*  
  Puntatore alla transizione factory, che è responsabile per la creazione di transizioni personalizzate.  
   
 ### <a name="return-value"></a>Valore restituito  
   
 ### <a name="remarks"></a>Note  
- Questo metodo può anche impostare il valore iniziale e la velocità iniziale da applicare a una variabile di animazione, il quale è associata a questa transizione. A questo scopo è necessario chiamare SetInitialValue e SetInitialVelocity prima che il framework crea l'oggetto COM incapsulato transizione (verifica quando si chiama CAnimationController:: AnimateGroup).  
+ Questo metodo può anche impostare valore iniziale e velocità iniziale da applicare a una variabile di animazione, il quale è associata a questa transizione. Per questo scopo è necessario chiamare SetInitialValue e SetInitialVelocity prima che il framework crea l'oggetto COM incapsulato transizione (verifica quando si chiama CAnimationController:: AnimateGroup).  
   
 ##  <a name="m_binitialvaluespecified"></a>  CCustomTransition::m_bInitialValueSpecified  
  Specifica se il valore iniziale è stato specificato con SetInitialValue.  
@@ -154,24 +154,24 @@ CCustomInterpolator* m_pInterpolator;
 ```  
   
 ##  <a name="setinitialvalue"></a>  CCustomTransition:: SetInitialValue  
- Imposta un valore iniziale, che verrà applicato a una variabile di animazione associata a questa transizione.  
+ Imposta un valore iniziale, che verrà applicato a una variabile di animazione associata con questa transizione.  
   
 ```  
 void SetInitialValue(DOUBLE initialValue);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `initialValue`  
+ *initialValue*  
   
 ##  <a name="setinitialvelocity"></a>  CCustomTransition:: SetInitialVelocity  
- Imposta una velocità iniziale, che verranno applicate a una variabile di animazione associata a questa transizione.  
+ Imposta una velocità iniziale, che verranno applicate a una variabile di animazione associata con questa transizione.  
   
 ```  
 void SetInitialVelocity(DOUBLE initialVelocity);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `initialVelocity`  
+ *initialVelocity*  
   
 ## <a name="see-also"></a>Vedere anche  
  [Classi](../../mfc/reference/mfc-classes.md)

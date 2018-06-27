@@ -16,23 +16,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 64fb9a3ff1c27aade9f74a8ed95a8016829874ab
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 76ccb2ec126ae57e39b1a4fab3a0bff82a353d71
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33384075"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36953762"
 ---
 # <a name="windows-sockets-deriving-from-socket-classes"></a>Windows Sockets: derivazione dalle classi Socket
-In questo articolo vengono descritte alcune delle funzionalità che è possibile ottenere derivare la propria classe da una delle classi di socket.  
+In questo articolo vengono descritte alcune delle funzionalità che è possibile liberare derivare la propria classe da una delle classi di socket.  
   
- È possibile derivare le classi di socket dal [CAsyncSocket](../mfc/reference/casyncsocket-class.md) o [CSocket](../mfc/reference/csocket-class.md) per aggiungere funzionalità personalizzate. In particolare, queste classi forniscono un numero di funzioni membro virtuali che è possibile eseguire l'override. Queste funzioni includono [OnReceive](../mfc/reference/casyncsocket-class.md#onreceive), [OnSend](../mfc/reference/casyncsocket-class.md#onsend), [OnAccept](../mfc/reference/casyncsocket-class.md#onaccept), [OnConnect](../mfc/reference/casyncsocket-class.md#onconnect), e [OnClose](../mfc/reference/casyncsocket-class.md#onclose). È possibile sostituire le funzioni nella classe derivata socket per sfruttare le notifiche forniscono quando si verificano eventi di rete. Il framework chiama queste funzioni di callback di notifica per la notifica degli eventi socket importanti, ad esempio la ricezione di dati che è possibile iniziare la lettura. Per ulteriori informazioni sulle funzioni di notifica, vedere [Windows Sockets: notifiche Socket](../mfc/windows-sockets-socket-notifications.md).  
+ È possibile derivare le proprie classi socket uno [CAsyncSocket](../mfc/reference/casyncsocket-class.md) oppure [CSocket](../mfc/reference/csocket-class.md) per aggiungere funzionalità personalizzate. In particolare, queste classi forniscono un numero di funzioni membro virtuali che è possibile eseguire l'override. Queste funzioni includono [OnReceive](../mfc/reference/casyncsocket-class.md#onreceive), [OnSend](../mfc/reference/casyncsocket-class.md#onsend), [OnAccept](../mfc/reference/casyncsocket-class.md#onaccept), [OnConnect](../mfc/reference/casyncsocket-class.md#onconnect), e [OnClose](../mfc/reference/casyncsocket-class.md#onclose). È possibile sostituire le funzioni nella classe derivata socket per sfruttare le notifiche forniscono quando si verificano eventi di rete. Il framework chiama queste funzioni di callback di notifica per ricevere una notifica degli eventi di socket importanti, ad esempio la ricezione di dati che è possibile iniziare la lettura. Per ulteriori informazioni sulle funzioni di notifica, vedere [Windows Sockets: notifiche Socket](../mfc/windows-sockets-socket-notifications.md).  
   
- Inoltre, classe `CSocket` fornisce il [OnMessagePending](../mfc/reference/csocket-class.md#onmessagepending) funzione membro (un avanzato sottoponibile a override). MFC chiama questa funzione, mentre il socket è distribuzione dei messaggi basati su Windows. È possibile eseguire l'override `OnMessagePending` per cercare determinati messaggi da Windows e rispondere ad essi.  
+ Inoltre, classe `CSocket` fornisce il [OnMessagePending](../mfc/reference/csocket-class.md#onmessagepending) funzione membro (un avanzato sottoponibile a override). MFC chiama questa funzione, mentre il socket è visualizzazione messaggi basati su Windows. È possibile eseguire l'override `OnMessagePending` per cercare determinati messaggi da Windows e rispondere ad essi.  
   
- La versione predefinita di `OnMessagePending` fornita nella classe `CSocket` esamina la coda di messaggi per `WM_PAINT` messaggi durante l'attesa di completamento di una chiamata di blocco. Invia messaggi di disegno per migliorare la qualità. Oltre a risultare utile, Mostra un modo, si potrebbe quindi sostituire la funzione manualmente. Un altro esempio, è consigliabile utilizzare `OnMessagePending` per l'attività seguente. Si supponga di che visualizza una finestra di dialogo non modale durante l'attesa di una transazione di rete per il completamento. Nella finestra di dialogo contiene un pulsante di annullamento che l'utente può utilizzare per annullare le transazioni di blocco che impiegano troppo lunga. Il `OnMessagePending` sostituzione potrebbe pumping dei messaggi correlati a questa finestra di dialogo non modale.  
+ La versione predefinita del `OnMessagePending` fornita nella classe `CSocket` esamina la coda di messaggi per i messaggi WM_PAINT durante l'attesa di una chiamata di blocco completare. Invia messaggi di disegno per migliorare la qualità di visualizzazione. Oltre a risultare utile, Mostra un modo, si potrebbe quindi sostituire la funzione manualmente. Un altro esempio, è consigliabile utilizzare `OnMessagePending` per l'attività seguente. Si supponga di che visualizza una finestra di dialogo non modali durante l'attesa di una transazione di rete venga completata. La finestra di dialogo contiene un pulsante di annullamento che l'utente può utilizzare per annullare le transazioni di blocco che impiegano troppo lunga. Il `OnMessagePending` override potrebbe essere il pumping dei messaggi correlati a questa finestra di dialogo non modale.  
   
- Nel `OnMessagePending` eseguire l'override, restituire **TRUE** o il valore restituito da una chiamata alla versione della classe di base di `OnMessagePending`. Se esegue il lavoro che si desidera comunque eseguita, chiamare la versione della classe di base.  
+ Nel `OnMessagePending` eseguire l'override, restituire **TRUE** o il valore restituito da una chiamata alla versione della classe di base di `OnMessagePending`. Se esegue il lavoro che si desidera comunque eseguita, chiamare la versione della classe base.  
   
  Per altre informazioni, vedere:  
   

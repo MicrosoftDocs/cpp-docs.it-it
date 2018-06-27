@@ -24,27 +24,27 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 48f3bd6c6463bbbe26214a29960260d2be583e20
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bb5e6ad4cfcc1e14d3b6accc1e5adaf4037669a4
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33385638"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36950214"
 ---
 # <a name="using-documents"></a>Utilizzo di documenti
-Collaborare, documenti e visualizzazioni:  
+Modalità di collaborazione, documenti e visualizzazioni:  
   
 -   Contengono, gestire e visualizzare le specifiche dell'applicazione [dati](../mfc/managing-data-with-document-data-variables.md).  
   
--   Fornire un'interfaccia composta da [variabili dati documento](../mfc/managing-data-with-document-data-variables.md) per la manipolazione dei dati.  
+-   Fornire un'interfaccia costituita [variabili dati documento](../mfc/managing-data-with-document-data-variables.md) per la manipolazione dei dati.  
   
--   Partecipare [scrittura e lettura di file](../mfc/serializing-data-to-and-from-files.md).  
+-   Partecipare [scrivere e leggere file](../mfc/serializing-data-to-and-from-files.md).  
   
 -   Partecipare [stampa](../mfc/role-of-the-view-in-printing.md).  
   
 -   [Gestire](../mfc/handling-commands-in-the-document.md) la maggior parte dei comandi e messaggi dell'applicazione.  
   
- Il documento è particolarmente coinvolte nella gestione dei dati. Archiviare i dati, in genere, nelle variabili di membro di classe documento. La vista utilizza queste variabili per accedere ai dati per la visualizzazione e aggiornare. Il meccanismo di serializzazione predefinito del documento gestisce la lettura e scrittura dei dati da e verso i file. Documenti possono anche gestire i comandi (ma non di Windows diverso da messaggi di **WM_COMMAND**).  
+ Il documento è particolarmente coinvolte nella gestione dei dati. Archiviare i dati, in genere, nelle variabili di membro di classe documento. La vista utilizza queste variabili per accedere ai dati per la visualizzazione e aggiornare. Meccanismo di serializzazione predefinito del documento gestisce la lettura e scrittura dei dati da e verso i file. Documenti possono gestire anche i comandi (ma non i messaggi di Windows diverso da WM_COMMAND).  
   
 ## <a name="what-do-you-want-to-know-more-about"></a>Ciò che si desidera saperne di più  
   

@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a2d55768f423feef3b5093ec0af6365aecfaafee
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: cfe91812d178618b1707f99aa10d6bd492109069
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33385109"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956795"
 ---
 # <a name="walkthrough-updating-the-mfc-scribble-application-part-1"></a>Procedura dettagliata: Aggiornamento dell'applicazione MFC Scribble (parte 1)
 In questa procedura dettagliata viene illustrato come modificare un'applicazione MFC esistente per utilizzare l'interfaccia utente della barra multifunzione. Visual Studio supporta sia la barra multifunzione di Office 2007 che la barra multifunzione Windows 7 Scenic. Per ulteriori informazioni sull'interfaccia utente della barra multifunzione, vedere [barre multifunzione](http://go.microsoft.com/fwlink/p/?linkid=129233) nel sito Web MSDN.  
@@ -56,7 +56,7 @@ In questa procedura dettagliata viene illustrato come modificare un'applicazione
   
 #### <a name="to-replace-the-base-classes-in-the-scribble-application"></a>Per sostituire le classi base nell'applicazione Scribble  
   
-1.  Scribble. cpp, verificare che `CScribbleApp::InitInstance` include una chiamata a [AfxOleInit](../mfc/reference/ole-initialization.md#afxoleinit).  
+1.  In SCRIBBLE. cpp, verificare che `CScribbleApp::InitInstance` include una chiamata a [AfxOleInit](../mfc/reference/ole-initialization.md#afxoleinit).  
   
 2.  Aggiungere il codice seguente al file stdafx.h.  
   
@@ -79,13 +79,13 @@ In questa procedura dettagliata viene illustrato come modificare un'applicazione
 
  ```  
   
-5.  La cornice principale di un'applicazione MDI (Multiple Document Interface, interfaccia a documenti multipli) non è più derivata dalla classe `CMDIFrameWnd`. In alternativa, è derivato dal [CMDIFrameWndEx](../mfc/reference/cmdiframewndex-class.md) classe.  
+5.  La cornice principale di un'applicazione MDI (Multiple Document Interface, interfaccia a documenti multipli) non è più derivata dalla classe `CMDIFrameWnd`. Al contrario, viene derivata dal [CMDIFrameWndEx](../mfc/reference/cmdiframewndex-class.md) classe.  
   
      Nei file mainfrm.h e mainfrm.cpp sostituire tutti i riferimenti a `CMDIFrameWnd` con `CMDIFrameWndEx`.  
   
 6.  Nei file childfrm.h e childfrm.cpp sostituire `CMDIChildWnd` con `CMDIChildWndEx`.  
   
-     Nel childfrm. file h, sostituire `CSplitterWnd` con `CSplitterWndEx`.  
+     In childfrm. file h, sostituire `CSplitterWnd` con `CSplitterWndEx`.  
   
 7.  Modificare le barre degli strumenti e le barre di stato per utilizzare le nuove classi MFC.  
   
@@ -129,9 +129,9 @@ In questa procedura dettagliata viene illustrato come modificare un'applicazione
 ##  <a name="addbitmap"></a> Aggiunta di bitmap al progetto  
  I quattro passaggi successivi di questa procedura dettagliata richiedono risorse bitmap. È possibile ottenere le bitmap appropriate in diversi modi:  
   
--   Utilizzare il [editor risorse](../windows/resource-editors.md) inventare proprio bitmap. In alternativa, utilizzare gli editor risorse per assemblare bitmap partendo da immagini con estensione png (Portable Network Graphics) che sono incluse in [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)]. Queste immagini sono nel `VS2008ImageLibrary` directory.  
+-   Usare la [editor di risorse](../windows/resource-editors.md) inventare proprio bitmap. In alternativa, utilizzare gli editor risorse per assemblare bitmap partendo da immagini con estensione png (Portable Network Graphics) che sono incluse in [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)]. Queste immagini sono nel `VS2008ImageLibrary` directory.  
   
-     Tuttavia, l'interfaccia utente della barra multifunzione richiede che determinate bitmap supportino le immagini trasparenti. Bitmap trasparenti utilizzano pixel a 32 bit, dove 24 bit specificano i componenti rossi, verde e blu del colore e 8 bit definiscono un *canale alfa* che specifica la trasparenza del colore. Con gli editor risorse correnti è possibile visualizzare, ma non modificare, le bitmap con pixel a 32 bit. Pertanto, utilizzare un editor di immagini esterno anziché gli editor risorse per modificare le bitmap trasparenti.  
+     Tuttavia, l'interfaccia utente della barra multifunzione richiede che determinate bitmap supportino le immagini trasparenti. Le bitmap trasparenti utilizzano pixel a 32 bit, dove 24 bit specificano i componenti rossi, verde e blu del colore e 8 bit definiscono un *canale alfa* che specifica la trasparenza del colore. Con gli editor risorse correnti è possibile visualizzare, ma non modificare, le bitmap con pixel a 32 bit. Pertanto, utilizzare un editor di immagini esterno anziché gli editor risorse per modificare le bitmap trasparenti.  
   
 -   Copiare un file di risorse appropriato da un'altra applicazione al progetto e importare le bitmap da quel file.  
   
@@ -149,13 +149,13 @@ In questa procedura dettagliata viene illustrato come modificare un'applicazione
   
     4.  Creare una copia del file toolbar.bmp e salvarla nell'esempio RibbonGadgets. Rinominare la copia panelicons.bmp e spostarla nel progetto Scribble.  
   
-2.  Importare la bitmap per un'applicazione MFC. In **visualizzazione risorse**, fare doppio clic su di **Scribble. rc** nodo, fare doppio clic su di **Bitmap** nodo e quindi fare clic su **aggiungere risorse**. Nella finestra di dialogo visualizzata, fare clic su **importazione**. Individuare il `res` directory, selezionare il file main.bmp e quindi fare clic su **aprire**.  
+2.  Importare la bitmap per un'applicazione MFC. In **visualizzazione risorse**, fare doppio clic sui **Scribble. rc** nodo, fare doppio clic sul **Bitmap** nodo e quindi fare clic su **Aggiungi risorsa**. Nella finestra di dialogo visualizzata, fare clic su **importazione**. Individuare il `res` directory, selezionare il file Main bmp e quindi fare clic su **Open**.  
   
      La bitmap main.bmp contiene un'immagine 26x26. Modificare l'ID della bitmap in IDB_RIBBON_MAIN.  
   
 3.  Importare le bitmap dal menu File associato al pulsante dell'applicazione.  
   
-    1.  Importare il file filesmall.bmp, il quale contiene dieci immagini 16x16 (16x160). Poiché è necessario che le immagini solo otto 16x16 (16x128), utilizzare il **visualizzazione risorse** per modificare la larghezza di tale bitmap da 160 a 128. Modificare l'ID della bitmap in IDB_RIBBON_FILESMALL.  
+    1.  Importare il file filesmall.bmp, il quale contiene dieci immagini 16x16 (16x160). Poiché è necessario che le immagini solo otto 16x16 (16x128), usare il **visualizzazione risorse** per modificare la larghezza di tale bitmap da 160 a 128. Modificare l'ID della bitmap in IDB_RIBBON_FILESMALL.  
   
     2.  Importare il file filelarge.bmp, il quale contiene otto immagini 32x32 (32x256). Modificare l'ID della bitmap in IDB_RIBBON_FILELARGE.  
   
@@ -167,7 +167,7 @@ In questa procedura dettagliata viene illustrato come modificare un'applicazione
   
 5.  Importare le bitmap per i pannelli della barra multifunzione ridimensionati. Queste bitmap, o icone di pannello, vengono spesso utilizzate dopo un'operazione di ridimensionamento se la barra multifunzione è troppo piccola per visualizzare l'intero pannello.  
   
-    1.  Importare la bitmap panelicons.bmp, la quale contiene otto immagini 16x16. Nel **proprietà** finestra il **Editor delle Bitmap**, regolare la larghezza della bitmap a 64 (16x64). Modificare l'ID della bitmap in IDB_PANEL_ICONS.  
+    1.  Importare la bitmap panelicons.bmp, la quale contiene otto immagini 16x16. Nel **delle proprietà** finestra del **Editor delle Bitmap**, regolare la larghezza della bitmap a 64 (16x64). Modificare l'ID della bitmap in IDB_PANEL_ICONS.  
   
  [[Sezioni](#top)]  
   
@@ -178,47 +178,47 @@ In questa procedura dettagliata viene illustrato come modificare un'applicazione
   
 #### <a name="to-add-a-ribbon-resource-to-the-project"></a>Per aggiungere una risorsa barra multifunzione al progetto  
   
-1.  Nel **progetto** menu, fare clic su **Aggiungi risorsa**.  
+1.  Nel **Project** menu, fare clic su **Aggiungi risorsa**.  
   
-2.  Nel **Aggiungi risorsa** nella finestra di dialogo **della barra multifunzione** e quindi fare clic su **New**.  
+2.  Nel **Aggiungi risorsa** finestra di dialogo **della barra multifunzione** e quindi fare clic su **nuovo**.  
   
-     In Visual Studio verrà creata una risorsa barra multifunzione che verrà aperta nella visualizzazione Progettazione. L'ID di risorsa della barra multifunzione è IDR_RIBBON1, il quale viene visualizzato in **visualizzazione risorse**. La barra multifunzione contiene una categoria e un pannello.  
+     In Visual Studio verrà creata una risorsa barra multifunzione che verrà aperta nella visualizzazione Progettazione. L'ID di risorsa della barra multifunzione è IDR_RIBBON1, il quale viene visualizzato nella **visualizzazione risorse**. La barra multifunzione contiene una categoria e un pannello.  
   
 3.  È possibile personalizzare il pulsante dell'applicazione modificandone le proprietà. Gli ID di messaggio che vengono utilizzati in questo codice sono già definiti nel menu per Scribble 1.0.  
   
-4.  Nella visualizzazione Progettazione fare clic sul pulsante dell'applicazione per visualizzarne le proprietà. Modificare i valori delle proprietà come segue: **immagine** a `IDB_RIBBON_MAIN`, **Prompt** per `File`, **chiavi** a `f`, **Large Images** a `IDB_RIBBON_FILELARGE`, e **Small Images** a `IDB_RIBBON_FILESMALL`.  
+4.  Nella visualizzazione Progettazione fare clic sul pulsante dell'applicazione per visualizzarne le proprietà. Modificare i valori delle proprietà come segue: **immagine** alla *IDB_RIBBON_MAIN*, **dei messaggi di richiesta** a *File*, **chiavi** per *f*, **Large Images** al *IDB_RIBBON_FILELARGE*, e **Small Images** a *IDB_RIBBON_ FILESMALL*.  
   
-5.  Le seguenti modifiche creano il menu che viene visualizzato quando l'utente fa clic sul pulsante dell'applicazione. Fare clic sui puntini di sospensione (**...** ) accanto a **elementi principali** per aprire la **Editor elementi**.  
+5.  Le seguenti modifiche creano il menu che viene visualizzato quando l'utente fa clic sul pulsante dell'applicazione. Fare clic sui puntini di sospensione (**...** ) accanto a **elementi principali** per aprire il **Editor elementi**.  
   
-    1.  Fare clic su **Aggiungi** per aggiungere un pulsante. Modifica **didascalia** a `&New`, **ID** a `ID_FILE_NEW`, **immagine** a `0`, **immagine di grandi dimensioni** a `0`.  
+    1.  Fare clic su **Aggiungi** per aggiungere un pulsante. Change **didascalia** a *& nuovo*, **ID** a *ID_FILE_NEW*, **immagine** a *0*, **Immagine di grandi dimensioni** a *0*.  
   
-    2.  Fare clic su **Aggiungi** per aggiungere un secondo pulsante. Modifica **didascalia** a `&Save`, **ID** a `ID_FILE_SAVE`, **immagine** a `2`, e **immagine di grandi dimensioni** a `2`.  
+    2.  Fare clic su **Aggiungi** per aggiungere un secondo pulsante. Change **didascalia** a *Sal & va*, **ID** a *ID_FILE_SAVE*, **immagine** a *2* , e **immagine di grandi dimensioni** a *2*.  
   
-    3.  Fare clic su **Aggiungi** per aggiungere un terzo pulsante. Modifica **didascalia** a `Save &As`, **ID** a `ID_FILE_SAVE_AS`, **immagine** a `3`, e **immagine di grandi dimensioni** a `3`.  
+    3.  Fare clic su **Aggiungi** per aggiungere un terzo pulsante. Change **didascalia** alla *Salva con nome*, **ID** a *ID_FILE_SAVE_AS*, **immagine** a *3*, e **immagine di grandi dimensioni** a *3*.  
   
-    4.  Fare clic su **Aggiungi** per aggiungere un quarto pulsante. Modifica **didascalia** a `&Print`, **ID** a `ID_FILE_PRINT`, **immagine** a `4`, e **immagine di grandi dimensioni** a `4`.  
+    4.  Fare clic su **Aggiungi** per aggiungere un quarto pulsante. Change **didascalia** alla *& stampa*, **ID** a *ID_FILE_PRINT*, **immagine** a *4* , e **immagine di grandi dimensioni** a *4*.  
   
     5.  Modifica il **elemento** tipo **separatore** e quindi fare clic su **Aggiungi**.  
   
-    6.  Modifica il **elemento** tipo **pulsante**. Fare clic su **Aggiungi** per aggiungere un quinto pulsante. Modifica **didascalia** a `&Close`, **ID** a `ID_FILE_CLOSE`, **immagine** a `5`, e **immagine di grandi dimensioni** a `5`.  
+    6.  Modifica il **elemento** tipo **pulsante**. Fare clic su **Aggiungi** per aggiungere un quinto pulsante. Change **didascalia** alla *& Chiudi*, **ID** a *ID_FILE_CLOSE*, **immagine** a *5* , e **immagine di grandi dimensioni** a *5*.  
   
 6.  Le seguenti modifiche creano un sottomenu al di sotto del pulsante Stampa creato nel passaggio precedente.  
   
-    1.  Fare clic sul **stampa** pulsante, modificare il **elemento** tipo **etichetta**, quindi fare clic su **inserire**. Modifica **didascalia** a `Preview and print the document`.  
+    1.  Fare clic sul **stampa** pulsante, modificare il **elemento** digitare per **etichetta**, quindi fare clic su **inserire**. Change **didascalia** alla *anteprima e stampa il documento*.  
   
-    2.  Fare clic su di **stampa** pulsante, modificare il **elemento** tipo **pulsante**, fare clic su **inserire**. Modifica **didascalia** a `&Print`, **ID** a `ID_FILE_PRINT`, **immagine** a `4`, e **immagine di grandi dimensioni** a `4`.  
+    2.  Fare clic sul **stampa** pulsante, modificare il **elemento** tipo **pulsante**, fare clic su **inserire**. Change **didascalia** alla *& stampa*, **ID** a *ID_FILE_PRINT*, **immagine** a *4* , e **immagine di grandi dimensioni** a *4*.  
   
-    3.  Fare clic su di **stampa** pulsante e quindi fare clic su **inserire** per aggiungere un pulsante. Modifica **didascalia** a `&Quick Print`, **ID** a `ID_FILE_PRINT_DIRECT`, **immagine** a `7`, e **immagine di grandi dimensioni** a `7`.  
+    3.  Fare clic sui **Print** pulsante e quindi fare clic su **inserire** per aggiungere un pulsante. Change **didascalia** a *& rapido stampa*, **ID** a *ID_FILE_PRINT_DIRECT*, **immagine** per *7*, e **immagine di grandi dimensioni** al *7*.  
   
-    4.  Fare clic su di **stampa** pulsante e quindi fare clic su **inserire** per aggiungere un altro pulsante. Modifica **didascalia** a `Print Pre&view`, **ID** a `ID_FILE_PRINT_PREVIEW`, **immagine** a `6`, e **immagine di grandi dimensioni** a `6`.  
+    4.  Fare clic sui **Print** pulsante e quindi fare clic su **inserire** per aggiungere un altro pulsante. Change **didascalia** alla *stampa & Anteprima*, **ID** a *ID_FILE_PRINT_PREVIEW*, **immagine** a *6*, e **immagine di grandi dimensioni** al *6*.  
   
-    5.  Ora è stata modificata la **elementi principali**. Fare clic su **Chiudi** per uscire dall'installazione di **Editor elementi**.  
+    5.  Punto sono stati modificati i **elementi principali**. Fare clic su **Close** per uscire dall'installazione di **Editor elementi**.  
   
 7.  Le modifiche seguenti creano un pulsante di uscita che viene visualizzato nella parte inferiore del menu del pulsante dell'applicazione.  
   
-    1.  Nel **proprietà** finestra, fare clic sui puntini di sospensione (**...** ) accanto a **pulsante** per aprire la **Editor elementi**.  
+    1.  Nel **delle proprietà** finestra, fare clic sui puntini di sospensione (**...** ) accanto a **pulsante** per aprire il **Editor elementi**.  
   
-    2.  Fare clic su **Aggiungi** per aggiungere un pulsante. Modifica **didascalia** a `E&xit`, **ID** a `ID_APP_EXIT`, **immagine** a `8`.  
+    2.  Fare clic su **Aggiungi** per aggiungere un pulsante. Change **didascalia** a *& dice di uscita*, **ID** a *ID_APP_EXIT*, **immagine** a *8* .  
   
  [[Sezioni](#top)]  
   
@@ -229,11 +229,11 @@ In questa procedura dettagliata viene illustrato come modificare un'applicazione
   
 1.  Nel file mainfrm.h aggiungere un membro dati alla sezione protetta di `CMainFrame`, la definizione della classe per la cornice principale. Questo membro rappresenta la barra multifunzione.  
   
- ' ' * / / Sulla barra multifunzione barra per l'applicazione  
+ ' ' * / / Sulla barra multifunzione a barre per l'applicazione  
     M_wndRibbonBar CMFCRibbonBar;  
  ```  
   
-2.  In the mainfrm.cpp file, add the following code before the final `return` statement at the end of the `CMainFrame::OnCreate` function. This creates an instance of the ribbon bar.  
+2.  In the mainfrm.cpp file, add the following code before the final **return** statement at the end of the `CMainFrame::OnCreate` function. This creates an instance of the ribbon bar.  
   
  ``` *// Create the ribbon bar  
     if (!m_wndRibbonBar.Create(this))  
@@ -254,18 +254,18 @@ In questa procedura dettagliata viene illustrato come modificare un'applicazione
   
 #### <a name="to-add-a-home-category-and-edit-panel"></a>Per aggiungere una categoria Home e un pannello Modifica  
   
-1.  Il programma Scribble richiede solo una categoria. Nella visualizzazione progettazione, fare clic su **categoria** per visualizzarne le proprietà. Modificare i valori delle proprietà come segue: **didascalia** a `&Home`, **Large Images** a `IDB_RIBBON_HOMELARGE`, **Small Images** a `IDB_RIBBON_HOMESMALL`.  
+1.  Il programma Scribble richiede solo una categoria. Nella visualizzazione progettazione, fare clic su **categoria** per visualizzarne le proprietà. Modificare i valori delle proprietà come segue: **didascalia** alla *& Home*, **Large Images** a *IDB_RIBBON_HOMELARGE*,  **Small Images** al *IDB_RIBBON_HOMESMALL*.  
   
-2.  Ogni categoria della barra multifunzione è organizzata in pannelli, ciascuno dei quali dispone di un nome. Ogni pannello contiene un set di controlli che eseguono operazioni correlate. Questa categoria dispone di un solo pannello. Fare clic su **pannello**e quindi modificare **didascalia** a `Edit` e **l'indice dell'immagine** a `0`.  
+2.  Ogni categoria della barra multifunzione è organizzata in pannelli, ciascuno dei quali dispone di un nome. Ogni pannello contiene un set di controlli che eseguono operazioni correlate. Questa categoria dispone di un solo pannello. Fare clic su **pannello**, quindi modificare **didascalia** a *modifica* e **indice immagine** a *0*.  
   
-3.  Per il **modifica** pannello, aggiungere un pulsante che consenta di cancellare il contenuto del documento. L'ID di messaggio per questo pulsante è già stato definito nella risorsa del menu IDR_SCRIBBTYPE. Specificare `Clear All` il testo del pulsante e l'indice della bitmap che decora il pulsante. Aprire il **della casella degli strumenti**, quindi trascinare un **pulsante** per il **modifica** pannello. Fare clic sul pulsante e quindi modificare **didascalia** a `Clear All`, **ID** a `ID_EDIT_CLEAR_ALL`, **l'indice dell'immagine** a `0`, **l'indice dell'immagine di grandi dimensioni**  a `0`.  
+3.  Per il **modifica** pannello, aggiungere un pulsante che consenta di cancellare il contenuto del documento. L'ID di messaggio per questo pulsante è già stato definito nella risorsa del menu IDR_SCRIBBTYPE. Specificare *Cancella tutto* il testo del pulsante e l'indice della bitmap che decora il pulsante. Aprire il **della casella degli strumenti**, quindi trascinare un **pulsante** per il **modifica** pannello. Fare clic sul pulsante e quindi modificare **didascalia** alla *Cancella tutto*, **ID** a *ID_EDIT_CLEAR_ALL*, **Image Index** al *0*, **l'indice dell'immagine di grandi dimensioni** a *0*.  
   
-4.  Salvare le modifiche, quindi compilare ed eseguire l'applicazione. Verrà visualizzata l'applicazione Scribble con una barra multifunzione nella parte superiore della finestra al posto della barra dei menu. La barra multifunzione deve disporre di una categoria, **Home**, e **Home** deve avere un pannello **modifica**. I pulsanti della barra multifunzione che è stato aggiunto devono essere associati a gestori di eventi esistenti e **aprire**, **Chiudi**, **salvare**, **stampa**, e **Cancella tutto** pulsanti dovrebbero funzionare come previsto.  
+4.  Salvare le modifiche, quindi compilare ed eseguire l'applicazione. Verrà visualizzata l'applicazione Scribble con una barra multifunzione nella parte superiore della finestra al posto della barra dei menu. Deve disporre di una categoria, la barra multifunzione **Home**, e **Home** deve disporre di un pannello **modifica**. I pulsanti della barra multifunzione che è stato aggiunto devono essere associati con i gestori di eventi esistente e il **Open**, **Chiudi**, **salvare**, **stampa**, e **Cancella tutto** pulsanti dovrebbero funzionare normalmente.  
   
  [[Sezioni](#top)]  
   
 ##  <a name="setlook"></a> Impostazione dell'aspetto dell'applicazione  
- Oggetto *gestore visualizzazione* è un oggetto globale che controlla tutti i disegni per un'applicazione. Dal momento che l'applicazione originale Scribble utilizza lo stile dell'interfaccia utente (UI) di Office 2000, l'aspetto dell'applicazione potrebbe risultare datato. È possibile reimpostare l'applicazione in modo che utilizzi il gestore visualizzazione di Office 2007 e che risulti simile a un'applicazione di Office 2007.  
+ Un *gestore visualizzazione* è un oggetto globale che controlla l'aspetto grafico per un'applicazione. Dal momento che l'applicazione originale Scribble utilizza lo stile dell'interfaccia utente (UI) di Office 2000, l'aspetto dell'applicazione potrebbe risultare datato. È possibile reimpostare l'applicazione in modo che utilizzi il gestore visualizzazione di Office 2007 e che risulti simile a un'applicazione di Office 2007.  
   
 #### <a name="to-set-the-look-of-the-application"></a>Per impostare l'aspetto dell'applicazione  
   

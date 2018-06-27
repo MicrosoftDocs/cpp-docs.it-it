@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3c01dbb3b14c13182afc85412b5c3ffa3ac0e9cf
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4e479c156967addc7add8f048d2ef1c3abab0dd8
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33354194"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956233"
 ---
 # <a name="cd2dgradientbrush-class"></a>Classe CD2DGradientBrush
 Classe di base di CD2DLinearGradientBrush e delle classi CD2DRadialGradientBrush.  
@@ -51,7 +51,7 @@ class CD2DGradientBrush : public CD2DBrush;
 |Nome|Descrizione|  
 |----------|-----------------|  
 |[CD2DGradientBrush::CD2DGradientBrush](#cd2dgradientbrush)|Costruisce un oggetto CD2DGradientBrush.|  
-|[CD2DGradientBrush:: ~ CD2DGradientBrush](#cd2dgradientbrush__~cd2dgradientbrush)|Distruttore. Chiamato quando viene eliminato un oggetto di un pennello sfumato D2D.|  
+|[CD2DGradientBrush:: ~ CD2DGradientBrush](#cd2dgradientbrush__~cd2dgradientbrush)|Distruttore. Chiamata eseguita quando viene eliminata definitivamente un oggetto di pennello sfumato D2D.|  
   
 ### <a name="protected-methods"></a>Metodi protetti  
   
@@ -65,7 +65,7 @@ class CD2DGradientBrush : public CD2DBrush;
 |----------|-----------------|  
 |[CD2DGradientBrush::m_arGradientStops](#m_argradientstops)|Matrice delle strutture D2D1_GRADIENT_STOP.|  
 |[CD2DGradientBrush::m_colorInterpolationGamma](#m_colorinterpolationgamma)|Lo spazio in cui il viene eseguito l'interpolazione tra i cursori sfumatura.|  
-|[CD2DGradientBrush::m_extendMode](#m_extendmode)|Il comportamento della sfumatura non compreso nell'intervallo normalizzato [0,1].|  
+|[CD2DGradientBrush::m_extendMode](#m_extendmode)|Il comportamento della sfumatura compreso nell'intervallo [0,1] normalizzato.|  
 |[CD2DGradientBrush::m_pGradientStops](#m_pgradientstops)|Puntatore a una matrice di strutture D2D1_GRADIENT_STOP.|  
   
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
@@ -81,7 +81,7 @@ class CD2DGradientBrush : public CD2DBrush;
  **Intestazione:** afxrendertarget. h  
   
 ##  <a name="_dtorcd2dgradientbrush"></a>  CD2DGradientBrush:: ~ CD2DGradientBrush  
- Distruttore. Chiamato quando viene eliminato un oggetto di un pennello sfumato D2D.  
+ Distruttore. Chiamata eseguita quando viene eliminata definitivamente un oggetto di pennello sfumato D2D.  
   
 ```  
 virtual ~CD2DGradientBrush();
@@ -102,25 +102,25 @@ CD2DGradientBrush(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `pParentTarget`  
+ *pParentTarget*  
  Puntatore alla destinazione di rendering.  
   
- `gradientStops`  
+ *gradientStops*  
  Puntatore a una matrice di strutture D2D1_GRADIENT_STOP.  
   
- `gradientStopsCount`  
+ *gradientStopsCount*  
  Un valore maggiore o uguale a 1 che specifica il numero di cursori sfumatura nella matrice gradientStops.  
   
- `colorInterpolationGamma`  
+ *colorInterpolationGamma*  
  Lo spazio in cui il viene eseguito l'interpolazione tra i cursori sfumatura.  
   
- `extendMode`  
- Il comportamento della sfumatura non compreso nell'intervallo normalizzato [0,1].  
+ *extendMode*  
+ Il comportamento della sfumatura compreso nell'intervallo [0,1] normalizzato.  
   
- `pBrushProperties`  
+ *pBrushProperties*  
  Puntatore a una trasformazione di un pennello e di opacità.  
   
- `bAutoDestroy`  
+ *flag bAutoDestroy*  
  Indica che l'oggetto verrà eliminato dal proprietario (pParentTarget).  
   
 ##  <a name="destroy"></a>  CD2DGradientBrush:: Destroy  
@@ -145,7 +145,7 @@ D2D1_GAMMA m_colorInterpolationGamma;
 ```  
   
 ##  <a name="m_extendmode"></a>  CD2DGradientBrush::m_extendMode  
- Il comportamento della sfumatura non compreso nell'intervallo normalizzato [0,1].  
+ Il comportamento della sfumatura compreso nell'intervallo [0,1] normalizzato.  
   
 ```  
 D2D1_EXTEND_MODE m_extendMode;  

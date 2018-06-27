@@ -1,5 +1,5 @@
 ---
-title: 'TN035: Utilizzo di più file di risorse e i file di intestazione in Visual C++ | Documenti Microsoft'
+title: 'TN035: Utilizzo di più file di risorse e file di intestazione in Visual C++ | Documenti Microsoft'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c374e0d14375450533326be5fd406fe8147e475a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7c23e0a978ab8cb3c63566bd8d5ce64ecb2a80d4
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33385378"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952414"
 ---
 # <a name="tn035-using-multiple-resource-files-and-header-files-with-visual-c"></a>TN035: utilizzo di più file di risorse e di intestazione in Visual C++
 > [!NOTE]
@@ -30,7 +30,7 @@ ms.locfileid: "33385378"
   
  In questa nota viene descritto in che modo l'editor risorse di Visual C++ supporta più file di risorse e file di intestazione condivisi in un singolo progetto o tra più progetti e come è possibile usufruire di tale supporto. Questa nota risponde alle domande seguenti:  
   
--   Quando si potrebbe desiderare di dividere un progetto in più file di risorse e/o file di intestazione e come si esegue questa operazione  
+-   Quando si potrebbe desiderare di suddividere un progetto in più file di risorse e/o file di intestazione e come si procede  
   
 -   Come si condivide un'intestazione comune. File H tra due. RC (file)  
   
@@ -66,19 +66,19 @@ ms.locfileid: "33385378"
   
  **File di intestazione simboli**  
   
- Per impostazione predefinita, in Visual C++ il file di intestazione corrispondente viene sempre denominato RESOURCE.H, indipendentemente dal nome del file di risorse, ad esempio, MYAPP.RC. Utilizzando il **Inclusioni risorsa** comando il **vista** menu in Visual C++, è possibile modificare il nome di questo file di intestazione aggiornando il file del File di intestazione simboli nel **inclusioni impostazione**la finestra di dialogo.  
+ Per impostazione predefinita, in Visual C++ il file di intestazione corrispondente viene sempre denominato RESOURCE.H, indipendentemente dal nome del file di risorse, ad esempio, MYAPP.RC. Utilizzando il **Inclusioni risorsa** dal **vista** dal menu di Visual C++, è possibile modificare il nome di questo file di intestazione aggiornando il file di File di intestazione simboli nel **inclusioni**finestra di dialogo.  
   
  **Direttive per simboli in sola lettura**  
   
- Anche se in Visual C++ viene modificato un solo file di intestazione per ogni file RC specificato, Visual C++ supporta riferimenti ai simboli definiti in file di intestazione di sola lettura aggiuntivi. Utilizzando il **Inclusioni risorsa** comando il **vista** menu in Visual C++, è possibile specificare qualsiasi numero di file di intestazione di sola lettura aggiuntivi come direttive per simboli in sola lettura. La restrizione "sola lettura" indica che quando si aggiunge una nuova risorsa nel file RC, è possibile utilizzare un simbolo definito nel file di intestazione di sola lettura, tuttavia se si elimina la risorsa, il simbolo rimarrà definito nel file di intestazione di sola lettura. Non è possibile modificare il valore numerico assegnato a un simbolo di sola lettura.  
+ Anche se in Visual C++ viene modificato un solo file di intestazione per ogni file RC specificato, Visual C++ supporta riferimenti ai simboli definiti in file di intestazione di sola lettura aggiuntivi. Utilizzando il **Inclusioni risorsa** dal **vista** menu in Visual C++, è possibile specificare qualsiasi numero di file di intestazione di sola lettura aggiuntivi come direttive per simboli in sola lettura. La restrizione "sola lettura" indica che quando si aggiunge una nuova risorsa nel file RC, è possibile utilizzare un simbolo definito nel file di intestazione di sola lettura, tuttavia se si elimina la risorsa, il simbolo rimarrà definito nel file di intestazione di sola lettura. Non è possibile modificare il valore numerico assegnato a un simbolo di sola lettura.  
   
  **Direttive in fase di compilazione**  
   
- Visual C++ supporta inoltre l'annidamento dei file di risorse, dove un file RC viene incluso tramite #include all'interno di un altro. Quando si modifica un file RC specificato utilizzando Visual C++, alcune risorse nei file #include non sono visibili. Quando tuttavia si compila il file RC, i file #include vengono compilati. Utilizzando il **Inclusioni risorsa** comando il **vista** menu in Visual C++, è possibile specificare un numero qualsiasi di # include. RC (file) come direttive in fase di compilazione.  
+ Visual C++ supporta inoltre l'annidamento dei file di risorse, dove un file RC viene incluso tramite #include all'interno di un altro. Quando si modifica un file RC specificato utilizzando Visual C++, alcune risorse nei file #include non sono visibili. Quando tuttavia si compila il file RC, i file #include vengono compilati. Utilizzando il **Inclusioni risorsa** dal **vista** menu in Visual C++, è possibile specificare un numero qualsiasi di # include. RC (file) come direttive in fase di compilazione.  
   
- Si noti che cosa avviene se si legge in Visual C++ un. File RC #include un altro. File RC *non* specificato come direttiva in fase di compilazione. Questa situazione può verificarsi quando si introduce in Visual C++ un file RC gestito in precedenza manualmente con un editor di testo. Quando in Visual C++ viene letto il file RC #include, le risorse #include vengono unite nel file RC padre. Quando si salva il file RC padre, l'istruzione #include, in effetti, verrà sostituita dalle risorse #include. Se non si desidera eseguire questo merge, è necessario rimuovere il #include dall'elemento padre. File RC *precedente* di leggerlo in Visual C++, quindi in Visual C++ aggiungere di nuovo lo stesso #include come direttiva in fase di compilazione.  
+ Si noti che cosa avviene se si legge in Visual C++ un. File RC #include un altro. File RC *non* specificato come direttiva in fase di compilazione. Questa situazione può verificarsi quando si introduce in Visual C++ un file RC gestito in precedenza manualmente con un editor di testo. Quando in Visual C++ viene letto il file RC #include, le risorse #include vengono unite nel file RC padre. Quando si salva il file RC padre, l'istruzione #include, in effetti, verrà sostituita dalle risorse #include. Se non si desidera eseguire questo merge, è necessario rimuovere il #include dall'elemento padre. File RC *precedenti* di leggerlo in Visual C++, quindi in Visual C++ aggiungere di nuovo la stessa #include come direttiva in fase di compilazione.  
   
- Visual C++ Salva in un. I tre tipi di sopra del file RC informazioni inclusioni impostazione (File di intestazione simboli, direttive per simboli in sola lettura e direttive in fase di compilazione) in #include *e* nelle risorse TEXTINCLUDE. Vengono descritte le risorse TEXTINCLUDE, un dettaglio di implementazione che non è in genere necessario gestire, in [come Visual C++ gestisce informazioni di inclusioni impostazione](#_mfcnotes_tn035_set_includes).  
+ Visual C++ Salva in un. I tre tipi di sopra del file RC informazioni inclusioni impostazione (File di intestazione simboli, direttive per simboli in sola lettura e direttive in fase di compilazione) in #include le direttive *e* nelle risorse TEXTINCLUDE. Le risorse TEXTINCLUDE, un dettaglio di implementazione che non è normalmente necessaria per gestire con, sono illustrate in [come Visual C++ gestisce informazioni di inclusioni](#_mfcnotes_tn035_set_includes).  
   
  **Analisi dei creato dalla creazione guidata applicazioni. RC e. File H**  
   
@@ -138,7 +138,7 @@ RESOURCE.H     AFXRES.H
 #define ID_GREEN_BUTTON (ID_COLOR_BUTTON + GREEN)  
 ```  
   
- È possibile includere file di intestazione di sola lettura aggiuntivi utilizzando il **Inclusioni risorsa** comando per specificare il #include come seconda direttiva simboli in sola lettura, come in:  
+ È possibile includere file di intestazione di sola lettura aggiuntivi utilizzando la **Inclusioni risorsa** comando per specificare il #include come una seconda direttiva per simboli in sola lettura, come in:  
   
 ```  
 #include "afxres.h"  
@@ -219,7 +219,7 @@ RESOURCE.H     AFXRES.H
   
  **Imposizione dei file di Visual C++ non modificabili**  
   
- RES\MYAPP creato dalla creazione guidata applicazioni. File RC2 è riportato un esempio di un file che contiene le risorse che si *non* desidera accidentalmente lette in Visual C++ e quindi si scrive nuovo con perdita di informazioni di formattazione. Per evitare questo problema, inserire le seguenti righe all'inizio del file RES\MYAPP.RC2:  
+ RES\MYAPP creato dalla creazione guidata applicazioni. File RC2 è riportato un esempio di un file che contiene le risorse che si *non* desidera accidentalmente lette in Visual C++ e quindi scrivere il nuovo con perdita di informazioni di formattazione. Per evitare questo problema, inserire le seguenti righe all'inizio del file RES\MYAPP.RC2:  
   
 ```  
 #ifdef APSTUDIO_INVOKED  
@@ -227,7 +227,7 @@ RESOURCE.H     AFXRES.H
 #endif //APSTUDIO_INVOKED  
 ```  
   
- Quando Visual C++ compila il. File RC, definisce **APSTUDIO_INVOKED** nonché **RC_INVOKED**. Se la struttura di file creata dalla Creazione guidata applicazioni è danneggiata e Visual C++ legge la riga #error precedente, viene segnalato un errore irreversibile e la lettura del file RC viene interrotta.  
+ Quando Visual C++ compila il. File RC, definisce `APSTUDIO_INVOKED` nonché `RC_INVOKED`. Se la struttura di file creata dalla Creazione guidata applicazioni è danneggiata e Visual C++ legge la riga #error precedente, viene segnalato un errore irreversibile e la lettura del file RC viene interrotta.  
   
  **Gestione di simboli condivisi da più Visual C++ modificate. RC (file)**  
   
@@ -262,19 +262,19 @@ MYSTRS.H   / MYSHARED.H  \  MYMENUS.H
 #define _APS_NEXT_SYMED_VALUE     101  
 ```  
   
- **Aps_next_resource_value** è il valore di simbolo successivo che verrà utilizzato per una risorsa finestra di dialogo, risorse di menu e così via. L'intervallo valido per i valori dei simboli risorsa è compreso tra 1 e 0x6FFF.  
+ `_APS_NEXT_RESOURCE_VALUE` è il valore di simbolo successivo che verrà utilizzato per una risorsa finestra di dialogo, risorse di menu e così via. L'intervallo valido per i valori dei simboli risorsa è compreso tra 1 e 0x6FFF.  
   
- **Aps_next_command_value** è il valore di simbolo successivo che verrà utilizzato per l'identificazione di un comando. L'intervallo valido per i valori dei simboli di comando è compreso tra 0x8000 e 0xDFFF.  
+ `_APS_NEXT_COMMAND_VALUE` è il valore di simbolo successivo che verrà utilizzato per l'identificazione di un comando. L'intervallo valido per i valori dei simboli di comando è compreso tra 0x8000 e 0xDFFF.  
   
- **Aps_next_control_value** è il valore di simbolo successivo che verrà utilizzato per un controllo di finestra di dialogo. L'intervallo valido per i valori dei simboli di controllo finestra di dialogo è compreso tra 8 e 0xDFFF.  
+ `_APS_NEXT_CONTROL_VALUE` è il valore di simbolo successivo che verrà utilizzato per un controllo di finestra di dialogo. L'intervallo valido per i valori dei simboli di controllo finestra di dialogo è compreso tra 8 e 0xDFFF.  
   
- **Aps_next_symed_value** è il valore di simbolo successivo che verrà rilasciato manualmente quando si assegna un valore di simbolo utilizzando il comando nuovo nel Visualizzatore simboli.  
+ `_APS_NEXT_SYMED_VALUE` è il valore di simbolo successivo che verrà rilasciato manualmente quando si assegna un valore di simbolo utilizzando il comando nuovo nel Visualizzatore simboli.  
   
  Quando viene creato un nuovo file RC, Visual C++ inizia con valori leggermente più elevati del valore valido più basso. Questi valori verranno inizializzati anche dalla Creazione guidata applicazioni in valori più appropriati per le applicazioni MFC. Per ulteriori informazioni sugli intervalli di valori di ID, vedere [Nota tecnica 20](../mfc/tn020-id-naming-and-numbering-conventions.md).  
   
- Ora ogni volta che si crea un nuovo file di risorse, anche nello stesso progetto, Visual C++ definisce gli stessi **aps_next\_**  valori. Ciò significa che se si aggiungono, ad esempio, più finestre di dialogo in due diversi file RC, è molto probabile che lo stesso valore #define venga assegnato alle diverse finestre di dialogo. Ad esempio, a IDD_MY_DLG1 nel primo file RC può essere assegnato lo stesso numero, 101, di IDD_MY_DLG2 in un secondo file RC.  
+ Ora ogni volta che si crea un nuovo file di risorse, anche nello stesso progetto, Visual C++ definisce gli stessi `_APS_NEXT_` valori. Ciò significa che se si aggiungono, ad esempio, più finestre di dialogo in due diversi file RC, è molto probabile che lo stesso valore #define venga assegnato alle diverse finestre di dialogo. Ad esempio, a IDD_MY_DLG1 nel primo file RC può essere assegnato lo stesso numero, 101, di IDD_MY_DLG2 in un secondo file RC.  
   
- Per evitare questo problema, è necessario riservare un intervallo numerico separato per ognuno dei quattro domini di ID nei rispettivi file RC. A tale scopo l'aggiornamento manuale di **aps_next** valori in ogni il. RC (file) `before` di avviare l'aggiunta di risorse. Ad esempio, se il primo. File RC utilizza il valore predefinito **aps_next** valori, potrebbe essere necessario assegnare i seguenti **aps_next** valori al secondo. File RC:  
+ Per evitare questo problema, è necessario riservare un intervallo numerico separato per ognuno dei quattro domini di ID nei rispettivi file RC. A tale scopo l'aggiornamento manuale il `_APS_NEXT` valori in ogni il. File RC **prima di** si avvia l'aggiunta di risorse. Ad esempio, se il primo. File RC viene utilizzato il valore predefinito `_APS_NEXT` valori, potrebbe essere necessario assegnare i seguenti `_APS_NEXT` valori al secondo. File RC:  
   
 ```  
 #define _APS_NEXT_RESOURCE_VALUE  2000  
@@ -297,7 +297,7 @@ MYSTRS.H   / MYSHARED.H  \  MYMENUS.H
   
  L'ambiente di sviluppo interpreta il commento ignorando le modifiche a RESOURCE.H in modo che i file CPP dipendenti CPP non debbano essere ricompilati.  
   
- Visual C++ aggiunge sempre la riga di commento //{{NO_DEPENDENCIES}} a un file RC al momento del salvataggio. In alcuni casi, aggirare la dipendenza di compilazione da RESOURCE.H può generare errori di runtime non rilevati in fase di collegamento. Ad esempio, se si utilizza il visualizzatore simboli per modificare il valore numerico assegnato a un simbolo per una risorsa, la risorsa non verrà rilevata e caricata correttamente in fase di esecuzione dell'applicazione, se il file di .CPP che fa riferimento alla risorsa non viene ricompilato. In questi casi, si deve ricompilano in modo esplicito. File CPP interessati dalle modifiche dei simboli nella risorsa. H o selezionare **Ricompila tutto**. Se è necessario modificare spesso i valori dei simboli per un determinato gruppo di risorse, verrà probabilmente risulta più semplice e sicuro suddividere questi simboli in un file di intestazione di sola lettura, come descritto nella sezione precedente [inclusi File di intestazione aggiuntivi](#_mfcnotes_tn035_including).  
+ Visual C++ aggiunge sempre la riga di commento //{{NO_DEPENDENCIES}} a un file RC al momento del salvataggio. In alcuni casi, aggirare la dipendenza di compilazione da RESOURCE.H può generare errori di runtime non rilevati in fase di collegamento. Ad esempio, se si utilizza il visualizzatore simboli per modificare il valore numerico assegnato a un simbolo per una risorsa, la risorsa non verrà rilevata e caricata correttamente in fase di esecuzione dell'applicazione, se il file di .CPP che fa riferimento alla risorsa non viene ricompilato. In questi casi, si dovrebbe ricompilano in modo esplicito. I file CPP che si è certi sono interessati dalle modifiche dei simboli nella risorsa. H o select **Ricompila tutto**. Se è necessario modificare spesso i valori dei simboli per un determinato gruppo di risorse, è probabile più semplice e sicuro suddividere questi simboli in un file di intestazione di sola lettura separato, come descritto nella sezione precedente [inclusi File di intestazione aggiuntivi](#_mfcnotes_tn035_including).  
   
 ## <a name="_mfcnotes_tn035_set_includes"></a> La modalità di Visual C++ gestisce Set include informazioni * *  
   
@@ -313,7 +313,7 @@ MYSTRS.H   / MYSHARED.H  \  MYMENUS.H
   
  Ciascuno dei tre tipi di informazioni di Inclusione impostazione viene archiviato nel file RC in due formati: (1) come #include o altre direttive interpretabili dal Compilatore di risorse e (2) come risorse TEXTINCLUDE speciali interpretabili solo da Visual C++.  
   
- Lo scopo della risorsa TEXTINCLUDE consiste nell'archiviare in modo sicuro informazioni di inclusioni impostazione in un formato immediatamente presentabile in Visual C++ **inclusioni impostazione** la finestra di dialogo. TEXTINCLUDE è un *tipo di risorsa* definito da Visual C++. Visual C++ riconosce tre risorse TEXTINCLUDE specifiche che presentano numeri di identificazione risorsa 1, 2 e 3:  
+ Lo scopo della risorsa TEXTINCLUDE consiste nell'archiviare in modo sicuro le informazioni di inclusioni in un formato immediatamente presentabile in Visual C++ **inclusioni** finestra di dialogo. TEXTINCLUDE è un *tipo di risorsa* definito da Visual C++. Visual C++ riconosce tre risorse TEXTINCLUDE specifiche che presentano numeri di identificazione risorsa 1, 2 e 3:  
   
 |ID risorsa TEXTINCLUDE|Tipo informazioni di Inclusioni impostazione|  
 |-----------------------------|--------------------------------------|  

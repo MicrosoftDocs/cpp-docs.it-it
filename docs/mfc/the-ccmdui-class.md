@@ -20,19 +20,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dde8c31620f64e6201c59b7031c789caa16c4902
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a857d1cddcc78c7cfff4243b9c99194986af3d9b
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33379808"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956486"
 ---
 # <a name="the-ccmdui-class"></a>Classe CCmdUI
 Quando indirizza un comando di aggiornamento al gestore, il framework passa al gestore un puntatore a un oggetto `CCmdUI` (o a un oggetto di una classe derivata da `CCmdUI`). Questo oggetto rappresenta una voce di menu, un pulsante della barra degli strumenti o un altro oggetto dell'interfaccia utente che ha generato il comando. Il gestore aggiornamento chiama le funzioni membro della struttura `CCmdUI` attraverso il puntatore per aggiornare l'oggetto dell'interfaccia utente. Ad esempio, di seguito è riportato un gestore aggiornamento per la voce di menu "Cancella tutto":  
   
  [!code-cpp[NVC_MFCDocView#3](../mfc/codesnippet/cpp/the-ccmdui-class_1.cpp)]  
   
- Questo gestore chiama il **abilitare** funzione membro di un oggetto con accesso alla voce di menu. **Abilitare** rende disponibili per usare l'elemento.  
+ Questo gestore chiama il `Enable` funzione membro di un oggetto con l'accesso alla voce di menu. `Enable` l'elemento diventa disponibile per l'utilizzo.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Procedura: Aggiornare oggetti dell'interfaccia utente](../mfc/how-to-update-user-interface-objects.md)

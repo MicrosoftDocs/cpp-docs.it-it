@@ -19,15 +19,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ce96d90506176812ffb70b580c9d95a38c65fa19
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 114411d0f8c7084e26f36f0ffc05e60a32407c44
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33350885"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956834"
 ---
 # <a name="callback-functions-used-by-mfc"></a>Funzioni di callback utilizzate da MFC
-Tre funzioni di callback vengono visualizzati nella libreria di classi Microsoft Foundation. Queste funzioni di callback vengono passate a [CDC:: EnumObjects](../../mfc/reference/cdc-class.md#enumobjects), [CDC:: graystring](../../mfc/reference/cdc-class.md#graystring), e [CDC:: SetAbortProc](../../mfc/reference/cdc-class.md#setabortproc). Si noti che tutte le funzioni di callback devono intercettare le eccezioni MFC prima della restituzione di Windows, poiché non possono essere generate eccezioni attraverso i limiti di callback. Per ulteriori informazioni sulle eccezioni, vedere l'articolo [eccezioni](../../mfc/exception-handling-in-mfc.md).  
+Tre funzioni di callback vengono visualizzati nella libreria Microsoft Foundation Class. Queste funzioni di callback vengono passate a [CDC:: EnumObjects](../../mfc/reference/cdc-class.md#enumobjects), [CDC:: graystring](../../mfc/reference/cdc-class.md#graystring), e [CDC:: SetAbortProc](../../mfc/reference/cdc-class.md#setabortproc). Si noti che tutte le funzioni di callback devono intercettare le eccezioni MFC prima della restituzione di Windows, poiché non possono essere generate eccezioni attraverso i limiti di callback. Per altre informazioni sulle eccezioni, vedere l'articolo [eccezioni](../../mfc/exception-handling-in-mfc.md).  
 
 |nome||  
 |----------|-----------------|  
@@ -51,13 +51,13 @@ int CALLBACK EXPORT ObjectFunc(
   
 ### <a name="parameters"></a>Parametri  
  *lpszLogObject*  
- Punta a un [LOGPEN](../../mfc/reference/logpen-structure.md) o [LOGBRUSH](../../mfc/reference/logbrush-structure.md) struttura di dati che contiene informazioni sugli attributi logici dell'oggetto.  
+ Punta a un [LOGPEN](../../mfc/reference/logpen-structure.md) oppure [LOGBRUSH](../../mfc/reference/logbrush-structure.md) struttura di dati che contiene informazioni sugli attributi logici dell'oggetto.  
   
- `lpData`  
+ *lpData*  
  Punta ai dati forniti dall'applicazione passati alla funzione `EnumObjects`.  
   
 ### <a name="return-value"></a>Valore restituito  
- La funzione di callback restituisce un valore `int`. Il valore restituito è definito dall'utente. Se la funzione di callback restituisce 0, `EnumObjects` arresta l'enumerazione prima.  
+ La funzione di callback restituisce un **int**. Il valore restituito è definito dall'utente. Se la funzione di callback restituisce 0, `EnumObjects` arresta l'enumerazione prima.  
   
 ### <a name="remarks"></a>Note  
  Il nome effettivo deve essere esportato.  
@@ -75,20 +75,20 @@ BOOL CALLBACK EXPORT OutputFunc(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `hDC`  
- Identifica un contesto di dispositivo di memoria con una bitmap pari almeno alla larghezza e altezza specificato da `nWidth` e `nHeight` a `GrayString`.  
+ *hDC*  
+ Identifica un contesto di dispositivo di memoria con una bitmap pari almeno alla larghezza e l'altezza specificata da *nWidth* e *nHeight* a `GrayString`.  
   
- `lpData`  
+ *lpData*  
  Punta alla stringa di caratteri da tracciare.  
   
- `nCount`  
+ *nCount*  
  Specifica il numero di caratteri da restituire.  
   
 ### <a name="return-value"></a>Valore restituito  
- Valore restituito della funzione di callback deve essere **TRUE** per indicare l'esito positivo; in caso contrario è **FALSE**.  
+ Valore restituito della funzione di callback deve essere **TRUE** per indicare l'esito positivo; in caso contrario **FALSE**.  
   
 ### <a name="remarks"></a>Note  
- La funzione di callback (*OutputFunc*) è necessario disegnare un'immagine rispetto alle coordinate (0,0) anziché (*x*, *y*).  
+ La funzione di callback (*OutputFunc*) è necessario disegnare un'immagine, relativamente alle coordinate (0,0) anziché (*x*, *y*).  
 
 ## <a name="setabortproc"></a>  Funzione di callback per CDC:: SETABORTPROC
 Il nome *AbortFunc* è un segnaposto per il nome della funzione fornita dall'applicazione.  
@@ -105,14 +105,14 @@ BOOL CALLBACK EXPORT AbortFunc(
  *hPr*  
  Identifica il contesto di dispositivo.  
   
- `code`  
- Specifica se si è verificato un errore. È 0 se non si è verificato alcun errore. È **SP_OUTOFDISK** se Print Manager è attualmente lo spazio su disco e più spazio su disco sarà disponibile se l'applicazione è in attesa. Se `code` è **SP_OUTOFDISK**, l'applicazione non è necessario interrompere il processo di stampa. In caso contrario, deve restituire per la gestione di stampa chiamando il **PeekMessage** o **GetMessage** funzione di Windows.  
+ *Codice*  
+ Specifica se si è verificato un errore. È 0 se si è verificato alcun errore. Si tratta **SP_OUTOFDISK** se Print Manager è attualmente spazio su disco insufficiente e più spazio su disco verranno rese disponibile se l'applicazione resta in attesa. Se *codice* viene **SP_OUTOFDISK**, l'applicazione non è necessario interrompere il processo di stampa. In caso contrario, deve restituire per la gestione di stampa chiamando il `PeekMessage` o `GetMessage` funzione di Windows.  
   
 ### <a name="return-value"></a>Valore restituito  
- Il valore restituito della funzione del gestore di interruzione è diverso da zero se il processo di stampa per continuare e 0 se viene annullato.  
+ Il valore restituito della funzione del gestore di interruzione è diverso da zero se deve continuare il processo di stampa e 0 se verrà annullata.  
   
 ### <a name="remarks"></a>Note  
- Il nome effettivo deve essere esportato come descritto nella sezione Osservazioni di [CDC:: SetAbortProc](../../mfc/reference/cdc-class.md#setabortproc).  
+ Il nome effettivo deve essere esportato come descritto nella sezione osservazioni della [CDC:: SetAbortProc](../../mfc/reference/cdc-class.md#setabortproc).  
  
   
 ## <a name="see-also"></a>Vedere anche  

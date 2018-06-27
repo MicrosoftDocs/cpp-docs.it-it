@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2f538874b1690be920e9c7a3b3f494ca6851c532
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3de348131dded63794e818d40c0ac5aeae910b03
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33353957"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956708"
 ---
 # <a name="cbasekeyframe-class"></a>Classe CBaseKeyFrame
 Implementa la funzionalità di base di un fotogramma chiave.  
@@ -63,18 +63,18 @@ class CBaseKeyFrame : public CObject;
 |[CBaseKeyFrame:: AddToStoryboard](#addtostoryboard)|Aggiunge un fotogramma chiave allo storyboard.|  
 |[CBaseKeyFrame::GetAnimationKeyframe](#getanimationkeyframe)|Restituisce il valore del fotogramma chiave sottostante.|  
 |[CBaseKeyFrame::IsAdded](#isadded)|Indica se è stato aggiunto un fotogramma chiave allo storyboard.|  
-|[CBaseKeyFrame::IsKeyframeAtOffset](#iskeyframeatoffset)|Specifica se il fotogramma chiave deve essere aggiunto allo storyboard offset o dopo la transizione.|  
+|[CBaseKeyFrame::IsKeyframeAtOffset](#iskeyframeatoffset)|Specifica se il fotogramma chiave deve essere aggiunto allo storyboard in corrispondenza dell'offset o dopo la transizione.|  
   
 ### <a name="protected-data-members"></a>Membri dati protetti  
   
 |nome|Descrizione|  
 |----------|-----------------|  
 |[CBaseKeyFrame::m_bAdded](#m_badded)|Specifica se è stato aggiunto questo fotogramma chiave di uno storyboard.|  
-|[CBaseKeyFrame::m_bIsKeyframeAtOffset](#m_biskeyframeatoffset)|Specifica se questo fotogramma chiave deve essere aggiunto allo storyboard in un offset da un altro fotogramma chiave esistente o alla fine di qualche transizione.|  
-|[CBaseKeyFrame::m_keyframe](#m_keyframe)|Rappresenta un fotogramma chiave API di animazione Windows. Quando non viene inizializzato un fotogramma chiave è impostato per il valore UI_ANIMATION_KEYFRAME_STORYBOARD_START predefinito.|  
+|[CBaseKeyFrame::m_bIsKeyframeAtOffset](#m_biskeyframeatoffset)|Specifica se questo fotogramma chiave deve essere aggiunto allo storyboard in un offset da un altro fotogramma chiave esistente o alla fine di alcuni transizione.|  
+|[CBaseKeyFrame::m_keyframe](#m_keyframe)|Rappresenta un fotogramma chiave API di animazione Windows. Quando non viene inizializzato un fotogramma chiave è impostata sul valore predefinito UI_ANIMATION_KEYFRAME_STORYBOARD_START.|  
   
 ## <a name="remarks"></a>Note  
- Incapsula la variabile UI_ANIMATION_KEYFRAME. Funge da classe base per qualsiasi implementazione del fotogramma chiave. Un fotogramma chiave rappresenta un istante nel tempo all'interno di uno storyboard e può essere usato per specificare l'ora di inizio e fine delle transizioni. Esistono due tipi di fotogrammi chiave: i fotogrammi chiave aggiunti allo storyboard in corrispondenza dell'offset specificato (in tempo) o i fotogrammi chiave aggiunti dopo la transizione specificata. Poiché non è possibile conoscere la durata di alcune transizioni prima dell'inizio di animazione, i valori effettivi di alcuni fotogrammi chiave vengono determinati in fase di esecuzione solo. Perché i fotogrammi chiave potrebbero dipendere transizioni, che a loro volta dipendono dai fotogrammi chiave, è importante impedire ricorsioni infinite durante la compilazione di catene del fotogramma chiave.  
+ Incapsula la variabile UI_ANIMATION_KEYFRAME. Funge da classe base per qualsiasi implementazione del fotogramma chiave. Un fotogramma chiave rappresenta un istante nel tempo all'interno di uno storyboard e può essere usato per specificare l'ora di inizio e fine delle transizioni. Esistono due tipi di fotogrammi chiave: i fotogrammi chiave aggiunti allo storyboard in corrispondenza dell'offset specificato (in tempo) o i fotogrammi chiave aggiunti dopo la transizione specificata. Poiché la durata di alcuni transizioni non è possibile sapere prima di animazione viene avviata, i valori effettivi di alcuni fotogrammi chiave vengono determinati in fase di esecuzione solo. Perché i fotogrammi chiave potrebbero dipendere transizioni, che a loro volta dipendono i fotogrammi chiave, è importante impedire ricorsioni infinite durante la compilazione di catene del fotogramma chiave.  
   
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -94,14 +94,14 @@ virtual BOOL AddToStoryboard(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `pStoryboard`  
+ *pStoryboard*  
  Puntatore a uno storyboard.  
   
- `bDeepAdd`  
+ *bDeepAdd è impostato su*  
  Se questo parametro è TRUE e il fotogramma chiave da aggiungere dipende da un altro fotogramma chiave o una transizione, questo metodo tenta di aggiungere questo fotogramma chiave o una transizione allo storyboard prima.  
   
 ### <a name="return-value"></a>Valore restituito  
- TRUE se il fotogramma chiave è stato aggiunto allo storyboard. in caso contrario FALSE.  
+ TRUE se il fotogramma chiave è stato aggiunto allo storyboard correttamente; in caso contrario, FALSE.  
   
 ### <a name="remarks"></a>Note  
  Questo metodo viene chiamato per aggiungere un fotogramma chiave allo storyboard.  
@@ -121,7 +121,7 @@ UI_ANIMATION_KEYFRAME GetAnimationKeyframe() const;
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- Fotogramma chiave corrente. Il valore predefinito è UI_ANIMATION_KEYFRAME_STORYBOARD_START.  
+ Un fotogramma chiave corrente. Il valore predefinito è UI_ANIMATION_KEYFRAME_STORYBOARD_START.  
   
 ### <a name="remarks"></a>Note  
  Si tratta di una funzione di accesso per il valore del fotogramma chiave sottostante.  
@@ -134,13 +134,13 @@ BOOL IsAdded() const;
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- TRUE se viene aggiunto un fotogramma chiave di uno storyboard; in caso contrario FALSE.  
+ TRUE se un fotogramma chiave viene aggiunto uno storyboard; in caso contrario FALSE.  
   
 ### <a name="remarks"></a>Note  
- Nella classe base IsAdded restituisce sempre TRUE, ma viene sottoposto a override nelle classi derivate.  
+ Nella classe base IsAdded restituisce sempre TRUE, ma ne viene eseguito l'override nelle classi derivate.  
   
 ##  <a name="iskeyframeatoffset"></a>  CBaseKeyFrame::IsKeyframeAtOffset  
- Specifica se il fotogramma chiave deve essere aggiunto allo storyboard offset o dopo la transizione.  
+ Specifica se il fotogramma chiave deve essere aggiunto allo storyboard in corrispondenza dell'offset o dopo la transizione.  
   
 ```  
 BOOL IsKeyframeAtOffset() const;  
@@ -150,7 +150,7 @@ BOOL IsKeyframeAtOffset() const;
  TRUE se il fotogramma chiave deve essere aggiunto allo storyboard in corrispondenza di un offset specificato. FALSE se il fotogramma chiave deve essere aggiunto allo storyboard dopo la transizione.  
   
 ### <a name="remarks"></a>Note  
- Specifica se il fotogramma chiave deve essere aggiunto allo storyboard all'offset. L'offset o una transizione deve essere specificata in una classe derivata.  
+ Specifica se il fotogramma chiave deve essere aggiunto allo storyboard in corrispondenza dell'offset. L'offset o transizione deve essere specificata in una classe derivata.  
   
 ##  <a name="m_badded"></a>  CBaseKeyFrame::m_bAdded  
  Specifica se è stato aggiunto questo fotogramma chiave di uno storyboard.  
@@ -160,14 +160,14 @@ BOOL m_bAdded;
 ```  
   
 ##  <a name="m_biskeyframeatoffset"></a>  CBaseKeyFrame::m_bIsKeyframeAtOffset  
- Specifica se questo fotogramma chiave deve essere aggiunto allo storyboard in un offset da un altro fotogramma chiave esistente o alla fine di qualche transizione.  
+ Specifica se questo fotogramma chiave deve essere aggiunto allo storyboard in un offset da un altro fotogramma chiave esistente o alla fine di alcuni transizione.  
   
 ```  
 BOOL m_bIsKeyframeAtOffset;  
 ```  
   
 ##  <a name="m_keyframe"></a>  CBaseKeyFrame::m_keyframe  
- Rappresenta un fotogramma chiave API di animazione Windows. Quando non viene inizializzato un fotogramma chiave è impostato per il valore UI_ANIMATION_KEYFRAME_STORYBOARD_START predefinito.  
+ Rappresenta un fotogramma chiave API di animazione Windows. Quando non viene inizializzato un fotogramma chiave è impostata sul valore predefinito UI_ANIMATION_KEYFRAME_STORYBOARD_START.  
   
 ```  
 UI_ANIMATION_KEYFRAME m_keyframe;  

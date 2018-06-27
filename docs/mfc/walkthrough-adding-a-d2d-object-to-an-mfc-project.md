@@ -15,18 +15,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 68a6d5a0cda8c4d7fd06cf7bb6b9c1b60e50374b
-ms.sourcegitcommit: 301bb19056e5bae84ff50f7d1df1e546efe225ba
+ms.openlocfilehash: 87e1c696f3da374d7b71e1b24e3a8bd3ebfe41b9
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36306008"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954871"
 ---
 # <a name="walkthrough-adding-a-d2d-object-to-an-mfc-project"></a>Procedura dettagliata: aggiunta di un oggetto D2D a un progetto MFC
 
-Questa procedura dettagliata viene illustrato come aggiungere una base Direct2D (D2D) l'oggetto in un progetto (MFC (Microsoft Foundation Class Library), Visual C++ e quindi compilare il progetto in un'applicazione che visualizza "Hello, world" su uno sfondo sfumato.
+Questa procedura dettagliata viene illustrato come aggiungere una base Direct2D (D2D) dell'oggetto a un Visual C++, progetto Microsoft Foundation Class Library (MFC) e quindi compilare il progetto in un'applicazione che visualizza "Hello, world" su uno sfondo sfumato.
 
-La procedura dettagliata viene illustrato come eseguire queste attività:
+La procedura dettagliata viene illustrato come completare queste attività:
 
 - Creare un'applicazione MFC.
 
@@ -34,7 +34,7 @@ La procedura dettagliata viene illustrato come eseguire queste attività:
 
 - Modificare il pennello a sfumatura in modo che venga modificato di conseguenza quando la finestra viene ridimensionata.
 
-- Implementare un gestore di disegno D2D.
+- Implementare un gestore disegno D2D.
 
 - Verificare i risultati.
 
@@ -48,13 +48,13 @@ Per completare questa procedura dettagliata, è necessario disporre di Visual St
 
 1. Nel **File** dal menu **New** e quindi scegliere **progetto**.
 
-2. Nel **nuovo progetto** la finestra di dialogo, nel riquadro sinistro sotto **modelli installati**, espandere **Visual C++** e quindi selezionare **MFC**. Nel riquadro centrale, selezionare **applicazione MFC**. Nella casella **Nome** digitare `MFCD2DWalkthrough`. Scegliere **OK**.
+2. Nel **nuovo progetto** finestra di dialogo, nel riquadro sinistro sotto **modelli installati**, espandere **Visual C++** e quindi selezionare **MFC**. Nel riquadro centrale, seleziona **applicazione MFC**. Nel **nome** , digitare *MFCD2DWalkthrough*. Scegliere **OK**.
 
 3. Nel **Creazione guidata applicazione MFC**, scegliere **fine** senza modificare le impostazioni.
 
 ## <a name="to-create-a-solid-color-brush-and-a-linear-gradient-brush"></a>Per creare un pennello tinta unita e un pennello sfumatura lineare
 
-1. In **Esplora**nel **MFCD2DWalkthrough** nel progetto il **file di intestazione** MFCD2DWalkthroughView Apri cartella. Aggiungere questo codice per il `CMFCD2DWalkthroughView` classe da creare tre variabili di dati:
+1. In **Esplora soluzioni**, nel **MFCD2DWalkthrough** nel progetto il **file di intestazione** cartella, aprire MFCD2DWalkthroughView. Aggiungere questo codice per il `CMFCD2DWalkthroughView` classe da creare tre variabili di dati:
 
    ```cpp
    CD2DTextFormat* m_pTextFormat;
@@ -64,7 +64,7 @@ Per completare questa procedura dettagliata, è necessario disporre di Visual St
 
    Salvare il file e chiuderlo.
 
-2. Nel **i file di origine** cartella, aprire MFCD2DWalkthroughView. Nel costruttore per il `CMFCD2DWalkthroughView` classe, aggiungere questo codice:
+2. Nel **file di origine** cartella, aprire MFCD2DWalkthroughView. Nel costruttore per il `CMFCD2DWalkthroughView` classe, aggiungere questo codice:
 
    ```cpp
    // Enable D2D support for this window:
@@ -112,7 +112,7 @@ Per completare questa procedura dettagliata, è necessario disporre di Visual St
 
 1. Nel **Project** menu, scegliere **Creazione guidata classe**.
 
-2. Nel **Creazione guidata classe MFC**in **nome classe**selezionare `CMFCD2DWalkthroughView`.
+2. Nel **Creazione guidata classe MFC**, in **nome della classe**selezionare `CMFCD2DWalkthroughView`.
 
 3. Nel **messaggi** nella scheda il **messaggi** , quindi selezionare `WM_SIZE` e quindi scegliere **Aggiungi gestore**. Questa azione aggiunge il `OnSize` dal gestore di messaggi per il `CMFCD2DWalkthroughView` classe.
 
@@ -128,11 +128,11 @@ Per completare questa procedura dettagliata, è necessario disporre di Visual St
 
 1. Nel **Project** menu, scegliere **Creazione guidata classe**.
 
-2. Nel **Creazione guidata classe MFC**in **nome classe**selezionare `CMFCD2DWalkthroughView`.
+2. Nel **Creazione guidata classe MFC**, in **nome della classe**selezionare `CMFCD2DWalkthroughView`.
 
 3. Nel **messaggi** scheda, scegliere **Aggiungi messaggio personalizzato**.
 
-4. Nel **Aggiungi messaggio personalizzato** della finestra di dialogo il **messaggio Windows personalizzato** , digitare `AFX_WM_DRAW2D`. Nel **nome del gestore messaggi** , digitare `OnDraw2D`. Selezionare il **messaggio registrato** l'opzione e quindi scegliere **OK**. Questa azione aggiunge un gestore messaggi per il `AFX_WM_DRAW2D` del messaggio per il `CMFCD2DWalkthroughView` classe.
+4. Nel **Aggiungi messaggio personalizzato** della finestra di dialogo il **messaggio Windows personalizzato** , digitare *AFX_WM_DRAW2D*. Nel **nome del gestore messaggi** , digitare *OnDraw2D*. Selezionare il **messaggio registrato** l'opzione e quindi scegliere **OK**. Questa azione aggiunge un gestore di messaggi per il messaggio AFX_WM_DRAW2D il `CMFCD2DWalkthroughView` classe.
 
 5. Nel **gestori esistenti** , quindi selezionare `OnDraw2D`. Scegliere **Modifica codice** per visualizzare il `CMFCD2DWalkthroughView::OnDraw2D` metodo. Utilizzare questo codice per il `CMFCD2DWalkthroughView::OnDrawD2D` metodo:
 

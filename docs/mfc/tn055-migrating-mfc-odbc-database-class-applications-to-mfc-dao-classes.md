@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cce09994cf7dabdff1508ae5e12778ce6032624b
-ms.sourcegitcommit: e013acba70aa29fed60ae7945162adee23e19c3b
+ms.openlocfilehash: d46150ee76219732d0895e818fa00c68dc588853
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36322511"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36957390"
 ---
 # <a name="tn055-migrating-mfc-odbc-database-class-applications-to-mfc-dao-classes"></a>TN055: migrazione di applicazioni classi di database ODBC MFC a classi DAO MFC
 
@@ -99,9 +99,9 @@ Le modifiche essenziali alle funzionalità che possono influenzare l'applicazion
 
    Con le classi ODBC, in MFC è necessario definire queste opzioni tramite macro o tipi enumerati.
 
-   Con le classi DAO, DAO fornisce la definizione di queste opzioni in un file di intestazione (DBDAOINT.H). Pertanto il tipo del recordset è un membro enumerato di `CRecordset`, ma con DAO è una costante. Ad esempio si utilizzerebbe `snapshot` quando si specifica il tipo di `CRecordset` in ODBC ma `DB_OPEN_SNAPSHOT` quando si specifica il tipo di `CDaoRecordset`.
+   Con le classi DAO, DAO fornisce la definizione di queste opzioni in un file di intestazione (DBDAOINT.H). Pertanto il tipo del recordset è un membro enumerato di `CRecordset`, ma con DAO è una costante. Ad esempio si utilizzerebbe **snapshot** quando si specifica il tipo di `CRecordset` in ODBC ma **DB_OPEN_SNAPSHOT** quando si specifica il tipo di `CDaoRecordset`.
 
-- Il tipo di recordset predefinito per `CRecordset` viene `snapshot` mentre il tipo di recordset predefinito per `CDaoRecordset` è `dynaset` (vedere la nota riportata sotto per un problema aggiuntivo sugli snapshot della classe ODBC).
+- Il tipo di recordset predefinito per `CRecordset` viene **snapshot** mentre il tipo di recordset predefinito per `CDaoRecordset` è **dynaset** (vedere la nota riportata sotto per un problema aggiuntivo sugli snapshot della classe ODBC).
 
 - La classe ODBC `CRecordset` include un'opzione per creare un recordset di tipo forward-only. Nella classe `CDaoRecordset`, forward-only non è un tipo di recordset, ma una proprietà (o un opzione) di determinati tipi di recordset.
 
@@ -111,7 +111,7 @@ Le modifiche essenziali alle funzionalità che possono influenzare l'applicazion
 
 - La classe Exception è stata modificata. `CDBExceptions` vengono generate nelle classi ODBC e `CDaoExceptions` nelle classi DAO.
 
-- `RFX_Date` viene utilizzato `CTime` e `TIMESTAMP_STRUCT` oggetti mentre `DFX_Date` utilizza `COleDateTime`. Il `COleDateTime` è quasi identica a quella `CTime`, ma si basa su un OLE a 8 byte `DATE` invece di 4 byte `time_t` in modo che può contenere un quantità maggiore di dati.
+- `RFX_Date` viene utilizzato `CTime` e `TIMESTAMP_STRUCT` oggetti mentre `DFX_Date` utilizza `COleDateTime`. Il `COleDateTime` è quasi identica a quella `CTime`, ma si basa su un OLE a 8 byte **data** invece di 4 byte **time_t** in modo che può contenere un quantità maggiore di dati.
 
    > [!NOTE]
    > Gli snapshot di DAO (`CDaoRecordset`) sono di sola lettura mentre gli snapshot di ODBC (`CRecordset`) possono essere aggiornati in base al driver e all'utilizzo della libreria di cursori ODBC. Se si utilizza la libreria di cursori, gli snapshot `CRecordset` sono aggiornabili. Se si utilizza uno dei driver Microsoft da Desktop Driver Pack 3.0 senza la libreria di cursori ODBC, gli snapshot `CRecordset` sono di sola lettura. Se si utilizza un altro driver, controllare la documentazione del driver per verificare se gli snapshot (`STATIC_CURSORS`) sono di sola lettura.

@@ -1,5 +1,5 @@
 ---
-title: File di origine utilizzando MFC | Documenti Microsoft
+title: File di origine utilizzando l'operazione MFC | Documenti Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,19 +21,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 73177d8b73d5f4be6d886b0bda84f1e1241488cc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 69079e6f74743a82aa9e9b9b1c13703e480c904c
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33384335"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951543"
 ---
 # <a name="using-the-mfc-source-files"></a>Utilizzo dei file di origine MFC
 La libreria Microsoft Foundation Class (MFC) fornisce il codice sorgente completo. I file di intestazione (.h) si trovano nella directory \atlmfc\include; i file di implementazione (.cpp) sono nella directory \atlmfc\src\mfc.  
   
  In questa serie di articoli vengono illustrati le convenzioni utilizzate da MFC per commentare le diverse parti di ogni classe, il significato di questi commenti e ciò che ci si aspetta di trovare in ogni sezione. Le procedure guidate di Visual C++ utilizzano convenzioni simili per le classi create automaticamente e, probabilmente, queste convenzioni risulteranno utili anche per il proprio codice.  
   
- È possibile avere familiarità con la **pubblica**, `protected`, e `private` parole chiave C++. Osservando i file di intestazione MFC, si noterà che ogni classe potrebbe includere numerose parole chiave di questo tipo. Ad esempio, potrebbero essere funzioni e variabili membro pubblico in più **pubblica** (parola chiave). Questo perché MFC separa le variabili membro e le funzioni membro in base all'utilizzo, non al tipo di accesso consentito. MFC utilizza la parola chiave `private` sporadicamente; anche gli elementi considerati dettagli di implementazione in genere sono protected e spesso sono public. Sebbene l'accesso ai dettagli di implementazione sia sconsigliato, MFC affida la decisione allo sviluppatore.  
+ Potrebbe avere familiarità con la **pubblico**, **protetti**, e **privata** parole chiave C++. Osservando i file di intestazione MFC, si noterà che ogni classe potrebbe includere numerose parole chiave di questo tipo. Ad esempio, le variabili membro pubblico e funzioni potrebbero essere in una o più **pubblica** (parola chiave). Questo perché MFC separa le variabili membro e le funzioni membro in base all'utilizzo, non al tipo di accesso consentito. Usa MFC **privato** sporadicamente; anche gli elementi considerati dettagli di implementazione in genere sono protected e spesso sono public. Sebbene l'accesso ai dettagli di implementazione sia sconsigliato, MFC affida la decisione allo sviluppatore.  
   
  Sia nei file sorgente di MFC che nei file creati dalla Creazione guidata applicazione MFC è possibile trovare commenti simili all'interno delle dichiarazioni di classe (in genere nell'ordine indicato):  
   

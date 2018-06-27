@@ -17,54 +17,54 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a4eaf4b800fdc1954c54043aa7e2669613e6b27e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fc26f74de76205041228ce92e29309af1ce8959f
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33351953"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951675"
 ---
 # <a name="add-class-from-typelib-wizard"></a>Aggiunta guidata classe da libreria dei tipi
 Utilizzare questa procedura guidata per aggiungere una classe MFC da una libreria dei tipi disponibili. La procedura guidata crea una classe per ogni interfaccia che aggiunta dalla libreria dei tipi selezionati.  
   
  **Aggiungi classe da**  
- Specifica il percorso della libreria dei tipi, da cui viene creata la classe.  
+ Specifica il percorso della libreria dei tipi da cui viene creata la classe.  
   
 |Opzione|Descrizione|  
 |------------|-----------------|  
-|**Registry**|La libreria dei tipi è registrata nel sistema. Librerie dei tipi registrati sono elencate **librerie dei tipi disponibili**.|  
-|**File**|La libreria dei tipi non è necessariamente registrata nel sistema, ma è contenuta in un file. È necessario specificare il percorso del file in **percorso**.|  
+|**Registry**|La libreria dei tipi è registrata nel sistema. Le librerie dei tipi registrate sono elencate in **Available type libraries** (Librerie dei tipi disponibili).|  
+|**File**|La libreria dei tipi non è necessariamente registrata nel sistema ma è contenuta in un file. È necessario specificare il percorso del file in **Percorso**.|  
   
- **Librerie dei tipi disponibili**  
+ **Available type libraries** (Librerie dei tipi disponibili)  
  Elenca le librerie dei tipi attualmente registrate nel sistema. Selezionare una libreria dei tipi da questo elenco per visualizzarne le interfacce nel **interfacce** elenco.  
   
  Vedere "All'interno di Distributed COM: tipo di librerie e lingua integrazione" in MSDN library per ulteriori informazioni sulla registrazione delle librerie dei tipi.  
   
  **Posizione**  
- Specifica il percorso della libreria dei tipi. Se si fa clic **File** in **Aggiungi classe da**, è possibile specificare il percorso del file contenente la libreria dei tipi. Per passare al percorso del file, fare clic sul pulsante con puntini di sospensione.  
+ Specifica il percorso della libreria dei tipi. Se si fa clic su **File** in **Aggiungi classe da**, è possibile specificare il percorso del file contenente la libreria dei tipi. Per passare al percorso del file, fare clic sul pulsante con i puntini di sospensione.  
   
  **Interfacce**  
  Elenca le interfacce nella libreria dei tipi attualmente selezionato nel **librerie dei tipi disponibili** elenco.  
   
-|Pulsante di trasferimento|Descrizione|  
+|Pulsante Trasferimento|Descrizione|  
 |---------------------|-----------------|  
-|**>**|Aggiunge l'interfaccia selezionata nel **interfacce** elenco. Se è selezionata alcuna interfaccia disponibile.|  
+|**>**|Aggiunge l'interfaccia selezionata nell'elenco **Interfacce**. Visualizzato in grigio se è selezionata alcuna interfaccia.|  
 |**>>**|Aggiunge tutte le interfacce nella libreria dei tipi attualmente selezionata nel **librerie dei tipi disponibili** elenco.|  
-|**<**|Rimuove la classe selezionata nel **classi generate** elenco. Visualizzato in grigio se nessuna classe attualmente selezionata nel **classi generate** elenco.|  
-|**<\<**|Rimuove tutte le classi di **classi generate** elenco. Se in grigio il **classi generate** elenco è vuoto.|  
+|**<**|Rimuove la classe selezionata nell'elenco **Classi generate**. Visualizzato in grigio se nessuna classe attualmente selezionata nel **classi generate** elenco.|  
+|**<\<**|Rimuove tutte le classi dell'elenco **Classi generate**. In grigio se il **classi generate** elenco è vuoto.|  
   
  **Classi generate**  
- Specifica i nomi di classe da generare dalle interfacce aggiunte mediante il **>** o **>>** pulsante. È possibile fare clic su questa casella per selezionare una classe, quindi utilizzare le frecce su o giù per scorrere l'elenco, visualizzare il nome di ogni classe nel `Class` casella e il nome file nel **File** casella che viene generato quando si fa clic  **Fine**. È possibile selezionare solo una classe in un momento in questa casella.  
+ Specifica i nomi di classe da generare dalle interfacce aggiunte usando il pulsante **>** o **>>**. È possibile fare clic su questa casella per selezionare una classe, quindi utilizzare le frecce su o giù per scorrere l'elenco, visualizzazione di ogni nome di classe nel **classe** casella e il nome file nel **File** finestra che verrà generato quando si Fare clic su **fine**. È possibile selezionare solo una classe alla volta in questa casella.  
   
- È possibile rimuovere una classe selezionandolo nell'elenco e fare clic su **<**. Non è necessario selezionare una classe nella casella di classi generate per rimuovere tutte le classi. facendo clic su **<<**, rimuovere tutte le classi di **classi generate** casella.  
+ È possibile rimuovere una classe selezionandola nell'elenco e facendo clic su **<**. Non è necessario selezionare una classe nella casella di classi generate per rimuovere tutte le classi. facendo clic **<<**, si rimuove tutte le classi il **classi generate** casella.  
   
- `Class`  
- Specifica il nome della classe selezionata nel **classi generate** casella che consente di aggiungere la procedura guidata quando si fa clic **fine**. È possibile modificare il nome di `Class` casella.  
+ **Classe**  
+ Specifica il nome della classe selezionata nella casella **Classi generate** aggiunta dalla procedura guidata quando si fa clic su **Fine**. È possibile modificare il nome nel **classe** casella.  
   
  **File**  
- Imposta il nome del file di intestazione per la nuova classe. Per impostazione predefinita, questo nome è in base al nome fornito in **classi generate**. Fare clic sul pulsante con puntini di sospensione per salvare il nome del file nel percorso prescelto o per aggiungere la dichiarazione di classe in un file esistente. Se si sceglie un file esistente, il non verrà salvato nel percorso selezionato finché non si sceglie **fine** nella procedura guidata.  
+ Imposta il nome del file di intestazione per la nuova classe. Per impostazione predefinita, il nome è basato sul nome specificato in **Classi generate**. Fare clic sul pulsante con i puntini di sospensione per salvare il nome file nel percorso desiderato o aggiungere la dichiarazione di classe a un file esistente. Se si sceglie un file esistente, la procedura guidata non lo salverà nel percorso selezionato finché non si sceglie **Fine**.  
   
- La procedura guidata non sovrascrive un file. Se si seleziona il nome di un file esistente, quando si fa clic **fine**, la procedura guidata viene richiesto di indicare se la dichiarazione di classe deve essere aggiunti al contenuto del file. Fare clic su **Sì** da aggiungere al file; fare clic su **n** per tornare alla procedura guidata e specificare un altro nome di file.  
+ La procedura guidata non sovrascrive i file. Se si seleziona il nome di un file esistente, quando si sceglie **Fine**, la procedura guidata chiede di specificare se la dichiarazione di classe deve essere aggiunta al contenuto del file. Fare clic su **Sì** per aggiungere il file. Fare clic su **No** per tornare alla procedura guidata e specificare un altro nome di file.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Classe MFC da una libreria dei tipi](../../mfc/reference/adding-an-mfc-class-from-a-type-library.md)   

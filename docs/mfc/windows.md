@@ -17,19 +17,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 88ba41b7bb921cc2834b4d45712be768b2d19f8e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 97d8f7a0107f3f6d7aa9e5baa1454142e1426d9e
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33384465"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36950474"
 ---
 # <a name="windows"></a>WINDOWS
-Questa serie di articoli vengono illustrati gli oggetti di finestra nel framework MFC. Tutte le finestre MFC derivano dalla classe [CWnd](../mfc/reference/cwnd-class.md), inclusi finestre cornice, visualizzazioni, finestre di dialogo e controlli.  
+Questa serie di articoli illustra oggetti delle finestre nel framework MFC. Tutte le finestre MFC derivano dalla classe [CWnd](../mfc/reference/cwnd-class.md), inclusi finestre cornice, visualizzazioni, finestre di dialogo e controlli.  
   
- Viene descritto il primo gruppo di articoli [oggetti delle finestre](../mfc/window-objects.md) in generale. Fare riferimento a questo gruppo per informazioni generali su C++ oggetti delle finestre, sulle modalità di incapsulamento HWND e come è utilizzarli durante la creazione di finestre personalizzate, ad esempio le finestre figlio.  
+ Viene descritto il primo gruppo di articoli [oggetti delle finestre](../mfc/window-objects.md) in generale. Fare riferimento a questo gruppo per informazioni generali sugli oggetti di finestra C++, sulle modalità di incapsulamento un `HWND`, e come è usarli durante la creazione di finestre personalizzate, ad esempio le finestre figlio.  
   
- Viene descritto il secondo gruppo di articoli [finestre cornice](../mfc/frame-windows.md): windows che inserire un frame intorno al contenuto, in particolare. Fare riferimento a questo gruppo per informazioni sulle modalità di gestione di finestre cornice e il contenuto che essi frame, inclusi le barre di controllo e le visualizzazioni del framework MFC.  
+ Viene descritto il secondo gruppo di articoli [finestre cornice](../mfc/frame-windows.md), ovvero windows che inserire un frame intorno al contenuto, in particolare. Fare riferimento a questo gruppo per informazioni sulle modalità di gestione di finestre cornice e il contenuto che vengono frame, inclusi le barre di controllo e le visualizzazioni del framework MFC.  
   
 ## <a name="what-do-you-want-to-know-more-about"></a>Ciò che si desidera saperne di più  
  *Argomenti sugli oggetti di Window in generale*  

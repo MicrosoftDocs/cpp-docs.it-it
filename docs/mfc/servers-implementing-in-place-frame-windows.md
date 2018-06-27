@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1cc26e2874921d30ef233509ee46b776ec8e3e9b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f0f03d66fac6d58bdb48aa9b7a6d8aafe18a74ea
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33380864"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956434"
 ---
 # <a name="servers-implementing-in-place-frame-windows"></a>Server: implementazione di finestre cornice sul posto
 In questo articolo viene illustrata la procedura per implementare le finestre cornice sul posto in un'applicazione server di modifica visiva se non si intende utilizzare la creazione guidata dell'applicazione per creare un'applicazione server. Anziché utilizzare la procedura descritta in questo articolo, è possibile utilizzare una classe finestra cornice sul posto esistente da un'applicazione generato dalla procedura guidata o un esempio fornito con Visual C++.  
@@ -32,13 +32,13 @@ In questo articolo viene illustrata la procedura per implementare le finestre co
   
 1.  Derivare una classe della finestra cornice sul posto da `COleIPFrameWnd`.  
   
-    -   Utilizzare la macro `DECLARE_DYNCREATE` nel file di intestazione della classe.  
+    -   Usare la macro DECLARE_DYNCREATE nel file di intestazione della classe.  
   
-    -   Utilizzare la macro `IMPLEMENT_DYNCREATE` nel file (con estensione cpp) di implementazione della classe. In questo modo gli oggetti di questa classe possono essere creati dal framework.  
+    -   Usare la macro IMPLEMENT_DYNCREATE nel file di implementazione (. cpp) della classe. In questo modo gli oggetti di questa classe possono essere creati dal framework.  
   
 2.  Dichiarare un membro `COleResizeBar` nella classe della finestra cornice. Ciò è necessario se si vuole supportare il ridimensionamento sul posto nelle applicazioni server.  
   
-     Dichiarare un `OnCreate` gestore di messaggi (tramite il **proprietà** finestra) e chiamare **crea** per il `COleResizeBar` membro, se è stato definito.  
+     Dichiarare un `OnCreate` dal gestore di messaggi (utilizzando il **delle proprietà** finestra) e chiamare `Create` per il `COleResizeBar` membro, se sono state definite.  
   
 3.  Se si dispone di una barra degli strumenti, dichiarare un membro `CToolBar` nella classe della finestra cornice.  
   
@@ -56,7 +56,7 @@ In questo articolo viene illustrata la procedura per implementare le finestre co
   
  L'ID per la bitmap della barra degli strumenti deve corrispondere a quello delle altre risorse sul posto definite nell'applicazione server. Vedere [menu e risorse: aggiunte di Server](../mfc/menus-and-resources-server-additions.md) per informazioni dettagliate.  
   
- Per ulteriori informazioni, vedere [COleIPFrameWnd](../mfc/reference/coleipframewnd-class.md), [COleResizeBar](../mfc/reference/coleresizebar-class.md), e [CDocTemplate:: SetServerInfo](../mfc/reference/cdoctemplate-class.md#setserverinfo) nel *riferimenti alla libreria di classi*.  
+ Per altre informazioni, vedere [COleIPFrameWnd](../mfc/reference/coleipframewnd-class.md), [COleResizeBar](../mfc/reference/coleresizebar-class.md), e [CDocTemplate:: SetServerInfo](../mfc/reference/cdoctemplate-class.md#setserverinfo) nel *riferimenti alla libreria di classe*.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Server](../mfc/servers.md)   

@@ -17,15 +17,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1095061cce8ff8f189984aca99a06eb741a46e83
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 315526a8f95a1d62ac89f3a76fab492c9b136715
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33382073"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956382"
 ---
 # <a name="window-procedure-entry-points"></a>Punti di ingresso della routine della finestra
-Per proteggere le routine di finestra MFC, con collegamenti modulo statica con un'implementazione di procedure finestra speciale. Il collegamento viene eseguita automaticamente quando il modulo viene collegato a MFC. Utilizza questa procedura di finestra di `AFX_MANAGE_STATE` macro per definire correttamente lo stato del modulo effettivo, viene quindi chiamato **AfxWndProc**, che a sua volta delega al `WindowProc` funzione membro di appropriato `CWnd`-derivato oggetto.  
+Per proteggere le routine di finestra MFC, con collegamenti modulo statica con un'implementazione di procedure finestra speciale. Il collegamento viene eseguita automaticamente quando il modulo viene collegato a MFC. Questa routine viene utilizzata la macro AFX_MANAGE_STATE per impostare correttamente lo stato del modulo effettivo, viene quindi chiamato `AfxWndProc`, che a sua volta delega per il `WindowProc` funzione membro di appropriata `CWnd`-oggetto derivato.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Gestione dei dati dello stato dei moduli MFC](../mfc/managing-the-state-data-of-mfc-modules.md)

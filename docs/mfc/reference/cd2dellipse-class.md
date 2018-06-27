@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b4c4a801952c6b29779c381237c291232ce2ef25
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 44da620750fd9fcb241da3a195e294e24143acaa
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33347747"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36953583"
 ---
 # <a name="cd2dellipse-class"></a>Classe CD2DEllipse
 Wrapper per `D2D1_ELLIPSE`.  
@@ -40,7 +40,7 @@ class CD2DEllipse : public D2D1_ELLIPSE;
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[CD2DEllipse::CD2DEllipse](#cd2dellipse)|Di overload. Costruisce un `CD2DEllipse` oggetto `D2D1_ELLIPSE` oggetto.|  
+|[CD2DEllipse::CD2DEllipse](#cd2dellipse)|Di overload. Costruisce un `CD2DEllipse` dall'oggetto `D2D1_ELLIPSE` oggetto.|  
   
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  `D2D1_ELLIPSE`  
@@ -65,16 +65,16 @@ CD2DEllipse(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `rect`  
+ *Rect*  
  rettangolo di origine  
   
- `ellipse`  
+ *ellisse*  
  ellisse di origine  
   
- `ptCenter`  
+ *ptCenter*  
  Punto centrale dell'ellisse.  
   
- `sizeRadius`  
+ *sizeRadius*  
  Il raggio X e raggio Y dell'ellisse.  
   
 ## <a name="see-also"></a>Vedere anche  

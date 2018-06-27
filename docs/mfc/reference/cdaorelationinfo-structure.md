@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 112af640d020dc579c1ec2b1b7eace509daa451e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a49bdfb00c3f2ceba424af7bfdfa652cacec929e
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33366262"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951292"
 ---
 # <a name="cdaorelationinfo-structure"></a>Struttura CDaoRelationInfo
 Il `CDaoRelationInfo` struttura contiene informazioni su una relazione definita tra i campi di due tabelle in un [CDaoDatabase](../../mfc/reference/cdaodatabase-class.md) oggetto.  
@@ -44,16 +44,16 @@ struct CDaoRelationInfo
 ```  
   
 #### <a name="parameters"></a>Parametri  
- `m_strName`  
- Identifica in modo univoco l'oggetto di relazione. Per ulteriori informazioni, vedere l'argomento "Proprietà di nome" nella Guida di DAO.  
+ *m_strName*  
+ Identifica in modo univoco l'oggetto di relazione. Per altre informazioni, vedere l'argomento "Proprietà Name" nella Guida di DAO.  
   
  *m_strTable*  
- Nome della tabella primaria della relazione.  
+ Assegna un nome della tabella primaria della relazione.  
   
  *m_strForeignTable*  
- Definisce la tabella esterna nella relazione. Una tabella esterna è una tabella utilizzata per contenere chiavi esterne. In generale, utilizzare una tabella esterna per stabilire o applicare l'integrità referenziale. La tabella esterna è in genere sul lato molti di una relazione uno-a-molti. Esempi di tabelle esterne includono tabelle che contengono codici per il American stati o province canadese o gli ordini dei clienti.  
+ Assegna un nome di tabella esterna nella relazione. Una tabella esterna è una tabella utilizzata per contenere le chiavi esterne. In generale, utilizzare una tabella esterna per stabilire o applicare l'integrità referenziale. Nella tabella esterna è posto generalmente sul lato molti di una relazione uno-a-molti. Le tabelle che contengono codici per gli stati American o in Canada o gli ordini dei clienti sono esempi di tabelle esterne.  
   
- `m_lAttributes`  
+ *m_lAttributes*  
  Contiene informazioni sul tipo di relazione. Il valore di questo membro può essere uno dei seguenti:  
   
 - **dbRelationUnique** relazione è uno a uno.  
@@ -70,16 +70,16 @@ struct CDaoRelationInfo
   
 - **dbRelationDeleteCascade** verranno eseguite le operazioni di eliminazione a catena.  
   
- `m_pFieldInfos`  
- Un puntatore a una matrice di [CDaoRelationFieldInfo](../../mfc/reference/cdaorelationfieldinfo-structure.md) strutture. La matrice contiene un oggetto per ogni campo nella relazione. Il `m_nFields` (membro dati) fornisce un conteggio degli elementi della matrice.  
+ *m_pFieldInfos*  
+ Un puntatore a una matrice di [CDaoRelationFieldInfo](../../mfc/reference/cdaorelationfieldinfo-structure.md) strutture. La matrice contiene un oggetto per ogni campo nella relazione. Il *m_nFields* (membro dati) fornisce un conteggio degli elementi della matrice.  
   
- `m_nFields`  
- Il numero di `CDaoRelationFieldInfo` gli oggetti di `m_pFieldInfos` (membro dati).  
+ *m_nFields*  
+ Quante `CDaoRelationFieldInfo` gli oggetti di *m_pFieldInfos* (membro dati).  
   
 ## <a name="remarks"></a>Note  
  I riferimenti al database primario e secondario precedente indicano la modalità in cui vengono restituite le informazioni per il [GetRelationInfo](../../mfc/reference/cdaodatabase-class.md#getrelationinfo) funzione membro nella classe `CDaoDatabase`.  
   
- Gli oggetti della relazione non sono rappresentati da una classe MFC. Invece, l'oggetto DAO sottostante di un oggetto MFC del `CDaoDatabase` classe gestisce una raccolta di oggetti relazione: `CDaoDatabase` fornisce funzioni di membro per alcuni singoli elementi di informazioni sulle relazioni o di accedere a possano accedervi in una sola volta con un `CDaoRelationInfo` oggetto chiamando il `GetRelationInfo` funzione membro dell'oggetto di database che lo contiene.  
+ Gli oggetti della relazione non sono rappresentati da una classe MFC. Al contrario, l'oggetto DAO sottostante un oggetto MFC del `CDaoDatabase` classe gestisce una raccolta di oggetti relazione: `CDaoDatabase` fornisce funzioni membro per accedere alcuni singoli elementi delle informazioni sulle relazioni, è possono accedere ad esse tutti contemporaneamente con un `CDaoRelationInfo` oggetto chiamando il `GetRelationInfo` funzione membro dell'oggetto di database che lo contiene.  
   
  Le informazioni recuperate dal [CDaoDatabase::GetRelationInfo](../../mfc/reference/cdaodatabase-class.md#getrelationinfo) le funzioni membro vengono archiviate un `CDaoRelationInfo` struttura. `CDaoRelationInfo` definisce inoltre un `Dump` compila la funzione membro in modalità debug. È possibile utilizzare `Dump` per scaricare il contenuto di un `CDaoRelationInfo` oggetto.  
   

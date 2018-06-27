@@ -19,33 +19,33 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 822b75ec71d79b6e40ec6b61a77239707c32ce39
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 00ace36eef483d8385d718e14e1fc4c5f4e9ea1e
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33384436"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956473"
 ---
 # <a name="writing-an-internet-client-application-using-mfc-wininet-classes"></a>Scrittura di un'applicazione client Internet con classi WinInet MFC
-La base per tutte le applicazioni client Internet è la sessione di Internet. MFC implementa le sessioni Internet come gli oggetti della classe [CInternetSession](../mfc/reference/cinternetsession-class.md). Utilizzare questa classe, è possibile creare una o più sessioni simultanee.  
+La base di tutte le applicazioni client Internet è la sessione di Internet. MFC implementa le sessioni Internet come gli oggetti della classe [CInternetSession](../mfc/reference/cinternetsession-class.md). Utilizzare questa classe, è possibile creare una sessione di Internet o più sessioni simultanee.  
   
- Per comunicare con un server, è necessario un [CInternetConnection](../mfc/reference/cinternetconnection-class.md) oggetto, nonché un `CInternetSession`. È possibile creare un `CInternetConnection` utilizzando [CInternetSession:: GetFtpConnection](../mfc/reference/cinternetsession-class.md#getftpconnection), [CInternetSession:: GetHttpConnection](../mfc/reference/cinternetsession-class.md#gethttpconnection), o [CInternetSession:: GetGopherConnection](../mfc/reference/cinternetsession-class.md#getgopherconnection). Ognuna di queste chiamate è specifica per il tipo di protocollo. Queste chiamate non aprire un file sul server per la lettura o scrittura. Se si prevede di leggere o scrivere dati, è necessario aprire il file come passaggio separato.  
+ Per comunicare con un server, è necessario un [CInternetConnection](../mfc/reference/cinternetconnection-class.md) oggetti, nonché un `CInternetSession`. È possibile creare una `CInternetConnection` mediante [CInternetSession:: GetFtpConnection](../mfc/reference/cinternetsession-class.md#getftpconnection), [CInternetSession:: GetHttpConnection](../mfc/reference/cinternetsession-class.md#gethttpconnection), o [CInternetSession:: GetGopherConnection](../mfc/reference/cinternetsession-class.md#getgopherconnection). Ognuna di queste chiamate è specifica per il tipo di protocollo. Queste chiamate non aprono un file nel server per la lettura o scrittura. Se si prevede di leggere o scrivere dati, è necessario aprire il file come passaggio separato.  
   
  Per la maggior parte delle sessioni di Internet, il `CInternetSession` oggetto funziona mano in stretta associazione con un [CInternetFile](../mfc/reference/cinternetfile-class.md) oggetto:  
   
 -   Per una sessione di Internet, è necessario creare un'istanza di [CInternetSession](../mfc/reference/cinternetsession-class.md).  
   
--   Se la sessione Internet legge o scrive i dati, è necessario creare un'istanza di `CInternetFile` (o delle relative sottoclassi [CHttpFile](../mfc/reference/chttpfile-class.md) o [CGopherFile](../mfc/reference/cgopherfile-class.md)). Il modo più semplice per leggere i dati consiste nel chiamare [CInternetSession:: OpenURL](../mfc/reference/cinternetsession-class.md#openurl). Questa funzione consente di analizzare un localizzatore URL (Universal Resource) fornito dall'utente, viene aperta una connessione al server specificato dall'URL e restituisce una proprietà di sola lettura `CInternetFile` oggetto. `CInternetSession::OpenURL` non è specifico di un tipo di protocollo, ovvero la stessa chiamata funziona per tutti gli URL gopher, HTTP o FTP. `CInternetSession::OpenURL` funziona anche con i file locali (restituzione di un `CStdioFile` anziché un `CInternetFile`).  
+-   Se la sessione Internet legge o scrive i dati, è necessario creare un'istanza di `CInternetFile` (o delle relative sottoclassi [CHttpFile](../mfc/reference/chttpfile-class.md) o [CGopherFile](../mfc/reference/cgopherfile-class.md)). Il modo più semplice per leggere i dati consiste nel chiamare [CInternetSession:: OpenURL](../mfc/reference/cinternetsession-class.md#openurl). Questa funzione analizza un localizzatore URL (Universal Resource) fornito dall'utente, viene aperta una connessione al server specificato dall'URL e restituisce una sola lettura `CInternetFile` oggetto. `CInternetSession::OpenURL` non è specifico di un tipo di protocollo, ovvero la stessa chiamata funziona per tutti gli URL gopher, HTTP o FTP. `CInternetSession::OpenURL` funziona anche con i file locali (restituzione di un `CStdioFile` anziché un `CInternetFile`).  
   
--   Se il servizio Internet sessione non leggere o scrivere dati, ma esegue altre attività, ad esempio l'eliminazione di un file in una directory FTP, non si potrebbe essere necessario creare un'istanza di `CInternetFile`.  
+-   Se il servizio Internet sessione non leggere o scrivere dati, ma esegue altre operazioni, ad esempio l'eliminazione di un file in una directory FTP, potrebbe non essere necessario creare un'istanza di `CInternetFile`.  
   
  Esistono due modi per creare un `CInternetFile` oggetto:  
   
 -   Se si utilizza `CInternetSession::OpenURL` per stabilire la connessione al server, la chiamata a `OpenURL` restituisce un `CStdioFile`.  
   
--   Se utilizzare **CInternetSession:: GetFtpConnection**, `GetGopherConnection`, o `GetHttpConnection` per stabilire la connessione al server, è necessario chiamare `CFtpConnection::OpenFile`, `CGopherConnection::OpenFile`, o **CHttpConnection::**  , rispettivamente, per restituire un `CInternetFile`, `CGopherFile`, o `CHttpFile`, rispettivamente.  
+-   Se utilizzare `CInternetSession::GetFtpConnection`, `GetGopherConnection`, o `GetHttpConnection` per stabilire la connessione al server, è necessario chiamare `CFtpConnection::OpenFile`, `CGopherConnection::OpenFile`, o `CHttpConnection::OpenRequest`, rispettivamente, per restituire un `CInternetFile`, `CGopherFile`, o `CHttpFile`, rispettivamente.  
   
- I passaggi dell'implementazione di un'applicazione client Internet variano a seconda se si crea un client Internet generico basato su **OpenURL** o un client specifico del protocollo utilizzando uno del **GetConnection** funzioni.  
+ I passaggi di implementare un'applicazione client Internet variano a seconda se si crea un client Internet generico in base alle `OpenURL` o un client specifico del protocollo usando uno del `GetConnection` funzioni.  
   
 ## <a name="what-do-you-want-to-know-more-about"></a>Ciò che si desidera saperne di più  
   

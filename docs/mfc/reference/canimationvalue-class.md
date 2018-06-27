@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 923b1b74a50fd13a57c1d9c7696f81acb28453e3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b762c3abb5f57574dc2a60d6b2145af2e0c0484b
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33356538"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952098"
 ---
 # <a name="canimationvalue-class"></a>Classe CAnimationValue
 Implementa la funzionalità di oggetto di animazione con un valore.  
@@ -67,7 +67,7 @@ class CAnimationValue : public CAnimationBaseObject;
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[CAnimationValue::GetAnimationVariableList](#getanimationvariablelist)|Inserisce la variabile di animazione incapsulata in un elenco. (Esegue l'override [CAnimationBaseObject:: GetAnimationVariableList](../../mfc/reference/canimationbaseobject-class.md#getanimationvariablelist).)|  
+|[CAnimationValue::GetAnimationVariableList](#getanimationvariablelist)|Inserisce la variabile di animazione incapsulato in un elenco. (Esegue l'override [CAnimationBaseObject:: GetAnimationVariableList](../../mfc/reference/canimationbaseobject-class.md#getanimationvariablelist).)|  
   
 ### <a name="public-operators"></a>Operatori pubblici  
   
@@ -84,7 +84,7 @@ class CAnimationValue : public CAnimationBaseObject;
 |[CAnimationValue::m_value](#m_value)|La variabile di animazione incapsulata che rappresenta il valore di animazione.|  
   
 ## <a name="remarks"></a>Note  
- La classe CAnimationValue incapsula un singolo oggetto CAnimationVariable e può rappresentare un singolo valore animato nelle applicazioni. Ad esempio, è possibile utilizzare questa classe per la trasparenza animata (effetto dissolvenza), angolare (per ruotare gli oggetti), o per qualsiasi altro caso, quando è necessario creare un'animazione in base a un singolo valore animato. Per utilizzare questa classe nell'applicazione, creare un'istanza di un oggetto di questa classe, aggiungerlo al controller di animazione usando CAnimationController:: AddAnimationObject e chiamare AddTransition per ogni transizione da applicare al valore.  
+ La classe CAnimationValue incapsula un singolo oggetto CAnimationVariable e può rappresentare un singolo valore animato nelle applicazioni. Ad esempio, è possibile utilizzare questa classe per la trasparenza animata (effetto di dissolvenza), angolare (per ruotare gli oggetti), o per qualsiasi altro caso, quando è necessario creare un'animazione a seconda del valore singolo animata. Per usare questa classe nell'applicazione, creare un'istanza di un oggetto di questa classe, aggiungerlo al controller di animazione usando CAnimationController:: AddAnimationObject e chiamare AddTransition per ogni transizione da applicare al valore.  
   
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -104,7 +104,7 @@ void AddTransition(CBaseTransition* pTransition);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `pTransition`  
+ *pTransition*  
  Un puntatore all'oggetto di transizione.  
   
 ### <a name="remarks"></a>Note  
@@ -125,23 +125,23 @@ CAnimationValue(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `dblDefaultValue`  
+ *dblDefaultValue*  
  Specifica il valore predefinito.  
   
- `nGroupID`  
+ *nGroupID*  
  Specifica l'ID del gruppo.  
   
- `nObjectID`  
- Specifica l'ID dell'oggetto.  
+ *nObjectID*  
+ Specifica l'ID oggetto.  
   
- `dwUserData`  
+ *dwUserData*  
  Specifica i dati definiti dall'utente.  
   
 ### <a name="remarks"></a>Note  
- Costruisce l'oggetto CAnimationValue con le proprietà predefinite: il valore predefinito, ID di gruppo e ID di oggetto sono impostati su 0.  
+ Costruisce l'oggetto CAnimationValue con le proprietà predefinite: valore predefinito, ID di gruppo e ID di oggetto sono impostati su 0.  
   
 ##  <a name="getanimationvariablelist"></a>  CAnimationValue::GetAnimationVariableList  
- Inserisce la variabile di animazione incapsulata in un elenco.  
+ Inserisce la variabile di animazione incapsulato in un elenco.  
   
 ```  
 virtual void GetAnimationVariableList(
@@ -150,8 +150,8 @@ virtual void GetAnimationVariableList(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `lst`  
- Quando la funzione restituisce un risultato, contiene un puntatore a CAnimationVariable che rappresenta il valore di animazione.  
+ *lst*  
+ Quando la funzione viene restituito, contiene un puntatore a CAnimationVariable che rappresenta il valore di animazione.  
   
 ##  <a name="getvalue"></a>  CAnimationValue::GetValue  
  Recupera il valore corrente.  
@@ -162,14 +162,14 @@ BOOL GetValue(INT32& nValue);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `dblValue`  
+ *dblValue*  
  Output. Quando termina la funzione contiene un valore corrente della variabile di animazione.  
   
- `nValue`  
+ *nValore*  
  Output. Quando termina la funzione contiene un valore corrente della variabile di animazione.  
   
 ### <a name="return-value"></a>Valore restituito  
- TRUE se il valore corrente è stato recuperato correttamente. in caso contrario FALSE.  
+ TRUE se il valore corrente è stato recuperato correttamente. in caso contrario, FALSE.  
   
 ### <a name="remarks"></a>Note  
  Chiamare questa funzione per recuperare il valore corrente. Questa implementazione chiama l'oggetto COM incapsulato e se la chiamata ha esito negativo, questo metodo restituisce il valore predefinito che è stata precedentemente impostato nel costruttore o con SetDefaultValue.  
@@ -185,7 +185,7 @@ CAnimationVariable& GetVariable();
  Un riferimento alla variabile di animazione incapsulato.  
   
 ### <a name="remarks"></a>Note  
- Utilizzare questo metodo per accedere alla variabile di animazione incapsulata. Da CAnimationVariable si ottiene accesso all'oggetto IUIAnimationVariable sottostante, il cui puntatore può essere NULL se non è stata creata la variabile di animazione.  
+ Utilizzare questo metodo per accedere alla variabile di animazione incapsulato. Da CAnimationVariable si ottiene l'accesso all'oggetto IUIAnimationVariable sottostante, il cui puntatore può essere NULL se non è stata creata la variabile di animazione.  
   
 ##  <a name="m_value"></a>  CAnimationValue::m_value  
  La variabile di animazione incapsulata che rappresenta il valore di animazione.  
@@ -205,7 +205,7 @@ operator DOUBLE();
  Valore corrente del valore di animazione.  
   
 ### <a name="remarks"></a>Note  
- Fornisce la conversione tra CAnimationValue e DOUBLE. Internamente, questo metodo chiama GetValue e non verifica gli errori. Se GetValue ha esito negativo, il valore restituito conterrà un valore predefinito impostato in precedenza nel costruttore o con SetDefaultValue.  
+ Fornisce la conversione tra CAnimationValue e DOUBLE. Questo metodo chiama GetValue internamente e non controllare gli errori. Se GetValue ha esito negativo, il valore restituito conterrà un valore predefinito impostato in precedenza nel costruttore o con SetDefaultValue.  
   
 ##  <a name="operator_int32"></a>  CAnimationValue::operator INT32  
  Fornisce la conversione tra CAnimationValue e INT32.  
@@ -215,10 +215,10 @@ operator INT32();
 ```   
   
 ### <a name="return-value"></a>Valore restituito  
- Valore corrente del valore di animazione come integer.  
+ Valore corrente dell'animazione valore come numero intero.  
   
 ### <a name="remarks"></a>Note  
- Fornisce la conversione tra CAnimationValue e INT32. Internamente, questo metodo chiama GetValue e non verifica gli errori. Se GetValue ha esito negativo, il valore restituito conterrà un valore predefinito impostato in precedenza nel costruttore o con SetDefaultValue.  
+ Fornisce la conversione tra CAnimationValue e INT32. Questo metodo chiama GetValue internamente e non controllare gli errori. Se GetValue ha esito negativo, il valore restituito conterrà un valore predefinito impostato in precedenza nel costruttore o con SetDefaultValue.  
   
 ##  <a name="operator_eq"></a>  CAnimationValue::operator =  
  Assegna un valore DOUBLE a CAnimationValue.  
@@ -229,14 +229,14 @@ void operator=(INT32 nVal);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `dblVal`  
+ *dblVal*  
  Specifica il valore da assegnare al valore di animazione.  
   
- `nVal`  
+ *nVal*  
  Specifica il valore da assegnare al valore di animazione.  
   
 ### <a name="remarks"></a>Note  
- Assegna un valore DOUBLE a CAnimationValue. Questo valore è impostato come valore predefinito per la variabile di animazione incapsulata. Se si è scelto di questo oggetto di animazione agli eventi (ValueChanged o IntegerValueChanged), è necessario abilitare nuovamente questi eventi.  
+ Assegna un valore DOUBLE a CAnimationValue. Questo valore è impostato come valore predefinito per la variabile di animazione incapsulato. Se si ha sottoscritto l'oggetto di animazione agli eventi (ValueChanged o IntegerValueChanged), è necessario abilitare nuovamente questi eventi.  
   
 ##  <a name="setdefaultvalue"></a>  CAnimationValue::SetDefaultValue  
  Imposta il valore predefinito.  
@@ -246,11 +246,11 @@ void SetDefaultValue(DOUBLE dblDefaultValue);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `dblDefaultValue`  
+ *dblDefaultValue*  
  Specifica il valore predefinito.  
   
 ### <a name="remarks"></a>Note  
- Utilizzare questo metodo per impostare un valore predefinito. Un valore predefinito viene restituito all'applicazione quando non è stata avviata l'animazione e/o non è stato creato l'oggetto COM sottostante. Se è già stato creato l'oggetto COM sottostante incapsulato in CAnimationVarible, questo metodo ricrea, pertanto potrebbe essere necessario chiamare metodi EnableValueChanged/EnableIntegerValueChanged nuovamente.  
+ Utilizzare questo metodo per impostare un valore predefinito. Un valore predefinito viene restituito all'applicazione quando l'animazione non è stato avviato e/o non è stato creato l'oggetto COM sottostante. Se è già stato creato l'oggetto COM sottostante incapsulato in CAnimationVarible, questo metodo ricreato, pertanto potrebbe essere necessario chiamare metodi EnableValueChanged/EnableIntegerValueChanged nuovamente.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Classi](../../mfc/reference/mfc-classes.md)

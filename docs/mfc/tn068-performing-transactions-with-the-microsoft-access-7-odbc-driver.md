@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 63cce7532d93b1bd44b6a44c526310bd894d5e07
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 653e1cf29ff2b2e2338df7e8e3a1e74d73a7d6fe
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33384817"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36950227"
 ---
 # <a name="tn068-performing-transactions-with-the-microsoft-access-7-odbc-driver"></a>TN068: esecuzione di transazioni con il driver ODBC di Microsoft Access 7
 > [!NOTE]
@@ -32,23 +32,23 @@ ms.locfileid: "33384817"
  Questa nota viene descritto come eseguire transazioni quando si utilizzano le classi di database ODBC MFC e il driver ODBC di Microsoft Access 7.0 inclusa nella versione di Microsoft ODBC Desktop Driver Pack 3.0.  
   
 ## <a name="overview"></a>Panoramica  
- Se l'applicazione di database esegue transazioni, è necessario assicurarsi di chiamare `CDatabase::BeginTrans` e `CRecordset::Open` nella sequenza corretta nell'applicazione. Il driver Microsoft Access 7.0 utilizza il motore di database Microsoft Jet e Jet richiede che l'applicazione inizia una transazione in qualsiasi database che dispone di un cursore aperto. Per le classi di database ODBC MFC, un cursore aperto equivale a open `CRecordset` oggetto.  
+ Se l'applicazione di database esegue transazioni, è necessario prestare attenzione chiamare `CDatabase::BeginTrans` e `CRecordset::Open` nella sequenza corretta nell'applicazione. Il driver Microsoft Access 7.0 utilizza il motore di database Microsoft Jet e Jet richiede che l'applicazione inizia una transazione in qualsiasi database che dispone di un cursore aperto. Per le classi di database ODBC MFC, un cursore aperto equivale a open `CRecordset` oggetto.  
   
- Se si apre un recordset prima di chiamare **BeginTrans**, potrebbero non essere visualizzati messaggi di errore. Tuttavia, per qualsiasi recordset gli aggiornamenti dell'applicazione consente diventi permanenti dopo la chiamata `CRecordset::Update`, e gli aggiornamenti non essere rollback chiamando **Rollback**. Per evitare questo problema, è necessario chiamare **BeginTrans** prima e quindi aprire il recordset.  
+ Se si apre un recordset prima di chiamare `BeginTrans`, potrebbero non essere visualizzate eventuali messaggi di errore. Tuttavia, per qualsiasi recordset gli aggiornamenti dell'applicazione consente diventi permanente dopo la chiamata `CRecordset::Update`, e gli aggiornamenti non essere rollback chiamando `Rollback`. Per evitare questo problema, è necessario chiamare `BeginTrans` prima e quindi aprire il recordset.  
   
- MFC consente di controllare la funzionalità del driver per il comportamento del cursore commit e rollback. Classe `CDatabase` fornisce due funzioni membro, `GetCursorCommitBehavior` e `GetCursorRollbackBehavior`, per determinare l'effetto di qualsiasi transazione in aperto il `CRecordset` oggetto. Per il driver ODBC di Microsoft Access 7.0, queste funzioni membro restituiscono `SQL_CB_CLOSE` perché il driver di accesso non supporta la conservazione del cursore. Pertanto, è necessario chiamare `CRecordset::Requery` seguente un **CommitTrans** o **Rollback** operazione.  
+ MFC controlla la funzionalità del driver per il comportamento del cursore commit e rollback. Classe `CDatabase` fornisce due funzioni membro, `GetCursorCommitBehavior` e `GetCursorRollbackBehavior`, per determinare l'effetto di qualsiasi transazione in aperto il `CRecordset` oggetto. Per il driver ODBC di Microsoft Access 7.0, queste funzioni membro restituiscono `SQL_CB_CLOSE` perché il driver di accesso non supporta la conservazione del cursore. Pertanto, è necessario chiamare `CRecordset::Requery` seguente una `CommitTrans` o `Rollback` operazione.  
   
- Quando è necessario eseguire più transazioni uno dopo l'altro, è possibile chiamare **Requery** dopo la prima transazione e quindi avviare quello successivo. È necessario chiudere il recordset prima della chiamata successiva a **BeginTrans** per soddisfare il requisito di Jet. Questa nota tecnica descrive due metodi per gestire questa situazione:  
+ Quando è necessario eseguire più transazioni uno dopo l'altro, è possibile chiamare `Requery` dopo la prima transazione e quindi avviare quello successivo. È necessario chiudere il recordset prima della chiamata successiva a `BeginTrans` per soddisfare il requisito di Jet. In questa nota tecnica descrive due metodi per gestire questa situazione:  
   
--   Chiusura del recordset dopo ogni **CommitTrans** o **Rollback** operazione.  
+-   Chiusura del recordset dopo ogni `CommitTrans` o `Rollback` operazione.  
   
--   Utilizzando la funzione API ODBC **SQLFreeStmt**.  
+-   Utilizzo della funzione API ODBC `SQLFreeStmt`.  
   
-## <a name="closing-the-recordset-after-each-committrans-or-rollback-operation"></a>Chiusura di Recordset dopo ogni CommitTrans o l'operazione di Rollback  
- Prima di avviare una transazione, verificare che l'oggetto recordset è chiuso. Dopo la chiamata **BeginTrans**, chiamare il recordset **aprire** funzione membro. Chiudere il recordset immediatamente dopo la chiamata **CommitTrans** o **Rollback**. Si noti che più volte di apertura e chiusura del recordset possono rallentare le prestazioni di un'applicazione.  
+## <a name="closing-the-recordset-after-each-committrans-or-rollback-operation"></a>Chiusura di Recordset dopo ogni operazione di Rollback o CommitTrans  
+ Prima di avviare una transazione, verificare che l'oggetto recordset è chiuso. Dopo la chiamata `BeginTrans`, chiamare il recordset `Open` funzione membro. Chiudere il recordset immediatamente dopo la chiamata `CommitTrans` o `Rollback`. Si noti che più volte di apertura e chiusura del recordset può rallentare le prestazioni dell'applicazione.  
   
 ## <a name="using-sqlfreestmt"></a>Utilizzando SQLFreeStmt  
- È inoltre possibile utilizzare la funzione API ODBC **SQLFreeStmt** per chiudere in modo esplicito il cursore dopo la fine di una transazione. Per avviare un'altra transazione, chiamare **BeginTrans** seguito da `CRecordset::Requery`. Quando si chiama **SQLFreeStmt**, è necessario specificare HSTMT del recordset come primo parametro e **SQL_CLOSE** come secondo parametro. Questo metodo è superiore alla velocità del recordset all'inizio di ogni transazione di apertura e di chiusura. Il codice seguente viene illustrato come implementare questa tecnica:  
+ È inoltre possibile utilizzare la funzione API ODBC `SQLFreeStmt` per chiudere in modo esplicito il cursore dopo la fine di una transazione. Per avviare un'altra transazione, chiamare `BeginTrans` seguita da `CRecordset::Requery`. Quando si chiama `SQLFreeStmt`, è necessario specificare HSTMT del recordset come primo parametro e *SQL_CLOSE* come secondo parametro. Questo metodo è superiore alla velocità del recordset all'inizio di ogni transazione di apertura e di chiusura. Il codice seguente viene illustrato come implementare questa tecnica:  
   
 ```  
 CMyDatabase db;  
@@ -93,11 +93,11 @@ rs.Close();
 db.Close();
 ```  
   
- Per implementare questa tecnica è inoltre possibile scrivere una funzione nuova, **RequeryWithBeginTrans**, che è possibile chiamare per avviare la transazione successiva dopo il commit o rollback al primo. Per scrivere tale funzione, effettuare i passaggi seguenti:  
+ Un altro modo per implementare questa tecnica consiste nello scrivere una funzione nuova, `RequeryWithBeginTrans`, che è possibile chiamare per avviare la transazione successiva dopo il commit o rollback al primo. Per scrivere una funzione di questo tipo, effettuare i passaggi seguenti:  
   
-1.  Copiare il codice per **() CRecordset:: Requery** alla nuova funzione.  
+1.  Copiare il codice per `CRecordset::Requery( )` alla nuova funzione.  
   
-2.  Aggiungere la riga seguente immediatamente dopo la chiamata a **SQLFreeStmt**:  
+2.  Aggiungere la riga seguente immediatamente dopo la chiamata a `SQLFreeStmt`:  
   
  `m_pDatabase->BeginTrans( );`  
   
@@ -131,7 +131,7 @@ db.CommitTrans();
 ```  
   
 > [!NOTE]
->  Non utilizzare questa tecnica se è necessario modificare le variabili membro recordset **m_strFilter** o `m_strSort` tra le transazioni. In tal caso, è necessario chiudere il recordset dopo ogni **CommitTrans** o **Rollback** operazione.  
+>  Non usare questa tecnica se è necessario modificare le variabili membro recordset *m_strFilter* oppure *m_strSort* tra le transazioni. In tal caso, è consigliabile chiudere il recordset dopo ogni `CommitTrans` o `Rollback` operazione.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Note tecniche per numero](../mfc/technical-notes-by-number.md)   

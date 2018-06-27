@@ -1,5 +1,5 @@
 ---
-title: Gli attributi di controllo scheda e schede | Documenti Microsoft
+title: Gli attributi di controllo scheda e le schede | Documenti Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,19 +18,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f925f8b6a5c522e22890ee2c1082ae8d709d2220
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: cd2129ad4b2dc075893a730c0ba75de96dbebea0
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33381193"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952859"
 ---
 # <a name="tabs-and-tab-control-attributes"></a>Schede e attributi del controllo Tab
-Si dispone di controllo elevato sull'aspetto e il comportamento delle schede che costituiscono un controllo struttura a schede ([CTabCtrl](../mfc/reference/ctabctrl-class.md)). Ogni scheda può avere un'etichetta, un'icona, lo stato di un elemento e un valore a 32 bit definito dall'applicazione associata. Per ogni scheda, è possibile visualizzare l'icona, l'etichetta o entrambi.  
+Consente di controllare una notevole l'aspetto e il comportamento delle schede che costituiscono un controllo struttura a schede ([CTabCtrl](../mfc/reference/ctabctrl-class.md)). Ogni scheda può avere un'etichetta, un'icona, lo stato di un elemento e un valore a 32 bit definita dall'applicazione associati. Per ogni scheda, è possibile visualizzare l'icona, l'etichetta o entrambi.  
   
- Inoltre, ogni elemento di scheda può avere tre stati possibili: premuto, inattivo o evidenziato. Questo stato può essere impostato solo modificando un elemento di una scheda. Per modificare un elemento di scheda esistente, recuperare con una chiamata a [GetItem](../mfc/reference/ctabctrl-class.md#getitem), modificare il `TCITEM` struttura (in particolare il **dwState** e **dwStateMask** membri dati ) e quindi restituire modificato `TCITEM` struttura con una chiamata a [funzione membro SetItem](../mfc/reference/ctabctrl-class.md#setitem). Se è necessario cancellare gli stati di tutti gli elementi della scheda in un `CTabCtrl` oggetto, effettuare una chiamata a [DeselectAll](../mfc/reference/ctabctrl-class.md#deselectall). Questa funzione Reimposta lo stato di tutti gli elementi della scheda o tutti gli elementi ad eccezione di quello attualmente selezionato.  
+ Inoltre, ogni elemento di scheda può avere tre stati possibili: premuto, inattivo o evidenziato. Questo stato può essere impostato solo modificando un elemento di scheda esistente. Per modificare un elemento di scheda esistente, recuperare con una chiamata a [GetItem](../mfc/reference/ctabctrl-class.md#getitem), modificare il `TCITEM` struttura (in particolare il *dwState* e *dwStateMask* membri dati ) e quindi si torna modificato `TCITEM` struttura con una chiamata a [funzione membro SetItem](../mfc/reference/ctabctrl-class.md#setitem). Se è necessario deselezionare gli stati di tutti gli elementi della scheda in un `CTabCtrl` dell'oggetto, effettuare una chiamata a [DeselectAll](../mfc/reference/ctabctrl-class.md#deselectall). Questa funzione Reimposta lo stato di tutti gli elementi della scheda o tutti gli elementi ad eccezione di quello attualmente selezionato.  
   
- Il codice seguente cancella lo stato di tutti gli elementi della scheda e quindi viene modificato lo stato del terzo elemento:  
+ Il codice seguente cancella lo stato di tutti gli elementi di scheda e quindi viene modificato lo stato del terzo elemento:  
   
  [!code-cpp[NVC_MFCControlLadenDialog#32](../mfc/codesnippet/cpp/tabs-and-tab-control-attributes_1.cpp)]  
   

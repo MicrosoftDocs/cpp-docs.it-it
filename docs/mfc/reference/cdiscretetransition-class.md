@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 858304a41cb015711393ea6cc41e73ddbcc8cd8b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a0252cc64a1d14a6d096a5c4ad6dd2e0d6c3c7ff
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33366935"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36957032"
 ---
 # <a name="cdiscretetransition-class"></a>Classe CDiscreteTransition
 Incapsula una transizione discreta.  
@@ -48,7 +48,7 @@ class CDiscreteTransition : public CBaseTransition;
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[CDiscreteTransition::CDiscreteTransition](#cdiscretetransition)|Costruisce un oggetto di transizione discreta e inizializza i parametri.|  
+|[CDiscreteTransition::CDiscreteTransition](#cdiscretetransition)|Costruisce un oggetto di transizione discreta e inizializza i relativi parametri.|  
   
 ### <a name="public-methods"></a>Metodi pubblici  
   
@@ -65,7 +65,7 @@ class CDiscreteTransition : public CBaseTransition;
 |[CDiscreteTransition::m_hold](#m_hold)|La quantità di tempo per cui conservare la variabile al valore finale.|  
   
 ## <a name="remarks"></a>Note  
- Durante una transizione discreta, la variabile di animazione rimane il valore iniziale per un periodo di tempo specificato, quindi passa istantaneamente a un valore finale specificato e mantiene tale valore per un determinato tempo di attesa. Poiché tutte le transizioni vengono cancellate automaticamente, è consigliabile per assegnarle utilizzando l'operatore new. L'oggetto COM IUIAnimationTransition incapsulato viene creato da CAnimationController:: AnimateGroup, finché non è NULL. Modifica le variabili membro dopo la creazione dell'oggetto COM non ha alcun effetto.  
+ Durante una transizione discreta, la variabile di animazione rimane il valore iniziale per un periodo di tempo specificato, quindi passa istantaneamente a un valore finale specificato e mantiene tale valore per un determinato tempo di attesa. Poiché tutte le transizioni vengono cancellate automaticamente, è consigliabile per assegnarle utilizzando l'operatore new. L'oggetto COM IUIAnimationTransition incapsulato viene creato da CAnimationController:: AnimateGroup, finché non è NULL. Per modificare le variabili membro dopo la creazione di questo oggetto COM non ha alcun effetto.  
   
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -78,7 +78,7 @@ class CDiscreteTransition : public CBaseTransition;
  **Intestazione:** afxanimationcontroller.h  
   
 ##  <a name="cdiscretetransition"></a>  CDiscreteTransition::CDiscreteTransition  
- Costruisce un oggetto di transizione discreta e inizializza i parametri.  
+ Costruisce un oggetto di transizione discreta e inizializza i relativi parametri.  
   
 ```  
 CDiscreteTransition(
@@ -88,13 +88,13 @@ CDiscreteTransition(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `delay`  
+ *ritardo*  
  La quantità di tempo di ritardo del passaggio istantaneo per il valore finale.  
   
- `dblFinalValue`  
+ *dblFinalValue*  
  Il valore della variabile di animazione alla fine della transizione.  
   
- `hold`  
+ *tenere premuto*  
  La quantità di tempo per cui conservare la variabile al valore finale.  
   
 ##  <a name="create"></a>  CDiscreteTransition::Create  
@@ -106,12 +106,12 @@ virtual BOOL Create(
     IUIAnimationTransitionFactory* \*not used*\);
 ```  
   
-`pLibrary`  
+*pLibrary*  
  Un puntatore a un [IUIAnimationTransitionLibrary interfaccia](https://msdn.microsoft.com/library/windows/desktop/dd371897), che definisce una raccolta di transizioni standard.  
 
   
 ### <a name="return-value"></a>Valore restituito  
- TRUE se transizione viene creata correttamente. in caso contrario FALSE.  
+ TRUE se transizione viene creata correttamente. in caso contrario, FALSE.  
   
 ##  <a name="m_dblfinalvalue"></a>  CDiscreteTransition::m_dblFinalValue  
  Il valore della variabile di animazione alla fine della transizione.  

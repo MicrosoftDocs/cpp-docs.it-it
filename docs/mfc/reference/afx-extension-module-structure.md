@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6560bf337f6e146bba19e41d56727945df771dd2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e741f172d0dfe528a166fad087460fd9ae18c0f3
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33349257"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951182"
 ---
 # <a name="afxextensionmodule-structure"></a>Struttura AFX_EXTENSION_MODULE
-Il `AFX_EXTENSION_MODULE` viene utilizzata durante l'inizializzazione di DLL di estensione MFC per contenere lo stato del modulo DLL estensione MFC.  
+Il `AFX_EXTENSION_MODULE` utilizzato durante l'inizializzazione della DLL di estensione MFC per contenere lo stato del modulo DLL estensione MFC.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -43,30 +43,30 @@ struct AFX_EXTENSION_MODULE
  *bInitialized*  
  **TRUE** se il modulo DLL è stato inizializzato con `AfxInitExtensionModule`.  
   
- `hModule`  
+ *modulo hModule*  
  Specifica l'handle del modulo DLL.  
   
  *hResource*  
  Specifica l'handle del modulo DLL risorsa personalizzata.  
   
  *pFirstSharedClass*  
- Un puntatore alle informazioni (il `CRuntimeClass` struttura) sulla prima classe di runtime del modulo DLL. Utilizzato per fornire l'inizio dell'elenco di classi di runtime.  
+ Un puntatore alle informazioni (il `CRuntimeClass` struttura) sulla classe di runtime prima del modulo DLL. Utilizzato per fornire l'inizio dell'elenco di classi di runtime.  
   
  *pFirstSharedFactory*  
- Puntatore alla factory oggetto prima del modulo DLL (un `COleObjectFactory` oggetto). Utilizzato per fornire l'inizio dell'elenco di factory di classe.  
+ Un puntatore al primo oggetto factory del modulo DLL (un `COleObjectFactory` oggetto). Utilizzato per fornire l'inizio dell'elenco di factory di classe.  
   
 ## <a name="remarks"></a>Note  
  Estensione MFC DLL è necessario eseguire due operazioni nella loro `DllMain` funzione:  
   
 -   Chiamare [AfxInitExtensionModule](extension-dll-macros.md#afxinitextensionmodule) e controllare il valore restituito.  
   
--   Creare un **CDynLinkLibrary** oggetto se di esportazione di DLL [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) oggetti o ha un proprio risorse personalizzate.  
+-   Creare una `CDynLinkLibrary` dell'oggetto se prevede di esportare il file DLL [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) oggetti o ha un proprio risorse personalizzate.  
   
- Il `AFX_EXTENSION_MODULE` struttura viene utilizzata per tenere una copia dell'estensione di MFC, lo stato del modulo DLL, tra cui una copia degli oggetti di classe di runtime che sono state inizializzate dalla DLL di estensione MFC come parte della costruzione di un normale oggetto statico eseguita prima `DllMain` è immesso. Ad esempio:  
+ Il `AFX_EXTENSION_MODULE` struttura viene usata per contenere una copia dell'estensione MFC stato del modulo DLL, tra cui la classe di oggetti di runtime che sono state inizializzate dalla DLL di estensione MFC come parte della costruzione di un normale oggetto statico eseguita prima una copia `DllMain` è immesso. Ad esempio:  
   
  [!code-cpp[NVC_MFC_DLL#2](../../atl-mfc-shared/codesnippet/cpp/afx-extension-module-structure_1.cpp)]  
   
- Le informazioni sul modulo archiviati nel `AFX_EXTENSION_MODULE` struttura può essere copiata il **CDynLinkLibrary** oggetto. Ad esempio:  
+ Le informazioni di modulo archiviate nel `AFX_EXTENSION_MODULE` struttura può essere copiata il `CDynLinkLibrary` oggetto. Ad esempio:  
   
  [!code-cpp[NVC_MFC_DLL#5](../../atl-mfc-shared/codesnippet/cpp/afx-extension-module-structure_2.cpp)]  
   

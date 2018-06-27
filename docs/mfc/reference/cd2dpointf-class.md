@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4a6439a25072975d28b98e4c6d88c3a1de8703d6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e23dbce668234fecc3162d52e0bbea6fb05a7b06
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33348706"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36957273"
 ---
 # <a name="cd2dpointf-class"></a>Classe CD2DPointF
 Wrapper per `D2D1_POINT_2F`.  
@@ -40,7 +40,7 @@ class CD2DPointF : public D2D1_POINT_2F;
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[CD2DPointF::CD2DPointF](#cd2dpointf)|Di overload. Costruisce un `CD2DPointF` oggetto `D2D1_POINT_2F` oggetto.|  
+|[CD2DPointF::CD2DPointF](#cd2dpointf)|Di overload. Costruisce un `CD2DPointF` dall'oggetto `D2D1_POINT_2F` oggetto.|  
   
 ### <a name="public-operators"></a>Operatori pubblici  
   
@@ -67,13 +67,13 @@ CD2DPointF(FLOAT fX = 0., FLOAT fY = 0.);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `pt`  
+ *pt*  
  punto di origine  
   
- `fX`  
+ *fX*  
  origine X  
   
- `fY`  
+ *anno fiscale*  
  origine Y  
   
 ##  <a name="operator_cpoint"></a>  CPoint CD2DPointF::operator  
@@ -84,7 +84,7 @@ operator CPoint();
 ```   
   
 ### <a name="return-value"></a>Valore restituito  
- Valore corrente del punto D2D.  
+ Valore corrente del punto di D2D.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Classi](../../mfc/reference/mfc-classes.md)

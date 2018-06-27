@@ -48,12 +48,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1be476c43b0752b95a6514057e240a030325b95d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 002b9fd5d919bb277f9546f038e4b81c45380c81
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33354352"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952274"
 ---
 # <a name="cd2dradialgradientbrush-class"></a>Classe CD2DRadialGradientBrush
 Wrapper per ID2D1RadialGradientBrush.  
@@ -71,25 +71,25 @@ class CD2DRadialGradientBrush : public CD2DGradientBrush;
 |Nome|Descrizione|  
 |----------|-----------------|  
 |[CD2DRadialGradientBrush::CD2DRadialGradientBrush](#cd2dradialgradientbrush)|Costruisce un oggetto CD2DLinearGradientBrush.|  
-|[CD2DRadialGradientBrush:: ~ CD2DRadialGradientBrush](#_dtorcd2dradialgradientbrush)|Distruttore. Chiamato quando viene eliminato un oggetto di un pennello sfumatura radiale D2D.|  
+|[CD2DRadialGradientBrush:: ~ CD2DRadialGradientBrush](#_dtorcd2dradialgradientbrush)|Distruttore. Chiamata eseguita quando viene eliminata definitivamente un oggetto di un pennello sfumatura radiale D2D.|  
   
 ### <a name="public-methods"></a>Metodi pubblici  
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[CD2DRadialGradientBrush::Attach](#attach)|Collega a esistente di interfaccia di risorsa per l'oggetto|  
+|[CD2DRadialGradientBrush::Attach](#attach)|Associa esistente interfaccia risorsa per l'oggetto|  
 |[CD2DRadialGradientBrush::Create](#create)|Crea un CD2DRadialGradientBrush. (Esegue l'override [CD2DResource:: Create](../../mfc/reference/cd2dresource-class.md#create).)|  
 |[CD2DRadialGradientBrush::Destroy](#destroy)|Elimina un oggetto CD2DRadialGradientBrush. (Esegue l'override [CD2DGradientBrush:: Destroy](../../mfc/reference/cd2dgradientbrush-class.md#destroy).)|  
 |[CD2DRadialGradientBrush::Detach](#detach)|Disconnette l'interfaccia di risorsa dall'oggetto|  
 |[CD2DRadialGradientBrush::Get](#get)|Restituisce l'interfaccia ID2D1RadialGradientBrush|  
-|[CD2DRadialGradientBrush::GetCenter](#getcenter)|Recupera il centro dell'ellisse di sfumatura|  
+|[CD2DRadialGradientBrush::GetCenter](#getcenter)|Recupera il centro dell'ellisse sfumatura|  
 |[CD2DRadialGradientBrush::GetGradientOriginOffset](#getgradientoriginoffset)|Recupera l'offset dell'origine della sfumatura rispetto al centro dell'ellisse sfumatura|  
-|[CD2DRadialGradientBrush::GetRadiusX](#getradiusx)|Recupera il raggio x dell'ellisse di sfumatura|  
-|[CD2DRadialGradientBrush::GetRadiusY](#getradiusy)|Recupera il raggio y dell'ellisse di sfumatura|  
-|[CD2DRadialGradientBrush::SetCenter](#setcenter)|Specifica il centro dell'ellisse di sfumatura nello spazio delle coordinate del pennello.|  
+|[CD2DRadialGradientBrush::GetRadiusX](#getradiusx)|Recupera il raggio x dell'ellisse sfumatura|  
+|[CD2DRadialGradientBrush::GetRadiusY](#getradiusy)|Recupera il raggio y dell'ellisse sfumatura|  
+|[CD2DRadialGradientBrush::SetCenter](#setcenter)|Specifica il centro dell'ellisse sfumatura nello spazio delle coordinate del pennello|  
 |[CD2DRadialGradientBrush::SetGradientOriginOffset](#setgradientoriginoffset)|Specifica l'offset dell'origine della sfumatura rispetto al centro dell'ellisse sfumatura|  
-|[CD2DRadialGradientBrush::SetRadiusX](#setradiusx)|Specifica il raggio x dell'ellisse di sfumatura, nello spazio delle coordinate del pennello.|  
-|[CD2DRadialGradientBrush::SetRadiusY](#setradiusy)|Specifica il raggio y dell'ellisse di sfumatura nello spazio delle coordinate del pennello.|  
+|[CD2DRadialGradientBrush::SetRadiusX](#setradiusx)|Specifica il raggio x dell'ellisse sfumatura, nello spazio delle coordinate del pennello|  
+|[CD2DRadialGradientBrush::SetRadiusY](#setradiusy)|Specifica il raggio y dell'ellisse sfumatura, nello spazio delle coordinate del pennello|  
   
 ### <a name="public-operators"></a>Operatori pubblici  
   
@@ -102,7 +102,7 @@ class CD2DRadialGradientBrush : public CD2DGradientBrush;
 |nome|Descrizione|  
 |----------|-----------------|  
 |[CD2DRadialGradientBrush::m_pRadialGradientBrush](#m_pradialgradientbrush)|Puntatore a un ID2D1RadialGradientBrush.|  
-|[CD2DRadialGradientBrush::m_RadialGradientBrushProperties](#m_radialgradientbrushproperties)|Il centro, offset dell'origine sfumatura e raggio x e raggio y del pennello sfumatura del consentiti.|  
+|[CD2DRadialGradientBrush::m_RadialGradientBrushProperties](#m_radialgradientbrushproperties)|Il centro, offset dell'origine sfumatura e raggi x e raggio y del pennello sfumatura del.|  
   
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -119,22 +119,22 @@ class CD2DRadialGradientBrush : public CD2DGradientBrush;
  **Intestazione:** afxrendertarget. h  
   
 ##  <a name="_dtorcd2dradialgradientbrush"></a>  CD2DRadialGradientBrush:: ~ CD2DRadialGradientBrush  
- Distruttore. Chiamato quando viene eliminato un oggetto di un pennello sfumatura radiale D2D.  
+ Distruttore. Chiamata eseguita quando viene eliminata definitivamente un oggetto di un pennello sfumatura radiale D2D.  
   
 ```  
 virtual ~CD2DRadialGradientBrush();
 ```  
   
 ##  <a name="attach"></a>  CD2DRadialGradientBrush::Attach  
- Collega a esistente di interfaccia di risorsa per l'oggetto  
+ Associa esistente interfaccia risorsa per l'oggetto  
   
 ```  
 void Attach(ID2D1RadialGradientBrush* pResource);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `pResource`  
- Interfaccia della risorsa esistente. Non può essere NULL  
+ *pResource*  
+ Interfaccia risorsa esistente. Non può essere NULL  
   
 ##  <a name="cd2dradialgradientbrush"></a>  CD2DRadialGradientBrush::CD2DRadialGradientBrush  
  Costruisce un oggetto CD2DLinearGradientBrush.  
@@ -152,28 +152,28 @@ CD2DRadialGradientBrush(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `pParentTarget`  
+ *pParentTarget*  
  Puntatore alla destinazione di rendering.  
   
- `gradientStops`  
+ *gradientStops*  
  Puntatore a una matrice di strutture D2D1_GRADIENT_STOP.  
   
- `gradientStopsCount`  
+ *gradientStopsCount*  
  Un valore maggiore o uguale a 1 che specifica il numero di cursori sfumatura nella matrice gradientStops.  
   
- `RadialGradientBrushProperties`  
- Il centro, offset dell'origine sfumatura e raggio x e raggio y del pennello sfumatura del consentiti.  
+ *RadialGradientBrushProperties*  
+ Il centro, offset dell'origine sfumatura e raggi x e raggio y del pennello sfumatura del.  
   
- `colorInterpolationGamma`  
+ *colorInterpolationGamma*  
  Lo spazio in cui il viene eseguito l'interpolazione tra i cursori sfumatura.  
   
- `extendMode`  
- Il comportamento della sfumatura non compreso nell'intervallo normalizzato [0,1].  
+ *extendMode*  
+ Il comportamento della sfumatura compreso nell'intervallo [0,1] normalizzato.  
   
- `pBrushProperties`  
+ *pBrushProperties*  
  Puntatore a una trasformazione di un pennello e di opacità.  
   
- `bAutoDestroy`  
+ *flag bAutoDestroy*  
  Indica che l'oggetto verrà eliminato dal proprietario (pParentTarget).  
   
 ##  <a name="create"></a>  CD2DRadialGradientBrush::Create  
@@ -184,11 +184,11 @@ virtual HRESULT Create(CRenderTarget* pRenderTarget);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `pRenderTarget`  
+ *pRenderTarget*  
  Puntatore alla destinazione di rendering.  
   
 ### <a name="return-value"></a>Valore restituito  
- Se il metodo ha esito positivo, viene restituito S_OK. In caso contrario, restituisce un codice di errore HRESULT.  
+ Se il metodo ha esito positivo, viene restituito S_OK. In caso contrario, restituirà un codice di errore HRESULT.  
   
 ##  <a name="destroy"></a>  CD2DRadialGradientBrush::Destroy  
  Elimina un oggetto CD2DRadialGradientBrush.  
@@ -205,7 +205,7 @@ ID2D1RadialGradientBrush* Detach();
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- Puntatore a interfaccia risorse scollegato.  
+ Puntatore a interfaccia risorsa scollegato.  
   
 ##  <a name="get"></a>  CD2DRadialGradientBrush::Get  
  Restituisce l'interfaccia ID2D1RadialGradientBrush  
@@ -218,14 +218,14 @@ ID2D1RadialGradientBrush* Get();
  Puntatore a un'interfaccia ID2D1RadialGradientBrush o NULL se l'oggetto non è ancora inizializzato.  
   
 ##  <a name="getcenter"></a>  CD2DRadialGradientBrush::GetCenter  
- Recupera il centro dell'ellisse di sfumatura  
+ Recupera il centro dell'ellisse sfumatura  
   
 ```  
 CD2DPointF GetCenter() const;  
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- Il centro dell'ellisse di sfumatura. Questo valore è espresso in spazio di coordinate del pennello.  
+ Il centro dell'ellisse di sfumatura. Questo valore è espresso in spazio di coordinate del pennello  
   
 ##  <a name="getgradientoriginoffset"></a>  CD2DRadialGradientBrush::GetGradientOriginOffset  
  Recupera l'offset dell'origine della sfumatura rispetto al centro dell'ellisse sfumatura  
@@ -235,27 +235,27 @@ CD2DPointF GetGradientOriginOffset() const;
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- L'offset dell'origine della sfumatura dal centro dell'ellisse di sfumatura. Questo valore è espresso in spazio di coordinate del pennello.  
+ L'offset dell'origine della sfumatura dal centro dell'ellisse di sfumatura. Questo valore è espresso in spazio di coordinate del pennello  
   
 ##  <a name="getradiusx"></a>  CD2DRadialGradientBrush::GetRadiusX  
- Recupera il raggio x dell'ellisse di sfumatura  
+ Recupera il raggio x dell'ellisse sfumatura  
   
 ```  
 FLOAT GetRadiusX() const;  
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- Il raggio x dell'ellisse di sfumatura. Questo valore è espresso in spazio di coordinate del pennello.  
+ Il raggio x dell'ellisse di sfumatura. Questo valore è espresso in spazio di coordinate del pennello  
   
 ##  <a name="getradiusy"></a>  CD2DRadialGradientBrush::GetRadiusY  
- Recupera il raggio y dell'ellisse di sfumatura  
+ Recupera il raggio y dell'ellisse sfumatura  
   
 ```  
 FLOAT GetRadiusY() const;  
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- Il raggio y dell'ellisse di sfumatura. Questo valore è espresso in spazio di coordinate del pennello.  
+ Il raggio y dell'ellisse di sfumatura. Questo valore è espresso in spazio di coordinate del pennello  
   
 ##  <a name="m_pradialgradientbrush"></a>  CD2DRadialGradientBrush::m_pRadialGradientBrush  
  Puntatore a un ID2D1RadialGradientBrush.  
@@ -265,7 +265,7 @@ ID2D1RadialGradientBrush* m_pRadialGradientBrush;
 ```  
   
 ##  <a name="m_radialgradientbrushproperties"></a>  CD2DRadialGradientBrush::m_RadialGradientBrushProperties  
- Il centro, offset dell'origine sfumatura e raggio x e raggio y del pennello sfumatura del consentiti.  
+ Il centro, offset dell'origine sfumatura e raggi x e raggio y del pennello sfumatura del.  
   
 ```  
 D2D1_RADIAL_GRADIENT_BRUSH_PROPERTIES m_RadialGradientBrushProperties;  
@@ -282,15 +282,15 @@ operator ID2D1RadialGradientBrush*();
  Puntatore a un'interfaccia ID2D1RadialGradientBrush o NULL se l'oggetto non è ancora inizializzato.  
   
 ##  <a name="setcenter"></a>  CD2DRadialGradientBrush::SetCenter  
- Specifica il centro dell'ellisse di sfumatura nello spazio delle coordinate del pennello.  
+ Specifica il centro dell'ellisse sfumatura nello spazio delle coordinate del pennello  
   
 ```  
 void SetCenter(CD2DPointF point);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `point`  
- Il centro dell'ellisse di sfumatura, nello spazio delle coordinate del pennello.  
+ *Punto*  
+ Il centro dell'ellisse sfumatura, nello spazio delle coordinate del pennello  
   
 ##  <a name="setgradientoriginoffset"></a>  CD2DRadialGradientBrush::SetGradientOriginOffset  
  Specifica l'offset dell'origine della sfumatura rispetto al centro dell'ellisse sfumatura  
@@ -300,30 +300,30 @@ void SetGradientOriginOffset(CD2DPointF gradientOriginOffset);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `gradientOriginOffset`  
- L'offset dell'origine della sfumatura dal centro dell'ellisse di sfumatura  
+ *gradientOriginOffset*  
+ L'offset dell'origine della sfumatura dal centro dell'ellisse sfumatura  
   
 ##  <a name="setradiusx"></a>  CD2DRadialGradientBrush::SetRadiusX  
- Specifica il raggio x dell'ellisse di sfumatura, nello spazio delle coordinate del pennello.  
+ Specifica il raggio x dell'ellisse sfumatura, nello spazio delle coordinate del pennello  
   
 ```  
 void SetRadiusX(FLOAT radiusX);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `radiusX`  
- Il raggio x dell'ellisse di sfumatura. Questo valore è nello spazio delle coordinate del pennello.  
+ *radiusX*  
+ Il raggio x dell'ellisse di sfumatura. Questo valore è nello spazio delle coordinate del pennello  
   
 ##  <a name="setradiusy"></a>  CD2DRadialGradientBrush::SetRadiusY  
- Specifica il raggio y dell'ellisse di sfumatura nello spazio delle coordinate del pennello.  
+ Specifica il raggio y dell'ellisse sfumatura, nello spazio delle coordinate del pennello  
   
 ```  
 void SetRadiusY(FLOAT radiusY);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `radiusY`  
- Il raggio y dell'ellisse di sfumatura. Questo valore è nello spazio delle coordinate del pennello.  
+ *radiusY*  
+ Il raggio y dell'ellisse di sfumatura. Questo valore è nello spazio delle coordinate del pennello  
   
 ## <a name="see-also"></a>Vedere anche  
  [Classi](../../mfc/reference/mfc-classes.md)

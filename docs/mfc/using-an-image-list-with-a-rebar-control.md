@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6f902cb24d5cd8525a99f58fc5feeac416138148
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1786c89f4ec9cf1c0908dac5d81858d5b2e6b7db
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33381745"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36950706"
 ---
 # <a name="using-an-image-list-with-a-rebar-control"></a>Utilizzo di un elenco immagini con un controllo Rebar
 Ogni controllo Rebar band può contenere, tra l'altro, un'immagine proveniente da un elenco di immagini associato. Nella procedura riportata di seguito vengono descritti in dettaglio i passaggi necessari per visualizzare un'immagine in un controllo Rebar band.  
@@ -31,9 +31,9 @@ Ogni controllo Rebar band può contenere, tra l'altro, un'immagine proveniente d
   
 2.  Modificare il **REBARBANDINFO** struttura per assegnare un'immagine a un controllo rebar band:  
   
-    -   Impostare il **fMask** membro **RBBIM_IMAGE**, utilizzando l'operatore OR bit per bit per includere flag aggiuntivi in base alle esigenze.  
+    -   Impostare il *fMask* membro da `RBBIM_IMAGE`, tramite l'operatore OR bit per bit per includere flag aggiuntivi in base alle esigenze.  
   
-    -   Impostare il membro `iImage` sull'indice dell'elenco immagini dell'immagine da visualizzare.  
+    -   Impostare il *iImage* membro per l'indice dell'elenco immagini dell'immagine da visualizzare.  
   
 3.  Inizializzare tutti i membri di dati restanti, ad esempio la dimensione, il testo e un handle della finestra figlio contenuta, con le informazioni necessarie.  
   

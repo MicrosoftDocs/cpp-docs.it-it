@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6b2c10583a4c3fc2b988e50c15b6c1dcf206af65
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2e8e6c7d5f8144b2aec6c7783680feeff5f6f8a1
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33384911"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951624"
 ---
 # <a name="walkthrough-adding-a-ctaskdialog-to-an-application"></a>Procedura dettagliata: aggiunta di CTaskDialog a un'applicazione
 Questa procedura dettagliata illustra [CTaskDialog Class](../mfc/reference/ctaskdialog-class.md) e descrive come aggiungerla a un'applicazione.  
@@ -44,7 +44,7 @@ Questa procedura dettagliata illustra [CTaskDialog Class](../mfc/reference/ctask
   
 #### <a name="to-replace-a-windows-message-box-with-a-ctaskdialog"></a>Per sostituire una finestra di messaggio di Windows con CTaskDialog  
   
-1.  Generare una nuova applicazione MFC con le impostazioni predefinite e nominarla `MyProject`.  
+1.  Generare una nuova applicazione MFC con le impostazioni predefinite e Chiamarlo *MyProject*.  
   
 2.  Usare la finestra **Esplora soluzioni** per aprire il file MyProject.cpp.  
   
@@ -74,7 +74,7 @@ Questa procedura dettagliata illustra [CTaskDialog Class](../mfc/reference/ctask
  }  
  ```  
   
-6.  Inserire il codice seguente tra le parentesi dopo l'istruzione `if` del passaggio 5. Questo codice crea `CTaskDialog`.  
+6.  Inserire il codice seguente tra le parentesi dopo il **se** istruzione dal passaggio 5. Questo codice crea `CTaskDialog`.  
   
  ```  
     CTaskDialog taskDialog(message,
@@ -111,9 +111,9 @@ Questa procedura dettagliata illustra [CTaskDialog Class](../mfc/reference/ctask
   
 2.  Espandere la finestra **Visualizzazione risorse** fino a quando non è possibile selezionare la cartella **Tabelle delle stringhe** . Espandere la finestra e fare doppio clic sulla voce **Tabelle delle stringhe** .  
   
-3.  Scorrere fino alla fine della tabella delle stringhe e aggiungere una nuova voce. Modificare l'ID in `TEMP_LINE1`. Impostare la didascalia su **Riga di comando 1**.  
+3.  Scorrere fino alla fine della tabella delle stringhe e aggiungere una nuova voce. Modificare l'ID in *TEMP_LINE1*. Impostare la didascalia *1 riga di comando*.  
   
-4.  Aggiungere un'altra nuova voce. Modificare l'ID in `TEMP_LINE2`. Impostare la didascalia su **Riga di comando 2**.  
+4.  Aggiungere un'altra nuova voce. Modificare l'ID in *TEMP_LINE2*. Impostare la didascalia *riga di comando 2*.  
   
 5.  Tornare a MyProject.cpp.  
   
@@ -192,7 +192,7 @@ Questa procedura dettagliata illustra [CTaskDialog Class](../mfc/reference/ctask
   
 2.  Passare alla parentesi di chiusura per l'istruzione `if (CTaskDialog::IsSupported())` .  
   
-3.  Inserire il codice seguente prima della parentesi di chiusura dell'istruzione `if` (prima del blocco `else` ):  
+3.  Inserire il seguente codice immediatamente prima della parentesi di chiusura di **se** istruzione (prima il **else** blocco):  
   
  ```  
     HRESULT result2 = CTaskDialog::ShowDialog(L"My error message",

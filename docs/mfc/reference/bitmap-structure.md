@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fa8bb4ab914b4e05eb21cfc45a243328d32bb6d8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6a60e4af31ba5da23f399f86175ed4fcf1e4ec14
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33351637"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36950304"
 ---
 # <a name="bitmap-structure"></a>Struttura BITMAP
 Il **BITMAP** struttura definisce l'altezza, larghezza, il formato di colore e i valori di bit di una bitmap logica **.**  
@@ -51,7 +51,7 @@ typedef struct tagBITMAP {  /* bm */
  Specifica l'altezza della bitmap in righe raster. L'altezza deve essere maggiore di 0.  
   
  *bmWidthBytes*  
- Specifica il numero di byte in ogni riga raster. Questo valore deve essere un numero pari poiché l'interfaccia GDI (Graphics Device Interface) presuppone che i valori di bit di una bitmap formino una matrice di valori interi (a 2 byte). In altre parole, **bmWidthBytes** \* 8 deve essere il successivo multiplo di 16 maggiore o uguale al valore ottenuto quando il **bmWidth** membro viene moltiplicato per il **bmBitsPixel**  membro.  
+ Specifica il numero di byte in ogni riga raster. Questo valore deve essere un numero pari poiché l'interfaccia GDI (Graphics Device Interface) presuppone che i valori di bit di una bitmap formino una matrice di valori interi (a 2 byte). In altre parole, *bmWidthBytes* \* 8 deve essere il successivo multiplo di 16 maggiore o uguale al valore ottenuto quando il *bmWidth* membro viene moltiplicato per il *bmBitsPixel*  membro.  
   
  *bmPlanes*  
  Specifica il numero dei piani di colore nella bitmap.  
@@ -60,7 +60,7 @@ typedef struct tagBITMAP {  /* bm */
  Specifica il numero di bit di colore adiacenti su ogni piano necessario per definire un pixel.  
   
  *bmBits*  
- Punta alla posizione dei valori di bit della bitmap. Il **bmBits** membro deve essere un puntatore di tipo long a una matrice di valori di 1 byte.  
+ Punta alla posizione dei valori di bit della bitmap. Il *bmBits* membro deve essere un puntatore di tipo long a una matrice di valori a 1 byte.  
   
 ## <a name="remarks"></a>Note  
  I formati di bitmap attualmente utilizzati sono monocromatico e a colori. La bitmap monocromatica utilizza un formato a 1 bit, 1 piano. Ogni analisi è un multiplo di 16 bit.  
@@ -85,7 +85,7 @@ typedef struct tagBITMAP {  /* bm */
   
  Tutti i dispositivi supportano le bitmap con il **RC_BITBLT** bit impostato il **RASTERCAPS** indice del [CDC:: GetDeviceCaps](../../mfc/reference/cdc-class.md#getdevicecaps) funzione membro.  
   
- Ogni dispositivo presenta un formato di colore univoco. Per trasferire una bitmap da un dispositivo a un altro, utilizzare il [GetDIBits](http://msdn.microsoft.com/library/windows/desktop/dd144879) e [SetDIBits](http://msdn.microsoft.com/library/windows/desktop/dd162973) funzioni di Windows.  
+ Ogni dispositivo presenta un formato di colore univoco. Per trasferire una bitmap da un dispositivo a un altro, usare il [SetDIBits](http://msdn.microsoft.com/library/windows/desktop/dd144879) e [SetDIBits](http://msdn.microsoft.com/library/windows/desktop/dd162973) funzioni di Windows.  
   
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** WinGDI. h  
