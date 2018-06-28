@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: abilitare IntelliSense per progetti Makefile | Documenti Microsoft'
+title: 'Procedura: Abilitare IntelliSense per progetti makefile | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,42 +17,43 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9de79d56c6e8b6e496c0e7988ada07ed7595ea70
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.openlocfilehash: 4b9b11f04f1fe8d201d6d07ca5ed83f9ca7d991b
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34705462"
 ---
 # <a name="how-to-enable-intellisense-for-makefile-projects"></a>Procedura: abilitare IntelliSense per progetti makefile
-Funzionamento dell'IDE per progetti makefile Visual C++ quando determinate impostazioni o le opzioni del compilatore, del progetto di IntelliSense vengono impostati in modo non corretto. Utilizzare questa procedura per configurare i progetti makefile Visual C++, in modo che il funzionamento di IntelliSense è quando i progetti makefile sono aperti nell'ambiente di sviluppo di Visual Studio.  
+IntelliSense non funziona nell'IDE per i progetti makefile di Visual C++ quando determinate impostazioni di progetto o opzioni del compilatore sono configurate in modo non corretto. Usare questa procedura per configurare i progetti makefile Visual C++, in modo che IntelliSense funzioni quando i progetti makefile vengono aperti nell'ambiente di sviluppo di Visual Studio.  
   
-### <a name="to-enable-intellisense-for-makefile-projects-in-the-ide"></a>Per abilitare IntelliSense per progetti makefile nell'IDE  
+### <a name="to-enable-intellisense-for-makefile-projects-in-the-ide"></a>Per abilitare IntelliSense per i progetti makefile nell'IDE  
   
-1.  Aprire il **pagine delle proprietà** la finestra di dialogo. Per informazioni dettagliate, vedere [funziona con le proprietà del progetto](../ide/working-with-project-properties.md).  
+1.  Aprire la finestra di dialogo **Pagine delle proprietà**. Per altre informazioni, vedere [Uso di proprietà di progetto](../ide/working-with-project-properties.md).  
   
-2.  Espandere il **le proprietà di configurazione** nodo.  
+2.  Espandere il nodo **Proprietà di configurazione**.  
   
-3.  Selezionare il **NMake** proprietà pagina e quindi modificare le proprietà di **IntelliSense** come appropriato.  
+3.  Selezionare la pagina della proprietà **NMake** e quindi modificare le proprietà nell'area **IntelliSense** nel modo desiderato.  
   
-    -   Impostare il **definizioni preprocessore** proprietà per definire i simboli del preprocessore nel progetto makefile. Vedere [/D (definizioni preprocessore)](../build/reference/d-preprocessor-definitions.md), per ulteriori informazioni.  
+    -   Impostare la proprietà **Definizioni del preprocessore** per definire i simboli del preprocessore nel progetto makefile. Per altre informazioni, vedere [/D (definizioni preprocessore)](../build/reference/d-preprocessor-definitions.md).  
   
-    -   Impostare il **percorsi di ricerca** proprietà per specificare l'elenco delle directory in cui il compilatore effettuerà la ricerca per risolvere i riferimenti di file che vengono passati alle direttive del preprocessore nel progetto makefile. Vedere [/I (directory di inclusione aggiuntive)](../build/reference/i-additional-include-directories.md), per ulteriori informazioni.  
+    -   Impostare la proprietà **Percorso di ricerca di inclusione** per specificare l'elenco delle directory in cui il compilatore esegue la ricerca per risolvere i riferimenti di file che vengono passati alle direttive del preprocessore nel progetto makefile. Per altre informazioni, vedere [/I (Directory di inclusione aggiuntive)](../build/reference/i-additional-include-directories.md).  
   
-         Per i progetti vengono compilati utilizzando CL. EXE da una finestra di comando, impostare il **INCLUDE** variabile di ambiente per specificare directory di cui il compilatore effettuerà la ricerca per risolvere i riferimenti di file che vengono passati alle direttive del preprocessore nel progetto makefile.  
+         Per i progetti che vengono compilati con CL.EXE da una finestra di comando, impostare la variabile di ambiente **INCLUDE** per specificare le directory in cui il compilatore esegue la ricerca per risolvere i riferimenti di file che vengono passati alle direttive del preprocessore nel progetto makefile.  
   
-    -   Impostare il **inclusioni** proprietà per specificare quali file di intestazione al processo durante la compilazione del progetto makefile. Vedere [/FI (nome forzato File di inclusione)](../build/reference/fi-name-forced-include-file.md), per ulteriori informazioni.  
+    -   Impostare la proprietà **Inclusioni imposte** per specificare quali file di intestazione elaborare durante la compilazione del progetto makefile. Per altre informazioni, vedere [/FI (Specifica il file di inclusione da usare)](../build/reference/fi-name-forced-include-file.md).  
   
-    -   Impostare il **percorso di ricerca Assembly** proprietà per specificare l'elenco delle directory in cui il compilatore effettuerà la ricerca per risolvere i riferimenti agli assembly .NET nel progetto. Vedere [/AI (specifica le directory di metadati)](../build/reference/ai-specify-metadata-directories.md), per ulteriori informazioni.  
+    -   Impostare la proprietà **Percorso di ricerca assembly** per specificare l'elenco delle directory in cui il compilatore eseguirà la ricerca per risolvere i riferimenti agli assembly .NET nel progetto. Per altre informazioni, vedere [/AI (Specifica le directory di metadati)](../build/reference/ai-specify-metadata-directories.md).  
   
-    -   Impostare il **assembly imposti** proprietà per specificare quali assembly .NET per l'elaborazione durante la compilazione del progetto makefile. Vedere [/FU (Name Forced #using File)](../build/reference/fu-name-forced-hash-using-file.md), per ulteriori informazioni.  
+    -   Impostare la proprietà **Assembly a uso forzato** per specificare quali assembly .NET elaborare durante la compilazione del progetto makefile. Per altre informazioni, vedere [/FU (Specifica file #using da usare)](../build/reference/fu-name-forced-hash-using-file.md).  
   
-    -   Impostare il **opzioni aggiuntive** proprietà per specificare opzioni aggiuntive del compilatore devono essere utilizzati da Intellisense durante l'analisi di file C++.  
+    -   Impostare la proprietà **Opzioni aggiuntive** per specificare opzioni aggiuntive del compilatore che IntelliSense deve usare durante l'analisi dei file C++.  
   
-4.  Fare clic su **OK** per chiudere le pagine delle proprietà.  
+4.  Scegliere **OK** per chiudere le pagine delle proprietà.  
   
-5.  Utilizzare il **Salva tutto** comando per salvare le impostazioni di progetto modificato.  
+5.  Usare il comando **Salva tutto** per salvare le impostazioni del progetto modificate.  
   
- Alla successiva apertura del progetto makefile nell'ambiente di sviluppo di Visual Studio, eseguire il **Pulisci soluzione** comando e quindi la **Compila soluzione** comando progetto makefile. IntelliSense dovrebbe funzionare correttamente nell'IDE.  
+ Alla successiva apertura del progetto makefile nell'ambiente di sviluppo di Visual Studio, eseguire il comando **Pulisci soluzione** e quindi il comando **Compila soluzione** nel progetto makefile. IntelliSense funzionerà correttamente nell'IDE.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Utilizzo di IntelliSense](/visualstudio/ide/using-intellisense)   

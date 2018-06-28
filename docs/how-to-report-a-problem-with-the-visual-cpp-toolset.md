@@ -1,6 +1,6 @@
 ---
 title: Come segnalare un problema con il set di strumenti Visual C++ | Microsoft Docs
-ms.date: 5/11/2018
+ms.date: 06/08/2018
 ms.technology:
 - cpp-ide
 ms.topic: conceptual
@@ -10,12 +10,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f0044a0da7b1ac4ad052eb120ccfb1f7425d2c0e
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: dec9cfac5273469eb37418929d83e273f6ab8612
+ms.sourcegitcommit: 1c2e035f98fb55d9b3c08ec3bb562179a368d0d1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34336317"
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35253880"
 ---
 # <a name="how-to-report-a-problem-with-the-visual-c-toolset-or-documentation"></a>Come segnalare un problema con il set di strumenti Visual C++ o la documentazione
 
@@ -358,7 +358,7 @@ Creare la procedura di riproduzione come progetto IDE minimo, comprimere l'inter
 Esistono un paio di modi utili per inviare il report a Microsoft. È possibile usare lo strumento predefinito di Visual Studio [Segnala un problema ](/visualstudio/ide/how-to-report-a-problem-with-visual-studio-2017), o le pagine della [Community degli sviluppatori Visual Studio](https://developercommunity.visualstudio.com/). È inoltre possibile accedere direttamente alle pagine della nostra community di sviluppatori scegliendo il pulsante **Commenti e suggerimenti** nella parte inferiore della pagina. La scelta dipende dal fatto che si vogliano usare gli strumenti dell'IDE per acquisire gli screenshot e organizzare la segnalazione da pubblicare nelle pagine della community degli sviluppatori o che si preferisca usare direttamente il sito Web.
 
 > [!NOTE]
-> Indipendentemente dalla modalità di invio del report, Microsoft rispetta la privacy degli utenti. Microsoft garantisce conformità a tutte le leggi che regolano la privacy dei dati. Per informazioni sul trattamento dei dati inviati a Microsoft, vedere l'[Informativa sulla privacy della famiglia dei prodotti Microsoft Visual Studio](https://www.visualstudio.com/dn948229).
+> Indipendentemente dalla modalità di invio del report, Microsoft rispetta la privacy degli utenti. Microsoft garantisce conformità a tutte le leggi che regolano la privacy dei dati. Per informazioni sul trattamento dei dati inviati a Microsoft, vedere l'[Informativa sulla privacy di Microsoft](https://www.visualstudio.com/dn948229).
 
 ### <a name="use-the-report-a-problem-tool"></a>Usare lo strumento Segnala un problema
 

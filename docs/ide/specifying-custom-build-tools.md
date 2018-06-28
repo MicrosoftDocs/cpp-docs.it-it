@@ -1,7 +1,7 @@
 ---
-title: Strumenti di compilazione specificando | Documenti Microsoft
+title: Specifica di strumenti di compilazione personalizzati | Microsoft Docs
 ms.custom: ''
-ms.date: 12/28/2017
+ms.date: 06/05/2018
 ms.technology:
 - cpp-ide
 ms.topic: conceptual
@@ -25,67 +25,68 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1b8fc10d2a94ab4b26a47991d3dc8923afb28ca3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.openlocfilehash: a880d8cac05ea662feafa4c309f70bb91179fb2c
+ms.sourcegitcommit: 6784c1d5081dbe4d8119379647a34666328e1fdf
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34798931"
 ---
-# <a name="specify-custom-build-tools"></a>Specificare gli strumenti di compilazione personalizzata
+# <a name="specify-custom-build-tools"></a>Specificare strumenti di compilazione personalizzati
 
-Oggetto *strumento di compilazione personalizzato* fornisce il sistema di compilazione con le informazioni necessarie per compilare file di input specifici. Uno strumento di compilazione personalizzata specifica un comando da eseguire, un elenco di file di input, un elenco dei file di output generati dal comando e una descrizione facoltativa dello strumento.
+Uno *strumento di compilazione personalizzato* offre al sistema di compilazione le informazioni necessarie per compilare file di input specifici. Uno strumento di compilazione personalizzato specifica un comando da eseguire, un elenco di file di input, un elenco dei file di output generati dal comando e una descrizione facoltativa dello strumento.
 
-Per informazioni generali sugli strumenti di compilazione personalizzata e istruzioni di compilazione personalizzate, vedere [informazioni sulle istruzioni di compilazione personalizzate e di eventi di compilazione](../ide/understanding-custom-build-steps-and-build-events.md).
+Per informazioni generali sugli strumenti di compilazione personalizzati e sulle istruzioni di compilazione personalizzate, vedere [Informazioni sulle istruzioni di compilazione personalizzate e sugli eventi di compilazione](../ide/understanding-custom-build-steps-and-build-events.md).
 
-### <a name="to-specify-a-custom-build-tool"></a>Per specificare uno strumento di compilazione personalizzata
+### <a name="to-specify-a-custom-build-tool"></a>Per specificare uno strumento di compilazione personalizzato
 
-1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per ulteriori informazioni, vedere [impostazione delle proprietà dei progetti Visual C++](../ide/working-with-project-properties.md).
+1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per altre informazioni, vedere [Impostazione delle proprietà dei progetti Visual C++](../ide/working-with-project-properties.md).
 
-1. Scegliere **le proprietà di configurazione** per abilitare il **configurazione** casella. Nel **configurazione** , selezionare la configurazione per il quale si desidera specificare uno strumento di compilazione personalizzata.
+1. Scegliere **Proprietà di configurazione** per attivare la casella **Configurazione**. Nella casella **Configurazione** selezionare la configurazione per la quale si vuole specificare uno strumento di compilazione personalizzato.
 
-1. In **Esplora**, selezionare il file di input per lo strumento di compilazione personalizzata.
+1. In **Esplora soluzioni** selezionare il file di input per lo strumento di compilazione personalizzato.
 
-   Se il **strumento di compilazione personalizzato** cartella non viene visualizzata, l'estensione del file selezionato è associato a uno strumento predefinito. Lo strumento predefinito per file c e cpp è ad esempio, il compilatore. Per eseguire l'override di un'impostazione o dello strumento, nel **le proprietà di configurazione** nodo, nel **generale** cartella, nel **tipo di elemento** proprietà, scegliere **di compilazione personalizzata Strumento**. Scegliere **applica** e **strumento di compilazione personalizzato** nodo viene visualizzato.
+   Se la cartella **Strumento di compilazione personalizzato** non viene visualizzata, l'estensione di file selezionata è associata a uno strumento predefinito. Ad esempio lo strumento predefinito per i file con estensione c e cpp è il compilatore. Per eseguire l'override di un'impostazione dello strumento predefinito, nel nodo **Proprietà di configurazione** nella scheda **Generale** e nella proprietà **Tipo di elemento** scegliere **Strumento di compilazione personalizzato**. Scegliere **Applica**. Viene visualizzato il nodo **Strumento di compilazione personalizzato**.
 
-1. Nel **strumento di compilazione personalizzato** nodo, nel **generale** cartella, specificare le proprietà associate personalizzata strumento di compilazione:
+1. Nel nodo **Strumento di compilazione personalizzato** nella cartella **Generale** specificare le proprietà associate allo strumento di compilazione personalizzato:
 
-   - In **dipendenze aggiuntive**, specificare eventuali file aggiuntivi oltre a quella per cui viene definito lo strumento di compilazione personalizzata (il file associato con lo strumento di compilazione personalizzata è considerato in modo implicito un input allo strumento). Il file di input aggiuntivi non è un requisito necessario per uno strumento di compilazione personalizzata. Se si dispone di più di un input aggiuntivo, separarli con punti e virgola.
+   - In **Dipendenze aggiuntive** specificare eventuali file aggiuntivi oltre a quello per cui viene definito lo strumento di compilazione personalizzato (che viene considerato in modo implicito un input per lo strumento). La presenza di file di input aggiuntivi non è obbligatoria per uno strumento di compilazione personalizzato. Se sono presenti più input aggiuntivi, separarli con punti e virgola.
 
-      Se un **dipendenze aggiuntive** data del file è successiva al file di input, quindi viene eseguito lo strumento di compilazione personalizzata. Se tutti del **dipendenze aggiuntive** file risalgono a più file di input e il file di input è antecedente la **output** file delle proprietà, quindi lo strumento di compilazione personalizzate non viene eseguito.
+      Se la data di uno dei file specificati in **Dipendenze aggiuntive** è successiva a quella del file di input, lo strumento di compilazione personalizzato viene eseguito. Se tutti i file in **Dipendenze aggiuntive** sono meno recenti del file di input e il file di input è meno recente del file della proprietà **Output**, lo strumento di compilazione personalizzato non viene eseguito.
 
-      Ad esempio, si supponga un strumento di compilazione personalizzato che accetta NomeInput come input e genera NomeInput e che NomeInput include un file di intestazione, NomeIntestazione. È possibile specificare NomeIntestazione come dipendenza di input per MyInput e il sistema di compilazione compilerà NomeInput quando è aggiornato x.
+      Si supponga ad esempio di avere uno strumento di compilazione personalizzato che accetta come input MyInput.x e genera MyInput.cpp e si supponga anche che MyInput.x includa il file di intestazione MyHeader.h. È possibile specificare MyHeader.h come dipendenza di input per MyInput.x. Il sistema compila MyInput.cpp quando questo non risulta aggiornato rispetto a MyInput.x o MyHeader.h.
 
-      Le dipendenze di input possono inoltre garantire che gli strumenti di compilazione personalizzata eseguiti nell'ordine che richiesto. Nell'esempio precedente, si supponga che NomeIntestazione effettivamente l'output di uno strumento di compilazione personalizzata. Poiché una dipendenza di NomeInput NomeIntestazione, il sistema di compilazione genererà innanzitutto NomeIntestazione prima di eseguire lo strumento di compilazione personalizzata su NomeInput.
+      Le dipendenze di input possono anche garantire che gli strumenti di compilazione personalizzati vengano eseguiti nell'ordine richiesto. Nell'esempio precedente si supponga che MyHeader.x sia l'output di uno strumento di compilazione personalizzato. Dato che MyHeader.h è una dipendenza di MyInput.x, il sistema compila Myheader.h prima di eseguire lo strumento di compilazione personalizzato su MyInput.x.
 
-   - In **riga di comando**, specificare un comando come se si stesse specificando al prompt dei comandi. Specificare un comando valido o un file batch e qualsiasi input obbligatorio o file di output. Specificare il **chiamare** comando prima del nome di un file batch per garantire che tutti i comandi successivi vengono eseguiti batch.
+   - In **Riga di comando** specificare un comando con il formato usato al prompt dei comandi. Specificare un comando o un file batch valido e i file di input o output necessari. Specificare il comando batch **call** prima del nome di un file batch per garantire che tutti i comandi successivi vengano eseguiti.
 
-      Possono specificare più file di input e outpui simbolicamente con le macro di MSBuild. Per informazioni su come specificare il percorso dei file o i nomi dei set di file, vedere [comuni macro per comandi di compilazione e proprietà](../ide/common-macros-for-build-commands-and-properties.md).
+      Le macro di MSBuild consentono di specificare vari file di input e output in modo simbolico. Per informazioni su come specificare il percorso dei file o i nomi dei set di file, vedere [Macro comuni per i comandi e le proprietà di compilazione](../ide/common-macros-for-build-commands-and-properties.md).
 
-      Poiché il carattere '% s'è riservato da MSBuild, se si specifica una variabile di ambiente sostituire ogni **%** con carattere di escape di **% 25** sequenza di escape esadecimale. Ad esempio, sostituire **% WINDIR %** con **25WINDIR % 25**. MSBuild sostituisce ogni **% 25** sequenza con la **%** carattere prima di accedere alla variabile di ambiente.
+      Poiché il carattere "%" è riservato per MSBuild, se si specifica una variabile di ambiente sostituire ogni carattere di escape **%** con la sequenza di escape esadecimale **%25**. Ad esempio, sostituire **%WINDIR%** con **%25WINDIR%25**. MSBuild sostituisce ogni sequenza **%25** con il carattere **%** prima di accedere alla variabile di ambiente.
 
-   - In **descrizione**, immettere un messaggio descrittivo per questo strumento di compilazione personalizzata. Il messaggio viene stampato il **Output** finestra quando il sistema di compilazione elabora questo strumento.
+   - In **Descrizione** immettere un messaggio descrittivo per questo strumento di compilazione personalizzato. Il messaggio viene visualizzato nella finestra **Output** quando il sistema esegue lo strumento.
 
-   - In **output**, specificare il nome del file di output. Si tratta di una voce obbligatoria. senza un valore per questa proprietà, lo strumento di compilazione personalizzata non verrà eseguito. Se uno strumento di compilazione personalizzata dispone di più output, separare i nomi di file con un punto e virgola.
+   - In **Output** specificare il nome del file di output. Questa voce è obbligatoria. Se questa proprietà non dispone di un valore lo strumento di compilazione personalizzato non viene eseguito. Se uno strumento di compilazione personalizzato dispone di più output, separare i nomi di file con punti e virgola.
 
-      Il nome del file di output deve essere lo stesso come specificato nella **riga di comando** proprietà. Il sistema di compilazione progetto verrà cercare il file e controllare la data. Se il file di output è più recente del file di input o se il file di output non viene trovato, viene eseguito lo strumento di compilazione personalizzata. Se tutti del **dipendenze aggiuntive** file risalgono a più file di input e il file di input è più recente del file specificato nella **output** proprietà, lo strumento di compilazione personalizzate non viene eseguito.
+      Il nome del file di output deve essere lo stesso nome specificato nella proprietà **Riga di comando**. Il sistema di compilazione del progetto cerca il file e ne verifica la data. Se il file di output è meno recente del file di input o non viene trovato, viene eseguito lo strumento di compilazione personalizzato. Se tutti i file in **Dipendenze aggiuntive** sono meno recenti del file di input e il file di input è meno recente del file specificato nella proprietà **Output**, lo strumento di compilazione personalizzato non viene eseguito.
 
-Se si desidera che il sistema di compilazione di operare su un file di output generato dallo strumento di compilazione personalizzata, è necessario aggiungere manualmente, al progetto. Lo strumento di compilazione personalizzata aggiornerà il file durante la compilazione.
+Se si vuole che il sistema di compilazione elabori un file di output generato dallo strumento di compilazione personalizzato, è necessario aggiungere manualmente il file al progetto. Lo strumento di compilazione personalizzato aggiornerà il file durante la compilazione.
 
 ## <a name="example"></a>Esempio
 
-Si supponga che si desidera includere un file denominato parser nel progetto. Si dispone di un analizzatore lessicale, **lexer.exe**, al percorso eseguibile. Si desidera utilizzarla per elaborare parser per produrre un file c che ha lo stesso nome di base (parser).
+Si supponga di voler includere nel progetto un file con nome parser.l. Il percorso eseguibile include un analizzatore lessicale, **lexer.exe**. Si vuole usarlo per elaborare parser.l e produrre un file con estensione c e con lo stesso nome di base (parser.c).
 
-Innanzitutto, è possibile aggiungere l e parser al progetto. Se i file non esiste ancora, aggiungere un riferimento ai file. Creare uno strumento di compilazione personalizzata per parser e immettere quanto segue nel **comandi** proprietà:
+In primo luogo aggiungere parser.l e parser.c al progetto. Se i file non esistono ancora, aggiungere un riferimento ai file. Creare uno strumento di compilazione personalizzato per parser.l e immettere quanto segue nella proprietà **Comandi**:
 
-> **%(FullPath) lexer. \%C (nome file)**
+> **lexer %(FullPath) .\%(Filename).c**
 
-Questo comando viene eseguito l'analizzatore lessicale nel parser e restituisce i parser alla directory del progetto.
+Questo comando esegue l'analizzatore lessicale su parser.l e restituisce parser.c nella directory del progetto.
 
-Nel **output** proprietà, immettere quanto segue:
+Nella proprietà **Output** immettere quanto segue:
 
-> **. \%C (nome file)**
+> **.\%(Filename).c**
 
-Quando si compila il progetto, il sistema di compilazione confronta i timestamp di parser e parser. Se il parser è più recente o se il parser non esiste, il sistema di compilazione esegue il valore della **riga di comando** proprietà per aggiornare parser. Dal momento che è stato anche aggiunto al progetto, il sistema di compilazione compila quindi parser.
+Quando si compila il progetto, il sistema di compilazione confronta i timestamp di parser.l e parser.c. Se parser.l è più recente o se parser.c non esiste, il sistema di compilazione esegue il valore della proprietà **Riga di comando** per aggiornare parser.c. Dato che anche parser.c è stato aggiunto al progetto, il sistema di compilazione compila quindi parser.c.
 
 ## <a name="see-also"></a>Vedere anche
 

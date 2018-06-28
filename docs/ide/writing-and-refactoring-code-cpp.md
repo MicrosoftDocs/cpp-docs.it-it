@@ -1,7 +1,9 @@
 ---
-title: Scrittura e refactoring del codice (C++) | Documenti Microsoft
+title: Scrittura e refactoring del codice (C++) |Microsoft Docs
 ms.custom: ''
-ms.date: 11/27/2017
+ms.date: 04/30/2018
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-ide
 ms.topic: conceptual
@@ -12,53 +14,58 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 02a028ddf5cbd4ac33f1ff9b148e7f20e5114c69
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.openlocfilehash: 977fc221a5a940e2446dbf0ede8445680218dc73
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34705618"
 ---
 # <a name="writing-and-refactoring-code-c"></a>Scrittura e refactoring del codice (C++)
 
-L'editor di codice e l'IDE di Visual C++ includono numerosi strumenti per la scrittura di codice. Alcuni sono specifici di C++ e altri sono sostanzialmente uguali per tutti i linguaggi di Visual Studio. Per ulteriori informazioni sulle funzionalità condivise, vedere [scrittura di codice nell'Editor di testo e del codice](/visualstudio/ide/writing-code-in-the-code-and-text-editor). Le opzioni per l'abilitazione e configurazione delle funzionalità specifiche di C++ sono disponibili nel [avanzate dell'Editor di testo C++](/visualstudio/ide/reference/options-text-editor-c-cpp-advanced) finestra di dialogo (**strumenti &#124; opzioni &#124; Editor di testo &#124; C/C++ &#124; avanzate** oppure digitare "Avanzate C++" in **veloce**). Dopo aver scelto l'opzione da impostare, è possibile ottenere ulteriori informazioni premendo **F1** quando la finestra di dialogo è attiva. Per le opzioni di formattazione di codice generale, digitare `Editor C++` in **avvio veloce**.
+L'editor di codice e l'IDE di Visual C++ includono numerosi strumenti per la scrittura di codice. Alcuni sono specifici di C++ e altri sono sostanzialmente uguali per tutti i linguaggi di Visual Studio. Per altre informazioni sulle funzionalità condivise, vedere [Scrittura di codice nell'editor di testo e di codice](/visualstudio/ide/writing-code-in-the-code-and-text-editor). Le opzioni per l'abilitazione e configurazione delle funzionalità specifiche di C++ sono disponibili in **Strumenti &#124; Opzioni &#124; Editor di testo &#124; C/C++**. Dopo aver scelto l'opzione da impostare, è possibile ottenere ulteriori informazioni premendo il tasto **F1** quando la finestra di dialogo è attiva. Per le opzioni di formattazione di codice generale, digitare `Editor C++` in **Avvio veloce**.
 
-Le funzionalità sperimentali che possono o non possono essere inclusi in una versione futura di Visual Studio, vedere il [Editor di testo C++ sperimentale](/visualstudio/ide/reference/options-text-editor-c-cpp-experimental) finestra di dialogo. In Visual Studio 2017 è possibile abilitare **Intellisense predittiva** in questa finestra di dialogo.
+Le funzionalità sperimentali, che possono o non possono essere incluse in una versione futura di Visual Studio, sono nella finestra di dialogo [Editor di testo C++ Sperimentale](/visualstudio/ide/reference/options-text-editor-c-cpp-experimental). In Visual Studio 2017 è possibile abilitare **IntelliSense predittivo** in questa finestra di dialogo.
 
-## <a name="adding-new-code"></a>Aggiunta di nuovo codice
+## <a name="adding-new-files"></a>Aggiunta di nuovi file
 
-Dopo aver creato un progetto, è possibile avviare la codifica nei file generati automaticamente. Per aggiungere nuovi file, fare clic sul nodo del progetto in Esplora soluzioni e scegliere **Aggiungi &#124; New**.
+Per aggiungere nuovi file a un progetto, fare clic con il pulsante destro del mouse sul nodo del progetto in Esplora soluzioni e scegliere **Aggiungi &#124; Nuovo**.
 
-Per impostare opzioni di formattazione quali rientri, completamento parentesi graffa e la colorazione, digitare `C++ Formatting` nel **avvio veloce** finestra.
+## <a name="formatting-options"></a>Opzioni di formattazione
 
-### <a name="intellisense"></a>IntelliSense
+Per impostare le opzioni di formattazione, ad esempio rientri, completamento parentesi graffa e colorazione, digitare "Formattazione C++" nella finestra **Avvio veloce**. Visual Studio 2017 15.7 e versioni successive supporta ClangFormat. È possibile configurarlo nella [pagina delle proprietà di formattazione di C/C++](/visualstudio/ide/reference/options-text-editor-c-cpp-formatting) in **Strumenti &#124; Opzioni &#124; Editor di testo &#124; C/C++ &#124; Formattazione**.
+
+![Opzioni di formattazione di C++](media/cpp-formatting-options.png)
+
+## <a name="intellisense"></a>IntelliSense
 
 IntelliSense è il nome di un set di funzionalità che forniscono informazioni inline su membri, tipi e overload di funzione. Nella figura seguente viene illustrato l'elenco a discesa dei membri che viene visualizzato durante la digitazione. È possibile premere TAB per inserire il testo dell'elemento selezionato nel file del codice.
 
-![C&#43; &#43; elenco a discesa di membri](../ide/media/vs2015_cpp_statement_completion.png "vs2015_cpp_statement_completion")
+![Elenco a discesa dei membri di C&#43;&#43;](../ide/media/vs2015_cpp_statement_completion.png "vs2015_cpp_statement_completion")
 
-Per ulteriori informazioni, vedere [Visual C++ Intellisense](/visualstudio/ide/visual-cpp-intellisense).
+Per informazioni complete, vedere [IntelliSense per Visual C++](/visualstudio/ide/visual-cpp-intellisense).
 
-### <a name="insert-snippets"></a>Inserisci frammento di codice
+## <a name="insert-snippets"></a>Inserisci frammento di codice
 
 Per frammento si intende una parte predefinita di codice sorgente. Fare clic con il pulsante destro del mouse su un singolo punto o su testo selezionato per inserire un frammento oppure racchiudere il testo selezionato con il frammento. Nella figura seguente sono illustrati i tre passaggi per racchiudere un'istruzione selezionata con un ciclo for. Le evidenziazioni gialle nell'immagine finale sono campi modificabili a cui è possibile accedere premendo TAB. Per altre informazioni, vedere [Code Snippets](/visualstudio/ide/code-snippets) (Frammenti di codice).
 
-![Visual C&#43; &#43; Inserisci frammento di eliminare&#45;verso il basso](../ide/media/vs2015_cpp_surround_with.png "vs2015_cpp_surround_with")
+![Elenco a discesa Inserisci frammento di codice di Visual C&#43;&#43;](../ide/media/vs2015_cpp_surround_with.png "vs2015_cpp_surround_with")
 
-### <a name="add-class"></a>Aggiungi classe
+## <a name="add-class"></a>Aggiungi classe
 
-Aggiungere una nuova classe dal **progetto** menu utilizzando la creazione guidata classe.
+Per aggiungere una nuova classe dal menu **Progetto**, usare la Creazione guidata classe.
 
-![Aggiungi nuova classe in Visual C&#43;&#43;](../ide/media/vs2015_cpp_add_class.png "vs2015_cpp_add_class")
+![Aggiungere una nuova classe in Visual C&#43;&#43;](../ide/media/vs2015_cpp_add_class.png "vs2015_cpp_add_class")
 
-### <a name="class-wizard"></a>Creazione guidata classe
+È anche possibile usare la Creazione guidata classe per modificare o esaminare una classe esistente.
 
-Per modificare o esaminare una classe esistente oppure aggiungere una nuova classe, usare la Creazione guidata classe. Per ulteriori informazioni, vedere [aggiunta di funzionalità con creazioni guidate codice (C++)](../ide/adding-functionality-with-code-wizards-cpp.md).
+![Creazione guidata classe di Visual C&#43;&#43;](../ide/media/vs2015_cpp_class_wizard.png "vs2015_cpp_class_wizard")
 
-![Visual C&#43; &#43; classe guidata](../ide/media/vs2015_cpp_class_wizard.png "vs2015_cpp_class_wizard")
+Per altre informazioni, vedere [Aggiunta di funzionalità con creazioni guidate codice (C++)](../ide/adding-functionality-with-code-wizards-cpp.md).
 
 ## <a name="refactoring"></a>Refactoring
 
-I refactoring sono disponibili nel menu di scelta rapida azioni rapide oppure facendo clic su un [lampadina](/visualstudio/ide/perform-quick-actions-with-light-bulbs) nell'editor.  Alcune sono incluse anche nel **Modifica > eseguire il refactoring** menu.  Queste funzionalità comprendono:
+I refactoring sono disponibili nel menu di scelta rapida Azioni rapide oppure facendo clic su una [lampadina](/visualstudio/ide/perform-quick-actions-with-light-bulbs) nell'editor.  Alcuni sono inclusi anche nel menu **Modifica > Refactoring**.  Queste funzionalità comprendono:
 
 * [Rinomina](refactoring/rename.md)
 * [Estrai funzione](refactoring/extract-function.md)
@@ -70,64 +77,64 @@ I refactoring sono disponibili nel menu di scelta rapida azioni rapide oppure fa
 
 ## <a name="navigate-and-understand"></a>Spostamenti e approfondimenti
 
-Visual C++ ha molte funzionalità di spostamento di codice con altri linguaggi. Per ulteriori informazioni, vedere [spostamento nel codice](/visualstudio/ide/navigating-code) e [visualizzazione della struttura del codice](/visualstudio/ide/viewing-the-structure-of-code).
+Visual C++ condivide con altri linguaggi molte funzionalità di spostamento all'interno del codice. Per altre informazioni, vedere [Spostarsi all'interno del codice](/visualstudio/ide/navigating-code) e [Visualizzare la struttura del codice usando diverse finestre degli strumenti](/visualstudio/ide/viewing-the-structure-of-code).
 
-### <a name="quickinfo"></a>Informazioni rapide
+## <a name="quickinfo"></a>Informazioni rapide
 
 È possibile passare con il puntatore del mouse su una variabile per visualizzare le informazioni sul relativo tipo.
 
 ![QuickInfo di Visual C&#43;&#43;](../ide/media/vs2015_cpp_quickinfo.png "vs2015_cpp_quickInfo")
 
-### <a name="open-document-navigate-to-header"></a>Apri documento (passa all'intestazione)
+## <a name="open-document-navigate-to-header"></a>Apri documento (passa all'intestazione)
 
 Fare clic con il pulsante destro del mouse sul nome dell'intestazione in una direttiva `#include` per aprire il file di intestazione.
 
-![Visual C&#43; &#43; opzione di menu Apri documento](../ide/media/vs2015_cpp_open_document.png "vs2015_cpp_open_document")
+![Opzione di menu Apri documento in Visual C&#43;&#43;](../ide/media/vs2015_cpp_open_document.png "vs2015_cpp_open_document")
 
-### <a name="peek-definition"></a>Visualizza definizione
+## <a name="peek-definition"></a>Visualizza definizione
 
-Passare il mouse su una variabile o una funzione dichiarazione, rapida, quindi scegliere **Visualizza definizione** per mostrare una visualizzazione inline della relativa definizione. Per ulteriori informazioni, vedere [Visualizza definizione (Alt + F12)](/visualstudio/ide/how-to-view-and-edit-code-by-using-peek-definition-alt-plus-f12).
+Passare il mouse su una dichiarazione di variabile o di funzione, fare clic con il pulsante destro e scegliere **Visualizza definizione** per accedere a una visualizzazione inline della relativa definizione. Per altre informazioni, vedere [Visualizza definizione (ALT+F12)](/visualstudio/ide/how-to-view-and-edit-code-by-using-peek-definition-alt-plus-f12).
 
-![Visual C&#43; &#43; Visualizza definizione](../ide/media/vs2015_cpp_peek_definition.png "vs2015_cpp_peek_definition")
+![Visualizza definizione in Visual C&#43;&#43;](../ide/media/vs2015_cpp_peek_definition.png "vs2015_cpp_peek_definition")
 
-### <a name="go-to-definition"></a>Vai a definizione
+## <a name="go-to-definition"></a>Vai a definizione
 
-Passare il mouse su una variabile o una funzione dichiarazione, rapida, quindi scegliere **Vai a definizione** per aprire il documento in cui l'oggetto è definito.
+Passare il mouse su una dichiarazione di variabile o di funzione, fare clic con il pulsante destro e scegliere **Vai a definizione** per aprire il documento in cui è definito l'oggetto.
 
-### <a name="view-call-hierarchy"></a>Visualizza gerarchia delle chiamate
+## <a name="view-call-hierarchy"></a>Visualizza gerarchia delle chiamate
 
-Fare clic con il pulsante destro del mouse su una qualsiasi chiamata di funzione per visualizzare un elenco ricorsivo di tutte le funzioni chiamate e di tutte le funzioni che la chiamano. È possibile espandere nello stesso modo tutte le singole funzioni dell'elenco. Per ulteriori informazioni, vedere [gerarchia di chiamata](/visualstudio/ide/reference/call-hierarchy).
+Fare clic con il pulsante destro del mouse su una qualsiasi chiamata di funzione per visualizzare un elenco ricorsivo di tutte le funzioni chiamate e di tutte le funzioni che la chiamano. È possibile espandere nello stesso modo tutte le singole funzioni dell'elenco. Per altre informazioni, vedere [Gerarchia delle chiamate](/visualstudio/ide/reference/call-hierarchy).
 
-![Visual C&#43; &#43; gerarchia di chiamata](../ide/media/vs2015_cpp_call_hierarchy.png "vs2015_cpp_call_hierarchy")
+![Gerarchia delle chiamate in Visual C&#43;&#43;](../ide/media/vs2015_cpp_call_hierarchy.png "vs2015_cpp_call_hierarchy")
 
-### <a name="toggle-header--code-file"></a>Attiva/disattiva file di codice/intestazione
+## <a name="toggle-header--code-file"></a>Attiva/disattiva file di codice/intestazione
 
-Mouse e scegliere **Mostra/Nascondi / File di codice** per passare da un file di intestazione e il relativo file di codice associato.
+Fare clic con il pulsante destro del mouse e scegliere **Attiva/disattiva file di codice/intestazione** per passare da un file di intestazione al file del codice associato e viceversa.
 
-### <a name="outlining"></a>struttura
+## <a name="outlining"></a>struttura
 
-Fare clic in un file di codice sorgente e scegliere **struttura** per comprimere o espandere definizioni e/o aree personalizzate per renderne più semplice visualizzare solo le parti di cui si è interessati. Per altre informazioni, vedere [Struttura](/visualstudio/ide/outlining).
+Fare clic con il pulsante destro del mouse in un punto qualsiasi di un file del codice sorgente e scegliere **Struttura** per comprimere o espandere definizioni e/o aree personalizzate e individuare più facilmente solo le parti che interessano. Per altre informazioni, vedere [Struttura](/visualstudio/ide/outlining).
 
-![Visual C&#43; &#43; della struttura](../ide/media/vs2015_cpp_outlining.png "vs2015_cpp_outlining")
+![Struttura in Visual C&#43;&#43;](../ide/media/vs2015_cpp_outlining.png "vs2015_cpp_outlining")
 
-### <a name="scroll-bar-map-mode"></a>Modalità mappa per barra di scorrimento
+## <a name="scrollbar-map-mode"></a>Modalità mappa per barra di scorrimento
 
-Questa modalità consente di scorrere rapidamente e spostarsi in un file del codice senza abbandonare la posizione corrente oppure di fare clic su un punto qualsiasi nella mappa del codice per passare direttamente a tale posizione.
+Questa modalità consente di scorrere rapidamente e spostarsi in un file del codice senza abbandonare la posizione corrente oppure di fare clic su un punto qualsiasi nella mappa del codice per passare direttamente a tale posizione. Per altre informazioni, vedere [Procedura: Tenere traccia del codice personalizzando la barra di scorrimento](/visualstudio/ide/how-to-track-your-code-by-customizing-the-scrollbar).
 
-![Mappa in Visual C# del codice&#43;&#43;](../ide/media/vs2015_cpp_code_map.png "vs2015_cpp_code_map")
+![Mappa del codice in Visual C&#43;&#43;](../ide/media/vs2015_cpp_code_map.png "vs2015_cpp_code_map")
 
-### <a name="generate-graph-of-include-files"></a>Genera grafico dei file di inclusione
+## <a name="generate-graph-of-include-files"></a>Genera grafico dei file di inclusione
 
-Fare clic su un file di codice nel progetto e scegliere **Genera grafico dei file di inclusione** per visualizzare un grafico dei file inclusi da altri file.
+Fare clic con il pulsante destro del mouse su un file del codice del progetto e scegliere **Genera grafico dei file di inclusione** per visualizzare un grafico dei file inclusi da altri file.
 
-![Visual C&#43; &#43; grafico dei file di inclusione](../ide/media/vs2015_cpp_include_graph.png "vs2015_cpp_include_graph")
+![Grafico dei file di inclusione in Visual C&#43;&#43;](../ide/media/vs2015_cpp_include_graph.png "vs2015_cpp_include_graph")
 
-### <a name="f1-help"></a>F1 Guida
+## <a name="f1-help"></a>F1 Guida
 
-Posizionando il cursore su o dopo un qualsiasi tipo, parola chiave o funzione e premendo F1, verrà visualizzato direttamente l'argomento di riferimento pertinente della libreria MSDN. F1 funziona anche con gli elementi dell'elenco errori e in numerose finestre di dialogo.
+Posizionando il cursore su o dopo un qualsiasi tipo, parola chiave o funzione e premendo F1, si passa direttamente all'argomento di riferimento pertinente su docs.microsoft.com. F1 funziona anche con gli elementi dell'elenco errori e in numerose finestre di dialogo.
 
-### <a name="quick-launch"></a>Avvio veloce
+## <a name="quick-launch"></a>Avvio veloce
 
 Per passare facilmente a qualsiasi finestra o strumento in Visual Studio, è sufficiente digitarne il nome nella finestra di avvio veloce nell'angolo in alto a destra dell'interfaccia utente. L'elenco di completamento automatico verrà filtrato durante la digitazione.
 
-![Avvio rapido di Visual Studio](../ide/media/vs2015_cpp_quick_launch.png "vs2015_cpp_quick_launch")
+![Avvio veloce di Visual Studio](../ide/media/vs2015_cpp_quick_launch.png "vs2015_cpp_quick_launch")

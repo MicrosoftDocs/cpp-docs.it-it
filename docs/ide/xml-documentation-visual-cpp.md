@@ -1,5 +1,5 @@
 ---
-title: Documentazione XML (Visual C++) | Documenti Microsoft
+title: Documentazione XML (Visual C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,38 +17,39 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9ee19c51c04fa32ab3c2f1810bb963b22ec7e890
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.openlocfilehash: 9d763a62edc2f21d8a7669e409c164906c440f1d
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34705634"
 ---
 # <a name="xml-documentation-visual-c"></a>Documentazione XML (Visual C++)
-In Visual C++, è possibile aggiungere commenti al codice sorgente che verrà elaborato in un file XML. Questo file può quindi essere l'input a un processo che crea la documentazione per le classi nel codice.  
+In Visual C++ è possibile aggiungere commenti al codice sorgente che verrà elaborato in un file XML. Questo file può essere l'input in un processo che crea la documentazione per le classi nel codice.  
   
- In un file di codice Visual C++, commenti della documentazione XML devono essere specificati direttamente prima di una definizione di metodo o tipo. I commenti possono essere utilizzati per popolare il suggerimento dati Intellisense QuickInfo negli scenari seguenti:  
+ In un file di codice Visual C++ i commenti della documentazione XML devono essere posizionati direttamente prima della definizione di un metodo o tipo. I commenti possono essere usati per popolare il suggerimento dati Informazioni rapide Intellisense negli scenari seguenti:  
   
-1.  Quando il codice viene compilato come un componente Windows Runtime con un file con estensione winmd associato  
+1.  quando il codice viene compilato come un componente Windows Runtime con un file con estensione winmd associato  
   
-2.  Quando il codice sorgente è incluso nel progetto corrente  
+2.  quando il codice sorgente è incluso nel progetto corrente  
   
-3.  in una raccolta i cui dichiarazioni di tipo e le implementazioni si trovano nello stesso file di intestazione  
+3.  in una raccolta le cui dichiarazioni e implementazioni di tipo si trovano nello stesso file di intestazione  
   
 > [!NOTE]
->  Nella versione corrente, i commenti del codice non vengono elaborati su modelli o qualsiasi elemento che contiene un tipo di modello (ad esempio, una funzione che accetta un parametro come un modello). Aggiunta di tali commenti si otterrà un comportamento indefinito.  
+>  Nella versione corrente i commenti del codice non vengono elaborati sui modelli o su qualsiasi elemento contenente un tipo di modello (ad esempio, una funzione che accetta un parametro come un modello). Aggiungendo tali commenti si otterrà un comportamento non definito.  
   
  Per informazioni dettagliate sulla creazione di un file XML con i commenti della documentazione, vedere gli argomenti seguenti.  
   
 |Per informazioni su|Vedere|  
 |---------------------------|---------|  
-|Le opzioni del compilatore da utilizzare|[/doc](../build/reference/doc-process-documentation-comments-c-cpp.md)|  
-|È possibile utilizzare per fornire comunemente tag funzionalità utilizzate nella documentazione|[Tag consigliati per i commenti relativi alla documentazione](../ide/recommended-tags-for-documentation-comments-visual-cpp.md)|  
-|Le stringhe ID generate dal compilatore per identificare i costrutti di codice|[L'elaborazione del File con estensione XML](../ide/dot-xml-file-processing.md)|  
+|Opzioni del compilatore da usare|[/doc](../build/reference/doc-process-documentation-comments-c-cpp.md)|  
+|Tag che si possono usare per specificare le funzionalità usate comunemente nella documentazione|[Tag consigliati per i commenti relativi alla documentazione](../ide/recommended-tags-for-documentation-comments-visual-cpp.md)|  
+|Stringhe ID generate dal compilatore per identificare i costrutti nel codice|[Elaborazione del file XML](../ide/dot-xml-file-processing.md)|  
 |Come delimitare i tag della documentazione|[Delimitatori per i tag della documentazione di Visual C++](../ide/delimiters-for-visual-cpp-documentation-tags.md)|  
-|La generazione di un file XML da uno o più file xdc.|[Riferimento a XDCMake](../ide/xdcmake-reference.md)|  
-|Collegamenti a informazioni su XML che si riferisce alle aree di funzionalità di Visual Studio|[XML in Visual Studio](/visualstudio/xml-tools/xml-tools-in-visual-studio)|  
+|Generazione di un file XML da uno o più file con estensione xdc.|[Riferimento a XDCMake](../ide/xdcmake-reference.md)|  
+|Collegamenti a informazioni su XML in quanto correlato alle aree di funzionalità di Visual Studio|[XML in Visual Studio](/visualstudio/xml-tools/xml-tools-in-visual-studio)|  
   
- Se è necessario inserire i caratteri speciali XML nel testo di un commento di documentazione, è necessario utilizzare l'entità XML o una sezione CDATA.  
+ Se è necessario inserire i caratteri speciali XML nel testo di un commento della documentazione, è necessario usare le entità XML o una sezione CDATA.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Estensioni componenti per le piattaforme runtime](../windows/component-extensions-for-runtime-platforms.md)

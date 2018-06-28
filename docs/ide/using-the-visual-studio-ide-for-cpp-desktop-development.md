@@ -1,6 +1,6 @@
 ---
 title: Uso dell'IDE di Visual Studio per lo sviluppo di applicazioni desktop C++ | Microsoft Docs
-ms.date: 11/27/2017
+ms.date: 06/08/2018
 ms.technology:
 - cpp-ide
 ms.topic: conceptual
@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 29810e928ee910efe0eb9a4bdbcda8576bcb7a9e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4b71f09914d509aa4202bfc856d52f6cea26cea3
+ms.sourcegitcommit: 1c2e035f98fb55d9b3c08ec3bb562179a368d0d1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33328880"
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35253815"
 ---
 # <a name="using-the-visual-studio-ide-for-c-desktop-development"></a>Utilizzo dell'ambiente di sviluppo di Visual Studio per lo sviluppo di applicazioni desktop C++
 
@@ -27,7 +27,7 @@ L'ambiente di sviluppo integrato (IDE) di Visual Studio offre un set di funziona
 
 ## <a name="prerequisites"></a>Prerequisiti
 
-Se Visual Studio non è stato installato, procedere subito. È possibile scaricare Visual Studio da [Download di Visual Studio](http://www.visualstudio.com/downloads/download-visual-studio-vs.aspx). Quando si installa Visual Studio, assicurarsi di includere gli strumenti di sviluppo di Visual C++ perché non sono installati per impostazione predefinita. Per altre informazioni su come installare Visual Studio, vedere [Installare Visual Studio](/visualstudio/install/install-visual-studio).
+Se Visual Studio non è stato installato, procedere subito. Per i collegamenti ai download e una procedura dettagliata, vedere [Installare il supporto C++ in Visual Studio](../build/vscpp-step-0-installation.md). Per altre informazioni su come installare Visual Studio in generale e suggerimenti per la risoluzione dei problemi, vedere [Installare Visual Studio](/visualstudio/install/install-visual-studio). Assicurarsi di scegliere il carico di lavoro **Sviluppo di applicazioni desktop con C++** per includere compilatori, strumenti e librerie di C++ al momento dell'installazione di Visual Studio poiché questi non vengono installati per impostazione predefinita.
 
 Queste procedure dettagliate presuppongono che si sia già installato Visual Studio, il linguaggio e i componenti Visual C++ necessari per lo sviluppo di Windows Desktop. Si presuppone inoltre una conoscenza delle nozioni di base del linguaggio C++. Per approfondire C++ ci sono molti libri e risorse Web disponibili. Un buon punto di partenza è la pagina [Get Started](https://isocpp.org/get-started) (Attività iniziali) del sito Web della Standard C++ Foundation.
 
