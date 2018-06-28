@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c0ca520fe89e04d984e6490c495f2622a6037c79
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 81ad51fe00a0b205000b15a05ede9497850f488e
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367760"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041273"
 ---
 # <a name="cinterpolatorbase-class"></a>Classe CInterpolatorBase
 Implementa un callback, chiamato dall'API di animazione quando deve essere calcolato un nuovo valore di una variabile di animazione.  
@@ -68,14 +68,14 @@ class CInterpolatorBase : public CUIAnimationInterpolatorBase<CInterpolatorBase>
 |[CInterpolatorBase::GetDependencies](#getdependencies)|Ottiene le dipendenze dell'interpolatore. Esegue l'override`CUIAnimationInterpolatorBase::GetDependencies`.|  
 |[CInterpolatorBase::GetDuration](#getduration)|Ottiene la durata dell'interpolatore. Esegue l'override`CUIAnimationInterpolatorBase::GetDuration`.|  
 |[CInterpolatorBase::GetFinalValue](#getfinalvalue)|Ottiene il valore finale a cui punta l'interpolatore. Esegue l'override`CUIAnimationInterpolatorBase::GetFinalValue`.|  
-|[CInterpolatorBase::InterpolateValue](#interpolatevalue)|Il valore a un offset specificato esegue l'interpolazione (esegue l'override `CUIAnimationInterpolatorBase::InterpolateValue`.)|  
+|[CInterpolatorBase::InterpolateValue](#interpolatevalue)|Crea un'interpolazione il valore a un offset specificato (esegue l'override `CUIAnimationInterpolatorBase::InterpolateValue`.)|  
 |[CInterpolatorBase::InterpolateVelocity](#interpolatevelocity)|Crea un'interpolazione la velocità a un offset specificato (esegue l'override `CUIAnimationInterpolatorBase::InterpolateVelocity`.)|  
 |[CInterpolatorBase::SetCustomInterpolator](#setcustominterpolator)|Archivia un puntatore a un interpolatore personalizzato che gli eventi.|  
 |[CInterpolatorBase::SetDuration](#setduration)|Imposta la durata dell'interpolatore (esegue l'override `CUIAnimationInterpolatorBase::SetDuration`.)|  
-|[CInterpolatorBase::SetInitialValueAndVelocity](#setinitialvalueandvelocity)|Imposta il valore iniziale dell'interpolatore e velocità. Esegue l'override`CUIAnimationInterpolatorBase::SetInitialValueAndVelocity`.|  
+|[CInterpolatorBase::SetInitialValueAndVelocity](#setinitialvalueandvelocity)|Imposta valore iniziale dell'interpolatore e velocità. Esegue l'override`CUIAnimationInterpolatorBase::SetInitialValueAndVelocity`.|  
   
 ## <a name="remarks"></a>Note  
- Questo gestore viene creato e passato a `IUIAnimationTransitionFactory::CreateTransition` quando un `CCustomTransition` oggetto viene creato come parte del processo di inizializzazione di animazione (avviato da `CAnimationController::AnimateGroup`). In genere non è necessario utilizzare questa classe direttamente, sufficiente routs tutti gli eventi per un `CCustomInterpolator`-cui puntatore viene passato al costruttore della classe derivata `CCustomTransition`.  
+ Questo gestore viene creato e passato a `IUIAnimationTransitionFactory::CreateTransition` quando un `CCustomTransition` oggetto viene creato come parte del processo di inizializzazione di animazione (avviata da `CAnimationController::AnimateGroup`). In genere non è necessario utilizzare questa classe direttamente, sufficiente routs tutti gli eventi a un `CCustomInterpolator`-il cui puntatore viene passato al costruttore di classe derivata `CCustomTransition`.  
   
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  `CUIAnimationCallbackBase`  
@@ -104,11 +104,11 @@ static COM_DECLSPEC_NOTHROW HRESULT CreateInstance(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `pInterpolator`  
+ *pInterpolator*  
  Puntatore a interpolatore personalizzato.  
   
- `ppHandler`  
- Output. Contiene un puntatore all'istanza di CInterpolatorBase quando la funzione restituisce.  
+ *ppHandler*  
+ Output. Contiene un puntatore all'istanza di CInterpolatorBase al completamento della funzione.  
   
 ### <a name="return-value"></a>Valore restituito  
   
@@ -123,17 +123,17 @@ IFACEMETHOD(GetDependencies)(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `initialValueDependencies`  
+ *initialValueDependencies*  
  Output. Gli aspetti dell'interpolatore che dipendono dal valore iniziale passato a SetInitialValueAndVelocity.  
   
- `initialVelocityDependencies`  
- Output. Gli aspetti dell'interpolatore che dipendono da velocità iniziale passati a SetInitialValueAndVelocity.  
+ *initialVelocityDependencies*  
+ Output. Gli aspetti dell'interpolatore che variano in base alla velocità iniziale passato a SetInitialValueAndVelocity.  
   
- `durationDependencies`  
+ *durationDependencies*  
  Output. Gli aspetti dell'interpolatore che dipendono dalla durata passati a SetDuration.  
   
 ### <a name="return-value"></a>Valore restituito  
- Se il metodo ha esito positivo, viene restituito S_OK. Restituisce E_FAIL se CCustomInterpolator non è impostato o l'implementazione personalizzata restituisce FALSE dal metodo GetDependencies.  
+ Se il metodo ha esito positivo, viene restituito S_OK. Restituisce E_FAIL se CCustomInterpolator non è impostata, o l'implementazione personalizzata restituisce FALSE dal metodo GetDependencies.  
   
 ##  <a name="getduration"></a>  CInterpolatorBase::GetDuration  
  Ottiene la durata dell'interpolatore.  
@@ -143,11 +143,11 @@ IFACEMETHOD(GetDuration)(__out UI_ANIMATION_SECONDS* duration);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `duration`  
+ *Durata*  
  Output. La durata della transizione, in secondi.  
   
 ### <a name="return-value"></a>Valore restituito  
- Se il metodo ha esito positivo, viene restituito S_OK. Restituisce E_FAIL se CCustomInterpolator non è impostato o l'implementazione personalizzata restituisce FALSE dal metodo GetDuration.  
+ Se il metodo ha esito positivo, viene restituito S_OK. Restituisce E_FAIL se CCustomInterpolator non è impostata, o l'implementazione personalizzata restituisce FALSE dal metodo GetDuration.  
   
 ##  <a name="getfinalvalue"></a>  CInterpolatorBase::GetFinalValue  
  Ottiene il valore finale a cui punta l'interpolatore.  
@@ -157,14 +157,14 @@ IFACEMETHOD(GetFinalValue)(__out DOUBLE* value);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `value`  
+ *valore*  
  Output. Il valore finale di una variabile alla fine della transizione.  
   
 ### <a name="return-value"></a>Valore restituito  
- Se il metodo ha esito positivo, viene restituito S_OK. Restituisce E_FAIL se CCustomInterpolator non è impostato o l'implementazione personalizzata restituisce FALSE dal metodo GetFinalValue.  
+ Se il metodo ha esito positivo, viene restituito S_OK. Restituisce E_FAIL se CCustomInterpolator non è impostata, o l'implementazione personalizzata restituisce FALSE dal metodo GetFinalValue.  
   
 ##  <a name="interpolatevalue"></a>  CInterpolatorBase::InterpolateValue  
- Il valore a un offset specificato esegue l'interpolazione  
+ Crea un'interpolazione il valore a un offset specificato  
   
 ```  
 IFACEMETHOD(InterpolateValue)(
@@ -173,14 +173,14 @@ IFACEMETHOD(InterpolateValue)(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `offset`  
- L'offset dall'inizio della transizione. L'offset è sempre maggiore o uguale a zero e minore della durata della transizione. Questo metodo non viene chiamato se la durata della transizione è zero.  
+ *offset*  
+ L'offset dall'inizio della transizione. L'offset è sempre maggiore o uguale a zero e minore della durata della transizione. Questo metodo non viene chiamato se la durata della transizione è uguale a zero.  
   
- `value`  
+ *valore*  
  Output. Il valore interpolato.  
   
 ### <a name="return-value"></a>Valore restituito  
- Se il metodo ha esito positivo, viene restituito S_OK. Restituisce E_FAIL se CCustomInterpolator non è impostato o l'implementazione personalizzata restituisce FALSE dal metodo InterpolateValue.  
+ Se il metodo ha esito positivo, viene restituito S_OK. Restituisce E_FAIL se CCustomInterpolator non è impostata, o l'implementazione personalizzata restituisce FALSE dal metodo InterpolateValue.  
   
 ##  <a name="interpolatevelocity"></a>  CInterpolatorBase::InterpolateVelocity  
  Crea un'interpolazione la velocità a un offset specificato  
@@ -192,14 +192,14 @@ IFACEMETHOD(InterpolateVelocity)(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `offset`  
- L'offset dall'inizio della transizione. L'offset è sempre maggiore di o uguale a zero e minore o uguale alla durata della transizione. Questo metodo non viene chiamato se la durata della transizione è zero.  
+ *offset*  
+ L'offset dall'inizio della transizione. L'offset è sempre maggiore o uguale a zero e minore o uguale alla durata della transizione. Questo metodo non viene chiamato se la durata della transizione è uguale a zero.  
   
- `velocity`  
+ *velocità*  
  Output. La velocità della variabile in corrispondenza dell'offset.  
   
 ### <a name="return-value"></a>Valore restituito  
- Se il metodo ha esito positivo, viene restituito S_OK. Restituisce E_FAIL se CCustomInterpolator non è impostato o l'implementazione personalizzata restituisce FALSE dal metodo InterpolateVelocity.  
+ Se il metodo ha esito positivo, viene restituito S_OK. Restituisce E_FAIL se CCustomInterpolator non è impostata, o l'implementazione personalizzata restituisce FALSE dal metodo InterpolateVelocity.  
   
 ##  <a name="setcustominterpolator"></a>  CInterpolatorBase::SetCustomInterpolator  
  Archivia un puntatore a un interpolatore personalizzato che gli eventi.  
@@ -209,7 +209,7 @@ void SetCustomInterpolator(CCustomInterpolator* pInterpolator);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `pInterpolator`  
+ *pInterpolator*  
  Puntatore a interpolatore personalizzato.  
   
 ##  <a name="setduration"></a>  CInterpolatorBase::SetDuration  
@@ -220,14 +220,14 @@ IFACEMETHOD(SetDuration)(__in UI_ANIMATION_SECONDS duration);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `duration`  
+ *Durata*  
  La durata della transizione.  
   
 ### <a name="return-value"></a>Valore restituito  
- Se il metodo ha esito positivo, viene restituito S_OK. Restituisce E_FAIL se CCustomInterpolator non è impostato o l'implementazione personalizzata restituisce FALSE dal metodo SetDuration.  
+ Se il metodo ha esito positivo, viene restituito S_OK. Restituisce E_FAIL se CCustomInterpolator non è impostata, o l'implementazione personalizzata restituisce FALSE dal metodo SetDuration.  
   
 ##  <a name="setinitialvalueandvelocity"></a>  CInterpolatorBase::SetInitialValueAndVelocity  
- Imposta il valore iniziale dell'interpolatore e velocità.  
+ Imposta valore iniziale dell'interpolatore e velocità.  
   
 ```  
 IFACEMETHOD(SetInitialValueAndVelocity)(
@@ -236,14 +236,14 @@ IFACEMETHOD(SetInitialValueAndVelocity)(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `initialValue`  
+ *initialValue*  
  Il valore della variabile all'inizio della transizione.  
   
- `initialVelocity`  
+ *initialVelocity*  
  La velocità della variabile all'inizio della transizione.  
   
 ### <a name="return-value"></a>Valore restituito  
- Se il metodo ha esito positivo, viene restituito S_OK. Restituisce E_FAIL se CCustomInterpolator non è impostato o l'implementazione personalizzata restituisce FALSE dal metodo SetInitialValueAndVelocity.  
+ Se il metodo ha esito positivo, viene restituito S_OK. Restituisce E_FAIL se CCustomInterpolator non è impostata, o l'implementazione personalizzata restituisce FALSE dal metodo SetInitialValueAndVelocity.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Classi](../../mfc/reference/mfc-classes.md)

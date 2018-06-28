@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9d342fdd903de610c0676d7a9e0b6e58ef15f41f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1412a65ce7afaab5421d49c22a9cd8ece5b283b1
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33366330"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040886"
 ---
 # <a name="clineartransition-class"></a>Classe CLinearTransition
 Incapsula una transizione lineare.  
@@ -62,7 +62,7 @@ class CLinearTransition : public CBaseTransition;
 |[CLinearTransition::m_duration](#m_duration)|La durata della transizione.|  
   
 ## <a name="remarks"></a>Note  
- Durante una transizione lineare, il valore della variabile di animazione passa in modo lineare dal valore iniziale a un valore finale specificato. Poiché tutte le transizioni vengono cancellate automaticamente, è consigliabile per assegnarle utilizzando l'operatore new. L'oggetto COM IUIAnimationTransition incapsulato viene creato da CAnimationController:: AnimateGroup, finché non è NULL. Modifica le variabili membro dopo la creazione dell'oggetto COM non ha alcun effetto.  
+ Durante una transizione lineare, il valore della variabile di animazione assume in modo lineare dal valore iniziale a un valore finale specificato. Poiché tutte le transizioni vengono cancellate automaticamente, è consigliabile per assegnarle utilizzando l'operatore new. L'oggetto COM IUIAnimationTransition incapsulato viene creato da CAnimationController:: AnimateGroup, finché non è NULL. Per modificare le variabili membro dopo la creazione di questo oggetto COM non ha alcun effetto.  
   
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -84,10 +84,10 @@ CLinearTransition(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `duration`  
+ *Durata*  
  La durata della transizione.  
   
- `dblFinalValue`  
+ *dblFinalValue*  
  Il valore della variabile di animazione alla fine della transizione.  
   
 ##  <a name="create"></a>  CLinearTransition::Create  
@@ -100,11 +100,11 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parametri  
-`pLibrary`  
+*pLibrary*  
  Un puntatore a un [IUIAnimationTransitionLibrary interfaccia](https://msdn.microsoft.com/library/windows/desktop/dd371897), che definisce una raccolta di transizioni standard.  
   
 ### <a name="return-value"></a>Valore restituito  
- TRUE se transizione viene creata correttamente. in caso contrario FALSE.  
+ TRUE se transizione viene creata correttamente. in caso contrario, FALSE.  
   
 ##  <a name="m_dblfinalvalue"></a>  CLinearTransition::m_dblFinalValue  
  Il valore della variabile di animazione alla fine della transizione.  
