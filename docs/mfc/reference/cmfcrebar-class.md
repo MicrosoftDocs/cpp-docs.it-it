@@ -38,15 +38,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: abb880c1add83ec03d787c28b816f2e82caeddd6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fcef7bab4fd2b0cd913c0da929534d6964730215
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368800"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037961"
 ---
 # <a name="cmfcrebar-class"></a>Classe CMFCReBar
-Oggetto `CMFCReBar` oggetto è una barra di controllo che fornisce informazioni sullo stato per i controlli rebar, persistenza e layout.  
+Oggetto `CMFCReBar` oggetto è una barra di controllo che fornisce layout, persistenza e le informazioni sullo stato per i controlli rebar.  
    [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
 ## <a name="syntax"></a>Sintassi  
   
@@ -73,12 +73,12 @@ class CMFCReBar : public CPane
 |[CMFCReBar::SetPaneAlignment](#setpanealignment)|(Esegue l'override [CBasePane::SetPaneAlignment](../../mfc/reference/cbasepane-class.md#setpanealignment).)|  
   
 ## <a name="remarks"></a>Note  
- Oggetto `CMFCReBar` oggetto può contenere diverse finestre figlio. Ciò include le caselle di modifica, le barre degli strumenti e caselle di riepilogo. È possibile ridimensionare il controllo rebar a livello di codice o l'utente può ridimensionare manualmente il controllo rebar trascinando la barra verticale di ridimensionamento. È anche possibile impostare lo sfondo di un oggetto rebar in una bitmap di propria scelta.  
+ Oggetto `CMFCReBar` oggetto può contenere diverse finestre figlio. Ciò include le caselle di modifica, le barre degli strumenti e caselle di riepilogo. È possibile ridimensionare il controllo rebar a livello di codice oppure l'utente può ridimensionare manualmente il controllo rebar trascinando la barra verticale di ridimensionamento. È inoltre possibile impostare lo sfondo di un oggetto rebar in una bitmap di propria scelta.  
   
  Un oggetto rebar si comporta in modo analogo a un oggetto barra degli strumenti. Un controllo rebar può contenere una o più bande, e ogni band può contenere una barra verticale di ridimensionamento, una bitmap, un'etichetta di testo e una finestra figlio.  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene illustrato come utilizzare i vari metodi nella `CMFCReBar` classe. Nell'esempio viene illustrato come creare un controllo rebar e aggiungervi una banda. La banda funziona come una barra degli strumenti interno. Questo frammento di codice fa parte di [campione Rebar](../../visual-cpp-samples.md).  
+ Nell'esempio seguente viene illustrato come utilizzare i vari metodi nella `CMFCReBar` classe. Nell'esempio viene illustrato come creare un controllo rebar e aggiungervi una fuori banda. La banda funziona come una barra degli strumenti interno. Questo frammento di codice fa parte il [campione Rebar](../../visual-cpp-samples.md).  
   
  [!code-cpp[NVC_MFC_RebarTest#1](../../mfc/reference/codesnippet/cpp/cmfcrebar-class_1.h)]  
 [!code-cpp[NVC_MFC_RebarTest#2](../../mfc/reference/codesnippet/cpp/cmfcrebar-class_2.cpp)]  
@@ -110,22 +110,22 @@ BOOL AddBar(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] [out] `pBar`  
+ [in] [out] *pBar*  
  Puntatore alla finestra figlio che deve essere inserito un controllo rebar. L'oggetto cui viene fatto riferimento deve avere il **WS_CHILD** stile della finestra.  
   
- [in] `pszText`  
- Specifica il testo da visualizzare nel controllo rebar. Il testo non fa parte della finestra figlio. Piuttosto, cui viene visualizzato il controllo rebar stesso.  
+ [in] *pszText*  
+ Specifica il testo da visualizzare nel controllo rebar. Il testo non fa parte della finestra figlio. Piuttosto, cui viene visualizzato il controllo rebar se stesso.  
   
- [in] [out] `pbmp`  
+ [in] [out] *pbmp*  
  Specifica la bitmap da visualizzare sullo sfondo del controllo rebar.  
   
- [in] `dwStyle`  
- Contiene lo stile da applicare per la banda. Per un elenco completo degli stili di banda, vedere la descrizione per `fStyle` nel [REBARBANDINFO](http://msdn.microsoft.com/library/windows/desktop/bb774393) struttura nella documentazione di Windows SDK.  
+ [in] *dwStyle*  
+ Contiene lo stile da applicare di fuori banda. Per un elenco completo degli stili fuori banda, vedere la descrizione `fStyle` nella [REBARBANDINFO](http://msdn.microsoft.com/library/windows/desktop/bb774393) struttura nella documentazione di Windows SDK.  
   
- [in] `clrFore`  
+ [in] *clrFore*  
  Rappresenta il colore di primo piano del controllo rebar.  
   
- [in] `clrBack`  
+ [in] *clrBack*  
  Rappresenta il colore di sfondo del controllo rebar.  
   
 ### <a name="return-value"></a>Valore restituito  
@@ -143,16 +143,16 @@ BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] [out] `pParentWnd`  
+ [in] [out] *pParentWnd*  
  Puntatore alla finestra padre di questo controllo rebar.  
   
- [in] `dwCtrlStyle`  
+ [in] *dwCtrlStyle*  
  Specifica lo stile per il controllo rebar. Il valore di stile predefinito è **RBS_BANDBORDERS**, che consente di visualizzare limitare le righe per separare le bande adiacenti del controllo rebar. Per un elenco degli stili validi, vedere [stili del controllo Rebar](http://msdn.microsoft.com/library/windows/desktop/bb774377) nella documentazione di Windows SDK.  
   
- [in] `dwStyle`  
+ [in] *dwStyle*  
  Lo stile della finestra del controllo rebar. Per un elenco degli stili validi, vedere [stili finestra](../../mfc/reference/styles-used-by-mfc.md#window-styles).  
   
- [in] `nID`  
+ [in] *nID*  
  ID di finestra figlio. del controllo rebar  
   
 ### <a name="return-value"></a>Valore restituito  
@@ -168,10 +168,10 @@ CReBarCtrl& GetReBarCtrl() const;
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- Un riferimento all'oggetto sottostante `CReBarCtrl` oggetto.  
+ Un riferimento a sottostante `CReBarCtrl` oggetto.  
   
 ### <a name="remarks"></a>Note  
- Chiamare questo metodo per sfruttare la funzionalità controllo comune rebar di Windows per la personalizzazione del controllo rebar.  
+ Chiamare questo metodo per sfruttare la funzionalità controllo comune rebar di Windows durante la personalizzazione del controllo rebar.  
   
 ##  <a name="calcfixedlayout"></a>  CMFCReBar::CalcFixedLayout  
 
@@ -183,8 +183,8 @@ virtual CSize CalcFixedLayout(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `bStretch`  
- [in] `bHorz`  
+ [in] *bStretch*  
+ [in] *bHorz*  
   
 ### <a name="return-value"></a>Valore restituito  
   
@@ -209,7 +209,7 @@ void EnableDocking(DWORD dwDockStyle);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `dwDockStyle`  
+ [in] *dwDockStyle*  
   
 ### <a name="remarks"></a>Note  
   
@@ -232,7 +232,7 @@ virtual BOOL OnShowControlBarMenu(CPoint);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `CPoint`  
+ [in] *CPoint*  
   
 ### <a name="return-value"></a>Valore restituito  
   
@@ -248,8 +248,8 @@ virtual INT_PTR OnToolHitTest(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `point`  
- [in] `pTI`  
+ [in] *punto*  
+ [in] *pTI*  
   
 ### <a name="return-value"></a>Valore restituito  
   
@@ -265,8 +265,8 @@ virtual void OnUpdateCmdUI(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `pTarget`  
- [in] `bDisableIfNoHndler`  
+ [in] *pTarget*  
+ [in] *bDisableIfNoHndler*  
   
 ### <a name="remarks"></a>Note  
   
@@ -278,7 +278,7 @@ virtual void SetPaneAlignment(DWORD dwAlignment);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `dwAlignment`  
+ [in] *dwAlignment*  
   
 ### <a name="remarks"></a>Note  
   

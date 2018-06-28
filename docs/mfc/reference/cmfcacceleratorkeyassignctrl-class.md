@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6a2906071ce1e8c8f65f21554915feed0d134276
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7728df79bf2ab842910b580b1404f109034e55b7
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367945"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037246"
 ---
 # <a name="cmfcacceleratorkeyassignctrl-class"></a>Classe CMFCAcceleratorKeyAssignCtrl
 Il `CMFCAcceleratorKeyAssignCtrl` classe estende la [classe CEdit](../../mfc/reference/cedit-class.md) per supportare pulsanti di sistema supplementari come ALT, controllo e MAIUSC.  
@@ -94,7 +94,7 @@ CMFCAcceleratorKeyAssignCtrl();
 ```  
   
 ##  <a name="getaccel"></a>  CMFCAcceleratorKeyAssignCtrl::GetAccel  
- Recupera il `ACCEL` struttura per premuto un tasto di scelta rapida di [CMFCAcceleratorKeyAssignCtrl](../../mfc/reference/cmfcacceleratorkeyassignctrl-class.md) oggetto.  
+ Recupera il `ACCEL` struttura per nella quando viene premuto un tasto di scelta rapida di [CMFCAcceleratorKeyAssignCtrl](../../mfc/reference/cmfcacceleratorkeyassignctrl-class.md) oggetto.  
   
 ```  
 ACCEL const* GetAccel() const;  
@@ -104,7 +104,7 @@ ACCEL const* GetAccel() const;
  Un `ACCEL` struttura che descrive il tasto di scelta rapida.  
   
 ### <a name="remarks"></a>Note  
- Utilizzare questa funzione per recuperare il `ACCEL` struttura per l'utente ha immesso nel tasto di scelta rapida del `CMFCAcceleratorKeyAssignCtrl` oggetto.  
+ Utilizzare questa funzione per recuperare il `ACCEL` struttura per un tasto di scelta rapida che l'utente ha immesso nel `CMFCAcceleratorKeyAssignCtrl` oggetto.  
   
 ##  <a name="isfocused"></a>  CMFCAcceleratorKeyAssignCtrl::IsFocused  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
@@ -128,7 +128,7 @@ BOOL IsKeyDefined() const;
  Diverso da zero se l'utente ha premuto già una combinazione valida di chiavi che definiscono un tasto di scelta rapida; in caso contrario 0.  
   
 ### <a name="remarks"></a>Note  
- Utilizzare questa funzione per determinare se l'utente ha immesso un tasto di scelta rapida valido nel `CMFCAcceleratorKeyAssignCtrl` oggetto. Se esiste un tasto di scelta rapida, è possibile utilizzare [CMFCAcceleratorKeyAssignCtrl::GetAccel](#getaccel) per ottenere il `ACCEL` struttura associata a questo tasto di scelta rapida.  
+ Utilizzare questa funzione per determinare se l'utente ha immesso un tasto di scelta rapida valido nel `CMFCAcceleratorKeyAssignCtrl` oggetto. Se esiste un tasto di scelta rapida, è possibile utilizzare [CMFCAcceleratorKeyAssignCtrl::GetAccel](#getaccel) metodo per ottenere il `ACCEL` struttura associata a questo tasto di scelta rapida.  
   
 ##  <a name="pretranslatemessage"></a>  CMFCAcceleratorKeyAssignCtrl::PreTranslateMessage  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
@@ -138,7 +138,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `pMsg`  
+ [in] *pMsg*  
   
 ### <a name="return-value"></a>Valore restituito  
   
@@ -152,7 +152,7 @@ void ResetKey();
 ```  
   
 ### <a name="remarks"></a>Note  
- La funzione Cancella il testo del controllo di modifica. Questo include qualsiasi tasti di scelta rapida che l'utente ha premuto.  
+ La funzione Cancella il testo di controllo di modifica. Ciò include qualsiasi tasti di scelta rapida che l'utente ha premuto.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Grafico delle gerarchie](../../mfc/hierarchy-chart.md)   

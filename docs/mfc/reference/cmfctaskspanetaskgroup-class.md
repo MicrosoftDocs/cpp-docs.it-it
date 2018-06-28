@@ -34,15 +34,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d51b29f9ea2719f98f263565680ded2360197572
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1e6c56116c94abeaf4dd266ca823e66c68d099fd
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370845"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037496"
 ---
 # <a name="cmfctaskspanetaskgroup-class"></a>Classe CMFCTasksPaneTaskGroup
-Il `CMFCTasksPaneTaskGroup` classe è una classe helper utilizzata dal [CMFCTasksPane](../../mfc/reference/cmfctaskspane-class.md) controllo. Gli oggetti di tipo `CMFCTasksPaneTaskGroup` rappresentano un *gruppo di attività*. Il gruppo di attività è un elenco di elementi visualizzato dal framework in una casella separata dotata di un pulsante di compressione. La casella può avere una didascalia facoltativa (nome del gruppo). Se un gruppo viene compresso, l'elenco di attività non è visibile.  
+Il `CMFCTasksPaneTaskGroup` classe è una classe helper utilizzata per il [CMFCTasksPane](../../mfc/reference/cmfctaskspane-class.md) controllo. Gli oggetti di tipo `CMFCTasksPaneTaskGroup` rappresentano un *gruppo di attività*. Il gruppo di attività è un elenco di elementi visualizzato dal framework in una casella separata dotata di un pulsante di compressione. La casella può avere una didascalia facoltativa (nome del gruppo). Se un gruppo viene compresso, l'elenco di attività non è visibile.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -71,26 +71,26 @@ class CMFCTasksPaneTaskGroup : public CObject
 |----------|-----------------|  
 |[CMFCTasksPaneTaskGroup::m_bIsBottom](#m_bisbottom)|Determina se il gruppo di attività è allineato alla parte inferiore del controllo del riquadro attività.|  
 |[CMFCTasksPaneTaskGroup::m_bIsCollapsed](#m_biscollapsed)|Determina se il gruppo di attività è compressa.|  
-|[CMFCTasksPaneTaskGroup::m_bIsSpecial](#m_bisspecial)|Determina se il gruppo di attività è *speciali.* Il framework Visualizza didascalie speciale con un colore diverso.|  
+|[CMFCTasksPaneTaskGroup::m_bIsSpecial](#m_bisspecial)|Determina se il gruppo di attività è *speciali.* Le didascalie speciale visualizzato dal framework in un colore diverso.|  
 |[CMFCTasksPaneTaskGroup::m_lstTasks](#m_lsttasks)|Contiene l'elenco di attività interno.|  
 |[CMFCTasksPaneTaskGroup::m_rect](#m_rect)|Specifica il rettangolo di delimitazione della didascalia del gruppo.|  
 |[CMFCTasksPaneTaskGroup::m_rectGroup](#m_rectgroup)|Specifica il rettangolo di delimitazione del gruppo.|  
 |[CMFCTasksPaneTaskGroup::m_strName](#m_strname)|Specifica il nome del gruppo.|  
   
 ## <a name="remarks"></a>Note  
- Nella figura seguente viene illustrato un gruppo di attività espanso:  
+ Nella figura seguente viene mostrato un gruppo di attività espanso:  
   
  ![Gruppo di attività espanso](../../mfc/reference/media/nexttaskgrpexpand.png "nexttaskgrpexpand")  
   
- Nella figura seguente viene illustrato un gruppo di attività compresso:  
+ La figura seguente mostra un gruppo di attività compresso:  
   
  ![Gruppo di attività compresso](../../mfc/reference/media/nexttaskgrpcollapse.png "nexttaskgrpcollapse")  
   
- Nella figura seguente viene illustrato un gruppo di attività senza didascalia:  
+ La figura seguente mostra un gruppo di attività senza didascalia:  
   
  ![Gruppo di attività senza didascalia](../../mfc/reference/media/nexttaskgrpnocapt.png "nexttaskgrpnocapt")  
   
- Nella figura seguente mostra due gruppi di attività. Il primo gruppo di attività è contrassegnato come speciale impostando il `m_bIsSpecial` flag `TRUE`, mentre il secondo gruppo di attività non è speciale. Si noti come la didascalia per il primo gruppo di attività è più scura del secondo gruppo di attività:  
+ Nella figura seguente vengono mostrati due gruppi di attività. Il primo gruppo di attività è contrassegnato come speciale impostando il `m_bIsSpecial` flag su `TRUE`, mentre il secondo gruppo di attività non è speciale. Si noti come la didascalia per il primo gruppo di attività è più scura rispetto al secondo gruppo di attività:  
   
  ![Gruppo di attività speciale](../../mfc/reference/media/nexttaskgrpspecial.png "nexttaskgrpspecial")  
   
@@ -116,22 +116,22 @@ CMFCTasksPaneTaskGroup(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `lpszName`  
+ *lpszName*  
  Specifica il nome del gruppo nella didascalia del gruppo.  
   
- `bIsBottom`  
+ *bIsBottom*  
  Specifica se il gruppo è allineato alla parte inferiore del controllo del riquadro attività.  
   
- `bIsSpecial`  
+ *bIsSpecial*  
  Specifica se il gruppo è designato come *speciali* e di conseguenza, se la didascalia del gruppo viene riempita con un colore diverso.  
   
- `bIsCollapsed`  
+ *bIsCollapsed*  
  Specifica se il gruppo è compresso.  
   
- `pPage`  
- Specifica la pagina delle proprietà appartenente a questo gruppo di attività.  
+ *Esercitazione*  
+ Specifica la pagina delle proprietà a cui appartiene questo gruppo di attività.  
   
- `hIcon`  
+ *Icona*  
  Specifica l'icona che consente di visualizzare la didascalia del gruppo.  
   
 ### <a name="remarks"></a>Note  
@@ -144,7 +144,7 @@ BOOL m_bIsBottom;
 ```  
   
 ### <a name="remarks"></a>Note  
- È possibile allineare un solo gruppo alla parte inferiore della finestra di controllo del riquadro attività. Ultima è necessario aggiungere questo gruppo di attività. Per ulteriori informazioni, vedere [cmfctaskspane:: addgroup](../../mfc/reference/cmfctaskspane-class.md#addgroup).  
+ È possibile allineare un solo gruppo alla parte inferiore del controllo del riquadro attività. Ultima è necessario aggiungere questo gruppo di attività. Per altre informazioni, vedere [cmfctaskspane:: addgroup](../../mfc/reference/cmfctaskspane-class.md#addgroup).  
   
 ##  <a name="m_biscollapsed"></a>  CMFCTasksPaneTaskGroup::m_bIsCollapsed  
  Determina se il gruppo di attività è compressa.  
@@ -164,7 +164,7 @@ BOOL m_bIsSpecial;
 ```  
   
 ### <a name="remarks"></a>Note  
- Se l'applicazione utilizza il tema visivo di Windows XP e `m_bIsSpecial` è `FALSE`, il framework chiama `DrawThemeBackground` con il `EBP_NORMALGROUPBACKGROUND` flag. Se `m_bIsSpecial` è `TRUE`, il framework chiama `DrawThemeBackground` con il `EBP_SPECIALGROUPBACKGROUND` flag.  
+ Se l'applicazione usi il tema visivo di Windows XP e `m_bIsSpecial` viene `FALSE`, il framework chiama `DrawThemeBackground` con il `EBP_NORMALGROUPBACKGROUND` flag. Se `m_bIsSpecial` viene `TRUE`, il framework chiama `DrawThemeBackground` con il `EBP_SPECIALGROUPBACKGROUND` flag.  
   
 ##  <a name="m_lsttasks"></a>  CMFCTasksPaneTaskGroup::m_lstTasks  
  Contiene l'elenco di attività interno.  
@@ -216,14 +216,14 @@ virtual BOOL SetACCData(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `pParent`  
+ [in] *pParent*  
  Rappresenta la finestra padre del gruppo di attività corrente.  
   
- [out] `data`  
+ [out] *dati*  
  Un oggetto di tipo `CAccessibilityData` che viene popolata con i dati di accessibilità del gruppo di attività corrente.  
   
 ### <a name="return-value"></a>Valore restituito  
- `TRUE` Se il `data` parametro è stato popolato con i dati di accessibilità del gruppo di attività corrente; in caso contrario, `FALSE`.  
+ `TRUE` Se il *dati* parametro è stato popolato con i dati di accessibilità del gruppo di attività corrente; in caso contrario, `FALSE`.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Grafico delle gerarchie](../../mfc/hierarchy-chart.md)   

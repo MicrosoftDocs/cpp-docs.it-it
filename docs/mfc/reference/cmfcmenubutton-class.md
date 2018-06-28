@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2d611acb34d4159abb41ffa333b4b2cfb6d94442
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 09d68cd7c0e4796b3368e1167888d703d37a8cf8
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33375389"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040168"
 ---
 # <a name="cmfcmenubutton-class"></a>CMFCMenuButton (classe)
 Pulsante che consente di visualizzare un menu di scelta rapida e segnala le selezioni di menu dell'utente.  
@@ -61,25 +61,25 @@ class CMFCMenuButton : public CMFCButton
 |Nome|Descrizione|  
 |----------|-----------------|  
 |[CMFCMenuButton::PreTranslateMessage](#pretranslatemessage)|Chiamato dal framework per convertire i messaggi della finestra prima che vengano inviati. Esegue l'override`CMFCButton::PreTranslateMessage`.|  
-|[CMFCMenuButton::SizeToContent](#sizetocontent)|Modifica la dimensione del pulsante in base alle relative dimensioni di testo e immagine.|  
+|[CMFCMenuButton::SizeToContent](#sizetocontent)|Modificare le dimensioni del pulsante in base alle relative dimensioni di testo e immagine.|  
   
 ### <a name="data-members"></a>Membri di dati  
   
 |nome|Descrizione|  
 |----------|-----------------|  
-|[CMFCMenuButton::m_bOSMenu](#m_bosmenu)|Specifica se visualizzare il menu a comparsa del sistema predefinito o utilizzare [CContextMenuManager::TrackPopupMenu](../../mfc/reference/ccontextmenumanager-class.md#trackpopupmenu).|  
+|[CMFCMenuButton::m_bOSMenu](#m_bosmenu)|Specifica se visualizzare il menu a comparsa del sistema predefinita oppure usare [CContextMenuManager::TrackPopupMenu](../../mfc/reference/ccontextmenumanager-class.md#trackpopupmenu).|  
 |[CMFCMenuButton::m_bRightArrow](#m_brightarrow)|Specifica se il menu di scelta rapida verrà visualizzato di sotto o a destra del pulsante.|  
 |[CMFCMenuButton::m_bStayPressed](#m_bstaypressed)|Specifica se il pulsante di menu cambia il proprio stato dopo che l'utente rilascia il pulsante.|  
-|[CMFCMenuButton::m_hMenu](#m_hmenu)|Handle per il menu di Windows associata.|  
+|[CMFCMenuButton::m_hMenu](#m_hmenu)|Un handle per il menu di Windows associato.|  
 |[CMFCMenuButton::m_nMenuResult](#m_nmenuresult)|Un identificatore che indica quale elemento l'utente selezionato dal menu a comparsa.|  
   
 ## <a name="remarks"></a>Note  
- Il `CMFCMenuButton` viene derivata dal [CMFCButton classe](../../mfc/reference/cmfcbutton-class.md) che, a sua volta è derivato dal [CButton classe](../../mfc/reference/cbutton-class.md). Pertanto, è possibile utilizzare `CMFCMenuButton` nel codice esattamente come si utilizzerebbe `CButton`.  
+ Il `CMFCMenuButton` classe è derivata dal [classe CMFCButton](../../mfc/reference/cmfcbutton-class.md) che, a sua volta deriva dal [CButton classe](../../mfc/reference/cbutton-class.md). Pertanto, è possibile utilizzare `CMFCMenuButton` nel codice esattamente come si utilizzerebbe `CButton`.  
   
- Quando si crea un `CMFCMenuButton`, è necessario passare un handle al menu di scelta rapida associato. Successivamente, chiamare la funzione `CMFCMenuButton::SizeToContent`. `CMFCMenuButton::SizeToContent` verifica che la dimensione del controllo button è sufficiente per includere una freccia che punta alla posizione in cui verrà visualizzata la finestra popup, vale a dire, di sotto o a destra del pulsante.  
+ Quando si crea un `CMFCMenuButton`, è necessario passare un handle per il menu a comparsa associato. Successivamente, chiamare la funzione `CMFCMenuButton::SizeToContent`. `CMFCMenuButton::SizeToContent` verifica che la dimensione del controllo button è sufficiente per includere una freccia che punta alla posizione in cui verrà visualizzata la finestra popup, vale a dire, di sotto o a destra del pulsante.  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene illustrato come impostare l'handle del menu associato al pulsante, ridimensionare il pulsante in base alle relative dimensioni di testo e immagine e impostare il menu popup che viene visualizzato dal framework. Questo frammento di codice fa parte di [esempio nuovi controlli](../../visual-cpp-samples.md).  
+ Nell'esempio seguente viene illustrato come impostare l'handle del menu associato al pulsante, ridimensionare il pulsante in base alle relative dimensioni di testo e immagine e impostare il menu di scelta rapida che viene visualizzato dal framework. Questo frammento di codice fa parte il [esempio di nuovi controlli](../../visual-cpp-samples.md).  
   
  [!code-cpp[NVC_MFC_NewControls#38](../../mfc/reference/codesnippet/cpp/cmfcmenubutton-class_1.h)]  
 [!code-cpp[NVC_MFC_NewControls#39](../../mfc/reference/codesnippet/cpp/cmfcmenubutton-class_2.cpp)]  
@@ -108,39 +108,39 @@ CMFCMenuButton();
 ```  
   
 ##  <a name="m_bosmenu"></a>  CMFCMenuButton::m_bOSMenu  
- Una variabile membro di tipo Boolean che indica il menu di scelta rapida visualizzato dal framework.  
+ Una variabile membro booleano che indica il menu di scelta rapida visualizzato dal framework.  
   
 ```  
 BOOL m_bOSMenu;  
 ```  
   
 ### <a name="remarks"></a>Note  
- Se `m_bOSMenu` è `TRUE`, il framework chiama ereditato `TrackPopupMenu` metodo per questo oggetto. In caso contrario, il framework chiama [CContextMenuManager::TrackPopupMenu](../../mfc/reference/ccontextmenumanager-class.md#trackpopupmenu).  
+ Se `m_bOSMenu` viene `TRUE`, il framework chiama ereditato `TrackPopupMenu` metodo per questo oggetto. In caso contrario, il framework chiama [CContextMenuManager::TrackPopupMenu](../../mfc/reference/ccontextmenumanager-class.md#trackpopupmenu).  
   
 ##  <a name="m_brightarrow"></a>  CMFCMenuButton::m_bRightArrow  
- Una variabile membro di tipo Boolean che indica la posizione del menu a comparsa.  
+ Una variabile membro booleano che indica la posizione del menu a comparsa.  
   
 ```  
 BOOL m_bRightArrow;  
 ```  
   
 ### <a name="remarks"></a>Note  
- Quando l'utente preme il pulsante di menu, l'applicazione visualizza un menu a comparsa. Il framework verrà visualizzato il menu a comparsa sotto il pulsante o a destra del pulsante. Il pulsante offre inoltre una piccola freccia che indica dove verrà visualizzati i menu a comparsa. Se `m_bRightArrow` è `TRUE`, il framework Visualizza il menu a comparsa a destra del pulsante. In caso contrario, viene visualizzato sotto il pulsante di menu a comparsa.  
+ Quando l'utente preme il pulsante di menu, l'applicazione mostra un menu a comparsa. Il framework verrà visualizzato il menu a comparsa sotto il pulsante o a destra del pulsante. Il pulsante offre inoltre una piccola freccia che indica dove verrà visualizzato il menu a comparsa. Se `m_bRightArrow` è `TRUE`, il framework Visualizza il menu a comparsa a destra del pulsante. In caso contrario, viene visualizzato il menu a comparsa sotto il pulsante.  
   
 ##  <a name="m_bstaypressed"></a>  CMFCMenuButton::m_bStayPressed  
- Una variabile membro di tipo Boolean che indica se il pulsante di menu viene premuto mentre l'utente effettua una selezione da menu a comparsa.  
+ Una variabile membro booleano che indica se il pulsante di menu viene premuto mentre l'utente effettua una selezione da menu a comparsa.  
   
 ```  
 BOOL m_bStayPressed;  
 ```  
   
 ### <a name="remarks"></a>Note  
- Se il `m_bStayPressed` membro `FALSE`, non diventano premuto il pulsante di menu quando l'utente fa clic sul pulsante. In questo caso, il framework Visualizza il menu di scelta rapida.  
+ Se il `m_bStayPressed` membro `FALSE`, non diventano premuto il pulsante di menu quando l'utente fa clic sul pulsante. In questo caso, il framework visualizza solo il menu di scelta rapida.  
   
- Se il `m_bStayPressed` membro `TRUE`, diventa premuto il pulsante di menu quando l'utente fa clic sul pulsante. Rimane premuto fino a dopo che l'utente chiude il menu a comparsa, effettuare una selezione o l'annullamento.  
+ Se il `m_bStayPressed` membro `TRUE`, diventa premuto il pulsante di menu quando l'utente fa clic sul pulsante. Rimane premuto fino a dopo che l'utente chiude il menu di scelta rapida, in base effettuando una selezione o l'annullamento.  
   
 ##  <a name="m_hmenu"></a>  CMFCMenuButton::m_hMenu  
- Handle di menu associata.  
+ Handle per il menu collegato.  
   
 ```  
 HMENU m_hMenu;  
@@ -150,14 +150,14 @@ HMENU m_hMenu;
  Il framework Visualizza il menu indicato da questa variabile membro quando l'utente fa clic sul pulsante di menu.  
   
 ##  <a name="m_nmenuresult"></a>  CMFCMenuButton::m_nMenuResult  
- Un intero che indica quale elemento l'utente seleziona dal menu a comparsa.  
+ Un intero che indica quale elemento l'utente seleziona da menu a comparsa.  
   
 ```  
 int m_nMenuResult;  
 ```  
   
 ### <a name="remarks"></a>Note  
- Il valore di questa variabile membro è zero se l'utente annulla il menu senza effettuare una selezione o se si verifica un errore.  
+ Il valore di questa variabile membro è zero se l'utente annulla il menu di scelta senza effettuare una selezione o se si verifica un errore.  
   
 ##  <a name="pretranslatemessage"></a>  CMFCMenuButton::PreTranslateMessage  
  Chiamato dal framework per convertire i messaggi della finestra prima che vengano inviati.  
@@ -167,7 +167,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `pMsg`  
+ [in] *pMsg*  
  Punta a un [MSG](../../mfc/reference/msg-structure1.md) struttura che contiene il messaggio da elaborare.  
   
 ### <a name="return-value"></a>Valore restituito  
@@ -176,23 +176,23 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 ### <a name="remarks"></a>Note  
   
 ##  <a name="sizetocontent"></a>  CMFCMenuButton::SizeToContent  
- Modifica la dimensione del pulsante in base alle relative dimensioni di testo e dell'immagine.  
+ Modificare le dimensioni del pulsante in base alle relative dimensioni di testo e dell'immagine.  
   
 ```  
 virtual CSize SizeToContent(BOOL bCalcOnly = FALSE);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `bCalcOnly`  
+ [in] *bCalcOnly*  
  Un parametro booleano che indica se questo metodo deve essere ridimensionato il pulsante.  
   
 ### <a name="return-value"></a>Valore restituito  
- Oggetto [CSize](../../atl-mfc-shared/reference/csize-class.md) oggetto che specifica la nuova dimensione per il pulsante.  
+ Un [CSize](../../atl-mfc-shared/reference/csize-class.md) oggetto che specifica la nuova dimensione per il pulsante.  
   
 ### <a name="remarks"></a>Note  
- Se si chiama questa funzione e `bCalcOnly` è `TRUE`, `SizeToContent` calcolerà solo le nuove dimensioni del pulsante.  
+ Se si chiama questa funzione e *bCalcOnly* viene `TRUE`, `SizeToContent` calcolerà solo le nuove dimensioni del pulsante.  
   
- Le nuove dimensioni del pulsante viene calcolata per adattare il testo del pulsante, immagine e direzione. Il framework aggiunge inoltre predefinite dei margini di 10 pixel del bordo orizzontale e di 5 pixel del bordo verticale.  
+ Le nuove dimensioni del pulsante viene calcolata per adattare il testo del pulsante, immagine e direzione. Il framework aggiunge inoltre predefinite dei margini di 10 pixel del bordo orizzontale e 5 pixel del bordo verticale.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Grafico delle gerarchie](../../mfc/hierarchy-chart.md)   

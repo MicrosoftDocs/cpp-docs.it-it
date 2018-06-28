@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 63c123e135458ff627bc6004e3299c667354ed41
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d358e256e28ea61c9b9c287429dfdfcb7b1435c6
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367143"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041831"
 ---
 # <a name="cmapwordtoob-class"></a>Classe CMapWordToOb
 Supporta mappe di puntatori `CObject` con chiave fornita da parole a 16 bit.  
@@ -61,7 +61,7 @@ class CMapWordToOb : public CObject
 ```  
   
 ## <a name="members"></a>Membri  
- Le funzioni membro di `CMapWordToOb` sono simili alle funzioni membro della classe [CMapStringToOb](../../mfc/reference/cmapstringtoob-class.md). Grazie a questa somiglianza, per le specifiche delle funzioni membro è possibile usare la documentazione di riferimento di `CMapStringToOb`. Ogni volta che un `CString` o **const** puntatore a `char` come un parametro di funzione o valore restituito, sostituire **WORD**.  
+ Le funzioni membro `CMapWordToOb` sono simili alle funzioni membro della classe [CMapStringToOb](../../mfc/reference/cmapstringtoob-class.md). Grazie a questa somiglianza, per le specifiche delle funzioni membro è possibile usare la documentazione di riferimento di `CMapStringToOb`. Ovunque sia visualizzato un `CString` o un **const** puntatore **char** come parametro della funzione o valore restituito, sostituire **WORD**.  
   
  `BOOL CMapStringToOb::Lookup( const char* <key>,`  
   
@@ -88,8 +88,8 @@ class CMapWordToOb : public CObject
 |[CMapStringToOb::GetStartPosition](../../mfc/reference/cmapstringtoob-class.md#getstartposition)|Restituisce la posizione del primo elemento.|  
 |[CMapStringToOb::HashKey](../../mfc/reference/cmapstringtoob-class.md#hashkey)|Calcola il valore hash di una chiave specificata.|  
 |[CMapStringToOb::InitHashTable](../../mfc/reference/cmapstringtoob-class.md#inithashtable)|Inizializza la tabella hash.|  
-|[CMapStringToOb::IsEmpty](../../mfc/reference/cmapstringtoob-class.md#isempty)|Verifica se la condizione mappa vuota (nessun elemento).|  
-|[CMapStringToOb::Lookup](../../mfc/reference/cmapstringtoob-class.md#lookup)|Cerca un puntatore void in base alla chiave di un puntatore void. Il valore del puntatore, non l'entità cui fa riferimento, viene utilizzato per il confronto delle chiavi.|  
+|[CMapStringToOb::IsEmpty](../../mfc/reference/cmapstringtoob-class.md#isempty)|Verifica se la condizione di mappa vuoto (alcun elemento).|  
+|[CMapStringToOb::Lookup](../../mfc/reference/cmapstringtoob-class.md#lookup)|Cerca un puntatore void in base alla chiave puntatore void. Il valore del puntatore, non l'entità cui fa riferimento, viene utilizzato per il confronto delle chiavi.|  
 |[CMapStringToOb::LookupKey](../../mfc/reference/cmapstringtoob-class.md#lookupkey)|Restituisce un riferimento alla chiave associata con il valore di chiave specificato.|  
 |[CMapStringToOb::RemoveAll](../../mfc/reference/cmapstringtoob-class.md#removeall)|Rimuove tutti gli elementi da questa mappa.|  
 |[CMapStringToOb::RemoveKey](../../mfc/reference/cmapstringtoob-class.md#removekey)|Rimuove un elemento specificato da una chiave.|  
@@ -104,11 +104,11 @@ class CMapWordToOb : public CObject
 ## <a name="remarks"></a>Note  
  `CMapWordToOb` incorpora la macro `IMPLEMENT_SERIAL` per supportare la serializzazione e il dump dei relativi elementi. Ogni elemento viene serializzato a sua volta se una mappa è archiviata in un archivio, con l'inserimento di overload ( **<<**) (operatore) o con il `Serialize` funzione membro.  
   
- Se è necessario un dump di singoli **WORD** -  `CObject` elementi, è necessario impostare la profondità del contesto di dump su 1 o versione successiva.  
+ Se è necessario un dump di singoli **WORD** -  `CObject` elementi, è necessario impostare la profondità del contesto di dump su 1 o versioni successive.  
   
- Quando un `CMapWordToOb` oggetto viene eliminato oppure quando gli elementi vengono rimossi, il `CObject` i puntatori sono stati rimossi. Gli oggetti a cui fa riferimento il `CObject` puntatori non vengono eliminati definitivamente.  
+ Quando un `CMapWordToOb` oggetto viene eliminato oppure quando gli elementi vengono rimossi, il `CObject` puntatori sono stati rimossi. Gli oggetti cui fanno riferimento il `CObject` puntatori non vengono eliminati definitivamente.  
   
- Per ulteriori informazioni su `CMapWordToOb`, vedere l'articolo [raccolte](../../mfc/collections.md).  
+ Per ulteriori informazioni sul `CMapWordToOb`, vedere l'articolo [raccolte](../../mfc/collections.md).  
   
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  [CObject](../../mfc/reference/cobject-class.md)  

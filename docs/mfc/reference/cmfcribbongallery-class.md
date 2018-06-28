@@ -88,12 +88,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: da6727c54fd3c1f4ae25f401294861a6c8909e50
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 61ab69daadcb7e030511362932be41a3919dd087
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33377862"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039323"
 ---
 # <a name="cmfcribbongallery-class"></a>Classe CMFCRibbonGallery
 Implementa raccolte della barra multifunzione di tipo Office 2007.  
@@ -118,7 +118,7 @@ class CMFCRibbonGallery : public CMFCRibbonButton
 |Nome|Descrizione|  
 |----------|-----------------|  
 |[CMFCRibbonGallery::AddGroup](#addgroup)|Aggiunge un nuovo gruppo nella raccolta.|  
-|[CMFCRibbonGallery::AddSubItem](#addsubitem)|Aggiunge una nuova voce di menu al menu a discesa.|  
+|[CMFCRibbonGallery::AddSubItem](#addsubitem)|Aggiunge una nuova voce di menu al menu di scelta menu a discesa.|  
 |[CMFCRibbonGallery::Clear](#clear)|Cancella il contenuto della raccolta.|  
 |[CMFCRibbonGallery::EnableMenuResize](#enablemenuresize)|Abilita o disabilita il ridimensionamento del pannello del menu.|  
 |[CMFCRibbonGallery::EnableMenuSideBar](#enablemenusidebar)|Abilita o disabilita la barra laterale a sinistra del menu di scelta rapida.|  
@@ -127,7 +127,7 @@ class CMFCRibbonGallery : public CMFCRibbonButton
 |[CMFCRibbonGallery::GetGroupName](#getgroupname)|Restituisce il nome del gruppo che si trova in corrispondenza dell'indice specificato.|  
 |[CMFCRibbonGallery::GetGroupOffset](#getgroupoffset)||  
 |[CMFCRibbonGallery::GetIconsInRow](#geticonsinrow)|Restituisce il numero di elementi in una riga della raccolta della barra multifunzione.|  
-|[CMFCRibbonGallery::GetItemToolTip](#getitemtooltip)|Restituisce il testo della descrizione comandi associato a un elemento nella raccolta.|  
+|[CMFCRibbonGallery::GetItemToolTip](#getitemtooltip)|Restituisce il testo della descrizione comando associato a un elemento nella raccolta.|  
 |[CMFCRibbonGallery::GetLastSelectedItem](#getlastselecteditem)|Restituisce l'indice dell'ultimo elemento nella raccolta che l'utente selezionato.|  
 |[CMFCRibbonGallery::GetPaletteID](#getpaletteid)|Restituisce l'ID di comando della raccolta corrente.|  
 |[CMFCRibbonGallery::GetRegularSize](#getregularsize)|(Esegue l'override [cmfcribbonbutton:: Getregularsize](../../mfc/reference/cmfcribbonbutton-class.md#getregularsize).)|  
@@ -145,12 +145,12 @@ class CMFCRibbonGallery : public CMFCRibbonButton
 |[CMFCRibbonGallery::RemoveItemToolTips](#removeitemtooltips)|Rimuove le descrizioni comandi da tutti gli elementi nella raccolta.|  
 |[CMFCRibbonGallery::SelectItem](#selectitem)||  
 |[CMFCRibbonGallery::SetACCData](#setaccdata)|(Esegue l'override [cmfcribbonbutton:: Setaccdata](../../mfc/reference/cmfcribbonbutton-class.md#setaccdata).)|  
-|[CMFCRibbonGallery::SetButtonMode](#setbuttonmode)|Specifica se visualizzare la raccolta della barra multifunzione come un pulsante di menu a discesa o una tavolozza direttamente sulla barra multifunzione.|  
+|[CMFCRibbonGallery::SetButtonMode](#setbuttonmode)|Specifica se visualizzare la raccolta della barra multifunzione come un pulsante di menu a discesa o come una tavolozza direttamente sulla barra multifunzione.|  
 |[CMFCRibbonGallery::SetGroupName](#setgroupname)|Imposta il nome di un gruppo.|  
 |[CMFCRibbonGallery::SetIconsInRow](#seticonsinrow)|Definisce il numero di elementi per ogni riga nella raccolta.|  
 |[CMFCRibbonGallery::SetItemToolTip](#setitemtooltip)|Imposta il testo della descrizione comando per un elemento nella raccolta.|  
 |[CMFCRibbonGallery::SetPalette](#setpalette)|Collega una tavolozza a una raccolta della barra multifunzione.|  
-|[CMFCRibbonGallery::SetPaletteID](#setpaletteid)|Definisce l'ID di comando che viene inviato il `WM_COMMAND` messaggio quando è stato selezionato un elemento della raccolta.|  
+|[CMFCRibbonGallery::SetPaletteID](#setpaletteid)|Definisce l'ID di comando che viene inviato nel messaggio WM_COMMAND quando è stato selezionato un elemento della raccolta.|  
   
 ### <a name="protected-methods"></a>Metodi protetti  
   
@@ -159,10 +159,10 @@ class CMFCRibbonGallery : public CMFCRibbonButton
 |[CMFCRibbonGallery::OnDrawPaletteIcon](#ondrawpaletteicon)|Chiamato dal framework quando viene disegnata un'icona di raccolta.|  
   
 ## <a name="remarks"></a>Note  
- Un pulsante di raccolta si comporta esattamente come un pulsante di menu regolari con la differenza che visualizza una raccolta quando viene aperto da un utente. Quando si seleziona un elemento in una raccolta, il framework invia il `WM_COMMAND` messaggio con ID di comando del pulsante. Quando si gestisce il messaggio, è necessario chiamare [CMFCRibbonGallery::GetLastSelectedItem](#getlastselecteditem) per determinare quale elemento è stato selezionato dalla raccolta.  
+ Un pulsante di raccolta si comporta come un pulsante di menu regolari ad eccezione del fatto che visualizza una raccolta quando viene aperto da un utente. Quando si seleziona un elemento in una raccolta, il framework invia il messaggio WM_COMMAND con ID di comando del pulsante. Quando si gestisce il messaggio, è necessario chiamare [CMFCRibbonGallery::GetLastSelectedItem](#getlastselecteditem) per determinare quale elemento è stato selezionato dalla raccolta.  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene illustrato come utilizzare i vari metodi nella `CMFCRibbonGallery` classe per configurare un `CMFCRibbonGallery` oggetto. Nell'esempio viene illustrato come specificare il numero di elementi per ogni riga nella raccolta, abilitare il ridimensionamento del pannello del menu, abilitare la barra laterale a sinistra del menu di scelta rapida e visualizzare raccolta della barra multifunzione come una tavolozza direttamente sulla barra multifunzione. Questo frammento di codice fa parte dell' [esempio Draw Client](../../visual-cpp-samples.md).  
+ Nell'esempio seguente viene illustrato come utilizzare i vari metodi nella `CMFCRibbonGallery` classe per configurare un `CMFCRibbonGallery` oggetto. Nell'esempio viene illustrato come specificare il numero di elementi per ogni riga nella raccolta, abilita il ridimensionamento del pannello del menu, abilitare la barra laterale a sinistra del menu a comparsa e visualizzare la raccolta della barra multifunzione come una tavolozza direttamente sulla barra multifunzione. Questo frammento di codice fa parte dell' [esempio Draw Client](../../visual-cpp-samples.md).  
   
  [!code-cpp[NVC_MFC_DrawClient#6](../../mfc/reference/codesnippet/cpp/cmfcribbongallery-class_1.cpp)]  
   
@@ -195,26 +195,26 @@ void AddGroup(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `lpszGroupName`  
+ [in] *lpszGroupName*  
  Specifica il nome del gruppo.  
   
- [in] `uiImagesPaletteResID`  
+ [in] *uiImagesPaletteResID*  
  Specifica l'ID risorsa dell'elenco immagini che contiene le immagini per il gruppo.  
   
- [in] `cxPaletteImage`  
- Specifica la larghezza in pixel di un'immagine.  
+ [in] *cxPaletteImage*  
+ Specifica la larghezza in pixel dell'immagine.  
   
- [in] `imagesGroup`  
+ [in] *imagesGroup*  
  Riferimento all'elenco di immagini che contiene le immagini di gruppo.  
   
- [in] `nIconsNum`  
+ [in] *nIconsNum*  
  Specifica il numero di icone nel gruppo. Questo parametro deve essere specificato solo per personalizzato (proprietario) gruppi.  
   
 ### <a name="remarks"></a>Note  
- Chiamando questo metodo, è possibile dividere gli elementi in una raccolta della barra multifunzione in più gruppi. Ogni gruppo può avere una didascalia.  
+ È possibile dividere gli elementi in una raccolta della barra multifunzione in più gruppi chiamando questo metodo. Ogni gruppo può avere una didascalia.  
   
 ##  <a name="addsubitem"></a>  CMFCRibbonGallery::AddSubItem  
- Aggiunge una nuova voce di menu al menu a discesa.  
+ Aggiunge una nuova voce di menu al menu di scelta menu a discesa.  
   
 ```  
 void AddSubItem(
@@ -224,22 +224,22 @@ void AddSubItem(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `pSubItem`  
- Puntatore all'elemento da aggiungere al menu.  
+ [in] *pSubItem*  
+ Puntatore all'elemento da aggiungere al menu di scelta.  
   
- [in] `nIndex`  
- Specifica l'indice in base zero di un percorso in cui inserire l'elemento.  
+ [in] *nIndex*  
+ Specifica l'indice in base zero di una posizione in cui inserire l'elemento.  
   
- [in] `bOnTop`  
+ [in] *bOnTop*  
  `TRUE` Per specificare che l'elemento deve essere inserito prima raccolta della barra multifunzione; in caso contrario, `FALSE`.  
   
 ### <a name="remarks"></a>Note  
- È possibile combinare raccolte popup con le voci di menu popup chiamando questo metodo. Voci di menu possono trovarsi prima o dopo la raccolta.  
+ È possibile combinare raccolte popup con voci di menu popup chiamando questo metodo. Voci di menu possono trovarsi prima o dopo la raccolta.  
   
- Per inserire l'elemento precedente della raccolta, impostare `bOnTop` a `TRUE`. Impostare `bOnTop` a `FALSE` inserire l'elemento di sotto della raccolta.  
+ Per inserire l'elemento precedente della raccolta, impostare *bOnTop* a `TRUE`. Impostare *bOnTop* a `FALSE` inserire l'elemento di sotto della raccolta.  
   
 > [!NOTE]
->  Il parametro `nIndex` specifica l'indice di inserimento all'inizio della raccolta e nella parte inferiore della raccolta. Ad esempio, se è necessario inserire un elemento di una posizione prima della raccolta, impostare `nIndex` su 1 e `bOnTop` a `TRUE`. Analogamente, se è necessario inserire un elemento di una posizione di sotto della raccolta, impostare `nIndex` su 1 e `bOnTop` a `FALSE`.  
+>  Il parametro *nIndex* specifica l'indice di inserimento all'inizio della raccolta e nella parte inferiore della raccolta. Ad esempio, se è necessario inserire un elemento di una posizione prima della raccolta, impostare *nIndex* su 1 e *bOnTop* a `TRUE`. Analogamente, se è necessario inserire un elemento di una posizione di sotto della raccolta, impostare *nIndex* su 1 e *bOnTop* a `FALSE`.  
   
 ##  <a name="clear"></a>  CMFCRibbonGallery::Clear  
  Cancella il contenuto della raccolta.  
@@ -283,35 +283,35 @@ CMFCRibbonGallery (
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `nID`  
- Specifica l'ID di comando da eseguire quando un utente fa clic sul pulsante di comando.  
+ *nID*  
+ Specifica l'ID di comando del comando da eseguire quando un utente fa clic sul pulsante.  
   
- `lpszText`  
+ *lpszText*  
  Specifica il testo da visualizzare sul pulsante.  
   
- `nSmallImageIndex`  
+ *nSmallImageIndex*  
  Indice in base zero dell'immagine piccola da visualizzare sul pulsante.  
   
- `nLargeImageIndex`  
- Indice in base zero dell'immagine da visualizzare sul pulsante di grandi dimensioni.  
+ *nLargeImageIndex*  
+ Indice in base zero dell'immagine di grandi dimensioni da visualizzare sul pulsante.  
   
- `imagesPalette`  
- Un riferimento di [CMFCToolBarImages](../../mfc/reference/cmfctoolbarimages-class.md) oggetto che contiene le immagini da visualizzare nella raccolta.  
+ *imagesPalette*  
+ Un riferimento per il [CMFCToolBarImages](../../mfc/reference/cmfctoolbarimages-class.md) oggetto che contiene le immagini da visualizzare nella raccolta.  
   
- `uiImagesPaletteResID`  
+ *uiImagesPaletteResID*  
  L'ID risorsa dell'elenco di immagini da visualizzare nella raccolta.  
   
- `cxPaletteImage`  
- Specifica la larghezza, in pixel, dell'immagine della raccolta.  
+ *cxPaletteImage*  
+ Specifica la larghezza, in pixel, dell'immagine nella raccolta.  
   
- `sizeIcon`  
+ *sizeIcon*  
  Specifica le dimensioni, in pixel, dell'immagine della raccolta.  
   
- `nIconsNum`  
+ *nIconsNum*  
  Specifica il numero di icone nella raccolta.  
   
- `bDefaultButtonStyle`  
- Specifica se utilizzare il valore predefinito o lo stile del pulsante creato dal proprietario.  
+ *bDefaultButtonStyle*  
+ Specifica se utilizzare il valore predefinito o lo stile del pulsante disegnato dal proprietario.  
   
 ### <a name="remarks"></a>Note  
   
@@ -325,14 +325,14 @@ void EnableMenuResize(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `bEnable`  
+ [in] *bAttivare il*  
  `TRUE` Per abilitare il ridimensionamento di menu. in caso contrario, `FALSE`.  
   
- [in] `bVertcalOnly`  
+ [in] *bVertcalOnly*  
  `TRUE` Per specificare che la raccolta è possibile ridimensionare solo verticalmente; `FALSE` per specificare che la raccolta può essere ridimensionato sia verticalmente e orizzontalmente.  
   
 ### <a name="remarks"></a>Note  
- Utilizzare questo metodo per abilitare o disabilitare il ridimensionamento di raccolta della barra multifunzione. Quando è abilitato il ridimensionamento, la raccolta della barra multifunzione Visualizza gripper che un utente può utilizzare per ridimensionarlo.  
+ Utilizzare questo metodo per abilitare o disabilitare il ridimensionamento di raccolta della barra multifunzione. Quando è abilitato il ridimensionamento, raccolta della barra multifunzione Visualizza un gripper che un utente può utilizzare per ridimensionarlo.  
   
 ##  <a name="enablemenusidebar"></a>  CMFCRibbonGallery::EnableMenuSideBar  
  Abilita o disabilita la barra laterale a sinistra del menu di scelta rapida.  
@@ -342,7 +342,7 @@ void EnablMenuSideBar(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `bEnable`  
+ [in] *bAttivare il*  
  `TRUE` Per specificare che la barra laterale è abilitata; in caso contrario, `FALSE`.  
   
 ### <a name="remarks"></a>Note  
@@ -356,7 +356,7 @@ virtual CSize GetCompactSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `pDC`  
+ [in] *pDC*  
   
 ### <a name="return-value"></a>Valore restituito  
   
@@ -381,11 +381,11 @@ LPCTSTR GetGroupName(int nGroupIndex) const;
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `nGroupIndex`  
- Specifica l'indice in base zero per il gruppo, il cui nome si desidera recuperare.  
+ [in] *nGroupIndex*  
+ Specifica l'indice in base zero per il gruppo cui nome si desidera recuperare.  
   
 ### <a name="return-value"></a>Valore restituito  
- Il nome del gruppo in corrispondenza dell'indice specificato. Passando un indice non valido, genererà un'asserzione non riuscita.  
+ Il nome del gruppo che si trova in corrispondenza dell'indice specificato. Passaggio di un indice non valido comporterà un'asserzione non riuscita.  
   
 ### <a name="remarks"></a>Note  
   
@@ -413,18 +413,18 @@ int GetIconsInRow() const;
 ### <a name="remarks"></a>Note  
   
 ##  <a name="getitemtooltip"></a>  CMFCRibbonGallery::GetItemToolTip  
- Restituisce il testo della descrizione comandi associato a un elemento nella raccolta.  
+ Restituisce il testo della descrizione comando associato a un elemento nella raccolta.  
   
 ```  
 LPCTSTR GetItemToolTip(int nItemIndex) const;  
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `nItemIndex`  
+ [in] *nItemIndex*  
  Specifica l'indice in base zero dell'elemento per cui recuperare il testo della descrizione comando.  
   
 ### <a name="return-value"></a>Valore restituito  
- Puntatore alla stringa di descrizione comando assegnato a un elemento nella raccolta della barra multifunzione. Può essere `NULL` se nessuna descrizione comandi viene assegnata a tale elemento.  
+ Puntatore alla stringa di descrizione comando assegnato a un elemento nella raccolta della barra multifunzione. Può essere `NULL` se nessuna descrizione comandi viene assegnata a quell'elemento.  
   
 ### <a name="remarks"></a>Note  
   
@@ -436,16 +436,16 @@ static int GetLastSelectedItem(UINT uiCmdID);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `uiCmdID`  
- Specifica l'ID di comando della voce di menu che ha aperto la raccolta della barra multifunzione.  
+ [in] *uiCmdID*  
+ Specifica l'ID di comando della voce di menu che aperto raccolta della barra multifunzione.  
   
 ### <a name="return-value"></a>Valore restituito  
- Quando l'utente seleziona un elemento nella raccolta della barra multifunzione, la libreria invia il `WM_COMMAND` messaggio insieme all'ID di comando del pulsante di menu che ha aperto la raccolta della barra multifunzione.  
+ Quando l'utente seleziona un elemento nella raccolta della barra multifunzione, la libreria invia il messaggio WM_COMMAND insieme all'ID di comando del pulsante di menu che aperto raccolta della barra multifunzione.  
   
 ### <a name="remarks"></a>Note  
   
 ##  <a name="getpaletteid"></a>  CMFCRibbonGallery::GetPaletteID  
- Restituisce l'ID di comando della tavolozza corrente.  
+ Restituisce l'ID di comando del riquadro corrente.  
   
 ```  
 int GetPaletteID() const;  
@@ -464,7 +464,7 @@ virtual CSize GetRegularSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `pDC`  
+ [in] *pDC*  
   
 ### <a name="return-value"></a>Valore restituito  
   
@@ -547,7 +547,7 @@ virtual void OnAfterChangeRect(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `pDC`  
+ [in] *pDC*  
   
 ### <a name="remarks"></a>Note  
   
@@ -559,7 +559,7 @@ virtual void OnDraw(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `pDC`  
+ [in] *pDC*  
   
 ### <a name="remarks"></a>Note  
   
@@ -576,20 +576,20 @@ virtual void OnDrawPaletteIcon(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `pDC`  
- Puntatore al contesto di dispositivo utilizzato per il disegno.  
+ [in] *pDC*  
+ Puntatore al contesto di dispositivo che viene utilizzato per il disegno.  
   
- [in] `rectIcon`  
+ [in] *rectIcon*  
  Specifica il rettangolo di delimitazione dell'icona da disegnare.  
   
- [in] `nIconIndex`  
+ [in] *nIconIndex*  
  Specifica l'indice in base zero nell'elenco delle immagini delle icone di raccolta dell'icona da disegnare.  
   
- [in] `pIcon`  
+ [in] *pIcon*  
  Un puntatore per l'icona da disegnare.  
   
- [in] `clrText`  
- Specifica il colore del testo dell'elemento da disegnare.  
+ [in] *clrText*  
+ Specifica il colore per il testo dell'elemento da disegnare.  
   
 ### <a name="remarks"></a>Note  
  È possibile eseguire l'override di questo metodo in una classe derivata per personalizzare l'aspetto di una raccolta della barra multifunzione.  
@@ -602,7 +602,7 @@ virtual void OnEnable(BOOL bEnable);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `bEnable`  
+ [in] *bAttivare il*  
   
 ### <a name="remarks"></a>Note  
   
@@ -614,7 +614,7 @@ virtual void OnRTLChanged(BOOL bIsRTL);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `bIsRTL`  
+ [in] *bIsRTL*  
   
 ### <a name="remarks"></a>Note  
   
@@ -626,7 +626,7 @@ void RedrawIcons();
 ```  
   
 ### <a name="remarks"></a>Note  
- Chiamare questa funzione per ridisegnare la raccolta. Se è stato modificato il contenuto della raccolta in fase di esecuzione, è necessario chiamare questo metodo.  
+ Chiamare questa funzione per ridisegnare la raccolta. È necessario chiamare questo metodo se è stato modificato il contenuto della raccolta in fase di esecuzione.  
   
 ##  <a name="removeitemtooltips"></a>  CMFCRibbonGallery::RemoveItemToolTips  
  Rimuove le descrizioni comandi da tutti gli elementi nella raccolta.  
@@ -645,7 +645,7 @@ void SelectItem(int nItemIndex);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `nItemIndex`  
+ [in] *nItemIndex*  
   
 ### <a name="remarks"></a>Note  
   
@@ -659,10 +659,10 @@ virtual BOOL SetACCData(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `pParent`  
+ [in] *pParent*  
  Finestra padre della finestra della raccolta della barra multifunzione.  
   
- [out] `data`  
+ [out] *dati*  
  Oggetto `CAccessibilityData` che riceve i dati di accessibilità dalla raccolta della barra multifunzione.  
   
 ### <a name="return-value"></a>Valore restituito  
@@ -671,14 +671,14 @@ virtual BOOL SetACCData(
  `TRUE` Se il metodo ha esito positivo; in caso contrario, `FALSE`.  
   
 ##  <a name="setbuttonmode"></a>  CMFCRibbonGallery::SetButtonMode  
- Determina se visualizzare la raccolta della barra multifunzione come un pulsante di menu a discesa o una tavolozza direttamente sulla barra multifunzione.  
+ Determina se visualizzare la raccolta della barra multifunzione come un pulsante di menu a discesa o come una tavolozza direttamente sulla barra multifunzione.  
   
 ```  
 void SetButtonMode(BOOL bSet=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `bSet`  
+ [in] *bSet*  
  `TRUE` Per visualizzare la raccolta della barra multifunzione come un pulsante di menu a discesa. `FALSE` per visualizzare il contenuto della raccolta della barra multifunzione direttamente sulla barra multifunzione.  
   
 ### <a name="remarks"></a>Note  
@@ -693,14 +693,14 @@ void SetGroupName(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `nGroupIndex`  
- Specifica l'indice in base zero per il gruppo per cui il nome viene modificato.  
+ [in] *nGroupIndex*  
+ Specifica l'indice in base zero per il gruppo per cui viene modificato il nome.  
   
- [in] `lpszGroupName`  
+ [in] *lpszGroupName*  
  Specifica il nuovo nome per il gruppo.  
   
 ### <a name="remarks"></a>Note  
- Il gruppo viene modificato il cui nome è necessario sono stati aggiunti mediante la [CMFCRibbonGallery::AddGroup](#addgroup) metodo.  
+ Il gruppo viene modificato il cui nome è necessario sono stati aggiunti mediante il [CMFCRibbonGallery::AddGroup](#addgroup) metodo.  
   
 ##  <a name="seticonsinrow"></a>  CMFCRibbonGallery::SetIconsInRow  
  Specifica il numero di elementi per ogni riga nella raccolta.  
@@ -710,7 +710,7 @@ void SetIconsInRow(int nIconsInRow);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `nIconsInRow`  
+ [in] *nIconsInRow*  
  Specifica il numero di elementi da visualizzare in ogni riga della raccolta.  
   
 ### <a name="remarks"></a>Note  
@@ -726,10 +726,10 @@ void SetItemToolTip(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `nItemIndex`  
- Indice in base zero dell'elemento a cui associare la descrizione comando tavolozza.  
+ [in] *nItemIndex*  
+ Indice in base zero dell'elemento tavolozza a cui associare la descrizione comando.  
   
- [in] `lpszToolTip`  
+ [in] *lpszToolTip*  
  Testo da visualizzare sul componente tooltip.  
   
 ### <a name="remarks"></a>Note  
@@ -747,27 +747,27 @@ void SetPalette(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `imagesPalette`  
+ [in] *imagesPalette*  
  Specifica l'elenco di immagini che contiene le icone da visualizzare nella raccolta.  
   
- [in] `uiImagesPaletteResID`  
- Specifica l'ID risorsa dell'elenco che contiene le icone da visualizzare nella raccolta di immagini.  
+ [in] *uiImagesPaletteResID*  
+ Specifica l'ID risorsa dell'elenco immagini che contiene le icone da visualizzare nella raccolta.  
   
- [in] `cxPaletteImage`  
+ [in] *cxPaletteImage*  
  Specifica la larghezza, in pixel, di un'immagine della raccolta.  
   
 ### <a name="remarks"></a>Note  
   
 ##  <a name="setpaletteid"></a>  CMFCRibbonGallery::SetPaletteID  
- Definisce l'ID di comando che viene inviato il **WM_COMMAND** messaggio quando un utente seleziona un elemento della raccolta.  
+ Definisce l'ID di comando che viene inviato nel messaggio WM_COMMAND quando un utente seleziona un elemento della raccolta.  
   
 ```  
 void SetPaletteID(UINT nID);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `nID`  
- Specifica l'ID di comando che viene inviato il **WM_COMMAND** messaggio quando un utente seleziona un elemento della raccolta.  
+ [in] *nID*  
+ Specifica l'ID di comando che viene inviato nel messaggio WM_COMMAND quando un utente seleziona un elemento della raccolta.  
   
 ### <a name="remarks"></a>Note  
  Per determinare l'elemento specifico che un utente ha selezionato dalla raccolta, chiamare il [CMFCRibbonGallery::GetLastSelectedItem](#getlastselecteditem) metodo statico.  

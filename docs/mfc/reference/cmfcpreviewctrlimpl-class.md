@@ -46,15 +46,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bb1ef84aabed69554ded868bbe9092c3e8b7082f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a94ad813ff72eaed2642e9c78a098b999bf128fa
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370412"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040077"
 ---
 # <a name="cmfcpreviewctrlimpl-class"></a>Classe CMFCPreviewCtrlImpl
-Questa classe implementa una finestra che viene inserita in una finestra host fornita dalla Shell per l'anteprima avanzata.  
+Questa classe implementa una finestra collocata in una finestra host fornita dalla Shell per l'anteprima avanzata.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -80,7 +80,7 @@ class CMFCPreviewCtrlImpl : public CWnd;
 |[CMFCPreviewCtrlImpl::Focus](#focus)|Imposta lo stato attivo al controllo di input.|  
 |[CMFCPreviewCtrlImpl::GetDocument](#getdocument)|Restituisce un documento collegato a questo controllo di anteprima.|  
 |[CMFCPreviewCtrlImpl::Redraw](#redraw)|Indica il ridisegno del controllo.|  
-|[CMFCPreviewCtrlImpl::SetDocument](#setdocument)|Chiamato dal gestore di anteprima per creare una relazione tra l'implementazione di documento e il controllo di anteprima.|  
+|[CMFCPreviewCtrlImpl::SetDocument](#setdocument)|Chiamato dal gestore di anteprima per creare una relazione tra l'implementazione del documento e il controllo di anteprima.|  
 |[CMFCPreviewCtrlImpl::SetHost](#sethost)|Imposta un nuovo elemento padre per questo controllo.|  
 |[CMFCPreviewCtrlImpl::SetPreviewVisuals](#setpreviewvisuals)|Chiamato da un gestore di anteprima avanzata quando è necessario impostare gli elementi visivi di un'anteprima dettagliata del contenuto.|  
 |[CMFCPreviewCtrlImpl::SetRect](#setrect)|Imposta un nuovo rettangolo di delimitazione per questo controllo.|  
@@ -136,13 +136,13 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `hWndParent`  
+ *hWndParent*  
  Un handle alla finestra host fornita dalla Shell per l'anteprima avanzata.  
   
- `prc`  
+ *Repubblica popolare cinese*  
  Specifica le dimensioni iniziali e la posizione della finestra.  
   
- `pContext`  
+ *pContext*  
  Un puntatore a un contesto di creazione.  
   
 ### <a name="return-value"></a>Valore restituito  
@@ -169,7 +169,7 @@ virtual void DoPaint(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `pDC`  
+ *pDC*  
  Puntatore a un contesto di dispositivo per il disegno.  
 
 
@@ -191,7 +191,7 @@ ATL::IDocument* GetDocument();
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- Puntatore a un documento, il cui contenuto viene visualizzato in anteprima nel controllo.
+ Un puntatore a un documento, il cui contenuto viene visualizzato in anteprima nel controllo.
 
 ## <a name="m_clrbackcolor"></a> CMFCPreviewCtrlImpl::m_clrBackColor  
 Colore di sfondo della finestra di anteprima.  
@@ -235,7 +235,7 @@ Indica il ridisegno del controllo.
 virtual void Redraw();  
 ```  
 ## <a name="setdocument"></a> CMFCPreviewCtrlImpl::SetDocument 
-Chiamato dal gestore di anteprima per creare una relazione tra l'implementazione di documento e il controllo di anteprima.  
+Chiamato dal gestore di anteprima per creare una relazione tra l'implementazione del documento e il controllo di anteprima.  
   
 ### <a name="syntax"></a>Sintassi  
   
@@ -246,7 +246,7 @@ void SetDocument(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `pDocument`  
+ *pDocument*  
  Un puntatore all'implementazione del documento.  
 
 ## <a name="sethost"></a> CMFCPreviewCtrlImpl::SetHost  
@@ -261,8 +261,8 @@ virtual void SetHost(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `hWndParent`  
- Un handle a una nuova finestra padre.  
+ *hWndParent*  
+ Handle per la nuova finestra padre.  
 
 ## <a name="setpreviewvisuals"></a> CMFCPreviewCtrlImpl::SetPreviewVisuals  
 Chiamato da un gestore di anteprima avanzata quando è necessario impostare gli elementi visivi di un'anteprima dettagliata del contenuto.  
@@ -278,13 +278,13 @@ virtual void SetPreviewVisuals(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `clrBack`  
+ *clrBack*  
  Colore di sfondo della finestra di anteprima.  
   
- `clrText`  
+ *clrText*  
  Colore del testo della finestra di anteprima.  
   
- `plf`  
+ *plf*  
  Tipo di carattere utilizzato per visualizzare il testo nella finestra di anteprima. 
 
 ##  <a name="setrect"></a> CMFCPreviewCtrlImpl::SetRect  
@@ -300,10 +300,10 @@ virtual void SetRect(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `prc`  
+ *Repubblica popolare cinese*  
  Specifica le nuove dimensioni e posizione del controllo di anteprima.  
   
- `bRedraw`  
+ *bRedraw*  
  Specifica se il controllo deve essere ridisegnato.  
   
 ### <a name="remarks"></a>Note  

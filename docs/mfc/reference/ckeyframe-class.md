@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9a9e9ff3d6e3e4bcccf8e9ebd46f791f60f1cc37
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 56fa354a46e40704ac063791931ca01d1386a558
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367185"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038458"
 ---
 # <a name="ckeyframe-class"></a>Classe CKeyFrame
 Rappresenta un fotogramma chiave di animazione.  
@@ -66,21 +66,21 @@ class CKeyFrame : public CBaseKeyFrame;
 |----------|-----------------|  
 |[CKeyFrame::AddToStoryboard](#addtostoryboard)|Aggiunge un fotogramma chiave di uno storyboard. (Esegue l'override [CBaseKeyFrame:: AddToStoryboard](../../mfc/reference/cbasekeyframe-class.md#addtostoryboard).)|  
 |[CKeyFrame::AddToStoryboardAfterTransition](#addtostoryboardaftertransition)|Aggiunge un fotogramma chiave nello storyboard dopo la transizione.|  
-|[CKeyFrame::AddToStoryboardAtOffset](#addtostoryboardatoffset)|Aggiunge un fotogramma chiave allo storyboard all'offset.|  
+|[CKeyFrame::AddToStoryboardAtOffset](#addtostoryboardatoffset)|Aggiunge un fotogramma chiave nello storyboard in corrispondenza dell'offset.|  
 |[CKeyFrame::GetExistingKeyframe](#getexistingkeyframe)|Restituisce un puntatore a un fotogramma chiave che dipende da questo fotogramma chiave.|  
 |[CKeyFrame::GetOffset](#getoffset)|Restituisce un offset da altro fotogramma chiave.|  
-|[CKeyFrame::GetTransition](#gettransition)|Restituisce un puntatore a una transizione di che questo fotogramma chiave dipende.|  
+|[CKeyFrame::GetTransition](#gettransition)|Restituisce un puntatore a una transizione che dipende da questo fotogramma chiave.|  
   
 ### <a name="protected-data-members"></a>Membri dati protetti  
   
 |nome|Descrizione|  
 |----------|-----------------|  
 |[CKeyFrame::m_offset](#m_offset)|Specifica l'offset di questo fotogramma chiave da un fotogramma chiave archiviato in m_pExistingKeyFrame.|  
-|[CKeyFrame::m_pExistingKeyFrame](#m_pexistingkeyframe)|Archivia un puntatore a un fotogramma chiave esistente. Per creare uno storyboard con m_offset al fotogramma chiave esistente, viene aggiunto questo fotogramma chiave.|  
+|[CKeyFrame::m_pExistingKeyFrame](#m_pexistingkeyframe)|Archivia un puntatore a un fotogramma chiave esistente. Viene aggiunto questo fotogramma chiave in uno storyboard con m_offset al fotogramma chiave esistente.|  
 |[CKeyFrame::m_pTransition](#m_ptransition)|Archivia un puntatore a una transizione che inizia in corrispondenza di questo fotogramma chiave.|  
   
 ## <a name="remarks"></a>Note  
- Questa classe implementa un fotogramma chiave di animazione. Un fotogramma chiave rappresenta un istante nel tempo all'interno di uno storyboard e può essere usato per specificare l'ora di inizio e fine delle transizioni. Un fotogramma chiave può essere basato su altri fotogrammi chiave hanno offset (in secondi), o può essere basato su una transizione e rappresenta un momento in cui termina questa transizione.  
+ Questa classe implementa un fotogramma chiave di animazione. Un fotogramma chiave rappresenta un istante nel tempo all'interno di uno storyboard e può essere usato per specificare l'ora di inizio e fine delle transizioni. Un fotogramma chiave può essere basato su altri fotogrammi chiave hanno offset (in secondi) da quest'ultimo, o può essere basato su una transizione e rappresenta un momento in cui termina questa transizione.  
   
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -102,14 +102,14 @@ virtual BOOL AddToStoryboard(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `pStoryboard`  
+ *pStoryboard*  
  Puntatore a uno storyboard.  
   
- `bDeepAdd`  
+ *bDeepAdd è impostato su*  
  Specifica se aggiungere fotogrammi chiave o una transizione in modo ricorsivo.  
   
 ### <a name="return-value"></a>Valore restituito  
- TRUE se il fotogramma chiave è stato aggiunto correttamente.  
+ TRUE se è stato aggiunto correttamente fotogramma chiave.  
   
 ### <a name="remarks"></a>Note  
  Questo metodo aggiunge un fotogramma chiave allo storyboard. Se dipende altri fotogrammi chiave o una transizione e bDeepAdd è impostato su TRUE, questo metodo tenta di aggiungerli in modo ricorsivo.  
@@ -124,20 +124,20 @@ BOOL AddToStoryboardAfterTransition(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `pStoryboard`  
+ *pStoryboard*  
  Puntatore a uno storyboard.  
   
- `bDeepAdd`  
- Se si desidera aggiungere in modo ricorsivo una transizione specifica.  
+ *bDeepAdd è impostato su*  
+ Specifica se aggiungere in modo ricorsivo una transizione.  
   
 ### <a name="return-value"></a>Valore restituito  
- TRUE se il fotogramma chiave è stato aggiunto correttamente.  
+ TRUE se è stato aggiunto correttamente fotogramma chiave.  
   
 ### <a name="remarks"></a>Note  
  Questa funzione viene chiamata dal framework per aggiungere un fotogramma chiave nello storyboard dopo la transizione.  
   
 ##  <a name="addtostoryboardatoffset"></a>  CKeyFrame::AddToStoryboardAtOffset  
- Aggiunge un fotogramma chiave allo storyboard all'offset.  
+ Aggiunge un fotogramma chiave nello storyboard in corrispondenza dell'offset.  
   
 ```  
 virtual BOOL AddToStoryboardAtOffset(
@@ -146,17 +146,17 @@ virtual BOOL AddToStoryboardAtOffset(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `pStoryboard`  
+ *pStoryboard*  
  Puntatore a uno storyboard.  
   
- `bDeepAdd`  
+ *bDeepAdd è impostato su*  
  Specifica se aggiungere un fotogramma chiave di questo fotogramma chiave dipende da in modo ricorsivo.  
   
 ### <a name="return-value"></a>Valore restituito  
- TRUE se il fotogramma chiave è stato aggiunto correttamente.  
+ TRUE se è stato aggiunto correttamente fotogramma chiave.  
   
 ### <a name="remarks"></a>Note  
- Questa funzione viene chiamata dal framework per aggiungere un fotogramma chiave allo storyboard all'offset.  
+ Questa funzione viene chiamata dal framework per aggiungere un fotogramma chiave nello storyboard in corrispondenza dell'offset.  
   
 ##  <a name="ckeyframe"></a>  CKeyFrame::CKeyFrame  
  Costruisce un fotogramma chiave che dipende da una transizione.  
@@ -171,14 +171,14 @@ CKeyFrame(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `pTransition`  
+ *pTransition*  
  Un puntatore a una transizione.  
   
- `pKeyframe`  
- Puntatore al fotogramma chiave.  
+ *pKeyframe*  
+ Un puntatore al fotogramma chiave.  
   
- `offset`  
- Offset, in secondi, da un fotogramma chiave specificato da pKeyframe.  
+ *offset*  
+ Offset, in secondi dal fotogramma chiave specificato da pKeyframe.  
   
 ### <a name="remarks"></a>Note  
  Al termine della transizione specificata, il fotogramma chiave costruito rappresenterà un momento specifico all'interno di uno storyboard.  
@@ -204,13 +204,13 @@ UI_ANIMATION_SECONDS GetOffset();
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- Offset in secondi da altro fotogramma chiave.  
+ Un offset espresso in secondi da altro fotogramma chiave.  
   
 ### <a name="remarks"></a>Note  
  Questo metodo deve essere chiamato per determinare un offset espresso in secondi da altro fotogramma chiave.  
   
 ##  <a name="gettransition"></a>  CKeyFrame::GetTransition  
- Restituisce un puntatore a una transizione di che questo fotogramma chiave dipende.  
+ Restituisce un puntatore a una transizione che dipende da questo fotogramma chiave.  
   
 ```  
 CBaseTransition* GetTransition();
@@ -220,7 +220,7 @@ CBaseTransition* GetTransition();
  Un puntatore valido a una transizione o NULL se questo fotogramma chiave dipende transizione.  
   
 ### <a name="remarks"></a>Note  
- Si tratta di una funzione di accesso a una transizione di che questo fotogramma chiave dipende.  
+ Si tratta di una funzione di accesso a una transizione che dipende da questo fotogramma chiave.  
   
 ##  <a name="m_offset"></a>  CKeyFrame::m_offset  
  Specifica l'offset di questo fotogramma chiave da un fotogramma chiave archiviato in m_pExistingKeyFrame.  
@@ -230,7 +230,7 @@ UI_ANIMATION_SECONDS m_offset;
 ```  
   
 ##  <a name="m_pexistingkeyframe"></a>  CKeyFrame::m_pExistingKeyFrame  
- Archivia un puntatore a un fotogramma chiave esistente. Per creare uno storyboard con m_offset al fotogramma chiave esistente, viene aggiunto questo fotogramma chiave.  
+ Archivia un puntatore a un fotogramma chiave esistente. Viene aggiunto questo fotogramma chiave in uno storyboard con m_offset al fotogramma chiave esistente.  
   
 ```  
 CBaseKeyFrame* m_pExistingKeyFrame;  

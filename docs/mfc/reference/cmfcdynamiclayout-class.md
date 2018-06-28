@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 76faab221b5e36f9795595d07cd13d0bbf1df200
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d89f82f03a4c6a9faf2ddf3e8c3f2a0b7b3fd1d2
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370721"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042365"
 ---
 # <a name="cmfcdynamiclayout-class"></a>Classe CMFCDynamicLayout
 Specifica come i controlli in una finestra vengono spostati e ridimensionati quando l'utente ridimensiona la finestra.  
@@ -63,15 +63,15 @@ class CMFCDynamicLayout : public CObject
 |[Cmfcdynamiclayout:: Hasitem](#hasitem)|Controlla se al layout dinamico è stato aggiunto un controllo figlio.|  
 |[Cmfcdynamiclayout:: IsEmpty](#isempty)|Controlla se un layout dinamico non dispone di finestre figlio aggiuntive.|  
 |[CMFCDynamicLayout::LoadResource](#loadresource)|Legge il layout dinamico dalla risorsa AFX_DIALOG_LAYOUT e quindi applica il layout alla finestra host.|  
-|statico [Movehorizontal](#movehorizontal)|Ottiene un [MoveSettings](#movesettings_structure) valore che definisce la quantità di un controllo figlio viene spostato in senso orizzontale quando l'utente ridimensiona la finestra di hosting.|  
-|statico [Movehorizontalandvertical](#movehorizontalandvertical)|Ottiene un [MoveSettings](#movesettings_structure) valore che definisce la quantità di un controllo figlio viene spostato in senso orizzontale quando l'utente ridimensiona la finestra di hosting.|  
-|statico [Movenone](#movenone)|Ottiene un [MoveSettings](#movesettings_structure) valore che non rappresenta di movimento, orizzontale o verticale, per un controllo figlio.|  
-|statico [Movevertical](#movevertical)|Ottiene un [MoveSettings](#movesettings_structure) valore che definisce la quantità di un controllo figlio viene spostato in senso verticale quando l'utente ridimensiona la finestra di hosting.|  
+|statico [Movehorizontal](#movehorizontal)|Ottiene un [MoveSettings](#movesettings_structure) valore che definisce come un controllo figlio viene spostato in senso orizzontale quando l'utente ridimensiona la finestra di hosting.|  
+|statico [Movehorizontalandvertical](#movehorizontalandvertical)|Ottiene un [MoveSettings](#movesettings_structure) valore che definisce come un controllo figlio viene spostato in senso orizzontale quando l'utente ridimensiona la finestra di hosting.|  
+|statico [Movenone](#movenone)|Ottiene un [MoveSettings](#movesettings_structure) valore che non rappresenta Nessun movimento, orizzontale o verticale, per un controllo figlio.|  
+|statico [Movevertical](#movevertical)|Ottiene un [MoveSettings](#movesettings_structure) valore che definisce come un controllo figlio viene spostato in senso verticale quando l'utente ridimensiona la finestra di hosting.|  
 |[CMFCDynamicLayout::SetMinSize](#setminsize)|Imposta le dimensioni finestra al di sotto delle quali il layout non verrà regolato.|  
-|statico [Sizehorizontal](#sizehorizontal)|Ottiene un [SizeSettings](#sizesettings_structure) valore che definisce la quantità di un controllo figlio viene ridimensionato in senso orizzontale quando l'utente ridimensiona la finestra di hosting.|  
-|statico [Sizehorizontalandvertical](#sizehorizontalandvertical)|Ottiene un [SizeSettings](#sizesettings_structure) valore che definisce la quantità di un controllo figlio viene ridimensionato in senso orizzontale quando l'utente ridimensiona la finestra di hosting.|  
+|statico [Sizehorizontal](#sizehorizontal)|Ottiene un [SizeSettings](#sizesettings_structure) valore che definisce come un controllo figlio viene ridimensionato in senso orizzontale quando l'utente ridimensiona la finestra di hosting.|  
+|statico [Sizehorizontalandvertical](#sizehorizontalandvertical)|Ottiene un [SizeSettings](#sizesettings_structure) valore che definisce come un controllo figlio viene ridimensionato in senso orizzontale quando l'utente ridimensiona la finestra di hosting.|  
 |statico [Sizenone](#sizenone)|Ottiene un [SizeSettings](#sizesettings_structure) valore che non rappresenta alcuna modifica nelle dimensioni di un controllo figlio.|  
-|statico [Sizevertical](#sizevertical)|Ottiene un [SizeSettings](#sizesettings_structure) valore che definisce la quantità di un controllo figlio viene ridimensionato in senso verticale quando l'utente ridimensiona la finestra di hosting.|  
+|statico [Sizevertical](#sizevertical)|Ottiene un [SizeSettings](#sizesettings_structure) valore che definisce come un controllo figlio viene ridimensionato in senso verticale quando l'utente ridimensiona la finestra di hosting.|  
   
 ## <a name="nested-types"></a>Tipi annidati  
   
@@ -105,16 +105,16 @@ BOOL AddItem(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `hwnd`  
+ *HWND*  
  Handle per la finestra da aggiungere.  
   
- `nID`  
+ *nID*  
  ID del controllo figlio da aggiungere.  
   
- `moveSettings`  
+ *moveSettings*  
  Struttura che descrive le modalità di spostamento del controllo al variare delle dimensioni della finestra.  
   
- `sizeSettings`  
+ *sizeSettings*  
  Struttura che descrive le modalità di ridimensionamento del controllo al variare delle dimensioni della finestra.  
   
 ### <a name="return-value"></a>Valore restituito  
@@ -141,7 +141,7 @@ BOOL Create(CWnd* pHostWnd);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- pHostWnd  
+ *pHostWnd*  
  Puntatore alla finestra host.  
   
 ### <a name="return-value"></a>Valore restituito  
@@ -183,7 +183,7 @@ void GetHostWndRect(CRect& rect,);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `rect`  
+ *Rect*  
  Dopo che viene restituita la funzione, questo parametro contiene il rettangolo delimitatore dell'area del layout. Questo è un parametro out; il valore di input viene sovrascritto.  
   
 ### <a name="remarks"></a>Note  
@@ -196,7 +196,7 @@ BOOL HasItem(HWND hwnd);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `hwnd`  
+ *HWND*  
  Handle della finestra per il controllo.  
   
 ### <a name="return-value"></a>Valore restituito  
@@ -226,13 +226,13 @@ static BOOL LoadResource(CWnd* pHostWnd,
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `pHostWnd`  
+ *pHostWnd*  
  Puntatore alla finestra host.  
   
- `lpResource`  
+ *lpResource*  
  Puntatore al buffer che contiene la risorsa AFX_DIALOG_LAYOUT.  
   
- `dwSize`  
+ *dwSize diverso da*  
  Dimensioni del buffer, in byte.  
   
 ### <a name="return-value"></a>Valore restituito  
@@ -241,49 +241,49 @@ static BOOL LoadResource(CWnd* pHostWnd,
 ### <a name="remarks"></a>Note  
   
 ##  <a name="movehorizontal"></a>  Movehorizontal  
- Ottiene un [MoveSettings](#movesettings_structure) valore che definisce la quantità di un controllo figlio viene spostato in senso orizzontale quando l'utente ridimensiona la finestra di hosting.  
+ Ottiene un [MoveSettings](#movesettings_structure) valore che definisce come un controllo figlio viene spostato in senso orizzontale quando l'utente ridimensiona la finestra di hosting.  
   
 ```  
 static MoveSettings MoveHorizontal(int nRatio);  
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `nRatio`  
+ *nRatio*  
  Definisce come percentuale la distanza di spostamento in orizzontale di un controllo figlio quando l'utente ridimensiona la finestra host.  
   
 ### <a name="return-value"></a>Valore restituito  
- Oggetto [MoveSettings](#movesettings_structure) rapporto di spostamento che incapsula l'oggetto richiesto.  
+ Un [MoveSettings](#movesettings_structure) rapporto di spostamento che incapsula l'oggetto richiesto.  
   
 ### <a name="remarks"></a>Note  
   
 ##  <a name="movehorizontalandvertical"></a>  Movehorizontalandvertical  
- Ottiene un [MoveSettings](#movesettings_structure) valore che definisce la quantità di un controllo figlio viene spostato in senso orizzontale quando l'utente ridimensiona la finestra di hosting.  
+ Ottiene un [MoveSettings](#movesettings_structure) valore che definisce come un controllo figlio viene spostato in senso orizzontale quando l'utente ridimensiona la finestra di hosting.  
   
 ```  
 static MoveSettings MoveHorizontalAndVertical(int nXRatio int nYRatio);  
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `nXRatio`  
+ *nXRatio*  
  Definisce come percentuale la distanza di spostamento in orizzontale di un controllo figlio quando l'utente ridimensiona la finestra host.  
   
- `nYRatio`  
+ *nYRatio*  
  Definisce come percentuale la distanza di spostamento in verticale di un controllo figlio quando l'utente ridimensiona la finestra host.  
   
 ### <a name="return-value"></a>Valore restituito  
- Oggetto [MoveSettings](#movesettings_structure) rapporto di spostamento che incapsula l'oggetto richiesto.  
+ Un [MoveSettings](#movesettings_structure) rapporto di spostamento che incapsula l'oggetto richiesto.  
   
 ### <a name="remarks"></a>Note  
   
 ##  <a name="movenone"></a>  Movenone  
- Ottiene un [MoveSettings](#movesettings_structure) valore che non rappresenta di movimento, orizzontale o verticale, per un controllo figlio.  
+ Ottiene un [MoveSettings](#movesettings_structure) valore che non rappresenta Nessun movimento, orizzontale o verticale, per un controllo figlio.  
   
 ```  
 static MoveSettings MoveNone();  
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- Oggetto [MoveSettings](#movesettings_structure) che corregge il controllo sul posto, in modo che non si sposti quando l'utente ridimensiona la finestra host.  
+ Un [MoveSettings](#movesettings_structure) che corregge il controllo sul posto, in modo che non si sposti quando l'utente ridimensiona la finestra host.  
   
 ### <a name="remarks"></a>Note  
   
@@ -329,18 +329,18 @@ BOOL IsVertical() const
  TRUE se l'oggetto `MoveSettings` specifica uno spostamento verticale diverso da zero.  
 
 ##  <a name="movevertical"></a>  Movevertical  
- Ottiene un [MoveSettings](#movesettings_structure) valore che definisce la quantità di un controllo figlio viene spostato in senso verticale quando l'utente ridimensiona la finestra di hosting.  
+ Ottiene un [MoveSettings](#movesettings_structure) valore che definisce come un controllo figlio viene spostato in senso verticale quando l'utente ridimensiona la finestra di hosting.  
   
 ```  
 static MoveSettings MoveVertical(int nRatio);  
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `nRatio`  
+ *nRatio*  
  Definisce come percentuale la distanza di spostamento in verticale di un controllo figlio quando l'utente ridimensiona la finestra host.  
   
 ### <a name="return-value"></a>Valore restituito  
- Oggetto [MoveSettings](#movesettings_structure) rapporto di spostamento che incapsula l'oggetto richiesto.  
+ Un [MoveSettings](#movesettings_structure) rapporto di spostamento che incapsula l'oggetto richiesto.  
   
 ### <a name="remarks"></a>Note  
   
@@ -352,44 +352,44 @@ void SetMinSize(const CSize& size);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `size`  
+ *size*  
  Le dimensioni finestra al di sotto delle quali il layout non verrà regolato.  
   
 ### <a name="remarks"></a>Note  
  Posizione e dimensioni di un controllo figlio quando viene modificato in modo dinamico quando si ridimensiona una finestra di hosting, con una dimensione minima al di sotto della quale il layout non viene regolato. L'utente può ridurre le dimensioni della finestra, ma alcune parti della stessa verranno nascoste dalla visualizzazione.  
   
 ##  <a name="sizehorizontal"></a>  Sizehorizontal  
- Ottiene un [SizeSettings](#sizesettings_structure) valore che definisce la quantità di un controllo figlio viene ridimensionato in senso orizzontale quando l'utente ridimensiona la finestra di hosting.  
+ Ottiene un [SizeSettings](#sizesettings_structure) valore che definisce come un controllo figlio viene ridimensionato in senso orizzontale quando l'utente ridimensiona la finestra di hosting.  
   
 ```  
 static SizeSettings SizeHorizontal(int nRatio);  
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `nRatio`  
+ *nRatio*  
  Definisce come percentuale l'estensione del ridimensionamento in orizzontale di un controllo figlio quando l'utente ridimensiona la finestra host.  
   
 ### <a name="return-value"></a>Valore restituito  
- Oggetto [SizeSettings](#sizesettings_structure) che incapsula il rapporto di dimensionamento richiesto.  
+ Un [SizeSettings](#sizesettings_structure) che incapsula il rapporto di dimensionamento richiesto.  
   
 ### <a name="remarks"></a>Note  
   
 ##  <a name="sizehorizontalandvertical"></a>  Sizehorizontalandvertical  
- Ottiene un [SizeSettings](#sizesettings_structure) valore che definisce la quantità di un controllo figlio viene ridimensionato in senso orizzontale quando l'utente ridimensiona la finestra di hosting.  
+ Ottiene un [SizeSettings](#sizesettings_structure) valore che definisce come un controllo figlio viene ridimensionato in senso orizzontale quando l'utente ridimensiona la finestra di hosting.  
   
 ```  
 static SizeSettings SizeHorizontalAndVertical(int nXRatio int nYRatio);  
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `nXRatio`  
+ *nXRatio*  
  Definisce come percentuale l'estensione del ridimensionamento in orizzontale di un controllo figlio quando l'utente ridimensiona la finestra host.  
   
- `nYRatio`  
+ *nYRatio*  
  Definisce come percentuale l'estensione del ridimensionamento in verticale di un controllo figlio quando l'utente ridimensiona la finestra host.  
   
 ### <a name="return-value"></a>Valore restituito  
- Oggetto [SizeSettings](#sizesettings_structure) che incapsula il rapporto di dimensionamento richiesto.  
+ Un [SizeSettings](#sizesettings_structure) che incapsula il rapporto di dimensionamento richiesto.  
   
 ### <a name="remarks"></a>Note  
   
@@ -401,7 +401,7 @@ static SizeSettings SizeNone();
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- Oggetto [SizeSettings](#sizesettings_structure) che corregge il controllo a determinate dimensioni, in modo che non si cambi dimensioni quando l'utente ridimensiona la finestra host.  
+ Un [SizeSettings](#sizesettings_structure) valore che corregge il controllo a determinate dimensioni, in modo che non si cambi dimensioni quando l'utente ridimensiona la finestra host.  
   
 ### <a name="remarks"></a>Note  
   
@@ -446,18 +446,18 @@ BOOL IsVertical() const
  TRUE se l'oggetto `SizeSettings` specifica un ridimensionamento verticale diverso da zero.  
 
 ##  <a name="sizevertical"></a>  Sizevertical  
- Ottiene un [SizeSettings](#sizesettings_structure) valore che definisce la quantità di un controllo figlio viene ridimensionato in senso verticale quando l'utente ridimensiona la finestra di hosting.  
+ Ottiene un [SizeSettings](#sizesettings_structure) valore che definisce come un controllo figlio viene ridimensionato in senso verticale quando l'utente ridimensiona la finestra di hosting.  
   
 ```  
 static SizeSettings SizeVertical(int nRatio);  
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `nRatio`  
+ *nRatio*  
  Definisce come percentuale l'estensione del ridimensionamento in verticale di un controllo figlio quando l'utente ridimensiona la finestra host.  
   
 ### <a name="return-value"></a>Valore restituito  
- Oggetto [SizeSettings](#sizesettings_structure) che incapsula il rapporto di dimensionamento richiesto.  
+ Un [SizeSettings](#sizesettings_structure) che incapsula il rapporto di dimensionamento richiesto.  
   
 ### <a name="remarks"></a>Note  
   

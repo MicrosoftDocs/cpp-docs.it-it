@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 71738511079427a60c9296bc75f9c1e79416d667
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e1226f99d01d933e1754d301756aee6a12620e6a
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367156"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040142"
 ---
 # <a name="chtmleditctrl-class"></a>Classe CHtmlEditCtrl
 Fornisce la funzionalità del controllo ActiveX WebBrowser in una finestra MFC.  
@@ -58,7 +58,7 @@ class CHtmlEditCtrl: public CWnd,
 |[CHtmlEditCtrl::GetStartDocument](#getstartdocument)|Recupera l'URL di un documento predefinito da caricare nel controllo WebBrowser indipendente.|  
   
 ## <a name="remarks"></a>Note  
- Il controllo WebBrowser ospitato controllo viene automaticamente inserito in modalità di modifica dopo averlo creato.  
+ Modalità di modifica WebBrowser ospitato controllo viene automaticamente inserito dopo averlo creato.  
   
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -82,7 +82,7 @@ CHtmlEditCtrl();
 ```  
   
 ##  <a name="create"></a>  CHtmlEditCtrl::Create  
- Crea un controllo WebBrowser ActiveX e lo collega al `CHtmlEditCtrl` oggetto. WebBrowser ActiveX controllo passa automaticamente a un documento predefinito e quindi viene inserito nella modalità di modifica da questa funzione.  
+ Crea un controllo WebBrowser ActiveX e lo collega al `CHtmlEditCtrl` oggetto. Il WebBrowser ActiveX controllo passa automaticamente a un documento predefinito e quindi viene inserito nella modalità di modifica da questa funzione.  
   
 ```  
 virtual BOOL Create(
@@ -95,22 +95,22 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `lpszWindowName`  
+ *lpszWindowName*  
  Questo parametro è inutilizzato.  
   
- `dwStyle`  
+ *dwStyle*  
  Questo parametro è inutilizzato.  
   
- `rect`  
+ *Rect*  
  Specifica dimensioni e la posizione del controllo.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Specifica la finestra del controllo padre. Non deve essere **NULL**.  
   
- `nID`  
+ *nID*  
  Specifica l'ID. del controllo  
   
- `pContext`  
+ *pContext*  
  Questo parametro è inutilizzato.  
   
 ### <a name="return-value"></a>Valore restituito  
@@ -124,7 +124,7 @@ BOOL GetDHtmlDocument(IHTMLDocument2** ppDocument) const;
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `ppDocument`  
+ *ppDocument*  
  L'interfaccia a documenti.  
   
 ##  <a name="getstartdocument"></a>  CHtmlEditCtrl::GetStartDocument  

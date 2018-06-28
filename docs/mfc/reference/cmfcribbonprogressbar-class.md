@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2b9d0d1ab9722b14caddc3935d820301ae229f5a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 24981d2544c2b3e2c8be6a3307829f8a1e1c29ad
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369336"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040220"
 ---
 # <a name="cmfcribbonprogressbar-class"></a>Classe CMFCRibbonProgressBar
 Implementa un controllo che indica visivamente lo stato di avanzamento di un'operazione di lunga durata.  
@@ -64,21 +64,21 @@ class CMFCRibbonProgressBar : public CMFCRibbonBaseElement
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[CMFCRibbonProgressBar::GetPos](#getpos)|Restituisce lo stato corrente.|  
+|[CMFCRibbonProgressBar::GetPos](#getpos)|Restituisce lo stato di avanzamento corrente.|  
 |[CMFCRibbonProgressBar::GetRangeMax](#getrangemax)|Restituisce il valore massimo dell'intervallo corrente.|  
 |[CMFCRibbonProgressBar::GetRangeMin](#getrangemin)|Restituisce il valore minimo dell'intervallo corrente.|  
 |[CMFCRibbonProgressBar::GetRegularSize](#getregularsize)|Restituisce la dimensione regolare dell'elemento della barra multifunzione. (Esegue l'override [cmfcribbonbaseelement:: Getregularsize](../../mfc/reference/cmfcribbonbaseelement-class.md#getregularsize).)|  
 |[CMFCRibbonProgressBar::IsInfiniteMode](#isinfinitemode)|Specifica se l'indicatore di stato è in esecuzione in modalità infinita.|  
 |[CMFCRibbonProgressBar::OnDraw](#ondraw)|Chiamato dal framework per disegnare l'elemento della barra multifunzione. (Esegue l'override [cmfcribbonbaseelement:: OnDraw](../../mfc/reference/cmfcribbonbaseelement-class.md#ondraw).)|  
 |[CMFCRibbonProgressBar::SetInfiniteMode](#setinfinitemode)|Imposta l'indicatore di stato in modalità infinita.|  
-|[CMFCRibbonProgressBar::SetPos](#setpos)|Imposta lo stato corrente.|  
+|[CMFCRibbonProgressBar::SetPos](#setpos)|Imposta lo stato di avanzamento corrente.|  
 |[CMFCRibbonProgressBar::SetRange](#setrange)|Imposta i valori minimi e massimo.|  
   
 ## <a name="remarks"></a>Note  
- Oggetto `CMFCRibbonProgressBar` possono operare in due modalità: regolare e infinito. In modalità normale, l'indicatore di stato viene riempita da sinistra a destra e si arresta quando raggiunge il valore massimo. In modalità infinita, l'indicatore di stato viene riempito ripetutamente con il valore minimo per il valore massimo. È possibile utilizzare modalità infinita per indicare che è in corso un'operazione, ma che il tempo di completamento è sconosciuto.  
+ Oggetto `CMFCRibbonProgressBar` può funzionare in due modi: regolare e infinito. In modalità normale, l'indicatore di stato viene riempita da sinistra a destra e si arresta quando raggiunge il valore massimo. In modalità infinita, l'indicatore di stato ripetutamente viene riempito con il valore minimo per il valore massimo. È possibile utilizzare modalità infinita per indicare che è in corso un'operazione, ma che il tempo di completamento è sconosciuto.  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene illustrato come utilizzare i vari metodi nella `CMFCRibbonProgressBar` classe. Nell'esempio viene illustrato come impostare l'indicatore di stato in modalità infinita (dove il tempo di completamento di un'operazione è sconosciuto), impostare i valori minimi e massimo per l'indicatore di stato e impostare la posizione corrente dell'indicatore di stato. Questo frammento di codice fa parte di [esempio MS Office 2007 Demo](../../visual-cpp-samples.md).  
+ Nell'esempio seguente viene illustrato come utilizzare i vari metodi nella `CMFCRibbonProgressBar` classe. Nell'esempio viene illustrato come impostare l'indicatore di stato in modalità infinita (dove il tempo di completamento di un'operazione è sconosciuto), impostare i valori minimi e massimo per l'indicatore di stato e impostare la posizione corrente dell'indicatore di stato. Questo frammento di codice fa parte il [esempio di MS Office 2007 Demo](../../visual-cpp-samples.md).  
   
  [!code-cpp[NVC_MFC_MSOffice2007Demo#11](../../mfc/reference/codesnippet/cpp/cmfcribbonprogressbar-class_1.cpp)]  
   
@@ -106,14 +106,14 @@ CMFCRibbonProgressBar(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `nID`  
+ [in] *nID*  
  Specifica l'ID di comando per l'indicatore di stato della barra multifunzione.  
   
- [in] `nWidth`  
- Specifica la larghezza, in pixel, della barra di stato della barra multifunzione.  
+ [in] *nWidth*  
+ Specifica la larghezza, in pixel, dell'indicatore di stato della barra multifunzione.  
   
- [in] `nHeight`  
- Specifica l'altezza, in pixel, della barra di stato della barra multifunzione.  
+ [in] *nHeight*  
+ Specifica l'altezza, in pixel, dell'indicatore di stato della barra multifunzione.  
   
 ##  <a name="getpos"></a>  CMFCRibbonProgressBar::GetPos  
  Restituisce la posizione corrente dell'indicatore di stato.  
@@ -158,7 +158,7 @@ virtual CSize GetRegularSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `pDC`  
+ [in] *pDC*  
   
 ### <a name="return-value"></a>Valore restituito  
   
@@ -185,7 +185,7 @@ virtual void OnDraw(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `pDC`  
+ [in] *pDC*  
   
 ### <a name="remarks"></a>Note  
   
@@ -197,7 +197,7 @@ void SetInfiniteMode(BOOL bSet = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `bSet`  
+ [in] *bSet*  
  `TRUE` Per specificare che l'indicatore di stato è in modalità di infinito. in caso contrario, `FALSE`.  
   
 ### <a name="remarks"></a>Note  
@@ -213,10 +213,10 @@ void SetPos(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `nPos`  
- Specifica la posizione in cui è stato impostato l'indicatore di stato.  
+ [in] *nPos*  
+ Specifica la posizione in cui è impostato l'indicatore di stato.  
   
- [in] `bRedraw`  
+ [in] *bRedraw*  
  Specifica se l'indicatore di stato deve essere ridisegnato.  
   
 ### <a name="remarks"></a>Note  
@@ -232,14 +232,14 @@ void SetRange(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `nMin`  
+ [in] *nMin*  
  Specifica il valore minimo dell'intervallo.  
   
- [in] `nMax`  
+ [in] *nMax*  
  Specifica il valore massimo dell'intervallo.  
   
 ### <a name="remarks"></a>Note  
- Utilizzare questo metodo per definire l'intervallo dell'indicatore di stato tramite i valori minimi e massimo.  
+ Utilizzare questo metodo per definire l'intervallo dell'indicatore di stato impostando i valori minimi e massimo.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Grafico delle gerarchie](../../mfc/hierarchy-chart.md)   

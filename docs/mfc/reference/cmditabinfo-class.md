@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b95706603c8fe8a8f53be8cd0db405cd649271f2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4b3676db7cedbca1fe831e44c9ff7cf018360adc
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368095"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040053"
 ---
 # <a name="cmditabinfo-class"></a>Classe CMDITabInfo
 Il `CMDITabInfo` classe viene utilizzata per passare i parametri [CMDIFrameWndEx:: Enablemditabbedgroups](../../mfc/reference/cmdiframewndex-class.md#enablemditabbedgroups) metodo. Impostare i membri di questa classe per controllare il comportamento dei gruppi MDI a schede.  
@@ -75,9 +75,9 @@ class CMDITabInfo
 |[CMDITabInfo::m_bActiveTabCloseButton;](#m_bactivetabclosebutton_)|Specifica se un **Chiudi** pulsante viene visualizzato sull'etichetta della scheda attiva.|  
 |[CMDITabInfo::m_bAutoColor](#m_bautocolor)|Specifica se le schede MDI dei colori.|  
 |[CMDITabInfo::m_bDocumentMenu](#m_bdocumentmenu)|Specifica se il gruppo di schede Visualizza un menu di scelta rapida che viene visualizzato un elenco di documenti aperti o Visualizza i pulsanti di scorrimento.|  
-|[CMDITabInfo::m_bEnableTabSwap](#m_benabletabswap)|Specifica se l'utente è possibile scambiare le posizioni delle schede trascinando.|  
+|[CMDITabInfo::m_bEnableTabSwap](#m_benabletabswap)|Specifica se l'utente può scambiare le posizioni delle schede trascinando.|  
 |[CMDITabInfo::m_bFlatFrame](#m_bflatframe)|Specifica se le schede hanno un frame flat.|  
-|[CMDITabInfo::m_bTabCloseButton](#m_btabclosebutton)|Specifica se ogni etichetta scheda Visualizza un **Chiudi** pulsante.|  
+|[CMDITabInfo::m_bTabCloseButton](#m_btabclosebutton)|Specifica se ogni etichetta scheda Visualizza una **Chiudi** pulsante.|  
 |[CMDITabInfo::m_bTabCustomTooltips](#m_btabcustomtooltips)|Specifica se le descrizioni comandi personalizzate sono abilitate.|  
 |[CMDITabInfo::m_bTabIcons](#m_btabicons)|Specifica se visualizzare le icone nelle schede MDI.|  
 |[CMDITabInfo::m_nTabBorderSize](#m_ntabbordersize)|Specifica le dimensioni del bordo di ogni finestra a schede.|  
@@ -85,10 +85,10 @@ class CMDITabInfo
 |[CMDITabInfo::m_tabLocation](#m_tablocation)|Specifica se le etichette delle schede si trovano nella parte superiore o inferiore della pagina.|  
   
 ## <a name="remarks"></a>Note  
- Questa classe specifica i parametri dei gruppi che il framework crea scheda MDI.  
+ Questa classe specifica i parametri di gruppi di schede MDI che il framework crea.  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio riportato di seguito viene illustrato come impostare i valori delle variabili di membro in `CMDITabInfo` classe.  
+ Nell'esempio seguente viene illustrato come impostare i valori delle variabili di membro in `CMDITabInfo` classe.  
   
  [!code-cpp[NVC_MFC_MDITab#1](../../mfc/reference/codesnippet/cpp/cmditabinfo-class_1.cpp)]  
   
@@ -106,17 +106,17 @@ BOOL m_bActiveTabCloseButton;
 ```  
   
 ### <a name="remarks"></a>Note  
- Se `TRUE`, verrà visualizzata l'etichetta della scheda attiva un **Chiudi** pulsante. Il **Chiudi** pulsante verrà rimosso dall'angolo superiore destro dell'area della scheda. In caso contrario, non verrà visualizzata l'etichetta della scheda attiva un **Chiudi** pulsante. Il **Chiudi** pulsante verrà visualizzato nell'angolo superiore destro dell'area della scheda.  
+ Se `TRUE`, verrà visualizzata l'etichetta della scheda attiva una **Chiudi** pulsante. Il **Chiudi** pulsante verrà rimosso dall'angolo superiore destro dell'area della scheda. In caso contrario, non verrà visualizzata l'etichetta della scheda attiva una **Chiudi** pulsante. Il **Chiudi** pulsante verrà visualizzato nell'angolo superiore destro dell'area della scheda.  
   
 ##  <a name="m_bautocolor"></a>  CMDITabInfo::m_bAutoColor  
- Specifica se ogni scheda MDI con il relativo colore.  
+ Specifica se ogni scheda MDI dispone di un colore.  
   
 ```  
 BOOL m_bAutoColor;  
 ```  
   
 ### <a name="remarks"></a>Note  
- Se `TRUE`, ogni scheda avrà il relativo colore. Il set di colori viene gestito dalla libreria MFC. In caso contrario, le schede vengono visualizzate in bianco. Il valore predefinito è `FALSE`.  
+ Se `TRUE`, ogni scheda avrà un colore. Il set di colori viene gestito dalla libreria MFC. In caso contrario, le schede vengono visualizzate in bianco. Il valore predefinito è `FALSE`.  
   
 ##  <a name="m_bdocumentmenu"></a>  CMDITabInfo::m_bDocumentMenu  
  Specifica se ogni scheda Visualizza un menu di scelta rapida che viene visualizzato un elenco di documenti aperti sul bordo destro dell'area della scheda.  
@@ -129,7 +129,7 @@ BOOL m_bDocumentMenu;
  Se `TRUE`, windows ogni scheda consente di visualizzare un menu di scelta rapida che viene visualizzato un elenco di documenti aperti sul bordo destro dell'area della scheda; In caso contrario, la finestra a schede Visualizza i pulsanti di scorrimento sul bordo destro dell'area della scheda. Il valore predefinito è `FALSE`.  
   
 ##  <a name="m_benabletabswap"></a>  CMDITabInfo::m_bEnableTabSwap  
- Specifica se l'utente è possibile scambiare le posizioni delle schede trascinando.  
+ Specifica se l'utente può scambiare le posizioni delle schede trascinando.  
   
 ```  
 BOOL m_bEnableTabSwap;  
@@ -163,7 +163,7 @@ BOOL m_bTabCustomTooltips;
 ```  
   
 ### <a name="remarks"></a>Note  
- Se `TRUE`, l'applicazione invia un `AFX_WM_ON_GET_TAB_TOOLTIP` messaggio per la cornice principale. È possibile gestire questo messaggio utilizzando il `ON_REGISTERED_MESSAGE` (macro).  
+ Se `TRUE`, l'applicazione invia un `AFX_WM_ON_GET_TAB_TOOLTIP` messaggio per la cornice principale. È possibile gestire questo messaggio utilizzando il `ON_REGISTERED_MESSAGE` macro.  
   
 ##  <a name="m_btabicons"></a>  CMDITabInfo::m_bTabIcons  
  Specifica se visualizzare le icone nelle schede MDI.  
@@ -208,7 +208,7 @@ CMFCTabCtrl::Style m_style
  Stile 3D con etichette delle schede di rettangolo.  
   
  `STYLE_FLAT_SHARED_HORZ_SCROLL`  
- Stile Flat con barra di scorrimento orizzontale condiviso.  
+ Dello stile Flat con barra di scorrimento orizzontale condivisa.  
   
  `STYLE_3D_ROUNDED_SCROLL`  
  Stile 3D con etichette delle schede di arrotondamento.  
@@ -235,8 +235,8 @@ void Serialize(CArchive& ar);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `ar`  
- Oggetto [CArchive (classe)](../../mfc/reference/carchive-class.md) oggetto da serializzare.  
+ [in] *ar*  
+ Un [CArchive (classe)](../../mfc/reference/carchive-class.md) oggetto da serializzare.  
   
 ## <a name="see-also"></a>Vedere anche  
  [CMDIFrameWndEx (classe)](../../mfc/reference/cmdiframewndex-class.md)   

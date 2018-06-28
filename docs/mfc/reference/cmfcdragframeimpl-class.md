@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f743c074bc956181e8b62a02062ac2f22cdfb6e4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 458288ecff0b457205ba1735494ad8106c3feae7
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33373830"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040948"
 ---
 # <a name="cmfcdragframeimpl-class"></a>Classe CMFCDragFrameImpl
-La `CMFCDragFrameImpl` classe disegna il rettangolo di trascinamento visualizzato quando l'utente trascina un riquadro in modalità di ancoraggio standard.  
+Il `CMFCDragFrameImpl` classe disegna il rettangolo di trascinamento visualizzato quando l'utente trascina un riquadro in modalità di ancoraggio standard.  
    [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
    
 ## <a name="syntax"></a>Sintassi  
@@ -34,7 +34,7 @@ class CMFCDragFrameImpl
 ```  
   
 ## <a name="remarks"></a>Note  
- Un oggetto di questa classe viene incorporato in ogni [classe CPane](../../mfc/reference/cpane-class.md) oggetto. Di conseguenza, ogni riquadro che utilizza il `CanFloat` metodo visualizza un rettangolo di trascinamento quando l'utente trascina.  
+ Un oggetto di questa classe viene incorporato in ogni [classe CPane](../../mfc/reference/cpane-class.md) oggetto. Di conseguenza, ogni riquadro che utilizza il `CanFloat` metodo visualizza un rettangolo di trascinamento quando l'utente la trascina.  
   
  È possibile controllare lo spessore del rettangolo di trascinamento utilizzando [AFX_GLOBAL_DATA::m_nDragFrameThicknessFloat](afx-global-data-structure.md#m_ndragframethicknessfloat) e [AFX_GLOBAL_DATA::m_nDragFrameThicknessDock](afx-global-data-structure.md#m_ndragframethicknessdock).  
   
@@ -52,7 +52,7 @@ void EndDrawDragFrame(BOOL bClearInternalRects = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `bClearInternalRects`  
+ [in] *bClearInternalRects*  
   
 ### <a name="remarks"></a>Note  
   
@@ -64,7 +64,7 @@ void Init(CWnd* pDraggedWnd);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `pDraggedWnd`  
+ [in] *pDraggedWnd*  
   
 ### <a name="remarks"></a>Note  
   
@@ -76,7 +76,7 @@ void MoveDragFrame(BOOL bForceMove = FALSE);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `bForceMove`  
+ [in] *bForceMove*  
   
 ### <a name="remarks"></a>Note  
   
@@ -92,9 +92,9 @@ void PlaceTabPreDocking(CWnd* pCBarToPlaceOn);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `pTabbedBar`  
- [in] `bFirstTime`  
- [in] `pCBarToPlaceOn`  
+ [in] *pTabbedBar*  
+ [in] *bFirstTime*  
+ [in] *pCBarToPlaceOn*  
   
 ### <a name="remarks"></a>Note  
   
@@ -106,7 +106,7 @@ void RemoveTabPreDocking(CDockablePane* pOldTargetBar = NULL);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `pOldTargetBar`  
+ [in] *pOldTargetBar*  
   
 ### <a name="remarks"></a>Note  
   

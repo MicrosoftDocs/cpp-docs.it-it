@@ -34,15 +34,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ec36bfc82064272e165ea274cd127cc626731643
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: df36f8a6af5d8ad7e2a96780e02f236e3225333d
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368777"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040629"
 ---
 # <a name="cmfccaptionbutton-class"></a>Classe CMFCCaptionButton
-Il `CMFCCaptionButton` implementa un pulsante che viene visualizzato nella barra del titolo per un riquadro ancorato o una finestra con mini-cornice. In genere, il framework crea automaticamente pulsanti della barra del titolo.  
+Il `CMFCCaptionButton` implementa un pulsante che viene visualizzato nella barra del titolo per un riquadro ancorato o in una finestra con mini-cornice. In genere, il framework crea automaticamente pulsanti della barra del titolo.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -66,13 +66,13 @@ class CMFCCaptionButton : public CObject
 |[CMFCCaptionButton::GetIconID](#geticonid)|Restituisce l'ID dell'immagine associata al pulsante.|  
 |[CMFCCaptionButton::GetRect](#getrect)|Restituisce il rettangolo occupato dal pulsante.|  
 |[CMFCCaptionButton::GetSize](#getsize)|Restituisce la larghezza e altezza del pulsante.|  
-|[CMFCCaptionButton::IsMiniFrameButton](#isminiframebutton)|Indica se l'altezza della barra del titolo è impostata su dimensioni minidump.|  
+|[CMFCCaptionButton::IsMiniFrameButton](#isminiframebutton)|Indica se l'altezza della barra del titolo è impostata su dimensioni mini.|  
 |[CMFCCaptionButton::Move](#move)|Imposta la posizione di disegno pulsante e Mostra lo stato della finestra.|  
-|[CMFCCaptionButton::OnDraw](#ondraw)|Disegna il pulsante della didascalia.|  
+|[CMFCCaptionButton::OnDraw](#ondraw)|Disegna il pulsante di didascalia.|  
 |[CMFCCaptionButton::SetMiniFrameButton](#setminiframebutton)|Imposta la dimensione minima della barra del titolo.|  
   
 ## <a name="remarks"></a>Note  
- È possibile derivare una classe da [CPaneFrameWnd classe](../../mfc/reference/cpaneframewnd-class.md) e utilizzare il metodo protetto, `AddButton`, per aggiungere pulsanti a una finestra cornice minidump.  
+ È possibile derivare una classe da [classe CPaneFrameWnd](../../mfc/reference/cpaneframewnd-class.md) e utilizzare il metodo protetto `AddButton`, per aggiungere pulsanti di didascalia a una finestra cornice mini.  
   
  CPaneFrameWnd.h definisce gli ID di comando per due tipi di pulsanti:  
   
@@ -81,7 +81,7 @@ class CMFCCaptionButton : public CObject
 - `AFX_CAPTION_BTN_CLOSE`, che consente di visualizzare un **Chiudi** pulsante quando il riquadro può essere chiuso o nascosto.  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio riportato di seguito viene illustrato come costruire un `CMFCCaptionButton` dell'oggetto e impostare la dimensione minima della barra del titolo.  
+ Nell'esempio seguente viene illustrato come costruire un `CMFCCaptionButton` dell'oggetto e impostare la dimensione minima della barra del titolo.  
   
  [!code-cpp[NVC_MFC_RibbonApp#43](../../mfc/reference/codesnippet/cpp/cmfccaptionbutton-class_1.cpp)]  
   
@@ -106,13 +106,13 @@ CMFCCaptionButton(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `nHit`  
+ [in] *nHit*  
  Il comando associato al pulsante.  
   
- [in] `bLeftAlign`  
+ [in] *bLeftAlign*  
  Specifica se il pulsante è allineato a sinistra.  
   
- Nella tabella seguente sono elencati i valori possibili per il `nHit` parametro.  
+ Nella tabella seguente sono elencati i valori possibili per il *nHit* parametro.  
   
 |Valore|Comando|  
 |-----------|-------------|  
@@ -121,13 +121,13 @@ CMFCCaptionButton(
 |`HTMAXBUTTON`|Pulsante di ingrandimento.|  
 |`AFX_HTLEFTBUTTON`|Pulsante freccia sinistra.|  
 |`AFX_HTRIGHTBUTTON`|Pulsante freccia destra.|  
-|`AFX_HTMENU`|Premuto il pulsante di menu freccia.|  
+|`AFX_HTMENU`|Verso il basso sul pulsante di menu freccia.|  
 |`HTNOWHERE`|Il valore predefinito. non rappresenta nessun comando.|  
   
 ### <a name="remarks"></a>Note  
- Per impostazione predefinita, i pulsanti non sono associati a un comando.  
+ Per impostazione predefinita, i pulsanti di didascalia non sono associati a un comando.  
   
- Pulsanti sono allineati in destra o sinistra.  
+ Pulsanti sono allineati in destra o a sinistra.  
   
 ##  <a name="gethit"></a>  CMFCCaptionButton::GetHit  
  Restituisce il comando rappresentato dal pulsante.  
@@ -139,7 +139,7 @@ UINT GetHit() const;
 ### <a name="return-value"></a>Valore restituito  
  Il comando rappresentato dal pulsante.  
   
- Nella tabella seguente sono elencati i possibili valori restituiti.  
+ Nella tabella seguente sono elencati i valori restituiti possibili.  
   
 |Valore|Comando|  
 |-----------|-------------|  
@@ -148,7 +148,7 @@ UINT GetHit() const;
 |`HTMAXBUTTON`|Pulsante di ingrandimento.|  
 |`AFX_HTLEFTBUTTON`|Pulsante freccia sinistra.|  
 |`AFX_HTRIGHTBUTTON`|Pulsante freccia destra.|  
-|`AFX_HTMENU`|Premuto il pulsante di menu freccia.|  
+|`AFX_HTMENU`|Verso il basso sul pulsante di menu freccia.|  
 |`HTNOWHERE`|Il valore predefinito. non rappresenta nessun comando.|  
   
 ##  <a name="geticonid"></a>  CMFCCaptionButton::GetIconID  
@@ -161,17 +161,17 @@ virtual CMenuImages::IMAGES_IDS GetIconID(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `bHorz`  
+ [in] *bHorz*  
  `TRUE` per immagine freccia sinistra o destra ID; `FALSE` per su o freccia giù ID immagine.  
   
- [in] `bMaximized`  
+ [in] *bMaximized*  
  `TRUE` per un ID dell'immagine Ingrandisci; `FALSE` per una riduzione a icona immagine ID.  
   
 ### <a name="return-value"></a>Valore restituito  
  L'ID immagine.  
   
 ### <a name="remarks"></a>Note  
- I parametri di specificare gli ID immagine per la riduzione a icona o ottimizzare pulsanti.  
+ I parametri di specificare gli ID immagine per Riduci a icona o didascalia adottata.  
   
 ##  <a name="getrect"></a>  CMFCCaptionButton::GetRect  
  Restituisce il rettangolo occupato dal pulsante.  
@@ -184,7 +184,7 @@ virtual CRect GetRect() const;
  Il rettangolo che rappresenta la posizione del pulsante.  
   
 ### <a name="remarks"></a>Note  
- Se non è possibile visualizzare il pulsante, la dimensione restituita è 0.  
+ Se non è possibile visualizzare il pulsante, della dimensione restituita è 0.  
   
 ##  <a name="getsize"></a>  CMFCCaptionButton::GetSize  
  Restituisce la larghezza e altezza del pulsante.  
@@ -200,7 +200,7 @@ static CSize GetSize();
  Le dimensioni restituite includono bordo e il margine di pulsante.  
   
 ##  <a name="isminiframebutton"></a>  CMFCCaptionButton::IsMiniFrameButton  
- Indica se l'altezza della barra del titolo è impostata su dimensioni minidump.  
+ Indica se l'altezza della barra del titolo è impostata su dimensioni mini.  
   
 ```  
 BOOL IsMiniFrameButton() const;  
@@ -221,14 +221,14 @@ void Move(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `ptTo`  
+ [in] *ptTo*  
  Nuova posizione.  
   
- [in] `bHide`  
- Se si desidera visualizzare sul pulsante.  
+ [in] *bHide*  
+ Indica se visualizzare il pulsante.  
   
 ##  <a name="ondraw"></a>  CMFCCaptionButton::OnDraw  
- Disegna il pulsante della didascalia.  
+ Disegna il pulsante di didascalia.  
   
 ```  
 virtual void OnDraw(
@@ -240,23 +240,23 @@ virtual void OnDraw(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `pDC`  
+ [in] *pDC*  
  Puntatore a un contesto di dispositivo per il pulsante.  
   
- [in] `bActive`  
+ [in] *bActive*  
  Indica se disegnare un'immagine del pulsante attiva.  
   
- [in] `bHorz`  
- Riservato per l'utilizzo in una classe derivata.  
+ [in] *bHorz*  
+ Riservato per usi in una classe derivata.  
   
- [in] `bMaximized`  
+ [in] *bMaximized*  
  Indica se disegnare un'immagine del pulsante ingrandita.  
   
- [in] `bDisabled`  
+ [in] *bDisattivato*  
  Indica se disegnare un'immagine del pulsante abilitato.  
   
 ### <a name="remarks"></a>Note  
- Il `bMaximized` parametro viene utilizzato quando il pulsante è un ingrandimento o pulsante Riduci a icona.  
+ Il *bMaximized* parametro viene utilizzato quando il pulsante è un ingrandimento o pulsante Riduci a icona.  
   
 ##  <a name="setminiframebutton"></a>  CMFCCaptionButton::SetMiniFrameButton  
  Imposta la dimensione minima della barra del titolo.  
@@ -266,7 +266,7 @@ void SetMiniFramebutton(BOOL bSet = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `bSet`  
+ [in] *bSet*  
  `TRUE` per l'altezza della barra del titolo mini; `FALSE` per altezza della barra del titolo predefinito.  
   
 ## <a name="see-also"></a>Vedere anche  

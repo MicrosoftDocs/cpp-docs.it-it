@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 109c3b2f6337adece6c371f1fafa98291468485e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 444d42c7273e64a07966592b315660b92ddf8ee0
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369707"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042056"
 ---
 # <a name="cmfcribboncheckbox-class"></a>Classe CMFCRibbonCheckBox
 La classe `CMFCRibbonCheckBox` implementa una casella di controllo che è possibile aggiungere a un pannello della barra multifunzione, a una barra di accesso rapido o a un menu di scelta rapida.  
@@ -77,9 +77,9 @@ class CMFCRibbonCheckBox : public CMFCRibbonButton
 ```  
 CMFCRibbonCheckBox (UINT nID, LPCTSTR lpszText)  
 ```  
-dove `nID` è l'ID comando della casella di controllo e `lpszText` è l'etichetta di testo della casella di controllo.  
+in cui *nID* è l'ID di comando casella di controllo e *lpszText* l'etichetta di testo della casella di controllo.  
   
- È possibile aggiungere una casella di controllo a un pannello della barra multifunzione utilizzando [cmfcribbonpanel:: Add](../../mfc/reference/cmfcribbonpanel-class.md#add).  
+ È possibile aggiungere una casella di controllo a un pannello della barra multifunzione usando [cmfcribbonpanel:: Add](../../mfc/reference/cmfcribbonpanel-class.md#add).  
   
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -103,30 +103,30 @@ CMFCRibbonCheckBox(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `nID`  
+ [in] *nID*  
  Specifica l'ID di comando.  
   
- [in] `lpszText`  
+ [in] *lpszText*  
  Specifica l'etichetta di testo.  
   
 ### <a name="return-value"></a>Valore restituito  
  Costruisce un oggetto di casella di controllo della barra multifunzione.  
   
 ### <a name="example"></a>Esempio  
- Nell'esempio riportato di seguito viene illustrato come costruire un oggetto della `CMFCRibbonCheckBox` classe.  
+ Nell'esempio seguente viene illustrato come costruire un oggetto del `CMFCRibbonCheckBox` classe.  
   
  [!code-cpp[NVC_MFC_RibbonApp#17](../../mfc/reference/codesnippet/cpp/cmfcribboncheckbox-class_1.cpp)]  
   
 ##  <a name="getcompactsize"></a>  CMFCRibbonCheckBox::GetCompactSize  
- Quando sottoposto a override, ottiene la dimensione compatta della casella di controllo.  
+ In caso di override, ottiene la dimensione compatta della casella di controllo.  
   
 ```  
 virtual CSize GetCompactSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `pDC`  
- Puntatore al `CDC` associata con la casella di controllo.  
+ [in] *pDC*  
+ Puntatore al `CDC` associati con la casella di controllo.  
   
 ### <a name="return-value"></a>Valore restituito  
  Restituisce un `CSize` oggetto che contiene la dimensione compatta della casella di controllo.  
@@ -142,11 +142,11 @@ virtual CSize GetIntermediateSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `pDC`  
+ [in] *pDC*  
  Puntatore al `CDC` associata a questa casella di controllo.  
   
 ### <a name="return-value"></a>Valore restituito  
- Oggetto `CSize` oggetto che contiene la dimensione intermedia della casella di controllo.  
+ Oggetto `CSize` oggetto contenente la dimensione intermedia della casella di controllo.  
   
 ### <a name="remarks"></a>Note  
  Se non viene sottoposto a override, calcola la dimensione intermedia come dimensione della casella di controllo predefinito ( `AFX_CHECK_BOX_DEFAULT_SIZE`) oltre le dimensioni del testo, più i margini.  
@@ -159,7 +159,7 @@ virtual CSize GetRegularSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `pDC`  
+ [in] *pDC*  
  Puntatore al `CDC` oggetto associato a questa casella di controllo.  
   
 ### <a name="return-value"></a>Valore restituito  
@@ -176,35 +176,35 @@ virtual BOOL IsDrawTooltipImage() const;
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- Restituisce `TRUE` se è presente un'immagine di descrizione comando associata con la casella di controllo, o `FALSE` in caso contrario.  
+ Restituisce `TRUE` se è associata la casella di controllo, un'immagine di descrizione comando o `FALSE` in caso contrario.  
   
 ### <a name="remarks"></a>Note  
   
 ##  <a name="ondraw"></a>  CMFCRibbonCheckBox::OnDraw  
- Chiamato dal framework per disegnare la casella di controllo utilizzando un contesto di dispositivo specificato.  
+ Chiamata eseguita dal framework per disegnare la casella di controllo utilizzando un contesto di dispositivo specificato.  
   
 ```  
 virtual void OnDraw(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `pDC`  
+ [in] *pDC*  
  Puntatore al `CDC` in cui disegnare la casella di controllo.  
   
 ### <a name="remarks"></a>Note  
   
 ##  <a name="ondrawmenuimage"></a>  CMFCRibbonCheckBox::OnDrawMenuImage  
- Chiamato dal framework per disegnare un'immagine di menu per la casella di controllo.  
+ Chiamata eseguita dal framework per disegnare un'immagine di menu per la casella di controllo.  
   
 ```  
 virtual BOOL OnDrawMenuImage(CDC*, CRect);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `CDC*`  
- Puntatore al `CDC` associata con la casella di controllo.  
+ [in] *CDC**  
+ Puntatore al `CDC` associati con la casella di controllo.  
   
- [in] `CRect`  
+ [in] *CRect*  
  Oggetto `CRect` oggetto che specifica il rettangolo in cui disegnare l'immagine del menu.  
   
 ### <a name="return-value"></a>Valore restituito  
@@ -227,22 +227,22 @@ virtual void OnDrawOnList(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `pDC`  
+ [in] *pDC*  
  Puntatore al contesto di dispositivo in cui disegnare la casella di controllo.  
   
- [in] `strText`  
- Testo da visualizzare.  
+ [in] *strText*  
+ Testo visualizzato.  
   
- [in] `nTextOffset`  
+ [in] *nTextOffset*  
  La distanza in pixel, dal lato sinistro della casella di riepilogo per il testo visualizzato.  
   
- [in] `rect`  
+ [in] *rect*  
  Il rettangolo di visualizzazione per la casella di controllo.  
   
- [in] `bIsSelected`  
+ [in] *bIsSelected*  
  `TRUE` Se la casella di controllo è selezionata, o `FALSE` in caso contrario.  
   
- [in] `bHighlighted`  
+ [in] *bHighlighted*  
  `TRUE` Se la casella di controllo viene evidenziato, o `FALSE` in caso contrario.  
   
 ### <a name="remarks"></a>Note  
@@ -257,10 +257,10 @@ virtual BOOL SetACCData(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `pParent`  
+ *pParent*  
  La finestra padre della casella di controllo.  
   
- `data`  
+ *data*  
  I dati di accessibilità per la casella di controllo.  
   
 ### <a name="return-value"></a>Valore restituito  

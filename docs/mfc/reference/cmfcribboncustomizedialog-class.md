@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d195b2888c47a318369df13c371f85b21cc7bf84
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8e693a0e6a2353693f676ed0d63d7087d3e57455
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370194"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040899"
 ---
 # <a name="cmfcribboncustomizedialog-class"></a>Classe CMFCRibbonCustomizeDialog
 Visualizza la barra multifunzione **Personalizza** pagina.  
@@ -82,14 +82,14 @@ CMFCRibbonCustomizeDialog(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `pWndParent`  
+ [in] *pWndParent*  
  Puntatore alla finestra padre (in genere la cornice principale).  
   
- [in] `pRibbon`  
+ [in] *pRibbon*  
  Un puntatore al `CMFCRibbonBar` che è possibile personalizzare.  
   
 ### <a name="example"></a>Esempio  
- Nell'esempio riportato di seguito viene illustrato come costruire un `CMFCRibbonCustomizeDialog` oggetto.  
+ Nell'esempio seguente viene illustrato come costruire un `CMFCRibbonCustomizeDialog` oggetto.  
   
  [!code-cpp[NVC_MFC_RibbonApp#18](../../mfc/reference/codesnippet/cpp/cmfcribboncustomizedialog-class_1.cpp)]  
   

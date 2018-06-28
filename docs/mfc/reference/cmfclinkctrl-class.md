@@ -24,15 +24,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b91bc8fec3eebba5f3037633b5840d9b1abca731
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c8b0a512d0969f88d270ab7373be4807b1c55914
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33371728"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038354"
 ---
 # <a name="cmfclinkctrl-class"></a>Classe CMFCLinkCtrl
-La `CMFCLinkCtrl` classe viene visualizzato un pulsante come collegamento ipertestuale e richiama la destinazione del collegamento quando si fa clic sul pulsante.  
+Il `CMFCLinkCtrl` classe viene visualizzato un pulsante come collegamento ipertestuale e richiama la destinazione del collegamento quando si fa clic sul pulsante.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -60,7 +60,7 @@ class CMFCLinkCtrl : public CMFCButton
  Quando si fa clic su un pulsante che viene derivato dal `CMFCLinkCtrl` (classe), il framework passa l'URL del pulsante come parametro per il `ShellExecute` metodo. Il `ShellExecute` metodo consente di aprire la destinazione dell'URL.  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene illustrato come impostare le dimensioni di un `CMFCLinkCtrl` oggetto e come impostare un url e una descrizione comando in un `CMFCLinkCtrl` oggetto. In questo esempio fa parte di [esempio nuovi controlli](../../visual-cpp-samples.md).  
+ Nell'esempio seguente viene illustrato come impostare le dimensioni di un `CMFCLinkCtrl` oggetto e come impostare un url e una descrizione comando in un `CMFCLinkCtrl` oggetto. In questo esempio fa parte il [esempio di nuovi controlli](../../visual-cpp-samples.md).  
   
  [!code-cpp[NVC_MFC_NewControls#9](../../mfc/reference/codesnippet/cpp/cmfclinkctrl-class_1.h)]  
 [!code-cpp[NVC_MFC_NewControls#10](../../mfc/reference/codesnippet/cpp/cmfclinkctrl-class_2.cpp)]  
@@ -91,10 +91,10 @@ virtual void OnDrawFocusRect(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `pDC`  
+ [in] *pDC*  
  Puntatore a un contesto di dispositivo.  
   
- [in] `rectClient`  
+ [in] *rectClient*  
  Un rettangolo che limita il controllo collegamento.  
   
 ### <a name="remarks"></a>Note  
@@ -108,8 +108,8 @@ void SetURL(LPCTSTR lpszURL);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `lpszURL`  
- Per visualizzare il testo del pulsante.  
+ [in] *lpszURL*  
+ Il testo del pulsante da visualizzare.  
   
 ### <a name="remarks"></a>Note  
   
@@ -121,11 +121,11 @@ void SetURLPrefix(LPCTSTR lpszPrefix);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `lpszPrefix`  
+ [in] *lpszPrefix*  
  Il prefisso del protocollo URL.  
   
 ### <a name="remarks"></a>Note  
- Utilizzare questo metodo per impostare il prefisso dell'URL. Il prefisso non viene visualizzato sulla superficie del pulsante, ma è possibile utilizzarlo per consente di passare di destinazione dell'URL.  
+ Utilizzare questo metodo per impostare il prefisso dell'URL. Il prefisso non viene visualizzato sulla superficie del pulsante, ma è possibile utilizzare per individuare di destinazione dell'URL.  
   
 ##  <a name="sizetocontent"></a>  CMFCLinkCtrl::SizeToContent  
  Ridimensiona il pulsante per contenere il testo del pulsante o bitmap.  
@@ -137,14 +137,14 @@ virtual CSize SizeToContent(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `bVCenter`  
+ [in] *bVCenter*  
  `TRUE` al centro il testo del pulsante e bitmap verticalmente tra superiore e inferiore del controllo collegamento. in caso contrario, `FALSE`. Il valore predefinito è `FALSE`.  
   
- [in] `bHCenter`  
+ [in] *bHCenter*  
  `TRUE` al centro il testo del pulsante e bitmap orizzontalmente tra i lati sinistro e destro del controllo collegamento. in caso contrario, `FALSE`. Il valore predefinito è `FALSE`.  
   
 ### <a name="return-value"></a>Valore restituito  
- Oggetto [CSize](../../atl-mfc-shared/reference/csize-class.md) oggetto che contiene le nuove dimensioni del controllo collegamento.  
+ Un [CSize](../../atl-mfc-shared/reference/csize-class.md) oggetto che contiene le nuove dimensioni del controllo collegamento.  
   
 ### <a name="remarks"></a>Note  
   

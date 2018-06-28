@@ -40,15 +40,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4a4264f26028db4c581fe1dc143905ac0ffc8f66
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 06575c4d014f72ddbae63ea5f02c3081b4228e1d
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33372697"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037729"
 ---
 # <a name="cmfcribbonslider-class"></a>Classe CMFCRibbonSlider
-La `CMFCRibbonSlider` classe implementa un controllo dispositivo di scorrimento che è possibile aggiungere a una barra multifunzione o la barra di stato della barra multifunzione. Il controllo dispositivo di scorrimento della barra multifunzione è simile ai dispositivi di scorrimento dello zoom visualizzati nelle applicazioni di Office 2007.  
+Il `CMFCRibbonSlider` classe implementa un controllo dispositivo di scorrimento che è possibile aggiungere a una barra multifunzione o la barra di stato multifunzione. Il controllo dispositivo di scorrimento della barra multifunzione è simile ai dispositivi di scorrimento dello zoom visualizzati nelle applicazioni di Office 2007.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -72,20 +72,20 @@ class CMFCRibbonSlider : public CMFCRibbonBaseElement
 |[CMFCRibbonSlider::GetRangeMax](#getrangemax)|Restituisce il valore massimo del dispositivo di scorrimento.|  
 |[CMFCRibbonSlider::GetRangeMin](#getrangemin)|Restituisce il valore minimo del dispositivo di scorrimento.|  
 |[CMFCRibbonSlider::GetRegularSize](#getregularsize)|Restituisce la dimensione regolare dell'elemento della barra multifunzione. (Esegue l'override [cmfcribbonbaseelement:: Getregularsize](../../mfc/reference/cmfcribbonbaseelement-class.md#getregularsize).)|  
-|[CMFCRibbonSlider::GetZoomIncrement](#getzoomincrement)|Restituisce la dimensione dell'incremento di zoom per il controllo dispositivo di scorrimento.|  
-|[CMFCRibbonSlider::HasZoomButtons](#haszoombuttons)|Specifica se il dispositivo di scorrimento contiene pulsanti zoom.|  
+|[CMFCRibbonSlider::GetZoomIncrement](#getzoomincrement)|Restituisce la dimensione dell'incremento zoom per il controllo dispositivo di scorrimento.|  
+|[CMFCRibbonSlider::HasZoomButtons](#haszoombuttons)|Specifica se il dispositivo di scorrimento è disponibili pulsanti zoom.|  
 |[CMFCRibbonSlider::OnDraw](#ondraw)|Chiamato dal framework per disegnare l'elemento della barra multifunzione. (Esegue l'override [cmfcribbonbaseelement:: OnDraw](../../mfc/reference/cmfcribbonbaseelement-class.md#ondraw).)|  
 |[CMFCRibbonSlider::SetPos](#setpos)|Imposta la posizione corrente del controllo dispositivo di scorrimento.|  
 |[CMFCRibbonSlider::SetRange](#setrange)|Specifica l'intervallo del controllo dispositivo di scorrimento impostando i valori minimi e massimo.|  
 |[CMFCRibbonSlider::SetZoomButtons](#setzoombuttons)|Mostra o nasconde i pulsanti zoom.|  
-|[CMFCRibbonSlider::SetZoomIncrement](#setzoomincrement)|Imposta dimensione dell'incremento di zoom per il controllo dispositivo di scorrimento.|  
+|[CMFCRibbonSlider::SetZoomIncrement](#setzoomincrement)|Imposta dimensione incremento dello zoom per il controllo dispositivo di scorrimento.|  
   
 ## <a name="remarks"></a>Note  
  È possibile utilizzare il `SetRange` metodo per configurare l'intervallo di incrementi di zoom per il dispositivo di scorrimento. È possibile impostare la posizione corrente del dispositivo di scorrimento utilizzando il `SetPos` metodo.  
   
- È possibile visualizzare i pulsanti zoom circolare a sinistra e a destra del controllo dispositivo di scorrimento utilizzando il `SetZoomButtons` metodo. Per impostazione predefinita, il dispositivo di scorrimento orizzontale, pulsante zoom a sinistra viene visualizzato un segno di sottrazione e pulsante zoom destra viene visualizzato un segno più.  
+ È possibile visualizzare i pulsanti zoom circolare a sinistra e a destra del controllo dispositivo di scorrimento utilizzando il `SetZoomButtons` metodo. Per impostazione predefinita, il dispositivo di scorrimento è orizzontale, il pulsante zoom a sinistra viene visualizzato un segno di sottrazione e il pulsante di ingrandimento a destra visualizza un segno di addizione.  
   
- Il `SetZoomIncrement` metodo definisce l'incremento per aggiungere o sottrarre dalla posizione corrente quando un utente fa clic sui pulsanti di zoom.  
+ Il `SetZoomIncrement` metodo consente di definire l'incremento per aggiungere o sottrarre rispetto alla posizione corrente quando un utente fa clic sui pulsanti di zoom.  
   
 ## <a name="example"></a>Esempio  
  Nell'esempio seguente viene illustrato come utilizzare i vari metodi nella `CMFCRibbonSlider` classe per impostare le proprietà del dispositivo di scorrimento. Nell'esempio viene illustrato come costruire un `CMFCRibbonSlider` dell'oggetto, visualizzare i pulsanti zoom, impostare la posizione corrente del controllo dispositivo di scorrimento e impostare l'intervallo di valori per il controllo dispositivo di scorrimento.  
@@ -112,14 +112,14 @@ CMFCRibbonSlider(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `nID`  
+ [in] *nID*  
  ID del dispositivo di scorrimento.  
   
- [in]. `nWidth`  
- Larghezza in pixel del dispositivo di scorrimento.  
+ [in]. *nWidth*  
+ Larghezza del dispositivo di scorrimento in pixel.  
   
 ### <a name="remarks"></a>Note  
- Costruisce un dispositivo di scorrimento della barra multifunzione è `nWidth` pixel nella categoria pannello in cui viene aggiunto il dispositivo di scorrimento. Per impostazione predefinita, il dispositivo di scorrimento è orizzontale.  
+ Costruisce un dispositivo di scorrimento della barra multifunzione che viene *nWidth* pixel nella categoria pannello in cui viene aggiunto il dispositivo di scorrimento. Per impostazione predefinita, il dispositivo di scorrimento è orizzontale.  
   
 ##  <a name="getpos"></a>  CMFCRibbonSlider::GetPos  
  Restituisce la posizione corrente del controllo dispositivo di scorrimento.  
@@ -159,7 +159,7 @@ virtual CSize GetRegularSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `pDC`  
+ [in] *pDC*  
   
 ### <a name="return-value"></a>Valore restituito  
   
@@ -176,7 +176,7 @@ int GetZoomIncrement() const;
  L'incremento di zoom per il controllo dispositivo di scorrimento.  
   
 ##  <a name="haszoombuttons"></a>  CMFCRibbonSlider::HasZoomButtons  
- Specifica se il dispositivo di scorrimento contiene pulsanti zoom.  
+ Specifica se il dispositivo di scorrimento è disponibili pulsanti zoom.  
   
 ```  
 BOOL HasZoomButtons() const;  
@@ -193,7 +193,7 @@ virtual void OnDraw(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `pDC`  
+ [in] *pDC*  
   
 ### <a name="remarks"></a>Note  
   
@@ -207,10 +207,10 @@ void SetPos(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `nPos`  
+ [in] *nPos*  
  Specifica la posizione da impostare per il dispositivo di scorrimento. La posizione è relativo all'inizio del dispositivo di scorrimento.  
   
- [in] `bRedraw`  
+ [in] *bRedraw*  
  Se `TRUE`, il dispositivo di scorrimento viene ridisegnato.  
   
 ##  <a name="setrange"></a>  CMFCRibbonSlider::SetRange  
@@ -223,10 +223,10 @@ void SetRange(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `nMin`  
+ [in] *nMin*  
  Specifica il valore minimo del controllo dispositivo di scorrimento.  
   
- [in] `nMax`  
+ [in] *nMax*  
  Specifica il valore massimo del controllo dispositivo di scorrimento.  
   
 ### <a name="remarks"></a>Note  
@@ -240,7 +240,7 @@ void SetZoomButtons(BOOL bSet=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in]. `bSet`  
+ [in]. *bSet*  
  `TRUE` Per visualizzare pulsanti zoom; `FALSE` per nasconderle.  
   
 ##  <a name="setzoomincrement"></a>  CMFCRibbonSlider::SetZoomIncrement  
@@ -251,7 +251,7 @@ void SetZoomIncrement(int nZoomIncrement);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `nZoomIncrement`  
+ [in] *nZoomIncrement*  
  Specifica l'incremento del controllo dispositivo di scorrimento dello zoom.  
   
 ## <a name="see-also"></a>Vedere anche  

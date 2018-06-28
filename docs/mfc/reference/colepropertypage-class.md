@@ -48,14 +48,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e8328fb4987044c5a28b1a6a6ce19c674039dea9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a1b98cd7bfb6983a4133e0bb48e3c75b8a973ddf
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33376210"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042547"
 ---
-# <a name="colepropertypage-class"></a>Classe COlePropertyPage
+# <a name="colepropertypage-class"></a>COlePropertyPage (classe)
 Utilizzata per visualizzare le proprietà di un controllo personalizzato in un'interfaccia grafica, simile a una finestra di dialogo.  
   
 ## <a name="syntax"></a>Sintassi  
@@ -77,9 +77,9 @@ class AFX_NOVTABLE COlePropertyPage : public CDialog
 |Nome|Descrizione|  
 |----------|-----------------|  
 |[COlePropertyPage::GetControlStatus](#getcontrolstatus)|Indica se l'utente ha modificato il valore nel controllo.|  
-|[COlePropertyPage::GetObjectArray](#getobjectarray)|Restituisce la matrice di oggetti in corso di modifica dalla pagina delle proprietà.|  
+|[COlePropertyPage::GetObjectArray](#getobjectarray)|Restituisce la matrice di oggetti in fase di modifica per la pagina delle proprietà.|  
 |[COlePropertyPage::GetPageSite](#getpagesite)|Restituisce un puntatore alla pagina delle proprietà `IPropertyPageSite` interfaccia.|  
-|[COlePropertyPage::IgnoreApply](#ignoreapply)|Determina quali controlli non abilitare il pulsante Applica.|  
+|[COlePropertyPage::IgnoreApply](#ignoreapply)|Determina quali controlli non si abilita il pulsante Applica.|  
 |[COlePropertyPage::IsModified](#ismodified)|Indica se l'utente ha modificato la pagina delle proprietà.|  
 |[COlePropertyPage::OnEditProperty](#oneditproperty)|Chiamato dal framework quando l'utente modifica una proprietà.|  
 |[COlePropertyPage::OnHelp](#onhelp)|Chiamato dal framework quando l'utente richiama la Guida.|  
@@ -95,7 +95,7 @@ class AFX_NOVTABLE COlePropertyPage : public CDialog
 ## <a name="remarks"></a>Note  
  Ad esempio, una pagina delle proprietà può includere un controllo di modifica che consente all'utente di visualizzare e modificare proprietà etichetta del controllo.  
   
- Ogni proprietà personalizzate o predefinite del controllo può avere un controllo di finestra di dialogo che consente l'utente del controllo visualizzare il valore della proprietà corrente e, se necessario, modificare tale valore.  
+ Ogni proprietà personalizzate o predefinite del controllo può avere un controllo di finestra di dialogo che consente l'utente del controllo visualizzare il valore corrente della proprietà e modificare tale valore se necessario.  
   
  Per ulteriori informazioni sull'utilizzo `COlePropertyPage`, vedere l'articolo [controlli ActiveX: pagine delle proprietà](../../mfc/mfc-activex-controls-property-pages.md).  
   
@@ -130,7 +130,7 @@ COlePropertyPage(
  ID risorsa della didascalia della pagina delle proprietà.  
   
 ### <a name="remarks"></a>Note  
- Quando si implementa una sottoclasse di `COlePropertyPage`, deve utilizzare il costruttore della sottoclasse il `COlePropertyPage` costruttore per identificare la risorsa modello di finestra di dialogo in cui è basata la pagina delle proprietà e la risorsa di stringa che contiene la didascalia.  
+ Quando si implementa una sottoclasse `COlePropertyPage`, deve utilizzare il costruttore della sottoclasse il `COlePropertyPage` costruttore per identificare la risorsa modello di finestra di dialogo in cui si basa la pagina delle proprietà e la risorsa stringa che contiene la didascalia.  
   
 ##  <a name="getcontrolstatus"></a>  COlePropertyPage::GetControlStatus  
  Determina se l'utente ha modificato il valore del controllo pagina proprietà con l'ID di risorsa specificata.  
@@ -140,28 +140,28 @@ BOOL GetControlStatus(UINT nID);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `nID`  
+ *nID*  
  ID di risorsa di un controllo pagina delle proprietà.  
   
 ### <a name="return-value"></a>Valore restituito  
  **TRUE** se il valore del controllo è stato modificato; in caso contrario **FALSE**.  
   
 ##  <a name="getobjectarray"></a>  COlePropertyPage::GetObjectArray  
- Restituisce la matrice di oggetti in corso di modifica dalla pagina delle proprietà.  
+ Restituisce la matrice di oggetti in fase di modifica per la pagina delle proprietà.  
   
 ```  
 LPDISPATCH* GetObjectArray(ULONG* pnObjects);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `pnObjects`  
- Puntatore a un unsigned long integer che riceve il numero di oggetti in corso di modifica dalla pagina.  
+ *pnObjects*  
+ Puntatore a un unsigned long integer che riceve il numero di oggetti in fase di modifica dalla pagina.  
   
 ### <a name="return-value"></a>Valore restituito  
  Puntatore a una matrice di `IDispatch` puntatori, che vengono utilizzati per accedere alle proprietà di ogni controllo nella pagina delle proprietà. Il chiamante non deve rilasciare questi puntatori di interfaccia.  
   
 ### <a name="remarks"></a>Note  
- Ogni oggetto pagina delle proprietà gestisce una matrice di puntatori al `IDispatch` interfacce degli oggetti in corso di modifica dalla pagina. La funzione imposta relativo `pnObjects` argomento per il numero di elementi della matrice e restituisce un puntatore al primo elemento della matrice.  
+ Ogni oggetto pagina delle proprietà gestisce una matrice di puntatori al `IDispatch` interfacce degli oggetti in fase di modifica dalla pagina. La funzione imposta il relativo *pnObjects* argomento per il numero di elementi della matrice e restituisce un puntatore al primo elemento della matrice.  
   
 ##  <a name="getpagesite"></a>  COlePropertyPage::GetPageSite  
  Ottiene un puntatore alla pagina delle proprietà `IPropertyPageSite` interfaccia.  
@@ -177,18 +177,18 @@ LPPROPERTYPAGESITE GetPageSite();
  Controlli e contenitori collaborino in modo che gli utenti possono esplorare e modificare le proprietà del controllo. Il controllo include pagine delle proprietà, ognuno dei quali è un oggetto OLE che consente all'utente di modificare un set di proprietà correlato. Il contenitore fornisce un frame di proprietà che consente di visualizzare le pagine delle proprietà. Per ogni pagina, la finestra delle proprietà fornisce un sito di pagina, che supporta il `IPropertyPageSite` interfaccia.  
   
 ##  <a name="ignoreapply"></a>  COlePropertyPage::IgnoreApply  
- Determina quali controlli non abilitare il pulsante Applica.  
+ Determina quali controlli non si abilita il pulsante Applica.  
   
 ```  
 void IgnoreApply(UINT nID);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `nID`  
- ID del controllo verrà ignorato.  
+ *nID*  
+ ID del controllo che verranno ignorati.  
   
 ### <a name="remarks"></a>Note  
- Pulsante Applica della pagina delle proprietà è abilitato solo se sono stati modificati i valori dei controlli di pagina delle proprietà. Utilizzare questa funzione per specificare i controlli che non causano il pulsante Applica deve essere abilitata quando cambiano i relativi valori.  
+ Pulsante Applica della pagina delle proprietà è abilitato solo se sono stati modificati i valori dei controlli di pagina di proprietà. Utilizzare questa funzione per specificare i controlli che non causano il pulsante Applica venga abilitato quando i relativi valori cambiano.  
   
 ##  <a name="ismodified"></a>  COlePropertyPage::IsModified  
  Determina se l'utente ha modificato i valori nella pagina delle proprietà.  
@@ -201,15 +201,15 @@ BOOL IsModified();
  **TRUE** se la pagina delle proprietà è stata modificata.  
   
 ##  <a name="oneditproperty"></a>  COlePropertyPage::OnEditProperty  
- Il framework chiama questa funzione quando è una proprietà specifica da modificare.  
+ Il framework chiama questa funzione quando una proprietà specifica per essere modificato.  
   
 ```  
 virtual BOOL OnEditProperty(DISPID dispid);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `dispid`  
- ID dispatch della proprietà da modificare.  
+ *DISPID*  
+ ID dispatch della proprietà in fase di modifica.  
   
 ### <a name="return-value"></a>Valore restituito  
  L'implementazione predefinita restituisce **FALSE**. Esegue l'override di questa funzione devono restituire **TRUE**.  
@@ -232,7 +232,7 @@ virtual BOOL OnHelp(LPCTSTR lpszHelpDir);
  L'implementazione predefinita restituisce **FALSE**.  
   
 ### <a name="remarks"></a>Note  
- Eseguire l'override se la pagina delle proprietà è necessario eseguire alcuna azione speciale quando l'utente accede alla Guida. L'implementazione predefinita non esegue alcuna operazione e restituisce **FALSE**, che indica al framework di chiamare WinHelp.  
+ Eseguire l'override se la pagina delle proprietà deve eseguire alcuna azione speciale quando l'utente accede alla Guida. L'implementazione predefinita non esegue alcuna operazione e restituisce **FALSE**, che indica al framework di chiamare WinHelp.  
   
 ##  <a name="oninitdialog"></a>  COlePropertyPage::OnInitDialog  
  Il framework chiama questa funzione quando viene inizializzato finestra di dialogo della pagina delle proprietà.  
@@ -245,7 +245,7 @@ virtual BOOL OnInitDialog();
  L'implementazione predefinita restituisce **FALSE**.  
   
 ### <a name="remarks"></a>Note  
- Eseguire l'override se qualsiasi azione speciale è necessaria quando viene inizializzata la finestra di dialogo. L'implementazione predefinita chiama `CDialog::OnInitDialog` e restituisce **FALSE**.  
+ Eseguirne l'override se è necessaria alcuna azione speciale quando la finestra di dialogo viene inizializzato. L'implementazione predefinita chiama `CDialog::OnInitDialog` e restituisce **FALSE**.  
   
 ##  <a name="onobjectschanged"></a>  COlePropertyPage::OnObjectsChanged  
  Chiamato dal framework quando viene scelto un controllo OLE diverso con nuove proprietà.  
@@ -255,19 +255,19 @@ virtual void OnObjectsChanged();
 ```  
   
 ### <a name="remarks"></a>Note  
- Quando si visualizzano le proprietà di un controllo OLE nell'ambiente di sviluppo, una finestra di dialogo non modale viene utilizzato per visualizzare le pagine delle proprietà. Se un altro controllo è selezionato, è necessario visualizzare un set diverso di pagine delle proprietà per il nuovo set di proprietà. Il framework chiama questa funzione per notificare la pagina delle proprietà della modifica.  
+ Quando si visualizzano le proprietà di un controllo OLE nell'ambiente di sviluppo, una finestra di dialogo non modale consente di visualizzare le pagine delle proprietà. Se un altro controllo è selezionato, è necessario visualizzare un set diverso di pagine delle proprietà per il nuovo set di proprietà. Il framework chiama questa funzione per notificare la pagina delle proprietà della modifica.  
   
  Eseguire l'override di questa funzione per ricevere una notifica di questa azione ed eseguire eventuali azioni speciali.  
   
 ##  <a name="onsetpagesite"></a>  COlePropertyPage:: OnSetPageSite  
- Il framework chiama questa funzione quando la finestra delle proprietà fornisce il sito di pagina della pagina delle proprietà.  
+ Il framework chiama questa funzione quando la finestra delle proprietà fornisce sito pagina della pagina delle proprietà.  
   
 ```  
 virtual void OnSetPageSite();
 ```  
   
 ### <a name="remarks"></a>Note  
- L'implementazione predefinita carica didascalia della pagina e tenta di determinare le dimensioni della pagina dalla risorsa finestra di dialogo. Eseguire l'override di questa funzione se la pagina delle proprietà richiede ulteriori azioni; l'override deve chiamare l'implementazione della classe di base.  
+ L'implementazione predefinita carica didascalia della pagina e tenta di determinare le dimensioni della pagina dalla risorsa finestra di dialogo. Eseguire l'override di questa funzione se la pagina delle proprietà è richiesta alcuna azione ulteriore; l'override deve chiamare l'implementazione della classe di base.  
   
 ##  <a name="setcontrolstatus"></a>  COlePropertyPage::SetControlStatus  
  Modifica lo stato di un controllo pagina delle proprietà.  
@@ -279,11 +279,11 @@ BOOL SetControlStatus(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `nID`  
+ *nID*  
  Contiene l'ID di un controllo pagina delle proprietà.  
   
- `bDirty`  
- Specifica se un campo della pagina delle proprietà è stato modificato. Impostare su **TRUE** se il campo è stato modificato, **FALSE** se non è stato modificato.  
+ *bDirty*  
+ Specifica se un campo della pagina delle proprietà è stato modificato. Impostato su **TRUE** se il campo è stato modificato, **FALSE** se non è stato modificato.  
   
 ### <a name="return-value"></a>Valore restituito  
  **TRUE**, se il controllo specificato è stata impostata; in caso contrario **FALSE**.  
@@ -303,7 +303,7 @@ void SetDialogResource(HGLOBAL hDialog);
  Handle di risorsa finestra di dialogo della pagina delle proprietà.  
   
 ##  <a name="sethelpinfo"></a>  COlePropertyPage::SetHelpInfo  
- Specifica il contesto della Guida per la pagina delle proprietà, il nome del file della Guida e informazioni sulla descrizione comandi.  
+ Specifica informazioni sulla descrizione comandi, il nome del file della Guida e il contesto della Guida per la pagina delle proprietà.  
   
 ```  
 void SetHelpInfo(
@@ -314,9 +314,9 @@ void SetHelpInfo(
   
 ### <a name="parameters"></a>Parametri  
  *lpszDocString*  
- Stringa contenente informazioni della Guida breve per la visualizzazione in una barra di stato o un altro percorso.  
+ Stringa contenente le informazioni della Guida breve per la visualizzazione in una barra di stato o un altro percorso.  
   
- `lpszHelpFile`  
+ *lpszHelpFile*  
  Nome del file della Guida della pagina delle proprietà.  
   
  *dwHelpContext*  
@@ -330,11 +330,11 @@ void SetModifiedFlag(BOOL bModified = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `bModified`  
- Specifica il nuovo valore per i flag di modifica della pagina delle proprietà.  
+ *bModified*  
+ Specifica il nuovo valore per flag modificato della pagina delle proprietà.  
   
 ##  <a name="setpagename"></a>  COlePropertyPage::SetPageName  
- Imposta il nome della pagina delle proprietà, che in genere consentirà di visualizzare la finestra delle proprietà nella scheda della pagina.  
+ Imposta il nome della pagina delle proprietà, che in genere visualizzerà la finestra delle proprietà nella scheda della pagina.  
   
 ```  
 void SetPageName(LPCTSTR lpszPageName);

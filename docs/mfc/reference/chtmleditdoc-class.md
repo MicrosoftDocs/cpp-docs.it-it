@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: de452365a02b69798c62e2eecfd8051afcf08bb8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 86d8cf9b3011865fac58515fb3429a363dd5946f
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33366971"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038959"
 ---
 # <a name="chtmleditdoc-class"></a>Classe CHtmlEditDoc
 Con [CHtmlEditView](../../mfc/reference/chtmleditview-class.md), fornisce la funzionalità della piattaforma di modifica WebBrowser nel contesto dell'architettura documento / visualizzazione MFC.  
@@ -83,7 +83,7 @@ virtual CHtmlEditView* GetView() const;
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- Restituisce un puntatore al documento **CHtmlEditView** oggetto.  
+ Restituisce un puntatore per il documento **CHtmlEditView** oggetto.  
   
 ##  <a name="ismodified"></a>  CHtmlEditDoc::IsModified  
  Restituisce se WebBrowser (controllo) della vista associata contiene un documento che è stato modificato dall'utente.  
@@ -100,7 +100,7 @@ virtual BOOL OpenURL(LPCTSTR lpszURL);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `lpszURL`  
+ *lpszURL*  
  URL da aprire.  
   
 ### <a name="return-value"></a>Valore restituito  

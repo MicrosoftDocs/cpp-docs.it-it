@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8c02c2590e4143460a2cd89bb2b7e7e167c92c0e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8123db8e4a8dfba94e469881af8fbb2ecb40e2a0
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370809"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041981"
 ---
 # <a name="cmfccustomcolorspropertypage-class"></a>Classe CMFCCustomColorsPropertyPage
-Rappresenta una pagina delle proprietà che è possibile selezionare i colori personalizzati in una finestra di dialogo colore.  
+Rappresenta una pagina delle proprietà che può selezionare colori personalizzati in una finestra di dialogo colore.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -53,10 +53,10 @@ class CMFCCustomColorsPropertyPage : public CPropertyPage
 |[CMFCCustomColorsPropertyPage::Setup](#setup)|Imposta i componenti di colore della pagina delle proprietà.|  
   
 ### <a name="remarks"></a>Note  
- Il `CMFCColorDialog` Usa questa classe per visualizzare la pagina delle proprietà colore personalizzato. Per ulteriori informazioni su `CMFCColorDialog`, vedere [CMFCColorDialog classe](../../mfc/reference/cmfccolordialog-class.md).  
+ Il `CMFCColorDialog` classe utilizza questa classe per visualizzare la pagina delle proprietà colore personalizzato. Per ulteriori informazioni `CMFCColorDialog`, vedere [CMFCColorDialog classe](../../mfc/reference/cmfccolordialog-class.md).  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio riportato di seguito viene illustrato come costruire un `CMFCCustomColorsPropertyPage` e impostare i componenti di colore della pagina delle proprietà.  
+ Nell'esempio seguente viene illustrato come costruire un `CMFCCustomColorsPropertyPage` dell'oggetto e impostare i componenti di colore della pagina delle proprietà.  
   
  [!code-cpp[NVC_MFC_RibbonApp#35](../../mfc/reference/codesnippet/cpp/cmfccustomcolorspropertypage-class_1.cpp)]  
   
@@ -91,12 +91,12 @@ void Setup(
 |||  
 |-|-|  
 |Parametro|Descrizione|  
-|[in] `R`|Il componente rosso del valore RGB.|  
-|[in] `G`|Il componente verde del valore RGB.|  
-|[in] `B`|Il componente blu del valore RGB.|  
+|[in] *R*|Il componente rosso del valore RGB.|  
+|[in] *G*|Il componente verde del valore RGB.|  
+|[in] *B*|Il componente blu del valore RGB.|  
   
 ### <a name="remarks"></a>Note  
- Questo metodo aggiorna RGB corrente e i formato HLS (tonalità, luminosità e saturazione) colore valori associati della pagina delle proprietà. Il [CMFCColorDialog::SetPageTwo](../../mfc/reference/cmfccolordialog-class.md#setpagetwo) metodo chiama questo metodo quando il framework Inizializza la finestra di dialogo colore o l'utente preme il pulsante sinistro del mouse. Per ulteriori informazioni su `CMFCColorDialog`, vedere [CMFCColorDialog classe](../../mfc/reference/cmfccolordialog-class.md).  
+ Questo metodo aggiorna RGB corrente e i formato HLS (tonalità, luminosità e saturazione) colore valori associati della pagina delle proprietà. Il [CMFCColorDialog::SetPageTwo](../../mfc/reference/cmfccolordialog-class.md#setpagetwo) metodo chiama questo metodo quando il framework Inizializza la finestra di dialogo colore o l'utente preme il pulsante sinistro del mouse. Per ulteriori informazioni `CMFCColorDialog`, vedere [CMFCColorDialog classe](../../mfc/reference/cmfccolordialog-class.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Grafico delle gerarchie](../../mfc/hierarchy-chart.md)   

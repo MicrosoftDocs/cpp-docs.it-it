@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1d8aebd796e0edb587e18db910df808fa349ca37
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 07b20d43c53fc0f485d33f71805e73f885c1200a
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33371673"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041750"
 ---
 # <a name="cmfcribbonminitoolbar-class"></a>Classe CMFCRibbonMiniToolBar
 Implementa una barra degli strumenti popup contestuale.  
@@ -98,17 +98,17 @@ void SetCommands(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `pRibbonBar`  
+ [in] *pRibbonBar*  
  La barra multifunzione che la barra Cerca i pulsanti da visualizzare.  
   
- [in] `lstCommands`  
- L'elenco di comandi da visualizzare nella barra di formattazione rapida. Tutte le categorie della barra multifunzione vengono eseguite la ricerca i pulsanti associati.  
+ [in] *lstCommands*  
+ L'elenco di comandi da visualizzare nella barra degli strumenti formattazione rapida. Tutte le categorie della barra multifunzione vengono effettuata la ricerca per trovare i pulsanti associati.  
   
 ### <a name="remarks"></a>Note  
  Utilizzare questa funzione per impostare l'elenco di comandi da visualizzare nella barra di formattazione rapida.  
   
 ### <a name="example"></a>Esempio  
- Nell'esempio seguente viene illustrato come utilizzare il `SetCommands` metodo la `CMFCRibbonMiniToolBar` classe. Questo frammento di codice fa parte di [esempio MS Office 2007 Demo](../../visual-cpp-samples.md).  
+ Nell'esempio seguente viene illustrato come utilizzare il `SetCommands` metodo la `CMFCRibbonMiniToolBar` classe. Questo frammento di codice fa parte il [esempio di MS Office 2007 Demo](../../visual-cpp-samples.md).  
   
  [!code-cpp[NVC_MFC_MSOffice2007Demo#9](../../mfc/reference/codesnippet/cpp/cmfcribbonminitoolbar-class_1.cpp)]  
   
@@ -122,10 +122,10 @@ BOOL Show(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `x`  
+ [in] *x*  
  Specifica la posizione orizzontale della barra di formattazione rapida in coordinate dello schermo.  
   
- [in] `y`  
+ [in] *y*  
  Specifica la posizione verticale della barra di formattazione rapida in coordinate dello schermo.  
   
 ### <a name="return-value"></a>Valore restituito  
@@ -143,23 +143,23 @@ BOOL ShowWithContextMenu(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `x`  
+ [in] *x*  
  Specifica la posizione orizzontale del menu di scelta rapida in coordinate dello schermo.  
   
- [in] `y`  
+ [in] *y*  
  Specifica la posizione verticale del menu di scelta rapida in coordinate dello schermo.  
   
- [in] `uiMenuResID`  
+ [in] *uiMenuResID*  
  Specifica l'ID di risorsa di menu di scelta rapida da visualizzare.  
   
- [in] `pWndOwner`  
- Identifica la finestra che riceve messaggi dal menu di scelta rapida.  
+ [in] *pWndOwner*  
+ Identifica la finestra, che riceve messaggi dal menu di scelta rapida.  
   
 ### <a name="return-value"></a>Valore restituito  
  `TRUE` Se il menu di scelta rapida è stato visualizzato correttamente. in caso contrario, `FALSE`.  
   
 ### <a name="remarks"></a>Note  
- Utilizzare questa funzione per visualizzare una barra di formattazione rapida che dispone di un menu di scelta rapida. Menu di scelta rapida è posizionata 15 pixel sotto la barra di formattazione rapida.  
+ Utilizzare questa funzione per visualizzare una barra di formattazione rapida con un menu di scelta rapida. Menu di scelta rapida è posizionata 15 pixel sotto la barra di formattazione rapida.  
   
 ##  <a name="iscontextmenumode"></a>  CMFCRibbonMiniToolBar::IsContextMenuMode  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  

@@ -34,15 +34,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 985cd4011dbb1ea8ccad7cd40c81833dd5507f11
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6ff84edab9166072e04637bb82dfc52c42f1722e
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33371797"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040103"
 ---
 # <a name="cmfcmaskededit-class"></a>Classe CMFCMaskedEdit
-La `CMFCMaskedEdit` classe supporta un controllo di modifica mascherato, che convalida l'input utente rispetto a una maschera e visualizza i risultati convalidati in base a un modello.  
+Il `CMFCMaskedEdit` classe supporta un controllo di modifica mascherato, che convalida l'input utente rispetto a una maschera e visualizza i risultati convalidati in base a un modello.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -65,37 +65,37 @@ class CMFCMaskedEdit : public CEdit
 |----------|-----------------|  
 |[CMFCMaskedEdit::DisableMask](#disablemask)|Disabilita la convalida dell'input utente.|  
 |[CMFCMaskedEdit::EnableGetMaskedCharsOnly](#enablegetmaskedcharsonly)|Specifica se il `GetWindowText` che consente di recuperare solo i caratteri mascherati.|  
-|[CMFCMaskedEdit::EnableMask](#enablemask)|Controllo di modifica consente di inizializzare il mascherato.|  
-|[CMFCMaskedEdit::EnableSelectByGroup](#enableselectbygroup)|Specifica se il controllo MaskedEdit consente di selezionare determinati gruppi di input dell'utente o a tutto l'input utente.|  
-|[CMFCMaskedEdit::EnableSetMaskedCharsOnly](#enablesetmaskedcharsonly)|Specifica se il testo viene convalidato solo caratteri mascherati, o in base alla maschera intera.|  
+|[CMFCMaskedEdit::EnableMask](#enablemask)|Controllo di modifica consente di inizializzare il mascherati.|  
+|[CMFCMaskedEdit::EnableSelectByGroup](#enableselectbygroup)|Specifica se il controllo MaskedEdit consente di selezionare determinati gruppi di input dell'utente o di input di tutti gli utenti.|  
+|[CMFCMaskedEdit::EnableSetMaskedCharsOnly](#enablesetmaskedcharsonly)|Specifica se il testo viene convalidato sulla base solo mascherato caratteri o in base alla maschera intera.|  
 |`CMFCMaskedEdit::GetThisClass`|Usato dal framework per ottenere un puntatore per il [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) oggetto associato a questo tipo di classe.|  
 |[CMFCMaskedEdit::GetWindowText](#getwindowtext)|Recupera convalidati dal controllo MaskedEdit.|  
 |[CMFCMaskedEdit::SetValidChars](#setvalidchars)|Specifica una stringa di caratteri validi che l'utente può immettere.|  
-|[CMFCMaskedEdit::SetWindowText](#setwindowtext)|Consente di visualizzare un prompt dei comandi del controllo di modifica mascherato.|  
+|[CMFCMaskedEdit::SetWindowText](#setwindowtext)|Consente di visualizzare un prompt dei comandi nel controllo di modifica mascherato.|  
   
 ### <a name="protected-methods"></a>Metodi protetti  
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[CMFCMaskedEdit::IsMaskedChar](#ismaskedchar)|Chiamato dal framework per convalidare il carattere specificato con il carattere corrispondente.|  
+|[CMFCMaskedEdit::IsMaskedChar](#ismaskedchar)|Chiamata eseguita dal framework per convalidare il carattere specificato con il carattere corrispondente.|  
   
 ## <a name="remarks"></a>Note  
- Eseguire i passaggi seguenti per utilizzare il `CMFCMaskedEdit` controllo nell'applicazione:  
+ Eseguire la procedura seguente per utilizzare il `CMFCMaskedEdit` controllo nell'applicazione:  
   
  1. Incorporare un `CMFCMaskedEdit` oggetto nella classe di finestra.  
   
  2. Chiamare il [CMFCMaskedEdit::EnableMask](#enablemask) metodo per specificare il filtro.  
   
- 3. Chiamare il [CMFCMaskedEdit::SetValidChars](#setvalidchars) per specificare l'elenco di caratteri validi.  
+ 3. Chiamare il [CMFCMaskedEdit::SetValidChars](#setvalidchars) metodo per specificare l'elenco di caratteri validi.  
   
  4. Chiamare il [CMFCMaskedEdit::SetWindowText](#setwindowtext) metodo per specificare il testo predefinito per il controllo MaskedEdit.  
   
  5. Chiamare il [CMFCMaskedEdit::GetWindowText](#getwindowtext) metodo per recuperare il testo convalidato.  
   
- Se non si chiama uno o più metodi per inizializzare la maschera, i caratteri validi e il testo predefinito, il controllo MaskedEdit si comporta esattamente come si comporta il controllo di modifica standard.  
+ Se non si chiama uno o più metodi per inizializzare la maschera di caratteri validi e testo predefinito, il controllo MaskedEdit si comporta esattamente come si comporta il controllo di modifica standard.  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio riportato di seguito viene illustrato come impostare una maschera (ad esempio un numero di telefono) usando il `EnableMask` metodo per creare la maschera per il controllo MaskedEdit, il `SetValidChars` per specificare una stringa di caratteri validi che l'utente può immettere e (metodo)`SetWindowText` metodo per visualizzare un prompt dei comandi in con la maschera di controllo di modifica. In questo esempio fa parte di [esempio nuovi controlli](../../visual-cpp-samples.md).  
+ Nell'esempio seguente viene illustrato come impostare una maschera (ad esempio un numero di telefono) usando il `EnableMask` metodo per creare la maschera per il controllo MaskedEdit, il `SetValidChars` metodo per specificare una stringa di caratteri validi che l'utente può immettere e `SetWindowText` metodo per visualizzare un prompt dei comandi nel mascherati controllo edit. In questo esempio fa parte il [esempio di nuovi controlli](../../visual-cpp-samples.md).  
   
  [!code-cpp[NVC_MFC_NewControls#11](../../mfc/reference/codesnippet/cpp/cmfcmaskededit-class_1.h)]  
 [!code-cpp[NVC_MFC_NewControls#12](../../mfc/reference/codesnippet/cpp/cmfcmaskededit-class_2.cpp)]  
@@ -132,14 +132,14 @@ void EnableGetMaskedCharsOnly(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `bEnable`  
+ [in] *bAttivare il*  
  `TRUE` Per specificare che il [CMFCMaskedEdit::GetWindowText](#getwindowtext) metodo recuperare mascherato solo caratteri; `FALSE` per specificare che il metodo di recuperare l'intero testo. Il valore predefinito è `TRUE`.  
   
 ### <a name="remarks"></a>Note  
- Utilizzare questo metodo per abilitare il recupero dei caratteri mascherati. Creare quindi un controllo di modifica mascherato che corrisponde al numero di telefono, ad esempio (425) 555-0187. Se si chiama il `GetWindowText` (metodo), restituisce "4255550187". Se si disabilita il recupero dei caratteri mascherati, il `GetWindowText` metodo restituisce il testo che viene visualizzato nel controllo di modifica, ad esempio "(425) 555-0187".  
+ Utilizzare questo metodo per abilitare il recupero dei caratteri mascherati. Creare quindi un controllo di modifica mascherato che corrisponde al numero di telefono, ad esempio (425) 555-0187. Se si chiama il `GetWindowText` metodo, viene restituito "4255550187". Se si disabilita il recupero dei caratteri mascherati, il `GetWindowText` metodo restituisce il testo che viene visualizzato nel controllo di modifica, ad esempio "(425) 555-0187".  
   
 ##  <a name="enablemask"></a>  CMFCMaskedEdit::EnableMask  
- Controllo di modifica consente di inizializzare il mascherato.  
+ Controllo di modifica consente di inizializzare il mascherati.  
   
 ```  
 void EnableMask(
@@ -150,28 +150,28 @@ void EnableMask(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `lpszMask`  
- Una stringa della maschera che specifica il tipo di carattere che può essere visualizzati in ogni posizione in input dell'utente. La lunghezza del `lpszInputTemplate` e `lpszMask` le stringhe di parametri devono essere uguali. Vedere la sezione Osservazioni per ulteriori informazioni sui caratteri maschera.  
+ [in] *lpszMask*  
+ Una stringa della maschera che specifica il tipo di carattere che può essere visualizzati in ogni posizione in input dell'utente. La lunghezza del *lpszInputTemplate* e *lpszMask* stringhe dei parametri devono essere uguali. Vedere la sezione Osservazioni per informazioni dettagliate sugli caratteri maschera.  
   
- [in] `lpszInputTemplate`  
- Una stringa di modello di maschera che specifica che il valore letterale di caratteri che può essere visualizzati in ogni posizione in input dell'utente. Utilizzare il carattere di sottolineatura ('_') come segnaposto carattere. La lunghezza del `lpszInputTemplate` e `lpszMask` le stringhe di parametri devono essere uguali.  
+ [in] *lpszInputTemplate*  
+ Una stringa di modello di maschera che specifica che il valore letterale di caratteri che può essere visualizzati in ogni posizione in input dell'utente. Utilizzare il carattere di sottolineatura ('_') come segnaposto carattere. La lunghezza del *lpszInputTemplate* e *lpszMask* stringhe dei parametri devono essere uguali.  
   
- [in] `chMaskInputTemplate`  
- Un carattere che sostituisce il framework per ogni carattere non valido nell'input dell'utente. Il valore predefinito di questo parametro è un carattere di sottolineatura ('_').  
+ [in] *chMaskInputTemplate*  
+ Un carattere predefinito da utilizzare in sostituzione il framework per ogni carattere non valido nell'input dell'utente. Il valore predefinito di questo parametro è un carattere di sottolineatura ('_').  
   
- [in] `lpszValid`  
+ [in] *lpszValid*  
  Stringa che contiene un set di caratteri validi. `NULL` indica che tutti i caratteri sono validi. Il valore predefinito di questo parametro è `NULL`.  
   
 ### <a name="remarks"></a>Note  
- Utilizzare questo metodo per creare la maschera per il controllo di modifica mascherato. Derivare una classe dal `CMFCMaskedEdit` classe ed eseguire l'override di [CMFCMaskedEdit::IsMaskedChar](#ismaskedchar) metodo da utilizzare il proprio codice per l'elaborazione di maschera personalizzata.  
+ Utilizzare questo metodo per creare la maschera per il controllo di modifica mascherato. Derivare una classe dal `CMFCMaskedEdit` classe ed eseguire l'override di [CMFCMaskedEdit::IsMaskedChar](#ismaskedchar) metodo da usare il proprio codice per l'elaborazione di maschera personalizzata.  
   
  Nella tabella seguente elenca i caratteri di maschera predefinito:  
   
 |Carattere maschera|Definizione|  
 |--------------------|----------------|  
 |D|Cifra.|  
-|d|Numero o spazio.|  
-|+|Più (+) ('+ '), meno ('-'), o uno spazio.|  
+|d|Cifra o lo spazio.|  
+|+|Più (+) ('+ ') meno ('-'), o uno spazio.|  
 |C|Carattere alfabetico.|  
 |c|Carattere alfabetico o uno spazio.|  
 |A|Carattere alfanumerico.|  
@@ -179,20 +179,20 @@ void EnableMask(
 |*|Un carattere stampabile.|  
   
 ##  <a name="enableselectbygroup"></a>  CMFCMaskedEdit::EnableSelectByGroup  
- Specifica se il controllo MaskedEdit consente all'utente di selezionare determinati gruppi input o tutti gli input.  
+ Specifica se il controllo MaskedEdit consente all'utente di selezionare i gruppi particolare input o tutti gli input.  
   
 ```  
 void EnableSelectByGroup(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `bEnable`  
+ [in] *bAttivare il*  
  `TRUE` Per selezionare solo i gruppi; `FALSE` per selezionare l'intero testo. Il valore predefinito è `TRUE`.  
   
 ### <a name="remarks"></a>Note  
- Utilizzare questa funzione per specificare se il controllo MaskedEdit consente all'utente di selezionare l'intero testo o di gruppo.  
+ Utilizzare questa funzione per specificare se il controllo MaskedEdit consente agli utenti la selezione per gruppo o l'intero testo.  
   
- Per impostazione predefinita, la selezione dal gruppo è abilitata. In questo caso, l'utente può selezionare solo continui gruppi di caratteri validi.  
+ Per impostazione predefinita, la selezione per gruppo è abilitata. In questo caso l'utente può selezionare solo continui gruppi di caratteri validi.  
   
  Ad esempio, si potrebbe utilizzare il seguente controllo MaskedEdit per convalidare un numero di telefono:  
   
@@ -208,7 +208,7 @@ void EnableSelectByGroup(BOOL bEnable=TRUE);
   
  `m_wndMaskEdit.SetWindowText(_T("(425) 555-0187")); // Prompt`  
   
- Se è attivata la selezione dal gruppo, l'utente può recuperare solo il "425", "555" o "0187" gruppi di stringa. Se la selezione del gruppo viene disabilitata l'utente può recuperare il testo intero del numero di telefono: "(425) 555-0187".  
+ Se è abilitata la selezione per gruppo, l'utente può recuperare solo il "425", "555" o "0187" stringa gruppi. Se la selezione del gruppo viene disabilitata l'utente può recuperare l'intero testo del numero di telefono: "(425) 555-0187".  
   
 ##  <a name="enablesetmaskedcharsonly"></a>  CMFCMaskedEdit::EnableSetMaskedCharsOnly  
  Specifica se il testo viene convalidato solo i caratteri mascherati, o in base alla maschera intera.  
@@ -218,7 +218,7 @@ void EnableSetMaskedCharsOnly(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `bEnable`  
+ [in] *bAttivare il*  
  `TRUE` per convalidare l'utente input in base a mascherato solo caratteri; `FALSE` per convalidare l'intera maschera. Il valore predefinito è `TRUE`.  
   
 ##  <a name="getwindowtext"></a>  CMFCMaskedEdit::GetWindowText  
@@ -233,25 +233,25 @@ void GetWindowText(CString& rstrString) const;
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [out] `lpszStringBuf`  
- Un puntatore a un buffer che riceve il testo dal controllo di modifica.  
+ [out] *lpszStringBuf*  
+ Puntatore a un buffer che riceve il testo dal controllo di modifica.  
   
- [in] `nMaxCount`  
+ [in] *nMaxCount*  
  Numero massimo di caratteri da ricevere.  
   
- [out] `rstrString`  
+ [out] *rstrString*  
  Un riferimento all'oggetto stringa che riceve il testo dal controllo di modifica.  
   
 ### <a name="return-value"></a>Valore restituito  
- Il primo overload di metodo restituisce il numero di byte della stringa che viene copiato il `lpszStringBuf` buffer del parametro; 0 se il controllo MaskedEdit non dispone di alcun testo.  
+ Il primo overload di metodo restituisce il numero di byte della stringa che viene copiato il *lpszStringBuf* buffer del parametro; 0 se il controllo MaskedEdit non dispone di alcun testo.  
   
 ### <a name="remarks"></a>Note  
- Questo metodo copia il testo del controllo di modifica mascherato dal `lpszStringBuf` buffer o `rstrString` stringa.  
+ Questo metodo copia il testo del controllo di modifica mascherato dal *lpszStringBuf* buffer o il *rstrString* stringa.  
   
- Questo metodo consente di ridefinire [CWnd::GetWindowText](../../mfc/reference/cwnd-class.md#getwindowtext).  
+ Questo metodo ridefinisce [CWnd::GetWindowText](../../mfc/reference/cwnd-class.md#getwindowtext).  
   
 ##  <a name="ismaskedchar"></a>  CMFCMaskedEdit::IsMaskedChar  
- Chiamato dal framework per convalidare il carattere specificato con il carattere corrispondente.  
+ Chiamata eseguita dal framework per convalidare il carattere specificato con il carattere corrispondente.  
   
 ```  
 virtual BOOL IsMaskedChar(
@@ -260,17 +260,17 @@ virtual BOOL IsMaskedChar(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `chChar`  
+ [in] *chChar*  
  Carattere da convalidare.  
   
- [in] `chMaskChar`  
+ [in] *chMaskChar*  
  Il carattere corrispondente dalla stringa della maschera.  
   
 ### <a name="return-value"></a>Valore restituito  
- `TRUE` Se il `chChar` parametro è il tipo di carattere consentito per il `chMaskChar` parametro; in caso contrario, `FALSE`.  
+ `TRUE` Se il *chChar* parametro è il tipo di carattere consentito dal *chMaskChar* parametro; in caso contrario, `FALSE`.  
   
 ### <a name="remarks"></a>Note  
- Eseguire l'override di questo metodo per convalidare i caratteri di input per conto proprio. Per ulteriori informazioni sui caratteri mask, vedere il [CMFCMaskedEdit::EnableMask](#enablemask) metodo.  
+ Eseguire l'override di questo metodo per convalidare i caratteri di input dall'utente. Per ulteriori informazioni sui caratteri mask, vedere la [CMFCMaskedEdit::EnableMask](#enablemask) metodo.  
   
 ##  <a name="setvalidchars"></a>  CMFCMaskedEdit::SetValidChars  
  Specifica una stringa di caratteri validi che l'utente può immettere.  
@@ -280,7 +280,7 @@ void SetValidChars(LPCTSTR lpszValid=NULL);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `lpszValid`  
+ [in] *lpszValid*  
  Stringa che contiene il set di caratteri di input validi. `NULL` significa che tutti i caratteri sono validi. Il valore predefinito di questo parametro è `NULL`.  
   
 ### <a name="remarks"></a>Note  
@@ -291,20 +291,20 @@ void SetValidChars(LPCTSTR lpszValid=NULL);
  `//Mask: 0xFFFFm_wndMaskEdit.EnableMask( _T(" AAAA"),                // The mask string. _T("0x____"),               // The literal template string. _T('_'));                   // The default character that replaces the backspace character.// Valid string charactersm_wndMaskEdit.SetValidChars(_T("1234567890ABCDEFabcdef"));m_wndMaskEdit.SetWindowText(_T("0x01AF"));`  
   
 ##  <a name="setwindowtext"></a>  CMFCMaskedEdit::SetWindowText  
- Consente di visualizzare un prompt dei comandi del controllo di modifica mascherato.  
+ Consente di visualizzare un prompt dei comandi nel controllo di modifica mascherato.  
   
 ```  
 void SetWindowText(LPCTSTR lpszString);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `lpszString`  
+ [in] *lpszString*  
  Punta a una stringa con terminazione null che verrà utilizzato come un prompt dei comandi.  
   
 ### <a name="remarks"></a>Note  
  Questo metodo imposta il testo del controllo.  
   
- Questo metodo consente di ridefinire [CWnd::SetWindowText](../../mfc/reference/cwnd-class.md#setwindowtext).  
+ Questo metodo ridefinisce [CWnd::SetWindowText](../../mfc/reference/cwnd-class.md#setwindowtext).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Grafico delle gerarchie](../../mfc/hierarchy-chart.md)   

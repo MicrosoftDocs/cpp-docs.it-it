@@ -198,12 +198,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f10113af9e20bb9ea91d0b020cb24a9ff4f1a031
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5e5d2a65e1f75fb084c2878dc1231f0dffc12102
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33378240"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042391"
 ---
 # <a name="cmfcribbonbar-class"></a>Classe CMFCRibbonBar
 La classe `CMFCRibbonBar` implementa una barra multifunzione analoga a quella usata in Office 2007.  
@@ -235,7 +235,7 @@ class CMFCRibbonBar : public CPane
 |[CMFCRibbonBar::AddPrintPreviewCategory](#addprintpreviewcategory)||  
 |[CMFCRibbonBar::AddQATOnlyCategory](#addqatonlycategory)||  
 |[CMFCRibbonBar::AddToTabs](#addtotabs)|Aggiunge un elemento della barra multifunzione al lato destro di una barra multifunzione.|  
-|[CMFCRibbonBar::CreateEx](#createex)|Crea una barra di controllo e lo collega al [CPane](../../mfc/reference/cpane-class.md) oggetto. (Esegue l'override [cpane:: CreateEx](../../mfc/reference/cpane-class.md#createex).)|  
+|[CMFCRibbonBar::CreateEx](#createex)|Crea una barra di controllo e la collega ai [CPane](../../mfc/reference/cpane-class.md) oggetto. (Esegue l'override [cpane:: CreateEx](../../mfc/reference/cpane-class.md#createex).)|  
 |[CMFCRibbonBar::Create](#create)|Crea un controllo della barra multifunzione e lo collega a una barra multifunzione.|  
 |[CMFCRibbonBar::DeactivateKeyboardFocus](#deactivatekeyboardfocus)||  
 |[CMFCRibbonBar::DrawMenuImage](#drawmenuimage)||  
@@ -325,7 +325,7 @@ class CMFCRibbonBar : public CPane
   
  Gli elementi visualizzati sulla barra multifunzione si espandono e comprimono per usare al meglio lo spazio disponibile. Ad esempio, se lo spazio disponibile per la visualizzazione degli elementi di un pannello della barra multifunzione non è sufficiente, diventerà un pulsante di menu che visualizza elementi secondari in un menu a comparsa. La barra multifunzione si comporta come una barra di controllo statica (non mobile) e può essere ancorata nella parte superiore di un frame.  
   
- È possibile usare la classe `CMFCRibbonStatusBar` per implementare una barra di stato analoga a quella usata in Office 2007. Una categoria della barra multifunzione contiene (e Visualizza) un gruppo di [della barra multifunzione pannelli](../../mfc/reference/cmfcribbonpanel-class.md). Ogni pannello della barra multifunzione contiene uno o più elementi della barra multifunzione, derivati da [CMFCRibbonBaseElement](../../mfc/reference/cmfcribbonbaseelement-class.md).  
+ È possibile usare la classe `CMFCRibbonStatusBar` per implementare una barra di stato analoga a quella usata in Office 2007. Una categoria della barra multifunzione contiene (e Visualizza) un gruppo di [sulla barra multifunzione pannelli](../../mfc/reference/cmfcribbonpanel-class.md). Ogni pannello della barra multifunzione contiene uno o più elementi della barra multifunzione, derivati da [CMFCRibbonBaseElement](../../mfc/reference/cmfcribbonbaseelement-class.md).  
   
  Per informazioni su come aggiungere una barra multifunzione all'applicazione MFC esistente, vedere [procedura dettagliata: aggiornamento dell'applicazione MFC Scribble](../../mfc/walkthrough-updating-the-mfc-scribble-application-part-1.md).  
   
@@ -353,11 +353,11 @@ BOOL ActivateContextCategory(UINT uiContextID);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `uiContextID`  
+ [in] *uiContextID*  
  L'ID di categoria contesto.  
   
 ### <a name="return-value"></a>Valore restituito  
- `TRUE` Se una categoria contesto con `uiContextID` viene trovato e attivato; in caso contrario `FALSE`.  
+ `TRUE` Se una categoria contesto con *uiContextID* è stato trovato e attivato; in caso contrario `FALSE`.  
   
 ##  <a name="addcategory"></a>  CMFCRibbonBar::AddCategory  
  Crea e Inizializza una nuova categoria della barra multifunzione per la barra multifunzione.  
@@ -376,32 +376,32 @@ CMFCRibbonCategory* AddCategory(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `lpszName`  
+ [in] *lpszName*  
  Nome della categoria della barra multifunzione.  
   
- [in] `uiSmallImagesResID`  
- ID risorsa dell'elenco immagini piccole per categoria della barra multifunzione.  
+ [in] *uiSmallImagesResID*  
+ ID risorsa dell'elenco immagini piccole per la categoria della barra multifunzione.  
   
- [in] `uiLargeImagesResID`  
- ID di risorsa dell'elenco di immagine di grandi dimensioni per la categoria della barra multifunzione.  
+ [in] *uiLargeImagesResID*  
+ ID risorsa dell'elenco immagini grandi dimensioni per la categoria della barra multifunzione.  
   
- [in] `sizeSmallImage`  
+ [in] *sizeSmallImage*  
  Specifica le dimensioni delle immagini di piccole dimensioni per la categoria della barra multifunzione.  
   
- [in] `sizeLargeImage`  
+ [in] *sizeLargeImage*  
  Specifica le dimensioni delle immagini di grandi dimensioni per la categoria della barra multifunzione.  
   
- [in] `nInsertAt`  
- Indice in base zero della posizione di categoria.  
+ [in] *nInsertAt*  
+ Indice in base zero della posizione categoria.  
   
- [in] `pRTI`  
- Puntatore a un [CMFCRibbonCategory classe](../../mfc/reference/cmfcribboncategory-class.md) classi di runtime per creare dinamicamente una categoria della barra multifunzione in fase di esecuzione.  
+ [in] *pRTI*  
+ Puntatore a un [CMFCRibbonCategory classe](../../mfc/reference/cmfcribboncategory-class.md) classi di runtime per creare una categoria della barra multifunzione in modo dinamico in fase di esecuzione.  
   
 ### <a name="return-value"></a>Valore restituito  
- Un puntatore a una categoria della barra multifunzione nuovo se il metodo ha esito positivo. in caso contrario, `NULL`.  
+ Un puntatore a una categoria della barra multifunzione nuovo se il metodo ha avuto esito positivo; in caso contrario, `NULL`.  
   
 ### <a name="remarks"></a>Note  
- Se il `pRTI` parametro non è `NULL`, viene creata la nuova categoria della barra multifunzione in modo dinamico utilizzando la classe in fase di esecuzione.  
+ Se il *pRTI* parametro non `NULL`, viene creata la nuova categoria della barra multifunzione in modo dinamico utilizzando la classe di runtime.  
   
 ### <a name="example"></a>Esempio  
  Nell'esempio seguente viene illustrato come utilizzare il `AddCategory` metodo la `CMFCRibbonBar` classe.  
@@ -427,38 +427,38 @@ CMFCRibbonCategory* AddContextCategory(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `lpszName`  
+ [in] *lpszName*  
  Nome della categoria.  
   
- [in] `lpszContextName`  
+ [in] *lpszContextName*  
  Nome della didascalia della categoria contesto.  
   
- [in] `uiContextID`  
+ [in] *uiContextID*  
  ID del contesto.  
   
- [in] `clrContext`  
+ [in] *clrContext*  
  Colore della didascalia della categoria contesto.  
   
- [in] `uiSmallImagesResID`  
+ [in] *uiSmallImagesResID*  
  ID risorsa dell'immagine di piccole dimensioni di una categoria contesto.  
   
- [in] `uiLargeImagesResID`  
+ [in] *uiLargeImagesResID*  
  ID risorsa dell'immagine di grandi dimensioni di una categoria contesto.  
   
- [in] `sizeSmallImage`  
+ [in] *sizeSmallImage*  
  Dimensioni di un'immagine di piccole dimensioni.  
   
- [in] `sizeLargeImage`  
- Dimensioni dell'immagine di grandi dimensioni.  
+ [in] *sizeLargeImage*  
+ Dimensioni di un'immagine di grandi dimensioni.  
   
- [in] `pRTI`  
+ [in] *pRTI*  
  Puntatore a una classe di runtime.  
   
 ### <a name="return-value"></a>Valore restituito  
- Un puntatore alla categoria appena creato, o `NULL` se il `CreateObject` metodo `pRTI` non è possibile creare la categoria specificata.  
+ Un puntatore alla categoria appena creato, o `NULL` se il `CreateObject` metodo *pRTI* non è possibile creare la categoria specificata.  
   
 ### <a name="remarks"></a>Note  
- Utilizzare questa funzione per aggiungere una categoria contesto. Le categorie di contesto sono un tipo speciale di categoria che può essere mostrato o nascosto in fase di esecuzione, a seconda del contesto applicazione corrente. Quando l'utente seleziona un oggetto, ad esempio, è possibile visualizzare speciali schede con le categorie di contesto che consente di modificare l'oggetto selezionato specifico.  
+ Utilizzare questa funzione per aggiungere una categoria contesto. Le categorie di contesto sono un tipo speciale di categoria che può essere visualizzato o nascosto in fase di esecuzione, a seconda del contesto applicazione corrente. Ad esempio, quando l'utente seleziona un oggetto, è possibile visualizzare speciali schede con le categorie di contesto che consente di modificare l'oggetto selezionato specifico.  
   
  Il colore di una categoria contesto può essere uno dei valori seguenti:  
   
@@ -493,26 +493,26 @@ CMFCRibbonMainPanel* AddMainCategory(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `lpszName`  
+ [in] *lpszName*  
  Nome della categoria principale della barra multifunzione.  
   
- [in] `uiSmallImagesResID`  
+ [in] *uiSmallImagesResID*  
  ID risorsa delle immagini di piccole dimensioni.  
   
- [in] `uiLargeImagesResID`  
+ [in] *uiLargeImagesResID*  
  ID risorsa delle immagini di grandi dimensioni.  
   
- [in] `sizeSmallImage`  
+ [in] *sizeSmallImage*  
  Le dimensioni delle immagini di piccole dimensioni.  
   
- [in] `sizeLargeImage`  
+ [in] *sizeLargeImage*  
  Le dimensioni delle immagini di grandi dimensioni.  
   
 ### <a name="return-value"></a>Valore restituito  
- Puntatore alla nuova categoria principale della barra multifunzione se il metodo ha esito positivo. in caso contrario, `NULL`.  
+ Puntatore alla nuova categoria principale della barra multifunzione se il metodo ha avuto esito positivo; in caso contrario, `NULL`.  
   
 ### <a name="remarks"></a>Note  
- Se esiste già una categoria principale della barra multifunzione, questo viene eliminato.  
+ Se esiste già una categoria principale della barra multifunzione, viene eliminato.  
   
 ### <a name="example"></a>Esempio  
  Nell'esempio seguente viene illustrato come utilizzare il `AddMainCategory` metodo la `CMFCRibbonBar` classe.  
@@ -527,13 +527,13 @@ CMFCRibbonCategory* AddPrintPreviewCategory();
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- Un puntatore a una categoria della barra multifunzione nuovo se il metodo ha esito positivo. in caso contrario, `NULL`.  
+ Un puntatore a una categoria della barra multifunzione nuovo se il metodo ha avuto esito positivo; in caso contrario, `NULL`.  
   
 ### <a name="remarks"></a>Note  
  Questo metodo crea una categoria della barra multifunzione e i controlli necessari per fornire un'anteprima di stampa.  
   
 ##  <a name="addqatonlycategory"></a>  CMFCRibbonBar::AddQATOnlyCategory  
- Crea una categoria della barra degli strumenti accesso rapido.  
+ Crea una categoria della barra multifunzione della barra degli strumenti di accesso rapido.  
   
 ```  
 CMFCRibbonCategory* AddQATOnlyCategory(
@@ -544,30 +544,30 @@ CMFCRibbonCategory* AddQATOnlyCategory(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `lpszName`  
+ [in] *lpszName*  
  Nome della categoria.  
   
- [in] `uiSmallImagesResID`  
+ [in] *uiSmallImagesResID*  
  ID risorsa dell'elenco immagini per la categoria.  
   
- [in] `sizeSmallImage`  
+ [in] *sizeSmallImage*  
  Dimensioni delle immagini per gli elementi della barra multifunzione nella categoria.  
   
 ### <a name="return-value"></a>Valore restituito  
- Un puntatore a una nuova categoria se il metodo ha esito positivo. in caso contrario, `NULL`.  
+ Un puntatore alla categoria di nuovo se il metodo ha avuto esito positivo; in caso contrario, `NULL`.  
   
 ### <a name="remarks"></a>Note  
- Categoria della barra multifunzione degli strumenti accesso rapido viene utilizzata solo nella finestra di dialogo di personalizzazione della barra degli strumenti accesso rapido.  
+ Categoria della barra multifunzione della barra degli strumenti accesso rapido viene utilizzata solo nella finestra di dialogo Personalizzazione della barra degli strumenti accesso rapido.  
   
 ##  <a name="addtotabs"></a>  CMFCRibbonBar::AddToTabs  
- Aggiunge l'elemento barra multifunzione specificato nella riga di schede della barra multifunzione.  
+ Aggiunge l'elemento della barra multifunzione specificato nella riga di schede della barra multifunzione.  
   
 ```  
 void AddToTabs(CMFCRibbonBaseElement* pElement);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `pElement`  
+ [in] *pElement*  
  Puntatore a un elemento della barra multifunzione.  
   
 ### <a name="remarks"></a>Note  
@@ -581,7 +581,7 @@ CMFCRibbonBar(BOOL bReplaceFrameCaption = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `bReplaceFrameCaption`  
+ [in] *bReplaceFrameCaption*  
  `TRUE` per la barra multifunzione sostituire la didascalia della finestra cornice principale. `FALSE` per individuare la barra multifunzione sotto la didascalia della finestra cornice principale.  
   
 ### <a name="remarks"></a>Note  
@@ -597,13 +597,13 @@ BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `pParentWnd`  
+ [in] *pParentWnd*  
  Puntatore alla finestra padre per la barra multifunzione.  
   
- [in] `dwStyle`  
+ [in] *dwStyle*  
  Combinazione logica di stili per la nuova finestra.  
   
- [in] `nID`  
+ [in] *nID*  
  ID della nuova finestra.  
   
 ### <a name="return-value"></a>Valore restituito  
@@ -628,16 +628,16 @@ BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `pParentWnd`  
+ [in] *pParentWnd*  
  Puntatore alla finestra padre per la barra multifunzione.  
   
- [in] `dwCtrlStyle`  
+ [in] *dwCtrlStyle*  
  Questo parametro non viene usato.  
   
- [in] `dwStyle`  
+ [in] *dwStyle*  
  Combinazione logica di stili per la nuova finestra.  
   
- [in] `nID`  
+ [in] *nID*  
  ID della nuova finestra.  
   
 ### <a name="return-value"></a>Valore restituito  
@@ -653,7 +653,7 @@ void DeactivateKeyboardFocus(BOOL bSetFocus = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `bSetFocus`  
+ [in] *bSetFocus*  
  `TRUE` Per impostare lo stato attivo alla finestra padre della barra multifunzione.  
   
 ### <a name="remarks"></a>Note  
@@ -669,13 +669,13 @@ BOOL DrawMenuImage(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `pDC`  
+ [in] *pDC*  
  Puntatore a un contesto di dispositivo per il pulsante di menu.  
   
- [in] `pMenuItem`  
+ [in] *pMenuItem*  
  Puntatore a un pulsante di menu della barra degli strumenti.  
   
- [in] `rectImage`  
+ [in] *rectImage*  
  Il rettangolo di visualizzazione per un pulsante di menu.  
   
 ### <a name="return-value"></a>Valore restituito  
@@ -684,7 +684,7 @@ BOOL DrawMenuImage(
 ### <a name="remarks"></a>Note  
   
 ##  <a name="dwmcompositionchanged"></a>  CMFCRibbonBar::DWMCompositionChanged  
- Adatta la visualizzazione della barra multifunzione quando la composizione Desktop gestione Finestre desktop viene abilitata o disabilitata.  
+ Adatta la visualizzazione della barra multifunzione quando composizione Desktop gestione Finestre desktop viene abilitata o disabilitata.  
   
 ```  
 virtual void DWMCompositionChanged();
@@ -700,11 +700,11 @@ void EnableKeyTips(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `bEnable`  
+ [in] *bAttivare il*  
  `TRUE` Per abilitare la funzionalità suggerimenti tasto di scelta; `FALSE` disabilitare la funzionalità suggerimenti tasto di scelta.  
   
 ### <a name="remarks"></a>Note  
- Quando si abilita questa funzionalità, i suggerimenti tasto di vengono visualizzati quando l'utente preme il tasto ALT o F10. Quando l'utente preme tasto ALT, vengono visualizzati suggerimenti tasto con un ritardo di 200 millisecondi. Questo ritardo consente ai tasti di scelta rapida deve essere eseguito in modo che il tasto premuto ALT non interferisca con altre combinazioni di che includono il tasto ALT.  
+ Quando si abilita questa funzionalità, i suggerimenti tasto vengono visualizzati quando l'utente preme il tasto ALT o F10. Quando l'utente preme tasto ALT, vengono visualizzati i suggerimenti tasto con un ritardo di 200 millisecondi. Questo ritardo consente ai tasti di scelta rapida deve essere eseguito in modo che il tasto premuto ALT non interferisca con altre combinazioni di che includono il tasto ALT.  
   
 ##  <a name="enableprintpreview"></a>  CMFCRibbonBar::EnablePrintPreview  
  Abilita o disabilita il **anteprima di stampa** funzionalità.  
@@ -714,11 +714,11 @@ void EnablePrintPreview(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `bEnable`  
+ [in] *bAttivare il*  
  `TRUE` Per abilitare il **anteprima di stampa** funzionalità; `FALSE` per disabilitare il **anteprima di stampa** funzionalità.  
   
 ### <a name="remarks"></a>Note  
- Se `bEnable` è `FALSE` ed esiste una categoria di anteprima di stampa, viene eliminato.  
+ Se *bAttivare il* è `FALSE` ed esiste una categoria di anteprima di stampa, viene eliminato.  
   
  Per impostazione predefinita il **anteprima di stampa** funzionalità è abilitata.  
   
@@ -732,14 +732,14 @@ void EnableToolTips(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `bEnable`  
+ [in] *bAttivare il*  
  `TRUE` Per abilitare le descrizioni comandi della barra multifunzione; `FALSE` per disabilitare le descrizioni comandi della barra multifunzione.  
   
- [in] `bEnableDescr`  
+ [in] *bEnableDescr*  
  `TRUE` Per abilitare le descrizioni dei comandi sul componente tooltip; `FALSE` disabilitare descrizioni dei comandi sul componente tooltip.  
   
 ### <a name="remarks"></a>Note  
- Il `bEnable` parametro determina se visualizzare le descrizioni comandi quando il mouse viene posizionato su un elemento della barra multifunzione. Il `bEnableDescr` parametro determina se il testo descrittivo aggiuntivo viene visualizzato con il testo della descrizione comando.  
+ Il *bAttivare il* parametro determina la visualizzazione di descrizioni comandi quando il mouse viene spostato su un elemento della barra multifunzione. Il *bEnableDescr* parametro determina se viene visualizzato un testo descrittivo aggiuntivo con il testo della descrizione comando.  
   
 ##  <a name="findbydata"></a>  CMFCRibbonBar::FindByData  
  Recupera un puntatore a un elemento della barra multifunzione se i dati specificati e la visibilità.  
@@ -751,10 +751,10 @@ CMFCRibbonBaseElement* FindByData(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `dwData`  
+ [in] *dwData*  
  I dati associati a un elemento della barra multifunzione.  
   
- [in] `bVisibleOnly`  
+ [in] *bVisibleOnly*  
  `TRUE` eseguire la ricerca, solo gli elementi visibili della barra multifunzione `FALSE` per cercare tutti gli elementi della barra multifunzione.  
   
 ### <a name="return-value"></a>Valore restituito  
@@ -764,7 +764,7 @@ CMFCRibbonBaseElement* FindByData(
  Un elemento della barra multifunzione è qualsiasi controllo che è possibile aggiungere alla barra multifunzione, ad esempio un pulsante della barra multifunzione, una categoria della barra multifunzione o un dispositivo di scorrimento della barra multifunzione.  
   
 ##  <a name="findbyid"></a>  CMFCRibbonBar::FindByID  
- Recupera un puntatore all'elemento della barra multifunzione con i valori di ricerca e l'ID di comando specificato.  
+ Recupera un puntatore all'elemento della barra multifunzione con i valori di ricerca e ID di comando specificato.  
   
 ```  
 CMFCRibbonBaseElement* FindByID(
@@ -774,13 +774,13 @@ CMFCRibbonBaseElement* FindByID(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `uiCmdID`  
+ [in] *uiCmdID*  
  ID di comando per un elemento della barra multifunzione.  
   
- [in] `bVisibleOnly`  
+ [in] *bVisibleOnly*  
  `TRUE` eseguire la ricerca, solo gli elementi visibili della barra multifunzione `FALSE` per cercare tutti gli elementi della barra multifunzione.  
   
- [in] `bExcludeQAT`  
+ [in] *bExcludeQAT*  
  `TRUE` Per escludere gli elementi della barra degli strumenti accesso rapido dalla ricerca; in caso contrario, `FALSE`.  
   
 ### <a name="return-value"></a>Valore restituito  
@@ -789,7 +789,7 @@ CMFCRibbonBaseElement* FindByID(
 ### <a name="remarks"></a>Note  
  Un elemento della barra multifunzione è qualsiasi controllo della barra multifunzione che può essere aggiunto alla barra multifunzione, ad esempio un pulsante della barra multifunzione, una categoria della barra multifunzione o un dispositivo di scorrimento della barra multifunzione.  
   
- In generale, può esistere più di un elemento della barra multifunzione con lo stesso ID di comando. Se si desidera ottenere puntatori a tutti gli elementi della barra multifunzione che utilizzano un ID di comando specificato, utilizzare il [CMFCRibbonBar::GetElementsByID](#getelementsbyid) metodo.  
+ In generale, possono esserci più di un elemento della barra multifunzione con lo stesso ID di comando. Se si desidera ottenere puntatori a tutti gli elementi della barra multifunzione che utilizzano un ID di comando specificato, utilizzare il [CMFCRibbonBar::GetElementsByID](#getelementsbyid) metodo.  
   
 ##  <a name="findcategoryindexbydata"></a>  CMFCRibbonBar::FindCategoryIndexByData  
  Recupera l'indice della categoria della barra multifunzione che contiene i dati specificati.  
@@ -799,14 +799,14 @@ int FindCategoryIndexByData(DWORD dwData) const;
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `dwData`  
+ [in] *dwData*  
  I dati associati a una categoria della barra multifunzione.  
   
 ### <a name="return-value"></a>Valore restituito  
- L'indice in base zero di una categoria della barra multifunzione, se il metodo ha esito positivo. in caso contrario-1.  
+ L'indice in base zero di una categoria della barra multifunzione se il metodo ha avuto esito positivo; in caso contrario,-1.  
   
 ##  <a name="forcerecalclayout"></a>  CMFCRibbonBar::ForceRecalcLayout  
- Regola il layout di tutti gli elementi nella barra multifunzione e la finestra padre e ridisegna l'intera finestra.  
+ Regola il layout di tutti gli elementi nella barra multifunzione e finestra padre ridisegna l'intera finestra.  
   
 ```  
 void ForceRecalcLayout();
@@ -815,7 +815,7 @@ void ForceRecalcLayout();
 ### <a name="remarks"></a>Note  
   
 ##  <a name="getactivecategory"></a>  CMFCRibbonBar::GetActiveCategory  
- Recupera un puntatore a una categoria della barra multifunzione attivo.  
+ Recupera un puntatore alla categoria della barra multifunzione attivo.  
   
 ```  
 CMFCRibbonCategory* GetActiveCategory() const;  
@@ -837,7 +837,7 @@ CMFCRibbonApplicationButton* GetApplicationButton() const;
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- Un puntatore al pulsante di applicazione; o `NULL` se il pulsante non è stato impostato.  
+ Un puntatore al pulsante dell'applicazione; o `NULL` se il pulsante non è stato impostato.  
   
 ##  <a name="getcaptionheight"></a>  CMFCRibbonBar::GetCaptionHeight  
  Recupera l'altezza dell'area della didascalia per la barra multifunzione.  
@@ -852,18 +852,18 @@ int GetCaptionHeight() const;
 ### <a name="remarks"></a>Note  
   
 ##  <a name="getcategory"></a>  CMFCRibbonBar::GetCategory  
- Recupera un puntatore a una categoria della barra multifunzione in corrispondenza dell'indice specificato.  
+ Recupera un puntatore alla categoria della barra multifunzione in corrispondenza dell'indice specificato.  
   
 ```  
 CMFCRibbonCategory* GetCategory(int nIndex) const;  
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `nIndex`  
+ [in] *nIndex*  
  Indice in base zero di una categoria della barra multifunzione nell'elenco di categorie della barra multifunzione che è contenuto nella barra multifunzione.  
   
 ### <a name="return-value"></a>Valore restituito  
- Un puntatore a una categoria della barra multifunzione in corrispondenza dell'indice specificato. in caso contrario, `NULL` se `nIndex` non compreso nell'intervallo.  
+ Un puntatore a una categoria della barra multifunzione in corrispondenza dell'indice specificato; in caso contrario, `NULL` se *nIndex* non compreso nell'intervallo.  
   
 ##  <a name="getcategorycount"></a>  CMFCRibbonBar::GetCategoryCount  
  Recupera il numero di categorie della barra multifunzione nella barra multifunzione.  
@@ -886,7 +886,7 @@ int GetCategoryHeight() const;
  L'altezza della categoria.  
   
 ### <a name="remarks"></a>Note  
- L'altezza di categoria include l'altezza della scheda di categoria.  
+ L'altezza di categoria include l'altezza della scheda categoria.  
   
 ##  <a name="getcategoryindex"></a>  CMFCRibbonBar::GetCategoryIndex  
  Recupera l'indice della categoria specificata della barra multifunzione.  
@@ -896,11 +896,11 @@ int GetCategoryIndex(CMFCRibbonCategory* pCategory) const;
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `pCategory`  
+ [in] *pCategory*  
  Puntatore a una categoria della barra multifunzione.  
   
 ### <a name="return-value"></a>Valore restituito  
- L'indice in base zero di una categoria della barra multifunzione specificata da `pCategory`; o -1 se non viene trovata la categoria della barra multifunzione.  
+ L'indice in base zero di una categoria della barra multifunzione specificata da *pCategory*; o -1 se non viene trovata la categoria della barra multifunzione.  
   
 ##  <a name="getcontextname"></a>  CMFCRibbonBar::GetContextName  
  Recupera il nome della didascalia della categoria contesto specificata da un ID del contesto.  
@@ -912,24 +912,24 @@ BOOL GetContextName(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `uiContextID`  
+ [in] *uiContextID*  
  Un ID del contesto categoria della barra multifunzione.  
   
- [out] `strName`  
+ [out] *strName*  
  Il nome del titolo di una categoria contesto.  
   
 ### <a name="return-value"></a>Valore restituito  
- `TRUE` Se il metodo ha avuto esito positivo; in caso contrario, `FALSE` se `uiContextID` era zero o didascalia della categoria contesto non è stata trovata.  
+ `TRUE` Se il metodo ha avuto esito positivo; in caso contrario, `FALSE` se *uiContextID* era zero o didascalia della categoria contesto non è stata trovata.  
   
 ##  <a name="getdroppeddown"></a>  CMFCRibbonBar::GetDroppedDown  
- Recupera l'elemento della barra multifunzione che è correntemente visualizzato.  
+ Recupera l'elemento della barra multifunzione che viene attualmente eliminata verso il basso.  
   
 ```  
 virtual CMFCRibbonBaseElement* GetDroppedDown();
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- Elemento della barra multifunzione che è stato eliminato o `NULL` se nessun elemento della barra multifunzione è correntemente visualizzato.  
+ Elemento della barra multifunzione che viene attualmente eliminata o `NULL` se nessun elemento della barra multifunzione è correntemente visualizzato verso il basso.  
   
 ### <a name="remarks"></a>Note  
   
@@ -943,33 +943,33 @@ void GetElementsByID(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `uiCmdID`  
+ [in] *uiCmdID*  
  ID di comando di un elemento della barra multifunzione.  
   
- [out] `arButtons`  
- Matrice di puntatori agli elementi della barra multifunzione.  
+ [out] *arButtons*  
+ Una matrice di puntatori agli elementi della barra multifunzione.  
   
 ### <a name="remarks"></a>Note  
- Più elementi della barra multifunzione possono avere lo stesso ID di comando perché è possono copiare alcuni elementi della barra multifunzione alla barra degli strumenti accesso rapido.  
+ Più elementi della barra multifunzione possono avere lo stesso ID di comando, perché alcuni elementi della barra multifunzione possono essere copiati alla barra degli strumenti accesso rapido.  
   
 ##  <a name="gethideflags"></a>  CMFCRibbonBar::GetHideFlags  
- Recupera i flag che indicano la quantità della barra multifunzione è visibile.  
+ Recupera il flag che indicano la quantità della barra multifunzione è visibile.  
   
 ```  
 DWORD GetHideFlags() const;  
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- I flag che indicano la quantità della barra multifunzione è visibile.  
+ Flag che indicano la quantità della barra multifunzione è visibile.  
   
 ### <a name="remarks"></a>Note  
- La tabella seguente elenca il possibile combinazione di flag per il valore restituito:  
+ Nella tabella seguente sono elencate le possibili combinazione di flag per il valore restituito:  
   
  `AFX_RIBBONBAR_HIDE_ELEMENTS`  
  La barra multifunzione è ridotta a icona verticalmente e sono visibili solo le schede delle categorie, pulsante principale e barra di accesso rapido.  
   
  `AFX_RIBBONBAR_HIDE_ALL`  
- La larghezza della barra multifunzione è minore della larghezza minima ed è completamente nascosto.  
+ La larghezza della barra multifunzione è minore della larghezza minima ed è completamente nascosta.  
   
 ##  <a name="getitemidslist"></a>  CMFCRibbonBar::GetItemIDsList  
  Recupera gli ID di comando per la raccolta specificata di elementi della barra multifunzione nella barra multifunzione.  
@@ -980,10 +980,10 @@ void GetItemIDsList(CList<UINT, UINT>& lstItems,
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [out] `lstItems`  
+ [out] *lstItems*  
  L'elenco di ID di comando per gli elementi della barra multifunzione sono contenuti nella barra multifunzione.  
   
- [in] `bHiddenOnly`  
+ [in] *bHiddenOnly*  
  `TRUE` Per escludere gli elementi della barra multifunzione che vengono visualizzati; `FALSE` per includere tutti gli elementi della barra multifunzione nella barra multifunzione.  
   
 ### <a name="remarks"></a>Note  
@@ -996,7 +996,7 @@ int GetKeyboardNavigationLevel() const;
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- Il livello di navigazione corrente come l'utente preme i suggerimenti tasto di scelta sono contenuti nella barra multifunzione. Nella tabella seguente sono elencati i possibili valori restituiti:  
+ Il livello di navigazione corrente come l'utente preme i suggerimenti tasto di scelta sono contenuti nella barra multifunzione. Nella tabella seguente sono elencati i valori restituiti possibili:  
   
  -1  
  Non vengono visualizzati i suggerimenti tasto di scelta.  
@@ -1033,7 +1033,7 @@ CObject* GetKeyboardNavLevelParent() const;
  L'oggetto di navigazione da tastiera padre della barra multifunzione; in caso contrario `NULL`.  
   
 ### <a name="remarks"></a>Note  
- Quando l'utente preme un suggerimento nella barra multifunzione, l'oggetto di navigazione da tastiera corrente diventa l'oggetto di navigazione da tastiera padre.  
+ Quando l'utente sceglie un suggerimento nella barra multifunzione, l'oggetto di navigazione da tastiera corrente diventa l'oggetto di navigazione da tastiera padre.  
   
 ##  <a name="getmaincategory"></a>  CMFCRibbonBar::GetMainCategory  
  Recupera un puntatore alla categoria principale della barra multifunzione.  
@@ -1043,10 +1043,10 @@ CMFCRibbonCategory* GetMainCategory() const;
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- Puntatore a una categoria della barra multifunzione principale.  
+ Puntatore alla categoria principale della barra multifunzione.  
   
 ### <a name="remarks"></a>Note  
- Categoria della barra multifunzione principale contiene il pannello principale della barra multifunzione.  
+ Categoria della barra multifunzione principale contiene pannello della barra multifunzione principale.  
   
 ##  <a name="getqatcommandslocation"></a>  CMFCRibbonBar::GetQATCommandsLocation  
  Recupera il rettangolo di visualizzazione per la sezione di comandi della barra di accesso rapido.  
@@ -1081,11 +1081,11 @@ void GetQuickAccessCommands(CList<UINT,UINT>& lstCommands);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [out] `lstCommands`  
- L'elenco di ID di comando per gli elementi della barra multifunzione nella barra degli strumenti accesso rapido.  
+ [out] *lstCommands*  
+ L'elenco di ID di comando per gli elementi della barra multifunzione nella barra di accesso rapido.  
   
 ### <a name="remarks"></a>Note  
- L'elenco non contiene elementi della barra multifunzione che presenti separatori di controllo.  
+ L'elenco non contiene elementi della barra multifunzione che sono separatori di controllo.  
   
 ##  <a name="getquickaccesstoolbarlocation"></a>  CMFCRibbonBar::GetQuickAccessToolbarLocation  
  Recupera il rettangolo di visualizzazione per la barra di accesso rapido.  
@@ -1100,17 +1100,17 @@ CRect GetQuickAccessToolbarLocation() const;
 ### <a name="remarks"></a>Note  
   
 ##  <a name="gettabtrancateratio"></a>  CMFCRibbonBar::GetTabTrancateRatio  
- Recupera la riduzione percentuale dimensioni schede delle categorie di larghezza di visualizzazione.  
+ Recupera la riduzione delle dimensioni percentuale larghezza di visualizzazione schede delle categorie di.  
   
 ```  
 int GetTabTrancateRatio() const;  
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- La percentuale di dimensioni riduzione schede delle categorie di larghezza di visualizzazione.  
+ La percentuale di dimensionare riduzione schede delle categorie di larghezza di visualizzazione.  
   
 ### <a name="remarks"></a>Note  
- Schede delle categorie vengono ridotte in larghezza quando non è sufficiente la larghezza della barra multifunzione.  
+ Schede delle categorie vengono ridotte in larghezza fissa o quando non è sufficiente larghezza della barra multifunzione.  
   
 ##  <a name="gettooltipfixedwidthlargeimage"></a>  CMFCRibbonBar::GetTooltipFixedWidthLargeImage  
  Recupera le dimensioni della larghezza della descrizione comando per la barra multifunzione.  
@@ -1123,7 +1123,7 @@ int GetTooltipFixedWidthLargeImage() const;
  Le dimensioni della descrizione comando larghezza in pixel.  
   
 ### <a name="remarks"></a>Note  
- Se le dimensioni della larghezza di descrizione comandi sono 0, la larghezza varia.  
+ Se le dimensioni della larghezza della descrizione comando sono 0, la larghezza varia.  
   
 ##  <a name="gettooltipfixedwidthregular"></a>  CMFCRibbonBar::GetTooltipFixedWidthRegular  
  Recupera le dimensioni normali della larghezza della descrizione comando per la barra multifunzione.  
@@ -1136,7 +1136,7 @@ int GetTooltipFixedWidthRegular() const;
  Le dimensioni normali della descrizione comando larghezza in pixel.  
   
 ### <a name="remarks"></a>Note  
- Se le dimensioni normali della larghezza di descrizione comandi sono 0, la larghezza varia.  
+ Se le dimensioni normali della larghezza della descrizione comando sono 0, la larghezza varia.  
   
 ##  <a name="getvisiblecategorycount"></a>  CMFCRibbonBar::GetVisibleCategoryCount  
  Recupera il numero di categorie visibile nella barra multifunzione.  
@@ -1173,7 +1173,7 @@ void HideKeyTips();
 ### <a name="remarks"></a>Note  
   
 ##  <a name="hittest"></a>  CMFCRibbonBar::HitTest  
- Recupera un puntatore all'elemento della barra multifunzione specificato dalla posizione del punto.  
+ Recupera un puntatore all'elemento della barra multifunzione specificato dalla posizione del separatore.  
   
 ```  
 virtual CMFCRibbonBaseElement* HitTest(
@@ -1183,20 +1183,20 @@ virtual CMFCRibbonBaseElement* HitTest(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `point`  
- Posizione del punto nelle coordinate della barra multifunzione.  
+ [in] *punto*  
+ Posizione del punto nella barra multifunzione di coordinate.  
   
- [in] `bCheckActiveCategory`  
+ [in] *bCheckActiveCategory*  
  `TRUE` Per cercare la categoria attiva; `FALSE` non eseguire la ricerca nella categoria attiva.  
   
- [in] `bCheckPanelCaption`  
+ [in] *bCheckPanelCaption*  
  `TRUE` Per testare la didascalia del pannello della barra multifunzione con il punto che si trova in. `FALSE` non per testare la didascalia del pannello della barra multifunzione con il punto in esso contenuto. Per altre informazioni, vedere la sezione Osservazioni.  
   
 ### <a name="return-value"></a>Valore restituito  
  Un puntatore all'elemento della barra multifunzione che si trova nel punto specificato; in caso contrario `NULL` se il punto non si trova in un elemento della barra multifunzione.  
   
 ### <a name="remarks"></a>Note  
- La didascalia del pannello della barra multifunzione con il punto in essa contenuto non è stata testata a meno che il `bCheckActiveCategory` parametro `TRUE`.  
+ La didascalia del pannello della barra multifunzione con il punto in essa contenuto non è stata testata, a meno che il *bCheckActiveCategory* parametro `TRUE`.  
   
 ##  <a name="iskeytipenabled"></a>  CMFCRibbonBar::IsKeyTipEnabled  
  Indica se è abilitata la funzionalità suggerimenti tasto di scelta.  
@@ -1209,7 +1209,7 @@ BOOL IsKeyTipEnabled() const;
  `TRUE` Se è abilitata la funzionalità suggerimenti tasto di scelta; in caso contrario `FALSE`.  
   
 ##  <a name="ismainribbonbar"></a>  CMFCRibbonBar::IsMainRibbonBar  
- Indica se la barra multifunzione è la barra multifunzione principale.  
+ Indica se la barra multifunzione è la barra multifunzione primario.  
   
 ```  
 virtual BOOL IsMainRibbonBar() const;  
@@ -1219,7 +1219,7 @@ virtual BOOL IsMainRibbonBar() const;
  Restituisce sempre `TRUE`.  
   
 ### <a name="remarks"></a>Note  
- Per impostazione predefinita questo metodo restituisce sempre `TRUE`. Eseguire l'override di questo metodo per indicare se la barra multifunzione è la barra multifunzione principale.  
+ Per impostazione predefinita questo metodo restituisce sempre `TRUE`. Eseguire l'override di questo metodo per indicare se la barra multifunzione è la barra multifunzione primario.  
   
 ##  <a name="isprintpreviewenabled"></a>  CMFCRibbonBar::IsPrintPreviewEnabled  
  Indica se il **anteprima di stampa** funzionalità è abilitata.  
@@ -1244,7 +1244,7 @@ BOOL IsQATEmpty() const;
 ### <a name="remarks"></a>Note  
   
 ##  <a name="isquickaccesstoolbarontop"></a>  CMFCRibbonBar::IsQuickAccessToolbarOnTop  
- Indica se la barra di accesso rapido si trova sopra o sotto la barra multifunzione.  
+ Indica se la barra di accesso rapido è posizionata sopra o sotto la barra multifunzione.  
   
 ```  
 BOOL IsQuickAccessToolbarOnTop() const;  
@@ -1264,7 +1264,7 @@ BOOL IsReplaceFrameCaption() const;
  `TRUE` Se la barra multifunzione sostituisce la didascalia della finestra cornice principale. `FALSE` se barra multifunzione è sotto la didascalia della finestra cornice principale.  
   
 ##  <a name="isshowgroupborder"></a>  CMFCRibbonBar::IsShowGroupBorder  
- Indica se i gruppi di pulsanti si trova sulla barra multifunzione visualizzano un bordo gruppo.  
+ Indica se i gruppi di pulsanti che si trova sulla barra multifunzione Visualizza un bordo gruppo.  
   
 ```  
 virtual BOOL IsShowGroupBorder(CMFCRibbonButtonsGroup* pGroup) const;  
@@ -1278,7 +1278,7 @@ virtual BOOL IsShowGroupBorder(CMFCRibbonButtonsGroup* pGroup) const;
  Restituisce sempre `FALSE`.  
   
 ### <a name="remarks"></a>Note  
- Per impostazione predefinita questo metodo restituisce sempre `FALSE`. Eseguire l'override di questo metodo per indicare se i gruppi di pulsanti si trova sulla barra multifunzione visualizzano un bordo di gruppo.  
+ Per impostazione predefinita questo metodo restituisce sempre `FALSE`. Eseguire l'override di questo metodo per indicare se i gruppi di pulsanti che si trova sulla barra multifunzione visualizzare un bordo gruppo.  
   
 ##  <a name="istooltipdescrenabled"></a>  CMFCRibbonBar::IsToolTipDescrEnabled  
  Indica se sono abilitati descrizioni dei comandi.  
@@ -1304,7 +1304,7 @@ BOOL IsToolTipEnabled() const;
  `TRUE` Se le descrizioni comandi sono abilitati; `FALSE` se le descrizioni comandi sono disabilitati.  
   
 ##  <a name="istransparentcaption"></a>  CMFCRibbonBar::IsTransparentCaption  
- Indica se la visualizzazione è impostata per la combinazione di colori Windows Aero.  
+ Indica se la visualizzazione è impostata per Windows Aero combinazione di colori.  
   
 ```  
 BOOL IsTransparentCaption() const;  
@@ -1325,10 +1325,10 @@ virtual void OnClickButton(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `pButton`  
+ [in] *pButton*  
  Puntatore al pulsante che è stato fatto clic.  
   
- [in] `point`  
+ [in] *punto*  
  Questo parametro non viene usato.  
   
 ### <a name="remarks"></a>Note  
@@ -1343,8 +1343,8 @@ virtual void OnEditContextMenu(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `pEdit`  
- [in] `point`  
+ [in] *pEdit*  
+ [in] *punto*  
   
 ### <a name="remarks"></a>Note  
   
@@ -1356,11 +1356,11 @@ virtual void OnRTLChanged(BOOL bIsRTL);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `bIsRTL`  
+ [in] *bIsRTL*  
  `TRUE` Se il layout è da destra a sinistra; `FALSE` se il layout è da sinistra a destra.  
   
 ### <a name="remarks"></a>Note  
- Questo metodo consente di modificare il layout di tutti i controlli della barra multifunzione per la nuova direzione di layout.  
+ Questo metodo consente di regolare il layout di tutti i controlli della barra multifunzione per la nuova direzione di layout.  
   
 ##  <a name="onsetaccdata"></a>  CMFCRibbonBar::OnSetAccData  
  Questo metodo è interno al framework e non deve essere chiamato dal codice utente.  
@@ -1370,7 +1370,7 @@ BOOL OnSetAccData(long lVal);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- Long `lVal`  
+ long *lVal*  
  Indice dell'oggetto accessibile.  
   
 ### <a name="return-value"></a>Valore restituito  
@@ -1390,10 +1390,10 @@ virtual BOOL OnShowRibbonContextMenu(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `pWnd`  
- [in] `x`  
- [in] `y`  
- [in] `pHit`  
+ [in] *pWnd*  
+ [in] *x*  
+ [in] *y*  
+ [in] *pHit*  
   
 ### <a name="return-value"></a>Valore restituito  
   
@@ -1411,17 +1411,17 @@ virtual BOOL OnShowRibbonQATMenu(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `pWnd`  
- [in] `x`  
- [in] `y`  
- [in] `pHit`  
+ [in] *pWnd*  
+ [in] *x*  
+ [in] *y*  
+ [in] *pHit*  
   
 ### <a name="return-value"></a>Valore restituito  
   
 ### <a name="remarks"></a>Note  
   
 ##  <a name="onsyskeydown"></a>  CMFCRibbonBar::OnSysKeyDown  
- Chiamato dal framework quando l'utente preme il tasto F10 o tiene premuto il tasto ALT e quindi ne preme un altro.  
+ Chiamato dal framework quando l'utente preme il tasto F10 o tiene premuto il tasto ALT e quindi preme un altro.  
   
 ```  
 BOOL OnSysKeyDown(
@@ -1431,14 +1431,14 @@ BOOL OnSysKeyDown(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `pFrameWnd`  
+ [in] *pFrameWnd*  
  Puntatore alla finestra cornice principale padre della barra multifunzione.  
   
- [in] `wParam`  
- Codice tasto virtuale del tasto premuto.  
+ [in] *wParam*  
+ Codice tasto virtuale della chiave che viene premuta.  
   
- [in] `lParam`  
- Quando è stato premuto il tasto della tastiera flag di stato.  
+ [in] *lParam*  
+ I flag di stato della tastiera quando è stato premuto il tasto.  
   
 ### <a name="return-value"></a>Valore restituito  
  `TRUE` Se l'evento di pressione di tasto è stato elaborato; in caso contrario `FALSE`.  
@@ -1446,7 +1446,7 @@ BOOL OnSysKeyDown(
 ### <a name="remarks"></a>Note  
   
 ##  <a name="onsyskeyup"></a>  CMFCRibbonBar::OnSysKeyUp  
- Chiamato dal framework quando l'utente rilascia un tasto premuto quando è stato premuto il tasto ALT, il tasto ALT o il tasto F10.  
+ Chiamato dal framework quando l'utente rilascia il tasto F10, il tasto ALT o una chiave che è stata premuta quando è stato premuto il tasto ALT.  
   
 ```  
 BOOL OnSysKeyUp(
@@ -1456,13 +1456,13 @@ BOOL OnSysKeyUp(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `pFrameWnd`  
+ [in] *pFrameWnd*  
  Puntatore alla finestra cornice principale padre della barra multifunzione.  
   
- [in] `wParam`  
- Codice tasto virtuale della chiave viene rilasciata.  
+ [in] *wParam*  
+ Codice tasto virtuale della chiave in corso di rilascio.  
   
- [in] `lParam`  
+ [in] *lParam*  
  Questo parametro non viene usato.  
   
 ### <a name="return-value"></a>Valore restituito  
@@ -1487,7 +1487,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `pMsg`  
+ [in] *pMsg*  
  Puntatore a un messaggio.  
   
 ### <a name="return-value"></a>Valore restituito  
@@ -1523,17 +1523,17 @@ void RemoveAllFromTabs();
 ```  
   
 ### <a name="remarks"></a>Note  
- Utilizzare questa funzione se si desidera rimuovere tutti gli elementi che sono state aggiunte per l'area della scheda tramite [CMFCRibbonBar::AddToTabs](#addtotabs) metodo.  
+ Utilizzare questa funzione se si desidera rimuovere tutti gli elementi che sono state aggiunte per l'area della scheda con [CMFCRibbonBar::AddToTabs](#addtotabs) metodo.  
   
 ##  <a name="removecategory"></a>  CMFCRibbonBar::RemoveCategory  
- Elimina la categoria specificata della barra multifunzione dalla barra multifunzione.  
+ Consente di eliminare la categoria specificata della barra multifunzione dalla barra multifunzione.  
   
 ```  
 BOOL RemoveCategory(int nIndex);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `nIndex`  
+ [in] *nIndex*  
  Indice in base zero di una categoria nell'elenco di categorie della barra multifunzione che è contenuto nella barra multifunzione.  
   
 ### <a name="return-value"></a>Valore restituito  
@@ -1552,10 +1552,10 @@ BOOL SetActiveCategory(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `pCategory`  
+ [in] *pCategory*  
  Categoria della barra multifunzione che è contenuta nella barra multifunzione.  
   
- [in] `bForceRestore`  
+ [in] *bForceRestore*  
  `TRUE` Per ottimizzare la barra multifunzione è ridotta a icona; `FALSE` per visualizzare la categoria attiva in una finestra popup, se la barra multifunzione è ridotta a icona.  
   
 ### <a name="return-value"></a>Valore restituito  
@@ -1564,7 +1564,7 @@ BOOL SetActiveCategory(
 ### <a name="remarks"></a>Note  
  Categoria della barra multifunzione principale non può essere la categoria attiva.  
   
- Se la categoria specificata dal `pCategory` non è visualizzata, non può essere impostata come la categoria attiva.  
+ Se la categoria specificata da *pCategory* non è visualizzata, non può essere impostata come la categoria attiva.  
   
 ##  <a name="setactivemdichild"></a>  CMFCRibbonBar::SetActiveMDIChild  
  Associa i pulsanti di sistema della barra multifunzione che appartengono a una finestra figlio di interfaccia a documenti multipli (MDI) alla finestra figlio MDI specificata.  
@@ -1574,7 +1574,7 @@ void SetActiveMDIChild(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `pWnd`  
+ [in] *pWnd*  
  Puntatore a una finestra figlio MDI.  
   
 ### <a name="remarks"></a>Note  
@@ -1589,14 +1589,14 @@ void SetApplicationButton(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `pButton`  
+ [in] *pButton*  
  Puntatore al pulsante della barra multifunzione dell'applicazione.  
   
- [in] `sizeButton`  
+ [in] *sizeButton*  
  Dimensioni del pulsante della barra multifunzione dell'applicazione.  
   
 ### <a name="remarks"></a>Note  
- Pulsante della barra multifunzione dell'applicazione è un pulsante arrotondato grande nell'angolo superiore sinistro del controllo della barra multifunzione.  
+ Pulsante della barra multifunzione dell'applicazione è un pulsante arrotondato grandi situato nell'angolo superiore sinistro del controllo della barra multifunzione.  
   
 ### <a name="example"></a>Esempio  
  Nell'esempio seguente viene illustrato come utilizzare il `SetApplicationButton` metodo la `CMFCRibbonBar` classe.  
@@ -1614,20 +1614,20 @@ BOOL SetElementKeys(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `uiCmdID`  
+ [in] *uiCmdID*  
  L'ID di comando di un elemento della barra multifunzione.  
   
- [in] `lpszKeys`  
+ [in] *lpszKeys*  
  Suggerimento tasto di scelta.  
   
- [in] `lpszMenuKeys`  
+ [in] *lpszMenuKeys*  
  Suggerimento tasto di scelta menu.  
   
 ### <a name="return-value"></a>Valore restituito  
  `TRUE` Se i suggerimenti tasto di scelta dell'elemento almeno una barra multifunzione sono impostate; in caso contrario `FALSE`.  
   
 ### <a name="remarks"></a>Note  
- Suggerimento tasto di scelta menu facoltativo è per gli elementi della barra multifunzione con un pulsante che consente di aprire un menu di scelta rapida.  
+ Suggerimento tasto di scelta menu facoltativo sia per gli elementi della barra multifunzione con un pulsante di menu combinato che apre un menu popup.  
   
 ##  <a name="setkeyboardnavigationlevel"></a>  CMFCRibbonBar::SetKeyboardNavigationLevel  
  Imposta il livello di navigazione da tastiera come l'utente preme i suggerimenti tasto di scelta sono contenuti nella barra multifunzione.  
@@ -1639,17 +1639,17 @@ void SetKeyboardNavigationLevel(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `pLevel`  
+ [in] *pLevel*  
  Puntatore all'oggetto di navigazione da tastiera corrente.  
   
- [in] `bSetFocus`  
+ [in] *bSetFocus*  
  `TRUE` Per impostare lo stato attivo alla barra multifunzione.  
   
 ### <a name="remarks"></a>Note  
- Navigazione tramite tastiera della barra multifunzione inizia quando l'utente preme il tasto ALT o F10. L'utente seleziona il livello successivo di spostamento facendo clic su un suggerimento sulla barra multifunzione. L'utente può restituire il livello di navigazione precedente premendo il tasto ESC.  
+ Navigazione tramite tastiera della barra multifunzione viene avviato quando l'utente preme il tasto ALT o F10. L'utente seleziona il livello successivo di navigazione premendo un suggerimento nella barra multifunzione. L'utente può restituire il livello di navigazione precedente premendo il tasto ESC.  
   
 ##  <a name="setmaximizemode"></a>  CMFCRibbonBar::SetMaximizeMode  
- Consente di regolare la barra multifunzione barra quando le dimensioni della finestra di una finestra figlio di interfaccia a documenti multipli (MDI) entra o esce senza.  
+ Consente di regolare la barra multifunzione barra quando le dimensioni della finestra di una finestra figlio di interfaccia a documenti multipli (MDI) entra o esce dallo stato ingrandito.  
   
 ```  
 void SetMaximizeMode(
@@ -1658,10 +1658,10 @@ void SetMaximizeMode(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `bMax`  
+ [in] *bMax*  
  `TRUE` Per visualizzare i pulsanti di sistema per una finestra figlio MDI; della barra multifunzione `FALSE` per rimuovere i pulsanti di sistema per una finestra figlio MDI dalla barra multifunzione.  
   
- [in] `pWnd`  
+ [in] *pWnd*  
  Puntatore alla finestra cornice principale per la barra multifunzione.  
   
 ### <a name="remarks"></a>Note  
@@ -1677,10 +1677,10 @@ void SetQuickAccessCommands(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `lstCommands`  
+ [in] *lstCommands*  
  L'elenco di comandi da inserire nella barra di accesso rapido.  
   
- [in] `bRecalcLayout`  
+ [in] *bRecalcLayout*  
  `TRUE` Se desidera ridisegnare la barra multifunzione dopo aver aggiunto gli elementi della barra multifunzione; `FALSE` in caso contrario.  
   
 ### <a name="example"></a>Esempio  
@@ -1689,18 +1689,18 @@ void SetQuickAccessCommands(
  [!code-cpp[NVC_MFC_RibbonApp#8](../../mfc/reference/codesnippet/cpp/cmfcribbonbar-class_5.cpp)]  
   
 ##  <a name="setquickaccessdefaultstate"></a>  CMFCRibbonBar::SetQuickAccessDefaultState  
- Imposta la barra di accesso rapido allo stato predefinito.  
+ Imposta la barra degli strumenti di accedere rapidamente allo stato predefinito.  
   
 ```  
 void SetQuickAccessDefaultState(const CMFCRibbonQuickAccessToolBarDefaultState& state);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `state`  
+ [in] *stato*  
  Lo stato di accesso rapido della barra degli strumenti predefinita.  
   
 ### <a name="remarks"></a>Note  
- Lo stato della barra degli strumenti accesso rapido è incluso un elenco di comandi e la visibilità.  
+ Lo stato della barra degli strumenti accesso rapido include un elenco di comandi e la visibilità.  
   
 ### <a name="example"></a>Esempio  
  Nell'esempio seguente viene illustrato come utilizzare il `SetQuickAccessDefaultState` metodo la `CMFCRibbonBar` classe.  
@@ -1715,7 +1715,7 @@ void SetQuickAccessToolbarOnTop(BOOL bOnTop);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `bOnTop`  
+ [in] *bOnTop*  
  `TRUE` per posizionare la barra di accesso rapido sopra la barra multifunzione; `FALSE` per posizionare la barra di accesso rapido sotto la barra multifunzione.  
   
 ##  <a name="settooltipfixedwidth"></a>  CMFCRibbonBar::SetTooltipFixedWidth  
@@ -1728,11 +1728,11 @@ void SetTooltipFixedWidth(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `nWidthRegular`  
+ [in] *nWidthRegular*  
  La larghezza, in pixel, di una descrizione comando con dimensione fissa regolare.  
   
- [in] `nWidthLargeImage`  
- La larghezza, in pixel, di un tipo di grandi dimensioni fisse ridimensionati descrizione comando.  
+ [in] *nWidthLargeImage*  
+ La larghezza, in pixel, di un tipo di grandi dimensioni fisse ridimensionati della descrizione comando.  
   
 ### <a name="remarks"></a>Note  
  Se un parametro su 0, la larghezza corrispondente variare.  
@@ -1747,11 +1747,11 @@ void ShowCategory(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `nIndex`  
+ [in] *nIndex*  
  Indice della categoria della barra multifunzione.  
   
- [in] `bShow`  
- Se `TRUE`, indicare la categoria della barra multifunzione; in caso contrario, nascondere la categoria della barra multifunzione.  
+ [in] *bMostra*  
+ Se `TRUE`, indicare la categoria della barra multifunzione; nascondere in caso contrario, categoria della barra multifunzione.  
   
 ##  <a name="showcontextcategories"></a>  CMFCRibbonBar::ShowContextCategories  
  Mostra o nasconde le categorie contesto con l'ID specificato.  
@@ -1763,10 +1763,10 @@ void ShowContextCategories(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `uiContextID`  
+ [in] *uiContextID*  
  L'ID di categoria contesto.  
   
- [in] `bShow`  
+ [in] *bMostra*  
  Se `TRUE`, mostrare le categorie con l'ID specificato; in caso contrario, nascondere le categorie con l'ID specificato.  
   
 ##  <a name="showkeytips"></a>  CMFCRibbonBar::ShowKeyTips  
@@ -1798,7 +1798,7 @@ virtual BOOL TranslateChar(UINT nChar);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `nChar`  
+ [in] *nChar*  
  Codice utente pressione di tasto carattere.  
   
 ### <a name="return-value"></a>Valore restituito  
@@ -1820,7 +1820,7 @@ virtual CMFCRibbonBaseElement* GetFocused();
 ### <a name="remarks"></a>Note  
   
 ##  <a name="iswindows7look"></a>  CMFCRibbonBar::IsWindows7Look  
- Indica se la barra multifunzione con Windows 7 Cerca (pulsante piccola applicazione rettangolare).  
+ Indica se la barra multifunzione dispone di Windows 7 Cerca (pulsante piccola applicazione rettangolare).  
   
 ```  
 BOOL IsWindows7Look() const;  
@@ -1848,16 +1848,16 @@ virtual BOOL LoadFromResource(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `uiXMLResID`  
- Specifica la risorsa stringa ID di XML con le informazioni di barra multifunzione.  
+ *uiXMLResID*  
+ Specifica risorsa stringa ID di XML con informazioni sulla barra multifunzione.  
   
- `lpszResType`  
- Specifica tipo di risorsa si trova in `uiXMLResID`.  
+ *lpszResType*  
+ Specifica tipo di risorsa che si trova in *uiXMLResID*.  
   
- `hInstance`  
- Handle per il modulo il cui file eseguibile contiene la risorsa. Se `hInstance` è `NULL`, il sistema carica la risorsa dal modulo che è stato utilizzato per creare il processo corrente.  
+ *hInstance*  
+ Handle per il modulo il cui file eseguibile contiene la risorsa. Se *hInstance* è `NULL`, il sistema carica la risorsa dal modulo che è stato utilizzato per creare il processo corrente.  
   
- `lpszXMLResID`  
+ *lpszXMLResID*  
  Specifica l'ID di risorsa (sotto forma di stringa) con le informazioni di barra multifunzione.  
   
 ### <a name="return-value"></a>Valore restituito  
@@ -1873,8 +1873,8 @@ UINT SaveToXMLBuffer(LPBYTE* ppBuffer) const;
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `ppBuffer`  
- Quando questa funzione viene restituito, `ppBuffer` punta a un buffer allocato da questo metodo e informazioni sulla barra multifunzione in formato XML.  
+ *ppBuffer*  
+ Quando questa funzione viene restituito, *ppBuffer* punta a un buffer allocato da questo metodo e contiene informazioni sulla barra multifunzione in formato XML.  
   
 ### <a name="return-value"></a>Valore restituito  
  `TRUE` se l'esito è positivo; in caso contrario, `FALSE`.  
@@ -1889,7 +1889,7 @@ BOOL SaveToXMLFile(LPCTSTR lpszFilePath) const;
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `lpszFilePath`  
+ *lpszFilePath*  
  Specifica il file di output.  
   
 ### <a name="return-value"></a>Valore restituito  
@@ -1898,7 +1898,7 @@ BOOL SaveToXMLFile(LPCTSTR lpszFilePath) const;
 ### <a name="remarks"></a>Note  
   
 ##  <a name="setwindows7look"></a>  CMFCRibbonBar::SetWindows7Look  
- Abilita o disabilita l'aspetto di Windows 7 (pulsante piccola applicazione rettangolare) per la barra multifunzione.  
+ Abilita o disabilita l'aspetto di Windows 7 (piccolo rettangolare pulsante di applicazione) per la barra multifunzione.  
   
 ```  
 void SetWindows7Look(
@@ -1907,10 +1907,10 @@ void SetWindows7Look(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `bWindows7Look`  
+ *bWindows7Look*  
  `TRUE` Imposta l'aspetto di Windows 7; `FALSE` in caso contrario.  
   
- `bRecalc`  
+ *bRecalc*  
  `TRUE` Ricalcola il layout della barra multifunzione. `FALSE` in caso contrario.  
   
 ### <a name="remarks"></a>Note  

@@ -60,12 +60,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b2a84e73c165efd8f2f17e66af149e33d90395e8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 25337104da2f1ff397d3c61170ab6ad5a8817130
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33372521"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039141"
 ---
 # <a name="clist-class"></a>CList (classe)
 Supporta elenchi ordinati di oggetti non univoci accessibili in sequenza o in base al valore.  
@@ -89,9 +89,9 @@ class CList : public CObject
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[CList::AddHead](#addhead)|Aggiunge un elemento (o tutti gli elementi in un altro elenco) all'inizio dell'elenco (effettua un nuovo inizio).|  
-|[CList::AddTail](#addtail)|Aggiunge un elemento (o tutti gli elementi in un altro elenco) alla fine dell'elenco (effettua una nuova fine).|  
-|[CList::Find](#find)|Ottiene la posizione di un elemento specificato dal valore di puntatore.|  
+|[CList::AddHead](#addhead)|Aggiunge un elemento (o tutti gli elementi in un altro elenco) nell'intestazione dell'elenco (effettua un nuovo inizio).|  
+|[CList::AddTail](#addtail)|Aggiunge un elemento (o tutti gli elementi in un altro elenco) alla fine dell'elenco (effettua una nuova coda).|  
+|[CList::Find](#find)|Ottiene la posizione di un elemento specificato dal valore del puntatore.|  
 |[CList::FindIndex](#findindex)|Ottiene la posizione di un elemento specificato da un indice in base zero.|  
 |[CList::GetAt](#getat)|Ottiene l'elemento in una determinata posizione.|  
 |[CList::GetCount](#getcount)|Restituisce il numero di elementi nell'elenco.|  
@@ -104,11 +104,11 @@ class CList : public CObject
 |[CList::GetTailPosition](#gettailposition)|Restituisce la posizione dell'elemento della parte finale dell'elenco.|  
 |[CList::InsertAfter](#insertafter)|Inserisce un nuovo elemento dopo una determinata posizione.|  
 |[CList::InsertBefore](#insertbefore)|Inserisce un nuovo elemento prima di una determinata posizione.|  
-|[CList::IsEmpty](#isempty)|Verifica se la condizione di elenco vuoto (nessun elemento).|  
+|[CList::IsEmpty](#isempty)|Verifica se la condizione di elenco vuoto (alcun elemento).|  
 |[CList::RemoveAll](#removeall)|Rimuove tutti gli elementi da questo elenco.|  
-|[CList::RemoveAt](#removeat)|Rimuove un elemento dall'elenco, specificato dalla posizione.|  
+|[CList::RemoveAt](#removeat)|Rimuove un elemento da questo elenco, specificato dalla posizione.|  
 |[CList::RemoveHead](#removehead)|Rimuove l'elemento head dell'elenco.|  
-|[CList::RemoveTail](#removetail)|Rimuove l'elemento dalla coda dell'elenco.|  
+|[CList::RemoveTail](#removetail)|Rimuove l'elemento dall'elemento tail dell'elenco.|  
 |[CList::SetAt](#setat)|Imposta l'elemento in una determinata posizione.|  
   
 #### <a name="parameters"></a>Parametri  
@@ -121,13 +121,13 @@ class CList : public CObject
 ## <a name="remarks"></a>Note  
  `CList` gli elenchi si comportano come gli elenchi collegati doppiamente.  
   
- Una variabile di tipo **posizione** è una chiave per l'elenco. È possibile utilizzare un **posizione** variabile come un iteratore per attraversare un elenco in ordine sequenziale e come un segnalibro per indicare una posizione. Una posizione non è lo stesso come un indice, tuttavia.  
+ Una variabile di tipo **posizione** è una chiave per l'elenco. È possibile utilizzare un **posizione** variabile come un iteratore per attraversare un elenco in ordine sequenziale e come segnalibro per contenere un punto di partenza. Una posizione non è quella di un indice, tuttavia.  
   
- Inserimento di elementi è molto veloce in corrispondenza dell'inizio di elenco, nella fase finale e in corrispondenza di una determinata **posizione**. Una ricerca sequenziale è necessaria cercare un elemento per valore o indice. Questa ricerca può essere lenta se l'elenco è lungo.  
+ Inserimento di elementi è molto veloce in corrispondenza dell'inizio di elenco, nella fase finale e in corrispondenza di una determinata **posizione**. Una ricerca sequenziale è necessaria cercare un elemento dal valore o all'indice. Questa ricerca può essere lenta se l'elenco è lungo.  
   
- Se è necessario un dump di singoli elementi nell'elenco, è necessario impostare la profondità del contesto di dump a 1 o superiore.  
+ Se è necessario un dump di singoli elementi nell'elenco, è necessario impostare la profondità del contesto di dump a 1 o versioni successive.  
   
- Alcune funzioni membro di questa classe chiamano funzioni di supporto globale che devono essere personalizzati per la maggior parte degli utilizzi della `CList` classe. Vedere [classi Collection](../../mfc/reference/collection-class-helpers.md) nella sezione "Macro e funzioni globali".  
+ Alcune funzioni membro di questa chiamata classe helper globale funzioni che devono essere personalizzati per la maggior parte degli utilizzi della `CList` classe. Vedere [classi Collection](../../mfc/reference/collection-class-helpers.md) nella sezione "Macro e funzioni globali".  
   
  Per ulteriori informazioni sull'utilizzo `CList`, vedere l'articolo [raccolte](../../mfc/collections.md).  
   
@@ -143,7 +143,7 @@ class CList : public CObject
  **Intestazione:** afxtempl.h  
   
 ##  <a name="addhead"></a>  CList::AddHead  
- Aggiunge un nuovo elemento o un elenco di elementi all'inizio di questo elenco.  
+ Aggiunge un nuovo elemento o un elenco di elementi nell'intestazione dell'elenco.  
   
 ```  
 POSITION AddHead(ARG_TYPE newElement);  
@@ -151,14 +151,14 @@ void AddHead(CList* pNewList);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `ARG_TYPE`  
+ *ARG_TYPE*  
  Parametro del modello che specifica il tipo di elemento dell'elenco (può essere un riferimento).  
   
- `newElement`  
+ *newElement*  
  Il nuovo elemento.  
   
- `pNewList`  
- Un puntatore a un altro `CList` elenco. Gli elementi in `pNewList` verrà aggiunto all'elenco.  
+ *pNewList*  
+ Un puntatore a un altro `CList` elenco. Gli elementi in *pNewList* verrà aggiunto a questo elenco.  
   
 ### <a name="return-value"></a>Valore restituito  
  Restituisce la prima versione di **posizione** valore dell'elemento appena inserito.  
@@ -178,14 +178,14 @@ void AddTail(CList* pNewList);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `ARG_TYPE`  
+ *ARG_TYPE*  
  Parametro del modello che specifica il tipo di elemento dell'elenco (può essere un riferimento).  
   
- `newElement`  
+ *newElement*  
  Elemento da aggiungere all'elenco.  
   
- `pNewList`  
- Un puntatore a un altro `CList` elenco. Gli elementi in `pNewList` verrà aggiunto all'elenco.  
+ *pNewList*  
+ Un puntatore a un altro `CList` elenco. Gli elementi in *pNewList* verrà aggiunto a questo elenco.  
   
 ### <a name="return-value"></a>Valore restituito  
  Restituisce la prima versione di **posizione** valore dell'elemento appena inserito.  
@@ -204,17 +204,17 @@ CList(INT_PTR nBlockSize = 10);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `nBlockSize`  
+ *nBlockSize*  
  La granularità dell'allocazione di memoria per l'estensione nell'elenco.  
   
 ### <a name="remarks"></a>Note  
- Man mano che aumenta l'elenco, la memoria viene allocata in unità di `nBlockSize` voci.  
+ Man mano che aumenta l'elenco, la memoria viene allocata in unità pari *nBlockSize* voci.  
   
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFCCollections#38](../../mfc/codesnippet/cpp/clist-class_4.cpp)]  
   
 ##  <a name="find"></a>  CList::Find  
- Cerca nell'elenco in ordine sequenziale per trovare il primo elemento corrispondente al specificato `searchValue`.  
+ Cerca nell'elenco in ordine sequenziale per trovare il primo elemento corrispondente al specificato *searchValue*.  
   
 ```  
 POSITION Find(
@@ -223,34 +223,34 @@ POSITION Find(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `ARG_TYPE`  
+ *ARG_TYPE*  
  Parametro del modello che specifica il tipo di elemento dell'elenco (può essere un riferimento).  
   
- `searchValue`  
- Il valore da trovare nell'elenco.  
+ *searchValue*  
+ Il valore deve essere trovato nell'elenco.  
   
- `startAfter`  
+ *startAfter*  
  La posizione iniziale per la ricerca. Se viene specificato alcun valore, la ricerca inizia con l'elemento head.  
   
 ### <a name="return-value"></a>Valore restituito  
- Oggetto **posizione** valore che può essere utilizzato per l'iterazione o il recupero di puntatore a oggetto; **NULL** se l'oggetto non viene trovato.  
+ Un **posizione** valore che può essere usato per iterazione o il recupero di puntatore oggetto; **NULL** se l'oggetto non viene trovato.  
   
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFCCollections#39](../../mfc/codesnippet/cpp/clist-class_5.cpp)]  
   
 ##  <a name="findindex"></a>  CList::FindIndex  
- Usa il valore di `nIndex` come indice nell'elenco.  
+ Usa il valore di *nIndex* come indice nell'elenco.  
   
 ```  
 POSITION FindIndex(INT_PTR nIndex) const;  
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `nIndex`  
+ *nIndex*  
  Indice in base zero dell'elemento di elenco da trovare.  
   
 ### <a name="return-value"></a>Valore restituito  
- Oggetto **posizione** valore che può essere utilizzato per l'iterazione o il recupero di puntatore a oggetto; **NULL** se `nIndex` è negativo o troppo grande.  
+ Un **posizione** valore che può essere usato per iterazione o il recupero di puntatore oggetto; **NULL** se *nIndex* è negativo o troppo grande.  
   
 ### <a name="remarks"></a>Note  
  Avviare un'analisi sequenza dall'inizio dell'elenco, arresto nel *n*elemento th.  
@@ -268,7 +268,7 @@ const TYPE& GetAt(POSITION position) const;
   
 ### <a name="parameters"></a>Parametri  
  *TIPO*  
- Parametro di modello che specifica il tipo di oggetto nell'elenco.  
+ Parametro modello che specifica il tipo di oggetto nell'elenco.  
   
  *Posizione*  
  La posizione nell'elenco dell'elemento da ottenere.  
@@ -277,12 +277,12 @@ const TYPE& GetAt(POSITION position) const;
  Vedere la descrizione del valore restituito per `GetHead`.  
   
 ### <a name="remarks"></a>Note  
- `GetAt` Restituisce l'elemento (o un riferimento all'elemento) associato a una determinata posizione. Non ha lo stesso come un indice e non è possibile operare su un **posizione** valore manualmente. Una variabile di tipo **posizione** è una chiave per l'elenco.  
+ `GetAt` Restituisce l'elemento (o un riferimento all'elemento) associato a una determinata posizione. Non è quella di un indice e non può funzionare con una **posizione** valore manualmente. Una variabile di tipo **posizione** è una chiave per l'elenco.  
   
- È necessario assicurarsi che il **posizione** valore rappresenta una posizione valida nell'elenco. Se non è valido, la versione di Debug della libreria di classi Microsoft Foundation asserzioni.  
+ È necessario assicurarsi che il **posizione** valore rappresenta una posizione valida nell'elenco. Se non è valido, quindi asserisce la versione di Debug della libreria Microsoft Foundation Class.  
   
 ### <a name="example"></a>Esempio  
-  Per vedere l'esempio [CList::GetHeadPosition](#getheadposition).  
+  Vedere l'esempio relativo [CList::GetHeadPosition](#getheadposition).  
   
 ##  <a name="getcount"></a>  CList::GetCount  
  Ottiene il numero di elementi nell'elenco.  
@@ -292,13 +292,13 @@ INT_PTR GetCount() const;
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- Valore intero che contiene il numero di elementi.  
+ Valore integer contenente il numero di elementi.  
   
 ### <a name="remarks"></a>Note  
- Chiamare questo metodo genera lo stesso risultato di [CList::GetSize](#getsize) metodo.  
+ Chiamare questo metodo genera lo stesso risultato come le [CList::GetSize](#getsize) metodo.  
   
 ### <a name="example"></a>Esempio  
-  Per vedere l'esempio [CList::RemoveHead](#removehead).  
+  Vedere l'esempio relativo [CList::RemoveHead](#removehead).  
   
 ##  <a name="gethead"></a>  CList::GetHead  
  Ottiene l'elemento head (o un riferimento all'elemento head) di questo elenco.  
@@ -311,15 +311,15 @@ TYPE& GetHead();
   
 ### <a name="parameters"></a>Parametri  
  *TIPO*  
- Parametro di modello che specifica il tipo di oggetto nell'elenco.  
+ Parametro modello che specifica il tipo di oggetto nell'elenco.  
   
 ### <a name="return-value"></a>Valore restituito  
- Se l'elenco è **const**, `GetHead` restituisce una copia dell'elemento in corrispondenza dell'inizio dell'elenco. In questo modo la funzione può essere utilizzato solo sul lato destro di un'istruzione di assegnazione e protegge l'elenco dalla modifica.  
+ Se l'elenco **const**, `GetHead` restituisce una copia dell'elemento in corrispondenza dell'inizio dell'elenco. In questo modo la funzione deve essere utilizzata solo sul lato destro di un'istruzione di assegnazione e protegge l'elenco dalla modifica.  
   
- Se l'elenco non è **const**, `GetHead` restituisce un riferimento all'elemento in corrispondenza dell'inizio dell'elenco. Questo consente la funzione può essere utilizzata su entrambi i lati di un'istruzione di assegnazione e pertanto le voci dell'elenco da modificare.  
+ Se l'elenco non è **const**, `GetHead` restituisce un riferimento all'elemento in corrispondenza dell'inizio dell'elenco. In questo modo la funzione deve essere utilizzata in entrambi i lati di un'istruzione di assegnazione e pertanto consente le voci dell'elenco da modificare.  
   
 ### <a name="remarks"></a>Note  
- È necessario assicurarsi che l'elenco non è vuota prima di chiamare `GetHead`. Se l'elenco è vuoto, la versione di Debug della libreria di classi Microsoft Foundation asserzioni. Utilizzare [IsEmpty](#isempty) per verificare che l'elenco contiene elementi.  
+ È necessario assicurarsi che l'elenco non è vuota prima di chiamare `GetHead`. Se l'elenco è vuoto, la versione di Debug della libreria di classi Microsoft Foundation asserzioni. Uso [IsEmpty](#isempty) per verificare che l'elenco contiene elementi.  
   
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFCCollections#41](../../mfc/codesnippet/cpp/clist-class_7.cpp)]  
@@ -332,13 +332,13 @@ POSITION GetHeadPosition() const;
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- Oggetto **posizione** valore che può essere utilizzato per l'iterazione o il recupero di puntatore a oggetto; **NULL** se l'elenco è vuoto.  
+ Un **posizione** valore che può essere usato per iterazione o il recupero di puntatore oggetto; **NULL** se l'elenco è vuoto.  
   
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFCCollections#42](../../mfc/codesnippet/cpp/clist-class_8.cpp)]  
   
 ##  <a name="getnext"></a>  CList  
- Ottiene l'elemento di elenco, identificato da `rPosition`, quindi imposta `rPosition` per il **posizione** valore della voce successiva nell'elenco.  
+ Ottiene l'elemento di elenco identificata *rPosition*, quindi imposta *rPosition* per il **posizione** valore della voce successiva nell'elenco.  
   
 ```  
 TYPE& GetNext(POSITION& rPosition);  
@@ -349,26 +349,26 @@ const TYPE& GetNext(POSITION& rPosition) const;
  *TIPO*  
  Parametro di modello che specifica il tipo degli elementi nell'elenco.  
   
- `rPosition`  
+ *rPosition.*  
  Un riferimento a un **posizione** valore restituito da una precedente `GetNext`, [GetHeadPosition](#getheadposition), o un'altra chiamata di funzione membro.  
   
 ### <a name="return-value"></a>Valore restituito  
- Se l'elenco è **const**, `GetNext` restituisce una copia di un elemento dell'elenco. In questo modo la funzione può essere utilizzato solo sul lato destro di un'istruzione di assegnazione e protegge l'elenco dalla modifica.  
+ Se l'elenco **const**, `GetNext` restituisce una copia di un elemento dell'elenco. In questo modo la funzione deve essere utilizzata solo sul lato destro di un'istruzione di assegnazione e protegge l'elenco dalla modifica.  
   
- Se l'elenco non è **const**, `GetNext` restituisce un riferimento a un elemento dell'elenco. Questo consente la funzione può essere utilizzata su entrambi i lati di un'istruzione di assegnazione e pertanto le voci dell'elenco da modificare.  
+ Se l'elenco non è **const**, `GetNext` restituisce un riferimento a un elemento dell'elenco. In questo modo la funzione deve essere utilizzata in entrambi i lati di un'istruzione di assegnazione e pertanto consente le voci dell'elenco da modificare.  
   
 ### <a name="remarks"></a>Note  
- È possibile utilizzare `GetNext` in un ciclo di iterazione in avanti, se si stabilisce la posizione iniziale con una chiamata a `GetHeadPosition` o **trovare**.  
+ È possibile utilizzare `GetNext` in un ciclo di iterazione in avanti, se si stabilisce la posizione iniziale con una chiamata a `GetHeadPosition` o `Find`.  
   
- È necessario assicurarsi che il **posizione** valore rappresenta una posizione valida nell'elenco. Se non è valido, la versione di Debug della libreria di classi Microsoft Foundation asserzioni.  
+ È necessario assicurarsi che il **posizione** valore rappresenta una posizione valida nell'elenco. Se non è valido, quindi asserisce la versione di Debug della libreria Microsoft Foundation Class.  
   
- Se l'elemento recuperato è l'ultimo nell'elenco, quindi il nuovo valore di `rPosition` è impostato su **NULL**.  
+ Se l'elemento recuperato è l'ultimo nell'elenco, quindi il nuovo valore del `rPosition` è impostata su **NULL**.  
   
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFCCollections#43](../../mfc/codesnippet/cpp/clist-class_9.cpp)]  
   
 ##  <a name="getprev"></a>  CList::GetPrev  
- Ottiene l'elemento di elenco, identificato da `rPosition`, quindi imposta `rPosition` per il **posizione** valore della voce nell'elenco precedente.  
+ Ottiene l'elemento di elenco identificato dal `rPosition`, quindi imposta `rPosition` per il **posizione** valore della voce nell'elenco precedente.  
   
 ```  
 TYPE& GetPrev(POSITION& rPosition);  
@@ -379,20 +379,20 @@ const TYPE& GetPrev(POSITION& rPosition) const;
  *TIPO*  
  Parametro di modello che specifica il tipo degli elementi nell'elenco.  
   
- `rPosition`  
+ *rPosition.*  
  Un riferimento a un **posizione** valore restituito da una precedente `GetPrev` o un'altra chiamata di funzione membro.  
   
 ### <a name="return-value"></a>Valore restituito  
- Se l'elenco è **const**, `GetPrev` restituisce una copia dell'elemento in corrispondenza dell'inizio dell'elenco. In questo modo la funzione può essere utilizzato solo sul lato destro di un'istruzione di assegnazione e protegge l'elenco dalla modifica.  
+ Se l'elenco **const**, `GetPrev` restituisce una copia dell'elemento in corrispondenza dell'inizio dell'elenco. In questo modo la funzione deve essere utilizzata solo sul lato destro di un'istruzione di assegnazione e protegge l'elenco dalla modifica.  
   
- Se l'elenco non è **const**, `GetPrev` restituisce un riferimento a un elemento dell'elenco. Questo consente la funzione può essere utilizzata su entrambi i lati di un'istruzione di assegnazione e pertanto le voci dell'elenco da modificare.  
+ Se l'elenco non è **const**, `GetPrev` restituisce un riferimento a un elemento dell'elenco. In questo modo la funzione deve essere utilizzata in entrambi i lati di un'istruzione di assegnazione e pertanto consente le voci dell'elenco da modificare.  
   
 ### <a name="remarks"></a>Note  
- È possibile utilizzare `GetPrev` in un ciclo di iterazione inversa se si stabilisce la posizione iniziale con una chiamata a `GetTailPosition` o **trovare**.  
+ È possibile utilizzare `GetPrev` in un ciclo di iterazione inversa se si stabilisce la posizione iniziale con una chiamata a `GetTailPosition` o `Find`.  
   
- È necessario assicurarsi che il **posizione** valore rappresenta una posizione valida nell'elenco. Se non è valido, la versione di Debug della libreria di classi Microsoft Foundation asserzioni.  
+ È necessario assicurarsi che il **posizione** valore rappresenta una posizione valida nell'elenco. Se non è valido, quindi asserisce la versione di Debug della libreria Microsoft Foundation Class.  
   
- Se l'elemento recuperato è il primo nell'elenco, quindi il nuovo valore di `rPosition` è impostato su **NULL**.  
+ Se l'elemento recuperato è il primo nell'elenco, quindi il nuovo valore del *rPosition* è impostata su **NULL**.  
   
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFCCollections#44](../../mfc/codesnippet/cpp/clist-class_10.cpp)]  
@@ -408,7 +408,7 @@ INT_PTR GetSize() const;
  Numero di elementi nell'elenco.  
   
 ### <a name="remarks"></a>Note  
- Chiamare questo metodo per recuperare il numero di elementi nell'elenco.  Chiamare questo metodo genera lo stesso risultato di [CList::GetCount](#getcount) metodo.  
+ Chiamare questo metodo per recuperare il numero di elementi nell'elenco.  Chiamare questo metodo genera lo stesso risultato come le [CList::GetCount](#getcount) metodo.  
   
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFCCollections#45](../../mfc/codesnippet/cpp/clist-class_11.cpp)]  
@@ -426,10 +426,10 @@ const TYPE& GetTail() const;
  Parametro di modello che specifica il tipo di elementi nell'elenco.  
   
 ### <a name="return-value"></a>Valore restituito  
- Vedere la descrizione del valore restituito per [GetHead](../../mfc/reference/coblist-class.md#gethead).  
+ Vedere la descrizione del valore restituito di [GetHead](../../mfc/reference/coblist-class.md#gethead).  
   
 ### <a name="remarks"></a>Note  
- È necessario assicurarsi che l'elenco non è vuota prima di chiamare `GetTail`. Se l'elenco è vuoto, la versione di Debug della libreria di classi Microsoft Foundation asserzioni. Utilizzare [IsEmpty](../../mfc/reference/coblist-class.md#isempty) per verificare che l'elenco contiene elementi.  
+ È necessario assicurarsi che l'elenco non è vuota prima di chiamare `GetTail`. Se l'elenco è vuoto, la versione di Debug della libreria di classi Microsoft Foundation asserzioni. Uso [IsEmpty](../../mfc/reference/coblist-class.md#isempty) per verificare che l'elenco contiene elementi.  
   
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFCCollections#46](../../mfc/codesnippet/cpp/clist-class_12.cpp)]  
@@ -442,7 +442,7 @@ POSITION GetTailPosition() const;
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- Oggetto **posizione** valore che può essere utilizzato per l'iterazione o il recupero di puntatore a oggetto; **NULL** se l'elenco è vuoto.  
+ Un **posizione** valore che può essere usato per iterazione o il recupero di puntatore oggetto; **NULL** se l'elenco è vuoto.  
   
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFCCollections#47](../../mfc/codesnippet/cpp/clist-class_13.cpp)]  
@@ -456,12 +456,12 @@ POSITION InsertAfter(POSITION position, ARG_TYPE newElement);
   
 ### <a name="parameters"></a>Parametri  
  *Posizione*  
- Valore **POSITION** restituito da una chiamata di funzione del membro `GetNext`, `GetPrev`o **Find** .  
+ Un **posizione** valore restituito da una precedente `GetNext`, `GetPrev`, o `Find` chiamata di funzione membro.  
   
- `ARG_TYPE`  
- Parametro di modello che specifica il tipo di elemento di elenco.  
+ *ARG_TYPE*  
+ Parametro di modello che specifica il tipo dell'elemento di elenco.  
   
- `newElement`  
+ *newElement*  
  Elemento da aggiungere all'elenco.  
   
 ### <a name="return-value"></a>Valore restituito  
@@ -479,12 +479,12 @@ POSITION InsertBefore(POSITION position, ARG_TYPE newElement);
   
 ### <a name="parameters"></a>Parametri  
  *Posizione*  
- Valore **POSITION** restituito da una chiamata di funzione del membro `GetNext`, `GetPrev`o **Find** .  
+ Un **posizione** valore restituito da una precedente `GetNext`, `GetPrev`, o `Find` chiamata di funzione membro.  
   
- `ARG_TYPE`  
+ *ARG_TYPE*  
  Parametro del modello che specifica il tipo di elemento dell'elenco (può essere un riferimento).  
   
- `newElement`  
+ *newElement*  
  Elemento da aggiungere all'elenco.  
   
 ### <a name="return-value"></a>Valore restituito  
@@ -504,7 +504,7 @@ BOOL IsEmpty() const;
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- Diverso da zero se l'elenco è vuoto. in caso contrario 0.  
+ Diverso da zero se l'elenco è vuoto; in caso contrario 0.  
   
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFCCollections#50](../../mfc/codesnippet/cpp/clist-class_16.cpp)]  
@@ -534,7 +534,7 @@ void RemoveAt(POSITION position);
  La posizione dell'elemento da rimuovere dall'elenco.  
   
 ### <a name="remarks"></a>Note  
- È necessario assicurarsi che il **posizione** valore rappresenta una posizione valida nell'elenco. Se non è valido, la versione di Debug della libreria di classi Microsoft Foundation asserzioni.  
+ È necessario assicurarsi che il **posizione** valore rappresenta una posizione valida nell'elenco. Se non è valido, quindi asserisce la versione di Debug della libreria Microsoft Foundation Class.  
   
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFCCollections#52](../../mfc/codesnippet/cpp/clist-class_18.cpp)]  
@@ -554,13 +554,13 @@ TYPE RemoveHead();
  L'elemento in precedenza in corrispondenza dell'inizio dell'elenco.  
   
 ### <a name="remarks"></a>Note  
- È necessario assicurarsi che l'elenco non è vuota prima di chiamare `RemoveHead`. Se l'elenco è vuoto, la versione di Debug della libreria di classi Microsoft Foundation asserzioni. Utilizzare [IsEmpty](#isempty) per verificare che l'elenco contiene elementi.  
+ È necessario assicurarsi che l'elenco non è vuota prima di chiamare `RemoveHead`. Se l'elenco è vuoto, la versione di Debug della libreria di classi Microsoft Foundation asserzioni. Uso [IsEmpty](#isempty) per verificare che l'elenco contiene elementi.  
   
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFCCollections#53](../../mfc/codesnippet/cpp/clist-class_19.cpp)]  
   
 ##  <a name="removetail"></a>  CList::RemoveTail  
- Rimuove l'elemento dalla coda dell'elenco e restituisce un puntatore a esso.  
+ Rimuove l'elemento dall'elemento tail dell'elenco e restituisce un puntatore a esso.  
   
 ```  
 TYPE RemoveTail();
@@ -574,7 +574,7 @@ TYPE RemoveTail();
  L'elemento che è stata nella fase finale dell'elenco.  
   
 ### <a name="remarks"></a>Note  
- È necessario assicurarsi che l'elenco non è vuota prima di chiamare `RemoveTail`. Se l'elenco è vuoto, la versione di Debug della libreria di classi Microsoft Foundation asserzioni. Utilizzare [IsEmpty](#isempty) per verificare che l'elenco contiene elementi.  
+ È necessario assicurarsi che l'elenco non è vuota prima di chiamare `RemoveTail`. Se l'elenco è vuoto, la versione di Debug della libreria di classi Microsoft Foundation asserzioni. Uso [IsEmpty](#isempty) per verificare che l'elenco contiene elementi.  
   
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFCCollections#54](../../mfc/codesnippet/cpp/clist-class_20.cpp)]  
@@ -587,19 +587,19 @@ void SetAt(POSITION pos, ARG_TYPE newElement);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `pos`  
+ *POS*  
  Il **posizione** dell'elemento da impostare.  
   
- `ARG_TYPE`  
+ *ARG_TYPE*  
  Parametro del modello che specifica il tipo di elemento dell'elenco (può essere un riferimento).  
   
- `newElement`  
+ *newElement*  
  L'elemento da aggiungere all'elenco.  
   
 ### <a name="remarks"></a>Note  
- Non ha lo stesso come un indice e non è possibile operare su un **posizione** valore manualmente. `SetAt` Scrive l'elemento nella posizione specificata nell'elenco.  
+ Non è quella di un indice e non può funzionare con una **posizione** valore manualmente. `SetAt` Scrive l'elemento nella posizione specificata nell'elenco.  
   
- È necessario assicurarsi che il **posizione** valore rappresenta una posizione valida nell'elenco. Se non è valido, la versione di Debug della libreria di classi Microsoft Foundation asserzioni.  
+ È necessario assicurarsi che il **posizione** valore rappresenta una posizione valida nell'elenco. Se non è valido, quindi asserisce la versione di Debug della libreria Microsoft Foundation Class.  
   
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFCCollections#55](../../mfc/codesnippet/cpp/clist-class_21.cpp)]  

@@ -56,15 +56,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9d274cbafbd50df2f577b484e433c964f1dec096
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c1f2fcdedb6b01025b06e4384ec2c32e95d08b6e
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33376330"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040129"
 ---
 # <a name="cmfcfilterchunkvalueimpl-class"></a>Classe CMFCFilterChunkValueImpl
-Questa è una classe che semplifica la logica di blocchi e proprietà coppia di valori.  
+Si tratta di una classe che semplifica la logica di blocchi e proprietà coppia di valori.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -88,27 +88,27 @@ class CMFCFilterChunkValueImpl : public ATL::IFilterChunkValue;
 |[CMFCFilterChunkValueImpl::Clear](#clear)|Cancella il ChunkValue.|  
 |[CMFCFilterChunkValueImpl::CopyChunk](#copychunk)|Copia il blocco a una struttura che descrive le caratteristiche di un blocco.|  
 |[CMFCFilterChunkValueImpl::CopyFrom](#copyfrom)|Inizializza questo valore di blocco da di altro valore.|  
-|[CMFCFilterChunkValueImpl::GetChunkGUID](#getchunkguid)|Recupera il GUID del blocco.|  
+|[CMFCFilterChunkValueImpl::GetChunkGUID](#getchunkguid)|Recupera il GUID di blocco.|  
 |[CMFCFilterChunkValueImpl::GetChunkPID](#getchunkpid)|Recupera il blocco PID (ID di proprietà).|  
 |[CMFCFilterChunkValueImpl::GetChunkType](#getchunktype)|Ottiene blocco tipo.|  
 |[CMFCFilterChunkValueImpl::GetString](#getstring)|Recupera il valore stringa.|  
 |[CMFCFilterChunkValueImpl::GetValue](#getvalue)|Recupera il valore come un propvariant allocato.|  
-|[CMFCFilterChunkValueImpl::GetValueNoAlloc](#getvaluenoalloc)|Valore restituisce non allocato (valore interno).|  
+|[CMFCFilterChunkValueImpl::GetValueNoAlloc](#getvaluenoalloc)|Restituisce non allocato (valore interno) il valore.|  
 |[CMFCFilterChunkValueImpl::IsValid](#isvalid)|Controlla se il valore della proprietà è valido o meno.|  
-|[CMFCFilterChunkValueImpl::SetBoolValue](#setboolvalue)|Di overload. Imposta la proprietà chiave in un valore booleano.|  
-|[CMFCFilterChunkValueImpl::SetDwordValue](#setdwordvalue)|Imposta la proprietà chiave a un valore DWORD.|  
-|[CMFCFilterChunkValueImpl::SetFileTimeValue](#setfiletimevalue)|Imposta la proprietà chiave in un filetime.|  
-|[CMFCFilterChunkValueImpl::SetInt64Value](#setint64value)|Imposta la proprietà chiave in un int64.|  
-|[CMFCFilterChunkValueImpl::SetIntValue](#setintvalue)|Imposta la proprietà chiave a un int.|  
-|[CMFCFilterChunkValueImpl::SetLongValue](#setlongvalue)|Imposta la proprietà chiave su un valore LONG.|  
-|[CMFCFilterChunkValueImpl::SetSystemTimeValue](#setsystemtimevalue)|Imposta la proprietà chiave per un oggetto SystemTime.|  
-|[CMFCFilterChunkValueImpl::SetTextValue](#settextvalue)|Imposta la proprietà chiave in una stringa Unicode.|  
+|[CMFCFilterChunkValueImpl::SetBoolValue](#setboolvalue)|Di overload. Imposta la proprietà dalla chiave in un valore booleano.|  
+|[CMFCFilterChunkValueImpl::SetDwordValue](#setdwordvalue)|Imposta la proprietà dalla chiave a un valore DWORD.|  
+|[CMFCFilterChunkValueImpl::SetFileTimeValue](#setfiletimevalue)|Imposta la proprietà da chiave per un valore filetime.|  
+|[CMFCFilterChunkValueImpl::SetInt64Value](#setint64value)|Imposta la proprietà dalla chiave in un int64.|  
+|[CMFCFilterChunkValueImpl::SetIntValue](#setintvalue)|Imposta la proprietà dalla chiave a un int.|  
+|[CMFCFilterChunkValueImpl::SetLongValue](#setlongvalue)|Imposta la proprietà dalla chiave su un valore LONG.|  
+|[CMFCFilterChunkValueImpl::SetSystemTimeValue](#setsystemtimevalue)|Imposta la proprietà da chiave per un oggetto SystemTime.|  
+|[CMFCFilterChunkValueImpl::SetTextValue](#settextvalue)|Imposta la proprietà dalla chiave in una stringa Unicode.|  
   
 ### <a name="protected-methods"></a>Metodi protetti  
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[CMFCFilterChunkValueImpl::SetChunk](#setchunk)|Una funzione helper che imposta le proprietà comuni del blocco.|  
+|[CMFCFilterChunkValueImpl::SetChunk](#setchunk)|Funzione helper che imposta le proprietà comuni del blocco.|  
   
 ## <a name="remarks"></a>Note  
  Per utilizzare, sufficiente creare una classe CMFCFilterChunkValueImpl del tipo corretto  
@@ -166,11 +166,11 @@ HRESULT CopyChunk(STAT_CHUNK* pStatChunk);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `pStatChunk`  
- Puntatore al valore di destinazione che descrivono le caratteristiche del blocco.  
+ *pStatChunk*  
+ Un puntatore al valore di destinazione che descrivono le caratteristiche del blocco.  
   
 ### <a name="return-value"></a>Valore restituito  
- S_OK se ha esito positivo. in caso contrario un codice di errore.  
+ S_OK se l'operazione riesce; in caso contrario un codice di errore.  
   
 ### <a name="remarks"></a>Note  
   
@@ -182,13 +182,13 @@ void CopyFrom (IFilterChunkValue* pValue);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `pValue`  
+ *pValue*  
  Specifica il valore di origine da copiare.  
   
 ### <a name="remarks"></a>Note  
   
 ##  <a name="getchunkguid"></a>  CMFCFilterChunkValueImpl::GetChunkGUID  
- Recupera il GUID del blocco.  
+ Recupera il GUID di blocco.  
   
 ```  
 REFGUID GetChunkGUID() const;  
@@ -243,11 +243,11 @@ HRESULT GetValue(PROPVARIANT** ppPropVariant);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `ppPropVariant`  
+ *ppPropVariant*  
  Quando la funzione termina, questo parametro contiene il valore di blocco.  
   
 ### <a name="return-value"></a>Valore restituito  
- S_OK se PROPVARIANT allocata e il valore di blocco è stato copiato `ppPropVariant`; in caso contrario un codice di errore.  
+ S_OK se PROPVARIANT è stato allocato correttamente e il valore di blocco è stato copiato *ppPropVariant*; in caso contrario un codice di errore.  
   
 ### <a name="remarks"></a>Note  
   
@@ -276,7 +276,7 @@ BOOL IsValid() const;
 ### <a name="remarks"></a>Note  
   
 ##  <a name="setboolvalue"></a>  CMFCFilterChunkValueImpl::SetBoolValue  
- Di overload. Imposta la proprietà chiave in un valore booleano.  
+ Di overload. Imposta la proprietà dalla chiave in un valore booleano.  
   
 ```  
 HRESULT SetBoolValue(
@@ -300,34 +300,34 @@ HRESULT SetBoolValue(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `pkey`  
+ *pkey*  
  Specifica una chiave della proprietà.  
   
- `bVal`  
+ *bVal*  
  Specifica il valore di blocco da impostare.  
   
- `chunkType`  
+ *chunkType*  
  Flag indicano se questo blocco contiene un tipo di testo o una proprietà di tipo di valore. Valori di flag provengono dall'enumerazione CHUNKSTATE.  
   
- `locale`  
- La lingua e una varietà di lingua associata a un blocco di testo. Impostazioni locali di blocco viene utilizzata per gli indicizzatori di documento per eseguire corretto word breaking di testo. Se il blocco è di tipo testo né un tipo di valore con tipo di dati VT_BSTR, VT_LPSTR o VT_LPWSTR, questo campo viene ignorato.  
+ *locale*  
+ La lingua e una varietà di lingua associata a un blocco di testo. Impostazioni locali di blocco viene utilizzata per gli indicizzatori di documento per eseguire corretto word breaking di testo. Se il blocco di tipo testo né un tipo di valore con tipo di dati VT_LPWSTR, VT_LPSTR o VT_BSTR, questo campo viene ignorato.  
   
- `cwcLenSource`  
- La lunghezza in caratteri del testo di origine da cui è stato derivato blocco corrente. Un valore zero indica la corrispondenza di carattere per carattere tra il testo di origine e il testo derivato. Un valore diverso da zero indica che sia presente alcun tale corrispondenza diretta.  
+ *cwcLenSource*  
+ La lunghezza in caratteri del testo di origine da cui è stato derivato blocco corrente. Un valore pari a zero indica la corrispondenza di carattere per carattere tra il testo di origine e il testo derivato. Un valore diverso da zero indica che nessun tale corrispondenza diretta esista.  
   
- `cwcStartSource`  
- Offset da cui il testo di origine per un blocco derivato viene avviato nel blocco di origine.  
+ *cwcStartSource*  
+ Offset da cui il testo di origine per i blocchi derivata viene avviato nel blocco di origine.  
   
- `chunkBreakType`  
+ *chunkBreakType*  
  Il tipo di interruzione che separa il blocco precedente dal blocco corrente. I valori sono compresi nell'enumerazione CHUNK_BREAKTYPE.  
   
 ### <a name="return-value"></a>Valore restituito  
- S_OK se ha esito positivo. in caso contrario un codice di errore.  
+ S_OK se l'operazione riesce; in caso contrario un codice di errore.  
   
 ### <a name="remarks"></a>Note  
   
 ##  <a name="setchunk"></a>  CMFCFilterChunkValueImpl::SetChunk  
- Una funzione helper che imposta le proprietà comuni del blocco.  
+ Funzione helper che imposta le proprietà comuni del blocco.  
   
 ```  
 HRESULT SetChunk(
@@ -340,26 +340,26 @@ HRESULT SetChunk(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `pkey`  
+ *pkey*  
  Specifica una chiave della proprietà.  
   
- `chunkType`  
+ *chunkType*  
  Flag indicano se questo blocco contiene un tipo di testo o una proprietà di tipo di valore. Valori di flag provengono dall'enumerazione CHUNKSTATE.  
   
- `locale`  
- La lingua e una varietà di lingua associata a un blocco di testo. Impostazioni locali di blocco viene utilizzata per gli indicizzatori di documento per eseguire corretto word breaking di testo. Se il blocco è di tipo testo né un tipo di valore con tipo di dati VT_BSTR, VT_LPSTR o VT_LPWSTR, questo campo viene ignorato.  
+ *locale*  
+ La lingua e una varietà di lingua associata a un blocco di testo. Impostazioni locali di blocco viene utilizzata per gli indicizzatori di documento per eseguire corretto word breaking di testo. Se il blocco di tipo testo né un tipo di valore con tipo di dati VT_LPWSTR, VT_LPSTR o VT_BSTR, questo campo viene ignorato.  
   
- `cwcLenSource`  
- La lunghezza in caratteri del testo di origine da cui è stato derivato blocco corrente. Un valore zero indica la corrispondenza di carattere per carattere tra il testo di origine e il testo derivato. Un valore diverso da zero indica che sia presente alcun tale corrispondenza diretta.  
+ *cwcLenSource*  
+ La lunghezza in caratteri del testo di origine da cui è stato derivato blocco corrente. Un valore pari a zero indica la corrispondenza di carattere per carattere tra il testo di origine e il testo derivato. Un valore diverso da zero indica che nessun tale corrispondenza diretta esista.  
   
- `cwcStartSource`  
- Offset da cui il testo di origine per un blocco derivato viene avviato nel blocco di origine.  
+ *cwcStartSource*  
+ Offset da cui il testo di origine per i blocchi derivata viene avviato nel blocco di origine.  
   
- `chunkBreakType`  
+ *chunkBreakType*  
  Il tipo di interruzione che separa il blocco precedente dal blocco corrente. I valori sono compresi nell'enumerazione CHUNK_BREAKTYPE.  
   
 ### <a name="return-value"></a>Valore restituito  
- S_OK se ha esito positivo. codice di errore in caso contrario.  
+ S_OK se l'operazione riesce; codice di errore in caso contrario.  
   
 ### <a name="remarks"></a>Note  
   
@@ -378,34 +378,34 @@ HRESULT SetDwordValue(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `pkey`  
+ *pkey*  
  Specifica una chiave della proprietà.  
   
- `dwVal`  
+ *dwVal*  
  Specifica il valore di blocco da impostare.  
   
- `chunkType`  
+ *chunkType*  
  Flag indicano se questo blocco contiene un tipo di testo o una proprietà di tipo di valore. Valori di flag provengono dall'enumerazione CHUNKSTATE.  
   
- `locale`  
- La lingua e una varietà di lingua associata a un blocco di testo. Impostazioni locali di blocco viene utilizzata per gli indicizzatori di documento per eseguire corretto word breaking di testo. Se il blocco è di tipo testo né un tipo di valore con tipo di dati VT_BSTR, VT_LPSTR o VT_LPWSTR, questo campo viene ignorato.  
+ *locale*  
+ La lingua e una varietà di lingua associata a un blocco di testo. Impostazioni locali di blocco viene utilizzata per gli indicizzatori di documento per eseguire corretto word breaking di testo. Se il blocco di tipo testo né un tipo di valore con tipo di dati VT_LPWSTR, VT_LPSTR o VT_BSTR, questo campo viene ignorato.  
   
- `cwcLenSource`  
- La lunghezza in caratteri del testo di origine da cui è stato derivato blocco corrente. Un valore zero indica la corrispondenza di carattere per carattere tra il testo di origine e il testo derivato. Un valore diverso da zero indica che sia presente alcun tale corrispondenza diretta.  
+ *cwcLenSource*  
+ La lunghezza in caratteri del testo di origine da cui è stato derivato blocco corrente. Un valore pari a zero indica la corrispondenza di carattere per carattere tra il testo di origine e il testo derivato. Un valore diverso da zero indica che nessun tale corrispondenza diretta esista.  
   
- `cwcStartSource`  
- Offset da cui il testo di origine per un blocco derivato viene avviato nel blocco di origine.  
+ *cwcStartSource*  
+ Offset da cui il testo di origine per i blocchi derivata viene avviato nel blocco di origine.  
   
- `chunkBreakType`  
+ *chunkBreakType*  
  Il tipo di interruzione che separa il blocco precedente dal blocco corrente. I valori sono compresi nell'enumerazione CHUNK_BREAKTYPE.  
   
 ### <a name="return-value"></a>Valore restituito  
- S_OK se ha esito positivo. in caso contrario un codice di errore.  
+ S_OK se l'operazione riesce; in caso contrario un codice di errore.  
   
 ### <a name="remarks"></a>Note  
   
 ##  <a name="setfiletimevalue"></a>  CMFCFilterChunkValueImpl::SetFileTimeValue  
- Impostare la proprietà chiave in un filetime.  
+ Impostare la proprietà chiave per un valore filetime.  
   
 ```  
 HRESULT SetFileTimeValue(
@@ -419,29 +419,29 @@ HRESULT SetFileTimeValue(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `pkey`  
+ *pkey*  
  Specifica una chiave della proprietà.  
   
- `dtVal`  
+ *dtVal*  
  Specifica il valore di blocco da impostare.  
   
- `chunkType`  
+ *chunkType*  
  Flag indicano se questo blocco contiene un tipo di testo o una proprietà di tipo di valore. Valori di flag provengono dall'enumerazione CHUNKSTATE.  
   
- `locale`  
- La lingua e una varietà di lingua associata a un blocco di testo. Impostazioni locali di blocco viene utilizzata per gli indicizzatori di documento per eseguire corretto word breaking di testo. Se il blocco è di tipo testo né un tipo di valore con tipo di dati VT_BSTR, VT_LPSTR o VT_LPWSTR, questo campo viene ignorato.  
+ *locale*  
+ La lingua e una varietà di lingua associata a un blocco di testo. Impostazioni locali di blocco viene utilizzata per gli indicizzatori di documento per eseguire corretto word breaking di testo. Se il blocco di tipo testo né un tipo di valore con tipo di dati VT_LPWSTR, VT_LPSTR o VT_BSTR, questo campo viene ignorato.  
   
- `cwcLenSource`  
- La lunghezza in caratteri del testo di origine da cui è stato derivato blocco corrente. Un valore zero indica la corrispondenza di carattere per carattere tra il testo di origine e il testo derivato. Un valore diverso da zero indica che sia presente alcun tale corrispondenza diretta.  
+ *cwcLenSource*  
+ La lunghezza in caratteri del testo di origine da cui è stato derivato blocco corrente. Un valore pari a zero indica la corrispondenza di carattere per carattere tra il testo di origine e il testo derivato. Un valore diverso da zero indica che nessun tale corrispondenza diretta esista.  
   
- `cwcStartSource`  
- Offset da cui il testo di origine per un blocco derivato viene avviato nel blocco di origine.  
+ *cwcStartSource*  
+ Offset da cui il testo di origine per i blocchi derivata viene avviato nel blocco di origine.  
   
- `chunkBreakType`  
+ *chunkBreakType*  
  Il tipo di interruzione che separa il blocco precedente dal blocco corrente. I valori sono compresi nell'enumerazione CHUNK_BREAKTYPE.  
   
 ### <a name="return-value"></a>Valore restituito  
- S_OK se ha esito positivo. in caso contrario un codice di errore.  
+ S_OK se l'operazione riesce; in caso contrario un codice di errore.  
   
 ### <a name="remarks"></a>Note  
   
@@ -460,29 +460,29 @@ HRESULT SetInt64Value(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `pkey`  
+ *pkey*  
  Specifica una chiave della proprietà.  
   
- `nVal`  
+ *nVal*  
  Specifica il valore di blocco da impostare.  
   
- `chunkType`  
+ *chunkType*  
  Flag indicano se questo blocco contiene un tipo di testo o una proprietà di tipo di valore. Valori di flag provengono dall'enumerazione CHUNKSTATE.  
   
- `locale`  
- La lingua e una varietà di lingua associata a un blocco di testo. Impostazioni locali di blocco viene utilizzata per gli indicizzatori di documento per eseguire corretto word breaking di testo. Se il blocco è di tipo testo né un tipo di valore con tipo di dati VT_BSTR, VT_LPSTR o VT_LPWSTR, questo campo viene ignorato.  
+ *locale*  
+ La lingua e una varietà di lingua associata a un blocco di testo. Impostazioni locali di blocco viene utilizzata per gli indicizzatori di documento per eseguire corretto word breaking di testo. Se il blocco di tipo testo né un tipo di valore con tipo di dati VT_LPWSTR, VT_LPSTR o VT_BSTR, questo campo viene ignorato.  
   
- `cwcLenSource`  
- La lunghezza in caratteri del testo di origine da cui è stato derivato blocco corrente. Un valore zero indica la corrispondenza di carattere per carattere tra il testo di origine e il testo derivato. Un valore diverso da zero indica che sia presente alcun tale corrispondenza diretta.  
+ *cwcLenSource*  
+ La lunghezza in caratteri del testo di origine da cui è stato derivato blocco corrente. Un valore pari a zero indica la corrispondenza di carattere per carattere tra il testo di origine e il testo derivato. Un valore diverso da zero indica che nessun tale corrispondenza diretta esista.  
   
- `cwcStartSource`  
- Offset da cui il testo di origine per un blocco derivato viene avviato nel blocco di origine.  
+ *cwcStartSource*  
+ Offset da cui il testo di origine per i blocchi derivata viene avviato nel blocco di origine.  
   
- `chunkBreakType`  
+ *chunkBreakType*  
  Il tipo di interruzione che separa il blocco precedente dal blocco corrente. I valori sono compresi nell'enumerazione CHUNK_BREAKTYPE.  
   
 ### <a name="return-value"></a>Valore restituito  
- S_OK se ha esito positivo. in caso contrario un codice di errore.  
+ S_OK se l'operazione riesce; in caso contrario un codice di errore.  
   
 ### <a name="remarks"></a>Note  
   
@@ -501,29 +501,29 @@ HRESULT SetIntValue(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `pkey`  
+ *pkey*  
  Specifica una chiave della proprietà.  
   
- `nVal`  
+ *nVal*  
  Specifica il valore di blocco da impostare.  
   
- `chunkType`  
+ *chunkType*  
  Flag indicano se questo blocco contiene un tipo di testo o una proprietà di tipo di valore. Valori di flag provengono dall'enumerazione CHUNKSTATE.  
   
- `locale`  
- La lingua e una varietà di lingua associata a un blocco di testo. Impostazioni locali di blocco viene utilizzata per gli indicizzatori di documento per eseguire corretto word breaking di testo. Se il blocco è di tipo testo né un tipo di valore con tipo di dati VT_BSTR, VT_LPSTR o VT_LPWSTR, questo campo viene ignorato.  
+ *locale*  
+ La lingua e una varietà di lingua associata a un blocco di testo. Impostazioni locali di blocco viene utilizzata per gli indicizzatori di documento per eseguire corretto word breaking di testo. Se il blocco di tipo testo né un tipo di valore con tipo di dati VT_LPWSTR, VT_LPSTR o VT_BSTR, questo campo viene ignorato.  
   
- `cwcLenSource`  
- La lunghezza in caratteri del testo di origine da cui è stato derivato blocco corrente. Un valore zero indica la corrispondenza di carattere per carattere tra il testo di origine e il testo derivato. Un valore diverso da zero indica che sia presente alcun tale corrispondenza diretta.  
+ *cwcLenSource*  
+ La lunghezza in caratteri del testo di origine da cui è stato derivato blocco corrente. Un valore pari a zero indica la corrispondenza di carattere per carattere tra il testo di origine e il testo derivato. Un valore diverso da zero indica che nessun tale corrispondenza diretta esista.  
   
- `cwcStartSource`  
- Offset da cui il testo di origine per un blocco derivato viene avviato nel blocco di origine.  
+ *cwcStartSource*  
+ Offset da cui il testo di origine per i blocchi derivata viene avviato nel blocco di origine.  
   
- `chunkBreakType`  
+ *chunkBreakType*  
  Il tipo di interruzione che separa il blocco precedente dal blocco corrente. I valori sono compresi nell'enumerazione CHUNK_BREAKTYPE.  
   
 ### <a name="return-value"></a>Valore restituito  
- S_OK se ha esito positivo. in caso contrario un codice di errore.  
+ S_OK se l'operazione riesce; in caso contrario un codice di errore.  
   
 ### <a name="remarks"></a>Note  
   
@@ -542,34 +542,34 @@ HRESULT SetLongValue(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `pkey`  
+ *pkey*  
  Specifica una chiave della proprietà.  
   
- `lVal`  
+ *lVal*  
  Specifica il valore di blocco da impostare.  
   
- `chunkType`  
+ *chunkType*  
  Flag indicano se questo blocco contiene un tipo di testo o una proprietà di tipo di valore. Valori di flag provengono dall'enumerazione CHUNKSTATE.  
   
- `locale`  
- La lingua e una varietà di lingua associata a un blocco di testo. Impostazioni locali di blocco viene utilizzata per gli indicizzatori di documento per eseguire corretto word breaking di testo. Se il blocco è di tipo testo né un tipo di valore con tipo di dati VT_BSTR, VT_LPSTR o VT_LPWSTR, questo campo viene ignorato.  
+ *locale*  
+ La lingua e una varietà di lingua associata a un blocco di testo. Impostazioni locali di blocco viene utilizzata per gli indicizzatori di documento per eseguire corretto word breaking di testo. Se il blocco di tipo testo né un tipo di valore con tipo di dati VT_LPWSTR, VT_LPSTR o VT_BSTR, questo campo viene ignorato.  
   
- `cwcLenSource`  
- La lunghezza in caratteri del testo di origine da cui è stato derivato blocco corrente. Un valore zero indica la corrispondenza di carattere per carattere tra il testo di origine e il testo derivato. Un valore diverso da zero indica che sia presente alcun tale corrispondenza diretta.  
+ *cwcLenSource*  
+ La lunghezza in caratteri del testo di origine da cui è stato derivato blocco corrente. Un valore pari a zero indica la corrispondenza di carattere per carattere tra il testo di origine e il testo derivato. Un valore diverso da zero indica che nessun tale corrispondenza diretta esista.  
   
- `cwcStartSource`  
- Offset da cui il testo di origine per un blocco derivato viene avviato nel blocco di origine.  
+ *cwcStartSource*  
+ Offset da cui il testo di origine per i blocchi derivata viene avviato nel blocco di origine.  
   
- `chunkBreakType`  
+ *chunkBreakType*  
  Il tipo di interruzione che separa il blocco precedente dal blocco corrente. I valori sono compresi nell'enumerazione CHUNK_BREAKTYPE.  
   
 ### <a name="return-value"></a>Valore restituito  
- S_OK se ha esito positivo. in caso contrario un codice di errore.  
+ S_OK se l'operazione riesce; in caso contrario un codice di errore.  
   
 ### <a name="remarks"></a>Note  
   
 ##  <a name="setsystemtimevalue"></a>  CMFCFilterChunkValueImpl::SetSystemTimeValue  
- Imposta la proprietà chiave per un oggetto SystemTime.  
+ Imposta la proprietà da chiave per un oggetto SystemTime.  
   
 ```  
 HRESULT SetSystemTimeValue(
@@ -583,34 +583,34 @@ HRESULT SetSystemTimeValue(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `pkey`  
+ *pkey*  
  Specifica una chiave della proprietà.  
   
- `systemTime`  
+ *systemTime*  
  Specifica il valore di blocco da impostare.  
   
- `chunkType`  
+ *chunkType*  
  Flag indicano se questo blocco contiene un tipo di testo o una proprietà di tipo di valore. Valori di flag provengono dall'enumerazione CHUNKSTATE.  
   
- `locale`  
- La lingua e una varietà di lingua associata a un blocco di testo. Impostazioni locali di blocco viene utilizzata per gli indicizzatori di documento per eseguire corretto word breaking di testo. Se il blocco è di tipo testo né un tipo di valore con tipo di dati VT_BSTR, VT_LPSTR o VT_LPWSTR, questo campo viene ignorato.  
+ *locale*  
+ La lingua e una varietà di lingua associata a un blocco di testo. Impostazioni locali di blocco viene utilizzata per gli indicizzatori di documento per eseguire corretto word breaking di testo. Se il blocco di tipo testo né un tipo di valore con tipo di dati VT_LPWSTR, VT_LPSTR o VT_BSTR, questo campo viene ignorato.  
   
- `cwcLenSource`  
- La lunghezza in caratteri del testo di origine da cui è stato derivato blocco corrente. Un valore zero indica la corrispondenza di carattere per carattere tra il testo di origine e il testo derivato. Un valore diverso da zero indica che sia presente alcun tale corrispondenza diretta.  
+ *cwcLenSource*  
+ La lunghezza in caratteri del testo di origine da cui è stato derivato blocco corrente. Un valore pari a zero indica la corrispondenza di carattere per carattere tra il testo di origine e il testo derivato. Un valore diverso da zero indica che nessun tale corrispondenza diretta esista.  
   
- `cwcStartSource`  
- Offset da cui il testo di origine per un blocco derivato viene avviato nel blocco di origine.  
+ *cwcStartSource*  
+ Offset da cui il testo di origine per i blocchi derivata viene avviato nel blocco di origine.  
   
- `chunkBreakType`  
+ *chunkBreakType*  
  Il tipo di interruzione che separa il blocco precedente dal blocco corrente. I valori sono compresi nell'enumerazione CHUNK_BREAKTYPE.  
   
 ### <a name="return-value"></a>Valore restituito  
- S_OK se ha esito positivo. in caso contrario un codice di errore.  
+ S_OK se l'operazione riesce; in caso contrario un codice di errore.  
   
 ### <a name="remarks"></a>Note  
   
 ##  <a name="settextvalue"></a>  CMFCFilterChunkValueImpl::SetTextValue  
- Imposta la proprietà chiave in una stringa Unicode.  
+ Imposta la proprietà dalla chiave in una stringa Unicode.  
   
 ```  
 HRESULT SetTextValue(
@@ -624,29 +624,29 @@ HRESULT SetTextValue(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `pkey`  
+ *pkey*  
  Specifica una chiave della proprietà.  
   
- `pszValue`  
+ *pszValue*  
  Specifica il valore di blocco da impostare.  
   
- `chunkType`  
+ *chunkType*  
  Flag indicano se questo blocco contiene un tipo di testo o una proprietà di tipo di valore. Valori di flag provengono dall'enumerazione CHUNKSTATE.  
   
- `locale`  
- La lingua e una varietà di lingua associata a un blocco di testo. Impostazioni locali di blocco viene utilizzata per gli indicizzatori di documento per eseguire corretto word breaking di testo. Se il blocco è di tipo testo né un tipo di valore con tipo di dati VT_BSTR, VT_LPSTR o VT_LPWSTR, questo campo viene ignorato.  
+ *locale*  
+ La lingua e una varietà di lingua associata a un blocco di testo. Impostazioni locali di blocco viene utilizzata per gli indicizzatori di documento per eseguire corretto word breaking di testo. Se il blocco di tipo testo né un tipo di valore con tipo di dati VT_LPWSTR, VT_LPSTR o VT_BSTR, questo campo viene ignorato.  
   
- `cwcLenSource`  
- La lunghezza in caratteri del testo di origine da cui è stato derivato blocco corrente. Un valore zero indica la corrispondenza di carattere per carattere tra il testo di origine e il testo derivato. Un valore diverso da zero indica che sia presente alcun tale corrispondenza diretta.  
+ *cwcLenSource*  
+ La lunghezza in caratteri del testo di origine da cui è stato derivato blocco corrente. Un valore pari a zero indica la corrispondenza di carattere per carattere tra il testo di origine e il testo derivato. Un valore diverso da zero indica che nessun tale corrispondenza diretta esista.  
   
- `cwcStartSource`  
- Offset da cui il testo di origine per un blocco derivato viene avviato nel blocco di origine.  
+ *cwcStartSource*  
+ Offset da cui il testo di origine per i blocchi derivata viene avviato nel blocco di origine.  
   
- `chunkBreakType`  
+ *chunkBreakType*  
  Il tipo di interruzione che separa il blocco precedente dal blocco corrente. I valori sono compresi nell'enumerazione CHUNK_BREAKTYPE.  
   
 ### <a name="return-value"></a>Valore restituito  
- S_OK se ha esito positivo. in caso contrario un codice di errore.  
+ S_OK se l'operazione riesce; in caso contrario un codice di errore.  
   
 ### <a name="remarks"></a>Note  
   

@@ -26,15 +26,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 05257749c95b619c479538a1322746ae2b487b6a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d92df2378ea8f41c140b69ba3878ca0d7a18e08a
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367958"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037368"
 ---
 # <a name="cmfcribbonmainpanel-class"></a>Classe CMFCRibbonMainPanel
-Implementa un pannello della barra multifunzione che viene visualizzato quando si fa clic il [CMFCRibbonApplicationButton](../../mfc/reference/cmfcribbonapplicationbutton-class.md).  
+Implementa un pannello della barra multifunzione che viene visualizzato quando si fa clic sui [CMFCRibbonApplicationButton](../../mfc/reference/cmfcribbonapplicationbutton-class.md).  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -64,11 +64,11 @@ class CMFCRibbonMainPanel : public CMFCRibbonPanel
 |`CMFCRibbonMainPanel::GetThisClass`|Usato dal framework per ottenere un puntatore per il [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) oggetto associato a questo tipo di classe.|  
   
 ## <a name="remarks"></a>Note  
- Il framework Visualizza il `CMFCRibbonMainPanel` quando si apre il pannello di applicazione. Include tre riquadri:  
+ Il framework Visualizza il `CMFCRibbonMainPanel` quando si apre il pannello dell'applicazione. Include tre riquadri:  
   
--   Nel riquadro sinistro sono comandi associati a file, ad esempio **aprire**, **salvare**, **stampa**, e **Chiudi**. Per aggiungere un comando in questo riquadro, chiamare [CMFCRibbonMainPanel::Add](#add).  
+-   Nel riquadro sinistro sono comandi associati a file, ad esempio **Open**, **salvare**, **stampa**, e **Chiudi**. Per aggiungere un comando in questo riquadro, chiamare [CMFCRibbonMainPanel::Add](#add).  
   
--   Riquadro di destra contiene le opzioni che modificano il comando che si fa clic su nel riquadro a sinistra. Ad esempio, se si fa clic su **Salva con nome** dal riquadro di sinistra, riquadro di destra è possibile visualizzare tipi di file disponibili. Per aggiungere un elemento in questo riquadro, chiamare [CMFCRibbonMainPanel::AddToRight](#addtoright).  
+-   Riquadro di destra contiene le opzioni che modificano il comando che si fa clic su nel riquadro sinistro. Ad esempio, se si fa clic su **Salva con nome** dal riquadro sinistro, riquadro destro visualizzare tipi di file disponibili. Per aggiungere un elemento in questo riquadro, chiamare [CMFCRibbonMainPanel::AddToRight](#addtoright).  
   
 -   Nel riquadro inferiore contiene pulsanti che consentono di modificare le impostazioni dell'applicazione e di uscire dal programma. Per aggiungere un elemento in questo riquadro, chiamare [CMFCRibbonMainPanel::AddToBottom](#addtobottom).  
   
@@ -90,11 +90,11 @@ virtual void Add(CMFCRibbonBaseElement* pElem);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] [out] `pElem`  
- Puntatore all'elemento della barra multifunzione per aggiungere al pannello principale.  
+ [in] [out] *pElem*  
+ Puntatore all'elemento della barra multifunzione per aggiungere al riquadro principale.  
   
 ### <a name="remarks"></a>Note  
- Aggiunge un elemento della barra multifunzione al pannello. Elementi aggiunti utilizzando questo metodo si troverà nella colonna a sinistra del pannello principale.  
+ Aggiunge un elemento della barra multifunzione al pannello. Elementi aggiunti utilizzando questo metodo verranno collocati nella colonna a sinistra del pannello principale.  
   
 ##  <a name="addrecentfileslist"></a>  CMFCRibbonMainPanel::AddRecentFilesList  
  Aggiunge una stringa di testo al menu dell'elenco di file recenti.  
@@ -106,11 +106,11 @@ void AddRecentFilesList(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `lpszLabel`  
+ *lpszLabel*  
  Specifica la stringa da aggiungere all'elenco dei file recenti.  
   
- `nWidth`  
- Specifica la larghezza, in pixel, del Pannello di elenco di file recenti.  
+ *nWidth*  
+ Specifica la larghezza, in pixel, del riquadro elenco di file recenti.  
   
 ### <a name="remarks"></a>Note  
   
@@ -122,8 +122,8 @@ void AddToBottom(CMFCRibbonMainPanelButton* pElem);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] [out] `pElem`  
- Puntatore all'elemento della barra multifunzione per aggiungere nella parte inferiore del pannello principale.  
+ [in] [out] *pElem*  
+ Un puntatore all'elemento della barra multifunzione da aggiungere alla parte inferiore del riquadro principale.  
   
 ### <a name="remarks"></a>Note  
   
@@ -137,14 +137,14 @@ void AddToRight(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `pElem`  
+ *pElem*  
  Puntatore a un elemento della barra multifunzione da aggiungere alla destra del riquadro principale.  
   
- `nWidth`  
+ *nWidth*  
  Specifica la larghezza, in pixel, del riquadro di destra.  
   
 ### <a name="remarks"></a>Note  
- Utilizzare questa funzione per aggiungere un elemento della barra multifunzione al riquadro di destra. Riquadro di destra visualizza in genere l'elenco dei file recenti, ma è possibile aggiungere qualsiasi altro elemento della barra multifunzione qui.  
+ Utilizzare questa funzione per aggiungere un elemento della barra multifunzione al riquadro di destra. Riquadro di destra in genere viene visualizzato l'elenco di file recenti, ma è possibile aggiungere qualsiasi altro elemento della barra multifunzione qui.  
   
 ##  <a name="getcommandsframe"></a>  CMFCRibbonMainPanel::GetCommandsFrame  
  Restituisce un rettangolo che rappresenta l'area del pannello principale della barra multifunzione.  

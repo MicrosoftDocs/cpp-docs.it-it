@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 27d2d4e95bffa3bd074ca1c6d4bf6d9c7e095a56
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b2dd3d47b2175a64be605ac8db9fdb1502ce2755
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370907"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041260"
 ---
 # <a name="cmfcribbongallerymenubutton-class"></a>Classe CMFCRibbonGalleryMenuButton
 Implementa un pulsante di menu della barra multifunzione contenente raccolte della barra multifunzione.  
@@ -108,7 +108,7 @@ virtual void CopyFrom(const CMFCToolBarButton& src);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `src`  
+ [in] *src*  
   
 ### <a name="remarks"></a>Note  
   
@@ -132,29 +132,29 @@ CMFCRibbonGalleryMenuButton(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `uiID`  
- L'ID di comando del pulsante. Questo è il valore inviato nel **WM_COMMAND** messaggio quando l'utente fa clic su questo pulsante.  
+ *uiID*  
+ L'ID di comando del pulsante. Questo è il valore inviato nel messaggio WM_COMMAND quando l'utente fa clic su questo pulsante.  
   
- `iImage`  
- Indice dell'immagine da visualizzare con il pulsante di menu della raccolta. Le immagini sono archiviate nel `imagesPalette` parametro.  
+ *iImage*  
+ L'indice dell'immagine da visualizzare con il pulsante di menu della raccolta. Le immagini vengono archiviate nel *imagesPalette* parametro.  
   
- `lpszText`  
+ *lpszText*  
  Il testo da visualizzare sul pulsante di menu.  
   
- `imagesPalette`  
+ *imagesPalette*  
  Contiene l'elenco di immagini da visualizzare nella raccolta.  
   
- `uiImagesPaletteResID`  
+ *uiImagesPaletteResID*  
  L'ID risorsa dell'elenco immagini per le immagini da visualizzare nella raccolta.  
   
- `cxPaletteImage`  
+ *cxPaletteImage*  
  Specifica la larghezza in pixel dell'immagine da visualizzare nella raccolta.  
   
 ### <a name="remarks"></a>Note  
  Il pulsante di menu della raccolta viene visualizzato come menu a comparsa con una freccia. Quando l'utente fa clic su questo pulsante, viene visualizzata una raccolta di immagini.  
   
 ### <a name="example"></a>Esempio  
- Nell'esempio seguente viene illustrato come utilizzare il costruttore del `CMFCRibbonGalleryMenuButton` classe. Questo frammento di codice fa parte di [esempio MS Office 2007 Demo](../../visual-cpp-samples.md).  
+ Nell'esempio seguente viene illustrato come utilizzare il costruttore del `CMFCRibbonGalleryMenuButton` classe. Questo frammento di codice fa parte il [esempio di MS Office 2007 Demo](../../visual-cpp-samples.md).  
   
  [!code-cpp[NVC_MFC_MSOffice2007Demo#8](../../mfc/reference/codesnippet/cpp/cmfcribbongallerymenubutton-class_1.cpp)]  
   

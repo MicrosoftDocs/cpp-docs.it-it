@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3995734918f50ed01fe6df7fb034c3ea37b630cd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 41165f177671379eecbc700df016cd19aea69962
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33377914"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040207"
 ---
 # <a name="cobarray-class"></a>Classe CObArray
 Supporta matrici di puntatori `CObject` .  
@@ -105,27 +105,27 @@ class CObArray : public CObject
 |[[] CObArray::operator](#operator_at)|Imposta o ottiene l'elemento in corrispondenza dell'indice specificato.|  
   
 ## <a name="remarks"></a>Note  
- Matrici di questi oggetti sono simili alle matrici del linguaggio C, ma in modo dinamico possono ridurre e aumento delle dimensioni in base alle esigenze.  
+ Queste matrici di oggetti sono simili alle matrici del linguaggio C, ma in modo dinamico possono ridurre e ingrandirsi.  
   
- Gli indici di matrice iniziano sempre nella posizione 0. È possibile decidere se il limite superiore di correggere o consentire alla matrice di espandere quando si aggiungono elementi oltre il limite corrente. Memoria viene allocata in modo contiguo al limite superiore, anche se alcuni elementi sono null.  
+ Gli indici di matrice iniziano sempre alla posizione 0. È possibile decidere se il limite superiore di correggere o consentire alla matrice di vengono espanse quando si aggiungono elementi oltre il limite corrente. Memoria viene allocata in modo contiguo al limite superiore, anche se alcuni elementi sono null.  
   
  In Win32, le dimensioni di un `CObArray` l'oggetto è limitato solo alla memoria disponibile.  
   
  Come con una matrice di C, il tempo di accesso per un `CObArray` elemento indicizzato è costante ed è indipendente delle dimensioni della matrice.  
   
- `CObArray` incorpora la macro `IMPLEMENT_SERIAL` per supportare la serializzazione e il dump dei relativi elementi. Se una matrice di `CObject` puntatori viene archiviato in un archivio, con l'operatore di inserimento in overload o con il `Serialize` ogni funzione membro `CObject` elemento viene serializzato a sua volta, insieme all'indice di matrice.  
+ `CObArray` incorpora la macro IMPLEMENT_SERIAL per supportare la serializzazione e il dump dei relativi elementi. Se una matrice di `CObject` puntatori viene archiviato in un archivio, con l'operatore di inserimento in overload o con il `Serialize` ogni funzione membro `CObject` elemento viene serializzato a sua volta, insieme all'indice di matrice.  
   
- Se è necessario un dump di singoli `CObject` elementi in una matrice, è necessario impostare la profondità del `CDumpContext` oggetto 1 o versione successiva.  
+ Se è necessario un dump di singoli `CObject` elementi in una matrice, è necessario impostare la profondità del `CDumpContext` oggetto 1 o versioni successive.  
   
- Quando un `CObArray` oggetto viene eliminato oppure quando gli elementi vengono rimossi, solo il `CObject` i puntatori vengono rimossi, non gli oggetti fanno riferimento.  
+ Quando un `CObArray` oggetto viene eliminato oppure quando gli elementi vengono rimossi, solo il `CObject` puntatori sono stati rimossi, non gli oggetti fanno riferimento.  
   
 > [!NOTE]
 >  Prima di usare una matrice, usare `SetSize` per determinarne le dimensioni e allocare la necessaria memoria. Se non si usa `SetSize`, l'aggiunta di elementi alla matrice ne causa la riallocazione e la copia frequente. Le operazioni di riallocazione e copia frequenti sono inefficienti e possono frammentare la memoria.  
   
- La derivazione di classi di matrice è simile alla derivazione di elenco. Per informazioni dettagliate sulla derivazione di una classe speciale elenco, vedere l'articolo [raccolte](../../mfc/collections.md).  
+ La derivazione di classi di matrice è simile alla derivazione di elenco. Per informazioni dettagliate sulla derivazione di una classe di elenco di scopi specifici, vedere l'articolo [raccolte](../../mfc/collections.md).  
   
 > [!NOTE]
->  È necessario utilizzare il `IMPLEMENT_SERIAL` macro nell'implementazione della classe derivata se si desidera serializzare il tipo di matrice.  
+>  È necessario utilizzare IMPLEMENT_SERIAL (macro) nell'implementazione della classe derivata se si desidera serializzare la matrice.  
   
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -136,23 +136,23 @@ class CObArray : public CObject
  **Intestazione:** afxcoll. h  
   
 ##  <a name="add"></a>  CObArray::Add  
- Aggiunge un nuovo elemento alla fine di una matrice, l'aumento delle dimensioni della matrice di 1.  
+ Aggiunge un nuovo elemento alla fine di una matrice, aumento delle dimensioni della matrice di 1.  
   
 ```  
 INT_PTR Add(CObject* newElement);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `newElement`  
+ *newElement*  
  Il `CObject` puntatore da aggiungere a questa matrice.  
   
 ### <a name="return-value"></a>Valore restituito  
- Indice dell'elemento aggiunto.  
+ L'indice dell'elemento aggiunto.  
   
 ### <a name="remarks"></a>Note  
- Se [SetSize](#setsize) è stato utilizzato con un `nGrowBy` valore maggiore di 1, la memoria aggiuntiva, quindi può essere allocata. Tuttavia, il limite superiore aumenterà di solo 1.  
+ Se [SetSize](#setsize) è stato utilizzato con un *nGrowBy* allocabile valore maggiore di 1, la memoria aggiuntiva. Tuttavia, il limite superiore aumenterà di solo 1.  
   
- Nella tabella seguente mostra altri membri funzioni che sono simili a `CObArray::Add`.  
+ Nella tabella seguente vengono mostrati altri membri funzioni che sono simili a `CObArray::Add`.  
   
 |Classe|Funzione membro|  
 |-----------|---------------------|  
@@ -168,7 +168,7 @@ INT_PTR Add(CObject* newElement);
   
  [!code-cpp[NVC_MFCCollections#75](../../mfc/codesnippet/cpp/cobarray-class_1.cpp)]  
   
- I risultati di questo programma sono come segue:  
+ I risultati di questo programma sono i seguenti:  
   
  `Add example: A CObArray with 2 elements`  
   
@@ -193,9 +193,9 @@ INT_PTR Append(const CObArray& src);
 ### <a name="remarks"></a>Note  
  Le matrici devono essere dello stesso tipo.  
   
- Se necessario, **Append** può allocare memoria aggiuntiva per contenere gli elementi aggiunti alla matrice.  
+ Se necessario, `Append` possono allocare memoria aggiuntiva per contenere gli elementi aggiunti alla matrice.  
   
- Nella tabella seguente mostra altri membri funzioni che sono simili a `CObArray::Append`.  
+ Nella tabella seguente vengono mostrati altri membri funzioni che sono simili a `CObArray::Append`.  
   
 |Classe|Funzione membro|  
 |-----------|---------------------|  
@@ -223,9 +223,9 @@ void Copy(const CObArray& src);
  Origine degli elementi da copiare nella matrice.  
   
 ### <a name="remarks"></a>Note  
- **Copia** libera la memoria; tuttavia, se necessario **copia** possono allocare memoria aggiuntiva per contenere gli elementi copiati nella matrice.  
+ `Copy` libera la memoria; Tuttavia, se necessario, `Copy` possono allocare memoria aggiuntiva per contenere gli elementi copiati nella matrice.  
   
- Nella tabella seguente mostra altri membri funzioni che sono simili a `CObArray::Copy`.  
+ Nella tabella seguente vengono mostrati altri membri funzioni che sono simili a `CObArray::Copy`.  
   
 |Classe|Funzione membro|  
 |-----------|---------------------|  
@@ -249,9 +249,9 @@ CObArray();
 ```  
   
 ### <a name="remarks"></a>Note  
- La matrice si espande un elemento alla volta.  
+ La matrice aumenta le dimensioni di un elemento alla volta.  
   
- La tabella seguente vengono illustrati altri costruttori che sono simili a `CObArray::CObArray`.  
+ La tabella seguente vengono illustrati altri costruttori sono simili a `CObArray::CObArray`.  
   
 |Classe|Costruttore|  
 |-----------|-----------------|  
@@ -273,16 +273,16 @@ CObject*& ElementAt(INT_PTR nIndex);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `nIndex`  
+ *nIndex*  
  Un indice integer che è maggiore o uguale a 0 e minore o uguale al valore restituito da `GetUpperBound`.  
   
 ### <a name="return-value"></a>Valore restituito  
  Un riferimento a un `CObject` puntatore.  
   
 ### <a name="remarks"></a>Note  
- Consente di implementare l'operatore di assegnazione a sinistra per le matrici. Si tratta di una funzione avanzata che deve essere utilizzata solo per implementare operatori speciali di matrici.  
+ Viene utilizzato per implementare l'operatore di assegnazione a sinistra per le matrici. Si tratta di una funzione avanzata che deve essere utilizzata solo per implementare operatori speciali di matrici.  
   
- Nella tabella seguente mostra altri membri funzioni che sono simili a `CObArray::ElementAt`.  
+ Nella tabella seguente vengono mostrati altri membri funzioni che sono simili a `CObArray::ElementAt`.  
   
 |Classe|Funzione membro|  
 |-----------|---------------------|  
@@ -294,7 +294,7 @@ CObject*& ElementAt(INT_PTR nIndex);
 |[CWordArray](../../mfc/reference/cwordarray-class.md)|**WORD & ElementAt (INT_PTR** `nIndex` **);**|  
   
 ### <a name="example"></a>Esempio  
-  Per vedere l'esempio [CObArray::GetSize](#getsize).  
+  Vedere l'esempio relativo [CObArray::GetSize](#getsize).  
   
 ##  <a name="freeextra"></a>  CObArray::FreeExtra  
  Consente di liberare memoria aggiuntiva allocata mentre l'array è stato aumentato.  
@@ -306,7 +306,7 @@ void FreeExtra();
 ### <a name="remarks"></a>Note  
  Questa funzione non ha effetto sulla dimensione o limite superiore della matrice.  
   
- Nella tabella seguente mostra altri membri funzioni che sono simili a `CObArray::FreeExtra`.  
+ Nella tabella seguente vengono mostrati altri membri funzioni che sono simili a `CObArray::FreeExtra`.  
   
 |Classe|Funzione membro|  
 |-----------|---------------------|  
@@ -318,7 +318,7 @@ void FreeExtra();
 |[CWordArray](../../mfc/reference/cwordarray-class.md)|**void () FreeExtra;**|  
   
 ### <a name="example"></a>Esempio  
-  Per vedere l'esempio [CObArray::GetData](#getdata).  
+  Vedere l'esempio relativo [CObArray::GetData](#getdata).  
   
 ##  <a name="getat"></a>  CObArray::GetAt  
  Restituisce l'elemento di matrice in corrispondenza dell'indice specificato.  
@@ -328,18 +328,18 @@ CObject* GetAt(INT_PTR nIndex) const;
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `nIndex`  
+ *nIndex*  
  Un indice integer che è maggiore o uguale a 0 e minore o uguale al valore restituito da `GetUpperBound`.  
   
 ### <a name="return-value"></a>Valore restituito  
- Il `CObject` elemento puntatore attualmente in corrispondenza di questo indice.  
+ Il `CObject` elemento puntatore attualmente in corrispondenza dell'indice.  
   
 ### <a name="remarks"></a>Note  
   
 > [!NOTE]
 >  Il passaggio di un valore negativo o un valore maggiore del valore restituito da `GetUpperBound` comporterà un'asserzione non riuscita.  
   
- Nella tabella seguente mostra altri membri funzioni che sono simili a `CObArray::GetAt`.  
+ Nella tabella seguente vengono mostrati altri membri funzioni che sono simili a `CObArray::GetAt`.  
   
 |Classe|Funzione membro|  
 |-----------|---------------------|  
@@ -368,7 +368,7 @@ INT_PTR GetCount() const;
 ### <a name="remarks"></a>Note  
  Chiamare questo metodo per recuperare il numero di elementi nella matrice. Poiché gli indici sono in base zero, la dimensione è maggiore dell'indice più grande di 1.  
   
- Nella tabella seguente mostra altri membri funzioni che sono simili a `CObArray::GetCount`.  
+ Nella tabella seguente vengono mostrati altri membri funzioni che sono simili a `CObArray::GetCount`.  
   
 |Classe|Funzione membro|  
 |-----------|---------------------|  
@@ -397,11 +397,11 @@ CObject** GetData();
  Un puntatore alla matrice di `CObject` puntatori.  
   
 ### <a name="remarks"></a>Note  
- Se disponibili, non sono presenti elementi `GetData` restituisce un valore null.  
+ Se sono presenti elementi disponibili, `GetData` restituisce un valore null.  
   
  Durante l'accesso diretto agli elementi della matrice consentono di lavorare più velocemente, prestare attenzione quando si chiama `GetData`; gli eventuali errori apportate direttamente interessano gli elementi della matrice.  
   
- Nella tabella seguente mostra altri membri funzioni che sono simili a `CObArray::GetData`.  
+ Nella tabella seguente vengono mostrati altri membri funzioni che sono simili a `CObArray::GetData`.  
   
 |Classe|Funzione membro|  
 |-----------|---------------------|  
@@ -427,7 +427,7 @@ INT_PTR GetSize() const;
 ### <a name="remarks"></a>Note  
  Poiché gli indici sono in base zero, la dimensione è maggiore dell'indice più grande di 1.  
   
- Nella tabella seguente mostra altri membri funzioni che sono simili a `CObArray::GetSize`.  
+ Nella tabella seguente vengono mostrati altri membri funzioni che sono simili a `CObArray::GetSize`.  
   
 |Classe|Funzione membro|  
 |-----------|---------------------|  
@@ -444,7 +444,7 @@ INT_PTR GetSize() const;
  [!code-cpp[NVC_MFCCollections#82](../../mfc/codesnippet/cpp/cobarray-class_8.cpp)]  
   
 ##  <a name="getupperbound"></a>  CObArray::GetUpperBound  
- Restituisce il limite superiore corrente di questa matrice.  
+ Restituisce il limite corrente di questa matrice.  
   
 ```  
 INT_PTR GetUpperBound() const;  
@@ -454,11 +454,11 @@ INT_PTR GetUpperBound() const;
  Indice del limite superiore (in base zero).  
   
 ### <a name="remarks"></a>Note  
- Poiché gli indici di matrice in base zero, questa funzione restituisce un valore 1 minore `GetSize`.  
+ Poiché gli indici di matrice sono a base zero, questa funzione restituisce un valore 1 minore `GetSize`.  
   
  La condizione **() GetUpperBound** = -1 indica che la matrice non contiene elementi.  
   
- Nella tabella seguente mostra altri membri funzioni che sono simili a `CObArray::GetUpperBound`.  
+ Nella tabella seguente vengono mostrati altri membri funzioni che sono simili a `CObArray::GetUpperBound`.  
   
 |Classe|Funzione membro|  
 |-----------|---------------------|  
@@ -490,29 +490,29 @@ void InsertAt(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `nIndex`  
+ *nIndex*  
  Un indice integer che può essere maggiore del valore restituito da `GetUpperBound`.  
   
- `newElement`  
- Il `CObject` puntatore da inserire nella matrice. Oggetto `newElement` del valore **NULL** è consentita.  
+ *newElement*  
+ Il `CObject` puntatore da inserire in questa matrice. Un *newElement* del valore **NULL** è consentita.  
   
- `nCount`  
+ *nCount*  
  Il numero di volte in cui che questo elemento deve essere inserito (valore predefinito è 1).  
   
- `nStartIndex`  
+ *nStartIndex*  
  Un indice integer che può essere maggiore del valore restituito da `GetUpperBound`.  
   
- `pNewArray`  
+ *pNewArray*  
  Un'altra matrice che contiene gli elementi da aggiungere a questa matrice.  
   
 ### <a name="remarks"></a>Note  
- La prima versione di `InsertAt` inserisce un elemento (o più copie di un elemento) in corrispondenza dell'indice specificato in una matrice. Nel processo di viene spostato (incrementando l'indice) si sposta l'elemento esistente in corrispondenza dell'indice e di tutti gli elementi sopra di esso.  
+ La prima versione di `InsertAt` inserisce un elemento (o più copie di un elemento) in corrispondenza dell'indice specificato in una matrice. Nel processo, viene spostato (incrementando l'indice) si sposta l'elemento esistente in corrispondenza dell'indice e backup di tutti gli elementi sopra di esso.  
   
- La seconda versione inserisce tutti gli elementi da un altro `CObArray` insieme, a partire dal `nStartIndex` posizione.  
+ La seconda versione inserisce tutti gli elementi da un altro `CObArray` insieme, iniziando in corrispondenza di *nStartIndex* posizione.  
   
- Il `SetAt` (funzione), invece, sostituisce un elemento di matrice specificata e non spostare tutti gli elementi.  
+ Il `SetAt` (funzione), al contrario, sostituisce un elemento della matrice specificata e non spostare tutti gli elementi.  
   
- Nella tabella seguente mostra altri membri funzioni che sono simili a `CObArray::InsertAt`.  
+ Nella tabella seguente vengono mostrati altri membri funzioni che sono simili a `CObArray::InsertAt`.  
   
 |Classe|Funzione membro|  
 |-----------|---------------------|  
@@ -528,7 +528,7 @@ void InsertAt(
   
  [!code-cpp[NVC_MFCCollections#84](../../mfc/codesnippet/cpp/cobarray-class_10.cpp)]  
   
- I risultati di questo programma sono come segue:  
+ I risultati di questo programma sono i seguenti:  
   
  `InsertAt example: A CObArray with 3 elements`  
   
@@ -546,7 +546,7 @@ BOOL IsEmpty() const;
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- Diverso da zero se la matrice è vuota. in caso contrario 0.  
+ Diverso da zero se la matrice è vuota; in caso contrario 0.  
   
 ##  <a name="operator_at"></a>  [] CObArray::operator  
  Questi operatori di indice sono un sostituto ideale per il `SetAt` e `GetAt` funzioni.  
@@ -557,11 +557,11 @@ CObject* operator[](int_ptr nindex) const;
 ```  
   
 ### <a name="remarks"></a>Note  
- Il primo operatore, chiamato per le matrici non **const**, può essere utilizzata con destra (r) o a sinistra di un'istruzione di assegnazione (valore l-value). Il secondo, la chiamata per **const** matrici, possono essere utilizzate solo nella parte destra.  
+ Il primo operatore, chiamato per le matrici non sono **const**, può essere utilizzata con destra (r-value) o a sinistra (elemento l-value) di un'istruzione di assegnazione. Il secondo, la chiamata per **const** matrici, possono essere utilizzate solo nella parte destra.  
   
  La versione di Debug della libreria dichiara se l'indice (sia a sinistra o destra di un'istruzione di assegnazione) è compreso nell'intervallo.  
   
- La tabella seguente vengono illustrati altri operatori che sono simili a **CObArray::operator [**.  
+ Nella tabella seguente illustra gli altri operatori sono simili ai **[] CObArray::operator**.  
   
 |Classe|Operatore|  
 |-----------|--------------|  
@@ -585,11 +585,11 @@ void RemoveAll();
 ```  
   
 ### <a name="remarks"></a>Note  
- Se la matrice è vuota, la funzione funziona comunque.  
+ Se la matrice è vuota, la funzione continui a funzionare.  
   
  Il `RemoveAll` funzione libera tutta la memoria utilizzata per l'archiviazione di puntatore.  
   
- Nella tabella seguente mostra altri membri funzioni che sono simili a `CObArray::RemoveAll`.  
+ Nella tabella seguente vengono mostrati altri membri funzioni che sono simili a `CObArray::RemoveAll`.  
   
 |Classe|Funzione membro|  
 |-----------|---------------------|  
@@ -606,7 +606,7 @@ void RemoveAll();
  [!code-cpp[NVC_MFCCollections#85](../../mfc/codesnippet/cpp/cobarray-class_12.cpp)]  
   
 ##  <a name="removeat"></a>  CObArray::RemoveAt  
- Rimuove uno o più elementi a partire da un indice specificato nella matrice.  
+ Rimuove uno o più elementi a partire dall'indice specificato in una matrice.  
   
 ```  
 void RemoveAt(
@@ -615,20 +615,20 @@ void RemoveAt(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `nIndex`  
+ *nIndex*  
  Un indice integer che è maggiore o uguale a 0 e minore o uguale al valore restituito da `GetUpperBound`.  
   
- `nCount`  
+ *nCount*  
  Numero di elementi da rimuovere.  
   
 ### <a name="remarks"></a>Note  
- Nel processo, viene spostato verso il basso tutti gli elementi sopra gli elementi rimossi. Si decrementa l'angolo il limite della matrice, ma non libera la memoria.  
+ Nel processo, viene spostato verso il basso tutti gli elementi sopra gli elementi rimossi. Si decrementa il limite superiore limite della matrice, ma non libera la memoria.  
   
  Se si tenta di rimuovere più elementi che sono contenuti nella matrice sopra il punto di rimozione, la versione di Debug della libreria di asserzioni.  
   
- Il `RemoveAt` funzione rimuove il `CObject` puntatore da una matrice, ma non elimina l'oggetto stesso.  
+ Il `RemoveAt` funzione rimuove il `CObject` puntatore di matrice, ma non elimina l'oggetto stesso.  
   
- Nella tabella seguente mostra altri membri funzioni che sono simili a `CObArray::RemoveAt`.  
+ Nella tabella seguente vengono mostrati altri membri funzioni che sono simili a `CObArray::RemoveAt`.  
   
 |Classe|Funzione membro|  
 |-----------|---------------------|  
@@ -644,7 +644,7 @@ void RemoveAt(
   
  [!code-cpp[NVC_MFCCollections#112](../../mfc/codesnippet/cpp/cobarray-class_13.cpp)]  
   
- I risultati di questo programma sono come segue:  
+ I risultati di questo programma sono i seguenti:  
   
  `RemoveAt example: A CObArray with 1 elements`  
   
@@ -660,18 +660,18 @@ void SetAt(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `nIndex`  
+ *nIndex*  
  Un indice integer che è maggiore o uguale a 0 e minore o uguale al valore restituito da `GetUpperBound`.  
   
- `newElement`  
- Il puntatore all'oggetto da inserire nella matrice. Oggetto **NULL** il valore è consentito.  
+ *newElement*  
+ Il puntatore all'oggetto da inserire in questa matrice. Un **NULL** il valore è consentito.  
   
 ### <a name="remarks"></a>Note  
  `SetAt` non comporterà la matrice a crescere. Utilizzare `SetAtGrow` se si desidera che la matrice di aumento automatico delle dimensioni.  
   
  È necessario assicurarsi che il valore di indice rappresenta una posizione valida nella matrice. Se è compreso nell'intervallo, la versione di Debug della libreria di asserzioni.  
   
- Nella tabella seguente mostra altri membri funzioni che sono simili a `CObArray::SetAt`.  
+ Nella tabella seguente vengono mostrati altri membri funzioni che sono simili a `CObArray::SetAt`.  
   
 |Classe|Funzione membro|  
 |-----------|---------------------|  
@@ -687,7 +687,7 @@ void SetAt(
   
  [!code-cpp[NVC_MFCCollections#86](../../mfc/codesnippet/cpp/cobarray-class_14.cpp)]  
   
- I risultati di questo programma sono come segue:  
+ I risultati di questo programma sono i seguenti:  
   
  `SetAt example: A CObArray with 2 elements`  
   
@@ -705,16 +705,16 @@ void SetAtGrow(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `nIndex`  
+ *nIndex*  
  Un indice integer che è maggiore o uguale a 0.  
   
- `newElement`  
- Il puntatore all'oggetto da aggiungere a questa matrice. Oggetto **NULL** il valore è consentito.  
+ *newElement*  
+ Il puntatore all'oggetto da aggiungere a questa matrice. Un **NULL** il valore è consentito.  
   
 ### <a name="remarks"></a>Note  
- Matrice di dimensioni sono aumentate automaticamente se necessario (vale a dire il limite superiore viene regolato per inserire il nuovo elemento).  
+ Matrice di dimensioni sono aumentate automaticamente se necessario (vale a dire, il limite superiore viene regolato per inserire il nuovo elemento).  
   
- Nella tabella seguente mostra altri membri funzioni che sono simili a `CObArray::SetAtGrow`.  
+ Nella tabella seguente vengono mostrati altri membri funzioni che sono simili a `CObArray::SetAtGrow`.  
   
 |Classe|Funzione membro|  
 |-----------|---------------------|  
@@ -730,7 +730,7 @@ void SetAtGrow(
   
  [!code-cpp[NVC_MFCCollections#87](../../mfc/codesnippet/cpp/cobarray-class_15.cpp)]  
   
- I risultati di questo programma sono come segue:  
+ I risultati di questo programma sono i seguenti:  
   
  `SetAtGrow example: A CObArray with 4 elements`  
   
@@ -743,7 +743,7 @@ void SetAtGrow(
  `[3] = a CAge at $4840 65`  
   
 ##  <a name="setsize"></a>  CObArray::SetSize  
- Stabilisce la dimensione di una matrice vuota o esistente. Alloca memoria se necessario.  
+ Consente di stabilire le dimensioni di una matrice vuota o esistente. Alloca memoria se necessario.  
   
 ```  
 void SetSize(
@@ -752,20 +752,20 @@ void SetSize(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `nNewSize`  
+ *nNewSize*  
  La nuova dimensione della matrice (numero di elementi). Deve essere maggiore o uguale a 0.  
   
- `nGrowBy`  
+ *nGrowBy*  
  Il numero minimo di slot di elemento per allocare se è necessario un aumento delle dimensioni.  
   
 ### <a name="remarks"></a>Note  
- Se le nuove dimensioni sono inferiori alle dimensioni precedenti, la matrice verrà troncata e tutta la memoria inutilizzata viene rilasciata. Per motivi di efficienza, chiamare `SetSize` per impostare le dimensioni della matrice prima di utilizzarlo. In questo modo si impedisce la necessità di riallocare e copiare la matrice ogni volta che viene aggiunto un elemento.  
+ Se le nuove dimensioni sono minori di quelle precedenti, la matrice verrà troncata e tutta la memoria inutilizzata viene rilasciata. Per motivi di efficienza, chiamare `SetSize` per impostare le dimensioni della matrice prima di utilizzarlo. Onde evitare la necessità di riallocare e copiare la matrice ogni volta che viene aggiunto un elemento.  
   
- Il `nGrowBy` parametro influisce sull'allocazione di memoria interna, mentre è in aumento della matrice. L'uso non influisce mai sulle dimensioni della matrice come riportato da `GetSize` e `GetUpperBound`.  
+ Il *nGrowBy* parametro influisce sull'allocazione di memoria interna mentre è in aumento della matrice. L'uso non influisce mai sulle dimensioni della matrice come riportato da `GetSize` e `GetUpperBound`.  
   
- Se le dimensioni della matrice sono diventato, tutti appena allocata **CObject \***  puntatori sono impostati su NULL.  
+ Se le dimensioni della matrice sono diventato, tutti allocata **CObject \***  puntatori sono impostati su NULL.  
   
- Nella tabella seguente mostra altri membri funzioni che sono simili a `CObArray::SetSize`.  
+ Nella tabella seguente vengono mostrati altri membri funzioni che sono simili a `CObArray::SetSize`.  
   
 |Classe|Funzione membro|  
 |-----------|---------------------|  
@@ -777,7 +777,7 @@ void SetSize(
 |[CWordArray](../../mfc/reference/cwordarray-class.md)|**void SetSize (INT_PTR** `nNewSize` **, int** `nGrowBy` **= -1);**<br /><br /> **throw (CMemoryException\* );**|  
   
 ### <a name="example"></a>Esempio  
-  Per vedere l'esempio [CObArray::GetData](#getdata).  
+  Vedere l'esempio relativo [CObArray::GetData](#getdata).  
   
 ## <a name="see-also"></a>Vedere anche  
  [CObject (classe)](../../mfc/reference/cobject-class.md)   

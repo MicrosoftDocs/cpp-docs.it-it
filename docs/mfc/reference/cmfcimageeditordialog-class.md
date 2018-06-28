@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 795e5548e93323af389c3faeaefa7dda0bf7d80c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: af19a9dcb207afa482f54e26540a6b706d607ce0
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33376249"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040769"
 ---
 # <a name="cmfcimageeditordialog-class"></a>Classe di CMFCImageEditorDialog
-La `CMFCImageEditorDialog` classe supporta una finestra di dialogo editor di immagini.  
+Il `CMFCImageEditorDialog` classe supporta una finestra di dialogo editor di immagini.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -43,21 +43,21 @@ class CMFCImageEditorDialog : public CDialogEx
 |[CMFCImageEditorDialog::CMFCImageEditorDialog](#cmfcimageeditordialog)|Costruisce un oggetto `CMFCImageEditorDialog`.|  
   
 ## <a name="remarks"></a>Note  
- La `CMFCImageEditorDialog` classe fornisce una finestra di dialogo che include:  
+ Il `CMFCImageEditorDialog` classe fornisce una finestra di dialogo che include:  
   
--   Un'area di immagine che consente di modificare singoli pixel in un'immagine.  
+-   Un'area dell'immagine che consente di modificare singoli pixel in un'immagine.  
   
 -   Strumenti per modificare i pixel nell'area dell'immagine di disegno.  
   
 -   Una tavolozza dei colori per specificare il colore che viene utilizzato dagli strumenti di disegno.  
   
--   Un'area di anteprima che visualizza l'effetto della modifica.  
+-   Area di anteprima che consente di visualizzare l'effetto di apportare le modifiche.  
   
- Nella figura seguente viene illustrato un editor di immagini la finestra di dialogo.  
+ Nella figura seguente mostra un editor di immagini finestra di dialogo.  
   
  ![Finestra di dialogo di CMFCImageEditorDialog](../../mfc/reference/media/imageedit.png "imageedit")  
   
- Un modo per utilizzare un `CMFCImageEditorDialog` oggetto consiste nel passarlo un `CBitmap` immagine da modificare. Non creare un'immagine di grandi dimensioni perché l'immagine di area di modifica è di dimensioni limitate e la logica pixel viene ridimensionata per adattarsi all'area. Chiamare il `DoModal` metodo per avviare una finestra di dialogo modale.  
+ Un modo per utilizzare un `CMFCImageEditorDialog` oggetto consiste nel passarlo un `CBitmap` immagine per essere modificato. Non creare un'immagine di grandi dimensioni perché l'immagine di area di modifica con una dimensione limitata e il pixel logico viene ridimensionata per adattarsi all'area. Chiamare il `DoModal` metodo per avviare una finestra di dialogo modale.  
   
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -86,22 +86,22 @@ CMFCImageEditorDialog(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `pBitmap`  
+ *pBitmap*  
  Puntatore a un'immagine.  
   
- `pParent`  
- Puntatore alla finestra padre della casella di dialogo editor immagine corrente.  
+ *pParent*  
+ Puntatore alla finestra padre della finestra di dialogo editor immagine corrente.  
   
- `nBitsPixel`  
- Il numero di bit utilizzati per rappresentare il colore di un singolo pixel, note anche come profondità di colore.  Se il `nBitsPixel` parametro è -1, la profondità di colore è derivata dall'immagine specificata per il `pBitmap` parametro. Il valore predefinito è -1.  
+ *nBitsPixel*  
+ Il numero di bit utilizzata per rappresentare il colore di un singolo pixel, note anche come profondità di colore.  Se il *nBitsPixel* parametro è -1, la profondità di colore è derivata dall'immagine specificata per il *pBitmap* parametro. Il valore predefinito è -1.  
   
 ### <a name="return-value"></a>Valore restituito  
- Per modificare un'immagine, passare un puntatore di immagine per il `CMFCImageEditorDialog` costruttore. Chiamare quindi il `DoModal` per aprire una finestra di dialogo modale. Quando il `DoModal` metodo viene restituito, contiene la nuova immagine.  
+ Per modificare un'immagine, passare un puntatore di immagine per il `CMFCImageEditorDialog` costruttore. Chiamare quindi il `DoModal` metodo per aprire una finestra di dialogo modale. Quando il `DoModal` metodo viene restituito, contiene la nuova immagine.  
   
 ### <a name="remarks"></a>Note  
   
 ### <a name="example"></a>Esempio  
- Nell'esempio riportato di seguito viene illustrato come costruire un oggetto della `CMFCImageEditorDialog` classe. In questo esempio fa parte di [esempio nuovi controlli](../../visual-cpp-samples.md).  
+ Nell'esempio seguente viene illustrato come costruire un oggetto del `CMFCImageEditorDialog` classe. In questo esempio fa parte il [esempio di nuovi controlli](../../visual-cpp-samples.md).  
   
  [!code-cpp[NVC_MFC_NewControls#8](../../mfc/reference/codesnippet/cpp/cmfcimageeditordialog-class_1.cpp)]  
 [!code-cpp[NVC_MFC_NewControls#40](../../mfc/reference/codesnippet/cpp/cmfcimageeditordialog-class_2.cpp)]  

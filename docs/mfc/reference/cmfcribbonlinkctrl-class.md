@@ -42,12 +42,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9267dd6ab89871bcf8058529f32eb3686be937df
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d078900c3436c2205905b92d651bab86e94db246
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368436"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039011"
 ---
 # <a name="cmfcribbonlinkctrl-class"></a>Classe CMFCRibbonLinkCtrl
 Implementa un collegamento ipertestuale collocato in una barra multifunzione. Il collegamento ipertestuale apre una pagina Web quando si fa clic su di esso.  
@@ -106,17 +106,17 @@ CMFCRibbonLinkCtrl(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `nID`  
- Specifica l'ID di comando del comando che viene eseguito quando si seleziona il controllo collegamento.  
+ [in] *nID*  
+ Specifica l'ID di comando del comando che viene eseguita quando viene selezionato il controllo collegamento.  
   
- [in] `lpszText`  
+ [in] *lpszText*  
  Specifica l'etichetta da visualizzare sul controllo collegamento.  
   
- [in] `lpszLink`  
+ [in] *lpszLink*  
  Specifica il collegamento ipertestuale associato al controllo di collegamento.  
   
 ### <a name="example"></a>Esempio  
- Nell'esempio seguente viene illustrato come utilizzare il costruttore del `CMFCRibbonLinkCtrl` classe. Questo frammento di codice fa parte di [esempio gadget della barra multifunzione](../../visual-cpp-samples.md).  
+ Nell'esempio seguente viene illustrato come utilizzare il costruttore del `CMFCRibbonLinkCtrl` classe. Questo frammento di codice fa parte il [esempio gadget della barra multifunzione](../../visual-cpp-samples.md).  
   
  [!code-cpp[NVC_MFC_RibbonGadgets#1](../../mfc/reference/codesnippet/cpp/cmfcribbonlinkctrl-class_1.cpp)]  
   
@@ -128,7 +128,7 @@ virtual void CopyFrom(const CMFCRibbonBaseElement& src);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `src`  
+ [in] *src*  
   
 ### <a name="remarks"></a>Note  
   
@@ -140,7 +140,7 @@ virtual CSize GetCompactSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `pDC`  
+ [in] *pDC*  
   
 ### <a name="return-value"></a>Valore restituito  
   
@@ -166,7 +166,7 @@ virtual CSize GetRegularSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `pDC`  
+ [in] *pDC*  
   
 ### <a name="return-value"></a>Valore restituito  
   
@@ -191,8 +191,8 @@ virtual BOOL OnDrawMenuImage(CDC*, CRect);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `CDC*`  
- [in] `CRect`  
+ [in] *CDC**  
+ [in] *CRect*  
   
 ### <a name="return-value"></a>Valore restituito  
   
@@ -217,7 +217,7 @@ virtual void OnDraw(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `pDC`  
+ [in] *pDC*  
   
 ### <a name="remarks"></a>Note  
   
@@ -229,7 +229,7 @@ virtual void OnMouseMove(CPoint point);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `point`  
+ [in] *punto*  
   
 ### <a name="remarks"></a>Note  
   
@@ -253,7 +253,7 @@ BOOL OpenLink();
  `TRUE` Se la pagina Web associata è stato aperto correttamente; in caso contrario, `FALSE`.  
   
 ### <a name="remarks"></a>Note  
- Verrà visualizzata una pagina web utilizzando il collegamento ipertestuale associato il `CMFCRibbonLinkCtrl` oggetto.  
+ Apre una pagina web utilizzando il collegamento ipertestuale associato il `CMFCRibbonLinkCtrl` oggetto.  
   
 ##  <a name="setlink"></a>  CMFCRibbonLinkCtrl::SetLink  
  Imposta il valore del collegamento ipertestuale.  
@@ -263,7 +263,7 @@ void SetLink(LPCTSTR lpszLink);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `lpszLink`  
+ [in] *lpszLink*  
  Specifica il testo del collegamento ipertestuale.  
   
 ## <a name="see-also"></a>Vedere anche  

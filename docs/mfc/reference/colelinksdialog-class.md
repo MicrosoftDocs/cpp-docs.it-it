@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e190c8b8cb11fefccb2847214dcaebf713f35dc4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fb24b73ba23b430e29ed9144e51372eefdb673a3
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368969"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042534"
 ---
 # <a name="colelinksdialog-class"></a>Classe COleLinksDialog
 Utilizzato per la finestra di dialogo di modifica collegamenti OLE.  
@@ -59,14 +59,14 @@ class COleLinksDialog : public COleDialog
 |[COleLinksDialog::m_el](#m_el)|Una struttura di tipo **OLEUIEDITLINKS** che controlla il comportamento della finestra di dialogo.|  
   
 ## <a name="remarks"></a>Note  
- Creare un oggetto della classe `COleLinksDialog` quando si desidera chiamare questa finestra di dialogo. Dopo un `COleLinksDialog` oggetto è stato creato, è possibile utilizzare il [m_el](#m_el) struttura per inizializzare i valori o stati dei controlli nella finestra di dialogo. Il `m_el` struttura è di tipo **OLEUIEDITLINKS**. Per ulteriori informazioni sull'utilizzo di questa classe di finestra di dialogo, vedere il [DoModal](#domodal) funzione membro.  
+ Creare un oggetto della classe `COleLinksDialog` quando si desidera chiamare questa finestra di dialogo. Dopo un `COleLinksDialog` oggetto una volta creato, è possibile usare il [m_el](#m_el) struttura per inizializzare i valori o stati dei controlli nella finestra di dialogo. Il `m_el` struttura è di tipo **OLEUIEDITLINKS**. Per ulteriori informazioni sull'utilizzo di questa classe di finestra di dialogo, vedere la [DoModal](#domodal) funzione membro.  
   
 > [!NOTE]
->  Il codice dell'applicazione contenitore generato dalla procedura guidata utilizza questa classe.  
+>  Codice dell'applicazione contenitore generato dalla procedura guidata utilizza questa classe.  
   
- Per ulteriori informazioni, vedere il [OLEUIEDITLINKS](http://msdn.microsoft.com/library/windows/desktop/ms678492) struttura in Windows SDK.  
+ Per altre informazioni, vedere la [OLEUIEDITLINKS](http://msdn.microsoft.com/library/windows/desktop/ms678492) struttura in Windows SDK.  
   
- Per ulteriori informazioni riguardanti le finestre di dialogo OLE specifici, vedere l'articolo [finestre di dialogo in OLE](../../mfc/dialog-boxes-in-ole.md).  
+ Per ulteriori informazioni sulla finestra di dialogo OLE specifici, vedere l'articolo [finestre di dialogo in OLE](../../mfc/dialog-boxes-in-ole.md).  
   
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -100,10 +100,10 @@ virtual INT_PTR DoModal();
   
 - **IDCANCEL** se l'utente ha annullato la finestra di dialogo.  
   
-- **IDABORT** se si è verificato un errore. Se **IDABORT** viene restituito, chiamare il `COleDialog::GetLastError` funzione membro per ottenere ulteriori informazioni sul tipo di errore che si è verificato. Per un elenco di possibili errori, vedere il [OleUIEditLinks](http://msdn.microsoft.com/library/windows/desktop/ms679703) funzione in Windows SDK.  
+- **IDABORT** se si è verificato un errore. Se **IDABORT** viene restituito, chiamare il `COleDialog::GetLastError` funzione membro per ottenere ulteriori informazioni sul tipo di errore che si sono verificati. Per un elenco dei possibili errori, vedere la [OleUIEditLinks](http://msdn.microsoft.com/library/windows/desktop/ms679703) (funzione) in Windows SDK.  
   
 ### <a name="remarks"></a>Note  
- Se si desidera inizializzare i vari controlli di finestra di dialogo impostando i membri del [m_el](#m_el) struttura, è necessario farlo prima di chiamare `DoModal`, ma dopo che l'oggetto finestra di dialogo.  
+ Se si desidera inizializzare i vari controlli di finestra di dialogo mediante impostazione dei membri del [m_el](#m_el) struttura, è consigliabile eseguirla prima di chiamare `DoModal`, ma dopo che l'oggetto finestra di dialogo viene costruito.  
   
 ##  <a name="colelinksdialog"></a>  COleLinksDialog::COleLinksDialog  
  Costruisce un oggetto `COleLinksDialog`.  
@@ -117,17 +117,17 @@ COleLinksDialog (
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `pDoc`  
+ *pDoc*  
  Punta al documento OLE che contiene i collegamenti per essere modificato.  
   
- `pView`  
- Fa riferimento alla vista corrente in `pDoc`.  
+ *pView*  
+ Dei punti di visualizzazione corrente *pDoc*.  
   
- `dwFlags`  
- Flag di creazione, che contiene i valori validi sono 0 o **ELF_SHOWHELP** per specificare se verrà visualizzato il pulsante della Guida verrà visualizzata la finestra di dialogo.  
+ *dwFlags*  
+ Flag di creazione, che contiene i valori validi sono 0 oppure **ELF_SHOWHELP** per specificare se il pulsante della Guida verrà visualizzato quando viene visualizzata la finestra di dialogo.  
   
- `pParentWnd`  
- Punta all'oggetto finestra padre o proprietaria (di tipo `CWnd`) a cui appartiene l'oggetto finestra di dialogo. Se è **NULL**, la finestra padre della finestra di dialogo è impostata per la finestra principale dell'applicazione.  
+ *pParentWnd*  
+ Punta all'oggetto finestra padre o proprietaria (di tipo `CWnd`) a cui appartiene l'oggetto finestra di dialogo. Se si tratta **NULL**, la finestra padre della finestra di dialogo è impostata per la finestra principale dell'applicazione.  
   
 ### <a name="remarks"></a>Note  
  Questa funzione crea solo un `COleLinksDialog` oggetto. Per visualizzare la finestra di dialogo, chiamare il [DoModal](#domodal) (funzione).  
@@ -140,9 +140,9 @@ OLEUIEDITLINKS m_el;
 ```  
   
 ### <a name="remarks"></a>Note  
- Membri di questa struttura possono essere modificati direttamente o tramite le funzioni membro.  
+ I membri di questa struttura possono essere modificati direttamente o tramite le funzioni membro.  
   
- Per ulteriori informazioni, vedere il [OLEUIEDITLINKS](http://msdn.microsoft.com/library/windows/desktop/ms678492) struttura in Windows SDK.  
+ Per altre informazioni, vedere la [OLEUIEDITLINKS](http://msdn.microsoft.com/library/windows/desktop/ms678492) struttura in Windows SDK.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Classe COleDialog](../../mfc/reference/coledialog-class.md)   

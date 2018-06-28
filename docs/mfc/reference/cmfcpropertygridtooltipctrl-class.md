@@ -30,15 +30,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cddd48c51e1e9b5d206cefa56e2879dfb3ace3b1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c284f5d5fdfee09349cc6eb9cbde38da21918d25
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367929"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040961"
 ---
 # <a name="cmfcpropertygridtooltipctrl-class"></a>Classe CMFCPropertyGridToolTipCtrl
-Implementa una descrizione comando controllare che il [CMFCPropertyGridCtrl Class](../../mfc/reference/cmfcpropertygridctrl-class.md) viene utilizzata per visualizzare le descrizioni comandi.  
+Implementa una descrizione comando controllare che il [CMFCPropertyGridCtrl Class](../../mfc/reference/cmfcpropertygridctrl-class.md) viene usato per visualizzare le descrizioni comandi.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -67,15 +67,15 @@ class CMFCPropertyGridToolTipCtrl : public CWnd
 |[CMFCPropertyGridToolTipCtrl::Hide](#hide)|Nasconde il controllo tooltip.|  
 |`CMFCPropertyGridToolTipCtrl::PreTranslateMessage`|Usato dalla classe [CWinApp](../../mfc/reference/cwinapp-class.md) per convertire i messaggi della finestra prima che vengano inviati alle funzioni Windows [TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) e [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) . Esegue l'override di [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).|  
 |[CMFCPropertyGridToolTipCtrl::SetTextMargin](#settextmargin)|Imposta la spaziatura tra il testo della descrizione comando e il bordo della finestra della descrizione comando.|  
-|[CMFCPropertyGridToolTipCtrl::Track](#track)|Visualizza il controllo descrizione comando.|  
+|[CMFCPropertyGridToolTipCtrl::Track](#track)|Visualizza il controllo tooltip.|  
   
 ## <a name="remarks"></a>Note  
- Le descrizioni comandi quando il puntatore è posizionato su un nome di proprietà. Il [CMFCPropertyGridToolTipCtrl](../../mfc/reference/cmfcpropertygridtooltipctrl-class.md) classe visualizza una descrizione comando in modo che sia facilmente leggibile dall'utente. In genere, la posizione di una descrizione comando è determinata dalla posizione del puntatore. Tramite questa classe, la descrizione comando visualizzata sopra il nome della proprietà, è simile all'estensione di proprietà naturale, in modo che il nome della proprietà è completamente visibile.  
+ Descrizioni comandi vengono visualizzati quando il puntatore si sofferma su un nome di proprietà. Il [CMFCPropertyGridToolTipCtrl](../../mfc/reference/cmfcpropertygridtooltipctrl-class.md) classe visualizza una descrizione comando in modo che siano facilmente leggibile dall'utente. In genere, la posizione di una descrizione comando è determinata dalla posizione dell'indicatore di misura. Tramite questa classe, la descrizione comando visualizzata sopra il nome della proprietà, è simile all'estensione di proprietà naturale, in modo che il nome della proprietà è completamente visibile.  
   
  MFC automaticamente questo controllo viene creato e utilizzato nel [CMFCPropertyGridCtrl Class](../../mfc/reference/cmfcpropertygridctrl-class.md).  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio riportato di seguito viene illustrato come costruire un oggetto della `CMFCPropertyGridToolTipCtrl` classe e come visualizzare il controllo tooltip.  
+ Nell'esempio seguente viene illustrato come costruire un oggetto del `CMFCPropertyGridToolTipCtrl` (classe) e come visualizzare il controllo tooltip.  
   
  [!code-cpp[NVC_MFC_RibbonApp#23](../../mfc/reference/codesnippet/cpp/cmfcpropertygridtooltipctrl-class_1.cpp)]  
   
@@ -106,7 +106,7 @@ BOOL Create(CWnd* pWndParent);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `pWndParent`  
+ [in] *pWndParent*  
  Puntatore alla finestra padre.  
   
 ### <a name="return-value"></a>Valore restituito  
@@ -120,7 +120,7 @@ void Deactivate();
 ```  
   
 ### <a name="remarks"></a>Note  
- Questo metodo imposta la posizione e testo ultimo i valori vuoti, in modo che le chiamate successive al [CMFCPropertyGridToolTipCtrl::Track](#track) visualizzazione della descrizione comando.  
+ Questo metodo imposta la posizione e testo ultimo i valori vuoti, in modo che le chiamate successive al [CMFCPropertyGridToolTipCtrl::Track](#track) visualizzare la descrizione comando.  
   
 ##  <a name="getlastrect"></a>  CMFCPropertyGridToolTipCtrl::GetLastRect  
  Restituisce le coordinate dell'ultima posizione del controllo tooltip.  
@@ -130,7 +130,7 @@ void GetLastRect(CRect& rect) const;
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [out] `rect`  
+ [out] *rect*  
  Contiene l'ultima posizione del controllo tooltip.  
   
 ##  <a name="hide"></a>  CMFCPropertyGridToolTipCtrl::Hide  
@@ -148,11 +148,11 @@ void SetTextMargin(int nTextMargin);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `nTextMargin`  
+ [in] *nTextMargin*  
  Specifica la spaziatura tra il testo del controllo descrizione comando e il bordo della finestra della descrizione comando. Il valore predefinito è 10 pixel.  
   
 ##  <a name="track"></a>  CMFCPropertyGridToolTipCtrl::Track  
- Visualizza il controllo descrizione comando.  
+ Visualizza il controllo tooltip.  
   
 ```  
 void Track(
@@ -161,14 +161,14 @@ void Track(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `rect`  
+ [in] *rect*  
  Specifica la posizione e le dimensioni del controllo tooltip.  
   
- [in] `strText`  
+ [in] *strText*  
  Specifica il testo da visualizzare nella descrizione comando.  
   
 ### <a name="remarks"></a>Note  
- Questo metodo visualizza il controllo tooltip la posizione e dimensioni specificate dal `rect`. Se la posizione, dimensione e testo non sono stati modificati dall'ultima volta che questo metodo è stato chiamato, questo metodo non ha alcun effetto.  
+ Questo metodo visualizza il controllo tooltip la posizione e dimensioni specificate dal *rect*. Se la posizione, dimensione e testo non sono stati modificati dall'ultima volta che questo metodo è stato chiamato, questo metodo non ha effetto.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Grafico delle gerarchie](../../mfc/hierarchy-chart.md)   

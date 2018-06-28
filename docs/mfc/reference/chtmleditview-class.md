@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 10f474ce860bf5d9071a93f17654123f4777efa7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0ca4d5a88b14f32064e473bd129fcd0f8ddd7898
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367344"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040613"
 ---
 # <a name="chtmleditview-class"></a>Classe CHtmlEditView
 Fornisce la funzionalità della piattaforma di modifica WebBrowser nel contesto dell'architettura documento/visualizzazione di MFC.  
@@ -100,29 +100,29 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `lpszClassName`  
- Punta a una stringa di caratteri con terminazione null che denomina la classe Windows. Il nome della classe può essere qualsiasi nome registrato con il [AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass) funzione globale o **RegisterClass** funzione di Windows. Se **NULL**, utilizza il valore predefinito [CFrameWnd](../../mfc/reference/cframewnd-class.md) attributi.  
+ *lpszClassName*  
+ Punta a una stringa di caratteri con terminazione null che indica il nome di classe di Windows. Il nome della classe può essere qualsiasi nome registrato con il [AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass) funzione globale o il **RegisterClass** funzione di Windows. Se **NULL**, viene utilizzato il valore predefinito predefinito [CFrameWnd](../../mfc/reference/cframewnd-class.md) attributi.  
   
- `lpszWindowName`  
+ *lpszWindowName*  
  Punta a una stringa di caratteri con terminazione null che rappresenta il nome della finestra.  
   
- `dwStyle`  
+ *dwStyle*  
  Specifica gli attributi di stile della finestra. Per impostazione predefinita, il **WS_VISIBLE** e **WS_CHILD** vengono impostati gli stili di Windows.  
   
- `rect`  
- Un riferimento a un [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) struttura che specifica le dimensioni e la posizione della finestra. Il `rectDefault` valore consente di specificare le dimensioni e posizione della nuova finestra.  
+ *Rect*  
+ Un riferimento a un [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) struttura che specifica le dimensioni e posizione della finestra. Il *rectDefault* valore consente di specificare le dimensioni e posizione della nuova finestra.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Puntatore alla finestra padre del controllo.  
   
- `nID`  
- Il numero ID della vista. Per impostazione predefinita, **AFX_IDW_PANE_FIRST**.  
+ *nID*  
+ Il numero ID della vista. Per impostazione predefinita, impostato su **AFX_IDW_PANE_FIRST**.  
   
- `pContext`  
+ *pContext*  
  Un puntatore a un [CCreateContext](../../mfc/reference/ccreatecontext-structure.md). **NULL** per impostazione predefinita.  
   
 ### <a name="remarks"></a>Note  
- Questo metodo chiama anche il controllo WebBrowser indipendente **Naviga** per caricare un documento predefinito (vedere [CHtmlEditView::GetStartDocument](#getstartdocument)).  
+ Questo metodo verrà chiamato anche il controllo WebBrowser indipendente **Navigate** metodo per caricare un documento predefinito (vedere [CHtmlEditView::GetStartDocument](#getstartdocument)).  
   
 ##  <a name="getdhtmldocument"></a>  CHtmlEditView::GetDHtmlDocument  
  Restituisce il **IHTMLDocument2** interfaccia nel documento corrente.  
@@ -132,7 +132,7 @@ BOOL GetDHtmlDocument(IHTMLDocument2** ppDocument) const;
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `ppDocument`  
+ *ppDocument*  
  Il [IHTMLDocument2](https://msdn.microsoft.com/library/aa752574.aspx) interfaccia.  
   
 ##  <a name="getstartdocument"></a>  CHtmlEditView::GetStartDocument  

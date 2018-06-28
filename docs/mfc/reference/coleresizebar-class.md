@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cf000b45e2bd24ec40e1ae15001c3df46d1b12c9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e3046fa4c9446afeba45fd41a6b571ccf58f2cfb
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33375616"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040116"
 ---
 # <a name="coleresizebar-class"></a>Classe COleResizeBar
 Tipo di barra di controllo che supporta il ridimensionamento di elementi OLE sul posto.  
@@ -55,7 +55,7 @@ class COleResizeBar : public CControlBar
   
  `COleResizeBar` gli oggetti sono in genere incorporati membri della finestra cornice oggetti derivati dal [COleIPFrameWnd](../../mfc/reference/coleipframewnd-class.md) classe.  
   
- Per ulteriori informazioni, vedere l'articolo [attivazione](../../mfc/activation-cpp.md).  
+ Per altre informazioni, vedere l'articolo [attivazione](../../mfc/activation-cpp.md).  
   
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -92,14 +92,14 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `pParentWnd`  
+ *pParentWnd*  
  Puntatore alla finestra padre della barra di ridimensionamento.  
   
- `dwStyle`  
+ *dwStyle*  
  Specifica il [stile della finestra](../../mfc/reference/styles-used-by-mfc.md#window-styles) attributi.  
   
- `nID`  
- ID di finestra figlio della barra di ridimensionamento.  
+ *nID*  
+ Finestra figlio barra di ridimensionamento dell'ID.  
   
 ### <a name="return-value"></a>Valore restituito  
  Diverso da zero se la barra di ridimensionamento è stata creata; in caso contrario 0.  

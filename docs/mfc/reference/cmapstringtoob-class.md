@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 52adc7ce08644fb002b2a0a2cd91d20d15d4f24a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7e4ea4ea24dfae26b1b43fe6480cac7f7a480fa4
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33375771"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042248"
 ---
 # <a name="cmapstringtoob-class"></a>Classe CMapStringToOb
 Classe di raccolte dizionario che esegue il mapping di oggetti `CString` univoci ai puntatori `CObject` .  
@@ -79,8 +79,8 @@ class CMapStringToOb : public CObject
 |[CMapStringToOb::GetStartPosition](#getstartposition)|Restituisce la posizione del primo elemento.|  
 |[CMapStringToOb::HashKey](#hashkey)|Calcola il valore hash di una chiave specificata.|  
 |[CMapStringToOb::InitHashTable](#inithashtable)|Inizializza la tabella hash.|  
-|[CMapStringToOb::IsEmpty](#isempty)|Verifica se la condizione mappa vuota (nessun elemento).|  
-|[CMapStringToOb::Lookup](#lookup)|Cerca un puntatore void in base alla chiave di un puntatore void. Il valore del puntatore, non l'entità cui fa riferimento, viene utilizzato per il confronto delle chiavi.|  
+|[CMapStringToOb::IsEmpty](#isempty)|Verifica se la condizione di mappa vuoto (alcun elemento).|  
+|[CMapStringToOb::Lookup](#lookup)|Cerca un puntatore void in base alla chiave puntatore void. Il valore del puntatore, non l'entità cui fa riferimento, viene utilizzato per il confronto delle chiavi.|  
 |[CMapStringToOb::LookupKey](#lookupkey)|Restituisce un riferimento alla chiave associata con il valore di chiave specificato.|  
 |[CMapStringToOb::RemoveAll](#removeall)|Rimuove tutti gli elementi da questa mappa.|  
 |[CMapStringToOb::RemoveKey](#removekey)|Rimuove un elemento specificato da una chiave.|  
@@ -95,15 +95,15 @@ class CMapStringToOb : public CObject
 ## <a name="remarks"></a>Note  
  Dopo aver inserito un `CString` -  `CObject*` coppia (elemento) nella mappa, è possibile recuperare in modo efficiente o eliminare la coppia utilizzando una stringa o un `CString` valore come chiave. È inoltre possibile scorrere tutti gli elementi nella mappa.  
   
- Una variabile di tipo **posizione** viene utilizzato per l'accesso in ingresso alternativo in tutte le variazioni di mappa. È possibile utilizzare un **posizione** "ricordare" una voce e per scorrere la mappa. Si potrebbe ipotizzare che l'iterazione sequenza in base al valore di chiave non è. La sequenza di elementi recuperati è indeterminata.  
+ Una variabile di tipo **posizione** viene utilizzato per l'accesso in ingresso alternativo in tutte le variazioni della mappa. È possibile utilizzare un **posizione** "ricordare" una voce e per scorrere la mappa. Si potrebbe ipotizzare che l'iterazione sequenza in base al valore della chiave; non è. La sequenza di elementi recuperati è indeterminata.  
   
  `CMapStringToOb` incorpora la macro `IMPLEMENT_SERIAL` per supportare la serializzazione e il dump dei relativi elementi. Ogni elemento viene serializzato a sua volta se una mappa è archiviata in un archivio, con l'inserimento di overload ( **<<**) (operatore) o con il `Serialize` funzione membro.  
   
- Se è necessario un dump di diagnostica dei singoli elementi nella mappa (il `CString` valore e `CObject` contenuto), è necessario impostare la profondità del contesto di dump su 1 o versione successiva.  
+ Se è necessario un dump di diagnostica dei singoli elementi nella mappa (il `CString` valore e il `CObject` contenuto), è necessario impostare la profondità del contesto di dump su 1 o versioni successive.  
   
- Quando un `CMapStringToOb` oggetto viene eliminato oppure quando gli elementi vengono rimossi, il `CString` oggetti e `CObject` i puntatori sono stati rimossi. Gli oggetti a cui fa riferimento il `CObject` puntatori non vengono eliminati definitivamente.  
+ Quando un `CMapStringToOb` oggetto viene eliminato oppure quando gli elementi vengono rimossi, il `CString` oggetti e `CObject` puntatori sono stati rimossi. Gli oggetti cui fanno riferimento il `CObject` puntatori non vengono eliminati definitivamente.  
   
- Derivazione della classe mappa è simile alla derivazione di elenco. Vedere l'articolo [raccolte](../../mfc/collections.md) per un'illustrazione di derivazione di una classe speciale elenco.  
+ Derivazione della classe mappa è simile alla derivazione di elenco. Vedere l'articolo [raccolte](../../mfc/collections.md) per un'illustrazione di derivazione di una classe di elenco di scopi specifici.  
   
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -121,13 +121,13 @@ CMapStringToOb(INT_PTR nBlockSize = 10);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `nBlockSize`  
+ *nBlockSize*  
  Specifica la granularità dell'allocazione di memoria per l'estensione della mappa.  
   
 ### <a name="remarks"></a>Note  
- Man mano che aumenta la mappa, la memoria viene allocata in unità di `nBlockSize` voci.  
+ Man mano che aumenta la mappa, la memoria viene allocata in unità pari *nBlockSize* voci.  
   
- Nella tabella seguente mostra altri membri funzioni che sono simili a **CMapStringToOb:: CMapStringToOb**.  
+ Nella tabella seguente vengono mostrati altri membri funzioni che sono simili ai **CMapStringToOb:: CMapStringToOb**.  
   
 |Classe|Funzione membro|  
 |-----------|---------------------|  
@@ -154,7 +154,7 @@ INT_PTR GetCount() const;
  Il numero di elementi in questa mappa.  
   
 ### <a name="remarks"></a>Note  
- Nella tabella seguente mostra altri membri funzioni che sono simili a `CMapStringToOb::GetCount`.  
+ Nella tabella seguente vengono mostrati altri membri funzioni che sono simili a `CMapStringToOb::GetCount`.  
   
 |Classe|Funzione membro|  
 |-----------|---------------------|  
@@ -181,7 +181,7 @@ UINT GetHashTableSize() const;
  Restituisce il numero di elementi nella tabella hash.  
   
 ### <a name="remarks"></a>Note  
- Nella tabella seguente mostra altri membri funzioni che sono simili a `CMapStringToOb::GetHashTableSize`.  
+ Nella tabella seguente vengono mostrati altri membri funzioni che sono simili a `CMapStringToOb::GetHashTableSize`.  
   
 |Classe|Funzione membro|  
 |-----------|---------------------|  
@@ -193,7 +193,7 @@ UINT GetHashTableSize() const;
 |[CMapWordToPtr](../../mfc/reference/cmapwordtoptr-class.md)|**() GetHashTableSize UINT const.**|  
   
 ##  <a name="getnextassoc"></a>  CMapStringToOb::GetNextAssoc  
- Recupera l'elemento della mappa in *rNextPosition*, quindi Aggiorna *rNextPosition* per fare riferimento all'elemento successivo nella mappa.  
+ Recupera l'elemento della mappa in corrispondenza *rNextPosition*, quindi Aggiorna *rNextPosition* per fare riferimento all'elemento successivo nella mappa.  
   
 ```  
 void GetNextAssoc(
@@ -204,26 +204,26 @@ void GetNextAssoc(
   
 ### <a name="parameters"></a>Parametri  
  *rNextPosition*  
- Specifica un riferimento a un **posizione** valore restituito da una precedente **GetNextAssoc** o **GetStartPosition** chiamare.  
+ Specifica un riferimento a un **posizione** valore restituito da una precedente **GetNextAssoc** oppure **GetStartPosition** chiamare.  
   
  *rKey*  
  Specifica la chiave restituita dell'elemento recuperato (stringa).  
   
  *rValue*  
- Specifica il valore restituito dell'elemento recuperato (un **CObject** puntatore). Per ulteriori informazioni su questo parametro, vedere la sezione Osservazioni.  
+ Specifica il valore restituito dell'elemento recuperato (un **CObject** puntatore). Per altre informazioni su questo parametro, vedere la sezione Osservazioni.  
   
 ### <a name="remarks"></a>Note  
  Questa funzione è particolarmente utile per l'iterazione di tutti gli elementi nella mappa. Si noti che la sequenza di posizione non è necessariamente lo stesso come sequenza di valore della chiave.  
   
- Se l'elemento recuperato è l'ultimo nella mappa, quindi il nuovo valore di *rNextPosition* è impostato su **NULL**.  
+ Se l'elemento recuperato è l'ultimo nella mappa, quindi il nuovo valore del *rNextPosition* è impostata su **NULL**.  
   
- Per il *rValue* parametro, assicurarsi di eseguire il cast del tipo di oggetto **CObject\*&**, che è ciò che il compilatore richiede, come illustrato nell'esempio seguente:  
+ Per il *rValue* parametro, assicurarsi di eseguire il cast del tipo di oggetto da **CObject\*&**, che è ciò che il compilatore richiede, come illustrato nell'esempio seguente:  
   
  [!code-cpp[NVC_MFCCollections#65](../../mfc/codesnippet/cpp/cmapstringtoob-class_3.cpp)]  
   
- Questo non vale **GetNextAssoc** per le mappe basate su modelli.  
+ Ciò non vale **GetNextAssoc** per le mappe basate su modelli.  
   
- Nella tabella seguente mostra altri membri funzioni che sono simili a **CMapStringToOb::GetNextAssoc**.  
+ Nella tabella seguente vengono mostrati altri membri funzioni che sono simili ai **CMapStringToOb::GetNextAssoc**.  
   
 |Classe|Funzione membro|  
 |-----------|---------------------|  
@@ -239,7 +239,7 @@ void GetNextAssoc(
   
  [!code-cpp[NVC_MFCCollections#66](../../mfc/codesnippet/cpp/cmapstringtoob-class_4.cpp)]  
   
- I risultati di questo programma sono come segue:  
+ I risultati di questo programma sono i seguenti:  
   
  `Lisa : a CAge at $4724 11`  
   
@@ -262,7 +262,7 @@ INT_PTR GetSize() const;
 ### <a name="remarks"></a>Note  
  Chiamare questo metodo per recuperare il numero di elementi nella mappa.  
   
- Nella tabella seguente mostra altri membri funzioni che sono simili a `CMapStringToOb::GetSize`.  
+ Nella tabella seguente vengono mostrati altri membri funzioni che sono simili a `CMapStringToOb::GetSize`.  
   
 |Classe|Funzione membro|  
 |-----------|---------------------|  
@@ -284,12 +284,12 @@ POSITION GetStartPosition() const;
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- Oggetto **posizione** valore che indica una posizione iniziale per l'iterazione della mappa; o **NULL** se la mappa è vuota.  
+ Un **posizione** valore che indica una posizione iniziale per eseguire l'iterazione della mappa; o **NULL** se la mappa è vuota.  
   
 ### <a name="remarks"></a>Note  
- La sequenza di iterazione non è stimabile; di conseguenza, "primo elemento nella mappa" alcun significato speciale.  
+ La sequenza di iterazione non è stimabile; Pertanto, il "primo elemento nella mappa" alcun significato speciale.  
   
- Nella tabella seguente mostra altri membri funzioni che sono simili a `CMapStringToOb::GetStartPosition`.  
+ Nella tabella seguente vengono mostrati altri membri funzioni che sono simili a `CMapStringToOb::GetStartPosition`.  
   
 |Classe|Funzione membro|  
 |-----------|---------------------|  
@@ -301,7 +301,7 @@ POSITION GetStartPosition() const;
 |[CMapWordToPtr](../../mfc/reference/cmapwordtoptr-class.md)|**POSITION () GetStartPosition const.**|  
   
 ### <a name="example"></a>Esempio  
- Per vedere l'esempio [CMapStringToOb::GetNextAssoc](#getnextassoc).  
+ Vedere l'esempio relativo [CMapStringToOb::GetNextAssoc](#getnextassoc).  
   
 ##  <a name="hashkey"></a>  CMapStringToOb::HashKey  
  Calcola il valore hash di una chiave specificata.  
@@ -311,14 +311,14 @@ UINT HashKey(LPCTSTR key) const;
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `key`  
- La chiave viene calcolato il cui valore hash.  
+ *key*  
+ La chiave il cui valore hash è deve essere calcolato.  
   
 ### <a name="return-value"></a>Valore restituito  
  Il valore della chiave hash  
   
 ### <a name="remarks"></a>Note  
- Nella tabella seguente mostra altri membri funzioni che sono simili a `CMapStringToOb::HashKey`.  
+ Nella tabella seguente vengono mostrati altri membri funzioni che sono simili a `CMapStringToOb::HashKey`.  
   
 |Classe|Funzione membro|  
 |-----------|---------------------|  
@@ -339,16 +339,16 @@ void InitHashTable(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `hashSize`  
+ *hashSize*  
  Numero di voci nella tabella hash.  
   
- `bAllocNow`  
- Se **TRUE**, consente di allocare la tabella hash al momento dell'inizializzazione; in caso contrario la tabella viene allocata quando necessario.  
+ *bAllocNow*  
+ Se **TRUE**, consente di allocare la tabella hash al momento dell'inizializzazione; in caso contrario, la tabella viene allocata quando necessario.  
   
 ### <a name="remarks"></a>Note  
- Per prestazioni ottimali, le dimensioni della tabella hash devono essere un numero primo. Per ridurre al minimo i conflitti, la dimensione deve essere approssimativamente il 20%, maggiore di set di dati più grande previsto.  
+ Per prestazioni ottimali, le dimensioni della tabella hash devono essere un numero primo. Per ridurre al minimo i conflitti, la dimensione deve includere approssimativamente il 20% maggiore di set di dati più grande previsto.  
   
- Nella tabella seguente mostra altri membri funzioni che sono simili a `CMapStringToOb::InitHashTable`.  
+ Nella tabella seguente vengono mostrati altri membri funzioni che sono simili a `CMapStringToOb::InitHashTable`.  
   
 |Classe|Funzione membro|  
 |-----------|---------------------|  
@@ -370,10 +370,10 @@ BOOL IsEmpty() const;
  Diverso da zero se questa mappa non contiene elementi; in caso contrario 0.  
   
 ### <a name="example"></a>Esempio  
- Per vedere l'esempio [RemoveAll](#removeall).  
+ Vedere l'esempio relativo [RemoveAll](#removeall).  
   
 ### <a name="remarks"></a>Note  
- Nella tabella seguente mostra altri membri funzioni che sono simili a **CMapStringToOb:: IsEmpty**.  
+ Nella tabella seguente vengono mostrati altri membri funzioni che sono simili ai **CMapStringToOb:: IsEmpty**.  
   
 |Classe|Funzione membro|  
 |-----------|---------------------|  
@@ -394,10 +394,10 @@ BOOL Lookup(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `key`  
+ *key*  
  Specifica la chiave di stringa che identifica l'elemento da ricercare.  
   
- `rValue`  
+ *rValue*  
  Specifica il valore restituito dall'elemento cercato.  
   
 ### <a name="return-value"></a>Valore restituito  
@@ -406,7 +406,7 @@ BOOL Lookup(
 ### <a name="remarks"></a>Note  
  `Lookup` utilizza un algoritmo hash per trovare rapidamente l'elemento della mappa con una chiave che corrisponde esattamente ( `CString` valore).  
   
- Nella tabella seguente mostra altri membri funzioni che sono simili a `CMapStringToOb::LookUp`.  
+ Nella tabella seguente vengono mostrati altri membri funzioni che sono simili a `CMapStringToOb::LookUp`.  
   
 |Classe|Funzione membro|  
 |-----------|---------------------|  
@@ -432,19 +432,19 @@ BOOL LookupKey(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `key`  
+ *key*  
  Specifica la chiave di stringa che identifica l'elemento da ricercare.  
   
- `rKey`  
- Riferimento alla chiave associata.  
+ *rKey*  
+ Il riferimento per la chiave associata.  
   
 ### <a name="return-value"></a>Valore restituito  
  Diverso da zero se la chiave viene trovata; in caso contrario 0.  
   
 ### <a name="remarks"></a>Note  
- Utilizzando un riferimento a una chiave è sicuro se utilizzato dopo l'elemento associato è stato rimosso dalla mappa o dopo il mapping è stato eliminato definitivamente.  
+ Utilizzo di un riferimento a una chiave è unsafe se utilizzato dopo l'elemento associato è stato rimosso dalla mappa o dopo la mappa è stato eliminato definitivamente.  
   
- Nella tabella seguente mostra altri membri funzioni che sono simili a **CMapStringToOb:: LookupKey**.  
+ Nella tabella seguente vengono mostrati altri membri funzioni che sono simili ai **CMapStringToOb:: LookupKey**.  
   
 |Classe|Funzione membro|  
 |-----------|---------------------|  
@@ -459,14 +459,14 @@ CObject*& operator[ ](lpctstr key);
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- Un riferimento a un puntatore a un `CObject` ; dell'oggetto o **NULL** se la mappa è vuota o `key` non compreso nell'intervallo.  
+ Un riferimento a un puntatore a un `CObject` dell'oggetto; oppure **NULL** se la mappa è vuota o *chiave* è compreso nell'intervallo.  
   
 ### <a name="remarks"></a>Note  
- E può pertanto essere utilizzato solo sul lato sinistro di un'istruzione di assegnazione (un l-value). Se è presente alcun elemento di mappa con la chiave specificata, viene creato un nuovo elemento.  
+ E può pertanto essere utilizzato solo sul lato sinistro di un'istruzione di assegnazione (un l-value). Se non è disponibile alcun elemento della mappa con la chiave specificata, viene creato un nuovo elemento.  
   
- Non c'è nessun "destra" (r) equivalente all'operatore perché prevede la possibilità che una chiave non può essere trovata nella mappa. Utilizzare il `Lookup` funzione membro per il recupero dell'elemento.  
+ Non c'è nessun "destra" (r-value) equivalente all'operatore perché vi sono possibilità che una chiave non può essere trovata nella mappa. Utilizzare il `Lookup` funzione membro per il recupero dell'elemento.  
   
- Nella tabella seguente mostra altri membri funzioni che sono simili a **CMapStringToOb::operator [**.  
+ Nella tabella seguente vengono mostrati altri membri funzioni che sono simili ai **[] CMapStringToOb::operator**.  
   
 |Classe|Funzione membro|  
 |-----------|---------------------|  
@@ -482,7 +482,7 @@ CObject*& operator[ ](lpctstr key);
   
  [!code-cpp[NVC_MFCCollections#72](../../mfc/codesnippet/cpp/cmapstringtoob-class_7.cpp)]  
   
- I risultati di questo programma sono come segue:  
+ I risultati di questo programma sono i seguenti:  
   
  `Operator [] example: A CMapStringToOb with 2 elements`  
   
@@ -491,18 +491,18 @@ CObject*& operator[ ](lpctstr key);
  `[Bart] = a CAge at $497E 13`  
   
 ##  <a name="removeall"></a>  CMapStringToOb::RemoveAll  
- Rimuove tutti gli elementi da questa mappa ed Elimina definitivamente il `CString` gli oggetti della chiave.  
+ Rimuove tutti gli elementi da questa mappa ed Elimina definitivamente il `CString` oggetti della chiave.  
   
 ```  
 void RemoveAll();
 ```  
   
 ### <a name="remarks"></a>Note  
- Il `CObject` non vengono eliminati definitivamente gli oggetti a cui fa riferimento da ciascuna chiave. Il `RemoveAll` funzione può causare perdite di memoria se si garantisce che il riferimento `CObject` gli oggetti vengono eliminati.  
+ Il `CObject` non vengono eliminati definitivamente gli oggetti cui viene fatto riferimento da ciascuna chiave. Il `RemoveAll` funzione può causare perdite di memoria se non si assicurano che il riferimento `CObject` gli oggetti vengano eliminati.  
   
  La funzione funziona correttamente se la mappa è vuota.  
   
- Nella tabella seguente mostra altri membri funzioni che sono simili a `CMapStringToOb::RemoveAll`.  
+ Nella tabella seguente vengono mostrati altri membri funzioni che sono simili a `CMapStringToOb::RemoveAll`.  
   
 |Classe|Funzione membro|  
 |-----------|---------------------|  
@@ -526,16 +526,16 @@ BOOL RemoveKey(LPCTSTR key);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `key`  
+ *key*  
  Specifica la stringa utilizzata per la ricerca della mappa.  
   
 ### <a name="return-value"></a>Valore restituito  
- Diverso da zero se la voce è stata trovata e rimosso correttamente. in caso contrario 0.  
+ Diverso da zero se la voce è stata trovata e rimosso correttamente; in caso contrario 0.  
   
 ### <a name="remarks"></a>Note  
  Ciò può causare perdite di memoria se il `CObject` oggetto non viene eliminato in un' posizione.  
   
- Nella tabella seguente mostra altri membri funzioni che sono simili a `CMapStringToOb::RemoveKey`.  
+ Nella tabella seguente vengono mostrati altri membri funzioni che sono simili a `CMapStringToOb::RemoveKey`.  
   
 |Classe|Funzione membro|  
 |-----------|---------------------|  
@@ -551,7 +551,7 @@ BOOL RemoveKey(LPCTSTR key);
   
  [!code-cpp[NVC_MFCCollections#70](../../mfc/codesnippet/cpp/cmapstringtoob-class_9.cpp)]  
   
- I risultati di questo programma sono come segue:  
+ I risultati di questo programma sono i seguenti:  
   
  `RemoveKey example: A CMapStringToOb with 3 elements`  
   
@@ -562,7 +562,7 @@ BOOL RemoveKey(LPCTSTR key);
  `[Bart] = a CAge at $4634 13`  
   
 ##  <a name="setat"></a>  CMapStringToOb::SetAt  
- I due principali strumenti inserire un elemento in una mappa.  
+ Indica che il database primario inserire un elemento in una mappa.  
   
 ```  
 void SetAt(
@@ -571,16 +571,16 @@ void SetAt(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `key`  
+ *key*  
  Specifica la stringa che rappresenta la chiave del nuovo elemento.  
   
- `newValue`  
+ *newValue*  
  Specifica il `CObject` puntatore che rappresenta il valore del nuovo elemento.  
   
 ### <a name="remarks"></a>Note  
- Innanzitutto, viene cercata la chiave. Se la chiave viene trovata, quindi verrà modificato il valore corrispondente. in caso contrario, viene creato un nuovo elemento chiave-valore.  
+ Prima di tutto, viene cercata la chiave. Se la chiave viene trovata, quindi verrà modificato il valore corrispondente. in caso contrario, viene creato un nuovo elemento chiave-valore.  
   
- Nella tabella seguente mostra altri membri funzioni che sono simili a `CMapStringToOb::SetAt`.  
+ Nella tabella seguente vengono mostrati altri membri funzioni che sono simili a `CMapStringToOb::SetAt`.  
   
 |Classe|Funzione membro|  
 |-----------|---------------------|  
@@ -596,7 +596,7 @@ void SetAt(
   
  [!code-cpp[NVC_MFCCollections#71](../../mfc/codesnippet/cpp/cmapstringtoob-class_10.cpp)]  
   
- I risultati di questo programma sono come segue:  
+ I risultati di questo programma sono i seguenti:  
   
  `before Lisa's birthday: A CMapStringToOb with 2 elements`  
   

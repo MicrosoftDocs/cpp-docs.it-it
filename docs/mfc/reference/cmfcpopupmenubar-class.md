@@ -56,12 +56,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1ef3d04291c874bf91ac6ae25fb15929a5c7317f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: aede6e3224149bd237ca2bb830370718105e1f83
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374474"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037758"
 ---
 # <a name="cmfcpopupmenubar-class"></a>CMFCPopupMenuBar (classe)
 Barra dei menu incorporata in un menu di scelta rapida.  
@@ -81,21 +81,21 @@ class CMFCPopupMenuBar : public CMFCToolBar
 |[CMFCPopupMenuBar::AdjustSizeImmediate](#adjustsizeimmediate)|Immediatamente Ricalcola il layout di un riquadro. (Esegue l'override [CPane::AdjustSizeImmediate](../../mfc/reference/cpane-class.md#adjustsizeimmediate).)|  
 |[CMFCPopupMenuBar::BuildOrigItems](#buildorigitems)|Carica le voci di menu di scelta rapida da una risorsa di menu specificato.|  
 |[CMFCPopupMenuBar::CloseDelayedSubMenu](#closedelayedsubmenu)|Chiude un pulsante di menu popup ritardata.|  
-|[CMFCPopupMenuBar::ExportToMenu](#exporttomenu)|Compila un menu i pulsanti di menu di scelta rapida.|  
+|[CMFCPopupMenuBar::ExportToMenu](#exporttomenu)|Consente di compilare un menu dai pulsanti menu di scelta rapida.|  
 |[CMFCPopupMenuBar::FindDestintationToolBar](#finddestintationtoolbar)|Individua la barra degli strumenti in cui si trova un punto specificato.|  
 |[CMFCPopupMenuBar::GetCurrentMenuImageSize](#getcurrentmenuimagesize)|Indica le dimensioni delle immagini di pulsante di menu.|  
 |[CMFCPopupMenuBar::GetDefaultMenuId](#getdefaultmenuid)|Restituisce l'identificatore della voce di menu predefinita.|  
 |[CMFCPopupMenuBar::GetLastCommandIndex](#getlastcommandindex)|Ottiene l'indice del comando di menu richiamato più di recente.|  
-|[CMFCPopupMenuBar::GetOffset](#getoffset)|Ottiene l'offset di riga della barra dei menu di scelta rapida.|  
-|[CMFCPopupMenuBar::ImportFromMenu](#importfrommenu)|Importa i pulsanti dei menu di scelta rapida da un menu specificato.|  
+|[CMFCPopupMenuBar::GetOffset](#getoffset)|Ottiene l'offset di riga della barra dei menu popup.|  
+|[CMFCPopupMenuBar::ImportFromMenu](#importfrommenu)|Importa i pulsanti dei menu di scelta rapida da un menu di scelta specificato.|  
 |[CMFCPopupMenuBar::IsDropDownListMode](#isdropdownlistmode)|Indica se la barra dei menu di scelta rapida è in modalità elenco a discesa.|  
 |[CMFCPopupMenuBar::IsPaletteMode](#ispalettemode)|Indica se la barra dei menu di scelta rapida è in modalità della tavolozza.|  
 |[CMFCPopupMenuBar::IsRibbonPanel](#isribbonpanel)|Indica se si tratta di un pannello della barra multifunzione ( `FALSE` per impostazione predefinita).|  
-|[CMFCPopupMenuBar::IsRibbonPanelInRegularMode](#isribbonpanelinregularmode)|Indica se questo è un pannello della barra multifunzione in modalità normale ( `FALSE` per impostazione predefinita).|  
+|[CMFCPopupMenuBar::IsRibbonPanelInRegularMode](#isribbonpanelinregularmode)|Indica se si tratta di un pannello della barra multifunzione in modalità normale ( `FALSE` per impostazione predefinita).|  
 |[CMFCPopupMenuBar::LoadFromHash](#loadfromhash)|Carica un menu archiviato.|  
 |[CMFCPopupMenuBar::RestoreDelayedSubMenu](#restoredelayedsubmenu)|Ripristina un pulsante di menu ritardata per la chiusura della barra dei menu di scelta rapida.|  
 |[CMFCPopupMenuBar::SetButtonStyle](#setbuttonstyle)|Imposta lo stile del pulsante della barra degli strumenti in corrispondenza dell'indice specificato. (Esegue l'override [CMFCToolBar::SetButtonStyle](../../mfc/reference/cmfctoolbar-class.md#setbuttonstyle).)|  
-|[CMFCPopupMenuBar::SetOffset](#setoffset)|Imposta l'offset di riga della barra dei menu di scelta rapida.|  
+|[CMFCPopupMenuBar::SetOffset](#setoffset)|Imposta l'offset di riga della barra dei menu popup.|  
 |[CMFCPopupMenuBar::StartPopupMenuTimer](#startpopupmenutimer)|Avvia il timer per un pulsante di menu popup ritardata specificato.|  
   
 ### <a name="data-members"></a>Membri di dati  
@@ -105,7 +105,7 @@ class CMFCPopupMenuBar : public CMFCToolBar
 |[CMFCPopupMenuBar::m_bDisableSideBarInXPMode](#m_bdisablesidebarinxpmode)|Specifica se verrà visualizzata sulla barra laterale grigia quando l'applicazione ha un aspetto di Windows XP.|  
   
 ## <a name="remarks"></a>Note  
- Il `CMFCPopupMenuBar` viene creato nello stesso momento come un [CMFCPopupMenu classe](../../mfc/reference/cmfcpopupmenu-class.md) e incorporati all'interno. Il `CMFCPopupMenuBar` copre l'intera area client del `CMFCPopupMenu` oggetto. Supporta una tastiera e mouse di input. Comunica che l'input di `CMFCPopupMenu` e alla finestra cornice di primo livello.  
+ Il `CMFCPopupMenuBar` viene creato nello stesso momento come un [CMFCPopupMenu classe](../../mfc/reference/cmfcpopupmenu-class.md) e incorporati all'interno. Il `CMFCPopupMenuBar` copre l'intera area client del `CMFCPopupMenu` oggetto. Supporta input del mouse e tastiera. Comunica che l'input di `CMFCPopupMenu` e alla finestra cornice di primo livello.  
   
 ## <a name="example"></a>Esempio  
  Nell'esempio seguente viene illustrato come inizializzare un `CMFCPopupMenuBar` dell'oggetto da un `CMFCPopupMenu` oggetto. Questo frammento di codice fa parte dell' [esempio Draw Client](../../visual-cpp-samples.md).  
@@ -140,7 +140,7 @@ virtual void AdjustSizeImmediate(BOOL bRecalcLayout);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `bRecalcLayout`  
+ [in] *bRecalcLayout*  
  `TRUE` Per ricalcolare automaticamente il layout del riquadro barra menu popup; in caso contrario, `FALSE`.  
   
 ### <a name="remarks"></a>Note  
@@ -153,11 +153,11 @@ BOOL BuildOrigItems(UINT uiMenuResID);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `uiMenuResID`  
- Specifica l'ID di menu della risorsa di menu da caricare.  
+ [in] *uiMenuResID*  
+ Specifica l'ID di menu della risorsa menu da caricare.  
   
 ### <a name="return-value"></a>Valore restituito  
- Restituisce `TRUE` se ha esito positivo o `FALSE` in caso contrario.  
+ Restituisce `TRUE` caso di esito positivo o `FALSE` in caso contrario.  
   
 ### <a name="remarks"></a>Note  
   
@@ -171,7 +171,7 @@ virtual void CloseDelayedSubMenu();
 ### <a name="remarks"></a>Note  
   
 ##  <a name="exporttomenu"></a>  CMFCPopupMenuBar::ExportToMenu  
- Compila un menu di pulsanti di menu di scelta rapida.  
+ Consente di compilare un menu dai pulsanti di menu popup.  
   
 ```  
 virtual HMENU ExportToMenu() const;  
@@ -190,7 +190,7 @@ CMFCToolBar* FindDestintationToolBar(CPoint point);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `point`  
+ [in] *punto*  
  Un punto dello schermo.  
   
 ### <a name="return-value"></a>Valore restituito  
@@ -206,7 +206,7 @@ virtual CSize GetCurrentMenuImageSize() const;
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- Restituisce le dimensioni delle immagini di pulsante di menu nella barra degli strumenti.  
+ Restituisce le dimensioni delle immagini di pulsante di menu sulla barra degli strumenti.  
   
 ### <a name="remarks"></a>Note  
   
@@ -218,7 +218,7 @@ UINT GetDefaultMenuId() const;
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- Restituisce l'identificatore della voce di menu predefinito nella barra dei menu di scelta rapida.  
+ Restituisce l'identificatore della voce di menu predefinito nella barra dei menu popup.  
   
 ### <a name="remarks"></a>Note  
   
@@ -235,20 +235,20 @@ static int __stdcall GetLastCommandIndex();
 ### <a name="remarks"></a>Note  
   
 ##  <a name="getoffset"></a>  CMFCPopupMenuBar::GetOffset  
- Ottiene l'offset di riga della barra dei menu di scelta rapida.  
+ Ottiene l'offset di riga della barra dei menu popup.  
   
 ```  
 int GetOffset() const;  
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- Restituisce l'offset di riga della barra dei menu di scelta rapida.  
+ Restituisce l'offset di riga della barra dei menu popup.  
   
 ### <a name="remarks"></a>Note  
  Questo valore viene impostato utilizzando [CMFCPopupMenuBar::SetOffset](#setoffset).  
   
 ##  <a name="importfrommenu"></a>  CMFCPopupMenuBar::ImportFromMenu  
- Importa i pulsanti dei menu di scelta rapida da un menu specificato.  
+ Importa i pulsanti dei menu di scelta rapida da un menu di scelta specificato.  
   
 ```  
 virtual BOOL ImportFromMenu(
@@ -257,14 +257,14 @@ virtual BOOL ImportFromMenu(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `hMenu`  
+ [in] *hMenu*  
  Il menu da cui importare i pulsanti dei menu di scelta rapida.  
   
- [in] `bShowAllCommands`  
+ [in] *bShowAllCommands*  
  `TRUE` Se tutti i comandi del menu devono essere importati, o `FALSE` se quelli utilizzati raramente possono essere nascosti.  
   
 ### <a name="return-value"></a>Valore restituito  
- Restituisce `TRUE` se i pulsanti dei menu sono stati importati dal menu o `FALSE` in caso contrario.  
+ Restituisce `TRUE` se sono stati importati dal menu, pulsanti di menu o `FALSE` in caso contrario.  
   
 ### <a name="remarks"></a>Note  
   
@@ -276,7 +276,7 @@ BOOL IsDropDownListMode() const;
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- Restituisce `TRUE` se la barra dei menu di scelta rapida è in modalità elenco a discesa o `FALSE` in caso contrario.  
+ Restituisce `TRUE` se la barra dei menu di scelta rapida è in modalità elenco a discesa, o `FALSE` in caso contrario.  
   
 ### <a name="remarks"></a>Note  
   
@@ -306,7 +306,7 @@ virtual BOOL IsRibbonPanel() const;
 ### <a name="remarks"></a>Note  
   
 ##  <a name="isribbonpanelinregularmode"></a>  CMFCPopupMenuBar::IsRibbonPanelInRegularMode  
- Indica se questo è un pannello della barra multifunzione in modalità normale ( `FALSE` per impostazione predefinita).  
+ Indica se si tratta di un pannello della barra multifunzione in modalità normale ( `FALSE` per impostazione predefinita).  
   
 ```  
 virtual BOOL IsRibbonPanelInRegularMode() const;  
@@ -325,16 +325,16 @@ BOOL LoadFromHash(HMENU hMenu);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `hMenu`  
+ [in] *hMenu*  
  Un handle per il menu archiviato da caricare.  
   
 ### <a name="return-value"></a>Valore restituito  
- Restituisce `TRUE` se è stato caricato correttamente, il menu o `FALSE` in caso contrario.  
+ Restituisce `TRUE` se viene caricato correttamente, il menu di scelta o `FALSE` in caso contrario.  
   
 ### <a name="remarks"></a>Note  
   
 ##  <a name="m_bdisablesidebarinxpmode"></a>  CMFCPopupMenuBar::m_bDisableSideBarInXPMode  
- Un parametro booleano che indica se l'applicazione dispone di una barra laterale grigia quando ha un aspetto di Windows XP.  
+ Un parametro booleano che indica se l'applicazione una barra laterale grigia e presenta un aspetto di Windows XP.  
   
 ```  
 BOOL m_bDisableSideBarInXPMode;  
@@ -364,24 +364,24 @@ virtual void SetButtonStyle(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `nIndex`  
+ [in] *nIndex*  
  Indice in base zero del pulsante della barra degli strumenti quali lo stile è necessario impostare.  
   
- [in] `nStyle`  
+ [in] *nStyle*  
  Lo stile del pulsante. Vedere [stili del controllo barra degli strumenti](../../mfc/reference/toolbar-control-styles.md) per un elenco di stili dei pulsanti della barra degli strumenti disponibili.  
   
 ### <a name="remarks"></a>Note  
   
 ##  <a name="setoffset"></a>  CMFCPopupMenuBar::SetOffset  
- Imposta l'offset di riga della barra dei menu di scelta rapida.  
+ Imposta l'offset di riga della barra dei menu popup.  
   
 ```  
 void SetOffset(int iOffset);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `iOffset`  
- Il numero di righe che deve essere con offset la barra dei menu di scelta rapida.  
+ [in] *iOffset*  
+ Il numero di righe che deve essere con offset barra dei menu popup.  
   
 ### <a name="remarks"></a>Note  
   
@@ -395,10 +395,10 @@ void StartPopupMenuTimer(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `pMenuButton`  
+ [in] *pMenuButton*  
  Puntatore al pulsante di menu per cui impostare il timer di ritardo.  
   
- [in] `nDelayFactor`  
+ [in] *nDelayFactor*  
  Un fattore ritardo pari ad almeno uno, moltiplicare il tempo di ritardo di menu standard (in genere tra un mezzo secondo e di 5 secondi).  
   
 ### <a name="remarks"></a>Note  

@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b3352841b1b495d1718ffa6be034239ecd7e50c6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c58e279a2e99201656e8af02d8c1c5d4d944f88d
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33366642"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042082"
 ---
 # <a name="cmfcpropertypage-class"></a>Classe CMFCPropertyPage
-La `CMFCPropertyPage` classe supporta la visualizzazione del menu di scelta rapida nella pagina delle proprietà.  
+Il `CMFCPropertyPage` classe supporta la visualizzazione del menu di scelta rapida nella pagina delle proprietà.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -53,9 +53,9 @@ class CMFCPropertyPage : public CPropertyPage
 |`CMFCPropertyPage::PreTranslateMessage`|Converte i messaggi della finestra prima che vengano inviati per la [TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) e [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) funzioni di Windows. Per ulteriori informazioni e la sintassi del metodo, vedere [CWnd:: PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage). Esegue l'override`CPropertyPage::PreTranslateMessage`.|  
   
 ## <a name="remarks"></a>Note  
- La `CMFCPropertyPage` classe rappresenta singole pagine di una finestra delle proprietà, altrimenti nota come finestra di dialogo a schede.  
+ Il `CMFCPropertyPage` classe rappresenta singole pagine di una finestra delle proprietà, altrimenti nota come finestra di dialogo a schede.  
   
- Utilizzare il `CMFCPropertyPage` classe con il [CMFCPropertySheet](../../mfc/reference/cmfcpropertysheet-class.md) classe. Per utilizzare i menu su una pagina delle proprietà, sostituire tutte le occorrenze di `CPropertyPage` classe con il `CMFCPropertyPage` classe.  
+ Utilizzare la `CMFCPropertyPage` classe con il [CMFCPropertySheet](../../mfc/reference/cmfcpropertysheet-class.md) classe. Per utilizzare i menu nella pagina delle proprietà, sostituire tutte le occorrenze del `CPropertyPage` classe con il `CMFCPropertyPage` classe.  
   
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -88,13 +88,13 @@ CMFCPropertyPage(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `nIDTemplate`  
+ *nIDTemplate*  
  ID di risorsa del modello per questa pagina.  
   
- `nIDCaption`  
- ID di risorsa dell'etichetta da inserire nella scheda della pagina. Se è 0, il nome viene ottenuto dal modello di finestra di dialogo per questa pagina. Il valore predefinito è 0.  
+ *nIDCaption*  
+ ID risorsa dell'etichetta da inserire nella scheda della pagina. Se è 0, il nome viene ottenuto dal modello di finestra di dialogo per questa pagina. Il valore predefinito è 0.  
   
- `lpszTemplateName`  
+ *lpszTemplateName*  
  Punta al nome del modello per questa pagina. Non può essere `NULL`.  
   
 ### <a name="return-value"></a>Valore restituito  

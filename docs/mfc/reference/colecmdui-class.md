@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e6195735c25bb188449638750f6100869a44f082
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c80c3b81b804a66e70efe9269b12d4e18d31c676
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370757"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040714"
 ---
 # <a name="colecmdui-class"></a>Classe COleCmdUI
 Implementa un metodo per MFC per aggiornare lo stato degli oggetti dell'interfaccia utente relativi alle funzionalità dell'applicazione basate su `IOleCommandTarget`.  
@@ -52,12 +52,12 @@ class COleCmdUI : public CCmdUI
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[COleCmdUI::Enable](#enable)|Imposta o Cancella il flag di comando attiva.|  
-|[COleCmdUI::SetCheck](#setcheck)|Imposta lo stato di un elemento toggle attivato/disattivato comando.|  
+|[COleCmdUI::Enable](#enable)|Imposta o Cancella il contrassegno di abilitazione del comando.|  
+|[COleCmdUI::SetCheck](#setcheck)|Imposta lo stato di un elemento toggle di attivazione/disattivazione comando.|  
 |[COleCmdUI::SetText](#settext)|Restituisce una stringa di testo nome o lo stato per un comando.|  
   
 ## <a name="remarks"></a>Note  
- In un'applicazione che non è abilitata per DocObjects, quando l'utente visualizza un menu dell'applicazione, i processi MFC **UPDATE_COMMAND_UI** notifiche. Ogni notifica viene assegnato un [CCmdUI](../../mfc/reference/ccmdui-class.md) oggetto che può essere modificato per riflettere lo stato di un comando specifico. Tuttavia, quando l'applicazione è abilitato per DocObjects, MFC elabora **UPDATE_OLE_COMMAND_UI** notifiche e assegna `COleCmdUI` oggetti.  
+ In un'applicazione che non è abilitata per DocObjects, quando l'utente visualizza un menu dell'applicazione, i processi MFC **UPDATE_COMMAND_UI** notifiche. Ogni notifica viene fornito un [CCmdUI](../../mfc/reference/ccmdui-class.md) oggetto che può essere modificato per riflettere lo stato di un comando specifico. Tuttavia, quando l'applicazione è abilitata per DocObjects, MFC elabora **UPDATE_OLE_COMMAND_UI** notifiche e assegna `COleCmdUI` oggetti.  
   
  `COleCmdUI` consente un DocObject ricevere comandi che hanno origine nell'interfaccia utente del contenitore (ad esempio FileNew, Apri, stampa e così via), e un contenitore ricevere comandi che hanno origine nell'interfaccia utente di DocObject. Sebbene `IDispatch` può essere usato per inviare gli stessi comandi `IOleCommandTarget` fornisce un modo più semplice per eseguire una query ed eseguire perché si basa su un set standard di comandi, in genere senza argomenti, e informazioni sul tipo non è coinvolto. `COleCmdUI` Consente di abilitare, aggiornare e impostare altre proprietà dei comandi dell'interfaccia utente DocObject. Quando si desidera richiamare il comando, chiamare [COleServerDoc::OnExecOleCmd](../../mfc/reference/coleserverdoc-class.md#onexecolecmd).  
   
@@ -72,7 +72,7 @@ class COleCmdUI : public CCmdUI
  **Intestazione:** afxdocobj.h  
   
 ##  <a name="colecmdui"></a>  COleCmdUI::COleCmdUI  
- Costruisce un `COleCmdUI` oggetto associato a un comando specifico dell'interfaccia utente.  
+ Costruisce un `COleCmdUI` oggetto associato a un comando dell'interfaccia utente specifico.  
   
 ```  
 COleCmdUI(
@@ -82,44 +82,44 @@ COleCmdUI(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `rgCmds`  
- Un elenco di comandi supportati associato il GUID specificato. Il **OLECMD** struttura associa comandi con i flag dei comandi.  
+ *rgCmds*  
+ Un elenco di comandi supportati associato il GUID specificato. Il **OLECMD** struttura associa comandi con flag dei comandi.  
   
  *cCmds*  
- Numero di comandi in `rgCmds`.  
+ Il numero di comandi nel *rgCmds*.  
   
- `pGroup`  
- Puntatore a un GUID che identifica un set di comandi.  
+ *pGroup*  
+ Un puntatore a un GUID che identifica un set di comandi.  
   
 ### <a name="remarks"></a>Note  
  Il `COleCmdUI` oggetto fornisce un'interfaccia programmatica per l'aggiornamento DocObject oggetti dell'interfaccia utente, ad esempio voci di menu o pulsanti della barra di controllo. Gli oggetti dell'interfaccia utente possono essere abilitati, disabilitati, selezionati e/o cancellati tramite la `COleCmdUI` oggetto.  
   
 ##  <a name="enable"></a>  COleCmdUI::Enable  
- Chiamare questa funzione per impostare il flag di comando del `COleCmdUI` oggetto **OLECOMDF_ENABLED**, che indica l'interfaccia con il comando è disponibile e abilitato, o per cancellare il flag di comando.  
+ Chiamare questa funzione per impostare il flag di comando del `COleCmdUI` l'oggetto in **OLECOMDF_ENABLED**, che indica l'interfaccia il comando è disponibile e abilitato, o per cancellare il flag di comando.  
   
 ```  
 virtual void Enable(BOOL bOn);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `bOn`  
+ *Bin*  
  Indica se il comando è associato il `COleCmdUI` oggetto deve essere abilitato o disabilitato. NonZero consente il comando. 0 disabilita il comando.  
   
 ##  <a name="setcheck"></a>  COleCmdUI::SetCheck  
- Chiamare questa funzione per impostare lo stato di un elemento toggle attivato/disattivato comando.  
+ Chiamare questa funzione per impostare lo stato di un elemento toggle di attivazione/disattivazione comando.  
   
 ```  
 virtual void SetCheck(int nCheck);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `nCheck`  
- Un valore che determina lo stato da impostare un elemento toggle attivato/disattivato comando. I valori sono:  
+ *nControllare*  
+ Un valore che determina lo stato da impostare un elemento toggle di attivazione/disattivazione comando. I valori sono:  
   
 |Valore|Descrizione|  
 |-----------|-----------------|  
 |**1**|Imposta il comando su on.|  
-|**2**|Imposta il comando indeterminato; Impossibile determinare lo stato perché l'attributo di questo comando è nel sia e disattivare gli stati della selezione pertinente.|  
+|**2**|Imposta il comando per indeterminato; lo stato non è possibile determinare perché l'attributo di questo comando è nel sia e disattivare gli stati della selezione pertinente.|  
 |Qualsiasi altro valore|Imposta il comando su off.|  
   
 ##  <a name="settext"></a>  COleCmdUI::SetText  
@@ -130,7 +130,7 @@ virtual void SetText(LPCTSTR lpszText);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `lpszText`  
+ *lpszText*  
  Un puntatore per il testo da utilizzare con il comando.  
   
 ## <a name="see-also"></a>Vedere anche  

@@ -22,15 +22,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3930ad915ff908b8931733a9f0362320e24dc2cf
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9087642a529911c0c0a885c4613a3dbf2e92311f
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33366343"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037622"
 ---
 # <a name="clistview-class"></a>CListView (classe)
-Semplifica l'utilizzo del controllo elenco e di [CListCtrl](../../mfc/reference/clistctrl-class.md), la classe che incapsula la funzionalità di controllo elenco, con l'architettura documento / visualizzazione MFC.  
+Semplifica l'utilizzo del controllo elenco e di [CListCtrl](../../mfc/reference/clistctrl-class.md), la classe che incapsula la funzionalità del controllo elenco con architettura documento / visualizzazione MFC.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -56,10 +56,10 @@ class CListView : public CCtrlView
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[CListView::RemoveImageList](#removeimagelist)|Rimuove l'elenco di immagini specificato dalla visualizzazione elenco.|  
+|[CListView::RemoveImageList](#removeimagelist)|Rimuove l'elenco di immagini specificato nella visualizzazione elenco.|  
   
 ## <a name="remarks"></a>Note  
- Per ulteriori informazioni su questa architettura, vedere la panoramica per il [CView](../../mfc/reference/cview-class.md) classe e i riferimenti incrociati citati non esiste.  
+ Per ulteriori informazioni su questa architettura, vedere la panoramica per i [CView](../../mfc/reference/cview-class.md) classe e i riferimenti incrociati citati non esiste.  
   
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -98,14 +98,14 @@ CListCtrl& GetListCtrl() const;
  [!code-cpp[NVC_MFCListView#7](../../atl/reference/codesnippet/cpp/clistview-class_1.cpp)]  
   
 ##  <a name="removeimagelist"></a>  CListView::RemoveImageList  
- Rimuove l'elenco di immagini specificato dalla visualizzazione elenco.  
+ Rimuove l'elenco di immagini specificato nella visualizzazione elenco.  
   
 ```  
 void RemoveImageList(int nImageList);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `nImageList`  
+ *nImageList*  
  Indice in base zero dell'immagine da rimuovere.  
   
 ## <a name="see-also"></a>Vedere anche  
