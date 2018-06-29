@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 4f3a8212-81ee-48a0-ad22-e0ed7c36a391
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: 413b7b4a7cf11ff7e83596ecc61423d4bc4f0358
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: efdd8f5b806b7e5745aed0091a2638c8592a6ecc
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33371621"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079065"
 ---
 # <a name="csingledoctemplate-class"></a>Classe CSingleDocTemplate
 Definisce un modello di documento che implementa l'interfaccia a documento singolo (SDI).  
@@ -45,11 +45,11 @@ class CSingleDocTemplate : public CDocTemplate
   
  Un modello di documento definisce la relazione tra tre tipi di classi:  
   
--   Una classe di documento, si deriva da **CDocument**.  
+-   Una classe di documento, che derivano da `CDocument`.  
   
--   Una classe di visualizzazione, che vengono visualizzati i dati della classe di documento elencato in precedenza. È possibile derivare la classe da `CView`, `CScrollView`, `CFormView`, o `CEditView`. (È anche possibile usare `CEditView` direttamente.)  
+-   Una classe di visualizzazione, che sono riportati i dati dalla classe documento elencata in precedenza. È possibile derivare la classe da `CView`, `CScrollView`, `CFormView`, o `CEditView`. (È anche possibile usare `CEditView` direttamente.)  
   
--   Classe finestra cornice contenente la vista. Per un modello di documento SDI, è possibile derivare la classe da `CFrameWnd`; se non è necessario personalizzare il comportamento di principale finestra cornice, è possibile utilizzare `CFrameWnd` direttamente senza derivare la propria classe.  
+-   Una classe di finestra cornice, che contiene la vista. Per un modello di documento SDI, è possibile derivare la classe da `CFrameWnd`; se è necessario personalizzare il comportamento di principale finestra cornice, è possibile usare `CFrameWnd` direttamente senza derivare una classe personalizzata.  
   
  Un'applicazione SDI in genere supporta un tipo di documento, pertanto dispone di un solo `CSingleDocTemplate` oggetto. È possibile aprire un solo documento alla volta.  
   
@@ -81,10 +81,10 @@ CSingleDocTemplate(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `nIDResource`  
+ *nIDResource*  
  Specifica l'ID delle risorse utilizzate con il tipo di documento. Può trattarsi di menu, icona, tabella di tasti di scelta rapida e risorse di tipo stringa.  
   
- La risorsa di stringa è costituito da fino a sette sottostringhe separate dal carattere "\n" (il carattere '\n' è necessario come segnaposto se una sottostringa non è inclusa; tuttavia, non sono necessari i caratteri finali '\n'); Questi sottostringhe descrivono il tipo di documento. Per informazioni sulle sottostringhe, vedere [CDocTemplate::GetDocString](../../mfc/reference/cdoctemplate-class.md#getdocstring). Questa risorsa stringa viene trovata nel file di risorse dell'applicazione. Ad esempio:  
+ La risorsa stringa è costituito da fino a sette sottostringhe separate dal carattere '\n' (il carattere '\n' è necessario come segnaposto se una sottostringa non viene inclusa; tuttavia, non sono necessari caratteri finali '\n'); Questi sottostringhe descrivono il tipo di documento. Per informazioni sulle sottostringhe, vedere [CDocTemplate::GetDocString](../../mfc/reference/cdoctemplate-class.md#getdocstring). Questa risorsa stringa viene trovata nel file di risorse dell'applicazione. Ad esempio:  
   
  `// MYCALC.RC`  
   
@@ -96,18 +96,18 @@ CSingleDocTemplate(
   
  `END`  
   
- È possibile modificare questa stringa mediante l'editor di stringa. l'intera stringa viene visualizzato come una singola voce nell'Editor di stringa, non come sette separare le voci.  
+ È possibile modificare questa stringa usando l'editor di stringa; l'intera stringa viene visualizzato come una singola voce nell'Editor di stringa, non come sette separare le voci.  
   
- Per ulteriori informazioni su questi tipi di risorse, vedere il [Editor stringa](../../windows/string-editor.md).  
+ Per ulteriori informazioni su questi tipi di risorse, vedere la [Editor stringa](../../windows/string-editor.md).  
   
- `pDocClass`  
- Punta al `CRuntimeClass` oggetto della classe di documento. Questa classe è un **CDocument**-derivata definito per rappresentare i documenti.  
+ *pDocClass*  
+ Punta al `CRuntimeClass` oggetto della classe documento. Questa classe è un `CDocument`-derivata definite per rappresentare i documenti.  
   
- `pFrameClass`  
- Punta al `CRuntimeClass` oggetto della classe di finestra cornice. Questa classe può essere un `CFrameWnd`-classe derivata, oppure può essere `CFrameWnd` se si desidera il comportamento predefinito per la finestra cornice principale.  
+ *pFrameClass*  
+ Punta al `CRuntimeClass` oggetto della classe della finestra cornice. Questa classe può essere un `CFrameWnd`-classe derivata, oppure può essere `CFrameWnd` se si desidera il comportamento predefinito per la finestra cornice principale.  
   
- `pViewClass`  
- Punta al `CRuntimeClass` oggetto della classe di visualizzazione. Questa classe è un `CView`-derivata una classe definita per visualizzare i documenti.  
+ *pViewClass*  
+ Punta al `CRuntimeClass` oggetto della classe di visualizzazione. Questa classe è un `CView`-derivata è definita per visualizzare i documenti.  
   
 ### <a name="remarks"></a>Note  
  Allocare dinamicamente un `CSingleDocTemplate` dell'oggetto e passarlo a `CWinApp::AddDocTemplate` dal `InitInstance` funzione membro della classe dell'applicazione.  

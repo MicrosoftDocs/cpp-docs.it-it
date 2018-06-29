@@ -27,15 +27,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 4313b80a4fa83e5340f678834b64dd5269278a0d
-ms.sourcegitcommit: 301bb19056e5bae84ff50f7d1df1e546efe225ba
+ms.openlocfilehash: f8d470928cb4cbc1625ad439efe75b97f2bb1bd7
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36305514"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079041"
 ---
 # <a name="numeric-stlclr"></a>numeric (STL/CLR)
-Definisce le funzioni di modello contenitore che eseguono algoritmi disponibili per l'elaborazione numerica.  
+Definisce le funzioni modello del contenitore che eseguono algoritmi disponibili per l'elaborazione numerica.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -57,9 +57,9 @@ Definisce le funzioni di modello contenitore che eseguono algoritmi disponibili 
 |[inner_product (STL/CLR)](#inner_product)|Calcola la somma del prodotto tra gli elementi di due intervalli e aggiunge tale somma a un valore iniziale specificato oppure calcola il risultato di una procedura generalizzata in cui le operazioni binarie di somma e prodotto vengono sostituite da altre operazioni binarie specificate.|  
 |[partial_sum (STL/CLR)](#partial_sum)|Calcola una serie di somme in un intervallo di input tra il primo elemento tramite il `i`elemento th e archivia il risultato di ciascuna somma nel `i`elemento th di un intervallo di destinazione oppure calcola il risultato di una procedura generalizzata in cui l'operazione di somma viene sostituita da un'altra operazione binaria specificata.|  
  
-## <a name="functions"></a>Funzioni
+## <a name="members"></a>Membri
 
-## <a name="accumulate"></a> accumulare (STL/CLR)
+## <a name="accumulate"></a> accumulate (STL/CLR)
 Calcola la somma di tutti gli elementi in un intervallo specificato, incluso il valore iniziale, elaborando le somme parziali successive oppure calcola il risultato dei risultati parziali successivi ottenuti analogamente tramite l'uso di un'operazione binaria specificata diversa da quella di somma.  
   
 ### <a name="syntax"></a>Sintassi  
@@ -72,7 +72,7 @@ template<class _InIt, class _Ty, class _Fn2> inline
 ```  
   
 ### <a name="remarks"></a>Note  
- Questa funzione si comporta come la funzione numerica della libreria Standard C++ `accumulate`. Per ulteriori informazioni, vedere [accumulare](../standard-library/numeric-functions.md#accumulate).  
+ Questa funzione si comporta come la funzione della libreria Standard C++ numerica `accumulate`. Per altre informazioni, vedere [accumulare](../standard-library/numeric-functions.md#accumulate).  
 
 ## <a name="adjacent_difference"></a> adjacent_difference (STL/CLR)
 Calcola le differenze successive tra ogni elemento e il relativo predecessore in un intervallo di input e restituisce i risultati in un intervallo di destinazione oppure calcola il risultato di una procedura generalizzata in cui l'operazione di differenza viene sostituita da un'altra operazione binaria specificata.  
@@ -89,7 +89,7 @@ template<class _InIt, class _OutIt, class _Fn2> inline
 ```  
   
 ### <a name="remarks"></a>Note  
- Questa funzione si comporta come la funzione numerica della libreria Standard C++ `adjacent_difference`. Per ulteriori informazioni, vedere [adjacent_difference](../standard-library/numeric-functions.md#adjacent_difference).  
+ Questa funzione si comporta come la funzione della libreria Standard C++ numerica `adjacent_difference`. Per altre informazioni, vedere [adjacent_difference](../standard-library/numeric-functions.md#adjacent_difference).  
 
 ## <a name="inner_product"></a> inner_product (STL/CLR)
 Calcola la somma del prodotto tra gli elementi di due intervalli e aggiunge tale somma a un valore iniziale specificato oppure calcola il risultato di una procedura generalizzata in cui le operazioni binarie di somma e prodotto vengono sostituite da altre operazioni binarie specificate.  
@@ -107,7 +107,7 @@ template<class _InIt1, class _InIt2, class _Ty, class _Fn21,
 ```  
   
 ### <a name="remarks"></a>Note  
- Questa funzione si comporta come la funzione numerica della libreria Standard C++ `inner_product`. Per ulteriori informazioni, vedere [inner_product](../standard-library/numeric-functions.md#inner_product).
+ Questa funzione si comporta come la funzione della libreria Standard C++ numerica `inner_product`. Per altre informazioni, vedere [inner_product](../standard-library/numeric-functions.md#inner_product).
 
 ## <a name="partial_sum"></a> partial_sum (STL/CLR)
 Calcola una serie di somme in un intervallo di input tra il primo elemento tramite il `i`elemento th e archivia il risultato di ciascuna somma nel `i`elemento th di un intervallo di destinazione oppure calcola il risultato di una procedura generalizzata in cui l'operazione di somma viene sostituita da un'altra operazione binaria specificata.  
@@ -123,5 +123,5 @@ template<class _InIt, class _OutIt, class _Fn2> inline
 ```  
   
 ### <a name="remarks"></a>Note  
- Questa funzione si comporta come la funzione numerica della libreria Standard C++ `partial_sum`. Per ulteriori informazioni, vedere [partial_sum](../standard-library/numeric-functions.md#partial_sum).  
+ Questa funzione si comporta come la funzione della libreria Standard C++ numerica `partial_sum`. Per altre informazioni, vedere [partial_sum](../standard-library/numeric-functions.md#partial_sum).  
     

@@ -33,12 +33,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fe943bcc0a1e1a027e432911bd2ad722fc7c7c1f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: face2637f308a56d95baa7563a6409dd38870d73
+ms.sourcegitcommit: 2f571220e16f6c20e1fdb005f6cbc9e7ef5608f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32399023"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37070077"
 ---
 # <a name="feclearexcept"></a>feclearexcept
 
@@ -72,7 +72,7 @@ Il **feclearexcept** funzione tenta di cancellare mobile punto specificato dal f
 |FE_INVALID|Si è verificato un errore di dominio in un'operazione precedente a virgola mobile.|
 |FE_OVERFLOW|Si è verificato un errore di intervallo. Un risultato dell'operazione precedente a virgola mobile era troppo grande per essere rappresentato.|
 |FE_UNDERFLOW|Un risultato dell'operazione precedente a virgola mobile era troppo piccolo per essere rappresentato con la massima precisione. È stato creato un valore denormalizzato.|
-|FE_ALLEXCEPT|OR bit per bit di tutte le eccezioni a virgola mobile supportate.|
+|FE_ALL_EXCEPT|OR bit per bit di tutte le eccezioni a virgola mobile supportate.|
 
 Il *excepts* argomento può essere zero o OR bit per bit di uno o più delle macro eccezione supportata. Il risultato di qualsiasi altro valore di argomento non è definito.
 

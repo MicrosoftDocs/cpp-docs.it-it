@@ -56,12 +56,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b569efb201f95ade8987aaa89bb6cea1bc0c15c1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d1d61049c4c5af0285d728685776b2f285f69ba4
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33376769"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079603"
 ---
 # <a name="crgn-class"></a>CRgn (classe)
 Incapsula un'area GDI (Graphics Device Interface) di Windows.  
@@ -84,22 +84,22 @@ class CRgn : public CGdiObject
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[CRgn::CombineRgn](#combinergn)|Imposta un `CRgn` oggetto in modo che è equivalente all'unione di due determinati `CRgn` oggetti.|  
-|[CRgn::CopyRgn](#copyrgn)|Imposta un `CRgn` dell'oggetto in modo che sia una copia di un oggetto specificato `CRgn` oggetto.|  
+|[CRgn::CombineRgn](#combinergn)|Imposta una `CRgn` dell'oggetto in modo che siano uguali per l'unione di due determinati `CRgn` oggetti.|  
+|[CRgn::CopyRgn](#copyrgn)|Imposta una `CRgn` dell'oggetto in modo che sia una copia di un oggetto specificato `CRgn` oggetto.|  
 |[CRgn::CreateEllipticRgn](#createellipticrgn)|Inizializza un `CRgn` oggetto con un'area ellittica.|  
-|[CRgn::CreateEllipticRgnIndirect](#createellipticrgnindirect)|Inizializza un `CRgn` oggetto con un'area ellittica definita da un [RECT](../../mfc/reference/rect-structure1.md) struttura.|  
+|[CRgn::CreateEllipticRgnIndirect](#createellipticrgnindirect)|Inizializza una `CRgn` oggetto con un'area ellittica definita da un [RECT](../../mfc/reference/rect-structure1.md) struttura.|  
 |[CRgn::CreateFromData](#createfromdata)|Crea un'area dai dati di area e di trasformazione specificati.|  
 |[CRgn::CreateFromPath](#createfrompath)|Crea un'area dal percorso selezionato nel contesto di dispositivo specificato.|  
-|[CRgn::CreatePolygonRgn](#createpolygonrgn)|Inizializza un `CRgn` oggetto con un'area poligonale. Il sistema si chiude il poligono automaticamente, se necessario, tracciando una linea da ultimo vertice al primo.|  
-|[CRgn::CreatePolyPolygonRgn](#createpolypolygonrgn)|Inizializza un `CRgn` oggetto con un'area composta da una serie di poligoni chiusi. I poligoni sia non contigui, o si sovrappongano.|  
+|[CRgn::CreatePolygonRgn](#createpolygonrgn)|Inizializza un `CRgn` oggetto con un'area poligonale. Il sistema si chiude il poligono automaticamente, se necessario, tracciando una linea tra il vertice ultima alla prima.|  
+|[CRgn::CreatePolyPolygonRgn](#createpolypolygonrgn)|Inizializza un `CRgn` oggetto con un'area composta da una serie di poligoni chiusi. I poligoni sia non contigui, oppure può verificarsi una sovrapposizione.|  
 |[CRgn::CreateRectRgn](#createrectrgn)|Inizializza un `CRgn` oggetto con un'area rettangolare.|  
-|[CRgn::CreateRectRgnIndirect](#createrectrgnindirect)|Inizializza un `CRgn` oggetto con un'area rettangolare definita da un [RECT](../../mfc/reference/rect-structure1.md) struttura.|  
+|[CRgn::CreateRectRgnIndirect](#createrectrgnindirect)|Inizializza una `CRgn` oggetto con un'area rettangolare definita da un [RECT](../../mfc/reference/rect-structure1.md) struttura.|  
 |[CRgn::CreateRoundRectRgn](#createroundrectrgn)|Inizializza un `CRgn` oggetto con un'area rettangolare con angoli arrotondati.|  
 |[CRgn::EqualRgn](#equalrgn)|Verifica due `CRgn` gli oggetti per determinare se sono equivalenti.|  
 |[CRgn::FromHandle](#fromhandle)|Restituisce un puntatore a un `CRgn` oggetto quando viene specificato un handle a un'area di Windows.|  
 |[CRgn::GetRegionData](#getregiondata)|Con i dati che descrive l'area specificata, riempie il buffer specificato.|  
 |[CRgn::GetRgnBox](#getrgnbox)|Recupera le coordinate del rettangolo di delimitazione di un `CRgn` oggetto.|  
-|[CRgn::OffsetRgn](#offsetrgn)|Sposta un `CRgn` oggetto offset specificati.|  
+|[CRgn::OffsetRgn](#offsetrgn)|Sposta un `CRgn` oggetto dall'offset specificati.|  
 |[CRgn::PtInRegion](#ptinregion)|Determina se un punto specificato è nell'area.|  
 |[CRgn::RectInRegion](#rectinregion)|Determina se qualsiasi parte di un rettangolo specificato è entro i limiti dell'area.|  
 |[CRgn::SetRectRgn](#setrectrgn)|Imposta il `CRgn` oggetto nell'area rettangolare specificata.|  
@@ -138,20 +138,20 @@ int CombineRgn(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `pRgn1`  
+ *pRgn1*  
  Identifica un'area esistente.  
   
- `pRgn2`  
+ *pRgn2*  
  Identifica un'area esistente.  
   
- `nCombineMode`  
+ *nCombineMode*  
  Specifica l'operazione da eseguire quando si combinano le aree di origine di due. Può essere uno dei valori seguenti:  
   
 - **RGN_AND** utilizza aree sovrapposte di entrambe le aree (intersezione).  
   
-- **RGN_COPY** crea una copia dell'area 1 (identificato da `pRgn1`).  
+- **RGN_COPY** crea una copia dell'area 1 (identificate *pRgn1*).  
   
-- **RGN_DIFF** crea un'area composta le aree dell'area 1 (identificate `pRgn1`) che non fanno parte della regione 2 (identificato da `pRgn2`).  
+- **RGN_DIFF** crea un'area composta le aree dell'area 1 (identificate *pRgn1*) che non fanno parte della regione 2 (identificata da *pRgn2*).  
   
 - **RGN_OR** combina entrambe le aree nella loro interezza (unione).  
   
@@ -169,26 +169,26 @@ int CombineRgn(
 - **SIMPLEREGION** nuova area non dispone di alcun bordi sovrapposti.  
   
 ### <a name="remarks"></a>Note  
- Le aree vengono combinate come specificato da `nCombineMode`.  
+ Le aree vengono combinate come specificato da *nCombineMode*.  
   
  I due specificati vengono combinate le aree e l'handle dell'area risultante viene archiviato nel `CRgn` oggetto. Pertanto, qualsiasi area viene archiviato nel `CRgn` oggetto è stato sostituito dall'area combinato.  
   
- La dimensione di un'area è limitata a 32.767 da 32.767 le unità logiche o a 64 KB di memoria, a seconda del valore minore.  
+ La dimensione di un'area è limitata a 32.767 da 32.767 unità logiche o a 64 KB di memoria, a seconda del valore minore.  
   
- Utilizzare [CopyRgn](#copyrgn) copiare semplicemente un'area in un'altra area.  
+ Uso [CopyRgn](#copyrgn) copiare semplicemente un'area in un'altra area.  
   
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFCDocView#144](../../mfc/codesnippet/cpp/crgn-class_1.cpp)]  
   
 ##  <a name="copyrgn"></a>  CRgn::CopyRgn  
- Copia dell'area definita da `pRgnSrc` nel `CRgn` oggetto.  
+ Copia dell'area definita da *pRgnSrc* nel `CRgn` oggetto.  
   
 ```  
 int CopyRgn(CRgn* pRgnSrc);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `pRgnSrc`  
+ *pRgnSrc*  
  Identifica un'area esistente.  
   
 ### <a name="return-value"></a>Valore restituito  
@@ -203,10 +203,10 @@ int CopyRgn(CRgn* pRgnSrc);
 - **SIMPLEREGION** nuova area non dispone di alcun bordi sovrapposti.  
   
 ### <a name="remarks"></a>Note  
- La nuova area sostituisce l'area precedentemente archiviato nel `CRgn` oggetto. Questa funzione è un caso speciale del [CombineRgn](#combinergn) funzione membro.  
+ La nuova area sostituisce l'area precedentemente archiviato nel `CRgn` oggetto. Questa funzione è un caso speciale della [CombineRgn](#combinergn) funzione membro.  
   
 ### <a name="example"></a>Esempio  
-  Per vedere l'esempio [CRgn::CreateEllipticRgn](#createellipticrgn).  
+  Vedere l'esempio relativo [CRgn::CreateEllipticRgn](#createellipticrgn).  
   
 ##  <a name="createellipticrgn"></a>  CRgn::CreateEllipticRgn  
  Crea un'area ellittica.  
@@ -220,27 +220,27 @@ BOOL CreateEllipticRgn(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `x1`  
- Specifica la coordinata x logica dell'angolo superiore sinistro del rettangolo di delimitazione dell'ellisse.  
+ *x1*  
+ Specifica la logica coordinata x dell'angolo superiore sinistro del rettangolo di delimitazione dell'ellisse.  
   
- `y1`  
+ *y1*  
  Specifica la coordinata y logica dell'angolo superiore sinistro del rettangolo di delimitazione dell'ellisse.  
   
- `x2`  
- Specifica la coordinata x logica dell'angolo inferiore destro del rettangolo di delimitazione dell'ellisse.  
+ *x2*  
+ Specifica la logica coordinata x dell'angolo inferiore destro del rettangolo di delimitazione dell'ellisse.  
   
- `y2`  
+ *y2*  
  Specifica la coordinata y logica dell'angolo inferiore destro del rettangolo di delimitazione dell'ellisse.  
   
 ### <a name="return-value"></a>Valore restituito  
  Diverso da zero se l'operazione ha esito positivo. in caso contrario 0.  
   
 ### <a name="remarks"></a>Note  
- L'area è definita dal rettangolo di delimitazione specificato da `x1`, `y1`, `x2`, e `y2`. L'area viene archiviato nel `CRgn` oggetto.  
+ L'area è definita dal rettangolo di delimitazione specificato da *x1*, *y1*, *x2*, e *y2*. L'area viene archiviato nel `CRgn` oggetto.  
   
- La dimensione di un'area è limitata a 32.767 da 32.767 le unità logiche o a 64 KB di memoria, a seconda del valore minore.  
+ La dimensione di un'area è limitata a 32.767 da 32.767 unità logiche o a 64 KB di memoria, a seconda del valore minore.  
   
- Quando ha terminato utilizzare un'area creata con il `CreateEllipticRgn` funzione, un'applicazione deve selezionare l'area di fuori del contesto di dispositivo e di utilizzare il `DeleteObject` funzione per rimuoverlo.  
+ Quando ha terminato di utilizzare un'area creata con il `CreateEllipticRgn` funzione, un'applicazione deve selezionare l'area orizzontale del contesto di dispositivo e usare il `DeleteObject` funzione per rimuoverlo.  
   
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFCDocView#145](../../mfc/codesnippet/cpp/crgn-class_2.cpp)]  
@@ -253,21 +253,21 @@ BOOL CreateEllipticRgnIndirect(LPCRECT lpRect);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `lpRect`  
- Punta a un `RECT` struttura o un `CRect` oggetto che contiene le coordinate logiche degli angoli superiore sinistro e destro inferiore del rettangolo di delimitazione dell'ellisse.  
+ *lpRect*  
+ Punta a un `RECT` struttura o un `CRect` oggetto che contiene le coordinate logiche degli angoli superiore sinistro e in basso a destra del rettangolo di delimitazione dell'ellisse.  
   
 ### <a name="return-value"></a>Valore restituito  
  Diverso da zero se l'operazione ha esito positivo. in caso contrario 0.  
   
 ### <a name="remarks"></a>Note  
- L'area è definita per la struttura o di un oggetto a cui puntata `lpRect` e viene archiviato nel `CRgn` oggetto.  
+ L'area è definita per la struttura o l'oggetto a cui puntata *lpRect* e viene archiviato nel `CRgn` oggetto.  
   
- La dimensione di un'area è limitata a 32.767 da 32.767 le unità logiche o a 64 KB di memoria, a seconda del valore minore.  
+ La dimensione di un'area è limitata a 32.767 da 32.767 unità logiche o a 64 KB di memoria, a seconda del valore minore.  
   
- Quando ha terminato utilizzare un'area creata con il `CreateEllipticRgnIndirect` funzione, un'applicazione deve selezionare l'area di fuori del contesto di dispositivo e di utilizzare il `DeleteObject` funzione per rimuoverlo.  
+ Quando ha terminato di utilizzare un'area creata con il `CreateEllipticRgnIndirect` funzione, un'applicazione deve selezionare l'area orizzontale del contesto di dispositivo e usare il `DeleteObject` funzione per rimuoverlo.  
   
 ### <a name="example"></a>Esempio  
-  Per vedere l'esempio [CRgn::CreateRectRgnIndirect](#createrectrgnindirect).  
+  Vedere l'esempio relativo [CRgn::CreateRectRgnIndirect](#createrectrgnindirect).  
   
 ##  <a name="createfromdata"></a>  CRgn::CreateFromData  
  Crea un'area dai dati di area e di trasformazione specificati.  
@@ -281,12 +281,12 @@ BOOL CreateFromData(
   
 ### <a name="parameters"></a>Parametri  
  *lpXForm*  
- Punta a un [XFORM](../../mfc/reference/xform-structure.md) struttura di dati che definisce la trasformazione da eseguire nell'area. Se questo puntatore è **NULL**, viene utilizzata la trasformazione di identità.  
+ Punta a un [XFORM](../../mfc/reference/xform-structure.md) struttura di dati che definisce la trasformazione deve essere eseguita nell'area. Se l'indicatore di misura **NULL**, viene utilizzata la trasformazione di identità.  
   
- `nCount`  
- Specifica il numero di byte a cui puntata `pRgnData`.  
+ *nCount*  
+ Specifica il numero di byte a cui puntata *pRgnData*.  
   
- `pRgnData`  
+ *pRgnData*  
  Punta a un [RGNDATA](../../mfc/reference/rgndata-structure.md) struttura di dati che contiene i dati dell'area.  
   
 ### <a name="return-value"></a>Valore restituito  
@@ -303,14 +303,14 @@ BOOL CreateFromPath(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `pDC`  
+ *pDC*  
  Identifica un contesto di dispositivo che contiene un percorso chiuso.  
   
 ### <a name="return-value"></a>Valore restituito  
  Diverso da zero se la funzione ha esito positivo; in caso contrario, 0.  
   
 ### <a name="remarks"></a>Note  
- Il contesto di dispositivo identificato mediante il `pDC` parametro deve contenere un percorso chiuso. Dopo aver `CreateFromPath` converte un percorso in un'area, Windows ignora il percorso di chiuso dal contesto del dispositivo.  
+ Il contesto di dispositivo identificato mediante il *pDC* parametro deve includere un percorso chiuso. Dopo aver `CreateFromPath` converte un percorso in un'area, Windows ignora il percorso chiuso dal contesto del dispositivo.  
   
 ##  <a name="createpolygonrgn"></a>  CRgn::CreatePolygonRgn  
  Crea un'area poligonale.  
@@ -323,7 +323,7 @@ BOOL CreatePolygonRgn(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `lpPoints`  
+ *lpPoints*  
  Punta a una matrice di **punto** strutture o una matrice di `CPoint` oggetti. Ogni struttura specifica la coordinata x e la coordinata y di un vertice del poligono. Il **punto** struttura ha il formato seguente:  
   
  `typedef struct tagPOINT {`  
@@ -334,25 +334,25 @@ BOOL CreatePolygonRgn(
   
  `} POINT;`  
   
- `nCount`  
- Specifica il numero di **punto** strutture o `CPoint` oggetti nella matrice a cui puntava `lpPoints`.  
+ *nCount*  
+ Specifica il numero di **punto** strutture o `CPoint` oggetti nella matrice a cui punta *lpPoints*.  
   
- `nMode`  
- Specifica la modalità di riempimento per l'area. Questo parametro può essere **ALTERNATIVO** o **CULLING**.  
+ *nMode*  
+ Specifica la modalità di riempimento per l'area. Questo parametro può essere **ALTERNATIVO** oppure **CULLING**.  
   
 ### <a name="return-value"></a>Valore restituito  
  Diverso da zero se l'operazione ha esito positivo. in caso contrario 0.  
   
 ### <a name="remarks"></a>Note  
- Il sistema si chiude il poligono automaticamente, se necessario, tracciando una linea da ultimo vertice al primo. L'area risulta viene archiviato nel `CRgn` oggetto.  
+ Il sistema si chiude il poligono automaticamente, se necessario, tracciando una linea tra il vertice ultima alla prima. L'area risulta viene archiviato nel `CRgn` oggetto.  
   
- La dimensione di un'area è limitata a 32.767 da 32.767 le unità logiche o a 64 KB di memoria, a seconda del valore minore.  
+ La dimensione di un'area è limitata a 32.767 da 32.767 unità logiche o a 64 KB di memoria, a seconda del valore minore.  
   
- Quando la modalità di riempimento del poligono è **ALTERNATIVO**, il sistema riempie l'area tra i lati di poligono pari e dispari in ogni riga di analisi. Ovvero, il sistema riempie l'area tra il primo e secondo lato, tra il lato terzo e quarto e così via.  
+ Quando la modalità di riempimento del poligono è **ALTERNATIVO**, il sistema riempie l'area compresa tra i lati di poligono dispari e con numeri pari in ciascuna riga di analisi. Vale a dire, il sistema riempie l'area tra il primo e secondo lato, tra il lato terzo e quarto e così via.  
   
- Quando la modalità di riempimento del poligono è **CULLING**, il sistema utilizza la direzione in cui è stata disegnata una figura per determinare se un'area di riempimento. Ogni segmento di linea in un poligono viene disegnato in senso orario o antiorario. Ogni volta che una linea immaginaria creata da un'area all'esterno di una figura passa attraverso un segmento di linea in senso orario, un numero viene incrementato. Quando la riga passa attraverso un segmento di linea in senso antiorario, il conteggio viene decrementato. Se il conteggio è diverso da zero quando la riga raggiunge all'esterno della figura, viene riempita l'area.  
+ Quando la modalità di riempimento del poligono è **CULLING**, il sistema utilizza la direzione in cui è stato disegnato una figura di seguito per determinare se un'area riempita. Ogni segmento di linea in un'istanza polygon viene disegnato in senso orario o antiorario. Ogni volta che una linea immaginaria disegnata da un'area all'esterno di una figura passa attraverso un segmento di linea in senso orario, un numero viene incrementato. Quando la riga passa attraverso un segmento di linea in senso antiorario, il conteggio viene ridotto. L'area viene inserita se il conteggio è diverso da zero quando la riga raggiunge il di fuori della figura.  
   
- Quando un'applicazione ha terminato di utilizzare un'area creata con il `CreatePolygonRgn` funzione, deve selezionare l'area out del contesto di dispositivo e di utilizzare il `DeleteObject` funzione per rimuoverlo.  
+ Quando un'applicazione ha terminato di utilizzare un'area creata con il `CreatePolygonRgn` funzione, deve selezionare l'area orizzontale del contesto di dispositivo e usare il `DeleteObject` funzione per rimuoverlo.  
   
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFCDocView#146](../../mfc/codesnippet/cpp/crgn-class_3.cpp)]  
@@ -369,8 +369,8 @@ BOOL CreatePolyPolygonRgn(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `lpPoints`  
- Punta a una matrice di **punto** strutture o una matrice di `CPoint` gli oggetti che definisce i vertici dei poligoni. Ogni poligono deve essere chiuso in modo esplicito perché il sistema non chiuderle automaticamente. I poligoni vengono specificati consecutivamente. Il **punto** struttura ha il formato seguente:  
+ *lpPoints*  
+ Punta a una matrice di **punto** strutture o una matrice di `CPoint` gli oggetti che definisce i vertici dei poligoni. Ogni poligono deve essere chiuso in modo esplicito perché il sistema non chiuderle automaticamente. Consecutivamente vengono specificati i poligoni. Il **punto** struttura ha il formato seguente:  
   
  `typedef struct tagPOINT {`  
   
@@ -380,14 +380,14 @@ BOOL CreatePolyPolygonRgn(
   
  `} POINT;`  
   
- `lpPolyCounts`  
- Punta a una matrice di interi. Il primo intero specifica il numero di vertici del poligono in prima il `lpPoints` matrice, il secondo valore integer specifica il numero di vertici poligono secondo e così via.  
+ *lpPolyCounts*  
+ Punta a una matrice di interi. Il primo intero specifica il numero di vertici del poligono in prima la *lpPoints* matrice, il secondo valore integer specifica il numero di vertici poligono secondo e così via.  
   
- `nCount`  
- Specifica il numero totale di valori integer di `lpPolyCounts` matrice.  
+ *nCount*  
+ Specifica il numero totale di valori integer il *lpPolyCounts* matrice.  
   
- `nPolyFillMode`  
- Specifica la modalità di riempimento del poligono. Questo valore può essere **ALTERNATIVO** o **CULLING**.  
+ *nPolyFillMode*  
+ Specifica la modalità di riempimento del poligono. Questo valore può essere **ALTERNATIVO** oppure **CULLING**.  
   
 ### <a name="return-value"></a>Valore restituito  
  Diverso da zero se l'operazione ha esito positivo. in caso contrario 0.  
@@ -395,15 +395,15 @@ BOOL CreatePolyPolygonRgn(
 ### <a name="remarks"></a>Note  
  L'area risulta viene archiviato nel `CRgn` oggetto.  
   
- I poligoni sia non contigui, o si sovrappongano.  
+ I poligoni sia non contigui, oppure può verificarsi una sovrapposizione.  
   
- La dimensione di un'area è limitata a 32.767 da 32.767 le unità logiche o a 64 KB di memoria, a seconda del valore minore.  
+ La dimensione di un'area è limitata a 32.767 da 32.767 unità logiche o a 64 KB di memoria, a seconda del valore minore.  
   
- Quando la modalità di riempimento del poligono è **ALTERNATIVO**, il sistema riempie l'area tra i lati di poligono pari e dispari in ogni riga di analisi. Ovvero, il sistema riempie l'area tra il primo e secondo lato, tra il lato terzo e quarto e così via.  
+ Quando la modalità di riempimento del poligono è **ALTERNATIVO**, il sistema riempie l'area compresa tra i lati di poligono dispari e con numeri pari in ciascuna riga di analisi. Vale a dire, il sistema riempie l'area tra il primo e secondo lato, tra il lato terzo e quarto e così via.  
   
- Quando la modalità di riempimento del poligono è **CULLING**, il sistema utilizza la direzione in cui è stata disegnata una figura per determinare se un'area di riempimento. Ogni segmento di linea in un poligono viene disegnato in senso orario o antiorario. Ogni volta che una linea immaginaria creata da un'area all'esterno di una figura passa attraverso un segmento di linea in senso orario, un numero viene incrementato. Quando la riga passa attraverso un segmento di linea in senso antiorario, il conteggio viene decrementato. Se il conteggio è diverso da zero quando la riga raggiunge all'esterno della figura, viene riempita l'area.  
+ Quando la modalità di riempimento del poligono è **CULLING**, il sistema utilizza la direzione in cui è stato disegnato una figura di seguito per determinare se un'area riempita. Ogni segmento di linea in un'istanza polygon viene disegnato in senso orario o antiorario. Ogni volta che una linea immaginaria disegnata da un'area all'esterno di una figura passa attraverso un segmento di linea in senso orario, un numero viene incrementato. Quando la riga passa attraverso un segmento di linea in senso antiorario, il conteggio viene ridotto. L'area viene inserita se il conteggio è diverso da zero quando la riga raggiunge il di fuori della figura.  
   
- Quando un'applicazione ha terminato di utilizzare un'area creata con il `CreatePolyPolygonRgn` funzione, deve selezionare l'area out del contesto di dispositivo e di utilizzare il [CGDIObject::DeleteObject](../../mfc/reference/cgdiobject-class.md#deleteobject) funzione membro per rimuoverlo.  
+ Quando un'applicazione ha terminato di utilizzare un'area creata con il `CreatePolyPolygonRgn` funzione, deve selezionare l'area orizzontale del contesto di dispositivo e usare il [CGDIObject::DeleteObject](../../mfc/reference/cgdiobject-class.md#deleteobject) funzione membro per rimuoverlo.  
   
 ##  <a name="createrectrgn"></a>  CRgn::CreateRectRgn  
  Crea un'area rettangolare che viene archiviata nel `CRgn` oggetto.  
@@ -417,25 +417,25 @@ BOOL CreateRectRgn(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `x1`  
- Specifica la coordinata x logica dell'angolo superiore sinistro dell'area.  
+ *x1*  
+ Specifica la logica coordinata x dell'angolo superiore sinistro dell'area.  
   
- `y1`  
+ *y1*  
  Specifica la coordinata y logica dell'angolo superiore sinistro dell'area.  
   
- `x2`  
- Specifica la coordinata x logica dell'angolo inferiore destro dell'area.  
+ *x2*  
+ Specifica la logica coordinata x dell'angolo inferiore destro dell'area.  
   
- `y2`  
+ *y2*  
  Specifica la coordinata y logica dell'angolo inferiore destro dell'area.  
   
 ### <a name="return-value"></a>Valore restituito  
  Diverso da zero se l'operazione ha esito positivo. in caso contrario 0.  
   
 ### <a name="remarks"></a>Note  
- La dimensione di un'area è limitata a 32.767 da 32.767 le unità logiche o a 64 KB di memoria, a seconda del valore minore.  
+ La dimensione di un'area è limitata a 32.767 da 32.767 unità logiche o a 64 KB di memoria, a seconda del valore minore.  
   
- Quando ha terminato un'area creata da utilizzare `CreateRectRgn`, un'applicazione deve usare il [CGDIObject::DeleteObject](../../mfc/reference/cgdiobject-class.md#deleteobject) funzione membro per rimuovere l'area.  
+ Quando ha terminato di utilizzare un'area creata `CreateRectRgn`, un'applicazione deve usare il [CGDIObject::DeleteObject](../../mfc/reference/cgdiobject-class.md#deleteobject) funzione membro per rimuovere l'area.  
   
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFCDocView#147](../../mfc/codesnippet/cpp/crgn-class_4.cpp)]  
@@ -450,7 +450,7 @@ BOOL CreateRectRgnIndirect(LPCRECT lpRect);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `lpRect`  
+ *lpRect*  
  Punta a un `RECT` struttura o `CRect` oggetto che contiene le coordinate logiche degli angoli superiore sinistro e in basso a destra dell'area. Il `RECT` struttura ha il formato seguente:  
   
  `typedef struct tagRECT {`  
@@ -469,9 +469,9 @@ BOOL CreateRectRgnIndirect(LPCRECT lpRect);
  Diverso da zero se l'operazione ha esito positivo. in caso contrario 0.  
   
 ### <a name="remarks"></a>Note  
- La dimensione di un'area è limitata a 32.767 da 32.767 le unità logiche o a 64 KB di memoria, a seconda del valore minore.  
+ La dimensione di un'area è limitata a 32.767 da 32.767 unità logiche o a 64 KB di memoria, a seconda del valore minore.  
   
- Quando ha terminato un'area creata da utilizzare `CreateRectRgnIndirect`, un'applicazione deve usare il [CGDIObject::DeleteObject](../../mfc/reference/cgdiobject-class.md#deleteobject) funzione membro per rimuovere l'area.  
+ Quando ha terminato di utilizzare un'area creata `CreateRectRgnIndirect`, un'applicazione deve usare il [CGDIObject::DeleteObject](../../mfc/reference/cgdiobject-class.md#deleteobject) funzione membro per rimuovere l'area.  
   
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFCDocView#148](../../mfc/codesnippet/cpp/crgn-class_5.cpp)]  
@@ -490,31 +490,31 @@ BOOL CreateRoundRectRgn(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `x1`  
- Specifica la coordinata x logica dell'angolo superiore sinistro dell'area.  
+ *x1*  
+ Specifica la logica coordinata x dell'angolo superiore sinistro dell'area.  
   
- `y1`  
+ *y1*  
  Specifica la coordinata y logica dell'angolo superiore sinistro dell'area.  
   
- `x2`  
- Specifica la coordinata x logica dell'angolo inferiore destro dell'area.  
+ *x2*  
+ Specifica la logica coordinata x dell'angolo inferiore destro dell'area.  
   
- `y2`  
+ *y2*  
  Specifica la coordinata y logica dell'angolo inferiore destro dell'area.  
   
  *x3*  
  Specifica la larghezza dell'ellisse utilizzata per creare gli angoli arrotondati.  
   
- `y3`  
+ *Y3*  
  Specifica l'altezza dell'ellisse utilizzata per creare gli angoli arrotondati.  
   
 ### <a name="return-value"></a>Valore restituito  
  Diverso da zero se l'operazione ha esito positivo. in caso contrario 0.  
   
 ### <a name="remarks"></a>Note  
- La dimensione di un'area è limitata a 32.767 da 32.767 le unità logiche o a 64 KB di memoria, a seconda del valore minore.  
+ La dimensione di un'area è limitata a 32.767 da 32.767 unità logiche o a 64 KB di memoria, a seconda del valore minore.  
   
- Quando un'applicazione ha terminato di utilizzare un'area creata con il `CreateRoundRectRgn` funzione, deve selezionare l'area out del contesto di dispositivo e di utilizzare il [CGDIObject::DeleteObject](../../mfc/reference/cgdiobject-class.md#deleteobject) funzione membro per rimuoverlo.  
+ Quando un'applicazione ha terminato di utilizzare un'area creata con il `CreateRoundRectRgn` funzione, deve selezionare l'area orizzontale del contesto di dispositivo e usare il [CGDIObject::DeleteObject](../../mfc/reference/cgdiobject-class.md#deleteobject) funzione membro per rimuoverlo.  
   
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFCDocView#149](../../mfc/codesnippet/cpp/crgn-class_6.cpp)]  
@@ -530,17 +530,17 @@ CRgn();
  Il `m_hObject` membro dati non contiene un'area GDI di Windows valida fino a quando non viene inizializzato l'oggetto con una o più degli altri `CRgn` funzioni membro.  
   
 ### <a name="example"></a>Esempio  
-  Per vedere l'esempio [CRgn::CreateRoundRectRgn](#createroundrectrgn).  
+  Vedere l'esempio relativo [CRgn::CreateRoundRectRgn](#createroundrectrgn).  
   
 ##  <a name="equalrgn"></a>  CRgn::EqualRgn  
- Determina se l'area specificata è equivalente all'area archiviato nel `CRgn` oggetto.  
+ Determina se l'area specificata è equivalente all'area archiviati nel `CRgn` oggetto.  
   
 ```  
 BOOL EqualRgn(CRgn* pRgn) const;  
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `pRgn`  
+ *pRgn*  
  Identifica un'area.  
   
 ### <a name="return-value"></a>Valore restituito  
@@ -557,14 +557,14 @@ static CRgn* PASCAL FromHandle(HRGN hRgn);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `hRgn`  
+ *hRgn*  
  Specifica un handle per un'area di Windows.  
   
 ### <a name="return-value"></a>Valore restituito  
  Un puntatore a un `CRgn` oggetto. Se la funzione non ha esito positivo, il valore restituito è **NULL**.  
   
 ### <a name="remarks"></a>Note  
- Se un `CRgn` oggetto non è già collegato all'handle di una password temporanea `CRgn` oggetto viene creato e collegato. Questo temporaneo `CRgn` oggetto è valido solo finché la volta successiva che l'applicazione è il tempo di inattività nel relativo ciclo di eventi, che ora immagine temporanea tutti gli oggetti vengono eliminati. In altre parole, questo è che l'oggetto temporaneo è valido solo durante l'elaborazione di una finestra di messaggio.  
+ Se un `CRgn` oggetto non è già collegato all'handle di una password temporanea `CRgn` oggetto viene creato e collegato. Questa memoria temporanea `CRgn` oggetto è valido solo fino alla successiva esecuzione l'applicazione ha tempo di inattività nel relativo ciclo di eventi, che ora immagine temporanea tutti gli oggetti vengono eliminati. Un altro modo di ciò è che l'oggetto temporaneo è valido solo durante l'elaborazione di una finestra di messaggio.  
   
 ##  <a name="getregiondata"></a>  CRgn::GetRegionData  
  Inserisce il buffer specificato che descrive l'area dati.  
@@ -576,14 +576,14 @@ int GetRegionData(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `lpRgnData`  
+ *lpRgnData*  
  Punta a un [RGNDATA](../../mfc/reference/rgndata-structure.md) struttura di dati che riceve le informazioni. Se questo parametro è **NULL**, il valore restituito contiene il numero di byte necessari per l'area dati.  
   
- `nCount`  
- Specifica le dimensioni, in byte, del `lpRgnData` buffer.  
+ *nCount*  
+ Specifica la dimensione, in byte, del *lpRgnData* buffer.  
   
 ### <a name="return-value"></a>Valore restituito  
- Se la funzione ha esito positivo e `nCount` specifica un numero sufficiente di byte, il valore restituito è sempre `nCount`. Se la funzione ha esito negativo o se `nCount` specifica minore rispetto a un numero sufficiente di byte, il valore restituito è 0 (errore).  
+ Se la funzione ha esito positivo e *nCount* specifica un numero sufficiente di byte, il valore restituito è sempre *nCount*. Se la funzione ha esito negativo o se *nCount* specifica minore di un numero sufficiente di byte, il valore restituito è 0 (errore).  
   
 ### <a name="remarks"></a>Note  
  Questi dati includono le dimensioni dei rettangoli che costituiscono l'area. Questa funzione viene utilizzata in combinazione con il `CRgn::CreateFromData` (funzione).  
@@ -596,8 +596,8 @@ int GetRgnBox(LPRECT lpRect) const;
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `lpRect`  
- Punta a un `RECT` struttura o `CRect` oggetto per ricevere le coordinate del rettangolo di delimitazione. Il `RECT` struttura ha il formato seguente:  
+ *lpRect*  
+ Punta a un `RECT` struttura o `CRect` oggetto per recuperare le coordinate del rettangolo di delimitazione. Il `RECT` struttura ha il formato seguente:  
   
  `typedef struct tagRECT {`  
   
@@ -623,10 +623,10 @@ int GetRgnBox(LPRECT lpRect) const;
 - **SIMPLEREGION** area è presente alcun bordi sovrapposti.  
   
 ### <a name="example"></a>Esempio  
-  Per vedere l'esempio [CRgn::CreatePolygonRgn](#createpolygonrgn).  
+  Vedere l'esempio relativo [CRgn::CreatePolygonRgn](#createpolygonrgn).  
   
 ##  <a name="offsetrgn"></a>  CRgn::OffsetRgn  
- Sposta l'area archiviato nel `CRgn` oggetto offset specificati.  
+ Sposta l'area archiviato nel `CRgn` oggetto dall'offset specificati.  
   
 ```  
 int OffsetRgn(
@@ -643,8 +643,8 @@ int OffsetRgn(POINT point);
  *y*  
  Specifica il numero di unità da spostare verso l'alto o verso il basso.  
   
- `point`  
- La coordinata x del `point` specifica il numero di unità per spostare a sinistra o destra. La coordinata y del `point` specifica il numero di unità da spostare verso l'alto o verso il basso. Il `point` parametro può essere un **punto** struttura o un `CPoint` oggetto.  
+ *Punto*  
+ La coordinata x del *punto* specifica il numero di unità per spostare a sinistra o destra. La coordinata y del *punto* specifica il numero di unità da spostare verso l'alto o verso il basso. Il *punto* parametro potrebbe essere un **punto** struttura o un `CPoint` oggetto.  
   
 ### <a name="return-value"></a>Valore restituito  
  Tipo della nuova area. Può essere uno dei valori seguenti:  
@@ -660,10 +660,10 @@ int OffsetRgn(POINT point);
 ### <a name="remarks"></a>Note  
  La funzione consente di spostare l'area *x* unità lungo l'asse x e *y* unità lungo l'asse y.  
   
- I valori delle coordinate di un'area devono essere minore o uguale a 32.767 e maggiore o uguale a tra -32.768. Il *x* e *y* parametri devono essere scelti attentamente per evitare le coordinate di regione non valido.  
+ I valori delle coordinate di un'area devono essere minore o uguale a maggiore o uguale a tra-32.768 e 32.767. Il *x* e *y* parametri devono essere scelti attentamente per evitare le coordinate area non valida.  
   
 ### <a name="example"></a>Esempio  
-  Per vedere l'esempio [CRgn::CreateEllipticRgn](#createellipticrgn).  
+  Vedere l'esempio relativo [CRgn::CreateEllipticRgn](#createellipticrgn).  
   
 ##  <a name="operator_hrgn"></a>  CRgn::operator HRGN  
  Utilizzare questo operatore per ottenere l'handle GDI di Windows associata del `CRgn` oggetto.  
@@ -673,12 +673,12 @@ operator HRGN() const;
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- Se ha esito positivo, un handle all'oggetto GDI di Windows rappresentato dal `CRgn` oggetto; in caso contrario **NULL**.  
+ Se ha esito positivo, un handle all'oggetto GDI di Windows rappresentato dal `CRgn` dell'oggetto; in caso contrario **NULL**.  
   
 ### <a name="remarks"></a>Note  
- Questo è un operatore di cast, che supporta l'utilizzo diretto di un **HRGN** oggetto.  
+ Questo è un operatore di cast, che supporta l'uso diretto di un' **HRGN** oggetto.  
   
- Per ulteriori informazioni sull'utilizzo di oggetti grafici, vedere l'articolo [oggetti immagine di](http://msdn.microsoft.com/library/windows/desktop/dd144962) in Windows SDK.  
+ Per ulteriori informazioni sull'utilizzo di oggetti grafici, vedere l'articolo [immagine di oggetti](http://msdn.microsoft.com/library/windows/desktop/dd144962) in Windows SDK.  
   
 ##  <a name="ptinregion"></a>  CRgn::PtInRegion  
  Controlla se il punto specificato da *x* e *y* nell'area archiviato nel `CRgn` oggetto.  
@@ -698,21 +698,21 @@ BOOL PtInRegion(POINT point) const;
  *y*  
  Specifica la coordinata y logica del punto da verificare.  
   
- `point`  
- Le coordinate x e y di `point` specificare le coordinate x e y del punto da verificare il valore di. Il `point` parametro può essere un **punto** struttura o un `CPoint` oggetto.  
+ *Punto*  
+ Le coordinate x e y del *punto* specificare le coordinate x e y del punto da verificare il valore di. Il *punto* parametro può essere un **punto** struttura o un `CPoint` oggetto.  
   
 ### <a name="return-value"></a>Valore restituito  
  Diverso da zero se il punto nell'area; in caso contrario 0.  
   
 ##  <a name="rectinregion"></a>  CRgn::RectInRegion  
- Determina se qualsiasi parte del rettangolo specificato da `lpRect` trova entro i limiti dell'area archiviati nel `CRgn` oggetto.  
+ Determina se qualsiasi parte del rettangolo specificato da *lpRect* trova entro i limiti dell'area archiviati nel `CRgn` oggetto.  
   
 ```  
 BOOL RectInRegion(LPCRECT lpRect) const;  
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `lpRect`  
+ *lpRect*  
  Punta a un `RECT` struttura o `CRect` oggetto. Il `RECT` struttura ha il formato seguente:  
   
  `typedef struct tagRECT {`  
@@ -728,7 +728,7 @@ BOOL RectInRegion(LPCRECT lpRect) const;
  `} RECT;`  
   
 ### <a name="return-value"></a>Valore restituito  
- Diverso da zero se qualsiasi parte del rettangolo specificato si trova entro i limiti dell'area di lavoro; in caso contrario 0.  
+ Diverso da zero se qualsiasi parte del rettangolo specificato si trova entro i limiti dell'area; in caso contrario 0.  
   
 ##  <a name="setrectrgn"></a>  CRgn::SetRectRgn  
  Crea un'area rettangolare.  
@@ -744,23 +744,23 @@ void SetRectRgn(LPCRECT lpRect);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `x1`  
+ *x1*  
  Specifica la coordinata x dell'angolo superiore sinistro dell'area rettangolare.  
   
- `y1`  
+ *y1*  
  Specifica la coordinata y dell'angolo superiore sinistro dell'area rettangolare.  
   
- `x2`  
+ *x2*  
  Specifica la coordinata x dell'angolo inferiore destro dell'area rettangolare.  
   
- `y2`  
+ *y2*  
  Specifica la coordinata y dell'angolo inferiore destro dell'area rettangolare.  
   
- `lpRect`  
+ *lpRect*  
  Specifica l'area rettangolare. Può essere un puntatore a un `RECT` struttura o un `CRect` oggetto.  
   
 ### <a name="remarks"></a>Note  
- A differenza di [CreateRectRgn](#createrectrgn), tuttavia, non allocare qualsiasi ulteriore memoria dall'heap locale dell'applicazione Windows. Utilizza invece lo spazio allocato per l'area archiviata nel `CRgn` oggetto. Ciò significa che il `CRgn` oggetto deve già essere stato inizializzato con un'area di Windows valida prima di chiamare `SetRectRgn`. I punti di base `x1`, `y1`, `x2`, e `y2` specificare la dimensione minima dello spazio allocato.  
+ A differenza [CreateRectRgn](#createrectrgn), tuttavia non allocare memoria aggiuntiva dall'heap locale dell'applicazione Windows. Al contrario, viene utilizzato lo spazio allocato per l'area archiviata nel `CRgn` oggetto. Ciò significa che il `CRgn` oggetto deve già essere stato inizializzato con un'area di Windows valida prima di chiamare `SetRectRgn`. I punti forniti *x1*, *y1*, *x2*, e *y2* specificare le dimensioni minime dello spazio allocato.  
   
  Utilizzare questa funzione anziché la `CreateRectRgn` funzione membro per evitare chiamate al gestore della memoria locale.  
   

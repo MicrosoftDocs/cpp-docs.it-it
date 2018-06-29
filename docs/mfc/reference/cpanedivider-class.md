@@ -94,17 +94,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: def39547a40c41d7e8d61d7ce9d54bb72e176985
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7315adc855b0bfbe1cc4ffae87c416fbaa584d57
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374678"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079364"
 ---
 # <a name="cpanedivider-class"></a>Classe CPaneDivider
 [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
- La `CPaneDivider` classe Divide due riquadri, divide due gruppi di riquadri o separa un gruppo di riquadri dall'area client della finestra cornice principale.  
+ Il `CPaneDivider` classe Divide due riquadri, divide due gruppi di riquadri o separa un gruppo di riquadri dall'area client della finestra cornice principale.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -170,7 +170,7 @@ class CPaneDivider : public CBasePane
   
 |nome|Descrizione|  
 |----------|-----------------|  
-|[CPaneDivider::m_nDefaultWidth](#m_ndefaultwidth)|Specifica la larghezza predefinita in pixel, di tutti i divisori di riquadro dell'applicazione.|  
+|[CPaneDivider::m_nDefaultWidth](#m_ndefaultwidth)|Specifica la larghezza predefinita in pixel di tutti i divisori di riquadro dell'applicazione.|  
 |[CPaneDivider::m_pSliderRTC](#m_psliderrtc)|Contiene un puntatore per le informazioni sulla classe di runtime su un `CPaneDivider`-oggetto derivato.|  
   
 ## <a name="remarks"></a>Note  
@@ -178,12 +178,12 @@ class CPaneDivider : public CBasePane
   
  Esistono due tipi di divisori di riquadro:  
   
--   Quando un gruppo di riquadri è ancorato a un lato della finestra cornice principale, viene creato un divisore di riquadro predefinito. Il divisore di riquadro predefinito contiene un puntatore al [CPaneContainerManager classe](../../mfc/reference/cpanecontainermanager-class.md) e reindirizza la maggior parte delle operazioni sul gruppo di riquadri (ad esempio il ridimensionamento di un riquadro o l'ancoraggio di un altro riquadro o un contenitore) per il gestore del contenitore. Ogni riquadro ancorato viene conservato un puntatore relativo predefinito divisore di riquadro.  
+-   un divisore di riquadro predefinita viene creato quando un gruppo di riquadri è ancorato a un lato della finestra cornice principale. Divisore di riquadro predefinito contiene un puntatore per il [CPaneContainerManager classe](../../mfc/reference/cpanecontainermanager-class.md) e reindirizza la maggior parte delle operazioni sul gruppo di riquadri (ad esempio il ridimensionamento di un riquadro o un altro di ancoraggio riquadro o un contenitore) per il gestore del contenitore. Ogni riquadro ancorato viene conservato un puntatore il divisore di riquadro predefinito.  
   
--   Un divisore di riquadro regolare appena Divide due riquadri in un contenitore. Per ulteriori informazioni, vedere [CPaneContainer classe](../../mfc/reference/cpanecontainer-class.md).  
+-   Un divisore di riquadro regolare appena Divide due riquadri in un contenitore. Per altre informazioni, vedere [CPaneContainer classe](../../mfc/reference/cpanecontainer-class.md).  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene illustrato come chiamare un oggetto `CPaneDivider` da un oggetto `CWorkspaceBar`. Questo frammento di codice fa parte di [esempio dimostrativo schede MDI](../../visual-cpp-samples.md).  
+ Nell'esempio seguente viene illustrato come chiamare un oggetto `CPaneDivider` da un oggetto `CWorkspaceBar`. Questo frammento di codice fa parte il [esempio dimostrativo schede MDI](../../visual-cpp-samples.md).  
   
  [!code-cpp[NVC_MFC_MDITabsDemo#5](../../mfc/reference/codesnippet/cpp/cpanedivider-class_1.cpp)]  
   
@@ -203,7 +203,7 @@ void SetAutoHideMode(BOOL bMode);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `bMode`  
+ [in] *bMode*  
   
 ### <a name="remarks"></a>Note  
   
@@ -215,7 +215,7 @@ void SetPaneContainerManager(CPaneContainerManager* p);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `p`  
+ [in] *p*  
   
 ### <a name="remarks"></a>Note  
   
@@ -227,7 +227,7 @@ virtual void AddPane(CDockablePane* pBar);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `pBar`  
+ [in] *pBar*  
   
 ### <a name="remarks"></a>Note  
   
@@ -247,10 +247,10 @@ virtual BOOL AddPaneContainer(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `barContainerManager`  
- [in] `bOuterEdge`  
- [in] `pTargetBar`  
- [in] `dwAlignment`  
+ [in] *barContainerManager*  
+ [in] *bOuterEdge*  
+ [in] *pTargetBar*  
+ [in] *dwAlignment*  
   
 ### <a name="return-value"></a>Valore restituito  
   
@@ -264,7 +264,7 @@ virtual CDockablePane* AddRecentPane(CDockablePane* pBar);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `pBar`  
+ [in] *pBar*  
   
 ### <a name="return-value"></a>Valore restituito  
   
@@ -283,11 +283,11 @@ virtual void CalcExpectedDockedRect(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `pWndToDock`  
- [in] `ptMouse`  
- [in] `rectResult`  
- [in] `bDrawTab`  
- [in] `ppTargetBar`  
+ [in] *pWndToDock*  
+ [in] *ptMouse*  
+ [in] *rectResult*  
+ [in] *bDrawTab*  
+ [in] *ppTargetBar*  
   
 ### <a name="remarks"></a>Note  
   
@@ -301,8 +301,8 @@ virtual CSize CalcFixedLayout(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `bStretch`  
- [in] `bHorz`  
+ [in] *bStretch*  
+ [in] *bHorz*  
   
 ### <a name="return-value"></a>Valore restituito  
   
@@ -332,8 +332,8 @@ CPaneDivider(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `bDefaultSlider`  
- [in] `pParent`  
+ [in] *bDefaultSlider*  
+ [in] *pParent*  
   
 ### <a name="return-value"></a>Valore restituito  
   
@@ -353,12 +353,12 @@ virtual BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `dwStyleEx`  
- [in] `dwStyle`  
- [in] `rect`  
- [in] `pParentWnd`  
- [in] `nID`  
- [in] `pContext`  
+ [in] *dwStyleEx*  
+ [in] *dwStyle*  
+ [in] *rect*  
+ [in] *pParentWnd*  
+ [in] *nID*  
+ [in] *pContext*  
   
 ### <a name="return-value"></a>Valore restituito  
   
@@ -396,8 +396,8 @@ CPaneContainer* FindPaneContainer(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `pBar`  
- [in] `bLeftBar`  
+ [in] *pBar*  
+ [in] *bLeftBar*  
   
 ### <a name="return-value"></a>Valore restituito  
   
@@ -411,7 +411,7 @@ CDockablePane* FindTabbedPane(UINT nID);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `nID`  
+ [in] *nID*  
   
 ### <a name="return-value"></a>Valore restituito  
   
@@ -447,11 +447,11 @@ void GetPaneDividers(CObList& lstSliders);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [out] `lstSliders`  
+ [out] *lstSliders*  
  Contiene l'elenco di divisori di riquadro che si trovano nel contenitore di riquadro.  
   
 ### <a name="remarks"></a>Note  
- Questo metodo deve essere chiamato per solo i divisori di riquadro predefinito. Un divisore di riquadro predefinito è un divisore che ridimensiona il contenitore intero riquadro.  
+ Questo metodo deve essere chiamato per divisori di riquadro predefinito solo. Un divisore di riquadro predefinito è un divisore che ridimensiona il riquadro intero contenitore.  
   
 ##  <a name="getpanedividerstyle"></a>  CPaneDivider::GetPaneDividerStyle  
 
@@ -472,11 +472,11 @@ void GetPanes(CObList& lstBars);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [out] `lstBars`  
+ [out] *lstBars*  
  Contiene l'elenco dei riquadri che si trovano nel contenitore di riquadro.  
   
 ### <a name="remarks"></a>Note  
- Questo metodo deve essere chiamato per solo i divisori di riquadro predefinito. Un divisore di riquadro predefinito è un divisore che ridimensiona il contenitore intero riquadro.  
+ Questo metodo deve essere chiamato per divisori di riquadro predefinito solo. Un divisore di riquadro predefinito è un divisore che ridimensiona il riquadro intero contenitore.  
   
 ##  <a name="getrootcontainerrect"></a>  CPaneDivider::GetRootContainerRect  
 
@@ -510,8 +510,8 @@ void Init(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `bDefaultSlider`  
- [in] `pParent`  
+ [in] *bDefaultSlider*  
+ [in] *pParent*  
   
 ### <a name="remarks"></a>Note  
   
@@ -527,10 +527,10 @@ virtual BOOL InsertPane(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `pBarToInsert`  
- [in] `pTargetBar`  
- [in] `dwAlignment`  
- [in] `lpRect`  
+ [in] *pBarToInsert*  
+ [in] *pTargetBar*  
+ [in] *dwAlignment*  
+ [in] *lpRect*  
   
 ### <a name="return-value"></a>Valore restituito  
   
@@ -586,20 +586,20 @@ virtual void Move(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `ptOffset`  
- [in] `bAdjustLayout`  
+ [in] *ptOffset*  
+ [in] *bAdjustLayout*  
   
 ### <a name="remarks"></a>Note  
   
 ##  <a name="m_psliderrtc"></a>  CPaneDivider::m_pSliderRTC  
- Contiene un puntatore alle informazioni di classe di runtime su un `CPaneDivider`-oggetto derivato.  
+ Contiene un puntatore a informazioni sulle classi di runtime su un `CPaneDivider`-oggetto derivato.  
   
 ```  
 AFX_IMPORT_DATA static CRuntimeClass* m_pSliderRTC;  
 ```  
   
 ### <a name="remarks"></a>Note  
- Impostare questa variabile membro se si crea un divisore di riquadro personalizzato. In questo modo il framework creare il divisore di riquadro quando viene disegnato il riquadro.  
+ Impostare questa variabile membro se si crea un divisore di riquadro personalizzato. Ciò consente al framework creare il divisore di riquadro quando viene disegnato il riquadro.  
   
 ### <a name="example"></a>Esempio  
  Nell'esempio seguente viene illustrato come impostare il `m_pSliderRTC` variabile membro:  
@@ -632,8 +632,8 @@ virtual void OnShowPane(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `pBar`  
- [in] `bShow`  
+ [in] *pBar*  
+ [in] *bMostra*  
   
 ### <a name="remarks"></a>Note  
   
@@ -654,7 +654,7 @@ virtual void RemovePane(CDockablePane* pBar);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `pBar`  
+ [in] *pBar*  
   
 ### <a name="remarks"></a>Note  
   
@@ -668,8 +668,8 @@ virtual BOOL ReplacePane(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `pBarToReplace`  
- [in] `pBarToReplaceWith`  
+ [in] *pBarToReplace*  
+ [in] *pBarToReplaceWith*  
   
 ### <a name="return-value"></a>Valore restituito  
   
@@ -685,8 +685,8 @@ virtual void RepositionPanes(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `rectNew`  
- [in] `hdwp`  
+ [in] *rectNew*  
+ [in] *hdwp*  
   
 ### <a name="remarks"></a>Note  
   
@@ -698,7 +698,7 @@ void Serialize(CArchive& ar);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `ar`  
+ [in] *ar*  
   
 ### <a name="remarks"></a>Note  
   
@@ -710,7 +710,7 @@ void ShowWindow(int nCmdShow);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `nCmdShow`  
+ [in] *nCmdShow*  
   
 ### <a name="remarks"></a>Note  
   
@@ -722,7 +722,7 @@ void StoreRecentDockSiteInfo(CDockablePane* pBar);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `pBar`  
+ [in] *pBar*  
   
 ### <a name="remarks"></a>Note  
   
@@ -736,8 +736,8 @@ void StoreRecentTabRelatedInfo(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `pDockingBar`  
- [in] `pTabbedBar`  
+ [in] *pDockingBar*  
+ [in] *pTabbedBar*  
   
 ### <a name="remarks"></a>Note  
   

@@ -20,15 +20,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d00d78acf7ddf8cfa27e117cbcdbbb00c7d6fa6b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 71871eae42fc720481852be1e60c934f941858c6
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374838"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37078156"
 ---
 # <a name="collection-class-helpers"></a>Supporti delle classi Collection
-Le classi di raccolta `CMap`, `CList`, e `CArray` utilizzare funzioni di supporto globali basati su modelli per tali scopi come il confronto, la copia e la serializzazione di elementi. Come parte dell'implementazione di classi basate su `CMap`, `CList`, e `CArray`, è necessario eseguire l'override di queste funzioni in base alle esigenze con le versioni personalizzata in base al tipo di dati archiviati nel mapping, elenco o matrice. Per informazioni sull'override di funzioni di supporto, ad esempio `SerializeElements`, vedere l'articolo [raccolte: come creare una raccolta indipendente dai tipi](../../mfc/how-to-make-a-type-safe-collection.md). Si noti che **ConstructElements** e **DestructElements** sono state deprecate.  
+Le classi collection `CMap`, `CList`, e `CArray` utilizzare funzioni helper basato su modelli globali per tali scopi come il confronto, la copia e la serializzazione di elementi. Come parte dell'implementazione delle classi di base `CMap`, `CList`, e `CArray`, è necessario eseguire l'override di queste funzioni in base alle esigenze con le versioni personalizzata in base al tipo di dati archiviati nella mappa, elenco o una matrice. Per informazioni sull'override di funzioni di supporto, ad esempio `SerializeElements`, vedere l'articolo [raccolte: come creare una raccolta indipendente dai tipi](../../mfc/how-to-make-a-type-safe-collection.md). Si noti che `ConstructElements` e `DestructElements` sono state deprecate.  
   
  La libreria Microsoft Foundation Class fornisce le seguenti funzioni globali in afxtempl. h che consentono di personalizzare le classi di raccolte:  
   
@@ -57,30 +57,30 @@ CompareElements(
  *TIPO*  
  Il tipo del primo elemento da confrontare.  
   
- `pElement1`  
+ *pElement1*  
  Puntatore al primo elemento da confrontare.  
   
- `ARG_TYPE`  
+ *ARG_TYPE*  
  Il tipo del secondo elemento da confrontare.  
   
- `pElement2`  
+ *pElement2*  
  Puntatore al secondo elemento da confrontare.  
   
 ### <a name="return-value"></a>Valore restituito  
- Diverso da zero se l'oggetto a cui puntava `pElement1` è uguale all'oggetto a cui puntata `pElement2`; in caso contrario, 0.  
+ Diverso da zero se l'oggetto a cui punta *pElement1* è uguale all'oggetto a cui puntata *pElement2*; in caso contrario, 0.  
   
 ### <a name="remarks"></a>Note  
- Il `CMap` chiama l'uso di `CMap` parametri di modello *chiave* e `ARG_KEY`.  
+ Il `CMap` chiama usare il `CMap` parametri di modello *chiave* e `ARG_KEY`.  
   
  L'implementazione predefinita restituisce il risultato del confronto della  *\*pElement1* e  *\*pElement2*. Eseguire l'override di questa funzione in modo che confronta gli elementi in modo appropriato per l'applicazione.  
   
- Il linguaggio C++ definisce l'operatore di confronto ( `==`) per i tipi semplici ( `char`, `int`, **float**e così via), ma non definisce un operatore di confronto per le classi e strutture. Se si desidera utilizzare `CompareElements` o per creare un'istanza di una delle classi di raccolta che lo utilizza, è necessario definire l'operatore di confronto o eseguire l'overload `CompareElements` con una versione che restituisce i valori appropriati.  
+ Il linguaggio C++ definisce l'operatore di confronto ( `==`) per i tipi semplici ( **char**, **int**, **float**e così via) ma non definisce un operatore di confronto per classi e strutture. Se si desidera utilizzare `CompareElements` o per creare un'istanza di una delle classi di raccolta che lo utilizza, è necessario definire l'operatore di confronto o eseguire l'overload `CompareElements` con una versione che restituisce i valori appropriati.  
   
 ### <a name="requirements"></a>Requisiti  
    **Intestazione:** afxtempl.h   
   
 ##  <a name="copyelements"></a>  CopyElements  
- Questa funzione viene chiamata direttamente da [CArray:: Append](carray-class.md#append) e [CArray:: Copy](carray-class.md#copy).  
+ Questa funzione viene chiamata direttamente dal [CArray:: Append](carray-class.md#append) e [CArray:: Copy](carray-class.md#copy).  
   
 ```   
 template<class TYPE>  
@@ -94,13 +94,13 @@ void AFXAPI CopyElements(
  *TIPO*  
  Parametro di modello che specifica il tipo di elementi da copiare.  
   
- `pDest`  
+ *pDest*  
  Puntatore alla destinazione in cui gli elementi verranno copiati.  
   
- `pSrc`  
+ *pSrc*  
  Puntatore all'origine degli elementi da copiare.  
   
- `nCount`  
+ *nCount*  
  Numero di elementi da copiare.  
   
 ### <a name="remarks"></a>Note  
@@ -123,22 +123,22 @@ void  AFXAPI DumpElements(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `dc`  
- Dump contesto per il dump di elementi.  
+ *dc*  
+ Eseguire il dump contesto per il dump di elementi.  
   
  *TIPO*  
  Parametro di modello che specifica il tipo degli elementi.  
   
- `pElements`  
+ *pElements*  
  Puntatore a elementi per eseguire il dump.  
   
- `nCount`  
+ *nCount*  
  Numero di elementi per eseguire il dump.  
   
 ### <a name="remarks"></a>Note  
- Il **CArray::Dump**, **CList::Dump**, e **CMap::Dump** funzioni chiamano questo metodo se la profondità del dump è maggiore di 0.  
+ Il `CArray::Dump`, `CList::Dump`, e `CMap::Dump` funzioni chiamano questo metodo se la profondità del dump è maggiore di 0.  
   
- L'implementazione predefinita non esegue alcuna operazione. Se gli elementi della raccolta sono derivati da `CObject`, la sostituzione scorrerà in genere gli elementi della raccolta, chiamare `Dump` per ogni elemento a sua volta.  
+ L'implementazione predefinita non esegue alcuna operazione. Se gli elementi della raccolta sono derivati da `CObject`, la sostituzione in genere si ripete attraverso gli elementi della raccolta, chiamare `Dump` per ogni elemento di conseguenza.  
   
 
 ### <a name="requirements"></a>Requisiti  
@@ -153,11 +153,11 @@ AFX_INLINE UINT AFXAPI HashKey(ARG_KEY  key);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `ARG_KEY`  
- Parametro di modello che specifica il tipo di dati utilizzato per accedere alle chiavi della mappa.  
+ *ARG_KEY*  
+ Parametro modello che specifica il tipo di dati utilizzato per accedere alle chiavi della mappa.  
   
- `key`  
- La chiave viene calcolato il cui valore hash.  
+ *key*  
+ La chiave il cui valore hash è deve essere calcolato.  
   
 ### <a name="return-value"></a>Valore restituito  
  Il valore della chiave hash.  
@@ -165,7 +165,7 @@ AFX_INLINE UINT AFXAPI HashKey(ARG_KEY  key);
 ### <a name="remarks"></a>Note  
  Questa funzione viene chiamata direttamente dal [CMap::RemoveKey](cmap-class.md#removekey) e indirettamente da [CMap::Lookup](cmap-class.md#lookup) e [CMap::Operator &#91; &#93; ](cmap-class.md#operator_at).
   
- L'implementazione predefinita crea un valore hash spostando `key` verso destra di quattro posizioni. Eseguire l'override di questa funzione in modo che restituisca i valori hash appropriato per l'applicazione.  
+ L'implementazione predefinita crea un valore hash spostando *chiave* verso destra di assumere quattro posizioni. Eseguire l'override di questa funzione in modo che restituisca i valori hash appropriato per l'applicazione.  
   
 ### <a name="example"></a>Esempio
  ```cpp  
@@ -192,13 +192,13 @@ void AFXAPI SerializeElements(CArchive& ar, TYPE* pElements, INT_PTR nCount);
  *TIPO*  
  Parametro di modello che specifica il tipo degli elementi.  
   
- `ar`  
+ *ar*  
  Un oggetto di archiviazione per l'archiviazione a o da.  
   
- `pElements`  
- Puntatore per gli elementi da archiviare.  
+ *pElements*  
+ Indicatore di misura per gli elementi da archiviare.  
   
- `nCount`  
+ *nCount*  
  Numero di elementi da archiviare  
   
 ### <a name="remarks"></a>Note  

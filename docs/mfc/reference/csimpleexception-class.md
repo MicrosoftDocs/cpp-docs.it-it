@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7d04a2f643add489d3302e58a9bde995303ecddd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: be5d27adabe8b271e2f8f3ed338e63e18d2432fc
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369925"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37078236"
 ---
 # <a name="csimpleexception-class"></a>Classe CSimpleException
 Questa classe è una classe di base per le eccezioni MFC critiche per le risorse.  
@@ -61,9 +61,9 @@ class AFX_NOVTABLE CSimpleException : public CException
 |[Classe CUserException](../../mfc/reference/cuserexception-class.md)|Eccezione che indica una risorsa non è stato trovato|  
 |[Classe CInvalidArgException](../../mfc/reference/cinvalidargexception-class.md)|Eccezione che indica un argomento non valido|  
   
- Poiché `CSimpleException` è una classe base astratta, non è possibile dichiarare un `CSimpleException` direttamente l'oggetto. In alternativa, è necessario dichiarare gli oggetti derivati, ad esempio quelli riportati nella tabella precedente. Se si sta dichiarando la propria classe derivata, utilizzare le classi precedenti come modello.  
+ Poiché `CSimpleException` è una classe basa astratta, non è possibile dichiarare un `CSimpleException` direttamente l'oggetto. Al contrario, è necessario dichiarare oggetti derivati, ad esempio quelli riportati nella tabella precedente. Se si sta dichiarando la propria classe derivata, utilizzare le classi precedenti come modello.  
   
- Per ulteriori informazioni, vedere il [CException (classe)](../../mfc/reference/cexception-class.md) argomento e [gestione delle eccezioni (MFC)](../../mfc/exception-handling-in-mfc.md).  
+ Per altre informazioni, vedere la [classe CException](../../mfc/reference/cexception-class.md) argomento e [gestione delle eccezioni (MFC)](../../mfc/exception-handling-in-mfc.md).  
   
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -84,11 +84,11 @@ explicit CSimpleException(BOOL bAutoDelete);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `bAutoDelete`  
- Specificare **TRUE** se la memoria per il `CSimpleException` oggetto è stato allocato nell'heap. In questo modo il `CSimpleException` oggetto da eliminare quando il **eliminare** funzione membro viene chiamata per eliminare l'eccezione. Specificare **FALSE** se il `CSimpleException` oggetto di nello stack o è un oggetto globale. In questo caso, il `CSimpleException` oggetto non saranno eliminate quando si sceglie il **eliminare** viene chiamata la funzione membro.  
+ *bAutoDelete*  
+ Specificare **TRUE** se la memoria per il `CSimpleException` oggetto è stato allocato nell'heap. In questo modo, il `CSimpleException` oggetto da eliminare quando il `Delete` funzione membro viene chiamata per eliminare l'eccezione. Specificare **FALSE** se il `CSimpleException` oggetto nello stack o è un oggetto globale. In questo caso, il `CSimpleException` oggetto non saranno eliminate quando si sceglie il `Delete` funzione membro viene chiamata.  
   
 ### <a name="remarks"></a>Note  
- In genere non è necessario chiamare questo costruttore direttamente. Una funzione che genera un'eccezione deve creare un'istanza di un `CException`-classe derivata e chiamare il relativo costruttore, oppure deve utilizzare uno dei MFC generare, ad esempio funzioni, [AfxThrowFileException](exception-processing.md#afxthrowfileexception), per generare un tipo predefinito.  
+ In genere non è necessario chiamare questo costruttore direttamente. Una funzione che genera un'eccezione deve creare un'istanza di un `CException`-classe derivata e chiamare il relativo costruttore, oppure deve utilizzare uno dei MFC generare, ad esempio le funzioni [AfxThrowFileException](exception-processing.md#afxthrowfileexception), per generare un tipo predefinito.  
   
 ##  <a name="geterrormessage"></a>  CSimpleException::GetErrorMessage  
  Chiamare questa funzione membro per fornire il testo su un errore che si è verificato.  
@@ -101,20 +101,20 @@ virtual BOOL GetErrorMessage(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `lpszError`  
+ *lpszError*  
  Un puntatore a un buffer che riceverà un messaggio di errore.  
   
- `nMaxError`  
+ *nMaxError*  
  Il numero massimo di caratteri nel buffer può contenere, tra cui la **NULL** carattere di terminazione.  
   
- `pnHelpContext`  
+ *pnHelpContext*  
  L'indirizzo di un **UINT** che riceverà l'ID del contesto della Guida. Se **NULL**, non verrà restituito alcun ID.  
   
 ### <a name="return-value"></a>Valore restituito  
- Diverso da zero se la funzione ha esito positivo. in caso contrario, 0 se il testo del non messaggio di errore di è disponibile.  
+ Diverso da zero se la funzione ha esito positivo. in caso contrario, 0 se nessun messaggio di testo è disponibile.  
   
 ### <a name="remarks"></a>Note  
- Per ulteriori informazioni, vedere [CException::GetErrorMessage](../../mfc/reference/cfileexception-class.md#geterrormessage).  
+ Per altre informazioni, vedere [CException::GetErrorMessage](../../mfc/reference/cfileexception-class.md#geterrormessage).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Grafico delle gerarchie](../../mfc/hierarchy-chart.md)   

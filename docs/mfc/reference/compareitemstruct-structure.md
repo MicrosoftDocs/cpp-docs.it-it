@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a94d39c6b6c256444cd2850f7e55a7e4b87f6d7a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5a54b4f4749e7865d793559a9cb5f475c1d57898
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368631"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37078258"
 ---
 # <a name="compareitemstruct-structure"></a>Struttura COMPAREITEMSTRUCT
-Il `COMPAREITEMSTRUCT` struttura fornisce gli identificatori e dati fornita dall'applicazione per due elementi in una casella di elenco ordinato, disegnato dal proprietario o una casella combinata.  
+Il `COMPAREITEMSTRUCT` struttura fornisce gli identificatori e i dati forniti dall'applicazione per due elementi in una casella di elenco ordinato, disegnato dal proprietario o casella combinata.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -41,29 +41,29 @@ typedef struct tagCOMPAREITEMSTRUCT {
 ```  
   
 #### <a name="parameters"></a>Parametri  
- `CtlType`  
+ *CtlType*  
  **ODT_LISTBOX** (che specifica una casella di riepilogo di disegno) o **ODT_COMBOBOX** (che specifica una casella combinata di disegno).  
   
- `CtlID`  
+ *CtlID*  
  L'ID di controllo per la casella di riepilogo o casella combinata.  
   
- `hwndItem`  
- Handle di finestra del controllo.  
+ *hwndItem*  
+ L'handle della finestra del controllo.  
   
  *itemID1*  
  L'indice del primo elemento nella casella di riepilogo o casella combinata da confrontare.  
   
  *itemData1*  
- Dati fornita dall'applicazione per il primo elemento da confrontare. Questo valore è stato passato nella chiamata che aggiunto l'elemento alla casella combinata o elenco.  
+ Dati forniti dall'applicazione per il primo elemento da confrontare. Questo valore è stato passato nella chiamata che aggiunto l'elemento alla casella combinata o elenco.  
   
  *itemID2*  
  Indice del secondo elemento nella casella di riepilogo o casella combinata da confrontare.  
   
  *itemData2*  
- Dati fornita dall'applicazione per il secondo elemento da confrontare. Questo valore è stato passato nella chiamata che aggiunto l'elemento alla casella combinata o elenco.  
+ Dati forniti dall'applicazione per il secondo elemento da confrontare. Questo valore è stato passato nella chiamata che aggiunto l'elemento alla casella combinata o elenco.  
   
 ## <a name="remarks"></a>Note  
- Ogni volta che un'applicazione aggiunge un nuovo elemento a una casella di riepilogo disegnato dal proprietario o casella combinata creata con la **CBS_SORT** o **LBS_SORT** stile, Windows invia il proprietario un `WM_COMPAREITEM` messaggio. Il `lParam` parametro del messaggio contiene un puntatore di tipo long a un `COMPAREITEMSTRUCT` struttura. Alla ricezione del messaggio, il proprietario confronta i due elementi e restituisce un valore che indica quale elemento precede l'altro.  
+ Ogni volta che un'applicazione aggiunge un nuovo elemento a una casella di riepilogo disegnato dal proprietario o casella combinata creata con la **CBS_SORT** oppure **LBS_SORT** stile, Windows invia il proprietario un messaggio WM_COMPAREITEM. Il *lParam* parametro del messaggio contiene un puntatore di tipo long a un `COMPAREITEMSTRUCT` struttura. Alla ricezione del messaggio, il proprietario confronta i due elementi e restituisce un valore che indica quale elemento precede l'altro.  
   
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** winuser.h  

@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9833607065407e66473a9fab1907bf2262816296
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a9f5cc55adac2bf5900d9891635a025716b9c1f3
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370640"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37078579"
 ---
 # <a name="csinusoidaltransitionfromvelocity-class"></a>Classe CSinusoidalTransitionFromVelocity
 Incapsula una transizione a velocità sinusoidale con un'ampiezza determinata dalla velocità iniziale della variabile di animazione.  
@@ -59,10 +59,10 @@ class CSinusoidalTransitionFromVelocity : public CBaseTransition;
 |Nome|Descrizione|  
 |----------|-----------------|  
 |[CSinusoidalTransitionFromVelocity::m_duration](#m_duration)|La durata della transizione.|  
-|[CSinusoidalTransitionFromVelocity::m_period](#m_period)|Il periodo di oscillazione dell'onda sinusoidale in secondi.|  
+|[CSinusoidalTransitionFromVelocity::m_period](#m_period)|Il periodo di oscillazione di wave sinusoidale in secondi.|  
   
 ## <a name="remarks"></a>Note  
- Il valore della variabile di animazione oscilla attorno al valore iniziale per l'intera durata di una transizione a intervalli sinusoidali. L'ampiezza dell'oscillazione è determinata dalla velocità della variabile di animazione quando inizia la transizione. Poiché tutte le transizioni vengono cancellate automaticamente, è consigliabile per assegnarle utilizzando l'operatore new. L'oggetto COM IUIAnimationTransition incapsulato viene creato da CAnimationController:: AnimateGroup, finché non è NULL. Modifica le variabili membro dopo la creazione dell'oggetto COM non ha alcun effetto.  
+ Il valore della variabile di animazione oscilla intorno al valore iniziale per l'intera durata di una transizione a intervalli. L'ampiezza dell'oscillazione è determinata dalla velocità della variabile di animazione quando inizia la transizione. Poiché tutte le transizioni vengono cancellate automaticamente, è consigliabile per assegnarle utilizzando l'operatore new. L'oggetto COM IUIAnimationTransition incapsulato viene creato da CAnimationController:: AnimateGroup, finché non è NULL. Per modificare le variabili membro dopo la creazione di questo oggetto COM non ha alcun effetto.  
   
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -84,11 +84,11 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `pLibrary`  
- Puntatore alla raccolta di transizione, che è responsabile della creazione di transizioni standard.  
+ *pLibrary*  
+ Puntatore alla raccolta di transizione, che è responsabile per la creazione di transizioni standard.  
   
 ### <a name="return-value"></a>Valore restituito  
- TRUE se transizione viene creata correttamente. in caso contrario FALSE.  
+ TRUE se transizione viene creata correttamente. in caso contrario, FALSE.  
   
 ##  <a name="csinusoidaltransitionfromvelocity"></a>  CSinusoidalTransitionFromVelocity::CSinusoidalTransitionFromVelocity  
  Costruisce un oggetto di transizione.  
@@ -100,11 +100,11 @@ CSinusoidalTransitionFromVelocity(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `duration`  
+ *Durata*  
  La durata della transizione.  
   
- `period`  
- Il periodo di oscillazione dell'onda sinusoidale in secondi.  
+ *Periodo*  
+ Il periodo di oscillazione di wave sinusoidale in secondi.  
   
 ##  <a name="m_duration"></a>  CSinusoidalTransitionFromVelocity::m_duration  
  La durata della transizione.  
@@ -114,7 +114,7 @@ UI_ANIMATION_SECONDS m_duration;
 ```  
   
 ##  <a name="m_period"></a>  CSinusoidalTransitionFromVelocity::m_period  
- Il periodo di oscillazione dell'onda sinusoidale in secondi.  
+ Il periodo di oscillazione di wave sinusoidale in secondi.  
   
 ```  
 UI_ANIMATION_SECONDS m_period;  

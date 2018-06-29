@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 09c302ec414e26c71d8989bb6d624314c8eb6db4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 646878a1cfd77dd61fbb854512c56512083ff609
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370207"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37078683"
 ---
 # <a name="csinusoidaltransitionfromrange-class"></a>Classe CSinusoidalTransitionFromRange
 Incapsula una transizione a intervalli sinusoidali con un determinato intervallo di oscillazione.  
@@ -64,14 +64,14 @@ class CSinusoidalTransitionFromRange : public CBaseTransition;
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[CSinusoidalTransitionFromRange::m_dblMaximumValue](#m_dblmaximumvalue)|Il valore della variabile di animazione, un picco di onda sinusoidale.|  
-|[CSinusoidalTransitionFromRange::m_dblMinimumValue](#m_dblminimumvalue)|Il valore della variabile di animazione, un punto minimo dell'onda sinusoidale.|  
+|[CSinusoidalTransitionFromRange::m_dblMaximumValue](#m_dblmaximumvalue)|Il valore della variabile di animazione un picco di wave sinusoidale.|  
+|[CSinusoidalTransitionFromRange::m_dblMinimumValue](#m_dblminimumvalue)|Il valore della variabile di animazione, un punto di wave sinusoidale minimo.|  
 |[CSinusoidalTransitionFromRange::m_duration](#m_duration)|La durata della transizione.|  
-|[CSinusoidalTransitionFromRange::m_period](#m_period)|Il periodo di oscillazione dell'onda sinusoidale in secondi.|  
+|[CSinusoidalTransitionFromRange::m_period](#m_period)|Il periodo di oscillazione di wave sinusoidale in secondi.|  
 |[CSinusoidalTransitionFromRange::m_slope](#m_slope)|L'inclinazione in base all'inizio della transizione.|  
   
 ## <a name="remarks"></a>Note  
- Il valore della variabile di animazione è compresa tra i valori minimi e massimo specificati per l'intera durata di una transizione a intervalli sinusoidali. Il parametro inclinazione viene utilizzato per evitare ambiguità tra i due possibili sinusoidali specificati dagli altri parametri. Poiché tutte le transizioni vengono cancellate automaticamente, è consigliabile per assegnarle utilizzando l'operatore new. L'oggetto COM IUIAnimationTransition incapsulato viene creato da CAnimationController:: AnimateGroup, finché non è NULL. Modifica le variabili membro dopo la creazione dell'oggetto COM non ha alcun effetto.  
+ Il valore della variabile di animazione varia tra i valori minimi e massimo specificati per l'intera durata di una transizione a intervalli. Il parametro inclinazione viene utilizzato per evitare ambiguità tra i due possibili sinusoidali specificati da altri parametri. Poiché tutte le transizioni vengono cancellate automaticamente, è consigliabile per assegnarle utilizzando l'operatore new. L'oggetto COM IUIAnimationTransition incapsulato viene creato da CAnimationController:: AnimateGroup, finché non è NULL. Per modificare le variabili membro dopo la creazione di questo oggetto COM non ha alcun effetto.  
   
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -93,11 +93,11 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `pLibrary`  
- Puntatore alla raccolta di transizione, che è responsabile della creazione di transizioni standard.  
+ *pLibrary*  
+ Puntatore alla raccolta di transizione, che è responsabile per la creazione di transizioni standard.  
   
 ### <a name="return-value"></a>Valore restituito  
- TRUE se transizione viene creata correttamente. in caso contrario FALSE.  
+ TRUE se transizione viene creata correttamente. in caso contrario, FALSE.  
   
 ##  <a name="csinusoidaltransitionfromrange"></a>  CSinusoidalTransitionFromRange::CSinusoidalTransitionFromRange  
  Costruisce un oggetto di transizione.  
@@ -112,30 +112,30 @@ CSinusoidalTransitionFromRange(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `duration`  
+ *Durata*  
  La durata della transizione.  
   
- `dblMinimumValue`  
- Il valore della variabile di animazione, un punto minimo dell'onda sinusoidale.  
+ *dblMinimumValue*  
+ Il valore della variabile di animazione, un punto di wave sinusoidale minimo.  
   
- `dblMaximumValue`  
- Il valore della variabile di animazione, un picco di onda sinusoidale.  
+ *dblMaximumValue*  
+ Il valore della variabile di animazione un picco di wave sinusoidale.  
   
- `period`  
- Il periodo di oscillazione dell'onda sinusoidale in secondi.  
+ *Periodo*  
+ Il periodo di oscillazione di wave sinusoidale in secondi.  
   
- `slope`  
+ *inclinazione*  
  L'inclinazione in base all'inizio della transizione.  
   
 ##  <a name="m_dblmaximumvalue"></a>  CSinusoidalTransitionFromRange::m_dblMaximumValue  
- Il valore della variabile di animazione, un picco di onda sinusoidale.  
+ Il valore della variabile di animazione un picco di wave sinusoidale.  
   
 ```  
 DOUBLE m_dblMaximumValue;  
 ```  
   
 ##  <a name="m_dblminimumvalue"></a>  CSinusoidalTransitionFromRange::m_dblMinimumValue  
- Il valore della variabile di animazione, un punto minimo dell'onda sinusoidale.  
+ Il valore della variabile di animazione, un punto di wave sinusoidale minimo.  
   
 ```  
 DOUBLE m_dblMinimumValue;  
@@ -149,7 +149,7 @@ UI_ANIMATION_SECONDS m_duration;
 ```  
   
 ##  <a name="m_period"></a>  CSinusoidalTransitionFromRange::m_period  
- Il periodo di oscillazione dell'onda sinusoidale in secondi.  
+ Il periodo di oscillazione di wave sinusoidale in secondi.  
   
 ```  
 UI_ANIMATION_SECONDS m_period;  

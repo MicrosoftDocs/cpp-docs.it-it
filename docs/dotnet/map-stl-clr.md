@@ -1,5 +1,5 @@
 ---
-title: mappa (STL/CLR) | Documenti Microsoft
+title: Map (STL/CLR) | Documenti Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -109,15 +109,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: e3691ad17aff90e866a21918c0853d2b1f4ce3a2
-ms.sourcegitcommit: 301bb19056e5bae84ff50f7d1df1e546efe225ba
+ms.openlocfilehash: 51570171fbd8de9919bcba5dabb47c26d8e1c748
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36305826"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079903"
 ---
 # <a name="map-stlclr"></a>map (STL/CLR)
-La classe modello descrive un oggetto che controlla una sequenza di lunghezza variabile di elementi che dispone di accesso bidirezionale. Utilizzare il contenitore `map` per gestire una sequenza di elementi come una struttura ad albero ordinato bilanciato (quasi) di nodi, ognuno l'archiviazione di un elemento. Un elemento è costituito da una chiave, per ordinare la sequenza e un valore mappato, che si per il marcia.  
+La classe modello descrive un oggetto che controlla una sequenza di lunghezza variabile di elementi che dispone dell'accesso bidirezionale. Utilizzare il contenitore `map` per gestire una sequenza di elementi come una struttura ad albero ordinato con carico bilanciato (quasi) di nodi, ognuno l'archiviazione di un elemento. Un elemento è costituito da una chiave, per ordinare la sequenza e un valore mappato, che si per l'interscambio.  
   
  Nella sezione successiva, `GValue` è identico:  
   
@@ -147,12 +147,12 @@ template<typename Key,
     { ..... };  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parametri  
  Chiave  
  Il tipo del componente chiave di un elemento nella sequenza controllata.  
   
  Il mapping  
- Il tipo del componente aggiuntivo di un elemento nella sequenza controllata.  
+ Il tipo di componente aggiuntivo di un elemento nella sequenza controllata.  
 
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** \<cliext/mappa >  
@@ -166,9 +166,9 @@ template<typename Key,
 |[map::const_iterator (STL/CLR)](#const_iterator)|Tipo di un iteratore costante per la sequenza controllata.|  
 |[map::const_reference (STL/CLR)](#const_reference)|Tipo di un riferimento costante a un elemento.|  
 |[map::const_reverse_iterator (STL/CLR)](#const_reverse_iterator)|Tipo di un iteratore inverso costante per la sequenza controllata.|  
-|[map::difference_type (STL/CLR)](#difference_type)|Il tipo di una distanza tra due elementi (possibilmente firmato).|  
+|[map::difference_type (STL/CLR)](#difference_type)|Il tipo di una distanza (possibilmente signed) tra due elementi.|  
 |[map::generic_container (STL/CLR)](#generic_container)|Il tipo dell'interfaccia generica per il contenitore.|  
-|[map::generic_iterator (STL/CLR)](#generic_iterator)|Il tipo di iteratore per l'interfaccia generica per il contenitore.|  
+|[map::generic_iterator (STL/CLR)](#generic_iterator)|Il tipo di un iteratore per l'interfaccia generica per il contenitore.|  
 |[map::generic_reverse_iterator (STL/CLR)](#generic_reverse_iterator)|Il tipo di un iteratore inverso per l'interfaccia generica per il contenitore.|  
 |[map::generic_value (STL/CLR)](#generic_value)|Il tipo di un elemento per l'interfaccia generica per il contenitore.|  
 |[map::iterator (STL/CLR)](#iterator)|Tipo di un iteratore per la sequenza controllata.|  
@@ -178,7 +178,7 @@ template<typename Key,
 |[map::reference (STL/CLR)](#reference)|Tipo di un riferimento a un elemento.|  
 |[map::reverse_iterator (STL/CLR)](#reverse_iterator)|Tipo di un iteratore inverso della sequenza controllata.|  
 |[map::size_type (STL/CLR)](#size_type)|Il tipo di una distanza (negativo) tra due elementi.|  
-|[map::value_compare (STL/CLR)](#value_compare)|Il delegato di ordinamento per valori di due elementi.|  
+|[map::value_compare (STL/CLR)](#value_compare)|Delegato di ordinamento per valori di due elementi.|  
 |[map::value_type (STL/CLR)](#value_type)|Tipo di un elemento.|  
   
 |Funzione membro|Descrizione|  
@@ -193,7 +193,7 @@ template<typename Key,
 |[map::find (STL/CLR)](#find)|Trova un elemento che corrisponde a una chiave specificata.|  
 |[map::insert (STL/CLR)](#insert)|Aggiunge elementi.|  
 |[map::key_comp (STL/CLR)](#key_comp)|Copia il delegato per due chiavi di ordinamento.|  
-|[map::lower_bound (STL/CLR)](#lower_bound)|Consente di trovare l'inizio dell'intervallo che corrisponde a una chiave specificata.|  
+|[map::lower_bound (STL/CLR)](#lower_bound)|Trova l'inizio dell'intervallo che corrisponde a una chiave specificata.|  
 |[map::make_value (STL/CLR)](#make_value)|Costruisce un oggetto valore.|  
 |[map::map (STL/CLR)](#map)|Costruisce un oggetto contenitore.|  
 |[map::rbegin (STL/CLR)](#rbegin)|Indica l'inizio della sequenza controllata inversa.|  
@@ -208,7 +208,7 @@ template<typename Key,
 |--------------|-----------------|  
 |[map::operator= (STL/CLR)](#op_as)|Sostituisce la sequenza controllata.|  
 |[map::operator(STL/CLR)](#op)|Esegue il mapping di una chiave per il relativo valore mappato associato.|  
-|[operator!= (map) (STL/CLR)](#op_neq)|Determina se un `map` oggetto non è uguale a un altro `map` oggetto.|  
+|[operator!= (map) (STL/CLR)](#op_neq)|Determina se un `map` non è uguale a un altro oggetto `map` oggetto.|  
 |[operator< (map) (STL/CLR)](#op_lt)|Determina se un `map` oggetto è minore di un altro `map` oggetto.|  
 |[operator<= (map) (STL/CLR)](#op_lteq)|Determina se un `map` oggetto è minore o uguale a un altro `map` oggetto.|  
 |[operator== (map) (STL/CLR)](#op_eq)|Determina se un `map` è uguale a un altro oggetto `map` oggetto.|  
@@ -220,7 +220,7 @@ template<typename Key,
 |Interfaccia|Descrizione|  
 |---------------|-----------------|  
 |<xref:System.ICloneable>|Duplicare un oggetto.|  
-|<xref:System.Collections.IEnumerable>|Tra gli elementi di sequenza.|  
+|<xref:System.Collections.IEnumerable>|Tramite gli elementi di sequenza.|  
 |<xref:System.Collections.ICollection>|Gestione gruppo di elementi.|  
 |<xref:System.Collections.Generic.IEnumerable%601>|Sequenza tramite elementi tipizzati.|  
 |<xref:System.Collections.Generic.ICollection%601>|Gestione gruppo di elementi tipizzati.|  
@@ -228,29 +228,29 @@ template<typename Key,
 |ITree < chiave, valore >|Gestisci contenitore generico.|  
   
 ## <a name="remarks"></a>Note  
- L'oggetto alloca e libera spazio di archiviazione per la sequenza che controlla come singoli nodi. Inserisce gli elementi in un albero bilanciato (quasi) che mantiene ordinato modificando i collegamenti tra nodi, mai copiando il contenuto di un nodo a un altro. Pertanto, è possibile inserire e rimuovere elementi liberamente senza disturbare elementi rimanenti.  
+ L'oggetto alloca e libera spazio di archiviazione per la sequenza di che tale vincolo controlla come singoli nodi. Inserisce gli elementi in un albero bilanciato (quasi) che mantiene ordinato modificando i collegamenti tra nodi, mai copiando i contenuti di un nodo a un altro. Pertanto, è possibile inserire e rimuovere elementi liberamente senza disturbare elementi rimanenti.  
   
- L'oggetto ordina la sequenza da esso controllata chiamando un oggetto delegato archiviato di tipo [Map:: key_compare (STL/CLR)](../dotnet/map-key-compare-stl-clr.md). È possibile specificare l'oggetto delegato archiviato quando si costruisce la mappa. Se non si specifica alcun oggetto delegato, il valore predefinito è il confronto `operator<(key_type, key_type)`. L'accesso all'oggetto archiviato chiamando la funzione membro [Map:: key_comp (STL/CLR)](../dotnet/map-key-comp-stl-clr.md)`()`.  
+ L'oggetto ordina la sequenza da esso controllata chiamando un oggetto delegato archiviato di tipo [Map:: key_compare (STL/CLR)](../dotnet/map-key-compare-stl-clr.md). È possibile specificare l'oggetto delegato archiviato quando si costruisce l'oggetto map Se non si specifica alcun oggetto delegato, il valore predefinito è il confronto `operator<(key_type, key_type)`. Accedere a questo oggetto archiviato chiamando la funzione membro [Map:: key_comp (STL/CLR)](../dotnet/map-key-comp-stl-clr.md)`()`.  
   
- Tale oggetto delegato deve imporre un ordine debole strict sulle chiavi di tipo [Map:: KEY_TYPE (STL/CLR)](../dotnet/map-key-type-stl-clr.md). Pertanto, per le due chiavi `X` e `Y`:  
+ Tale oggetto delegato deve imporre un strict ordinamento debole sulle chiavi di tipo [Map:: KEY_TYPE (STL/CLR)](../dotnet/map-key-type-stl-clr.md). Ciò significa, per le due chiavi `X` e `Y`:  
   
  `key_comp()(X, Y)` Restituisce il valore booleano stesso risultato a ogni chiamata.  
   
- Se `key_comp()(X, Y)` è true, `key_comp()(Y, X)` deve essere false.  
+ Se `key_comp()(X, Y)` è true, quindi `key_comp()(Y, X)` deve essere false.  
   
- Se `key_comp()(X, Y)` è true, `X` viene definito per essere ordinati prima `Y`.  
+ Se `key_comp()(X, Y)` è true, quindi `X` viene definito per essere ordinato in posizione precedente `Y`.  
   
- Se `!key_comp()(X, Y) && !key_comp()(Y, X)` è true, `X` e `Y` rientrano hanno un ordinamento equivalente.  
+ Se `!key_comp()(X, Y) && !key_comp()(Y, X)` è true, quindi `X` e `Y` rientrano hanno un ordinamento equivalente.  
   
- Per qualsiasi elemento `X` che precede `Y` nella sequenza controllata, `key_comp()(Y, X)` è false. (Per l'oggetto delegato predefinito, le chiavi non diminuisce mai valore.) A differenza di classe modello [mappa](../dotnet/map-stl-clr.md), un oggetto della classe modello `map` non richiede che le chiavi per tutti gli elementi siano univoche. Due o più tasti possono disporre di un ordinamento equivalente.  
+ Per qualsiasi elemento `X` che precede `Y` nella sequenza controllata, `key_comp()(Y, X)` è false. (Per l'oggetto delegato predefinito, le chiavi non diminuisce mai valore.) A differenza di classe modello [mappa](../dotnet/map-stl-clr.md), un oggetto della classe modello `map` non richiede che le chiavi per tutti gli elementi siano univoche. Due o più chiavi possono disporre di un ordinamento equivalente.  
   
  Ogni elemento contiene una chiave distinta e un valore mappato. La sequenza viene rappresentata in modo da consentire la ricerca, inserimento e rimozione di un elemento arbitrario con un numero di operazioni è proporzionale al logaritmo del numero di elementi nella sequenza (tempo logaritmico). Inoltre, l'inserimento di un elemento non invalida gli iteratori e la rimozione di un elemento invalida solo gli iteratori che fanno riferimento all'elemento rimosso.  
   
- Una mappa supporta gli iteratori bidirezionali, pertanto che è possibile eseguire per gli elementi adiacenti, dato un iteratore che definisce un elemento nella sequenza controllata. Un nodo head speciale corrispondente per l'iteratore restituito da [Map:: end (STL/CLR)](../dotnet/map-end-stl-clr.md)`()`. È possibile diminuire l'iteratore per raggiungere l'ultimo elemento nella sequenza controllata, se presente. È possibile incrementare un iteratore di mappa per raggiungere il nodo head e quindi confronterà uguale a `end()`. Ma non è possibile dereferenziare l'iteratore restituito da `end()`.  
+ Una mappa supporta gli iteratori bidirezionali, pertanto che è possibile eseguire per gli elementi adiacenti, dato un iteratore che definisce un elemento nella sequenza controllata. Un nodo head speciale corrisponde per l'iteratore restituito da [Map:: end (STL/CLR)](../dotnet/map-end-stl-clr.md)`()`. È possibile diminuire questo iteratore per raggiungere l'ultimo elemento nella sequenza controllata, se presente. È possibile incrementare un iteratore di mappa per raggiungere il nodo head e quindi confronterà uguale a `end()`. Ma non è possibile dereferenziare l'iteratore restituito da `end()`.  
   
- Si noti che è possibile fare riferimento a un elemento della mappa assegnato direttamente alla posizione numerica, che richiede un iteratore ad accesso casuale.  
+ Si noti che è possibile fare riferimento a un elemento della mappa direttamente presupponendo che la posizione numerica - che richiede un iteratore ad accesso casuale.  
   
- Un iteratore di mappa archivia un handle per il nodo mapping associato, che a sua volta memorizza un handle per il contenitore associato. È possibile utilizzare gli iteratori solo con i relativi oggetti contenitore associato. Un iteratore di mappa rimane valido finché il relativo nodo mapping associato è associato a un' mappa. Inoltre, un iteratore valido dereferencable--è possibile utilizzarlo per accedere o modificare il valore dell'elemento che definisce, in modo fino a quando non è uguale a `end()`.  
+ Un iteratore mappa archivia un handle per il nodo mapping associato, che a sua volta memorizza un handle al contenitore associato. È possibile utilizzare gli iteratori solo con i relativi oggetti contenitore associato. Un iteratore mappa rimane valido finché il relativo nodo mapping associato è associato a un' mappa. Inoltre, un iteratore valido dereferencable--è possibile utilizzare per accedere o modificare il valore dell'elemento che definisce, in modo fino a quando non è uguale a `end()`.  
   
  La cancellazione o eliminazione di un elemento chiama il distruttore per il valore archiviato. Eliminazione del contenitore Cancella tutti gli elementi. Di conseguenza, un contenitore il cui tipo di elemento è una classe di riferimento assicura che nessun elemento sopravvivere al contenitore. Si noti, tuttavia, che non è un contenitore di handle `not` eliminare definitivamente gli elementi.  
   
@@ -266,7 +266,7 @@ iterator begin();
 ```  
   
 ### <a name="remarks"></a>Note  
- La funzione membro restituisce un iteratore bidirezionale che definisce il primo elemento della sequenza controllata o appena oltre la fine di una sequenza vuota. È utilizzato per ottenere un iteratore che definisce il `current` inizio della sequenza controllata, ma il cui stato è possibile modificare se viene modificata la lunghezza della sequenza controllata.  
+ La funzione membro restituisce un iteratore bidirezionale che definisce il primo elemento della sequenza controllata o appena oltre la fine di una sequenza vuota. Che consente di ottenere un iteratore che definisce il `current` inizio della sequenza controllata, ma il relativo stato è possibile modificare se viene modificata la lunghezza della sequenza controllata.  
   
 ### <a name="example"></a>Esempio  
   
@@ -449,7 +449,7 @@ int main()
 ```  
 
 ## <a name="const_reverse_iterator"></a> Map:: const_reverse_iterator (STL/CLR)
-Il tipo di un iteratore inverso costante per la sequenza controllata...  
+Il tipo di un iteratore inverso costante per la sequenza controllata.  
   
 ### <a name="syntax"></a>Sintassi  
   
@@ -655,7 +655,7 @@ iterator end();
 ```  
   
 ### <a name="remarks"></a>Note  
- La funzione membro restituisce un iteratore bidirezionale che punta appena oltre la fine della sequenza controllata. È utilizzato per ottenere un iteratore che definisce la fine della sequenza controllata. il relativo stato modifica se viene modificata la lunghezza della sequenza controllata.  
+ La funzione membro restituisce un iteratore bidirezionale che punta appena oltre la fine della sequenza controllata. Che consente di ottenere un iteratore che indica la fine della sequenza controllata. il relativo stato non cambia se viene modificata la lunghezza della sequenza controllata.  
   
 ### <a name="example"></a>Esempio  
   
@@ -775,9 +775,9 @@ bool erase(key_type key)
  Elemento da cancellare.  
   
 ### <a name="remarks"></a>Note  
- La prima funzione membro rimuove l'elemento della sequenza controllata a cui puntata `where`e restituisce un iteratore che definisce il primo elemento rimanente oltre l'elemento rimosso, o [Map:: end (STL/CLR)](../dotnet/map-end-stl-clr.md) `()` se tale elemento non esiste. Utilizzarlo per rimuovere un singolo elemento.  
+ La prima funzione membro rimuove l'elemento della sequenza controllata a cui puntata `where`e restituisce un iteratore che definisce il primo elemento rimanente oltre l'elemento rimosso, o [Map:: end (STL/CLR)](../dotnet/map-end-stl-clr.md) `()` se tale elemento non esiste. Usarlo per rimuovere un singolo elemento.  
   
- La seconda funzione membro rimuove gli elementi della sequenza controllata nell'intervallo [`first`, `last`) e restituisce un iteratore che definisce il primo elemento rimanente successivo a tutti gli elementi eliminati, o `end()` se tale elemento non è presente... Utilizzarlo per rimuovere zero o più elementi adiacenti.  
+ La seconda funzione membro rimuove gli elementi della sequenza controllata nell'intervallo [`first`, `last`) e restituisce un iteratore che definisce il primo elemento rimanente successivo a tutti gli elementi eliminati, o `end()` se tale elemento non è presente... Usarlo per rimuovere zero o più elementi adiacenti.  
   
  La terza funzione membro rimuove qualsiasi elemento della sequenza controllata la cui chiave ha un ordinamento equivalente a `key`e restituisce un conteggio del numero di elementi rimossi. Utilizzarla per rimuovere e il conteggio di tutti gli elementi che corrispondono a una chiave specificata.  
   
@@ -855,7 +855,7 @@ iterator find(key_type key);
  Valore della chiave da cercare.  
   
 ### <a name="remarks"></a>Note  
- Se almeno un elemento nella sequenza controllata ha un ordinamento equivalente con `key`, la funzione membro restituisce un iteratore che definisce uno di questi elementi; in caso contrario restituisce [Map:: end (STL/CLR)](../dotnet/map-end-stl-clr.md)`()`. Utilizzarla per individuare un elemento attualmente nella sequenza controllata che corrisponde a una chiave specificata.  
+ Se almeno un elemento nella sequenza controllata abbia un ordinamento equivalente a `key`, la funzione membro restituisce un iteratore che definisce uno di questi elementi; in caso contrario, restituisce [Map:: end (STL/CLR)](../dotnet/map-end-stl-clr.md)`()`. Utilizzarla per individuare un elemento attualmente nella sequenza controllata che corrisponde a una chiave specificata.  
   
 ### <a name="example"></a>Esempio  
   
@@ -910,7 +910,7 @@ typedef Microsoft::VisualC::StlClr::
 ```  
   
 ### <a name="remarks"></a>Note  
- Il tipo descrive l'interfaccia generica per questa classe di contenitori di modelli.  
+ Tipo che descrive l'interfaccia generica per questa classe di contenitori di modelli.  
   
 ### <a name="example"></a>Esempio  
   
@@ -973,7 +973,7 @@ typedef Microsoft::VisualC::StlClr::Generic::
 ```  
   
 ### <a name="remarks"></a>Note  
- Il tipo descrive un iteratore generico che può essere utilizzato con l'interfaccia generica per questa classe di contenitori di modelli.  
+ Il tipo descrive un iteratore generico che può essere usato con l'interfaccia generica per questa classe di contenitori di modelli.  
   
 ### <a name="example"></a>Esempio  
   
@@ -1029,7 +1029,7 @@ typedef Microsoft::VisualC::StlClr::Generic::
 ```  
   
 ### <a name="remarks"></a>Note  
- Il tipo descrive un iteratore inverso generico che può essere utilizzato con l'interfaccia generica per questa classe di contenitori di modelli.  
+ Il tipo descrive un iteratore inverso generico che può essere usato con l'interfaccia generica per questa classe di contenitori di modelli.  
   
 ### <a name="example"></a>Esempio  
   
@@ -1157,11 +1157,11 @@ void insert(System::Collections::Generic::IEnumerable<value_type>^ right);
 ### <a name="remarks"></a>Note  
  Tutte le funzioni membro inserisce una sequenza specificata dagli operandi rimanenti.  
   
- La prima funzione membro incentrati inserire un elemento con valore `val`e restituisce una coppia di valori `X`. Se `X.second` è true, `X.first` definisce l'elemento appena inserito; in caso contrario `X.first` definisce un elemento con l'equivalente di ordinamento che già esiste e non viene inserito alcun nuovo elemento. Utilizzarla per inserire un singolo elemento.  
+ La prima funzione membro incentrati inserire un elemento con valore `val`e restituisce una coppia di valori `X`. Se `X.second` è true, `X.first` definisce l'elemento appena inserito; in caso contrario `X.first` designa un elemento con equivalente ordinamento che già esiste e non viene inserito alcun nuovo elemento. Utilizzarla per inserire un singolo elemento.  
   
- La seconda funzione membro inserisce un elemento con valore `val`, utilizzando `where` come un suggerimento (per migliorare le prestazioni) e restituisce un iteratore che definisce l'elemento appena inserito. Utilizzarla per inserire un singolo elemento che può essere adiacente a un elemento a cui che si è certi.  
+ La seconda funzione membro inserisce un elemento con valore `val`, utilizzando `where` come un suggerimento (per migliorare le prestazioni) e restituisce un iteratore che definisce l'elemento appena inserito. Utilizzarla per inserire un singolo elemento che può essere adiacente a un elemento che noto.  
   
- La terza funzione membro inserisce la sequenza [`first`, `last`). Utilizzarla per l'inserimento di zero o più elementi copiati da un'altra sequenza.  
+ La terza funzione membro inserisce la sequenza [`first`, `last`). Utilizzarla per inserire zero o più elementi copiati da un'altra sequenza.  
   
  La quarta funzione membro inserisce la sequenza designata dal `right`. Utilizzarla per inserire una sequenza descritta dall'enumeratore.  
   
@@ -1447,7 +1447,7 @@ a b c
 ```  
 
 ## <a name="lower_bound"></a> Map:: lower_bound (STL/CLR)
-Consente di trovare l'inizio dell'intervallo che corrisponde a una chiave specificata.  
+Trova l'inizio dell'intervallo che corrisponde a una chiave specificata.  
   
 ### <a name="syntax"></a>Sintassi  
   
@@ -1460,7 +1460,7 @@ iterator lower_bound(key_type key);
  Valore della chiave da cercare.  
   
 ### <a name="remarks"></a>Note  
- La funzione membro determina il primo elemento `X` nella sequenza controllata che ha un ordinamento equivalente a `key`. Se tale elemento non esiste, restituisce [Map:: end (STL/CLR)](../dotnet/map-end-stl-clr.md)`()`; in caso contrario restituisce un iteratore che definisce `X`. Utilizzarla per individuare l'inizio di una sequenza di elementi attualmente nella sequenza controllata che corrispondono a una chiave specificata.  
+ La funzione membro determina il primo elemento `X` nella sequenza controllata che ha un ordinamento equivalente a `key`. Se tale elemento non esiste, viene restituito [Map:: end (STL/CLR)](../dotnet/map-end-stl-clr.md)`()`; in caso contrario, restituisce un iteratore che definisce `X`. Utilizzarla per individuare l'inizio di una sequenza di elementi attualmente nella sequenza controllata che corrispondono a una chiave specificata.  
   
 ### <a name="example"></a>Esempio  
   
@@ -1514,13 +1514,13 @@ static value_type make_value(key_type key, mapped_type mapped);
   
 #### <a name="parameters"></a>Parametri  
  key  
- Valore della chiave da utilizzare.  
+ Valore della chiave da usare.  
   
- Il mapping  
+ il mapping  
  Valore mappato per la ricerca.  
   
 ### <a name="remarks"></a>Note  
- La funzione membro restituisce un `value_type` oggetto la cui chiave è `key` e il cui valore mappato è `mapped`. Utilizzarla per creare un oggetto può essere utilizzato con diverse altre funzioni membro.  
+ La funzione membro restituisce un `value_type` oggetto la cui chiave è `key` e il cui valore mappato `mapped`. Utilizzarla per creare un oggetto adatto per l'uso con diverse altre funzioni membro.  
   
 ### <a name="example"></a>Esempio  
   
@@ -1600,37 +1600,37 @@ map(System::Collections::Generic::IEnumerable<GValue>^ right,
   
  `map(map<Key, Mapped>% right);`  
   
- Inizializza la sequenza controllata con la sequenza [`right.begin()`, `right.end()`), con il predicato dell'ordinamento predefinito. Utilizzarlo per specificare una sequenza controllata iniziale che è una copia della sequenza controllata dall'oggetto mappa `right`, con il predicato dell'ordinamento predefinito.  
+ Inizializza la sequenza controllata con la sequenza [`right.begin()`, `right.end()`), con il predicato dell'ordinamento predefinito. Che consente di specificare una sequenza controllata iniziale che è una copia della sequenza controllata dall'oggetto mappa `right`, con il predicato dell'ordinamento predefinito.  
   
  Il costruttore:  
   
  `map(map<Key, Mapped>^ right);`  
   
- Inizializza la sequenza controllata con la sequenza [`right->begin()`, `right->end()`), con il predicato dell'ordinamento predefinito. Utilizzarlo per specificare una sequenza controllata iniziale che è una copia della sequenza controllata dall'oggetto mappa `right`, con il predicato dell'ordinamento predefinito.  
+ Inizializza la sequenza controllata con la sequenza [`right->begin()`, `right->end()`), con il predicato dell'ordinamento predefinito. Che consente di specificare una sequenza controllata iniziale che è una copia della sequenza controllata dall'oggetto mappa `right`, con il predicato dell'ordinamento predefinito.  
   
  Il costruttore:  
   
  `template<typename InIter> map(InIter first, InIter last);`  
   
- Inizializza la sequenza controllata con la sequenza [`first`, `last`), con il predicato dell'ordinamento predefinito. Utilizzarla per creare la sequenza controllata una copia di un'altra sequenza, con il predicato dell'ordinamento predefinito.  
+ Inizializza la sequenza controllata con la sequenza [`first`, `last`), con il predicato dell'ordinamento predefinito. Utilizzarla per creare una copia di un'altra sequenza, la sequenza controllata con il predicato dell'ordinamento predefinito.  
   
  Il costruttore:  
   
  `template<typename InIter> map(InIter first, InIter last, key_compare^ pred);`  
   
- Inizializza la sequenza controllata con la sequenza [`first`, `last`), con il predicato ordinamento `pred`. Utilizzarla per creare la sequenza controllata una copia di un'altra sequenza, con il predicato di ordinamento specificato.  
+ Inizializza la sequenza controllata con la sequenza [`first`, `last`), con il predicato ordinamento `pred`. Utilizzarla per creare una copia di un'altra sequenza, con il predicato di ordinamento specificato nella sequenza controllata.  
   
  Il costruttore:  
   
  `map(System::Collections::Generic::IEnumerable<Key>^ right);`  
   
- Inizializza la sequenza controllata con la sequenza designata dall'enumeratore `right`, con il predicato dell'ordinamento predefinito. Utilizzarla per creare la sequenza controllata una copia di un'altra sequenza descritta da un enumeratore, con il predicato dell'ordinamento predefinito.  
+ Inizializza la sequenza controllata con la sequenza designata dall'enumeratore `right`, con il predicato dell'ordinamento predefinito. Utilizzarla per creare la sequenza controllata una copia di un'altra sequenza descritta da un enumeratore con il predicato dell'ordinamento predefinito.  
   
  Il costruttore:  
   
  `map(System::Collections::Generic::IEnumerable<Key>^ right, key_compare^ pred);`  
   
- Inizializza la sequenza controllata con la sequenza designata dall'enumeratore `right`, con il predicato ordinamento `pred`. Utilizzarla per creare la sequenza controllata una copia di un'altra sequenza descritta da un enumeratore, con il predicato di ordinamento specificato.  
+ Inizializza la sequenza controllata con la sequenza designata dall'enumeratore `right`, con il predicato ordinamento `pred`. Utilizzarla per creare una copia di un'altra sequenza descritta da un enumeratore, con il predicato di ordinamento specificato nella sequenza controllata.  
   
 ### <a name="example"></a>Esempio  
   
@@ -1779,7 +1779,7 @@ map<Key, Mapped>% operator=(map<Key, Mapped>% right);
  Contenitore da copiare.  
   
 ### <a name="remarks"></a>Note  
- Le copie di operatore membro `right` all'oggetto, quindi restituisce `*this`. Viene usato per sostituire la sequenza controllata con una copia della sequenza controllata in `right`.  
+ Le copie di operatore membro `right` sull'oggetto, quindi restituisce `*this`. Viene usato per sostituire la sequenza controllata con una copia della sequenza controllata in `right`.  
   
 ### <a name="example"></a>Esempio  
   
@@ -1832,7 +1832,7 @@ mapped_type operator[](key_type key);
  Valore della chiave da cercare.  
   
 ### <a name="remarks"></a>Note  
- A tal fine per trovare un elemento con un ordinamento equivalente per le funzioni membro `key`. Se ne trova uno, viene restituito il valore mappato associato; in caso contrario, inserisce `value_type(key, mapped_type())` e restituisce l'oggetto associato valore di mapping (impostazione predefinita). Utilizzare per cercare un valore mappato ha la chiave associata, o per garantire che una voce esistente per la chiave, se non viene trovato.  
+ A tal fine per trovare un elemento con un ordinamento equivalente per le funzioni membro `key`. Se ne trova uno, restituisce il valore mappato associato; in caso contrario, inserisce `value_type(key, mapped_type())` e restituisce l'oggetto associato (impostazione predefinita) mappato valore. Utilizzare per cercare un valore mappato dato la chiave associata, o per garantire che una voce esistente per la chiave, se ne viene individuato nessuno.  
   
 ### <a name="example"></a>Esempio  
   
@@ -1893,7 +1893,7 @@ reverse_iterator rbegin();
 ```  
   
 ### <a name="remarks"></a>Note  
- La funzione membro restituisce un iteratore inverso che definisce l'ultimo elemento della sequenza controllata o appena oltre l'inizio di una sequenza vuota. Di conseguenza, indica il `beginning` della sequenza inversa. È utilizzato per ottenere un iteratore che definisce il `current` inizio della sequenza controllata considerata in ordine inverso, ma il cui stato è possibile modificare se viene modificata la lunghezza della sequenza controllata.  
+ La funzione membro restituisce un iteratore inverso che definisce l'ultimo elemento della sequenza controllata o appena oltre l'inizio di una sequenza vuota. Di conseguenza, indica il `beginning` della sequenza inversa. Che consente di ottenere un iteratore che definisce il `current` inizio della sequenza controllata considerata in ordine inverso, ma il relativo stato è possibile modificare se viene modificata la lunghezza della sequenza controllata.  
   
 ### <a name="example"></a>Esempio  
   
@@ -1987,7 +1987,7 @@ reverse_iterator rend();
 ```  
   
 ### <a name="remarks"></a>Note  
- La funzione membro restituisce un iteratore inverso che punta appena oltre l'inizio della sequenza controllata. Di conseguenza, indica il `end` della sequenza inversa. È utilizzato per ottenere un iteratore che definisce il `current` fine della sequenza controllata considerata in ordine inverso, ma il cui stato è possibile modificare se viene modificata la lunghezza della sequenza controllata.  
+ La funzione membro restituisce un iteratore inverso che punta appena oltre l'inizio della sequenza controllata. Di conseguenza, indica il `end` della sequenza inversa. Che consente di ottenere un iteratore che definisce il `current` fine della sequenza controllata considerata in ordine inverso, ma il relativo stato è possibile modificare se viene modificata la lunghezza della sequenza controllata.  
   
 ### <a name="example"></a>Esempio  
   
@@ -2080,7 +2080,7 @@ size_type size();
 ```  
   
 ### <a name="remarks"></a>Note  
- La funzione membro restituisce la lunghezza della sequenza controllata. Utilizzarla per determinare il numero di elementi attualmente presenti nella sequenza controllata. Se invece è rilevante se la sequenza è diverso da zero dimensioni, vedere [Map:: Empty (STL/CLR)](../dotnet/map-empty-stl-clr.md)`()`.  
+ La funzione membro restituisce la lunghezza della sequenza controllata. Utilizzarla per determinare il numero di elementi attualmente presenti nella sequenza controllata. Se si è interessati se la sequenza di dimensioni diverso da zero, vedere [Map:: Empty (STL/CLR)](../dotnet/map-empty-stl-clr.md)`()`.  
   
 ### <a name="example"></a>Esempio  
   
@@ -2297,7 +2297,7 @@ iterator upper_bound(key_type key);
  Valore della chiave da cercare.  
   
 ### <a name="remarks"></a>Note  
- La funzione membro determina l'ultimo elemento `X` nella sequenza controllata che ha un ordinamento equivalente a `key`. Se tale elemento non esiste o se `X` è l'ultimo elemento nella sequenza controllata, restituisce [Map:: end (STL/CLR)](../dotnet/map-end-stl-clr.md)`()`; in caso contrario restituisce un iteratore che definisce il primo elemento oltre `X`. Utilizzarla per individuare la fine di una sequenza di elementi attualmente nella sequenza controllata che corrispondono a una chiave specificata.  
+ La funzione membro determina l'ultimo elemento `X` nella sequenza controllata che ha un ordinamento equivalente a `key`. Se tale elemento non esiste o se `X` è l'ultimo elemento nella sequenza controllata, restituisce [Map:: end (STL/CLR)](../dotnet/map-end-stl-clr.md)`()`; in caso contrario, restituisce un iteratore che definisce il primo elemento oltre `X`. Utilizzarla per individuare la fine di una sequenza di elementi attualmente nella sequenza controllata che corrispondono a una chiave specificata.  
   
 ### <a name="example"></a>Esempio  
   
@@ -2350,7 +2350,7 @@ value_compare^ value_comp();
 ```  
   
 ### <a name="remarks"></a>Note  
- La funzione membro restituisce il delegato di ordinamento utilizzato per ordinare la sequenza controllata. È utilizzato per confrontare due valori di elemento.  
+ La funzione membro restituisce il delegato di ordinamento utilizzato per ordinare la sequenza controllata. È utilizzato per confrontare due valori di elementi.  
   
 ### <a name="example"></a>Esempio  
   
@@ -2387,7 +2387,7 @@ compare([L'b', 2], [L'a', 1]) = False
 ```  
   
 ## <a name="value_compare"></a> Map::value_compare (STL/CLR)
-Il delegato di ordinamento per valori di due elementi.  
+Delegato di ordinamento per valori di due elementi.  
   
 ### <a name="syntax"></a>Sintassi  
   
@@ -2496,7 +2496,7 @@ template<typename Key,
  Contenitore destro da confrontare.  
   
 ### <a name="remarks"></a>Note  
- La funzione di operatore restituisce `!(left == right)`. Utilizzati per verificare se `left` non viene ordinato identico `right` quando due mappe vengono confrontato elemento per elemento.  
+ La funzione di operatore restituisce `!(left == right)`. Che consente di testare se `left` non viene ordinato identico `right` quando due mappe vengono confrontato elemento per elemento.  
   
 ### <a name="example"></a>Esempio  
   
@@ -2565,7 +2565,7 @@ template<typename Key,
  Contenitore destro da confrontare.  
   
 ### <a name="remarks"></a>Note  
- L'operatore funzione restituisce true se, per la posizione più bassa `i` per il quale `!(right[i] < left[i])` è anche vero che `left[i] < right[i]`. In caso contrario, restituisce `left->size() < right->size()` utilizzati per verificare se `left` viene ordinato prima `right` quando due mappe vengono confrontato elemento per elemento.  
+ L'operatore funzione restituisce true se, per la posizione più bassa `i` per il quale `!(right[i] < left[i])` è anche vero che `left[i] < right[i]`. In caso contrario, restituisce `left->size() < right->size()` che consente di testare se `left` viene ordinato in posizione precedente `right` quando due mappe vengono confrontato elemento per elemento.  
   
 ### <a name="example"></a>Esempio  
   
@@ -2634,7 +2634,7 @@ template<typename Key,
  Contenitore destro da confrontare.  
   
 ### <a name="remarks"></a>Note  
- La funzione di operatore restituisce `!(right < left)`. Utilizzati per verificare se `left` non viene ordinato dopo `right` quando due mappe vengono confrontato elemento per elemento.  
+ La funzione di operatore restituisce `!(right < left)`. Che consente di testare se `left` non viene ordinato dopo `right` quando due mappe vengono confrontato elemento per elemento.  
   
 ### <a name="example"></a>Esempio  
   
@@ -2684,7 +2684,7 @@ int main()
 ```  
 
 ## <a name="op_eq"></a> operatore = = (map) (STL/CLR)
-Elenco di confronto uguale.  
+Confronto uguale a elenco.  
   
 ### <a name="syntax"></a>Sintassi  
   
@@ -2703,7 +2703,7 @@ template<typename Key,
  Contenitore destro da confrontare.  
   
 ### <a name="remarks"></a>Note  
- La funzione di operatore restituisce true solo se le sequenze controllate da `left` e `right` hanno la stessa lunghezza e, per ogni posizione `i`, `left[i] ==` `right[i]`. Utilizzati per verificare se `left` viene ordinato identico `right` quando due mappe vengono confrontato elemento per elemento.  
+ La funzione di operatore restituisce true solo se le sequenze controllate da `left` e `right` hanno la stessa lunghezza e, per ogni posizione `i`, `left[i] ==` `right[i]`. Che consente di testare se `left` viene ordinata quella `right` quando due mappe vengono confrontato elemento per elemento.  
   
 ### <a name="example"></a>Esempio  
   
@@ -2772,7 +2772,7 @@ template<typename Key,
  Contenitore destro da confrontare.  
   
 ### <a name="remarks"></a>Note  
- La funzione di operatore restituisce `right` `<` `left`. Utilizzati per verificare se `left` viene ordinato dopo `right` quando due mappe vengono confrontato elemento per elemento.  
+ La funzione di operatore restituisce `right` `<` `left`. Che consente di testare se `left` ordinate dopo `right` quando due mappe vengono confrontato elemento per elemento.  
   
 ### <a name="example"></a>Esempio  
   
@@ -2841,7 +2841,7 @@ template<typename Key,
  Contenitore destro da confrontare.  
   
 ### <a name="remarks"></a>Note  
- La funzione di operatore restituisce `!(left` `<` `right)`. Utilizzati per verificare se `left` non viene ordinato prima `right` quando due mappe vengono confrontato elemento per elemento.  
+ La funzione di operatore restituisce `!(left` `<` `right)`. Che consente di testare se `left` non viene ordinato prima `right` quando due mappe vengono confrontato elemento per elemento.  
   
 ### <a name="example"></a>Esempio  
   

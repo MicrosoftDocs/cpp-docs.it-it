@@ -22,15 +22,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bee22940fb197d480f4ae3550d8dd59780c256b5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: df3c052f3cefb3aa7d2a55e81fd5f7813632ceb1
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370181"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37078283"
 ---
 # <a name="csharedfile-class"></a>Classe CSharedFile
-Il [CMemFile](../../mfc/reference/cmemfile-class.md)-classe derivata che supporta i file di memoria condivisa.  
+Il [CMemFile](../../mfc/reference/cmemfile-class.md)-classe derivata che supporta file di memoria condivisa.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -51,20 +51,20 @@ class CSharedFile : public CMemFile
 |Nome|Descrizione|  
 |----------|-----------------|  
 |[CSharedFile::Detach](#detach)|Chiude il file di memoria condivisa e restituisce l'handle del relativo blocco di memoria.|  
-|[CSharedFile::SetHandle](#sethandle)|Allega il file di memoria condivisa per un blocco di memoria.|  
+|[CSharedFile::SetHandle](#sethandle)|Collega il file di memoria condivisa a un blocco di memoria.|  
   
 ## <a name="remarks"></a>Note  
- File di memoria si comportano come file su disco, ad eccezione del fatto che il file viene archiviato nella RAM piuttosto che sul disco. Un file di memoria è utile per l'archiviazione temporanea veloce o per il trasferimento dei byte non elaborati o oggetti serializzati tra processi indipendenti.  
+ File di memoria si comportano come file su disco con la differenza che il file viene archiviato nella RAM piuttosto che sul disco. Un file di memoria è utile per l'archiviazione temporanea fast o per il trasferimento dei byte non elaborati o oggetti serializzati tra processi indipendenti.  
   
- File di memoria condivisa differiscono da altri file di memoria in memoria per essi è stata allocata con il [GlobalAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366574) funzione di Windows. Il `CSharedFile` classe archivia i dati in un blocco di memoria allocata a livello globale (creato utilizzando **GlobalAlloc**), e questo blocco di memoria può essere condivisi tramite DDE, negli Appunti o altri OLE/COM uniform operazioni di trasferimento dati, ad esempio, utilizzando `IDataObject`.  
+ I file di memoria condivisa si differenziano dagli altri file di memoria in memoria per essi è stata allocata con il [GlobalAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366574) funzione di Windows. Il `CSharedFile` classe archivia i dati in un blocco di memoria allocata a livello globale (creato usando `GlobalAlloc`), e questo blocco di memoria può essere condivise tramite DDE, gli Appunti o altri OLE/COM uniform operazioni di trasferimento dati, ad esempio, utilizzando `IDataObject`.  
   
- **GlobalAlloc** restituisce un `HGLOBAL` gestire anziché un puntatore alla memoria, ad esempio il puntatore restituito da [malloc](../../c-runtime-library/reference/malloc.md). Il `HGLOBAL` handle necessario in alcune applicazioni. Ad esempio, di inserire dati negli Appunti è necessario un `HGLOBAL` gestire.  
+ `GlobalAlloc` Restituisce un `HGLOBAL` gestire anziché un puntatore alla memoria, ad esempio il puntatore restituito da [malloc](../../c-runtime-library/reference/malloc.md). Il `HGLOBAL` handle è necessaria in alcune applicazioni. Ad esempio, di inserire dati negli Appunti è necessario un `HGLOBAL` gestire.  
   
- Si noti che `CSharedFile` non mappato alla memoria utilizzare file e i dati non possono essere condiviso direttamente tra processi.  
+ Tenere presente che `CSharedFile` non mappato alla memoria utilizzare file e i dati non possono essere condiviso direttamente tra processi.  
   
- `CSharedFile` oggetti automaticamente possono allocare la memoria o è possibile collegare il propria blocco di memoria per il `CSharedFile` oggetto chiamando [CSharedFile::SetHandle](#sethandle). In entrambi i casi, viene allocata la memoria per l'aumento delle dimensioni nel file di memoria automaticamente `nGrowBytes`-dimensioni incrementi se `nGrowBytes` è diverso da zero.  
+ `CSharedFile` oggetti automaticamente possono allocare la memoria o è possibile collegare il propria blocco di memoria per il `CSharedFile` oggetto chiamando [CSharedFile::SetHandle](#sethandle). In entrambi i casi, viene allocata la memoria per l'aumento delle dimensioni nel file di memoria automaticamente `nGrowBytes`-dimensioni incrementi se `nGrowBytes` non è zero.  
   
- Per ulteriori informazioni, vedere l'articolo [file in MFC](../../mfc/files-in-mfc.md) e [gestione File](../../c-runtime-library/file-handling.md) nel *riferimenti alla libreria di Run-Time*.  
+ Per altre informazioni, vedere l'articolo [file in MFC](../../mfc/files-in-mfc.md) e [gestione File](../../c-runtime-library/file-handling.md) nel *riferimenti alla libreria di Run-Time*.  
   
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -91,8 +91,8 @@ CSharedFile(
  *nAllocFlags*  
  Flag che indica come è possibile allocare memoria. Vedere [GlobalAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366574) per un elenco di valori di flag validi.  
   
- `nGrowBytes`  
- L'incremento di allocazione della memoria in byte.  
+ *nGrowBytes*  
+ L'incremento di allocazione di memoria in byte.  
   
 ##  <a name="detach"></a>  CSharedFile::Detach  
  Chiamare questa funzione per chiudere il file di memoria e lo scollegamento dal blocco di memoria.  
@@ -120,11 +120,11 @@ void SetHandle(
  *hGlobalMemory*  
  Handle per la memoria globale per collegare il `CSharedFile`.  
   
- `bAllowGrow`  
+ *bAllowGrow*  
  Specifica se il blocco di memoria può raggiungere.  
   
 ### <a name="remarks"></a>Note  
- Se `bAllowGrow` viene effettuato diverso da zero, la dimensione del blocco di memoria viene aumentata in base alle esigenze, ad esempio, se un tentativo di scrivere più byte nel file che sono stati allocati per il blocco di memoria.  
+ Se *bAllowGrow* è diverso da zero, la dimensione del blocco di memoria viene aumentata in base alle esigenze, ad esempio, se un tentativo di tentato di scrivere più byte nel file che sono stati allocati per il blocco di memoria.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Classe CMemFile](../../mfc/reference/cmemfile-class.md)   

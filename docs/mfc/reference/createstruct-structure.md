@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e51aed1eb7f74c721a5a4da092f205a2492ba5f7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b7bc510f0d0cfc88476c9e222f51bcfeb958e31a
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370871"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37078467"
 ---
 # <a name="createstruct-structure"></a>Struttura CREATESTRUCT
 Il `CREATESTRUCT` struttura definisce i parametri di inizializzazione passati alla routine della finestra di un'applicazione.  
@@ -46,40 +46,40 @@ typedef struct tagCREATESTRUCT {
 ```  
   
 #### <a name="parameters"></a>Parametri  
- `lpCreateParams`  
- Punta ai dati da utilizzare per creare una finestra.  
+ *lpCreateParams*  
+ Punta ai dati da utilizzare per creare la finestra.  
   
- `hInstance`  
+ *hInstance*  
  Identifica l'handle dell'istanza di modulo del modulo che contiene la nuova finestra.  
   
- `hMenu`  
- Identifica il menu da utilizzare per la nuova finestra. Se una finestra figlio, contiene l'ID intero.  
+ *hMenu*  
+ Identifica il menu da utilizzare per la nuova finestra. Se una finestra figlio, contiene l'ID di tipo integer.  
   
- `hwndParent`  
+ *hwndParent*  
  Identifica la finestra proprietaria della nuova finestra. Questo membro è **NULL** se la finestra nuova finestra di primo livello.  
   
- `cy`  
+ *CY*  
  Specifica l'altezza della nuova finestra.  
   
- `cx`  
+ *CX*  
  Specifica la larghezza della nuova finestra.  
   
- `y`  
- Specifica la coordinata y dell'angolo superiore sinistro della nuova finestra. Le coordinate sono rispetto alla finestra padre se la nuova finestra è una finestra figlio. in caso contrario le coordinate sono relative all'origine schermata.  
+ *y*  
+ Specifica la coordinata y dell'angolo superiore sinistro della nuova finestra. Le coordinate sono relativi alla finestra padre se la nuova finestra è una finestra figlio. in caso contrario, le coordinate sono di origine dello schermo.  
   
- `x`  
- Specifica la coordinata x dell'angolo superiore sinistro della nuova finestra. Le coordinate sono rispetto alla finestra padre se la nuova finestra è una finestra figlio. in caso contrario le coordinate sono relative all'origine schermata.  
+ *x*  
+ Specifica la coordinata x dell'angolo superiore sinistro della nuova finestra. Le coordinate sono relativi alla finestra padre se la nuova finestra è una finestra figlio. in caso contrario, le coordinate sono di origine dello schermo.  
   
- `style`  
+ *Stile*  
  Specifica la nuova finestra [stile](../../mfc/reference/styles-used-by-mfc.md).  
   
- `lpszName`  
+ *lpszName*  
  Punta a una stringa con terminazione null che specifica il nome della nuova finestra.  
   
- `lpszClass`  
+ *lpszClass*  
  Punta a una stringa con terminazione null che specifica nome di classe della finestra Nuovo Windows (un [WNDCLASS](http://msdn.microsoft.com/library/windows/desktop/ms633576) struttura; per ulteriori informazioni, vedi il Windows SDK).  
   
- `dwExStyle`  
+ *dwExStyle*  
  Specifica il [stile esteso](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles) per la nuova finestra.  
   
 ## <a name="requirements"></a>Requisiti  

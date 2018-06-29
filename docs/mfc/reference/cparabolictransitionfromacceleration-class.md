@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 02cf84f2774a10ec0ca2751dbeffd4eb3c52e8a2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5f54f600e9a98304f1113c6e9e22389f6c974a80
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370975"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37078895"
 ---
 # <a name="cparabolictransitionfromacceleration-class"></a>Classe CParabolicTransitionFromAcceleration
 Incapsula una transizione di accelerazione parabolica.  
@@ -65,7 +65,7 @@ class CParabolicTransitionFromAcceleration : public CBaseTransition;
 |[CParabolicTransitionFromAcceleration::m_dblFinalVelocity](#m_dblfinalvelocity)|La velocità della variabile di animazione alla fine della transizione.|  
   
 ## <a name="remarks"></a>Note  
- Durante una transizione di accelerazione parabolica, modifica il valore della variabile di animazione dal valore iniziale per il valore finale termina con una velocità specificata. È possibile controllare la variabile raggiunge il valore finale specificando la frequenza di accelerazione. Poiché tutte le transizioni vengono cancellate automaticamente, è consigliabile per assegnarle utilizzando l'operatore new. L'oggetto COM IUIAnimationTransition incapsulato viene creato da CAnimationController:: AnimateGroup, finché non è NULL. Modifica le variabili membro dopo la creazione dell'oggetto COM non ha alcun effetto.  
+ Durante una transizione di accelerazione parabolica, cambia il valore della variabile di animazione dal valore iniziale per il valore finale termina con una velocità specificata. È possibile controllare con quale velocità variabile raggiunge il valore finale, specificando la frequenza di accelerazione. Poiché tutte le transizioni vengono cancellate automaticamente, è consigliabile per assegnarle utilizzando l'operatore new. L'oggetto COM IUIAnimationTransition incapsulato viene creato da CAnimationController:: AnimateGroup, finché non è NULL. Per modificare le variabili membro dopo la creazione di questo oggetto COM non ha alcun effetto.  
   
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -88,13 +88,13 @@ CParabolicTransitionFromAcceleration(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `dblFinalValue`  
+ *dblFinalValue*  
  Il valore della variabile di animazione alla fine della transizione.  
   
- `dblFinalVelocity`  
+ *dblFinalVelocity*  
  La velocità della variabile di animazione alla fine della transizione.  
   
- `dblAcceleration`  
+ *dblAcceleration*  
  L'accelerazione della variabile di animazione durante la transizione.  
   
 ##  <a name="create"></a>  CParabolicTransitionFromAcceleration::Create  
@@ -107,11 +107,11 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `pLibrary`  
- Puntatore alla raccolta di transizione, che è responsabile della creazione di transizioni standard.  
+ *pLibrary*  
+ Puntatore alla raccolta di transizione, che è responsabile per la creazione di transizioni standard.  
   
 ### <a name="return-value"></a>Valore restituito  
- TRUE se transizione viene creata correttamente. in caso contrario FALSE.  
+ TRUE se transizione viene creata correttamente. in caso contrario, FALSE.  
   
 ##  <a name="m_dblacceleration"></a>  CParabolicTransitionFromAcceleration::m_dblAcceleration  
  L'accelerazione della variabile di animazione durante la transizione.  

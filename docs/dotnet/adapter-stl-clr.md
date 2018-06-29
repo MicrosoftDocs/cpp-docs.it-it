@@ -59,12 +59,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 598159ff01fe1628a693085f84077d9adfcbbf49
-ms.sourcegitcommit: 301bb19056e5bae84ff50f7d1df1e546efe225ba
+ms.openlocfilehash: a472284df67993a65de98df7db698ea533451ea3
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36305542"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079436"
 ---
 # <a name="adapter-stlclr"></a>adapter (STL/CLR)
 L'intestazione STL/CLR `<cliext/adapter>` specifica due classi di modello (`collection_adapter` e `range_adapter`), la funzione di modello e `make_collection`.  
@@ -80,19 +80,21 @@ L'intestazione STL/CLR `<cliext/adapter>` specifica due classi di modello (`coll
   
  **Namespace:** cliext 
   
-## <a name="members"></a>Membri  
+## <a name="declarations"></a>Dichiarazioni  
   
 |Classe|Descrizione|  
 |-----------|-----------------|  
-|[collection_adapter (STL/CLR)](#collection_adapter)|Esegue il wrapping dell'insieme di libreria di classi Base (BCL) come un intervallo.|  
-|[range_adapter (STL/CLR)](#range_adapter)|Esegue il wrapping dell'intervallo come una raccolta di BCL.|  
+|[collection_adapter (STL/CLR)](#collection_adapter)|Esegue il wrapping raccolta libreria di classi Base (BCL) sotto forma di intervallo.|  
+|[range_adapter (STL/CLR)](#range_adapter)|Esegue il wrapping dell'intervallo come raccolta BCL.|  
 
 |Funzione|Descrizione|  
 |--------------|-----------------|  
 |[make_collection (STL/CLR)](#make_collection)|Crea un adattatore di intervallo mediante una coppia di iteratori.|   
   
+## <a name="members"></a>Membri
+
 ## <a name="collection_adapter"></a> collection_adapter (STL/CLR)
-Esegue il wrapping di una raccolta di .NET per l'utilizzo come un contenitore STL/CLR. Oggetto `collection_adapter` è una classe modello che descrive un oggetto contenitore STL/CLR semplice. Esegue il wrapping di un'interfaccia della libreria di classi Base (BCL) e restituisce una coppia iteratore che consente di modificare la sequenza controllata.  
+Esegue il wrapping di una raccolta di .NET per l'utilizzo come un contenitore STL/CLR. Oggetto `collection_adapter` è una classe modello che descrive un oggetto contenitore STL/CLR semplice. Esegue il wrapping di un'interfaccia di libreria di classi Base (BCL) e restituisce una coppia iteratore che consente di modificare la sequenza controllata.  
   
 ### <a name="syntax"></a>Sintassi  
   
@@ -128,7 +130,7 @@ template<typename Key,
 ```  
   
 ##### <a name="parameters"></a>Parametri  
- Comprimi  
+ Coll  
  Il tipo della raccolta sottoposta a wrapping.  
   
 ### <a name="specializations"></a>Specializzazioni  
@@ -151,14 +153,14 @@ template<typename Key,
 |[collection_adapter::difference_type (STL/CLR)](#difference_type)|Tipo di una distanza Signed tra due elementi.|  
 |[collection_adapter::iterator (STL/CLR)](#iterator)|Tipo di un iteratore per la sequenza controllata.|  
 |[collection_adapter::key_type (STL/CLR)](#key_type)|Il tipo di una chiave del dizionario.|  
-|[collection_adapter::mapped_type (STL/CLR)](#mapped_type)|Il tipo di un valore di dizionario.|  
+|[collection_adapter::mapped_type (STL/CLR)](#mapped_type)|Il tipo di un valore del dizionario.|  
 |[collection_adapter::reference (STL/CLR)](#reference)|Tipo di un riferimento a un elemento.|  
 |[collection_adapter::size_type (STL/CLR)](#size_type)|Tipo di una distanza Signed tra due elementi.|  
 |[collection_adapter::value_type (STL/CLR)](#value_type)|Tipo di un elemento.|  
   
 |Funzione membro|Descrizione|  
 |---------------------|-----------------|  
-|[collection_adapter::base (STL/CLR)](#base)|Definisce l'interfaccia BCL sottoposta a wrapping.|  
+|[collection_adapter::base (STL/CLR)](#base)|Consente di definire l'interfaccia BCL sottoposta a wrapping.|  
 |[collection_adapter::begin (STL/CLR)](#begin)|Indica l'inizio della sequenza controllata.|  
 |[collection_adapter::collection_adapter (STL/CLR)](#collection_adapter_collection_adapter)|Costruisce un oggetto adattatore.|  
 |[collection_adapter::end (STL/CLR)](#end)|Designa la fine della sequenza controllata.|  
@@ -167,13 +169,13 @@ template<typename Key,
   
 |Operatore|Descrizione|  
 |--------------|-----------------|  
-|[collection_adapter::operator= (STL/CLR)](#op_eq)|Sostituisce l'handle memorizzato BCL.|  
+|[collection_adapter::operator= (STL/CLR)](#op_eq)|Sostituisce l'handle BCL stored.|  
   
 ### <a name="remarks"></a>Note  
- Utilizzare questa classe di modello per modificare un contenitore BCL come un contenitore STL/CLR. Il `collection_adapter` archivia un handle a un'interfaccia BCL, che a sua volta controlla una sequenza di elementi. Oggetto `collection_adapter` oggetto `X` restituisce una coppia di iteratori input `X.begin()` e `X.end()` che si utilizza per visitare gli elementi, in ordine. Alcune delle specializzazioni consentono inoltre di scrivere `X.size()` per determinare la lunghezza della sequenza controllata.  
+ Utilizzare questa classe di modello per modificare un contenitore BCL come un contenitore STL/CLR. Il `collection_adapter` archivia un handle a un'interfaccia BCL, che a sua volta controlla una sequenza di elementi. Un `collection_adapter` oggetto `X` restituisce una coppia di iteratori di input `X.begin()` e `X.end()` che si utilizza per visitare gli elementi, in ordine. Alcune delle specializzazioni consentono inoltre di scrivere `X.size()` per determinare la lunghezza della sequenza controllata.  
 
 ## <a name="base"></a> collection_adapter::base (STL/CLR)
-Definisce l'interfaccia BCL sottoposta a wrapping.  
+Consente di definire l'interfaccia BCL sottoposta a wrapping.  
   
 ### <a name="syntax"></a>Sintassi  
   
@@ -279,7 +281,7 @@ collection_adapter(Coll^ collection);
   
 #### <a name="parameters"></a>Parametri  
  raccolta  
- Handle di libreria di classi base per eseguire il wrapping.  
+ Handle BCL per eseguire il wrapping.  
   
  right  
  Oggetto da copiare.  
@@ -295,13 +297,13 @@ collection_adapter(Coll^ collection);
   
  `collection_adapter(collection_adapter<Coll>% right);`  
   
- Inizializza l'handle memorizzato con `right.` [collection_adapter::base (STL/CLR)](../dotnet/collection-adapter-base-stl-clr.md)`()`.  
+ Inizializza l'handle con stored `right.` [collection_adapter::base (STL/CLR)](../dotnet/collection-adapter-base-stl-clr.md)`()`.  
   
  Il costruttore:  
   
  `collection_adapter(collection_adapter<Coll>^ right);`  
   
- Inizializza l'handle memorizzato con `right->` [collection_adapter::base (STL/CLR)](../dotnet/collection-adapter-base-stl-clr.md)`()`.  
+ Inizializza l'handle con stored `right->` [collection_adapter::base (STL/CLR)](../dotnet/collection-adapter-base-stl-clr.md)`()`.  
   
  Il costruttore:  
   
@@ -462,7 +464,7 @@ typedef T1 iterator;
 ```  
   
 ### <a name="remarks"></a>Note  
- Il tipo descrive un oggetto di tipo non specificato `T1` che può essere utilizzato come un iteratore di input per la sequenza controllata.  
+ Il tipo descrive un oggetto di tipo non specificato `T1` che può essere usato come iteratore di input per la sequenza controllata.  
   
 ### <a name="example"></a>Esempio  
   
@@ -506,7 +508,7 @@ typedef Key key_type;
 ```  
   
 ### <a name="remarks"></a>Note  
- Il tipo è un sinonimo del parametro di modello `Key`, in una specializzazione per `IDictionary` o `IDictionary<Value>`; in caso contrario non è definito.  
+ Il tipo è un sinonimo del parametro di modello `Key`, in una specializzazione per `IDictionary` o `IDictionary<Value>`; in caso contrario, non è definito.  
   
 ### <a name="example"></a>Esempio  
   
@@ -546,7 +548,7 @@ int main()
 ```  
 
 ## <a name="mapped_type"></a> collection_adapter::mapped_type (STL/CLR)
-Il tipo di un valore di dizionario.  
+Il tipo di un valore del dizionario.  
   
 ### <a name="syntax"></a>Sintassi  
   
@@ -555,7 +557,7 @@ typedef Value mapped_type;
 ```  
   
 ### <a name="remarks"></a>Note  
- Il tipo è un sinonimo del parametro di modello `Value`, in una specializzazione per `IDictionary` o `IDictionary<Value>`; in caso contrario non è definito.  
+ Il tipo è un sinonimo del parametro di modello `Value`, in una specializzazione per `IDictionary` o `IDictionary<Value>`; in caso contrario, non è definito.  
   
 ### <a name="example"></a>Esempio  
   
@@ -595,7 +597,7 @@ int main()
 ```  
 
 ## <a name="op_eq"></a> collection_adapter::operator = (STL/CLR)
-Sostituisce l'handle memorizzato BCL.  
+Sostituisce l'handle BCL stored.  
   
 ### <a name="syntax"></a>Sintassi  
   
@@ -608,7 +610,7 @@ collection_adapter<Coll>% operator=(collection_adapter<Coll>% right);
  Adapter da copiare.  
   
 ### <a name="remarks"></a>Note  
- Le copie di operatore membro `right` all'oggetto, quindi restituisce `*this`. Usarlo per sostituire l'handle BCL stored con una copia dell'handle BCL stored in `right`.  
+ Le copie di operatore membro `right` sull'oggetto, quindi restituisce `*this`. Che consente di sostituire l'handle BCL stored con una copia dell'handle BCL stored in `right`.  
   
 ### <a name="example"></a>Esempio  
   
@@ -706,7 +708,7 @@ size_type size();
 ```  
   
 ### <a name="remarks"></a>Note  
- La funzione membro restituisce la lunghezza della sequenza controllata. Non è definito in una specializzazione per `IEnumerable` o `IEnumerable<Value>`.  
+ La funzione membro restituisce la lunghezza della sequenza controllata. Non è stata definita in una specializzazione per `IEnumerable` o `IEnumerable<Value>`.  
   
 ### <a name="example"></a>Esempio  
   
@@ -859,7 +861,7 @@ typedef Value value_type;
 ```  
   
 ### <a name="remarks"></a>Note  
- Il tipo è un sinonimo del parametro di modello `Value`, se presente nella specializzazione; in caso contrario è un sinonimo per `System::Object^`.  
+ Il tipo è un sinonimo del parametro di modello `Value`, se presente nella specializzazione; in caso contrario, è un sinonimo per `System::Object^`.  
   
 ### <a name="example"></a>Esempio  
   
@@ -898,7 +900,7 @@ a b c
 ```  
 
 ## <a name="make_collection"></a> make_collection (STL/CLR)
-Rendere un `range_adapter` da una coppia di iteratori.  
+Rendere una `range_adapter` da una coppia di iteratori.  
   
 ### <a name="syntax"></a>Sintassi  
   
@@ -918,7 +920,7 @@ template<typename Iter>
  Secondo iteratore per eseguire il wrapping.  
   
 ### <a name="remarks"></a>Note  
- La funzione modello restituisce `gcnew range_adapter<Iter>(first, last)`. Utilizzato per costruire un `range_adapter<Iter>` oggetto da una coppia di iteratori.  
+ La funzione modello restituisce `gcnew range_adapter<Iter>(first, last)`. Che consente di costruire un `range_adapter<Iter>` oggetto da una coppia di iteratori.  
   
 ### <a name="example"></a>Esempio  
   
@@ -974,7 +976,7 @@ SyncRoot not nullptr = True
 ```  
 
 ## <a name="range_adapter"></a> range_adapter (STL/CLR)
-Classe modello che esegue il wrapping di una coppia di iteratori che consentono di implementare più interfacce di libreria di classi Base (BCL). Utilizzare il range_adapter per modificare un intervallo STL/CLR come se fosse un insieme di BCL.  
+Classe modello che esegue il wrapping di una coppia di iteratori che consentono di implementare più interfacce di libreria di classi Base (BCL). Utilizzare il range_adapter per modificare un intervallo di STL/CLR come se fosse un insieme di BCL.  
   
 ### <a name="syntax"></a>Sintassi  
   
@@ -990,7 +992,7 @@ template<typename Iter>
 ```  
   
 #### <a name="parameters"></a>Parametri  
- iter  
+ Iter  
  Il tipo associato gli iteratori sottoposta a wrapping.  
   
 ### <a name="members"></a>Membri  
@@ -1007,13 +1009,13 @@ template<typename Iter>
   
 |Interfaccia|Descrizione|  
 |---------------|-----------------|  
-|<xref:System.Collections.IEnumerable>|Scorre gli elementi nella raccolta.|  
+|<xref:System.Collections.IEnumerable>|Scorre gli elementi della raccolta.|  
 |<xref:System.Collections.ICollection>|Gestisce un gruppo di elementi.|  
 |<xref:System.Collections.Generic.IEnumerable%601>|Elementi tipizzati nella raccolta vengono scorsi...|  
 |<xref:System.Collections.Generic.ICollection%601>|Gestisce un gruppo di elementi tipizzati.|  
   
 ### <a name="remarks"></a>Note  
- Il range_adapter archivia una coppia di iteratori, che a sua volta delimitare una sequenza di elementi. L'oggetto implementa quattro interfacce di libreria di classi base che consentono di scorrere gli elementi, in ordine. Utilizzare questa classe di modello per modificare gli intervalli STL/CLR come contenitori BCL.  
+ Il range_adapter archivia una coppia di iteratori, che a sua volta delimitare una sequenza di elementi. L'oggetto implementa quattro interfacce BCL che consentono di scorrere gli elementi, in ordine. Utilizzare questa classe di modello per modificare gli intervalli STL/CLR Analogamente contenitori BCL.  
 
 ## <a name="range_adapter_op_eq"></a> range_adapter::operator = (STL/CLR)
 Sostituisce la coppia iteratore archiviato.  
@@ -1029,7 +1031,7 @@ range_adapter<Iter>% operator=(range_adapter<Iter>% right);
  Adapter da copiare.  
   
 ### <a name="remarks"></a>Note  
- Le copie di operatore membro `right` all'oggetto, quindi restituisce `*this`. Usarlo per sostituire la coppia iteratore archiviato con una copia della coppia iteratore archiviato in `right`.  
+ Le copie di operatore membro `right` sull'oggetto, quindi restituisce `*this`. Che consente di sostituire la coppia iteratore archiviato con una copia della coppia iteratore archiviato in `right`.  
   
 ### <a name="example"></a>Esempio  
   

@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 623e341610fbecb3dfc9ea0c2e2eed5ee06abebb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 21ec3a9491054ac6ecd0cdb4aad0c4c91d13dbd6
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33373466"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079052"
 ---
 # <a name="creversaltransition-class"></a>Classe CReversalTransition
 Incapsula una transizione di inversione.  
@@ -59,7 +59,7 @@ class CReversalTransition : public CBaseTransition;
 |[CReversalTransition::m_duration](#m_duration)|La durata della transizione.|  
   
 ## <a name="remarks"></a>Note  
- Una transizione di inversione cambia facilmente la direzione per una durata specificata. Il valore finale sarà lo stesso come valore iniziale e la velocità finale sarà negativo della velocità iniziale. Poiché tutte le transizioni vengono cancellate automaticamente, è consigliabile per assegnarle utilizzando l'operatore new. L'oggetto COM IUIAnimationTransition incapsulato viene creato da CAnimationController:: AnimateGroup, finché non è NULL. Modifica le variabili membro dopo la creazione dell'oggetto COM non ha alcun effetto.  
+ Una transizione di inversione cambia facilmente la direzione su periodi di tempo specificato. Il valore finale sarà identico al valore iniziale e la velocità finale sarà il corrispondente negativo del velocità iniziale. Poiché tutte le transizioni vengono cancellate automaticamente, è consigliabile per assegnarle utilizzando l'operatore new. L'oggetto COM IUIAnimationTransition incapsulato viene creato da CAnimationController:: AnimateGroup, finché non è NULL. Per modificare le variabili membro dopo la creazione di questo oggetto COM non ha alcun effetto.  
   
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -81,11 +81,11 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `pLibrary`  
- Puntatore alla raccolta di transizione, che è responsabile della creazione di transizioni standard.  
+ *pLibrary*  
+ Puntatore alla raccolta di transizione, che è responsabile per la creazione di transizioni standard.  
   
 ### <a name="return-value"></a>Valore restituito  
- TRUE se transizione viene creata correttamente. in caso contrario FALSE.  
+ TRUE se transizione viene creata correttamente. in caso contrario, FALSE.  
   
 ##  <a name="creversaltransition"></a>  CReversalTransition::CReversalTransition  
  Costruisce un oggetto di transizione di inversione e inizializza la sua durata.  
@@ -95,7 +95,7 @@ CReversalTransition(UI_ANIMATION_SECONDS duration);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `duration`  
+ *Durata*  
  La durata della transizione.  
   
 ##  <a name="m_duration"></a>  CReversalTransition::m_duration  

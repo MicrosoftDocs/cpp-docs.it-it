@@ -69,17 +69,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 078fd71dac8144e7aa6fda5772b820b086a78457
-ms.sourcegitcommit: 301bb19056e5bae84ff50f7d1df1e546efe225ba
+ms.openlocfilehash: b24bf0eab913285559ec9905762e239841c93a00
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36305527"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079733"
 ---
 # <a name="stack-stlclr"></a>stack (STL/CLR)
 La classe modello descrive un oggetto che controlla una sequenza di lunghezza variabile di elementi che dispone dell'accesso last-in First-Out. Si utilizza l'adapter contenitore `stack` per gestire un contenitore sottostante come uno stack di push-down.  
   
- Nella sezione successiva, `GValue` equivale `Value` , a meno che quest'ultimo è un tipo riferimento, nel qual caso è `Value^`. Analogamente, `GContainer` equivale `Container` , a meno che quest'ultimo è un tipo riferimento, nel qual caso è `Container^`.  
+ In seguito, la descrizione `GValue` corrisponde al `Value` a meno che quest'ultimo è un tipo riferimento, nel qual caso è `Value^`. Analogamente, `GContainer` corrisponde al `Container` a meno che quest'ultimo è un tipo riferimento, nel qual caso è `Container^`.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -93,7 +93,7 @@ template<typename Value,
     { ..... };  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parametri  
  Valore  
  Tipo di un elemento nella sequenza controllata.  
   
@@ -137,7 +137,7 @@ template<typename Value,
 |Operatore|Descrizione|  
 |--------------|-----------------|  
 |[stack::operator= (STL/CLR)](#op_as)|Sostituisce la sequenza controllata.|  
-|[operator!= (stack) (STL/CLR)](#op_neq)|Determina se un `stack` oggetto non è uguale a un altro `stack` oggetto.|  
+|[operator!= (stack) (STL/CLR)](#op_neq)|Determina se un `stack` non è uguale a un altro oggetto `stack` oggetto.|  
 |[operator< (stack) (STL/CLR)](#op_lt)|Determina se un `stack` oggetto è minore di un altro `stack` oggetto.|  
 |[operator<= (stack) (STL/CLR)](#op_lteq)|Determina se un `stack` oggetto è minore o uguale a un altro `stack` oggetto.|  
 |[operator== (stack) (STL/CLR)](#op_eq)|Determina se un `stack` è uguale a un altro oggetto `stack` oggetto.|  
@@ -149,10 +149,10 @@ template<typename Value,
 |Interfaccia|Descrizione|  
 |---------------|-----------------|  
 |<xref:System.ICloneable>|Duplicare un oggetto.|  
-|IStack\<valore, contenitore >|Gestire gli adattatori del contenitore generico.|  
+|IStack\<valore, contenitore >|Gestire adapter di contenitore generico.|  
   
 ## <a name="remarks"></a>Note  
- L'oggetto alloca e libera spazio di archiviazione per la sequenza da esso controllata tramite un contenitore sottostante, di tipo `Container`, che archivia `Value` elementi e aumento delle dimensioni su richiesta. L'oggetto limita l'accesso a push e si estraggono solo l'ultimo elemento, l'implementazione di una coda last-in First-Out (noto anche come una coda LIFO o stack).  
+ L'oggetto alloca e libera automaticamente spazio di archiviazione per la sequenza che controlla tramite un contenitore sottostante, di tipo `Container`, che archivia `Value` elementi e aumento delle dimensioni su richiesta. L'oggetto limita l'accesso per il push e operazione pop solo l'ultimo elemento, l'implementazione di una coda last-in First-Out (noto anche come una coda LIFO o stack).  
  
 ## <a name="members"></a>Membri
 
@@ -359,7 +359,7 @@ bool empty();
 ```  
   
 ### <a name="remarks"></a>Note  
- La funzione membro restituisce true per una sequenza controllata vuota. È equivalente a [stack:: Size (STL/CLR)](../dotnet/stack-size-stl-clr.md)`() == 0`. Utilizzarla per verificare se lo stack è vuoto.  
+ La funzione membro restituisce true per una sequenza controllata vuota. È equivalente a [stack::size (STL/CLR)](../dotnet/stack-size-stl-clr.md)`() == 0`. Utilizzarla per verificare se lo stack è vuoto.  
   
 ### <a name="example"></a>Esempio  
   
@@ -413,7 +413,7 @@ typedef Microsoft::VisualC::StlClr::IStack<Value>
 ```  
   
 ### <a name="remarks"></a>Note  
- Il tipo descrive l'interfaccia generica per questa classe di adattatori di contenitore di modello.  
+ Tipo che descrive l'interfaccia generica per questa classe di adattatori di contenitore di modello.  
   
 ### <a name="example"></a>Esempio  
   
@@ -474,7 +474,7 @@ typedef GValue generic_value;
 ```  
   
 ### <a name="remarks"></a>Note  
- Il tipo descrive un oggetto di tipo `GValue` che descrive il valore dell'elemento archiviato per l'utilizzo con l'interfaccia generica per questa classe di contenitori di modelli. (`GValue` è `value_type` o `value_type^` se `value_type` è un tipo di riferimento.)  
+ Il tipo descrive un oggetto di tipo `GValue` che descrive il valore dell'elemento archiviato per l'utilizzo con l'interfaccia generica per questa classe di contenitori di modelli. (`GValue` può essere `value_type` oppure `value_type^` se `value_type` è un tipo di riferimento.)  
   
 ### <a name="example"></a>Esempio  
   
@@ -576,7 +576,7 @@ stack <Value, Container>% operator=(stack <Value, Container>% right);
  Scheda contenitore da copiare.  
   
 ### <a name="remarks"></a>Note  
- Le copie di operatore membro `right` all'oggetto, quindi restituisce `*this`. Viene usato per sostituire la sequenza controllata con una copia della sequenza controllata in `right`.  
+ Le copie di operatore membro `right` sull'oggetto, quindi restituisce `*this`. Viene usato per sostituire la sequenza controllata con una copia della sequenza controllata in `right`.  
   
 ### <a name="example"></a>Esempio  
   
@@ -624,7 +624,7 @@ void pop();
 ```  
   
 ### <a name="remarks"></a>Note  
- La funzione membro rimuove l'ultimo elemento della sequenza controllata, che deve essere non vuoto. Utilizzarla per ridurre lo stack di un elemento sul retro.  
+ La funzione membro rimuove l'ultimo elemento della sequenza controllata, che deve essere non vuoto. Che consente di abbreviare lo stack di un elemento nella parte posteriore.  
   
 ### <a name="example"></a>Esempio  
   
@@ -671,7 +671,7 @@ void push(value_type val);
 ```  
   
 ### <a name="remarks"></a>Note  
- La funzione membro inserisce un elemento con valore `val` alla fine della sequenza controllata. Utilizzarlo per aggiungere un altro elemento allo stack.  
+ La funzione membro inserisce un elemento con valore `val` alla fine della sequenza controllata. Utilizzarla per aggiungere un altro elemento allo stack.  
   
 ### <a name="example"></a>Esempio  
   
@@ -749,7 +749,7 @@ a b c
 a b x  
 ```  
   
-## <a name="size"></a> stack:: Size (STL/CLR)
+## <a name="size"></a> stack::Size (STL/CLR)
 Conta il numero di elementi.  
   
 ### <a name="syntax"></a>Sintassi  
@@ -759,7 +759,7 @@ size_type size();
 ```  
   
 ### <a name="remarks"></a>Note  
- La funzione membro restituisce la lunghezza della sequenza controllata. Utilizzarla per determinare il numero di elementi attualmente presenti nella sequenza controllata. Se invece è rilevante se la sequenza è diverso da zero dimensioni, vedere [stack:: Empty (STL/CLR)](../dotnet/stack-empty-stl-clr.md)`()`.  
+ La funzione membro restituisce la lunghezza della sequenza controllata. Utilizzarla per determinare il numero di elementi attualmente presenti nella sequenza controllata. Se si è interessati se la sequenza di dimensioni diverso da zero, vedere [stack:: Empty (STL/CLR)](../dotnet/stack-empty-stl-clr.md)`()`.  
   
 ### <a name="example"></a>Esempio  
   
@@ -866,7 +866,7 @@ explicit stack(container_type% wrapped);
  right  
  Oggetto da copiare.  
   
- il wrapping  
+ eseguito il wrapping  
  Sottoposta a wrapping contenitore da usare.  
   
 ### <a name="remarks"></a>Note  
@@ -880,19 +880,19 @@ explicit stack(container_type% wrapped);
   
  `stack(stack<Value, Container>% right);`  
   
- Crea un contenitore incluso che è una copia di `right.get_container()`. Utilizzarlo per specificare una sequenza controllata iniziale che è una copia della sequenza controllata dall'oggetto stack `right`.  
+ Crea un contenitore con wrapper che è una copia di `right.get_container()`. Che consente di specificare una sequenza controllata iniziale che è una copia della sequenza controllata dall'oggetto stack `right`.  
   
  Il costruttore:  
   
  `stack(stack<Value, Container>^ right);`  
   
- Crea un contenitore incluso che è una copia di `right->get_container()`. Utilizzarlo per specificare una sequenza controllata iniziale che è una copia della sequenza controllata dall'oggetto stack `*right`.  
+ Crea un contenitore con wrapper che è una copia di `right->get_container()`. Che consente di specificare una sequenza controllata iniziale che è una copia della sequenza controllata dall'oggetto stack `*right`.  
   
  Il costruttore:  
   
  `explicit stack(container_type% wrapped);`  
   
- Usa il contenitore esistente `wrapped` come contenitore sottoposto a wrapping. È utilizzato per costruire un stack da un contenitore esistente.  
+ Usa il contenitore esistente `wrapped` come contenitore sottoposto a wrapping. Utilizzarla per creare uno stack da un contenitore esistente.  
   
 ### <a name="example"></a>Esempio  
   
@@ -1137,7 +1137,7 @@ c b a
 ```  
 
 ## <a name="op_neq"></a> operatore! = (stack) (STL/CLR)
-Stack di confronto non è uguale.  
+Stack non uguale a confronto.  
   
 ### <a name="syntax"></a>Sintassi  
   
@@ -1156,7 +1156,7 @@ template<typename Value,
  Contenitore destro da confrontare.  
   
 ### <a name="remarks"></a>Note  
- La funzione di operatore restituisce `!(left == right)`. Utilizzati per verificare se `left` non viene ordinato identico `right` quando due stack vengono confrontato elemento per elemento.  
+ La funzione di operatore restituisce `!(left == right)`. Che consente di testare se `left` non viene ordinato identico `right` quando due stack vengono confrontato elemento per elemento.  
   
 ### <a name="example"></a>Esempio  
   
@@ -1225,7 +1225,7 @@ template<typename Value,
  Contenitore destro da confrontare.  
   
 ### <a name="remarks"></a>Note  
- L'operatore funzione restituisce true se, per la posizione più bassa `i` per il quale `!(right[i] < left[i])` è anche vero che `left[i] < right[i]`. In caso contrario, restituisce `left->` [stack:: Size (STL/CLR)](../dotnet/stack-size-stl-clr.md) `() <` `right->size()` utilizzati per verificare se `left` viene ordinato prima `right` quando due stack vengono confrontato elemento per elemento.  
+ L'operatore funzione restituisce true se, per la posizione più bassa `i` per il quale `!(right[i] < left[i])` è anche vero che `left[i] < right[i]`. In caso contrario, restituisce `left->` [stack::size (STL/CLR)](../dotnet/stack-size-stl-clr.md) `() <` `right->size()` che consente di testare se `left` viene ordinato in posizione precedente `right` quando due stack vengono confrontato elemento per elemento.  
   
 ### <a name="example"></a>Esempio  
   
@@ -1275,7 +1275,7 @@ int main()
 ```  
 
 ## <a name="op_lteq"></a> operatore&lt;= (stack) (STL/CLR)
-Minore o uguale stack confronto.  
+Stack minore o uguale confronto.  
   
 ### <a name="syntax"></a>Sintassi  
   
@@ -1294,7 +1294,7 @@ template<typename Value,
  Contenitore destro da confrontare.  
   
 ### <a name="remarks"></a>Note  
- La funzione di operatore restituisce `!(right < left)`. Utilizzati per verificare se `left` non viene ordinato dopo `right` quando due stack vengono confrontato elemento per elemento.  
+ La funzione di operatore restituisce `!(right < left)`. Che consente di testare se `left` non viene ordinato dopo `right` quando due stack vengono confrontato elemento per elemento.  
   
 ### <a name="example"></a>Esempio  
   
@@ -1344,7 +1344,7 @@ int main()
 ```  
 
 ## <a name="op_eq"></a> operatore = = (stack) (STL/CLR)
-Stack di confronto uguale.  
+Confronto equal dello stack.  
   
 ### <a name="syntax"></a>Sintassi  
   
@@ -1363,7 +1363,7 @@ template<typename Value,
  Contenitore destro da confrontare.  
   
 ### <a name="remarks"></a>Note  
- La funzione di operatore restituisce true solo se le sequenze controllate da `left` e `right` hanno la stessa lunghezza e, per ogni posizione `i`, `left[i] ==` `right[i]`. Utilizzati per verificare se `left` viene ordinato identico `right` quando due stack vengono confrontato elemento per elemento.  
+ La funzione di operatore restituisce true solo se le sequenze controllate da `left` e `right` hanno la stessa lunghezza e, per ogni posizione `i`, `left[i] ==` `right[i]`. Che consente di testare se `left` viene ordinata quella `right` quando due stack vengono confrontato elemento per elemento.  
   
 ### <a name="example"></a>Esempio  
   
@@ -1432,7 +1432,7 @@ template<typename Value,
  Contenitore destro da confrontare.  
   
 ### <a name="remarks"></a>Note  
- La funzione di operatore restituisce `right` `<` `left`. Utilizzati per verificare se `left` viene ordinato dopo `right` quando due stack vengono confrontato elemento per elemento.  
+ La funzione di operatore restituisce `right` `<` `left`. Che consente di testare se `left` ordinate dopo `right` quando due stack vengono confrontato elemento per elemento.  
   
 ### <a name="example"></a>Esempio  
   
@@ -1501,7 +1501,7 @@ template<typename Value,
  Contenitore destro da confrontare.  
   
 ### <a name="remarks"></a>Note  
- La funzione di operatore restituisce `!(left < right)`. Utilizzati per verificare se `left` non viene ordinato prima `right` quando due stack vengono confrontato elemento per elemento.  
+ La funzione di operatore restituisce `!(left < right)`. Che consente di testare se `left` non viene ordinato prima `right` quando due stack vengono confrontato elemento per elemento.  
   
 ### <a name="example"></a>Esempio  
   
