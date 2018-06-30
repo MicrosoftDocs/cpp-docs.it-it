@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eb8c7d46a2ffc2d569cc123d51aaebbf43b5e328
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b2f5f0a72c08aeabcd764cf4c7763c9506769585
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33372405"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37121624"
 ---
 # <a name="cuintarray-class"></a>Classe CUIntArray
 Supporta matrici di Unsigned Integer.  
@@ -69,7 +69,7 @@ class CUIntArray : public CObject
 ```  
   
 ## <a name="members"></a>Membri  
- Le funzioni membro di `CUIntArray` sono simili alle funzioni membro della classe [CObArray](../../mfc/reference/cobarray-class.md). Grazie a questa somiglianza, per le specifiche delle funzioni membro è possibile usare la documentazione di riferimento di `CObArray`. Ogni volta che un `CObject` puntatore come parametro della funzione o valore restituito, sostituire con un **UINT**.  
+ Le funzioni membro `CUIntArray` sono simili alle funzioni membro della classe [CObArray](../../mfc/reference/cobarray-class.md). Grazie a questa somiglianza, per le specifiche delle funzioni membro è possibile usare la documentazione di riferimento di `CObArray`. Ovunque sia visualizzato un `CObject` puntatore come parametro della funzione o valore restituito, sostituire UINT.  
   
  `CObject* CObArray::GetAt( int <nIndex> ) const;`  
   
@@ -94,7 +94,7 @@ class CUIntArray : public CObject
 |[CObArray::FreeExtra](../../mfc/reference/cobarray-class.md#freeextra)|Libera tutta la memoria non utilizzata oltre limite il superiore corrente.|  
 |[CObArray::GetAt](../../mfc/reference/cobarray-class.md#getat)|Restituisce il valore in corrispondenza di un indice specificato.|  
 |[CObArray::GetCount](../../mfc/reference/cobarray-class.md#getcount)|Ottiene il numero di elementi nella matrice.|  
-|[CObArray::GetData](../../mfc/reference/cobarray-class.md#getdata)|Consente l'accesso a tutti gli elementi nella matrice. Può essere **NULL**.|  
+|[CObArray::GetData](../../mfc/reference/cobarray-class.md#getdata)|Consente l'accesso a tutti gli elementi nella matrice. Può essere NULL.|  
 |[CObArray::GetSize](../../mfc/reference/cobarray-class.md#getsize)|Ottiene il numero di elementi nella matrice.|  
 |[CObArray::GetUpperBound](../../mfc/reference/cobarray-class.md#getupperbound)|Restituisce il massimo indice valido.|  
 |[CObArray::InsertAt](../../mfc/reference/cobarray-class.md#insertat)|Inserisce un elemento (o tutti gli elementi di un'altra matrice) in corrispondenza di un indice specificato.|  
@@ -112,9 +112,9 @@ class CUIntArray : public CObject
 |[[] CObArray::operator](../../mfc/reference/cobarray-class.md#operator_at)|Imposta o ottiene l'elemento in corrispondenza dell'indice specificato.|  
   
 ## <a name="remarks"></a>Note  
- Intero senza segno, o **UINT**, differisce da parole e Double Word in cui la dimensione fisica di un **UINT** può cambiare a seconda della destinazione ambiente operativo. Oggetto **UINT** è la stessa dimensione come una parola doppia.  
+ Intero senza segno o UINT, diverso da parole e Double Word in quanto le dimensioni fisiche di UINT cambiare a seconda della destinazione ambiente operativo. UINT è la stessa dimensione di una parola doppia.  
   
- `CUIntArray` incorpora la [IMPLEMENT_DYNAMIC](run-time-object-model-services.md#implement_dynamic) macro per supportare l'accesso del tipo in fase di esecuzione e il dump di un [CDumpContext](../../mfc/reference/cdumpcontext-class.md) oggetto. Se è necessario un dump di intero senza segno a singoli elementi, è necessario impostare la profondità del contesto di dump a 1 o superiore. Matrici di interi senza segno non possono essere serializzate.  
+ `CUIntArray` incorpora la [IMPLEMENT_DYNAMIC](run-time-object-model-services.md#implement_dynamic) macro per supportare l'accesso del tipo in fase di esecuzione e il dump di un [CDumpContext](../../mfc/reference/cdumpcontext-class.md) oggetto. Se è necessario un dump di intero senza segno a singoli elementi, è necessario impostare la profondità del contesto di dump a 1 o versioni successive. Matrici di Unsigned integer non possono essere serializzate.  
   
 > [!NOTE]
 >  Prima di usare una matrice, usare `SetSize` per determinarne le dimensioni e allocare la necessaria memoria. Se non si usa `SetSize`, l'aggiunta di elementi alla matrice ne causa la riallocazione e la copia frequente. Le operazioni di riallocazione e copia frequenti sono inefficienti e possono frammentare la memoria.  

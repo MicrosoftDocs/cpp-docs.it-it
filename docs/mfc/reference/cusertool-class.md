@@ -40,15 +40,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 59f5ab622d6124e830028ea61a0c77583f76d015
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 925e93afae4682497263eb96832aa466c6034231
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374753"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37121316"
 ---
 # <a name="cusertool-class"></a>Classe CUserTool
-Uno strumento utente è una voce di menu che esegue un'applicazione esterna. Il **strumenti** scheda della finestra di **Personalizza** la finestra di dialogo ( [CMFCToolBarsCustomizeDialog classe](../../mfc/reference/cmfctoolbarscustomizedialog-class.md)) consente all'utente di aggiungere strumenti utente e per specificare il nome, i comandi, argomenti, e directory iniziale per ogni strumento.  
+Uno strumento utente è una voce di menu che esegue un'applicazione esterna. Il **strumenti** scheda della finestra il **Personalizza** finestra di dialogo ( [CMFCToolBarsCustomizeDialog classe](../../mfc/reference/cmfctoolbarscustomizedialog-class.md)) consente all'utente di aggiungere strumenti utente e per specificare il nome, comandi, argomenti, e directory iniziale per ogni strumento.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -86,10 +86,10 @@ class CUserTool : public CObject
 |[CUserTool::m_strLabel](#m_strlabel)|Nome dello strumento che viene visualizzato nella voce di menu per lo strumento.|  
   
 ## <a name="remarks"></a>Note  
- Per ulteriori informazioni su come abilitare gli strumenti utente nell'applicazione, vedere [CUserToolsManager classe](../../mfc/reference/cusertoolsmanager-class.md).  
+ Per ulteriori informazioni su come abilitare gli strumenti di utente nell'applicazione, vedere [CUserToolsManager classe](../../mfc/reference/cusertoolsmanager-class.md).  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene illustrato come creare uno strumento da un `CUserToolsManager` dell'oggetto, impostare il `m_strLabel` variabile membro e impostare l'applicazione che esegue lo strumento dell'utente. Questo frammento di codice fa parte di [esempio dimostrativo di Visual Studio](../../visual-cpp-samples.md).  
+ Nell'esempio seguente viene illustrato come creare uno strumento da un `CUserToolsManager` dell'oggetto, impostare il `m_strLabel` variabile membro e impostare l'applicazione che esegue lo strumento dell'utente. Questo frammento di codice fa parte il [esempio dimostrativo di Visual Studio](../../visual-cpp-samples.md).  
   
  [!code-cpp[NVC_MFC_VisualStudioDemo#35](../../mfc/codesnippet/cpp/cusertool-class_1.cpp)]  
   
@@ -122,10 +122,10 @@ void DrawToolIcon(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `pDC`  
+ [in] *pDC*  
  Puntatore a un contesto di dispositivo.  
   
- [in] `rectImage`  
+ [in] *rectImage*  
  Specifica le coordinate dell'area per visualizzare l'icona.  
   
 ##  <a name="getcommand"></a>  CUserTool::GetCommand  
@@ -159,7 +159,7 @@ virtual BOOL Invoke();
  Diverso da zero se il comando è stato eseguito correttamente. in caso contrario 0.  
   
 ### <a name="remarks"></a>Note  
- Chiamate [ShellExecute](http://msdn.microsoft.com/library/windows/desktop/bb762153) per eseguire un comando associato con lo strumento dell'utente. La funzione ha esito negativo se il comando è vuoto o se [ShellExecute](http://msdn.microsoft.com/library/windows/desktop/bb762153) ha esito negativo.  
+ Le chiamate [ShellExecute](http://msdn.microsoft.com/library/windows/desktop/bb762153) per eseguire un comando associato con lo strumento dell'utente. La funzione ha esito negativo se il comando è vuoto o se [ShellExecute](http://msdn.microsoft.com/library/windows/desktop/bb762153) ha esito negativo.  
   
 ##  <a name="loaddefaulticon"></a>  CUserTool::LoadDefaultIcon  
  Carica l'icona predefinita per uno strumento utente.  
@@ -169,7 +169,7 @@ virtual HICON LoadDefaultIcon();
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- Un handle per l'icona caricato ( `HICON`), o `NULL` se non è possibile caricare l'icona predefinita.  
+ Handle per l'icona caricato (ICONA) oppure NULL se non è possibile caricare l'icona predefinita.  
   
 ### <a name="remarks"></a>Note  
  Il framework chiama questo metodo quando non è in grado di caricare un'icona per uno strumento definito dall'utente dal file eseguibile dello strumento.  
@@ -184,7 +184,7 @@ CString m_strArguments;
 ```  
   
 ### <a name="remarks"></a>Note  
- Questa stringa viene passata allo strumento quando si chiama [CUserTool::Invoke](#invoke) o quando un utente sceglie il comando associato a questo strumento.  
+ Questa stringa viene passata allo strumento quando si chiama [CUserTool::Invoke](#invoke) o quando un utente sceglie il comando associato con questo strumento.  
   
 ##  <a name="m_strinitialdirectory"></a>  CUserTool::m_strInitialDirectory  
  Specifica la directory iniziale per lo strumento dell'utente.  
@@ -194,10 +194,10 @@ CString m_strInitialDirectory;
 ```  
   
 ### <a name="remarks"></a>Note  
- Questa variabile specifica la directory iniziale che lo strumento viene eseguito in quando si chiama [CUserTool::Invoke](#invoke) o quando un utente sceglie il comando associato a questo strumento.  
+ Questa variabile specifica la directory iniziale che lo strumento viene eseguito in quando si chiama [CUserTool::Invoke](#invoke) o quando un utente sceglie il comando associato con questo strumento.  
   
 ##  <a name="m_strlabel"></a>  CUserTool::m_strLabel  
- L'etichetta viene visualizzata nella voce di menu per lo strumento.  
+ L'etichetta che viene visualizzato nella voce di menu per lo strumento.  
   
 ```  
 CString m_strLabel;  
@@ -211,7 +211,7 @@ virtual void Serialize(CArchive& ar);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `ar`  
+ [in] *ar*  
   
 ### <a name="remarks"></a>Note  
   
@@ -223,11 +223,11 @@ void SetCommand(LPCTSTR lpszCmd);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `lpszCmd`  
- Specifica la nuova applicazione da associare con lo strumento dell'utente.  
+ [in] *lpszCmd*  
+ Specifica la nuova applicazione deve essere associato con lo strumento dell'utente.  
   
 ### <a name="remarks"></a>Note  
- Chiamare questo metodo per impostare una nuova applicazione che esegue lo strumento dell'utente. Il metodo elimina l'icona precedente e viene caricata una nuova icona dall'applicazione specificata. Se Impossibile caricare un'icona dell'applicazione, carica l'icona predefinita per uno strumento utente chiamando [CUserTool::LoadDefaultIcon](#loaddefaulticon).  
+ Chiamare questo metodo per impostare una nuova applicazione che esegue lo strumento dell'utente. Il metodo elimina l'icona precedente e carica una nuova icona dall'applicazione specificata. Se Impossibile caricare un'icona dall'applicazione, carica l'icona predefinita per uno strumento utente chiamando [CUserTool::LoadDefaultIcon](#loaddefaulticon).  
   
 ##  <a name="settoolicon"></a>  CUserTool::SetToolIcon  
  Carica l'icona per lo strumento dell'utente dall'applicazione che utilizza lo strumento.  
@@ -240,7 +240,7 @@ virtual HICON SetToolIcon();
  Handle per l'icona caricato.  
   
 ### <a name="remarks"></a>Note  
- Chiamare questo metodo per caricare l'icona da visualizzare nella voce di menu. Questo metodo cerca l'icona nel file eseguibile che utilizza lo strumento. Se non dispone di un'icona predefinita, l'icona fornito da [CUserTool::LoadDefaultIcon](#loaddefaulticon) viene invece utilizzato.  
+ Chiamare questo metodo per caricare l'icona da visualizzare nella voce di menu. Questo metodo cerca l'icona nel file eseguibile che utilizza lo strumento. Se non dispone di un'icona predefinita, l'icona forniti da [CUserTool::LoadDefaultIcon](#loaddefaulticon) viene invece utilizzato.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Grafico delle gerarchie](../../mfc/hierarchy-chart.md)   

@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1a6c42a4203fb1d0224f5f31e4123dca9a6fad65
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f9da7016e98d9bd84e62c3b05cae32346827142f
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33373814"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37121838"
 ---
 # <a name="ctabbedpane-class"></a>Classe CTabbedPane
 Implementa la funzionalità di un riquadro con schede staccabili.  
@@ -88,12 +88,12 @@ class CTabbedPane : public CBaseTabbedPane
 ## <a name="remarks"></a>Note  
  Il framework crea automaticamente un'istanza di questa classe quando un utente collega un riquadro a un altro posizionando il puntatore del mouse sul titolo del secondo riquadro. Tutti i riquadri a schede create dal framework dispongono di un ID -1.  
   
- Per specificare schede normali anziché schede con lo stile di Outlook, passare il `AFX_CBRS_REGULAR_TABS` di stile per il [CDockablePane:: CreateEx](../../mfc/reference/cdockablepane-class.md#createex) metodo.  
+ Per specificare schede normali anziché schede nello stile di Outlook, passare lo stile di AFX_CBRS_REGULAR_TABS il [CDockablePane:: CreateEx](../../mfc/reference/cdockablepane-class.md#createex) metodo.  
   
  Se si crea un riquadro a schede con schede rimovibili, il riquadro può essere eliminato definitivamente in modo automatico dal framework. Non è pertanto consigliabile archiviare il puntatore. Per passare un puntatore al riquadro a schede, chiamare il metodo `CBasePane::GetParentTabbedPane`.  
   
 ## <a name="example"></a>Esempio  
- In questo esempio viene creato un oggetto `CTabbedPane`. Successivamente, utilizziamo [cbasetabbedpane:: addTab](../../mfc/reference/cbasetabbedpane-class.md#addtab) per collegare le schede aggiuntive.  
+ In questo esempio viene creato un oggetto `CTabbedPane`. Passaggio successivo viene usato [cbasetabbedpane::](../../mfc/reference/cbasetabbedpane-class.md#addtab) per collegare le schede aggiuntive.  
   
 ```  
 CTabbedPane* pTabbededBar = new CTabbedPane (TRUE);
@@ -125,7 +125,7 @@ DockPane(pTabbededBar);
 ```  
   
 ## <a name="example"></a>Esempio  
- Un altro modo per creare un oggetto barra di controllo a schede è utilizzare [CDockablePane:: Attachtotabwnd](../../mfc/reference/cdockablepane-class.md#attachtotabwnd). Il `AttachToTabWnd` metodo crea dinamicamente un oggetto riquadro a schede con informazioni sulla classe di runtime impostate [CDockablePane:: Settabbedpanertc](../../mfc/reference/cdockablepane-class.md#settabbedpanertc).  
+ Un altro modo per creare un oggetto barra di controllo a schede consiste nell'utilizzare [CDockablePane:: Attachtotabwnd](../../mfc/reference/cdockablepane-class.md#attachtotabwnd). Il `AttachToTabWnd` metodo crea dinamicamente un oggetto riquadro a schede con informazioni sulle classi di runtime impostate [CDockablePane:: Settabbedpanertc](../../mfc/reference/cdockablepane-class.md#settabbedpanertc).  
   
  In questo esempio viene creato dinamicamente un riquadro a schede, vengono collegate due schede e la seconda scheda viene impostata come non rimovibile.  
   
@@ -177,8 +177,8 @@ virtual BOOL DetachPane(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `pBar`  
- [in] `bHide`  
+ [in] *pBar*  
+ [in] *bHide*  
   
 ### <a name="return-value"></a>Valore restituito  
   
@@ -192,13 +192,13 @@ static void EnableTabAutoColor(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `bEnable`  
- `TRUE` Per abilitare la colorazione automatica delle schede. in caso contrario, `FALSE`.  
+ [in] *bAttivare il*  
+ TRUE per abilitare la colorazione automatica delle schede. in caso contrario, FALSE.  
   
 ### <a name="remarks"></a>Note  
- Utilizzare questo metodo statico per abilitare o disabilitare la colorazione automatica delle schede in tutti i riquadri a schede nell'applicazione. Quando questa funzionalità è abilitata, ogni scheda viene compilato tramite il relativo colore. È possibile trovare l'elenco di colori usati per le schede di colore mediante la chiamata di [CMFCBaseTabCtrl::GetAutoColors](../../mfc/reference/cmfcbasetabctrl-class.md#getautocolors) metodo.  
+ Utilizzare questo metodo statico per abilitare o disabilitare la colorazione automatica delle schede in tutti i riquadri a schede nell'applicazione. Quando questa funzionalità è abilitata, ogni scheda viene riempita dal relativo colore. È possibile trovare l'elenco di colori usati per le schede dei colori chiamando il [CMFCBaseTabCtrl::GetAutoColors](../../mfc/reference/cmfcbasetabctrl-class.md#getautocolors) metodo.  
   
- È possibile specificare l'elenco di colori da utilizzare per le schede chiamando [CTabbedPane::SetTabAutoColors](#settabautocolors).  
+ È possibile specificare l'elenco di colori che verrà utilizzato per le schede chiamando [CTabbedPane::SetTabAutoColors](#settabautocolors).  
   
  Per impostazione predefinita, questa opzione è disabilitata.  
   
@@ -214,17 +214,17 @@ virtual BOOL FloatTab(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `pBar`  
- [in] `nTabID`  
- [in] `dockMethod`  
- [in] `bHide`  
+ [in] *pBar*  
+ [in] *nTabID*  
+ [in] *dockMethod*  
+ [in] *bHide*  
   
 ### <a name="return-value"></a>Valore restituito  
   
 ### <a name="remarks"></a>Note  
   
 ##  <a name="gettabarea"></a>  CTabbedPane::GetTabArea  
- Restituisce le dimensioni e la posizione dell'area della scheda nella finestra a schede.  
+ Restituisce le dimensioni e posizione dell'area della scheda nella finestra a schede.  
   
 ```  
 virtual void GetTabArea(
@@ -233,14 +233,14 @@ virtual void GetTabArea(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [out] `rectTabAreaTop`  
- Contiene le dimensioni e posizione, in coordinate dello schermo, dell'area della scheda superiore.  
+ [out] *rectTabAreaTop*  
+ Contiene le dimensioni e posizione, nelle coordinate dello schermo, dell'area della scheda superiore.  
   
- [out] `rectTabAreaBottom`  
- Contiene le dimensioni e posizione, in coordinate dello schermo, dell'area della scheda nella parte inferiore.  
+ [out] *rectTabAreaBottom*  
+ Contiene le dimensioni e posizione, nelle coordinate dello schermo, dell'area della scheda nella parte inferiore.  
   
 ### <a name="remarks"></a>Note  
- Il framework chiama questo metodo per determinare la modalità ancorare un riquadro che un utente sta trascinando. Quando l'utente trascina un riquadro sull'area della scheda del riquadro di destinazione, il framework tenta di aggiungere il progetto come una nuova scheda del riquadro di destinazione. In caso contrario, il tentativo di ancoraggio del riquadro sul lato del riquadro di destinazione, che comporta la creazione di un nuovo contenitore riquadro con un divisore che separa i due riquadri.  
+ Il framework chiama questo metodo per determinare la modalità ancorare un riquadro in cui un utente sta trascinando. Quando l'utente trascina un riquadro sopra l'area della scheda del riquadro di destinazione, il framework tenta di aggiungere il progetto come una nuova scheda del riquadro di destinazione. In caso contrario, tenta di ancoraggio del riquadro sul lato del riquadro di destinazione, che comporta la creazione di un nuovo contenitore riquadro con un divisore che separa i due riquadri.  
   
  Eseguire l'override di questo metodo in un `CTabbedPane`-derivata per modificare questo comportamento.  
   
@@ -274,7 +274,7 @@ virtual BOOL IsTabLocationBottom() const;
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- `TRUE` Se l'area della scheda si trova nella parte inferiore della finestra a schede. in caso contrario, `FALSE`.  
+ TRUE se l'area della scheda si trova nella parte inferiore della finestra a schede. in caso contrario, FALSE.  
   
 ### <a name="remarks"></a>Note  
   
@@ -286,11 +286,11 @@ AFX_IMPORT_DATA static BOOL m_bTabsAlwaysTop;
 ```  
   
 ### <a name="remarks"></a>Note  
- Impostare il membro statico `TRUE` per forzare tutte le schede nell'applicazione da visualizzare nella parte superiore del riquadro a schede.  
+ Impostare il membro statico a true per forzare tutte le schede nell'applicazione da visualizzare nella parte superiore del riquadro a schede.  
   
  È necessario impostare questo valore prima di aver creato un riquadro a schede.  
   
- Il valore predefinito è `FALSE`.  
+ Il valore predefinito è FALSE.  
   
 ##  <a name="m_ptabwndrtc"></a>  CTabbedPane::m_pTabWndRTC  
  Informazioni sulla classe di runtime per un oggetto personalizzato derivato da `CMFCTabCtrl`.  
@@ -300,7 +300,7 @@ AFX_IMPORT_DATA static CRuntimeClass* m_pTabWndRTC;
 ```  
   
 ### <a name="remarks"></a>Note  
- Impostare questa variabile membro statico in un puntatore alle informazioni sulla classe di runtime di un `CMFCTabCtrl`-oggetto derivato, se si utilizza una finestra a schede personalizzata all'interno di un riquadro a schede.  
+ Impostare questa variabile membro statico in un puntatore alle informazioni sulla classe di runtime di un `CMFCTabCtrl`-oggetto derivato se si utilizza una finestra a schede personalizzata all'interno di un riquadro a schede.  
   
 ##  <a name="resettabs"></a>  CTabbedPane::ResetTabs  
  Reimposta lo stato predefinito di tutti i riquadri a schede.  
@@ -310,7 +310,7 @@ static void ResetTabs();
 ```  
   
 ### <a name="remarks"></a>Note  
- Chiamare questo metodo per ripristinare tutti i riquadri a schede per lo stato predefinito. Quando viene chiamato, questo metodo ripristina le dimensioni bordo e lo stato di colore automatico di tutti i riquadri a schede.  
+ Chiamare questo metodo per ripristinare tutti i riquadri a schede per lo stato predefinito. Quando viene chiamato, questo metodo ripristina le dimensioni di bordo e lo stato di colore automatico di tutti i riquadri a schede.  
   
 ##  <a name="settabautocolors"></a>  CTabbedPane::SetTabAutoColors  
  Imposta un elenco di colori personalizzati che vengono utilizzati quando è abilitata la funzionalità colore automatico.  
@@ -320,13 +320,13 @@ static void SetTabAutoColors(const CArray<COLORREF, COLORREF>& arColors);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `arColors`  
+ [in] *arColors*  
  Contiene la matrice di colori da impostare.  
   
 ### <a name="remarks"></a>Note  
  Utilizzare questo metodo per personalizzare l'elenco dei colori utilizzati quando è abilitata la funzionalità colore automatico. Si tratta di una funzione statica che influisce su tutte le schede nell'applicazione.  
   
- Utilizzare [CTabbedPane::EnableTabAutoColor](#enabletabautocolor) per abilitare o disabilitare la funzionalità colore automatico.  
+ Uso [CTabbedPane::EnableTabAutoColor](#enabletabautocolor) per abilitare o disabilitare la funzionalità colore automatico.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Grafico delle gerarchie](../../mfc/hierarchy-chart.md)   

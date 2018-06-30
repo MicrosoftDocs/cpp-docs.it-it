@@ -28,35 +28,35 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5dd7e1b9b18e8478cfa4e61a22806cf067cb3699
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 542afe8ba67e1d9c6138998320483a964a08724a
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33375973"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37121825"
 ---
 # <a name="dialog-data-exchange-functions-for-ole-controls"></a>Funzioni DDX (Dialog Data Exchange) per controlli OLE
-In questo argomento elenca le funzioni DDX_OC utilizzate per scambiare dati tra una proprietà di un controllo OLE in una finestra di dialogo, la visualizzazione di form o oggetto visualizzazione controllo e un membro dati di oggetto visualizzazione controllo, la finestra di dialogo o visualizzazione form.  
+In questo argomento elenca le funzioni DDX_OC utilizzate per scambiare dati tra una proprietà di un controllo OLE in una finestra di dialogo, visualizzazione di form o oggetto visualizzazione controllo e un membro dati di oggetto visualizzazione controllo, la finestra di dialogo o visualizzazione form.  
   
 ### <a name="ddxoc-functions"></a>Funzioni DDX_OC  
   
 |||  
 |-|-|  
-|[DDX_OCBool](#ddx_ocbool)|Gestisce il trasferimento di **BOOL** dati tra una proprietà di un controllo OLE e **BOOL** (membro dati).|  
-|[DDX_OCBoolRO](#ddx_ocboolro)|Gestisce il trasferimento di **BOOL** dati tra una proprietà di sola lettura di un controllo OLE e **BOOL** (membro dati).|  
-|[DDX_OCColor](#ddx_occolor)|Gestisce il trasferimento di **OLE_COLOR** dati tra una proprietà di un controllo OLE e un **OLE_COLOR** (membro dati).|  
-|[DDX_OCColorRO](#ddx_occolorro)|Gestisce il trasferimento di **OLE_COLOR** dati tra una proprietà di sola lettura di un controllo OLE e un **OLE_COLOR** (membro dati).|  
-|[DDX_OCFloat](#ddx_ocfloat)|Gestisce il trasferimento di **float** (o **doppie**) dei dati tra una proprietà di un controllo OLE e un **float** (o **doppie**) (membro dati).|  
-|[DDX_OCFloatRO](#ddx_ocfloatro)|Gestisce il trasferimento di **float** (o **doppie**) dei dati tra una proprietà di sola lettura di un controllo OLE e un **float** (o **doppie**) dei dati membro.|  
-|[DDX_OCInt](#ddx_ocint)|Gestisce il trasferimento di `int` (o **lungo**) dei dati tra una proprietà di un controllo OLE e un `int` (o **lungo**) (membro dati).|  
-|[DDX_OCIntRO](#ddx_ocintro)|Gestisce il trasferimento di `int` (o **lungo**) dei dati tra una proprietà di sola lettura di un controllo OLE e un `int` (o **lungo**) (membro dati).|  
-|[DDX_OCShort](#ddx_ocshort)|Gestisce il trasferimento di **breve** dati tra una proprietà di un controllo OLE e **breve** (membro dati).|  
-|[DDX_OCShortRO](#ddx_ocshortro)|Gestisce il trasferimento di **breve** dati tra una proprietà di sola lettura di un controllo OLE e **breve** (membro dati).|  
-|[DDX_OCText](#ddx_octext)|Gestisce il trasferimento di **CString** dati tra una proprietà di un controllo OLE e **CString** (membro dati).|  
-|[DDX_OCTextRO](#ddx_octextro)|Gestisce il trasferimento di **CString** dati tra una proprietà di sola lettura di un controllo OLE e **CString** (membro dati).|  
+|[DDX_OCBool](#ddx_ocbool)|Gestisce il trasferimento del **BOOL** i dati tra una proprietà di un controllo OLE e una **BOOL** (membro dati).|  
+|[DDX_OCBoolRO](#ddx_ocboolro)|Gestisce il trasferimento del **BOOL** i dati tra una proprietà di sola lettura di un controllo OLE e una **BOOL** (membro dati).|  
+|[DDX_OCColor](#ddx_occolor)|Gestisce il trasferimento del **OLE_COLOR** i dati tra una proprietà di un controllo OLE e una **OLE_COLOR** (membro dati).|  
+|[DDX_OCColorRO](#ddx_occolorro)|Gestisce il trasferimento del **OLE_COLOR** i dati tra una proprietà di sola lettura di un controllo OLE e una **OLE_COLOR** (membro dati).|  
+|[DDX_OCFloat](#ddx_ocfloat)|Gestisce il trasferimento del **float** (o **double**) i dati tra una proprietà di un controllo OLE e un **float** (o **doppie**) (membro dati).|  
+|[DDX_OCFloatRO](#ddx_ocfloatro)|Gestisce il trasferimento del **float** (o **double**) i dati tra una proprietà di sola lettura di un controllo OLE e un **float** (o **doppie**) dei dati membro.|  
+|[DDX_OCInt](#ddx_ocint)|Gestisce il trasferimento del **int** (o **long**) i dati tra una proprietà di un controllo OLE e un **int** (o **lungo**) (membro dati).|  
+|[DDX_OCIntRO](#ddx_ocintro)|Gestisce il trasferimento del **int** (o **long**) i dati tra una proprietà di sola lettura di un controllo OLE e un **int** (o **lungo**) (membro dati).|  
+|[DDX_OCShort](#ddx_ocshort)|Gestisce il trasferimento del **breve** i dati tra una proprietà di un controllo OLE e una **breve** (membro dati).|  
+|[DDX_OCShortRO](#ddx_ocshortro)|Gestisce il trasferimento del **breve** i dati tra una proprietà di sola lettura di un controllo OLE e una **breve** (membro dati).|  
+|[DDX_OCText](#ddx_octext)|Gestisce il trasferimento del **CString** i dati tra una proprietà di un controllo OLE e una **CString** (membro dati).|  
+|[DDX_OCTextRO](#ddx_octextro)|Gestisce il trasferimento del **CString** i dati tra una proprietà di sola lettura di un controllo OLE e una **CString** (membro dati).|  
   
 ##  <a name="ddx_ocbool"></a>  DDX_OCBool  
- Il `DDX_OCBool` funzione gestisce il trasferimento di **BOOL** dati tra una proprietà di un controllo OLE in una finestra di dialogo visualizzazione form o un oggetto visualizzazione controllo e un **BOOL** membro dati nella finestra di dialogo, la visualizzazione di form, o oggetto visualizzazione controllo.  
+ Il `DDX_OCBool` funzione gestisce il trasferimento del **BOOL** i dati tra una proprietà di un controllo OLE in una finestra di dialogo visualizzazione form o un oggetto visualizzazione controllo e un **BOOL** membro dati della finestra di dialogo, visualizzazione di form, o oggetto visualizzazione controllo.  
   
 ```   
 void AFXAPI DDX_OCBool(
@@ -67,13 +67,13 @@ void AFXAPI DDX_OCBool(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `pDX`  
+ *pDX*  
  Puntatore a un oggetto `CDataExchange` . Il framework fornisce questo oggetto per stabilire il contesto dello scambio dei dati, inclusa la relativa direzione.  
   
- `nIDC`  
+ *nIDC*  
  L'ID di un controllo OLE nella finestra di dialogo, nella visualizzazione form o nell'oggetto visualizzazione controllo.  
   
- `dispid`  
+ *DISPID*  
  L'ID di invio di una proprietà del controllo.  
   
  *valore*  
@@ -86,7 +86,7 @@ void AFXAPI DDX_OCBool(
   **Intestazione:** afxdisp.h  
   
 ##  <a name="ddx_ocboolro"></a>  DDX_OCBoolRO  
- Il `DDX_OCBoolRO` funzione gestisce il trasferimento di **BOOL** dati tra una proprietà di sola lettura di un controllo OLE in una finestra di dialogo visualizzazione form o un oggetto visualizzazione controllo e un **BOOL** membro dati nella finestra di dialogo, visualizzazione form o oggetto visualizzazione controllo.  
+ Il `DDX_OCBoolRO` funzione gestisce il trasferimento del **BOOL** i dati tra una proprietà di sola lettura di un controllo OLE in una finestra di dialogo visualizzazione form o un oggetto visualizzazione controllo e un **BOOL** membro dati della finestra di dialogo visualizzazione form o oggetto visualizzazione controllo.  
   
 ```   
 void AFXAPI DDX_OCBoolRO(
@@ -97,13 +97,13 @@ void AFXAPI DDX_OCBoolRO(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `pDX`  
+ *pDX*  
  Puntatore a un oggetto `CDataExchange` . Il framework fornisce questo oggetto per stabilire il contesto dello scambio dei dati, inclusa la relativa direzione.  
   
- `nIDC`  
+ *nIDC*  
  L'ID di un controllo OLE nella finestra di dialogo, nella visualizzazione form o nell'oggetto visualizzazione controllo.  
   
- `dispid`  
+ *DISPID*  
  L'ID di invio di una proprietà del controllo.  
   
  *valore*  
@@ -116,7 +116,7 @@ void AFXAPI DDX_OCBoolRO(
   **Intestazione** afxdisp. h  
   
 ##  <a name="ddx_occolor"></a>  DDX_OCColor  
- Il `DDX_OCColor` funzione gestisce il trasferimento di **OLE_COLOR** dati tra una proprietà di un controllo OLE in una finestra di dialogo visualizzazione form o un oggetto visualizzazione controllo e un **OLE_COLOR** membro dati nella finestra di dialogo, visualizzazione form o oggetto visualizzazione controllo.  
+ Il `DDX_OCColor` funzione gestisce il trasferimento dei dati OLE_COLOR tra una proprietà di un controllo OLE in una finestra di dialogo, visualizzazione di form, o oggetto visualizzazione controllo e un membro dati OLE_COLOR della finestra di dialogo visualizzazione form o oggetto visualizzazione controllo.  
   
 ```   
 void AFXAPI DDX_OCColor(
@@ -127,13 +127,13 @@ void AFXAPI DDX_OCColor(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `pDX`  
+ *pDX*  
  Puntatore a un oggetto `CDataExchange` . Il framework fornisce questo oggetto per stabilire il contesto dello scambio dei dati, inclusa la relativa direzione.  
   
- `nIDC`  
+ *nIDC*  
  L'ID di un controllo OLE nella finestra di dialogo, nella visualizzazione form o nell'oggetto visualizzazione controllo.  
   
- `dispid`  
+ *DISPID*  
  L'ID di invio di una proprietà del controllo.  
   
  *valore*  
@@ -146,7 +146,7 @@ void AFXAPI DDX_OCColor(
   **Intestazione** afxdisp. h  
   
 ##  <a name="ddx_occolorro"></a>  DDX_OCColorRO  
- Il `DDX_OCColorRO` funzione gestisce il trasferimento di **OLE_COLOR** dati tra una proprietà di sola lettura di un controllo OLE in una finestra di dialogo visualizzazione form o un oggetto visualizzazione controllo e un **OLE_COLOR** membro dati di la finestra di dialogo, visualizzazione form o oggetto visualizzazione controllo.  
+ Il `DDX_OCColorRO` funzione gestisce il trasferimento dei dati OLE_COLOR tra una proprietà di sola lettura di un controllo OLE in una finestra di dialogo, visualizzazione di form, o oggetto visualizzazione controllo e un membro dati OLE_COLOR della finestra di dialogo visualizzazione form o oggetto visualizzazione controllo.  
   
 ```   
 void AFXAPI DDX_OCColorRO(
@@ -157,13 +157,13 @@ void AFXAPI DDX_OCColorRO(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `pDX`  
+ *pDX*  
  Puntatore a un oggetto `CDataExchange` . Il framework fornisce questo oggetto per stabilire il contesto dello scambio dei dati, inclusa la relativa direzione.  
   
- `nIDC`  
+ *nIDC*  
  L'ID di un controllo OLE nella finestra di dialogo, nella visualizzazione form o nell'oggetto visualizzazione controllo.  
   
- `dispid`  
+ *DISPID*  
  L'ID di invio di una proprietà del controllo.  
   
  *valore*  
@@ -176,7 +176,7 @@ void AFXAPI DDX_OCColorRO(
   **Intestazione** afxdisp. h  
   
 ##  <a name="ddx_ocfloat"></a>  DDX_OCFloat  
- Il `DDX_OCFloat` funzione gestisce il trasferimento di **float** (o **doppie**) dei dati tra una proprietà di un controllo OLE in una finestra di dialogo visualizzazione form o un oggetto visualizzazione controllo e un **float** (o **doppie**) membro dati dell'oggetto visualizzazione controllo, la finestra di dialogo o visualizzazione form.  
+ Il `DDX_OCFloat` funzione gestisce il trasferimento del **float** (o **doppie**) dei dati tra una proprietà di un controllo OLE in una finestra di dialogo visualizzazione form o un oggetto visualizzazione controllo e un **float** (o **doppie**) membro di dati della finestra di dialogo, visualizzazione form o oggetto visualizzazione controllo.  
   
 ```   
 void AFXAPI DDX_OCFloat(
@@ -193,13 +193,13 @@ void AFXAPI DDX_OCFloat(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `pDX`  
+ *pDX*  
  Puntatore a un oggetto `CDataExchange` . Il framework fornisce questo oggetto per stabilire il contesto dello scambio dei dati, inclusa la relativa direzione.  
   
- `nIDC`  
+ *nIDC*  
  L'ID di un controllo OLE nella finestra di dialogo, nella visualizzazione form o nell'oggetto visualizzazione controllo.  
   
- `dispid`  
+ *DISPID*  
  L'ID di invio di una proprietà del controllo.  
   
  *valore*  
@@ -212,7 +212,7 @@ void AFXAPI DDX_OCFloat(
   **Intestazione** afxdisp. h  
   
 ##  <a name="ddx_ocfloatro"></a>  DDX_OCFloatRO  
- Il `DDX_OCFloatRO` funzione gestisce il trasferimento di **float** (o **doppie**) dei dati tra una proprietà di sola lettura di un controllo OLE in una finestra di dialogo visualizzazione form o un oggetto visualizzazione controllo e un  **float** (o **doppie**) membro dati dell'oggetto visualizzazione controllo, la finestra di dialogo o visualizzazione form.  
+ Il `DDX_OCFloatRO` funzione gestisce il trasferimento del **float** (o **doppie**) dei dati tra una proprietà di sola lettura di un controllo OLE in una finestra di dialogo visualizzazione form o un oggetto visualizzazione controllo e un  **float** (o **doppie**) membro di dati della finestra di dialogo, visualizzazione form o oggetto visualizzazione controllo.  
   
 ```   
 void AFXAPI DDX_OCFloatRO(
@@ -229,13 +229,13 @@ void AFXAPI DDX_OCFloatRO(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `pDX`  
+ *pDX*  
  Puntatore a un oggetto `CDataExchange` . Il framework fornisce questo oggetto per stabilire il contesto dello scambio dei dati, inclusa la relativa direzione.  
   
- `nIDC`  
+ *nIDC*  
  L'ID di un controllo OLE nella finestra di dialogo, nella visualizzazione form o nell'oggetto visualizzazione controllo.  
   
- `dispid`  
+ *DISPID*  
  L'ID di invio di una proprietà del controllo.  
   
  *valore*  
@@ -248,7 +248,7 @@ void AFXAPI DDX_OCFloatRO(
   **Intestazione** afxdisp. h  
   
 ##  <a name="ddx_ocint"></a>  DDX_OCInt  
- Il `DDX_OCInt` funzione gestisce il trasferimento di `int` (o **lungo**) dei dati tra una proprietà di un controllo OLE in una finestra di dialogo visualizzazione form o un oggetto visualizzazione controllo e un `int` (o **prolungata**) membro dati dell'oggetto visualizzazione controllo, la finestra di dialogo o visualizzazione form.  
+ Il `DDX_OCInt` funzione gestisce il trasferimento del **int** (o **lungo**) dei dati tra una proprietà di un controllo OLE in una finestra di dialogo visualizzazione form o un oggetto visualizzazione controllo e un **int**(o **lungo**) membro di dati della finestra di dialogo, visualizzazione form o oggetto visualizzazione controllo.  
   
 ```   
 void AFXAPI DDX_OCInt(
@@ -265,13 +265,13 @@ void AFXAPI DDX_OCInt(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `pDX`  
+ *pDX*  
  Puntatore a un oggetto `CDataExchange` . Il framework fornisce questo oggetto per stabilire il contesto dello scambio dei dati, inclusa la relativa direzione.  
   
- `nIDC`  
+ *nIDC*  
  L'ID di un controllo OLE nella finestra di dialogo, nella visualizzazione form o nell'oggetto visualizzazione controllo.  
   
- `dispid`  
+ *DISPID*  
  L'ID di invio di una proprietà del controllo.  
   
  *valore*  
@@ -284,7 +284,7 @@ void AFXAPI DDX_OCInt(
   **Intestazione** afxdisp. h  
   
 ##  <a name="ddx_ocintro"></a>  DDX_OCIntRO  
- Il `DDX_OCIntRO` funzione gestisce il trasferimento di `int` (o **lungo**) dei dati tra una proprietà di sola lettura di un controllo OLE in una finestra di dialogo visualizzazione form o un oggetto visualizzazione controllo e un `int` (o **lungo** ) membro dati dell'oggetto visualizzazione controllo, la finestra di dialogo o visualizzazione form.  
+ Il `DDX_OCIntRO` funzione gestisce il trasferimento del **int** (o **lungo**) dei dati tra una proprietà di sola lettura di un controllo OLE in una finestra di dialogo visualizzazione form o un oggetto visualizzazione controllo e un **int** (o **lungo**) membro di dati della finestra di dialogo, visualizzazione form o oggetto visualizzazione controllo.  
   
 ```   
 void AFXAPI DDX_OCIntRO(
@@ -301,13 +301,13 @@ void AFXAPI DDX_OCIntRO(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `pDX`  
+ *pDX*  
  Puntatore a un oggetto `CDataExchange` . Il framework fornisce questo oggetto per stabilire il contesto dello scambio dei dati, inclusa la relativa direzione.  
   
- `nIDC`  
+ *nIDC*  
  L'ID di un controllo OLE nella finestra di dialogo, nella visualizzazione form o nell'oggetto visualizzazione controllo.  
   
- `dispid`  
+ *DISPID*  
  L'ID di invio di una proprietà del controllo.  
   
  *valore*  
@@ -320,7 +320,7 @@ void AFXAPI DDX_OCIntRO(
   **Intestazione** afxdisp. h  
   
 ##  <a name="ddx_ocshort"></a>  DDX_OCShort  
- Il `DDX_OCShort` funzione gestisce il trasferimento di dati short tra una proprietà di un controllo OLE nella finestra di dialogo, la visualizzazione di form, o oggetto visualizzazione controllo e un membro di dati short nella finestra di dialogo, visualizzazione form o oggetto visualizzazione controllo.  
+ Il `DDX_OCShort` funzione gestisce il trasferimento di dati short tra una proprietà di un controllo OLE in una finestra di dialogo, visualizzazione di form, o oggetto visualizzazione controllo e un membro di dati short della finestra di dialogo visualizzazione form o oggetto visualizzazione controllo.  
   
 ```   
 void AFXAPI DDX_OCShort(
@@ -331,13 +331,13 @@ void AFXAPI DDX_OCShort(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `pDX`  
+ *pDX*  
  Puntatore a un oggetto `CDataExchange` . Il framework fornisce questo oggetto per stabilire il contesto dello scambio dei dati, inclusa la relativa direzione.  
   
- `nIDC`  
+ *nIDC*  
  L'ID di un controllo OLE nella finestra di dialogo, nella visualizzazione form o nell'oggetto visualizzazione controllo.  
   
- `dispid`  
+ *DISPID*  
  L'ID di invio di una proprietà del controllo.  
   
  *valore*  
@@ -350,7 +350,7 @@ void AFXAPI DDX_OCShort(
   **Intestazione** afxdisp. h  
   
 ##  <a name="ddx_ocshortro"></a>  DDX_OCShortRO  
- Il `DDX_OCShortRO` funzione gestisce il trasferimento di dati short tra una proprietà di sola lettura di un controllo OLE nella finestra di dialogo, la visualizzazione di form, o oggetto visualizzazione controllo e un membro di dati short nella finestra di dialogo, visualizzazione form o oggetto visualizzazione controllo.  
+ Il `DDX_OCShortRO` funzione gestisce il trasferimento di dati short tra una proprietà di sola lettura di un controllo OLE in una finestra di dialogo, visualizzazione di form, o oggetto visualizzazione controllo e un membro di dati short della finestra di dialogo visualizzazione form o oggetto visualizzazione controllo.  
   
 ```   
 void AFXAPI DDX_OCShortRO(
@@ -361,13 +361,13 @@ void AFXAPI DDX_OCShortRO(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `pDX`  
+ *pDX*  
  Puntatore a un oggetto `CDataExchange` . Il framework fornisce questo oggetto per stabilire il contesto dello scambio dei dati, inclusa la relativa direzione.  
   
- `nIDC`  
+ *nIDC*  
  L'ID di un controllo OLE nella finestra di dialogo, nella visualizzazione form o nell'oggetto visualizzazione controllo.  
   
- `dispid`  
+ *DISPID*  
  L'ID di invio di una proprietà del controllo.  
   
  *valore*  
@@ -380,7 +380,7 @@ void AFXAPI DDX_OCShortRO(
   **Intestazione** afxdisp. h  
   
 ##  <a name="ddx_octext"></a>  DDX_OCText  
- Il **DDX_OCText** funzione gestisce il trasferimento di **CString** dati tra una proprietà di un controllo OLE in una finestra di dialogo visualizzazione form o un oggetto visualizzazione controllo e un **CString** dati membro dell'oggetto visualizzazione controllo, la finestra di dialogo o visualizzazione form.  
+ Il **DDX_OCText** funzione gestisce il trasferimento del **CString** dati tra una proprietà di un controllo OLE in una finestra di dialogo visualizzazione form o un oggetto visualizzazione controllo e una **CString** dati membro dell'oggetto visualizzazione controllo, la finestra di dialogo o visualizzazione form.  
   
 ```   
 void AFXAPI DDX_OCText(
@@ -391,13 +391,13 @@ void AFXAPI DDX_OCText(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `pDX`  
+ *pDX*  
  Un puntatore a un **CDataExchange** oggetto. Il framework fornisce questo oggetto per stabilire il contesto dello scambio dei dati, inclusa la relativa direzione.  
   
- `nIDC`  
+ *nIDC*  
  L'ID di un controllo OLE nella finestra di dialogo, nella visualizzazione form o nell'oggetto visualizzazione controllo.  
   
- `dispid`  
+ *DISPID*  
  L'ID di invio di una proprietà del controllo.  
   
  *valore*  
@@ -421,13 +421,13 @@ void AFXAPI DDX_OCTextRO(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `pDX`  
+ *pDX*  
  Puntatore a un oggetto `CDataExchange` . Il framework fornisce questo oggetto per stabilire il contesto dello scambio dei dati, inclusa la relativa direzione.  
   
- `nIDC`  
+ *nIDC*  
  L'ID di un controllo OLE nella finestra di dialogo, nella visualizzazione form o nell'oggetto visualizzazione controllo.  
   
- `dispid`  
+ *DISPID*  
  L'ID di invio di una proprietà del controllo.  
   
  *valore*  

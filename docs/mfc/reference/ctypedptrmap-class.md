@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cdb0c8679990a48740032017a2c0e11b7148f2d6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2f312d7e829657f2cc9c7c41c65afad8d8f8b343
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33376395"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37121864"
 ---
 # <a name="ctypedptrmap-class"></a>Classe CTypedPtrMap
 Fornisce un "wrapper" indipendente dai tipi per gli oggetti delle classi mappa di puntatori `CMapPtrToPtr`, `CMapPtrToWord`, `CMapWordToPtr`e `CMapStringToPtr`.  
@@ -42,14 +42,14 @@ class CTypedPtrMap : public BASE_CLASS
 ```  
   
 #### <a name="parameters"></a>Parametri  
- `BASE_CLASS`  
+ *BASE_CLASS*  
  Classe di base della classe map puntatore tipizzato; deve essere una classe della mappa di puntatore ( `CMapPtrToPtr`, `CMapPtrToWord`, `CMapWordToPtr`, o `CMapStringToPtr`).  
   
- `KEY`  
+ *KEY*  
  Classe dell'oggetto utilizzato come chiave per la mappa.  
   
- `VALUE`  
- La classe dell'oggetto archiviato nella mappa.  
+ *VALORE*  
+ Classe dell'oggetto archiviato nella mappa.  
   
 ## <a name="members"></a>Membri  
   
@@ -71,7 +71,7 @@ class CTypedPtrMap : public BASE_CLASS
 ## <a name="remarks"></a>Note  
  Quando si utilizza `CTypedPtrMap`, la funzionalità di controllo dei tipi C++ consente di eliminare gli errori causati da tipi di puntatore non corrispondenti.  
   
- Poiché tutti `CTypedPtrMap` funzioni inline, utilizzo del modello non in modo significativo la dimensione o velocità del codice.  
+ Poiché tutti i `CTypedPtrMap` funzioni inline, utilizzo del modello non in modo significativo la dimensione o velocità del codice.  
   
  Per ulteriori informazioni sull'utilizzo `CTypedPtrMap`, vedere gli articoli [raccolte](../../mfc/collections.md) e [classi basate su modello](../../mfc/template-based-classes.md).  
   
@@ -84,7 +84,7 @@ class CTypedPtrMap : public BASE_CLASS
  **Intestazione:** afxtempl.h  
   
 ##  <a name="getnextassoc"></a>  CTypedPtrMap::GetNextAssoc  
- Recupera l'elemento della mappa in `rNextPosition`, quindi Aggiorna `rNextPosition` per fare riferimento all'elemento successivo nella mappa.  
+ Recupera l'elemento della mappa in corrispondenza `rNextPosition`, quindi Aggiorna `rNextPosition` per fare riferimento all'elemento successivo nella mappa.  
   
 ```  
 void GetNextAssoc(
@@ -94,25 +94,25 @@ void GetNextAssoc(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `rPosition`  
- Specifica un riferimento a un **posizione** valore restituito da una precedente `GetNextAssoc` o `BASE_CLASS` **:: GetStartPosition** chiamare.  
+ *rPosition.*  
+ Specifica un riferimento a un valore di posizione restituito da una precedente `GetNextAssoc` oppure `BASE_CLASS` **:: GetStartPosition** chiamare.  
   
  *KEY*  
- Parametro di modello che specifica il tipo di chiavi della mappa.  
+ Parametro di modello che specifica il tipo delle chiavi della mappa.  
   
- `rKey`  
- Specifica la chiave dell'elemento recuperato restituita.  
+ *rKey*  
+ Specifica la chiave restituita dell'elemento recuperato.  
   
  *VALORE*  
- Parametro di modello che specifica il tipo di valori della mappa.  
+ Parametro di modello che specifica il tipo dei valori della mappa.  
   
- `rValue`  
+ *rValue*  
  Specifica il valore restituito dell'elemento recuperato.  
   
 ### <a name="remarks"></a>Note  
  Questa funzione è particolarmente utile per l'iterazione di tutti gli elementi nella mappa. Si noti che la sequenza di posizione non è necessariamente lo stesso come sequenza di valore della chiave.  
   
- Se l'elemento recuperato è l'ultimo nella mappa, quindi il nuovo valore di `rNextPosition` è impostato su **NULL**.  
+ Se l'elemento recuperato è l'ultimo nella mappa, quindi il nuovo valore di `rNextPosition` è impostato su NULL.  
   
  Questa funzione inline chiama `BASE_CLASS` **:: GetNextAssoc**.  
   
@@ -124,23 +124,23 @@ BOOL Lookup(BASE_CLASS ::BASE_ARG_KEY key, VALUE& rValue) const;
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `BASE_CLASS`  
- Parametro di modello che specifica la classe di base della classe della mappa.  
+ *BASE_CLASS*  
+ Parametro modello che specifica la classe di base della classe della mappa.  
   
- `key`  
+ *key*  
  La chiave dell'elemento da ricercare.  
   
  *VALORE*  
  Parametro di modello che specifica il tipo di valori archiviati in questa mappa.  
   
- `rValue`  
+ *rValue*  
  Specifica il valore restituito dell'elemento recuperato.  
   
 ### <a name="return-value"></a>Valore restituito  
  Diverso da zero se l'elemento è stato trovato. in caso contrario 0.  
   
 ### <a name="remarks"></a>Note  
- Questa funzione inline chiama `BASE_CLASS` **:: ricerca**.  
+ Questa funzione inline chiama `BASE_CLASS` **:: Lookup**.  
   
 ##  <a name="operator_at"></a>  [] CTypedPtrMap::operator  
  Questo operatore può essere utilizzato solo sul lato sinistro di un'istruzione di assegnazione (un l-value).  
@@ -153,14 +153,14 @@ VALUE& operator[ ](base_class ::base_arg_key key);
  *VALORE*  
  Parametro di modello che specifica il tipo di valori archiviati in questa mappa.  
   
- `BASE_CLASS`  
- Parametro di modello che specifica la classe di base della classe della mappa.  
+ *BASE_CLASS*  
+ Parametro modello che specifica la classe di base della classe della mappa.  
   
- `key`  
+ *key*  
  La chiave dell'elemento da cercare o creare nella mappa.  
   
 ### <a name="remarks"></a>Note  
- Se è presente alcun elemento di mappa con la chiave specificata, viene creato un nuovo elemento. Non c'è nessun "destra" (r) equivalente all'operatore perché prevede la possibilità che una chiave non può essere trovata nella mappa. Utilizzare il `Lookup` funzione membro per il recupero dell'elemento.  
+ Se non è disponibile alcun elemento della mappa con la chiave specificata, viene creato un nuovo elemento. Non c'è nessun "destra" (r-value) equivalente all'operatore perché vi sono possibilità che una chiave non può essere trovata nella mappa. Utilizzare il `Lookup` funzione membro per il recupero dell'elemento.  
   
 ##  <a name="removekey"></a>  CTypedPtrMap::RemoveKey  
  Questa funzione membro chiama `BASE_CLASS` **:: RemoveKey**.  
@@ -171,13 +171,13 @@ BOOL RemoveKey(KEY key);
   
 ### <a name="parameters"></a>Parametri  
  *KEY*  
- Parametro di modello che specifica il tipo di chiavi della mappa.  
+ Parametro di modello che specifica il tipo delle chiavi della mappa.  
   
- `key`  
+ *key*  
  Chiave dell'elemento da rimuovere.  
   
 ### <a name="return-value"></a>Valore restituito  
- Diverso da zero se la voce è stata trovata e rimosso correttamente. in caso contrario 0.  
+ Diverso da zero se la voce è stata trovata e rimosso correttamente; in caso contrario 0.  
   
 ### <a name="remarks"></a>Note  
  Per ulteriori osservazioni, vedere [CMapStringToOb::RemoveKey](../../mfc/reference/cmapstringtoob-class.md#removekey).  
@@ -191,12 +191,12 @@ void SetAt(KEY key, VALUE newValue);
   
 ### <a name="parameters"></a>Parametri  
  *KEY*  
- Parametro di modello che specifica il tipo di chiavi della mappa.  
+ Parametro di modello che specifica il tipo delle chiavi della mappa.  
   
- `key`  
+ *key*  
  Specifica il valore della chiave del newValue.  
   
- `newValue`  
+ *newValue*  
  Specifica il puntatore all'oggetto che rappresenta il valore del nuovo elemento.  
   
 ### <a name="remarks"></a>Note  

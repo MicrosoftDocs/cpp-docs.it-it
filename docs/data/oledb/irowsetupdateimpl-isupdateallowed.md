@@ -1,7 +1,7 @@
 ---
 title: 'IRowsetUpdateImpl:: IsUpdateAllowed | Documenti Microsoft'
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 06/25/2018
 ms.technology:
 - cpp-data
 ms.topic: reference
@@ -19,22 +19,22 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 3d39c726e4131b17d1dbdd76418e6da7985e4404
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 363626cedddea3da57e829a43c21c63b5c2b05cd
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33105348"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37122004"
 ---
 # <a name="irowsetupdateimplisupdateallowed"></a>IRowsetUpdateImpl::IsUpdateAllowed
-Eseguire l'override di questo metodo per verificare la presenza di sicurezza, l'integrità, e così via prima degli aggiornamenti.  
+Eseguire l'override di questo metodo per verificare la presenza di sicurezza, integrità e così via prima degli aggiornamenti.  
   
 ## <a name="syntax"></a>Sintassi  
   
 ```cpp
-HRESULT IsUpdateAllowed(DBPENDINGSTATUS /* [in] *//* status */,  
-   HROW /* [in] *//* hRowUpdate */,  
-   DBROWSTATUS* /* [out] *//* pRowStatus */);  
+HRESULT IsUpdateAllowed(DBPENDINGSTATUS /* [in] */ /* status */,  
+   HROW /* [in] */ /* hRowUpdate */,  
+   DBROWSTATUS* /* [out] */ /* pRowStatus */);  
 ```  
   
 #### <a name="parameters"></a>Parametri  
@@ -42,7 +42,7 @@ HRESULT IsUpdateAllowed(DBPENDINGSTATUS /* [in] *//* status */,
  [in] Lo stato di operazioni sulle righe in sospeso.  
   
  *hRowUpdate*  
- [in] Handle per le righe in cui che l'utente desidera aggiornare.  
+ [in] Handle per le righe che l'utente desidera aggiornare.  
   
  *pRowStatus*  
  [out] Lo stato restituito all'utente.  

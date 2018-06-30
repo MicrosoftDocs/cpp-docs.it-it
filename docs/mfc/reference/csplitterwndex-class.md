@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f0dfacc6bf08aa5b36288a9933ffa9980937f2b2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0ae4a24424acc4385927e0f7c99735bd50a6d472
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368875"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37121650"
 ---
 # <a name="csplitterwndex-class"></a>Classe CSplitterWndEx
 
@@ -50,12 +50,12 @@ class CSplitterWndEx : public CSplitterWnd
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[CSplitterWndEx::OnDrawSplitter](#ondrawsplitter)|Chiamato dal framework per disegnare una finestra con separatore. (Esegue l'override [CSplitterWnd::OnDrawSplitter](csplitterwnd-class.md#ondrawsplitter).)|  
+|[CSplitterWndEx::OnDrawSplitter](#ondrawsplitter)|Chiamata eseguita dal framework per disegnare una finestra con separatore. (Esegue l'override [CSplitterWnd::OnDrawSplitter](csplitterwnd-class.md#ondrawsplitter).)|  
   
 ## <a name="remarks"></a>Note  
  Eseguire l'override di `OnDrawSplitter` metodo per personalizzare l'aspetto dei componenti con interfaccia grafici di una finestra con separatore.  
   
- Il `CSplitterWndEx` classe è utilizzata in combinazione con il [OnDrawSplitterBorder](cmfcvisualmanager-class.md#ondrawsplitterborder), [OnDrawSplitterBox](cmfcvisualmanager-class.md#ondrawsplitterbox), e [OnFillSplitterBackground](cmfcvisualmanager-class.md#onfillsplitterbackground) metodi, che sono Se implementato da un gestore. Per generare un gestore visualizzazione disegnare una finestra con separatore nell'applicazione, sostituire le dichiarazioni del `CSplitterWnd` classe con il `CSplitterWndEx` classe. Per le applicazioni di finestra cornice, la classe di finestra con separatore è dichiarata nella classe CMainFrame che si trova in MainFrm. Per un esempio, vedere il `OutlookDemo` esempio nella directory degli esempi.  
+ Il `CSplitterWndEx` classe viene utilizzata in combinazione con il [OnDrawSplitterBorder](cmfcvisualmanager-class.md#ondrawsplitterborder), [OnDrawSplitterBox](cmfcvisualmanager-class.md#ondrawsplitterbox), e [OnFillSplitterBackground](cmfcvisualmanager-class.md#onfillsplitterbackground) metodi, che sono implementato da un gestore. Per generare un gestore visualizzazione disegnare una finestra con separatore nell'applicazione, sostituire le dichiarazioni del `CSplitterWnd` classe con il `CSplitterWndEx` classe. Per le applicazioni finestra cornice, la classe della finestra con separatore viene dichiarata nella classe CMainFrame che si trova in MainFrm. Per un esempio, vedere il `OutlookDemo` esempio nella directory degli esempi.  
   
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  [CObject](cobject-class.md)  
@@ -70,7 +70,7 @@ class CSplitterWndEx : public CSplitterWnd
  **Intestazione:** afxsplitterwndex.h  
   
 ##  <a name="ondrawsplitter"></a>  CSplitterWndEx::OnDrawSplitter  
- Chiamato dal framework per disegnare una finestra con separatore.  
+ Chiamata eseguita dal framework per disegnare una finestra con separatore.  
   
 ```  
 virtual void OnDrawSplitter(  
@@ -81,14 +81,14 @@ virtual void OnDrawSplitter(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] `pDC`  
- Puntatore al contesto di dispositivo. Se questo parametro è `NULL`, il framework ridisegna la finestra attiva.  
+ [in] *pDC*  
+ Puntatore al contesto di dispositivo. Se questo parametro è NULL, il framework ridisegna la finestra attiva.  
   
- [in] `nType`  
- Uno del `CSplitterWnd::ESplitType` valori di enumerazione che specifica l'elemento della finestra con separatore da disegnare. I valori validi sono `splitBox`, `splitBar`, `splitIntersection`, e `splitBorder`.  
+ [in] *NLE*  
+ Uno del `CSplitterWnd::ESplitType` valori di enumerazione che specifica l'elemento finestra con separatore da disegnare. I valori validi sono `splitBox`, `splitBar`, `splitIntersection`, e `splitBorder`.  
   
- [in] `rect`  
- Un rettangolo di delimitazione che specifica le dimensioni e posizione per disegnare l'elemento della finestra con separatore specificato.  
+ [in] *rect*  
+ Un rettangolo di delimitazione che specifica le dimensioni e posizione per disegnare l'elemento finestra con separatore specificato.  
   
 ### <a name="remarks"></a>Note  
   

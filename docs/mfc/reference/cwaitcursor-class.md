@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1e7bc4755d2e96c78735f1b3ef175ff3603686fb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d89cd3a27869434bc5874037005fee6a592db233
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33372508"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37122671"
 ---
 # <a name="cwaitcursor-class"></a>Classe CWaitCursor
 Fornisce un modo per mostrare in una riga un cursore di attesa, in genere visualizzato come una clessidra, mentre si sta eseguendo un'operazione di lunga durata.  
@@ -53,18 +53,18 @@ class CWaitCursor
 ## <a name="remarks"></a>Note  
  `CWaitCursor` non dispone di una classe basa.  
   
- Windows buone pratiche di programmazione richiedono che un cursore di attesa visualizzare ogni volta che si sta eseguendo un'operazione che richiede una notevole quantità di tempo.  
+ Programmazione consigliate buona Windows richiedono visualizzare un cursore di attesa ogni volta che si sta eseguendo un'operazione che richiede una notevole quantità di tempo.  
   
- Per visualizzare un cursore di attesa, può definire un `CWaitCursor` variabile prima del codice che esegue l'operazione di lunga durata. Il costruttore dell'oggetto determina automaticamente il cursore di attesa da visualizzare.  
+ Per visualizzare un cursore di attesa, può definire un `CWaitCursor` variabile prima del codice che esegue l'operazione di lunga durata. Costruttore dell'oggetto determina automaticamente il cursore di attesa da visualizzare.  
   
  Quando l'oggetto esce dall'ambito (alla fine del blocco in cui il `CWaitCursor` a un oggetto dichiarato), il relativo distruttore imposta il cursore fino al cursore precedente. In altre parole, l'oggetto esegue automaticamente la pulizia necessaria.  
   
 > [!NOTE]
->  A causa di costruttori e distruttori di loro funzionano, `CWaitCursor` gli oggetti vengono sempre dichiarati come variabili locali, ovvero mai vengono dichiarate come variabili globali né vengono allocate con **nuova**.  
+>  A causa di come i relativi costruttori e distruttori di lavoro, `CWaitCursor` gli oggetti vengono sempre dichiarati come variabili locali, ovvero sono mai state dichiarate come le variabili globali né sono allocati con **nuovo**.  
   
- Se si esegue un'operazione che potrebbe causare il cursore da modificare, ad esempio la visualizzazione di una finestra di messaggio o la finestra di dialogo, chiamare il [ripristinare](#restore) funzione membro per ripristinare il cursore di attesa. È possibile chiamare **ripristinare** anche quando un cursore di attesa è attualmente visualizzato.  
+ Se si esegue un'operazione che potrebbe causare il cursore da modificare, ad esempio la visualizzazione di una finestra di messaggio o la finestra di dialogo, chiamare il [ripristinare](#restore) funzione membro per ripristinare il cursore di attesa. È possibile chiamare `Restore` anche quando un cursore di attesa è attualmente visualizzato.  
   
- È possibile visualizzare un cursore di attesa per utilizzare la combinazione di [CCmdTarget::BeginWaitCursor](../../mfc/reference/ccmdtarget-class.md#beginwaitcursor), [CCmdTarget::EndWaitCursor](../../mfc/reference/ccmdtarget-class.md#endwaitcursor)ed eventualmente [CCmdTarget::RestoreWaitCursor](../../mfc/reference/ccmdtarget-class.md#restorewaitcursor). Tuttavia, `CWaitCursor` è più facile da utilizzare in quanto non è necessario impostare il cursore fino al cursore precedente al termine dell'operazione di lunga durata.  
+ Un altro modo per visualizzare un cursore di attesa consiste nell'utilizzare la combinazione di [CCmdTarget::BeginWaitCursor](../../mfc/reference/ccmdtarget-class.md#beginwaitcursor), [CCmdTarget::EndWaitCursor](../../mfc/reference/ccmdtarget-class.md#endwaitcursor)ed eventualmente [CCmdTarget::RestoreWaitCursor](../../mfc/reference/ccmdtarget-class.md#restorewaitcursor). Tuttavia, `CWaitCursor` è più facile da utilizzare perché non è necessario impostare il cursore fino al cursore precedente al termine dell'operazione di lunga durata.  
   
 > [!NOTE]
 >  MFC imposta e ripristina il cursore utilizzando il [CWinApp::DoWaitCursor](../../mfc/reference/cwinapp-class.md#dowaitcursor) funzione virtuale. È possibile eseguire l'override di questa funzione per ottenere un comportamento personalizzato.  
@@ -79,7 +79,7 @@ class CWaitCursor
  [!code-cpp[NVC_MFCWindowing#62](../../mfc/reference/codesnippet/cpp/cwaitcursor-class_1.cpp)]  
   
 ##  <a name="cwaitcursor"></a>  CWaitCursor::CWaitCursor  
- Per visualizzare un cursore di attesa, è sufficiente dichiarare un `CWaitCursor` oggetto prima che il codice che esegue l'operazione di lunga durata.  
+ Per visualizzare un cursore di attesa, dichiarando un `CWaitCursor` oggetto prima che il codice che esegue l'operazione di lunga durata.  
   
 ```  
 CWaitCursor();
@@ -90,23 +90,23 @@ CWaitCursor();
   
  Quando l'oggetto esce dall'ambito (alla fine del blocco in cui il `CWaitCursor` a un oggetto dichiarato), il relativo distruttore imposta il cursore fino al cursore precedente. In altre parole, l'oggetto esegue automaticamente la pulizia necessaria.  
   
- È possibile sfruttare il fatto che il distruttore viene chiamato alla fine del blocco, che potrebbe essere prima della fine della funzione, per rendere il cursore di attesa attiva solo in una parte della funzione. Questa tecnica è illustrata nel secondo esempio riportato di seguito.  
+ È possibile sfruttare il fatto che il distruttore viene chiamato alla fine del blocco, che potrebbe essere prima della fine della funzione, per rendere il cursore di attesa attiva solo in una parte di una funzione. Questa tecnica è illustrata nel secondo esempio riportato di seguito.  
   
 > [!NOTE]
->  A causa di costruttori e distruttori di loro funzionano, `CWaitCursor` gli oggetti vengono sempre dichiarati come variabili locali, ovvero mai vengono dichiarate come variabili globali, né vengono allocate con **nuova**.  
+>  A causa di come i relativi costruttori e distruttori di lavoro, `CWaitCursor` gli oggetti vengono sempre dichiarati come variabili locali, ovvero sono mai state dichiarate come le variabili globali, né sono allocati con **nuovo**.  
   
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFCWindowing#63](../../mfc/reference/codesnippet/cpp/cwaitcursor-class_2.cpp)]  
   
 ##  <a name="restore"></a>  CWaitCursor::Restore  
- Per ripristinare il cursore di attesa, chiamare questa funzione dopo l'esecuzione di un'operazione, ad esempio la visualizzazione di una finestra di messaggio o nella finestra di dialogo potrebbe cambiare il cursore di attesa per un altro cursore.  
+ Per ripristinare il cursore di attesa, chiamare questa funzione dopo l'esecuzione di un'operazione, ad esempio la visualizzazione di una finestra di messaggio o finestra di dialogo potrebbe cambiare il cursore di attesa per un altro cursore.  
   
 ```  
 void Restore();
 ```  
   
 ### <a name="remarks"></a>Note  
- È possibile chiamare **ripristinare** anche quando il cursore di attesa è attualmente visualizzato.  
+ È anche possibile chiamare `Restore` anche quando il cursore di attesa è attualmente visualizzato.  
   
  Se è necessario ripristinare il cursore di attesa in una funzione diversa da quella in cui il `CWaitCursor` a un oggetto dichiarato, è possibile chiamare [CCmdTarget::RestoreWaitCursor](../../mfc/reference/ccmdtarget-class.md#restorewaitcursor).  
   

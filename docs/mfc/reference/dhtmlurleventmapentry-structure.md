@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d038fa188ac431f20b0b19ca8ad8bf675943954c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ee629d9dcffc80ce20306989cad72d466722af87
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370058"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37123331"
 ---
 # <a name="dhtmlurleventmapentry-structure"></a>Struttura DHtmlUrlEventMapEntry
-Il `DHtmlUrlEventMapEntry` struttura fornisce il supporto di mappa eventi multi-URL.  
+Il `DHtmlUrlEventMapEntry` struttura fornisce il supporto mappe eventi multi-URL.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,7 +37,7 @@ const DHtmlEventMapEntry *pEventMap;
 ```  
   
 #### <a name="parameters"></a>Parametri  
- `szUrl`  
+ *szUrl*  
  L'URL.  
   
  *pEventMap*  

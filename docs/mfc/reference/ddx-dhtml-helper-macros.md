@@ -27,15 +27,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cb2e9d2494463b502fda85c03fa1b861e1182cfc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6de53324eac663df7c12ee0cb2c0f4f02558157d
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33372075"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37121702"
 ---
 # <a name="ddxdhtml-helper-macros"></a>Macro di Helper DDX_DHtml
-Le macro di helper DDX_DHtml consentono un facile accesso alle proprietà comuni dei controlli in una pagina HTML.  
+Le macro di helper DDX_DHtml consentono un facile accesso alle proprietà di uso comune dei controlli in una pagina HTML.  
   
 ### <a name="data-exchange-macros"></a>Macro di scambio di dati  
   
@@ -66,17 +66,17 @@ DDX_DHtml_Anchor_Href(
 ```  
   
 #### <a name="parameters"></a>Parametri  
- `dx`  
+ *dx*  
  Un puntatore a un [CDataExchange](../../mfc/reference/cdataexchange-class.md) oggetto.  
   
- `name`  
+ *name*  
  Il valore specificato per il parametro ID del controllo HTML.  
   
- `var`  
+ *var*  
  Il valore da scambiare.  
   
 ## <a name="remarks"></a>Note  
- Questa macro chiama il [CDHtmlDialog::DDX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext) funzione mediante il DISPID_IHTMLANCHORELEMENT_HREF inviare ID.
+ Questa macro chiama il [CDHtmlDialog::DDX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext) funzione utilizzando il DISPID_IHTMLANCHORELEMENT_HREF inviare ID.
 
 ## <a name="ddx_dhtml_anchor_target"></a>  DDX_DHtml_Anchor_Target
  Imposta o recupera la finestra di destinazione o il frame.  
@@ -89,17 +89,17 @@ DDX_DHtml_Anchor_Target(
 ```  
   
 #### <a name="parameters"></a>Parametri  
- `dx`  
+ *dx*  
  Un puntatore a un [CDataExchange](../../mfc/reference/cdataexchange-class.md) oggetto.  
   
- `name`  
+ *name*  
  Il valore specificato per il parametro ID del controllo HTML.  
   
- `var`  
+ *var*  
  Il valore da scambiare.  
   
 ## <a name="remarks"></a>Note  
- Questa macro chiama il [CDHtmlDialog::DDX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext) funzione mediante il DISPID_IHTMLANCHORELEMENT_TARGET inviare ID.  
+ Questa macro chiama il [CDHtmlDialog::DDX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext) funzione utilizzando il DISPID_IHTMLANCHORELEMENT_TARGET inviare ID.  
 
 ## <a name="ddx_dhtml_elementinnerhtml"></a>  DDX_DHtml_ElementInnerHtml
  Imposta o recupera il codice HTML tra i tag di inizio e di fine dell'elemento corrente.  
@@ -114,17 +114,17 @@ DDX_DHtml_ElementInnerHtml(
 ```  
   
 #### <a name="parameters"></a>Parametri  
- `dx`  
+ *dx*  
  Un puntatore a un [CDataExchange](../../mfc/reference/cdataexchange-class.md) oggetto.  
   
- `name`  
+ *name*  
  Il valore specificato per il parametro ID del controllo HTML.  
   
- `var`  
+ *var*  
  Il valore da scambiare.  
   
 ## <a name="remarks"></a>Note  
- Questa macro chiama il [CDHtmlDialog::DDX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext) funzione mediante il DISPID_IHTMLELEMENT_INNERHTML inviare ID.  
+ Questa macro chiama il [CDHtmlDialog::DDX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext) funzione utilizzando il DISPID_IHTMLELEMENT_INNERHTML inviare ID.  
   
 
 ## <a name="ddx_dhtml_elementinnertext"></a>  DDX_DHtml_ElementInnerText
@@ -140,17 +140,17 @@ DDX_DHtml_ElementInnerText(
 ```  
   
 #### <a name="parameters"></a>Parametri  
- `dx`  
+ *dx*  
  Un puntatore a un [CDataExchange](../../mfc/reference/cdataexchange-class.md) oggetto.  
   
- `name`  
+ *name*  
  Il valore specificato per il parametro ID del controllo HTML.  
   
- `var`  
+ *var*  
  Il valore da scambiare.  
   
 ## <a name="remarks"></a>Note  
- Questa macro chiama il [CDHtmlDialog::DDX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext) funzione mediante il DISPID_IHTMLELEMENT_INNERTEXT inviare ID. 
+ Questa macro chiama il [CDHtmlDialog::DDX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext) funzione utilizzando il DISPID_IHTMLELEMENT_INNERTEXT inviare ID. 
 
 ## <a name="ddx_dhtml_elementvalue"></a> DDX_DHtml_ElementValue  
 Imposta o recupera la proprietà Value dal controllo selezionato.  
@@ -163,19 +163,19 @@ DDX_DHtml_ElementValue(
 ```  
   
 #### <a name="parameters"></a>Parametri  
- `dx`  
+ *dx*  
  Un puntatore a un [CDataExchange](../../mfc/reference/cdataexchange-class.md) oggetto.  
   
- `name`  
+ *name*  
  Il valore specificato per il parametro ID del controllo HTML.  
   
- `var`  
+ *var*  
  Il valore da scambiare. Vedere *valore* in [CDHtmlDialog::DDX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext).  
   
 ## <a name="remarks"></a>Note  
- Questa macro verrà completata solo quando esegue i controlli che dispongono di una proprietà di valore. I controlli che hanno una proprietà Value includono le caselle di modifica, caselle di riepilogo e caselle combinate.  
+ Questa macro verrà completata solo quando viene eseguito i controlli che hanno una proprietà Value. I controlli che hanno una proprietà Value includono le caselle di modifica, caselle di riepilogo e caselle combinate.  
   
- Questa macro chiama il [CDHtmlDialog::DDX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext) funzione mediante il DISPID_A_VALUE inviare ID.  
+ Questa macro chiama il [CDHtmlDialog::DDX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext) funzione utilizzando il DISPID_A_VALUE inviare ID.  
 
 ## <a name="ddx_dhtml_frame_src"></a> DDX_DHtml_Frame_Src
 Ottiene o imposta l'URL del frame associato.  
@@ -188,17 +188,17 @@ DDX_DHtml_Frame_Src(
 ```  
   
 #### <a name="parameters"></a>Parametri  
- `dx`  
+ *dx*  
  Un puntatore a un [CDataExchange](../../mfc/reference/cdataexchange-class.md) oggetto.  
   
- `name`  
+ *name*  
  Il valore specificato per il parametro ID del controllo HTML.  
   
- `var`  
+ *var*  
  Il valore da scambiare.  
   
 ## <a name="remarks"></a>Note  
- Questa macro chiama il [CDHtmlDialog::DDX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext) funzione mediante il DISPID_IHTMLFRAMEBASE_SRC inviare ID.  
+ Questa macro chiama il [CDHtmlDialog::DDX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext) funzione utilizzando il DISPID_IHTMLFRAMEBASE_SRC inviare ID.  
 
 ## <a name="ddx_dhtml_iframe_src"></a> DDX_DHtml_IFrame_Src
 Ottiene o imposta l'URL del frame associato.  
@@ -213,17 +213,17 @@ DDX_DHtml_IFrame_Src(
 ```  
   
 #### <a name="parameters"></a>Parametri  
- `dx`  
+ *dx*  
  Un puntatore a un [CDataExchange](../../mfc/reference/cdataexchange-class.md) oggetto.  
   
- `name`  
+ *name*  
  Il valore specificato per il parametro ID del controllo HTML.  
   
- `var`  
+ *var*  
  Il valore da scambiare.  
   
 ## <a name="remarks"></a>Note  
- Questa macro chiama il [CDHtmlDialog::DDX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext) funzione mediante il DISPID_IHTMLFRAMEBASE_SRC inviare ID. 
+ Questa macro chiama il [CDHtmlDialog::DDX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext) funzione utilizzando il DISPID_IHTMLFRAMEBASE_SRC inviare ID. 
 
 ## <a name="ddx_dhtml_img_src"></a>DDX_DHtml_Img_Src
 Ottiene o recupera il nome di un'immagine o un video clip nel documento.  
@@ -236,19 +236,19 @@ DDX_DHtml_Img_Src(
 ```  
   
 #### <a name="parameters"></a>Parametri  
- `dx`  
+ *dx*  
  Un puntatore a un [CDataExchange](../../mfc/reference/cdataexchange-class.md) oggetto.  
   
- `name`  
+ *name*  
  Il valore specificato per il parametro ID del controllo HTML.  
   
- `var`  
+ *var*  
  Il valore da scambiare.  
   
 ## <a name="remarks"></a>Note  
- Quando si utilizza il `DDX_DHtml_Img_Src` (macro) per recuperare la proprietà src di un elemento immagine, l'oggetto immagine di Internet Explorer verrà restituito l'URL completo con caratteri di escape per l'origine dell'immagine. Ad esempio, se si utilizza il `DDX_DHtml_Img_Src` (macro) per impostare la proprietà src di un elemento immagine per la stringa "alcuni interessanti immagine," quando si recupera la proprietà, Internet Explorer restituisce la stringa "res://d:\myapplication\myapp.exe/some% 20interesting % 20picture."  
+ Quando si usa la macro DDX_DHtml_Img_Src per recuperare la proprietà src di un elemento immagine, l'oggetto immagine di Internet Explorer restituirà l'URL completo con caratteri di escape per l'origine dell'immagine. Ad esempio, se si usa la macro DDX_DHtml_Img_Src per impostare la proprietà src di un elemento immagine per la stringa "alcuni interessanti immagine", quando si recupera la proprietà, Internet Explorer restituirà la stringa "res://d:\myapplication\myapp.exe/some% 20interesting % 20picture."  
   
- Questa macro chiama il [CDHtmlDialog::DDX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext) funzione mediante il DISPID_IHTMLIMGELEMENT_SRC inviare ID.  
+ Questa macro chiama il [CDHtmlDialog::DDX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext) funzione utilizzando il DISPID_IHTMLIMGELEMENT_SRC inviare ID.  
 
   
 ## <a name="see-also"></a>Vedere anche  

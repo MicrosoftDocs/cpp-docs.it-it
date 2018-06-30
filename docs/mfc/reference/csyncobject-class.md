@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1712f0d26fc0d9ac3dcfb0f2a15a906351f43154
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bcc5290b08b6a0b6159c1ba9b0b5b05d02a178ba
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374097"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37122069"
 ---
 # <a name="csyncobject-class"></a>CSyncObject (classe)
 Classe virtuale pura che fornisce la funzionalità comune agli oggetti di sincronizzazione in Win32.  
@@ -68,9 +68,9 @@ class CSyncObject : public CObject
 |[CSyncObject::m_hObject](#m_hobject)|L'handle all'oggetto sottostante, la sincronizzazione.|  
   
 ## <a name="remarks"></a>Note  
- La libreria Microsoft Foundation Class fornisce diverse classi derivate da `CSyncObject`. Si tratta di [CEvent](../../mfc/reference/cevent-class.md), [CMutex](../../mfc/reference/cmutex-class.md), [CCriticalSection](../../mfc/reference/ccriticalsection-class.md), e [CSemaphore](../../mfc/reference/csemaphore-class.md).  
+ La libreria Microsoft Foundation Class fornisce diverse classi derivate da `CSyncObject`. Si tratta [CEvent](../../mfc/reference/cevent-class.md), [CMutex](../../mfc/reference/cmutex-class.md), [CCriticalSection](../../mfc/reference/ccriticalsection-class.md), e [CSemaphore](../../mfc/reference/csemaphore-class.md).  
   
- Per informazioni su come utilizzare gli oggetti di sincronizzazione, vedere l'articolo [Multithreading: utilizzo delle classi di sincronizzazione](../../parallel/multithreading-how-to-use-the-synchronization-classes.md).  
+ Per informazioni su come usare gli oggetti di sincronizzazione, vedere l'articolo [Multithreading: utilizzo delle classi di sincronizzazione](../../parallel/multithreading-how-to-use-the-synchronization-classes.md).  
   
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -89,8 +89,8 @@ virtual ~CSyncObject();
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `pstrName`  
- Nome dell'oggetto. Se **NULL**, *pstrName* sarà null.  
+ *pstrName*  
+ Nome dell'oggetto. Se NULL, *pstrName* sarà null.  
   
 ##  <a name="lock"></a>  CSyncObject::Lock  
  Chiamare questa funzione per ottenere l'accesso alla risorsa controllata dall'oggetto di sincronizzazione.  
@@ -100,14 +100,14 @@ virtual BOOL Lock(DWORD dwTimeout = INFINITE);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `dwTimeout`  
- Specifica la quantità di tempo in millisecondi di attesa per l'oggetto di sincronizzazione siano disponibili (segnalato). Se **infinito**, `Lock` rimarrà in attesa finché l'oggetto è stato segnalato prima della restituzione.  
+ *dwTimeout*  
+ Specifica la quantità di tempo in millisecondi di attesa per l'oggetto di sincronizzazione disponibilità (segnalato). Se è infinito, `Lock` attenderà fino a quando non viene segnalata l'oggetto prima della restituzione.  
   
 ### <a name="return-value"></a>Valore restituito  
  Diverso da zero se la funzione ha esito positivo; in caso contrario 0.  
   
 ### <a name="remarks"></a>Note  
- Se l'oggetto di sincronizzazione viene segnalato, `Lock` restituirà correttamente e il thread ora proprietario dell'oggetto. Se l'oggetto di sincronizzazione è impostato su non segnalato (non disponibile), `Lock` attenderà per l'oggetto di sincronizzazione vengano segnalati fino al numero di millisecondi specificato nella *dwTimeOut* parametro. Se l'oggetto di sincronizzazione non è stato segnalato nel periodo di tempo, specificato `Lock` restituisce un errore.  
+ Se l'oggetto di sincronizzazione non viene segnalato, `Lock` restituirà correttamente e il thread ora proprietario dell'oggetto. Se l'oggetto di sincronizzazione è impostato su non segnalato (non disponibile), `Lock` attenderà per l'oggetto di sincronizzazione vengano segnalati fino al numero di millisecondi specificato nella *dwTimeOut* parametro. Se l'oggetto di sincronizzazione non è stato segnalato nel periodo di tempo, specificato `Lock` restituisce un errore.  
   
 ##  <a name="m_hobject"></a>  CSyncObject::m_hObject  
  L'handle all'oggetto sottostante, la sincronizzazione.  
@@ -124,7 +124,7 @@ operator HANDLE() const;
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- Se ha esito positivo, l'handle dell'oggetto di sincronizzazione. in caso contrario, **NULL**.  
+ Se l'operazione riesce, l'handle dell'oggetto di sincronizzazione; in caso contrario, NULL.  
   
 ### <a name="remarks"></a>Note  
  È possibile utilizzare l'handle per chiamare direttamente le API di Windows.  
@@ -139,17 +139,17 @@ virtual BOOL Unlock() = 0; virtual BOOL Unlock(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `lCount`  
- Non è utilizzato dall'implementazione predefinita.  
+ *lCount*  
+ Non utilizzato dall'implementazione predefinita.  
   
- `lpPrevCount`  
- Non è utilizzato dall'implementazione predefinita.  
+ *lpPrevCount*  
+ Non utilizzato dall'implementazione predefinita.  
   
 ### <a name="return-value"></a>Valore restituito  
- Implementazione predefinita restituisce sempre **TRUE**.  
+ Implementazione predefinita restituisce sempre TRUE.  
   
 ### <a name="remarks"></a>Note  
- Restituisce l'implementazione predefinita della dichiarazione con due parametri sempre **TRUE**. Questa funzione viene chiamata per rilasciare l'accesso all'oggetto di sincronizzazione della proprietà del thread chiamante. La seconda dichiarazione è disponibile per gli oggetti di sincronizzazione, ad esempio semafori che consentono il più accesso di una risorsa controllata.  
+ L'implementazione predefinita della dichiarazione con due parametri sempre restituisce TRUE. Questa funzione viene chiamata per rilasciare l'accesso all'oggetto di sincronizzazione della proprietà del thread chiamante. La seconda dichiarazione è disponibile per gli oggetti di sincronizzazione, ad esempio semafori che consentono il più accesso di una risorsa controllata.  
   
 ## <a name="see-also"></a>Vedere anche  
  [CObject (classe)](../../mfc/reference/cobject-class.md)   

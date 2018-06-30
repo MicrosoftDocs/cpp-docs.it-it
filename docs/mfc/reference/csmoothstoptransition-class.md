@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e7f87c83b9f4c3840318b27922f758787d929d1e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 80f0c9802077b89ca5555dc476b1066f61e6c593
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374257"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37121490"
 ---
 # <a name="csmoothstoptransition-class"></a>Classe CSmoothStopTransition
 Incapsula una transizione a interruzione graduale.  
@@ -46,7 +46,7 @@ class CSmoothStopTransition : public CBaseTransition;
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[CSmoothStopTransition::CSmoothStopTransition](#csmoothstoptransition)|Costruisce una transizione a interruzione graduale e inizializza la durata massima e il valore finale.|  
+|[CSmoothStopTransition::CSmoothStopTransition](#csmoothstoptransition)|Costruisce una transizione a interruzione e inizializza la durata massima e il valore finale.|  
   
 ### <a name="public-methods"></a>Metodi pubblici  
   
@@ -62,7 +62,7 @@ class CSmoothStopTransition : public CBaseTransition;
 |[CSmoothStopTransition::m_maximumDuration](#m_maximumduration)|La durata massima della transizione.|  
   
 ## <a name="remarks"></a>Note  
- Una transizione a interruzione graduale rallenta così come si avvicina a un determinato valore finale e raggiunge con una velocità uguale a zero. La durata della transizione è determinata dalla velocità iniziale, la differenza tra i valori iniziali e finali e la durata massima specificata. Se non esiste alcuna soluzione composta da un singolo arco parabolico, questo metodo crea una transizione cubica. Poiché tutte le transizioni vengono cancellate automaticamente, è consigliabile per assegnarle utilizzando l'operatore new. L'oggetto COM IUIAnimationTransition incapsulato viene creato da CAnimationController:: AnimateGroup, finché non è NULL. Modifica le variabili membro dopo la creazione dell'oggetto COM non ha alcun effetto.  
+ Una transizione a interruzione rallenta mentre ne si avvicina a un determinato valore finale e raggiunge con una velocità uguale a zero. La durata della transizione è determinata dalla velocità iniziale, la differenza tra i valori iniziali e finali e la durata massima specificata. Se non esiste alcuna soluzione composta da un singolo arco parabolico, questo metodo crea una transizione cubica. Poiché tutte le transizioni vengono cancellate automaticamente, è consigliabile per assegnarle utilizzando l'operatore new. L'oggetto COM IUIAnimationTransition incapsulato viene creato da CAnimationController:: AnimateGroup, finché non è NULL. Per modificare le variabili membro dopo la creazione di questo oggetto COM non ha alcun effetto.  
   
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -84,14 +84,14 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `pLibrary`  
- Puntatore alla raccolta di transizione, che è responsabile della creazione di transizioni standard.  
+ *pLibrary*  
+ Puntatore alla raccolta di transizione, che è responsabile per la creazione di transizioni standard.  
   
 ### <a name="return-value"></a>Valore restituito  
- TRUE se transizione viene creata correttamente. in caso contrario FALSE.  
+ TRUE se transizione viene creata correttamente. in caso contrario, FALSE.  
   
 ##  <a name="csmoothstoptransition"></a>  CSmoothStopTransition::CSmoothStopTransition  
- Costruisce una transizione a interruzione graduale e inizializza la durata massima e il valore finale.  
+ Costruisce una transizione a interruzione e inizializza la durata massima e il valore finale.  
   
 ```  
 CSmoothStopTransition(
@@ -100,10 +100,10 @@ CSmoothStopTransition(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `maximumDuration`  
+ *maximumDuration*  
  La durata massima della transizione.  
   
- `dblFinalValue`  
+ *dblFinalValue*  
  Il valore della variabile di animazione alla fine della transizione.  
   
 ##  <a name="m_dblfinalvalue"></a>  CSmoothStopTransition::m_dblFinalValue  
