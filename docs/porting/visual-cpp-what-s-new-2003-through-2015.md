@@ -13,12 +13,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b9778a9d456ebd0fed6bc36c2c631849bcbfe11d
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: ef91c42d0787dac371d324eece1527e5366c89c3
+ms.sourcegitcommit: 05075fce8a0ed7fddb99f50f3931db966a91450d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34705605"
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36271396"
 ---
 # <a name="visual-c-what39s-new-2003-through-2015"></a>Visual C++: novità dalla versione 2003 alla 2015
 
@@ -1585,7 +1585,7 @@ Questo supporto migliorato per gli standard ISO C/C++ può richiedere modifiche 
 
 - Aggiunge il punto e virgola per i tipi di classe.
 - Completa le parentesi per i valori letterali stringa di tipo "raw".
-- Completa i commenti a più righe (/* */)
+- Completa i commenti a più righe (/\* \*/)
 
 **Trova tutti i riferimenti** ora risolve e filtra automaticamente i riferimenti in background dopo aver visualizzato l'elenco delle corrispondenze testuali.
 
