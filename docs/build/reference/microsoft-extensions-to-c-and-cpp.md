@@ -41,9 +41,10 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: 903ad9d5a44bb455bede52aa3456d03456f54d13
 ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32379341"
 ---
 # <a name="microsoft-extensions-to-c-and-c"></a>Estensioni Microsoft a C e C++
 Visual C++ estende gli standard ANSI C e ANSI C++ come segue.  
