@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5066e793c58dca9ccc12ccc159a010654df3efbc
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 68d2ca3de8e6e3c05095580ce63a5bac253548c0
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33860671"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38955452"
 ---
 # <a name="ltiteratorgt"></a>&lt;iterator&gt;
 
@@ -89,22 +89,22 @@ Sono state aggiunte estensioni agli iteratori della libreria standard C++ per su
 
 |Classe|Descrizione|
 |-|-|
-|[back_insert_iterator](../standard-library/back-insert-iterator-class.md)|La classe modello descrive un oggetto iteratore di output. Inserisce gli elementi in un contenitore di tipo **Container**, a cui accede tramite l'oggetto **pointer** protetto archiviato denominato container.|
-|[bidirectional_iterator_tag](../standard-library/bidirectional-iterator-tag-struct.md)|Classe che fornisce un tipo restituito per una funzione **iterator_category** che rappresenta un iteratore bidirezionale.|
+|[back_insert_iterator](../standard-library/back-insert-iterator-class.md)|La classe modello descrive un oggetto iteratore di output. Inserisce gli elementi in un contenitore di tipo `Container`, cui accede tramite il metodo protetto `pointer` oggetto archiviato denominato contenitore.|
+|[bidirectional_iterator_tag](../standard-library/bidirectional-iterator-tag-struct.md)|Una classe che fornisce un tipo restituito per un `iterator_category` funzione che rappresenta un iteratore bidirezionale.|
 |[checked_array_iterator](../standard-library/checked-array-iterator-class.md)|Classe che accede a una matrice mediante un iteratore verificato ad accesso causale. **Nota:**  questa classe è un'estensione Microsoft della libreria standard C++. Il codice implementato mediante questa funzione non può essere trasferito negli ambienti di compilazione standard di C++ che non supportano questa estensione Microsoft.|
-|[forward_iterator_tag](../standard-library/forward-iterator-tag-struct.md)|Classe che fornisce un tipo restituito per una funzione **iterator_category** che rappresenta un iteratore in avanti.|
-|[front_insert_iterator](../standard-library/front-insert-iterator-class.md)|La classe modello descrive un oggetto iteratore di output. Inserisce gli elementi in un contenitore di tipo **Container**, a cui accede tramite l'oggetto **pointer** protetto archiviato denominato container.|
-|[input_iterator_tag](../standard-library/input-iterator-tag-struct.md)|Classe che fornisce un tipo restituito per una funzione **iterator_category** che rappresenta un iteratore di input.|
-|[insert_iterator](../standard-library/insert-iterator-class.md)|La classe modello descrive un oggetto iteratore di output. Inserisce gli elementi in un contenitore di tipo **Container**, a cui accede tramite l'oggetto **pointer** protetto archiviato denominato container. Archivia inoltre l'oggetto **iterator** protetto, della classe **Container::iterator**, denominato **iter**.|
-|[istream_iterator](../standard-library/istream-iterator-class.md)|La classe modello descrive un oggetto iteratore di input. Estrae gli oggetti della classe **Ty** da un flusso di input, a cui accede tramite un oggetto archiviato di tipo pointer a `basic_istream`\<**Elem**, **Tr**>.|
-|[istreambuf_iterator](../standard-library/istreambuf-iterator-class.md)|La classe modello descrive un oggetto iteratore di input. Inserisce gli elementi della classe **Elem** in un buffer del flusso di output, a cui accede tramite un oggetto archiviato di tipo **pointer** a `basic_streambuf`\<**Elem**, **Tr**>.|
+|[forward_iterator_tag](../standard-library/forward-iterator-tag-struct.md)|Una classe che fornisce un tipo restituito per un `iterator_category` funzione che rappresenta un iteratore in avanti.|
+|[front_insert_iterator](../standard-library/front-insert-iterator-class.md)|La classe modello descrive un oggetto iteratore di output. Inserisce gli elementi in un contenitore di tipo `Container`, cui accede tramite il metodo protetto `pointer` oggetto archiviato denominato contenitore.|
+|[input_iterator_tag](../standard-library/input-iterator-tag-struct.md)|Una classe che fornisce un tipo restituito per un `iterator_category` funzione che rappresenta un iteratore di input.|
+|[insert_iterator](../standard-library/insert-iterator-class.md)|La classe modello descrive un oggetto iteratore di output. Inserisce gli elementi in un contenitore di tipo `Container`, cui accede tramite il metodo protetto `pointer` oggetto archiviato denominato contenitore. Archivia anche il metodo protetto `iterator` oggetto della classe `Container::iterator`, denominato `iter`.|
+|[istream_iterator](../standard-library/istream-iterator-class.md)|La classe modello descrive un oggetto iteratore di input. Estrae gli oggetti della classe `Ty` da un flusso di input, che accede tramite un oggetto archiviato di tipo pointer a `basic_istream` \< **Elem**, **Tr**>.|
+|[istreambuf_iterator](../standard-library/istreambuf-iterator-class.md)|La classe modello descrive un oggetto iteratore di input. Inserisce gli elementi della classe `Elem` in un buffer di flusso di output, cui si accede tramite un oggetto archiviato di tipo `pointer` al `basic_streambuf` \< **Elem**, **Tr** >.|
 |[iterator](../standard-library/iterator-struct.md)|La classe modello viene utilizzata come tipo di base per tutti gli iteratori.|
 |[iterator_traits](../standard-library/iterator-traits-struct.md)|Classe helper del modello che fornisce tipi critici associati a diversi tipi di iteratori in modo che sia possibile fare riferimento a essi nello stesso modo.|
 |[move_iterator](../standard-library/move-iterator-class.md)|Un oggetto `move_iterator` consente di archiviare un iteratore ad accesso casuale di tipo `RandomIterator`. Si comporta come un iteratore ad accesso casuale, salvo quando viene dereferenziato. Viene eseguito il cast in modo implicito del risultato di `operator*` a `value_type&&:` per creare un `rvalue reference`.|
-|[ostream_iterator](../standard-library/ostream-iterator-class.md)|La classe modello descrive un oggetto iteratore di output. Inserisce gli oggetti della classe **Type** in un flusso di output, a cui accede tramite un oggetto archiviato di tipo **pointer** a `basic_ostream`\<**Elem**, **Tr**>.|
-|[Classe ostreambuf_iterator](../standard-library/ostreambuf-iterator-class.md)|La classe modello descrive un oggetto iteratore di output. Inserisce gli elementi della classe **Elem** in un buffer del flusso di output, a cui accede tramite un oggetto archiviato di tipo pointer a `basic_streambuf`\<**Elem**, **Tr**>.|
-|[output_iterator_tag](../standard-library/output-iterator-tag-struct.md)|Classe che fornisce un tipo restituito per una funzione **iterator_category** che rappresenta un iteratore di output.|
-|[random_access_iterator_tag](../standard-library/random-access-iterator-tag-struct.md)|Classe che fornisce un tipo restituito per una funzione **iterator_category** che rappresenta un iteratore ad accesso casuale.|
+|[ostream_iterator](../standard-library/ostream-iterator-class.md)|La classe modello descrive un oggetto iteratore di output. Inserisce gli oggetti della classe `Type` in un flusso di output, cui si accede tramite un oggetto archiviato di tipo `pointer` al `basic_ostream` \< **Elem**, **Tr**>.|
+|[Classe ostreambuf_iterator](../standard-library/ostreambuf-iterator-class.md)|La classe modello descrive un oggetto iteratore di output. Inserisce gli elementi della classe `Elem` in un buffer di flusso di output, che accede tramite un oggetto archiviato di tipo pointer a `basic_streambuf` \< **Elem**, **Tr**>.|
+|[output_iterator_tag](../standard-library/output-iterator-tag-struct.md)|Una classe che fornisce un tipo restituito per `iterator_category` funzione che rappresenta un iteratore di output.|
+|[random_access_iterator_tag](../standard-library/random-access-iterator-tag-struct.md)|Una classe che fornisce un tipo restituito per `iterator_category` funzione che rappresenta un iteratore ad accesso casuale.|
 |[reverse_iterator](../standard-library/reverse-iterator-class.md)|La classe modello descrive un oggetto che si comporta come un iteratore ad accesso casuale solo in senso inverso.|
 |[unchecked_array_iterator](../standard-library/unchecked-array-iterator-class.md)|Classe che accede a una matrice mediante un iteratore ad accesso causale non verificato. **Nota:**  questa classe è un'estensione Microsoft della libreria standard C++. Il codice implementato mediante questa funzione non può essere trasferito negli ambienti di compilazione standard di C++ che non supportano questa estensione Microsoft.|
 

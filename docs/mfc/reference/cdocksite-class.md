@@ -1,5 +1,5 @@
 ---
-title: Classe CDockSite | Documenti Microsoft
+title: Classe CDockSite | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -96,12 +96,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cb5745d5c4ccc495cd508df10f0d36e3729ecf13
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 4a47efc1018f42cbd9f421f1d53566aa134addd6
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36952558"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37336839"
 ---
 # <a name="cdocksite-class"></a>CDockSite Class
 [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
@@ -164,7 +164,7 @@ class CDockSite: public CBasePane
 ## <a name="remarks"></a>Note  
  Il framework crea `CDockSite` oggetti automaticamente quando si chiama [cframewndex:: EnableDocking](../../mfc/reference/cframewndex-class.md#enabledocking). Le finestre del sito di ancoraggio sono posizionate sul bordo dell'area client nella finestra cornice principale.  
   
- In genere non è necessario chiamare i servizi forniti dal sito di ancoraggio perché [CFrameWndEx classe](../../mfc/reference/cframewndex-class.md) gestisce questi servizi.  
+ In genere non è necessario chiamare i servizi forniti dal sito di ancoraggio perché [classe CFrameWndEx](../../mfc/reference/cframewndex-class.md) gestisce questi servizi.  
   
 ## <a name="example"></a>Esempio  
  Nell'esempio riportato di seguito viene illustrato come creare un oggetto della classe `CDockSite`.  
@@ -340,7 +340,7 @@ virtual BOOL DockPaneLeftOf(
  Puntatore al riquadro di destinazione.  
   
 ### <a name="return-value"></a>Valore restituito  
- `TRUE` Se il riquadro viene ancorato correttamente. in caso contrario, `FALSE`.  
+ TRUE se il riquadro viene ancorato correttamente. in caso contrario, FALSE.  
   
 ### <a name="remarks"></a>Note  
   
@@ -364,10 +364,10 @@ CPane* FindPaneByID(UINT nID);
   
 ### <a name="parameters"></a>Parametri  
  [in] *nID*  
- L'ID di comando del riquadro da trovare.  
+ ID comando del riquadro da trovare.  
   
 ### <a name="return-value"></a>Valore restituito  
- Un puntatore al riquadro con l'ID di comando specificato, o `NULL` se il riquadro non viene trovato.  
+ Puntatore al riquadro con l'ID di comando specificato o NULL se il riquadro non viene trovato.  
   
 ### <a name="remarks"></a>Note  
   
@@ -424,7 +424,7 @@ const CObList& GetPaneList() const;
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- Un riferimento di sola lettura all'elenco dei riquadri è attualmente ancorato nella barra di ancoraggio.  
+ Un riferimento di sola lettura all'elenco di riquadri è attualmente ancorato nella barra ancorabile.  
   
 ##  <a name="isaccessibilitycompatible"></a>  CDockSite::IsAccessibilityCompatible  
 
@@ -618,7 +618,7 @@ virtual CPane* PaneFromPoint(CPoint pt);
  Un punto, nelle coordinate dello schermo, per il riquadro da recuperare.  
   
 ### <a name="return-value"></a>Valore restituito  
- Un puntatore al riquadro che si trova nel punto specificato o `NULL` se alcun riquadro non era presente nel punto specificato.  
+ Puntatore al riquadro che si trova al punto specificato o NULL se nessun riquadro era presente nel punto specificato.  
   
 ### <a name="remarks"></a>Note  
   
@@ -742,22 +742,22 @@ virtual BOOL ShowPane(
   
 ### <a name="parameters"></a>Parametri  
  [in] [out] *pBar*  
- Un puntatore al riquadro per essere mostrati o nascosti.  
+ Puntatore al riquadro per essere visualizzato o nascosto.  
   
  [in] *bMostra*  
- `TRUE` Per specificare che il riquadro viene visualizzato; `FALSE` per specificare che il riquadro deve essere nascosto.  
+ TRUE per specificare che il riquadro viene visualizzato; FALSE per specificare che il riquadro deve essere nascosto.  
   
  [in] *bDelay*  
- `TRUE` Per specificare che il layout del riquadro deve essere posticipato fino al dopo che viene visualizzato il riquadro; in caso contrario, `FALSE`.  
+ TRUE per specificare che il layout del riquadro deve essere ritardato fino a dopo il riquadro viene visualizzato; in caso contrario, FALSE.  
   
  [in] *bActivate*  
  Questo parametro non viene usato.  
   
 ### <a name="return-value"></a>Valore restituito  
- `TRUE` Se il riquadro è stato visualizzato o nascosto correttamente. `FALSE` Se il riquadro specificato non appartiene a questo sito di ancoraggio.  
+ TRUE se il riquadro è stato visualizzato o nascosto correttamente. FALSO se il riquadro specificato non appartiene a questo sito di ancoraggio.  
   
 ### <a name="remarks"></a>Note  
- Chiamare questo metodo per mostrare o nascondere i riquadri ancorati. In genere, non è necessario chiamare `CDockSite::ShowPane` direttamente, perché viene chiamato dalla finestra cornice padre o nel riquadro di base.  
+ Chiamare questo metodo per mostrare o nascondere i riquadri ancorati. In genere, non è necessario chiamare `CDockSite::ShowPane` direttamente, perché viene chiamato dalla finestra cornice padre o dal riquadro di base.  
   
 ##  <a name="showrow"></a>  CDockSite::ShowRow  
 

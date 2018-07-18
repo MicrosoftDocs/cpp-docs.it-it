@@ -20,16 +20,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c0d3de4c7538c36ac1a55ea2519fa26a878663a5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c7e43d5f528e85ea3233b9ea4a68e83ee0cfb7f3
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33848245"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39026407"
 ---
 # <a name="complex-class"></a>Classe complex
 
-La classe modello descrive un oggetto che archivia due oggetti di tipo **Type**. Uno rappresenta la parte reale di un numero complesso, l'altro la parte immaginaria.
+La classe modello descrive un oggetto che archivia due oggetti di tipo `Type`, uno che rappresenta la parte reale di un numero complesso e uno che rappresenta la parte immaginaria.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -42,7 +42,7 @@ class complex
 
 ## <a name="remarks"></a>Note
 
-Un oggetto della classe **Type**:
+Un oggetto della classe `Type`:
 
 - Ha un costruttore predefinito pubblico, un distruttore, un costruttore di copia e un operatore di assegnazione con un comportamento convenzionale.
 
@@ -50,9 +50,9 @@ Un oggetto della classe **Type**:
 
 - Definisce le funzioni matematiche e gli operatori aritmetici, come necessario, definiti per i tipi a virgola mobile, con un comportamento convenzionale.
 
-In particolare, non possono esistere sottili differenze tra il costruttore di copia e la costruzione predefinita seguita dall'assegnazione. Nessuna delle operazioni sugli oggetti della classe **Type** può generare eccezioni.
+In particolare, non possono esistere sottili differenze tra il costruttore di copia e la costruzione predefinita seguita dall'assegnazione. Nessuna delle operazioni sugli oggetti della classe `Type` può generare eccezioni.
 
-Per i tre tipi a virgola mobile esistono specializzazioni esplicite della classe modello complex. In questa implementazione, un valore di qualsiasi altro tipo **Type** è il cast di tipo per **double** per i calcoli effettivi, con il risultato **double** che viene riassegnato all'oggetto archiviato di tipo **Type**`.`
+Per i tre tipi a virgola mobile esistono specializzazioni esplicite della classe modello complex. In questa implementazione, un valore di qualsiasi altro tipo `Type` è il cast di tipo a **doppie** per i calcoli effettivi, con il **double** risultato assegnato all'oggetto archiviato di tipo `Type``.`
 
 ### <a name="constructors"></a>Costruttori
 
@@ -108,11 +108,11 @@ constexpr complex(
 
 ### <a name="parameters"></a>Parametri
 
-`_RealVal` Il valore della parte reale usata per inizializzare il numero complesso da costruire.
+*_RealVal* il valore della parte reale usata per inizializzare il numero complesso da costruire.
 
-`_ImagVal` Il valore della parte immaginaria usata per inizializzare il numero complesso da costruire.
+*_ImagVal* il valore della parte immaginaria usata per inizializzare il numero complesso da costruire.
 
-`complexNum` Numero complesso le cui parti reale e immaginarie vengono utilizzati per inizializzare il numero complesso da costruire.
+*complexNum* numero complesso le cui parti reale e immaginarie vengono utilizzati per inizializzare il numero complesso da costruire.
 
 ### <a name="remarks"></a>Note
 
@@ -187,7 +187,7 @@ T imag(const T& right);
 
 ### <a name="parameters"></a>Parametri
 
-`right` Un numero complesso di cui estrarre il valore immaginario da estrarre.
+*a destra* un numero complesso di cui il valore immaginario da estrarre.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -243,7 +243,7 @@ complex<Type>& operator*=(const complex<Type>& right);
 
 ### <a name="parameters"></a>Parametri
 
-`right` Un numero complesso o un numero che è dello stesso tipo del parametro del numero complesso di destinazione.
+*a destra* un numero complesso o numero dello stesso tipo del parametro del numero complesso di destinazione.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -326,7 +326,7 @@ complex<Type>& operator+=(const complex<Type>& right);
 
 ### <a name="parameters"></a>Parametri
 
-`right` Un numero complesso o un numero che è dello stesso tipo del parametro del numero complesso di destinazione.
+*a destra* un numero complesso o numero dello stesso tipo del parametro del numero complesso di destinazione.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -428,9 +428,9 @@ complex<Type>& operator-=(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>Parametri
 
-`complexNum` Un numero complesso da sottrarre il numero complesso di destinazione.
+*complexNum* un numero complesso da sottrarre dal numero complesso di destinazione.
 
-`_RealPart` Un numero reale da sottrarre il numero complesso di destinazione.
+*_RealPart* un numero reale da sottrarre dal numero complesso di destinazione.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -534,9 +534,9 @@ complex<Type>& operator/=(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>Parametri
 
-`complexNum` Un numero complesso da sottrarre il numero complesso di destinazione.
+*complexNum* un numero complesso da sottrarre dal numero complesso di destinazione.
 
-`_RealPart` Un numero reale da sottrarre il numero complesso di destinazione.
+*_RealPart* un numero reale da sottrarre dal numero complesso di destinazione.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -634,7 +634,7 @@ complex<Type>& operator=(const Type& right);
 
 ### <a name="parameters"></a>Parametri
 
-`right` Un numero complesso o un numero che è dello stesso tipo del parametro del numero complesso di destinazione.
+*a destra* un numero complesso o numero dello stesso tipo del parametro del numero complesso di destinazione.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -711,7 +711,7 @@ T real(const T& right);
 
 ### <a name="parameters"></a>Parametri
 
-`right` Un numero complesso il cui valore reale da estrarre.
+*a destra* un numero complesso da estrarre il cui valore reale.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -763,7 +763,7 @@ typedef Type value_type;
 
 ### <a name="remarks"></a>Note
 
-`value_type` è sinonimo del parametro modello **Type** per la classe complex.
+`value_type` è un sinonimo della classe complesso `Type` parametro di modello.
 
 ### <a name="example"></a>Esempio
 
@@ -792,5 +792,5 @@ of type value_type: c1 = (3,4).
 
 ## <a name="see-also"></a>Vedere anche
 
-[Membri complessi](http://msdn.microsoft.com/en-us/d5c4466c-43a0-4817-aca1-9a5d492dae28)<br/>
+[Membri complessi](http://msdn.microsoft.com/d5c4466c-43a0-4817-aca1-9a5d492dae28)<br/>
 [Thread Safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>

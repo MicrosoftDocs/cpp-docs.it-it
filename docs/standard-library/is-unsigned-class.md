@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 66128074d7beb52ab73f2e6b48371999d38e83a5
-ms.sourcegitcommit: 96cdc2da0d8c3783cc2ce03bd280a5430e1ac01d
+ms.openlocfilehash: f6ef4f70807e753c24d3a3595ab3665b45fdbe42
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "33954051"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38955704"
 ---
 # <a name="isunsigned-class"></a>Classe is_unsigned
 
@@ -37,11 +37,11 @@ struct is_unsigned;
 
 ### <a name="parameters"></a>Parametri
 
-`Ty` Il tipo di query.
+*Ty* il tipo di query.
 
 ## <a name="remarks"></a>Note
 
-Un'istanza del predicato di tipo contiene true se il tipo `Ty` è un tipo integrale unsigned o un o un tipo integrale unsigned `cv-qualified`; in caso contrario, contiene false.
+Un'istanza del tipo predicato contiene true se il tipo *Ty* è un tipo integrale unsigned o un `cv-qualified` tipo integrale unsigned, in caso contrario, contiene false.
 
 ## <a name="example"></a>Esempio
 

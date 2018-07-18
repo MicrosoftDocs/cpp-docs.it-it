@@ -1,5 +1,5 @@
 ---
-title: Più classi Base | Documenti Microsoft
+title: Più classi di Base | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d48c373f0753a787aa8e59c7ead5a8f94bfc7846
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 813c90db941f2eb760c4e3a36d15eca64a293bec
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38955465"
 ---
 # <a name="multiple-base-classes"></a>Più classi base
-Come descritto in [ereditarietà multipla](http://msdn.microsoft.com/en-us/3b74185e-2beb-4e29-8684-441e51d2a2ca), una classe può essere derivata da più di una classe base. In un modello di ereditarietà multipla (in cui le classi sono derivate da più di una classe base), le classi di base vengono specificate utilizzando il *base-list* elemento grammatica. Ad esempio, la dichiarazione di classe per `CollectionOfBook`, derivata da `Collection` e `Book`, può essere specificata come segue:  
+Una classe può essere derivata da più di una classe di base. In un modello di ereditarietà multipla (in cui le classi sono derivate da più di una classe di base), le classi di base vengono specificate utilizzando il *base-list* elemento di grammatica. Ad esempio, la dichiarazione di classe per `CollectionOfBook`, derivata da `Collection` e `Book`, può essere specificata come segue:  
   
-```  
+```cpp 
 // deriv_MultipleBaseClasses.cpp  
 // compile with: /LD  
 class Collection {  
@@ -39,14 +40,14 @@ class CollectionOfBook : public Book, public Collection {
   
  L'ordine in cui vengono specificate le classi base non è significativo, tranne in alcuni casi, quando vengono richiamati i costruttori e i distruttori. In questi casi, l'ordine in cui le classi base vengono specificate influisce su quanto segue:  
   
--   L'ordine con cui viene eseguita l'inizializzazione per costruttore. Se il codice si basa sul presupposto che la parte `Book` di `CollectionOfBook` sia inizializzata prima della parte `Collection`, l'ordine di specifica è significativo. L'inizializzazione viene eseguita nell'ordine in cui vengono specificate le classi di *base-list*.  
+-   L'ordine con cui viene eseguita l'inizializzazione per costruttore. Se il codice si basa sul presupposto che la parte `Book` di `CollectionOfBook` sia inizializzata prima della parte `Collection`, l'ordine di specifica è significativo. Inizializzazione viene eseguita in ordine le classi sono specificate nel *base-list*.  
   
--   L'ordine con cui vengono richiamati i distruttori per eseguire la pulizia. Anche in questo caso, se una "parte" specifica della classe deve essere presente mentre l'altra parte viene eliminata definitivamente, l'ordine è significativo. I distruttori vengono chiamati in ordine inverso delle classi specificate nel *base-list*.  
+-   L'ordine con cui vengono richiamati i distruttori per eseguire la pulizia. Anche in questo caso, se una "parte" specifica della classe deve essere presente mentre l'altra parte viene eliminata definitivamente, l'ordine è significativo. I distruttori vengono chiamati in ordine inverso di classi specificato nella *base-list*.  
   
     > [!NOTE]
     >  L'ordine di specifica delle classi base può influire sul layout di memoria della classe. Non prendere decisioni relative alla programmazione in base all'ordine dei membri base nella memoria.  
   
- Quando si specifica il *base-list*, non è possibile specificare più volte lo stesso nome di classe. Tuttavia, è possibile che una classe costituisca più volte una base indiretta per una classe derivata.  
+ Quando si specifica la *base-list*, è possibile specificare più volte lo stesso nome di classe. Tuttavia, è possibile che una classe costituisca più volte una base indiretta per una classe derivata.  
   
 ## <a name="virtual-base-classes"></a>Classi di base virtuali  
  Poiché una classe può rappresentare più di una volta una classe base indiretta per una classe derivata, in C++ è possibile ottimizzare l'utilizzo di tali classi base. Le classi base virtuali consentono di risparmiare spazio e di evitare ambiguità in gerarchie di classi in cui viene usata l'ereditarietà multipla.  
@@ -59,17 +60,17 @@ class CollectionOfBook : public Book, public Collection {
   
  Si consideri la gerarchia di classi nella figura seguente, che illustra un oggetto Lunch-Line simulato.  
   
- ![Grafico della riga lunch simulato](../cpp/media/vc38xp1.gif "vc38XP1")  
+ ![Grafico della linea simulato pranzo](../cpp/media/vc38xp1.gif "vc38XP1")  
 Rappresentazione grafica di un oggetto Lunch-line simulato  
   
  Nella figura `Queue` è la classe base sia per `CashierQueue` che per `LunchQueue`. Tuttavia, quando entrambe le classi vengono combinate per formare `LunchCashierQueue`, si verifica il problema seguente: la nuova classe contiene due oggetti secondari di tipo `Queue`, uno da `CashierQueue` e l'altro da `LunchQueue`. Nella figura seguente viene illustrato il layout di memoria concettuale (il layout di memoria effettivo può essere ottimizzato).  
   
- ![Simulate lunch&#45;oggetto line](../cpp/media/vc38xp2.gif "vc38XP2")  
+ ![Simulated pranzo&#45;oggetto line](../cpp/media/vc38xp2.gif "vc38XP2")  
 Oggetto Lunch-line simulato  
   
  Si noti che sono presenti due oggetti secondari `Queue` nell'oggetto `LunchCashierQueue`. Nel codice seguente `Queue` viene dichiarato come una classe base virtuale:  
   
-```  
+```cpp 
 // deriv_VirtualBaseClasses.cpp  
 // compile with: /LD  
 class Queue {};  
@@ -78,9 +79,9 @@ class LunchQueue : virtual public Queue {};
 class LunchCashierQueue : public LunchQueue, public CashierQueue {};  
 ```  
   
- La parola chiave `virtual` garantisce che sia inclusa solo una copia dell'oggetto subordinato `Queue` (vedere la figura seguente).  
+ Il **virtuale** parola chiave garantisce che solo una copia dell'oggetto subordinato `Queue` incluso (vedere la figura seguente).  
   
- ![Simulate lunch&#45;oggetto line, le classi base virtuali](../cpp/media/vc38xp3.gif "vc38XP3")  
+ ![Simulated pranzo&#45;oggetto line, le classi base virtuali](../cpp/media/vc38xp3.gif "vc38XP3")  
 Oggetto Lunch-line simulato con classi di base virtuali  
   
  Alla classe possono essere associati sia un componente virtuale che uno non virtuale di un tipo specifico. Ciò si verifica in condizioni illustrate nella figura seguente.  
@@ -90,7 +91,7 @@ Componenti virtuali e non virtuali della stessa classe
   
  Nella figura `CashierQueue` e `LunchQueue` usano `Queue` come classe base virtuale. Tuttavia, `TakeoutQueue` specifica `Queue` come classe base, non come classe base virtuale. Di conseguenza, `LunchTakeoutCashierQueue` dispone di due oggetti secondari di tipo `Queue`: uno dal percorso di ereditarietà che include `LunchCashierQueue` e uno dal percorso che include `TakeoutQueue`. Questa situazione viene illustrata nella figura seguente.  
   
- ![Ereditarietà virtuale e nel layout dell'oggetto](../cpp/media/vc38xp5.gif "vc38XP5")  
+ ![Ereditarietà virtuale e nel layout degli oggetti](../cpp/media/vc38xp5.gif "vc38XP5")  
 Layout dell'oggetto con ereditarietà virtuale e non virtuale  
   
 > [!NOTE]
@@ -98,12 +99,12 @@ Layout dell'oggetto con ereditarietà virtuale e non virtuale
   
  Se una classe derivata esegue l'override di una funzione virtuale che eredita da una classe base virtuale e se un costruttore o un distruttore per la classe base derivata chiama tale funzione usando un puntatore alla classe base virtuale, il compilatore può introdurre campi vtordisp nelle classi con basi virtuali. L'opzione del compilatore /vd0 elimina l'aggiunta del membro di spostamento nascosto del costruttore o distruttore. L'opzione del compilatore /vd1 li abilita per impostazione predefinita dove sono necessari. Disattivare vtordisps solo se si è certi che tutti i costruttori e distruttori di classe chiamino virtualmente le funzioni virtuali.  
   
- L'opzione del compilatore /vd influisce su un intero modulo di compilazione. Utilizzare il **vtordisp** pragma per eliminare e quindi riabilitare i campi vtordisp classe per classe:  
+ L'opzione del compilatore /vd influisce su un intero modulo di compilazione. Usare la **vtordisp** pragma per eliminare e quindi riabilitare i campi vtordisp classe per classe:  
   
-```  
+```cpp 
 #pragma vtordisp( off )  
 class GetReal : virtual public { ... };  
-#pragma vtordisp( on )  
+\#pragma vtordisp( on )  
 ```  
   
 ## <a name="name-ambiguities"></a>Ambiguità di nomi  
@@ -111,7 +112,7 @@ class GetReal : virtual public { ... };
   
  Qualsiasi espressione che fa riferimento a un membro di classe deve creare un riferimento non ambiguo. Nell'esempio che segue viene illustrato come si sviluppano le ambiguità:  
   
-```  
+```cpp 
 // deriv_NameAmbiguities.cpp  
 // compile with: /LD  
 // Declare two base classes, A and B.  
@@ -134,7 +135,7 @@ class C : public A, public B {};
   
  Date le dichiarazioni di classe precedenti, un codice come il seguente è ambiguo, perché non è chiaro se `b` faccia riferimento alla `b` presente in `A` o in `B`:  
   
-```  
+```cpp 
 C *pc = new C;  
   
 pc->b();  
@@ -148,11 +149,11 @@ pc->b();
   
 2.  Se le funzioni in overload non sono ambigue, vengono risolte.
   
-3.  Se l'accesso al nome viola le autorizzazioni di accesso ai membri, viene generato un messaggio di errore. (Per ulteriori informazioni, vedere [controllo di accesso ai membri](../cpp/member-access-control-cpp.md).)  
+3.  Se l'accesso al nome viola le autorizzazioni di accesso ai membri, viene generato un messaggio di errore. (Per altre informazioni, vedere [controllo di accesso ai membri](../cpp/member-access-control-cpp.md).)  
   
  Quando un'espressione produce ambiguità attraverso l'ereditarietà, è possibile risolverla manualmente qualificando il nome in questione con il relativo nome di classe. Per fare in modo che l'esempio precedente venga compilato correttamente e senza ambiguità, usare codice analogo al seguente:  
   
-```  
+```cpp 
 C *pc = new C;  
   
 pc->B::a();  
@@ -166,7 +167,7 @@ pc->B::a();
   
  Un nome domina un altro nome se è definito in entrambe le classi e una classe è derivata dall'altra. Il nome dominante è il nome nella classe derivata; questo nome viene usato quando sarebbe altrimenti sorta una certa ambiguità, come mostrato nell'esempio seguente:  
   
-```  
+```cpp 
 // deriv_Dominance.cpp  
 // compile with: /LD  
 class A {  
@@ -192,16 +193,16 @@ public:
   
 -   Dichiarazione di un oggetto di tipo `D`.  
   
--   Quando si applica l'operatore address-of (**&**) a tale oggetto. Si noti che l'operatore address-of fornisce sempre l'indirizzo di base dell'oggetto.  
+-   Applica l'operatore address-of di (**&**) a tale oggetto. Si noti che l'operatore address-of fornisce sempre l'indirizzo di base dell'oggetto.  
   
 -   Effetto della conversione esplicita del puntatore ottenuto usando l'operatore address-of in un tipo `A` della classe base. Si noti che l'assegnazione dell'indirizzo dell'oggetto al tipo `A*` non fornisce sempre il compilatore con informazioni sufficienti come quale oggetto secondario di tipo `A` è da selezionare; in questo caso, esistono due oggetti secondari.  
   
- ![Conversione ambigua di puntatori a classi di base](../cpp/media/vc38xt1.gif "vc38XT1")  
+ ![Conversione ambigua di puntatori alle classi di base](../cpp/media/vc38xt1.gif "vc38XT1")  
 Conversione ambigua di puntatori alle classi di base  
   
  La conversione nel tipo `A*` (puntatore a `A`) è ambigua poiché non è possibile discernere quale oggetto secondario di tipo `A` è quello corretto. Si noti che è possibile evitare l'ambiguità in modo esplicito specificando quale oggetto secondario si intende usare, come segue:  
   
-```  
+```cpp 
 (A *)(B *)&d       // Use B subobject.  
 (A *)(C *)&d       // Use C subobject.  
 ```  

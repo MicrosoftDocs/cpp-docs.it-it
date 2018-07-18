@@ -1,5 +1,5 @@
 ---
-title: Creazione di un'applicazione MFC di tipo Browser Web | Documenti Microsoft
+title: Creazione di un'applicazione MFC di tipo Browser Web | Microsoft Docs
 ms.custom: ''
 ms.date: 06/25/2018
 ms.technology:
@@ -19,36 +19,36 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1553f7ccc3b22b4e3d76d8c49d94ba2a61c19e97
-ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
+ms.openlocfilehash: 2a3b0e148104ff5620eddf7ac0d26693d96607d9
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37122553"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39025656"
 ---
 # <a name="creating-a-web-browser-style-mfc-application"></a>Creazione di un'applicazione MFC di tipo browser Web
-Un'applicazione di tipo browser Web accessibili informazioni dalla intranet o Internet (ad esempio HTML o documenti attivi), nonché le cartelle nel file system locale e in una rete. Derivando la classe di visualizzazione dell'applicazione dal [CHtmlView](../../mfc/reference/chtmlview-class.md), in modo efficace rendere l'applicazione un Web browser, fornendo la visualizzazione con il controllo WebBrowser.  
+Un'applicazione di tipo browser Web può accedere a informazioni da una rete intranet o Internet (ad esempio HTML o documenti attivi), nonché le cartelle nel file system locale e in una rete. Derivando la classe di visualizzazione dell'applicazione dal [CHtmlView](../../mfc/reference/chtmlview-class.md), in modo efficace rendere l'applicazione un Web browser fornendo la visualizzazione con il controllo WebBrowser.  
   
 ### <a name="to-create-a-web-browser-application-based-on-the-mfc-documentview-architecture"></a>Per creare un'applicazione Web browser basata sull'architettura documento/visualizzazione MFC  
   
-1.  Seguire le istruzioni [creazione di un'applicazione MFC](../../mfc/reference/creating-an-mfc-application.md).  
+1.  Seguire le istruzioni disponibili nel [creazione di un'applicazione MFC](../../mfc/reference/creating-an-mfc-application.md).  
   
-2.  Nella creazione guidata applicazione MFC [tipo di applicazione](../../mfc/reference/application-type-mfc-application-wizard.md) pagina, accertarsi che il **architettura documento/visualizzazione** casella è selezionata. (È possibile scegliere una **documento singolo** oppure **più documenti**, ma non **finestre**.)  
+2.  Nella creazione guidata applicazione MFC [tipo di applicazione](../../mfc/reference/application-type-mfc-application-wizard.md) pagina, assicurarsi che le **architettura documento/visualizzazione** casella è selezionata. (È possibile scegliere **singolo documento** oppure **più documenti**, ma non **basato su finestra di dialogo**.)  
   
 3.  Nel [classi generate](../../mfc/reference/generated-classes-mfc-application-wizard.md) pagina, utilizzare il **classe di Base** dal menu a discesa per selezionare `CHtmlView`.  
   
-4.  Selezionare le altre opzioni di trasposto lo scheletro di applicazione.  
+4.  Selezionare le altre opzioni di incorporato nell'applicazione scheletro.  
   
 5.  Scegliere **Fine**.  
   
- Il controllo WebBrowser supporta l'esplorazione del Web mediante i collegamenti ipertestuali e navigazione Uniform Resource Locator (URL). Il controllo gestisce un elenco di cronologia che consente all'utente di spostarsi e con le versioni precedenti tramite già visualizzati i siti, cartelle e documenti. Il controllo gestisce direttamente la navigazione, collegamenti ipertestuali, elenchi della cronologia, report Preferiti e sicurezza. Le applicazioni possono utilizzare il controllo WebBrowser come un contenitore documenti attivi di documenti attivi come host. Di conseguenza, documenti di Word o documenti in formato RTF, ad esempio fogli di calcolo Microsoft Excel possono essere aperto e modificati sul posto all'interno del controllo WebBrowser. Il controllo WebBrowser è anche un contenitore di controlli ActiveX che può ospitare controlli ActiveX.  
+ Il controllo WebBrowser supporta l'esplorazione del Web tramite i collegamenti ipertestuali e navigazione Uniform Resource Locator (URL). Il controllo gestisce un elenco di cronologia che consente all'utente di spostarsi e con le versioni precedenti tramite visitate in precedenza siti, cartelle e documenti. Il controllo gestisce direttamente la navigazione, collegamenti ipertestuali, gli elenchi della cronologia, Preferiti e sicurezza. Le applicazioni possono usare il controllo WebBrowser come un contenitore di documenti attivi anche documenti attivi. Di conseguenza, i documenti con formattazione complessa, ad esempio fogli di calcolo Microsoft Excel o Word documenti possono essere aperto e modificati sul posto all'interno del controllo WebBrowser. Il controllo WebBrowser è anche un contenitore di controlli ActiveX che può ospitare qualsiasi controllo ActiveX.  
   
 > [!NOTE]
->  Il controllo WebBrowser ActiveX (e pertanto `CHtmlView`) è disponibile solo per le applicazioni eseguite in versioni di Windows in cui Internet Explorer 4.0 o versioni successive è stato installato.  
+>  Il controllo WebBrowser ActiveX (e pertanto `CHtmlView`) è disponibile solo per le applicazioni in esecuzione in versioni di Windows in cui Internet Explorer 4.0 o versione successiva è installato.  
   
- Poiché `CHtmlView` implementa il controllo di Microsoft Web browser, il supporto per la stampa non è simile ad altre [CView](../../mfc/reference/cview-class.md)-classi derivate. Invece, il controllo WebBrowser implementa l'interfaccia utente stampante e stampa. Di conseguenza, `CHtmlView` does supporta l'anteprima di stampa e il framework non fornisce altre funzioni di stampa supporto: ad esempio [CView:: OnPreparePrinting](../../mfc/reference/cview-class.md#onprepareprinting), [CView::OnBeginPrinting](../../mfc/reference/cview-class.md#onbeginprinting), e [OnEndPrinting](../../mfc/reference/cview-class.md#onendprinting), che sono disponibili in altre applicazioni MFC.  
+ In quanto `CHtmlView` implementa il controllo browser Web Microsoft, il supporto per la stampa non è simile ad altre [CView](../../mfc/reference/cview-class.md)-le classi derivate. Piuttosto, il controllo WebBrowser implementa l'interfaccia utente stampante e la stampa. Ne consegue `CHtmlView` viene anteprima di stampa non è supportata e il framework non fornisce altre funzioni di stampa supporto: ad esempio, [CView:: OnPreparePrinting](../../mfc/reference/cview-class.md#onprepareprinting), [CView::OnBeginPrinting](../../mfc/reference/cview-class.md#onbeginprinting), e [OnEndPrinting](../../mfc/reference/cview-class.md#onendprinting), che sono disponibili in altre applicazioni MFC.  
   
- `CHtmlView` funge da wrapper per il controllo Web browser, che fornisce all'applicazione di una vista in una pagina Web o HTML. La procedura guidata crea una sostituzione per il [OnInitialUpdate](../../mfc/reference/cview-class.md#oninitialupdate) funzione nella classe di visualizzazione, che fornisce un collegamento al sito Web di Microsoft Visual C++:  
+ `CHtmlView` funge da wrapper per il controllo Web browser, che fornisce all'applicazione una visualizzazione in un sito Web o in una pagina HTML. La procedura guidata crea una sostituzione per il [OnInitialUpdate](../../mfc/reference/cview-class.md#oninitialupdate) funzione nella classe di visualizzazione, che fornisce un collegamento ipertestuale per il sito Web di Microsoft Visual C++:  
   
 ```cpp
 void CWebView::OnInitialUpdate()  
@@ -63,7 +63,7 @@ void CWebView::OnInitialUpdate()
 }
 ```
 
-È possibile sostituire questo sito con uno proprio, oppure è possibile usare il [LoadFromResource](../../mfc/reference/chtmlview-class.md#loadfromresource) funzione membro per aprire una pagina HTML che si trova nello script di risorsa del progetto come il contenuto predefinito per la visualizzazione. Ad esempio:  
+È possibile sostituire questo sito con uno personalizzato, o è possibile usare la [LoadFromResource](../../mfc/reference/chtmlview-class.md#loadfromresource) funzione membro per aprire una pagina HTML che si trova nello script di risorsa del progetto come il contenuto predefinito per la visualizzazione. Ad esempio:  
   
 ```cpp
 void CWebView::OnInitialUpdate()  
@@ -77,10 +77,10 @@ void CWebView::OnInitialUpdate()
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Esempio MFCIE di MFC](http://msdn.microsoft.com/en-us/7391aa0c-fca8-4994-a6c9-6c5c7470fba0)   
+ [Esempio MFCIE di MFC](http://msdn.microsoft.com/7391aa0c-fca8-4994-a6c9-6c5c7470fba0)   
  [Creazione guidata applicazione MFC](../../mfc/reference/mfc-application-wizard.md)   
  [Utilizzo di proprietà del progetto](../../ide/working-with-project-properties.md)   
  [Pagine delle proprietà](../../ide/property-pages-visual-cpp.md)   
  [Utilizzo di proprietà del progetto](../../ide/working-with-project-properties.md)   
- [Distribuzione di applicazioni](http://msdn.microsoft.com/en-us/4ff8881d-0daf-47e7-bfe7-774c625031b4)
+ [Distribuzione di applicazioni](http://msdn.microsoft.com/4ff8881d-0daf-47e7-bfe7-774c625031b4)
 

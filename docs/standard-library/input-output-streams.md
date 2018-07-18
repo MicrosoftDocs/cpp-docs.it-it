@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 51a7a9aff4f77444bbec46a9739fae91cac3c104
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: dcb17eeaf09cec63392cb842f790504b28038487
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33845931"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38955722"
 ---
 # <a name="inputoutput-streams"></a>Flussi di input/output
 
@@ -32,7 +32,7 @@ Per altre informazioni, vedere [Classe basic_iostream](../standard-library/basic
 
 Da `basic_iostream` deriva il modello di classe `basic_fstream`, che viene usato per trasmettere sotto forma di flusso i dati di tipo carattere da e verso i file.
 
-Sono disponibili anche typedef che forniscono specializzazioni di `basic_fstream` specifiche dei caratteri. Si tratta di `fstream`, un flusso di I/O di file basato su `char`, e di `wfstream`, un flusso di I/O di file basato su `wchar_t`. Per altre informazioni, vedere [Classe basic_fstream](../standard-library/basic-fstream-class.md), [fstream](../standard-library/basic-fstream-class.md) e [wfstream](../standard-library/basic-fstream-class.md). L'uso di questi typedef richiede l'inclusione del file di intestazione \<fstream>.
+Sono disponibili anche typedef che forniscono specializzazioni di `basic_fstream` specifiche dei caratteri. Si trovano `fstream`, ovvero un flusso dei / o file base **char**, e `wfstream`, che è un flusso dei / o file base **wchar_t**. Per altre informazioni, vedere [Classe basic_fstream](../standard-library/basic-fstream-class.md), [fstream](../standard-library/basic-fstream-class.md) e [wfstream](../standard-library/basic-fstream-class.md). L'uso di questi typedef richiede l'inclusione del file di intestazione \<fstream>.
 
 > [!NOTE]
 > Quando per eseguire l'I/O di file viene usato un oggetto `basic_fstream`, anche se il buffer sottostante contiene posizioni designate separatamente per la lettura e la scrittura, le posizioni di input e output correnti sono collegate tra loro, pertanto la lettura di alcuni dati sposta la posizione di output.
