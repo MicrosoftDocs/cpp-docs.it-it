@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::chrono [C++], time_point
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8b2f425e37d9471db42fa9ceec69048e3936f07c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 99209063e8856ffe9ea26ffaaf0917e1f6cd487b
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33865564"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954260"
 ---
 # <a name="timepoint-class"></a>Classe time_point
 
@@ -111,7 +111,8 @@ time_point& operator+=(const duration& Dur);
 
 ### <a name="parameters"></a>Parametri
 
-`Dur` Oggetto `duration` oggetto.
+*Rim*  
+ Oggetto `duration`.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -127,7 +128,8 @@ time_point& operator-=(const duration& Dur);
 
 ### <a name="parameters"></a>Parametri
 
-`Dur` Oggetto `duration` oggetto.
+*Rim*  
+ Oggetto `duration`.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -148,15 +150,17 @@ constexpr time_point(const time_point<clock, Duration2>& Tp);
 
 ### <a name="parameters"></a>Parametri
 
-`Dur` Un [durata](../standard-library/duration-class.md) oggetto.
+*Rim*  
+ Oggetto [duration](../standard-library/duration-class.md).
 
-`Tp` Oggetto `time_point` oggetto.
+*Elaborazione delle transazioni*  
+ Oggetto `time_point`.
 
 ### <a name="remarks"></a>Note
 
 Il primo costruttore crea un oggetto il cui valore `duration` archiviato è uguale a [duration::zero](../standard-library/duration-class.md#zero).
 
-Il secondo costruttore crea un oggetto il cui valore duration archiviato è uguale a `Dur`. A meno che `is_convertible<Duration2, duration>` non *sia true*, il secondo costruttore non partecipa alla risoluzione dell'overload. Per altre informazioni, vedere [<type_traits>](../standard-library/type-traits.md).
+Il secondo costruttore crea un oggetto il cui valore duration archiviato è uguale a *Rim*. A meno che `is_convertible<Duration2, duration>` non *sia true*, il secondo costruttore non partecipa alla risoluzione dell'overload. Per altre informazioni, vedere [<type_traits>](../standard-library/type-traits.md).
 
 Il terzo costruttore inizializza il suo valore `duration` usando `Tp.time_since_epoch()`.
 

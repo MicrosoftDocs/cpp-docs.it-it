@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 335fecb1104a3aa1754f0267eb7b9686446782ec
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 74adf7d42fcb5e5e3114e1a06162022f9f062e67
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33846714"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38960239"
 ---
 # <a name="checked-iterators"></a>Checked Iterators
 
@@ -35,12 +35,12 @@ Gli iteratori verificati garantiscono che i limiti del contenitore non vengano s
 
 Per informazioni sulla disabilitazione degli avvisi generati dagli iteratori verificati, vedere [_SCL_SECURE_NO_WARNINGS](../standard-library/scl-secure-no-warnings.md).
 
-È possibile usare la macro [\_ITERATOR\_DEBUG\_LEVEL](../standard-library/iterator-debug-level.md) del preprocessore per abilitare o disabilitare la funzionalità degli iteratori verificati. Se il valore di `_ITERATOR_DEBUG_LEVEL` viene definito come 1 o 2, l'uso non sicuro degli iteratori causa un errore di runtime e il programma viene terminato. Se definito come 0, gli iteratori verificati vengono disabilitati. Per impostazione predefinita, il valore di `_ITERATOR_DEBUG_LEVEL` è 0 per le build di rilascio e 2 per le build di debug.
+È possibile usare la macro [\_ITERATOR\_DEBUG\_LEVEL](../standard-library/iterator-debug-level.md) del preprocessore per abilitare o disabilitare la funzionalità degli iteratori verificati. Se ITERATOR_DEBUG_LEVEL è definito come 1 o 2, utilizzare non affidabile degli iteratori causa un errore di runtime e il programma viene terminato. Se definito come 0, gli iteratori verificati vengono disabilitati. Per impostazione predefinita, il valore di ITERATOR_DEBUG_LEVEL è 0 per le build di rilascio e 2 per le compilazioni di debug.
 
 > [!IMPORTANT]
-> La documentazione e il codice sorgente più datati possono fare riferimento alla macro [SECURE_SCL](../standard-library/secure-scl.md). Utilizzare `_ITERATOR_DEBUG_LEVEL` per controllare `_SECURE_SCL`. Per altre informazioni, vedere [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md).
+> La documentazione e il codice sorgente più datati possono fare riferimento alla macro [SECURE_SCL](../standard-library/secure-scl.md). Usare ITERATOR_DEBUG_LEVEL per controllare _secure_scl=1. Per altre informazioni, vedere [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md).
 
-Quando `_ITERATOR_DEBUG_LEVEL` viene definita come 1 o 2, vengono eseguite le seguenti verifiche degli iteratori:
+Quando ITERATOR_DEBUG_LEVEL viene definito come 1 o 2, vengono eseguiti tali controlli degli iteratori:
 
 - Vengono verificati tutti gli iteratori standard (ad esempio, [vector::iterator](../standard-library/vector-class.md#iterator)).
 
@@ -56,7 +56,7 @@ Quando `_ITERATOR_DEBUG_LEVEL` viene definita come 1 o 2, vengono eseguite le se
 |[deque::operator\[\]](../standard-library/deque-class.md#op_at)|[back](../standard-library/list-class.md#back)|[front](../standard-library/list-class.md#front)|[back](../standard-library/queue-class.md#back)|
 |[front](../standard-library/queue-class.md#front)|[vector::operator\[\]](../standard-library/vector-class.md#op_at)|[back](../standard-library/vector-class.md#back)|[front](../standard-library/vector-class.md#front)|
 
-Quando `_ITERATOR_DEBUG_LEVEL` viene definita come 0:
+ITERATOR_DEBUG_LEVEL quando viene definito come 0:
 
 - Tutti gli iteratori standard sono non verificati. Gli iteratori possono spostarsi oltre i limiti del contenitore, provocando un comportamento non definito.
 
@@ -70,7 +70,7 @@ Gli adattatori degli iteratori che supportano gli iteratori verificati sono la [
 
 ## <a name="example"></a>Esempio
 
-Quando si esegue la compilazione con `_ITERATOR_DEBUG_LEVEL` impostata su 1 o 2, viene visualizzato un errore di runtime se si tenta di accedere a un elemento che non rientra nei limiti del contenitore usando l'operatore di indicizzazione di determinate classi.
+Quando esegue la compilazione con ITERATOR_DEBUG_LEVEL impostato su 1 o 2, si verificherà un errore di runtime se si tenta di accedere a un elemento che è esterno ai limiti del contenitore usando l'operatore di indicizzazione di determinate classi.
 
 ```cpp
 // checked_iterators_1.cpp
@@ -99,7 +99,7 @@ Il programma stampa "67" e quindi visualizza una finestra di dialogo di errore d
 
 ## <a name="example"></a>Esempio
 
-Analogamente, quando si esegue la compilazione impostando `_ITERATOR_DEBUG_LEVEL` su 1 o 2 viene visualizzato un errore di runtime se si tenta di accedere a un elemento usando `front` o `back` nelle classi del contenitore quando il contenitore è vuoto.
+Analogamente, quando esegue la compilazione con ITERATOR_DEBUG_LEVEL impostato su 1 o 2, un errore di runtime si verificherà se si tenta di accedere a un elemento usando `front` o `back` nelle classi del contenitore quando il contenitore è vuoto.
 
 ```cpp
 // checked_iterators_2.cpp
@@ -123,7 +123,7 @@ Il programma visualizza una finestra di dialogo di errore di asserzione contenen
 
 ## <a name="example"></a>Esempio
 
-I vari scenari relativi ai casi di utilizzo degli iteratori con commenti su ciascuno di essi vengono illustrati nel codice seguente. Per impostazione predefinita, `_ITERATOR_DEBUG_LEVEL` è impostata su 2 nelle build di debug e su 0 nelle versioni complete.
+I vari scenari relativi ai casi di utilizzo degli iteratori con commenti su ciascuno di essi vengono illustrati nel codice seguente. Per impostazione predefinita, ITERATOR_DEBUG_LEVEL è impostato su 2 nelle build di Debug e su 0 nelle build di vendita al dettaglio.
 
 ```cpp
 // checked_iterators_3.cpp

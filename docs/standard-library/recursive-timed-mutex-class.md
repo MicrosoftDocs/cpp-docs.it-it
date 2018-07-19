@@ -28,12 +28,12 @@ helpviewer_keywords:
 - std::recursive_timed_mutex [C++], unlock
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9b4a87cadedb11368d7803231b96d0f7a5acfb99
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: bfabbd938f2258f7e1a75fd77eaac7b2cd23b2b8
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33863712"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957623"
 ---
 # <a name="recursivetimedmutex-class"></a>Classe recursive_timed_mutex
 
@@ -112,11 +112,11 @@ bool try_lock() noexcept;
 
 ### <a name="return-value"></a>Valore restituito
 
-`true` se il metodo ha ottenuto correttamente la proprietà del `mutex` o se il thread chiamante è già proprietario del `mutex`; in caso contrario, `false`.
+**true** se il metodo ottiene correttamente la proprietà del `mutex` o se il thread chiamante è già proprietario il `mutex`; in caso contrario, **false**.
 
 ### <a name="remarks"></a>Note
 
-Se il thread chiamante è già proprietario del `mutex`, il metodo restituisce immediatamente `true` e il blocco precedente rimane valido.
+Se il thread chiamante è già proprietario il `mutex`, la funzione restituisce immediatamente **true**, e il blocco precedente rimane valido.
 
 ## <a name="try_lock_for"></a>  try_lock_for
 
@@ -129,15 +129,15 @@ bool try_lock_for(const chrono::duration<Rep, Period>& Rel_time);
 
 ### <a name="parameters"></a>Parametri
 
-`Rel_time` Un [chrono](../standard-library/duration-class.md) che specifica la quantità massima di tempo in cui il metodo tenta di ottenere la proprietà dell'oggetto di `mutex`.
+*Rel_time* un' [chrono:: Duration](../standard-library/duration-class.md) che specifica la quantità massima di tempo in cui il metodo tenta di ottenere la proprietà del `mutex`.
 
 ### <a name="return-value"></a>Valore restituito
 
-`true` se il metodo ottiene correttamente la proprietà del `mutex` o se il thread chiamante è già proprietario del `mutex`; in caso contrario, `false`.
+**true** se il metodo ottiene correttamente la proprietà del `mutex` o se il thread chiamante è già proprietario il `mutex`; in caso contrario, **false**.
 
 ### <a name="remarks"></a>Note
 
-Se il thread chiamante è già proprietario del `mutex`, il metodo restituisce immediatamente `true` e il blocco precedente rimane valido.
+Se il thread chiamante è già proprietario il `mutex`, il metodo restituisce immediatamente **true**, e il blocco precedente rimane valido.
 
 ## <a name="try_lock_until"></a>  try_lock_until
 
@@ -152,15 +152,15 @@ bool try_lock_until(const xtime* Abs_time);
 
 ### <a name="parameters"></a>Parametri
 
-`Abs_time` Un punto nel tempo che specifica la soglia dopo il quale il metodo non tenta più di ottenere la proprietà del `mutex`.
+*Abs_time* un punto nel tempo che specifica la soglia dopo la quale il metodo non tenta più di ottenere la proprietà del `mutex`.
 
 ### <a name="return-value"></a>Valore restituito
 
-`true` se il metodo ottiene correttamente la proprietà del `mutex` o se il thread chiamante è già proprietario del `mutex`; in caso contrario, `false`.
+**true** se il metodo ottiene correttamente la proprietà del `mutex` o se il thread chiamante è già proprietario il `mutex`; in caso contrario, **false**.
 
 ### <a name="remarks"></a>Note
 
-Se il thread chiamante è già proprietario del `mutex`, il metodo restituisce immediatamente `true` e il blocco precedente rimane valido.
+Se il thread chiamante è già proprietario il `mutex`, il metodo restituisce immediatamente **true**, e il blocco precedente rimane valido.
 
 ## <a name="unlock"></a>  unlock
 

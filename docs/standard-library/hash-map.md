@@ -16,17 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e0e3948e8697825af6cdd785117647943b33bac0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: caae1a52c36c5d21e55e90a821b280f2face7ede
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33850053"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38959774"
 ---
 # <a name="lthashmapgt"></a>&lt;hash_map&gt;
 
 > [!NOTE]
-> Questa intestazione è obsoleta. L'alternativa è [ \<unordered_map >](unordered-map.md).
+> Questa intestazione è obsoleta. L'alternativa consiste [ \<unordered_map >](unordered-map.md).
 
 Definisce le classi del modello del contenitore hash_map e hash_multimap e i relativi modelli di supporto.
 
@@ -51,7 +51,7 @@ Definisce le classi del modello del contenitore hash_map e hash_multimap e i rel
 
 |Classe|Descrizione|
 |-|-|
-|[Classe hash_compare](hash-compare-class.md)|Descrive un oggetto che può essere usato da uno qualsiasi dei contenitori associativi hash, hash_map, hash_multimap, hash_set o hash_multiset, come oggetto del parametro **Traits** predefinito per l'ordinamento e l'hashing degli elementi contenuti.|
+|[Classe hash_compare](hash-compare-class.md)|Descrive un oggetto che può essere utilizzato da uno qualsiasi dei contenitori associativi hash, hash_map, hash_multimap, hash_set o hash_multiset, come valore predefinito `Traits` oggetto parametro da ordinamento e l'hashing degli elementi contenuti.|
 |[Classe value_compare](value-compare-class.md)|Fornisce un oggetto funzione in grado di confrontare gli elementi di un oggetto hash_map comparando i valori delle chiavi per determinarne l'ordine relativo nell'oggetto hash_map.|
 |[Classe hash_map](hash-map-class.md)|Usata per archiviare e recuperare rapidamente i dati da una raccolta in cui ogni elemento è una coppia che ha una chiave di ordinamento con valore univoco e un valore di dati associato.|
 |[Classe hash_multimap](hash-multimap-class.md)|Usata per archiviare e recuperare rapidamente i dati da una raccolta in cui ogni elemento è una coppia con una chiave di ordinamento il cui valore non deve essere univoco e un valore di dati associato.|
@@ -64,6 +64,6 @@ Definisce le classi del modello del contenitore hash_map e hash_multimap e i rel
 
 ## <a name="see-also"></a>Vedere anche
 
-[Riferimento a file di intestazione](cpp-standard-library-header-files.md)
+[Riferimento file di intestazione](cpp-standard-library-header-files.md)
 [Thread Safety nella libreria Standard C++](thread-safety-in-the-cpp-standard-library.md)
 [riferimenti alla libreria Standard C++](cpp-standard-library-reference.md)

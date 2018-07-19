@@ -16,12 +16,12 @@ helpviewer_keywords:
 - std::make_pair [C++]
 - std::move [C++]
 - std::swap [C++]
-ms.openlocfilehash: a26a4a0cab0bdea8a7a642cc760da0f3fc79b471
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9c7f053466e8c6297b7ccd9a2a40c5980e23ccba
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33861945"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38960307"
 ---
 # <a name="ltutilitygt-functions"></a>Funzioni &lt;utility&gt;
 
@@ -41,9 +41,11 @@ T exchange(T& val, Other&& new_val)
 
 ### <a name="parameters"></a>Parametri
 
-`val` Oggetto che riceverà il valore di new_val.
+*Val*  
+ Oggetto che riceverà il valore di new_val.
 
-`new_val` Oggetto il cui valore viene copiato o spostato in val.
+*new_val*  
+ Oggetto il cui valore viene copiato o spostato in val.
 
 ### <a name="remarks"></a>Note
 
@@ -99,12 +101,12 @@ constexpr Type&& forward(typename remove_reference<Type>::type&& Arg) noexcept
 
 |Parametro|Descrizione|
 |---------------|-----------------|
-|`Type`|Tipo di valore passato in `Arg`, che potrebbe essere diverso dal tipo di `Arg`, in genere determinato da un argomento di modello della funzione di inoltro.|
-|`Arg`|Argomento di cui eseguire il cast.|
+|*Type*|Il tipo del valore passato *Arg*, che potrebbe essere diverso rispetto al tipo del *Arg*. in genere determinato da un argomento di modello della funzione di inoltro.|
+|*arg*|Argomento di cui eseguire il cast.|
 
 ### <a name="return-value"></a>Valore restituito
 
-Restituisce un riferimento rvalue a `Arg` se il valore passato in `Arg` era in origine un rvalue o un riferimento a un rvalue; in caso contrario, restituisce `Arg` senza modificarne il tipo.
+Restituisce un riferimento rvalue *Arg* se il valore passato *Arg* era in origine un rvalue o un riferimento a un rvalue; in caso contrario, restituisce *Arg* senza modificarne il tipo.
 
 ### <a name="remarks"></a>Note
 
@@ -161,21 +163,25 @@ constexpr T2&& get(pair<T1, T2>&& Pr) noexcept;
 
 ### <a name="parameters"></a>Parametri
 
-`Index` L'indice in base 0 dell'elemento designato.
+*Index*  
+ L'indice in base 0 dell'elemento designato.
 
-`T1` Il tipo del primo elemento coppia.
+*T1*  
+ Tipo di elemento della prima coppia.
 
-`T2` Il tipo del secondo elemento coppia.
+*T2*  
+ Tipo di elemento della seconda coppia.
 
-`pr` Coppia da selezionare.
+*richiesta pull*  
+ Coppia da selezionare.
 
 ### <a name="remarks"></a>Note
 
 Le funzioni modello restituiscono un riferimento a un elemento del relativo argomento `pair` .
 
-Per gli overload indicizzati, se il valore di `Index` è 0, le funzioni restituiscono `pr.first` ; se il valore di `Index` è 1, le funzioni restituiscono `pr.second`. Il tipo `RI` è il tipo dell'elemento restituito.
+Per gli overload indicizzati, se il valore di *indice* è 0, le funzioni restituiscono `pr.first` e, se il valore di *indice* è 1, le funzioni restituiscono `pr.second`. Il tipo `RI` è il tipo dell'elemento restituito.
 
-Per gli overload che non hanno un parametro di indice, l'elemento da restituire viene dedotto dall'argomento di tipo. La chiamata `get<T>(Tuple)` genera un errore del compilatore nel caso in cui `pr` contenga più di un elemento o non contenga elementi di tipo T.
+Per gli overload che non hanno un parametro di indice, l'elemento da restituire viene dedotto dall'argomento di tipo. La chiamata `get<T>(Tuple)` produrrà un errore del compilatore se *pr* contiene più o meno di un elemento di tipo T.
 
 ### <a name="example"></a>Esempio
 
@@ -228,9 +234,11 @@ pair<T, U> make_pair(T&& Val1, U&& Val2);
 
 ### <a name="parameters"></a>Parametri
 
-`Val1` Valore che inizializza il primo elemento della `pair`.
+*Val1*  
+ Valore che inizializza il primo elemento di `pair`.
 
-`Val2` Valore che inizializza il secondo elemento di `pair`.
+*Val2*  
+ Valore che inizializza il secondo elemento di `pair`.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -269,8 +277,8 @@ constexpr typename remove_reference<Type>::type&& move(Type&& Arg) noexcept;
 
 |Parametro|Descrizione|
 |---------------|-----------------|
-|`Type`|Tipo dedotto dal tipo dell'argomento passato in `Arg`, insieme alle regole di compressione dei riferimenti.|
-|`Arg`|Argomento di cui eseguire il cast. Anche il tipo di `Arg` sembra essere specificato come riferimento rvalue, `move` accetta anche argomenti lvalue poiché tali riferimenti possono essere associati ai riferimenti rvalue.|
+|*Type*|Un tipo dedotto dal tipo dell'argomento passato *Arg*, in combinazione con le regole di compressione dei riferimenti.|
+|*arg*|Argomento di cui eseguire il cast. Anche se il tipo della *Arg* sembra essere specificato come riferimento rvalue, `move` accetta anche argomenti lvalue poiché riferimenti lvalue possono essere associati ai riferimenti rvalue.|
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -278,11 +286,11 @@ constexpr typename remove_reference<Type>::type&& move(Type&& Arg) noexcept;
 
 ### <a name="remarks"></a>Note
 
-L'argomento di modello `Type` non deve essere specificato in modo esplicito, ma dedotto dal tipo del valore passato in `Arg`. Il tipo di `Type` viene ulteriormente modificato in base alle regole di compressione dei riferimenti.
+L'argomento di modello *tipo* non può essere specificato in modo esplicito, ma dedotto dal tipo del valore passato *Arg*. Il tipo della *tipo* viene ulteriormente modificato in base alle regole di compressione dei riferimenti.
 
-`move` non sposta il relativo argomento. L'esecuzione invece del cast in modo non condizionale del relativo argomento, che potrebbe essere un lvalue, a un riferimento rvalue, consente al compilatore di spostarsi successivamente anziché copiare il valore passato in `Arg` se il relativo tipo è abilitato allo spostamento. Se il relativo tipo non è abilitato allo spostamento, viene copiato.
+`move` non sposta il relativo argomento. Invece, eseguendo il cast in modo incondizionato di argomento, che può essere un lvalue, ovvero a un riferimento rvalue, consente al compilatore di spostarsi successivamente anziché copia, il valore passato in *Arg* se il tipo è abilitato allo spostamento. Se il relativo tipo non è abilitato allo spostamento, viene copiato.
 
-Se il valore passato in `Arg` è un lvalue, ovvero dispone di un nome o il relativo indirizzo può essere accettato, viene invalidato quando si verifica lo spostamento. Non fare riferimento al valore passato in `Arg` in base al relativo nome o indirizzo dopo che è stato spostato.
+Se il valore passato *Arg* è un lvalue, vale a dire, ha un nome o il relativo indirizzo può essere eseguita, ovvero viene invalidato quando si verifica lo spostamento. Non fanno riferimento al valore passato *Arg* dal relativo nome o indirizzo dopo che è stato spostato.
 
 ## <a name="swap"></a>  swap
 
@@ -297,8 +305,8 @@ void swap(pair<T, U>& left, pair<T, U>& right);
 
 |Parametro|Descrizione|
 |---------------|-----------------|
-|`left`|Oggetto di tipo `pair`.|
-|`right`|Oggetto di tipo `pair`.|
+|*left*|Oggetto di tipo `pair`.|
+|*right*|Oggetto di tipo `pair`.|
 
 ### <a name="remarks"></a>Note
 

@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8f1d24fb90b99d7b757f628be4b39d42f0c0051f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 676cc8ea493d113e9ef8a6f85108fdf3bad6ce5f
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33845765"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38959507"
 ---
 # <a name="indirectarray-class"></a>Classe indirect_array
 
@@ -31,11 +31,11 @@ Classe modello ausiliaria interna che supporta oggetti che sono subset di oggett
 
 ## <a name="remarks"></a>Note
 
-La classe descrive un oggetto che archivia un riferimento a un oggetto **va** della classe [valarray](../standard-library/valarray-class.md)**\<Type>**, insieme a un oggetto **xa** della classe **valarray<size_t>**, che descrive la sequenza di elementi da selezionare dall'oggetto **valarray\<Type>**.
+La classe descrive un oggetto che archivia un riferimento a un oggetto `va` della classe [valarray](../standard-library/valarray-class.md)**\<tipo >**, insieme a un oggetto `xa` della classe `valarray<size_t>`, che descrive la sequenza di elementi da selezionare dal `valarray<Type>` oggetto.
 
-Si costruisce un oggetto **indirect_array\<Type>** solo scrivendo un'espressione nel formato **va[xa]**. Le funzioni membro della classe indirect_array si comportano quindi come le firme di funzione corrispondenti definite per **valarray\<Type>**, ad eccezione del fatto che è interessata solo la sequenza degli elementi selezionati.
+Si costruisce un' `indirect_array<Type>` oggetto solo scrivendo un'espressione del form `va[xa]`. Le funzioni membro della classe indirect_array si comportano quindi come le firme di funzione corrispondenti definite per `valarray<Type>`, ad eccezione del fatto che è interessata solo la sequenza degli elementi selezionati.
 
-La sequenza è costituita da elementi **xa.**[size](../standard-library/valarray-class.md#size), in cui l'elemento `I` diventa l'indice **xa**[ `I`] all'interno di **va**.
+La sequenza è costituita **xa.** [dimensioni](../standard-library/valarray-class.md#size) gli elementi, in cui elemento `I` diventa l'indice **xa**[ `I`] all'interno di `va`.
 
 ## <a name="example"></a>Esempio:
 

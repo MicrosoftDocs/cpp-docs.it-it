@@ -32,12 +32,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 77e158605deeae859132243ab624d4a1638973b8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3cbcf6a1a48f32f5976483d5bb70e7c2e3f1d469
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33861487"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954851"
 ---
 # <a name="wstringconvert-class"></a>Classe wstring_convert
 
@@ -52,9 +52,11 @@ class wstring_convert
 
 ### <a name="parameters"></a>Parametri
 
-`Codecvt` Il [delle impostazioni locali](../standard-library/locale-class.md) facet che rappresenta l'oggetto di conversione.
+*Codecvt*  
+ Facet delle [impostazioni locali](../standard-library/locale-class.md) che rappresenta l'oggetto di conversione.
 
-`Elem` Il tipo di elemento a caratteri "wide".
+*Elem*  
+ Tipo di elemento a caratteri "wide".
 
 ## <a name="remarks"></a>Note
 
@@ -145,11 +147,11 @@ wide_string from_bytes(const char* first, const char* last);
 
 |Parametro|Descrizione|
 |---------------|-----------------|
-|`Byte`|Sequenza di byte a elemento singolo da convertire.|
-|`ptr`|Sequenza di caratteri con terminazione Null di tipo C da convertire.|
-|`Bstr`|Oggetto [byte_string](#byte_string) da convertire.|
-|`first`|Il primo carattere in un intervallo di caratteri da convertire.|
-|`last`|L'ultimo carattere in un intervallo di caratteri da convertire.|
+|*Byte*|Sequenza di byte a elemento singolo da convertire.|
+|*ptr*|Sequenza di caratteri con terminazione Null di tipo C da convertire.|
+|*BSTR*|Oggetto [byte_string](#byte_string) da convertire.|
+|*first*|Il primo carattere in un intervallo di caratteri da convertire.|
+|*last*|L'ultimo carattere in un intervallo di caratteri da convertire.|
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -157,7 +159,7 @@ Oggetto stringa di caratteri "wide" risultante dalla conversione.
 
 ### <a name="remarks"></a>Note
 
-Se l'oggetto [conversion state](../standard-library/wstring-convert-class.md)`not` è stato costruito con un valore esplicito, viene impostato sul valore predefinito (lo stato iniziale della conversione) prima dell'inizio della conversione. In caso contrario, verrà lasciato invariato.
+Se il [stato di conversione](../standard-library/wstring-convert-class.md) oggetto era *non* costruito con un valore esplicito, viene impostato sul valore predefinito (lo stato di conversione iniziale) prima dell'inizio della conversione. In caso contrario, verrà lasciato invariato.
 
 Il numero di elementi di input convertiti correttamente viene archiviato nell'oggetto conteggio di conversione. Se non si verificano errori di conversione, la funzione membro restituisce la stringa di caratteri "wide" convertita. In caso contrario, se l'oggetto è stato costruito con un inizializzatore per il messaggio di errore con stringa di caratteri "wide", la funzione membro restituisce l'oggetto messaggio di errore con stringa di caratteri "wide". In caso contrario, la funzione membro genera un oggetto della classe [range_error](../standard-library/range-error-class.md).
 
@@ -214,15 +216,15 @@ byte_string to_bytes(const Elem* first, const Elem* last);
 
 |Parametro|Descrizione|
 |---------------|-----------------|
-|`Char`|Carattere wide da convertire.|
-|`Wptr`|Sequenza con terminazione Null di tipo C, che inizia da `wptr`, da convertire.|
-|`Wstr`|Oggetto [wide_string](#wide_string) da convertire.|
-|`first`|Primo elemento nell'intervallo di elementi da convertire.|
-|`last`|Ultimo elemento nell'intervallo di elementi da convertire.|
+|*Char*|Carattere wide da convertire.|
+|*Wptr*|Sequenza con terminazione Null di tipo C, che inizia da `wptr`, da convertire.|
+|*WSTR*|Oggetto [wide_string](#wide_string) da convertire.|
+|*first*|Primo elemento nell'intervallo di elementi da convertire.|
+|*last*|Ultimo elemento nell'intervallo di elementi da convertire.|
 
 ### <a name="remarks"></a>Note
 
-Se l'oggetto [conversion state](../standard-library/wstring-convert-class.md)`not` è stato costruito con un valore esplicito, viene impostato sul valore predefinito (lo stato iniziale della conversione) prima dell'inizio della conversione. In caso contrario, verrà lasciato invariato.
+Se il [stato di conversione](../standard-library/wstring-convert-class.md) oggetto era *non* costruito con un valore esplicito, viene impostato sul valore predefinito (lo stato di conversione iniziale) prima dell'inizio della conversione. In caso contrario, verrà lasciato invariato.
 
 Il numero di elementi di input convertiti correttamente viene archiviato nell'oggetto conteggio di conversione. Se non si verificano errori di conversione, la funzione membro restituisce la stringa di byte convertita. In caso contrario, se l'oggetto è stato costruito con un inizializzatore per il messaggio di errore con stringa di byte, la funzione membro restituisce l'oggetto messaggio di errore con stringa di byte. In caso contrario, la funzione membro genera un oggetto della classe [range_error](../standard-library/range-error-class.md).
 
@@ -252,10 +254,10 @@ wstring_convert(const byte_string& _Berr, const wide_string& Werr = wide_string(
 
 |Parametro|Descrizione|
 |---------------|-----------------|
-|`*Pcvt`|Oggetto di tipo `Codecvt` per eseguire la conversione.|
-|`_State`|Oggetto di tipo [state_type](#state_type) che rappresenta lo stato della conversione.|
-|`_Berr`|L'oggetto [byte_string](#byte_string) da visualizzare in caso di errori.|
-|`Werr`|L'oggetto [wide_string](#wide_string) da visualizzare in caso di errori.|
+|*\*Pcvt*|Oggetto di tipo `Codecvt` per eseguire la conversione.|
+|*Stato*|Oggetto di tipo [state_type](#state_type) che rappresenta lo stato della conversione.|
+|*Berr*|L'oggetto [byte_string](#byte_string) da visualizzare in caso di errori.|
+|*Werr*|L'oggetto [wide_string](#wide_string) da visualizzare in caso di errori.|
 
 ### <a name="remarks"></a>Note
 

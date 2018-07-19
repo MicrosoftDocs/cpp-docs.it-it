@@ -14,16 +14,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2cd9c9f643b6766dfca4f008f14c9d470a5bcc34
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 30523a7db07dba1359af59c9fcc988feb0e4ec18
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33853323"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953826"
 ---
 # <a name="other-one-argument-output-stream-manipulators"></a>Altri manipolatori di flusso di output a un solo argomento
 
-L'esempio seguente usa una classe `money`, che è un tipo `long`. Il manipolatore `setpic` allega alla classe una stringa "immagine" di formattazione che può essere usata dall'operatore di inserimento del flusso in overload della classe `money`. La stringa immagine viene archiviata come variabile statica nella classe `money` anziché come membro dati di una classe di flusso, pertanto non è necessario derivare una nuova classe del flusso di output.
+L'esempio seguente usa una classe `money`, che è una **lungo** tipo. Il manipolatore `setpic` allega alla classe una stringa "immagine" di formattazione che può essere usata dall'operatore di inserimento del flusso in overload della classe `money`. La stringa immagine viene archiviata come variabile statica nella classe `money` anziché come membro dati di una classe di flusso, pertanto non è necessario derivare una nuova classe del flusso di output.
 
 ## <a name="example"></a>Esempio
 

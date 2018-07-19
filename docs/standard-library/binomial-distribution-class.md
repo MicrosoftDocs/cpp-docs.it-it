@@ -36,12 +36,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f46e2d7f6fd7337965d0b5dcf5b5cfe8d7a53688
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0266c33731bdbd70fe9c9fb26a33878fc5d1c495
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33846311"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957685"
 ---
 # <a name="binomialdistribution-class"></a>Classe binomial_distribution
 
@@ -81,20 +81,20 @@ public:
 
 ### <a name="parameters"></a>Parametri
 
-*IntType* valore predefinito è il tipo di risultato di tipo integer, `int`. Per informazioni sui tipi possibili, vedere [\<random>](../standard-library/random.md).
+*IntType* il tipo di risultato integer, valore predefinito è **int**. Per informazioni sui tipi possibili, vedere [\<random>](../standard-library/random.md).
 
 *URNG* Motore di generazione di numeri casuali uniformi. Per informazioni sui tipi possibili, vedere [\<random>](../standard-library/random.md).
 
 ## <a name="remarks"></a>Note
 
-La classe modello descrive una distribuzione che produce valori di un tipo integrale specificato dall'utente o di tipo `int` se non è specificato alcun valore, distribuiti secondo la funzione di probabilità discreta binomiale. La tabella seguente include collegamenti ad articoli relativi ai singoli membri.
+La classe modello descrive una distribuzione che produce valori di un integrale specificato dall'utente, tipo o tipo **int** se ne viene specificato alcuno, distribuiti secondo la funzione di probabilità discreta binomiale. La tabella seguente include collegamenti ad articoli relativi ai singoli membri.
 
 ||||
 |-|-|-|
 |[binomial_distribution](#binomial_distribution)|`binomial_distribution::t`|`binomial_distribution::param`|
 |`binomial_distribution::operator()`|`binomial_distribution::p`|[param_type](#param_type)|
 
-I membri di proprietà `t()` e `p()` restituiscono i valori rispettivi per i parametri di distribuzione attualmente archiviati `t` e `p`.
+I membri di proprietà `t()` e `p()` restituiscono i valori dei parametri di distribuzione attualmente archiviato *t* e *p* rispettivamente.
 
 Il membro di proprietà `param()` imposta o restituisce il pacchetto di parametri di distribuzione archiviati `param_type`.
 
@@ -260,9 +260,9 @@ explicit binomial_distribution(const param_type& parm);
 
 **Precondizione:** `0 ≤ t` e `0.0 ≤ p ≤ 1.0`
 
-Il primo costruttore crea un oggetto il cui valore `p` archiviato include il valore *p* e il cui valore `t` archiviato include il valore *t*.
+Il primo costruttore crea un oggetto il cui stored *p* valore contiene il valore *p* e il cui stored *t* valore contiene il valore *t*.
 
-Il secondo costruttore costruisce un oggetto i cui parametri archiviati sono inizializzati da *parm*. È possibile ottenere e impostare i parametri correnti di una distribuzione esistente chiamando la funzione membro `param()`.
+Il secondo costruttore crea un oggetto i cui parametri archiviati sono inizializzati da *parm*. È possibile ottenere e impostare i parametri correnti di una distribuzione esistente chiamando la funzione membro `param()`.
 
 ## <a name="param_type"></a>  binomial_distribution::param_type
 

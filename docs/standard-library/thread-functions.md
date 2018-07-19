@@ -16,12 +16,12 @@ helpviewer_keywords:
 - std::sleep_until [C++]
 - std::swap [C++]
 - std::yield [C++]
-ms.openlocfilehash: f151bbaf692d914fa1072021e2f14262b2c72ce4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 948c00f7c0b773bf366f4ea9e102c832e9878d9b
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33855903"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38960450"
 ---
 # <a name="ltthreadgt-functions"></a>Funzioni &lt;thread&gt;
 
@@ -54,11 +54,12 @@ inline void sleep_for(const chrono::duration<Rep, Period>& Rel_time);
 
 ### <a name="parameters"></a>Parametri
 
-`Rel_time` Un [durata](../standard-library/duration-class.md) oggetto che specifica un intervallo di tempo.
+*Rel_time*  
+ Oggetto [duration](../standard-library/duration-class.md) che specifica un intervallo di tempo.
 
 ### <a name="remarks"></a>Note
 
-La funzione blocca il thread chiamante almeno per il tempo specificato da `Rel_time`. Questa funzione non genera eccezioni.
+La funzione blocca il thread chiamante per almeno il tempo specificato da *Rel_time*. Questa funzione non genera eccezioni.
 
 ## <a name="sleep_until"></a>  sleep_until
 
@@ -73,7 +74,8 @@ void sleep_until(const xtime *Abs_time);
 
 ### <a name="parameters"></a>Parametri
 
-`Abs_time` Rappresenta un punto nel tempo.
+*Abs_time*  
+ Rappresenta un punto nel tempo.
 
 ### <a name="remarks"></a>Note
 
@@ -81,7 +83,7 @@ Questa funzione non genera eccezioni.
 
 ## <a name="swap"></a>  swap
 
-Scambia gli stati dei due oggetti `thread`.
+Scambia gli stati dei due **thread** oggetti.
 
 ```cpp
 void swap(thread& Left, thread& Right) noexcept;
@@ -89,9 +91,11 @@ void swap(thread& Left, thread& Right) noexcept;
 
 ### <a name="parameters"></a>Parametri
 
-`Left` Sinistra `thread` oggetto.
+*A sinistra*  
+ Sinistra **thread** oggetto.
 
-`Right` Il diritto `thread` oggetto.
+*A destra*  
+ Il diritto **thread** oggetto.
 
 ### <a name="remarks"></a>Note
 

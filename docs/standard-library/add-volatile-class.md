@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bf15ef0b5134af7831cf2e71b4235df9534f3425
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8775c681954799e2239da5ad429f9f8131ca25b1
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33841297"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38958890"
 ---
 # <a name="addvolatile-class"></a>Classe add_volatile
 
-Crea un tipo volatile dal tipo specificato.
+Rende un **volatile** tipo dal tipo specificato.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -44,7 +44,7 @@ using add_volatile_t = typename add_volatile<T>::type;
 
 ## <a name="remarks"></a>Note
 
-Un'istanza di `add_volatile<T>` ha un typedef del membro `type` che è *T* se *T* è un riferimento, una funzione o un tipo qualificato volatile. In caso contrario sarà `volatile` *T*. L'alias `add_volatile_t` è un collegamento per l'accesso al typedef del membro `type`.
+Un'istanza di `add_volatile<T>` dispone di un membro **typedef** `type` vale a dire *T* se *T* è un riferimento, una funzione o un tipo qualificato volatile, in caso contrario **volatili** *T*. L'alias `add_volatile_t` è un collegamento per accedere al membro **typedef** `type`.
 
 ## <a name="example"></a>Esempio
 

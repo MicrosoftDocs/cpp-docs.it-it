@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 531ee45aed64daa19f818bc5c8480a9c1b032d30
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 58f3245e430ba1c74ea88f6262f14a4d38c1ca2c
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33844133"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954031"
 ---
 # <a name="isintegral-class"></a>Classe is_integral
 
@@ -37,13 +37,13 @@ struct is_integral;
 
 ### <a name="parameters"></a>Parametri
 
-`Ty` Il tipo di query.
+*Ty* il tipo di query.
 
 ## <a name="remarks"></a>Note
 
-Un'istanza del predicato di tipo contiene true se il tipo `Ty` è uno dei tipi integrali o un form `cv-qualified` di uno dei tipi integrali; in caso contrario, contiene false.
+Un'istanza del tipo predicato contiene true se il tipo *Ty* è uno dei tipi integrali o un `cv-qualified` forma di uno dei tipi integrali, in caso contrario, contiene false.
 
-Un tipo integrale è uno tra `bool`, `char`, `unsigned char`, `signed char`, `wchar_t`, `short`, `unsigned short`, `int`, `unsigned int`, `long` e `unsigned long`. Inoltre, con i compilatori che li forniscono, un tipo integrale può essere uno tra `long long`, `unsigned long long`, `__int64` e `unsigned __int64`.
+Un tipo integrale è uno dei **bool**, **char**, **unsigned char**, **char con segno**, **wchar_t**, **brevi**, **short senza segno**, **int**, **int senza segno**, **lungo**e **unsigned long**. Inoltre, con i compilatori che li forniscono, un tipo integrale può essere uno dei **long long**, **long long senza segno**, **__int64**, e **unsigned __int64**.
 
 ## <a name="example"></a>Esempio
 

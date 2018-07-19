@@ -41,12 +41,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eff0c41993a450e74b468b747776368bae6ad848
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9192f52b35ec50c7acb1672e03ea248d140c7f71
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33862874"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957522"
 ---
 # <a name="sharedptr-class"></a>Classe shared_ptr
 
@@ -261,7 +261,7 @@ explicit operator bool() const noexcept;
 
 ### <a name="remarks"></a>Note
 
-L'operatore restituisce un valore di `true` quando `get() != nullptr`in caso contrario, `false`.
+L'operatore restituisce un valore pari **true** quando `get() != nullptr`; in caso contrario **false**.
 
 ### <a name="example"></a>Esempio
 
@@ -351,9 +351,9 @@ shared_ptr& operator=(unique_ptr<Other, Deletor>&& ap);
 
 ### <a name="parameters"></a>Parametri
 
-`sp` Puntatore condiviso da copiare.
+*SP* puntatore condiviso da copiare.
 
-`ap` Puntatore automatico da copiare.
+*Asia Pacifico* puntatore automatico da copiare.
 
 ### <a name="remarks"></a>Note
 
@@ -441,11 +441,11 @@ bool owner_before(const weak_ptr<Other>& ptr);
 
 ### <a name="parameters"></a>Parametri
 
-`ptr` Un' `lvalue` riferimento a uno un `shared_ptr` o `weak_ptr`.
+*PTR* un' `lvalue` riferimento a una delle due una `shared_ptr` o un `weak_ptr`.
 
 ### <a name="remarks"></a>Note
 
-La funzione membro restituisce true se `*this` è `ordered before` `ptr`.
+La funzione membro di modello restituisce true se `*this` viene `ordered before` `ptr`.
 
 ## <a name="reset"></a>  shared_ptr::reset
 
@@ -466,17 +466,17 @@ void reset(Other *ptr, D dtor, A alloc);
 
 ### <a name="parameters"></a>Parametri
 
-`Other` Tipo controllato dal puntatore argomento.
+*Altri* tipo controllato dal puntatore argomento.
 
-`D` Il tipo del metodo deleter.
+*1!d* il tipo del metodo deleter.
 
-`ptr` Puntatore da copiare.
+*PTR* puntatore da copiare.
 
-`dtor` Metodo deleter da copiare.
+*DTOR* metodo deleter da copiare.
 
-`A` Il tipo di allocatore.
+*Oggetto* il tipo di allocatore.
 
-`alloc` L'allocatore da copiare.
+*Alloc* allocatore da copiare.
 
 ### <a name="remarks"></a>Note
 
@@ -581,23 +581,23 @@ shared_ptr(const unique_ptr<Other, D>& up) = delete;
 
 ### <a name="parameters"></a>Parametri
 
-`Other` Tipo controllato dal puntatore argomento.
+*Altri* tipo controllato dal puntatore argomento.
 
-`ptr` Puntatore da copiare.
+*PTR* puntatore da copiare.
 
-`D` Il tipo del metodo deleter.
+*1!d* il tipo del metodo deleter.
 
-`A` Il tipo di allocatore.
+*Oggetto* il tipo di allocatore.
 
-`dtor` Metodo deleter.
+*DTOR* metodo deleter.
 
-`ator` Allocatore.
+*Accelerator* allocatore.
 
-`sp` Il puntatore intelligente da copiare.
+*SP* puntatore intelligente da copiare.
 
-`wp` Puntatore debole.
+*WP* puntatore debole.
 
-`ap` Puntatore automatico da copiare.
+*Asia Pacifico* puntatore automatico da copiare.
 
 ### <a name="remarks"></a>Note
 
@@ -722,11 +722,11 @@ void swap(shared_ptr& sp);
 
 ### <a name="parameters"></a>Parametri
 
-`sp` Puntatore condiviso da scambiare con.
+*SP* puntatore condiviso da scambiare.
 
 ### <a name="remarks"></a>Note
 
-La funzione membro lascia che la risorsa originariamente di proprietà di `*this` divenga in seguito di proprietà di `sp` e che la risorsa originariamente di proprietà di `sp` divenga in seguito di proprietà di `*this`. La funzione non modifica i conteggi dei riferimenti per le due risorse e non genera alcuna eccezione.
+La funzione membro lascia che la risorsa originariamente di proprietà `*this` successivamente appartenenti *sp*e la risorsa originariamente di proprietà *sp* successivamente appartenenti `*this`. La funzione non modifica i conteggi dei riferimenti per le due risorse e non genera alcuna eccezione.
 
 ### <a name="example"></a>Esempio
 
@@ -792,7 +792,7 @@ bool unique() const;
 
 ### <a name="remarks"></a>Note
 
-La funzione membro restituisce `true` se nessun altro oggetto `shared_ptr` possiede la risorsa di proprietà di `*this`; in caso contrario, restituisce `false`.
+La funzione membro restituisce **true** se nessun altro `shared_ptr` oggetto proprietario della risorsa di proprietà `*this`; in caso contrario **false**.
 
 ### <a name="example"></a>Esempio
 

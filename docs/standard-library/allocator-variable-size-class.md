@@ -19,16 +19,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 690be271cd7e9ad3eaf019f1feb67202c14a9e5c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 46ba5742f6beb308ada7ed64788577768afeac60
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33840602"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953101"
 ---
 # <a name="allocatorvariablesize-class"></a>Classe allocator_variable_size
 
-Descrive un oggetto che gestisce l'allocazione e la liberazione dello spazio di archiviazione per gli oggetti di tipo `Type` usando una cache di tipo [cache_freelist](../standard-library/cache-freelist-class.md) con lunghezza gestita da [max_variable_size](../standard-library/max-variable-size-class.md).
+Descrive un oggetto che gestisce l'allocazione della memoria e liberare gli oggetti di tipo *tipo* usando una cache di tipo [cache_freelist](../standard-library/cache-freelist-class.md) con lunghezza gestita da [max_variable_size](../standard-library/max-variable-size-class.md).
 
 ## <a name="syntax"></a>Sintassi
 
@@ -41,11 +41,11 @@ class allocator_variable_size;
 
 |Parametro|Descrizione|
 |---------------|-----------------|
-|`Type`|Tipo degli elementi assegnato dall'allocatore.|
+|*Type*|Tipo degli elementi assegnato dall'allocatore.|
 
 ## <a name="remarks"></a>Note
 
-La macro [ALLOCATOR_DECL](../standard-library/allocators-functions.md#allocator_decl) passa questa classe come parametro `name` nell'istruzione seguente: `ALLOCATOR_DECL(CACHE_FREELIST(stdext::allocators::max_variable_size), SYNC_DEFAULT, allocator_variable_size);`
+Il [ALLOCATOR_DECL](../standard-library/allocators-functions.md#allocator_decl) macro passa questa classe come le *nome* parametro nell'istruzione seguente: `ALLOCATOR_DECL(CACHE_FREELIST(stdext::allocators::max_variable_size), SYNC_DEFAULT, allocator_variable_size);`
 
 ## <a name="requirements"></a>Requisiti
 

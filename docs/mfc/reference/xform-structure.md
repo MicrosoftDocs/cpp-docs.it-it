@@ -1,5 +1,5 @@
 ---
-title: Struttura XFORM | Documenti Microsoft
+title: Struttura XFORM | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1a1c3a8abd39f7f190f36a18e7691475d951cab8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6084882bed6690269fbb926f394159491d22978a
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33379486"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37885884"
 ---
 # <a name="xform-structure"></a>Struttura XFORM
 Il `XFORM` struttura ha il formato seguente:  
@@ -40,14 +40,14 @@ typedef struct  tagXFORM {  /* xfrm */
 ```  
   
 ## <a name="remarks"></a>Note  
- Il `XFORM` struttura specifica uno spazio world alla trasformazione di spazio di pagina. Il **eDx** e **eDy** membri specificano i componenti di traduzione orizzontale e verticale, rispettivamente. Nella tabella seguente viene illustrato come vengono utilizzati gli altri membri, a seconda dell'operazione:  
+ Il `XFORM` struttura consente di specificare un spazio globale alla trasformazione spazio nella pagina. Il `eDx` e `eDy` membri specificano i componenti di traduzione orizzontali e verticali, rispettivamente. Nella tabella seguente viene illustrato come vengono utilizzati gli altri membri, a seconda dell'operazione:  
   
 |Operazione|eM11|eM12|eM21|eM22|  
 |---------------|----------|----------|----------|----------|  
 |`Rotation`|Coseno dell'angolo di rotazione|Seno dell'angolo di rotazione|Negativo seno dell'angolo di rotazione|Coseno dell'angolo di rotazione|  
-|**la scalabilità**|Componente di scalabilità orizzontale|Nothing|Nothing|Componente di scala verticale|  
-|**Taglio**|Nothing|Costante proporzionalità orizzontale|Costante proporzionalità verticale|Nothing|  
-|**Reflection**|Componente orizzontale reflection|Nothing|Nothing|Componente verticale di reflection|  
+|`Scaling`|Componente di scalabilità orizzontale|Nothing|Nothing|Componente verticale di ridimensionamento|  
+|`Shear`|Nothing|Costante proporzionalità orizzontale|Costante proporzionalità verticale|Nothing|  
+|`Reflection`|Componente orizzontale di reflection|Nothing|Nothing|Componente verticale di reflection|  
   
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** WinGDI. h  

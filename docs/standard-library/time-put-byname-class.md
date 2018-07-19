@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 39db2ead78a123c3274405e3560bca1c67cf1f5c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 10c01fcc7c75fb3ea9abf5803f5f17d3bd378333
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33854142"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953901"
 ---
 # <a name="timeputbyname-class"></a>Classe time_put_byname
 
@@ -50,13 +50,15 @@ protected:
 
 ### <a name="parameters"></a>Parametri
 
-`_Locname` Un nome delle impostazioni locali.
+*_Locname*  
+ Nome delle impostazioni locali.
 
-`_Refs` Un conteggio dei riferimenti iniziale.
+*_Refs*  
+ Conteggio di riferimento iniziale.
 
 ## <a name="remarks"></a>Note
 
-Il comportamento è determinato dalle impostazioni locali [denominate](../standard-library/locale-class.md#name) `_Locname`. Ogni costruttore inizializza l'oggetto di base con [time_put](../standard-library/time-put-class.md#time_put)\<CharType, OutputIterator>( `_Refs`).
+Il comportamento è determinato dal [denominate](../standard-library/locale-class.md#name) delle impostazioni locali *_Locname*. Ogni costruttore inizializza l'oggetto di base con [time_put](../standard-library/time-put-class.md#time_put)\<CharType, OutputIterator > (`_Refs`).
 
 ## <a name="requirements"></a>Requisiti
 

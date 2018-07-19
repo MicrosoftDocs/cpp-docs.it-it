@@ -33,12 +33,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f52b5d47908fd2889452a6c517b510930cbe2a10
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3f5e02f1cfd7b35244c347ef0f07542e61938d7b
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33862144"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38960967"
 ---
 # <a name="regextokeniterator-class"></a>Classe regex_token_iterator
 
@@ -87,11 +87,11 @@ private:
 
 ### <a name="parameters"></a>Parametri
 
-`BidIt` Tipo di iteratore per le sottocorrispondenze.
+*BidIt* il tipo di iteratore per le sottocorrispondenze.
 
-`Elem` Il tipo di elementi in modo che corrispondano.
+*Elem* il tipo di elementi in modo che corrispondano.
 
-`RXtraits` Classe traits per gli elementi.
+*RXtraits* classe Traits per gli elementi.
 
 ## <a name="remarks"></a>Note
 
@@ -335,7 +335,7 @@ bool operator!=(const regex_token_iterator& right);
 
 ### <a name="parameters"></a>Parametri
 
-`right` Iteratore per il confronto.
+*a destra* l'iteratore da confrontare.
 
 ### <a name="remarks"></a>Note
 
@@ -679,7 +679,7 @@ bool operator==(const regex_token_iterator& right);
 
 ### <a name="parameters"></a>Parametri
 
-L'iteratore da confrontare con pulsante destro del mouse.
+*a destra* l'iteratore da confrontare.
 
 ### <a name="remarks"></a>Note
 
@@ -1144,13 +1144,13 @@ regex_token_iterator(BidIt first, BidIt last,
 
 ### <a name="parameters"></a>Parametri
 
-`first` Inizio della sequenza in modo che corrispondano.
+*primo* inizio della sequenza in modo che corrispondano.
 
-`last` Fine della sequenza in modo che corrispondano.
+*ultimo* fine della sequenza in modo che corrispondano.
 
-`re` Espressione regolare per le corrispondenze.
+*Re* espressione regolare per le corrispondenze.
 
-`f` Flag per le corrispondenze.
+*f* flag per le corrispondenze.
 
 ### <a name="remarks"></a>Note
 

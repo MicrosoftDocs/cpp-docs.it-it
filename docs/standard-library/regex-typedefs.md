@@ -29,12 +29,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fe7108c2eb370739494a2c6b8bc95fbdc1001840
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b32031103e6e6d9922fdb3b0fc3a0d95e5eb280c
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33860879"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957041"
 ---
 # <a name="ltregexgt-typedefs"></a>Typedef &lt;regex&gt;
 
@@ -105,7 +105,7 @@ typedef basic_regex<char> regex;
 
 ### <a name="remarks"></a>Note
 
-Il tipo descrive una specializzazione della classe modello [classe basic_regex](../standard-library/basic-regex-class.md) per iteratori di tipo `char`.
+Il tipo descrive una specializzazione della classe modello [classe basic_regex](../standard-library/basic-regex-class.md) per gli elementi di tipo **char**.
 
 > [!NOTE]
 > I caratteri a bit significativo avranno risultati imprevisti con `regex`. I valori non compresi nell'intervallo da 0 a 127 possono causare un comportamento non definito.
@@ -216,7 +216,7 @@ typedef basic_regex<wchar_t> wregex;
 
 ### <a name="remarks"></a>Note
 
-Il tipo descrive una specializzazione della classe modello [classe basic_regex](../standard-library/basic-regex-class.md) per iteratori di tipo `wchar_t`.
+Il tipo descrive una specializzazione della classe modello [classe basic_regex](../standard-library/basic-regex-class.md) per gli elementi di tipo **wchar_t**.
 
 ## <a name="wsmatch"></a>  Typedef wsmatch
 

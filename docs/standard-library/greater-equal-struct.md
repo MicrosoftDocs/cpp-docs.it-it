@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7f87ae764372990a96515a73789b373d2d6d7d01
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9f8b516a3e5f5e19731a372a6531d9f26cb94fa6
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33843418"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38958916"
 ---
-# <a name="greaterequal-struct"></a>Struct greater_equal
+# <a name="greaterequal-struct"></a>greater_equal (struct)
 
-Predicato binario che esegue l'operazione di maggiore o uguale a (`operator>=`) sui relativi argomenti.
+Un predicato binario che esegue l'operazione di maggiore di o uguale a (`operator>=`) sui relativi argomenti.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -49,11 +49,11 @@ struct greater_equal<void>
 
 ### <a name="parameters"></a>Parametri
 
-`Type`, `T`, `U` Qualsiasi tipo che supporta un `operator>=` che accetta gli operandi dei tipi specificati o dedotti.
+*Tipo di*, *T*, *U* qualsiasi tipo che supporta un `operator>=` che accetta gli operandi dei tipi specificati o dedotti.
 
-`Left` L'operando sinistro dell'operazione di maggiore di o uguale a. Il modello non specializzato accetta un argomento di riferimento lvalue di tipo `Type`. Il modello specializzato esegue un inoltro perfetto degli argomenti di riferimento lvalue e rvalue del tipo dedotto `T`.
+*Sinistra* l'operando sinistro dell'operazione di maggiore di o uguale a. Il modello non specializzato accetta un argomento di riferimento lvalue di tipo *tipo*. Il modello specializzato esegue un inoltro di lvalue perfetto e gli argomenti di riferimento rvalue del tipo di dedurre *T*.
 
-`Right` L'operando destro dell'operazione di maggiore di o uguale a. Il modello non specializzato accetta un argomento di riferimento lvalue di tipo `Type`. Il modello specializzato esegue un inoltro perfetto degli argomenti di riferimento lvalue e rvalue del tipo dedotto `U`.
+*Destra* l'operando destro dell'operazione di maggiore di o uguale a. Il modello non specializzato accetta un argomento di riferimento lvalue di tipo *tipo*. Il modello specializzato esegue un inoltro di lvalue perfetto e gli argomenti di riferimento rvalue del tipo di dedurre *U*.
 
 ## <a name="return-value"></a>Valore restituito
 
@@ -61,7 +61,7 @@ Risultato di `Left >= Right`. Il modello specializzato esegue un inoltro perfett
 
 ## <a name="remarks"></a>Note
 
-Il predicato binario `greater_equal`< `Type`> fornisce un rigido ordinamento debole di un set di valori di elemento di tipo `Type` in classi di equivalenza esclusivamente se il tipo soddisfa i requisiti matematici standard per questo tipo di ordinamento. Le specializzazioni per qualsiasi tipo di puntatore producono un ordinamento totale degli elementi, in quanto tutti gli elementi di valori distinti vengono ordinati l'uno rispetto all'altro.
+Il predicato binario `greater_equal` <  `Type`> fornisce un rigido ordinamento debole di un set di valori di elemento di tipo *tipo* in classi di equivalenza esclusivamente se il tipo soddisfa lo standard di matematico requisiti per l'ordinamento. Le specializzazioni per qualsiasi tipo di puntatore producono un ordinamento totale degli elementi, in quanto tutti gli elementi di valori distinti vengono ordinati l'uno rispetto all'altro.
 
 ## <a name="example"></a>Esempio
 

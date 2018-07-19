@@ -33,12 +33,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5fd2bfdfc2a55dc1723fb72ab8de64a46c3c612f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d20a887c5fa056ef697b087fdaf91b94702d0c0f
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33846077"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953234"
 ---
 # <a name="bernoullidistribution-class"></a>Classe bernoulli_distribution
 
@@ -80,7 +80,7 @@ public:
 
 ## <a name="remarks"></a>Note
 
-La classe descrive una distribuzione che produce valori di tipo `bool`, distribuiti in base alla funzione di probabilità discreta di Bernoulli. La tabella seguente include collegamenti ad articoli relativi ai singoli membri.
+La classe descrive una distribuzione che produce valori di tipo **bool**, distribuiti in base alla funzione di probabilità discreta di Bernoulli. La tabella seguente include collegamenti ad articoli relativi ai singoli membri.
 
 ||||
 |-|-|-|
@@ -194,7 +194,7 @@ Il secondo costruttore crea un oggetto i cui parametri archiviati sono inizializ
 
 Contiene i parametri della distribuzione.
 
-param_type struct {typedef bernoulli_distribution distribution_type; param_type (doppio p = 0,5); doppio p() const.
+struct param_type {typedef bernoulli_distribution distribution_type; param_type (doppio p = 0,5); doppio p() const.
 
    bool operator==(const param_type& right) const; bool operator!=(const param_type& right) const; };
 

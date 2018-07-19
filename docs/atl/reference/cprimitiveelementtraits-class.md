@@ -1,5 +1,5 @@
 ---
-title: Classe CPrimitiveElementTraits | Documenti Microsoft
+title: Classe CPrimitiveElementTraits | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,15 +19,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3bec944c4b9a505cc817dbe7aa3ce09a317954f7
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2219be699e879afb6ec19ad84acc50f18d93a9a9
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32359143"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37885809"
 ---
 # <a name="cprimitiveelementtraits-class"></a>Classe CPrimitiveElementTraits
-Questa classe fornisce metodi predefiniti e comporre funzioni che per una classe di raccolte di tipi di dati primitivi.  
+Questa classe fornisce metodi predefiniti e le funzioni per una classe di raccolta è costituita da tipi di dati primitivi.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,8 +37,8 @@ class CPrimitiveElementTraits : public CDefaultElementTraits<T>
 ```  
   
 #### <a name="parameters"></a>Parametri  
- `T`  
- Il tipo di dati da archiviare nell'oggetto raccolta di classe.  
+ *T*  
+ Il tipo di dati da archiviare nell'oggetto classe di raccolta.  
   
 ## <a name="members"></a>Membri  
   
@@ -47,12 +47,12 @@ class CPrimitiveElementTraits : public CDefaultElementTraits<T>
 |Nome|Descrizione|  
 |----------|-----------------|  
 |[CPrimitiveElementTraits::INARGTYPE](#inargtype)|Il tipo di dati da utilizzare per l'aggiunta di elementi per l'oggetto di classe di raccolta.|  
-|[CPrimitiveElementTraits::OUTARGTYPE](#outargtype)|Il tipo di dati da utilizzare per recuperare gli elementi dall'oggetto della classe di raccolta.|  
+|[CPrimitiveElementTraits::OUTARGTYPE](#outargtype)|Il tipo di dati da utilizzare per recuperare gli elementi dall'oggetto di classe della raccolta.|  
   
 ## <a name="remarks"></a>Note  
- Questa classe fornisce metodi per lo spostamento, la copia, il confronto e gli elementi di tipo di dati primitivi archiviati in un oggetto di classe di raccolta di hash e funzioni statiche predefinito.  
+ Questa classe fornisce funzioni statiche predefinito e i metodi per lo spostamento, copia, il confronto e gli elementi di tipo di dati primitivi archiviati in un oggetto di classe di raccolta di hash.  
   
- Per ulteriori informazioni, vedere [classi Collection ATL](../../atl/atl-collection-classes.md).  
+ Per altre informazioni, vedere [classi Collection ATL](../../atl/atl-collection-classes.md).  
   
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  [CDefaultCompareTraits](../../atl/reference/cdefaultcomparetraits-class.md)  
@@ -76,7 +76,7 @@ typedef T INARGTYPE;
 ```  
   
 ##  <a name="outargtype"></a>  CPrimitiveElementTraits::OUTARGTYPE  
- Il tipo di dati da utilizzare per recuperare gli elementi dall'oggetto della classe di raccolta.  
+ Il tipo di dati da utilizzare per recuperare gli elementi dall'oggetto di classe della raccolta.  
   
 ```
 typedef T& OUTARGTYPE;
@@ -84,4 +84,4 @@ typedef T& OUTARGTYPE;
   
 ## <a name="see-also"></a>Vedere anche  
  [Classe CDefaultElementTraits](../../atl/reference/cdefaultelementtraits-class.md)   
- [Cenni preliminari sulla classe](../../atl/atl-class-overview.md)
+ [Panoramica della classe](../../atl/atl-class-overview.md)

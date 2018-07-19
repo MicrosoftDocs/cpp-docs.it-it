@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 127e1d4d39a79350dc050e1b9fb7636bce63c156
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c5c47f91a3e029175d40bd1a762fb6e6ff527ee7
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33850626"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38955814"
 ---
 # <a name="gslice-class"></a>Classe gslice
 
@@ -39,9 +39,9 @@ La classe archivia i parametri che caratterizzano un oggetto di tipo [gslice_arr
 
 - Indice iniziale.
 
-- Vettore di lunghezza di classe **valarray<size_t>**.
+- Vettore lunghezza di classe `valarray<size_t>`.
 
-- Vettore di stride di classe **valarray<size_t>**.
+- Vettore stride di classe `valarray<size_t>`.
 
 I due vettori devono avere la stessa lunghezza.
 
@@ -84,19 +84,19 @@ gslice(
 
 ### <a name="parameters"></a>Parametri
 
-`_StartIndex` Indice del primo elemento nel subset di valarray.
+*_StartIndex* indice valarray del primo elemento nel subset.
 
-`_LenArray` Matrice che specifica il numero di elementi in ogni sezione.
+*_LenArray* una matrice che specifica il numero di elementi in ogni sezione.
 
-`_IncArray` Matrice che specifica lo stride in ogni sezione.
+*_IncArray* una matrice che specifica lo stride in ogni sezione.
 
 ### <a name="return-value"></a>Valore restituito
 
-Il costruttore predefinito archivia zero per l'indice iniziale e vettori di lunghezza zero per i vettori di lunghezza e stride. Il secondo costruttore archivia `_StartIndex` per l'indice iniziale, `_LenArray` per la matrice di lunghezza e `_IncArray` per la matrice di stride.
+Il costruttore predefinito archivia zero per l'indice iniziale e vettori di lunghezza zero per i vettori di lunghezza e stride. Il secondo costruttore Archivia *_StartIndex* per l'indice iniziale *_LenArray* per la matrice di lunghezza, e *_IncArray* per la matrice di stride.
 
 ### <a name="remarks"></a>Note
 
-**gslice** definisce un subset di un oggetto valarray costituito da più sezioni di tale oggetto, ognuna delle quali inizia in corrispondenza dello stesso elemento specificato. La possibilità di usare matrici per definire più sezioni costituisce l'unica differenza tra `gslice` e [slice::slice](../standard-library/slice-class.md#slice). La prima sezione ha un primo elemento con indice `_StartIndex`, un numero di elementi specificato dal primo elemento di `_LenArray` e uno stride fornito dal primo elemento di `_IncArray`. Nel successivo set di sezioni ortogonali i primi elementi vengono forniti dalla prima sezione. Il secondo elemento di `_LenArray` specifica il numero di elementi. Lo stride viene fornito dal secondo elemento di `_IncArray`. Una terza dimensione delle sezioni usa gli elementi della matrice bidimensionale come elementi iniziali e procede in modo analogo.
+**gslice** definisce un subset di un oggetto valarray costituito da più sezioni di tale oggetto, ognuna delle quali inizia in corrispondenza dello stesso elemento specificato. La possibilità di usare matrici per definire più sezioni costituisce l'unica differenza tra `gslice` e [slice::slice](../standard-library/slice-class.md#slice). La prima sezione contiene un elemento con un indice *_StartIndex*, un numero di elementi specificato dal primo elemento della *_LenArray*e uno stride fornito dal primo elemento della *_IncArray* . Nel successivo set di sezioni ortogonali i primi elementi vengono forniti dalla prima sezione. Il secondo elemento della *_LenArray* specifica il numero di elementi. Lo stride viene fornito per il secondo elemento della *_IncArray*. Una terza dimensione delle sezioni usa gli elementi della matrice bidimensionale come elementi iniziali e procede in modo analogo.
 
 ### <a name="example"></a>Esempio
 

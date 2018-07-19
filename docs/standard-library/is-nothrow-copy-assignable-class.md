@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6c5c5bdc1e944483071f0f1dcd53c3bc93eb6ed3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e540d6fe4c00772af01b187d24efae18fd62357f
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33842937"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957558"
 ---
 # <a name="isnothrowcopyassignable-class"></a>Classe is_nothrow_copy_assignable
 
@@ -36,11 +36,11 @@ struct is_nothrow_copy_assignable;
 
 ### <a name="parameters"></a>Parametri
 
-`T` Il tipo di query.
+*T* il tipo di query.
 
 ## <a name="remarks"></a>Note
 
-Un'istanza del predicato di tipo contiene true se `T` è un tipo referenziabile dove `is_nothrow_assignable<T&, const T&>` contiene true; in caso contrario, contiene false.
+Un'istanza del tipo predicato contiene true per un tipo referenziabile *T* dove `is_nothrow_assignable<T&, const T&>` contiene true; in caso contrario, contiene false.
 
 ## <a name="requirements"></a>Requisiti
 

@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9825b690336acc8e93b0d404cc8335e5b27404b3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8b138424f3394c940307b422f590648c661d037d
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33840589"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38958143"
 ---
 # <a name="addcv-class"></a>Classe add_cv
 
-Crea un tipo const volatile dal tipo.
+Rende **const volatile** tipo dal tipo.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -44,7 +44,7 @@ using add_cv_t = typename add_cv<T>::type;
 
 ## <a name="remarks"></a>Note
 
-Un'istanza del tipo modificato `add_cv<T>` ha un typedef del membro `type` equivalente a *T* modificato da [add_volatile](../standard-library/add-volatile-class.md) e [add_const](../standard-library/add-const-class.md), a meno che *T* non includa già qualificatori di tipo const o volatile o non sia un riferimento o una funzione.
+Un'istanza del tipo modificato `add_cv<T>` ha un `type` membro **typedef** equivale a *T* modificata da entrambe [add_volatile](../standard-library/add-volatile-class.md) e [ add_const](../standard-library/add-const-class.md), a meno che *T* già dispone di qualificatori cv, è un riferimento o una funzione.
 
 Il tipo di helper `add_cv_t<T>` è un collegamento per l'accesso al typedef del membro `add_cv<T>` `type`.
 

@@ -1,5 +1,5 @@
 ---
-title: Struttura ATL_DRAWINFO | Documenti Microsoft
+title: Struttura ATL_DRAWINFO | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6c8ba7be259a10ee1bf47bbdc401a2389adac2be
-ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
+ms.openlocfilehash: fa45822d51d704022e773f6c8220db34b010a805
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34255964"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37885822"
 ---
 # <a name="atldrawinfo-structure"></a>Struttura ATL_DRAWINFO
-Contiene informazioni utilizzate per il rendering in varie destinazioni, ad esempio una stampante, metafile o controllo ActiveX.  
+Contiene informazioni utilizzate per il rendering a destinazioni diverse, ad esempio una stampante, metafile o controllo ActiveX.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -52,46 +52,46 @@ struct ATL_DRAWINFO {
  `cbSize`  
  Le dimensioni della struttura, in byte.  
   
- **dwDrawAspect**  
- Specifica come destinazione per essere rappresentato. Rappresentazioni possono includere contenuto, un'icona, un'immagine di anteprima o un documento stampato. Per un elenco di valori possibili, vedere [DVASPECT](http://msdn.microsoft.com/library/windows/desktop/ms690318) e [DVASPECT2](http://msdn.microsoft.com/library/windows/desktop/ms688644).  
+ `dwDrawAspect`  
+ Specifica come destinazione deve essere rappresentato. Rappresentazioni possono includere contenuto, un'icona, un'immagine di anteprima o un documento stampato. Per un elenco di valori possibili, vedere [DVASPECT](http://msdn.microsoft.com/library/windows/desktop/ms690318) e [DVASPECT2](http://msdn.microsoft.com/library/windows/desktop/ms688644).  
   
- **lindex**  
- Parte della destinazione di interesse per l'operazione di disegno. L'interpretazione varia a seconda del valore nel **dwDrawAspect** membro.  
+ `lindex`  
+ Parte della destinazione di interesse per l'operazione di disegno. L'interpretazione dipende dal valore nel `dwDrawAspect` membro.  
   
- **ptd**  
- Puntatore a un [DVTARGETDEVICE](http://msdn.microsoft.com/library/windows/desktop/ms686613) struttura che abilita ottimizzazioni disegnare in base all'aspetto specificato. Si noti che più recente di oggetti e contenitori che supportano le interfacce di disegnare ottimizzate supportano anche questo membro. Oggetti meno recenti e i contenitori che non supportano interfacce disegnare ottimizzate sempre specificano **NULL** per questo membro.  
+ `ptd`  
+ Puntatore a un [DVTARGETDEVICE](http://msdn.microsoft.com/library/windows/desktop/ms686613) struttura che consente alle ottimizzazioni di disegnare in base all'aspetto specificato. Si noti che più recente di oggetti e contenitori che supportano le interfacce di disegnare ottimizzate supportano anche questo membro. Gli oggetti e contenitori che non supportano le interfacce di disegnare ottimizzate sempre meno recenti specificano NULL per questo membro.  
   
- **hicTargetDev**  
- Contesto delle informazioni per il dispositivo di destinazione a cui puntava **ptd** da cui l'oggetto può estrarre le dimensioni del dispositivo e testare le funzionalità del dispositivo. Se **ptd** è **NULL**, l'oggetto deve ignorare il valore di **hicTargetDev** membro.  
+ `hicTargetDev`  
+ Contesto delle informazioni per il dispositivo di destinazione a cui punta `ptd` da cui l'oggetto può estrarre la metrica del dispositivo e testare le funzionalità del dispositivo. Se `ptd` è NULL, l'oggetto deve ignorare il valore di `hicTargetDev` membro.  
   
- **hdcDraw**  
- Il contesto di dispositivo su cui disegnare. Per un oggetto privo di finestra, il **hdcDraw** membro fa parte di `MM_TEXT` la modalità di mapping con le coordinate logiche corrispondente alle coordinate client della finestra contenitore. Inoltre, il contesto di dispositivo deve essere lo stesso stato in genere passata un `WM_PAINT` messaggio.  
+ `hdcDraw`  
+ Il contesto di dispositivo su cui disegnare. Per un oggetto senza finestra, il `hdcDraw` membro fa parte il `MM_TEXT` modalità di mapping con le sue coordinate logiche corrispondente alle coordinate client della finestra contenitore. Inoltre, il contesto di dispositivo deve essere lo stesso stato come quello normalmente passato per un `WM_PAINT` messaggio.  
   
- **prcBounds**  
- Puntatore a un [RECTL](http://msdn.microsoft.com/library/windows/desktop/dd162907) struttura che specifica il rettangolo in **hdcDraw** e in cui l'oggetto deve essere disegnato. Questo membro controlla il posizionamento e l'adattamento dell'oggetto. Questo membro deve essere **NULL** per disegnare l'oggetto attivo sul posto senza finestra. In ogni situazione, **NULL** non è un valore valido e dovrebbe restituire un `E_INVALIDARG` codice di errore. Se il contenitore passa non**NULL** valore a un oggetto privo di finestra, l'oggetto deve eseguire il rendering dell'aspetto richiesto il contesto di dispositivo specificato e un rettangolo. Questo può richiedere da un oggetto privo di finestra per il rendering di una vista in secondo luogo, non attivo dell'oggetto o per stampare l'oggetto contenitore.  
+ `prcBounds`  
+ Puntatore a un [RECTL](http://msdn.microsoft.com/library/windows/desktop/dd162907) che specifica il rettangolo nella struttura `hdcDraw` e in cui deve essere disegnato l'oggetto. Questo membro controlla il posizionamento e l'adattamento dell'oggetto. Questo membro deve essere NULL per disegnare un oggetto attivo sul posto senza. In ogni altra situazione, NULL, non è un valore valido e dovrebbe restituire un `E_INVALIDARG` codice di errore. Se il contenitore passa un valore diverso da NULL a un oggetto senza finestra, l'oggetto deve eseguire il rendering l'aspetto richiesto nel contesto di dispositivo specificato e il rettangolo. Un contenitore può richiedere questo da un oggetto senza eseguire il rendering di una vista in secondo luogo, non attivo dell'oggetto o per stampare l'oggetto.  
   
- **prcWBounds**  
- Se **hdcDraw** è un contesto di dispositivo metafile (vedere [GetDeviceCaps](http://msdn.microsoft.com/library/windows/desktop/dd144877) in Windows SDK), questo è un puntatore a un **RECTL** struttura che specifica il rettangolo di delimitazione nel metafile sottostante. La struttura del rettangolo contiene le dimensioni della finestra e l'origine di finestra. Questi valori sono utili per il disegno metafile. Il rettangolo indicato da **prcBounds** è annidata all'interno di tale **prcWBounds** rettangolo; sono nello stesso spazio delle coordinate.  
+ `prcWBounds`  
+ Se `hdcDraw` è un contesto di dispositivo metafile (vedere [GetDeviceCaps](http://msdn.microsoft.com/library/windows/desktop/dd144877) in Windows SDK), questo è un puntatore a un `RECTL` struttura che specifica il rettangolo delimitatore nel metafile sottostante. La struttura rettangolo contiene le dimensioni della finestra e l'origine di finestra. Questi valori sono utili per il disegno metafile. Il rettangolo indicato dal `prcBounds` è annidato all'interno di questa `prcWBounds` rettangolo; sono nello stesso spazio delle coordinate.  
   
- **bOptimize**  
- Diverso da zero se il disegno del controllo per essere ottimizzato, in caso contrario 0. Se il disegno è ottimizzato, dopo aver terminato automaticamente viene ripristinato lo stato del contesto del dispositivo per il rendering.  
+ `bOptimize`  
+ Diverso da zero se il disegno del controllo sia ottimizzato, in caso contrario 0. Se è ottimizzato il disegno, lo stato del contesto di dispositivo vengono ripristinato automaticamente dopo aver terminato il rendering.  
   
- **bZoomed**  
- Diverso da zero se la destinazione dispone di un fattore di zoom, in caso contrario 0. Il fattore di zoom viene archiviato in **ZoomNum**.  
+ `bZoomed`  
+ Diverso da zero se la destinazione è un fattore di zoom, altrimenti 0. Il fattore di zoom viene archiviato in `ZoomNum`.  
   
- **bRectInHimetric**  
- Diverso da zero se le dimensioni di **prcBounds** in **HIMETRIC**, in caso contrario 0.  
+ `bRectInHimetric`  
+ Diverso da zero se le dimensioni di `prcBounds` in HIMETRIC, in caso contrario 0.  
   
- **ZoomNum**  
- La larghezza e altezza del rettangolo in cui viene eseguito il rendering dell'oggetto. Il fattore di zoom lungo l'asse x (la proporzione tra le dimensioni dell'oggetto naturale per renderne corrente) della destinazione è il valore di **ZoomNum.cx** diviso per il valore di **ZoomDen.cx**. Il fattore di zoom lungo l'asse y viene eseguito in modo simile.  
+ `ZoomNum`  
+ La larghezza e altezza del rettangolo in cui viene eseguito il rendering dell'oggetto. Il fattore di zoom lungo l'asse x (la proporzione tra le dimensioni dell'oggetto naturale alle dimensioni correnti) della destinazione è il valore della `ZoomNum.cx` diviso per il valore di `ZoomDen.cx`. Il fattore di zoom lungo l'asse y è realizzato in modo simile.  
   
- **ZoomDen**  
- L'effettiva larghezza e l'altezza della destinazione.  
+ `ZoomDen`  
+ La larghezza effettiva e l'altezza della destinazione.  
   
 ## <a name="remarks"></a>Note  
- L'utilizzo tipico di questa struttura sarebbe il recupero di informazioni durante il rendering dell'oggetto di destinazione. Ad esempio, è possibile recuperare valori da `ATL_DRAWINFO` all'interno dell'overload di [CComControlBase::OnDrawAdvanced](ccomcontrolbase-class.md#ondrawadvanced).  
+ Utilizzo tipici di questa struttura sarebbe il recupero di informazioni durante il rendering dell'oggetto di destinazione. Ad esempio, è possibile recuperare valori da ATL_DRAWINFO all'interno di overload della funzione [CComControlBase::OnDrawAdvanced](ccomcontrolbase-class.md#ondrawadvanced).  
   
- Questa struttura consente di archiviare informazioni pertinenti utilizzate per visualizzare l'aspetto di un oggetto per il dispositivo di destinazione. Nel disegno sullo schermo, una stampante, o anche un metafile, è possono utilizzare le informazioni fornite.  
+ Questa struttura consente di archiviare informazioni pertinenti usate per visualizzare l'aspetto di un oggetto per il dispositivo di destinazione. Le informazioni fornite sono utilizzabile nel disegno per la schermata, una stampante o persino un metafile.  
   
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** atlctl. h  

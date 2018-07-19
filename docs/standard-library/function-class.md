@@ -28,12 +28,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 26164c391689c8fb7f24f49464e141f74a3058ee
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 4ca8621067c851b5a1e107eb16800d546562fbb6
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33847842"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38959933"
 ---
 # <a name="function-class"></a>Classe function
 
@@ -89,9 +89,9 @@ public:
 
 ### <a name="parameters"></a>Parametri
 
-`Fty` Il tipo di funzione per eseguire il wrapping.
+*Fty* il tipo di funzione per eseguire il wrapping.
 
-`Ax` La funzione allocatore.
+*AX* funzione allocatore.
 
 ## <a name="remarks"></a>Note
 
@@ -164,15 +164,15 @@ template <class Fx, class Alloc>
 
 ### <a name="parameters"></a>Parametri
 
-`_Func` Un oggetto richiamabile.
+*Func* un oggetto chiamabile.
 
-`_Fnref` Un wrapper di riferimento che contiene un oggetto richiamabile.
+*_Fnref* un wrapper di riferimento che contiene un oggetto chiamabile.
 
-`Ax` Un oggetto allocatore.
+*AX* un oggetto allocatore.
 
 ### <a name="remarks"></a>Note
 
-Ogni funzione membro sostituisce l'oggetto `callable object` incluso in `*this` con l'oggetto chiamabile passato come `operand`. Entrambe allocano memoria con l'oggetto allocatore `Ax`.
+Ogni funzione membro sostituisce l'oggetto `callable object` incluso in `*this` con l'oggetto chiamabile passato come `operand`. Entrambe allocano memoria con l'oggetto allocatore *Ax*.
 
 ## <a name="function"></a>  function::function
 
@@ -199,17 +199,17 @@ template <class Fx, class Alloc>
 
 ### <a name="parameters"></a>Parametri
 
-`right` Oggetto funzione in cui copiare.
+*a destra* oggetto funzione in cui copiare.
 
-`Fx` Il tipo di oggetto richiamabile.
+*FX* il tipo di oggetto chiamabile.
 
-`_Func` L'oggetto chiamata per eseguire il wrapping.
+*Func* oggetto chiamabile di cui eseguire il wrapping.
 
-`Alloc` Il tipo di allocatore.
+*Alloc* il tipo di allocatore.
 
-`Ax` Allocatore.
+*AX* allocatore.
 
-`_Fnref` Il riferimento di oggetto richiamabile di cui eseguire il wrapping.
+*_Fnref* il riferimento all'oggetto chiamabile per eseguire il wrapping.
 
 ### <a name="remarks"></a>Note
 
@@ -295,7 +295,7 @@ operator unspecified();
 
 ### <a name="remarks"></a>Note
 
-L'operatore restituisce un valore convertibile in `bool` con un valore true solo se l'oggetto non è vuoto. Può essere usato per verificare se l'oggetto è vuoto.
+L'operatore restituisce un valore che è convertibile in **bool** con un valore true solo se l'oggetto non è vuoto. Può essere usato per verificare se l'oggetto è vuoto.
 
 ### <a name="example"></a>Esempio
 
@@ -340,9 +340,9 @@ result_type operator()(
 
 ### <a name="parameters"></a>Parametri
 
-`TN` Il tipo dell'ennesimo chiamare argomento.
+*TN* il tipo dell'ennesimo argomento di chiamata.
 
-`tN` L'argomento ennesimo chiamata.
+*tN* l'ennesimo argomento di chiamata.
 
 ### <a name="remarks"></a>Note
 
@@ -391,13 +391,13 @@ template <class Fty>
 
 ### <a name="parameters"></a>Parametri
 
-`npc` Una costante puntatore null.
+*NPC* una costante puntatore null.
 
-`right` Oggetto funzione in cui copiare.
+*a destra* oggetto funzione in cui copiare.
 
-`fn` L'oggetto chiamata per eseguire il wrapping.
+*Fn* oggetto chiamabile di cui eseguire il wrapping.
 
-`fnref` Il riferimento di oggetto richiamabile di cui eseguire il wrapping.
+*fnref* il riferimento all'oggetto chiamabile per eseguire il wrapping.
 
 ### <a name="remarks"></a>Note
 
@@ -506,11 +506,11 @@ void swap(function& right);
 
 ### <a name="parameters"></a>Parametri
 
-`right` Oggetto funzione da scambiare con.
+*a destra* da scambiare con l'oggetto function.
 
 ### <a name="remarks"></a>Note
 
-La funzione membro scambia gli oggetti di destinazione tra `*this` e `right`. Esegue tale operazione in un tempo costante e non genera eccezioni.
+La funzione membro Scambia gli oggetti di destinazione tra `*this` e *destro*. Esegue tale operazione in un tempo costante e non genera eccezioni.
 
 ### <a name="example"></a>Esempio
 
@@ -567,13 +567,13 @@ template <class Fty2>
 
 ### <a name="parameters"></a>Parametri
 
-`Fty2` Il tipo di oggetto richiamabile di destinazione per eseguire il test.
+*Fty2* il tipo di oggetto chiamabile di destinazione per eseguire il test.
 
 ### <a name="remarks"></a>Note
 
-Il tipo `Fty2` deve essere chiamabile per i tipi di argomento `T1, T2, ..., TN` e il tipo restituito `Ret`. Se `target_type() == typeid(Fty2)`, la funzione modello membro restituisce l'indirizzo dell'oggetto di destinazione; in caso contrario, restituisce 0.
+Il tipo *Fty2* deve essere chiamabile per i tipi di argomento `T1, T2, ..., TN` e il tipo restituito `Ret`. Se `target_type() == typeid(Fty2)`, la funzione modello membro restituisce l'indirizzo dell'oggetto di destinazione; in caso contrario, restituisce 0.
 
-Un tipo `Fty2` è chiamabile per i tipi di argomento `T1, T2, ..., TN` e il tipo restituito `Ret` se, per lvalue `fn, t1, t2, ..., tN` rispettivamente dei tipi `Fty2, T1, T2, ..., TN`, `INVOKE(fn, t1, t2, ..., tN)` è nel formato corretto e, se `Ret` non è `void`, convertibile in `Ret`.
+Un tipo *Fty2* chiamabile per i tipi di argomento `T1, T2, ..., TN` e il tipo restituito `Ret` se, per lvalue `fn, t1, t2, ..., tN` dei tipi `Fty2, T1, T2, ..., TN`, rispettivamente, `INVOKE(fn, t1, t2, ..., tN)` è ben formata e, se `Ret`non è **void**, convertibile in `Ret`.
 
 ### <a name="example"></a>Esempio
 

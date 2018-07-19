@@ -26,12 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: df8b872d9aeb718c1e86d460d8ef60beac8f3632
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: de84f708957074878fba84ebfe3db600a1b6ed86
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33862442"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954812"
 ---
 # <a name="moneyput-class"></a>Classe money_put
 
@@ -47,9 +47,9 @@ class money_put : public locale::facet;
 
 ### <a name="parameters"></a>Parametri
 
-`CharType` Il tipo utilizzato all'interno di un programma per codificare i caratteri delle impostazioni locali.
+*CharType* il tipo utilizzato all'interno di un programma per codificare i caratteri delle impostazioni locali.
 
-`OutputIterator` Il tipo di iteratore in cui le funzioni put monetarie scrivono il proprio output.
+*OutputIterator* il tipo di iteratore in cui le funzioni put monetarie scrivono il proprio output.
 
 ## <a name="remarks"></a>Note
 
@@ -117,15 +117,15 @@ virtual iter_type do_put(
 
 ### <a name="parameters"></a>Parametri
 
-`next` Un iteratore che punta al primo elemento della stringa inserita.
+*Avanti* un iteratore che punta al primo elemento della stringa inserita.
 
-`_Intl` Valore booleano che indica il tipo di simbolo di valuta previsto nella sequenza: **true** se internazionale, **false** se interne.
+*_Intl* valore booleano che indica il tipo del simbolo di valuta previsto nella sequenza: **true** se internazionale, **false** se nazionale.
 
-`_Iosbase` Un formato di flag che quando set indica che il simbolo di valuta è facoltativo. in caso contrario, è necessario
+*In_losbase* flag di formato che, quando impostato indica che il simbolo di valuta è facoltativo; in caso contrario, è necessario
 
-`_Fill` Un carattere utilizzato per la spaziatura.
+*_Fill* un carattere utilizzato per la spaziatura.
 
-`val` Un oggetto stringa da convertire.
+*Val* un oggetto stringa da convertire.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -133,9 +133,9 @@ Iteratore di output che punta alla posizione successiva all'ultimo elemento prod
 
 ### <a name="remarks"></a>Note
 
-La prima funzione membro virtuale protetta genera elementi sequenziali a partire da `next` per produrre un campo di input di tipo valuta dal valore di [string_type](#string_type) dell'oggetto `val`. La sequenza controllata da `val` deve iniziare con uno o più cifre decimali, preceduti facoltativamente da un segno meno (-), che rappresenta la quantità. La funzione restituisce un iteratore che designa il primo elemento dopo il campo di output di tipo valuta generato.
+La prima funzione membro virtuale protetta genera elementi sequenziali a partire *successivo* per produrre un campo di output di tipo valuta dalle [string_type](#string_type) oggetto *val*. La sequenza controllata da *val* deve iniziare con uno o più cifre decimali, preceduti facoltativamente da un segno meno (-), che rappresenta l'importo. La funzione restituisce un iteratore che designa il primo elemento dopo il campo di output di tipo valuta generato.
 
-La seconda funzione membro virtuale protetta si comporta come la prima, ad eccezione del fatto che converte innanzitutto `val` in una sequenza di cifre decimali, preceduta in modo facoltativo da un segno meno, e quindi converte tale sequenza nel modo descritto in precedenza.
+La seconda funzione membro virtuale protetta si comporta come la prima, ad eccezione che si converte in modo efficace innanzitutto *val* in una sequenza di cifre decimali, preceduta in modo facoltativo da un segno meno (-), quindi converte tale sequenza come illustrato in precedenza.
 
 Il formato di un campo di output di tipo valuta è determinato dal valore fac [locale facet](../standard-library/locale-class.md#facet_class) restituito dalla chiamata effettiva [use_facet](../standard-library/locale-functions.md#use_facet) < [moneypunct](../standard-library/moneypunct-class.md)\< **CharType**, **intl**> >( **iosbase**. [getloc](../standard-library/ios-base-class.md#getloc)).
 
@@ -195,11 +195,11 @@ explicit money_put(size_t _Refs = 0);
 
 ### <a name="parameters"></a>Parametri
 
-`_Refs` Valore integer utilizzato per specificare il tipo di gestione della memoria per l'oggetto.
+*_Refs* valore integer utilizzato per specificare il tipo di gestione della memoria per l'oggetto.
 
 ### <a name="remarks"></a>Note
 
-I valori possibili per il parametro `_Refs` e i relativi significati sono:
+I valori possibili per il *_Refs* parametro e i relativi significati sono:
 
 - 0: la durata dell'oggetto è gestita dalle impostazioni locali che lo contengono.
 
@@ -234,15 +234,15 @@ iter_type put(
 
 ### <a name="parameters"></a>Parametri
 
-`next` Un iteratore che punta al primo elemento della stringa inserita.
+*Avanti* un iteratore che punta al primo elemento della stringa inserita.
 
-`_Intl` Valore booleano che indica il tipo di simbolo di valuta previsto nella sequenza: **true** se internazionale, **false** se interne.
+*_Intl* valore booleano che indica il tipo del simbolo di valuta previsto nella sequenza: **true** se internazionale, **false** se nazionale.
 
-`_Iosbase` Un formato di flag che quando set indica che il simbolo di valuta è facoltativo. in caso contrario, è necessario
+*In_losbase* flag di formato che, quando impostato indica che il simbolo di valuta è facoltativo; in caso contrario, è necessario
 
-`_Fill` Un carattere utilizzato per la spaziatura.
+*_Fill* un carattere utilizzato per la spaziatura.
 
-`val` Un oggetto stringa da convertire.
+*Val* un oggetto stringa da convertire.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -286,7 +286,7 @@ money_put( ) = "CAD1,000.12"
 
 ## <a name="string_type"></a>  money_put::string_type
 
-Tipo che descrive una stringa contenente caratteri di tipo **CharType**.
+Tipo che descrive una stringa contenente caratteri di tipo `CharType`.
 
 ```cpp
 typedef basic_string<CharType, Traits, Allocator> string_type;

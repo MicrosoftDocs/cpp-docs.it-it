@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c13dcadc87c23e288c7f8c8a7f5bc9752aae5db7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b385d822c2f58d26938b3300207a790dc1193060
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33853651"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953049"
 ---
 # <a name="resultof-class"></a>Classe result_of
 
@@ -48,13 +48,13 @@ template<class T>
 
 ### <a name="parameters"></a>Parametri
 
-`Fn` Tipo richiamabile alla query.
+*Fn* tipo chiamabile su query.
 
-`ArgTypes` I tipi di elenco di argomenti di tipo richiamabile alla query.
+*ArgTypes* i tipi dell'elenco di argomenti al tipo chiamabile su query.
 
 ## <a name="remarks"></a>Note
 
-Usare questo modello per determinare in fase di compilazione il tipo di risultato di `Fn`(`ArgTypes`), dove `Fn` è un tipo chiamabile, un riferimento alla funzione o un riferimento al tipo chiamabile, richiamato tramite un elenco di argomenti dei tipi in `ArgTypes`. Il membro `type` della classe modello attribuisce un nome al tipo di risultato di `decltype(std::invoke(declval<Fn>(), declval<ArgTypes>()...))` se l'espressione non valutata `std::invoke(declval<Fn>(), declval<ArgTypes>()...)` è nel formato corretto. In caso contrario, la classe di modello non ha alcun membro `type`. Il tipo `Fn` e tutti i tipi inclusi nel pacchetto di parametri `ArgTypes` devono essere tipi completi, `void`, o matrici di valori associati sconosciuti.
+Usare questo modello per determinare in fase di compilazione il tipo di risultato `Fn`(`ArgTypes`), dove *Fn* è un tipo chiamabile, un riferimento alla funzione o un riferimento al tipo chiamabile, richiamato tramite un elenco di argomenti dei tipi in  *ArgTypes*. Il membro `type` della classe modello attribuisce un nome al tipo di risultato di `decltype(std::invoke(declval<Fn>(), declval<ArgTypes>()...))` se l'espressione non valutata `std::invoke(declval<Fn>(), declval<ArgTypes>()...)` è nel formato corretto. In caso contrario, la classe di modello non ha alcun membro `type`. Il tipo *Fn* e tutti i tipi nel pacchetto di parametri *ArgTypes* devono essere tipi completi, **void**, o matrici di valori associati sconosciuti.
 
 ## <a name="requirements"></a>Requisiti
 

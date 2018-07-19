@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4144eed22a3a16615d7fa79ecd4828835c6ebe0b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 73a051eadaf06950e606f475b2bb418425e1b19f
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33846480"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38958874"
 ---
 # <a name="alignedstorage-class"></a>Classe aligned_storage
 
@@ -40,13 +40,13 @@ using aligned_storage_t = typename aligned_storage<Len, Align>::type;
 
 ### <a name="parameters"></a>Parametri
 
-`Len` Le dimensioni dell'oggetto.
+*Len* le dimensioni dell'oggetto.
 
-`Align` L'allineamento di un oggetto.
+*Allinea* allineamento dell'oggetto.
 
 ## <a name="remarks"></a>Note
 
-Il typedef del membro di modello `type` è un sinonimo di un tipo POD con allineamento `Align` e dimensione `Len`. `Align` deve essere uguale a `alignment_of<T>::value` per un determinato tipo `T` o all'allineamento predefinito.
+Il typedef del membro di modello `type` è un sinonimo di un tipo POD con allineamento *Align* e la dimensione *Len*. *Allineare* deve essere uguale al `alignment_of<T>::value` per un determinato tipo `T`, o per l'allineamento predefinito.
 
 ## <a name="example"></a>Esempio
 

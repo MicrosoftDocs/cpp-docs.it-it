@@ -32,12 +32,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1ffc59d3425f403fb1dca43f70876cfbfb5d3dd9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 4b7b604fd58c3f320b62c022e6b5d1749c1f3a87
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33861961"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954890"
 ---
 # <a name="messages-class"></a>Classe messages
 
@@ -54,7 +54,7 @@ class messages : public messages_base;
 
 ### <a name="parameters"></a>Parametri
 
-`CharType` Il tipo utilizzato all'interno di un programma per codificare i caratteri delle impostazioni locali.
+*CharType* il tipo utilizzato all'interno di un programma per codificare i caratteri delle impostazioni locali.
 
 ## <a name="remarks"></a>Note
 
@@ -114,7 +114,7 @@ void close(catalog _Catval) const;
 
 ### <a name="parameters"></a>Parametri
 
-`_Catval` Il catalogo per essere chiuso.
+*Catval* il catalogo da chiudere.
 
 ### <a name="remarks"></a>Note
 
@@ -130,11 +130,11 @@ virtual void do_close(catalog _Catval) const;
 
 ### <a name="parameters"></a>Parametri
 
-`_Catval` Il catalogo per essere chiuso.
+*Catval* il catalogo da chiudere.
 
 ### <a name="remarks"></a>Note
 
-La funzione membro protetta chiude il catalogo dei messaggi `_Catval`. È necessario che tale catalogo sia stato aperto da una precedente chiamata a [do_open](#do_open).
+La funzione membro protetta chiude il catalogo dei messaggi *catval*, che deve essere stato aperto da una precedente chiamata a [do_open](#do_open).
 
 È necessario ottenere *_Catval* da un catalogo aperto in precedenza e non chiuso.
 
@@ -156,21 +156,21 @@ virtual string_type do_get(
 
 ### <a name="parameters"></a>Parametri
 
-`_Catval` Il valore di identificazione che specifica il catalogo dei messaggi da cercare.
+*Catval* il valore di identificazione che specifica il catalogo dei messaggi da cercare.
 
-`_Set` Il primo identificato usata per individuare un messaggio in un catalogo dei messaggi.
+*Imposta* il primo valore identificato usato per individuare un messaggio in un catalogo dei messaggi.
 
-`_Message` Il secondo identificato usata per individuare un messaggio in un catalogo dei messaggi.
+*Messaggio* secondo valore identificato usato per individuare un messaggio in un catalogo dei messaggi.
 
-`_Dfault` La stringa da restituire in caso di errore.
+*_Dfault* la stringa da restituire in caso di errore.
 
 ### <a name="return-value"></a>Valore restituito
 
-In caso di esito negativo, viene restituita una copia di `_Dfault`. In caso contrario, viene restituita una copia della sequenza di messaggi specificata.
+Restituisce una copia della *_Dfault* in caso di errore. In caso contrario, viene restituita una copia della sequenza di messaggi specificata.
 
 ### <a name="remarks"></a>Note
 
-La funzione membro protetta tenta di ottenere una sequenza di messaggi dal catalogo dei messaggi `_Catval`. A questo scopo, è possibile che usi `_Set`, `_Message` e `_Dfault`.
+La funzione membro protetta tenta di ottenere una sequenza di messaggi dal catalogo dei messaggi *catval*. È possibile che sfrutta *imposta*, *messaggio*, e *_Dfault* a tale scopo.
 
 ### <a name="example"></a>Esempio
 
@@ -188,9 +188,9 @@ virtual catalog do_open(
 
 ### <a name="parameters"></a>Parametri
 
-`_Catname` Il nome del catalogo in cui cercare.
+*_Catname* il nome del catalogo in cui cercare.
 
-`_Loc` Le impostazioni locali da cercare nel catalogo.
+*_Loc* le impostazioni locali da ricercare nel catalogo.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -198,7 +198,7 @@ In caso di esito negativo, viene restituito un valore minore di zero. In caso co
 
 ### <a name="remarks"></a>Note
 
-La funzione membro protetta tenta di aprire un catalogo dei messaggi il cui nome è `_Catname`. A questo scopo, è possibile che usi le impostazioni locali `_Loc`.
+La funzione membro protetta tenta di aprire un catalogo dei messaggi il cui nome corrisponde *_Catname*. È possibile che usi le impostazioni locali *_Loc* in questo modo
 
 Il valore restituito deve essere usato come argomento in una successiva chiamata a [close](#close).
 
@@ -220,17 +220,17 @@ string_type get(
 
 ### <a name="parameters"></a>Parametri
 
-`_Catval` Il valore di identificazione che specifica il catalogo dei messaggi da cercare.
+*Catval* il valore di identificazione che specifica il catalogo dei messaggi da cercare.
 
-`_Set` Il primo identificato usata per individuare un messaggio in un catalogo dei messaggi.
+*Imposta* il primo valore identificato usato per individuare un messaggio in un catalogo dei messaggi.
 
-`_Message` Il secondo identificato usata per individuare un messaggio in un catalogo dei messaggi.
+*Messaggio* secondo valore identificato usato per individuare un messaggio in un catalogo dei messaggi.
 
-`_Dfault` La stringa da restituire in caso di errore.
+*_Dfault* la stringa da restituire in caso di errore.
 
 ### <a name="return-value"></a>Valore restituito
 
-In caso di esito negativo, viene restituita una copia di `_Dfault`. In caso contrario, viene restituita una copia della sequenza di messaggi specificata.
+Restituisce una copia della *_Dfault* in caso di errore. In caso contrario, viene restituita una copia della sequenza di messaggi specificata.
 
 ### <a name="remarks"></a>Note
 
@@ -251,13 +251,13 @@ protected: messages(
 
 ### <a name="parameters"></a>Parametri
 
-`_Refs` Valore integer utilizzato per specificare il tipo di gestione della memoria per l'oggetto.
+*_Refs* valore integer utilizzato per specificare il tipo di gestione della memoria per l'oggetto.
 
-`_Locname` Il nome delle impostazioni locali.
+*_Locname* il nome delle impostazioni locali.
 
 ### <a name="remarks"></a>Note
 
-I valori possibili per il parametro `_Refs` e i relativi significati sono:
+I valori possibili per il *_Refs* parametro e i relativi significati sono:
 
 - 0: la durata dell'oggetto è gestita dalle impostazioni locali che lo contengono.
 
@@ -281,9 +281,9 @@ catalog open(
 
 ### <a name="parameters"></a>Parametri
 
-`_Catname` Il nome del catalogo in cui cercare.
+*_Catname* il nome del catalogo in cui cercare.
 
-`_Loc` Le impostazioni locali da cercare nel catalogo.
+*_Loc* le impostazioni locali da ricercare nel catalogo.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -295,7 +295,7 @@ La funzione membro restituisce [do_open](#do_open)( `_Catname`, `_Loc`).
 
 ## <a name="string_type"></a>  messages::string_type
 
-Tipo che descrive una stringa di tipo `basic_string` contenente caratteri di tipo **CharType**.
+Tipo che descrive una stringa di tipo `basic_string` contenente caratteri di tipo `CharType`.
 
 ```cpp
 typedef basic_string<CharType, Traits, Allocator> string_type;

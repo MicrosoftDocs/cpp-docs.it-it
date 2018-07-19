@@ -19,12 +19,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 31f7fe06c46472f9919a642ecc5d6ed5a326792c
-ms.sourcegitcommit: 3bb7c1c0ceeb8012418e2fff9ae5a7db0fff3877
+ms.openlocfilehash: b56a493ce91c6ac7f0864a1bf4e10476603d79fd
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34458901"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38959043"
 ---
 # <a name="systemclock-structure"></a>Struttura system_clock
 
@@ -78,7 +78,7 @@ Un clock è *costante* se è *monotonico* e se il tempo tra i cicli macchina è 
 
 ## <a name="from_time_t"></a>  system_clock::from_time_t
 
-Metodo statico che restituisce un oggetto [time_point](../standard-library/time-point-class.md) che più si avvicina all'ora rappresentata da `Tm`.
+Metodo statico che restituisce un [time_point](../standard-library/time-point-class.md) che più si avvicina l'ora rappresentata dal *Tm*.
 
 ```cpp
 static time_point from_time_t(time_t Tm) noexcept;
@@ -86,7 +86,8 @@ static time_point from_time_t(time_t Tm) noexcept;
 
 ### <a name="parameters"></a>Parametri
 
-`Tm` Un [time_t](../c-runtime-library/standard-types.md) oggetto.
+*TM*  
+ Oggetto [time_t](../c-runtime-library/standard-types.md).
 
 ## <a name="is_monotonic_constant"></a>  Costante system_clock::is_monotonic
 
@@ -98,7 +99,7 @@ static const bool is_monotonic = false;
 
 ### <a name="return-value"></a>Valore restituito
 
-In questa implementazione, `system_clock::is_monotonic` restituisce sempre `false`.
+In questa implementazione `system_clock::is_monotonic` restituisce sempre **false**.
 
 ### <a name="remarks"></a>Note
 
@@ -114,7 +115,7 @@ static const bool is_steady = false;
 
 ### <a name="return-value"></a>Valore restituito
 
-In questa implementazione, `system_clock::is_steady` restituisce sempre `false`.
+In questa implementazione `system_clock::is_steady` restituisce sempre **false**.
 
 ### <a name="remarks"></a>Note
 
@@ -134,7 +135,7 @@ Oggetto [time_point](../standard-library/time-point-class.md) che rappresenta l'
 
 ## <a name="to_time_t"></a>  system_clock::to_time_t
 
-Metodo statico che restituisce un oggetto [time_t](../c-runtime-library/standard-types.md) che più si avvicina all'ora rappresentata da `Time`.
+Metodo statico che restituisce un [time_t](../c-runtime-library/standard-types.md) che più si avvicina l'ora rappresentata dal *ora*.
 
 ```cpp
 static time_t to_time_t(const time_point& Time) noexcept;
@@ -142,7 +143,8 @@ static time_t to_time_t(const time_point& Time) noexcept;
 
 ### <a name="parameters"></a>Parametri
 
-`Time` Un [time_point](../standard-library/time-point-class.md) oggetto.
+*Ora*  
+ Oggetto [time_point](../standard-library/time-point-class.md).
 
 ## <a name="see-also"></a>Vedere anche
 

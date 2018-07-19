@@ -36,12 +36,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 72b42546f140dfd150676c8bc21b4b651815281f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1c2f2351d55a4b4f868021bd0c44a0b942633c68
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33864164"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38958530"
 ---
 # <a name="lognormaldistribution-class"></a>Classe lognormal_distribution
 
@@ -78,11 +78,11 @@ public:
 
 ### <a name="parameters"></a>Parametri
 
-*RealType* valore predefinito è il tipo di risultato a virgola mobile, `double`. Per informazioni sui tipi possibili, vedere [\<random>](../standard-library/random.md).
+*RealType* il tipo di risultato a virgola mobile, per impostazione predefinita **doppie**. Per informazioni sui tipi possibili, vedere [\<random>](../standard-library/random.md).
 
 ## <a name="remarks"></a>Note
 
-La classe di modelli descrive una distribuzione che produce valori di un tipo integrale specificato dall'utente o di tipo `double` se non è specificato alcun valore, distribuiti in base alla distribuzione lognormale. La tabella seguente include collegamenti ad articoli relativi ai singoli membri.
+La classe modello descrive una distribuzione che produce valori di un integrale specificato dall'utente, tipo o tipo **doppie** se ne viene specificato alcuno, distribuiti in base alla distribuzione lognormale. La tabella seguente include collegamenti ad articoli relativi ai singoli membri.
 
 ||||
 |-|-|-|

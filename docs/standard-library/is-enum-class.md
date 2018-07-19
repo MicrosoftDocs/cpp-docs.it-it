@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 493c3dc0faf42e0f08f88afd3ac405cfbd7404aa
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ac1a6c39f25e42237265964ae1bfb0214aaa9087
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33844881"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38960999"
 ---
 # <a name="isenum-class"></a>Classe is_enum
 
@@ -37,11 +37,11 @@ struct is_enum;
 
 ### <a name="parameters"></a>Parametri
 
-`Ty` Il tipo di query.
+*Ty* il tipo di query.
 
 ## <a name="remarks"></a>Note
 
-Un'istanza del predicato di tipo contiene true se il tipo `Ty` è un tipo di enumerazione o un form `cv-qualified` di un tipo di enumerazione; in caso contrario, contiene false.
+Un'istanza del tipo predicato contiene true se il tipo *Ty* è un tipo di enumerazione o un `cv-qualified` forma di un tipo di enumerazione, in caso contrario, contiene false.
 
 ## <a name="example"></a>Esempio
 

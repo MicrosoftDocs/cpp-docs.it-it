@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 37e5e2ceff83704632a77ef0fb1eedecaa9e678b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 140bdea373442e1e987ce30c2421057b9355796b
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33847195"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954018"
 ---
 # <a name="ltfuturegt"></a>&lt;future&gt;
 
@@ -36,7 +36,7 @@ Questa intestazione usa il runtime di concorrenza (ConcRT) in modo che sia utili
 ## <a name="remarks"></a>Note
 
 > [!NOTE]
-> Nel codice compilato tramite **/clr**, questa intestazione è bloccata.
+> Nel codice compilato usando **/clr**, questa intestazione è bloccata.
 
 Un *provider asincrono* archivia il risultato di una chiamata di funzione. Un *oggetto restituito asincrono* viene usato per recuperare il risultato di una chiamata di funzione. Uno *stato asincrono associato* consente la comunicazione tra un provider asincrono e uno o più oggetti restituiti asincroni.
 
@@ -48,7 +48,7 @@ Lo stato asincrono associato è *ready* solo se il relativo provider asincrono h
 
 La funzione modello `async` e le classi modello `promise` e `packaged_task` sono provider asincroni. Le classi modello `future` e `shared_future` descrivono gli oggetti restituiti asincroni.
 
-Ognuna delle classi modello `promise`, `future` e `shared_future` ha una specializzazione per il tipo `void` e una specializzazione parziale per l'archiviazione e il recupero di un valore per riferimento. Queste specializzazioni si differenziano dal modello principale solo nelle firme e nella semantica delle funzioni che archiviano e recuperano il valore restituito.
+Ognuna delle classi modello `promise`, `future`, e `shared_future` ha una specializzazione per il tipo **void** e una specializzazione parziale per l'archiviazione e recupero di un valore per riferimento. Queste specializzazioni si differenziano dal modello principale solo nelle firme e nella semantica delle funzioni che archiviano e recuperano il valore restituito.
 
 Le classi modello `future` e `shared_future` non si bloccano mai nei relativi distruttori, con l'eccezione di un unico caso che viene mantenuto per compatibilità con le versioni precedenti. Infatti, a differenza di quanto avviene con tutti gli altri oggetti future, per un oggetto `future` o l'ultimo oggetto `shared_future` associato a un'attività avviata con `std::async`, il distruttore si blocca se l'attività non è stata completata. In altri termini, si blocca se il thread non ha ancora chiamato `.get()` o `.wait()` e l'attività è ancora in esecuzione. Alla descrizione di `std::async` nella bozza dello standard è stata aggiunta una nota di usabilità che spiega quanto segue: se un oggetto future ottenuto da std::async viene spostato al di fuori dell'ambito locale, l'altro codice che usa l'oggetto future deve tenere presente che il distruttore di tale oggetto può bloccarsi per consentire allo stato condiviso di diventare ready. In tutti gli altri casi, i distruttori `future` e `shared_future` sono necessari ed è garantito che non si blocchino mai.
 
@@ -87,7 +87,7 @@ Le classi modello `future` e `shared_future` non si bloccano mai nei relativi di
 |----------|-----------------|
 |[future_errc](../standard-library/future-enums.md#future_errc)|Fornisce i nomi simbolici per tutti gli errori segnalati dalla classe `future_error`.|
 |[future_status](../standard-library/future-enums.md#future_status)|Fornisce i nomi simbolici per i motivi che una funzione di attesa temporizzata può restituire.|
-|[Avvio veloce](../standard-library/future-enums.md#launch)|Rappresenta un tipo di maschera di bit che descrive le possibili modalità per la funzione modello `async`.|
+|[avvio veloce](../standard-library/future-enums.md#launch)|Rappresenta un tipo di maschera di bit che descrive le possibili modalità per la funzione modello `async`.|
 
 ## <a name="see-also"></a>Vedere anche
 

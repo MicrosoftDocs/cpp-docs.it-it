@@ -36,12 +36,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e9c6e71b0872b19ea063d9cc0ff2615ef4362ac1
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a4c92b24dbd5ccfbd308cb1b52dee7347f1df1e4
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33855760"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38959861"
 ---
 # <a name="normaldistribution-class"></a>Classe normal_distribution
 
@@ -81,18 +81,18 @@ public:
 
 ### <a name="parameters"></a>Parametri
 
-*RealType* valore predefinito è il tipo di risultato a virgola mobile, `double`. Per informazioni sui tipi possibili, vedere [\<random>](../standard-library/random.md).
+*RealType* il tipo di risultato a virgola mobile, per impostazione predefinita **doppie**. Per informazioni sui tipi possibili, vedere [\<random>](../standard-library/random.md).
 
 ## <a name="remarks"></a>Note
 
-La classe modello descrive una distribuzione che produce valori di un tipo integrale specificato dall'utente o di tipo `double` se non è specificato alcun valore, distribuiti in base alla distribuzione normale. La tabella seguente include collegamenti ad articoli relativi ai singoli membri.
+La classe modello descrive una distribuzione che produce valori di un integrale specificato dall'utente, tipo o tipo **doppie** se ne viene specificato alcuno, distribuiti in base alla distribuzione normale. La tabella seguente include collegamenti ad articoli relativi ai singoli membri.
 
 ||||
 |-|-|-|
 |[normal_distribution](#normal_distribution)|`normal_distribution::mean`|`normal_distribution::param`|
 |`normal_distribution::operator()`|`normal_distribution::stddev`|[param_type](#param_type)|
 
-Le funzioni di proprietà `mean()` e `stddev()` restituiscono i valori rispettivi per i parametri di distribuzione archiviati `mean` e `stddev`, rispettivamente.
+Le funzioni di proprietà `mean()` e `stddev()` restituiscono i valori per i parametri di distribuzione archiviati *significa* e *stddev* rispettivamente.
 
 Il membro di proprietà `param()` imposta o restituisce il pacchetto di parametri di distribuzione archiviati `param_type`.
 
@@ -212,7 +212,7 @@ explicit normal_distribution(const param_type& parm);
 
 *StdDev* il `stddev` parametro di distribuzione.
 
-*Parm* struttura di parametri usata per costruire la distribuzione.
+*Parm* la struttura di parametri utilizzata per costruire la distribuzione.
 
 ### <a name="remarks"></a>Note
 

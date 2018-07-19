@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 01fe61112e5b36c8341e4a3209a9bec335549736
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ad33ff04c688ab79fa4a73234829d3e13fd1b44d
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33857191"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954235"
 ---
 # <a name="ltmemorygt-operators"></a>Operatori &lt;memory&gt;
 
@@ -56,13 +56,13 @@ bool operator!=(
 
 ### <a name="parameters"></a>Parametri
 
-`left` Uno degli oggetti di cui verificare la disuguaglianza.
+*a sinistra* uno degli oggetti di cui verificare la disuguaglianza.
 
-`right` Uno degli oggetti di cui verificare la disuguaglianza.
+*a destra* uno degli oggetti di cui verificare la disuguaglianza.
 
-`Ty1` Tipo controllato dal puntatore condiviso sinistro.
+*Ty1* tipo controllato dal sinistra condiviso puntatore.
 
-`Ty2` Tipo controllato dal puntatore condiviso destro.
+*Ty2* tipo controllato dal destra condiviso puntatore.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -154,23 +154,23 @@ bool operator==(
 
 ### <a name="parameters"></a>Parametri
 
-`left` Uno degli oggetti di cui verificare l'uguaglianza.
+*a sinistra* uno degli oggetti da sottoporre a test per verificarne l'uguaglianza.
 
-`right` Uno degli oggetti di cui verificare l'uguaglianza.
+*a destra* uno degli oggetti da sottoporre a test per verificarne l'uguaglianza.
 
-`Ty1` Tipo controllato dal puntatore condiviso sinistro.
+*Ty1* tipo controllato dal sinistra condiviso puntatore.
 
-`Ty2` Tipo controllato dal puntatore condiviso destro.
+*Ty2* tipo controllato dal destra condiviso puntatore.
 
 ### <a name="return-value"></a>Valore restituito
 
-`true` se gli oggetti sono uguali, `false` se gli oggetti non sono uguali.
+**true** se gli oggetti sono uguali **false** se gli oggetti non sono uguali.
 
 ### <a name="remarks"></a>Note
 
 Il primo operatore modello restituisce true Tutti gli allocatori predefiniti sono uguali.
 
-Il secondo e il terzo operatore modello restituiscono ` left.get() ==  right.get()`.
+Il secondo e il terzo operatore modello restituiscono `left.get() ==  right.get()`.
 
 ### <a name="example"></a>Esempio
 
@@ -258,17 +258,17 @@ bool operator>=(
 
 ### <a name="parameters"></a>Parametri
 
-`left` Uno degli oggetti da confrontare.
+*a sinistra* uno degli oggetti da confrontare.
 
-`right` Uno degli oggetti da confrontare.
+*a destra* uno degli oggetti da confrontare.
 
-`Ty1` Tipo controllato dal puntatore condiviso sinistro.
+*Ty1* tipo controllato dal sinistra condiviso puntatore.
 
-`Ty2` Tipo controllato dal puntatore condiviso destro.
+*Ty2* tipo controllato dal destra condiviso puntatore.
 
 ### <a name="remarks"></a>Note
 
-Gli operatori di modello restituiscono `left.get() >= right.get()`.
+L'operatore modello restituiscono `left.get() >= right.get()`.
 
 ## <a name="op_lt"></a>  operator&lt;
 
@@ -288,13 +288,13 @@ bool operator<(
 
 ### <a name="parameters"></a>Parametri
 
-`left` Uno degli oggetti da confrontare.
+*a sinistra* uno degli oggetti da confrontare.
 
-`right` Uno degli oggetti da confrontare.
+*a destra* uno degli oggetti da confrontare.
 
-`Ty1` Tipo controllato dal puntatore sinistro.
+*Ty1* tipo controllato dal puntatore sinistro.
 
-`Ty2` Tipo controllato dal puntatore destro.
+*Ty2* tipo controllato dal puntatore destro.
 
 ## <a name="op_lt_eq"></a>  operator&lt;=
 
@@ -314,17 +314,17 @@ bool operator<=(
 
 ### <a name="parameters"></a>Parametri
 
-`left` Uno degli oggetti da confrontare.
+*a sinistra* uno degli oggetti da confrontare.
 
-`right` Uno degli oggetti da confrontare.
+*a destra* uno degli oggetti da confrontare.
 
-`Ty1` Tipo controllato dal puntatore condiviso sinistro.
+*Ty1* tipo controllato dal sinistra condiviso puntatore.
 
-`Ty2` Tipo controllato dal puntatore condiviso destro.
+*Ty2* tipo controllato dal destra condiviso puntatore.
 
 ### <a name="remarks"></a>Note
 
-Gli operatori di modello restituiscono `left.get() <= right.get()`
+L'operatore modello restituiscono `left.get() <= right.get()`
 
 ## <a name="op_gt"></a>  operator&gt;
 
@@ -344,13 +344,13 @@ bool operator>(
 
 ### <a name="parameters"></a>Parametri
 
-`left` Uno degli oggetti da confrontare.
+*a sinistra* uno degli oggetti da confrontare.
 
-`right` Uno degli oggetti da confrontare.
+*a destra* uno degli oggetti da confrontare.
 
-`Ty1` Tipo controllato dal puntatore condiviso sinistro.
+*Ty1* tipo controllato dal sinistra condiviso puntatore.
 
-`Ty2` Tipo controllato dal puntatore condiviso destro.
+*Ty2* tipo controllato dal destra condiviso puntatore.
 
 ## <a name="op_lt_lt"></a>  operator&lt;&lt;
 
@@ -364,15 +364,15 @@ std::basic_ostream<Elem, Tr>& operator<<(std::basic_ostream<Elem, Tr>& out,
 
 ### <a name="parameters"></a>Parametri
 
-`Elem` Il tipo dell'elemento di flusso.
+*Elem* il tipo dell'elemento flusso.
 
-`Tr` Il tipo di tratti di elemento di flusso.
+*TR* il tipo di tratti dell'elemento flusso.
 
-`Ty` Tipo controllato dal puntatore condiviso.
+*Ty* tipo controllato dal puntatore condiviso.
 
-`out` Flusso di output.
+*out* nel flusso di output.
 
-`sp` Puntatore condiviso.
+*SP* puntatore condiviso.
 
 ### <a name="remarks"></a>Note
 

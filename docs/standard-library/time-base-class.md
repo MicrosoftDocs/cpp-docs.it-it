@@ -16,16 +16,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4c13cd76f5d353cf91997406c8e7f74b5383cf8e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6e1111ede44edc36e5399d82b3c4e088b20cc1c9
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33854498"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957298"
 ---
 # <a name="timebase-class"></a>Classe time_base
 
-Questa classe viene usata come classe di base per i facet della classe modello time_get e definisce solo l'oggetto **dateorder** di tipo enumerato e diverse costanti di questo tipo.
+La classe funge da classe base per i facet della classe di modello di time_get, la definizione sufficiente del tipo enumerato `dateorder` e diverse costanti di questo tipo.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -48,15 +48,15 @@ public:
 
 Ogni costante caratterizza un modo diverso di ordinare i componenti di una data. Le costanti sono:
 
-- **no_order**: specifica che non si vuole usare un ordine particolare.
+- `no_order` non specifica nessun ordine particolare.
 
-- **dmy**: specifica l'ordine giorno, mese e anno, come in 2 Dicembre 1979.
+- `dmy` Specifica l'ordine giorno, mese, anno, come in 2 dicembre 1979.
 
-- **dmy**: specifica l'ordine mese, giorno e anno, come in Dicembre 2, 1979.
+- `mdy` Specifica l'ordine mese, giorno, anno, come in dicembre 2, 1979.
 
-- **ymd**: specifica l'ordine anno, mese e giorno, come in 1979/12/2.
+- `ymd` Specifica l'ordine anno, mese, giorno, come in 1979/12/2.
 
-- **ydm**: specifica l'ordine anno, giorno e mese, come in 1979: 2 Dic.
+- `ydm` Specifica l'ordine anno, giorno, mese, come in 1979:2 dic.
 
 ## <a name="requirements"></a>Requisiti
 

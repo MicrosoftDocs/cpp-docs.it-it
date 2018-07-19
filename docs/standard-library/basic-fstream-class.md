@@ -26,12 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 00484c170ba3e42ceb9925861def9e7a4617e324
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 832a7b8f864dc21214d3b2428f83fd0c68330ff9
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33847582"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38959891"
 ---
 # <a name="basicfstream-class"></a>Classe basic_fstream
 
@@ -46,9 +46,9 @@ class basic_fstream : public basic_iostream<Elem, Tr>
 
 ### <a name="parameters"></a>Parametri
 
-`Elem` Elemento di base del buffer di file.
+*Elem* l'elemento di base del buffer di file.
 
-`Tr` I tratti dell'elemento di base del buffer di file (in genere `char_traits` <  `Elem`>).
+*TR* i tratti dell'elemento di base del buffer di file (in genere `char_traits` <  `Elem`>).
 
 ## <a name="remarks"></a>Note
 
@@ -135,17 +135,17 @@ basic_fstream(basic_fstream&& right);
 
 ### <a name="parameters"></a>Parametri
 
-`_Filename` Il nome del file da aprire.
+*Nome file* il nome del file da aprire.
 
-`_Mode` Una delle enumerazioni negli [ios_base:: OpenMode](../standard-library/ios-base-class.md#openmode).
+*Modalità* una delle enumerazioni nello [ios_base:: OpenMode](../standard-library/ios-base-class.md#openmode).
 
-`_Prot` Il file predefinito aprendo protezione, equivalente ai `shflag` parametro nel [fsopen, wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md).
+*_Prot* protezione dati, equivalente a di apertura file predefinita di *shflag* parametri in [fsopen, wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md).
 
 ### <a name="remarks"></a>Note
 
-Il primo costruttore inizializza la classe base chiamando [basic_iostream](../standard-library/basic-iostream-class.md)( **sb**), dove **sb** è l'oggetto archiviato di classe [basic_filebuf](../standard-library/basic-filebuf-class.md)\< **Elem**, **Tr**>. Inizializza anche **sb** chiamando `basic_filebuf`\< **Elem**, **Tr**>.
+Il primo costruttore inizializza la classe base chiamando [basic_iostream](../standard-library/basic-iostream-class.md)(`sb`), dove `sb` è l'oggetto archiviato della classe [basic_filebuf](../standard-library/basic-filebuf-class.md) \< **Elem**, **Tr**>. Inizializza anche `sb` chiamando `basic_filebuf` \< **Elem**, **Tr**>.
 
-Il secondo e il terzo costruttore inizializza la classe base chiamando `basic_iostream`( **sb**). Inizializza anche **sb** chiamando `basic_filebuf`\< **Elem**, **Tr**> e quindi **sb.**[open](../standard-library/basic-filebuf-class.md#open)(_ *Filename*, `_Mode`). Se quest'ultima funzione restituisce un puntatore null, il costruttore chiama [setstate](../standard-library/basic-ios-class.md#setstate)( **failbit**).
+Il secondo e il terzo costruttore inizializza la classe base chiamando `basic_iostream`( **sb**). Inizializza anche `sb` chiamando `basic_filebuf` \< **Elem**, **Tr**> e quindi **SB**[aprire](../standard-library/basic-filebuf-class.md#open)( _ *Nomefile*, `_Mode`). Se quest'ultima restituisce un puntatore null, il costruttore chiama [setstate](../standard-library/basic-ios-class.md#setstate)(`failbit`).
 
 Il quarto costruttore inizializza l'oggetto con il contenuto di `right`, considerato come riferimento rvalue.
 
@@ -167,7 +167,7 @@ La funzione membro chiama [rdbuf](#rdbuf)**->** [close](../standard-library/basi
 
 ### <a name="example"></a>Esempio
 
-Vedere [basic_filebuf::close](../standard-library/basic-filebuf-class.md#close) per un esempio di utilizzo di **close**.
+Vedere [basic_filebuf::close](../standard-library/basic-filebuf-class.md#close) per un esempio di utilizzo di `close`.
 
 ## <a name="is_open"></a>  basic_fstream::is_open
 
@@ -215,19 +215,19 @@ void open(
 
 ### <a name="parameters"></a>Parametri
 
-`_Filename` Il nome del file da aprire.
+*Nome file* il nome del file da aprire.
 
-`_Mode` Una delle enumerazioni negli [ios_base:: OpenMode](../standard-library/ios-base-class.md#openmode).
+*Modalità* una delle enumerazioni nello [ios_base:: OpenMode](../standard-library/ios-base-class.md#openmode).
 
-`_Prot` Il file predefinito aprendo protezione, equivalente ai `shflag` parametro nel [fsopen, wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md).
+*_Prot* protezione dati, equivalente a di apertura file predefinita di *shflag* parametri in [fsopen, wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md).
 
 ### <a name="remarks"></a>Note
 
-La funzione membro chiama [rdbuf](#rdbuf) **->** [open](../standard-library/basic-filebuf-class.md#open)(_ *Filename*, `_Mode`). Se tale funzione restituisce un puntatore null, la funzione chiama [setstate](../standard-library/basic-ios-class.md#setstate)( **failbit**).
+La funzione membro chiama [rdbuf](#rdbuf) **->** [open](../standard-library/basic-filebuf-class.md#open)(_ *Filename*, `_Mode`). Se la funzione restituisce un puntatore null, la funzione chiama [setstate](../standard-library/basic-ios-class.md#setstate)( `failbit`).
 
 ### <a name="example"></a>Esempio
 
-Vedere [basic_filebuf::open](../standard-library/basic-filebuf-class.md#open) per un esempio di utilizzo di **open**.
+Visualizzare [basic_filebuf:: Open](../standard-library/basic-filebuf-class.md#open) per un esempio di come usare `open`.
 
 ## <a name="op_eq"></a>  basic_fstream::operator=
 
@@ -239,7 +239,7 @@ basic_fstream& operator=(basic_fstream&& right);
 
 ### <a name="parameters"></a>Parametri
 
-`right` Riferimento lvalue a un `basic_fstream` oggetto.
+*a destra* un riferimento lvalue a un `basic_fstream` oggetto.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -247,7 +247,7 @@ Restituisce `*this`.
 
 ### <a name="remarks"></a>Note
 
-L'operatore del membro sostituisce i contenuti dell'oggetto usando i contenuti di `right`, gestiti come un riferimento rvalue.
+L'operatore membro sostituisce il contenuto dell'oggetto usando il contenuto del *a destra*, considerato come riferimento rvalue.
 
 ## <a name="rdbuf"></a>  basic_fstream::rdbuf
 
@@ -275,11 +275,11 @@ void swap(basic_fstream& right);
 
 ### <a name="parameters"></a>Parametri
 
-`right` Un' `lvalue` fanno riferimento a un `basic_fstream` oggetto.
+*a destra* un' `lvalue` fanno riferimento a un `basic_fstream` oggetto.
 
 ### <a name="remarks"></a>Note
 
-La funzione membro scambia il contenuto di questo oggetto con il contenuto di `right`.
+La funzione membro Scambia il contenuto di questo oggetto e il contenuto del *a destra*.
 
 ## <a name="see-also"></a>Vedere anche
 

@@ -1,5 +1,5 @@
 ---
-title: I componenti COM Desktop ATL | Documenti Microsoft
+title: Componenti Desktop COM ATL | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2fb459c10f7ead6960760c8d02b9a471a7b8f6c2
-ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
+ms.openlocfilehash: e53f2dfd0181b85efbc71defbc528d452d32b4dd
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34255993"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953849"
 ---
 # <a name="atl-com-desktop-components"></a>Per altre informazioni, vedere Applicazioni desktop ATL COM.
-Il riferimento ATL documenta il modello libreria ATL (Active), un set di classi C++ basate su modelli che semplificano la programmazione di oggetti modello COM (Component Object). Per sfruttare appieno i vantaggi di ATL, è consigliabile una conoscenza del funzionamento con COM.  
+I riferimenti per ATL documenta il modello libreria ATL (Active), un set di classi C++ basate su modelli che semplificano la programmazione di oggetti modello COM (Component Object). Per sfruttare appieno i vantaggi di ATL, è consigliabile una conoscenza pratica di COM.  
   
 ## <a name="in-this-section"></a>In questa sezione  
  [Panoramica sulle classi ATL](../atl/atl-class-overview.md)  
@@ -41,24 +41,21 @@ Il riferimento ATL documenta il modello libreria ATL (Active), un set di classi 
  [Macro ATL](../atl/reference/atl-macros.md)  
  Fornisce materiale di riferimento sulle macro organizzate in ordine alfabetico. Sono inclusi argomenti organizzare le macro in categorie.  
   
- [TypeDef ATL](../atl/reference/atl-typedefs.md)  
+ [Typedef ATL](../atl/reference/atl-typedefs.md)  
  Fornisce materiale di riferimento sui typedef organizzati in ordine alfabetico  
   
  [Archetipo Worker](../atl/reference/worker-archetype.md)  
- Vengono forniti collegamenti per il sistema per lavoro ATL.  
-  
- [Argomenti relativi ad ATL obsoleta](http://msdn.microsoft.com/en-us/7af0223d-148e-4a4c-bf9c-3e916a3b67ec)  
- Fornisce materiale di riferimento sulle classi, macro e funzioni che sono deprecati.  
+ Vengono forniti collegamenti all'archetipo Worker ATL.  
   
 ## <a name="related-sections"></a>Sezioni correlate  
  [ATL](../atl/active-template-library-atl-concepts.md)  
- Fornisce argomenti su come programmare utilizzando la libreria ATL (Active Template).  
+ Fornisce argomenti su come programmare usando la libreria ATL (Active Template).  
   
  [Esercitazione ATL](../atl/active-template-library-atl-tutorial.md)  
- Illustra la creazione di un controllo e alcune nozioni ATL nel processo.  
+ Illustra la creazione di un controllo e illustra alcuni concetti di base ATL nel processo.  
   
- [Esempi di ATL](../visual-cpp-samples.md)  
- Codice di esempio in cui viene illustrato come utilizzare ATL per scrivere oggetti COM.  
+ [Esempi relativi ad ATL](../visual-cpp-samples.md)  
+ Codice di esempio che illustra come usare ATL per scrivere oggetti COM.  
   
  [Modelli OLE DB](../data/oledb/ole-db-templates.md)  
  Fornisce materiale di riferimento per i modelli consumer e provider OLE DB, un set di classi modello che implementa molte interfacce OLE DB usate più di frequente.  

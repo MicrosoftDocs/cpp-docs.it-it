@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e48e6fcd7da3b1e1c91b4aecb640c02ae4068bf9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6484d70488da834d0acea79cbe9b02968e0e2a35
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33855318"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957285"
 ---
 # <a name="istrstream-class"></a>Classe istrstream
 
@@ -82,13 +82,13 @@ istrstream(
 
 ### <a name="parameters"></a>Parametri
 
-`count` La lunghezza del buffer ( `ptr`).
+*conteggio* la lunghezza del buffer (*ptr*).
 
-`ptr` Il contenuto con cui viene inizializzato il buffer.
+*PTR* il contenuto con cui viene inizializzato il buffer.
 
 ### <a name="remarks"></a>Note
 
-Tutti i costruttori inizializzano la classe di base chiamando [istream](../standard-library/istream-typedefs.md#istream)( **sb**), dove **sb** è l'oggetto archiviato della classe [strstreambuf](../standard-library/strstreambuf-class.md). I primi due costruttori inizializzano anche **sb** chiamando `strstreambuf`( ( **const**`char` \*) `ptr`, 0 ). I due costruttori rimanenti chiamano invece `strstreambuf`( ( **const**`char` *) `ptr`, `count` ).
+Tutti i costruttori inizializzano la classe base chiamando [istream](../standard-library/istream-typedefs.md#istream)(**sb**), dove `sb` è l'oggetto archiviato della classe [strstreambuf](../standard-library/strstreambuf-class.md). I primi due costruttori inizializzano `sb` chiamando `strstreambuf`(( **const** `char` \*) `ptr`, 0). I due costruttori rimanenti chiamano invece `strstreambuf`( ( **const**`char` *) `ptr`, `count` ).
 
 ## <a name="rdbuf"></a>  istrstream::rdbuf
 
@@ -128,7 +128,7 @@ La funzione membro restituisce [rdbuf](#rdbuf) -> [str](../standard-library/strs
 
 ### <a name="example"></a>Esempio
 
-Vedere [strstream::str](../standard-library/strstreambuf-class.md#str) per un esempio d'uso di **str**.
+Visualizzare [strstream](../standard-library/strstreambuf-class.md#str) per un esempio che usa `str`.
 
 ## <a name="see-also"></a>Vedere anche
 

@@ -16,16 +16,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c2bf0a2dc049e2c3ac236af3591fddce82704b0b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9dcf61895e884eeb16a6461e91675a3f1688d91d
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33849847"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38955949"
 ---
 # <a name="ltarraygt"></a>&lt;array&gt;
 
-Definisce la classe di modello contenitore `array` e diversi modelli di supporto.
+Definisce la classe modello contenitore **matrice** e diversi modelli di supporto.
 
 ## <a name="syntax"></a>Sintassi
 

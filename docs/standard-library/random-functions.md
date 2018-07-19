@@ -8,12 +8,12 @@ f1_keywords:
 ms.assetid: 2ac9ec59-619b-4b85-a425-f729277c1bc8
 helpviewer_keywords:
 - std::generate_canonical
-ms.openlocfilehash: c8ee20759e66c7beb295de96b8311df46555ac6b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5b0cd634dad099669d803d4a2717fc9198151781
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33852816"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954158"
 ---
 # <a name="ltrandomgt-functions"></a>Funzioni &lt;random&gt;
 
@@ -31,15 +31,15 @@ RealType generate_canonical(Generator& Gen);
 
 ### <a name="parameters"></a>Parametri
 
-`RealType` Tipo integrale a virgola mobile. Per informazioni sui tipi possibili, vedere [\<random>](../standard-library/random.md).
+*RealType* tipo integrale a virgola mobile. Per informazioni sui tipi possibili, vedere [\<random>](../standard-library/random.md).
 
-`Bits` Generatore di numeri casuali.
+*BITS* generatore di numeri casuali.
 
-`Gen` Generatore di numeri casuali.
+*Generazione* generatore di numeri casuali.
 
 ### <a name="remarks"></a>Note
 
-La funzione di modello chiama ripetutamente `operator()` di `Gen` e inserisce i valori restituiti in un pacchetto in un `x` a virgola mobile di tipo `RealType` fino al recupero del numero specificato di bit di mantissa in `x`. Il numero specificato è più piccolo rispetto a `Bits` (che deve essere diverso da zero) e al numero completo di bit di mantissa in `RealType`. La prima chiamata fornisce i bit di livello più basso. La funzione restituisce `x`.
+Le chiamate di funzione di modello `operator()` dei *Gen* più volte e inserisce i valori restituiti in un valore a virgola mobile `x` di tipo *RealType* fino a quando non dispone di recupero del numero specificato di bit di mantissa in `x`. Il numero specificato è il meno elevato tra *Bits* (che deve essere diverso da zero) e il numero completo di bit di mantissa *RealType*. La prima chiamata fornisce i bit di livello più basso. La funzione restituisce `x`.
 
 ## <a name="see-also"></a>Vedere anche
 

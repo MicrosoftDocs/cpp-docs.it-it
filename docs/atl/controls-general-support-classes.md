@@ -1,5 +1,5 @@
 ---
-title: 'Controlli ATL: Classi di supporto generale | Documenti Microsoft'
+title: 'Controlli ATL: Classi di supporto generale | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,23 +17,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8c0aa30487edb3a5998a0b9777017015aeb7b675
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6674bbdc29a6945cb26ea6b2caa03cc8c72be230
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32354855"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38958517"
 ---
 # <a name="controls-general-support-classes"></a>Controlli: Classi di supporto generale
 Le classi seguenti forniscono il supporto generale per i controlli ATL:  
   
--   [CComControl](../atl/reference/ccomcontrol-class.md) è costituito da dati e funzioni membri di supporto sono essenziali per i controlli ATL.  
+-   [CComControl](../atl/reference/ccomcontrol-class.md) costituito dai membri di dati e funzioni helper essenziali per i controlli ATL.  
   
 -   [IOleControlImpl](../atl/reference/iolecontrolimpl-class.md) fornisce i metodi necessari per i controlli.  
   
--   [IOleObjectImpl](../atl/reference/ioleobjectimpl-class.md) fornisce i metodi dell'entità da un contenitore per comunicare con un controllo. Gestisce l'attivazione e disattivazione dei controlli sul posto.  
+-   [IOleObjectImpl](../atl/reference/ioleobjectimpl-class.md) fornisce i metodi principali attraverso il quale comunica un contenitore con un controllo. Gestisce l'attivazione e disattivazione dei controlli sul posto.  
   
--   [IQuickActivateImpl](../atl/reference/iquickactivateimpl-class.md) combina l'inizializzazione in una singola chiamata di contenitori per evitare ritardi durante il caricamento dei controlli.  
+-   [IQuickActivateImpl](../atl/reference/iquickactivateimpl-class.md) combina l'inizializzazione in un'unica chiamata per evitare ritardi durante il caricamento dei controlli dei contenitori.  
   
 -   [IPointerInactiveImpl](../atl/reference/ipointerinactiveimpl-class.md) gestisce l'interazione del mouse minima per un controllo inattivo in caso contrario.  
   
@@ -44,5 +44,5 @@ Le classi seguenti forniscono il supporto generale per i controlli ATL:
  [Esercitazione ATL](../atl/active-template-library-atl-tutorial.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Cenni preliminari sulla classe](../atl/atl-class-overview.md)
+ [Panoramica della classe](../atl/atl-class-overview.md)
 

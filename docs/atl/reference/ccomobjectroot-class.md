@@ -1,5 +1,5 @@
 ---
-title: Classe CComObjectRoot | Documenti Microsoft
+title: Classe CComObjectRoot | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e6a7d350f7bd50476c1c327d824089981d3e8321
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d2832b9866145d9af510302c8c6d327972205495
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32359032"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38952968"
 ---
-# <a name="ccomobjectroot-class"></a>CComObjectRoot (classe)
-Il typedef di [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md) trasformare in modello predefinito del server del modello di threading.  
+# <a name="ccomobjectroot-class"></a>Classe CComObjectRoot
+Questo typedef dei [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md) viene creato un modello predefinito del server del modello di threading.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -34,17 +34,16 @@ typedef CComObjectRootEx<CComObjectThreadModel> CComObjectRoot;
 ```  
   
 ## <a name="remarks"></a>Note  
- `CComObjectRoot` è un `typedef` dei [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md) trasformare in modello predefinito del server del modello di threading. In questo modo [CComObjectThreadModel](atl-typedefs.md#ccomobjectthreadmodel) farà riferimento a uno [CComSingleThreadModel](../../atl/reference/ccomsinglethreadmodel-class.md) o [CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md).  
+ `CComObjectRoot` è un `typedef` dei [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md) creato un modello predefinito del server del modello di threading. In questo modo [CComObjectThreadModel](atl-typedefs.md#ccomobjectthreadmodel) farà riferimento a uno [CComSingleThreadModel](../../atl/reference/ccomsinglethreadmodel-class.md) oppure [CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md).  
   
- `CComObjectRootEx` gestione oggetto riferimento conteggio per gli oggetti aggregati e non aggregati. Se l'oggetto non viene aggregato e posiziona il puntatore per l'outer unknown se l'oggetto da aggregare contiene il numero di riferimento di oggetto. Per gli oggetti aggregati, `CComObjectRootEx` metodi possono essere utilizzati per gestire l'errore dell'oggetto interno per costruire e per proteggere l'oggetto esterno dall'eliminazione quando vengono rilasciate le interfacce interne o l'oggetto interno viene eliminato.  
+ `CComObjectRootEx` gestisce gestione di conteggio di riferimento di oggetto per gli oggetti aggregati e non aggregati. Contiene il conteggio dei riferimenti oggetto se l'oggetto non è vengono aggregato e contiene il puntatore a unknown esterno se l'oggetto da aggregare. Per gli oggetti aggregati, `CComObjectRootEx` metodi possono essere utilizzati per gestire l'errore dell'oggetto interno per costruire e per proteggere l'oggetto esterno dall'eliminazione quando vengono rilasciate le interfacce interne o l'oggetto interno viene eliminato.  
   
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** atlcom. h  
   
 ## <a name="see-also"></a>Vedere anche  
- [Membri della classe CComObjectRootEx](http://msdn.microsoft.com/en-us/e3ce9c3d-9c8e-4fe5-b682-8e56740a0164)   
  [Classe CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md)   
  [Classe CComAggObject](../../atl/reference/ccomaggobject-class.md)   
- [CComObject (classe)](../../atl/reference/ccomobject-class.md)   
- [CComPolyObject (classe)](../../atl/reference/ccompolyobject-class.md)   
- [Cenni preliminari sulla classe](../../atl/atl-class-overview.md)
+ [Classe CComObject](../../atl/reference/ccomobject-class.md)   
+ [Classe CComPolyObject](../../atl/reference/ccompolyobject-class.md)   
+ [Panoramica della classe](../../atl/atl-class-overview.md)

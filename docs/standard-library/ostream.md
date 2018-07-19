@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bf7b8bf3015879643728358258cfe4a67536b3ea
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 94c84a8fd6b3aacbedf9d624fc750f98da4531e9
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33863787"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957935"
 ---
 # <a name="ltostreamgt"></a>&lt;ostream&gt;
 
@@ -40,8 +40,8 @@ Definisce la classe modello [basic_ostream](../standard-library/basic-ostream-cl
 
 |Nome del tipo|Descrizione|
 |-|-|
-|[ostream](../standard-library/ostream-typedefs.md#ostream)|Crea un tipo da `basic_ostream` specializzato su `char` e `char_traits` specializzato su `char`.|
-|[wostream](../standard-library/ostream-typedefs.md#wostream)|Crea un tipo da `basic_ostream` specializzato su `wchar_t` e `char_traits` specializzato su `wchar_t`.|
+|[ostream](../standard-library/ostream-typedefs.md#ostream)|Crea un tipo da `basic_ostream` specializzato su **char** e `char_traits` specializzato in **char**.|
+|[wostream](../standard-library/ostream-typedefs.md#wostream)|Crea un tipo da `basic_ostream` specializzato su **wchar_t** e `char_traits` specializzato in **wchar_t**.|
 
 ### <a name="manipulators"></a>Manipolatori
 

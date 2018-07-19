@@ -6,12 +6,12 @@ ms.topic: reference
 f1_keywords:
 - chrono/std::operator modulo
 ms.assetid: c5a19267-4684-40c1-b7a9-cc1012b058f3
-ms.openlocfilehash: 1ac1051ddaa67dc1970119586ecb9e937583c58a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 786713f37bc8470dd5c455eae49eb4faed72b781
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33847400"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957412"
 ---
 # <a name="ltchronogt-operators"></a>Operatori &lt;chrono&gt;
 
@@ -49,21 +49,21 @@ constexpr typename common_type<Duration1, Duration2>::type
 
 ### <a name="parameters"></a>Parametri
 
-`Left` Sinistra `duration` o `time_point` oggetto.
+*A sinistra* sinistra `duration` o `time_point` oggetto.
 
-`Right` Il diritto `duration` o `time_point` oggetto.
+*A destra* destra `duration` o `time_point` oggetto.
 
-`Time` Oggetto `time_point` oggetto.
+*Tempo* oggetto `time_point` oggetto.
 
-`Dur` Oggetto `duration` oggetto.
+*Rim* oggetto `duration` oggetto.
 
 ### <a name="return-value"></a>Valore restituito
 
 La prima funzione restituisce un oggetto `duration`, la cui lunghezza di intervallo corrisponde alla differenza tra gli intervalli dei due argomenti.
 
-La seconda funzione restituisce un oggetto `time_point` che rappresenta un punto nel tempo che viene spostato dalla negazione dell'intervallo di tempo rappresentato da `Dur`, dal punto nel tempo specificato da `Time`.
+La seconda funzione restituisce un `time_point` oggetto che rappresenta un punto nel tempo che viene spostato dalla negazione dell'intervallo di tempo rappresentato da *Rim*, dal punto nel tempo specificato da *ora*.
 
-La terza funzione restituisce un oggetto `duration` che rappresenta l'intervallo di tempo tra `Left` e `Right`.
+La terza funzione restituisce un `duration` oggetto che rappresenta l'intervallo di tempo tra *a sinistra* e *destra*.
 
 ## <a name="op_neq"></a>  operator!=
 
@@ -114,13 +114,13 @@ constexpr duration<typename common_type<Rep1, Rep2>::type, Period2>
 
 ### <a name="parameters"></a>Parametri
 
-`Dur` Oggetto `duration` oggetto.
+*Rim* oggetto `duration` oggetto.
 
-`Mult` Un valore integrale.
+*Mult* valore integrale.
 
 ### <a name="return-value"></a>Valore restituito
 
-Ogni funzione restituisce un oggetto `duration` la cui lunghezza dell'intervallo è costituita da `Mult` moltiplicato per la lunghezza di `Dur`.
+Ogni funzione restituisce un `duration` oggetto la cui lunghezza dell'intervallo è *Mult* moltiplicato per la lunghezza del *Rim*.
 
 A meno che l'oggetto `is_convertible<Rep2, common_type<Rep1, Rep2>>` *resti valido*, la prima funzione non fa parte della risoluzione dell'overload. Per altre informazioni, vedere [<type_traits>](../standard-library/type-traits.md).
 
@@ -147,19 +147,19 @@ constexpr typename common_type<Rep1, Rep2>::type
 
 ### <a name="parameters"></a>Parametri
 
-`Dur` Oggetto `duration` oggetto.
+*Rim* oggetto `duration` oggetto.
 
-`Div` Un valore integrale.
+*Div* valore integrale.
 
-`Left` Sinistra `duration` oggetto.
+*A sinistra* sinistra `duration` oggetto.
 
-`Right` Il diritto `duration` oggetto.
+*A destra* destra `duration` oggetto.
 
 ### <a name="return-value"></a>Valore restituito
 
-Il primo operatore restituisce un oggetto duration il cui intervallo di lunghezza è la lunghezza di `Dur` divisa per il valore `Div`.
+Il primo operatore restituisce un oggetto duration il cui intervallo di lunghezza è la lunghezza di *Rim* diviso per il valore *Div*.
 
-Il secondo operatore restituisce il rapporto tra la lunghezza dell'intervallo di `Left` e `Right`.
+Il secondo operatore restituisce il rapporto tra la lunghezza dell'intervallo di *sinistra* e *destra*.
 
 A meno che l'oggetto `is_convertible<Rep2, common_type<Rep1, Rep2>>` *resti valido* e `Rep2` non sia una creazione di istanza di `duration`, il primo operatore non fa parte della risoluzione dell'overload. Per altre informazioni, vedere [<type_traits>](../standard-library/type-traits.md).
 
@@ -191,19 +191,19 @@ time_point<Clock, constexpr typename common_type<duration<Rep1, Period1>, Durati
 
 ### <a name="parameters"></a>Parametri
 
-`Left` Sinistra `duration` o `time_point` oggetto.
+*A sinistra* sinistra `duration` o `time_point` oggetto.
 
-`Right` Il diritto `duration` o `time_point` oggetto.
+*A destra* destra `duration` o `time_point` oggetto.
 
-`Time` Oggetto `time_point` oggetto.
+*Tempo* oggetto `time_point` oggetto.
 
-`Dur` Oggetto `duration` oggetto.
+*Rim* oggetto `duration` oggetto.
 
 ### <a name="return-value"></a>Valore restituito
 
-La prima funzione restituisce un oggetto `duration` che dispone di un intervallo di tempo equivalente alla somma degli intervalli di `Left` e `Right`.
+La prima funzione restituisce un `duration` oggetto che ha un intervallo di tempo uguale alla somma degli intervalli del *a sinistra* e *destra*.
 
-La seconda e terza funzione restituiscono un oggetto `time_point` che rappresenta un punto nel tempo che viene spostato, dall'intervallo di `Dur`, dal punto nel tempo `Time`.
+La seconda e terza funzione restituiscono un `time_point` oggetto che rappresenta un punto nel tempo che viene spostato, in base all'intervallo *Rim*, dal punto nel tempo *ora*.
 
 ## <a name="op_lt"></a>  operator&lt;
 
@@ -224,15 +224,15 @@ constexpr bool operator<(
 
 ### <a name="parameters"></a>Parametri
 
-`Left` Sinistra `duration` o `time_point` oggetto.
+*A sinistra* sinistra `duration` o `time_point` oggetto.
 
-`Right` Il diritto `duration` o `time_point` oggetto.
+*A destra* destra `duration` o `time_point` oggetto.
 
 ### <a name="return-value"></a>Valore restituito
 
-La prima funzione restituisce `true` se la lunghezza dell'intervallo di `Left`è minore della lunghezza dell'intervallo di `Right`. In caso contrario, la funzione restituisce `false`.
+La prima funzione restituisce **true** se la lunghezza dell'intervallo di *sinistra* è minore della lunghezza di intervallo del *destra*. In caso contrario, la funzione restituisce **false**.
 
-La seconda funzione restituisce `true` se `Left` precede `Right`. In caso contrario, la funzione restituisce `false`.
+La seconda funzione restituisce **true** se *sinistra* precede *destra*. In caso contrario, la funzione restituisce **false**.
 
 ## <a name="op_lt_eq"></a>  operator&lt;=
 
@@ -252,9 +252,9 @@ constexpr bool operator<=(
 
 ### <a name="parameters"></a>Parametri
 
-`Left` Sinistra `duration` o `time_point` oggetto.
+*A sinistra* sinistra `duration` o `time_point` oggetto.
 
-`Right` Il diritto `duration` o `time_point` oggetto.
+*A destra* destra `duration` o `time_point` oggetto.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -278,15 +278,15 @@ constexpr bool operator==(
 
 ### <a name="parameters"></a>Parametri
 
-`Left` Sinistra `duration` o `time_point` oggetto.
+*A sinistra* sinistra `duration` o `time_point` oggetto.
 
-`Right` Il diritto `duration` o `time_point` oggetto.
+*A destra* destra `duration` o `time_point` oggetto.
 
 ### <a name="return-value"></a>Valore restituito
 
-La prima funzione restituisce `true` se `Left` e `Right` rappresentano gli intervalli di tempo che hanno la stessa lunghezza. In caso contrario, la funzione restituisce `false`.
+La prima funzione restituisce **true** se *sinistra* e *destra* rappresentano gli intervalli di tempo che hanno la stessa lunghezza. In caso contrario, la funzione restituisce **false**.
 
-La seconda funzione restituisce `true` se `Left` e `Right` rappresentano lo stesso punto nel tempo. In caso contrario, la funzione restituisce `false`.
+La seconda funzione restituisce **true** se *sinistra* e *destra* rappresentano lo stesso punto nel tempo. In caso contrario, la funzione restituisce **false**.
 
 ## <a name="op_gt"></a>  operator&gt;
 
@@ -306,9 +306,9 @@ constexpr bool operator>(
 
 ### <a name="parameters"></a>Parametri
 
-`Left` Sinistra `duration` o `time_point` oggetto.
+*A sinistra* sinistra `duration` o `time_point` oggetto.
 
-`Right` Il diritto `duration` o `time_point` oggetto.
+*A destra* destra `duration` o `time_point` oggetto.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -332,9 +332,9 @@ constexpr bool operator>=(
 
 ### <a name="parameters"></a>Parametri
 
-`Left` Sinistra `duration` o `time_point` oggetto.
+*A sinistra* sinistra `duration` o `time_point` oggetto.
 
-`Right` Il diritto `duration` o `time_point` oggetto.
+*A destra* destra `duration` o `time_point` oggetto.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -360,19 +360,19 @@ constexpr typename common_type<duration<Rep1, _Period1>, duration<Rep2, Period2>
 
 ### <a name="parameters"></a>Parametri
 
-`Dur` Oggetto `duration` oggetto.
+*Rim* oggetto `duration` oggetto.
 
-`Div` Un valore integrale.
+*Div* valore integrale.
 
-`Left` Sinistra `duration` oggetto.
+*A sinistra* sinistra `duration` oggetto.
 
-`Right` Il diritto `duration` oggetto.
+*A destra* destra `duration` oggetto.
 
 ### <a name="return-value"></a>Valore restituito
 
-La prima funzione restituisce un oggetto `duration` la cui lunghezza dell'intervallo è il modulo `Dur` `Div`.
+La prima funzione restituisce un `duration` oggetto la cui lunghezza dell'intervallo è *Rim* modulo *Div*.
 
-La seconda funzione restituisce un valore che rappresenta il modulo `Left` `Right`.
+La seconda funzione restituisce un valore che rappresenta *sinistra* modulo *destra*.
 
 ## <a name="see-also"></a>Vedere anche
 

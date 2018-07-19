@@ -11,12 +11,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6310281aa86c48ae0a8b0fb313e79994d0b9b538
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1193e7ab65c49f0f79aeae52ca6563310296116d
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33863891"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953648"
 ---
 # <a name="ltistreamgt-functions"></a>Funzioni &lt;istream&gt;
 
@@ -42,9 +42,9 @@ void swap(
 
 ### <a name="parameters"></a>Parametri
 
-`left` Un flusso.
+*a sinistra* un flusso.
 
-`right` Un flusso.
+*a destra* un flusso.
 
 ## <a name="ws"></a>  ws
 
@@ -56,7 +56,7 @@ template class<Elem, Tr> basic_istream<Elem, Tr>& ws(basic_istream<Elem, Tr>& _I
 
 ### <a name="parameters"></a>Parametri
 
-`_Istr` Un flusso.
+*_Istr* un flusso.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -66,7 +66,7 @@ Flusso.
 
 Il manipolatore estrae e rimuove gli elementi `ch` per cui [use_facet](../standard-library/basic-filebuf-class.md#open)< **ctype**\< **Elem**> >( [getloc](../standard-library/ios-base-class.md#getloc)). **is**( **ctype**\< **Elem**>:: **space**, **ch**) è true.
 
-La funzione chiama [setstate](../standard-library/basic-ios-class.md#setstate)( **eofbit**) se raggiunge la fine del file durante l'estrazione degli elementi. Restituisce `_Istr`.
+La funzione chiama [setstate](../standard-library/basic-ios-class.md#setstate)( **eofbit**) se raggiunge la fine del file durante l'estrazione degli elementi. Viene restituito *_Istr*.
 
 ### <a name="example"></a>Esempio
 

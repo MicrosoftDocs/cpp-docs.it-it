@@ -19,12 +19,12 @@ helpviewer_keywords:
 - std::operator!= (complex)
 - std::operator&gt;&gt; (complex)
 - std::operator&lt;&lt; (complex), std::operator== (complex)
-ms.openlocfilehash: e0ab9f6cf54393b5c1d58cb00ec9238015b5c5d0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b65178b171b8717096eb19206877b033a52d1e44
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33848138"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957698"
 ---
 # <a name="ltcomplexgt-operators"></a>Operatori &lt;complex&gt;
 
@@ -58,9 +58,9 @@ bool operator!=(
 
 ### <a name="parameters"></a>Parametri
 
-`left` Un numero complesso o un oggetto di tipo di parametro di cui verificare la disuguaglianza.
+*a sinistra* un numero complesso o un oggetto del relativo tipo di parametro per cui verificare la disuguaglianza.
 
-`right` Un numero complesso o un oggetto di tipo di parametro di cui verificare la disuguaglianza.
+*a destra* un numero complesso o un oggetto del relativo tipo di parametro per cui verificare la disuguaglianza.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -196,9 +196,9 @@ complex<Type> operator*(
 
 ### <a name="parameters"></a>Parametri
 
-`left` Il primo di due numeri complessi o un numero che è del tipo di parametro per un numero complesso che deve essere moltiplicata per il * operazione.
+*a sinistra* il primo di due numeri complessi o numero del tipo di parametro per un numero complesso che deve essere moltiplicato con il * operazione.
 
-`right` Il secondo dei due numeri complessi o un numero che è del tipo di parametro per un numero complesso che deve essere moltiplicata per il * operazione.
+*a destra* secondo di due numeri complessi o numero del tipo di parametro per un numero complesso che deve essere moltiplicato con il * operazione.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -295,9 +295,9 @@ complex<Type> operator+(const complex<Type>& left);
 
 ### <a name="parameters"></a>Parametri
 
-`left` Il primo di due numeri complessi o un numero che è del tipo di parametro per un numero complesso che deve essere aggiunta per l'operazione +.
+*a sinistra* il primo di due numeri complessi o numero del tipo di parametro per un numero complesso che deve essere aggiunto con l'operazione +.
 
-`right` Il secondo dei due numeri complessi o un numero che è del tipo di parametro per un numero complesso che deve essere aggiunto per l'operazione +.
+*a destra* secondo dei due numeri complessi o numero del tipo di parametro per un numero complesso che deve essere aggiunto con l'operazione +.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -305,7 +305,7 @@ Numero complesso risultante dall'aggiunta dei due numeri, il cui valore e tipo v
 
 ### <a name="remarks"></a>Note
 
-L'operazione viene sottoposta a overload in modo da poter eseguire semplici operazioni aritmetiche senza convertire i dati in un formato particolare. Restituisce l'operatore unario `left`.
+L'operazione viene sottoposta a overload in modo da poter eseguire semplici operazioni aritmetiche senza convertire i dati in un formato particolare. Restituisce l'operatore unario *sinistro*.
 
 ### <a name="example"></a>Esempio
 
@@ -433,13 +433,13 @@ complex<Type> operator-(const complex<Type>& left);
 
 ### <a name="parameters"></a>Parametri
 
-`left` Primo di due numeri complessi o un numero che è del tipo di parametro per un numero complesso che deve essere sottratto dal - operazione.
+*a sinistra* il primo di due numeri complessi o numero del tipo di parametro per un numero complesso che deve essere sottratto con l'operazione -.
 
-`right` Il secondo dei due numeri complessi o un numero che è del tipo di parametro per un numero complesso che deve essere sottratto dal - operazione.
+*a destra* secondo di due numeri complessi o numero del tipo di parametro per un numero complesso che deve essere sottratto con l'operazione -.
 
 ### <a name="return-value"></a>Valore restituito
 
-Numero complesso risultante dalla sottrazione di `right` da `left`, due numeri i cui valori sono specificati dagli input dei parametri.
+Numero complesso risultante dalla sottrazione di *a destra* dalla *sinistro*, i due numeri i cui valori vengono specificati dagli input dei parametri.
 
 ### <a name="remarks"></a>Note
 
@@ -570,9 +570,9 @@ complex<Type> operator*(
 
 ### <a name="parameters"></a>Parametri
 
-`left` Un numero complesso o un numero che è del tipo di parametro per un numero complesso che rappresenta il numeratore deve essere diviso per il denominatore con la / operazione.
+*a sinistra* un numero complesso o numero del tipo di parametro per un numero complesso che rappresenta il numeratore da dividere per il denominatore con il / operazione.
 
-`right` Un numero complesso o un numero che è del tipo di parametro per un numero complesso che rappresenta il denominatore da utilizzare per dividere il numeratore con la / operazione.
+*a destra* un numero complesso o numero del tipo di parametro per un numero complesso che rappresenta il denominatore per essere usato per dividere il numeratore con il / operazione.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -678,13 +678,13 @@ basic_ostream<Elem, Traits>& operator<<(
 
 ### <a name="parameters"></a>Parametri
 
-`Ostr` Il flusso di output in cui viene inserito il numero complesso.
+*Ostr* nel flusso di output in cui viene inserito il numero complesso.
 
-`right` Numero complesso da immettere nel flusso di output
+*a destra* numero complesso da immettere nel flusso di output
 
 ### <a name="return-value"></a>Valore restituito
 
-Scrive il valore del numero complesso specificato per `Ostr` in formato cartesiano: (*parte reale,* parte immaginaria).
+Scrive il valore del numero complesso specificato per il *Ostr* in formato cartesiano: ( *parte reale, parte immaginaria* ).
 
 ### <a name="remarks"></a>Note
 
@@ -749,9 +749,9 @@ bool operator==(
 
 ### <a name="parameters"></a>Parametri
 
-`left` Un numero complesso o un oggetto di tipo di parametro di cui verificare la disuguaglianza.
+*a sinistra* un numero complesso o un oggetto del relativo tipo di parametro per cui verificare la disuguaglianza.
 
-`right` Un numero complesso o un oggetto di tipo di parametro di cui verificare la disuguaglianza.
+*a destra* un numero complesso o un oggetto del relativo tipo di parametro per cui verificare la disuguaglianza.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -877,13 +877,13 @@ basic_istream<Elem, Traits>& operator>>(
 
 ### <a name="parameters"></a>Parametri
 
-`Istr` Il flusso di input da cui si sta estraendo numero complesso.
+*Istr* il flusso di input da cui si sta estraendo il numero complesso.
 
-`right` Numero complesso da cui vengono estratti dal flusso di input.
+*a destra* numero complesso da cui vengono estratti dal flusso di input.
 
 ### <a name="return-value"></a>Valore restituito
 
-Legge il valore del numero complesso specificato da `Istr` e restituisce i dati in `right`.
+Legge il valore del numero complesso specificato da *Istr* e lo restituisce in *a destra*.
 
 ### <a name="remarks"></a>Note
 

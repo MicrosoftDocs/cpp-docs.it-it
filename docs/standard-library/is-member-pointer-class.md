@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bfb4b2be959dc48bbf7c5c5f786f7b803dba1a8e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1d3549d222ccfcf317b2621c2e2f8869b6634249
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33843132"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38959219"
 ---
 # <a name="ismemberpointer-class"></a>Classe is_member_pointer
 
@@ -37,11 +37,11 @@ struct is_member_pointer;
 
 ### <a name="parameters"></a>Parametri
 
-`Ty` Il tipo di query.
+*Ty* il tipo di query.
 
 ## <a name="remarks"></a>Note
 
-Un'istanza del predicato di tipo contiene true se il tipo `Ty` è un puntatore a una funzione membro o a un oggetto membro oppure un form `cv-qualified` di uno di questi; in caso contrario, contiene false.
+Un'istanza del tipo predicato contiene true se il tipo *Ty* è un puntatore a funzione membro o un puntatore a un oggetto membro o un `cv-qualified` forma di uno di essi, in caso contrario, contiene false.
 
 ## <a name="example"></a>Esempio
 

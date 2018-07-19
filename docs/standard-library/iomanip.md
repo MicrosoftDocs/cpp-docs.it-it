@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9a410dae35771d89b9d9ae72c8221501f051d10e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f58622230541b0eedf4e7c73d12e81c36ea70fc9
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33846571"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953475"
 ---
 # <a name="ltiomanipgt"></a>&lt;iomanip&gt;
 
-Includere il `iostreams` intestazione standard \<iomanip > per definire diversi manipolatori che accettano un singolo argomento.
+Includere il `iostreams` intestazione standard \<iomanip > per definire diversi manipolatori che accettano un solo argomento.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -37,7 +37,7 @@ Includere il `iostreams` intestazione standard \<iomanip > per definire diversi 
 
 ## <a name="remarks"></a>Note
 
-Ciascuno di questi manipolatori restituisce un tipo non specificato, a cui viene assegnato un nome compreso tra **T1** e **T10**, che esegue l'overload sia di `basic_istream`\<**Elem**, **Tr**>`::`[operator>>](../standard-library/istream-operators.md#op_gt_gt) sia di `basic_ostream`\<**Elem**, **Tr**>`::`[operator<<](../standard-library/ostream-operators.md#op_lt_lt).
+Ognuno di questi manipolatori restituisce un tipo non specificato, denominato `T1` attraverso `T10`, che esegue l'overload di entrambi `basic_istream` \< **Elem**, **Tr** > `::` [operatore >>](../standard-library/istream-operators.md#op_gt_gt) e `basic_ostream` \< **Elem**, **Tr** > `::` [operatore <<](../standard-library/ostream-operators.md#op_lt_lt).
 
 ### <a name="manipulators"></a>Manipolatori
 

@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8478490914a6f9049cd54ec78c8de8a1e519f36f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c3d3902d900e0dad5ec3e335e9c3424d58ee2674
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33845674"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38960417"
 ---
 # <a name="cachefreelist-class"></a>Classe cache_freelist
 
@@ -42,14 +42,14 @@ class cache_freelist
 
 |Parametro|Descrizione|
 |---------------|-----------------|
-|`Sz`|Numero di elementi della matrice da allocare.|
-|`Max`|La classe max che rappresenta la dimensione massima dell'elenco di disponibilità. Può essere [max_none](../standard-library/max-fixed-size-class.md), [max_unbounded](../standard-library/max-none-class.md), [max_fixed_size](../standard-library/max-unbounded-class.md) o [max_variable_size](../standard-library/max-variable-size-class.md).|
+|*sz*|Numero di elementi della matrice da allocare.|
+|*Max*|La classe max che rappresenta la dimensione massima dell'elenco di disponibilità. Può essere [max_none](../standard-library/max-fixed-size-class.md), [max_unbounded](../standard-library/max-none-class.md), [max_fixed_size](../standard-library/max-unbounded-class.md) o [max_variable_size](../standard-library/max-variable-size-class.md).|
 
 ## <a name="remarks"></a>Note
 
-La classe di modello cache_freelist gestisce un elenco di disponibilità dei blocchi di memoria di dimensioni `Sz`. Quando l'elenco di disponibilità è pieno usa `operator delete` per deallocare i blocchi di memoria. Quando l'elenco di disponibilità è vuoto usa `operator new` per allocare nuovi blocchi di memoria. La dimensione massima dell'elenco di disponibilità è determinata dalla classe max passata nel parametro `Max`.
+La classe di modello cache_freelist gestisce un elenco di disponibilità di blocchi di memoria delle dimensioni *Sz*. Quando l'elenco di disponibilità è pieno Usa **operatore delete** per deallocare memoria blocca. Quando l'elenco di disponibilità è vuoto Usa **operatore new** allocare nuovi blocchi di memoria. La dimensione massima dell'elenco di disponibilità è determinata dalla classe max passata nel *Max* parametro.
 
-Ogni blocco di memoria contiene `Sz` byte di memoria utilizzabile e i dati richiesti da `operator new` e `operator delete`.
+Ogni blocco di memoria contiene *Sz* byte di memoria utilizzabile e i dati che **operatore new** e **operatore delete** richiedono.
 
 ### <a name="constructors"></a>Costruttori
 
@@ -82,7 +82,7 @@ void *allocate(std::size_t count);
 
 |Parametro|Descrizione|
 |---------------|-----------------|
-|`count`|Numero di elementi della matrice da allocare.|
+|*count*|Numero di elementi della matrice da allocare.|
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -112,8 +112,8 @@ void deallocate(void* ptr, std::size_t count);
 
 |Parametro|Descrizione|
 |---------------|-----------------|
-|`ptr`|Puntatore al primo oggetto da deallocare dall'archivio.|
-|`count`|Numero di oggetti da deallocare dall'archivio.|
+|*ptr*|Puntatore al primo oggetto da deallocare dall'archivio.|
+|*count*|Numero di oggetti da deallocare dall'archivio.|
 
 ### <a name="remarks"></a>Note
 

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - std::make_error_code
 - std::make_error_condition
 - std::system_category
-ms.openlocfilehash: 6135a3dc51b372c85545f01f52c70cbc6f236e64
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 838a63fc43ef71561c0911cfa4c85c76cf04bc08
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33855133"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38959665"
 ---
 # <a name="ltsystemerrorgt-functions"></a>Funzioni &lt;system_error&gt;
 
@@ -52,7 +52,7 @@ error_code make_error_code(generic_errno _Errno);
 
 |Parametro|Descrizione|
 |---------------|-----------------|
-|`_Errno`|Valore di enumerazione da archiviare nell'oggetto codice di errore.|
+|*Errno*|Valore di enumerazione da archiviare nell'oggetto codice di errore.|
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -72,7 +72,7 @@ error_condition make_error_condition(generic_errno _Errno);
 
 |Parametro|Descrizione|
 |---------------|-----------------|
-|`_Errno`|Valore di enumerazione da archiviare nell'oggetto condizione di errore.|
+|*Errno*|Valore di enumerazione da archiviare nell'oggetto condizione di errore.|
 
 ### <a name="return-value"></a>Valore restituito
 

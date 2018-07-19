@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a71b6a45dbdb882cc666c72296938f970bba52ac
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 808340df89bb548fee57604f25409c117933cc4e
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33844946"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953260"
 ---
 # <a name="cachechunklist-class"></a>Classe cache_chunklist
 
@@ -42,13 +42,13 @@ class cache_chunklist
 
 |Parametro|Descrizione|
 |---------------|-----------------|
-|`Sz`|Numero di elementi della matrice da allocare.|
+|*sz*|Numero di elementi della matrice da allocare.|
 
 ## <a name="remarks"></a>Note
 
-Questa classe modello usa `operator new` per allocare porzioni di memoria non elaborata, con sottoallocazione dei blocchi per allocare memoria per un blocco di memoria quando necessario; archivia i blocchi di memoria deallocati in un elenco di disponibilità separato per ogni porzione e usa `operator delete` per deallocare una porzione quando nessuno dei relativi blocchi di memoria è in uso.
+Questa classe modello viene utilizzato **operatore new** per allocare porzioni di memoria non elaborata, con sottoallocazione dei blocchi per allocare memoria per un blocco di memoria quando necessario; archivia blocchi di memoria deallocati in un elenco di disponibilità separato per ogni porzione e Usa **operatore delete** per deallocare una porzione quando nessuno dei relativi blocchi di memoria è in uso.
 
-Ogni blocco di memoria contiene `Sz` byte di memoria utilizzabile e un puntatore alla porzione a cui appartiene. Ogni porzione contiene `Nelts` blocchi di memoria, tre puntatori, un int e i dati richiesti da `operator new` e `operator delete`.
+Ogni blocco di memoria contiene *Sz* byte di memoria utilizzabile e un puntatore alla porzione a cui appartiene. Ogni porzione contiene `Nelts` blocchi di memoria, tre puntatori, un int e i dati che **operatore new** e **operatore delete** richiedono.
 
 ### <a name="constructors"></a>Costruttori
 
@@ -81,7 +81,7 @@ void *allocate(std::size_t count);
 
 |Parametro|Descrizione|
 |---------------|-----------------|
-|`count`|Numero di elementi della matrice da allocare.|
+|*count*|Numero di elementi della matrice da allocare.|
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -111,8 +111,8 @@ void deallocate(void* ptr, std::size_t count);
 
 |Parametro|Descrizione|
 |---------------|-----------------|
-|`ptr`|Puntatore al primo oggetto da deallocare dall'archivio.|
-|`count`|Numero di oggetti da deallocare dall'archivio.|
+|*ptr*|Puntatore al primo oggetto da deallocare dall'archivio.|
+|*count*|Numero di oggetti da deallocare dall'archivio.|
 
 ### <a name="remarks"></a>Note
 

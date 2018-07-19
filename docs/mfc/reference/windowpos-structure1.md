@@ -1,5 +1,5 @@
 ---
-title: WINDOWPOS Structure1 | Documenti Microsoft
+title: WINDOWPOS Structure1 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d4abd236998f37f0d719f41827d05a17fde56fde
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: db51e8f9924d69406989b3a9ac12b45f0e55e870
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33379294"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37885962"
 ---
 # <a name="windowpos-structure1"></a>WINDOWPOS Structure1
 Il `WINDOWPOS` struttura contiene informazioni sulle dimensioni e posizione di una finestra.  
@@ -53,40 +53,40 @@ typedef struct tagWINDOWPOS { /* wp */
  *y*  
  Specifica la posizione del bordo destro della finestra.  
   
- `cx`  
+ *CX*  
  Specifica la larghezza della finestra, in pixel.  
   
- `cy`  
+ *CY*  
  Specifica l'altezza della finestra, in pixel.  
   
- `flags`  
+ *flags*  
  Specifica le opzioni di posizionamento di finestra. Questo membro può essere uno dei valori seguenti:  
   
-- **SWP_DRAWFRAME** Disegna un frame (definito nella descrizione della classe per la finestra) intorno alla finestra. La finestra riceve un `WM_NCCALCSIZE` messaggio.  
+- SWP_DRAWFRAME Disegna un frame (definito nella descrizione della classe per la finestra) attorno alla finestra. La finestra riceve un messaggio WM_NCCALCSIZE.  
   
-- **SWP_FRAMECHANGED** invia un `WM_NCCALCSIZE` messaggio alla finestra, anche se le dimensioni della finestra non viene modificata. Se questo flag non è specificato, `WM_NCCALCSIZE` viene inviato solo quando le dimensioni della finestra viene modificata.  
+- SWP_FRAMECHANGED invia un WM_NCCALCSIZE messaggio alla finestra, anche se le dimensioni della finestra non viene modificata. Se questo flag viene omesso, viene inviato WM_NCCALCSIZE solo quando le dimensioni della finestra viene modificata.  
   
-- **SWP_HIDEWINDOW** nasconde la finestra.  
+- SWP_HIDEWINDOW nasconde la finestra.  
   
-- `SWP_NOACTIVATE` La finestra non è attivata.  
+- SWP_NOACTIVATE non attiva la finestra.  
   
-- **SWP_NOCOPYBITS** Elimina l'intero contenuto dell'area client. Se questo flag non è specificato, il contenuto valido dell'area client venga salvato e copiato indietro nell'area client, dopo che la finestra viene ridimensionata o riposizionata.  
+- SWP_NOCOPYBITS ignora l'intero contenuto dell'area client. Se questo flag non è specificato, il contenuto valido dell'area client venga salvato e copiato nuovamente dell'area client dopo che la finestra viene ridimensionata o riposizionata.  
   
-- `SWP_NOMOVE` Mantiene la posizione corrente (ignora le **x** e **y** membri).  
+- Posizione corrente mantiene SWP_NOMOVE (ignora le `x` e `y` membri).  
   
-- **SWP_NOOWNERZORDER** non modifica la posizione della finestra proprietaria nell'ordine Z.  
+- SWP_NOOWNERZORDER non modifica la posizione della finestra del proprietario nell'ordine Z.  
   
-- `SWP_NOSIZE` Consente di mantenere dimensioni correnti (ignora le **cx** e **cy** membri).  
+- Dimensioni correnti SWP_NOSIZE mantiene (ignora le `cx` e `cy` membri).  
   
-- **SWP_NOREDRAW** non vengono aggiornate le modifiche.  
+- SWP_NOREDRAW non vengono aggiornate le modifiche.  
   
-- **SWP_NOREPOSITION** come **SWP_NOOWNERZORDER**.  
+- SWP_NOREPOSITION stesso come SWP_NOOWNERZORDER.  
   
-- **SWP_NOSENDCHANGING** impedisce la finestra di ricezione il `WM_WINDOWPOSCHANGING` messaggio.  
+- SWP_NOSENDCHANGING impedisce alla finestra di ricezione del messaggio WM_WINDOWPOSCHANGING.  
   
-- `SWP_NOZORDER` Mantiene l'ordinamento corrente (ignora le **hwndInsertAfter** membro).  
+- Consente di mantenere SWP_NOZORDER ordinamento corrente (ignora il `hwndInsertAfter` membro).  
   
-- **SWP_SHOWWINDOW** Visualizza la finestra.  
+- SWP_SHOWWINDOW Visualizza la finestra.  
   
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** winuser.h  

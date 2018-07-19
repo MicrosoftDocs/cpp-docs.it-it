@@ -9,12 +9,12 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 24b9bb9e-e983-4060-bce5-2c7c8161ee61
-ms.openlocfilehash: aa5c2a662fb5e827978a7c00aa3035dcc6cc97f2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 135922bb88b02c00849a577fb8d8457b6fb21989
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33847299"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38958237"
 ---
 # <a name="lthashmapgt-operators"></a>Operatori &lt;hash_map&gt;
 
@@ -36,9 +36,9 @@ bool operator!=(const hash_map <Key, Type, Traits, Allocator>& left, const hash_
 
 ### <a name="parameters"></a>Parametri
 
-`left` Un oggetto di tipo `hash_map`.
+*a sinistra* un oggetto di tipo `hash_map`.
 
-`right` Un oggetto di tipo `hash_map`.
+*a destra* un oggetto di tipo `hash_map`.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -103,9 +103,9 @@ bool operator==(const hash_map <Key, Type, Traits, Allocator>& left, const hash_
 
 ### <a name="parameters"></a>Parametri
 
-`left` Un oggetto di tipo `hash_map`.
+*a sinistra* un oggetto di tipo `hash_map`.
 
-`right` Un oggetto di tipo `hash_map`.
+*a destra* un oggetto di tipo `hash_map`.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -168,9 +168,9 @@ bool operator!=(const hash_multimap <Key, Type, Traits, Allocator>& left, const 
 
 ### <a name="parameters"></a>Parametri
 
-`left` Un oggetto di tipo `hash_multimap`.
+*a sinistra* un oggetto di tipo `hash_multimap`.
 
-`right` Un oggetto di tipo `hash_multimap`.
+*a destra* un oggetto di tipo `hash_multimap`.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -233,9 +233,9 @@ bool operator==(const hash_multimap <Key, Type, Traits, Allocator>& left, const 
 
 ### <a name="parameters"></a>Parametri
 
-`left` Un oggetto di tipo `hash_multimap`.
+*a sinistra* un oggetto di tipo `hash_multimap`.
 
-`right` Un oggetto di tipo `hash_multimap`.
+*a destra* un oggetto di tipo `hash_multimap`.
 
 ### <a name="return-value"></a>Valore restituito
 

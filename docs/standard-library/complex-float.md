@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 278a9e33fb305b73c2919c455f55b816de644e4b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: af6d3ce3beca7d9bb3b14ee9c9373a8505623376
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33843392"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954005"
 ---
 # <a name="complexltfloatgt"></a>complex&lt;float&gt;
 
@@ -51,11 +51,11 @@ constexpr complex(
 
 ### <a name="parameters"></a>Parametri
 
-`_RealVal` Il valore di tipo **float** per la parte reale del numero complesso che viene costruito.
+*_RealVal* il valore di tipo **float** per la parte reale del numero complesso da costruire.
 
-`_ImagVal` Il valore di tipo **float** per la parte immaginaria del numero complesso che viene costruito.
+*_ImagVal* il valore di tipo **float** per la parte immaginaria del numero complesso da costruire.
 
-`complexNum` Numero complesso di tipo **doppie** o di tipo `long double` cui parti reale e immaginarie vengono usate per inizializzare un numero complesso di tipo **float** in fase di costruzione.
+*complexNum* il numero complesso di tipo **doppie** o di tipo **long double** cui parti reale e immaginarie vengono usate per inizializzare un numero complesso di tipo **float**in fase di costruzione.
 
 ## <a name="return-value"></a>Valore restituito
 
@@ -63,7 +63,7 @@ Numero complesso di tipo **float**.
 
 ## <a name="remarks"></a>Note
 
-La specializzazione esplicita della classe modello complex in una classe complex di tipo **float** si differenzia dalla classe modello solo per i costruttori definiti. La conversione da **float** a **double** può essere implicita, ma la conversione meno sicura da **float** a `long double` deve essere **esplicita**. L'uso di una conversione **esplicita** esclude l'inizializzazione con conversione del tipo tramite la sintassi di assegnazione.
+La specializzazione esplicita della classe modello complex in una classe complex di tipo **float** si differenzia dalla classe modello solo per i costruttori definiti. La conversione da **float** al **double** può essere implicita, ma la conversione meno sicura da **float** al **long double** è deve essere **esplicita**. L'uso di una conversione **esplicita** esclude l'inizializzazione con conversione del tipo tramite la sintassi di assegnazione.
 
 Per altre informazioni sulla classe modello `complex`, vedere [Classe complex](../standard-library/complex-class.md). Per un elenco dei membri della classe modello `complex`, vedere
 

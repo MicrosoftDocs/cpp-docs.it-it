@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f9c63aa54675bd0b1d5a52a1c0a9d80a73f53290
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 65ac9dc44da5126673ee1f0699f5a5dd9dcb87e1
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33842820"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38960781"
 ---
 # <a name="iscopyassignable-class"></a>Classe is_copy_assignable
 
@@ -36,11 +36,11 @@ struct is_copy_assignable;
 
 ### <a name="parameters"></a>Parametri
 
-`Ty` Il tipo di query.
+*Ty* il tipo di query.
 
 ## <a name="remarks"></a>Note
 
-Un'istanza del predicato di tipo contiene true se il tipo `Ty` è una classe che ha un operatore di assegnazione di copia; in caso contrario, contiene false. Equivalente a is_assignable\<Ty&, const Ty&>.
+Un'istanza del tipo predicato contiene true se il tipo *Ty* è una classe che ha un copia operatore di assegnazione, in caso contrario, contiene false. Equivalente a is_assignable\<Ty&, const Ty&>.
 
 ## <a name="requirements"></a>Requisiti
 

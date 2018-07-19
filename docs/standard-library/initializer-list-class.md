@@ -22,12 +22,12 @@ helpviewer_keywords:
 - std::initializer_list::size
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a3941464c80d254b6675e1982dac952c3f29a0f9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 11014748dcbfa105d111e9e2a8d83fc57d0cb405
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33847039"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954054"
 ---
 # <a name="initializerlist-class"></a>Classe initializer_list
 
@@ -44,7 +44,7 @@ class initializer_list
 
 |Parametro|Descrizione|
 |---------------|-----------------|
-|`Type`|Tipo di dati degli elementi da archiviare in `initializer_list`.|
+|*Type*|Tipo di dati degli elementi da archiviare in `initializer_list`.|
 
 
 ## <a name="remarks"></a>Note
@@ -127,8 +127,8 @@ initializer_list(const InputIterator First, const InputIterator Last);
 
 |Parametro|Descrizione|
 |---------------|-----------------|
-|`First`|Posizione del primo elemento nell'intervallo di elementi da copiare.|
-|`Last`|Posizione del primo elemento oltre l'intervallo di elementi da copiare.|
+|*Primo*|Posizione del primo elemento nell'intervallo di elementi da copiare.|
+|*ultimo*|Posizione del primo elemento oltre l'intervallo di elementi da copiare.|
 
 ### <a name="remarks"></a>Note
 

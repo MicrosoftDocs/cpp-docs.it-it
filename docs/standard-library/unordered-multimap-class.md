@@ -147,12 +147,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2c69d344276ef584ef20801395c62c8ed55567cb
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: bd7a7489c07572a9e3865698dc02988768983669
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33863660"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38960577"
 ---
 # <a name="unorderedmultimap-class"></a>Classe unordered_multimap
 
@@ -173,11 +173,11 @@ class unordered_multimap;
 
 |Parametro|Descrizione|
 |-|-|
-|`Key`|Tipo di chiave.|
-|`Ty`|Tipo mappato.|
-|`Hash`|Tipo di oggetto della funzione hash.|
-|`Pred`|Tipo di oggetto della funzione di confronto di uguaglianza.|
-|`Alloc`|Classe Allocator.|
+|*Key*|Tipo di chiave.|
+|*Ty*|Tipo mappato.|
+|*hash*|Tipo di oggetto della funzione hash.|
+|*Pred*|Tipo di oggetto della funzione di confronto di uguaglianza.|
+|*Alloc*|Classe Allocator.|
 
 ## <a name="members"></a>Membri
 
@@ -308,11 +308,11 @@ const_local_iterator begin(size_type nbucket) const;
 
 |Parametro|Descrizione|
 |-|-|
-|`nbucket`|Numero di bucket.|
+|*nbucket*|Numero di bucket.|
 
 ### <a name="remarks"></a>Note
 
-Le prime due funzioni membro restituiscono un iteratore in avanti che punta al primo elemento della sequenza (o appena oltre la fine di una sequenza vuota). Le ultime due funzioni membro restituiscono un iteratore in avanti che punta al primo elemento del bucket `nbucket` (o appena oltre la fine di un bucket vuoto).
+Le prime due funzioni membro restituiscono un iteratore in avanti che punta al primo elemento della sequenza (o appena oltre la fine di una sequenza vuota). Le ultime due funzioni membro restituiscono un iteratore in avanti che punta al primo elemento del bucket *nbucket* (o appena oltre la fine di un bucket vuoto).
 
 ### <a name="example"></a>Esempio
 
@@ -369,11 +369,12 @@ size_type bucket(const Key& keyval) const;
 
 ### <a name="parameters"></a>Parametri
 
-`keyval` Il valore della chiave per eseguire il mapping.
+*Keyval*  
+ Valore della chiave da mappare.
 
 ### <a name="remarks"></a>Note
 
-La funzione membro restituisce il numero di bucket che corrisponde attualmente al valore della chiave `keyval`.
+La funzione membro restituisce il numero di bucket corrisponde attualmente al valore della chiave *keyval*.
 
 ### <a name="example"></a>Esempio
 
@@ -513,11 +514,12 @@ size_type bucket_size(size_type nbucket) const;
 
 ### <a name="parameters"></a>Parametri
 
-`nbucket` Numero di bucket.
+*nbucket*  
+ Numero di bucket.
 
 ### <a name="remarks"></a>Note
 
-La funzione membro restituisce la dimensione del numero di bucket `nbucket`.
+La funzione membro restituisce le dimensioni del numero di bucket *nbucket*.
 
 ### <a name="example"></a>Esempio
 
@@ -561,7 +563,7 @@ bucket_size(7) == 1
 
 ## <a name="cbegin"></a>  unordered_multimap::cbegin
 
-Restituisce un iteratore `const` che punta al primo elemento dell'intervallo.
+Restituisce un **const** iteratore che punta al primo elemento nell'intervallo.
 
 ```cpp
 const_iterator cbegin() const;
@@ -569,13 +571,13 @@ const_iterator cbegin() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-Iteratore di accesso in avanti `const` che punta al primo elemento dell'intervallo o alla posizione oltre la fine di un intervallo vuoto (per un intervallo vuoto, `cbegin() == cend()`).
+Oggetto **const** iteratore di accesso in avanti che punta al primo elemento dell'intervallo o alla posizione appena oltre la fine di un intervallo vuoto (per un intervallo vuoto, `cbegin() == cend()`).
 
 ### <a name="remarks"></a>Note
 
 Con il valore restituito di `cbegin`, gli elementi dell'intervallo non possono essere modificati.
 
-È possibile usare questa funzione membro anziché la funzione membro `begin()` per garantire che il valore restituito sia `const_iterator`. In genere, viene usata insieme alla parola chiave di deduzione di tipo [auto](../cpp/auto-cpp.md), come illustrato nell'esempio seguente. Nell'esempio, si consideri `Container` come un contenitore (non `const`) modificabile di qualsiasi tipo che supporta `begin()` e `cbegin()`.
+È possibile usare questa funzione membro anziché la funzione membro `begin()` per garantire che il valore restituito sia `const_iterator`. In genere, viene usata insieme alla parola chiave di deduzione di tipo [auto](../cpp/auto-cpp.md), come illustrato nell'esempio seguente. Nell'esempio, prendere in considerazione `Container` sia un modificabili (non - **const**) contenitore di qualsiasi tipo che supporta `begin()` e `cbegin()`.
 
 ```cpp
 auto i1 = Container.begin();
@@ -587,7 +589,7 @@ auto i2 = Container.cbegin();
 
 ## <a name="cend"></a>  unordered_multimap::cend
 
-Restituisce un iteratore `const` che punta alla posizione oltre l'ultimo elemento di un intervallo.
+Restituisce un **const** iteratore che punta alla posizione oltre l'ultimo elemento in un intervallo.
 
 ```cpp
 const_iterator cend() const;
@@ -595,13 +597,13 @@ const_iterator cend() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-Iteratore di accesso in avanti `const` che punta oltre la fine dell'intervallo.
+Oggetto **const** iteratore di accesso in avanti che punta appena oltre la fine dell'intervallo.
 
 ### <a name="remarks"></a>Note
 
 `cend` viene utilizzato per verificare se un iteratore ha superato la fine del relativo intervallo.
 
-È possibile usare questa funzione membro anziché la funzione membro `end()` per garantire che il valore restituito sia `const_iterator`. In genere, viene usata insieme alla parola chiave di deduzione di tipo [auto](../cpp/auto-cpp.md), come illustrato nell'esempio seguente. Nell'esempio, si consideri `Container` come un contenitore (non `const`) modificabile di qualsiasi tipo che supporta `end()` e `cend()`.
+È possibile usare questa funzione membro anziché la funzione membro `end()` per garantire che il valore restituito sia `const_iterator`. In genere, viene usata insieme alla parola chiave di deduzione di tipo [auto](../cpp/auto-cpp.md), come illustrato nell'esempio seguente. Nell'esempio, prendere in considerazione `Container` sia un modificabili (non - **const**) contenitore di qualsiasi tipo che supporta `end()` e `cend()`.
 
 ```cpp
 auto i1 = Container.end();
@@ -878,7 +880,8 @@ size_type count(const Key& keyval) const;
 
 ### <a name="parameters"></a>Parametri
 
-`keyval` Valore della chiave da cercare.
+*Keyval*  
+ Valore della chiave da cercare.
 
 ### <a name="remarks"></a>Note
 
@@ -996,7 +999,7 @@ iterator emplace(Args&&... args);
 
 |Parametro|Descrizione|
 |-|-|
-|`args`|Argomenti inoltrati per costruire un elemento da inserire nell'oggetto unordered_multimap.|
+|*args*|Argomenti inoltrati per costruire un elemento da inserire nell'oggetto unordered_multimap.|
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -1027,8 +1030,8 @@ iterator emplace_hint(
 
 |Parametro|Descrizione|
 |-|-|
-|`args`|Argomenti inoltrati per costruire un elemento da inserire nell'oggetto unordered.|
-|`where`|Suggerimento sulla posizione per avviare la ricerca del punto di inserimento corretto.|
+|*args*|Argomenti inoltrati per costruire un elemento da inserire nell'oggetto unordered.|
+|*where*|Suggerimento sulla posizione per avviare la ricerca del punto di inserimento corretto.|
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -1131,11 +1134,11 @@ const_local_iterator end(size_type nbucket) const;
 
 |Parametro|Descrizione|
 |-|-|
-|`nbucket`|Numero di bucket.|
+|*nbucket*|Numero di bucket.|
 
 ### <a name="remarks"></a>Note
 
-Le prime due funzioni membro restituiscono un iteratore in avanti che punta poco oltre la fine della sequenza. Le ultime due funzioni membro restituiscono un iteratore in avanti che punta poco oltre la fine del bucket `nbucket`.
+Le prime due funzioni membro restituiscono un iteratore in avanti che punta poco oltre la fine della sequenza. Le ultime due funzioni membro restituiscono un iteratore in avanti che punta poco oltre la fine del bucket *nbucket*.
 
 ### <a name="example"></a>Esempio
 
@@ -1198,11 +1201,12 @@ std::pair<const_iterator, const_iterator>
 
 ### <a name="parameters"></a>Parametri
 
-`keyval` Valore della chiave da cercare.
+*Keyval*  
+ Valore della chiave da cercare.
 
 ### <a name="remarks"></a>Note
 
-La funzione membro restituisce una coppia di iteratori `X` , in modo tale che `[X.first, X.second)` delimiti solo gli elementi della sequenza controllata associati a un ordinamento equivalente a `keyval`. Se tali elementi non esistono, entrambi gli iteratori sono `end()`.
+La funzione membro restituisce una coppia di iteratori `X` tale che `[X.first, X.second)` delimiti solo gli elementi della sequenza controllata che hanno un ordinamento equivalente con *keyval*. Se tali elementi non esistono, entrambi gli iteratori sono `end()`.
 
 ### <a name="example"></a>Esempio
 
@@ -1273,13 +1277,17 @@ size_type erase(
 
 ### <a name="parameters"></a>Parametri
 
-`Where` Posizione dell'elemento da rimuovere.
+*Where*  
+ Posizione dell'elemento che deve essere rimosso.
 
-`First` Posizione del primo elemento da rimuovere.
+*Primo*  
+ Posizione del primo elemento che deve essere rimosso.
 
-`Last` Posizione immediatamente successiva all'ultimo elemento da rimuovere.
+*ultimo*  
+ Posizione immediatamente successiva all'ultimo elemento che deve essere rimosso.
 
-`Key` Il valore della chiave degli elementi da rimuovere.
+*Key*  
+ Valore della chiave dell'elemento che deve essere rimosso.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -1301,7 +1309,8 @@ const_iterator find(const Key& keyval) const;
 
 ### <a name="parameters"></a>Parametri
 
-`keyval` Valore della chiave da cercare.
+*Keyval*  
+ Valore della chiave da cercare.
 
 ### <a name="remarks"></a>Note
 
@@ -1515,13 +1524,13 @@ IList);
 
 |Parametro|Descrizione|
 |-|-|
-|`Val`|Valore di un elemento da inserire in unordered_multimap.|
-|`Where`|Posizione in cui iniziare a cercare il punto di inserimento corretto.|
-|`ValTy`|Parametro di modello che specifica il tipo di argomento che può essere usato dall'oggetto unordered_multimap per costruire un elemento di [value_type](../standard-library/map-class.md#value_type) e che esegue l'inoltro perfetto di `Val` come argomento.|
-|`First`|Posizione del primo elemento da copiare.|
-|`Last`|Posizione immediatamente dopo l'ultimo elemento da copiare.|
-|`InputIterator`|Argomento della funzione modello che soddisfa i requisiti di un [iteratore di input](../standard-library/input-iterator-tag-struct.md) che punta agli elementi di un tipo utilizzabili per costruire oggetti [value_type](../standard-library/map-class.md#value_type).|
-|`IList`|Oggetto [initializer_list](../standard-library/initializer-list.md) da cui copiare gli elementi.|
+|*Val*|Valore di un elemento da inserire in unordered_multimap.|
+|*Where*|Posizione in cui iniziare a cercare il punto di inserimento corretto.|
+|*ValTy*|Parametro di modello che specifica il tipo di argomento utilizzabili unordered_multimap per costruire un elemento di [value_type](../standard-library/map-class.md#value_type)e perfetto *Val* come argomento.|
+|*Primo*|Posizione del primo elemento da copiare.|
+|*ultimo*|Posizione immediatamente dopo l'ultimo elemento da copiare.|
+|*InputIterator*|Argomento della funzione modello che soddisfa i requisiti di un [iteratore di input](../standard-library/input-iterator-tag-struct.md) che punta agli elementi di un tipo utilizzabili per costruire oggetti [value_type](../standard-library/map-class.md#value_type).|
+|*IList*|Oggetto [initializer_list](../standard-library/initializer-list.md) da cui copiare gli elementi.|
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -1537,7 +1546,7 @@ Se viene generata un'eccezione durante l'inserimento di un solo elemento, ma l'e
 
 L'oggetto [value_type](../standard-library/map-class.md#value_type) di un contenitore è un typedef appartenente al contenitore e, per map, `map<K, V>::value_type` è `pair<const K, V>`. Il valore di un elemento è una coppia ordinata in cui il primo componente equivale al valore della chiave e il secondo componente equivale al valore dati dell'elemento.
 
-La funzione membro di intervallo (5) inserisce la sequenza di valori di elemento in un unordered_multimap che corrisponde a ogni elemento interessato da un iteratore nell'intervallo `[First, Last)`. Non viene quindi inserito `Last`. La funzione membro di contenitore `end()` fa riferimento alla posizione immediatamente dopo l'ultimo elemento nel contenitore. L'istruzione `m.insert(v.begin(), v.end());`, ad esempio, cerca di inserire tutti gli elementi di `v` in `m`.
+La funzione membro di intervallo (5) inserisce la sequenza di valori degli elementi in un unordered_multimap che corrisponde a ogni elemento interessato da un iteratore nell'intervallo `[First, Last)`; pertanto *ultimo* non inserito. La funzione membro di contenitore `end()` fa riferimento alla posizione immediatamente dopo l'ultimo elemento nel contenitore. L'istruzione `m.insert(v.begin(), v.end());`, ad esempio, cerca di inserire tutti gli elementi di `v` in `m`.
 
 La funzione membro di elenco di inizializzatori (6) usa un oggetto [initializer_list](../standard-library/initializer-list.md) per copiare gli elementi nell'oggetto unordered_multimap.
 
@@ -2002,11 +2011,12 @@ void max_load_factor(float factor);
 
 ### <a name="parameters"></a>Parametri
 
-`factor` Nuovo fattore di carico massimo.
+*factor*  
+ Nuovo fattore di carico massimo.
 
 ### <a name="remarks"></a>Note
 
-La prima funzione membro restituisce il fattore di carico massimo archiviato. La seconda funzione membro sostituisce il fattore di carico massimo archiviato con `factor`.
+La prima funzione membro restituisce il fattore di carico massimo archiviato. La seconda funzione membro sostituisce il fattore di carico massimo archiviato con *factor*.
 
 ### <a name="example"></a>Esempio
 
@@ -2134,11 +2144,11 @@ unordered_multimap& operator=(unordered_multimap&& right);
 
 |Parametro|Descrizione|
 |-|-|
-|`right`|Classe unordered_multimap che viene copiata in unordered_multimap.|
+|*right*|Classe unordered_multimap che viene copiata in unordered_multimap.|
 
 ### <a name="remarks"></a>Note
 
-Dopo l'eliminazione di tutti gli elementi esistenti in una classe unordered_multimap, `operator=` copia o sposta il contenuto di `right` nella classe unordered_multimap.
+Dopo la cancellazione di tutti gli elementi esistenti in un unordered_multimap `operator=` copia o Sposta il contenuto del *destro* in unordered_multimap.
 
 ### <a name="example"></a>Esempio
 
@@ -2281,11 +2291,12 @@ void rehash(size_type nbuckets);
 
 ### <a name="parameters"></a>Parametri
 
-`nbuckets` Numero di bucket richiesto.
+*nbuckets*  
+ Numero di bucket richiesto.
 
 ### <a name="remarks"></a>Note
 
-La funzione membro modifica il numero di bucket in modo da essere almeno pari a `nbuckets` e ricompila la tabella hash in base alle esigenze.
+La funzione membro modifica il numero di bucket in modo da essere almeno *nbuckets* e ricompila la tabella hash in base alle esigenze.
 
 ### <a name="example"></a>Esempio
 
@@ -2464,11 +2475,11 @@ void swap(unordered_multimap& right);
 
 ### <a name="parameters"></a>Parametri
 
-`right` Contenitore da scambiare con.
+*a destra* il contenitore da scambiare.
 
 ### <a name="remarks"></a>Note
 
-La funzione membro scambia le sequenze controllate tra `*this` e `right`. Se [unordered_multimap::get_allocator](#get_allocator)`() == right.get_allocator()`, esegue l'operazione in un tempo costante, genera un'eccezione solo in seguito alla copia dell'oggetto traits archiviato di tipo `Tr` e non invalida alcun riferimento, puntatore o iteratore che definisce gli elementi nelle due sequenze controllate. In caso contrario, esegue un numero di assegnazioni di elementi e chiamate al costruttore proporzionale al numero di elementi nelle due sequenze controllate.
+La funzione membro Scambia le sequenze controllate tra `*this` e *destro*. Se [unordered_multimap::get_allocator](#get_allocator)`() == right.get_allocator()`, esegue l'operazione in un tempo costante, genera un'eccezione solo in seguito alla copia dell'oggetto traits archiviato di tipo `Tr` e non invalida alcun riferimento, puntatore o iteratore che definisce gli elementi nelle due sequenze controllate. In caso contrario, esegue un numero di assegnazioni di elementi e chiamate al costruttore proporzionale al numero di elementi nelle due sequenze controllate.
 
 ### <a name="example"></a>Esempio
 
@@ -2581,27 +2592,27 @@ unordered_multimap(
 
 |Parametro|Descrizione|
 |-|-|
-|`InputIterator`|Tipo di iteratore.|
-|`Al`|Oggetto allocatore da archiviare.|
-|`Comp`|Oggetto della funzione di confronto da archiviare.|
-|`Hash`|Oggetto della funzione hash da archiviare.|
-|`Bucket_count`|Numero minimo di bucket.|
-|`Right`|Contenitore da copiare.|
-|`IList`|initializer_list da cui copiare gli elementi.|
+|*InputIterator*|Tipo di iteratore.|
+|*Al*|Oggetto allocatore da archiviare.|
+|*Comp*|Oggetto della funzione di confronto da archiviare.|
+|*hash*|Oggetto della funzione hash da archiviare.|
+|*valore di bucket_count*|Numero minimo di bucket.|
+|*A destra*|Contenitore da copiare.|
+|*IList*|initializer_list da cui copiare gli elementi.|
 
 ### <a name="remarks"></a>Note
 
-Il primo costruttore specifica una copia della sequenza controllata da `Right`. Il secondo costruttore specifica una sequenza controllata vuota. Il terzo costruttore specifica una copia della sequenza spostando `Right`. Il quarto, il quinto, il sesto, il settimo e l'ottavo costruttore usano una initializer_list per i membri. Il nono costruttore inserisce la sequenza di valori degli elementi `[First, Last)`.
+Il primo costruttore specifica una copia della sequenza controllata da *destra*. Il secondo costruttore specifica una sequenza controllata vuota. Il terzo costruttore Specifica una copia della sequenza spostando *destra*. Il quarto, il quinto, il sesto, il settimo e l'ottavo costruttore usano una initializer_list per i membri. Il nono costruttore inserisce la sequenza di valori degli elementi `[First, Last)`.
 
-Tutti i costruttori inizializzano inoltre diversi valori archiviati. Per il costruttore di copia, i valori vengono ottenuti da `Right`. In caso contrario:
+Tutti i costruttori inizializzano inoltre diversi valori archiviati. Per il costruttore di copia, i valori vengono ottenuti dal *destra*. In caso contrario:
 
-Il numero minimo di bucket è costituito dall'argomento `Bucket_count`, se disponibile; in caso contrario è costituito da un valore predefinito descritto qui come il valore `N0` definito a livello di implementazione.
+il numero minimo di bucket è l'argomento *Bucket_count*, se presente; in caso contrario è un valore predefinito descritto qui come il valore definito dall'implementazione `N0`.
 
-L'oggetto della funzione hash è costituito dall'argomento `Hash`, se disponibile; in caso contrario, è `Hash()`.
+L'oggetto della funzione hash è l'argomento *Hash*, se presente; in caso contrario, è `Hash()`.
 
-L'oggetto della funzione di confronto è costituito dall'argomento `Comp`, se disponibile; in caso contrario, è `Pred()`.
+L'oggetto funzione di confronto è l'argomento *Comp*, se presente; in caso contrario, è `Pred()`.
 
-L'oggetto allocatore è costituito dall'argomento `Al`, se disponibile; in caso contrario, è `Alloc()`.
+L'oggetto allocatore è l'argomento *Al*, se presente; in caso contrario, è `Alloc()`.
 
 ### <a name="example"></a>Esempio
 

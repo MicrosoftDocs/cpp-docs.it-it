@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0734c4044dba77e07ec4b18fc6381618b7592d1b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 802e831fc884762c169b2752ae06fad7e46db2d8
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33844588"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38960365"
 ---
 # <a name="container-classdifferencetype"></a>Container Class::difference_type
 
@@ -37,7 +37,7 @@ typedef T1 difference_type;
 
 ## <a name="remarks"></a>Note
 
-Viene descritta come un sinonimo del tipo non specificato **T1** (in genere **Alloc::difference_type**).
+Viene descritta come un sinonimo del tipo non specificato `T1` (in genere `Alloc::difference_type`).
 
 ## <a name="see-also"></a>Vedere anche
 

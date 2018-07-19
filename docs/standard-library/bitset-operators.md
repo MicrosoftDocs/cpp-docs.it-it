@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::operator&lt;&lt; (bitset)
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3056546e5a543c0058f789e293e0a63a3d53283a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7d01a9ad5ef0b5cc3198231ae2b361e04856449f
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33850398"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38955020"
 ---
 # <a name="ltbitsetgt-operators"></a>Operatori &lt;bitset&gt;
 
@@ -48,13 +48,13 @@ operator&(
 
 ### <a name="parameters"></a>Parametri
 
-`left` Il primo di due BitSet cui rispettivi elementi devono essere combinati con i bit per bit `AND`.
+*a sinistra* il primo dei due BitSet i cui rispettivi elementi devono essere combinati con i bit per bit `AND`.
 
-`right` Secondo di due oggetti valarray equivalenti cui rispettivi elementi devono essere combinati con i bit per bit `AND`.
+*a destra* secondo dei due oggetti valarray i cui rispettivi elementi devono essere combinati con i bit per bit `AND`.
 
 ### <a name="return-value"></a>Valore restituito
 
-Un bitset i cui elementi sono il risultato dell'esecuzione dell'operazione `AND` sugli elementi corrispondenti di `left` e `right`.
+Un bitset di cui elementi sono il risultato dell'esecuzione di `AND` operazione su elementi corrispondenti delle *a sinistra* e *a destra*.
 
 ### <a name="example"></a>Esempio
 
@@ -98,15 +98,15 @@ basic_ostream<CharType, Traits>& operator<<(
 
 ### <a name="parameters"></a>Parametri
 
-`right` Un oggetto di tipo **bitset\<N >** che è possibile inserire nel flusso di output sotto forma di stringa.
+*a destra* un oggetto di tipo **bitset\<N >** che deve essere inserito nel flusso di output come stringa.
 
 ### <a name="return-value"></a>Valore restituito
 
-Una rappresentazione di testo della sequenza di bit in **ostr**.
+Una rappresentazione di testo della sequenza di bit in `ostr`.
 
 ### <a name="remarks"></a>Note
 
-La funzione di modello è in rapporto di overload con **operator<<**, consentendo di scrivere un bitset senza prima convertirlo in una stringa. La funzione di modello consente di gestire in modo efficace quanto segue:
+Gli overload della funzione modello `operator<<`, consentendo un bitset devono essere scritti senza prima convertirlo in una stringa. La funzione di modello consente di gestire in modo efficace quanto segue:
 
 **ostr** << _ *Right*. [to_string](bitset-class.md) < **CharType**, **Traits**, **allocator**\< **CharType**> > ( )
 
@@ -157,19 +157,19 @@ _Istr,
 
 ### <a name="parameters"></a>Parametri
 
-`_Istr` Stringa che viene inserita il flusso di input da inserire nel bitset.
+*_Istr* la stringa immessa nel flusso di input da inserire nel bitset.
 
-`right` Bitset che riceve i bit dal flusso di input.
+*a destra* il bitset che riceve i bit dal flusso di input.
 
 ### <a name="return-value"></a>Valore restituito
 
-La funzione di modello restituisce la stringa `_Istr`.
+La funzione modello restituisce la stringa *_Istr*.
 
 ### <a name="remarks"></a>Note
 
-La funzione di modello è in rapporto di overload con **operator>>** per memorizzare nel bitset _ *Right* il valore bitset( `str`), dove `str` è un oggetto di tipo [basic_string](basic-string-class.md) < **CharType**, **Traits**, **allocator**\< **CharType**> > **&** estratto da `_Istr`.
+Gli overload della funzione modello `operator>>` per memorizzare nel bitset _ *a destra* il valore bitset (`str`), dove `str` è un oggetto di tipo [basic_string](basic-string-class.md)  <  **CharType**, **Traits**, **allocatore** \< **CharType**>> **&** estratto *_Istr*.
 
-La funzione di modello estrae gli elementi da `_Istr` e li inserisce nel bitset fino a quando:
+La funzione di modello estrae gli elementi da *_Istr* e li inserisce nel bitset fino a quando:
 
 - Tutti gli elementi di bit sono stati estratti dal flusso di input e memorizzati nel bitset.
 
@@ -240,13 +240,13 @@ operator^(
 
 ### <a name="parameters"></a>Parametri
 
-`left` Il primo di due BitSet cui rispettivi elementi devono essere combinati con i bit per bit `EXCLUSIVE-OR`.
+*a sinistra* il primo dei due BitSet i cui rispettivi elementi devono essere combinati con i bit per bit `EXCLUSIVE-OR`.
 
-`right` Secondo di due oggetti valarray equivalenti cui rispettivi elementi devono essere combinati con i bit per bit `EXCLUSIVE-OR`.
+*a destra* secondo dei due oggetti valarray i cui rispettivi elementi devono essere combinati con i bit per bit `EXCLUSIVE-OR`.
 
 ### <a name="return-value"></a>Valore restituito
 
-Un bitset i cui elementi sono il risultato dell'esecuzione dell'operazione `EXCLUSIVE-OR` sugli elementi corrispondenti di `left` e `right`.
+Un bitset di cui elementi sono il risultato dell'esecuzione di `EXCLUSIVE-OR` operazione su elementi corrispondenti delle *a sinistra* e *a destra*.
 
 ### <a name="example"></a>Esempio
 
@@ -290,13 +290,13 @@ operator|(
 
 ### <a name="parameters"></a>Parametri
 
-`left` Il primo di due BitSet cui rispettivi elementi devono essere combinati con i bit per bit `OR`.
+*a sinistra* il primo dei due BitSet i cui rispettivi elementi devono essere combinati con i bit per bit `OR`.
 
-`right` Secondo di due oggetti valarray equivalenti cui rispettivi elementi devono essere combinati con i bit per bit `OR`.
+*a destra* secondo dei due oggetti valarray i cui rispettivi elementi devono essere combinati con i bit per bit `OR`.
 
 ### <a name="return-value"></a>Valore restituito
 
-Un bitset i cui elementi sono il risultato dell'esecuzione dell'operazione `OR` sugli elementi corrispondenti di `left` e `right`.
+Un bitset di cui elementi sono il risultato dell'esecuzione di `OR` operazione su elementi corrispondenti delle *a sinistra* e *a destra*.
 
 ### <a name="example"></a>Esempio
 

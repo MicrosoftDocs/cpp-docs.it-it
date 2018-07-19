@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 540f5085d1f2ab3b641e023654d05f1e9e66bae2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9fe7672a925105bff3b63032a709353388143c0c
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33857337"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953010"
 ---
 # <a name="syncnone-class"></a>Classe sync_none
 
@@ -72,7 +72,7 @@ void *allocate(std::size_t count);
 
 |Parametro|Descrizione|
 |---------------|-----------------|
-|`count`|Numero di elementi della matrice da allocare.|
+|*count*|Numero di elementi della matrice da allocare.|
 
 ### <a name="remarks"></a>Note
 
@@ -90,8 +90,8 @@ void deallocate(void* ptr, std::size_t count);
 
 |Parametro|Descrizione|
 |---------------|-----------------|
-|`ptr`|Puntatore al primo oggetto da deallocare dall'archivio.|
-|`count`|Numero di oggetti da deallocare dall'archivio.|
+|*ptr*|Puntatore al primo oggetto da deallocare dall'archivio.|
+|*count*|Numero di oggetti da deallocare dall'archivio.|
 
 ### <a name="remarks"></a>Note
 
@@ -109,12 +109,12 @@ bool equals(const sync<Cache>& Other) const;
 
 |Parametro|Descrizione|
 |---------------|-----------------|
-|`Cache`|Oggetto cache del filtro di sincronizzazione.|
-|`Other`|Oggetto cache da confrontare per verificarne l'uguaglianza.|
+|*Cache*|Oggetto cache del filtro di sincronizzazione.|
+|*Altro*|Oggetto cache da confrontare per verificarne l'uguaglianza.|
 
 ### <a name="return-value"></a>Valore restituito
 
-La funzione membro restituisce sempre `true`.
+La funzione membro restituisce sempre **true**.
 
 ### <a name="remarks"></a>Note
 

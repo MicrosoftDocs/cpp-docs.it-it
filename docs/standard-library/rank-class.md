@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: be250d2908522ac85902563d64bf57ca7cde88a0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 615da57a092a9cbdc1933ed57adbbaed6afdcf65
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33853154"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38960603"
 ---
 # <a name="rank-class"></a>Classe rank
 
@@ -37,11 +37,11 @@ struct rank;
 
 ### <a name="parameters"></a>Parametri
 
-`Ty` Il tipo di query.
+*Ty* il tipo di query.
 
 ## <a name="remarks"></a>Note
 
-La query di tipo contiene il valore del numero di dimensioni di tipo matrice `Ty`, oppure 0 se `Ty` non è un tipo di matrice.
+La query di tipo contiene il valore del numero di dimensioni del tipo di matrice *Ty*, oppure 0 se *Ty* non è un tipo di matrice.
 
 ## <a name="example"></a>Esempio
 

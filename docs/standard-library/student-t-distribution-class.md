@@ -31,12 +31,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9e48a657d15fbb6526ebc9d717825f409f10928f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 309b01fac7e6461a48992ee1c2c091439353aee7
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33858900"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961012"
 ---
 # <a name="studenttdistribution-class"></a>Classe student_t_distribution
 
@@ -74,11 +74,11 @@ public:
 
 ### <a name="parameters"></a>Parametri
 
-*RealType* valore predefinito è il tipo di risultato a virgola mobile, `double`. Per informazioni sui tipi possibili, vedere [\<random>](../standard-library/random.md).
+*RealType* il tipo di risultato a virgola mobile, per impostazione predefinita **doppie**. Per informazioni sui tipi possibili, vedere [\<random>](../standard-library/random.md).
 
 ## <a name="remarks"></a>Note
 
-La classe modello descrive una distribuzione che genera valori di un tipo integrale specificato dall'utente o di tipo `double` se non è specificato alcun valore, distribuiti in base alla distribuzione Student-*t*. La tabella seguente include collegamenti ad articoli relativi ai singoli membri.
+La classe modello descrive una distribuzione che produce valori di un integrale specificato dall'utente, tipo o tipo **doppie** se ne viene specificato alcuno, distribuiti secondo Student *t*-distribuzione. La tabella seguente include collegamenti ad articoli relativi ai singoli membri.
 
 ||||
 |-|-|-|
@@ -183,9 +183,10 @@ explicit student_t_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parametri
 
-*n* il `n` parametro di distribuzione.
+*n*  
+ Parametro di distribuzione `n`.
 
-*Parm* il pacchetto di parametro utilizzato per costruire la distribuzione.
+*Parm* il pacchetto di parametri utilizzato per costruire la distribuzione.
 
 ### <a name="remarks"></a>Note
 
@@ -212,9 +213,11 @@ struct param_type {
 
 ### <a name="parameters"></a>Parametri
 
-*n* il `n` parametro di distribuzione.
+*n*  
+Parametro di distribuzione `n`.
 
-*a destra* il `param_type` oggetto da confrontare con questa istanza.
+*right*  
+Oggetto `param_type` da confrontare con questo oggetto.
 
 ### <a name="remarks"></a>Note
 

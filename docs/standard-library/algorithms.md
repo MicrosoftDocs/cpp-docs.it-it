@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c67a509c17558c7b388aa288612d73ea26062ec0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5338ddeb802d13d100e5e3026152793f866c90f6
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33846662"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961025"
 ---
 # <a name="algorithms"></a>Algoritmi
 
@@ -43,7 +43,7 @@ Le descrizioni delle funzioni di modello dell'algoritmo utilizzano diverse espre
 
 - Espressioni come *X* - *Y*, dove *X* e *Y* possono essere iteratori diversi da quelli ad accesso casuale, vengono considerate nel senso matematico. La funzione non restituisce necessariamente operator**-** se deve determinare il valore. Lo stesso vale anche per le espressioni, ad esempio *X* + *N* e *X* - *N*, dove *N* è un tipo integer.
 
-Diversi algoritmi usano un predicato che esegue un confronto a coppie, ad esempio con `operator==`, per restituire un risultato `bool`. La funzione predicativa `operator==`, o una funzione sostituiva, non deve modificare gli operandi. Deve restituire lo stesso risultato `bool` ogni volta che viene valutata e deve restituire lo stesso risultato se l'operando viene sostituito con una copia di uno degli operandi.
+Diversi algoritmi usano un predicato che esegue un confronto a coppie, ad esempio con `operator==`, per restituire un **bool** risultato. La funzione predicativa `operator==`, o una funzione sostituiva, non deve modificare gli operandi. Deve restituire lo stesso **bool** risultato ogni volta che viene valutata e deve restituire lo stesso risultato se l'operando viene sostituito con una copia degli operandi.
 
 Diversi algoritmi usano un predicato che deve imporre un ordinamento di tipo "strict weak" alle coppie di elementi di una sequenza. Per il predicato `pr`(*X*, *Y*):
 
@@ -53,11 +53,11 @@ Diversi algoritmi usano un predicato che deve imporre un ordinamento di tipo "st
 
 - Ordinamento significa che `pr`(*X*, *Y*) && `pr`(*Y*, Z) implica `pr`(*X*, Z).
 
-Alcuni di questi algoritmi usano in modo implicito il predicato *X* \< *Y*. Altri predicati che in genere soddisfano il requisito di ordinamento di tipo "strict weak" sono *X* > *Y*, **less**(*X*, *Y*) e `greater`(*X*, *Y*). Si noti, tuttavia, che i predicati come *X* \<= *Y* e *X* >= *Y* non soddisfano questo requisito.
+Alcuni di questi algoritmi usano in modo implicito il predicato *X* \< *Y*. Altri predicati che in genere soddisfano il "strict Weak" requisito di ordinamento vengono *X* > *Y*, `less`(*X*, *Y*), e `greater`(*X*, *Y*). Si noti, tuttavia, che i predicati come *X* \<= *Y* e *X* >= *Y* non soddisfano questo requisito.
 
-Una sequenza di elementi designati dagli iteratori nell'intervallo [`First`, `Last`) è una sequenza ordinata in base a operator**<** se per ogni *N* nell'intervallo [0, `Last` - `First`) e per ogni *M* nell'intervallo (N, `Last` - `First`) il predicato !(\*(`First` + *M*) < \*(*First* + *N*)) è true. Si noti che gli elementi vengono ordinati in ordine crescente. La funzione predicato **operator<** o una funzione sostitutiva non deve modificare gli operandi. Deve restituire lo stesso risultato `bool` ogni volta che viene valutata e deve restituire lo stesso risultato se l'operando viene sostituito con una copia di uno degli operandi. Inoltre, deve imporre un ordinamento di tipo "strict weak" agli operandi che confronta.
+Una sequenza di elementi designati dagli iteratori nell'intervallo [`First`, `Last`) è una sequenza ordinata in base a operator**<** se per ogni *N* nell'intervallo [0, `Last` - `First`) e per ogni *M* nell'intervallo (N, `Last` - `First`) il predicato !(\*(`First` + *M*) < \*(*First* + *N*)) è true. Si noti che gli elementi vengono ordinati in ordine crescente. La funzione predicativa `operator<`, o una funzione sostituiva, non deve modificare gli operandi. Deve restituire lo stesso risultato `bool` ogni volta che viene valutata e deve restituire lo stesso risultato se l'operando viene sostituito con una copia di uno degli operandi. Inoltre, deve imporre un ordinamento di tipo "strict weak" agli operandi che confronta.
 
-Una sequenza di elementi designati dagli iteratori nell'intervallo [`First`, `Last`) è un heap ordinato in base a **operator<** se per ogni *N* nell'intervallo [1, `Last` - `First`) il predicato !(\*`First` < \*(`First` + *N*)) è true. Il primo elemento è il più grande. La struttura interna è altrimenti nota solo per le funzioni di modello [make_heap](../standard-library/algorithm-functions.md#make_heap), [pop_heap](../standard-library/algorithm-functions.md#pop_heap), e [push_heap](../standard-library/algorithm-functions.md#push_heap). Come con una sequenza ordinata, la funzione predicato **operator<**, o una funzione sostitutiva, non deve modificare gli operandi e deve imporre un ordinamento di tipo "strict weak" agli operandi che confronta. Deve restituire lo stesso risultato `bool` ogni volta che viene valutata e deve restituire lo stesso risultato se l'operando viene sostituito con una copia di uno degli operandi.
+Una sequenza di elementi designati dagli iteratori nell'intervallo [`First`, `Last`) è un heap ordinato in base `operator<` se per ogni *N* compreso nell'intervallo [1, `Last`  -  `First`) di predicato. (\*`First` < \*(`First` + *N*)) è true. Il primo elemento è il più grande. La struttura interna è altrimenti nota solo alle funzioni di modello [make_heap](../standard-library/algorithm-functions.md#make_heap), [pop_heap](../standard-library/algorithm-functions.md#pop_heap), e [push_heap](../standard-library/algorithm-functions.md#push_heap). Come con una sequenza ordinata, la funzione di predicato `operator<`, o qualsiasi sostitutiva, non deve modificare gli operandi e deve imporre un rigido ordinamento debole agli operandi Confronta. Deve restituire lo stesso **bool** risultato ogni volta che viene valutata e deve restituire lo stesso risultato se l'operando viene sostituito con una copia degli operandi.
 
 Gli algoritmi della libreria standard C++ si trovano nei file di intestazione [\<algorithm>](../standard-library/algorithm.md) e [\<numeric>](../standard-library/numeric.md).
 

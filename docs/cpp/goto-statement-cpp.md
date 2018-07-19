@@ -1,5 +1,5 @@
 ---
-title: Istruzione goto (C++) | Documenti Microsoft
+title: Istruzione goto (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 52e3bbd026a00306fb2d8e69df94fd9c0c913039
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7676f38e52734fa2f0ce8ecbc9b268be1939f6dc
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953395"
 ---
 # <a name="goto-statement-c"></a>Istruzione goto (C++)
-L'istruzione `goto` trasferisce incondizionatamente il controllo all'istruzione contrassegnata dall'identificatore specificato.  
+Il **goto** istruzione trasferisce il controllo all'istruzione contrassegnata dall'identificatore specificato.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -34,16 +35,16 @@ goto identifier;
 ## <a name="remarks"></a>Note  
  L'istruzione con etichetta designata da `identifier` deve essere nella funzione corrente. Tutti i nomi di `identifier` sono membri di uno spazio dei nomi interno e quindi non interferiscono con altri identificatori.  
   
- Un'etichetta di istruzione è significativa solo per un'istruzione `goto` In caso contrario, le etichette di istruzione vengono ignorate. Le etichette non possono essere ridichiarate.  
+ Un'etichetta di istruzione è significativa solo a un **goto** istruzione; in caso contrario, vengono ignorate le etichette di istruzione. Le etichette non possono essere ridichiarate.  
   
- Per uno stile di programmazione ottimale è consigliabile usare le istruzioni `break`, `continue` e `return` invece dell'istruzione `goto`, quando possibile. Tuttavia, poiché l'istruzione `break` consente di uscire solo da un livello di un ciclo, potrebbe essere necessario usare un'istruzione `goto` per uscire da un ciclo eccessivamente annidato.  
+ È buona norma programmare lo stile da utilizzare il **break**, **continuare**, e **restituire** istruzioni anziché il **goto** istruzione ogni volta che possibili. Tuttavia, poiché il **interruzione** istruzione consente di uscire da un solo livello di un ciclo, potrebbe essere necessario usare un **goto** istruzione per uscire da un ciclo eccessivamente annidato.  
   
- Per ulteriori informazioni sulle etichette e `goto` istruzione, vedere [istruzioni con etichetta](../cpp/labeled-statements.md) e [utilizzo di etichette con l'istruzione goto](http://msdn.microsoft.com/en-us/6cd7c31a-9822-4241-8566-f79f51be48fe).  
+ Per altre informazioni sulle etichette e la **goto** istruzione, vedere [istruzioni con etichetta](../cpp/labeled-statements.md).  
   
 ## <a name="example"></a>Esempio  
- In questo esempio un'istruzione `goto` trasferisce il controllo al punto con etichetta `stop` quando `i` è uguale a 3.  
+ In questo esempio, un **goto** istruzione trasferisce il controllo al punto etichettato `stop` quando `i` è uguale a 3.  
   
-```  
+```cpp  
 // goto_statement.cpp  
 #include <stdio.h>  
 int main()  

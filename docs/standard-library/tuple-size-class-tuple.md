@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7249aad5e130e805aae73bdbfba7f9c4f78ad4fe
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0c03c47502fdd9309b3d6553c3f46f9685d4eaa9
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33853983"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38958266"
 ---
 # <a name="tuplesize-class"></a>Classe tuple_size
 
@@ -66,23 +66,29 @@ template <class Tuple>
 
 ### <a name="parameters"></a>Parametri
 
-*Tupla* il tipo della tupla.
+*Tuple*  
+Tipo della tupla.
 
-*Elem* il tipo degli elementi della matrice.
+*Elem*  
+Tipo degli elementi della matrice.
 
-*Dimensioni* le dimensioni della matrice.
+*Size*  
+Dimensione della matrice.
 
-*T1* il tipo del primo membro della coppia.
+*T1*  
+Tipo del primo membro della coppia.
 
-*T2* il tipo del secondo membro della coppia.
+*T2*  
+Tipo del secondo membro della coppia.
 
-*Tipi* i tipi degli elementi della tupla.
+*Tipi*  
+Tipo degli elementi della tupla.
 
 ## <a name="remarks"></a>Note
 
-La classe modello include un membro `value` che è un'espressione costante integrale il cui valore è l'estensione del tipo di tupla `Tuple`.
+La classe modello include un membro `value` che rappresenta un'espressione costante integrale il cui valore è l'estensione del tipo di tupla *tupla*.
 
-La specializzazione modello per le matrici include un membro `value` che è un'espressione costante integrale di valore `Size`, corrispondente alla dimensione della matrice.
+La specializzazione modello per le matrici include un membro `value` che rappresenta un'espressione costante integrale il cui valore è *dimensioni*, che corrisponde alla dimensione della matrice.
 
 La specializzazione modello per la coppia include un membro `value` che è un'espressione costante integrale di valore 2.
 
@@ -116,7 +122,7 @@ int main()
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** \<tupla > **intestazione:** \<array > (per la specializzazione matrice) **intestazione:** \<utilità > (per la specializzazione coppia)
+**Intestazione:** \<tuple > **intestazione:** \<array > (per la specializzazione di matrice) **intestazione:** \<utility > (per la specializzazione di coppia)
 
 **Spazio dei nomi:** std
 

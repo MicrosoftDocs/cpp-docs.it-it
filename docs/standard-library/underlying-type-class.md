@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4f45af807b37294b87920b6fabac18647f170025
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8b3f796d5039900b591c219c840d1aef94d23e8f
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33853222"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957581"
 ---
 # <a name="underlyingtype-class"></a>Classe underlying_type
 
@@ -37,11 +37,12 @@ struct underlying_type;
 
 ### <a name="parameters"></a>Parametri
 
-`T` Tipo da modificare.
+*T*  
+ Tipo da modificare.
 
 ## <a name="remarks"></a>Note
 
-Il typedef del membro `type` della classe modello assegna un nome al tipo integrale sottostante di `T` quando `T` è un tipo di enumerazione; in caso contrario, non è presente alcun typedef del membro `type`.
+Il `type` typedef del membro della classe modello assegna il tipo di integrale sottostante *T*, quando *T* è un tipo di enumerazione, in caso contrario, non è presente alcun typedef del membro `type`.
 
 ## <a name="requirements"></a>Requisiti
 

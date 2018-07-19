@@ -7,12 +7,12 @@ f1_keywords:
 - limits/std::float_denorm_style
 - limits/std::float_round_style
 ms.assetid: c86680a2-ba97-4ed9-8c20-a448857d7dc5
-ms.openlocfilehash: 356c98ce5c93d1e05a583fc30c4758c5d15d7529
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5795d146714c6eb00902518347138a98574679a8
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33858159"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38960648"
 ---
 # <a name="ltlimitsgt-enums"></a>Enumerazioni &lt;limits&gt;
 
@@ -35,11 +35,11 @@ enum float_denorm_style {
 
 L'enumerazione restituisce:
 
-- **denorm_indeterminate** se la presenza o l'assenza di form denormalizzato non può essere determinata al momento della conversione.
+- `denorm_indeterminate` Se la presenza o assenza di form denormalizzato non può essere determinato al momento della conversione.
 
-- **denorm_absent** se non sono presenti form denormalizzati.
+- `denorm_absent` Se non sono presenti form denormalizzati.
 
-- **denorm_present** se sono presenti form denormalizzati.
+- `denorm_present` Se sono presenti form denormalizzati.
 
 ### <a name="example"></a>Esempio
 
@@ -62,15 +62,15 @@ enum float_round_style {
 
 L'enumerazione restituisce:
 
-- **round_indeterminate** se il metodo di arrotondamento non può essere determinato.
+- `round_indeterminate` Se non è possibile determinare il metodo di arrotondamento.
 
-- **round_toward_zero** se l'arrotondamento è a zero.
+- `round_toward_zero` Se l'arrotondamento verso lo zero.
 
-- **round_to_nearest** se l'arrotondamento è al numero intero più vicino.
+- `round_to_nearest` Se l'arrotondamento al numero intero più vicino.
 
-- **round_toward_infinity** se l'arrotondamento si allontana da zero.
+- `round_toward_infinity` Se l'arrotondamento si allontana da zero.
 
-- **round_toward_neg_infinity** se l'arrotondamento è al massimo numero intero negativo.
+- `round_toward_neg_infinity` Se l'arrotondamento al numero intero negativo.
 
 ### <a name="example"></a>Esempio
 

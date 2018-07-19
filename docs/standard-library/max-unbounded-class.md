@@ -26,12 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 679db380dabf15786776a6896c931f584ef46fce
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3bf2d24ad916a9f7dba5a61ecb7745c3d86573c9
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33864099"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38955799"
 ---
 # <a name="maxunbounded-class"></a>Classe max_unbounded
 
@@ -71,11 +71,11 @@ void allocated(std::size_t _Nx = 1);
 
 |Parametro|Descrizione|
 |---------------|-----------------|
-|`_Nx`|Valore di incremento.|
+|*_Nx*|Valore di incremento.|
 
 ### <a name="remarks"></a>Note
 
-Questa funzione membro non esegue alcuna operazione. Viene chiamata dopo ogni chiamata eseguita da `cache_freelist::allocate` all'operatore `new`. L'argomento `_Nx` è il numero di blocchi di memoria inclusi nel blocco allocato dall'operatore `new`.
+Questa funzione membro non esegue alcuna operazione. Viene chiamato dopo ogni chiamata eseguita da `cache_freelist::allocate` all'operatore **nuovi**. L'argomento *_Nx* è il numero di blocchi di memoria nel blocco allocato dall'operatore **nuove**.
 
 ## <a name="deallocated"></a>  max_unbounded::deallocated
 
@@ -89,11 +89,11 @@ void deallocated(std::size_t _Nx = 1);
 
 |Parametro|Descrizione|
 |---------------|-----------------|
-|`_Nx`|Valore di incremento.|
+|*_Nx*|Valore di incremento.|
 
 ### <a name="remarks"></a>Note
 
-La funzione membro non esegue alcuna operazione. Questa funzione viene chiamata dopo ogni chiamata eseguita da `cache_freelist::deallocate` all'operatore `delete`. L'argomento `_Nx` è il numero di blocchi di memoria inclusi nel blocco deallocato dall'operatore `delete`.
+La funzione membro non esegue alcuna operazione. Questa funzione membro viene chiamata dopo ogni chiamata da `cache_freelist::deallocate` all'operatore **eliminare**. L'argomento *_Nx* è il numero di blocchi di memoria nel blocco deallocato dall'operatore **eliminare**.
 
 ## <a name="full"></a>  max_unbounded::full
 
@@ -105,11 +105,11 @@ bool full();
 
 ### <a name="return-value"></a>Valore restituito
 
-La funzione membro restituisce sempre `false`.
+La funzione membro restituisce sempre **false**.
 
 ### <a name="remarks"></a>Note
 
-Questa funzione membro viene chiamata da `cache_freelist::deallocate`. Se la chiamata restituisce `true`, `deallocate` inserisce il blocco di memoria nell'elenco di disponibilità; se restituisce false, `deallocate` chiama l'operatore `delete` per deallocare il blocco.
+Questa funzione membro viene chiamata da `cache_freelist::deallocate`. Se la chiamata restituisce **true**, `deallocate` inserisce il blocco di memoria nell'elenco di disponibilità; se false, restituisce `deallocate` chiama l'operatore **Elimina** deallocare il blocco.
 
 ## <a name="released"></a>  max_unbounded::released
 

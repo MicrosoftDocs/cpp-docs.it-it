@@ -26,12 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d0e1e57693650c69aa1a5b8ec006830458ef7775
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c691ce0896a5227e28db6ac8f684d712150e8861
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33854194"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38960915"
 ---
 # <a name="maxfixedsize-class"></a>Classe max_fixed_size
 
@@ -48,7 +48,7 @@ class max_fixed_size
 
 |Parametro|Descrizione|
 |---------------|-----------------|
-|`Max`|Classe max che determina il numero massimo di elementi da archiviare nell'oggetto `freelist`.|
+|*Max*|Classe max che determina il numero massimo di elementi da archiviare nell'oggetto `freelist`.|
 
 ### <a name="constructors"></a>Costruttori
 
@@ -84,11 +84,11 @@ void allocated(std::size_t _Nx = 1);
 
 |Parametro|Descrizione|
 |---------------|-----------------|
-|`_Nx`|Valore di incremento.|
+|*_Nx*|Valore di incremento.|
 
 ### <a name="remarks"></a>Note
 
-La funzione membro non esegue alcuna operazione. Questa funzione viene chiamata dopo ogni chiamata eseguita da `cache_freelist::allocate` all'operatore `new`. L'argomento `_Nx` è il numero di blocchi di memoria inclusi nel blocco allocato dall'operatore `new`.
+La funzione membro non esegue alcuna operazione. Questa funzione membro viene chiamata dopo ogni chiamata eseguita dal `cache_freelist::allocate` all'operatore **nuovi**. L'argomento *_Nx* è il numero di blocchi di memoria nel blocco allocato dall'operatore **nuove**.
 
 ## <a name="deallocated"></a>  max_fixed_size::deallocated
 
@@ -102,11 +102,11 @@ void deallocated(std::size_t _Nx = 1);
 
 |Parametro|Descrizione|
 |---------------|-----------------|
-|`_Nx`|Valore di incremento.|
+|*_Nx*|Valore di incremento.|
 
 ### <a name="remarks"></a>Note
 
-La funzione membro non esegue alcuna operazione. Questa funzione viene chiamata dopo ogni chiamata eseguita da `cache_freelist::deallocate` all'operatore `delete`. L'argomento `_Nx` è il numero di blocchi di memoria inclusi nel blocco deallocato dall'operatore `delete`.
+La funzione membro non esegue alcuna operazione. Questa funzione membro viene chiamata dopo ogni chiamata da `cache_freelist::deallocate` all'operatore **eliminare**. L'argomento *_Nx* è il numero di blocchi di memoria nel blocco deallocato dall'operatore **eliminare**.
 
 ## <a name="full"></a>  max_fixed_size::full
 
@@ -118,11 +118,11 @@ bool full();
 
 ### <a name="return-value"></a>Valore restituito
 
-`true` se `Max <= _Nblocks`; in caso contrario, `false`.
+**true** se `Max <= _Nblocks`; in caso contrario, **false**.
 
 ### <a name="remarks"></a>Note
 
-Questa funzione membro viene chiamata da `cache_freelist::deallocate`. Se la chiamata restituisce `true`, `deallocate` inserisce il blocco di memoria nell'elenco di disponibilità; se restituisce false, `deallocate` chiama l'operatore `delete` per deallocare il blocco.
+Questa funzione membro viene chiamata da `cache_freelist::deallocate`. Se la chiamata restituisce **true**, `deallocate` inserisce il blocco di memoria nell'elenco di disponibilità; se false, restituisce `deallocate` chiama l'operatore **Elimina** deallocare il blocco.
 
 ## <a name="max_fixed_size"></a>  max_fixed_size::max_fixed_size
 

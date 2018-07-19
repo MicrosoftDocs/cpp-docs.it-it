@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0580d6e2128a75f7457541cc82caf2fece958b81
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: cfc3f744da2deb804f1a3e3445fbed3da3fac0b5
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33844575"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38955786"
 ---
-# <a name="divides-struct"></a>Struct divides
+# <a name="divides-struct"></a>divides (struct)
 
-Oggetto funzione predefinito che esegue l'operazione di divisione ( `operator/`) negli argomenti.
+Un oggetto funzione predefinito che esegue l'operazione di divisione (`operator/`) sui relativi argomenti.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -49,11 +49,11 @@ struct divides<void>
 
 ### <a name="parameters"></a>Parametri
 
-`Type`, `T`, `U` Un tipo che supporta un `operator/` che accetta gli operandi dei tipi specificati o dedotti.
+*Tipo di*, *T*, *U* un tipo che supporta un `operator/` che accetta gli operandi dei tipi specificati o dedotti.
 
-`Left` L'operando sinistro dell'operazione di divisione. Il modello non specializzato accetta un argomento di riferimento lvalue di tipo `Type`. Il modello specializzato esegue un inoltro perfetto degli argomenti di riferimento lvalue e rvalue del tipo dedotto `T`.
+*Sinistra* l'operando sinistro dell'operazione di divisione. Il modello non specializzato accetta un argomento di riferimento lvalue di tipo *tipo*. Il modello specializzato esegue un inoltro di lvalue perfetto e gli argomenti di riferimento rvalue del tipo di dedurre *T*.
 
-`Right` L'operando destro dell'operazione di divisione. Il modello non specializzato accetta un argomento di riferimento lvalue di tipo `Type`. Il modello specializzato esegue un inoltro perfetto degli argomenti di riferimento lvalue e rvalue del tipo dedotto `U`.
+*Destra* l'operando destro dell'operazione di divisione. Il modello non specializzato accetta un argomento di riferimento lvalue di tipo *tipo*. Il modello specializzato esegue un inoltro di lvalue perfetto e gli argomenti di riferimento rvalue del tipo di dedurre *U*.
 
 ## <a name="return-value"></a>Valore restituito
 

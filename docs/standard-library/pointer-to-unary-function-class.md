@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9f431542ab85b4ae540622651967f3a5520ff5f7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 33161d622bf43b79b33c91a5abc6f703c48c4f2e
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33853443"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953062"
 ---
 # <a name="pointertounaryfunction-class"></a>Classe pointer_to_unary_function
 
@@ -43,17 +43,17 @@ public:
 
 ### <a name="parameters"></a>Parametri
 
-`pfunc` La funzione binaria da convertire.
+*pfunc* della funzione binaria da convertire.
 
-`left` L'oggetto che il  *\*pfunc* viene chiamato su.
+*a sinistra* dell'oggetto che il  *\*pfunc* viene chiamato su.
 
 ## <a name="return-value"></a>Valore restituito
 
-La classe modello archivia una copia di **pfunc**. Definisce la relativa funzione membro `operator()` che restituisce (\* **pfunc**)(_ *Left*).
+La classe modello archivia una copia di `pfunc`. Definisce la relativa funzione membro `operator()` che restituisce (\* **pfunc**)(_ *Left*).
 
 ## <a name="remarks"></a>Note
 
-Un puntatore a funzione unaria è un oggetto funzione e può essere passato a qualsiasi algoritmo della libreria standard C++ che prevede una funzione unaria come parametro, ma non è adattabile. Per usarlo con un adattatore, ad esempio in associazione a un valore o con un negator, deve essere fornito con i tipi annidati **argument_type** e **result_type** che rendono possibile tale adattamento. La conversione da `pointer_to_unary_function` consente il funzionamento degli adattatori di funzione con i puntatori a funzione binaria.
+Un puntatore a funzione unaria è un oggetto funzione e può essere passato a qualsiasi algoritmo della libreria standard C++ che prevede una funzione unaria come parametro, ma non è adattabile. Per usarlo con un adattatore, ad esempio in associazione a un valore o con un negator, deve essere fornito con i tipi annidati `argument_type` e `result_type` che rendono possibile tale adattamento. La conversione da `pointer_to_unary_function` consente il funzionamento degli adattatori di funzione con i puntatori a funzione binaria.
 
 ## <a name="example"></a>Esempio
 

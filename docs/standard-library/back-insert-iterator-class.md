@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: efd633fb4617a5058afd9bd55b40ccb4fbcee06e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6830baf3d474b80f2e7906a7aadd27d2eee27f9a
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33847686"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38958620"
 ---
 # <a name="backinsertiterator-class"></a>Classe back_insert_iterator
 
@@ -40,7 +40,7 @@ class back_insert_iterator;
 
 ### <a name="parameters"></a>Parametri
 
-`Container` Il tipo di contenitore nella parte posteriore del quali elementi devono essere inseriti da un `back_insert_iterator`.
+*Contenitore* tipo di contenitore nella parte posteriore del quali elementi devono essere inseriti da un `back_insert_iterator`.
 
 ## <a name="remarks"></a>Note
 
@@ -83,7 +83,7 @@ explicit back_insert_iterator(Container& _Cont);
 
 ### <a name="parameters"></a>Parametri
 
-`_Cont` Il contenitore che il `back_insert_iterator` viene utilizzata per inserire un elemento in.
+*_Cont* il contenitore che il `back_insert_iterator` consiste nell'inserire un elemento.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -323,7 +323,7 @@ back_insert_iterator<Container>& operator=(typename Container::value_type&& val)
 
 ### <a name="parameters"></a>Parametri
 
-`val` Il valore da inserire nel contenitore.
+*Val* il valore da inserire nel contenitore.
 
 ### <a name="return-value"></a>Valore restituito
 

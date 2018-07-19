@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::is_trivially_copy_assignable
 - std::is_trivially_move_assignable
 - std::is_trivially_move_constructible
-ms.openlocfilehash: ff6d6066d90fe5049b89586ce657e62860c12f9f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3754af9a32ab1beeb4f3b9a783547bd081d57a46
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33861094"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38955836"
 ---
 # <a name="lttypetraitsgt-functions"></a>Funzioni &lt;type_traits&gt;
 
@@ -44,7 +44,7 @@ ms.locfileid: "33861094"
 
 ## <a name="is_assignable"></a>  is_assignable
 
-Verifica se un valore di tipo `From` può essere assegnato a un tipo `To`.
+Verifica se un valore di *dal* tipo può essere assegnato a un *a* tipo.
 
 ```cpp
 template <class To, class From>
@@ -53,13 +53,15 @@ struct is_assignable;
 
 ### <a name="parameters"></a>Parametri
 
-Per il tipo di oggetto che riceve l'assegnazione.
+*Per*  
+ Il tipo di oggetto che riceve l'assegnazione.
 
-Dal tipo dell'oggetto che fornisce il valore.
+*From*  
+ Il tipo di oggetto che fornisce il valore.
 
 ### <a name="remarks"></a>Note
 
-L'espressione non valutata `declval<To>() = declval<From>()` deve essere nel formato corretto. `From` e `To` devono essere tipi completi, `void`, o matrici di valori associati sconosciuti.
+L'espressione non valutata `declval<To>() = declval<From>()` deve essere nel formato corretto. Entrambe *dal* e *al* devono essere tipi completi, **void**, o matrici di valori associati sconosciuti.
 
 ## <a name="is_copy_assignable"></a>  is_copy_assignable
 
@@ -72,11 +74,12 @@ struct is_copy_assignable;
 
 ### <a name="parameters"></a>Parametri
 
-`Ty` Il tipo di query.
+*Ty*  
+ Tipo su cui eseguire una query.
 
 ### <a name="remarks"></a>Note
 
-Un'istanza del predicato di tipo contiene true se il tipo `Ty` è una classe che ha un operatore di assegnazione di copia; in caso contrario, contiene false. Equivalente a is_assignable\<Ty&, const Ty&>.
+Un'istanza del tipo predicato contiene true se il tipo *Ty* è una classe che ha un copia operatore di assegnazione, in caso contrario, contiene false. Equivalente a is_assignable\<Ty&, const Ty&>.
 
 ## <a name="is_copy_constructible"></a>  is_copy_constructible
 
@@ -89,11 +92,12 @@ struct is_copy_constructible;
 
 ### <a name="parameters"></a>Parametri
 
-`Ty` Il tipo di query.
+*Ty*  
+ Tipo su cui eseguire una query.
 
 ### <a name="remarks"></a>Note
 
-Un'istanza del predicato di tipo contiene true se il tipo `Ty` è una classe che ha un costruttore di copia; in caso contrario, contiene false.
+Un'istanza del tipo predicato contiene true se il tipo *Ty* è una classe che ha un costruttore di copia in caso contrario, contiene false.
 
 ### <a name="example"></a>Esempio
 
@@ -141,11 +145,12 @@ struct is_default_constructible;
 
 ### <a name="parameters"></a>Parametri
 
-`T` Il tipo di query.
+*T*  
+ Tipo su cui eseguire una query.
 
 ### <a name="remarks"></a>Note
 
-Un'istanza del predicato di tipo contiene true se il tipo `T` è un tipo di classe con un costruttore predefinito; in caso contrario, contiene false. Equivale al predicato `is_constructible<T>`. Il tipo `T` deve essere un tipo completo, `void`o una matrice di valori associati sconosciuti.
+Un'istanza del tipo predicato contiene true se il tipo *T* è un tipo di classe che ha un costruttore predefinito, in caso contrario, contiene false. Equivale al predicato `is_constructible<T>`. Tipo di *T* deve essere un tipo completo, **void**, o una matrice di valori associati sconosciuti.
 
 ### <a name="example"></a>Esempio
 
@@ -193,7 +198,8 @@ struct is_move_assignable;
 
 ### <a name="parameters"></a>Parametri
 
-`T` Il tipo di query.
+*T*  
+ Tipo su cui eseguire una query.
 
 ### <a name="remarks"></a>Note
 
@@ -210,11 +216,12 @@ struct is_move_constructible;
 
 ### <a name="parameters"></a>Parametri
 
-T il tipo da valutare
+*T*  
+ Il tipo da valutare
 
 ### <a name="remarks"></a>Note
 
-Un predicato di tipo che restituisce true se il tipo `T` può essere costruito con un'operazione di spostamento. Questo predicato è equivalente a `is_constructible<T, T&&>`.
+Un predicato di tipo che restituisce true se il tipo *T* può essere creato usando un'operazione di spostamento. Questo predicato è equivalente a `is_constructible<T, T&&>`.
 
 ## <a name="is_nothrow_move_assignable"></a>  is_nothrow_move_assignable
 
@@ -227,11 +234,12 @@ struct is_nothrow_move_assignable;
 
 ### <a name="parameters"></a>Parametri
 
-`Ty` Il tipo di query.
+*Ty*  
+ Tipo su cui eseguire una query.
 
 ### <a name="remarks"></a>Note
 
-Un'istanza del predicato di tipo contiene true se il tipo `Ty` è un operatore di assegnazione di spostamento nothrow; in caso contrario, contiene false.
+Un'istanza del tipo predicato contiene true se il tipo *Ty* ha un nothrow operatore di assegnazione spostamento, in caso contrario, contiene false.
 
 ## <a name="is_trivially_copy_assignable"></a>  is_trivially_copy_assignable
 
@@ -244,13 +252,14 @@ struct is_trivially_copy_assignable;
 
 ### <a name="parameters"></a>Parametri
 
-`T` Il tipo di query.
+*T*  
+ Tipo su cui eseguire una query.
 
 ### <a name="remarks"></a>Note
 
-Un'istanza del predicato di tipo contiene true se il tipo `T` è una classe che ha un operatore di assegnazione di copia semplice; in caso contrario, contiene false.
+Un'istanza del tipo predicato contiene true se il tipo *T* è una classe che ha un operatore copia semplice assegnazione, in caso contrario, contiene false.
 
-Un costruttore di assegnazione per una classe `T` è semplice se è fornito in modo implicito, la classe `T` non dispone di funzioni virtuali, la classe `T` non dispone di basi virtuali, le classi di tutti i membri di dati non statici di tipo classe dispongono di operatori di assegnazione semplice e le classi di tutti i membri di dati non statici di tipo matrice di classe dispongono di operatori di assegnazione semplice.
+Un costruttore di assegnazione per una classe *T* è semplice se si è fornito in modo implicito, la classe *T* non ha funzioni virtuali, la classe *T* non ha basi virtuali, le classi di tutti i membri dati non statici di tipo classe hanno operatori di assegnazione semplice e le classi di tutti i membri dati non statici di tipo matrice della classe hanno operatori di assegnazione semplice.
 
 ## <a name="is_trivially_move_assignable"></a>  is_trivially_move_assignable
 
@@ -263,19 +272,20 @@ struct is_trivially_move_assignable;
 
 ### <a name="parameters"></a>Parametri
 
-`Ty` Il tipo di query.
+*Ty*  
+ Tipo su cui eseguire una query.
 
 ### <a name="remarks"></a>Note
 
-Un'istanza del predicato di tipo contiene true se il tipo `Ty` è una classe che ha un operatore di assegnazione di spostamento semplice; in caso contrario, contiene false.
+Un'istanza del tipo predicato contiene true se il tipo *Ty* è una classe che ha un semplice operatore di assegnazione spostamento, in caso contrario, contiene false.
 
-Un operatore di assegnazione di spostamento per una classe `Ty` è semplice se:
+Un operatore di assegnazione di spostamento per una classe *Ty* è piuttosto semplice se:
 
 viene fornito in modo implicito
 
-la classe `Ty` non ha funzioni virtuali
+la classe *Ty* non ha funzioni virtuali
 
-la classe `Ty` non ha basi virtuali
+la classe *Ty* non ha basi virtuali
 
 le classi di tutti i membri dati non statici del tipo di classe hanno operatori di assegnazione di spostamento semplici
 
@@ -292,25 +302,26 @@ struct is_trivially_move_constructible;
 
 ### <a name="parameters"></a>Parametri
 
-`Ty` Il tipo di query.
+*Ty*  
+ Tipo su cui eseguire una query.
 
 ### <a name="remarks"></a>Note
 
-Un'istanza del predicato di tipo contiene true se il tipo `Ty` è una classe che ha un costruttore di spostamento semplice; in caso contrario, contiene false.
+Un'istanza del tipo predicato contiene true se il tipo *Ty* è una classe che ha un costruttore spostamento semplice, in caso contrario, contiene false.
 
-Un costruttore di spostamento per una classe `Ty` è piuttosto semplice se:
+Un costruttore di spostamento per una classe *Ty* è piuttosto semplice se:
 
 viene dichiarato in modo implicito
 
 i tipi di parametro sono equivalenti a quelli di una dichiarazione implicita
 
-la classe `Ty` non ha funzioni virtuali
+la classe *Ty* non ha funzioni virtuali
 
-la classe `Ty` non ha basi virtuali
+la classe *Ty* non ha basi virtuali
 
 la classe non ha alcun membro dati non statici volatili
 
-tutte le basi dirette della classe `Ty` hanno costruttori di spostamento semplici
+tutte le basi dirette della classe *Ty* hanno costruttori di spostamento semplici
 
 le classi di tutti i membri dati non statici del tipo di classe hanno costruttori di spostamento semplici
 

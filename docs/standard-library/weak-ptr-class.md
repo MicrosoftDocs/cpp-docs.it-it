@@ -38,12 +38,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 03cd10d3efac16521cf826f3d9081ec533b9abec
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5817d44657fa429bdce19f8641255d7db630eac7
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33861779"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954864"
 ---
 # <a name="weakptr-class"></a>Classe weak_ptr
 
@@ -77,7 +77,8 @@ public:
 
 ### <a name="parameters"></a>Parametri
 
-`Ty` Tipo controllato dal puntatore debole.
+*Ty*  
+ Tipo controllato dal puntatore debole.
 
 ## <a name="remarks"></a>Note
 
@@ -104,7 +105,7 @@ Si verifica un ciclo quando due o più risorse controllate da oggetti `shared_pt
 |[element_type](#element_type)|Tipo dell'elemento.|
 |[expired](#expired)|Verifica se la proprietà è scaduta.|
 |[lock](#lock)|Ottiene la proprietà esclusiva di una risorsa.|
-|[owner_before](#owner_before)|Restituisce `true` se `weak_ptr` è ordinato in posizione precedente al (o è minore del) puntatore fornito.|
+|[owner_before](#owner_before)|Restituisce **true** se l'oggetto `weak_ptr` viene ordinato in posizione precedente (o minore di) al puntatore fornito.|
 |[reset](#reset)|Rilascia una risorsa di proprietà.|
 |[swap](#swap)|Scambia due oggetti `weak_ptr`.|
 |[use_count](#use_count)|Conta il numero di oggetti `shared_ptr` designati.|
@@ -168,7 +169,7 @@ bool expired() const;
 
 ### <a name="remarks"></a>Note
 
-La funzione membro restituisce `true` se `*this` è scaduto, altrimenti restituisce `false`.
+La funzione membro restituisce **true** se `*this` è scaduto, in caso contrario **false**.
 
 ### <a name="example"></a>Esempio
 
@@ -226,7 +227,7 @@ shared_ptr<Ty> lock() const;
 
 ### <a name="remarks"></a>Note
 
-La funzione membro restituisce un oggetto shared_ptr vuoto se `*this` scaduta; in caso contrario restituirà un [classe shared_ptr](../standard-library/shared-ptr-class.md)\<Ty > oggetto a cui appartiene la risorsa che `*this` punta a.
+La funzione membro restituisce un oggetto shared_ptr vuoto se `*this` è scaduto; in caso contrario, restituisce un [classe shared_ptr](../standard-library/shared-ptr-class.md)\<Ty > oggetto proprietario della risorsa che `*this` punta a.
 
 ### <a name="example"></a>Esempio
 
@@ -289,11 +290,14 @@ weak_ptr& operator=(const shared_ptr<Other>& sp);
 
 ### <a name="parameters"></a>Parametri
 
-`Other` Tipo controllato dal puntatore di tipo argument condiviso/debole.
+*Altro*  
+ Tipo controllato dal puntatore dell'argomento condiviso/debole.
 
-`wp` Puntatore debole da copiare.
+*Windows Phone*  
+ Puntatore debole da copiare.
 
-`sp` Puntatore condiviso da copiare.
+*SP*  
+ Puntatore condiviso da copiare.
 
 ### <a name="remarks"></a>Note
 
@@ -333,7 +337,7 @@ int main()
 
 ## <a name="owner_before"></a>  owner_before
 
-Restituisce `true` se `weak_ptr` è ordinato in posizione precedente al (o è minore del) puntatore fornito.
+Restituisce **true** se l'oggetto `weak_ptr` viene ordinato in posizione precedente (o minore di) al puntatore fornito.
 
 ```cpp
 template <class Other>
@@ -345,11 +349,12 @@ bool owner_before(const weak_ptr<Other>& ptr);
 
 ### <a name="parameters"></a>Parametri
 
-`ptr` Un' `lvalue` riferimento a uno un `shared_ptr` o `weak_ptr`.
+*ptr*  
+ Riferimento `lvalue` a `shared_ptr` o `weak_ptr`.
 
 ### <a name="remarks"></a>Note
 
-La funzione membro restituisce `true` se `*this` è `ordered before` `ptr`.
+La funzione membro di modello restituisce **true** se `*this` viene `ordered before` `ptr`.
 
 ## <a name="reset"></a>  reset
 
@@ -404,11 +409,12 @@ void swap(weak_ptr& wp);
 
 ### <a name="parameters"></a>Parametri
 
-`wp` Puntatore debole da scambiare con.
+*Windows Phone*  
+ Puntatore debole da scambiare.
 
 ### <a name="remarks"></a>Note
 
-La funzione membro lascia che la risorsa originariamente puntata da `*this` venga in seguito puntata da `wp` e che la risorsa originariamente puntata da `wp` venga in seguito puntata da `*this`. La funzione non modifica i conteggi dei riferimenti per le due risorse e non genera alcuna eccezione.
+La funzione membro lascia che la risorsa originariamente puntata da `*this` successivamente a cui punta *wp*e la risorsa originariamente puntata da *wp* venga in seguito puntata da `*this`. La funzione non modifica i conteggi dei riferimenti per le due risorse e non genera alcuna eccezione.
 
 ### <a name="example"></a>Esempio
 
@@ -523,11 +529,14 @@ weak_ptr(const shared_ptr<Other>& sp);
 
 ### <a name="parameters"></a>Parametri
 
-`Other` Tipo controllato dal puntatore di tipo argument condiviso/debole.
+*Altro*  
+ Tipo controllato dal puntatore dell'argomento condiviso/debole.
 
-`wp` Puntatore debole da copiare.
+*Windows Phone*  
+ Puntatore debole da copiare.
 
-`sp` Puntatore condiviso da copiare.
+*SP*  
+ Puntatore condiviso da copiare.
 
 ### <a name="remarks"></a>Note
 

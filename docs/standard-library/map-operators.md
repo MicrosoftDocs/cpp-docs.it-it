@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::operator&lt; (map)
 - std::operator&lt;= (map)
 - std::operator== (map)
-ms.openlocfilehash: 60813074eb112836295a72b1c11a24a8c9800313
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 22d8d5d348dc4bf4bd50ee56db360e4490503b78
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33861165"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38959258"
 ---
 # <a name="ltmapgt-operators"></a>Operatori &lt;map&gt;
 
@@ -48,9 +48,9 @@ bool operator!=(
 
 ### <a name="parameters"></a>Parametri
 
-`left` Un oggetto di tipo **mappa**.
+*a sinistra* un oggetto di tipo `map`.
 
-`right` Un oggetto di tipo **mappa**.
+*a destra* un oggetto di tipo `map`.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -110,9 +110,9 @@ bool operator<(
 
 ### <a name="parameters"></a>Parametri
 
-`left` Un oggetto di tipo **mappa**.
+*a sinistra* un oggetto di tipo `map`.
 
-`right` Un oggetto di tipo **mappa**.
+*a destra* un oggetto di tipo `map`.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -172,9 +172,9 @@ bool operator<=(
 
 ### <a name="parameters"></a>Parametri
 
-`left` Un oggetto di tipo **mappa**.
+*a sinistra* un oggetto di tipo `map`.
 
-`right` Un oggetto di tipo **mappa**.
+*a destra* un oggetto di tipo `map`.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -237,9 +237,9 @@ bool operator==(
 
 ### <a name="parameters"></a>Parametri
 
-`left` Un oggetto di tipo **mappa**.
+*a sinistra* un oggetto di tipo `map`.
 
-`right` Un oggetto di tipo **mappa**.
+*a destra* un oggetto di tipo `map`.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -299,9 +299,9 @@ bool operator>(
 
 ### <a name="parameters"></a>Parametri
 
-`left` Un oggetto di tipo **mappa**.
+*a sinistra* un oggetto di tipo `map`.
 
-`right` Un oggetto di tipo **mappa**.
+*a destra* un oggetto di tipo `map`.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -361,9 +361,9 @@ bool operator>=(
 
 ### <a name="parameters"></a>Parametri
 
-`left` Un oggetto di tipo **mappa**.
+*a sinistra* un oggetto di tipo `map`.
 
-`right` Un oggetto di tipo **mappa**.
+*a destra* un oggetto di tipo `map`.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -426,9 +426,9 @@ bool operator!=(
 
 ### <a name="parameters"></a>Parametri
 
-`left` Un oggetto di tipo `multimap`.
+*a sinistra* un oggetto di tipo `multimap`.
 
-`right` Un oggetto di tipo `multimap`.
+*a destra* un oggetto di tipo `multimap`.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -488,9 +488,9 @@ bool operator<(
 
 ### <a name="parameters"></a>Parametri
 
-`left` Un oggetto di tipo `multimap`.
+*a sinistra* un oggetto di tipo `multimap`.
 
-`right` Un oggetto di tipo `multimap`.
+*a destra* un oggetto di tipo `multimap`.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -550,9 +550,9 @@ bool operator<=(
 
 ### <a name="parameters"></a>Parametri
 
-`left` Un oggetto di tipo `multimap`.
+*a sinistra* un oggetto di tipo `multimap`.
 
-`right` Un oggetto di tipo `multimap`.
+*a destra* un oggetto di tipo `multimap`.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -615,9 +615,9 @@ bool operator==(
 
 ### <a name="parameters"></a>Parametri
 
-`left` Un oggetto di tipo `multimap`.
+*a sinistra* un oggetto di tipo `multimap`.
 
-`right` Un oggetto di tipo `multimap`.
+*a destra* un oggetto di tipo `multimap`.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -677,9 +677,9 @@ bool operator>(
 
 ### <a name="parameters"></a>Parametri
 
-`left` Un oggetto di tipo `multimap`.
+*a sinistra* un oggetto di tipo `multimap`.
 
-`right` Un oggetto di tipo `multimap`.
+*a destra* un oggetto di tipo `multimap`.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -739,9 +739,9 @@ bool operator>=(
 
 ### <a name="parameters"></a>Parametri
 
-`left` Un oggetto di tipo `multimap`.
+*a sinistra* un oggetto di tipo `multimap`.
 
-`right` Un oggetto di tipo `multimap`.
+*a destra* un oggetto di tipo `multimap`.
 
 ### <a name="return-value"></a>Valore restituito
 

@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 797bc6353bd7396d409de073cc412480a803117f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 95e2713f3c73a3dc35c11be8d245ede94b2c3bba
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33844341"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953979"
 ---
 # <a name="inputiteratortag-struct"></a>Struct input_iterator_tag
 
-Classe che fornisce un tipo restituito per la funzione **iterator_category** che rappresenta un iteratore di input.
+Una classe che fornisce un tipo restituito per `iterator_category` funzione che rappresenta un iteratore di input.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -36,11 +36,11 @@ struct input_iterator_tag {};
 
 Le classi di tag di categoria vengono usate come tag di compilazione per la selezione dell'algoritmo. La funzione modello deve trovare la categoria più specifica dell'argomento iteratore in modo da usare l'algoritmo più efficiente in fase di compilazione. Per ciascun iteratore di tipo `Iterator`, `iterator_traits`< `Iterator`> **::iterator_category** deve essere definito come il tag di categoria più specifico che descrive il comportamento dell'iteratore.
 
-Il tipo è uguale a **iterator**\< **Iter**> **::iterator_category** quando **Iter** descrive un oggetto che può essere usato come iteratore di input.
+Il tipo è identico **iteratore** \< **Iter**> **:: iterator_category** quando `Iter` descrive un oggetto che può essere utilizzato come un iteratore di input.
 
 ## <a name="example"></a>Esempio
 
-Vedere [iterator_traits](../standard-library/iterator-traits-struct.md) o [random_access_iterator_tag](../standard-library/random-access-iterator-tag-struct.md) per indicazioni su come usare i tag **iterator_tag**.
+Visualizzare [iterator_traits](../standard-library/iterator-traits-struct.md) oppure [random_access_iterator_tag](../standard-library/random-access-iterator-tag-struct.md) per un esempio di come usare `iterator_tag`s.
 
 ## <a name="requirements"></a>Requisiti
 

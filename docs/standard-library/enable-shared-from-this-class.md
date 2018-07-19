@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9bc34a0a176e39a30e6cdb5d4c2cdeeebc94b5b1
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 46e5b0b0c55c5a5dd0a48d2437fc83fa43226f5a
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33845752"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38956143"
 ---
 # <a name="enablesharedfromthis-class"></a>Classe enable_shared_from_this
 
@@ -46,13 +46,13 @@ protected:
 
 ### <a name="parameters"></a>Parametri
 
-`Ty` Tipo controllato dal puntatore condiviso.
+*Ty* tipo controllato dal puntatore condiviso.
 
 ## <a name="remarks"></a>Note
 
-Gli oggetti derivati da `enable_shared_from_this` possono usare i metodi `shared_from_this` nelle funzioni membro per creare proprietari [shared_ptr](../standard-library/shared-ptr-class.md) dell'istanza che condividono la proprietà con proprietari `shared_ptr` esistenti. In caso contrario, se si crea un nuovo `shared_ptr` usando `this`, è diverso dai proprietari `shared_ptr` esistenti, il che può portare a riferimenti non validi o all'eliminazione di un oggetto più volte.
+Gli oggetti derivati da `enable_shared_from_this` possono usare i metodi `shared_from_this` nelle funzioni membro per creare proprietari [shared_ptr](../standard-library/shared-ptr-class.md) dell'istanza che condividono la proprietà con proprietari `shared_ptr` esistenti. In caso contrario, se si crea una nuova `shared_ptr` usando **ciò**, è diverso dai esistente `shared_ptr` proprietari, che possono portare a riferimenti non validi o l'oggetto deve essere eliminato più di una volta.
 
-I costruttori, il distruttore e l'operatore di assegnazione sono protetti per evitare un uso improprio accidentale. Il tipo di argomento del modello `Ty` deve essere il tipo della classe derivata.
+I costruttori, il distruttore e l'operatore di assegnazione sono protetti per evitare un uso improprio accidentale. Il tipo di argomento di modello *Ty* deve essere il tipo della classe derivata.
 
 Per un esempio di utilizzo, vedere [enable_shared_from_this::shared_from_this](#shared_from_this).
 
@@ -73,7 +73,7 @@ shared_ptr<const T> shared_from_this() const;
 
 ### <a name="remarks"></a>Note
 
-Quando si derivano oggetti dalla classe di base `enable_shared_from_this`, le funzioni membro del modello `shared_from_this` restituiscono un oggetto [classe shared_ptr](../standard-library/shared-ptr-class.md) che condivide la proprietà di questa istanza con i proprietari `shared_ptr` esistenti. In caso contrario, se si crea un nuovo `shared_ptr` da `this`, è diverso dai proprietari `shared_ptr` esistenti, il che può portare a riferimenti non validi o all'eliminazione di un oggetto più volte. Il comportamento sarà indefinito se si chiama `shared_from_this` in un'istanza che non è già di proprietà di un oggetto `shared_ptr`.
+Quando si derivano oggetti dalla classe di base `enable_shared_from_this`, le funzioni membro del modello `shared_from_this` restituiscono un oggetto [classe shared_ptr](../standard-library/shared-ptr-class.md) che condivide la proprietà di questa istanza con i proprietari `shared_ptr` esistenti. In caso contrario, se si crea una nuova `shared_ptr` dal **ciò**, è diverso dai esistente `shared_ptr` proprietari, che possono portare a riferimenti non validi o l'oggetto deve essere eliminato più di una volta. Il comportamento sarà indefinito se si chiama `shared_from_this` in un'istanza che non è già di proprietà di un oggetto `shared_ptr`.
 
 ### <a name="example"></a>Esempio
 
@@ -111,5 +111,5 @@ sp2->val == 3
 
 ## <a name="see-also"></a>Vedere anche
 
-[enable_shared_from_this::shared_from_this](#shared_from_this)<br/>
+[enable_shared_from_this:: shared_from_this](#shared_from_this)<br/>
 [Classe shared_ptr](../standard-library/shared-ptr-class.md)<br/>

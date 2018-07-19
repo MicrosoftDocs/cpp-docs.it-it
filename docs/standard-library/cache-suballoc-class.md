@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 28dc4e52e2f114600ad3a22697500ce9d8594113
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ccc01372d08edb997ed6b0aaa70be69fde60a1e2
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33850307"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954323"
 ---
 # <a name="cachesuballoc-class"></a>Classe cache_suballoc
 
@@ -42,13 +42,13 @@ class cache_suballoc
 
 |Parametro|Descrizione|
 |---------------|-----------------|
-|`Sz`|Numero di elementi della matrice da allocare.|
+|*sz*|Numero di elementi della matrice da allocare.|
 
 ## <a name="remarks"></a>Note
 
-La classe di modello cache_suballoc archivia blocchi di memoria deallocati in un elenco di disponibilità con lunghezza non vincolata, usando `freelist<sizeof(Type), max_unbounded>`, e sottoalloca blocchi di memoria da una porzione più grande allocata con `operator new` quando l'elenco di disponibilità è vuoto.
+La classe di modello cache_suballoc archivia blocchi di memoria deallocati in un elenco di disponibilità con lunghezza non associato, usando `freelist<sizeof(Type), max_unbounded>`e Sottoalloca blocchi di memoria da una porzione più grande allocata con **operatore new** quando è l'elenco di disponibilità vuoto.
 
-Ogni porzione contiene `Sz * Nelts` byte di memoria utilizzabile e i dati richiesti da `operator new` e `operator delete`. Le porzioni allocate non vengono mai liberate.
+Ogni porzione contiene `Sz * Nelts` byte di memoria utilizzabile e i dati che **operatore new** e **operatore delete** richiedono. Le porzioni allocate non vengono mai liberate.
 
 ### <a name="constructors"></a>Costruttori
 
@@ -81,7 +81,7 @@ void *allocate(std::size_t count);
 
 |Parametro|Descrizione|
 |---------------|-----------------|
-|`count`|Numero di elementi della matrice da allocare.|
+|*count*|Numero di elementi della matrice da allocare.|
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -111,8 +111,8 @@ void deallocate(void* ptr, std::size_t count);
 
 |Parametro|Descrizione|
 |---------------|-----------------|
-|`ptr`|Puntatore al primo oggetto da deallocare dall'archivio.|
-|`count`|Numero di oggetti da deallocare dall'archivio.|
+|*ptr*|Puntatore al primo oggetto da deallocare dall'archivio.|
+|*count*|Numero di oggetti da deallocare dall'archivio.|
 
 ### <a name="remarks"></a>Note
 

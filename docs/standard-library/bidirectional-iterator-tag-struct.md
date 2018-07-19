@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 108397f6c3c3c088839230f2b48b505300149345
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a04265a68a03edc9f957161991d2ddd91a8e6096
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33844393"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38958179"
 ---
 # <a name="bidirectionaliteratortag-struct"></a>Struct bidirectional_iterator_tag
 
-Classe che specifica un tipo restituito per la funzione **iterator_category** che rappresenta un iteratore bidirezionale.
+Una classe che fornisce un tipo restituito per `iterator_category` funzione che rappresenta un iteratore bidirezionale.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -38,7 +38,7 @@ struct bidirectional_iterator_tag    : public forward_iterator_tag {};
 
 Le classi di tag di categoria vengono usate come tag di compilazione per la selezione dell'algoritmo. La funzione di modello deve trovare la categoria più specifica dell'argomento iteratore in modo da usare l'algoritmo più efficiente in fase di compilazione. Per ogni iteratore di tipo `Iterator`, è necessario definire `iterator_traits`< `Iterator`>::**iterator_category** come il tag di categoria più specifico che descrive il comportamento dell'iteratore.
 
-Il tipo è uguale a **iterator**\< **Iter**>::**iterator_category** quando **Iter** descrive un oggetto che può essere usato come iteratore bidirezionale.
+Il tipo è identico **iteratore** \< **Iter**>:: **iterator_category** quando `Iter` descrive un oggetto che può essere utilizzato come un bidirezionale iteratore.
 
 ## <a name="example"></a>Esempio
 

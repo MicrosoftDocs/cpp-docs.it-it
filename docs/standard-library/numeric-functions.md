@@ -16,12 +16,12 @@ helpviewer_keywords:
 - std::inner_product [C++]
 - std::iota [C++]
 - std::partial_sum [C++]
-ms.openlocfilehash: d5504ed83ce41f38dc69f3fb612438800285d905
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 47ac885152b0fdfbb9ce1ab77f6597db00c5bc07
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33862582"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38960252"
 ---
 # <a name="ltnumericgt-functions"></a>Funzioni &lt;numeric&gt;
 
@@ -48,21 +48,21 @@ Type accumulate(
 
 ### <a name="parameters"></a>Parametri
 
-`first` Iteratore di input che punta al primo elemento nell'intervallo per essere sommato o combinato secondo un'operazione binaria specificata.
+*primo* un iteratore di input che punta al primo elemento nell'intervallo venga sommato o combinato secondo un'operazione binaria specificata.
 
-`last` Iteratore di input che punta all'ultimo elemento nell'intervallo da sommato o combinato secondo un'operazione binaria specificata che è una posizione oltre l'ultimo elemento incluso nell'accumulo iterata.
+*ultimo* un iteratore di input che punta all'ultimo elemento nell'intervallo venga sommato o combinato secondo un'operazione binaria specificata immediatamente successiva all'ultimo elemento in realtà incluso nella somma iterata.
 
-`val` Un valore iniziale a cui ogni elemento è a sua volta aggiunti o combinato con in base a un'operazione binaria specificata.
+*Val* un valore iniziale a cui ogni elemento viene a sua volta aggiunto o combinato secondo un'operazione binaria specificata.
 
-`binary_op` Operazione binaria che si desidera applicare a ogni elemento nell'intervallo specificato e il risultato delle relative applicazioni precedente.
+*binary_op* l'operazione binaria da applicare a ciascun elemento nell'intervallo specificato e il risultato delle applicazioni precedenti.
 
 ### <a name="return-value"></a>Valore restituito
 
-Somma di `val` e tutti gli elementi nell'intervallo specificato per la prima funzione modello o, per la seconda funzione modello, risultato dell'applicazione dell'operazione binaria specificata anziché dell'operazione di somma, a ( *PartialResult, \*Iter*), dove *PartialResult* è il risultato delle applicazioni precedenti dell'operazione e `Iter` è un iteratore che punta a un elemento nell'intervallo.
+La somma dei *val* e tutti gli elementi nell'intervallo specificato per la prima funzione modello o, per la seconda funzione modello, il risultato dell'operazione binaria specificata, anziché l'operazione di somma, per applicazione (  *PartialResult \*Iter*), dove *PartialResult* è il risultato delle applicazioni precedenti dell'operazione e `Iter` è un iteratore che punta a un elemento nell'intervallo.
 
 ### <a name="remarks"></a>Note
 
-Il valore iniziale assicura che sia presente un risultato ben definito se l'intervallo è vuoto, nel qual caso viene restituito `val`. L'operazione binaria non deve essere necessariamente associativa o commutativa. Il risultato viene inizializzato sul valore iniziale `val` e quindi *result* = `binary_op` ( *result*, **\***`Iter`) viene calcolato in modo iterativo attraverso l'intervallo, dove `Iter` è un iteratore che punta all'elemento successivo nell'intervallo. L'intervallo deve essere valido e la complessità è in linea con le dimensioni dell'intervallo. Il tipo restituito dell'operatore binario deve essere convertibile in **Type** per garantire la chiusura durante l'iterazione.
+Il valore iniziale assicura che sia un risultato ben definito se l'intervallo è vuoto, nel qual caso *val* viene restituito. L'operazione binaria non deve essere necessariamente associativa o commutativa. Il risultato viene inizializzato sul valore iniziale *val* e quindi *risultato*  =  `binary_op` ( *risultato*, **\*** `Iter`) viene calcolato in modo iterativo attraverso l'intervallo, in cui `Iter` è un iteratore che punta all'elemento successivo nell'intervallo. L'intervallo deve essere valido e la complessità è in linea con le dimensioni dell'intervallo. Il tipo restituito dell'operatore binario deve essere convertibile in **Type** per garantire la chiusura durante l'iterazione.
 
 ### <a name="example"></a>Esempio
 
@@ -184,13 +184,13 @@ OutputIterator adjacent_difference(
 
 ### <a name="parameters"></a>Parametri
 
-`first` Un iteratore di input che punta al primo elemento nell'intervallo di input il cui elementi devono essere differenziati con i rispettivi predecessori o in cui la coppia di valori deve operare su un'altra operazione binaria specificata.
+*primo* un iteratore di input che punta al primo elemento nell'intervallo di input cui elementi devono essere differenziati con i rispettivi predecessori o in cui la coppia di valori deve operare su un'altra operazione binaria specificata.
 
-`last` Un iteratore di input che punta all'ultimo elemento nell'intervallo di input il cui elementi devono essere differenziati con i rispettivi predecessori o in cui la coppia di valori deve operare su un'altra operazione binaria specificata.
+*ultimo* un iteratore di input che punta all'ultimo elemento nell'intervallo di input cui elementi devono essere differenziati con i rispettivi predecessori o in cui la coppia di valori deve operare su un'altra operazione binaria specificata.
 
-`result` Un iteratore di output che punta al primo elemento un intervallo di destinazione in cui la serie di differenze o i risultati dell'operazione specificata da archiviare.
+*risultato* un iteratore di output che punta al primo elemento un intervallo di destinazione in cui vengono archiviate la serie di differenze o i risultati dell'operazione specificata.
 
-`binary_op` L'operazione binaria da applicare nell'operazione generalizzata che sostituisce l'operazione di sottrazione della procedura di differenziazione.
+*binary_op* l'operazione binaria da applicare nell'operazione generalizzata che sostituisce l'operazione di sottrazione della procedura di differenziazione.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -198,11 +198,11 @@ Iteratore di output che punta alla fine dell'intervallo di destinazione: `result
 
 ### <a name="remarks"></a>Note
 
-L'iteratore di output _ *risultato* può essere iteratore dell'iteratore di input * prima di tutto, *, in modo che `adjacent_difference`s possono essere calcolate sul posto.
+L'iteratore di output _ *risultato* può essere uguale all'iteratore di input * prima di tutto, *, in modo che `adjacent_difference`possano essere calcolate sul posto.
 
-Per una sequenza di valori *un*1, *un*2, *un*3, in un intervallo di input, la prima funzione modello archivia successivi **partial_difference**s *un*1, *un*2 - *un*1, a3 - *un*2, nell'intervallo di destinazione.
+Per una sequenza di valori *un*1, *un*2 *un*3, in un intervallo di input, la prima funzione modello archivia successivi `partial_difference`s *un*1 , *una*2 - *una*1, a3 - *un*2 nell'intervallo di destinazione.
 
-Per una sequenza di valori *a*1, *a*2, *a*3 di un intervallo di input, la seconda funzione modello archivia le **partial_difference** *a*1, *a*2 `binary_op` *a*1, *a*3 `binary_op` *a*2 successive nell'intervallo di destinazione.
+Per una sequenza di valori *un*1, *un*2 *un*3, in un intervallo di input, la seconda funzione modello archivia successivi `partial_difference`s *un* 1, *una*2 `binary_op` *una*1 *un*3 `binary_op` *un*2 nell'intervallo di destinazione.
 
 Non è necessario che l'operazione binaria `binary_op` sia associativa o commutativa perché l'ordine delle operazioni applicate è specificato in modo completo.
 
@@ -291,35 +291,35 @@ Type inner_product(
 
 ### <a name="parameters"></a>Parametri
 
-`first1` Un iteratore di input che punta al primo elemento nel primo intervallo il cui interna prodotto o generalizzato interna prodotto con il secondo intervallo è da calcolare.
+*first1* un iteratore di input che punta al primo elemento nel primo intervallo cui prodotto interno o il prodotto interno generalizzato con il secondo intervallo è deve essere calcolata.
 
-`last1` Un iteratore di input che punta all'ultimo elemento nel primo intervallo il cui interna prodotto o generalizzato interna prodotto con il secondo intervallo è da calcolare.
+*last1* un iteratore di input che punta all'ultimo elemento nel primo intervallo cui prodotto interno o il prodotto interno generalizzato con il secondo intervallo è da calcolare.
 
-`first2` Un iteratore di input che punta al primo elemento nel secondo intervallo il cui interna prodotto o generalizzato interna prodotto con il primo intervallo è da calcolare.
+*first2* un iteratore di input che punta al primo elemento nel secondo intervallo cui prodotto interno o è possibile calcolare il prodotto interno generalizzato con il primo intervallo.
 
-`val` Un valore iniziale a cui il prodotto interna o generalizzato interna prodotto tra gli intervalli è da aggiungere.
+*Val* un valore iniziale a cui il prodotto interno generalizzato tra gli intervalli o il prodotto interno deve essere aggiunto.
 
-*binary_op1* operazione binaria che sostituisce l'operazione interna prodotto della somma applicato per i prodotti tra gli elementi nella generalizzazione del prodotto interna.
+*binary_op1* operazione binaria che sostituisce l'operazione di somma applicata ai prodotti tra elementi nella generalizzazione del prodotto interno del prodotto interno.
 
-*binary_op2* operazione binaria che sostituisce l'operazione tra gli elementi interna prodotto di più volte nella generalizzazione del prodotto interna.
+*binary_op2* operazione binaria che sostituisce l'operazione tra gli elementi del prodotto interno di moltiplicazione nella generalizzazione del prodotto interno.
 
 ### <a name="return-value"></a>Valore restituito
 
 La prima funzione membro restituisce la somma dei prodotti tra gli elementi e la aggiunge al valore iniziale specificato. Per gli intervalli di valori *a*i e *b*i, viene quindi restituito:
 
-`val` + ( *un*1 \* *b*1) + ( *un*2 \* *b*2) + + ( *un*n \* *b*n)
+`val` + ( *una*1 \* *b*1) + ( *un*2 \* *b*2) + + ( *un*n \* *b*n)
 
-sostituendo in modo iterativo `val` con `val` + ( *un*si \* *b*i).
+sostituendo in modo iterativo *val* con `val` + ( *una*ho \* *b*ho).
 
 La seconda funzione membro restituisce:
 
-`val` *binary_op1* ( *un*1 *binary_op2* *b*1) *binary_op1* ( *un*2 *binary_op2* *b*2) *binary_op1* ... *binary_op1* ( *un*n *binary_op2* *b*n)
+`val` *binary_op1* ( *una*1 *binary_op2* *b*1) *binary_op1* ( *un*2 *binary_op2* *b*2) *binary_op1* ... *binary_op1* ( *una*n *binary_op2* *b*n)
 
-sostituendo in modo iterativo `val` con `val` *binary_op1* ( *un*si *binary_op2* *b*i).
+sostituendo in modo iterativo *val* con `val` *binary_op1* ( *un*ho *binary_op2* *b* i).
 
 ### <a name="remarks"></a>Note
 
-Il valore iniziale assicura che sia presente un risultato ben definito se l'intervallo è vuoto, nel qual caso viene restituito `val`. Le operazioni binarie non devono essere necessariamente associative o commutative. L'intervallo deve essere valido e la complessità è in linea con le dimensioni dell'intervallo. Il tipo restituito dell'operatore binario deve essere convertibile in **Type** per garantire la chiusura durante l'iterazione.
+Il valore iniziale assicura che sia un risultato ben definito se l'intervallo è vuoto, nel qual caso *val* viene restituito. Le operazioni binarie non devono essere necessariamente associative o commutative. L'intervallo deve essere valido e la complessità è in linea con le dimensioni dell'intervallo. Il tipo restituito dell'operatore binario deve essere convertibile in **Type** per garantire la chiusura durante l'iterazione.
 
 ### <a name="example"></a>Esempio
 
@@ -413,7 +413,7 @@ int main()
 
 ## <a name="iota"></a>  iota
 
-Archivia un valore iniziale a partire dal primo elemento e inserendo gli incrementi successivi del valore (` value++`) in ciascun elemento dell'intervallo `[ first,  last)`.
+Archivia un valore iniziale, che inizia con il primo elemento e inserendo gli incrementi successivi del valore di (` value++`) in ogni elemento nell'intervallo `[ first,  last)`.
 
 ```cpp
 template <class ForwardIterator, class Type>
@@ -422,11 +422,11 @@ void iota(ForwardIterator first, ForwardIterator last, Type value);
 
 ### <a name="parameters"></a>Parametri
 
-`first` Iteratore di input che punta al primo elemento nell'intervallo da compilare.
+*primo* un iteratore di input che punta al primo elemento nell'intervallo da compilare.
 
-`last` Iteratore di input che punta all'ultimo elemento nell'intervallo da compilare.
+*ultimo* un iteratore di input che punta all'ultimo elemento nell'intervallo da compilare.
 
-`value` Il valore iniziale per l'archiviazione nel primo elemento e di incremento in successione per gli elementi successivi.
+*valore* il valore iniziale da archiviare nel primo elemento e da incrementare per gli elementi successivi.
 
 ### <a name="remarks"></a>Note
 
@@ -493,27 +493,27 @@ OutputIterator partial_sum(
 
 ### <a name="parameters"></a>Parametri
 
-`first` Iteratore di input che punta al primo elemento nell'intervallo per venga parzialmente sommato o combinato secondo un'operazione binaria specificata.
+*primo* un iteratore di input che punta al primo elemento nell'intervallo per venga parzialmente sommato o combinato secondo un'operazione binaria specificata.
 
-`last` Iteratore di input che punta all'ultimo elemento nell'intervallo da parzialmente sommato o combinato secondo un'operazione binaria specificata che è una posizione oltre l'ultimo elemento incluso nell'accumulo iterata.
+*ultimo* un iteratore di input che punta all'ultimo elemento nell'intervallo per venga parzialmente sommato o combinato secondo un'operazione binaria specificata immediatamente successiva all'ultimo elemento in realtà incluso nella somma iterata.
 
-`result` Un iteratore di output che punta al primo elemento un intervallo di destinazione in cui la serie di somme parziali o i risultati dell'operazione specificata da archiviare.
+*risultato* un iteratore di output che punta al primo elemento un intervallo di destinazione in cui vengono archiviate la serie di somme parziali o i risultati dell'operazione specificata.
 
-`binary_op` L'operazione binaria da applicare nell'operazione generalizzata che sostituisce l'operazione di somma della procedura di somma parziale.
+*binary_op* operazione binaria da applicare nell'operazione generalizzata che sostituisce l'operazione di somma della procedura di somma parziale.
 
 ### <a name="return-value"></a>Valore restituito
 
-Iteratore di output che punta alla fine dell'intervallo di destinazione: `result` + ( `last` - `first`),
+Iteratore di output che punta alla fine dell'intervallo di destinazione: `result` + (`last` - `first`),
 
 ### <a name="remarks"></a>Note
 
-L'iteratore di output `result` può essere uguale all'iteratore di input `first`, in modo che le somme parziali possano essere calcolate sul posto.
+Iteratore di output *risultato* può essere uguale all'iteratore di input *primo*, in modo che le somme parziali possano essere calcolate sul posto.
 
 Per una sequenza di valori *a*1, *a*2, *a*3 in un intervallo di input, la prima funzione modello archivia le somme parziali successive nell'intervallo di destinazione, dove l'elemento *i*th è fornito da (  ( ( *a*1 + *a*2) + *a*3) *a*i).
 
-Per una sequenza di valori *un*1, *un*2, *un*3, in un intervallo di input, la seconda funzione di modello archivia le somme parziali successive nell'intervallo di destinazione, in cui l'elemento ith è specificato da ((( *un*1 `binary_op` *un*2) `binary_op` *un* 3)*un*i).
+Per una sequenza di valori *una*1, *una*2 *un*3, in un intervallo di input, la seconda funzione modello archivia le somme parziali successive nell'intervallo di destinazione, in cui è l'elemento con determinato da ((( *un*1 `binary_op` *una*2) `binary_op` *un*3) *un*ho).
 
-Non è necessario che l'operazione binaria `binary_op` sia associativa o commutativa perché l'ordine delle operazioni applicate è specificato in modo completo.
+L'operazione binaria *binary_op* non debba essere associativa o commutativa, perché si applica l'ordine delle operazioni è completamente specificato.
 
 ### <a name="example"></a>Esempio
 

@@ -1,5 +1,5 @@
 ---
-title: Classi di moduli COM (ATL) | Documenti Microsoft
+title: Classi dei moduli COM (ATL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,21 +16,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: abf5449135bd0220f82400aed5e1c0aba0b90591
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8485f9565c75796cdb7a10f303469c1393b9f55f
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32354981"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38958218"
 ---
-# <a name="com-modules-classes"></a>Classi di moduli COM
-Le classi seguenti offrono il supporto per un modulo COM:  
+# <a name="com-modules-classes"></a>Classi dei moduli COM
+Le classi seguenti forniscono supporto per un modulo COM:  
   
--   [CAtlBaseModule](../atl/reference/catlbasemodule-class.md) viene creata un'istanza di questa classe in ogni progetto ATL.  
+-   [CAtlBaseModule](../atl/reference/catlbasemodule-class.md) viene creata un'istanza di questa classe in tutti i progetti ATL.  
   
 -   [CAtlComModule](../atl/reference/catlcommodule-class.md) questa classe implementa un modulo di server COM.  
   
--   [CAtlModule](../atl/reference/catlmodule-class.md) questa classe fornisce i metodi utilizzati da diverse classi di modulo ATL.  
+-   [CAtlModule](../atl/reference/catlmodule-class.md) questa classe fornisce metodi usati da diverse classi di modulo ATL.  
   
 -   [CAtlModuleT](../atl/reference/catlmodulet-class.md) questa classe implementa un modulo ATL.  
   
@@ -38,16 +38,16 @@ Le classi seguenti offrono il supporto per un modulo COM:
   
 -   [CAtlServiceModuleT](../atl/reference/catlservicemodulet-class.md) questa classe implementa un servizio.  
   
--   [CAtlWinModule](../atl/reference/catlwinmodule-class.md) questa classe fornisce supporto per i componenti di finestra ATL.  
+-   [CAtlWinModule](../atl/reference/catlwinmodule-class.md) questa classe offre supporto per i componenti di finestra ATL.  
   
--   [CComModule](../atl/reference/ccommodule-class.md) questa classe implementa un modulo DLL o EXE. Obsoleto in ATL 7.0.  
+-   [CComModule](../atl/reference/ccommodule-class.md) questa classe implementa un modulo DLL o EXE. Obsoleti in ATL 7.0.  
   
--   [CComAutoThreadModule](../atl/reference/ccomautothreadmodule-class.md) questa classe implementa un modulo EXE, con supporto per più apartment di pool di thread. Obsoleto in ATL 7.0.  
+-   [CComAutoThreadModule](../atl/reference/ccomautothreadmodule-class.md) questa classe implementa un modulo di file EXE, con supporto per più apartment di pool di thread. Obsoleti in ATL 7.0.  
   
 ## <a name="related-articles"></a>Articoli correlati  
  [Classi di modulo ATL](../atl/atl-module-classes.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Cenni preliminari sulla classe](../atl/atl-class-overview.md)   
- [Classi Module](../atl/atl-module-classes.md)
+ [Panoramica della classe](../atl/atl-class-overview.md)   
+ [Classi di modulo](../atl/atl-module-classes.md)
 

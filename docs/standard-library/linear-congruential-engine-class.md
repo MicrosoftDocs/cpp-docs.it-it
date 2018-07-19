@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6f902e7a1a3ae4bcb35a4822228425747476d5bc
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d4069dc5151dd231773e926aadf17de7c03d3770
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33864073"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38958279"
 ---
 # <a name="linearcongruentialengine-class"></a>Classe linear_congruential_engine
 
@@ -55,13 +55,13 @@ class linear_congruential_engine{
 
 ### <a name="parameters"></a>Parametri
 
-`UIntType` Il tipo di risultato unsigned integer. Per informazioni sui tipi possibili, vedere [\<random>](../standard-library/random.md).
+*UIntType* il tipo di risultato integer senza segno. Per informazioni sui tipi possibili, vedere [\<random>](../standard-library/random.md).
 
-`A` **Moltiplicatore**. **Precondizione**: vedere la sezione Note.
+*Oggetto* **moltiplicatore**. **Precondizione**: vedere la sezione Note.
 
-`C` **Incremento**. **Precondizione**: vedere la sezione Note.
+*C* **incremento**. **Precondizione**: vedere la sezione Note.
 
-`M` **Modulo**. **Precondizione**: vedere la sezione Note.
+*M* **Modulus**. **Precondizione**: vedere la sezione Note.
 
 ## <a name="members"></a>Membri
 
@@ -80,9 +80,9 @@ La classe modello `linear_congruential_engine` è il motore di generazione più 
 
 Il motore produce valori di un tipo integrale senza segno specificato dall'utente usando la relazione di ricorrenza (*period*) `x(i) = (A * x(i-1) + C) mod M`.
 
-Se `M` è zero, il valore usato per questa operazione di modulo è `numeric_limits<result_type>::max() + 1`. L'ultimo valore restituito è lo stato del motore oppure il valore di seeding se non sono state effettuate chiamate a `operator()`.
+Se *M* è uguale a zero, il valore usato per questa operazione di modulo è `numeric_limits<result_type>::max() + 1`. L'ultimo valore restituito è lo stato del motore oppure il valore di seeding se non sono state effettuate chiamate a `operator()`.
 
-Se `M` è diverso da zero, i valori degli argomenti di modello `A` e `C` devono essere minori di `M`.
+Se *M* è diverso da zero, i valori degli argomenti di modello *oggetto* e *C* deve essere minore di *M*.
 
 Sebbene sia possibile costruire un generatore direttamente da questo motore, è anche possibile usare uno dei typedef predefiniti seguenti.
 

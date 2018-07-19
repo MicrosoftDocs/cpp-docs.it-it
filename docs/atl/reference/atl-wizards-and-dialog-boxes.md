@@ -1,5 +1,5 @@
 ---
-title: Finestre di dialogo e procedure guidate ATL | Documenti Microsoft
+title: Finestre di dialogo e procedure guidate ATL | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,15 +14,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bfdb246f5d331936993093fce068efdcdceee5c2
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8bc65cd853646ae447b9cf4b97b62390d2facd53
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32356673"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38960616"
 ---
 # <a name="atl-wizards-and-dialog-boxes"></a>Finestre di dialogo e procedure guidate ATL
-Le procedure guidate Active Template Library (ATL) generano codice di boilerplate per diversi tipi di oggetti COM. È possibile eseguire le procedure guidate aprendo il menu di scelta rapida per un progetto in **Esplora** e scegliendo **Aggiungi**, **classe**.  
+Le procedure guidate libreria ATL (Active Template) generano codice boilerplate per diversi tipi di oggetti COM. È possibile eseguire le procedure guidate, aprire il menu di scelta rapida per un progetto in **Esplora soluzioni** e scegliendo **Add**, **classe**.  
   
 ## <a name="related-articles"></a>Articoli correlati  
   
@@ -33,9 +33,9 @@ Le procedure guidate Active Template Library (ATL) generano codice di boilerplat
 |[Pagina delle proprietà ATL](../../atl/reference/adding-an-atl-property-page.md)|Crea una pagina delle proprietà di base.|  
 |[Provider OLE DB ATL](../../atl/reference/adding-an-atl-ole-db-provider.md)|Crea un provider OLE DB di base.|  
 |[Consumer OLE DB ATL](../../atl/reference/adding-an-atl-ole-db-consumer.md)|Crea un consumer OLE DB di base.|  
-|[La finestra di dialogo ATL](../../atl/reference/adding-an-atl-dialog-box.md)|Crea una finestra di dialogo base.|  
+|[Finestra di dialogo ATL](../../atl/reference/adding-an-atl-dialog-box.md)|Crea una finestra di dialogo di base.|  
 |[Controllo ATL](../../atl/reference/adding-an-atl-control.md)|Crea un controllo ActiveX di base.|  
-|[Componente ATL COM+ 1.0](../../atl/reference/adding-an-atl-com-plus-1-0-component.md)|Crea un componente ATL COM+ 1.0 di base|  
+|[Componente ATL COM+ 1.0](../../atl/reference/adding-an-atl-com-plus-1-0-component.md)|Crea un componente ATL COM+ 1.0 base|  
 |[Componente pagine ASP ATL](../../atl/reference/adding-an-atl-active-server-page-component.md)|Crea un componente pagine ASP ATL base.|  
 |[Componenti Desktop COM ATL](../../atl/atl-com-desktop-components.md)|Collegamenti alla documentazione ATL.|
 

@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5445379597c4fefcd657303a05c33b6509d54d2e
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 53f4deb0bfe9439011f75cd22d0d52b74dae9c1f
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/01/2018
-ms.locfileid: "34569898"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38959725"
 ---
 # <a name="steadyclock-struct"></a>Struct steady_clock
 
@@ -43,22 +43,22 @@ Un clock è *monotonico* se il valore restituito da una prima chiamata a `now` �
 
 |nome|Descrizione|
 |----------|-----------------|
-|`steady_clock::duration`|Un sinonimo `nanoseconds`, definito in \<chrono >.|
-|`steady_clock::period`|Un sinonimo `nano`, definito in \<percentuale >.|
-|`steady_clock::rep`|Un sinonimo **lungo** **long**, il tipo che viene utilizzato per rappresentare il numero di tick del clock in istanze di contenuti di `duration`.|
+|`steady_clock::duration`|Un sinonimo `nanoseconds`, definita in \<chrono >.|
+|`steady_clock::period`|Un sinonimo `nano`, definita in \<ratio >.|
+|`steady_clock::rep`|Un sinonimo **lungo** **long**, il tipo che viene usato per rappresentare il numero di tick del clock in istanze di contenuti di `duration`.|
 |`steady_clock::time_point`|Sinonimo di `chrono::time_point<steady_clock>`.|
 
 ## <a name="public-functions"></a>Funzioni pubbliche
 
 |Funzione|Descrizione|
 |--------------|-----------------|
-|`now`|Restituisce l'ora corrente come una `time_point` valore.|
+|`now`|Restituisce l'ora corrente come un `time_point` valore.|
 
 ## <a name="public-constants"></a>Costanti pubbliche
 
 |nome|Descrizione|
 |----------|-----------------|
-|`steady_clock::is_steady`|Contiene `true`. Un oggetto `steady_clock` è *costante*.|
+|`steady_clock::is_steady`|Mantiene **true**. Un oggetto `steady_clock` è *costante*.|
 
 ## <a name="requirements"></a>Requisiti
 

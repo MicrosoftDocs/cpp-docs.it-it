@@ -30,12 +30,12 @@ helpviewer_keywords:
 - std::promise [C++], swap
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ac8508cab7afc7e6614c29b64d78849383f5bc2d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8a1ddfd30a1e061426f0a19ac1118aa5ade1de17
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33861046"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38958561"
 ---
 # <a name="promise-class"></a>Classe promise
 
@@ -54,7 +54,7 @@ class promise;
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[Oggetto Promise](#promise)|Costruisce un oggetto `promise`.|
+|[oggetto Promise](#promise)|Costruisce un oggetto `promise`.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
@@ -79,7 +79,7 @@ class promise;
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** \<futura >
+**Intestazione:** \<future >
 
 **Spazio dei nomi:** std
 
@@ -107,7 +107,7 @@ promise& operator=(promise&& Other) noexcept;
 
 ### <a name="parameters"></a>Parametri
 
-`Other` Oggetto `promise` oggetto.
+*Altri* oggetto `promise` oggetto.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -115,7 +115,7 @@ promise& operator=(promise&& Other) noexcept;
 
 ### <a name="remarks"></a>Note
 
-Questo operatore trasferisce lo stato asincrono associato da `Other`. Dopo il trasferimento, `Other` è *empty*.
+Questo operatore trasferisce lo stato asincrono associato da *altri*. Dopo il trasferimento *altri* viene *vuota*.
 
 ## <a name="promise"></a>  Costruttore promise::promise
 
@@ -130,17 +130,17 @@ promise(promise&& Other) noexcept;
 
 ### <a name="parameters"></a>Parametri
 
-`Al` Allocatore di memoria. Per altre informazioni, vedere [\<allocators>](../standard-library/allocators-header.md).
+*Al* un allocatore di memoria. Per altre informazioni, vedere [\<allocators>](../standard-library/allocators-header.md).
 
-`Other` Oggetto `promise` oggetto.
+*Altri* oggetto `promise` oggetto.
 
 ### <a name="remarks"></a>Note
 
 Il primo costruttore costruisce un oggetto *empty*`promise`.
 
-Il secondo costruttore costruisce un oggetto `promise` vuoto e usa `Al` per l'allocazione della memoria.
+Il secondo costruttore crea un oggetto vuoto `promise` oggetto e viene utilizzato *Al* per l'allocazione di memoria.
 
-Il terzo costruttore costruisce un oggetto `promise` e trasferisce lo stato asincrono associato da `Other`, lasciando `Other` vuoto.
+Il terzo costruttore crea un `promise` dell'oggetto e trasferisce lo stato asincrono associato da *altri*e lascia *altri* vuoto.
 
 ## <a name="set_exception"></a>  promise::set_exception
 
@@ -152,7 +152,7 @@ void set_exception(exception_ptr Exc);
 
 ### <a name="parameters"></a>Parametri
 
-`Exc` Un' [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr) che viene archiviato con questo metodo come risultato dell'eccezione.
+*Escl* un' [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr) archiviato da questo metodo come risultato dell'eccezione.
 
 ### <a name="remarks"></a>Note
 
@@ -172,7 +172,7 @@ void set_exception_at_thread_exit(exception_ptr Exc);
 
 ### <a name="parameters"></a>Parametri
 
-`Exc` Un' [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr) che viene archiviato con questo metodo come risultato dell'eccezione.
+*Escl* un' [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr) archiviato da questo metodo come risultato dell'eccezione.
 
 ### <a name="remarks"></a>Note
 
@@ -195,7 +195,7 @@ void promise<void>::set_value();
 
 ### <a name="parameters"></a>Parametri
 
-`Val` Il valore da archiviare come risultato.
+*Val* il valore da archiviare come risultato.
 
 ### <a name="remarks"></a>Note
 
@@ -205,11 +205,11 @@ Se [set_exception](#set_exception), [set_exception_at_thread_exit](#set_exceptio
 
 Come risultato di questo metodo, i thread bloccati sullo stato asincrono associato vengono sbloccati.
 
-Il primo metodo genera anche un'eccezione generata quando `Val` viene copiato nello stato asincrono associato. In questo caso lo stato asincrono associato non è impostato su ready.
+Il primo metodo genera anche un'eccezione generata quando *Val* viene copiato nello stato asincrono associato. In questo caso lo stato asincrono associato non è impostato su ready.
 
-Il secondo metodo genera anche un'eccezione generata quando `Val` viene spostato nello stato asincrono associato. In questo caso lo stato asincrono associato non è impostato su ready.
+Il secondo metodo genera anche un'eccezione generata quando *Val* viene spostato nello stato asincrono associato. In questo caso lo stato asincrono associato non è impostato su ready.
 
-Per la parziale specializzazione `promise<Ty&>`, il valore archiviato è in effetti un riferimento a `Val`.
+Per la parziale specializzazione `promise<Ty&>`, il valore archiviato è in effetti un riferimento a *Val*.
 
 Per la specializzazione `promise<void>`, non esiste alcun valore archiviato.
 
@@ -226,7 +226,7 @@ void promise<void>::set_value_at_thread_exit();
 
 ### <a name="parameters"></a>Parametri
 
-`Val` Il valore da archiviare come risultato.
+*Val* il valore da archiviare come risultato.
 
 ### <a name="remarks"></a>Note
 
@@ -236,11 +236,11 @@ Se [set_exception](#set_exception), [set_exception_at_thread_exit](#set_exceptio
 
 A differenza di `set_value`, lo stato associato asincrono non viene impostato su ready finché tutti gli oggetti locali del thread corrente non sono stati eliminati definitivamente. In genere, i thread bloccati sullo stato associato asincrono non vengono sbloccati finché non si esce dal thread corrente.
 
-Il primo metodo genera anche un'eccezione generata quando `Val` viene copiato nello stato asincrono associato.
+Il primo metodo genera anche un'eccezione generata quando *Val* viene copiato nello stato asincrono associato.
 
-Il secondo metodo genera anche un'eccezione generata quando `Val` viene spostato nello stato asincrono associato.
+Il secondo metodo genera anche un'eccezione generata quando *Val* viene spostato nello stato asincrono associato.
 
-Per la parziale specializzazione `promise<Ty&>`, il valore archiviato è in effetti un riferimento a `Val`.
+Per la parziale specializzazione `promise<Ty&>`, il valore archiviato è in realtà un riferimento a *Val*.
 
 Per la specializzazione `promise<void>`, non esiste alcun valore archiviato.
 
@@ -254,7 +254,7 @@ void swap(promise& Other) noexcept;
 
 ### <a name="parameters"></a>Parametri
 
-`Other` Oggetto `promise` oggetto.
+*Altri* oggetto `promise` oggetto.
 
 ## <a name="see-also"></a>Vedere anche
 

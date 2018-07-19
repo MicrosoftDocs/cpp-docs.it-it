@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 83180020c20f78c16af0b1b33bada91936b6af9b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f065f7c00d3853d00c1063cd5b2838ec6d1d27b4
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33844406"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38952997"
 ---
 # <a name="identity-structure"></a>Struttura identity
 
@@ -40,13 +40,13 @@ struct identity {
 
 |Parametro|Descrizione|
 |---------------|-----------------|
-|`left`|Valore da identificare.|
+|*left*|Valore da identificare.|
 
 ## <a name="remarks"></a>Note
 
 La classe contiene la definizione di tipo pubblico `type`, che equivale al tipo di parametro di modello. Viene usata insieme alla funzione modello [forward](../standard-library/utility-functions.md#forward) per garantire che un parametro di funzione abbia il tipo desiderato.
 
-Per compatibilità con il codice meno recente, la classe definisce anche la funzione di identità `operator()` che restituisce il relativo argomento `left`.
+Per garantire la compatibilità con il codice precedente, la classe definisce anche la funzione identity `operator()` che restituisce il relativo argomento *sinistro*.
 
 ## <a name="requirements"></a>Requisiti
 

@@ -1,5 +1,5 @@
 ---
-title: Tipo di accesso alla raccolta | Documenti Microsoft
+title: Tipo di accesso alla libreria | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,23 +16,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fb81a8aa7d9262992da29a2d93cf770fad754316
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: afba5d2c2d0cd0b84e12cbd13cedba473b535587
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33373211"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37885897"
 ---
 # <a name="type-library-access"></a>Accesso alla libreria dei tipi
-Librerie dei tipi espongono le interfacce di un controllo OLE ad altre applicazioni compatibili con OLE. Ogni controllo OLE deve avere una libreria dei tipi, se una o più interfacce da esporre.  
+Librerie dei tipi espongono le interfacce di un controllo OLE ad altre applicazioni compatibili con OLE. Ogni controllo OLE deve avere una libreria dei tipi se una o più interfacce devono essere esposti.  
   
- Le macro seguenti consentono un controllo OLE fornire l'accesso alla propria libreria dei tipi:  
+ Le macro seguenti consentono un controllo OLE fornire l'accesso per la propria libreria dei tipi:  
   
 ### <a name="type-library-access"></a>Accesso alla libreria dei tipi  
   
 |||  
 |-|-|  
-|[DECLARE_OLETYPELIB](#declare_oletypelib)|Dichiara un `GetTypeLib` funzione membro di un controllo OLE (deve essere utilizzato nella dichiarazione di classe).|  
+|[DECLARE_OLETYPELIB](#declare_oletypelib)|Dichiara un `GetTypeLib` funzione membro di un controllo OLE (deve essere usato nella dichiarazione di classe).|  
 |[IMPLEMENT_OLETYPELIB](#implement_oletypelib)|Implementa un `GetTypeLib` funzione membro di un controllo OLE (che sarà utilizzata nell'implementazione della classe).|  
   
 ##  <a name="declare_oletypelib"></a>  DECLARE_OLETYPELIB  
@@ -43,11 +43,11 @@ DECLARE_OLETYPELIB(class_name)
 ```  
   
 ### <a name="parameters"></a>Parametri  
- *CLASS_NAME5D*  
+ *CLASS_NAME*  
  Il nome della classe del controllo correlata alla libreria dei tipi.  
   
 ### <a name="remarks"></a>Note  
- Utilizzare questa macro nel file di intestazione della classe di controllo.  
+ Usare questa macro in file di intestazione classe del controllo.  
 
 ### <a name="requirements"></a>Requisiti  
  **Intestazione:** afxdisp.h  
@@ -60,20 +60,20 @@ IMPLEMENT_OLETYPELIB(class_name, tlid, wVerMajor,  wVerMinor)
 ```  
   
 ### <a name="parameters"></a>Parametri  
- *CLASS_NAME5D*  
+ *CLASS_NAME*  
  Il nome della classe del controllo correlata alla libreria dei tipi.  
   
  *tlid*  
- Il numero ID della libreria dei tipi.  
+ Il numero di ID della libreria dei tipi.  
   
- `wVerMajor`  
+ *wVerMajor*  
  Il numero di versione principale della libreria di tipo.  
   
- `wVerMinor`  
+ *wVerMinor*  
  Il numero di versione secondaria della libreria di tipo.  
   
 ### <a name="remarks"></a>Note  
- Questa macro deve essere presente nel file di implementazione per qualsiasi classe di controllo che usa il `DECLARE_OLETYPELIB` (macro).  
+ Questa macro deve essere presente nel file di implementazione per qualsiasi classe di controllo che usa declare_oletypelib (macro).  
 
 ### <a name="requirements"></a>Requisiti  
  **Intestazione:** afxdisp.h  

@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7e9a8bf702f4373040a6f7255d67f551b5dbfa60
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 05354361bd460f64daced16684e9f8b70de94898
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33846961"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954112"
 ---
 # <a name="freelist-class"></a>Classe freelist
 
@@ -43,12 +43,12 @@ class freelist
 
 |Parametro|Descrizione|
 |---------------|-----------------|
-|`Sz`|Numero di elementi della matrice da allocare.|
-|`Max`|Classe max che rappresenta il numero massimo di elementi da archiviare nell'elenco di disponibilità. La classe max può essere [max_none](../standard-library/max-none-class.md), [max_unbounded](../standard-library/max-unbounded-class.md), [max_fixed_size](../standard-library/max-fixed-size-class.md) o [max_variable_size](../standard-library/max-variable-size-class.md).|
+|*sz*|Numero di elementi della matrice da allocare.|
+|*Max*|Classe max che rappresenta il numero massimo di elementi da archiviare nell'elenco di disponibilità. La classe max può essere [max_none](../standard-library/max-none-class.md), [max_unbounded](../standard-library/max-unbounded-class.md), [max_fixed_size](../standard-library/max-fixed-size-class.md) o [max_variable_size](../standard-library/max-variable-size-class.md).|
 
 ## <a name="remarks"></a>Note
 
-Questa classe modello gestisce un elenco di blocchi di memoria di dimensione `Sz` in cui la lunghezza massima dell'elenco è determinata dalla classe max passata in `Max`.
+Questa classe modello gestisce un elenco di blocchi di memoria di dimensioni *Sz* con la lunghezza massima dell'elenco è determinata dalla classe max passata *Max*.
 
 ### <a name="constructors"></a>Costruttori
 
@@ -93,7 +93,7 @@ Restituisce un puntatore al blocco di memoria rimosso dall'elenco.
 
 ### <a name="remarks"></a>Note
 
-La funzione membro restituisce `NULL` se l'elenco è vuoto. In caso contrario, rimuove il primo blocco di memoria dall'elenco.
+La funzione membro restituisce NULL se l'elenco è vuoto. In caso contrario, rimuove il primo blocco di memoria dall'elenco.
 
 ## <a name="push"></a>  freelist::push
 
@@ -107,15 +107,15 @@ bool push(void* ptr);
 
 |Parametro|Descrizione|
 |---------------|-----------------|
-|`ptr`|Puntatore al blocco di memoria da aggiungere all'elenco di disponibilità.|
+|*ptr*|Puntatore al blocco di memoria da aggiungere all'elenco di disponibilità.|
 
 ### <a name="return-value"></a>Valore restituito
 
-`true` se la funzione `full` della classe max restituisce `false`; in caso contrario, la funzione `push` restituisce `false`.
+**true** se il `full` funzione della classe max restituisce **false**; in caso contrario, il `push` restituisce **false**.
 
 ### <a name="remarks"></a>Note
 
-Se la funzione `full` della classe max restituisce `false`, questa funzione membro aggiunge all'inizio dell'elenco il blocco di memoria a cui punta `ptr`.
+Se il `full` funzione della classe max restituisce **false**, questa funzione membro aggiunge il blocco di memoria a cui punta *ptr* nell'intestazione dell'elenco.
 
 ## <a name="see-also"></a>Vedere anche
 

@@ -36,12 +36,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b516478c72e92f63b898cc43aa4838ab72733a05
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b475f497509249a29eb466c1a353111661b744e6
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33858955"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38959472"
 ---
 # <a name="piecewiselineardistribution-class"></a>Classe piecewise_linear_distribution
 
@@ -90,7 +90,7 @@ public:
 
 ### <a name="parameters"></a>Parametri
 
-`RealType` Tipo di risultato, i valori predefiniti a virgola mobile `double`. Per informazioni sui tipi possibili, vedere [\<random>](../standard-library/random.md).
+*RealType* tipo di risultato, il valore predefinito è a virgola mobile **doppie**. Per informazioni sui tipi possibili, vedere [\<random>](../standard-library/random.md).
 
 ## <a name="remarks"></a>Note
 
@@ -266,15 +266,15 @@ explicit piecewise_linear_distribution(const param_type& parm);
 
 *intervalli* un' [initializer_list](../cpp/initializers.md) con gli intervalli della distribuzione.
 
-*conteggio* il numero di elementi nell'intervallo di distribuzioni.
+*conteggio* il numero di elementi dell'intervallo di distribuzioni.
 
 *xmin* il valore minimo dell'intervallo di distribuzioni.
 
 *xmax* il valore massimo dell'intervallo di distribuzioni. Deve essere maggiore di *xmin*.
 
-*weightfunc* l'oggetto che rappresenta la funzione di probabilità per la distribuzione. Il parametro e il valore restituito devono essere convertibili in `double`.
+*weightfunc* l'oggetto che rappresenta la funzione di probabilità per la distribuzione. Il valore restituito sia il parametro deve essere convertibile in **doppie**.
 
-*Parm* struttura di parametri usata per costruire la distribuzione.
+*Parm* la struttura di parametri utilizzata per costruire la distribuzione.
 
 ### <a name="remarks"></a>Note
 
@@ -290,7 +290,7 @@ piecewise_linear_distribution(
     InputIteratorW firstW);
 ```
 
-costruisce un oggetto di distribuzione con intervalli da iteratori nella sequenza [`firstI`, `lastI`) e una sequenza di pesi corrispondente a partire da `firstW`.
+Costruisce un oggetto di distribuzione con intervalli da iteratori nella sequenza [ `firstI`, `lastI`) e una di pesi corrispondente a partire da sequenza *firstW*.
 
 Il costruttore di elenchi di inizializzatori
 
@@ -301,7 +301,7 @@ piecewise_linear_distribution(
     UnaryOperation weightfunc);
 ```
 
-crea un oggetto di distribuzione con intervalli dall'elenco di inizializzatori `intervals` e pesi generati dalla funzione `weightfunc`.
+Costruisce un oggetto di distribuzione con intervalli dall'elenco di inizializzatori *intervalli* e pesi generati dalla funzione *weightfunc*.
 
 Il costruttore definito come
 
@@ -314,7 +314,7 @@ piecewise_linear_distribution(
     UnaryOperation weightfunc);
 ```
 
-costruisce un oggetto di distribuzione con intervalli `count` distribuiti in modo uniforme in [`xmin,xmax`], assegnando pesi a ciascun intervallo in base alla funzione `weightfunc`. `weightfunc` deve accettare un parametro e avere un valore restituito, entrambi convertibili in `double`. **Precondizione:**`xmin < xmax`.
+Costruisce un oggetto di distribuzione con *conteggio* intervalli distribuiti in modo uniforme in [ `xmin,xmax`], assegnazione di ogni intervallo di pesi in base alla funzione *weightfunc*, e  *weightfunc* deve accettare un parametro e avere un valore restituito, entrambi convertibili in `double`. **Precondizione:**`xmin < xmax`.
 
 Il costruttore definito come
 
@@ -322,7 +322,7 @@ Il costruttore definito come
 explicit piecewise_linear_distribution(const param_type& parm);
 ```
 
-crea un oggetto di distribuzione usando `parm` come struttura di parametri archiviata.
+Costruisce un oggetto di distribuzione usando *parm* come struttura del parametro archiviato.
 
 ## <a name="param_type"></a>  piecewise_linear_distribution::param_type
 

@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 504d561dd0d7fbc640c898aa8aa70a70337accb8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: bb03b35ed792bda7c506fd06d6102dda83c768e6
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33860645"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38959271"
 ---
 # <a name="mersennetwisterengine-class"></a>Classe mersenne_twister_engine
 
@@ -39,23 +39,23 @@ class mersenne_twister_engine;
 
 ### <a name="parameters"></a>Parametri
 
-`UIntType` Il tipo di risultato unsigned integer. Per informazioni sui tipi possibili, vedere [\<random>](../standard-library/random.md).
+*UIntType* il tipo di risultato integer senza segno. Per informazioni sui tipi possibili, vedere [\<random>](../standard-library/random.md).
 
-`W` **Dimensione parola**. Dimensione di ogni parola, in bit, della sequenza di stato. **Precondizione:** `2u < W ≤ numeric_limits<UIntType>::digits`
+*W* **dimensione parola**. Dimensione di ogni parola, in bit, della sequenza di stato. **Precondizione:** `2u < W ≤ numeric_limits<UIntType>::digits`
 
-`N` **Dimensione stato**. Numero di elementi (valori) nella sequenza di stato.
+*N* **dimensione stato**. Numero di elementi (valori) nella sequenza di stato.
 
-`M` **Dimensione spostamento**. Numero di elementi da ignorare durante ogni twist. **Precondizione:** `0 < M ≤ N`
+*M* **dimensione spostamento**. Numero di elementi da ignorare durante ogni twist. **Precondizione:** `0 < M ≤ N`
 
-`R` **Maschera di bit**. **Precondizione:** `R ≤ W`
+*R* **bit di maschera**. **Precondizione:** `R ≤ W`
 
-`A` **Maschera XOR**. **Precondizione:** `A ≤ (1u<<W) - 1u`
+*Oggetto* **maschera XOR**. **Precondizione:** `A ≤ (1u<<W) - 1u`
 
-`U`, `S`, `T`, `L` **Parametri MAIUSC Tempering**. Usati come valori di spostamento durante la crittografia. Precondizione: `U,S,T,L ≤ W`
+*U*, *S*, *T*, *g* **parametri MAIUSC Tempering**. Usati come valori di spostamento durante la crittografia. Precondizione: `U,S,T,L ≤ W`
 
-`D`, `B`, `C` **Parametri maschera di bit Tempering**. Usati come valori di maschera di bit durante la crittografia. Precondizione: `D,B,C ≤ (1u<<W) - 1u`
+*1!d*, *B*, *C* **parametri maschera di bit Tempering**. Usati come valori di maschera di bit durante la crittografia. Precondizione: `D,B,C ≤ (1u<<W) - 1u`
 
-`F` **Moltiplicatore inizializzazione**. Usato per l'inizializzazione della sequenza. Precondizione: `F ≤ (1u<<W) - 1u`
+*F* **moltiplicatore inizializzazione**. Usato per l'inizializzazione della sequenza. Precondizione: `F ≤ (1u<<W) - 1u`
 
 ## <a name="members"></a>Membri
 
@@ -70,9 +70,9 @@ Per altre informazioni sui membri del motore, vedere [\<random>](../standard-lib
 
 ## <a name="remarks"></a>Note
 
-Questa classe di modello descrive un motore di numeri casuali che restituisce valori sull'intervallo chiuso [ `0`, `2`<sup>W</sup> - `1`]. Contiene un valore integrale di grandi dimensioni con `W * (N - 1) + R` bit. Estrae `W` bit alla volta da questo valore elevato e quando ha usato tutti i bit, esegue il twist del valore di grandi dimensioni spostando e mescolando i bit in modo da avere un nuovo set di bit dal quale effettuare l'estrazione. Lo stato del motore è costituito dagli ultimi valori a `N` `W` bit usati se `operator()` è stato chiamato almeno `N` volte, altrimenti dai valori a `M` `W` che sono stati usati e dagli ultimi `N - M` valori di seeding.
+Questa classe di modello descrive un motore di numeri casuali che restituisce valori sull'intervallo chiuso [ `0`, `2`<sup>W</sup> - `1`]. Contiene un valore integrale di grandi dimensioni con `W * (N - 1) + R` bit. Estrae *W* bit alla volta da questo valore elevato e quando ha usato tutti i bit intreccia il valore di grandi dimensioni spostando e mescolando i bit in modo che includa un nuovo set di bit per estrarre da. Lo stato del motore è l'ultima `N` `W`-bit usati se i valori `operator()` è stato chiamato almeno *N* volte, altrimenti il `M` `W`-bit di valori che sono stati usati e dagli ultimi `N - M` valori di seeding.
 
-Il generatore esegue il twist del valore di grandi dimensioni tramite un registro di spostamento di feedback generalizzato di twist definito dai valori di spostamento `N` e `M`, da un valore di twist `R` e da una maschera XOR `A` condizionale. Inoltre, i bit del registro di spostamento non elaborato sono crittografati in base a una matrice di crittografia dei bit definita dai valori `U`, `D`, `S`, `B`, `T`, `C` e `L`.
+Il generatore intreccia il valore elevato che conserva mediante un registro a scorrimento a feedback generalizzato definito dai valori di spostamento *N* e *M*, un valore di twist *R*e un oggetto maschera XOR condizionale *oggetto*. Inoltre, i bit del Registro di spostamento non elaborato sono crittografati in base a una matrice di crittografia dei bit definita dai valori *U*, *1!d*, *S*, *B* , *T*, *C*, e *L*.
 
 L'argomento del modello `UIntType` deve essere abbastanza grande da contenere valori fino a `2`<sup>W</sup> - `1`. I valori degli altri argomenti del modello devono soddisfare i requisiti seguenti: `2u < W, 0 < M, M ≤ N, R ≤ W, U ≤ W, S ≤ W, T ≤ W, L ≤ W, W ≤ numeric_limits<UIntType>::digits, A ≤ (1u<<W) - 1u, B ≤ (1u<<W) - 1u, C ≤ (1u<<W) - 1u, D ≤ (1u<<W) - 1u, and F ≤ (1u<<W) - 1u`.
 

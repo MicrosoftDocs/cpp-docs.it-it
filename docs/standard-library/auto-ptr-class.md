@@ -24,12 +24,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 83c211617752a9c9701f513373d8fe796a26a1c6
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 00114711f93fcc1ec057ea50b1ce681523db3a9c
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33850717"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38958003"
 ---
 # <a name="autoptr-class"></a>Classe auto_ptr
 
@@ -65,13 +65,13 @@ public:
 ```
 ### <a name="parameters"></a>Parametri
 
-`right` Il `auto_ptr` da cui ottenere una risorsa esistente.
+*a destra* il `auto_ptr` da cui ottenere una risorsa esistente.
 
-`ptr` Il puntatore specificato per sostituire il puntatore archiviato.
+*PTR* puntatore specificato per sostituire il puntatore archiviato.
 
 ## <a name="remarks"></a>Note
 
-La classe modello descrive un puntatore intelligente, chiamato un `auto_ptr`, a un oggetto allocato. Il puntatore deve essere Null o deve designare un oggetto allocato da `new`. `auto_ptr` trasferisce la proprietà se il valore archiviato viene assegnato a un altro oggetto. Sostituisce il valore archiviato dopo un trasferimento con un puntatore Null. Il distruttore per `auto_ptr<Type>` elimina l'oggetto allocato. `auto_ptr<Type>` assicura che un oggetto allocato venga eliminato automaticamente quando il controllo lascia un blocco, anche tramite un'eccezione generata. Non costruire due oggetti `auto_ptr<Type>` proprietari dello stesso oggetto.
+La classe modello descrive un puntatore intelligente, chiamato un `auto_ptr`, a un oggetto allocato. Il puntatore deve essere null o un oggetto allocato da designare **nuovo**. `auto_ptr` trasferisce la proprietà se il valore archiviato viene assegnato a un altro oggetto. Sostituisce il valore archiviato dopo un trasferimento con un puntatore Null. Il distruttore per `auto_ptr<Type>` elimina l'oggetto allocato. `auto_ptr<Type>` assicura che un oggetto allocato venga eliminato automaticamente quando il controllo lascia un blocco, anche tramite un'eccezione generata. Non costruire due oggetti `auto_ptr<Type>` proprietari dello stesso oggetto.
 
 È possibile passare un oggetto `auto_ptr<Type>` in base al valore come argomento per una chiamata di funzione. Un `auto_ptr` non può essere un elemento di un contenitore della libreria standard. Non è possibile gestire in modo affidabile una sequenza di oggetti `auto_ptr<Type>` con un contenitore della libreria standard C++.
 
@@ -95,7 +95,7 @@ La classe modello descrive un puntatore intelligente, chiamato un `auto_ptr`, a 
 |-|-|
 |[get](#get)|La funzione membro restituisce il puntatore `myptr` archiviato.|
 |[release](#release)|Il membro sostituisce il puntatore archiviato `myptr` con un puntatore Null e restituisce il puntatore archiviato in precedenza.|
-|[reset](#reset)|La funzione membro valuta l'espressione `delete myptr`, ma solo se il valore del puntatore archiviato `myptr` cambia in seguito a una chiamata di funzione. Sostituisce quindi il puntatore archiviato con `ptr`.|
+|[reset](#reset)|La funzione membro valuta l'espressione `delete myptr`, ma solo se il valore del puntatore archiviato `myptr` cambia in seguito a una chiamata di funzione. Sostituisce quindi il puntatore archiviato con *ptr*.|
 
 ### <a name="operators"></a>Operatori
 
@@ -130,17 +130,17 @@ auto _ptr(auto _ptr<Other>& right) throw();
 
 ### <a name="parameters"></a>Parametri
 
-`ptr` Il puntatore all'oggetto che `auto_ptr` incapsula.
+*PTR* il puntatore all'oggetto che `auto_ptr` incapsula.
 
-`right` Il `auto_ptr` oggetto da copiare dal costruttore.
+*a destra* il `auto_ptr` oggetto deve essere copiato dal costruttore.
 
 ### <a name="remarks"></a>Note
 
-Il primo costruttore archivia `ptr` in **myptr**, il puntatore archiviato all'oggetto allocato. Il secondo costruttore trasferisce la proprietà del puntatore archiviato in `right`, archiviando `right`. [release](#release) in **myptr**.
+Il primo costruttore Archivia *ptr* in `myptr`, il puntatore archiviato all'oggetto allocato. Il secondo costruttore trasferisce la proprietà del puntatore archiviato in *a destra*, archiviando *a destra*. [rilasciare](#release) in `myptr`.
 
-Il terzo costruttore si comporta come il secondo, ad eccezione del fatto che archivia **right**. `ref`. **release** in **myptr**, dove `ref` è il riferimento archiviato in `right`.
+Il terzo costruttore si comporta come il secondo, ad eccezione del fatto che archivia `right`. `ref`. `release` nelle `myptr`, dove `ref` è il riferimento archiviato `right`.
 
-Il costruttore di modello si comporta come il secondo costruttore, a condizione che un puntatore ad **Other** possa essere convertito in modo implicito in un puntatore a **Type**.
+Il costruttore di modello si comporta come il secondo costruttore, a condizione che un puntatore a `Other` può essere convertito in modo implicito in un puntatore a `Type`.
 
 ### <a name="example"></a>Esempio
 
@@ -203,7 +203,7 @@ Destructing 00311AF8
 
 ## <a name="element_type"></a>  auto_ptr::element_type
 
-Il tipo è un sinonimo del parametro modello **Type**.
+Il tipo è un sinonimo del parametro di modello `Type`.
 
 ```cpp
 
@@ -212,7 +212,7 @@ typedef Type element  _type;
 
 ## <a name="get"></a>  auto_ptr::get
 
-La funzione membro restituisce il puntatore archiviato **myptr**.
+La funzione membro restituisce il puntatore `myptr` archiviato.
 
 ```cpp
 Type *get() const throw();
@@ -220,7 +220,7 @@ Type *get() const throw();
 
 ### <a name="return-value"></a>Valore restituito
 
-Il puntatore archiviato **myptr**.
+Il puntatore archiviato `myptr`.
 
 ### <a name="example"></a>Esempio
 
@@ -282,7 +282,7 @@ auto_ptr<Type>& operator=(auto_ptr_ref<Type> right) throw();
 
 ### <a name="parameters"></a>Parametri
 
-`right` Un oggetto di tipo `auto_ptr`.
+*a destra* un oggetto di tipo `auto_ptr`.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -290,7 +290,7 @@ Riferimento a un oggetto di tipo `auto_ptr`\< **Type**>.
 
 ### <a name="remarks"></a>Note
 
-L'assegnazione valuta l'espressione **delete myptr**, ma solo se il puntatore archiviato **myptr** cambia in seguito all'assegnazione. Viene quindi trasferita la proprietà del puntatore archiviato in _ *Right*, archiviando \_ *Right*. [release](#release) in **myptr**. La funzione restituisce **\*this**.
+L'assegnazione valuta l'espressione `delete myptr`, ma solo se il puntatore archiviato `myptr` modifiche in seguito all'assegnazione. Viene quindi trasferita la proprietà del puntatore archiviato in _ *Right*, archiviando \_ *Right*. [rilasciare](#release) in `myptr`. La funzione restituisce **\*this**.
 
 ### <a name="example"></a>Esempio
 
@@ -306,7 +306,7 @@ Type& operator*() const throw();
 
 ### <a name="return-value"></a>Valore restituito
 
-Un riferimento a un oggetto di tipo **Type** di proprietà del puntatore.
+Un riferimento a un oggetto di tipo `Type` di proprietà del puntatore.
 
 ### <a name="remarks"></a>Note
 
@@ -326,11 +326,11 @@ Type * operator->() const throw();
 
 ### <a name="return-value"></a>Valore restituito
 
-Un membro dell'oggetto di proprietà di **auto_ptr**.
+Un membro dell'oggetto che `auto_ptr` è proprietario.
 
 ### <a name="remarks"></a>Note
 
-L'operatore di selezione restituisce [get](#get)`( )`, in modo che l'espressione *ap*-> **member** si comporti come ( *ap*. **get**( ) )-> **member**, dove *ap* è un oggetto di classe `auto_ptr`\< **Type**>. Di conseguenza, il puntatore archiviato non deve essere null e **Type** deve essere una classe, uno struct o un tipo di unione con un membro **member**.
+L'operatore di selezione restituisce [get](#get)`( )`, in modo che l'espressione *ap*-> **member** si comporti come ( *ap*. **get**( ) )-> **member**, dove *ap* è un oggetto di classe `auto_ptr`\< **Type**>. Di conseguenza, il puntatore archiviato non deve essere null, e `Type` deve essere una classe, struct o tipo di unione con un `member` membro.
 
 ### <a name="example"></a>Esempio
 
@@ -368,7 +368,7 @@ int main()
 
 ## <a name="op_auto_ptr_ref_lt_other_gt"></a>  auto_ptr::operator auto_ptr_ref&lt;Other&gt;
 
-Esegue il cast da un `auto_ptr` a un **auto_ptr_ref**.
+Esegue il cast da un `auto_ptr` a un `auto_ptr_ref`.
 
 ```cpp
 template <class Other>
@@ -429,7 +429,7 @@ main exiting
 
 ## <a name="release"></a>  auto_ptr::release
 
-Il membro sostituisce il puntatore archiviato **myptr** con un puntatore null e restituisce il puntatore archiviato in precedenza.
+Il membro sostituisce il puntatore archiviato `myptr` con un puntatore Null e restituisce il puntatore archiviato in precedenza.
 
 ```cpp
 Type *release() throw();
@@ -441,7 +441,7 @@ Il puntatore archiviato in precedenza.
 
 ### <a name="remarks"></a>Note
 
-Il membro sostituisce il puntatore archiviato **myptr** con un puntatore null e restituisce il puntatore archiviato in precedenza.
+Il membro sostituisce il puntatore archiviato `myptr` con un puntatore Null e restituisce il puntatore archiviato in precedenza.
 
 ### <a name="example"></a>Esempio
 
@@ -491,7 +491,7 @@ Destructing 00311B88 Value: 6
 
 ## <a name="reset"></a>  auto_ptr::reset
 
-La funzione membro valuta l'espressione **eliminare** **myptr**, ma solo se il valore del puntatore archiviato **myptr** cambia in seguito a una chiamata di funzione. Sostituisce quindi il puntatore archiviato con **ptr**.
+La funzione membro valuta l'espressione `delete myptr`, ma solo se il valore del puntatore archiviato `myptr` modifiche come risultato una chiamata di funzione. Sostituisce quindi il puntatore archiviato con `ptr`.
 
 ```cpp
 void reset(Type* ptr = 0);
@@ -499,7 +499,7 @@ void reset(Type* ptr = 0);
 
 ### <a name="parameters"></a>Parametri
 
-`ptr` Il puntatore specificato per sostituire il puntatore archiviato **myptr**.
+*PTR* il puntatore specificato per sostituire il puntatore archiviato `myptr`.
 
 ### <a name="example"></a>Esempio
 

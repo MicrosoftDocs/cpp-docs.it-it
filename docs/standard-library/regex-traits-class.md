@@ -48,12 +48,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3d6eb69787d20343e8ed289311dba02a55e85592
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: 31f3f2a4c01645df17af8992cc7f6b92dd57966a
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34451563"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38960931"
 ---
 # <a name="regextraits-class"></a>Classe regex_traits
 
@@ -92,11 +92,11 @@ public:
 
 ### <a name="parameters"></a>Parametri
 
-`Elem` Il tipo di elemento di carattere per descrivere.
+*Elem* il tipo di elemento di carattere da descrivere.
 
 ## <a name="remarks"></a>Note
 
-La classe modello descrive vari tratti dell'espressione regolare per il tipo `Elem`. La classe modello [classe basic_regex](../standard-library/basic-regex-class.md) usa queste informazioni per modificare gli elementi di tipo `Elem`.
+La classe modello descrive vari tratti dell'espressione regolare per il tipo *Elem*. La classe modello [classe basic_regex](../standard-library/basic-regex-class.md) Usa queste informazioni per modificare elementi di tipo *Elem*.
 
 Ogni oggetto `regex_traits` contiene un oggetto di tipo `regex_traits::locale` usto da alcune delle sue funzioni membro. Le impostazioni locali predefinite sono una copia di `regex_traits::locale()`. La funzione membro `imbue` sostituisce l'oggetto delle impostazioni locali e la funzione membro `getloc` restituisce una copia dell'oggetto delle impostazioni locali.
 
@@ -365,11 +365,11 @@ locale_type imbue(locale_type loc);
 
 ### <a name="parameters"></a>Parametri
 
-`loc` Oggetto delle impostazioni locali da archiviare.
+*loc* oggetto delle impostazioni locali da archiviare.
 
 ### <a name="remarks"></a>Note
 
-La funzione membro copia `loc` nell'oggetto archiviato `locale` e restituisce una copia del valore precedente dell'oggetto archiviato `locale` .
+La funzione membro copia *loc* per l'oggetto memorizzato `locale` specificato e restituisce una copia del valore precedente dell'oggetto memorizzato `locale` oggetto.
 
 ### <a name="example"></a>Esempio
 
@@ -452,13 +452,13 @@ bool isctype(char_type ch, char_class_type cls) const;
 
 ### <a name="parameters"></a>Parametri
 
-`ch` Elemento da testare.
+*CH* l'elemento da verificare.
 
-`cls` Classi da testare.
+*CLS* le classi da testare.
 
 ### <a name="remarks"></a>Note
 
-La funzione membro restituisce true solo se il carattere `ch` è incluso nella classe di caratteri designata da `cls`.
+La funzione membro restituisce true solo se il carattere *ch* è nella classe di caratteri designata dal *cls*.
 
 ### <a name="example"></a>Esempio
 
@@ -541,7 +541,7 @@ static size_type length(const char_type *str);
 
 ### <a name="parameters"></a>Parametri
 
-`str`
+*str*
 
 La sequenza con terminazione null.
 
@@ -714,9 +714,9 @@ char_class_type lookup_classname(FwdIt first, FwdIt last) const;
 
 ### <a name="parameters"></a>Parametri
 
-`first` Inizio della sequenza da cercare.
+*primo* inizio della sequenza da cercare.
 
-`last` Fine della sequenza da cercare.
+*ultimo* fine della sequenza da cercare.
 
 ### <a name="remarks"></a>Note
 
@@ -808,9 +808,9 @@ string_type lookup_collatename(FwdIt first, FwdIt last) const;
 
 ### <a name="parameters"></a>Parametri
 
-`first` Inizio della sequenza da cercare.
+*primo* inizio della sequenza da cercare.
 
-`last` Fine della sequenza da cercare.
+*ultimo* fine della sequenza da cercare.
 
 ### <a name="remarks"></a>Note
 
@@ -1149,9 +1149,9 @@ string_type transform(FwdIt first, FwdIt last) const;
 
 ### <a name="parameters"></a>Parametri
 
-`first` Inizio della sequenza da trasformare.
+*primo* inizio della sequenza da trasformare.
 
-`last` Fine della sequenza da trasformare.
+*ultimo* fine della sequenza da trasformare.
 
 ### <a name="remarks"></a>Note
 
@@ -1239,9 +1239,9 @@ string_type transform_primary(FwdIt first, FwdIt last) const;
 
 ### <a name="parameters"></a>Parametri
 
-`first` Inizio della sequenza da trasformare.
+*primo* inizio della sequenza da trasformare.
 
-`last` Fine della sequenza da trasformare.
+*ultimo* fine della sequenza da trasformare.
 
 ### <a name="remarks"></a>Note
 
@@ -1328,7 +1328,7 @@ char_type translate(char_type ch) const;
 
 ### <a name="parameters"></a>Parametri
 
-`ch` Elemento da convertire.
+*CH* elemento da convertire.
 
 ### <a name="remarks"></a>Note
 
@@ -1415,7 +1415,7 @@ char_type translate_nocase(char_type ch) const;
 
 ### <a name="parameters"></a>Parametri
 
-`ch` Elemento da convertire.
+*CH* elemento da convertire.
 
 ### <a name="remarks"></a>Note
 
@@ -1502,13 +1502,13 @@ int value(Elem ch, int radix) const;
 
 ### <a name="parameters"></a>Parametri
 
-`ch` Elemento da convertire.
+*CH* elemento da convertire.
 
-`radix` Base aritmetica da usare.
+*radice* base aritmetica da usare.
 
 ### <a name="remarks"></a>Note
 
-La funzione membro restituisce il valore rappresentato dal carattere `ch` in base `radix`, oppure -1 se `ch` non è una cifra valida in base `radix`. La funzione verrà chiamata solo se il valore dell'argomento `radix` è 8, 10 o 16.
+La funzione membro restituisce il valore rappresentato dal carattere *ch* nella base *radice*, oppure -1 se *ch* non è una cifra valida nella base *radice*. La funzione verrà chiamata solo con un *radice* argomento di 8, 10 o 16.
 
 ### <a name="example"></a>Esempio
 
@@ -1591,5 +1591,5 @@ hex C == 12
 [Operatori \<regex>](../standard-library/regex-operators.md)<br/>
 [Classe regex_token_iterator](../standard-library/regex-token-iterator-class.md)<br/>
 [Typedef \<regex>](../standard-library/regex-typedefs.md)<br/>
-[regex_traits\<char > (classe)](../standard-library/regex-traits-char-class.md)<br/>
+[regex_traits\<char > classe](../standard-library/regex-traits-char-class.md)<br/>
 [Classe regex_traits\<wchar_t>](../standard-library/regex-traits-wchar-t-class.md)<br/>

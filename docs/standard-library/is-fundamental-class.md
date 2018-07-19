@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0e210af223ffe6d3b8e0766adaaf539f0bb97f73
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 63b2c11b7a5a8d48e3fe068807b641489c6aa323
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33844367"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957360"
 ---
 # <a name="isfundamental-class"></a>Classe is_fundamental
 
@@ -37,11 +37,11 @@ struct is_fundamental;
 
 ### <a name="parameters"></a>Parametri
 
-`Ty` Il tipo di query.
+*Ty* il tipo di query.
 
 ## <a name="remarks"></a>Note
 
-Un'istanza del predicato di tipo contiene true se il tipo `Ty` è un tipo fondamentale, ovvero `void`, un tipo integrale, un tipo a virgola mobile o un form `cv-qualified` di uno di essi; in caso contrario, contiene false.
+Un'istanza del tipo predicato contiene true se il tipo *Ty* è un tipo fondamentale, ovvero **void**, un tipo integrale, un mobile il tipo di punto o un `cv-qualified` forma di uno di essi, in caso contrario, contiene false.
 
 ## <a name="example"></a>Esempio
 

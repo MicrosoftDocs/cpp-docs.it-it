@@ -28,12 +28,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 810f565d85a923379a25f49c6fe1c7d7cc4efbc5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0f96fbe8525ee4eef44da70261bd62e079aa279a
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33859280"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38960590"
 ---
 # <a name="istreambufiterator-class"></a>Classe istreambuf_iterator
 
@@ -49,15 +49,15 @@ class istreambuf_iterator
 
 ### <a name="parameters"></a>Parametri
 
-`CharType` Tipo che rappresenta il tipo di carattere per istreambuf_iterator.
+*CharType* tipo che rappresenta il tipo di carattere per istreambuf_iterator.
 
-`Traits` Tipo che rappresenta il tipo di carattere per istreambuf_iterator. Questo argomento è facoltativo e il valore predefinito è `char_traits`\< *CharType>.*
+*Tratti* tipo che rappresenta il tipo di carattere per istreambuf_iterator. Questo argomento è facoltativo e il valore predefinito è `char_traits`\< *CharType>.*
 
 ## <a name="remarks"></a>Note
 
 La classe istreambuf_iterator deve soddisfare i requisiti per un iteratore di input.
 
-Dopo la costruzione o l'incremento di un oggetto della classe istreambuf_iterator con un puntatore archiviato diverso da Null, l'oggetto prova a estrarre e ad archiviare un oggetto di tipo **CharType** dal flusso di input associato. L'estrazione può essere tuttavia ritardata fino a quando l'oggetto non viene dereferenziato o copiato. Se l'estrazione ha esito negativo, l'oggetto sostituisce il puntatore archiviato con un puntatore Null, creando così un indicatore di fine della sequenza.
+Dopo la costruzione o l'incremento di un oggetto della classe istreambuf_iterator con un puntatore archiviato diverso da Null, l'oggetto prova a estrarre e ad archiviare un oggetto di tipo *CharType* dal flusso di input associato. L'estrazione può essere tuttavia ritardata fino a quando l'oggetto non viene dereferenziato o copiato. Se l'estrazione ha esito negativo, l'oggetto sostituisce il puntatore archiviato con un puntatore Null, creando così un indicatore di fine della sequenza.
 
 ### <a name="constructors"></a>Costruttori
 
@@ -105,7 +105,7 @@ typedef CharType char_type;
 
 ### <a name="remarks"></a>Note
 
-Il tipo è un sinonimo del parametro di modello **CharType**.
+Il tipo è un sinonimo del parametro di modello *CharType*.
 
 ### <a name="example"></a>Esempio
 
@@ -150,7 +150,7 @@ bool equal(const istreambuf_iterator<CharType, Traits>& right) const;
 
 ### <a name="parameters"></a>Parametri
 
-`right` Iteratore di cui verificare l'uguaglianza.
+*a destra* l'iteratore di cui verificare l'uguaglianza.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -158,7 +158,7 @@ bool equal(const istreambuf_iterator<CharType, Traits>& right) const;
 
 ### <a name="remarks"></a>Note
 
-Un intervallo viene definito da `istreambuf_iterator` in base alla posizione corrente e all'iteratore di fine flusso. Tuttavia, poiché tutti gli iteratori non di fine flusso sono equivalenti in base alla funzione membro **equal**, non è possibile definire intervalli secondari usando `istreambuf_iterator`. Gli operatori `==` e `!=` hanno la stessa semantica.
+Un intervallo viene definito dal `istreambuf_iterator` per la posizione corrente e l'iteratore di fine del flusso. tuttavia, poiché tutti non-fine flusso gli iteratori sono equivalenti nel `equal` funzione membro, non è possibile definire intervalli secondari usando `istreambuf_iterator`s. Gli operatori `==` e `!=` hanno la stessa semantica.
 
 ### <a name="example"></a>Esempio
 
@@ -198,7 +198,7 @@ typedef typename traits_type::int_type int_type;
 
 ### <a name="remarks"></a>Note
 
-Il tipo è un sinonimo di **Traits::int_type**.
+Il tipo è sinonimo di `Traits::int_type`.
 
 ### <a name="example"></a>Esempio
 
@@ -246,13 +246,13 @@ istreambuf_iterator(istream_type& _Istr) throw();
 
 ### <a name="parameters"></a>Parametri
 
-`strbuf` Il buffer del flusso di input a cui il `istreambuf_iterator` in fase di collegamento.
+*strbuf* il buffer di flusso di input a cui il `istreambuf_iterator` viene collegato.
 
-`_Istr` Il flusso di input a cui il `istreambuf_iterator` in fase di collegamento.
+*_Istr* flusso di input a cui il `istreambuf_iterator` viene collegato.
 
 ### <a name="remarks"></a>Note
 
-Il primo costruttore inizializza il puntatore del buffer del flusso di input con `strbuf`. Il secondo costruttore inizializza il puntatore del buffer del flusso di input con `_Istr`. `rdbuf` e quindi tenta di estrarre e archiviare un oggetto di tipo **CharType**.
+Il primo costruttore inizializza il puntatore del buffer del flusso di input con *strbuf*. Il secondo costruttore inizializza il puntatore del buffer del flusso di input con *_Istr*. `rdbuf`e quindi tenta di estrarre e archiviare un oggetto di tipo `CharType`.
 
 ### <a name="example"></a>Esempio
 
@@ -341,7 +341,7 @@ Oggetto `istreambuf_iterator` o riferimento a un oggetto `istreambuf_iterator`.
 
 ### <a name="remarks"></a>Note
 
-Il primo operatore prova a estrarre e ad archiviare un oggetto di tipo **CharType** dal flusso di input associato. Il secondo operatore esegue una copia dell'oggetto, incrementa l'oggetto, quindi restituisce la copia.
+Il primo operatore prova a estrarre e archiviare un oggetto di tipo `CharType` dal flusso di input associato. Il secondo operatore esegue una copia dell'oggetto, lo incrementa, quindi restituisce la copia.
 
 ### <a name="example"></a>Esempio
 
@@ -397,7 +397,7 @@ Il tipo è un sinonimo di `basic_streambuf`\< **CharType**, **Traits**>.
 
 ### <a name="example"></a>Esempio
 
-Vedere [istreambuf_iterator](#istreambuf_iterator) per un esempio di come dichiarare e usare **istreambuf_type**.
+Vedere [istreambuf_iterator](#istreambuf_iterator) per un esempio di come dichiarare e usare `istreambuf_type`.
 
 ## <a name="traits_type"></a>  istreambuf_iterator::traits_type
 
@@ -409,7 +409,7 @@ typedef Traits traits_type;
 
 ### <a name="remarks"></a>Note
 
-Il tipo è un sinonimo del parametro di modello **Traits**.
+Il tipo è un sinonimo del parametro di modello *Traits*.
 
 ### <a name="example"></a>Esempio
 

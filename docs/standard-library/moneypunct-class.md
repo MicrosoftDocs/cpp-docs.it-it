@@ -56,16 +56,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 28acc1eb2f2ed265d20507d2b47efa657c2d1bb9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0ed808d8b28071978e89d873d0af9735167e4dbf
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33862507"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957509"
 ---
 # <a name="moneypunct-class"></a>Classe moneypunct
 
-La classe modello descrive un oggetto che può essere utilizzato come facet delle impostazioni locali per descrivere le sequenze `CharType` utilizzate per rappresentare un campo di input o output monetario. Se il parametro di modello `Intl` è `true`, vengono rispettate le convenzioni internazionali.
+La classe modello descrive un oggetto che può essere utilizzato come facet delle impostazioni locali per descrivere le sequenze di tipo *CharType* utilizzato per rappresentare un campo di input o output monetario. Se il parametro di modello *Intl* viene *true*, vengono rispettate le convenzioni internazionali.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -76,15 +76,15 @@ class moneypunct;
 
 ### <a name="parameters"></a>Parametri
 
-`CharType` Il tipo utilizzato all'interno di un programma per codificare i caratteri.
+*CharType* il tipo utilizzato all'interno di un programma per codificare i caratteri.
 
-`Intl` Flag che specifica se devono essere rispettate le convenzioni internazionali.
+*Intl* un flag che specifica se devono essere rispettate le convenzioni internazionali.
 
 ## <a name="remarks"></a>Note
 
 Come in qualsiasi facet delle impostazioni locali, l'ID dell'oggetto statico ha un valore archiviato iniziale uguale a zero. Il primo tentativo di accedere a tale valore archiviato consente di archiviare un valore positivo univoco in **id.**
 
-L'oggetto statico const intl archivia il valore del parametro di modello **Intl**.
+L'oggetto statico const intl archivia il valore del parametro di modello *Intl*.
 
 ### <a name="constructors"></a>Costruttori
 
@@ -285,7 +285,7 @@ Regola specifica delle impostazioni locali per determinare la modalità di raggr
 
 ### <a name="example"></a>Esempio
 
-Vedere l'esempio relativo a [grouping](#grouping), in cui la funzione membro virtuale viene chiamata da **grouping**.
+Vedere l'esempio relativo [raggruppamento](#grouping), in cui la funzione membro virtuale viene chiamata da `grouping`.
 
 ## <a name="do_neg_format"></a>  moneypunct::do_neg_format
 
@@ -297,19 +297,19 @@ virtual pattern do_neg_format() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-La funzione membro virtuale protetta restituisce una regola specifica delle impostazioni locali per determinare la modalità di generazione di un campo di output di tipo valuta per un importo negativo. Ciascuno dei quatto elementi di **pattern::field** può avere i valori seguenti:
+La funzione membro virtuale protetta restituisce una regola specifica delle impostazioni locali per determinare la modalità di generazione di un campo di output di tipo valuta per un importo negativo. Ciascuno dei quatto elementi di `pattern::field` può avere i valori:
 
-- **none** per trovare la corrispondenza con zero o più spazi o per non generare nulla.
+- `none` in base a zero o più spazi o generare nulla.
 
-- **sign** per trovare la corrispondenza con un segno positivo o negativo o per generare tale segno.
+- `sign` in base a o generare un segno positivo o negativo.
 
-- **space** per trovare la corrispondenza con zero o più spazi o per generare uno spazio.
+- `space` in base a zero o più spazi o generare uno spazio.
 
-- **symbol** per trovare la corrispondenza con un simbolo di valuta o per generare tale simbolo.
+- `symbol` in base a o generare un simbolo di valuta.
 
-- **value** per trovare la corrispondenza con un valore monetario o per generare tale valore.
+- `value` in base a o generare un valore monetario.
 
-I componenti di un campo di output di tipo valuta vengono generati e i componenti di un campo di input di tipo valuta vengono messi in corrispondenza nell'ordine in cui questi elementi compaiono in **pattern::field**. Ciascuno dei valori **sign**, **symbol**, **value** e **none** o **space** deve comparire solamente una volta. Il valore **none** non deve comparire per primo. Il valore **space** non deve comparire come primo o ultimo. Se **Intl** è true, l'ordine è **symbol**, **sign**, **none** e **value**.
+I componenti di un campo di output di tipo valuta vengono generati e i componenti di un campo di input vengono confrontati nell'ordine in cui questi elementi compaiono in `pattern::field`. Ognuno dei valori `sign`, `symbol`, `value`e il valore `none` o `space` deve comparire solamente una volta. Il valore `none` non deve comparire prima. Il valore **space** non deve comparire come primo o ultimo. Se `Intl` è true, l'ordine viene `symbol`, `sign`, `none`, quindi `value`.
 
 La versione del modello di `moneypunct`\< **CharType**, **Intl**> restituisce `{`**money_base::symbol**, **money_base::sign**, **money_base::value**, **money_base::none**`}`.
 
@@ -531,11 +531,11 @@ explicit moneypunct(size_t _Refs = 0);
 
 ### <a name="parameters"></a>Parametri
 
-`_Refs` Valore integer utilizzato per specificare il tipo di gestione della memoria per l'oggetto.
+*_Refs* valore integer utilizzato per specificare il tipo di gestione della memoria per l'oggetto.
 
 ### <a name="remarks"></a>Note
 
-I valori possibili per il parametro `_Refs` e i relativi significati sono:
+I valori possibili per il *_Refs* parametro e i relativi significati sono:
 
 - 0: la durata dell'oggetto è gestita dalle impostazioni locali che lo contengono.
 

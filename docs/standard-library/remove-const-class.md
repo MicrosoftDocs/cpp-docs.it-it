@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7b9aaae690acd372e8482ac8a0e33a14e030e4b3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3c0eaf8eeab1c5d9c024baa85af025f2294956e8
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33855331"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38959284"
 ---
 # <a name="removeconst-class"></a>Classe remove_const
 
@@ -42,11 +42,11 @@ using remove_const_t = typename remove_const<T>::type;
 
 ### <a name="parameters"></a>Parametri
 
-`T` Tipo da modificare.
+*T* tipo da modificare.
 
 ## <a name="remarks"></a>Note
 
-Un'istanza di `remove_const<T>` contiene un tipo modificato che è `T1` quando `T` è nel formato `const T1`, in caso contrario, `T`.
+Un'istanza di `remove_const<T>` contiene un tipo modificato che è `T1` quando *T* è nel formato `const T1`; in caso contrario *T*.
 
 ## <a name="example"></a>Esempio
 

@@ -1,5 +1,5 @@
 ---
-title: Stili del controllo barra degli strumenti | Documenti Microsoft
+title: Stili dei controlli toolBar | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,15 +14,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1958c83ef5a0eec5f3c7f5873451edd3839146be
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 35b5b87944f2b0f9ce78adbe42b59d92b98a6e5a
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33373195"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37885835"
 ---
 # <a name="toolbar-control-styles"></a>Stili dei controlli ToolBar
-[Classe CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md) presenta un set di flag di stile che determinano l'aspetto e comportamento del pulsante. È possibile impostare una combinazione di questi flag chiamando [CMFCToolBarButton::SetStyle](../../mfc/reference/cmfctoolbarbutton-class.md#setstyle). In questo argomento vengono elencati i valori dei flag di stile e i relativi significati.  
+[Classe CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md) dispone di un set di flag di stile che determinano l'aspetto e comportamento del pulsante. È possibile impostare una combinazione di questi flag chiamando [CMFCToolBarButton::SetStyle](../../mfc/reference/cmfctoolbarbutton-class.md#setstyle). In questo argomento vengono elencati i valori dei flag di stile e i relativi significati.  
   
 ## <a name="property-values"></a>Valori delle proprietà  
  I valori seguenti determinano il tipo di pulsante che il controllo rappresenta:  
@@ -62,9 +62,9 @@ ms.locfileid: "33373195"
  Posiziona l'elemento in una nuova riga o in una nuova colonna senza la separazione di colonne.  
   
 ## <a name="remarks"></a>Note  
- Lo stile corrente viene archiviato in [CMFCToolBarButton::m_nStyle](../../mfc/reference/cmfctoolbarbutton-class.md#m_nstyle). Non impostare un nuovo valore in `m_nStyle` direttamente, in quanto alcune classi derivate eseguono elaborazioni aggiuntive quando si chiama `SetStyles`.  
+ Lo stile corrente viene archiviato in [CMFCToolBarButton::m_nStyle](../../mfc/reference/cmfctoolbarbutton-class.md#m_nstyle). Non impostare un nuovo valore `m_nStyle` direttamente, in quanto alcune classi derivate eseguono elaborazioni aggiuntive quando si chiama `SetStyles`.  
   
- Il gestore visualizzazione determina l'aspetto dei pulsanti in ciascuno stato. Vedere [gestione visualizzazione](../../mfc/visualization-manager.md) per ulteriori informazioni.  
+ Il gestore visualizzazione determina l'aspetto dei pulsanti in ciascuno stato. Visualizzare [gestione visualizzazione](../../mfc/visualization-manager.md) per altre informazioni.  
   
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** afxtoolbarbutton. h  

@@ -16,16 +16,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 029fba9cc5a13569df8cc1e2e11b639e65ea24c9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: fc0684d51fd406f16588188555f67fcebb351fbf
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33863904"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38956098"
 ---
 # <a name="memfunreft-class"></a>Classe mem_fun_ref_t
 
-Classe di adattatori che consente a una funzione membro **non_const** che non accetta argomenti di essere chiamata come oggetto funzione unaria se inizializzata con un argomento di riferimento.
+Classe di adattatori che consente un `non_const` funzione membro che non accetta argomenti di essere chiamata come oggetto funzione unaria se inizializzata con un argomento di riferimento.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -42,9 +42,9 @@ class mem_fun_ref_t : public unary_function<Type, Result> {
 
 ### <a name="parameters"></a>Parametri
 
-`_Pm` Un puntatore alla funzione membro della classe **tipo** da convertire in un oggetto funzione.
+*_Pm* un puntatore alla funzione membro della classe `Type` da convertire in un oggetto funzione.
 
-`left` L'oggetto che il `_Pm` funzione membro viene chiamata su.
+*a sinistra* dell'oggetto che il *_Pm* funzione membro viene chiamata su.
 
 ## <a name="return-value"></a>Valore restituito
 
@@ -52,7 +52,7 @@ Funzione unaria adattabile.
 
 ## <a name="remarks"></a>Note
 
-La classe modello archivia una copia di `_Pm`, che deve essere un puntatore a una funzione membro della classe **Type**, in un oggetto membro privato. Definisce la relativa funzione membro `operator()` che restituisce ( **left**.* `_Pm`)( ).
+La classe modello archivia una copia della *_Pm*, che deve essere un puntatore a una funzione membro della classe `Type`, in un oggetto membro privato. Definisce la relativa funzione membro `operator()` che restituisce ( **left**.* `_Pm`)( ).
 
 ## <a name="example"></a>Esempio
 

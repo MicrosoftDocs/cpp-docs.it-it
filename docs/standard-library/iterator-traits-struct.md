@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 57387af452ff4a127eec6b669cec6e02863b8fd3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e0b4221e32b6e85df0b559b1d6d4ecda381d8e3d
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33856622"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38959638"
 ---
 # <a name="iteratortraits-struct"></a>Struct iterator_traits
 
@@ -45,17 +45,17 @@ struct iterator_traits {
 
 La struct modello definisce i tipi di membro:
 
-- **iterator_category**: un sinonimo di **Iterator::iterator_category**
+- `iterator_category`: un sinonimo `Iterator::iterator_category`.
 
-- `value_type`: un sinonimo di **Iterator::value_type**
+- `value_type`: un sinonimo `Iterator::value_type`.
 
-- `difference_type`: un sinonimo di **Iterator::difference_type**
+- `difference_type`: un sinonimo `Iterator::difference_type`.
 
-- `distance_type`: un sinonimo di **Iterator::difference_type**
+- `distance_type`: un sinonimo `Iterator::difference_type.`
 
-- **pointer**: un sinonimo di **Iterator::pointer**
+- `pointer`: un sinonimo `Iterator::pointer`.
 
-- **reference**: un sinonimo di **Iterator::reference**
+- `reference`: un sinonimo `Iterator::reference`.
 
 Le specializzazioni parziali determinano i tipi critici associati a un puntatore di tipo **Type \***  o **Type \*** const.
 

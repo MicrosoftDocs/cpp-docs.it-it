@@ -1,5 +1,5 @@
 ---
-title: Classe CComSafeArrayBound | Documenti Microsoft
+title: Classe CComSafeArrayBound | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,15 +22,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 455e71cd0ee323df8cfe43001f87179c649eefe5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: cdb0acc5059fa76531421cb261cb1d640aef3709
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32364053"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954339"
 ---
 # <a name="ccomsafearraybound-class"></a>Classe CComSafeArrayBound
-Questa classe è un wrapper per un [SAFEARRAYBOUND](http://msdn.microsoft.com/en-us/303a9bdb-71d6-4f14-8747-84cf84936c6d) struttura.  
+Questa classe è un wrapper per un [SAFEARRAYBOUND](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagsafearraybound) struttura.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -58,7 +58,7 @@ class CComSafeArrayBound : public SAFEARRAYBOUND
 |[operator =](#operator_eq)|Imposta il `CComSafeArrayBound` su un nuovo valore.|  
   
 ## <a name="remarks"></a>Note  
- Questa classe è un wrapper per il **SAFEARRAYBOUND** struttura usata da [CComSafeArray](../../atl/reference/ccomsafearray-class.md). Fornisce metodi per l'esecuzione di query e impostare i limiti superiori e inferiori di una singola dimensione di un `CComSafeArray` oggetto e il numero di elementi che contiene. Un oggetto multidimensionale `CComSafeArray` oggetto utilizza una matrice di `CComSafeArrayBound` oggetti, uno per ogni dimensione. Pertanto, quando si utilizzano i metodi, ad esempio [GetCount](#getcount), tenere presente che questo metodo non restituirà il numero totale di elementi in una matrice multidimensionale.  
+ Questa classe è un wrapper per il `SAFEARRAYBOUND` struttura usata da [CComSafeArray](../../atl/reference/ccomsafearray-class.md). Fornisce metodi per l'esecuzione di query e impostare i limiti superiori e inferiori di una singola dimensione di un `CComSafeArray` oggetto e il numero di elementi in esso contenuti. Multidimensionale `CComSafeArray` oggetto utilizza una matrice di `CComSafeArrayBound` oggetti, uno per ogni dimensione. Pertanto, quando si utilizzano i metodi, ad esempio [GetCount](#getcount), tenere presente che questo metodo non restituisce il numero totale di elementi in una matrice multidimensionale.  
   
  **Intestazione:** atlsafe.h  
   
@@ -73,14 +73,14 @@ CComSafeArrayBound(ULONG ulCount = 0, LONG lLowerBound = 0) throw();
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `ulCount`  
+ *ulCount*  
  Numero di elementi nella matrice.  
   
- `lLowerBound`  
- Il limite inferiore da cui la matrice viene numerata.  
+ *lLowerBound*  
+ Il limite inferiore da cui la matrice è numerata.  
   
 ### <a name="remarks"></a>Note  
- Se la matrice è possibile accedere da un programma Visual C++, è consigliabile che il limite inferiore deve essere definito come 0. Potrebbe essere preferibile utilizzare un valore di limite inferiore diverso se la matrice è utilizzabile con altri linguaggi, ad esempio Visual Basic.  
+ Se la matrice deve essere accessibile da un programma Visual C++, è consigliabile che il limite inferiore viene definita come 0. Potrebbe essere preferibile usare un valore limite inferiore differente se la matrice deve essere usato con altri linguaggi, ad esempio Visual Basic.  
   
 ##  <a name="getcount"></a>  CComSafeArrayBound::GetCount  
  Chiamare questo metodo per restituire il numero di elementi.  
@@ -93,7 +93,7 @@ ULONG GetCount() const throw();
  Restituisce il numero di elementi.  
   
 ### <a name="remarks"></a>Note  
- Se l'oggetto associato `CComSafeArray` oggetto rappresenta una matrice multidimensionale, questo metodo restituirà solo il numero totale di elementi nella dimensione più a destra. Utilizzare [CComSafeArray::GetCount](../../atl/reference/ccomsafearray-class.md#getcount) per ottenere il numero totale di elementi.  
+ Se l'oggetto associato `CComSafeArray` oggetto rappresenta una matrice multidimensionale, questo metodo restituirà solo il numero totale di elementi nella dimensione più a destra. Uso [CComSafeArray::GetCount](../../atl/reference/ccomsafearray-class.md#getcount) per ottenere il numero totale di elementi.  
   
 ##  <a name="getlowerbound"></a>  CComSafeArrayBound::GetLowerBound  
  Chiamare questo metodo per restituire il limite inferiore.  
@@ -113,10 +113,10 @@ LONG GetUpperBound() const throw();
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- Restituisce il limite superiore di `CComSafeArrayBound` oggetto.  
+ Restituisce il limite superiore del `CComSafeArrayBound` oggetto.  
   
 ### <a name="remarks"></a>Note  
- Il limite superiore dipende dal numero di elementi e il valore del limite inferiore. Ad esempio, se il limite inferiore è 0 e il numero di elementi è 10, il limite superiore verrà automaticamente impostato a 9.  
+ Il limite superiore dipende dal numero di elementi e il valore limite inferiore. Ad esempio, se il limite inferiore è 0 e il numero di elementi è 10, il limite superiore di essere imposterà automaticamente su 9.  
   
 ##  <a name="operator_eq"></a>  CComSafeArrayBound::operator =  
  Imposta il `CComSafeArrayBound` su un nuovo valore.  
@@ -127,17 +127,17 @@ CComSafeArrayBound& operator= (ULONG ulCount) throw();
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `bound`  
+ *Associato*  
  Oggetto `CComSafeArrayBound`.  
   
- `ulCount`  
+ *ulCount*  
  Numero di elementi.  
   
 ### <a name="return-value"></a>Valore restituito  
  Restituisce un puntatore al `CComSafeArrayBound` oggetto.  
   
 ### <a name="remarks"></a>Note  
- Il `CComSafeArrayBound` oggetto può essere assegnato utilizzando un oggetto esistente `CComSafeArrayBound`, o specificando il numero di elementi, nel qual caso il limite inferiore è impostato su 0 per impostazione predefinita.  
+ Il `CComSafeArrayBound` oggetto può essere assegnato usando un oggetto esistente `CComSafeArrayBound`, oppure specificando il numero di elementi, nel qual caso il limite inferiore è impostato su 0 per impostazione predefinita.  
   
 ##  <a name="setcount"></a>  CComSafeArrayBound::SetCount  
  Chiamare questo metodo per impostare il numero di elementi.  
@@ -147,11 +147,11 @@ ULONG SetCount(ULONG ulCount) throw();
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `ulCount`  
+ *ulCount*  
  Numero di elementi.  
   
 ### <a name="return-value"></a>Valore restituito  
- Restituisce il numero di elementi di `CComSafeArrayBound` oggetto.  
+ Restituisce il numero di elementi nel `CComSafeArrayBound` oggetto.  
   
 ##  <a name="setlowerbound"></a>  CComSafeArrayBound::SetLowerBound  
  Chiamare questo metodo per impostare il limite inferiore.  
@@ -161,16 +161,16 @@ LONG SetLowerBound(LONG lLowerBound) throw();
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `lLowerBound`  
+ *lLowerBound*  
  Il limite inferiore.  
   
 ### <a name="return-value"></a>Valore restituito  
  Restituisce il nuovo limite inferiore del `CComSafeArrayBound` oggetto.  
   
 ### <a name="remarks"></a>Note  
- Se la matrice è possibile accedere da un programma Visual C++, è consigliabile che il limite inferiore deve essere definito come 0. Potrebbe essere preferibile utilizzare un valore di limite inferiore diverso se la matrice è utilizzabile con altri linguaggi, ad esempio Visual Basic.  
+ Se la matrice deve essere accessibile da un programma Visual C++, è consigliabile che il limite inferiore viene definita come 0. Potrebbe essere preferibile usare un valore limite inferiore differente se la matrice deve essere usato con altri linguaggi, ad esempio Visual Basic.  
   
- Il limite superiore dipende dal numero di elementi e il valore del limite inferiore. Ad esempio, se il limite inferiore è 0 e il numero di elementi è 10, il limite superiore verrà automaticamente impostato a 9.  
+ Il limite superiore dipende dal numero di elementi e il valore limite inferiore. Ad esempio, se il limite inferiore è 0 e il numero di elementi è 10, il limite superiore di essere imposterà automaticamente su 9.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Cenni preliminari sulla classe](../../atl/atl-class-overview.md)
+ [Panoramica della classe](../../atl/atl-class-overview.md)

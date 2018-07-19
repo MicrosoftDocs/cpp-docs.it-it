@@ -36,12 +36,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 28e27742bc956a4d6c86db4a3eb0893ff8437e6c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5b651f4117cae6d3b4ed72d22ace5194e5d24446
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33859888"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957672"
 ---
 # <a name="weibulldistribution-class"></a>Classe weibull_distribution
 
@@ -80,11 +80,11 @@ class weibull_distribution
 
 ### <a name="parameters"></a>Parametri
 
-*RealType* valore predefinito è il tipo di risultato a virgola mobile, `double`. Per informazioni sui tipi possibili, vedere [\<random>](../standard-library/random.md).
+*RealType* il tipo di risultato a virgola mobile, per impostazione predefinita **doppie**. Per informazioni sui tipi possibili, vedere [\<random>](../standard-library/random.md).
 
 ## <a name="remarks"></a>Note
 
-La classe modello descrive una distribuzione che produce valori di un tipo a virgola mobile specificato dall'utente, o di tipo `double` se non ne viene specificato alcuno, distribuiti in base alla distribuzione di Weibull. La tabella seguente include collegamenti ad articoli relativi ai singoli membri.
+La classe modello descrive una distribuzione che produce valori di virgola mobile specificato dall'utente, tipo o tipo **doppie** se ne viene specificato alcuno, distribuiti in base alla distribuzione di Weibull. La tabella seguente include collegamenti ad articoli relativi ai singoli membri.
 
 ||||
 |-|-|-|
@@ -232,11 +232,14 @@ explicit weibull_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parametri
 
-*un* il `a` parametro di distribuzione.
+*a*  
+Parametro di distribuzione `a`.
 
-*b* il `b` parametro di distribuzione.
+*b*  
+Parametro di distribuzione `b`.
 
-*Parm* il `param_type` struttura usata per costruire la distribuzione.
+*parm*  
+Struttura `param_type` usata per costruire la distribuzione.
 
 ### <a name="remarks"></a>Note
 
@@ -264,11 +267,14 @@ struct param_type {
 
 ### <a name="parameters"></a>Parametri
 
-*un* il `a` parametro di distribuzione.
+*a*  
+Parametro di distribuzione `a`.
 
-*b* il `b` parametro di distribuzione.
+*b*  
+Parametro di distribuzione `b`.
 
-*a destra* il `param_type` oggetto da confrontare con questa istanza.
+*right*  
+Oggetto `param_type` da confrontare con questo oggetto.
 
 ### <a name="remarks"></a>Note
 

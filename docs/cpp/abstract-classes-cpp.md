@@ -1,5 +1,5 @@
 ---
-title: Classi (C++) astratte | Documenti Microsoft
+title: Astrazione di classi (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c35ea26bc5dda6c0dce27217cc75784034a77554
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 73c1d560f0e2adfbecb72fe9df96d981d0bb93af
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34705361"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957948"
 ---
 # <a name="abstract-classes-c"></a>Classi astratte (C ++)
 
@@ -30,7 +30,7 @@ Le classi astratte fungono da espressioni di concetti generali da cui è possibi
 
 Una classe che contiene almeno una funzione virtuale pura è considerata una classe astratta. Le classi derivate dalla classe astratta devono implementare la funzione virtuale pura o sono anch'esse classi astratte.
 
-Una funzione virtuale viene dichiarata come "pura" utilizzando il *identificatore pure* sintassi (descritto in [implementazione della classe protocollo](http://msdn.microsoft.com/en-us/a319f1b3-05e8-400e-950a-1ca6eb105ab5)). Si consideri l'esempio presentato [funzioni virtuali](../cpp/virtual-functions.md). Lo scopo della classe `Account` è di fornire la funzionalità generale, ma gli oggetti di tipo `Account` sono troppo generici per essere utili. Pertanto, `Account` rappresenta una scelta valida per una classe astratta:
+Si consideri l'esempio illustrato in [funzioni virtuali](../cpp/virtual-functions.md). Lo scopo della classe `Account` è di fornire la funzionalità generale, ma gli oggetti di tipo `Account` sono troppo generici per essere utili. Pertanto, `Account` rappresenta una scelta valida per una classe astratta:
 
 ```cpp
 // deriv_AbstractClasses.cpp
@@ -63,7 +63,7 @@ Un'altra restrizione è che se il costruttore per una classe astratta chiama dir
 
 Le funzioni virtuali pure possono essere definite per le classi astratte, ma possono essere chiamate direttamente solo usando la sintassi:
 
-*nome di classe astratta*::*-nome della funzione*)
+*abstract-class-name*::*-nome della funzione*)
 
 Questa operazione può essere utile quando si progettano le gerarchie di classe le cui classi base includono i distruttori virtuali pure, poiché i distruttori di classe base sono sempre chiamati nel processo di eliminazione definitiva di un oggetto. Si consideri l'esempio seguente:
 

@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8452c106c5a4d0d005ec61278c8e0d7cb75723ec
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0b9b58235d404b523629a0e9d24121182d1119c3
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33912680"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38960330"
 ---
 # <a name="issigned-class"></a>Classe is_signed
 
@@ -37,11 +37,11 @@ struct is_signed;
 
 ### <a name="parameters"></a>Parametri
 
-`Ty` Il tipo di query.
+*Ty* il tipo di query.
 
 ## <a name="remarks"></a>Note
 
-Un'istanza del tipo predicato contiene true se il tipo `Ty` è un tipo integrale signed o un tipo integrale signed `cv-qualified`; in caso contrario, contiene false.
+Un'istanza del tipo predicato contiene true se il tipo *Ty* è un tipo integrale signed o un `cv-qualified` tipo integrale con segno, in caso contrario, contiene false.
 
 ## <a name="example"></a>Esempio
 

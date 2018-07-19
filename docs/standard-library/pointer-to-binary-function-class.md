@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 39549a277a203d9daa894f48437224caf50a0521
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0b632fabe8f596d46a0423d670ff57bb12de93cd
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33853378"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953456"
 ---
 # <a name="pointertobinaryfunction-class"></a>Classe pointer_to_binary_function
 
@@ -44,19 +44,19 @@ public:
 
 ### <a name="parameters"></a>Parametri
 
-`pfunc` La funzione binaria da convertire.
+*pfunc* della funzione binaria da convertire.
 
-`left` Sinistra dell'oggetto che il  *\*pfunc* viene chiamato su.
+*a sinistra* sinistra dell'oggetto che il  *\*pfunc* viene chiamato su.
 
-`right` Il diritto dell'oggetto che il  *\*pfunc* viene chiamato su.
+*a destra* destra dell'oggetto che il  *\*pfunc* viene chiamato su.
 
 ## <a name="return-value"></a>Valore restituito
 
-La classe modello archivia una copia di **pfunc**. Definisce la relativa funzione membro `operator()` che restituisce (\* **pfunc**)(_ *Left*, \_ *Right*).
+La classe modello archivia una copia di `pfunc`. Definisce la relativa funzione membro `operator()` che restituisce (\* **pfunc**)(_ *Left*, \_ *Right*).
 
 ## <a name="remarks"></a>Note
 
-Un puntatore a funzione binaria è un oggetto funzione e può essere passato a qualsiasi algoritmo della libreria standard C++ che prevede una funzione binaria come parametro, ma non è adattabile. Per usarlo con un adattatore, ad esempio in associazione a un valore o con un negator, deve essere fornito con i tipi annidati **first_argument_type**, **second_argument_type** e **result_type** che rendono possibile tale adattamento. La conversione da `pointer_to_binary_function` consente il funzionamento degli adattatori di funzione con i puntatori a funzione binaria.
+Un puntatore a funzione binaria è un oggetto funzione e può essere passato a qualsiasi algoritmo della libreria standard C++ che prevede una funzione binaria come parametro, ma non è adattabile. Per usarlo con un adattatore, ad esempio in associazione a un valore o con un negator, deve essere fornito con i tipi annidati `first_argument_type`, `second_argument_type`, e `result_type` che rendono possibile tale adattamento. La conversione da `pointer_to_binary_function` consente il funzionamento degli adattatori di funzione con i puntatori a funzione binaria.
 
 ## <a name="example"></a>Esempio
 

@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::operator&lt; (deque)
 - std::operator&lt;= (deque)
 - std::operator== (deque)
-ms.openlocfilehash: d4dfa6963e9c8194bd4ee589a1a0adced1f05d0d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 21fdf5e624634a29d8ed32e004e7fb0d653b86f1
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33846844"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38955215"
 ---
 # <a name="ltdequegt-operators"></a>Operatori &lt;deque&gt;
 
@@ -44,9 +44,9 @@ bool operator!=(const deque<Type, Allocator>& left, const deque<Type, Allocator>
 
 ### <a name="parameters"></a>Parametri
 
-`left` Un oggetto di tipo `deque`.
+*a sinistra* un oggetto di tipo `deque`.
 
-`right` Un oggetto di tipo `deque`.
+*a destra* un oggetto di tipo `deque`.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -92,9 +92,9 @@ bool operator<(const deque<Type, Allocator>& left, const deque<Type, Allocator>&
 
 ### <a name="parameters"></a>Parametri
 
-`left` Un oggetto di tipo `deque`.
+*a sinistra* un oggetto di tipo `deque`.
 
-`right` Un oggetto di tipo `deque`.
+*a destra* un oggetto di tipo `deque`.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -144,9 +144,9 @@ bool operator<=(const deque<Type, Allocator>& left, const deque<Type, Allocator>
 
 ### <a name="parameters"></a>Parametri
 
-`left` Un oggetto di tipo `deque`.
+*a sinistra* un oggetto di tipo `deque`.
 
-`right` Un oggetto di tipo `deque`.
+*a destra* un oggetto di tipo `deque`.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -197,9 +197,9 @@ bool operator==(const deque<Type, Allocator>& left, const deque<Type, Allocator>
 
 ### <a name="parameters"></a>Parametri
 
-`left` Un oggetto di tipo `deque`.
+*a sinistra* un oggetto di tipo `deque`.
 
-`right` Un oggetto di tipo `deque`.
+*a destra* un oggetto di tipo `deque`.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -253,9 +253,9 @@ bool operator>(const deque<Type, Allocator>& left, const deque<Type, Allocator>&
 
 ### <a name="parameters"></a>Parametri
 
-`left` Un oggetto di tipo `deque`.
+*a sinistra* un oggetto di tipo `deque`.
 
-`right` Un oggetto di tipo `deque`.
+*a destra* un oggetto di tipo `deque`.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -307,9 +307,9 @@ bool operator>=(const deque<Type, Allocator>& left, const deque<Type, Allocator>
 
 ### <a name="parameters"></a>Parametri
 
-`left` Un oggetto di tipo `deque`.
+*a sinistra* un oggetto di tipo `deque`.
 
-`right` Un oggetto di tipo `deque`.
+*a destra* un oggetto di tipo `deque`.
 
 ### <a name="return-value"></a>Valore restituito
 

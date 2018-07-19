@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bd8b757ab46d462bd5d6a596f7dbbfdd18061a8d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d5666aca2d6a855b64af26d38a1ae834fecec5d6
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33842999"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38958465"
 ---
 # <a name="isassignable-class"></a>Classe is_assignable
 
@@ -42,7 +42,7 @@ Dal tipo dell'oggetto che fornisce il valore.
 
 ## <a name="remarks"></a>Note
 
-L'espressione non valutata `declval<To>() = declval<From>()` deve essere nel formato corretto. `From` e `To` devono essere tipi completi, `void`, o matrici di valori associati sconosciuti.
+L'espressione non valutata `declval<To>() = declval<From>()` deve essere nel formato corretto. Entrambe `From` e `To` devono essere tipi completi, **void**, o matrici di valori associati sconosciuti.
 
 ## <a name="requirements"></a>Requisiti
 
