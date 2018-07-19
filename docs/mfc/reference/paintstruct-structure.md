@@ -1,5 +1,5 @@
 ---
-title: Struttura PAINTSTRUCT | Documenti Microsoft
+title: Struttura PAINTSTRUCT | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bfeddfd1ebf0c5c2247b27a0c69a8a6ef33e7766
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 75a3db6c6beb18afe2303b464fcab290b2e132fc
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370438"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37338210"
 ---
 # <a name="paintstruct-structure"></a>Struttura PAINTSTRUCT
-Il `PAINTSTRUCT` struttura contiene informazioni che possono essere usate per disegnare l'area client di una finestra.  
+Il `PAINTSTRUCT` struttura contiene informazioni che possono essere utilizzate per disegnare l'area client di una finestra.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -44,19 +44,19 @@ typedef struct tagPAINTSTRUCT {
  Identifica il contesto di visualizzazione da utilizzare per il disegno.  
   
  *fErase*  
- Specifica se deve essere ridisegnato lo sfondo. Non è 0 se l'applicazione deve essere ridisegnata lo sfondo. L'applicazione è responsabile per disegnare lo sfondo, se una classe finestra di Windows viene creata senza un pennello di sfondo (vedere la descrizione del **hbrBackground** appartenente il [WNDCLASS](http://msdn.microsoft.com/library/windows/desktop/ms633576) struttura in Windows SDK).  
+ Specifica se lo sfondo deve essere ridisegnato. Non è 0 se l'applicazione deve essere ridisegnata lo sfondo. L'applicazione è responsabile per disegnare lo sfondo se viene creata una classe di finestre Windows senza un pennello di sfondo (vedere la descrizione della `hbrBackground` membro della [WNDCLASS](http://msdn.microsoft.com/library/windows/desktop/ms633576) struttura nel SDK di Windows).  
   
  *rcPaint*  
- Specifica l'angolo superiore sinistro e inferiore destro angoli del rettangolo in cui è richiesto il disegno.  
+ Specifica l'angolo superiore sinistro e inferiore destro angoli del rettangolo in cui viene richiesto il disegno.  
   
  *fRestore*  
- Membro riservato. Viene utilizzata internamente da Windows.  
+ Membro riservato. Viene usato internamente da Windows.  
   
  *fIncUpdate*  
- Membro riservato. Viene utilizzata internamente da Windows.  
+ Membro riservato. Viene usato internamente da Windows.  
   
  *rgbReserved [16]*  
- Membro riservato. Riservato blocco di memoria utilizzata internamente da Windows.  
+ Membro riservato. Riservato blocco di memoria usata internamente da Windows.  
   
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** winuser.h  

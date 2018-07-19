@@ -1,5 +1,5 @@
 ---
-title: Classe CCommonDialog | Documenti Microsoft
+title: Classe CCommonDialog | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 53f53bdb19c6f40d73179b600051ecfaf6b69c94
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: d6821b7a33339b2a143778172caa7a4a22cb101e
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36950635"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37335915"
 ---
 # <a name="ccommondialog-class"></a>Classe CCommonDialog
 Classe di base per le classi che incapsulano la funzionalità delle finestre di dialogo comuni di Windows.  
@@ -84,18 +84,18 @@ explicit CCommonDialog(CWnd* pParentWnd);
   
 ### <a name="parameters"></a>Parametri  
  *pParentWnd*  
- Punta all'oggetto finestra padre o proprietaria (di tipo [CWnd](../../mfc/reference/cwnd-class.md)) a cui appartiene l'oggetto finestra di dialogo. Se si tratta **NULL**, finestra padre dell'oggetto finestra di dialogo è impostata per la finestra principale dell'applicazione.  
+ Punta all'oggetto finestra padre o proprietaria (typu [CWnd](../../mfc/reference/cwnd-class.md)) a cui appartiene l'oggetto finestra di dialogo. Se è NULL, finestra padre dell'oggetto finestra di dialogo è impostata per la finestra principale dell'applicazione.  
   
 ### <a name="remarks"></a>Note  
- Vedere [CDialog::CDialog](../../mfc/reference/cdialog-class.md#cdialog) per informazioni complete.  
+ Visualizzare [CDialog::CDialog](../../mfc/reference/cdialog-class.md#cdialog) per informazioni complete.  
   
 ## <a name="see-also"></a>Vedere anche  
- [CDialog (classe)](../../mfc/reference/cdialog-class.md)   
+ [Classe CDialog](../../mfc/reference/cdialog-class.md)   
  [Grafico delle gerarchie](../../mfc/hierarchy-chart.md)   
  [CFileDialog (classe)](../../mfc/reference/cfiledialog-class.md)   
  [Classe CFontDialog](../../mfc/reference/cfontdialog-class.md)   
  [Classe CColorDialog](../../mfc/reference/ccolordialog-class.md)   
  [Classe CPageSetupDialog](../../mfc/reference/cpagesetupdialog-class.md)   
  [Classe CPrintDialog](../../mfc/reference/cprintdialog-class.md)   
- [Classe CFindReplaceDialog.](../../mfc/reference/cfindreplacedialog-class.md)   
+ [Classe CFindReplaceDialog](../../mfc/reference/cfindreplacedialog-class.md)   
  [Classe COleDialog](../../mfc/reference/coledialog-class.md)

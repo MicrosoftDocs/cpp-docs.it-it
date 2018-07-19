@@ -1,5 +1,5 @@
 ---
-title: Struttura NCCALCSIZE_PARAMS | Documenti Microsoft
+title: Struttura NCCALCSIZE_PARAMS | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 07db612cb6dbde0dd762cf709ac6040bbd836c4b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 095b66af9dab08e3d8fad040c43e2eaf8d2beb81
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369723"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37335643"
 ---
 # <a name="nccalcsizeparams-structure"></a>Struttura NCCALCSIZE_PARAMS
-Il `NCCALCSIZE_PARAMS` struttura contiene informazioni che un'applicazione può utilizzare durante l'elaborazione di `WM_NCCALCSIZE` messaggio per calcolare la dimensione, posizione e il contenuto valido dell'area client di una finestra.  
+Il `NCCALCSIZE_PARAMS` struttura contiene informazioni che un'applicazione può utilizzare durante l'elaborazione del messaggio WM_NCCALCSIZE per calcolare le dimensioni, posizione e contenuto valido dell'area client di una finestra.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,10 +37,10 @@ typedef struct tagNCCALCSIZE_PARAMS {
   
 #### <a name="parameters"></a>Parametri  
  *rgrc*  
- Specifica una matrice di rettangoli. La prima riga contiene le coordinate di una finestra che sono stati spostati o ridimensionato. Il secondo contiene le coordinate della finestra prima che è stata spostata o ridimensionata. Il terzo contiene le coordinate dell'area client di una finestra prima che è stata spostata o ridimensionata. Se la finestra è una finestra figlio, le coordinate sono relative all'area client della finestra padre. Se la finestra è una finestra di primo livello, le coordinate sono rispetto allo schermo.  
+ Specifica una matrice di rettangoli. Il primo contiene le nuove coordinate di una finestra che è stata spostata o ridimensionata. Il secondo contiene le coordinate della finestra prima che è stata spostata o ridimensionata. Il terzo contiene le coordinate dell'area client di una finestra prima che è stata spostata o ridimensionata. Se la finestra è una finestra figlio, le coordinate sono relative all'area client della finestra padre. Se la finestra è una finestra di primo livello, le coordinate sono relative allo schermo.  
   
  *lppos*  
- Punta a un [WINDOWPOS](../../mfc/reference/windowpos-structure1.md) struttura che contiene i valori di dimensioni e la posizione specificati nell'operazione che ha causato la finestra da spostare o ridimensionare.  
+ Punta a un [WINDOWPOS](../../mfc/reference/windowpos-structure1.md) struttura che contiene i valori di dimensioni e la posizione specificati nell'operazione che ha causato la finestra essere spostato o ridimensionato.  
   
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** winuser.h  

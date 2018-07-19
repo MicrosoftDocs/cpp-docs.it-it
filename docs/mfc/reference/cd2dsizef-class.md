@@ -1,5 +1,5 @@
 ---
-title: Classe CD2DSizeF | Documenti Microsoft
+title: Classe CD2DSizeF | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,15 +20,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e939d189d991ef234e940b272291c2da6c931684
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: f7c25f55263270ad797b231a21e60fe4b0e552c4
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36954478"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37336113"
 ---
 # <a name="cd2dsizef-class"></a>Classe CD2DSizeF
-Wrapper per D2D1_SIZE_F.  
+Un wrapper per D2D1_SIZE_F.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -48,13 +48,13 @@ class CD2DSizeF : public D2D1_SIZE_F;
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[CD2DSizeF::IsNull](#isnull)|Restituisce un **booleano** valore che indica se un'espressione non contiene dati validi ( **null**).|  
+|[CD2DSizeF::IsNull](#isnull)|Restituisce un **booleana** valore che indica se un'espressione non contiene dati validi (NULL).|  
   
 ### <a name="public-operators"></a>Operatori pubblici  
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[CSize CD2DSizeF::operator](#operator_csize)|Converte `CD2DSizeF` a `CSize` oggetto.|  
+|[CD2DSizeF::operator CSize](#operator_csize)|Consente di convertire `CD2DSizeF` a `CSize` oggetto.|  
   
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  `D2D1_SIZE_F`  
@@ -65,7 +65,7 @@ class CD2DSizeF : public D2D1_SIZE_F;
  **Intestazione:** afxrendertarget. h  
   
 ##  <a name="cd2dsizef"></a>  CD2DSizeF::CD2DSizeF  
- Costruisce un oggetto CD2DSizeF da un oggetto CSize.  
+ Costruisce un oggetto CD2DSizeF dall'oggetto CSize.  
   
 ```  
 CD2DSizeF(const CSize& size);  
@@ -98,7 +98,7 @@ BOOL IsNull() const;
 ### <a name="return-value"></a>Valore restituito  
  TRUE se la larghezza e altezza sono vuote; in caso contrario, FALSE.  
   
-##  <a name="operator_csize"></a>  CSize CD2DSizeF::operator  
+##  <a name="operator_csize"></a>  CD2DSizeF::operator CSize  
  Converte un oggetto CSize CD2DSizeF.  
   
 ```  

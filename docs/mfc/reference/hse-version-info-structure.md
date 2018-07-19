@@ -1,5 +1,5 @@
 ---
-title: Struttura HSE_VERSION_INFO | Documenti Microsoft
+title: Struttura HSE_VERSION_INFO | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: acdf63e062aab1407daee461e22f00f5d3c59cee
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: daf1565c2fe2d7a4620f83b765671fea80502102
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369886"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37335815"
 ---
 # <a name="hseversioninfo-structure"></a>Struttura HSE_VERSION_INFO
-Questa struttura viene fatto riferimento tramite il `pVer` parametro il `CHttpServer::GetExtensionVersion` funzione membro. Fornisce il numero di versione ISA e una descrizione di testo di ISA.  
+Questa struttura viene fatto riferimento tramite il *pVer* parametro nel `CHttpServer::GetExtensionVersion` funzione membro. Fornisce il numero di versione ISA e una descrizione testuale dell'ISA.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,10 +37,10 @@ typedef struct _HSE_VERSION_INFO {
   
 #### <a name="parameters"></a>Parametri  
  *dwExtensionVersion*  
- Il numero di versione di ISA.  
+ Il numero di versione dell'ISA.  
   
  *lpszExtensionDesc*  
- La descrizione di testo di ISA. L'implementazione predefinita fornisce il testo segnaposto. eseguire l'override `CHttpServer::GetExtensionVersion` per fornire una propria descrizione.  
+ La descrizione testuale dell'ISA. L'implementazione predefinita fornisce il testo segnaposto; eseguire l'override `CHttpServer::GetExtensionVersion` per fornire una propria descrizione.  
   
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** httpext.h  

@@ -1,5 +1,5 @@
 ---
-title: Classe CMapPtrToPtr | Documenti Microsoft
+title: Classe CMapPtrToPtr | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5b3af1336c35fe9520834018d9c668005048db82
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 284efeda739f3282bf0ae23f11f950971538645d
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37037761"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37335718"
 ---
 # <a name="cmapptrtoptr-class"></a>Classe CMapPtrToPtr
 Supporta mappe di puntatori void con chiave fornita da puntatori void.  
@@ -61,7 +61,7 @@ class CMapPtrToPtr : public CObject
 ```  
   
 ## <a name="members"></a>Membri  
- Le funzioni membro `CMapPtrToPtr` sono simili alle funzioni membro della classe [CMapStringToOb](../../mfc/reference/cmapstringtoob-class.md). Grazie a questa somiglianza, per le specifiche delle funzioni membro è possibile usare la documentazione di riferimento di `CMapStringToOb`. Ogni volta che un `CObject` puntatore come parametro della funzione o valore restituito, sostituire un puntatore a **void**. Ogni volta che un `CString` o un **const** puntatore `char` come parametro della funzione o valore restituito, sostituire un puntatore a **void**.  
+ Le funzioni membro della `CMapPtrToPtr` sono simili alle funzioni membro della classe [CMapStringToOb](../../mfc/reference/cmapstringtoob-class.md). Grazie a questa somiglianza, per le specifiche delle funzioni membro è possibile usare la documentazione di riferimento di `CMapStringToOb`. Ogni volta che un `CObject` puntatore come parametro della funzione o valore restituito, sostituire un puntatore a **void**. Ogni volta che un `CString` o un **const** puntatore al **char** come parametro della funzione o valore restituito, sostituire con un puntatore a **void**.  
   
  `BOOL CMapStringToOb::Lookup( const char* <key>,`  
   
@@ -88,12 +88,12 @@ class CMapPtrToPtr : public CObject
 |[CMapStringToOb::GetStartPosition](../../mfc/reference/cmapstringtoob-class.md#getstartposition)|Restituisce la posizione del primo elemento.|  
 |[CMapStringToOb::HashKey](../../mfc/reference/cmapstringtoob-class.md#hashkey)|Calcola il valore hash di una chiave specificata.|  
 |[CMapStringToOb::InitHashTable](../../mfc/reference/cmapstringtoob-class.md#inithashtable)|Inizializza la tabella hash.|  
-|[CMapStringToOb::IsEmpty](../../mfc/reference/cmapstringtoob-class.md#isempty)|Verifica se la condizione di mappa vuoto (alcun elemento).|  
-|[CMapStringToOb::Lookup](../../mfc/reference/cmapstringtoob-class.md#lookup)|Cerca un puntatore void in base alla chiave puntatore void. Il valore del puntatore, non l'entità cui fa riferimento, viene utilizzato per il confronto delle chiavi.|  
-|[CMapStringToOb::LookupKey](../../mfc/reference/cmapstringtoob-class.md#lookupkey)|Restituisce un riferimento alla chiave associata con il valore di chiave specificato.|  
+|[CMapStringToOb::IsEmpty](../../mfc/reference/cmapstringtoob-class.md#isempty)|Verifica se la condizione vuota-map (nessun elemento).|  
+|[CMapStringToOb::Lookup](../../mfc/reference/cmapstringtoob-class.md#lookup)|Cerca un puntatore void in base alla chiave di puntatore void. Il valore del puntatore, non le entità cui fa riferimento, viene utilizzato per il confronto delle chiavi.|  
+|[CMapStringToOb::LookupKey](../../mfc/reference/cmapstringtoob-class.md#lookupkey)|Restituisce un riferimento alla chiave associata al valore di chiave specificato.|  
 |[CMapStringToOb::RemoveAll](../../mfc/reference/cmapstringtoob-class.md#removeall)|Rimuove tutti gli elementi da questa mappa.|  
 |[CMapStringToOb::RemoveKey](../../mfc/reference/cmapstringtoob-class.md#removekey)|Rimuove un elemento specificato da una chiave.|  
-|[CMapStringToOb::SetAt](../../mfc/reference/cmapstringtoob-class.md#setat)|Inserisce un elemento nella mappa. sostituisce un elemento esistente se viene trovata una chiave corrispondente.|  
+|[CMapStringToOb::SetAt](../../mfc/reference/cmapstringtoob-class.md#setat)|Inserisce un elemento nella mappa; sostituisce un elemento esistente se viene trovata una chiave corrispondente.|  
   
 ### <a name="public-operators"></a>Operatori pubblici  
   
@@ -102,9 +102,9 @@ class CMapPtrToPtr : public CObject
 |[[] CMapStringToOb::operator](../../mfc/reference/cmapstringtoob-class.md#operator_at)|Inserisce un elemento nella mappa, la sostituzione di operatore per `SetAt`.|  
   
 ## <a name="remarks"></a>Note  
- `CMapPtrToPtr` include la macro `IMPLEMENT_DYNAMIC` per supportare l'accesso del tipo in fase di esecuzione ed eseguire l'operazione di dump dell'oggetto `CDumpContext`. Se è necessario un dump di singoli elementi della mappa (valori del puntatore), è necessario impostare la profondità del contesto di dump a 1 o versioni successive.  
+ `CMapPtrToPtr` incorpora l'IMPLEMENT_DYNAMIC (macro) per supportare l'accesso di tipo in fase di esecuzione e il dump per un `CDumpContext` oggetto. Se è necessario un dump di singoli elementi della mappa (valori di puntatore), è necessario impostare la profondità del contesto di dump a 1 o versioni successive.  
   
- Puntatore a puntatore mappe non possono essere serializzate.  
+ Puntatore a puntatore, esegue il mapping non può essere serializzato.  
   
  Quando un oggetto `CMapPtrToPtr` viene eliminato oppure quando gli elementi vengono rimossi, vengono eliminati solo i puntatori e non le entità che referenziano.  
   
@@ -119,7 +119,7 @@ class CMapPtrToPtr : public CObject
  **Intestazione:** afxcoll. h  
   
 ## <a name="see-also"></a>Vedere anche  
- [CObject (classe)](../../mfc/reference/cobject-class.md)   
+ [Classe CObject](../../mfc/reference/cobject-class.md)   
  [Grafico della gerarchia](../../mfc/hierarchy-chart.md)
 
 

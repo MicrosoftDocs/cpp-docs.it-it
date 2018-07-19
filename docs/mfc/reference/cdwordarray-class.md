@@ -1,5 +1,5 @@
 ---
-title: Classe CDWordArray | Documenti Microsoft
+title: Classe CDWordArray | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6dd3f38a5bd54a2a79d002ff8c533d17c2426b80
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b06364aeb75ef57d02946a6799e80cf44c21c733
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33366489"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37335705"
 ---
 # <a name="cdwordarray-class"></a>Classe CDWordArray
 Supporta matrici di double word a 32 bit.  
@@ -69,7 +69,7 @@ class CDWordArray : public CObject
 ```  
   
 ## <a name="members"></a>Membri  
- Le funzioni membro di `CDWordArray` sono simili alle funzioni membro della classe [CObArray](../../mfc/reference/cobarray-class.md). Grazie a questa somiglianza, per le specifiche delle funzioni membro è possibile usare la documentazione di riferimento di `CObArray`. Ogni volta che un `CObject` puntatore come parametro della funzione o valore restituito, sostituire con un `DWORD`.  
+ Le funzioni membro della `CDWordArray` sono simili alle funzioni membro della classe [CObArray](../../mfc/reference/cobarray-class.md). Grazie a questa somiglianza, per le specifiche delle funzioni membro è possibile usare la documentazione di riferimento di `CObArray`. Ogni volta che un `CObject` puntatore come parametro della funzione o valore restituito, sostituire con un `DWORD`.  
   
  `CObject* CObArray::GetAt( int <nIndex> ) const;`  
   
@@ -94,7 +94,7 @@ class CDWordArray : public CObject
 |[CObArray::FreeExtra](../../mfc/reference/cobarray-class.md#freeextra)|Libera tutta la memoria non utilizzata oltre limite il superiore corrente.|  
 |[CObArray::GetAt](../../mfc/reference/cobarray-class.md#getat)|Restituisce il valore in corrispondenza di un indice specificato.|  
 |[CObArray::GetCount](../../mfc/reference/cobarray-class.md#getcount)|Ottiene il numero di elementi nella matrice.|  
-|[CObArray::GetData](../../mfc/reference/cobarray-class.md#getdata)|Consente l'accesso a tutti gli elementi nella matrice. Può essere **NULL**.|  
+|[CObArray::GetData](../../mfc/reference/cobarray-class.md#getdata)|Consente l'accesso a tutti gli elementi nella matrice. Può essere NULL.|  
 |[CObArray::GetSize](../../mfc/reference/cobarray-class.md#getsize)|Ottiene il numero di elementi nella matrice.|  
 |[CObArray::GetUpperBound](../../mfc/reference/cobarray-class.md#getupperbound)|Restituisce il massimo indice valido.|  
 |[CObArray::InsertAt](../../mfc/reference/cobarray-class.md#insertat)|Inserisce un elemento (o tutti gli elementi di un'altra matrice) in corrispondenza di un indice specificato.|  
@@ -112,19 +112,19 @@ class CDWordArray : public CObject
 |[[] CObArray::operator](../../mfc/reference/cobarray-class.md#operator_at)|Imposta o ottiene l'elemento in corrispondenza dell'indice specificato.|  
   
 ## <a name="remarks"></a>Note  
- `CDWordArray` incorpora la macro `IMPLEMENT_SERIAL` per supportare la serializzazione e il dump dei relativi elementi. Se una matrice di Double Word è archiviata in un archivio, con l'inserimento di overload ( **<<**) (operatore) o con il `Serialize` funzione membro, ogni elemento è, a sua volta, serializzato.  
+ `CDWordArray` incorpora la macro `IMPLEMENT_SERIAL` per supportare la serializzazione e il dump dei relativi elementi. Se una matrice di parole doppie è archiviata in un archivio, con l'inserimento di overload ( **<<**) operatore o con il `Serialize` funzione membro, ogni elemento è, a sua volta, serializzato.  
   
 > [!NOTE]
 >  Prima di usare una matrice, usare `SetSize` per determinarne le dimensioni e allocare la necessaria memoria. Se non si usa `SetSize`, l'aggiunta di elementi alla matrice ne causa la riallocazione e la copia frequente. Le operazioni di riallocazione e copia frequenti sono inefficienti e possono frammentare la memoria.  
   
- Se è necessario eseguire il debug di output da singoli elementi nella matrice, è necessario impostare la profondità del `CDumpContext` oggetto 1 o versione successiva.  
+ Se è necessario eseguire il debug di output da singoli elementi nella matrice, è necessario impostare la profondità del `CDumpContext` oggetto 1 o versioni successive.  
   
- Per ulteriori informazioni sull'utilizzo `CDWordArray`, vedere l'articolo [raccolte](../../mfc/collections.md).  
+ Per altre informazioni sull'uso `CDWordArray`, vedere l'articolo [raccolte](../../mfc/collections.md).  
   
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** afxcoll. h  
   
 ## <a name="see-also"></a>Vedere anche  
- [CObject (classe)](../../mfc/reference/cobject-class.md)   
+ [Classe CObject](../../mfc/reference/cobject-class.md)   
  [Grafico delle gerarchie](../../mfc/hierarchy-chart.md)   
  [Classe CObArray](../../mfc/reference/cobarray-class.md)

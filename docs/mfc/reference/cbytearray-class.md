@@ -1,5 +1,5 @@
 ---
-title: Classe CByteArray | Documenti Microsoft
+title: Classe CByteArray | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4fa82ea58cfd5d64f6aa825fe08264cdd17c1985
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 22e138b586070a0e47ffa399d2c76d086fd4b951
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36951065"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37335854"
 ---
 # <a name="cbytearray-class"></a>Classe CByteArray
 Supporta matrici di byte dinamiche.  
@@ -69,7 +69,7 @@ class CByteArray : public CObject
 ```  
   
 ## <a name="members"></a>Membri  
- Le funzioni membro `CByteArray` sono simili alle funzioni membro della classe [CObArray](../../mfc/reference/cobarray-class.md). Grazie a questa somiglianza, per le specifiche delle funzioni membro è possibile usare la documentazione di riferimento di `CObArray`. Ogni volta che un `CObject` puntatore come parametro della funzione o valore restituito, sostituire con un **BYTE**.  
+ Le funzioni membro della `CByteArray` sono simili alle funzioni membro della classe [CObArray](../../mfc/reference/cobarray-class.md). Grazie a questa somiglianza, per le specifiche delle funzioni membro è possibile usare la documentazione di riferimento di `CObArray`. Ogni volta che un `CObject` puntatore come parametro della funzione o valore restituito, sostituire con un BYTE.  
   
  `CObject* CObArray::GetAt( int <nIndex> ) const;`  
   
@@ -94,7 +94,7 @@ class CByteArray : public CObject
 |[CObArray::FreeExtra](../../mfc/reference/cobarray-class.md#freeextra)|Libera tutta la memoria non utilizzata oltre limite il superiore corrente.|  
 |[CObArray::GetAt](../../mfc/reference/cobarray-class.md#getat)|Restituisce il valore in corrispondenza di un indice specificato.|  
 |[CObArray::GetCount](../../mfc/reference/cobarray-class.md#getcount)|Ottiene il numero di elementi nella matrice.|  
-|[CObArray::GetData](../../mfc/reference/cobarray-class.md#getdata)|Consente l'accesso a tutti gli elementi nella matrice. Può essere **NULL**.|  
+|[CObArray::GetData](../../mfc/reference/cobarray-class.md#getdata)|Consente l'accesso a tutti gli elementi nella matrice. Può essere NULL.|  
 |[CObArray::GetSize](../../mfc/reference/cobarray-class.md#getsize)|Ottiene il numero di elementi nella matrice.|  
 |[CObArray::GetUpperBound](../../mfc/reference/cobarray-class.md#getupperbound)|Restituisce il massimo indice valido.|  
 |[CObArray::InsertAt](../../mfc/reference/cobarray-class.md#insertat)|Inserisce un elemento (o tutti gli elementi di un'altra matrice) in corrispondenza di un indice specificato.|  
@@ -112,14 +112,14 @@ class CByteArray : public CObject
 |[[] CObArray::operator](../../mfc/reference/cobarray-class.md#operator_at)|Imposta o ottiene l'elemento in corrispondenza dell'indice specificato.|  
   
 ## <a name="remarks"></a>Note  
- `CByteArray` incorpora la macro IMPLEMENT_SERIAL per supportare la serializzazione e il dump dei relativi elementi. Se una matrice di byte viene archiviata in un archivio, con l'inserimento di overload ( **<<**) (operatore) o con il `Serialize` funzione membro, ogni elemento è, di conseguenza, serializzato.  
+ `CByteArray` incorpora l'IMPLEMENT_SERIAL (macro) per supportare la serializzazione e il dump dei relativi elementi. Se una matrice di byte viene archiviata in un archivio, con l'inserimento di overload ( **<<**) operatore o con il `Serialize` funzione membro, ogni elemento è, a sua volta, serializzato.  
   
 > [!NOTE]
 >  Prima di usare una matrice, usare `SetSize` per determinarne le dimensioni e allocare la necessaria memoria. Se non si usa `SetSize`, l'aggiunta di elementi alla matrice ne causa la riallocazione e la copia frequente. Le operazioni di riallocazione e copia frequenti sono inefficienti e possono frammentare la memoria.  
   
  Se è necessario eseguire il debug di output da singoli elementi nella matrice, è necessario impostare la profondità del `CDumpContext` oggetto 1 o versioni successive.  
   
- Per ulteriori informazioni sull'utilizzo `CByteArray`, vedere l'articolo [raccolte](../../mfc/collections.md).  
+ Per altre informazioni sull'uso `CByteArray`, vedere l'articolo [raccolte](../../mfc/collections.md).  
   
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -130,6 +130,6 @@ class CByteArray : public CObject
  **Intestazione:** afxcoll. h  
   
 ## <a name="see-also"></a>Vedere anche  
- [CObject (classe)](../../mfc/reference/cobject-class.md)   
+ [Classe CObject](../../mfc/reference/cobject-class.md)   
  [Grafico delle gerarchie](../../mfc/hierarchy-chart.md)   
  [Classe CObArray](../../mfc/reference/cobarray-class.md)
