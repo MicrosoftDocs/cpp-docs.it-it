@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0f8bd1ec1436b960a0637a79cb04982a953636a6
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c4bff519ea12646e94e92cde219fa38e4009a767
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33856300"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38956456"
 ---
 # <a name="rtsalloc-class"></a>Classe rts_alloc
 
@@ -44,7 +44,7 @@ class rts_alloc
 
 |Parametro|Descrizione|
 |---------------|-----------------|
-|`Cache`|Il tipo delle istanze cache contenuto nell'array. Può essere la [classe cache_chunklist](../standard-library/cache-chunklist-class.md), [cache_freelist](../standard-library/cache-freelist-class.md) o [cache_suballoc](../standard-library/cache-suballoc-class.md).|
+|*Cache*|Il tipo delle istanze cache contenuto nell'array. Può essere la [classe cache_chunklist](../standard-library/cache-chunklist-class.md), [cache_freelist](../standard-library/cache-freelist-class.md) o [cache_suballoc](../standard-library/cache-suballoc-class.md).|
 
 ## <a name="remarks"></a>Note
 
@@ -76,7 +76,7 @@ void *allocate(std::size_t count);
 
 |Parametro|Descrizione|
 |---------------|-----------------|
-|`count`|Numero di elementi della matrice da allocare.|
+|*count*|Numero di elementi della matrice da allocare.|
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -84,7 +84,7 @@ Puntatore all'oggetto allocato.
 
 ### <a name="remarks"></a>Note
 
-La funzione membro restituisce `caches[_IDX].allocate(count)`, dove l'indice `_IDX` è determinato dalla dimensione del blocco richiesto `count`, oppure, se `count` è troppo grande, restituisce `operator new(count)`. Oggetto `cache` che rappresenta l'oggetto cache.
+La funzione membro restituisce `caches[_IDX].allocate(count)`, dove l'indice `_IDX` è determinato dalla dimensione del blocco richiesto *conteggio*, o, se *count* è troppo grande, restituisce `operator new(count)`. Oggetto `cache` che rappresenta l'oggetto cache.
 
 ## <a name="deallocate"></a>  rts_alloc::deallocate
 
@@ -98,12 +98,12 @@ void deallocate(void* ptr, std::size_t count);
 
 |Parametro|Descrizione|
 |---------------|-----------------|
-|`ptr`|Puntatore al primo oggetto da deallocare dall'archivio.|
-|`count`|Numero di oggetti da deallocare dall'archivio.|
+|*ptr*|Puntatore al primo oggetto da deallocare dall'archivio.|
+|*count*|Numero di oggetti da deallocare dall'archivio.|
 
 ### <a name="remarks"></a>Note
 
-La funzione membro chiama `caches[_IDX].deallocate(ptr, count)`, dove l'indice `_IDX` è determinato dalla dimensione del blocco richiesto `count`, oppure, se `count` è troppo grande, restituisce `operator delete(ptr)`.
+La funzione membro chiama `caches[_IDX].deallocate(ptr, count)`, dove l'indice `_IDX` è determinato dalla dimensione del blocco richiesto *conteggio*, o, se *count* è troppo grande, restituisce `operator delete(ptr)`.
 
 ## <a name="equals"></a>  rts_alloc::equals
 
@@ -117,12 +117,12 @@ bool equals(const sync<_Cache>& _Other) const;
 
 |Parametro|Descrizione|
 |---------------|-----------------|
-|`_Cache`|Oggetto cache associato al filtro.|
-|`_Other`|Oggetto cache da confrontare per verificarne l'uguaglianza.|
+|*_Cache*|Oggetto cache associato al filtro.|
+|*_Other*|Oggetto cache da confrontare per verificarne l'uguaglianza.|
 
 ### <a name="remarks"></a>Note
 
-`true` se il risultato di `caches[0].equals(other.caches[0])`; in caso contrario, `false`. `caches` rappresenta una matrice di oggetti cache.
+**true** se il risultato del `caches[0].equals(other.caches[0])`; in caso contrario, **false**. `caches` rappresenta una matrice di oggetti cache.
 
 ## <a name="see-also"></a>Vedere anche
 

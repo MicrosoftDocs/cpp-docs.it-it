@@ -1,5 +1,5 @@
 ---
-title: Interfaccia IRegistrar | Documenti Microsoft
+title: Interfaccia IRegistrar | Microsoft Docs
 ms.custom: ''
 ms.date: 2/1/2017
 ms.technology:
@@ -25,15 +25,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 89d1e9269536ee28f2c8dd29819ff594c89c186b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b6720ef830563e24d887071e1ee1e4a8c31df05c
+ms.sourcegitcommit: bb4488366e4581c561ca1e573a2b99b71d4c6288
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32363751"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38993568"
 ---
 # <a name="iregistrar-interface"></a>Interfaccia IRegistrar
-Questa interfaccia è definita in atliface.h e viene utilizzata internamente dalle funzioni membro da CAtlModule, ad esempio [UpdateRegistryFromResourceD](catlmodule-class.md#updateregistryfromresourced).   
+Questa interfaccia è definita in atliface.h e viene usata internamente dalle funzioni membro CAtlModule, ad esempio [UpdateRegistryFromResourceD](catlmodule-class.md#updateregistryfromresourced).   
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -41,7 +41,7 @@ Questa interfaccia è definita in atliface.h e viene utilizzata internamente dal
 typedef interface IRegistrar IRegistrar;
 ```  
 ## <a name="remarks"></a>Note
-Vedere l'argomento [utilizzando parametri sostituibili (il Registrar preprocessore)](../../atl/using-replaceable-parameters-the-registrar-s-preprocessor.md) per altri dettagli.  
+Vedere l'argomento [usando parametri sostituibili (preprocessore del Registrar)](../../atl/using-replaceable-parameters-the-registrar-s-preprocessor.md) per altri dettagli.  
 
 ## <a name="members"></a>Membri  
   
@@ -143,6 +143,6 @@ virtualHRESULT STDMETHODCALLTYPE ResourceUnregister(
  
 ## <a name="see-also"></a>Vedere anche  
  [Uso dei parametri sostituibili (preprocessore del registrar)](../../atl/using-replaceable-parameters-the-registrar-s-preprocessor.md)  
- [Cenni preliminari sulla classe](../../atl/atl-class-overview.md)   
- [Classi Module](../../atl/atl-module-classes.md)   
+ [Panoramica della classe](../../atl/atl-class-overview.md)   
+ [Classi di modulo](../../atl/atl-module-classes.md)   
  [Registro di sistema ATL (Registrar)](../../atl/atl-registry-component-registrar.md)  

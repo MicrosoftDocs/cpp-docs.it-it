@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 757a5eb526bc8d4294a64cbdc9645e72285162ce
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f73559503ad427c9b7eb513d4164d3348c652948
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33857259"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954747"
 ---
 # <a name="istriviallyconstructible-class"></a>Classe is_trivially_constructible
 
@@ -37,13 +37,13 @@ struct is_trivially_constructible;
 
 ### <a name="parameters"></a>Parametri
 
-`T` Il tipo di query.
+*T* il tipo di query.
 
-`Args` I tipi di argomento per trovare una corrispondenza in un costruttore di `T`.
+*Args* i tipi di argomento in modo che corrispondano in un costruttore della *T*.
 
 ## <a name="remarks"></a>Note
 
-Un'istanza del predicato di tipo contiene true se il tipo `T` è facilmente costruibile mediante i tipi di argomento in `Args`; in caso contrario, contiene false. Il tipo `T` è facilmente costruibile se la definizione di variabile `T t(std::declval<Args>()...);` è nel formato corretto ed è nota per non chiamare operazioni complesse. `T` e tutti i tipi inclusi in `Args` devono essere tipi completi, `void`, o matrici di valori associati sconosciuti.
+Un'istanza del tipo predicato contiene true se il tipo *T* è facilmente costruibile mediante i tipi di argomento in *Args*, in caso contrario, contiene false. Tipo di *T* è facilmente costruibile se la definizione di variabile `T t(std::declval<Args>()...);` è ben formata e se è noto per non chiamare alcuna operazione non semplice. Entrambe *T* e tutti i tipi negli *Args* devono essere tipi completi, **void**, o matrici di valori associati sconosciuti.
 
 ## <a name="requirements"></a>Requisiti
 

@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ef0be002676860acb4f55d989416114ec23ce809
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 4ad86773fdc78f3cb8d5219ce14919a035755f3b
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33854431"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38955332"
 ---
 # <a name="pair-structure"></a>Struttura pair
 
@@ -54,25 +54,25 @@ struct pair
 
 ### <a name="parameters"></a>Parametri
 
-`Val1` Valore che inizializza il primo elemento della `pair`.
+*Val1* Inizializza il primo elemento di valore `pair`.
 
-`Val2` Valore che inizializza il secondo elemento di `pair`.
+*Val2* Inizializza il secondo elemento di valore `pair`.
 
-`Right` Coppia i cui valori devono essere utilizzati per inizializzare gli elementi di un'altra coppia.
+*Destra* una coppia i cui valori devono essere utilizzati per inizializzare gli elementi di un'altra coppia.
 
 ## <a name="return-value"></a>Valore restituito
 
-Il primo costruttore (predefinito) inizializza il primo elemento della coppia sul valore predefinito di tipo **T1** e il secondo elemento sul valore predefinito di tipo **T2**.
+Il primo costruttore (predefinito) Inizializza il primo elemento della coppia sul valore predefinito di tipo `T1` e il secondo elemento sul valore predefinito di tipo `T2`.
 
-Il secondo costruttore inizializza il primo elemento della coppia su `Val1` e il secondo su *Val2.*
+Il secondo costruttore inizializza il primo elemento della coppia *Val1* e il secondo su *Val2.*
 
 Il terzo costruttore (modello) inizializza il primo elemento della coppia su `Right`. **first** e il secondo su `Right`. **second**.
 
-Il quarto costruttore inizializza il primo elemento della coppia su `Val1` e il secondo su *Val2* usando i [Riferimenti Rvalue Declarator: &&](../cpp/rvalue-reference-declarator-amp-amp.md).
+Il quarto costruttore inizializza il primo elemento della coppia *Val1* e il secondo su *Val2* usando [dichiaratore di riferimento Rvalue: & &](../cpp/rvalue-reference-declarator-amp-amp.md).
 
 ## <a name="remarks"></a>Note
 
-Lo struct del modello archivia una coppia di oggetti, rispettivamente di tipo **T1** e **T2**. Il tipo **first_type** è uguale al parametro di modello **T1**, mentre il tipo **second_type** è uguale al parametro di modello **T2**. Sia **T1** che **T2** devono fornire solo un costruttore predefinito, un costruttore ad argomento singolo e un distruttore. Tutti i membri del tipo `pair` sono pubblici, in quanto il tipo è dichiarato come `struct` anziché come **class**. Una coppia viene usata in genere in due modi: come tipo restituito per le funzioni che restituiscono due valori e come elemento per le classi contenitore associative [map](../standard-library/map-class.md) e [multimap](../standard-library/multimap-class.md), entrambe con una chiave e un tipo di valore associati a ciascun elemento. La seconda soddisfa i requisiti relativi ai contenitori associativi di coppie e ha un tipo di valore con formato `pair`< **const**`key_type`, `mapped_type`>.
+Lo struct del modello archivia una coppia di oggetti di tipo `T1` e `T2`, rispettivamente. Il tipo `first_type` è uguale al parametro di modello `T1` e il tipo `second_type` è uguale al parametro di modello `T2`. `T1` e `T2` devono fornire solo un costruttore predefinito, un costruttore ad argomento singolo e un distruttore. Tutti i membri del tipo `pair` sono pubblici, in quanto il tipo è dichiarato come `struct` anziché come **class**. Una coppia viene usata in genere in due modi: come tipo restituito per le funzioni che restituiscono due valori e come elemento per le classi contenitore associative [map](../standard-library/map-class.md) e [multimap](../standard-library/multimap-class.md), entrambe con una chiave e un tipo di valore associati a ciascun elemento. La seconda soddisfa i requisiti relativi ai contenitori associativi di coppie e ha un tipo di valore con formato `pair`< **const**`key_type`, `mapped_type`>.
 
 ## <a name="example"></a>Esempio
 

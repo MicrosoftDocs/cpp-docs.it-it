@@ -30,12 +30,12 @@ helpviewer_keywords:
 - std::future [C++], wait_until
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 31490578b1f1d9b6028b3fa2cdcc5769d3a53935
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 77b3c96d2c579b9fa3081ad7223ac254a727a88b
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33847559"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38956638"
 ---
 # <a name="future-class"></a>Classe future
 
@@ -79,7 +79,7 @@ Ogni *provider asincrono* standard restituisce un oggetto il cui tipo è una cre
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** \<futura >
+**Intestazione:** \<future >
 
 **Spazio dei nomi:** std
 
@@ -94,13 +94,13 @@ future(future&& Other) noexcept;
 
 ### <a name="parameters"></a>Parametri
 
-`Other` Oggetto `future` oggetto.
+*Altri* oggetto `future` oggetto.
 
 ### <a name="remarks"></a>Note
 
 Il primo costruttore crea un oggetto `future` che non ha uno stato asincrono associato.
 
-Il secondo costruttore crea un oggetto `future` e trasferisce lo stato asincrono associato da `Other`. `Other` non ha un più uno stato asincrono associato.
+Il secondo costruttore crea un `future` dell'oggetto e trasferisce lo stato asincrono associato da *altri*. *Altri* non ha più uno stato asincrono associato.
 
 ## <a name="get"></a>  future::get
 
@@ -120,7 +120,7 @@ Prima di recuperare il risultato, questo metodo blocca il thread corrente finch�
 
 Per la specializzazione parziale `future<Ty&>`, il valore archiviato è di fatto un riferimento all'oggetto passato al provider asincrono come valore restituito.
 
-Poiché non esiste alcun valore archiviato per la specializzazione `future<void>`, il metodo restituisce `void`.
+Poiché non esiste alcun valore archiviato per la specializzazione `future<void>`, il metodo restituisce **void**.
 
 In altre specializzazioni il metodo sposta il relativo valore restituito dal valore archiviato. Pertanto, chiamare questo metodo solo una volta.
 
@@ -134,7 +134,7 @@ future& operator=(future&& Right) noexcept;
 
 ### <a name="parameters"></a>Parametri
 
-`Right` Oggetto `future` oggetto.
+*A destra* oggetto `future` oggetto.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -142,7 +142,7 @@ future& operator=(future&& Right) noexcept;
 
 ### <a name="remarks"></a>Note
 
-Dopo il trasferimento, `Right` non ha più uno stato asincrono associato.
+Dopo il trasferimento *destra* non ha più uno stato asincrono associato.
 
 ## <a name="share"></a>  future::share
 
@@ -166,7 +166,7 @@ bool valid() noexcept;
 
 ### <a name="return-value"></a>Valore restituito
 
-`true` se l'oggetto ha uno stato asincrono associato; in caso contrario, `false`.
+**true** se l'oggetto ha uno stato asincrono associato; in caso contrario, **false**.
 
 ## <a name="wait"></a>  future::wait
 
@@ -191,7 +191,7 @@ future_status wait_for(const chrono::duration<Rep, Period>& Rel_time) const;
 
 ### <a name="parameters"></a>Parametri
 
-`Rel_time` Un [chrono](../standard-library/duration-class.md) oggetto che specifica un intervallo di tempo massimo che il thread si blocca.
+*Rel_time* un' [chrono:: Duration](../standard-library/duration-class.md) che specifica un intervallo di tempo massimo che il thread si blocca.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -212,7 +212,7 @@ future_status wait_until(const chrono::time_point<Clock, Duration>& Abs_time) co
 
 ### <a name="parameters"></a>Parametri
 
-`Abs_time` Un [chrono:: time_point](../standard-library/time-point-class.md) oggetto che specifica un'ora dopo il quale è possibile sbloccare il thread.
+*Abs_time* un' [chrono:: time_point](../standard-library/time-point-class.md) oggetto che specifica un'ora dopo il quale è possibile sbloccare il thread.
 
 ### <a name="return-value"></a>Valore restituito
 

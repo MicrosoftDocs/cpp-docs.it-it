@@ -1,5 +1,5 @@
 ---
-title: Classe CButton | Documenti Microsoft
+title: Classe CButton | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -84,14 +84,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5e232c363da4c9bbaf7e049551f9e2915671098c
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 67e4c1755a4d7e5da451305260d4f88ac2c938bf
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36957442"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39027888"
 ---
-# <a name="cbutton-class"></a>CButton (classe)
+# <a name="cbutton-class"></a>Classe CButton
 Fornisce la funzionalità dei controlli pulsante di Windows.  
   
 ## <a name="syntax"></a>Sintassi  
@@ -112,73 +112,73 @@ class CButton : public CWnd
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[CButton::Create](#create)|Crea il controllo pulsante di Windows e lo collega al `CButton` oggetto.|  
-|[CButton::DrawItem](#drawitem)|Sostituzione consente di disegnare un proprietario `CButton` oggetto.|  
+|[CButton::Create](#create)|Crea il controllo pulsante Windows e lo collega al `CButton` oggetto.|  
+|[CButton::DrawItem](#drawitem)|Eseguire l'override per disegnare un proprietario `CButton` oggetto.|  
 |[CButton::GetBitmap](#getbitmap)|Recupera l'handle di bitmap impostata in precedenza con [SetBitmap](#setbitmap).|  
 |[CButton::GetButtonStyle](#getbuttonstyle)|Recupera informazioni sullo stile del controllo pulsante.|  
 |[CButton::GetCheck](#getcheck)|Recupera lo stato di un controllo pulsante di selezione.|  
-|[CButton::GetCursor](#getcursor)|Recupera l'handle dell'immagine cursore impostato in precedenza con [SetCursor](#setcursor).|  
+|[CButton::GetCursor](#getcursor)|Recupera l'handle dell'immagine del cursore è impostato in precedenza con [SetCursor](#setcursor).|  
 |[CButton::GetIcon](#geticon)|Recupera l'handle dell'icona impostato in precedenza con [SetIcon](#seticon).|  
-|[CButton::GetIdealSize](#getidealsize)|Recupera la dimensione ideale del controllo button.|  
-|[CButton::GetImageList](#getimagelist)|Recupera l'elenco di immagini del controllo button.|  
+|[CButton::GetIdealSize](#getidealsize)|Recupera la dimensione ideale del controllo pulsante.|  
+|[CButton::GetImageList](#getimagelist)|Recupera l'elenco di immagini del controllo pulsante.|  
 |[CButton::GetNote](#getnote)|Recupera il componente nota del controllo collegamento comando corrente.|  
-|[CButton::GetNoteLength](#getnotelength)|Recupera la lunghezza del testo della nota per il controllo collegamento comando corrente.|  
-|[CButton::GetSplitGlyph](#getsplitglyph)|Recupera l'icona associata con il controllo pulsante di menu combinato corrente.|  
+|[CButton::GetNoteLength](#getnotelength)|Recupera la lunghezza del testo della nota per il controllo command link corrente.|  
+|[CButton::GetSplitGlyph](#getsplitglyph)|Recupera il glifo associato il controllo pulsante di menu combinato corrente.|  
 |[CButton::GetSplitImageList](#getsplitimagelist)|Recupera l'elenco di immagini per il controllo pulsante di menu combinato corrente.|  
-|[CButton::GetSplitInfo](#getsplitinfo)|Recupera le informazioni che definisce il controllo pulsante di menu combinato corrente.|  
-|[CButton::GetSplitSize](#getsplitsize)|Recupera il rettangolo di delimitazione del componente del menu a discesa il controllo pulsante di menu combinato corrente.|  
-|[CButton::GetSplitStyle](#getsplitstyle)|Recupera gli stili dei pulsanti di menu combinato che definiscono il controllo pulsante di menu combinato corrente.|  
+|[CButton::GetSplitInfo](#getsplitinfo)|Recupera le informazioni che definiscono il controllo pulsante di menu combinato corrente.|  
+|[CButton::GetSplitSize](#getsplitsize)|Recupera il rettangolo di delimitazione del componente elenco a discesa del controllo pulsante di divisione corrente.|  
+|[CButton::GetSplitStyle](#getsplitstyle)|Recupera gli stili dei pulsanti di suddivisione che definiscono il controllo pulsante di menu combinato corrente.|  
 |[CButton::GetState](#getstate)|Recupera il controllo dello stato, lo stato di evidenziazione e stato attivo di un controllo pulsante.|  
-|[CButton::GetTextMargin](#gettextmargin)|Recupera il margine di testo del controllo button.|  
+|[CButton::GetTextMargin](#gettextmargin)|Recupera il margine di testo del controllo pulsante.|  
 |[CButton:: SetBitmap](#setbitmap)|Specifica una bitmap da visualizzare sul pulsante.|  
 |[CButton::SetButtonStyle](#setbuttonstyle)|Modifica lo stile di un pulsante.|  
 |[CButton::SetCheck](#setcheck)|Imposta lo stato di un controllo pulsante di selezione.|  
 |[CButton::SetCursor](#setcursor)|Specifica un'immagine di cursore da visualizzare sul pulsante.|  
-|[CButton::SetDropDownState](#setdropdownstate)|Imposta lo stato di riepilogo a discesa del controllo pulsante di menu combinato corrente.|  
+|[CButton::SetDropDownState](#setdropdownstate)|Imposta lo stato di riepilogo a discesa del controllo pulsante di divisione corrente.|  
 |[CButton::SetIcon](#seticon)|Specifica l'icona da visualizzare sul pulsante.|  
-|[CButton::SetImageList](#setimagelist)|Imposta l'elenco di immagini del controllo button.|  
-|[CButton::SetNote](#setnote)|Imposta la nota sul controllo di collegamento di comando corrente.|  
+|[CButton::SetImageList](#setimagelist)|Imposta l'elenco di immagini del controllo pulsante.|  
+|[CButton::SetNote](#setnote)|Imposta la nota il controllo di collegamento di comando corrente.|  
 |[CButton::SetSplitGlyph](#setsplitglyph)|Associa un glifo specificato con il controllo pulsante di menu combinato corrente.|  
 |[CButton::SetSplitImageList](#setsplitimagelist)|Associa un elenco di immagini con il controllo pulsante di menu combinato corrente.|  
-|[CButton::SetSplitInfo](#setsplitinfo)|Specifica le informazioni che definisce il controllo pulsante di menu combinato corrente.|  
-|[CButton::SetSplitSize](#setsplitsize)|Imposta il rettangolo di delimitazione del componente del menu a discesa il controllo pulsante di menu combinato corrente.|  
-|[CButton::SetSplitStyle](#setsplitstyle)|Imposta lo stile del controllo pulsante di menu combinato corrente.|  
-|[CButton::SetState](#setstate)|Imposta lo stato di evidenziazione di un controllo pulsante.|  
-|[CButton::SetTextMargin](#settextmargin)|Imposta il margine di testo del controllo button.|  
+|[CButton::SetSplitInfo](#setsplitinfo)|Specifica le informazioni che definiscono il controllo pulsante di menu combinato corrente.|  
+|[CButton::SetSplitSize](#setsplitsize)|Imposta il rettangolo di delimitazione del componente elenco a discesa del controllo pulsante di divisione corrente.|  
+|[CButton::SetSplitStyle](#setsplitstyle)|Imposta lo stile del controllo pulsante di divisione corrente.|  
+|[CButton::SetState](#setstate)|Imposta lo stato di evidenziazione dei risultati di un controllo pulsante.|  
+|[CButton::SetTextMargin](#settextmargin)|Imposta il margine di testo del controllo pulsante.|  
   
 ## <a name="remarks"></a>Note  
- Un controllo button è una finestra figlio di piccole dimensioni, rettangolare che può essere selezionata e disattivare. Pulsanti possono essere utilizzati da solo o in gruppi e possono essere identificato dall'etichetta o visualizzata senza testo. Un pulsante in genere cambia aspetto quando l'utente fa clic sopra.  
+ Un controllo pulsante è una finestra figlio di piccole dimensioni, rettangolare che può essere selezionata e disattivare. Pulsanti possono essere usati da solo o in gruppi e possono essere identificato dall'etichetta o visualizzata senza testo. Un pulsante Modifica in genere l'aspetto quando viene selezionato dall'utente.  
   
- I tipici pulsanti sono la casella di controllo pulsante di opzione e pulsante di comando. A `CButton` oggetto può diventare uno di questi, in base al [pulsante stile](../../mfc/reference/styles-used-by-mfc.md#button-styles) specificato nella relativa inizializzazione mediante il [crea](#create) funzione membro.  
+ I tipici pulsanti sono la casella di controllo pulsante di opzione e pulsante di comando. Oggetto `CButton` oggetti possono diventare uno di questi valori in base al [pulsante stile](../../mfc/reference/styles-used-by-mfc.md#button-styles) specificato nella relativa inizializzazione dal [crea](#create) funzione membro.  
   
- Inoltre, il [CBitmapButton](../../mfc/reference/cbitmapbutton-class.md) classe derivata da `CButton` supporta la creazione di controlli pulsanti di etichetta con immagini bitmap anziché di testo. Oggetto `CBitmapButton` può avere bitmap separata per un pulsante del, verso il basso, con stato attivo e disabilitato stati.  
+ Inoltre, il [CBitmapButton](../../mfc/reference/cbitmapbutton-class.md) classe derivata da `CButton` supporta la creazione di controlli pulsanti contrassegnati con le immagini bitmap anziché di testo. Oggetto `CBitmapButton` può avere separate le bitmap per un pulsante del, verso il basso, con stato attivo e disabilitati gli stati.  
   
- È possibile creare un controllo button da un modello di finestra di dialogo o direttamente nel codice. In entrambi i casi, chiamare prima il costruttore `CButton` per costruire il `CButton` dell'oggetto, quindi chiamare il `Create` funzione membro per creare le finestre di controllo button e associarlo al `CButton` oggetto.  
+ È possibile creare un controllo button da un modello di finestra di dialogo o direttamente nel codice. In entrambi i casi, chiamare prima il costruttore `CButton` per costruire il `CButton` dell'oggetto, quindi chiamare il `Create` funzione membro per creare la Windows controllo button e associarlo al `CButton` oggetto.  
   
- Costruzione può essere un processo in un passaggio in una classe derivata da `CButton`. Scrivere un costruttore della classe derivata e chiamata `Create` all'interno del costruttore.  
+ Costruzione può essere un processo in un passaggio in una classe derivata da `CButton`. Scrivere un costruttore per la classe derivata e chiamare `Create` all'interno del costruttore.  
   
  Se si desidera gestire i messaggi di notifica Windows inviati da un controllo pulsante al relativo elemento padre (in genere una classe derivata da [CDialog](../../mfc/reference/cdialog-class.md)), aggiungere una funzione membro della mappa messaggi voce e gestore di messaggi alla classe padre per ogni messaggio.  
   
- Ogni voce della mappa messaggi assume il formato seguente:  
+ Ogni voce nella mappa messaggi assume il formato seguente:  
   
- **On _** notifica **(**`id`, `memberFxn` **)**  
+ **On _** Notification **(**`id`, `memberFxn` **)**  
   
- in cui `id` specifica l'ID di finestra figlio del controllo che invia la notifica e `memberFxn` è il nome della funzione membro padre scritta per gestire la notifica.  
+ in cui `id` specifica l'ID della finestra figlio del controllo che invia la notifica e `memberFxn` è il nome della funzione membro padre scritta per gestire la notifica.  
   
  Prototipo di funzione dell'elemento padre è il seguente:  
   
  **afx_msg** `void` `memberFxn` **();**  
   
- Le voci della mappa messaggi potenziali sono i seguenti:  
+ Le voci della mappa messaggi possibili sono i seguenti:  
   
 |Voce della mappa|Inviato al padre quando...|  
 |---------------|----------------------------|  
-|**ON_BN_CLICKED**|L'utente sceglie un pulsante.|  
-|**ON_BN_DOUBLECLICKED**|L'utente fa doppio clic su un pulsante.|  
+|ON_BN_CLICKED|L'utente sceglie un pulsante.|  
+|ON_BN_DOUBLECLICKED|L'utente fa doppio clic su un pulsante.|  
   
- Se si crea un `CButton` oggetto da una risorsa finestra di dialogo, il `CButton` oggetto viene automaticamente distrutta quando l'utente chiude la finestra di dialogo.  
+ Se si crea una `CButton` oggetto da una risorsa finestra di dialogo, il `CButton` oggetto viene eliminato automaticamente quando l'utente chiude la finestra di dialogo.  
   
- Se si crea un `CButton` oggetto all'interno di una finestra, potrebbe essere necessario eliminarlo. Se si crea il `CButton` oggetto sull'heap tramite il **nuovi** funzione, è necessario chiamare **eliminare** per l'oggetto venga eliminata quando l'utente chiude Windows controllo pulsante. Se si crea il `CButton` oggetto nello stack oppure è incorporato nell'oggetto finestra di dialogo padre, viene eliminato automaticamente.  
+ Se si crea un `CButton` dell'oggetto all'interno di una finestra, potrebbe essere necessario eliminarlo. Se si crea il `CButton` oggetto sull'heap tramite il **nuovi** funzione, è necessario chiamare **eliminare** sull'oggetto per eliminarla definitivamente quando l'utente chiude Windows il controllo pulsante. Se si crea il `CButton` oggetto nello stack oppure è incorporato nell'oggetto padre della finestra, venga eliminato automaticamente.  
   
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -203,7 +203,7 @@ CButton();
  [!code-cpp[NVC_MFC_CButton#1](../../mfc/reference/codesnippet/cpp/cbutton-class_1.cpp)]  
   
 ##  <a name="create"></a>  CButton::Create  
- Crea il controllo pulsante di Windows e lo collega al `CButton` oggetto.  
+ Crea il controllo pulsante Windows e lo collega al `CButton` oggetto.  
   
 ```  
 virtual BOOL Create(
@@ -216,16 +216,16 @@ virtual BOOL Create(
   
 ### <a name="parameters"></a>Parametri  
  *lpszCaption*  
- Specifica il testo del controllo button.  
+ Specifica il testo del controllo pulsante.  
   
  *dwStyle*  
- Specifica lo stile del controllo button. Applicare qualsiasi combinazione di [pulsante stili](../../mfc/reference/styles-used-by-mfc.md#button-styles) al pulsante.  
+ Specifica lo stile del controllo pulsante. Applicare qualsiasi combinazione di [stili di pulsante](../../mfc/reference/styles-used-by-mfc.md#button-styles) al pulsante.  
   
  *Rect*  
- Specifica dimensioni e la posizione del controllo button. Può essere un `CRect` oggetto o un `RECT` struttura.  
+ Specifica le dimensioni e la posizione del controllo pulsante. Può essere un' `CRect` oggetto o un `RECT` struttura.  
   
  *pParentWnd*  
- Specifica finestra padre del controllo button, in genere un `CDialog`. Non deve essere **NULL**.  
+ Specifica finestra padre del controllo button, in genere un `CDialog`. Non deve essere NULL.  
   
  *nID*  
  Specifica l'ID. del controllo pulsante  
@@ -234,27 +234,27 @@ virtual BOOL Create(
  Diverso da zero se ha esito positivo; in caso contrario 0.  
   
 ### <a name="remarks"></a>Note  
- Si costruisce un `CButton` oggetto in due passaggi. In primo luogo, chiamare il costruttore e quindi chiamare `Create`, che crea il controllo pulsante di Windows e lo collega al `CButton` oggetto.  
+ Si costruisce un `CButton` oggetto in due passaggi. In primo luogo, chiamare il costruttore e quindi chiamare `Create`, che crea il controllo pulsante Windows e lo collega al `CButton` oggetto.  
   
- Se il **WS_VISIBLE** stile viene specificato, Windows invia il controllo pulsante di tutti i messaggi di attivazione e visualizzare il pulsante necessari.  
+ Se si specifica lo stile WS_VISIBLE, il controllo button Windows invia tutti i messaggi necessari per attivare e visualizzare il pulsante.  
   
- Applicare la seguente istruzione [stili finestra](../../mfc/reference/styles-used-by-mfc.md#window-styles) a un controllo pulsante:  
+ Applicare la seguente istruzione [stili di finestra](../../mfc/reference/styles-used-by-mfc.md#window-styles) a un controllo pulsante:  
   
-- **WS_CHILD** sempre  
+- WS_CHILD sempre  
   
-- **WS_VISIBLE** in genere  
+- In genere WS_VISIBLE  
   
-- **WS_DISABLED** raramente  
+- WS_DISABLED raramente  
   
-- **WS_GROUP** ai controlli di gruppo  
+- WS_GROUP ai controlli di gruppo  
   
-- **WS_TABSTOP** per includere il pulsante nell'ordine di tabulazione  
+- WS_TABSTOP per includere il pulsante nell'ordine di tabulazione  
   
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFC_CButton#2](../../mfc/reference/codesnippet/cpp/cbutton-class_2.cpp)]  
   
 ##  <a name="drawitem"></a>  CButton::DrawItem  
- Chiamato dal framework quando viene modificato un aspetto visivo di un pulsante disegnato dal proprietario.  
+ Chiamato dal framework quando viene modificato un aspetto visivo di un pulsante creato dal proprietario.  
   
 ```  
 virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
@@ -262,10 +262,10 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
   
 ### <a name="parameters"></a>Parametri  
  *lpDrawItemStruct*  
- Un puntatore di tipo long a un [DRAWITEMSTRUCT](../../mfc/reference/drawitemstruct-structure.md) struttura. La struttura contiene informazioni relative all'elemento da disegnare e il tipo di disegno necessaria.  
+ Un puntatore di tipo long a un [DRAWITEMSTRUCT](../../mfc/reference/drawitemstruct-structure.md) struttura. La struttura contiene informazioni sull'elemento da disegnare e il tipo di disegno necessaria.  
   
 ### <a name="remarks"></a>Note  
- Un pulsante disegnato dal proprietario è il **BS_OWNERDRAW** stile set. Eseguire l'override di questa funzione membro per implementare disegno di un proprietario `CButton` oggetto. L'applicazione deve ripristinare tutti grafica device interface (GDI) gli oggetti selezionati per il contesto di visualizzazione fornito *lpDrawItemStruct* prima il membro funzione termina.  
+ Un pulsante creato dal proprietario è lo stile BS_OWNERDRAW impostato. Eseguire l'override di questa funzione membro per implementare la creazione per un proprietario `CButton` oggetto. L'applicazione è necessario ripristinare tutti grafica device interface (GDI) gli oggetti selezionati per il contesto di visualizzazione fornito *lpDrawItemStruct* prima del membro funzione termina.  
   
  Vedere anche il [BS_](../../mfc/reference/styles-used-by-mfc.md#button-styles) i valori di stile.  
   
@@ -273,14 +273,14 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
  [!code-cpp[NVC_MFC_CButton#3](../../mfc/reference/codesnippet/cpp/cbutton-class_3.cpp)]  
   
 ##  <a name="getbitmap"></a>  CButton::GetBitmap  
- Chiamare questa funzione membro per ottenere l'handle di una bitmap, impostata in precedenza con [SetBitmap](#setbitmap), vale a dire associata a un pulsante.  
+ Chiamare questa funzione membro per ottenere l'handle di una bitmap, impostata in precedenza con [SetBitmap](#setbitmap), che viene associato un pulsante.  
   
 ```  
 HBITMAP GetBitmap() const;  
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- Handle per una bitmap. **NULL** se nessuna bitmap è specificata in precedenza.  
+ Handle per una bitmap. NULL se nessun bitmap viene specificata in precedenza.  
   
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFC_CButton#4](../../mfc/reference/codesnippet/cpp/cbutton-class_4.cpp)]  
@@ -293,54 +293,54 @@ UINT GetButtonStyle() const;
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- Restituisce gli stili dei pulsanti per questo `CButton` oggetto. Questa funzione restituisce solo il [BS_](../../mfc/reference/styles-used-by-mfc.md#button-styles) i valori di stile, non di uno degli altri stili di finestra.  
+ Restituisce gli stili dei pulsanti per l'oggetto `CButton` oggetto. Questa funzione restituisce solo le [BS_](../../mfc/reference/styles-used-by-mfc.md#button-styles) i valori di stile, non uno qualsiasi degli altri stili di finestra.  
   
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFC_CButton#5](../../mfc/reference/codesnippet/cpp/cbutton-class_5.cpp)]  
   
 ##  <a name="getcheck"></a>  CButton::GetCheck  
- Recupera lo stato di una casella di controllo o pulsante di opzione selezione.  
+ Recupera lo stato di selezione di un pulsante di opzione o casella di controllo.  
   
 ```  
 int GetCheck() const;  
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- Il valore restituito da un controllo pulsante creato con il **BS_AUTOCHECKBOX**, **BS_AUTORADIOBUTTON**, **BS_AUTO3STATE**, **BS_CHECKBOX**, **BS_RADIOBUTTON**, o **BS_3STATE** stile è uno dei valori seguenti:  
+ Il valore restituito da un controllo pulsante creato con BS_AUTOCHECKBOX, BS_AUTORADIOBUTTON, BS_AUTO3STATE, BS_CHECKBOX, BS_RADIOBUTTON o stile BS_3STATE è uno dei valori seguenti:  
   
 |Valore|Significato|  
 |-----------|-------------|  
-|**BST_UNCHECKED**|Stato dei pulsanti è deselezionato.|  
-|**BST_CHECKED**|Viene verificato allo stato dei pulsanti.|  
-|**BST_INDETERMINATE**|Stato dei pulsanti è indeterminato (si applica solo se il pulsante ha il **BS_3STATE** oppure **BS_AUTO3STATE** stile).|  
+|BST_UNCHECKED|Stato del pulsante è deselezionato.|  
+|BST_CHECKED|Stato del pulsante è selezionato.|  
+|BST_INDETERMINATE|Stato del pulsante è indeterminato (si applica solo se il pulsante è applicato lo stile BS_3STATE o BS_AUTO3STATE).|  
   
- Se il pulsante ha altri stili, il valore restituito è **BST_UNCHECKED**.  
+ Se il pulsante ha altri stili, il valore restituito è BST_UNCHECKED.  
   
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFC_CButton#6](../../mfc/reference/codesnippet/cpp/cbutton-class_6.cpp)]  
   
 ##  <a name="getcursor"></a>  CButton::GetCursor  
- Chiamare questa funzione membro per ottenere l'handle di un cursore, impostato in precedenza con [SetCursor](#setcursor), vale a dire associata a un pulsante.  
+ Chiamare questa funzione membro per ottenere l'handle di un cursore, impostato in precedenza con [SetCursor](#setcursor), che viene associato un pulsante.  
   
 ```  
 HCURSOR GetCursor();  
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- Handle per un'immagine del cursore. **NULL** se non viene specificato in precedenza alcun cursore.  
+ Handle per un'immagine del cursore. NULL se nessun cursore è specificato in precedenza.  
   
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFC_CButton#7](../../mfc/reference/codesnippet/cpp/cbutton-class_7.cpp)]  
   
 ##  <a name="geticon"></a>  CButton::GetIcon  
- Chiamare questa funzione membro per ottenere l'handle di un set di icone, in precedenza con [SetIcon](#seticon), vale a dire associata a un pulsante.  
+ Chiamare questa funzione membro per ottenere l'handle di un set di icone, in precedenza con [SetIcon](#seticon), che viene associato un pulsante.  
   
 ```  
 HICON GetIcon() const;  
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- Un handle per un'icona. **NULL** se nessuna icona viene specificata in precedenza.  
+ Handle per un'icona. NULL se non viene specificata in precedenza alcuna icona.  
   
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFC_CButton#8](../../mfc/reference/codesnippet/cpp/cbutton-class_8.cpp)]  
@@ -360,10 +360,10 @@ BOOL GetIdealSize(SIZE* psize);
  Diverso da zero se ha esito positivo; in caso contrario 0.  
   
 ### <a name="remarks"></a>Note  
- Questa funzione membro emula la funzionalità del **BCM_GETIDEALSIZE** messaggio, come descritto nel [pulsanti](http://msdn.microsoft.com/library/windows/desktop/bb775943) sezione di Windows SDK.  
+ Questa funzione membro emula la funzionalità del messaggio BCM_GETIDEALSIZE, come descritto nel [pulsanti](http://msdn.microsoft.com/library/windows/desktop/bb775943) sezione del SDK di Windows.  
   
 ##  <a name="getimagelist"></a>  CButton::GetImageList  
- Chiamare questo metodo per ottenere l'elenco di immagini dal controllo button.  
+ Chiamare questo metodo per ottenere l'elenco di immagini dal controllo pulsante.  
   
 ```  
 BOOL GetImageList(PBUTTON_IMAGELIST pbuttonImagelist);
@@ -377,7 +377,7 @@ BOOL GetImageList(PBUTTON_IMAGELIST pbuttonImagelist);
  Diverso da zero se ha esito positivo; in caso contrario 0.  
   
 ### <a name="remarks"></a>Note  
- Questa funzione membro emula la funzionalità del **BCM_GETIMAGELIST** messaggio, come descritto nel [pulsanti](http://msdn.microsoft.com/library/windows/desktop/bb775943) sezione di Windows SDK.  
+ Questa funzione membro emula la funzionalità del messaggio BCM_GETIMAGELIST, come descritto nel [pulsanti](http://msdn.microsoft.com/library/windows/desktop/bb775943) sezione del SDK di Windows.  
   
 ##  <a name="getnote"></a>  CButton::GetNote  
  Recupera il testo della nota associato al controllo di collegamento di comando corrente.  
@@ -394,55 +394,55 @@ BOOL GetNote(
   
 |Parametro|Descrizione|  
 |---------------|-----------------|  
-|[out] *lpszNote*|Puntatore a un buffer, che il chiamante è responsabile per l'allocazione e deallocazione. Se il valore restituito è `true`, il buffer contiene il testo della nota che è associato il controllo collegamento comando corrente; in caso contrario, il buffer subisce modifica.|  
-|[in, out] *cchNote*|Un puntatore a una variabile integer senza segno.<br /><br /> Quando questo metodo viene chiamato, la variabile contiene la dimensione del buffer specificato per il *lpszNote* parametro.<br /><br /> Quando termina, questo metodo se il valore restituito è `true` la variabile contiene la dimensione della nota associata al controllo di collegamento di comando corrente. Se il valore restituito è `false`, la variabile contiene la dimensione del buffer necessaria per contenere la nota.|  
+|[out] *lpszNote*|Puntatore a un buffer, a cui il chiamante è responsabile dell'allocazione e deallocazione. Se il valore restituito è TRUE, il buffer contiene il testo della nota che è associato il controllo di collegamento comandi corrente; in caso contrario, il buffer è invariato.|  
+|[in, out] *cchNote*|Un puntatore a una variabile integer senza segno.<br /><br /> Quando questo metodo viene chiamato, la variabile contiene la dimensione del buffer specificata per il *lpszNote* parametro.<br /><br /> Quando il metodo termina, se il valore restituito è TRUE, la variabile contiene la dimensione della nota associata al controllo di collegamento di comando corrente. Se il valore restituito è FALSE, la variabile contiene la dimensione del buffer necessaria per contenere la nota.|  
   
 ### <a name="return-value"></a>Valore restituito  
- Nel primo overload, un [CString](../../atl-mfc-shared/using-cstring.md) oggetto che contiene il testo della nota associato al controllo di collegamento di comando corrente.  
+ Nel primo overload, una [CString](../../atl-mfc-shared/using-cstring.md) oggetto che contiene il testo della nota associato al controllo di collegamento di comando corrente.  
   
  oppure  
   
- Nel secondo overload `true` se questo metodo dà esito positivo; in caso contrario, `false`.  
+ Nel secondo overload, TRUE se il metodo ha esito positivo; in caso contrario, FALSE.  
   
 ### <a name="remarks"></a>Note  
- Utilizzare questo metodo solo con i controlli con pulsante lo stile `BS_COMMANDLINK` o `BS_DEFCOMMANDLINK`.  
+ Usare questo metodo solo con i controlli cui stile del pulsante è BS_COMMANDLINK o BS_DEFCOMMANDLINK.  
   
- Questo metodo invia il [BCM_GETNOTE](http://msdn.microsoft.com/library/windows/desktop/bb775965) messaggio, come descritto in Windows SDK.  
+ Questo metodo invia il [BCM_GETNOTE](http://msdn.microsoft.com/library/windows/desktop/bb775965) messaggio, che è descritti nel SDK di Windows.  
   
 ##  <a name="getnotelength"></a>  CButton::GetNoteLength  
- Recupera la lunghezza del testo della nota per il controllo collegamento comando corrente.  
+ Recupera la lunghezza del testo della nota per il controllo command link corrente.  
   
 ```  
 UINT GetNoteLength() const;  
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- La lunghezza del testo della nota, in caratteri Unicode a 16 bit, per il controllo collegamento comando corrente.  
+ La lunghezza del testo della nota, in caratteri Unicode a 16 bit, per il controllo command link corrente.  
   
 ### <a name="remarks"></a>Note  
- Utilizzare questo metodo solo con i controlli con pulsante lo stile `BS_COMMANDLINK` o `BS_DEFCOMMANDLINK`.  
+ Usare questo metodo solo con i controlli cui stile del pulsante è BS_COMMANDLINK o BS_DEFCOMMANDLINK.  
   
- Questo metodo invia il [BCM_GETNOTELENGTH](http://msdn.microsoft.com/library/windows/desktop/bb775967) messaggio, come descritto in Windows SDK.  
+ Questo metodo invia il [BCM_GETNOTELENGTH](http://msdn.microsoft.com/library/windows/desktop/bb775967) messaggio, che è descritti nel SDK di Windows.  
   
 ##  <a name="getsplitglyph"></a>  CButton::GetSplitGlyph  
- Recupera l'icona associata con il controllo pulsante di menu combinato corrente.  
+ Recupera il glifo associato il controllo pulsante di menu combinato corrente.  
   
 ```  
 TCHAR GetSplitGlyph() const;  
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- Il carattere di glifi associato con il controllo pulsante di menu combinato corrente.  
+ Il carattere del glifo associato il controllo pulsante di menu combinato corrente.  
   
 ### <a name="remarks"></a>Note  
- Un'icona è la rappresentazione fisica di un carattere in un particolare tipo di carattere. Ad esempio, un controllo pulsante di menu combinato potrebbe essere decorato con l'icona del segno di spunta carattere Unicode (U + 2713).  
+ Un glifo è la rappresentazione fisica di un carattere in un particolare tipo di carattere. Ad esempio, un controllo split button potrebbe essere decorato con l'icona del segno di spunta carattere Unicode (U+10000 2713).  
   
- Utilizzare questo metodo solo con i controlli con pulsante lo stile `BS_SPLITBUTTON` o `BS_DEFSPLITBUTTON`.  
+ Usare questo metodo solo con i controlli cui stile del pulsante è BS_SPLITBUTTON o BS_DEFSPLITBUTTON.  
   
- Questo metodo inizializza il `mask` membro di un [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) struttura con il `BCSIF_GLYPH` flag e quindi lo invia struttura nel [verso](http://msdn.microsoft.com/library/windows/desktop/bb775969) messaggio descritto in Windows SDK. Quando la funzione di messaggio viene restituito, questo metodo recupera l'icona dal `himlGlyph` membro della struttura.  
+ Questo metodo inizializza la `mask` membro di un [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) struttura con il flag BCSIF_GLYPH e successivo invio che la struttura nel [verso](http://msdn.microsoft.com/library/windows/desktop/bb775969) messaggio che è descritti nel Windows SDK. Quando termina la funzione di messaggio, questo metodo recupera il glifo dal `himlGlyph` membro della struttura.  
   
 ##  <a name="getsplitimagelist"></a>  CButton::GetSplitImageList  
- Recupera il [elenco di immagini](../../mfc/reference/cimagelist-class.md) per il controllo pulsante di menu combinato corrente.  
+ Recupera le [elenco di immagini](../../mfc/reference/cimagelist-class.md) per il controllo pulsante di menu combinato corrente.  
   
 ```  
 CImageList* GetSplitImageList() const;  
@@ -452,12 +452,12 @@ CImageList* GetSplitImageList() const;
  Un puntatore a un [CImageList](../../mfc/reference/cimagelist-class.md) oggetto.  
   
 ### <a name="remarks"></a>Note  
- Utilizzare questo metodo solo con i controlli con pulsante lo stile `BS_SPLITBUTTON` o `BS_DEFSPLITBUTTON`.  
+ Usare questo metodo solo con i controlli cui stile del pulsante è BS_SPLITBUTTON o BS_DEFSPLITBUTTON.  
   
- Questo metodo inizializza il `mask` membro di un [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) struttura con il `BCSIF_IMAGE` flag e quindi lo invia struttura nel [verso](http://msdn.microsoft.com/library/windows/desktop/bb775969) messaggio descritto in Windows SDK. Quando la funzione di messaggio viene restituito, che consente di recuperare l'elenco di immagini dal `himlGlyph` membro della struttura.  
+ Questo metodo inizializza la `mask` membro di un [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) struttura con il flag BCSIF_IMAGE e successivo invio che la struttura nel [verso](http://msdn.microsoft.com/library/windows/desktop/bb775969) messaggio che è descritti nel Windows SDK. Quando termina la funzione di messaggio, questo metodo recupera l'elenco di immagini dal `himlGlyph` membro della struttura.  
   
 ##  <a name="getsplitinfo"></a>  CButton::GetSplitInfo  
- Recupera i parametri che determinano la modalità Windows a disegnare il controllo pulsante di menu combinato corrente.  
+ Recupera i parametri che determinano il modo in cui Windows consente di disegnare il controllo pulsante di menu combinato corrente.  
   
 ```  
 BOOL GetSplitInfo(PBUTTON_SPLITINFO pInfo) const;  
@@ -467,18 +467,18 @@ BOOL GetSplitInfo(PBUTTON_SPLITINFO pInfo) const;
   
 |Parametro|Descrizione|  
 |---------------|-----------------|  
-|[out] *pInfo*|Puntatore a un [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) struttura che riceve le informazioni sul controllo pulsante di menu combinato corrente. Il chiamante è responsabile per l'allocazione della struttura.|  
+|[out] *pInfo*|Puntatore a un [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) struttura che riceve informazioni sul controllo pulsante divisione corrente. Il chiamante è responsabile dell'allocazione della struttura.|  
   
 ### <a name="return-value"></a>Valore restituito  
- `true` se questo metodo dà esito positivo; in caso contrario, `false`.  
+ TRUE se questo metodo ha esito positivo; in caso contrario, FALSE.  
   
 ### <a name="remarks"></a>Note  
- Utilizzare questo metodo solo con i controlli con pulsante lo stile `BS_SPLITBUTTON` o `BS_DEFSPLITBUTTON`.  
+ Usare questo metodo solo con i controlli cui stile del pulsante è BS_SPLITBUTTON o BS_DEFSPLITBUTTON.  
   
- Questo metodo invia il [verso](http://msdn.microsoft.com/library/windows/desktop/bb775969) messaggio, come descritto in Windows SDK.  
+ Questo metodo invia il [verso](http://msdn.microsoft.com/library/windows/desktop/bb775969) messaggio, che è descritti nel SDK di Windows.  
   
 ##  <a name="getsplitsize"></a>  CButton::GetSplitSize  
- Recupera il rettangolo di delimitazione del componente del menu a discesa il controllo pulsante di menu combinato corrente.  
+ Recupera il rettangolo di delimitazione del componente elenco a discesa del controllo pulsante di divisione corrente.  
   
 ```  
 BOOL GetSplitSize(LPSIZE pSize) const;  
@@ -491,31 +491,31 @@ BOOL GetSplitSize(LPSIZE pSize) const;
 |[out] *pSize*|Puntatore a un [dimensioni](http://msdn.microsoft.com/library/windows/desktop/dd145106) struttura che riceve la descrizione di un rettangolo.|  
   
 ### <a name="return-value"></a>Valore restituito  
- `true` se questo metodo dà esito positivo; in caso contrario, `false`.  
+ TRUE se questo metodo ha esito positivo; in caso contrario, FALSE.  
   
 ### <a name="remarks"></a>Note  
- Utilizzare questo metodo solo con i controlli con pulsante lo stile `BS_SPLITBUTTON` o `BS_DEFSPLITBUTTON`.  
+ Usare questo metodo solo con i controlli cui stile del pulsante è BS_SPLITBUTTON o BS_DEFSPLITBUTTON.  
   
- Quando il controllo pulsante di menu combinato viene espanso, può essere visualizzato un elenco a discesa componente, ad esempio un controllo elenco o cercapersone. Questo metodo recupera il rettangolo di delimitazione che contiene il componente elenco a discesa.  
+ Quando il controllo pulsante di menu combinato viene espanso, è possibile visualizzare un elenco a discesa componente, ad esempio un controllo di elenco o un controllo pager. Questo metodo recupera il rettangolo di delimitazione che contiene il componente elenco a discesa.  
   
- Questo metodo inizializza il `mask` membro di un [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) struttura con il `BCSIF_SIZE` flag e quindi lo invia struttura nel [verso](http://msdn.microsoft.com/library/windows/desktop/bb775969) messaggio descritto in Windows SDK. Quando la funzione di messaggio viene restituito, questo metodo recupera il rettangolo di delimitazione dal `size` membro della struttura.  
+ Questo metodo inizializza la `mask` membro di un [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) struttura con il flag BCSIF_SIZE e successivo invio che la struttura nel [verso](http://msdn.microsoft.com/library/windows/desktop/bb775969) messaggio che è descritti nel Windows SDK. Quando termina la funzione di messaggio, questo metodo recupera il rettangolo di delimitazione dal `size` membro della struttura.  
   
 ##  <a name="getsplitstyle"></a>  CButton::GetSplitStyle  
- Recupera gli stili dei pulsanti di menu combinato che definiscono il controllo pulsante di menu combinato corrente.  
+ Recupera gli stili dei pulsanti di suddivisione che definiscono il controllo pulsante di menu combinato corrente.  
   
 ```  
 UINT GetSplitStyle() const;  
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- Combinazione bit per bit di stili dei pulsanti di menu combinato. Per altre informazioni, vedere la `uSplitStyle` membro del [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) struttura.  
+ Combinazione bit per bit di stili di pulsante di divisione. Per altre informazioni, vedere la `uSplitStyle` membro della [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) struttura.  
   
 ### <a name="remarks"></a>Note  
- Utilizzare questo metodo solo con i controlli con pulsante lo stile `BS_SPLITBUTTON` o `BS_DEFSPLITBUTTON`.  
+ Usare questo metodo solo con i controlli cui stile del pulsante è BS_SPLITBUTTON o BS_DEFSPLITBUTTON.  
   
- Gli stili dei pulsanti di menu combinato specificare l'allineamento, proporzioni e formato grafico con cui Windows disegna un'icona di pulsante di menu combinato.  
+ Gli stili dei pulsanti di suddivisione specificare l'allineamento, proporzioni e formato grafico con cui Windows disegna un'icona di pulsante di divisione.  
   
- Questo metodo inizializza il `mask` membro di un [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) struttura con il `BCSIF_STYLE` flag e quindi lo invia struttura nel [verso](http://msdn.microsoft.com/library/windows/desktop/bb775969) messaggio descritto in Windows SDK. Quando la funzione di messaggio viene restituito, questo metodo recupera gli stili dei pulsanti di menu combinato dal `uSplitStyle` membro della struttura.  
+ Questo metodo inizializza la `mask` membro di un [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) struttura con il flag BCSIF_STYLE e successivo invio che la struttura nel [verso](http://msdn.microsoft.com/library/windows/desktop/bb775969) messaggio che è descritti nel Windows SDK. Quando termina la funzione di messaggio, questo metodo recupera gli stili dei pulsanti di suddivisione dal `uSplitStyle` membro della struttura.  
   
 ##  <a name="getstate"></a>  CButton::GetState  
  Recupera lo stato di un controllo pulsante.  
@@ -525,18 +525,18 @@ UINT GetState() const;
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- Un campo di bit che contiene la combinazione di valori che indicano lo stato corrente di un controllo pulsante. Nella tabella seguente sono elencati i valori possibili.  
+ Un campo di bit che contiene la combinazione di valori che indicano lo stato corrente di un controllo pulsante. La tabella seguente elenca i valori possibili.  
   
-|Stato dei pulsanti|Valore|Descrizione|  
+|Stato del pulsante|Valore|Descrizione|  
 |------------------|-----------|-----------------|  
-|`BST_UNCHECKED`|0x0000|Lo stato iniziale.|  
-|`BST_CHECKED`|0x0001|Il controllo pulsante è selezionato.|  
-|`BST_INDETERMINATE`|0x0002|Lo stato è indeterminato (possibile solo quando il controllo pulsante ha tre stati).|  
-|`BST_PUSHED`|0x0004|Il controllo pulsante è premuto.|  
-|`BST_FOCUS`|0x0008|Il controllo pulsante ha lo stato attivo.|  
+|BST_UNCHECKED|0x0000|Stato iniziale.|  
+|BST_CHECKED|0x0001|Il controllo pulsante è selezionato.|  
+|BST_INDETERMINATE|0x0002|Lo stato è indeterminato (possibile solo quando il controllo button può avere tre stati).|  
+|BST_PUSHED|0x0004|Il controllo pulsante è premuto.|  
+|BST_FOCUS|0x0008|Il controllo pulsante ha lo stato attivo.|  
   
 ### <a name="remarks"></a>Note  
- Un controllo pulsante con i `BS_3STATE` o `BS_AUTO3STATE` stile del pulsante Crea una casella di controllo che nello stato di un terzo denominato stato indeterminato. Lo stato indeterminato indica che la casella di controllo è deselezionata né selezionata.  
+ Un controllo pulsante con lo stile del pulsante BS_3STATE o BS_AUTO3STATE crea una casella di controllo che ha un terzo stato denominato stato indeterminato. Lo stato indeterminato indica che la casella di controllo non è selezionata né deselezionata.  
   
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFC_CButton#9](../../mfc/reference/codesnippet/cpp/cbutton-class_9.cpp)]  
@@ -550,7 +550,7 @@ BOOL GetTextMargin(RECT* pmargin);
   
 ### <a name="parameters"></a>Parametri  
  *pmargin*  
- Il margine di testo di un puntatore di `CButton` oggetto.  
+ Un puntatore al margine di testo il `CButton` oggetto.  
   
 ### <a name="return-value"></a>Valore restituito  
  Restituisce il margine di testo.  
@@ -559,7 +559,7 @@ BOOL GetTextMargin(RECT* pmargin);
  Diverso da zero se ha esito positivo; in caso contrario 0.  
   
 ### <a name="remarks"></a>Note  
- Questa funzione membro emula la funzionalità del **BCM_GETTEXTMARGIN** messaggio, come descritto nel [pulsanti](http://msdn.microsoft.com/library/windows/desktop/bb775943) sezione di Windows SDK.  
+ Questa funzione membro emula la funzionalità del messaggio BCM_GETTEXTMARGIN, come descritto nel [pulsanti](http://msdn.microsoft.com/library/windows/desktop/bb775943) sezione del SDK di Windows.  
   
 ##  <a name="setbitmap"></a>  CButton:: SetBitmap  
  Chiamare questa funzione membro per associare una nuova bitmap con il pulsante.  
@@ -573,26 +573,26 @@ HBITMAP SetBitmap(HBITMAP hBitmap);
  L'handle di una bitmap.  
   
 ### <a name="return-value"></a>Valore restituito  
- L'handle di una bitmap in precedenza associata con il pulsante.  
+ L'handle di una bitmap in precedenza associata al pulsante.  
   
 ### <a name="remarks"></a>Note  
- La bitmap verrà posizionata automaticamente sul pulsante, centrato per impostazione predefinita. Se la bitmap è troppo grande per il pulsante, verrà ritagliato su entrambi i lati. È possibile scegliere altre opzioni di allineamento, inclusi i seguenti:  
+ La bitmap verrà posizionata automaticamente sul pulsante, centrato per impostazione predefinita. Se la bitmap è troppo grande per il pulsante, verrà troncato in entrambi i lati. È possibile scegliere altre opzioni di allineamento, incluse le seguenti:  
   
-- **BS_TOP**  
+- BS_TOP  
   
-- **BS_LEFT**  
+- BS_LEFT  
   
-- **BS_RIGHT**  
+- BS_RIGHT  
   
-- **BS_CENTER**  
+- BS_CENTER  
   
-- **BS_BOTTOM**  
+- BS_BOTTOM  
   
-- **BS_VCENTER**  
+- BS_VCENTER  
   
- A differenza [CBitmapButton](../../mfc/reference/cbitmapbutton-class.md), che usa quattro bitmap per ogni pulsante `SetBitmap` utilizza solo una singola bitmap per ogni pulsante. Quando viene premuto il pulsante, viene visualizzata la bitmap per spostare verso il basso e a destra.  
+ A differenza [CBitmapButton](../../mfc/reference/cbitmapbutton-class.md), che utilizza le quattro bitmap per ogni pulsante `SetBitmap` Usa solo una mappa di bit per ogni pulsante. Quando viene premuto il pulsante, viene visualizzata la mappa di bit per spostare verso il basso e a destra.  
   
- Si è responsabili del rilascio di bitmap al termine con esso.  
+ Si è responsabile del rilascio della bitmap al termine con esso.  
   
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFC_CButton#4](../../mfc/reference/codesnippet/cpp/cbutton-class_4.cpp)]  
@@ -608,19 +608,19 @@ void SetButtonStyle(
   
 ### <a name="parameters"></a>Parametri  
  *nStyle*  
- Specifica il [pulsante stile](../../mfc/reference/styles-used-by-mfc.md#button-styles).  
+ Specifica la [pulsante stile](../../mfc/reference/styles-used-by-mfc.md#button-styles).  
   
  *bRedraw*  
- Specifica se il pulsante deve essere ridisegnato. Un valore diverso da zero ridisegna il pulsante. Un valore 0 non viene ridisegnato il pulsante. Il pulsante viene ridisegnato per impostazione predefinita.  
+ Specifica se il pulsante deve essere ridisegnato. Un valore diverso da zero ridisegnato il pulsante. Un valore 0 non viene ridisegnato il pulsante. Il pulsante viene ridisegnato per impostazione predefinita.  
   
 ### <a name="remarks"></a>Note  
- Utilizzare il `GetButtonStyle` funzione membro per recuperare lo stile del pulsante. La parola meno significativa dello stile del pulsante completo è lo stile del pulsante specifico.  
+ Usare il `GetButtonStyle` funzione membro per recuperare lo stile del pulsante. La parola meno significativa dello stile di pulsante completa è lo stile di pulsante specifico.  
   
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFC_CButton#5](../../mfc/reference/codesnippet/cpp/cbutton-class_5.cpp)]  
   
 ##  <a name="setcheck"></a>  CButton::SetCheck  
- Imposta o Reimposta lo stato di una casella di controllo o pulsante di opzione selezione.  
+ Imposta o Reimposta lo stato di selezione di un pulsante di opzione o casella di controllo.  
   
 ```  
 void SetCheck(int nCheck);
@@ -628,13 +628,13 @@ void SetCheck(int nCheck);
   
 ### <a name="parameters"></a>Parametri  
  *nControllare*  
- Specifica lo stato di controllo. Questo parametro può essere uno dei valori seguenti:  
+ Specifica lo stato di selezione. Questo parametro può essere uno dei seguenti:  
   
 |Valore|Significato|  
 |-----------|-------------|  
-|**BST_UNCHECKED**|Impostare lo stato del pulsante non è selezionata.|  
-|**BST_CHECKED**|Impostare lo stato del pulsante controllare.|  
-|**BST_INDETERMINATE**|Impostare lo stato del pulsante su indeterminato. Questo valore può essere utilizzato solo se il pulsante ha il **BS_3STATE** oppure **BS_AUTO3STATE** stile.|  
+|BST_UNCHECKED|Impostare lo stato del pulsante su deselezionata.|  
+|BST_CHECKED|Impostare lo stato del pulsante controllare.|  
+|BST_INDETERMINATE|Impostare lo stato del pulsante su indeterminato. Questo valore può essere utilizzato solo se il pulsante è applicato lo stile BS_3STATE o BS_AUTO3STATE.|  
   
 ### <a name="remarks"></a>Note  
  Questa funzione membro non ha effetto su un pulsante di comando.  
@@ -657,27 +657,27 @@ HCURSOR SetCursor(HCURSOR hCursor);
  L'handle di un cursore precedentemente associato al pulsante.  
   
 ### <a name="remarks"></a>Note  
- Il cursore verrà posizionato automaticamente sul pulsante, centrato per impostazione predefinita. Se il cursore è troppo grande per il pulsante, verrà ritagliato su entrambi i lati. È possibile scegliere altre opzioni di allineamento, inclusi i seguenti:  
+ Il cursore sarà posizionato automaticamente sul pulsante, centrato per impostazione predefinita. Se il cursore è troppo grande per il pulsante, verrà troncato in entrambi i lati. È possibile scegliere altre opzioni di allineamento, incluse le seguenti:  
   
-- **BS_TOP**  
+- BS_TOP  
   
-- **BS_LEFT**  
+- BS_LEFT  
   
-- **BS_RIGHT**  
+- BS_RIGHT  
   
-- **BS_CENTER**  
+- BS_CENTER  
   
-- **BS_BOTTOM**  
+- BS_BOTTOM  
   
-- **BS_VCENTER**  
+- BS_VCENTER  
   
- A differenza [CBitmapButton](../../mfc/reference/cbitmapbutton-class.md), che usa quattro bitmap per ogni pulsante `SetCursor` utilizza solo un cursore per il pulsante. Quando viene premuto il pulsante, viene visualizzato il cursore da scorrere verso il basso e a destra.  
+ A differenza [CBitmapButton](../../mfc/reference/cbitmapbutton-class.md), che utilizza le quattro bitmap per ogni pulsante `SetCursor` Usa un solo cursore per ogni pulsante. Quando viene premuto il pulsante, viene visualizzato il cursore per spostare verso il basso e a destra.  
   
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFC_CButton#7](../../mfc/reference/codesnippet/cpp/cbutton-class_7.cpp)]  
   
 ##  <a name="setdropdownstate"></a>  CButton::SetDropDownState  
- Imposta lo stato di riepilogo a discesa del controllo pulsante di menu combinato corrente.  
+ Imposta lo stato di riepilogo a discesa del controllo pulsante di divisione corrente.  
   
 ```  
 BOOL SetDropDownState(BOOL fDropDown);
@@ -687,23 +687,23 @@ BOOL SetDropDownState(BOOL fDropDown);
   
 |Parametro|Descrizione|  
 |---------------|-----------------|  
-|[in] *fDropDown*|`true` Per impostare `BST_DROPDOWNPUSHED` stato; in caso contrario, `false`.|  
+|[in] *fDropDown*|TRUE per impostare lo stato BST_DROPDOWNPUSHED; in caso contrario, FALSE.|  
   
 ### <a name="return-value"></a>Valore restituito  
- `true` se questo metodo dà esito positivo; in caso contrario, `false`.  
+ TRUE se questo metodo ha esito positivo; in caso contrario, FALSE.  
   
 ### <a name="remarks"></a>Note  
- Un controllo pulsante di menu combinato con uno stile di `BS_SPLITBUTTON` o `BS_DEFSPLITBUTTON` ed è costituito da un pulsante e una freccia giù a destra. Per altre informazioni, vedere [stili dei pulsanti](http://msdn.microsoft.com/library/windows/desktop/bb775951). Lo stato di riepilogo a discesa in genere, viene impostato quando l'utente fa clic sulla freccia a discesa. Utilizzare questo metodo per impostare a livello di codice lo stato di riepilogo a discesa del controllo. La freccia a discesa viene disegnata ombreggiata per indicare lo stato.  
+ Un controllo pulsante di menu combinato con uno stile di BS_SPLITBUTTON o BS_DEFSPLITBUTTON ed è costituito da un pulsante e una freccia a discesa a destra. Per altre informazioni, vedere [stili dei pulsanti](http://msdn.microsoft.com/library/windows/desktop/bb775951). In genere, viene impostato lo stato di riepilogo a discesa quando l'utente fa clic sulla freccia giù. Utilizzare questo metodo per impostare a livello di codice lo stato di riepilogo a discesa del controllo. La freccia giù viene disegnata ombreggiata per indicare lo stato.  
   
- Questo metodo invia il [BCM_SETDROPDOWNSTATE](http://msdn.microsoft.com/library/windows/desktop/bb775973) messaggio, come descritto in Windows SDK.  
+ Questo metodo invia il [BCM_SETDROPDOWNSTATE](http://msdn.microsoft.com/library/windows/desktop/bb775973) messaggio, che è descritti nel SDK di Windows.  
   
 ### <a name="example"></a>Esempio  
- Esempio di codice seguente definisce la variabile *m_splitButton*, che viene utilizzato per accedere a livello di codice il controllo pulsante di menu combinato. Questa variabile viene utilizzata nell'esempio seguente.  
+ Esempio di codice seguente definisce la variabile *m_splitButton*, che viene usato per accedere a livello di codice il controllo pulsante di menu combinato. Questa variabile viene usata nell'esempio seguente.  
   
  [!code-cpp[NVC_MFC_CButton_s1#1](../../mfc/reference/codesnippet/cpp/cbutton-class_10.h)]  
   
 ### <a name="example"></a>Esempio  
- Esempio di codice seguente imposta lo stato del controllo pulsante di divisione per indicare che viene inserita la freccia a discesa.  
+ Esempio di codice seguente imposta lo stato del controllo split button per indicare che viene eseguito il push di freccia a discesa.  
   
  [!code-cpp[NVC_MFC_CButton_s1#6](../../mfc/reference/codesnippet/cpp/cbutton-class_11.cpp)]  
   
@@ -718,15 +718,15 @@ BOOL SetElevationRequired(BOOL fElevationRequired);
   
 |Parametro|Descrizione|  
 |---------------|-----------------|  
-|[in] `fElevationRequired`|`true` Per impostare `elevation required` stato; in caso contrario, `false`.|  
+|[in] *fElevationRequired*|True per impostare `elevation required` dello stato; in caso contrario, FALSE.|  
   
 ### <a name="return-value"></a>Valore restituito  
- `true` se questo metodo dà esito positivo; in caso contrario, `false`.  
+ TRUE se questo metodo ha esito positivo; in caso contrario, FALSE.  
   
 ### <a name="remarks"></a>Note  
- Se un controllo pulsante o un comando di collegamento è richiesta l'autorizzazione di sicurezza con privilegi elevati per eseguire un'azione, impostare il controllo `elevation required` dello stato. Successivamente, Windows viene visualizzata l'icona dello scudo controllo dell'Account utente (UAC) sul controllo. Per altre informazioni, vedere "Controllo dell'Account utente" all'indirizzo [MSDN](http://go.microsoft.com/fwlink/p/?linkid=18507).  
+ Se un controllo di collegamento di pulsante o comando richiede l'autorizzazione di sicurezza con privilegi elevati per eseguire un'azione, impostare il controllo su `elevation required` dello stato. Successivamente, Windows visualizza l'icona dello scudo controllo Account utente (UAC) nel controllo. Per altre informazioni, vedere "Controllo dell'Account utente" all'indirizzo [MSDN](http://go.microsoft.com/fwlink/p/?linkid=18507).  
   
- Questo metodo invia il [BCM_SETSHIELD](http://msdn.microsoft.com/library/windows/desktop/bb775979) messaggio, come descritto in Windows SDK.  
+ Questo metodo invia il [BCM_SETSHIELD](http://msdn.microsoft.com/library/windows/desktop/bb775979) messaggio, che è descritti nel SDK di Windows.  
   
 ##  <a name="seticon"></a>  CButton::SetIcon  
  Chiamare questa funzione membro per associare una nuova icona con il pulsante.  
@@ -736,34 +736,34 @@ HICON SetIcon(HICON hIcon);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- *Icona*  
+ *hIcon*  
  L'handle di un'icona.  
   
 ### <a name="return-value"></a>Valore restituito  
- L'handle di un'icona in precedenza associata con il pulsante.  
+ L'handle di un'icona associata in precedenza con il pulsante.  
   
 ### <a name="remarks"></a>Note  
- L'icona verrà inserito automaticamente sul pulsante, centrato per impostazione predefinita. Se l'icona è troppo grande per il pulsante, verrà ritagliato su entrambi i lati. È possibile scegliere altre opzioni di allineamento, inclusi i seguenti:  
+ L'icona verrà inserito automaticamente sul pulsante, centrato per impostazione predefinita. Se l'icona è troppo grande per il pulsante, verrà troncato in entrambi i lati. È possibile scegliere altre opzioni di allineamento, incluse le seguenti:  
   
-- **BS_TOP**  
+- BS_TOP  
   
-- **BS_LEFT**  
+- BS_LEFT  
   
-- **BS_RIGHT**  
+- BS_RIGHT  
   
-- **BS_CENTER**  
+- BS_CENTER  
   
-- **BS_BOTTOM**  
+- BS_BOTTOM  
   
-- **BS_VCENTER**  
+- BS_VCENTER  
   
- A differenza [CBitmapButton](../../mfc/reference/cbitmapbutton-class.md), che usa quattro bitmap per ogni pulsante `SetIcon` Usa solo un'icona per ogni pulsante. Quando viene premuto il pulsante, viene visualizzata l'icona da scorrere verso il basso e a destra.  
+ A differenza [CBitmapButton](../../mfc/reference/cbitmapbutton-class.md), che utilizza le quattro bitmap per ogni pulsante `SetIcon` utilizza solo un'icona per ogni pulsante. Quando viene premuto il pulsante, viene visualizzata l'icona per spostare verso il basso e a destra.  
   
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFC_CButton#8](../../mfc/reference/codesnippet/cpp/cbutton-class_8.cpp)]  
   
 ##  <a name="setimagelist"></a>  CButton::SetImageList  
- Chiamare questo metodo per impostare l'elenco delle immagini di `CButton` oggetto.  
+ Chiamare questo metodo per impostare l'elenco di immagini del `CButton` oggetto.  
   
 ```  
 BOOL SetImageList(PBUTTON_IMAGELIST pbuttonImagelist);
@@ -771,16 +771,16 @@ BOOL SetImageList(PBUTTON_IMAGELIST pbuttonImagelist);
   
 ### <a name="parameters"></a>Parametri  
  *pbuttonImagelist*  
- Un puntatore per il nuovo elenco di immagini.  
+ Puntatore al nuovo elenco di immagini.  
   
 ### <a name="return-value"></a>Valore restituito  
- Restituisce **TRUE** in caso di esito positivo **FALSE** in caso di errore.  
+ Restituisce TRUE se l'operazione riesce, FALSE in caso di errore.  
   
 ### <a name="remarks"></a>Note  
- Questa funzione membro emula la funzionalità del **BCM_SETIMAGELIST** messaggio, come descritto nel [pulsanti](http://msdn.microsoft.com/library/windows/desktop/bb775943) sezione di Windows SDK.  
+ Questa funzione membro emula la funzionalità del messaggio BCM_SETIMAGELIST, come descritto nel [pulsanti](http://msdn.microsoft.com/library/windows/desktop/bb775943) sezione del SDK di Windows.  
   
 ##  <a name="setnote"></a>  CButton::SetNote  
- Imposta il testo della nota per il controllo collegamento comando corrente.  
+ Imposta il testo della nota per il controllo command link corrente.  
   
 ```  
 BOOL SetNote(LPCTSTR lpszNote);
@@ -790,23 +790,23 @@ BOOL SetNote(LPCTSTR lpszNote);
   
 |Parametro|Descrizione|  
 |---------------|-----------------|  
-|[in] *lpszNote*|Puntatore a una stringa Unicode che viene impostata come il testo della nota per il comando del collegamento.|  
+|[in] *lpszNote*|Puntatore a una stringa Unicode che sia impostata come il testo della nota per il controllo command link.|  
   
 ### <a name="return-value"></a>Valore restituito  
- `true` se questo metodo dà esito positivo; in caso contrario, `false`.  
+ TRUE se questo metodo ha esito positivo; in caso contrario, FALSE.  
   
 ### <a name="remarks"></a>Note  
- Utilizzare questo metodo solo con i controlli con pulsante lo stile `BS_COMMANDLINK` o `BS_DEFCOMMANDLINK`.  
+ Usare questo metodo solo con i controlli cui stile del pulsante è BS_COMMANDLINK o BS_DEFCOMMANDLINK.  
   
- Questo metodo invia il [BCM_SETNOTE](http://msdn.microsoft.com/library/windows/desktop/bb775977) messaggio, come descritto in Windows SDK.  
+ Questo metodo invia il [BCM_SETNOTE](http://msdn.microsoft.com/library/windows/desktop/bb775977) messaggio, che è descritti nel SDK di Windows.  
   
 ### <a name="example"></a>Esempio  
- Esempio di codice seguente definisce la variabile *m_cmdLink*, che viene utilizzato per accedere a livello di codice il comando del collegamento. Questa variabile viene utilizzata nell'esempio seguente.  
+ Esempio di codice seguente definisce la variabile *m_cmdLink*, che viene usato per accedere a livello di codice il controllo command link. Questa variabile viene usata nell'esempio seguente.  
   
  [!code-cpp[NVC_MFC_CButton_s1#1](../../mfc/reference/codesnippet/cpp/cbutton-class_10.h)]  
   
 ### <a name="example"></a>Esempio  
- Esempio di codice seguente imposta il testo della nota per il comando del collegamento.  
+ Esempio di codice seguente imposta il testo della nota per il controllo command link.  
   
  [!code-cpp[NVC_MFC_CButton_s1#7](../../mfc/reference/codesnippet/cpp/cbutton-class_12.cpp)]  
   
@@ -821,20 +821,20 @@ BOOL SetSplitGlyph(TCHAR chGlyph);
   
 |Parametro|Descrizione|  
 |---------------|-----------------|  
-|[in] *chGlyph*|Un carattere che specifica l'icona da utilizzare come la divisione pulsante freccia in giù.|  
+|[in] *chGlyph*|Un carattere che specifica il glifo da utilizzare come la divisione pulsante freccia in giù.|  
   
 ### <a name="return-value"></a>Valore restituito  
- `true` se questo metodo dà esito positivo; in caso contrario, `false`.  
+ TRUE se questo metodo ha esito positivo; in caso contrario, FALSE.  
   
 ### <a name="remarks"></a>Note  
- Utilizzare questo metodo solo con i controlli che hanno lo stile del pulsante `BS_SPLITBUTTON` o `BS_DEFSPLITBUTTON`.  
+ Usare questo metodo solo con i controlli che hanno lo stile del pulsante BS_SPLITBUTTON o BS_DEFSPLITBUTTON.  
   
- Un'icona è la rappresentazione fisica di un carattere in un particolare tipo di carattere. Il *chGlyph* parametro non viene utilizzato come l'icona, ma è invece possibile selezionare un glifo da un set di icone definita dal sistema. L'icona di freccia predefinito specificato da un carattere '6' e il carattere Unicode TRIANGOLO nero verso il basso verso l'alto (U + 25BC) è simile.  
+ Un glifo è la rappresentazione fisica di un carattere in un particolare tipo di carattere. Il *chGlyph* parametro non viene utilizzato come il glifo, ma viene invece usato per selezionare un glifo da un set di glifi definito dal sistema. L'icona di freccia predefinito specificato da un carattere '6' e il carattere Unicode TRIANGOLO nero verso il basso verso l'alto (U + 25BC) è simile.  
   
- Questo metodo inizializza la `mask` membro di un [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) struttura con il `BCSIF_GLYPH` flag e la `himlGlyph` membro con il `chGlyph` parametro e quindi lo invia struttura il [ Verso](http://msdn.microsoft.com/library/windows/desktop/bb775969) messaggio in cui è descritto in Windows SDK.  
+ Questo metodo inizializza la `mask` membro di un [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) struttura con il flag BCSIF_GLYPH e il `himlGlyph` membro con il *chGlyph* parametro e che quindi invia struttura nel [verso](http://msdn.microsoft.com/library/windows/desktop/bb775969) messaggio che è descritti nel SDK di Windows.  
   
 ##  <a name="setsplitimagelist"></a>  CButton::SetSplitImageList  
- Associa un [elenco di immagini](../../mfc/reference/cimagelist-class.md) con il controllo pulsante di menu combinato corrente.  
+ Associa un' [elenco di immagini](../../mfc/reference/cimagelist-class.md) con il controllo pulsante di menu combinato corrente.  
   
 ```  
 BOOL SetSplitImageList(CImageList* pSplitImageList);
@@ -844,18 +844,18 @@ BOOL SetSplitImageList(CImageList* pSplitImageList);
   
 |Parametro|Descrizione|  
 |---------------|-----------------|  
-|[in] *pSplitImageList*|Puntatore a un [CImageList](../../mfc/reference/cimagelist-class.md) oggetto assegnare per il controllo pulsante di menu combinato corrente.|  
+|[in] *pSplitImageList*|Puntatore a un [CImageList](../../mfc/reference/cimagelist-class.md) oggetto da assegnare per il controllo pulsante di menu combinato corrente.|  
   
 ### <a name="return-value"></a>Valore restituito  
- `true` se questo metodo dà esito positivo; in caso contrario, `false`.  
+ TRUE se questo metodo ha esito positivo; in caso contrario, FALSE.  
   
 ### <a name="remarks"></a>Note  
- Utilizzare questo metodo solo con i controlli con pulsante lo stile `BS_SPLITBUTTON` o `BS_DEFSPLITBUTTON`.  
+ Usare questo metodo solo con i controlli cui stile del pulsante è BS_SPLITBUTTON o BS_DEFSPLITBUTTON.  
   
- Questo metodo inizializza la `mask` membro di un [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) struttura con il `BCSIF_IMAGE` flag e la `himlGlyph` membro con il *pSplitImageList* parametro e quindi Invia tale struttura il [verso](http://msdn.microsoft.com/library/windows/desktop/bb775969) messaggio in cui è descritto in Windows SDK.  
+ Questo metodo inizializza la `mask` membro di un [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) struttura con il flag BCSIF_IMAGE e il `himlGlyph` membro con il *pSplitImageList* parametro e quindi invia tale struttura nel [verso](http://msdn.microsoft.com/library/windows/desktop/bb775969) messaggio che è descritti nel SDK di Windows.  
   
 ##  <a name="setsplitinfo"></a>  CButton::SetSplitInfo  
- Specifica i parametri che determinano il modo in cui Windows a disegnare il controllo pulsante di menu combinato corrente.  
+ Specifica i parametri che determinano il modo in cui Windows consente di disegnare il controllo pulsante di menu combinato corrente.  
   
 ```  
 BOOL SetSplitInfo(PBUTTON_SPLITINFO pInfo);
@@ -868,25 +868,25 @@ BOOL SetSplitInfo(PBUTTON_SPLITINFO pInfo);
 |[in] *pInfo*|Puntatore a un [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) struttura che definisce il controllo pulsante di menu combinato corrente.|  
   
 ### <a name="return-value"></a>Valore restituito  
- `true` se questo metodo dà esito positivo; in caso contrario, `false`.  
+ TRUE se questo metodo ha esito positivo; in caso contrario, FALSE.  
   
 ### <a name="remarks"></a>Note  
- Utilizzare questo metodo solo con i controlli con pulsante lo stile `BS_SPLITBUTTON` o `BS_DEFSPLITBUTTON`.  
+ Usare questo metodo solo con i controlli cui stile del pulsante è BS_SPLITBUTTON o BS_DEFSPLITBUTTON.  
   
- Questo metodo invia il [BCM_SETSPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775981) messaggio, come descritto in Windows SDK.  
+ Questo metodo invia il [BCM_SETSPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775981) messaggio, che è descritti nel SDK di Windows.  
   
 ### <a name="example"></a>Esempio  
- Esempio di codice seguente definisce la variabile, `m_splitButton`, che viene utilizzato per accedere a livello di codice il controllo pulsante di menu combinato.  
+ Esempio di codice seguente definisce la variabile `m_splitButton`, che viene usato per accedere a livello di codice il controllo pulsante di menu combinato.  
   
  [!code-cpp[NVC_MFC_CButton_s1#1](../../mfc/reference/codesnippet/cpp/cbutton-class_10.h)]  
   
 ### <a name="example"></a>Esempio  
- Esempio di codice seguente viene modificato l'icona utilizzata per la divisione pulsante freccia in giù. L'esempio sostituisce un'icona triangolo verso l'alto per l'icona triangolo verso l'alto verso il basso predefinito. L'icona visualizzata dipende il carattere specificato nella `himlGlyph` membro del `BUTTON_SPLITINFO` struttura. L'icona triangolo verso l'alto verso il basso specificato da un carattere ' 6 'e l'icona triangolo verso l'alto specificato da un carattere ' 5'. Per il confronto, vedere il metodo, praticità [CButton::SetSplitGlyph](#setsplitglyph).  
+ Esempio di codice seguente viene modificato il glifo che viene usato per la suddivisione pulsante freccia in giù. L'esempio sostituisce un glifo di triangolo verso l'alto per l'icona triangolo verso l'alto verso il basso predefinito. Il glifo visualizzato dipende dal carattere specificato nella `himlGlyph` membro del `BUTTON_SPLITINFO` struttura. L'icona triangolo verso l'alto verso il basso è specificato da un carattere ' 6 'e l'icona triangolo verso l'alto è specificato da un carattere ' 5'. Per il confronto, il metodo pratico, vedere [CButton::SetSplitGlyph](#setsplitglyph).  
   
  [!code-cpp[NVC_MFC_CButton_s1#4](../../mfc/reference/codesnippet/cpp/cbutton-class_13.cpp)]  
   
 ##  <a name="setsplitsize"></a>  CButton::SetSplitSize  
- Imposta il rettangolo di delimitazione del componente del menu a discesa il controllo pulsante di menu combinato corrente.  
+ Imposta il rettangolo di delimitazione del componente elenco a discesa del controllo pulsante di divisione corrente.  
   
 ```  
 BOOL SetSplitSize(LPSIZE pSize);
@@ -899,27 +899,27 @@ BOOL SetSplitSize(LPSIZE pSize);
 |[in] *pSize*|Puntatore a un [dimensioni](http://msdn.microsoft.com/library/windows/desktop/dd145106) struttura che descrive un rettangolo di delimitazione.|  
   
 ### <a name="return-value"></a>Valore restituito  
- `true` se questo metodo dà esito positivo; in caso contrario, `false`.  
+ TRUE se questo metodo ha esito positivo; in caso contrario, FALSE.  
   
 ### <a name="remarks"></a>Note  
- Utilizzare questo metodo solo con i controlli con pulsante lo stile `BS_SPLITBUTTON` o `BS_DEFSPLITBUTTON`.  
+ Usare questo metodo solo con i controlli cui stile del pulsante è BS_SPLITBUTTON o BS_DEFSPLITBUTTON.  
   
- Quando il controllo pulsante di menu combinato viene espanso, può essere visualizzato un elenco a discesa componente, ad esempio un controllo elenco o cercapersone. Questo metodo consente di specificare le dimensioni del rettangolo di delimitazione che contiene il componente elenco a discesa.  
+ Quando il controllo pulsante di menu combinato viene espanso, è possibile visualizzare un elenco a discesa componente, ad esempio un controllo di elenco o un controllo pager. Questo metodo specifica le dimensioni del rettangolo di delimitazione che contiene il componente elenco a discesa.  
   
- Questo metodo inizializza la `mask` membro di un [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) struttura con il `BCSIF_SIZE` flag e il `size` membro con il *pSize* parametro e quindi invia che struttura nel [verso](http://msdn.microsoft.com/library/windows/desktop/bb775969) messaggio in cui è descritto in Windows SDK.  
+ Questo metodo inizializza la `mask` membro di un [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) struttura con il flag BCSIF_SIZE e il `size` membro con il *pSize* parametro e quindi invia che la struttura nel [verso](http://msdn.microsoft.com/library/windows/desktop/bb775969) messaggio che è descritti nel SDK di Windows.  
   
 ### <a name="example"></a>Esempio  
- Esempio di codice seguente definisce la variabile, `m_splitButton`, che viene utilizzato per accedere a livello di codice il controllo pulsante di menu combinato. Questa variabile viene utilizzata nell'esempio seguente.  
+ Esempio di codice seguente definisce la variabile `m_splitButton`, che viene usato per accedere a livello di codice il controllo pulsante di menu combinato. Questa variabile viene usata nell'esempio seguente.  
   
  [!code-cpp[NVC_MFC_CButton_s1#1](../../mfc/reference/codesnippet/cpp/cbutton-class_10.h)]  
   
 ### <a name="example"></a>Esempio  
- Esempio di codice seguente raddoppia le dimensioni della divisione pulsante freccia in giù.  
+ Esempio di codice seguente raddoppia le dimensioni di split elenco a discesa della freccia del pulsante.  
   
  [!code-cpp[NVC_MFC_CButton_s1#5](../../mfc/reference/codesnippet/cpp/cbutton-class_14.cpp)]  
   
 ##  <a name="setsplitstyle"></a>  CButton::SetSplitStyle  
- Imposta lo stile del controllo pulsante di menu combinato corrente.  
+ Imposta lo stile del controllo pulsante di divisione corrente.  
   
 ```  
 BOOL SetSplitStyle(UINT uSplitStyle);
@@ -929,25 +929,25 @@ BOOL SetSplitStyle(UINT uSplitStyle);
   
 |Parametro|Descrizione|  
 |---------------|-----------------|  
-|[in] *uSplitStyle*|Combinazione bit per bit di stili dei pulsanti di menu combinato. Per altre informazioni, vedere la `uSplitStyle` membro del [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) struttura.|  
+|[in] *uSplitStyle*|Combinazione bit per bit di stili di pulsante di divisione. Per altre informazioni, vedere la `uSplitStyle` membro della [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) struttura.|  
   
 ### <a name="return-value"></a>Valore restituito  
- `true` se questo metodo dà esito positivo; in caso contrario, `false`.  
+ TRUE se questo metodo ha esito positivo; in caso contrario, FALSE.  
   
 ### <a name="remarks"></a>Note  
- Utilizzare questo metodo solo con i controlli con pulsante lo stile `BS_SPLITBUTTON` o `BS_DEFSPLITBUTTON`.  
+ Usare questo metodo solo con i controlli cui stile del pulsante è BS_SPLITBUTTON o BS_DEFSPLITBUTTON.  
   
- Gli stili dei pulsanti di menu combinato specificare l'allineamento, proporzioni e formato grafico con cui Windows disegna un'icona di pulsante di menu combinato. Per altre informazioni, vedere la `uSplitStyle` membro del [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) struttura.  
+ Gli stili dei pulsanti di suddivisione specificare l'allineamento, proporzioni e formato grafico con cui Windows disegna un'icona di pulsante di divisione. Per altre informazioni, vedere la `uSplitStyle` membro della [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) struttura.  
   
- Questo metodo inizializza la `mask` membro di un [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) struttura con il `BCSIF_STYLE` flag e la `uSplitStyle` membro con il *uSplitStyle* parametro e quindi invia tale struttura nel [verso](http://msdn.microsoft.com/library/windows/desktop/bb775969) messaggio in cui è descritto in Windows SDK.  
+ Questo metodo inizializza la `mask` membro di un [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) struttura con il flag BCSIF_STYLE e il `uSplitStyle` membro con il *uSplitStyle* parametro e che quindi invia struttura nel [verso](http://msdn.microsoft.com/library/windows/desktop/bb775969) messaggio che è descritti nel SDK di Windows.  
   
 ### <a name="example"></a>Esempio  
- Esempio di codice seguente definisce la variabile, `m_splitButton`, che viene utilizzato per accedere a livello di codice il controllo pulsante di menu combinato.  
+ Esempio di codice seguente definisce la variabile `m_splitButton`, che viene usato per accedere a livello di codice il controllo pulsante di menu combinato.  
   
  [!code-cpp[NVC_MFC_CButton_s1#1](../../mfc/reference/codesnippet/cpp/cbutton-class_10.h)]  
   
 ### <a name="example"></a>Esempio  
- Esempio di codice seguente imposta lo stile della freccia split pulsante elenco a discesa. Il `BCSS_ALIGNLEFT` stile consente di visualizzare la freccia a sinistra del pulsante e `BCSS_STRETCH` stile mantiene le proporzioni della freccia dell'elenco a discesa quando si ridimensiona il pulsante.  
+ Esempio di codice seguente imposta lo stile della freccia a discesa pulsante split. Lo stile BCSS_ALIGNLEFT consente di visualizzare la freccia a sinistra del pulsante e lo stile BCSS_STRETCH mantiene le proporzioni della freccia di elenco a discesa quando si ridimensiona il pulsante.  
   
  [!code-cpp[NVC_MFC_CButton_s1#3](../../mfc/reference/codesnippet/cpp/cbutton-class_15.cpp)]  
   
@@ -960,12 +960,12 @@ void SetState(BOOL bHighlight);
   
 ### <a name="parameters"></a>Parametri  
  *bHighlight*  
- Specifica se il pulsante deve essere evidenziato. Un valore diverso da zero evidenzia il pulsante. un valore 0 consente di rimuovere qualsiasi evidenziazione.  
+ Specifica se il pulsante deve essere evidenziata. Valore diverso da zero evidenziazioni pulsante. un valore 0 consente di rimuovere eventuali evidenziazione.  
   
 ### <a name="remarks"></a>Note  
- Evidenziazione interessa l'anello esterno di un controllo pulsante. Non ha alcun effetto sullo stato di controllo di un pulsante di opzione o una casella di controllo.  
+ L'evidenziazione interessa l'anello esterno di un controllo pulsante. Non ha alcun effetto sullo stato della verifica di un pulsante di opzione o casella di controllo.  
   
- Un controllo button viene automaticamente evidenziato quando l'utente fa clic e contiene il pulsante sinistro del mouse. L'evidenziazione viene rimossa quando l'utente rilascia il pulsante del mouse.  
+ Un controllo button viene automaticamente evidenziato quando l'utente fa clic e contiene il pulsante sinistro del mouse. L'evidenziazione viene rimosso quando l'utente rilascia il pulsante del mouse.  
   
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFC_CButton#9](../../mfc/reference/codesnippet/cpp/cbutton-class_9.cpp)]  
@@ -979,18 +979,18 @@ BOOL SetTextMargin(RECT* pmargin);
   
 ### <a name="parameters"></a>Parametri  
  *pmargin*  
- Un puntatore per il nuovo margine di testo.  
+ Puntatore al margine di nuovo testo.  
   
 ### <a name="return-value"></a>Valore restituito  
  Restituisce TRUE se l'operazione riesce, FALSE in caso di errore.  
   
 ### <a name="remarks"></a>Note  
- Questa funzione membro emula la funzionalità del **BCM_SETTEXTMARGIN** messaggio, come descritto nel [pulsanti](http://msdn.microsoft.com/library/windows/desktop/bb775943) sezione di Windows SDK.  
+ Questa funzione membro emula la funzionalità del messaggio BCM_SETTEXTMARGIN, come descritto nel [pulsanti](http://msdn.microsoft.com/library/windows/desktop/bb775943) sezione del SDK di Windows.  
   
 ## <a name="see-also"></a>Vedere anche  
- [CWnd (classe)](../../mfc/reference/cwnd-class.md)   
+ [Classe CWnd](../../mfc/reference/cwnd-class.md)   
  [Grafico delle gerarchie](../../mfc/hierarchy-chart.md)   
- [CWnd (classe)](../../mfc/reference/cwnd-class.md)   
+ [Classe CWnd](../../mfc/reference/cwnd-class.md)   
  [CComboBox (classe)](../../mfc/reference/ccombobox-class.md)   
  [Classe CEdit](../../mfc/reference/cedit-class.md)   
  [CListBox (classe)](../../mfc/reference/clistbox-class.md)   

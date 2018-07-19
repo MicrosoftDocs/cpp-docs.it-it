@@ -1,5 +1,5 @@
 ---
-title: Classe informazioni di errore (ATL) | Documenti Microsoft
+title: Classe di informazioni di errore (ATL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,18 +18,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c3cccddf76eaa97b0bc73239c6e89fde1c23b301
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 25a02ade201c611ec9849d7557f3c854beb5bacc
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32354217"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38955345"
 ---
 # <a name="error-information-classes"></a>Classi di informazioni di errore
-La classe seguente indica la modalità di gestione di informazioni sull'errore:  
+La classe seguente indica come viene gestite informazioni sull'errore:  
   
--   [ISupportErrorInfoImpl](../atl/reference/isupporterrorinfoimpl-class.md) determina se l'oggetto supporta la [IErrorInfo](http://msdn.microsoft.com/en-us/4dda6909-2d9a-4727-ae0c-b5f90dcfa447) interfaccia. **IErrorInfo** consente di essere propagati al client le informazioni di errore.  
+-   [ISupportErrorInfoImpl](../atl/reference/isupporterrorinfoimpl-class.md) determina se l'oggetto supporta la [IErrorInfo](/previous-versions/windows/desktop/api/oaidl/nn-oaidl-ierrorinfo) interfaccia. `IErrorInfo` Consente di ripropagare al client informazioni di errore.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Cenni preliminari sulla classe](../atl/atl-class-overview.md)
+ [Panoramica della classe](../atl/atl-class-overview.md)
 

@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d876d1005e5044a6be6511482d3e3043b580adcd
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a8d933c80aa42ef9b954b6ae498632ab9835cb3d
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33846324"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39025939"
 ---
 # <a name="ltfilesystemgt-enumerations"></a>Enumerazioni &lt;filesystem&gt;
 
@@ -38,7 +38,7 @@ Questo argomento illustra le enumerazioni nell'intestazione del file system.
 
 ## <a name="copy_options"></a>  copy_options
 
-Enumerazione dei valori di maschera di bit che viene usata con le funzioni [copy](http://msdn.microsoft.com/en-us/4af7a9b0-8861-45ed-b84e-0307f0669d60) e [copy_file](http://msdn.microsoft.com/en-us/4af7a9b0-8861-45ed-b84e-0307f0669d60) per specificare comportamenti.
+Enumerazione dei valori di maschera di bit che viene usata con le funzioni [copy](http://msdn.microsoft.com/4af7a9b0-8861-45ed-b84e-0307f0669d60) e [copy_file](http://msdn.microsoft.com/4af7a9b0-8861-45ed-b84e-0307f0669d60) per specificare comportamenti.
 
 ### <a name="syntax"></a>Sintassi
 

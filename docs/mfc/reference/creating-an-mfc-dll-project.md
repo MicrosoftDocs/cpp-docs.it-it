@@ -1,5 +1,5 @@
 ---
-title: Creazione di un progetto DLL MFC | Documenti Microsoft
+title: Creazione di un progetto DLL MFC | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,37 +19,37 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c5c560fecdaed6ea74442596aab685a08300b3fb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b0a5582c81bdc56861a549a2d17cd95ee238975a
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374055"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39027992"
 ---
 # <a name="creating-an-mfc-dll-project"></a>Creazione di un progetto DLL MFC
-DLL MFC è un file binario che funge da una libreria condivisa di funzioni che possono essere utilizzate contemporaneamente da più applicazioni. Il modo più semplice per creare un progetto DLL MFC è utilizzare la creazione guidata DLL MFC.  
+Una DLL MFC è un file binario che agisce come una libreria condivisa di funzioni che possono essere utilizzate contemporaneamente da più applicazioni. Il modo più semplice per creare un progetto DLL MFC è utilizzare la procedura guidata DLL MFC.  
   
 > [!NOTE]
->  L'aspetto della funzionalità nell'IDE può variano a seconda delle impostazioni attive o l'edizione e potrebbero essere diversi da quelli descritti nella Guida. Per modificare le impostazioni, scegliere **Importa/Esporta impostazioni** dal menu **Strumenti** . Per altre informazioni, vedere [Personalizzazione delle impostazioni di sviluppo in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  L'aspetto delle funzionalità nell'IDE possa variano a seconda delle impostazioni attive o l'edizione e potrebbero essere diversi da quelli descritti nella Guida. Per modificare le impostazioni, scegliere **Importa/Esporta impostazioni** dal menu **Strumenti** . Per altre informazioni, vedere [Personalizzazione delle impostazioni di sviluppo in Visual Studio](http://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
   
 ### <a name="to-create-an-mfc-dll-project-using-the-mfc-dll-wizard"></a>Per creare un progetto di DLL MFC mediante la creazione guidata DLL MFC  
   
-1.  Seguire le istruzioni dell'argomento della Guida [creazione di un progetto con una creazione guidata applicazione di Visual C++](../../ide/creating-desktop-projects-by-using-application-wizards.md).  
+1.  Attenersi alla procedura illustrata nell'argomento della Guida [Creazione di un progetto con una creazione guidata applicazione Visual C++](../../ide/creating-desktop-projects-by-using-application-wizards.md).  
   
  **Nota** nella **nuovo progetto** della finestra di dialogo Seleziona il `MFC DLL` icona nel riquadro dei modelli per aprire la creazione guidata DLL MFC.  
   
-1.  Definire le impostazioni dell'applicazione di [le impostazioni dell'applicazione](../../mfc/reference/application-settings-mfc-dll-wizard.md) pagina del [Creazione guidata DLL MFC](../../mfc/reference/mfc-dll-wizard.md).  
+1.  Definire le impostazioni dell'applicazione usando il [le impostazioni dell'applicazione](../../mfc/reference/application-settings-mfc-dll-wizard.md) pagina della [Creazione guidata DLL MFC](../../mfc/reference/mfc-dll-wizard.md).  
   
     > [!NOTE]
     >  Saltare questo passaggio per mantenere le impostazioni predefinite della procedura guidata.  
   
-2.  Fare clic su **fine** per chiudere la procedura guidata e aprire il nuovo progetto in **Esplora**.  
+2.  Fare clic su **Finish** per chiudere la procedura guidata e aprire il nuovo progetto nella **Esplora soluzioni**.  
   
- Una volta creato il progetto, è possibile visualizzare i file creati in Esplora soluzioni. Per altre informazioni sui file creati per il progetto con la procedura guidata, vedere il file ReadMe.txt generato dal progetto. Per ulteriori informazioni sui tipi di file, vedere [tipi di File creati per progetti di Visual C++](../../ide/file-types-created-for-visual-cpp-projects.md).  
+ Dopo aver creato il progetto, è possibile visualizzare i file creati in Esplora soluzioni. Per altre informazioni sui file creati per il progetto con la procedura guidata, vedere il file ReadMe.txt generato dal progetto. Per altre informazioni sui tipi di file, vedere [tipi di File creati per i progetti Visual C++](../../ide/file-types-created-for-visual-cpp-projects.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Tipi di progetto di Visual C++](/visualstudio/debugger/debugging-preparation-visual-cpp-project-types)   
+ [Tipi di progetto Visual C++](/visualstudio/debugger/debugging-preparation-visual-cpp-project-types)   
  [Aggiunta di funzionalità con creazioni guidate codice](../../ide/adding-functionality-with-code-wizards-cpp.md)   
  [Pagine delle proprietà](../../ide/property-pages-visual-cpp.md)   
- [Distribuzione di applicazioni](http://msdn.microsoft.com/en-us/4ff8881d-0daf-47e7-bfe7-774c625031b4)
+ [Distribuzione di applicazioni](http://msdn.microsoft.com/4ff8881d-0daf-47e7-bfe7-774c625031b4)
 

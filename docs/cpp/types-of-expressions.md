@@ -1,5 +1,5 @@
 ---
-title: Tipi di espressioni | Documenti Microsoft
+title: Tipi di espressioni | Microsoft Docs
 ms.custom: index-page
 ms.date: 11/04/2016
 ms.technology:
@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bc0904c5e503b60d5d9015e5102b1155016c78a7
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a053c837b0a2064a93a019d16856712553bd7a44
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32422423"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39026565"
 ---
 # <a name="types-of-expressions"></a>Tipi di espressioni
 Le espressioni C++ sono suddivise in diverse categorie:  
@@ -34,15 +34,15 @@ Le espressioni C++ sono suddivise in diverse categorie:
   
 -   [Espressioni con operatore condizionale](../cpp/conditional-operator-q.md). L'operatore condizionale è un operatore ternario (unico operatore di questo tipo nel linguaggio C++) - e accetta tre operandi.  
   
--   [Le espressioni costanti](../cpp/cpp-constant-expressions.md). Le espressioni costanti sono formate interamente da dati costanti.  
+-   [Espressioni costanti](../cpp/cpp-constant-expressions.md). Le espressioni costanti sono formate interamente da dati costanti.  
   
--   [Espressioni con conversioni del tipo esplicite](http://msdn.microsoft.com/en-us/060ad6b4-9592-4f3e-8509-a20ac84a85ae). Le conversioni del tipo esplicito, denominate anche cast, possono essere utilizzate nelle espressioni.  
+-   [Espressioni con conversioni esplicite](http://msdn.microsoft.com/060ad6b4-9592-4f3e-8509-a20ac84a85ae). Le conversioni del tipo esplicito, denominate anche cast, possono essere utilizzate nelle espressioni.  
   
 -   [Espressioni con operatori puntatore a membro](../cpp/pointer-to-member-operators-dot-star-and-star.md).  
   
 -   [Esegue il cast](../cpp/casting.md). Il cast indipendente dai tipi può essere utilizzato nelle espressioni.  
   
--   [Run-Time Type Information](../cpp/run-time-type-information.md). Determina il tipo di un oggetto durante l'esecuzione del programma.  
+-   [Informazioni sui tipi in fase di esecuzione](../cpp/run-time-type-information.md). Determina il tipo di un oggetto durante l'esecuzione del programma.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Espressioni](../cpp/expressions-cpp.md)

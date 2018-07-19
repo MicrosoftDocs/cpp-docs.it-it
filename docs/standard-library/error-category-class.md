@@ -26,12 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 23ec1929becbfcd3f98124e4274687854ef2f455
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f37029491c4a438f44c9f1bb27a9d192c14d1f12
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33847702"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39028229"
 ---
 # <a name="errorcategory-class"></a>Classe error_category
 
@@ -88,7 +88,7 @@ virtual error_condition default_error_condition(int _Errval) const;
 
 |Parametro|Descrizione|
 |---------------|-----------------|
-|`_Errval`|Valore del codice di errore da archiviare nella [error_condition](../standard-library/error-condition-class.md).|
+|*_Errval*|Valore del codice di errore da archiviare nella [error_condition](../standard-library/error-condition-class.md).|
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -112,13 +112,13 @@ virtual bool equivalent(const error_code& _Code,
 
 |Parametro|Descrizione|
 |---------------|-----------------|
-|`_Errval`|Il valore del codice di errore da confrontare.|
-|`_Cond`|L'oggetto [error_condition](../standard-library/error-condition-class.md) da confrontare.|
-|`_Code`|L'oggetto [error_code](../standard-library/error-code-class.md) da confrontare.|
+|*_Errval*|Il valore del codice di errore da confrontare.|
+|*_Cond*|L'oggetto [error_condition](../standard-library/error-condition-class.md) da confrontare.|
+|*Code*|L'oggetto [error_code](../standard-library/error-code-class.md) da confrontare.|
 
 ### <a name="return-value"></a>Valore restituito
 
-`true` se la categoria e il valore sono uguali, in caso contrario `false`.
+**true** se la categoria e valore sono uguali; in caso contrario, **false**.
 
 ### <a name="remarks"></a>Note
 
@@ -138,11 +138,11 @@ virtual string message(error_code::value_type val) const = 0;
 
 |Parametro|Descrizione|
 |---------------|-----------------|
-|`val`|Il valore del codice di errore da confrontare.|
+|*Val*|Il valore del codice di errore da confrontare.|
 
 ### <a name="return-value"></a>Valore restituito
 
-Restituisce un nome descrittivo del codice di errore `val` per la categoria.
+Restituisce un nome descrittivo del codice di errore *val* per la categoria.
 
 ### <a name="remarks"></a>Note
 
@@ -172,7 +172,7 @@ bool operator==(const error_category& right) const;
 
 |Parametro|Descrizione|
 |---------------|-----------------|
-|`right`|L'oggetto di cui verificare l'uguaglianza.|
+|*right*|Oggetto di cui verificare l'uguaglianza.|
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -194,11 +194,11 @@ bool operator!=(const error_category& right) const;
 
 |Parametro|Descrizione|
 |---------------|-----------------|
-|`right`|L'oggetto di cui verificare la disuguaglianza.|
+|*right*|Oggetto di cui verificare la disuguaglianza.|
 
 ### <a name="return-value"></a>Valore restituito
 
-**true** se l'oggetto `error_category` non è uguale all'oggetto `error_category` passato in `right`; in caso contrario **false**.
+**true** se il `error_category` non è uguale all'oggetto il `error_category` oggetto passato in *a destra*; in caso contrario **false**.
 
 ### <a name="remarks"></a>Note
 
@@ -216,7 +216,7 @@ bool operator<(const error_category& right) const;
 
 |Parametro|Descrizione|
 |---------------|-----------------|
-|`right`|L'oggetto `error_category` da confrontare.|
+|*right*|L'oggetto `error_category` da confrontare.|
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -236,7 +236,7 @@ typedef int value_type;
 
 ### <a name="remarks"></a>Note
 
-La definizione del tipo è un sinonimo di `int`.
+Definizione del tipo è un sinonimo **int**.
 
 ## <a name="see-also"></a>Vedere anche
 

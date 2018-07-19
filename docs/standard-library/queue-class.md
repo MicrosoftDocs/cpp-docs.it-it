@@ -32,12 +32,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5442888e8e370892add687c21132e397ae683ac8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d50b53f9c06c5edbd159e7e2bac112f6f30432df
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33861503"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954916"
 ---
 # <a name="queue-class"></a>Classe queue
 
@@ -54,15 +54,15 @@ class queue
 
 *Tipo* tipo di dati degli elementi da archiviare nella coda
 
-`Container` Il tipo di contenitore sottostante usato per implementare la coda.
+*Contenitore* il tipo di contenitore sottostante usato per implementare la coda.
 
 ## <a name="remarks"></a>Note
 
-Gli elementi della classe **Type** stipulata nel primo parametro di modello di un oggetto queue sono sinonimi di [value_type](#value_type) e devono corrispondere al tipo di elemento della classe di contenitori sottostante **Container** stipulata dal secondo parametro di modello. La classe **Type** deve essere assegnabile, in modo che sia possibile copiare oggetti di quel tipo e assegnare valori alle variabili di quel tipo.
+Gli elementi della classe `Type` stipulata nel primo modello di parametro di un oggetto queue sono sinonimi di [value_type](#value_type) e deve corrispondere al tipo di elemento nella classe del contenitore sottostante `Container` stabilito per il secondo parametro di modello. Il `Type` deve essere assegnabile, in modo che sia possibile copiare oggetti di quel tipo e assegnare valori alle variabili di quel tipo.
 
-Le classi contenitore sottostanti idonee per l'oggetto queue includono [deque](../standard-library/deque-class.md) e [list](../standard-library/list-class.md) o qualsiasi altro contenitore sequenziale che supporta le operazioni di `front`, **back**, `push_back` e `pop_front`. La classe del contenitore sottostante è incapsulata nell'adattatore di contenitori, che espone solo il set limitato di funzioni membro dei contenitori di sequenza come interfaccia pubblica.
+Includono classi contenitore sottostanti idonee per la coda [deque](../standard-library/deque-class.md) e [elenco](../standard-library/list-class.md), o qualsiasi altro contenitore sequenziale che supporta le operazioni di `front`, `back`, `push_back`, e `pop_front`. La classe del contenitore sottostante è incapsulata nell'adattatore di contenitori, che espone solo il set limitato di funzioni membro dei contenitori di sequenza come interfaccia pubblica.
 
-Gli oggetti queue sono di tipo EqualityComparable se e solo se gli elementi della classe **Type** sono di tipo EqualityComparable e sono di tipo LessThanComparable se e solo se gli elementi della classe **Type** sono di tipo LessThanComparable.
+Gli oggetti queue sono di tipo equalitycomparable se e solo se gli elementi della classe `Type` sono di tipo equalitycomparable e sono minori-di tipo lessthancomparable se e solo se gli elementi della classe `Type` sono meno-di tipo lessthancomparable.
 
 Esistono tre tipi di adattatori di contenitori definiti nella libreria standard C++: stack, queue e priority_queue. Ognuno di essi limita la funzionalità di una classe contenitore sottostante per fornire un'interfaccia controllata con precisione a una struttura di dati standard.
 
@@ -119,7 +119,7 @@ Ultimo elemento dell'oggetto queue. Se l'oggetto queue è vuoto, il valore resti
 
 ### <a name="remarks"></a>Note
 
-Se il valore restituito di **back** viene assegnato a un oggetto `const_reference`, l'oggetto queue non può essere modificato. Se il valore restituito di **back** viene assegnato a un oggetto **reference**, l'oggetto queue può essere modificato.
+Se il valore restituito di `back` viene assegnato a un oggetto `const_reference`, l'oggetto queue non può essere modificato. Se il valore restituito di `back` viene assegnato a un `reference`, l'oggetto queue può essere modificato.
 
 Durante la compilazione tramite [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) definito come 1 o 2, si verificherà un errore di runtime se si tenta di accedere a un elemento in un oggetto queue vuoto.  Per altre informazioni, vedere [Iteratori verificati](../standard-library/checked-iterators.md).
 
@@ -229,9 +229,9 @@ Primo elemento dell'oggetto queue. Se l'oggetto queue è vuoto, il valore restit
 
 ### <a name="remarks"></a>Note
 
-Se il valore restituito di `front` viene assegnato a un oggetto `const_reference`, l'oggetto queue non può essere modificato. Se il valore restituito di `front` viene assegnato a un oggetto **reference**, l'oggetto queue può essere modificato.
+Se il valore restituito di `front` viene assegnato a un oggetto `const_reference`, l'oggetto queue non può essere modificato. Se il valore restituito di `front` viene assegnato a un `reference`, l'oggetto queue può essere modificato.
 
-La funzione membro restituisce un oggetto **reference** al primo elemento della sequenza controllata, che non deve essere vuoto.
+La funzione membro restituisce un `reference` al primo elemento della sequenza controllata, che deve essere non vuoto.
 
 Durante la compilazione tramite [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) definito come 1 o 2, si verificherà un errore di runtime se si tenta di accedere a un elemento in un oggetto queue vuoto.  Per altre informazioni, vedere [Iteratori verificati](../standard-library/checked-iterators.md).
 
@@ -331,7 +331,7 @@ void push(const Type& val);
 
 ### <a name="parameters"></a>Parametri
 
-`val` L'elemento aggiunto alla fine della coda.
+*Val* elemento aggiunto alla fine dell'oggetto queue.
 
 ### <a name="remarks"></a>Note
 
@@ -381,7 +381,7 @@ explicit queue(const container_type& right);
 
 ### <a name="parameters"></a>Parametri
 
-`right` Il **const** contenitore dei quali è la coda costruita deve essere una copia.
+*a destra* il **const** contenitore di cui l'oggetto queue costruito deve essere una copia.
 
 ### <a name="remarks"></a>Note
 

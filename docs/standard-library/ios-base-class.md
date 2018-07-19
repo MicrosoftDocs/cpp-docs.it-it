@@ -118,12 +118,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 818d6fad62ec4d506215a82f2faa1e3aa58d1654
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: aec1d5291526360157b4e1a0b5b4eff9ae9fd454
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33849041"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38956458"
 ---
 # <a name="iosbase-class"></a>Classe ios_base
 
@@ -135,13 +135,13 @@ Un oggetto della classe ios_base archivia le informazioni di formattazione che s
 
 - Una maschera di eccezione in un oggetto di tipo [iostate](#iostate).
 
-- Larghezza del campo in un oggetto di tipo `int`.
+- Larghezza del campo in un oggetto di tipo **int**.
 
-- Una precisione di visualizzazione in un oggetto di tipo `int`.
+- Una precisione di visualizzazione in un oggetto di tipo **int**.
 
-- Un oggetto di impostazioni locali in un oggetto di tipo **locale**.
+- Un oggetto delle impostazioni locali in un oggetto di tipo `locale`.
 
-- Due matrici estendibili con elementi di tipo **long** e puntatore `void`.
+- Due matrici estendibili con elementi di tipo **lungo** e **void** puntatore.
 
 Un oggetto della classe ios_base archivia anche informazioni sullo stato del flusso, in un oggetto di tipo [iostate](#iostate), e uno stack di callback.
 
@@ -178,7 +178,7 @@ Un oggetto della classe ios_base archivia anche informazioni sullo stato del flu
 |[basefield](#fmtflags)|Maschera di bit definita come `dec` &#124; `hex` &#124; `oct`.|
 |[beg](#seekdir)|Specifica la ricerca relativa all'inizio di una sequenza.|
 |[binary](#openmode)|Specifica che un file deve essere letto come flusso binario, anziché come flusso di testo.|
-|[boolalpha](#fmtflags)|Specifica l'inserimento o l'estrazione di oggetti di tipo `bool` come nomi (ad esempio `true` e `false`), anziché come valori numerici.|
+|[boolalpha](#fmtflags)|Specifica l'inserimento o estrazione di oggetti di tipo **bool** come nomi (ad esempio **true** e **false**) anziché come valori numerici.|
 |[cur](#seekdir)|Specifica la ricerca relativa alla posizione corrente all'interno di una sequenza.|
 |[dec](#fmtflags)|Specifica l'inserimento o l'estrazione di valori interi in formato decimale.|
 |[end](#seekdir)|Specifica la ricerca relativa alla fine di una sequenza.|
@@ -249,11 +249,11 @@ enum event {
 
 Il tipo è costituito da un tipo non enumerato che descrive un oggetto in grado di archiviare l'evento di callback usato come argomento di una funzione registrata con [register_callback](#register_callback). I valori distinti degli eventi sono:
 
-- **copyfmt_event** per identificare un callback che si verifica in prossimità della fine di una chiamata a [copyfmt](../standard-library/basic-ios-class.md#copyfmt), immediatamente prima che venga copiata la [maschera di eccezione](../standard-library/ios-base-class.md).
+- `copyfmt_event`, per identificare un callback che si trova vicino alla fine di una chiamata a [copyfmt](../standard-library/basic-ios-class.md#copyfmt), subito prima il [maschera delle eccezioni](../standard-library/ios-base-class.md) viene copiato.
 
-- **erase_event** per identificare un callback che si verifica all'inizio di una chiamata a [copyfmt](../standard-library/basic-ios-class.md#copyfmt) o all'inizio di una chiamata al distruttore di **\*this**.
+- `erase_event`, per identificare un callback che si verifica all'inizio di una chiamata a [copyfmt](../standard-library/basic-ios-class.md#copyfmt), oppure all'inizio di una chiamata al distruttore per  **\*ciò**.
 
-- **imbue_event** per identificare un callback che si verifica alla fine di una chiamata a [imbue](#imbue), immediatamente prima che venga restituita la funzione.
+- `imbue_event`, per identificare un callback che si verifica alla fine di una chiamata a [imbue](#imbue), immediatamente prima del termine della funzione.
 
 ### <a name="example"></a>Esempio
 
@@ -274,7 +274,7 @@ typedef void (__cdecl *event_callback)(
 
 *_E* il [evento](#event).
 
-`_Base` Flusso in cui è stato chiamato l'evento.
+*Base* nel flusso in cui è stato chiamato l'evento.
 
 *Dichiaro* un numero definito dall'utente.
 
@@ -349,7 +349,7 @@ fmtflags flags(fmtflags fmtfl);
 
 ### <a name="parameters"></a>Parametri
 
-`fmtfl` Il nuovo `fmtflags` impostazione.
+*fmtfl* nuovo `fmtflags` impostazione.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -359,7 +359,7 @@ Impostazione `fmtflags` precedente o corrente.
 
 Vedere [ios_base::fmtflags](#fmtflags) per un elenco dei flag.
 
-La prima funzione membro restituisce i flag di formato archiviati. La seconda funzione membro archivia `fmtfl` nei flag di formato e restituisce il relativo valore archiviato precedente.
+La prima funzione membro restituisce i flag di formato archiviati. La seconda funzione membro Archivia *fmtfl* del flag di formato e restituisce il valore archiviato precedente.
 
 ### <a name="example"></a>Esempio
 
@@ -433,7 +433,7 @@ Il tipo è un tipo maschera di bit che descrive un oggetto in grado di archiviar
 
 - `right`, per riempire la larghezza del campo in base alle necessità inserendo caratteri di riempimento all'inizio di un campo generato (giustificazione a destra).
 
-- `boolalpha`, per inserire o estrarre oggetti di tipo `bool` come nomi (ad esempio `true` e `false`) anziché come valori numerici.
+- `boolalpha`, per inserire o estrarre gli oggetti di tipo **bool** come nomi (ad esempio **true** e **false**) anziché come valori numerici.
 
 - `fixed`, per inserire valori a virgola mobile in formato a virgola fissa (senza il campo dell'esponente).
 
@@ -499,7 +499,7 @@ locale imbue(const locale& _Loc);
 
 ### <a name="parameters"></a>Parametri
 
-`_Loc` La nuova impostazione delle impostazioni locali.
+*_Loc* nuove impostazioni locali.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -507,7 +507,7 @@ Impostazioni locali precedenti.
 
 ### <a name="remarks"></a>Note
 
-La funzione membro archivia `_Loc` nell'oggetto delle impostazioni locali e segnala l'evento di callback e `imbue_event`. Restituisce il valore archiviato precedente.
+La funzione membro Archivia *_Loc* nell'oggetto delle impostazioni locali e quindi segnala l'evento di callback e `imbue_event`. Restituisce il valore archiviato precedente.
 
 ### <a name="example"></a>Esempio
 
@@ -563,7 +563,7 @@ Il tipo è costituito da un tipo maschera di bit che descrive un oggetto in grad
 
 - `failbit`, per registrare un errore per l'estrazione di un campo valido da un flusso.
 
-Un valore utile è anche `goodbit`, in cui non è impostato nessuno dei bit indicati in precedenza ( `goodbit` è sempre zero).
+Inoltre, è un valore utile `goodbit`, in cui nessuno dei bit indicati in precedenza vengono impostati (`goodbit` è sempre zero).
 
 ## <a name="iword"></a>  ios_base::iword
 
@@ -575,13 +575,13 @@ long& iword(int idx);
 
 ### <a name="parameters"></a>Parametri
 
-`idx` L'indice del valore da archiviare come un `iword`.
+*IDX* l'indice del valore da archiviare come un `iword`.
 
 ### <a name="remarks"></a>Note
 
-La funzione membro restituisce un riferimento all'elemento `idx` della matrice estendibile con elementi di tipo **long**. Tutti gli elementi sono effettivamente presenti e archiviano inizialmente il valore zero. Il riferimento restituito non è valido dopo la chiamata successiva a `iword` per l'oggetto, dopo che l'oggetto viene modificato da una chiamata in **basic_ios::**[copyfmt](../standard-library/basic-ios-class.md#copyfmt) o dopo che l'oggetto viene eliminato.
+La funzione membro restituisce un riferimento all'elemento *idx* della matrice estendibile con elementi di tipo **lungo**. Tutti gli elementi sono effettivamente presenti e archiviano inizialmente il valore zero. Il riferimento restituito non è valido dopo la chiamata successiva a `iword` per l'oggetto, dopo che l'oggetto viene modificato da una chiamata in **basic_ios::**[copyfmt](../standard-library/basic-ios-class.md#copyfmt) o dopo che l'oggetto viene eliminato.
 
-Se `idx` è negativo o se per l'elemento non è disponibile un'archiviazione univoca, la funzione chiama [setstate](../standard-library/basic-ios-class.md#setstate)**(badbit)** e restituisce un riferimento che potrebbe non essere univoco.
+Se *idx* è negativo o se è disponibile per l'elemento di un'archiviazione univoca, la funzione chiama [setstate](../standard-library/basic-ios-class.md#setstate)**(badbit)** e restituisce un riferimento che potrebbe non essere univoco.
 
 Per ottenere un indice univoco, da usare con tutti gli oggetti di tipo `ios_base`, chiamare [xalloc](#xalloc).
 
@@ -609,17 +609,17 @@ public:
 
 Il tipo è costituito da un `bitmask type` che descrive un oggetto in grado di archiviare la modalità di apertura per vari oggetti iostream. I valori flag distinti (elementi) sono:
 
-- **app**, per eseguire la ricerca alla fine di un flusso prima di ogni inserimento.
+- `app`, per eseguire la ricerca alla fine di un flusso prima di ogni inserimento.
 
-- **ate**, per eseguire la ricerca alla fine di un flusso quando il relativo oggetto di controllo viene inizialmente creato.
+- `ate`, per eseguire la ricerca alla fine di un flusso quando l'oggetto di controllo viene inizialmente creato.
 
-- **binary**, per leggere un file come flusso binario, anziché come flusso di testo.
+- `binary`, per leggere un file come flusso binario, anziché come un flusso di testo.
 
-- **in**, per consentire l'estrazione da un flusso.
+- `in`, per consentire l'estrazione da un flusso.
 
-- **out**, per consentire l'inserimento in un flusso.
+- `out`, per consentire l'inserimento in un flusso.
 
-- **trunc**, per eliminare i contenuti di un file esistente quando viene creato l'oggetto di controllo.
+- `trunc`, per eliminare il contenuto di un file esistente quando viene creato l'oggetto di controllo.
 
 ### <a name="example"></a>Esempio
 
@@ -649,7 +649,7 @@ ios_base& operator=(const ios_base& right);
 
 ### <a name="parameters"></a>Parametri
 
-`right` Un oggetto di tipo `ios_base`.
+*a destra* un oggetto di tipo `ios_base`.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -672,11 +672,11 @@ streamsize precision(streamsize _Prec);
 
 ### <a name="parameters"></a>Parametri
 
-`_Prec` Il numero di cifre significative per la visualizzazione, o il numero di cifre dopo il separatore decimale in notazione fissa.
+*_Prec* il numero di cifre significative da visualizzare o il numero di cifre dopo il separatore decimale nella notazione fissa.
 
 ### <a name="return-value"></a>Valore restituito
 
-La prima funzione membro restituisce la [precisione di visualizzazione](../standard-library/ios-base-class.md) archiviata. La seconda funzione membro archivia `_Prec` nella precisione di visualizzazione e restituisce il relativo valore precedente archiviato.
+La prima funzione membro restituisce la [precisione di visualizzazione](../standard-library/ios-base-class.md) archiviata. La seconda funzione membro Archivia *_Prec* nella precisione di visualizzazione e restituisce il valore archiviato precedente.
 
 ### <a name="remarks"></a>Note
 
@@ -716,11 +716,11 @@ void *& pword(int _Idx);
 
 ### <a name="parameters"></a>Parametri
 
-`_Idx` L'indice del valore da archiviare come un `pword`.
+*IDX* l'indice del valore da archiviare come un `pword`.
 
 ### <a name="remarks"></a>Note
 
-La funzione membro restituisce un riferimento all'elemento _ *Idx* della matrice estendibile con elementi di tipo puntatore `void`. Tutti gli elementi sono effettivamente presenti e archiviano inizialmente il puntatore Null. Il riferimento restituito non è valido dopo la chiamata successiva a `pword` per l'oggetto, dopo che l'oggetto viene modificato da una chiamata in **basic_ios::**[copyfmt](../standard-library/basic-ios-class.md#copyfmt) o dopo che l'oggetto viene eliminato.
+La funzione membro restituisce un riferimento all'elemento _ *Idx* della matrice estendibile con elementi di tipo **void** puntatore. Tutti gli elementi sono effettivamente presenti e archiviano inizialmente il puntatore Null. Il riferimento restituito non è valido dopo la chiamata successiva a `pword` per l'oggetto, dopo che l'oggetto viene modificato da una chiamata in **basic_ios::**[copyfmt](../standard-library/basic-ios-class.md#copyfmt) o dopo che l'oggetto viene eliminato.
 
 Se _ *Idx* è negativo o se per l'elemento non è disponibile un'archiviazione univoca, la funzione chiama [setstate](../standard-library/basic-ios-class.md#setstate)**(badbit)** e restituisce un riferimento che potrebbe non essere univoco.
 
@@ -741,13 +741,13 @@ void register_callback(
 
 ### <a name="parameters"></a>Parametri
 
-`pfn` Puntatore alla funzione di callback.
+*pfn* puntatore alla funzione di callback.
 
-`idx` Un numero definito dall'utente.
+*IDX* un numero definito dall'utente.
 
 ### <a name="remarks"></a>Note
 
-La funzione membro inserisce la coppia `{pfn, idx}` nello stack di callback stored [stack di callback](../standard-library/ios-base-class.md). Quando un evento di callback **ev** viene segnalato, le funzioni vengono chiamate in ordine inverso del Registro di sistema, dall'espressione `(*pfn)(ev, *this, idx)`.
+La funzione membro inserisce la coppia `{pfn, idx}` nello stack di callback archiviato [stack di callback](../standard-library/ios-base-class.md). Quando un evento di callback **ev** viene segnalato, le funzioni vengono chiamate, in ordine inverso del Registro di sistema, dall'espressione `(*pfn)(ev, *this, idx)`.
 
 ### <a name="example"></a>Esempio
 
@@ -855,13 +855,13 @@ namespace std {
 
 ### <a name="remarks"></a>Note
 
-Il tipo è un tipo enumerato che descrive un oggetto che può archiviare la modalità di ricerca utilizzata come argomenti alle funzioni membro delle classi iostream diversi. I valori flag distinti sono:
+Il tipo è un tipo enumerato che descrive un oggetto che può archiviare la modalità di ricerca utilizzata come argomento per le funzioni membro di diverse classi iostream. I valori flag distinti sono:
 
-- **beg**,   per eseguire la ricerca (modifica della posizione di lettura o scrittura corrente) relativa all'inizio di una sequenza (array,   flusso   o file).
+- `beg`, per eseguire la ricerca (alter corrente lettura o scrittura posizione) rispetto all'inizio di una sequenza (array, flusso o file).
 
-- **cur**,   per eseguire la ricerca relativa alla posizione corrente all'interno di una sequenza.
+- `cur`, per eseguire la ricerca relativa alla posizione corrente all'interno di una sequenza.
 
-- **end**,   per eseguire la ricerca relativa alla fine di una sequenza.
+- `end`, per eseguire la ricerca relativa alla fine di una sequenza.
 
 ### <a name="example"></a>Esempio
 
@@ -901,9 +901,9 @@ fmtflags setf(
 
 ### <a name="parameters"></a>Parametri
 
-`_Mask` I flag da attivare.
+*Mask* flag da attivare.
 
-*_Unset* i flag da disattivare.
+*Unset* flag da disattivare.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -949,7 +949,7 @@ static bool sync_with_stdio(
 
 ### <a name="parameters"></a>Parametri
 
-`_Sync` Se vengono sincronizzati con tutti i flussi **stdio**.
+*_Sync* se tutti i flussi sono sincronizzati con `stdio`.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -957,7 +957,7 @@ static bool sync_with_stdio(
 
 ### <a name="remarks"></a>Note
 
-    The static member function stores a **stdio** sync flag, which is initially **true**. When **true**, this flag ensures that operations on the same file are properly synchronized between the [iostreams](../standard-library/iostreams-conventions.md) functions and those defined in the C++ Standard Library. Otherwise, synchronization may or may not be guaranteed, but performance may be improved. The function stores `_Sync` in the **stdio** sync flag and returns its previous stored value. You can call it reliably only before performing any operations on the standard streams.
+    The static member function stores a `stdio` sync flag, which is initially **true**. When **true**, this flag ensures that operations on the same file are properly synchronized between the [iostreams](../standard-library/iostreams-conventions.md) functions and those defined in the C++ Standard Library. Otherwise, synchronization may or may not be guaranteed, but performance may be improved. The function stores *_Sync* in the `stdio` sync flag and returns its previous stored value. You can call it reliably only before performing any operations on the standard streams.
 
 ## <a name="unsetf"></a> ios_base::unsetf
 
@@ -971,7 +971,7 @@ void unsetf(
 
 ### <a name="parameters"></a>Parametri
 
-`_Mask` I flag che si desidera disattivare.
+*Mask* i flag che si vuole disattivare.
 
 ### <a name="remarks"></a>Note
 
@@ -994,7 +994,7 @@ streamsize width(
 
 ### <a name="parameters"></a>Parametri
 
-`_Wide` La dimensione desiderata del flusso di output.
+*_Wide* la dimensione desiderata del flusso di output.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -1002,7 +1002,7 @@ streamsize width(
 
 ### <a name="remarks"></a>Note
 
-    The first member function returns the stored field width. The second member function stores `_Wide` in the field width and returns its previous stored value.
+    The first member function returns the stored field width. The second member function stores *_Wide* in the field width and returns its previous stored value.
 
 ### <a name="example"></a>Esempio
 

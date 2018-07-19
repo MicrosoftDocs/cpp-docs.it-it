@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b1151464d4f2d863f8cdc30191199c0606d58b8f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 58599777f3e680b7ea124d9e9dfa427fd55b4051
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33852390"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38956934"
 ---
 # <a name="negate-struct"></a>Struct negate
 
@@ -49,9 +49,9 @@ struct negate<void>
 
 ### <a name="parameters"></a>Parametri
 
-`Type` Qualsiasi tipo che supporta un `operator-` che accetta un operando di tipo specificato o dedotto.
+*Tipo di* qualsiasi tipo che supporta un `operator-` che accetta un operando del tipo specificato o dedotto.
 
-`Left` L'operando da negare. Il modello specializzato esegue un inoltro perfetto degli argomenti di riferimento lvalue e rvalue del tipo dedotto `Type`.
+*Sinistra* l'operando da negare. Il modello specializzato esegue un inoltro di lvalue perfetto e gli argomenti di riferimento rvalue del tipo di dedurre *tipo*.
 
 ## <a name="return-value"></a>Valore restituito
 

@@ -1,7 +1,7 @@
 ---
 title: fgets, fgetws | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 07/11/2018
 ms.technology:
 - cpp-standard-libraries
 ms.topic: reference
@@ -39,12 +39,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e92deea033443ec942895d2aef2d1a307ac89f34
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9c155150a364c2cbbd230c56678e6e7dcb4e4fde
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32402020"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39027167"
 ---
 # <a name="fgets-fgetws"></a>fgets, fgetws
 
@@ -70,25 +70,25 @@ wchar_t *fgetws(
 *str*<br/>
 Percorso di archiviazione per i dati.
 
-*NumChars*<br/>
+*numChars*<br/>
 Numero massimo di caratteri da leggere.
 
-*Flusso*<br/>
+*flusso*<br/>
 Puntatore alla struttura **FILE**.
 
 ## <a name="return-value"></a>Valore restituito
 
-Ognuna di queste funzioni restituisce *str*. **NULL** viene restituito per indicare un errore o una condizione di fine del file. Uso **feof** oppure **ferror** per determinare se si è verificato un errore. Se *str* oppure *flusso* è un puntatore null, o *numChars* è minore o uguale a zero, questa funzione richiama il gestore di parametri non validi, come descritto in [ Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, **errno** è impostata su **EINVAL** e la funzione restituisce **NULL**.
+Ognuna di queste funzioni restituisce *str*. **NULL** viene restituito per indicare un errore o una condizione di fine del file. Uso **feof** oppure **ferror** per determinare se si è verificato un errore. Se *str* oppure *stream* è un puntatore null, o *numChars* è minore o uguale a zero, questa funzione richiama il gestore di parametri non validi, come descritto in [ Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, **errno** è impostata su **EINVAL** e la funzione restituisce **NULL**.
 
 Per informazioni su questi e altri codici di errore, vedere [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Note
 
-Il **fgets** funzione legge una stringa di input *flusso* argomento e lo archivia nel *str*. **fgets** legge caratteri dalla posizione corrente del flusso di e tra il primo carattere di nuova riga, alla fine del flusso o fino a quando il numero di caratteri letti è uguale a *numChars* - 1, quest'ultima giunge prima. Il risultato archiviato nel *str* viene aggiunto con un carattere null. Il carattere di nuova riga, se letto, viene incluso nella stringa.
+Il **fgets** funzione legge una stringa di input *stream* argomento e lo archivia nel *str*. **fgets** legge caratteri dalla posizione corrente del flusso a e includendo il primo carattere di nuova riga alla fine del flusso, o fino a quando il numero di caratteri letti è uguale al *numChars* - 1, a seconda del valore raggiunto per primo. Il risultato archiviato in *str* viene accodato con un carattere null. Il carattere di nuova riga, se letto, viene incluso nella stringa.
 
-**fgetws** è una versione a caratteri wide **fgets**.
+**fgetws** è una versione a caratteri wide di **fgets**.
 
-**fgetws** legge l'argomento a caratteri wide *str* come una stringa di caratteri multibyte o una stringa di caratteri wide seconda *flusso* viene aperto in modalità testo o binari, rispettivamente. Per altre informazioni sull'uso delle modalità testo e binaria in formato Unicode e I/O flusso multibyte, vedere [I/O file modalità testo e binaria](../../c-runtime-library/text-and-binary-mode-file-i-o.md) e [I/O flusso Unicode in modalità testo e binaria](../../c-runtime-library/unicode-stream-i-o-in-text-and-binary-modes.md).
+**fgetws** legge l'argomento a caratteri wide *str* come una stringa di caratteri multibyte o una stringa di caratteri "wide" seconda *flusso* viene aperto in modalità testo o binari, rispettivamente. Per altre informazioni sull'uso delle modalità testo e binaria in formato Unicode e I/O flusso multibyte, vedere [I/O file modalità testo e binaria](../../c-runtime-library/text-and-binary-mode-file-i-o.md) e [I/O flusso Unicode in modalità testo e binaria](../../c-runtime-library/unicode-stream-i-o-in-text-and-binary-modes.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 
@@ -109,9 +109,8 @@ Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-run
 
 ```C
 // crt_fgets.c
-// This program uses fgets to display
-// a line from a file on the screen.
-//
+// This program uses fgets to display 
+// the first line from a file.
 
 #include <stdio.h>
 

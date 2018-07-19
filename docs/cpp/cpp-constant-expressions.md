@@ -1,5 +1,5 @@
 ---
-title: Espressioni costanti C++ | Documenti Microsoft
+title: Espressioni costanti C++ | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,45 +16,46 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d71427c7176d8448d861c6dd7602b6bc91941737
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fef56154f34f645b279ffccd99915d366388cb06
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39026702"
 ---
 # <a name="c-constant-expressions"></a>Espressioni costanti C++
-Oggetto *costante* valore corrisponde a uno che non cambia. C++ fornisce due parole chiave per permettere di indicare che un oggetto non deve essere modificato e per applicare tale intento.  
+Oggetto *costante* valore corrisponde a uno che non cambiano. C++ fornisce due parole chiave per permettere di indicare che un oggetto non deve essere modificato e per applicare tale intento.  
   
- Il linguaggio C++ richiede espressioni costanti (espressioni che restituiscono una costante) per le dichiarazioni di:  
+Il linguaggio C++ richiede espressioni costanti (espressioni che restituiscono una costante) per le dichiarazioni di:  
   
--   Limiti di matrice  
+ -   Limiti di matrice  
+      
+ -   Selettori in istruzioni case  
+      
+ -   Specifica di lunghezza del campo di bit  
+      
+ -   Inizializzatori di enumerazione  
   
--   Selettori in istruzioni case  
+Gli unici operandi che sono validi nelle espressioni costanti sono:  
   
--   Specifica di lunghezza del campo di bit  
+ -   Valori letterali  
+      
+ -   Costanti di enumerazione  
+      
+ -   Valori dichiarati come const che vengono inizializzati con espressioni costanti  
+      
+ -   **sizeof** espressioni  
   
--   Inizializzatori di enumerazione  
+Le costanti non integrali devono essere convertite (in modo esplicito o implicito) in tipi integrali affinché siano valide in un'espressione costante. Pertanto, il codice seguente è valido:  
   
- Gli unici operandi che sono validi nelle espressioni costanti sono:  
-  
--   Valori letterali  
-  
--   Costanti di enumerazione  
-  
--   Valori dichiarati come const che vengono inizializzati con espressioni costanti  
-  
--   Espressioni `sizeof`  
-  
- Le costanti non integrali devono essere convertite (in modo esplicito o implicito) in tipi integrali affinché siano valide in un'espressione costante. Pertanto, il codice seguente è valido:  
-  
-```  
+```cpp 
 const double Size = 11.0;  
 char chArray[(int)Size];  
 ```  
   
- Le conversioni esplicite in tipi integrali sono valide nelle espressioni costanti. Tutti gli altri tipi e i tipi derivati non sono validi tranne quando sono usati come operandi per l'operatore `sizeof`.  
+Le conversioni esplicite in tipi integrali sono valide nelle espressioni costanti. Tutti gli altri tipi e i tipi derivati non sono validi tranne quando sono usati come operandi per l'operatore `sizeof`.  
   
- L'operatore virgola e gli operatori di assegnazione non possono essere usati nelle espressioni costanti.  
+L'operatore virgola e gli operatori di assegnazione non possono essere usati nelle espressioni costanti.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Tipi di espressioni](../cpp/types-of-expressions.md)

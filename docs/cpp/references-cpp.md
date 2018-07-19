@@ -1,5 +1,5 @@
 ---
-title: Riferimenti (C++) | Documenti Microsoft
+title: Riferimenti (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,11 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fe60a849cb1b14420ab83af77362ddda433884a9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 174ab622b177766a33dd55f6b3c78ac38c26ded1
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38956593"
 ---
 # <a name="references-c"></a>Riferimenti (C++)
 Un riferimento, analogamente a un puntatore, archivia l'indirizzo di un oggetto che si trova in un'altra posizione in memoria. A differenza di un puntatore, dopo l'inizializzazione non è possibile impostare un riferimento in modo che indichi un oggetto diverso o che sia impostato su Null. Esistono due tipi di riferimenti: i riferimenti lvalue che fanno riferimento a un nome variabile e i riferimenti rvalue che fanno riferimento a un [oggetto temporaneo](../cpp/temporary-objects.md). L'operatore & indica un riferimento lvalue e l'operatore && indica un riferimento rvalue o un riferimento universale (rvalue o lvalue) in base al contesto.  
@@ -48,34 +49,34 @@ Un riferimento, analogamente a un puntatore, archivia l'indirizzo di un oggetto 
   
 -   Identificatore della classe di archiviazione facoltativo.  
   
--   Parametro facoltativo **const** e/o `volatile` qualificatori.  
+-   Facoltativo **const** e/o **volatile** qualificatori.  
   
 -   Il tipo di identificatore: il nome di un tipo.  
   
 -   2. Dichiaratore:  
   
--   Un modificatore facoltativo specifico di Microsoft. Per ulteriori informazioni, vedere [modificatori specifici Microsoft](../cpp/microsoft-specific-modifiers.md).  
+-   Un modificatore facoltativo specifico di Microsoft. Per altre informazioni, vedere [modificatori specifici Microsoft](../cpp/microsoft-specific-modifiers.md).  
   
 -   L'operatore & oppure l'operatore &&.  
   
--   Parametro facoltativo **const** e/o `volatile` qualificatori.  
+-   Facoltativo **const** e/o **volatile** qualificatori.  
   
 -   Identificatore.  
   
  3. Inizializzatore facoltativo.  
   
- Il form di dichiaratori più complessi per puntatori a matrici e funzioni sono applicabili anche ai riferimenti a matrici e funzioni, vedere [puntatori](../cpp/pointers-cpp.md) e [dichiaratori](http://msdn.microsoft.com/en-us/8a7b9b51-92bd-4ac0-b3fe-0c4abe771838).  
+ I form di dichiaratori più complessi per i puntatori a matrici e le funzioni si applicano anche ai riferimenti alle matrici e funzioni, vedere [puntatori](../cpp/pointers-cpp.md).  
   
  Più dichiaratori e inizializzatori possono essere visualizzati in un elenco separato da virgola che segue un singolo identificatore di dichiarazione. Ad esempio:  
   
-```  
+```cpp 
 int &i;   
 int &i, &j;   
 ```  
   
  I riferimenti, i puntatori e gli oggetti possono essere dichiarati insieme:  
   
-```  
+```cpp 
 int &ref, *ptr, k;   
 ```  
   
@@ -85,7 +86,7 @@ int &ref, *ptr, k;
   
 ## <a name="example"></a>Esempio  
   
-```  
+```cpp 
 // references.cpp  
 #include <stdio.h>  
 struct S {  

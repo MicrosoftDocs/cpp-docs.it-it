@@ -13,12 +13,12 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: f25752dc-d3e2-4e12-b5ac-9a8682ca60ed
-ms.openlocfilehash: c3e5c1e82e98379ff2cefae48f8af89f8fc0b698
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ce4c1a0b7fa1771cf80437d27ed9dd89baa5f220
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33859072"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38956963"
 ---
 # <a name="lttuplegt-operators"></a>Operatori &lt;tuple&gt;
 
@@ -40,7 +40,8 @@ bool operator!=(const tuple<T1, T2, ..., TN>& tpl1,
 
 ### <a name="parameters"></a>Parametri
 
-`TN` Il tipo dell'ennesimo elemento tupla.
+*TN*  
+ Tipo dell'ennesimo elemento tupla.
 
 ### <a name="remarks"></a>Note
 
@@ -104,7 +105,8 @@ bool operator<(const tuple<T1, T2, ..., TN>& tpl1,
 
 ### <a name="parameters"></a>Parametri
 
-`TN` Il tipo dell'ennesimo elemento tupla.
+*TN*  
+ Tipo dell'ennesimo elemento tupla.
 
 ### <a name="remarks"></a>Note
 
@@ -168,7 +170,8 @@ bool operator<=(const tuple<T1, T2, ..., TN>& tpl1,
 
 ### <a name="parameters"></a>Parametri
 
-`TN` Il tipo dell'ennesimo elemento tupla.
+*TN*  
+ Tipo dell'ennesimo elemento tupla.
 
 ### <a name="remarks"></a>Note
 
@@ -232,7 +235,8 @@ bool operator==(const tuple<T1, T2, ..., TN>& tpl1,
 
 ### <a name="parameters"></a>Parametri
 
-`TN` Il tipo dell'ennesimo elemento tupla.
+*TN*  
+ Tipo dell'ennesimo elemento tupla.
 
 ### <a name="remarks"></a>Note
 
@@ -296,7 +300,8 @@ bool operator>(const tuple<T1, T2, ..., TN>& tpl1,
 
 ### <a name="parameters"></a>Parametri
 
-`TN` Il tipo dell'ennesimo elemento tupla.
+*TN*  
+ Tipo dell'ennesimo elemento tupla.
 
 ### <a name="remarks"></a>Note
 
@@ -360,7 +365,8 @@ bool operator>=(const tuple<T1, T2, ..., TN>& tpl1,
 
 ### <a name="parameters"></a>Parametri
 
-`TN` Il tipo dell'ennesimo elemento tupla.
+*TN*  
+ Tipo dell'ennesimo elemento tupla.
 
 ### <a name="remarks"></a>Note
 

@@ -1,5 +1,5 @@
 ---
-title: Riepilogo delle regole di ambito | Documenti Microsoft
+title: Riepilogo delle regole di ambito | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,32 +18,32 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9d901103f36493e74f73b2edb18faa1188e704ef
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2ce7c57688fae22c3bba844cff480ae3aec03785
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32423870"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39028138"
 ---
 # <a name="summary-of-scope-rules"></a>Riepilogo delle regole di ambito
-L'utilizzo di un nome deve essere non ambiguo all'interno dell'ambito relativo (fino al punto in cui viene determinata l'esecuzione dell'overload). Se il nome indica una funzione, quest'ultima deve essere non ambigua rispetto al numero e al tipo di parametri. Se il nome non è ambiguo, [accesso ai membri](../cpp/member-access-control-cpp.md) vengono applicate le regole.  
+L'utilizzo di un nome deve essere non ambiguo all'interno dell'ambito relativo (fino al punto in cui viene determinata l'esecuzione dell'overload). Se il nome indica una funzione, quest'ultima deve essere non ambigua rispetto al numero e al tipo di parametri. Se il nome è ambiguo, [accesso ai membri](../cpp/member-access-control-cpp.md) vengono applicate le regole.  
   
 ## <a name="constructor-initializers"></a>Inizializzatori del costruttore  
- Inizializzatori del costruttore (descritti in [inizializzazione di basi e membri](http://msdn.microsoft.com/en-us/2f71377e-2b6b-49da-9a26-18e9b40226a1)) vengono valutate nell'ambito del blocco più esterno del costruttore per il quale vengono specificate. Di conseguenza, possono usare i nomi dei parametri del costruttore.  
+ Inizializzatori del costruttore (descritti in [inizializzazione di basi e membri](http://msdn.microsoft.com/2f71377e-2b6b-49da-9a26-18e9b40226a1)) vengono valutati nell'ambito del blocco più esterno del costruttore per il quale vengono specificate. Di conseguenza, possono usare i nomi dei parametri del costruttore.  
   
 ## <a name="global-names"></a>Nomi globali  
  Un nome di un oggetto, funzione o enumeratore è globale se viene introdotto al di fuori di qualsiasi funzione o classe o se è preceduto dall'operatore unario di ambito globale (`::`) e se non viene usato insieme a uno degli operatori binari seguenti:  
   
 -   Risoluzione ambito (`::`)  
   
--   Selezione dei membri per gli oggetti e riferimenti (**.**)  
+-   Selezione dei membri per gli oggetti e i riferimenti (**.**)  
   
 -   Selezione membro per puntatori (**->**)  
   
 ## <a name="qualified-names"></a>Nomi completi  
  I nomi usati con l'operatore di risoluzione dell'ambito binario (`::`) sono denominati "nomi completi". Il nome specificato dopo l'operatore di risoluzione dell'ambito binario deve essere un membro della classe specificata a sinistra dell'operatore o un membro della relativa classe base.  
   
- I nomi specificati dopo l'operatore di selezione dei membri (**.** o **->**) devono essere membri del tipo di classe dell'oggetto specificato a sinistra dell'operatore o membri della relativa classe base. I nomi specificati a destra dell'operatore di selezione dei membri (**->**) può anche contenere oggetti di un altro tipo di classe, a condizione che il lato sinistro della **->** è un oggetto di classe e che la classe definisce un operatore di selezione dei membri in overload (**->**) che restituisce un puntatore a un altro tipo di classe. (Questa operazione viene illustrata in dettaglio in [accesso ai membri di classe](../cpp/member-access.md).)  
+ I nomi specificati dopo l'operatore di selezione dei membri (**.** oppure **->**) devono essere membri del tipo di classe dell'oggetto specificato a sinistra dell'operatore o membri della relativa classe base. I nomi specificati a destra dell'operatore di selezione dei membri (**->**) possono anche essere oggetti di un altro tipo di classe, a condizione che il lato sinistro della **->** è un oggetto di classe e che la classe definisce un operatore di selezione dei membri in overload (**->**) che restituisce un puntatore a un altro tipo di classe. (Questa operazione viene illustrata più dettagliatamente [accesso ai membri di classe](../cpp/member-access.md).)  
   
  Il compilatore cerca i nomi nel seguente ordine, arrestandosi quando il nome viene trovato:  
   
@@ -63,11 +63,11 @@ L'utilizzo di un nome deve essere non ambiguo all'interno dell'ambito relativo (
   
 1.  I nomi preceduti da `::` forzano l'inizio della ricerca in ambito globale.  
   
-2.  I nomi preceduti dal **classe**, `struct`, e **unione** parole chiave forzano il compilatore di cercare solo **classe**, `struct`, o **unione**  nomi.  
+2.  I nomi preceduti dal **classe**, **struct**, e **union** parole chiave imporre al compilatore di cercare solo **classe**,  **struct**, oppure **union** nomi.  
   
-3.  I nomi sul lato sinistro dell'operatore di risoluzione dell'ambito (`::`) può essere solo **classe**, `struct`, **dello spazio dei nomi**, o **unione** nomi.  
+3.  I nomi sul lato sinistro dell'operatore di risoluzione dell'ambito (`::`) può essere solo **classe**, **struct**, **dello spazio dei nomi**, o **union**i nomi.  
   
- Se il nome riferimento a un membro non statico ma viene usato in una funzione membro statica, verrà generato un messaggio di errore. Analogamente, se il nome fa riferimento a qualsiasi membro non statico in una classe contenitore, un messaggio di errore viene generato perché le classi incluse non dispone della classe che li racchiude **questo** puntatori.  
+ Se il nome riferimento a un membro non statico ma viene usato in una funzione membro statica, verrà generato un messaggio di errore. Analogamente, se il nome fa riferimento a qualsiasi membro non statico in una classe contenitore, un messaggio di errore viene generato perché le classi incluse non dispongono della classe che li racchiude **ciò** puntatori.  
   
 ## <a name="function-parameter-names"></a>Nomi dei parametri delle funzioni  
  I nomi dei parametri delle funzioni nelle definizioni di funzione sono considerati nell'ambito del blocco più esterno della funzione. Di conseguenza, sono nomi locali e diventano esterni all'ambito quando si esce dalla funzione.  

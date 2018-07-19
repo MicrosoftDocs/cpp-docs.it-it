@@ -1,5 +1,5 @@
 ---
-title: _variant_t::Detach | Documenti Microsoft
+title: _variant_t::Detach | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,17 +19,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b53d6dc51117ffe9b82511c6084e36bc49873b88
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f71257b369e7833f279c0f68ce33e0ec925ebf6b
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32421946"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39026260"
 ---
 # <a name="varianttdetach"></a>_variant_t::Detach
 **Sezione specifica Microsoft**  
   
- Scollega incapsulato **VARIANT** oggetto da questo `_variant_t` oggetto.  
+ Scollega incapsulato `VARIANT` da questo oggetto `_variant_t` oggetto.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -40,10 +40,10 @@ VARIANT Detach( );
 ```  
   
 ## <a name="return-value"></a>Valore restituito  
- Incapsulato **VARIANT**.  
+ Incapsulato `VARIANT`.  
   
 ## <a name="remarks"></a>Note  
- Estrae e restituisce incapsulato **VARIANT**, quindi rimuove il `_variant_t` oggetto senza eliminarlo. Questa funzione membro rimuove il **VARIANT** dall'incapsulamento e imposta il **VARTYPE** di questo `_variant_t` oggetto `VT_EMPTY`. È responsabilità dell'utente di rilasciare l'oggetto restituito **VARIANT** chiamando il [VariantClear](http://msdn.microsoft.com/en-us/28741d81-8404-4f85-95d3-5c209ec13835) (funzione).  
+ Estrae e restituisce incapsulato `VARIANT`, quindi Cancella questo `_variant_t` oggetto senza eliminarlo. Questa funzione membro rimuove il `VARIANT` dall'incapsulamento e imposta la `VARTYPE` di questo `_variant_t` oggetto parametro su VT_EMPTY. È responsabilità dell'utente per rilasciare l'oggetto restituito `VARIANT` chiamando il [VariantClear](http://msdn.microsoft.com/28741d81-8404-4f85-95d3-5c209ec13835) (funzione).  
   
  **Fine sezione specifica Microsoft**  
   

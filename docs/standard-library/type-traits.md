@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5c7d09615b5f9ec7f0f72acde965d5ffbd018c9c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f1b0ae8be5e9f33982d9a24d3004ebb46b6b8a4d
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33863374"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39026351"
 ---
 # <a name="lttypetraitsgt"></a>&lt;type_traits&gt;
 
@@ -36,7 +36,7 @@ Definisce modelli che forniscono costanti in fase di compilazione in grado di of
 
 ## <a name="remarks"></a>Note
 
-Le classi e i modelli in \<type_traits > vengono usate per supportare l'inferenza del tipo, classificazione e la trasformazione in fase di compilazione per rilevare errori correlati al tipo e consentono di ottimizzare il codice generico. Questi modelli e classi includono tratti di tipo unario che descrivono una proprietà di un tipo, tratti di tipo binario che descrivono una relazione tra tipi e tratti di trasformazione che modificano una proprietà di un tipo.
+Le classi e i modelli in \<type_traits > vengono usate per supportare l'inferenza del tipo, classificazione e la trasformazione in fase di compilazione, per rilevare gli errori relativi ai tipi e che consentono di ottimizzare il codice generico. Questi modelli e classi includono tratti di tipo unario che descrivono una proprietà di un tipo, tratti di tipo binario che descrivono una relazione tra tipi e tratti di trasformazione che modificano una proprietà di un tipo.
 
 Per supportare i tratti di tipo viene definita una classe helper `integral_constant`. Questa classe dispone delle specializzazioni modello `true_type` e `false_type` che formano le classi di base per i predicati di tipo. Un *predicato di tipo* è un modello che accetta uno o più argomenti di tipo. Quando un predicato di tipo è *include true*, è derivato pubblicamente, in modo diretto o indiretto, da [true_type](../standard-library/type-traits-typedefs.md#true_type). Quando un predicato di tipo è *include false*, è derivato pubblicamente, in modo diretto o indiretto, da [false_type](../standard-library/type-traits-typedefs.md#false_type).
 
@@ -74,7 +74,7 @@ Categorie di tipi primari
 
 |||
 |-|-|
-|[is_void](../standard-library/is-void-class.md)|Verifica se il tipo è `void`.|
+|[is_void](../standard-library/is-void-class.md)|Verifica se il tipo è **void**.|
 |[is_null_pointer](../standard-library/is-null-pointer-class.md)|Verifica se il tipo è `std::nullptr_t`.|
 |[is_integral](../standard-library/is-integral-class.md)|Verifica se il tipo è integrale.|
 |[is_floating_point](../standard-library/is-floating-point-class.md)|Verifica se il tipo è a virgola mobile.|
@@ -95,7 +95,7 @@ Categorie di tipi compositi
 |-|-|
 |[is_reference](../standard-library/is-reference-class.md)|Verifica se il tipo è un riferimento.|
 |[is_arithmetic](../standard-library/is-arithmetic-class.md)|Verifica se il tipo è aritmetico.|
-|[is_fundamental](../standard-library/is-fundamental-class.md)|Verifica se il tipo è `void` o aritmetico.|
+|[is_fundamental](../standard-library/is-fundamental-class.md)|Verifica se il tipo è **void** o aritmetico.|
 |[is_object](../standard-library/is-object-class.md)|Verifica se il tipo è un tipo di oggetto.|
 |[is_scalar](../standard-library/is-scalar-class.md)|Verifica se il tipo è scalare.|
 |[is_compound](../standard-library/is-compound-class.md)|Verifica se il tipo non è scalare.|
@@ -105,8 +105,8 @@ Proprietà dei tipi
 
 |||
 |-|-|
-|[is_const](../standard-library/is-const-class.md)|Verifica se il tipo è `const`.|
-|[is_volatile](../standard-library/is-volatile-class.md)|Verifica se il tipo è `volatile`.|
+|[is_const](../standard-library/is-const-class.md)|Verifica se il tipo è **const**.|
+|[is_volatile](../standard-library/is-volatile-class.md)|Verifica se il tipo è **volatile**.|
 |[is_trivial](../standard-library/is-trivial-class.md)|Verifica se il tipo è semplice.|
 |[is_trivially_copyable](../standard-library/is-trivially-copyable-class.md)|Verifica se il tipo è facilmente copiabile.|
 |[is_standard_layout](../standard-library/is-standard-layout-class.md)|Verifica se il tipo è un tipo di layout standard.|
@@ -142,7 +142,7 @@ Proprietà dei tipi
 |[is_nothrow_copy_assignable](../standard-library/is-nothrow-copy-assignable-class.md)|Verifica se il tipo è assegnabile mediante copia e se l'assegnazione è nota come operazione che non genera eccezioni.|
 |[is_nothrow_move_assignable](../standard-library/type-traits-functions.md#is_nothrow_move_assignable)|Verifica se il tipo è assegnabile mediante spostamento e se l'assegnazione è nota come operazione che non genera eccezioni.|
 |[is_nothrow_destructible](../standard-library/is-nothrow-destructible-class.md)|Verifica se il tipo è distruttibile e se il distruttore è noto come elemento che non genera eccezioni.|
-|[has_virtual_destructor](http://msdn.microsoft.com/en-us/c0f85f0b-c63c-410d-a046-72eeaf44f7eb)|Verifica se il tipo ha un distruttore virtuale.|
+|[has_virtual_destructor](http://msdn.microsoft.com/c0f85f0b-c63c-410d-a046-72eeaf44f7eb)|Verifica se il tipo ha un distruttore virtuale.|
 
 Query sulle proprietà del tipo
 
@@ -164,9 +164,9 @@ Modifiche costante-volatile
 
 |||
 |-|-|
-|[add_const](../standard-library/add-const-class.md)|Genera un tipo `const` dal tipo.|
-|[add_volatile](../standard-library/add-volatile-class.md)|Genera un tipo `volatile` dal tipo.|
-|[add_cv](../standard-library/add-cv-class.md)|Genera un tipo `const volatile` dal tipo.|
+|[add_const](../standard-library/add-const-class.md)|Genera una **const** tipo dal tipo.|
+|[add_volatile](../standard-library/add-volatile-class.md)|Genera una **volatile** tipo dal tipo.|
+|[add_cv](../standard-library/add-cv-class.md)|Genera una **const volatile** tipo dal tipo.|
 |[remove_const](../standard-library/remove-const-class.md)|Genera un tipo non costante dal tipo.|
 |[remove_volatile](../standard-library/remove-volatile-class.md)|Genera un tipo non volatile dal tipo.|
 |[remove_cv](../standard-library/remove-cv-class.md)|Genera un tipo non costante non volatile dal tipo.|

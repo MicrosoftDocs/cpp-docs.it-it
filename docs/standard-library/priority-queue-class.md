@@ -30,12 +30,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 149d255dd82d0dff2d2ddb1101b38bf05c69673a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a53b865d054948d9ee22acbfbec0b6ddf807ec0c
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33861916"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954760"
 ---
 # <a name="priorityqueue-class"></a>Classe priority_queue
 
@@ -50,17 +50,17 @@ class priority_queue
 
 ### <a name="parameters"></a>Parametri
 
-*Tipo* tipo di dati degli elementi da archiviare nella classe priority_queue.
+*Tipo* tipo di dati degli elementi da archiviare nell'oggetto priority_queue.
 
-`Container` Il tipo di contenitore sottostante usato per implementare la classe priority_queue.
+*Contenitore* il tipo di contenitore sottostante usato per implementare l'oggetto priority_queue.
 
-*Confrontare* il tipo che fornisce un oggetto funzione che può confrontare due valori di elementi come chiavi di ordinamento per determinarne l'ordine relativo nella classe priority_queue. Questo argomento è facoltativo e il predicato binario **meno***\<*** typename** *contenitore ***:: value_type*** >* è il valore predefinito.
+*Confrontare* il tipo che fornisce un oggetto funzione che può confrontare due valori di elemento come chiavi di ordinamento per determinarne l'ordine relativo nell'oggetto priority_queue. Questo argomento è facoltativo e il predicato binario **minore***\<*** typename** *contenitore ***:: value_type*** >* è il valore predefinito.
 
 ## <a name="remarks"></a>Note
 
-Gli elementi della classe **Type** stipulata nel primo parametro di modello di un oggetto queue sono sinonimi di [value_type](#value_type) e devono corrispondere al tipo di elemento della classe di contenitori sottostante **Container** stipulata dal secondo parametro di modello. La classe **Type** deve essere assegnabile, in modo che sia possibile copiare oggetti di quel tipo e assegnare valori alle variabili di quel tipo.
+Gli elementi della classe `Type` stipulata nel primo modello di parametro di un oggetto queue sono sinonimi di [value_type](#value_type) e deve corrispondere al tipo di elemento nella classe del contenitore sottostante `Container` stabilito per il secondo parametro di modello. Il `Type` deve essere assegnabile, in modo che sia possibile copiare oggetti di quel tipo e assegnare valori alle variabili di quel tipo.
 
-L'oggetto priority_queue ordina la sequenza che controlla chiamando un oggetto funzione archiviato della classe **Traits**. In genere, gli elementi devono essere confrontabili come "minore di" per stabilire questo ordine: in modo che, dati qualsiasi due elementi, sia possibile determinare che sono equivalenti (ovvero che uno non è minore dell'altro) o che uno è minore dell'altro. Di conseguenza, l'ordinamento viene eseguito tra gli elementi non equivalenti. A un livello più tecnico, la funzione di confronto è un predicato binario che provoca un ordinamento di tipo "strict weak" nel senso matematico standard.
+L'oggetto priority_queue Ordina la sequenza da esso controllata chiamando un oggetto funzione archiviato della classe `Traits`. In genere, gli elementi devono essere confrontabili come "minore di" per stabilire questo ordine: in modo che, dati qualsiasi due elementi, sia possibile determinare che sono equivalenti (ovvero che uno non è minore dell'altro) o che uno è minore dell'altro. Di conseguenza, l'ordinamento viene eseguito tra gli elementi non equivalenti. A un livello più tecnico, la funzione di confronto è un predicato binario che provoca un ordinamento di tipo "strict weak" nel senso matematico standard.
 
 Le classi contenitore sottostanti idonee per l'oggetto priority_queue includono la [classe deque](../standard-library/deque-class.md), la [classe vector](../standard-library/vector-class.md) predefinita o qualsiasi altro contenitore sequenziale che supporta le operazioni di `front`, `push_back` e `pop_back`, nonché un iteratore ad accesso casuale. La classe del contenitore sottostante è incapsulata nell'adattatore di contenitori, che espone solo il set limitato di funzioni membro dei contenitori di sequenza come interfaccia pubblica.
 
@@ -249,23 +249,23 @@ priority_queue(InputIterator first, InputIterator last, const Traits&_comp, cons
 
 ### <a name="parameters"></a>Parametri
 
-*_ comp* la funzione di confronto di tipo **constTraits** utilizzato per ordinare gli elementi nella classe priority_queue, che per impostazione predefinita per confrontare funzione del contenitore di base.
+*_ comp* funzione di confronto di tipo **constTraits** usata per ordinare gli elementi nell'oggetto priority_queue, il cui valore predefinito è funzione di confronto del contenitore di base.
 
-`_Cont` Il contenitore di base di cui è costruito classe priority_queue deve essere una copia.
+*_Cont* il contenitore di base di cui l'oggetto priority_queue costruito deve essere una copia.
 
-`right` Classe priority_queue delle quali il set costruito può essere una copia.
+*a destra* oggetto priority_queue di cui è il set costruito deve essere una copia.
 
-`first` La posizione del primo elemento nell'intervallo di elementi da copiare.
+*primo* la posizione del primo elemento nell'intervallo di elementi da copiare.
 
-`last` La posizione del primo elemento oltre l'intervallo di elementi da copiare.
+*ultimo* la posizione del primo elemento oltre l'intervallo di elementi da copiare.
 
 ### <a name="remarks"></a>Note
 
-Ciascuno dei primi tre costruttori specifica un oggetto priority_queue iniziale vuoto. Di questi, il secondo specifica il tipo di funzione di confronto ( `comp`) da usare per stabilire l'ordine degli elementi e il terzo specifica in modo esplicito il tipo `container_type` ( `_Cont`) da usare. La parola chiave **explicit** elimina alcuni tipi di conversione automatica del tipo.
+Ognuno dei primi tre costruttori specifica un oggetto priority_queue vuoto iniziale, il secondo specifica il tipo di funzione di confronto (`comp`) da usare per stabilire l'ordine degli elementi e la terza in modo esplicito specificando le `container_type`(`_Cont`) da utilizzare. La parola chiave **explicit** elimina alcuni tipi di conversione automatica del tipo.
 
-Il quarto costruttore specifica una copia dell'oggetto priority_queue `right`.
+Il quarto costruttore specifica una copia dell'oggetto priority_queue *a destra*.
 
-Le ultime tre costruttori copiano l'intervallo [* primo, ultimo *) di un determinato contenitore e utilizzare i valori per inizializzare un priority_queue crescenti all'inequivocabilità che specifica il tipo della funzione di confronto della classe **tratti** e `container_type`.
+Gli ultimi tre costruttori copiano l'intervallo [* primo, ultimo *) di un contenitore e usare i valori per inizializzare un oggetto priority_queue con un grado di esplicitazione crescente nello specificare il tipo di funzione di confronto della classe **tratti** e`container_type`.
 
 ### <a name="example"></a>Esempio
 
@@ -388,7 +388,7 @@ void push(const Type& val);
 
 ### <a name="parameters"></a>Parametri
 
-`val` L'elemento aggiunto alla parte superiore della classe priority_queue.
+*Val* elemento aggiunto alla parte superiore dell'oggetto priority_queue.
 
 ### <a name="remarks"></a>Note
 
@@ -493,7 +493,7 @@ const_reference top() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-Riferimento all'elemento più grande, come determinato dalla funzione **Traits**, oggetto della classe priority_queue.
+Un riferimento all'elemento più grande, come determinato dal `Traits` funzione, oggetto della classe priority_queue.
 
 ### <a name="remarks"></a>Note
 

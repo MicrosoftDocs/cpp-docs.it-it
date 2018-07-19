@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3506572586f0dc8edc3f9e97955e7612bcea46ae
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b143a37c306320223ac3abe430e41c9750c8ece9
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33859186"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39025783"
 ---
 # <a name="spaceinfo-structure"></a>Struttura space_info
 
@@ -55,5 +55,5 @@ struct space_info   {
 
 [Riferimento file di intestazione](../standard-library/cpp-standard-library-header-files.md)<br/>
 [\<filesystem>](../standard-library/filesystem.md)<br/>
-[space](http://msdn.microsoft.com/en-us/7fce0b0e-523b-4598-b218-47245d0204ca)<br/>
+[space](http://msdn.microsoft.com/7fce0b0e-523b-4598-b218-47245d0204ca)<br/>
 [Esplorazione del file system (C++)](../standard-library/file-system-navigation.md)<br/>

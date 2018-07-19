@@ -1,7 +1,7 @@
 ---
-title: 'Metodo comptr:: Asiid | Documenti Microsoft'
+title: 'Metodo comptr:: Asiid | Microsoft Docs'
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 07/11/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 26f56a9d94620067ae31f5b4984ff24fe703822e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: db5bc6b2547fb77dd887f96b6c33dee536e43f77
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33870090"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39025903"
 ---
 # <a name="comptrasiid-method"></a>Metodo ComPtr::AsIID
 Restituisce un oggetto ComPtr che rappresenta l'interfaccia identificata dall'ID dell'interfaccia specificato.  
@@ -41,7 +41,7 @@ WRL_NOTHROW HRESULT AsIID(
  ID di interfaccia.  
   
  `p`  
- Se supportato, un puntatore indiretto doppio per l'interfaccia specificata dal `riid` parametro; in caso contrario, un puntatore a IUnknown.  
+ Se l'oggetto presenta un'interfaccia il cui ID corrisponde `riid`, un puntatore indiretto doppio per l'interfaccia specificata dal `riid` parametro; in caso contrario, un puntatore a IUnknown.  
   
 ## <a name="return-value"></a>Valore restituito  
  S_OK se riesce; in caso contrario, HRESULT indica un errore.  

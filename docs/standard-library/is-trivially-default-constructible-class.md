@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8f2bd65fa7145325fd4c5c2f1a2483851d0738b7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: aa7b831790804005f0649dbae0dbb98df5121106
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33852136"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954734"
 ---
 # <a name="istriviallydefaultconstructible-class"></a>Classe is_trivially_default_constructible
 
@@ -36,21 +36,21 @@ struct is_trivially_default_constructible;
 
 ### <a name="parameters"></a>Parametri
 
-`Ty` Il tipo di query.
+*Ty* il tipo di query.
 
 ## <a name="remarks"></a>Note
 
-Un'istanza del predicato di tipo contiene true se il tipo `Ty` è una classe che ha un costruttore semplice; in caso contrario, contiene false.
+Un'istanza del tipo predicato contiene true se il tipo *Ty* è una classe che ha un costruttore semplice, in caso contrario, contiene false.
 
-Un costruttore predefinito per una classe `Ty` è piuttosto semplice se:
+Un costruttore predefinito per una classe *Ty* è piuttosto semplice se:
 
 - è un costruttore predefinito dichiarato in modo implicito
 
-- la classe `Ty` non ha funzioni virtuali
+- la classe *Ty* non ha funzioni virtuali
 
-- la classe `Ty` non ha basi virtuali
+- la classe *Ty* non ha basi virtuali
 
-- tutte le basi dirette della classe `Ty` hanno costruttori semplici
+- tutte le basi dirette della classe *Ty* hanno costruttori semplici
 
 - le classi di tutti i membri dati non statici del tipo di classe hanno costruttori semplici
 

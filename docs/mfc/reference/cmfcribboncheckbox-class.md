@@ -1,5 +1,5 @@
 ---
-title: Classe CMFCRibbonCheckBox | Documenti Microsoft
+title: Classe CMFCRibbonCheckBox | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 444d42c7273e64a07966592b315660b92ddf8ee0
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 97b143311f6326e938e9ac61175b02c82d3c8c2c
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37042056"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39027180"
 ---
 # <a name="cmfcribboncheckbox-class"></a>Classe CMFCRibbonCheckBox
 La classe `CMFCRibbonCheckBox` implementa una casella di controllo che è possibile aggiungere a un pannello della barra multifunzione, a una barra di accesso rapido o a un menu di scelta rapida.  
@@ -77,7 +77,7 @@ class CMFCRibbonCheckBox : public CMFCRibbonButton
 ```  
 CMFCRibbonCheckBox (UINT nID, LPCTSTR lpszText)  
 ```  
-in cui *nID* è l'ID di comando casella di controllo e *lpszText* l'etichetta di testo della casella di controllo.  
+in cui *nID* è l'ID comando casella di controllo e *lpszText* l'etichetta di testo della casella di controllo.  
   
  È possibile aggiungere una casella di controllo a un pannello della barra multifunzione usando [cmfcribbonpanel:: Add](../../mfc/reference/cmfcribbonpanel-class.md#add).  
   
@@ -94,7 +94,7 @@ in cui *nID* è l'ID di comando casella di controllo e *lpszText* l'etichetta di
  **Intestazione:** afxribboncheckbox. h  
   
 ##  <a name="cmfcribboncheckbox"></a>  CMFCRibbonCheckBox::CMFCRibbonCheckBox  
- Costruttore di un oggetto di casella di controllo della barra multifunzione  
+ Costruttore di un oggetto casella di controllo della barra multifunzione  
   
 ```  
 CMFCRibbonCheckBox(
@@ -104,13 +104,13 @@ CMFCRibbonCheckBox(
   
 ### <a name="parameters"></a>Parametri  
  [in] *nID*  
- Specifica l'ID di comando.  
+ Specifica l'ID del comando.  
   
  [in] *lpszText*  
  Specifica l'etichetta di testo.  
   
 ### <a name="return-value"></a>Valore restituito  
- Costruisce un oggetto di casella di controllo della barra multifunzione.  
+ Costruisce un oggetto casella di controllo della barra multifunzione.  
   
 ### <a name="example"></a>Esempio  
  Nell'esempio seguente viene illustrato come costruire un oggetto del `CMFCRibbonCheckBox` classe.  
@@ -118,7 +118,7 @@ CMFCRibbonCheckBox(
  [!code-cpp[NVC_MFC_RibbonApp#17](../../mfc/reference/codesnippet/cpp/cmfcribboncheckbox-class_1.cpp)]  
   
 ##  <a name="getcompactsize"></a>  CMFCRibbonCheckBox::GetCompactSize  
- In caso di override, ottiene la dimensione compatta della casella di controllo.  
+ Quando sottoposto a override, ottiene la dimensione compatta della casella di controllo.  
   
 ```  
 virtual CSize GetCompactSize(CDC* pDC);
@@ -126,7 +126,7 @@ virtual CSize GetCompactSize(CDC* pDC);
   
 ### <a name="parameters"></a>Parametri  
  [in] *pDC*  
- Puntatore al `CDC` associati con la casella di controllo.  
+ Puntatore a CDC associati con la casella di controllo.  
   
 ### <a name="return-value"></a>Valore restituito  
  Restituisce un `CSize` oggetto che contiene la dimensione compatta della casella di controllo.  
@@ -143,10 +143,10 @@ virtual CSize GetIntermediateSize(CDC* pDC);
   
 ### <a name="parameters"></a>Parametri  
  [in] *pDC*  
- Puntatore al `CDC` associata a questa casella di controllo.  
+ Puntatore a CDC associato a questa casella di controllo.  
   
 ### <a name="return-value"></a>Valore restituito  
- Oggetto `CSize` oggetto contenente la dimensione intermedia della casella di controllo.  
+ Oggetto `CSize` oggetto che contiene la dimensione intermedia della casella di controllo.  
   
 ### <a name="remarks"></a>Note  
  Se non viene sottoposto a override, calcola la dimensione intermedia come dimensione della casella di controllo predefinito ( `AFX_CHECK_BOX_DEFAULT_SIZE`) oltre le dimensioni del testo, più i margini.  
@@ -160,10 +160,10 @@ virtual CSize GetRegularSize(CDC* pDC);
   
 ### <a name="parameters"></a>Parametri  
  [in] *pDC*  
- Puntatore al `CDC` oggetto associato a questa casella di controllo.  
+ Puntatore all'oggetto CDC associato a questa casella di controllo.  
   
 ### <a name="return-value"></a>Valore restituito  
- Restituisce un `CSize` oggetto che contiene le dimensioni normali della casella di controllo.  
+ Restituisce un `CSize` oggetto che contiene la dimensione regolare della casella di controllo.  
   
 ### <a name="remarks"></a>Note  
  Se non viene sottoposto a override, restituisce la dimensione intermedia della casella di controllo.  
@@ -176,7 +176,7 @@ virtual BOOL IsDrawTooltipImage() const;
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- Restituisce `TRUE` se è associata la casella di controllo, un'immagine di descrizione comando o `FALSE` in caso contrario.  
+ Restituisce TRUE se è presente un'immagine di descrizione comando associata con la casella di controllo oppure FALSE in caso contrario.  
   
 ### <a name="remarks"></a>Note  
   
@@ -189,7 +189,7 @@ virtual void OnDraw(CDC* pDC);
   
 ### <a name="parameters"></a>Parametri  
  [in] *pDC*  
- Puntatore al `CDC` in cui disegnare la casella di controllo.  
+ Puntatore a CDC in cui disegnare la casella di controllo.  
   
 ### <a name="remarks"></a>Note  
   
@@ -202,19 +202,19 @@ virtual BOOL OnDrawMenuImage(CDC*, CRect);
   
 ### <a name="parameters"></a>Parametri  
  [in] *CDC**  
- Puntatore al `CDC` associati con la casella di controllo.  
+ Puntatore a CDC associati con la casella di controllo.  
   
  [in] *CRect*  
  Oggetto `CRect` oggetto che specifica il rettangolo in cui disegnare l'immagine del menu.  
   
 ### <a name="return-value"></a>Valore restituito  
- Restituisce `TRUE` se è stato creato l'immagine, o `FALSE` in caso contrario.  
+ Restituisce TRUE se è stata disegnata l'immagine o FALSE in caso contrario.  
   
 ### <a name="remarks"></a>Note  
- Se non viene sottoposto a override, restituisce `FALSE`.  
+ Se non viene sottoposto a override, restituisce FALSE.  
   
 ##  <a name="ondrawonlist"></a>  CMFCRibbonCheckBox::OnDrawOnList  
- Chiamato dal framework per disegnare la casella di controllo in una casella di riepilogo di comandi.  
+ Chiamata eseguita dal framework per disegnare la casella di controllo in una casella di riepilogo di comandi.  
   
 ```  
 virtual void OnDrawOnList(
@@ -234,16 +234,16 @@ virtual void OnDrawOnList(
  Testo visualizzato.  
   
  [in] *nTextOffset*  
- La distanza in pixel, dal lato sinistro della casella di riepilogo per il testo visualizzato.  
+ Distanza, espressa in pixel, dal lato sinistro della casella di riepilogo per il testo visualizzato.  
   
  [in] *rect*  
  Il rettangolo di visualizzazione per la casella di controllo.  
   
  [in] *bIsSelected*  
- `TRUE` Se la casella di controllo è selezionata, o `FALSE` in caso contrario.  
+ TRUE se la casella di controllo è selezionata oppure FALSE in caso contrario.  
   
  [in] *bHighlighted*  
- `TRUE` Se la casella di controllo viene evidenziato, o `FALSE` in caso contrario.  
+ TRUE se la casella di controllo è evidenziato o FALSE in caso contrario.  
   
 ### <a name="remarks"></a>Note  
   
@@ -264,10 +264,10 @@ virtual BOOL SetACCData(
  I dati di accessibilità per la casella di controllo.  
   
 ### <a name="return-value"></a>Valore restituito  
- Restituisce sempre `TRUE`.  
+ Restituisce sempre TRUE.  
   
 ### <a name="remarks"></a>Note  
- Per impostazione predefinita questo metodo imposta i dati di accessibilità per la casella di controllo e sempre restituisce `TRUE`. Eseguire l'override di questo metodo per impostare i dati di accessibilità e restituire un valore che indica l'esito positivo o negativo.  
+ Per impostazione predefinita, questo metodo imposta i dati di accessibilità per la casella di controllo e restituisce sempre TRUE. Eseguire l'override di questo metodo per impostare i dati di accessibilità e restituire un valore che indica l'esito positivo o negativo.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Grafico delle gerarchie](../../mfc/hierarchy-chart.md)   

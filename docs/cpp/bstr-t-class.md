@@ -1,5 +1,5 @@
 ---
-title: classe bstr_t | Documenti Microsoft
+title: classe bstr_t | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,17 +18,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8bea9f863df08342f17419a16b14579fa6a257b8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 15ed9c32a204bdef726a5ace88d811d2eeeb2c53
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32415283"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39027248"
 ---
 # <a name="bstrt-class"></a>_bstr_t Class
 **Sezione specifica Microsoft**  
   
- Oggetto `_bstr_t` incapsulata dall'oggetto di [tipo di dati BSTR](http://msdn.microsoft.com/en-us/1b2d7d2c-47af-4389-a6b6-b01b7e915228). La classe gestisce l'allocazione e deallocazione tramite le chiamate di funzione per **SysAllocString** e **SysFreeString** e altri `BSTR` API quando appropriato. La classe `_bstr_t` utilizza il conteggio dei riferimenti per evitare un sovraccarico eccessivo.  
+ Oggetto `_bstr_t` incapsulato dall'oggetto di [tipo di dati BSTR](http://msdn.microsoft.com/1b2d7d2c-47af-4389-a6b6-b01b7e915228). La classe gestisce l'allocazione delle risorse e la deallocazione tramite chiamate di funzione a `SysAllocString` e `SysFreeString` e altri `BSTR` API quando appropriato. La classe `_bstr_t` utilizza il conteggio dei riferimenti per evitare un sovraccarico eccessivo.  
   
 ### <a name="construction"></a>Costruzione  
   
@@ -53,9 +53,9 @@ ms.locfileid: "32415283"
 |||  
 |-|-|  
 |[operator =](../cpp/bstr-t-operator-equal.md)|Assegna un nuovo valore a un oggetto `_bstr_t` esistente.|  
-|[+ = (operatore)](../cpp/bstr-t-operator-add-equal-plus.md)|Aggiunge caratteri alla fine dell'oggetto `_bstr_t`.|  
+|[operator + =](../cpp/bstr-t-operator-add-equal-plus.md)|Aggiunge caratteri alla fine dell'oggetto `_bstr_t`.|  
 |[operatore +](../cpp/bstr-t-operator-add-equal-plus.md)|Concatena due stringhe.|  
-|[operatore !](../cpp/bstr-t-operator-logical-not.md)|Controlla se incapsulato `BSTR` è un **NULL** stringa.|  
+|[operatore !](../cpp/bstr-t-operator-logical-not.md)|Controlla se incapsulato `BSTR` è una stringa NULL.|  
 |[operatore = =,! =, \<, >, \<=, > =](../cpp/bstr-t-relational-operators.md)|Confronta due oggetti `_bstr_t`.|  
 |[operatore wchar_t * &#124; char\*](../cpp/bstr-t-wchar-t-star-bstr-t-char-star.md)|Estrae i puntatori all'oggetto Unicode incapsulato o all'oggetto multibyte `BSTR`.|  
   
@@ -64,7 +64,7 @@ ms.locfileid: "32415283"
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** \<comutil.h >  
   
- **Lib:** comsuppw. lib o comsuppwd. lib (vedere [/Zc: wchar_t (wchar_t è il tipo nativo)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) per altre informazioni)  
+ **Lib:** comsuppw. lib o comsuppwd. lib (vedere [/Zc: wchar_t (wchar_t Is tipo nativo)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) per altre informazioni)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Classi di supporto COM del compilatore](../cpp/compiler-com-support-classes.md)

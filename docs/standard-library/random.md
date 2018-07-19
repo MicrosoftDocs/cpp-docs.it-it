@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bdfae58c03d18638ad44f844909d585b41d710cd
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 453c2eb186175b275defdc87dcfcdc79ff5f258a
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33862910"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38956505"
 ---
 # <a name="ltrandomgt"></a>&lt;random&gt;
 
@@ -49,7 +49,7 @@ Questi collegamenti permettono di passare alle sezioni principali dell'articolo:
 
 ### <a name="quick-tips"></a>Suggerimenti rapidi
 
-Ecco alcuni suggerimenti da tenere presenti quando si utilizza \<casuale >:
+Di seguito sono riportati alcuni suggerimenti da tenere presenti quando si usa \<random >:
 
 - Nella maggior parte dei casi, i generatori URNG producono bit non elaborati che devono essere modellati da distribuzioni. Un'eccezione è costituita da [std::shuffle()](../standard-library/algorithm-functions.md#shuffle), poiché usa direttamente un generatore URNG.
 
@@ -59,7 +59,7 @@ Ecco alcuni suggerimenti da tenere presenti quando si utilizza \<casuale >:
 
 - L'associazione più utile per la maggior parte delle applicazioni è costituita dal motore `mt19937` con `uniform_int_distribution`, come mostrato nell'[esempio di codice](#code) più avanti in questo articolo.
 
-Sono disponibili molte opzioni selezionabili nel \<casuale > intestazione e uno di essi è preferibile rispetto alla funzione Runtime C obsoleta `rand()`. Per informazioni su problemi `rand()` e in che modo \<casuale > li gestisce, vedere [in questo video](http://go.microsoft.com/fwlink/p/?linkid=397615).
+Esistono diverse opzioni disponibili dal \<random > intestazione e uno di essi è preferibile alla funzione Runtime C obsoleta `rand()`. Per informazioni sui problemi con relativi `rand()` e in che modo \<random > li gestisce, vedere [questo video](http://go.microsoft.com/fwlink/p/?linkid=397615).
 
 ## <a name="code"></a> Esempi
 
@@ -228,7 +228,7 @@ I generatori URNG sono spesso descritti tramite e proprietà seguenti:
 
 3. **Qualità**: livello di casualità effettiva della sequenza generata. Questa proprietà è definita spesso "*casualità*".
 
-Le sezioni seguenti elencano i generatori di numeri casuali (generatori Urng) forniti nel \<casuale > intestazione.
+Le sezioni seguenti elencano i generatori di numeri casuali (generatori Urng) forniti nel \<random > dell'intestazione.
 
 ####  <a name="rd"></a> Generatore non deterministico
 
@@ -258,13 +258,13 @@ Per la creazione di istanze di motori e adattatori del motore. Per altre informa
 - `mt19937_64` Motore Mersenne Twister a 64 bit (Matsumoto e Nishimura, 2000).
  `typedef mersenne_twister_engine<unsigned long long, 64, 312, 156,      31, 0xb5026f5aa96619e9ULL,      29, 0x5555555555555555ULL,      17, 0x71d67fffeda60000ULL,      37, 0xfff7eee000000000ULL,      43, 6364136223846793005ULL> mt19937_64;`
 
-- `ranlux24` motore RANLUX a 24 bit (Martin Lüscher e Fred James, 1994).
+- `ranlux24` motore RANLUX 24 bit (Martin Lüscher e Fred James, 1994).
  `typedef discard_block_engine<ranlux24_base, 223, 23> ranlux24;`
 
 - `ranlux24_base` Usato come base per `ranlux24`.
  `typedef subtract_with_carry_engine<unsigned int, 24, 10, 24> ranlux24_base;`
 
-- `ranlux48` motore RANLUX a 48 bit (Martin Lüscher e Fred James, 1994).
+- `ranlux48` motore RANLUX 48 bit (Martin Lüscher e Fred James, 1994).
  `typedef discard_block_engine<ranlux48_base, 389, 11> ranlux48;`
 
 - `ranlux48_base` Usato come base per `ranlux48`.
@@ -294,7 +294,7 @@ Gli adattatori del motore sono modelli che adattano altri motori (di base). In g
 
 ###  <a name="distributions"></a> Distribuzioni di numeri casuali
 
-Le sezioni seguenti elencano le distribuzioni disponibili nel \<casuale > intestazione. Le distribuzioni sono un meccanismo post-elaborazione che usano in genere l'output del generatore URNG come input e distribuiscono l'output in base a una funzione di densità di probabilità statistica definita. Per altre informazioni, vedere la sezione [Motori e distribuzioni](#engdist).
+Le sezioni seguenti elencano le distribuzioni disponibili nel \<random > dell'intestazione. Le distribuzioni sono un meccanismo post-elaborazione che usano in genere l'output del generatore URNG come input e distribuiscono l'output in base a una funzione di densità di probabilità statistica definita. Per altre informazioni, vedere la sezione [Motori e distribuzioni](#engdist).
 
 #### <a name="uniform-distributions"></a>Distribuzioni uniformi
 
@@ -310,7 +310,7 @@ Le sezioni seguenti elencano le distribuzioni disponibili nel \<casuale > intest
 
 |||
 |-|-|
-|[Classe bernoulli_distribution](../standard-library/bernoulli-distribution-class.md)|Produce una distribuzione di Bernoulli dei valori `bool`.|
+|[Classe bernoulli_distribution](../standard-library/bernoulli-distribution-class.md)|Produce una distribuzione di Bernoulli **bool** valori.|
 |[Classe binomial_distribution](../standard-library/binomial-distribution-class.md)|Produce una distribuzione binomiale di valori di tipo Integer.|
 |[Classe geometric_distribution](../standard-library/geometric-distribution-class.md)|Produce una distribuzione geometrica di valori di tipo Integer.|
 |[Classe negative_binomial_distribution](../standard-library/negative-binomial-distribution-class.md)|Produce una distribuzione binomiale negativa di valori di tipo Integer.|
@@ -354,7 +354,7 @@ Le sezioni seguenti elencano le distribuzioni disponibili nel \<casuale > intest
 
 ### <a name="utility-functions"></a>Funzioni di utilità
 
-In questa sezione sono elencate le funzioni di utilità generali disponibili nel \<casuale > intestazione.
+In questa sezione elenca le funzioni di utilità generali disponibili nel \<random > dell'intestazione.
 
 |||
 |-|-|
@@ -362,7 +362,7 @@ In questa sezione sono elencate le funzioni di utilità generali disponibili nel
 
 ### <a name="operators"></a>Operatori
 
-In questa sezione vengono elencati gli operatori forniti nel \<casuale > intestazione.
+In questa sezione vengono elencati gli operatori forniti nel \<casuale > dell'intestazione.
 
 |||
 |-|-|
@@ -373,13 +373,13 @@ In questa sezione vengono elencati gli operatori forniti nel \<casuale > intesta
 
 ## <a name="engdist"></a> Motori e distribuzioni
 
-Vedere le sezioni seguenti per informazioni su ognuna di queste categorie dei modelli di classe definite in \<casuale >. Entrambe le categorie di classi di modelli accettano un tipo come argomento e usano i nomi di parametri di modello condivisi per descrivere le proprietà del tipo consentite come tipo di argomento effettivo, come indicato di seguito:
+Vedere le sezioni seguenti per informazioni su ognuna di queste categorie di classe modello definite in \<random >. Entrambe le categorie di classi di modelli accettano un tipo come argomento e usano i nomi di parametri di modello condivisi per descrivere le proprietà del tipo consentite come tipo di argomento effettivo, come indicato di seguito:
 
-- `IntType` indica un `short`, `int`, `long`, `long long`, `unsigned short`, `unsigned int`, `unsigned long` o `unsigned long long`.
+- `IntType` indica un **brevi**, **int**, **long**, **long long**, **short senza segno**,  **int senza segno**, **long senza segno**, o **long long senza segno**.
 
-- `UIntType` indica `unsigned short`, `unsigned int`, `unsigned long` o `unsigned long long`.
+- `UIntType` indica **short senza segno**, **unsigned int**, **long senza segno**, oppure **long long senza segno**.
 
-- `RealType` indica un `float`, `double` o `long double`.
+- `RealType` indica un **float**, **double**, o **long double**.
 
 ### <a name="engines"></a>Motori
 

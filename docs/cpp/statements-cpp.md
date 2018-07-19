@@ -1,5 +1,5 @@
 ---
-title: Istruzioni (C++) | Documenti Microsoft
+title: Istruzioni (C++) | Microsoft Docs
 ms.custom: index-page
 ms.date: 11/04/2016
 ms.technology:
@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ab4b9d6a294e509a6a197866e9ef775063e3da7b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a3d3c8f5d9f08c4dce370d49dc5a43bbc45b479e
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32422781"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39025757"
 ---
 # <a name="statements-c"></a>Istruzioni (C++)
 Le istruzioni di C++ sono gli elementi di un programma che controllano l'ordine e il modo in cui gli oggetti vengono modificati. Contenuto della sezione  
@@ -40,11 +40,11 @@ Le istruzioni di C++ sono gli elementi di un programma che controllano l'ordine 
   
     -   [Istruzioni di iterazione](../cpp/iteration-statements-cpp.md). Queste istruzioni consentono l'esecuzione ripetuta di un blocco di codice finché non si verifica un caso specifico di terminazione.  
   
-    -   [Istruzioni di spostamento](../cpp/jump-statements-cpp.md). Queste istruzioni trasferiscono immediatamente il controllo a un'altra posizione nella funzione o restituiscono il controllo dalla funzione.  
+    -   [Istruzioni di salto](../cpp/jump-statements-cpp.md). Queste istruzioni trasferiscono immediatamente il controllo a un'altra posizione nella funzione o restituiscono il controllo dalla funzione.  
   
-    -   [Istruzioni di dichiarazione](http://msdn.microsoft.com/en-us/14538558-356f-450e-9e1e-3cd62ba952b9). Le dichiarazioni introducono un nome in un programma. ([Dichiarazioni e definizioni](declarations-and-definitions-cpp.md) fornisce ulteriori informazioni sulle dichiarazioni.)  
+    -   [Le istruzioni di dichiarazione](http://msdn.microsoft.com/14538558-356f-450e-9e1e-3cd62ba952b9). Le dichiarazioni introducono un nome in un programma. ([Dichiarazioni e definizioni](declarations-and-definitions-cpp.md) fornisce maggiori informazioni sulle dichiarazioni.)  
   
- Per informazioni sulle istruzioni di gestione delle eccezioni vedere [eccezioni](../cpp/exception-handling-in-visual-cpp.md).  
+ Per informazioni sulle istruzioni di gestione delle eccezioni, vedere [gestione delle eccezioni](../cpp/exception-handling-in-visual-cpp.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Riferimenti al linguaggio C++](../cpp/cpp-language-reference.md)

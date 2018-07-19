@@ -1,5 +1,5 @@
 ---
-title: Creazione di un'applicazione MFC | Documenti Microsoft
+title: Creazione di un'applicazione MFC | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5b30b1e0f5e8031609845c78da7558e8b3207862
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d5907006fcff607ad91f9cf579e5bf022c02b8f0
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368813"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39026991"
 ---
 # <a name="creating-an-mfc-application"></a>Creazione di un'applicazione MFC
 Un'applicazione MFC rappresenta un'applicazione eseguibile per Windows basata sulla libreria MFC (Microsoft Foundation Class). Il modo più semplice per creare un'applicazione MFC consiste nell'utilizzo della Creazione guidata applicazione MFC.  
@@ -29,7 +29,7 @@ Un'applicazione MFC rappresenta un'applicazione eseguibile per Windows basata su
 > [!IMPORTANT]
 >  I progetti MFC non sono supportati nelle versioni di Visual Studio Express Edition.  
   
- File eseguibili MFC in genere suddivisi in cinque tipi: applicazioni Windows standard, finestre di dialogo, applicazioni basate su form, le applicazioni di tipo Esplora risorse e applicazioni di tipo browser Web. Per altre informazioni, vedere:  
+ File eseguibili MFC in genere rientrano in cinque tipi: applicazioni di Windows standard, finestre di dialogo, applicazioni basate su form, le applicazioni di tipo Esplora risorse e applicazioni di tipo browser Web. Per altre informazioni, vedere:  
   
 -   [Utilizzo delle classi per la scrittura di applicazioni di Windows](../../mfc/using-the-classes-to-write-applications-for-windows.md)  
   
@@ -45,22 +45,22 @@ Un'applicazione MFC rappresenta un'applicazione eseguibile per Windows basata su
   
 ### <a name="to-create-an-mfc-application-using-the-mfc-application-wizard"></a>Per creare un'applicazione MFC mediante la Creazione guidata applicazione MFC  
   
-1.  Seguire le istruzioni dell'argomento della Guida [creazione di un progetto con una creazione guidata applicazione di Visual C++](../../ide/creating-desktop-projects-by-using-application-wizards.md).  
+1.  Attenersi alla procedura illustrata nell'argomento della Guida [Creazione di un progetto con una creazione guidata applicazione Visual C++](../../ide/creating-desktop-projects-by-using-application-wizards.md).  
   
-2.  Nel **nuovo progetto** nella finestra di dialogo **applicazione MFC** nel riquadro dei modelli per aprire la procedura guidata.  
+2.  Nel **nuovo progetto** finestra di dialogo **applicazione MFC** nel riquadro dei modelli per aprire la procedura guidata.  
   
-3.  Definire le impostazioni dell'applicazione di [Creazione guidata applicazione MFC](../../mfc/reference/mfc-application-wizard.md).  
+3.  Definire le impostazioni dell'applicazione usando il [Creazione guidata applicazione MFC](../../mfc/reference/mfc-application-wizard.md).  
   
     > [!NOTE]
     >  Saltare questo passaggio per mantenere le impostazioni predefinite della procedura guidata.  
   
 4.  Fare clic su **fine** per chiudere la procedura guidata e aprire il nuovo progetto nell'ambiente di sviluppo.  
   
- Una volta creato il progetto, è possibile visualizzare i file creati in **Esplora**. Per altre informazioni sui file creati per il progetto con la procedura guidata, vedere il file ReadMe.txt generato dal progetto. Per ulteriori informazioni sui tipi di file, vedere [tipi di File creati per progetti di Visual C++](../../ide/file-types-created-for-visual-cpp-projects.md).  
+ Dopo aver creato il progetto, è possibile visualizzare i file creati nella **Esplora soluzioni**. Per altre informazioni sui file creati per il progetto con la procedura guidata, vedere il file ReadMe.txt generato dal progetto. Per altre informazioni sui tipi di file, vedere [tipi di File creati per i progetti Visual C++](../../ide/file-types-created-for-visual-cpp-projects.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Preparazione al debug: Applicazioni Windows Visual C++](http://msdn.microsoft.com/en-us/a8bc54de-41a3-464d-9a12-db9bdcbc1ad5)   
+ [Preparazione al debug: Applicazioni di Windows di Visual C++](http://msdn.microsoft.com/a8bc54de-41a3-464d-9a12-db9bdcbc1ad5)   
  [Aggiunta di funzionalità con creazioni guidate codice](../../ide/adding-functionality-with-code-wizards-cpp.md)   
  [Pagine delle proprietà](../../ide/property-pages-visual-cpp.md)   
- [Distribuzione di applicazioni](http://msdn.microsoft.com/en-us/4ff8881d-0daf-47e7-bfe7-774c625031b4)
+ [Distribuzione di applicazioni](http://msdn.microsoft.com/4ff8881d-0daf-47e7-bfe7-774c625031b4)
 

@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fb046dfbc01a4a65a565d8d9aa6b012bbde1d9e6
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b14733ea906fa47e7339c23efb8942763e928828
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33853801"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38956309"
 ---
 # <a name="removecv-class"></a>Classe remove_cv
 
@@ -40,11 +40,11 @@ using remove_cv_t = typename remove_cv<T>::type;
 
 ### <a name="parameters"></a>Parametri
 
-`T` Tipo da modificare.
+*T* tipo da modificare.
 
 ## <a name="remarks"></a>Note
 
-Un'istanza di `remove_cv<T>` contiene un tipo modificato che è `T1` quando `T` è nel formato `const T1`, `volatile T1` o `const volatile T1`; in caso contrario, `T`.
+Un'istanza di `remove_cv<T>` contiene un tipo modificato che è `T1` quando *T* è nel formato `const T1`, `volatile T1`, oppure `const volatile T1`; in caso contrario *T*.
 
 ## <a name="example"></a>Esempio
 

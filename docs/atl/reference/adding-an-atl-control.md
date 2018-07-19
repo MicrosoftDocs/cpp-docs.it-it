@@ -1,5 +1,5 @@
 ---
-title: Aggiunta di un controllo ATL | Documenti Microsoft
+title: Aggiunta di un controllo ATL | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,25 +15,25 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 136b0fe6fea5ef95bd1670457f472a1fcc292bf0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fab4e01cafa314f259c22ce61ca4e0c4754a874a
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32356935"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954682"
 ---
 # <a name="adding-an-atl-control"></a>Aggiunta di un controllo ATL
-Utilizzare questa procedura guidata per aggiungere un oggetto dell'interfaccia utente a un progetto che supporta le interfacce per tutti i potenziali contenitori. Per supportare queste interfacce, il progetto deve avere stato creato come un'applicazione ATL o di un'applicazione MFC con supporto ATL. È possibile utilizzare il [Creazione guidata progetto ATL](../../atl/reference/atl-project-wizard.md) per creare un'applicazione ATL o [aggiungere un oggetto ATL all'applicazione MFC](../../mfc/reference/adding-atl-support-to-your-mfc-project.md) per implementare il supporto ATL per un'applicazione MFC.  
+Utilizzare questa procedura guidata per aggiungere un oggetto di interfaccia utente a un progetto che supporta le interfacce per tutti i contenitori potenziali. Per supportare queste interfacce, il progetto deve avere stato creato come un'applicazione ATL o come un'applicazione MFC che contiene il supporto per ATL. È possibile usare la [Creazione guidata progetto ATL](../../atl/reference/atl-project-wizard.md) per creare un'applicazione ATL o [aggiungere un oggetto ATL all'applicazione MFC](../../mfc/reference/adding-atl-support-to-your-mfc-project.md) per implementare il supporto ATL per un'applicazione MFC.  
   
 ### <a name="to-add-an-atl-control-to-your-project"></a>Per aggiungere un controllo ATL al progetto  
   
-1.  In entrambi **Esplora** o [Visualizzazione classi](http://msdn.microsoft.com/en-us/8d7430a9-3e33-454c-a9e1-a85e3d2db925), fare doppio clic sul nome del progetto a cui si desidera aggiungere l'oggetto semplice ATL.  
+1.  In uno **Esplora soluzioni** oppure [Visualizzazione classi](/visualstudio/ide/viewing-the-structure-of-code), fare doppio clic il nome del progetto a cui si desidera aggiungere l'oggetto semplice ATL.  
   
-2.  Fare clic su **Aggiungi** dal menu di scelta rapida e quindi fare clic su **Aggiungi classe**.  
+2.  Fare clic su **Add** dal menu di scelta rapida e quindi fare clic su **Aggiungi classe**.  
   
-3.  Nel [Aggiungi classe](../../ide/add-class-dialog-box.md) la finestra di dialogo, nel riquadro dei modelli, fare clic su **controllo ATL**, quindi fare clic su **Aggiungi** per visualizzare il [Creazione guidata controllo ATL](../../atl/reference/atl-control-wizard.md).  
+3.  Nel [Aggiungi classe](../../ide/add-class-dialog-box.md) finestra di dialogo, nel riquadro dei modelli, fare clic su **del controllo ATL**e quindi fare clic su **Add** per visualizzare il [Creazione guidata controllo ATL](../../atl/reference/atl-control-wizard.md).  
   
- Utilizzo di **Creazione guidata controllo ATL**, è possibile creare uno dei tre tipi di controlli:  
+ Usando il **Creazione guidata controllo ATL**, è possibile creare uno dei tre tipi di controlli:  
   
 -   Un controllo standard  
   
@@ -41,10 +41,9 @@ Utilizzare questa procedura guidata per aggiungere un oggetto dell'interfaccia u
   
 -   Un controllo DHTML  
   
- Inoltre, è possibile ridurre le dimensioni del controllo e rimuovere le interfacce non utilizzate dalla maggior parte dei contenitori selezionando **controllo minimo** sul **opzioni** pagina della procedura guidata.  
+ Inoltre, è possibile ridurre le dimensioni del controllo e rimuovere le interfacce non utilizzate dalla maggior parte dei contenitori selezionando **controllo minimo** nel **opzioni** pagina della procedura guidata.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Aggiunta di funzionalità per il controllo composito](../../atl/adding-functionality-to-the-composite-control.md)   
- [Nozioni di base di oggetti COM ATL](../../atl/fundamentals-of-atl-com-objects.md)   
- [Esempio ATLFire](http://msdn.microsoft.com/en-us/5b2649f1-f45b-4cfb-9c4b-4d9459c26b09)
+ [Aggiunta di funzionalità al controllo composito](../../atl/adding-functionality-to-the-composite-control.md)   
+ [Nozioni fondamentali sugli oggetti COM ATL](../../atl/fundamentals-of-atl-com-objects.md)   
 

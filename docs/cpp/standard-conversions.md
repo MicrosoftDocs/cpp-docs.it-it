@@ -1,5 +1,5 @@
 ---
-title: Conversioni standard | Documenti Microsoft
+title: Conversioni standard | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 050f974fe7e74077b1a8dab5caf5160d518ca8b1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e08daba1e80523e7992f52ec353826bb53417682
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39028359"
 ---
 # <a name="standard-conversions"></a>Conversioni standard
-Il linguaggio C++ definisce le conversioni tra i relativi tipi fondamentali. Inoltre, definisce le conversioni per i tipi derivati puntatore, riferimento e puntatore a membro. Queste conversioni sono definite "conversioni standard". (Per ulteriori informazioni sui tipi, tipi standard e tipi derivati, vedere [tipi](http://msdn.microsoft.com/en-us/6882ee83-ea32-4373-8d57-c3efbbc15af0).)  
+Il linguaggio C++ definisce le conversioni tra i relativi tipi fondamentali. Inoltre, definisce le conversioni per i tipi derivati puntatore, riferimento e puntatore a membro. Queste conversioni sono definite "conversioni standard". (Per altre informazioni sui tipi, tipi standard e i tipi derivati, vedere [tipi](http://msdn.microsoft.com/6882ee83-ea32-4373-8d57-c3efbbc15af0).)  
   
  In questa sezione vengono descritte le conversioni standard seguenti:  
   
@@ -44,11 +45,11 @@ Il linguaggio C++ definisce le conversioni tra i relativi tipi fondamentali. Ino
 -   Conversioni puntatore a membro  
   
     > [!NOTE]
-    >  I tipi definiti dall'utente possono specificare le proprie conversioni. Viene descritta la conversione di tipi definiti dall'utente in [costruttori](../cpp/constructors-cpp.md) e [conversioni](../cpp/user-defined-type-conversions-cpp.md).  
+    >  I tipi definiti dall'utente possono specificare le proprie conversioni. Conversione di tipi definiti dall'utente verrà trattata negli [costruttori](../cpp/constructors-cpp.md) e [conversioni](../cpp/user-defined-type-conversions-cpp.md).  
   
- Il codice seguente genera conversioni (in questo esempio, promozioni a intero):  
+Il codice seguente genera conversioni (in questo esempio, promozioni a intero):  
   
-```  
+```cpp 
 long  long_num1, long_num2;  
 int   int_num;  
   
@@ -59,20 +60,20 @@ long_num1 = int_num;
 long_num2 = int_num * long_num2;  
 ```  
   
- Il risultato di una conversione è un l-value solo se genera un tipo di riferimento. Ad esempio, una conversione definita dall'utente dichiarata come `operator int&()` restituisce un riferimento ed è un l-value. Tuttavia, una conversione è dichiarato come `operator int()`restituisce un oggetto e non è un l-value.  
+ Il risultato di una conversione è un l-value solo se genera un tipo di riferimento. Ad esempio, una conversione definita dall'utente dichiarata come `operator int&()` restituisce un riferimento ed è un l-value. Tuttavia, una conversione dichiarata come `operator int()`restituisce un oggetto e non è un l-value.  
   
 ## <a name="integral-promotions"></a>Promozioni a intero  
  Gli oggetti di un tipo integrale possono essere convertiti in un tipo integrale più ampio, ovvero in un tipo in grado di rappresentare un più ampio set di valori. Tale conversione widening viene denominata "promozione a intero." Con la promozione a intero, è possibile usare quanto segue in un'espressione ogni qual volta sia possibile usare un altro tipo integrale:  
   
--   Oggetti, valori letterali e costanti di tipo `char` e `short int`  
+-   Gli oggetti, valori letterali e costanti di tipo **char** e **short int**  
   
 -   Tipi di enumerazione  
   
--   `int` campi di bit  
+-   **int** campi di bit  
   
 -   Enumeratori  
   
- Le promozioni di C++ sono a "mantenimento del valore." Ciò significa che si ha la certezza che il valore, in seguito alla promozione, sia identico al valore antecedente la promozione. Nelle promozioni a mantenimento del valore, gli oggetti di tipi integrali più brevi (come i campi di bit o gli oggetti di tipo `char`) vengono promossi al tipo `int`, se `int` è in grado di rappresentare la gamma completa del tipo di origine. Se `int` non è in grado rappresentare la gamma completa dei valori, l'oggetto viene promosso al tipo `unsigned int`. Sebbene questa strategia sia identica a quella usata da ANSI C, le conversioni a mantenimento del valore non mantengono il "segno" dell'oggetto.  
+ Le promozioni di C++ sono a "mantenimento del valore." Ciò significa che si ha la certezza che il valore, in seguito alla promozione, sia identico al valore antecedente la promozione. Nelle promozioni a mantenimento del valore, gli oggetti di tipi integrali più brevi (ad esempio i campi di bit o gli oggetti di tipo **char**) vengono promossi al tipo **int** se **int** può rappresentare la versione completa intervallo del tipo originale. Se **int** non può rappresentare l'intera gamma di valori, quindi l'oggetto viene promosso al tipo **unsigned int**. Sebbene questa strategia sia identica a quella usata da ANSI C, le conversioni a mantenimento del valore non mantengono il "segno" dell'oggetto.  
   
  Le promozioni a mantenimento del valore e le promozioni che mantengono il segno producono, in genere, gli stessi risultati. Possono, però, produrre risultati diversi qualora l'oggetto promosso sia uno dei seguenti:  
   
@@ -84,16 +85,16 @@ long_num2 = int_num * long_num2;
   
      Questi operatori trattano le quantità con segno e quelle senza segno in maniera differente, quando si esegue un'operazione di spostamento. Nel caso delle quantità con segno, spostare una quantità a destra comporta la propagazione del bit di segno verso le posizioni di bit vuote. Nel caso delle quantità senza segno, le posizioni di bit vuote vengono riempite con zero.  
   
--   Argomento in una funzione in overload o operando di un operatore di overload che dipende dal segno del tipo dello stesso operando per corrispondere all'argomento. (Vedere [operatori di overload](../cpp/operator-overloading.md) per ulteriori informazioni sulla definizione di operatori di overload.)  
+-   Argomento in una funzione in overload o operando di un operatore di overload che dipende dal segno del tipo dello stesso operando per corrispondere all'argomento. (Vedere [operatori di overload](../cpp/operator-overloading.md) per altre informazioni sulla definizione di operatori di overload.)  
   
 ## <a name="integral-conversions"></a>Conversioni integrali  
- Le conversioni integrali vengono eseguite tra i tipi integrali. I tipi integrali sono `char`, `int`, e **lungo** (e **breve**, **firmato**, e `unsigned` versioni di questi tipi).  
+ Le conversioni integrali vengono eseguite tra i tipi integrali. I tipi integrali sono **char**, **int**, e **long** (e il **breve**, **firmato**e **senza segno** versioni di questi tipi).  
   
- **Da Signed a unsigned**  
+ **Signed a tipo unsigned**  
   
  Gli oggetti di tipi integrali con segno possono essere convertiti nei corrispondenti tipi senza segno. Quando si verificano queste conversioni, lo schema di bit effettivo non cambia; cambia, tuttavia, l'interpretazione dei dati. Si consideri il codice seguente:  
   
-```  
+```cpp 
   
 #include <iostream>  
   
@@ -109,7 +110,7 @@ int main()
   
 ```  
   
- Nell'esempio precedente uno tipo `signed short`, `i`, viene definito e inizializzato con un numero negativo. L'espressione `(u = i)` causa `i` da convertire in un **unsigned short** prima dell'assegnazione a `u`.  
+ Nell'esempio precedente, una **short con segno**, `i`, viene definito e inizializzato con un numero negativo. L'espressione `(u = i)` provoca `i` da convertire in un **short senza segno** prima dell'assegnazione a `u`.  
   
  **Unsigned a signed**  
   
@@ -129,18 +130,18 @@ int main()
 //Output: -3  
 ```  
   
- Nell'esempio precedente, `u` è un `unsigned` **breve** oggetto integrale che deve essere convertito in una quantità con segno per valutare l'espressione `(i = u)`. Poiché il relativo valore non può essere rappresentato correttamente in un oggetto `signed short`, i dati vengono interpretati erroneamente come illustrato.  
+ Nell'esempio precedente, `u` è un **short senza segno** oggetto integrale che deve essere convertito in una quantità con segno per valutare l'espressione `(i = u)`. Perché il relativo valore non può essere rappresentato correttamente in un **short con segno**, i dati vengono interpretati erroneamente come illustrato.  
   
 ## <a name="floating-point-conversions"></a>Conversioni del punto a virgola mobile  
- Un oggetto di un tipo a virgola mobile può essere convertito in modo sicuro in un tipo a virgola mobile più preciso, senza che la conversione causi una perdita di significato. Ad esempio, le conversioni da **float** a **doppie** o da **doppie** a `long double` sono sicure e il valore viene modificato.  
+ Un oggetto di un tipo a virgola mobile può essere convertito in modo sicuro in un tipo a virgola mobile più preciso, senza che la conversione causi una perdita di significato. Ad esempio, le conversioni da **float** al **double** o da **double** a **long double** sono sicure e il valore rimane invariato.  
   
- Un oggetto di un tipo a virgola mobile può essere inoltre convertito in un tipo meno preciso, se è compreso in un intervallo rappresentabile mediante tale tipo (Vedere [limiti mobile](../cpp/floating-limits.md) per gli intervalli di tipo a virgola mobile.) Se il valore originale non può essere rappresentato in modo preciso, può essere convertito nel successivo valore più alto o più basso rappresentabile. Se tale valore non esiste, il risultato non è definito. Si consideri l'esempio seguente:  
+ Un oggetto di un tipo a virgola mobile può essere inoltre convertito in un tipo meno preciso, se è compreso in un intervallo rappresentabile mediante tale tipo (Vedere [mobile limiti](../cpp/floating-limits.md) per gli intervalli di tipo a virgola mobile.) Se il valore originale non può essere rappresentato in modo preciso, può essere convertito nel successivo valore più alto o più basso rappresentabile. Se tale valore non esiste, il risultato non è definito. Si consideri l'esempio seguente:  
   
 ```cpp
 cout << (float)1E300 << endl;  
 ```  
   
- Il valore massimo rappresentabile dal tipo **float** è 3.402823466 e38, un numero molto inferiore rispetto a 1E300. Pertanto, il numero viene convertito verso l'infinito e il risultato è "inf".  
+ Il valore massimo rappresentabile dal tipo **float** è 3.402823466E38, un numero molto inferiore rispetto a 1E300. Pertanto, il numero viene convertito a infinito e il risultato è "inf".  
   
 ## <a name="conversions-between-integral-and-floating-point-types"></a>Conversioni tra tipi integrali e tipi punto a virgola mobile  
  Alcune espressioni possono causare la conversione degli oggetti di tipo a virgola mobile in tipi integrali o viceversa. Quando un oggetto di tipo integrale viene convertito in un tipo a virgola mobile e il valore originale non può essere rappresentato esattamente, il risultato è dato dal successivo valore più alto o più basso rappresentabile.  
@@ -148,20 +149,20 @@ cout << (float)1E300 << endl;
  Quando un oggetto di tipo a virgola mobile viene convertito nel tipo integrale, la parte frazionaria viene troncata. Nel processo di conversione non viene eseguito alcun arrotondamento. Il troncamento indica che un numero come 1,3 viene convertito in 1 e-1.3 viene convertito in -1.  
   
 ## <a name="arithmetic-conversions"></a>Conversioni aritmetiche  
- Molti operatori binari (illustrati in [espressioni con operatori binari](../cpp/expressions-with-binary-operators.md)) causano conversioni degli operandi e restituiscono risultati nello stesso modo. La modalità in cui questi operatori causano le conversioni è denominata "conversioni aritmetiche consuete." Le conversioni aritmetiche degli operandi di tipi nativi differenti vengono eseguite come illustrato nella tabella seguente. I tipi typedef si comportano in base ai tipi nativi sottostanti.  
+ Molti operatori binari (illustrati in [espressioni con operatori binari](../cpp/expressions-with-binary-operators.md)) causano conversioni degli operandi e restituiscono i risultati allo stesso modo. La modalità in cui questi operatori causano le conversioni è denominata "conversioni aritmetiche consuete." Le conversioni aritmetiche degli operandi di tipi nativi differenti vengono eseguite come illustrato nella tabella seguente. I tipi typedef si comportano in base ai tipi nativi sottostanti.  
   
 ### <a name="conditions-for-type-conversion"></a>Condizioni per la conversione di tipi  
   
 |Condizioni soddisfatte|Conversione|  
 |--------------------|----------------|  
 |Degli operandi è di tipo **long double**.|Altro operando verrà convertito nel tipo **long double**.|  
-|Condizione precedente non è soddisfatta e degli operandi è di tipo **double**.|Altro operando verrà convertito nel tipo **double**.|  
-|Le condizioni precedenti non soddisfatte e degli operandi è di tipo **float**.|Altro operando verrà convertito nel tipo **float**.|  
-|Le condizioni precedenti non sono soddisfatte (nessuno degli operandi sono di tipo a virgola mobile).|Le promozioni integrali vengono eseguite sugli operandi come indicato di seguito:<br /><br /> -Se degli operandi è di tipo `unsigned` **lungo**, l'altro operando verrà convertito nel tipo `unsigned long`.<br />-Se condizione precedente non è soddisfatta e degli operandi è di tipo **lungo** e l'altro di tipo `unsigned` `int`, entrambi gli operandi verranno convertiti nel tipo `unsigned long`.<br />-Se le due condizioni precedenti non vengono soddisfatte e degli operandi è di tipo **lungo**, l'altro operando verrà convertito nel tipo **lungo**.<br />-Se le tre condizioni precedenti non vengono soddisfatte e degli operandi è di tipo `unsigned int`, l'altro operando verrà convertito nel tipo `unsigned int`.<br />-Se nessuna delle condizioni precedenti viene soddisfatta, entrambi gli operandi vengono convertiti nel tipo `int`.|  
+|Precedente condizione non soddisfatta e degli operandi è di tipo **doppie**.|Altro operando verrà convertito nel tipo **doppie**.|  
+|Precedente le condizioni non soddisfatte e degli operandi è di tipo **float**.|Altro operando verrà convertito nel tipo **float**.|  
+|Le condizioni precedenti non sono soddisfatte (nessuno degli operandi sono di tipo a virgola mobile).|Le promozioni integrali vengono eseguite sugli operandi come indicato di seguito:<br /><br /> -Se degli operandi è di tipo **long senza segno**, l'altro operando verrà convertito nel tipo **long senza segno**.<br />-Se condizione precedente non soddisfatte e degli operandi è di tipo **lungo** e l'altro di tipo **unsigned int**, entrambi gli operandi verranno convertiti nel tipo **long senza segno**.<br />-Se le due condizioni precedenti non vengono soddisfatte e degli operandi è di tipo **lungo**, l'altro operando verrà convertito nel tipo **lungo**.<br />-Se le tre condizioni precedenti non vengono soddisfatte e degli operandi è di tipo **int senza segno**, l'altro operando verrà convertito nel tipo **unsigned int**.<br />-Se nessuna delle condizioni precedenti viene soddisfatta, entrambi gli operandi verranno convertiti nel tipo **int**.|  
   
  Il codice seguente illustra le regole di conversione descritte nella tabella:  
   
-```  
+```cpp 
   
 double dVal;  
 float fVal;  
@@ -179,9 +180,9 @@ int main() {
 }  
 ```  
   
- La prima istruzione nell'esempio precedente mostra una moltiplicazione di due tipi integrali, `iVal` e `ulVal`. La condizione soddisfatta è che nessuno dei due operandi è di tipo a virgola mobile e che uno degli operandi è di tipo `unsigned int`. Quindi, l'altro operando `iVal`, viene convertito nel tipo `unsigned int`. Il risultato viene assegnato a `dVal`. La condizione soddisfatta è che un operando è di tipo **doppie**; pertanto, il `unsigned int` risultato della moltiplicazione viene convertito nel tipo **double**.  
+ La prima istruzione nell'esempio precedente mostra una moltiplicazione di due tipi integrali, `iVal` e `ulVal`. La condizione soddisfatta è che nessuno dei due operandi sono di tipo a virgola mobile e uno degli operandi è di tipo **unsigned int**. Pertanto, l'altro operando `iVal`, viene convertito nel tipo **unsigned int**. Il risultato viene assegnato a `dVal`. La condizione soddisfatta è che un operando è di tipo **doppie**; pertanto, il **unsigned int** risultato della moltiplicazione viene convertito nel tipo **double**.  
   
- La seconda istruzione nell'esempio precedente viene illustrata l'aggiunta di un **float** e un tipo integrale, `fVal` e `ulVal`. Il `ulVal` variabile viene convertita nel tipo **float** (terza condizione nella tabella). Il risultato dell'addizione viene convertito nel tipo **doppie** (seconda condizione nella tabella) e assegnato a `dVal`.  
+ La seconda istruzione nell'esempio precedente viene illustrata l'aggiunta di un **float** e a un tipo integrale `fVal` e `ulVal`. Il `ulVal` variabile verrà convertito nel tipo **float** (terza condizione nella tabella). Il risultato dell'addizione viene convertito nel tipo **doppie** (seconda condizione nella tabella) e assegnati a `dVal`.  
   
 ## <a name="pointer-conversions"></a>Conversioni puntatore  
  I puntatori possono essere convertiti durante l'assegnazione, l'inizializzazione, il confronto e altre espressioni.  
@@ -189,18 +190,18 @@ int main() {
 ### <a name="pointer-to-classes"></a>Puntatore a classi  
  Esistono due casi in cui un puntatore a una classe può essere convertito in un puntatore a una classe base.  
   
- Il primo caso è quando la classe base specificata è accessibile e la conversione non è ambigua. (Vedere [più classi Base](../cpp/multiple-base-classes.md) per ulteriori informazioni sui riferimenti ambigui della classe di base.)  
+ Il primo caso è quando la classe base specificata è accessibile e la conversione non è ambigua. (Vedere [più classi Base](../cpp/multiple-base-classes.md) per altre informazioni sui riferimenti ambigui della classe di base.)  
   
  L'accessibilità di una classe base dipende dal tipo di ereditarietà usato nella derivazione. Esaminare l'ereditarietà illustrata nella seguente figura.  
   
- ![Grafica dell'ereditarietà con base&#45;classe accessibilità](../cpp/media/vc38xa1.gif "vc38XA1")  
+ ![Grafica dell'ereditarietà con base&#45;classe di accessibilità](../cpp/media/vc38xa1.gif "vc38XA1")  
 Grafico dell'ereditarietà per l'illustrazione dell'accessibilità delle classi base  
   
  Nella tabella seguente viene illustrata l'accessibilità della classe base per la situazione illustrata nella figura.  
   
 ### <a name="base-class-accessibility"></a>Accessibilità della classe base  
   
-|Tipo di funzione|Derivazione|Conversione da<br /><br /> B * a\* persona?|  
+|Tipo di funzione|Derivazione|Conversione da<br /><br /> B * a\* legale?|  
 |----------------------|----------------|-------------------------------------------|  
 |Funzione esterna (non a livello dell'ambito della classe)|Private|No|  
 ||Protetta|No|  
@@ -212,13 +213,13 @@ Grafico dell'ereditarietà per l'illustrazione dell'accessibilità delle classi 
 ||Protetta|Yes|  
 ||Public|Yes|  
   
- Il secondo caso in cui un puntatore a una classe può essere convertito in un puntatore a una classe base è quando si usa una conversione di tipo esplicita. (Vedere [espressioni con conversioni di tipi esplicite](http://msdn.microsoft.com/en-us/060ad6b4-9592-4f3e-8509-a20ac84a85ae) per ulteriori informazioni sulle conversioni di tipo esplicito.)  
+ Il secondo caso in cui un puntatore a una classe può essere convertito in un puntatore a una classe base è quando si usa una conversione di tipo esplicita. (Vedere [espressioni con conversioni esplicite](http://msdn.microsoft.com/060ad6b4-9592-4f3e-8509-a20ac84a85ae) per altre informazioni sulle conversioni esplicite.)  
   
  Il risultato di tale conversione è un puntatore al "sotto-oggetto", la parte dell'oggetto descritto completamente dalla classe base.  
   
- Nel codice seguente vengono definite due classi, `A` e `B`, dove `B` è derivata da `A`. (Per ulteriori informazioni sull'ereditarietà, vedere [classi derivate da](../cpp/inheritance-cpp.md).) Definisce quindi `bObject` un oggetto di tipo `B` e due puntatori (`pA` e `pB`) che puntano all'oggetto.  
+ Nel codice seguente vengono definite due classi, `A` e `B`, dove `B` è derivata da `A`. (Per altre informazioni sull'ereditarietà, vedere [classi derivate da](../cpp/inheritance-cpp.md).) Definisce quindi `bObject` un oggetto di tipo `B` e due puntatori (`pA` e `pB`) che puntano all'oggetto.  
   
-```  
+```cpp 
 // C2039 expected  
 class A  
 {  
@@ -245,18 +246,18 @@ int main()
 }  
 ```  
   
- Il puntatore `pA` è di tipo `A *`, che può essere interpretato con il significato di "puntatore a un oggetto di tipo `A`". I membri di `bObject` `(`, ad esempio `BComponent` e `BMemberFunc`) sono univoci `B` e sono pertanto inaccessibili mediante `pA`. Il puntatore `pA` consente l'accesso solo a quelle caratteristiche (funzioni membro e dati) dell'oggetto definite nella classe `A`.  
+ Il puntatore `pA` è di tipo `A *`, che può essere interpretato con il significato di "puntatore a un oggetto di tipo `A`". I membri del `bObject` `(`, ad esempio `BComponent` e `BMemberFunc`) sono univoci `B` e sono pertanto inaccessibili mediante `pA`. Il puntatore `pA` consente l'accesso solo a quelle caratteristiche (funzioni membro e dati) dell'oggetto definite nella classe `A`.  
   
 ### <a name="pointer-to-function"></a>Puntatore a funzione  
  Un puntatore a una funzione può essere convertito nel tipo **void \*** , se tipo **void \***  è sufficientemente grande da contenere tale puntatore.  
   
 ### <a name="pointer-to-void"></a>Puntatore a void  
- I puntatori al tipo `void` possono essere convertiti in puntatori a qualsiasi altro tipo, ma solo con un cast di tipo esplicito (diversamente da quello che avviene in C). (Vedere [espressioni con conversioni di tipi esplicite](http://msdn.microsoft.com/en-us/060ad6b4-9592-4f3e-8509-a20ac84a85ae) per ulteriori informazioni sui cast di tipo.) Un puntatore a qualsiasi tipo può essere convertito implicitamente a un tipo `void`. Un puntatore a un oggetto incompleto di un tipo può essere convertito in un puntatore a `void` (implicitamente) e viceversa (esplicitamente). Il risultato di tale conversione è uguale al valore del puntatore originale. Un oggetto è considerato incompleto se viene dichiarato ma le informazioni disponibili sono insufficienti per determinarne la dimensione o la classe base.  
+ Puntatori al tipo **void** convertibili in puntatori a qualsiasi altro tipo, ma solo con un cast di tipo esplicito (diversamente da c). (Vedere [espressioni con conversioni esplicite](http://msdn.microsoft.com/060ad6b4-9592-4f3e-8509-a20ac84a85ae) per altre informazioni sui cast di tipo.) Un puntatore a qualsiasi tipo può essere convertito in modo implicito in un puntatore al tipo **void**. Un puntatore a un oggetto incompleto di un tipo può essere convertito in un puntatore a **void** (implicitamente) e viceversa (esplicitamente). Il risultato di tale conversione è uguale al valore del puntatore originale. Un oggetto è considerato incompleto se viene dichiarato ma le informazioni disponibili sono insufficienti per determinarne la dimensione o la classe base.  
   
- Un puntatore a un oggetto che non è **const** o `volatile` può essere convertito in modo implicito in un puntatore di tipo **void \*** .  
+ Un puntatore a qualsiasi oggetto che non sia **const** oppure **volatile** può essere convertito in modo implicito in un puntatore di tipo **void \*** .  
   
 ### <a name="const-and-volatile-pointers"></a>Puntatori const e volatile  
- C++ non fornisce una conversione standard da un **const** o `volatile` tipo a un tipo che non è **const** o `volatile`. Tuttavia, qualsiasi tipo di conversione può essere specificato usando i cast di tipo espliciti (comprese le conversioni non sicure).  
+ C++ non fornisce una conversione standard da un **const** oppure **volatile** tipo a un tipo che non è **const** oppure **volatile**. Tuttavia, qualsiasi tipo di conversione può essere specificato usando i cast di tipo espliciti (comprese le conversioni non sicure).  
   
 > [!NOTE]
 >  I puntatori C++ ai membri, ad eccezione dei puntatori ai membri statici, sono diversi dai puntatori normali e non hanno le stesse conversioni standard. I puntatori ai membri statici sono puntatori normali e hanno le stesse conversioni dei puntatori normali.   
@@ -264,12 +265,12 @@ int main()
 ### <a name="null-pointer-conversions"></a>Conversioni di puntatori Null  
  Un'espressione di costante integrale che restituisce zero o il cast dell'espressione a un tipo puntatore, vengono convertiti in un puntatore denominato "puntatore NULL". Questo puntatore è diverso da un puntatore a qualsiasi oggetto o funzione valida (ad eccezione dei puntatori a oggetti di base, che possono avere lo stesso offset e puntare comunque a oggetti diversi).  
   
- In C++ 11 il [nullptr](../cpp/nullptr.md) tipo deve essere preferito al puntatore null di tipo C.  
+ In c++11 il [nullptr](../cpp/nullptr.md) tipo deve essere preferito rispetto del puntatore null di tipo C.  
   
 ### <a name="pointer-expression-conversions"></a>Conversioni di espressioni puntatore  
  Qualsiasi espressione con un tipo di matrice può essere convertita in un puntatore dello stesso tipo. Il risultato della conversione è un puntatore al primo elemento della matrice. L'esempio riportato di seguito illustra tale conversione:  
   
-```  
+```cpp 
 char szPath[_MAX_PATH]; // Array of type char.  
 char *pszPath = szPath; // Equals &szPath[0].  
 ```  
@@ -285,7 +286,7 @@ char *pszPath = szPath; // Equals &szPath[0].
   
 -   La classe base specificata è accessibile.  
   
--   La conversione non è ambigua. (Vedere [più classi Base](../cpp/multiple-base-classes.md) per ulteriori informazioni sui riferimenti ambigui della classe di base.)  
+-   La conversione non è ambigua. (Vedere [più classi Base](../cpp/multiple-base-classes.md) per altre informazioni sui riferimenti ambigui della classe di base.)  
   
  Il risultato della conversione è un puntatore al sotto-oggetto che rappresenta la classe base.  
   
@@ -310,7 +311,7 @@ char *pszPath = szPath; // Equals &szPath[0].
   
  Nel codice seguente viene illustrata la definizione di un puntatore al membro `i` nella classe `A`. Il puntatore `pai` viene inizializzato a 0, che è il puntatore null.  
   
-```  
+```cpp 
 class A  
 {  
 public:  

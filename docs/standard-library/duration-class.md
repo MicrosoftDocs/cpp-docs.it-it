@@ -21,12 +21,12 @@ helpviewer_keywords:
 - std::chrono [C++], duration
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fe02890ce8d8dcde099f4b91b23c770b2e36c96d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a4b85fd369e82ceab0a6b5255267e32d864eab67
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33847946"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38956866"
 ---
 # <a name="duration-class"></a>Classe duration
 
@@ -120,25 +120,25 @@ constexpr duration(const duration<Rep2, Period2>& Dur);
 
 ### <a name="parameters"></a>Parametri
 
-`Rep2` Un tipo aritmetico per rappresentare il numero di segni di graduazione.
+*Rep2* un tipo aritmetico per rappresentare il numero di segni di graduazione.
 
-`Period2` Oggetto `std::ratio` specializzazione di modello per rappresentare il periodo di segni di graduazione in unità di secondi.
+*Period2* oggetto `std::ratio` specializzazione di modello per rappresentare il periodo di tick in unità di secondi.
 
-`R` Il numero di tick del periodo predefinito.
+*R* il numero di tick del periodo predefinito.
 
-`Dur` Il numero di tick del periodo specificato da `Period2`.
+*Rim* il numero di tick del periodo specificato da *Period2*.
 
 ### <a name="remarks"></a>Note
 
 Il costruttore predefinito costruisce un oggetto non inizializzato. L'inizializzazione del valore con parentesi graffe vuote inizializza un oggetto che rappresenta un intervallo di tempo di zero tick.
 
-Il secondo costruttore, il primo costruttore dell'argomento di modello, costruisce un oggetto che rappresenta un intervallo di tempo di tick `R` usando un periodo predefinito di `std::ratio<1>`. Per evitare l'arrotondamento dei conteggi di tick, è un errore creare un oggetto duration in base a un tipo di rappresentazione `Rep2` che può essere trattato come tipo a virgola mobile quando `duration::rep` non può essere trattato come tipo a virgola mobile.
+Il secondo, l'argomento di un modello costruttore crea un oggetto che rappresenta un intervallo di tempo pari *R* usando un periodo predefinito di tick del clock `std::ratio<1>`. Per evitare l'arrotondamento dei conteggi di tick, è possibile creare un oggetto duration da un tipo di rappresentazione *Rep2* che può essere trattato come valore a virgola mobile al tipo quando `duration::rep` non può essere considerato come un tipo a virgola mobile.
 
-Il terzo costruttore, il secondo costruttore dell'argomento di modello, costruisce un oggetto che rappresenta un intervallo di tempo la cui lunghezza corrisponde all'intervallo di tempo specificato da `Dur`. Per evitare il troncamento dei conteggi dei tick, non creare un oggetto duration da un altro oggetto duration di tipo *incommensurabile* con il tipo destinazione.
+Il terzo costruttore ad argomento modello due costruisce un oggetto che rappresenta un intervallo di tempo la cui lunghezza è l'intervallo di tempo specificato da *Rim*. Per evitare il troncamento dei conteggi dei tick, non creare un oggetto duration da un altro oggetto duration di tipo *incommensurabile* con il tipo destinazione.
 
 Un tipo duration `D1` è *incommensurabile* con un altro tipo duration `D2` se `D2` non può essere trattato come tipo a virgola mobile e [ratio_divide\<D1::period, D2::period>::type::den](../standard-library/ratio.md) non è 1.
 
-A meno che `Rep2` sia convertibile in modo implicito in `rep` e `treat_as_floating_point<rep>`*contenga true* o `treat_as_floating_point<Rep2>`*contenga false*, il secondo costruttore non partecipa alla risoluzione dell'overload. Per altre informazioni, vedere [<type_traits>](../standard-library/type-traits.md).
+A meno che *Rep2* è implicitamente convertibile in `rep` e il valore `treat_as_floating_point<rep>` *contenga true* oppure `treat_as_floating_point<Rep2>` *contenga false*, il secondo costruttore non partecipa alla risoluzione dell'overload. Per altre informazioni, vedere [<type_traits>](../standard-library/type-traits.md).
 
 A meno che nessun overflow sia indotto nella conversione e `treat_as_floating_point<rep>`*contenga true*, o `ratio_divide<Period2, period>::den` equivalga a 1 e `treat_as_floating_point<Rep2>`*contenga false*, il terzo costruttore non partecipa alla risoluzione dell'overload. Per altre informazioni, vedere [<type_traits>](../standard-library/type-traits.md).
 
@@ -202,7 +202,7 @@ duration& operator%=(const duration& Div);
 
 ### <a name="parameters"></a>Parametri
 
-`Div` Per il primo metodo, `Div` rappresenta un conteggio di tick. Per il secondo metodo, `Div` è un oggetto `duration` che contiene un conteggio dei tick.
+*Div* per il primo metodo, *Div* rappresenta un conteggio dei tick. Per il secondo metodo, *Div* è un `duration` oggetto che contiene un conteggio dei tick.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -218,7 +218,7 @@ duration& operator*=(const rep& Mult);
 
 ### <a name="parameters"></a>Parametri
 
-`Mult` Un valore del tipo specificato da `duration::rep`.
+*Mult* un valore del tipo specificato dal `duration::rep`.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -234,7 +234,7 @@ duration& operator/=(const rep& Div);
 
 ### <a name="parameters"></a>Parametri
 
-`Div` Un valore del tipo specificato da `duration::rep`.
+*Div* un valore del tipo specificato dal `duration::rep`.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -274,7 +274,7 @@ duration& operator+=(const duration& Dur);
 
 ### <a name="parameters"></a>Parametri
 
-`Dur` Oggetto `duration` oggetto.
+*Rim* oggetto `duration` oggetto.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -290,7 +290,7 @@ duration& operator-=(const duration& Dur);
 
 ### <a name="parameters"></a>Parametri
 
-`Dur` Oggetto `duration` oggetto.
+*Rim* oggetto `duration` oggetto.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -314,7 +314,7 @@ duration& operator%=(const rep& Div);duration& operator%=(const duration& Div);
 
 ### <a name="parameters"></a>Parametri
 
-`Div` Divisore, che è un oggetto duration o un valore che rappresenta i conteggi.
+*Div* il divisore, che può essere un oggetto durata o un valore che rappresenta i conteggi dei tick.
 
 ### <a name="remarks"></a>Note
 

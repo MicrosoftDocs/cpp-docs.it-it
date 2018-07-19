@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f4f2b455b362bcb170a09c89a0bfef8013286971
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 138ec5bb28e108751a7d4b03651826db38c098fa
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33855266"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39026932"
 ---
 # <a name="ltstreambufgt"></a>&lt;streambuf&gt;
 
@@ -38,14 +38,14 @@ Includere l'intestazione standard \<streambuf> per definire la classe modello [b
 
 |Nome del tipo|Descrizione|
 |-|-|
-|[streambuf](../standard-library/streambuf-typedefs.md#streambuf)|Una specializzazione di `basic_streambuf` che usa `char` come parametri modello.|
-|[wstreambuf](../standard-library/streambuf-typedefs.md#wstreambuf)|Una specializzazione di `basic_streambuf` che usa `wchar_t` come parametri modello.|
+|[streambuf](../standard-library/streambuf-typedefs.md#streambuf)|Una specializzazione dello `basic_streambuf` che usa **char** come parametri del modello.|
+|[wstreambuf](../standard-library/streambuf-typedefs.md#wstreambuf)|Una specializzazione dello `basic_streambuf` che usa **wchar_t** come parametri del modello.|
 
 ### <a name="classes"></a>Classi
 
 |Classe|Descrizione|
 |-|-|
-|[Classe basic_streambuf](http://msdn.microsoft.com/en-us/d9c706ba-ce01-43e0-b0b2-a558fc53ea8d)|La classe modello descrive una classe base astratta per la derivazione di un buffer di flusso, che controlla la trasmissione di elementi verso e da una rappresentazione specifica di un flusso.|
+|[Classe basic_streambuf](http://msdn.microsoft.com/d9c706ba-ce01-43e0-b0b2-a558fc53ea8d)|La classe modello descrive una classe base astratta per la derivazione di un buffer di flusso, che controlla la trasmissione di elementi verso e da una rappresentazione specifica di un flusso.|
 
 ## <a name="see-also"></a>Vedere anche
 

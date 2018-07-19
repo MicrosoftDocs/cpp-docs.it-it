@@ -1,5 +1,5 @@
 ---
-title: Interfacce tear-Off di classi (ATL) | Documenti Microsoft
+title: Classi (ATL) delle interfacce tear-Off | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,20 +17,20 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bf7f61a815293d27139c2739544b0e08e89583e3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: bb7fec440902652d8ab04f688488a00340ab41aa
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32361062"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38956979"
 ---
-# <a name="tear-off-interfaces-classes"></a>Classi di interfacce tear-Off
-Le classi seguenti offrono il supporto per interfacce tear-off:  
+# <a name="tear-off-interfaces-classes"></a>Classi delle interfacce tear-Off
+Le classi seguenti forniscono supporto per interfacce tear-off:  
   
--   [CComTearOffObject](../atl/reference/ccomtearoffobject-class.md) implementa **IUnknown** per un'interfaccia tear-off.  
+-   [CComTearOffObject](../atl/reference/ccomtearoffobject-class.md) implementa `IUnknown` per un'interfaccia tear-off.  
   
--   [CComCachedTearOffObject](../atl/reference/ccomcachedtearoffobject-class.md) implementa **IUnknown** per un'interfaccia tear-off "memorizzato nella cache".  
+-   [CComCachedTearOffObject](../atl/reference/ccomcachedtearoffobject-class.md) implementa `IUnknown` per un'interfaccia tear-off "cache".  
   
 ## <a name="see-also"></a>Vedere anche  
- [Cenni preliminari sulla classe](../atl/atl-class-overview.md)
+ [Panoramica della classe](../atl/atl-class-overview.md)
 

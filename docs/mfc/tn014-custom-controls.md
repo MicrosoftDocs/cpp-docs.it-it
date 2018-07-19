@@ -1,5 +1,5 @@
 ---
-title: 'TN014: Controlli personalizzati | Documenti Microsoft'
+title: 'TN014: Controlli personalizzati | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/28/2018
 ms.technology:
@@ -17,16 +17,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 377b754fd9e04cd88c5d1c6f71508ff8f431ee99
-ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
+ms.openlocfilehash: e7ab10a6c0c53bd9aba87ddea594e689b3142b4c
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37121890"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39027261"
 ---
 # <a name="tn014-custom-controls"></a>TN014: controlli personalizzati
 
-In questa nota viene descritto il supporto MFC per i controlli di disegno automatico e personalizzati. Inoltre descrive creazione di una sottoclasse dinamica e viene descritta la relazione tra [CWnd](../mfc/reference/cwnd-class.md) oggetti e `HWND`s.
+In questa nota viene descritto il supporto MFC per i controlli di disegno automatico e personalizzati. Inoltre descrive creazione di una sottoclasse dinamica e viene descritta la relazione tra [CWnd](../mfc/reference/cwnd-class.md) gli oggetti e `HWND`s.
 
 Nell'applicazione MFC di esempio CTRLTEST viene illustrato come utilizzare molti controlli personalizzati. Vedere il codice sorgente per l'esempio MFC generale [CTRLTEST](../visual-cpp-samples.md) e Guida in linea.
 
@@ -104,11 +104,11 @@ Per informazioni dettagliate sulle strutture di disegno ([DRAWITEMSTRUCT](../mfc
 
 Per i menu di disegno automatico, è necessario eseguire l'override dei metodi `OnMeasureItem` e `OnDrawItem`.
 
-Per le caselle di riepilogo e caselle combinate di disegno automatico, è necessario eseguire l'override di `OnMeasureItem` e `OnDrawItem`. Nel modello di finestra di dialogo, è necessario specificare lo stile LBS_OWNERDRAWVARIABLE per le caselle di riepilogo o lo stile CBS_OWNERDRAWVARIABLE per le caselle combinate. Lo stile OWNERDRAWFIXED non funzionerà con gli elementi di disegno automatico poiché l'altezza fissa dell'elemento viene determinata prima di disegno automatico i controlli vengono associati alla casella di riepilogo. (È possibile utilizzare i metodi [CListBox::SetItemHeight](../mfc/reference/clistbox-class.md#setitemheight) e [CComboBox::SetItemHeight](../mfc/reference/ccombobox-class.md#setitemheight) per superare questa limitazione.)
+Per le caselle di riepilogo e caselle combinate di disegno automatico, è necessario eseguire l'override di `OnMeasureItem` e `OnDrawItem`. Nel modello di finestra di dialogo, è necessario specificare lo stile LBS_OWNERDRAWVARIABLE per le caselle di riepilogo o CBS_OWNERDRAWVARIABLE stile per le caselle combinate. Lo stile OWNERDRAWFIXED non funzionerà con gli elementi di disegno automatico poiché l'altezza fissa dell'elemento viene determinata prima che i controlli di disegno automatico sono collegati alla casella di riepilogo. (È possibile usare i metodi [CListBox::SetItemHeight](../mfc/reference/clistbox-class.md#setitemheight) e [CComboBox::SetItemHeight](../mfc/reference/ccombobox-class.md#setitemheight) per superare questa limitazione.)
 
-Passa a uno stile OWNERDRAWVARIABLE impone al sistema per applicare lo stile NOINTEGRALHEIGHT al controllo. Poiché il controllo in grado di calcolare un'altezza integrale con gli elementi di dimensioni variabili, lo stile predefinito dei INTEGRALHEIGHT viene ignorato e il controllo è sempre NOINTEGRALHEIGHT. Se gli elementi hanno l'altezza fissata, è possibile evitare che gli elementi parziali vengano disegnati specificando la dimensione di controllo in modo che sia un moltiplicatore intero della dimensione dell'elemento.
+Il passaggio a uno stile OWNERDRAWVARIABLE impone al sistema per applicare lo stile NOINTEGRALHEIGHT al controllo. Poiché il controllo non è possibile calcolare un'altezza integrale con elementi di dimensioni variabili, lo stile predefinito dei INTEGRALHEIGHT viene ignorato e il controllo è sempre NOINTEGRALHEIGHT. Se gli elementi hanno l'altezza fissata, è possibile evitare che gli elementi parziali vengano disegnati specificando la dimensione di controllo in modo che sia un moltiplicatore intero della dimensione dell'elemento.
 
-Per le caselle di riepilogo e caselle combinate con lo stile LBS_SORT o CBS_SORT di disegno automatico, è necessario eseguire l'override di `OnCompareItem` metodo.
+Per le caselle di riepilogo e caselle combinate con lo stile LBS_SORT o CBS_SORT di disegno automatico, è necessario eseguire l'override di `OnCompareItem` (metodo).
 
 Per le caselle di riepilogo e le caselle combinate di disegno automatico, `OnDeleteItem` in genere non viene sottoposto a override. È possibile eseguire l'override di `OnDeleteItem` se si desidera eseguire dell'elaborazione speciale. Un caso in cui sarebbe applicabile è quando vengono archiviate della memoria aggiuntiva o altre risorse con ogni elemento casella di riepilogo o casella combinata.
 
@@ -122,9 +122,9 @@ L'esempio più comune di un pulsante di disegno automatico è un pulsante bitmap
 
 Talvolta è preferibile modificare la funzionalità di un oggetto già esistente. Negli esempi precedenti è stato necessario personalizzare i controlli prima che venissero creati. La creazione di una sottoclasse dinamica consente di personalizzare un controllo che è già stato creato.
 
-Creazione di una sottoclasse è il termine di Windows per la sostituzione di [WndProc](http://msdn.microsoft.com/en-us/94ba8ffa-3c36-46d4-ac74-9bd10b1ffd26) di una finestra con un oggetto personalizzato `WndProc` e chiamare il vecchio `WndProc` per funzionalità predefinite.
+Creazione di una sottoclasse è il termine di Windows per la sostituzione di [WndProc](http://msdn.microsoft.com/94ba8ffa-3c36-46d4-ac74-9bd10b1ffd26) di una finestra con un oggetto personalizzato `WndProc` e la chiamata precedente `WndProc` per funzionalità predefinite.
 
-Questa operazione non deve essere confusa con la derivazione di classi di C++. Per chiarire, i termini C++ *classe di base* e *derivata* sono analoghi alle *superclasse* e *sottoclasse* nelle finestre modello a oggetti. La derivazione di C++ con MFC e la creazione di una sottoclasse di Windows sono simili a livello funzionale, ad eccezione del fatto che C++ non supporta la creazione di una sottoclasse dinamica.
+Questa operazione non deve essere confusa con la derivazione di classi di C++. Per maggiore chiarezza, le condizioni di C++ *classe di base* e *classe derivata* sono analoghe alle *superclasse* e *sottoclasse* in di Windows modello a oggetti. La derivazione di C++ con MFC e la creazione di una sottoclasse di Windows sono simili a livello funzionale, ad eccezione del fatto che C++ non supporta la creazione di una sottoclasse dinamica.
 
 La classe `CWnd` fornisce la connessione tra un oggetto C++ (derivato da `CWnd`) e un oggetto finestra di Windows (noto come `HWND`).
 
@@ -132,15 +132,15 @@ Esistono tre modi comuni in cui questi sono correlati:
 
 - `CWnd` crea `HWND`. È possibile modificare il comportamento in una classe derivata creando una classe derivata da `CWnd`. Il `HWND` viene creato quando l'applicazione chiama [CWnd:: Create](../mfc/reference/cwnd-class.md#create).
 
-- L'applicazione associa un `CWnd` a un `HWND` esistente. Il comportamento della finestra esistente non viene modificato. Questo è un caso di delega e si è reso possibile tramite la chiamata [CWnd::Attach](../mfc/reference/cwnd-class.md#attach) alias esistente `HWND` a un `CWnd` oggetto.
+- L'applicazione associa un `CWnd` a un `HWND` esistente. Il comportamento della finestra esistente non viene modificato. Questo è un caso di delega e si è reso possibile chiamando [CWnd::Attach](../mfc/reference/cwnd-class.md#attach) alias esistente `HWND` a un `CWnd` oggetto.
 
 - `CWnd` è collegato a un `HWND` esistente ed è possibile modificare il comportamento in una classe derivata. Questa procedura è denominata creazione di una sottoclasse dinamica poiché viene modificato il comportamento e, di conseguenza la classe, di un oggetto Windows in fase di esecuzione.
 
-Creazione di una sottoclasse dinamica è possibile ottenere utilizzando i metodi [CWnd:: SubclassWindow](../mfc/reference/cwnd-class.md#subclasswindow) e[CWnd:: SubclassDlgItem](../mfc/reference/cwnd-class.md#subclassdlgitem).
+Creazione di una sottoclasse dinamica è possibile ottenere usando i metodi [CWnd:: SubclassWindow](../mfc/reference/cwnd-class.md#subclasswindow) e[CWnd:: SubclassDlgItem](../mfc/reference/cwnd-class.md#subclassdlgitem).
 
 Entrambe le routine associano un oggetto `CWnd` a un `HWND` esistente. `SubclassWindow` accetta `HWND` direttamente. `SubclassDlgItem` è una funzione di supporto che accetta un ID di controllo e la finestra padre. `SubclassDlgItem` è progettato per collegare gli oggetti C++ ai controlli finestra di dialogo creati da un modello di finestra di dialogo.
 
-Vedere la [CTRLTEST](../visual-cpp-samples.md) riportato per alcuni esempi di quando utilizzare `SubclassWindow` e `SubclassDlgItem`.
+Vedere le [CTRLTEST](../visual-cpp-samples.md) riportato per alcuni esempi di quando utilizzare `SubclassWindow` e `SubclassDlgItem`.
 
 ## <a name="see-also"></a>Vedere anche
 

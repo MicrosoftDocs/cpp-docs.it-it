@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9888b847c3e52cd8b6a034e95e35ca73933acd3f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2b7cd9a949fef63e742d75bc01b199871d4950cc
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33861831"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38956476"
 ---
 # <a name="uniquelock-class"></a>Classe unique_lock
 
@@ -34,9 +34,9 @@ class unique_lock;
 
 ## <a name="remarks"></a>Note
 
-L'argomento del modello `Mutex` deve denominare un tipo *mutex*.
+L'argomento del modello `Mutex` deve denominare un *tipo mutex*.
 
-A livello interno, un oggetto `unique_lock` archivia un puntatore a un oggetto `mutex` associato e a un oggetto `bool` che indica se il thread corrente è proprietario dell'oggetto `mutex`.
+Internamente, un `unique_lock` archivia un puntatore a un oggetto associato `mutex` oggetto e una **bool** che indica se il thread corrente è proprietario di `mutex`.
 
 ## <a name="members"></a>Membri
 
@@ -94,11 +94,11 @@ void lock();
 
 ### <a name="remarks"></a>Note
 
-Se il puntatore `mutex` archiviato è `null`, questo metodo genera un [system_error](../standard-library/system-error-class.md) con codice di errore `operation_not_permitted`.
+Se l'oggetto memorizzato `mutex` puntatore è NULL, questo metodo genera un [system_error](../standard-library/system-error-class.md) con un codice di errore di `operation_not_permitted`.
 
 Se il thread di chiamata è già proprietario dell'oggetto `mutex` associato, questo metodo genera un `system_error` con codice di errore `resource_deadlock_would_occur`.
 
-In caso contrario, questo metodo chiama il metodo `lock` sull'oggetto `mutex` associato e imposta il flag interno di proprietà del thread su `true`.
+In caso contrario, questo metodo chiama `lock` sull'oggetto associato `mutex` e imposta il flag della proprietà interna thread **true**.
 
 ## <a name="mutex"></a>  mutex
 
@@ -118,7 +118,7 @@ explicit operator bool() noexcept
 
 ### <a name="return-value"></a>Valore restituito
 
-`true` se il thread è proprietario dell'oggetto mutex; in caso contrario, `false`.
+**true** se il thread è proprietario del mutex; in caso contrario **false**.
 
 ## <a name="op_eq"></a>  operator=
 
@@ -130,7 +130,8 @@ unique_lock& operator=(unique_lock&& Other) noexcept;
 
 ### <a name="parameters"></a>Parametri
 
-`Other` Oggetto `unique_lock` oggetto.
+*Altro*  
+ Oggetto `unique_lock`.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -140,7 +141,7 @@ unique_lock& operator=(unique_lock&& Other) noexcept;
 
 Se il thread di chiamata è proprietario dell'oggetto `mutex` associato in precedenza, prima di chiamare il metodo `unlock` sull'oggetto `mutex` assegna i nuovi valori.
 
-Dopo la copia, questo metodo imposta `Other` su uno stato costruito per impostazione predefinita.
+Dopo la copia, questo metodo imposta *altri* a uno stato costruito in modo predefinito.
 
 ## <a name="owns_lock"></a>  owns_lock
 
@@ -152,7 +153,7 @@ bool owns_lock() const noexcept;
 
 ### <a name="return-value"></a>Valore restituito
 
-`true` se il thread è proprietario dell'oggetto `mutex`; in caso contrario, `false`.
+**true** se il thread è proprietario di `mutex`; in caso contrario, **false**.
 
 ## <a name="release"></a>  release
 
@@ -168,7 +169,7 @@ Valore precedente del puntatore `mutex` archiviato.
 
 ### <a name="remarks"></a>Note
 
-Questo metodo imposta in valore del puntatore `mutex` archiviato su 0 e il flag interno di proprietà dell'oggetto `mutex` su `false`.
+Questo metodo imposta il valore dell'oggetto memorizzato `mutex` puntatore su 0 e l'interno `mutex` flag della proprietà per **false**.
 
 ## <a name="swap"></a>  swap
 
@@ -180,7 +181,8 @@ void swap(unique_lock& Other) noexcept;
 
 ### <a name="parameters"></a>Parametri
 
-`Other` Oggetto `unique_lock` oggetto.
+*Altro*  
+ Oggetto `unique_lock`.
 
 ## <a name="try_lock"></a>  try_lock
 
@@ -192,11 +194,11 @@ bool try_lock() noexcept;
 
 ### <a name="return-value"></a>Valore restituito
 
-`true` se il metodo ottiene correttamente la proprietà di `mutex`; in caso contrario, `false`.
+**true** se il metodo ottiene correttamente la proprietà del `mutex`; in caso contrario, **false**.
 
 ### <a name="remarks"></a>Note
 
-Se il puntatore `mutex` archiviato è `null`, il metodo genera un [system_error](../standard-library/system-error-class.md) con codice di errore `operation_not_permitted`.
+Se l'oggetto memorizzato `mutex` puntatore è NULL, il metodo genera un [system_error](../standard-library/system-error-class.md) con un codice di errore `operation_not_permitted`.
 
 Se il thread di chiamata è già proprietario dell'oggetto `mutex`, il metodo genera un `system_error` con codice di errore `resource_deadlock_would_occur`.
 
@@ -212,15 +214,16 @@ bool try_lock_for(
 
 ### <a name="parameters"></a>Parametri
 
-`Rel_time` Un [chrono](../standard-library/duration-class.md) che specifica la quantità massima di tempo in cui il metodo tenta di ottenere la proprietà dell'oggetto di `mutex`.
+*Rel_time*  
+ Oggetto [chrono::duration](../standard-library/duration-class.md) che specifica il periodo di tempo massimo per cui il metodo può tentare di ottenere la proprietà del `mutex`.
 
 ### <a name="return-value"></a>Valore restituito
 
-`true` se il metodo ottiene correttamente la proprietà di `mutex`; in caso contrario, `false`.
+**true** se il metodo ottiene correttamente la proprietà del `mutex`; in caso contrario, **false**.
 
 ### <a name="remarks"></a>Note
 
-Se il puntatore `mutex` archiviato è `null`, il metodo genera un [system_error](../standard-library/system-error-class.md) con codice di errore `operation_not_permitted`.
+Se l'oggetto memorizzato `mutex` puntatore è NULL, il metodo genera un [system_error](../standard-library/system-error-class.md) con un codice di errore `operation_not_permitted`.
 
 Se il thread di chiamata è già proprietario dell'oggetto `mutex`, il metodo genera un `system_error` con codice di errore `resource_deadlock_would_occur`.
 
@@ -237,15 +240,16 @@ bool try_lock_until(const xtime* Abs_time);
 
 ### <a name="parameters"></a>Parametri
 
-`Abs_time` Un punto nel tempo che specifica la soglia dopo il quale il metodo non tenta più di ottenere la proprietà del `mutex`.
+*Abs_time*  
+ Momento specifico che indica la soglia oltre la quale il metodo non tenta più di ottenere la proprietà di `mutex`.
 
 ### <a name="return-value"></a>Valore restituito
 
-`true` se il metodo ottiene correttamente la proprietà di `mutex`; in caso contrario, `false`.
+**true** se il metodo ottiene correttamente la proprietà del `mutex`; in caso contrario, **false**.
 
 ### <a name="remarks"></a>Note
 
-Se il puntatore `mutex` archiviato è `null`, il metodo genera un [system_error](../standard-library/system-error-class.md) con codice di errore `operation_not_permitted`.
+Se l'oggetto memorizzato `mutex` puntatore è NULL, il metodo genera un [system_error](../standard-library/system-error-class.md) con un codice di errore `operation_not_permitted`.
 
 Se il thread di chiamata è già proprietario dell'oggetto `mutex`, il metodo genera un `system_error` con codice di errore `resource_deadlock_would_occur`.
 
@@ -279,21 +283,25 @@ unique_lock(mutex_type& Mtx,
 
 ### <a name="parameters"></a>Parametri
 
-`Mtx` Un oggetto di tipo mutex.
+*Mtx*  
+ Oggetto di tipo mutex.
 
-`Rel_time` Un [chrono](../standard-library/duration-class.md) che specifica la quantità massima di tempo in cui il metodo tenta di ottenere la proprietà dell'oggetto di `mutex`.
+*Rel_time*  
+ Oggetto [chrono::duration](../standard-library/duration-class.md) che specifica il periodo di tempo massimo per cui il metodo può tentare di ottenere la proprietà del `mutex`.
 
-`Abs_time` Un punto nel tempo che specifica la soglia dopo il quale il metodo non tenta più di ottenere la proprietà del `mutex`.
+*Abs_time*  
+ Momento specifico che indica la soglia oltre la quale il metodo non tenta più di ottenere la proprietà di `mutex`.
 
-`Other` Oggetto `unique_lock` oggetto.
+*Altro*  
+ Oggetto `unique_lock`.
 
 ### <a name="remarks"></a>Note
 
 Il primo costruttore crea un oggetto con un valore del puntatore mutex associato pari a 0.
 
-Il secondo costruttore sposta lo stato dell'oggetto mutex associato da `Other`. Dopo lo spostamento, il parametro `Other` non è più associato a un oggetto mutex.
+Il secondo costruttore sposta lo stato di mutex associato da *altri*. Dopo lo spostamento *altri* non è più associato a un mutex.
 
-I costruttori rimanenti archiviano & `Mtx` come puntatore `mutex` archiviato. La proprietà dell'oggetto `mutex` è determinata dal secondo argomento, se esistente.
+I costruttori rimanenti archiviano & *Mtx* come archiviato `mutex` puntatore. La proprietà dell'oggetto `mutex` è determinata dal secondo argomento, se esistente.
 
 |||
 |-|-|
@@ -328,7 +336,7 @@ void unlock();
 
 Se il thread di chiamata non è proprietario dell'oggetto `mutex` associato, questo metodo genera un [system_error](../standard-library/system-error-class.md) con codice di errore `operation_not_permitted`.
 
-In caso contrario, questo metodo chiama il metodo `unlock` sull'oggetto `mutex` associato e imposta il flag interno di proprietà del thread su `false`.
+In caso contrario, questo metodo chiama `unlock` sull'oggetto associato `mutex` e imposta il flag della proprietà interna thread **false**.
 
 ## <a name="see-also"></a>Vedere anche
 

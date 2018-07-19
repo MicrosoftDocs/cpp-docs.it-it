@@ -1,5 +1,5 @@
 ---
-title: Struttura WINDOWPLACEMENT | Documenti Microsoft
+title: Struttura WINDOWPLACEMENT | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 829b3c90acb089bd91d71c498df5906fff919f22
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6dbd9a921194146e260eb79f5266311caa3d0300
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33379473"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39026195"
 ---
 # <a name="windowplacement-structure"></a>Struttura WINDOWPLACEMENT
-Il `WINDOWPLACEMENT` struttura contiene informazioni sul posizionamento di una finestra sullo schermo **.**  
+Il `WINDOWPLACEMENT` struttura contiene informazioni sulla posizione di una finestra sullo schermo.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -40,47 +40,47 @@ typedef struct tagWINDOWPLACEMENT {     /* wndpl */
 ```  
   
 #### <a name="parameters"></a>Parametri  
- *length*  
- Specifica la lunghezza, espressa in byte, della struttura **.**  
+*length*  
+Specifica la lunghezza, espressa in byte, della struttura.  
   
- `flags`  
- Specifica i flag che controllano la posizione della finestra ridotta a icona e il metodo mediante il quale la finestra è ripristinata. Questo membro può essere uno o entrambi i flag seguenti:  
+*flags*  
+Specifica i flag che controllano la posizione della finestra ridotta a icona e il metodo mediante il quale la finestra è ripristinata. Questo membro può essere uno o entrambi i flag seguenti:  
   
-- **WPF_SETMINPOSITION** specifica che è possibile specificare le posizioni x e y della finestra ridotta a icona **.** Questo flag deve essere specificato se le coordinate sono impostate nel **ptMinPosition** membro.  
+ - WPF_SETMINPOSITION specifica che è possibile specificare le posizioni x e y della finestra ridotta a icona. Questo flag deve essere specificato se le coordinate vengono specificate nella `ptMinPosition` membro.  
+      
+ - WPF_RESTORETOMAXIMIZED specifica che la finestra ripristinata verrà ingrandita, indipendentemente dal fatto indica se è stato ingrandito prima è stata ridotta a icona. Questa impostazione è valida solo la volta successiva che la finestra è ripristinata. Il comportamento di ripristino predefinito rimane invariata. Questo flag è valido solo quando il valore SW_SHOWMINIMIZED viene specificato per il `showCmd` membro.  
   
-- **WPF_RESTORETOMAXIMIZED** specifica che la finestra ripristinata verrà ingrandita, indipendentemente dal fatto è stata ingrandita prima è stata ridotta a icona. Questa impostazione è valida solo alla successiva che finestra viene ripristinata. Non viene modificato il comportamento di ripristino predefinito. Questo flag è valido solo quando il **SW_SHOWMINIMIZED** sia stato specificato per il **showCmd** membro.  
+*showCmd.*  
+Specifica lo stato di visualizzazione corrente della finestra. Questo membro può essere uno dei valori seguenti:  
   
- *showCmd*  
- Specifica lo stato di visualizzazione corrente della finestra. Questo membro può essere uno dei valori seguenti:  
+ - SW_HIDE nasconde la finestra e passa l'attivazione a un'altra finestra.  
+      
+ - SW_MINIMIZE riduce al minimo dell'intervallo specificato e attiva la finestra di primo livello nell'elenco del sistema.  
+      
+ - SW_RESTORE attiva e visualizza una finestra. Se la finestra è ridotta a icona o ingrandita, Windows lo ripristina le dimensioni e posizione (uguale a SW_SHOWNORMAL) originale.  
+      
+ - SW_SHOW attiva una finestra e visualizzarlo nelle dimensioni correnti e la posizione.  
+      
+ - SW_SHOWMAXIMIZED attiva una finestra che viene visualizzata come una finestra ingrandita.  
+      
+ - SW_SHOWMINIMIZED attiva una finestra e lo visualizza come icona.  
+      
+ - SW_SHOWMINNOACTIVE Visualizza una finestra ridotta a icona. La finestra attualmente attiva rimane attiva.  
+      
+ - SW_SHOWNA Visualizza una finestra nello stato corrente. La finestra attualmente attiva rimane attiva.  
+      
+ - SW_SHOWNOACTIVATE Visualizza una finestra nelle dimensioni e la posizione più recente. La finestra attualmente attiva rimane attiva.  
+      
+ - SW_SHOWNORMAL attiva e visualizza una finestra. Se la finestra è ridotta a icona o ingrandita, Windows lo ripristina le dimensioni e posizione (uguale a SW_RESTORE) originale.  
   
-- **SW_HIDE** nasconde la finestra e passa l'attivazione a un'altra finestra.  
+*ptMinPosition*  
+Specifica la posizione dell'angolo superiore sinistro della finestra quando la finestra è ridotta a icona.  
   
-- **SW_MINIMIZE** riduce al minimo dell'intervallo specificato e attiva la finestra di livello superiore nell'elenco del sistema.  
+*ptMaxPosition*  
+Specifica la posizione dell'angolo superiore sinistro della finestra quando la finestra è ingrandita.  
   
-- **SW_RESTORE** attiva e visualizza una finestra. Se la finestra viene ridotta a icona o ingrandita, Windows lo ripristina le dimensioni e la posizione originale (uguale a **SW_SHOWNORMAL**).  
-  
-- **SW_SHOW** attiva una finestra e lo visualizza nelle dimensioni correnti e la posizione.  
-  
-- **SW_SHOWMAXIMIZED** attiva una finestra e lo visualizza in una finestra ingrandita.  
-  
-- **SW_SHOWMINIMIZED** attiva una finestra che viene visualizzata come un'icona.  
-  
-- **SW_SHOWMINNOACTIVE** Visualizza una finestra a icona. La finestra attualmente attiva rimane attiva.  
-  
-- **SW_SHOWNA** Visualizza una finestra nello stato corrente. La finestra attualmente attiva rimane attiva.  
-  
-- **SW_SHOWNOACTIVATE** Visualizza una finestra le dimensioni e la posizione più recente. La finestra attualmente attiva rimane attiva.  
-  
-- **SW_SHOWNORMAL** attiva e visualizza una finestra. Se la finestra viene ridotta a icona o ingrandita, Windows lo ripristina le dimensioni e la posizione originale (uguale a **SW_RESTORE**).  
-  
- *ptMinPosition*  
- Specifica la posizione dell'angolo superiore sinistro della finestra quando è ridotta a icona la finestra.  
-  
- `ptMaxPosition`  
- Specifica la posizione dell'angolo superiore sinistro della finestra quando la finestra è ingrandita.  
-  
- *rcNormalPosition*  
- Specifica le coordinate della finestra quando la finestra è nella posizione normale (ripristinata).  
+*rcNormalPosition*  
+Specifica le coordinate della finestra quando la finestra è nella posizione normale (ripristinata).  
   
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** winuser.h  

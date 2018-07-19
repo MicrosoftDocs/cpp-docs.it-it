@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ed73314d5cef6849c84a8e1019e1fd2d6c8ead86
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 43f4aec5796db6a277b6bfb1edecdcd2e7f5c455
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33845388"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954617"
 ---
 # <a name="isbaseof-class"></a>Classe is_base_of
 
@@ -37,13 +37,13 @@ struct is_base_of;
 
 ### <a name="parameters"></a>Parametri
 
-`Base` Classe di base per verificare la presenza.
+*Base* da testare per la classe di base.
 
-`Derived` Il tipo derivato da testare per.
+*Derivato* il tipo derivato da verificare per.
 
 ## <a name="remarks"></a>Note
 
-Un'istanza del predicato di tipo contiene true se il tipo `Base` è una classe base del tipo `Derived`; in caso contrario, contiene false.
+Un'istanza del tipo predicato contiene true se il tipo *Base* è una classe di base del tipo *Derived*, in caso contrario, contiene false.
 
 ## <a name="example"></a>Esempio
 

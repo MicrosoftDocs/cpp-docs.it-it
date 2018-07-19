@@ -1,5 +1,5 @@
 ---
-title: Creazione guidata Consumer OLE DB ATL | Documenti Microsoft
+title: Creazione guidata Consumer OLE DB ATL | Microsoft Docs
 ms.custom: ''
 ms.date: 06/25/2018
 ms.technology:
@@ -18,120 +18,120 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f53d8273a708b7f84393290dd578933a5390313c
-ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
+ms.openlocfilehash: 7dc15e9eaf7068756aa4d945cf494156498af6f9
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37121689"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39025984"
 ---
 # <a name="atl-ole-db-consumer-wizard"></a>Creazione guidata consumer OLE DB ATL
-Questa procedura guidata imposta backup di una classe consumer OLE DB con le associazioni dati necessaria per accedere all'origine dati specificata tramite il provider OLE DB specificato.  
+Questa procedura guidata imposta una classe di consumer OLE DB con le associazioni dati necessaria per accedere all'origine dati specificata tramite il provider OLE DB specificato.  
   
 > [!NOTE]
->  Questa procedura guidata è necessario fare clic il **origine dati** pulsante per selezionare un'origine dati prima di immettere i nomi nel `Class` e **file con estensione h** campi.  
+>  Questa procedura guidata è necessario fare clic il **Zdroj dat** per selezionare un'origine dati prima di immettere i nomi nel `Class` e **file con estensione h** campi.  
   
 ## <a name="uielement-list"></a>Elenco UIElement  
- **Origine dati**  
- Il **origine dati** pulsante consente di impostare l'origine dati specificata utilizzando il provider OLE DB specificato. Quando si fa clic su questo pulsante, il **proprietà di Data Link** verrà visualizzata la finestra di dialogo. Per ulteriori informazioni sulla compilazione di stringhe di connessione e il **proprietà di Data Link** finestra di dialogo, vedere [Introduzione all'API di collegamento dati](https://msdn.microsoft.com/library/ms718102.aspx) nella documentazione di Windows SDK.  
+**Origine dati**  
+Il **Zdroj dat** pulsante configurare l'origine dati specificata utilizzando il provider OLE DB specificato. Quando si fa clic sul pulsante, il **proprietà di Data Link** verrà visualizzata la finestra di dialogo. Per altre informazioni sulla creazione di stringhe di connessione e il **proprietà di Data Link** finestra di dialogo, vedere [Cenni preliminari sull'API di collegamento dati](https://msdn.microsoft.com/library/ms718102.aspx) nella documentazione di Windows SDK.  
   
 > [!NOTE]
->  Nelle versioni precedenti, fare clic su MAIUSC il **origine dati** pulsante aperta una finestra di dialogo Apri File che consente di selezionare un file di Data Link (UDL). Questa funzionalità non è più supportata.  
+>  Nelle versioni precedenti, facendo clic MAIUSC i **Zdroj dat** pulsante aperta una finestra di dialogo Apri File per consentire di selezionare un file di Data Link (UDL). Questa funzionalità non è più supportata.  
   
- Nella finestra di dialogo sono presenti quattro schede:  
+La finestra di dialogo include quattro schede:  
   
-- **Provider** scheda  
+ - **Provider** scheda  
   
-- **Connessione** scheda  
+ - **Connessione** scheda  
   
-- **Advanced** scheda  
+ - **Advanced** scheda  
   
-- **Tutti i** scheda  
+ - **Tutti i** scheda  
   
-     Le informazioni aggiuntive seguenti vengono descritte le schede di **proprietà di Data Link** finestra di dialogo.  
+Le informazioni aggiuntive seguenti vengono descritte le schede di **proprietà di Data Link** nella finestra di dialogo.  
   
-     Fare clic su **OK** alla fine. Il **Seleziona oggetto di Database** verrà visualizzata la finestra di dialogo. Da questa finestra di dialogo, selezionare la tabella, vista o stored procedure che verranno utilizzate dal consumer.  
+Fare clic su **OK** alla fine. Il **Seleziona oggetto di Database** verrà visualizzata la finestra di dialogo. Da questa finestra di dialogo, selezionare la tabella, vista o stored procedure che verranno utilizzate dal consumer.  
   
  **Provider**  
-     Selezionare un provider appropriato per gestire la connessione all'origine dati. Il tipo di provider in genere è determinato dal tipo di database a cui ci si connette. Fare clic sui `Next` pulsante oppure fare clic il **connessione** scheda.  
+   Selezionare un provider appropriato per gestire la connessione all'origine dati. Il tipo di provider in genere è determinato dal tipo di database a cui ci si connette. Fare clic sui **successivo** pulsante oppure fare clic sui **connessione** scheda.  
   
  **Connessione**  
-     Il contenuto di questa scheda dipende dal provider selezionato. Anche se esistono molti tipi di provider, in questa sezione vengono illustrate le connessioni per i due più comuni: dati ODBC e SQL. Gli altri sono simili a quelli nei campi descritti di seguito.  
+   Il contenuto di questa scheda dipende dal provider selezionato. Anche se esistono molti tipi di provider, in questa sezione vengono illustrate le connessioni per i due più comuni: i dati SQL e ODBC. Gli altri sono simili a quelli nei campi descritti di seguito.  
   
-     Per i dati SQL:  
+  Per i dati SQL:  
   
-    1. **Selezionare o immettere un nome server:** fare clic sul menu elenco a discesa per visualizzare tutti i server registrati i dati nella rete e selezionarne uno.  
+   1. **Selezionare o immettere un nome server:** fare clic sul menu a discesa elenco per visualizzare tutti i server di dati registrati nella rete e selezionarne uno.  
   
-    2. **Immettere le informazioni per l'accesso al server:** immettere un nome utente e una password per accedere al server di dati.  
+   2. **Immettere le informazioni per l'accesso al server:** immettere un nome utente e una password per accedere al server di dati.  
   
-    3. **Selezionare il database nel server:** fare clic sul menu a discesa per visualizzare tutti i database registrati nel server del data e selezionare uno.  
+   3. **Selezionare il database nel server:** fare clic sul menu di riepilogo per visualizzare tutti i database registrati nel server di dati e selezionarne uno.  
   
          oppure  
   
- **Collegare un file di database come un nome di database:** specificare un file da utilizzare come database, immettere il nome del percorso esplicito.  
+    **Collegare un file di database come un nome di database:** specificare un file da utilizzare come database, immettere il nome del percorso esplicito.  
   
-        > [!NOTE]
-        >  There is a security problem with the "Allow saving of password" feature of the Data Link Properties dialog box. In "Enter information to log on to the server," there are two radio buttons:  
+    > [!NOTE]
+    >  Si verifica un problema di sicurezza con la funzionalità "Per il salvataggio della password" della finestra di dialogo proprietà di Data Link. In "Immettere le informazioni per l'accesso al server", sono disponibili due pulsanti di opzione:  
   
- **Utilizzare la sicurezza integrata di Windows NT**  
+    **Usare la sicurezza integrata di Windows NT**  
   
- **Utilizzare un nome utente specifico e una password**  
+    **Usare un nome utente specifico e una password**  
   
-         If you select **Use a specific user name and password**, you have the option of saving the password (using the check box for "Allow saving password"); however, this option is not secure. It is recommended that you select **Use Windows NT integrated security**; this option is secure because it encrypts the password.  
+     Se si seleziona **usare un nome utente specifico e una password**, è possibile scegliere di salvare la password (usando la casella di controllo per "Consenti salvataggio password"); tuttavia, questa opzione non è sicura. Si consiglia di selezionare **utilizza Windows protezione integrata NT**; questa opzione è sicura perché permette di crittografare la password.  
   
-         There might be situations in which you want to select "Allow saving password." For example, if you are releasing a library with a private database solution, you should not access the database directly but instead use a middle-tier application to verify the user (through whatever authentication scheme you choose) and then limit the sort of data available to the user.  
+     Potrebbero esserci situazioni in cui si desidera selezionare "Consenti salvataggio password". Ad esempio, se si sta rilasciando una libreria con una soluzione di database privato, è necessario non accedono direttamente al database ma usare invece un'applicazione di livello intermedio per verificare che l'utente (tramite qualsiasi schema di autenticazione scelto) e quindi limitarne l'ordinamento dei dati disponibile per l'utente.  
   
-         For ODBC data:  
+     Per i dati ODBC:  
   
-         1. **Specify the source of data:** You can use a data source name or a connection string.  
+     1. **Specificare l'origine dei dati:** è possibile usare un nome dell'origine dati o una stringa di connessione.  
   
- **Usa nome origine dati:** questo elenco a discesa vengono visualizzate origini dati registrate nel computer. È possibile impostare le origini dati anticipo tramite Amministrazione origine dati ODBC- o -**stringa di connessione utilizzata:** immettere una stringa di connessione è già ottenuto oppure fare clic sul **compilare** pulsante; il **Selezionare l'origine dati** verrà visualizzata la finestra di dialogo. Selezionare un'origine dati macchina o di file e fare clic su **OK**.  
+    **Usa nome origine dati:** questo elenco a discesa vengono visualizzate origini dati registrate nel computer. È possibile configurare le origini dati anticipo tramite Amministrazione origine dati ODBC- o -**stringa di connessione utilizzata:** immettere una stringa di connessione possiede già, oppure fare clic sui **compilare** pulsante; il **Selezionare un'origine dati** verrà visualizzata la finestra di dialogo. Selezionare un'origine dati di produzione o di file e fare clic su **OK**.  
   
-        > [!NOTE]
-        >  You can obtain a connection string by viewing the properties of an existing connection in Server Explorer, or you can create a connection by double-clicking **Add Connection** in Server Explorer.  
+     > [!NOTE]
+     >  È possibile ottenere una stringa di connessione visualizzando le proprietà di una connessione esistente in Esplora Server, oppure è possibile creare una connessione facendo doppio clic su **Aggiungi connessione** in Esplora Server.  
   
-         2. **Enter information to log on to the server:** Enter a user name and password to log on to the data server.  
+     2. **Immettere le informazioni per l'accesso al server:** immettere un nome utente e una password per accedere al server di dati.  
   
-         3. Enter the initial catalog to use.  
+     3. Immettere il catalogo iniziale da usare.  
   
-         4. Click **Test Connection**; if the test succeeds, click **OK**. If not, check your logon information, try another database, or try another data server.  
+     4. Fare clic su **Test connessione**; se il test ha esito positivo, fare clic su **OK**. In caso contrario, controllare le informazioni di accesso, provare un altro database o provare un altro server di dati.  
   
- **Avanzate**  
- **Le impostazioni di rete:** specificare il **livello di rappresentazione** (il livello di rappresentazione che il server è possibile utilizzare per rappresentare il client; corrisponde direttamente a livelli di rappresentazione RPC) e  **Livello di protezione** (il livello di protezione dei dati inviati tra client e server; corrisponde direttamente a livelli di protezione RPC).  
+**Avanzate**  
+  **Impostazioni di rete:** specificare il **livello di rappresentazione** (il livello di rappresentazione che il server è possibile utilizzare per rappresentare il client; corrisponde direttamente a livelli di rappresentazione RPC) e  **Livello di protezione** (il livello di protezione dei dati inviati tra client e server; corrisponde direttamente a livelli di protezione RPC).  
   
- **Altro:** In **timeout connessione**, specificare il numero di secondi del tempo di inattività consentito prima che si verifichi un timeout. In **le autorizzazioni di accesso**, specifica le autorizzazioni di accesso per la connessione dati.  
+  **Altro:** nelle **timeout della connessione**, specificare il numero di secondi di tempo di inattività consentiti prima che si verifica un timeout. Nelle **le autorizzazioni di accesso**, specificare le autorizzazioni di accesso per la connessione dati.  
   
-     Per ulteriori informazioni sulle proprietà di inizializzazione avanzata, fare riferimento alla documentazione fornita con ogni provider OLE DB specifico.  
+    For more information about advanced initialization properties, refer to the documentation provided with each specific OLE DB provider.  
   
- **All**  
+**All**  
      Questa scheda Visualizza un riepilogo delle proprietà di inizializzazione per l'origine dati e la connessione specificata. È possibile modificare questi valori.  
   
-     Fare clic su **OK** alla fine. Il **Seleziona oggetto di Database** verrà visualizzata la finestra di dialogo. Da questa finestra di dialogo, selezionare la tabella, vista o stored procedure che verranno utilizzate dal consumer.  
+     Click **OK** to finish. The **Select Database Object** dialog box appears. From this dialog box, select the table, view, or stored procedure that the consumer will use.  
   
  `Class`  
- Dopo aver selezionato un'origine dati, questa casella viene popolata con un nome di classe predefinito basato sulla tabella o stored procedure che è stata selezionata (vedere **selezionare un'origine dati** sotto). È possibile modificare il nome della classe.  
+ Dopo aver selezionato un'origine dati, questa casella viene popolata con un nome predefinito della classe basato la tabella o una stored procedure che è stato selezionato (vedere **Vybrat zdroj** sotto). È possibile modificare il nome della classe.  
   
  **File con estensione h**  
- Dopo aver selezionato un'origine dati, questa casella viene popolata con un nome di classe intestazione predefinito basato sulla tabella o stored procedure che è stata selezionata (vedere **selezionare un'origine dati** sotto). È possibile modificare il nome del file di intestazione o selezionare un file di intestazione esistente.  
+ Dopo aver selezionato un'origine dati, questa casella viene popolata con un nome di classe intestazione predefinito basato sulla tabella o sulla stored procedure che è stato selezionato (vedere **Vybrat zdroj** sotto). È possibile modificare il nome del file di intestazione o selezionare un file di intestazione esistente.  
   
  **Con attributi**  
- Questa opzione specifica se la procedura guidata creerà classi consumer con attributi o le dichiarazioni di template. Quando si seleziona questa opzione, la procedura guidata utilizza gli attributi anziché le dichiarazioni di template (si tratta dell'opzione predefinita). Quando si deseleziona questa opzione, la procedura guidata utilizza le dichiarazioni di template invece che come attributi.  
+ Questa opzione specifica se la procedura guidata creerà le classi di consumer usando gli attributi o le dichiarazioni di template. Quando si seleziona questa opzione, verranno utilizzati attributi invece delle dichiarazioni di modello (questo è l'opzione predefinita). Quando si deseleziona questa opzione, la procedura guidata utilizza le dichiarazioni di template anziché agli attributi.  
   
--   Se si seleziona un consumer **tipo** della tabella, la procedura guidata Usa i `db_source` e **db_table** attributi per creare la tabella e la funzione di accesso nella tabella delle dichiarazioni di classe e che usa **db_column**  per creare la mappa delle colonne, ad esempio:  
+ -   Se si seleziona un consumer **tipo** della tabella, la procedura guidata Usa la `db_source` e `db_table` gli attributi per creare la tabella e la funzione di accesso nella tabella delle dichiarazioni di classe e Usa `db_column` per creare la mappa delle colonne, ad esempio:  
   
- ``` 
+```
  // Inject table class and table accessor class declarations  
  [db_source("<initialization_string>"), db_table("dbo.Orders")]  
  ... 
  // Column map  
  [ db_column(1, status=m_dwOrderIDStatus, length=m_dwOrderIDLength) ] LONG m_OrderID;  
  [ db_column(2, status=m_dwCustomerIDStatus, length=m_dwCustomerIDLength) ] TCHAR m_CustomerID[6];  
- ...  
- ```  
+ ...
+```
   
-     anziché utilizzare il `CTable` classe di modello per dichiarare la tabella e classe della tabella della funzione di accesso e le macro BEGIN_COLUMN_MAP ed END_COLUMN_MAP per creare la mappa delle colonne, ad esempio:  
+   invece di usare il `CTable` classe di modello per dichiarare la tabella e classe table della funzione di accesso e le macro BEGIN_COLUMN_MAP ed END_COLUMN_MAP per creare la mappa delle colonne, ad esempio:  
   
- ``` 
+``` 
  // Table accessor class  
     class COrdersAccessor; // Table class  
     class COrders : public CTable<CAccessor<COrdersAccessor>>;  
@@ -142,19 +142,19 @@ Questa procedura guidata imposta backup di una classe consumer OLE DB con le ass
     COLUMN_ENTRY_LENGTH_STATUS(2, m_CustomerID, m_dwCustomerIDLength, m_dwCustomerIDStatus)  
  ...  
     END_COLUMN_MAP() 
- ```  
+```  
   
--   Se si seleziona un consumer **tipo** del comando, la procedura guidata Usa i `db_source` e **db_command** attributi e che usa **db_column** per creare la mappa delle colonne, ad esempio :  
+-   Se si seleziona un consumer **tipo** del comando, la procedura guidata Usa la `db_source` e `db_command` gli attributi e Usa `db_column` per creare la mappa delle colonne, ad esempio:  
   
- ```  
+```  
  [db_source("<initialization_string>"), db_command("SQL_command")]  
  ... 
  // Column map using db_column is the same as for consumer type of 'table'  
- ```  
+```  
   
-     anziché utilizzare il comando e le dichiarazioni di classe di comando della funzione di accesso nel file con estensione h della classe di comando, ad esempio:  
+   invece di usare il comando e le dichiarazioni di classe di comando della funzione di accesso nel file con estensione h della classe di comando, ad esempio:  
   
- ```  
+```  
     Command accessor class:  
     class CListOrdersAccessor;  
     Command class:  
@@ -162,32 +162,32 @@ Questa procedura guidata imposta backup di una classe consumer OLE DB con le ass
  ... 
  // Column map using BEGIN_COLUMN_MAP ... END_COLUMN_MAP is the same as
  // for consumer type of 'table'  
- ```  
+```  
   
- Vedere [meccanismi che consentono di attributi di base](../../windows/basic-mechanics-of-attributes.md) per altre informazioni.  
+ Visualizzare [meccanismi di base degli attributi](../../windows/basic-mechanics-of-attributes.md) per altre informazioni.  
   
  **Type**  
  Selezionare uno di questi pulsanti di opzione per specificare se la classe consumer verrà derivata `CTable` o `CCommand` (impostazione predefinita).  
   
  **Tabella**  
- Selezionare questa opzione se si desidera utilizzare `CTable` oppure **db_table** per creare la tabella e la funzione di accesso nella tabella delle dichiarazioni di classe.  
+ Selezionare questa opzione se si desidera utilizzare `CTable` o `db_table` per creare la tabella e la funzione di accesso nella tabella delle dichiarazioni di classe.  
   
  **Comando**  
- Selezionare questa opzione se si desidera utilizzare `CCommand` oppure **db_command** per creare il comando e una funzione di accesso di comando delle dichiarazioni di classe. Si tratta della selezione predefinita.  
+ Selezionare questa opzione se si desidera utilizzare `CCommand` o `db_command` per creare il comando e una funzione di accesso di comando delle dichiarazioni di classe. Questa è la selezione predefinita.  
   
  **Supporto**  
  Selezionare le caselle di controllo per specificare i tipi di aggiornamento devono essere supportati nel consumer (il valore predefinito è none). Gli aspetti seguenti imposterà [DBPROP_IRowsetChange](https://msdn.microsoft.com/library/ms715892.aspx) e le voci appropriate per [DBPROP_UPDATABILITY](https://msdn.microsoft.com/library/ms722676.aspx) nel set di proprietà della mappa.  
   
  **Modifica**  
- Specifica che il consumer supportano gli aggiornamenti dei dati della riga nel set di righe.  
+ Specifica che il consumer supportano gli aggiornamenti dei dati di riga nel set di righe.  
   
  **Inserisci**  
  Specifica che il consumer supporta l'inserimento di righe nel set di righe.  
   
  **Eliminazione**  
- Specifica che il consumer supporta l'eliminazione delle righe dal set di righe.  
+ Specifica che il consumer supporta l'eliminazione di righe dal set di righe.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Consumer OLE DB ATL](../../atl/reference/adding-an-atl-ole-db-consumer.md)   
  [Aggiunta di funzionalità con creazioni guidate codice](../../ide/adding-functionality-with-code-wizards-cpp.md)   
- [Le stringhe di connessione e i collegamenti dati (OLE DB)](https://msdn.microsoft.com/library/ms718376.aspx)
+ [Stringhe di connessione e i collegamenti dati (OLE DB)](https://msdn.microsoft.com/library/ms718376.aspx)

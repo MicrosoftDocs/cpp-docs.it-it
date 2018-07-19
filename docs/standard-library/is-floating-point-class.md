@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 63129ad04e2e74cdae9c590c76e1910e95117431
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 52bc5ff0fe53dc89f932bf62dc98f7c8a03a725f
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33844432"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957005"
 ---
 # <a name="isfloatingpoint-class"></a>Classe is_floating_point
 
@@ -37,13 +37,13 @@ struct is_floating_point;
 
 ### <a name="parameters"></a>Parametri
 
-`Ty` Il tipo di query.
+*Ty* il tipo di query.
 
 ## <a name="remarks"></a>Note
 
-Un'istanza del tipo predicato contiene true se il tipo `Ty` è un tipo a virgola mobile o un form `cv-qualified` di un tipo a virgola mobile; in caso contrario, contiene false.
+Un'istanza del tipo predicato contiene true se il tipo *Ty* mobile tipo di punto o un `cv-qualified` digitare formato a virgola mobile, in caso contrario, contiene false.
 
-Un tipo a virgola mobile è `float`, `double`, o `long double`.
+Un tipo a virgola mobile è uno dei **float**, **double**, o **long double**.
 
 ## <a name="example"></a>Esempio
 

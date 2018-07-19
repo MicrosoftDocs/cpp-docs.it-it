@@ -148,12 +148,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7f8f74a2aa1eb47d9de4705941bd7367e313e7bd
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6e02be0369821cc6f8aa37210c9a3b7f9479be84
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33863069"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954721"
 ---
 # <a name="unorderedmap-class"></a>Classe unordered_map
 
@@ -174,11 +174,11 @@ class unordered_map;
 
 |Parametro|Descrizione|
 |-|-|
-|`Key`|Tipo di chiave.|
-|`Ty`|Tipo mappato.|
-|`Hash`|Tipo di oggetto della funzione hash.|
-|`Pred`|Tipo di oggetto della funzione di confronto di uguaglianza.|
-|`Alloc`|Classe Allocator.|
+|*Key*|Tipo di chiave.|
+|*Ty*|Tipo mappato.|
+|*hash*|Tipo di oggetto della funzione hash.|
+|*Pred*|Tipo di oggetto della funzione di confronto di uguaglianza.|
+|*Alloc*|Classe Allocator.|
 
 ## <a name="members"></a>Membri
 
@@ -305,7 +305,7 @@ const Ty& at(const Key& key) const;
 
 |Parametro|Descrizione|
 |-|-|
-|`key`|Valore di chiave da trovare.|
+|*key*|Valore di chiave da trovare.|
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -357,11 +357,11 @@ const_local_iterator begin(size_type nbucket) const;
 
 |Parametro|Descrizione|
 |-|-|
-|`nbucket`|Numero di bucket.|
+|*nbucket*|Numero di bucket.|
 
 ### <a name="remarks"></a>Note
 
-Le prime due funzioni membro restituiscono un iteratore in avanti che punta al primo elemento della sequenza (o appena oltre la fine di una sequenza vuota). Le ultime due funzioni membro restituiscono un iteratore in avanti che punta al primo elemento del bucket `nbucket` (o appena oltre la fine di un bucket vuoto).
+Le prime due funzioni membro restituiscono un iteratore in avanti che punta al primo elemento della sequenza (o appena oltre la fine di una sequenza vuota). Le ultime due funzioni membro restituiscono un iteratore in avanti che punta al primo elemento del bucket *nbucket* (o appena oltre la fine di un bucket vuoto).
 
 ### <a name="example"></a>Esempio
 
@@ -417,11 +417,11 @@ size_type bucket(const Key& keyval) const;
 
 ### <a name="parameters"></a>Parametri
 
-`keyval` Il valore della chiave per eseguire il mapping.
+*Keyval* il valore della chiave per eseguire il mapping.
 
 ### <a name="remarks"></a>Note
 
-La funzione membro restituisce il numero di bucket che corrisponde attualmente al valore della chiave `keyval`.
+La funzione membro restituisce il numero di bucket corrisponde attualmente al valore della chiave *keyval*.
 
 ### <a name="example"></a>Esempio
 
@@ -560,11 +560,12 @@ size_type bucket_size(size_type nbucket) const;
 
 ### <a name="parameters"></a>Parametri
 
-`nbucket` Numero di bucket.
+*nbucket*  
+ Numero di bucket.
 
 ### <a name="remarks"></a>Note
 
-La funzione membro restituisce la dimensione del numero di bucket `nbucket`.
+La funzione membro restituisce le dimensioni del numero di bucket *nbucket*.
 
 ### <a name="example"></a>Esempio
 
@@ -607,7 +608,7 @@ bucket_size(7) == 1
 
 ## <a name="cbegin"></a>  unordered_map::cbegin
 
-Restituisce un iteratore `const` che punta al primo elemento dell'intervallo.
+Restituisce un **const** iteratore che punta al primo elemento nell'intervallo.
 
 ```cpp
 const_iterator cbegin() const;
@@ -615,13 +616,13 @@ const_iterator cbegin() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-Iteratore di accesso in avanti `const` che punta al primo elemento dell'intervallo o alla posizione oltre la fine di un intervallo vuoto (per un intervallo vuoto, `cbegin() == cend()`).
+Oggetto **const** iteratore di accesso in avanti che punta al primo elemento dell'intervallo o alla posizione appena oltre la fine di un intervallo vuoto (per un intervallo vuoto, `cbegin() == cend()`).
 
 ### <a name="remarks"></a>Note
 
 Con il valore restituito di `cbegin`, gli elementi dell'intervallo non possono essere modificati.
 
-È possibile usare questa funzione membro anziché la funzione membro `begin()` per garantire che il valore restituito sia `const_iterator`. In genere, viene usata insieme alla parola chiave di deduzione di tipo [auto](../cpp/auto-cpp.md), come illustrato nell'esempio seguente. Nell'esempio, si consideri `Container` come un contenitore (non `const`) modificabile di qualsiasi tipo che supporta `begin()` e `cbegin()`.
+È possibile usare questa funzione membro anziché la funzione membro `begin()` per garantire che il valore restituito sia `const_iterator`. In genere, viene usata insieme alla parola chiave di deduzione di tipo [auto](../cpp/auto-cpp.md), come illustrato nell'esempio seguente. Nell'esempio, prendere in considerazione `Container` sia un modificabili (non - **const**) contenitore di qualsiasi tipo che supporta `begin()` e `cbegin()`.
 
 ```cpp
 auto i1 = Container.begin();
@@ -633,7 +634,7 @@ auto i2 = Container.cbegin();
 
 ## <a name="cend"></a>  unordered_map::cend
 
-Restituisce un iteratore `const` che punta alla posizione oltre l'ultimo elemento di un intervallo.
+Restituisce un **const** iteratore che punta alla posizione oltre l'ultimo elemento in un intervallo.
 
 ```cpp
 const_iterator cend() const;
@@ -641,13 +642,13 @@ const_iterator cend() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-Iteratore di accesso in avanti `const` che punta oltre la fine dell'intervallo.
+Oggetto **const** iteratore di accesso in avanti che punta appena oltre la fine dell'intervallo.
 
 ### <a name="remarks"></a>Note
 
 `cend` viene utilizzato per verificare se un iteratore ha superato la fine del relativo intervallo.
 
-È possibile usare questa funzione membro anziché la funzione membro `end()` per garantire che il valore restituito sia `const_iterator`. In genere, viene usata insieme alla parola chiave di deduzione di tipo [auto](../cpp/auto-cpp.md), come illustrato nell'esempio seguente. Nell'esempio, si consideri `Container` come un contenitore (non `const`) modificabile di qualsiasi tipo che supporta `end()` e `cend()`.
+È possibile usare questa funzione membro anziché la funzione membro `end()` per garantire che il valore restituito sia `const_iterator`. In genere, viene usata insieme alla parola chiave di deduzione di tipo [auto](../cpp/auto-cpp.md), come illustrato nell'esempio seguente. Nell'esempio, prendere in considerazione `Container` sia un modificabili (non - **const**) contenitore di qualsiasi tipo che supporta `end()` e `cend()`.
 
 ```cpp
 auto i1 = Container.end();
@@ -923,7 +924,8 @@ size_type count(const Key& keyval) const;
 
 ### <a name="parameters"></a>Parametri
 
-`keyval` Valore della chiave da cercare.
+*Keyval*  
+ Valore della chiave da cercare.
 
 ### <a name="remarks"></a>Note
 
@@ -1040,13 +1042,13 @@ pair<iterator, bool>  emplace( Args&&... args);
 
 |Parametro|Descrizione|
 |-|-|
-|`args`|Argomenti inoltrati per costruire un elemento da inserire nell'oggetto unordered_map a meno che non vi sia già contenuto un elemento il cui valore è ordinato in modo equivalente.|
+|*args*|Argomenti inoltrati per costruire un elemento da inserire nell'oggetto unordered_map a meno che non vi sia già contenuto un elemento il cui valore è ordinato in modo equivalente.|
 
 ### <a name="return-value"></a>Valore restituito
 
-Oggetto `pair` il cui componente `bool` restituisce true se è stato effettuato un inserimento e false se in `unordered_map` è già contenuto un elemento la cui chiave ha un valore equivalente nell'ordinamento e il cui componente iteratore restituisce l'indirizzo in cui è stato inserito un nuovo elemento o in cui si trovava già l'elemento.
+Oggetto `pair` la cui **bool** componente restituisce true se è stato eseguito un inserimento e false se il `unordered_map` contiene già un elemento la cui chiave ha un valore equivalente nell'ordinamento e il relativo componente iterator restituisce il indirizzo in cui è stato inserito un nuovo elemento o in cui l'elemento si trovava già.
 
-Per accedere al componente iteratore di una coppia `pr` restituita da questa funzione membro, usare `pr.first` e per deferenziarlo, usare `*(pr.first)`. Per accedere al componente `bool` di una coppia `pr` restituita da questa funzione membro, usare `pr.second`.
+Per accedere al componente iterator di una coppia `pr` restituita da questa funzione membro, usare `pr.first` e per dereferenziarlo, usare `*(pr.first)`. Per l'accesso di **bool** componente di una coppia `pr` restituita da questa funzione membro, usare `pr.second`.
 
 ### <a name="remarks"></a>Note
 
@@ -1069,8 +1071,8 @@ iterator emplace_hint(const_iterator where, Args&&... args);
 
 |Parametro|Descrizione|
 |-|-|
-|`args`|Argomenti inoltrati per costruire un elemento da inserire nell'oggetto unordered_map a meno che quest'ultimo non contenga già tale elemento o, più in generale, a meno che non contenga già un elemento la cui la chiave sia equivalentemente ordinata.|
-|`where`|Suggerimento sulla posizione per avviare la ricerca del punto di inserimento corretto.|
+|*args*|Argomenti inoltrati per costruire un elemento da inserire nell'oggetto unordered_map a meno che quest'ultimo non contenga già tale elemento o, più in generale, a meno che non contenga già un elemento la cui la chiave sia equivalentemente ordinata.|
+|*where*|Suggerimento sulla posizione per avviare la ricerca del punto di inserimento corretto.|
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -1170,11 +1172,11 @@ const_local_iterator end(size_type nbucket) const;
 
 |Parametro|Descrizione|
 |-|-|
-|`nbucket`|Numero di bucket.|
+|*nbucket*|Numero di bucket.|
 
 ### <a name="remarks"></a>Note
 
-Le prime due funzioni membro restituiscono un iteratore in avanti che punta poco oltre la fine della sequenza. Le ultime due funzioni membro restituiscono un iteratore in avanti che punta poco oltre la fine del bucket `nbucket`.
+Le prime due funzioni membro restituiscono un iteratore in avanti che punta poco oltre la fine della sequenza. Le ultime due funzioni membro restituiscono un iteratore in avanti che punta poco oltre la fine del bucket *nbucket*.
 
 ## <a name="equal_range"></a>  unordered_map::equal_range
 
@@ -1187,11 +1189,12 @@ std::pair<const_iterator, const_iterator>  equal_range(const Key& keyval) const;
 
 ### <a name="parameters"></a>Parametri
 
-`keyval` Valore della chiave da cercare.
+*Keyval*  
+ Valore della chiave da cercare.
 
 ### <a name="remarks"></a>Note
 
-La funzione membro restituisce una coppia di iteratori `X` , in modo tale che `[X.first, X.second)` delimiti solo gli elementi della sequenza controllata associati a un ordinamento equivalente a `keyval`. Se tali elementi non esistono, entrambi gli iteratori sono `end()`.
+La funzione membro restituisce una coppia di iteratori `X` tale che `[X.first, X.second)` delimiti solo gli elementi della sequenza controllata che hanno un ordinamento equivalente con *keyval*. Se tali elementi non esistono, entrambi gli iteratori sono `end()`.
 
 ### <a name="example"></a>Esempio
 
@@ -1256,13 +1259,17 @@ size_type erase(const key_type& Key);
 
 ### <a name="parameters"></a>Parametri
 
-`Where` Posizione dell'elemento da rimuovere.
+*Where*  
+ Posizione dell'elemento che deve essere rimosso.
 
-`First` Posizione del primo elemento da rimuovere.
+*Primo*  
+ Posizione del primo elemento che deve essere rimosso.
 
-`Last` Posizione immediatamente successiva all'ultimo elemento da rimuovere.
+*ultimo*  
+ Posizione immediatamente successiva all'ultimo elemento che deve essere rimosso.
 
-`Key` Il valore della chiave degli elementi da rimuovere.
+*Key*  
+ Valore della chiave dell'elemento che deve essere rimosso.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -1284,7 +1291,8 @@ const_iterator find(const Key& keyval) const;
 
 ### <a name="parameters"></a>Parametri
 
-`keyval` Valore della chiave da cercare.
+*Keyval*  
+ Valore della chiave da cercare.
 
 ### <a name="remarks"></a>Note
 
@@ -1492,17 +1500,17 @@ IList);
 
 |Parametro|Descrizione|
 |-|-|
-|`Val`|Valore di un elemento da inserire in unordered_map a meno che non vi sia già contenuto un elemento la cui chiave è ordinata in modo equivalente.|
-|`Where`|Posizione in cui iniziare a cercare il punto di inserimento corretto.|
-|`ValTy`|Parametro di modello che specifica il tipo di argomento che può essere usato da unordered_map per costruire un elemento di [value_type](../standard-library/map-class.md#value_type) e che esegue l'inoltro perfetto di `Val` come argomento.|
-|`First`|Posizione del primo elemento da copiare.|
-|`Last`|Posizione immediatamente dopo l'ultimo elemento da copiare.|
-|`InputIterator`|Argomento della funzione modello che soddisfa i requisiti di un [iteratore di input](../standard-library/input-iterator-tag-struct.md) che punta agli elementi di un tipo utilizzabili per costruire oggetti [value_type](../standard-library/map-class.md#value_type).|
-|`IList`|Oggetto [initializer_list](../standard-library/initializer-list.md) da cui copiare gli elementi.|
+|*Val*|Valore di un elemento da inserire in unordered_map a meno che non vi sia già contenuto un elemento la cui chiave è ordinata in modo equivalente.|
+|*Where*|Posizione in cui iniziare a cercare il punto di inserimento corretto.|
+|*ValTy*|Parametro di modello che specifica il tipo di argomento che è usato da unordered_map per costruire un elemento di [value_type](../standard-library/map-class.md#value_type)e perfetto *Val* come argomento.|
+|*Primo*|Posizione del primo elemento da copiare.|
+|*ultimo*|Posizione immediatamente dopo l'ultimo elemento da copiare.|
+|*InputIterator*|Argomento della funzione modello che soddisfa i requisiti di un [iteratore di input](../standard-library/input-iterator-tag-struct.md) che punta agli elementi di un tipo utilizzabili per costruire oggetti [value_type](../standard-library/map-class.md#value_type).|
+|*IList*|Oggetto [initializer_list](../standard-library/initializer-list.md) da cui copiare gli elementi.|
 
 ### <a name="return-value"></a>Valore restituito
 
-Le funzioni membro a elemento singolo (1) e (2) restituiscono un oggetto [pair](../standard-library/pair-structure.md) il cui componente `bool` è true se è stato eseguito un inserimento e false se l'oggetto unordered_map contiene già un elemento la cui chiave ha un valore equivalente nell'ordinamento. Il componente dell'iteratore della coppia di valori restituita punta all'elemento appena inserito se il componente `bool` è true oppure all'elemento esistente se il componente `bool` è false.
+Le funzioni membro a elemento singolo, (1) e (2) restituiscono una [coppia](../standard-library/pair-structure.md) cui **bool** componente è true se è stato eseguito un inserimento e false se unordered_map contiene già un elemento la cui chiave ha una valore equivalente nell'ordinamento. Il componente iteratore della coppia di valore restituito punta all'elemento appena inserito se il **bool** componente è true oppure all'elemento esistente se il **bool** componente è false.
 
 Le funzioni membro a elemento singolo con suggerimento, (3) e (4), restituiscono un iteratore che punta alla posizione in cui il nuovo elemento è stato inserito in unordered_map o all'elemento già esistente se esiste un elemento con una chiave equivalente.
 
@@ -1512,7 +1520,7 @@ Non ci sono iteratori, puntatori o riferimenti invalidati da questa funzione.
 
 Se viene generata un'eccezione durante l'inserimento di un solo elemento, ma l'eccezione non si manifesta nella funzione hash del contenitore, lo stato del contenitore non verrà modificato. Se l'eccezione viene generata nella funzione hash, il risultato non sarà definito. Se viene generata un'eccezione durante l'inserimento di più elementi, il contenitore viene lasciato in uno stato non specificato ma comunque valido.
 
-Per accedere al componente dell'iteratore di una `pair` `pr` restituita dalle funzioni membro a elemento singolo, usare `pr.first`; per dereferenziare l'iteratore all'interno della coppia restituita, usare `*pr.first` fornendo un elemento. Per accedere al componente `bool`, usare `pr.second`. Per un esempio, vedere il codice di esempio più avanti in questo articolo.
+Per accedere al componente dell'iteratore di una `pair` `pr` restituita dalle funzioni membro a elemento singolo, usare `pr.first`; per dereferenziare l'iteratore all'interno della coppia restituita, usare `*pr.first` fornendo un elemento. Per l'accesso di **bool** componente, usare `pr.second`. Per un esempio, vedere il codice di esempio più avanti in questo articolo.
 
 L'oggetto [value_type](../standard-library/map-class.md#value_type) di un contenitore è un typedef appartenente al contenitore e, per map, `map<K, V>::value_type` è `pair<const K, V>`. Il valore di un elemento è una coppia ordinata in cui il primo componente equivale al valore della chiave e il secondo componente equivale al valore dati dell'elemento.
 
@@ -2000,11 +2008,12 @@ void max_load_factor(float factor);
 
 ### <a name="parameters"></a>Parametri
 
-`factor` Nuovo fattore di carico massimo.
+*factor*  
+ Nuovo fattore di carico massimo.
 
 ### <a name="remarks"></a>Note
 
-La prima funzione membro restituisce il fattore di carico massimo archiviato. La seconda funzione membro sostituisce il fattore di carico massimo archiviato con `factor`.
+La prima funzione membro restituisce il fattore di carico massimo archiviato. La seconda funzione membro sostituisce il fattore di carico massimo archiviato con *factor*.
 
 ### <a name="example"></a>Esempio
 
@@ -2132,7 +2141,7 @@ Ty& operator[](Key&& keyval);
 
 |Parametro|Descrizione|
 |-|-|
-|`Keyval`|Valore della chiave da trovare o inserire.|
+|*Keyval*|Valore della chiave da trovare o inserire.|
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -2220,13 +2229,13 @@ unordered_map& operator=(unordered_map&& right);
 
 |Parametro|Descrizione|
 |-|-|
-|`right`|Oggetto unordered_map da cui la funzione operatore assegna il contenuto.|
+|*right*|Oggetto unordered_map da cui la funzione operatore assegna il contenuto.|
 
 ### <a name="remarks"></a>Note
 
-La prima versione copia tutti gli elementi da `right` a questo oggetto unordered_map.
+La prima versione copia tutti gli elementi da *a destra* a questo oggetto unordered_map.
 
-La seconda versione sposta tutti gli elementi da `right` a questo oggetto unordered_map.
+La seconda versione Sposta tutti gli elementi da *a destra* a questo oggetto unordered_map.
 
 Tutti gli elementi presenti in questo oggetto unordered_map prima dell'esecuzione di `operator`= vengono eliminati.
 
@@ -2371,11 +2380,12 @@ void rehash(size_type nbuckets);
 
 ### <a name="parameters"></a>Parametri
 
-`nbuckets` Numero di bucket richiesto.
+*nbuckets*  
+ Numero di bucket richiesto.
 
 ### <a name="remarks"></a>Note
 
-La funzione membro modifica il numero di bucket in modo da essere almeno pari a `nbuckets` e ricompila la tabella hash in base alle esigenze.
+La funzione membro modifica il numero di bucket in modo da essere almeno *nbuckets* e ricompila la tabella hash in base alle esigenze.
 
 ### <a name="example"></a>Esempio
 
@@ -2554,11 +2564,12 @@ void swap(unordered_map& right);
 
 ### <a name="parameters"></a>Parametri
 
-`right` Contenitore da scambiare con.
+*right*  
+ Contenitore con cui eseguire lo scambio.
 
 ### <a name="remarks"></a>Note
 
-La funzione membro scambia le sequenze controllate tra `*this` e `right`. Se [unordered_map::get_allocator](#get_allocator)`() == right.get_allocator()`, esegue l'operazione in un tempo costante, genera un'eccezione solo in seguito alla copia dell'oggetto traits archiviato di tipo `Tr` e non invalida alcun riferimento, puntatore o iteratore che definisce gli elementi nelle due sequenze controllate. In caso contrario, esegue un numero di assegnazioni di elementi e chiamate al costruttore proporzionale al numero di elementi nelle due sequenze controllate.
+La funzione membro Scambia le sequenze controllate tra `*this` e *destro*. Se [unordered_map::get_allocator](#get_allocator)`() == right.get_allocator()`, esegue l'operazione in un tempo costante, genera un'eccezione solo in seguito alla copia dell'oggetto traits archiviato di tipo `Tr` e non invalida alcun riferimento, puntatore o iteratore che definisce gli elementi nelle due sequenze controllate. In caso contrario, esegue un numero di assegnazioni di elementi e chiamate al costruttore proporzionale al numero di elementi nelle due sequenze controllate.
 
 ### <a name="example"></a>Esempio
 
@@ -2665,28 +2676,28 @@ unordered_map(
 
 |Parametro|Descrizione|
 |-|-|
-|`Al`|Oggetto allocatore da archiviare.|
-|`Comp`|Oggetto della funzione di confronto da archiviare.|
-|`Hash`|Oggetto della funzione hash da archiviare.|
-|`Bucket_count`|Numero minimo di bucket.|
-|`Right`|Contenitore da copiare.|
-|`First`||
-|`Last`||
-|`IList`|initializer_list che contiene gli elementi da copiare.|
+|*Al*|Oggetto allocatore da archiviare.|
+|*Comp*|Oggetto della funzione di confronto da archiviare.|
+|*hash*|Oggetto della funzione hash da archiviare.|
+|*valore di bucket_count*|Numero minimo di bucket.|
+|*A destra*|Contenitore da copiare.|
+|*Primo*||
+|*ultimo*||
+|*IList*|initializer_list che contiene gli elementi da copiare.|
 
 ### <a name="remarks"></a>Note
 
 Il primo costruttore specifica una copia della sequenza controllata da `right`. Il secondo costruttore specifica una sequenza controllata vuota. In terzo costruttore inserisce la sequenza di valori degli elementi `[first, last)`. In quarto costruttore specifica una copia della sequenza spostando `right`.
 
-Tutti i costruttori inizializzano inoltre diversi valori archiviati. Per il costruttore di copia, i valori vengono ottenuti da `Right`. In caso contrario:
+Tutti i costruttori inizializzano inoltre diversi valori archiviati. Per il costruttore di copia, i valori vengono ottenuti dal *destra*. In caso contrario:
 
-Il numero minimo di bucket è costituito dall'argomento `Bucket_count`, se disponibile. In caso contrario è costituito da un valore predefinito descritto qui come il valore `N0` definito a livello di implementazione.
+il numero minimo di bucket è l'argomento *Bucket_count*, se presente; in caso contrario è un valore predefinito descritto qui come il valore definito dall'implementazione `N0`.
 
-L'oggetto della funzione hash è costituito dall'argomento `Hash`, se disponibile. In caso contrario, è `Hash()`.
+L'oggetto della funzione hash è l'argomento *Hash*, se presente; in caso contrario, è `Hash()`.
 
-L'oggetto della funzione di confronto è costituito dall'argomento `Comp`, se disponibile; in caso contrario, è `Pred()`.
+L'oggetto funzione di confronto è l'argomento *Comp*, se presente; in caso contrario, è `Pred()`.
 
-L'oggetto allocatore è costituito dall'argomento `Al`, se disponibile; in caso contrario, è `Alloc()`.
+L'oggetto allocatore è l'argomento *Al*, se presente; in caso contrario, è `Alloc()`.
 
 ### <a name="example"></a>Esempio
 
