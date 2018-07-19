@@ -1,5 +1,5 @@
 ---
-title: Istruzione for (C++) | Documenti Microsoft
+title: Istruzione for (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,15 +14,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 38181a43134c35c4db1db3d78a79d3338934b7d2
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b38b608d1d254d304c7182d5063f870e2bbfcffe
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32417184"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37940819"
 ---
 # <a name="for-statement-c"></a>Istruzione for (C++)
-Esegue ripetutamente un'istruzione finché la condizione non diventa false. Per informazioni sull'intervallo basata per istruzione, vedere [per istruzione (C++) basato su intervallo](../cpp/range-based-for-statement-cpp.md).  
+Esegue ripetutamente un'istruzione finché la condizione non diventa false. Per informazioni su basato su intervallo per l'istruzione, vedere [Range-based per istruzione (C++)](../cpp/range-based-for-statement-cpp.md).  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -32,9 +32,9 @@ for ( init-expression ; cond-expression ; loop-expression )
 ```  
   
 ## <a name="remarks"></a>Note  
- Utilizzare l'istruzione `for` per costruire cicli che dovranno essere eseguiti un numero specificato di volte.  
+ Usare la **per** istruzione per costruire cicli che devono eseguire un numero di volte specificato.  
   
- L'istruzione `for` è costituita da tre parti facoltative, come illustrato nella tabella seguente.  
+ Il **per** istruzione costituita da tre parti facoltative, come illustrato nella tabella seguente.  
   
 ### <a name="for-loop-elements"></a>Elementi del ciclo For  
   
@@ -44,7 +44,7 @@ for ( init-expression ; cond-expression ; loop-expression )
 |`cond-expression`|Prima dell'esecuzione di ogni iterazione di `statement`, inclusa la prima iterazione. `statement` viene eseguito solo se `cond-expression` restituisce true (diverso da zero).|Un'espressione che restituisce un tipo di classe o un tipo integrale con una conversione non ambigua a un tipo integrale. Normalmente utilizzato per verificare i criteri di terminazione del ciclo For.|  
 |`loop-expression`|Alla fine di ogni iterazione di `statement`. Dopo l'esecuzione di `loop-expression`, viene valutato `cond-expression`.|Normalmente utilizzato per incrementare gli indici del ciclo.|  
   
- Negli esempi riportati di seguito vengono illustrati modi diversi per utilizzare l'istruzione `for`.  
+ Gli esempi seguenti illustrano diversi modi per usare la **per** istruzione.  
   
 ```cpp  
 #include <iostream>  
@@ -106,11 +106,11 @@ for (int i = 10; i > 0; i--) {
     // Output: 10 12 14 16 18  
 ```  
   
- A `for` ciclo termina quando un [interruzione](../cpp/break-statement-cpp.md), [restituire](../cpp/return-statement-cpp.md), o [goto](../cpp/goto-statement-cpp.md) (per un'istruzione con etichetta all'esterno di **per** ciclo) all'interno di `statement` viene eseguita. Oggetto [continuare](../cpp/continue-statement-cpp.md) istruzione in un `for` ciclo termina solo l'iterazione corrente.  
+ Oggetto **per** ciclo termina quando un [interruzione](../cpp/break-statement-cpp.md), [restituire](../cpp/return-statement-cpp.md), o [goto](../cpp/goto-statement-cpp.md) (a un'istruzione con etichetta all'esterno di **per**ciclo) all'interno di `statement` viene eseguita. Oggetto [continuare](../cpp/continue-statement-cpp.md) istruzione in un **per** ciclo termina solo l'iterazione corrente.  
   
- Se `cond-expression` viene omesso, viene considerato true e **per** ciclo verrà terminato senza un `break`, `return`, o `goto` all'interno di `statement`.  
+ Se `cond-expression` viene omesso, viene considerato true e il **per** ciclo verrà terminato senza una **interruzione**, **restituiscono**, o **goto** all'interno di `statement`.  
   
- Sebbene i tre campi dell'istruzione `for` vengano in genere utilizzati per l'inizializzazione, la verifica della terminazione e l'incremento, non sono limitati a questi utilizzi. Ad esempio, il codice seguente consente di stampare i numeri da 0 a 4. In questo caso, `statement` è l'istruzione Null:  
+ Sebbene i tre campi del **per** istruzione vengono normalmente utilizzati per l'inizializzazione, verifica della terminazione e incremento, non sono limitati a questi utilizzi. Ad esempio, il codice seguente consente di stampare i numeri da 0 a 4. In questo caso, `statement` è l'istruzione Null:  
   
 ```cpp  
 #include <iostream>  
@@ -126,7 +126,7 @@ int main()
 ```  
   
 ## <a name="for-loops-and-the-c-standard"></a>per i cicli e lo standard C++  
- Lo standard C++ specifica che una variabile dichiarata in un ciclo `for` uscirà dall'ambito dopo la terminazione del ciclo `for`. Ad esempio:  
+ Lo standard C++ specifica che una variabile dichiarata in un **per** ciclo uscirà dall'ambito dopo il **per** fine del ciclo. Ad esempio:  
   
 ```cpp  
 for (int i = 0 ; i < 5 ; i++) {  
@@ -135,11 +135,11 @@ for (int i = 0 ; i < 5 ; i++) {
 // i is now out of scope under /Za or /Zc:forScope  
 ```  
   
- Per impostazione predefinita, in [/Ze](../build/reference/za-ze-disable-language-extensions.md), una variabile dichiarata in un `for` ciclo rimane nell'ambito fino a quando il `for` termina l'ambito contiene del ciclo.  
+ Per impostazione predefinita, sotto [/Ze](../build/reference/za-ze-disable-language-extensions.md), una variabile dichiarata in un **per** ciclo resta nell'ambito finché il **per** termina l'ambito di inclusione del ciclo.  
   
- [/Zc: forScope](../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md) Abilita il comportamento standard delle variabili dichiarate nei cicli for senza la necessità di specificare /Za.  
+ [/Zc: forScope](../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md) consente il comportamento standard delle variabili dichiarate nei cicli for senza la necessità di specificare /Za.  
   
- È anche possibile utilizzare le differenze di ambito del ciclo `for` per dichiarare nuovamente le variabili in /Ze come segue:  
+ È anche possibile usare le differenze di ambito di **per** ciclo per dichiarare nuovamente le variabili in /Ze come segue:  
   
 ```cpp  
 // for_statement5.cpp  
@@ -151,7 +151,7 @@ int main(){
 }  
 ```  
   
- Questo è molto simile al comportamento standard di una variabile dichiarata in un ciclo `for`, che richiede variabili dichiarate in un ciclo `for` per uscire dall'ambito al termine del ciclo. Quando una variabile viene dichiarata in un ciclo `for`, il compilatore la promuove internamente a una variabile locale nell'ambito che la contiene del ciclo `for`, anche se esiste già una variabile locale con lo stesso nome.  
+ Ciò è molto simile al comportamento standard di una variabile dichiarata in un **per** ciclo, che richiede variabili dichiarate in un **per** ciclo esca dall'ambito dopo il ciclo viene completato. Quando una variabile viene dichiarata un **per** ciclo, il compilatore la promuove internamente a una variabile locale nel **per** ciclo dell'ambito che lo contiene anche se è già presente una variabile locale con lo stesso nome.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Istruzioni di iterazione](../cpp/iteration-statements-cpp.md)   
