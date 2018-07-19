@@ -1,5 +1,5 @@
 ---
-title: Interoperabilità con altri linguaggi .NET (C + + CLI) | Documenti Microsoft
+title: Interoperabilità con altri linguaggi .NET (C + + CLI) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -7,28 +7,187 @@ ms.technology:
 ms.topic: conceptual
 dev_langs:
 - C++
+helpviewer_keywords:
+- C++, indexers
+- indexers, consuming C#
+- as C# keyword [C++]
+- is C# keyword [C++]
+- lock statement
+- lock C# keyword [C++]
 ms.assetid: a5902cf8-a14d-4559-aefb-c178615d45bb
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 80f7c99cf4b4127a1b4862aae64cc604ae3e0f69
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 000009eca8150774150ab1e1d8f6d228aaf5c912
+ms.sourcegitcommit: 27be37ae07ee7b657a54d23ed34438220d977fdc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33129099"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39110299"
 ---
 # <a name="interoperability-with-other-net-languages-ccli"></a>Interoperabilità con altri linguaggi .NET (C++/CLI)
-Gli argomenti in questa sezione illustrano come creare gli assembly in Visual C++ che utilizzano da o offrono funzionalità agli assembly scritti in c# o Visual Basic.  
+Gli argomenti in questa sezione illustrano come creare gli assembly in Visual C++ che usano da o offrono funzionalità agli assembly scritti in c# o Visual Basic.  
   
-## <a name="in-this-section"></a>In questa sezione  
- [Procedura: Implementare le parole chiave is e as di C# (C++/CLI)](../dotnet/how-to-implement-is-and-as-csharp-keywords-cpp-cli.md)  
+## <a name="consume_indexer"></a> Usare un indicizzatore c#
+Visual C++ non supporta gli indicizzatori; dispone di proprietà indicizzate. Per usare un indicizzatore in c#, accedere all'indicizzatore come se fosse una proprietà indicizzata.  
   
- [Procedura: Implementare la parola chiave lock di C# (C++/CLI)](../dotnet/how-to-implement-the-lock-csharp-keyword-cpp-cli.md)  
+ Per altre informazioni sugli indicizzatori, vedere:  
   
- [Procedura: Usare un indicizzatore C# (C++/CLI)](../dotnet/how-to-consume-a-csharp-indexer-cpp-cli.md)  
+-   [Indicizzatori](/dotnet/csharp/programming-guide/indexers/index)  
+  
+### <a name="example"></a>Esempio  
+ Il programma c# seguente definisce un indicizzatore.  
+  
+```csharp  
+// consume_cs_indexers.cs  
+// compile with: /target:library  
+using System;  
+public class IndexerClass {  
+   private int [] myArray = new int[100];   
+   public int this [int index] {   // Indexer declaration  
+      get {  
+         // Check the index limits.  
+         if (index < 0 || index >= 100)  
+            return 0;  
+         else  
+            return myArray[index];  
+      }  
+      set {  
+         if (!(index < 0 || index >= 100))  
+            myArray[index] = value;  
+      }  
+   }  
+}  
+/*  
+// code to consume the indexer  
+public class MainClass {  
+   public static void Main() {  
+      IndexerClass b = new IndexerClass();  
+  
+      // Call indexer to initialize elements 3 and 5  
+      b[3] = 256;  
+      b[5] = 1024;  
+      for (int i = 0 ; i <= 10 ; i++)   
+         Console.WriteLine("Element #{0} = {1}", i, b[i]);  
+   }  
+}  
+*/  
+```  
+  
+### <a name="example"></a>Esempio  
+ Questo programma Visual C++ Usa l'indicizzatore.  
+  
+```cpp  
+// consume_cs_indexers_2.cpp  
+// compile with: /clr  
+#using "consume_cs_indexers.dll"  
+using namespace System;  
+  
+int main() {  
+   IndexerClass ^ ic = gcnew IndexerClass;  
+   ic->default[0] = 21;  
+   for (int i = 0 ; i <= 10 ; i++)  
+      Console::WriteLine("Element #{0} = {1}", i, ic->default[i]);  
+}  
+```  
+  
+```Output  
+Element #0 = 21  
+Element #1 = 0  
+Element #2 = 0  
+Element #3 = 0  
+Element #4 = 0  
+Element #5 = 0  
+Element #6 = 0  
+Element #7 = 0  
+Element #8 = 0  
+Element #9 = 0  
+Element #10 = 0  
+```  
+
+## <a name="implement_isas"></a> Implementare è e come parole chiave di c#
+In questo argomento viene illustrato come implementare la funzionalità dei `is` e `as` parole chiave di c# in Visual C++.  
+  
+### <a name="example"></a>Esempio  
+  
+```cpp  
+// CS_is_as.cpp  
+// compile with: /clr  
+using namespace System;  
+  
+interface class I {  
+public:  
+   void F();  
+};  
+  
+ref struct C : public I {  
+   virtual void F( void ) { }  
+};  
+  
+template < class T, class U >   
+Boolean isinst(U u) {  
+   return dynamic_cast< T >(u) != nullptr;  
+}  
+  
+int main() {  
+   C ^ c = gcnew C();  
+   I ^ i = safe_cast< I ^ >(c);   // is (maps to castclass in IL)  
+   I ^ ii = dynamic_cast< I ^ >(c);   // as (maps to isinst in IL)  
+  
+   // simulate 'as':  
+   Object ^ o = "f";  
+   if ( isinst< String ^ >(o) )  
+      Console::WriteLine("o is a string");  
+}  
+```  
+  
+```Output  
+o is a string  
+```  
+
+## <a name="implement_locak"></a> Implementare la parola chiave c# lock
+In questo argomento viene illustrato come implementare il codice c# `lock` parola chiave in Visual C++. 
+  
+ È anche possibile usare il `lock` classe nella libreria di supporto di C++. Visualizzare [sincronizzazione (classe lock)](../dotnet/synchronization-lock-class.md) per altre informazioni.  
+  
+### <a name="example"></a>Esempio  
+  
+```cpp  
+// CS_lock_in_CPP.cpp  
+// compile with: /clr  
+using namespace System::Threading;  
+ref class Lock {  
+   Object^ m_pObject;  
+public:  
+   Lock( Object ^ pObject ) : m_pObject( pObject ) {  
+      Monitor::Enter( m_pObject );  
+   }  
+   ~Lock() {  
+      Monitor::Exit( m_pObject );  
+   }  
+};  
+  
+ref struct LockHelper {  
+   void DoSomething();  
+};  
+  
+void LockHelper::DoSomething() {  
+   // Note: Reference type with stack allocation semantics to provide   
+   // deterministic finalization  
+  
+   Lock lock( this );     
+   // LockHelper instance is locked  
+}  
+  
+int main()  
+{  
+   LockHelper lockHelper;  
+   lockHelper.DoSomething();  
+   return 0;  
+}  
+```  
   
 ## <a name="see-also"></a>Vedere anche  
  [Programmazione .NET con C++/CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

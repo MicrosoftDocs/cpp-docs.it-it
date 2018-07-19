@@ -1,5 +1,5 @@
 ---
-title: eseguire-mentre l'istruzione (C++) | Documenti Microsoft
+title: si-while istruzione (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,14 +19,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 81ed3628b75b98bdf7883de275ccd8f74a066abd
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d2de180d58c31f4bd6c8b15eb69076b99f8b57b0
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37943654"
 ---
 # <a name="do-while-statement-c"></a>Istruzione do-while (C++)
-Esegue un *istruzione* ripetutamente finché la condizione di chiusura specificata (il *espressione*) restituisce zero.  
+Esegue una *istruzione* ripetutamente finché la condizione di chiusura specificata (il *espressione*) restituisce zero.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,18 +38,18 @@ while ( expression ) ;
 ```  
   
 ## <a name="remarks"></a>Note  
- Il test della condizione di chiusura viene eseguito dopo ogni esecuzione del ciclo; pertanto, un ciclo `do-while` viene eseguito una o più volte, a seconda del valore dell'espressione di chiusura. Il `do-while` istruzione può terminare anche quando un [interruzione](../cpp/break-statement-cpp.md), [goto](../cpp/goto-statement-cpp.md), o [restituire](../cpp/return-statement-cpp.md) nel corpo dell'istruzione viene eseguita l'istruzione.  
+ Il test della condizione di chiusura viene eseguito dopo ogni esecuzione del ciclo; Pertanto, un **scopo-mentre** ciclo viene eseguito una o più volte, a seconda del valore dell'espressione di chiusura. Il **è-mentre** istruzione può terminare anche quando una [interruzione](../cpp/break-statement-cpp.md), [goto](../cpp/goto-statement-cpp.md), o [restituire](../cpp/return-statement-cpp.md) istruzione viene eseguita nel corpo dell'istruzione.  
   
  *espressione* deve essere di tipo puntatore o aritmetico. L'esecuzione procede nel modo seguente:  
   
 1.  Viene eseguito il corpo dell'istruzione.  
   
-2.  Viene quindi valutato *expression*. Se *expression* è false, l'istruzione `do-while` termina e il controllo passa all'istruzione successiva nel programma. Se *expression* è true (diverso da zero), il processo viene ripetuto a partire dal passaggio 1.  
+2.  Viene quindi valutato *expression*. Se *espressione* è false, il **scopo-mentre** istruzione termina e il controllo passa all'istruzione successiva nel programma. Se *expression* è true (diverso da zero), il processo viene ripetuto a partire dal passaggio 1.  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene mostrato l'utilizzo dell'istruzione `do-while`:  
+ Nell'esempio seguente viene illustrato il **scopo-mentre** istruzione:  
   
-```  
+```cpp 
 // do_while_statement.cpp  
 #include <stdio.h>  
 int main()  

@@ -1,5 +1,5 @@
 ---
-title: Ellissi e modelli Variadic | Documenti Microsoft
+title: Ellissi e modelli Variadic | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,22 +12,22 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2eddd87660d996e0d726c4453e0eb732a5553b99
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b37df4146b23404463ec869e00a8cf5298b7acf5
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32416658"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37941005"
 ---
 # <a name="ellipses-and-variadic-templates"></a>Ellissi e modelli variadic
-In questo articolo viene illustrato come utilizzare i puntini di sospensione (`...`) con i modelli di variadic C++. I puntini di sospensione ha molti modi in C e C++. Sono inclusi elenchi di argomenti variabili per le funzioni. Il `printf()` funzione dalla libreria di Runtime C è uno degli esempi più noti.  
+Questo articolo illustra come usare i puntini di sospensione (`...`) con i modelli variadic di C++. I puntini di sospensione è stato usato in diversi modi in C e C++. Ad esempio elenchi di argomenti variabili per le funzioni. Il `printf()` funzione dalla libreria di Runtime C è uno degli esempi più noti.  
   
- Oggetto *modello variadic* è un modello di classe o una funzione che supporta un numero arbitrario di argomenti. Questo meccanismo è particolarmente utile per gli sviluppatori di librerie C++ perché è possibile applicarlo a modelli di classe e i modelli di funzione e in tal modo forniscono un'ampia gamma di funzionalità indipendente dai tipi e non semplice e flessibilità.  
+ Oggetto *modello variadic* è un modello di classe o funzione che supporta un numero arbitrario di argomenti. Questo meccanismo è particolarmente utile per gli sviluppatori di librerie C++ perché è possibile applicarla a entrambi i modelli di classe e i modelli di funzione e in tal modo forniscono un'ampia gamma di funzionalità complesse e indipendenti dai tipi e flessibilità.  
   
 ## <a name="syntax"></a>Sintassi  
- I puntini di sospensione viene utilizzato in due modi dai modelli di variadic. A sinistra del nome del parametro, indica un *pacchetto parametri*, e a destra del nome del parametro espande i pacchetti di parametri in nomi distinti.  
+ I puntini di sospensione viene usato in due modi da diversi modelli variadic. A sinistra del nome del parametro indica un *pacchetto di parametri*, e a destra del nome del parametro espande i pacchetti di parametri in nomi distinti.  
   
- Ecco un esempio di base di *classe modello variadic* sintassi di definizione:  
+ Ecco un esempio di base *classe di modello variadic* sintassi di definizione:  
   
 ```cpp  
 template<typename... Arguments> class classname;  
@@ -47,7 +47,7 @@ template<typename ... Arguments> class classname;
   
  Si noti che in questo articolo viene utilizzata la convenzione illustrata nel primo esempio (i puntini di sospensione sono associati a `typename`).  
   
- Nell'esempio precedente `Arguments` è un pacchetto di parametri. La classe `classname` può accettare un numero variabile di argomenti, come illustrato in questi esempi:  
+ Nell'esempio precedente `Arguments` è un pacchetto di parametri. La classe `classname` può accettare un numero variabile di argomenti, come in questi esempi:  
   
 ```cpp  
 template<typename... Arguments> class vtclass;  
@@ -59,22 +59,22 @@ vtclass<long, std::vector<int>, std::string> vtinstance4;
   
 ```  
   
- Utilizzando una definizione di classe modello variadic, è inoltre possibile richiedere almeno un parametro:  
+ Usando una definizione di classe modello variadic, è anche possibile richiedere almeno un parametro:  
   
 ```cpp  
 template <typename First, typename... Rest> class classname;  
   
 ```  
   
- Ecco un esempio di base di *funzione modello variadic* sintassi:  
+ Ecco un esempio di base *funzione di modello variadic* sintassi:  
   
 ```cpp  
 template <typename... Arguments> returntype functionname(Arguments... args);  
 ```  
   
- Il `Arguments` pacchetto parametri viene quindi espansa per l'utilizzo, come illustrato nella sezione successiva, **informazioni sui modelli di variadic**.  
+ Il `Arguments` pacchetto di parametri viene quindi espanso per l'uso, come illustrato nella sezione successiva **comprensione dei modelli di variadic**.  
   
- Sono possibili altre forme di sintassi della funzione di modello variadic, inclusi, ma non limitata, in questi esempi:  
+ Sono possibili altre forme di sintassi della funzione modello variadic, tra cui, senza limitazioni, questi esempi:  
   
 ```cpp  
 template <typename... Arguments> returntype functionname(Arguments&... args);   
@@ -82,21 +82,21 @@ template <typename... Arguments> returntype functionname(Arguments&&... args);
 template <typename... Arguments> returntype functionname(Arguments*... args);  
 ```  
   
- Ad esempio identificatori `const` sono inoltre consentiti:  
+ Gli identificatori come **const** sono inoltre consentite:  
   
 ```cpp  
 template <typename... Arguments> returntype functionname(const Arguments&... args);  
   
 ```  
   
- Come le definizioni di classi modello variadic, è possibile apportare le funzioni che richiedono almeno un parametro:  
+ Come le definizioni di classi modello variadic, è possibile creare funzioni che richiedono almeno un parametro:  
   
 ```cpp  
 template <typename First, typename... Rest> returntype functionname(const First& first, const Rest&... args);  
   
 ```  
   
- Utilizzano modelli Variadic il `sizeof...()` (operatore) (non correlati a versioni precedenti `sizeof()` (operatore)):  
+ I modelli Variadic utilizzano le `sizeof...()` operatore (non correlato al meno recente `sizeof()` operator):  
   
 ```cpp  
 template<typename... Arguments>  
@@ -116,7 +116,7 @@ void tfunc(const Arguments&... args)
   
 -   In un elenco di parametri di modello (`template <parameter-list>`), `typename...` introduce un pacchetto di parametri di modello.  
   
--   In una clausola di dichiarazione di parametro (`func(parameter-list)`), un puntini di sospensione "principale" introduce un pacchetto di parametri di funzione e il posizionamento di puntini di sospensione è importante:  
+-   In una clausola di dichiarazione di parametro (`func(parameter-list)`), un "livello superiore" puntini di sospensione introduce un pacchetto di parametri di funzione e il posizionamento dei puntini è importante:  
   
     ```cpp  
     // v1 is NOT a function parameter pack:  
@@ -129,7 +129,7 @@ void tfunc(const Arguments&... args)
 -   Quando i puntini di sospensione sono presenti subito dopo un nome di parametro, si ottiene un'espansione del pacchetto di parametri.  
   
 ## <a name="example"></a>Esempio  
- È un buon metodo per illustrare il meccanismo di funzione di modello variadic uso di alcune delle funzionalità di riscrittura `printf`:  
+ Un buon metodo per illustrare il meccanismo variadic della funzione modello è utilizzarlo nella riscrittura di alcune delle funzionalità di `printf`:  
   
 ```cpp  
 #include <iostream>  
@@ -174,5 +174,5 @@ first, 2, third, 3.14159
 ```  
   
 > [!NOTE]
->  Usare la maggior parte delle implementazioni che incorporano le funzioni modello variadic ricorsione qualche forma di, ma è leggermente diversa rispetto alla ricorsione tradizionale.  Ricorsione tradizionale implica una funzione chiama se stesso tramite la stessa firma. (Potrebbe essere sovraccarico o basato su modelli, ma la stessa firma viene scelto ogni volta). Ricorsione Variadic implica la chiamata di un modello di funzione variadic utilizzando diversi numeri (quasi sempre decrescente) di argomenti e l'indicazione in tal modo out una firma diversa ogni volta. Un "case di base" è ancora necessaria, ma la natura della ricorsione è diversa.  
+>  La maggior parte delle implementazioni che includono funzioni variadic del modello usano la ricorsione di qualche tipo, ma è leggermente diversa dalla ricorsione tradizionale.  La ricorsione tradizionale include una funzione chiamata al metodo di stesso usando la stessa firma. (Potrebbe essere in overload o basata su modelli, ma ogni volta viene scelta la stessa firma). La ricorsione Variadic prevede la chiamata a un modello di funzione variadic utilizzando numeri (quasi sempre decrescenti) diversi di argomenti e quindi scegliendo una firma diversa ogni volta. Un "case di base" è ancora necessaria, ma la natura della ricorsione è differente.  
   

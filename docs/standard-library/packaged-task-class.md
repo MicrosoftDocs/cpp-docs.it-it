@@ -30,12 +30,12 @@ helpviewer_keywords:
 - std::packaged_task [C++], valid
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b37d6fc7b01c179f017e04f8064a789b8f4ad2b9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7eb5b8d003682f5b941dd805f424afbe4a36cc85
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33860905"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964795"
 ---
 # <a name="packagedtask-class"></a>Classe packaged_task
 
@@ -77,7 +77,7 @@ class packaged_task;
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** \<futura >
+**Intestazione:** \<future >
 
 **Spazio dei nomi:** std
 
@@ -123,7 +123,7 @@ packaged_task& operator=(packaged_task&& Right);
 
 ### <a name="parameters"></a>Parametri
 
-`Right` Oggetto `packaged_task` oggetto.
+*A destra* oggetto `packaged_task` oggetto.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -131,7 +131,7 @@ packaged_task& operator=(packaged_task&& Right);
 
 ### <a name="remarks"></a>Note
 
-Dopo l'operazione, `Right` non ha un più uno stato asincrono associato.
+Al termine dell'operazione *destra* non ha più uno stato asincrono associato.
 
 ## <a name="op_call"></a>  packaged_task::operator()
 
@@ -159,7 +159,7 @@ operator bool() const noexcept;
 
 ### <a name="return-value"></a>Valore restituito
 
-`true` se l'oggetto ha uno stato asincrono associato; in caso contrario, `false`.
+**true** se l'oggetto ha uno stato asincrono associato; in caso contrario, **false**.
 
 ## <a name="packaged_task"></a>  Costruttore packaged_task::packaged_task
 
@@ -178,21 +178,21 @@ template <class Fn, class Alloc>
 
 ### <a name="parameters"></a>Parametri
 
-`Right` Oggetto `packaged_task` oggetto.
+*A destra* oggetto `packaged_task` oggetto.
 
-`alloc` Allocatore di memoria. Per altre informazioni, vedere [\<allocators>](../standard-library/allocators-header.md).
+*Alloc* un allocatore di memoria. Per altre informazioni, vedere [\<allocators>](../standard-library/allocators-header.md).
 
-`fn` Un oggetto funzione.
+*Fn* un oggetto funzione.
 
 ### <a name="remarks"></a>Note
 
-Il primo costruttore costruisce un oggetto `packaged_task` che non ha uno *stato asincrono associato*.
+Il primo costruttore crea un oggetto `packaged_task` che non ha *stato asincrono associato*.
 
-Il secondo costruttore crea un oggetto `packaged_task` e trasferisce lo stato asincrono associato da `Right`. Dopo l'operazione, `Right` non ha un più uno stato asincrono associato.
+Il secondo costruttore crea un `packaged_task` dell'oggetto e trasferisce lo stato asincrono associato da *destra*. Al termine dell'operazione *destra* non ha più uno stato asincrono associato.
 
-Il terzo costruttore crea un oggetto `packaged_task` con una copia di `fn` memorizzata nello stato asincrono associato.
+Il terzo costruttore crea un `packaged_task` che ha una copia dell'oggetto *fn* archiviato nello stato asincrono associato.
 
-Il quarto costruttore crea un oggetto `packaged_task` con una copia di `fn` memorizzata nello stato asincrono associato e utilizza `alloc` per l'allocazione della memoria.
+Il quarto costruttore crea un `packaged_task` che ha una copia dell'oggetto *fn* archiviato nello stato asincrono associato e utilizza `alloc` per l'allocazione di memoria.
 
 ## <a name="dtorpackaged_task_destructor"></a>  Distruttore packaged_task::~packaged_task
 
@@ -228,7 +228,7 @@ void swap(packaged_task& Right) noexcept;
 
 ### <a name="parameters"></a>Parametri
 
-`Right` Oggetto `packaged_task` oggetto.
+*A destra* oggetto `packaged_task` oggetto.
 
 ## <a name="valid"></a>  packaged_task::valid
 
@@ -240,7 +240,7 @@ bool valid() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-`true` se l'oggetto ha uno stato asincrono associato; in caso contrario, `false`.
+**true** se l'oggetto ha uno stato asincrono associato; in caso contrario, **false**.
 
 ## <a name="see-also"></a>Vedere anche
 

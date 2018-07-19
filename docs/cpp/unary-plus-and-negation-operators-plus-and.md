@@ -1,5 +1,5 @@
 ---
-title: 'Operatori di negazione e operatore più unario: + e - | Documenti Microsoft'
+title: 'Più e operatori di negazione unari: + e - | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,11 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1441337275ac07b0d1ba39e8bfa34e7165f87f82
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: aa500288ec4982ca4e1d304fac2cd577d58f4207
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37943921"
 ---
 # <a name="unary-plus-and-negation-operators--and--"></a>Operatori più e operatori di negazione unari: + e -
 ## <a name="syntax"></a>Sintassi  
@@ -33,22 +34,18 @@ ms.lasthandoff: 05/03/2018
 ```  
   
 + cast-expression  
-```  
-  
-```  
-  
 - cast-expression  
 ```  
   
 ## <a name="-operator"></a>+ (operatore)  
- Il risultato dell'operatore più unario (**+**) è il valore dell'operando. L'operando dell'operatore unario più deve essere un tipo aritmetico.  
+ Il risultato dell'operatore più unario (**+**) è il valore del relativo operando. L'operando dell'operatore unario più deve essere un tipo aritmetico.  
   
- La promozione a intero viene eseguita su operandi integrali. Il tipo risultante è il tipo a cui l'operando viene promosso. Pertanto l'espressione `+ch`, dove `ch` è di tipo `char`, determina il tipo `int`, mentre il valore rimane invariato. Vedere [conversioni Standard](standard-conversions.md) per ulteriori informazioni su come eseguire l'innalzamento di livello.  
+ La promozione a intero viene eseguita su operandi integrali. Il tipo risultante è il tipo a cui l'operando viene promosso. Di conseguenza, l'espressione `+ch`, dove `ch` JE typu **char**, tipo **int**; il valore rimane invariato. Visualizzare [conversioni Standard](standard-conversions.md) per altre informazioni sul modo in cui viene eseguita la promozione.  
   
 ## <a name="--operator"></a>- (operatore)  
  L'operatore di negazione unario (**-**) produce il corrispondente negativo del relativo operando. L'operando nell'operatore di negazione unario deve essere un tipo aritmetico.  
   
- La promozione a intero viene eseguita su operandi integrali e il tipo risultante è il tipo a cui l'operando viene promosso. Vedere [conversioni Standard](standard-conversions.md) per ulteriori informazioni su come viene eseguita la promozione.  
+ La promozione a intero viene eseguita su operandi integrali e il tipo risultante è il tipo a cui l'operando viene promosso. Visualizzare [conversioni Standard](standard-conversions.md) per altre informazioni sul modo in cui viene eseguito l'innalzamento di livello.  
   
 ## <a name="microsoft-specific"></a>Sezione specifica Microsoft  
  La negazione unaria di quantità senza segno viene eseguita sottraendo il valore dell'operando da 2^n, dove n è il numero di bit in un oggetto di tipo specificato senza segno.

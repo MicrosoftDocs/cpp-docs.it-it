@@ -1,5 +1,5 @@
 ---
-title: Istruzioni continue (C++) | Documenti Microsoft
+title: Istruzioni continue (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b153c9f5dfae93f1a5cb83dc2b9bcfc09e77af07
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 97422a09f890686c4d414eea13da7db891494cc4
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37943865"
 ---
 # <a name="continue-statement-c"></a>Istruzioni continue (C++)
-Forza il trasferimento del controllo per l'espressione di controllo di inclusione più piccolo [si](../cpp/do-while-statement-cpp.md), [per](../cpp/for-statement-cpp.md), o [mentre](../cpp/while-statement-cpp.md) ciclo.  
+Forza il trasferimento del controllo per l'espressione di controllo di inclusione più piccolo [scopo](../cpp/do-while-statement-cpp.md), [per](../cpp/for-statement-cpp.md), o [mentre](../cpp/while-statement-cpp.md) ciclo.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -34,15 +35,15 @@ continue;
 ## <a name="remarks"></a>Note  
  Alcune istruzioni restanti nell'iterazione corrente non vengono eseguite. L'iterazione successiva del ciclo è determinata nel modo seguente:  
   
--   In un ciclo `do` o `while`, l'iterazione successiva inizia rivalutando l'espressione di controllo dell'istruzione `do` o `while`.  
+-   In un **effettuare** o **mentre** ciclo, l'iterazione successiva inizia rivalutando l'espressione di controllo del **eseguire** o **mentre** istruzione.  
   
--   In un ciclo `for` (utilizzando la sintassi `for`(`init-expr`; `cond-expr`; `loop-expr`)), la clausola `loop-expr` viene eseguita. La clausola `cond-expr` viene rivalutata e, a seconda del risultato, il ciclo termina o si verifica un'altra iterazione.  
+-   In un **per** ciclo (usando la sintassi `for`(`init-expr`; `cond-expr`; `loop-expr`)), il `loop-expr` clausola viene eseguita. La clausola `cond-expr` viene rivalutata e, a seconda del risultato, il ciclo termina o si verifica un'altra iterazione.  
   
- Di seguito viene illustrato come l'istruzione `continue` può essere utilizzata per ignorare le sezioni di codice e avviare l'iterazione successiva di un ciclo.  
+ L'esempio seguente illustra come la **continuare** istruzione può essere utilizzata per ignorare le sezioni di codice e avviare l'iterazione successiva di un ciclo.  
   
 ## <a name="example"></a>Esempio  
   
-```  
+```cpp 
 // continue_statement.cpp  
 #include <stdio.h>  
 int main()  

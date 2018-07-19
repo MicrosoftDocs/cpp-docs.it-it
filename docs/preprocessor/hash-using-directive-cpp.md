@@ -1,5 +1,5 @@
 ---
-title: '#Direttiva using (C + + Common Language Runtime) | Documenti Microsoft'
+title: '#Direttiva using (C + + CLI) | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,14 +22,14 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 053c425a6bb8dcab0dc5cb94db1537f0fff3d9f8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c2255f5de9cc26505bb07110da6368a039009c6c
+ms.sourcegitcommit: b8b1cba85ff423142d73c888be26baa8c33f3cdc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33840736"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39093033"
 ---
-# <a name="using-directive-cclr"></a>#using (direttiva) (C + + Common Language Runtime)
+# <a name="using-directive-ccli"></a>#using (direttiva) (C + + CLI)
 Importa i metadati in un programma compilato con [/clr](../build/reference/clr-common-language-runtime-compilation.md).  
   
 ## <a name="syntax"></a>Sintassi  
@@ -45,27 +45,27 @@ Importa i metadati in un programma compilato con [/clr](../build/reference/clr-c
  `#using <MyComponent.dll>`  
   
  as_friend  
- Specifica che tutti i tipi in `file` sono accessibili.  Per ulteriori informazioni, vedere [assembly Friend (C++)](../dotnet/friend-assemblies-cpp.md).  
+ Specifica che tutti i tipi in `file` sono accessibili.  Per altre informazioni, vedere [gli assembly Friend (C++)](../dotnet/friend-assemblies-cpp.md).  
   
 ## <a name="remarks"></a>Note  
- `file` può essere un file del linguaggio MSIL (Microsoft Intermediate Language) che viene importato per dati e costrutti gestiti. Se un file DLL contiene un manifesto dell'assembly, quindi vengono importati tutti i file. dll a cui fa riferimento nel manifesto dell'assembly a cui si sta compilando elencherà *file* nei metadati come un riferimento all'assembly.  
+ `file` può essere un file del linguaggio MSIL (Microsoft Intermediate Language) che viene importato per dati e costrutti gestiti. Se un file con estensione dll contiene un manifesto dell'assembly, quindi vengono importati tutti i file con estensione DLL a cui fa riferimento il manifesto e l'assembly a cui si sta compilando elencherà *file* nei metadati come un riferimento all'assembly.  
   
- Se `file` non contiene un assembly (se `file` è un modulo) e se non si intende utilizzare le informazioni sul tipo del modulo nell'applicazione corrente (assembly), è possibile semplicemente indicare che il modulo è parte dell'assembly; usare [/ASSEMBLYMODULE](../build/reference/assemblymodule-add-a-msil-module-to-the-assembly.md). I tipi nel modulo sono quindi disponibili per qualsiasi applicazione con riferimento nell'assembly.  
+ Se `file` non contiene un assembly (se `file` è un modulo) e se non si intende usare le informazioni sul tipo dal modulo nell'applicazione corrente (assembly), è possibile semplicemente indicare che il modulo è parte dell'assembly; usare [/ASSEMBLYMODULE](../build/reference/assemblymodule-add-a-msil-module-to-the-assembly.md). I tipi nel modulo sono quindi disponibili per qualsiasi applicazione con riferimento nell'assembly.  
   
- Un'alternativa all'utilizzo `#using` è il [/FU](../build/reference/fu-name-forced-hash-using-file.md) l'opzione del compilatore.  
+ Un'alternativa all'utilizzo `#using` è il [/FU](../build/reference/fu-name-forced-hash-using-file.md) opzione del compilatore.  
   
- gli assembly .exe passati a `#using` deve essere compilato utilizzando uno dei compilatori di Visual Studio .NET (Visual Basic o Visual c#, ad esempio).  Il tentativo di importare i metadati da un assembly .exe compilato con **/clr** genererà un'eccezione di caricamento file.  
+ gli assembly .exe passato a `#using` deve essere compilato usando uno dei compilatori Visual Studio .NET (Visual Basic o Visual c#, ad esempio).  Tentativo di importare i metadati da un assembly .exe compilato con **/clr** comporterà un'eccezione di caricamento file.  
   
 > [!NOTE]
 >  Un componente a cui si fa riferimento con `#using` può essere eseguito con una versione del file importato in fase di compilazione, comportando la produzione di risultati imprevisti da un'applicazione client.  
   
- Affinché il compilatore di riconoscere un tipo in un assembly (non un modulo), deve essere forzato per risolvere il tipo, che è possibile eseguire, ad esempio, mediante la definizione di un'istanza del tipo. Esistono altri modi per risolvere i nomi dei tipi in un assembly per il compilatore, ad esempio, se si eredita da un tipo in un assembly, il nome del tipo verrà quindi diventano noti al compilatore.  
+ Affinché il compilatore possa riconoscere un tipo in un assembly (non un modulo), deve essere forzata la risoluzione del tipo, è possibile ripetere l'operazione, ad esempio, con la definizione di un'istanza del tipo. Esistono altri modi per risolvere i nomi dei tipi in un assembly per il compilatore, ad esempio, se si eredita da un tipo in un assembly, il nome del tipo verrà quindi diventare noto al compilatore.  
   
- Quando si importano metadati compilati dal codice sorgente che utilizza [declspec](../cpp/thread.md), la semantica del thread non è persistenti nei metadati. Ad esempio, una variabile dichiarata con **declspec**, compilata in un programma compilato per .NET Framework common language runtime e quindi importata con `#using`, non sarà più possibile **( declspec thread)** semantica sulla variabile.  
+ Quando si importano metadati compilati dal codice sorgente che utilizza [declspec](../cpp/thread.md), la semantica del thread non viene mantenuta nei metadati. Ad esempio, una variabile dichiarata con **declspec**, compilata in un programma che si intende la compilazione per .NET Framework common language runtime e quindi importate tramite `#using`, non sarà più possibile **( declspec thread)** semantica sulla variabile.  
   
  Tutti i tipi importati (sia gestiti che nativi) in un file a cui viene fatto riferimento con `#using` sono disponibili, ma il compilatore tratta i tipi nativi come dichiarazioni e non come definizioni.  
   
- mscorlib.dll viene fatto automaticamente riferimento durante la compilazione con **/clr**.  
+ mscorlib. dll viene automaticamente fatto riferimento durante la compilazione con **/clr**.  
   
  La variabile di ambiente LIBPATH specifica le directory in cui verrà eseguita la ricerca quando il compilatore tenta di risolvere i nomi dei file passati con `#using`.  
   
@@ -77,7 +77,7 @@ Importa i metadati in un programma compilato con [/clr](../build/reference/clr-c
   
 -   Directory di sistema di .NET Framework.  
   
--   Directiry aggiunte con il [/AI](../build/reference/ai-specify-metadata-directories.md) l'opzione del compilatore.  
+-   Directiry aggiunte con il [/AI](../build/reference/ai-specify-metadata-directories.md) opzione del compilatore.  
   
 -   Directory nella variabile di ambiente LIBPATH.  
   

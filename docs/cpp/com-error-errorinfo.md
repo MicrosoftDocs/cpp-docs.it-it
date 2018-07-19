@@ -1,5 +1,5 @@
 ---
-title: _com_error::ErrorInfo | Documenti Microsoft
+title: _com_error::ErrorInfo | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8fbc735dfae1b30209eccfd14f1170826fb07680
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 52935c81849ded072cb20d6c835b3a71b66c2871
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32410993"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37941314"
 ---
 # <a name="comerrorerrorinfo"></a>_com_error::ErrorInfo
 **Sezione specifica Microsoft**  
   
- Recupera il **IErrorInfo** oggetto passato al costruttore.  
+ Recupera il `IErrorInfo` oggetto passato al costruttore.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,10 +37,10 @@ IErrorInfo * ErrorInfo( ) const throw( );
 ```  
   
 ## <a name="return-value"></a>Valore restituito  
- Raw **IErrorInfo** elemento passato al costruttore.  
+ L'elemento `IErrorInfo` non elaborato passato nel costruttore.  
   
 ## <a name="remarks"></a>Note  
- Recupera incapsulato **IErrorInfo** elemento un `_com_error` oggetto, o **NULL** se nessun **IErrorInfo** elemento viene registrato. Il chiamante deve chiamare **versione** sull'oggetto restituito al termine dell'utilizzo.  
+ Recupera incapsulato `IErrorInfo` di elemento un `_com_error` dell'oggetto, o NULL se nessun `IErrorInfo` voce viene registrata. Il chiamante deve chiamare `Release` sull'oggetto restituito al termine utilizzarlo.  
   
  **Fine sezione specifica Microsoft**  
   

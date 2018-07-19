@@ -1,5 +1,5 @@
 ---
-title: UUID (C++) | Documenti Microsoft
+title: UUID (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b143def4d758307c6ce6737281bdca1097aaa8c5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e81b81509877ff53b613af80638b2386ed0cb0b2
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37943910"
 ---
 # <a name="uuid-c"></a>uuid (C++)
 **Sezione specifica Microsoft**  
   
- Il compilatore associa un GUID a una classe o struttura dichiarata o definita (solo per le definizioni complete dell'oggetto COM) con l'attributo `uuid`.  
+ Il compilatore associa un GUID a una classe o struttura dichiarata o definita (COM oggetto definizioni complete solo) con i **uuid** attributo.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -36,14 +37,14 @@ __declspec( uuid("ComObjectGUID") ) declarator
 ```  
   
 ## <a name="remarks"></a>Note  
- L'attributo `uuid` accetta una stringa come proprio argomento. Questa stringa denomina un GUID nel formato normale del Registro di sistema con o senza il **{}** delimitatori. Ad esempio:  
+ Il **uuid** attributo accetta una stringa come argomento. Questa stringa denomina un GUID in formato normale del Registro di sistema con o senza il **{}** delimitatori. Ad esempio:  
   
-```  
+```cpp 
 struct __declspec(uuid("00000000-0000-0000-c000-000000000046")) IUnknown;  
 struct __declspec(uuid("{00020400-0000-0000-c000-000000000046}")) IDispatch;  
 ```  
   
- Tale attributo può essere applicato in una ridichiarazione. Questo consente alle intestazioni di sistema di fornire le definizioni di interfaccia come **IUnknown**e alla ridichiarazione in un'altra intestazione (ad esempio \<Comdef. h >) per fornire il GUID.  
+ Tale attributo può essere applicato in una ridichiarazione. In questo modo le intestazioni di sistema di fornire, ad esempio le definizioni delle interfacce `IUnknown`e alla ridichiarazione in un'altra intestazione (ad esempio \<Comdef. h >) per fornire il GUID.  
   
  La parola chiave [uuidof](../cpp/uuidof-operator.md) possono essere applicati per recuperare la costante GUID associata a un tipo definito dall'utente.  
   

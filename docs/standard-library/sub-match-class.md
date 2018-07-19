@@ -30,12 +30,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 740ebe26dd36dd89786806c3960e6184b117daeb
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 607a200230e1dfb167707e785f7f8fbbde118587
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33860255"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964782"
 ---
 # <a name="submatch-class"></a>Classe sub_match
 
@@ -65,7 +65,8 @@ public:
 
 ### <a name="parameters"></a>Parametri
 
-`BidIt` Tipo di iteratore per le sottocorrispondenze.
+*BidIt*  
+ Tipo di iteratore per le sottocorrispondenze.
 
 ## <a name="remarks"></a>Note
 
@@ -97,11 +98,14 @@ int compare(const value_type *ptr) const;
 
 ### <a name="parameters"></a>Parametri
 
-`right` Sottocorrispondenza da confrontare.
+*right*  
+ Sottocorrispondenza da confrontare.
 
-`str` Stringa da confrontare.
+*str*  
+ Stringa da confrontare.
 
-`ptr` La sequenza con terminazione null da confrontare.
+*ptr*  
+ Sequenza con terminazione null da confrontare.
 
 ### <a name="remarks"></a>Note
 
@@ -373,7 +377,7 @@ bool matched;
 
 ### <a name="remarks"></a>Note
 
-Il membro contiene `true` solo se il gruppo Capture associato a `*this` fa parte della corrispondenza di espressione regolare.
+Contiene il membro **true** solo se il gruppo capture associato `*this` faceva parte della corrispondenza di espressione regolare.
 
 ### <a name="example"></a>Esempio
 

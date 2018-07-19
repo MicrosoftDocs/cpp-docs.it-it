@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7fb721b23f473c59051e72edc969e5de38f1c984
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2e6df4526eea3b0b8b4e91fa4f3e6a89cdd8adb7
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33843249"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964310"
 ---
 # <a name="extent-class"></a>Classe extent
 
@@ -37,13 +37,13 @@ struct extent;
 
 ### <a name="parameters"></a>Parametri
 
-`Ty` Il tipo di query.
+*Ty* il tipo di query.
 
-`I` La matrice associata alla query.
+*Ho* matrice associata alla query.
 
 ## <a name="remarks"></a>Note
 
-Se `Ty` è un tipo di matrice con almeno `I` dimensioni, la query di tipo contiene il numero di elementi nella dimensione specificata da `I`. Se `Ty` non è un tipo di matrice o la sua classificazione è minore di `I`, o se `I` è zero e `Ty` è di tipo "matrice di valori associati sconosciuti di `U`", la query di tipo contiene il valore 0.
+Se *Ty* è un tipo di matrice con almeno *ho* dimensioni, la query di tipo contiene il numero di elementi nella dimensione specificata da *ho*. Se *Ty* non è un tipo di matrice o la classificazione è minore di *ho*, o se *ho* è uguale a zero e *Ty* è di tipo "matrice sconosciuto associata di `U` ", la query di tipo contiene il valore 0.
 
 ## <a name="example"></a>Esempio
 

@@ -14,11 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d341a2d7ee9f6220922dbdde95e19020fe085892
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1f516114dbaa9e507491cf669c3371b6b8fbaf11
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37943581"
 ---
 # <a name="setcomerrorhandler"></a>_set_com_error_handler
 **Sezione specifica Microsoft**  
@@ -37,23 +38,23 @@ void __stdcall _set_com_error_handler(
 ```  
   
 #### <a name="parameters"></a>Parametri  
- `pHandler`  
+ *pHandler*  
  Puntatore alla funzione di sostituzione.  
   
- `hr`  
- Informazioni `HRESULT`.  
+ *risorse umane*  
+ Informazioni su HRESULT.  
   
- `perrinfo`  
+ *perrinfo*  
  Oggetto `IErrorInfo`.  
   
 ## <a name="remarks"></a>Note  
- Per impostazione predefinita, [com_raise_error](../cpp/com-raise-error.md) gestisce tutti gli errori COM. È possibile modificare questo comportamento utilizzando `_set_com_error_handler` per chiamare la propria funzione di gestione degli errori.  
+ Per impostazione predefinita [com_raise_error](../cpp/com-raise-error.md) gestisce tutti gli errori COM. È possibile modificare questo comportamento utilizzando `_set_com_error_handler` per chiamare la propria funzione di gestione degli errori.  
   
  La funzione di sostituzione deve avere una firma uguale a quella di `_com_raise_error`.  
   
 ## <a name="example"></a>Esempio  
   
-```  
+```cpp 
 // _set_com_error_handler.cpp  
 // compile with /EHsc  
 #include <stdio.h>  
@@ -95,7 +96,7 @@ Exception raised: Unable to establish the connection!
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** \<Comdef. h >  
   
- **Lib:** se il **wchar_t è il tipo nativo** opzione del compilatore è attiva, utilizzare comsuppw. lib o comsuppwd. lib. Se **wchar_t è il tipo nativo** è disattiva, utilizzare comsupp.lib. Per altre informazioni, vedere [/Zc:wchar_t (Tipo nativo wchar_t)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md).  
+ **Lib:** se il **wchar_t is tipo nativo** opzione del compilatore è attivato, utilizzare comsuppw. lib o comsuppwd. lib. Se **wchar_t is tipo nativo** è disattiva, utilizzare comsupp. lib. Per altre informazioni, vedere [/Zc:wchar_t (Tipo nativo wchar_t)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Funzioni globali COM del compilatore](../cpp/compiler-com-global-functions.md)

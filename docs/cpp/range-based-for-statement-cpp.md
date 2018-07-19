@@ -1,5 +1,5 @@
 ---
-title: Basato su intervallo per l'istruzione (C++) | Documenti Microsoft
+title: Range-based istruzione for (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,11 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cc60c1efc307f30c06accdd7404cb35c135dae5b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1284e4f6e096ab8021c597b841a8e983673561bd
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37943593"
 ---
 # <a name="range-based-for-statement-c"></a>Istruzione for basata su intervallo (C++)
 Esegue `statement` ripetutamente e in sequenza per ogni elemento in `expression`.  
@@ -25,16 +26,16 @@ Esegue `statement` ripetutamente e in sequenza per ogni elemento in `expression`
   
 ```  
   
-      for ( for-range-declaration : expression )  
+for ( for-range-declaration : expression )  
    statement   
 ```  
   
 ## <a name="remarks"></a>Note  
- Utilizzare basata sull'intervallo `for` istruzione per costruire i cicli che devono essere eseguite tramite un "intervallo", che viene definito come un elemento che è possibile scorrere, ad esempio, `std::vector`, o qualsiasi altra sequenza della libreria Standard C++ il cui intervallo è definito da un `begin()` e `end()`. Il nome dichiarato nella parte `for-range-declaration` è locale all'istruzione `for` e non può essere dichiarato nuovamente in `expression` o `statement`. Si noti che il [auto](../cpp/auto-cpp.md) in cui è preferibile utilizzare parole chiave di `for-range-declaration` parte dell'istruzione. 
+ Usare basato su intervallo **per** istruzione per costruire cicli che devono essere eseguite tramite un "range", che è definita come tutto ciò che è possibile eseguire l'iterazione attraverso, ad esempio, `std::vector`, o qualsiasi altra libreria C++ Standard con un intervallo di sequenza è definito da una `begin()` e `end()`. Il nome dichiarato nel `for-range-declaration` parte è locale per il **per** istruzione e non può essere dichiarato nuovamente in `expression` o `statement`. Si noti che il [automatica](../cpp/auto-cpp.md) parola chiave è preferito nel `for-range-declaration` parte dell'istruzione. 
 
- **Novità di Visual Studio 2017:** basata sull'intervallo per i cicli non sono più necessari che Begin () ed end () restituisce oggetti dello stesso tipo. Ciò consente a end() di restituire un oggetto sentinel come viene usato dagli intervalli in base alla definizione nella proposta Ranges-V3. Per altre informazioni, vedere il documento relativo alla [generalizzazione del ciclo for basato su intervallo](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0184r0.html) e la [libreria range-v3 su GitHub](https://github.com/ericniebler/range-v3).
+ **Novità di Visual Studio 2017:** basati su intervallo per i cicli non richiedono più che Begin () ed end () restituiscano oggetti dello stesso tipo. Ciò consente a end() di restituire un oggetto sentinel come viene usato dagli intervalli in base alla definizione nella proposta Ranges-V3. Per altre informazioni, vedere il documento relativo alla [generalizzazione del ciclo for basato su intervallo](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0184r0.html) e la [libreria range-v3 su GitHub](https://github.com/ericniebler/range-v3).
   
- Questo codice viene illustrato come utilizzare basata sull'intervallo `for` cicli per scorrere una matrice e un vettore:  
+ Questo codice viene illustrato come utilizzare in base a intervallo **per** cicli di iterazione per scorrere una matrice e un vettore:  
   
 ```cpp  
 // range-based-for.cpp  
@@ -93,24 +94,26 @@ int main()
 ```  
   
  L'output è il seguente:  
+
+```Output
+ 1 2 3 4 5 6 7 8 9 10  
   
- `1 2 3 4 5 6 7 8 9 10`  
+ 1 2 3 4 5 6 7 8 9 10  
   
- `1 2 3 4 5 6 7 8 9 10`  
+ 1 2 3 4 5 6 7 8 9 10  
   
- `1 2 3 4 5 6 7 8 9 10`  
-  
- `1 2 3 4 5 6 7 8 9 10`  
+ 1 2 3 4 5 6 7 8 9 10  
   
  `end of integer array test`  
   
  `0.14159 1.14159 2.14159 3.14159 4.14159 5.14159 6.14159 7.14159 8.14159 9.14159`  
   
  `end of vector test`  
+```
+
+ Una basata su intervallo **per** ciclo termina quando una di queste condizioni `statement` viene eseguito: una [interruzione](../cpp/break-statement-cpp.md), [restituiscono](../cpp/return-statement-cpp.md), o [goto](../cpp/goto-statement-cpp.md) a un'etichetta istruzione all'esterno basato su intervallo **per** ciclo. Oggetto [continuare](../cpp/continue-statement-cpp.md) istruzione in un intervallo basato **per** ciclo termina solo l'iterazione corrente.  
   
- Basato su intervallo `for` ciclo termina quando una di queste condizioni `statement` viene eseguita: un [interruzione](../cpp/break-statement-cpp.md), [restituire](../cpp/return-statement-cpp.md), o [goto](../cpp/goto-statement-cpp.md) a un'istruzione con etichetta all'esterno di basato su intervallo **per** ciclo. Oggetto [continuare](../cpp/continue-statement-cpp.md) istruzione in un intervallo basato su un `for` ciclo termina solo l'iterazione corrente.  
-  
- Tenere presente questi concetti relativi al ciclo `for` basato su intervallo:  
+ Tenere presente questi fatti su basati su intervallo **per**:  
   
 -   Riconosce automaticamente le matrici.  
   

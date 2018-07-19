@@ -1,5 +1,5 @@
 ---
-title: Specializzazione di modello (C++) | Documenti Microsoft
+title: Specializzazione di modello (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f2cc25bab72532e1bfb425646d76b69aaf07f5d1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: edef104cafc4b56b5f785537db1c836da4e427dc
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32422709"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37941171"
 ---
 # <a name="template-specialization-c"></a>Specializzazione di modello (C++)
 
@@ -80,7 +80,7 @@ PTS<int S::*>::IsPointer == 0 PTS<int S::*>::IsPointerToDataMember == 1
   
 ## <a name="example"></a>Esempio
 
- Se si dispone di una classe collection di modello che accetta qualsiasi tipo **T**, è possibile creare una specializzazione parziale che accetta qualsiasi tipo di puntatore * * T * * *. Nel codice seguente viene illustrato un modello di classe di raccolta `Bag` e una specializzazione parziale per i tipi di puntatore in cui la raccolta dereferenzia i tipi di puntatore prima di copiarli nella matrice. La raccolta quindi archivia i valori a cui si fa riferimento. Con il modello originale, solo i puntatori sarebbero stati archiviati nella raccolta, lasciando i dati vulnerabili all'eliminazione o alla modifica. In questa versione speciale del puntatore della raccolta, viene aggiunto il codice per verificare un puntatore null nel metodo `add`.  
+ Se si dispone di una classe collection di modello che accetta qualsiasi tipo `T`, è possibile creare una specializzazione parziale che accetta qualsiasi tipo di puntatore `T*`. Nel codice seguente viene illustrato un modello di classe di raccolta `Bag` e una specializzazione parziale per i tipi di puntatore in cui la raccolta dereferenzia i tipi di puntatore prima di copiarli nella matrice. La raccolta quindi archivia i valori a cui si fa riferimento. Con il modello originale, solo i puntatori sarebbero stati archiviati nella raccolta, lasciando i dati vulnerabili all'eliminazione o alla modifica. In questa versione speciale del puntatore della raccolta, viene aggiunto il codice per verificare un puntatore null nel metodo `add`.  
   
 ```cpp
 // partial_specialization_of_class_templates2.cpp  
@@ -192,7 +192,7 @@ Null pointer!
   
 ## <a name="example"></a>Esempio
 
- Nell'esempio seguente viene definita una classe di modello che accetta le coppie di uno dei due tipi, quindi definisce una specializzazione parziale di tale classe di modello specializzata in modo che uno dei tipi sia `int`. La specializzazione definisce un metodo di ordinamento aggiuntivo che implementa un ordinamento a bolle semplice in base all'intero.  
+ L'esempio seguente definisce un modello di classe che accetta le coppie di due tipi qualsiasi e quindi definisce una specializzazione parziale di tale classe modello specializzata in modo che uno dei tipi viene **int**. La specializzazione definisce un metodo di ordinamento aggiuntivo che implementa un ordinamento a bolle semplice in base all'intero.  
   
 ```cpp
 // partial_specialization_of_class_templates3.cpp  

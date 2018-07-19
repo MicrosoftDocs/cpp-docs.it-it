@@ -30,12 +30,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7c162f6092c127277e2af992eda1e47c00c7cb43
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9b933029f7180292e1c9e392bf2ab09e8dbcb204
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33862377"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38963225"
 ---
 # <a name="stack-class"></a>Classe stack
 
@@ -52,15 +52,15 @@ class stack
 
 *Tipo* tipo di dati degli elementi da archiviare nello stack.
 
-`Container` Il tipo di contenitore sottostante usato per implementare lo stack. Il valore predefinito è la classe `deque`*\<Type>*.
+*Contenitore* il tipo di contenitore sottostante usato per implementare lo stack. Il valore predefinito è la classe `deque`*\<Type>*.
 
 ## <a name="remarks"></a>Note
 
-Gli elementi della classe **Type** stipulata nel primo parametro di modello di un oggetto stack sono sinonimi di [value_type](#value_type) e devono corrispondere al tipo di elemento della classe contenitore sottostante **Container** stipulata dal secondo parametro di modello. La classe **Type** deve essere assegnabile, in modo che sia possibile copiare oggetti di quel tipo e assegnare valori alle variabili di quel tipo.
+Gli elementi della classe `Type` stipulata nel primo modello di parametro di un oggetto stack sono sinonimi di [value_type](#value_type) e deve corrispondere al tipo di elemento nella classe del contenitore sottostante `Container` stabilito per il secondo parametro di modello. Il `Type` deve essere assegnabile, in modo che sia possibile copiare oggetti di quel tipo e assegnare valori alle variabili di quel tipo.
 
-Le classi contenitore sottostanti idonee per lo stack includono le classi [deque](../standard-library/deque-class.md), [list](../standard-library/list-class.md) e [vector](../standard-library/vector-class.md) o qualsiasi altro contenitore sequenziale che supporta il funzionamento di **back**, `push_back` e `pop_back`. La classe del contenitore sottostante è incapsulata nell'adattatore di contenitori, che espone solo il set limitato di funzioni membro dei contenitori di sequenza come interfaccia pubblica.
+Classi contenitore sottostanti idonee per lo stack includono [deque](../standard-library/deque-class.md), [classe list](../standard-library/list-class.md), e [classe vector](../standard-library/vector-class.md), o qualsiasi altro contenitore sequenziale che supporta le operazioni di `back`, `push_back`, e `pop_back`. La classe del contenitore sottostante è incapsulata nell'adattatore di contenitori, che espone solo il set limitato di funzioni membro dei contenitori di sequenza come interfaccia pubblica.
 
-Gli oggetti stack sono di tipo EqualityComparable se e solo se gli elementi della classe **Type** sono di tipo EqualityComparable. Sono invece di tipo LessThanComparable se e solo se gli elementi della classe **Type** sono di tipo LessThanComparable.
+Gli oggetti stack sono di tipo equalitycomparable se e solo se gli elementi della classe `Type` sono di tipo equalitycomparable e sono minori-di tipo lessthancomparable se e solo se gli elementi della classe `Type` sono meno-di tipo lessthancomparable.
 
 - La classe stack supporta la struttura dei dati LIFO (Last-In, First-Out). Una buona analogia è costituita da una pila di piatti. Gli elementi (piatti) possono essere inseriti, ispezionati o rimossi solo dalla cima della pila/stack, ovvero l'ultimo elemento alla fine del contenitore di base. La restrizione relativa alla possibilità di accedere solo al primo elemento è il motivo per l'uso della classe stack.
 
@@ -227,7 +227,7 @@ void push(const Type& val);
 
 ### <a name="parameters"></a>Parametri
 
-`val` L'elemento aggiunto alla parte superiore dello stack.
+*Val* elemento aggiunto all'inizio dello stack.
 
 ### <a name="remarks"></a>Note
 
@@ -334,7 +334,7 @@ explicit stack(const container_type& right);
 
 ### <a name="parameters"></a>Parametri
 
-`right` Il contenitore di cui è lo stack costruito deve essere una copia.
+*a destra* il contenitore di cui lo stack costruito deve essere una copia.
 
 ### <a name="example"></a>Esempio
 
@@ -393,7 +393,7 @@ Riferimento all'ultimo elemento del contenitore all'inizio dello stack.
 
 Per applicare la funzione membro, lo stack deve essere non vuoto. L'inizio dello stack è la posizione occupata dall'elemento aggiunto più di recente ed è l'ultimo elemento alla fine del contenitore.
 
-Se il valore restituito di **top** viene assegnato a `const_reference`, l'oggetto stack non può essere modificato. Se il valore restituito di **top** viene assegnato a un oggetto **reference**, l'oggetto stack può essere modificato.
+Se il valore restituito di `top` viene assegnato a un `const_reference`, l'oggetto stack non può essere modificato. Se il valore restituito di `top` viene assegnato a un `reference`, l'oggetto stack può essere modificato.
 
 ### <a name="example"></a>Esempio
 

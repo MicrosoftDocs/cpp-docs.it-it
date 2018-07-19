@@ -1,5 +1,5 @@
 ---
-title: 'Operatori di addizione: + e - | Documenti Microsoft'
+title: 'Operatori di addizione: + e - | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,11 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5f265bf915d9ba0c984b85235bd502d6ea0a5a77
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 89fc0f122f0859e6fc891ddfccd4bc99e7034bfe
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37943942"
 ---
 # <a name="additive-operators--and--"></a>Operatori di addizione: + e -
 ## <a name="syntax"></a>Sintassi  
@@ -45,9 +46,9 @@ expression - expression
   
  Questi operatori binari hanno un'associatività da sinistra a destra.  
   
- Gli operatori additivi accettano gli operandi di tipi aritmetici o tipi puntatore. Il risultato dell'addizione (**+**) (operatore) è la somma degli operandi. Il risultato della sottrazione (**-**) (operatore) è la differenza tra gli operandi. Se uno o entrambi gli operandi sono puntatori, questi devono essere puntatori agli oggetti, non alle funzioni. Se entrambi gli operandi sono puntatori, i risultati non sono significativi a meno che entrambi siano puntatori agli oggetti nella stessa matrice.  
+ Gli operatori additivi accettano gli operandi di tipi aritmetici o tipi puntatore. Il risultato dell'addizione (**+**) operatore è la somma degli operandi. Il risultato della sottrazione (**-**) l'operatore è la differenza tra gli operandi. Se uno o entrambi gli operandi sono puntatori, questi devono essere puntatori agli oggetti, non alle funzioni. Se entrambi gli operandi sono puntatori, i risultati non sono significativi a meno che entrambi siano puntatori agli oggetti nella stessa matrice.  
   
- Operatori additivi accettano gli operandi di *aritmetici*, *integrale*, e *scalare* tipi. Questi vengono definiti nella tabella seguente.  
+ Gli operatori additivi accettano gli operandi *aritmetici*, *integrale*, e *scalare* tipi. Questi vengono definiti nella tabella seguente.  
   
 ### <a name="types-used-with-additive-operators"></a>Tipi usati con gli operatori additivi  
   
@@ -75,7 +76,7 @@ expression - expression
   
 ## <a name="example"></a>Esempio  
   
-```  
+```cpp 
 // expre_Additive_Operators.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -96,7 +97,7 @@ int main() {
 ## <a name="pointer-addition"></a>Addizione di puntatori  
  Se uno degli operandi presenti in un'operazione di addizione è un puntatore a una matrice di oggetti, l'altro deve essere di tipo integrale. Il risultato è un puntatore dello stesso tipo del puntatore originale e che punta un altro elemento della matrice. Nel frammento di codice seguente è illustrato questo concetto:  
   
-```  
+```cpp 
 short IntArray[10]; // Objects of type short occupy 2 bytes  
 short *pIntArray = IntArray;  
   
@@ -114,11 +115,11 @@ for( int i = 0; i < 10; ++i )
 >  Il codice del form `pIntArray = pIntArray + 1` si trova raramente nei programmi C++; per eseguire un incremento, sono preferibili i seguenti form: `pIntArray++` o `pIntArray += 1`.  
   
 ## <a name="pointer-subtraction"></a>Sottrazione di puntatori  
- Se entrambi gli operandi sono puntatori, il risultato di una sottrazione è la differenza (in elementi di matrice) tra gli operandi. L'espressione di sottrazione restituisce un risultato integrale con segno di tipo ptrdiff_t (definito nel file di inclusione standard \<STDDEF. h >).  
+ Se entrambi gli operandi sono puntatori, il risultato di una sottrazione è la differenza (in elementi di matrice) tra gli operandi. L'espressione di sottrazione viene fornito un risultato integrale con segno typu **ptrdiff_t** (definite nel file di inclusione standard \<STDDEF. h >).  
   
- Uno degli operandi può essere di tipo integrale purché sia il secondo operando. Il risultato della sottrazione è dello stesso tipo del puntatore originale. Il valore della sottrazione è un puntatore al (*n* - *si*) elemento della matrice th, dove *n* è l'elemento a cui punta il puntatore originale e il *si* è il valore integrale del secondo operando.  
+ Uno degli operandi può essere di tipo integrale purché sia il secondo operando. Il risultato della sottrazione è dello stesso tipo del puntatore originale. Il valore della sottrazione è un puntatore ai (*n* - *ho*) elemento della matrice th, dove *n* è l'elemento a cui punta il puntatore originale e il *ho* è il valore integrale del secondo operando.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Espressioni con operatori binari](../cpp/expressions-with-binary-operators.md)   
- [Operatori C++ predefiniti, precedenza e associazione](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
+ [Operatori C++ predefiniti, precedenza e associatività degli operatori](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
  [Operatori di addizione C](../c-language/c-additive-operators.md)

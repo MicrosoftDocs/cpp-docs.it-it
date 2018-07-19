@@ -1,5 +1,5 @@
 ---
-title: noinline | Documenti Microsoft
+title: noinline | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,11 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f81ab892fd7f406292925f424bebc7514fd7ea0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 37098e904402a42f6ff28e594db265fc07b4d458
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37943590"
 ---
 # <a name="noinline"></a>noinline
 ## <a name="microsoft-specific"></a>Sezione specifica Microsoft  
@@ -29,9 +30,9 @@ ms.lasthandoff: 05/03/2018
   
  Può essere preferibile non incorporare una funzione se è ridotta e non fondamentale per le prestazioni del codice. Ovvero se la funzione è di piccole dimensioni e probabilmente non viene chiamata spesso, ad esempio una funzione che gestisce una condizione di errore.  
   
- Tenere presente che se una funzione è contrassegnata `noinline`, la funzione chiamante sarà più ridotta e, pertanto, candidata per l'incorporamento del compilatore.  
+ Tenere presente che se una funzione è contrassegnata **noinline**, la funzione chiamante sarà più piccoli e, pertanto, se stesso un candidato per l'incorporamento del compilatore.  
   
-```  
+```cpp 
 class X {  
    __declspec(noinline) int mbrfunc() {  
       return 0;   

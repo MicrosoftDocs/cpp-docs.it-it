@@ -1,5 +1,5 @@
 ---
-title: _bstr_t::Copy | Documenti Microsoft
+title: _bstr_t::Copy | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,11 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c7337669cae68c088265d812585a44fadd6bcb76
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d23f204e7e8a545fbee7ab516495ed711d7984a9
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37943686"
 ---
 # <a name="bstrtcopy"></a>_bstr_t::copy
 **Sezione specifica Microsoft**  
@@ -32,21 +33,19 @@ ms.lasthandoff: 05/03/2018
   
 ```  
   
-      BSTR copy(  
-  bool fCopy = true  
-) const;  
+BSTR copy( bool fCopy = true ) const;  
 ```  
   
 #### <a name="parameters"></a>Parametri  
- `fCopy`  
- Se **true**, **copia** restituisce una copia dell'oggetto contenuto `BSTR`, in caso contrario **copia** restituisce l'oggetto BSTR effettivo.  
+ *fCopy*  
+ Se TRUE, `copy` restituisce una copia dell'oggetto contenuto `BSTR`; in caso contrario `copy` restituisce l'oggetto BSTR effettivo.  
   
 ## <a name="remarks"></a>Note  
  Restituisce una copia allocata dell'oggetto `BSTR` incapsulato.  
   
 ## <a name="example"></a>Esempio  
   
-```  
+```cpp 
 STDMETHODIMP CAlertMsg::get_ConnectionStr(BSTR *pVal){ //  m_bsConStr is _bstr_t  
    *pVal = m_bsConStr.copy();  
 }  

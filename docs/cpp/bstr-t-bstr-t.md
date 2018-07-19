@@ -1,5 +1,5 @@
 ---
-title: _bstr_t::_bstr_t | Documenti Microsoft
+title: _bstr_t::_bstr_t | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 824108b78ede3999a83b1c7c1ac75cc847f182f5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fb2e870c7418c0d0a6cf3cd82bc0a8acb45466a0
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32413284"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37941265"
 ---
 # <a name="bstrtbstrt"></a>_bstr_t::_bstr_t
 **Sezione specifica Microsoft**  
@@ -53,23 +53,23 @@ _bstr_t(
 ```  
   
 #### <a name="parameters"></a>Parametri  
- `s1`  
+ *s1*  
  Oggetto `_bstr_t` da copiare.  
   
- `s2`  
+ *s2*  
  Stringa multibyte.  
   
- `s3`  
+ *S3*  
  Stringa Unicode  
   
- `var`  
+ *var*  
  Oggetto [variant_t](../cpp/variant-t-class.md) oggetto.  
   
- `bstr`  
+ *BSTR*  
  Oggetto `BSTR` esistente.  
   
- `fCopy`  
- Se `false`, l'argomento `bstr` viene associato al nuovo oggetto senza creare una copia tramite la chiamata a `SysAllocString`.  
+ *fCopy*  
+ Se FALSE, il *bstr* argomento viene associato al nuovo oggetto senza creare una copia tramite la chiamata `SysAllocString`.  
   
 ## <a name="remarks"></a>Note  
  Nella tabella seguente vengono descritti i costruttori per `_bstr_t`.  
@@ -77,7 +77,7 @@ _bstr_t(
 |Costruttore|Descrizione|  
 |-----------------|-----------------|  
 |`_bstr_t( )`|Costruisce un valore predefinito `_bstr_t` oggetto che incapsula un valore null `BSTR` oggetto.|  
-|`_bstr_t( _bstr_t&`  `s1`  `)`|Costruisce un oggetto `_bstr_t` come copia di un altro.<br /><br /> Si tratta di un *superficiale* copia, che incrementa il conteggio dei riferimenti di incapsulato `BSTR` oggetto anziché crearne uno nuovo.|  
+|`_bstr_t( _bstr_t&`  `s1`  `)`|Costruisce un oggetto `_bstr_t` come copia di un altro.<br /><br /> Si tratta di un *superficiale* copy, che incrementa il conteggio dei riferimenti di incapsulato `BSTR` oggetto anziché crearne uno nuovo.|  
 |`_bstr_t( char*`  `s2`  `)`|Costruisce un oggetto `_bstr_t` chiamando `SysAllocString` per creare un nuovo oggetto `BSTR`, quindi lo incapsula.<br /><br /> Questo costruttore esegue innanzitutto una conversione multibyte a Unicode.|  
 |`_bstr_t( wchar_t*`  `s3`  `)`|Costruisce un oggetto `_bstr_t` chiamando `SysAllocString` per creare un nuovo oggetto `BSTR`, quindi lo incapsula.|  
 |`_bstr_t( _variant_t&`  `var`  `)`|Costruisce un oggetto `_bstr_t` da un oggetto `_variant_t` recuperando prima un oggetto `BSTR` dall'oggetto VARIANT incapsulato.|  
@@ -86,5 +86,5 @@ _bstr_t(
  **Fine sezione specifica Microsoft**  
   
 ## <a name="see-also"></a>Vedere anche  
- [bstr_t (classe)](../cpp/bstr-t-class.md)   
+ [classe bstr_t](../cpp/bstr-t-class.md)   
  [Classe _variant_t](../cpp/variant-t-class.md)

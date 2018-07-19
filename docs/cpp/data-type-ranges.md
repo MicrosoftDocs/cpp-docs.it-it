@@ -1,5 +1,5 @@
 ---
-title: Intervalli dei tipi di dati | Documenti Microsoft
+title: Intervalli dei tipi di dati | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -45,12 +45,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 04c809249bbe7513e5a1e439ebaf5e4e44a2f758
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 93a399f922d79c073cc6471ebe702d8ef7fcd842
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32418393"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37940641"
 ---
 # <a name="data-type-ranges"></a>Intervalli dei tipi di dati
 I compilatori di Visual C++ a 32 e a 64 bit riconoscono i tipi indicati nella tabella più avanti in questo articolo.  
@@ -105,9 +105,9 @@ I compilatori di Visual C++ a 32 e a 64 bit riconoscono i tipi indicati nella ta
   
  In base a come viene usata, una variabile di `__wchar_t` indica un tipo di carattere wide o un tipo di carattere multibyte. Usare il prefisso `L` prima di una costante di carattere o di stringa per definire la costante del tipo di carattere wide.  
   
- `signed` e `unsigned` sono modificatori che è possibile usare con qualsiasi tipo integrale eccetto `bool`. Si noti che `char`, `signed char`e `unsigned char` sono tre tipi diversi per scopi di meccanismi come l'overload e i modelli.  
+ **firmato** e **senza segno** sono modificatori che è possibile usare con qualsiasi tipo integrale eccetto **bool**. Si noti che **char**, **char con segno**, e **unsigned char** sono tre tipi distinti per gli scopi di meccanismi come l'overload e i modelli.  
   
- I tipi `int` e `unsigned int` hanno una dimensione di quattro byte. Tuttavia, il codice portatile non deve dipendere dalla dimensione di `int` poiché lo standard del linguaggio gli consente di essere specifico dell'implementazione.  
+ Il **int** e **unsigned int** tipi hanno una dimensione di quattro byte. Tuttavia, codice portatile non deve dipendere la dimensione del **int** perché lo standard del linguaggio consente di essere specifici dell'implementazione.  
   
  C/C++ in Visual Studio supporta inoltre tipi di Integer dimensionati. Per altre informazioni, vedere [__int8, \__int16, \__int32, \__int64](../cpp/int8-int16-int32-int64.md) e [Limiti per tipi Integer](../cpp/integer-limits.md).  
   

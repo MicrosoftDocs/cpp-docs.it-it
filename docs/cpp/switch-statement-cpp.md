@@ -1,5 +1,5 @@
 ---
-title: Istruzione switch (C++) | Documenti Microsoft
+title: Istruzione switch (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,11 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5cea2c7e4bff895f9ccabc044ed5b7f5ae506b32
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1d4ab0694936fe4ad25b3c56bf286e9416e4e935
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37943602"
 ---
 # <a name="switch-statement-c"></a>Istruzione switch (C++)
 Consente la selezione tra più sezioni di codice, in base al valore di un'espressione integrale.  
@@ -38,23 +39,23 @@ Consente la selezione tra più sezioni di codice, in base al valore di un'espres
 ```  
   
 ## <a name="remarks"></a>Note  
- Il *espressione* deve essere di tipo integrale o di un tipo di classe per cui è disponibile una conversione non ambigua a tipo integrale. La promozione a intero viene eseguita come descritto in [conversioni Standard](standard-conversions.md).  
+ Il *espressione* deve essere di tipo integrale o di un tipo di classe per cui è disponibile una conversione non ambigua a tipo integrale. Promozione a intero viene eseguita come descritto in [conversioni Standard](standard-conversions.md).  
   
- Il `switch` corpo dell'istruzione è costituito da una serie di **case** etichette ed eventualmente **predefinito** etichetta. Nessun due espressioni costanti nelle **case** istruzioni possono restituire lo stesso valore. Il **predefinito** etichetta può comparire una sola volta. Le istruzioni con etichette non sono requisiti sintattici, ma l'istruzione `switch` è inutile senza di essi.   L'istruzione default non deve necessariamente essere alla fine; può apparire in un punto qualsiasi del corpo dell'istruzione switch. Un'etichetta case o default può apparire solo all'interno di un'istruzione switch.  
+ Il **commutatore** corpo dell'istruzione è costituito da una serie di **case** etichette ed eventualmente **predefinito** etichetta. Nessuna due espressioni costanti nelle **caso** istruzioni possono restituire lo stesso valore. Il **predefinito** etichetta può comparire una sola volta. Le istruzioni con etichette non sono requisiti sintattici, ma il **commutatore** istruzione è inutile senza di essi.   L'istruzione default non deve necessariamente essere alla fine; può apparire in un punto qualsiasi del corpo dell'istruzione switch. Un'etichetta case o default può apparire solo all'interno di un'istruzione switch.  
   
- Il *espressione costante* in ogni **case** etichetta viene convertita nel tipo di *espressione* e confrontato con *espressione* per uguaglianza. Il controllo passa all'istruzione la cui proprietà **case** *espressione costante* corrisponde al valore di *espressione*. Il comportamento risultante è illustrato nella tabella seguente.  
+ Il *espressione costante* in ogni **case** etichetta viene convertito nel tipo del *espressione* e confrontato con *espressione* per uguaglianza. Il controllo passa all'istruzione la cui proprietà **case** *espressione costante* corrisponde al valore di *espressione*. Il comportamento risultante è illustrato nella tabella seguente.  
   
 ### <a name="switch-statement-behavior"></a>Comportamento dell'istruzione switch  
   
 |Condizione|Operazione|  
 |---------------|------------|  
 |Il valore convertito corrisponde a quello dell'espressione di controllo promossa.|Il controllo viene trasferito all'istruzione che segue tale etichetta.|  
-|Nessuna costante corrisponde alle costanti nel **case** etichette; un **predefinito** è presente alcuna etichetta.|Per il controllo viene trasferito il **predefinito** etichetta.|  
-|Nessuna costante corrisponde alle costanti nel **case** etichette; **predefinito** etichetta non è presente.|Il controllo viene trasferito all'istruzione che segue l'istruzione `switch`.|  
+|Nessuna costante corrisponde alle costanti nel **case** delle etichette; un **predefinita** è presente alcuna etichetta.|Per il controllo viene trasferito il **predefinito** etichetta.|  
+|Nessuna costante corrisponde alle costanti nel **caso** etichette; **predefinito** etichetta non è presente.|Il controllo viene trasferito all'istruzione dopo il **commutatore** istruzione.|  
   
- Se viene trovata un'espressione corrispondente, controllo non viene impedito da successive **case** o **predefinito** etichette. Il [interruzione](../cpp/break-statement-cpp.md) istruzione viene utilizzata per arrestare l'esecuzione e trasferire il controllo all'istruzione dopo il `switch` istruzione. Senza un **interruzione** , ogni istruzione corrispondente **case** etichetta alla fine del `switch`, tra cui la **predefinito**, viene eseguita. Ad esempio:  
+ Se viene trovata un'espressione corrispondente, controllo non viene impedito da successive **case** oppure **predefinita** etichette. Il [break](../cpp/break-statement-cpp.md) istruzione viene utilizzata per arrestare l'esecuzione e trasferire il controllo all'istruzione dopo le **passare** istruzione. Senza un **interruzione** , ogni istruzione corrispondente **case** etichetta alla fine del **switch**, tra cui la **predefinito**, è eseguito. Ad esempio:  
   
-```  
+```cpp 
 // switch_statement1.cpp  
 #include <stdio.h>  
   
@@ -83,9 +84,9 @@ int main() {
 }  
 ```  
   
- Nell'esempio precedente `capa` viene incrementato se `c` è una `A` maiuscola. L'istruzione `break` dopo `capa++` termina l'esecuzione del corpo dell'istruzione `switch` e il controllo passa al ciclo `while`. Senza il `break` istruzione esecuzione sarebbe "passaggio" alla successiva istruzione con etichetta, in modo che `lettera` e `nota` potrebbe anche essere incrementato. Uno scopo simile viene utilizzato dall'istruzione `break` per `case 'a'`. Se `c` è una `a` minuscola, `lettera` viene incrementata e l'istruzione `break` termina il corpo dell'istruzione `switch`. Se `c` non è `a` o `A`, l'istruzione `default` viene eseguita.  
+ Nell'esempio precedente `capa` viene incrementato se `c` è una `A` maiuscola. Il **break** istruzione dopo `capa++` termina l'esecuzione del **passare** corpo dell'istruzione e il controllo passa al **mentre** ciclo. Senza il **INTERR** istruzione, l'esecuzione sarebbe "passare" alla successiva istruzione con etichetta, in modo che `lettera` e `nota` potrebbe anche essere incrementato. Uno scopo simile viene servito dal **INTERR** istruzione per `case 'a'`. Se `c` è minuscolo `a`, `lettera` viene incrementata e il **interruzione** istruzione termina il **passare** corpo dell'istruzione. Se `c` non è un `a` oppure `A`, il **predefinita** viene eseguita un'istruzione.  
 
- **Visual Studio 2017 e versioni successiva:** (disponibile con [/std:c + + 17](../build/reference/std-specify-language-standard-version.md)) il `[[fallthrough]]` attributo viene specificato il c++17 standard. E può essere utilizzato un `switch` istruzione come un suggerimento al compilatore (o a chiunque legga il codice) è destinato questo comportamento del passaggio. Il compilatore Visual C++ attualmente non avvisa in caso di fallthrough comportamento, in modo da questo attributo non è il comportamento del compilatore alcun effetto. Si noti che l'attributo viene applicato a un'istruzione vuota all'interno dell'istruzione con etichetta; in altre parole il punto e virgola è necessario.
+ **Visual Studio 2017 e versioni successiva:** (disponibile con [/std: c + + 17](../build/reference/std-specify-language-standard-version.md)) il `[[fallthrough]]` attributo è specificato in c++17 standard. Può essere utilizzato una **commutatore** istruzione come un suggerimento al compilatore (o a chiunque legga il codice) tale comportamento del FallThrough è previsto. Il compilatore Visual C++ attualmente non avvisa in caso di fallthrough comportamento, in modo che questo attributo non ha alcun effetto sul comportamento del compilatore. Si noti che l'attributo viene applicato a un'istruzione vuota all'interno dell'istruzione con etichetta; in altre parole il punto e virgola è necessario.
 
 ```cpp
 int main()
@@ -113,7 +114,7 @@ int main()
 }
 ```
 
- **Visual Studio 2017 15.3 e versioni successive** (disponibile con [/std:c + + 17](../build/reference/std-specify-language-standard-version.md)): un'istruzione switch può introdurre e inizializzare una variabile il cui ambito è limitato al blocco dell'istruzione switch:
+ **Visual Studio 2017 versione 15.3 e versioni successive** (disponibile con [/std: c + + 17](../build/reference/std-specify-language-standard-version.md)): un'istruzione switch può introdurre e inizializzare una variabile il cui ambito è limitato al blocco dell'istruzione switch:
 
 ```cpp
  switch (Gadget gadget(args); auto s = gadget.get_status())
@@ -126,7 +127,7 @@ int main()
         };
 ```
 
- Un blocco interno di un'istruzione `switch` può contenere definizioni con inizializzazioni finché sono raggiungibili, ovvero non vengono ignorate da tutti i possibili percorsi di esecuzione. I nomi introdotti utilizzando queste dichiarazioni hanno ambito locale. Ad esempio:  
+ Un blocco interno di un **commutatore** istruzione può contenere definizioni con inizializzazioni finché sono raggiungibili, vale a dire, non vengono ignorate da tutti i possibili percorsi di esecuzione. I nomi introdotti utilizzando queste dichiarazioni hanno ambito locale. Ad esempio:  
   
 ```cpp  
 // switch_statement2.cpp  
@@ -161,13 +162,13 @@ int main(int argc, char *argv[])
 }  
 ```  
   
- Un'istruzione `switch` può essere annidata. In questi casi, **case** o **predefinito** etichette associare più vicina `switch` istruzione che li racchiude.  
+ Oggetto **commutatore** istruzione può essere nidificata. In questi casi **case** o **predefinito** associare etichette a quello più vicino **passare** istruzione che li racchiude.  
 
  
 ## <a name="microsoft-specific"></a>Sezione specifica Microsoft  
- Microsoft C non limita il numero di valori di etichette case che possono essere presenti in un'istruzione `switch`. Tale numero è limitato solo dalla memoria disponibile. ANSI C richiede che in un'istruzione `switch` siano consentite almeno 257 etichette case.  
+ Microsoft C non limita il numero di valori di case in una **commutatore** istruzione. Tale numero è limitato solo dalla memoria disponibile. ANSI C richiede almeno 257 etichette case essere consentito in una **commutatore** istruzione.  
   
- Per impostazione predefinita, in Microsoft C le estensioni Microsoft sono abilitate. Utilizzare il [/Za](../build/reference/za-ze-disable-language-extensions.md) l'opzione del compilatore per disabilitare queste estensioni.  
+ Per impostazione predefinita, in Microsoft C le estensioni Microsoft sono abilitate. Usare la [/Za](../build/reference/za-ze-disable-language-extensions.md) opzione del compilatore per disabilitare queste estensioni.  
   
 **Fine sezione specifica Microsoft**  
   

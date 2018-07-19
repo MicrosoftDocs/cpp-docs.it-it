@@ -1,5 +1,5 @@
 ---
-title: Operatore dynamic_cast | Documenti Microsoft
+title: Operatore dynamic_cast | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,11 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a87105ad2d52ebbb7749deafadedcd510314038f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 697f4a83cb0b5f9aabb7ce477c4664cb39fb7f97
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37943998"
 ---
 # <a name="dynamiccast-operator"></a>Operatore dynamic_cast
 Converte l'operando `expression` a un oggetto di tipo `type-id`.  
@@ -33,19 +34,19 @@ dynamic_cast < type-id > ( expression )
 ```  
   
 ## <a name="remarks"></a>Note  
- Il `type-id` deve essere un puntatore o un riferimento a un tipo di classe definita in precedenza o un "puntatore a void". Il tipo di `expression` deve essere un puntatore se `type-id` è un puntatore o un l-value se `type-id` è un riferimento.  
+ Il `type-id` deve essere un puntatore o riferimento a un tipo di classe definito in precedenza oppure un "puntatore a void". Il tipo di `expression` deve essere un puntatore se `type-id` è un puntatore o un l-value se `type-id` è un riferimento.  
   
- Vedere [static_cast](../cpp/static-cast-operator.md) per una spiegazione della differenza tra le conversioni di cast statiche e dinamiche e quando è consigliabile utilizzarle.  
+ Visualizzare [static_cast](../cpp/static-cast-operator.md) per una spiegazione della differenza tra le conversioni di cast statiche e dinamiche e quando è appropriato usare ciascuna.  
   
- Esistono due modifiche di rilievo al comportamento di `dynamic_cast` nel codice gestito:  
+ Esistono due modifiche di rilievo nel comportamento dei **dynamic_cast** nel codice gestito:  
   
--   `dynamic_cast` per un puntatore al tipo sottostante di un'enumerazione boxed avrà esito negativo in fase di esecuzione, restituisce 0 anziché il puntatore convertito.  
+-   **dynamic_cast** a un puntatore al tipo sottostante di un'enumerazione boxed avrà esito negativo in fase di esecuzione, restituendo 0 anziché il puntatore convertito.  
   
--   `dynamic_cast` non verrà generata un'eccezione quando `type-id` è un puntatore interno a un tipo di valore, con il cast non riusciti in fase di esecuzione.  Il cast restituisce ora il valore del puntatore 0 anziché generare.  
+-   **dynamic_cast** non genera più un'eccezione quando `type-id` è un puntatore interno a un tipo di valore, con il cast di esito negativo in fase di esecuzione.  Il cast a questo punto verrà restituito il valore di puntatore 0 anziché generare.  
   
- Se `type-id` è un puntatore a una non ambiguo accessibile diretto o indiretto classe di base di `expression`, un puntatore al sotto-oggetto univoco di tipo `type-id` è il risultato. Ad esempio:  
+ Se `type-id` è un puntatore a una non ambiguo accessibile diretto o indiretto classe base del `expression`, un puntatore all'oggetto secondario univoco di tipo `type-id` è il risultato. Ad esempio:  
   
-```  
+```cpp 
 // dynamic_cast_1.cpp  
 // compile with: /c  
 class B { };  
@@ -60,11 +61,11 @@ void f(D* pd) {
 }  
 ```  
   
- Questo tipo di conversione viene chiamato un upcast"" perché sposta un puntatore di una gerarchia di classi, da una classe derivata a una classe che deriva da. Un upcast è una conversione implicita.  
+ Questo tipo di conversione viene chiamato un "upcast" perché sposta un puntatore di una gerarchia di classi, da una classe derivata a una classe che derivi da. Un upcast è una conversione implicita.  
   
- Se `type-id` è void *, viene eseguito un controllo di runtime per determinare il tipo effettivo di `expression`. Il risultato è un puntatore all'oggetto completo a cui puntata `expression`. Ad esempio:  
+ Se `type-id` è void *, viene eseguito un controllo in fase di esecuzione per determinare il tipo effettivo del `expression`. Il risultato è un puntatore all'oggetto completo a cui punta `expression`. Ad esempio:  
   
-```  
+```cpp 
 // dynamic_cast_2.cpp  
 // compile with: /c /GR  
 class A {virtual void f();};  
@@ -81,11 +82,11 @@ void f() {
 }  
 ```  
   
- Se `type-id` non è void *, viene eseguito un controllo di runtime per verificare se l'oggetto a cui puntava `expression` può essere convertito nel tipo a cui puntata `type-id`.  
+ Se `type-id` non è void *, viene effettuato un controllo in fase di esecuzione per vedere se l'oggetto a cui punta `expression` può essere convertito nel tipo a cui punta `type-id`.  
   
- Se il tipo di `expression` è una classe di base del tipo di `type-id`, viene eseguito un controllo di runtime per verificare se `expression` punti effettivamente a un oggetto completo del tipo di `type-id`. In questo caso, il risultato è un puntatore a un oggetto completo del tipo di `type-id`. Ad esempio:  
+ Se il tipo di `expression` è una classe del tipo di base `type-id`, viene effettuato un controllo in fase di esecuzione per vedere se `expression` punti effettivamente a un oggetto completo del tipo di `type-id`. Se è true, il risultato è un puntatore a un oggetto completo del tipo di `type-id`. Ad esempio:  
   
-```  
+```cpp 
 // dynamic_cast_3.cpp  
 // compile with: /c /GR  
 class B {virtual void f();};  
@@ -100,15 +101,15 @@ void f() {
 }  
 ```  
   
- Questo tipo di conversione viene chiamato un "downcast" perché sposta un puntatore in una gerarchia di classe, da una determinata classe a una classe derivata da esso.  
+ Questo tipo di conversione viene chiamato una "downcast" perché sposta un puntatore verso il basso di una gerarchia di classi, da una determinata classe a una classe derivata da esso.  
   
- In caso di ereditarietà multipla, vengono introdotte le possibilità di ambiguità. Prendere in considerazione la gerarchia di classi illustrata nella figura riportata di seguito.  
+ In caso di ereditarietà multipla, vengono introdotte le possibilità di ambiguità. Prendere in considerazione nella gerarchia di classe illustrata nella figura seguente.  
   
- Per i tipi CLR, `dynamic_cast` produce alcuna operazione se è possibile eseguire la conversione in modo implicito, o un codice MSIL `isinst` istruzione, che esegue un controllo dinamico e restituisce `nullptr` se la conversione non riesce.  
+ Per i tipi CLR, **dynamic_cast** dà come risultato no-op se la conversione può essere eseguita in modo implicito, o un codice MSIL `isinst` istruzione, che esegue un controllo dinamico e restituisce **nullptr** se la conversione non riesce.  
   
- L'esempio seguente usa `dynamic_cast` per determinare se una classe è un'istanza del tipo specifico:  
+ L'esempio seguente usa **dynamic_cast** per determinare se una classe è un'istanza del tipo specifico:  
   
-```  
+```cpp 
 // dynamic_cast_clr.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -129,12 +130,12 @@ int main() {
 }  
 ```  
   
- ![Gerarchia di ereditarietà multipla delle classi](../cpp/media/vc39011.gif "vc39011")  
+ ![Classe gerarchia di ereditarietà multipla](../cpp/media/vc39011.gif "vc39011")  
 Gerarchia delle classi che mostra l'ereditarietà multipla  
   
- Un puntatore a un oggetto di tipo `D` può essere convertito in modo sicuro in `B` o `C`. Tuttavia, se `D` viene eseguito il cast in modo da puntare a un `A` l'istanza dell'oggetto `A` comporterebbe? In questo modo, un errore di cast ambiguo. Per evitare questo problema, è possibile eseguire due cast non ambiguo. Ad esempio:  
+ Un puntatore a un oggetto di tipo `D` è possibile eseguire il cast `B` o `C`. Tuttavia, se `D` viene eseguito il cast in modo da puntare a un `A` dell'oggetto, quale istanza di `A` produrrebbe? Ciò comporterebbe un errore di cast ambiguo. Per risolvere questo problema, è possibile eseguire due cast non ambiguo. Ad esempio:  
   
-```  
+```cpp 
 // dynamic_cast_4.cpp  
 // compile with: /c /GR  
 class A {virtual void f();};  
@@ -148,21 +149,21 @@ void f() {
 }  
 ```  
   
- Quando si utilizzano le classi base virtuali, è possibile inserire ulteriori ambiguità. Prendere in considerazione la gerarchia di classi illustrata nella figura riportata di seguito.  
+ È possibile introdurre ulteriori ambiguità quando si usano le classi base virtuali. Prendere in considerazione nella gerarchia di classe illustrata nella figura seguente.  
   
- ![Classe gerarchia delle classi base virtuali](../cpp/media/vc39012.gif "vc39012")  
+ ![Gerarchia che mostra classi base virtuali delle classi](../cpp/media/vc39012.gif "vc39012")  
 Gerarchia delle classi che mostra classi di base virtuali  
   
- In questa gerarchia `A` è una classe base virtuale. Data un'istanza della classe `E` e un puntatore di `A` sottoggetto, un `dynamic_cast` a un puntatore a `B` avrà esito negativo a causa dell'ambiguità. È innanzitutto necessario eseguire il cast a completo `E` dell'oggetto, quindi il funzionamento del backup della gerarchia, in modo non ambiguo per raggiungere il corretto `B` oggetto.  
+ In questa gerarchia, `A` è una classe base virtuale. Data un'istanza della classe `E` e un puntatore per il `A` oggetto secondario, un **dynamic_cast** a un puntatore a `B` avrà esito negativo a causa dell'ambiguità. È necessario innanzitutto il cast a tutte `E` dell'oggetto, quindi funzionano risalire la gerarchia, in modo non ambiguo, per raggiungere il valore corretto `B` oggetto.  
   
- Prendere in considerazione la gerarchia di classi illustrata nella figura riportata di seguito.  
+ Prendere in considerazione nella gerarchia di classe illustrata nella figura seguente.  
   
- ![Classe gerarchia delle classi di base duplicate](../cpp/media/vc39013.gif "vc39013")  
+ ![Classe gerarchia che mostra classi di base duplicate](../cpp/media/vc39013.gif "vc39013")  
 Gerarchia delle classi che mostra classi di base duplicate  
   
- Dato un oggetto di tipo `E` e un puntatore al `D` sottoggetto, da cui spostarsi il `D` oggetto secondario all'estrema sinistra `A` sottoggetto, è possono eseguire conversioni di tre. È possibile eseguire un `dynamic_cast` la conversione dal `D` puntatore a un `E` puntatore, quindi una conversione (sia `dynamic_cast` o una conversione implicita) da `E` a `B`e infine una conversione implicita da `B` a `A`. Ad esempio:  
+ Dato un oggetto di tipo `E` e un puntatore al `D` sottoggetto, da cui spostarsi il `D` oggetto secondario all'estrema sinistra `A` sottoggetto, possono essere effettuate tre conversioni. È possibile eseguire una **dynamic_cast** conversione dalle `D` puntatore a un `E` puntatore, quindi una conversione (entrambi **dynamic_cast** o una conversione implicita) da `E`alla `B`e infine una conversione implicita da `B` a `A`. Ad esempio:  
   
-```  
+```cpp 
 // dynamic_cast_5.cpp  
 // compile with: /c /GR  
 class A {virtual void f();};  
@@ -178,11 +179,11 @@ void f(D* pd) {
 }  
 ```  
   
- Il `dynamic_cast` operatore può essere utilizzato anche per eseguire un "cast tra". Utilizzando la stessa gerarchia di classi, è possibile eseguire il cast di un puntatore, ad esempio, dal `B` oggetto secondario per il `D` sottoggetto, purché l'oggetto completo è di tipo `E`.  
+ Il **dynamic_cast** operatore può anche essere usato per eseguire un "cast tra". Utilizzando la stessa gerarchia di classi, è possibile eseguire il cast di un puntatore, ad esempio, dal `B` oggetto secondario per il `D` sottoggetto, purché l'oggetto completo è di tipo `E`.  
   
- Considerando cross-cast, è effettivamente possibile eseguire la conversione da un puntatore a `D` a un puntatore all'estrema sinistra `A` sottoggetto nei due passaggi. È possibile eseguire una croce esegue il cast da `D` a `B`, quindi una conversione implicita da `B` a `A`. Ad esempio:  
+ Prendere in considerazione tra i cast, è effettivamente possibile eseguire la conversione da un puntatore a `D` a un puntatore all'estrema sinistra `A` oggetto secondario in senso due fasi. È possibile eseguire una croce cast da `D` al `B`, quindi una conversione implicita da `B` a `A`. Ad esempio:  
   
-```  
+```cpp 
 // dynamic_cast_6.cpp  
 // compile with: /c /GR  
 class A {virtual void f();};  
@@ -197,11 +198,11 @@ void f(D* pd) {
 }  
 ```  
   
- Un valore di puntatore null viene convertito al valore del puntatore null del tipo di destinazione da `dynamic_cast`.  
+ Un valore di puntatore null viene convertito al valore del puntatore null del tipo di destinazione dal **dynamic_cast**.  
   
- Quando si utilizza `dynamic_cast < type-id > ( expression )`, se `expression` non può essere convertito in modo sicuro nel tipo `type-id`, il controllo in fase di esecuzione determina il cast a non riuscire. Ad esempio:  
+ Quando si usa `dynamic_cast < type-id > ( expression )`, se `expression` non può essere convertito in modo sicuro in cui per digitare `type-id`, il controllo in fase di esecuzione fa sì che il cast a non riuscire. Ad esempio:  
   
-```  
+```cpp 
 // dynamic_cast_7.cpp  
 // compile with: /c /GR  
 class A {virtual void f();};  
@@ -214,16 +215,16 @@ void f() {
 }  
 ```  
   
- Il valore di un cast non riuscito per il tipo di puntatore è il puntatore null. Un cast non riuscito per fare riferimento a tipo genera un [eccezione bad_cast](../cpp/bad-cast-exception.md).   Se `expression` non di punta o fare riferimento a un oggetto valido, un `__non_rtti_object` viene generata un'eccezione.  
+ Il valore di un cast non riuscito per il tipo di puntatore è il puntatore null. Un cast non riuscito a fare riferimento a tipo genera un [eccezione bad_cast](../cpp/bad-cast-exception.md).   Se `expression` scegliere o fare riferimento a un oggetto valido, non un `__non_rtti_object` viene generata un'eccezione.  
   
- Vedere [typeid](../cpp/typeid-operator.md) per una spiegazione di `__non_rtti_object` eccezione.  
+ Visualizzare [typeid](../cpp/typeid-operator.md) per una spiegazione di `__non_rtti_object` eccezione.  
   
 ## <a name="example"></a>Esempio  
- L'esempio seguente crea il puntatore della classe base (struct A), a un oggetto (struct C).  Questo, nonché delle tabelle dei fatti sono funzioni virtuali, abilita il polimorfismo di runtime.  
+ L'esempio seguente crea il puntatore della classe di base (struct A), a un oggetto (struct C).  Questo, oltre il fact presenti sono funzioni virtuali, abilita il polimorfismo di runtime.  
   
  L'esempio chiama anche una funzione non virtuale nella gerarchia.  
   
-```  
+```cpp 
 // dynamic_cast_8.cpp  
 // compile with: /GR /EHsc  
 #include <stdio.h>  

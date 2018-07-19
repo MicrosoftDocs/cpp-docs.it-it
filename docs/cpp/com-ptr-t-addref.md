@@ -1,5 +1,5 @@
 ---
-title: _com_ptr_t::AddRef | Documenti Microsoft
+title: _com_ptr_t::AddRef | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 54a1b629f254bae2b72790546bcbb00185f2c44c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 40ed48b54a3862f7ac5804e7652d98b661bb071d
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32409774"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37940992"
 ---
 # <a name="comptrtaddref"></a>_com_ptr_t::AddRef
 **Sezione specifica Microsoft**  
   
- Chiamate di `AddRef` funzione membro di **IUnknown** sul puntatore a interfaccia incapsulato.  
+ Chiama il `AddRef` funzione membro di `IUnknown` sul puntatore a interfaccia incapsulato.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,7 +37,7 @@ void AddRef( );
 ```  
   
 ## <a name="remarks"></a>Note  
- Chiamate `IUnknown::AddRef` sul puntatore a interfaccia incapsulato, che genera un `E_POINTER` errore se il puntatore è **NULL**.  
+ Le chiamate `IUnknown::AddRef` sul puntatore a interfaccia incapsulato, restituendo un errore E_POINTER se il puntatore è NULL.  
   
  **Fine sezione specifica Microsoft**  
   

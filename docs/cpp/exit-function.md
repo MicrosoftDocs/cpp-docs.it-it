@@ -1,5 +1,5 @@
 ---
-title: Exit (funzione) | Documenti Microsoft
+title: Funzione Exit | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,24 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5767f6b08b4adcd3d1a8d367c6286a746eeecec3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d08ac1375fa383543eaafb5b3ce49cd2bbfbc4da
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32412530"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37941080"
 ---
 # <a name="exit-function"></a>Funzione exit
-Il **uscire** funzione, dichiarata in un file di inclusione standard \<STDLIB. h >, termina un programma C++.  
+Il `exit` funzione dichiarata nel file di inclusione standard \<STDLIB. h >, termina un programma C++.  
   
- Il valore fornito come argomento di **uscire** viene restituito al sistema operativo come codice di codice o di uscita restituito del programma. Per convenzione, un codice restituito uguale a zero indica che il programma è stato completato correttamente.  
+ Il valore fornito come argomento a `exit` viene restituito al sistema operativo come codice di uscita o codice restituito del programma. Per convenzione, un codice restituito uguale a zero indica che il programma è stato completato correttamente.  
   
 > [!NOTE]
->  È possibile utilizzare le costanti `EXIT_FAILURE` e `EXIT_SUCCESS`, definito in \<STDLIB. h >, per indicare esito positivo o negativo del programma.  
+>  È possibile utilizzare le costanti EXIT_FAILURE ed EXIT_SUCCESS, definite in \<STDLIB. h >, per indicare esito positivo o negativo del programma.  
   
- Emissione di un `return` from dell'istruzione il **principale** funzione è equivalente alla chiamata al metodo il **uscire** funzione con il valore restituito come argomento.  
+ Emissione di un **restituire** istruzione dal `main` funzione è equivalente alla chiamata di `exit` funzione con il valore restituito come argomento.  
   
- Per ulteriori informazioni, vedere [uscire](../c-runtime-library/reference/exit-exit-exit.md) nel *riferimenti alla libreria di Run-Time*.  
+ Per altre informazioni, vedere [uscire](../c-runtime-library/reference/exit-exit-exit.md) nel *Run-Time Library Reference*.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Chiusura del programma](../cpp/program-termination.md)

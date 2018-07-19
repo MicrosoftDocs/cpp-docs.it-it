@@ -1,5 +1,5 @@
 ---
-title: 'Dichiaratore di riferimento lvalue: &amp; | Documenti Microsoft'
+title: 'Dichiaratore di riferimento lvalue: &amp; | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,11 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: de716ec8c29bbdb50462cd6ea642ed603d411c2a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d16ed882b1037123963f105b1a78bf8e1023d332
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37943902"
 ---
 # <a name="lvalue-reference-declarator-amp"></a>Dichiaratore di riferimento lvalue: &amp;
 Contiene l'indirizzo di un oggetto, ma sintatticamente si comporta come un oggetto.  
@@ -38,12 +39,12 @@ type-id & cast-expression
   
  Qualsiasi oggetto il cui l'indirizzo può essere convertito in un dato tipo di puntatore, può anche essere convertito in un tipo di riferimento simile. Ad esempio, qualsiasi oggetto il cui l'indirizzo può essere convertito in un tipo `char *`, può anche essere convertito in un tipo `char &`.  
   
- Non confondere le dichiarazioni di riferimento utilizzando il [operatore address-of](../cpp/address-of-operator-amp.md). Quando il `&` *identificatore* è preceduto da un tipo, ad esempio `int` o `char`, *identificatore* è dichiarato come un riferimento al tipo. Quando `&` *identificatore* non è preceduto da un tipo, l'utilizzo è quello dell'operatore address-of.  
+ Non confondere le dichiarazioni di riferimento utilizzando il [operatore address-of](../cpp/address-of-operator-amp.md). Quando la `&` *identificatore* è preceduto da un tipo, ad esempio **int** oppure **char**, *identificatore* è dichiarato come un riferimento a il tipo. Quando `&` *identificatore* non è preceduto da un tipo, l'utilizzo è quello dell'operatore address-of.  
   
 ## <a name="example"></a>Esempio  
  Nell'esempio seguente viene illustrato il dichiaratore di riferimento dichiarando un oggetto `Person` e un riferimento a tale oggetto. Poiché `rFriend` è un riferimento a `myFriend`, l'aggiornamento delle variabili modifica lo stesso oggetto.  
   
-```  
+```cpp 
 // reference_declarator.cpp  
 // compile with: /EHsc  
 // Demonstrates the reference declarator.  
@@ -81,5 +82,5 @@ Bill is 40
 ## <a name="see-also"></a>Vedere anche  
  [Riferimenti](../cpp/references-cpp.md)   
  [Argomenti della funzione tipo-riferimento](../cpp/reference-type-function-arguments.md)   
- [Funzioni che restituiscono tipi di riferimento](../cpp/reference-type-function-returns.md)   
+ [Restituiti dalla funzione tipo-riferimento](../cpp/reference-type-function-returns.md)   
  [Riferimenti a puntatori](../cpp/references-to-pointers.md)

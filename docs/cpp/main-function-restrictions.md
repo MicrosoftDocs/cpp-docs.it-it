@@ -1,5 +1,5 @@
 ---
-title: limitazioni sulla funzione Main | Documenti Microsoft
+title: limitazioni sulla funzione Main | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,21 +16,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ed5be2df6e152b26bcade1970b35ad33655e8e02
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3114f1ef379495f36f4231dbad6fd41ac145bcfe
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32419685"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37941746"
 ---
 # <a name="main-function-restrictions"></a>Limitazioni sulla funzione main
-Applicano numerose restrizioni per il **principale** funzione che non si applicano alle altre funzioni C++. Il **principale** funzione:  
+Si applicano numerose restrizioni per il `main` funzione che non si applicano a qualsiasi altra funzione di C++. Il `main` funzione:  
   
 -   Impossibile eseguire l'overload (vedere [overload di funzioni](function-overloading.md)).  
   
--   Non può essere dichiarato come **inline**.  
+-   Non possono essere dichiarati come **inline**.  
   
--   Non può essere dichiarato come **statico**.  
+-   Non possono essere dichiarati come **statici**.  
   
 -   Non è possibile accettarne l'indirizzo.  
   

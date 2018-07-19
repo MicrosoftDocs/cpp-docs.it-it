@@ -1,5 +1,5 @@
 ---
-title: Considerazioni di terminazione aggiuntive | Documenti Microsoft
+title: Considerazioni di terminazione aggiuntive | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b634c7c792d4462f96f022f223d0b1eec2a750ba
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 50cf3d7e5168ba40acde386b62cf02c0933f8ca4
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32408146"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37941249"
 ---
 # <a name="additional-termination-considerations"></a>Considerazioni di terminazione aggiuntive
-È possibile terminare un programma C++ utilizzando **uscire**, `return`, o **abort**. È possibile aggiungere l'elaborazione di uscita utilizzando la funzione `atexit`. Questi argomenti vengono approfonditi nelle sezioni successive.  
+È possibile terminare un programma C++ utilizzando **uscire**, **restituire**, o **abort**. È possibile aggiungere l'elaborazione di uscita utilizzando la funzione `atexit`. Questi argomenti vengono approfonditi nelle sezioni successive.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Avvio e terminazione](../cpp/startup-and-termination-cpp.md)

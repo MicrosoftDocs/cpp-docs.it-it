@@ -1,5 +1,5 @@
 ---
-title: Identificatori (C++) | Documenti Microsoft
+title: Identificatori (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8bb25713ad4f4a8ab1821eac4f7bf05d671bb101
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1ef6bf658cd290e23be59eb7d26a6b0d353b52c6
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32415407"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37941772"
 ---
 # <a name="identifiers-c"></a>Identificatori (C++)
 Un identificatore è una sequenza di caratteri usata per indicare uno dei seguenti elementi:  
@@ -71,7 +71,7 @@ N O P Q R S T U V W X Y Z
   
  **Sezione specifica Microsoft**  
   
- Solo i primi 2048 caratteri degli identificatori di Microsoft C++ sono significativi. I nomi dei tipi definiti dall'utente sono decorati dal compilatore per conservare le informazioni sul tipo. Il nome risultante, incluse le informazioni sul tipo, non può essere più lungo di 2048 caratteri. (Vedere [nomi decorati](../build/reference/decorated-names.md) per ulteriori informazioni.) I fattori che possono influenzare la lunghezza di un identificatore decorato sono i seguenti:  
+ Solo i primi 2048 caratteri degli identificatori di Microsoft C++ sono significativi. I nomi dei tipi definiti dall'utente sono decorati dal compilatore per conservare le informazioni sul tipo. Il nome risultante, incluse le informazioni sul tipo, non può essere più lungo di 2048 caratteri. (Vedere [nomi decorati](../build/reference/decorated-names.md) per altre informazioni.) I fattori che possono influenzare la lunghezza di un identificatore decorato sono i seguenti:  
   
 -   Se l'identificatore indica un oggetto di tipo definito dall'utente o un tipo derivato da un tipo definito dall'utente.  
   
@@ -102,7 +102,7 @@ int main() {
   
  Il primo carattere di un identificatore deve essere un carattere alfabetico, maiuscolo o minuscolo, oppure un carattere di sottolineatura ( **_** ). Poiché gli identificatori di C++ rispettano la distinzione tra maiuscole e minuscole, `fileName` è diverso da `FileName`.  
   
- Gli identificatori non possono avere esattamente la stessa ortografia delle parole chiave. Gli identificatori contenenti parole chiave sono validi. Ad esempio, `Pint` è un identificatore valido, anche se contiene `int`, che è una parola chiave.  
+ Gli identificatori non possono avere esattamente la stessa ortografia delle parole chiave. Gli identificatori contenenti parole chiave sono validi. Ad esempio, `Pint` è un identificatore valido, anche se contiene **int**, che è una parola chiave.  
   
  L'utilizzo di due caratteri di sottolineatura sequenziali ( **__** ) all'inizio di un identificatore o un singolo carattere di sottolineatura seguito da un carattere maiuscolo è riservato alle implementazioni C++ in tutti gli ambiti. Evitare di usare un carattere di sottolineatura iniziale seguito da una minuscola per i nomi con ambito file per non creare potenziali conflitti con gli identificatori riservati correnti o futuri.  
   

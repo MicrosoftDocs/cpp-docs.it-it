@@ -1,5 +1,5 @@
 ---
-title: novtable | Documenti Microsoft
+title: novtable | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,23 +17,24 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 283ff09c320b67686e353f0497c665828cd8b5d0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3ad0c50330d174a6139ce6e588b278e03cd99562
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37943611"
 ---
 # <a name="novtable"></a>novtable
 ## <a name="microsoft-specific"></a>Sezione specifica Microsoft  
- Questo è un attributo `__declspec` esteso.  
+ Si tratta di un **declspec** attributi estesa.  
   
- Questo formato dell'attributo `__declspec` può essere applicato a qualsiasi dichiarazione di classe, ma deve essere applicato solo a classi di interfaccia pure, ovvero, classi per le quali non verrà mai creata un'istanza automaticamente. L'attributo `__declspec` arresta la generazione di codice da parte del compilatore per inizializzare vfptr nel costruttore o nei costruttori e nel distruttore della classe. In molti casi, in tal modo vengono rimossi gli unici riferimenti a vtable associati alla classe e, pertanto, il linker la rimuoverà. L'utilizzo del formato dell'attributo `__declspec` può comportare una riduzione significativa della dimensione del codice.  
+ Questa forma di **declspec** possono essere applicati a qualsiasi dichiarazione di classe, ma deve essere applicato solo a classi di interfaccia pure, ovvero le classi che non verranno mai avviata l'istanza in modo indipendente. Il **declspec** interrompe il compilatore di generare codice per inizializzare vfptr nel costruttori e nel distruttore della classe il costruttore di o. In molti casi, in tal modo vengono rimossi gli unici riferimenti a vtable associati alla classe e, pertanto, il linker la rimuoverà. Utilizzo del formato del **declspec** può comportare una riduzione significativa delle dimensioni del codice.  
   
  Se si tenta di creare un'istanza di una classe contrassegnata con `novtable` e quindi accedere a un membro di classe, si riceverà una violazione di accesso (AV).  
   
 ## <a name="example"></a>Esempio  
   
-```  
+```cpp 
 // novtable.cpp  
 #include <stdio.h>  
   

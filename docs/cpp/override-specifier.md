@@ -1,5 +1,5 @@
 ---
-title: Identificatore di override | Documenti Microsoft
+title: Identificatore di override | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,15 +14,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4d43620ceeb0404c3ad8b10cee3d0a00e7b2f467
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b50ffc096cc710f4028c7effc2dda8822f077f29
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32420181"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37940654"
 ---
 # <a name="override-specifier"></a>Identificatore override
-È possibile utilizzare la parola chiave `override` per definire le funzioni membro che eseguono l'override di una funzione virtuale in una classe di base.  
+È possibile usare la **eseguire l'override** (parola chiave) per indicare che le funzioni che eseguono l'override di una funzione virtuale in una classe di base.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -32,10 +32,10 @@ function-declaration override;
 ```  
   
 ## <a name="remarks"></a>Note  
- `override` è sensibile al contesto e ha un significato speciale solo quando utilizzato dopo una dichiarazione di funzione membro; in caso contrario, non è una parola chiave riservata.  
+ **eseguire l'override** è sensibile al contesto e ha un significato solo quando speciale utilizzato dopo una dichiarazione di funzione membro; in caso contrario, non è una parola chiave riservata.  
   
 ## <a name="example"></a>Esempio  
- Utilizzare `override` per evitare comportamenti di ereditarietà accidentali nel codice. Nell'esempio seguente viene illustrato dove, senza utilizzare `override`, il comportamento della funzione membro della classe derivata potrebbe non essere stato previsto. Il compilatore non genera alcun errore per questo codice.  
+ Uso **eseguire l'override** al fine di evitare il comportamento di ereditarietà accidentali nel codice. Nell'esempio seguente viene illustrato dove, senza usare **eseguire l'override**, il comportamento della funzione membro della classe derivata potrebbe non essere stato previsto. Il compilatore non genera alcun errore per questo codice.  
   
 ```cpp  
 class BaseClass  
@@ -61,7 +61,7 @@ class DerivedClass: public BaseClass
   
 ```  
   
- Quando si utilizza `override`, il compilatore genera errori invece di creare nuove funzioni membro automaticamente.  
+ Quando si usa **eseguire l'override**, il compilatore genera errori invece in modo invisibile creare nuove funzioni membro.  
   
 ```cpp  
 class BaseClass  
@@ -89,7 +89,7 @@ class DerivedClass: public BaseClass
   
 ```  
   
- Per specificare che è Impossibile eseguire l'override di funzioni e che le classi non possono essere ereditate, utilizzare il [finale](../cpp/final-specifier.md) (parola chiave).  
+ Per specificare che non è possibile eseguire l'override di funzioni e che le classi non possono essere ereditate, usare il [finale](../cpp/final-specifier.md) (parola chiave).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Identificatore final](../cpp/final-specifier.md)   

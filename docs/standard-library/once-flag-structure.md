@@ -14,16 +14,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f8a8d28f19e32988bfa179642a87e880413bb0ff
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 4275b99ada0dbfe1c974446d21862f7fa73aab38
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33852338"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964496"
 ---
 # <a name="onceflag-structure"></a>Struttura once_flag
 
-Rappresenta un oggetto `struct` usato con la funzione modello [call_once](../standard-library/mutex-functions.md#call_once) per garantire che il codice di inizializzazione venga chiamato una sola volta, anche in presenza di più thread di esecuzione.
+Rappresenta un **struct** che viene usato con la funzione modello [call_once](../standard-library/mutex-functions.md#call_once) per assicurarsi che l'inizializzazione codice viene chiamato una sola volta, anche in presenza di più thread di esecuzione.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -31,7 +31,7 @@ struct once_flag { constexpr once_flag() noexcept; once_flag(const once_flag&); 
 
 ## <a name="remarks"></a>Note
 
-Il `once_flag` `struct` ha solo un costruttore predefinito.
+Il `once_flag` **struct** ha solo un costruttore predefinito.
 
 È possibile creare oggetti di tipo `once_flag`, ma non eseguirne la copia.
 

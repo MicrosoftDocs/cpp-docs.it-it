@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1a3250d9a090dcbd5eaa9a3cc0d51df84600ed3e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 66f9401bed0a6c9d0b1ffa09a10f98afa258069d
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33912875"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964756"
 ---
 # <a name="ltlimitsgt"></a>&lt;limits&gt;
 
@@ -37,7 +37,7 @@ Definisce la classe modello `numeric_limits` e due enumerazioni relative all'arr
 
 ## <a name="remarks"></a>Note
 
-Le specializzazioni esplicite della classe `numeric_limits` descrivono molte proprietà dei tipi fondamentali, inclusi i tipi di carattere, integer e a virgola mobile e `bool`, che sono definite dall'implementazione anziché dalle regole del linguaggio C++. Le proprietà descritte in \<limits> includono accuratezza, rappresentazioni con dimensioni minime e massime, arrotondamento e segnalazione degli errori di tipo.
+Le specializzazioni esplicite del `numeric_limits` classe descrivono molte proprietà dei tipi fondamentali, tra cui il carattere, integer e tipi a virgola mobile e **bool** che si trovano implementazione definita anziché dalle le regole del linguaggio C++. Le proprietà descritte in \<limits> includono accuratezza, rappresentazioni con dimensioni minime e massime, arrotondamento e segnalazione degli errori di tipo.
 
 ### <a name="enumerations"></a>Enumerazioni
 

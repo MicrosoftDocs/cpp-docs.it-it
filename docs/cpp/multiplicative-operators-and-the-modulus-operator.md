@@ -1,5 +1,5 @@
 ---
-title: Operatori di moltiplicazione e operatori modulo | Documenti Microsoft
+title: Gli operatori di moltiplicazione e operatori modulo | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -25,11 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 129dce32dfe0ba50a07b71d2fcfaf72bdade090e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: de826b1ac86656b9225560bfd9003ce0b03c1111
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37943862"
 ---
 # <a name="multiplicative-operators-and-the-modulus-operator"></a>Operatori di moltiplicazione e operatori modulo
 ## <a name="syntax"></a>Sintassi  
@@ -57,11 +58,11 @@ expression % expression
   
  L'operatore di divisione produce il risultato dividendo il primo operando per il secondo.  
   
- L'operatore modulo produce il resto fornito dalla seguente espressione, in cui *e1* è il primo operando e *e2* è il secondo: *e1* -(*e1*  /  *e2*) \* *e2*, dove entrambi gli operandi sono di tipi integrali.  
+ L'operatore modulo produce il resto fornito dall'espressione seguente, dove *e1* è il primo operando e *e2* è il secondo: *e1* -(*e1*  /  *e2*) \* *e2*, dove entrambi gli operandi sono di tipi integrali.  
   
  La divisione per 0 in una divisione o in un'espressione di modulo non è definita e provoca un errore di runtime. Pertanto, le espressioni seguenti generano risultati errati non definiti:  
   
-```  
+```cpp 
 i % 0  
 f / 0.0  
 ```  
@@ -75,14 +76,14 @@ f / 0.0
  In Microsoft C++, il risultato di un'espressione di modulo è sempre uguale al segno del primo operando.  
   
 **Fine sezione specifica Microsoft**  
- Se la divisione calcolata di due interi non è esatta e un solo operando è negativo, il risultato è l'intero più grande (in termini di grandezza, non considerando il segno) che è minore del valore esatto che produrrebbe l'operazione di divisione. Ad esempio, il valore calcolato della -11 / 3 è-3.666666666. Il risultato della divisione integrale è -3.  
+ Se la divisione calcolata di due interi non è esatta e un solo operando è negativo, il risultato è l'intero più grande (in termini di grandezza, non considerando il segno) che è minore del valore esatto che produrrebbe l'operazione di divisione. Ad esempio, il valore calcolato di -11 / 3 è-3.666666666. Il risultato della divisione è -3.  
   
  La relazione tra gli operatori moltiplicativi viene fornita dall'identità (*e1* / *e2*) \* *e2*  +  *e1* % *e2* == *e1*.  
   
 ## <a name="example"></a>Esempio  
- Nel programma seguente vengono illustrati gli operatori moltiplicativi. Si noti che ogni operando di `10 / 3` deve essere convertito in modo esplicito nel tipo `float` per evitare il troncamento in modo che entrambi gli operandi sono di tipo `float` prima della divisione.  
+ Nel programma seguente vengono illustrati gli operatori moltiplicativi. Si noti che degli operandi del `10 / 3` deve essere convertito in modo esplicito nel tipo **float** per evitare il troncamento in modo che entrambi gli operandi sono di tipo **float** prima della divisione.  
   
-```  
+```cpp 
 // expre_Multiplicative_Operators.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -98,5 +99,5 @@ int main() {
   
 ## <a name="see-also"></a>Vedere anche  
  [Espressioni con operatori binari](../cpp/expressions-with-binary-operators.md)   
- [Operatori C++ predefiniti, precedenza e associazione](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
+ [Operatori C++ predefiniti, precedenza e associatività degli operatori](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
  [Operatori di moltiplicazione C](../c-language/c-multiplicative-operators.md)

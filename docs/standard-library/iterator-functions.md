@@ -34,12 +34,12 @@ helpviewer_keywords:
 - std::make_unchecked_array_iterator [C++]
 - std::next [C++]
 - std::prev [C++]
-ms.openlocfilehash: 965ff7aadb4add306061599bbe55466bbfb87f94
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 995aa846af4642070150f2dd41d4bf6463f46ee8
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33861818"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964463"
 ---
 # <a name="ltiteratorgt-functions"></a>Funzioni &lt;iterator&gt;
 
@@ -64,17 +64,17 @@ void advance(
 
 ### <a name="parameters"></a>Parametri
 
-`InIt` Iteratore che deve essere incrementato e che deve soddisfare i requisiti per un iteratore di input.
+*InIt* dell'iteratore che deve essere incrementato e che deve soddisfare i requisiti per un iteratore di input.
 
-`Off` Un tipo integrale che è convertibile nel tipo di differenza dell'iteratore e che specifica il numero di incrementi la posizione dell'iteratore è necessario far avanzare.
+*Disattivare* un tipo integrale che è convertibile nel tipo di differenza dell'iteratore e che specifica il numero di incrementi la posizione dell'iteratore è avanzato.
 
 ### <a name="remarks"></a>Note
 
 L'intervallo fatto avanzare deve essere non singolare, in cui gli iteratori devono essere deferenziabili o oltre la fine.
 
-Se **InputIterator** soddisfa i requisiti per un tipo di iteratore bidirezionale, `Off` può essere negativo. Se **InputIterator** è un tipo di iteratore di input o in avanti, `Off` non deve essere negativo.
+Se il `InputIterator` soddisfa i requisiti per un tipo di iteratore bidirezionale, quindi *disattivato* può essere negativo. Se `InputIterator` è un tipo di iteratore di input o inoltro, *disattivato* deve essere non negativo.
 
-La funzione advance presenta una complessità costante quando **InputIterator** soddisfa i requisiti per un iteratore ad accesso casuale; in caso contrario, presenta una complessità lineare ed è pertanto potenzialmente dispendiosa.
+La funzione advance presenta una complessità costante quando `InputIterator` soddisfa i requisiti per un iteratore ad accesso casuale; in caso contrario, presenta una complessità lineare ed è pertanto potenzialmente dispendiosa.
 
 ### <a name="example"></a>Esempio
 
@@ -134,11 +134,11 @@ back_insert_iterator<Container> back_inserter(Container& _Cont);
 
 ### <a name="parameters"></a>Parametri
 
-`_Cont` Il contenitore in cui l'inserimento inversa è deve essere eseguito.
+*_Cont* il contenitore in cui deve essere eseguito l'inserimento inverso.
 
 ### <a name="return-value"></a>Valore restituito
 
-Oggetto `back_insert_iterator` associato all'oggetto contenitore `_Cont`.
+Oggetto `back_insert_iterator` associato all'oggetto contenitore *_Cont*.
 
 ### <a name="remarks"></a>Note
 
@@ -212,15 +212,15 @@ Ty *begin(Ty (& array)[Size]);
 
 ### <a name="parameters"></a>Parametri
 
-`cont` Un contenitore.
+*cont* un contenitore.
 
-`array` Una matrice di oggetti di tipo `Ty`.
+*matrice* una matrice di oggetti di tipo `Ty`.
 
 ### <a name="return-value"></a>Valore restituito
 
 Le prime due funzioni di modello restituiscono `cont.begin()`. La prima funzione è non costante; la seconda è costante.
 
-La terza funzione di modello restituisce `array`.
+La terza funzione modello restituisce *matrice*.
 
 ### <a name="example"></a>Esempio
 
@@ -305,7 +305,7 @@ auto cbegin(const Container& cont)
 
 ### <a name="parameters"></a>Parametri
 
-`cont` Un contenitore o un initializer_list.
+*cont* un contenitore o un oggetto initializer_list.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -315,7 +315,7 @@ Costante `cont.begin()`.
 
 Questa funzione viene eseguita con tutti i contenitori della libreria standard C++ e con [initializer_list](../standard-library/initializer-list-class.md).
 
-È possibile utilizzare questa funzione membro anziché il modello `begin()` per garantire che il valore restituito sia `const_iterator`. In genere, viene usata insieme alla parola chiave di deduzione di tipo [auto](../cpp/auto-cpp.md), come illustrato nell'esempio seguente. Nell'esempio, si consideri `Container` come un contenitore (non `const`) modificabile o `initializer_list` di qualsiasi tipo che supporta `begin()` e `cbegin()`.
+È possibile utilizzare questa funzione membro anziché il modello `begin()` per garantire che il valore restituito sia `const_iterator`. In genere, viene usata insieme alla parola chiave di deduzione di tipo [auto](../cpp/auto-cpp.md), come illustrato nell'esempio seguente. Nell'esempio, prendere in considerazione `Container` sia un modificabili (non - **const**) contenitore oppure `initializer_list` di qualsiasi tipo che supporta `begin()` e `cbegin()`.
 
 ```cpp
 auto i1 = Container.begin();
@@ -337,7 +337,7 @@ auto cend(const Container& cont)
 
 ### <a name="parameters"></a>Parametri
 
-`cont` Un contenitore o un initializer_list.
+*cont* un contenitore o un oggetto initializer_list.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -347,7 +347,7 @@ Costante `cont.end()`.
 
 Questa funzione viene eseguita con tutti i contenitori della libreria standard C++ e con [initializer_list](../standard-library/initializer-list-class.md).
 
-È possibile usare questa funzione membro in sostituzione della funzione modello [end()](../standard-library/iterator-functions.md#end) per garantire che il valore restituito sia `const_iterator`. In genere, viene usata insieme alla parola chiave di deduzione di tipo [auto](../cpp/auto-cpp.md), come illustrato nell'esempio seguente. Nell'esempio, si consideri `Container` come un contenitore (non `const`) modificabile o `initializer_list` di qualsiasi tipo che supporta `end()` e `cend()`.
+È possibile usare questa funzione membro in sostituzione della funzione modello [end()](../standard-library/iterator-functions.md#end) per garantire che il valore restituito sia `const_iterator`. In genere, viene usata insieme alla parola chiave di deduzione di tipo [auto](../cpp/auto-cpp.md), come illustrato nell'esempio seguente. Nell'esempio, prendere in considerazione `Container` sia un modificabili (non - **const**) contenitore oppure `initializer_list` di qualsiasi tipo che supporta `end()` e `cend()`.
 
 ```cpp
 auto i1 = Container.end();
@@ -368,17 +368,17 @@ typename iterator_traits<InputIterator>::difference_type distance(InputIterator 
 
 ### <a name="parameters"></a>Parametri
 
-`first` Il primo iteratore la cui distanza nel secondo viene determinato.
+*primo* il primo iteratore viene determinato la cui distanza dal secondo.
 
-`last` Il secondo iteratore la cui distanza dalla prima è necessario determinare.
+*ultimo* il secondo iteratore è necessario determinare la cui distanza dal primo.
 
 ### <a name="return-value"></a>Valore restituito
 
-Il numero di volte che deve essere incrementato `first` finché non è uguale a `last`.
+Il numero di occorrenze *primo* devono essere incrementati finché non è uguale *ultima*.
 
 ### <a name="remarks"></a>Note
 
-La funzione distance presenta una complessità costante quando **InputIterator** soddisfa i requisiti per un iteratore ad accesso casuale; in caso contrario, presenta una complessità lineare ed è pertanto potenzialmente dispendiosa.
+La funzione distance presenta una complessità costante quando `InputIterator` soddisfa i requisiti per un iteratore ad accesso casuale; in caso contrario, presenta una complessità lineare ed è pertanto potenzialmente dispendiosa.
 
 ### <a name="example"></a>Esempio
 
@@ -447,9 +447,9 @@ Ty *end(Ty (& array)[Size]);
 
 ### <a name="parameters"></a>Parametri
 
-`cont` Un contenitore.
+*cont* un contenitore.
 
-`array` Una matrice di oggetti di tipo `Ty`.
+*matrice* una matrice di oggetti di tipo `Ty`.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -472,11 +472,11 @@ front_insert_iterator<Container> front_inserter(Container& _Cont);
 
 ### <a name="parameters"></a>Parametri
 
-`_Cont` L'oggetto contenitore il cui inizio presenta un elemento inserito.
+*_Cont* l'oggetto contenitore inizio del quale ha riscontrato un elemento inserito.
 
 ### <a name="return-value"></a>Valore restituito
 
-Oggetto `front_insert_iterator` associato all'oggetto contenitore `_Cont`.
+Oggetto `front_insert_iterator` associato all'oggetto contenitore *_Cont*.
 
 ### <a name="remarks"></a>Note
 
@@ -533,7 +533,7 @@ After the front insertions, the list L is:
 
 ## <a name="inserter"></a>  inserter
 
-Funzione di modello helper che consente di utilizzare `inserter(_Cont, _Where)` anziché `insert_iterator<Container>(_Cont, _Where)`.
+Funzione di modello helper che consente di usare `inserter(_Cont, _Where)` invece di `insert_iterator<Container>(_Cont, _Where)`.
 
 ```cpp
 template <class Container>
@@ -545,9 +545,9 @@ inserter(
 
 ### <a name="parameters"></a>Parametri
 
-`_Cont` Il contenitore a cui devono essere aggiunti nuovi elementi.
+*_Cont* il contenitore a cui devono essere aggiunti nuovi elementi.
 
-`_Where` Iteratore di individuazione del punto di inserimento.
+*WHERE* iteratore che individua il punto di inserimento.
 
 ### <a name="remarks"></a>Note
 
@@ -618,11 +618,11 @@ checked_array_iterator<Iter>
 
 ### <a name="parameters"></a>Parametri
 
-`Ptr` Puntatore alla matrice di destinazione.
+*PTR* un puntatore alla matrice di destinazione.
 
-`Size` Le dimensioni della matrice di destinazione.
+*Dimensioni* le dimensioni della matrice di destinazione.
 
-`Index` Indice facoltativo nella matrice.
+*Indice* indice facoltativo nella matrice.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -704,7 +704,7 @@ make_move_iterator(const Iterator& _It);
 
 ### <a name="parameters"></a>Parametri
 
-`_It` L'iteratore archiviato nella nuova iteratore di spostamento.
+*_It* l'iteratore archiviato nel nuovo spostare iteratore.
 
 ### <a name="remarks"></a>Note
 
@@ -725,7 +725,7 @@ unchecked_array_iterator<Iter>
 
 ### <a name="parameters"></a>Parametri
 
-`Ptr` Puntatore alla matrice di destinazione.
+*PTR* un puntatore alla matrice di destinazione.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -802,17 +802,17 @@ InputIterator next(
 
 ### <a name="parameters"></a>Parametri
 
-`first` La posizione corrente.
+*primo* la posizione corrente.
 
-`_Off` Il numero di volte in cui eseguire l'iterazione.
+*Off* il numero di iterazioni da eseguire.
 
 ### <a name="return-value"></a>Valore restituito
 
-Restituisce la nuova posizione dell'iteratore dopo l'esecuzione di `_Off` iterazioni.
+Restituisce la nuova posizione dell'iteratore dopo l'iterazione *Off* volte.
 
 ### <a name="remarks"></a>Note
 
-La funzione modello restituisce `next` incrementato `_Off` volte.
+La funzione modello restituisce `next` incrementato *Off* volte
 
 ## <a name="prev"></a>  prev
 
@@ -827,9 +827,9 @@ BidirectionalIterator prev(
 
 ### <a name="parameters"></a>Parametri
 
-`first` La posizione corrente.
+*primo* la posizione corrente.
 
-`_Off` Il numero di volte in cui eseguire l'iterazione.
+*Off* il numero di iterazioni da eseguire.
 
 ### <a name="remarks"></a>Note
 

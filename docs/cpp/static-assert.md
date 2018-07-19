@@ -1,5 +1,5 @@
 ---
-title: static_assert | Documenti Microsoft
+title: static_assert | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,14 +19,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 47046090da45d963cc0005f47e2bea680ad17795
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: dc51fab2dade4c6bed0456dd353258df82722de5
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37943838"
 ---
 # <a name="staticassert"></a>static_assert
-Verifica un'asserzione software in fase di compilazione. Se l'espressione costante specificata è `false`, il compilatore Visualizza il messaggio specificato, se presente e la compilazione non riesce con l'errore C2338; in caso contrario, la dichiarazione non ha alcun effetto.  
+Verifica un'asserzione software in fase di compilazione. Se l'espressione costante specificata è FALSE, il compilatore Visualizza il messaggio specificato, se presente, e la compilazione ha esito negativo con l'errore C2338; in caso contrario, la dichiarazione non ha effetto.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -41,33 +42,33 @@ static_assert( constant-expression );
   
 |Parametro|Descrizione|  
 |---------------|-----------------|  
-|`constant-expression`|Espressione costante integrale che può essere convertita in un valore booleano.<br /><br /> Se l'espressione valutata restituisce zero (false), viene visualizzato il parametro `string-literal` e la compilazione ha esito negativo con un errore. Se l'espressione restituisce un valore diverso da zero (true), la dichiarazione `static_assert` non ha effetto.|  
+|`constant-expression`|Espressione costante integrale che può essere convertita in un valore booleano.<br /><br /> Se l'espressione valutata restituisce zero (false), viene visualizzato il parametro `string-literal` e la compilazione ha esito negativo con un errore. Se l'espressione è diverso da zero (true), il **static_assert** dichiarazione non ha alcun effetto.|  
 |`string-literal`|Messaggio visualizzato se il parametro `constant-expression` è zero. Il messaggio è una stringa di caratteri nel [set di caratteri di base](../c-language/ascii-character-set.md) del compilatore; ovvero, non [caratteri multibyte o wide](../c-language/multibyte-and-wide-characters.md).|  
   
 ## <a name="remarks"></a>Note  
- Il `constant-expression` parametro di un `static_assert` dichiarazione rappresenta un *asserzione software*. Un'asserzione software specifica una condizione che si prevede abbia valore True in un particolare punto del programma. Se la condizione è true, la dichiarazione `static_assert` non ha effetto. Se la condizione è false, l'asserzione ha esito negativo, il compilatore visualizza il messaggio nel parametro `string-literal` e la compilazione ha esito negativo con un errore. In Visual Studio 2017 e versioni successive, il parametro di valore letterale stringa è facoltativo. 
+ Il `constant-expression` parametro di un **static_assert** dichiarazione rappresenta una *asserzione software*. Un'asserzione software specifica una condizione che si prevede abbia valore True in un particolare punto del programma. Se la condizione è true, il **static_assert** dichiarazione non ha alcun effetto. Se la condizione è false, l'asserzione ha esito negativo, il compilatore visualizza il messaggio nel parametro `string-literal` e la compilazione ha esito negativo con un errore. In Visual Studio 2017 e versioni successive, il parametro di valore letterale stringa è facoltativo. 
   
- La dichiarazione `static_assert` verifica un'asserzione software in fase di compilazione. Al contrario, il [assert (macro), Assert, wassert](../c-runtime-library/reference/assert-macro-assert-wassert.md) macro test di un'asserzione software in fase di esecuzione e comporta un costo in fase di esecuzione nel tempo o di spazio. La dichiarazione `static_assert` è particolarmente utile per i modelli di debug perché gli argomenti di modello possono essere inclusi nel parametro `constant-expression`.  
+ Il **static_assert** consente di testare un'asserzione software in fase di compilazione. Al contrario, il [Macro assert, Assert, wassert](../c-runtime-library/reference/assert-macro-assert-wassert.md) macro testare un'asserzione software in fase di esecuzione e comporta un costo di fase di esecuzione nel tempo o di spazio. Il **static_assert** dichiarazione è particolarmente utile per il debug di modelli perché argomenti di modello possono essere inclusi nel `constant-expression` parametro.  
   
- Il compilatore esamina la dichiarazione `static_assert` per gli errori di sintassi quando viene rilevata la dichiarazione. Il compilatore restituisce immediatamente il parametro `constant-expression` se non dipende da un parametro di modello. In caso contrario, il compilatore restituisce il parametro `constant-expression` quando viene creata un'istanza del modello. Di conseguenza, il compilatore potrebbe generare un messaggio di diagnostica una volta quando la dichiarazione viene rilevata e nuovamente quando viene creata un'istanza del modello.  
+ Il compilatore esamina la **static_assert** dichiarazione per gli errori di sintassi quando viene rilevata la dichiarazione. Il compilatore restituisce immediatamente il parametro `constant-expression` se non dipende da un parametro di modello. In caso contrario, il compilatore restituisce il parametro `constant-expression` quando viene creata un'istanza del modello. Di conseguenza, il compilatore potrebbe generare un messaggio di diagnostica una volta quando la dichiarazione viene rilevata e nuovamente quando viene creata un'istanza del modello.  
   
- È possibile utilizzare la parola chiave `static_assert` nell'ambito di uno spazio dei nomi, di una classe o di un blocco. La parola chiave `static_assert` è tecnicamente una dichiarazione, anche se non introduce il nuovo nome nel programma, perché può essere utilizzata nell'ambito dello spazio dei nomi.  
+ È possibile usare la **static_assert** parola chiave nella spazio dei nomi, classe o di ambito del blocco. (Il **static_assert** la parola chiave è tecnicamente una dichiarazione, anche se introduce il nuovo nome nel programma, perché può essere usato nell'ambito dello spazio dei nomi.)  
   
 ## <a name="description"></a>Descrizione  
- Nell'esempio seguente la dichiarazione `static_assert` ha come ambito quello dello spazio dei nomi. Poiché il compilatore riconosce la dimensione di tipo `void *`, l'espressione viene valutata immediatamente.  
+ Nell'esempio seguente, il **static_assert** dichiarazione con ambito spazio dei nomi. Poiché il compilatore riconosce la dimensione di tipo `void *`, l'espressione viene valutata immediatamente.  
   
 ## <a name="example"></a>Esempio  
   
-```  
+```cpp 
 static_assert(sizeof(void *) == 4, "64-bit code generation is not supported.");  
 ```  
   
 ## <a name="description"></a>Descrizione  
- Nell'esempio riportato di seguito la dichiarazione `static_assert` ha come ambito quello della classe. Il `static_assert` verifica che un parametro di modello è un *dati non aggiornati* tipo (POD). Il compilatore esamina la dichiarazione `static_assert` quando viene dichiarata, ma non restituisce il parametro `constant-expression` fino a che non viene creata un'istanza del modello di classe `basic_string` in `main()`.  
+ Nell'esempio seguente, il **static_assert** dichiarazione con ambito di classe. Il **static_assert** verifica che un parametro di modello sia un *dati non aggiornati* tipo (POD). Il compilatore esamina la **static_assert** dichiarazione quando viene dichiarata, ma non valuta il `constant-expression` parametro finché il `basic_string` viene creata un'istanza di modello di classe `main()`.  
   
 ## <a name="example"></a>Esempio  
   
-```  
+```cpp 
 #include <type_traits>  
 #include <iosfwd>  
 namespace std {  
@@ -91,11 +92,11 @@ int main()
 ```  
   
 ## <a name="description"></a>Descrizione  
- Nell'esempio seguente la dichiarazione `static_assert` ha come ambito quello del blocco. La dichiarazione `static_assert` verifica che la dimensione della struttura VMPage sia uguale alla dimensione di pagina della memoria virtuale del sistema.  
+ Nell'esempio seguente, il **static_assert** dichiarazione con ambito blocco. Il **static_assert** verifica che la dimensione della struttura VMPage sia uguale a pagesize della memoria virtuale del sistema.  
   
 ## <a name="example"></a>Esempio  
   
-```  
+```cpp 
 #include <sys/param.h> // defines PAGESIZE  
 class VMMClient {  
 public:  

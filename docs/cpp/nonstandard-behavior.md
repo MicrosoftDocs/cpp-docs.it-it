@@ -1,5 +1,5 @@
 ---
-title: Comportamento non standard | Documenti Microsoft
+title: Comportamento non standard | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,20 +16,20 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 54d421f00839d21236741e8d33f1415fe129b18c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1b7334fdc420c096c42360dd6b75fc400b8b34f3
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32420295"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37941798"
 ---
 # <a name="nonstandard-behavior"></a>Comportamento non standard
 Negli sezioni seguenti sono elencate alcune parti in cui l'implementazione Visual C++ di C++ non si conforma allo standard C++. I numeri delle sezioni indicati di seguito fanno riferimento ai numeri delle sezioni nello standard C++ 11 (ISO/IEC 14882:2011(E)).  
   
- L'elenco dei limiti del compilatore che differiscono da quelli definiti nello standard C++ è specificato in [limiti del compilatore](../cpp/compiler-limits.md).  
+ L'elenco dei limiti del compilatore che differiscono da quelli definiti nello standard C++ è disponibile nella [limiti del compilatore](../cpp/compiler-limits.md).  
   
 ## <a name="covariant-return-types"></a>Tipi restituiti covarianti  
- Le classi base virtuali non sono supportate come tipi restituiti covarianti quando la funzione virtuale dispone di un numero variabile di argomenti. Questo non è conforme alla sezione 10.3, paragrafo 7 della specifica C++ ISO. L'esempio seguente non viene compilato errore del compilatore [C2688](../error-messages/compiler-errors-2/compiler-error-c2688.md)  
+ Le classi base virtuali non sono supportate come tipi restituiti covarianti quando la funzione virtuale dispone di un numero variabile di argomenti. Questo non è conforme alla sezione 10.3, paragrafo 7 della specifica C++ ISO. L'esempio seguente non viene compilato, fornendo l'errore del compilatore [C2688](../error-messages/compiler-errors-2/compiler-error-c2688.md)  
   
 ```cpp  
 // CovariantReturn.cpp  
@@ -78,10 +78,10 @@ void f() throw(int); // parsed but not used
 void g() throw();    // parsed and used  
 ```  
   
- Per ulteriori informazioni sulle specifiche di eccezione, vedere [specifiche di eccezione](../cpp/exception-specifications-throw-cpp.md).  
+ Per altre informazioni sulle specifiche di eccezione, vedere [specifiche di eccezione](../cpp/exception-specifications-throw-cpp.md).  
   
 ## <a name="chartraitseof"></a>char_traits::eof()  
- Gli stati standard C++ che [char_traits:: EOF](../standard-library/char-traits-struct.md#eof) non devono corrispondere a un oggetto valido `char_type` valore. Il compilatore di Visual C++ applica questo vincolo al tipo `char`, ma non al tipo `wchar_t`. Questo non è conforme al requisito indicato nella Tabella 62 della sezione 12.1.1 della specifica ISO C++. Nell'esempio che segue viene illustrato quanto descritto.  
+ Gli stati standard C++ che [char_traits:: EOF](../standard-library/char-traits-struct.md#eof) non deve corrispondere a un valore valido `char_type` valore. Il compilatore Visual C++ applica questo vincolo al tipo **char**, ma non per tipo `wchar_t`. Questo non è conforme al requisito indicato nella Tabella 62 della sezione 12.1.1 della specifica ISO C++. Nell'esempio che segue viene illustrato quanto descritto.  
   
 ```cpp  
 #include <iostream>  

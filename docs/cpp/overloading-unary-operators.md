@@ -1,5 +1,5 @@
 ---
-title: Overload degli operatori unari | Documenti Microsoft
+title: Overload degli operatori unari | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,19 +21,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d7f242fac0d81c6d46c2d810bf07459fde2fb2ae
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6f20268e9d67ed59e52f3716e9203dadd2a2715d
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32421059"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37941691"
 ---
 # <a name="overloading-unary-operators"></a>Overload degli operatori unari
 Di seguito sono elencati gli operatori unari di cui è possibile eseguire l'overload:  
   
 1.  `!` ([NOT logico](../cpp/logical-negation-operator-exclpt.md))  
   
-2.  `&` ([indirizzo-of](../cpp/address-of-operator-amp.md))  
+2.  `&` ([AddressOf](../cpp/address-of-operator-amp.md))  
   
 3.  `~` ([complemento a uno](../cpp/one-s-complement-operator-tilde.md))  
   
@@ -45,13 +45,13 @@ Di seguito sono elencati gli operatori unari di cui è possibile eseguire l'over
   
 7.  `++` ([incremento](../cpp/prefix-increment-and-decrement-operators-increment-and-decrement.md))  
   
-8.  `--` ([decrementare](../cpp/prefix-increment-and-decrement-operators-increment-and-decrement.md))  
+8.  `--` ([decremento](../cpp/prefix-increment-and-decrement-operators-increment-and-decrement.md))  
   
 9. operatori di conversione  
   
- L'incremento e decremento (operatori) (`++` e **--**) sono trattati separatamente in [incrementare e decrementare](../cpp/increment-and-decrement-operator-overloading-cpp.md).  
+ L'incremento e decremento (operatori) (`++` e `--`) vengono trattati separatamente in [incrementare e decrementare](../cpp/increment-and-decrement-operator-overloading-cpp.md).  
   
- Gli operatori di conversione vengono illustrati anche in un argomento separato. vedere [conversioni dei tipi definiti dall'utente](../cpp/user-defined-type-conversions-cpp.md).  
+ Gli operatori di conversione vengono illustrati anche in un argomento distinto; visualizzare [conversioni di tipi definiti dall'utente](../cpp/user-defined-type-conversions-cpp.md).  
   
  Le regole seguenti valgono per tutti gli altri operatori unari. Per dichiarare una funzione di un operatore unario come membro non statico, è necessario dichiararla nel seguente formato:  
   

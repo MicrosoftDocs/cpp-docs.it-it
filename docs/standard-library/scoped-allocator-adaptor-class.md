@@ -33,12 +33,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e403e0133818846deb08bb336adc98618e944bf9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7025e0d52aa882c26e2785279626959ca6b29ac1
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33861877"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962930"
 ---
 # <a name="scopedallocatoradaptor-class"></a>Classe scoped_allocator_adaptor
 
@@ -131,9 +131,9 @@ pointer allocate(size_type count);pointer allocate(size_type count, const_void_p
 
 ### <a name="parameters"></a>Parametri
 
-`count` Il numero di elementi per cui è possibile allocare spazio di archiviazione sufficiente.
+*conteggio* il numero di elementi per cui è possibile allocare spazio di archiviazione sufficiente.
 
-`hint` Un puntatore che potrebbero rivelarsi utili l'oggetto allocatore individuando l'indirizzo di un oggetto allocato prima della richiesta.
+*hint* un puntatore che potrebbe essere utile all'oggetto allocatore individuando l'indirizzo di un oggetto allocato prima della richiesta.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -168,19 +168,19 @@ void construct(pair<Ty1, Ty2>* ptr, pair<Uy1, Uy2>&& right);
 
 ### <a name="parameters"></a>Parametri
 
-`ptr` Un puntatore nella posizione di memoria in cui l'oggetto è deve essere costruita.
+*PTR* un puntatore alla posizione di memoria in cui viene possibile costruire l'oggetto.
 
-`args` Un elenco di argomenti.
+*args* un elenco di argomenti.
 
-`first` Un oggetto del primo tipo in una coppia.
+*primo* un oggetto del primo tipo in una coppia.
 
-`second` Un oggetto del secondo tipo in una coppia.
+*secondo* un oggetto del secondo tipo in una coppia.
 
-`right` Un oggetto esistente per essere spostato o copiato.
+*a destra* oggetto esistente da spostare o copiare.
 
 ### <a name="remarks"></a>Note
 
-Il primo metodo costruisce l'oggetto in `ptr` chiamando `Outermost_traits::construct(OUTERMOST(*this), ptr, xargs...)`, dove `xargs...` ha uno dei valori seguenti:
+Il primo metodo costruisce l'oggetto in corrispondenza *ptr* chiamando `Outermost_traits::construct(OUTERMOST(*this), ptr, xargs...)`, dove `xargs...` è uno dei valori seguenti.
 
 - Se `uses_allocator<Ty, inner_allocator_type>` contiene false, `xargs...` è `args...`.
 
@@ -188,7 +188,7 @@ Il primo metodo costruisce l'oggetto in `ptr` chiamando `Outermost_traits::const
 
 - Se `uses_allocator<Ty, inner_allocator_type>` e `is_constructible<Ty, args..., inner_allocator()>` contengono entrambi true, `xargs...` è `args..., inner_allocator()`.
 
-Il secondo metodo costruisce l'oggetto pair in `ptr` chiamando `Outermost_traits::construct(OUTERMOST(*this), &ptr->first, xargs...)`, dove `xargs...` è `first...` modificato come nell'elenco precedente, e `Outermost_traits::construct(OUTERMOST(*this), &ptr->second, xargs...)`, dove `xargs...` è `second...` modificato come nell'elenco precedente.
+Il secondo metodo costruisce l'oggetto pair in *ptr* chiamando `Outermost_traits::construct(OUTERMOST(*this), &ptr->first, xargs...)`, dove `xargs...` viene `first...` modificato come nell'elenco precedente, e `Outermost_traits::construct(OUTERMOST(*this), &ptr->second, xargs...)`, dove `xargs...` è `second...` modificato come avviene nell'elenco precedente.
 
 Il terzo metodo si comporta come `this->construct(ptr, piecewise_construct, tuple<>, tuple<>)`.
 
@@ -208,9 +208,9 @@ void deallocate(pointer ptr, size_type count);
 
 ### <a name="parameters"></a>Parametri
 
-`ptr` Puntatore alla posizione iniziale degli oggetti da deallocare.
+*PTR* un puntatore alla posizione iniziale degli oggetti da deallocare.
 
-`count` Il numero di oggetti da deallocare.
+*conteggio* il numero di oggetti da deallocare.
 
 ## <a name="destroy"></a>  scoped_allocator_adaptor::destroy
 
@@ -223,7 +223,7 @@ void destroy(Ty* ptr)
 
 ### <a name="parameters"></a>Parametri
 
-`ptr` Un puntatore all'oggetto di essere eliminati.
+*PTR* un puntatore all'oggetto da distruggere.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -271,7 +271,7 @@ Riferimento all'oggetto archiviato di tipo `outer_allocator_type`.
 
 Definisce il tipo `Outer::rebind\<Other>::other` come sinonimo di `scoped_allocator_adaptor\<Other, Inner...>`.
 
-riassociazione struct {typedef Other_traits::rebind\<altri > Other_alloc; typedef scoped_allocator_adaptor\<Other_alloc, Inner... > other;};
+struct riassociazione {typedef Other_traits::rebind\<altri > Other_alloc; scoped_allocator_adaptor typedef\<Other_alloc, Inner... > other;};
 
 ## <a name="scoped_allocator_adaptor"></a>  Costruttore scoped_allocator_adaptor::scoped_allocator_adaptor
 
@@ -294,15 +294,15 @@ scoped_allocator_adaptor(Outer2&& al,
 
 ### <a name="parameters"></a>Parametri
 
-`right` Un oggetto esistente `scoped_allocator_adaptor`.
+*a destra* esistente `scoped_allocator_adaptor`.
 
-`al` Un allocatore esistente da utilizzare come l'allocatore esterno.
+*al* allocatore esistente da usare come allocatore esterno.
 
-`rest` Un elenco di allocatori per utilizzarlo come gli allocatori interni.
+*REST* un elenco di allocatori da usare come allocatori interni.
 
 ### <a name="remarks"></a>Note
 
-Il primo costruttore crea per impostazione predefinita i relativi oggetti allocator archiviati. Ognuno dei tre costruttori successivi crea i relativi oggetti allocator archiviati in base agli oggetti corrispondenti in `right`. L'ultimo costruttore crea i relativi oggetti allocator archiviati in base agli argomenti corrispondenti nell'elenco degli argomenti.
+Il primo costruttore crea per impostazione predefinita i relativi oggetti allocator archiviati. Ognuno dei tre costruttori successivi crea i relativi oggetti allocator archiviati dagli oggetti corrispondenti in *a destra*. L'ultimo costruttore crea i relativi oggetti allocator archiviati in base agli argomenti corrispondenti nell'elenco degli argomenti.
 
 ## <a name="select_on_container_copy_construction"></a>  scoped_allocator_adaptor::select_on_container_copy_construction
 
@@ -314,7 +314,7 @@ scoped_allocator_adaptor select_on_container_copy_construction();
 
 ### <a name="return-value"></a>Valore restituito
 
-Questo metodo restituisce `scoped_allocator_adaptor(Outer_traits::select_on_container_copy_construction(*this), inner_allocator().select_on_container_copy_construction())`. Il risultato è un nuovo oggetto `scoped_allocator_adaptor` con ogni oggetto allocatore archiviato inizializzato tramite una chiamata a `al.select_on_container_copy_construction()` per l'allocatore `al` corrispondente.
+Questo metodo restituisce `scoped_allocator_adaptor(Outer_traits::select_on_container_copy_construction(*this), inner_allocator().select_on_container_copy_construction())`. Il risultato è una nuova `scoped_allocator_adaptor` oggetto con un oggetto allocatore archiviato inizializzato tramite una chiamata `al.select_on_container_copy_construction()` per l'allocatore corrispondente *al*.
 
 ## <a name="see-also"></a>Vedere anche
 

@@ -1,5 +1,5 @@
 ---
-title: Espressioni con operatori unari | Documenti Microsoft
+title: Espressioni con operatori unari | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0e1b8db2e02e6ab3e2a70d94ba5f6fe3516e464e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9301d4fdb09c63b7dc8e875e2b03a4990acec054
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32416171"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37941158"
 ---
 # <a name="expressions-with-unary-operators"></a>Espressioni con operatori unari
 Gli operatori unari agiscono solo su un operando in un'espressione. Gli operatori unari sono i seguenti:  
@@ -30,7 +30,7 @@ Gli operatori unari agiscono solo su un operando in un'espressione. Gli operator
   
 -   [Operatore address-of (&)](../cpp/address-of-operator-amp.md)  
   
--   [Operatore (+) più unario](../cpp/unary-plus-and-negation-operators-plus-and.md)  
+-   [Operatore (+) unario](../cpp/unary-plus-and-negation-operators-plus-and.md)  
   
 -   [Operatore di negazione unario (-)](../cpp/unary-plus-and-negation-operators-plus-and.md)  
   
@@ -50,7 +50,7 @@ Gli operatori unari agiscono solo su un operando in un'espressione. Gli operator
   
 -   [operatore alignof](../cpp/alignof-operator.md)  
   
--   [Operatore new](../cpp/new-operator-cpp.md)  
+-   [operatore new](../cpp/new-operator-cpp.md)  
   
 -   [operatore delete](../cpp/delete-operator-cpp.md)  
   
@@ -60,31 +60,31 @@ Gli operatori unari agiscono solo su un operando in un'espressione. Gli operator
   
 -   *postfix-expression*  
   
--   `++` *espressione unaria*  
+-   `++` *unary-expression*  
   
--   `--` *espressione unaria*  
+-   `--` *unary-expression*  
   
 -   *operatore unario* *cast-expression*  
   
--   `sizeof` *espressione unaria*  
+-   **sizeof** *unary-expression*  
   
 -   `sizeof(` *nome del tipo* `)`  
   
--   `decltype(` *espressione* `)`  
+-   `decltype(` *Espressione* `)`  
   
--   *espressione di assegnazione*  
+-   *espressione di allocazione*  
   
--   *deallocazione-expression*  
+-   *espressione di deallocazione*  
   
- Qualsiasi *postfix-expression* viene considerato un *espressione unaria*, e poiché qualsiasi espressione primaria viene considerato un *postfix-expression*, le espressioni primarie è considerato un *espressione unaria* anche. Per ulteriori informazioni, vedere [espressioni in forma suffissa](../cpp/postfix-expressions.md) e [espressioni primarie](../cpp/primary-expressions.md).  
+ Eventuali *postfix-expression* viene considerato un *unary-expression*, e poiché qualsiasi espressione primaria viene considerata una *postfix-expression*, tutte le espressioni primarie è considerata una *unary-expression* anche. Per altre informazioni, vedere [espressioni in forma suffissa](../cpp/postfix-expressions.md) e [espressioni primarie](../cpp/primary-expressions.md).  
   
- Un *operatore unario* è costituito da uno o più i simboli seguenti: `* & + - ! ~`  
+ Oggetto *unary-operator* è costituito da uno o più simboli seguenti: `* & + - ! ~`  
   
- Il *cast-expression* è un'espressione unaria con un cast per modificare il tipo di parametro facoltativo. Per ulteriori informazioni vedere [operatore Cast: ()](../cpp/cast-operator-parens.md).  
+ Il *cast-expression* è un'espressione unaria con un operatore cast facoltativo per modificare il tipo. Per altre informazioni, vedere [operatore Cast: ()](../cpp/cast-operator-parens.md).  
   
- Un *espressione* può essere qualsiasi espressione. Per ulteriori informazioni, vedere [espressioni](../cpp/expressions-cpp.md).  
+ Un' *espressione* può essere qualsiasi espressione. Per altre informazioni, vedere [espressioni](../cpp/expressions-cpp.md).  
   
- Il *allocazione espressione* si intende il `new` operatore. Il *deallocazione espressione* si intende il `delete` operatore. Per ulteriori informazioni, vedere i collegamenti indicati in precedenza in questo argomento.  
+ Il *allocazione-expression* si intende il **nuove** operatore. Il *deallocazione-expression* si intende il **eliminare** operatore. Per ulteriori informazioni, vedere i collegamenti indicati in precedenza in questo argomento.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Tipi di espressioni](../cpp/types-of-expressions.md)

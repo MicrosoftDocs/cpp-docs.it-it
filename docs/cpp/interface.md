@@ -1,5 +1,5 @@
 ---
-title: Interface | Documenti Microsoft
+title: Interface | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,11 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eea8f2585a1e385795a42c745aa95e180c6bb352
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 03964b224603d86064290aa68344c828c2630a17
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37943536"
 ---
 # <a name="interface"></a>__interface
 **Sezione specifica Microsoft**  
@@ -43,36 +44,35 @@ ms.lasthandoff: 05/03/2018
   
 ```  
   
-modifier  
- __interface interface-name {interface-definition};  
+modifier __interface interface-name {interface-definition};  
 ```  
   
 ## <a name="remarks"></a>Note  
- C++ [classe](../cpp/class-cpp.md) o [struct](../cpp/struct-cpp.md) potrebbe essere implementato con queste regole, ma `__interface` applicarle tramite.  
+ C++ [classe](../cpp/class-cpp.md) oppure [struct](../cpp/struct-cpp.md) può essere implementato con queste regole, ma **Interface** li applica.  
   
  Ad esempio, di seguito è riportata una definizione di interfaccia di esempio:  
   
-```  
+```cpp 
 __interface IMyInterface {  
    HRESULT CommitX();  
    HRESULT get_X(BSTR* pbstrName);  
 };  
 ```  
   
- Per informazioni sulle interfacce gestite, vedere [classe interfaccia](../windows/interface-class-cpp-component-extensions.md).  
+ Per informazioni sulle interfacce gestite, vedere [classe di interfaccia](../windows/interface-class-cpp-component-extensions.md).  
   
  Si noti che non è necessario dichiarare in modo esplicito che le funzioni `CommitX` e `get_X` sono virtuali pure. Una dichiarazione equivalente per la prima funzione sarà:  
   
-```  
+```cpp 
 virtual HRESULT CommitX() = 0;  
 ```  
   
- `__interface` implica il [novtable](../cpp/novtable.md) `__declspec` modificatore.  
+ **Interface** implica la [novtable](../cpp/novtable.md) **declspec** modificatore.  
   
 ## <a name="example"></a>Esempio  
  Nell'esempio seguente viene illustrato come utilizzare le proprietà dichiarate in un'interfaccia.  
   
-```  
+```cpp 
 // deriv_interface.cpp  
 #define _ATL_ATTRIBUTES 1  
 #include <atlbase.h>  

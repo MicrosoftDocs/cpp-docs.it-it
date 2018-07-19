@@ -1,5 +1,5 @@
 ---
-title: Distruttori (C++) | Documenti Microsoft
+title: Distruttori (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,18 +19,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 64d75946d3ae9c1de1d59d74100de68a3b27dcc8
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 2bbe849f8ec9d47c73b7d909734df600957f3afd
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34704802"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37941785"
 ---
 # <a name="destructors-c"></a>Distruttori (C++)
 
-Un distruttore è una funzione membro che viene richiamata automaticamente quando l'oggetto esce dall'ambito o viene eliminato in modo esplicito da una chiamata a `delete`. Un distruttore è lo stesso nome di classe, preceduto da una tilde (`~`). Ad esempio, il distruttore per la classe `String` viene dichiarato con `~String()`.
+Un distruttore è una funzione membro che viene richiamata automaticamente quando l'oggetto esce dall'ambito o viene eliminato in modo esplicito da una chiamata a **Elimina**. Un distruttore con lo stesso nome della classe, preceduto da una tilde (`~`). Ad esempio, il distruttore per la classe `String` viene dichiarato con `~String()`.
 
-Se non si definisce un distruttore, il compilatore fornirà un valore predefinito. Per molte classi di ciò è sufficiente. È necessario definire un distruttore personalizzato quando la classe archivia l'handle di risorse di sistema che devono essere rilasciate o puntatori che possiedono la memoria facciano riferimento.
+Se non si definisce un distruttore, il compilatore fornirà uno predefinito; Per molte classi di ciò è sufficiente. È sufficiente definire un distruttore personalizzato quando la classe archivia gli handle di risorse di sistema che devono essere rilasciati o puntatori che possiede la memoria facciano riferimento.
 
 Si consideri la dichiarazione seguente di una classe `String`:
 
@@ -72,7 +72,7 @@ int main() {
 }
 ```
 
-Nell'esempio precedente, il distruttore `String::~String` usa l'operatore `delete` per liberare lo spazio allocato in modo dinamico per l'archiviazione di testo.
+Nell'esempio precedente, il distruttore `String::~String` utilizza le **eliminare** operatore per liberare lo spazio allocato in modo dinamico per l'archiviazione di testo.
 
 ## <a name="declaring-destructors"></a>Dichiarazione di distruttori
 
@@ -82,11 +82,11 @@ Diverse regole controllano la dichiarazione di distruttori. I distruttori:
 
 - Non accettano argomenti.
 
-- Restituisce il valore (o `void`).
+- Non restituiscono un valore (o **void**).
 
-- Non può essere dichiarato come **const**, **volatile**, o **statico**. Tuttavia, possono essere richiamati per l'eliminazione di oggetti dichiarati come **const**, **volatile**, o **statico**.
+- Non possono essere dichiarati come **const**, **volatile**, o **statico**. Tuttavia, possono essere richiamati per l'eliminazione di oggetti dichiarati come **const**, **volatile**, o **statico**.
 
-- Può essere dichiarato come **virtuale**. Usando i distruttori virtuali, è possibile eliminare definitivamente gli oggetti senza conoscerne il tipo; il distruttore corretto per l'oggetto viene richiamato usando il meccanismo di funzione virtuale. Si noti che i distruttori possono essere dichiarati come funzioni virtuali pure per classi astratte.
+- Possono essere dichiarati come **virtuale**. Usando i distruttori virtuali, è possibile eliminare definitivamente gli oggetti senza conoscerne il tipo; il distruttore corretto per l'oggetto viene richiamato usando il meccanismo di funzione virtuale. Si noti che i distruttori possono essere dichiarati come funzioni virtuali pure per classi astratte.
 
 ## <a name="using-destructors"></a>Uso di distruttori
 
@@ -94,7 +94,7 @@ I distruttori vengono chiamati quando si verifica uno degli eventi seguenti:
 
 - Un oggetto (automatico) locale con ambito del blocco diventa esterno all'ambito.
 
-- Un oggetto allocato con il **nuova** operatore viene deallocato in modo esplicito utilizzando **eliminare**.
+- Un oggetto allocato con il **nuove** operatore viene deallocato in modo esplicito utilizzando **eliminare**.
 
 - La durata di un oggetto temporaneo termina.
 
@@ -106,9 +106,9 @@ I distruttori possono chiamare liberamente le funzioni membro di classe e accede
 
 Esistono due restrizioni relative all'utilizzo dei distruttori:
 
-- È possibile accettare il relativo indirizzo.
+- È possibile accettare relativo indirizzo.
 
-- le classi derivate non ereditano il distruttore della classe di base.
+- Le classi derivate non ereditano il distruttore della classe di base.
 
 ## <a name="order-of-destruction"></a>Ordine di distruzione
 
@@ -116,7 +116,7 @@ Quando un oggetto esce dall'ambito o viene eliminato, la sequenza di eventi nell
 
 1. Il distruttore della classe viene chiamato e il corpo della funzione distruttore viene eseguito.
 
-1. I distruttori per gli oggetti membri non statici vengono chiamati in ordine inverso in cui appaiono nella dichiarazione di classe. Elenco di inizializzazione dei membri facoltativo usato nella costruzione di tali membri non influisce sull'ordine di costruzione o distruzione.
+1. I distruttori per gli oggetti membri non statici vengono chiamati in ordine inverso in cui appaiono nella dichiarazione di classe. Elenco di inizializzazione dei membri facoltativo usato nella costruzione di tali membri non influenza l'ordine di costruzione o distruzione.
 
 1. I distruttori per classi base non virtuali vengono chiamati in ordine inverso di dichiarazione.
 
@@ -201,11 +201,11 @@ Per determinare l'ordine di distruzione delle classi base virtuali di un oggetto
 
 Di conseguenza, per la classe `E`, l'ordine di distruzione è:
 
-1. La classe di basa non virtuale `E`.
+1. La classe di base non virtuali `E`.
 
-1. La classe di basa non virtuale `D`.
+1. La classe di base non virtuali `D`.
 
-1. La classe di basa non virtuale `C`.
+1. La classe di base non virtuali `C`.
 
 1. Classe base virtuale `B`.
 
@@ -217,7 +217,7 @@ L'ordine di costruzione o di distruzione è particolarmente importante quando i 
 
 Tali interdipendenze tra le classi in un grafico di ereditarietà sono di per sé rischiose, perché le classi derivate in seguito possono modificare la nozione di percorso più a sinistra, alterando, in questo modo, l'ordine di costruzione e distruzione.
 
-### <a name="non-virtual-base-classes"></a>Classi base non virtuali
+### <a name="non-virtual-base-classes"></a>Classi di base non virtuali
 
 I distruttori per classi base non virtuali vengono chiamati in ordine inverso in cui vengono dichiarati i nomi di classe di base. Si consideri la seguente dichiarazione di classe:
 
@@ -230,7 +230,7 @@ Nell'esempio precedente, il distruttore di `Base2` viene chiamato prima del dist
 
 ## <a name="explicit-destructor-calls"></a>Chiamate del distruttore esplicite
 
-La chiamata di un distruttore in modo esplicito è raramente necessaria. Tuttavia, può essere utile eseguire la pulizia di oggetti inseriti in corrispondenza di indirizzi assoluti. Questi oggetti vengono comunemente allocati usando definito dall'utente **nuova** operatore che accetta un argomento di posizione. Il **eliminare** operatore non può deallocare tale memoria perché non viene allocata dall'archivio libero (per ulteriori informazioni, vedere [nuovo ed eliminare operatori](../cpp/new-and-delete-operators.md)). Una chiamata al distruttore è tuttavia in grado di eseguire una pulizia appropriata. Per chiamare in modo esplicito il distruttore di un oggetto, `s`, di classe `String`, usare una delle seguenti istruzioni:
+La chiamata di un distruttore in modo esplicito è raramente necessaria. Tuttavia, può essere utile eseguire la pulizia di oggetti inseriti in corrispondenza di indirizzi assoluti. Questi oggetti vengono comunemente allocati usando IIR **nuovo** operatore che accetta un argomento di posizione. Il **eliminare** operatore non può deallocare tale memoria perché non viene allocata dall'archivio libero (per altre informazioni, vedere [nuova ed eliminare operatori](../cpp/new-and-delete-operators.md)). Una chiamata al distruttore è tuttavia in grado di eseguire una pulizia appropriata. Per chiamare in modo esplicito il distruttore di un oggetto, `s`, di classe `String`, usare una delle seguenti istruzioni:
 
 ```cpp
 s.String::~String();     // non-virtual call

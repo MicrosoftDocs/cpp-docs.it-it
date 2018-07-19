@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d8980119a3414159018102b8a0d1ad7fb0e8fe76
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ee35bd9fd138dce5e9163fe1712083f5671caaa1
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33850522"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964323"
 ---
 # <a name="isnothrowdestructible-class"></a>Classe is_nothrow_destructible
 
@@ -37,11 +37,11 @@ struct is_nothrow_destructible;
 
 ### <a name="parameters"></a>Parametri
 
-`T` Il tipo di query.
+*T* il tipo di query.
 
 ## <a name="remarks"></a>Note
 
-Un'istanza del tipo di predicato contiene true se `T` è un tipo distruttibile e se il distruttore è noto al compilatore come elemento che non genera eccezioni. In caso contrario, contiene false.
+Un'istanza del tipo predicato contiene true se il tipo *T* è un tipo distruttibile e il distruttore è nota al compilatore non genera eccezioni. In caso contrario, contiene false.
 
 ## <a name="requirements"></a>Requisiti
 

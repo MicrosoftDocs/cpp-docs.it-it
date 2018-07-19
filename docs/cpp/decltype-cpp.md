@@ -1,5 +1,5 @@
 ---
-title: decltype (C++) | Documenti Microsoft
+title: decltype (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,15 +19,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ac9fe7ebf3d3e406854308e56d38e37567acc07a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7fceb9ce3433a4255619a6c7bac4e952b15ac04d
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32418039"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37941288"
 ---
 # <a name="decltype--c"></a>decltype (C++)
-L'identificatore di tipo `decltype` restituisce il tipo di un'espressione specificata. Il `decltype` identificatore di tipo con il [parola chiave auto](../cpp/auto-cpp.md), è utile principalmente per gli sviluppatori che scrivono librerie di modelli. È, ad esempio, possibile usare le parole chiave `auto` e `decltype` per dichiarare una funzione di modello il cui tipo restituito dipende dai tipi dei relativi argomenti di modello. In alternativa, è possibile usare le parole chiave `auto` e `decltype` per dichiarare una funzione di modello che esegua il wrapping di una chiamata a un'altra funzione e che quindi restituisca il tipo restituito della funzione di cui è stato eseguito il wrapping.  
+L'identificatore di tipo `decltype` restituisce il tipo di un'espressione specificata. Il `decltype` identificatore di tipo con il [parola chiave auto](../cpp/auto-cpp.md), risulta principalmente utile per gli sviluppatori che scrivono librerie di modelli. Uso **automatica** e `decltype` per dichiarare una funzione di modello restituiscono il cui tipo dipende dai tipi dei relativi argomenti di modello. In alternativa, usare **automatica** e `decltype` per dichiarare una funzione di modello che esegue il wrapping di una chiamata a un'altra funzione e quindi restituisce il tipo restituito della funzione con wrapping.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -39,21 +39,21 @@ decltype( expression )
   
 |Parametro|Descrizione|  
 |---------------|-----------------|  
-|`expression`|Un'espressione. Per ulteriori informazioni, vedere [espressioni](../cpp/expressions-cpp.md).|  
+|*Espressione*|Un'espressione. Per altre informazioni, vedere [espressioni](../cpp/expressions-cpp.md).|  
   
 ## <a name="return-value"></a>Valore restituito  
- Tipo del parametro `expression`.  
+ Il tipo dei *espressione* parametro.  
   
 ## <a name="remarks"></a>Note  
  L'identificatore di tipo `decltype` è supportato in Visual C++ 2010 o versioni successive e può essere usato sia con il codice nativo che con il codice gestito. `decltype(auto)` (C++14) è supportato in Visual Studio 2015 e versioni successive.  
   
- Per determinare il tipo del parametro `expression`, il compilatore usa le regole elencate di seguito.  
+ Il compilatore utilizza le regole seguenti per determinare il tipo dei *espressione* parametro.  
   
--   Se il `expression` parametro è un identificatore o un [accesso a membro di classe](../cpp/member-access-operators-dot-and.md), `decltype(expression)` è il tipo di entità denominato da `expression`. In assenza di tale entità oppure se il parametro `expression` denomina un set di funzioni in overload, il compilatore genera un messaggio di errore.  
+-   Se il *espressione* parametro è un identificatore o una [l'accesso ai membri di classe](../cpp/member-access-operators-dot-and.md), `decltype(expression)` è il tipo di entità denominato da *espressione*. Se non vi è alcuna entità o le *espressione* parametro denomina un set di funzioni in overload, il compilatore genera un messaggio di errore.  
   
--   Se il `expression` parametro è una chiamata a una funzione o una funzione di operatore di overload, `decltype(expression)` è il tipo restituito della funzione. Le parentesi di un operatore di overload vengono ignorate.  
+-   Se il *espressione* parametro è una chiamata a una funzione o una funzione operatore di overload, `decltype(expression)` è il tipo restituito della funzione. Le parentesi di un operatore di overload vengono ignorate.  
   
--   Se il `expression` parametro è un [rvalue](../cpp/lvalues-and-rvalues-visual-cpp.md), `decltype(expression)` è il tipo di `expression`. Se il `expression` parametro è un [lvalue](../cpp/lvalues-and-rvalues-visual-cpp.md), `decltype(expression)` è un [riferimento lvalue](../cpp/lvalue-reference-declarator-amp.md) al tipo di `expression`.  
+-   Se il *espressione* parametro è un [rvalue](../cpp/lvalues-and-rvalues-visual-cpp.md), `decltype(expression)` è il tipo di *espressione*. Se il *espressione* parametro è un [lvalue](../cpp/lvalues-and-rvalues-visual-cpp.md), `decltype(expression)` è un [riferimento lvalue](../cpp/lvalue-reference-declarator-amp.md) al tipo di *espressione*.  
   
  Nell'esempio di codice seguente sono illustrati alcuni utilizzi dell'identificatore di tipo `decltype`. Innanzitutto, si supponga di aver codificato le istruzioni seguenti.  
   
@@ -68,28 +68,28 @@ const A* a = new A();
   
 |Istruzione|Tipo|Note|  
 |---------------|----------|-----------|  
-|`decltype(fx());`|`const int&&`|Un [riferimento rvalue](../cpp/rvalue-reference-declarator-amp-amp.md) per un `const int`.|  
-|`decltype(var);`|`int`|Il tipo di variabile `var`:|  
-|`decltype(a->x);`|`double`|Il tipo di accesso ai membri.|  
-|`decltype((a->x));`|`const double&`|Le parentesi interne determinano la valutazione dell'istruzione come un'espressione anziché come un accesso ai membri. E poiché `a` viene dichiarato come un puntatore `const`, il tipo è un riferimento a `const double`.|  
+|`decltype(fx());`|`const int&&`|Un' [riferimento rvalue](../cpp/rvalue-reference-declarator-amp-amp.md) a un **const int**.|  
+|`decltype(var);`|**int**|Il tipo di variabile `var`:|  
+|`decltype(a->x);`|**double**|Il tipo di accesso ai membri.|  
+|`decltype((a->x));`|`const double&`|Le parentesi interne determinano la valutazione dell'istruzione come un'espressione anziché come un accesso ai membri. E poiché `a` viene dichiarato come un `const` puntatore, il tipo è un riferimento a **doppia const**.|  
   
 ## <a name="decltype-and-auto"></a>Decltype e auto  
- In C++ 14 è possibile utilizzare `decltype(auto)` senza tipo restituito finale per dichiarare una funzione di modello il cui tipo restituito dipende dai tipi dei relativi argomenti di modello.  
+ In c++14 è possibile usare `decltype(auto)` con alcun tipo restituito finale per dichiarare una funzione di modello il cui tipo restituito dipende dai tipi dei relativi argomenti di modello.  
   
- In C++11 è possibile usare l'identificatore di tipo `decltype` in un tipo restituito finale, insieme alla parola chiave `auto`, per dichiarare una funzione di modello il cui tipo restituito dipende dai tipi dei relativi argomenti di modello. Si consideri il seguente esempio di codice in cui il tipo restituito della funzione di modello dipende dai tipi di argomenti di modello. Nell'esempio di codice, il *sconosciuto* segnaposto indica che il tipo restituito non può essere specificato.  
+ In c++11, è possibile usare la `decltype` identificatore di tipo in un tipo restituito finale, insieme il **automatica** (parola chiave), per dichiarare una funzione di modello il cui tipo restituito dipende dai tipi dei relativi argomenti di modello. Si consideri il seguente esempio di codice in cui il tipo restituito della funzione di modello dipende dai tipi di argomenti di modello. Nell'esempio di codice, il *sconosciuto* segnaposto indica che il tipo restituito non può essere specificato.  
   
 ```cpp  
 template<typename T, typename U>  
 UNKNOWN func(T&& t, U&& u){ return t + u; };   
 ```  
   
- L'introduzione dell'identificatore di tipo `decltype` consente a uno sviluppatore di ottenere il tipo dell'espressione restituito dalla funzione di modello. Utilizzare il *sintassi di dichiarazione di funzione alternativo* che viene visualizzato in un secondo momento, il `auto` (parola chiave) e `decltype` digitare l'identificatore per dichiarare un *specificato in ritardo* tipo restituito. Il tipo restituito ritardo-specificato viene determinato quando la dichiarazione viene compilata, anziché quando viene codificata.  
+ L'introduzione dell'identificatore di tipo `decltype` consente a uno sviluppatore di ottenere il tipo dell'espressione restituito dalla funzione di modello. Usare la *sintassi di dichiarazione di funzione alternativa* che viene visualizzato in un secondo momento, il **automatico** (parola chiave) e il `decltype` digitare l'identificatore per dichiarare un *ritardo-specificato* tipo restituito. Il tipo restituito ritardo-specificato viene determinato quando la dichiarazione viene compilata, anziché quando viene codificata.  
   
- Il prototipo indicato di seguito mostra la sintassi per la dichiarazione di una funzione alternativa. Si noti che il `const` e `volatile` qualificatori e `throw` [specifica di eccezione](../cpp/exception-specifications-throw-cpp.md) sono facoltativi. Il *function_body* segnaposto rappresenta un'istruzione composta che specifica ciò che svolge la funzione. Come procedura di codifica, ottimale il *espressione* segnaposto nel `decltype` istruzione deve corrispondere all'espressione specificata per il `return` istruzione, se presente, nel *function_body*.  
+ Il prototipo indicato di seguito mostra la sintassi per la dichiarazione di una funzione alternativa. Si noti che il **const** e **volatile** qualificatori e il **throw** [specifica di eccezione](../cpp/exception-specifications-throw-cpp.md) sono facoltativi. Il *function_body* segnaposto rappresenta un'istruzione composta che specifica ciò che svolge la funzione. Come procedura consigliata, di codifica ottimale il *espressione* segnaposto nel `decltype` istruzione deve corrispondere all'espressione specificata dal **restituiscono** istruzione, se presente, nel *function_body* .  
   
- **Auto** *nome_funzione* **(** *parametri*<sub>scegliere</sub> **)**  **const**<sub>opt</sub> **volatile**<sub>opt</sub> **->** **decltype (** *espressione* **)** **throw**<sub>opt</sub> **{** *function_body* **};**  
+ **Auto** *nome_funzione* **(** *parametri*<sub>opt</sub> **)**  **const**<sub>opt</sub> **volatile**<sub>opt</sub> **->** **decltype (** *espressione* **)** **throw**<sub>opt</sub> **{** *function_body* **};**  
   
- Nel seguente esempio di codice il tipo restituito ritardo-specificato della funzione di modello `myFunc` dipende dai tipi di argomenti di modello `t` e `u`. Come procedura di codifica ottimale, il codice di esempio Usa anche i riferimenti rvalue e `forward` modello di funzione, che supporta *un inoltro perfetto*. Per altre informazioni, vedere [Dichiaratore di riferimento rvalue: &&](../cpp/rvalue-reference-declarator-amp-amp.md).  
+ Nel seguente esempio di codice il tipo restituito ritardo-specificato della funzione di modello `myFunc` dipende dai tipi di argomenti di modello `t` e `u`. Come procedura di codifica ottimale, l'esempio di codice usa anche i riferimenti rvalue e i `forward` modello di funzione, che supporta *inoltro perfetto*. Per altre informazioni, vedere [Dichiaratore di riferimento rvalue: &&](../cpp/rvalue-reference-declarator-amp-amp.md).  
   
 ```cpp  
 //C++11  
@@ -183,7 +183,7 @@ x3.Dump() = 42
 ```
   
 ## <a name="example"></a>Esempio
-**Visual Studio 2017 e versioni successiva:** il compilatore analizza argomenti decltype quando i modelli vengono dichiarati anziché creare un'istanza. Di conseguenza, se viene rilevata una specializzazione non dipendente nell'argomento decltype, non verrà rinviata all'ora di creazione di un'istanza ma verrà elaborata immediatamente e sarà possibile diagnosticare eventuali errori risultanti in quel momento.
+**Visual Studio 2017 e versioni successiva:** il compilatore analizza argomenti decltype quando i modelli vengono dichiarati piuttosto che creare un'istanza. Di conseguenza, se viene rilevata una specializzazione non dipendente nell'argomento decltype, non verrà rinviata all'ora di creazione di un'istanza ma verrà elaborata immediatamente e sarà possibile diagnosticare eventuali errori risultanti in quel momento.
 
 Nell'esempio seguente viene illustrato questo tipo di errore del compilatore che viene generato al momento della dichiarazione:
 

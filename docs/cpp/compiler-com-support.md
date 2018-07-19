@@ -1,5 +1,5 @@
 ---
-title: Supporto COM del compilatore | Documenti Microsoft
+title: Supporto COM del compilatore | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,22 +15,22 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8d6e916cbd7cd8f5fbb259ff096159f9a49202ac
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a21b7dd00aa0bb0894da4cc13cf0f6f40078ee1b
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32412712"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37941827"
 ---
 # <a name="compiler-com-support"></a>Supporto COM del compilatore
 ## <a name="microsoft-specific"></a>Sezione specifica Microsoft  
  Il compilatore di Visual C++ è in grado di leggere direttamente le librerie dei tipi COM (Component Object Model) e di tradurre il contenuto in codice sorgente C++ che può essere incluso nella compilazione. Sono disponibili estensioni del linguaggio per semplificare la programmazione COM sul lato client.  
   
- Tramite il [direttiva del preprocessore #import](../preprocessor/hash-import-directive-cpp.md), il compilatore può leggere una libreria dei tipi e convertire le interfacce in un file di intestazione C++ che descrive il modello COM come classi. È disponibile un set di attributi `#import` per il controllo utente del contenuto dei file di intestazione delle librerie dei tipi risultanti.  
+ Tramite il [direttiva del preprocessore #import](../preprocessor/hash-import-directive-cpp.md), il compilatore può leggere una libreria dei tipi e convertire i dati in un file di intestazione C++ che descrive il modello COM interfacce come classi. È disponibile un set di attributi `#import` per il controllo utente del contenuto dei file di intestazione delle librerie dei tipi risultanti.  
   
- È possibile utilizzare il [declspec](../cpp/declspec.md) degli attributi estesa [uuid](../cpp/uuid-cpp.md) per assegnare un identificatore univoco globale (GUID) a un oggetto COM. La parola chiave [uuidof](../cpp/uuidof-operator.md) può essere utilizzato per estrarre il GUID associato a un oggetto COM. Un altro `__declspec` attributo [proprietà](../cpp/property-cpp.md), può essere usato per specificare il **ottenere** e **impostare** metodi per un membro dati di un oggetto COM.  
+ È possibile usare la [declspec](../cpp/declspec.md) attributo esteso [uuid](../cpp/uuid-cpp.md) per assegnare un identificatore univoco globale (GUID) a un oggetto COM. La parola chiave [uuidof](../cpp/uuidof-operator.md) può essere utilizzato per estrarre il GUID associato a un oggetto COM. Un'altra `__declspec` attributo, [proprietà](../cpp/property-cpp.md), può essere utilizzato per specificare il **ottenere** e **impostare** metodi per un membro dati di un oggetto COM.  
   
- Viene fornito un set di classi e funzioni globali di supporto COM per supportare il **VARIANT** e `BSTR` tipi, implementare i puntatori intelligenti e per incapsulare l'oggetto errore generato da `_com_raise_error`:  
+ Viene fornito un set di classi e funzioni globali di supporto COM per supportare le `VARIANT` e `BSTR` tipi, implementare i puntatori intelligenti e incapsulare l'oggetto errore generato da `_com_raise_error`:  
   
 -   [Funzioni globali COM del compilatore](../cpp/compiler-com-global-functions.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: thiscall | Documenti Microsoft
+title: thiscall | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,30 +17,30 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4912628529ae0b47a5a5b938ab8e6d25a9099510
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: d1b7718e4c6d270536f5d7973a1b5a3ec0e61f28
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34704403"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37941587"
 ---
 # <a name="thiscall"></a>__thiscall
 
 **Sezione specifica Microsoft**
 
-La convenzione di chiamata `__thiscall` viene utilizzata nelle funzioni ed è la convenzione di chiamata predefinita utilizzata dalle funzioni di C++ che non utilizzano argomenti variabili. In `__thiscall`, la chiamata pulisce lo stack, operazione impossibile per funzioni `vararg`. Gli argomenti vengono inseriti nello stack da destra a sinistra, con il puntatore `this` passato tramite il registro ECX, e non nello stack, sull'architettura x86.
+Il **thiscall** convenzione di chiamata viene usato con funzioni membro ed è la convenzione di chiamata predefinita utilizzata dalle funzioni membro C++ che non utilizzano argomenti variabili. Sotto **thiscall**, la chiamata pulisce lo stack, che è Impossibile per `vararg` funzioni. Gli argomenti vengono inseriti nello stack da destra a sinistra, con la **ciò** puntatore passato tramite il registro ECX e non nello stack, in x86 architettura.
 
-Un motivo per utilizzare `__thiscall` consiste nel fatto che nelle classi le funzioni utilizzano `__clrcall` per impostazione predefinita. In tal caso, è possibile utilizzare `__thiscall` per rendere specifiche funzioni chiamabili da codice nativo.
+Uno dei motivi per usare **thiscall** è disponibile nelle classi il cui membro funzioni utilizzano `__clrcall` per impostazione predefinita. In tal caso, è possibile usare **thiscall** per rendere specifiche funzioni chiamabili da codice nativo.
 
-Durante la compilazione con [/clr: pure](../build/reference/clr-common-language-runtime-compilation.md), tutte le funzioni e i puntatori a funzione sono `__clrcall` se non specificato diversamente. Il **/clr: pure** e **/CLR: safe** opzioni del compilatore sono deprecate in Visual Studio 2015 e non supportate in Visual Studio 2017.
+Durante la compilazione con [/clr: pure](../build/reference/clr-common-language-runtime-compilation.md), tutte le funzioni e i puntatori a funzione sono `__clrcall` se non diversamente specificato. Il **/clr: pure** e **/CLR: safe** opzioni del compilatore sono state deprecate in Visual Studio 2015 e non sono supportate in Visual Studio 2017.
 
-Nelle versioni precedenti di Visual C++ 2005, il `__thiscall` convenzione di chiamata potrebbe non essere specificato in modo esplicito in un programma, perché `__thiscall` non era una parola chiave.
+Nelle versioni precedenti di Visual C++ 2005, il **thiscall** convenzione di chiamata potrebbe non essere specificato in modo esplicito in un programma, perché **thiscall** non era una parola chiave.
 
-Le funzioni `vararg` utilizzano la convenzione di chiamata `__cdecl`. Tutti gli argomenti della funzione vengono inseriti nello stack, con il puntatore `this` posizionato in fondo allo stack
+`vararg` uso di funzioni membro di **cdecl** convenzione di chiamata. Tutti gli argomenti della funzione vengono inseriti nello stack, con la **ciò** puntatore è posizionato sullo stack di ultima
 
 Poiché questa convenzione di chiamata si applica solo a C++, non esiste alcuno schema della decorazione dei nomi in C.
 
-Su ARM e x64 macchine, `__thiscall` viene accettata e ignorata dal compilatore.
+In ARM e x64 macchine **thiscall** viene accettato e ignorato dal compilatore.
 
 Per le funzioni di classi non statiche, se la funzione viene definita non inline, il modificatore della convenzione di chiamata non deve essere specificato nella definizione non inline. Questo significa che per i metodi membri non statici della classe la convenzione di chiamata specificata durante la dichiarazione è presunta in corrispondenza della definizione.
 

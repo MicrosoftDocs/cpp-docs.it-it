@@ -26,12 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f71ea63fbb0fa11f470061ea5ee141d0c3b2bfb3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c2d26ecc120565556651057b764a5fdd7ae64d43
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33861214"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38958253"
 ---
 # <a name="ostreambufiterator-class"></a>Classe ostreambuf_iterator
 
@@ -45,9 +45,9 @@ template <class CharType = char class Traits = char_traits <CharType>>
 
 ### <a name="parameters"></a>Parametri
 
-`CharType` Tipo che rappresenta il tipo di carattere per ostreambuf_iterator. Questo argomento è facoltativo e il valore predefinito è `char`.
+*CharType* tipo che rappresenta il tipo di carattere per ostreambuf_iterator. Questo argomento è facoltativo e il valore predefinito è **char**.
 
-`Traits` Tipo che rappresenta il tipo di carattere per ostreambuf_iterator. Questo argomento è facoltativo e il valore predefinito è `char_traits`\< *CharType>.*
+*Tratti* tipo che rappresenta il tipo di carattere per ostreambuf_iterator. Questo argomento è facoltativo e il valore predefinito è `char_traits`\< *CharType>.*
 
 ## <a name="remarks"></a>Note
 
@@ -98,7 +98,7 @@ typedef CharType char_type;
 
 ### <a name="remarks"></a>Note
 
-Il tipo è un sinonimo del parametro di modello **CharType**.
+Il tipo è un sinonimo del parametro di modello `CharType`.
 
 ### <a name="example"></a>Esempio
 
@@ -294,7 +294,7 @@ ostreambuf_iterator<CharType, Traits>& operator=(CharType _Char);
 
 ### <a name="parameters"></a>Parametri
 
-`_Char` Carattere da inserire nel buffer del flusso.
+*_Char* il carattere da inserire nel buffer del flusso.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -346,13 +346,13 @@ ostreambuf_iterator(ostream_type& Ostr) throw();
 
 ### <a name="parameters"></a>Parametri
 
-`strbuf` L'oggetto streambuf di output utilizzato per inizializzare il puntatore di buffer del flusso di output.
+*strbuf* oggetto streambuf di output utilizzato per inizializzare il puntatore del buffer del flusso di output.
 
-`Ostr` L'oggetto di flusso di output utilizzato per inizializzare il puntatore di buffer del flusso di output.
+*Ostr* l'oggetto di flusso di output utilizzato per inizializzare il puntatore del buffer del flusso di output.
 
 ### <a name="remarks"></a>Note
 
-Il primo costruttore inizializza il puntatore del buffer del flusso di output con `strbuf`.
+Il primo costruttore inizializza il puntatore del buffer del flusso di output con *strbuf*.
 
 Il secondo costruttore inizializza il puntatore del buffer del flusso di output con `Ostr`. `rdbuf`. Il puntatore archiviato non deve essere un puntatore null.
 
@@ -415,7 +415,7 @@ typedef basic_streambuf<CharType, Traits> streambuf_type;
 
 ### <a name="remarks"></a>Note
 
-Il tipo è un sinonimo di `basic_streambuf`\< **CharType**, **Traits**>, una classe di flusso per i buffer I/O che diventa `streambuf` quando è specializzata per il tipo di carattere `char`.
+Il tipo è un sinonimo `basic_streambuf` \< **CharType**, **Traits**>, una classe di flusso per i buffer dei / o che diventa `streambuf` quando è specializzata per il tipo di carattere **char**.
 
 ### <a name="example"></a>Esempio
 
@@ -431,7 +431,7 @@ typedef Traits traits_type;
 
 ### <a name="remarks"></a>Note
 
-Il tipo è un sinonimo del parametro di modello **Traits**.
+Il tipo è un sinonimo del parametro di modello `Traits`.
 
 ### <a name="example"></a>Esempio
 

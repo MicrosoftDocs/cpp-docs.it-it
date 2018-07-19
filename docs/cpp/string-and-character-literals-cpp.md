@@ -1,5 +1,5 @@
 ---
-title: Stringa e valori letterali carattere (C++) | Documenti Microsoft
+title: Stringa e valori letterali carattere (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cede3ee6efb063141fc9ba7db58c6ec1dbcae845
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 16a4d3e663c0cb8d80d3b154f23082d88b446b6f
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32424602"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37942094"
 ---
 # <a name="string-and-character-literals--c"></a>Stringa e valori letterali carattere (C++)
 C++ supporta diversi tipi di stringa e di carattere e permette di esprimere i valori letterali di ogni tipo. Nel codice sorgente, si esprime il contenuto dei valori letterali carattere e stringa usando un set di caratteri. I nomi di caratteri universali e i caratteri di escape consentono di esprimere qualsiasi stringa usando solo il set di caratteri di origine di base. Un valore letterale stringa non elaborata permette di evitare l'uso di caratteri di escape e può essere usato per esprimere tutti i tipi di valori letterali stringa. È anche possibile creare valori letterali std::string senza dover eseguire ulteriori passaggi di costruzione o conversione.  
@@ -79,35 +79,35 @@ int main()
 }  
 ```  
   
- I valori letterali stringa non hanno prefisso o prefissi `u8`, `L`, `u`e  `U` per indicare rispettivamente le codifiche di caratteri narrow (a byte singolo o multibyte), UTF-8, caratteri wide (UCS-2 o UTF-16), UTF-16 e UTF-32. Un valore letterale stringa non elaborata può avere i prefissi `R`, `u8R`, `LR`, `uR` e `UR` per gli equivalenti della versione non elaborata di queste codifiche.  Per creare valori std::string temporanei o statici, è possibile usare valori letterali stringa o valori letterali stringa non elaborata con un suffisso `s` . Per altre informazioni, vedere la sezione Valori letterali stringa riportata di seguito. Per ulteriori informazioni sul carattere di origine di base impostata, nomi di caratteri universali e uso di caratteri dalle tabelle codici estese nel codice sorgente, vedere [set di caratteri](../cpp/character-sets.md).  
+ I valori letterali stringa non hanno prefisso o prefissi `u8`, `L`, `u`e  `U` per indicare rispettivamente le codifiche di caratteri narrow (a byte singolo o multibyte), UTF-8, caratteri wide (UCS-2 o UTF-16), UTF-16 e UTF-32. Un valore letterale stringa non elaborata può avere i prefissi `R`, `u8R`, `LR`, `uR` e `UR` per gli equivalenti della versione non elaborata di queste codifiche.  Per creare valori std::string temporanei o statici, è possibile usare valori letterali stringa o valori letterali stringa non elaborata con un suffisso `s` . Per altre informazioni, vedere la sezione Valori letterali stringa riportata di seguito. Per altre informazioni sul carattere di origine di base impostato, nomi di caratteri universali e uso di caratteri dalle tabelle codici estese nel codice sorgente, vedere [set di caratteri](../cpp/character-sets.md).  
   
 ## <a name="character-literals"></a>Valori letterali carattere  
  Un *valore letterale carattere* è costituito da un carattere costante. È rappresentato dal carattere racchiuso tra virgolette singole. Esistono cinque tipi di valori letterali carattere:  
   
--   Valori letterali carattere ordinario di tipo `char`, ad esempio `'a'`  
+-   I valori letterali di tipo carattere ordinario **char**, ad esempio `'a'`  
   
--   Valori letterali carattere UTF-8 di tipo `char`, ad esempio `u8'a'`  
+-   Valori letterali carattere UTF-8 typu **char**, ad esempio `u8'a'`  
   
 -   Valori letterali carattere wide di tipo `wchar_t`, ad esempio `L'a'`  
   
 -   Valori letterali carattere UTF-16 di tipo `char16_t`, ad esempio `u'a'`  
   
--   Valori letterali carattere UTF-32 di tipo `char32_t`, ad esempio `U'a'`  
+-   Valori letterali carattere UTF-32 typu `char32_t`, ad esempio `U'a'`  
   
- Il carattere utilizzato per un valore letterale carattere può essere qualsiasi carattere, tranne la barra rovesciata caratteri riservati ('\\'), virgoletta singola (') o nuova riga. I caratteri riservati possono essere specificati con una sequenza di escape. È possibile specificare i caratteri usando nomi di caratteri universali, a condizione che le dimensioni del tipo siano sufficienti a contenere il carattere.  
+ Il carattere utilizzato per un valore letterale carattere può essere qualsiasi carattere, eccetto la barra rovesciata caratteri riservati ('\\'), virgoletta singola (') o nuova riga. I caratteri riservati possono essere specificati con una sequenza di escape. È possibile specificare i caratteri usando nomi di caratteri universali, a condizione che le dimensioni del tipo siano sufficienti a contenere il carattere.  
   
 ### <a name="encoding"></a>Codifica  
  Valori letterali carattere vengono codificati in modo diverso in base il prefisso.  
   
--   Un carattere letterale senza un prefisso è un valore letterale carattere normale. Sequenza di escape contenente un solo carattere, il valore di un valore letterale carattere normale, o nome di carattere universale che può essere rappresentato nel set di caratteri di esecuzione ha un valore uguale al valore numerico di codifica nel set di caratteri di esecuzione. Valore letterale un carattere ordinario che contiene più di un carattere o sequenza di escape, nome di carattere universale è un *multicarattere letterale*. Un valore letterale multicarattere o un valore letterale carattere ordinario che non può essere rappresentato nel set di caratteri di esecuzione è supporto condizionale, è di tipo int e il relativo valore è definito dall'implementazione.  
+-   Valore letterale senza prefisso un carattere è un valore letterale carattere ordinario. Sequenza di escape contenente un singolo carattere, il valore di un valore letterale carattere ordinario, o nome di carattere universale che può essere rappresentato nel set di caratteri di esecuzione con un valore uguale al valore numerico della relativa codifica in set di caratteri di esecuzione. Valore letterale un carattere ordinario che contiene più di un carattere, sequenze di escape o nome di carattere universale è una *valori letterali carattere multicarattere*. Un valore letterale multicarattere o un valore letterale carattere ordinario che non può essere rappresentato nel set di caratteri di esecuzione è supporto condizionale, è di tipo int e il relativo valore è definito dall'implementazione.  
   
--   Un valore letterale carattere che inizia con il prefisso L è un valore letterale di caratteri "wide". Il valore di un valore letterale di caratteri "wide" che contiene un solo carattere, una sequenza di escape o un nome di carattere universale ha un valore uguale al valore numerico della relativa codifica di caratteri wide di esecuzione impostato a meno che il valore letterale carattere non dispone di alcuna rappresentazione di set di caratteri wide di esecuzione, nel qual caso il valore è definito dall'implementazione. Il valore di un valore letterale di caratteri "wide" che contiene più caratteri, le sequenze di escape o nomi di caratteri universali è definito dall'implementazione.  
+-   Un valore letterale carattere che inizia con il prefisso L è un valore letterale di caratteri "wide". Il valore di un valore letterale di caratteri "wide" che contiene un singolo carattere, sequenze di escape o nome di carattere universale ha un valore uguale al valore numerico della relativa codifica nei caratteri wide di esecuzione impostato solo se il valore letterale carattere non dispone di alcuna rappresentazione di set di caratteri wide di esecuzione, nel qual caso il valore è definito dall'implementazione. Il valore di un valore letterale di caratteri "wide" che contiene più caratteri, le sequenze di escape o nomi di caratteri universali è definito dall'implementazione.  
   
--   Un valore letterale carattere che inizia con il prefisso u8 è un valore letterale carattere UTF-8. Sequenza di escape contenente un solo carattere, il valore di un valore letterale carattere UTF-8 o nome di carattere universale ha un valore uguale al valore di punto di codice ISO 10646 se può essere rappresentato da una singola unità di codice UTF-8 (corrispondente a controlli C0 e latino di base Blocco Unicode). Se il valore non può essere rappresentato da una singola unità di codice UTF-8, il programma è valido. Un valore letterale contenente più di un carattere, sequenza di escape o nome di carattere universale di un carattere UTF-8 è valido.  
+-   Un valore letterale carattere che inizia con il prefisso u8 è un valore letterale carattere UTF-8. Sequenza di escape contenente un singolo carattere, il valore di un valore letterale carattere UTF-8, o nome di carattere universale ha un valore uguale al valore di punto codice ISO 10646 se può essere rappresentata da una singola unità di codice UTF-8 (corrispondente alla C0 controlli e latino di base Blocco Unicode). Se il valore non può essere rappresentato da una singola unità di codice UTF-8, il programma è valido. Un carattere UTF-8 letterale contenente più di un carattere, sequenza di escape o nome di carattere universale non è valido.  
   
--   Un valore letterale carattere che inizia con il prefisso u è un valore letterale carattere UTF-16. Sequenza di escape contenente un solo carattere, il valore di un valore letterale carattere UTF-16 o nome di carattere universale ha un valore uguale al valore di punto di codice ISO 10646 se può essere rappresentato da una singola unità di codice UTF-16 (corrispondente al piano multilingua di base ). Se il valore non può essere rappresentato da una singola unità di codice UTF-16, il programma è valido. Un carattere UTF-16 letterale contenente più di un carattere, sequenza di escape o nome di carattere universale non è valido.  
+-   Un valore letterale carattere che inizia con il prefisso u è un valore letterale carattere UTF-16. Sequenza di escape contenente un singolo carattere, il valore di un valore letterale carattere UTF-16 o nome di carattere universale ha un valore uguale al valore di punto codice ISO 10646 se può essere rappresentata da una singola unità di codice UTF-16 (corrispondente al piano multilingua di base ). Se il valore non può essere rappresentato da una singola unità di codice UTF-16, il programma è valido. Un carattere UTF-16 letterale contenente più di un carattere, sequenza di escape o nome di carattere universale non è valido.  
   
--   Un valore letterale carattere che inizia con il prefisso U è un valore letterale carattere UTF-32. Sequenza di escape contenente un solo carattere, il valore di un valore letterale carattere UTF-32, o nome di carattere universale ha un valore uguale al valore di punto di codice ISO 10646. Un valore letterale contenente più di un carattere, sequenza di escape o nome di carattere universale di un carattere UTF-8 è valido.  
+-   Un valore letterale carattere che inizia con il prefisso U è un valore letterale carattere UTF-32. Sequenza di escape contenente un singolo carattere, il valore di un valore letterale carattere UTF-32, o nome di carattere universale ha un valore uguale al valore di punto codice ISO 10646. Un carattere UTF-8 letterale contenente più di un carattere, sequenza di escape o nome di carattere universale non è valido.  
   
 ###  <a name="bkmk_Escape"></a> Sequenze di escape  
  Esistono tre tipi di sequenze di escape: semplici, ottali ed esadecimali. Le sequenze di escape possono essere una delle seguenti:  
@@ -122,7 +122,7 @@ int main()
 |avanzamento carta|\f|ottale|\ooo|  
 |avviso (campana)|\a|esadecimale|\xhhh|  
   
- Il codice seguente illustra alcuni esempi di caratteri di escape mediante valori letterali carattere ordinario. La stessa sintassi di sequenza di escape è valida per gli altri tipi di valore letterale di carattere.  
+ Il codice seguente illustra alcuni esempi di caratteri di escape usando i valori letterali carattere ordinario. La stessa sintassi della sequenza di escape è valida per gli altri tipi di valore letterale di carattere.  
   
 ```cpp  
 #include <iostream>  
@@ -146,7 +146,7 @@ int main() {
   
  **Sezione specifica Microsoft**  
   
- Per creare un valore da un valore letterale carattere ordinario (quelli senza un prefisso), il compilatore converte il carattere o sequenza di caratteri tra virgolette singole in valori a 8 bit all'interno di un intero a 32 bit. Più caratteri nel valore letterale carattere riempiono i byte corrispondenti secondo le necessità, dal più significativo al meno significativo. Per creare un valore `char` , il compilatore prende il byte meno significativo. Per creare un valore `wchar_t` o `char16_t` , il compilatore prende la parola meno significativa. Il compilatore avvisa che il risultato sarà troncato se si assegnano bit al di sopra del byte o della parola assegnati.  
+ Per creare un valore da un valore letterale carattere ordinario (quelli senza un prefisso), il compilatore converte il carattere o sequenza di caratteri tra virgolette singole in valori a 8 bit all'interno di un intero a 32 bit. Più caratteri nel valore letterale carattere riempiono i byte corrispondenti secondo le necessità, dal più significativo al meno significativo. Per creare un **char** valore, il compilatore prende il byte meno significativi. Per creare un valore `wchar_t` o `char16_t` , il compilatore prende la parola meno significativa. Il compilatore avvisa che il risultato sarà troncato se si assegnano bit al di sopra del byte o della parola assegnati.  
   
 ```cpp  
 char c0    = 'abcd';    // C4305, C4309, truncates to 'd'  
@@ -168,7 +168,7 @@ char c4 = '\089';   // C4305, C4309, truncates to '9'
 char c5 = '\qrs';   // C4129, C4305, C4309, truncates to 's'  
 ```  
   
- Una sequenza di escape esadecimale è una barra rovesciata seguita dal carattere `x`, seguito a sua volta da una sequenza di cifre esadecimali. Una sequenza di escape che non contiene cifre esadecimali causa l'errore C2153 del compilatore: "i valori letterali esadecimali devono avere almeno una cifra esadecimale". Gli zero iniziali vengono ignorati. Una sequenza di escape che sembra contenere caratteri esadecimali e non esadecimali viene valutata come sequenza di escape esadecimale fino all'ultimo carattere non esadecimale, seguita dai caratteri esadecimali.   In un normale o con prefisso u8 carattere letterale, il valore esadecimale più elevato è 0xFF. In un valore letterale carattere wide con prefisso L o u il valore esadecimale più elevato è 0xFFFF. In un valore letterale carattere wide con prefisso U il valore esadecimale più elevato è 0xFFFFFFFF.  
+ Una sequenza di escape esadecimale è una barra rovesciata seguita dal carattere `x`, seguito a sua volta da una sequenza di cifre esadecimali. Una sequenza di escape che non contiene cifre esadecimali causa l'errore C2153 del compilatore: "i valori letterali esadecimali devono avere almeno una cifra esadecimale". Gli zero iniziali vengono ignorati. Una sequenza di escape che sembra contenere caratteri esadecimali e non esadecimali viene valutata come sequenza di escape esadecimale fino all'ultimo carattere non esadecimale, seguita dai caratteri esadecimali.   In un normale o con prefisso u8 valore letterale carattere, il valore esadecimale più elevato è 0xFF. In un valore letterale carattere wide con prefisso L o u il valore esadecimale più elevato è 0xFFFF. In un valore letterale carattere wide con prefisso U il valore esadecimale più elevato è 0xFFFFFFFF.  
   
 ```cpp  
 char c6 = '\x0050'; // 'P'  
@@ -189,7 +189,7 @@ wchar_t w7 = L'\x0pqr'; // C4066 L'\0', pqr ignored
   
  **Fine sezione specifica Microsoft**  
   
- Il carattere barra rovesciata (\\) è un carattere di continuazione di riga quando viene posizionato alla fine di una riga. Se si vuole che un carattere barra rovesciata venga visualizzato come un valore letterale carattere, è necessario digitare due barre rovesciate di seguito in una riga (`\\`). Per altre informazioni sul carattere di continuazione di riga, vedere [Phases of Translation](../preprocessor/phases-of-translation.md).  
+ Il carattere barra rovesciata (\\) è un carattere di continuazione di riga quando viene inserito alla fine di una riga. Se si vuole che un carattere barra rovesciata venga visualizzato come un valore letterale carattere, è necessario digitare due barre rovesciate di seguito in una riga (`\\`). Per altre informazioni sul carattere di continuazione di riga, vedere [Phases of Translation](../preprocessor/phases-of-translation.md).  
   
 ###  <a name="bkmk_UCN"></a> Nomi di caratteri universali  
  Nei valori letterali carattere e nei valori letterali stringa (elaborati) nativi, qualsiasi carattere potrà essere rappresentato da un nome di carattere universale.  I nomi di caratteri universali sono formati da un prefisso \U seguito da un punto di codice Unicode a otto cifre oppure da un prefisso \u seguito da un punto di codice Unicode a quattro cifre. Tutte e otto o quattro cifre devono rispettivamente essere presenti per costituire un nome di carattere universale in formato corretto.  
@@ -212,7 +212,7 @@ char u5 = '\U00000041'; // \U UCN 'A'
  Un valore letterale stringa rappresenta una sequenza di caratteri che insieme formano una stringa con terminazione null. I caratteri devono essere racchiusi tra virgolette doppie. Sono disponibili i seguenti tipi di valori letterali stringa:  
   
 ### <a name="narrow-string-literals"></a>Valori letterali stringa a caratteri "narrow"  
- Un valore letterale stringa "narrow" è una matrice senza prefisso, virgolette doppie delimitata, con terminazione null di tipo `const char[n]`, dove n è la lunghezza della matrice in byte. Un valore letterale stringa a caratteri "narrow" può contenere qualsiasi carattere grafico eccetto le virgolette doppie (`"`), la barra rovesciata (`\`) o un carattere di nuova riga. Un valore letterale stringa a caratteri "narrow" può anche contenere le sequenze di escape sopra elencate e i nomi di caratteri universali che rientrano in un byte.  
+ Un valore letterale stringa è una matrice senza prefisso, virgolette doppie delimitato da virgole e con terminazione null di tipo `const char[n]`, dove n è la lunghezza della matrice in byte. Un valore letterale stringa a caratteri "narrow" può contenere qualsiasi carattere grafico eccetto le virgolette doppie (`"`), la barra rovesciata (`\`) o un carattere di nuova riga. Un valore letterale stringa a caratteri "narrow" può anche contenere le sequenze di escape sopra elencate e i nomi di caratteri universali che rientrano in un byte.  
   
 ```cpp  
 const char *narrow = "abcd";  
@@ -223,7 +223,7 @@ const char *escaped = "yes\\no";
   
 #### <a name="utf-8-encoded-strings"></a>Stringhe codificate UTF-8  
   
- Una stringa con codificata UTF-8 è una matrice con prefisso u8, virgolette doppie delimitata, con terminazione null di tipo `const char[n]`, dove n è la lunghezza della matrice codificata in byte. Un valore letterale stringa con prefisso u8 può contenere qualsiasi carattere grafico eccetto le virgolette doppie (`"`), la barra rovesciata (`\`) o un carattere di nuova riga. Un valore letterale stringa con prefisso u8 può anche contenere le sequenze di escape sopra elencate e qualsiasi nome di carattere universale.  
+ Una stringa con codificata UTF-8 è una matrice con prefisso u8, virgolette delimitato da virgole e con terminazione null di tipo `const char[n]`, dove n è la lunghezza della matrice codificata in byte. Un valore letterale stringa con prefisso u8 può contenere qualsiasi carattere grafico eccetto le virgolette doppie (`"`), la barra rovesciata (`\`) o un carattere di nuova riga. Un valore letterale stringa con prefisso u8 può anche contenere le sequenze di escape sopra elencate e qualsiasi nome di carattere universale.  
   
 ```cpp  
 const char* str1 = u8"Hello World";  
@@ -231,7 +231,7 @@ const char* str2 = u8"\U0001F607 is O:-)";
 ```  
   
 ### <a name="wide-string-literals"></a>Valori letterali stringa a caratteri wide  
- Un valore letterale stringa "wide" è una matrice con terminazione null della costante `wchar_t` con prefisso '`L`' contenente qualsiasi carattere grafico eccetto le virgolette doppie ("), barra rovesciata (\\), o carattere di nuova riga. Un valore letterale stringa a caratteri wide può contenere le sequenze di escape sopra elencate e qualsiasi nome di carattere universale.  
+ Un valore letterale stringa a caratteri wide è una matrice con terminazione null della costante `wchar_t` che è preceduto da '`L`' e contiene qualsiasi carattere grafico eccetto le virgolette doppie ("), barra rovesciata (\\), o un carattere di nuova riga. Un valore letterale stringa a caratteri wide può contenere le sequenze di escape sopra elencate e qualsiasi nome di carattere universale.  
   
 ```cpp  
 const wchar_t* wide = L"zyxw";  
@@ -248,7 +248,7 @@ auto s4 = U"hello"; // const char32_t*
 ```  
   
 ### <a name="raw-string-literals-c11"></a>Valori letterali stringa non elaborata (C++11)  
- Un valore letterale stringa non elaborato è una matrice con terminazione null, di qualsiasi tipo di carattere, ovvero contenente qualsiasi carattere grafico, incluse le virgolette doppie ("), barra rovesciata (\\), o carattere di nuova riga. I valori letterali stringa non elaborata vengono spesso usati nelle espressioni regolari che usano le classi di caratteri e nelle stringhe HTML e XML. Per esempi, vedere l'articolo seguente: [frequenti di Bjarne Stroustrup su C++ 11](http://go.microsoft.com/fwlink/p/?linkid=401172).  
+ Un valore letterale stringa non elaborato è una matrice con terminazione null, di qualsiasi tipo di carattere, contenente qualsiasi carattere grafico, inclusi le virgolette doppie ("), barra rovesciata (\\), o un carattere di nuova riga. I valori letterali stringa non elaborata vengono spesso usati nelle espressioni regolari che usano le classi di caratteri e nelle stringhe HTML e XML. Per esempi, vedere l'articolo seguente: [domande frequenti di Bjarne su c++11](http://go.microsoft.com/fwlink/p/?linkid=401172).  
   
 ```cpp  
 // represents the string: An unescaped \ character  
@@ -300,7 +300,7 @@ u32string str5{ U"hello"s };
 u32string str6{ UR"(She said "hello.")"s };  
 ```  
   
- valori letterali std:: String sono definiti nello spazio dei nomi `std::literals::string_literals` nel \<stringa > file di intestazione. Poiché `std::literals::string_literals`e `std::literals` sono dichiarati come [spazi dei nomi inline](../cpp/namespaces-cpp.md), `std::literals::string_literals` verrà considerato automaticamente come appartenente direttamente allo spazio dei nomi `std`.  
+ valori letterali std:: String sono definiti nello spazio dei nomi `std::literals::string_literals` nella \<stringa > file di intestazione. Poiché `std::literals::string_literals`e `std::literals` sono dichiarati come [spazi dei nomi inline](../cpp/namespaces-cpp.md), `std::literals::string_literals` verrà considerato automaticamente come appartenente direttamente allo spazio dei nomi `std`.  
   
 ### <a name="size-of-string-literals"></a>Dimensioni dei valori letterali stringa  
  Per char ANSI\* stringhe e altre codifiche a byte singolo (non UTF-8), le dimensioni (in byte) di un valore letterale stringa è il numero di caratteri più 1 per il carattere di terminazione null. Per tutti gli altri tipi di stringa, le dimensioni non sono strettamente correlate al numero di caratteri. UTF-8 usa al massimo quattro elementi di tipo char per codificare alcune *unità di codice*e char16_t o wchar_t codificati come UTF-16 possono usare due elementi (per un totale di quattro byte) per codificare una singola *unità di codice*.   Questo esempio illustra la dimensione di un valore letterale stringa a caratteri wide in byte:  
@@ -310,7 +310,7 @@ const wchar_t* str = L"Hello!";
 const size_t byteSize = (wcslen(str) + 1) * sizeof(wchar_t);  
 ```  
   
- Si noti che `strlen()` e `wcslen()` non includono le dimensioni del carattere di terminazione null, la cui dimensione è uguale alle dimensioni di elemento di tipo stringa: un byte in una stringa char *, due byte in wchar_t\* char16_t o\* stringhe, e quattro byte in char32_t\* stringhe.  
+ Si noti che `strlen()` e `wcslen()` non includono le dimensioni del carattere null di terminazione, la cui dimensione è uguale alla dimensione elemento di tipo string: un byte in una stringa char *, due byte in wchar_t\* o char16_t\* stringhe, e quattro byte in char32_t\* stringhe.  
   
  La lunghezza massima di un valore letterale stringa è di 65.535 byte. Questo limite si applica sia ai valori letterali stringa a caratteri narrow che a quelli a caratteri wide.  
   
@@ -319,14 +319,14 @@ const size_t byteSize = (wcslen(str) + 1) * sizeof(wchar_t);
   
  **Sezione specifica Microsoft**  
   
- In Visual C++ è possibile usare un valore letterale stringa per inizializzare un puntatore a `char` o `wchar_t`non const. Questa operazione è consentita nel codice C99, ma è deprecata in C++98 e rimossa in C++11. Il tentativo di modificare la stringa genera una violazione di accesso, come nel seguente esempio:  
+ In Visual C++ è possibile usare un valore letterale stringa per inizializzare un puntatore a non-const **char** o `wchar_t`. Questa operazione è consentita nel codice C99, ma è deprecata in C++98 e rimossa in C++11. Il tentativo di modificare la stringa genera una violazione di accesso, come nel seguente esempio:  
   
 ```cpp  
 wchar_t* str = L"hello";  
 str[2] = L'a'; // run-time error: access violation  
 ```  
   
- È possibile fare in modo il compilatore generi un errore quando un valore letterale stringa viene convertita in un puntatore ai caratteri non_const quando si imposta la [/Zc: strictstrings (disabilitare la conversione del tipo di valore letterale stringa)](../build/reference/zc-strictstrings-disable-string-literal-type-conversion.md) l'opzione del compilatore. È consigliabile usarlo per il codice portabile conforme agli standard. È anche consigliabile usare la parola chiave `auto` per dichiarare i puntatori inizializzati dal valore letterale stringa perché viene risolta nel tipo (const) corretto. Ad esempio, l'esempio di codice seguente rileva un tentativo di scrittura in un valore letterale stringa in fase di compilazione:  
+ È possibile fare in modo il compilatore generi un errore quando un valore letterale stringa viene convertita in un puntatore ai caratteri non_const quando si impostano i [/Zc: strictstrings (disabilitare la conversione del tipo di valore letterale stringa)](../build/reference/zc-strictstrings-disable-string-literal-type-conversion.md) opzione del compilatore. È consigliabile usarlo per il codice portabile conforme agli standard. È anche consigliabile usare la **automatica** parola chiave per dichiarare i puntatori inizializzati dal valore letterale stringa perché viene risolto nel tipo (const) corretto. Ad esempio, l'esempio di codice seguente rileva un tentativo di scrittura in un valore letterale stringa in fase di compilazione:  
   
 ```cpp  
 auto str = L"hello";  
@@ -380,7 +380,7 @@ auto x4 = u8"hello" " "s u8"world"z; // C3688, disagree on suffixes
 ```  
   
 ### <a name="string-literals-with-universal-character-names"></a>Valori letterali stringa con nomi di caratteri universali  
- I valori letterali stringa (elaborata) nativi possono usare i nomi di caratteri universali per rappresentare qualsiasi carattere a condizione che il nome di carattere universale possa essere codificato come uno o più caratteri nel tipo di stringa.  Ad esempio, un nome di carattere universale che rappresenta un carattere esteso non può essere codificato in una stringa a caratteri narrow usando la tabella codici ANSI, ma può essere codificato in stringhe a caratteri narrow in alcune tabelle di codici multibyte o in stringhe UTF-8 o in una stringa a caratteri wide. In C++ 11, supporto Unicode viene esteso char16_t * e char32_t\* tipi di stringa:  
+ I valori letterali stringa (elaborata) nativi possono usare i nomi di caratteri universali per rappresentare qualsiasi carattere a condizione che il nome di carattere universale possa essere codificato come uno o più caratteri nel tipo di stringa.  Ad esempio, un nome di carattere universale che rappresenta un carattere esteso non può essere codificato in una stringa a caratteri narrow usando la tabella codici ANSI, ma può essere codificato in stringhe a caratteri narrow in alcune tabelle di codici multibyte o in stringhe UTF-8 o in una stringa a caratteri wide. In c++11 il supporto per Unicode è stato esteso char16_t * e char32_t\* tipi stringa:  
   
 ```cpp  
 // ASCII smiling face  
@@ -401,5 +401,5 @@ const char32_t* s5 = U"😎 = \U0001F60E is B-)";
   
 ## <a name="see-also"></a>Vedere anche  
  [Set di caratteri](../cpp/character-sets.md)   
- [Numerici, booleani e puntatore valori letterali](../cpp/numeric-boolean-and-pointer-literals-cpp.md)   
+ [Numerici, booleani e valori letterali di puntatore](../cpp/numeric-boolean-and-pointer-literals-cpp.md)   
  [Valori letterali definiti dall'utente](../cpp/user-defined-literals-cpp.md)

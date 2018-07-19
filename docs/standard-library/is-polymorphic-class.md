@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6de11114eafe423e80c885f3b1a5d00a70b449e0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 4eab6d6ce44655177d20073ca5c5cda3859cb8b3
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33864047"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38966381"
 ---
 # <a name="ispolymorphic-class"></a>Classe is_polymorphic
 
@@ -37,11 +37,11 @@ struct is_polymorphic;
 
 ### <a name="parameters"></a>Parametri
 
-`Ty` Il tipo di query.
+*Ty* il tipo di query.
 
 ## <a name="remarks"></a>Note
 
-Un'istanza del predicato di tipo contiene true se il tipo `Ty` è una classe dichiara o eredita una funzione virtuale; in caso contrario, contiene false.
+Un'istanza del tipo predicato contiene true se il tipo *Ty* è una classe che dichiara o eredita una funzione virtuale, in caso contrario, contiene false.
 
 ## <a name="example"></a>Esempio
 

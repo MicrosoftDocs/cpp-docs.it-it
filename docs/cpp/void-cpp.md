@@ -18,16 +18,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: de70ec6758109bc765d0cec3552762288d51ded2
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 81dd7717940bb6f78063b0fba64dd5d7f8cad583
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37943542"
 ---
 # <a name="void-c"></a>void (C++)
-Quando usato come tipo restituito da una funzione, `void` specifica che la funzione non restituisce alcun valore. Quando usato per l'elenco di parametri di una funzione, void specifica che la funzione non accetta parametri. Quando usato nella dichiarazione di un puntatore, void specifica che il puntatore è universale.  
+Quando usato come tipo restituito dalla funzione, il **void** parola chiave specifica che la funzione non restituisce un valore. Quando usato per l'elenco di parametri di una funzione, void specifica che la funzione non accetta parametri. Quando usato nella dichiarazione di un puntatore, void specifica che il puntatore è universale.  
   
- Se il tipo di un indicatore di misura è **void \*** , il puntatore può indicare una variabile che non è dichiarato con la **const** o `volatile` (parola chiave). Un puntatore void non può essere dereferenziato a meno che su di esso non venga eseguito il cast su un altro tipo. Un puntatore void può essere convertito in qualsiasi altro tipo di puntatore ai dati.  
+ Se è di tipo di puntatore **void \*** , il puntatore può indicare una variabile che non è dichiarato con il **const** oppure **volatile** (parola chiave). Un puntatore void non può essere dereferenziato a meno che su di esso non venga eseguito il cast su un altro tipo. Un puntatore void può essere convertito in qualsiasi altro tipo di puntatore ai dati.  
   
  Un puntatore void può puntare a una funzione, ma non a un membro di classe in C++.  
   
@@ -35,7 +36,7 @@ Quando usato come tipo restituito da una funzione, `void` specifica che la funzi
   
 ## <a name="example"></a>Esempio  
   
-```  
+```cpp 
 // void.cpp  
 void vobject;   // C2182  
 void *pv;   // okay  
@@ -45,7 +46,7 @@ int main() {
    // Cast optional in C required in C++  
    pint = (int *)pv;  
 }   
-```  
+``` 
   
 ## <a name="see-also"></a>Vedere anche  
  [Parole chiave](../cpp/keywords-cpp.md)   

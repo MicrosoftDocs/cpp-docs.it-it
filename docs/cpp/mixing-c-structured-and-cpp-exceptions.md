@@ -1,5 +1,5 @@
 ---
-title: Combinazione di eccezioni di C++ e C (strutturate) | Documenti Microsoft
+title: Combinazione di eccezioni di C++ e C (strutturate) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,25 +18,25 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3e9544e10ff0af41c0ff08fa51293c67c9977f2b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 495f0fe9faf0c75257f2ac7bbe0a3457438ffdf9
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32420106"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37942042"
 ---
 # <a name="mixing-c-structured-and-c-exceptions"></a>Combinazione di eccezioni C (strutturate) e C++
-Se si desidera scrivere codice più portabile, non è consigliabile utilizzare la gestione delle eccezioni strutturata nei programmi C++. Tuttavia, talvolta si potrebbero eseguire la compilazione con **/EHa** e combinare le eccezioni strutturate e codice sorgente C++ e necessarie alcune funzionalità per gestire entrambi i tipi di eccezioni. Poiché un gestore eccezioni strutturate non ha alcun concetto di oggetti o eccezioni tipizzate, non è possibile gestire le eccezioni generate da codice C++; Tuttavia, C++ **catch** gestori possono gestire le eccezioni strutturate. Come nel caso, la sintassi di gestione delle eccezioni C++ (**provare**, `throw`, **catch**) non è accettata dal compilatore C, ma la sintassi di gestione delle eccezioni strutturata (`__try`, `__except`, `__finally`) è supportato dal compilatore C++.  
+Se si desidera scrivere codice più portabile, non è consigliabile utilizzare la gestione delle eccezioni strutturata nei programmi C++. Tuttavia, talvolta si potrebbero eseguire la compilazione con **/EHa** e combinare le eccezioni strutturate e codice sorgente C++ e necessarie alcune funzionalità per gestire entrambi i tipi di eccezioni. Poiché un gestore di eccezioni strutturate non prevede il concetto di oggetti o eccezioni tipizzate, non può gestire le eccezioni generate da codice C++; Tuttavia, C++ **catch** gestori possono gestire le eccezioni strutturate. Come tale, la sintassi di gestione delle eccezioni C++ (**provare**, **throw**, **catch**) non viene accettata dal compilatore C, ma la sintassi di gestione delle eccezioni strutturata (**try** , **except**, **finally**) è supportato dal compilatore C++.  
   
- Vedere [set_se_translator](../c-runtime-library/reference/set-se-translator.md) per informazioni sulla gestione delle eccezioni strutturate come eccezioni di C++.  
+ Visualizzare [set_se_translator](../c-runtime-library/reference/set-se-translator.md) per informazioni sulla gestione delle eccezioni strutturate come eccezioni C++.  
   
  Se si combinano eccezioni C++ e strutturate, tenere presente quanto segue:  
   
 1.  Le eccezioni C++ e le eccezioni strutturate non possono essere combinate all'interno della stessa funzione.  
   
-2.  I gestori di terminazione (blocchi`__finally`) vengono sempre eseguiti, anche durante la rimozione successiva alla generazione di un'eccezione.  
+2.  Gestori di terminazione (**finally** blocchi) vengono sempre eseguiti, anche durante la rimozione dopo che viene generata un'eccezione.  
   
-3.  Gestione delle eccezioni C++ può intercettare e mantenere semantica di rimozione in tutti i moduli compilati con il [/EH](../build/reference/eh-exception-handling-model.md) l'opzione del compilatore (questa opzione Abilita la semantica di rimozione).  
+3.  Gestione delle eccezioni C++ può intercettare e preserve semantica di rimozione in tutti i moduli compilati con il [/EH](../build/reference/eh-exception-handling-model.md) opzione del compilatore (questa opzione Abilita la semantica di rimozione).  
   
 4.  In alcune circostanze, è possibile che le funzioni distruttore non vengano chiamate per tutti gli oggetti. Ad esempio, se si verifica un'eccezione strutturata quando si tenta di effettuare una chiamata di funzione tramite un puntatore di funzione non inizializzato, e la stessa funzione accetta come parametri oggetti creati prima della chiamata, per questi oggetti non vengono chiamati i distruttori, durante la rimozione dello stack.  
   

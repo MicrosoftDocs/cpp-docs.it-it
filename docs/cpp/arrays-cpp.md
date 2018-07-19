@@ -1,5 +1,5 @@
 ---
-title: Matrici (C++) | Documenti Microsoft
+title: Matrici (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,18 +16,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0fe8e5f53d05ac159fd577b260268f297b59d146
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 60c7baaaf20158c29c34aea364e70c0d040a42e3
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37943548"
 ---
 # <a name="arrays-c"></a>Matrici (C++)
 Una matrice è una raccolta di oggetti simili. Il caso più semplice di una matrice è un vettore che può essere dichiarato dalla seguente sequenza:  
   
 ```  
   
-      decl-specifier identifier [ constant-expression ]  
+decl-specifier identifier [ constant-expression ]  
 decl-specifier identifier []  
 decl-specifier identifer [][ constant-expression] . . .  
 decl-specifier identifier [ constant-expression ]  
@@ -38,7 +39,7 @@ decl-specifier identifier [ constant-expression ]
   
 -   Identificatore della classe di archiviazione facoltativo.  
   
--   Parametro facoltativo **const** e/o `volatile` identificatori.  
+-   Facoltativo **const** e/o **volatile** identificatori.  
   
 -   Nome del tipo degli elementi della matrice.  
   
@@ -46,17 +47,17 @@ decl-specifier identifier [ constant-expression ]
   
 -   Identificatore.  
   
--   Un'espressione costante di tipo integrale racchiusa tra parentesi quadre, **[].** Se vengono dichiarate più dimensioni utilizzando altre parentesi, l'espressione costante può essere omessa sul primo set di parentesi.  
+-   Un'espressione costante di tipo integrale racchiusa tra parentesi quadre **[]**. Se vengono dichiarate più dimensioni utilizzando altre parentesi, l'espressione costante può essere omessa sul primo set di parentesi quadre.  
   
 -   Parentesi aggiuntive facoltative che includono espressioni costanti.  
   
- 3. Inizializzatore facoltativo.  Vedere [inizializzatori](../cpp/initializers.md).  
+ 3. Inizializzatore facoltativo.  Visualizzare [inizializzatori](../cpp/initializers.md).  
   
- Il numero di elementi nella matrice è dato dall'espressione costante. Il primo elemento nella matrice è l'elemento 0 e l'ultimo elemento è il (*n*-1) elemento, in cui *n* è il numero di elementi della matrice può contenere. Il *espressione costante* deve essere di tipo integrale e deve essere maggiore di 0. Una matrice con dimensione zero è valida solo quando la matrice è l'ultimo campo in un `struct` o **unione** e quando le estensioni Microsoft (/Ze) sono abilitate.  
+ Il numero di elementi nella matrice è dato dall'espressione costante. Il primo elemento nella matrice è l'elemento 0 e l'ultimo elemento è la (*n*-1) elemento, dove *n* è il numero di elementi della matrice può contenere. Il *espressione costante* deve essere di tipo integrale e deve essere maggiore di 0. Una matrice con dimensione zero è valida solo quando la matrice è l'ultimo campo in un **struct** oppure **union** e quando sono abilitate le estensioni Microsoft (/Ze).  
   
  Nell'esempio seguente viene illustrato come definire una matrice in fase di esecuzione:  
   
-```  
+```cpp 
 // arrays.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -77,22 +78,22 @@ int main() {
 }  
 ```  
   
- Le matrici sono tipi derivati e possono pertanto essere generate da qualsiasi altro tipo derivato o fondamentale tranne che dalle funzioni, dai riferimenti e da `void`.  
+ Le matrici sono tipi derivati e possono pertanto essere generate da un altro tipo derivato o fondamentale tranne le funzioni, riferimenti, e **void**.  
   
  Le matrici generate da altre matrici sono matrici multidimensionali. Queste matrici multidimensionali sono specificate posizionando più espressioni costanti tra parentesi in sequenza. Ad esempio, considerare la dichiarazione riportata di seguito:  
   
-```  
+```cpp 
 int i2[5][7];  
 ```  
   
- Specifica una matrice di tipo `int`, disposta concettualmente in una matrice bidimensionale di cinque righe e sette colonne, come illustrato nella seguente immagine:  
+ Specifica una matrice di tipo **int**, disposta concettualmente in una matrice bidimensionale di cinque righe e sette colonne, come illustrato nella figura seguente:  
   
- ![Layout concettuale di un multi&#45;una matrice unidimensionale](../cpp/media/vc38rc1.gif "vc38RC1")  
+ ![Layout concettuale di un più&#45;matrice dimensionale](../cpp/media/vc38rc1.gif "vc38RC1")  
 Layout concettuale di matrice multidimensionale  
   
- Nelle dichiarazioni di matrici a più dimensioni contenenti un elenco di inizializzatori (come descritto in [inizializzatori](../cpp/initializers.md)), l'espressione costante che specifica i limiti per la prima dimensione può essere omesso. Ad esempio:  
+ Nelle dichiarazioni di matrici a più dimensioni con un elenco di inizializzatori (come descritto in [inizializzatori](../cpp/initializers.md)), l'espressione costante che specifica i limiti per la prima dimensione può essere omesso. Ad esempio:  
   
-```  
+```cpp 
 // arrays2.cpp  
 // compile with: /c  
 const int cMarkets = 4;  
@@ -121,7 +122,7 @@ double TransportCosts[][cMarkets] = {
 ## <a name="example"></a>Esempio  
  La tecnica di omettere la specifica dei limiti per la prima dimensione di una matrice multidimensionale può essere utilizzata solo nelle dichiarazioni di funzione come segue:  
   
-```  
+```cpp 
 // multidimensional_arrays.cpp  
 // compile with: /EHsc  
 // arguments: 3  

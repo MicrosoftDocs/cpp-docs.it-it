@@ -1,5 +1,5 @@
 ---
-title: Dichiarazione using | Documenti Microsoft
+title: Dichiarazione using | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c4cb07e2d56527ad4907b7b144ba5f3bc04196a9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c40a69e9c8d584d91a1b6401ec0da57368641975
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32424470"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37941525"
 ---
 # <a name="using-declaration"></a>dichiarazione using
 La dichiarazione using introduce un nome nell'area dichiarativa in cui la dichiarazione using viene visualizzata.  
@@ -39,19 +39,19 @@ using declarator-list ;
 ### <a name="parameters"></a>Parametri
   
 *Identificatore di nome annidati*  
-    Una sequenza di spazio dei nomi, classe o i nomi di enumerazione e operatori di risoluzione ambito (:), terminata da un operatore di risoluzione dell'ambito. Un operatore di risoluzione ambito singolo può essere utilizzato per introdurre un nome dello spazio dei nomi globale. La parola chiave `typename` è facoltativo e può essere utilizzato per risolvere i nomi dipendenti quando introdotti in un modello di classe da una classe base.  
+    Una sequenza di spazio dei nomi, classe, o i nomi di enumerazione e operatori di risoluzione ambito (:), terminata da un operatore di risoluzione dell'ambito. Un operatore di risoluzione ambito singolo consente di introdurre un nome dello spazio dei nomi globali. La parola chiave **typename** è facoltativo e può essere usato per risolvere i nomi dei dipendenti quando introdotti in un modello di classe da una classe base.  
   
-*id non qualificato*  
-    Non qualificata id-espressione che può essere un identificatore, un nome di operatore di overload, definiti dall'utente letterale Conversione o operatore di nome di una funzione, un nome di distruttore di classe o un elenco di nome e l'argomento di modello.  
+*non qualificato-id*  
+    Non qualificata id-espressione che può essere un identificatore, un nome di operatore di overload, un nome definito dall'utente letterale operatore o la conversione (funzione), un nome di un distruttore di classe o un elenco di nome e l'argomento di modello.  
   
-*elenco di dichiaratori*  
-    Un elenco delimitato da virgole di [`typename`] *identificatore di nome annidati* *non qualificato id* dichiaratori, eventualmente seguiti dai puntini di sospensione.
+*declarator-list*  
+    Un elenco delimitato da virgole di [**nomeTipo**] *annidati-name-specifier* *non qualificato-id* dichiaratori, seguiti facoltativamente da puntini di sospensione.
     
 ## <a name="remarks"></a>Note  
-Una dichiarazione using introduce un nome non qualificato come sinonimo di un'entità dichiarata in un' posizione. Consente a un nome singolo da uno spazio dei nomi specifico per essere utilizzati senza qualifica esplicita nell'area di dichiarazione in cui è presente. È in contrasto con la [direttiva using](../cpp/namespaces-cpp.md#using_directives), che consente di *tutti* i nomi di uno spazio dei nomi per essere utilizzati senza qualifica. Il `using` (parola chiave) viene usato anche per [tipo alias](../cpp/aliases-and-typedefs-cpp.md).  
+Una dichiarazione using introduce un nome non qualificato come sinonimo di un'entità dichiarata in un' posizione. Consente a un nome singolo da uno spazio dei nomi specifico per essere utilizzati senza qualifica esplicita nell'area di dichiarazione in cui è presente. È in contrasto con la [direttiva using](../cpp/namespaces-cpp.md#using_directives), che consente *tutte* i nomi in uno spazio dei nomi per essere utilizzati senza qualifica. Il **usando** parola chiave viene usato anche per [tipo alias](../cpp/aliases-and-typedefs-cpp.md).  
   
 ## <a name="example"></a>Esempio  
- Una dichiarazione using può essere utilizzata in una definizione di classe.  
+ Una dichiarazione using è utilizzabile in una definizione di classe.  
   
 ```cpp  
 // using_declaration1.cpp  
@@ -96,7 +96,7 @@ In B::g()
 ```  
   
 ## <a name="example"></a>Esempio  
-Quando viene utilizzata per dichiarare un membro, un utilizzo dichiarazione deve fare riferimento a un membro di una classe di base.  
+Quando viene utilizzata per dichiarare un membro, una tramite dichiarazione deve fare riferimento a un membro di una classe di base.  
   
 ```cpp  
 // using_declaration2.cpp  
@@ -135,7 +135,7 @@ In B::f()
 ```  
   
 ## <a name="example"></a>Esempio  
-I membri dichiarati utilizzando una dichiarazione può fare riferimento tramite qualificazione esplicita. Il `::` fa riferimento allo spazio dei nomi globale.  
+I membri dichiarati utilizzando una dichiarazione può fare riferimento con qualificazione esplicita. Il `::` fa riferimento allo spazio dei nomi globale.  
   
 ```cpp  
 // using_declaration3.cpp  
@@ -174,9 +174,9 @@ In A::g
 ```  
   
 ## <a name="example"></a>Esempio  
-Utilizzando una dichiarazione, il sinonimo creato dalla dichiarazione fa riferimento solo a definizioni vengono al momento l'utilizzo di dichiarazione. Le definizioni aggiunte uno spazio dei nomi una volta completata la dichiarazione non sono sinonimi.  
+Quando un uso è apportata dichiarazione, creato dalla dichiarazione fa riferimento il sinonimo solo definizioni validi al momento l'uso dichiarazione. Definizioni aggiunte a uno spazio dei nomi di utilizzo dichiarazione non sono sinonimi.  
   
-Un nome definito da un `using` dichiarazione è un alias per il nome originale. Non si applica il tipo di collegamento o altri attributi della dichiarazione originale.  
+Un nome definito da una **usando** dichiarazione è un alias per il nome originale. Non modifica il tipo, un collegamento o altri attributi della dichiarazione originale.  
   
 ```cpp  
 // post_declaration_namespace_additions.cpp  
@@ -202,7 +202,7 @@ void b() {
 ```  
   
 ## <a name="example"></a>Esempio  
-Per quanto riguarda le funzioni in spazi dei nomi, se un set di dichiarazioni locali e l'utilizzo di dichiarazioni per un singolo nome utilizzati in un'area dichiarativa, sono tutte devono fare riferimento alla stessa entità o devono tutti fare riferimento alle funzioni.  
+Per quanto riguarda le funzioni in spazi dei nomi, se un set di dichiarazioni locali e si usa le dichiarazioni per un singolo nome sono espressi in un'area dichiarativa, sono tutte devono fare riferimento alla stessa entità o sono tutte devono fare riferimento alle funzioni.  
   
 ```cpp  
 // functions_in_namespaces1.cpp  
@@ -221,10 +221,10 @@ void g() {
 }  
 ```  
   
- Nell'esempio precedente, il `using B::i` fa in modo che un secondo `int i` per essere dichiarata nel `g()` (funzione). Il `using B::f` istruzione non è in conflitto con il `f(char)` funzionare perché i nomi di funzione introdotti da `B::f` presentano tipi di parametro diversi.  
+ Nell'esempio precedente, il `using B::i` istruzione fa sì che un secondo `int i` venga dichiarato nel `g()` (funzione). Il `using B::f` istruzione non è in conflitto con il `f(char)` funzionare perché i nomi delle funzioni introdotti da `B::f` presentano tipi di parametro diversi.  
   
 ## <a name="example"></a>Esempio  
- Una dichiarazione di funzione locale non può avere lo stesso nome e tipo di una funzione introdotta dalla dichiarazione using. Ad esempio:  
+ Una dichiarazione di funzione locale non può essere lo stesso nome e tipo di una funzione introdotta dalla dichiarazione using. Ad esempio:  
   
 ```cpp  
 // functions_in_namespaces2.cpp  
@@ -250,7 +250,7 @@ void h() {
 ```  
   
 ## <a name="example"></a>Esempio  
- Rispetto all'ereditarietà, utilizzando una dichiarazione introduce un nome da una classe base in un ambito di classe derivata, le funzioni membro nelle funzioni membro virtuale di override di classe derivata con gli stessi tipi di nome e l'argomento nella classe base.  
+ Rispetto all'ereditarietà, utilizzando una dichiarazione introduce un nome da una classe di base nell'ambito di un classe derivata, funzioni membro in funzioni di membro virtuale override della classe derivata con lo stesso nome e argomento tipo nella classe di base.  
   
 ```cpp  
 // using_declaration_inheritance1.cpp  
@@ -307,9 +307,9 @@ In D::g(char)
 ```  
   
 ## <a name="example"></a>Esempio  
-Tutte le istanze di un nome indicato in tramite la dichiarazione deve essere accessibile. In particolare, se una classe derivata Usa un la dichiarazione di accedere a un membro di una classe base, il nome del membro deve essere accessibile. Se il nome è quello di una funzione membro in overload, tutte le funzioni denominate devono essere accessibile.  
+Tutte le istanze di un nome indicato in tramite la dichiarazione deve essere accessibile. In particolare, se una classe derivata Usa un usando una dichiarazione di accedere a un membro di una classe base, il nome del membro deve essere accessibile. Se il nome è quello di una funzione membro in overload, quindi tutte le funzioni denominate devono essere accessibili.  
   
-Per ulteriori informazioni sull'accessibilità dei membri, vedere [controllo di accesso ai membri](../cpp/member-access-control-cpp.md).  
+Per altre informazioni sull'accessibilità dei membri, vedere [controllo di accesso ai membri](../cpp/member-access-control-cpp.md).  
   
 ```cpp  
 // using_declaration_inheritance2.cpp  

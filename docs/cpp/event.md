@@ -1,5 +1,5 @@
 ---
-title: Event | Documenti Microsoft
+title: Event | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,11 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 921ab0d8a18e8bb50f7ca5ea02002aa16244abcd
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: abfda38c6c35c3e7172b187c89fa78bed5ee7616
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37943554"
 ---
 # <a name="event"></a>__event
 Dichiara un evento.  
@@ -31,15 +32,13 @@ Dichiara un evento.
   
 ```  
   
-      __event   
-      method-declarator  
-      ;  
+__event method-declarator;  
 __event __interface interface-specifier;  
 __event member-declarator;  
 ```  
   
 ## <a name="remarks"></a>Note  
- La parola chiave `__event` può essere applicata a una dichiarazione di metodo, a una dichiarazione di interfaccia o una dichiarazione di un membro dati. Non è tuttavia possibile utilizzare la parola chiave `__event` per qualificare un membro di una classe annidata.  
+ La parola chiave **event** può essere applicato a una dichiarazione di metodo, una dichiarazione di interfaccia o una dichiarazione di membro dati. Tuttavia, è possibile usare la **event** parola chiave per qualificare un membro di una classe annidata.  
   
  A seconda che l'origine evento e il ricevitore siano C++ nativi, COM o gestiti (.NET Framework), è possibile utilizzare i seguenti costrutti come eventi:  
   
@@ -49,46 +48,46 @@ __event member-declarator;
 |—|interfaccia|—|  
 |—|—|membro dati|  
   
- Utilizzare [hook](../cpp/hook.md) in un ricevitore di eventi per associare un metodo del gestore con un metodo dell'evento. Si noti che dopo aver creato un evento con la parola chiave `__event`, tutti i gestori eventi successivamente collegati a tale evento verranno chiamati quando l'evento viene chiamato.  
+ Uso [hook](../cpp/hook.md) in un ricevitore di eventi per associare un metodo del gestore con un metodo dell'evento. Si noti che dopo aver creato un evento con il **event** (parola chiave), tutti i gestori eventi successivamente collegati a tale evento verranno chiamati quando viene chiamato l'evento.  
   
- Una dichiarazione di metodo `__event` non può avere una definizione; una definizione viene generata in modo implicito, pertanto il metodo di evento può essere chiamato come se fosse un metodo ordinario qualsiasi.  
+ Un' **event** dichiarazione di metodo non può contenere una definizione; viene generata in modo implicito una definizione, in modo che il metodo di evento può essere chiamato come se fosse un metodo ordinario qualsiasi.  
   
 > [!NOTE]
 >  Una classe o una struttura basata su template non può contenere eventi.  
   
 ## <a name="native-events"></a>Eventi nativi  
- Gli eventi nativi sono metodi. Il tipo restituito è in genere `HRESULT` o `void`, ma può essere qualsiasi tipo integrale, incluso `enum`. Quando un evento utilizza un tipo restituito integrale, viene definita una condizione di errore quando un gestore eventi restituisce un valore diverso da zero, nel qual caso l'evento generato chiamerà gli altri delegati.  
+ Gli eventi nativi sono metodi. Il tipo restituito è in genere HRESULT o **void**, ma può essere qualsiasi tipo integrale, incluso un **enum**. Quando un evento utilizza un tipo restituito integrale, viene definita una condizione di errore quando un gestore eventi restituisce un valore diverso da zero, nel qual caso l'evento generato chiamerà gli altri delegati.  
   
-```  
+```cpp 
 // Examples of native C++ events:  
 __event void OnDblClick();  
 __event HRESULT OnClick(int* b, char* s);  
 ```  
   
- Vedere [gestione degli eventi in C++ nativo](../cpp/event-handling-in-native-cpp.md) per il codice di esempio.  
+ Visualizzare [gestione degli eventi in C++ nativo](../cpp/event-handling-in-native-cpp.md) per codice di esempio.  
   
 ## <a name="com-events"></a>Eventi COM  
- Gli eventi COM sono interfacce. I parametri di un metodo in un'interfaccia di origine evento devono essere **in** parametri (ma questo non è applicato rigorosamente), poiché un **out** parametro non è utile quando il multicasting. Verrà generato un avviso di livello 1 se si utilizza un **out** parametro.  
+ Gli eventi COM sono interfacce. I parametri di un metodo in un'interfaccia di origine evento devono essere `in` parametri (ma questo non è applicato rigorosamente), poiché un `out` parametro non è utile quando il multicasting. Verrà generato un avviso di livello 1 se si usa un `out` parametro.  
   
- Il tipo restituito è in genere `HRESULT` o `void`, ma può essere qualsiasi tipo integrale, incluso `enum`. Quando un evento utilizza un tipo restituito integrale e un gestore eventi restituisce un valore diverso da zero, si tratta di una condizione di errore nel qual caso l'evento generato interromperà le chiamate agli altri delegati. Si noti che il compilatore contrassegnerà automaticamente un'interfaccia di origine evento come un [origine](../windows/source-cpp.md) nel file IDL generato.  
+ Il tipo restituito è in genere HRESULT o **void**, ma può essere qualsiasi tipo integrale, incluso **enum**. Quando un evento utilizza un tipo restituito integrale e un gestore eventi restituisce un valore diverso da zero, si tratta di una condizione di errore nel qual caso l'evento generato interromperà le chiamate agli altri delegati. Si noti che il compilatore contrassegnerà automaticamente un'interfaccia di origine evento come un [origine](../windows/source-cpp.md) in IDL generato.  
   
- Il [Interface](../cpp/interface.md) è sempre richiesta dopo la parola chiave `__event` per un'origine evento COM.  
+ Il [Interface](../cpp/interface.md) è sempre obbligatorio dopo la parola chiave **event** per un'origine evento COM.  
   
-```  
+```cpp 
 // Example of a COM event:  
 __event __interface IEvent1;  
 ```  
   
- Vedere [gestione degli eventi in COM](../cpp/event-handling-in-com.md) per il codice di esempio.  
+ Visualizzare [gestione degli eventi in COM](../cpp/event-handling-in-com.md) per codice di esempio.  
   
 ## <a name="managed-events"></a>Eventi gestiti  
  Per informazioni sulla codifica di eventi nella nuova sintassi, vedere [evento](../windows/event-cpp-component-extensions.md).  
   
- Gli eventi gestiti sono membri dati o metodi. Se usato con un evento, il tipo restituito di un delegato deve essere conforme con la [Common Language Specification](/dotnet/standard/language-independence-and-language-independent-components). Il tipo restituito del gestore eventi deve corrispondere al tipo restituito del delegato. Per ulteriori informazioni sui delegati, vedere [delegati ed eventi](../dotnet/delegates-and-events.md). Se un evento gestito è un membro dati, il relativo tipo deve essere un puntatore a un delegato.  
+ Gli eventi gestiti sono membri dati o metodi. Se usato con un evento, il tipo restituito del delegato deve essere conforme con la [Common Language Specification](/dotnet/standard/language-independence-and-language-independent-components). Il tipo restituito del gestore eventi deve corrispondere al tipo restituito del delegato. Per altre informazioni sui delegati, vedere [delegati ed eventi](../dotnet/delegates-and-events.md). Se un evento gestito è un membro dati, il relativo tipo deve essere un puntatore a un delegato.  
   
  In .NET Framework, è possibile trattare un membro dati come se fosse un metodo (ovvero, il metodo `Invoke` del delegato corrispondente). È necessario predefinire il tipo delegato per la dichiarazione di un membro dati di eventi gestiti. In contrasto, un metodo dell'evento gestito definisce in modo implicito il delegato gestito corrispondente se questo non è già stato definito. Ad esempio, è possibile dichiarare un valore dell'evento quale `OnClick` come evento seguente:  
   
-```  
+```cpp 
 // Examples of managed events:  
 __event ClickEventHandler* OnClick;  // data member as event  
 __event void OnClick(String* s);  // method as event  
@@ -98,7 +97,7 @@ __event void OnClick(String* s);  // method as event
   
 ## <a name="example-native-events"></a>Esempio: eventi nativi  
   
-```  
+```cpp 
 // EventHandling_Native_Event.cpp  
 // compile with: /c  
 [event_source(native)]  
@@ -110,7 +109,7 @@ public:
   
 ## <a name="example-com-events"></a>Esempio: eventi COM  
   
-```  
+```cpp 
 // EventHandling_COM_Event.cpp  
 // compile with: /c  
 #define _ATL_ATTRIBUTES 1  

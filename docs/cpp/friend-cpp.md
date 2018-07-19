@@ -1,7 +1,7 @@
 ---
-title: Friend (C++) | Documenti Microsoft
+title: Friend (C++) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 07/02/2018
 ms.technology:
 - cpp-language
 ms.topic: language-reference
@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1538ad67ce1b742c55dc413d78e40e8dcc9884df
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9938e8bb2128def7d5f507acb111de854dfd4977
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32418263"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37942081"
 ---
 # <a name="friend-c"></a>friend (C++)
-In alcuni casi, è preferibile concedere l'accesso a livello di membro alle funzioni che non sono membri di una classe o a tutti i membri in una classe separata. Solo l'implementatore della classe può dichiarare i rispettivi elementi friend. Una funzione o una classe non può dichiarare se stessa come elemento friend di una classe. In una definizione di classe, utilizzare il `friend` (parola chiave) e il nome di una funzione non membro o un'altra classe per concedere l'accesso ai membri privati e protetti della classe.         In una definizione di modello, un parametro di tipo può essere dichiarato come friend.  
+In alcuni casi, è più pratico concedere l'accesso a livello di membro alle funzioni che non sono membri di una classe o a tutti i membri in una classe separata. Solo l'implementatore della classe può dichiarare i rispettivi elementi friend. Una funzione o una classe non può dichiarare se stessa come elemento friend di una classe. In una definizione di classe, usare il **friend** (parola chiave) e il nome di una funzione non membro o un'altra classe per concedere l'accesso ai membri privati e protetti della classe. In una definizione di modello, un parametro di tipo possa essere dichiarato come friend.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -38,7 +38,7 @@ friend F;
 ## <a name="friend-declarations"></a>Dichiarazioni Friend  
  Se si dichiara una funzione Friend che non è stata dichiarata precedentemente, tale funzione viene esportata nell'ambito nonclass contenitore.  
   
- Le funzioni dichiarate in una dichiarazione Friend vengono considerate come se fossero state dichiarate usando la parola chiave `extern`. (Per ulteriori informazioni su `extern`, vedere [identificatori di classe di archiviazione statica](http://msdn.microsoft.com/en-us/3ba9289a-a412-4a17-b319-ceb2c087df48).)  
+ Le funzioni dichiarate in una dichiarazione friend vengono considerate come se fossero state dichiarate usando la **extern** (parola chiave). Per altre informazioni, vedere [extern](extern-cpp.md).  
   
  Sebbene le funzioni con ambito globale possono essere dichiarate come Friend prima dei relativi prototipi, le funzioni membro non possono essere dichiarate come Friend prima che venga visualizzata la relativa dichiarazione di classe completa. Nel codice seguente è illustrato il motivo dell'errore:  
   
@@ -50,18 +50,18 @@ class HasFriends
 };  
 ```  
   
- L'esempio precedente immette il nome della classe `ForwardDeclared` nell'ambito, ma la dichiarazione completa (in particolare, la parte che dichiara la funzione `IsAFriend`) non è nota. Di conseguenza, la dichiarazione `friend` nella classe `HasFriends` genera un errore.  
+ L'esempio precedente immette il nome della classe `ForwardDeclared` nell'ambito, ma la dichiarazione completa (in particolare, la parte che dichiara la funzione `IsAFriend`) non è nota. Pertanto, il **friend** dichiarazione nella classe `HasFriends` genera un errore.  
   
- A partire da C++ 11, esistono due forme di dichiarazioni friend per una classe:  
+ A partire da c++11, esistono due forme di dichiarazioni friend per una classe:  
   
 ```cpp  
 friend class F;  
 friend F;  
 ```  
   
- Il primo formato introduce una nuova classe F se viene trovata alcuna classe esistente con lo stesso nome nello spazio dei nomi più interno.  **C++11**: la seconda forma non introduce una nuova classe; può essere utilizzato quando la classe è già stata dichiarata e deve essere utilizzato quando si dichiara un parametro di tipo di modello o un typedef come friend.  
+ Il primo modulo introduce una nuova classe F se delle classi esistenti con lo stesso nome è stata trovata nello spazio dei nomi di colonne più interno.  **C++11**: il secondo form non introduce una nuova classe; può essere utilizzato quando la classe è già stata dichiarata e deve essere usato quando si dichiara un parametro di tipo di modello o un typedef come friend.  
   
- Utilizzare `class friend F` quando il tipo di riferimento non è ancora stato dichiarato:  
+ Usare `class friend F` quando il tipo di riferimento non è ancora stato dichiarato:  
   
 ```cpp  
 namespace NS  
@@ -83,7 +83,7 @@ namespace NS
 }  
 ```  
   
- Nell'esempio seguente, `friend F` si intende la `F` classe dichiarata all'esterno dell'ambito di NS.  
+ Nell'esempio seguente `friend F` si intende il `F` classe dichiarata all'esterno dell'ambito di NS.  
   
 ```cpp  
 class F {};  
@@ -96,7 +96,7 @@ namespace NS
 }  
 ```  
   
- Utilizzare `friend F` per dichiarare un parametro di modello come friend:  
+ Usare `friend F` per dichiarare un parametro di modello come friend:  
   
 ```cpp  
 template <typename T>  
@@ -107,7 +107,7 @@ class my_class
 };  
 ```  
   
- Utilizzare `friend F` per dichiarare un typedef come friend:  
+ Usare `friend F` per dichiarare un typedef come friend:  
   
 ```cpp  
 class Foo {};  
@@ -126,9 +126,9 @@ class G
 >  Sebbene la seconda classe per intero debba essere Friend della prima classe, è possibile selezionare le funzioni nella prima classe che saranno Friend della seconda classe.  
   
 ## <a name="friend-functions"></a>funzioni di tipo friend  
- Una funzione `friend` è una funzione che non è un membro di una classe ma ha accesso ai membri privati e protetti della classe. Le funzioni friend non sono considerate membri della classe; sono funzioni esterne normali a cui vengono concessi privilegi di accesso speciali. Elementi Friend non sono nell'ambito della classe e non vengono chiamati con gli operatori di selezione dei membri (**.** e -**>**) a meno che non sono membri di un'altra classe. Una funzione `friend` viene dichiarata dalla classe che le sta concedendo accesso. La dichiarazione `friend` può essere inserita in un punto qualsiasi della dichiarazione di classe. Non è influenzata dalle parole chiave di controllo di accesso.  
+ Oggetto **friend** è una funzione che non è un membro di una classe, ma ha accesso ai membri privati e protetti della classe. Le funzioni friend non sono considerate membri della classe; sono funzioni esterne normali a cui vengono concessi privilegi di accesso speciali. Gli elementi Friend non sono nell'ambito della classe e non vengono chiamati utilizzando gli operatori di selezione dei membri (**.** e -**>**) a meno che non sono membri di un'altra classe. Oggetto **friend** funzione viene dichiarata dalla classe che concede l'accesso. Il **friend** dichiarazione può essere inserita in un punto qualsiasi nella dichiarazione di classe. Non è influenzata dalle parole chiave di controllo di accesso.  
   
- Nell'esempio seguente viene illustrata una classe `Point` e una funzione friend `ChangePrivate`. La funzione `friend` ha accesso al membro dati privato dell'oggetto `Point` ricevuto come parametro.  
+ Nell'esempio seguente viene illustrata una classe `Point` e una funzione friend `ChangePrivate`. Il **friend** funzione ha accesso al membro dati privato del `Point` riceve come parametro dell'oggetto.  
   
 ```cpp  
 // friend_functions.cpp  
@@ -189,7 +189,7 @@ int A::Func1( B& b ) { return b._b; }   // OK
 int A::Func2( B& b ) { return b._b; }   // C2248  
 ```  
   
- Nell'esempio precedente, solo alla funzione `A::Func1( B& )` viene concesso l'accesso Friend alla classe `B`. Di conseguenza, accedere al membro privato `_b` corretto in `Func1` della classe `A` ma non in `Func2`.  
+ Nell'esempio precedente, solo alla funzione `A::Func1( B& )` viene concesso l'accesso Friend alla classe `B`. Di conseguenza, accedere al membro privato `_b` sia corretto in `Func1` della classe `A` ma non in `Func2`.  
   
  Una classe `friend` è una classe in cui tutte le funzioni membro sono funzioni Friend di una classe, ovvero, le cui funzioni membro hanno accesso agli altri membri privati e protetti della classe. Si supponga che la dichiarazione `friend` nella classe `B` sia stata:  
   

@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1e275bd195c11b605891b250e9264bad587eb853
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0fb9b61ec4d2abc6ae73b2ebed7571398857d517
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33865606"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38963459"
 ---
 # <a name="syncshared-class"></a>Classe sync_shared
 
@@ -44,7 +44,7 @@ class sync_shared
 
 |Parametro|Descrizione|
 |---------------|-----------------|
-|`Cache`|Tipo di cache associato al filtro di sincronizzazione. Può essere [cache_chunklist](../standard-library/cache-chunklist-class.md), [cache_freelist](../standard-library/cache-freelist-class.md) o [cache_suballoc](../standard-library/cache-suballoc-class.md).|
+|*Cache*|Tipo di cache associato al filtro di sincronizzazione. Può essere [cache_chunklist](../standard-library/cache-chunklist-class.md), [cache_freelist](../standard-library/cache-freelist-class.md) o [cache_suballoc](../standard-library/cache-suballoc-class.md).|
 
 ### <a name="member-functions"></a>Funzioni membro
 
@@ -72,7 +72,7 @@ void *allocate(std::size_t count);
 
 |Parametro|Descrizione|
 |---------------|-----------------|
-|`count`|Numero di elementi della matrice da allocare.|
+|*count*|Numero di elementi della matrice da allocare.|
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -94,8 +94,8 @@ void deallocate(void* ptr, std::size_t count);
 
 |Parametro|Descrizione|
 |---------------|-----------------|
-|`ptr`|Puntatore al primo oggetto da deallocare dall'archivio.|
-|`count`|Numero di oggetti da deallocare dall'archivio.|
+|*ptr*|Puntatore al primo oggetto da deallocare dall'archivio.|
+|*count*|Numero di oggetti da deallocare dall'archivio.|
 
 ### <a name="remarks"></a>Note
 
@@ -113,12 +113,12 @@ bool equals(const sync_shared<Cache>& Other) const;
 
 |Parametro|Descrizione|
 |---------------|-----------------|
-|`Cache`|Tipo di cache associato al filtro di sincronizzazione.|
-|`Other`|Cache da confrontare per verificarne l'uguaglianza.|
+|*Cache*|Tipo di cache associato al filtro di sincronizzazione.|
+|*Altro*|Cache da confrontare per verificarne l'uguaglianza.|
 
 ### <a name="return-value"></a>Valore restituito
 
-`true` se il risultato di `cache.equals(Other.cache)`, dove `cache` rappresenta l'oggetto cache, è `true`; in caso contrario, `false`.
+**true** se il risultato del `cache.equals(Other.cache)`, dove `cache` rappresenta l'oggetto della cache, viene **true**; in caso contrario, **false**.
 
 ### <a name="remarks"></a>Note
 

@@ -1,5 +1,5 @@
 ---
-title: Restrict | Documenti Microsoft
+title: Restrict | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,31 +16,32 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d96abd70990f1c01229004e9be000ec4e35a8595
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e402fc9a32b92960f251796365199a608d6d1137
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37943977"
 ---
 # <a name="restrict"></a>__restrict
-Ad esempio il **declspec ( [limitare](../cpp/restrict.md) )** modificatore, la `__restrict` parola chiave indica che un simbolo non è associato un alias nell'ambito corrente. Tra la parola chiave `__restrict` e il modificatore `__declspec ( restrict )` esistono le differenze seguenti:  
+Ad esempio il **declspec ( [limitare](../cpp/restrict.md) )** modificatore, la **Restrict** parola chiave indica che un simbolo non è associato un alias nell'ambito corrente. Il **Restrict** parola chiave è diverso dal `__declspec ( restrict )` modificatore nei modi seguenti:  
   
--   La parola chiave `__restrict` è valida solo per variabili, mentre `__declspec ( restrict )` è valido solo per le dichiarazioni e le definizioni di funzione.  
+-   Il **Restrict** parola chiave è valida solo per variabili, e `__declspec ( restrict )` è valido solo nelle dichiarazioni di funzione e definizioni.  
   
--   `__restrict` è analogo a `restrict` nella specifica C99, ma è possibile sare `__restrict` in programmi C++ o C.  
+-   **Restrict** è simile a **limitare** nella specifica C99, ma **Restrict** è utilizzabile in programmi C++ o C.  
   
--   Quando si usa `__restrict`, il compilatore non trasferirà la proprietà noalias di una variabile. In altre parole, se si assegna una variabile `__restrict` a una variabile non-`__restrict` variable, il compilatore non consentirà comunque l'uso di un alias per la variabile non-__restrict. Questo comportamento è diverso da quello della parola chiave `restrict` della specifica C99.  
+-   Quando **Restrict** viene utilizzato, il compilatore non trasferirà la proprietà noalias di una variabile. Vale a dire, se si assegna un **Restrict** variabile non -**Restrict** variabile, il compilatore consentirà comunque il non- Restrict variabile con un alias. Questo comportamento è diverso dal comportamento dei **limitare** parola chiave della specifica C99.  
   
  In generale, se si è interessati al comportamento di un'intera funzione, è preferibile usare `__declspec ( restrict )` anziché la parola chiave.  
   
- In Visual Studio 2015 e versioni successive è possibile usare `__restrict` nei riferimenti C++.  
+ In Visual Studio 2015 e versioni successive **Restrict** può essere utilizzato nei riferimenti C++.  
   
 > [!NOTE]
->  Quando viene utilizzata su una variabile che dispone anche di [volatile](../cpp/volatile-cpp.md) (parola chiave), `volatile` avrà la precedenza.  
+>  Quando viene usato in una variabile che ha il [volatile](../cpp/volatile-cpp.md) parola chiave **volatile** avrà la precedenza.  
   
 ## <a name="example"></a>Esempio  
   
-```  
+```cpp 
 // __restrict_keyword.c  
 // compile with: /LD  
 // In the following function, declare a and b as disjoint arrays  
