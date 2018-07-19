@@ -1,5 +1,5 @@
 ---
-title: Classe CFtpConnection | Documenti Microsoft
+title: Classe CFtpConnection | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -40,15 +40,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 303e89cd00091d8427bdb1d6e36c9a85b7aa5100
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: c5e0c902b9de9ea4d742d96b88f86d47231597f7
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36952953"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37337333"
 ---
 # <a name="cftpconnection-class"></a>Classe CFtpConnection
-Gestisce la connessione FTP a un server Internet e consente la manipolazione diretta di directory e file in tale server.  
+Gestisce la connessione FTP a un server Internet e consentirne un'elaborazione diretta delle directory e file in tale server.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -83,9 +83,9 @@ class CFtpConnection : public CInternetConnection
 ## <a name="remarks"></a>Note  
  FTP è uno dei tre servizi Internet riconosciuti dalle classi WinInet MFC.  
   
- Per comunicare con un server FTP Internet, è innanzitutto necessario creare un'istanza di [CInternetSession](../../mfc/reference/cinternetsession-class.md), quindi creare un `CFtpConnection` oggetto. È non creare mai un `CFtpConnection` l'oggetto direttamente; piuttosto, chiamare [CInternetSession:: GetFtpConnection](../../mfc/reference/cinternetsession-class.md#getftpconnection), che consente di creare il `CFtpConnection` dell'oggetto e restituisce un puntatore a esso.  
+ Per comunicare con un server FTP Internet, è innanzitutto necessario creare un'istanza di [CInternetSession](../../mfc/reference/cinternetsession-class.md), quindi creare un `CFtpConnection` oggetto. È non creare mai una `CFtpConnection` direttamente l'oggetto; piuttosto, chiamare [CInternetSession:: GetFtpConnection](../../mfc/reference/cinternetsession-class.md#getftpconnection), che consente di creare il `CFtpConnection` specificato e restituisce un puntatore a esso.  
   
- Per altre informazioni su come `CFtpConnection` funziona con le altre classi MFC Internet, vedere l'articolo [Internet programmazione con WinInet](../../mfc/win32-internet-extensions-wininet.md). Per ulteriori informazioni sulla comunicazione con gli altri due supportati servizi, HTTP e gopher, vedere le classi [CHttpConnection](../../mfc/reference/chttpconnection-class.md) e [CGopherConnection](../../mfc/reference/cgopherconnection-class.md).  
+ Per altre informazioni su come `CFtpConnection` funziona con le altre classi MFC Internet, vedere l'articolo [programmazione Internet con WinInet](../../mfc/win32-internet-extensions-wininet.md). Per altre informazioni sulla comunicazione con gli altri due supportati servizi, HTTP e gopher, vedere le classi [CHttpConnection](../../mfc/reference/chttpconnection-class.md) e [CGopherConnection](../../mfc/reference/cgopherconnection-class.md).  
   
 ## <a name="example"></a>Esempio  
   Vedere l'esempio nel [CFtpFileFind](../../mfc/reference/cftpfilefind-class.md) Cenni preliminari sulla classe.  
@@ -123,38 +123,38 @@ CFtpConnection(
   
 ### <a name="parameters"></a>Parametri  
  *pSession*  
- Un puntatore alla correlate [CInternetSession](../../mfc/reference/cinternetsession-class.md) oggetto.  
+ Un puntatore all'oggetto correlato [CInternetSession](../../mfc/reference/cinternetsession-class.md) oggetto.  
   
  *hConnected*  
- Handle della finestra della sessione corrente di Internet.  
+ L'handle di Windows della sessione corrente di Internet.  
   
  *pstrServer*  
  Un puntatore a una stringa contenente il nome del server FTP.  
   
  *dwContext*  
- L'identificatore di contesto per l'operazione. *dwContext* identifica le informazioni sullo stato dell'operazione restituite da [CInternetSession:: OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback). Il valore predefinito è impostato su 1. Tuttavia, è possibile assegnare in modo esplicito un ID di contesto specifico per l'operazione. L'oggetto e qualsiasi lavoro che svolto verrà associati a tale ID del contesto.  
+ L'identificatore di contesto per l'operazione. *dwContext* identifica le informazioni sullo stato dell'operazione restituite da [CInternetSession:: OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback). Il valore predefinito è impostato su 1. Tuttavia, è possibile assegnare in modo esplicito un ID di contesto specifico per l'operazione. L'oggetto e qualsiasi lavoro che svolto da associare con tale ID del contesto.  
   
  *pstrUserName*  
- Puntatore a una stringa con terminazione null che specifica il nome dell'utente per l'accesso. Se **NULL**, il valore predefinito è anonimo.  
+ Puntatore a una stringa con terminazione null che specifica il nome dell'utente per l'accesso. Se NULL, il valore predefinito è anonymous.  
   
  *pstrPassword*  
- Un puntatore a una stringa con terminazione null che specifica la password da utilizzare per l'accesso. Se entrambi *pstrPassword* e *pstrUserName* sono **NULL**, la password anonima predefinita è il nome dell'utente tramite posta elettronica. Se *pstrPassword* viene **NULL** (o una stringa vuota) ma *pstrUserName* non **NULL**, viene utilizzata una password vuota. Nella tabella seguente viene descritto il comportamento per le quattro possibili impostazioni di *pstrUserName* e *pstrPassword*:  
+ Un puntatore a una stringa con terminazione null che specifica la password da utilizzare per l'accesso. Se entrambe *pstrPassword* e *pstrUserName* sono NULL, la password anonima predefinita è il nome dell'utente tramite posta elettronica. Se *pstrPassword* è NULL (o una stringa vuota), ma *pstrUserName* non è NULL, viene usata una password vuota. La tabella seguente descrive il comportamento per le quattro possibili impostazioni di *pstrUserName* e *pstrPassword*:  
   
 |*pstrUserName*|*pstrPassword*|Nome utente inviato al server FTP|Password inviati al server FTP|  
 |--------------------|--------------------|---------------------------------|---------------------------------|  
-|**NULL** o ""|**NULL** o ""|"anonimo"|Nome di posta elettronica dell'utente|  
-|Non- **NULL** stringa|**NULL** o ""|*pstrUserName*|" "|  
-|**NULL** diverso da **NULL** stringa|**ERRORE**|**ERRORE**||  
-|Non- **NULL** stringa|Non- **NULL** stringa|*pstrUserName*|*pstrPassword*|  
+|NULL o ""|NULL o ""|"anonymous"|Nome messaggio di posta elettronica dell'utente|  
+|Stringa non NULL|NULL o ""|*pstrUserName*|" "|  
+|Stringa Non NULL a NULL|ERRORE|ERRORE||  
+|Stringa non NULL|Stringa non NULL|*pstrUserName*|*pstrPassword*|  
   
  *nPort*  
- Numero che identifica la porta TCP/IP da utilizzare nel server.  
+ Numero che identifica la porta TCP/IP da usare nel server.  
   
  *bPassive*  
- Specifica la modalità passiva o attiva per questa sessione FTP. Se impostato su **TRUE**, imposta l'API Win32 *dwFlag* al **INTERNET_FLAG_PASSIVE**.  
+ Specifica la modalità passiva o attiva per questa sessione FTP. Se impostato su TRUE, imposta l'API Win32 *dwFlag* a INTERNET_FLAG_PASSIVE.  
   
 ### <a name="remarks"></a>Note  
- È non creare mai un `CFtpConnection` direttamente l'oggetto. In alternativa, chiamare [CInternetSession:: GetFtpConnection](../../mfc/reference/cinternetsession-class.md#getftpconnection), che consente di creare il **CFptConnection** oggetto.  
+ È non creare mai un `CFtpConnection` direttamente l'oggetto. Chiamare invece [CInternetSession:: GetFtpConnection](../../mfc/reference/cinternetsession-class.md#getftpconnection), che consente di creare il `CFptConnection` oggetto.  
   
 ##  <a name="command"></a>  CFtpConnection::Command  
  Invia un comando direttamente a un server FTP.  
@@ -174,9 +174,9 @@ CInternetFile* Command(
  *eResponse*  
  Determina se è prevista una risposta dal server FTP. Il valore può essere uno dei seguenti:  
   
-- **CmdRespNone** è prevista alcuna risposta.  
+- `CmdRespNone` È prevista alcuna risposta.  
   
-- **Cmdrespnone** è prevista una risposta.  
+- `CmdRespRead` È prevista una risposta.  
   
  *dwFlags*  
  Valore contenente i flag che controllano questa funzione. Per un elenco completo, vedere [FTPCommand](http://msdn.microsoft.com/library/windows/desktop/aa384133).  
@@ -188,7 +188,7 @@ CInternetFile* Command(
  Diverso da zero se ha esito positivo; in caso contrario 0.  
   
 ### <a name="remarks"></a>Note  
- Questa funzione membro emula la funzionalità del [FTPCommand](http://msdn.microsoft.com/library/windows/desktop/aa384133) funzione, come descritto in Windows SDK.  
+ Questa funzione membro emula la funzionalità dei [FTPCommand](http://msdn.microsoft.com/library/windows/desktop/aa384133) funzionare, come descritto nel SDK di Windows.  
   
  Se si verifica un errore, MFC genera un'eccezione di tipo [CInternetException](../../mfc/reference/cinternetexception-class.md).  
   
@@ -207,9 +207,9 @@ BOOL CreateDirectory(LPCTSTR pstrDirName);
  Diverso da zero se ha esito positivo; in caso contrario 0. Se la chiamata ha esito negativo, la funzione di Windows [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) può essere chiamato per determinare la causa dell'errore.  
   
 ### <a name="remarks"></a>Note  
- Utilizzare `GetCurrentDirectory` per determinare la directory di lavoro corrente per la connessione al server. Non presupporre che il sistema remoto sia connesso è nella directory radice.  
+ Usare `GetCurrentDirectory` per determinare la directory di lavoro corrente per questa connessione al server. Non presupporre che il sistema remoto sia connesso è nella directory radice.  
   
- Il `pstrDirName` parametro può essere un parzialmente o un nome di file completo relativo alla directory corrente. Una barra rovesciata (\\) o barra rovesciata (/) può essere utilizzato come separatore di directory per dei nomi. `CreateDirectory` traduce i separatori di nome di directory per i caratteri appropriati prima che vengano utilizzate.  
+ Il `pstrDirName` parametro può essere un parzialmente o un nome file completo relativo alla directory corrente. Una barra rovesciata (\\) o barra (/) può essere utilizzata come separatore di directory per il nome. `CreateDirectory` traduce i separatori di nome di directory in caratteri appropriati prima che vengano utilizzate.  
   
 ##  <a name="getcurrentdirectory"></a>  CFtpConnection:: GetCurrentDirectory  
  Chiamare questa funzione membro per ottenere il nome della directory corrente.  
@@ -235,15 +235,15 @@ BOOL GetCurrentDirectory(
 |||  
 |-|-|  
 |In ingresso|Le dimensioni del buffer fa *pstrDirName*.|  
-|In fase di restituzione|Il numero di caratteri archiviati a *pstrDirName*. Se la funzione membro non riesce e viene restituito ERROR_INSUFFICIENT_BUFFER, quindi *lpdwLen* contiene il numero di byte che l'applicazione deve allocare per ricevere la stringa.|  
+|In fase di restituzione|Il numero di caratteri archiviati a *pstrDirName*. Se la funzione membro non riesce e viene restituito ERROR_INSUFFICIENT_BUFFER *lpdwLen* contiene il numero di byte che l'applicazione deve allocare per ricevere la stringa.|  
   
 ### <a name="return-value"></a>Valore restituito  
  Diverso da zero se ha esito positivo; in caso contrario 0. Se la chiamata ha esito negativo, la funzione Win32 [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) può essere chiamato per determinare la causa dell'errore.  
   
 ### <a name="remarks"></a>Note  
- Per ottenere invece il nome della directory sotto forma di URL, chiamare [GetCurrentDirectoryAsURL](#getcurrentdirectoryasurl).  
+ Per ottenere invece il nome della directory come un URL, chiamare [GetCurrentDirectoryAsURL](#getcurrentdirectoryasurl).  
   
- I parametri *pstrDirName* oppure *strDirName* possono essere entrambi nomi parzialmente qualificati relativo alla directory corrente o completo. Una barra rovesciata (\\) o barra rovesciata (/) può essere utilizzato come separatore di directory per dei nomi. `GetCurrentDirectory` traduce i separatori di nome di directory per i caratteri appropriati prima che vengano utilizzate.  
+ I parametri *pstrDirName* oppure *strDirName* possono essere entrambi nomi parzialmente qualificati di file relativo alla directory corrente o in modo completo. Una barra rovesciata (\\) o barra (/) può essere utilizzata come separatore di directory per il nome. `GetCurrentDirectory` traduce i separatori di nome di directory in caratteri appropriati prima che vengano utilizzate.  
   
 ##  <a name="getcurrentdirectoryasurl"></a>  CFtpConnection:: Getcurrentdirectoryasurl  
  Chiamare questa funzione membro per ottenere il nome della directory corrente sotto forma di URL.  
@@ -269,7 +269,7 @@ BOOL GetCurrentDirectoryAsURL(
 |||  
 |-|-|  
 |In ingresso|Le dimensioni del buffer fa *pstrDirName*.|  
-|In fase di restituzione|Il numero di caratteri archiviati a *pstrDirName*. Se la funzione membro non riesce e viene restituito ERROR_INSUFFICIENT_BUFFER, quindi *lpdwLen* contiene il numero di byte che l'applicazione deve allocare per ricevere la stringa.|  
+|In fase di restituzione|Il numero di caratteri archiviati a *pstrDirName*. Se la funzione membro non riesce e viene restituito ERROR_INSUFFICIENT_BUFFER *lpdwLen* contiene il numero di byte che l'applicazione deve allocare per ricevere la stringa.|  
   
 ### <a name="return-value"></a>Valore restituito  
  Diverso da zero se ha esito positivo; in caso contrario 0. Se la chiamata ha esito negativo, la funzione Win32 [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) può essere chiamato per determinare la causa dell'errore.  
@@ -277,10 +277,10 @@ BOOL GetCurrentDirectoryAsURL(
 ### <a name="remarks"></a>Note  
  `GetCurrentDirectoryAsURL` si comporta come [GetCurrentDirectory](#getcurrentdirectory)  
   
- Il parametro *strDirName* possono essere entrambi nomi parzialmente qualificati relativo alla directory corrente o completo. Una barra rovesciata (\\) o barra rovesciata (/) può essere utilizzato come separatore di directory per dei nomi. `GetCurrentDirectoryAsURL` traduce i separatori di nome di directory per i caratteri appropriati prima che vengano utilizzate.  
+ Il parametro *strDirName* possono essere entrambi nomi parzialmente qualificati di file relativo alla directory corrente o in modo completo. Una barra rovesciata (\\) o barra (/) può essere utilizzata come separatore di directory per il nome. `GetCurrentDirectoryAsURL` traduce i separatori di nome di directory in caratteri appropriati prima che vengano utilizzate.  
   
 ##  <a name="getfile"></a>  CFtpConnection::GetFile  
- Chiamare questa funzione membro per ottenere un file da un server FTP e archiviarla nel computer locale.  
+ Chiamare questa funzione membro per ottenere un file da un server FTP e archiviarlo nel computer locale.  
   
 ```  
 BOOL GetFile(
@@ -294,50 +294,50 @@ BOOL GetFile(
   
 ### <a name="parameters"></a>Parametri  
  *pstrRemoteFile*  
- Un puntatore a una stringa con terminazione null contenente il nome di un file da recuperare dal server FTP.  
+ Un puntatore a una stringa con terminazione null che contiene il nome di un file da recuperare dal server FTP.  
   
  *pstrLocalFile*  
- Un puntatore a una stringa con terminazione null contenente il nome del file da creare nel sistema locale.  
+ Un puntatore a una stringa con terminazione null che contiene il nome del file da creare nel sistema locale.  
   
  *bFailIfExists*  
- Indica se il nome del file potrebbe essere già utilizzato da un file esistente. Se il nome del file locale esiste già, e questo parametro è **TRUE**, `GetFile` ha esito negativo. In caso contrario, `GetFile` cancellerà la copia esistente del file.  
+ Indica se il nome del file potrebbe essere già utilizzato da un file esistente. Se esiste già il nome del file locale e questo parametro è TRUE, `GetFile` ha esito negativo. In caso contrario, `GetFile` cancellerà la copia esistente del file.  
   
  *dwAttributes*  
  Indica gli attributi del file. Può trattarsi di qualsiasi combinazione dei flag seguenti FILE_ATTRIBUTE_ *.  
   
--   FILE_ATTRIBUTE_ARCHIVE il file è un file di archivio. Le applicazioni utilizzano questo attributo per contrassegnare i file di backup o la rimozione.  
+-   FILE_ATTRIBUTE_ARCHIVE il file è un file di archivio. Le applicazioni usano questo attributo per contrassegnare i file per il backup o la rimozione.  
   
--   FILE_ATTRIBUTE_COMPRESSED il file o la directory è compresso. Per un file, la compressione significa che tutti i dati nel file vengono compressi. Per una directory, la compressione è il valore predefinito per nuovi file creati e le sottodirectory.  
+-   FILE_ATTRIBUTE_COMPRESSED file o della directory è compresso. Per un file, la compressione significa che tutti i dati nel file vengono compressi. Per una directory, la compressione è il valore predefinito per nuovi file creati e le sottodirectory.  
   
 -   FILE_ATTRIBUTE_DIRECTORY il file è una directory.  
   
--   FILE_ATTRIBUTE_NORMAL il file non dispone altri attributi impostati. Questo attributo è valido solo se utilizzato da solo. Tutti gli altri attributi di file di eseguire l'override FILE_ATTRIBUTE_NORMAL:  
+-   Il file FILE_ATTRIBUTE_NORMAL non possiede altri attributi impostato. Questo attributo è valido solo se usato da solo. Tutti gli altri attributi di file di eseguire l'override FILE_ATTRIBUTE_NORMAL:  
   
--   FILE_ATTRIBUTE_HIDDEN il file è nascosto. Non è devono essere inclusi in una visualizzazione directory comune.  
+-   FILE_ATTRIBUTE_HIDDEN il file è nascosto. Non è devono essere inclusi in un elenco delle directory standard.  
   
--   FILE_ATTRIBUTE_READONLY il file è di sola lettura. Le applicazioni possono leggere il file, ma non scrivervi o eliminarlo.  
+-   FILE_ATTRIBUTE_READONLY il file è di sola lettura. Le applicazioni possono leggere il file, ma non è possibile scrivervi oppure eliminarlo.  
   
 -   FILE_ATTRIBUTE_SYSTEM il file fa parte di o viene utilizzato esclusivamente dal sistema operativo.  
   
--   FILE_ATTRIBUTE_TEMPORARY il file è in uso per l'archiviazione temporanea. Le applicazioni devono scrivere il file solo se strettamente necessario. La maggior parte dei dati del file rimane in memoria senza il supporto viene scaricata perché il file verrà presto eliminato.  
+-   FILE_ATTRIBUTE_TEMPORARY il file viene usato per l'archiviazione temporanea. Le applicazioni devono scrivere nel file solo se assolutamente necessario. La maggior parte dei dati del file rimane in memoria senza viene scaricata il supporto perché il file verrà presto eliminato.  
   
  *dwFlags*  
- Specifica le condizioni in cui si verifica il trasferimento. Questo parametro può essere uno qualsiasi del *dwFlags* valori descritti nelle [FtpGetFile](http://msdn.microsoft.com/library/windows/desktop/aa384157) in Windows SDK.  
+ Specifica le condizioni in cui si verifica il trasferimento. Questo parametro può essere uno qualsiasi dei *dwFlags* i valori descritti nella [FtpGetFile](http://msdn.microsoft.com/library/windows/desktop/aa384157) nel SDK di Windows.  
   
  *dwContext*  
- L'identificatore di contesto per il recupero di file. Vedere **osservazioni** per ulteriori informazioni sulle *dwContext*.  
+ L'identificatore di contesto per il recupero di file. Visualizzare **osservazioni** per altre informazioni sui *dwContext*.  
   
 ### <a name="return-value"></a>Valore restituito  
  Diverso da zero se ha esito positivo; in caso contrario 0. Se la chiamata ha esito negativo, la funzione Win32 [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) può essere chiamato per determinare la causa dell'errore.  
   
 ### <a name="remarks"></a>Note  
- `GetFile` è una routine di alto livello che gestisce l'intera l'overhead associato alla lettura di un file da un server FTP e archiviare i dati in locale. Le applicazioni che recuperano solo i dati di file o che richiedono il controllo chiude sul trasferimento di file, devono utilizzare `OpenFile` e [CInternetFile:: Read](../../mfc/reference/cinternetfile-class.md#read) invece.  
+ `GetFile` è una routine di alto livello che provvede a tutto l'overhead associato alla lettura di un file da un server FTP e archiviandolo in locale. Le applicazioni che recuperano solo i dati dei file, o che richiedono Chiudi controllare il trasferimento di file, devono usare `OpenFile` e [CInternetFile:: Read](../../mfc/reference/cinternetfile-class.md#read) invece.  
   
- Se *dwFlags* FILE_TRANSFER_TYPE_ASCII, conversione dei dati dei file anche converte controllo e la formattazione di caratteri da equivalenti di Windows. Il trasferimento predefinito è modalità binaria, in cui il file viene scaricato nello stesso formato archiviato nel server.  
+ Se *dwFlags* FILE_TRANSFER_TYPE_ASCII, conversione dei dati dei file anche converte controllo e formattazione dei caratteri agli equivalenti di Windows. Il trasferimento predefinito è la modalità binaria, in cui viene scaricato il file nello stesso formato archiviati nel server.  
   
- Entrambi *pstrRemoteFile* e *pstrLocalFile* possono essere entrambi nomi parzialmente qualificati relativo alla directory corrente o completo. Una barra rovesciata (\\) o barra rovesciata (/) può essere utilizzato come separatore di directory per dei nomi. `GetFile` traduce i separatori di nome di directory per i caratteri appropriati prima che vengano utilizzate.  
+ Entrambe *pstrRemoteFile* e *pstrLocalFile* possono essere entrambi nomi parzialmente qualificati di file relativo alla directory corrente o in modo completo. Una barra rovesciata (\\) o barra (/) può essere utilizzata come separatore di directory per il nome. `GetFile` traduce i separatori di nome di directory in caratteri appropriati prima che vengano utilizzate.  
   
- Eseguire l'override di *dwContext* predefinito per impostare l'identificatore di contesto su un valore di propria scelta. L'identificatore di contesto è associato a questa operazione specifica del `CFtpConnection` oggetto creato dal relativo [CInternetSession](../../mfc/reference/cinternetsession-class.md) oggetto. Il valore viene restituito al [CInternetSession:: OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) per fornire lo stato dell'operazione con cui viene identificato. Vedere l'articolo [prime operazioni in Internet: WinInet](../../mfc/wininet-basics.md) per ulteriori informazioni sull'identificatore di contesto.  
+ Eseguire l'override di *dwContext* predefinito per impostare l'identificatore di contesto su un valore di propria scelta. L'identificatore di contesto è associato a questa specifica operazione dei `CFtpConnection` oggetto creato dal relativo [CInternetSession](../../mfc/reference/cinternetsession-class.md) oggetto. Viene restituito il valore per [CInternetSession:: OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) per fornire lo stato dell'operazione con cui viene identificato. Vedere l'articolo [prime operazioni in Internet: WinInet](../../mfc/wininet-basics.md) per altre informazioni sull'identificatore di contesto.  
   
 ##  <a name="openfile"></a>  CFtpConnection:: OpenFile  
  Chiamare questa funzione membro per aprire un file che si trova in un server FTP per la lettura o scrittura.  
@@ -355,35 +355,35 @@ CInternetFile* OpenFile(
  Un puntatore a una stringa contenente il nome del file da aprire.  
   
  *dwAccess*  
- Determina come il file si accederà. È possibile GENERIC_READ o GENERIC_WRITE, ma non entrambi.  
+ Determina come il file sarà accessibile. Può essere GENERIC_READ o GENERIC_WRITE, ma non entrambi.  
   
  *dwFlags*  
- Specifica le condizioni in cui si verificano trasferimenti successivi. Può trattarsi di una delle seguenti costanti FTP_TRANSFER_ *:  
+ Specifica le condizioni in cui si verificano trasferimenti successive. Ciò può essere uno delle seguenti costanti FTP_TRANSFER_ *:  
   
--   FTP_TRANSFER_TYPE_ASCII il file trasferisce utilizzando il metodo di trasferimento FTP ASCII (tipo di oggetto). Controllo converte e informazioni di formattazione a equivalenti locale.  
+-   FTP_TRANSFER_TYPE_ASCII il file di trasferimento viene eseguito tramite il metodo di trasferimento FTP ASCII (tipo di oggetto). Converte controllo e informazioni di formattazione a equivalenti in locale.  
   
--   FTP_TRANSFER_TYPE_BINARY il file di dati vengono trasferiti utilizzando il metodo di trasferimento immagine FTP's (tipo I). I dati di trasferimenti di file esattamente come se esistono, senza modifiche. Questo è il metodo di trasferimento predefinito.  
+-   FTP_TRANSFER_TYPE_BINARY file trasferisce i dati usando il metodo di trasferimento di immagine FTP's (tipo di ricerca per categorie). I dati vengono trasferiti i file così come è presente, senza modifiche. Questo è il metodo di trasferimento predefinito.  
   
  *dwContext*  
- L'identificatore di contesto per l'apertura del file. Vedere **osservazioni** per ulteriori informazioni sulle *dwContext*.  
+ L'identificatore di contesto per l'apertura del file. Visualizzare **osservazioni** per altre informazioni sui *dwContext*.  
   
 ### <a name="return-value"></a>Valore restituito  
  Un puntatore a un [CInternetFile](../../mfc/reference/cinternetfile-class.md) oggetto.  
   
 ### <a name="remarks"></a>Note  
- `OpenFile` deve essere utilizzato nelle situazioni seguenti:  
+ `OpenFile` deve essere usato nelle situazioni seguenti:  
   
--   Un'applicazione dispone di dati che devono essere inviato e crearlo come file nel server FTP, ma che i dati non sono presente in un file locale. Una volta `OpenFile` apre un file, l'applicazione utilizza [CInternetFile::Write](../../mfc/reference/cinternetfile-class.md#write) per inviare i dati di file FTP al server.  
+-   Un'applicazione dispone di dati che devono essere inviato e crearlo come file nel server FTP, ma i dati non più in un file locale. Una volta `OpenFile` apre un file, l'applicazione utilizza [CInternetFile::Write](../../mfc/reference/cinternetfile-class.md#write) per inviare i dati di file FTP al server.  
   
--   Un'applicazione deve recuperare un file dal server e inserirlo nella memoria controllato dell'applicazione, invece di scrivere su disco. L'applicazione utilizza [CInternetFile:: Read](../../mfc/reference/cinternetfile-class.md#read) dopo aver utilizzato `OpenFile` per aprire il file.  
+-   Un'applicazione deve recuperare un file dal server e posizionarlo in memoria controllato dall'applicazione, invece di scrittura sul disco. L'applicazione utilizza [CInternetFile:: Read](../../mfc/reference/cinternetfile-class.md#read) dopo aver usato `OpenFile` per aprire il file.  
   
--   Un'applicazione richiede un elevato livello di controllo su un trasferimento di file. Ad esempio, l'applicazione può essere utile visualizzare un indicatore di stato controllo indicano lo stato di avanzamento dello stato di trasferimento di file durante il download di file.  
+-   Un'applicazione richiede un elevato livello di controllo sul trasferimento di file. Ad esempio, l'applicazione desideri visualizzare uno stato di avanzamento controllo indicano lo stato di avanzamento dello stato di trasferimento di file durante il download di un file.  
   
- Dopo la chiamata `OpenFile` e fino alla chiamata `CInternetConnection::Close`, l'applicazione può chiamare solo [CInternetFile:: Read](../../mfc/reference/cinternetfile-class.md#read), [CInternetFile::Write](../../mfc/reference/cinternetfile-class.md#write), `CInternetConnection::Close`, o [ CFtpFileFind:: FindFile](../../mfc/reference/cftpfilefind-class.md#findfile). Le chiamate ad altre funzioni FTP per la stessa sessione FTP avrà esito negativo e impostare il codice di errore FTP_ETRANSFER_IN_PROGRESS.  
+ Dopo avere chiamato `OpenFile` e fino a quando la chiamata `CInternetConnection::Close`, l'applicazione può chiamare solo [CInternetFile:: Read](../../mfc/reference/cinternetfile-class.md#read), [CInternetFile::Write](../../mfc/reference/cinternetfile-class.md#write), `CInternetConnection::Close`, o [ CFtpFileFind:: FindFile](../../mfc/reference/cftpfilefind-class.md#findfile). Le chiamate ad altre funzioni FTP per la stessa sessione FTP avrà esito negativo e impostare il codice di errore per FTP_ETRANSFER_IN_PROGRESS.  
   
- Il *pstrFileName* parametro può essere un nome parziale completo o relativo alla directory corrente. Una barra rovesciata (\\) o barra rovesciata (/) può essere utilizzato come separatore di directory per dei nomi. `OpenFile` traduce i separatori di nome di directory per i caratteri appropriati prima di utilizzarlo.  
+ Il *pstrFileName* parametro può essere un nome parzialmente qualificato completo o relativo alla directory corrente. Una barra rovesciata (\\) o barra (/) può essere utilizzata come separatore di directory per il nome. `OpenFile` traduce i separatori di nome di directory in caratteri appropriati prima di poterla usare.  
   
- Eseguire l'override di *dwContext* predefinito per impostare l'identificatore di contesto su un valore di propria scelta. L'identificatore di contesto è associato a questa operazione specifica del `CFtpConnection` oggetto creato dal relativo [CInternetSession](../../mfc/reference/cinternetsession-class.md) oggetto. Il valore viene restituito al [CInternetSession:: OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) per fornire lo stato dell'operazione con cui viene identificato. Vedere l'articolo [prime operazioni in Internet: WinInet](../../mfc/wininet-basics.md) per ulteriori informazioni sull'identificatore di contesto.  
+ Eseguire l'override di *dwContext* predefinito per impostare l'identificatore di contesto su un valore di propria scelta. L'identificatore di contesto è associato a questa specifica operazione dei `CFtpConnection` oggetto creato dal relativo [CInternetSession](../../mfc/reference/cinternetsession-class.md) oggetto. Viene restituito il valore per [CInternetSession:: OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) per fornire lo stato dell'operazione con cui viene identificato. Vedere l'articolo [prime operazioni in Internet: WinInet](../../mfc/wininet-basics.md) per altre informazioni sull'identificatore di contesto.  
   
 ##  <a name="putfile"></a>  CFtpConnection::PutFile  
  Chiamare questa funzione membro per archiviare un file in un server FTP.  
@@ -404,18 +404,18 @@ BOOL PutFile(
  Un puntatore a una stringa contenente il nome del file da creare sul server FTP.  
   
  *dwFlags*  
- Specifica le condizioni in cui si verifica il trasferimento del file. Può essere una delle costanti FTP_TRANSFER_ * descritto in [OpenFile](#openfile).  
+ Specifica le condizioni in cui si verifica il trasferimento del file. Può essere una delle costanti FTP_TRANSFER_ * descritto nella [OpenFile](#openfile).  
   
  *dwContext*  
- L'identificatore di contesto per l'inserimento del file. Vedere **osservazioni** per ulteriori informazioni sulle *dwContext*.  
+ L'identificatore di contesto per posizionare il file. Visualizzare **osservazioni** per altre informazioni sui *dwContext*.  
   
 ### <a name="return-value"></a>Valore restituito  
  Diverso da zero se ha esito positivo; in caso contrario 0. Se la chiamata ha esito negativo, la funzione Win32 [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) può essere chiamato per determinare la causa dell'errore.  
   
 ### <a name="remarks"></a>Note  
- `PutFile` è una routine di alto livello che gestisce tutte le operazioni associate alla memorizzazione di un file in un server FTP. Le applicazioni che solo inviare i dati o che richiedono un maggiore controllo sul trasferimento di file, devono utilizzare [OpenFile](#openfile) e [CInternetFile::Write](../../mfc/reference/cinternetfile-class.md#write).  
+ `PutFile` è una routine di alto livello che gestisce tutte le operazioni associate con l'archiviazione di un file in un server FTP. Le applicazioni che solo invio dei dati, o che richiedono un maggiore controllo sul trasferimento di file, devono usare [OpenFile](#openfile) e [CInternetFile::Write](../../mfc/reference/cinternetfile-class.md#write).  
   
- Esegue l'override dell'impostazione predefinita `dwContext` per impostare l'identificatore di contesto su un valore di propria scelta. L'identificatore di contesto è associato a questa operazione specifica del `CFtpConnection` oggetto creato dal relativo [CInternetSession](../../mfc/reference/cinternetsession-class.md) oggetto. Il valore viene restituito al [CInternetSession:: OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) per fornire lo stato dell'operazione con cui viene identificato. Vedere l'articolo [prime operazioni in Internet: WinInet](../../mfc/wininet-basics.md) per ulteriori informazioni sull'identificatore di contesto.  
+ Esegue l'override dell'impostazione predefinita `dwContext` per impostare l'identificatore di contesto su un valore di propria scelta. L'identificatore di contesto è associato a questa specifica operazione dei `CFtpConnection` oggetto creato dal relativo [CInternetSession](../../mfc/reference/cinternetsession-class.md) oggetto. Viene restituito il valore per [CInternetSession:: OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) per fornire lo stato dell'operazione con cui viene identificato. Vedere l'articolo [prime operazioni in Internet: WinInet](../../mfc/wininet-basics.md) per altre informazioni sull'identificatore di contesto.  
   
 ##  <a name="remove"></a>  CFtpConnection:: Remove  
  Chiamare questa funzione membro per eliminare il file specificato dal server connesso.  
@@ -426,13 +426,13 @@ BOOL Remove(LPCTSTR pstrFileName);
   
 ### <a name="parameters"></a>Parametri  
  *pstrFileName*  
- Un puntatore a una stringa contenente il nome di file da rimuovere.  
+ Un puntatore a una stringa contenente il nome del file da rimuovere.  
   
 ### <a name="return-value"></a>Valore restituito  
  Diverso da zero se ha esito positivo; in caso contrario 0. Se la chiamata ha esito negativo, la funzione Win32 [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) può essere chiamato per determinare la causa dell'errore.  
   
 ### <a name="remarks"></a>Note  
- Il *pstrFileName* parametro può essere un nome parziale completo o relativo alla directory corrente. Una barra rovesciata (\\) o barra rovesciata (/) può essere utilizzato come separatore di directory per dei nomi. Il **rimuovere** funzione converte i separatori di nome di directory per i caratteri appropriati prima che vengano utilizzate.  
+ Il *pstrFileName* parametro può essere un nome parzialmente qualificato completo o relativo alla directory corrente. Una barra rovesciata (\\) o barra (/) può essere utilizzata come separatore di directory per il nome. Il `Remove` funzione converte i separatori di nome di directory in caratteri appropriati prima che vengano utilizzate.  
   
 ##  <a name="removedirectory"></a>  CFtpConnection::RemoveDirectory  
  Chiamare questa funzione membro per rimuovere la directory specificata dal server connesso.  
@@ -443,7 +443,7 @@ BOOL RemoveDirectory(LPCTSTR pstrDirName);
   
 ### <a name="parameters"></a>Parametri  
  *pstrDirName*  
- Un puntatore a una stringa contenente la directory da rimuovere.  
+ Un puntatore a una stringa che contiene la directory da rimuovere.  
   
 ### <a name="return-value"></a>Valore restituito  
  Diverso da zero se ha esito positivo; in caso contrario 0. Se la chiamata ha esito negativo, la funzione Win32 [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) può essere chiamato per determinare la causa dell'errore.  
@@ -451,7 +451,7 @@ BOOL RemoveDirectory(LPCTSTR pstrDirName);
 ### <a name="remarks"></a>Note  
  Uso [GetCurrentDirectory](#getcurrentdirectory) per determinare la directory di lavoro corrente del server. Non presupporre che il sistema remoto sia connesso è nella directory radice.  
   
- Il *pstrDirName* parametro possa essere entrambi un nome parziale o completo relativo alla directory corrente. Una barra rovesciata (\\) o barra rovesciata (/) può essere utilizzato come separatore di directory per dei nomi. `RemoveDirectory` traduce i separatori di nome di directory per i caratteri appropriati prima che vengano utilizzate.  
+ Il *pstrDirName* parametro possa essere entrambi un nome parziale o completo relativo alla directory corrente. Una barra rovesciata (\\) o barra (/) può essere utilizzata come separatore di directory per il nome. `RemoveDirectory` traduce i separatori di nome di directory in caratteri appropriati prima che vengano utilizzate.  
   
 ##  <a name="rename"></a>  CFtpConnection::Rename  
  Chiamare questa funzione membro per rinominare il file specificato nel server connesso.  
@@ -473,10 +473,10 @@ BOOL Rename(
  Diverso da zero se ha esito positivo; in caso contrario 0. Se la chiamata ha esito negativo, la funzione Win32 [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) può essere chiamato per determinare la causa dell'errore.  
   
 ### <a name="remarks"></a>Note  
- Il *pstrExisting* e *pstrNew* parametri possono essere un nome parziale completo o relativo alla directory corrente. Una barra rovesciata (\\) o barra rovesciata (/) può essere utilizzato come separatore di directory per dei nomi. **Rinominare** converte i separatori di nome di directory per i caratteri appropriati prima che vengano utilizzate.  
+ Il *pstrExisting* e *pstrNew* parametri possono essere un nome parzialmente qualificato completo o relativo alla directory corrente. Una barra rovesciata (\\) o barra (/) può essere utilizzata come separatore di directory per il nome. `Rename` traduce i separatori di nome di directory in caratteri appropriati prima che vengano utilizzate.  
   
 ##  <a name="setcurrentdirectory"></a>  CFtpConnection:: SetCurrentDirectory  
- Chiamare questa funzione membro per passare a una directory diversa sul server FTP.  
+ Chiamare questa funzione membro per modificare in una directory diversa sul server FTP.  
   
 ```  
 BOOL SetCurrentDirectory(LPCTSTR pstrDirName);
@@ -490,7 +490,7 @@ BOOL SetCurrentDirectory(LPCTSTR pstrDirName);
  Diverso da zero se ha esito positivo; in caso contrario 0. Se la chiamata ha esito negativo, la funzione Win32 [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) può essere chiamato per determinare la causa dell'errore.  
   
 ### <a name="remarks"></a>Note  
- Il *pstrDirName* parametro possa essere entrambi un nome parziale o completo relativo alla directory corrente. Una barra rovesciata (\\) o barra rovesciata (/) può essere utilizzato come separatore di directory per dei nomi. `SetCurrentDirectory` traduce i separatori di nome di directory per i caratteri appropriati prima che vengano utilizzate.  
+ Il *pstrDirName* parametro possa essere entrambi un nome parziale o completo relativo alla directory corrente. Una barra rovesciata (\\) o barra (/) può essere utilizzata come separatore di directory per il nome. `SetCurrentDirectory` traduce i separatori di nome di directory in caratteri appropriati prima che vengano utilizzate.  
   
  Uso [GetCurrentDirectory](#getcurrentdirectory) per determinare la directory di lavoro corrente del server FTP. Non presupporre che il sistema remoto sia connesso è nella directory radice.  
   

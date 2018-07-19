@@ -1,5 +1,5 @@
 ---
-title: Classe CMFCCaptionBar | Documenti Microsoft
+title: CMFCCaptionBar (classe) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -76,15 +76,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5f655d8bd6fbfd19182bbaeed21eaa95739ff33d
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 09b7f38926ad3e76de7e5e9bc36425ef77c42d4f
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37038972"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37338463"
 ---
 # <a name="cmfccaptionbar-class"></a>CMFCCaptionBar (classe)
-Oggetto `CMFCCaptionBar` oggetto è una barra di controllo che può visualizzare tre elementi: un pulsante, un'etichetta di testo e una bitmap. Può essere visualizzato un solo elemento di ogni tipo alla volta. È possibile allineare ciascun elemento ai margini sinistro o destro del controllo o al centro. È inoltre possibile applicare uno stile Flat o 3D ai bordi superiore e inferiore della barra del titolo.  
+Oggetto `CMFCCaptionBar` oggetto è una barra di controllo che è possibile visualizzare tre elementi: un pulsante, un'etichetta di testo e una bitmap. Può essere visualizzato un solo elemento di ogni tipo alla volta. È possibile allineare ciascun elemento ai margini sinistro o destro del controllo o al centro. È inoltre possibile applicare uno stile Flat o 3D ai bordi superiore e inferiore della barra del titolo.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -98,23 +98,23 @@ class CMFCCaptionBar : public CPane
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[CMFCCaptionBar::Create](#create)|Crea il controllo barra di didascalia e lo collega al `CMFCCaptionBar` oggetto.|  
+|[CMFCCaptionBar::Create](#create)|Crea il controllo barra del titolo e la collega al `CMFCCaptionBar` oggetto.|  
 |[CMFCCaptionBar::DoesAllowDynInsertBefore](#doesallowdyninsertbefore)|Indica se un altro riquadro può essere inserito in modo dinamico tra la barra del titolo e il relativo frame padre. (Esegue l'override [cbasepane:: Doesallowdyninsertbefore](../../mfc/reference/cbasepane-class.md#doesallowdyninsertbefore).)|  
-|[CMFCCaptionBar::EnableButton](#enablebutton)|Abilita o disabilita il pulsante nella barra del titolo.|  
+|[CMFCCaptionBar::EnableButton](#enablebutton)|Abilita o disabilita il pulsante della barra del titolo.|  
 |[CMFCCaptionBar::GetAlignment](#getalignment)|Restituisce l'allineamento dell'elemento specificato.|  
-|[CMFCCaptionBar::GetBorderSize](#getbordersize)|Restituisce le dimensioni del bordo della barra del titolo.|  
+|[CMFCCaptionBar::GetBorderSize](#getbordersize)|Restituisce la dimensione del bordo della barra del titolo.|  
 |[CMFCCaptionBar::GetButtonRect](#getbuttonrect)|Recupera il rettangolo di delimitazione del pulsante sulla barra del titolo.|  
-|[CMFCCaptionBar::GetMargin](#getmargin)|Restituisce la distanza tra il bordo degli elementi della barra didascalia e il bordo del controllo indicatore di didascalia.|  
-|[CMFCCaptionBar::IsMessageBarMode](#ismessagebarmode)|Specifica se la barra del titolo è in modalità barra messaggi.|  
+|[CMFCCaptionBar::GetMargin](#getmargin)|Restituisce la distanza tra il bordo degli elementi barra didascalia e il bordo del controllo indicatore di didascalia.|  
+|[CMFCCaptionBar::IsMessageBarMode](#ismessagebarmode)|Specifica se la barra del titolo è in modalità barra dei messaggi.|  
 |[CMFCCaptionBar::RemoveBitmap](#removebitmap)|Rimuove l'immagine bitmap della barra del titolo.|  
-|[CMFCCaptionBar::RemoveButton](#removebutton)|Rimuove il pulsante nella barra del titolo.|  
-|[CMFCCaptionBar::RemoveIcon](#removeicon)|Rimuove l'icona nella barra del titolo.|  
+|[CMFCCaptionBar::RemoveButton](#removebutton)|Rimuove il pulsante della barra del titolo.|  
+|[CMFCCaptionBar::RemoveIcon](#removeicon)|Rimuove l'icona della barra del titolo.|  
 |[CMFCCaptionBar::RemoveText](#removetext)|Rimuove l'etichetta di testo dalla barra del titolo.|  
-|[CMFCCaptionBar::SetBitmap](#setbitmap)|Imposta l'immagine bitmap per la barra del titolo.|  
-|[CMFCCaptionBar::SetBorderSize](#setbordersize)|Imposta le dimensioni del bordo della barra del titolo.|  
+|[CMFCCaptionBar::SetBitmap](#setbitmap)|Imposta l'immagine bitmap per della barra del titolo.|  
+|[CMFCCaptionBar::SetBorderSize](#setbordersize)|Imposta la dimensione del bordo della barra del titolo.|  
 |[CMFCCaptionBar::SetButton](#setbutton)|Imposta il pulsante per la barra del titolo.|  
 |[CMFCCaptionBar::SetButtonPressed](#setbuttonpressed)|Consente di specificare se il pulsante premuto.|  
-|[CMFCCaptionBar::SetButtonToolTip](#setbuttontooltip)|Imposta la descrizione comando per il pulsante.|  
+|[CMFCCaptionBar::SetButtonToolTip](#setbuttontooltip)|Imposta la descrizione comando del pulsante.|  
 |[CMFCCaptionBar::SetFlatBorder](#setflatborder)|Imposta lo stile del bordo della barra del titolo.|  
 |[CMFCCaptionBar::SetIcon](#seticon)|Imposta l'icona per una barra del titolo.|  
 |[CMFCCaptionBar::SetImageToolTip](#setimagetooltip)|Imposta la descrizione comando per l'immagine per la barra del titolo.|  
@@ -129,33 +129,33 @@ class CMFCCaptionBar : public CPane
 |[CMFCCaptionBar::OnDrawBorder](#ondrawborder)|Chiamato dal framework per disegnare il bordo della barra del titolo.|  
 |[CMFCCaptionBar::OnDrawButton](#ondrawbutton)|Chiamata eseguita dal framework per disegnare il pulsante della barra del titolo.|  
 |[CMFCCaptionBar::OnDrawImage](#ondrawimage)|Chiamato dal framework per disegnare l'immagine di barra del titolo.|  
-|[CMFCCaptionBar::OnDrawText](#ondrawtext)|Chiamata eseguita dal framework per disegnare il testo della barra del titolo.|  
+|[CMFCCaptionBar::OnDrawText](#ondrawtext)|Chiamata eseguita dal framework per disegnare il testo barra del titolo.|  
   
 ### <a name="data-members"></a>Membri di dati  
   
 |nome|Descrizione|  
 |----------|-----------------|  
 |[CMFCCaptionBar::m_clrBarBackground](#m_clrbarbackground)|Il colore di sfondo della barra del titolo.|  
-|[CMFCCaptionBar::m_clrBarBorder](#m_clrbarborder)|Il colore del bordo della barra del titolo.|  
-|[CMFCCaptionBar::m_clrBarText](#m_clrbartext)|Colore testo della didascalia barra.|  
+|[CMFCCaptionBar::m_clrBarBorder](#m_clrbarborder)|Colore del bordo della barra del titolo.|  
+|[CMFCCaptionBar::m_clrBarText](#m_clrbartext)|Colore del testo della barra di didascalia.|  
   
 ## <a name="remarks"></a>Note  
- Per creare una barra del titolo, seguire questi passaggi:  
+ Per creare una barra del titolo, seguire questa procedura:  
   
-1.  Costruire l'oggetto `CMFCCaptionBar`. In genere, aggiungere la barra del titolo di una classe della finestra cornice.  
+1.  Costruire l'oggetto `CMFCCaptionBar`. In genere, è necessario aggiungere la barra del titolo di una classe della finestra cornice.  
   
-2.  Chiamare il [CMFCCaptionBar::Create](#create) per creare il controllo barra di didascalia e associarlo al `CMFCCaptionBar` oggetto.  
+2.  Chiamare il [CMFCCaptionBar::Create](#create) per creare il controllo barra del titolo e associarlo al `CMFCCaptionBar` oggetto.  
   
-3.  Chiamare [CMFCCaptionBar::SetButton](#setbutton), [CMFCCaptionBar::SetText](#settext), [CMFCCaptionBar::SetIcon](#seticon), e [CMFCCaptionBar::SetBitmap](#setbitmap)per impostare gli elementi della barra la didascalia.  
+3.  Chiamare [CMFCCaptionBar::SetButton](#setbutton), [CMFCCaptionBar::SetText](#settext), [CMFCCaptionBar::SetIcon](#seticon), e [CMFCCaptionBar::SetBitmap](#setbitmap)per impostare gli elementi della barra di didascalia.  
   
- Quando si imposta l'elemento button, è necessario assegnare un ID di comando per il pulsante. Quando l'utente fa clic sul pulsante, le route barra didascalia il `WM_COMMAND` i messaggi con questo ID alla finestra cornice padre.  
+ Quando si imposta l'elemento button, è necessario assegnare un ID di comando per il pulsante. Quando l'utente fa clic sul pulsante, la barra del titolo instrada i messaggi WM_COMMAND con questo ID per la finestra cornice padre.  
   
- Barra del titolo può funziona anche in modalità barra del messaggio, che emula la barra dei messaggi che viene visualizzato nelle applicazioni di Microsoft Office 2007. Nella modalità barra dei messaggi, la barra del titolo visualizza una bitmap, un messaggio e un pulsante (che in genere consente di aprire una finestra di dialogo.) È possibile assegnare una descrizione comando per la mappa di bit.  
+ Barra del titolo può interagire anche in modalità barra dei messaggi, che emula la barra dei messaggi che viene visualizzato nelle applicazioni Microsoft Office 2007. In modalità indicatore di messaggio, la barra del titolo visualizza una bitmap, un messaggio e un pulsante (che in genere si apre una finestra di dialogo.) È possibile assegnare una descrizione comando alla bitmap.  
   
- Per abilitare la modalità barra dei messaggi, chiamare [CMFCCaptionBar::Create](#create) e impostare il quarto parametro (bIsMessageBarMode) `TRUE`.  
+ Per abilitare la modalità barra dei messaggi, chiamare [CMFCCaptionBar::Create](#create) e il quarto parametro (bIsMessageBarMode) impostato su TRUE.  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene illustrato come utilizzare i vari metodi nella `CMFCCaptionBar` classe. Nell'esempio viene illustrato come creare il controllo barra di didascalia, impostare un bordo 3D della barra del titolo, impostare la distanza, espressa in pixel, tra il bordo della didascalia della barra di elementi e il bordo del controllo indicatore di didascalia, impostare il pulsante per la barra del titolo , impostare la descrizione comando per il pulsante, impostare l'etichetta di testo per la barra del titolo, impostare l'immagine bitmap per la barra del titolo e impostare la descrizione comando per l'immagine nella barra del titolo. Questo frammento di codice fa parte il [esempio di MS Office 2007 Demo](../../visual-cpp-samples.md).  
+ Nell'esempio seguente viene illustrato come utilizzare i vari metodi nel `CMFCCaptionBar` classe. L'esempio illustra come creare il controllo barra del titolo, impostare un bordo 3D della barra del titolo, impostare la distanza, espressa in pixel, tra il bordo della didascalia della barra di elementi e il bordo del controllo indicatore di didascalia, impostare il pulsante per la barra del titolo , impostare la descrizione comando del pulsante, impostare l'etichetta di testo per la barra del titolo, impostare l'immagine bitmap per la barra del titolo e impostare la descrizione comando per l'immagine nella barra del titolo. Questo frammento di codice fa parte di [esempio di MS Office 2007 Demo](../../visual-cpp-samples.md).  
   
  [!code-cpp[NVC_MFC_MSOffice2007Demo#1](../../mfc/reference/codesnippet/cpp/cmfccaptionbar-class_1.h)]  
 [!code-cpp[NVC_MFC_MSOffice2007Demo#2](../../mfc/reference/codesnippet/cpp/cmfccaptionbar-class_2.cpp)]  
@@ -177,7 +177,7 @@ class CMFCCaptionBar : public CPane
  **Intestazione:** afxcaptionbar.h  
   
 ##  <a name="create"></a>  CMFCCaptionBar::Create  
- Crea il controllo barra di didascalia e lo collega al `CMFCCaptionBar` oggetto.  
+ Crea il controllo barra del titolo e la collega al `CMFCCaptionBar` oggetto.  
   
 ```  
 BOOL Create(
@@ -190,25 +190,25 @@ BOOL Create(
   
 ### <a name="parameters"></a>Parametri  
  *dwStyle*  
- La combinazione di OR logica degli stili barra del titolo.  
+ La combinazione OR logica degli stili di barra del titolo.  
   
  *pParentWnd*  
  La finestra padre del controllo indicatore di didascalia.  
   
- *UID*  
+ *uID*  
  L'ID del controllo indicatore di didascalia.  
   
  *nHeight*  
- L'altezza, in pixel, del controllo indicatore di didascalia. Se è -1, l'altezza viene calcolata in base all'altezza dell'icona, il testo e il pulsante che consente di visualizzare il controllo barra di didascalia.  
+ Altezza, in pixel, del controllo indicatore di didascalia. Se è 1, l'altezza viene calcolato in base all'altezza dell'icona, il testo e il pulsante che visualizza il controllo barra del titolo.  
   
  *bIsMessageBarMode*  
- `TRUE` Se la barra del titolo si trova nella modalità barra messaggio; `FALSE` in caso contrario.  
+ TRUE se la barra del titolo è in modalità di barra il messaggio. FALSE in caso contrario.  
   
 ### <a name="return-value"></a>Valore restituito  
- `TRUE` Se il controllo barra di didascalia viene creato correttamente. `FALSE` in caso contrario.  
+ TRUE se il controllo barra del titolo viene creato correttamente. FALSE in caso contrario.  
   
 ### <a name="remarks"></a>Note  
- Si costruisce un `CMFCCaptionBar` oggetto in due passaggi. Prima chiamare il costruttore, e quindi si chiama il `Create` metodo, che crea il controllo di Windows e lo collega al `CMFCCaptionBar` oggetto.  
+ Si costruisce un `CMFCCaptionBar` oggetto in due passaggi. Prima di tutto si chiama il costruttore e quindi si chiama il `Create` metodo, che crea il controllo di Windows e lo collega al `CMFCCaptionBar` oggetto.  
   
 ##  <a name="doesallowdyninsertbefore"></a>  CMFCCaptionBar::DoesAllowDynInsertBefore  
  Indica se un altro riquadro può essere inserito in modo dinamico tra la barra del titolo e il relativo frame padre.  
@@ -218,12 +218,12 @@ virtual BOOL DoesAllowDynInsertBefore() const;
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- Restituisce `FALSE` a meno che non viene sottoposto a override.  
+ A meno che non viene sottoposto a override, restituisce FALSE.  
   
 ### <a name="remarks"></a>Note  
   
 ##  <a name="enablebutton"></a>  CMFCCaptionBar::EnableButton  
- Abilita o disabilita il pulsante nella barra del titolo.  
+ Abilita o disabilita il pulsante della barra del titolo.  
   
 ```  
 void EnableButton(BOOL bEnable=TRUE);
@@ -231,7 +231,7 @@ void EnableButton(BOOL bEnable=TRUE);
   
 ### <a name="parameters"></a>Parametri  
  [in] *bAttivare il*  
- `TRUE` Per abilitare il pulsante `FALSE` per disabilitare il pulsante.  
+ True per abilitare il pulsante, FALSE per disabilitare il pulsante.  
   
 ##  <a name="getalignment"></a>  CMFCCaptionBar::GetAlignment  
  Restituisce l'allineamento dell'elemento specificato.  
@@ -259,7 +259,7 @@ BarElementAlignment GetAlignment(BarElement elem);
 -   ALIGN_CENTER  
   
 ##  <a name="getbordersize"></a>  CMFCCaptionBar::GetBorderSize  
- Restituisce le dimensioni del bordo della barra del titolo.  
+ Restituisce la dimensione del bordo della barra del titolo.  
   
 ```  
 int GetBorderSize() const;  
@@ -279,27 +279,27 @@ CRect GetButtonRect() const;
  Oggetto `CRect` oggetto che contiene le coordinate del rettangolo di delimitazione del pulsante sulla barra del titolo.  
   
 ##  <a name="getmargin"></a>  CMFCCaptionBar::GetMargin  
- Restituisce la distanza tra il bordo degli elementi della barra didascalia e il bordo del controllo indicatore di didascalia.  
+ Restituisce la distanza tra il bordo degli elementi barra didascalia e il bordo del controllo indicatore di didascalia.  
   
 ```  
 int GetMargin() const;  
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- La distanza, espressa in pixel, tra il bordo degli elementi della barra didascalia e il bordo del controllo indicatore di didascalia.  
+ Distanza, espressa in pixel, tra il bordo degli elementi barra didascalia e il bordo del controllo indicatore di didascalia.  
   
 ##  <a name="ismessagebarmode"></a>  CMFCCaptionBar::IsMessageBarMode  
- Specifica se la barra del titolo è in modalità barra messaggi.  
+ Specifica se la barra del titolo è in modalità barra dei messaggi.  
   
 ```  
 BOOL IsMessageBarMode() const;  
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- `TRUE` Se la barra del titolo si trova nella modalità barra messaggio; `FALSE` in caso contrario.  
+ TRUE se la barra del titolo è in modalità di barra il messaggio. FALSE in caso contrario.  
   
 ### <a name="remarks"></a>Note  
- Nella modalità barra messaggio, la barra del titolo visualizza un'immagine con una descrizione comando, un testo del messaggio e un pulsante.  
+ Nella modalità barra dei messaggi, la barra del titolo visualizza un'immagine con una descrizione comando, un testo del messaggio e un pulsante.  
   
 ##  <a name="m_clrbarbackground"></a>  CMFCCaptionBar::m_clrBarBackground  
  Il colore di sfondo della barra del titolo.  
@@ -309,14 +309,14 @@ COLORREF m_clrBarBackground
 ```  
   
 ##  <a name="m_clrbarborder"></a>  CMFCCaptionBar::m_clrBarBorder  
- Il colore del bordo della barra del titolo.  
+ Colore del bordo della barra del titolo.  
   
 ```  
 COLORREF m_clrBarBorder  
 ```  
   
 ##  <a name="m_clrbartext"></a>  CMFCCaptionBar::m_clrBarText  
- Colore testo della didascalia barra.  
+ Colore del testo della barra di didascalia.  
   
 ```  
 COLORREF m_clrBarText  
@@ -336,12 +336,12 @@ virtual void OnDrawBackground(
  Puntatore al contesto di dispositivo della barra del titolo.  
   
  [in] *rect*  
- Il rettangolo da riempire.  
+ Per riempire il rettangolo di delimitazione.  
   
 ### <a name="remarks"></a>Note  
  Il `OnDrawBackground` metodo viene chiamato quando sta per essere riempito lo sfondo della barra del titolo. L'implementazione predefinita riempie lo sfondo usando il [CMFCCaptionBar::m_clrBarBackground](#m_clrbarbackground) colore.  
   
- Eseguire l'override di questo metodo in un `CMFCCaptionBar` derivata per personalizzare l'aspetto della barra del titolo.  
+ L'override del metodo in un `CMFCCaptionBar` derivata per personalizzare l'aspetto della barra del titolo.  
   
 ##  <a name="ondrawborder"></a>  CMFCCaptionBar::OnDrawBorder  
  Chiamato dal framework per disegnare il bordo della barra del titolo.  
@@ -362,7 +362,7 @@ virtual void OnDrawBorder(
 ### <a name="remarks"></a>Note  
  Per impostazione predefinita, i bordi sono applicato lo stile flat.  
   
- Eseguire l'override di questo metodo in un `CMFCCaptionBar` derivata per personalizzare l'aspetto dei bordi della barra del titolo.  
+ L'override del metodo in un `CMFCCaptionBar` derivata per personalizzare l'aspetto dei bordi della barra del titolo.  
   
 ##  <a name="ondrawbutton"></a>  CMFCCaptionBar::OnDrawButton  
  Chiamata eseguita dal framework per disegnare il pulsante della barra del titolo.  
@@ -386,10 +386,10 @@ virtual void OnDrawButton(
  Etichetta di testo del pulsante.  
   
  [in] *bEnabled*  
- `TRUE` Se il pulsante è abilitato; `FALSE` in caso contrario.  
+ TRUE se il pulsante è abilitato; FALSE in caso contrario.  
   
 ### <a name="remarks"></a>Note  
- Eseguire l'override di questo metodo in un `CMFCCaptionBar` derivata per personalizzare l'aspetto del pulsante della barra del titolo.  
+ L'override del metodo in un `CMFCCaptionBar` derivata per personalizzare l'aspetto del pulsante della barra del titolo.  
   
 ##  <a name="ondrawimage"></a>  CMFCCaptionBar::OnDrawImage  
  Chiamato dal framework per disegnare l'immagine di barra del titolo.  
@@ -408,10 +408,10 @@ virtual void OnDrawImage(
  Specifica il rettangolo di delimitazione dell'immagine.  
   
 ### <a name="remarks"></a>Note  
- Eseguire l'override di questo metodo in un `CMFCCaptionBar` derivata per personalizzare l'aspetto dell'immagine.  
+ L'override del metodo in un `CMFCCaptionBar` derivata per personalizzare l'aspetto dell'immagine.  
   
 ##  <a name="ondrawtext"></a>  CMFCCaptionBar::OnDrawText  
- Chiamata eseguita dal framework per disegnare il testo della barra del titolo.  
+ Chiamata eseguita dal framework per disegnare il testo barra del titolo.  
   
 ```  
 virtual void OnDrawText(
@@ -433,7 +433,7 @@ virtual void OnDrawText(
 ### <a name="remarks"></a>Note  
  L'implementazione predefinita viene visualizzato il testo usando `CDC::DrawText` e [CMFCCaptionBar::m_clrBarText](#m_clrbartext) colore.  
   
- Eseguire l'override di questo metodo in un `CMFCCaptionBar` derivata per personalizzare l'aspetto del testo della barra del titolo.  
+ L'override del metodo in un `CMFCCaptionBar` derivata per personalizzare l'aspetto del testo della barra del titolo.  
   
 ##  <a name="removebitmap"></a>  CMFCCaptionBar::RemoveBitmap  
  Rimuove l'immagine bitmap della barra del titolo.  
@@ -443,17 +443,17 @@ void RemoveBitmap();
 ```  
   
 ##  <a name="removebutton"></a>  CMFCCaptionBar::RemoveButton  
- Rimuove il pulsante nella barra del titolo.  
+ Rimuove il pulsante della barra del titolo.  
   
 ```  
 void RemoveButton();
 ```  
   
 ### <a name="remarks"></a>Note  
- Il layout degli elementi della barra di didascalia vengono regolati automaticamente.  
+ Il layout degli elementi di didascalia a barre vengono automaticamente adeguati.  
   
 ##  <a name="removeicon"></a>  CMFCCaptionBar::RemoveIcon  
- Rimuove l'icona nella barra del titolo.  
+ Rimuove l'icona della barra del titolo.  
   
 ```  
 void RemoveIcon();
@@ -467,7 +467,7 @@ void RemoveText();
 ```  
   
 ##  <a name="setbitmap"></a>  CMFCCaptionBar::SetBitmap  
- Imposta l'immagine bitmap per la barra del titolo.  
+ Imposta l'immagine bitmap per della barra del titolo.  
   
 ```  
 void SetBitmap(
@@ -486,23 +486,23 @@ void SetBitmap(
   
 ### <a name="parameters"></a>Parametri  
  [in] *hBitmap*  
- Handle di bitmap da impostare.  
+ Handle per la mappa di bit da impostare.  
   
  [in] *clrTransparent*  
  Un valore RGB che specifica il colore trasparente dell'immagine bitmap.  
   
  [in] *bStretch*  
- Se `TRUE`, la bitmap viene estesa se non è possibile inserirlo all'immagine del rettangolo di delimitazione. In caso contrario, la bitmap non è estesa.  
+ Se TRUE, la bitmap viene adattata se non si adatta all'immagine del rettangolo di delimitazione. In caso contrario, la bitmap non è estesa.  
   
  [in] *bmpAlignment*  
- L'allineamento della bitmap.  
+ L'allineamento dell'immagine bitmap.  
   
 ### <a name="remarks"></a>Note  
  Utilizzare questo metodo per impostare una bitmap in una barra del titolo.  
   
- La bitmap precedente viene eliminata automaticamente. Se la barra del titolo viene visualizzata un'icona perché hai chiamato così il [CMFCCaptionBar::SetIcon](#seticon) metodo, la bitmap non verrà visualizzata a meno che non si rimuove l'icona chiamando [CMFCCaptionBar::RemoveIcon](#removeicon).  
+ La mappa di bit precedente viene eliminato automaticamente. Se la barra del titolo viene visualizzata un'icona perché hai chiamato così il [CMFCCaptionBar::SetIcon](#seticon) metodo, la bitmap non verrà visualizzata a meno che non si rimuove l'icona chiamando [CMFCCaptionBar::RemoveIcon](#removeicon).  
   
- La bitmap viene allineata come specificato dal *bmpAlignment* parametro.  Questo parametro può avere uno dei valori `BarElementAlignment` seguenti:  
+ La bitmap è allineata come specificato dal *bmpAlignment* parametro.  Questo parametro può avere uno dei valori `BarElementAlignment` seguenti:  
   
 -   ALIGN_INVALID  
   
@@ -513,7 +513,7 @@ void SetBitmap(
 -   ALIGN_CENTER  
   
 ##  <a name="setbordersize"></a>  CMFCCaptionBar::SetBorderSize  
- Imposta le dimensioni del bordo della barra del titolo.  
+ Imposta la dimensione del bordo della barra del titolo.  
   
 ```  
 void SetBorderSize(int nSize);
@@ -521,7 +521,7 @@ void SetBorderSize(int nSize);
   
 ### <a name="parameters"></a>Parametri  
  [in] *nSize*  
- Nuova dimensione, in pixel, del bordo barra didascalia.  
+ La nuova dimensione, in pixel, del bordo barra del titolo.  
   
 ##  <a name="setbutton"></a>  CMFCCaptionBar::SetButton  
  Imposta il pulsante per la barra del titolo.  
@@ -536,16 +536,16 @@ void SetButton(
   
 ### <a name="parameters"></a>Parametri  
  *lpszLabel*  
- Etichetta del comando del pulsante.  
+ Etichetta di comando del pulsante.  
   
  *uiCmdUI*  
- ID di comando. del pulsante  
+ ID del comando. del pulsante  
   
  *btnAlignmnet*  
  Allineamento del pulsante.  
   
  *bHasDropDownArrow*  
- `TRUE` Se il pulsante Visualizza un elenco a discesa freccia, `FALSE` in caso contrario.  
+ TRUE se il pulsante Visualizza un elenco a discesa sulla freccia, in caso contrario, FALSE.  
   
 ##  <a name="setbuttonpressed"></a>  CMFCCaptionBar::SetButtonPressed  
  Consente di specificare se il pulsante premuto.  
@@ -556,10 +556,10 @@ void SetButtonPressed(BOOL bPresed=TRUE);
   
 ### <a name="parameters"></a>Parametri  
  *bPresed*  
- `TRUE` Se il pulsante mantiene lo stato premuto e `FALSE` in caso contrario.  
+ TRUE se il pulsante mantiene lo stato di premuto, FALSE in caso contrario.  
   
 ##  <a name="setbuttontooltip"></a>  CMFCCaptionBar::SetButtonToolTip  
- Imposta la descrizione comando per il pulsante.  
+ Imposta la descrizione comando del pulsante.  
   
 ```  
 void SetButtonToolTip(
@@ -572,7 +572,7 @@ void SetButtonToolTip(
  La didascalia della descrizione comando.  
   
  [in] *lpszDescription*  
- La descrizione della descrizione.  
+ La descrizione comando.  
   
 ##  <a name="setflatborder"></a>  CMFCCaptionBar::SetFlatBorder  
  Imposta lo stile del bordo della barra del titolo.  
@@ -583,7 +583,7 @@ void SetFlatBorder(BOOL bFlat=TRUE);
   
 ### <a name="parameters"></a>Parametri  
  [in] *bFlat*  
- `TRUE` Se il bordo di una barra del titolo è flat. `FALSE` Se il bordo 3D.  
+ TRUE se il bordo di una barra del titolo è flat. FALSE se il bordo 3D.  
   
 ##  <a name="seticon"></a>  CMFCCaptionBar::SetIcon  
  Imposta l'icona per una barra del titolo.  
@@ -595,14 +595,14 @@ void SetIcon(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *icona*  
- Handle per l'icona da impostare.  
+ [in] *hIcon*  
+ L'handle dell'icona da impostare.  
   
  [in] *iconAlignment*  
  L'allineamento dell'icona.  
   
 ### <a name="remarks"></a>Note  
- Barre del titolo possono visualizzare icone o bitmap. Vedere [CMFCCaptionBar::SetBitmap](#setbitmap) per scoprire come visualizzare una bitmap. Se si imposta un'icona sia una bitmap, icona viene sempre visualizzato. Chiamare [CMFCCaptionBar::RemoveIcon](#removeicon) per rimuovere un'icona nella barra del titolo.  
+ Barre del titolo possono visualizzare icone o bitmap. Visualizzare [CMFCCaptionBar::SetBitmap](#setbitmap) per scoprire come fare visualizzare una bitmap. Se si imposta un'icona sia una bitmap, l'icona viene visualizzata sempre. Chiamare [CMFCCaptionBar::RemoveIcon](#removeicon) per rimuovere un'icona nella barra del titolo.  
   
  L'icona è allineato in base al *iconAlignment* parametro. Può essere uno dei seguenti `BarElementAlignment` valori:  
   
@@ -628,7 +628,7 @@ void SetImageToolTip(
  Il testo della descrizione comando.  
   
  [in] *lpszDescription*  
- La descrizione della descrizione.  
+ La descrizione comando.  
   
 ##  <a name="setmargin"></a>  CMFCCaptionBar::SetMargin  
  Imposta la distanza tra il bordo dell'elemento barra didascalia e il bordo del controllo indicatore di didascalia.  
@@ -639,7 +639,7 @@ void SetMargin(int nMargin);
   
 ### <a name="parameters"></a>Parametri  
  [in] *nMargin*  
- La distanza, espressa in pixel, tra il bordo degli elementi della barra didascalia e il bordo del controllo indicatore di didascalia.  
+ Distanza, espressa in pixel, tra il bordo degli elementi barra didascalia e il bordo del controllo indicatore di didascalia.  
   
 ##  <a name="settext"></a>  CMFCCaptionBar::SetText  
  Imposta l'etichetta di testo per la barra del titolo.  
@@ -652,13 +652,13 @@ void SetText(
   
 ### <a name="parameters"></a>Parametri  
  [in] *strText*  
- Stringa di testo da impostare.  
+ La stringa di testo da impostare.  
   
- [in] *textAlignment*  
+ [in] *TextAlignment =*  
  L'allineamento del testo.  
   
 ### <a name="remarks"></a>Note  
- L'etichetta di testo viene allineato come specificato dal *textAlignment* parametro. Può essere uno dei seguenti `BarElementAlignment` valori:  
+ L'etichetta di testo è allineato come specificato dal *textAlignment* parametro. Può essere uno dei seguenti `BarElementAlignment` valori:  
   
 -   ALIGN_INVALID  
   

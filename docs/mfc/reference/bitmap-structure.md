@@ -1,5 +1,5 @@
 ---
-title: Struttura BITMAP | Documenti Microsoft
+title: Struttura BITMAP | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6a60e4af31ba5da23f399f86175ed4fcf1e4ec14
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: ddc4868d7cc3c094ad2bb81b5d9706a2b749553d
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36950304"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37339347"
 ---
 # <a name="bitmap-structure"></a>Struttura BITMAP
-Il **BITMAP** struttura definisce l'altezza, larghezza, il formato di colore e i valori di bit di una bitmap logica **.**  
+Il **BITMAP** struttura definisce l'altezza, larghezza, formato di colore e i valori di bit di una bitmap logica **.**  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -51,7 +51,7 @@ typedef struct tagBITMAP {  /* bm */
  Specifica l'altezza della bitmap in righe raster. L'altezza deve essere maggiore di 0.  
   
  *bmWidthBytes*  
- Specifica il numero di byte in ogni riga raster. Questo valore deve essere un numero pari poiché l'interfaccia GDI (Graphics Device Interface) presuppone che i valori di bit di una bitmap formino una matrice di valori interi (a 2 byte). In altre parole, *bmWidthBytes* \* 8 deve essere il successivo multiplo di 16 maggiore o uguale al valore ottenuto quando il *bmWidth* membro viene moltiplicato per il *bmBitsPixel*  membro.  
+ Specifica il numero di byte in ogni riga raster. Questo valore deve essere un numero pari poiché l'interfaccia GDI (Graphics Device Interface) presuppone che i valori di bit di una bitmap formino una matrice di valori interi (a 2 byte). In altre parole, *bmWidthBytes* \* 8 deve essere il successivo multiplo di 16 maggiore o uguale a quello ottenuto quando il *bmWidth* membro viene moltiplicato il *bmBitsPixel*  membro.  
   
  *bmPlanes*  
  Specifica il numero dei piani di colore nella bitmap.  
@@ -83,9 +83,9 @@ typedef struct tagBITMAP {  /* bm */
   
  Su un dispositivo monocromatico i pixel sono bianchi o neri. Se il bit corrispondente nella bitmap è 1, il pixel è attivato (bianco). Se il bit corrispondente nella bitmap è 0, il pixel è disattivato (nero).  
   
- Tutti i dispositivi supportano le bitmap con il **RC_BITBLT** bit impostato il **RASTERCAPS** indice del [CDC:: GetDeviceCaps](../../mfc/reference/cdc-class.md#getdevicecaps) funzione membro.  
+ Tutti i dispositivi supportano le bitmap con il set di bit RC_BITBLT nell'indice RASTERCAPS del [CDC:: GetDeviceCaps](../../mfc/reference/cdc-class.md#getdevicecaps) funzione membro.  
   
- Ogni dispositivo presenta un formato di colore univoco. Per trasferire una bitmap da un dispositivo a un altro, usare il [SetDIBits](http://msdn.microsoft.com/library/windows/desktop/dd144879) e [SetDIBits](http://msdn.microsoft.com/library/windows/desktop/dd162973) funzioni di Windows.  
+ Ogni dispositivo presenta un formato di colore univoco. Per trasferire una bitmap da un dispositivo a altro, usare il [GetDIBits](http://msdn.microsoft.com/library/windows/desktop/dd144879) e [SetDIBits](http://msdn.microsoft.com/library/windows/desktop/dd162973) funzioni di Windows.  
   
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** WinGDI. h  

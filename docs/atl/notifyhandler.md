@@ -1,5 +1,5 @@
 ---
-title: NotifyHandler | Documenti Microsoft
+title: NotifyHandler | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 74fbdd99c162b4362339d8c1b45ddc281d30eeee
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 72c6c992f2ec92bc11d6dd009649d503d3c0bd02
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32356453"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37848337"
 ---
 # <a name="notifyhandler"></a>NotifyHandler
-Il nome della funzione identificata dal terzo parametro del `NOTIFY_HANDLER` macro della mappa del messaggio.  
+Il nome della funzione identificato dal terzo parametro della macro NOTIFY_HANDLER nella mappa messaggi.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -39,20 +39,20 @@ Il nome della funzione identificata dal terzo parametro del `NOTIFY_HANDLER` mac
 ```  
   
 #### <a name="parameters"></a>Parametri  
- `idCtrl`  
+ *idCtrl*  
  L'identificatore del controllo che invia il messaggio.  
   
  *pnmh*  
- Indirizzo di un [NMHDR](http://msdn.microsoft.com/library/windows/desktop/bb775514) struttura che contiene il codice di notifica e informazioni aggiuntive. Per alcuni messaggi di notifica, questo parametro punta a una struttura più ampia che dispone di **NMHDR** struttura come il primo membro.  
+ Indirizzo di un [NMHDR](http://msdn.microsoft.com/library/windows/desktop/bb775514) struttura che contiene il codice di notifica e informazioni aggiuntive. Per alcuni messaggi di notifica, questo parametro punta a una struttura più grande che presenta il `NMHDR` struttura come il primo membro.  
   
- `bHandled`  
- I set di mapping dei messaggi `bHandled` a **TRUE** prima *NotifyHandler* viene chiamato. Se *NotifyHandler* non gestire completamente il messaggio, è necessario impostare `bHandled` a **FALSE** per indicare che il messaggio richiede un'ulteriore elaborazione.  
+ *bHandled*  
+ Il set di mapping dei messaggi *bHandled* su TRUE prima *NotifyHandler* viene chiamato. Se *NotifyHandler* non gestisce completamente il messaggio deve essere impostato *bHandled* al **FALSE** per indicare che il messaggio richiede un'ulteriore elaborazione.  
   
 ## <a name="return-value"></a>Valore restituito  
  Il risultato dell'elaborazione del messaggio. 0 se ha esito positivo.  
   
 ## <a name="remarks"></a>Note  
- Per un esempio dell'utilizzo di questo gestore di messaggi in una mappa messaggi, vedere [NOTIFY_HANDLER](reference/message-map-macros-atl.md#notify_handler)).  
+ Per un esempio dell'uso di questo gestore di messaggi in una mappa dei messaggi, vedere [NOTIFY_HANDLER](reference/message-map-macros-atl.md#notify_handler)).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Implementazione di una finestra](../atl/implementing-a-window.md)   

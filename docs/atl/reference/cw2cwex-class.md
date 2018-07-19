@@ -1,5 +1,5 @@
 ---
-title: Classe CW2CWEX | Documenti Microsoft
+title: Classe CW2CWEX | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,18 +19,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 671311b0788438d7b92dad9d9137e28cbb88df60
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f97ddd87194d9cf7cce0b5fcd898b6a9f391d908
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32363282"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37879381"
 ---
 # <a name="cw2cwex-class"></a>Classe CW2CWEX
-Questa classe viene utilizzata per le macro di conversione di stringhe `CW2CTEX` e `CT2CWEX`e typedef `CW2W`.  
+Questa classe viene utilizzata la macro di conversione di stringhe CW2CTEX e CT2CWEX e typedef CW2W.  
   
 > [!IMPORTANT]
->  Questa classe e i relativi membri non possono essere utilizzati nelle applicazioni eseguite in Windows Runtime.  
+>  Questa classe e i relativi membri non possono essere utilizzati nelle applicazioni eseguite nel Runtime di Windows.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -40,8 +40,8 @@ class CW2CWEX
 ```  
   
 #### <a name="parameters"></a>Parametri  
- `t_nBufferLength`  
- Le dimensioni del buffer utilizzato nel processo di conversione. La lunghezza predefinita è di 128 byte.  
+ *t_nBufferLength*  
+ Le dimensioni del buffer utilizzato nel processo di traduzione. La lunghezza predefinita è di 128 byte.  
   
 ## <a name="members"></a>Membri  
   
@@ -62,27 +62,27 @@ class CW2CWEX
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[CW2CWEX::m_psz](#m_psz)|Il membro dati che archivia la stringa di origine.|  
+|[CW2CWEX::m_psz](#m_psz)|Membro dati che archivia la stringa di origine.|  
   
 ## <a name="remarks"></a>Note  
- A meno che non è necessaria la funzionalità aggiuntiva, utilizzare `CW2CTEX`, `CT2CWEX`, o `CW2W` nel codice.  
+ A meno che non è necessaria la funzionalità aggiuntiva, usare CW2CTEX, CT2CWEX o CW2W nel codice.  
   
- Questa classe è possibile utilizzare nei cicli e non sarà un overflow dello stack. Per impostazione predefinita, le classi di conversione ATL e le macro utilizzano la tabella codici ANSI del thread corrente per la conversione.  
+ Questa classe sia sicura per l'uso nei cicli e non eseguiranno l'overflow dello stack. Per impostazione predefinita, le classi di conversione ATL e le macro usano la tabella codici ANSI del thread corrente per la conversione.  
   
- Le macro seguenti sono basate su questa classe:  
+ Le macro seguenti si basano su questa classe:  
   
-- `CW2CTEX`  
+- CW2CTEX  
   
-- `CT2CWEX`  
+- CT2CWEX  
   
- La seguente dichiarazione typedef è basato su questa classe:  
+ Il typedef seguente si basa su questa classe:  
   
-- `CW2W`  
+- CW2W  
   
- Per una discussione su queste macro di conversione di testo, vedere [macro di conversione di stringhe MFC e ATL](string-conversion-macros.md).  
+ Per una descrizione di queste macro di conversione di testo, vedere [macro di conversione di stringhe MFC e ATL](string-conversion-macros.md).  
   
 ## <a name="example"></a>Esempio  
- Vedere [macro di conversione di stringhe MFC e ATL](string-conversion-macros.md) per un esempio dell'utilizzo di queste macro di conversione di stringhe.  
+ Visualizzare [macro di conversione di stringhe MFC e ATL](string-conversion-macros.md) per un esempio dell'uso di queste macro di conversione di stringhe.  
   
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** atlconv. h  
@@ -96,10 +96,10 @@ CW2CWEX(LPCWSTR psz) throw(...);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `psz`  
+ *psz*  
  La stringa di testo da convertire.  
   
- `nCodePage`  
+ *nCodePage*  
  La tabella codici. Non utilizzato in questa classe.  
   
 ### <a name="remarks"></a>Note  
@@ -116,7 +116,7 @@ CW2CWEX(LPCWSTR psz) throw(...);
  Consente di liberare il buffer allocato.  
   
 ##  <a name="m_psz"></a>  CW2CWEX::m_psz  
- Il membro dati che archivia la stringa di origine.  
+ Membro dati che archivia la stringa di origine.  
   
 ```
 LPCWSTR m_psz;
@@ -130,7 +130,7 @@ operator LPCWSTR() const throw();
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- Restituisce la stringa di testo come tipo **LPCWSTR.**  
+ Restituisce la stringa di testo come tipo LPCWSTR.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Classe CA2AEX](../../atl/reference/ca2aex-class.md)   
@@ -138,4 +138,4 @@ operator LPCWSTR() const throw();
  [Classe CA2WEX](../../atl/reference/ca2wex-class.md)   
  [Classe CW2AEX](../../atl/reference/cw2aex-class.md)   
  [Classe CW2WEX](../../atl/reference/cw2wex-class.md)   
- [Cenni preliminari sulla classe](../../atl/atl-class-overview.md)
+ [Panoramica della classe](../../atl/atl-class-overview.md)

@@ -1,5 +1,5 @@
 ---
-title: CClientDC (classe) | Documenti Microsoft
+title: Classe CClientDC | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b4f013589b509781d217e521b680f1d529189a0a
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: add135c353366ed54a24c63fcce2101c49d24fe7
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36954266"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37338581"
 ---
 # <a name="cclientdc-class"></a>CClientDC (classe)
 Si occupa di chiamare le funzioni di Windows [GetDC](http://msdn.microsoft.com/library/windows/desktop/dd144871) in fase di costruzione e [ReleaseDC](http://msdn.microsoft.com/library/windows/desktop/dd162920) in fase di eliminazione.  
@@ -42,13 +42,13 @@ class CClientDC : public CDC
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[CClientDC::CClientDC](#cclientdc)|Costruisce un `CClientDC` oggetto connesso al `CWnd`.|  
+|[CClientDC::CClientDC](#cclientdc)|Costruisce un `CClientDC` oggetto connesso il `CWnd`.|  
   
 ### <a name="protected-data-members"></a>Membri dati protetti  
   
 |nome|Descrizione|  
 |----------|-----------------|  
-|[CClientDC::m_hWnd](#m_hwnd)|Il `HWND` della finestra per la quale il `CClientDC` è valido.|  
+|[CClientDC::m_hWnd](#m_hwnd)|L'oggetto HWND della finestra per il quale il `CClientDC` è valido.|  
   
 ## <a name="remarks"></a>Note  
  Ciò significa che il contesto di dispositivo associato un `CClientDC` oggetto rappresenta l'area client di una finestra.  
@@ -66,7 +66,7 @@ class CClientDC : public CDC
  **Intestazione:** afxwin.h  
   
 ##  <a name="cclientdc"></a>  CClientDC::CClientDC  
- Costruisce un `CClientDC` oggetto a cui accede l'area client del [CWnd](../../mfc/reference/cwnd-class.md) a cui punta *pWnd*.  
+ Costruisce un `CClientDC` oggetti cui accede l'area client del [CWnd](../../mfc/reference/cwnd-class.md) a cui punta *pWnd*.  
   
 ```  
 explicit CClientDC(CWnd* pWnd);
@@ -74,12 +74,12 @@ explicit CClientDC(CWnd* pWnd);
   
 ### <a name="parameters"></a>Parametri  
  *pWnd*  
- Finestra cui area client accederà l'oggetto di contesto di dispositivo.  
+ Finestra di cui l'area client accederà l'oggetto di contesto di dispositivo.  
   
 ### <a name="remarks"></a>Note  
  Il costruttore chiama la funzione di Windows [GetDC](http://msdn.microsoft.com/library/windows/desktop/dd144871).  
   
- Un'eccezione (di tipo `CResourceException`) viene generato se le finestre `GetDC` chiamata ha esito negativo. Un contesto di dispositivo potrebbe non essere disponibile se Windows è già allocato tutti i relativi contesti di periferica disponibile. L'applicazione in competizione per le cinque comuni contesti di visualizzazione disponibili in qualsiasi momento in Windows.  
+ Un'eccezione (di tipo `CResourceException`) viene generata se la Windows `GetDC` chiamata ha esito negativo. Un contesto di dispositivo potrebbe non essere disponibile se Windows è già allocato tutti i relativi contesti di dispositivo disponibili. L'applicazione è in competizione per le cinque comuni contesti di visualizzazione disponibili in qualsiasi momento in Windows.  
   
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFCDocView#42](../../mfc/codesnippet/cpp/cclientdc-class_1.cpp)]  

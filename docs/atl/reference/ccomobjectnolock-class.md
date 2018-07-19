@@ -1,5 +1,5 @@
 ---
-title: Classe CComObjectNoLock | Documenti Microsoft
+title: Classe CComObjectNoLock | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,15 +21,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cd7f9fa0ac67592c5fca805eaa4bb4ec4b0ca153
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
-ms.translationtype: HT
+ms.openlocfilehash: 27dd0ad9bb64c8e708b228ec13a9fbf0e33fa589
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32361479"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37884116"
 ---
 # <a name="ccomobjectnolock-class"></a>Classe CComObjectNoLock
-Questa classe implementa **IUnknown** per un oggetto non aggregato, ma vengono non incremento il modulo conteggio dei blocchi nel costruttore.  
+Questa classe implementa `IUnknown` per un oggetto non aggregato, ma non non incremento il modulo conteggio dei blocchi nel costruttore.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -39,8 +39,8 @@ class CComObjectNoLock : public Base
 ```  
   
 #### <a name="parameters"></a>Parametri  
- `Base`  
- La classe, derivata da [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) o [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md), come anche a causa di una qualsiasi altra interfaccia che si desidera supportare nell'oggetto.  
+ *base*  
+ La classe, derivata da [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) oppure [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md), come anche da qualsiasi altra interfaccia si desidera supportare nell'oggetto.  
   
 ## <a name="members"></a>Membri  
   
@@ -60,9 +60,9 @@ class CComObjectNoLock : public Base
 |[CComObjectNoLock::Release](#release)|Decrementa il conteggio dei riferimenti nell'oggetto.|  
   
 ## <a name="remarks"></a>Note  
- `CComObjectNoLock` è simile a [CComObject](../../atl/reference/ccomobject-class.md) in quanto implementa [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) per un oggetto non aggregato; tuttavia, `CComObjectNoLock` non incremento il blocco di modulo si tiene conto nel costruttore.  
+ `CComObjectNoLock` è simile a [CComObject](../../atl/reference/ccomobject-class.md) in quanto implementa [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) per un oggetto non aggregato; tuttavia, `CComObjectNoLock` tiene conto non incremento del blocco di modulo nel costruttore.  
   
- Utilizza ATL `CComObjectNoLock` internamente per class factory. In generale, non utilizzare questa classe direttamente.  
+ Usa ATL `CComObjectNoLock` internamente per class factory. In generale, non utilizzare questa classe direttamente.  
   
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  `Base`  
@@ -83,7 +83,7 @@ STDMETHOD_(ULONG, AddRef)();
  Un valore che può essere utile per la diagnostica o di testing.  
   
 ##  <a name="ccomobjectnolock"></a>  CComObjectNoLock::CComObjectNoLock  
- Costruttore. A differenza di [CComObject](../../atl/reference/ccomobject-class.md), non incrementa il conteggio dei blocchi del modulo.  
+ Costruttore. A differenza [CComObject](../../atl/reference/ccomobject-class.md), non incrementa il conteggio dei blocchi del modulo.  
   
 ```
 CComObjectNoLock(void* = NULL);
@@ -91,7 +91,7 @@ CComObjectNoLock(void* = NULL);
   
 ### <a name="parameters"></a>Parametri  
  **void\***  
- [in] Questo parametro senza nome non viene usato. Stato attuale per simmetria con altri **CCom * * * XXX*`Object`*XXX* costruttori.  
+ [in] Questo parametro senza nome non viene utilizzato. Stato attuale per simmetria con altri **CCom * * * XXX*`Object`*XXX* costruttori.  
   
 ##  <a name="dtor"></a>  CComObjectNoLock::~CComObjectNoLock  
  Distruttore.  
@@ -112,14 +112,14 @@ STDMETHOD(QueryInterface)(REFIID iid, void** ppvObject);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `iid`  
- [in] Identificatore dell'interfaccia richiesta.  
+ *IID*  
+ [in] L'identificatore dell'interfaccia richiesto.  
   
- `ppvObject`  
- [out] Un puntatore al puntatore a interfaccia identificato dal `iid`. Se l'oggetto non supporta questa interfaccia, `ppvObject` è impostato su **NULL**.  
+ *ppvObject*  
+ [out] Un puntatore al puntatore a interfaccia identificato dal *iid*. Se l'oggetto non supporta questa interfaccia, *ppvObject* è impostato su NULL.  
   
 ### <a name="return-value"></a>Valore restituito  
- Un valore `HRESULT` standard.  
+ Un valore HRESULT standard.  
   
 ##  <a name="release"></a>  CComObjectNoLock::Release  
  Decrementa il conteggio dei riferimenti nell'oggetto.  
@@ -129,7 +129,7 @@ STDMETHOD_(ULONG, Release)();
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- Nelle build di debug **versione** restituisce un valore che può essere utile per la diagnostica o di testing. Nelle build di debug non **versione** restituisce sempre 0.  
+ Nelle build di debug `Release` restituisce un valore che può essere utile per la diagnostica o di testing. Nelle compilazioni non di debug, `Release` restituisce sempre 0.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Cenni preliminari sulla classe](../../atl/atl-class-overview.md)
+ [Panoramica della classe](../../atl/atl-class-overview.md)

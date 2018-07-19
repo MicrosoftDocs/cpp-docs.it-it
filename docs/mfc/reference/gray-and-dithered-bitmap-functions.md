@@ -1,5 +1,5 @@
 ---
-title: Funzioni Bitmap grigie e con dithering | Documenti Microsoft
+title: Funzioni di Bitmap grige e retinate | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: de887cdbe80642925bc935eb48726a59850f6f96
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 46a1607b0d69be21e38cace117ec2c0e248827be
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33375174"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37339397"
 ---
 # <a name="gray-and-dithered-bitmap-functions"></a>funzioni di bitmap grige e retinate
 **Funzioni della bitmap grigia**  
@@ -62,7 +62,7 @@ void AFXAPI AfxDrawGrayBitmap(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `pDC`  
+ *pDC*  
  Punta al controller di dominio di destinazione.  
   
  *x*  
@@ -71,10 +71,10 @@ void AFXAPI AfxDrawGrayBitmap(
  *y*  
  Coordinata Y di destinazione.  
   
- `rSrc`  
+ *rSrc*  
  Bitmap di origine.  
   
- `crBackground`  
+ *crBackground*  
  Nuovo colore di sfondo (in genere grigio, ad esempio COLOR_MENU).  
   
 ### <a name="remarks"></a>Note  
@@ -99,13 +99,13 @@ void AFXAPI AfxGetGrayBitmap(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `rSrc`  
+ *rSrc*  
  Bitmap di origine.  
   
- `pDest`  
+ *pDest*  
  Bitmap di destinazione.  
   
- `crBackground`  
+ *crBackground*  
  Nuovo colore di sfondo (in genere grigio, ad esempio COLOR_MENU).  
   
 ### <a name="remarks"></a>Note  
@@ -133,7 +133,7 @@ void AFXAPI AfxDrawDitheredBitmap(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `pDC`  
+ *pDC*  
  Punta al controller di dominio di destinazione.  
   
  *x*  
@@ -142,17 +142,17 @@ void AFXAPI AfxDrawDitheredBitmap(
  *y*  
  Coordinata Y di destinazione.  
   
- `rSrc`  
+ *rSrc*  
  Bitmap di origine.  
   
- `cr1`  
- Uno dei due dithering colori, in genere bianco.  
+ *oggetti cr1*  
+ Uno dei colori due retinatura, in genere bianco.  
   
- `cr2`  
- Altri dithering colore, grigio chiaro in genere (COLOR_MENU).  
+ *CR2*  
+ Altri retinatura colore, colore grigio chiaro in genere (COLOR_MENU).  
   
 ### <a name="remarks"></a>Note  
- La bitmap di origine viene disegnata nella destinazione con un colore di due controller di dominio ( `cr1` e `cr2`) modello Scacchi sostituzione dello sfondo della bitmap. Lo sfondo della bitmap di origine è definito come il bianco e tutti i pixel corrispondenza tra il colore del pixel nell'angolo superiore sinistro della bitmap.  
+ La bitmap di origine viene disegnata nella destinazione con un colore di due controller di dominio (*gli oggetti cr1* e *cr2*) motivo a scacchi sostituzione dello sfondo della mappa di bit. Lo sfondo della bitmap di origine è definito come dei pixel bianchi e tutti i pixel corrispondenza tra il colore del pixel nell'angolo superiore sinistro della bitmap.  
   
  ![Confronto delle versioni di icone con dithering e originali](../../mfc/reference/media/vcditheredbitmap.gif "vcditheredbitmap")  
   
@@ -175,20 +175,20 @@ void AFXAPI AfxGetDitheredBitmap(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `rSrc`  
+ *rSrc*  
  Bitmap di origine.  
   
- `pDest`  
+ *pDest*  
  Bitmap di destinazione.  
   
- `cr1`  
- Uno dei due dithering colori, in genere bianco.  
+ *oggetti cr1*  
+ Uno dei colori due retinatura, in genere bianco.  
   
- `cr2`  
- Altri dithering colore, grigio chiaro in genere (COLOR_MENU).  
+ *CR2*  
+ Altri retinatura colore, colore grigio chiaro in genere (COLOR_MENU).  
   
 ### <a name="remarks"></a>Note  
- La bitmap di origine viene copiata nella bitmap di destinazione con due colori ( `cr1` e `cr2`) modello Scacchi sostituzione dello sfondo della bitmap di origine. Lo sfondo della bitmap di origine è definito come il bianco e tutti i pixel corrispondenza tra il colore del pixel nell'angolo superiore sinistro della bitmap.  
+ La bitmap di origine viene copiata nella bitmap di destinazione con un colore di due (*gli oggetti cr1* e *cr2*) motivo a scacchi sostituendo in background del bitmap di origine. Lo sfondo della bitmap di origine è definito come dei pixel bianchi e tutti i pixel corrispondenza tra il colore del pixel nell'angolo superiore sinistro della bitmap.  
   
  ![Confronto delle versioni di icone con dithering e originali](../../mfc/reference/media/vcditheredbitmap.gif "vcditheredbitmap")  
   

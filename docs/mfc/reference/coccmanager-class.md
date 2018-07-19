@@ -1,5 +1,5 @@
 ---
-title: Classe COccManager | Documenti Microsoft
+title: Classe COccManager | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b19b52135678ebd798f61143b5bad953b8629a5
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: cabf1cde43f11997de27b2b2f148482d4f024455
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37038149"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37852367"
 ---
 # <a name="coccmanager-class"></a>Classe COccManager
 Gestisce vari siti di controllo personalizzato, implementati dagli oggetti `COleControlContainer` e `COleControlSite` .  
@@ -68,15 +68,15 @@ class COccManager : public CNoTrackObject
 |[COccManager::GetDefBtnCode](#getdefbtncode)|Recupera il codice del pulsante predefinito.|  
 |[COccManager::IsDialogMessage](#isdialogmessage)|Determina la destinazione di un messaggio di dialogo.|  
 |[COccManager::IsLabelControl](#islabelcontrol)|Determina se il controllo specificato è un controllo etichetta.|  
-|[COccManager::IsMatchingMnemonic](#ismatchingmnemonic)|Determina se il tasto di scelta corrente corrisponde il tasto di scelta rapida del controllo specificato.|  
+|[COccManager::IsMatchingMnemonic](#ismatchingmnemonic)|Determina se il carattere mnemonico corrente corrisponde al carattere mnemonico del controllo specificato.|  
 |[COccManager::OnEvent](#onevent)|È stato effettuato un tentativo di gestire l'evento specificato.|  
 |[COccManager::PostCreateDialog](#postcreatedialog)|Libera le risorse allocate durante la creazione della finestra di dialogo.|  
 |[COccManager::PreCreateDialog](#precreatedialog)|Elabora un modello di finestra di dialogo per i controlli ActiveX.|  
 |[COccManager::SetDefaultButton](#setdefaultbutton)|Alterna lo stato predefinito del controllo specificato.|  
-|[COccManager::SplitDialogTemplate](#splitdialogtemplate)|Separa i controlli ActiveX esistenti da controlli comuni nel modello di finestra di dialogo specificata.|  
+|[COccManager::SplitDialogTemplate](#splitdialogtemplate)|Separa tutti i controlli ActiveX esistenti da controlli comuni nel modello di finestra di dialogo specificata.|  
   
 ## <a name="remarks"></a>Note  
- La classe base, `CNoTrackObject`, è una classe di base non documentata Og (nella AFXTLS. H). Progettato per l'uso nel framework MFC, le classi derivate dal `CNoTrackObject` classe esentati dal rilevamento di perdite di memoria. Non è consigliabile derivare direttamente da `CNoTrackObject`.  
+ La classe di base `CNoTrackObject`, è una classe di base non documentata (che si trova in AFXTLS. H). Progettato per l'uso nel framework MFC, le classi derivate dal `CNoTrackObject` classe non sono interessati dal rilevamento di perdite di memoria. Non è consigliabile derivare direttamente da `CNoTrackObject`.  
   
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  `CNoTrackObject`  
@@ -95,13 +95,13 @@ virtual COleControlContainer* CreateContainer(CWnd* pWnd);
   
 ### <a name="parameters"></a>Parametri  
  *pWnd*  
- Un puntatore all'oggetto finestra associato al contenitore sito personalizzato.  
+ Un puntatore all'oggetto finestra associato al contenitore del sito personalizzata.  
   
 ### <a name="return-value"></a>Valore restituito  
- Un puntatore al contenitore di appena creato; in caso contrario **NULL**.  
+ Un puntatore per il contenitore appena creato. in caso contrario NULL.  
   
 ### <a name="remarks"></a>Note  
- Per ulteriori informazioni sulla creazione di siti personalizzati, vedere [COleControlContainer::AttachControlSite](../../mfc/reference/colecontrolcontainer-class.md#attachcontrolsite).  
+ Per altre informazioni sulla creazione di siti personalizzati, vedere [COleControlContainer::AttachControlSite](../../mfc/reference/colecontrolcontainer-class.md#attachcontrolsite).  
   
 ##  <a name="createdlgcontrols"></a>  COccManager::CreateDlgControls  
  Chiamare questa funzione per creare controlli ActiveX specificati per il *pOccDialogInfo* parametro.  
@@ -121,22 +121,22 @@ virtual BOOL CreateDlgControls(
   
 ### <a name="parameters"></a>Parametri  
  *pWndParent*  
- Un puntatore dell'elemento padre dell'oggetto finestra di dialogo.  
+ Un puntatore all'elemento padre dell'oggetto finestra di dialogo.  
   
  *lpszResourceName*  
- Il nome della risorsa creata.  
+ Il nome della risorsa da creare.  
   
  *pOccDialogInfo*  
- Un puntatore al modello di finestra di dialogo considerato di creare l'oggetto finestra di dialogo.  
+ Un puntatore al modello della finestra di dialogo considerato di creare l'oggetto finestra di dialogo.  
   
  *lpResource*  
  Un puntatore a una risorsa.  
   
 ### <a name="return-value"></a>Valore restituito  
- Diverso da zero se il controllo è stato creato correttamente. zero in caso contrario.  
+ Diverso da zero se il controllo è stato creato correttamente. in caso contrario, zero.  
   
 ##  <a name="createsite"></a>  COccManager::CreateSite  
- Chiamato dal framework per creare un sito di controllo, ospitato dal contenitore a cui puntato *pCtrlCont*.  
+ Chiamato dal framework per creare un sito del controllo ospitato dal contenitore a cui punta *pCtrlCont*.  
   
 ```  
 virtual COleControlSite* CreateSite(COleControlContainer* pCtrlCont);
@@ -144,15 +144,15 @@ virtual COleControlSite* CreateSite(COleControlContainer* pCtrlCont);
   
 ### <a name="parameters"></a>Parametri  
  *pCtrlCont*  
- Un puntatore al contenitore del controllo che ospita il nuovo sito di controllo.  
+ Puntatore al contenitore del controllo che ospita il nuovo sito di controllo.  
   
 ### <a name="return-value"></a>Valore restituito  
- Un puntatore al sito del controllo appena creato.  
+ Puntatore al sito del controllo appena creato.  
   
 ### <a name="remarks"></a>Note  
- Eseguire l'override di questa funzione per creare un controllo personalizzato di un sito, utilizzando il [COleControlSite](../../mfc/reference/colecontrolsite-class.md)-classe derivata.  
+ Eseguire l'override di questa funzione per creare un controllo personalizzato di un sito, usando il [COleControlSite](../../mfc/reference/colecontrolsite-class.md)-classe derivata.  
   
- Ogni contenitore di controllo può ospitare più siti. Creare altri siti con più chiamate a `CreateSite`.  
+ Ogni contenitore del controllo può ospitare più siti. Creare altri siti con più chiamate a `CreateSite`.  
   
 ##  <a name="getdefbtncode"></a>  COccManager::GetDefBtnCode  
  Chiamare questa funzione per determinare se il controllo è un pulsante di comando predefinito.  
@@ -168,14 +168,14 @@ static DWORD AFX_CDECL GetDefBtnCode(CWnd* pWnd);
 ### <a name="return-value"></a>Valore restituito  
  Uno dei valori seguenti:  
   
-- **DLGC_DEFPUSHBUTTON** controllo è il pulsante predefinito nella finestra di dialogo.  
+- Controllo DLGC_DEFPUSHBUTTON è il pulsante predefinito nella finestra di dialogo.  
   
-- **DLGC_UNDEFPUSHBUTTON** controllo non è il pulsante predefinito nella finestra di dialogo.  
+- Controllo DLGC_UNDEFPUSHBUTTON non è il pulsante predefinito nella finestra di dialogo.  
   
 - **0** controllo non è un pulsante.  
   
 ##  <a name="isdialogmessage"></a>  COccManager::IsDialogMessage  
- Chiamato dal framework per determinare se un messaggio è solo per la finestra di dialogo specificata e, in caso affermativo, elabora il messaggio.  
+ Chiamato dal framework per determinare se un messaggio è destinato la finestra di dialogo specificata e, in caso affermativo elabora il messaggio.  
   
 ```  
 virtual BOOL IsDialogMessage(
@@ -185,18 +185,18 @@ virtual BOOL IsDialogMessage(
   
 ### <a name="parameters"></a>Parametri  
  *pWndDlg*  
- Puntatore alla finestra di destinazione del messaggio.  
+ Puntatore alla finestra di dialogo destinazione prevista del messaggio.  
   
  *lpMsg*  
- Un puntatore a un `MSG` struttura che contiene il messaggio da verificare.  
+ Un puntatore a un `MSG` struttura che contiene il messaggio da controllare.  
   
 ### <a name="return-value"></a>Valore restituito  
- Diverso da zero se l'elaborazione del messaggio; zero in caso contrario.  
+ Diverso da zero se il messaggio viene elaborato; in caso contrario, zero.  
   
 ### <a name="remarks"></a>Note  
- Il comportamento predefinito di `IsDialogMessage` consiste nel verificare la presenza di messaggi della tastiera e convertirli in selezioni per la finestra di dialogo corrispondente. Ad esempio, il tasto TAB, quando premuti, seleziona il controllo o il gruppo di controlli successivi.  
+ Il comportamento predefinito di `IsDialogMessage` consiste nel verificare la presenza di messaggi della tastiera e convertirli nelle selezioni per la finestra di dialogo corrispondente. Ad esempio, il tasto TAB, una volta premuto, seleziona il successivo controllo o gruppo di controlli.  
   
- Eseguire l'override di questa funzione per ottenere un comportamento personalizzato per i messaggi inviati alla finestra di dialogo specificata.  
+ Eseguire l'override di questa funzione per fornire un comportamento personalizzato per i messaggi inviati alla finestra di dialogo specificata.  
   
 ##  <a name="islabelcontrol"></a>  COccManager::IsLabelControl  
  Chiamare questa funzione per determinare se il controllo specificato è un controllo etichetta.  
@@ -208,16 +208,16 @@ static BOOL AFX_CDECL IsLabelControl(COleControlSiteOrWnd* pWnd);
   
 ### <a name="parameters"></a>Parametri  
  *pWnd*  
- Un puntatore alla finestra che contiene il controllo.  
+ Puntatore alla finestra che contiene il controllo.  
   
 ### <a name="return-value"></a>Valore restituito  
- Diverso da zero se il controllo è un'etichetta; zero in caso contrario  
+ Diverso da zero se il controllo è un'etichetta; in caso contrario, zero  
   
 ### <a name="remarks"></a>Note  
- Un controllo etichetta è uno che funziona come un'etichetta per il controllo è successivo nell'ordinamento.  
+ Un controllo label è uno che agisce come un'etichetta per il controllo è successivo nell'ordinamento.  
   
 ##  <a name="ismatchingmnemonic"></a>  COccManager::IsMatchingMnemonic  
- Chiamare questa funzione per determinare se il tasto di scelta corrente corrisponde a quello rappresentato dal controllo.  
+ Chiamare questa funzione per determinare se il carattere mnemonico corrente corrisponde a quello rappresentato dal controllo.  
   
 ```  
 static BOOL AFX_CDECL IsMatchingMnemonic(
@@ -232,13 +232,13 @@ static BOOL AFX_CDECL IsMatchingMnemonic(
   
 ### <a name="parameters"></a>Parametri  
  *pWnd*  
- Un puntatore alla finestra che contiene il controllo.  
+ Puntatore alla finestra che contiene il controllo.  
   
  *lpMsg*  
- Puntatore al messaggio che contiene il tasto di scelta rapida in modo che corrispondano.  
+ Puntatore al messaggio che contiene il carattere mnemonico in modo che corrispondano.  
   
 ### <a name="return-value"></a>Valore restituito  
- Diverso da zero se il tasto di scelta corrisponde al controllo; zero in caso contrario  
+ Diverso da zero se il carattere mnemonico corrisponde al controllo. in caso contrario, zero  
   
 ### <a name="remarks"></a>Note  
   
@@ -255,22 +255,22 @@ virtual BOOL OnEvent(
   
 ### <a name="parameters"></a>Parametri  
  *pCmdTarget*  
- Un puntatore al `CCmdTarget` oggetto tentare di gestire l'evento  
+ Un puntatore al `CCmdTarget` tentare di gestire l'evento oggetto  
   
  *idCtrl*  
- L'ID di risorsa del controllo.  
+ L'ID risorsa del controllo.  
   
  *pEvent*  
- L'evento da gestire.  
+ L'evento gestito.  
   
  *pHandlerInfo*  
- In caso contrario **NULL**, `OnEvent` compila il **pTarget** e **pmf** i membri del **AFX_CMDHANDLERINFO** struttura invece di inviando il comando. In genere, questo parametro deve essere **NULL**.  
+ Se non è NULL, `OnEvent` viene compilato il `pTarget` e `pmf` membri del `AFX_CMDHANDLERINFO` struttura invece di inviare il comando. In genere, questo parametro deve essere NULL.  
   
 ### <a name="return-value"></a>Valore restituito  
- Diverso da zero se l'evento è stato gestito, zero in caso contrario.  
+ Diverso da zero se l'evento è stato gestito; in caso contrario, zero.  
   
 ### <a name="remarks"></a>Note  
- Eseguire l'override di questa funzione per personalizzare il processo di gestione degli eventi predefiniti.  
+ Eseguire l'override di questa funzione per personalizzare il processo di gestione degli eventi predefinito.  
   
 ##  <a name="precreatedialog"></a>  COccManager::PreCreateDialog  
  Chiamato dal framework per elaborare un modello di finestra di dialogo per i controlli ActiveX prima di creare la finestra di dialogo effettivo.  
@@ -283,18 +283,18 @@ virtual const DLGTEMPLATE* PreCreateDialog(
   
 ### <a name="parameters"></a>Parametri  
  *pOccDialogInfo*  
- Un' **_AFX_OCC_DIALOG_INFO** struttura contenente informazioni su tutti i controlli ActiveX ospitati dalla finestra di dialogo e il modello di finestra di dialogo.  
+ Un `_AFX_OCC_DIALOG_INFO` struttura che contiene informazioni su tutti i controlli ActiveX ospitati dalla finestra di dialogo e il modello di finestra di dialogo.  
   
  *pOrigTemplate*  
- Un puntatore al modello di finestra di dialogo per essere utilizzata per creare la finestra di dialogo.  
+ Un puntatore al modello della finestra di dialogo da utilizzare nella finestra di dialogo di creazione.  
   
 ### <a name="return-value"></a>Valore restituito  
  Un puntatore a una struttura modello di finestra di dialogo considerata di creare la finestra di dialogo.  
   
 ### <a name="remarks"></a>Note  
- Il comportamento predefinito effettua una chiamata a `SplitDialogTemplate`, determinare se sono presenti eventuali ActiveX controlli presenti e quindi restituisce il modello di finestra di dialogo risultante.  
+ Il comportamento predefinito effettua una chiamata a `SplitDialogTemplate`, determinare se sono presenti eventuali ActiveX controlla presente e restituisce quindi il modello di finestra di dialogo risultante.  
   
- Eseguire l'override di questa funzione per personalizzare il processo di creazione di una finestra di dialogo hosting di controlli ActiveX.  
+ Eseguire l'override di questa funzione per personalizzare il processo di creazione di una finestra di dialogo che ospita i controlli ActiveX.  
   
 ##  <a name="postcreatedialog"></a>  COccManager::PostCreateDialog  
  Chiamato dal framework per liberare la memoria allocata per il modello di finestra di dialogo.  
@@ -305,7 +305,7 @@ virtual void PostCreateDialog(_AFX_OCC_DIALOG_INFO* pOccDialogInfo);
   
 ### <a name="parameters"></a>Parametri  
  *pOccDialogInfo*  
- Un' **_AFX_OCC_DIALOG_INFO** struttura contenente informazioni su tutti i controlli ActiveX ospitati dalla finestra di dialogo e il modello di finestra di dialogo.  
+ Un `_AFX_OCC_DIALOG_INFO` struttura che contiene informazioni su tutti i controlli ActiveX ospitati dalla finestra di dialogo e il modello di finestra di dialogo.  
   
 ### <a name="remarks"></a>Note  
  Questa memoria è stata allocata da una chiamata a `SplitDialogTemplate`ed è stato usato per tutti i controlli ActiveX ospitati nella finestra di dialogo.  
@@ -323,10 +323,10 @@ static void AFX_CDECL SetDefaultButton(
   
 ### <a name="parameters"></a>Parametri  
  *pWnd*  
- Un puntatore alla finestra che contiene il controllo.  
+ Puntatore alla finestra che contiene il controllo.  
   
  *bLivello predefinito*  
- Diverso da zero se il controllo deve impostare come pulsante predefinito. zero in caso contrario.  
+ Diverso da zero se il controllo deve diventare il pulsante predefinito; in caso contrario, zero.  
   
 ### <a name="return-value"></a>Valore restituito  
  Diverso da zero se ha esito positivo; in caso contrario 0.  
@@ -334,10 +334,10 @@ static void AFX_CDECL SetDefaultButton(
 ### <a name="remarks"></a>Note  
   
 > [!NOTE]
->  Il controllo deve avere il **OLEMISC_ACTSLIKEBUTTON** impostato un bit di stato. Per ulteriori informazioni sul **OLEMISC** flag, vedere il [OLEMISC](http://msdn.microsoft.com/library/windows/desktop/ms678497) argomento in Windows SDK.  
+>  Il controllo deve avere il OLEMISC_ACTSLIKEBUTTON status bit impostato. Per altre informazioni sui flag OLEMISC, vedere la [OLEMISC](http://msdn.microsoft.com/library/windows/desktop/ms678497) argomento nel SDK di Windows.  
   
 ##  <a name="splitdialogtemplate"></a>  COccManager::SplitDialogTemplate  
- Chiamato dal framework per suddividere i controlli ActiveX dei controlli di finestra di dialogo comuni.  
+ Chiamato dal framework per suddividere i controlli ActiveX da controlli di finestra di dialogo comuni.  
   
 ```  
 virtual DLGTEMPLATE* SplitDialogTemplate(
@@ -347,21 +347,21 @@ virtual DLGTEMPLATE* SplitDialogTemplate(
   
 ### <a name="parameters"></a>Parametri  
  *pTemplate*  
- Un puntatore al modello di finestra di dialogo da esaminare.  
+ Un puntatore al modello della finestra di dialogo da esaminare.  
   
  *ppOleDlgItems*  
- Un elenco dei puntatori agli elementi caselle di dialogo che sono controlli ActiveX.  
+ Elenco di puntatori agli elementi di finestra di dialogo che sono controlli ActiveX.  
   
 ### <a name="return-value"></a>Valore restituito  
- Un puntatore a una struttura modello di finestra di dialogo contenente solo i controlli ActiveX non. Se non è presente, nessun controllo ActiveX **NULL** viene restituito.  
+ Un puntatore a una struttura di modello di finestra di dialogo che contiene solo controlli non ActiveX. Se i controlli ActiveX non sono presenti, viene restituito NULL.  
   
 ### <a name="remarks"></a>Note  
- Se vengono trovati tutti i controlli ActiveX, il modello viene analizzato e viene creato un nuovo modello, che contiene solo i controlli ActiveX non. I controlli ActiveX trovati durante questo processo vengono aggiunti alla *ppOleDlgItems*.  
+ Se vengono trovati tutti i controlli ActiveX, il modello viene analizzato e viene creato un nuovo modello, che contiene solo controlli non ActiveX. Tutti i controlli ActiveX rilevati durante questo processo vengono aggiunte alla *ppOleDlgItems*.  
   
- Se non sono presenti controlli ActiveX nel modello **NULL** viene restituito *.*  
+ Se non sono presenti controlli ActiveX nel modello, viene restituito NULL *.*  
   
 > [!NOTE]
->  Memoria allocata per il nuovo modello sarà resa disponibile nel `PostCreateDialog` (funzione).  
+>  Memoria allocata per il nuovo modello viene liberato nel `PostCreateDialog` (funzione).  
   
  Eseguire l'override di questa funzione per personalizzare questo processo.  
   

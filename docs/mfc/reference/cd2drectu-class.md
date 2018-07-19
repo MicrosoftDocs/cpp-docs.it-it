@@ -1,5 +1,5 @@
 ---
-title: Classe CD2DRectU | Documenti Microsoft
+title: Classe CD2DRectU | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d5faf4bb8f2ff416d90311d678543c48d212acdd
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 6e054c23d2137f5802c17731fac86dd64080389e
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36953883"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37336474"
 ---
 # <a name="cd2drectu-class"></a>Classe CD2DRectU
 Wrapper per `D2D1_RECT_U`.  
@@ -48,13 +48,13 @@ class CD2DRectU : public D2D1_RECT_U;
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[CD2DRectU::IsNull](#isnull)|Restituisce un **booleano** valore che indica se un'espressione non contiene dati validi ( **null**).|  
+|[CD2DRectU::IsNull](#isnull)|Restituisce un **booleana** valore che indica se un'espressione non contiene dati validi (NULL).|  
   
 ### <a name="public-operators"></a>Operatori pubblici  
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[CRect CD2DRectU::operator](#operator_crect)|Converte `CD2DRectU` a `CRect` oggetto.|  
+|[CRect CD2DRectU::operator](#operator_crect)|Consente di convertire `CD2DRectU` a `CRect` oggetto.|  
   
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  `D2D1_RECT_U`  
@@ -65,7 +65,7 @@ class CD2DRectU : public D2D1_RECT_U;
  **Intestazione:** afxrendertarget. h  
   
 ##  <a name="cd2drectu"></a>  CD2DRectU::CD2DRectU  
- Costruisce un oggetto CD2DRectU da un oggetto CRect.  
+ Costruisce un oggetto CD2DRectU dall'oggetto CRect.  
   
 ```  
 CD2DRectU(const CRect& rect);  
@@ -104,7 +104,7 @@ BOOL IsNull() const;
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- Restituisce TRUE se parte superiore del rettangolo, sinistro, inferiore e i valori corretti sono tutti pari a 0; in caso contrario, FALSE.  
+ TRUE se sono tutti uguali a 0; del rettangolo superiore, sinistro, inferiore e valori corretti in caso contrario, FALSE.  
   
 ##  <a name="operator_crect"></a>  CRect CD2DRectU::operator  
  Converte un oggetto CRect CD2DRectU.  

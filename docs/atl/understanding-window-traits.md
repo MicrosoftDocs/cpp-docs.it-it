@@ -1,5 +1,5 @@
 ---
-title: Tratti di finestra ATL | Documenti Microsoft
+title: Tratti delle finestre ATL | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,35 +14,35 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 71fbf5b3c4c3f1aa95070cbc0d30beb9e1321348
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 28336cca8c9dbd808b28575569b7f2bddf97ec58
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32362368"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37851268"
 ---
-# <a name="understanding-window-traits"></a>Informazioni sulle caratteristiche di finestra
-Le classi tratti finestra forniscono un metodo semplice per la standardizzazione stili utilizzati per la creazione di un oggetto finestra ATL. Tratti finestra sono accettati come parametri di modello da [CWindowImpl](../atl/reference/cwindowimpl-class.md) e altre classi di finestra ATL allo scopo di fornire stili finestra a livello di classe predefiniti.  
+# <a name="understanding-window-traits"></a>Informazioni sui tratti delle finestre
+Traits (classi) finestra offrono un metodo semplice per la standardizzazione con gli stili usati per la creazione di un oggetto di finestra ATL. Vengono inoltre accettati come parametri del modello da tratti delle finestre [CWindowImpl](../atl/reference/cwindowimpl-class.md) e altre classi di finestra ATL allo scopo di fornire stili di finestra a livello di classe predefiniti.  
   
- Se l'autore di un'istanza di finestra non ne fornisce gli stili in modo esplicito nella chiamata a [crea](../atl/reference/cwindowimpl-class.md#create), è possibile utilizzare una classe traits per assicurarsi che la finestra è ancora creata con gli stili corretti. È anche possibile verificare che alcuni stili sono impostati per tutte le istanze di tale classe di finestra mentre altri da impostare per ogni istanza.  
+ Se il creatore di un'istanza non fornisce gli stili in modo esplicito nella chiamata a [Create](../atl/reference/cwindowimpl-class.md#create), è possibile usare una classe traits per assicurarsi che la finestra è ancora creata con gli stili corretti. È anche possibile garantire che alcuni stili siano impostate per tutte le istanze di tale classe finestra mentre altri devono essere impostate in ogni istanza.  
   
-## <a name="atl-window-traits-templates"></a>Modelli di tratti di finestra ATL  
- ATL fornisce due modelli di tratti finestra che consentono di impostare gli stili predefiniti in fase di compilazione utilizzando i parametri di modello.  
+## <a name="atl-window-traits-templates"></a>Modelli tratti di finestra ATL  
+ ATL offre due modelli di tratti finestra che sono possibile impostare gli stili predefiniti in fase di compilazione usando i relativi parametri di modello.  
   
 |Classe|Descrizione|  
 |-----------|-----------------|  
-|[CWinTraits](../atl/reference/cwintraits-class.md)|Utilizzare questo modello quando si desidera fornire stili finestra che verranno utilizzati solo quando gli altri stili non vengono specificati nella chiamata a predefiniti **crea**. Gli stili forniti in fase di esecuzione hanno la precedenza sugli stili impostati in fase di compilazione.|  
-|[CWinTraitsOR](../atl/reference/cwintraitsor-class.md)|Utilizzare questa classe quando si desidera specificare gli stili che devono essere sempre impostati per la classe di finestra. Gli stili forniti in fase di esecuzione vengono combinati con gli stili impostati in fase di compilazione utilizzando l'operatore OR bit per bit.|  
+|[CWinTraits](../atl/reference/cwintraits-class.md)|Usare questo modello quando si desidera fornire stili di finestra che verranno utilizzati solo se nessun altri stili vengono specificati nella chiamata a predefiniti `Create`. Gli stili specificati alla prioritari fase di esecuzione tramite gli stili impostati in fase di compilazione.|  
+|[CWinTraitsOR](../atl/reference/cwintraitsor-class.md)|Utilizzare questa classe quando si desidera specificare gli stili che devono essere sempre impostati per la classe della finestra. Gli stili forniti in fase di esecuzione vengono combinati con gli stili impostati in fase di compilazione usando l'operatore OR bit per bit.|  
   
- Oltre a questi modelli, ATL fornisce una serie di predefiniti specializzazioni di `CWinTraits` modello per le combinazioni di stili di finestra comunemente utilizzate. Vedere il [CWinTraits](../atl/reference/cwintraits-class.md) fare riferimento alla documentazione per i dettagli completi.  
+ Oltre a questi modelli, ATL fornisce una serie di specializzazioni predefinite del `CWinTraits` modello per le combinazioni di stili di finestra comunemente utilizzate. Vedere le [CWinTraits](../atl/reference/cwintraits-class.md) fare riferimento alla documentazione per informazioni dettagliate.  
   
-## <a name="custom-window-traits"></a>Tratti di finestra personalizzati  
- Nel caso improbabile specializzazione di uno dei modelli forniti da ATL non è sufficiente ed è necessario creare la propria classe traits, è sufficiente creare una classe che implementa due funzioni statiche: `GetWndStyle` e **GetWndStyleEx** :  
+## <a name="custom-window-traits"></a>Tratti delle finestre personalizzati  
+ Nel caso poco probabile che uno dei modelli forniti da ATL specializzato non è sufficiente ed è necessario creare la propria classe traits, è sufficiente creare una classe che implementa due funzioni statiche: `GetWndStyle` e `GetWndStyleEx`:  
   
  [!code-cpp[NVC_ATL_Windowing#68](../atl/codesnippet/cpp/understanding-window-traits_1.h)]  
   
- Ognuna di queste funzioni viene passato un valore di stile in fase di esecuzione che è possibile utilizzare per produrre un valore di stile. Se la classe di tratti finestra viene utilizzata come argomento del modello a una classe di finestra ATL, i valori di stile passati alle funzioni statiche saranno passati come argomenti di stile per [crea](../atl/reference/cwindowimpl-class.md#create).  
+ Ognuna di queste funzioni verrà passato alcuni valori di stile di visualizzazione in fase di esecuzione che può usare per produrre un nuovo valore di stile. Se la classe traits finestra viene utilizzata come argomento del modello a una classe di finestra ATL, i valori di stile passati a queste funzioni statiche saranno passati come argomenti di stile per [Create](../atl/reference/cwindowimpl-class.md#create).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Classi di finestra](../atl/atl-window-classes.md)
+ [Classi di finestre](../atl/atl-window-classes.md)
 

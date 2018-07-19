@@ -1,5 +1,5 @@
 ---
-title: CPaintDC (classe) | Documenti Microsoft
+title: Classe CPaintDC | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 496c06fe7550598eeeb4136b233f39079d7425e9
-ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
+ms.openlocfilehash: 119a4e1b39d86ef2d12565fd593ce2124cef5bd5
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37078219"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37848915"
 ---
 # <a name="cpaintdc-class"></a>CPaintDC (classe)
 Una classe di contesto di dispositivo derivata da [CDC](../../mfc/reference/cdc-class.md).  
@@ -50,20 +50,20 @@ class CPaintDC : public CDC
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[CPaintDC::m_ps](#m_ps)|Contiene il [PAINTSTRUCT](../../mfc/reference/paintstruct-structure.md) usato per disegnare l'area client.|  
+|[CPaintDC::m_ps](#m_ps)|Contiene il [PAINTSTRUCT](../../mfc/reference/paintstruct-structure.md) utilizzato per disegnare l'area client.|  
   
 ### <a name="protected-data-members"></a>Membri dati protetti  
   
 |nome|Descrizione|  
 |----------|-----------------|  
-|[CPaintDC::m_hWnd](#m_hwnd)|Il `HWND` ai quali questo `CPaintDC` oggetto viene collegato.|  
+|[CPaintDC::m_hWnd](#m_hwnd)|L'oggetto HWND per cui questo `CPaintDC` oggetto è connesso.|  
   
 ## <a name="remarks"></a>Note  
- Esegue un [CWnd:: BeginPaint](../../mfc/reference/cwnd-class.md#beginpaint) in fase di costruzione e [CWnd::EndPaint](../../mfc/reference/cwnd-class.md#endpaint) in fase di eliminazione.  
+ Esegue una [CWnd:: BeginPaint](../../mfc/reference/cwnd-class.md#beginpaint) in fase di costruzione e [CWnd::EndPaint](../../mfc/reference/cwnd-class.md#endpaint) in fase di eliminazione.  
   
- Un `CPaintDC` oggetto può essere utilizzato solo quando si risponde a un [WM_PAINT](http://msdn.microsoft.com/library/windows/desktop/dd145213) dei messaggi, in genere nel `OnPaint` funzione membro di gestore di messaggi.  
+ Oggetto `CPaintDC` oggetto può essere utilizzato solo quando si risponde a un [WM_PAINT](http://msdn.microsoft.com/library/windows/desktop/dd145213) dei messaggi, in genere nel `OnPaint` funzione membro di gestore di messaggi.  
   
- Per ulteriori informazioni sull'utilizzo `CPaintDC`, vedere [contesti di dispositivo](../../mfc/device-contexts.md).  
+ Per altre informazioni sull'uso `CPaintDC`, vedere [contesti di dispositivo](../../mfc/device-contexts.md).  
   
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -76,7 +76,7 @@ class CPaintDC : public CDC
  **Intestazione:** afxwin.h  
   
 ##  <a name="cpaintdc"></a>  CPaintDC::CPaintDC  
- Costruisce un `CPaintDC` oggetto prepara la finestra dell'applicazione per il disegno e archivia il [PAINTSTRUCT](../../mfc/reference/paintstruct-structure.md) struttura nel [m_ps](#m_ps) variabile membro.  
+ Costruisce un `CPaintDC` prepara la finestra dell'applicazione per il disegno, oggetto e archivia il [PAINTSTRUCT](../../mfc/reference/paintstruct-structure.md) struttura nel [m_ps](#m_ps) variabile membro.  
   
 ```  
 explicit CPaintDC(CWnd* pWnd);
@@ -84,40 +84,40 @@ explicit CPaintDC(CWnd* pWnd);
   
 ### <a name="parameters"></a>Parametri  
  *pWnd*  
- Punta ai `CWnd` oggetto a cui il `CPaintDC` oggetto appartiene.  
+ Punta al `CWnd` oggetto a cui il `CPaintDC` appartiene l'oggetto.  
   
 ### <a name="remarks"></a>Note  
- Un'eccezione (di tipo `CResourceException`) viene generato se le finestre [GetDC](http://msdn.microsoft.com/library/windows/desktop/dd144871) chiamata ha esito negativo. Un contesto di dispositivo potrebbe non essere disponibile se Windows è già allocato tutti i relativi contesti di periferica disponibile. L'applicazione in competizione per le cinque comuni contesti di visualizzazione disponibili in qualsiasi momento in Windows.  
+ Un'eccezione (di tipo `CResourceException`) viene generata se la Windows [GetDC](http://msdn.microsoft.com/library/windows/desktop/dd144871) chiamata ha esito negativo. Un contesto di dispositivo potrebbe non essere disponibile se Windows è già allocato tutti i relativi contesti di dispositivo disponibili. L'applicazione è in competizione per le cinque comuni contesti di visualizzazione disponibili in qualsiasi momento in Windows.  
   
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFCDocView#97](../../mfc/codesnippet/cpp/cpaintdc-class_1.cpp)]  
   
 ##  <a name="m_hwnd"></a>  CPaintDC::m_hWnd  
- Il `HWND` ai quali questo `CPaintDC` oggetto viene collegato.  
+ Il `HWND` a cui questo `CPaintDC` oggetto è connesso.  
   
 ```  
 HWND m_hWnd;  
 ```  
   
 ### <a name="remarks"></a>Note  
- *m_hWnd* è una variabile di tipo protetta `HWND`.  
+ *m_hWnd* protetto variabile di tipo di HWND.  
   
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFCDocView#98](../../mfc/codesnippet/cpp/cpaintdc-class_2.cpp)]  
   
 ##  <a name="m_ps"></a>  CPaintDC::m_ps  
- `m_ps` è una variabile membro pubblico di tipo [PAINTSTRUCT](../../mfc/reference/paintstruct-structure.md).  
+ `m_ps` è una variabile membro pubblico typu [PAINTSTRUCT](../../mfc/reference/paintstruct-structure.md).  
   
 ```  
 PAINTSTRUCT m_ps;  
 ```  
   
 ### <a name="remarks"></a>Note  
- È il `PAINTSTRUCT` che vengono passati e compilati [CWnd:: BeginPaint](../../mfc/reference/cwnd-class.md#beginpaint).  
+ È il `PAINTSTRUCT` che viene passato a e compilati dagli [CWnd:: BeginPaint](../../mfc/reference/cwnd-class.md#beginpaint).  
   
  Il `PAINTSTRUCT` contiene informazioni che l'applicazione utilizza per disegnare l'area client della finestra associata a un `CPaintDC` oggetto.  
   
- Si noti che è possibile accedere all'handle di contesto di dispositivo tramite il `PAINTSTRUCT`. Tuttavia, è possibile accedere all'handle più direttamente tramite il `m_hDC` variabile membro che `CPaintDC` eredita da `CDC`.  
+ Si noti che è possibile accedere l'handle del contesto di dispositivo attraverso il `PAINTSTRUCT`. Tuttavia, è possibile accedere in modo più diretto l'handle tramite il `m_hDC` variabile membro che `CPaintDC` eredita da CDC.  
   
 ### <a name="example"></a>Esempio  
   Vedere l'esempio relativo [CPaintDC::m_hWnd](#m_hwnd).  

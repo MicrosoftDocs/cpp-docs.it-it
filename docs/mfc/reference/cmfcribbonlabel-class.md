@@ -1,5 +1,5 @@
 ---
-title: Classe CMFCRibbonLabel | Documenti Microsoft
+title: Classe CMFCRibbonLabel | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 36b2d78bb3f1ffaefa67a062c6498c195d46336f
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: ac06722b675af5e8ac8d4136cc2938ac772befc9
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37042495"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37848583"
 ---
 # <a name="cmfcribbonlabel-class"></a>Classe CMFCRibbonLabel
 Implementa un'etichetta di testo non selezionabile per una barra multifunzione.  
@@ -50,13 +50,13 @@ class CMFCRibbonLabel : public CMFCRibbonButton
 |Nome|Descrizione|  
 |----------|-----------------|  
 |`CMFCRibbonLabel::CreateObject`|Usato dal framework per creare un'istanza dinamica di questo tipo di classe.|  
-|`CMFCRibbonLabel::GetThisClass`|Usato dal framework per ottenere un puntatore per il [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) oggetto associato a questo tipo di classe.|  
+|`CMFCRibbonLabel::GetThisClass`|Utilizzato dal framework per ottenere un puntatore per il [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) oggetto associato a questo tipo di classe.|  
 |[CMFCRibbonLabel::SetACCData](#setaccdata)|Determina i dati di accessibilità per l'elemento etichetta della barra multifunzione corrente. (Esegue l'override [cmfcribbonbutton:: Setaccdata](../../mfc/reference/cmfcribbonbutton-class.md#setaccdata).)|  
   
 ### <a name="remarks"></a>Note  
  Dopo aver creato un'etichetta della barra multifunzione, aggiungerlo a un pannello chiamando [cmfcribbonpanel:: Add](../../mfc/reference/cmfcribbonpanel-class.md#add).  
   
- È possibile aggiungere un'etichetta della barra multifunzione alla barra degli strumenti accesso rapido.  
+ È possibile aggiungere un'etichetta della barra multifunzione alla barra di accesso rapido.  
   
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -71,7 +71,7 @@ class CMFCRibbonLabel : public CMFCRibbonButton
  **Intestazione:** afxRibbonLabel.h  
   
 ##  <a name="cmfcribbonlabel"></a>  CMFCRibbonLabel::CMFCRibbonLabel  
- Costruisce e Inizializza un [CMFCRibbonLabel](../../mfc/reference/cmfcribbonlabel-class.md) oggetto che consente di visualizzare la stringa di testo specificato.  
+ Costruisce e Inizializza un [CMFCRibbonLabel](../../mfc/reference/cmfcribbonlabel-class.md) oggetto che viene visualizzata la stringa di testo specificato.  
   
 ```  
 CMFCRibbonLabel(
@@ -81,10 +81,10 @@ CMFCRibbonLabel(
   
 ### <a name="parameters"></a>Parametri  
  [in] *lpszText*  
- Testo da visualizzare nell'etichetta.  
+ Il testo da visualizzare nell'etichetta.  
   
  [in] *bIsMultiLine*  
- `TRUE` Per specificare che l'etichetta è un'etichetta su più righe; in caso contrario, `FALSE`.  
+ TRUE per specificare che l'etichetta è un'etichetta su più righe; in caso contrario, FALSE.  
   
 ##  <a name="setaccdata"></a>  CMFCRibbonLabel::SetACCData  
  Determina i dati di accessibilità per l'elemento etichetta della barra multifunzione corrente.  
@@ -100,10 +100,10 @@ virtual BOOL SetACCData(
  Rappresenta la finestra padre dell'etichetta della barra multifunzione corrente.  
   
  [out] *dati*  
- Un oggetto di tipo `CAccessibilityData` che viene popolata con i dati di accessibilità dell'etichetta della barra multifunzione corrente.  
+ Un oggetto di tipo `CAccessibilityData` che viene popolato con i dati di accessibilità dell'etichetta della barra multifunzione corrente.  
   
 ### <a name="return-value"></a>Valore restituito  
- `TRUE` Se il *dati* parametro è stato popolato con i dati di accessibilità dell'etichetta della barra multifunzione corrente; in caso contrario, `FALSE`.  
+ TRUE se il *dati* parametro è stato popolato con i dati di accessibilità dell'etichetta della barra multifunzione corrente; in caso contrario, FALSE.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Grafico delle gerarchie](../../mfc/hierarchy-chart.md)   

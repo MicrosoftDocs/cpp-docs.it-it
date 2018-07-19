@@ -1,5 +1,5 @@
 ---
-title: Windows supporta le classi (ATL) | Documenti Microsoft
+title: Windows supporta le classi (ATL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,43 +17,43 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c2095e5141dfdd320bae0e7aa69ffd4b3c9fe9a9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 40521ce5b7ec192781e1496590fdd42b36e132e1
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32362082"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37848389"
 ---
 # <a name="windows-support-classes"></a>Classi di supporto di Windows
-Le classi seguenti offrono il supporto per windows:  
+Le classi seguenti forniscono supporto per windows:  
   
--   [_U_MENUorID](../atl/reference/u-menuorid-class.md) fornisce wrapper per **CreateWindow** e **CreateWindowEx**.  
+-   [U_menuorid](../atl/reference/u-menuorid-class.md) sono disponibili wrapper per `CreateWindow` e `CreateWindowEx`.  
   
 -   [CWindow](../atl/reference/cwindow-class.md) contiene metodi per la modifica di una finestra. `CWindow` è la classe base per `CWindowImpl`, `CDialogImpl` e `CContainedWindow`.  
   
--   [CWindowImpl](../atl/reference/cwindowimpl-class.md) implementa una finestra in base a una nuova classe della finestra. Consente inoltre di sottoclasse o superclasse la finestra.  
+-   [CWindowImpl](../atl/reference/cwindowimpl-class.md) implementa una finestra basata su una nuova classe della finestra. Consente inoltre alla sottoclasse o superclasse la finestra.  
   
 -   [CDialogImpl](../atl/reference/cdialogimpl-class.md) implementa una finestra di dialogo.  
   
--   [CAxDialogImpl](../atl/reference/caxdialogimpl-class.md) implementa una finestra di dialogo (modale o non modale) che ospita controlli ActiveX.  
+-   [CAxDialogImpl](../atl/reference/caxdialogimpl-class.md) implementa una finestra di dialogo (modale o non modale) che ospita i controlli ActiveX.  
   
 -   [CSimpleDialog](../atl/reference/csimpledialog-class.md) implementa una finestra di dialogo (modale o non modale) con funzionalità di base.  
   
--   [CAxWindow](../atl/reference/caxwindow-class.md) la modifica di una finestra che ospita un controllo ActiveX.  
+-   [CAxWindow](../atl/reference/caxwindow-class.md) gestisce una finestra che ospita un controllo ActiveX.  
   
--   [CAxWindow2T](../atl/reference/caxwindow2t-class.md) fornisce metodi per la modifica di una finestra che ospita un controllo ActiveX e offre supporto per l'hosting di controlli ActiveX con licenza.  
+-   [CAxWindow2T](../atl/reference/caxwindow2t-class.md) fornisce metodi per la modifica di una finestra che ospita un controllo ActiveX e include anche il supporto per l'hosting di controlli ActiveX con licenza.  
   
 -   [CContainedWindowT](../atl/reference/ccontainedwindowt-class.md) implementa una finestra contenuta all'interno di un altro oggetto.  
   
 -   [CWndClassInfo](../atl/reference/cwndclassinfo-class.md) gestisce le informazioni di una nuova classe di finestra.  
   
--   [CDynamicChain](../atl/reference/cdynamicchain-class.md) supporta la concatenazione dinamica delle mappe messaggi.  
+-   [CDynamicChain](../atl/reference/cdynamicchain-class.md) supporta la concatenazione dinamica di mappe messaggi.  
   
 -   [CMessageMap](../atl/reference/cmessagemap-class.md) consente a un oggetto di esporre il messaggio viene eseguito il mapping ad altri oggetti.  
   
--   [CWinTraits](../atl/reference/cwintraits-class.md) offre un metodo semplice di standardizzare i tratti di un oggetto finestra ATL.  
+-   [CWinTraits](../atl/reference/cwintraits-class.md) offre un metodo semplice di standardizzare i tratti di un oggetto di finestra ATL.  
   
--   [CWinTraitsOR](../atl/reference/cwintraitsor-class.md) fornisce valori predefiniti per gli stili di finestra e degli stili estesi utilizzati per creare una finestra. Questi valori vengono aggiunti utilizzando l'operatore OR logico, per i valori forniti durante la creazione di una finestra.  
+-   [CWinTraitsOR](../atl/reference/cwintraitsor-class.md) fornisce i valori predefiniti per gli stili di finestra e stili estesi considerati di creare una finestra. Questi valori vengono aggiunti, usando l'operatore OR logico, ai valori forniti durante la creazione di una finestra.  
   
 ## <a name="related-articles"></a>Articoli correlati  
  [Classi di finestra ATL](../atl/atl-window-classes.md)  
@@ -61,7 +61,7 @@ Le classi seguenti offrono il supporto per windows:
  [Esercitazione ATL](../atl/active-template-library-atl-tutorial.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Cenni preliminari sulla classe](../atl/atl-class-overview.md)   
+ [Panoramica della classe](../atl/atl-class-overview.md)   
  [Macro della mappa messaggi](../atl/reference/message-map-macros-atl.md)   
  [Macro di classi di finestre](../atl/reference/window-class-macros.md)
 

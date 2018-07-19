@@ -1,5 +1,5 @@
 ---
-title: Utilizza IDispEventImpl (ATL) | Documenti Microsoft
+title: Uso di IDispEventImpl (ATL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,30 +16,30 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 520d1129234a26ff6eb4c402154969ad7e166211
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 38ac64a99c3523f174c62c9788aeab867aa8758b
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32361151"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37848928"
 ---
-# <a name="using-idispeventimpl"></a>Utilizza IDispEventImpl
-Quando si utilizza `IDispEventImpl` per gestire gli eventi, è necessario:  
+# <a name="using-idispeventimpl"></a>Uso di IDispEventImpl
+Quando si usa `IDispEventImpl` per gestire gli eventi, è necessario:  
   
 -   Derivare la classe da [IDispEventImpl](../atl/reference/idispeventimpl-class.md).  
   
--   Aggiungere una mappa del sink di eventi alla classe.  
+-   Aggiungere una mappa di sink di eventi alla classe.  
   
--   Aggiungere le voci per l'evento sink mappa utilizzando il [macro SINK_ENTRY](reference/composite-control-macros.md#sink_entry) o [SINK_ENTRY_EX](reference/composite-control-macros.md#sink_entry_ex) (macro).  
+-   Aggiungere le voci per il mapping dei sink di evento utilizzando il [macro SINK_ENTRY](reference/composite-control-macros.md#sink_entry) oppure [SINK_ENTRY_EX](reference/composite-control-macros.md#sink_entry_ex) macro.  
   
 -   Implementare i metodi che desidera gestire.  
   
--   Notifica e annullare gli avvisi per l'origine evento.  
+-   Notifica e annullare l'origine dell'evento.  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene illustrato come gestire il **DocumentChange** evento generato da Word **applicazione** oggetto. Questo evento viene definito come un metodo sul **ApplicationEvents** interfaccia dispatch.  
+ L'esempio seguente viene illustrato come gestire le `DocumentChange` eventi generati di Word **applicazione** oggetto. Questo evento viene definito come un metodo su di `ApplicationEvents` interfaccia dispatch.  
   
- L'esempio è tratto di [esempio ATLEventHandling](../visual-cpp-samples.md).  
+ L'esempio è tratto dal [esempio ATLEventHandling](../visual-cpp-samples.md).  
   
  `[`  
   
@@ -69,11 +69,11 @@ Quando si utilizza `IDispEventImpl` per gestire gli eventi, è necessario:
   
  `};`  
   
- Nell'esempio viene utilizzato `#import` per generare i file di intestazione richiesta dalla libreria dei tipi di Word. Se si desidera utilizzare questo esempio con altre versioni di Word, è necessario specificare il file dll mso corretto. Ad esempio, Office 2000 fornisce MSO9 e OfficeXP fornisce Mso. Questo codice è semplificato dal stdafx. h:  
+ L'esempio Usa `#import` per generare i file di intestazione obbligatori da libreria dei tipi di Word. Se si desidera usare questo esempio con altre versioni di Word, è necessario specificare il file dll corretti mso. Ad esempio, Office 2000 fornisce MSO9 e OfficeXP fornisce Mso. dll. Questo codice è semplificato dal file stdafx. h:  
   
  [!code-cpp[NVC_ATL_EventHandlingSample#1](../atl/codesnippet/cpp/using-idispeventimpl_1.h)]  
   
- Il codice seguente viene visualizzato in NotSoSimple. Il codice pertinente è indicato dai commenti:  
+ Il codice seguente viene visualizzato in NotSoSimple. Il codice rilevante è indicato dai commenti:  
   
  [!code-cpp[NVC_ATL_EventHandlingSample#2](../atl/codesnippet/cpp/using-idispeventimpl_2.h)]  
   

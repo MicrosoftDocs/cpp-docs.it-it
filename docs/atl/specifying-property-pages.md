@@ -1,5 +1,5 @@
 ---
-title: Specificare le pagine delle proprietà (ATL) | Documenti Microsoft
+title: Specificare le pagine delle proprietà (ATL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,31 +17,31 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e8d4cbeaa8ea9a57f9287f2d2fe78c61884ba4a3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7119dca24a6b6ec5b66e52d7e2c01cd66985e764
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32358925"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37848376"
 ---
 # <a name="specifying-property-pages"></a>Specificare le pagine delle proprietà
-Quando si crea un controllo ActiveX, è spesso che si desidera associarla pagine delle proprietà che può essere utilizzati per impostare le proprietà del controllo. Controlla l'uso di contenitori di **ISpecifyPropertyPages** interfaccia per scoprire quali pagine delle proprietà consente di impostare le proprietà del controllo. È necessario implementare questa interfaccia nel controllo.  
+Quando si crea un controllo ActiveX, è spesso consigliabile associarlo a pagine delle proprietà che può essere utilizzati per impostare le proprietà del controllo. Controlla l'uso di contenitori di `ISpecifyPropertyPages` interfaccia per scoprire quali pagine delle proprietà possono essere utilizzati per impostare le proprietà del controllo. È necessario implementare questa interfaccia nel controllo.  
   
- Per implementare **ISpecifyPropertyPages** utilizzando ATL, procedere come segue:  
+ Per implementare `ISpecifyPropertyPages` utilizzando ATL, procedere come segue:  
   
 1.  Derivare la classe da [ISpecifyPropertyPagesImpl](../atl/reference/ispecifypropertypagesimpl-class.md).  
   
-2.  Aggiungere una voce per **ISpecifyPropertyPages** alla mappa COM della classe.  
+2.  Aggiungere una voce per `ISpecifyPropertyPages` alla mappa COM della classe.  
   
-3.  Aggiungere un [PROP_PAGE](reference/property-map-macros.md#prop_page) voce per il mapping di proprietà per ogni pagina associata al controllo.  
+3.  Aggiungere un [PROP_PAGE](reference/property-map-macros.md#prop_page) voce alla mappa delle proprietà per ogni pagina associato al controllo.  
   
 > [!NOTE]
->  Durante la generazione di un controllo standard utilizzando la [Creazione guidata controllo ATL](../atl/reference/atl-control-wizard.md), è necessario aggiungere solo il `PROP_PAGE` voci per il mapping di proprietà. La procedura guidata genera il codice necessario per gli altri passaggi.  
+>  Durante la generazione di un controllo standard usando il [Creazione guidata controllo ATL](../atl/reference/atl-control-wizard.md), sarà solo necessario aggiungere le voci PROP_PAGE al mapping della proprietà. La procedura guidata genera il codice necessario per gli altri passaggi.  
   
- Contenitori ben progettati verranno visualizzate le pagine di proprietà specificato nello stesso ordine di `PROP_PAGE` voci nel mapping della proprietà. In genere, è necessario inserire voci pagina delle proprietà standard dopo le voci per le pagine personalizzate nel mapping della proprietà, in modo che gli utenti, vedere le pagine specifiche del controllo prima di tutto.  
+ I contenitori ben progettati visualizzerà le pagine delle proprietà specificato nello stesso ordine delle voci di PROP_PAGE nel mapping della proprietà. In generale, è opportuno inserire le voci della pagina proprietà standard dopo le voci per le pagine personalizzate nel mapping della proprietà, in modo che gli utenti visualizzano prima di tutto le pagine specifiche per il controllo.  
   
 ## <a name="example"></a>Esempio  
- La classe seguente per un calendario di controllo Usa il **ISpecifyPropertyPages** interfaccia per comunicare ai contenitori che è possono impostare le relative proprietà utilizzando una pagina di date personalizzato e la pagina colore predefinita.  
+ La classe seguente per un calendario di controllo viene utilizzato il `ISpecifyPropertyPages` interfaccia per comunicare ai contenitori che è possono impostare le relative proprietà usando una pagina di date personalizzato e la pagina colore predefinita.  
   
  [!code-cpp[NVC_ATL_Windowing#72](../atl/codesnippet/cpp/specifying-property-pages_1.h)]  
   

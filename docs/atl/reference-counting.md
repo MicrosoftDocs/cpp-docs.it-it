@@ -1,5 +1,5 @@
 ---
-title: Conteggio (ATL) | Documenti Microsoft
+title: (ATL) nel conteggio dei riferimenti | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,30 +18,30 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d1ba27f00bf25f88575101b1299daf50f94000ad
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8e0ce8b2cc412c576b0eded9662d8e70b34cf2ec
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32358248"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37850813"
 ---
 # <a name="reference-counting"></a>Il conteggio dei riferimenti
-In COM non automaticamente tenta di rimuovere un oggetto dalla memoria quando che l'oggetto non è non è più utilizzato. Al contrario, il programmatore oggetto deve rimuovere l'oggetto inutilizzato. Il programmatore determina se un oggetto può essere rimosso in base a un conteggio dei riferimenti.  
+In COM non automaticamente tenta di rimuovere un oggetto dalla memoria quando ritiene che l'oggetto non è più in uso. Al contrario, il compito del programmatore deve rimuovere l'oggetto inutilizzato. Il programmatore determina se un oggetto possa essere rimossi in base a un conteggio dei riferimenti.  
   
- COM viene utilizzato il **IUnknown** metodi, [AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379) e [versione](http://msdn.microsoft.com/library/windows/desktop/ms682317)per gestire il conteggio dei riferimenti delle interfacce in un oggetto. Le regole generali per la chiamata di questi metodi sono:  
+ COM Usa il `IUnknown` metodi [AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379) e [versione](http://msdn.microsoft.com/library/windows/desktop/ms682317), per gestire il conteggio dei riferimenti delle interfacce in un oggetto. Le regole generali per la chiamata di questi metodi sono:  
   
 -   Ogni volta che un client riceve un puntatore a interfaccia `AddRef` deve essere chiamato sull'interfaccia.  
   
--   Ogni volta che il client ha terminato di utilizzare il puntatore di interfaccia, è necessario chiamare **versione**.  
+-   Ogni volta che il client ha terminato di utilizzare il puntatore di interfaccia, è necessario chiamare `Release`.  
   
- In un'implementazione semplice, ogni `AddRef` chiamare incrementi e ogni **versione** chiamare decrementa una variabile del contatore all'interno dell'oggetto. Quando il conteggio torna a zero, l'interfaccia non ha tutti gli utenti ed è disponibile per rimuoverlo dalla memoria.  
+ In un'implementazione semplice, ciascuna `AddRef` chiamare incrementi e ogni `Release` chiamare decrementa una variabile contatore all'interno dell'oggetto. Quando viene restituito il conteggio su zero, l'interfaccia non è più ha tutti gli utenti ed è possibile rimuovere se stesso dalla memoria.  
   
- Il conteggio dei riferimenti può anche essere implementata in modo che ogni riferimento all'oggetto (non a una singola interfaccia) viene conteggiato. In questo caso, ogni `AddRef` e **versione** chiamare delegati a un'implementazione centrale sull'oggetto, e **versione** libera l'intero oggetto quando il conteggio dei riferimenti arriva a zero.  
+ Il conteggio dei riferimenti può anche essere implementato in modo che ogni riferimento all'oggetto (non a una singola interfaccia) viene conteggiato. In questo caso, ogni `AddRef` e `Release` chiama delegati a un'implementazione centrale per l'oggetto, e `Release` libera l'intero oggetto quando il conteggio dei riferimenti raggiunge zero.  
   
 > [!NOTE]
->  Quando un `CComObject`-oggetto derivato viene costruita utilizzando il **nuova** (operatore), il conteggio dei riferimenti è 0. Pertanto, una chiamata a `AddRef` devono essere apportate dopo la creazione di `CComObject`-oggetto derivato.  
+>  Quando un `CComObject`-oggetto derivato viene costruito usando il **nuovi** (operatore), il conteggio dei riferimenti è 0. Pertanto, una chiamata a `AddRef` devono essere apportate dopo la corretta creazione la `CComObject`-oggetto derivato.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Introduzione a COM](../atl/introduction-to-com.md)   
- [La gestione della durata degli oggetti mediante il conteggio dei riferimenti](http://msdn.microsoft.com/library/windows/desktop/ms687260)
+ [La gestione della durata degli oggetti tramite il conteggio dei riferimenti](http://msdn.microsoft.com/library/windows/desktop/ms687260)
 

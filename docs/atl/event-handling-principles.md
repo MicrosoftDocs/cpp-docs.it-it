@@ -1,5 +1,5 @@
 ---
-title: Principi (ATL) di gestione degli eventi | Documenti Microsoft
+title: I principi (ATL) di gestione degli eventi | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,38 +18,38 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cb7577dc7d9fb58f43ee67d5e5b8f00393dca1bf
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 239ea94343652d379048bbeee87d2650d3f1ed72
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32355448"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37852536"
 ---
 # <a name="event-handling-principles"></a>Principi di gestione degli eventi
 Esistono tre passaggi comuni a tutti la gestione degli eventi. È necessario:  
   
--   Implementa l'interfaccia eventi sull'oggetto.  
+-   Implementare l'interfaccia evento sull'oggetto.  
   
 -   Informare l'origine eventi che l'oggetto richiede la ricezione di eventi.  
   
--   Annullare gli avvisi per l'origine evento quando l'oggetto non serve più la ricezione di eventi.  
+-   Annullare l'origine dell'evento quando l'oggetto non serve più la ricezione di eventi.  
   
- La modalità di implementazione dell'interfaccia eventi dipenderà dal relativo tipo. Un'interfaccia di evento può essere vtable, doppio o un'interfaccia dispatch. È attivo nella finestra di progettazione dell'origine evento per definire l'interfaccia. è attivo per implementare tale interfaccia.  
+ La modalità che è possibile implementare l'interfaccia evento dipenderà dal relativo tipo. Un'interfaccia di eventi può essere vtable, dual o un'interfaccia dispatch. Spetta alla finestra di progettazione dell'origine evento per definire l'interfaccia. Spetta all'utente per implementare tale interfaccia.  
   
 > [!NOTE]
->  Anche se non esistono alcun motivi tecnici che un'interfaccia di evento non può essere duale, esistono una serie di motivi una progettazione ottimale per evitare l'utilizzo di queste interfacce. Tuttavia, si tratta di una decisione presa da progettazione/responsabile dell'implementazione dell'evento *origine*. Poiché si sta lavorando dal punto di vista dell'evento `sink`, è necessario per consentire la possibilità che potrebbe non avere qualsiasi scelta, per implementare un'interfaccia duale evento. Per ulteriori informazioni sulle interfacce duali, vedere [interfacce duali e ATL](../atl/dual-interfaces-and-atl.md).  
+>  Anche se non esistono Nessun motivi tecnici che un'interfaccia eventi non può essere duale, esistono una serie di motivi una buona progettazione per evitare l'uso di queste interfacce. Tuttavia, si tratta di una decisione presa dalla funzione di progettazione/implementazione dell'evento *origine*. Poiché si sta lavorando dal punto di vista dell'evento `sink`, è necessario per consentire la possibilità che si potrebbe non avere qualsiasi scelta, per implementare un'interfaccia duale evento. Per altre informazioni sulle interfacce duali, vedere [interfacce duali e ATL](../atl/dual-interfaces-and-atl.md).  
   
  Notifica all'origine eventi può essere suddivisi in tre passaggi:  
   
 -   L'oggetto di origine per eseguire una query [IConnectionPointContainer](http://msdn.microsoft.com/library/windows/desktop/ms683857).  
   
--   Chiamare [IConnectionPointContainer:: FindConnectionPoint](http://msdn.microsoft.com/library/windows/desktop/ms692476) passando l'IID dell'interfaccia eventi che desiderato. Se l'esito è positivo, verrà restituito il [IConnectionPoint](http://msdn.microsoft.com/library/windows/desktop/ms694318) interfaccia su un oggetto punto di connessione.  
+-   Chiamare [IConnectionPointContainer:: FindConnectionPoint](http://msdn.microsoft.com/library/windows/desktop/ms692476) passando l'IID dell'interfaccia eventi che interessa. Se ha esito positivo, verrà restituito il [IConnectionPoint](http://msdn.microsoft.com/library/windows/desktop/ms694318) interfaccia su un oggetto punto di connessione.  
   
--   Chiamare [IConnectionPoint::](http://msdn.microsoft.com/library/windows/desktop/ms678815) passando il **IUnknown** del sink di evento. Se l'esito è positivo, verrà restituito un `DWORD` cookie che rappresenta la connessione.  
+-   Chiamare [IConnectionPoint:: Advise](http://msdn.microsoft.com/library/windows/desktop/ms678815) passando la `IUnknown` del sink di evento. Se ha esito positivo, restituirà un `DWORD` cookie che rappresenta la connessione.  
   
- Dopo aver registrato correttamente l'interesse dimostrato nella ricezione degli eventi, i metodi sull'interfaccia di eventi dell'oggetto verranno chiamati in base agli eventi generati dall'oggetto di origine. Quando non è necessario ricevere eventi, è possibile passare il cookie al punto di connessione tramite [IConnectionPoint:: Unadvise](http://msdn.microsoft.com/library/windows/desktop/ms686608). Questa verrà interrotta la connessione tra origine e sink.  
+ Dopo aver registrato correttamente l'interesse dimostrato nella ricezione di eventi, metodi nell'interfaccia eventi dell'oggetto verranno chiamati in base agli eventi generati dall'oggetto di origine. Quando è non necessario non è più la ricezione di eventi, è possibile passare il cookie di tornare al punto di connessione tramite [IConnectionPoint:: Unadvise](http://msdn.microsoft.com/library/windows/desktop/ms686608). Questo verrà interrotta la connessione tra origine e sink.  
   
- Fare attenzione a evitare i riferimenti di cicli durante la gestione degli eventi.  
+ Prestare attenzione a evitare riferimento i cicli di gestione degli eventi.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Gestione di eventi](../atl/event-handling-and-atl.md)

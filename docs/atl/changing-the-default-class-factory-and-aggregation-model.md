@@ -1,5 +1,5 @@
 ---
-title: Modifica la Class Factory predefinita e il modello di aggregazione | Documenti Microsoft
+title: Modifica la Class Factory predefinita e il modello di aggregazione | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,29 +22,29 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ce64f2162aa0d5cdf5bcf5e16b56b6989fcaf1ee
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: db2e684565589eb736b135db3460ed8b83d382b1
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32355239"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37850878"
 ---
 # <a name="changing-the-default-class-factory-and-aggregation-model"></a>Modifica la Class Factory predefinita e il modello di aggregazione
-Utilizza ATL [CComCoClass](../atl/reference/ccomcoclass-class.md) per definire la classe factory e l'aggregazione modello predefinito per l'oggetto. `CComCoClass` Specifica le due macro seguenti:  
+Usa ATL [CComCoClass](../atl/reference/ccomcoclass-class.md) per definire la classe factory e l'aggregazione modello predefinito per l'oggetto. `CComCoClass` Specifica le due macro seguenti:  
   
 -   [DECLARE_CLASSFACTORY](reference/aggregation-and-class-factory-macros.md#declare_classfactory) dichiara la class factory per essere [CComClassFactory](../atl/reference/ccomclassfactory-class.md).  
   
 -   [DECLARE_AGGREGATABLE](reference/aggregation-and-class-factory-macros.md#declare_aggregatable) dichiara che è possibile aggregare l'oggetto.  
   
- È possibile eseguire l'override di una di queste impostazioni predefinite specificando un'altra macro nella definizione della classe. Ad esempio, per usare [CComClassFactory2](../atl/reference/ccomclassfactory2-class.md) anziché `CComClassFactory`, specificare il [macro DECLARE_CLASSFACTORY2](reference/aggregation-and-class-factory-macros.md#declare_classfactory2) macro:  
+ È possibile eseguire l'override di uno di questi valori predefiniti specificando un'altra macro nella definizione della classe. Ad esempio, per usare [CComClassFactory2](../atl/reference/ccomclassfactory2-class.md) invece di `CComClassFactory`, specificare il [macro DECLARE_CLASSFACTORY2](reference/aggregation-and-class-factory-macros.md#declare_classfactory2) macro:  
   
  [!code-cpp[NVC_ATL_COM#2](../atl/codesnippet/cpp/changing-the-default-class-factory-and-aggregation-model_1.h)]  
   
- Altre due macro che definiscono una class factory è [: DECLARE_CLASSFACTORY_AUTO_THREAD](reference/aggregation-and-class-factory-macros.md#declare_classfactory_auto_thread) e [DECLARE_CLASSFACTORY_SINGLETON](reference/aggregation-and-class-factory-macros.md#declare_classfactory_singleton).  
+ Altre due macro che definiscono una class factory viene [: DECLARE_CLASSFACTORY_AUTO_THREAD](reference/aggregation-and-class-factory-macros.md#declare_classfactory_auto_thread) e [DECLARE_CLASSFACTORY_SINGLETON](reference/aggregation-and-class-factory-macros.md#declare_classfactory_singleton).  
   
- ATL Usa anche il `typedef` meccanismo per implementare il comportamento predefinito. Ad esempio, il `DECLARE_AGGREGATABLE` macro utilizza `typedef` per definire un tipo denominato **CreatorClass**, cui viene fatto riferimento in ATL. Si noti che in una classe derivata, un `typedef` utilizzando lo stesso nome della classe base `typedef` comporta ATL utilizzando la definizione e si esegue l'override del comportamento predefinito.  
+ ATL Usa anche il **typedef** meccanismo per implementare il comportamento predefinito. Ad esempio, Usa la macro DECLARE_AGGREGATABLE **typedef** per definire un tipo denominato `_CreatorClass`, cui viene fatto riferimento in ATL. Si noti che in una classe derivata, una **typedef** usando lo stesso nome della classe base **typedef** comporta ATL utilizzando la definizione e si esegue l'override del comportamento predefinito.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Nozioni di base di oggetti COM ATL](../atl/fundamentals-of-atl-com-objects.md)   
+ [Nozioni fondamentali su oggetti COM ATL](../atl/fundamentals-of-atl-com-objects.md)   
  [Macro di aggregazione e class factory](../atl/reference/aggregation-and-class-factory-macros.md)
 

@@ -1,5 +1,5 @@
 ---
-title: Classe CMFCToolBarsCustomizeDialog | Documenti Microsoft
+title: Classe CMFCToolBarsCustomizeDialog | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -34,17 +34,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b4c2d7de8c9be8aa33cd5849c089a2caac1271b
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 3c12b23c2250f2b0d26b053410c864c8cf435469
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37041877"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37852874"
 ---
 # <a name="cmfctoolbarscustomizedialog-class"></a>Classe CMFCToolBarsCustomizeDialog
-Una finestra di dialogo non modale scheda ( [CPropertySheet (classe)](../../mfc/reference/cpropertysheet-class.md)) che consente all'utente di personalizzare le barre degli strumenti, menu, tasti di scelta rapida, strumenti definiti dall'utente e stile di visualizzazione in un'applicazione. In genere, l'utente accede a questa finestra di dialogo scegliendo **Personalizza** dal menu **Strumenti** .  
+Una finestra di dialogo schede non modale ( [CPropertySheet (classe)](../../mfc/reference/cpropertysheet-class.md)) che consente all'utente di personalizzare le barre degli strumenti, menu, tasti di scelta rapida, gli strumenti definiti dall'utente e dello stile di visualizzazione in un'applicazione. In genere, l'utente accede a questa finestra di dialogo scegliendo **Personalizza** dal menu **Strumenti** .  
   
- Il **Personalizza** finestra di dialogo ha sei schede: **comandi**, **barre degli strumenti**, **strumenti**, **tastiera**,  **Menu di scelta**, e **opzioni**.  
+ Il **Personalizza** finestra di dialogo dispone di sei schede: **comandi**, **barre degli strumenti**, **strumenti**, **tastiera**,  **Menu di scelta**, e **opzioni**.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -65,45 +65,45 @@ class CMFCToolBarsCustomizeDialog : public CPropertySheet
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|`CMFCToolBarsCustomizeDialog::` [CMFCToolBarsCustomizeDialog::AddButton](#addbutton)|Inserisce un pulsante della barra degli strumenti nell'elenco di comandi sul **comandi** pagina|  
-|`CMFCToolBarsCustomizeDialog::` [CMFCToolBarsCustomizeDialog::AddMenu](#addmenu)|Carica un menu di scelta dal risorse e chiama [CMFCToolBarsCustomizeDialog::AddMenuCommands](#addmenucommands) per aggiungere tale menu all'elenco di comandi nella **comandi** pagina.|  
-|`CMFCToolBarsCustomizeDialog::` [CMFCToolBarsCustomizeDialog::AddMenuCommands](#addmenucommands)|Carica un menu di scelta dal risorse e chiama [CMFCToolBarsCustomizeDialog::AddMenuCommands](#addmenucommands) per aggiungere tale menu all'elenco di comandi nella **comandi** pagina.|  
-|`CMFCToolBarsCustomizeDialog::` [CMFCToolBarsCustomizeDialog::AddToolBar](#addtoolbar)|Carica una barra degli strumenti dalle risorse. Quindi, per ogni comando nel menu chiama il [CMFCToolBarsCustomizeDialog::AddButton](#addbutton) per inserire un pulsante nell'elenco di comandi sul **comandi** pagina nella categoria specificata.|  
-|`CMFCToolBarsCustomizeDialog::` [CMFCToolBarsCustomizeDialog::Create](#create)|Consente di visualizzare il **personalizzazione** finestra di dialogo.|  
+|`CMFCToolBarsCustomizeDialog::` [CMFCToolBarsCustomizeDialog::AddButton](#addbutton)|Inserisce un pulsante della barra degli strumenti nell'elenco di comandi nel **comandi** pagina|  
+|`CMFCToolBarsCustomizeDialog::` [CMFCToolBarsCustomizeDialog::AddMenu](#addmenu)|Carica un menu di scelta dalle risorse e le chiamate [CMFCToolBarsCustomizeDialog::AddMenuCommands](#addmenucommands) per aggiungere tale menu per l'elenco dei comandi nella **comandi** pagina.|  
+|`CMFCToolBarsCustomizeDialog::` [CMFCToolBarsCustomizeDialog::AddMenuCommands](#addmenucommands)|Carica un menu di scelta dalle risorse e le chiamate [CMFCToolBarsCustomizeDialog::AddMenuCommands](#addmenucommands) per aggiungere tale menu per l'elenco dei comandi nella **comandi** pagina.|  
+|`CMFCToolBarsCustomizeDialog::` [CMFCToolBarsCustomizeDialog::AddToolBar](#addtoolbar)|Carica una barra degli strumenti dalle risorse. Quindi, per ogni comando nelle chiamate menu la [CMFCToolBarsCustomizeDialog::AddButton](#addbutton) metodo per inserire un pulsante nell'elenco di comandi nel **comandi** pagina nella categoria specificata.|  
+|`CMFCToolBarsCustomizeDialog::` [CMFCToolBarsCustomizeDialog::Create](#create)|Consente di visualizzare il **personalizzazione** nella finestra di dialogo.|  
 |`CMFCToolBarsCustomizeDialog::EnableTools`|Riservato per utilizzi futuri.|  
-|`CMFCToolBarsCustomizeDialog::` [CMFCToolBarsCustomizeDialog::EnableUserDefinedToolbars](#enableuserdefinedtoolbars)|Abilita o disabilita la creazione di nuove barre degli strumenti utilizzando il **Personalizza** finestra di dialogo.|  
-|[CMFCToolBarsCustomizeDialog::FillAllCommandsList](#fillallcommandslist)|Popola l'oggetto specificato `CListBox` oggetto con i comandi nel **tutti i comandi** categoria.|  
-|[CMFCToolBarsCustomizeDialog::FillCategoriesComboBox](#fillcategoriescombobox)|Popola l'oggetto specificato `CComboBox` oggetto con il nome di ogni categoria di comando nel **Personalizza** finestra di dialogo.|  
-|[CMFCToolBarsCustomizeDialog::FillCategoriesListBox](#fillcategorieslistbox)|Popola l'oggetto specificato `CListBox` oggetto con il nome di ogni categoria di comando nel **Personalizza** finestra di dialogo.|  
-|[CMFCToolBarsCustomizeDialog::GetCommandName](#getcommandname)|Recupera il nome associato con l'ID di comando specificato.|  
-|[CMFCToolBarsCustomizeDialog::GetCountInCategory](#getcountincategory)|Recupera il numero di elementi che hanno un'etichetta di testo specificato dall'elenco fornito.|  
-|[CMFCToolBarsCustomizeDialog::GetFlags](#getflags)|Recupera il set di flag che influenzano il comportamento della finestra di dialogo.|  
-|`CMFCToolBarsCustomizeDialog::GetThisClass`|Usato dal framework per ottenere un puntatore per il [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) oggetto associato a questo tipo di classe.|  
-|`CMFCToolBarsCustomizeDialog::` [CMFCToolBarsCustomizeDialog::OnEditToolbarMenuImage](#onedittoolbarmenuimage)|Avvia un editor di immagini in modo che un utente può personalizzare un'icona dell'elemento pulsante o menu della barra degli strumenti.|  
+|`CMFCToolBarsCustomizeDialog::` [CMFCToolBarsCustomizeDialog::EnableUserDefinedToolbars](#enableuserdefinedtoolbars)|Abilita o disabilita la creazione di nuove barre degli strumenti tramite il **Personalizza** nella finestra di dialogo.|  
+|[CMFCToolBarsCustomizeDialog::FillAllCommandsList](#fillallcommandslist)|Popola l'oggetto specificato `CListBox` oggetto con i comandi di **tutti i comandi** categoria.|  
+|[CMFCToolBarsCustomizeDialog::FillCategoriesComboBox](#fillcategoriescombobox)|Popola l'oggetto specificato `CComboBox` oggetto con il nome di ogni categoria di comandi nel **Personalizza** nella finestra di dialogo.|  
+|[CMFCToolBarsCustomizeDialog::FillCategoriesListBox](#fillcategorieslistbox)|Popola l'oggetto specificato `CListBox` oggetto con il nome di ogni categoria di comandi nel **Personalizza** nella finestra di dialogo.|  
+|[CMFCToolBarsCustomizeDialog::GetCommandName](#getcommandname)|Recupera il nome associato con l'ID del comando specificato.|  
+|[CMFCToolBarsCustomizeDialog::GetCountInCategory](#getcountincategory)|Recupera il numero di elementi nell'elenco fornito con un'etichetta di testo specificato.|  
+|[CMFCToolBarsCustomizeDialog::GetFlags](#getflags)|Recupera il set di flag che influiscono sul comportamento della finestra di dialogo.|  
+|`CMFCToolBarsCustomizeDialog::GetThisClass`|Utilizzato dal framework per ottenere un puntatore per il [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) oggetto associato a questo tipo di classe.|  
+|`CMFCToolBarsCustomizeDialog::` [CMFCToolBarsCustomizeDialog::OnEditToolbarMenuImage](#onedittoolbarmenuimage)|Avvia un editor di immagini in modo che un utente può personalizzare un'icona di elemento pulsante o menu barra degli strumenti.|  
 |[CMFCToolBarsCustomizeDialog::OnInitDialog](#oninitdialog)|Esegue l'override per aumentare l'inizializzazione della finestra delle proprietà. (Esegue l'override [CPropertySheet:: OnInitDialog](../../mfc/reference/cpropertysheet-class.md#oninitdialog).)|  
 |[CMFCToolBarsCustomizeDialog::PostNcDestroy](#postncdestroy)|Chiamato dal framework dopo che la finestra è stata eliminata. Esegue l'override`CPropertySheet::PostNcDestroy`.|  
 |`CMFCToolBarsCustomizeDialog::` [CMFCToolBarsCustomizeDialog::RemoveButton](#removebutton)|Rimuove il pulsante con l'ID di comando specificato dalla categoria specificata, o di tutte le categorie.|  
 |`CMFCToolBarsCustomizeDialog::` [CMFCToolBarsCustomizeDialog::RenameCategory](#renamecategory)|Rinomina una categoria nella casella di riepilogo delle categorie nel **comandi** scheda.|  
-|`CMFCToolBarsCustomizeDialog::` [CMFCToolBarsCustomizeDialog::ReplaceButton](#replacebutton)|Sostituisce un pulsante nell'elenco dei comandi nella **comandi** scheda con un nuovo oggetto pulsante della barra degli strumenti.|  
-|`CMFCToolBarsCustomizeDialog::` [CMFCToolBarsCustomizeDialog::SetUserCategory](#setusercategory)|Aggiunge una categoria all'elenco di categorie che verrà visualizzato nella **comandi** scheda.|  
+|`CMFCToolBarsCustomizeDialog::` [CMFCToolBarsCustomizeDialog::ReplaceButton](#replacebutton)|Sostituisce un pulsante nell'elenco di comandi nel **comandi** scheda con un nuovo oggetto pulsante della barra degli strumenti.|  
+|`CMFCToolBarsCustomizeDialog::` [CMFCToolBarsCustomizeDialog::SetUserCategory](#setusercategory)|Aggiunge una categoria all'elenco di categorie che verranno visualizzate sul **comandi** scheda.|  
   
 ### <a name="protected-methods"></a>Metodi protetti  
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|`CMFCToolBarsCustomizeDialog::` [CMFCToolBarsCustomizeDialog::CheckToolsValidity](#checktoolsvalidity)|Chiamato dal framework per determinare se l'elenco di strumenti definiti dall'utente è valido.|  
-|`CMFCToolBarsCustomizeDialog::` [CMFCToolBarsCustomizeDialog::OnAfterChangeTool](#onafterchangetool)|Chiamato dal framework quando cambiano le proprietà di uno strumento definito dall'utente.|  
+|`CMFCToolBarsCustomizeDialog::` [CMFCToolBarsCustomizeDialog::CheckToolsValidity](#checktoolsvalidity)|Chiamato dal framework per determinare se l'elenco degli strumenti definite dall'utente è valido.|  
+|`CMFCToolBarsCustomizeDialog::` [CMFCToolBarsCustomizeDialog::OnAfterChangeTool](#onafterchangetool)|Chiamato dal framework quando le proprietà di uno strumento definito dall'utente vengono modificate.|  
 |`CMFCToolBarsCustomizeDialog::` [CMFCToolBarsCustomizeDialog::OnAssignKey](#onassignkey)|Determina se un collegamento di mappatura della tastiera specificato può essere assegnato a un'azione.|  
 |`CMFCToolBarsCustomizeDialog::` [CMFCToolBarsCustomizeDialog::OnBeforeChangeTool](#onbeforechangetool)|Determina se uno strumento definito dall'utente può essere modificato.|  
 |`CMFCToolBarsCustomizeDialog::` [CMFCToolBarsCustomizeDialog::OnInitToolsPage](#oninittoolspage)|Chiamato dal framework quando l'utente sceglie il **strumenti** scheda viene richiesto.|  
   
 ## <a name="remarks"></a>Note  
- Per visualizzare il **Personalizza** finestra di dialogo casella, creare un `CMFCToolBarsCustomizeDialog` oggetto e chiamare il [CMFCToolBarsCustomizeDialog::Create](#create) metodo.  
+ Per visualizzare il **Personalizza** finestra di dialogo casella, creare un `CMFCToolBarsCustomizeDialog` oggetto e chiamare il [CMFCToolBarsCustomizeDialog::Create](#create) (metodo).  
   
- Mentre il **Personalizza** finestra di dialogo è attiva, l'applicazione funziona in modalità speciale che limita l'utente per le attività di personalizzazione.  
+ Mentre il **Personalizza** nella finestra di dialogo è attiva, il funzionamento dell'applicazione in modalità speciale che limita l'utente per le attività di personalizzazione.  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene illustrato come utilizzare i vari metodi nella `CMFCToolBarsCustomizeDialog` classe. Nell'esempio viene illustrato come sostituire un pulsante della barra degli strumenti nella casella di riepilogo di comandi nel **comandi** pagina, abilitare la creazione di nuove barre degli strumenti tramite il **Personalizza** finestra di dialogo e visualizzare il  **Personalizzazione** finestra di dialogo. Questo frammento di codice fa parte il [esempio dimostrativo di inserimento/espulsione](../../visual-cpp-samples.md).  
+ Nell'esempio seguente viene illustrato come utilizzare i vari metodi nel `CMFCToolBarsCustomizeDialog` classe. Nell'esempio viene illustrato come sostituire un pulsante della barra degli strumenti nella casella di riepilogo dei comandi nel **comandi** pagina, abilitare la creazione di nuove barre degli strumenti tramite il **Personalizza** nella finestra di dialogo e visualizzare il  **Personalizzazione** nella finestra di dialogo. Questo frammento di codice fa parte di [esempio dimostrativo di inserimento/espulsione](../../visual-cpp-samples.md).  
   
  [!code-cpp[NVC_MFC_IEDemo#4](../../mfc/reference/codesnippet/cpp/cmfctoolbarscustomizedialog-class_1.cpp)]  
   
@@ -122,7 +122,7 @@ class CMFCToolBarsCustomizeDialog : public CPropertySheet
  **Intestazione:** afxToolBarsCustomizeDialog.h  
   
 ##  <a name="addbutton"></a>  CMFCToolBarsCustomizeDialog::AddButton  
- Inserisce un pulsante della barra degli strumenti nell'elenco di comandi sul **comandi** pagina.  
+ Inserisce un pulsante della barra degli strumenti nell'elenco di comandi nel **comandi** pagina.  
   
 ```  
 void AddButton(
@@ -138,33 +138,33 @@ void AddButton(
   
 ### <a name="parameters"></a>Parametri  
  [in] *uiCategoryId*  
- Specifica l'ID di categoria in cui inserire il pulsante.  
+ Specifica l'ID della categoria in cui inserire il pulsante.  
   
  [in] *pulsante*  
  Specifica il pulsante da inserire.  
   
  [in] *iInsertBefore*  
- Specifica l'indice in base zero di un pulsante della barra degli strumenti prima della quale viene inserito il pulsante.  
+ Specifica l'indice in base zero di un pulsante della barra degli strumenti prima del quale viene inserito il pulsante.  
   
  [in] *lpszCategory*  
- Specifica la stringa di categoria per il pulsante Inserisci.  
+ Specifica la stringa di categoria per l'inserimento del pulsante.  
   
 ### <a name="remarks"></a>Note  
- Il `AddButton` metodo ignora i pulsanti con l'ID di comando standard (ad esempio ID_FILE_MRU_FILE1), i comandi che non sono consentiti (vedere [CMFCToolBar::IsCommandPermitted](../../mfc/reference/cmfctoolbar-class.md#iscommandpermitted)) e fittizio pulsanti.  
+ Il `AddButton` metodo ignora i pulsanti con l'ID di comando standard (ad esempio ID_FILE_MRU_FILE1), i comandi che non sono consentite (vedere [CMFCToolBar::IsCommandPermitted](../../mfc/reference/cmfctoolbar-class.md#iscommandpermitted)) e i pulsanti fittizio.  
   
- Questo metodo crea un nuovo oggetto dello stesso tipo come `button` (in genere un [CMFCToolBarButton classe](../../mfc/reference/cmfctoolbarbutton-class.md)) utilizzando la classe di runtime del pulsante. Chiama poi [CMFCToolBarButton::CopyFrom](../../mfc/reference/cmfctoolbarbutton-class.md#copyfrom) per copiare i membri di dati del pulsante e inserisce la copia nella categoria specificata.  
+ Questo metodo crea un nuovo oggetto dello stesso tipo come `button` (in genere una [classe CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md)) usando la classe di runtime del pulsante. Chiama poi [CMFCToolBarButton::CopyFrom](../../mfc/reference/cmfctoolbarbutton-class.md#copyfrom) per copiare i membri di dati del pulsante e inserisce la copia nella categoria specificata.  
   
- Quando viene inserito il nuovo pulsante, viene assegnato il `OnAddToCustomizePage` notifica.  
+ Quando viene inserito il nuovo pulsante, riceve il `OnAddToCustomizePage` notifica.  
   
  Se `iInsertBefore` è -1, il pulsante viene aggiunto all'elenco di categorie; in caso contrario, viene inserito prima dell'elemento con l'indice specificato.  
   
 ### <a name="example"></a>Esempio  
- Nell'esempio seguente viene illustrato come utilizzare il `AddButton` metodo la `CMFCToolBarsCustomizeDialog` classe. Questo frammento di codice fa parte il [esempio Slider](../../visual-cpp-samples.md).  
+ L'esempio seguente illustra come usare il `AddButton` metodo del `CMFCToolBarsCustomizeDialog` classe. Questo frammento di codice fa parte di [esempio di dispositivo di scorrimento](../../visual-cpp-samples.md).  
   
  [!code-cpp[NVC_MFC_Slider#1](../../mfc/reference/codesnippet/cpp/cmfctoolbarscustomizedialog-class_2.cpp)]  
   
 ##  <a name="addmenu"></a>  CMFCToolBarsCustomizeDialog::AddMenu  
- Carica un menu di scelta dal risorse e chiama [CMFCToolBarsCustomizeDialog::AddMenuCommands](#addmenucommands) per aggiungere tale menu all'elenco di comandi nella **comandi** pagina.  
+ Carica un menu di scelta dalle risorse e le chiamate [CMFCToolBarsCustomizeDialog::AddMenuCommands](#addmenucommands) per aggiungere tale menu per l'elenco dei comandi nella **comandi** pagina.  
   
 ```  
 BOOL AddMenu(UINT uiMenuResId);
@@ -175,13 +175,13 @@ BOOL AddMenu(UINT uiMenuResId);
  Specifica l'ID di risorsa di un menu da caricare.  
   
 ### <a name="return-value"></a>Valore restituito  
- `TRUE` Se è stato aggiunto un menu; in caso contrario `FALSE`.  
+ TRUE se è stato aggiunto un menu di scelta; in caso contrario, FALSE.  
   
 ### <a name="remarks"></a>Note  
- Nella chiamata a `AddMenuCommands`, *bPopup* è `FALSE`. Di conseguenza, tale metodo non aggiunge voci di menu che contengono i sottomenu all'elenco dei comandi. Il metodo aggiunge le voci di menu nel sottomenu all'elenco dei comandi.  
+ Nella chiamata a `AddMenuCommands`, *bPopup* è FALSE. Di conseguenza, tale metodo non aggiunge voci di menu che includono sottomenu all'elenco dei comandi. Questo metodo aggiungere le voci di menu nel sottomenu all'elenco dei comandi.  
   
 ##  <a name="addmenucommands"></a>  CMFCToolBarsCustomizeDialog::AddMenuCommands  
- Aggiunge gli elementi all'elenco dei comandi di **comandi** pagina per rappresentare tutti gli elementi nel menu di scelta specificato.  
+ Aggiunge elementi all'elenco di comandi nel **comandi** pagina per rappresentare tutti gli elementi nel menu di scelta specificato.  
   
 ```  
 void AddMenuCommands(
@@ -196,21 +196,21 @@ void AddMenuCommands(
  Puntatore a oggetto CMenu da aggiungere.  
   
  [in] *bPopup*  
- Specifica se inserire le voci di menu di scelta rapida all'elenco dei comandi.  
+ Specifica se inserire le voci di menu popup all'elenco dei comandi.  
   
  [in] *lpszCategory*  
  Il nome della categoria per inserire il menu di scelta.  
   
  [in] *lpszMenuPath*  
- Un prefisso che viene aggiunto al nome quando il comando è racchiusa il **tutte le categorie** elenco.  
+ Un prefisso che viene aggiunto al nome quando il comando viene visualizzato nel **tutte le categorie** elenco.  
   
 ### <a name="remarks"></a>Note  
- Il `AddMenuCommands` metodo esegue un ciclo in tutte le voci di menu *pMenu*. Per ogni voce di menu che non contiene un sottomenu, questo metodo crea un' [classe CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md) oggetto e chiama il [CMFCToolBarsCustomizeDialog::AddButton](#addbutton) metodo per aggiungere la voce di menu come una barra degli strumenti pulsante per l'elenco di comandi sul **comandi** pagina. I separatori vengono ignorati in questo processo.  
+ Il `AddMenuCommands` metodo esegue un ciclo in tutte le voci di menu *pMenu*. Per ogni voce di menu che non contiene un sottomenu, questo metodo crea un' [classe CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md) oggetto e chiama le [CMFCToolBarsCustomizeDialog::AddButton](#addbutton) per aggiungere la voce di menu come una barra degli strumenti pulsante per l'elenco dei comandi di **comandi** pagina. I separatori vengono ignorati in questo processo.  
   
- Se *bPopup* viene `TRUE`, per ogni voce di menu che contiene un sottomenu questo metodo crea un [classe CMFCToolBarMenuButton](../../mfc/reference/cmfctoolbarmenubutton-class.md) dell'oggetto e lo inserisce l'elenco di comandi chiamando `AddButton` . In caso contrario, le voci di menu che contengono i sottomenu non vengono visualizzate nell'elenco dei comandi. In entrambi i casi, quando `AddMenuCommands` rileva una voce di menu con un sottomenu chiama se stessa in modo ricorsivo, passando un puntatore al sottomenu come il *pMenu* parametro e aggiungendo l'etichetta del sottomenu in *lpszMenuPath*.  
+ Se *bPopup* è TRUE, per ogni voce di menu che contiene un sottomenu questo metodo crea un' [classe CMFCToolBarMenuButton](../../mfc/reference/cmfctoolbarmenubutton-class.md) dell'oggetto e la inserisce nell'elenco di comandi chiamando `AddButton`. In caso contrario, le voci di menu che includono sottomenu non vengono visualizzate nell'elenco dei comandi. In entrambi i casi, quando `AddMenuCommands` rileva una voce di menu con un sottomenu chiama se stessa in modo ricorsivo, passando un puntatore al sottomenu come i *pMenu* parametro e aggiungendo l'etichetta del sottomenu al *lpszMenuPath*.  
   
 ##  <a name="addtoolbar"></a>  CMFCToolBarsCustomizeDialog::AddToolBar  
- Carica una barra degli strumenti dalle risorse. Quindi, per ogni comando nel menu chiama il [CMFCToolBarsCustomizeDialog::AddButton](#addbutton) per inserire un pulsante nell'elenco di comandi sul **comandi** pagina nella categoria specificata.  
+ Carica una barra degli strumenti dalle risorse. Quindi, per ogni comando nelle chiamate menu la [CMFCToolBarsCustomizeDialog::AddButton](#addbutton) metodo per inserire un pulsante nell'elenco di comandi nel **comandi** pagina nella categoria specificata.  
   
 ```  
 BOOL AddToolBar(
@@ -224,27 +224,27 @@ BOOL AddToolBar(
   
 ### <a name="parameters"></a>Parametri  
  [in] *uiCategoryId*  
- Specifica l'ID risorsa della categoria per aggiungere la barra degli strumenti per.  
+ Specifica l'ID risorsa della categoria per aggiungere la barra degli strumenti.  
   
  [in] *uiToolbarResId*  
- Specifica l'ID della risorsa di una barra degli strumenti cui comandi vengono inseriti nell'elenco dei comandi.  
+ Specifica l'ID di risorsa di una barra degli strumenti i cui comandi vengono inseriti nell'elenco dei comandi.  
   
  [in] *lpszCategory*  
  Specifica il nome della categoria a cui aggiungere la barra degli strumenti.  
   
 ### <a name="return-value"></a>Valore restituito  
- `TRUE` Se il metodo ha esito positivo; in caso contrario `FALSE`.  
+ TRUE se il metodo ha esito positivo. in caso contrario, FALSE.  
   
 ### <a name="example"></a>Esempio  
- Nell'esempio seguente viene illustrato come utilizzare il `AddToolBar` metodo la `CMFCToolBarsCustomizeDialog` classe. Questo frammento di codice fa parte dell' [esempio di Word Pad](../../visual-cpp-samples.md).  
+ L'esempio seguente illustra come usare il `AddToolBar` metodo nel `CMFCToolBarsCustomizeDialog` classe. Questo frammento di codice fa parte dell' [esempio di Word Pad](../../visual-cpp-samples.md).  
   
  [!code-cpp[NVC_MFC_WordPad#11](../../mfc/reference/codesnippet/cpp/cmfctoolbarscustomizedialog-class_3.cpp)]  
   
 ### <a name="remarks"></a>Note  
- Il controllo viene utilizzato per rappresentare ogni comando è un [classe CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md) oggetto. Dopo aver aggiunto la barra degli strumenti, è possibile sostituire il pulsante con un controllo di un tipo derivato mediante la chiamata [CMFCToolBarsCustomizeDialog::ReplaceButton](#replacebutton).  
+ Il controllo che viene usato per rappresentare ogni comando è un [classe CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md) oggetto. Dopo aver aggiunto la barra degli strumenti, è possibile sostituire il pulsante con un controllo di un tipo derivato chiamando [CMFCToolBarsCustomizeDialog::ReplaceButton](#replacebutton).  
   
 ##  <a name="checktoolsvalidity"></a>  CMFCToolBarsCustomizeDialog::CheckToolsValidity  
- Verifica la validità dell'elenco degli strumenti dell'utente.  
+ Verifica la validità dell'elenco di strumenti dell'utente.  
   
 ```  
 virtual BOOL CheckToolsValidity(const CObList& lstTools);
@@ -255,12 +255,12 @@ virtual BOOL CheckToolsValidity(const CObList& lstTools);
  Elenco di strumenti definiti dall'utente da controllare.  
   
 ### <a name="return-value"></a>Valore restituito  
- Restituisce `TRUE` se l'elenco degli strumenti definiti dall'utente è valido; in caso contrario `FALSE`. L'implementazione predefinita restituisce sempre `TRUE`.  
+ Restituisce TRUE se l'elenco degli strumenti definite dall'utente è valido. in caso contrario, FALSE. L'implementazione predefinita restituisce sempre TRUE.  
   
 ### <a name="remarks"></a>Note  
- Il framework chiama questo metodo per verificare la validità di oggetti che rappresentano strumenti definiti dall'utente restituiti da [CMFCToolBarsCustomizeDialog::CheckToolsValidity](#checktoolsvalidity).  
+ Il framework chiama questo metodo per verificare la validità di oggetti che rappresentano gli strumenti definiti dall'utente restituiti da [CMFCToolBarsCustomizeDialog::CheckToolsValidity](#checktoolsvalidity).  
   
- Eseguire l'override di `CheckToolsValidity` metodo in una classe derivata da `CMFCToolBarsCustomizeDialog` se si desidera convalidare gli strumenti utente prima che l'utente chiude la finestra di dialogo. Se questo metodo restituisce `FALSE` quando l'utente sceglie il **Chiudi** pulsante nell'angolo superiore destro della finestra di dialogo o sul pulsante con etichettata **Chiudi** nell'angolo inferiore destro della finestra di dialogo, il finestra di dialogo consente di visualizzare il **strumenti** scheda anziché chiusura. Se questo metodo restituisce `FALSE` quando l'utente fa clic su una scheda per passare dal **strumenti** scheda, non si verifica la navigazione. È necessario visualizzare una finestra di messaggio appropriato per informare l'utente del problema che ha causato esito negativo della convalida.  
+ Eseguire l'override di `CheckToolsValidity` metodo in una classe derivata da `CMFCToolBarsCustomizeDialog` se si desidera convalidare gli strumenti dell'utente prima che l'utente chiude la finestra di dialogo. Se questo metodo restituisce FALSE quando l'utente fa clic su uno di **Close** pulsante nell'angolo superiore destro della finestra di dialogo o sul pulsante con etichettata **Chiudi** nell'angolo inferiore destro della finestra di dialogo, la finestra di dialogo Consente di visualizzare il **strumenti** scheda invece di chiusura. Se questo metodo restituisce FALSE quando l'utente fa clic su una scheda a esce dal **strumenti** scheda non si verifica la navigazione. Si dovrebbe visualizzare una finestra di messaggio appropriato per informare l'utente del problema che ha causato esito negativo della convalida.  
   
 ##  <a name="cmfctoolbarscustomizedialog"></a>  CMFCToolBarsCustomizeDialog::CMFCToolBarsCustomizeDialog  
  Costruisce un oggetto `CMFCToolBarsCustomizeDialog`.  
@@ -275,58 +275,58 @@ CMFCToolBarsCustomizeDialog(
   
 ### <a name="parameters"></a>Parametri  
  [in] *pWndParentFrame*  
- Un puntatore al frame padre. Questo parametro non deve essere `NULL`.  
+ Puntatore al frame padre. Questo parametro non deve essere NULL.  
   
  [in] *bAutoSetFromMenus*  
- Un valore booleano che specifica se aggiungere i comandi di menu da tutti i menu per l'elenco di comandi sul **comandi** pagina. Se questo parametro è `TRUE`, vengono aggiunti i comandi di menu. In caso contrario, non vengono aggiunti i comandi di menu.  
+ Valore booleano che specifica se aggiungere i comandi di menu da tutti i menu per l'elenco di comandi nel **comandi** pagina. Se questo parametro è TRUE, vengono aggiunti i comandi di menu. In caso contrario, non vengono aggiunti i comandi di menu.  
   
  [in] *uiFlags*  
- Una combinazione di flag che influenzano il comportamento della finestra di dialogo. Questo parametro può essere uno o più dei seguenti valori:  
+ Una combinazione di flag che influiscono sul comportamento della finestra di dialogo. Questo parametro può essere uno o più dei valori seguenti:  
   
-- `AFX_CUSTOMIZE_MENU_SHADOWS`  
+- AFX_CUSTOMIZE_MENU_SHADOWS  
   
-- `AFX_CUSTOMIZE_TEXT_LABELS`  
+- AFX_CUSTOMIZE_TEXT_LABELS  
   
-- `AFX_CUSTOMIZE_MENU_ANIMATIONS`  
+- AFX_CUSTOMIZE_MENU_ANIMATIONS  
   
-- `AFX_CUSTOMIZE_NOHELP`  
+- AFX_CUSTOMIZE_NOHELP  
   
-- `AFX_CUSTOMIZE_CONTEXT_HELP`  
+- AFX_CUSTOMIZE_CONTEXT_HELP  
   
-- `AFX_CUSTOMIZE_NOTOOLS`  
+- AFX_CUSTOMIZE_NOTOOLS  
   
-- `AFX_CUSTOMIZE_MENUAMPERS`  
+- AFX_CUSTOMIZE_MENUAMPERS  
   
-- `AFX_CUSTOMIZE_NO_LARGE_ICONS`  
+- AFX_CUSTOMIZE_NO_LARGE_ICONS  
   
  [in] *plistCustomPages*  
- Un puntatore a un elenco di `CRuntimeClass` oggetti che specificano altre pagine personalizzate.  
+ Un puntatore a un elenco di `CRuntimeClass` oggetti che specificano le pagine personalizzate aggiuntive.  
   
 ### <a name="remarks"></a>Note  
- Il *plistCustomPages* parametro fa riferimento all'elenco di `CRuntimeClass` oggetti che specificano altre pagine personalizzate. Il costruttore aggiunge altre pagine alla finestra di dialogo utilizzando il [CRuntimeClass::CreateObject](../../mfc/reference/cruntimeclass-structure.md#createobject) metodo. Vedere l'esempio CustomPages per un esempio che consente di aggiungere altre pagine per il **Personalizza** finestra di dialogo.  
+ Il *plistCustomPages* parametro fa riferimento all'elenco di `CRuntimeClass` oggetti che specificano le pagine personalizzate aggiuntive. Il costruttore aggiunge altre pagine alla finestra di dialogo tramite il [CRuntimeClass::CreateObject](../../mfc/reference/cruntimeclass-structure.md#createobject) (metodo). Vedere l'esempio CustomPages per un esempio che consente di aggiungere altre pagine per il **Personalizza** nella finestra di dialogo.  
   
- Per ulteriori informazioni sui valori che è possibile passare il *uiFlags* parametro, vedere [CMFCToolBarsCustomizeDialog::GetFlags](#getflags).  
+ Per altre informazioni sui valori che è possibile passare il *uiFlags* parametro, vedere [CMFCToolBarsCustomizeDialog::GetFlags](#getflags).  
   
 ### <a name="example"></a>Esempio  
- Nell'esempio seguente viene illustrato come costruire un oggetto del `CMFCToolBarsCustomizeDialog` classe. Questo frammento di codice fa parte il [esempio Custom Pages](../../visual-cpp-samples.md).  
+ Nell'esempio seguente viene illustrato come costruire un oggetto del `CMFCToolBarsCustomizeDialog` classe. Questo frammento di codice fa parte il [esempio di pagine personalizzate](../../visual-cpp-samples.md).  
   
  [!code-cpp[NVC_MFC_CustomPages#3](../../mfc/reference/codesnippet/cpp/cmfctoolbarscustomizedialog-class_4.cpp)]  
   
 ##  <a name="create"></a>  CMFCToolBarsCustomizeDialog::Create  
- Consente di visualizzare il **personalizzazione** finestra di dialogo.  
+ Consente di visualizzare il **personalizzazione** nella finestra di dialogo.  
   
 ```  
 virtual BOOL Create();
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- `TRUE` Se la finestra delle proprietà di personalizzazione viene creato correttamente. in caso contrario `FALSE`.  
+ TRUE se la finestra delle proprietà di personalizzazione viene creato correttamente. in caso contrario, FALSE.  
   
 ### <a name="remarks"></a>Note  
  Chiamare il `Create` metodo solo dopo l'inizializzazione completa della classe.  
   
 ##  <a name="enableuserdefinedtoolbars"></a>  CMFCToolBarsCustomizeDialog::EnableUserDefinedToolbars  
- Abilita o disabilita la creazione di nuove barre degli strumenti utilizzando il **Personalizza** finestra di dialogo.  
+ Abilita o disabilita la creazione di nuove barre degli strumenti tramite il **Personalizza** nella finestra di dialogo.  
   
 ```  
 void EnableUserDefinedToolbars(BOOL bEnable=TRUE);
@@ -334,15 +334,15 @@ void EnableUserDefinedToolbars(BOOL bEnable=TRUE);
   
 ### <a name="parameters"></a>Parametri  
  [in] *bAttivare il*  
- `TRUE` Per abilitare barre degli strumenti definite dall'utente; `FALSE` per disabilitare le barre degli strumenti.  
+ TRUE per abilitare barre degli strumenti definite dall'utente; FALSE per disabilitare le barre degli strumenti.  
   
 ### <a name="remarks"></a>Note  
- Se *bAttivare il* viene `TRUE`, il **nuovo**, **rinominare** e **Elimina** pulsanti vengono visualizzati nel **barre degli strumenti**  pagina.  
+ Se *bAttivare il* è TRUE, il **New**, **rinominare** e **Elimina** pulsanti vengono visualizzati nei **barre degli strumenti** pagina.  
   
- Per impostazione predefinita, oppure se *bAttivare il* è `FALSE`, questi pulsanti non vengono visualizzati e l'utente non è possibile definire nuove barre degli strumenti.  
+ Per impostazione predefinita, oppure se *bAttivare il* è FALSE, questi pulsanti non vengono visualizzati e l'utente non è possibile definire nuove barre degli strumenti.  
   
 ##  <a name="fillallcommandslist"></a>  CMFCToolBarsCustomizeDialog::FillAllCommandsList  
- Popola l'oggetto specificato `CListBox` oggetto con i comandi nel **tutti i comandi** categoria.  
+ Popola l'oggetto specificato `CListBox` oggetto con i comandi di **tutti i comandi** categoria.  
   
 ```  
 virtual void FillAllCommandsList(CListBox& wndListOfCommands) const;  
@@ -355,12 +355,12 @@ virtual void FillAllCommandsList(CListBox& wndListOfCommands) const;
 ### <a name="remarks"></a>Note  
  Il **tutti i comandi** categoria contiene i comandi di tutte le categorie. Il [CMFCToolBarsCustomizeDialog::AddButton](#addbutton) metodo aggiunge il comando associato con il pulsante specificato per il **tutti i comandi** categoria per l'utente.  
   
- Questo metodo cancella il contenuto dell'oggetto fornito `CListBox` oggetto prima di popolarlo con i comandi nel **tutti i comandi** categoria.  
+ Questo metodo cancella il contenuto dell'oggetto fornito `CListBox` oggetto prima popolarlo con i comandi di **tutti i comandi** categoria.  
   
  Il `CMFCMousePropertyPage` classe utilizza questo metodo per popolare la casella di riepilogo fare doppio clic su eventi.  
   
 ##  <a name="fillcategoriescombobox"></a>  CMFCToolBarsCustomizeDialog::FillCategoriesComboBox  
- Popola l'oggetto specificato `CComboBox` oggetto con il nome di ogni categoria di comando nel **Personalizza** finestra di dialogo.  
+ Popola l'oggetto specificato `CComboBox` oggetto con il nome di ogni categoria di comandi nel **Personalizza** nella finestra di dialogo.  
   
 ```  
 void FillCategoriesComboBox(
@@ -373,19 +373,19 @@ void FillCategoriesComboBox(
  Un riferimento al `CComboBox` oggetto da popolare.  
   
  [in] *bAddEmpty*  
- Valore booleano che specifica se aggiungere categorie alla casella combinata che non contengono i comandi. Se questo parametro è `TRUE`, le categorie vuote vengono aggiunti alla casella combinata. In caso contrario, le categorie vuote non vengono aggiunti.  
+ Valore booleano che specifica se aggiungere categorie alla casella combinata privi di comandi. Se questo parametro è TRUE, vuote categorie vengono aggiunti alla casella combinata. In caso contrario, le categorie vuote non vengono aggiunti.  
   
 ### <a name="remarks"></a>Note  
- Questo metodo è simile ai [CMFCToolBarsCustomizeDialog::FillCategoriesListBox](#fillcategorieslistbox) metodo ad eccezione del fatto che questo metodo funziona con un `CComboBox` oggetto.  
+ Questo metodo è simile al [CMFCToolBarsCustomizeDialog::FillCategoriesListBox](#fillcategorieslistbox) metodo ad eccezione del fatto che questo metodo funziona con un `CComboBox` oggetto.  
   
- Questo metodo non cancella il contenuto del `CComboBox` oggetto prima popolarlo. Garantisce che il **tutti i comandi** categoria è l'elemento finale nella casella combinata.  
+ Questo metodo non cancella il contenuto del `CComboBox` oggetto prima del suo popolamento. Garantisce che il **tutti i comandi** categoria è l'elemento finale della casella combinata.  
   
- È possibile aggiungere nuove categorie di comando utilizzando il [CMFCToolBarsCustomizeDialog::AddButton](#addbutton) metodo. È possibile modificare il nome di una categoria esistente utilizzando il [CMFCToolBarsCustomizeDialog::RenameCategory](#renamecategory) metodo.  
+ È possibile aggiungere nuove categorie di comando usando il [CMFCToolBarsCustomizeDialog::AddButton](#addbutton) (metodo). È possibile modificare il nome di una categoria esistente usando il [CMFCToolBarsCustomizeDialog::RenameCategory](#renamecategory) (metodo).  
   
- Il `CMFCToolBarsKeyboardPropertyPage` e `CMFCKeyMapDialog` classi utilizzano questo metodo per suddividere in categorie di mappatura della tastiera.  
+ Il `CMFCToolBarsKeyboardPropertyPage` e `CMFCKeyMapDialog` classi utilizzano questo metodo per suddividere in categorie le mappature della tastiera.  
   
 ##  <a name="fillcategorieslistbox"></a>  CMFCToolBarsCustomizeDialog::FillCategoriesListBox  
- Popola l'oggetto specificato `CListBox` oggetto con il nome di ogni categoria di comando nel **Personalizza** finestra di dialogo.  
+ Popola l'oggetto specificato `CListBox` oggetto con il nome di ogni categoria di comandi nel **Personalizza** nella finestra di dialogo.  
   
 ```  
 void FillCategoriesListBox(
@@ -398,19 +398,19 @@ void FillCategoriesListBox(
  Un riferimento al `CListBox` oggetto da popolare.  
   
  [in] *bAddEmpty*  
- Valore booleano che specifica se aggiungere categorie per la casella di riepilogo che non contengono i comandi. Se questo parametro è `TRUE`, le categorie vuote vengono aggiunti alla casella di riepilogo. In caso contrario, le categorie vuote non vengono aggiunti.  
+ Valore booleano che specifica se aggiungere categorie nella casella di riepilogo che non dispongono di comandi. Se questo parametro è TRUE, vuote categorie vengono aggiunti alla casella di riepilogo. In caso contrario, le categorie vuote non vengono aggiunti.  
   
 ### <a name="remarks"></a>Note  
- Questo metodo è simile ai [CMFCToolBarsCustomizeDialog::FillCategoriesComboBox](#fillcategoriescombobox) metodo ad eccezione del fatto che questo metodo funziona con un `CListBox` oggetto.  
+ Questo metodo è simile al [CMFCToolBarsCustomizeDialog::FillCategoriesComboBox](#fillcategoriescombobox) metodo ad eccezione del fatto che questo metodo funziona con un `CListBox` oggetto.  
   
- Questo metodo non cancella il contenuto del `CListBox` oggetto prima popolarlo. Garantisce che il **tutti i comandi** categoria è l'elemento finale nella casella di riepilogo.  
+ Questo metodo non cancella il contenuto del `CListBox` oggetto prima del suo popolamento. Garantisce che il **tutti i comandi** categoria è l'elemento finale nella casella di riepilogo.  
   
- È possibile aggiungere nuove categorie di comando utilizzando il [CMFCToolBarsCustomizeDialog::AddButton](#addbutton) metodo. È possibile modificare il nome di una categoria esistente utilizzando il [CMFCToolBarsCustomizeDialog::RenameCategory](#renamecategory) metodo.  
+ È possibile aggiungere nuove categorie di comando usando il [CMFCToolBarsCustomizeDialog::AddButton](#addbutton) (metodo). È possibile modificare il nome di una categoria esistente usando il [CMFCToolBarsCustomizeDialog::RenameCategory](#renamecategory) (metodo).  
   
- Il `CMFCToolBarsCommandsPropertyPage` classe utilizza questo metodo per visualizzare l'elenco di comandi che è associato a ogni categoria di comando.  
+ Il `CMFCToolBarsCommandsPropertyPage` classe utilizza questo metodo per visualizzare l'elenco di comandi che è associato a ogni categoria di comandi.  
   
 ##  <a name="getcommandname"></a>  CMFCToolBarsCustomizeDialog::GetCommandName  
- Recupera il nome associato con l'ID di comando specificato.  
+ Recupera il nome associato con l'ID del comando specificato.  
   
 ```  
 LPCTSTR GetCommandName(UINT uiCmd) const;  
@@ -421,10 +421,10 @@ LPCTSTR GetCommandName(UINT uiCmd) const;
  L'ID del comando da recuperare.  
   
 ### <a name="return-value"></a>Valore restituito  
- Il nome associato all'ID di comando specificata o `NULL` se il comando non esiste.  
+ Il nome che è associato l'ID di comando specificato o NULL se il comando non esiste.  
   
 ##  <a name="getcountincategory"></a>  CMFCToolBarsCustomizeDialog::GetCountInCategory  
- Recupera il numero di elementi che hanno un'etichetta di testo specificato dall'elenco fornito.  
+ Recupera il numero di elementi nell'elenco fornito con un'etichetta di testo specificato.  
   
 ```  
 int GetCountInCategory(
@@ -440,52 +440,52 @@ int GetCountInCategory(
  Un riferimento a un elenco contenente `CMFCToolBarButton` oggetti.  
   
 ### <a name="return-value"></a>Valore restituito  
- Il numero di elementi nell'oggetto fornito elenco cui equals etichetta di testo *lpszItemName*.  
+ Il numero di elementi nell'oggetto fornito è uguale a cui etichetta di testo di elenco *lpszItemName*.  
   
 ### <a name="remarks"></a>Note  
  Ogni elemento nell'elenco di oggetti fornito deve essere di tipo `CMFCToolBarButton`. Questo metodo confronta *lpszItemName* con il [CMFCToolBarButton::m_strText](../../mfc/reference/cmfctoolbarbutton-class.md#m_strtext) (membro dati).  
   
 ##  <a name="getflags"></a>  CMFCToolBarsCustomizeDialog::GetFlags  
- Recupera il set di flag che influenzano il comportamento della finestra di dialogo.  
+ Recupera il set di flag che influiscono sul comportamento della finestra di dialogo.  
   
 ```  
 UINT GetFlags() const;  
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- Il set di flag che influenzano il comportamento della finestra di dialogo.  
+ Il set di flag che influiscono sul comportamento della finestra di dialogo.  
   
 ### <a name="remarks"></a>Note  
- Questo metodo recupera il valore della *uiFlags* parametro passato al costruttore. Il valore restituito può essere uno o più dei seguenti valori:  
+ Questo metodo recupera il valore della *uiFlags* parametro che viene passato al costruttore. Il valore restituito può essere uno o più dei valori seguenti:  
   
- `AFX_CUSTOMIZE_MENU_SHADOWS`  
- Consente all'utente di specificare l'aspetto di ombreggiatura del menu.  
+ AFX_CUSTOMIZE_MENU_SHADOWS  
+ Consente all'utente di specificare l'aspetto dell'ombreggiatura del menu.  
   
- `AFX_CUSTOMIZE_TEXT_LABELS`  
+ AFX_CUSTOMIZE_TEXT_LABELS  
  Consente all'utente di specificare se le etichette di testo vengono visualizzate sotto le immagini dei pulsanti della barra degli strumenti.  
   
- `AFX_CUSTOMIZE_MENU_ANIMATIONS`  
+ AFX_CUSTOMIZE_MENU_ANIMATIONS  
  Consente all'utente di specificare lo stile di animazione del menu.  
   
- `AFX_CUSTOMIZE_NOHELP`  
- Rimuove il pulsante nella finestra di dialogo di personalizzazione.  
+ AFX_CUSTOMIZE_NOHELP  
+ Rimuove il pulsante nella finestra di dialogo personalizzazione.  
   
- `AFX_CUSTOMIZE_CONTEXT_HELP`  
- Abilita il `WS_EX_CONTEXTHELP` dello stile di visualizzazione.  
+ AFX_CUSTOMIZE_CONTEXT_HELP  
+ Abilita lo stile di visualizzazione WS_EX_CONTEXTHELP.  
   
- `AFX_CUSTOMIZE_NOTOOLS`  
+ AFX_CUSTOMIZE_NOTOOLS  
  Rimuove il **strumenti** pagina dalla finestra di dialogo di personalizzazione. Questo flag è valido se l'applicazione usa il `CUserToolsManager` classe.  
   
- `AFX_CUSTOMIZE_MENUAMPERS`  
- Consente di didascalie contenere il carattere e commerciale ( **&**) caratteri.  
+ AFX_CUSTOMIZE_MENUAMPERS  
+ Consente le didascalie dei pulsanti contenere il carattere e commerciale ( **&**) caratteri.  
   
- `AFX_CUSTOMIZE_NO_LARGE_ICONS`  
+ AFX_CUSTOMIZE_NO_LARGE_ICONS  
  Rimuove il **icone grandi** opzione dalla finestra di dialogo di personalizzazione.  
   
- Per ulteriori informazioni sul `WS_EX_CONTEXTHELP` dello stile di visualizzazione, vedere [stili finestra estesi](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles).  
+ Per altre informazioni sullo stile di visualizzazione WS_EX_CONTEXTHELP, vedere [stili finestra estesi](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles).  
   
 ##  <a name="onafterchangetool"></a>  CMFCToolBarsCustomizeDialog::OnAfterChangeTool  
- Risponde a una modifica in uno strumento utente immediatamente dopo che si verifica l'errore.  
+ Risponde a una modifica in uno strumento utente subito dopo si verifica.  
   
 ```  
 virtual void OnAfterChangeTool(CUserTool* pSelTool);
@@ -493,13 +493,13 @@ virtual void OnAfterChangeTool(CUserTool* pSelTool);
   
 ### <a name="parameters"></a>Parametri  
  [in, out] *pSelTool*  
- Un puntatore all'oggetto strumento utente è stato modificato.  
+ Un puntatore all'oggetto utente dello strumento che è stato modificato.  
   
 ### <a name="remarks"></a>Note  
- Questo metodo viene chiamato dal framework quando un utente modifica le proprietà di uno strumento definito dall'utente. L'implementazione predefinita non esegue alcuna operazione. Eseguire l'override di questo metodo in una classe derivata da `CMFCToolBarsCustomizeDialog` per eseguire l'elaborazione dopo che si verifica una modifica a uno strumento utente.  
+ Questo metodo viene chiamato dal framework quando un utente modifica le proprietà di uno strumento definito dall'utente. L'implementazione predefinita non esegue alcuna operazione. L'override del metodo in una classe derivata da `CMFCToolBarsCustomizeDialog` per eseguire l'elaborazione dopo viene apportata una modifica a uno strumento dell'utente.  
   
 ##  <a name="onassignkey"></a>  CMFCToolBarsCustomizeDialog::OnAssignKey  
- Convalida i tasti di scelta rapida perché sono definiti da un utente.  
+ Convalida i tasti di scelta rapida quando sono definiti da un utente.  
   
 ```  
 virtual BOOL OnAssignKey(ACCEL* pAccel);
@@ -507,16 +507,16 @@ virtual BOOL OnAssignKey(ACCEL* pAccel);
   
 ### <a name="parameters"></a>Parametri  
  [in, out] *pAccel*  
- Puntatore per l'assegnazione di tasti proposto espresso come un [accelerazione](http://msdn.microsoft.com/library/windows/desktop/ms646340) struct.  
+ Puntatore per l'assegnazione del proposto da tastiera che è espresso come un [accelerazione](http://msdn.microsoft.com/library/windows/desktop/ms646340) struct.  
   
 ### <a name="return-value"></a>Valore restituito  
- `TRUE` Se la chiave può essere assegnata, o `FALSE` se la chiave non può essere assegnata. L'implementazione predefinita restituisce sempre `TRUE`.  
+ TRUE se la chiave può essere assegnata o FALSE se la chiave non può essere assegnata. L'implementazione predefinita restituisce sempre TRUE.  
   
 ### <a name="remarks"></a>Note  
- Eseguire l'override di questo metodo in una classe derivata per eseguire un'elaborazione aggiuntiva quando un utente assegna un nuovo tasto di scelta rapida o per convalidare i tasti di scelta rapida dell'utente sono definiti. Per impedire l'assegnazione di un collegamento, restituire `FALSE`. È possibile anche visualizzare una finestra di messaggio o in caso contrario, informare l'utente del motivo per cui è stato rifiutato tasto di scelta rapida.  
+ L'override del metodo in una classe derivata per eseguire un'elaborazione aggiuntiva quando un utente assegna un nuovo tasto di scelta rapida o per convalidare i tasti di scelta rapida quando l'utente li definisce. Per impedire l'assegnazione di un collegamento, restituisce FALSE. Devi inoltre visualizzare una finestra di messaggio o in caso contrario, informare l'utente del motivo per cui è stato rifiutato tasti di scelta rapida.  
   
 ##  <a name="onbeforechangetool"></a>  CMFCToolBarsCustomizeDialog::OnBeforeChangeTool  
- Esegue un'elaborazione personalizzata quando una modifica a uno strumento utente quando l'utente sta per applicare una modifica.  
+ Esegue un'elaborazione personalizzata quando una modifica a uno strumento dell'utente quando l'utente sta per applicare una modifica.  
   
 ```  
 virtual void OnBeforeChangeTool(CUserTool* pSelTool);
@@ -527,10 +527,10 @@ virtual void OnBeforeChangeTool(CUserTool* pSelTool);
  Un puntatore all'oggetto strumento utente che sta per essere sostituito.  
   
 ### <a name="remarks"></a>Note  
- Questo metodo viene chiamato dal framework quando sta per modificare le proprietà di uno strumento definito dall'utente. L'implementazione predefinita non esegue alcuna operazione. Eseguire l'override di `OnBeforeChangeTool` metodo in una classe derivata da `CMFCToolBarsCustomizeDialog` se si desidera eseguire l'elaborazione prima che si verifica una modifica a uno strumento utente, ad esempio il rilascio delle risorse che *pSelTool* utilizza.  
+ Questo metodo viene chiamato dal framework quando sta per modificare le proprietà di uno strumento definito dall'utente. L'implementazione predefinita non esegue alcuna operazione. Eseguire l'override di `OnBeforeChangeTool` metodo in una classe derivata da `CMFCToolBarsCustomizeDialog` se si desidera eseguire l'elaborazione prima che si verifica una modifica a uno strumento dell'utente, ad esempio rilasciando le risorse che *pSelTool* Usa.  
   
 ##  <a name="onedittoolbarmenuimage"></a>  CMFCToolBarsCustomizeDialog::OnEditToolbarMenuImage  
- Avvia un editor di immagini in modo che un utente può personalizzare un'icona dell'elemento pulsante o menu della barra degli strumenti.  
+ Avvia un editor di immagini in modo che un utente può personalizzare un'icona di elemento pulsante o menu barra degli strumenti.  
   
 ```  
 virtual BOOL OnEditToolbarMenuImage(
@@ -544,16 +544,16 @@ virtual BOOL OnEditToolbarMenuImage(
  Puntatore alla finestra padre.  
   
  [in] *bitmap*  
- Un riferimento a un oggetto bitmap per essere modificato.  
+ Un riferimento a un oggetto bitmap da modificare.  
   
  [in] *nBitsPerPixel*  
- La risoluzione del colore, in bit per pixel delle bitmap.  
+ Risoluzione colore, in bit per pixel delle bitmap.  
   
 ### <a name="return-value"></a>Valore restituito  
- `TRUE` Se è in corso il commit di una modifica; in caso contrario `FALSE`. L'implementazione predefinita consente di visualizzare una finestra di dialogo e restituisce `TRUE` se l'utente fa clic su **OK**, oppure `FALSE` se l'utente fa clic **Annulla** o la **Chiudi** pulsante.  
+ TRUE se è in corso il commit di una modifica; in caso contrario, FALSE. L'implementazione predefinita consente di visualizzare una finestra di dialogo e restituisce TRUE se l'utente fa clic **OK**, oppure FALSE se l'utente fa clic **Annulla** o nella **Chiudi** pulsante.  
   
 ### <a name="remarks"></a>Note  
- Questo metodo viene chiamato dal framework quando l'utente esegue l'editor di immagini. Visualizza l'implementazione predefinita [CMFCImageEditorDialog classe](../../mfc/reference/cmfcimageeditordialog-class.md) finestra di dialogo. Eseguire l'override `OnEditToolbarMenuImage` in una classe derivata da utilizzare un editor di immagini personalizzate.  
+ Questo metodo viene chiamato dal framework quando l'utente esegue l'editor di immagini. Visualizza l'implementazione predefinita [classe CMFCImageEditorDialog](../../mfc/reference/cmfcimageeditordialog-class.md) nella finestra di dialogo. Eseguire l'override `OnEditToolbarMenuImage` in una classe derivata per usare un editor di immagini personalizzate.  
   
 ##  <a name="oninitdialog"></a>  CMFCToolBarsCustomizeDialog::OnInitDialog  
  Esegue l'override per aumentare l'inizializzazione della finestra delle proprietà.  
@@ -563,20 +563,20 @@ virtual BOOL OnInitDialog();
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- Il risultato della chiamata di [CPropertySheet:: OnInitDialog](../../mfc/reference/cpropertysheet-class.md#oninitdialog) metodo.  
+ Il risultato della chiamata di [CPropertySheet:: OnInitDialog](../../mfc/reference/cpropertysheet-class.md#oninitdialog) (metodo).  
   
 ### <a name="remarks"></a>Note  
- Questo metodo estende l'implementazione della classe base, [CPropertySheet:: OnInitDialog](../../mfc/reference/cpropertysheet-class.md#oninitdialog), visualizzando il **Chiudi** pulsante, assicurandosi che la finestra di dialogo adatta alle dimensioni dello schermo corrente e spostando la **Guida** pulsante nell'angolo inferiore sinistro della finestra di dialogo.  
+ Questo metodo estende l'implementazione della classe base, [CPropertySheet:: OnInitDialog](../../mfc/reference/cpropertysheet-class.md#oninitdialog), visualizzando le **Chiudi** pulsante, assicurandosi che la finestra di dialogo adatta alle dimensioni dello schermo corrente e spostando la **Aiutare** pulsante nell'angolo inferiore sinistro della finestra di dialogo.  
   
 ##  <a name="oninittoolspage"></a>  CMFCToolBarsCustomizeDialog::OnInitToolsPage  
- Gestisce la notifica di framework che il **strumenti** pagina sta per essere inizializzato.  
+ Gestisce la notifica dal framework che la **strumenti** pagina sta per essere inizializzato.  
   
 ```  
 virtual void OnInitToolsPage();
 ```  
   
 ### <a name="remarks"></a>Note  
- L'implementazione predefinita non esegue alcuna operazione. Eseguire l'override di questo metodo in una classe derivata per elaborare la notifica.  
+ L'implementazione predefinita non esegue alcuna operazione. L'override del metodo in una classe derivata per elaborare la notifica.  
   
 ##  <a name="postncdestroy"></a>  CMFCToolBarsCustomizeDialog::PostNcDestroy  
  Chiamato dal framework dopo che la finestra è stata eliminata.  
@@ -605,7 +605,7 @@ int RemoveButton(
   
 ### <a name="parameters"></a>Parametri  
  [in] *uiCategoryId*  
- Specifica l'ID di categoria da cui rimuovere il pulsante.  
+ Specifica l'ID della categoria da cui rimuovere il pulsante.  
   
  [in] *uiCmdId*  
  Specifica l'ID di comando del pulsante.  
@@ -614,7 +614,7 @@ int RemoveButton(
  Specifica il nome della categoria da cui rimuovere il pulsante.  
   
 ### <a name="return-value"></a>Valore restituito  
- Indice in base zero del pulsante rimosso oppure -1 se l'ID di comando specificato non è stato trovato nella categoria specificata. Se *uiCategoryId* è -1, il valore restituito è 0.  
+ Indice a base zero del pulsante rimosso oppure -1 se l'ID di comando specificato non è stato trovato nella categoria specificata. Se *uiCategoryId* è -1, il valore restituito è 0.  
   
 ### <a name="remarks"></a>Note  
  Per rimuovere un pulsante di tutte le categorie, chiamare il primo overload di questo metodo e impostare *uiCategoryId* su -1.  
@@ -630,19 +630,19 @@ BOOL RenameCategory(
   
 ### <a name="parameters"></a>Parametri  
  [in] *lpszCategoryOld*  
- Il nome di categoria da modificare.  
+ Per modificare il nome della categoria.  
   
  [in] *lpszCategoryNew*  
  Il nuovo nome di categoria.  
   
 ### <a name="return-value"></a>Valore restituito  
- `TRUE` Se il metodo ha avuto esito positivo; in caso contrario `FALSE`.  
+ TRUE se il metodo ha avuto esito positivo. in caso contrario, FALSE.  
   
 ### <a name="remarks"></a>Note  
  Il nome della categoria deve essere univoco.  
   
 ##  <a name="replacebutton"></a>  CMFCToolBarsCustomizeDialog::ReplaceButton  
- Sostituisce un pulsante della barra degli strumenti nella casella di riepilogo di comandi nella **comandi** pagina.  
+ Sostituisce un pulsante della barra degli strumenti nella casella di riepilogo dei comandi nel **comandi** pagina.  
   
 ```  
 void ReplaceButton(
@@ -655,18 +655,18 @@ void ReplaceButton(
  Specifica il comando del pulsante da sostituire.  
   
  [in] *pulsante*  
- Un **const** riferimento all'oggetto pulsante della barra degli strumenti che sostituisce il pulsante precedente.  
+ Oggetto **const** riferimento all'oggetto pulsante della barra degli strumenti che sostituisce il precedente pulsante.  
   
 ### <a name="remarks"></a>Note  
- Quando si [CMFCToolBarsCustomizeDialog::AddMenu](#addmenu), [CMFCToolBarsCustomizeDialog::AddMenuCommands](#addmenucommands), o [CMFCToolBarsCustomizeDialog::AddToolBar](#addtoolbar) aggiunge un comando per il **comandi** pagina, che è sotto forma di un [classe CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md) oggetto (o un [CMFCToolBarMenuButton classe](../../mfc/reference/cmfctoolbarmenubutton-class.md) oggetto per un menu elemento che contiene un sottomenu aggiunto da `AddMenuCommands`). Inoltre, il framework chiama tre metodi seguenti per aggiungere automaticamente comandi. Se si desidera che un comando per essere rappresentato da un tipo derivato, chiamare `ReplaceButton` e passare un pulsante del tipo derivato.  
+ Quando [CMFCToolBarsCustomizeDialog::AddMenu](#addmenu), [CMFCToolBarsCustomizeDialog::AddMenuCommands](#addmenucommands), o [CMFCToolBarsCustomizeDialog::AddToolBar](#addtoolbar) aggiunge un comando per il **comandi** pagina, che comando sia sotto forma di un [classe CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md) oggetto (o un [classe CMFCToolBarMenuButton](../../mfc/reference/cmfctoolbarmenubutton-class.md) oggetto per un menu elemento contenente un sottomenu aggiunto da `AddMenuCommands`). Il framework chiama anche questi tre metodi per aggiungere automaticamente comandi. Se si desidera che un comando per essere rappresentato da un tipo derivato, chiamare `ReplaceButton` e passare un pulsante del tipo derivato.  
   
 ### <a name="example"></a>Esempio  
- Nell'esempio seguente viene illustrato come utilizzare il `ReplaceButton` metodo la `CMFCToolBarsCustomizeDialog` classe. Questo frammento di codice fa parte il [esempio dimostrativo di Visual Studio](../../visual-cpp-samples.md).  
+ L'esempio seguente illustra come usare il `ReplaceButton` metodo nel `CMFCToolBarsCustomizeDialog` classe. Questo frammento di codice fa parte di [esempio dimostrativo di Visual Studio](../../visual-cpp-samples.md).  
   
  [!code-cpp[NVC_MFC_VisualStudioDemo#34](../../mfc/codesnippet/cpp/cmfctoolbarscustomizedialog-class_5.cpp)]  
   
 ##  <a name="setusercategory"></a>  CMFCToolBarsCustomizeDialog::SetUserCategory  
- Specifica la categoria nell'elenco di categorie per il **comandi** pagina è la categoria di utente. È necessario chiamare questa funzione prima di chiamare [CMFCToolBarsCustomizeDialog::Create](#create).  
+ Specifica la categoria nell'elenco delle categorie per il **comandi** pagina è la categoria di utente. È necessario chiamare questa funzione prima di chiamare [CMFCToolBarsCustomizeDialog::Create](#create).  
   
 ```  
 BOOL SetUserCategory(LPCTSTR lpszCategory);
@@ -677,7 +677,7 @@ BOOL SetUserCategory(LPCTSTR lpszCategory);
  Nome della categoria.  
   
 ### <a name="return-value"></a>Valore restituito  
- `TRUE` Se il metodo ha esito positivo; in caso contrario `FALSE`.  
+ TRUE se il metodo ha esito positivo. in caso contrario, FALSE.  
   
 ### <a name="remarks"></a>Note  
  L'impostazione di categoria di utente non è attualmente utilizzata dal framework.  

@@ -1,5 +1,5 @@
 ---
-title: Stringa ATL e le classi di testo | Documenti Microsoft
+title: Stringa di ATL e classi di testo | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,33 +15,33 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4bd20b017109cd91bcfcb25020178c1296cadf24
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 953afd2ba9f2a575eddb4140e71bada46e71dae3
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32362200"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37848951"
 ---
 # <a name="string-and-text-classes"></a>Classi di testo e stringa
-Queste classi forniscono supporto per le conversioni di stringa di testo e stringhe.  
+Queste classi forniscono supporto per le stringhe e le conversioni di stringa di testo.  
   
--   [CA2AEX](../atl/reference/ca2aex-class.md) questa classe viene utilizzata per le macro di conversione di stringhe `CA2TEX` e `CT2AEX`e typedef **CA2A**.  
+-   [CA2AEX](../atl/reference/ca2aex-class.md) questa classe viene utilizzata la macro di conversione di stringhe CA2TEX e CT2AEX e typedef CA2A.  
   
--   [CA2CAEX](../atl/reference/ca2caex-class.md) questa classe è utilizzata dalla macro di conversione di stringhe `CA2CTEX` e `CT2CAEX`e typedef **CA2CA**.  
+-   [CA2CAEX](../atl/reference/ca2caex-class.md) questa classe viene utilizzata dalle macro di conversione di stringhe CA2CTEX e CT2CAEX e typedef CA2CA.  
   
--   [CA2WEX](../atl/reference/ca2wex-class.md) questa classe viene utilizzata per le macro di conversione di stringhe `CA2TEX`, `CA2CTEX`, `CT2WEX`, e `CT2CWEX`e typedef **CA2W**.  
+-   [CA2WEX](../atl/reference/ca2wex-class.md) questa classe viene utilizzata la macro di conversione di stringhe CA2TEX, CA2CTEX, CT2WEX e CT2CWEX e typedef CA2W.  
   
--   [CW2AEX](../atl/reference/cw2aex-class.md) questa classe viene utilizzata per le macro di conversione di stringhe `CT2AEX`, `CW2TEX`, `CW2CTEX`, e `CT2CAEX`e typedef **CW2A**.  
+-   [CW2AEX](../atl/reference/cw2aex-class.md) questa classe viene utilizzata la macro di conversione di stringhe CT2AEX, CW2TEX, CW2CTEX e CT2CAEX e typedef CW2A.  
   
--   [CW2CWEX](../atl/reference/cw2cwex-class.md) questa classe viene utilizzata per le macro di conversione di stringhe `CW2CTEX` e `CT2CWEX`e typedef **CW2CW**.  
+-   [CW2CWEX](../atl/reference/cw2cwex-class.md) questa classe viene utilizzata la macro di conversione di stringhe CW2CTEX e CT2CWEX e typedef CW2CW.  
   
--   [CW2WEX](../atl/reference/cw2wex-class.md) questa classe viene utilizzata per le macro di conversione di stringhe `CW2TEX` e `CT2WEX`e typedef `CW2W`.  
+-   [CW2WEX](../atl/reference/cw2wex-class.md) questa classe viene utilizzata la macro di conversione di stringhe CW2TEX e CT2WEX e typedef CW2W.  
   
--   [CComBSTR](../atl/reference/ccombstr-class.md) questa classe è un wrapper per `BSTR`s.  
+-   [CComBSTR](../atl/reference/ccombstr-class.md) questa classe è un wrapper per i BSTR.  
   
--   [_U_STRINGorID](../atl/reference/u-stringorid-class.md) classe dell'adattatore in questo argomento consente di entrambi i nomi delle risorse (`LPCTSTR`s) o l'ID di risorsa (**UINT**s) deve essere passato a una funzione senza richiedere al chiamante di convertire l'ID in una stringa utilizzando il  **MAKEINTRESOURCE** (macro).  
+-   [U_stringorid](../atl/reference/u-stringorid-class.md) classe dell'adattatore in questo argomento consente a entrambi i nomi delle risorse (`LPCTSTR`s) o ID (UINTs) deve essere passato a una funzione senza che il chiamante convertire una stringa utilizzando la macro MAKEINTRESOURCE l'ID di risorsa.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Cenni preliminari sulla classe](../atl/atl-class-overview.md)   
+ [Panoramica della classe](../atl/atl-class-overview.md)   
  [Macro di conversione di stringhe MFC e ATL](reference/string-conversion-macros.md)
 

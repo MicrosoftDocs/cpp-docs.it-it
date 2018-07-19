@@ -1,5 +1,5 @@
 ---
-title: Classe CMFCPropertyGridFontProperty | Documenti Microsoft
+title: Classe CMFCPropertyGridFontProperty | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,15 +22,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f224def5d91d47cad0cb61938f1ce9a538109014
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 3ea43fefabe43bec8a5bf9b00404491a405e5416
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37039042"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37852981"
 ---
 # <a name="cmfcpropertygridfontproperty-class"></a>Classe CMFCPropertyGridFontProperty
-Il `CMFCPropertyGridFileProperty` classe supporta un elemento controllo elenco delle proprietà che apre una finestra di dialogo Selezione tipo di carattere.  
+Il `CMFCPropertyGridFileProperty` classe supporta un elemento controllo elenco delle proprietà che verrà visualizzata una finestra di dialogo Selezione tipo di carattere.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -52,9 +52,9 @@ class CMFCPropertyGridFontProperty : public CMFCPropertyGridProperty
 |Nome|Descrizione|  
 |----------|-----------------|  
 |`CMFCPropertyGridFontProperty::FormatProperty`|Formatta la rappresentazione di testo di un valore della proprietà. (Esegue l'override [cmfcpropertygridproperty:: Formatproperty](../../mfc/reference/cmfcpropertygridproperty-class.md#formatproperty).)|  
-|[CMFCPropertyGridFontProperty::GetColor](#getcolor)|Recupera il colore del carattere che l'utente seleziona dalla finestra di dialogo tipo di carattere.|  
-|[CMFCPropertyGridFontProperty::GetLogFont](#getlogfont)|Recupera il tipo di carattere che l'utente seleziona dalla finestra di dialogo tipo di carattere.|  
-|`CMFCPropertyGridFontProperty::GetThisClass`|Usato dal framework per ottenere un puntatore per il [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) oggetto associato a questo tipo di classe.|  
+|[CMFCPropertyGridFontProperty::GetColor](#getcolor)|Recupera il colore del tipo di carattere selezionato dalla finestra di dialogo tipo di carattere.|  
+|[CMFCPropertyGridFontProperty::GetLogFont](#getlogfont)|Recupera il tipo di carattere selezionato dalla finestra di dialogo tipo di carattere.|  
+|`CMFCPropertyGridFontProperty::GetThisClass`|Utilizzato dal framework per ottenere un puntatore per il [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) oggetto associato a questo tipo di classe.|  
 |`CMFCPropertyGridFontProperty::OnClickButton`|Chiamato dal framework quando l'utente fa clic su un pulsante contenuto in una proprietà. (Esegue l'override [cmfcpropertygridproperty:: Onclickbutton](../../mfc/reference/cmfcpropertygridproperty-class.md#onclickbutton).)|  
   
 ## <a name="remarks"></a>Note  
@@ -90,16 +90,16 @@ CMFCPropertyGridFontProperty(
  Struttura logica del tipo di carattere che specifica gli attributi del tipo di carattere.  
   
  [in] *dwFontDialogFlags*  
- Stili applicati alla finestra di dialogo tipo di carattere che viene visualizzata quando si sceglie il pulsante di menu a discesa valore di proprietà. Il valore predefinito è la combinazione bit per bit (OR) di CF_EFFECTS e CF_SCREENFONTS. Per altre informazioni, vedere la *flag* parametro del [struttura CHOOSEFONT](http://msdn.microsoft.com/library/windows/desktop/ms646832).  
+ Stili applicati alla finestra di dialogo tipo di carattere che viene visualizzata quando si fa clic sul pulsante dell'elenco a discesa valore proprietà. Il valore predefinito è la combinazione bit per bit (OR) di CF_EFFECTS e CF_SCREENFONTS. Per altre informazioni, vedere la *Flags* parametro del [CHOOSEFONT struttura](http://msdn.microsoft.com/library/windows/desktop/ms646832).  
   
  [in] *lpszDescr*  
- Descrizione della proprietà del tipo di carattere. Il valore predefinito è `NULL`.  
+ Descrizione della proprietà del tipo di carattere. Il valore predefinito è NULL.  
   
  [in] *dwData*  
  Dati specifici dell'applicazione, ad esempio un numero intero o un puntatore a altri dati che sono associati alla proprietà. Il valore predefinito è 0.  
   
  [in] *colore*  
- Il colore del tipo di carattere. Il valore predefinito è il colore predefinito.  
+ Colore del tipo di carattere. Il valore predefinito è il colore predefinito.  
   
 ### <a name="remarks"></a>Note  
  Oggetto `CMFCPropertyGridFontProperty` oggetto rappresenta una proprietà del tipo di carattere in un controllo griglia delle proprietà del tipo di carattere.  
@@ -110,7 +110,7 @@ CMFCPropertyGridFontProperty(
  [!code-cpp[NVC_MFC_NewControls#26](../../mfc/reference/codesnippet/cpp/cmfcpropertygridfontproperty-class_1.cpp)]  
   
 ##  <a name="getcolor"></a>  CMFCPropertyGridFontProperty::GetColor  
- Recupera il colore del carattere che l'utente seleziona dalla finestra di dialogo tipo di carattere.  
+ Recupera il colore del tipo di carattere selezionato dalla finestra di dialogo tipo di carattere.  
   
 ```  
 COLORREF GetColor() const;  
@@ -122,7 +122,7 @@ COLORREF GetColor() const;
 ### <a name="remarks"></a>Note  
   
 ##  <a name="getlogfont"></a>  CMFCPropertyGridFontProperty::GetLogFont  
- Recupera il tipo di carattere che l'utente seleziona dalla finestra di dialogo tipo di carattere.  
+ Recupera il tipo di carattere selezionato dalla finestra di dialogo tipo di carattere.  
   
 ```  
 LPLOGFONT GetLogFont();

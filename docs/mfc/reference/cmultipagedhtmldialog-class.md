@@ -1,5 +1,5 @@
 ---
-title: Classe CMultiPageDHtmlDialog | Documenti Microsoft
+title: Classe CMultiPageDHtmlDialog | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8a1a4ca77e4b7a2cda10d87bd657e73931a50612
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 51e9b34252b2a3fa7d097914360b9ee24baa8301
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37038006"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37850865"
 ---
 # <a name="cmultipagedhtmldialog-class"></a>Classe CMultiPageDHtmlDialog
 Una finestra di dialogo a più pagine visualizza più pagine HTML in sequenza e gestisce gli eventi da ogni pagina.  
@@ -40,16 +40,16 @@ class CMultiPageDHtmlDialog : public CDHtmlDialog
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[CMultiPageDHtmlDialog::CMultiPageDHtmlDialog](#cmultipagedhtmldialog)|Costruisce un oggetto di finestra di dialogo DHTML (procedura guidata stile) a più pagine.|  
+|[CMultiPageDHtmlDialog::CMultiPageDHtmlDialog](#cmultipagedhtmldialog)|Costruisce un oggetto finestra di dialogo DHTML (stile procedura guidata) a più pagine.|  
 |[CMultiPageDHtmlDialog:: ~ CMultiPageDHtmlDialog](#cmultipagedhtmldialog__~cmultipagedhtmldialog)|Elimina un oggetto finestra di dialogo DHTML a più pagine.|  
   
 ## <a name="remarks"></a>Note  
- Il meccanismo per raggiungere questo obiettivo è un [mappa eventi URL e DHTML](dhtml-event-maps.md), che contiene incorporati mappe eventi per ogni pagina.  
+ Il meccanismo per eseguire questa operazione è un [mappa eventi URL e DHTML](dhtml-event-maps.md), che contiene incorporato mappe eventi per ogni pagina.  
   
 ## <a name="example"></a>Esempio  
- Questa finestra di dialogo a più pagine presuppone tre risorse HTML che definiscono funzionalità semplice procedura guidata. La prima pagina è una `Next` pulsante, il secondo un **Prev** e `Next` pulsante e la terza un **Prev** pulsante. Quando viene premuto un pulsante, una funzione del gestore chiama [CDHtmlDialog::LoadFromResource](../../mfc/reference/cdhtmldialog-class.md#loadfromresource) per caricare la pagina nuova appropriata.  
+ Questa finestra di dialogo a più pagine presuppone tre risorse HTML che definiscono la funzionalità semplice procedura guidata. La prima pagina include un **successivo** pulsante, il secondo un **Prev** e **successiva** pulsante e il terzo una **Prev** pulsante. Quando viene premuto un pulsante, chiama una funzione del gestore [CDHtmlDialog::LoadFromResource](../../mfc/reference/cdhtmldialog-class.md#loadfromresource) per caricare la nuova pagina appropriata.  
   
- Le parti pertinenti di dichiarazione di classe (in CMyMultiPageDlg.h):  
+ Le parti pertinenti della dichiarazione di classe (in CMyMultiPageDlg.h):  
   
  [!code-cpp[NVC_MFCDocView#181](../../mfc/codesnippet/cpp/cmultipagedhtmldialog-class_1.h)]  
   
@@ -82,7 +82,7 @@ class CMultiPageDHtmlDialog : public CDHtmlDialog
  **Intestazione:** afxdhtml. h  
   
 ##  <a name="cmultipagedhtmldialog"></a>  CMultiPageDHtmlDialog::CMultiPageDHtmlDialog  
- Costruisce un oggetto di finestra di dialogo DHTML (procedura guidata stile) a più pagine.  
+ Costruisce un oggetto finestra di dialogo DHTML (stile procedura guidata) a più pagine.  
   
 ```  
 CMultiPageDHtmlDialog(
@@ -101,16 +101,16 @@ CMultiPageDHtmlDialog();
   
 ### <a name="parameters"></a>Parametri  
  *lpszTemplateName*  
- La stringa con terminazione null che rappresenta il nome di una risorsa modello di finestra di dialogo.  
+ La stringa con terminazione null che rappresenta il nome di una risorsa modello-finestra di dialogo.  
   
  *szHtmlResID*  
- La stringa con terminazione null che rappresenta il nome della risorsa HTML.  
+ La stringa con terminazione null che rappresenta il nome di una risorsa HTML.  
   
  *pParentWnd*  
- Un puntatore all'oggetto finestra padre o proprietaria (di tipo [CWnd](../../mfc/reference/cwnd-class.md)) a cui appartiene l'oggetto finestra di dialogo. Se si tratta **NULL**, finestra padre dell'oggetto finestra di dialogo è impostata per la finestra principale dell'applicazione.  
+ Un puntatore all'oggetto finestra padre o proprietaria (typu [CWnd](../../mfc/reference/cwnd-class.md)) a cui appartiene l'oggetto finestra di dialogo. Se è NULL, finestra padre dell'oggetto finestra di dialogo è impostata per la finestra principale dell'applicazione.  
   
  *nIDTemplate*  
- Contiene il numero di ID di una risorsa modello di finestra di dialogo.  
+ Contiene il numero di ID di una risorsa modello-finestra di dialogo.  
   
  *nHtmlResID*  
  Contiene il numero di ID di una risorsa HTML.  

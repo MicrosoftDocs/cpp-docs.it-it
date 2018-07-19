@@ -1,5 +1,5 @@
 ---
-title: Classe IOleControlImpl | Documenti Microsoft
+title: Classe IOleControlImpl | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,18 +21,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5a54067f53e83d78f063ae5f3694460452e24b26
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 34bdb0af5965b300e77a02858af3708c90fa63d0
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32361798"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37879283"
 ---
 # <a name="iolecontrolimpl-class"></a>Classe IOleControlImpl
-Questa classe fornisce un'implementazione predefinita del **IOleControl** interfaccia e implementa **IUnknown**.  
+Questa classe fornisce un'implementazione predefinita del `IOleControl` interfaccia e implementa `IUnknown`.  
   
 > [!IMPORTANT]
->  Questa classe e i relativi membri non possono essere utilizzati nelle applicazioni eseguite in Windows Runtime.  
+>  Questa classe e i relativi membri non possono essere utilizzati nelle applicazioni eseguite nel Runtime di Windows.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -42,7 +42,7 @@ class IOleControlImpl
 ```   
   
 #### <a name="parameters"></a>Parametri  
- `T`  
+ *T*  
  La classe, derivata da `IOleControlImpl`.  
   
 ## <a name="members"></a>Membri  
@@ -52,14 +52,14 @@ class IOleControlImpl
 |Nome|Descrizione|  
 |----------|-----------------|  
 |[IOleControlImpl::FreezeEvents](#freezeevents)|Indica se il contenitore Ignora o accetta eventi dal controllo.|  
-|[IOleControlImpl::GetControlInfo](#getcontrolinfo)|Compila informazioni sul comportamento di tastiera del controllo. Restituisce l'implementazione di ATL **E_NOTIMPL**.|  
-|[IOleControlImpl::OnAmbientPropertyChange](#onambientpropertychange)|Indica un controllo che uno o più proprietà di ambiente del contenitore è stato modificato. Restituisce l'implementazione di ATL `S_OK`.|  
-|[IOleControlImpl::OnMnemonic](#onmnemonic)|Indica al controllo che un utente ha premuto un tasto di scelta rapida specificato. Restituisce l'implementazione di ATL **E_NOTIMPL**.|  
+|[IOleControlImpl::GetControlInfo](#getcontrolinfo)|Compila informazioni sul comportamento della tastiera del controllo. L'implementazione di ATL restituisce E_NOTIMPL.|  
+|[IOleControlImpl::OnAmbientPropertyChange](#onambientpropertychange)|Informa un controllo che uno o più proprietà di ambiente del contenitore è stato modificato. L'implementazione di ATL restituisce S_OK.|  
+|[IOleControlImpl::OnMnemonic](#onmnemonic)|Indica al controllo che un utente ha premuto un tasto specificato. L'implementazione di ATL restituisce E_NOTIMPL.|  
   
 ## <a name="remarks"></a>Note  
- Classe `IOleControlImpl` fornisce un'implementazione predefinita del [IOleControl](http://msdn.microsoft.com/library/windows/desktop/ms694320) interfaccia e implementa **IUnknown** per l'invio di informazioni per il dump Crea dispositivo in modalità debug.  
+ Classe `IOleControlImpl` fornisce un'implementazione predefinita del [IOleControl](http://msdn.microsoft.com/library/windows/desktop/ms694320) interfaccia e implementa `IUnknown` per l'invio di informazioni per il dump compila dispositivo in modalità debug.  
   
- **Articoli correlati** [esercitazione ATL](../../atl/active-template-library-atl-tutorial.md), [creazione di un progetto ATL](../../atl/reference/creating-an-atl-project.md)  
+ **Articoli correlati** [esercitazione ATL](../../atl/active-template-library-atl-tutorial.md), [la creazione di un progetto ATL](../../atl/reference/creating-an-atl-project.md)  
   
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  `IOleControl`  
@@ -70,57 +70,57 @@ class IOleControlImpl
  **Intestazione:** atlctl. h  
   
 ##  <a name="freezeevents"></a>  IOleControlImpl::FreezeEvents  
- Nell'implementazione di ATL, `FreezeEvents` incrementa la classe di controllo `m_nFreezeEvents` membro dati se `bFreeze` è **TRUE**e decrementa `m_nFreezeEvents` se `bFreeze` è **FALSE**.  
+ Nell'implementazione di ATL `FreezeEvents` incrementa la classe di controllo `m_nFreezeEvents` membro dati se `bFreeze` è TRUE e decrementa `m_nFreezeEvents` se `bFreeze` è FALSE.  
   
 ```
 HRESULT FreezeEvents(BOOL bFreeze);
 ```  
   
 ### <a name="remarks"></a>Note  
- `FreezeEvents` Restituisce quindi `S_OK`.  
+ `FreezeEvents` Restituisce S_OK.  
   
- Vedere [IOleControl:: FreezeEvents](http://msdn.microsoft.com/library/windows/desktop/ms678482) in Windows SDK.  
+ Visualizzare [IOleControl:: FreezeEvents](http://msdn.microsoft.com/library/windows/desktop/ms678482) in Windows SDK.  
   
 ##  <a name="getcontrolinfo"></a>  IOleControlImpl::GetControlInfo  
- Compila informazioni sul comportamento di tastiera del controllo.  
+ Compila informazioni sul comportamento della tastiera del controllo.  
   
 ```
 HRESULT GetControlInfo(LPCONTROLINFO pCI);
 ```  
   
 ### <a name="remarks"></a>Note  
- Vedere [IOleControl:GetControlInfo](http://msdn.microsoft.com/library/windows/desktop/ms693730) in Windows SDK.  
+ Visualizzare [IOleControl:GetControlInfo](http://msdn.microsoft.com/library/windows/desktop/ms693730) in Windows SDK.  
   
 ### <a name="return-value"></a>Valore restituito  
- Restituisce **E_NOTIMPL**.  
+ Restituisce E_NOTIMPL.  
   
 ##  <a name="onambientpropertychange"></a>  IOleControlImpl::OnAmbientPropertyChange  
- Indica un controllo che uno o più proprietà di ambiente del contenitore è stato modificato.  
+ Informa un controllo che uno o più proprietà di ambiente del contenitore è stato modificato.  
   
 ```
 HRESULT OnAmbientPropertyChange(DISPID dispid);
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- Restituisce `S_OK`.  
+ Restituisce S_OK.  
   
 ### <a name="remarks"></a>Note  
- Vedere [IOleControl::OnAmbientPropertyChange](http://msdn.microsoft.com/library/windows/desktop/ms690175) in Windows SDK.  
+ Visualizzare [IOleControl::OnAmbientPropertyChange](http://msdn.microsoft.com/library/windows/desktop/ms690175) in Windows SDK.  
   
 ##  <a name="onmnemonic"></a>  IOleControlImpl::OnMnemonic  
- Indica al controllo che un utente ha premuto un tasto di scelta rapida specificato.  
+ Indica al controllo che un utente ha premuto un tasto specificato.  
   
 ```
 HRESULT OnMnemonic(LPMSG pMsg);
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- Restituisce **E_NOTIMPL**.  
+ Restituisce E_NOTIMPL.  
   
 ### <a name="remarks"></a>Note  
- Vedere [IOleControl::OnMnemonic](http://msdn.microsoft.com/library/windows/desktop/ms680699) in Windows SDK.  
+ Visualizzare [IOleControl::OnMnemonic](http://msdn.microsoft.com/library/windows/desktop/ms680699) in Windows SDK.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Classe IOleObjectImpl](../../atl/reference/ioleobjectimpl-class.md)   
  [Interfacce di controlli ActiveX](http://msdn.microsoft.com/library/windows/desktop/ms692724)   
- [Cenni preliminari sulla classe](../../atl/atl-class-overview.md)
+ [Panoramica della classe](../../atl/atl-class-overview.md)

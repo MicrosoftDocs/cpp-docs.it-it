@@ -1,5 +1,5 @@
 ---
-title: Struttura CDaoDatabaseInfo | Documenti Microsoft
+title: Struttura CDaoDatabaseInfo | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b10cd2d5c6174e63ff8aa74b4edc98b20375fae0
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 0815d248b6726d830fc50af9886c729c34ba2f29
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36951933"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37336481"
 ---
 # <a name="cdaodatabaseinfo-structure"></a>Struttura CDaoDatabaseInfo
-Il `CDaoDatabaseInfo` struttura contiene informazioni su un oggetto di database definito per l'accesso oggetti DAO (data).  
+Il `CDaoDatabaseInfo` struttura contiene informazioni su un oggetto di database definito per data access Object (DAO).  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -44,73 +44,73 @@ struct CDaoDatabaseInfo
   
 #### <a name="parameters"></a>Parametri  
  *m_strName*  
- Identifica in modo univoco l'oggetto di database. Per recuperare direttamente questa proprietà, chiamare [CDaoDatabase::GetName](../../mfc/reference/cdaodatabase-class.md#getname). Per informazioni dettagliate, vedere l'argomento "Proprietà Name" nella Guida di DAO.  
+ Identifica in modo univoco l'oggetto di database. Per recuperare direttamente questa proprietà, chiamare [CDaoDatabase::GetName](../../mfc/reference/cdaodatabase-class.md#getname). Per informazioni dettagliate, vedere l'argomento "Proprietà di nome" nella Guida di DAO.  
   
  *m_bUpdatable*  
- Indica se le modifiche possono essere apportate al database. Per recuperare direttamente questa proprietà, chiamare [CDaoDatabase::CanUpdate](../../mfc/reference/cdaodatabase-class.md#canupdate). Per informazioni dettagliate, vedere l'argomento "Proprietà aggiornabile" nella Guida di DAO.  
+ Indica se è possibile apportare modifiche al database. Per recuperare direttamente questa proprietà, chiamare [CDaoDatabase::CanUpdate](../../mfc/reference/cdaodatabase-class.md#canupdate). Per informazioni dettagliate, vedere l'argomento "Proprietà aggiornabile" nella Guida di DAO.  
   
  *m_bTransactions*  
- Indica se un'origine dati supporta transazioni, la registrazione di una serie di modifiche che può essere eseguito il rollback (annullamento) o il commit (salvata). Se un database è basato sul motore di database Microsoft Jet, la proprietà di transazioni è diverso da zero ed è possibile utilizzare le transazioni. Altri motori di database potrebbero non supportare le transazioni. Per recuperare direttamente questa proprietà, chiamare [CDaoDatabase::CanTransact](../../mfc/reference/cdaodatabase-class.md#cantransact). Per informazioni dettagliate, vedere l'argomento "Proprietà Transactions" nella Guida di DAO.  
+ Indica se un'origine dati supporta le transazioni, la registrazione di una serie di modifiche che può essere eseguito il rollback (annullamento) o il commit (salvata). Se un database è basato sul motore di database Microsoft Jet, la proprietà delle transazioni è diverso da zero ed è possibile utilizzare le transazioni. Altri motori di database potrebbero non supportare le transazioni. Per recuperare direttamente questa proprietà, chiamare [CDaoDatabase::CanTransact](../../mfc/reference/cdaodatabase-class.md#cantransact). Per informazioni dettagliate, vedere l'argomento "Proprietà transazioni" nella Guida di DAO.  
   
  *m_strVersion*  
  Indica la versione del motore di database Microsoft Jet. Per recuperare direttamente il valore di questa proprietà, chiamare l'oggetto di database [GetVersion](../../mfc/reference/cdaodatabase-class.md#getversion) funzione membro. Per informazioni dettagliate, vedere l'argomento "Proprietà Version" nella Guida di DAO.  
   
  *m_lCollatingOrder*  
- Specifica la sequenza di ordinamento nel testo di confronto di stringhe o di ordinamento. I valori possibili includono:  
+ Specifica la sequenza di ordinamento del testo per il confronto di stringa o l'ordinamento. I valori possibili includono:  
   
-- **dbSortGeneral** utilizzare generale (in lingua inglese, francese, tedesco, portoghese, italiano e spagnolo moderno) dell'ordinamento.  
+- `dbSortGeneral` Usare l'ordine di ordinamento (in lingua inglese, francese, tedesco, portoghese, italiano e spagnolo moderno) generale.  
   
-- **dbSortArabic** utilizzare l'ordinamento arabo.  
+- `dbSortArabic` Utilizzare l'ordinamento arabo.  
   
-- **dbSortCyrillic** utilizzare l'ordinamento russa.  
+- `dbSortCyrillic` Utilizzare l'ordinamento russa.  
   
-- **dbSortCzech** utilizzare l'ordinamento cechi.  
+- `dbSortCzech` Utilizzare l'ordinamento cechi.  
   
-- **dbSortDutch** utilizzare l'ordinamento olandese.  
+- `dbSortDutch` Utilizzare l'ordinamento olandese.  
   
-- **dbSortGreek** utilizzare l'ordinamento greco.  
+- `dbSortGreek` Utilizzare l'ordinamento greco.  
   
-- **dbSortHebrew** utilizzare l'ordinamento ebraico.  
+- `dbSortHebrew` Utilizzare l'ordinamento ebraico.  
   
-- **dbSortHungarian** utilizzare l'ordinamento ungherese.  
+- `dbSortHungarian` Utilizzare l'ordinamento ungherese.  
   
-- **dbSortIcelandic** usare l'ordine dei islandese ordinamento.  
+- `dbSortIcelandic` Utilizzare l'ordinamento Icelandic.  
   
-- **dbSortNorwdan** utilizzare l'ordinamento norvegese o danese.  
+- `dbSortNorwdan` Utilizzare l'ordinamento norvegese o danese.  
   
-- **dbSortPDXIntl** utilizzare all'interno dell'ordinamento Paradox internazionale.  
+- `dbSortPDXIntl` Utilizzare l'ordinamento Paradox International.  
   
-- **dbSortPDXNor** utilizzare Paradox norvegese o ordinamento danese.  
+- `dbSortPDXNor` Usare il norvegese Paradox o ordinamento danese.  
   
-- **dbSortPDXSwe** utilizzare Paradox svedese o finlandese di ordinamento.  
+- `dbSortPDXSwe` Usare il paradosso svedese o ordinamento finlandese.  
   
-- **dbSortPolish** utilizzare l'ordinamento polacco.  
+- `dbSortPolish` Utilizzare l'ordinamento polacco.  
   
-- **dbSortSpanish** utilizzare l'ordinamento spagnola.  
+- `dbSortSpanish` Usare il tipo di ordinamento dello spagnolo.  
   
-- **dbSortSwedFin** utilizzare l'ordinamento svedese o finlandese.  
+- `dbSortSwedFin` Utilizzare l'ordinamento svedese o finlandese.  
   
-- **dbSortTurkish** utilizzare l'ordinamento turca.  
+- `dbSortTurkish` Utilizzare l'ordinamento turco.  
   
-- **dbSortUndefined** l'ordinamento è definito o è sconosciuta.  
+- `dbSortUndefined` L'ordinamento è definito o è sconosciuto.  
   
  Per altre informazioni, vedere l'argomento "Personalizzazione di Windows del Registro di sistema le impostazioni per l'accesso dei dati" nella Guida di DAO.  
   
  *m_nQueryTimeout*  
- Il numero di secondi di che attesa del motore di database Microsoft Jet prima di un errore di timeout si verifica quando viene eseguita una query su un database ODBC. Il valore di timeout predefinito è 60 secondi. Quando QueryTimeout è impostata su 0, si verifica alcun timeout; Ciò può provocare il blocco del programma. Per recuperare direttamente il valore di questa proprietà, chiamare l'oggetto di database [GetQueryTimeout](../../mfc/reference/cdaodatabase-class.md#getquerytimeout) funzione membro. Per informazioni dettagliate, vedere l'argomento "Proprietà QueryTimeout" nella Guida di DAO.  
+ Il numero di secondi di attesa motore di database Microsoft Jet prima di un errore di timeout si verifica quando viene eseguita una query su un database ODBC. Il valore di timeout predefinito è 60 secondi. Quando QueryTimeout viene impostato su 0, si verifica alcun timeout; Ciò può causare il blocco del programma. Per recuperare direttamente il valore di questa proprietà, chiamare l'oggetto di database [GetQueryTimeout](../../mfc/reference/cdaodatabase-class.md#getquerytimeout) funzione membro. Per informazioni dettagliate, vedere l'argomento "Proprietà QueryTimeout" nella Guida di DAO.  
   
  *m_strConnect*  
- Vengono fornite informazioni sull'origine di un database aperto. Per informazioni sulle stringhe di connessione e per informazioni sul recupero direttamente il valore di questa proprietà, vedere la [CDaoDatabase::GetConnect](../../mfc/reference/cdaodatabase-class.md#getconnect) funzione membro. Per altre informazioni, vedere l'argomento "Proprietà connessione" nella Guida di DAO.  
+ Fornisce informazioni sull'origine di un database aperto. Per informazioni su stringhe di connessione e per informazioni sul recupero direttamente il valore di questa proprietà, vedere la [CDaoDatabase::GetConnect](../../mfc/reference/cdaodatabase-class.md#getconnect) funzione membro. Per altre informazioni, vedere l'argomento "Proprietà connessione" nella Guida di DAO.  
   
 ## <a name="remarks"></a>Note  
- Il database è un oggetto DAO sottostante un oggetto della classe MFC [CDaoDatabase](../../mfc/reference/cdaodatabase-class.md). I riferimenti al database primario, secondario e tutti gli sopra indicano la modalità in cui vengono restituite le informazioni per il [CDaoWorkspace::GetDatabaseInfo](../../mfc/reference/cdaoworkspace-class.md#getdatabaseinfo) funzione membro.  
+ Il database è un oggetto DAO sottostante un oggetto MFC della classe [CDaoDatabase](../../mfc/reference/cdaodatabase-class.md). I riferimenti al database primario, secondario e tutti sopra indicano la modalità in cui vengono restituite le informazioni per il [CDaoWorkspace::GetDatabaseInfo](../../mfc/reference/cdaoworkspace-class.md#getdatabaseinfo) funzione membro.  
   
- Le informazioni recuperate dal [CDaoWorkspace::GetDatabaseInfo](../../mfc/reference/cdaoworkspace-class.md#getdatabaseinfo) le funzioni membro vengono archiviate un `CDaoDatabaseInfo` struttura. Chiamare `GetDatabaseInfo` per il `CDaoWorkspace` oggetto nella raccolta cui database è archiviato l'oggetto di database. `CDaoDatabaseInfo` definisce inoltre un `Dump` compila la funzione membro in modalità debug. È possibile utilizzare `Dump` per scaricare il contenuto di un `CDaoDatabaseInfo` oggetto.  
+ Le informazioni recuperate dal [CDaoWorkspace::GetDatabaseInfo](../../mfc/reference/cdaoworkspace-class.md#getdatabaseinfo) le funzioni membro vengono archiviate un `CDaoDatabaseInfo` struttura. Chiamare `GetDatabaseInfo` per il `CDaoWorkspace` oggetto nella raccolta cui database è archiviato l'oggetto di database. `CDaoDatabaseInfo` definisce inoltre un `Dump` compila la funzione membro in modalità debug. È possibile usare `Dump` per scaricare il contenuto di un `CDaoDatabaseInfo` oggetto.  
   
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** afxdao. h  
   
 ## <a name="see-also"></a>Vedere anche  
  [Strutture, stili, callback e mappe messaggi](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
- [CDaoWorkspace (classe)](../../mfc/reference/cdaoworkspace-class.md)   
+ [Classe CDaoWorkspace](../../mfc/reference/cdaoworkspace-class.md)   
  [Classe CDaoDatabase](../../mfc/reference/cdaodatabase-class.md)

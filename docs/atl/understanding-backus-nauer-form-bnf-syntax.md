@@ -1,5 +1,5 @@
 ---
-title: ATL (Registrar) e Backus Nauer Form sintassi (BNF) | Documenti Microsoft
+title: ATL (Registrar) e Backus Nauer Form (BNF) sintassi | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,39 +15,40 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4137dd94886456d5813076f3cb328bac5ecf5c03
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: bf1033007a02ea21e7625068bc23d762c103aa41
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37854447"
 ---
-# <a name="understanding-backus-nauer-form-bnf-syntax"></a>Informazioni sulla sintassi BNF (Form) Backus Nauer
-Gli script utilizzati da ATL (Registrar) sono descritte in questo argomento utilizzando la sintassi BNF, che usa la notazione illustrata nella tabella seguente.  
+# <a name="understanding-backus-nauer-form-bnf-syntax"></a>Informazioni sulla sintassi di Backus Nauer Form (BNF)
+In questo argomento usando la sintassi BNF che usa la notazione del punto illustrata nella tabella seguente sono descritti gli script usati da ATL (Registrar).  
   
-|Convenzione/simboli|Significato|  
+|Convenzione/simbolo|Significato|  
 |------------------------|-------------|  
-|`::=`|Equivalente|  
-|`&#124;`|OR|  
-|`X+`|Uno o più `X`s.|  
-|`[X]`|`X` è facoltativo. I delimitatori facoltativi sono contrassegnati da `[]`.|  
-|Qualsiasi **grassetto** testo|Un valore letterale stringa.|  
-|Qualsiasi *corsivo* testo|Come costruire il valore letterale stringa.|  
+|::=|Equivalente|  
+|&#124;|OR|  
+|X +|Uno o più Xs.|  
+|[X]|X è facoltativo. I delimitatori facoltativi sono indicati da \[].|  
+|Eventuali **grassetto** testo|Un valore letterale stringa.|  
+|Eventuali *corsivo* testo|Come costruire il valore letterale stringa.|  
   
- Come indicato nella tabella precedente, script di registrazione utilizzare valori letterali stringa. Questi valori sono il testo effettivo che deve essere presente nello script. Nella tabella seguente vengono descritte le stringhe letterali utilizzate in uno script di ATL (Registrar).  
+ Come indicato nella tabella precedente, script di registrazione usare i valori letterali stringa. Questi valori sono text effettivi che devono essere visualizzati nello script. Nella tabella seguente vengono descritti i valori letterali stringa utilizzate in uno script ATL (Registrar).  
   
 |Valore letterale stringa|Operazione|  
 |--------------------|------------|  
-|**ForceRemove**|Rimuove completamente la successiva chiave (se presente) e quindi ricreata.|  
-|**NoRemove**|Non rimuove il tasto successivo durante l'annullamento della registrazione.|  
+|**ForceRemove**|Rimuove completamente il tasto successivo (se presente) e quindi ricreata.|  
+|**NoRemove**|Non rimuove la successiva chiave durante l'annullamento della registrazione.|  
 |**Val**|Specifica che `<Key Name>` è effettivamente un valore denominato.|  
 |**Eliminazione**|Elimina la successiva chiave durante la registrazione.|  
-|**s**|Specifica che il valore successivo è una stringa (**REG_SZ**).|  
-|**d**|Specifica che il valore successivo è un **DWORD** (**REG_DWORD**).|  
-|**m**|Specifica che il valore successivo è una valore multistringa (**REG_MULTI_SZ**).|  
-|**b**|Specifica che il valore successivo è un valore binario (**REG_BINARY**).|  
+|**s**|Specifica che il valore successivo è una stringa (REG_SZ).|  
+|**d**|Specifica che il valore successivo è un valore DWORD (REG_DWORD).|  
+|**m**|Specifica che il valore successivo è una valore multistringa (REG_MULTI_SZ).|  
+|**b**|Specifica che il valore successivo è un valore binario (REG_BINARY).|  
   
 ## <a name="bnf-syntax-examples"></a>Esempi di sintassi BNF  
- Di seguito sono riportati alcuni esempi di sintassi che consentono di comprendere il funzionano i valori letterali stringa e la notazione in uno script di ATL (Registrar).  
+ Ecco alcuni esempi di sintassi che aiutano a comprendere come i valori letterali stringa e la notazione funzionano in uno script ATL (Registrar).  
   
 ### <a name="syntax-example-1"></a>Esempio di sintassi 1  
   
@@ -63,7 +64,7 @@ Gli script utilizzati da ATL (Registrar) sono descritte in questo argomento util
 <registry expression> ::= <Add Key> | <Delete Key>  
 ```  
   
- Specifica che `registry expression` è equivalente a una `Add Key` o `Delete Key`.  
+ Specifica che `registry expression` equivale a `Add Key` o `Delete Key`.  
   
 ### <a name="syntax-example-3"></a>Esempio di sintassi 3  
   
@@ -87,7 +88,7 @@ Gli script utilizzati da ATL (Registrar) sono descritte in questo argomento util
 <AlphaNumeric> ::= any character not NULL, that is, ASCII 0  
 ```  
   
- Specifica che `AlphaNumeric` è equivalente a qualsiasi carattere diverso da NULL.  
+ Specifica che `AlphaNumeric` equivale a qualsiasi carattere diverso da NULL.  
   
 ### <a name="syntax-example-6"></a>Esempio di sintassi 6  
   
@@ -95,7 +96,7 @@ Gli script utilizzati da ATL (Registrar) sono descritte in questo argomento util
 val 'testmulti' = m 'String 1\0String 2\0'  
 ```  
   
- Specifica che il nome della chiave `testmulti` è un valore multistringa composto `String 1` e `String 2`.  
+ Specifica che il nome della chiave `testmulti` è un valore multistringa costituito `String 1` e `String 2`.  
   
 ### <a name="syntax-example-7"></a>Esempio di sintassi 7  
   
@@ -103,7 +104,7 @@ val 'testmulti' = m 'String 1\0String 2\0'
 val 'testhex' = d '&H55'  
 ```  
   
- Specifica che il nome della chiave `testhex` è un **DWORD** valore impostato su 55 esadecimale (decimale 85). Si noti che è conforme al formato di **& H** notazione come incluso nelle specifiche di Visual Basic.  
+ Specifica che il nome della chiave `testhex` è un valore DWORD impostato su 55 esadecimale (decimale 85). Questo formato è conforme alla nota la **& H** notazione come trovato nella specifica di Visual Basic.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Creazione degli script del Registro di sistema](../atl/creating-registrar-scripts.md)

@@ -1,5 +1,5 @@
 ---
-title: Classe CHtmlEditView | Documenti Microsoft
+title: Classe CHtmlEditView | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0ca4d5a88b14f32064e473bd129fcd0f8ddd7898
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 0519373a46e1c25feda7a3130b420c565a96eece
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37040613"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37339543"
 ---
 # <a name="chtmleditview-class"></a>Classe CHtmlEditView
 Fornisce la funzionalità della piattaforma di modifica WebBrowser nel contesto dell'architettura documento/visualizzazione di MFC.  
@@ -53,8 +53,8 @@ class CHtmlEditView : public CHtmlView, public CHtmlEditCtrlBase<CHtmlEditView>
 |Nome|Descrizione|  
 |----------|-----------------|  
 |[CHtmlEditView::Create](#create)|Crea un nuovo oggetto finestra.|  
-|[CHtmlEditView::GetDHtmlDocument](#getdhtmldocument)|Restituisce il **IHTMLDocument2** interfaccia nel documento corrente.|  
-|[CHtmlEditView::GetStartDocument](#getstartdocument)|Recupera il nome del documento predefinito per questa vista.|  
+|[CHtmlEditView::GetDHtmlDocument](#getdhtmldocument)|Restituisce il `IHTMLDocument2` interfaccia nel documento corrente.|  
+|[CHtmlEditView::GetStartDocument](#getstartdocument)|Recupera il nome del documento predefinito per questa visualizzazione.|  
   
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -101,31 +101,31 @@ virtual BOOL Create(
   
 ### <a name="parameters"></a>Parametri  
  *lpszClassName*  
- Punta a una stringa di caratteri con terminazione null che indica il nome di classe di Windows. Il nome della classe può essere qualsiasi nome registrato con il [AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass) funzione globale o il **RegisterClass** funzione di Windows. Se **NULL**, viene utilizzato il valore predefinito predefinito [CFrameWnd](../../mfc/reference/cframewnd-class.md) attributi.  
+ Punta a una stringa di caratteri con terminazione null che denomina la classe Windows. Il nome della classe può essere qualsiasi nome registrato con il [AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass) funzione globale o `RegisterClass` funzione Windows. Se NULL, viene utilizzato il valore predefinito predefinito [CFrameWnd](../../mfc/reference/cframewnd-class.md) attributi.  
   
  *lpszWindowName*  
  Punta a una stringa di caratteri con terminazione null che rappresenta il nome della finestra.  
   
  *dwStyle*  
- Specifica gli attributi di stile della finestra. Per impostazione predefinita, il **WS_VISIBLE** e **WS_CHILD** vengono impostati gli stili di Windows.  
+ Specifica gli attributi di stile di finestra. Per impostazione predefinita, gli stili WS_VISIBLE e WS_CHILD Windows sono impostati.  
   
  *Rect*  
- Un riferimento a un [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) struttura che specifica le dimensioni e posizione della finestra. Il *rectDefault* valore consente di specificare le dimensioni e posizione della nuova finestra.  
+ Un riferimento a un [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) struttura che specifica le dimensioni e posizione della finestra. Il *rectDefault* valore consente a Windows specificare le dimensioni e la posizione della nuova finestra.  
   
  *pParentWnd*  
  Puntatore alla finestra padre del controllo.  
   
  *nID*  
- Il numero ID della vista. Per impostazione predefinita, impostato su **AFX_IDW_PANE_FIRST**.  
+ Il numero di ID della vista. Per impostazione predefinita, impostato per AFX_IDW_PANE_FIRST.  
   
  *pContext*  
- Un puntatore a un [CCreateContext](../../mfc/reference/ccreatecontext-structure.md). **NULL** per impostazione predefinita.  
+ Un puntatore a un [CCreateContext](../../mfc/reference/ccreatecontext-structure.md). NULL per impostazione predefinita.  
   
 ### <a name="remarks"></a>Note  
- Questo metodo verrà chiamato anche il controllo WebBrowser indipendente **Navigate** metodo per caricare un documento predefinito (vedere [CHtmlEditView::GetStartDocument](#getstartdocument)).  
+ Questo metodo verrà chiamato anche il controllo WebBrowser indipendente `Navigate` per caricare un documento predefinito (vedere [CHtmlEditView::GetStartDocument](#getstartdocument)).  
   
 ##  <a name="getdhtmldocument"></a>  CHtmlEditView::GetDHtmlDocument  
- Restituisce il **IHTMLDocument2** interfaccia nel documento corrente.  
+ Restituisce il `IHTMLDocument2` interfaccia nel documento corrente.  
   
 ```  
 BOOL GetDHtmlDocument(IHTMLDocument2** ppDocument) const;  
@@ -136,7 +136,7 @@ BOOL GetDHtmlDocument(IHTMLDocument2** ppDocument) const;
  Il [IHTMLDocument2](https://msdn.microsoft.com/library/aa752574.aspx) interfaccia.  
   
 ##  <a name="getstartdocument"></a>  CHtmlEditView::GetStartDocument  
- Recupera il nome del documento predefinito per questa vista.  
+ Recupera il nome del documento predefinito per questa visualizzazione.  
   
 ```  
 virtual LPCTSTR GetStartDocument();

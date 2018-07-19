@@ -1,5 +1,5 @@
 ---
-title: Classe CHtmlEditCtrl | Documenti Microsoft
+title: Classe CHtmlEditCtrl | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e1226f99d01d933e1754d301756aee6a12620e6a
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 4cc8cdc389edc8abbc424ec8277f759e7f3d81bb
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37040142"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37338568"
 ---
 # <a name="chtmleditctrl-class"></a>Classe CHtmlEditCtrl
 Fornisce la funzionalità del controllo ActiveX WebBrowser in una finestra MFC.  
@@ -54,8 +54,8 @@ class CHtmlEditCtrl: public CWnd,
 |Nome|Descrizione|  
 |----------|-----------------|  
 |[CHtmlEditCtrl::Create](#create)|Crea un controllo WebBrowser ActiveX e lo collega al `CHtmlEditCtrl` oggetto. Questa funzione inserisce automaticamente il controllo WebBrowser ActiveX in modalità di modifica.|  
-|[CHtmlEditCtrl::GetDHtmlDocument](#getdhtmldocument)|Recupera il [IHTMLDocument2](https://msdn.microsoft.com/library/aa752574.aspx) interfaccia nel documento attualmente caricato nel controllo WebBrowser indipendente.|  
-|[CHtmlEditCtrl::GetStartDocument](#getstartdocument)|Recupera l'URL di un documento predefinito da caricare nel controllo WebBrowser indipendente.|  
+|[CHtmlEditCtrl::GetDHtmlDocument](#getdhtmldocument)|Recupera le [IHTMLDocument2](https://msdn.microsoft.com/library/aa752574.aspx) interfaccia nel documento attualmente caricato nel controllo WebBrowser indipendente.|  
+|[CHtmlEditCtrl::GetStartDocument](#getstartdocument)|Recupera l'URL a un documento predefinito da caricare nel controllo WebBrowser indipendente.|  
   
 ## <a name="remarks"></a>Note  
  Modalità di modifica WebBrowser ospitato controllo viene automaticamente inserito dopo averlo creato.  
@@ -102,10 +102,10 @@ virtual BOOL Create(
  Questo parametro è inutilizzato.  
   
  *Rect*  
- Specifica dimensioni e la posizione del controllo.  
+ Specifica le dimensioni e la posizione del controllo.  
   
  *pParentWnd*  
- Specifica la finestra del controllo padre. Non deve essere **NULL**.  
+ Specifica la finestra del controllo padre. Non deve essere NULL.  
   
  *nID*  
  Specifica l'ID. del controllo  
@@ -114,10 +114,10 @@ virtual BOOL Create(
  Questo parametro è inutilizzato.  
   
 ### <a name="return-value"></a>Valore restituito  
- Restituisce **TRUE** in caso di esito positivo **FALSE** in caso di errore.  
+ Restituisce TRUE se l'operazione riesce, FALSE in caso di errore.  
   
 ##  <a name="getdhtmldocument"></a>  CHtmlEditCtrl::GetDHtmlDocument  
- Recupera il [IHTMLDocument2](https://msdn.microsoft.com/library/aa752574.aspx) interfaccia nel documento attualmente caricato nel controllo WebBrowser indipendente  
+ Recupera le [IHTMLDocument2](https://msdn.microsoft.com/library/aa752574.aspx) interfaccia nel documento attualmente caricato nel controllo WebBrowser indipendente  
   
 ```  
 BOOL GetDHtmlDocument(IHTMLDocument2** ppDocument) const;  
@@ -128,7 +128,7 @@ BOOL GetDHtmlDocument(IHTMLDocument2** ppDocument) const;
  L'interfaccia a documenti.  
   
 ##  <a name="getstartdocument"></a>  CHtmlEditCtrl::GetStartDocument  
- Recupera l'URL di un documento predefinito da caricare nel controllo WebBrowser indipendente.  
+ Recupera l'URL a un documento predefinito da caricare nel controllo WebBrowser indipendente.  
   
 ```  
 virtual LPCTSTR GetStartDocument();

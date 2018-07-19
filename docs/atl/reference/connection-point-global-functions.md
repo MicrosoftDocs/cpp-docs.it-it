@@ -1,5 +1,5 @@
 ---
-title: Funzioni globali del punto di connessione | Documenti Microsoft
+title: Funzioni globali del punto di connessione | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,24 +18,24 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7dc6cd11cb1f04ba877524cd1ae6134a7dd93d09
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b85da5991357f1b67c6d2249d854e6084ee48c23
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32362791"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37884061"
 ---
 # <a name="connection-point-global-functions"></a>Funzioni globali del punto di connessione
-Queste funzioni forniscono il supporto per i punti di connessione e sink di mappe.  
+Queste funzioni forniscono supporto per i punti di connessione e le mappe di sink.  
   
 > [!IMPORTANT]
->  Le funzioni elencate nella tabella seguente non possono essere utilizzate nelle applicazioni eseguite in Windows Runtime.  
+>  Le funzioni elencate nella tabella seguente non possono essere utilizzate nelle applicazioni eseguite nel Runtime di Windows.  
   
 |||  
 |-|-|  
 |[AtlAdvise](#atladvise)|Crea una connessione tra il punto di connessione di un oggetto e il sink di un client.|  
 |[AtlUnadvise](#atlunadvise)|Termina la connessione stabilita tramite `AtlAdvise`.|  
-|[AtlAdviseSinkMap](#atladvisesinkmap)|Informa o unadvises voci nella mappa del sink di evento.|  
+|[AtlAdviseSinkMap](#atladvisesinkmap)|Avvisa o Annulla l'avviso di voci nella mappa del sink di evento.|  
 
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** atlbase. h  
@@ -44,7 +44,7 @@ Queste funzioni forniscono il supporto per i punti di connessione e sink di mapp
  Crea una connessione tra il punto di connessione di un oggetto e il sink di un client.  
   
 > [!IMPORTANT]
->  Questa funzione non può essere utilizzata nelle applicazioni eseguite in Windows Runtime.  
+>  Questa funzione non può essere utilizzata nelle applicazioni eseguite nel Runtime di Windows.  
   
 ```
 HRESULT    AtlAdvise(
@@ -55,23 +55,23 @@ HRESULT    AtlAdvise(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `pUnkCP`  
- [in] Un puntatore al **IUnknown** dell'oggetto di una connessione con il client.  
+ *pUnkCP*  
+ [in] Un puntatore al `IUnknown` dell'oggetto desidera connettersi con il client.  
   
  *pUnk*  
- [in] Un puntatore al client **IUnknown**.  
+ [in] Un puntatore al client `IUnknown`.  
   
- `iid`  
+ *IID*  
  [in] Il GUID del punto di connessione. In genere, questo è lo stesso come interfaccia in uscita gestita dal punto di connessione.  
   
- `pdw`  
- [out] Puntatore al cookie che identifica in modo univoco la connessione.  
+ *PDW*  
+ [out] Puntatore a cookie che identifica in modo univoco la connessione.  
   
 ### <a name="return-value"></a>Valore restituito  
  Un valore HRESULT standard.  
   
 ### <a name="remarks"></a>Note  
- Il sink implementa l'interfaccia in uscita supportata dal punto di connessione. Il client utilizza il `pdw` cookie per rimuovere la connessione tramite il passaggio al [AtlUnadvise](#atlunadvise).  
+ Il sink implementa l'interfaccia in uscita dal punto di connessione è supportata. Il client usa la *pdw* cookie per rimuovere la connessione passando a [AtlUnadvise](#atlunadvise).  
   
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_ATL_Windowing#91](../../atl/codesnippet/cpp/connection-point-global-functions_1.cpp)]  
@@ -80,7 +80,7 @@ HRESULT    AtlAdvise(
  Termina la connessione stabilita tramite [AtlAdvise](#atladvise).  
   
 > [!IMPORTANT]
->  Questa funzione non può essere utilizzata nelle applicazioni eseguite in Windows Runtime.  
+>  Questa funzione non può essere utilizzata nelle applicazioni eseguite nel Runtime di Windows.  
   
 ```
 HRESULT    AtlUnadvise(
@@ -90,13 +90,13 @@ HRESULT    AtlUnadvise(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `pUnkCP`  
- [in] Un puntatore al **IUnknown** dell'oggetto con cui è connesso il client.  
+ *pUnkCP*  
+ [in] Un puntatore al `IUnknown` dell'oggetto che il client è connesso con.  
   
- `iid`  
+ *IID*  
  [in] Il GUID del punto di connessione. In genere, questo è lo stesso come interfaccia in uscita gestita dal punto di connessione.  
   
- `dw`  
+ *dw*  
  [in] Cookie che identifica in modo univoco la connessione.  
   
 ### <a name="return-value"></a>Valore restituito  
@@ -109,7 +109,7 @@ HRESULT    AtlUnadvise(
  Chiamare questa funzione per inviare o annullare gli avvisi per tutte le voci della mappa eventi sink dell'oggetto.  
   
 > [!IMPORTANT]
->  Questa funzione non può essere utilizzata nelle applicazioni eseguite in Windows Runtime.  
+>  Questa funzione non può essere utilizzata nelle applicazioni eseguite nel Runtime di Windows.  
   
 ```
 HRESULT AtlAdviseSinkMap(T* pT, bool bAdvise);
@@ -117,10 +117,10 @@ HRESULT AtlAdviseSinkMap(T* pT, bool bAdvise);
   
 ### <a name="parameters"></a>Parametri  
  *pT*  
- [in] Un puntatore all'oggetto contenente la mappa di sink.  
+ [in] Un puntatore all'oggetto che contiene la mappa di sink.  
   
- `bAdvise`  
- [in] **true** se tutte le voci di sink devono ricevere notifica; **false** se tutte le voci di sink devono essere unadvised.  
+ *bAdvise*  
+ [in] TRUE se tutte le voci di sink a cui annunciare; FALSE se devono essere annullare tutte le voci di sink.  
   
 ### <a name="return-value"></a>Valore restituito  
  Un valore HRESULT standard.  

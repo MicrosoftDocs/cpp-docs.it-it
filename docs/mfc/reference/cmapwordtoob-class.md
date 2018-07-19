@@ -1,5 +1,5 @@
 ---
-title: Classe CMapWordToOb | Documenti Microsoft
+title: Classe CMapWordToOb | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d358e256e28ea61c9b9c287429dfdfcb7b1435c6
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: d9f9554f0ba8daf5a96f0fa2daa32e0e20469bf7
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37041831"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37335405"
 ---
 # <a name="cmapwordtoob-class"></a>Classe CMapWordToOb
 Supporta mappe di puntatori `CObject` con chiave fornita da parole a 16 bit.  
@@ -61,7 +61,7 @@ class CMapWordToOb : public CObject
 ```  
   
 ## <a name="members"></a>Membri  
- Le funzioni membro `CMapWordToOb` sono simili alle funzioni membro della classe [CMapStringToOb](../../mfc/reference/cmapstringtoob-class.md). Grazie a questa somiglianza, per le specifiche delle funzioni membro è possibile usare la documentazione di riferimento di `CMapStringToOb`. Ovunque sia visualizzato un `CString` o un **const** puntatore **char** come parametro della funzione o valore restituito, sostituire **WORD**.  
+ Le funzioni membro della `CMapWordToOb` sono simili alle funzioni membro della classe [CMapStringToOb](../../mfc/reference/cmapstringtoob-class.md). Grazie a questa somiglianza, per le specifiche delle funzioni membro è possibile usare la documentazione di riferimento di `CMapStringToOb`. Ogni volta che un `CString` o un **const** puntatore al **char** come parametro della funzione o valore restituito, sostituire con WORD.  
   
  `BOOL CMapStringToOb::Lookup( const char* <key>,`  
   
@@ -88,12 +88,12 @@ class CMapWordToOb : public CObject
 |[CMapStringToOb::GetStartPosition](../../mfc/reference/cmapstringtoob-class.md#getstartposition)|Restituisce la posizione del primo elemento.|  
 |[CMapStringToOb::HashKey](../../mfc/reference/cmapstringtoob-class.md#hashkey)|Calcola il valore hash di una chiave specificata.|  
 |[CMapStringToOb::InitHashTable](../../mfc/reference/cmapstringtoob-class.md#inithashtable)|Inizializza la tabella hash.|  
-|[CMapStringToOb::IsEmpty](../../mfc/reference/cmapstringtoob-class.md#isempty)|Verifica se la condizione di mappa vuoto (alcun elemento).|  
-|[CMapStringToOb::Lookup](../../mfc/reference/cmapstringtoob-class.md#lookup)|Cerca un puntatore void in base alla chiave puntatore void. Il valore del puntatore, non l'entità cui fa riferimento, viene utilizzato per il confronto delle chiavi.|  
-|[CMapStringToOb::LookupKey](../../mfc/reference/cmapstringtoob-class.md#lookupkey)|Restituisce un riferimento alla chiave associata con il valore di chiave specificato.|  
+|[CMapStringToOb::IsEmpty](../../mfc/reference/cmapstringtoob-class.md#isempty)|Verifica se la condizione vuota-map (nessun elemento).|  
+|[CMapStringToOb::Lookup](../../mfc/reference/cmapstringtoob-class.md#lookup)|Cerca un puntatore void in base alla chiave di puntatore void. Il valore del puntatore, non le entità cui fa riferimento, viene utilizzato per il confronto delle chiavi.|  
+|[CMapStringToOb::LookupKey](../../mfc/reference/cmapstringtoob-class.md#lookupkey)|Restituisce un riferimento alla chiave associata al valore di chiave specificato.|  
 |[CMapStringToOb::RemoveAll](../../mfc/reference/cmapstringtoob-class.md#removeall)|Rimuove tutti gli elementi da questa mappa.|  
 |[CMapStringToOb::RemoveKey](../../mfc/reference/cmapstringtoob-class.md#removekey)|Rimuove un elemento specificato da una chiave.|  
-|[CMapStringToOb::SetAt](../../mfc/reference/cmapstringtoob-class.md#setat)|Inserisce un elemento nella mappa. sostituisce un elemento esistente se viene trovata una chiave corrispondente.|  
+|[CMapStringToOb::SetAt](../../mfc/reference/cmapstringtoob-class.md#setat)|Inserisce un elemento nella mappa; sostituisce un elemento esistente se viene trovata una chiave corrispondente.|  
   
 ### <a name="public-operators"></a>Operatori pubblici  
   
@@ -102,11 +102,11 @@ class CMapWordToOb : public CObject
 |[[] CMapStringToOb::operator](../../mfc/reference/cmapstringtoob-class.md#operator_at)|Inserisce un elemento nella mappa, la sostituzione di operatore per `SetAt`.|  
   
 ## <a name="remarks"></a>Note  
- `CMapWordToOb` incorpora la macro `IMPLEMENT_SERIAL` per supportare la serializzazione e il dump dei relativi elementi. Ogni elemento viene serializzato a sua volta se una mappa è archiviata in un archivio, con l'inserimento di overload ( **<<**) (operatore) o con il `Serialize` funzione membro.  
+ `CMapWordToOb` incorpora l'IMPLEMENT_SERIAL (macro) per supportare la serializzazione e il dump dei relativi elementi. Ogni elemento viene serializzato a turno se una mappa è archiviata in un archivio, con l'inserimento di overload ( **<<**) operatore o con il `Serialize` funzione membro.  
   
- Se è necessario un dump di singoli **WORD** -  `CObject` elementi, è necessario impostare la profondità del contesto di dump su 1 o versioni successive.  
+ Se è necessario un dump di singoli WORD - `CObject` elementi, è necessario impostare la profondità del contesto di dump su 1 o versioni successive.  
   
- Quando un `CMapWordToOb` oggetto viene eliminato oppure quando gli elementi vengono rimossi, il `CObject` puntatori sono stati rimossi. Gli oggetti cui fanno riferimento il `CObject` puntatori non vengono eliminati definitivamente.  
+ Quando un `CMapWordToOb` oggetto viene eliminato o quando gli elementi vengono rimossi, il `CObject` puntatori sono stati rimossi. Gli oggetti cui fa riferimento il `CObject` puntatori non vengono eliminati definitivamente.  
   
  Per ulteriori informazioni sul `CMapWordToOb`, vedere l'articolo [raccolte](../../mfc/collections.md).  
   
@@ -119,7 +119,7 @@ class CMapWordToOb : public CObject
  **Intestazione:** afxcoll. h  
   
 ## <a name="see-also"></a>Vedere anche  
- [CObject (classe)](../../mfc/reference/cobject-class.md)   
+ [Classe CObject](../../mfc/reference/cobject-class.md)   
  [Grafico della gerarchia](../../mfc/hierarchy-chart.md)
 
 

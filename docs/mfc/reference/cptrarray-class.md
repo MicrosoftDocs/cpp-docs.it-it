@@ -1,5 +1,5 @@
 ---
-title: Classe CPtrArray | Documenti Microsoft
+title: Classe CPtrArray | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1ab3416c0c4e659ce94f7dc4376ea2d7a1fd4c32
-ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
+ms.openlocfilehash: c2325f95ebcd002c5a80c50316cbbf208052b78b
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37078026"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37851291"
 ---
 # <a name="cptrarray-class"></a>Classe CPtrArray
 Supporta matrici di puntatori void.  
@@ -69,7 +69,7 @@ class CPtrArray : public CObject
 ```  
   
 ## <a name="members"></a>Membri  
- Le funzioni membro `CPtrArray` sono simili alle funzioni membro della classe [CObArray](../../mfc/reference/cobarray-class.md). Grazie a questa somiglianza, per le specifiche delle funzioni membro è possibile usare la documentazione di riferimento di `CObArray`. Ogni volta che un `CObject` puntatore come parametro della funzione o valore restituito, sostituire un puntatore a **void**.  
+ Le funzioni membro della `CPtrArray` sono simili alle funzioni membro della classe [CObArray](../../mfc/reference/cobarray-class.md). Grazie a questa somiglianza, per le specifiche delle funzioni membro è possibile usare la documentazione di riferimento di `CObArray`. Ogni volta che un `CObject` puntatore come parametro della funzione o valore restituito, sostituire un puntatore a **void**.  
   
  `CObject* CObArray::GetAt( int <nIndex> ) const;`  
   
@@ -112,16 +112,16 @@ class CPtrArray : public CObject
 |[[] CObArray::operator](../../mfc/reference/cobarray-class.md#operator_at)|Imposta o ottiene l'elemento in corrispondenza dell'indice specificato.|  
   
 ## <a name="remarks"></a>Note  
- `CPtrArray` include la macro `IMPLEMENT_DYNAMIC` per supportare l'accesso del tipo in fase di esecuzione ed eseguire l'operazione di dump dell'oggetto `CDumpContext`. Se è necessario un dump del puntatore singoli elementi della matrice, è necessario impostare la profondità del contesto di dump a 1 o versioni successive.  
+ `CPtrArray` incorpora l'IMPLEMENT_DYNAMIC (macro) per supportare l'accesso di tipo in fase di esecuzione e il dump per un `CDumpContext` oggetto. Se è necessario un dump puntatore singoli elementi della matrice, è necessario impostare la profondità del contesto di dump a 1 o versioni successive.  
   
 > [!NOTE]
 >  Prima di usare una matrice, usare `SetSize` per determinarne le dimensioni e allocare la necessaria memoria. Se non si usa `SetSize`, l'aggiunta di elementi alla matrice ne causa la riallocazione e la copia frequente. Le operazioni di riallocazione e copia frequenti sono inefficienti e possono frammentare la memoria.  
   
  Matrici di puntatori non possono essere serializzate.  
   
- Una matrice di puntatore o viene eliminata, quando gli elementi vengono rimossi, vengono eliminati solo i puntatori e non le entità che referenziano.  
+ Quando viene eliminato un puntatore di matrice oppure quando gli elementi vengono rimossi, vengono rimossi solo i puntatori, non le entità che referenziano.  
   
- Per ulteriori informazioni sull'utilizzo `CPtrArray`, vedere l'articolo [raccolte](../../mfc/collections.md).  
+ Per altre informazioni sull'uso `CPtrArray`, vedere l'articolo [raccolte](../../mfc/collections.md).  
   
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -132,6 +132,6 @@ class CPtrArray : public CObject
  **Intestazione:** afxcoll. h  
   
 ## <a name="see-also"></a>Vedere anche  
- [CObject (classe)](../../mfc/reference/cobject-class.md)   
+ [Classe CObject](../../mfc/reference/cobject-class.md)   
  [Grafico delle gerarchie](../../mfc/hierarchy-chart.md)   
  [Classe CObArray](../../mfc/reference/cobarray-class.md)

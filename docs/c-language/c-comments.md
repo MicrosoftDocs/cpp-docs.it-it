@@ -1,7 +1,7 @@
 ---
 title: Commenti C | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 06/25/2018
 ms.technology:
 - cpp-language
 ms.topic: language-reference
@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f3a6c2d32596aa8205d02ee5cddb28b5ba3c8166
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c2eccff8ab582270f766fdbcb448fdb91145e348
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32384346"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37121744"
 ---
 # <a name="c-comments"></a>Commenti C
 Un commento è una sequenza di caratteri che inizia con una combinazione barra/asterisco (<b>/\*</b>) considerata come un singolo spazio vuoto dal compilatore e altrimenti ignorata. Un commento può contenere qualsiasi combinazione di caratteri del set di caratteri rappresentabili, inclusi i caratteri di nuova riga, fatta eccezione per il delimitatore di fine commento (<b>\*/</b>). I commenti possono occupare più di una riga, ma non possono essere annidati.  
@@ -70,13 +70,13 @@ printf( "Hello\n" );  /* Comments can go here */
   
  **Sezione specifica Microsoft**  
   
- Il compilatore Microsoft supporta anche commenti a riga singola preceduti da due barre (**//**). Se si esegue la compilazione con l'opzione /Za (standard ANSI), questi commenti generano errori. Tali commenti non possono estendersi su una seconda riga.  
+ Il compilatore Microsoft supporta anche commenti a riga singola preceduti da due barre (__//__). Se si esegue la compilazione con l'opzione /Za (standard ANSI), questi commenti generano errori. Tali commenti non possono estendersi su una seconda riga.  
   
 ```  
 // This is a valid comment  
 ```  
   
- I commenti che iniziano con due barre (**//**) vengono terminati dal successivo carattere di nuova riga non preceduto da un carattere di escape. Nell'esempio seguente il carattere di nuova riga è preceduto da una barra rovesciata (**\\**), creando in tal modo una sequenza di escape. Questa sequenza di escape indica al compilatore di considerare la riga successiva nella riga precedente. Per altre informazioni, vedere [Sequenze di escape](../c-language/escape-sequences.md).  
+ I commenti che iniziano con due barre (__//__) vengono terminati dal successivo carattere di nuova riga non preceduto da un carattere di escape. Nell'esempio seguente il carattere di nuova riga è preceduto da una barra rovesciata (**\\**), creando in tal modo una sequenza di escape. Questa sequenza di escape indica al compilatore di considerare la riga successiva nella riga precedente. Per altre informazioni, vedere [Sequenze di escape](../c-language/escape-sequences.md).  
   
 ```  
 // my comment \  

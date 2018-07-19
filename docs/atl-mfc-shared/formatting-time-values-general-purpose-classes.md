@@ -1,5 +1,5 @@
 ---
-title: 'Formattazione di valori di ora: Classi di uso generale | Documenti Microsoft'
+title: 'Formattazione dei valori di tempo: Classi generiche | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,27 +17,27 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d48dd7ef4990c4ffe13c7c1f056d5904b6897435
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: aa5192ebcbc6b0b9b82bcce0bd0f2041ff536016
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32354655"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37879368"
 ---
-# <a name="formatting-time-values-general-purpose-classes"></a>Formattazione di valori di ora: Classi di uso generale
+# <a name="formatting-time-values-general-purpose-classes"></a>Formattazione dei valori di tempo: Classi generiche
 La procedura seguente viene illustrato come formattare i valori di ora.  
   
-#### <a name="to-format-a-string-representation-of-a-time-or-elapsed-time"></a>Per formattare una rappresentazione di stringa di un'ora o tempo trascorso  
+#### <a name="to-format-a-string-representation-of-a-time-or-elapsed-time"></a>Per formattare una rappresentazione di stringa di ora o di tempo trascorso  
   
-1.  Utilizzare il **formato** funzione membro da uno di [CTime](../atl-mfc-shared/reference/ctime-class.md) o [CTimeSpan](../atl-mfc-shared/reference/ctimespan-class.md) classi per creare un carattere di rappresentazione di stringa della data o tempo trascorso, come illustrato il esempio seguente.  
+Usare la `Format` funzione di membro da una di [CTime](../atl-mfc-shared/reference/ctime-class.md) o [CTimeSpan](../atl-mfc-shared/reference/ctimespan-class.md) classi per creare un carattere di rappresentazione di stringa dell'ora o il tempo trascorso, come illustrato nell'esempio seguente.
   
      [!code-cpp[NVC_ATLMFC_Utilities#175](../atl-mfc-shared/codesnippet/cpp/formatting-time-values-general-purpose-classes_1.cpp)]  
   
 ## <a name="what-do-you-want-to-know-more-about"></a>Ciò che si desidera saperne di più  
   
--   [Generale di data e ora programmazione in MFC](../atl-mfc-shared/date-and-time.md)  
+-   [Programmazione di tempo in MFC e data generale](../atl-mfc-shared/date-and-time.md)  
   
--   [Utilizzo di SYSTEMTIME](../atl-mfc-shared/date-and-time-systemtime-support.md)  
+-   [Uso di SYSTEMTIME](../atl-mfc-shared/date-and-time-systemtime-support.md)  
   
 -   [Supporto di automazione di data e ora programmazione](../atl-mfc-shared/date-and-time-automation-support.md)  
   

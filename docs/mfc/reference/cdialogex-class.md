@@ -1,5 +1,5 @@
 ---
-title: Classe CDialogEx | Documenti Microsoft
+title: Classe CDialogEx | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ff365134a9b952b92211418c03d147a65077c66e
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 5d941b112047dc8f90a8cdc4686e422f028b6d7e
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36951852"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37335958"
 ---
 # <a name="cdialogex-class"></a>Classe CDialogEx
 La classe `CDialogEx` specifica il colore e l'immagine di sfondo di una finestra di dialogo.  
@@ -59,7 +59,7 @@ class CDialogEx : public CDialog
   
  Le immagini della finestra di dialogo vengono archiviate in un file di risorse. Il framework elimina automaticamente tutte le immagini caricate dal file di risorse. Per eliminare a livello di codice l'immagine di sfondo corrente, chiamare il [CDialogEx::SetBackgroundImage](#setbackgroundimage) metodo o implementare un `OnDestroy` gestore dell'evento. Quando si chiama il [CDialogEx::SetBackgroundImage](#setbackgroundimage) metodo, passare un `HBITMAP` parametro come handle dell'immagine. L'oggetto `CDialogEx` diventa proprietario dell'immagine e la elimina se il flag `m_bAutoDestroyBmp` è `TRUE`.  
   
- Un `CDialogEx` oggetto può essere un elemento padre di un [CMFCPopupMenu classe](../../mfc/reference/cmfcpopupmenu-class.md) oggetto. Il [classe CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md) object chiama il `CDialogEx::SetActiveMenu` (metodo) quando il [CMFCPopupMenu classe](../../mfc/reference/cmfcpopupmenu-class.md) oggetto verrà visualizzata la. In seguito, il `CDialogEx` oggetto gestisce qualsiasi evento di menu finché il [CMFCPopupMenu classe](../../mfc/reference/cmfcpopupmenu-class.md) oggetto viene chiuso.  
+ Oggetto `CDialogEx` oggetto può essere un elemento padre di un [classe CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md) oggetto. Il [classe CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md) object chiama il `CDialogEx::SetActiveMenu` (metodo) quando il [classe CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md) apre dell'oggetto. In seguito, il `CDialogEx` oggetto gestisce qualsiasi evento di menu finché il [classe CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md) oggetto è chiuso.  
   
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -97,10 +97,10 @@ CDialogEx(
  Nome della risorsa di un modello di finestra di dialogo.  
   
  [in] *pParent*  
- Puntatore alla finestra padre. Il valore predefinito è `NULL`.  
+ Puntatore alla finestra padre. Il valore predefinito è NULL.  
   
  [in] *pParentWnd*  
- Puntatore alla finestra padre. Il valore predefinito è `NULL`.  
+ Puntatore alla finestra padre. Il valore predefinito è NULL.  
   
 ### <a name="return-value"></a>Valore restituito  
   
@@ -120,7 +120,7 @@ void SetBackgroundColor(
  Un valore di colore RGB.  
   
  [in] *bRepaint*  
- `TRUE` Per aggiornare immediatamente la schermata; in caso contrario, `FALSE`. Il valore predefinito è `TRUE`.  
+ TRUE per aggiornare immediatamente la schermata; in caso contrario, FALSE. Il valore predefinito è TRUE.  
   
 ### <a name="remarks"></a>Note  
   
@@ -148,20 +148,20 @@ BOOL SetBackgroundImage(
  [in] *uiBmpResId*  
  L'ID risorsa dell'immagine di sfondo.  
   
- [in] *percorso*  
+ [in] *posizione*  
  Uno del `CDialogEx::BackgroundLocation` valori che specificano la posizione dell'immagine. I valori validi includono BACKGR_TILE BACKGR_TOPLEFT, BACKGR_TOPRIGHT, BACKGR_BOTTOMLEFT e BACKGR_BOTTOMRIGHT. Il valore predefinito è BACKGR_TILE.  
   
  [in] *il flag bAutoDestroy*  
- `TRUE` Per eliminare automaticamente l'immagine di sfondo; in caso contrario, `FALSE`.  
+ TRUE per eliminare automaticamente l'immagine di sfondo; in caso contrario, FALSE.  
   
  [in] *bRepaint*  
- `TRUE` per immediatamente ridisegnare la finestra di dialogo; in caso contrario, `FALSE`.  
+ TRUE per immediatamente ridisegnare la finestra di dialogo; in caso contrario, FALSE.  
   
 ### <a name="return-value"></a>Valore restituito  
- Nel secondo metodo sintassi, eseguire l'overload `TRUE` se il metodo ha esito positivo; in caso contrario, `FALSE`.  
+ Il secondo metodo overload di informazioni sulla sintassi, TRUE se il metodo ha esito positivo. in caso contrario, FALSE.  
   
 ### <a name="remarks"></a>Note  
- L'immagine specificata non è estesa alle dimensioni dell'area client finestra di dialogo.  
+ L'immagine specificata non è esteso in base l'area client della finestra di dialogo.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Grafico delle gerarchie](../../mfc/hierarchy-chart.md)   

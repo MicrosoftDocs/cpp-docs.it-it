@@ -1,5 +1,5 @@
 ---
-title: Macro della mappa COM | Documenti Microsoft
+title: Macro di mappa COM | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 74f8903d81a126a6647bc43018f8422296ddf970
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 00c15bf8567456254c8a338ed395a726fcbe8c9b
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32358423"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37879309"
 ---
-# <a name="com-map-macros"></a>Macro della mappa COM
-Queste macro definiscono le mappe dell'interfaccia COM.  
+# <a name="com-map-macros"></a>Macro di mappa COM
+Queste macro definiscono mappe dell'interfaccia COM.  
   
 |||  
 |-|-|  
@@ -44,10 +44,10 @@ BEGIN_COM_MAP(x)
   
 ### <a name="parameters"></a>Parametri  
  *x*  
- [in] Il nome dell'oggetto di classe a cui in che si siano esponendo le interfacce.  
+ [in] Il nome dell'oggetto di classe in che si siano esponendo le interfacce.  
   
 ### <a name="remarks"></a>Note  
- [CComObjectRootEx:: InternalQueryInterface](ccomobjectrootex-class.md#internalqueryinterface) restituisce solo i puntatori per le interfacce nella mappa COM. Avviare la mappa dell'interfaccia con il `BEGIN_COM_MAP` (macro), aggiungere le voci per ognuna delle interfacce con la [COM_INTERFACE_ENTRY](com-interface-entry-macros.md#com_interface_entry) macro o una delle relative varianti e completare la mappa con la [END_COM_MAP](#end_com_map) macro.  
+ [CComObjectRootEx:: InternalQueryInterface](ccomobjectrootex-class.md#internalqueryinterface) restituisce solo i puntatori per le interfacce nella mappa COM. Avviare la mappa dell'interfaccia con la macro BEGIN_COM_MAP, aggiungere le voci per ognuna delle interfacce con la [COM_INTERFACE_ENTRY](com-interface-entry-macros.md#com_interface_entry) macro o una delle relative varianti e completare la mappa con il [END_COM_MAP](#end_com_map) macro.  
 
   
 ### <a name="example"></a>Esempio  

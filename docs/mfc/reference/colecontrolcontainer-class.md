@@ -1,5 +1,5 @@
 ---
-title: Classe COleControlContainer | Documenti Microsoft
+title: Classe COleControlContainer | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -82,12 +82,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0b59a1ef4d1a70063c15b7de41963abc60dd341a
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 7f33335e193997c0988cab0580c3eab612d0cc84
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37041929"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37852303"
 ---
 # <a name="colecontrolcontainer-class"></a>Classe COleControlContainer
 Funge da contenitore di controlli per i controlli ActiveX.  
@@ -110,15 +110,15 @@ class COleControlContainer : public CCmdTarget
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[COleControlContainer::AttachControlSite](#attachcontrolsite)|Crea un sito di controllo, ospitato dal contenitore.|  
-|[COleControlContainer::BroadcastAmbientPropertyChange](#broadcastambientpropertychange)|Informa ospitati tutti i controlli che una proprietà di ambiente è stato modificato.|  
+|[COleControlContainer::AttachControlSite](#attachcontrolsite)|Crea un sito del controllo ospitato dal contenitore.|  
+|[COleControlContainer::BroadcastAmbientPropertyChange](#broadcastambientpropertychange)|Segnala tutti inclusi i controlli che una proprietà di ambiente è stato modificato.|  
 |[COleControlContainer::CheckDlgButton](#checkdlgbutton)|Modifica il controllo pulsante specificato.|  
 |[COleControlContainer::CheckRadioButton](#checkradiobutton)|Seleziona il pulsante di opzione specificato di un gruppo.|  
-|[COleControlContainer::CreateControl](#createcontrol)|Crea un controllo ActiveX ospitato.|  
+|[COleControlContainer::CreateControl](#createcontrol)|Crea un controllo ActiveX contenuto.|  
 |[COleControlContainer::CreateOleFont](#createolefont)|Crea un tipo di carattere OLE.|  
 |[COleControlContainer::FindItem](#finditem)|Restituisce il sito personalizzato del controllo specificato.|  
-|[COleControlContainer::FreezeAllEvents](#freezeallevents)|Determina se il sito del controllo è accettazione di eventi.|  
-|[COleControlContainer::GetAmbientProp](#getambientprop)|Recupera la proprietà di ambiente specificata.|  
+|[COleControlContainer::FreezeAllEvents](#freezeallevents)|Determina se il sito del controllo è possibile accettare gli eventi.|  
+|[COleControlContainer::GetAmbientProp](#getambientprop)|Recupera le proprietà di ambiente specificata.|  
 |[COleControlContainer::GetDlgItem](#getdlgitem)|Recupera il controllo di finestra di dialogo specificata.|  
 |[COleControlContainer::GetDlgItemInt](#getdlgitemint)|Recupera il valore del controllo finestra di dialogo specificata.|  
 |[COleControlContainer::GetDlgItemText](#getdlgitemtext)|Recupera la didascalia del controllo finestra di dialogo specificata.|  
@@ -126,8 +126,8 @@ class COleControlContainer : public CCmdTarget
 |[COleControlContainer::HandleWindowlessMessage](#handlewindowlessmessage)|Gestisce i messaggi inviati a un controllo senza finestra.|  
 |[COleControlContainer::IsDlgButtonChecked](#isdlgbuttonchecked)|Determina lo stato del pulsante specificato.|  
 |[COleControlContainer::OnPaint](#onpaint)|Chiamata eseguita per ridisegnare una parte del contenitore.|  
-|[COleControlContainer::OnUIActivate](#onuiactivate)|Chiamata eseguita quando un controllo sta per essere attivato sul posto.|  
-|[COleControlContainer::OnUIDeactivate](#onuideactivate)|Chiamata eseguita quando un controllo sta per essere disattivato.|  
+|[COleControlContainer::OnUIActivate](#onuiactivate)|Chiamato quando un controllo sta per essere attivato sul posto.|  
+|[COleControlContainer::OnUIDeactivate](#onuideactivate)|Chiamato quando un controllo sta per essere disattivato.|  
 |[COleControlContainer::ScrollChildren](#scrollchildren)|Chiamato dal framework quando vengono ricevuti i messaggi di scorrimento da una finestra figlio.|  
 |[COleControlContainer::SendDlgItemMessage](#senddlgitemmessage)|Invia un messaggio al controllo specificato.|  
 |[COleControlContainer::SetDlgItemInt](#setdlgitemint)|Imposta il valore del controllo specificato.|  
@@ -141,17 +141,17 @@ class COleControlContainer : public CCmdTarget
 |[COleControlContainer::m_crFore](#m_crfore)|Il colore di primo piano del contenitore.|  
 |[COleControlContainer::m_listSitesOrWnds](#m_listsitesorwnds)|Un elenco dei siti di controllo supportati.|  
 |[COleControlContainer::m_nWindowlessControls](#m_nwindowlesscontrols)|Il numero di controlli privi di finestra ospitati.|  
-|[COleControlContainer::m_pOleFont](#m_polefont)|Puntatore al tipo di carattere OLE del sito del controllo personalizzato.|  
-|[COleControlContainer::m_pSiteCapture](#m_psitecapture)|Puntatore al sito del controllo di acquisizione.|  
+|[COleControlContainer::m_pOleFont](#m_polefont)|Puntatore al tipo di carattere del sito personalizzato di controllo OLE.|  
+|[COleControlContainer::m_pSiteCapture](#m_psitecapture)|Puntatore al sito di controllo di acquisizione.|  
 |[COleControlContainer::m_pSiteFocus](#m_psitefocus)|Puntatore al controllo che attualmente ha lo stato attivo di input.|  
 |[COleControlContainer::m_pSiteUIActive](#m_psiteuiactive)|Puntatore al controllo che è attualmente attivato sul posto.|  
-|[COleControlContainer::m_pWnd](#m_pwnd)|Puntatore alla finestra di implementazione del contenitore del controllo.|  
+|[COleControlContainer::m_pWnd](#m_pwnd)|Puntatore alla finestra di implementazione al contenitore di controlli.|  
 |[COleControlContainer::m_siteMap](#m_sitemap)|Mappa del sito.|  
   
 ## <a name="remarks"></a>Note  
- Questa operazione viene eseguita includendo il supporto per uno o più siti di controllo ActiveX (implementata da `COleControlSite`). `COleControlContainer` implementa completamente la [IOleInPlaceFrame](http://msdn.microsoft.com/library/windows/desktop/ms692770) e [IOleContainer](http://msdn.microsoft.com/library/windows/desktop/ms690103) interfacce, che consente i controlli ActiveX contenuti soddisfare i requisiti di qualifica come elementi sul posto.  
+ Questa operazione viene eseguita fornendo il supporto per uno o più siti di controllo ActiveX (implementato da `COleControlSite`). `COleControlContainer` implementa completamente la [IOleInPlaceFrame](http://msdn.microsoft.com/library/windows/desktop/ms692770) e [IOleContainer](http://msdn.microsoft.com/library/windows/desktop/ms690103) interfacce, consentendo un controllo ActiveX indipendente soddisfare i requisiti come elementi sul posto.  
   
- In genere, questa classe viene utilizzata in combinazione con `COccManager` e `COleControlSite` per implementare un contenitore di controllo ActiveX personalizzato, con siti personalizzati per uno o più controlli ActiveX.  
+ In genere, questa classe viene utilizzata in combinazione con `COccManager` e `COleControlSite` per implementare un contenitore di controlli ActiveX personalizzato, con siti personalizzati per uno o più controlli ActiveX.  
   
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -182,16 +182,16 @@ void AttachControlSite(
  Un puntatore a un `CWnd` oggetto.  
   
  *nIDC*  
- L'ID del controllo da collegare.  
+ L'ID del controllo da associare.  
   
 ### <a name="remarks"></a>Note  
  Eseguire l'override di questa funzione se si desidera personalizzare questo processo.  
   
 > [!NOTE]
->  Utilizzare la prima tipologia di questa funzione in caso di collegamento statico alla libreria MFC. Utilizzare la seconda tipologia se ci si collega in modo dinamico alla libreria MFC.  
+>  Utilizzare la prima tipologia di questa funzione in modo statico per il collegamento alla libreria MFC. Utilizzare la seconda tipologia se ci si collega in modo dinamico alla libreria MFC.  
   
 ##  <a name="broadcastambientpropertychange"></a>  COleControlContainer::BroadcastAmbientPropertyChange  
- Informa ospitati tutti i controlli che una proprietà di ambiente è stato modificato.  
+ Segnala tutti inclusi i controlli che una proprietà di ambiente è stato modificato.  
   
 ```  
 virtual void BroadcastAmbientPropertyChange(DISPID dispid);
@@ -199,7 +199,7 @@ virtual void BroadcastAmbientPropertyChange(DISPID dispid);
   
 ### <a name="parameters"></a>Parametri  
  *DISPID*  
- ID dispatch della proprietà di ambiente in corso di modifica.  
+ ID dispatch della proprietà di ambiente da modificare.  
   
 ### <a name="remarks"></a>Note  
  Questa funzione viene chiamata dal framework quando una proprietà di ambiente è stato modificato valore. Eseguire l'override di questa funzione per personalizzare questo comportamento.  
@@ -220,14 +220,14 @@ virtual void CheckDlgButton(
  *nControllare*  
  Specifica lo stato del pulsante. Può essere uno dei seguenti:  
   
-- **BST_CHECKED** imposta lo stato del pulsante selezionato.  
+- BST_CHECKED imposta lo stato del pulsante di controllati.  
   
-- **BST_INDETERMINATE** imposta lo stato del pulsante su appare in grigio, che indica uno stato indeterminato. Utilizzare questo valore solo se il pulsante ha il **BS_3STATE** oppure **BS_AUTO3STATE** stile.  
+- BST_INDETERMINATE imposta lo stato del pulsante su grigio, che indica uno stato indeterminato. Utilizzare questo valore solo se il pulsante ha il BS_3STATE o BS_AUTO3STATE lo stile.  
   
-- **BST_UNCHECKED** imposta lo stato del pulsante su cancellati.  
+- BST_UNCHECKED imposta lo stato del pulsante a deselezionata.  
   
 ##  <a name="checkradiobutton"></a>  COleControlContainer::CheckRadioButton  
- Seleziona un pulsante di opzione specificato in un gruppo e cancella i pulsanti rimanenti del gruppo.  
+ Seleziona un pulsante di opzione specificato in un gruppo e cancella i pulsanti rimanenti nel gruppo.  
   
 ```  
 virtual void CheckRadioButton(
@@ -241,7 +241,7 @@ virtual void CheckRadioButton(
  Specifica l'identificatore del primo pulsante di opzione nel gruppo.  
   
  *nIDLastButton*  
- Specifica l'identificatore del pulsante ultima nel gruppo.  
+ Specifica l'identificatore del pulsante di opzione ultimo gruppo.  
   
  *nIDCheckButton*  
  Specifica l'identificatore del pulsante di opzione da controllare.  
@@ -258,7 +258,7 @@ explicit COleControlContainer(CWnd* pWnd);
  Puntatore alla finestra padre del contenitore del controllo.  
   
 ### <a name="remarks"></a>Note  
- Dopo l'oggetto è stato creato correttamente, aggiungere un sito di controllo personalizzato con una chiamata a `AttachControlSite`.  
+ Una volta che l'oggetto è stato creato correttamente, aggiungere un sito di controllo personalizzato con una chiamata a `AttachControlSite`.  
   
 ##  <a name="createcontrol"></a>  COleControlContainer::CreateControl  
  Crea un controllo ActiveX, ospitato da specificato `COleControlSite` oggetto.  
@@ -299,52 +299,52 @@ BOOL CreateControl(
  ID univoco della classe del controllo.  
   
  *lpszWindowName*  
- Un puntatore per il testo da visualizzare nel controllo. Imposta il valore della proprietà di didascalia o il testo del controllo (se presente). Se **NULL**, proprietà di didascalia o il testo del controllo non viene modificata.  
+ Puntatore al testo da visualizzare nel controllo. Imposta il valore della proprietà di didascalia o il testo del controllo (se presente). Se NULL, la proprietà del controllo didascalia o il testo non viene modificata.  
   
  *dwStyle*  
  Stili di Windows. Gli stili disponibili sono elencati sotto la **osservazioni** sezione.  
   
  *Rect*  
- Specifica dimensioni e la posizione del controllo. Può essere un `CRect` oggetto o un `RECT` struttura.  
+ Specifica le dimensioni e la posizione del controllo. Può essere un' `CRect` oggetto o un `RECT` struttura.  
   
  *nID*  
- Specifica l'ID figlio finestra. del controllo  
+ Specifica l'ID del figlio finestra. del controllo  
   
  *pPersist*  
- Un puntatore a un `CFile` contenente lo stato permanente per il controllo. Il valore predefinito è **NULL**, che indica che il controllo Inizializza senza ripristinare lo stato da qualsiasi archivio permanente. In caso contrario **NULL**, deve essere un puntatore a un `CFile`-oggetto che contiene i dati del controllo persistente, sotto forma di un flusso o una risorsa di archiviazione derivato. Questi dati è stato possibile sono stati salvati in attivazione di una precedente del client. Il `CFile` può contenere altri dati, ma deve avere il puntatore di lettura / scrittura al primo byte di dati persistenti impostato al momento della chiamata a `CreateControl`.  
+ Un puntatore a un `CFile` contenente lo stato permanente per il controllo. Il valore predefinito è NULL, che indica che il controllo Inizializza senza ripristinare lo stato da qualsiasi archivio permanente. Se non è NULL, deve essere un puntatore a un `CFile`-derivato l'oggetto che contiene i dati del controllo persistente, sotto forma di un flusso o una risorsa di archiviazione. Questi dati è stato possibile sono stati salvati in un'attivazione precedente del client. Il `CFile` può contenere altri dati, ma deve avere il puntatore di lettura / scrittura impostato per il primo byte di dati persistenti al momento della chiamata a `CreateControl`.  
   
  *bStorage*  
- Indica se i dati in *pPersist* devono essere interpretate come `IStorage` o `IStream` dati. Se i dati in *pPersist* è un archivio *bStorage* deve essere **TRUE**. Se i dati in *pPersist* è un flusso *bStorage* deve essere **FALSE**. Il valore predefinito è **FALSE**.  
+ Indica se i dati in *pPersist* devono essere interpretate come `IStorage` o `IStream` dati. Se i dati in *pPersist* è una risorsa di archiviazione *bStorage* deve essere TRUE. Se i dati in *pPersist* è un flusso *bStorage* deve essere FALSE. Il valore predefinito è FALSE.  
   
  *bstrLicKey*  
- Dati chiave di licenza facoltativi. Questi dati sono necessaria solo per la creazione di controlli che richiedono un codice di licenza in fase di esecuzione. Se il controllo supporta le licenze, è necessario fornire un codice Product key per la creazione del controllo su esito positivo. Il valore predefinito è **NULL**.  
+ Dati chiave di licenza facoltativi. Questi dati sono necessaria solo per la creazione di controlli che richiedono una chiave di licenza in fase di esecuzione. Se il controllo supporta la gestione delle licenze, è necessario fornire un codice di licenza per la creazione del controllo su esito positivo. Il valore predefinito è NULL.  
   
  *ppNewSite*  
- Un puntatore al sito del controllo esistente che ospiterà il controllo viene creato. Il valore predefinito è **NULL**, che indica che un nuovo sito di controllo verrà automaticamente creato e collegato al nuovo controllo.  
+ Puntatore al sito del controllo esistente che ospiterà il controllo da creare. Il valore predefinito è NULL, che indica che un nuovo sito di controllo verrà automaticamente creato e collegato al nuovo controllo.  
   
  *ppt*  
- Un puntatore a un **punto** struttura che contiene l'angolo superiore sinistro del controllo. Le dimensioni del controllo sono determinate dal valore di *psize*. Il *ppt* e *psize* valori rappresentano un metodo facoltativo che specifica le dimensioni e posizione del controllo.  
+ Un puntatore a un `POINT` struttura che contiene l'angolo superiore sinistro del controllo. Le dimensioni del controllo sono determinate dal valore della *psize*. Il *ppt* e *psize* valori rappresentano un metodo facoltativo che specifica le dimensioni e posizione del controllo.  
   
  *psize*  
- Un puntatore a un **dimensioni** struttura che contiene la dimensione del controllo. L'angolo superiore sinistro è determinato dal valore di *ppt*. Il *ppt* e *psize* valori rappresentano un metodo facoltativo che specifica le dimensioni e posizione del controllo.  
+ Un puntatore a un `SIZE` struttura che contiene la dimensione del controllo. Nell'angolo superiore sinistro è determinato dal valore della *ppt*. Il *ppt* e *psize* valori rappresentano un metodo facoltativo che specifica le dimensioni e posizione del controllo.  
   
 ### <a name="return-value"></a>Valore restituito  
  Diverso da zero se ha esito positivo; in caso contrario 0.  
   
 ### <a name="remarks"></a>Note  
- Solo un subset di Windows *dwStyle* flag supportati da `CreateControl`:  
+ Solo un subset di Windows *dwStyle* flag sono supportati dal `CreateControl`:  
   
-- **WS_VISIBLE** crea una finestra che inizialmente è visibile. Obbligatorio se si desidera il controllo sia visibile immediatamente, come windows normale.  
+- WS_VISIBLE crea una finestra che inizialmente è visibile. Obbligatorio se si desidera visualizzare immediatamente, come nelle normali finestre di controllo.  
   
-- **WS_DISABLED** crea una finestra che inizialmente è disabilitata. Una finestra disabilitata non può ricevere input da parte dell'utente. Può essere impostato se il controllo ha una proprietà Enabled.  
+- WS_DISABLED crea una finestra che inizialmente è disabilitata. Una finestra disabilitata non può ricevere input da parte dell'utente. Può essere impostato se il controllo ha una proprietà Enabled.  
   
-- **WS_BORDER** crea una finestra con un bordo sottile-line. Può essere impostata se controllo dispone di una proprietà BorderStyle.  
+- WS_BORDER crea una finestra con un bordo a linea sottile. Può essere impostato se il controllo ha una proprietà BorderStyle.  
   
-- **WS_GROUP** specifica il primo controllo di un gruppo di controlli. L'utente può modificare lo stato attivo da un controllo del gruppo a quella successiva tramite i tasti di direzione. Tutti i controlli definiti con la **WS_GROUP** applicare uno stile dopo il primo controllo appartengono allo stesso gruppo. Il controllo successivo con la **WS_GROUP** stile termina il gruppo e avvia il gruppo successivo.  
+- WS_GROUP specifica il primo controllo di un gruppo di controlli. L'utente può modificare lo stato attivo da un controllo del gruppo a quella successiva usando i tasti di direzione. Tutti i controlli definiti con lo stile WS_GROUP dopo il primo controllo appartengono allo stesso gruppo. Il controllo successivo con lo stile WS_GROUP termina il gruppo e avvia il gruppo successivo.  
   
-- **WS_TABSTOP** specifica un controllo che può ricevere lo stato attivo quando l'utente preme il tasto TAB. Premendo il tasto TAB viene modificato lo stato attivo al controllo successivo del **WS_TABSTOP** stile.  
+- WS_TABSTOP specifica un controllo che può ricevere lo stato attivo quando l'utente preme il tasto TAB. Premendo il tasto TAB viene modificato lo stato attivo al controllo successivo dello stile WS_TABSTOP.  
   
- Utilizzare il secondo overload per creare i controlli di dimensioni predefinite.  
+ Usare il secondo overload per creare controlli con dimensioni predefinite.  
   
 ##  <a name="createolefont"></a>  COleControlContainer::CreateOleFont  
  Crea un tipo di carattere OLE.  
@@ -355,7 +355,7 @@ void CreateOleFont(CFont* pFont);
   
 ### <a name="parameters"></a>Parametri  
  *pFont*  
- Un puntatore al tipo di carattere da utilizzare per il contenitore del controllo.  
+ Puntatore al tipo di carattere da utilizzare per il contenitore del controllo.  
   
 ##  <a name="finditem"></a>  COleControlContainer::FindItem  
  Trova il sito personalizzato che ospita l'elemento specificato.  
@@ -366,13 +366,13 @@ virtual COleControlSite* FindItem(UINT nID) const;
   
 ### <a name="parameters"></a>Parametri  
  *nID*  
- Identificatore dell'elemento da trovare.  
+ L'identificatore dell'elemento da trovare.  
   
 ### <a name="return-value"></a>Valore restituito  
  Un puntatore per il sito personalizzato dell'elemento specificato.  
   
 ##  <a name="freezeallevents"></a>  COleControlContainer::FreezeAllEvents  
- Determina se il contenitore verrà ignori alcuni eventi dai siti di controllo associato o accettati dall'utente.  
+ Determina se il contenitore verrà ignora gli eventi dai siti di controllo collegato o accettare le condizioni.  
   
 ```  
 void FreezeAllEvents(BOOL bFreeze);
@@ -380,12 +380,12 @@ void FreezeAllEvents(BOOL bFreeze);
   
 ### <a name="parameters"></a>Parametri  
  *bFreeze*  
- Diverso da zero se gli eventi saranno elaborati; in caso contrario 0.  
+ Diverso da zero se gli eventi verranno elaborati; in caso contrario 0.  
   
 ### <a name="remarks"></a>Note  
   
 > [!NOTE]
->  Il controllo non è necessario interrompere la generazione degli eventi, se richiesto dal contenitore del controllo. La generazione può continuare, ma tutti gli eventi successivi verranno ignorati dal contenitore dei controlli.  
+>  Il controllo non è necessario interrompere la generazione degli eventi, se richiesto dal contenitore del controllo. Generazione dell'evento può continuare, ma tutti gli eventi successivi verranno ignorati dal contenitore dei controlli.  
   
 ##  <a name="getambientprop"></a>  COleControlContainer::GetAmbientProp  
  Recupera il valore di una proprietà di ambiente specificata.  
@@ -405,13 +405,13 @@ virtual BOOL GetAmbientProp(
  ID dispatch della proprietà di ambiente desiderata.  
   
  *pVarResult*  
- Un puntatore al valore della proprietà di ambiente.  
+ Puntatore al valore della proprietà di ambiente.  
   
 ### <a name="return-value"></a>Valore restituito  
  Diverso da zero se ha esito positivo; in caso contrario 0.  
   
 ##  <a name="getdlgitem"></a>  COleControlContainer::GetDlgItem  
- Recupera un puntatore per la finestra di controllo o figlio specificata in una finestra di dialogo o altre finestre.  
+ Recupera un puntatore per la finestra di controllo o elemento figlio specificata in una finestra di dialogo o altra finestra.  
   
 ```  
 virtual CWnd* GetDlgItem(int nID) const;  
@@ -426,13 +426,13 @@ virtual void GetDlgItem(
  Identificatore dell'elemento della finestra da recuperare.  
   
  *phWnd*  
- Un puntatore all'handle dell'oggetto window dell'elemento della finestra di dialogo specificata.  
+ Un puntatore all'handle dell'oggetto della finestra dell'elemento finestra di dialogo specificata.  
   
 ### <a name="return-value"></a>Valore restituito  
- Puntatore alla finestra dell'elemento della finestra di dialogo.  
+ Puntatore alla finestra di dialogo dell'elemento.  
   
 ##  <a name="getdlgitemint"></a>  COleControlContainer::GetDlgItemInt  
- Recupera il valore di testo tradotte del controllo specificato.  
+ Recupera il valore del testo tradotto del controllo specificato.  
   
 ```  
 virtual UINT GetDlgItemInt(
@@ -446,22 +446,22 @@ virtual UINT GetDlgItemInt(
  L'identificatore del controllo.  
   
  *lpTrans*  
- Puntatore a una variabile booleana che riceve un valore di esito positivo o negativo di funzione ( **TRUE** indica l'esito positivo, **FALSE** indica un esito negativo).  
+ Puntatore a una variabile booleana che riceve un valore di esito positivo o negativo (funzione) (TRUE indica l'esito positivo, FALSE indica un esito negativo).  
   
  *bSigned*  
- Specifica se la funzione deve esaminare il testo per un segno meno all'inizio e restituire un valore intero con segno, se ne trova uno. Se il *bSigned* parametro **TRUE**, specificando che il valore da recuperare è un valore intero con segno, il cast del valore restituito di un' **int** tipo. Per ottenere informazioni dettagliate sull'errore, chiamare [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360).  
+ Specifica se la funzione deve esaminare il testo per un segno meno (-) all'inizio e restituire un valore intero con segno se ne trova uno. Se il *bSigned* parametro è TRUE, specifica che il valore da recuperare è un valore intero con segno, eseguire il cast del valore restituito in un **int** tipo. Per ottenere informazioni sull'errore, chiamare [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360).  
   
 ### <a name="return-value"></a>Valore restituito  
- Se ha esito positivo, la variabile a cui punta *lpTrans* è impostata su **TRUE**, e il valore restituito è il valore tradotto del testo del controllo.  
+ Se ha esito positivo, la variabile a cui punta *lpTrans* è impostata su TRUE, e il valore restituito è il valore tradotto del testo del controllo.  
   
- Se la funzione ha esito negativo, la variabile a cui punta *lpTrans* è impostata su **FALSE**, e il valore restituito è zero. Si noti che, poiché un possibile valore convertito è pari a zero, un valore restituito pari a zero non da solo indica un errore.  
+ Se la funzione ha esito negativo, la variabile a cui punta *lpTrans* è impostata su FALSE, e il valore restituito è zero. Si noti che, poiché zero è un possibile valore tradotto, un valore restituito pari a zero non da solo indica un errore.  
   
- Se *lpTrans* viene **NULL**, la funzione non restituisce disponibile alcuna informazione sull'esito positivo o negativo.  
+ Se *lpTrans* è NULL, la funzione non restituisce alcuna informazione sull'esito positivo o negativo.  
   
 ### <a name="remarks"></a>Note  
- La funzione converte il testo recuperato rimuovendo eventuali spazi aggiuntivi all'inizio del testo e quindi convertendo le cifre decimali. La funzione interrompe la conversione quando raggiunge la fine del testo o se viene rilevato un carattere non numerico.  
+ La funzione converte il testo recuperato la rimozione dei eventuali spazi aggiuntivi all'inizio del testo e quindi convertendo le cifre decimali. La funzione interrompe la traduzione quando raggiunge la fine del testo o rileva un carattere non numerico.  
   
- Questa funzione restituisce zero se il valore convertito è maggiore **INT_MAX** (per numeri con segno) o **UINT_MAX** (per i numeri senza segno).  
+ Questa funzione restituisce zero se il valore convertito è maggiore di INT_MAX (per i numeri con segno) o UINT_MAX (per i numeri non firmati).  
   
 ##  <a name="getdlgitemtext"></a>  COleControlContainer::GetDlgItemText  
  Recupera il testo del controllo specificato.  
@@ -481,12 +481,12 @@ virtual int GetDlgItemText(
  Puntatore al testo del controllo.  
   
  *nMaxCount*  
- Specifica la lunghezza massima, in caratteri, della stringa da copiare nel buffer a cui puntata *lpStr*. Se la lunghezza della stringa supera il limite, la stringa viene troncata.  
+ Specifica la lunghezza massima, in caratteri, della stringa da copiare nel buffer a cui punta *lpStr*. Se la lunghezza della stringa supera il limite, la stringa viene troncata.  
   
 ### <a name="return-value"></a>Valore restituito  
- Se la funzione ha esito positivo, il valore restituito specifica il numero di caratteri copiato nel buffer, senza includere il carattere di terminazione null.  
+ Se la funzione ha esito positivo, il valore restituito specifica il numero di caratteri copiati nel buffer, senza includere il carattere di terminazione null.  
   
- Se la funzione ha esito negativo, il valore restituito è zero. Per ottenere informazioni dettagliate sull'errore, chiamare [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360).  
+ Se la funzione ha esito negativo, il valore restituito è zero. Per ottenere informazioni sull'errore, chiamare [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360).  
   
 ##  <a name="handlesetfocus"></a>  COleControlContainer::HandleSetFocus  
  Determina se il contenitore gestisce i messaggi WM_SETFOCUS.  
@@ -496,7 +496,7 @@ virtual BOOL HandleSetFocus();
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- Diverso da zero se il contenitore gestisce i messaggi WM_SETFOCUS; zero in caso contrario.  
+ Diverso da zero se il contenitore gestisce i messaggi WM_SETFOCUS; in caso contrario, zero.  
   
 ##  <a name="handlewindowlessmessage"></a>  COleControlContainer::HandleWindowlessMessage  
  Elabora i messaggi della finestra per i controlli privi di finestra.  
@@ -514,13 +514,13 @@ virtual BOOL HandleWindowlessMessage(
  L'identificatore per il messaggio della finestra, fornito da Windows.  
   
  *wParam*  
- Parametro del messaggio. fornito da Windows. Specifica informazioni aggiuntive specifiche di messaggio. Il contenuto di questo parametro dipende dal valore della *messaggio* parametro.  
+ Parametro del messaggio. fornito da Windows. Specifica informazioni aggiuntive specifiche del messaggio. Il contenuto di questo parametro dipende dal valore della *messaggio* parametro.  
   
  *lParam*  
- Parametro del messaggio. fornito da Windows. Specifica informazioni aggiuntive specifiche di messaggio. Il contenuto di questo parametro dipende dal valore della *messaggio* parametro.  
+ Parametro del messaggio. fornito da Windows. Specifica informazioni aggiuntive specifiche del messaggio. Il contenuto di questo parametro dipende dal valore della *messaggio* parametro.  
   
  *plResult*  
- Codice restituito da Windows. Specifica il risultato dell'elaborazione del messaggio e dipende dal messaggio inviato.  
+ Codice di risultato di Windows. Specifica il risultato dell'elaborazione del messaggio e dipende dal messaggio inviato.  
   
 ### <a name="return-value"></a>Valore restituito  
  Diverso da zero se ha esito positivo; in caso contrario 0.  
@@ -537,19 +537,19 @@ virtual UINT IsDlgButtonChecked(int nIDButton) const;
   
 ### <a name="parameters"></a>Parametri  
  *nIDButton*  
- L'identificatore del controllo button.  
+ L'identificatore del controllo pulsante.  
   
 ### <a name="return-value"></a>Valore restituito  
- Il valore restituito, da un pulsante creato con il **BS_AUTOCHECKBOX**, **BS_AUTORADIOBUTTON**, **BS_AUTO3STATE**, **BS_CHECKBOX**, **BS_RADIOBUTTON**, o **BS_3STATE** stile. Può essere uno dei seguenti:  
+ Il valore restituito da un pulsante creato con lo stile BS_AUTOCHECKBOX, BS_AUTORADIOBUTTON, BS_AUTO3STATE, BS_CHECKBOX, BS_RADIOBUTTON o BS_3STATE. Può essere uno dei seguenti:  
   
-- **BST_CHECKED** pulsante è selezionato.  
+- Pulsante BST_CHECKED è selezionato.  
   
-- **BST_INDETERMINATE** pulsante diventa inattivo, che indica uno stato indeterminato (si applica solo se il pulsante ha il **BS_3STATE** o **BS_AUTO3STATE** stile).  
+- Pulsante BST_INDETERMINATE è inattivo, che indica uno stato indeterminato (si applica solo se il pulsante è applicato lo stile BS_3STATE o BS_AUTO3STATE).  
   
-- **BST_UNCHECKED** pulsante è deselezionato.  
+- Pulsante BST_UNCHECKED viene cancellato.  
   
 ### <a name="remarks"></a>Note  
- Se il pulsante è un controllo a tre stati, la funzione membro determina se lo è visualizzata in grigio, selezionata, o entrambe le opzioni.  
+ Se il pulsante è un controllo a tre stati, la funzione membro determina se lo è visualizzata in grigio, selezionata, o nessuna delle due.  
   
 ##  <a name="m_crback"></a>  COleControlContainer::m_crBack  
  Il colore di sfondo del contenitore.  
@@ -566,42 +566,42 @@ COLORREF m_crFore;
 ```  
   
 ##  <a name="m_listsitesorwnds"></a>  COleControlContainer::m_listSitesOrWnds  
- Un elenco di controllo siti ospitati dal contenitore.  
+ Elenco di controllo siti ospitati dal contenitore.  
   
 ```  
 CTypedPtrList<CPtrList, COleControlSiteOrWnd*> m_listSitesOrWnds;  
 ```  
   
 ##  <a name="m_nwindowlesscontrols"></a>  COleControlContainer::m_nWindowlessControls  
- Il numero di controlli privi di finestra ospitato dal contenitore dei controlli.  
+ Il numero di controlli privi di finestra ospitata dal contenitore dei controlli.  
   
 ```  
 int m_nWindowlessControls;  
 ```  
   
 ##  <a name="m_polefont"></a>  COleControlContainer::m_pOleFont  
- Puntatore al tipo di carattere OLE del sito del controllo personalizzato.  
+ Puntatore al tipo di carattere del sito personalizzato di controllo OLE.  
   
 ```  
 LPFONTDISP m_pOleFont;  
 ```  
   
 ##  <a name="m_psitecapture"></a>  COleControlContainer::m_pSiteCapture  
- Puntatore al sito del controllo di acquisizione.  
+ Puntatore al sito di controllo di acquisizione.  
   
 ```  
 COleControlSite* m_pSiteCapture;  
 ```  
   
 ##  <a name="m_psitefocus"></a>  COleControlContainer::m_pSiteFocus  
- Un puntatore al sito del controllo che attualmente ha lo stato attivo di input.  
+ Puntatore al sito del controllo che attualmente ha lo stato attivo di input.  
   
 ```  
 COleControlSite* m_pSiteFocus;  
 ```  
   
 ##  <a name="m_psiteuiactive"></a>  COleControlContainer::m_pSiteUIActive  
- Un puntatore al sito del controllo che viene attivato sul posto.  
+ Puntatore al sito del controllo che è attivato sul posto.  
   
 ```  
 COleControlSite* m_pSiteUIActive;  
@@ -630,16 +630,16 @@ virtual BOOL OnPaint(CDC* pDC);
   
 ### <a name="parameters"></a>Parametri  
  *pDC*  
- Puntatore al contesto di dispositivo utilizzato dal contenitore.  
+ Puntatore al contesto di dispositivo usato dal contenitore.  
   
 ### <a name="return-value"></a>Valore restituito  
- Diverso da zero se il messaggio è stato gestito; zero in caso contrario.  
+ Diverso da zero se il messaggio è stato gestito; in caso contrario, zero.  
   
 ### <a name="remarks"></a>Note  
  Eseguire l'override di questa funzione per personalizzare il processo di disegno.  
   
 ##  <a name="onuiactivate"></a>  COleControlContainer::OnUIActivate  
- Chiamato dal framework quando il sito del controllo, a cui punta *pSite*, deve essere attivato sul posto.  
+ Chiamato dal framework quando il sito del controllo a cui punta *pSite*, sta per essere attivato sul posto.  
   
 ```  
 virtual void OnUIActivate(COleControlSite* pSite);
@@ -647,13 +647,13 @@ virtual void OnUIActivate(COleControlSite* pSite);
   
 ### <a name="parameters"></a>Parametri  
  *pSite*  
- Un puntatore al sito del controllo sta per essere attivato sul posto.  
+ Puntatore al sito di controllo per essere attivato sul posto.  
   
 ### <a name="remarks"></a>Note  
  Attivazione sul posto significa che menu principale del contenitore viene sostituito con un menu composto sul posto.  
   
 ##  <a name="onuideactivate"></a>  COleControlContainer::OnUIDeactivate  
- Chiamato dal framework quando il sito del controllo, a cui punta *pSite*, sta per essere disattivato.  
+ Chiamato dal framework quando il sito del controllo a cui punta *pSite*, sta per essere disattivato.  
   
 ```  
 virtual void OnUIDeactivate(COleControlSite* pSite);
@@ -661,10 +661,10 @@ virtual void OnUIDeactivate(COleControlSite* pSite);
   
 ### <a name="parameters"></a>Parametri  
  *pSite*  
- Un puntatore al sito del controllo sta per essere disattivato.  
+ Puntatore al sito del controllo sta per essere disattivato.  
   
 ### <a name="remarks"></a>Note  
- Quando si riceve questa notifica, il contenitore deve reinstallare relativa interfaccia utente e assumere lo stato attivo.  
+ Quando viene ricevuta questa notifica, il contenitore deve reinstallare l'interfaccia utente e assumere lo stato attivo.  
   
 ##  <a name="scrollchildren"></a>  COleControlContainer::ScrollChildren  
  Chiamato dal framework quando vengono ricevuti i messaggi di scorrimento da una finestra figlio.  
@@ -677,10 +677,10 @@ virtual void ScrollChildren(
   
 ### <a name="parameters"></a>Parametri  
  *dx*  
- Quantità, in pixel, lo scorrimento lungo l'asse x.  
+ Quantità, in pixel, dello scorrimento lungo l'asse x.  
   
  *dy*  
- Quantità, in pixel, lo scorrimento lungo l'asse y.  
+ Quantità, in pixel, dello scorrimento lungo l'asse y.  
   
 ##  <a name="senddlgitemmessage"></a>  COleControlContainer::SendDlgItemMessage  
  Invia un messaggio al controllo specificato.  
@@ -701,10 +701,10 @@ virtual LRESULT SendDlgItemMessage(
  Specifica il messaggio da inviare.  
   
  *wParam*  
- Specifica informazioni aggiuntive specifiche di messaggio.  
+ Specifica informazioni aggiuntive specifiche del messaggio.  
   
  *lParam*  
- Specifica informazioni aggiuntive specifiche di messaggio.  
+ Specifica informazioni aggiuntive specifiche del messaggio.  
   
 ##  <a name="setdlgitemint"></a>  COleControlContainer::SetDlgItemInt  
  Imposta il testo di un controllo in una finestra di dialogo per la rappresentazione di stringa di un valore intero specificato.  
@@ -724,10 +724,10 @@ virtual void SetDlgItemInt(
  Il valore intero da visualizzare.  
   
  *bSigned*  
- Specifica se il *nValore* parametro signed o unsigned. Se questo parametro è **TRUE**, *nValore* è firmato. Se questo parametro è **TRUE** e *nValore* è minore di zero, un segno meno sign viene posizionata prima la prima cifra nella stringa. Se questo parametro è **FALSE**, *nValore* è senza segno.  
+ Specifica se il *nValore* parametro signed o unsigned. Se questo parametro è TRUE, *nValore* è firmato. Se questo parametro è TRUE e *nValore* è minore di zero, un segno meno sign viene posizionato prima della prima cifra nella stringa. Se questo parametro è FALSE, *nValore* è senza segno.  
   
 ##  <a name="setdlgitemtext"></a>  COleControlContainer::SetDlgItemText  
- Imposta il testo del controllo specificato, usando il testo contenuto nel *lpszString*.  
+ Imposta il testo del controllo specificato, utilizzando il testo contenuto nel *lpszString*.  
   
 ```  
 virtual void SetDlgItemText(
@@ -743,7 +743,7 @@ virtual void SetDlgItemText(
  Puntatore al testo del controllo.  
   
 ## <a name="see-also"></a>Vedere anche  
- [CCmdTarget (classe)](../../mfc/reference/ccmdtarget-class.md)   
+ [Classe CCmdTarget](../../mfc/reference/ccmdtarget-class.md)   
  [Grafico delle gerarchie](../../mfc/hierarchy-chart.md)   
  [Classe COleControlSite](../../mfc/reference/colecontrolsite-class.md)   
  [Classe COccManager](../../mfc/reference/coccmanager-class.md)

@@ -1,5 +1,5 @@
 ---
-title: Classe CMFCPreviewCtrlImpl | Documenti Microsoft
+title: Classe CMFCPreviewCtrlImpl | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -46,12 +46,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a94ad813ff72eaed2642e9c78a098b999bf128fa
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 0ab9cd717d8e035d9cfc75e0f856af792c392cf7
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37040077"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37848997"
 ---
 # <a name="cmfcpreviewctrlimpl-class"></a>Classe CMFCPreviewCtrlImpl
 Questa classe implementa una finestra collocata in una finestra host fornita dalla Shell per l'anteprima avanzata.  
@@ -76,20 +76,20 @@ class CMFCPreviewCtrlImpl : public CWnd;
 |Nome|Descrizione|  
 |----------|-----------------|  
 |[CMFCPreviewCtrlImpl::Create](#create)|Di overload. Chiamato da un gestore di anteprima avanzata per creare la finestra di Windows.|  
-|[CMFCPreviewCtrlImpl::Destroy](#destroy)|Chiamato da un gestore di anteprima avanzata quando è necessario eliminare definitivamente questo controllo.|  
-|[CMFCPreviewCtrlImpl::Focus](#focus)|Imposta lo stato attivo al controllo di input.|  
+|[CMFCPreviewCtrlImpl::Destroy](#destroy)|Chiamato da un gestore di anteprime Rich quando è necessario eliminare definitivamente questo controllo.|  
+|[CMFCPreviewCtrlImpl::Focus](#focus)|Imposta lo stato attivo a questo controllo.|  
 |[CMFCPreviewCtrlImpl::GetDocument](#getdocument)|Restituisce un documento collegato a questo controllo di anteprima.|  
 |[CMFCPreviewCtrlImpl::Redraw](#redraw)|Indica il ridisegno del controllo.|  
-|[CMFCPreviewCtrlImpl::SetDocument](#setdocument)|Chiamato dal gestore di anteprima per creare una relazione tra l'implementazione del documento e il controllo di anteprima.|  
-|[CMFCPreviewCtrlImpl::SetHost](#sethost)|Imposta un nuovo elemento padre per questo controllo.|  
-|[CMFCPreviewCtrlImpl::SetPreviewVisuals](#setpreviewvisuals)|Chiamato da un gestore di anteprima avanzata quando è necessario impostare gli elementi visivi di un'anteprima dettagliata del contenuto.|  
+|[CMFCPreviewCtrlImpl::SetDocument](#setdocument)|Chiamato dal gestore di anteprime per creare una relazione tra l'implementazione di documento e il controllo di anteprima.|  
+|[CMFCPreviewCtrlImpl::SetHost](#sethost)|Imposta un nuovo elemento padre di questo controllo.|  
+|[CMFCPreviewCtrlImpl::SetPreviewVisuals](#setpreviewvisuals)|Chiamato da un gestore di anteprime Rich quando è necessario impostare gli oggetti visivi di un'anteprima dettagliata del contenuto.|  
 |[CMFCPreviewCtrlImpl::SetRect](#setrect)|Imposta un nuovo rettangolo di delimitazione per questo controllo.|  
   
 ### <a name="protected-methods"></a>Metodi protetti  
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[CMFCPreviewCtrlImpl::DoPaint](#dopaint)|Chiamato dal framework per eseguire il rendering dell'anteprima.|  
+|[CMFCPreviewCtrlImpl::DoPaint](#dopaint)|Chiamato dal framework per il rendering dell'anteprima.|  
   
 ### <a name="protected-data-members"></a>Membri dati protetti  
   
@@ -137,19 +137,19 @@ virtual BOOL Create(
   
 ### <a name="parameters"></a>Parametri  
  *hWndParent*  
- Un handle alla finestra host fornita dalla Shell per l'anteprima avanzata.  
+ Handle alla finestra host fornita dalla Shell per l'anteprima avanzata.  
   
  *Repubblica popolare cinese*  
  Specifica le dimensioni iniziali e la posizione della finestra.  
   
  *pContext*  
- Un puntatore a un contesto di creazione.  
+ Puntatore a un contesto di creazione.  
   
 ### <a name="return-value"></a>Valore restituito  
- `TRUE` Se la creazione ha esito positivo. in caso contrario `FALSE`.  
+ TRUE se l'operazione di creazione è riuscita; in caso contrario, FALSE.  
   
 ## <a name="destroy"></a> CMFCPreviewCtrlImpl::Destroy
-Chiamato da un gestore di anteprima avanzata quando è necessario eliminare definitivamente questo controllo.  
+Chiamato da un gestore di anteprime Rich quando è necessario eliminare definitivamente questo controllo.  
   
 ### <a name="syntax"></a>Sintassi  
   
@@ -158,7 +158,7 @@ virtual void Destroy();
 ```  
   
 ## <a name="dopaint"></a> CMFCPreviewCtrlImpl::DoPaint  
-Chiamato dal framework per eseguire il rendering dell'anteprima.  
+Chiamato dal framework per il rendering dell'anteprima.  
   
 ### <a name="syntax"></a>Sintassi  
   
@@ -174,7 +174,7 @@ virtual void DoPaint(
 
 
 ## <a name="focus"></a> CMFCPreviewCtrlImpl::Focus  
-Imposta lo stato attivo al controllo di input.  
+Imposta lo stato attivo a questo controllo.  
   
 ### <a name="syntax"></a>Sintassi  
   
@@ -191,7 +191,7 @@ ATL::IDocument* GetDocument();
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- Un puntatore a un documento, il cui contenuto viene visualizzato in anteprima nel controllo.
+ Puntatore a un documento, il cui contenuto viene visualizzato in anteprima nel controllo.
 
 ## <a name="m_clrbackcolor"></a> CMFCPreviewCtrlImpl::m_clrBackColor  
 Colore di sfondo della finestra di anteprima.  
@@ -235,7 +235,7 @@ Indica il ridisegno del controllo.
 virtual void Redraw();  
 ```  
 ## <a name="setdocument"></a> CMFCPreviewCtrlImpl::SetDocument 
-Chiamato dal gestore di anteprima per creare una relazione tra l'implementazione del documento e il controllo di anteprima.  
+Chiamato dal gestore di anteprime per creare una relazione tra l'implementazione di documento e il controllo di anteprima.  
   
 ### <a name="syntax"></a>Sintassi  
   
@@ -250,7 +250,7 @@ void SetDocument(
  Un puntatore all'implementazione del documento.  
 
 ## <a name="sethost"></a> CMFCPreviewCtrlImpl::SetHost  
-Imposta un nuovo elemento padre per questo controllo.  
+Imposta un nuovo elemento padre di questo controllo.  
   
 ### <a name="syntax"></a>Sintassi  
   
@@ -265,7 +265,7 @@ virtual void SetHost(
  Handle per la nuova finestra padre.  
 
 ## <a name="setpreviewvisuals"></a> CMFCPreviewCtrlImpl::SetPreviewVisuals  
-Chiamato da un gestore di anteprima avanzata quando è necessario impostare gli elementi visivi di un'anteprima dettagliata del contenuto.  
+Chiamato da un gestore di anteprime Rich quando è necessario impostare gli oggetti visivi di un'anteprima dettagliata del contenuto.  
   
 ### <a name="syntax"></a>Sintassi  
   
@@ -301,7 +301,7 @@ virtual void SetRect(
   
 ### <a name="parameters"></a>Parametri  
  *Repubblica popolare cinese*  
- Specifica le nuove dimensioni e posizione del controllo di anteprima.  
+ Specifica la nuova dimensione e posizione del controllo di anteprima.  
   
  *bRedraw*  
  Specifica se il controllo deve essere ridisegnato.  

@@ -1,5 +1,5 @@
 ---
-title: Classe CMFCRibbonMiniToolBar | Documenti Microsoft
+title: Classe CMFCRibbonMiniToolBar | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 07b20d43c53fc0f485d33f71805e73f885c1200a
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: d97e3e993571392893533be220e243b045b81e30
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37041750"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37852887"
 ---
 # <a name="cmfcribbonminitoolbar-class"></a>Classe CMFCRibbonMiniToolBar
 Implementa una barra degli strumenti popup contestuale.  
@@ -56,7 +56,7 @@ class CMFCRibbonMiniToolBar : public CMFCRibbonPanelMenu
 |Nome|Descrizione|  
 |----------|-----------------|  
 |`CMFCRibbonMiniToolBar::CreateObject`|Usato dal framework per creare un'istanza dinamica di questo tipo di classe.|  
-|`CMFCRibbonMiniToolBar::GetThisClass`|Usato dal framework per ottenere un puntatore per il [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) oggetto associato a questo tipo di classe.|  
+|`CMFCRibbonMiniToolBar::GetThisClass`|Utilizzato dal framework per ottenere un puntatore per il [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) oggetto associato a questo tipo di classe.|  
 |[CMFCRibbonMiniToolBar::IsContextMenuMode](#iscontextmenumode)||  
 |[CMFCRibbonMiniToolBar::IsRibbonMiniToolBar](#isribbonminitoolbar)|Esegue l'override`CMFCPopupMenu::IsRibbonMiniToolBar`.|  
 |[CMFCRibbonMiniToolBar::SetCommands](#setcommands)|Imposta l'elenco di comandi da visualizzare sulla barra degli strumenti.|  
@@ -108,7 +108,7 @@ void SetCommands(
  Utilizzare questa funzione per impostare l'elenco di comandi da visualizzare nella barra di formattazione rapida.  
   
 ### <a name="example"></a>Esempio  
- Nell'esempio seguente viene illustrato come utilizzare il `SetCommands` metodo la `CMFCRibbonMiniToolBar` classe. Questo frammento di codice fa parte il [esempio di MS Office 2007 Demo](../../visual-cpp-samples.md).  
+ L'esempio seguente illustra come usare il `SetCommands` metodo del `CMFCRibbonMiniToolBar` classe. Questo frammento di codice fa parte di [esempio di MS Office 2007 Demo](../../visual-cpp-samples.md).  
   
  [!code-cpp[NVC_MFC_MSOffice2007Demo#9](../../mfc/reference/codesnippet/cpp/cmfcribbonminitoolbar-class_1.cpp)]  
   
@@ -129,7 +129,7 @@ BOOL Show(
  Specifica la posizione verticale della barra di formattazione rapida in coordinate dello schermo.  
   
 ### <a name="return-value"></a>Valore restituito  
- `TRUE` Se la barra di formattazione rapida è stata visualizzata correttamente. in caso contrario, `FALSE`.  
+ TRUE se la barra di formattazione rapida viene visualizzata correttamente. in caso contrario, FALSE.  
   
 ##  <a name="showwithcontextmenu"></a>  CMFCRibbonMiniToolBar::ShowWithContextMenu  
  Visualizza la barra di formattazione rapida con un menu di scelta rapida.  
@@ -153,10 +153,10 @@ BOOL ShowWithContextMenu(
  Specifica l'ID di risorsa di menu di scelta rapida da visualizzare.  
   
  [in] *pWndOwner*  
- Identifica la finestra, che riceve messaggi dal menu di scelta rapida.  
+ Identifica la finestra che riceve messaggi dal menu di scelta rapida.  
   
 ### <a name="return-value"></a>Valore restituito  
- `TRUE` Se il menu di scelta rapida è stato visualizzato correttamente. in caso contrario, `FALSE`.  
+ TRUE se il menu di scelta rapida è stato visualizzato correttamente. in caso contrario, FALSE.  
   
 ### <a name="remarks"></a>Note  
  Utilizzare questa funzione per visualizzare una barra di formattazione rapida con un menu di scelta rapida. Menu di scelta rapida è posizionata 15 pixel sotto la barra di formattazione rapida.  

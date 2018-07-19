@@ -1,5 +1,5 @@
 ---
-title: Tipi di dati classi (ATL) | Documenti Microsoft
+title: Classi (ATL) i tipi di dati | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,22 +17,22 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8ab8c9d6839fad12459e65b396878f719a60c6d1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ae961d47f77b630eaff91e1c02e244454b12dc80
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32353858"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37851314"
 ---
 # <a name="data-types-classes"></a>Classi di tipi di dati
-Le seguenti classi di eseguire il wrapping come tipi di dati C++:  
+Le classi seguenti di eseguire il wrapping come tipi di dati C++:  
   
 -   [CComBSTR](../atl/reference/ccombstr-class.md) esegue il wrapping di `BSTR` tipo di dati.  
   
--   [CComVariant](../atl/reference/ccomvariant-class.md) esegue il wrapping di **VARIANT** tipo di dati.  
+-   [CComVariant](../atl/reference/ccomvariant-class.md) esegue il wrapping di `VARIANT` tipo di dati.  
   
--   [CComCurrency](../atl/reference/ccomcurrency-class.md) include metodi e gli operatori per creare e gestire un `CURRENCY` oggetto.  
+-   [CComCurrency](../atl/reference/ccomcurrency-class.md) include metodi e operatori per creare e gestire un `CURRENCY` oggetto.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Cenni preliminari sulla classe](../atl/atl-class-overview.md)
+ [Panoramica della classe](../atl/atl-class-overview.md)
 

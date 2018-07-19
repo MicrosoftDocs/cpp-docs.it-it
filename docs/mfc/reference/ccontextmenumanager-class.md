@@ -1,5 +1,5 @@
 ---
-title: Classe CContextMenuManager | Documenti Microsoft
+title: Classe CContextMenuManager | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9407c98183fa923a58ca2939e8c534cd56dc8ef7
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 4f2bf81c2e69290feb9f9afd054286c10e42d0be
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36954621"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37338753"
 ---
 # <a name="ccontextmenumanager-class"></a>Classe CContextMenuManager
 Il `CContextMenuManager` oggetto gestisce i menu di scelta rapida, noto anche come menu di scelta rapida.  
@@ -68,27 +68,27 @@ class CContextMenuManager : public CObject
 |Nome|Descrizione|  
 |----------|-----------------|  
 |[CContextMenuManager::AddMenu](#addmenu)|Aggiunge un nuovo menu di scelta rapida.|  
-|[CContextMenuManager::GetMenuById](#getmenubyid)|Restituisce un handle per il menu associato all'ID risorsa fornita.|  
-|[CContextMenuManager::GetMenuByName](#getmenubyname)|Restituisce un handle al menu di scelta che corrisponde al nome fornito dal menu.|  
+|[CContextMenuManager::GetMenuById](#getmenubyid)|Restituisce un handle per il menu associato l'ID risorsa specificato.|  
+|[CContextMenuManager::GetMenuByName](#getmenubyname)|Restituisce un handle al menu che corrisponde al nome del menu di scelta specificato.|  
 |[CContextMenuManager::GetMenuNames](#getmenunames)|Restituisce un elenco di nomi di menu.|  
 |[CContextMenuManager::LoadState](#loadstate)|Carica il menu di scelta rapida archiviato nel Registro di sistema Windows.|  
 |[CContextMenuManager::ResetState](#resetstate)|Cancella i menu di scelta rapida dal gestore di menu di scelta rapida.|  
 |[CContextMenuManager::SaveState](#savestate)|Salva i menu di scelta rapida per il Registro di sistema di Windows.|  
-|[CContextMenuManager::SetDontCloseActiveMenu](#setdontcloseactivemenu)|Controlli se il `CContextMenuManager` chiude il menu di scelta rapida attivo quando si visualizza un nuovo menu di scelta rapida.|  
-|[CContextMenuManager::ShowPopupMenu](#showpopupmenu)|Visualizza il menu di scelta rapida specificato.|  
-|[CContextMenuManager::TrackPopupMenu](#trackpopupmenu)|Visualizza il menu di scelta rapida specificato. Restituisce l'indice del comando di menu selezionata.|  
+|[CContextMenuManager::SetDontCloseActiveMenu](#setdontcloseactivemenu)|Controlli se il `CContextMenuManager` chiude il menu di scelta rapida attiva quando viene visualizzato un nuovo menu di scelta rapida.|  
+|[CContextMenuManager::ShowPopupMenu](#showpopupmenu)|Visualizza il menu di scelta rapida specificati.|  
+|[CContextMenuManager::TrackPopupMenu](#trackpopupmenu)|Visualizza il menu di scelta rapida specificati. Restituisce l'indice del comando di menu selezionata.|  
   
 ## <a name="remarks"></a>Note  
- `CContextMenuManager` gestisce i menu di scelta rapida e assicura che hanno un aspetto coerente.  
+ `CContextMenuManager` gestisce i menu di scelta rapida e garantisce che abbiano un aspetto coerente.  
   
- Non è consigliabile creare un `CContextMenuManager` oggetto manualmente. Il framework dell'applicazione crea il `CContextMenuManager` oggetto. Tuttavia, è necessario chiamare [CWinAppEx::InitContextMenuManager](../../mfc/reference/cwinappex-class.md#initcontextmenumanager) quando l'applicazione viene inizializzata. Dopo l'inizializzazione di gestione contesto, utilizzare il metodo [CWinAppEx::GetContextMenuManager](../../mfc/reference/cwinappex-class.md#getcontextmenumanager) per ottenere un puntatore al gestore del contesto per l'applicazione.  
+ Non è necessario creare un `CContextMenuManager` oggetto manualmente. Il framework dell'applicazione crea il `CContextMenuManager` oggetto. Tuttavia, è necessario chiamare [CWinAppEx::InitContextMenuManager](../../mfc/reference/cwinappex-class.md#initcontextmenumanager) quando viene inizializzato l'applicazione. Dopo aver inizializzato gestore di contesto, usare il metodo [CWinAppEx::GetContextMenuManager](../../mfc/reference/cwinappex-class.md#getcontextmenumanager) per ottenere un puntatore al gestore di contesto per l'applicazione.  
   
- È possibile creare menu di scelta rapida in fase di esecuzione chiamando `AddMenu`. Se si desidera visualizzare il menu di scelta senza prima ricevente input dell'utente, chiamare `ShowPopupMenu`. `TrackPopupMenu` viene utilizzato quando si desidera creare un menu di scelta e attende l'input utente. `TrackPopupMenu` Restituisce l'indice del comando selezionato o 0 se l'utente è stata chiusa senza effettuare alcuna selezione.  
+ È possibile creare i menu di scelta rapida in fase di esecuzione chiamando `AddMenu`. Se si desidera visualizzare il menu senza prima ricevente input dell'utente, chiamare `ShowPopupMenu`. `TrackPopupMenu` viene usato quando si desidera creare un menu di scelta e attende l'input utente. `TrackPopupMenu` Restituisce l'indice del comando selezionato oppure 0 se l'utente è stata chiusa senza effettuare selezioni.  
   
- Il `CContextMenuManager` inoltre possibile salvare e caricare il proprio stato nel Registro di sistema di Windows.  
+ Il `CContextMenuManager` possono anche salvare e caricare il proprio stato nel Registro di sistema di Windows.  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene illustrato come aggiungere un menu a un `CContextMenuManager` oggetto e come non chiudere il menu a comparsa attivo quando il `CContextMenuManager` oggetto venga visualizzato un nuovo menu a comparsa. Questo frammento di codice fa parte il [esempio Custom Pages](../../visual-cpp-samples.md).  
+ Nell'esempio seguente viene illustrato come aggiungere un menu a un `CContextMenuManager` oggetti e come non chiudere il menu a comparsa attivo quando il `CContextMenuManager` oggetto venga visualizzato un nuovo menu a comparsa. Questo frammento di codice fa parte il [esempio di pagine personalizzate](../../visual-cpp-samples.md).  
   
  [!code-cpp[NVC_MFC_CustomPages#4](../../mfc/reference/codesnippet/cpp/ccontextmenumanager-class_1.cpp)]  
   
@@ -125,7 +125,7 @@ BOOL AddMenu(
  Stringa che contiene il nome per il nuovo menu.  
   
 ### <a name="return-value"></a>Valore restituito  
- Diverso da zero se il metodo ha avuto esito positivo; 0 se il metodo ha esito negativo.  
+ Diverso da zero se il metodo ha esito positivo; 0 se il metodo ha esito negativo.  
   
 ### <a name="remarks"></a>Note  
  Questo metodo ha esito negativo se *uiMenuResId* non è valido o se un altro menu con lo stesso nome è già nel `CContextMenuManager`.  
@@ -138,10 +138,10 @@ CContextMenuManager();
 ```  
   
 ### <a name="remarks"></a>Note  
- Nella maggior parte dei casi, non sarà necessario creare un `CContextMenuManager` manualmente. Il framework dell'applicazione crea il `CContextMenuManager` oggetto. È necessario chiamare [CWinAppEx::InitContextMenuManager](../../mfc/reference/cwinappex-class.md#initcontextmenumanager) durante l'inizializzazione dell'applicazione. Per ottenere un puntatore al gestore del contesto, chiamare [CWinAppEx::GetContextMenuManager](../../mfc/reference/cwinappex-class.md#getcontextmenumanager).  
+ Nella maggior parte dei casi, non è necessario creare un `CContextMenuManager` manualmente. Il framework dell'applicazione crea il `CContextMenuManager` oggetto. È necessario chiamare [CWinAppEx::InitContextMenuManager](../../mfc/reference/cwinappex-class.md#initcontextmenumanager) durante l'inizializzazione dell'applicazione. Per ottenere un puntatore per la gestione del contesto, chiamare [CWinAppEx::GetContextMenuManager](../../mfc/reference/cwinappex-class.md#getcontextmenumanager).  
   
 ##  <a name="getmenubyid"></a>  CContextMenuManager::GetMenuById  
- Restituisce un handle per il menu associato un ID di risorsa specificata.  
+ Restituisce un handle per il menu associato a un ID risorsa specificato.  
   
 ```  
 HMENU GetMenuById(UINT nMenuResId) const;  
@@ -149,7 +149,7 @@ HMENU GetMenuById(UINT nMenuResId) const;
   
 ### <a name="parameters"></a>Parametri  
  [in] *nMenuResId*  
- ID della risorsa per il menu di scelta.  
+ L'ID di risorsa per il menu di scelta.  
   
 ### <a name="return-value"></a>Valore restituito  
  Un handle per il menu associato o `NULL` se il menu non viene trovato.  
@@ -168,16 +168,16 @@ HMENU GetMenuByName(
  Stringa che contiene il nome del menu da recuperare.  
   
  [out] *puiOrigResID*  
- Puntatore a un oggetto `UINT`. Questo parametro contiene l'ID della risorsa del menu specificato, se trovato.  
+ Puntatore a un UINT. Questo parametro contiene l'ID di risorsa di menu specificato, se trovato.  
   
 ### <a name="return-value"></a>Valore restituito  
- Un handle per il menu che corrisponde al nome specificato da *lpszName*. `NULL` Se non vi è alcun menu chiamato *lpszName*.  
+ Un handle per il menu che corrisponde al nome specificato da *lpszName*. NULL se non esiste alcun menu chiamato *lpszName*.  
   
 ### <a name="remarks"></a>Note  
- Se questo metodo consente di trovare un menu che corrisponde a *lpszName*, `GetMenuByName` archivia l'ID di risorsa di menu nel parametro *puiOrigResID*.  
+ Se questo metodo trova un menu che corrisponde a *lpszName*, `GetMenuByName` archivia l'ID di risorsa di menu nel parametro *puiOrigResID*.  
   
 ##  <a name="getmenunames"></a>  CContextMenuManager::GetMenuNames  
- Restituisce l'elenco di nomi di menu aggiunto per il [CContextMenuManager](../../mfc/reference/ccontextmenumanager-class.md).  
+ Restituisce l'elenco di nomi di menu aggiunta per il [CContextMenuManager](../../mfc/reference/ccontextmenumanager-class.md).  
   
 ```  
 void GetMenuNames(CStringList& listOfNames) const;  
@@ -185,10 +185,10 @@ void GetMenuNames(CStringList& listOfNames) const;
   
 ### <a name="parameters"></a>Parametri  
  [out] *listOfNames*  
- Un riferimento a un [oggetto CStringList](../../mfc/reference/cstringlist-class.md) parametro. Questo metodo scrive l'elenco di nomi di menu per questo parametro.  
+ Un riferimento a un [CStringList](../../mfc/reference/cstringlist-class.md) parametro. Questo metodo scrive l'elenco di nomi di menu per questo parametro.  
   
 ##  <a name="loadstate"></a>  CContextMenuManager::LoadState  
- Carica le informazioni associate le [CContextMenuManager classe](../../mfc/reference/ccontextmenumanager-class.md) dal Registro di sistema Windows.  
+ Carica le informazioni associate le [classe CContextMenuManager](../../mfc/reference/ccontextmenumanager-class.md) dal Registro di sistema Windows.  
   
 ```  
 virtual BOOL LoadState(LPCTSTR lpszProfileName = NULL);
@@ -199,28 +199,28 @@ virtual BOOL LoadState(LPCTSTR lpszProfileName = NULL);
  Stringa che contiene il percorso relativo di una chiave del Registro di sistema.  
   
 ### <a name="return-value"></a>Valore restituito  
- Diverso da zero se il metodo ha esito positivo; in caso contrario 0.  
+ Diverso da zero se il metodo ha esito positivo. in caso contrario 0.  
   
 ### <a name="remarks"></a>Note  
- Il *lpszProfileName* parametro non è il percorso assoluto per una voce del Registro di sistema. Si tratta di un percorso relativo che viene aggiunto alla fine della chiave del Registro di sistema predefinito per l'applicazione. Per ottenere o impostare la chiave del Registro di sistema predefinito, utilizzare i metodi [CWinAppEx::GetRegistryBase](../../mfc/reference/cwinappex-class.md#getregistrybase) e [CWinAppEx::SetRegistryBase](../../mfc/reference/cwinappex-class.md#setregistrybase) rispettivamente.  
+ Il *lpszProfileName* parametro non è il percorso assoluto per una voce del Registro di sistema. Si tratta di un percorso relativo che viene aggiunto alla fine della chiave del Registro di sistema predefinito per l'applicazione. Per ottenere o impostare la chiave del Registro di sistema predefinito, usare i metodi [CWinAppEx::GetRegistryBase](../../mfc/reference/cwinappex-class.md#getregistrybase) e [CWinAppEx::SetRegistryBase](../../mfc/reference/cwinappex-class.md#setregistrybase) rispettivamente.  
   
- Utilizzare il metodo [CContextMenuManager::SaveState](#savestate) per salvare i menu di scelta rapida per il Registro di sistema.  
+ Usare il metodo [CContextMenuManager::SaveState](#savestate) per salvare i menu di scelta rapida per il Registro di sistema.  
   
 ##  <a name="resetstate"></a>  CContextMenuManager::ResetState  
- Cancella tutti gli elementi dal menu di scelta rapida associati con il [CContextMenuManager classe](../../mfc/reference/ccontextmenumanager-class.md).  
+ Cancella tutti gli elementi dal menu di scelta rapida associati con il [classe CContextMenuManager](../../mfc/reference/ccontextmenumanager-class.md).  
   
 ```  
 virtual BOOL ResetState();
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- `TRUE` Se il metodo ha esito positivo; `FALSE` se si verifica un errore.  
+ TRUE se il metodo ha esito positivo. FALSE se si verifica un errore.  
   
 ### <a name="remarks"></a>Note  
- Questo metodo cancella i menu a comparsa e li rimuove dal `CContextMenuManager`.  
+ Questo metodo cancella il menu di scelta rapida e li rimuove dal `CContextMenuManager`.  
   
 ##  <a name="savestate"></a>  CContextMenuManager::SaveState  
- Salva le informazioni associate le [CContextMenuManager classe](../../mfc/reference/ccontextmenumanager-class.md) nel Registro di sistema di Windows.  
+ Salva le informazioni associate le [classe CContextMenuManager](../../mfc/reference/ccontextmenumanager-class.md) nel Registro di sistema di Windows.  
   
 ```  
 virtual BOOL SaveState(LPCTSTR lpszProfileName = NULL);
@@ -231,12 +231,12 @@ virtual BOOL SaveState(LPCTSTR lpszProfileName = NULL);
  Stringa che contiene il percorso relativo di una chiave del Registro di sistema.  
   
 ### <a name="return-value"></a>Valore restituito  
- Diverso da zero se il metodo ha esito positivo; in caso contrario 0.  
+ Diverso da zero se il metodo ha esito positivo. in caso contrario 0.  
   
 ### <a name="remarks"></a>Note  
- Il *lpszProfileName* parametro non è il percorso assoluto per una voce del Registro di sistema. Si tratta di un percorso relativo che viene aggiunto alla fine della chiave del Registro di sistema predefinito per l'applicazione. Per ottenere o impostare la chiave del Registro di sistema predefinito, utilizzare i metodi [CWinAppEx::GetRegistryBase](../../mfc/reference/cwinappex-class.md#getregistrybase) e [CWinAppEx::SetRegistryBase](../../mfc/reference/cwinappex-class.md#setregistrybase) rispettivamente.  
+ Il *lpszProfileName* parametro non è il percorso assoluto per una voce del Registro di sistema. Si tratta di un percorso relativo che viene aggiunto alla fine della chiave del Registro di sistema predefinito per l'applicazione. Per ottenere o impostare la chiave del Registro di sistema predefinito, usare i metodi [CWinAppEx::GetRegistryBase](../../mfc/reference/cwinappex-class.md#getregistrybase) e [CWinAppEx::SetRegistryBase](../../mfc/reference/cwinappex-class.md#setregistrybase) rispettivamente.  
   
- Utilizzare il metodo [CContextMenuManager::LoadState](#loadstate) per caricare i menu di scelta rapida dal Registro di sistema.  
+ Usare il metodo [CContextMenuManager::LoadState](#loadstate) per caricare i menu di scelta rapida dal Registro di sistema.  
   
 ##  <a name="setdontcloseactivemenu"></a>  CContextMenuManager::SetDontCloseActiveMenu  
  Controlli se il [CContextMenuManager](../../mfc/reference/ccontextmenumanager-class.md) chiude il menu a comparsa attivo quando questo viene visualizzato un nuovo menu a comparsa.  
@@ -247,13 +247,13 @@ void SetDontCloseActiveMenu (BOOL bSet = TRUE);
   
 ### <a name="parameters"></a>Parametri  
  [in] *bSet*  
- Un parametro booleano che controlla se chiudere il menu a comparsa attivo. Il valore `TRUE` indica il menu a comparsa attivo non è chiuso. `FALSE` indica che il menu a comparsa attivo viene chiuso.  
+ Un parametro booleano che controlla se chiudere il menu a comparsa attivo. Il valore TRUE indica che il menu a comparsa attivo non viene chiusa. FALSE indica che il menu a comparsa attivo viene chiuso.  
   
 ### <a name="remarks"></a>Note  
  Per impostazione predefinita, il `CContextMenuManager` chiude il menu a comparsa attivo.  
   
 ##  <a name="showpopupmenu"></a>  CContextMenuManager::ShowPopupMenu  
- Visualizza il menu di scelta rapida specificato.  
+ Visualizza il menu di scelta rapida specificati.  
   
 ```  
 virtual BOOL ShowPopupMenu(
@@ -277,36 +277,36 @@ virtual CMFCPopupMenu* ShowPopupMenu(
   
 ### <a name="parameters"></a>Parametri  
  [in] *uiMenuResId*  
- L'ID di risorsa del menu che consente di visualizzare questo metodo.  
+ L'ID risorsa del menu di scelta che visualizzerà questo metodo.  
   
  [in] *x*  
- Orizzontale offset per il menu di scelta rapida nelle coordinate client.  
+ Orizzontale offset per il menu di scelta rapida nelle coordinate del client.  
   
  [in] *y*  
- L'offset verticale per il menu di scelta rapida nelle coordinate client  
+ L'offset verticale per il menu di scelta rapida nelle coordinate del client  
   
  [in] *pWndOwner*  
  Puntatore alla finestra padre del menu di scelta rapida.  
   
  [in] *bOwnMessage*  
- Un parametro booleano che indica come vengono indirizzati i messaggi. Se *bOwnMessage* è `FALSE`, routing MFC standard viene utilizzato. In caso contrario, *pWndOwner* riceve i messaggi.  
+ Un parametro booleano che indica come vengono indirizzati i messaggi. Se *bOwnMessage* è FALSE, standard MFC viene utilizzato il routing. In caso contrario, *pWndOwner* riceve i messaggi.  
   
  [in] *hmenuPopup*  
- L'handle del menu che consente di visualizzare questo metodo.  
+ L'handle del menu di scelta che visualizzerà questo metodo.  
   
  [in] *il flag bAutoDestroy*  
- Un parametro booleano che indica se il menu di verrà automaticamente eliminato definitivamente.  
+ Un parametro booleano che indica se il menu di scelta verrà automaticamente eliminato definitivamente.  
   
  [in] *bRightAlign*  
- Un parametro booleano che indica come sono allineate le voci di menu. Se *bRightAlign* è `TRUE`, il menu è allineato a destra per ordine di lettura da destra a sinistra.  
+ Un parametro booleano che indica la modalità di allineamento delle voci di menu. Se *bRightAlign* è TRUE, il menu di scelta è allineata a destra per ordine di lettura da destra a sinistra.  
   
 ### <a name="return-value"></a>Valore restituito  
- Il primo overload restituisce diverso da zero se il metodo mostra il menu di correttamente. in caso contrario 0. Il secondo overload del metodo restituisce un puntatore a [CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md) se il menu di scelta rapida visualizza correttamente; in caso contrario `NULL`.  
+ Il primo overload restituisce diverso da zero se il metodo viene illustrato il menu di scelta correttamente. in caso contrario 0. Il secondo overload del metodo restituisce un puntatore a [CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md) se verrà visualizzato il menu di scelta rapida in modo corretto; in caso contrario, NULL.  
   
 ### <a name="remarks"></a>Note  
- Questo metodo è analogo al metodo [CContextMenuManager::TrackPopupMenu](#trackpopupmenu) in quanto entrambi i metodi di visualizzano un menu di scelta rapida. Tuttavia, `TrackPopupMenu` restituisce l'indice del comando di menu selezionata.  
+ Questo metodo è simile al metodo [CContextMenuManager::TrackPopupMenu](#trackpopupmenu) in quanto entrambi i metodi di visualizzano un menu di scelta rapida. Tuttavia, `TrackPopupMenu` restituisce l'indice del comando di menu selezionata.  
   
- Se il parametro *il flag bAutoDestroy* viene `FALSE`, è necessario chiamare manualmente ereditato `DestroyMenu` metodo per rilasciare le risorse di memoria. L'implementazione predefinita di `ShowPopupMenu` non usa il parametro *il flag bAutoDestroy*. Viene fornito per utilizzi futuri o per classi personalizzate derivate dal `CContextMenuManager` classe.  
+ Se il parametro *il flag bAutoDestroy* è FALSE, è necessario chiamare manualmente ereditato `DestroyMenu` metodo per rilasciare le risorse di memoria. L'implementazione predefinita di `ShowPopupMenu` non usa il parametro *il flag bAutoDestroy*. Viene fornito per usi futuri o per classi personalizzate derivate dal `CContextMenuManager` classe.  
   
 ##  <a name="trackpopupmenu"></a>  CContextMenuManager::TrackPopupMenu  
  Visualizza il menu di scelta rapida specificato e restituisce l'indice del comando di menu di scelta rapida selezionato.  
@@ -322,25 +322,25 @@ virtual UINT TrackPopupMenu(
   
 ### <a name="parameters"></a>Parametri  
  [in] *hmenuPopup*  
- L'handle del menu di scelta rapida che viene visualizzato questo metodo.  
+ Handle del menu di scelta rapida che consente di visualizzare questo metodo.  
   
  [in] *x*  
- Orizzontale offset per il menu di scelta rapida nelle coordinate client.  
+ Orizzontale offset per il menu di scelta rapida nelle coordinate del client.  
   
  [in] *y*  
- Verticale offset per il menu di scelta rapida nelle coordinate client.  
+ L'offset per il menu di scelta rapida nelle coordinate del client verticale.  
   
  [in] *pWndOwner*  
  Puntatore alla finestra padre del menu di scelta rapida.  
   
  [in] *bRightAlign*  
- Un parametro booleano che indica la modalità di allineamento delle voci di menu. Se *bRightAlign* è `TRUE`, il menu è allineato a destra per ordine di lettura da destra a sinistra. Se *bRightAlign* è `FALSE`, il menu è allineato a sinistra per ordine di lettura da sinistra a destra.  
+ Un parametro booleano che indica la modalità di allineamento delle voci di menu. Se *bRightAlign* è TRUE, il menu di scelta è allineata a destra per ordine di lettura da destra a sinistra. Se *bRightAlign* è FALSE, il menu di scelta è allineata a sinistra per ordine di lettura da sinistra a destra.  
   
 ### <a name="return-value"></a>Valore restituito  
  L'ID di comando di menu del comando che l'utente sceglie; 0 se l'utente chiude il menu di scelta rapida senza selezionare un comando di menu.  
   
 ### <a name="remarks"></a>Note  
- Questo metodo funziona come una chiamata modale per visualizzare un menu di scelta rapida. L'applicazione non continuerà per la riga seguente nel codice fino a quando l'utente chiude il menu di scelta rapida o seleziona un comando. È un metodo alternativo che è possibile utilizzare per visualizzare un menu di scelta rapida [CContextMenuManager::ShowPopupMenu](#showpopupmenu). Tale metodo non è una chiamata modale e non restituirà l'ID del comando selezionato.  
+ Questo metodo funziona come una chiamata modale per visualizzare un menu di scelta rapida. L'applicazione non continuerà per la riga seguente nel codice fino a quando l'utente chiude il menu di scelta rapida o seleziona un comando. È un metodo alternativo che è possibile usare per visualizzare un menu di scelta rapida [CContextMenuManager::ShowPopupMenu](#showpopupmenu). Tale metodo non è una chiamata modale e non restituirà l'ID del comando selezionato.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Grafico delle gerarchie](../../mfc/hierarchy-chart.md)   

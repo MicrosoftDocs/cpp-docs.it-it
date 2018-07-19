@@ -1,5 +1,5 @@
 ---
-title: Struttura MEASUREITEMSTRUCT | Documenti Microsoft
+title: Struttura MEASUREITEMSTRUCT | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ff015fdaf9e37d919459cadc8e4c35c4b795b3f8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bcf4bd41d00f6999b4158f0884c39e7a16d10bcc
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33372270"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37336959"
 ---
 # <a name="measureitemstruct-structure"></a>Struttura MEASUREITEMSTRUCT
 Il `MEASUREITEMSTRUCT` struttura informa Windows delle dimensioni di un elemento di controllo o del menu creato dal proprietario.  
@@ -40,28 +40,28 @@ typedef struct tagMEASUREITEMSTRUCT {
 ```  
   
 #### <a name="parameters"></a>Parametri  
- `CtlType`  
+ *CtlType*  
  Contiene il tipo di controllo. I valori per i tipi di controllo sono i seguenti:  
   
-- **ODT_COMBOBOX** casella combinata creato dal proprietario.  
+- Pole se seznamem ODT_COMBOBOX proprietario.  
   
-- **ODT_LISTBOX** casella di riepilogo di disegno  
+- Casella di riepilogo di disegno ODT_LISTBOX  
   
-- **ODT_MENU** menu creato dal proprietario.  
+- Menu di disegno ODT_MENU  
   
- `CtlID`  
- Contiene l'ID di controllo per un pulsante, una casella di riepilogo o una casella combinata. Questo membro non viene usato per un menu.  
+ *CtlID*  
+ Contiene l'ID di controllo per un pulsante, casella di riepilogo o casella combinata. Questo membro non viene usato per un menu.  
   
- `itemID`  
- Contiene l'ID della voce di menu per un menu o l'ID di elemento di casella di riepilogo per una casella combinata ad altezza variabile o una casella di riepilogo. Questo membro non viene utilizzato per una casella combinata ad altezza fissa o una casella di riepilogo o per un pulsante.  
+ *ID dell'elemento*  
+ Contiene l'ID voce di menu per un menu o l'ID di elemento di casella di riepilogo per una casella combinata di altezza variabile o una casella di riepilogo. Questo membro non viene utilizzato per una casella combinata di altezza fissa o una casella di riepilogo o per un pulsante.  
   
  *itemWidth*  
- Specifica la larghezza di una voce di menu. Il proprietario della voce di menu di disegno personalizzato è necessario compilare questo membro prima della restituzione del messaggio.  
+ Specifica la larghezza di una voce di menu. Il proprietario della voce di menu creato dal proprietario deve compilare questo membro prima della restituzione del messaggio.  
   
  *itemHeight*  
- Specifica l'altezza di un singolo elemento in una casella di riepilogo o un menu. Prima di restituire il messaggio, il proprietario della casella combinata proprietario, casella di riepilogo o voce di menu deve compilare questo membro. L'altezza massima dell'elemento di una casella di riepilogo è 255.  
+ Specifica l'altezza di un singolo elemento in una casella di riepilogo o un menu. Prima che venga restituito dal messaggio, il proprietario della casella combinata creato dal proprietario, casella di riepilogo o voce di menu deve compilare questo membro. L'altezza massima di un elemento di casella di riepilogo è 255.  
   
- `itemData`  
+ *itemData*  
  Per una casella combinata o una casella di riepilogo, questo membro contiene il valore passato alla casella di riepilogo per uno degli elementi seguenti:  
   
 - [CComboBox::AddString](../../mfc/reference/ccombobox-class.md#addstring)  
@@ -80,7 +80,7 @@ typedef struct tagMEASUREITEMSTRUCT {
   
 - [CMenu::ModifyMenu](../../mfc/reference/cmenu-class.md#modifymenu)  
   
- Ciò consente di elaborare correttamente l'interazione dell'utente con il controllo. Errore per la compilazione dei membri di corretti il `MEASUREITEMSTRUCT` struttura causerà un funzionamento non corretto del controllo.  
+ In questo modo Windows da elaborare in modo corretto l'interazione dell'utente con il controllo. Tentativo di compilare i membri appropriati nel `MEASUREITEMSTRUCT` struttura causerà un funzionamento non corretto del controllo.  
   
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** winuser.h  

@@ -1,5 +1,5 @@
 ---
-title: Funzione CAtlServiceModuleT | Documenti Microsoft
+title: 'Funzione CAtlServiceModuleT:: | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,26 +18,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a07ad6b09fa10a81b500625531226dc18fc6281a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e509ad88a744f6ebaaca41ecd0d6455d68c2585c
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32355125"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37850654"
 ---
-# <a name="catlservicemoduletrun-function"></a>CAtlServiceModuleT (funzione)
-**Eseguire** contiene le chiamate a `PreMessageLoop`, `RunMessageLoop`, e `PostMessageLoop`. Dopo la chiamata `PreMessageLoop` Archivia prima l'ID del thread. del servizio Questo ID verrà utilizzato dal servizio per la chiusura inviando un **WM_QUIT** messaggio utilizzando la funzione API Win32, [PostThreadMessage](http://msdn.microsoft.com/library/windows/desktop/ms644946).  
+# <a name="catlservicemoduletrun-function"></a>Funzione CAtlServiceModuleT:: Run
+`Run` contiene le chiamate a `PreMessageLoop`, `RunMessageLoop`, e `PostMessageLoop`. Dopo essere stato chiamato, `PreMessageLoop` Archivia prima l'ID del thread. del servizio Il servizio userà questo ID per la chiusura inviando un messaggio WM_QUIT mediante la funzione API Win32, [PostThreadMessage](http://msdn.microsoft.com/library/windows/desktop/ms644946).  
   
- `PreMessageLoop` chiama quindi `InitializeSecurity`. Per impostazione predefinita, `InitializeSecurity` chiamate [CoInitializeSecurity](http://msdn.microsoft.com/library/windows/desktop/ms693736) con il descrittore di sicurezza impostato su NULL, il che significa che qualsiasi utente che disponga dell'accesso all'oggetto.  
+ `PreMessageLoop` chiama quindi `InitializeSecurity`. Per impostazione predefinita `InitializeSecurity` chiamate [CoInitializeSecurity](http://msdn.microsoft.com/library/windows/desktop/ms693736) con il descrittore di sicurezza impostato su NULL, il che significa che ogni utente abbia accesso all'oggetto.  
   
- Se si desidera il servizio per specificare la propria sicurezza, eseguire l'override `PreMessageLoop` e non chiamare `InitializeSecurity`, COM verrà quindi determinare le impostazioni di sicurezza dal Registro di sistema. È un modo pratico per configurare le impostazioni del Registro di sistema con il [DCOMCNFG](../atl/dcomcnfg.md) utilità illustrato più avanti in questa sezione.  
+ Se il servizio per specificare il proprio sistema di protezione non desiderate, eseguire l'override `PreMessageLoop` e non chiamare `InitializeSecurity`, COM verrà quindi determinare le impostazioni di sicurezza dal Registro di sistema. È un modo pratico per configurare le impostazioni del Registro di sistema con il [DCOMCNFG](../atl/dcomcnfg.md) utilità illustrati più avanti in questa sezione.  
   
- Dopo aver specificata di sicurezza, l'oggetto è registrato con COM in modo che i nuovi client può connettersi al programma. Infine, il programma indica Gestione controllo servizi (SCM) che è in esecuzione e avvia un ciclo di messaggi. Il programma rimane in esecuzione fino a quando non invia un messaggio di uscita durante l'arresto del servizio.  
+ Una volta sicurezza viene specificata, l'oggetto è registrato con COM in modo che i nuovi client possono connettersi al programma. Infine, il programma indica a Gestione controllo servizi (SCM) che è in esecuzione e il programma entra in un ciclo di messaggi. Il programma rimane in esecuzione fino a quando non inserisce un messaggio quit al momento della chiusura del servizio.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Servizi](../atl/atl-services.md)   
  [Classe CSecurityDesc](../atl/reference/csecuritydesc-class.md)   
- [Classe IDSR](../atl/reference/csid-class.md)   
+ [Classe CSid](../atl/reference/csid-class.md)   
  [Classe CDacl](../atl/reference/cdacl-class.md)   
- [CAtlServiceModuleT](../atl/reference/catlservicemodulet-class.md#run)
+ [CAtlServiceModuleT:: Run](../atl/reference/catlservicemodulet-class.md#run)
 

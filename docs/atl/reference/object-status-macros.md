@@ -1,5 +1,5 @@
 ---
-title: Oggetto stato macro | Documenti Microsoft
+title: Macro di stato dell'oggetto | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,19 +14,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eddfc28c659d0c1eb54794d8fc76a9f3a4f9e73b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e3657e7076bf67a5a3870d7d127cc150f976ecde
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32360874"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37883658"
 ---
-# <a name="object-status-macros"></a>Oggetto stato macro
-Questa macro imposta flag appartenenti ai controlli ActiveX.  
+# <a name="object-status-macros"></a>Macro di stato oggetto
+Questa macro imposta flag appartenenti a controlli ActiveX.  
   
 |||  
 |-|-|  
-|[DECLARE_OLEMISC_STATUS](#declare_olemisc_status)|Utilizzato nei controlli ActiveX di ATL per impostare il **OLEMISC** flag.|  
+|[DECLARE_OLEMISC_STATUS](#declare_olemisc_status)|Utilizzato nei controlli ActiveX di ATL per impostare i flag OLEMISC.|  
 
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** atlcom. h  

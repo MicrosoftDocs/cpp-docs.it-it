@@ -1,5 +1,5 @@
 ---
-title: Classe CW2WEX | Documenti Microsoft
+title: Classe CW2WEX | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,18 +20,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e70ba1fdf42ea2f00b057d9b95105b34d9eff5a2
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7710856f05204dbbbc2bc15e2e62056123cd85cc
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32362420"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37884074"
 ---
 # <a name="cw2wex-class"></a>Classe CW2WEX
-Questa classe viene utilizzata per le macro di conversione di stringhe `CW2TEX` e `CT2WEX`e typedef `CW2W`.  
+Questa classe viene utilizzata la macro di conversione di stringhe CW2TEX e CT2WEX e typedef CW2W.  
   
 > [!IMPORTANT]
->  Questa classe e i relativi membri non possono essere utilizzati nelle applicazioni eseguite in Windows Runtime.  
+>  Questa classe e i relativi membri non possono essere utilizzati nelle applicazioni eseguite nel Runtime di Windows.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -41,8 +41,8 @@ class CW2WEX
 ```  
   
 #### <a name="parameters"></a>Parametri  
- `t_nBufferLength`  
- Le dimensioni del buffer utilizzato nel processo di conversione. La lunghezza predefinita è di 128 byte.  
+ *t_nBufferLength*  
+ Le dimensioni del buffer utilizzato nel processo di traduzione. La lunghezza predefinita è di 128 byte.  
   
 ## <a name="members"></a>Membri  
   
@@ -63,32 +63,32 @@ class CW2WEX
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[CW2WEX::m_psz](#m_psz)|Il membro dati che archivia la stringa di origine.|  
-|[CW2WEX::m_szBuffer](#m_szbuffer)|Il buffer statico, utilizzato per archiviare la stringa convertita.|  
+|[CW2WEX::m_psz](#m_psz)|Membro dati che archivia la stringa di origine.|  
+|[CW2WEX::m_szBuffer](#m_szbuffer)|Il buffer statico, usato per archiviare la stringa convertita.|  
   
 ## <a name="remarks"></a>Note  
- A meno che non è necessaria la funzionalità aggiuntiva, utilizzare `CW2TEX`, `CT2WEX`, o `CW2W` nel codice.  
+ A meno che non è necessaria la funzionalità aggiuntiva, usare CW2TEX, CT2WEX o CW2W nel codice.  
   
- Questa classe contiene un buffer a dimensione fissa statico viene utilizzato per archiviare il risultato della conversione. Se il risultato è troppo grande per il buffer statico, la classe alloca memoria con `malloc`, liberando la memoria quando l'oggetto esce dall'ambito. Ciò garantisce che, a differenza del testo macro di conversione disponibili nelle versioni precedenti di ATL, questa classe è possibile utilizzare nei cicli e che non sarà un overflow dello stack.  
+ Questa classe contiene un buffer statico di dimensione fissa che viene usato per archiviare il risultato della conversione. Se il risultato è troppo grande per il buffer statico, la classe alloca memoria usando **malloc**, liberando la memoria quando l'oggetto esce dall'ambito. Ciò garantisce che, a differenza del testo macro di conversione disponibili nelle versioni precedenti di ATL, questa classe sia sicura per l'uso nei cicli e che non eseguiranno l'overflow dello stack.  
   
- Se la classe tenta di allocare memoria in cui l'heap e non riesce, chiama `AtlThrow` con un argomento di **E_OUTOFMEMORY**.  
+ Se la classe tenta di allocare memoria sull'heap e ha esito negativo, chiamerà `AtlThrow` con un argomento di E_OUTOFMEMORY.  
   
- Per impostazione predefinita, le classi di conversione ATL e le macro utilizzano la tabella codici ANSI del thread corrente per la conversione.  
+ Per impostazione predefinita, le classi di conversione ATL e le macro usano la tabella codici ANSI del thread corrente per la conversione.  
   
- Le macro seguenti sono basate su questa classe:  
+ Le macro seguenti si basano su questa classe:  
   
-- `CW2TEX`  
+- CW2TEX  
   
-- `CT2WEX`  
+- CT2WEX  
   
- La seguente dichiarazione typedef è basato su questa classe:  
+ Il typedef seguente si basa su questa classe:  
   
-- `CW2W`  
+- CW2W  
   
- Per una discussione su queste macro di conversione di testo, vedere [macro di conversione di stringhe MFC e ATL](string-conversion-macros.md).  
+ Per una descrizione di queste macro di conversione di testo, vedere [macro di conversione di stringhe MFC e ATL](string-conversion-macros.md).  
   
 ## <a name="example"></a>Esempio  
- Vedere [macro di conversione di stringhe MFC e ATL](string-conversion-macros.md) per un esempio dell'utilizzo di queste macro di conversione di stringhe.  
+ Visualizzare [macro di conversione di stringhe MFC e ATL](string-conversion-macros.md) per un esempio dell'uso di queste macro di conversione di stringhe.  
   
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** atlconv. h  
@@ -102,14 +102,14 @@ CW2WEX( LPCWSTR  psz) throw(...);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `psz`  
+ *psz*  
  La stringa di testo da convertire.  
   
- `nCodePage`  
+ *nCodePage*  
  La tabella codici. Non utilizzato in questa classe.  
   
 ### <a name="remarks"></a>Note  
- Crea il buffer necessario per la traduzione.  
+ Crea il buffer della traduzione.  
   
 ##  <a name="dtor"></a>  CW2WEX:: ~ CW2WEX  
  Il distruttore...  
@@ -122,28 +122,28 @@ CW2WEX( LPCWSTR  psz) throw(...);
  Consente di liberare il buffer allocato.  
   
 ##  <a name="m_psz"></a>  CW2WEX::m_psz  
- Il membro dati che archivia la stringa di origine.  
+ Membro dati che archivia la stringa di origine.  
   
 ```
 LPWSTR m_psz;
 ```  
   
 ##  <a name="m_szbuffer"></a>  CW2WEX::m_szBuffer  
- Il buffer statico, utilizzato per archiviare la stringa convertita.  
+ Il buffer statico, usato per archiviare la stringa convertita.  
   
 ```
 wchar_t m_szBuffer[t_nBufferLength];
 ```  
   
 ##  <a name="operator_lpwstr"></a>  CW2WEX::operator LPWSTR  
- Operatore di cast.  
+ Operatore cast.  
   
 ```  
 operator LPWSTR() const throw();
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- Restituisce la stringa di testo come tipo `LPWSTR`.  
+ Restituisce la stringa di testo come tipo LPWSTR.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Classe CA2AEX](../../atl/reference/ca2aex-class.md)   
@@ -151,4 +151,4 @@ operator LPWSTR() const throw();
  [Classe CA2WEX](../../atl/reference/ca2wex-class.md)   
  [Classe CW2AEX](../../atl/reference/cw2aex-class.md)   
  [Classe CW2CWEX](../../atl/reference/cw2cwex-class.md)   
- [Cenni preliminari sulla classe](../../atl/atl-class-overview.md)
+ [Panoramica della classe](../../atl/atl-class-overview.md)

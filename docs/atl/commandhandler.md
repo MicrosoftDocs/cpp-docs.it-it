@@ -1,5 +1,5 @@
 ---
-title: CommandHandler | Documenti Microsoft
+title: CommandHandler | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 27f5585ec334a4179b76579c5216c8c30013ca97
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 784551b090f7c0c73b96b846fcc8d74017cc1e30
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32355138"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37850641"
 ---
 # <a name="commandhandler"></a>CommandHandler
-`CommandHandler` viene identificata dal terzo parametro della funzione di `COMMAND_HANDLER` macro della mappa del messaggio.  
+`CommandHandler` la funzione è identificata dal terzo parametro della macro COMMAND_HANDLER nella mappa messaggi.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -40,23 +40,23 @@ ms.locfileid: "32355138"
 ```  
   
 #### <a name="parameters"></a>Parametri  
- `wNotifyCode`  
+ *wNotifyCode*  
  Il codice di notifica.  
   
  *wID*  
- Identificatore della voce di menu, controllo o i tasti di scelta rapida.  
+ Identificatore della voce di menu, controllo o tasto di scelta rapida.  
   
  *hWndCtl*  
- Un handle a un controllo di finestra.  
+ Handle per un controllo di finestra.  
   
- `bHandled`  
- I set di mapping dei messaggi `bHandled` a **TRUE** prima `CommandHandler` viene chiamato. Se `CommandHandler` non gestire completamente il messaggio, è necessario impostare `bHandled` a **FALSE** per indicare che il messaggio richiede un'ulteriore elaborazione.  
+ *bHandled*  
+ Il set di mapping dei messaggi *bHandled* su TRUE prima `CommandHandler` viene chiamato. Se `CommandHandler` non gestisce completamente il messaggio deve essere impostato *bHandled* su FALSE per indicare che il messaggio richiede un'ulteriore elaborazione.  
   
 ## <a name="return-value"></a>Valore restituito  
  Il risultato dell'elaborazione del messaggio. 0 se ha esito positivo.  
   
 ## <a name="remarks"></a>Note  
- Per un esempio dell'utilizzo di questo gestore di messaggi in una mappa messaggi, vedere [COMMAND_HANDLER](reference/message-map-macros-atl.md#command_handler).  
+ Per un esempio dell'uso di questo gestore di messaggi in una mappa dei messaggi, vedere [COMMAND_HANDLER](reference/message-map-macros-atl.md#command_handler).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Implementazione di una finestra](../atl/implementing-a-window.md)   

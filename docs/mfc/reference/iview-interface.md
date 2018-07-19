@@ -1,5 +1,5 @@
 ---
-title: Interfaccia IView | Documenti Microsoft
+title: Interfaccia IView | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,15 +22,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a06243af3de7a2f4b32aa9a9ae492dfe3b2d3b64
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: acf1ba02e9bbf6afd14e41be7dda406d257cb681
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370959"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37339761"
 ---
 # <a name="iview-interface"></a>Interfaccia IView
-Implementa diversi metodi che [CWinFormsView](../../mfc/reference/cwinformsview-class.md) utilizza per inviare notifiche di visualizzazione per un controllo gestito.  
+Implementa diversi metodi che [CWinFormsView](../../mfc/reference/cwinformsview-class.md) utilizza per inviare notifiche di visualizzazione a un controllo gestito.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -44,43 +44,43 @@ interface class IView
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[IView::OnActivateView](#onactivateview)|Chiamato da MFC quando una vista viene attivata o disattivata.|  
-|[IView::OnInitialUpdate](#oninitialupdate)|Chiamato dal framework dopo la visualizzazione prima di tutto è collegata al documento, ma prima che la visualizzazione iniziale.|  
-|[IView::OnUpdate](#onupdate)|Chiamato da MFC dopo che è stato modificato il documento della vista. Questa funzione consente di aggiornare la visualizzazione in modo da riflettere le modifiche.|  
+|[IView::OnActivateView](#onactivateview)|Chiamato da MFC quando una visualizzazione viene attivata o disattivata.|  
+|[IView::OnInitialUpdate](#oninitialupdate)|Chiamato dal framework dopo la visualizzazione prima di tutto è collegata al documento, ma prima la visualizzazione iniziale.|  
+|[IView::OnUpdate](#onupdate)|Chiamato da MFC dopo che il documento della vista è stato modificato. Questa funzione consente la visualizzazione di aggiornare la relativa visualizzazione in modo da riflettere le modifiche.|  
   
 ## <a name="remarks"></a>Note  
- `IView` implementa diversi metodi che `CWinFormsView` Usa per inoltrare le notifiche di visualizzazione comuni a un controllo gestito ospitato. Si tratta di [OnInitialUpdate](#oninitialupdate), [OnUpdate](#onupdate) e [OnActivateView](#onactivateview).  
+ `IView` implementa diversi metodi che `CWinFormsView` Usa per inoltrare comune visualizzare le notifiche a un controllo ospitato gestito. Si tratta [OnInitialUpdate](#oninitialupdate), [OnUpdate](#onupdate) e [OnActivateView](#onactivateview).  
   
- `IView` è simile a [CView](../../mfc/reference/cview-class.md), ma viene usato solo con controlli e le viste gestite.  
+ `IView` è simile a [CView](../../mfc/reference/cview-class.md), ma viene usato solo con le visualizzazioni gestite e i controlli.  
   
- Per ulteriori informazioni sull'utilizzo di Windows Form, vedere [utilizzando un controllo utente Windows Form in MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).  
+ Per altre informazioni sull'uso di Windows Form, vedere [usando un controllo utente di Windows Form in MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).  
   
 
 ## <a name="requirements"></a>Requisiti  
  Intestazione: afxwinforms. h (definito nell'assembly atlmfc\lib\mfcmifc80.dll)  
 
 ## <a name="onactivateview"></a> IView::OnActivateView  
-Chiamato da MFC quando una vista viene attivata o disattivata.
+Chiamato da MFC quando una visualizzazione viene attivata o disattivata.
 ```
 void OnActivateView(bool activate);
 ```
 ## <a name="parameters"></a>Parametri
-`activate`  
+*attivare*  
 Indica se la visualizzazione viene attivata o disattivata.  
 
 ## <a name="oninitialupdate"></a> IView::OnInitialUpdate
-Chiamato dal framework dopo la visualizzazione prima di tutto è collegata al documento, ma prima che la visualizzazione iniziale.
+Chiamato dal framework dopo la visualizzazione prima di tutto è collegata al documento, ma prima la visualizzazione iniziale.
 ```
 void OnInitialUpdate();
 ```
 
 ## <a name="onupdate"></a> IView::OnUpdate 
-Chiamato da MFC dopo che il documento della vista è stato modificato.  
+Chiamato da MFC dopo che il documento della visualizzazione è stato modificato.  
 ```
 void OnUpdate();
 ```
 ## <a name="remarks"></a>Note  
-Questa funzione consente di aggiornare la visualizzazione in modo da riflettere le modifiche.
+Questa funzione consente la visualizzazione di aggiornare la relativa visualizzazione in modo da riflettere le modifiche.
 
 ## <a name="see-also"></a>Vedere anche  
  [Classe CWinFormsView](../../mfc/reference/cwinformsview-class.md)   

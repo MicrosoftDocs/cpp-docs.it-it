@@ -1,5 +1,5 @@
 ---
-title: Classe di CMFCPropertySheet | Documenti Microsoft
+title: Classe CMFCPropertySheet | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -50,14 +50,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 53ec20a6fb45efc3848381d165256a429b80a386
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 45624c094d7ae656c50b55cc932762b7f9aa6476
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37040012"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37854070"
 ---
-# <a name="cmfcpropertysheet-class"></a>Classe di CMFCPropertySheet
+# <a name="cmfcpropertysheet-class"></a>Classe CMFCPropertySheet
 La classe `CMFCPropertySheet` supporta una finestra delle proprietà in cui ogni pagina delle proprietà è identificata da una scheda, un pulsante della barra degli strumenti, un nodo del controllo dell'albero o un elemento di elenco.  
   
 ## <a name="syntax"></a>Sintassi  
@@ -87,7 +87,7 @@ class CMFCPropertySheet : public CPropertySheet
 |[CMFCPropertySheet::GetLook](#getlook)|Recupera il valore di enumerazione che specifica l'aspetto della finestra delle proprietà corrente.|  
 |[CMFCPropertySheet::GetNavBarWidth](#getnavbarwidth)|Recupera la larghezza della barra di navigazione in pixel.|  
 |[CMFCPropertySheet::GetTab](#gettab)|Recupera l'oggetto del controllo Struttura a schede interno che supporta il controllo corrente della finestra delle proprietà.|  
-|`CMFCPropertySheet::GetThisClass`|Usato dal framework per ottenere un puntatore per il [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) oggetto associato a questo tipo di classe.|  
+|`CMFCPropertySheet::GetThisClass`|Utilizzato dal framework per ottenere un puntatore per il [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) oggetto associato a questo tipo di classe.|  
 |[CMFCPropertySheet::InitNavigationControl](#initnavigationcontrol)|Inizializza l'aspetto del controllo corrente della finestra delle proprietà.|  
 |[CMFCPropertySheet::OnActivatePage](#onactivatepage)|Chiamato dal framework quando una pagina delle proprietà è abilitata.|  
 |[CMFCPropertySheet::OnDrawPageHeader](#ondrawpageheader)|Chiamato dal framework per creare un'intestazione pagina delle proprietà personalizzata.|  
@@ -106,11 +106,11 @@ class CMFCPropertySheet : public CPropertySheet
   
 1.  Derivare una classe dalla classe `CMFCPropertySheet` e assegnare alla classe un nome, ad esempio, CMyPropertySheet.  
   
-2.  Costruire un [CMFCPropertyPage](../../mfc/reference/cmfcpropertypage-class.md) oggetto per ogni pagina delle proprietà.  
+2.  Creare un [CMFCPropertyPage](../../mfc/reference/cmfcpropertypage-class.md) oggetto per ogni pagina delle proprietà.  
   
 3.  Chiamare il [CMFCPropertySheet:: Setlook](#setlook) metodo nel costruttore CMyPropertySheet. Un parametro del metodo specifica che le pagine delle proprietà vengono visualizzate come schede nella parte superiore o sinistra della finestra delle proprietà, come schede nello stile di una finestra delle proprietà di Microsoft OneNote, come pulsanti su un controllo della barra degli strumenti di Microsoft Outlook, come nodi di un controllo albero oppure come un elenco di elementi sul lato sinistro della finestra delle proprietà.  
   
-4.  Se si crea una finestra delle proprietà nello stile di una barra degli strumenti di Microsoft Outlook, chiamare il [CMFCPropertySheet::SetIconsList](#seticonslist) metodo per associare un elenco immagini con le pagine delle proprietà.  
+4.  Se si crea una finestra delle proprietà nello stile di una barra degli strumenti di Microsoft Outlook, chiamare il [CMFCPropertySheet::SetIconsList](#seticonslist) metodo per associare un elenco di immagini con le pagine delle proprietà.  
   
 5.  Chiamare il [CMFCPropertySheet:: addPage](#addpage) metodo per ogni pagina delle proprietà.  
   
@@ -121,7 +121,7 @@ class CMFCPropertySheet : public CPropertySheet
   
  ![Colori di CMFCPropertySheet](../../mfc/reference/media/cmfcpropertysheet_color.png "cmfcpropertysheet_color")  
   
- La figura seguente mostra una finestra delle proprietà che contiene un [CMFCPropertyGridCtrl Class](../../mfc/reference/cmfcpropertygridctrl-class.md) oggetto. Tale oggetto è una finestra delle proprietà nello stile di una finestra delle proprietà dei controlli standard.  
+ La figura seguente illustra una finestra delle proprietà che contiene un [classe CMFCPropertyGridCtrl](../../mfc/reference/cmfcpropertygridctrl-class.md) oggetto. Tale oggetto è una finestra delle proprietà nello stile di una finestra delle proprietà dei controlli standard.  
   
  ![Elenchi e delle proprietà di CMFCPropertySheet](../../mfc/reference/media/cmfcpropertysheet_list.png "cmfcpropertysheet_list")  
   
@@ -152,12 +152,12 @@ void AddPage(CPropertyPage* pPage);
   
 ### <a name="parameters"></a>Parametri  
  [in] *esercitazione*  
- Puntatore a un oggetto di pagina. Questo parametro non può essere `NULL`.  
+ Puntatore a un oggetto della pagina. Questo parametro non può essere NULL.  
   
 ### <a name="remarks"></a>Note  
- Questo metodo aggiunge la pagina delle proprietà specificata come scheda a destra nella pagina delle proprietà. Pertanto, è possibile usare questo metodo per aggiungere le pagine in ordine da sinistra a destra.  
+ Questo metodo aggiunge la pagina delle proprietà specificata come la scheda all'estrema destra nella finestra delle proprietà. Pertanto, è possibile usare questo metodo per aggiungere pagine in ordine da sinistra a destra.  
   
- Se la finestra delle proprietà nello stile di Microsoft Outlook, il framework visualizza un elenco di pulsanti di navigazione a sinistra della finestra delle proprietà. Dopo che questo metodo aggiunge una pagina delle proprietà, aggiunge un pulsante corrispondente all'elenco. Per visualizzare una pagina delle proprietà, fare clic sul pulsante corrispondente. Per ulteriori informazioni sugli stili di finestre delle proprietà, vedere [CMFCPropertySheet:: Setlook](#setlook).  
+ Se la finestra delle proprietà nello stile di Microsoft Outlook, il framework visualizza un elenco di pulsanti di spostamento a sinistra della finestra delle proprietà. Dopo che questo metodo aggiunge una pagina delle proprietà, aggiunge un pulsante corrispondente all'elenco. Per visualizzare una pagina delle proprietà, fare clic sul pulsante corrispondente. Per altre informazioni sugli stili di finestre delle proprietà, vedere [CMFCPropertySheet:: Setlook](#setlook).  
   
 ##  <a name="addpagetotree"></a>  CMFCPropertySheet::AddPageToTree  
  Aggiunge una nuova pagina delle proprietà al controllo albero.  
@@ -172,19 +172,19 @@ void AddPageToTree(
   
 ### <a name="parameters"></a>Parametri  
  [in] *pCategory*  
- Puntatore a un nodo dell'albero padre, o `NULL` per associare la pagina specificata con il nodo di primo livello. Chiamare il [CMFCPropertySheet::AddTreeCategory](#addtreecategory) metodo per ottenere l'indicatore di misura.  
+ Puntatore a un nodo dell'albero padre o NULL da associare alla pagina specificata con il nodo di primo livello. Chiamare il [CMFCPropertySheet::AddTreeCategory](#addtreecategory) metodo per ottenere questo puntatore.  
   
  [in] *esercitazione*  
  Puntatore a un oggetto pagina delle proprietà.  
   
  [in] *nIconNum*  
- Indice in base zero di un'icona o -1 se nessuna icona viene utilizzata. Quando la pagina non è selezionata, l'icona viene visualizzata accanto alla pagina delle proprietà del controllo struttura ad albero. Il valore predefinito è -1.  
+ Indice in base zero di un'icona o -1 se è utilizzata alcuna icona. Quando la pagina non è selezionata, l'icona viene visualizzata accanto alla pagina delle proprietà del controllo albero. Il valore predefinito è -1.  
   
  [in] *nSelIconNum*  
- Indice in base zero di un'icona o -1 se nessuna icona viene utilizzata. L'icona viene visualizzata accanto alla pagina delle proprietà del controllo albero quando è selezionata la pagina. Il valore predefinito è -1.  
+ Indice in base zero di un'icona o -1 se è utilizzata alcuna icona. L'icona viene visualizzata accanto alla pagina delle proprietà del controllo albero quando è selezionata la pagina. Il valore predefinito è -1.  
   
 ### <a name="remarks"></a>Note  
- Questo metodo aggiunge una pagina delle proprietà come un nodo foglia di un controllo struttura ad albero. Per aggiungere una pagina delle proprietà, creare una `CMFCPropertySheet` dell'oggetto, chiamare il [CMFCPropertySheet:: Setlook](#setlook) metodo con il *Cerca* parametro impostato su `CMFCPropertySheet::PropSheetLook_Tree`e quindi utilizzare questo metodo per aggiungere la pagina delle proprietà .  
+ Questo metodo aggiunge una pagina delle proprietà come un nodo foglia di un controllo struttura ad albero. Per aggiungere una pagina delle proprietà, creare un `CMFCPropertySheet` dell'oggetto, chiamare il [CMFCPropertySheet:: Setlook](#setlook) metodo con il *Cerca* parametro impostato su `CMFCPropertySheet::PropSheetLook_Tree`e quindi usare questo metodo per aggiungere la pagina delle proprietà .  
   
 ##  <a name="addtreecategory"></a>  CMFCPropertySheet::AddTreeCategory  
  Aggiunge un nuovo nodo al controllo albero.  
@@ -202,19 +202,19 @@ CMFCPropertySheetCategoryInfo* AddTreeCategory(
  Nome del nodo.  
   
  [in] *nIconNum*  
- Indice in base zero di un'icona o -1 se nessuna icona viene utilizzata. Quando la pagina non è selezionata, l'icona viene visualizzata accanto alla pagina delle proprietà del controllo struttura ad albero. Il valore predefinito è -1.  
+ Indice in base zero di un'icona o -1 se è utilizzata alcuna icona. Quando la pagina non è selezionata, l'icona viene visualizzata accanto alla pagina delle proprietà del controllo albero. Il valore predefinito è -1.  
   
  [in] *nSelectedIconNum*  
- Indice in base zero di un'icona o -1 se nessuna icona viene utilizzata. L'icona viene visualizzata accanto alla pagina delle proprietà del controllo albero quando è selezionata la pagina. Il valore predefinito è -1.  
+ Indice in base zero di un'icona o -1 se è utilizzata alcuna icona. L'icona viene visualizzata accanto alla pagina delle proprietà del controllo albero quando è selezionata la pagina. Il valore predefinito è -1.  
   
  [in] *pParentCategory*  
- Puntatore a un nodo dell'albero padre, o `NULL` per associare la pagina specificata con il nodo di primo livello. Impostare questo parametro con il [CMFCPropertySheet::AddTreeCategory](#addtreecategory) metodo.  
+ Puntatore a un nodo dell'albero padre o NULL da associare alla pagina specificata con il nodo di primo livello. Impostare questo parametro con il [CMFCPropertySheet::AddTreeCategory](#addtreecategory) (metodo).  
   
 ### <a name="return-value"></a>Valore restituito  
- Un puntatore al nuovo nodo nel controllo struttura ad albero.  
+ Puntatore al nuovo nodo nel controllo albero.  
   
 ### <a name="remarks"></a>Note  
- Utilizzare questo metodo per aggiungere un nuovo nodo, viene definito come una categoria, al controllo albero. Per aggiungere un nodo, creare una `CMFCPropertySheet` dell'oggetto, chiamare il [CMFCPropertySheet:: Setlook](#setlook) metodo con il *Cerca* parametro impostato su `CMFCPropertySheet::PropSheetLook_Tree`e quindi utilizzare questo metodo per aggiungere il nodo.  
+ Utilizzare questo metodo per aggiungere un nuovo nodo, è anche definito come una categoria, al controllo albero. Per aggiungere un nodo, creare un `CMFCPropertySheet` dell'oggetto, chiamare il [CMFCPropertySheet:: Setlook](#setlook) metodo con il *Cerca* parametro impostato su `CMFCPropertySheet::PropSheetLook_Tree`e quindi usare questo metodo per aggiungere il nodo.  
   
  Usare il valore restituito di questo metodo nelle chiamate successive a [CMFCPropertySheet::AddPageToTree](#addpagetotree) e [CMFCPropertySheet::AddTreeCategory](#addtreecategory).  
   
@@ -235,16 +235,16 @@ CMFCPropertySheet(
   
 ### <a name="parameters"></a>Parametri  
  [in] *pszCaption*  
- Stringa che contiene la didascalia della finestra delle proprietà. Non può essere `NULL`.  
+ Stringa che contiene la didascalia della finestra delle proprietà. Non può essere NULL.  
   
  [in] *nIDCaption*  
  ID di risorsa che contiene la didascalia della finestra delle proprietà.  
   
  [in] *pParentWnd*  
- Puntatore alla finestra padre della finestra delle proprietà, o `NULL` se la finestra padre è la finestra principale dell'applicazione. Il valore predefinito è `NULL`.  
+ Puntatore alla finestra padre della finestra delle proprietà oppure NULL se la finestra padre è la finestra principale dell'applicazione. Il valore predefinito è NULL.  
   
  [in] *iSelectPage*  
- Indice in base zero della pagina delle proprietà superiore. Il valore predefinito è 0.  
+ Indice a base zero della pagina delle proprietà principali. Il valore predefinito è 0.  
   
 ### <a name="remarks"></a>Note  
  Per altre informazioni, vedere i parametri per il [CPropertySheet::CPropertySheet](../../mfc/reference/cpropertysheet-class.md#cpropertysheet) costruttore.  
@@ -261,7 +261,7 @@ void EnablePageHeader(int nHeaderHeight);
  L'altezza dell'intestazione, in pixel.  
   
 ### <a name="remarks"></a>Note  
- Per utilizzare il valore del *nHeaderHeight* eseguire l'override di parametro per disegnare un'intestazione personalizzata, la [CMFCPropertySheet::OnDrawPageHeader](#ondrawpageheader) (metodo).  
+ Per utilizzare il valore della *nHeaderHeight* parametro per creare un'intestazione personalizzata, eseguire l'override di [CMFCPropertySheet::OnDrawPageHeader](#ondrawpageheader) (metodo).  
   
 ##  <a name="getheaderheight"></a>  CMFCPropertySheet::GetHeaderHeight  
  Recupera l'altezza dell'intestazione corrente.  
@@ -284,7 +284,7 @@ PropSheetLook GetLook() const;
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- Uno dei valori di enumerazione che specifica l'aspetto della finestra delle proprietà. Per un elenco di valori possibili, vedere la tabella di enumerazione nella sezione osservazioni della [CMFCPropertySheet:: Setlook](#setlook).  
+ Uno dei valori di enumerazione che specifica l'aspetto della finestra delle proprietà. Per un elenco di valori possibili, vedere la tabella di enumerazione nella sezione Osservazioni di [CMFCPropertySheet:: Setlook](#setlook).  
   
 ##  <a name="getnavbarwidth"></a>  CMFCPropertySheet::GetNavBarWidth  
  Ottiene la larghezza della barra di spostamento.  
@@ -307,11 +307,11 @@ CMFCTabCtrl& GetTab() const;
  Un oggetto di controllo struttura a schede interno.  
   
 ### <a name="remarks"></a>Note  
- È possibile impostare una finestra delle proprietà in modo che venga visualizzato in diversi stili, ad esempio un controllo struttura ad albero, un elenco di pulsanti di spostamento o un set di pagine a schede.  
+ È possibile impostare una finestra delle proprietà in modo che venga visualizzato in stili diversi, ad esempio un controllo struttura ad albero, un elenco di pulsanti di navigazione o un set di pagine a schede.  
   
- Prima di chiamare questo metodo, chiamare il [CMFCPropertySheet:: Setlook](#setlook) metodo per impostare l'aspetto del controllo finestra delle proprietà. Chiamare quindi il [CMFCPropertySheet::InitNavigationControl](#initnavigationcontrol) metodo per inizializzare l'oggetto controllo struttura a schede interno. Utilizzare questo metodo per recuperare l'oggetto controllo scheda e quindi utilizzare quell'oggetto per lavorare con le schede nella pagina delle proprietà.  
+ Prima di chiamare questo metodo, chiamare il [CMFCPropertySheet:: Setlook](#setlook) metodo per impostare l'aspetto del controllo finestra delle proprietà. Chiamare quindi il [CMFCPropertySheet::InitNavigationControl](#initnavigationcontrol) metodo per inizializzare l'oggetto di controllo struttura a schede interno. Utilizzare questo metodo per recuperare l'oggetto controllo scheda e quindi usare tale oggetto per lavorare con le schede nella finestra delle proprietà.  
   
- Questo metodo effettua un'asserzione in modalità di debug, se il controllo della finestra delle proprietà non è impostato su vengono visualizzate nello stile di Microsoft OneNote.  
+ Questo metodo effettua un'asserzione in modalità di debug, se il controllo della finestra delle proprietà non è impostato su visualizzata nello stile di Microsoft OneNote.  
   
 ##  <a name="initnavigationcontrol"></a>  CMFCPropertySheet::InitNavigationControl  
  Inizializza l'aspetto del controllo corrente della finestra delle proprietà.  
@@ -321,10 +321,10 @@ virtual CWnd* InitNavigationControl();
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- Un puntatore alla finestra del controllo finestra delle proprietà.  
+ Puntatore alla finestra di controllo di finestra delle proprietà.  
   
 ### <a name="remarks"></a>Note  
- Un controllo della finestra delle proprietà può essere visualizzati in diversi formati diversi, ad esempio un set di pagine a schede, un controllo albero o un elenco di pulsanti di navigazione. Usare la [CMFCPropertySheet:: Setlook](#setlook) metodo per specificare l'aspetto del controllo finestra delle proprietà.  
+ Un controllo di finestra delle proprietà può apparire in varie forme diverse, ad esempio un set di pagine a schede, un controllo albero o un elenco di pulsanti di navigazione. Usare la [CMFCPropertySheet:: Setlook](#setlook) metodo per specificare l'aspetto del controllo finestra delle proprietà.  
   
 ##  <a name="onactivatepage"></a>  CMFCPropertySheet::OnActivatePage  
  Chiamato dal framework quando una pagina delle proprietà è abilitata.  
@@ -338,7 +338,7 @@ virtual void OnActivatePage(CPropertyPage* pPage);
  Puntatore a un oggetto pagina delle proprietà che rappresenta la pagina proprietà enabled.  
   
 ### <a name="remarks"></a>Note  
- Per impostazione predefinita, questo metodo garantisce che la pagina delle proprietà abilitato lo scorrimento nella visualizzazione. Se lo stile della finestra delle proprietà corrente contiene un riquadro di Microsoft Outlook, questo metodo imposta il pulsante di Outlook corrispondente per lo stato di selezione.  
+ Per impostazione predefinita, questo metodo assicura che la pagina proprietà enabled di scorrimento nella visualizzazione. Se lo stile della finestra delle proprietà corrente contiene un riquadro di Microsoft Outlook, questo metodo imposta il pulsante di Outlook corrispondente allo stato selezionato.  
   
 ##  <a name="ondrawpageheader"></a>  CMFCPropertySheet::OnDrawPageHeader  
  Chiamata eseguita dal framework per disegnare l'intestazione per una pagina delle proprietà personalizzate.  
@@ -355,7 +355,7 @@ virtual void OnDrawPageHeader(
  Puntatore a un contesto di dispositivo.  
   
  [in] *nPage*  
- Il numero di pagina di proprietà in base zero.  
+ Il numero di pagina delle proprietà in base zero.  
   
  [in] *rectHeader*  
  Un rettangolo di delimitazione che specifica la posizione in cui disegnare l'intestazione.  
@@ -375,7 +375,7 @@ virtual BOOL OnRemoveTreePage(CPropertyPage* pPage);
  Puntatore a un oggetto pagina delle proprietà che rappresenta la pagina delle proprietà da rimuovere.  
   
 ### <a name="return-value"></a>Valore restituito  
- `TRUE` se questo metodo dà esito positivo; in caso contrario, `FALSE`.  
+ TRUE se questo metodo ha esito positivo; in caso contrario, FALSE.  
   
 ##  <a name="removecategory"></a>  CMFCPropertySheet::RemoveCategory  
  Rimuove un nodo dal controllo albero.  
@@ -389,7 +389,7 @@ void RemoveCategory(CMFCPropertySheetCategoryInfo* pCategory);
  Puntatore a una categoria (nodo) da rimuovere.  
   
 ### <a name="remarks"></a>Note  
- Utilizzare questo metodo per rimuovere un nodo, viene inoltre definito come una categoria, da un controllo albero. Usare la [CMFCPropertySheet::AddTreeCategory](#addtreecategory) metodo per aggiungere un nodo a un controllo struttura ad albero.  
+ Utilizzare questo metodo per rimuovere un nodo che è detta anche una categoria, da un controllo struttura ad albero. Usare la [CMFCPropertySheet::AddTreeCategory](#addtreecategory) metodo per aggiungere un nodo a un controllo struttura ad albero.  
   
 ##  <a name="removepage"></a>  CMFCPropertySheet::RemovePage  
  Rimuove una pagina delle proprietà dalla finestra delle proprietà.  
@@ -401,13 +401,13 @@ void RemovePage(int nPage);
   
 ### <a name="parameters"></a>Parametri  
  [in] *esercitazione*  
- Puntatore all'oggetto pagina delle proprietà che rappresenta la pagina delle proprietà da rimuovere. Non può essere `NULL`.  
+ Puntatore all'oggetto pagina delle proprietà che rappresenta la pagina delle proprietà da rimuovere. Non può essere NULL.  
   
  [in] *nPage*  
  Indice in base zero della pagina da rimuovere.  
   
 ### <a name="remarks"></a>Note  
- Questo metodo rimuove la pagina delle proprietà specificato ed elimina la finestra associata. La pagina delle proprietà dell'oggetto che il *esercitazione* parametro specifica non viene eliminato finché il [CMFCPropertySheet](../../mfc/reference/cmfcpropertysheet-class.md) finestra è chiusa.  
+ Questo metodo rimuove la pagina delle proprietà specificate ed elimina la finestra associata. La pagina delle proprietà dell'oggetto che il *esercitazione* parametro specifica non viene eliminato finché il [CMFCPropertySheet](../../mfc/reference/cmfcpropertysheet-class.md) finestra viene chiusa.  
   
 ##  <a name="seticonslist"></a>  CMFCPropertySheet::SetIconsList  
  Specifica l'elenco delle immagini usate nel controllo di navigazione del riquadro di Outlook.  
@@ -425,21 +425,21 @@ void SetIconsList(HIMAGELIST hIcons);
  L'ID di risorsa di un elenco di immagini.  
   
  [in] *cx*  
- La larghezza, in pixel, delle icone dell'elenco immagini.  
+ La larghezza in pixel, di icone dell'elenco immagini.  
   
  [in] *clrTransparent*  
- Colore trasparente immagine. Le parti dell'immagine di questo oggetto color dovrà essere trasparente. Il valore predefinito è il colore magenta, RGB(255,0,255).  
+ Colore trasparente immagine. Le parti dell'immagine di questo oggetto color sarà trasparente. Il valore predefinito è il colore magenta, RGB(255,0,255).  
   
- [in] *hIcons*  
- Handle per un elenco immagini esistente.  
+ [in] *gli oggetti HICON*  
+ Handle per un elenco di immagini esistente.  
   
 ### <a name="return-value"></a>Valore restituito  
- Nel primo metodo sintassi, eseguire l'overload `TRUE` se questo metodo dà esito positivo; in caso contrario, `FALSE`.  
+ Il primo metodo consiste nel rapporto di overload sulla sintassi, TRUE se questo metodo ha esito positivo; in caso contrario, FALSE.  
   
 ### <a name="remarks"></a>Note  
- Se la finestra delle proprietà nello stile di Microsoft Outlook, il framework visualizza un elenco di pulsanti di navigazione, chiamati il controllo riquadro di Outlook, a sinistra della finestra delle proprietà. Utilizzare questo metodo per impostare l'elenco di immagini da utilizzare per il controllo riquadro di Outlook.  
+ Se la finestra delle proprietà nello stile di Microsoft Outlook, il framework visualizza un elenco di pulsanti di navigazione chiamati controllo del riquadro di Outlook, alla sinistra della finestra delle proprietà. Utilizzare questo metodo per impostare l'elenco di immagini da utilizzare da controllo del riquadro di Outlook.  
   
- Per ulteriori informazioni sui metodi che supportano questo metodo, vedere [CImageList:: Create](../../mfc/reference/cimagelist-class.md#create) e [CImageList::Add](../../mfc/reference/cimagelist-class.md#add). Per ulteriori informazioni su come impostare lo stile di una finestra delle proprietà, vedere [CMFCPropertySheet:: Setlook](#setlook).  
+ Per altre informazioni sui metodi che supportano questo metodo, vedere [CImageList:: Create](../../mfc/reference/cimagelist-class.md#create) e [CImageList::Add](../../mfc/reference/cimagelist-class.md#add). Per altre informazioni su come impostare lo stile di una finestra delle proprietà, vedere [CMFCPropertySheet:: Setlook](#setlook).  
   
 ##  <a name="setlook"></a>  CMFCPropertySheet:: Setlook  
  Specifica l'aspetto della finestra delle proprietà.  
@@ -451,24 +451,24 @@ void SetLook(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- [in] *Cerca*  
+ [in] *aspetto*  
  Uno dei valori di enumerazione che specifica l'aspetto della finestra delle proprietà. Lo stile predefinito per una finestra delle proprietà è `CMFCPropertySheet::PropSheetLook_Tabs`. Per altre informazioni, vedere la tabella nella sezione Osservazioni di questo argomento.  
   
  [in] *nNavControlWidth*  
- Larghezza del controllo di navigazione, in pixel. Il valore predefinito è 100.  
+ La larghezza del controllo di navigazione, in pixel. Il valore predefinito è 100.  
   
 ### <a name="remarks"></a>Note  
  Per visualizzare una finestra delle proprietà in uno stile diverso da quello predefinito, chiamare questo metodo prima di creare la finestra delle proprietà.  
   
- Nella tabella seguente sono elencati i valori di enumerazione che possono essere specificati nel *Cerca* parametro.  
+ Nella tabella seguente sono elencati i valori di enumerazione che possono essere specificati nel *aspetto* parametro.  
   
 |Valore|Descrizione|  
 |-----------|-----------------|  
-|`CMFCPropertySheet::PropSheetLook_Tabs`|(Impostazione predefinita) Visualizza una scheda per ogni pagina delle proprietà. Le schede vengono visualizzate nella parte superiore della finestra delle proprietà e sono in pila se sono presenti altre schede di quelle presenti in una singola riga.|  
-|`CMFCPropertySheet::PropSheetLook_OutlookBar`|Visualizza un elenco di pulsanti di navigazione nello stile della barra di Microsoft Outlook, sul lato sinistro della finestra delle proprietà. Ogni pulsante nell'elenco corrisponde a una pagina delle proprietà. Il framework Visualizza frecce di scorrimento, se sono presenti più pulsanti quelle presenti nell'area visibile dell'elenco.|  
-|`CMFCPropertySheet::PropSheetLook_Tree`|Visualizza un controllo albero sul lato sinistro della finestra delle proprietà. Ogni nodo padre o figlio del controllo struttura ad albero corrisponde a una pagina delle proprietà. Se sono presenti altri nodi quelle presenti nell'area visibile del controllo struttura ad albero, il framework Visualizza frecce di scorrimento.|  
-|`CMFCPropertySheet::PropSheetLook_OneNoteTabs`|Visualizza una scheda nello stile di Microsoft OneNote, per ogni pagina delle proprietà. Il framework vengono visualizzate le schede nella parte superiore della finestra delle proprietà e le frecce di scorrimento se sono presenti più schede di rientri in una singola riga.|  
-|`CMFCPropertySheet::PropSheetLook_List`|Visualizza un elenco a sinistra della finestra delle proprietà. Ogni elemento di elenco corrisponde a una pagina delle proprietà. Il framework Visualizza frecce di scorrimento, se sono presenti più voci di elenco quelle presenti nell'area visibile dell'elenco.|  
+|`CMFCPropertySheet::PropSheetLook_Tabs`|(Impostazione predefinita) Visualizza una scheda per ogni pagina delle proprietà. Le schede vengono visualizzate nella parte superiore della finestra delle proprietà e sono in pila se sono presenti più schede di quelle rientra in una singola riga.|  
+|`CMFCPropertySheet::PropSheetLook_OutlookBar`|Visualizza un elenco di pulsanti di navigazione nello stile della barra di Microsoft Outlook, sul lato sinistro della finestra delle proprietà. Ciascun pulsante nell'elenco corrisponde a una pagina delle proprietà. Il framework Visualizza frecce di scorrimento se sono presenti altri pulsanti di quelle presenti l'area visibile dell'elenco.|  
+|`CMFCPropertySheet::PropSheetLook_Tree`|Visualizza un controllo albero sul lato sinistro della finestra delle proprietà. Ogni nodo padre o figlio del controllo albero corrisponde a una pagina delle proprietà. Se sono presenti più nodi di quelle presenti l'area visibile del controllo albero, il framework Visualizza frecce di scorrimento.|  
+|`CMFCPropertySheet::PropSheetLook_OneNoteTabs`|Visualizza una scheda nello stile Microsoft OneNote per ogni pagina delle proprietà. Il framework vengono visualizzate le schede nella parte superiore della finestra delle proprietà e le frecce di scorrimento se sono presenti più schede di possa essere inserito in una singola riga.|  
+|`CMFCPropertySheet::PropSheetLook_List`|Visualizza un elenco sul lato sinistro della finestra delle proprietà. Ogni elemento dell'elenco corrisponde a una pagina delle proprietà. Il framework Visualizza frecce di scorrimento se sono presenti più voci di elenco di quelle presenti l'area visibile dell'elenco.|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Grafico delle gerarchie](../../mfc/hierarchy-chart.md)   

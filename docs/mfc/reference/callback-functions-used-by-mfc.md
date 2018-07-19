@@ -1,5 +1,5 @@
 ---
-title: Funzioni di callback utilizzate da MFC | Documenti Microsoft
+title: Funzioni di callback utilizzate da MFC | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,15 +19,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 114411d0f8c7084e26f36f0ffc05e60a32407c44
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 96db2ea0c28e14f7a8e614d94e18cd3fad3cda53
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36956834"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37339010"
 ---
 # <a name="callback-functions-used-by-mfc"></a>Funzioni di callback utilizzate da MFC
-Tre funzioni di callback vengono visualizzati nella libreria Microsoft Foundation Class. Queste funzioni di callback vengono passate a [CDC:: EnumObjects](../../mfc/reference/cdc-class.md#enumobjects), [CDC:: graystring](../../mfc/reference/cdc-class.md#graystring), e [CDC:: SetAbortProc](../../mfc/reference/cdc-class.md#setabortproc). Si noti che tutte le funzioni di callback devono intercettare le eccezioni MFC prima della restituzione di Windows, poiché non possono essere generate eccezioni attraverso i limiti di callback. Per altre informazioni sulle eccezioni, vedere l'articolo [eccezioni](../../mfc/exception-handling-in-mfc.md).  
+Tre funzioni di callback vengono visualizzati nella libreria di classi Microsoft Foundation. Queste funzioni di callback vengono passate a [CDC:: EnumObjects](../../mfc/reference/cdc-class.md#enumobjects), [CDC:: graystring](../../mfc/reference/cdc-class.md#graystring), e [CDC:: SetAbortProc](../../mfc/reference/cdc-class.md#setabortproc). Si noti che tutte le funzioni di callback necessario intercettare le eccezioni MFC prima della restituzione di Windows, poiché non possono essere generate eccezioni attraverso i limiti di callback. Per altre informazioni sulle eccezioni, vedere l'articolo [eccezioni](../../mfc/exception-handling-in-mfc.md).  
 
 |nome||  
 |----------|-----------------|  
@@ -51,7 +51,7 @@ int CALLBACK EXPORT ObjectFunc(
   
 ### <a name="parameters"></a>Parametri  
  *lpszLogObject*  
- Punta a un [LOGPEN](../../mfc/reference/logpen-structure.md) oppure [LOGBRUSH](../../mfc/reference/logbrush-structure.md) struttura di dati che contiene informazioni sugli attributi logici dell'oggetto.  
+ Punta a un [LOGPEN](../../mfc/reference/logpen-structure.md) oppure [LOGBRUSH](../../mfc/reference/logbrush-structure.md) struttura dei dati che contiene informazioni sugli attributi logici dell'oggetto.  
   
  *lpData*  
  Punta ai dati forniti dall'applicazione passati alla funzione `EnumObjects`.  
@@ -76,7 +76,7 @@ BOOL CALLBACK EXPORT OutputFunc(
   
 ### <a name="parameters"></a>Parametri  
  *hDC*  
- Identifica un contesto di dispositivo di memoria con una bitmap pari almeno alla larghezza e l'altezza specificata da *nWidth* e *nHeight* a `GrayString`.  
+ Identifica un contesto di dispositivo di memoria con una bitmap pari almeno alla larghezza e altezza specificati da `nWidth` e `nHeight` a `GrayString`.  
   
  *lpData*  
  Punta alla stringa di caratteri da tracciare.  
@@ -85,10 +85,10 @@ BOOL CALLBACK EXPORT OutputFunc(
  Specifica il numero di caratteri da restituire.  
   
 ### <a name="return-value"></a>Valore restituito  
- Valore restituito della funzione di callback deve essere **TRUE** per indicare l'esito positivo; in caso contrario **FALSE**.  
+ Valore restituito della funzione di callback deve essere TRUE per indicare l'esito positivo; in caso contrario è FALSE.  
   
 ### <a name="remarks"></a>Note  
- La funzione di callback (*OutputFunc*) è necessario disegnare un'immagine, relativamente alle coordinate (0,0) anziché (*x*, *y*).  
+ La funzione di callback (*OutputFunc*) è necessario disegnare un'immagine rispetto alle coordinate (0,0) anziché (*x*, *y*).  
 
 ## <a name="setabortproc"></a>  Funzione di callback per CDC:: SETABORTPROC
 Il nome *AbortFunc* è un segnaposto per il nome della funzione fornita dall'applicazione.  
@@ -106,13 +106,13 @@ BOOL CALLBACK EXPORT AbortFunc(
  Identifica il contesto di dispositivo.  
   
  *Codice*  
- Specifica se si è verificato un errore. È 0 se si è verificato alcun errore. Si tratta **SP_OUTOFDISK** se Print Manager è attualmente spazio su disco insufficiente e più spazio su disco verranno rese disponibile se l'applicazione resta in attesa. Se *codice* viene **SP_OUTOFDISK**, l'applicazione non è necessario interrompere il processo di stampa. In caso contrario, deve restituire per la gestione di stampa chiamando il `PeekMessage` o `GetMessage` funzione di Windows.  
+ Specifica se si è verificato un errore. È 0 se si è verificato alcun errore. È SP_OUTOFDISK Print Manager è attualmente spazio su disco insufficiente e più spazio su disco sarà disponibile se l'applicazione resta in attesa. Se *codice* è SP_OUTOFDISK, l'applicazione non è necessario interrompere il processo di stampa. Se non è presente, deve restituire alla gestione stampa chiamando il `PeekMessage` o `GetMessage` funzione Windows.  
   
 ### <a name="return-value"></a>Valore restituito  
- Il valore restituito della funzione del gestore di interruzione è diverso da zero se deve continuare il processo di stampa e 0 se verrà annullata.  
+ Il valore restituito della funzione del gestore di interruzione è diverso da zero se deve continuare il processo di stampa e 0 se viene annullato.  
   
 ### <a name="remarks"></a>Note  
- Il nome effettivo deve essere esportato come descritto nella sezione osservazioni della [CDC:: SetAbortProc](../../mfc/reference/cdc-class.md#setabortproc).  
+ Il nome effettivo deve essere esportato come descritto nella sezione Osservazioni di [CDC:: SetAbortProc](../../mfc/reference/cdc-class.md#setabortproc).  
  
   
 ## <a name="see-also"></a>Vedere anche  
