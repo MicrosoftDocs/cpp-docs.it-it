@@ -1,5 +1,5 @@
 ---
-title: Classe CPtrList | Documenti Microsoft
+title: Classe CPtrList | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 421373969beb83d033ce8ca14bd11fdb5d8dcb14
-ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
+ms.openlocfilehash: 36746c7979511890bb450c9204c0c7a908bbace3
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37078621"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37853894"
 ---
 # <a name="cptrlist-class"></a>Classe CPtrList
 Supporta elenchi di puntatori void.  
@@ -35,7 +35,7 @@ class CPtrList : public CObject
 ```  
   
 ## <a name="members"></a>Membri  
- Le funzioni membro `CPtrList` sono simili alle funzioni membro della classe [CObList](../../mfc/reference/coblist-class.md). Grazie a questa somiglianza, per le specifiche delle funzioni membro è possibile usare la documentazione di riferimento di `CObList`. Ogni volta che un `CObject` puntatore come parametro della funzione o valore restituito, sostituire un puntatore a **void**.  
+ Le funzioni membro della `CPtrList` sono simili alle funzioni membro della classe [CObList](../../mfc/reference/coblist-class.md). Grazie a questa somiglianza, per le specifiche delle funzioni membro è possibile usare la documentazione di riferimento di `CObList`. Ogni volta che un `CObject` puntatore come parametro della funzione o valore restituito, sostituire un puntatore a **void**.  
   
  `CObject*& CObList::GetHead() const;`  
   
@@ -44,13 +44,13 @@ class CPtrList : public CObject
  `void*& CPtrList::GetHead() const;`  
   
 ## <a name="remarks"></a>Note  
- `CPtrList` include la macro `IMPLEMENT_DYNAMIC` per supportare l'accesso del tipo in fase di esecuzione ed eseguire l'operazione di dump dell'oggetto `CDumpContext`. Se è necessario un dump di singoli elementi dell'elenco di puntatori, è necessario impostare la profondità del contesto di dump su 1 o su un valore superiore.  
+ `CPtrList` incorpora l'IMPLEMENT_DYNAMIC (macro) per supportare l'accesso di tipo in fase di esecuzione e il dump per un `CDumpContext` oggetto. Se è necessario un dump di singoli elementi dell'elenco di puntatori, è necessario impostare la profondità del contesto di dump su 1 o su un valore superiore.  
   
  Gli elenchi di puntatori non possono essere serializzati.  
   
  Quando un oggetto `CPtrList` viene eliminato oppure quando gli elementi vengono rimossi, vengono eliminati solo i puntatori e non le entità che referenziano.  
   
- Per ulteriori informazioni sull'utilizzo `CPtrList`, vedere l'articolo [raccolte](../../mfc/collections.md).  
+ Per altre informazioni sull'uso `CPtrList`, vedere l'articolo [raccolte](../../mfc/collections.md).  
   
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -61,6 +61,6 @@ class CPtrList : public CObject
  **Intestazione:** afxcoll. h  
   
 ## <a name="see-also"></a>Vedere anche  
- [CObject (classe)](../../mfc/reference/cobject-class.md)   
+ [Classe CObject](../../mfc/reference/cobject-class.md)   
  [Grafico delle gerarchie](../../mfc/hierarchy-chart.md)   
  [Classe CObList](../../mfc/reference/coblist-class.md)

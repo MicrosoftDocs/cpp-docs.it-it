@@ -1,5 +1,5 @@
 ---
-title: Funzioni inline (C++) | Documenti Microsoft
+title: Funzioni inline (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,19 +18,20 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6661996669e454e655d0149f1dbb1df505116469
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3c2fc99d4349a158bc4ce944be96e9c6141700cf
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37943302"
 ---
 # <a name="inline-functions-c"></a>Funzioni inline (C++)
 Una funzione definita nel corpo di una dichiarazione di classe è una funzione inline.  
   
 ## <a name="example"></a>Esempio  
- Nella seguente dichiarazione di classe, il costruttore `Account` è una funzione inline. Le funzioni membro `GetBalance`, `Deposit`, e `Withdraw` non vengono specificati come **inline** ma possono essere implementate come funzioni inline.  
+ Nella seguente dichiarazione di classe, il costruttore `Account` è una funzione inline. Le funzioni membro `GetBalance`, `Deposit`, e `Withdraw` non vengono specificate come **inline** ma possono essere implementate come funzioni inline.  
   
-```  
+```cpp 
 // Inline_Member_Functions.cpp  
 class Account  
 {  
@@ -63,24 +64,24 @@ int main()
 ```  
   
 > [!NOTE]
->  Nella dichiarazione di classe, le funzioni sono state dichiarate senza la **inline** (parola chiave). Il **inline** parola chiave può essere specificato nella dichiarazione di classe; il risultato è lo stesso.  
+>  Nella dichiarazione di classe, le funzioni sono state dichiarate senza la **inline** (parola chiave). Il **inline** parola chiave può essere specificato nella dichiarazione di classe, il risultato è lo stesso.  
   
  Una funzione membro inline specificata deve essere dichiarata allo stesso modo in ogni unità di compilazione. Questo vincolo fa sì che le funzioni inline funzionino come se fossero funzioni con istanze create. Inoltre, deve esserci esattamente una definizione di una funzione inline.  
   
- Valore predefinito è una funzione membro della classe su un collegamento esterno a meno che non contiene una definizione per la funzione di **inline** identificatore. L'esempio precedente mostra che non queste funzioni devono essere dichiarate in modo esplicito con il **inline** identificatore; utilizzando **inline** nella funzione definizione rende una funzione inline. Tuttavia, non è consentito dichiarare nuovamente una funzione come **inline** dopo una chiamata a tale funzione.  
+ Una funzione membro della classe per impostazione predefinita su un collegamento esterno a meno che non contiene una definizione di tale funzione il **inline** identificatore. L'esempio precedente mostra che queste funzioni non necessitano dichiarate in modo esplicito con la **inline** identificatore; utilizzando **inline** nella funzione di definizione rende una funzione inline. Tuttavia, è valido ridichiarare una funzione come **inline** dopo una chiamata a tale funzione.  
   
 ## <a name="inline-inline-and-forceinline"></a>Inline, inline, e \__forceinline  
- Gli identificatori `inline` e `__inline` indicano al compilatore di inserire una copia del corpo della funzione in ogni punto in cui la funzione stessa viene richiamata.  
+ Il **inline** e **inline** identificatori di indicano al compilatore di inserire una copia del corpo della funzione in ogni posizione viene chiamata la funzione.  
   
  L'inserimento (denominato espansione inline o incorporamento) viene eseguito solo se l'analisi del rapporto costo/beneficio del compilatore è vantaggiosa. L'espansione inline riduce il sovraccarico delle chiamate di funzione al costo potenziale di una maggiore lunghezza del codice.  
   
- La parola chiave `__forceinline` sostituisce l'analisi del rapporto costo/beneficio e si basa sul giudizio del programmatore. Prestare attenzione quando si usa `__forceinline`. L'utilizzo indiscriminato di `__forceinline` può aumentare le dimensioni del codice con un guadagno solo marginale in termini di prestazioni oppure, in alcuni casi, addirittura con perdita di prestazioni (ad esempio a causa del paging elevato di un file eseguibile maggiore).  
+ Il **forceinline** (parola chiave) sostituisce l'analisi del costo/beneficio e si basa sul giudizio del programmatore invece. Prestare attenzione quando si usa **forceinline**. Utilizzo indiscriminato di **forceinline** può comportare la dimensioni del codice con solo marginale prestazionali o, in alcuni casi, anche il calo delle prestazioni (a causa di un aumento di paging di un file eseguibile maggiore, ad esempio).  
   
  L'utilizzo di funzioni inline può rendere il programma più veloce perché elimina il sovraccarico associato alle chiamate di funzione. Le funzioni con espansione inline sono soggette a ottimizzazioni di codice non disponibili per le funzioni normali.  
   
- Il compilatore considera come suggerimenti le opzioni di espansione inline e le parole chiave. Non è garantito che le funzioni siano sottoposte all'espansione inline. Non è possibile forzare il compilatore all'esecuzione dell'espansione inline di una data funzione, anche con la parola chiave `__forceinline`. Durante la compilazione con **/clr**, il compilatore verrà non inline una funzione se sono presenti attributi di protezione applicati alla funzione.  
+ Il compilatore considera come suggerimenti le opzioni di espansione inline e le parole chiave. Non è garantito che le funzioni siano sottoposte all'espansione inline. Non è possibile forzare il compilatore di rendere inline una particolare funzione, anche con il **forceinline** (parola chiave). Durante la compilazione con **/clr**, il compilatore creerà non inline una funzione se sono presenti attributi di sicurezza applicati alla funzione.  
   
- Il **inline** (parola chiave) è disponibile solo in C++. Le parole chiave `__inline``__forceinline` sono disponibili sia in C che in C++. Per garantire la compatibilità con le versioni precedenti, **inline** è un sinonimo di `__inline`.  
+ Il **inline** (parola chiave) è disponibile solo in C++. Il **inline** e **forceinline** parole chiave sono disponibili in C e C++. Per garantire la compatibilità con versioni precedenti **inline** è un sinonimo **inline**.  
   
  Il **inline** parola chiave indica al compilatore che l'espansione inline è preferibile. Tuttavia, il compilatore può creare un'istanza separata della funzione (istanziare) e creare collegamenti standard di chiamate anziché inserire il codice inline. Questa situazione può verificarsi nei due casi seguenti:  
   
@@ -88,17 +89,17 @@ int main()
   
 -   Funzioni a cui si fa riferimento tramite un puntatore in un punto diverso dell'unità di conversione.  
   
- I motivi seguenti possono interferire con l'incorporamento, *come anche altri*, a discrezione del compilatore; è non deve dipendere il **inline** identificatore per una funzione inline.  
+ Questi motivi possono interferire con incorporamenti *come anche altri*, a discrezione del compilatore; è non devono dipendere le **inline** identificatore per fare in modo da rendere inline una funzione.  
   
  Analogamente alle funzioni normali, non è definito alcun ordine di valutazione degli argomenti di una funzione inline. Tale ordine infatti può essere diverso da quello in cui gli argomenti vengono valutati una volta passati usando il protocollo normale di chiamata di funzione.  
   
  Il [/Ob](../build/reference/ob-inline-function-expansion.md) opzione di ottimizzazione del compilatore consente di determinare se espansione funzioni inline viene effettivamente eseguita.  
   
- [/LTCG](../build/reference/ltcg-link-time-code-generation.md) esegue intramodulo indipendentemente dal fatto è stata richiesta nel codice sorgente.  
+ [/LTCG](../build/reference/ltcg-link-time-code-generation.md) esegue intramodulo indipendentemente dal fatto che è stata richiesta nel codice sorgente.  
   
 ### <a name="example-1"></a>Esempio 1  
   
-```  
+```cpp 
 // inline_keyword1.cpp  
 // compile with: /c  
 inline int max( int a , int b ) {  
@@ -108,11 +109,11 @@ inline int max( int a , int b ) {
 }  
 ```  
   
- Funzioni membro di classe possono essere dichiarate inline usando la **inline** parola chiave o inserendo la definizione di funzione all'interno della definizione di classe.  
+ Funzioni membro della classe possono essere dichiarate inline usando la **inline** parola chiave o inserendo la definizione di funzione all'interno della definizione di classe.  
   
 ### <a name="example-2"></a>Esempio 2  
   
-```  
+```cpp 
 // inline_keyword2.cpp  
 // compile with: /EHsc /c  
 #include <iostream>  
@@ -127,9 +128,9 @@ private:
 ```  
   
 ### <a name="microsoft-specific"></a>Sezione specifica Microsoft  
- Il `__inline` la parola chiave è equivalente a **inline**.  
+ Il **inline** equivale alla parola chiave **inline**.  
   
- Anche se si usa `__forceinline`, il compilatore non è in grado di incorporare codice in qualsiasi circostanza. Il compilatore non esegue l'espansione inline di una funzione se si verificano le condizioni seguenti:  
+ Nonostante **forceinline**, il compilatore non è codice inline in qualsiasi circostanza. Il compilatore non esegue l'espansione inline di una funzione se si verificano le condizioni seguenti:  
   
 -   La funzione o il relativo chiamante viene compilato con /Ob0 (l'opzione predefinita per le compilazioni di debug).  
   
@@ -139,7 +140,7 @@ private:
   
 -   La funzione usa l'assembly inline, a meno che non venga compilata con /Og, /Ox, /O1 oppure /O2.  
   
--   La funzione è ricorsiva e non accompagnati da **#pragma inline_recursion (On)**. Con la direttiva pragma, per le funzioni ricorsive viene eseguita l'espansione inline a una profondità predefinita di 16 chiamate. Per ridurre il livello di profondità, usare [inline_depth](../preprocessor/inline-depth.md) pragma.  
+-   La funzione è ricorsiva e non è associata a **inline_recursion (On) #pragma**. Con la direttiva pragma, per le funzioni ricorsive viene eseguita l'espansione inline a una profondità predefinita di 16 chiamate. Per ridurre il livello di profondità, usare [inline_depth](../preprocessor/inline-depth.md) pragma.  
   
 -   La funzione è virtuale e viene chiamata virtualmente. Per chiamate dirette alle funzioni virtuali può essere eseguita l'espansione inline.  
   
@@ -147,16 +148,16 @@ private:
   
 -   La funzione viene anche contrassegnata con il [naked](../cpp/naked-cpp.md) [declspec](../cpp/declspec.md) modificatore.  
   
- Se il compilatore non può rendere inline una funzione dichiarata con `__forceinline`, verrà generato un avviso di livello 1, tranne quando:
+ Se il compilatore non può rendere inline una funzione dichiarata con **forceinline**, verrà generato un avviso di livello 1, tranne quando:
   
--   La funzione viene compilata utilizzando /Od o /Ob0. Non inline in questi casi è previsto.     
+-   La funzione viene compilata con/Ob0 o /Od. Non l'incorporamento è previsto in questi casi.     
   
--   La funzione viene definita esternamente, in una libreria o un'altra unità di conversione o è una destinazione chiamata virtuale o chiamate indirette. Il compilatore non è possibile identificare il codice non inline che non viene trovata nell'unità di conversione corrente.  
+-   La funzione è definita all'esterno, in una libreria inclusa o un'altra unità di conversione, o è una destinazione di chiamata virtuale o di destinazione di chiamata indiretta. Il compilatore non è possibile identificare il codice non inline che non riesce a trovare nell'unità di conversione corrente.  
   
- Funzioni ricorsive possono essere sostituite inline a una profondità specificata dal [inline_depth](../preprocessor/inline-depth.md) pragma, fino a un massimo di 16 chiamate. Dopo tale profondità, le chiamate di funzioni ricorsive vengono considerate come chiamate a un'istanza della funzione.  La profondità con cui le funzioni ricorsive vengono valutate dalle funzionalità euristiche inline non può superare i 16 livelli. Il [inline_recursion](../preprocessor/inline-recursion.md) pragma controlla l'espansione inline di una funzione attualmente in espansione. Vedere il [espansione funzioni Inline](../build/reference/ob-inline-function-expansion.md) (/ Ob) l'opzione del compilatore per informazioni correlate.  
+ Funzioni ricorsive possono essere sostituite inline a una profondità specificata per il [inline_depth](../preprocessor/inline-depth.md) pragma, fino a un massimo di 16 chiamate. Dopo tale profondità, le chiamate di funzioni ricorsive vengono considerate come chiamate a un'istanza della funzione.  La profondità con cui le funzioni ricorsive vengono valutate dalle funzionalità euristiche inline non può superare i 16 livelli. Il [inline_recursion](../preprocessor/inline-recursion.md) pragma controlla l'espansione inline di una funzione attualmente in espansione. Vedere le [espansione funzioni Inline](../build/reference/ob-inline-function-expansion.md) (/ Ob) l'opzione del compilatore per le informazioni correlate.  
   
 **Fine sezione specifica Microsoft**  
- Per ulteriori informazioni sull'utilizzo di **inline** identificatore, vedere:  
+ Per altre informazioni sull'uso di **inline** identificatore, vedere:  
   
 -   [Funzioni membro di classi inline](../cpp/inline-functions-cpp.md)  
   
@@ -167,7 +168,7 @@ private:
   
  Oggetto `Point` classe può essere definita come segue:  
   
-```  
+```cpp 
 // when_to_use_inline_functions.cpp  
 class Point  
 {  
@@ -194,7 +195,7 @@ int main()
 }  
 ```  
   
- Presupponendo che la modifica delle coordinate sia un'operazione relativamente comune in un client di tale classe, se si specificano le due funzioni di accesso (`x` e `y` nell'esempio precedente) come **inline** generalmente viene salvato il overhead per:  
+ Supponendo che modifica delle coordinate sia un'operazione relativamente comune in un client di tale classe, specificando le due funzioni di accesso (`x` e `y` nell'esempio precedente) come **inline** in genere consente di salvare il overhead in:  
   
 -   Chiamate di funzione (incluso il passaggio dei parametri e il posizionamento dell'indirizzo dell'oggetto nello stack)  
   
@@ -213,13 +214,13 @@ int main()
   
 -   Le funzioni inline seguono tutti i protocolli di indipendenza dai tipi applicati alle funzioni normali.  
   
--   Funzioni inline sono specificate usando la stessa sintassi di qualsiasi altra funzione, ad eccezione del fatto che includono il **inline** parola chiave nella dichiarazione di funzione.  
+-   Le funzioni inline sono specificate utilizzando la stessa sintassi come qualsiasi altra funzione, ad eccezione del fatto che includano il **inline** parola chiave nella dichiarazione di funzione.  
   
 -   Le espressioni passate come argomenti alle funzioni inline sono valutate una sola volta. In alcuni casi, le espressioni passate come argomenti alle macro possono essere valutate più volte.  
   
  Nell'esempio seguente viene illustrata una macro che converte le lettere minuscole in lettere maiuscole:  
   
-```  
+```cpp 
 // inline_functions_macro.c  
 #include <stdio.h>  
 #include <conio.h>  
@@ -237,13 +238,13 @@ int main() {
   
 ```  
   
- Lo scopo dell'espressione `toupper(getc(stdin))` è che un carattere deve essere letto dal dispositivo di console (`stdin`) e, se necessario, convertito in lettere maiuscole.  
+ Lo scopo dell'espressione `toupper(getc(stdin))` è che un carattere venga letto dal dispositivo di console (`stdin`) e, se necessario, convertito in lettere maiuscole.  
   
  A causa dell'implementazione della macro, `getc` viene eseguito una volta, per determinare se il carattere è maggiore o uguale ad "a", e una volta per determinare se è minore o uguale a "Z". Se si trova in questo intervallo, `getc` viene eseguito nuovamente per convertire il carattere in lettere maiuscole. Ciò significa che il programma attende due o tre caratteri, quando l'ideale sarebbe che ne attendesse uno solo.  
   
  Le funzioni inline rimediano al problema descritto in precedenza:  
   
-```  
+```cpp 
 // inline_functions_inline.cpp  
 #include <stdio.h>  
 #include <conio.h>  

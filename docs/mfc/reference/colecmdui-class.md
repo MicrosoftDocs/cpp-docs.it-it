@@ -1,5 +1,5 @@
 ---
-title: Classe COleCmdUI | Documenti Microsoft
+title: Classe COleCmdUI | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c80c3b81b804a66e70efe9269b12d4e18d31c676
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 9b057620e0ea348559b9c37f55ba7658b7f5270c
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37040714"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37851482"
 ---
 # <a name="colecmdui-class"></a>Classe COleCmdUI
 Implementa un metodo per MFC per aggiornare lo stato degli oggetti dell'interfaccia utente relativi alle funzionalità dell'applicazione basate su `IOleCommandTarget`.  
@@ -52,16 +52,16 @@ class COleCmdUI : public CCmdUI
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[COleCmdUI::Enable](#enable)|Imposta o Cancella il contrassegno di abilitazione del comando.|  
+|[COleCmdUI::Enable](#enable)|Imposta o Cancella il flag di comando di abilitazione.|  
 |[COleCmdUI::SetCheck](#setcheck)|Imposta lo stato di un elemento toggle di attivazione/disattivazione comando.|  
 |[COleCmdUI::SetText](#settext)|Restituisce una stringa di testo nome o lo stato per un comando.|  
   
 ## <a name="remarks"></a>Note  
- In un'applicazione che non è abilitata per DocObjects, quando l'utente visualizza un menu dell'applicazione, i processi MFC **UPDATE_COMMAND_UI** notifiche. Ogni notifica viene fornito un [CCmdUI](../../mfc/reference/ccmdui-class.md) oggetto che può essere modificato per riflettere lo stato di un comando specifico. Tuttavia, quando l'applicazione è abilitata per DocObjects, MFC elabora **UPDATE_OLE_COMMAND_UI** notifiche e assegna `COleCmdUI` oggetti.  
+ In un'applicazione che non è abilitato per DocObjects, quando l'utente visualizza un menu nell'applicazione MFC Elabora notifiche UPDATE_COMMAND_UI. Ogni notifica viene assegnato un [CCmdUI](../../mfc/reference/ccmdui-class.md) oggetto che può essere modificata per riflettere lo stato di un particolare comando. Tuttavia, quando l'applicazione è abilitato per DocObjects, MFC Elabora notifiche UPDATE_OLE_COMMAND_UI e assegna `COleCmdUI` oggetti.  
   
- `COleCmdUI` consente un DocObject ricevere comandi che hanno origine nell'interfaccia utente del contenitore (ad esempio FileNew, Apri, stampa e così via), e un contenitore ricevere comandi che hanno origine nell'interfaccia utente di DocObject. Sebbene `IDispatch` può essere usato per inviare gli stessi comandi `IOleCommandTarget` fornisce un modo più semplice per eseguire una query ed eseguire perché si basa su un set standard di comandi, in genere senza argomenti, e informazioni sul tipo non è coinvolto. `COleCmdUI` Consente di abilitare, aggiornare e impostare altre proprietà dei comandi dell'interfaccia utente DocObject. Quando si desidera richiamare il comando, chiamare [COleServerDoc::OnExecOleCmd](../../mfc/reference/coleserverdoc-class.md#onexecolecmd).  
+ `COleCmdUI` consente un DocObject ricevere comandi che hanno origine nell'interfaccia utente del relativo contenitore (ad esempio FileNew, Apri, stampa e così via), e un contenitore ricevere comandi che hanno origine nell'interfaccia utente dell'oggetto documento. Sebbene `IDispatch` può essere usato per inviare gli stessi comandi, `IOleCommandTarget` fornisce un modo più semplice per eseguire query e vengono eseguite perché si basa su un set standard di comandi, in genere senza argomenti, ed non è coinvolta alcuna informazione sul tipo. `COleCmdUI` Consente di abilitare, aggiornare e impostare altre proprietà dei comandi dell'interfaccia utente DocObject. Quando si vuole richiamare il comando, chiamare [COleServerDoc::OnExecOleCmd](../../mfc/reference/coleserverdoc-class.md#onexecolecmd).  
   
- Per ulteriori informazioni sulla DocObjects, vedere [CDocObjectServer](../../mfc/reference/cdocobjectserver-class.md) e [CDocObjectServerItem](../../mfc/reference/cdocobjectserveritem-class.md). Vedere anche [prime operazioni in Internet: documenti attivi](../../mfc/active-documents-on-the-internet.md) e [documenti attivi](../../mfc/active-documents-on-the-internet.md).  
+ Per altre informazioni su DocObjects, vedere [CDocObjectServer](../../mfc/reference/cdocobjectserver-class.md) e [CDocObjectServerItem](../../mfc/reference/cdocobjectserveritem-class.md). Vedere anche [prime operazioni in Internet: i documenti attivi](../../mfc/active-documents-on-the-internet.md) e [documenti attivi](../../mfc/active-documents-on-the-internet.md).  
   
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  [CCmdUI](../../mfc/reference/ccmdui-class.md)  
@@ -83,19 +83,19 @@ COleCmdUI(
   
 ### <a name="parameters"></a>Parametri  
  *rgCmds*  
- Un elenco di comandi supportati associato il GUID specificato. Il **OLECMD** struttura associa comandi con flag dei comandi.  
+ Elenco di comandi supportati associato al GUID specificato. Il `OLECMD` struttura associa i comandi con flag dei comandi.  
   
  *cCmds*  
  Il numero di comandi nel *rgCmds*.  
   
  *pGroup*  
- Un puntatore a un GUID che identifica un set di comandi.  
+ Puntatore a un GUID che identifica un set di comandi.  
   
 ### <a name="remarks"></a>Note  
- Il `COleCmdUI` oggetto fornisce un'interfaccia programmatica per l'aggiornamento DocObject oggetti dell'interfaccia utente, ad esempio voci di menu o pulsanti della barra di controllo. Gli oggetti dell'interfaccia utente possono essere abilitati, disabilitati, selezionati e/o cancellati tramite la `COleCmdUI` oggetto.  
+ Il `COleCmdUI` oggetto fornisce un'interfaccia programmatica per l'aggiornamento DocObject oggetti dell'interfaccia utente, ad esempio voci di menu o i pulsanti della barra di controllo. Gli oggetti dell'interfaccia utente possono essere abilitati, disabilitati, selezionati e/o cancellati tramite il `COleCmdUI` oggetto.  
   
 ##  <a name="enable"></a>  COleCmdUI::Enable  
- Chiamare questa funzione per impostare il flag di comando del `COleCmdUI` l'oggetto in **OLECOMDF_ENABLED**, che indica l'interfaccia il comando è disponibile e abilitato, o per cancellare il flag di comando.  
+ Chiamare questa funzione per impostare il flag di comando del `COleCmdUI` a OLECOMDF_ENABLED, che indica l'interfaccia di comando è disponibile e abilitato, oppure per cancellare il flag di comando.  
   
 ```  
 virtual void Enable(BOOL bOn);
@@ -119,8 +119,8 @@ virtual void SetCheck(int nCheck);
 |Valore|Descrizione|  
 |-----------|-----------------|  
 |**1**|Imposta il comando su on.|  
-|**2**|Imposta il comando per indeterminato; lo stato non è possibile determinare perché l'attributo di questo comando è nel sia e disattivare gli stati della selezione pertinente.|  
-|Qualsiasi altro valore|Imposta il comando su off.|  
+|**2**|Imposta il comando su indeterminato; lo stato non è possibile determinare perché l'attributo di questo comando è in entrambi e disattivare gli stati nella selezione pertinente.|  
+|qualsiasi altro valore|Imposta il comando su off.|  
   
 ##  <a name="settext"></a>  COleCmdUI::SetText  
  Chiamare questa funzione per restituire una stringa di testo nome o lo stato per un comando.  
@@ -131,10 +131,10 @@ virtual void SetText(LPCTSTR lpszText);
   
 ### <a name="parameters"></a>Parametri  
  *lpszText*  
- Un puntatore per il testo da utilizzare con il comando.  
+ Puntatore al testo da utilizzare con il comando.  
   
 ## <a name="see-also"></a>Vedere anche  
- [CCmdUI (classe)](../../mfc/reference/ccmdui-class.md)   
+ [Classe CCmdUI](../../mfc/reference/ccmdui-class.md)   
  [Grafico della gerarchia](../../mfc/hierarchy-chart.md)
 
 

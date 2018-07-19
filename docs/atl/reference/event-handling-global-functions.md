@@ -1,5 +1,5 @@
 ---
-title: Funzioni globali di gestione degli eventi | Documenti Microsoft
+title: Funzioni globali di gestione degli eventi | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,18 +17,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cb2c7834e7d5475810973a42ef179ea4f5f0079f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 85babf3155fdc94dafd5d62c2e67401e5add3663
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32358338"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37883999"
 ---
 # <a name="event-handling-global-functions"></a>Funzioni globali di gestione degli eventi
 Questa funzione fornisce un gestore eventi.  
   
 > [!IMPORTANT]
->  La funzione elencata nella tabella seguente non può essere utilizzata nelle applicazioni eseguite in Windows Runtime.  
+>  La funzione elencata nella tabella seguente non può essere utilizzata nelle applicazioni eseguite nel Runtime di Windows.  
   
 |||  
 |-|-|  
@@ -41,21 +41,21 @@ Questa funzione fornisce un gestore eventi.
  Attendere che l'oggetto venga segnalato, inviando nel frattempo i messaggi della finestra in base alle necessità.  
   
 > [!IMPORTANT]
->  Questa funzione non può essere utilizzata nelle applicazioni eseguite in Windows Runtime.  
+>  Questa funzione non può essere utilizzata nelle applicazioni eseguite nel Runtime di Windows.  
   
 ```
 BOOL AtlWaitWithMessageLoop(HANDLE hEvent);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `hEvent`  
- [in] L'handle dell'oggetto di attesa.  
+ *hEvent*  
+ [in] L'handle dell'oggetto da attendere.  
   
 ### <a name="return-value"></a>Valore restituito  
- Restituisce **TRUE** se l'oggetto è stato segnalato.  
+ Restituisce TRUE se l'oggetto è stato segnalato.  
   
 ### <a name="remarks"></a>Note  
- Ciò è utile se si desidera attendere un evento dell'oggetto di verificarsi e ricevere una notifica di esso il problema, ma consentono i messaggi della finestra deve essere inviato durante l'attesa.  
+ Ciò è utile se si vuole attendere un evento dell'oggetto a verificarsi e ricevere una notifica di esso in corso, ma consentire i messaggi finestra inviati durante l'attesa.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Funzioni](../../atl/reference/atl-functions.md)

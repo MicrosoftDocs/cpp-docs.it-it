@@ -1,5 +1,5 @@
 ---
-title: DATE (tipo) | Documenti Microsoft
+title: Tipo di data | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,57 +21,57 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5aafed046fa5724442e30014aa5634542de0f4aa
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 314b943b171d43f8b1723321ac3a942ed33fd100
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32358127"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37883466"
 ---
-# <a name="date-type"></a>DATE (tipo)
-Il **data** tipo viene implementato utilizzando un numero a virgola mobile a 8 byte. Giorni sono rappresentati in incrementi di numero intero a partire dal 30 dicembre 1899, mezzanotte all'ora zero. I valori di ora sono espressi come valore assoluto della parte frazionaria del numero. Nella tabella seguente vengono illustrate le diverse date insieme a loro **data** equivalente numerico di tipo:  
+# <a name="date-type"></a>Tipo DATE
+Il tipo data viene implementato usando un numero a virgola mobile a 8 byte. Giorni sono rappresentati da incrementi di numero intero a partire dal 30 dicembre 1899, mezzanotte all'ora zero. I valori delle ore sono espresse come valore assoluto della parte frazionaria del numero. Nella tabella seguente illustra le diverse date insieme ai relativi equivalenti numerici di tipo Data:  
   
 |Data e ora|Rappresentazione|  
 |-------------------|--------------------|  
-|Mezzanotte del 30 dicembre 1899|0,00|  
+|30 dicembre 1899, mezzanotte|0,00|  
 |Mezzanotte del 1 gennaio 1900|2.00|  
-|Mezzanotte del 4 gennaio 1900|5.00|  
-|4 gennaio 1900, 6 ore|5.25|  
-|4 gennaio 1900 mezzogiorno|5.50|  
-|4 gennaio 1900, 21.|5.875|  
+|La mezzanotte del 4 gennaio 1900|5.00|  
+|4 gennaio 1900 e 6 del mattino.|5.25|  
+|4 gennaio 1900 e mezzogiorno|5.50|  
+|4 gennaio 1900, alle 21.00|5.875|  
   
- Il **data** tipo, date, nonché `COleDateTime` classe rappresenta date e ore come un numero di riga classico. La `COleDateTime` classe contiene diversi metodi per la modifica dei valori di data, inclusa la conversione da e verso altri formati di data comuni.  
+ Il tipo di date, DATE, nonché `COleDateTime` classe rappresenta le date e ore come una linea numerica classica. Il `COleDateTime` classe contiene diversi metodi per la modifica dei valori di data, tra cui la conversione da e verso altri formati data comuni.  
   
- Quando si utilizzano questi formati di data e ora in automazione, è opportuno notare quanto segue:  
+ Sottolineare i seguenti punti quando si lavora con questi formati di data e ora in automazione:  
   
 -   Le date vengono specificate in ora locale. la sincronizzazione deve essere eseguita manualmente quando si lavora con le date in fusi orari diversi.  
   
--   I tipi di data non tiene conto per l'ora legale.  
+-   I tipi di data non tengono conto per l'ora legale.  
   
--   La sequenza temporale data diventa discontinua per valori di data minore di 0 (entro 30 dicembre 1899). Infatti, la parte di numero intero del valore date viene considerata con segno, mentre la parte frazionaria viene considerata come senza segno. In altre parole, la parte di numero intero del valore date può essere positivo o negativo, mentre la parte frazionaria del valore date viene sempre aggiunta alla data logica complessiva. La tabella seguente illustra alcuni esempi:  
+-   La sequenza temporale data diventa discontinua per valori di data minore di 0 (prima di 30 dicembre 1899). Infatti, la parte di numero intero del valore date viene considerata con segno, mentre la parte frazionaria viene considerata come senza segno. In altre parole, la parte di numero intero del valore date può essere positivo o negativo, mentre la parte frazionaria del valore date viene sempre aggiunta sulla data logica complessiva. Nella tabella seguente illustra alcuni esempi:  
   
 |Data e ora|Rappresentazione|  
 |-------------------|--------------------|  
 |27 dicembre 1899, mezzanotte|-3.00|  
 |28 dicembre 1899, mezzogiorno|-2.50|  
 |28 dicembre 1899, mezzanotte|-2.00|  
-|Mezzanotte del 29 dicembre 1899|-1.00|  
+|29 dicembre 1899, mezzanotte|-1.00|  
 |30 dicembre 1899, 18.00.|-0.75|  
 |30 dicembre 1899, mezzogiorno|-0.50|  
-|30 dicembre 1899, 6 ore|-0.25|  
-|Mezzanotte del 30 dicembre 1899|0,00|  
-|30 dicembre 1899, 6 ore|0.25|  
+|30 dicembre 1899, 6 del mattino.|-0.25|  
+|30 dicembre 1899, mezzanotte|0,00|  
+|30 dicembre 1899, 6 del mattino.|0.25|  
 |30 dicembre 1899, mezzogiorno|0.50|  
 |30 dicembre 1899, 18.00.|0.75|  
 |Mezzanotte del 31 dicembre 1899|1.00|  
 |Mezzanotte del 1 gennaio 1900|2.00|  
-|1 ° gennaio 1900 mezzogiorno|2.50|  
-|2 gennaio 1900, mezzanotte|3.00|  
+|1 gennaio 1900 e mezzogiorno|2.50|  
+|2 ° gennaio 1900, mezzanotte|3.00|  
   
 > [!CAUTION]
->  Si noti che poiché 6:00 AM è sempre rappresentato da un valore frazionario 0,25 indipendentemente dal fatto che il valore integer che rappresenta il giorno è un valore positivo (dopo il 30 dicembre 1899) o negativo (prima del 30 dicembre 1899), un semplice confronto punto mobile erroneamente ordinare qualsiasi **data** che rappresenta 6:00:00 in un giorno precedente a 30/12/1899 come *in un secondo momento* rispetto a un **data** che rappresenta 7:00 AM nello stesso giorno.  
+>  Si noti che poiché 6:00 viene sempre rappresentata da un valore frazionario 0,25 indipendentemente dal fatto che l'intero che rappresenta il giorno è un valore positivo (dopo il 30 dicembre 1899) o negativo (prima dal 30 dicembre 1899), un semplice confronto punto a virgola mobile viene erroneamente ordinare qualsiasi data che rappresenta le 6.00 nel giorno precedente a 12/30/1899 come *in un secondo momento* rispetto a una data che rappresentano 7:00 nello stesso giorno.  
   
- Ulteriori informazioni sui problemi correlati al **data** e `COleDateTime` tipi sono reperibile nella [classe COleDateTime](../atl-mfc-shared/reference/coledatetime-class.md) e [data e ora: supporto di automazione](../atl-mfc-shared/date-and-time-automation-support.md).  
+ Altre informazioni sui problemi relativi alla data e `COleDateTime` i tipi sono disponibili in [classe COleDateTime](../atl-mfc-shared/reference/coledatetime-class.md) e [data e ora: supporto di automazione](../atl-mfc-shared/date-and-time-automation-support.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Data e ora](../atl-mfc-shared/date-and-time.md)   

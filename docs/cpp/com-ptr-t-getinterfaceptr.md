@@ -1,5 +1,5 @@
 ---
-title: _com_ptr_t::GetInterfacePtr | Documenti Microsoft
+title: _com_ptr_t::GetInterfacePtr | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,11 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ba50965199128726f325fc0dcf9260c6415bf0d9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1e81484f7b40417320078700332b512cbc81d7e6
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37943201"
 ---
 # <a name="comptrtgetinterfaceptr"></a>_com_ptr_t::GetInterfacePtr
 **Sezione specifica Microsoft**  
@@ -31,12 +32,12 @@ ms.lasthandoff: 05/03/2018
   
 ```  
   
-      Interface* GetInterfacePtr( ) const throw( );   
+Interface* GetInterfacePtr( ) const throw( );   
 Interface*& GetInterfacePtr() throw();  
 ```  
   
 ## <a name="remarks"></a>Note  
- Restituisce il puntatore a interfaccia incapsulato, che può essere **NULL**.  
+ Restituisce il puntatore a interfaccia incapsulato, che può essere NULL.  
   
  **Fine sezione specifica Microsoft**  
   

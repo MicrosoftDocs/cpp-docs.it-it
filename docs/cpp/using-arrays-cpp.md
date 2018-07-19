@@ -1,5 +1,5 @@
 ---
-title: Utilizzo delle matrici (C++) | Documenti Microsoft
+title: Uso delle matrici (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,16 +14,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0c2140dbe786a5d2a2a1b86eca17912e5e06b922
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 980aaa5bf0b9472e8fb1c6d7f6b3c56aa255d00b
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37943233"
 ---
 # <a name="using-arrays-c"></a>Utilizzo di matrici (C++)
 È possibile accedere ai singoli elementi di una matrice tramite l'operatore di indice di matrice (`[ ]`). Se una matrice unidimensionale viene utilizzata in un'espressione senza indice, il nome della matrice restituisce un puntatore al primo elemento della matrice.  
   
-```  
+```cpp 
 // using_arrays.cpp  
 int main() {  
    char chArray[10];  
@@ -35,7 +36,7 @@ int main() {
   
  Quando si utilizzano matrici multidimensionali, è possibile utilizzare varie combinazioni nelle espressioni.  
   
-```  
+```cpp 
 // using_arrays_2.cpp  
 // compile with: /EHsc /W1  
 #include <iostream>  
@@ -54,7 +55,7 @@ int main() {
 }  
 ```  
   
- Nel codice precedente `multi` è una matrice tridimensionale di tipo `double`. Il puntatore `p2multi` punta a una matrice di tipo `double` tridimensionale. In questo esempio la matrice viene utilizzata con uno, due e tre indici. Sebbene sia più comune specificare tutti gli indici, come nell'istruzione `cout`, è talvolta utile selezionare un sottoinsieme specifico di elementi della matrice, come illustrato nelle istruzioni che seguono `cout`.  
+ Nel codice precedente, `multi` è una matrice tridimensionale di tipo **doppie**. Il `p2multi` puntatore punta a una matrice di tipo **double** tridimensionale. In questo esempio la matrice viene utilizzata con uno, due e tre indici. Sebbene sia più comune specificare tutti gli indici, come nell'istruzione `cout`, è talvolta utile selezionare un sottoinsieme specifico di elementi della matrice, come illustrato nelle istruzioni che seguono `cout`.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Array](../cpp/arrays-cpp.md)

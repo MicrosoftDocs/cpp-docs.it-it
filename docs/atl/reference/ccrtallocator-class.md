@@ -1,5 +1,5 @@
 ---
-title: Classe CCRTAllocator | Documenti Microsoft
+title: Classe CCRTAllocator | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,15 +20,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2f92ae3f4041b143a8cc4d58b1060c7d5b9a7bb4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3f026610469c75f37e49df6f42358a3ff378cb0e
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32363447"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37879585"
 ---
 # <a name="ccrtallocator-class"></a>Classe CCRTAllocator
-Questa classe fornisce metodi per la gestione della memoria, utilizzo della routine di memoria CRT.  
+Questa classe fornisce metodi per la gestione della memoria mediante routine di memoria CRT.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -47,7 +47,7 @@ class ATL::CCRTAllocator
 |[Ccrtallocator:: ReAllocate](#reallocate)|(Statico) Chiamare questo metodo per riallocare la memoria.|  
   
 ## <a name="remarks"></a>Note  
- Questa classe viene utilizzata da [CHeapPtr](../../atl/reference/cheapptr-class.md) per fornire routine di allocazione di memoria CRT. La classe controparte, [CComAllocator](../../atl/reference/ccomallocator-class.md), fornisce gli stessi metodi di utilizzo della routine di COM.  
+ Questa classe viene utilizzata da [CHeapPtr](../../atl/reference/cheapptr-class.md) fornire routine di allocazione della memoria di CRT. La classe controparte [CComAllocator](../../atl/reference/ccomallocator-class.md), fornisce gli stessi metodi usando le routine di COM.  
   
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** atlcore  
@@ -60,14 +60,14 @@ static __declspec(allocator) void* Allocate(size_t nBytes) throw();
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `nBytes`  
+ *nBytes*  
  Numero di byte da allocare.  
   
 ### <a name="return-value"></a>Valore restituito  
  Restituisce un puntatore void allo spazio allocato o NULL se la memoria disponibile è insufficiente.  
   
 ### <a name="remarks"></a>Note  
- Alloca memoria. Vedere [malloc](../../c-runtime-library/reference/malloc.md) per altri dettagli.  
+ Alloca memoria. Visualizzare [malloc](../../c-runtime-library/reference/malloc.md) per altri dettagli.  
   
 ##  <a name="free"></a>  Ccrtallocator:: Free  
  Chiamare questa funzione statica per liberare memoria.  
@@ -77,11 +77,11 @@ static void Free(void* p) throw();
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `p`  
+ *p*  
  Puntatore alla memoria allocata.  
   
 ### <a name="remarks"></a>Note  
- Libera la memoria allocata. Vedere [libero](../../c-runtime-library/reference/free.md) per altri dettagli.  
+ Libera la memoria allocata. Visualizzare [gratuita](../../c-runtime-library/reference/free.md) per altri dettagli.  
   
 ##  <a name="reallocate"></a>  Ccrtallocator:: ReAllocate  
  Chiamare questa funzione statica per riallocare la memoria.  
@@ -91,19 +91,19 @@ static __declspec(allocator) void* Reallocate(void* p, size_t nBytes) throw();
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `p`  
+ *p*  
  Puntatore alla memoria allocata.  
   
- `nBytes`  
+ *nBytes*  
  Numero di byte da riallocare.  
   
 ### <a name="return-value"></a>Valore restituito  
  Restituisce un puntatore void allo spazio allocato o NULL se la memoria è insufficiente.  
   
 ### <a name="remarks"></a>Note  
- Ridimensiona la quantità di memoria allocata. Vedere [realloc](../../c-runtime-library/reference/realloc.md) per altri dettagli.  
+ Ridimensiona la quantità di memoria allocata. Visualizzare [realloc](../../c-runtime-library/reference/realloc.md) per altri dettagli.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Classe CHeapPtr](../../atl/reference/cheapptr-class.md)   
  [Classe CComAllocator](../../atl/reference/ccomallocator-class.md)   
- [Cenni preliminari sulla classe](../../atl/atl-class-overview.md)
+ [Panoramica della classe](../../atl/atl-class-overview.md)

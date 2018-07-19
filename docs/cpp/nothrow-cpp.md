@@ -1,5 +1,5 @@
 ---
-title: nothrow (C++) | Documenti Microsoft
+title: nothrow (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/03/2018
 ms.technology:
@@ -17,30 +17,30 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 69a706577cf112c3d8a3b7748f72679f7213936d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7efbd22c846327c5731cf3ab14ba1f2045c8636f
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32420657"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37939149"
 ---
 # <a name="nothrow-c"></a>nothrow (C++)
 
 **Sezione specifica Microsoft**
 
-Attributo esteso `__declspec` che può essere utilizzato nella dichiarazione di funzioni.
+Oggetto **declspec** attributo esteso che può essere usato nella dichiarazione di funzioni.
 
 ## <a name="syntax"></a>Sintassi  
   
-> *tipo restituito* __declspec(nothrow) [*convenzione di chiamata*] *-nome della funzione* ([*elenco di argomenti*])
+> *tipo restituito* __declspec(nothrow) [*convenzione di chiamata*] *-nome della funzione* ([*dall'elenco di argomenti*])
 
 ## <a name="remarks"></a>Note
 
-Si consiglia di utilizzare tutto il codice di nuovo il [noexcept](noexcept-cpp.md) operatore anziché `__declspec(nothrow)`.
+Si consiglia di nuovo codice usare il [noexcept](noexcept-cpp.md) operatore anziché `__declspec(nothrow)`.
 
-L'attributo indica al compilatore che la funzione dichiarata e le funzioni che tale funzione chiama non generano mai un'eccezione. Tuttavia, non viene imposta la direttiva. In altre parole, non fa mai [std:: Terminate](../standard-library/exception-functions.md#terminate) da richiamare, a differenza di `noexcept`, o in **std:c + + 17** (Visual Studio 2017 15,5 e versioni successive), la modalità `throw()`.
+L'attributo indica al compilatore che la funzione dichiarata e le funzioni che tale funzione chiama non generano mai un'eccezione. Tuttavia, non comporta la direttiva. In altre parole, non provoca mai [std:: Terminate](../standard-library/exception-functions.md#terminate) deve essere richiamato, a differenza `noexcept`, o in **/std: c + + 17** (Visual Studio 2017 versione 15.5 e successive), la modalità `throw()`.
 
-Con il modello di gestione delle eccezioni sincrona, per impostazione predefinita il compilatore può ora eliminare i meccanismi che consentono di tenere traccia della durata di alcuni oggetti non rimovibili in tale funzione, riducendo notevolmente la dimensione del codice. Data la seguente direttiva del preprocessore, le dichiarazioni di tre funzione seguenti sono equivalenti nel **/std:c + + 14** modalità:
+Con il modello di gestione delle eccezioni sincrona, per impostazione predefinita il compilatore può ora eliminare i meccanismi che consentono di tenere traccia della durata di alcuni oggetti non rimovibili in tale funzione, riducendo notevolmente la dimensione del codice. Data la seguente direttiva del preprocessore, le dichiarazioni di tre funzione seguenti sono equivalenti **/std: c + + 14** modalità:
 
 ```cpp
 #define WINAPI __declspec(nothrow) __stdcall
@@ -50,9 +50,9 @@ void __declspec(nothrow) __stdcall f2();
 void __stdcall f3() throw();
 ```
 
-In **/std:c + + 17** modalità `throw()` non equivale ad altri utenti che utilizzano `__declspec(nothrow)` perché causa `std::terminate` da richiamare se viene generata un'eccezione dalla funzione.
+Nelle **/std: c + + 17** modalità `throw()` non equivale ad altri utenti che usano `__declspec(nothrow)` perché causa `std::terminate` da richiamare se viene generata un'eccezione dalla funzione.
 
-Il `void __stdcall f3() throw();` dichiarazione utilizza la sintassi definita dallo standard C++. In C++ 17 il `throw()` (parola chiave) è stata deprecata.
+Il `void __stdcall f3() throw();` dichiarazione utilizza la sintassi definita dallo standard C++. In c++17 il `throw()` parola chiave è stata deprecata.
 
 **Fine sezione specifica Microsoft**
 

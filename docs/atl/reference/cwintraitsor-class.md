@@ -1,5 +1,5 @@
 ---
-title: Classe CWinTraitsOR | Documenti Microsoft
+title: Classe CWinTraitsOR | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,18 +20,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3df5081d8584d821737350176740b6fd067ac78f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a996b1f2a9b81e9d74548f3e69883cee447ac3a0
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32361460"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37881617"
 ---
 # <a name="cwintraitsor-class"></a>Classe CWinTraitsOR
-Questa classe fornisce un metodo per la standardizzazione stili utilizzati quando si crea un oggetto window.  
+Questa classe fornisce un metodo per la standardizzazione con gli stili usati durante la creazione di un oggetto finestra.  
   
 > [!IMPORTANT]
->  Questa classe e i relativi membri non possono essere utilizzati nelle applicazioni eseguite in Windows Runtime.  
+>  Questa classe e i relativi membri non possono essere utilizzati nelle applicazioni eseguite nel Runtime di Windows.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -43,11 +43,11 @@ class CWinTraitsOR
 ```  
   
 #### <a name="parameters"></a>Parametri  
- `t_dwStyle`  
+ *t_dwStyle*  
  Stili di finestra predefinito.  
   
- `t_dwExStyle`  
- Stili finestra estesi predefiniti.  
+ *t_dwExStyle*  
+ Stili finestra estesi per impostazione predefinita.  
   
 ## <a name="members"></a>Membri  
   
@@ -56,47 +56,47 @@ class CWinTraitsOR
 |Nome|Descrizione|  
 |----------|-----------------|  
 |[CWinTraitsOR::GetWndExStyle](#getwndexstyle)|Recupera gli stili estesi per il `CWinTraitsOR` oggetto.|  
-|[CWinTraitsOR::GetWndStyle](#getwndstyle)|Recupera gli stili standard per il `CWinTraitsOR` oggetto.|  
+|[CWinTraitsOR::GetWndStyle](#getwndstyle)|Recupera gli stili di standard per il `CWinTraitsOR` oggetto.|  
   
 ## <a name="remarks"></a>Note  
- Questo [tratti finestra](../../atl/understanding-window-traits.md) classe fornisce un metodo semplice per la standardizzazione stili utilizzati per la creazione di un oggetto finestra ATL. Utilizzare una specializzazione di questa classe come un parametro di modello [CWindowImpl](../../atl/reference/cwindowimpl-class.md) o un'altra delle classi di finestra ATL per specificare il set minimo di stili standard ed estesi da utilizzare per le istanze di tale classe di finestra.  
+ Ciò [tratti delle finestre](../../atl/understanding-window-traits.md) classe fornisce un metodo semplice per la standardizzazione con gli stili usati per la creazione di un oggetto di finestra ATL. Usare una specializzazione della classe come parametro di modello per [CWindowImpl](../../atl/reference/cwindowimpl-class.md) o un'altra delle classi di finestra di ATL per specificare il set minimo di stili estesi e standard da utilizzare per le istanze di tale classe della finestra.  
   
- Utilizzare una specializzazione del modello se si desidera assicurarsi che determinati stili siano impostati per tutte le istanze della classe della finestra mentre altri deve essere impostato su una base per ogni istanza nella chiamata a [CWindowImpl::Create](../../atl/reference/cwindowimpl-class.md#create).  
+ Usare una specializzazione di questo modello se si desidera garantire che alcuni stili siano impostate per tutte le istanze della classe della finestra mentre altri devono essere impostate in una base per istanza nella chiamata a [CWindowImpl::Create](../../atl/reference/cwindowimpl-class.md#create).  
   
- Se si desidera fornire stili finestra che verranno utilizzati solo quando gli altri stili non vengono specificati nella chiamata a predefiniti `CWindowImpl::Create`, utilizzare [CWinTraits](../../atl/reference/cwintraits-class.md) invece.  
+ Se si desidera fornire stili di finestra che verranno utilizzati solo se nessun altri stili vengono specificati nella chiamata a predefiniti `CWindowImpl::Create`, usare [CWinTraits](../../atl/reference/cwintraits-class.md) invece.  
   
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** atlwin. h  
   
 ##  <a name="getwndstyle"></a>  CWinTraitsOR::GetWndStyle  
- Chiamare questa funzione per recuperare una combinazione (utilizzando l'operatore OR logico) gli stili di standard di `CWinTraits` oggetto e gli stili predefiniti specificati da `t_dwStyle`.  
+ Chiamare questa funzione per recuperare una combinazione (tramite l'operatore OR logico) degli stili di standard di `CWinTraits` oggetto e gli stili predefiniti specificati da *t_dwStyle*.  
   
 ```
 static DWORD GetWndStyle(DWORD dwStyle);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `dwStyle`  
+ *dwStyle*  
  Stili utilizzati per la creazione di una finestra.  
   
 ### <a name="return-value"></a>Valore restituito  
- Una combinazione degli stili che vengono passati in `dwStyle` e il valore predefinito di quelle specificate da `t_dwStyle`, utilizzando l'operatore logico OR.  
+ Una combinazione degli stili passati *dwStyle* e il valore predefinito di quelli specificati dal `t_dwStyle`, usando l'operatore logico OR.  
   
 ##  <a name="getwndexstyle"></a>  CWinTraitsOR::GetWndExStyle  
- Chiamare questa funzione per recuperare una combinazione (utilizzando l'operatore logico OR), gli stili estesi del `CWinTraits` oggetto e gli stili predefiniti specificati da `t_dwStyle`.  
+ Chiamare questa funzione per recuperare una combinazione (tramite l'operatore logico OR) degli stili estesi del `CWinTraits` oggetto e gli stili predefiniti specificati dal `t_dwStyle`.  
   
 ```
 static DWORD GetWndExStyle(DWORD dwExStyle);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `dwExStyle`  
+ *dwExStyle*  
  Stili estesi utilizzati per la creazione di una finestra.  
   
 ### <a name="return-value"></a>Valore restituito  
- Una combinazione degli stili estesi che vengono passati in `dwExStyle` e quelle specificato da predefinite `t_dwExStyle`, utilizzando l'operatore OR logico  
+ Una combinazione degli stili estesi che vengono passati *dwExStyle* e quelle specificate dal predefinite `t_dwExStyle`, usando l'operatore logico OR  
   
 ## <a name="see-also"></a>Vedere anche  
- [Cenni preliminari sulla classe](../../atl/atl-class-overview.md)   
+ [Panoramica della classe](../../atl/atl-class-overview.md)   
  [Informazioni sui tratti delle finestre](../../atl/understanding-window-traits.md)
 

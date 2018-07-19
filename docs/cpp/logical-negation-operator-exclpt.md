@@ -19,11 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b64e9887e51666405d3c6c106b40c99528ea4510
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c6c8ad17195954feeeccb47896fa013302b6d7e3
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37943521"
 ---
 # <a name="logical-negation-operator-"></a>Operatore di negazione logica: !
 ## <a name="syntax"></a>Sintassi  
@@ -34,16 +35,16 @@ ms.lasthandoff: 05/03/2018
 ```  
   
 ## <a name="remarks"></a>Note  
- L'operatore di negazione logica (**!**) Inverte il significato dei relativi operandi. L'operando deve essere di tipo aritmetico o puntatore (o un'espressione che restituisce un tipo aritmetico o puntatore). L'operando viene convertito in modo implicito nel tipo `bool`. Il risultato è **true** se l'operando di conversione è **false**; il risultato è **false** se l'operando di conversione è **true**. Il risultato è di tipo `bool`.  
+ L'operatore di negazione logico (**!**) Inverte il significato dei relativi operandi. L'operando deve essere di tipo aritmetico o puntatore (o un'espressione che restituisce un tipo aritmetico o puntatore). L'operando verrà convertito in modo implicito nel tipo **bool**. Il risultato è TRUE se l'operando di conversione FALSE. Se l'operando di conversione è TRUE, il risultato è FALSE. Il risultato è di tipo **bool**.  
   
- Per un'espressione *e*, l'espressione unaria **! * * * e* equivale all'espressione **(* e* `==` 0), tranne in cui gli operatori di overload sono coinvolti.  
+ Per un'espressione *elettronica*, l'espressione unaria **! * * * e* equivale all'espressione **(* * * e* `==` 0), tranne dove gli operatori di overload sono coinvolti.  
   
 ## <a name="operator-keyword-for-"></a>Parola chiave operator per !  
- Il **non** operatore è il testo equivalente di **!**. Esistono due modi per accedere il **non** operatore nei programmi: includere il file di intestazione `iso646.h`, o compilare il [/Za](../build/reference/za-ze-disable-language-extensions.md) l'opzione del compilatore (Disabilita estensioni linguaggio).  
+ Il **non** operatore è l'equivalente testuale di **!**. Esistono due modi per accedere la **non** operatore nei programmi: includere il file di intestazione `iso646.h`, o eseguire la compilazione con il [/Za](../build/reference/za-ze-disable-language-extensions.md) l'opzione del compilatore (Disabilita estensioni linguaggio).  
   
 ## <a name="example"></a>Esempio  
   
-```  
+```cpp 
 // expre_Logical_NOT_Operator.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -58,5 +59,5 @@ int main() {
   
 ## <a name="see-also"></a>Vedere anche  
  [Espressioni con operatori unari](../cpp/expressions-with-unary-operators.md)   
- [Operatori C++ predefiniti, precedenza e associazione](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
+ [Operatori C++ predefiniti, precedenza e associatività degli operatori](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
  [Operatori aritmetici unari](../c-language/unary-arithmetic-operators.md)

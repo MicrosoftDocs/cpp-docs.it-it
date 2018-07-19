@@ -1,5 +1,5 @@
 ---
-title: Indietro di C++ (C++ moderno) | Documenti Microsoft
+title: Bentornati C++ (C++ moderno) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 63e73657c7e018d2a4eb71170561e310aeba9d5b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 220c8f27aec52fe707e0482eb041ea71c5bd8291
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32424867"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37939377"
 ---
 # <a name="welcome-back-to-c-modern-c"></a>C++ (C++ moderno)
 C++ è uno dei linguaggi di programmazione più ampiamente adottati nel mondo. I programmi in C++ ben scritti sono veloci ed efficienti. Il linguaggio è più flessibile di altri linguaggi, in quanto è possibile utilizzarlo per creare un'ampia gamma di applicazioni: da giochi divertenti ed emozionanti, a software scientifico a elevate prestazioni, fino a driver di dispositivo, programmi incorporati e applicazioni client Windows. Per più di 20 anni C++ è stato utilizzato per risolvere problemi come questi e molti altri. Molti non sanno che un numero sempre maggiore di programmatori in C++ ha abbandonato la vecchia programmazione di tipo C per ripiegare sul moderno C++.  
@@ -32,19 +32,19 @@ C++ è uno dei linguaggi di programmazione più ampiamente adottati nel mondo. I
   
 -   Puntatori intelligenti anziché puntatori non elaborati.  
   
--   `std::string` e `std::wstring` i tipi (vedere [ \<stringa >](../standard-library/string.md)) anziché raw `char[]` matrici.  
+-   `std::string` e `std::wstring` tipi (vedere [ \<stringa >](../standard-library/string.md)) anziché raw `char[]` matrici.  
   
--   [Libreria Standard C++](../standard-library/cpp-standard-library-header-files.md) come contenitori `vector`, `list`, e `map` anziché contenitori personalizzati o matrici non elaborate. Vedere [ \<vettore >](../standard-library/vector.md), [ \<elenco >](../standard-library/list.md), e [ \<mappa >](../standard-library/map.md).  
+-   [Libreria Standard C++](../standard-library/cpp-standard-library-header-files.md) quali contenitori `vector`, `list`, e `map` anziché contenitori personalizzati o matrici non elaborate. Visualizzare [ \<vector >](../standard-library/vector.md), [ \<elenco >](../standard-library/list.md), e [ \<mappa >](../standard-library/map.md).  
   
 -   Libreria Standard C++ [algoritmi](../standard-library/algorithm.md) anziché quelli codificati manualmente.  
   
 -   Eccezioni, per notificare e gestire le condizioni di errore.  
   
--   Utilizzo della libreria Standard C++ la comunicazione tra thread senza blocco `std::atomic<>` (vedere [ \<atomic >](../standard-library/atomic.md)) anziché altri meccanismi di comunicazione tra thread.  
+-   Senza blocchi la comunicazione tra thread mediante la libreria Standard C++ `std::atomic<>` (vedere [ \<atomic >](../standard-library/atomic.md)) anziché altri meccanismi di comunicazione tra thread.  
   
 -   Inline [funzioni lambda](../cpp/lambda-expressions-in-cpp.md) anziché piccole funzioni implementate separatamente.  
   
--   Basato su intervallo per i cicli scrivere cicli più affidabili che funzionano con Windows Runtime, contenitori della libreria Standard C++ e matrici di raccolte nel modulo `for ( for-range-declaration : expression )`. Tale impostazione fa parte del supporto del linguaggio di base. Per ulteriori informazioni, vedere [per istruzione (C++) basato su intervallo](../cpp/range-based-for-statement-cpp.md).  
+-   Basato su intervallo per scrivere cicli più affidabili eseguibili con matrici, contenitori della libreria Standard C++ e Windows Runtime raccolte sotto forma di cicli `for ( for-range-declaration : expression )`. Tale impostazione fa parte del supporto del linguaggio di base. Per altre informazioni, vedere [Range-based per istruzione (C++)](../cpp/range-based-for-statement-cpp.md).  
   
  Lo stesso linguaggio C++ si è evoluto. Confrontare i due frammenti di codice seguenti. Qui viene illustrato il funzionamento in C++:  
   
@@ -102,9 +102,9 @@ void f()
 
 ```
 
- In C++ moderno non è necessario utilizzare la gestione delle eccezioni esplicita o new/delete, poiché è possibile usare puntatori intelligenti. Quando si utilizza il `auto` deduzione del tipo e [funzione lambda](../cpp/lambda-expressions-in-cpp.md), è possibile scrivere codice più rapidamente, renderlo più conciso e comprensibile. E basato su intervallo `for` ciclo è pulita, più facile da usare e meno soggetto a errori non intenzionali rispetto a un tipo C `for` ciclo. Per scrivere l'applicazione, è possibile usare i boilerplate insieme alle righe minime di codice. È inoltre possibile rendere tale codice indipendente dalle eccezioni e dalla memoria, senza allocazione/deallocazione o codici di errore da gestire.  
+ In C++ moderno non è necessario utilizzare la gestione delle eccezioni esplicita o new/delete, poiché è possibile usare puntatori intelligenti. Quando si usa la **automatica** deduzione del tipo e [funzione lambda](../cpp/lambda-expressions-in-cpp.md), è possibile scrivere codice più veloce, renderlo più conciso e comprensibile. E una basata su intervallo **per** ciclo è più chiara, più facile da usare e meno soggetto a errori non intenzionali rispetto a un tipo C **per** ciclo. Per scrivere l'applicazione, è possibile usare i boilerplate insieme alle righe minime di codice. È inoltre possibile rendere tale codice indipendente dalle eccezioni e dalla memoria, senza allocazione/deallocazione o codici di errore da gestire.  
   
- Il linguaggio C++ moderno comprende due tipi di polimorfismo: fase di compilazione, tramite i modelli e fase di esecuzione tramite l'ereditarietà e la virtualizzazione. È possibile combinare i due tipi di polimorfismo per un grande effetto. Il modello della libreria Standard C++ `shared_ptr` utilizza metodi virtuali interni per eseguire la cancellazione di tipo apparentemente senza. Evitare tuttavia di utilizzare in modo eccessivo la virtualizzazione per il polimorfismo quando un modello costituisce la scelta migliore. I modelli possono essere molto efficaci.  
+ Il linguaggio C++ moderno comprende due tipi di polimorfismo: fase di compilazione, tramite i modelli e fase di esecuzione tramite l'ereditarietà e la virtualizzazione. È possibile combinare i due tipi di polimorfismo per un grande effetto. Il modello della libreria Standard C++ `shared_ptr` utilizza metodi virtuali interni per eseguire la cancellazione del tipo apparentemente senza. Evitare tuttavia di utilizzare in modo eccessivo la virtualizzazione per il polimorfismo quando un modello costituisce la scelta migliore. I modelli possono essere molto efficaci.  
   
  Se si usa C++ dopo aver utilizzato un altro linguaggio, specialmente da un linguaggio gestito in cui la maggior parte dei tipi è costituita da tipi di riferimento e pochi sono tipi di valore, è importante sapere che le classi C++ sono tipi di valore per impostazione predefinita. È tuttavia possibile specificarli come tipi di riferimento per abilitare il comportamento polimorfico che supporta la programmazione orientata a oggetti. Osservazione utile: i tipi di valore hanno maggiormente effetto sulla memoria e sul controllo del layout, i tipi di riferimento invece sulle classi di base e sulle funzioni virtuali per il supporto del polimorfismo. Per impostazione predefinita, i tipi di valore sono copiabili. Ciascuno include un costruttore di copia e un operatore di assegnazione della copia. Quando si specifica un tipo di riferimento, impostare la classe come non copiabile (disattivare il costruttore di copia e l'operatore di assegnazione di copia) e utilizzare un distruttore virtuale, che supporta il polimorfismo. I tipi di valore riguardano anche il contenuto, che, quando vengono copiati, forniscono due valori indipendenti che è possibile modificare separatamente. I tipi di riferimento riguardano tuttavia l'identità, ossia di quale oggetto si tratta, per questo motivo sono talvolta denominati tipi polimorfici.  
   
@@ -130,13 +130,13 @@ void f()
   
 -   [Algoritmi](../cpp/algorithms-modern-cpp.md)  
   
--   [Stringa e i/o la formattazione (C++ moderno)](../cpp/string-and-i-o-formatting-modern-cpp.md)  
+-   [Stringa e i/o formattazione (C++ moderno)](../cpp/string-and-i-o-formatting-modern-cpp.md)  
   
--   [Errori ed eccezioni](../cpp/errors-and-exception-handling-modern-cpp.md)  
+-   [Gli errori e la gestione delle eccezioni](../cpp/errors-and-exception-handling-modern-cpp.md)  
   
 -   [Portabilità in base ai limiti ABI](../cpp/portability-at-abi-boundaries-modern-cpp.md)  
   
- Per altre informazioni, vedere l'articolo di StackOverflow [quali idiomi C++ sono deprecate in c++11](http://go.microsoft.com/fwlink/p/?linkid=402836)  
+ Per altre informazioni, vedere l'articolo di StackOverflow [idiomatiche di C++ sono deprecate in c++11](http://go.microsoft.com/fwlink/p/?linkid=402836)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Riferimenti al linguaggio C++](../cpp/cpp-language-reference.md)   

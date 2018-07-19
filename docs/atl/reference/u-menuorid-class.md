@@ -1,5 +1,5 @@
 ---
-title: Classe _U_MENUorID | Documenti Microsoft
+title: Classe u_menuorid | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,18 +19,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 847a735cdba6b9ff4173e23acf78ea7dc4d3034c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0f945766283fa6e58b1eb3430cc780b1ae136e9f
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32363460"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37884737"
 ---
-# <a name="umenuorid-class"></a>Classe _U_MENUorID
-Questa classe fornisce wrapper per **CreateWindow** e **CreateWindowEx**.  
+# <a name="umenuorid-class"></a>Classe u_menuorid
+Questa classe fornisce wrapper `CreateWindow` e `CreateWindowEx`.  
   
 > [!IMPORTANT]
->  Questa classe e i relativi membri non possono essere utilizzati nelle applicazioni eseguite in Windows Runtime.  
+>  Questa classe e i relativi membri non possono essere utilizzati nelle applicazioni eseguite nel Runtime di Windows.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -50,28 +50,28 @@ class _U_MENUorID
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[_U_MENUorID::m_hMenu](#_u_menuorid__m_hmenu)|Un handle a un menu.|  
+|[_U_MENUorID::m_hMenu](#_u_menuorid__m_hmenu)|Handle a un menu.|  
   
 ## <a name="remarks"></a>Note  
- Classe di adattatori di questo argomento consente di entrambi gli ID ( **UINT**s) o gli handle di menu ( `HMENU`s) deve essere passato a una funzione senza un cast esplicito della parte del chiamante.  
+ Classe dell'adattatore in questo argomento consente di eseguire gli ID (UINTs) o gli handle di menu (HMENUs) deve essere passato a una funzione senza un cast esplicito da parte del chiamante.  
   
- Questa classe è progettata per l'implementazione di wrapper per l'API di Windows, in particolare il [CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679) e [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) funzioni che accettano un `HMENU` argomento che può essere un elemento figlio Identificatore di finestra ( **UINT**) anziché un handle di menu. Ad esempio, è possibile visualizzare questa classe in uso come parametro a [CWindowImpl::Create](cwindowimpl-class.md#create).  
+ Questa classe è progettata per l'implementazione del wrapper per l'API di Windows, in particolare [CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679) e [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) funzioni, entrambi accettare un argomento HMENU che può essere una finestra figlio identificatore (UINT) anziché un handle di menu. Ad esempio, è possibile visualizzare questa classe in uso come parametro per [CWindowImpl::Create](cwindowimpl-class.md#create).  
 
   
- La classe definisce due overload del costruttore: uno accetta un **UINT** argomento e l'altro accetta un `HMENU` argomento. Il **UINT** argomento è sufficiente eseguire il cast a un `HMENU` nel costruttore e il risultato memorizzato nel membro dati della classe, [m_hMenu](#_u_menuorid__m_hmenu). L'argomento di `HMENU` costruttore verrà archiviato direttamente senza conversione.  
+ La classe definisce due overload del costruttore: uno accetta un argomento UINT e l'altro accetta un argomento HMENU. L'argomento UINT è sufficiente eseguire il cast a un HMENU nel costruttore e il risultato archiviato nel membro dati della classe, [m_hMenu](#_u_menuorid__m_hmenu). L'argomento del costruttore HMENU verrà archiviato direttamente, senza conversione.  
   
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** atlwin. h  
   
 ##  <a name="_u_menuorid__m_hmenu"></a>  _U_MENUorID::m_hMenu  
- La classe contiene il valore passato a uno dei suoi costruttori come pubblica `HMENU` (membro dati).  
+ La classe contiene il valore passato a uno dei relativi costruttori come membro dati pubblico HMENU.  
   
 ```
 HMENU m_hMenu;
 ```  
   
 ##  <a name="_u_menuorid___u_menuorid"></a>  _U_MENUorID::_U_MENUorID  
- Il **UINT** argomento è sufficiente eseguire il cast a un `HMENU` nel costruttore e il risultato memorizzato nel membro dati della classe, [m_hMenu](#_u_menuorid__m_hmenu).  
+ L'argomento UINT è sufficiente eseguire il cast a un HMENU nel costruttore e il risultato archiviato nel membro dati della classe, [m_hMenu](#_u_menuorid__m_hmenu).  
   
 ```
 _U_MENUorID(UINT nID);  
@@ -79,14 +79,14 @@ _U_MENUorID(HMENU hMenu);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `nID`  
- Identificatore di una finestra figlio.  
+ *nID*  
+ Un identificatore di finestra figlio.  
   
- `hMenu`  
- Handle di menu.  
+ *hMenu*  
+ Handle menu.  
   
 ### <a name="remarks"></a>Note  
- L'argomento di `HMENU` costruttore verrà archiviato direttamente senza conversione.  
+ L'argomento del costruttore HMENU verrà archiviato direttamente, senza conversione.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Cenni preliminari sulla classe](../../atl/atl-class-overview.md)
+ [Panoramica della classe](../../atl/atl-class-overview.md)

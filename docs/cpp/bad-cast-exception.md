@@ -1,5 +1,5 @@
 ---
-title: Eccezione bad_cast | Documenti Microsoft
+title: Eccezione bad_cast | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,11 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7c09754e44b2cf1d7bda4bde35b8d76335d96711
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b50995ff1d5eb730bf6593679194d32d5300b9d7
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37943137"
 ---
 # <a name="badcast-exception"></a>Eccezione bad_cast
 Viene generata l'eccezione `bad_cast` dall'operatore `dynamic_cast` come risultato di un cast non riuscito a un tipo di riferimento.  
@@ -37,7 +38,7 @@ catch (bad_cast)
 ## <a name="remarks"></a>Note  
  L'interfaccia per `bad_cast` è:  
   
-```  
+```cpp 
 class bad_cast : public exception {  
 public:  
    bad_cast(const char * _Message = "bad cast");  
@@ -48,7 +49,7 @@ public:
   
  Il codice seguente contiene un esempio di un operatore `dynamic_cast` non riuscito che genera l'eccezione `bad_cast`.  
   
-```  
+```cpp 
 // expre_bad_cast_Exception.cpp  
 // compile with: /EHsc /GR  
 #include <typeinfo.h>  
@@ -77,16 +78,16 @@ int main() {
 }  
 ```  
   
- L'eccezione viene generata perché l'oggetto di cui si sta eseguendo il cast (una forma) non è derivato dal tipo di cast specificato (cerchio). Per evitare l'eccezione, aggiungere tali dichiarazioni a `main`:  
+ L'eccezione viene generata perché l'oggetto di cui si sta eseguendo il cast (una forma) non è derivato dal tipo di cast specificato (cerchio). Per evitare l'eccezione, aggiungere tali dichiarazioni a **principale**:  
   
-```  
+```cpp 
 Circle circle_instance;  
 Circle& ref_circle = circle_instance;  
 ```  
   
- Quindi invertire il senso del cast nel blocco `try` nel modo seguente:  
+ Quindi invertire il senso del cast nel **provare** bloccare come indicato di seguito:  
   
-```  
+```cpp 
 Shape& ref_shape = dynamic_cast<Shape&>(ref_circle);  
 ```  
   

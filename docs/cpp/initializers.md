@@ -1,5 +1,5 @@
 ---
-title: Gli inizializzatori | Documenti Microsoft
+title: Gli inizializzatori | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 072b6a62bde2ab58909fd0c8dd1954e7d330ced5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b7a94ee7df512262c58d7a90e3dbf461270b5d4c
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32424306"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37939864"
 ---
 # <a name="initializers"></a>Inizializzatori
 Un inizializzatore specifica il valore iniziale di una variabile. È possibile inizializzare le variabili nei contesti seguenti:  
@@ -95,7 +95,7 @@ Un inizializzatore specifica il valore iniziale di una variabile. È possibile i
   
 -   I puntatori vengono inizializzati su `nullptr`.  
   
--   Le matrici, [POD](../standard-library/is-pod-class.md) classi, strutture e unioni dispongano i relativi membri inizializzati su un valore pari a zero.  
+-   Matrici [POD](../standard-library/is-pod-class.md) classi, struct e unioni dispongano i relativi membri inizializzati sul valore zero.  
   
  L'inizializzazione zero viene eseguita in momenti diversi:  
   
@@ -125,7 +125,7 @@ int main() {
 ```  
   
 ### <a name="default_initialization"></a> Inizializzazione predefinita  
- L'inizializzazione predefinita per classi, struct e unioni è l'inizializzazione con un costruttore predefinito. Il costruttore predefinito può essere chiamato senza espressione di inizializzazione oppure con la parola chiave `new`:  
+ L'inizializzazione predefinita per classi, struct e unioni è l'inizializzazione con un costruttore predefinito. Il costruttore predefinito può essere chiamato senza espressione di inizializzazione o con il **nuovo** (parola chiave):  
   
 ```cpp  
 MyClass mc1;  
@@ -180,7 +180,7 @@ int main() {
 }  
 ```  
   
- Per ulteriori informazioni sull'inizializzazione di oggetti statici globali, vedere [considerazioni di avvio aggiuntive](../cpp/additional-startup-considerations.md).  
+ Per altre informazioni sull'inizializzazione di oggetti statici globali, vedere [considerazioni aggiuntive di avvio](../cpp/additional-startup-considerations.md).  
   
 ### <a name="value-initialization"></a>Inizializzazione valore  
  L'inizializzazione valore si verifica nei casi seguenti:  
@@ -189,7 +189,7 @@ int main() {
   
 -   Un oggetto temporaneo anonimo viene inizializzato con parentesi o parentesi graffe vuote.  
   
--   Un oggetto viene inizializzato tramite la parola chiave `new` più le parentesi o le parentesi graffe vuote.  
+-   un oggetto viene inizializzato con il **nuovo** parola chiave più le parentesi vuote o le parentesi graffe  
   
  L'inizializzazione valore prevede i comportamenti seguenti:  
   
@@ -230,7 +230,7 @@ int main() {
   
 -   Un membro dati non statico viene inizializzato con un segno di uguale.  
   
--   I membri di classi, struct e unioni vengono inizializzati tramite l'inizializzazione per copia durante l'inizializzazione aggregata. Vedere [inizializzazione aggregata](#agginit) per gli esempi.  
+-   I membri di classi, struct e unioni vengono inizializzati tramite l'inizializzazione per copia durante l'inizializzazione aggregata. Visualizzare [inizializzazione aggregata](#agginit) per alcuni esempi.  
   
  Il codice seguente mostra alcuni esempi di inizializzazione per copia:  
   
@@ -279,9 +279,9 @@ shared_ptr<int> sp = new int(1729); // the constructor is explicit; same error
   
 -   Una variabile viene inizializzata con parentesi o parentesi graffe non vuote.  
   
--   Una variabile viene inizializzata con la parola chiave `new` più parentesi o parentesi graffe non vuote.  
+-   una variabile viene inizializzata con il **nuovo** parola chiave più parentesi graffe non vuote o parentesi  
   
--   Una variabile viene inizializzata con `static_cast`.  
+-   una variabile viene inizializzata con **static_cast**  
   
 -   In un costruttore le classi base e i membri non statici vengono inizializzati tramite un elenco di inizializzatori.  
   
@@ -321,7 +321,7 @@ int main(){
   
 -   Una variabile viene inizializzata.  
   
--   Una classe viene inizializzata con la parola chiave `new`.  
+-   una classe viene inizializzata con il **nuovo** (parola chiave)  
   
 -   Un oggetto viene restituito da una funzione.  
   
@@ -378,7 +378,7 @@ int main() {
 -   Funzioni membro virtuali.  
   
 > [!NOTE]
->  <!--conformance note-->In Visual Studio 2015 and earlier, an aggregate is not allowed to have  brace-or-equal initializers for non-static members. This restriction was removed in the C++14 standard and implemented in Visual Studio 2017. 
+>  <!--conformance note-->In Visual Studio 2015 e versioni precedenti, un'aggregazione non è consentita avere inizializzatori a parentesi graffa-or-equal per membri non statici. Questa restrizione è stata rimossa nel standard c++14 e implementata in Visual Studio 2017. 
   
  Gli inizializzatori di aggregazione sono costituiti da un elenco di inizializzazione tra parentesi graffe, con o senza un segno di uguale, come illustrato nell'esempio seguente:  
   
@@ -425,7 +425,7 @@ myArr3: 8 9 10 0 0
 ```  
   
 > [!IMPORTANT]
->  Membri della matrice vengono dichiarati, ma non esplicitamente inizializzati durante l'inizializzazione aggregata vengono inizializzate su zero, come in `myArr3` sopra.  
+>  I membri di matrici dichiarati, ma non esplicitamente inizializzati durante l'inizializzazione aggregata vengono inizializzate su zero, come in `myArr3` sopra.  
   
 #### <a name="initializing-unions-and-structs"></a>Inizializzazione di unioni e struct  
  Se un'unione non ha alcun costruttore, è possibile inizializzarla con un singolo valore (o un'altra istanza di un'unione). Il valore viene utilizzato per inizializzare il primo campo non statico. Questo non accade con l'inizializzazione struct in quanto il primo valore dell'inizializzatore viene utilizzato per inizializzare il primo campo, il secondo per inizializzare il secondo campo e così via... Confrontare l'inizializzazione di unioni e struct nell'esempio seguente.  
@@ -516,7 +516,7 @@ int main()
     class c {public:   int& i;};  
     ```  
   
--   Dichiarazione di una variabile esplicitamente specificata come `extern`. Ad esempio:  
+-   Dichiarazione di una variabile esplicitamente specificata come **extern**. Ad esempio:  
   
     ```  
     extern int& iVal;  
@@ -527,10 +527,10 @@ int main()
  ![Grafico delle decisioni per l'inizializzazione dei tipi di riferimento](../cpp/media/vc38s71.gif "vc38S71")  
 Grafico decisionale per l'inizializzazione dei tipi di riferimento  
   
- Riferimenti agli `volatile` i tipi (dichiarati come `volatile` *typename * * * &** *identificatore*) può essere inizializzato con `volatile` oggetti dello stesso tipo o con gli oggetti che non sono stati dichiarati come `volatile`. Possono, tuttavia, essere inizializzati con **const** oggetti di quel tipo. Analogamente, i riferimenti alla **const** tipi (dichiarati come **const** *typename * * * &** *identificatore*) può essere inizializzato con **const** oggetti dello stesso tipo (o qualsiasi elemento che dispone di una conversione a quel tipo o con gli oggetti che non sono stati dichiarati come **const**). Non possono, tuttavia, essere inizializzati con oggetti `volatile` di quel tipo.  
+ I riferimenti a **volatili** tipi (dichiarati come **volatile** *typename * * * &** *identificatore*) può essere inizializzato con **volatili** gli oggetti dello stesso tipo o con oggetti che non sono stati dichiarati **volatile**. Possono, tuttavia, essere inizializzati con **const** oggetti di quel tipo. Analogamente, i riferimenti a **const** tipi (dichiarati come **const** *typename * * * &** *identificatore*) può essere inizializzato con **const** gli oggetti dello stesso tipo (o qualsiasi elemento che dispone di una conversione al tipo o con gli oggetti che non sono stati dichiarati **const**). Possono, tuttavia, essere inizializzati con **volatile** oggetti di quel tipo.  
   
- I riferimenti che non sono qualificati con il **const** o `volatile` parola chiave può essere inizializzato solo con gli oggetti dichiarati come **const** né `volatile`.  
+ I riferimenti non qualificati con il **const** oppure **volatile** parola chiave può essere inizializzato solo con gli oggetti non dichiarati come **const** né  **volatile**.  
   
 ### <a name="initialization-of-external-variables"></a>Inizializzazione di variabili esterne  
- Le dichiarazioni delle variabili automatiche, statiche ed esterne possono contenere inizializzatori. Tuttavia, le dichiarazioni di variabili esterne possono contenere inizializzatori solo se le variabili non vengono dichiarate come `extern`.
+ Le dichiarazioni delle variabili automatiche, statiche ed esterne possono contenere inizializzatori. Tuttavia, le dichiarazioni di variabili esterne possono contenere inizializzatori solo se le variabili non vengono dichiarate come **extern**.
   

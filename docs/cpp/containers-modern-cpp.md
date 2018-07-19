@@ -1,5 +1,5 @@
 ---
-title: Contenitori (C++ moderno) | Documenti Microsoft
+title: Contenitori (Modern C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 1/18/2018
 ms.technology:
@@ -11,23 +11,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 49a77234b679fd61d801bb78d751891467d6b4e0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2eb9419562382d3494e64dd7fb0472882fe73c13
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32412075"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37939039"
 ---
 # <a name="containers-modern-c"></a>Contenitori (C++ moderno)
 
-Per impostazione predefinita, utilizzare [vettore](../standard-library/vector-class.md) come il contenitore sequenza preferito in C++. Ciò equivale a `List<T>` in linguaggi .NET.
+Per impostazione predefinita, usare [vettore](../standard-library/vector-class.md) come contenitore sequenza preferito in C++. Ciò equivale a `List<T>` nei linguaggi .NET.
 
 ```cpp
 vector<string> apples;
 apples.push_back("Granny Smith");
 ```
 
-Utilizzare [mappa](../standard-library/map-class.md) (non `unordered_map`) come contenitore associativo predefinito. Utilizzare [impostare](../standard-library/set-class.md), [multimap](../standard-library/multimap-class.md), e [multiset](../standard-library/multiset-class.md) degenerato & più casi.
+Uso [mappa](../standard-library/map-class.md) (non `unordered_map`) come contenitore associativo predefinito. Uso [impostata](../standard-library/set-class.md), [multimap](../standard-library/multimap-class.md), e [multiset](../standard-library/multiset-class.md) degenerato & più casi.
 
 ```cpp
 map<string, string> apple_color;
@@ -35,17 +35,17 @@ map<string, string> apple_color;
 apple_color["Granny Smith"] = "Green";
 ```
 
-Quando è necessario ottimizzare le prestazioni, utilizzare:
+Quando è necessario ottimizzare le prestazioni, è consigliabile usare:
 
-- Il [matrice](../standard-library/array-class-stl.md) del tipo durante l'incorporamento è importante, ad esempio, un membro di classe.
+- Il [matrice](../standard-library/array-class-stl.md) del tipo durante l'incorporamento è importante, ad esempio un membro di classe.
 
-- Contenitori associativi non ordinati, ad esempio [unordered_map](../standard-library/unordered-map-class.md). Questi hanno elemento inferiore overhead e ricerca a tempo costante, ma può essere difficile da usare in modo corretto ed efficiente.
+- Contenitori associativi non ordinati, ad esempio [unordered_map](../standard-library/unordered-map-class.md). Hanno un sovraccarico inferiore per ogni elemento e ricerca a tempo costante, ma può essere più difficile da usare in modo corretto ed efficiente.
 
-- Ordinati **vettore**. Per altre informazioni, vedere [Algoritmi](../cpp/algorithms-modern-cpp.md).
+- Ordinati `vector`. Per altre informazioni, vedere [Algoritmi](../cpp/algorithms-modern-cpp.md).
 
-Non utilizzare matrici di tipo C. Per le API precedenti che necessitano accesso diretto ai dati, utilizzare i metodi della funzione di accesso, ad esempio `f(vec.data(), vec.size());` invece.
+Non usare matrici di tipo C. Per le API precedenti che devono accedere ai dati direttamente, usare i metodi della funzione di accesso, ad esempio `f(vec.data(), vec.size());` invece.
 
-Per ulteriori informazioni sui contenitori, vedere [contenitori della libreria Standard C++](../standard-library/stl-containers.md).
+Per altre informazioni sui contenitori, vedere [i contenitori della libreria Standard C++](../standard-library/stl-containers.md).
 
 ## <a name="see-also"></a>Vedere anche
 

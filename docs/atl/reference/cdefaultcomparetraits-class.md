@@ -1,5 +1,5 @@
 ---
-title: Classe CDefaultCompareTraits | Documenti Microsoft
+title: Classe CDefaultCompareTraits | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c5b06bf475c60c0190fc6ab78f4357e1b247f1d8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5ed197cc1f18821b65c249ee15a7e75f54fc7a32
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32361639"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37884766"
 ---
 # <a name="cdefaultcomparetraits-class"></a>Classe CDefaultCompareTraits
 Questa classe fornisce funzioni di confronto di elemento predefinite.  
@@ -37,7 +37,7 @@ class CDefaultCompareTraits
 ```  
   
 #### <a name="parameters"></a>Parametri  
- `T`  
+ *T*  
  Il tipo di dati da archiviare nella raccolta.  
   
 ## <a name="members"></a>Membri  
@@ -46,49 +46,49 @@ class CDefaultCompareTraits
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[CDefaultCompareTraits::CompareElements](#compareelements)|(Statico) Chiamare questa funzione per confrontare due elementi per stabilirne l'uguaglianza.|  
-|[CDefaultCompareTraits::CompareElementsOrdered](#compareelementsordered)|(Statico) Chiamare questa funzione per determinare l'elemento superiore e inferiore.|  
+|[CDefaultCompareTraits::CompareElements](#compareelements)|(Statico) Chiamare questa funzione per confrontare due elementi per verificarne l'uguaglianza.|  
+|[CDefaultCompareTraits::CompareElementsOrdered](#compareelementsordered)|(Statico) Chiamare questa funzione per determinare l'elemento supera e inferiore.|  
   
 ## <a name="remarks"></a>Note  
- Questa classe contiene due funzioni statiche per il confronto di elementi archiviati in un oggetto di classe di raccolta. Questa classe viene utilizzata per la [CDefaultElementTraits classe](../../atl/reference/cdefaultelementtraits-class.md).  
+ Questa classe contiene due funzioni statiche per il confronto di elementi archiviati in un oggetto di classe di raccolta. Questa classe viene utilizzata per la [classe CDefaultElementTraits](../../atl/reference/cdefaultelementtraits-class.md).  
   
- Per ulteriori informazioni, vedere [classi Collection ATL](../../atl/atl-collection-classes.md).  
+ Per altre informazioni, vedere [classi Collection ATL](../../atl/atl-collection-classes.md).  
   
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** atlcoll. h  
   
 ##  <a name="compareelements"></a>  CDefaultCompareTraits::CompareElements  
- Chiamare questa funzione per confrontare due elementi per stabilirne l'uguaglianza.  
+ Chiamare questa funzione per confrontare due elementi per verificarne l'uguaglianza.  
   
 ```
 static bool CompareElements(const T& element1, const T& element2);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `element1`  
+ *Element1*  
  Primo elemento.  
   
- `element2`  
+ *Elemento2*  
  Il secondo elemento.  
   
 ### <a name="return-value"></a>Valore restituito  
- Restituisce true se gli elementi sono uguali, false in caso contrario.  
+ Restituisce true se gli elementi sono uguali e false in caso contrario.  
   
 ### <a name="remarks"></a>Note  
- L'implementazione predefinita di questa funzione è l'uguaglianza ( `==`) (operatore). Per gli oggetti diversi dai tipi di dati semplice, questa funzione potrebbe essere necessario eseguire l'override.  
+ L'implementazione predefinita di questa funzione è l'uguaglianza (**==**) operatore. Per gli oggetti diversi da tipi di dati semplici, questa funzione potrebbe essere necessario eseguire l'override.  
   
 ##  <a name="compareelementsordered"></a>  CDefaultCompareTraits::CompareElementsOrdered  
- Chiamare questa funzione per determinare l'elemento superiore e inferiore.  
+ Chiamare questa funzione per determinare l'elemento supera e inferiore.  
   
 ```
 static int CompareElementsOrdered(const T& element1, const T& element2);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `element1`  
+ *Element1*  
  Primo elemento.  
   
- `element2`  
+ *Elemento2*  
  Il secondo elemento.  
   
 ### <a name="return-value"></a>Valore restituito  
@@ -96,12 +96,12 @@ static int CompareElementsOrdered(const T& element1, const T& element2);
   
 |Condizione|Valore restituito|  
 |---------------|------------------|  
-|`element1` < `element2`|<0|  
-|`element1` == `element2`|0|  
-|`element1` > `element2`|>0|  
+|*element1* < *Elemento2*|<0|  
+|*element1* == *Elemento2*|0|  
+|*element1* > *Elemento2*|>0|  
   
 ### <a name="remarks"></a>Note  
- L'implementazione predefinita di questa funzione utilizza il `==`, **\<**, e **>** operatori. Per gli oggetti diversi dai tipi di dati semplice, questa funzione potrebbe essere necessario eseguire l'override.  
+ L'implementazione predefinita di questa funzione utilizza il **==**, **\<**, e **>** operatori. Per gli oggetti diversi da tipi di dati semplici, questa funzione potrebbe essere necessario eseguire l'override.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Cenni preliminari sulla classe](../../atl/atl-class-overview.md)
+ [Panoramica della classe](../../atl/atl-class-overview.md)

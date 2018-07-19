@@ -1,5 +1,5 @@
 ---
-title: Macro di messaggi di Windows | Documenti Microsoft
+title: Macro di messaggi di Windows | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,14 +14,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 21bb273b94f871e253ab927238c96256f46e2b3a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3063dd1bb5bbd9c0eb957b9727027b2d01edfd7d
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32360217"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37886206"
 ---
-# <a name="windows-messages-macros"></a>Macro di messaggi di Windows
+# <a name="windows-messages-macros"></a>Macro di messaggi Windows
 Questa macro inoltra i messaggi della finestra.  
   
 |||  
@@ -39,10 +39,10 @@ WM_FORWARDMSG
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- Diverso da zero se il messaggio è stato elaborato, se non lo zero.  
+ Diverso da zero se il messaggio è stato elaborato, zero se non.  
   
 ### <a name="remarks"></a>Note  
- Utilizzare `WM_FORWARDMSG` per inoltrare un messaggio ricevuto da una finestra a un'altra finestra per l'elaborazione. I parametri LPARAM e WPARAM vengono utilizzati come indicato di seguito:  
+ Usare WM_FORWARDMSG per inoltrare un messaggio ricevuto da una finestra a un'altra finestra per l'elaborazione. I parametri LPARAM e WPARAM vengono usati come segue:  
   
 |Parametro|Utilizzo|  
 |---------------|-----------|  
@@ -50,7 +50,7 @@ WM_FORWARDMSG
 |LPARAM|Un puntatore a un `MSG` struttura che contiene informazioni su un messaggio|  
   
 ### <a name="example"></a>Esempio  
- Nell'esempio seguente, `m_hWndOther` rappresenta l'altra finestra che riceve il messaggio.  
+ Nell'esempio seguente, `m_hWndOther` rappresenta l'altra finestra che riceve questo messaggio.  
   
  [!code-cpp[NVC_ATL_Windowing#137](../../atl/codesnippet/cpp/windows-messages-macros_1.cpp)]  
   

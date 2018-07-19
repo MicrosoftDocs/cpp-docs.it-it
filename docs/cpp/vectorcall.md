@@ -1,5 +1,5 @@
 ---
-title: vectorcall | Documenti Microsoft
+title: vectorcall | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,32 +12,32 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 29c202a888d4c741a9a9fb54a84109100038d32a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c05707f3d6d6e323bf9605c3c742f6bef417d817
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32424734"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37939780"
 ---
 # <a name="vectorcall"></a>__vectorcall
 **Sezione specifica Microsoft**  
   
- La convenzione di chiamata `__vectorcall` specifica che gli argomenti alle funzioni devono essere passati nei registri, quando possibile. `__vectorcall` utilizza per gli argomenti di più registri [fastcall](../cpp/fastcall.md) o il valore predefinito [convenzione di chiamata x64](../build/overview-of-x64-calling-conventions.md) utilizzare. La convenzione di chiamata `__vectorcall` è supportata solo nel codice nativo su processori x86 e x64 che includono Streaming SIMD Extensions 2 (SSE2) e versioni successive. Utilizzare `__vectorcall` per velocizzare le funzioni che passano più argomenti a virgola mobile o vettoriali SIMD ed eseguono operazioni che sfruttano gli argomenti caricati nei registri. Nell'elenco seguente sono indicate le funzionalità comuni alle implementazioni x86 e x64 di `__vectorcall`. Le differenze sono descritte più avanti in questo articolo.  
+ La convenzione di chiamata `__vectorcall` specifica che gli argomenti alle funzioni devono essere passati nei registri, quando possibile. `__vectorcall` utilizza i registri più argomenti rispetto [fastcall](../cpp/fastcall.md) o il valore predefinito [convenzione di chiamata x64](../build/overview-of-x64-calling-conventions.md) usare. La convenzione di chiamata `__vectorcall` è supportata solo nel codice nativo su processori x86 e x64 che includono Streaming SIMD Extensions 2 (SSE2) e versioni successive. Utilizzare `__vectorcall` per velocizzare le funzioni che passano più argomenti a virgola mobile o vettoriali SIMD ed eseguono operazioni che sfruttano gli argomenti caricati nei registri. Nell'elenco seguente sono indicate le funzionalità comuni alle implementazioni x86 e x64 di `__vectorcall`. Le differenze sono descritte più avanti in questo articolo.  
   
 |Elemento|Implementazione|  
 |-------------|--------------------|  
 |Convenzione della decorazione dei nomi C|Nei nomi delle funzioni vengono utilizzati come suffisso due segni di chiocciola (@@) seguiti dal numero di byte (in decimali) nell'elenco dei parametri.|  
 |Convenzione della conversione maiuscolo/minuscolo e viceversa|Non viene effettuata alcuna conversione maiuscolo/minuscolo.|  
   
- Utilizzando il [/Gv](../build/reference/gd-gr-gv-gz-calling-convention.md) l'opzione del compilatore, ogni funzione nel modulo viene compilata come `__vectorcall` , a meno che la funzione è una funzione membro, viene dichiarato con un attributo di convenzione di chiamata in conflitto, viene utilizzato un `vararg` variabile elenco di argomenti, o il nome `main`.  
+ Usando il [/Gv](../build/reference/gd-gr-gv-gz-calling-convention.md) l'opzione del compilatore, ogni funzione nel modulo viene compilata come `__vectorcall` , a meno che la funzione è una funzione membro, viene dichiarata con un attributo di convenzione di chiamata in conflitto, viene utilizzato un `vararg` variabile elenco di argomenti, o con il nome `main`.  
   
- È possibile passare tre tipi di argomenti per registrare in `__vectorcall` funzioni: *tipo integer* valori, *vector tipo* valori, e *aggregazione vettore omogenea* (HVA ) i valori.  
+ È possibile passare tre tipi di argomenti per registrare in `__vectorcall` funzioni: *tipo integer* valori *vettori di tipo* valori, e *aggregazione vettore omogenei* hva (Homogeneous ) i valori.  
   
- Un tipo Integer risponde a due requisiti, ovvero si adatta alle dimensioni native del registro del processore, ad esempio 4 byte in un computer x86 o 8 byte in un computer x64, ed è convertibile in un numero intero della lunghezza del registro e viceversa senza modificarne la rappresentazione di bit. Ad esempio, qualsiasi tipo che può essere trasformato in `int` su computer x86 (`long long` su computer x64), quale un tipo `char` o `short`, o di cui è possibile eseguire il cast in `int` (`long long` su computer x64) e di nuovo nel tipo originale senza modifiche è un tipo Integer. I tipi Integer includono il puntatore, il riferimento e i tipi `struct` o i tipi `union` di 4 byte (8 byte in x64) o meno. Su piattaforme x64 i tipi `struct` e i tipi `union` di dimensioni maggiori vengono passati per riferimento alla memoria allocata dal chiamante, mentre su piattaforme x86 vengono passati per valore nello stack.  
+ Un tipo Integer risponde a due requisiti, ovvero si adatta alle dimensioni native del registro del processore, ad esempio 4 byte in un computer x86 o 8 byte in un computer x64, ed è convertibile in un numero intero della lunghezza del registro e viceversa senza modificarne la rappresentazione di bit. Ad esempio, qualsiasi tipo che può essere promosso al **int** x86 (**long long** su x64), ad esempio, una **char** o **breve**, o che può essere convertito in **int** (**long long** su x64) ed eseguire il relativo tipo originale senza modifiche è un tipo integer. Tipi integer includono il puntatore, riferimento, e **struct** oppure **union** i tipi di 4 byte (8 byte in x64) o meno. In x64 piattaforme, più grande **struct** e **union** tipi vengono passati per riferimento alla memoria allocata dal chiamante; x86 piattaforme, vengono passati per valore nello stack.  
   
- Un tipo vettore può essere a virgola mobile, ad esempio `float` o `double`, oppure SIMD, ad esempio `__m128` o `__m256`.  
+ Un tipo vettore è un tipo a virgola mobile, ovvero, ad esempio, un **float** o **double**, o un tipo di vettore SIMD, ad esempio, **__m128** o **__m256**.  
   
- Un tipo HVA è un tipo composto da membri dati (fino a quattro) con tipi vettore identici. Un tipo HVA ha lo stesso requisito di allineamento del tipo vettore dei relativi membri. Questo è un esempio di definizione `struct` di un tipo HVA contenente tre tipi vettore identici e allineamento a 32 byte:  
+ Un tipo HVA è un tipo composto da membri dati (fino a quattro) con tipi vettore identici. Un tipo HVA ha lo stesso requisito di allineamento del tipo vettore dei relativi membri. Questo è un esempio di un tipo HVA **struct** definizione contenente tre tipi vettore identici e allineamento a 32 byte:  
   
 ```cpp  
 typedef struct {  
@@ -50,7 +50,7 @@ typedef struct {
   
  Dichiarare le funzioni in modo esplicito con la parola chiave `__vectorcall` nei file di intestazione per consentire il collegamento senza errori del codice compilato separatamente. Per utilizzare `__vectorcall`, le funzioni devono avere un prototipo e non possono utilizzare un elenco di argomenti a lunghezza variabile `vararg`.  
   
- Una funzione membro può essere dichiarata tramite l'identificatore `__vectorcall`. Il puntatore `this` nascosto viene passato per registro come primo argomento di tipo Integer.  
+ Una funzione membro può essere dichiarata tramite l'identificatore `__vectorcall`. Nascosto **ciò** puntatore viene passato per registro come primo argomento di tipo integer.  
   
  Nei computer ARM `__vectorcall` viene accettato e ignorato dal compilatore.  
   
@@ -74,7 +74,7 @@ void MyClass::mymethod() { return; }
 void __vectorcall MyClass::mymethod() { return; }  
 ```  
   
- Il modificatore della convenzione di chiamata `__vectorcall` deve essere specificato quando viene creato un puntatore a una funzione `__vectorcall`. Nell'esempio successivo viene creato un oggetto `typedef` per un puntatore a una funzione `__vectorcall` che accetta quattro argomenti `double` e restituisce un valore `__m256`:  
+ Il modificatore della convenzione di chiamata `__vectorcall` deve essere specificato quando viene creato un puntatore a una funzione `__vectorcall`. L'esempio successivo crea un **typedef** per un puntatore a un `__vectorcall` funzione che accetta quattro **double** argomenti e restituisce un **__m256** valore:  
   
 ```cpp  
 typedef __m256 (__vectorcall * vcfnptr)(double, double, double, double);  
@@ -83,11 +83,11 @@ typedef __m256 (__vectorcall * vcfnptr)(double, double, double, double);
 ## <a name="vectorcall-convention-on-x64"></a>Convenzione __vectorcall su piattaforme x64  
  La convenzione di chiamata `__vectorcall` su piattaforme x64 estende la convenzione di chiamata standard x64 per sfruttare i registri aggiuntivi. Sia gli argomenti tipo Integer che gli argomenti tipo vettore vengono mappati ai registri in base alla posizione nell'elenco di argomenti. Gli argomenti HVA vengono allocati nei registri vettoriali inutilizzati.  
   
- Quando uno dei primi quattro argomenti, in ordine da sinistra a destra, sono argomenti di tipo Integer, vengono passati nel registro corrispondente a tale posizione, ovvero RCX, RDX, R8 o R9. Un puntatore nascosto `this` viene trattato come primo argomento di tipo Integer. Quando un argomento HVA in uno dei primi quattro argomenti non può essere passato nei registri disponibili, viene invece passato un riferimento alla memoria allocata dal chiamante nel registro dei tipi Integer corrispondente. Gli argomenti tipo Integer dopo la posizione del quarto parametro vengono passati allo stack.  
+ Quando uno dei primi quattro argomenti, in ordine da sinistra a destra, sono argomenti tipo Integer, vengono passati nel registro corrispondente a tale posizione, ovvero RCX, RDX, R8 o R9. Nascosta **ciò** puntatore viene trattato come primo argomento di tipo integer. Quando un argomento HVA in uno dei primi quattro argomenti non può essere passato nei registri disponibili, viene invece passato un riferimento alla memoria allocata dal chiamante nel registro dei tipi Integer corrispondente. Gli argomenti tipo Integer dopo la posizione del quarto parametro vengono passati allo stack.  
   
- Quando uno dei primi sei argomenti, in ordine da sinistra a destra, sono argomenti tipo vettore, vengono passati per valore nei registri vettoriali SSE da 0 a 5 in base alla posizione dell'argomento. I tipi a virgola mobile e `__m128` vengono passati nei registri XMM, mentre i tipi `__m256` vengono passati nei registri YMM. In questo caso esiste una differenza rispetto alla convenzione di chiamata x64 standard, poiché i tipi vettore sono passati per valore anziché per riferimento e vengono utilizzati registri aggiuntivi. Lo spazio dello shadow stack allocato per gli argomenti di tipo vettore è fissato a 8 byte e [/homeparams](../build/reference/homeparams-copy-register-parameters-to-stack.md) opzione non è valida. Gli argomenti tipo vettore nelle posizioni del settimo parametro e successive vengono passati nello stack per riferimento alla memoria allocata dal chiamante.  
+ Quando uno dei primi sei argomenti, in ordine da sinistra a destra, sono argomenti tipo vettore, vengono passati per valore nei registri vettoriali SSE da 0 a 5 in base alla posizione dell'argomento. A virgola mobile e **__m128** tipi vengono passati nei registri XMM, e **__m256** tipi vengono passati in YMM Registra. In questo caso esiste una differenza rispetto alla convenzione di chiamata x64 standard, poiché i tipi vettore sono passati per valore anziché per riferimento e vengono utilizzati registri aggiuntivi. Lo spazio dello shadow stack allocato per gli argomenti tipo vettore è fissato a 8 byte e il [/homeparams](../build/reference/homeparams-copy-register-parameters-to-stack.md) opzione non è valida. Gli argomenti tipo vettore nelle posizioni del settimo parametro e successive vengono passati nello stack per riferimento alla memoria allocata dal chiamante.  
   
- Dopo che i registri sono stati allocati per gli argomenti vettoriali, i membri dati degli argomenti HVA vengono allocati in ordine crescente ai registri vettoriali inutilizzati da XMM0 a XMM5 (o da YMM0 a YMM5), per i tipi `__m256`), finché sono disponibili registri sufficienti per l'intero HVA. Se non sono disponibili registri sufficienti, l'argomento HVA verrà passato per riferimento alla memoria allocata dal chiamante. Lo spazio dello shadow stack per un argomento HVA è fissato a 8 byte con contenuto non definito. Gli argomenti HVA vengono assegnati ai registri in ordine da sinistra a destra nell'elenco dei parametri e possono trovarsi in qualsiasi posizione. Gli argomenti HVA in una delle prime quattro posizioni non assegnati ai registri vettoriali vengono passati per riferimento nel registro di tipi Integer corrispondente a tale posizione. Gli argomenti HVA passati per riferimento dopo la posizione del quarto parametro vengono inseriti nello stack.  
+ Dopo che i registri sono stati allocati per gli argomenti vettoriali, i membri dati degli argomenti HVA vengono allocati, in ordine crescente ai registri vettoriali inutilizzati XMM0 a XMM5 (o da YMM0 a YMM5, per **__m256** tipi), finché sono disponibili registri sufficienti è disponibile per l'intero HVA. Se non sono disponibili registri sufficienti, l'argomento HVA verrà passato per riferimento alla memoria allocata dal chiamante. Lo spazio dello shadow stack per un argomento HVA è fissato a 8 byte con contenuto non definito. Gli argomenti HVA vengono assegnati ai registri in ordine da sinistra a destra nell'elenco dei parametri e possono trovarsi in qualsiasi posizione. Gli argomenti HVA in una delle prime quattro posizioni non assegnati ai registri vettoriali vengono passati per riferimento nel registro di tipi Integer corrispondente a tale posizione. Gli argomenti HVA passati per riferimento dopo la posizione del quarto parametro vengono inseriti nello stack.  
   
  Quando possibile, i risultati di funzioni `__vectorcall` sono restituiti per valore in registri. I risultati di tipo Integer, inclusi i valori struct o union di 8 byte o meno, vengono restituiti per valore in RAX. I risultati di tipo vettore vengono restituiti per valore in XMM0 o in YMM0, a seconda della dimensione. Nei risultati HVA ogni elemento dati viene restituito per valore nei registri da XMM0 a XMM3 o da YMM0 a YMM3, in base alle dimensioni dell'elemento. I tipi di risultati che non rientrano nei registri corrispondenti vengono restituiti per riferimento alla memoria allocata dal chiamante.  
   
@@ -191,13 +191,13 @@ int __cdecl main( void )
 ```  
   
 ## <a name="vectorcall-convention-on-x86"></a>Convenzione __vectorcall su piattaforme x86  
- La convenzione di chiamata `__vectorcall` segue la convenzione `__fastcall` per gli argomenti di tipo Integer a 32 bit e sfrutta i vantaggi dei registri vettoriali SSE per il tipo vettore e gli argomenti HVA.  
+ Il `__vectorcall` segue convenzione di chiamata il **fastcall** convenzione per gli argomenti di tipo integer a 32 bit e sfrutta i vantaggi dei registri vettoriali SSE per tipo vettore e gli argomenti HVA.  
   
- I primi due argomenti di tipo Integer presenti nell'elenco di parametri da sinistra a destra vengono inseriti rispettivamente in ECX e in EDX. Un puntatore nascosto `this` viene trattato come primo argomento di tipo Integer e viene passato in ECX. I primi sei argomenti di tipo vettore vengono passati per valore attraverso i registri vettoriali SSE da 0 - 5 oppure nei registri YMM o XMM in base alle dimensioni dell'argomento.  
+ I primi due argomenti tipo Integer presenti nell'elenco di parametri da sinistra a destra vengono inseriti rispettivamente in ECX e in EDX. Nascosta **ciò** puntatore viene trattato come primo argomento di tipo integer e viene passato in ECX. I primi sei argomenti tipo vettore vengono passati per valore attraverso i registri vettoriali SSE da 0 - 5 oppure nei registri YMM o XMM in base alle dimensioni dell'argomento.  
   
- I primi sei argomenti di tipo vettore, in ordine da sinistra a destra, vengono passati per valore nei registri vettoriali SSE da 0 a 5. I tipi a virgola mobile e `__m128` vengono passati nei registri XMM, mentre i tipi `__m256` vengono passati nei registri YMM. Nessuno spazio dello shadow stack viene allocato per gli argomenti tipo vettore passati dal registro. Il settimo argomento tipo vettore e quelli successivi vengono passati nello stack per riferimento alla memoria allocata dal chiamante. La limitazione dell'errore del compilatore [C2719](../error-messages/compiler-errors-2/compiler-error-c2719.md) non si applica a questi argomenti.  
+ I primi sei argomenti tipo vettore, in ordine da sinistra a destra, vengono passati per valore nei registri vettoriali SSE da 0 a 5. A virgola mobile e **__m128** tipi vengono passati nei registri XMM, e **__m256** tipi vengono passati in YMM Registra. Nessuno spazio dello shadow stack viene allocato per gli argomenti tipo vettore passati dal registro. Il settimo argomento tipo vettore e quelli successivi vengono passati nello stack per riferimento alla memoria allocata dal chiamante. La limitazione dell'errore del compilatore [C2719](../error-messages/compiler-errors-2/compiler-error-c2719.md) non si applica a questi argomenti.  
   
- Dopo che i registri sono stati allocati per gli argomenti vettoriali, i membri dati degli argomenti HVA vengono allocati in ordine crescente ai registri vettoriali inutilizzati da XMM0 a XMM5 (o da YMM0 a YMM5), per i tipi `__m256`), finché sono disponibili registri sufficienti per l'intero HVA. Se non sono disponibili registri sufficienti, l'argomento HVA verrà passato sullo stack per riferimento alla memoria allocata dal chiamante. Nessuno spazio dello stack shadow viene allocato per un argomento HVA. Gli argomenti HVA vengono assegnati ai registri in ordine da sinistra a destra nell'elenco dei parametri e possono trovarsi in qualsiasi posizione.  
+ Dopo che i registri sono stati allocati per gli argomenti vettoriali, i dati i membri degli argomenti HVA vengono allocati in ordine crescente a vettoriali inutilizzati registra XMM0 a XMM5 (o da YMM0 a YMM5, per **__m256** tipi), finché sono disponibili registri sufficienti è disponibile per l'intero HVA. Se non sono disponibili registri sufficienti, l'argomento HVA verrà passato sullo stack per riferimento alla memoria allocata dal chiamante. Nessuno spazio dello stack shadow viene allocato per un argomento HVA. Gli argomenti HVA vengono assegnati ai registri in ordine da sinistra a destra nell'elenco dei parametri e possono trovarsi in qualsiasi posizione.  
   
  Quando possibile, i risultati di funzioni `__vectorcall` sono restituiti per valore in registri. I risultati di tipo Integer, inclusi i valori struct o union di 4 byte o meno, vengono restituiti per valore in EAX. I valori struct o union di tipo Integer di 8 byte o meno vengono restituiti per valore nei registri da EDX a EAX. I risultati di tipo vettore vengono restituiti per valore in XMM0 o in YMM0, a seconda della dimensione. Nei risultati HVA ogni elemento dati viene restituito per valore nei registri da XMM0 a XMM3 o da YMM0 a YMM3, in base alle dimensioni dell'elemento. Altri tipi di risultati vengono restituiti per riferimento alla memoria allocata dal chiamante.  
   

@@ -1,5 +1,5 @@
 ---
-title: Classe COleLinksDialog | Documenti Microsoft
+title: Classe COleLinksDialog | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fb24b73ba23b430e29ed9144e51372eefdb673a3
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 5dd17c0541b573cba40146c55b46d14143209c87
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37042534"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37853878"
 ---
 # <a name="colelinksdialog-class"></a>Classe COleLinksDialog
 Utilizzato per la finestra di dialogo di modifica collegamenti OLE.  
@@ -56,17 +56,17 @@ class COleLinksDialog : public COleDialog
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[COleLinksDialog::m_el](#m_el)|Una struttura di tipo **OLEUIEDITLINKS** che controlla il comportamento della finestra di dialogo.|  
+|[COleLinksDialog::m_el](#m_el)|Una struttura di tipo OLEUIEDITLINKS che controlla il comportamento della finestra di dialogo.|  
   
 ## <a name="remarks"></a>Note  
- Creare un oggetto della classe `COleLinksDialog` quando si desidera chiamare questa finestra di dialogo. Dopo un `COleLinksDialog` oggetto una volta creato, è possibile usare il [m_el](#m_el) struttura per inizializzare i valori o stati dei controlli nella finestra di dialogo. Il `m_el` struttura è di tipo **OLEUIEDITLINKS**. Per ulteriori informazioni sull'utilizzo di questa classe di finestra di dialogo, vedere la [DoModal](#domodal) funzione membro.  
+ Creare un oggetto della classe `COleLinksDialog` quando si desidera chiamare questa finestra di dialogo. Dopo una `COleLinksDialog` oggetto è stato costruito, è possibile usare il [m_el](#m_el) struttura per inizializzare i valori o degli stati dei controlli nella finestra di dialogo. Il `m_el` struttura è di tipo OLEUIEDITLINKS. Per altre informazioni sull'uso di questa classe di finestra di dialogo, vedere la [DoModal](#domodal) funzione membro.  
   
 > [!NOTE]
->  Codice dell'applicazione contenitore generato dalla procedura guidata utilizza questa classe.  
+>  Il codice dell'applicazione contenitore generato dalla procedura guidata Usa questa classe.  
   
- Per altre informazioni, vedere la [OLEUIEDITLINKS](http://msdn.microsoft.com/library/windows/desktop/ms678492) struttura in Windows SDK.  
+ Per altre informazioni, vedere la [OLEUIEDITLINKS](http://msdn.microsoft.com/library/windows/desktop/ms678492) struttura nel SDK di Windows.  
   
- Per ulteriori informazioni sulla finestra di dialogo OLE specifici, vedere l'articolo [finestre di dialogo in OLE](../../mfc/dialog-boxes-in-ole.md).  
+ Per altre informazioni sulle finestre di dialogo OLE specifici, vedere l'articolo [finestre di dialogo in OLE](../../mfc/dialog-boxes-in-ole.md).  
   
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -94,16 +94,16 @@ virtual INT_PTR DoModal();
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- Stato di completamento per la finestra di dialogo. Uno dei valori seguenti:  
+ Stato di completamento della finestra di dialogo. Uno dei valori seguenti:  
   
-- **IDOK** se la finestra di dialogo è stata visualizzata correttamente.  
+- IDOK se la finestra di dialogo viene visualizzata correttamente.  
   
-- **IDCANCEL** se l'utente ha annullato la finestra di dialogo.  
+- IDCANCEL, se l'utente ha annullato la finestra di dialogo.  
   
-- **IDABORT** se si è verificato un errore. Se **IDABORT** viene restituito, chiamare il `COleDialog::GetLastError` funzione membro per ottenere ulteriori informazioni sul tipo di errore che si sono verificati. Per un elenco dei possibili errori, vedere la [OleUIEditLinks](http://msdn.microsoft.com/library/windows/desktop/ms679703) (funzione) in Windows SDK.  
+- IDABORT se si è verificato un errore. Se viene restituito IDABORT, chiamare il `COleDialog::GetLastError` funzione membro per ottenere altre informazioni sul tipo di errore che si sono verificati. Per un elenco dei possibili errori, vedere la [OleUIEditLinks](http://msdn.microsoft.com/library/windows/desktop/ms679703) funzione nel SDK di Windows.  
   
 ### <a name="remarks"></a>Note  
- Se si desidera inizializzare i vari controlli di finestra di dialogo mediante impostazione dei membri del [m_el](#m_el) struttura, è consigliabile eseguirla prima di chiamare `DoModal`, ma dopo che l'oggetto finestra di dialogo viene costruito.  
+ Se si desidera inizializzare i vari controlli di finestra di dialogo impostando i membri del [m_el](#m_el) struttura, è consigliabile farlo prima di chiamare `DoModal`, ma dopo che viene costruito l'oggetto finestra di dialogo.  
   
 ##  <a name="colelinksdialog"></a>  COleLinksDialog::COleLinksDialog  
  Costruisce un oggetto `COleLinksDialog`.  
@@ -118,22 +118,22 @@ COleLinksDialog (
   
 ### <a name="parameters"></a>Parametri  
  *pDoc*  
- Punta al documento OLE che contiene i collegamenti per essere modificato.  
+ Punta al documento OLE che contiene i collegamenti da modificare.  
   
  *pView*  
- Dei punti di visualizzazione corrente *pDoc*.  
+ Punti di visualizzazione corrente *pDoc*.  
   
  *dwFlags*  
- Flag di creazione, che contiene i valori validi sono 0 oppure **ELF_SHOWHELP** per specificare se il pulsante della Guida verrà visualizzato quando viene visualizzata la finestra di dialogo.  
+ Flag di creazione, che contiene 0 o ELF_SHOWHELP per specificare se il pulsante della Guida verrà visualizzato quando viene visualizzata la finestra di dialogo.  
   
  *pParentWnd*  
- Punta all'oggetto finestra padre o proprietaria (di tipo `CWnd`) a cui appartiene l'oggetto finestra di dialogo. Se si tratta **NULL**, la finestra padre della finestra di dialogo è impostata per la finestra principale dell'applicazione.  
+ Punta all'oggetto finestra padre o proprietaria (di tipo `CWnd`) a cui appartiene l'oggetto finestra di dialogo. Se è NULL, la finestra padre della finestra di dialogo è impostata per la finestra principale dell'applicazione.  
   
 ### <a name="remarks"></a>Note  
  Questa funzione crea solo un `COleLinksDialog` oggetto. Per visualizzare la finestra di dialogo, chiamare il [DoModal](#domodal) (funzione).  
   
 ##  <a name="m_el"></a>  COleLinksDialog::m_el  
- Struttura di tipo **OLEUIEDITLINKS** consentono di controllare il comportamento della finestra di dialogo Modifica collegamenti.  
+ Struttura di tipo OLEUIEDITLINKS consentono di controllare il comportamento della finestra di dialogo Modifica collegamenti.  
   
 ```  
 OLEUIEDITLINKS m_el;  
@@ -142,7 +142,7 @@ OLEUIEDITLINKS m_el;
 ### <a name="remarks"></a>Note  
  I membri di questa struttura possono essere modificati direttamente o tramite le funzioni membro.  
   
- Per altre informazioni, vedere la [OLEUIEDITLINKS](http://msdn.microsoft.com/library/windows/desktop/ms678492) struttura in Windows SDK.  
+ Per altre informazioni, vedere la [OLEUIEDITLINKS](http://msdn.microsoft.com/library/windows/desktop/ms678492) struttura nel SDK di Windows.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Classe COleDialog](../../mfc/reference/coledialog-class.md)   

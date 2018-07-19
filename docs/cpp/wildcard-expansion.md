@@ -1,5 +1,5 @@
 ---
-title: Espansione di caratteri jolly | Documenti Microsoft
+title: Espansione di caratteri jolly | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,18 +21,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bb58d5da479d686cac0d18c9d36e500bd6b5a632
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7f4de54cbbe978534a42dcb9cbfa677eb1597aa5
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32420650"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37939136"
 ---
 # <a name="wildcard-expansion"></a>Espansione di caratteri jolly
 ## <a name="microsoft-specific"></a>Sezione specifica Microsoft  
  È possibile usare caratteri jolly, ovvero il punto interrogativo (?) e l'asterisco (*), per specificare gli argomenti del percorso e del nome del file nella riga di comando.  
   
- Gli argomenti della riga di comando vengono gestiti da una routine denominata **Setargv** (o **Wsetargv** nell'ambiente a caratteri wide), che per impostazione predefinita non consente di espandere i caratteri jolly in stringhe separate nella `argv`matrice di stringhe. Per ulteriori informazioni sull'abilitazione di espansione di caratteri jolly, vedere [espansione degli argomenti jolly](../c-language/expanding-wildcard-arguments.md).  
+ Gli argomenti della riga di comando vengono gestiti da una routine denominata `_setargv` (o `_wsetargv` nell'ambiente di caratteri "wide"), che per impostazione predefinita non espande i caratteri jolly in stringhe separate nella `argv` matrice di stringhe. Per altre informazioni sull'abilitazione dell'espansione di caratteri jolly, consultare [espansione di argomenti con caratteri jolly](../c-language/expanding-wildcard-arguments.md).  
   
 **Fine sezione specifica Microsoft**  
   

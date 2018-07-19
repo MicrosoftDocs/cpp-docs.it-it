@@ -1,5 +1,5 @@
 ---
-title: unaligned | Documenti Microsoft
+title: unaligned | Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2018
 ms.technology:
@@ -16,22 +16,22 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d73b082b9f41d03eb0b1a8c9fe772351ff4da91f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2a7a9de35e225dabadbf9f4a3731f6d57fd9e99a
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32420915"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37940413"
 ---
 # <a name="unaligned"></a>__unaligned
 
-**Sezione specifica Microsoft**. Quando si dichiara un puntatore con il modificatore `__unaligned`, il compilatore presuppone che il puntatore faccia riferimento a dati non allineati. Di conseguenza, appropriata per la piattaforma di codice viene generato per la gestione di operazioni di lettura non allineati e scrive tramite il puntatore.
+**Sezione specifica Microsoft**. Quando si dichiara un puntatore con il **unaligned** modificatore, il compilatore presuppone che il puntatore faccia riferimento a dati che non sono allineati. Di conseguenza, appropriata per la piattaforma di codice viene generato per gestire letture non allineate e scrive tramite il puntatore del mouse.
 
 ## <a name="remarks"></a>Note
 
-Questo modificatore descrive l'allineamento dei dati a cui punta il puntatore; si presuppone che il puntatore stesso essere allineati.
+Questo modificatore descrive l'allineamento dei dati di cui il puntatore; si presuppone che il puntatore stesso essere allineati.
 
-La necessità di `__unaligned` parola chiave si differenzia dall'ambiente e della piattaforma. Errore per contrassegnare i dati in modo appropriato può provocare problemi comprese tra prestazioni e gli errori hardware. Il `__unaligned` modificatore non è valido per x86 piattaforma.
+La necessità per il **unaligned** parola chiave varia a seconda della piattaforma e l'ambiente. Errore per contrassegnare i dati in modo appropriato può comportare problemi compreso tra le penalizzazioni delle prestazioni agli errori hardware. Il **unaligned** modificatore non valido per x86 piattaforma.
 
 Per ulteriori informazioni sull'allineamento, vedere:
 

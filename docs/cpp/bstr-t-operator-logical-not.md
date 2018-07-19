@@ -18,17 +18,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a320b02bb97c4f6b506e23a7dc93b36c22421aec
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5408cf05910bdc1802213d69a286707199f0be76
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32409761"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37940230"
 ---
 # <a name="bstrtoperator-"></a>_bstr_t::operator !
 **Sezione specifica Microsoft**  
   
- Controlla se incapsulato `BSTR` è un **NULL** stringa.  
+ Controlla se incapsulato `BSTR` è una stringa NULL.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -39,7 +39,7 @@ bool operator!( ) const throw( );
 ```  
   
 ## <a name="return-value"></a>Valore restituito  
- Restituisce **true** in caso affermativo, **false** in caso contrario.  
+ Restituisce TRUE in caso affermativo, FALSE in caso contrario.  
   
  **Fine sezione specifica Microsoft**  
   

@@ -1,5 +1,5 @@
 ---
-title: _com_ptr_t::_com_ptr_t | Documenti Microsoft
+title: _com_ptr_t::_com_ptr_t | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5d47cfc48a7d73ca1159c4a1862281c01c16cc11
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f27d6f1a09f46dfb3906825bdf4f2347a02f2d38
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32413934"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37939071"
 ---
 # <a name="comptrtcomptrt"></a>_com_ptr_t::_com_ptr_t
 **Sezione specifica Microsoft**  
@@ -143,31 +143,31 @@ explicit _com_ptr_t(
 ```  
   
 #### <a name="parameters"></a>Parametri  
- `pInterface`  
+ *pInterface*  
  Puntatore a interfaccia raw.  
   
- `fAddRef`  
- Se **true**, `AddRef` viene chiamato per incrementare il conteggio dei riferimenti del puntatore a interfaccia incapsulato.  
+ *fAddRef*  
+ Se TRUE, `AddRef` viene chiamato per incrementare il conteggio dei riferimenti del puntatore a interfaccia incapsulato.  
   
- *i criteri CP*  
+ *CP*  
  Oggetto `_com_ptr_t`.  
   
- `p`  
+ *p*  
  Puntatore a interfaccia raw con tipo relativo diverso dal tipo di puntatore intelligente dell'oggetto `_com_ptr_t`.  
   
  *varSrc*  
  Oggetto `_variant_t`.  
   
- `clsid`  
- Il **CLSID** di una coclasse.  
+ *clsid*  
+ Il `CLSID` di una coclasse.  
   
- `dwClsContext`  
+ *dwClsContext*  
  Contesto del codice eseguibile in esecuzione.  
   
  *lpcStr*  
- Stringa multibyte che contiene un **CLSID** (a partire da "**{**") o un **ProgID**.  
+ Stringa multibyte che contiene un `CLSID` (a partire da "**{**") o un `ProgID`.  
   
- `pOuter`  
+ *pOuter*  
  Unknown esterno di [aggregazione](http://msdn.microsoft.com/library/windows/desktop/ms686558).  
   
 ## <a name="see-also"></a>Vedere anche  

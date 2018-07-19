@@ -1,5 +1,5 @@
 ---
-title: Connetti | Documenti Microsoft
+title: _bstr_t::Assign | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: de790fa55299999be8c4cb4d2945e2b004d20a9e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a80c918036887e9c3e573294d3859a9b60e71e7f
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37943190"
 ---
 # <a name="bstrtassign"></a>_bstr_t::Assign
 **Sezione specifica Microsoft**  
   
- Copia un `BSTR` nel `BSTR` sottoposto a wrapping da un **_**`bstr_t`.  
+ Copia una `BSTR` nella `BSTR` sottoposto a wrapping da un **_**`bstr_t`.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -36,7 +37,7 @@ void Assign(
 ```  
   
 #### <a name="parameters"></a>Parametri  
- `s`  
+ *s*  
  Elemento `BSTR` da copiare nell'elemento `BSTR` incapsulato da `_bstr_t`.  
   
 ## <a name="remarks"></a>Note  
@@ -44,7 +45,7 @@ void Assign(
   
 ## <a name="example"></a>Esempio  
   
-```  
+```cpp 
 // _bstr_t_Assign.cpp  
   
 #include <comdef.h>  

@@ -1,5 +1,5 @@
 ---
-title: Classe CPagerCtrl | Documenti Microsoft
+title: Classe CPagerCtrl | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -58,12 +58,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ad0d928f7190d3908c41560c7fb106e3024ebc6e
-ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
+ms.openlocfilehash: 56b00604f57c67ba2555f667e41501451d06fed4
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37079648"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37853823"
 ---
 # <a name="cpagerctrl-class"></a>Classe CPagerCtrl
 La classe `CPagerCtrl` esegue il wrapping del controllo pager di Windows, che può scorrere all'interno della visualizzazione una finestra contenuta che non rientra nella finestra contenitore.  
@@ -86,14 +86,14 @@ class CPagerCtrl : public CWnd
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[CPagerCtrl::Create](#create)|Crea un controllo cercapersone con stili specificati e lo collega all'oggetto corrente `CPagerCtrl` oggetto.|  
-|[CPagerCtrl::CreateEx](#createex)|Crea un controllo cercapersone con stili estesi specificati e lo collega all'oggetto corrente `CPagerCtrl` oggetto.|  
-|[CPagerCtrl::ForwardMouse](#forwardmouse)|Abilita o disabilita l'inoltro [WM_MOUSEMOVE](http://msdn.microsoft.com/library/windows/desktop/ms645616) messaggi nella finestra contenuta nel controllo pager corrente.|  
+|[CPagerCtrl::Create](#create)|Crea un controllo pager con gli stili specificati e lo collega all'oggetto corrente `CPagerCtrl` oggetto.|  
+|[CPagerCtrl::CreateEx](#createex)|Crea un controllo pager con stili estesi specificati e lo collega all'oggetto corrente `CPagerCtrl` oggetto.|  
+|[CPagerCtrl::ForwardMouse](#forwardmouse)|Abilita o disabilita l'inoltro [WM_MOUSEMOVE](http://msdn.microsoft.com/library/windows/desktop/ms645616) messaggi alla finestra che è contenuto nel controllo pager corrente.|  
 |[CPagerCtrl::GetBkColor](#getbkcolor)|Recupera il colore di sfondo del controllo pager corrente.|  
 |[CPagerCtrl::GetBorder](#getborder)|Recupera la dimensione del bordo del controllo pager corrente.|  
-|[CPagerCtrl::GetButtonSize](#getbuttonsize)|Recupera la dimensione di pulsante del controllo pager corrente.|  
-|[CPagerCtrl::GetButtonState](#getbuttonstate)|Recupera lo stato del pulsante specificato nel controllo pager corrente.|  
-|[CPagerCtrl::GetDropTarget](#getdroptarget)|Recupera il [IDropTarget](http://msdn.microsoft.com/library/windows/desktop/ms679679) interfaccia per il controllo pager corrente.|  
+|[CPagerCtrl::GetButtonSize](#getbuttonsize)|Recupera la dimensione del pulsante del controllo pager corrente.|  
+|[CPagerCtrl::GetButtonState](#getbuttonstate)|Recupera lo stato del pulsante specificato del controllo pager corrente.|  
+|[CPagerCtrl::GetDropTarget](#getdroptarget)|Recupera le [IDropTarget](http://msdn.microsoft.com/library/windows/desktop/ms679679) interfaccia per il controllo pager corrente.|  
 |[CPagerCtrl::GetScrollPos](#getscrollpos)|Recupera la posizione di scorrimento del controllo pager corrente.|  
 |[CPagerCtrl::IsButtonDepressed](#isbuttondepressed)|Indica se il pulsante specificato del controllo pager corrente è in `pressed` dello stato.|  
 |[CPagerCtrl::IsButtonGrayed](#isbuttongrayed)|Indica se il pulsante specificato del controllo pager corrente è in `grayed` dello stato.|  
@@ -102,17 +102,17 @@ class CPagerCtrl : public CWnd
 |[CPagerCtrl::IsButtonNormal](#isbuttonnormal)|Indica se il pulsante specificato del controllo pager corrente è in `normal` dello stato.|  
 |[CPagerCtrl::RecalcSize](#recalcsize)|Fa sì che il controllo pager corrente ricalcolare le dimensioni della finestra contenuta.|  
 |[CPagerCtrl::SetBkColor](#setbkcolor)|Imposta il colore di sfondo del controllo pager corrente.|  
-|[CPagerCtrl::SetBorder](#setborder)|Imposta le dimensioni del bordo del controllo pager corrente.|  
+|[CPagerCtrl::SetBorder](#setborder)|Imposta la dimensione del bordo del controllo pager corrente.|  
 |[CPagerCtrl::SetButtonSize](#setbuttonsize)|Imposta le dimensioni del pulsante del controllo pager corrente.|  
 |[CPagerCtrl::SetChild](#setchild)|Imposta la finestra indipendente per il controllo pager corrente.|  
 |[CPagerCtrl::SetScrollPos](#setscrollpos)|Imposta la posizione di scorrimento del controllo pager corrente.|  
   
 ## <a name="remarks"></a>Note  
- Un controllo cercapersone è una finestra che contiene un'altra finestra lineare e più grande rispetto alla finestra che lo contiene, che consente di scorrere la finestra contenuta nella visualizzazione. Il controllo pager Visualizza due pulsanti di scorrimento che vengono automaticamente eliminate quando si scorre la finestra contenuta per renderne più lontano e nuovamente in caso contrario. È possibile creare un controllo cercapersone verso cui scorre orizzontalmente o verticalmente.  
+ Un controllo pager è una finestra che contiene un'altra finestra che è lineare e maggiore della finestra contenitore e consente di scorrere la finestra contenuta nella visualizzazione. Il controllo pager Visualizza due pulsanti di scorrimento che scompaiono automaticamente quando si scorre la finestra contenuta per renderne più lontano e poi riapparire in caso contrario. È possibile creare un controllo pager che scorre orizzontalmente o verticalmente.  
   
- Ad esempio, se l'applicazione dispone di una barra degli strumenti che non è sufficientemente ampia per visualizzare tutti i relativi elementi, è possibile assegnare la barra degli strumenti a un controllo cercapersone e gli utenti saranno in grado di scorrere la barra degli strumenti a sinistra o a destra per accedere a tutti gli elementi. Microsoft Internet Explorer versione 4.0 (versione commctrl.dll 4.71) introduce il controllo pager.  
+ Ad esempio, se l'applicazione presenta una barra degli strumenti che non è sufficientemente ampio per visualizzare tutti i relativi elementi, è possibile assegnare la barra degli strumenti a un controllo pager e gli utenti saranno in grado di scorrere la barra degli strumenti a sinistra o destra per accedere a tutti gli elementi. Microsoft Internet Explorer versione 4.0 (versione commctrl.dll 4.71) introduce il controllo pager.  
   
- Il `CPagerCtrl` classe è derivata dal [CWnd](../../mfc/reference/cwnd-class.md) classe. Per ulteriori informazioni e per un'illustrazione di un controllo cercapersone, vedere [controlli Pager](http://msdn.microsoft.com/library/windows/desktop/bb760855).  
+ Il `CPagerCtrl` classe è derivata dal [CWnd](../../mfc/reference/cwnd-class.md) classe. Per altre informazioni e per un'illustrazione di un controllo pager, vedere [controlli Pager](http://msdn.microsoft.com/library/windows/desktop/bb760855).  
   
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -134,10 +134,10 @@ CPagerCtrl();
 ```  
   
 ### <a name="remarks"></a>Note  
- Utilizzare il [CPagerCtrl::Create](#create) oppure [CPagerCtrl::CreateEx](#createex) per creare un controllo cercapersone e associarlo al `CPagerCtrl` oggetto.  
+ Usare la [CPagerCtrl::Create](#create) o [CPagerCtrl::CreateEx](#createex) per creare un controllo pager e associarlo al `CPagerCtrl` oggetto.  
   
 ##  <a name="create"></a>  CPagerCtrl::Create  
- Crea un controllo cercapersone con stili specificati e lo collega all'oggetto corrente `CPagerCtrl` oggetto.  
+ Crea un controllo pager con gli stili specificati e lo collega all'oggetto corrente `CPagerCtrl` oggetto.  
   
 ```  
 virtual BOOL Create(
@@ -152,23 +152,23 @@ virtual BOOL Create(
 |Parametro|Descrizione|  
 |---------------|-----------------|  
 |[in] *dwStyle*|Una combinazione bit per bit (OR) di [stili window](../../mfc/reference/styles-used-by-mfc.md#window-styles) e [stili del controllo pager](http://msdn.microsoft.com/library/windows/desktop/bb760859) da applicare al controllo.|  
-|[in] *rect*|Un riferimento a un [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) struttura che contiene la posizione e dimensioni del controllo nelle coordinate client.|  
-|[in] *pParentWnd*|Un puntatore a un [CWnd](../../mfc/reference/cwnd-class.md) oggetto che è la finestra padre del controllo. Questo parametro non può essere `NULL`.|  
+|[in] *rect*|Un riferimento a un [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) struttura che contiene la posizione e dimensioni del controllo in base alle coordinate client.|  
+|[in] *pParentWnd*|Un puntatore a un [CWnd](../../mfc/reference/cwnd-class.md) oggetto, ovvero la finestra padre del controllo. Questo parametro non può essere NULL.|  
 |[in] *nID*|L'ID del controllo.|  
   
 ### <a name="return-value"></a>Valore restituito  
- `true` se questo metodo dà esito positivo; in caso contrario, `false`.  
+ TRUE se questo metodo ha esito positivo; in caso contrario, FALSE.  
   
 ### <a name="remarks"></a>Note  
- Per creare un controllo cercapersone, dichiarare un `CPagerCtrl` variabile, quindi chiamare il [CPagerCtrl::Create](#create) o [CPagerCtrl::CreateEx](#createex) metodo su tale variabile.  
+ Per creare un controllo pager, dichiarare un `CPagerCtrl` variabile, quindi chiamare il [CPagerCtrl::Create](#create) oppure [CPagerCtrl::CreateEx](#createex) metodo su tale variabile.  
   
 ### <a name="example"></a>Esempio  
- Nell'esempio seguente crea un controllo cercapersone, quindi utilizza il [CPagerCtrl::SetChild](#setchild) metodo per associare un controllo pulsante molto lunghi con il controllo pager. Nell'esempio viene quindi utilizzata la [CPagerCtrl::SetButtonSize](#setbuttonsize) per impostare l'altezza del controllo pager per 20 pixel e il [CPagerCtrl::SetBorder](#setborder) metodo per impostare lo spessore del bordo a 1 pixel.  
+ Nell'esempio seguente crea un controllo pager, quindi Usa il [CPagerCtrl::SetChild](#setchild) metodo per associare un controllo pulsante molto lunghi con il controllo pager. Nell'esempio viene utilizzata la [CPagerCtrl::SetButtonSize](#setbuttonsize) metodo per impostare l'altezza del controllo pager per 20 pixel e il [CPagerCtrl::SetBorder](#setborder) metodo per impostare lo spessore del bordo di 1 pixel.  
   
  [!code-cpp[NVC_MFC_CSplitButton_s2#1](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_1.cpp)]  
   
 ##  <a name="createex"></a>  CPagerCtrl::CreateEx  
- Crea un controllo cercapersone con stili estesi specificati e lo collega all'oggetto corrente `CPagerCtrl` oggetto.  
+ Crea un controllo pager con stili estesi specificati e lo collega all'oggetto corrente `CPagerCtrl` oggetto.  
   
 ```  
 virtual BOOL CreateEx(
@@ -183,20 +183,20 @@ virtual BOOL CreateEx(
   
 |Parametro|Descrizione|  
 |---------------|-----------------|  
-|[in] *dwExStyle*|Combinazione bit per bit di stili estesi da applicare al controllo. Per altre informazioni, vedere la *dwExStyle* parametro del [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) (funzione).|  
+|[in] *dwExStyle*|Combinazione bit per bit degli stili estesi da applicare al controllo. Per altre informazioni, vedere la *dwExStyle* parametro delle [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) (funzione).|  
 |[in] *dwStyle*|Una combinazione bit per bit (OR) di [stili window](../../mfc/reference/styles-used-by-mfc.md#window-styles) e [stili del controllo pager](http://msdn.microsoft.com/library/windows/desktop/bb760859) da applicare al controllo.|  
-|[in] *rect*|Un riferimento a un [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) struttura che contiene la posizione e dimensioni del controllo nelle coordinate client.|  
-|[in] *pParentWnd*|Un puntatore a un [CWnd](../../mfc/reference/cwnd-class.md) oggetto che è la finestra padre del controllo. Questo parametro non può essere `NULL`.|  
+|[in] *rect*|Un riferimento a un [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) struttura che contiene la posizione e dimensioni del controllo in base alle coordinate client.|  
+|[in] *pParentWnd*|Un puntatore a un [CWnd](../../mfc/reference/cwnd-class.md) oggetto, ovvero la finestra padre del controllo. Questo parametro non può essere NULL.|  
 |[in] *nID*|L'ID del controllo.|  
   
 ### <a name="return-value"></a>Valore restituito  
- `true` se questo metodo dà esito positivo; in caso contrario, `false`.  
+ TRUE se questo metodo ha esito positivo; in caso contrario, FALSE.  
   
 ### <a name="remarks"></a>Note  
- Per creare un controllo cercapersone, dichiarare un `CPagerCtrl` variabile, quindi chiamare il [CPagerCtrl::Create](#create) o [CPagerCtrl::CreateEx](#createex) metodo su tale variabile.  
+ Per creare un controllo pager, dichiarare un `CPagerCtrl` variabile, quindi chiamare il [CPagerCtrl::Create](#create) oppure [CPagerCtrl::CreateEx](#createex) metodo su tale variabile.  
   
 ##  <a name="forwardmouse"></a>  CPagerCtrl::ForwardMouse  
- Abilita o disabilita l'inoltro [WM_MOUSEMOVE](http://msdn.microsoft.com/library/windows/desktop/ms645616) messaggi nella finestra contenuta nel controllo pager corrente.  
+ Abilita o disabilita l'inoltro [WM_MOUSEMOVE](http://msdn.microsoft.com/library/windows/desktop/ms645616) messaggi alla finestra che è contenuto nel controllo pager corrente.  
   
 ```  
 void ForwardMouse(BOOL bForward);
@@ -206,10 +206,10 @@ void ForwardMouse(BOOL bForward);
   
 |Parametro|Descrizione|  
 |---------------|-----------------|  
-|[in] *bForward*|`true` per inoltrare i messaggi del mouse, o `false` non inoltrare messaggi di mouse.|  
+|[in] *bForward*|True per i messaggi del mouse avanti o FALSE per non inoltrare i messaggi del mouse.|  
   
 ### <a name="remarks"></a>Note  
- Questo metodo invia il [PGM_FORWARDMOUSE](http://msdn.microsoft.com/library/windows/desktop/bb760867) messaggio, come descritto in Windows SDK.  
+ Questo metodo invia il [PGM_FORWARDMOUSE](http://msdn.microsoft.com/library/windows/desktop/bb760867) messaggio, che è descritti nel SDK di Windows.  
   
 ##  <a name="getborder"></a>  CPagerCtrl::GetBorder  
  Recupera la dimensione del bordo del controllo pager corrente.  
@@ -219,13 +219,13 @@ int GetBorder() const;
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- Le dimensioni correnti di bordo, misurato in pixel.  
+ Le dimensioni correnti del bordo, misurato in pixel.  
   
 ### <a name="remarks"></a>Note  
- Questo metodo invia il [PGM_GETBORDER](http://msdn.microsoft.com/library/windows/desktop/bb760869) messaggio, come descritto in Windows SDK.  
+ Questo metodo invia il [PGM_GETBORDER](http://msdn.microsoft.com/library/windows/desktop/bb760869) messaggio, che è descritti nel SDK di Windows.  
   
 ### <a name="example"></a>Esempio  
- Nell'esempio seguente viene utilizzata la [CPagerCtrl::GetBorder](#getborder) metodo per recuperare lo spessore del bordo del controllo pager.  
+ L'esempio seguente usa il [CPagerCtrl::GetBorder](#getborder) metodo per recuperare lo spessore del bordo del controllo pager.  
   
  [!code-cpp[NVC_MFC_CSplitButton_s2#5](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_2.cpp)]  
   
@@ -237,33 +237,33 @@ COLORREF GetBkColor() const;
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- Un [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) valore contenente il colore di sfondo corrente del controllo pager.  
+ Oggetto [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) valore che contiene il colore di sfondo corrente del controllo pager.  
   
 ### <a name="remarks"></a>Note  
- Questo metodo invia il [PGM_GETBKCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb760868) messaggio, come descritto in Windows SDK.  
+ Questo metodo invia il [PGM_GETBKCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb760868) messaggio, che è descritti nel SDK di Windows.  
   
 ### <a name="example"></a>Esempio  
- Nell'esempio seguente viene utilizzata la [CPagerCtrl::SetBkColor](#setbkcolor) metodo per impostare il colore di sfondo del controllo pager in rosso e il [CPagerCtrl::GetBkColor](#getbkcolor) metodo per confermare che è stata apportata la modifica.  
+ L'esempio seguente usa il [CPagerCtrl::SetBkColor](#setbkcolor) metodo per impostare il colore di sfondo del controllo pager in rosso e il [CPagerCtrl::GetBkColor](#getbkcolor) metodo per confermare che è stata apportata la modifica.  
   
  [!code-cpp[NVC_MFC_CSplitButton_s2#4](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_3.cpp)]  
   
 ##  <a name="getbuttonsize"></a>  CPagerCtrl::GetButtonSize  
- Recupera la dimensione di pulsante del controllo pager corrente.  
+ Recupera la dimensione del pulsante del controllo pager corrente.  
   
 ```  
 int GetButtonSize() const;  
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- La dimensione corrente del controllo button, misurato in pixel.  
+ Pulsante dimensione corrente, misurata in pixel.  
   
 ### <a name="remarks"></a>Note  
- Questo metodo invia il [PGM_GETBUTTONSIZE](http://msdn.microsoft.com/library/windows/desktop/bb760870) messaggio, come descritto in Windows SDK.  
+ Questo metodo invia il [PGM_GETBUTTONSIZE](http://msdn.microsoft.com/library/windows/desktop/bb760870) messaggio, che è descritti nel SDK di Windows.  
   
- Se il controllo pager ha il `PGS_HORZ` stile, la dimensione del controllo button determina la larghezza dei pulsanti di spostamento, e se dispone del controllo pager il `PGS_VERT` stile, la dimensione del controllo button determina l'altezza dei pulsanti di spostamento. Per altre informazioni, vedere [stili del controllo Pager](http://msdn.microsoft.com/library/windows/desktop/bb760859).  
+ Se il controllo pager PGS_HORZ lo stile, le dimensioni del pulsante determinano lo spessore dei pulsanti di spostamento e se il controllo pager PGS_VERT lo stile, le dimensioni del pulsante determinano l'altezza dei pulsanti di spostamento. Per altre informazioni, vedere [stili del controllo Pager](http://msdn.microsoft.com/library/windows/desktop/bb760859).  
   
 ##  <a name="getbuttonstate"></a>  CPagerCtrl::GetButtonState  
- Recupera lo stato del pulsante di scorrimento specificata in del controllo pager corrente.  
+ Recupera lo stato del pulsante di scorrimento specificato nel controllo pager corrente.  
   
 ```  
 DWORD GetButtonState(int iButton) const;  
@@ -273,16 +273,16 @@ DWORD GetButtonState(int iButton) const;
   
 |Parametro|Descrizione|  
 |---------------|-----------------|  
-|[in] *iButton*|Indica il pulsante per cui viene recuperato lo stato. Se lo stile del controllo pager `PGS_HORZ`, specificare `PGB_TOPORLEFT` per il pulsante sinistro e `PGB_BOTTOMORRIGHT` per il pulsante destro del mouse. Se lo stile del controllo pager `PGS_VERT`, specificare `PGB_TOPORLEFT` per il pulsante in alto e `PGB_BOTTOMORRIGHT` per il pulsante nella parte inferiore. Per altre informazioni, vedere [stili del controllo Pager](http://msdn.microsoft.com/library/windows/desktop/bb760859).|  
+|[in] *iButton*|Indica il pulsante per il quale viene recuperato lo stato. Se lo stile del controllo pager PGS_HORZ, specificare PGB_TOPORLEFT per il pulsante sinistro e PGB_BOTTOMORRIGHT per il pulsante a destra. Se lo stile del controllo pager PGS_VERT, specificare PGB_TOPORLEFT per il pulsante in alto e PGB_BOTTOMORRIGHT del pulsante nella parte inferiore. Per altre informazioni, vedere [stili del controllo Pager](http://msdn.microsoft.com/library/windows/desktop/bb760859).|  
   
 ### <a name="return-value"></a>Valore restituito  
- Lo stato del pulsante specificato mediante il *iButton* parametro. Lo stato è `PGF_INVISIBLE`, `PGF_NORMAL`, `PGF_GRAYED`, `PGF_DEPRESSED`, o `PGF_HOT`. Per altre informazioni, vedere la sezione di valore restituito del [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) messaggio.  
+ Lo stato del pulsante specificato per il *iButton* parametro. Lo stato è PGF_INVISIBLE, PGF_NORMAL, PGF_GRAYED, PGF_DEPRESSED o PGF_HOT. Per altre informazioni, vedere la sezione di valore restituito del [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) messaggio.  
   
 ### <a name="remarks"></a>Note  
- Questo metodo invia il [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) messaggio, come descritto in Windows SDK.  
+ Questo metodo invia il [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) messaggio, che è descritti nel SDK di Windows.  
   
 ##  <a name="getdroptarget"></a>  CPagerCtrl::GetDropTarget  
- Recupera il [IDropTarget](http://msdn.microsoft.com/library/windows/desktop/ms679679) interfaccia per il controllo pager corrente.  
+ Recupera le [IDropTarget](http://msdn.microsoft.com/library/windows/desktop/ms679679) interfaccia per il controllo pager corrente.  
   
 ```  
 IDropTarget* GetDropTarget() const;  
@@ -292,9 +292,9 @@ IDropTarget* GetDropTarget() const;
  Un puntatore al `IDropTarget` interfaccia per il controllo pager corrente.  
   
 ### <a name="remarks"></a>Note  
- `IDropTarget` è una delle interfacce implementate per supportare le operazioni di trascinamento e rilascio nell'applicazione.  
+ `IDropTarget` è una delle interfacce è implementare per supportare le operazioni di trascinamento e rilascio nell'applicazione.  
   
- Questo metodo invia il [PGM_GETDROPTARGET](http://msdn.microsoft.com/library/windows/desktop/bb760872) messaggio, come descritto in Windows SDK. Il chiamante di questo metodo è responsabile della chiamata di `Release` membro del [IDropTarget](http://msdn.microsoft.com/library/windows/desktop/ms679679) interfaccia quando l'interfaccia non è più necessario.  
+ Questo metodo invia il [PGM_GETDROPTARGET](http://msdn.microsoft.com/library/windows/desktop/bb760872) messaggio, che è descritti nel SDK di Windows. Il chiamante di questo metodo è responsabile della chiamata di `Release` membro della [IDropTarget](http://msdn.microsoft.com/library/windows/desktop/ms679679) interfaccia quando l'interfaccia non è più necessario.  
   
 ##  <a name="getscrollpos"></a>  CPagerCtrl::GetScrollPos  
  Recupera la posizione di scorrimento del controllo pager corrente.  
@@ -307,10 +307,10 @@ int GetScrollPos() const;
  La posizione di scorrimento corrente, misurato in pixel.  
   
 ### <a name="remarks"></a>Note  
- Questo metodo invia il [PGM_GETPOS](http://msdn.microsoft.com/library/windows/desktop/bb760874) messaggio, come descritto in Windows SDK.  
+ Questo metodo invia il [PGM_GETPOS](http://msdn.microsoft.com/library/windows/desktop/bb760874) messaggio, che è descritti nel SDK di Windows.  
   
 ### <a name="example"></a>Esempio  
- Nell'esempio seguente viene utilizzata la [CPagerCtrl::GetScrollPos](#getscrollpos) metodo per recuperare la posizione di scorrimento corrente del controllo pager. Se il controllo pager non è già scorrere a zero, la posizione più a sinistra, nell'esempio viene utilizzata la [CPagerCtrl::SetScrollPos](#setscrollpos) metodo per impostare la posizione di scorrimento su zero.  
+ L'esempio seguente usa il [CPagerCtrl::GetScrollPos](#getscrollpos) metodo per recuperare la posizione di scorrimento corrente del controllo pager. Se il controllo pager non è arriva a zero, la posizione più a sinistra, l'esempio Usa la [CPagerCtrl::SetScrollPos](#setscrollpos) metodo per impostare la posizione di scorrimento su zero.  
   
  [!code-cpp[NVC_MFC_CSplitButton_s2#7](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_4.cpp)]  
   
@@ -325,13 +325,13 @@ BOOL IsButtonDepressed(int iButton) const;
   
 |Parametro|Descrizione|  
 |---------------|-----------------|  
-|[in] *iButton*|Indica il pulsante per cui viene recuperato lo stato. Se lo stile del controllo pager `PGS_HORZ`, specificare `PGB_TOPORLEFT` per il pulsante sinistro e `PGB_BOTTOMORRIGHT` per il pulsante destro del mouse. Se lo stile del controllo pager `PGS_VERT`, specificare `PGB_TOPORLEFT` per il pulsante in alto e `PGB_BOTTOMORRIGHT` per il pulsante nella parte inferiore. Per altre informazioni, vedere [stili del controllo Pager](http://msdn.microsoft.com/library/windows/desktop/bb760859).|  
+|[in] *iButton*|Indica il pulsante per il quale viene recuperato lo stato. Se lo stile del controllo pager PGS_HORZ, specificare PGB_TOPORLEFT per il pulsante sinistro e PGB_BOTTOMORRIGHT per il pulsante a destra. Se lo stile del controllo pager PGS_VERT, specificare PGB_TOPORLEFT per il pulsante in alto e PGB_BOTTOMORRIGHT del pulsante nella parte inferiore. Per altre informazioni, vedere [stili del controllo Pager](http://msdn.microsoft.com/library/windows/desktop/bb760859).|  
   
 ### <a name="return-value"></a>Valore restituito  
- `true` Se il pulsante specificato è nello stato pressed; in caso contrario, `false`.  
+ TRUE se il pulsante specificato si trova nello stato pressed; in caso contrario, FALSE.  
   
 ### <a name="remarks"></a>Note  
- Questo metodo invia il [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) messaggio, come descritto in Windows SDK. Viene quindi verificato se lo stato restituito è `PGF_DEPRESSED`. Per altre informazioni, vedere la sezione di valore restituito del [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) messaggio.  
+ Questo metodo invia il [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) messaggio, che è descritti nel SDK di Windows. Verifica quindi se lo stato restituito è PGF_DEPRESSED. Per altre informazioni, vedere la sezione di valore restituito del [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) messaggio.  
   
 ##  <a name="isbuttongrayed"></a>  CPagerCtrl::IsButtonGrayed  
  Indica se il pulsante di scorrimento specificata del controllo pager corrente è in stato non disponibile.  
@@ -344,13 +344,13 @@ BOOL IsButtonGrayed(int iButton) const;
   
 |Parametro|Descrizione|  
 |---------------|-----------------|  
-|[in] *iButton*|Indica il pulsante per cui viene recuperato lo stato. Se lo stile del controllo pager `PGS_HORZ`, specificare `PGB_TOPORLEFT` per il pulsante sinistro e `PGB_BOTTOMORRIGHT` per il pulsante destro del mouse. Se lo stile del controllo pager `PGS_VERT`, specificare `PGB_TOPORLEFT` per il pulsante in alto e `PGB_BOTTOMORRIGHT` per il pulsante nella parte inferiore. Per altre informazioni, vedere [stili del controllo Pager](http://msdn.microsoft.com/library/windows/desktop/bb760859).|  
+|[in] *iButton*|Indica il pulsante per il quale viene recuperato lo stato. Se lo stile del controllo pager PGS_HORZ, specificare PGB_TOPORLEFT per il pulsante sinistro e PGB_BOTTOMORRIGHT per il pulsante a destra. Se lo stile del controllo pager PGS_VERT, specificare PGB_TOPORLEFT per il pulsante in alto e PGB_BOTTOMORRIGHT del pulsante nella parte inferiore. Per altre informazioni, vedere [stili del controllo Pager](http://msdn.microsoft.com/library/windows/desktop/bb760859).|  
   
 ### <a name="return-value"></a>Valore restituito  
- `true` Se il pulsante specificato è in stato inattivo. in caso contrario, `false`.  
+ TRUE se il pulsante specificato è in stato inattivo. in caso contrario, FALSE.  
   
 ### <a name="remarks"></a>Note  
- Questo metodo invia il [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) messaggio, come descritto in Windows SDK. Viene quindi verificato se lo stato restituito è `PGF_GRAYED`. Per altre informazioni, vedere la sezione di valore restituito del [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) messaggio.  
+ Questo metodo invia il [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) messaggio, che è descritti nel SDK di Windows. Verifica quindi se lo stato restituito è PGF_GRAYED. Per altre informazioni, vedere la sezione di valore restituito del [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) messaggio.  
   
 ##  <a name="isbuttonhot"></a>  CPagerCtrl::IsButtonHot  
  Indica se il pulsante di scorrimento specificata del controllo pager corrente è in stato attivo.  
@@ -363,13 +363,13 @@ BOOL IsButtonHot(int iButton) const;
   
 |Parametro|Descrizione|  
 |---------------|-----------------|  
-|[in] *iButton*|Indica il pulsante per cui viene recuperato lo stato. Se lo stile del controllo pager `PGS_HORZ`, specificare `PGB_TOPORLEFT` per il pulsante sinistro e `PGB_BOTTOMORRIGHT` per il pulsante destro del mouse. Se lo stile del controllo pager `PGS_VERT`, specificare `PGB_TOPORLEFT` per il pulsante in alto e `PGB_BOTTOMORRIGHT` per il pulsante nella parte inferiore. Per altre informazioni, vedere [stili del controllo Pager](http://msdn.microsoft.com/library/windows/desktop/bb760859).|  
+|[in] *iButton*|Indica il pulsante per il quale viene recuperato lo stato. Se lo stile del controllo pager PGS_HORZ, specificare PGB_TOPORLEFT per il pulsante sinistro e PGB_BOTTOMORRIGHT per il pulsante a destra. Se lo stile del controllo pager PGS_VERT, specificare PGB_TOPORLEFT per il pulsante in alto e PGB_BOTTOMORRIGHT del pulsante nella parte inferiore. Per altre informazioni, vedere [stili del controllo Pager](http://msdn.microsoft.com/library/windows/desktop/bb760859).|  
   
 ### <a name="return-value"></a>Valore restituito  
- `true` Se il pulsante specificato si trova in stato attivo; in caso contrario, `false`.  
+ TRUE se il pulsante specificato si trova in stato attivo; in caso contrario, FALSE.  
   
 ### <a name="remarks"></a>Note  
- Questo metodo invia il [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) messaggio, come descritto in Windows SDK. Viene quindi verificato se lo stato restituito è `PGF_HOT`. Per altre informazioni, vedere la sezione di valore restituito del [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) messaggio.  
+ Questo metodo invia il [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) messaggio, che è descritti nel SDK di Windows. Verifica quindi se lo stato restituito è PGF_HOT. Per altre informazioni, vedere la sezione di valore restituito del [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) messaggio.  
   
 ##  <a name="isbuttoninvisible"></a>  CPagerCtrl::IsButtonInvisible  
  Indica se il pulsante di scorrimento specificata del controllo pager corrente è in stato invisibile.  
@@ -382,23 +382,23 @@ BOOL IsButtonInvisible(int iButton) const;
   
 |Parametro|Descrizione|  
 |---------------|-----------------|  
-|[in] *iButton*|Indica il pulsante per cui viene recuperato lo stato. Se lo stile del controllo pager `PGS_HORZ`, specificare `PGB_TOPORLEFT` per il pulsante sinistro e `PGB_BOTTOMORRIGHT` per il pulsante destro del mouse. Se lo stile del controllo pager `PGS_VERT`, specificare `PGB_TOPORLEFT` per il pulsante in alto e `PGB_BOTTOMORRIGHT` per il pulsante nella parte inferiore. Per altre informazioni, vedere [stili del controllo Pager](http://msdn.microsoft.com/library/windows/desktop/bb760859).|  
+|[in] *iButton*|Indica il pulsante per il quale viene recuperato lo stato. Se lo stile del controllo pager PGS_HORZ, specificare PGB_TOPORLEFT per il pulsante sinistro e PGB_BOTTOMORRIGHT per il pulsante a destra. Se lo stile del controllo pager PGS_VERT, specificare PGB_TOPORLEFT per il pulsante in alto e PGB_BOTTOMORRIGHT del pulsante nella parte inferiore. Per altre informazioni, vedere [stili del controllo Pager](http://msdn.microsoft.com/library/windows/desktop/bb760859).|  
   
 ### <a name="return-value"></a>Valore restituito  
- `true` Se il pulsante specificato è in stato invisibile. in caso contrario, `false`.  
+ TRUE se il pulsante specificato è in stato invisibile. in caso contrario, FALSE.  
   
 ### <a name="remarks"></a>Note  
- Windows rende invisibile il pulsante di scorrimento in una direzione particolare quando la finestra contenuta lo scorrimento per renderne più lontano perché facendo clic sul pulsante ulteriormente non è possibile importare informazioni della finestra contenuta nella visualizzazione.  
+ Windows rende invisibile il pulsante di scorrimento in una direzione particolare quando si scorre la finestra contenuta per renderne più lontani perché facendo clic sul pulsante ulteriormente non è possibile visualizzare informazioni della finestra contenuta al.  
   
- Questo metodo invia il [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) messaggio, come descritto in Windows SDK. Viene quindi verificato se lo stato restituito è `PGF_INVISIBLE`. Per altre informazioni, vedere la sezione di valore restituito del [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) messaggio.  
+ Questo metodo invia il [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) messaggio, che è descritti nel SDK di Windows. Verifica quindi se lo stato restituito è PGF_INVISIBLE. Per altre informazioni, vedere la sezione di valore restituito del [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) messaggio.  
   
 ### <a name="example"></a>Esempio  
- Nell'esempio seguente viene utilizzata la [CPagerCtrl::IsButtonInvisible](#isbuttoninvisible) metodo per determinare se a sinistra del controllo pager e pulsanti di scorrimento a destra sono visibili.  
+ L'esempio seguente usa il [CPagerCtrl::IsButtonInvisible](#isbuttoninvisible) metodo per determinare se a sinistra del controllo pager e pulsanti di scorrimento a destra sono visibili.  
   
  [!code-cpp[NVC_MFC_CSplitButton_s2#6](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_5.cpp)]  
   
 ##  <a name="isbuttonnormal"></a>  CPagerCtrl::IsButtonNormal  
- Indica se il pulsante di scorrimento specificata del controllo pager corrente è nello stato normal.  
+ Indica se il pulsante di scorrimento specificata del controllo pager corrente è nello stato normale.  
   
 ```  
 BOOL IsButtonNormal(int iButton) const;  
@@ -408,13 +408,13 @@ BOOL IsButtonNormal(int iButton) const;
   
 |Parametro|Descrizione|  
 |---------------|-----------------|  
-|[in] *iButton*|Indica il pulsante per cui viene recuperato lo stato. Se lo stile del controllo pager `PGS_HORZ`, specificare `PGB_TOPORLEFT` per il pulsante sinistro e `PGB_BOTTOMORRIGHT` per il pulsante destro del mouse. Se lo stile del controllo pager `PGS_VERT`, specificare `PGB_TOPORLEFT` per il pulsante in alto e `PGB_BOTTOMORRIGHT` per il pulsante nella parte inferiore. Per altre informazioni, vedere [stili del controllo Pager](http://msdn.microsoft.com/library/windows/desktop/bb760859).|  
+|[in] *iButton*|Indica il pulsante per il quale viene recuperato lo stato. Se lo stile del controllo pager PGS_HORZ, specificare PGB_TOPORLEFT per il pulsante sinistro e PGB_BOTTOMORRIGHT per il pulsante a destra. Se lo stile del controllo pager PGS_VERT, specificare PGB_TOPORLEFT per il pulsante in alto e PGB_BOTTOMORRIGHT del pulsante nella parte inferiore. Per altre informazioni, vedere [stili del controllo Pager](http://msdn.microsoft.com/library/windows/desktop/bb760859).|  
   
 ### <a name="return-value"></a>Valore restituito  
- `true` Se il pulsante specificato è nello stato normal; in caso contrario, `false`.  
+ TRUE se il pulsante specificato si trova nello stato normale; in caso contrario, FALSE.  
   
 ### <a name="remarks"></a>Note  
- Questo metodo invia il [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) messaggio, come descritto in Windows SDK. Viene quindi verificato se lo stato restituito è `PGF_NORMAL`. Per altre informazioni, vedere la sezione di valore restituito del [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) messaggio.  
+ Questo metodo invia il [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) messaggio, che è descritti nel SDK di Windows. Verifica quindi se lo stato restituito è PGF_NORMAL. Per altre informazioni, vedere la sezione di valore restituito del [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) messaggio.  
   
 ##  <a name="recalcsize"></a>  CPagerCtrl::RecalcSize  
  Fa sì che il controllo pager corrente ricalcolare le dimensioni della finestra contenuta.  
@@ -424,15 +424,15 @@ void RecalcSize();
 ```  
   
 ### <a name="remarks"></a>Note  
- Questo metodo invia il [PGM_RECALCSIZE](http://msdn.microsoft.com/library/windows/desktop/bb760876) messaggio, come descritto in Windows SDK. Di conseguenza, il controllo cercapersone invia il [PGN_CALCSIZE](http://msdn.microsoft.com/library/windows/desktop/bb760864) notifica per ottenere le dimensioni di scorrimento della finestra contenuta.  
+ Questo metodo invia il [PGM_RECALCSIZE](http://msdn.microsoft.com/library/windows/desktop/bb760876) messaggio, che è descritti nel SDK di Windows. Di conseguenza, il controllo cercapersone invia il [PGN_CALCSIZE](http://msdn.microsoft.com/library/windows/desktop/bb760864) notifica per ottenere le dimensioni di scorrimento della finestra contenuta.  
   
 ### <a name="example"></a>Esempio  
- Nell'esempio seguente viene utilizzata la [CPagerCtrl::RecalcSize](#recalcsize) metodo per richiedere il controllo pager corrente ricalcolo delle dimensioni.  
+ L'esempio seguente usa il [CPagerCtrl::RecalcSize](#recalcsize) metodo per richiedere il controllo pager corrente ricalcolo delle dimensioni.  
   
  [!code-cpp[NVC_MFC_CSplitButton_s2#3](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_6.cpp)]  
   
 ### <a name="example"></a>Esempio  
- Nell'esempio seguente viene utilizzata [reflection di messaggio](../../mfc/tn062-message-reflection-for-windows-controls.md) per abilitare il controllo pager ricalcolare dimensioni anziché richiedere finestra padre del controllo per eseguire il calcolo. Nell'esempio deriva il `MyPagerCtrl` classe dal [CPagerCtrl classe](../../mfc/reference/cpagerctrl-class.md), quindi utilizza una mappa messaggi per associare il [PGN_CALCSIZE](http://msdn.microsoft.com/library/windows/desktop/bb760864) notifica con il `OnCalcsize` gestore delle notifiche. In questo esempio, il gestore delle notifiche imposta la larghezza e altezza del controllo pager di usare valori fissi.  
+ L'esempio seguente usa [reflection di messaggio](../../mfc/tn062-message-reflection-for-windows-controls.md) per abilitare il controllo pager ricalcolare la propria dimensione anziché richiedere a finestra di dialogo padre del controllo per eseguire il calcolo. L'esempio deriva il `MyPagerCtrl` classe la [classe CPagerCtrl](../../mfc/reference/cpagerctrl-class.md), quindi Usa una mappa messaggi per associare il [PGN_CALCSIZE](http://msdn.microsoft.com/library/windows/desktop/bb760864) notifica con il `OnCalcsize` gestore delle notifiche. In questo esempio, il gestore delle notifiche imposta la larghezza e altezza del controllo pager per valori fissi.  
   
  [!code-cpp[NVC_MFC_CSplitButton_s2#8](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_7.cpp)]  
   
@@ -447,21 +447,21 @@ COLORREF SetBkColor(COLORREF clrBk);
   
 |Parametro|Descrizione|  
 |---------------|-----------------|  
-|[in] *clrBk*|Un [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) valore contenente il nuovo colore di sfondo del controllo pager.|  
+|[in] *clrBk*|Oggetto [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) valore contenente il nuovo colore di sfondo del controllo pager.|  
   
 ### <a name="return-value"></a>Valore restituito  
- Un [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) valore contenente il colore di sfondo precedente del controllo pager.  
+ Oggetto [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) valore contenente il precedente colore di sfondo del controllo pager.  
   
 ### <a name="remarks"></a>Note  
- Questo metodo invia il [PGM_SETBKCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb760878) messaggio, come descritto in Windows SDK.  
+ Questo metodo invia il [PGM_SETBKCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb760878) messaggio, che è descritti nel SDK di Windows.  
   
 ### <a name="example"></a>Esempio  
- Nell'esempio seguente viene utilizzata la [CPagerCtrl::SetBkColor](#setbkcolor) metodo per impostare il colore di sfondo del controllo pager in rosso e il [CPagerCtrl::GetBkColor](#getbkcolor) metodo per confermare che è stata apportata la modifica.  
+ L'esempio seguente usa il [CPagerCtrl::SetBkColor](#setbkcolor) metodo per impostare il colore di sfondo del controllo pager in rosso e il [CPagerCtrl::GetBkColor](#getbkcolor) metodo per confermare che è stata apportata la modifica.  
   
  [!code-cpp[NVC_MFC_CSplitButton_s2#4](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_3.cpp)]  
   
 ##  <a name="setborder"></a>  CPagerCtrl::SetBorder  
- Imposta le dimensioni del bordo del controllo pager corrente.  
+ Imposta la dimensione del bordo del controllo pager corrente.  
   
 ```  
 int SetBorder(int iBorder);
@@ -471,16 +471,16 @@ int SetBorder(int iBorder);
   
 |Parametro|Descrizione|  
 |---------------|-----------------|  
-|[in] *iBorder*|La nuova dimensione bordo, misurata in pixel. Se il *iBorder* parametro è negativo, il valore di dimensione bordo è impostata su zero.|  
+|[in] *iBorder*|La nuova dimensione bordo, misurato in pixel. Se il *iBorder* parametro è negativo, la dimensione del bordo viene impostata su zero.|  
   
 ### <a name="return-value"></a>Valore restituito  
- Le precedenti dimensioni bordo, misurato in pixel.  
+ La precedente dimensione del bordo, misurato in pixel.  
   
 ### <a name="remarks"></a>Note  
- Questo metodo invia il [PGM_SETBORDER](http://msdn.microsoft.com/library/windows/desktop/bb760880) messaggio, come descritto in Windows SDK.  
+ Questo metodo invia il [PGM_SETBORDER](http://msdn.microsoft.com/library/windows/desktop/bb760880) messaggio, che è descritti nel SDK di Windows.  
   
 ### <a name="example"></a>Esempio  
- Nell'esempio seguente crea un controllo cercapersone, quindi utilizza il [CPagerCtrl::SetChild](#setchild) metodo per associare un controllo pulsante molto lunghi con il controllo pager. Nell'esempio viene quindi utilizzata la [CPagerCtrl::SetButtonSize](#setbuttonsize) per impostare l'altezza del controllo pager per 20 pixel e il [CPagerCtrl::SetBorder](#setborder) metodo per impostare lo spessore del bordo a 1 pixel.  
+ Nell'esempio seguente crea un controllo pager, quindi Usa il [CPagerCtrl::SetChild](#setchild) metodo per associare un controllo pulsante molto lunghi con il controllo pager. Nell'esempio viene utilizzata la [CPagerCtrl::SetButtonSize](#setbuttonsize) metodo per impostare l'altezza del controllo pager per 20 pixel e il [CPagerCtrl::SetBorder](#setborder) metodo per impostare lo spessore del bordo di 1 pixel.  
   
  [!code-cpp[NVC_MFC_CSplitButton_s2#1](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_1.cpp)]  
   
@@ -495,18 +495,18 @@ int SetButtonSize(int iButtonSize);
   
 |Parametro|Descrizione|  
 |---------------|-----------------|  
-|[in] *iButtonSize*|La nuova dimensione del controllo button, misurato in pixel.|  
+|[in] *iButtonSize*|Le nuove dimensioni del pulsante, misurato in pixel.|  
   
 ### <a name="return-value"></a>Valore restituito  
- La dimensione del controllo button precedente, misurato in pixel.  
+ Pulsante dimensione precedente, misurata in pixel.  
   
 ### <a name="remarks"></a>Note  
- Questo metodo invia il [PGM_SETBUTTONSIZE](http://msdn.microsoft.com/library/windows/desktop/bb760886) messaggio, come descritto in Windows SDK.  
+ Questo metodo invia il [PGM_SETBUTTONSIZE](http://msdn.microsoft.com/library/windows/desktop/bb760886) messaggio, che è descritti nel SDK di Windows.  
   
- Se il controllo pager ha il `PGS_HORZ` stile, la dimensione del controllo button determina la larghezza dei pulsanti di spostamento, e se dispone del controllo pager il `PGS_VERT` stile, la dimensione del controllo button determina l'altezza dei pulsanti di spostamento. Le dimensioni predefinite del pulsante sono tre quarti della larghezza della barra di scorrimento e la dimensione minima pulsante è 12 pixel. Per altre informazioni, vedere [stili del controllo Pager](http://msdn.microsoft.com/library/windows/desktop/bb760859).  
+ Se il controllo pager PGS_HORZ lo stile, le dimensioni del pulsante determinano lo spessore dei pulsanti di spostamento e se il controllo pager PGS_VERT lo stile, le dimensioni del pulsante determinano l'altezza dei pulsanti di spostamento. Le dimensioni predefinite del pulsante sono tre quarti della larghezza della barra di scorrimento e la dimensione minima pulsante è 12 pixel. Per altre informazioni, vedere [stili del controllo Pager](http://msdn.microsoft.com/library/windows/desktop/bb760859).  
   
 ### <a name="example"></a>Esempio  
- Nell'esempio seguente crea un controllo cercapersone, quindi utilizza il [CPagerCtrl::SetChild](#setchild) metodo per associare un controllo pulsante molto lunghi con il controllo pager. Nell'esempio viene quindi utilizzata la [CPagerCtrl::SetButtonSize](#setbuttonsize) per impostare l'altezza del controllo pager per 20 pixel e il [CPagerCtrl::SetBorder](#setborder) metodo per impostare lo spessore del bordo a 1 pixel.  
+ Nell'esempio seguente crea un controllo pager, quindi Usa il [CPagerCtrl::SetChild](#setchild) metodo per associare un controllo pulsante molto lunghi con il controllo pager. Nell'esempio viene utilizzata la [CPagerCtrl::SetButtonSize](#setbuttonsize) metodo per impostare l'altezza del controllo pager per 20 pixel e il [CPagerCtrl::SetBorder](#setborder) metodo per impostare lo spessore del bordo di 1 pixel.  
   
  [!code-cpp[NVC_MFC_CSplitButton_s2#1](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_1.cpp)]  
   
@@ -521,15 +521,15 @@ void SetChild(HWND hwndChild);
   
 |Parametro|Descrizione|  
 |---------------|-----------------|  
-|[in] *hwndChild*|Handle di finestra deve essere incluso.|  
+|[in] *hwndChild*|Handle per la finestra per essere contenuta.|  
   
 ### <a name="remarks"></a>Note  
- Questo metodo invia il [PGM_SETCHILD](http://msdn.microsoft.com/library/windows/desktop/bb760884) messaggio, come descritto in Windows SDK.  
+ Questo metodo invia il [PGM_SETCHILD](http://msdn.microsoft.com/library/windows/desktop/bb760884) messaggio, che è descritti nel SDK di Windows.  
   
- Questo metodo non modifica l'elemento padre della finestra contenuta; viene assegnato solo un handle di finestra per il controllo pager per lo scorrimento. Nella maggior parte dei casi, la finestra contenuta sarà una finestra figlio del controllo pager.  
+ Questo metodo non modifica l'elemento padre della finestra contenuta. solo assegna un handle di finestra per il controllo pager per lo scorrimento. Nella maggior parte dei casi, la finestra contenuta sarà una finestra figlio del controllo pager.  
   
 ### <a name="example"></a>Esempio  
- Nell'esempio seguente crea un controllo cercapersone, quindi utilizza il [CPagerCtrl::SetChild](#setchild) metodo per associare un controllo pulsante molto lunghi con il controllo pager. Nell'esempio viene quindi utilizzata la [CPagerCtrl::SetButtonSize](#setbuttonsize) per impostare l'altezza del controllo pager per 20 pixel e il [CPagerCtrl::SetBorder](#setborder) metodo per impostare lo spessore del bordo a 1 pixel.  
+ Nell'esempio seguente crea un controllo pager, quindi Usa il [CPagerCtrl::SetChild](#setchild) metodo per associare un controllo pulsante molto lunghi con il controllo pager. Nell'esempio viene utilizzata la [CPagerCtrl::SetButtonSize](#setbuttonsize) metodo per impostare l'altezza del controllo pager per 20 pixel e il [CPagerCtrl::SetBorder](#setborder) metodo per impostare lo spessore del bordo di 1 pixel.  
   
  [!code-cpp[NVC_MFC_CSplitButton_s2#1](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_1.cpp)]  
   
@@ -544,15 +544,15 @@ void SetScrollPos(int iPos);
   
 |Parametro|Descrizione|  
 |---------------|-----------------|  
-|[in] *ipo*|La nuova posizione di scorrimento, misurata in pixel.|  
+|[in] *ipo*|La nuova posizione di scorrimento, misurato in pixel.|  
   
 ### <a name="remarks"></a>Note  
- Questo metodo invia il [PGM_SETPOS](http://msdn.microsoft.com/library/windows/desktop/bb760886) messaggio, come descritto in Windows SDK.  
+ Questo metodo invia il [PGM_SETPOS](http://msdn.microsoft.com/library/windows/desktop/bb760886) messaggio, che è descritti nel SDK di Windows.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Classe CPagerCtrl](../../mfc/reference/cpagerctrl-class.md)   
  [Grafico delle gerarchie](../../mfc/hierarchy-chart.md)   
- [Controlli pager](http://msdn.microsoft.com/library/windows/desktop/bb760855)
+ [Controlli del pager](http://msdn.microsoft.com/library/windows/desktop/bb760855)
 
 
 

@@ -1,5 +1,5 @@
 ---
-title: Funzioni con elenchi di argomenti variabili (C++) | Documenti Microsoft
+title: Le funzioni con elenchi di argomenti variabili (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,14 +19,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 14bbb56c7ae62bd7ef8c58b45704a4ba809965e0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e66ee17f8aa82e46011a78e34baa79b3dea3cdb1
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37943177"
 ---
 # <a name="functions-with-variable-argument-lists--c"></a>Elenchi di funzioni con argomenti variabili (C++)
-Le dichiarazioni di funzione, in cui l'ultimo membro sono i puntini di sospensione (...), possono accettare un numero variabile di argomenti. In questi casi, C++ fornisce il controllo di tipo solo per gli argomenti dichiarati esplicitamente. È possibile usare elenchi di argomenti variabili quando è necessario rendere una funzione così generale che anche il numero e i tipi di argomenti possono variare. La famiglia di funzioni è riportato un esempio delle funzioni che usano elenchi di argomenti variabili. `printf` *argument-declaration-list*  
+Le dichiarazioni di funzione, in cui l'ultimo membro sono i puntini di sospensione (...), possono accettare un numero variabile di argomenti. In questi casi, C++ fornisce il controllo di tipo solo per gli argomenti dichiarati esplicitamente. È possibile usare elenchi di argomenti variabili quando è necessario rendere una funzione così generale che anche il numero e i tipi di argomenti possono variare. La famiglia di funzioni è riportato un esempio di funzioni che usano elenchi di argomenti variabili. `printf` *argument-declaration-list*  
   
 ## <a name="functions-with-variable-arguments"></a>Funzioni con elenchi di argomenti variabili  
  Per accedere agli argomenti dopo quelli dichiarati, usare le macro contenute nel file di inclusione standard \<stdarg. h > come descritto di seguito.  
@@ -39,13 +40,13 @@ Le dichiarazioni di funzione, in cui l'ultimo membro sono i puntini di sospensio
   
  La dichiarazione di una funzione che accetta un numero variabile di argomenti richiede almeno un argomento segnaposto, anche se non viene usato. Se questo argomento segnaposto non viene fornito, non è possibile accedere agli argomenti restanti.  
   
- Quando gli argomenti di tipo `char` vengono passati come argomenti variabili, vengono convertiti nel tipo `int`. Analogamente, quando gli argomenti di tipo **float** vengono passati come argomenti variabili, vengono convertiti nel tipo **double**. Gli argomenti di altri tipi sono soggetti alle consuete promozioni a virgola mobile e integrali. Vedere [conversioni Standard](standard-conversions.md) per ulteriori informazioni.  
+ Quando gli argomenti di tipo **char** vengono passati come argomenti variabili, vengono convertiti nel tipo **int**. Analogamente, quando gli argomenti di tipo **float** vengono passati come argomenti variabili, vengono convertiti nel tipo **doppie**. Gli argomenti di altri tipi sono soggetti alle consuete promozioni a virgola mobile e integrali. Visualizzare [conversioni Standard](standard-conversions.md) per altre informazioni.  
   
- Le funzioni che richiedono elenchi di variabili vengono dichiarate usando i puntini di sospensione (...) nell'elenco di argomenti. Utilizzare i tipi e le macro descritti nel \<stdarg. h > file di inclusione per accedere agli argomenti che vengono passati da un elenco di variabili. Per ulteriori informazioni su queste macro, vedere [va_arg, va_copy, va_end, va_start](../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md). nella documentazione per la libreria di runtime C.  
+ Le funzioni che richiedono elenchi di variabili vengono dichiarate usando i puntini di sospensione (...) nell'elenco di argomenti. Usare i tipi e le macro descritti nel \<stdarg. h > Includi file per accedere agli argomenti passati da un elenco di variabili. Per altre informazioni su queste macro, vedere [va_arg, va_copy, va_end, va_start](../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md). nella documentazione per la libreria di runtime C.  
   
- Nell'esempio seguente illustra il funzionano di macro con il tipo (dichiarato in \<stdarg. h >): 
+ L'esempio seguente illustra come le macro di collaborare con il tipo (dichiarato in \<stdarg. h >): 
   
-```  
+```cpp 
 // variable_argument_lists.cpp  
 #include <stdio.h>  
 #include <stdarg.h>  

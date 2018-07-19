@@ -1,5 +1,5 @@
 ---
-title: Classe CInterfaceArray | Documenti Microsoft
+title: Classe CInterfaceArray | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 36a24eadea87d0d34adf0f577b321fa16a7cfc86
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c33e0783acfba1b460894ac8f5dde80e61780762
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32359462"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37882720"
 ---
 # <a name="cinterfacearray-class"></a>Classe CInterfaceArray
 Questa classe fornisce metodi utili quando si crea una matrice di puntatori a interfaccia COM.  
@@ -38,11 +38,11 @@ class CInterfaceArray :
 ```  
   
 #### <a name="parameters"></a>Parametri  
- `I`  
+ *I*  
  Un'interfaccia COM che specifica il tipo di puntatore da archiviare.  
   
- `piid`  
- Un puntatore per l'IID del `I`.  
+ *piid*  
+ Un puntatore all'IID del *ho*.  
   
 ## <a name="members"></a>Membri  
   
@@ -50,12 +50,12 @@ class CInterfaceArray :
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[CInterfaceArray::CInterfaceArray](#cinterfacearray)|Il costruttore per la matrice di interfaccia.|  
+|[CInterfaceArray::CInterfaceArray](#cinterfacearray)|Il costruttore per la matrice di interfacce.|  
   
 ## <a name="remarks"></a>Note  
- Questa classe fornisce un costruttore e i metodi derivati per la creazione di una matrice di puntatori a interfaccia COM. Utilizzare [CInterfaceList](../../atl/reference/cinterfacelist-class.md) quando è necessario un elenco.  
+ Questa classe fornisce un costruttore e i metodi derivati per la creazione di una matrice di puntatori a interfaccia COM. Uso [CInterfaceList](../../atl/reference/cinterfacelist-class.md) quando è necessario un elenco.  
   
- Per ulteriori informazioni, vedere [classi Collection ATL](../../atl/atl-collection-classes.md).  
+ Per altre informazioni, vedere [classi Collection ATL](../../atl/atl-collection-classes.md).  
   
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  `CAtlArray`  
@@ -73,10 +73,10 @@ CInterfaceArray() throw();
 ```  
   
 ### <a name="remarks"></a>Note  
- Inizializza una matrice di puntatore intelligente.  
+ Consente di inizializzare la matrice di puntatore intelligente.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Classe CAtlArray](../../atl/reference/catlarray-class.md)   
  [Classe CComQIPtr](../../atl/reference/ccomqiptr-class.md)   
  [Classe CComQIPtrElementTraits](../../atl/reference/ccomqiptrelementtraits-class.md)   
- [Cenni preliminari sulla classe](../../atl/atl-class-overview.md)
+ [Panoramica della classe](../../atl/atl-class-overview.md)

@@ -1,5 +1,5 @@
 ---
-title: Classe CDefaultCharTraits | Documenti Microsoft
+title: Classe CDefaultCharTraits | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 24aa01ec29f063c1fa65ebe24c707deb1ea58556
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e591bc8c77e2130548e65c6197f9e550efc480fb
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32361727"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37881854"
 ---
 # <a name="cdefaultchartraits-class"></a>Classe CDefaultCharTraits
 Questa classe fornisce due funzioni statiche per la conversione dei caratteri tra lettere maiuscole e minuscole.  
@@ -37,7 +37,7 @@ class CDefaultCharTraits
 ```  
   
 #### <a name="parameters"></a>Parametri  
- `T`  
+ *T*  
  Il tipo di dati da archiviare nella raccolta.  
   
 ## <a name="members"></a>Membri  
@@ -80,7 +80,7 @@ static char CharToUpper(char x);
   
 ### <a name="parameters"></a>Parametri  
  *x*  
- Carattere da convertire in caratteri maiuscoli.  
+ Carattere da convertire in maiuscolo.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Cenni preliminari sulla classe](../../atl/atl-class-overview.md)
+ [Panoramica della classe](../../atl/atl-class-overview.md)

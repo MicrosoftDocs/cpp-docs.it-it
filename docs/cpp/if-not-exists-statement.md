@@ -1,5 +1,5 @@
 ---
-title: istruzione if_not_exists | Documenti Microsoft
+title: istruzione if_not_exists | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bd4e586a211d7c4e2ead1ce3f225e2d92d2bd5a7
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 37148a3849e859d7ca77595416616cfa0b952ecf
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32418816"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37939949"
 ---
 # <a name="ifnotexists-statement"></a>Istruzione __if_not_exists
-L'istruzione `__if_not_exists` verifica l'esistenza dell'identificatore specificato. Se l'identificatore non è presente, il blocco di istruzioni specificato viene eseguito.  
+Il **if_not_exists** istruzione verifica se l'identificatore specificato esiste. Se l'identificatore non è presente, il blocco di istruzioni specificato viene eseguito.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -44,20 +44,20 @@ statements
 ## <a name="remarks"></a>Note  
   
 > [!CAUTION]
->  Per ottenere risultati più affidabili, utilizzare l'istruzione `__if_not_exists` con i seguenti vincoli.  
+>  Per ottenere risultati più affidabili, usare il **if_not_exists** istruzione in base ai vincoli seguenti.  
   
--   Applicare l'istruzione `__if_not_exists` solo a tipi semplici, non a modelli.  
+-   Si applicano i **if_not_exists** unici tipi semplici, non i modelli dell'istruzione.  
   
--   Applicare l'istruzione `__if_not_exists` agli identificatori sia interni che esterni alla classe. Non applicare l'istruzione `__if_not_exists` a variabili locali.  
+-   Si applicano i **if_not_exists** istruzione agli identificatori sia interni che esterni alla classe. Non si applicano i **if_not_exists** istruzione alle variabili locali.  
   
--   Utilizzare l'istruzione `__if_not_exists` solo nel corpo di una funzione. All'esterno del corpo di una funzione, l'istruzione `__if_not_exists` può testare solo tipi completamente definiti.  
+-   Usare la **if_not_exists** istruzione solo nel corpo di una funzione. All'esterno del corpo di una funzione, il **if_not_exists** istruzione può testare solo tipi completamente definiti.  
   
 -   Quando si testano funzioni in overload, non è possibile testare una forma specifica di overload.  
   
- Il complemento al `__if_not_exists` istruzione è la [if_exists](../cpp/if-exists-statement.md) istruzione.  
+ Il complemento per il **if_not_exists** istruzione è la [if_exists](../cpp/if-exists-statement.md) istruzione.  
   
 ## <a name="example"></a>Esempio  
- Per un esempio su come usare `__if_not_exists`, vedere [if_exists istruzione](../cpp/if-exists-statement.md).  
+ Per un esempio su come usare **if_not_exists**, vedere [if_exists istruzione](../cpp/if-exists-statement.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Istruzioni di selezione](../cpp/selection-statements-cpp.md)   

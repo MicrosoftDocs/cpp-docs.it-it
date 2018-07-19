@@ -1,5 +1,5 @@
 ---
-title: Classe CStrBufT | Documenti Microsoft
+title: Classe CStrBufT | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -23,15 +23,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 695c3bc4c5e03f2ff6c1865f456b1ef358e3dcf4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: cfe483c89345dd0920bbd2f32500679c88ebf85a
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32361358"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37882585"
 ---
 # <a name="cstrbuft-class"></a>Classe CStrBufT
-Questa classe fornisce la pulizia automatica di risorsa per `GetBuffer` e `ReleaseBuffer` viene chiamato su un oggetto esistente `CStringT` oggetto.  
+Questa classe fornisce la pulizia automatica delle risorse delle `GetBuffer` e `ReleaseBuffer` viene chiamato su un oggetto esistente `CStringT` oggetto.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -42,13 +42,13 @@ class CStrBufT
   
 #### <a name="parameters"></a>Parametri  
  *TCharType*  
- Il tipo di carattere della `CStrBufT` classe. Può essere uno dei seguenti:  
+ Il tipo di carattere del `CStrBufT` classe. Può essere uno dei seguenti:  
   
-- `char` (per le stringhe di caratteri ANSI)  
+- **Char** (per le stringhe di caratteri ANSI)  
   
-- `wchar_t` (per le stringhe di caratteri Unicode)  
+- **wchar_t** (per le stringhe di caratteri Unicode)  
   
-- **TCHAR** (per le stringhe di caratteri sia ANSI e Unicode)  
+- TCHAR (per le stringhe di caratteri ANSI sia Unicode)  
   
 ## <a name="members"></a>Membri  
   
@@ -56,15 +56,15 @@ class CStrBufT
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|`PCXSTR`|Puntatore a una stringa costante.|  
-|`PXSTR`|Un puntatore a una stringa.|  
-|`StringType`|Tipo stringa il cui buffer deve essere modificati da specializzazioni di questo modello di classe.|  
+|PCXSTR|Puntatore a una stringa costante.|  
+|PXSTR|Un puntatore a una stringa.|  
+|`StringType`|Il tipo di stringa il cui buffer è deve essere modificato da specializzazioni di questo modello di classe.|  
   
 ### <a name="public-constructors"></a>Costruttori pubblici  
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[CStrBufT::CStrBufT](#cstrbuft)|Il costruttore per l'oggetto buffer di stringa.|  
+|[CStrBufT::CStrBufT](#cstrbuft)|Il costruttore per l'oggetto del buffer di stringa.|  
   
 ### <a name="public-methods"></a>Metodi pubblici  
   
@@ -76,36 +76,36 @@ class CStrBufT
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[CStrBufT::operator PCXSTR](#operator_pcxstr)|Recupera un **const** puntatore al buffer di caratteri dell'oggetto string associato.|  
+|[CStrBufT::operator PCXSTR](#operator_pcxstr)|Recupera una **const** puntatore al buffer di caratteri dell'oggetto string associato.|  
 |[CStrBufT::operator PXSTR](#operator_pxstr)|Recupera un puntatore al buffer di caratteri dell'oggetto string associato.|  
   
 ### <a name="public-constants"></a>Costanti pubbliche  
   
 |nome|Descrizione|  
 |----------|-----------------|  
-|[CStrBufT::AUTO_LENGTH](#auto_length)|Consente di determinare automaticamente la nuova lunghezza della stringa di versione.|  
+|[CStrBufT::AUTO_LENGTH](#auto_length)|Consente di determinare automaticamente la nuova lunghezza della stringa al momento del rilascio.|  
 |[CStrBufT::SET_LENGTH](#set_length)|Impostare la lunghezza dell'oggetto string in fase di GetBuffer|  
   
 ## <a name="remarks"></a>Note  
- Questa classe viene utilizzata come una classe wrapper per la sostituzione delle chiamate a [GetBuffer](../../atl-mfc-shared/reference/csimplestringt-class.md#getbuffer) e [ReleaseBuffer](../../atl-mfc-shared/reference/csimplestringt-class.md#releasebuffer), o [GetBufferSetLength](../../atl-mfc-shared/reference/csimplestringt-class.md#getbuffersetlength) e `ReleaseBuffer`.  
+ Questa classe viene utilizzata come una classe wrapper per la sostituzione di chiamate a [GetBuffer](../../atl-mfc-shared/reference/csimplestringt-class.md#getbuffer) e [ReleaseBuffer](../../atl-mfc-shared/reference/csimplestringt-class.md#releasebuffer), o [GetBufferSetLength](../../atl-mfc-shared/reference/csimplestringt-class.md#getbuffersetlength) e `ReleaseBuffer`.  
   
- Progettato principalmente come una classe helper, `CStrBufT` fornisce un modo pratico per uno sviluppatore di utilizzare buffer di caratteri di un oggetto stringa senza doversi preoccupare come o quando chiamare `ReleaseBuffer`. Ciò è possibile perché l'oggetto wrapper esce dall'ambito naturalmente nel caso di un'eccezione o per più percorsi di codice in fase di chiusura. causa il distruttore di liberare la risorsa di stringa.  
+ Progettato come classe helper `CStrBufT` offre un modo pratico per uno sviluppatore lavorare con il buffer di caratteri di un oggetto stringa senza preoccuparsi di come o quando chiamare `ReleaseBuffer`. Ciò è possibile perché l'oggetto wrapper esce dall'ambito ovviamente nel caso di un'eccezione o per più percorsi di codice in fase di chiusura. causa il distruttore di liberare la risorsa di tipo stringa.  
   
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** atlsimpstr.h  
   
 ##  <a name="auto_length"></a>  CStrBufT::AUTO_LENGTH  
- Consente di determinare automaticamente la nuova lunghezza della stringa di versione.  
+ Consente di determinare automaticamente la nuova lunghezza della stringa al momento del rilascio.  
   
 ```
 static const DWORD AUTO_LENGTH = 0x01;
 ```  
   
 ### <a name="remarks"></a>Note  
- Consente di determinare automaticamente la nuova lunghezza della stringa di versione. La stringa deve essere con terminazione null.  
+ Consente di determinare automaticamente la nuova lunghezza della stringa al momento del rilascio. La stringa deve essere con terminazione null.  
   
 ##  <a name="cstrbuft"></a>  CStrBufT::CStrBufT  
- Costruisce un oggetto di buffer.  
+ Costruisce un oggetto del buffer.  
   
 ```
 CStrBufT(StringType& str, int nMinLength, DWORD dwFlags = AUTO_LENGTH) throw(...);
@@ -113,26 +113,26 @@ explicit CStrBufT(StringType& str) throw(...);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `str`  
- L'oggetto stringa associato con il buffer. In genere, lo sviluppatore utilizzerà typedef predefiniti indicati di **CStrBuf** ( **TCHAR** variante), **CStrBufA** ( `char` variante) e **CStrBufW**  ( `wchar_t` variante).  
+ *str*  
+ Oggetto string associato al buffer. In genere, lo sviluppatore userà dei typedef predefiniti indicati `CStrBuf` (variant TCHAR), `CStrBufA` (**char** variant) e `CStrBufW` (**wchar_t** variante).  
   
  *nMinLength*  
  La lunghezza minima del buffer di caratteri.  
   
- `dwFlags`  
+ *dwFlags*  
  Determina se la lunghezza della stringa viene determinata automaticamente. Può essere uno dei seguenti:  
   
-- **AUTO_LENGTH** la lunghezza della stringa viene automaticamente determinato quando [CSimpleStringT::Release](../../atl-mfc-shared/reference/csimplestringt-class.md#releasebuffer) viene chiamato. La stringa deve essere con terminazione null. Valore predefinito.  
+- La lunghezza della stringa AUTO_LENGTH viene automaticamente determinata quando [CSimpleStringT::Release](../../atl-mfc-shared/reference/csimplestringt-class.md#releasebuffer) viene chiamato. La stringa deve essere con terminazione null. Valore predefinito.  
   
-- **SET_LENGTH** viene impostata quando la lunghezza della stringa [CSimpleStringT::GetBuffer](../../atl-mfc-shared/reference/csimplestringt-class.md#getbuffer) viene chiamato.  
+- Viene impostata quando la lunghezza della stringa SET_LENGTH [CSimpleStringT::GetBuffer](../../atl-mfc-shared/reference/csimplestringt-class.md#getbuffer) viene chiamato.  
   
 ### <a name="remarks"></a>Note  
- Crea un buffer di stringa per l'oggetto stringa associato. Durante la costruzione, [CSimpleStringT::GetBuffer](../../atl-mfc-shared/reference/csimplestringt-class.md#getbuffer) o [CSimpleStringT::GetBufferSetLength](../../atl-mfc-shared/reference/csimplestringt-class.md#getbuffersetlength) viene chiamato.  
+ Crea un buffer di stringa per l'oggetto stringa associata. Durante la costruzione [CSimpleStringT::GetBuffer](../../atl-mfc-shared/reference/csimplestringt-class.md#getbuffer) oppure [CSimpleStringT::GetBufferSetLength](../../atl-mfc-shared/reference/csimplestringt-class.md#getbuffersetlength) viene chiamato.  
   
- Si noti che il costruttore di copia è `private`.  
+ Si noti che è il costruttore di copia **privato**.  
   
 ##  <a name="operator_pcxstr"></a>  CStrBufT::operator PCXSTR  
- Si accede direttamente ai caratteri archiviati nell'oggetto string associato come una stringa in formato C.  
+ Consente di accedere direttamente caratteri archiviati nell'oggetto string associato come una stringa in formato C.  
   
 ```  
 operator PCXSTR() const throw();
@@ -142,10 +142,10 @@ operator PCXSTR() const throw();
  Un puntatore ai dati della stringa di caratteri.  
   
 ### <a name="remarks"></a>Note  
- Chiamare questa funzione per restituire un puntatore al buffer di caratteri di un oggetto stringa. Impossibile modificare il contenuto dell'oggetto string con l'indicatore di misura.  
+ Chiamare questa funzione per restituire un puntatore al buffer di caratteri di un oggetto stringa. Il contenuto dell'oggetto stringa non può essere modificato con puntatore ' this '.  
   
 ##  <a name="operator_pxstr"></a>  CStrBufT::operator PXSTR  
- Si accede direttamente ai caratteri archiviati nell'oggetto string associato come una stringa in formato C.  
+ Consente di accedere direttamente caratteri archiviati nell'oggetto string associato come una stringa in formato C.  
   
 ```
 operator PXSTR() throw();
@@ -155,7 +155,7 @@ operator PXSTR() throw();
  Un puntatore ai dati della stringa di caratteri.  
   
 ### <a name="remarks"></a>Note  
- Chiamare questa funzione per restituire un puntatore al buffer di caratteri di un oggetto stringa. Lo sviluppatore può modificare il contenuto dell'oggetto string con l'indicatore di misura.  
+ Chiamare questa funzione per restituire un puntatore al buffer di caratteri di un oggetto stringa. Lo sviluppatore può modificare il contenuto dell'oggetto stringa a puntatore ' this '.  
   
 ##  <a name="pcxstr"></a>  CStrBufT::PCXSTR  
  Puntatore a una stringa costante.  
@@ -172,7 +172,7 @@ typedef CSimpleStringT<TCharType>::PXSTR PXSTR;
 ```  
   
 ##  <a name="set_length"></a>  CStrBufT::SET_LENGTH  
- Impostare la lunghezza dell'oggetto string in `GetBuffer` ora.  
+ Impostare la lunghezza dell'oggetto stringa a `GetBuffer` ora.  
   
 ```
 static const DWORD SET_LENGTH = 0x02;
@@ -181,7 +181,7 @@ static const DWORD SET_LENGTH = 0x02;
 ### <a name="remarks"></a>Note  
  Impostare la lunghezza dell'oggetto string in fase di GetBuffer.  
   
- Determina se [CSimpleStringT::GetBuffer](../../atl-mfc-shared/reference/csimplestringt-class.md#getbuffer) e [CSimpleStringT::GetBufferSetLength](../../atl-mfc-shared/reference/csimplestringt-class.md#getbuffersetlength) vengono chiamati quando viene creato l'oggetto buffer di stringa.  
+ Determina se [CSimpleStringT::GetBuffer](../../atl-mfc-shared/reference/csimplestringt-class.md#getbuffer) e [CSimpleStringT::GetBufferSetLength](../../atl-mfc-shared/reference/csimplestringt-class.md#getbuffersetlength) vengono chiamati quando viene costruito l'oggetto del buffer di stringa.  
   
 ##  <a name="setlength"></a>  CStrBufT::SetLength  
  Imposta la lunghezza del buffer di caratteri.  
@@ -191,24 +191,24 @@ void SetLength(int nLength);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `nLength`  
- Nuova lunghezza del buffer di caratteri dell'oggetto string.  
+ *nLength*  
+ La nuova lunghezza del buffer di caratteri dell'oggetto stringa.  
   
 > [!NOTE]
->  Deve essere minore o uguale alla lunghezza minima del buffer specificata nel costruttore di `CStrBufT`.  
+>  Deve essere minore o uguale alla lunghezza minima del buffer specificata nel costruttore della `CStrBufT`.  
   
 ### <a name="remarks"></a>Note  
- Chiamare questa funzione per impostare la lunghezza della stringa rappresentata dall'oggetto buffer.  
+ Chiamare questa funzione per impostare la lunghezza della stringa rappresentata dall'oggetto del buffer.  
   
 ##  <a name="stringtype"></a>  CStrBufT::StringType  
- Tipo stringa il cui buffer deve essere modificati da specializzazioni di questo modello di classe.  
+ Il tipo di stringa il cui buffer è deve essere modificato da specializzazioni di questo modello di classe.  
   
 ```
 typedef CSimpleStringT<TCharType> StringType;
 ```  
   
 ### <a name="remarks"></a>Note  
- **TCharType** è il tipo di carattere utilizzato per specializzare il modello di classe.  
+ `TCharType` è il tipo di carattere usato per specializzare il modello di classe.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Grafico delle gerarchie](../../mfc/hierarchy-chart.md)   

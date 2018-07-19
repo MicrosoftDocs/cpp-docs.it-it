@@ -1,5 +1,5 @@
 ---
-title: _com_error::WCodeToHRESULT | Documenti Microsoft
+title: _com_error::WCodeToHRESULT | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 31b9df8305d0eea772979904f63847f6d6c2325a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: dce98775007360e3fdd4177141f7a550548d3679
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32413375"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37939195"
 ---
 # <a name="comerrorwcodetohresult"></a>_com_error::WCodeToHRESULT
 **Sezione specifica Microsoft**  
   
- Esegue il mapping di `wCode` a 16 bit a `HRESULT` a 32 bit.  
+ Esegue il mapping a 16 *wCode* a 32 bit HRESULT.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -38,14 +38,14 @@ ms.locfileid: "32413375"
 ```  
   
 #### <a name="parameters"></a>Parametri  
- `wCode`  
- `wCode` a 16 bit di cui eseguire il mapping a `HRESULT` a 32 bit.  
+ *wCode*  
+ Il 16-bit *wCode* devono essere mappati a 32 bit HRESULT.  
   
 ## <a name="return-value"></a>Valore restituito  
- `HRESULT` a 32 bit di cui è stato eseguito il mapping da `wCode` a 16 bit.  
+ 32 bit HRESULT mappato da 16 bit *wCode*.  
   
 ## <a name="remarks"></a>Note  
- Vedere il [WCode](../cpp/com-error-wcode.md) funzione membro.  
+ Vedere le [WCode](../cpp/com-error-wcode.md) funzione membro.  
   
  **Fine sezione specifica Microsoft**  
   

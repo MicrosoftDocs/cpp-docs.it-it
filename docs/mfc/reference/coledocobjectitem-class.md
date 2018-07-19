@@ -1,5 +1,5 @@
 ---
-title: Classe COleDocObjectItem | Documenti Microsoft
+title: Classe COleDocObjectItem | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b0842904ddb6e534cabc9fff8b5d2b2b4855f410
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 86e4d51687f1f005ad6c6e655e243275508d1529
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37042209"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37849776"
 ---
 # <a name="coledocobjectitem-class"></a>Classe COleDocObjectItem
 Implementa Active Document Containment.  
@@ -62,29 +62,29 @@ class COleDocObjectItem : public COleClientItem
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[COleDocObjectItem:: DoDefaultPrinting](#dodefaultprinting)|Stampa il documento dell'applicazione contenitore usando le impostazioni predefinite della stampante.|  
+|[COleDocObjectItem:: DoDefaultPrinting](#dodefaultprinting)|Stampa il documento dell'applicazione contenitore usando le impostazioni della stampante predefinita.|  
 |[COleDocObjectItem::ExecCommand](#execcommand)|Esegue il comando specificato dall'utente.|  
 |[COleDocObjectItem::GetActiveView](#getactiveview)|Recupera visualizzazione attiva del documento.|  
 |[COleDocObjectItem::GetPageCount](#getpagecount)|Recupera il numero di pagine nel documento dell'applicazione contenitore.|  
 |[COleDocObjectItem](#onprepareprinting)|Prepara il documento dell'applicazione contenitore per la stampa.|  
 |[COleDocObjectItem](#onprint)|Stampa il documento dell'applicazione contenitore.|  
 |[COleDocObjectItem::QueryCommand](#querycommand)|Query per lo stato di uno o più comandi generati dagli eventi dell'interfaccia utente.|  
-|[COleDocObjectItem::Release](#release)|Rilascia la connessione a un OLE elemento collegato e lo chiuda se era aperta. Non elimina definitivamente l'elemento client.|  
+|[COleDocObjectItem::Release](#release)|Rilascia la connessione a un elemento collegato oggetto OLE e lo chiude se era aperta. Non elimina definitivamente l'elemento client.|  
   
 ## <a name="remarks"></a>Note  
  In MFC, un documento attivo viene gestito in modo analogo a una normale, posto modificabile incorporamento, con le differenze seguenti:  
   
--   Il `COleDocument`-classe derivata ancora gestisce un elenco di elementi attualmente incorporati; tuttavia, questi elementi possono essere `COleDocObjectItem`-elementi derivati.  
+-   Il `COleDocument`-classe derivata comunque mantenuto un elenco di elementi incorporati; tuttavia, questi elementi possono essere `COleDocObjectItem`-elementi derivati.  
   
--   Quando un documento attivo è attivo, occupa l'intera area client della vista quando è attivo sul posto.  
+-   Quando un documento attivo è attivo, occupa l'intera area client della visualizzazione quando è attivo sul posto.  
   
--   Un contenitore di documenti attivi abbia il pieno controllo del **Guida** menu.  
+-   Un contenitore di documenti attivi dispone di controllo completo di **aiutare** menu.  
   
--   Il **Guida** menu contiene voci di menu per il contenitore di documenti attivi e server.  
+-   Il **aiutare** menu contiene voci di menu per il contenitore di documenti attivi e il server.  
   
- Poiché il contenitore documento attivo possiede il **Guida** menu, il contenitore è responsabile per il server di inoltro **Guida** messaggi di menu al server. Questa integrazione è gestita da `COleDocObjectItem`.  
+ Poiché il contenitore documento attivo possiede il **aiutare** menu, il contenitore è responsabile per il server di inoltro **Guida** i messaggi di menu al server. Questa integrazione è gestita da `COleDocObjectItem`.  
   
- Per ulteriori informazioni sull'unione di menu e attivazione documento attivo, vedere la panoramica della [Active Document Containment](../../mfc/active-document-containment.md).  
+ Per altre informazioni su attivazione di documenti attivi e unione di menu, vedere Panoramica dei [Active Document Containment](../../mfc/active-document-containment.md).  
   
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -109,7 +109,7 @@ COleDocObjectItem(COleDocument* pContainerDoc = NULL);
   
 ### <a name="parameters"></a>Parametri  
  *pContainerDoc*  
- Un puntatore al `COleDocument` oggetto funge da contenitore documenti attivi. Questo parametro deve essere **NULL** per abilitare **IMPLEMENT_SERIALIZE**. In genere elementi OLE sono costruiti con un non - **NULL** puntatore al documento.  
+ Un puntatore al `COleDocument` oggetto funge da contenitore documento attivo. Questo parametro deve essere NULL per abilitare IMPLEMENT_SERIALIZE. In genere gli elementi OLE sono costruiti con un puntatore di documento non NULL.  
   
 ##  <a name="dodefaultprinting"></a>  COleDocObjectItem:: DoDefaultPrinting  
  Chiamato dal framework per un documento usando le impostazioni predefinite.  
@@ -125,7 +125,7 @@ static HRESULT DoDefaultPrinting(
  Un puntatore a un [CView](../../mfc/reference/cview-class.md) oggetto che invia il comando di stampa.  
   
  *pInfo*  
- Un puntatore a un [CPrintInfo](../../mfc/reference/cprintinfo-structure.md) oggetto che descrive il processo per la stampa.  
+ Un puntatore a un [CPrintInfo](../../mfc/reference/cprintinfo-structure.md) oggetto che descrive il processo di stampa.  
   
 ##  <a name="execcommand"></a>  COleDocObjectItem::ExecCommand  
  Chiamare questa funzione membro per eseguire il comando specificato dall'utente.  
@@ -139,40 +139,40 @@ HRESULT ExecCommand(
   
 ### <a name="parameters"></a>Parametri  
  *nCmdID*  
- L'identificatore di comando da eseguire. È necessario racchiudere il gruppo identificato da *pguidCmdGroup*.  
+ Identificatore del comando da eseguire. Deve appartenere al gruppo identificato da *pguidCmdGroup*.  
   
  *nCmdExecOpt*  
- Specifica le opzioni di esecuzione del comando. Per impostazione predefinita, impostato per eseguire il comando senza chiedere conferma all'utente. Vedere [OLECMDEXECOPT](http://msdn.microsoft.com/library/windows/desktop/ms683930) per un elenco di valori.  
+ Specifica le opzioni di esecuzione del comando. Per impostazione predefinita, impostato per eseguire il comando senza chiedere conferma all'utente. Visualizzare [OLECMDEXECOPT](http://msdn.microsoft.com/library/windows/desktop/ms683930) per un elenco di valori.  
   
  *pguidCmdGroup*  
- Identificatore univoco del gruppo di comando. Per impostazione predefinita **NULL**, che consente di specificare il gruppo standard. Il comando passato *nCmdID* deve appartenere al gruppo.  
+ Identificatore univoco del gruppo di comandi. Per impostazione predefinita, NULL, che specifica il gruppo standard. Il comando passato *nCmdID* deve appartenere al gruppo.  
   
 ### <a name="return-value"></a>Valore restituito  
- Restituisce `S_OK` se ha esito positivo; in caso contrario, restituisce uno dei seguenti codici di errore.  
+ Restituisce S_OK se l'esito positivo. in caso contrario, restituisce uno dei seguenti codici di errore.  
   
 |Valore|Descrizione|  
 |-----------|-----------------|  
-|**E_UNEXPECTED**|Errore imprevisto.|  
-|**E_FAIL**|Si è verificato un errore.|  
-|**E_NOTIMPL**|Indica MFC stesso deve provare a convertire e inviare il comando.|  
-|**OLECMDERR_E_UNKNOWNGROUP**|*pguidCmdGroup* è non **NULL** ma non specifica un gruppo di comando riconosciuto.|  
-|**OLECMDERR_E_NOTSUPPORTED**|*nCmdID* non è riconosciuto come un comando valido in pGroup il gruppo.|  
-|**OLECMDERR_DISABLED**|Il comando identificato *nCmdID* è disabilitato e non può essere eseguita.|  
-|**OLECMDERR_NOHELP**|Chiamante richiesto per la Guida sul comando identificato *nCmdID* ma è disponibile alcuna informazione della Guida.|  
-|**OLECMDERR_CANCELLED**|L'utente ha annullato l'esecuzione.|  
+|E_UNEXPECTED|Si è verificato un errore imprevisto.|  
+|E_FAIL|Si è verificato un errore.|  
+|E_NOTIMPL|Indica MFC stessa deve tentare di convertire e inviare il comando.|  
+|OLECMDERR_E_UNKNOWNGROUP|*pguidCmdGroup* è diverso da NULL, ma non specifica un gruppo di controlli riconosciuto.|  
+|OLECMDERR_E_NOTSUPPORTED|*nCmdID* non è riconosciuto come un comando valido in pGroup il gruppo.|  
+|OLECMDERR_DISABLED|Il comando identificato da *nCmdID* è disabilitato e non può essere eseguita.|  
+|OLECMDERR_NOHELP|Chiamante richiesto per la Guida sul comando identificato da *nCmdID* ma nessuna guida è disponibile.|  
+|OLECMDERR_CANCELLED|L'utente ha annullato l'esecuzione.|  
   
 ### <a name="remarks"></a>Note  
- Il *pguidCmdGroup* e il *nCmdID* parametri insieme identificano in modo univoco il comando da richiamare. Il *nCmdExecOpt* parametro specifica l'azione da intraprendere esatto.  
+ Il *pguidCmdGroup* e il *nCmdID* parametri insieme identificano in modo univoco il comando da richiamare. Il *nCmdExecOpt* parametro specifica l'azione esatto da eseguire.  
   
 ##  <a name="getactiveview"></a>  COleDocObjectItem::GetActiveView  
- Chiamare questa funzione per ottenere un puntatore a membro di `IOleDocumentView` interfaccia della visualizzazione attualmente attiva.  
+ Chiamare questa funzione membro per ottenere un puntatore per il `IOleDocumentView` dell'interfaccia della visualizzazione attualmente attiva.  
   
 ```  
 LPOLEDOCUMENTVIEW GetActiveView() const;  
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- Un puntatore per il [IOleDocumentView](http://msdn.microsoft.com/library/windows/desktop/ms678455) interfaccia della visualizzazione attualmente attiva. Se non è presente alcuna visualizzazione corrente, non restituisce **NULL**.  
+ Un puntatore per il [IOleDocumentView](http://msdn.microsoft.com/library/windows/desktop/ms678455) dell'interfaccia della visualizzazione attualmente attiva. Se non esiste alcuna visualizzazione corrente, restituisce NULL.  
   
 ### <a name="remarks"></a>Note  
  Il conteggio dei riferimenti sull'oggetto restituito `IOleDocumentView` puntatore non viene incrementato prima che venga restituito da questa funzione.  
@@ -188,10 +188,10 @@ BOOL GetPageCount(
   
 ### <a name="parameters"></a>Parametri  
  *pnFirstPage*  
- Un puntatore al numero di pagina prima del documento. Può essere **NULL**, che indica il chiamante non deve necessariamente questo numero.  
+ Puntatore al numero di pagina prima del documento. Può essere NULL, che indica che il chiamante non necessita di questo numero.  
   
  *pcPages*  
- Un puntatore al numero totale di pagine del documento. Può essere **NULL**, che indica il chiamante non deve necessariamente questo numero.  
+ Puntatore al numero totale di pagine del documento. Può essere NULL, che indica che il chiamante non necessita di questo numero.  
   
 ### <a name="return-value"></a>Valore restituito  
  Diverso da zero se ha esito positivo; in caso contrario 0.  
@@ -211,10 +211,10 @@ static BOOL OnPreparePrinting(
  Un puntatore a un [CView](../../mfc/reference/cview-class.md) oggetto che invia il comando di stampa.  
   
  *pInfo*  
- Un puntatore a un [CPrintInfo](../../mfc/reference/cprintinfo-structure.md) oggetto che descrive il processo per la stampa.  
+ Un puntatore a un [CPrintInfo](../../mfc/reference/cprintinfo-structure.md) oggetto che descrive il processo di stampa.  
   
  *bPrintAll*  
- Specifica se l'intero documento deve essere stampato.  
+ Specifica se l'intero documento da stampare.  
   
 ### <a name="return-value"></a>Valore restituito  
  Diverso da zero se ha esito positivo; in caso contrario 0.  
@@ -234,10 +234,10 @@ static void OnPrint(
  Un puntatore a un oggetto CView che invia il comando di stampa.  
   
  *pInfo*  
- Un puntatore a un [CPrintInfo](../../mfc/reference/cprintinfo-structure.md) oggetto che descrive il processo per la stampa.  
+ Un puntatore a un [CPrintInfo](../../mfc/reference/cprintinfo-structure.md) oggetto che descrive il processo di stampa.  
   
  *bPrintAll*  
- Specifica se l'intero documento deve essere stampato.  
+ Specifica se l'intero documento da stampare.  
   
 ##  <a name="querycommand"></a>  COleDocObjectItem::QueryCommand  
  Query per lo stato di uno o più comandi generati dagli eventi dell'interfaccia utente.  
@@ -252,25 +252,25 @@ HRESULT QueryCommand(
   
 ### <a name="parameters"></a>Parametri  
  *nCmdID*  
- Identificatore del comando sottoposto a query.  
+ Identificatore del comando sottoposta a query.  
   
  *pdwStatus*  
  Puntatore al flag restituiti come risultato della query. Per un elenco di valori possibili, vedere [OLECMDF](http://msdn.microsoft.com/library/windows/desktop/ms695237).  
   
  *pCmdText*  
- Puntatore a un [OLECMDTEXT](http://msdn.microsoft.com/library/windows/desktop/ms693314) struttura in cui si desidera restituire le informazioni di nome e lo stato per un singolo comando. Può essere **NULL** per indicare che il chiamante queste informazioni non necessarie.  
+ Puntatore a un [OLECMDTEXT](http://msdn.microsoft.com/library/windows/desktop/ms693314) struttura in cui si desidera restituire le informazioni di nome e lo stato per un singolo comando. Può essere NULL per indicare che il chiamante non necessita di queste informazioni.  
   
  *pguidCmdGroup*  
- Identificatore univoco del gruppo di comandi; può essere **NULL** per specificare il gruppo standard.  
+ Identificatore univoco del gruppo di comandi; può essere NULL per specificare il gruppo standard.  
   
 ### <a name="return-value"></a>Valore restituito  
- Per un elenco completo dei valori restituiti, vedere [IOleCommandTarget::QueryStatus](http://msdn.microsoft.com/library/windows/desktop/ms688491) in Windows SDK.  
+ Per un elenco completo dei valori restituiti, vedere [IOleCommandTarget::QueryStatus](http://msdn.microsoft.com/library/windows/desktop/ms688491) nel SDK di Windows.  
   
 ### <a name="remarks"></a>Note  
- Questa funzione membro emula la funzionalità del [IOleCommandTarget::QueryStatus](http://msdn.microsoft.com/library/windows/desktop/ms688491) (metodo), come descritto in Windows SDK.  
+ Questa funzione membro emula la funzionalità dei [IOleCommandTarget::QueryStatus](http://msdn.microsoft.com/library/windows/desktop/ms688491) metodo, come descritto nel SDK di Windows.  
   
 ##  <a name="release"></a>  COleDocObjectItem::Release  
- Rilascia la connessione a un OLE elemento collegato e lo chiuda se era aperta. Non elimina definitivamente l'elemento client.  
+ Rilascia la connessione a un elemento collegato oggetto OLE e lo chiude se era aperta. Non elimina definitivamente l'elemento client.  
   
 ```  
 virtual void Release(OLECLOSE dwCloseOption = OLECLOSE_NOSAVE);
@@ -278,7 +278,7 @@ virtual void Release(OLECLOSE dwCloseOption = OLECLOSE_NOSAVE);
   
 ### <a name="parameters"></a>Parametri  
  *dwCloseOption*  
- Flag che specifica le condizioni dell'elemento OLE viene salvato quando torna allo stato caricato. Per un elenco di valori possibili, vedere [COleClientItem::Close](../../mfc/reference/coleclientitem-class.md#close).  
+ Flag che specifica le condizioni dell'elemento OLE viene salvato quando tornerà allo stato caricato. Per un elenco di valori possibili, vedere [COleClientItem::Close](../../mfc/reference/coleclientitem-class.md#close).  
   
 ### <a name="remarks"></a>Note  
  Non elimina definitivamente l'elemento client.  

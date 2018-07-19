@@ -1,5 +1,5 @@
 ---
-title: Raise | Documenti Microsoft
+title: Raise | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,11 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 93bd00c89df69d655f42c06509ef0360eff0c092
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9a95f012b36e30c171fde1cbc8d28a21a074e281
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37943263"
 ---
 # <a name="raise"></a>__raise
 Evidenzia il sito di chiamata di un evento.  
@@ -30,23 +31,21 @@ Evidenzia il sito di chiamata di un evento.
   
 ```  
   
-__raise   
-method-declarator  
-;  
+__raise method-declarator;  
   
 ```  
   
 ## <a name="remarks"></a>Note  
- Un evento può essere generato dal codice gestito solo dall'interno della classe in cui è definito. Vedere [evento](../windows/event-cpp-component-extensions.md) per ulteriori informazioni.  
+ Un evento può essere generato dal codice gestito solo dall'interno della classe in cui è definito. Visualizzare [evento](../windows/event-cpp-component-extensions.md) per altre informazioni.  
   
- La parola chiave `__raise` causa la restituzione di un errore se si chiama un elemento non correlato a un evento.  
+ La parola chiave **Raise** provoca un errore da generare se si chiama un esterne.  
   
 > [!NOTE]
 >  Una classe o una struttura basata su template non può contenere eventi.  
   
 ## <a name="example"></a>Esempio  
   
-```  
+```cpp 
 // EventHandlingRef_raise.cpp  
 struct E {  
    __event void func1();  

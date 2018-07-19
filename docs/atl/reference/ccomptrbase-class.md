@@ -1,5 +1,5 @@
 ---
-title: Classe CComPtrBase | Documenti Microsoft
+title: Classe CComPtrBase | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -27,15 +27,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ea90c1394da9b6a202b121a0e521f99acaba8264
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c7abcfcfe6aec722fa3540ad974017ab47e6cf71
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32366367"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37885451"
 ---
 # <a name="ccomptrbase-class"></a>Classe CComPtrBase
-Questa classe fornisce una base per le classi di puntatore intelligente utilizzo della memoria basato su COM routine.  
+Questa classe fornisce una base per le classi di puntatore intelligente con le routine di memoria basato su COM.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -45,8 +45,8 @@ class CComPtrBase
 ```  
   
 #### <a name="parameters"></a>Parametri  
- `T`  
- Il tipo di oggetto per fare riferimento il puntatore intelligente.  
+ *T*  
+ Il tipo di oggetto a cui fa riferimento il puntatore intelligente.  
   
 ## <a name="members"></a>Membri  
   
@@ -61,14 +61,14 @@ class CComPtrBase
 |Nome|Descrizione|  
 |----------|-----------------|  
 |[CComPtrBase:: Advise](#advise)|Chiamare questo metodo per creare una connessione tra il `CComPtrBase`del punto di connessione e un sink del client.|  
-|[CComPtrBase::Attach](#attach)|Chiamare questo metodo per assumere la proprietà di un indicatore di misura esistente.|  
-|[CComPtrBase:: CoCreateInstance](#cocreateinstance)|Chiamare questo metodo per creare un oggetto della classe associata a un ID di classe o un ID di programma specificato|  
+|[CComPtrBase::Attach](#attach)|Chiamare questo metodo per acquisire la proprietà di un indicatore di misura esistente.|  
+|[CComPtrBase:: CoCreateInstance](#cocreateinstance)|Chiamare questo metodo per creare un oggetto di classe associata a un determinato ID di classe o ID di programma.|  
 |[CComPtrBase::CopyTo](#copyto)|Chiamare questo metodo per copiare il `CComPtrBase` puntatore a un'altra variabile di puntatore.|  
 |[CComPtrBase::Detach](#detach)|Chiamare questo metodo per rilasciare la proprietà di un puntatore.|  
-|[CComPtrBase::IsEqualObject](#isequalobject)|Chiamare questo metodo per verificare se l'oggetto specificato **IUnknown** punta allo stesso oggetto associato di `CComPtrBase` oggetto.|  
+|[CComPtrBase::IsEqualObject](#isequalobject)|Chiamare questo metodo per verificare se l'oggetto specificato `IUnknown` punta allo stesso oggetto associato di `CComPtrBase` oggetto.|  
 |[CComPtrBase::QueryInterface](#queryinterface)|Chiamare questo metodo per restituire un puntatore a un'interfaccia specificata.|  
 |[CComPtrBase::Release](#release)|Chiamare questo metodo per rilasciare l'interfaccia.|  
-|[CComPtrBase::SetSite](#setsite)|Chiamare questo metodo per impostare il sito del `CComPtrBase` dell'oggetto per il **IUnknown** dell'oggetto padre.|  
+|[CComPtrBase::SetSite](#setsite)|Chiamare questo metodo per impostare il sito del `CComPtrBase` dell'oggetto per il `IUnknown` dell'oggetto padre.|  
   
 ### <a name="public-operators"></a>Operatori pubblici  
   
@@ -76,23 +76,23 @@ class CComPtrBase
 |----------|-----------------|  
 |[CComPtrBase::operator T *](#operator_t_star)|L'operatore di cast.|  
 |[CComPtrBase::operator!](#operator_not)|L'operatore NOT.|  
-|[CComPtrBase::operator &](#operator_amp)|Il & (operatore).|  
-|[CComPtrBase::operator *](#operator_star)|Il * (operatore).|  
-|[CComPtrBase::operator <](#ccomptrbase__operator lt)|Minore di-operatore.|  
+|[CComPtrBase::operator &](#operator_amp)|I & operatore.|  
+|[CComPtrBase::operator *](#operator_star)|Il * operatore.|  
+|[CComPtrBase::operator <](#ccomptrbase__operator lt)|Minore di-operatore di maggioranza.|  
 |[CComPtrBase::operator = =](#operator_eq_eq)|L'operatore di uguaglianza.|  
-|[CComPtrBase::operator ->](#operator_ptr)|L'operatore di puntatore ai membri.|  
+|[CComPtrBase::operator ->](#operator_ptr)|Operatore puntatore-a-membri.|  
   
 ### <a name="public-data-members"></a>Membri dati pubblici  
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[CComPtrBase::p](#p)|La variabile membro di dati puntatore.|  
+|[CComPtrBase::p](#p)|La variabile di membro dati puntatore.|  
   
 ## <a name="remarks"></a>Note  
- Questa classe fornisce la base per altri puntatori intelligenti che utilizzano le routine di gestione della memoria COM, ad esempio [CComQIPtr](../../atl/reference/ccomqiptr-class.md) e [CComPtr](../../atl/reference/ccomptr-class.md). Aggiungere i propri costruttori e operatori di classi derivate, ma si basano sui metodi forniti da `CComPtrBase`.  
+ Questa classe fornisce la base per altri puntatori intelligenti che usano routine di gestione della memoria COM, ad esempio [CComQIPtr](../../atl/reference/ccomqiptr-class.md) e [CComPtr](../../atl/reference/ccomptr-class.md). Aggiungere i propri costruttori e operatori di classi derivate, ma si basano su metodi forniti dalla `CComPtrBase`.  
   
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** atlcomcli. h  
+ **Intestazione:** atlcomcli  
   
 ##  <a name="advise"></a>  CComPtrBase:: Advise  
  Chiamare questo metodo per creare una connessione tra il `CComPtrBase`del punto di connessione e un sink del client.  
@@ -106,33 +106,33 @@ HRESULT Advise(
   
 ### <a name="parameters"></a>Parametri  
  *pUnk*  
- Un puntatore al client **IUnknown**.  
+ Un puntatore al client `IUnknown`.  
   
- `iid`  
+ *IID*  
  Il GUID del punto di connessione. In genere, questo è lo stesso come interfaccia in uscita gestita dal punto di connessione.  
   
- `pdw`  
- Puntatore al cookie che identifica in modo univoco la connessione.  
+ *PDW*  
+ Puntatore a cookie che identifica in modo univoco la connessione.  
   
 ### <a name="return-value"></a>Valore restituito  
- Restituisce S_OK se l'operazione riesce, o un errore HRESULT in caso di errore.  
+ Restituisce S_OK se l'operazione riesce, o un valore HRESULT di errore in caso di errore.  
   
 ### <a name="remarks"></a>Note  
- Vedere [AtlAdvise](connection-point-global-functions.md#atladvise) per ulteriori informazioni.  
+ Visualizzare [AtlAdvise](connection-point-global-functions.md#atladvise) per altre informazioni.  
   
 ##  <a name="attach"></a>  CComPtrBase::Attach  
- Chiamare questo metodo per assumere la proprietà di un indicatore di misura esistente.  
+ Chiamare questo metodo per acquisire la proprietà di un indicatore di misura esistente.  
   
 ```
 void Attach(T* p2) throw();
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `p2`  
+ *P2*  
  Il `CComPtrBase` oggetto assumerà la proprietà del puntatore ' this '.  
   
 ### <a name="remarks"></a>Note  
- **Collegare** chiamate [CComPtrBase::Release](#release) su esistenti [CComPtrBase::p](#p) variabile membro e quindi assegna `p2` a `CComPtrBase::p`. Quando un `CComPtrBase` oggetto acquisisce la proprietà di un puntatore, chiama automaticamente `Release` sull'indicatore di misura in cui vengono eliminati il puntatore e tutti i dati allocati se il conteggio dei riferimenti per l'oggetto è pari a 0.  
+ `Attach` le chiamate [CComPtrBase::Release](#release) su esistenti [CComPtrBase::p](#p) variabile membro e quindi assegna *p2* a `CComPtrBase::p`. Quando un `CComPtrBase` oggetto acquisisce la proprietà di un puntatore, chiamerà automaticamente `Release` sull'indicatore di misura in cui vengono eliminati il puntatore del mouse ed eventuali dati allocati se il conteggio dei riferimenti nell'oggetto arriva a 0.  
   
 ##  <a name="dtor"></a>  CComPtrBase:: ~ CComPtrBase  
  Distruttore.  
@@ -142,10 +142,10 @@ void Attach(T* p2) throw();
 ```  
   
 ### <a name="remarks"></a>Note  
- Rilascia l'interfaccia a cui puntata `CComPtrBase`.  
+ Rilascia l'interfaccia a cui punta `CComPtrBase`.  
   
 ##  <a name="cocreateinstance"></a>  CComPtrBase:: CoCreateInstance  
- Chiamare questo metodo per creare un oggetto della classe associata a un ID di classe o un ID di programma specificato  
+ Chiamare questo metodo per creare un oggetto di classe associata a un determinato ID di classe o ID di programma.  
   
 ```
 HRESULT CoCreateInstance(  
@@ -160,25 +160,25 @@ HRESULT CoCreateInstance(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `szProgID`  
- Puntatore a un ProgID, utilizzato per recuperare il CLSID.  
+ *szProgID*  
+ Puntatore a un ProgID, usato per ripristinare il CLSID.  
   
- `pUnkOuter`  
- Se **NULL**, indica che l'oggetto non sia stata creata come parte di un'aggregazione. Se non **NULL**, è un puntatore all'oggetto aggregato **IUnknown** interfaccia (il controllo **IUnknown**).  
+ *pUnkOuter*  
+ Se NULL, indica che l'oggetto non viene creata come parte di un'aggregazione. Se diverso da NULL, è un puntatore all'oggetto aggregato `IUnknown` interfaccia (il controllo `IUnknown`).  
   
- `dwClsContext`  
+ *dwClsContext*  
  Contesto in cui verrà eseguito il codice che gestisce l'oggetto appena creato.  
   
- `rclsid`  
- CLSID associato con i dati e il codice che verrà utilizzato per creare l'oggetto.  
+ *rclsid*  
+ CLSID associato ai dati e al codice che verrà utilizzato per creare l'oggetto.  
   
 ### <a name="return-value"></a>Valore restituito  
- In caso di errore, restituisce S_OK in caso di esito positivo o REGDB_E_CLASSNOTREG, CLASS_E_NOAGGREGATION, CO_E_CLASSSTRING o E_NOINTERFACE. Vedere [CoCreateClassInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615) e [CLSIDFromProgID](http://msdn.microsoft.com/library/windows/desktop/ms688386) per una descrizione di questi errori.  
+ Restituisce S_OK in caso di esito positivo o REGDB_E_CLASSNOTREG, CLASS_E_NOAGGREGATION, CO_E_CLASSSTRING o E_NOINTERFACE in caso di errore. Visualizzare [CoCreateClassInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615) e [CLSIDFromProgID](http://msdn.microsoft.com/library/windows/desktop/ms688386) per una descrizione di questi errori.  
   
 ### <a name="remarks"></a>Note  
- Se il primo form del metodo viene chiamato, [CLSIDFromProgID](http://msdn.microsoft.com/library/windows/desktop/ms688386) viene utilizzato per recuperare il CLSID. Entrambe le forme, quindi chiamano [CoCreateClassInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615).  
+ Se il primo form del metodo viene chiamato, [CLSIDFromProgID](http://msdn.microsoft.com/library/windows/desktop/ms688386) viene usato per ripristinare il CLSID. Quindi chiamare entrambi i formati [CoCreateClassInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615).  
   
- Nelle build di debug è si verifica un errore di asserzione se [CComPtrBase::p](#p) non è uguale a NULL.  
+ Nelle build di debug, si verifica un errore di asserzione se [CComPtrBase::p](#p) non è uguale a NULL.  
   
 ##  <a name="copyto"></a>  CComPtrBase::CopyTo  
  Chiamare questo metodo per copiare il `CComPtrBase` puntatore a un'altra variabile di puntatore.  
@@ -192,12 +192,12 @@ HRESULT CopyTo(T** ppT) throw();
  Indirizzo della variabile che riceverà il `CComPtrBase` puntatore.  
   
 ### <a name="return-value"></a>Valore restituito  
- Restituisce S_OK se riesce, E_POINTER in caso di errore.  
+ Restituisce S_OK se l'operazione riesce, E_POINTER in caso di errore.  
   
 ### <a name="remarks"></a>Note  
- Copie di `CComPtrBase` puntatore a *ppT*. Il conteggio dei riferimenti [CComPtrBase::p](#p) variabile membro viene incrementata.  
+ Copia il `CComPtrBase` puntatore a *ppT*. Il conteggio dei riferimenti [CComPtrBase::p](#p) variabile membro viene incrementata.  
   
- Un errore se viene restituito HRESULT *ppT* è uguale a NULL. Nelle build di debug è si verifica un errore di asserzione se *ppT* è uguale a NULL.  
+ Un errore se viene restituito HRESULT *ppT* è uguale a NULL. Nelle build di debug, si verifica un errore di asserzione se *ppT* è uguale a NULL.  
   
 ##  <a name="detach"></a>  CComPtrBase::Detach  
  Chiamare questo metodo per rilasciare la proprietà di un puntatore.  
@@ -207,21 +207,21 @@ T* Detach() throw();
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- Restituisce una copia dell'indicatore di misura.  
+ Restituisce una copia del puntatore.  
   
 ### <a name="remarks"></a>Note  
- Rilascia la proprietà di un puntatore, imposta il [CComPtrBase::p](#p) variabile membro dati su NULL e restituisce una copia dell'indicatore di misura.  
+ Rilascia la proprietà di un puntatore, imposta la [CComPtrBase::p](#p) variabile membro dei dati su NULL e restituisce una copia del puntatore.  
   
 ##  <a name="isequalobject"></a>  CComPtrBase::IsEqualObject  
- Chiamare questo metodo per verificare se l'oggetto specificato **IUnknown** punta allo stesso oggetto associato di `CComPtrBase` oggetto.  
+ Chiamare questo metodo per verificare se l'oggetto specificato `IUnknown` punta allo stesso oggetto associato di `CComPtrBase` oggetto.  
   
 ```
 bool IsEqualObject(IUnknown* pOther) throw();
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `pOther`  
- Il **IUnknown \***  da confrontare.  
+ *pOther*  
+ Oggetto `IUnknown *` da confrontare.  
   
 ### <a name="return-value"></a>Valore restituito  
  Restituisce true se gli oggetti sono identici, false in caso contrario.  
@@ -237,26 +237,26 @@ bool operator!() const throw();
  Restituisce true se il `CComHeapPtr` puntatore è uguale a NULL, false in caso contrario.  
   
 ##  <a name="operator_amp"></a>  CComPtrBase::operator &amp;  
- Il & (operatore).  
+ I & operatore.  
   
 ```
 T** operator&() throw();
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- Restituisce l'indirizzo dell'oggetto a cui fa riferimento il `CComPtrBase` oggetto.  
+ Restituisce l'indirizzo dell'oggetto a cui punta il `CComPtrBase` oggetto.  
   
 ##  <a name="operator_star"></a>  CComPtrBase::operator *  
- Il * (operatore).  
+ Il * operatore.  
   
 ```
 T& operator*() const throw();
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- Restituisce il valore di [CComPtrBase::p](#p); ovvero, un puntatore all'oggetto a cui fa riferimento il `CComPtrBase` oggetto.  
+ Restituisce il valore del [CComPtrBase::p](#p); vale a dire, un puntatore all'oggetto cui fa riferimento il `CComPtrBase` oggetto.  
   
- Se build di debug, si verificherà un errore di asserzione se [CComPtrBase::p](#p) non è uguale a NULL.  
+ Se le build di debug, se si verifica un errore di asserzione [CComPtrBase::p](#p) non è uguale a NULL.  
   
 ##  <a name="operator_eq_eq"></a>  CComPtrBase::operator = =  
  L'operatore di uguaglianza.  
@@ -274,7 +274,7 @@ bool operator== (T* pT) const throw();
   
 ##  <a name="operator_ptr"></a>  CComPtrBase::operator-&gt;  
 
- L'operatore puntatore a membro.  
+ Operatore puntatore a membro.  
   
 ```
 _NoAddRefReleaseOnCComPtr<T>* operator->() const throw();
@@ -284,10 +284,10 @@ _NoAddRefReleaseOnCComPtr<T>* operator->() const throw();
  Restituisce il valore della [CComPtrBase::p](#p) variabile membro dati.  
   
 ### <a name="remarks"></a>Note  
- Utilizzare questo operatore per chiamare un metodo in una classe a cui fa riferimento il `CComPtrBase` oggetto. Nelle build di debug, un errore di asserzione si verificherà se il `CComPtrBase` (membro dati) fa riferimento a NULL.  
+ Utilizzare questo operatore per chiamare un metodo in una classe a cui punta il `CComPtrBase` oggetto. Nelle build di debug, un errore di asserzione si verificherà se il `CComPtrBase` membro dati punta a NULL.  
   
 ##  <a name="operator_lt"></a>  CComPtrBase::operator &lt;  
- Minore di-operatore.  
+ Minore di-operatore di maggioranza.  
   
 ```
 bool operator<(T* pT) const throw();
@@ -298,7 +298,7 @@ bool operator<(T* pT) const throw();
  Un puntatore a un oggetto.  
   
 ### <a name="return-value"></a>Valore restituito  
- Restituisce true se il puntatore gestito dall'oggetto corrente è inferiore a quello del puntatore a cui viene confrontato.  
+ Restituisce true se il puntatore gestito dall'oggetto corrente è inferiore a quello del puntatore con cui è confrontato.  
   
 ##  <a name="operator_t_star"></a>  CComPtrBase::operator T *  
  L'operatore di cast.  
@@ -308,10 +308,10 @@ operator T*() const throw();
 ```  
   
 ### <a name="remarks"></a>Note  
- Restituisce un puntatore al tipo di dati oggetto definito nel modello di classe.  
+ Restituisce un puntatore al tipo di dati di oggetto definito nel modello di classe.  
   
 ##  <a name="p"></a>  CComPtrBase::p  
- La variabile membro di dati puntatore.  
+ La variabile di membro dati puntatore.  
   
 ```
 T* p;
@@ -329,19 +329,19 @@ template <class Q> HRESULT QueryInterface(Q
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `Q`  
- Il tipo di oggetto è richiesto il cui puntatore di interfaccia.  
+ *Q*  
+ Il tipo di oggetto cui puntatore a interfaccia è necessaria.  
   
- `pp`  
- Indirizzo della variabile di output che riceve il puntatore di interfaccia richiesto.  
+ *profilo di porta*  
+ Indirizzo della variabile di output che riceve il puntatore a interfaccia richiesto.  
   
 ### <a name="return-value"></a>Valore restituito  
- In caso di errore, restituisce S_OK esito positivo o E_NOINTERFACE.  
+ Restituisce S_OK su operazione riuscita o E_NOINTERFACE in caso di errore.  
   
 ### <a name="remarks"></a>Note  
  Questo metodo chiama [IUnknown:: QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521).  
   
- Nelle build di debug è si verifica un errore di asserzione se *pp* non è uguale a NULL.  
+ Nelle build di debug, si verifica un errore di asserzione se *pp* non è uguale a NULL.  
   
 ##  <a name="release"></a>  CComPtrBase::Release  
  Chiamare questo metodo per rilasciare l'interfaccia.  
@@ -351,24 +351,24 @@ void Release() throw();
 ```  
   
 ### <a name="remarks"></a>Note  
- L'interfaccia viene rilasciata, e [CComPtrBase::p](#p) è impostato su NULL.  
+ L'interfaccia viene rilasciato, e [CComPtrBase::p](#p) è impostato su NULL.  
   
 ##  <a name="setsite"></a>  CComPtrBase::SetSite  
- Chiamare questo metodo per impostare il sito del `CComPtrBase` dell'oggetto per il **IUnknown** dell'oggetto padre.  
+ Chiamare questo metodo per impostare il sito del `CComPtrBase` dell'oggetto per il `IUnknown` dell'oggetto padre.  
   
 ```
 HRESULT SetSite(IUnknown* punkParent) throw();
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `punkParent`  
- Un puntatore al **IUnknown** interfaccia dell'elemento padre.  
+ *punkParent*  
+ Un puntatore al `IUnknown` interfaccia dell'elemento padre.  
   
 ### <a name="return-value"></a>Valore restituito  
- Restituisce S_OK se l'operazione riesce, o un errore HRESULT in caso di errore.  
+ Restituisce S_OK se l'operazione riesce, o un valore HRESULT di errore in caso di errore.  
   
 ### <a name="remarks"></a>Note  
  Questo metodo chiama [AtlSetChildSite](composite-control-global-functions.md#atlsetchildsite).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Cenni preliminari sulla classe](../../atl/atl-class-overview.md)
+ [Panoramica della classe](../../atl/atl-class-overview.md)

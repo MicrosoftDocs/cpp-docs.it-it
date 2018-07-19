@@ -1,5 +1,5 @@
 ---
-title: Oggetti temporanei | Documenti Microsoft
+title: Gli oggetti temporanei | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,20 +15,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5523abd0142b8b6dc3a25beb8ca8d113cf5463bc
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2d914b668140f1cbf372e29bcdd4f4b526397fb9
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37943209"
 ---
 # <a name="temporary-objects"></a>Oggetti temporanei
 In alcuni casi, è necessario che il compilatore crei oggetti temporanei. Questi oggetti temporanei possono essere creati per i seguenti motivi:  
   
--   Per inizializzare un riferimento `const` con un inizializzatore di un tipo diverso da quello del tipo sottostante del riferimento inizializzato.  
+-   Per inizializzare un **const** riferimento con un inizializzatore di un tipo diverso da quello del tipo sottostante del riferimento in fase di inizializzazione.  
   
 -   Per memorizzare il valore restituito di una funzione che restituisce un tipo definito dall'utente. Questi temporanei vengono creati solo se il programma non copia il valore restituito in un oggetto. Ad esempio:  
   
-    ```  
+    ```cpp 
     UDT Func1();    //  Declare a function that returns a user-defined  
                     //   type.  
   
@@ -51,6 +52,6 @@ In alcuni casi, è necessario che il compilatore crei oggetti temporanei. Questi
   
 |Temporaneo di motivo creato|Punto di distruzione|  
 |------------------------------|-----------------------|  
-|Risultato della valutazione dell'espressione|Tutti i temporanei creati come risultato della valutazione delle espressioni vengono eliminati alla fine dell'istruzione di espressione (ovvero al punto e virgola) o alla fine delle espressioni di controllo per le istruzioni `for`, `if`, `while`, `do` e `switch`.|  
-|Inizializzare i riferimenti `const`|Se un inizializzatore non è un l-value dello stesso tipo del riferimento di cui si sta eseguendo l'inizializzazione, un temporaneo del tipo di oggetto sottostante viene creato e inizializzato con l'espressione di inizializzazione. Questo oggetto temporaneo viene eliminato definitivamente subito dopo che l'oggetto di riferimento a cui è associato viene eliminato definitivamente.|  
+|Risultato della valutazione dell'espressione|Tutti i temporanei creati come risultato di valutazione dell'espressione vengono eliminati definitivamente alla fine dell'istruzione di espressione (vale a dire, il punto e virgola), o alla fine delle espressioni di controllo per **per**, **se**, **Sebbene**, **scopo**, e **passare** istruzioni.|  
+|L'inizializzazione **const** riferimenti|Se un inizializzatore non è un l-value dello stesso tipo del riferimento di cui si sta eseguendo l'inizializzazione, un temporaneo del tipo di oggetto sottostante viene creato e inizializzato con l'espressione di inizializzazione. Questo oggetto temporaneo viene eliminato definitivamente subito dopo che l'oggetto di riferimento a cui è associato viene eliminato definitivamente.|  
   

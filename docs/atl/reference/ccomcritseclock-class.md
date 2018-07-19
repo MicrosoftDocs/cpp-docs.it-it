@@ -1,5 +1,5 @@
 ---
-title: Classe CComCritSecLock | Documenti Microsoft
+title: Classe CComCritSecLock | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 98b6eb7a8e6df16134573b55a7c9666befe4e4a1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1b03d22a7daff614c560c7531143b718de7351c0
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32358886"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37880251"
 ---
 # <a name="ccomcritseclock-class"></a>Classe CComCritSecLock
 Questa classe fornisce metodi per bloccare e sbloccare un oggetto sezione critica.  
@@ -57,7 +57,7 @@ template<class TLock> class CComCritSecLock
 |[CComCritSecLock::Unlock](#unlock)|Chiamare questo metodo per sbloccare l'oggetto sezione critica.|  
   
 ## <a name="remarks"></a>Note  
- Utilizzare questa classe per bloccare e sbloccare gli oggetti in modo più sicuro rispetto a con il [classe CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md) o [CComAutoCriticalSection classe](../../atl/reference/ccomautocriticalsection-class.md).  
+ Utilizzare questa classe per bloccare e sbloccare gli oggetti in modo più sicuro rispetto a con la [classe CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md) oppure [classe CComAutoCriticalSection](../../atl/reference/ccomautocriticalsection-class.md).  
   
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** atlbase. h  
@@ -71,9 +71,9 @@ CComCritSecLock(TLock& cs, bool bInitialLock = true);
   
 ### <a name="parameters"></a>Parametri  
  *cs*  
- L'oggetto sezione critica.  
+ Oggetto sezione critica.  
   
- `bInitialLock`  
+ *bInitialLock*  
  Lo stato del blocco iniziale: **true** significa bloccato.  
   
 ### <a name="remarks"></a>Note  
@@ -97,7 +97,7 @@ HRESULT Lock() throw();
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- Restituisce S_OK se l'oggetto è stato bloccato o un errore HRESULT in caso di errore.  
+ Restituisce S_OK se l'oggetto è stato bloccato o un valore HRESULT di errore in caso di errore.  
   
 ### <a name="remarks"></a>Note  
  Se l'oggetto è già bloccato, si verificherà un errore di ASSERZIONE nelle build di debug.  
@@ -110,7 +110,7 @@ void Unlock() throw();
 ```  
   
 ### <a name="remarks"></a>Note  
- Se l'oggetto è già sbloccata, si verificherà un errore di ASSERZIONE nelle build di debug.  
+ Se l'oggetto è già sbloccato, si verificherà un errore di ASSERZIONE nelle build di debug.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Classe CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md)   

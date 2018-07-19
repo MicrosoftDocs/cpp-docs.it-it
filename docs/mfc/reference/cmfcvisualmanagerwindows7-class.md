@@ -1,5 +1,5 @@
 ---
-title: Classe CMFCVisualManagerWindows7 | Documenti Microsoft
+title: Classe CMFCVisualManagerWindows7 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c4bcc39645c079ef9a0b61a4e12782223dd19a92
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 17ec3560e7faf8c49f410437c79609bfb871a9c9
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37042222"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37849949"
 ---
 # <a name="cmfcvisualmanagerwindows7-class"></a>Classe CMFCVisualManagerWindows7
 Il `CMFCVisualManagerWindows7` fornisce a un'applicazione l'aspetto di un [!INCLUDE[win7](../../build/includes/win7_md.md)] dell'applicazione.  
@@ -49,19 +49,19 @@ class CMFCVisualManagerWindows7 : public CMFCVisualManagerWindows;
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|`CMFCVisualManagerWindows7::CleanStyle`|Cancella lo stile di visualizzazione corrente e reimposta lo stile di visualizzazione predefinito.|  
-|`CMFCVisualManagerWindows7::CleanUp`|Cancella tutti gli oggetti nell'interfaccia utente e reimposta i comandi di menu.|  
-|`CMFCVisualManagerWindows7::DrawNcBtn`|Disegna un pulsante nell'area non client sul frame. Gli utilizzi di framework ridurre al minimo questo metodo per disegnare, ingrandire, chiudere e ripristinare i pulsanti nell'angolo superiore destro della cornice della finestra. Questo metodo non viene chiamato quando il programma Usa un tema non Aero.|  
-|`CMFCVisualManagerWindows7::DrawNcText`|Disegna un testo nell'area non client sul frame. Il framework utilizza questo metodo per disegnare il titolo dell'applicazione nella barra del titolo nella parte superiore della finestra cornice.|  
-|`CMFCVisualManagerWindows7::DrawSeparator`|Disegna un separatore nel [CMFCToolBar classe](../../mfc/reference/cmfctoolbar-class.md).|  
-|`CMFCVisualManagerWindows7::GetRibbonBar`|Recupera il [classe CMFCRibbonBar](../../mfc/reference/cmfcribbonbar-class.md) associato all'interfaccia utente.|  
+|`CMFCVisualManagerWindows7::CleanStyle`|Cancella lo stile di visualizzazione corrente e ripristina lo stile di visualizzazione predefinito.|  
+|`CMFCVisualManagerWindows7::CleanUp`|Cancella tutti gli oggetti nell'interfaccia utente e ripristina i menu.|  
+|`CMFCVisualManagerWindows7::DrawNcBtn`|Disegna un pulsante nell'area non client nel frame. Usa il framework ridurre al minimo questo metodo consente di disegnare, ottimizzare, chiudere e ripristinare i pulsanti nell'angolo superiore destro della cornice della finestra. Questo metodo non viene chiamato quando il programma Usa un tema non Aero.|  
+|`CMFCVisualManagerWindows7::DrawNcText`|Disegna il testo nell'area non client nel frame. Il framework utilizza questo metodo per disegnare il titolo dell'applicazione nella barra del titolo nella parte superiore della finestra cornice.|  
+|`CMFCVisualManagerWindows7::DrawSeparator`|Disegna un separatore nel [classe CMFCToolBar](../../mfc/reference/cmfctoolbar-class.md).|  
+|`CMFCVisualManagerWindows7::GetRibbonBar`|Recupera le [classe CMFCRibbonBar](../../mfc/reference/cmfcribbonbar-class.md) associato all'interfaccia utente.|  
 |[CMFCVisualManagerWindows7::GetRibbonEditBackgroundColor](#getribboneditbackgroundcolor)|Ottiene un colore di sfondo della finestra di modifica della barra multifunzione.|  
 |`CMFCVisualManagerWindows7::GetRibbonPopupBorderSize`|Esegue l'override [CMFCVisualManager::GetRibbonPopupBorderSize](../../mfc/reference/cmfcvisualmanager-class.md#getribbonpopupbordersize)|  
 |`CMFCVisualManagerWindows7::GetRibbonQuickAccessToolBarChevronOffset`|Esegue l'override [CMFCVisualManager::GetRibbonQuickAccessToolBarChevronOffset](../../mfc/reference/cmfcvisualmanager-class.md#getribbonquickaccesstoolbarchevronoffset)|  
 |`CMFCVisualManagerWindows7::GetRibbonQuickAccessToolBarRightMargin`|Esegue l'override [CMFCVisualManager::GetRibbonQuickAccessToolBarRightMargin](../../mfc/reference/cmfcvisualmanager-class.md#getribbonquickaccesstoolbarrightmargin)|  
 |`CMFCVisualManagerWindows7::IsHighlightWholeMenuItem`|Esegue l'override [CMFCVisualManagerWindows::IsHighlightWholeMenuItem](../../mfc/reference/cmfcvisualmanagerwindows-class.md#ishighlightwholemenuitem)|  
 |`CMFCVisualManagerWindows7::IsOwnerDrawMenuCheck`|Esegue l'override [CMFCVisualManager::IsOwnerDrawMenuCheck](../../mfc/reference/cmfcvisualmanager-class.md#isownerdrawmenucheck)|  
-|`CMFCVisualManagerWindows7::IsRibbonPresent`|Determina se un `CMFCRibbonBar` sia presente e visibili.|  
+|`CMFCVisualManagerWindows7::IsRibbonPresent`|Determina se un `CMFCRibbonBar` è presente ed è visibile.|  
 |`CMFCVisualManagerWindows7::OnDrawButtonBorder`|Esegue l'override [CMFCVisualManagerWindows::OnDrawButtonBorder](../../mfc/reference/cmfcvisualmanagerwindows-class.md#ondrawbuttonborder)|  
 |`CMFCVisualManagerWindows7::OnDrawCheckBoxEx`|Esegue l'override [CMFCVisualManagerWindows::OnDrawCheckBoxEx](../../mfc/reference/cmfcvisualmanagerwindows-class.md#ondrawcheckboxex)|  
 |`CMFCVisualManagerWindows7::OnDrawComboDropButton`|Esegue l'override [CMFCVisualManagerWindows::OnDrawComboDropButton](../../mfc/reference/cmfcvisualmanagerwindows-class.md#ondrawcombodropbutton)|  
@@ -99,13 +99,13 @@ class CMFCVisualManagerWindows7 : public CMFCVisualManagerWindows;
 |`CMFCVisualManagerWindows7::OnNcActivate`|Esegue l'override [CMFCVisualManager::OnNcActivate](../../mfc/reference/cmfcvisualmanager-class.md#onncactivate)|  
 |`CMFCVisualManagerWindows7::OnNcPaint`|Esegue l'override [CMFCVisualManager::OnNcPaint](../../mfc/reference/cmfcvisualmanager-class.md#onncpaint)|  
 |`CMFCVisualManagerWindows7::OnUpdateSystemColors`|Esegue l'override [CMFCVisualManagerWindows::OnUpdateSystemColors](../../mfc/reference/cmfcvisualmanagerwindows-class.md#onupdatesystemcolors)|  
-|`CMFCVisualManagerWindows7::SetResourceHandle`|Imposta l'handle di risorsa che descrive gli attributi di gestione di visual.|  
+|`CMFCVisualManagerWindows7::SetResourceHandle`|Imposta l'handle di risorsa che descrive gli attributi del gestore visualizzazione.|  
 |`CMFCVisualManagerWindows7::SetStyle`|Imposta la combinazione di colori di `CMFCVisualManagerWindows7` GUI.|  
   
 ## <a name="remarks"></a>Note  
- Usare la `CMFCVisualManagerWindows7` (classe) per modificare l'aspetto dell'applicazione per simulare predefinito [!INCLUDE[win7](../../build/includes/win7_md.md)] dell'applicazione. Questa classe potrebbe non essere valida se l'applicazione è in esecuzione una versione di Windows precedenti a [!INCLUDE[win7](../../build/includes/win7_md.md)]. In tale scenario, l'applicazione utilizza il gestore visualizzazione predefinito definito in [CMFCVisualManager](../../mfc/reference/cmfcvisualmanager-class.md).  
+ Usare la `CMFCVisualManagerWindows7` classe per modificare l'aspetto dell'applicazione per simulare un valore predefinito [!INCLUDE[win7](../../build/includes/win7_md.md)] dell'applicazione. Questa classe potrebbe non essere valida se l'applicazione è in esecuzione su una versione di Windows precedenti a [!INCLUDE[win7](../../build/includes/win7_md.md)]. In questo scenario, l'applicazione usa il gestore visualizzazione predefinito definito in [CMFCVisualManager](../../mfc/reference/cmfcvisualmanager-class.md).  
   
- Il CMFCVisualManagerWindows7 eredita più metodi da entrambi i [classe CMFCVisualManagerWindows](../../mfc/reference/cmfcvisualmanagerwindows-class.md) e il `CMFCVisualManager` classe. I metodi elencati nella sezione precedente sono nuove per la `CMFCVisualManagerWindows7` classe.  
+ Il CMFCVisualManagerWindows7 eredita più metodi da entrambi i [classe CMFCVisualManagerWindows](../../mfc/reference/cmfcvisualmanagerwindows-class.md) e il `CMFCVisualManager` classe. I metodi elencati nella sezione precedente sono nuove per il `CMFCVisualManagerWindows7` classe.  
   
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -150,13 +150,13 @@ virtual COLORREF GetRibbonEditBackgroundColor (
   
 ### <a name="parameters"></a>Parametri  
  [in] *pEdit*  
- Un puntatore per il controllo di modifica. Questo valore non può essere `NULL`.  
+ Puntatore al controllo di modifica. Questo valore non può essere NULL.  
   
  [out] *bIsHighlighted*  
  Restituisce se la casella della barra multifunzione è evidenziata.  
   
  [out] *bIsPaneHighlighted*  
- Restituisce `TRUE` se la barra multifunzione del pannello che contiene *pEdit* viene evidenziato.  
+ Restituisce TRUE se la barra multifunzione pannello che contiene *pEdit* è evidenziato.  
   
  [out] *bIsDisabled*  
  Restituisce se *pEdit* è disabilitato.  
@@ -179,15 +179,15 @@ virtual void OnFillMenuImageRect(
   
 ### <a name="parameters"></a>Parametri  
  [in] *pDC*  
- Un puntatore al contesto di dispositivo di un pulsante di menu.  
+ Puntatore al contesto di dispositivo di un pulsante di menu.  
   
  [in] *pButton*  
- Un puntatore a un `CMFCToolBarButton`. Il framework riempie lo sfondo del pulsante.  
+ Un puntatore a un `CMFCToolBarButton`. Il framework riempie lo sfondo di questo pulsante.  
   
  [in] *rect*  
- Un rettangolo che specifica i limiti dell'area di immagine del pulsante di menu.  
+ Un rettangolo che specifica i limiti dell'area del menu pulsante immagine.  
   
- [in] *stato*  
+ [in] *dello stato*  
  Lo stato del pulsante.  
   
 ### <a name="remarks"></a>Note  

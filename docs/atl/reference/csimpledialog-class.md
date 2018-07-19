@@ -1,5 +1,5 @@
 ---
-title: Classe CSimpleDialog | Documenti Microsoft
+title: Classe CSimpleDialog | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,14 +21,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f3a8f6cb2ead8798b86d65a1fa875a42a68cdd77
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b0c713781ff6c780e63fdf19545f83bf693a081b
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32362387"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37881659"
 ---
-# <a name="csimpledialog-class"></a>CSimpleDialog (classe)
+# <a name="csimpledialog-class"></a>Classe CSimpleDialog
 Questa classe implementa una finestra di dialogo modale base.  
   
 ## <a name="syntax"></a>Sintassi  
@@ -44,7 +44,7 @@ class CSimpleDialog : public CDialogImplBase
  L'ID risorsa della risorsa modello di finestra di dialogo.  
   
  *t_bCenter*  
- **TRUE** se l'oggetto finestra di dialogo è centrato nella finestra proprietaria in caso contrario **FALSE**.  
+ TRUE se l'oggetto finestra di dialogo al centro la finestra del proprietario. in caso contrario, FALSE.  
   
 ## <a name="members"></a>Membri  
   
@@ -55,11 +55,11 @@ class CSimpleDialog : public CDialogImplBase
 |[CSimpleDialog::DoModal](#domodal)|Crea una finestra di dialogo modale.|  
   
 ## <a name="remarks"></a>Note  
- Implementa una finestra di dialogo modale con funzionalità di base. `CSimpleDialog` fornisce supporto per controlli comuni di Windows solo. Per creare e visualizzare una finestra di dialogo modale, creare un'istanza di questa classe, specificando il nome di un modello di risorsa esistente per la finestra di dialogo. L'oggetto finestra di dialogo si chiude quando l'utente fa clic su qualsiasi controllo con un valore predefinito (ad esempio IDOK o IDCANCEL).  
+ Implementa una finestra di dialogo modale con funzionalità di base. `CSimpleDialog` fornisce supporto per controlli comuni di Windows solo. Per creare e visualizzare una finestra di dialogo modale, creare un'istanza di questa classe, fornendo il nome di un modello di risorse esistente per la finestra di dialogo. L'oggetto finestra di dialogo si chiude quando l'utente fa clic su qualsiasi controllo e il valore predefinito (ad esempio, IDOK o IDCANCEL).  
   
- `CSimpleDialog` Consente di creare solo le finestre di dialogo modale. `CSimpleDialog` fornisce la routine di finestra di dialogo, che utilizza la mappa dei messaggi predefinita per indirizzare i messaggi per i gestori appropriati.  
+ `CSimpleDialog` Consente di creare solo le finestre di dialogo modale. `CSimpleDialog` fornisce la routine di finestra di dialogo, che usa la mappa dei messaggi predefinita per indirizzare i messaggi ai gestori appropriati.  
   
- Vedere [implementazione di una finestra di dialogo](../../atl/implementing-a-dialog-box.md) per ulteriori informazioni.  
+ Visualizzare [implementazione di una finestra di dialogo](../../atl/implementing-a-dialog-box.md) per altre informazioni.  
   
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  `CDialogImplBase`  
@@ -77,16 +77,16 @@ INT_PTR DoModal(HWND hWndParent = ::GetActiveWindow());
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `hWndParent`  
- Handle per l'elemento padre della finestra di dialogo. Se non viene fornito alcun valore, l'elemento padre è impostato per la finestra attiva corrente.  
+ *hWndParent*  
+ Handle per l'elemento padre della finestra di dialogo. Se viene specificato alcun valore, l'elemento padre è impostato per la finestra attiva corrente.  
   
 ### <a name="return-value"></a>Valore restituito  
- Se ha esito positivo, il valore restituito è l'ID di risorsa del controllo che chiusa la finestra di dialogo.  
+ Se l'operazione riesce, il valore restituito è l'ID risorsa del controllo che è stata chiusa la finestra di dialogo.  
   
  Se la funzione ha esito negativo, il valore restituito è -1. Per ottenere informazioni estese sull'errore, chiamare `GetLastError`.  
   
 ### <a name="remarks"></a>Note  
- Questo metodo gestisce tutte le interazioni con l'utente, mentre è attiva la finestra di dialogo. Questo è ciò che rende la finestra di dialogo modale; ovvero, l'utente non può interagire con altre finestre fino a quando non viene chiusa la finestra di dialogo.  
+ Questo metodo gestisce l'interazione con l'utente mentre è attiva la finestra di dialogo. Questo è ciò che rende la finestra di dialogo modale; vale a dire, l'utente non è possibile interagire con altre finestre fino a quando non viene chiusa la finestra di dialogo.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Cenni preliminari sulla classe](../../atl/atl-class-overview.md)
+ [Panoramica della classe](../../atl/atl-class-overview.md)

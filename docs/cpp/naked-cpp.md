@@ -1,5 +1,5 @@
 ---
-title: naked (C++) | Documenti Microsoft
+title: naked (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 84e172c24bbb87f9243a4c0de25a98c90e043acc
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1057754b5c98086de42daedd5e7aab70656eba69
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37943249"
 ---
 # <a name="naked-c"></a>naked (C++)
 **Sezione specifica Microsoft**  
   
- Per le funzioni dichiarate con la `naked` attributo, il compilatore genera codice senza codice di prologo ed epilogo. È possibile utilizzare questa funzionalità per scrivere le proprie sequenze di codice di epilogo o di prologo utilizzando codice assembler inline. Le funzioni con attributo naked sono particolarmente utili nella scrittura di driver di dispositivi virtuali.  Si noti che il `naked` attributo è valido solo per x86 e ARM e non è disponibile in [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)].  
+ Per le funzioni dichiarate con il **naked** attributo, il compilatore genera codice senza codice di prologo ed epilogo. È possibile utilizzare questa funzionalità per scrivere le proprie sequenze di codice di epilogo o di prologo utilizzando codice assembler inline. Le funzioni con attributo naked sono particolarmente utili nella scrittura di driver di dispositivi virtuali.  Si noti che il **naked** attributo è valido solo per x86 e ARM e non è disponibile in [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)].  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -35,16 +36,16 @@ __declspec(naked) declarator
 ```  
   
 ## <a name="remarks"></a>Note  
- Poiché il `naked` è rilevante solo per la definizione di una funzione e non è un modificatore di tipo di attributo, le funzioni naked devono utilizzare la sintassi degli attributi estesa e [declspec](../cpp/declspec.md) (parola chiave).  
+ Poiché il **naked** attributo rilevante solo per la definizione di una funzione e non è un modificatore di tipo, le funzioni naked devono usare la sintassi degli attributi estesa e il [declspec](../cpp/declspec.md) (parola chiave).  
   
 
  Il compilatore non è possibile generare una funzione inline per una funzione contrassegnata con l'attributo naked, anche se la funzione viene anche contrassegnata con il [forceinline](inline-functions-cpp.md) (parola chiave).  
 
   
- Il compilatore genera un errore se il `naked` attributo viene applicato a qualsiasi elemento diverso dalla definizione di un metodo non membro.  
+ Il compilatore genera un errore se il **naked** attributo viene applicato a qualsiasi elemento diverso dalla definizione di un metodo non membro.  
   
 ## <a name="examples"></a>Esempi  
- Questo codice definisce una funzione con il `naked` attributo:  
+ Questo codice definisce una funzione con il **naked** attributo:  
   
 ```  
 __declspec( naked ) int func( formal_parameters ) {}  
@@ -57,18 +58,17 @@ __declspec( naked ) int func( formal_parameters ) {}
 Naked int func( formal_parameters ) {}  
 ```  
   
- L'attributo `naked` influisce solo sulla natura della generazione di codice del compilatore per le sequenze di prologo ed epilogo della funzione. Tale attributo non influisce sul codice generato per chiamare tali funzioni. Di conseguenza, l'attributo `naked` non è considerato come parte del tipo di funzione e i puntatori alla funzione non possono avere l'attributo `naked`. Inoltre, l'attributo `naked` non può essere applicato a una definizione dei dati. Ad esempio, in questo esempio di codice genera un errore:  
+ Il **naked** attributo interessa solo la natura della generazione del codice del compilatore per le sequenze di prologo ed epilogo della funzione. Tale attributo non influisce sul codice generato per chiamare tali funzioni. Di conseguenza, il **naked** attributo non è considerato parte del tipo della funzione e i puntatori a funzione non può contenere il **naked** attributo. Inoltre, il **naked** attributo non può essere applicato a una definizione di dati. Questo esempio di codice, ad esempio, genera un errore:  
   
 ```  
-__declspec( naked ) int i;       // Error--naked attribute not  
-                                 // permitted on data declarations.  
+__declspec( naked ) int i;  
+// Error--naked attribute not permitted on data declarations.  
 ```  
   
- L'attributo `naked` è rilevante solo per la definizione della funzione e non può essere specificato nel prototipo della funzione. Ad esempio, questa dichiarazione genera un errore del compilatore:  
+ Il **naked** attributo è rilevante solo per la definizione della funzione e non può essere specificato nel prototipo della funzione. Ad esempio, questa dichiarazione genera un errore del compilatore:  
   
 ```  
-__declspec( naked ) int func();  // Error--naked attribute not   
-                                 // permitted on function declarations  
+__declspec( naked ) int func();  // Error--naked attribute not permitted on function declarations  
 ```  
   
  **Fine sezione specifica Microsoft**  

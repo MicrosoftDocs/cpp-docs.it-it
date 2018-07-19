@@ -1,5 +1,5 @@
 ---
-title: "Procedura: progettazione di sicurezza dell'eccezione | Documenti Microsoft"
+title: 'Procedura: progettare la sicurezza di eccezione del | Microsoft Docs'
 ms.custom: how-to
 ms.date: 11/04/2016
 ms.technology:
@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cbad81c5014c2aa3bcf10b083fa974615e4669e9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3dd7448d50debc54cde075b8a6879af8b1be62c9
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32417968"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37940322"
 ---
 # <a name="how-to-design-for-exception-safety"></a>Procedura: progettare la sicurezza dell'eccezione
 Uno dei vantaggi del meccanismo di eccezione è che l'esecuzione, insieme ai dati sull'eccezione, passa direttamente dall'istruzione che genera l'eccezione alla prima istruzione catch che gestisce. Il gestore può essere un numero qualsiasi di livelli nello stack di chiamate. Le funzioni chiamate tra l'istruzione try e l'istruzione throw non sono necessarie per ottenere informazioni sull'eccezione gestita.  Tuttavia, devono essere progettate in modo tale da poter uscire dall'ambito "in modo imprevisto" in qualsiasi punto in cui un'eccezione può propagarsi dal basso, ed essere eseguite senza lasciarsi dietro oggetti parzialmente creati, memoria persa o strutture di dati in stati non utilizzabili.  
@@ -28,7 +28,7 @@ Uno dei vantaggi del meccanismo di eccezione è che l'esecuzione, insieme ai dat
  Indipendentemente da come una funzione gestisce un'eccezione, per garantire una "protezione dalle eccezioni" deve essere progettata secondo le seguenti regole basilari.  
   
 ### <a name="keep-resource-classes-simple"></a>Mantenere le classi di risorse semplici  
- Quando si incapsula la gestione manuale delle risorse nelle classi, utilizzare una classe il cui scopo sia solo di gestire ciascuna risorsa; in caso contrario, si potrebbero introdurre delle perdite. Utilizzare [puntatori intelligenti](../cpp/smart-pointers-modern-cpp.md) quando possibile, come illustrato nell'esempio seguente. Questo esempio è volutamente finto e semplicistico per evidenziare le differenze quando viene usato `shared_ptr`.  
+ Quando si incapsula la gestione manuale delle risorse nelle classi, utilizzare una classe il cui scopo sia solo di gestire ciascuna risorsa; in caso contrario, si potrebbero introdurre delle perdite. Uso [puntatori intelligenti](../cpp/smart-pointers-modern-cpp.md) quando possibile, come illustrato nell'esempio seguente. Questo esempio è volutamente finto e semplicistico per evidenziare le differenze quando viene usato `shared_ptr`.  
   
 ```cpp  
 // old-style new/delete version  
@@ -90,10 +90,10 @@ public:
 ```  
   
 ### <a name="use-the-raii-idiom-to-manage-resources"></a>Utilizzare il linguaggio del modello RAII per gestire le risorse  
- Per essere eseguita correttamente indipendentemente dalle eccezioni, una funzione deve garantire che gli oggetti che ha allocato utilizzando `malloc` o `new` vengano eliminati in modo permanente e che tutte le risorse quali gli handle di file vengano chiuse o rilasciate anche se viene generata un'eccezione. Il *Resource Acquisition Is Initialization* linguaggio (RAII) lega la gestione di tali risorse alla durata delle variabili automatiche. Quando una funzione va fuori ambito o restituendo un risultato normalmente o a causa di un'eccezione, vengono richiamati i distruttori per tutte le variabili automatiche completamente costruite. Un oggetto wrapper del modello RAII, come un puntatore intelligente, chiama la funzione di chiusura o di eliminazione appropriata nel proprio distruttore. Nel codice indipendente dalle eccezioni è estremamente importante passare la proprietà di ogni risorsa immediatamente a un tipo di oggetto RAII. Si noti che il `vector`, `string`, `make_shared`, `fstream`, e l'acquisizione della risorsa per l'utente di gestire classi simili.  Tuttavia, `unique_ptr` tradizionali e `shared_ptr` costruzioni sono speciali perché l'acquisizione delle risorse viene eseguita dall'utente anziché l'oggetto; pertanto, sono considerate *risorse versione è distruzione* ma sono discussione come RAII.  
+ Per essere indipendente dalle eccezioni, una funzione deve garantire che gli oggetti che ha allocato utilizzando `malloc` oppure **nuovi** vengano eliminati definitivamente e tutte le risorse, ad esempio gli handle di file vengano chiuse o rilasciate anche se viene generata un'eccezione. Il *Resource Acquisition Is Initialization* idioma (RAII) lega la gestione di tali risorse alla durata delle variabili automatiche. Quando una funzione va fuori ambito o restituendo un risultato normalmente o a causa di un'eccezione, vengono richiamati i distruttori per tutte le variabili automatiche completamente costruite. Un oggetto wrapper del modello RAII, come un puntatore intelligente, chiama la funzione di chiusura o di eliminazione appropriata nel proprio distruttore. Nel codice indipendente dalle eccezioni è estremamente importante passare la proprietà di ogni risorsa immediatamente a un tipo di oggetto RAII. Si noti che il `vector`, `string`, `make_shared`, `fstream`, e classi simili gestiscono l'acquisizione della risorsa per l'utente.  Tuttavia `unique_ptr` tradizionali `shared_ptr` costruzioni sono speciali perché viene eseguita l'acquisizione delle risorse dall'utente anziché l'oggetto; pertanto, vengono considerate come *risorsa di versione è l'eliminazione permanente* ma sono incerte come il modello RAII.  
   
 ## <a name="the-three-exception-guarantees"></a>Tre garanzie di eccezioni  
- In genere, la sicurezza di eccezione è descritto in termini di tre garanzie di eccezioni che può fornire una funzione: il *garanzia di nessun errore*, *garanzia solida*e *garanzia di base* .  
+ In genere, protezione dalle eccezioni viene discussa in termini di tre garanzie di eccezione che può fornire una funzione: la *garanzia di nessun errore*, il *garanzia solida*e il *garanzia di base* .  
   
 ### <a name="no-fail-guarantee"></a>Garanzia di nessun errore  
  La garanzia di nessun errore o di nessuna generazione è la garanzia più forte che una funzione possa offrire. Dichiara che la funzione non genererà eccezioni o non consentirà la propagazione di eccezioni. Tuttavia, non è possibile fornire in modo affidabile una garanzia a meno che (a) non sia noto che anche tutte le funzioni chiamate da tale funzione siano senza errori o (b) sia noto che tutte le eccezioni generate vengono intercettate prima che raggiungano questa funzione o (c) sia noto come intercettare e gestire correttamente tutte le eccezioni che potrebbero raggiungere questa funzione.  
@@ -120,5 +120,5 @@ public:
 -   Non consentire alle eccezioni di uscire da un distruttore. Un assioma di base del linguaggio C++ afferma che i distruttori non dovrebbero mai consentire che un'eccezione si propaghi nello stack di chiamate. Se un distruttore deve eseguire un'operazione che potenzialmente genera un'eccezione, deve farlo in un blocco try-catch e inghiottire l'eccezione. La libreria standard garantisce questo comportamento per tutti i distruttori che definisce.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Errori ed eccezioni](../cpp/errors-and-exception-handling-modern-cpp.md)   
+ [Gli errori e la gestione delle eccezioni](../cpp/errors-and-exception-handling-modern-cpp.md)   
  [Procedura: Interfaccia tra codice eccezionale e non eccezionale](../cpp/how-to-interface-between-exceptional-and-non-exceptional-code.md)

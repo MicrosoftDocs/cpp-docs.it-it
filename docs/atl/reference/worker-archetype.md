@@ -1,5 +1,5 @@
 ---
-title: Sistema di rilevazione lavoro | Documenti Microsoft
+title: Archetipo worker | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,50 +14,50 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cee9df0b137655fe66e68c189de756f15233a94d
-ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
+ms.openlocfilehash: 75f9e974a2969fa817598556e3e043626a826970
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34255978"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37881305"
 ---
-# <a name="worker-archetype"></a>Sistema di rilevazione di lavoro
-Classi conformi al *lavoro* sistema per fornire il codice per gli elementi di lavoro di processo in coda in un pool di thread.  
+# <a name="worker-archetype"></a>Archetipo worker
+Classi conformi al *lavoro* archetipo forniscono il codice per gli elementi di lavoro di processo in coda nel pool di thread.  
   
  **Implementazione**  
   
- Per implementare una classe conforme a questo sistema di rilevazione, la classe deve fornire le funzionalità seguenti:  
+ Per implementare una classe conforme a archetipo, la classe deve fornire le funzionalità seguenti:  
   
 |Metodo|Descrizione|  
 |------------|-----------------|  
-|[Initialize](#initialize)|Chiamato per inizializzare l'oggetto di lavoro prima di tutte le richieste vengono passate a [Execute](#execute).|  
+|[Initialize](#initialize)|Chiamato per inizializzare l'oggetto ruolo di lavoro prima che tutte le richieste vengono passate al [Execute](#execute).|  
 |[Eseguire](#execute)|Chiamato per elaborare un elemento di lavoro.|  
-|[Terminare](#terminate)|Chiamato per annullare l'inizializzazione dell'oggetto worker dopo tutte le richieste sono state passate [Execute](#execute).|  
+|[Terminare](#terminate)|Chiamato da non inizializzare l'oggetto ruolo di lavoro dopo che tutte le richieste sono state passate al [Execute](#execute).|  
   
 |Typedef|Descrizione|  
 |-------------|-----------------|  
-|[RequestType](#requesttype)|Typedef per il tipo di elemento di lavoro che può essere elaborato dalla classe di lavoro.|  
+|[RequestType](#requesttype)|Typedef per il tipo di elemento di lavoro che può essere elaborato dalla classe ruolo di lavoro.|  
   
- Una tipica *lavoro* classe è simile al seguente:  
+ Una tipica *lavoro* abbia un aspetto simile al seguente:  
   
  [!code-cpp[NVC_ATL_Utilities#137](../../atl/codesnippet/cpp/worker-archetype_1.cpp)]  
   
  **Implementazioni esistenti**  
   
- Queste classi sono conformi a questo sistema per:  
+ Queste classi sono conformi all'archetipo:  
   
 |Classe|Descrizione|  
 |-----------|-----------------|  
-|[CNonStatelessWorker](../../atl/reference/cnonstatelessworker-class.md)|Riceve le richieste del pool di thread e li passa un oggetto di lavoro che viene creato e distrutto per ogni richiesta.|  
+|[CNonStatelessWorker](../../atl/reference/cnonstatelessworker-class.md)|Riceve le richieste del pool di thread e li passa ad un oggetto di lavoro che verrà creato ed eliminato per ogni richiesta.|  
   
- **Utilizzo**  
+ **Usare**  
   
- Questi parametri di modello prevede che la classe sia conforme a questo sistema per:  
+ Questi parametri del modello prevede che la classe di conformarsi all'archetipo:  
   
 |Nome del parametro|Utilizzata da|  
 |--------------------|-------------|  
-|*Lavoro*|[CThreadPool](../../atl/reference/cthreadpool-class.md)|  
-|*Lavoro*|[CNonStatelessWorker](../../atl/reference/cnonstatelessworker-class.md)|  
+|*Ruolo di lavoro*|[CThreadPool](../../atl/reference/cthreadpool-class.md)|  
+|*Ruolo di lavoro*|[CNonStatelessWorker](../../atl/reference/cnonstatelessworker-class.md)|  
   
 ### <a name="requirements"></a>Requisiti  
  **Intestazione:** atlutil. h  
@@ -75,30 +75,30 @@ void Execute(
 ```  
   
 #### <a name="parameters"></a>Parametri  
- `request`  
+ *Richiesta*  
  L'elemento di lavoro da elaborare. L'elemento di lavoro è dello stesso tipo `RequestType`.  
   
- `pvWorkerParam`  
- Un parametro personalizzato riconosciuto dalla classe di lavoro. Anche passato a `WorkerArchetype::Initialize` e `Terminate`.  
+ *pvWorkerParam*  
+ Un parametro personalizzato riconosciuto dalla classe ruolo di lavoro. Anche passato a `WorkerArchetype::Initialize` e `Terminate`.  
   
- `pOverlapped`  
- Un puntatore al [OVERLAPPED](http://msdn.microsoft.com/library/windows/desktop/ms684342) struttura utilizzata per creare la coda in cui sono stati accodati.  
+ *pOverlapped*  
+ Un puntatore per il [OVERLAPPED](http://msdn.microsoft.com/library/windows/desktop/ms684342) struttura utilizzata per creare la coda in cui gli elementi messe in coda.  
   
 ## <a name="initialize"></a> WorkerArchetype::Initialize
-Chiamato per inizializzare l'oggetto di lavoro prima di tutte le richieste vengono passate a `WorkerArchetype::Execute`.  
+Chiamato per inizializzare l'oggetto ruolo di lavoro prima di tutte le richieste vengono passate al `WorkerArchetype::Execute`.  
 ```
 BOOL Initialize(void* pvParam) throw();
 ```  
   
 #### <a name="parameters"></a>Parametri  
- `pvParam`  
- Un parametro personalizzato riconosciuto dalla classe di lavoro. Anche passato a `WorkerArchetype::Terminate` e `WorkerArchetype::Execute`.  
+ *parametro pvParam*  
+ Un parametro personalizzato riconosciuto dalla classe ruolo di lavoro. Anche passato a `WorkerArchetype::Terminate` e `WorkerArchetype::Execute`.  
   
 ### <a name="return-value"></a>Valore restituito  
- Restituire **TRUE** in caso di esito positivo **FALSE** in caso di errore.  
+ Restituisce TRUE se l'operazione riesce, FALSE in caso di errore.  
   
 ## <a name="requesttype"></a> WorkerArchetype::RequestType
-Typedef per il tipo di elemento di lavoro che può essere elaborato dalla classe di lavoro.  
+Typedef per il tipo di elemento di lavoro che può essere elaborato dalla classe ruolo di lavoro.  
   
 ```  
 typedef MyRequestType RequestType;    
@@ -108,15 +108,15 @@ typedef MyRequestType RequestType;
  Questo tipo deve essere utilizzato come primo parametro di `WorkerArchetype::Execute` e deve essere in grado di sottoposto a cast da e verso un ULONG_PTR.  
   
 ## <a name="terminate"></a> WorkerArchetype::Terminate
-Chiamato per annullare l'inizializzazione dell'oggetto worker dopo tutte le richieste sono state passate `WorkerArchetype::Execute`).  
+Chiamato da non inizializzare l'oggetto ruolo di lavoro dopo che tutte le richieste sono state passate al `WorkerArchetype::Execute`).  
     
 ``` 
 void Terminate(void* pvParam) throw();
 ```  
   
 #### <a name="parameters"></a>Parametri  
- `pvParam`  
- Un parametro personalizzato riconosciuto dalla classe di lavoro. Anche passato a `WorkerArchetype::Initialize` e `WorkerArchetype::Execute`.  
+ *parametro pvParam*  
+ Un parametro personalizzato riconosciuto dalla classe ruolo di lavoro. Anche passato a `WorkerArchetype::Initialize` e `WorkerArchetype::Execute`.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Concetti](../../atl/active-template-library-atl-concepts.md)   

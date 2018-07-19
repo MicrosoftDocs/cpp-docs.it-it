@@ -1,5 +1,5 @@
 ---
-title: Identificatore final | Documenti Microsoft
+title: Identificatore final | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,34 +16,31 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 82fb9e13fc5dbbafcc37905716a37322b2966c6d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 594bc432cb12b63c76172b06ee078d5b0f72de55
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37943166"
 ---
 # <a name="final-specifier"></a>Identificatore final
-È possibile utilizzare la parola chiave `final` per designare le funzioni virtuali che non possono essere sottoposte a override in una classe derivata. È inoltre possibile utilizzare tale parola chiave per definire classi che non possono essere ereditate.  
+È possibile usare la **finale** parola chiave per definire le funzioni virtuali che non possono essere sottoposto a override in una classe derivata. È inoltre possibile utilizzare tale parola chiave per definire classi che non possono essere ereditate.  
   
 ## <a name="syntax"></a>Sintassi  
   
 ```  
   
 function-declaration final;  
-```  
-  
-```  
-  
 class class-name final base-classes  
 ```  
   
 ## <a name="remarks"></a>Note  
- La parola chiave `final` è sensibile al contesto e ha un significato speciale solo quando viene utilizzata dopo una dichiarazione di funzione o un nome di classe; in caso contrario, non è una parola chiave riservata.  
+ **finale** è sensibile al contesto e ha un significato speciale solo quando viene utilizzata dopo una dichiarazione di funzione o nome di classe; in caso contrario, non è una parola chiave riservata.  
   
- Quando si utilizza `final` nelle dichiarazioni di classe, `base-classes` è una parte della dichiarazione facoltativa.  
+ Quando **finale** viene usato nelle dichiarazioni di classe, `base-classes` è una parte facoltativa della dichiarazione.  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene utilizzata la parola chiave `final` per specificare che una funzione virtuale non può essere sottoposta a override.  
+ L'esempio seguente usa il **finale** (parola chiave) per specificare che una funzione virtuale non può essere sottoposto a override.  
   
 ```cpp  
 class BaseClass  
@@ -58,9 +55,9 @@ class DerivedClass: public BaseClass
 };  
 ```  
   
- Per informazioni su come specificare che è possono eseguire l'override di funzioni membro, vedere [identificatore di override](../cpp/override-specifier.md).  
+ Per informazioni su come specificare che è possano eseguire l'override di funzioni membro, vedere [identificatore di override](../cpp/override-specifier.md).  
   
- Nell'esempio successivo viene utilizzata la parola chiave `final` per specificare che una classe non può essere ereditata.  
+ L'esempio seguente usa il **finale** (parola chiave) per specificare che una classe non può essere ereditata.  
   
 ```cpp  
 class BaseClass final   

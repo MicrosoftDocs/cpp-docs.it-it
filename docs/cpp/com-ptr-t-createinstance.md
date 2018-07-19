@@ -1,5 +1,5 @@
 ---
-title: _com_ptr_t::CreateInstance | Documenti Microsoft
+title: _com_ptr_t::CreateInstance | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,22 +16,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 70ccd73980295bdda67a4c49d034b6d185d2d93c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c8aca9422c4798cd798d048ce42443c4f38bd170
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37943500"
 ---
 # <a name="comptrtcreateinstance"></a>_com_ptr_t::CreateInstance
 **Sezione specifica Microsoft**  
   
- Crea una nuova istanza di un oggetto dato un **CLSID** o **ProgID**.  
+ Crea una nuova istanza di un oggetto dato un `CLSID` o `ProgID`.  
   
 ## <a name="syntax"></a>Sintassi  
   
 ```  
   
-      HRESULT CreateInstance(  
+HRESULT CreateInstance(  
    const CLSID& rclsid,  
    IUnknown* pOuter=NULL,  
    DWORD dwClsContext = CLSCTX_ALL   
@@ -49,29 +50,29 @@ HRESULT CreateInstance(
 ```  
   
 #### <a name="parameters"></a>Parametri  
- `rclsid`  
- Il **CLSID** di un oggetto.  
+ *rclsid*  
+ Il `CLSID` di un oggetto.  
   
- `clsidString`  
- Una stringa Unicode che contiene un **CLSID** (a partire da "**{**") o un **ProgID**.  
+ *clsidString*  
+ Una stringa Unicode che contiene un `CLSID` (a partire da "**{**") o un `ProgID`.  
   
- `clsidStringA`  
- Stringa multibyte, utilizzando la tabella codici ANSI, che contiene un **CLSID** (a partire da "**{**") o un **ProgID**.  
+ *clsidStringA*  
+ Una stringa multibyte che utilizza la tabella codici ANSI, che contiene un `CLSID` (a partire da "**{**") o un `ProgID`.  
   
- `dwClsContext`  
+ *dwClsContext*  
  Contesto del codice eseguibile in esecuzione.  
   
- `pOuter`  
+ *pOuter*  
  Unknown esterno di [aggregazione](../atl/aggregation.md).  
   
 ## <a name="remarks"></a>Note  
- Queste funzioni membro chiamano `CoCreateInstance` per creare un nuovo oggetto COM e delle query per questo tipo di interfaccia del puntatore intelligente. Il puntatore risultante viene incapsulato in questo oggetto `_com_ptr_t`. **Versione** viene chiamato per diminuire il conteggio dei riferimenti per il puntatore incapsulato in precedenza. Questa routine restituisce `HRESULT` per indicare l'esito positivo o negativo.  
+ Queste funzioni membro chiamano `CoCreateInstance` per creare un nuovo oggetto COM e delle query per questo tipo di interfaccia del puntatore intelligente. Il puntatore risultante viene incapsulato in questo oggetto `_com_ptr_t`. `Release` viene chiamato per diminuire il conteggio dei riferimenti del puntatore incapsulato in precedenza. Questa routine restituisce il valore HRESULT per indicare esito positivo o negativo.  
   
--   **CreateInstance (** `rclsid` **,**`dwClsContext`**)** crea una nuova istanza in esecuzione di un oggetto dato un **CLSID**.        
+-   **CreateInstance (***rclsid* **,***dwClsContext***)** crea una nuova istanza in esecuzione di un oggetto dato un `CLSID`.        
   
--   **CreateInstance (** `clsidString` **,**`dwClsContext`**)** crea una nuova istanza in esecuzione di un oggetto mediante una stringa Unicode che contiene un **CLSID**(a partire da "**{**") o un **ProgID**.        
+-   **CreateInstance (***clsidString* **,***dwClsContext***)** crea una nuova istanza in esecuzione di un oggetto dato un Stringa Unicode che contiene un `CLSID` (a partire da "**{**") o un `ProgID`.        
   
--   **CreateInstance (** `clsidStringA` **,**`dwClsContext`**)** crea una nuova istanza in esecuzione di un oggetto in base a una stringa di caratteri multibyte che contiene un **CLSID**  (a partire da "**{**") o un **ProgID**.       Chiamate [MultiByteToWideChar](http://msdn.microsoft.com/library/windows/desktop/dd319072), che si presuppone che la stringa sia la tabella codici ANSI anziché una tabella codici OEM.  
+-   **CreateInstance (***clsidStringA* **,***dwClsContext***)** crea una nuova istanza in esecuzione di un oggetto dato un stringa di caratteri multibyte che contiene un `CLSID` (a partire da "**{**") o un `ProgID`.       Le chiamate [MultiByteToWideChar](http://msdn.microsoft.com/library/windows/desktop/dd319072), che presuppone che la stringa sia la tabella codici ANSI anziché una tabella codici OEM.  
   
  **Fine sezione specifica Microsoft**  
   

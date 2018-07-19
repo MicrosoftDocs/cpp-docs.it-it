@@ -1,5 +1,5 @@
 ---
-title: Classe COleChangeSourceDialog | Documenti Microsoft
+title: Classe COleChangeSourceDialog | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 08b4095b535724f7132a2b286ce52cb46286932b
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: ea2c87a3ce87bbf15f99609a643a9a72f6d2058e
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37037596"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37853485"
 ---
 # <a name="colechangesourcedialog-class"></a>Classe COleChangeSourceDialog
 Utilizzato per la finestra di dialogo di modifica dell'origine OLE.  
@@ -65,23 +65,23 @@ class COleChangeSourceDialog : public COleDialog
 |[COleChangeSourceDialog::DoModal](#domodal)|Consente di visualizzare la finestra di dialogo di modifica dell'origine OLE.|  
 |[COleChangeSourceDialog::GetDisplayName](#getdisplayname)|Ottiene il nome visualizzato di origine completo.|  
 |[COleChangeSourceDialog::GetFileName](#getfilename)|Ottiene il nome del file dal nome di origine.|  
-|[COleChangeSourceDialog::GetFromPrefix](#getfromprefix)|Ottiene il prefisso dell'origine precedente.|  
+|[COleChangeSourceDialog::GetFromPrefix](#getfromprefix)|Ottiene il prefisso di origine precedente.|  
 |[COleChangeSourceDialog::GetItemName](#getitemname)|Ottiene il nome dell'elemento dal nome di origine.|  
-|[COleChangeSourceDialog::GetToPrefix](#gettoprefix)|Ottiene il prefisso di una nuova origine|  
-|[COleChangeSourceDialog::IsValidSource](#isvalidsource)|Indica se l'origine è valido.|  
+|[COleChangeSourceDialog::GetToPrefix](#gettoprefix)|Ottiene il prefisso della nuova origine|  
+|[COleChangeSourceDialog::IsValidSource](#isvalidsource)|Indica se l'origine è valida.|  
   
 ### <a name="public-data-members"></a>Membri dati pubblici  
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[COleChangeSourceDialog::m_cs](#m_cs)|Una struttura che controlla il comportamento della finestra di dialogo.|  
+|[COleChangeSourceDialog::m_cs](#m_cs)|Struttura che controlla il comportamento della finestra di dialogo.|  
   
 ## <a name="remarks"></a>Note  
- Creare un oggetto della classe `COleChangeSourceDialog` quando si desidera chiamare questa finestra di dialogo. Dopo un `COleChangeSourceDialog` oggetto una volta creato, è possibile usare il [m_cs](#m_cs) struttura per inizializzare i valori o stati dei controlli nella finestra di dialogo. Il `m_cs` struttura è di tipo [OLEUICHANGESOURCE](http://msdn.microsoft.com/library/windows/desktop/ms682160). Per ulteriori informazioni sull'utilizzo di questa classe di finestra di dialogo, vedere la [DoModal](#domodal) funzione membro.  
+ Creare un oggetto della classe `COleChangeSourceDialog` quando si desidera chiamare questa finestra di dialogo. Dopo una `COleChangeSourceDialog` oggetto è stato costruito, è possibile usare il [m_cs](#m_cs) struttura per inizializzare i valori o degli stati dei controlli nella finestra di dialogo. Il `m_cs` struttura JE typu [OLEUICHANGESOURCE](http://msdn.microsoft.com/library/windows/desktop/ms682160). Per altre informazioni sull'uso di questa classe di finestra di dialogo, vedere la [DoModal](#domodal) funzione membro.  
   
  Per altre informazioni, vedere la [OLEUICHANGESOURCE](http://msdn.microsoft.com/library/windows/desktop/ms682160) struttura in Windows SDK.  
   
- Per ulteriori informazioni sulle finestre di dialogo OLE specifici, vedere l'articolo [finestre di dialogo in OLE](../../mfc/dialog-boxes-in-ole.md).  
+ Per altre informazioni sulle finestre di dialogo OLE specifici, vedere l'articolo [finestre di dialogo in OLE](../../mfc/dialog-boxes-in-ole.md).  
   
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -102,7 +102,7 @@ class COleChangeSourceDialog : public COleDialog
  **Intestazione:** afxodlgs. h  
   
 ##  <a name="colechangesourcedialog"></a>  COleChangeSourceDialog::COleChangeSourceDialog  
- Questa funzione costruisce una `COleChangeSourceDialog` oggetto.  
+ Questa funzione costruisce un `COleChangeSourceDialog` oggetto.  
   
 ```  
 explicit COleChangeSourceDialog(
@@ -112,15 +112,15 @@ explicit COleChangeSourceDialog(
   
 ### <a name="parameters"></a>Parametri  
  *pItem*  
- Puntatore all'oggetto collegato [COleClientItem](../../mfc/reference/coleclientitem-class.md) la cui origine è da aggiornare.  
+ Puntatore all'oggetto collegato [COleClientItem](../../mfc/reference/coleclientitem-class.md) la cui origine deve essere aggiornato.  
   
  *pParentWnd*  
- Punta all'oggetto finestra padre o proprietaria (di tipo `CWnd`) a cui appartiene l'oggetto finestra di dialogo. Se si tratta **NULL**, la finestra padre della finestra di dialogo verrà impostata su finestra principale dell'applicazione.  
+ Punta all'oggetto finestra padre o proprietaria (di tipo `CWnd`) a cui appartiene l'oggetto finestra di dialogo. Se è NULL, la finestra padre della finestra di dialogo verrà impostata nella finestra principale dell'applicazione.  
   
 ### <a name="remarks"></a>Note  
  Per visualizzare la finestra di dialogo, chiamare il [DoModal](#domodal) (funzione).  
   
- Per altre informazioni, vedere la [OLEUICHANGESOURCE](http://msdn.microsoft.com/library/windows/desktop/ms682160) struttura e [OleUIChangeSource](http://msdn.microsoft.com/library/windows/desktop/ms682497) funzione in Windows SDK.  
+ Per altre informazioni, vedere la [OLEUICHANGESOURCE](http://msdn.microsoft.com/library/windows/desktop/ms682160) struttura e [OleUIChangeSource](http://msdn.microsoft.com/library/windows/desktop/ms682497) (funzione) in Windows SDK.  
   
 ##  <a name="domodal"></a>  COleChangeSourceDialog::DoModal  
  Chiamare questa funzione per visualizzare la finestra di dialogo di modifica dell'origine OLE.  
@@ -130,18 +130,18 @@ virtual INT_PTR DoModal();
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- Stato di completamento per la finestra di dialogo. Uno dei valori seguenti:  
+ Stato di completamento della finestra di dialogo. Uno dei valori seguenti:  
   
-- **IDOK** se la finestra di dialogo è stata visualizzata correttamente.  
+- IDOK se la finestra di dialogo viene visualizzata correttamente.  
   
-- **IDCANCEL** se l'utente ha annullato la finestra di dialogo.  
+- IDCANCEL, se l'utente ha annullato la finestra di dialogo.  
   
-- **IDABORT** se si è verificato un errore. Se **IDABORT** viene restituito, chiamare il [COleDialog:: GetLastError](../../mfc/reference/coledialog-class.md#getlasterror) funzione membro per ottenere ulteriori informazioni sul tipo di errore che si sono verificati. Per un elenco dei possibili errori, vedere la [OleUIChangeSource](http://msdn.microsoft.com/library/windows/desktop/ms682497) funzione in Windows SDK.  
+- IDABORT se si è verificato un errore. Se viene restituito IDABORT, chiamare il [COleDialog:: GetLastError](../../mfc/reference/coledialog-class.md#getlasterror) funzione membro per ottenere altre informazioni sul tipo di errore che si sono verificati. Per un elenco dei possibili errori, vedere la [OleUIChangeSource](http://msdn.microsoft.com/library/windows/desktop/ms682497) (funzione) in Windows SDK.  
   
 ### <a name="remarks"></a>Note  
- Se si desidera inizializzare i vari controlli di finestra di dialogo mediante impostazione dei membri del [m_cs](#m_cs) struttura, è consigliabile farlo prima di chiamare `DoModal`, ma dopo che l'oggetto finestra di dialogo viene costruito.  
+ Se si desidera inizializzare i vari controlli di finestra di dialogo impostando i membri del [m_cs](#m_cs) struttura, è necessario eseguire questa operazione prima di chiamare `DoModal`, ma dopo che viene costruito l'oggetto finestra di dialogo.  
   
- Se `DoModal` restituisce **IDOK**, è possibile chiamare funzioni per recuperare le impostazioni utente ha immesso o informazioni dalla finestra di dialogo membro. Il seguente descrive le funzioni di query tipici:  
+ Se `DoModal` restituisce IDOK, è possibile chiamare funzioni per recuperare le impostazioni immesse dall'utente o le informazioni dalla finestra di dialogo membro. Nel seguente elenco presenti funzioni di query tipici:  
   
 - [GetFileName](#getfilename)  
   
@@ -157,17 +157,17 @@ CString GetDisplayName();
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- Il nome visualizzato completo origine (moniker) per il [COleClientItem](../../mfc/reference/coleclientitem-class.md) specificato nel costruttore.  
+ Il nome visualizzato completo di origine (moniker) per il [COleClientItem](../../mfc/reference/coleclientitem-class.md) specificato nel costruttore.  
   
 ##  <a name="getfilename"></a>  COleChangeSourceDialog::GetFileName  
- Chiamare questa funzione per recuperare la parte di file moniker del nome visualizzato per l'elemento collegato client.  
+ Chiamare questa funzione per recuperare la parte di moniker del file del nome visualizzato per l'elemento collegato client.  
   
 ```  
 CString GetFileName();
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- La parte di file moniker del nome visualizzato dell'origine per il [COleClientItem](../../mfc/reference/coleclientitem-class.md) specificato nel costruttore.  
+ La parte di moniker del file del nome visualizzato dell'origine per il [COleClientItem](../../mfc/reference/coleclientitem-class.md) specificato nel costruttore.  
   
 ### <a name="remarks"></a>Note  
  Il moniker del file con il moniker dell'elemento fornisce il nome visualizzato completo.  
@@ -183,21 +183,21 @@ CString GetFromPrefix();
  La stringa di prefisso precedente dell'origine.  
   
 ### <a name="remarks"></a>Note  
- Questa funzione solo dopo la chiamata [DoModal](#domodal) restituisce **IDOK**.  
+ Questa funzione solo dopo la chiamata [DoModal](#domodal) restituisce IDOK.  
   
- Questo valore proviene direttamente dal **lpszFrom** appartenente il [OLEUICHANGESOURCE](http://msdn.microsoft.com/library/windows/desktop/ms682160) struttura.  
+ Questo valore proviene direttamente dai `lpszFrom` membro della [OLEUICHANGESOURCE](http://msdn.microsoft.com/library/windows/desktop/ms682160) struttura.  
   
  Per altre informazioni, vedere la [OLEUICHANGESOURCE](http://msdn.microsoft.com/library/windows/desktop/ms682160) struttura in Windows SDK.  
   
 ##  <a name="getitemname"></a>  COleChangeSourceDialog::GetItemName  
- Chiamare questa funzione per recuperare la parte del moniker di elemento del nome visualizzato per l'elemento collegato client.  
+ Chiamare questa funzione per recuperare la parte di elemento moniker del nome visualizzato per l'elemento collegato client.  
   
 ```  
 CString GetItemName();
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- La parte del moniker di elemento del nome visualizzato dell'origine per il [COleClientItem](../../mfc/reference/coleclientitem-class.md) specificato nel costruttore.  
+ La parte di elemento moniker del nome visualizzato dell'origine per il [COleClientItem](../../mfc/reference/coleclientitem-class.md) specificato nel costruttore.  
   
 ### <a name="remarks"></a>Note  
  Il moniker del file con il moniker dell'elemento fornisce il nome visualizzato completo.  
@@ -210,12 +210,12 @@ CString GetToPrefix();
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- Nuova stringa di prefisso dell'origine.  
+ La nuova stringa di prefisso dell'origine.  
   
 ### <a name="remarks"></a>Note  
- Questa funzione solo dopo la chiamata [DoModal](#domodal) restituisce **IDOK**.  
+ Questa funzione solo dopo la chiamata [DoModal](#domodal) restituisce IDOK.  
   
- Questo valore proviene direttamente dal **lpszTo** appartenente il [OLEUICHANGESOURCE](http://msdn.microsoft.com/library/windows/desktop/ms682160) struttura.  
+ Questo valore proviene direttamente dai `lpszTo` membro della [OLEUICHANGESOURCE](http://msdn.microsoft.com/library/windows/desktop/ms682160) struttura.  
   
  Per altre informazioni, vedere la [OLEUICHANGESOURCE](http://msdn.microsoft.com/library/windows/desktop/ms682160) struttura in Windows SDK.  
   
@@ -227,7 +227,7 @@ OLEUICHANGESOURCE m_cs;
 ```  
   
 ### <a name="remarks"></a>Note  
- `OLEUICHANGESOURCE` Consente di controllare il comportamento della finestra di dialogo Modifica dell'origine OLE. I membri di questa struttura possono essere modificati direttamente.  
+ `OLEUICHANGESOURCE` viene usato per controllare il comportamento della finestra di dialogo Modifica dell'origine OLE. I membri di questa struttura possono essere modificati direttamente.  
   
  Per altre informazioni, vedere la [OLEUICHANGESOURCE](http://msdn.microsoft.com/library/windows/desktop/ms682160) struttura in Windows SDK.  
   
@@ -242,7 +242,7 @@ BOOL IsValidSource();
  Diverso da zero se la nuova origine è valida, in caso contrario 0.  
   
 ### <a name="remarks"></a>Note  
- Questa funzione solo dopo la chiamata [DoModal](#domodal) restituisce **IDOK**.  
+ Questa funzione solo dopo la chiamata [DoModal](#domodal) restituisce IDOK.  
   
  Per altre informazioni, vedere la [OLEUICHANGESOURCE](http://msdn.microsoft.com/library/windows/desktop/ms682160) struttura in Windows SDK.  
   

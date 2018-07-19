@@ -1,5 +1,5 @@
 ---
-title: while (istruzione) (C++) | Documenti Microsoft
+title: while (istruzione) (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,31 +17,32 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6f281007bea3f23bc8e7cebcdd68b9a306b500e9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fc826b588f133abb93c9942e7907dd8b0fce9574
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37943281"
 ---
 # <a name="while-statement-c"></a>Istruzione while (C++)
-Esegue *istruzione* ripetutamente finché *espressione* restituisce zero.  
+Viene eseguito *istruzione* ripetutamente finché *espressione* restituisce zero.  
   
 ## <a name="syntax"></a>Sintassi  
   
 ```  
   
-      while ( expression )  
+while ( expression )  
    statement  
 ```  
   
 ## <a name="remarks"></a>Note  
- Il test di *espressione* avviene prima dell'esecuzione del ciclo; pertanto, un `while` il ciclo viene eseguito zero o più volte. *espressione* deve essere di un tipo integrale, un tipo di puntatore o un tipo di classe con una conversione non ambigua a un tipo integrale o tipo di puntatore.  
+ Il test della *espressione* avviene prima di ogni esecuzione del ciclo; pertanto, un **mentre** ciclo viene eseguito zero o più volte. *espressione* deve essere di un tipo integrale, un tipo di puntatore, o un tipo di classe con una conversione non ambigua a un valore integrale o puntatore.  
   
- Oggetto `while` ciclo può terminare anche quando un [interruzione](../cpp/break-statement-cpp.md), [goto](../cpp/goto-statement-cpp.md), o [restituire](../cpp/return-statement-cpp.md) all'interno dell'istruzione corpo viene eseguito. Utilizzare [continuare](../cpp/continue-statement-cpp.md) per terminare l'iterazione corrente senza uscire il `while` ciclo. **continuare** passa il controllo all'iterazione successiva del `while` ciclo.  
+ Un **mentre** ciclo può terminare anche quando un [interruzione](../cpp/break-statement-cpp.md), [goto](../cpp/goto-statement-cpp.md), oppure [restituire](../cpp/return-statement-cpp.md) all'interno dell'istruzione corpo viene eseguito. Uso [continuare](../cpp/continue-statement-cpp.md) per terminare l'iterazione corrente senza uscire dalle **mentre** ciclo. **continuare** passa il controllo all'iterazione successiva del **mentre** ciclo.  
   
- Nel codice seguente viene utilizzato un ciclo `while` per tagliare i caratteri di sottolineatura finali di una stringa:  
+ Il codice seguente usa un' **mentre** caratteri di sottolineatura ciclo al Taglia finali da una stringa:  
   
-```  
+```cpp 
 // while_statement.cpp  
   
 #include <string.h>  

@@ -1,5 +1,5 @@
 ---
-title: Limitazioni ai gestori di eccezioni | Documenti Microsoft
+title: Limitazioni ai gestori di eccezioni | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,16 +15,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f739152b502a156dc62dfab279e5ad044cfff99
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 13971ede3aef6d223b1c631c4a28f8bf190e7174
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32420204"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37938783"
 ---
 # <a name="restrictions-on-exception-handlers"></a>Limitazioni ai gestori di eccezioni
-La limitazione principale nell'utilizzo dei gestori eccezioni è che non è possibile utilizzare un'istruzione `goto` per passare a un blocco di istruzioni `__try`. È tuttavia necessario inserire il blocco di istruzioni attraverso il normale flusso di controllo. È possibile uscire da un blocco di istruzioni `__try` e annidare i gestori di eccezione quando lo si desidera.  
+La limitazione principale nell'utilizzo di gestori di eccezioni nel codice è che è possibile utilizzare un **goto** istruzione di passare in un **try** blocco di istruzioni. È tuttavia necessario inserire il blocco di istruzioni attraverso il normale flusso di controllo. È possibile passare direttamente su un **try** istruzione blocca e annidare i gestori di eccezioni che vuoi.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Scrittura di un gestore di eccezioni](../cpp/writing-an-exception-handler.md)   
+ [La scrittura di un gestore di eccezioni](../cpp/writing-an-exception-handler.md)   
  [Gestione strutturata delle eccezioni (C/C++)](../cpp/structured-exception-handling-c-cpp.md)

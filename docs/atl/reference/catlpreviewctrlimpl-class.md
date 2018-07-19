@@ -1,5 +1,5 @@
 ---
-title: Classe CAtlPreviewCtrlImpl | Documenti Microsoft
+title: Classe CAtlPreviewCtrlImpl | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -30,18 +30,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 926076115a19b8c9669ec03958d841f08417e89c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9d0d1e35e3c2a7d9467024afdf3d415478cd7de1
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32362187"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37884977"
 ---
 # <a name="catlpreviewctrlimpl-class"></a>Classe CAtlPreviewCtrlImpl
-Questa classe è un'implementazione di ATL di una finestra che viene inserita in una finestra host fornita dalla Shell per l'anteprima avanzata.  
+Questa classe è un'implementazione di ATL di una finestra collocata in una finestra host fornita dalla Shell per l'anteprima avanzata.  
   
 > [!IMPORTANT]
->  Questa classe e i relativi membri non possono essere utilizzati nelle applicazioni eseguite in Windows Runtime.  
+>  Questa classe e i relativi membri non possono essere utilizzati nelle applicazioni eseguite nel Runtime di Windows.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -63,19 +63,19 @@ class CAtlPreviewCtrlImpl : public CWindowImpl<CAtlPreviewCtrlImpl>, public IPre
 |Nome|Descrizione|  
 |----------|-----------------|  
 |[CAtlPreviewCtrlImpl::Create](#create)|Chiamato da un gestore di anteprima avanzata per creare la finestra di Windows.|  
-|[CAtlPreviewCtrlImpl::Destroy](#destroy)|Chiamato da un gestore di anteprima avanzata quando è necessario eliminare definitivamente questo controllo.|  
-|[CAtlPreviewCtrlImpl::Focus](#focus)|Imposta lo stato attivo al controllo di input.|  
+|[CAtlPreviewCtrlImpl::Destroy](#destroy)|Chiamato da un gestore di anteprime Rich quando è necessario eliminare definitivamente questo controllo.|  
+|[CAtlPreviewCtrlImpl::Focus](#focus)|Imposta lo stato attivo a questo controllo.|  
 |[CAtlPreviewCtrlImpl::OnPaint](#onpaint)|Gestisce il messaggio WM_PAINT.|  
 |[CAtlPreviewCtrlImpl::Redraw](#redraw)|Indica il ridisegno del controllo.|  
-|[CAtlPreviewCtrlImpl::SetHost](#sethost)|Imposta un nuovo elemento padre per questo controllo.|  
-|[CAtlPreviewCtrlImpl::SetPreviewVisuals](#setpreviewvisuals)|Chiamato da un gestore di anteprima avanzata quando è necessario impostare gli elementi visivi di un'anteprima dettagliata del contenuto.|  
+|[CAtlPreviewCtrlImpl::SetHost](#sethost)|Imposta un nuovo elemento padre di questo controllo.|  
+|[CAtlPreviewCtrlImpl::SetPreviewVisuals](#setpreviewvisuals)|Chiamato da un gestore di anteprime Rich quando è necessario impostare gli oggetti visivi di un'anteprima dettagliata del contenuto.|  
 |[CAtlPreviewCtrlImpl::SetRect](#setrect)|Imposta un nuovo rettangolo di delimitazione per questo controllo.|  
   
 ### <a name="protected-methods"></a>Metodi protetti  
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[CAtlPreviewCtrlImpl::DoPaint](#dopaint)|Chiamato dal framework per eseguire il rendering dell'anteprima.|  
+|[CAtlPreviewCtrlImpl::DoPaint](#dopaint)|Chiamato dal framework per il rendering dell'anteprima.|  
   
 ### <a name="protected-constants"></a>Costanti protette  
   
@@ -138,19 +138,19 @@ virtual BOOL Create(HWND hWndParent, const RECT* prc);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `hWndParent`  
- Un handle alla finestra host fornita dalla Shell per l'anteprima avanzata.  
+ *hWndParent*  
+ Handle alla finestra host fornita dalla Shell per l'anteprima avanzata.  
   
- `prc`  
+ *Repubblica popolare cinese*  
  Specifica le dimensioni iniziali e la posizione della finestra.  
   
 ### <a name="return-value"></a>Valore restituito  
- `TRUE` se l'esito è positivo; in caso contrario, `FALSE`.  
+ TRUE se l'operazione riesce; in caso contrario, FALSE.  
   
 ### <a name="remarks"></a>Note  
   
 ##  <a name="destroy"></a>  CAtlPreviewCtrlImpl::Destroy  
- Chiamato da un gestore di anteprima avanzata quando è necessario eliminare definitivamente questo controllo.  
+ Chiamato da un gestore di anteprime Rich quando è necessario eliminare definitivamente questo controllo.  
   
 ```
 virtual void Destroy();
@@ -159,20 +159,20 @@ virtual void Destroy();
 ### <a name="remarks"></a>Note  
   
 ##  <a name="dopaint"></a>  CAtlPreviewCtrlImpl::DoPaint  
- Chiamato dal framework per eseguire il rendering dell'anteprima.  
+ Chiamato dal framework per il rendering dell'anteprima.  
   
 ```
 virtual void DoPaint(HDC hdc);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `hdc`  
+ *HDC*  
  Handle per un contesto di dispositivo per il disegno.  
   
 ### <a name="remarks"></a>Note  
   
 ##  <a name="focus"></a>  CAtlPreviewCtrlImpl::Focus  
- Imposta lo stato attivo al controllo di input.  
+ Imposta lo stato attivo a questo controllo.  
   
 ```
 virtual void Focus();
@@ -219,17 +219,17 @@ LRESULT OnPaint(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `nMsg`  
+ *nMsg*  
  Impostare su WM_PAINT.  
   
- `wParam`  
+ *wParam*  
  Questo parametro non viene usato.  
   
- `lParam`  
+ *lParam*  
  Questo parametro non viene usato.  
   
- `bHandled`  
- Quando questa funzione viene restituito, contiene `TRUE`.  
+ *bHandled*  
+ Quando questa funzione viene restituito, contiene TRUE.  
   
 ### <a name="return-value"></a>Valore restituito  
  Restituisce sempre 0.  
@@ -246,20 +246,20 @@ virtual void Redraw();
 ### <a name="remarks"></a>Note  
   
 ##  <a name="sethost"></a>  CAtlPreviewCtrlImpl::SetHost  
- Imposta un nuovo elemento padre per questo controllo.  
+ Imposta un nuovo elemento padre di questo controllo.  
   
 ```
 virtual void SetHost(HWND hWndParent);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `hWndParent`  
- Un handle a una nuova finestra padre.  
+ *hWndParent*  
+ Handle per la nuova finestra padre.  
   
 ### <a name="remarks"></a>Note  
   
 ##  <a name="setpreviewvisuals"></a>  CAtlPreviewCtrlImpl::SetPreviewVisuals  
- Chiamato da un gestore di anteprima avanzata quando è necessario impostare gli elementi visivi di un'anteprima dettagliata del contenuto.  
+ Chiamato da un gestore di anteprime Rich quando è necessario impostare gli oggetti visivi di un'anteprima dettagliata del contenuto.  
   
 ```
 virtual void SetPreviewVisuals(
@@ -269,13 +269,13 @@ virtual void SetPreviewVisuals(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `clrBack`  
+ *clrBack*  
  Colore di sfondo della finestra di anteprima.  
   
- `clrText`  
+ *clrText*  
  Colore del testo della finestra di anteprima.  
   
- `plf`  
+ *plf*  
  Tipo di carattere utilizzato per visualizzare il testo nella finestra di anteprima.  
   
 ### <a name="remarks"></a>Note  
@@ -288,10 +288,10 @@ virtual void SetRect(const RECT* prc, BOOL bRedraw);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `prc`  
- Specifica le nuove dimensioni e posizione del controllo di anteprima.  
+ *Repubblica popolare cinese*  
+ Specifica la nuova dimensione e posizione del controllo di anteprima.  
   
- `bRedraw`  
+ *bRedraw*  
  Specifica se il controllo deve essere ridisegnato.  
   
 ### <a name="remarks"></a>Note  

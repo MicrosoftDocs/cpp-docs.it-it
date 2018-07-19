@@ -1,5 +1,5 @@
 ---
-title: Classe CAtlAutoThreadModuleT | Documenti Microsoft
+title: Classe CAtlAutoThreadModuleT | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,18 +18,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a012494365745d40d98c0f65ee9eff6b5e9502da
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a54818b839f13ad9114274248cfdbfc74efa033a
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32361418"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37883073"
 ---
 # <a name="catlautothreadmodulet-class"></a>Classe CAtlAutoThreadModuleT
-Questa classe fornisce metodi per l'implementazione di un server di pool di thread, modello di apartment COM.  
+Questa classe fornisce metodi per l'implementazione di un server COM in pool di thread, modello di apartment.  
   
 > [!IMPORTANT]
->  Questa classe e i relativi membri non possono essere utilizzati nelle applicazioni eseguite in Windows Runtime.  
+>  Questa classe e i relativi membri non possono essere utilizzati nelle applicazioni eseguite nel Runtime di Windows.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -41,14 +41,14 @@ class ATL_NO_VTABLE CAtlAutoThreadModuleT : public IAtlAutoThreadModule
 ```  
   
 #### <a name="parameters"></a>Parametri  
- `T`  
+ *T*  
  La classe che implementerà il server COM.  
   
- `ThreadAllocator`  
+ *ThreadAllocator*  
  La classe di gestione di selezione di thread. Il valore predefinito è [CComSimpleThreadAllocator](../../atl/reference/ccomsimplethreadallocator-class.md).  
   
- `dwWait`  
- Specifica l'intervallo di timeout in millisecondi. Il valore predefinito è infinito, ovvero intervallo di timeout del metodo mai allo scadere dell'intervallo.  
+ *dwWait*  
+ Specifica l'intervallo di timeout, espresso in millisecondi. Il valore predefinito è INFINITE, il che significa intervallo di timeout del metodo mai allo scadere dell'intervallo.  
   
 ## <a name="members"></a>Membri  
   
@@ -56,13 +56,13 @@ class ATL_NO_VTABLE CAtlAutoThreadModuleT : public IAtlAutoThreadModule
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[CAtlAutoThreadModuleT::GetDefaultThreads](#getdefaultthreads)|Questa funzione statica in modo dinamico calcola e restituisce il numero massimo di thread per il modulo EXE, in base al numero di processori.|  
+|[CAtlAutoThreadModuleT::GetDefaultThreads](#getdefaultthreads)|Questa funzione statica in modo dinamico calcola e restituisce il numero massimo di thread per il modulo di file EXE, in base al numero di processori.|  
   
 ## <a name="remarks"></a>Note  
- La classe [CAtlAutoThreadModule](../../atl/reference/catlautothreadmodule-class.md) deriva da `CAtlAutoThreadModuleT` per implementare un pool di thread del modello di apartment COM server. Sostituisce la classe obsoleta [CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md).  
+ La classe [CAtlAutoThreadModule](../../atl/reference/catlautothreadmodule-class.md) deriva da `CAtlAutoThreadModuleT` per implementare un pool di thread di modello di apartment COM server. Sostituisce la classe obsoleta [CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md).  
   
 > [!NOTE]
->  Questa classe non deve essere utilizzata in una DLL, come il valore predefinito `dwWait` valore infinito provoca un deadlock quando la DLL viene scaricata.  
+>  Questa classe non deve essere utilizzata in una DLL, come il valore predefinito *dwWait* valore infinito provocherà un deadlock quando la DLL viene scaricata.  
   
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  `IAtlAutoThreadModule`  
@@ -73,7 +73,7 @@ class ATL_NO_VTABLE CAtlAutoThreadModuleT : public IAtlAutoThreadModule
  **Intestazione:** atlbase. h  
   
 ##  <a name="getdefaultthreads"></a>  CAtlAutoThreadModuleT::GetDefaultThreads  
- Questa funzione statica in modo dinamico calcola e restituisce il numero massimo di thread per il modulo EXE, in base al numero di processori.  
+ Questa funzione statica in modo dinamico calcola e restituisce il numero massimo di thread per il modulo di file EXE, in base al numero di processori.  
   
 ```
 static int GetDefaultThreads();
@@ -83,10 +83,10 @@ static int GetDefaultThreads();
  Il numero di thread da creare nel modulo EXE.  
   
 ### <a name="remarks"></a>Note  
- Eseguire l'override di questo metodo se si desidera utilizzare un metodo diverso per il calcolo del numero di thread. Per impostazione predefinita, il numero di thread è in base al numero di processori.  
+ Eseguire l'override di questo metodo se si desidera utilizzare un metodo diverso per il calcolo del numero di thread. Per impostazione predefinita, il numero di thread si basa sul numero di processori.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Classe IAtlAutoThreadModule](../../atl/reference/iatlautothreadmodule-class.md)   
- [Cenni preliminari sulla classe](../../atl/atl-class-overview.md)   
+ [Panoramica della classe](../../atl/atl-class-overview.md)   
  [Classe IAtlAutoThreadModule](../../atl/reference/iatlautothreadmodule-class.md)   
- [Classi Module](../../atl/atl-module-classes.md)
+ [Classi di modulo](../../atl/atl-module-classes.md)

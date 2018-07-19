@@ -1,5 +1,5 @@
 ---
-title: struct (C++) | Documenti Microsoft
+title: struct (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5a9ea6bea20ad1591db9b07507b4db959d10a318
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4f4b343097be6c15b5a273fd4e2a59198858d576
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37943238"
 ---
 # <a name="struct-c"></a>struct (C++)
-La parola chiave `struct` definisce un tipo di struttura e/o una variabile di un tipo di struttura.  
+Il **struct** (parola chiave) definisce un tipo di struttura e/o una variabile di un tipo di struttura.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -36,46 +37,46 @@ La parola chiave `struct` definisce un tipo di struttura e/o una variabile di un
 ```  
   
 #### <a name="parameters"></a>Parametri  
- `template-spec`  
- Specifiche facoltative del modello. Per ulteriori informazioni, vedere [specifiche del modello](templates-cpp.md).  
+ *modello-spec*  
+ Specifiche facoltative del modello. Per altre informazioni, consultare [specifiche del modello](templates-cpp.md).  
   
- `struct`  
- Parola chiave `struct`.  
+ *struct*  
+ Il **struct** (parola chiave).  
   
- `ms-decl-spec`  
- Specifica della classe di archiviazione facoltativa. Per ulteriori informazioni, vedere il [declspec](../cpp/declspec.md) (parola chiave).  
+ *MS-decl-spec*  
+ Specifica della classe di archiviazione facoltativa. Per altre informazioni, vedere la [declspec](../cpp/declspec.md) (parola chiave).  
   
- `tag`  
- Nome del tipo assegnato alla struttura. Il tag diventa una parola riservata nell'ambito della struttura. Il tag è facoltativo. Se omesso, viene definita una struttura anonima. Per ulteriori informazioni, vedere [tipi di classe anonima](../cpp/anonymous-class-types.md).  
+ *Tag*  
+ Nome del tipo assegnato alla struttura. Il tag diventa una parola riservata nell'ambito della struttura. Il tag è facoltativo. Se omesso, viene definita una struttura anonima. Per altre informazioni, vedere [tipi di classe anonimi](../cpp/anonymous-class-types.md).  
   
- `base-list`  
- Elenco facoltativo delle classi o delle strutture da cui questa struttura deriverà i relativi membri. Vedere [le classi di Base](../cpp/base-classes.md) per ulteriori informazioni. Ogni nome di classe o struttura di base può essere preceduto da un identificatore di accesso ([pubblica](../cpp/public-cpp.md), [privata](../cpp/private-cpp.md), [protetti](../cpp/protected-cpp.md)) e [virtuale](../cpp/virtual-cpp.md) parola chiave. Vedere la tabella di accesso ai membri in [controllo dell'accesso ai membri della classe](member-access-control-cpp.md) per ulteriori informazioni.  
+ *base-list*  
+ Elenco facoltativo delle classi o delle strutture da cui questa struttura deriverà i relativi membri. Visualizzare [le classi di Base](../cpp/base-classes.md) per altre informazioni. Ogni nome di classe o struttura di base può essere preceduto da un identificatore di accesso ([pubbliche](../cpp/public-cpp.md), [privato](../cpp/private-cpp.md), [protette](../cpp/protected-cpp.md)) e il [virtuale](../cpp/virtual-cpp.md) parola chiave. Vedere la tabella di accesso ai membri nella [controllo dell'accesso ai membri della classe](member-access-control-cpp.md) per altre informazioni.  
   
- `member-list`  
- Elenco dei membri della struttura. Fare riferimento a [Panoramica membro della classe](../cpp/class-member-overview.md) per ulteriori informazioni. L'unica differenza qui consiste nel fatto che viene utilizzato `struct` anziché `class`.  
+ *elenco di membri*  
+ Elenco dei membri della struttura. Fare riferimento a [Panoramica della classe membro](../cpp/class-member-overview.md) per altre informazioni. L'unica differenza è che **struct** viene usato al posto di **classe**.  
   
- `declarators`  
- Elenco dei dichiaratori in cui sono specificati i nomi della classe. Gli elenchi dei dichiaratori dichiarano una o più istanze del tipo di struttura. I dichiaratori possono includere gli elenchi degli inizializzatori se tutti i membri dati della classe sono `public`. Gli elenchi degli inizializzatori sono comuni nelle strutture poiché i membri dati sono `public` per impostazione predefinita.  Vedere [Panoramica di dichiaratori](../cpp/overview-of-declarators.md) per ulteriori informazioni.  
+ *dichiaratori*  
+ Elenco dei dichiaratori in cui sono specificati i nomi della classe. Gli elenchi dei dichiaratori dichiarano una o più istanze del tipo di struttura. I dichiaratori possono includere gli elenchi di inizializzatori se tutti i membri dati della classe vengono **pubblica**. Gli elenchi di inizializzatori sono comuni nelle strutture poiché i membri dati sono **pubblica** per impostazione predefinita.  Visualizzare [panoramica dei dichiaratori](../cpp/overview-of-declarators.md) per altre informazioni.  
   
 ## <a name="remarks"></a>Note  
  Un tipo di struttura è un tipo composto definito dall'utente. È composto da campi o membri che possono avere tipi diversi.  
   
- In C++, una struttura è la stessa di una classe a parte il fatto che i relativi membri sono `public` per impostazione predefinita.  
+ In C++, una struttura è uguale a una classe ad eccezione del fatto che i relativi membri siano **pubblica** per impostazione predefinita.  
   
  Per informazioni sulle classi gestite e gli struct, vedere [classi e struct](../windows/classes-and-structs-cpp-component-extensions.md).  
   
 ## <a name="using-a-structure"></a>Utilizzo di una struttura  
- In C, è necessario utilizzare in modo esplicito la parola chiave `struct` per dichiarare una struttura. In C++ non è necessario utilizzare la parola chiave `struct` dopo la definizione del tipo.  
+ In C, è necessario usare in modo esplicito il **struct** una parola chiave per dichiarare una struttura. In C++, non è necessario usare il **struct** (parola chiave) dopo aver definito il tipo.  
   
  È possibile dichiarare delle variabili quando il tipo di struttura viene definito inserendo uno o più nomi di variabili delimitati da virgole tra la parentesi graffa di chiusura e il punto e virgola.  
   
  Le variabili di struttura possono essere inizializzate. L'inizializzazione per ogni variabile deve essere racchiusa in parentesi graffe.  
   
- Per informazioni correlate, vedere [classe](../cpp/class-cpp.md), [unione](../cpp/unions.md), e [enum](../cpp/enumerations-cpp.md).  
+ Per informazioni correlate, vedere [classe](../cpp/class-cpp.md), [union](../cpp/unions.md), e [enum](../cpp/enumerations-cpp.md).  
   
 ## <a name="example"></a>Esempio  
   
-```  
+```cpp 
 #include <iostream>  
 using namespace std;  
   

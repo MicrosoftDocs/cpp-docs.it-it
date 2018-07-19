@@ -1,5 +1,5 @@
 ---
-title: Operatori relazionali variant_t | Documenti Microsoft
+title: Operatori relazionali variant_t | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -25,11 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 663d8e24af8362de8ea809bc37a68c33d3278bc7
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 08d7f5c7c244d242c3d1dd7af7d2c2af017bcc78
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37943494"
 ---
 # <a name="variantt-relational-operators"></a>Operatori relazionali _variant_t
 **Sezione specifica Microsoft**  
@@ -40,32 +41,28 @@ ms.lasthandoff: 05/03/2018
   
 ```  
   
-      bool operator==(  
-   const VARIANT& varSrc   
-) const;  
 bool operator==(  
-   const VARIANT* pSrc   
-) const;  
+   const VARIANT& varSrc) const;  
+bool operator==(  
+   const VARIANT* pSrc) const;  
 bool operator!=(  
-   const VARIANT& varSrc   
-) const;  
+   const VARIANT& varSrc) const;  
 bool operator!=(  
-   const VARIANT* pSrc   
-) const;  
+   const VARIANT* pSrc) const;  
 ```  
   
 #### <a name="parameters"></a>Parametri  
  *varSrc*  
- Oggetto **VARIANT** da confrontare con il `_variant_t` oggetto.  
+ Oggetto `VARIANT` da confrontare con il `_variant_t` oggetto.  
   
- `pSrc`  
- Puntatore al **VARIANT** da confrontare con il `_variant_t` oggetto.  
+ *pSrc*  
+ Puntatore per il `VARIANT` da confrontare con il `_variant_t` oggetto.  
   
 ## <a name="return-value"></a>Valore restituito  
- Restituisce **true** se è responsabile del confronto, **false** in caso contrario.  
+ Restituisce **true** qualora sia presente, il confronto **false** in caso contrario.  
   
 ## <a name="remarks"></a>Note  
- Confronta un `_variant_t` dell'oggetto con un **VARIANT**, il test di uguaglianza o disuguaglianza.  
+ Confronta un `_variant_t` dell'oggetto con un `VARIANT`, il test di uguaglianza o disuguaglianza.  
   
  **Fine sezione specifica Microsoft**  
   

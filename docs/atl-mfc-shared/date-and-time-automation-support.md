@@ -1,5 +1,5 @@
 ---
-title: 'Data e ora: supporto di automazione | Documenti Microsoft'
+title: 'Data e ora: supporto di automazione | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,39 +24,39 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 915bcd5487f423b6240061a0e85f5554a3224397
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b5f6f0c6bf9933f06da4b50f9754a0d68814e16b
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32357594"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37883752"
 ---
 # <a name="date-and-time-automation-support"></a>Data e ora: supporto di automazione
-In questo articolo viene descritto come sfruttare i servizi di libreria di classe relativi alla gestione di data e ora. Le procedure descritte comprendono:  
+Questo articolo descrive come sfruttare i servizi di libreria di classi correlate alla gestione di data e ora. Le procedure descritte includono:  
   
 -   [Recupero dell'ora corrente](../atl-mfc-shared/current-time-automation-classes.md)  
   
--   [Il calcolo del tempo trascorso](../atl-mfc-shared/elapsed-time-automation-classes.md)  
+-   [Calcolo del tempo trascorso](../atl-mfc-shared/elapsed-time-automation-classes.md)  
   
 -   [Formattazione di una rappresentazione di stringa di una data/ora](../atl-mfc-shared/formatting-time-automation-classes.md)  
   
- Il [COleDateTime](../atl-mfc-shared/reference/coledatetime-class.md) classe fornisce un modo per rappresentare le informazioni di data e ora. Offre una maggiore granularità e un intervallo più ampio di [CTime](../atl-mfc-shared/reference/ctime-class.md) classe. Il [COleDateTimeSpan](../atl-mfc-shared/reference/coledatetimespan-class.md) classe rappresenta il tempo trascorso, ad esempio la differenza tra due `COleDateTime` oggetti.  
+ Il [COleDateTime](../atl-mfc-shared/reference/coledatetime-class.md) classe fornisce un modo per rappresentare le informazioni di data e ora. Offre una maggiore granularità e un intervallo più ampio i [CTime](../atl-mfc-shared/reference/ctime-class.md) classe. Il [COleDateTimeSpan](../atl-mfc-shared/reference/coledatetimespan-class.md) classe rappresenta il tempo trascorso, ad esempio la differenza tra due `COleDateTime` oggetti.  
   
- Il `COleDateTime` e `COleDateTimeSpan` classi sono progettate per essere utilizzato con la `COleVariant` classe usata nell'automazione. `COleDateTime` e `COleDateTimeSpan` sono anche utili per la programmazione di database MFC, ma possono essere usati ogni volta che si desidera modificare i valori di data e ora. Sebbene il `COleDateTime` classe dispone di un intervallo di valori e granularità maggiore rispetto a più di `CTime` (classe), richiede più spazio di archiviazione per ogni oggetto di `CTime`. Esistono inoltre alcune considerazioni speciali quando si lavora con sottostante **data** tipo. Vedere [nel tipo di dati](../atl-mfc-shared/date-type.md) per ulteriori informazioni sull'implementazione di **data**.  
+ Il `COleDateTime` e `COleDateTimeSpan` classi sono progettate per essere usato con il `COleVariant` classe usata nell'automazione. `COleDateTime` e `COleDateTimeSpan` sono anche utili nella programmazione di database MFC, ma possono essere usati ogni volta che si desidera modificare i valori di data e ora. Anche se il `COleDateTime` classe dispone di un intervallo di valori e granularità maggiore rispetto a più di `CTime` (classe), richiede più spazio di archiviazione per ogni oggetto più `CTime`. Esistono inoltre alcune considerazioni speciali quando si lavora nel tipo di dati sottostante. Visualizzare [nel tipo di dati](../atl-mfc-shared/date-type.md) per altri dettagli sull'implementazione di Data.  
   
- `COleDateTime` oggetti possono essere utilizzati per rappresentare le date comprese tra il 1 gennaio 100 e il 31 dicembre 9999. `COleDateTime` gli oggetti sono valori a virgola mobile, con una risoluzione approssimativa di 1 millisecondo. `COleDateTime` basa il **data** tipo di dati, definito nella documentazione di MFC in [COleDateTime:: operator data](../atl-mfc-shared/reference/coledatetime-class.md#operator_date). L'implementazione effettiva del **data** si estende oltre i limiti. Il `COleDateTime` implementazione impone tali limiti per facilitare l'utilizzo della classe.  
+ `COleDateTime` gli oggetti possono essere utilizzati per rappresentare le date comprese tra il 1 gennaio 100 e il 31 dicembre 9999. `COleDateTime` gli oggetti sono valori a virgola mobile, con una risoluzione approssimativa di 1 millisecondo. `COleDateTime` si basa sul tipo di dati DATE, definito nella documentazione di MFC sotto [COleDateTime:: operator data](../atl-mfc-shared/reference/coledatetime-class.md#operator_date). L'implementazione effettiva della data si estende oltre i limiti. Il `COleDateTime` implementazione impone tali limiti per facilitare l'uso con la classe.  
   
  `COleDateTime` non supporta giuliana. Si presuppone che il calendario gregoriano per estendere indietro nel tempo per il 1 gennaio 100.  
   
- `COleDateTime` Ignora l'ora legale (DST). Esempio di codice seguente vengono confrontate due metodi per il calcolo di un intervallo di tempo che attraversa il relativo alla data dell'ora legale: uno che utilizza la libreria CRT, mentre l'altro `COleDateTime`. Ora legale avviene, nella maggior parte dei casi, la seconda settimana di aprile e il terzo nel mese di ottobre.  
+ `COleDateTime` Ignora l'ora legale (DST). Esempio di codice seguente vengono confrontate due metodi di calcolo di un intervallo di tempo che attraversa il relativo alla data dell'ora legale: uno che utilizza la libreria CRT, mentre l'altro `COleDateTime`. Ora legale passa, la maggior parte delle impostazioni locali, la seconda settimana nel mese di aprile e il terzo nel mese di ottobre.  
   
- Il primo metodo imposta due `CTime` oggetti, *time1* e *time2*per 5 e 6 di aprile, rispettivamente, con le strutture di tipo C standard **tm** e `time_t`. Il codice visualizza *time1* e *time2* e l'intervallo di tempo tra di essi.  
+ Il primo metodo imposta due `CTime` oggetti *time1* e *time2*per aprile 5 e 6 aprile, rispettivamente, con le strutture di tipo C standard `tm` e `time_t`. Consente di visualizzare il codice *time1* e *time2* e l'intervallo di tempo tra di essi.  
   
- Il secondo metodo consente di creare due `COleDateTime` oggetti, `oletime1` e `oletime2`e li imposta sulle stesse date di *time1* e *time2*. Visualizza `oletime1` e `oletime2` e l'intervallo di tempo tra di essi.  
+ Il secondo metodo vengono creati due `COleDateTime` oggetti `oletime1` e `oletime2`e li imposta le date come stesso *time1* e *time2*. Viene visualizzato `oletime1` e `oletime2` e l'intervallo di tempo tra di essi.  
   
- La libreria CRT calcola correttamente una differenza di 23 ore. `COleDateTimeSpan` Calcola una differenza di 24 ore.  
+ La libreria CRT calcola in modo corretto una differenza di ore 23. `COleDateTimeSpan` Calcola una differenza di 24 ore.  
   
- Si noti che una soluzione alternativa viene utilizzata verso la fine dell'esempio per visualizzare la data in modo corretto utilizzando `COleDateTime::Format`. Vedere l'articolo della Knowledge Base "BUG: Format("%D") ha esito negativo per `COleDateTime` e `COleDateTimeSpan`" (Q167338).  
+ Si noti che una soluzione alternativa viene utilizzata per visualizzare la data in modo corretto utilizzando verso la fine dell'esempio `COleDateTime::Format`. Vedere l'articolo della Knowledge Base "BUG: per non riesce Format("%D") `COleDateTime` e `COleDateTimeSpan`" (Q167338).  
   
  [!code-cpp[NVC_ATLMFC_Utilities#176](../atl-mfc-shared/codesnippet/cpp/date-and-time-automation-support_1.cpp)]  
   

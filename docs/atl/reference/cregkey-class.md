@@ -1,5 +1,5 @@
 ---
-title: Classe CRegKey | Documenti Microsoft
+title: Classe CRegKey | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -52,18 +52,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b6daec3347aecaed3ba0aba5dec106d049a6a701
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7804513c45de1951935e0fdf2fd485b9457e2a5e
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32366640"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37885298"
 ---
 # <a name="cregkey-class"></a>Classe CRegKey
 Questa classe fornisce metodi per modificare le voci nel Registro di sistema.  
   
 > [!IMPORTANT]
->  Questa classe e i relativi membri non possono essere utilizzati nelle applicazioni eseguite in Windows Runtime.  
+>  Questa classe e i relativi membri non possono essere utilizzati nelle applicazioni eseguite nel Runtime di Windows.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -85,33 +85,33 @@ class CRegKey
 |Nome|Descrizione|  
 |----------|-----------------|  
 |[CRegKey::Attach](#attach)|Chiamare questo metodo per collegare un HKEY dal `CRegKey` oggetto impostando il [m_hKey](#m_hkey) handle membro `hKey`.|  
-|[CRegKey::Close](#close)|Chiamare questo metodo per rilasciare il [m_hKey](#m_hkey) membro gestire e impostarlo su NULL.|  
-|[CRegKey::Create](#create)|Chiamare questo metodo per creare la chiave specificata, se non esiste come sottochiave di `hKeyParent`.|  
+|[CRegKey::Close](#close)|Chiamare questo metodo per rilasciare il [m_hKey](#m_hkey) membro gestire e impostarla su NULL.|  
+|[CRegKey::Create](#create)|Chiamare questo metodo per creare la chiave specificata, se non esiste come una sottochiave della `hKeyParent`.|  
 |[CRegKey::DeleteSubKey](#deletesubkey)|Chiamare questo metodo per rimuovere la chiave specificata dal Registro di sistema.|  
 |[CRegKey::DeleteValue](#deletevalue)|Chiamare questo metodo per rimuovere un campo del valore da [m_hKey](#m_hkey).|  
-|[CRegKey::Detach](#detach)|Chiamare questo metodo per scollegare il [m_hKey](#m_hkey) membro handle dal `CRegKey` e impostare `m_hKey` su NULL.|  
-|[CRegKey::EnumKey](#enumkey)|Chiamare questo metodo per enumerare le sottochiavi della chiave del Registro di sistema aprire.|  
-|[CRegKey::Flush](#flush)|Chiamare questo metodo per scrivere tutti gli attributi della chiave del Registro di sistema aprire nel Registro di sistema.|  
-|[CRegKey::GetKeySecurity](#getkeysecurity)|Chiamare questo metodo per recuperare una copia del descrittore di sicurezza protegge la chiave del Registro di sistema aprire.|  
-|[CRegKey::NotifyChangeKeyValue](#notifychangekeyvalue)|Questo metodo di notifica al chiamante sulle modifiche al contenuto della chiave del Registro di sistema open o attributi.|  
+|[CRegKey::Detach](#detach)|Chiamare questo metodo per scollegare il [m_hKey](#m_hkey) handle membro dalle `CRegKey` dell'oggetto e impostare `m_hKey` su NULL.|  
+|[CRegKey::EnumKey](#enumkey)|Chiamare questo metodo per enumerare le sottochiavi della chiave del Registro di sistema open.|  
+|[CRegKey::Flush](#flush)|Chiamare questo metodo per tutti gli attributi della chiave di registro aperto di scrittura nel Registro di sistema.|  
+|[CRegKey::GetKeySecurity](#getkeysecurity)|Chiamare questo metodo per recuperare una copia del descrittore di sicurezza protegge la chiave del Registro di sistema open.|  
+|[CRegKey::NotifyChangeKeyValue](#notifychangekeyvalue)|Questo metodo notifica al chiamante sulle modifiche per gli attributi o il contenuto della chiave del Registro di sistema open.|  
 |[CRegKey::Open](#open)|Chiamare questo metodo per aprire la chiave specificata e impostare [m_hKey](#m_hkey) all'handle di questa chiave.|  
 |[CRegKey::QueryBinaryValue](#querybinaryvalue)|Chiamare questo metodo per recuperare i dati binari per nome di un valore specificato.|  
-|[CRegKey::QueryDWORDValue](#querydwordvalue)|Chiamare questo metodo per recuperare i dati DWORD per nome di un valore specificato.|  
+|[CRegKey::QueryDWORDValue](#querydwordvalue)|Chiamare questo metodo per recuperare i dati di valore DWORD per nome di un valore specificato.|  
 |[CRegKey::QueryGUIDValue](#queryguidvalue)|Chiamare questo metodo per recuperare i dati GUID per il nome di un valore specificato.|  
 |[CRegKey::QueryMultiStringValue](#querymultistringvalue)|Chiamare questo metodo per recuperare i dati delle multistringhe per nome di un valore specificato.|  
-|[CRegKey::QueryQWORDValue](#queryqwordvalue)|Chiamare questo metodo per recuperare i dati QWORD per nome di un valore specificato.|  
+|[CRegKey::QueryQWORDValue](#queryqwordvalue)|Chiamare questo metodo per recuperare i valori QWORD nome di un valore specificato.|  
 |[CRegKey::QueryStringValue](#querystringvalue)|Chiamare questo metodo per recuperare i dati di stringa per nome di un valore specificato.|  
-|[CRegKey::QueryValue](#queryvalue)|Chiamare questo metodo per recuperare i dati per il campo del valore specificato di [m_hKey](#m_hkey). Le versioni precedenti di questo metodo non sono più supportate e sono contrassegnate come **ATL_DEPRECATED**.|  
-|[CRegKey::RecurseDeleteKey](#recursedeletekey)|Chiamare questo metodo per rimuovere la chiave specificata dal Registro di sistema e rimuovere in modo esplicito il sottochiavi.|  
-|[CRegKey::SetBinaryValue](#setbinaryvalue)|Chiamare questo metodo per impostare il valore della chiave del Registro di sistema binario.|  
-|[CRegKey::SetDWORDValue](#setdwordvalue)|Chiamare questo metodo per impostare il valore DWORD della chiave del Registro di sistema.|  
+|[CRegKey::QueryValue](#queryvalue)|Chiamare questo metodo per recuperare i dati per il campo del valore specificato [m_hKey](#m_hkey). Le versioni precedenti di questo metodo non sono più supportate e sono contrassegnate come ATL_DEPRECATED.|  
+|[CRegKey::RecurseDeleteKey](#recursedeletekey)|Chiamare questo metodo per rimuovere la chiave specificata dal Registro di sistema e rimuovere in modo esplicito tutte le sottochiavi.|  
+|[CRegKey::SetBinaryValue](#setbinaryvalue)|Chiamare questo metodo per impostare il valore binario della chiave del Registro di sistema.|  
+|[CRegKey::SetDWORDValue](#setdwordvalue)|Chiamare questo metodo per impostare il valore della chiave del Registro di sistema DWORD.|  
 |[CRegKey::SetGUIDValue](#setguidvalue)|Chiamare questo metodo per impostare il valore GUID della chiave del Registro di sistema.|  
-|[CRegKey::SetKeySecurity](#setkeysecurity)|Chiamare questo metodo per impostare la protezione della chiave del Registro di sistema.|  
+|[CRegKey::SetKeySecurity](#setkeysecurity)|Chiamare questo metodo per impostare la sicurezza della chiave del Registro di sistema.|  
 |[CRegKey::SetKeyValue](#setkeyvalue)|Chiamare questo metodo per archiviare i dati in un campo del valore specificato di una chiave specificata.|  
 |[CRegKey::SetMultiStringValue](#setmultistringvalue)|Chiamare questo metodo per impostare il valore multistringa della chiave del Registro di sistema.|  
 |[CRegKey::SetQWORDValue](#setqwordvalue)|Chiamare questo metodo per impostare il valore QWORD della chiave del Registro di sistema.|  
 |[CRegKey::SetStringValue](#setstringvalue)|Chiamare questo metodo per impostare il valore di stringa della chiave del Registro di sistema.|  
-|[CRegKey::SetValue](#setvalue)|Chiamare questo metodo per archiviare i dati nel campo del valore specificato [m_hKey](#m_hkey). Le versioni precedenti di questo metodo non sono più supportate e sono contrassegnate come **ATL_DEPRECATED**.|  
+|[CRegKey::SetValue](#setvalue)|Chiamare questo metodo per archiviare i dati nel campo del valore specificato [m_hKey](#m_hkey). Le versioni precedenti di questo metodo non sono più supportate e sono contrassegnate come ATL_DEPRECATED.|  
   
 ### <a name="public-operators"></a>Operatori pubblici  
   
@@ -124,48 +124,48 @@ class CRegKey
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[CRegKey::m_hKey](#m_hkey)|Contiene un handle della chiave del Registro di sistema associata con il `CRegKey` oggetto.|  
+|[CRegKey::m_hKey](#m_hkey)|Contiene un handle della chiave del Registro di sistema associato il `CRegKey` oggetto.|  
 |[CRegKey::m_pTM](#m_ptm)|Puntatore a `CAtlTransactionManager` oggetto|  
   
 ## <a name="remarks"></a>Note  
- `CRegKey` fornisce metodi per la creazione e l'eliminazione di chiavi e valori nel Registro di sistema. Il Registro di sistema contiene un set di specifiche dell'installazione di definizioni per i componenti di sistema, ad esempio numeri di versione del software, il mapping logico fisica dell'hardware installato e gli oggetti COM.  
+ `CRegKey` fornisce metodi per la creazione e l'eliminazione di chiavi e valori nel Registro di sistema. Il Registro di sistema contiene un set di installazione specifiche delle definizioni per i componenti di sistema, ad esempio i numeri di versione del software, il mapping logico a fisico di hardware installato e oggetti COM.  
   
  `CRegKey` fornisce un'interfaccia di programmazione nel Registro di sistema per un determinato computer. Per aprire una chiave del Registro di sistema specifico, ad esempio, è consigliabile chiamare `CRegKey::Open`. Per recuperare o modificare un valore di dati, chiamare `CRegKey::QueryValue` o `CRegKey::SetValue`, rispettivamente. Per chiudere una chiave, chiamare `CRegKey::Close`.  
   
- Quando si chiude una chiave, i dati del Registro di sistema viene scritto (scaricato) per il disco rigido. Questo processo potrebbe richiedere alcuni secondi. Se l'applicazione deve in modo esplicito di scrivere i dati del Registro di sistema sul disco rigido, è possibile chiamare il [RegFlushKey](http://msdn.microsoft.com/library/windows/desktop/ms724867) funzione Win32. Tuttavia, **RegFlushKey** utilizza molte risorse di sistema e deve essere chiamato solo quando strettamente necessario.  
+ Quando si chiude una chiave, i dati del Registro di sistema viene scritto (scaricato) per il disco rigido. Questo processo potrebbe richiedere qualche secondo. Se l'applicazione deve scrivere in modo esplicito i dati del Registro di sistema sul disco rigido, è possibile chiamare il [regflushkey ha](http://msdn.microsoft.com/library/windows/desktop/ms724867) funzione Win32. Tuttavia, `RegFlushKey` Usa molte risorse di sistema e deve essere chiamato solo se assolutamente necessario.  
   
 > [!IMPORTANT]
->  I metodi che consentono al chiamante di specificare un percorso del Registro di sistema sono in grado di leggere i dati che non possono essere considerato attendibili. Utilizzano metodi che consentono di [RegQueryValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724911) deve prendere in considerazione che questa funzione non gestito in modo esplicito di stringhe che sono a terminazione NULL. Entrambe le condizioni devono essere controllate dal codice chiamante.  
+>  I metodi che consentono al chiamante di specificare un percorso del Registro di sistema hanno la possibilità di leggere i dati che non sono attendibili. Usano i metodi che rendono [RegQueryValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724911) deve prendere in considerazione che questa funzione non viene gestito in modo esplicito le stringhe che sono con terminata NULL. Entrambe le condizioni devono essere controllate dal codice chiamante.  
   
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** atlbase. h  
   
 ##  <a name="attach"></a>  CRegKey::Attach  
- Chiamare questo metodo per collegare un HKEY dal `CRegKey` oggetto impostando il [m_hKey](#m_hkey) handle membro `hKey`.  
+ Chiamare questo metodo per collegare un HKEY dal `CRegKey` oggetto impostando il [m_hKey](#m_hkey) handle membro *hKey*.  
   
 ```
 void Attach(HKEY hKey) throw();
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `hKey`  
+ *hKey*  
  L'handle di una chiave del Registro di sistema.  
   
 ### <a name="remarks"></a>Note  
- **Collegare** verrà verificata se `m_hKey` è diverso da NULL.  
+ `Attach` genera un'asserzione se `m_hKey` è diverso da NULL.  
   
 ##  <a name="close"></a>  CRegKey::Close  
- Chiamare questo metodo per rilasciare il [m_hKey](#m_hkey) membro gestire e impostarlo su NULL.  
+ Chiamare questo metodo per rilasciare il [m_hKey](#m_hkey) membro gestire e impostarla su NULL.  
   
 ```
 LONG Close() throw();
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- Se ha esito positivo, restituisce ERROR_SUCCESS; in caso contrario, restituisce un valore di errore.  
+ Se l'operazione riesce, restituisce ERROR_SUCCESS; in caso contrario, restituisce un valore di errore.  
   
 ##  <a name="create"></a>  CRegKey::Create  
- Chiamare questo metodo per creare la chiave specificata, se non esiste come sottochiave di `hKeyParent`.  
+ Chiamare questo metodo per creare la chiave specificata, se non esiste come una sottochiave della *hKeyParent*.  
   
 ```
 LONG Create(  
@@ -179,32 +179,32 @@ LONG Create(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `hKeyParent`  
+ *hKeyParent*  
  L'handle di una chiave aperta.  
   
- `lpszKeyName`  
- Specifica il nome di una chiave può essere creato o aperto. Questo nome deve essere una sottochiave di `hKeyParent`.  
+ *lpszKeyName*  
+ Specifica il nome di una chiave può essere creato o aperto. Questo nome deve essere una sottochiave della *hKeyParent*.  
   
- `lpszClass`  
- Specifica la classe della chiave da creare o aprire. Il valore predefinito è REG_NONE.  
+ *lpszClass*  
+ Specifica la classe della chiave può essere creato o aperto. Il valore predefinito è REG_NONE.  
   
- `dwOptions`  
- Opzioni per la chiave. Il valore predefinito è REG_OPTION_NON_VOLATILE. Per un elenco di valori possibili e le descrizioni, vedere [RegCreateKeyEx](http://msdn.microsoft.com/library/windows/desktop/ms724844) in Windows SDK.  
+ *dwOptions*  
+ Opzioni per la chiave. Il valore predefinito è REG_OPTION_NON_VOLATILE. Per un elenco di valori possibili e le descrizioni, vedere [RegCreateKeyEx](http://msdn.microsoft.com/library/windows/desktop/ms724844) nel SDK di Windows.  
   
- `samDesired`  
- L'accesso di sicurezza per la chiave. Il valore predefinito è KEY_READ &#124; KEY_WRITE. Per un elenco di valori possibili e le descrizioni, vedere **RegCreateKeyEx**.  
+ *samDesired*  
+ L'accesso di sicurezza per la chiave. Il valore predefinito è KEY_READ &#124; KEY_WRITE. Per un elenco di valori possibili e le descrizioni, vedere `RegCreateKeyEx`.  
   
  *lpSecAttr*  
- Un puntatore a un [SECURITY_ATTRIBUTES](http://msdn.microsoft.com/library/windows/desktop/aa379560) struttura che indica se l'handle della chiave può essere ereditato da un processo figlio. Per impostazione predefinita, questo parametro è NULL (che indica l'handle non può essere ereditato).  
+ Un puntatore a un [SECURITY_ATTRIBUTES](http://msdn.microsoft.com/library/windows/desktop/aa379560) struttura che indica se l'handle della chiave può essere ereditato da un processo figlio. Per impostazione predefinita, questo parametro è NULL (ovvero l'handle non può essere ereditato).  
   
  *lpdwDisposition*  
  [out] Se diverso da NULL, recupera REG_CREATED_NEW_KEY (se la chiave non esisteva ed è stata creata) o REG_OPENED_EXISTING_KEY (se la chiave esisteva ed è stato aperto).  
   
 ### <a name="return-value"></a>Valore restituito  
- Se ha esito positivo, restituisce ERROR_SUCCESS e apre la chiave. Se il metodo ha esito negativo, il valore restituito è un codice di errore diverso da zero definito in WINERROR. H.  
+ Se l'operazione riesce, restituisce ERROR_SUCCESS e apre la chiave. Se il metodo ha esito negativo, il valore restituito è un codice di errore diverso da zero definito in WINERROR. H.  
   
 ### <a name="remarks"></a>Note  
- **Creare** imposta il [m_hKey](#m_hkey) membro per l'handle di questa chiave.  
+ `Create` Imposta il [m_hKey](#m_hkey) membro per l'handle di questa chiave.  
   
 ##  <a name="cregkey"></a>  CRegKey::CRegKey  
  Costruttore.  
@@ -217,13 +217,13 @@ CRegKey(CAtlTransactionManager* pTM) throw();
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `key`  
+ *key*  
  Riferimento a un oggetto `CRegKey`.  
   
- `hKey`  
- Un handle a una chiave del Registro di sistema.  
+ *hKey*  
+ Handle a una chiave del Registro di sistema.  
   
- `pTM`  
+ *pTM*  
  Puntatore all'oggetto CAtlTransactionManager  
   
 ### <a name="remarks"></a>Note  
@@ -247,11 +247,11 @@ LONG DeleteSubKey(LPCTSTR lpszSubKey) throw();
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `lpszSubKey`  
- Specifica il nome della chiave da eliminare. Questo nome deve essere una sottochiave di [m_hKey](#m_hkey).  
+ *lpszSubKey*  
+ Specifica il nome della chiave da eliminare. Questo nome deve essere una sottochiave della [m_hKey](#m_hkey).  
   
 ### <a name="return-value"></a>Valore restituito  
- Se ha esito positivo, restituisce ERROR_SUCCESS. Se il metodo ha esito negativo, il valore restituito è un codice di errore diverso da zero definito in WINERROR. H.  
+ Se l'operazione riesce, restituisce ERROR_SUCCESS. Se il metodo ha esito negativo, il valore restituito è un codice di errore diverso da zero definito in WINERROR. H.  
   
 ### <a name="remarks"></a>Note  
  `DeleteSubKey` possibile eliminare solo una chiave che dispone di sottochiavi. Se la chiave contiene sottochiavi, chiamare [RecurseDeleteKey](#recursedeletekey) invece.  
@@ -264,24 +264,24 @@ LONG DeleteValue(LPCTSTR lpszValue) throw();
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `lpszValue`  
+ *lpszValue*  
  Specifica il campo del valore da rimuovere.  
   
 ### <a name="return-value"></a>Valore restituito  
- Se ha esito positivo, restituisce ERROR_SUCCESS. Se il metodo ha esito negativo, il valore restituito è un codice di errore diverso da zero definito in WINERROR. H.  
+ Se l'operazione riesce, restituisce ERROR_SUCCESS. Se il metodo ha esito negativo, il valore restituito è un codice di errore diverso da zero definito in WINERROR. H.  
   
 ##  <a name="detach"></a>  CRegKey::Detach  
- Chiamare questo metodo per scollegare il [m_hKey](#m_hkey) membro handle dal `CRegKey` e impostare `m_hKey` su NULL.  
+ Chiamare questo metodo per scollegare il [m_hKey](#m_hkey) handle membro dalle `CRegKey` dell'oggetto e impostare `m_hKey` su NULL.  
   
 ```
 HKEY Detach() throw();
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- HKEY è associato il `CRegKey` oggetto.  
+ HKEY associato il `CRegKey` oggetto.  
   
 ##  <a name="enumkey"></a>  CRegKey::EnumKey  
- Chiamare questo metodo per enumerare le sottochiavi della chiave del Registro di sistema aprire.  
+ Chiamare questo metodo per enumerare le sottochiavi della chiave del Registro di sistema open.  
   
 ```
 LONG EnumKey(  
@@ -292,26 +292,26 @@ LONG EnumKey(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `iIndex`  
- Indice della sottochiave. Questo parametro deve essere zero per la prima chiamata e quindi incrementato per le chiamate successive  
+ *iIndex*  
+ L'indice della sottochiave. Questo parametro deve essere zero per la prima chiamata e quindi incrementato per le chiamate successive  
   
- `pszName`  
+ *pszName*  
  Puntatore a un buffer che riceve il nome della sottochiave, incluso il carattere di terminazione null. Solo il nome della sottochiave viene copiato nel buffer, non la gerarchia di chiavi completa.  
   
  *pnNameLength*  
- Puntatore a una variabile che specifica la dimensione, in TCHARs, del buffer specificato per il `pszName` parametro. Questa dimensione deve includere il carattere di terminazione null. Quando il metodo restituisce, la variabile a cui puntava *pnNameLength* contiene il numero di caratteri archiviati nel buffer. Il conteggio restituito non include il carattere di terminazione null.  
+ Puntatore a una variabile che specifica la dimensione, in TCHARs, del buffer specificata per il *pszName* parametro. Questa dimensione deve includere il carattere di terminazione null. Quando il metodo termina, contiene la variabile a cui punta *pnNameLength* contiene il numero di caratteri memorizzati nel buffer. Il conteggio restituito non include il carattere di terminazione null.  
   
  *pftLastWriteTime*  
- Puntatore a una variabile che riceve l'ora ultima scrittura per la sottochiave enumerata.  
+ Puntatore a una variabile che riceve l'ora della sottochiave enumerata ultima scrittura.  
   
 ### <a name="return-value"></a>Valore restituito  
  Se il metodo ha esito positivo, il valore restituito è ERROR_SUCCESS. Se il metodo ha esito negativo, il valore restituito è un codice di errore diverso da zero definito in WINERROR. H.  
   
 ### <a name="remarks"></a>Note  
- Per enumerare le sottochiavi, chiamare `CRegKey::EnumKey` con un indice pari a zero. Incrementare il valore di indice e ripetere il metodo restituisce ERROR_NO_MORE_ITEMS. Per ulteriori informazioni, vedere [RegEnumKeyEx](http://msdn.microsoft.com/library/windows/desktop/ms724862) in Windows SDK.  
+ Per enumerare le sottochiavi, chiamare `CRegKey::EnumKey` con un indice pari a zero. Incrementare il valore di indice e ripetere fino a quando il metodo restituisce ERROR_NO_MORE_ITEMS. Per altre informazioni, vedere [RegEnumKeyEx](http://msdn.microsoft.com/library/windows/desktop/ms724862) nel SDK di Windows.  
   
 ##  <a name="flush"></a>  CRegKey::Flush  
- Chiamare questo metodo per scrivere tutti gli attributi della chiave del Registro di sistema aprire nel Registro di sistema.  
+ Chiamare questo metodo per tutti gli attributi della chiave di registro aperto di scrittura nel Registro di sistema.  
   
 ```
 LONG Flush() throw();
@@ -321,10 +321,10 @@ LONG Flush() throw();
  Se il metodo ha esito positivo, il valore restituito è ERROR_SUCCESS. Se il metodo ha esito negativo, il valore restituito è un codice di errore diverso da zero definito in WINERROR. H.  
   
 ### <a name="remarks"></a>Note  
- Per ulteriori informazioni, vedere [RegEnumFlush](http://msdn.microsoft.com/library/windows/desktop/ms724867) in Windows SDK.  
+ Per altre informazioni, vedere [RegEnumFlush](http://msdn.microsoft.com/library/windows/desktop/ms724867) nel SDK di Windows.  
   
 ##  <a name="getkeysecurity"></a>  CRegKey::GetKeySecurity  
- Chiamare questo metodo per recuperare una copia del descrittore di sicurezza protegge la chiave del Registro di sistema aprire.  
+ Chiamare questo metodo per recuperare una copia del descrittore di sicurezza protegge la chiave del Registro di sistema open.  
   
 ```
 LONG GetKeySecurity(  
@@ -334,23 +334,23 @@ LONG GetKeySecurity(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `si`  
+ *sistema internazionale di misura*  
  Il [SECURITY_INFORMATION](http://msdn.microsoft.com/library/windows/desktop/aa379573) valore che indica le informazioni di sicurezza richiesto.  
   
- `psd`  
+ *file PSD*  
  Un puntatore a un buffer che riceve una copia del descrittore di sicurezza richiesto.  
   
- `pnBytes`  
- Le dimensioni, in byte, del buffer a cui puntata `psd`.  
+ *pnBytes*  
+ Le dimensioni, in byte, del buffer a cui punta *psd*.  
   
 ### <a name="return-value"></a>Valore restituito  
- Se il metodo ha esito positivo, il valore restituito è ERROR_SUCCESS. Se il metodo ha esito negativo, il valore restituito è che un codice di errore diverso da zero è definito in WINERROR. H.  
+ Se il metodo ha esito positivo, il valore restituito è ERROR_SUCCESS. Se il metodo ha esito negativo, il valore restituito è che un codice di errore diverso da zero è definito nel WINERROR. H.  
   
 ### <a name="remarks"></a>Note  
- Per ulteriori informazioni, vedere [RegGetKeySecurity](http://msdn.microsoft.com/library/windows/desktop/aa379313).  
+ Per altre informazioni, vedere [RegGetKeySecurity](http://msdn.microsoft.com/library/windows/desktop/aa379313).  
   
 ##  <a name="m_hkey"></a>  CRegKey::m_hKey  
- Contiene un handle della chiave del Registro di sistema associata con il `CRegKey` oggetto.  
+ Contiene un handle della chiave del Registro di sistema associato il `CRegKey` oggetto.  
   
 ```
 HKEY m_hKey;
@@ -366,7 +366,7 @@ CAtlTransactionManager* m_pTM;
 ### <a name="remarks"></a>Note  
   
 ##  <a name="notifychangekeyvalue"></a>  CRegKey::NotifyChangeKeyValue  
- Questo metodo di notifica al chiamante sulle modifiche al contenuto della chiave del Registro di sistema open o attributi.  
+ Questo metodo notifica al chiamante sulle modifiche per gli attributi o il contenuto della chiave del Registro di sistema open.  
   
 ```
 LONG NotifyChangeKeyValue(  
@@ -378,23 +378,23 @@ LONG NotifyChangeKeyValue(
   
 ### <a name="parameters"></a>Parametri  
  *bWatchSubtree*  
- Specifica un flag che indica se segnalare le modifiche alla chiave specificata e tutte le relative sottochiavi o solo la chiave specificata. Se questo parametro è TRUE, il metodo segnala le modifiche in cui la chiave e le relative sottochiavi. Se il parametro è FALSE, il metodo segnala le modifiche apportate solo nella chiave.  
+ Specifica un flag che indica se segnalare le modifiche alla chiave specificata e tutte le relative sottochiavi o solo la chiave specificata. Se questo parametro è TRUE, il metodo segnala le modifiche nella chiave e le relative sottochiavi. Se il parametro è FALSE, il metodo segnala le modifiche apportate solo nella chiave.  
   
  *dwNotifyFilter*  
  Specifica un set di flag che controllano quali modifiche deve essere segnalato. Questo parametro può essere una combinazione dei valori seguenti:  
   
 |Valore|Significato|  
 |-----------|-------------|  
-|REG_NOTIFY_CHANGE_NAME|Notificare al chiamante se una sottochiave viene aggiunto o eliminata.|  
+|REG_NOTIFY_CHANGE_NAME|Notificare al chiamante se viene aggiunto o eliminata una sottochiave.|  
 |REG_NOTIFY_CHANGE_ATTRIBUTES|Notificare al chiamante di modifiche agli attributi della chiave, ad esempio le informazioni sul descrittore di sicurezza.|  
-|REG_NOTIFY_CHANGE_LAST_SET|Notificare al chiamante di modifiche a un valore della chiave. Può trattarsi di aggiunta o eliminazione di un valore o la modifica di un valore esistente.|  
+|REG_NOTIFY_CHANGE_LAST_SET|Notificare al chiamante le modifiche apportate al valore della chiave. Può trattarsi di aggiunta o eliminazione di un valore o la modifica di un valore esistente.|  
 |REG_NOTIFY_CHANGE_SECURITY|Notificare al chiamante di modifiche al descrittore di sicurezza della chiave.|  
   
- `hEvent`  
- Handle per un evento. Se il *bAsync* parametro è TRUE, il metodo restituisce immediatamente e vengono riportate le modifiche mediante la segnalazione di questo evento. Se `bAsync` è FALSE, `hEvent` viene ignorato.  
+ *hEvent*  
+ Handle per un evento. Se il *bAsync* parametro è TRUE, il metodo restituisce immediatamente e le modifiche vengono segnalate per segnalare questo evento. Se *bAsync* FALSO *hEvent* viene ignorato.  
   
- `bAsync`  
- Specifica un flag che indica come il metodo segnala le modifiche. Se questo parametro è TRUE, il metodo restituisce immediatamente e segnala le modifiche apportate da segnalare l'evento specificato. Se questo parametro è FALSE, il metodo non restituisce fino a quando non si è verificata una modifica. Se `hEvent` non specifica un evento valido, il `bAsync` parametro non può essere TRUE.  
+ *bAsync*  
+ Specifica un flag che indica come il metodo segnala le modifiche. Se questo parametro è TRUE, il metodo restituisce immediatamente e segnala le modifiche apportate tramite segnalazioni l'evento specificato. Se questo parametro è FALSE, il metodo non restituisce fino a quando non è stata modificata. Se *hEvent* non specifica un evento valido, il *bAsync* parametro non può essere TRUE.  
   
 ### <a name="return-value"></a>Valore restituito  
  Se il metodo ha esito positivo, il valore restituito è ERROR_SUCCESS. Se il metodo ha esito negativo, il valore restituito è un codice di errore diverso da zero definito in WINERROR. H.  
@@ -402,9 +402,9 @@ LONG NotifyChangeKeyValue(
 ### <a name="remarks"></a>Note  
   
 > [!NOTE]
->  Questo metodo non notificare al chiamante se viene eliminata la chiave specificata.  
+>  Questo metodo notifica al chiamante se viene eliminata la chiave specificata.  
   
- Per ulteriori informazioni e un programma di esempio, vedere [RegNotifyChangeKeyValue](http://msdn.microsoft.com/library/windows/desktop/ms724892).  
+ Per altre informazioni e un programma di esempio, vedere [RegNotifyChangeKeyValue](http://msdn.microsoft.com/library/windows/desktop/ms724892).  
   
 ##  <a name="open"></a>  CRegKey::Open  
  Chiamare questo metodo per aprire la chiave specificata e impostare [m_hKey](#m_hkey) all'handle di questa chiave.  
@@ -417,22 +417,22 @@ LONG Open(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `hKeyParent`  
+ *hKeyParent*  
  L'handle di una chiave aperta.  
   
- `lpszKeyName`  
- Specifica il nome di una chiave può essere creato o aperto. Questo nome deve essere una sottochiave di `hKeyParent`.  
+ *lpszKeyName*  
+ Specifica il nome di una chiave può essere creato o aperto. Questo nome deve essere una sottochiave della *hKeyParent*.  
   
- `samDesired`  
- L'accesso di sicurezza per la chiave. Il valore predefinito è KEY_ALL_ACCESS. Per un elenco di valori possibili e le descrizioni, vedere [RegCreateKeyEx](http://msdn.microsoft.com/library/windows/desktop/ms724844) in Windows SDK.  
+ *samDesired*  
+ L'accesso di sicurezza per la chiave. Il valore predefinito è KEY_ALL_ACCESS. Per un elenco di valori possibili e le descrizioni, vedere [RegCreateKeyEx](http://msdn.microsoft.com/library/windows/desktop/ms724844) nel SDK di Windows.  
   
 ### <a name="return-value"></a>Valore restituito  
- Se ha esito positivo, restituisce ERROR_SUCCESS; in caso contrario, un valore di errore diverso da zero definito in WINERROR. H.  
+ Se l'operazione riesce, restituisce ERROR_SUCCESS; in caso contrario, un valore di errore diverso da zero definito in WINERROR. H.  
   
 ### <a name="remarks"></a>Note  
- Se il `lpszKeyName` parametro è NULL o punti a una stringa vuota, **aprire** apre un nuovo handle della chiave identificata `hKeyParent`, ma non chiude qualsiasi handle aperto in precedenza.  
+ Se il *lpszKeyName* parametro è NULL o i punti su una stringa vuota, `Open` apre un nuovo handle della chiave identificata da *hKeyParent*, ma non chiude eventuali handle aperto in precedenza.  
   
- A differenza di [CRegKey::Create](#create), **aprire** non crea la chiave specificata se non esiste.  
+ A differenza [CRegKey::Create](#create), `Open` non creerà la chiave specificata se non esiste.  
   
 ##  <a name="operator_hkey"></a>  CRegKey::operator HKEY  
  Converte un `CRegKey` oggetto da un HKEY.  
@@ -449,14 +449,14 @@ CRegKey& operator= (CRegKey& key) throw();
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `key`  
+ *key*  
  Chiave da copiare.  
   
 ### <a name="return-value"></a>Valore restituito  
  Restituisce un riferimento alla nuova chiave.  
   
 ### <a name="remarks"></a>Note  
- Questo operatore consente di scollegare `key` dal relativo oggetto corrente e lo assegna al `CRegKey` invece dell'oggetto.  
+ Questo operatore consente di scollegare *key* dal relativo oggetto corrente e la assegna al `CRegKey` invece dell'oggetto.  
   
 ##  <a name="querybinaryvalue"></a>  CRegKey::QueryBinaryValue  
  Chiamare questo metodo per recuperare i dati binari per nome di un valore specificato.  
@@ -469,26 +469,26 @@ LONG QueryBinaryValue(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `pszValueName`  
- Puntatore a una stringa con terminazione null contenente il nome del valore per la query.  
+ *pszValueName*  
+ Puntatore a una stringa con terminazione null che contiene il nome del valore di query.  
   
- `pValue`  
+ *pValue*  
  Puntatore a un buffer che riceve i dati del valore.  
   
- `pnBytes`  
- Puntatore a una variabile che specifica la dimensione, in byte, del buffer a cui punta il `pValue` parametro. Quando il metodo restituisce, questa variabile contiene la dimensione dei dati copiati nel buffer.  
+ *pnBytes*  
+ Puntatore a una variabile che specifica la dimensione, espressa in byte, del buffer a cui fa riferimento il *pValue* parametro. Quando il metodo termina, questa variabile contiene la dimensione dei dati copiati nel buffer.  
   
 ### <a name="return-value"></a>Valore restituito  
- Se il metodo ha esito positivo, viene restituito ERROR_SUCCESS. Se il metodo non riesce a leggere un valore, restituisce un codice di errore diverso da zero definito in WINERROR. H. Se i dati a cui fa riferimento non sono di tipo REG_BINARY, viene restituito ERROR_INVALID_DATA.  
+ Se il metodo ha esito positivo, viene restituito ERROR_SUCCESS. Se il metodo non riesce a leggere un valore, restituisce un codice di errore diverso da zero definito in WINERROR. H. Se i dati di riferimento non sono di tipo REG_BINARY, viene restituito ERROR_INVALID_DATA.  
   
 ### <a name="remarks"></a>Note  
- Questo metodo si avvalgono di **RegQueryValueEx** e conferma che viene restituito il tipo di dati corretto. Vedere [RegQueryValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724911) per altri dettagli.  
+ Questo metodo Usa `RegQueryValueEx` e conferma che viene restituito il tipo di dati corretto. Visualizzare [RegQueryValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724911) per altri dettagli.  
   
 > [!IMPORTANT]
->  Questo metodo consente al chiamante di specificare un percorso del Registro di sistema, potenzialmente la lettura dei dati che non possono essere considerato attendibili. Inoltre, il [RegQueryValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724911) funzione usata da questo metodo non gestisce in modo esplicito le stringhe con terminata NULL. Entrambe le condizioni devono essere controllate dal codice chiamante.  
+>  Questo metodo consente al chiamante di specificare qualsiasi percorso del Registro di sistema, potenzialmente la lettura dei dati che non sono attendibili. Inoltre, il [RegQueryValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724911) funzione usata da questo metodo non gestisce in modo esplicito le stringhe che sono con terminata NULL. Entrambe le condizioni devono essere controllate dal codice chiamante.  
   
 ##  <a name="querydwordvalue"></a>  CRegKey::QueryDWORDValue  
- Chiamare questo metodo per recuperare i dati DWORD per nome di un valore specificato.  
+ Chiamare questo metodo per recuperare i dati di valore DWORD per nome di un valore specificato.  
   
 ```
 LONG QueryDWORDValue(  
@@ -497,20 +497,20 @@ LONG QueryDWORDValue(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `pszValueName`  
- Puntatore a una stringa con terminazione null contenente il nome del valore per la query.  
+ *pszValueName*  
+ Puntatore a una stringa con terminazione null che contiene il nome del valore di query.  
   
- `dwValue`  
+ *dwValue*  
  Puntatore a un buffer che riceve il valore DWORD.  
   
 ### <a name="return-value"></a>Valore restituito  
- Se il metodo ha esito positivo, viene restituito ERROR_SUCCESS. Se il metodo non riesce a leggere un valore, restituisce un codice di errore diverso da zero definito in WINERROR. H. Se i dati a cui fa riferimento non sono di tipo REG_DWORD, viene restituito ERROR_INVALID_DATA.  
+ Se il metodo ha esito positivo, viene restituito ERROR_SUCCESS. Se il metodo non riesce a leggere un valore, restituisce un codice di errore diverso da zero definito in WINERROR. H. Se i dati di riferimento non sono di tipo REG_DWORD, viene restituito ERROR_INVALID_DATA.  
   
 ### <a name="remarks"></a>Note  
- Questo metodo si avvalgono di **RegQueryValueEx** e conferma che viene restituito il tipo di dati corretto. Vedere [RegQueryValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724911) per altri dettagli.  
+ Questo metodo Usa `RegQueryValueEx` e conferma che viene restituito il tipo di dati corretto. Visualizzare [RegQueryValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724911) per altri dettagli.  
   
 > [!IMPORTANT]
->  Questo metodo consente al chiamante di specificare un percorso del Registro di sistema, potenzialmente la lettura dei dati che non possono essere considerato attendibili. Inoltre, il [RegQueryValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724911) funzione usata da questo metodo non gestisce in modo esplicito le stringhe con terminata NULL. Entrambe le condizioni devono essere controllate dal codice chiamante.  
+>  Questo metodo consente al chiamante di specificare qualsiasi percorso del Registro di sistema, potenzialmente la lettura dei dati che non sono attendibili. Inoltre, il [RegQueryValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724911) funzione usata da questo metodo non gestisce in modo esplicito le stringhe che sono con terminata NULL. Entrambe le condizioni devono essere controllate dal codice chiamante.  
   
 ##  <a name="queryguidvalue"></a>  CRegKey::QueryGUIDValue  
  Chiamare questo metodo per recuperare i dati GUID per il nome di un valore specificato.  
@@ -522,20 +522,20 @@ LONG QueryGUIDValue(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `pszValueName`  
- Puntatore a una stringa con terminazione null contenente il nome del valore per la query.  
+ *pszValueName*  
+ Puntatore a una stringa con terminazione null che contiene il nome del valore di query.  
   
- `guidValue`  
+ *guidValue*  
  Puntatore a una variabile che riceve il GUID.  
   
 ### <a name="return-value"></a>Valore restituito  
- Se il metodo ha esito positivo, viene restituito ERROR_SUCCESS. Se il metodo non riesce a leggere un valore, restituisce un codice di errore diverso da zero definito in WINERROR. H. Se i dati a cui fa riferimento non sono un GUID valido, viene restituito ERROR_INVALID_DATA.  
+ Se il metodo ha esito positivo, viene restituito ERROR_SUCCESS. Se il metodo non riesce a leggere un valore, restituisce un codice di errore diverso da zero definito in WINERROR. H. Se i dati di riferimento non sono un GUID valido, viene restituito ERROR_INVALID_DATA.  
   
 ### <a name="remarks"></a>Note  
- Questo metodo si avvalgono di `CRegKey::QueryStringValue` e la stringa viene convertita in un GUID utilizzando [CLSIDFromString](http://msdn.microsoft.com/library/windows/desktop/ms680589).  
+ Questo metodo Usa `CRegKey::QueryStringValue` e converte la stringa in un GUID usando [CLSIDFromString](http://msdn.microsoft.com/library/windows/desktop/ms680589).  
   
 > [!IMPORTANT]
->  Questo metodo consente al chiamante di specificare un percorso del Registro di sistema, potenzialmente la lettura dei dati che non possono essere considerato attendibili.  
+>  Questo metodo consente al chiamante di specificare qualsiasi percorso del Registro di sistema, potenzialmente la lettura dei dati che non sono attendibili.  
   
 ##  <a name="querymultistringvalue"></a>  CRegKey::QueryMultiStringValue  
  Chiamare questo metodo per recuperare i dati delle multistringhe per nome di un valore specificato.  
@@ -548,26 +548,26 @@ LONG QueryMultiStringValue(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `pszValueName`  
- Puntatore a una stringa con terminazione null contenente il nome del valore per la query.  
+ *pszValueName*  
+ Puntatore a una stringa con terminazione null che contiene il nome del valore di query.  
   
- `pszValue`  
+ *pszValue*  
  Puntatore a un buffer che riceve i dati delle multistringhe. Una valore multistringa è una matrice di stringhe con terminazione null, terminate da due caratteri null.  
   
- `pnChars`  
- La dimensione in TCHARs, del buffer a cui puntata `pszValue`. Quando termina, il metodo `pnChars` contiene la dimensione, in TCHARs, di valore multistringa recuperato, incluso un carattere di terminazione null.  
+ *pnChars*  
+ La dimensione in TCHARs, del buffer a cui punta *pszValue*. Quando termina, il metodo *pnChars* contiene la dimensione, in TCHARs, di valore multistringa recuperato, incluso un carattere di terminazione null.  
   
 ### <a name="return-value"></a>Valore restituito  
- Se il metodo ha esito positivo, viene restituito ERROR_SUCCESS. Se il metodo non riesce a leggere un valore, restituisce un codice di errore diverso da zero definito in WINERROR. H. Se i dati a cui fa riferimento non sono di tipo REG_MULTI_SZ, viene restituito ERROR_INVALID_DATA.  
+ Se il metodo ha esito positivo, viene restituito ERROR_SUCCESS. Se il metodo non riesce a leggere un valore, restituisce un codice di errore diverso da zero definito in WINERROR. H. Se i dati di riferimento non sono di tipo REG_MULTI_SZ, viene restituito ERROR_INVALID_DATA.  
   
 ### <a name="remarks"></a>Note  
- Questo metodo si avvalgono di **RegQueryValueEx** e conferma che viene restituito il tipo di dati corretto. Vedere [RegQueryValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724911) per altri dettagli.  
+ Questo metodo Usa `RegQueryValueEx` e conferma che viene restituito il tipo di dati corretto. Visualizzare [RegQueryValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724911) per altri dettagli.  
   
 > [!IMPORTANT]
->  Questo metodo consente al chiamante di specificare un percorso del Registro di sistema, potenzialmente la lettura dei dati che non possono essere considerato attendibili. Inoltre, il [RegQueryValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724911) funzione usata da questo metodo non gestisce in modo esplicito le stringhe con terminata NULL. Entrambe le condizioni devono essere controllate dal codice chiamante.  
+>  Questo metodo consente al chiamante di specificare qualsiasi percorso del Registro di sistema, potenzialmente la lettura dei dati che non sono attendibili. Inoltre, il [RegQueryValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724911) funzione usata da questo metodo non gestisce in modo esplicito le stringhe che sono con terminata NULL. Entrambe le condizioni devono essere controllate dal codice chiamante.  
   
 ##  <a name="queryqwordvalue"></a>  CRegKey::QueryQWORDValue  
- Chiamare questo metodo per recuperare i dati QWORD per nome di un valore specificato.  
+ Chiamare questo metodo per recuperare i valori QWORD nome di un valore specificato.  
   
 ```
 LONG QueryQWORDValue(  
@@ -576,20 +576,20 @@ LONG QueryQWORDValue(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `pszValueName`  
- Puntatore a una stringa con terminazione null contenente il nome del valore per la query.  
+ *pszValueName*  
+ Puntatore a una stringa con terminazione null che contiene il nome del valore di query.  
   
- `qwValue`  
+ *qwValue*  
  Puntatore a un buffer che riceve il QWORD.  
   
 ### <a name="return-value"></a>Valore restituito  
- Se il metodo ha esito positivo, viene restituito ERROR_SUCCESS. Se il metodo non riesce a leggere un valore, restituisce un codice di errore diverso da zero definito in WINERROR. H. Se i dati a cui fa riferimento non sono di tipo REG_QWORD, viene restituito ERROR_INVALID_DATA.  
+ Se il metodo ha esito positivo, viene restituito ERROR_SUCCESS. Se il metodo non riesce a leggere un valore, restituisce un codice di errore diverso da zero definito in WINERROR. H. Se i dati di riferimento non sono di tipo REG_QWORD, viene restituito ERROR_INVALID_DATA.  
   
 ### <a name="remarks"></a>Note  
- Questo metodo si avvalgono di **RegQueryValueEx** e conferma che viene restituito il tipo di dati corretto. Vedere [RegQueryValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724911) per altri dettagli.  
+ Questo metodo Usa `RegQueryValueEx` e conferma che viene restituito il tipo di dati corretto. Visualizzare [RegQueryValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724911) per altri dettagli.  
   
 > [!IMPORTANT]
->  Questo metodo consente al chiamante di specificare un percorso del Registro di sistema, potenzialmente la lettura dei dati che non possono essere considerato attendibili. Inoltre, il [RegQueryValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724911) funzione usata da questo metodo non gestisce in modo esplicito le stringhe con terminata NULL. Entrambe le condizioni devono essere controllate dal codice chiamante.  
+>  Questo metodo consente al chiamante di specificare qualsiasi percorso del Registro di sistema, potenzialmente la lettura dei dati che non sono attendibili. Inoltre, il [RegQueryValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724911) funzione usata da questo metodo non gestisce in modo esplicito le stringhe che sono con terminata NULL. Entrambe le condizioni devono essere controllate dal codice chiamante.  
   
 ##  <a name="querystringvalue"></a>  CRegKey::QueryStringValue  
  Chiamare questo metodo per recuperare i dati di stringa per nome di un valore specificato.  
@@ -602,26 +602,26 @@ LONG QueryStringValue(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `pszValueName`  
- Puntatore a una stringa con terminazione null contenente il nome del valore per la query.  
+ *pszValueName*  
+ Puntatore a una stringa con terminazione null che contiene il nome del valore di query.  
   
- `pszValue`  
+ *pszValue*  
  Puntatore a un buffer che riceve i dati di stringa.  
   
- `pnChars`  
- La dimensione in TCHARs, del buffer a cui puntata `pszValue`. Quando termina, il metodo `pnChars` contiene la dimensione, in TCHARs, della stringa recuperato, incluso un carattere di terminazione null.  
+ *pnChars*  
+ La dimensione in TCHARs, del buffer a cui punta *pszValue*. Quando termina, il metodo *pnChars* contiene la dimensione, in TCHARs, della stringa recuperato, incluso un carattere di terminazione null.  
   
 ### <a name="return-value"></a>Valore restituito  
- Se il metodo ha esito positivo, viene restituito ERROR_SUCCESS. Se il metodo non riesce a leggere un valore, restituisce un codice di errore diverso da zero definito in WINERROR. H. Se i dati a cui fa riferimento non sono di tipo REG_SZ, viene restituito ERROR_INVALID_DATA. Se il metodo restituisce ERROR_MORE_DATA, `pnChars` uguale a zero, non la dimensione richiesta del buffer in byte.  
+ Se il metodo ha esito positivo, viene restituito ERROR_SUCCESS. Se il metodo non riesce a leggere un valore, restituisce un codice di errore diverso da zero definito in WINERROR. H. Se i dati di riferimento non sono di tipo REG_SZ, viene restituito ERROR_INVALID_DATA. Se il metodo restituisce, ERROR_MORE_DATA *pnChars* è uguale a zero, non le dimensioni del buffer necessarie in byte.  
   
 ### <a name="remarks"></a>Note  
- Questo metodo si avvalgono di **RegQueryValueEx** e conferma che viene restituito il tipo di dati corretto. Vedere [RegQueryValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724911) per altri dettagli.  
+ Questo metodo Usa `RegQueryValueEx` e conferma che viene restituito il tipo di dati corretto. Visualizzare [RegQueryValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724911) per altri dettagli.  
   
 > [!IMPORTANT]
->  Questo metodo consente al chiamante di specificare un percorso del Registro di sistema, potenzialmente la lettura dei dati che non possono essere considerato attendibili. Inoltre, il [RegQueryValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724911) funzione usata da questo metodo non gestisce in modo esplicito le stringhe con terminata NULL. Entrambe le condizioni devono essere controllate dal codice chiamante.  
+>  Questo metodo consente al chiamante di specificare qualsiasi percorso del Registro di sistema, potenzialmente la lettura dei dati che non sono attendibili. Inoltre, il [RegQueryValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724911) funzione usata da questo metodo non gestisce in modo esplicito le stringhe che sono con terminata NULL. Entrambe le condizioni devono essere controllate dal codice chiamante.  
   
 ##  <a name="queryvalue"></a>  CRegKey::QueryValue  
- Chiamare questo metodo per recuperare i dati per il campo del valore specificato di [m_hKey](#m_hkey). Le versioni precedenti di questo metodo non sono più supportate e sono contrassegnate come **ATL_DEPRECATED**.  
+ Chiamare questo metodo per recuperare i dati per il campo del valore specificato [m_hKey](#m_hkey). Le versioni precedenti di questo metodo non sono più supportate e sono contrassegnate come ATL_DEPRECATED.  
   
 ```
 LONG QueryValue(  
@@ -641,43 +641,43 @@ ATL_DEPRECATED LONG QueryValue(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `pszValueName`  
- Puntatore a una stringa con terminazione null contenente il nome del valore per la query. Se `pszValueName` è NULL o una stringa vuota, "", il metodo recupera il tipo e che i dati per la chiave del senza nome o valore predefinito, se presente.  
+ *pszValueName*  
+ Puntatore a una stringa con terminazione null che contiene il nome del valore di query. Se *pszValueName* è NULL o una stringa vuota "", il metodo recupera il tipo e i dati per la chiave del senza nome o valore predefinito, se presente.  
   
- `pdwType`  
- Puntatore a una variabile che riceve un codice che indica il tipo di dati archiviati nel valore specificato. Il `pdwType` parametro può essere NULL se il codice di tipo non è obbligatorio.  
+ *pdwType*  
+ Puntatore a una variabile che riceve un codice che indica il tipo di dati memorizzati nel valore specificato. Il *pdwType* parametro può essere NULL se il codice del tipo non è necessario.  
   
- `pData`  
- Puntatore a un buffer che riceve i dati del valore. Questo parametro può essere NULL se i dati non sono necessari.  
+ *pData*  
+ Puntatore a un buffer che riceve i dati del valore. Questo parametro può essere NULL se non sono richiesti i dati.  
   
- `pnBytes`  
- Puntatore a una variabile che specifica la dimensione, in byte, del buffer a cui punta il `pData` parametro. Quando il metodo viene restituito, questa variabile contiene la dimensione dei dati copiati *pData.*  
+ *pnBytes*  
+ Puntatore a una variabile che specifica la dimensione, espressa in byte, del buffer a cui fa riferimento il *pData* parametro. Quando il metodo termina, questa variabile contiene la dimensione dei dati copiati *pData.*  
   
- `dwValue`  
- Dati numerici del campo valore.  
+ *dwValue*  
+ Dati numerici del campo del valore.  
   
- `lpszValueName`  
- Specifica il campo del valore deve essere sottoposto a query.  
+ *lpszValueName*  
+ Specifica il campo del valore per eseguire una query.  
   
- `szValue`  
- Dati di stringa del campo valore.  
+ *szValue*  
+ Dati del campo del valore di tipo stringa.  
   
- `pdwCount`  
- Le dimensioni dei dati di stringa. Alle dimensioni di cui è inizialmente impostato sul valore di `szValue` buffer.  
+ *pdwCount*  
+ Le dimensioni dei dati di stringa. Il valore è impostato inizialmente alle dimensioni dei *szValue* buffer.  
   
 ### <a name="return-value"></a>Valore restituito  
- Se ha esito positivo, restituisce ERROR_SUCCESS; in caso contrario, un codice di errore diverso da zero definito in WINERROR. H.  
+ Se l'operazione riesce, restituisce ERROR_SUCCESS; in caso contrario, un codice di errore diverso da zero definito nel WINERROR. H.  
   
 ### <a name="remarks"></a>Note  
- Le due versioni originali di `QueryValue` non sono più supportate e sono contrassegnati come **ATL_DEPRECATED**. Il compilatore emetterà un avviso se questi formati vengono utilizzati.  
+ Le due versioni originali di `QueryValue` non sono più supportate e sono contrassegnate come ATL_DEPRECATED. Il compilatore genererà un avviso se vengono utilizzate queste forme.  
   
  Le chiamate al metodo rimanenti RegQueryValueEx.  
   
 > [!IMPORTANT]
->  Questo metodo consente al chiamante di specificare un percorso del Registro di sistema, potenzialmente la lettura dei dati che non possono essere considerato attendibili. Inoltre, la funzione RegQueryValueEx usata da questo metodo non gestire in modo esplicito le stringhe che `NULL` terminato. Entrambe le condizioni devono essere controllate dal codice chiamante.  
+>  Questo metodo consente al chiamante di specificare qualsiasi percorso del Registro di sistema, potenzialmente la lettura dei dati che non sono attendibili. Inoltre, la funzione RegQueryValueEx usata da questo metodo non gestisce in modo esplicito le stringhe che sono con terminata NULL. Entrambe le condizioni devono essere controllate dal codice chiamante.  
   
 ##  <a name="recursedeletekey"></a>  CRegKey::RecurseDeleteKey  
- Chiamare questo metodo per rimuovere la chiave specificata dal Registro di sistema e rimuovere in modo esplicito il sottochiavi.  
+ Chiamare questo metodo per rimuovere la chiave specificata dal Registro di sistema e rimuovere in modo esplicito tutte le sottochiavi.  
   
 ```
 LONG RecurseDeleteKey(LPCTSTR lpszKey) throw();
@@ -685,16 +685,16 @@ LONG RecurseDeleteKey(LPCTSTR lpszKey) throw();
   
 ### <a name="parameters"></a>Parametri  
  *lpszKey*  
- Specifica il nome della chiave da eliminare. Questo nome deve essere una sottochiave di [m_hKey](#m_hkey).  
+ Specifica il nome della chiave da eliminare. Questo nome deve essere una sottochiave della [m_hKey](#m_hkey).  
   
 ### <a name="return-value"></a>Valore restituito  
- Se ha esito positivo, restituisce ERROR_SUCCESS; in caso contrario, un valore di errore diverso da zero definito in WINERROR. H.  
+ Se l'operazione riesce, restituisce ERROR_SUCCESS; in caso contrario, un valore di errore diverso da zero definito in WINERROR. H.  
   
 ### <a name="remarks"></a>Note  
  Se la chiave contiene sottochiavi, è necessario chiamare questo metodo per eliminare la chiave.  
   
 ##  <a name="setbinaryvalue"></a>  CRegKey::SetBinaryValue  
- Chiamare questo metodo per impostare il valore della chiave del Registro di sistema binario.  
+ Chiamare questo metodo per impostare il valore binario della chiave del Registro di sistema.  
   
 ```
 LONG SetBinaryValue(  
@@ -704,14 +704,14 @@ LONG SetBinaryValue(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `pszValueName`  
+ *pszValueName*  
  Puntatore a una stringa contenente il nome del valore da impostare. Se un valore con il nome specificato non è già presente, il metodo lo aggiunge alla chiave.  
   
- `pValue`  
- Puntatore a un buffer contenente i dati da archiviare con il nome del valore specificato.  
+ *pValue*  
+ Puntatore a un buffer contenente i dati per l'archiviazione con il nome del valore specificato.  
   
- `nBytes`  
- Specifica la dimensione, in byte, le informazioni a cui fa riferimento il `pValue` parametro.  
+ *nBytes*  
+ Specifica la dimensione, espressa in byte, delle informazioni a cui fa riferimento il *pValue* parametro.  
   
 ### <a name="return-value"></a>Valore restituito  
  Se il metodo ha esito positivo, il valore restituito è ERROR_SUCCESS. Se il metodo ha esito negativo, il valore restituito è un codice di errore diverso da zero definito in WINERROR. H.  
@@ -720,17 +720,17 @@ LONG SetBinaryValue(
  Questo metodo Usa [RegSetValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724923) per scrivere il valore del Registro di sistema.  
   
 ##  <a name="setdwordvalue"></a>  CRegKey::SetDWORDValue  
- Chiamare questo metodo per impostare il valore DWORD della chiave del Registro di sistema.  
+ Chiamare questo metodo per impostare il valore della chiave del Registro di sistema DWORD.  
   
 ```
 LONG SetDWORDValue(LPCTSTR pszValueName, DWORD dwValue) throw();
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `pszValueName`  
+ *pszValueName*  
  Puntatore a una stringa contenente il nome del valore da impostare. Se un valore con il nome specificato non è già presente, il metodo lo aggiunge alla chiave.  
   
- `dwValue`  
+ *dwValue*  
  I dati DWORD deve essere archiviata con il nome del valore specificato.  
   
 ### <a name="return-value"></a>Valore restituito  
@@ -747,17 +747,17 @@ LONG SetGUIDValue(LPCTSTR pszValueName, REFGUID guidValue) throw();
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `pszValueName`  
+ *pszValueName*  
  Puntatore a una stringa contenente il nome del valore da impostare. Se un valore con il nome specificato non è già presente, il metodo lo aggiunge alla chiave.  
   
- `guidValue`  
- Riferimento al GUID deve essere archiviata con il nome del valore specificato.  
+ *guidValue*  
+ Riferimento al GUID per l'archiviazione con il nome del valore specificato.  
   
 ### <a name="return-value"></a>Valore restituito  
  Se il metodo ha esito positivo, il valore restituito è ERROR_SUCCESS. Se il metodo ha esito negativo, il valore restituito è un codice di errore diverso da zero definito in WINERROR. H.  
   
 ### <a name="remarks"></a>Note  
- Questo metodo si avvalgono di `CRegKey::SetStringValue` e converte GUID in una stringa utilizzando [StringFromGUID2](http://msdn.microsoft.com/library/windows/desktop/ms683893).  
+ Questo metodo Usa `CRegKey::SetStringValue` e li converte GUID in una stringa usando [StringFromGUID2](http://msdn.microsoft.com/library/windows/desktop/ms683893).  
   
 ##  <a name="setkeyvalue"></a>  CRegKey::SetKeyValue  
  Chiamare questo metodo per archiviare i dati in un campo del valore specificato di una chiave specificata.  
@@ -770,47 +770,47 @@ LONG SetKeyValue(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `lpszKeyName`  
- Specifica il nome della chiave da creare o aprire. Questo nome deve essere una sottochiave di [m_hKey](#m_hkey).  
+ *lpszKeyName*  
+ Specifica il nome della chiave può essere creato o aperto. Questo nome deve essere una sottochiave della [m_hKey](#m_hkey).  
   
- `lpszValue`  
+ *lpszValue*  
  Specifica i dati da archiviare. Questo parametro deve essere non NULL.  
   
- `lpszValueName`  
- Specifica il campo del valore da impostare. Se un campo del valore con questo nome esiste già nella chiave, viene aggiunto.  
+ *lpszValueName*  
+ Specifica il campo del valore da impostare. Se un campo del valore con lo stesso nome esiste già nella chiave, viene aggiunto.  
   
 ### <a name="return-value"></a>Valore restituito  
- Se ha esito positivo, restituisce ERROR_SUCCESS; in caso contrario, un codice di errore diverso da zero definito in WINERROR. H.  
+ Se l'operazione riesce, restituisce ERROR_SUCCESS; in caso contrario, un codice di errore diverso da zero definito nel WINERROR. H.  
   
 ### <a name="remarks"></a>Note  
- Chiamare questo metodo per creare o aprire il `lpszKeyName` chiave e archiviare il `lpszValue` dati il `lpszValueName` campo del valore.  
+ Chiamare questo metodo per creare o aprire il *lpszKeyName* la chiave e archiviare le *lpszValue* i dati nel *lpszValueName* campo del valore.  
   
 ##  <a name="setkeysecurity"></a>  CRegKey::SetKeySecurity  
- Chiamare questo metodo per impostare la protezione della chiave del Registro di sistema.  
+ Chiamare questo metodo per impostare la sicurezza della chiave del Registro di sistema.  
   
 ```
 LONG SetKeySecurity(SECURITY_INFORMATION si, PSECURITY_DESCRIPTOR psd) throw();
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `si`  
+ *sistema internazionale di misura*  
  Specifica i componenti del descrittore di sicurezza da impostare. Il valore può essere una combinazione dei valori seguenti:  
   
 |Valore|Significato|  
 |-----------|-------------|  
-|DACL_SECURITY_INFORMATION|Imposta l'elenco della chiave controllo di accesso discrezionali (DACL). La chiave deve avere accesso WRITE_DAC o il processo di chiamata deve essere il proprietario dell'oggetto.|  
-|GROUP_SECURITY_INFORMATION|Imposta l'identificatore di sicurezza della chiave primaria gruppo (SID). La chiave deve avere accesso WRITE_OWNER o il processo di chiamata deve essere il proprietario dell'oggetto.|  
+|DACL_SECURITY_INFORMATION|Imposta l'elenco di controllo di accesso discrezionali della chiave (DACL). La chiave deve avere accesso WRITE_DAC, o il processo di chiamata deve essere il proprietario dell'oggetto.|  
+|GROUP_SECURITY_INFORMATION|Imposta l'ID di sicurezza della chiave primaria di gruppo (SID). La chiave deve avere accesso WRITE_OWNER o il processo di chiamata deve essere il proprietario dell'oggetto.|  
 |OWNER_SECURITY_INFORMATION|Imposta il SID del proprietario della chiave. La chiave deve avere accesso WRITE_OWNER o il processo di chiamata deve essere il proprietario dell'oggetto o disporre del privilegio SE_TAKE_OWNERSHIP_NAME abilitato.|  
-|SACL_SECURITY_INFORMATION|Imposta l'elenco di controllo di accesso della chiave del sistema (SACL). La chiave deve avere accesso ACCESS_SYSTEM_SECURITY. Il metodo migliore per ottenere l'accesso è per abilitare il SE_SECURITY_NAME [privilegio](http://msdn.microsoft.com/library/windows/desktop/aa379306) nel token di accesso corrente del chiamante, aprire l'handle per l'accesso ACCESS_SYSTEM_SECURITY e quindi disabilitare il privilegio.|  
+|SACL_SECURITY_INFORMATION|Imposta l'elenco di controllo di accesso della chiave del sistema (SACL). La chiave deve avere accesso ACCESS_SYSTEM_SECURITY. La modalità appropriata per ottenere l'accesso è per abilitare il SE_SECURITY_NAME [privilegio](http://msdn.microsoft.com/library/windows/desktop/aa379306) nel token di accesso corrente del chiamante, aprire l'handle per l'accesso ACCESS_SYSTEM_SECURITY e quindi disabilitare il privilegio.|  
   
- `psd`  
+ *file PSD*  
  Puntatore a un [SECURITY_DESCRIPTOR](http://msdn.microsoft.com/library/windows/desktop/aa379561) struttura che specifica gli attributi di sicurezza da impostare per la chiave specificata.  
   
 ### <a name="return-value"></a>Valore restituito  
  Se il metodo ha esito positivo, il valore restituito è ERROR_SUCCESS. Se il metodo ha esito negativo, il valore restituito è un codice di errore diverso da zero definito in WINERROR. H.  
   
 ### <a name="remarks"></a>Note  
- Imposta gli attributi di sicurezza della chiave. Vedere [RegSetKeySecurity](http://msdn.microsoft.com/library/windows/desktop/aa379314) per altri dettagli.  
+ Imposta gli attributi di sicurezza della chiave. Visualizzare [RegSetKeySecurity](http://msdn.microsoft.com/library/windows/desktop/aa379314) per altri dettagli.  
   
 ##  <a name="setmultistringvalue"></a>  CRegKey::SetMultiStringValue  
  Chiamare questo metodo per impostare il valore multistringa della chiave del Registro di sistema.  
@@ -820,11 +820,11 @@ LONG SetMultiStringValue(LPCTSTR pszValueName, LPCTSTR pszValue) throw();
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `pszValueName`  
+ *pszValueName*  
  Puntatore a una stringa contenente il nome del valore da impostare. Se un valore con il nome specificato non è già presente, il metodo lo aggiunge alla chiave.  
   
- `pszValue`  
- Puntatore ai dati delle multistringhe deve essere archiviata con il nome del valore specificato. Una valore multistringa è una matrice di stringhe con terminazione null, terminate da due caratteri null.  
+ *pszValue*  
+ Puntatore ai dati delle multistringhe da archiviare con il nome del valore specificato. Una valore multistringa è una matrice di stringhe con terminazione null, terminate da due caratteri null.  
   
 ### <a name="return-value"></a>Valore restituito  
  Se il metodo ha esito positivo, il valore restituito è ERROR_SUCCESS. Se il metodo ha esito negativo, il valore restituito è un codice di errore diverso da zero definito in WINERROR. H.  
@@ -840,10 +840,10 @@ LONG SetQWORDValue(LPCTSTR pszValueName, ULONGLONG qwValue) throw();
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `pszValueName`  
+ *pszValueName*  
  Puntatore a una stringa contenente il nome del valore da impostare. Se un valore con il nome specificato non è già presente, il metodo lo aggiunge alla chiave.  
   
- `qwValue`  
+ *qwValue*  
  I dati QWORD deve essere archiviata con il nome del valore specificato.  
   
 ### <a name="return-value"></a>Valore restituito  
@@ -863,14 +863,14 @@ LONG SetStringValue(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `pszValueName`  
+ *pszValueName*  
  Puntatore a una stringa contenente il nome del valore da impostare. Se un valore con il nome specificato non è già presente, il metodo lo aggiunge alla chiave.  
   
- `pszValue`  
- Puntatore ai dati di stringa deve essere archiviata con il nome del valore specificato.  
+ *pszValue*  
+ Puntatore ai dati di stringa per l'archiviazione con il nome del valore specificato.  
   
- `dwType`  
- Il tipo di stringa da scrivere nel Registro di sistema: REG_SZ (predefinito) o REG_EXPAND_SZ (per multistringhe).  
+ *dwType*  
+ Il tipo di stringa da scrivere nel Registro di sistema: REG_SZ (impostazione predefinita) o REG_EXPAND_SZ (per le multistringhe).  
   
 ### <a name="return-value"></a>Valore restituito  
  Se il metodo ha esito positivo, il valore restituito è ERROR_SUCCESS. Se il metodo ha esito negativo, il valore restituito è un codice di errore diverso da zero definito in WINERROR. H.  
@@ -879,7 +879,7 @@ LONG SetStringValue(
  Questo metodo Usa [RegSetValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724923\(v=vs.85\).aspx) per scrivere il valore del Registro di sistema.  
   
 ##  <a name="setvalue"></a>  CRegKey::SetValue  
- Chiamare questo metodo per archiviare i dati nel campo del valore specificato [m_hKey](#m_hkey). Le versioni precedenti di questo metodo non sono più supportate e sono contrassegnate come **ATL_DEPRECATED**.  
+ Chiamare questo metodo per archiviare i dati nel campo del valore specificato [m_hKey](#m_hkey). Le versioni precedenti di questo metodo non sono più supportate e sono contrassegnate come ATL_DEPRECATED.  
   
 ```
 LONG SetValue(  
@@ -906,47 +906,47 @@ ATL_DEPRECATED LONG SetValue(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `pszValueName`  
- Puntatore a una stringa contenente il nome del valore da impostare. Se un valore con il nome specificato non è già presente nella chiave, il metodo lo aggiunge alla chiave. Se `pszValueName` è NULL o una stringa vuota, "", il metodo imposta il tipo e che i dati per la chiave del senza nome o il valore predefinito.  
+ *pszValueName*  
+ Puntatore a una stringa contenente il nome del valore da impostare. Se un valore con il nome specificato non è già presente nella chiave, il metodo lo aggiunge alla chiave. Se *pszValueName* è NULL o una stringa vuota "", il metodo imposta il tipo e i dati per la chiave del senza nome o il valore predefinito.  
   
- `dwType`  
- Specifica un codice che indica il tipo di dati a cui fa riferimento il `pValue` parametro.  
+ *dwType*  
+ Specifica un codice che indica il tipo di dati a cui fa riferimento il *pValue* parametro.  
   
- `pValue`  
- Puntatore a un buffer contenente i dati da archiviare con il nome del valore specificato.  
+ *pValue*  
+ Puntatore a un buffer contenente i dati per l'archiviazione con il nome del valore specificato.  
   
- `nBytes`  
- Specifica la dimensione, in byte, le informazioni a cui fa riferimento il `pValue` parametro. Se i dati sono di tipo REG_SZ, REG_EXPAND_SZ o REG_MULTI_SZ, `nBytes` deve includere le dimensioni del carattere di terminazione null.  
+ *nBytes*  
+ Specifica la dimensione, espressa in byte, delle informazioni a cui fa riferimento il *pValue* parametro. Se i dati sono di tipo, REG_MULTI_SZ, REG_EXPAND_SZ o REG_SZ *nBytes* deve includere le dimensioni del carattere null di terminazione.  
   
- `hKeyParent`  
+ *hKeyParent*  
  L'handle di una chiave aperta.  
   
- `lpszKeyName`  
- Specifica il nome di una chiave può essere creato o aperto. Questo nome deve essere una sottochiave di `hKeyParent`.  
+ *lpszKeyName*  
+ Specifica il nome di una chiave può essere creato o aperto. Questo nome deve essere una sottochiave della *hKeyParent*.  
   
- `lpszValue`  
+ *lpszValue*  
  Specifica i dati da archiviare. Questo parametro deve essere non NULL.  
   
- `lpszValueName`  
- Specifica il campo del valore da impostare. Se un campo del valore con questo nome esiste già nella chiave, viene aggiunto.  
+ *lpszValueName*  
+ Specifica il campo del valore da impostare. Se un campo del valore con lo stesso nome esiste già nella chiave, viene aggiunto.  
   
- `dwValue`  
+ *dwValue*  
  Specifica i dati da archiviare.  
   
- `bMulti`  
+ *bMulti*  
  Se false, indica che la stringa è di tipo REG_SZ. Se true, indica che la stringa è una valore multistringa di tipo REG_MULTI_SZ.  
   
- `nValueLen`  
- Se `bMulti` è true, `nValueLen` è la lunghezza del *lpszValue* stringa in caratteri. Se `bMulti` è false, il valore-1 indica che il metodo calcolerà automaticamente la lunghezza.  
+ *nValueLen*  
+ Se *bMulti* è true, *nValueLen* è la lunghezza del *lpszValue* stringa in caratteri. Se *bMulti* è false, il valore -1 indica che il metodo calcolerà automaticamente la lunghezza.  
   
 ### <a name="return-value"></a>Valore restituito  
- Se ha esito positivo, restituisce ERROR_SUCCESS; in caso contrario, un codice di errore diverso da zero definito in WINERROR. H.  
+ Se l'operazione riesce, restituisce ERROR_SUCCESS; in caso contrario, un codice di errore diverso da zero definito nel WINERROR. H.  
   
 ### <a name="remarks"></a>Note  
- Le due versioni originali di `SetValue` sono contrassegnati come **ATL_DEPRECATED** e non deve più essere usato. Il compilatore emetterà un avviso se questi formati vengono utilizzati.  
+ Le due versioni originali di `SetValue` vengono contrassegnati come ATL_DEPRECATED e non devono più essere utilizzati. Il compilatore genererà un avviso se vengono utilizzate queste forme.  
   
- Le chiamate al metodo terzo [RegSetValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724923).  
+ Le chiamate al metodo terza [RegSetValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724923).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Esempio DCOM](../../visual-cpp-samples.md)   
- [Cenni preliminari sulla classe](../../atl/atl-class-overview.md)
+ [Panoramica della classe](../../atl/atl-class-overview.md)

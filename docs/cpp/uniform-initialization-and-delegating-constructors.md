@@ -1,5 +1,5 @@
 ---
-title: Uniforme di inizializzazione e costruttori deleganti | Documenti Microsoft
+title: Uniforme di inizializzazione e costruttori deleganti | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,15 +12,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: df40eef538ec09a0189bf6c1e6b4881edb59f5c6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 92174ceefa350b739567ac3e67c2ca023afb6008
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32423522"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37939832"
 ---
 # <a name="uniform-initialization-and-delegating-constructors"></a>Inizializzazione uniforme e costruttori deleganti
-Nel linguaggio C++ moderno, è possibile utilizzare *tra parentesi graffe inizializzazione* per qualsiasi tipo, senza il segno di uguale. Inoltre, è possibile utilizzare la delega dei costruttori per semplificare il codice quando si dispone di più costruttori che eseguono operazioni simili.  
+Nel linguaggio C++ moderno, è possibile usare *inizializzazione con parentesi graffe* per qualsiasi tipo, senza il segno di uguale. Inoltre, è possibile utilizzare la delega dei costruttori per semplificare il codice quando si dispone di più costruttori che eseguono operazioni simili.  
   
 ## <a name="brace-initialization"></a>Inizializzazione con parentesi graffe  
  È possibile utilizzare l'inizializzazione con parentesi graffe per qualsiasi classe, struct o unione. Se un tipo dispone di un costruttore predefinito, dichiarato in modo implicito o esplicito, è possibile utilizzare l'inizializzazione predefinita con parentesi graffe (con le parentesi graffe vuote). Ad esempio, la classe seguente può essere inizializzata utilizzando sia l'inizializzazione con parentesi graffe predefinita che quella non predefinita:  
@@ -91,7 +91,7 @@ int main()
 }  
 ```  
   
- È possibile utilizzare l'inizializzazione con parentesi graffe ovunque si esegua in genere l'inizializzazione, ad esempio come parametro di funzione o valore restituito o con la parola chiave `new`:  
+ È possibile usare l'inizializzazione con parentesi graffe ovunque si esegua in genere l'inizializzazione, ad esempio, come un parametro di funzione o un valore restituito o con il **nuovo** (parola chiave):  
   
 ```cpp  
 class_d* cf = new class_d{4.5};  
@@ -101,14 +101,14 @@ return { 4.5 };
 ```  
   
 ## <a name="initializerlist-constructors"></a>Costruttori di initializer_list  
- Il [classe initializer_list](../standard-library/initializer-list-class.md) rappresenta un elenco di oggetti di un tipo specificato che può essere utilizzato in un costruttore e in altri contesti. È possibile creare un initializer_list tramite l'inizializzazione con parentesi graffe:  
+ Il [classe initializer_list](../standard-library/initializer-list-class.md) rappresenta un elenco di oggetti di un tipo specificato che può essere usato in un costruttore e in altri contesti. È possibile creare un initializer_list tramite l'inizializzazione con parentesi graffe:  
   
 ```cpp  
 initializer_list<int> int_list{5, 6, 7};  
 ```  
   
 > [!IMPORTANT]
->  Per utilizzare questa classe, è necessario includere il [< initializer_list >](../standard-library/initializer-list.md) intestazione.  
+>  Per usare questa classe, è necessario includere il [< initializer_list >](../standard-library/initializer-list.md) intestazione.  
   
  Un `initializer_list` può essere copiato. In questo caso, i membri del nuovo elenco sono riferimenti ai membri dell'elenco originale:  
   

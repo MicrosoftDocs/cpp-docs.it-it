@@ -1,5 +1,5 @@
 ---
-title: _bstr_t::Detach | Documenti Microsoft
+title: _bstr_t::Detach | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 117a2df667b9aa9ee13fc30dd0eff4bd201907c8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6b8b7bc86ae487843f925668bccfbfd8e67b8685
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32408952"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37940251"
 ---
 # <a name="bstrtdetach"></a>_bstr_t::Detach
 **Sezione specifica Microsoft**  
@@ -40,7 +40,7 @@ BSTR Detach( ) throw;
  L'elemento `BSTR` di cui è stato eseguito il wrapping da `_bstr_t`.  
   
 ## <a name="example"></a>Esempio  
- Vedere [Connetti](../cpp/bstr-t-assign.md) per un esempio di utilizzo **scollegamento**.  
+ Visualizzare [_bstr_t::Assign](../cpp/bstr-t-assign.md) per un esempio di utilizzo `Detach`.  
   
  **Fine sezione specifica Microsoft**  
   

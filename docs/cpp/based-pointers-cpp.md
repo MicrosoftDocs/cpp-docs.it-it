@@ -1,5 +1,5 @@
 ---
-title: Basati su puntatori (C++) | Documenti Microsoft
+title: Basati su puntatori (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,16 +19,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c6cc2e45574d30ae1a544da78a4f7a75321a1156
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f24c2ad56f91be3ed413f6967e6e40749693fe1b
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37943299"
 ---
 # <a name="based-pointers-c"></a>Puntatori based (C++)
 **Sezione specifica Microsoft**  
   
- La parola chiave `__based` consente di dichiarare puntatori basati su puntatori (puntatori con offset rispetto ai puntatori esistenti).  
+ Il **based** (parola chiave) consente di dichiarare puntatori basati su puntatori (puntatori con offset rispetto ai puntatori esistenti).  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -38,11 +39,11 @@ type __based( base ) declarator
 ```  
   
 ## <a name="remarks"></a>Note  
- I puntatori basati sugli indirizzi di puntatori sono l'unico formato della parola chiave `__based` valida in compilazioni a 32 bit o a 64 bit. Per i compilatori C e C++ a 32 bit Microsoft un puntatore based è un offset a 32 bit di una base puntatore a 32 bit. Una restrizione analoga è presente per ambienti a 64 bit, in cui un puntatore based è un offset a 64 bit rispetto a una base a 64 bit.  
+ I puntatori basati sugli indirizzi di puntatori sono l'unica forma del **based** parola chiave valida in compilazioni a 32 bit o 64 bit. Per i compilatori C e C++ a 32 bit Microsoft un puntatore based è un offset a 32 bit di una base puntatore a 32 bit. Una restrizione analoga è presente per ambienti a 64 bit, in cui un puntatore based è un offset a 64 bit rispetto a una base a 64 bit.  
   
  Un utilizzo dei puntatori basati su puntatori è correlato agli identificatori persistenti che contengono puntatori. Un elenco collegato costituito da puntatori basati su un puntatore può essere salvato su disco e successivamente ricaricato in un'altra posizione della memoria, con i puntatori che rimangono validi. Ad esempio:  
   
-```  
+```cpp 
 // based_pointers1.cpp  
 // compile with: /c  
 void *vpBuffer;  
@@ -55,16 +56,16 @@ struct llist_t {
  Il puntatore `vpBuffer` viene assegnato l'indirizzo di memoria allocata in un qualche punto successivo del programma. L'elenco collegato viene rilocato rispetto al valore `vpBuffer`.  
   
 > [!NOTE]
->  Identificatori persistenti che contengono puntatori possono essere realizzati anche tramite [file mappati alla memoria](http://msdn.microsoft.com/library/windows/desktop/aa366556).  
+>  Rendere persistenti gli identificatori che contengono puntatori possono essere eseguiti anche utilizzando [file mappati alla memoria](http://msdn.microsoft.com/library/windows/desktop/aa366556).  
   
  Quando si dereferenzia un puntatore based, la base deve essere specificata in modo esplicito o essere implicitamente nota tramite la dichiarazione.  
   
- Per garantire la compatibilità con le versioni precedenti, **based** è un sinonimo di `__based`.  
+ Per garantire la compatibilità con versioni precedenti **based** è un sinonimo **based**.  
   
 ## <a name="example"></a>Esempio  
  Nel codice seguente viene illustrata la modifica di un puntatore based tramite la modifica della base relativa.  
   
-```  
+```cpp 
 // based_pointers2.cpp  
 // compile with: /EHsc  
 #include <iostream>  

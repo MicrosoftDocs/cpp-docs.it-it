@@ -1,5 +1,5 @@
 ---
-title: Parole chiave di ereditarietà | Documenti Microsoft
+title: Parole chiave di ereditarietà | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -28,11 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1088a920e5d023e4dea78e55610bebc0f20c2bac
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 44cdb2b8149d2e8faf09ed715f96bc069620076b
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37943485"
 ---
 # <a name="inheritance-keywords"></a>Parole chiave di ereditarietà
 **Sezione specifica Microsoft**  
@@ -45,25 +46,25 @@ class [__virtual_inheritance] class-name;
   
  dove:  
   
- *nome di classe*  
+ *nome della classe*  
  Il nome della classe che si sta dichiarando.  
   
  Il linguaggio C++ consente di dichiarare un puntatore a un membro della classe prima della definizione della classe. Ad esempio:  
   
-```  
+```cpp 
 class S;  
 int S::*p;  
 ```  
   
- Nel codice precedente, `p` è dichiarato come puntatore a membro integer di classe S. Tuttavia, `class S` ha non è ancora stato definito in questo codice; è stato solo dichiarato. Quando il compilatore rileva tale puntatore, deve effettuare una rappresentazione generalizzata del puntatore. La dimensione della rappresentazione dipende dal modello di ereditarietà specificato. Sono disponibili quattro modi per specificare un modello di ereditarietà al compilatore:  
+ Nel codice precedente, `p` è dichiarato come puntatore al membro integer di classe S. Tuttavia, `class S` ha non è ancora stato definito in questo codice; è stato solo dichiarato. Quando il compilatore rileva tale puntatore, deve effettuare una rappresentazione generalizzata del puntatore. La dimensione della rappresentazione dipende dal modello di ereditarietà specificato. Sono disponibili quattro modi per specificare un modello di ereditarietà al compilatore:  
   
 -   Nell'IDE in **rappresentazione di puntatore a membro**  
   
--   Nella riga di comando mediante il [/vmg](../build/reference/vmb-vmg-representation-method.md) passare  
+-   Nella riga di comando tramite il [/vmg](../build/reference/vmb-vmg-representation-method.md) switch  
   
--   Utilizzo di [pointers_to_members](../preprocessor/pointers-to-members.md) (pragma)  
+-   Usando il [pointers_to_members](../preprocessor/pointers-to-members.md) (pragma)  
   
--   Utilizzando le parole chiave di ereditarietà `__single_inheritance`, `__multiple_inheritance` e `__virtual_inheritance`. Con questa tecnica viene controllato il modello di ereditarietà in base alle classi.  
+-   Utilizzando le parole chiave di ereditarietà **Single_Inheritance**, **multiple_inheritance**, e **virtual_inheritance**. Con questa tecnica viene controllato il modello di ereditarietà in base alle classi.  
   
     > [!NOTE]
     >  Se si dichiara sempre un puntatore a un membro di una classe dopo la definizione della classe, non è necessario utilizzare nessuna di queste opzioni.  
@@ -72,7 +73,7 @@ int S::*p;
   
  Se l'esempio precedente viene modificato in:  
   
-```  
+```cpp 
 class __single_inheritance S;  
 int S::*p;  
 ```  

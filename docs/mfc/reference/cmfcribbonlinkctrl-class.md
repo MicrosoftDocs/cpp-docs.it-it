@@ -1,5 +1,5 @@
 ---
-title: Classe CMFCRibbonLinkCtrl | Documenti Microsoft
+title: Classe CMFCRibbonLinkCtrl | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -42,12 +42,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d078900c3436c2205905b92d651bab86e94db246
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 26837b4eda881bdf83e2f34f0c81a1b0e7034ffe
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37039011"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37851496"
 ---
 # <a name="cmfcribbonlinkctrl-class"></a>Classe CMFCRibbonLinkCtrl
 Implementa un collegamento ipertestuale collocato in una barra multifunzione. Il collegamento ipertestuale apre una pagina Web quando si fa clic su di esso.  
@@ -107,16 +107,16 @@ CMFCRibbonLinkCtrl(
   
 ### <a name="parameters"></a>Parametri  
  [in] *nID*  
- Specifica l'ID di comando del comando che viene eseguita quando viene selezionato il controllo collegamento.  
+ Specifica l'ID di comando del comando che viene eseguito quando si fa clic sul controllo collegamento.  
   
  [in] *lpszText*  
- Specifica l'etichetta da visualizzare sul controllo collegamento.  
+ Specifica l'etichetta da visualizzare nel controllo collegamento.  
   
  [in] *lpszLink*  
  Specifica il collegamento ipertestuale associato al controllo di collegamento.  
   
 ### <a name="example"></a>Esempio  
- Nell'esempio seguente viene illustrato come utilizzare il costruttore del `CMFCRibbonLinkCtrl` classe. Questo frammento di codice fa parte il [esempio gadget della barra multifunzione](../../visual-cpp-samples.md).  
+ Nell'esempio seguente viene illustrato come utilizzare il costruttore del `CMFCRibbonLinkCtrl` classe. Questo frammento di codice fa parte di [esempio di gadget della barra multifunzione](../../visual-cpp-samples.md).  
   
  [!code-cpp[NVC_MFC_RibbonGadgets#1](../../mfc/reference/codesnippet/cpp/cmfcribbonlinkctrl-class_1.cpp)]  
   
@@ -250,10 +250,10 @@ BOOL OpenLink();
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- `TRUE` Se la pagina Web associata è stato aperto correttamente; in caso contrario, `FALSE`.  
+ TRUE se la pagina Web associata è stato aperto correttamente; in caso contrario, FALSE.  
   
 ### <a name="remarks"></a>Note  
- Apre una pagina web utilizzando il collegamento ipertestuale associato il `CMFCRibbonLinkCtrl` oggetto.  
+ Viene aperta una pagina Web usando il collegamento ipertestuale associato il `CMFCRibbonLinkCtrl` oggetto.  
   
 ##  <a name="setlink"></a>  CMFCRibbonLinkCtrl::SetLink  
  Imposta il valore del collegamento ipertestuale.  

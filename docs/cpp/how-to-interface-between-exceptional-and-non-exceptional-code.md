@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: interfaccia tra codice eccezionale e Non eccezionale | Documenti Microsoft'
+title: 'Procedura: interfaccia tra codice eccezionale e Non eccezionale | Microsoft Docs'
 ms.custom: how-to
 ms.date: 11/04/2016
 ms.technology:
@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f2cf2216ba75912520f744f0f0331a50520aa895
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 74805c7ecd4b4ecef71d8ac1358fd6c2014e27d5
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32417275"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37940118"
 ---
 # <a name="how-to-interface-between-exceptional-and-non-exceptional-code"></a>Procedura: interfaccia tra codice eccezionale e non eccezionale
 In questo articolo viene descritto come implementare una gestione delle eccezioni coerente in un modulo C++ e viene illustrato come convertire tali eccezioni da e verso i codici di errore ai limiti della eccezione.  
@@ -25,7 +25,7 @@ In questo articolo viene descritto come implementare una gestione delle eccezion
  Talvolta un modulo C++ deve interfacciarsi con del codice che non utilizza le eccezioni (codice senza eccezione). Tale interfaccia è noto come un *limite di eccezione*. Ad esempio, è necessario chiamare la funzione Win32 `CreateFile` nel programma C++. `CreateFile` non genera eccezioni; invece imposta codici di errore che possono venire recuperati dalla funzione `GetLastError`. Se il programma C++ è complesso, è preferibile includere una politica di gestione coerente degli errori basata sulle eccezioni. Inoltre è probabile che non si desideri abbandonare l'utilizzo delle eccezioni solo perché si deve interfacciare con del codice privo di eccezioni e che non si desideri combinare nel modulo C++ la politica di gestione degli errori basata sulle eccezioni con quella non basata sulle eccezioni.  
   
 ## <a name="calling-non-exceptional-functions-from-c"></a>Chiamata a funzioni senza eccezioni da C++  
- Quando si chiama una funzione senza eccezioni da C++, lo scopo è quello di eseguire il wrapping della funzione in una funzione C++ che rileva eventuali errori e quindi genera eventualmente un'eccezione. Quando si progetta una funzione wrapper, è necessario innanzitutto decidere quale tipo di garanzie fornire: nessuna generazione, avanzata o di base. In secondo luogo, occorre progettare la funzione in modo che tutte le risorse, ad esempio, gli handle dei file, vengano correttamente rilasciate se viene generata un'eccezione. In genere, questo significa utilizzare puntatori intelligenti o gestori di risorse simili per gestire la proprietà delle risorse. Per ulteriori informazioni sulle considerazioni relative alla progettazione, vedere [come: progettazione di sicurezza dell'eccezione](../cpp/how-to-design-for-exception-safety.md).  
+ Quando si chiama una funzione senza eccezioni da C++, lo scopo è quello di eseguire il wrapping della funzione in una funzione C++ che rileva eventuali errori e quindi genera eventualmente un'eccezione. Quando si progetta una funzione wrapper, è necessario innanzitutto decidere quale tipo di garanzie fornire: nessuna generazione, avanzata o di base. In secondo luogo, occorre progettare la funzione in modo che tutte le risorse, ad esempio, gli handle dei file, vengano correttamente rilasciate se viene generata un'eccezione. In genere, questo significa utilizzare puntatori intelligenti o gestori di risorse simili per gestire la proprietà delle risorse. Per altre informazioni sulle considerazioni relative alla progettazione, vedere [procedura: progettare la sicurezza di eccezione del](../cpp/how-to-design-for-exception-safety.md).  
   
 ### <a name="example"></a>Esempio  
  Nell'esempio seguente vengono mostrate le funzioni C++ che utilizzano le funzioni Win32 `CreateFile` e `ReadFile` internamente per aprire e leggere due file.  La classe `File` rappresenta un wrapper RAII per gli handle di file. Il costruttore rileva uno stato "impossibile trovare il file" e genera un'eccezione per propagare l'errore nello stack di chiamate del modulo C++ (in questo esempio, la funzione `main()`). Se un'eccezione viene generata dopo che un oggetto `File` è completamente costruito, il distruttore chiama automaticamente `CloseHandle` per rilasciare l'handle di file. Se si preferisce, è possibile utilizzare la classe ATL (Active Template Library (ATL) `CHandle` per lo stesso scopo oppure `unique_ptr` con un deleter personalizzato. Le funzioni che chiamano le API Win32 e CRT rilevano gli errori e quindi generano eccezioni C++ utilizzando la funzione definita localmente `ThrowLastErrorIf`, che a sua volta utilizza la classe `Win32Exception`, derivata dalla classe `runtime_error`. In questo esempio, tutte le funzioni forniscono una solida garanzia di eccezione; se viene generata un'eccezione in un punto qualsiasi di queste funzioni, nessuna risorsa viene persa e nessuno stato del programma viene modificato.  
@@ -197,7 +197,7 @@ BOOL DiffFiles2(const string& file1, const string& file2)
   
 ```  
   
- Quando si convertono le eccezioni in codici di errore, un possibile problema è che i codici di errore spesso non contengono la ricchezza di informazioni che un'eccezione può archiviare. Per risolvere il problema, è possibile fornire un blocco `catch` per ogni tipo di eccezione specifico che può essere generato e registrare i dettagli dell'eccezione prima che venga convertita in un codice di errore. Questo approccio può creare ripetizioni nel codice se più funzioni utilizzano tutte lo stesso set di blocchi `catch`. Una tecnica efficace per evitare le ripetizioni nel codice è il refactoring di tali blocchi in una funzione di utilità privata che implementa i blocchi `try` e `catch` e accetta un oggetto funzione che viene richiamato nel blocco `try`. In ciascuna funzione pubblica passare il codice alla funzione di utilità come un'espressione lambda.  
+ Quando si convertono le eccezioni in codici di errore, un possibile problema è che i codici di errore spesso non contengono la ricchezza di informazioni che un'eccezione può archiviare. Per risolvere questo problema, è possibile specificare una **catch** blocco per ogni tipo di eccezione specifico che potrebbe essere generata ed esegue la registrazione per registrare i dettagli dell'eccezione prima che venga convertito in un codice di errore. Questo approccio può creare ripetizioni nel codice se più funzioni utilizzano tutte lo stesso set di **catch** blocchi. Un buon metodo per evitare la ripetizione del codice è il refactoring di tali blocchi in un'unica funzione di utilità privata che implementa il **provare** e **catch** blocca e accetta un oggetto funzione che viene richiamato nel **provare** blocco. In ciascuna funzione pubblica passare il codice alla funzione di utilità come un'espressione lambda.  
   
 ```cpp  
 template<typename Func>   
@@ -243,5 +243,5 @@ bool DiffFiles3(const string& file1, const string& file2)
  Per altre informazioni sulle espressioni lambda, vedere [Espressioni lambda in C++](../cpp/lambda-expressions-in-cpp.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Errori ed eccezioni](../cpp/errors-and-exception-handling-modern-cpp.md)   
+ [Gli errori e la gestione delle eccezioni](../cpp/errors-and-exception-handling-modern-cpp.md)   
  [Procedura: Progettare la sicurezza dell'eccezione](../cpp/how-to-design-for-exception-safety.md)

@@ -1,5 +1,5 @@
 ---
-title: Funzioni che restituiscono tipi di riferimento | Documenti Microsoft
+title: Funzioni che restituiscono tipi di riferimento | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,11 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 867313625ccc90924eed0c0c9405970f2cb90f8a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 12b86ee4505792fbc3a90d34ece8e714eb3565ff
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37943217"
 ---
 # <a name="reference-type-function-returns"></a>Elementi restituiti dalla funzione tipo-riferimento
 È possibile dichiarare le funzioni affinché restituiscano un tipo di riferimento. La dichiarazione di una funzione viene effettuata per due motivi:  
@@ -31,14 +32,14 @@ ms.lasthandoff: 05/03/2018
   
 -   L'oggetto a cui si fa riferimento non uscirà dall'ambito al completamento della funzione.  
   
- Analogamente a come può essere più efficiente passare oggetti di grandi dimensioni *a* funzioni per riferimento, può essere anche più efficiente per restituire oggetti di grandi dimensioni *da* funzioni in base al riferimento. Il protocollo riferimento-restituzione elimina la necessità di copiare l'oggetto in un percorso temporaneo prima della restituzione.  
+ Così come può essere più efficiente passare oggetti di grandi dimensioni *al* funzioni per riferimento, può essere anche più efficiente per restituire gli oggetti grandi *da* funzioni in base al riferimento. Il protocollo riferimento-restituzione elimina la necessità di copiare l'oggetto in un percorso temporaneo prima della restituzione.  
   
- I tipi riferimento-restituzione possono rivelarsi utili quando la funzione deve restituire un l-value. La maggior parte degli operatori di overload rientra in questa categoria, in particolare l'operatore di assegnazione. Gli operatori di overload sono illustrati in [operatori di overload](../cpp/operator-overloading.md).  
+ I tipi riferimento-restituzione possono rivelarsi utili quando la funzione deve restituire un l-value. La maggior parte degli operatori di overload rientra in questa categoria, in particolare l'operatore di assegnazione. Gli operatori di overload vengono analizzati [operatori di overload](../cpp/operator-overloading.md).  
   
 ## <a name="example"></a>Esempio  
  Considerare l'esempio `Point`:  
   
-```  
+```cpp 
 // refType_function_returns.cpp  
 // compile with: /EHsc  
   
@@ -82,7 +83,7 @@ cout << "x = " << ThePoint.x() << "\n"
   
 ## <a name="output"></a>Output  
   
-```  
+```Output  
 x = 7  
 y = 9  
 ```  
@@ -93,7 +94,7 @@ y = 9
   
  Le dichiarazioni di tipi di riferimenti devono contenere gli inizializzatori tranne nei seguenti casi:  
   
--   Dichiarazione `extern` esplicita  
+-   Explicit **extern** dichiarazione  
   
 -   Dichiarazione di un membro di classe  
   
@@ -104,7 +105,7 @@ y = 9
 ## <a name="caution-returning-address-of-local"></a>Attenzione nella restituzione dell'indirizzo di una variabile locale  
  Se si dichiara un oggetto a livello di ambito locale, tale oggetto verrà eliminato al completamento della funzione. Se la funzione restituisce un riferimento all'oggetto, tale riferimento provocherà probabilmente una violazione di accesso in fase di esecuzione se il chiamante tenta di usare il riferimento Null.  
   
-```  
+```cpp 
 // C4172 means Don’t do this!!!  
 Foo& GetFoo()  
 {  

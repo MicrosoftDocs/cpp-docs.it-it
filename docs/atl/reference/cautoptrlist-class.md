@@ -1,5 +1,5 @@
 ---
-title: Classe CAutoPtrList | Documenti Microsoft
+title: Classe CAutoPtrList | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,18 +18,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9101d66de6782d1a060a8acdfb0d02e9971bb9c5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5d942c0611b408303922f3e6ab91000630ce8774
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32357545"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37883593"
 ---
 # <a name="cautoptrlist-class"></a>Classe CAutoPtrList
-Questa classe fornisce metodi utili durante la costruzione di un elenco di puntatori intelligenti.  
+Questa classe fornisce metodi utili quando si crea un elenco di puntatori intelligenti.  
   
 > [!IMPORTANT]
->  Questa classe e i relativi membri non possono essere utilizzati nelle applicazioni eseguite in Windows Runtime.  
+>  Questa classe e i relativi membri non possono essere utilizzati nelle applicazioni eseguite nel Runtime di Windows.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -40,7 +40,7 @@ class CAutoPtrList :
 ```  
   
 #### <a name="parameters"></a>Parametri  
- `E`  
+ *E*  
  Il tipo di puntatore.  
   
 ## <a name="members"></a>Membri  
@@ -54,7 +54,7 @@ class CAutoPtrList :
 ## <a name="remarks"></a>Note  
  Questa classe fornisce un costruttore e metodi da deriva [CAtlList](../../atl/reference/catllist-class.md) e [CAutoPtrElementTraits](../../atl/reference/cautoptrelementtraits-class.md) per facilitare la creazione di un oggetto elenco archiviare i puntatori intelligenti. La classe [CAutoPtrArray](../../atl/reference/cautoptrarray-class.md) fornisce una funzione simile per un oggetto matrice.  
   
- Per ulteriori informazioni, vedere [classi Collection ATL](../../atl/atl-collection-classes.md).  
+ Per altre informazioni, vedere [classi Collection ATL](../../atl/atl-collection-classes.md).  
   
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  [CAtlList](../../atl/reference/catllist-class.md)  
@@ -72,13 +72,13 @@ CAutoPtrList(UINT nBlockSize = 10) throw();
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `nBlockSize`  
+ *nBlockSize*  
  Dimensione del blocco, con valore predefinito è 10.  
   
 ### <a name="remarks"></a>Note  
- La dimensione del blocco è una misura della quantità di memoria allocata quando è necessario un nuovo elemento. Blocchi di dimensioni maggiori di ridurre ulteriormente le chiamate alle routine di allocazione di memoria, ma usano più risorse.  
+ La dimensione del blocco è una misura della quantità di memoria allocata quando un nuovo elemento è obbligatorio. Blocchi di dimensioni maggiori riducono le chiamate alle routine di allocazione della memoria, ma usano più risorse.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Classe CAtlList](../../atl/reference/catllist-class.md)   
  [Classe CAutoPtrElementTraits](../../atl/reference/cautoptrelementtraits-class.md)   
- [Cenni preliminari sulla classe](../../atl/atl-class-overview.md)
+ [Panoramica della classe](../../atl/atl-class-overview.md)

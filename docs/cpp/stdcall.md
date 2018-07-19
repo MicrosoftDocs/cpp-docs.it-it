@@ -1,5 +1,5 @@
 ---
-title: stdcall | Documenti Microsoft
+title: stdcall | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f018a87f7a73de6500294b0817263e6f847af8ad
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 09efc905507d93bbb80b003f93b885d9d27fcb1d
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32422670"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37939845"
 ---
 # <a name="stdcall"></a>__stdcall
 **Sezione specifica Microsoft**  
   
- La convenzione di chiamata `__stdcall` viene utilizzata per chiamare le funzioni dell'API Win32. La chiamata pulisce lo stack, pertanto il compilatore effettua **vararg** funzioni `__cdecl`. Le funzioni che utilizzano questa convenzione di chiamata richiedono un prototipo di funzione.  
+ Il **stdcall** convenzione di chiamata viene usato per chiamare funzioni API Win32. Il chiamato pulisce lo stack, in modo che il compilatore rende **vararg** funzioni **cdecl**. Le funzioni che utilizzano questa convenzione di chiamata richiedono un prototipo di funzione.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -44,13 +44,13 @@ return-type __stdcall function-name[(argument-list)]
 |Convenzione per il passaggio degli argomenti|Per valore, a meno che non venga passato un puntatore o un tipo di riferimento.|  
 |Responsabilità di manutenzione dello stack|La funzione chiamata determina l'estrazione dei propri argomenti dallo stack.|  
 |Convenzione della decorazione dei nomi|Un carattere di sottolineatura (_) viene aggiunto come prefisso del nome. Il nome è seguito dal simbolo @ seguito dal numero di byte (in decimale) nell'elenco di argomenti. Pertanto, la funzione dichiarata come `int func( int a, double b )` è decorata come segue: `_func@12`|  
-|Convenzione della conversione maiuscolo/minuscolo e viceversa|Nessuno|  
+|Convenzione della conversione maiuscolo/minuscolo e viceversa|nessuno|  
   
- Il [/Gz](../build/reference/gd-gr-gv-gz-calling-convention.md) specifica l'opzione del compilatore `__stdcall` per tutte le funzioni dichiarate in modo non esplicito con una convenzione di chiamata diversa.  
+ Il [/Gz](../build/reference/gd-gr-gv-gz-calling-convention.md) specifica l'opzione del compilatore **stdcall** per tutte le funzioni dichiarate in modo non esplicito con una convenzione di chiamata diversa.  
   
- Le funzioni dichiarate utilizzando il `__stdcall` modificatore restituito valori in modo analogo alle funzioni dichiarate utilizzando [cdecl](../cpp/cdecl.md).  
+ Le funzioni dichiarate utilizzando il **stdcall** modificatore restituito valori in modo analogo alle funzioni dichiarate utilizzando [cdecl](../cpp/cdecl.md).  
   
- Nei processori ARM e x64, `__stdcall` viene accettata e ignorata dal compilatore; nelle architetture ARM e x64, per convenzione, gli argomenti vengono passati in registri quando possibile, mentre gli argomenti successivi vengono passati nello stack.  
+ In ARM e x64 processori **stdcall** viene accettata e ignorata dal compilatore; su ARM e x64 architetture, per convenzione, gli argomenti vengono passati nei registri quando possibile e gli argomenti successivi vengono passati nello stack.  
   
  Per le funzioni di classi non statiche, se la funzione viene definita non inline, il modificatore della convenzione di chiamata non deve essere specificato nella definizione non inline. Questo significa che per i metodi membri non statici della classe la convenzione di chiamata specificata durante la dichiarazione è presunta in corrispondenza della definizione. Data questa definizione di classe,  
   
@@ -73,7 +73,7 @@ void __stdcall CMyClass::mymethod() { return; }
 ```  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente, utilizzare _**stdcall** comporta tutti `WINAPI` tipi di funzione gestita come una chiamata standard:  
+ Nell'esempio seguente, usare _**stdcall** comporta che tutti `WINAPI` tipi di funzione come una chiamata standard:  
   
 ```cpp  
 // Example of the __stdcall keyword  

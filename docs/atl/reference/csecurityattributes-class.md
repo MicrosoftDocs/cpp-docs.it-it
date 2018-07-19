@@ -1,5 +1,5 @@
 ---
-title: Classe CSecurityAttributes | Documenti Microsoft
+title: Classe CSecurityAttributes | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,18 +19,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 03bda174fb85fa6857e22b851b93bcf1b3192716
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4bc37dd8025009e4f904373fc8aa106c93dc8210
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32357506"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37879347"
 ---
 # <a name="csecurityattributes-class"></a>Classe CSecurityAttributes
-Questa classe è un semplice wrapper per la struttura di attributi di sicurezza.  
+Questa classe è un wrapper sottile per la struttura di attributi di sicurezza.  
   
 > [!IMPORTANT]
->  Questa classe e i relativi membri non possono essere utilizzati nelle applicazioni eseguite in Windows Runtime.  
+>  Questa classe e i relativi membri non possono essere utilizzati nelle applicazioni eseguite nel Runtime di Windows.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -53,9 +53,9 @@ class CSecurityAttributes : public SECURITY_ATTRIBUTES
 |[CSecurityAttributes:: set](#set)|Chiamare questo metodo per impostare gli attributi del `CSecurityAttributes` oggetto.|  
   
 ## <a name="remarks"></a>Note  
- Il **SECURITY_ATTRIBUTES** struttura contiene un [descrittore di sicurezza](http://msdn.microsoft.com/library/windows/desktop/aa379561) utilizzata per la creazione di un oggetto e specifica se l'handle recuperato specificando questa struttura è ereditabile.  
+ Il `SECURITY_ATTRIBUTES` struttura contiene una [descrittore di sicurezza](http://msdn.microsoft.com/library/windows/desktop/aa379561) utilizzata per la creazione di un oggetto e specifica se l'handle recuperato specificando questa struttura è ereditabile.  
   
- Per un'introduzione al modello di controllo di accesso in Windows, vedere [controllo di accesso](http://msdn.microsoft.com/library/windows/desktop/aa374860) in Windows SDK.  
+ Per un'introduzione al modello di controllo di accesso in Windows, vedere [controllo di accesso](http://msdn.microsoft.com/library/windows/desktop/aa374860) nel SDK di Windows.  
   
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  `SECURITY_ATTRIBUTES`  
@@ -74,10 +74,10 @@ explicit CSecurityAttributes(const CSecurityDesc& rSecurityDescriptor, bool bInh
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `rSecurityDescriptor`  
+ *rSecurityDescriptor*  
  Riferimento a un descrittore di sicurezza.  
   
- `bInheritsHandle`  
+ *bInheritsHandle*  
  Specifica se l'handle restituito viene ereditato alla creazione di un nuovo progetto. Se questo membro è true, il nuovo processo eredita l'handle.  
   
 ##  <a name="set"></a>  CSecurityAttributes:: set  
@@ -88,18 +88,18 @@ void Set(const CSecurityDesc& rSecurityDescriptor, bool bInheritHandle = false) 
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `rSecurityDescriptor`  
+ *rSecurityDescriptor*  
  Riferimento a un descrittore di sicurezza.  
   
- `bInheritHandle`  
+ *bInheritHandle*  
  Specifica se l'handle restituito viene ereditato alla creazione di un nuovo progetto. Se questo membro è true, il nuovo processo eredita l'handle.  
   
 ### <a name="remarks"></a>Note  
- Questo metodo viene utilizzato il costruttore per inizializzare il `CSecurityAttributes` oggetto.  
+ Questo metodo viene utilizzato dal costruttore per inizializzare il `CSecurityAttributes` oggetto.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Esempio di sicurezza](../../visual-cpp-samples.md)   
  [SECURITY_ATTRIBUTES](http://msdn.microsoft.com/library/windows/desktop/aa379560)   
  [descrittore di sicurezza](http://msdn.microsoft.com/library/windows/desktop/aa379561)   
- [Cenni preliminari sulla classe](../../atl/atl-class-overview.md)   
+ [Panoramica della classe](../../atl/atl-class-overview.md)   
  [Funzioni globali di sicurezza](../../atl/reference/security-global-functions.md)

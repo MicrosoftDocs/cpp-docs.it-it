@@ -1,5 +1,5 @@
 ---
-title: Classe CComAutoDeleteCriticalSection | Documenti Microsoft
+title: Classe CComAutoDeleteCriticalSection | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c5153520b5a5648f8352465031264c223ffd97c4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8b90afb9ae47ced33c331aef988489b567b1078b
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32360064"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37879902"
 ---
 # <a name="ccomautodeletecriticalsection-class"></a>Classe CComAutoDeleteCriticalSection
 Questa classe fornisce metodi per ottenere e rilasciare la proprietà di un oggetto sezione critica.  
@@ -34,10 +34,10 @@ class CComAutoDeleteCriticalSection : public CComSafeDeleteCriticalSection
 ```  
   
 ## <a name="remarks"></a>Note  
- `CComAutoDeleteCriticalSection` deriva dalla classe [CComSafeDeleteCriticalSection](../../atl/reference/ccomsafedeletecriticalsection-class.md). Tuttavia, `CComAutoDeleteCriticalSection` esegue l'override di [termine](ccomsafedeletecriticalsection-class.md#term) metodo `private` accesso, che impone la pulitura di memoria interna che si verificano solo quando le istanze di questa classe escono dall'ambito o in modo esplicito vengono eliminate dalla memoria.  
+ `CComAutoDeleteCriticalSection` deriva dalla classe [CComSafeDeleteCriticalSection](../../atl/reference/ccomsafedeletecriticalsection-class.md). Tuttavia, `CComAutoDeleteCriticalSection` esegue l'override di [termine](ccomsafedeletecriticalsection-class.md#term) metodo da **privata** accesso, che impone la Pulitura memoria interna che si verificano solo quando le istanze di questa classe escono dall'ambito o vengono eliminate in modo esplicito dal memoria.  
 
   
- Questa classe viene introdotto alcun metodi aggiuntivi tramite la relativa classe base. Vedere [CComSafeDeleteCriticalSection](../../atl/reference/ccomsafedeletecriticalsection-class.md) e [CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md) per ulteriori informazioni sulle classi helper sezione critica.  
+ Questa classe viene introdotto alcun metodi aggiuntivi tramite la relativa classe base. Visualizzare [CComSafeDeleteCriticalSection](../../atl/reference/ccomsafedeletecriticalsection-class.md) e [CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md) per altre informazioni sulle classi di helper sezione critica.  
   
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  [CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md)  
@@ -52,4 +52,4 @@ class CComAutoDeleteCriticalSection : public CComSafeDeleteCriticalSection
 ## <a name="see-also"></a>Vedere anche  
  [Classe CComSafeDeleteCriticalSection](../../atl/reference/ccomsafedeletecriticalsection-class.md)   
  [Classe CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md)   
- [Cenni preliminari sulla classe](../../atl/atl-class-overview.md)
+ [Panoramica della classe](../../atl/atl-class-overview.md)

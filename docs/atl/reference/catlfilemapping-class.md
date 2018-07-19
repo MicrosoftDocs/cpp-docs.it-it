@@ -1,5 +1,5 @@
 ---
-title: Classe CAtlFileMapping | Documenti Microsoft
+title: Classe CAtlFileMapping | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,18 +17,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 524e5d9c7cef5bcff0d72ddf1225ef79b1b26d64
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 17f4735b56d6d15dfe3740c0dad727765e0eb84b
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32358841"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37882305"
 ---
 # <a name="catlfilemapping-class"></a>Classe CAtlFileMapping
-Questa classe rappresenta un file mappato alla memoria, l'aggiunta di un operatore di cast per i metodi di [CAtlFileMappingBase](../../atl/reference/catlfilemappingbase-class.md).  
+Questa classe rappresenta un file mappato alla memoria, l'aggiunta di un operatore cast per i metodi della [CAtlFileMappingBase](../../atl/reference/catlfilemappingbase-class.md).  
   
 > [!IMPORTANT]
->  Questa classe e i relativi membri non possono essere utilizzati nelle applicazioni eseguite in Windows Runtime.  
+>  Questa classe e i relativi membri non possono essere utilizzati nelle applicazioni eseguite nel Runtime di Windows.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -38,8 +38,8 @@ class CAtlFileMapping : public CAtlFileMappingBase
 ```  
   
 #### <a name="parameters"></a>Parametri  
- `T`  
- Il tipo di dati utilizzati per l'operatore di cast.  
+ *T*  
+ Il tipo di dati usati per l'operatore cast.  
   
 ## <a name="members"></a>Membri  
   
@@ -47,10 +47,10 @@ class CAtlFileMapping : public CAtlFileMappingBase
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[CAtlFileMapping::operator T *](#operator_t_star)|Consente la conversione implicita di `CAtlFileMapping` oggetti `T` **\***.|  
+|[CAtlFileMapping::operator T *](#operator_t_star)|Consente la conversione implicita dei `CAtlFileMapping` oggetti `T` **\***.|  
   
 ## <a name="remarks"></a>Note  
- Questa classe aggiunge un operatore di cast singolo per consentire la conversione implicita di `CAtlFileMapping` oggetti `T` **\***. Altri membri vengono forniti dalla classe di base, [CAtlFileMappingBase](../../atl/reference/catlfilemappingbase-class.md).  
+ Questa classe aggiunge un operatore cast singolo per consentire la conversione implicita dei `CAtlFileMapping` oggetti `T` **\***. Gli altri membri vengono forniti dalla classe di base, [CAtlFileMappingBase](../../atl/reference/catlfilemappingbase-class.md).  
   
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  [CAtlFileMappingBase](../../atl/reference/catlfilemappingbase-class.md)  
@@ -61,7 +61,7 @@ class CAtlFileMapping : public CAtlFileMappingBase
  **Intestazione:** atlfile.h  
   
 ##  <a name="operator_t_star"></a>  CAtlFileMapping::operator T *  
- Consente la conversione implicita di `CAtlFileMapping` oggetti `T` **\***.  
+ Consente la conversione implicita dei `CAtlFileMapping` oggetti `T` **\***.  
   
 ```  
 operator T*() const throw();
@@ -71,8 +71,8 @@ operator T*() const throw();
  Restituisce un `T` **\*** puntatore all'inizio del file mappato alla memoria.  
   
 ### <a name="remarks"></a>Note  
- Chiamate [CAtlFileMappingBase::GetData](../../atl/reference/catlfilemappingbase-class.md#getdata) e reinterpreta il puntatore restituito come un `T` **\*** in *T* è il tipo utilizzato come modello parametro di questa classe.  
+ Le chiamate [CAtlFileMappingBase::GetData](../../atl/reference/catlfilemappingbase-class.md#getdata) e reinterpreta il puntatore restituito come una `T` **\*** in cui *T* è il tipo usato come modello parametro di questa classe.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Classe CAtlFileMappingBase](../../atl/reference/catlfilemappingbase-class.md)   
- [Cenni preliminari sulla classe](../../atl/atl-class-overview.md)
+ [Panoramica della classe](../../atl/atl-class-overview.md)

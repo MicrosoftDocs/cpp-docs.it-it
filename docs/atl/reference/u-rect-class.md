@@ -1,5 +1,5 @@
 ---
-title: Classe _U_RECT | Documenti Microsoft
+title: Classe u_rect | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,68 +19,69 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 93d067daf34538e3745e9a4efdd91fda65ef4de9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2ebb76d2f373862b39f2a3742481e14523a7a94b
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32360887"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37882221"
 ---
-# <a name="urect-class"></a>Classe _U_RECT
-Classe di adattatori di questo argomento consente di utilizzare `RECT` puntatori o riferimenti deve essere passato a una funzione che viene implementata in termini di puntatori.  
+# <a name="urect-class"></a>Classe u_rect
+Classe dell'adattatore in questo argomento consente `RECT` puntatori o riferimenti da passare a una funzione che viene implementata in termini di puntatori.  
   
 > [!IMPORTANT]
->  Questa classe e i relativi membri non possono essere utilizzati nelle applicazioni eseguite in Windows Runtime.  
+>  Questa classe e i relativi membri non possono essere utilizzati nelle applicazioni eseguite nel Runtime di Windows.  
   
 ## <a name="syntax"></a>Sintassi  
   
 ```
-class _U_RECT```  
+class _U_RECT
+```  
   
-## Members  
+## <a name="members"></a>Membri  
   
-### Public Constructors  
+### <a name="public-constructors"></a>Costruttori pubblici  
   
-|Name|Description|  
+|Nome|Descrizione|  
 |----------|-----------------|  
-|[_U_RECT::_U_RECT](#_u_rect___u_rect)|The constructor.|  
+|[_U_RECT::_U_RECT](#_u_rect___u_rect)|Costruttore.|  
   
-### Public Data Members  
+### <a name="public-data-members"></a>Membri dati pubblici  
   
-|Name|Description|  
+|Nome|Descrizione|  
 |----------|-----------------|  
-|[_U_RECT::m_lpRect](#_u_rect__m_lprect)|Pointer to a `RECT`.|  
+|[_U_RECT::m_lpRect](#_u_rect__m_lprect)|Puntatore a un `RECT`.|  
   
-## Remarks  
- The class defines two constructor overloads: one accepts a **RECT&** argument and the other accepts an `LPRECT` argument. The first constructor stores the address of the reference argument in the class's single data member, [m_lpRect](#_u_rect__m_lprect). The argument to the pointer constructor is stored directly without conversion.  
+## <a name="remarks"></a>Note  
+ La classe definisce due overload del costruttore: uno accetta un **RECT &** argomento e l'altro accetta un `LPRECT` argomento. Il primo costruttore archivia l'indirizzo dell'argomento di riferimento nel membro dati della classe, [m_lpRect](#_u_rect__m_lprect). L'argomento del costruttore di puntatore verrà archiviato direttamente, senza conversione.  
   
-## Requirements  
- **Header:** atlwin.h  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** atlwin. h  
   
 ##  <a name="_u_rect__m_lprect"></a>  _U_RECT::m_lpRect  
- The class holds the value passed to either of its constructors as a public `LPRECT` data member.  
+ La classe contiene il valore passato a uno dei relativi costruttori come pubblica `LPRECT` (membro dati).  
   
 ```
 LPRECT m_lpRect;
 ```  
   
 ##  <a name="_u_rect___u_rect"></a>  _U_RECT::_U_RECT  
- The address of the reference argument is stored in the class's single data member, [m_lpRect](#_u_rect__m_lprect).  
+ L'indirizzo dell'argomento di riferimento è archiviato nel membro dati della classe, [m_lpRect](#_u_rect__m_lprect).  
   
 ```
-_U_RECT (RECT & rc);  
-_U_RECT (LPRECT lpRect);
+_U_RECT(RECT& rc);  
+_U_RECT(LPRECT lpRect);
 ```  
   
-### Parameters  
- `rc`  
- A `RECT` reference.  
+### <a name="parameters"></a>Parametri  
+ *RC*  
+ Oggetto `RECT` riferimento.  
   
- `lpRect`  
- A `RECT` pointer.  
+ *lpRect*  
+ Oggetto `RECT` puntatore.  
   
-### Remarks  
- The argument to the pointer constructor is stored directly without conversion.  
+### <a name="remarks"></a>Note  
+ L'argomento del costruttore di puntatore verrà archiviato direttamente, senza conversione.  
   
-## See Also  
- [Class Overview](../../atl/atl-class-overview.md)
+## <a name="see-also"></a>Vedere anche  
+ [Panoramica della classe](../../atl/atl-class-overview.md)

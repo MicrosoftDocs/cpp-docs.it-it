@@ -1,5 +1,5 @@
 ---
-title: 'Operatore AND bit per bit: &amp; | Documenti Microsoft'
+title: 'Operatore AND bit per bit: &amp; | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,22 +18,22 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aeacac8afb7a8195642ebbfb6aac7c697544cd16
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 428e3634898f50e7737c5fc5dae2ce7d0445572e
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37943182"
 ---
 # <a name="bitwise-and-operator-amp"></a>Operatore AND bit per bit: &amp;
+
 ## <a name="syntax"></a>Sintassi  
   
-```  
-  
-expression   
-&  
- expression  
-  
-```  
+```
+
+expression & expression  
+
+```
   
 ## <a name="remarks"></a>Note  
  Le espressioni possono essere altre espressioni And o (in base alle restrizioni dei tipi menzionate di seguito) espressioni di uguaglianza, espressioni relazionali, espressioni additive, espressioni moltiplicative, espressioni puntatore a membro, espressioni cast, espressioni unarie, espressioni di suffisso o espressioni primarie.  
@@ -43,11 +43,11 @@ expression
  Entrambi gli operandi all'operatore AND bit per bit devono essere tipi integrali. Le conversioni aritmetiche consuete analizzate [conversioni Standard](standard-conversions.md), vengono applicate agli operandi.  
   
 ## <a name="operator-keyword-for-"></a>Parola chiave operator per &  
- Il `bitand` operatore è il testo equivalente di **&**. Esistono due modi per accedere il `bitand` operatore nei programmi: includere il file di intestazione `iso646.h`, o compilare il [/Za](../build/reference/za-ze-disable-language-extensions.md) l'opzione del compilatore (Disabilita estensioni linguaggio).  
+ Il **bitand** operatore è l'equivalente testuale di **&**. Esistono due modi per accedere la **bitand** operatore nei programmi: includere il file di intestazione `iso646.h`, o eseguire la compilazione con il [/Za](../build/reference/za-ze-disable-language-extensions.md) l'opzione del compilatore (Disabilita estensioni linguaggio).  
   
 ## <a name="example"></a>Esempio  
   
-```  
+```cpp 
 // expre_Bitwise_AND_Operator.cpp  
 // compile with: /EHsc  
 // Demonstrate bitwise AND  
@@ -63,5 +63,5 @@ int main() {
   
 ## <a name="see-also"></a>Vedere anche  
  [Operatori predefiniti C++, precedenza e associazione](cpp-built-in-operators-precedence-and-associativity.md)  
- [Operatori C++ predefiniti, precedenza e associazione](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
+ [Operatori C++ predefiniti, precedenza e associatività degli operatori](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
  [Operatori bit per bit C](../c-language/c-bitwise-operators.md)

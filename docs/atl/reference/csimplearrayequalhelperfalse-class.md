@@ -1,5 +1,5 @@
 ---
-title: Classe CSimpleArrayEqualHelperFalse | Documenti Microsoft
+title: Classe CSimpleArrayEqualHelperFalse | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7e22d67634f29b60bdc983c892c5fe266df61d08
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a325da2edd4af8b8b0e6e965dc60df8c11bf8d30
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32358205"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37882858"
 ---
 # <a name="csimplearrayequalhelperfalse-class"></a>Classe CSimpleArrayEqualHelperFalse
-Questa classe è un supporto per il [CSimpleArray](../../atl/reference/csimplearray-class.md) classe.  
+Questa classe è un supporto per la [CSimpleArray](../../atl/reference/csimplearray-class.md) classe.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -36,7 +36,7 @@ class CSimpleArrayEqualHelperFalse
 ```  
   
 #### <a name="parameters"></a>Parametri  
- `T`  
+ *T*  
  Una classe derivata.  
   
 ## <a name="members"></a>Membri  
@@ -48,7 +48,7 @@ class CSimpleArrayEqualHelperFalse
 |[CSimpleArrayEqualHelperFalse::IsEqual](#isequal)|(Statico) Restituisce false.|  
   
 ## <a name="remarks"></a>Note  
- Questa classe di tratti è un complemento di `CSimpleArray` classe. IT sempre restituisce false e, inoltre, verranno chiamato `ATLASSERT` con un argomento di false se vi viene mai fatto riferimento. In situazioni in cui non è definito sufficientemente i test di uguaglianza, questa classe consente a una matrice contenente gli elementi per funzionare correttamente per la maggior parte dei metodi, ma non in modo ben definito per i metodi che dipendono da confronti, ad esempio [CSimpleArray:: Trovare](../../atl/reference/csimplearray-class.md#find).  
+ Questa classe traits è un complemento di `CSimpleArray` classe. IT sempre restituisce false e, inoltre, verranno chiamata `ATLASSERT` con un argomento di false se vi è mai fatto riferimento. In situazioni in cui il test di uguaglianza non è sufficientemente definito, questa classe consente a una matrice contenente gli elementi per funzionare correttamente per la maggior parte dei metodi, ma negativo in modo ben definito per i metodi che dipendono da confronti, ad esempio [CSimpleArray:: Trovare](../../atl/reference/csimplearray-class.md#find).  
   
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** atlsimpcoll. h  
@@ -64,8 +64,8 @@ static bool IsEqual(const T&, const T&);
  Restituisce false.  
   
 ### <a name="remarks"></a>Note  
- Questo metodo sempre restituisce false e chiamerà `ATLASSERT` con un argomento di false se viene fatto riferimento. Lo scopo di `CSimpleArrayEqualHelperFalse::IsEqual` consiste nel forzare metodi mediante i confronti esito negativo in modo ben definito quando il test di uguaglianza non è stato definito in modo adeguato.  
+ Questo metodo sempre restituisce false e chiamerà `ATLASSERT` con un argomento di false se viene fatto riferimento. Lo scopo di `CSimpleArrayEqualHelperFalse::IsEqual` consiste nel forzare metodi mediante i confronti esito negativo in modalità ben definite quando i test di uguaglianza non sono stati definiti in modo adeguato.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Classe CSimpleArrayEqualHelper](../../atl/reference/csimplearrayequalhelper-class.md)   
- [Cenni preliminari sulla classe](../../atl/atl-class-overview.md)
+ [Panoramica della classe](../../atl/atl-class-overview.md)

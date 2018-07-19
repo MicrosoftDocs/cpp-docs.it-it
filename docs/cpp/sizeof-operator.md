@@ -1,5 +1,5 @@
 ---
-title: Operatore sizeof | Documenti Microsoft
+title: Operatore sizeof | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ff35b6ef4674121a645fb3d80c96f5da3edded9f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 58724d2e17947c69d1aaf2ed0af66137fe20cc74
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37943293"
 ---
 # <a name="sizeof-operator"></a>Operatore sizeof
-Genera la dimensione dell'operando in base alla dimensione del tipo `char`.  
+Restituisce la dimensione del relativo operando relativamente alle dimensioni di tipo **char**.  
   
 > [!NOTE]
->  Per informazioni di `sizeof ...` (operatore), vedere [ellissi e modelli Variadic](../cpp/ellipses-and-variadic-templates.md).  
+>  Per informazioni sul `sizeof ...` operatore, vedere [ellissi e modelli Variadic](../cpp/ellipses-and-variadic-templates.md).  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -36,19 +37,19 @@ sizeof  ( type-name )
 ```  
   
 ## <a name="remarks"></a>Note  
- Il risultato di `sizeof` operatore è di tipo `size_t`, un tipo integrale definito nel file di inclusione \<STDDEF. h >. Tale operatore consente di evitare di specificare le dimensioni dei dati dipendenti dal computer nei programmi.  
+ Il risultato del **sizeof** operatore JE typu `size_t`, un tipo integrale definito nel file di inclusione \<STDDEF. h >. Tale operatore consente di evitare di specificare le dimensioni dei dati dipendenti dal computer nei programmi.  
   
- L'operando di `sizeof` può essere uno dei seguenti:  
+ L'operando **sizeof** può essere uno dei seguenti:  
   
--   Un nome di tipo. Per usare `sizeof` con un nome di tipo, il nome deve essere racchiuso tra parentesi.  
+-   Un nome di tipo. Per utilizzare **sizeof** con un nome di tipo, il nome deve essere racchiuso tra parentesi.  
   
--   Un'espressione. Se usato con un'espressione, `sizeof` può essere specificato con o senza le parentesi. L'espressione non viene valutata.  
+-   Un'espressione. Se usato con un'espressione **sizeof** può essere specificato con o senza le parentesi. L'espressione non viene valutata.  
   
- Quando l'operatore `sizeof` viene applicato a un oggetto di tipo `char`, restituisce 1. Quando l'operatore `sizeof` viene applicato a una matrice, restituisce il numero totale di byte della matrice, non la dimensione del puntatore rappresentato dall'identificatore della matrice. Per ottenere la dimensione del puntatore rappresentato dall'identificatore della matrice, passarlo come parametro a una funzione che usa `sizeof`. Ad esempio:  
+ Quando la **sizeof** operatore viene applicato a un oggetto di tipo **char**, restituisce 1. Quando la **sizeof** operatore viene applicato a una matrice, restituisce il numero totale di byte della matrice, non la dimensione del puntatore rappresentato dall'identificatore della matrice. Per ottenere le dimensioni del puntatore rappresentato dall'identificatore della matrice, passarlo come parametro a una funzione che usa **sizeof**. Ad esempio:  
   
 ## <a name="example"></a>Esempio  
   
-```  
+```cpp 
 #include <iostream>  
 using namespace std;  
   
@@ -72,25 +73,25 @@ int main()
   
 ## <a name="sample-output"></a>Esempio di output  
   
-```  
+```Output  
 The size of a char is: 1  
 The length of Hello, world! is: 14  
 The size of the pointer is 4  
 ```  
   
- Quando l'operatore `sizeof` viene applicato a un tipo `class`, `struct` o `union`, il risultato è il numero di byte in un oggetto di tale tipo, più la spaziatura interna aggiunta per allineare i membri ai confini di parola. Il risultato non corrisponde necessariamente alla dimensione calcolata sommando i requisiti di archiviazione dei singoli membri. Il [/Zp](../build/reference/zp-struct-member-alignment.md) l'opzione del compilatore e [pack](../preprocessor/pack.md) pragma influisce sui limiti di allineamento per i membri.  
+ Quando il **sizeof** operatore viene applicato a un **classe**, **struct**, oppure **unione** tipo, il risultato è il numero di byte in un oggetto di cui tipo, oltre a qualsiasi spaziatura interna aggiunta per allineare i membri ai confini di parola. Il risultato non corrisponde necessariamente alla dimensione calcolata sommando i requisiti di archiviazione dei singoli membri. Il [/Zp](../build/reference/zp-struct-member-alignment.md) l'opzione del compilatore e il [pack](../preprocessor/pack.md) pragma influiscono sui limiti di allineamento per i membri.  
   
- L'operatore `sizeof` non restituisce mai 0, neanche per una classe vuota.  
+ Il **sizeof** operatore non restituisce mai 0, anche per una classe vuota.  
   
- L'operatore `sizeof` non può essere usato con gli operandi seguenti:  
+ Il **sizeof** operatore non può essere usato con gli operandi seguenti:  
   
--   Funzioni. `sizeof` può tuttavia essere applicato ai puntatori a funzioni.  
+-   Funzioni. (Tuttavia **sizeof** può essere applicato ai puntatori a funzioni.)  
   
 -   Campi di bit.  
   
 -   Classi non definite.  
   
--   Tipo `void`.  
+-   Il tipo **void**.  
   
 -   Matrici allocate in modo dinamico.  
   
@@ -100,13 +101,13 @@ The size of the pointer is 4
   
 -   Nomi tra parentesi di tipi incompleti.  
   
- Quando l'operatore `sizeof` viene applicato a un riferimento, il risultato corrisponde a `sizeof` applicato all'oggetto stesso.  
+ Quando la **sizeof** operatore viene applicato a un riferimento, il risultato è lo stesso come se **sizeof** applicato all'oggetto stesso.  
   
- Se una matrice non dimensionata è l'ultimo elemento di una struttura, l'operatore `sizeof` restituisce le dimensioni della struttura senza la matrice.  
+ Se una matrice non dimensionata è l'ultimo elemento di una struttura, il **sizeof** operatore restituisce le dimensioni della struttura senza la matrice.  
   
- L'operatore `sizeof` viene spesso usato per calcolare il numero di elementi di una matrice con un'espressione in formato:  
+ Il **sizeof** operatore viene spesso usato per calcolare il numero di elementi in una matrice usando un'espressione nel formato:  
   
-```  
+```cpp 
 sizeof array / sizeof array[0]  
 ```  
   

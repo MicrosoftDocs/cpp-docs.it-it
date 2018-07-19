@@ -1,5 +1,5 @@
 ---
-title: grammatica based | Documenti Microsoft
+title: grammatica based | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,21 +14,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 20e1c14cd7add01f8583c24541987b2980da794a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fad00244be53a2eebe4a02b99c6368333f3daf23
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32409537"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37939364"
 ---
 # <a name="based-grammar"></a>Grammatica __based
 ## <a name="microsoft-specific"></a>Sezione specifica Microsoft  
  L'indirizzamento di base è utile nei casi in cui si necessita di un controllo preciso del segmento in cui sono allocati gli oggetti (dati a base dinamica o statica).  
   
- L'unica forma accettabile di indirizzamento di base, nelle compilazioni a 32 bit e a 64 bit, è "basata su un puntatore" che definisce un tipo contenente uno spostamento a 32 o 64 bit verso una base di 32 o 64 bit o che si basa su `void`.  
+ L'unica forma di indirizzamento di base accettabile nelle compilazioni a 32 bit e a 64 bit è "basata su un puntatore" che definisce un tipo che contiene uno spostamento a 32 o 64 bit a una base 32 bit o 64 bit o basati sul **void**.  
   
 ## <a name="grammar"></a>Grammatica  
- *modificatore di intervallo in base*:  
+ *base-intervallo-modifier*:  
  **based (***base-expression***)**   
   
  *espressione di base*:  
@@ -37,7 +37,7 @@ ms.locfileid: "32409537"
  *variabile in base alla*:  
  *identifier*  
   
- *in base abstract-declarator*:  
+ *base-abstract-declarator*:  
  *abstract-declarator*  
   
  *tipo di base*:  

@@ -1,5 +1,5 @@
 ---
-title: Funzioni globali COM mappa | Documenti Microsoft
+title: Funzioni globali di mappa COM | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,20 +17,20 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 509479a923203acd80eaac1ef90aa64125d208c6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a23dc598d499071183cfcf7b0172611a693e569d
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32359879"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37884236"
 ---
-# <a name="com-map-global-functions"></a>Funzioni globali COM mappa
-Queste funzioni forniscono il supporto per la mappa COM **IUnknown** implementazioni.  
+# <a name="com-map-global-functions"></a>Funzioni globali di mappa COM
+Queste funzioni forniscono supporto per la mappa COM `IUnknown` implementazioni.  
   
 |||  
 |-|-|  
-|[AtlInternalQueryInterface](#atlinternalqueryinterface)|Delega al **IUnknown** di un oggetto non aggregato.|  
-|[InlineIsEqualIUnknown](#inlineisequaliunknown)|Genera un codice efficiente per il confronto tra interfacce con **IUnknown**.|  
+|[AtlInternalQueryInterface](#atlinternalqueryinterface)|Delega la `IUnknown` di un oggetto non aggregato.|  
+|[InlineIsEqualIUnknown](#inlineisequaliunknown)|Genera codice efficace per il confronto di interfacce con `IUnknown`.|  
 
   
 ## <a name="requirements"></a>Requisiti  
@@ -48,29 +48,29 @@ HRESULT AtlInternalQueryInterface(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `pThis`  
+ *pThis*  
  [in] Un puntatore all'oggetto che contiene la mappa COM di interfacce esposte a `QueryInterface`.  
   
- `pEntries`  
- [in] Matrice di **_ATL_INTMAP_ENTRY** strutture che accedono a una mappa delle interfacce disponibili.  
+ *pEntries*  
+ [in] Matrice di `_ATL_INTMAP_ENTRY` strutture che accedono a una mappa delle interfacce disponibili.  
   
- `iid`  
+ *IID*  
  [in] Il GUID dell'interfaccia richiesto.  
   
- `ppvObject`  
- [out] Un puntatore a puntatore a interfaccia specificato `iid`, o **NULL** se l'interfaccia non viene trovato.  
+ *ppvObject*  
+ [out] Un puntatore a puntatore a interfaccia specificato nella *iid*, oppure NULL se l'interfaccia non viene trovato.  
   
 ### <a name="return-value"></a>Valore restituito  
- Uno dei valori HRESULT standard.  
+ Uno dei valori di HRESULT standard.  
   
 ### <a name="remarks"></a>Note  
- `AtlInternalQueryInterface` gestisce solo le interfacce nella tabella di mappe COM. Se l'oggetto è aggregato, `AtlInternalQueryInterface` non delegare unknown esterno. È possibile immettere le interfacce nella tabella di mappe COM con la macro [COM_INTERFACE_ENTRY](com-interface-entry-macros.md#com_interface_entry) o una delle relative varianti.  
+ `AtlInternalQueryInterface` gestisce solo le interfacce nella tabella di mappe COM. Se l'oggetto è aggregato, `AtlInternalQueryInterface` non delegare a unknown esterno. È possibile inserire le interfacce nella tabella di mappe COM con la macro [COM_INTERFACE_ENTRY](com-interface-entry-macros.md#com_interface_entry) o una delle relative varianti.  
   
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_ATL_Windowing#94](../../atl/codesnippet/cpp/com-map-global-functions_1.cpp)]  
   
 ##  <a name="inlineisequaliunknown"></a>  InlineIsEqualIUnknown  
- Chiamare questa funzione per il caso speciale di test per **IUnknown**.  
+ Chiamare questa funzione, per il caso speciale di test per `IUnknown`.  
   
 ```
 BOOL InlineIsEqualUnknown(REFGUID rguid1);
@@ -78,7 +78,7 @@ BOOL InlineIsEqualUnknown(REFGUID rguid1);
   
 ### <a name="parameters"></a>Parametri  
  *rguid1*  
- [in] Il GUID da confrontare con **IID_IUnknown**.  
+ [in] Il GUID da confrontare con `IID_IUnknown`.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Funzioni](../../atl/reference/atl-functions.md)   

@@ -1,5 +1,5 @@
 ---
-title: _com_ptr_t::Release | Documenti Microsoft
+title: _com_ptr_t::Release | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,17 +17,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9bf83b3f6ece4e8422f1ba8dbc5d1448da6bf0c7
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7a8a734eae486ca5e88009301b13d71b21473d9f
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32409644"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37939256"
 ---
 # <a name="comptrtrelease"></a>_com_ptr_t::Release
 **Sezione specifica Microsoft**  
   
- Chiamate di **versione** funzione membro di **IUnknown** sul puntatore a interfaccia incapsulato.  
+ Chiama il `Release` funzione membro di `IUnknown` sul puntatore a interfaccia incapsulato.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -38,7 +38,7 @@ void Release( );
 ```  
   
 ## <a name="remarks"></a>Note  
- Chiamate `IUnknown::Release` sul puntatore a interfaccia incapsulato, che genera un `E_POINTER` errore se questo puntatore a interfaccia **NULL**.  
+ Le chiamate `IUnknown::Release` sul puntatore a interfaccia incapsulato, restituendo un errore E_POINTER se questo puntatore a interfaccia è NULL.  
   
  **Fine sezione specifica Microsoft**  
   

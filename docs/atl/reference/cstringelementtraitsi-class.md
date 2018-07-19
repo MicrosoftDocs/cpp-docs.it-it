@@ -1,5 +1,5 @@
 ---
-title: Classe CStringElementTraitsI | Documenti Microsoft
+title: Classe CStringElementTraitsI | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,15 +22,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1544a2fec1c4567c301eb2c051f7455c8ca393c2
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d523c882754a69239ebbbfad1adcb0e91c0c4ca6
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32362105"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37879888"
 ---
 # <a name="cstringelementtraitsi-class"></a>Classe CStringElementTraitsI
-Questa classe fornisce funzioni statiche relative alle stringhe archiviate in oggetti di classe di raccolta. È simile a [CStringElementTraits](../../atl/reference/cstringelementtraits-class.md), ma consente di eseguire confronti tra maiuscole e minuscole.  
+Questa classe fornisce funzioni statiche relative alle stringhe negli oggetti di classe di raccolta. È simile a [CStringElementTraits](../../atl/reference/cstringelementtraits-class.md), ma esegue i confronti tra maiuscole e minuscole.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -40,7 +40,7 @@ class CStringElementTraitsI : public CElementTraitsBase<T>
 ```  
   
 #### <a name="parameters"></a>Parametri  
- `T`  
+ *T*  
  Il tipo di dati da archiviare nella raccolta.  
   
 ## <a name="members"></a>Membri  
@@ -50,7 +50,7 @@ class CStringElementTraitsI : public CElementTraitsBase<T>
 |Nome|Descrizione|  
 |----------|-----------------|  
 |[CStringElementTraitsI::INARGTYPE](#inargtype)|Il tipo di dati da utilizzare per l'aggiunta di elementi per l'oggetto di classe di raccolta.|  
-|[CStringElementTraitsI::OUTARGTYPE](#outargtype)|Il tipo di dati da utilizzare per recuperare gli elementi dall'oggetto della classe di raccolta.|  
+|[CStringElementTraitsI::OUTARGTYPE](#outargtype)|Il tipo di dati da utilizzare per recuperare gli elementi dall'oggetto di classe della raccolta.|  
   
 ### <a name="public-methods"></a>Metodi pubblici  
   
@@ -58,12 +58,12 @@ class CStringElementTraitsI : public CElementTraitsBase<T>
 |----------|-----------------|  
 |[CStringElementTraitsI::CompareElements](#compareelements)|Chiamare questa funzione statica per confrontare due elementi della stringa per verificarne l'uguaglianza, ignorando tra maiuscole e minuscole.|  
 |[CStringElementTraitsI::CompareElementsOrdered](#compareelementsordered)|Chiamare questa funzione statica per confrontare due elementi della stringa, ignorando tra maiuscole e minuscole.|  
-|[CStringElementTraitsI::Hash](#hash)|Chiamare questa funzione statica per calcolare un valore hash per l'elemento della stringa specificata.|  
+|[CStringElementTraitsI::Hash](#hash)|Chiamare questa funzione statica per calcolare un valore hash per l'elemento di stringa specificata.|  
   
 ## <a name="remarks"></a>Note  
- Questa classe fornisce funzioni statiche per il confronto di stringhe e per la creazione di un valore hash. Queste funzioni sono utili quando si utilizza una classe di raccolta per archiviare i dati basati su stringa. Utilizzare [CStringRefElementTraits](../../atl/reference/cstringrefelementtraits-class.md) quando gli oggetti stringa devono con trattata come riferimenti.  
+ Questa classe fornisce funzioni statiche per il confronto di stringhe e per la creazione di un valore hash. Queste funzioni sono utili quando si usa una classe di raccolta per archiviare i dati basati su stringa. Uso [CStringRefElementTraits](../../atl/reference/cstringrefelementtraits-class.md) quando gli oggetti stringa devono essere con affrontati come riferimenti.  
   
- Per ulteriori informazioni, vedere [classi Collection ATL](../../atl/atl-collection-classes.md).  
+ Per altre informazioni, vedere [classi Collection ATL](../../atl/atl-collection-classes.md).  
   
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  [CElementTraitsBase](../../atl/reference/celementtraitsbase-class.md)  
@@ -81,17 +81,17 @@ static bool CompareElements(INARGTYPE str1, INARGTYPE str2) throw();
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `str1`  
+ *str1*  
  Il primo elemento di stringa.  
   
- `str2`  
+ *str2*  
  Il secondo elemento di stringa.  
   
 ### <a name="return-value"></a>Valore restituito  
- Restituisce true se gli elementi sono uguali, false in caso contrario.  
+ Restituisce true se gli elementi sono uguali e false in caso contrario.  
   
 ### <a name="remarks"></a>Note  
- I confronti viene fatta distinzione tra maiuscole e minuscole.  
+ I confronti sono maiuscole e minuscole.  
   
 ##  <a name="compareelementsordered"></a>  CStringElementTraitsI::CompareElementsOrdered  
  Chiamare questa funzione statica per confrontare due elementi della stringa, ignorando tra maiuscole e minuscole.  
@@ -101,29 +101,29 @@ static int CompareElementsOrdered(INARGTYPE str1, INARGTYPE str2) throw();
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `str1`  
+ *str1*  
  Il primo elemento di stringa.  
   
- `str2`  
+ *str2*  
  Il secondo elemento di stringa.  
   
 ### <a name="return-value"></a>Valore restituito  
- Zero se le stringhe sono identiche, < 0 se `str1` è minore di `str2`, o > 0 se `str1` è maggiore di `str2`. Il [CStringT::Compare](../../atl-mfc-shared/reference/cstringt-class.md#compare) metodo viene utilizzato per eseguire i confronti.  
+ Zero se le stringhe sono identiche, < 0 se *str1* è minore di *str2*, o > 0 se *str1* è maggiore di quella *str2*. Il [CStringT::Compare](../../atl-mfc-shared/reference/cstringt-class.md#compare) metodo viene utilizzato per eseguire i confronti.  
 
   
 ### <a name="remarks"></a>Note  
- I confronti viene fatta distinzione tra maiuscole e minuscole.  
+ I confronti sono maiuscole e minuscole.  
   
 ##  <a name="hash"></a>  CStringElementTraitsI::Hash  
- Chiamare questa funzione statica per calcolare un valore hash per l'elemento della stringa specificata.  
+ Chiamare questa funzione statica per calcolare un valore hash per l'elemento di stringa specificata.  
   
 ```
 static ULONG Hash(INARGTYPE str) throw();
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `str`  
- L'elemento della stringa.  
+ *str*  
+ L'elemento di stringa.  
   
 ### <a name="return-value"></a>Valore restituito  
  Restituisce un valore hash, calcolato usando il contenuto della stringa.  
@@ -136,7 +136,7 @@ typedef T::PCXSTR INARGTYPE;
 ```  
   
 ##  <a name="outargtype"></a>  CStringElementTraitsI::OUTARGTYPE  
- Il tipo di dati da utilizzare per recuperare gli elementi dall'oggetto della classe di raccolta.  
+ Il tipo di dati da utilizzare per recuperare gli elementi dall'oggetto di classe della raccolta.  
   
 ```
 typedef T& OUTARGTYPE;
@@ -144,5 +144,5 @@ typedef T& OUTARGTYPE;
   
 ## <a name="see-also"></a>Vedere anche  
  [Classe CElementTraitsBase](../../atl/reference/celementtraitsbase-class.md)   
- [Cenni preliminari sulla classe](../../atl/atl-class-overview.md)   
+ [Panoramica della classe](../../atl/atl-class-overview.md)   
  [Classe CStringElementTraits](../../atl/reference/cstringelementtraits-class.md)

@@ -1,5 +1,5 @@
 ---
-title: Implementazione di un gestore di stringa personalizzato (metodo di base) | Documenti Microsoft
+title: Implementazione di una gestione stringhe personalizzata (metodo di base) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,17 +14,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 259f9533747b266f0be0a782cdc94c98f167d2d2
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c393489b8b4d0353ae37a21132f66e0618b3b794
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32355725"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37884584"
 ---
-# <a name="implementation-of-a-custom-string-manager-basic-method"></a>Implementazione di un gestore di stringa personalizzato (metodo di base)
-Il modo più semplice per personalizzare lo schema di allocazione di memoria per i dati di stringa sono possibile utilizzare ATL fornita dal **CAtlStringMgr** classe ma fornire la propria memoria routine di allocazione. Il costruttore per **CAtlStringMgr** accetta un solo parametro: un puntatore a un `IAtlMemMgr` oggetto. `IAtlMemMgr` è una classe basa astratta che fornisce un'interfaccia generica per un heap. Utilizzando il `IAtlMemMgr` interfaccia, il **CAtlStringMgr** alloca rialloca e libera la memoria utilizzata per archiviare i dati di tipo stringa. È possibile implementare il `IAtlMemMgr` interfaccia manualmente oppure utilizzare una delle cinque classi di gestione di memoria di ATL. I gestori di memoria di ATL eseguito semplicemente il wrapping di funzioni di allocazione di memoria esistenti:  
+# <a name="implementation-of-a-custom-string-manager-basic-method"></a>Implementazione di una gestione stringhe personalizzata (metodo di base)
+Il modo più semplice per personalizzare lo schema di allocazione di memoria per i dati di stringa consiste nell'usare ATL fornito dal `CAtlStringMgr` classe ma forniscono routine di allocazione della propria memoria. Il costruttore per `CAtlStringMgr` accetta un singolo parametro: un puntatore a un `IAtlMemMgr` oggetto. `IAtlMemMgr` è una classe base astratta che fornisce un'interfaccia generica per un heap. Usando il `IAtlMemMgr` interfaccia, il `CAtlStringMgr` consente di allocare, riallocare e libera la memoria usata per archiviare dati di tipo stringa. È possibile implementare il `IAtlMemMgr` interfaccia manualmente o usare una delle classi di gestione della memoria disponibili ATL cinque. I responsabili di memoria di ATL eseguono semplicemente il wrapping di funzionalità di allocazione della memoria esistente:  
   
--   [Su CCRTHeap](../atl/reference/ccrtheap-class.md) esegue il wrapping di funzioni di heap CRT standard ([malloc](../c-runtime-library/reference/malloc.md), [libero](../c-runtime-library/reference/free.md), e [realloc](../c-runtime-library/reference/realloc.md))  
+-   [Su CCRTHeap](../atl/reference/ccrtheap-class.md) esegue il wrapping di funzioni di heap CRT standard ([malloc](../c-runtime-library/reference/malloc.md), [gratuito](../c-runtime-library/reference/free.md), e [realloc](../c-runtime-library/reference/realloc.md))  
   
 -   [CWin32Heap](../atl/reference/cwin32heap-class.md) esegue il wrapping di gestire un heap Win32, usando [HeapAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366597), [HeapFree](http://msdn.microsoft.com/library/windows/desktop/aa366701), e [HeapRealloc](http://msdn.microsoft.com/library/windows/desktop/aa366704)  
   
@@ -38,7 +38,7 @@ Il modo più semplice per personalizzare lo schema di allocazione di memoria per
   
  [!code-cpp[NVC_ATLMFC_Utilities#180](../atl-mfc-shared/codesnippet/cpp/implementation-of-a-custom-string-manager-basic-method_1.cpp)]  
   
- Utilizzare questo gestore di stringhe privato per gestire la memoria per un `CString` variabile, passare un puntatore al gestore come parametro per il `CString` costruttore della variabile:  
+ Usare questo gestore di stringa privata per gestire la memoria per un `CString` variabile, passare un puntatore al gestore come parametro per il `CString` costruttore della variabile:  
   
  [!code-cpp[NVC_ATLMFC_Utilities#181](../atl-mfc-shared/codesnippet/cpp/implementation-of-a-custom-string-manager-basic-method_2.cpp)]  
   

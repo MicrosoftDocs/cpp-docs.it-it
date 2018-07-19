@@ -1,5 +1,5 @@
 ---
-title: Interfaccia IDocHostUIHandlerDispatch | Documenti Microsoft
+title: Interfaccia IDocHostUIHandlerDispatch | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,18 +17,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 07d6d861bfa4a41d7d9ee6697dd72cba0da2ceda
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 936d9b30f18f5ef84c68c55a1607cfcd88d45525
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32364245"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37884613"
 ---
 # <a name="idochostuihandlerdispatch-interface"></a>Interfaccia IDocHostUIHandlerDispatch
-Interfaccia per l'analisi di HTML Microsoft e il motore di rendering.  
+Interfaccia per il motore di rendering e l'analisi HTML di Microsoft.  
   
 > [!IMPORTANT]
->  Questa classe e i relativi membri non possono essere utilizzati nelle applicazioni eseguite in Windows Runtime.  
+>  Questa classe e i relativi membri non possono essere utilizzati nelle applicazioni eseguite nel Runtime di Windows.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -41,33 +41,33 @@ interface IDocHostUIHandlerDispatch : IDispatch
 ### <a name="public-methods"></a>Metodi pubblici  
   
 > [!NOTE]
->  I collegamenti nella tabella riportata di seguito sono per gli argomenti di riferimento per i membri di SDK INet il [IDocUIHostHandler](https://msdn.microsoft.com/library/aa753260.aspx) interfaccia. `IDocHostUIHandlerDispatch` ha la stessa funzionalità **IDocUIHostHandler**, con la differenza è che `IDocHostUIHandlerDispatch` è un'interfaccia dispatch mentre **IDocUIHostHandler** è un'interfaccia personalizzata.  
+>  I collegamenti nella tabella seguente sono per gli argomenti di riferimento INet SDK per i membri del [IDocUIHostHandler](https://msdn.microsoft.com/library/aa753260.aspx) interfaccia. `IDocHostUIHandlerDispatch` ha la stessa funzionalità `IDocUIHostHandler`, con la differenza è che `IDocHostUIHandlerDispatch` è un'interfaccia dispatch mentre `IDocUIHostHandler` è un'interfaccia personalizzata.  
   
 |||  
 |-|-|  
-|[EnableModeless](https://msdn.microsoft.com/library/aa753253.aspx)|Chiamato dall'implementazione MSHTML di [IOleInPlaceActiveObject::EnableModeless](http://msdn.microsoft.com/library/windows/desktop/ms680115). Chiamato anche quando MSHTML Visualizza un'interfaccia utente modale.|  
-|[FilterDataObject](https://msdn.microsoft.com/library/aa753254.aspx)|Chiamata eseguita sull'host da MSHTML per consentire all'host di sostituire l'oggetto dati MSHTML.|  
+|[EnableModeless](https://msdn.microsoft.com/library/aa753253.aspx)|Chiamato da un'implementazione MSHTML di [IOleInPlaceActiveObject::EnableModeless](http://msdn.microsoft.com/library/windows/desktop/ms680115). Chiamato anche quando MSHTML Visualizza l'interfaccia utente modale.|  
+|[FilterDataObject](https://msdn.microsoft.com/library/aa753254.aspx)|Chiamato sull'host da MSHTML per consentire all'host di sostituire l'oggetto dati MSHTML.|  
 |[GetDropTarget](https://msdn.microsoft.com/library/aa753255.aspx)|Chiamata eseguita dal MSHTML quando utilizzato come destinazione di trascinamento per consentire all'host di fornire un'alternativa [IDropTarget](http://msdn.microsoft.com/library/windows/desktop/ms679679).|  
-|[GetExternal](https://msdn.microsoft.com/library/aa753256.aspx)|Chiamato da MSHTML per ottenere l'interfaccia IDispatch dell'host.|  
+|[GetExternal](https://msdn.microsoft.com/library/aa753256.aspx)|Chiamata eseguita dal MSHTML per ottenere l'interfaccia IDispatch dell'host.|  
 |[GetHostInfo](https://msdn.microsoft.com/library/aa753257.aspx)|Recupera le funzionalità dell'interfaccia utente dell'host MSHTML.|  
 |[GetOptionKeyPath](https://msdn.microsoft.com/library/aa753258.aspx)|Restituisce la chiave del Registro di sistema in cui MSHTML archivia le preferenze dell'utente.|  
 |[HideUI](https://msdn.microsoft.com/library/aa753259.aspx)|Chiamata eseguita quando MSHTML rimuove i menu e barre degli strumenti.|  
-|[OnDocWindowActivate](https://msdn.microsoft.com/library/aa753261.aspx)|Chiamato dall'implementazione MSHTML di [OnDocWindowActivate](http://msdn.microsoft.com/library/windows/desktop/ms687281).|  
-|[OnFrameWindowActivate](https://msdn.microsoft.com/library/aa753262.aspx)|Chiamato dall'implementazione MSHTML di [IOleInPlaceActiveObject:: OnFrameWindowActivate](http://msdn.microsoft.com/library/windows/desktop/ms683969).|  
-|[ResizeBorder](https://msdn.microsoft.com/library/aa753263.aspx)|Chiamato dall'implementazione MSHTML di [IOleInPlaceActiveObject:: ResizeBorder](http://msdn.microsoft.com/library/windows/desktop/ms680053).|  
+|[OnDocWindowActivate](https://msdn.microsoft.com/library/aa753261.aspx)|Chiamato da un'implementazione MSHTML di [OnDocWindowActivate](http://msdn.microsoft.com/library/windows/desktop/ms687281).|  
+|[OnFrameWindowActivate](https://msdn.microsoft.com/library/aa753262.aspx)|Chiamato da un'implementazione MSHTML di [IOleInPlaceActiveObject:: OnFrameWindowActivate](http://msdn.microsoft.com/library/windows/desktop/ms683969).|  
+|[ResizeBorder](https://msdn.microsoft.com/library/aa753263.aspx)|Chiamato da un'implementazione MSHTML di [IOleInPlaceActiveObject:: ResizeBorder](http://msdn.microsoft.com/library/windows/desktop/ms680053).|  
 |[ShowContextMenu](https://msdn.microsoft.com/library/aa753264.aspx)|Chiamato da MSHTML per visualizzare un menu di scelta rapida.|  
-|[ShowUI](https://msdn.microsoft.com/library/aa753265.aspx)|Consente all'host di sostituire le barre degli strumenti e menu MSHTML.|  
-|[TranslateAccelerator](https://msdn.microsoft.com/library/aa753266.aspx)|Chiamato da MSHTML quando [IOleInPlaceActiveObject:: TranslateAccelerator](http://msdn.microsoft.com/library/windows/desktop/ms693360) o [IOleControlSite:: TranslateAccelerator](http://msdn.microsoft.com/library/windows/desktop/ms693756) viene chiamato.|  
-|[TranslateUrl](https://msdn.microsoft.com/library/aa753267.aspx)|Chiamato da MSHTML per consentire all'host la possibilità di modificare l'URL da caricare.|  
+|[ShowUI](https://msdn.microsoft.com/library/aa753265.aspx)|Consente all'host di sostituire MSHTML menu e barre degli strumenti.|  
+|[TranslateAccelerator](https://msdn.microsoft.com/library/aa753266.aspx)|Chiamato da MSHTML quando [IOleInPlaceActiveObject:: TranslateAccelerator](http://msdn.microsoft.com/library/windows/desktop/ms693360) oppure [IOleControlSite:: TranslateAccelerator](http://msdn.microsoft.com/library/windows/desktop/ms693756) viene chiamato.|  
+|[TranslateUrl](https://msdn.microsoft.com/library/aa753267.aspx)|Chiamata eseguita dal MSHTML per consentire all'host la possibilità di modificare l'URL da caricare.|  
 |[UpdateUI](https://msdn.microsoft.com/library/aa753268.aspx)|Notifica all'host che lo stato del comando è stato modificato.|  
   
 ## <a name="remarks"></a>Note  
- Un host è possibile sostituire il menu, barre degli strumenti e menu di scelta rapida utilizzato dall'analisi Microsoft HTML e il motore di rendering (MSHTML) implementando questa interfaccia.  
+ Un host può sostituire il menu, barre degli strumenti e menu di scelta rapida utilizzati per il motore di rendering (MSHTML) e l'analisi HTML Microsoft implementando questa interfaccia.  
   
 ## <a name="requirements"></a>Requisiti  
  La definizione di questa interfaccia è disponibile come file IDL o C++, come illustrato di seguito.  
   
-|Tipo di definizione|File|  
+|Tipo definizione|File|  
 |---------------------|----------|  
 |IDL|ATLIFace.idl|  
 |C++|ATLIFace.h (incluso anche in atlbase. H)|  

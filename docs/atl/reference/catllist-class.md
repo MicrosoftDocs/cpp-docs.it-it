@@ -1,5 +1,5 @@
 ---
-title: Classe CAtlList | Documenti Microsoft
+title: Classe CAtlList | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -47,15 +47,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4bfe961ef3ac02a0ed068b8cc2b74f2a6cce22ae
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: aec15ab7750963947aace63819aad34240b3561d
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32366432"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37885668"
 ---
 # <a name="catllist-class"></a>Classe CAtlList
-Questa classe fornisce metodi per la creazione e gestione di un oggetto elenco.  
+Questa classe fornisce metodi per creare e gestire un oggetto elenco.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -65,11 +65,11 @@ class CAtlList
 ```  
   
 #### <a name="parameters"></a>Parametri  
- `E`  
+ *E*  
  Tipo dell'elemento.  
   
- `ETraits`  
- Il codice utilizzato per copiare o spostare elementi. Vedere [CElementTraits classe](../../atl/reference/celementtraits-class.md) per altri dettagli.  
+ *ETraits*  
+ Il codice usato per copiare o spostare gli elementi. Visualizzare [classe CElementTraits](../../atl/reference/celementtraits-class.md) per altri dettagli.  
   
 ## <a name="members"></a>Membri  
   
@@ -90,11 +90,11 @@ class CAtlList
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[CAtlList::AddHead](#addhead)|Chiamare questo metodo per aggiungere un elemento head dell'elenco.|  
+|[CAtlList::AddHead](#addhead)|Chiamare questo metodo per aggiungere un elemento all'inizio dell'elenco.|  
 |[CAtlList::AddHeadList](#addheadlist)|Chiamare questo metodo per aggiungere un elenco esistente all'inizio dell'elenco.|  
-|[CAtlList::AddTail](#addtail)|Chiamare questo metodo per aggiungere un elemento alla fine dell'elenco.|  
-|[CAtlList::AddTailList](#addtaillist)|Chiamare questo metodo per aggiungere un elenco esistente alla fine dell'elenco.|  
-|[CAtlList::AssertValid](#assertvalid)|Chiamare questo metodo per verificare che l'elenco è valido.|  
+|[CAtlList::AddTail](#addtail)|Chiamare questo metodo per aggiungere un elemento alla fine di questo elenco.|  
+|[CAtlList::AddTailList](#addtaillist)|Chiamare questo metodo per aggiungere un elenco esistente alla fine di questo elenco.|  
+|[CAtlList::AssertValid](#assertvalid)|Chiamare questo metodo per verificare che l'elenco sia valido.|  
 |[CAtlList::Find](#find)|Chiamare questo metodo per eseguire ricerche nell'elenco per l'elemento specificato.|  
 |[CAtlList::FindIndex](#findindex)|Chiamare questo metodo per ottenere la posizione di un elemento, dato un valore di indice.|  
 |[CAtlList::GetAt](#getat)|Chiamare questo metodo per restituire l'elemento in una posizione specificata nell'elenco.|  
@@ -104,11 +104,11 @@ class CAtlList
 |[CAtlList::GetNext](#getnext)|Chiamare questo metodo per restituire l'elemento successivo nell'elenco.|  
 |[CAtlList::GetPrev](#getprev)|Chiamare questo metodo per restituire l'elemento precedente nell'elenco.|  
 |[CAtlList::GetTail](#gettail)|Chiamare questo metodo per restituire l'elemento in corrispondenza della parte finale dell'elenco.|  
-|[CAtlList::GetTailPosition](#gettailposition)|Chiamare questo metodo per ottenere la posizione di fine dell'elenco.|  
-|[CAtlList::InsertAfter](#insertafter)|Chiamare questo metodo per inserire un nuovo elemento nell'elenco alla posizione specificata.|  
+|[CAtlList::GetTailPosition](#gettailposition)|Chiamare questo metodo per ottenere la posizione della parte finale dell'elenco.|  
+|[CAtlList::InsertAfter](#insertafter)|Chiamare questo metodo per inserire un nuovo elemento nell'elenco dopo la posizione specificata.|  
 |[CAtlList::InsertBefore](#insertbefore)|Chiamare questo metodo per inserire un nuovo elemento nell'elenco prima della posizione specificata.|  
 |[CAtlList::IsEmpty](#isempty)|Chiamare questo metodo per determinare se l'elenco è vuoto.|  
-|[CAtlList::MoveToHead](#movetohead)|Chiamare questo metodo per spostare l'elemento specificato all'inizio dell'elenco.|  
+|[CAtlList::MoveToHead](#movetohead)|Chiamare questo metodo per spostare l'elemento specificato nell'intestazione dell'elenco.|  
 |[CAtlList::MoveToTail](#movetotail)|Chiamare questo metodo per spostare l'elemento specificato alla fine dell'elenco.|  
 |[CAtlList::RemoveAll](#removeall)|Chiamare questo metodo per rimuovere tutti gli elementi dall'elenco.|  
 |[CAtlList::RemoveAt](#removeat)|Chiamare questo metodo per rimuovere un singolo elemento dall'elenco.|  
@@ -117,20 +117,20 @@ class CAtlList
 |[CAtlList::RemoveTail](#removetail)|Chiamare questo metodo per rimuovere l'elemento in corrispondenza della parte finale dell'elenco.|  
 |[CAtlList::RemoveTailNoReturn](#removetailnoreturn)|Chiamare questo metodo per rimuovere l'elemento in corrispondenza della parte finale dell'elenco senza restituire alcun valore.|  
 |[CAtlList::SetAt](#setat)|Chiamare questo metodo per impostare il valore dell'elemento in una determinata posizione nell'elenco.|  
-|[CAtlList::SwapElements](#swapelements)|Chiamare questo metodo per eseguire lo scambio di elementi nell'elenco.|  
+|[CAtlList::SwapElements](#swapelements)|Chiamare questo metodo per scambiare gli elementi nell'elenco.|  
   
 ## <a name="remarks"></a>Note  
- Il `CAtlList` supporta elenchi ordinati di oggetti non univoci accessibili in sequenza o in base al valore di classe. `CAtlList` gli elenchi si comportano come gli elenchi collegati doppiamente. Ogni elenco contiene un elemento head e una coda e i nuovi elementi (o gli elenchi in alcuni casi) possono essere aggiunto a delle estremità dell'elenco o inseriti prima o dopo elementi specifici.  
+ Il `CAtlList` supporta elenchi ordinati di oggetti non univoci accessibili in sequenza o in base al valore di classe. `CAtlList` gli elenchi si comportano come gli elenchi collegati doppiamente. Ogni elenco contiene un elemento head e da una coda e nuovi elementi (o gli elenchi in alcuni casi) possono essere aggiunto a un'estremità dell'elenco, o inseriti prima o dopo elementi specifici.  
   
- La maggior parte del `CAtlList` metodi utilizzare di un valore di posizione. Questo valore è utilizzato dai metodi per fare riferimento alla posizione di memoria effettivo in cui gli elementi vengono archiviati e non di calcolo o stimati direttamente. Se è necessario l'accesso di *n*elemento th nell'elenco, il metodo [CAtlList::FindIndex](#findindex) restituirà il valore di posizione corrispondente per un indice specificato. I metodi [CAtlList::GetNext](#getnext) e [CAtlList::GetPrev](#getprev) può essere utilizzato per scorrere gli oggetti nell'elenco.  
+ La maggior parte del `CAtlList` dai metodi usare di un valore di posizione. Questo valore viene utilizzato dai metodi per fare riferimento alla posizione di memoria effettiva in cui gli elementi vengono archiviati e non di calcolo o stimati direttamente. Se è necessario per l'accesso di *n*elemento nell'elenco, il metodo [CAtlList::FindIndex](#findindex) restituirà il valore di posizione corrispondente per un determinato indice. I metodi [CAtlList::GetNext](#getnext) e [CAtlList::GetPrev](#getprev) può essere utilizzato per scorrere gli oggetti nell'elenco.  
   
- Per ulteriori informazioni sulle classi di raccolta disponibili con ATL, vedere [classi Collection ATL](../../atl/atl-collection-classes.md).  
+ Per ulteriori informazioni riguardanti le classi di raccolte disponibili con ATL, vedere [classi Collection ATL](../../atl/atl-collection-classes.md).  
   
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** atlcoll. h  
   
 ##  <a name="addhead"></a>  CAtlList::AddHead  
- Chiamare questo metodo per aggiungere un elemento head dell'elenco.  
+ Chiamare questo metodo per aggiungere un elemento all'inizio dell'elenco.  
   
 ```
 POSITION AddHead();
@@ -138,14 +138,14 @@ POSITION AddHead(INARGTYPE element);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `element`  
+ *Elemento*  
  Il nuovo elemento.  
   
 ### <a name="return-value"></a>Valore restituito  
  Restituisce la posizione dell'elemento appena aggiunto.  
   
 ### <a name="remarks"></a>Note  
- Se viene utilizzata la prima versione, viene creato un elemento vuoto utilizzando il costruttore predefinito, anziché il costruttore di copia.  
+ Se viene utilizzata la prima versione, viene creato un elemento vuoto usando il relativo costruttore predefinito, anziché il relativo costruttore di copia.  
   
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_ATL_Utilities#13](../../atl/codesnippet/cpp/catllist-class_1.cpp)]  
@@ -158,17 +158,17 @@ void AddHeadList(const CAtlList<E, ETraits>* plNew);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `plNew`  
- Elenco da aggiungere.  
+ *plNew*  
+ L'elenco da aggiungere.  
   
 ### <a name="remarks"></a>Note  
- Nell'elenco a cui puntava `plNew` viene inserito all'inizio dell'elenco esistente. Nelle build di debug, un errore di asserzione si verificherà se `plNew` è uguale a NULL.  
+ Nell'elenco a cui punta *plNew* viene inserito all'inizio dell'elenco esistente. Nelle build di debug, un errore di asserzione si verificherà se *plNew* è uguale a NULL.  
   
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_ATL_Utilities#14](../../atl/codesnippet/cpp/catllist-class_2.cpp)]  
   
 ##  <a name="addtail"></a>  CAtlList::AddTail  
- Chiamare questo metodo per aggiungere un elemento alla fine dell'elenco.  
+ Chiamare questo metodo per aggiungere un elemento alla fine di questo elenco.  
   
 ```
 POSITION AddTail();
@@ -176,44 +176,44 @@ POSITION AddTail(INARGTYPE element);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `element`  
+ *Elemento*  
  Elemento da aggiungere.  
   
 ### <a name="return-value"></a>Valore restituito  
  Restituisce la posizione dell'elemento appena aggiunto.  
   
 ### <a name="remarks"></a>Note  
- Se viene utilizzata la prima versione, viene creato un elemento vuoto utilizzando il costruttore predefinito, anziché il costruttore di copia. L'elemento viene aggiunto alla fine dell'elenco e quindi ora diventa la parte finale. Questo metodo può essere utilizzato con un elenco vuoto.  
+ Se viene utilizzata la prima versione, viene creato un elemento vuoto usando il relativo costruttore predefinito, anziché il relativo costruttore di copia. L'elemento viene aggiunto alla fine dell'elenco e quindi, questo diventa la parte finale. Questo metodo può essere utilizzato con un elenco vuoto.  
   
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_ATL_Utilities#15](../../atl/codesnippet/cpp/catllist-class_3.cpp)]  
   
 ##  <a name="addtaillist"></a>  CAtlList::AddTailList  
- Chiamare questo metodo per aggiungere un elenco esistente alla fine dell'elenco.  
+ Chiamare questo metodo per aggiungere un elenco esistente alla fine di questo elenco.  
   
 ```
 void AddTailList(const CAtlList<E, ETraits>* plNew);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `plNew`  
- Elenco da aggiungere.  
+ *plNew*  
+ L'elenco da aggiungere.  
   
 ### <a name="remarks"></a>Note  
- Nell'elenco a cui puntava `plNew` viene inserito dopo l'ultimo elemento (se presenti) nell'oggetto elenco. L'ultimo elemento di `plNew` elenco diventa quindi la coda. Nelle build di debug, un errore di asserzione si verificherà se *plNew* è uguale a NULL.  
+ Nell'elenco a cui punta *plNew* viene inserito dopo l'ultimo elemento (se presente) nell'oggetto elenco. L'ultimo elemento di *plNew* elenco diventa quindi la parte finale. Nelle build di debug, un errore di asserzione si verificherà se *plNew* è uguale a NULL.  
   
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_ATL_Utilities#16](../../atl/codesnippet/cpp/catllist-class_4.cpp)]  
   
 ##  <a name="assertvalid"></a>  CAtlList::AssertValid  
- Chiamare questo metodo per verificare che l'elenco è valido.  
+ Chiamare questo metodo per verificare che l'elenco sia valido.  
   
 ```
 void AssertValid() const;
 ```  
   
 ### <a name="remarks"></a>Note  
- Nelle build di debug, si verificherà un errore di asserzione se l'oggetto elenco non è valido. Per essere valida, deve avere un elenco vuoto head sia della parte finale del riferimento su NULL e deve avere un elenco che non sia vuoto, head e chiusura che punta a indirizzi validi.  
+ Nelle build di debug, si verificherà un errore di asserzione se l'oggetto elenco non è valido. Per essere valida, deve avere un elenco vuoto head e tail puntano a NULL e deve avere un elenco non vuoto head e tail sta puntando a indirizzi validi.  
   
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_ATL_Utilities#17](../../atl/codesnippet/cpp/catllist-class_5.cpp)]  
@@ -226,11 +226,11 @@ CAtlList(UINT nBlockSize = 10) throw();
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `nBlockSize`  
+ *nBlockSize*  
  La dimensione del blocco.  
   
 ### <a name="remarks"></a>Note  
- Il costruttore per il `CAtlList` oggetto. La dimensione del blocco è una misura della quantità di memoria allocata quando è necessario un nuovo elemento. Blocchi di dimensioni maggiori di ridurre ulteriormente le chiamate alle routine di allocazione di memoria, ma usano più risorse.  
+ Il costruttore per la `CAtlList` oggetto. La dimensione del blocco è una misura della quantità di memoria allocata quando un nuovo elemento è obbligatorio. Blocchi di dimensioni maggiori riducono le chiamate alle routine di allocazione della memoria, ma usano più risorse.  
   
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_ATL_Utilities#18](../../atl/codesnippet/cpp/catllist-class_6.cpp)]  
@@ -243,7 +243,7 @@ CAtlList(UINT nBlockSize = 10) throw();
 ```  
   
 ### <a name="remarks"></a>Note  
- Libera tutte le risorse allocate, inclusa una chiamata a [CAtlList::RemoveAll](#removeall) per rimuovere tutti gli elementi dall'elenco.  
+ Libera tutte le risorse allocate, tra cui una chiamata a [CAtlList::RemoveAll](#removeall) per rimuovere tutti gli elementi dall'elenco.  
   
  Nelle build di debug, un errore di asserzione si verificherà se l'elenco contiene ancora alcuni elementi dopo la chiamata a `RemoveAll`.  
   
@@ -255,17 +255,17 @@ POSITION Find(INARGTYPE element, POSITION posStartAfter = NULL) const throw();
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `element`  
+ *Elemento*  
  L'elemento da trovare nell'elenco.  
   
- `posStartAfter`  
- La posizione iniziale per la ricerca. Se viene specificato alcun valore, la ricerca inizia con l'elemento head.  
+ *posStartAfter*  
+ Posizione iniziale per la ricerca. Se viene specificato alcun valore, la ricerca inizia con l'elemento head.  
   
 ### <a name="return-value"></a>Valore restituito  
- Restituisce il valore della posizione dell'elemento, se trovato, in caso contrario restituisce NULL.  
+ Restituisce il valore di posizione dell'elemento, se trovato, in caso contrario, restituisce NULL.  
   
 ### <a name="remarks"></a>Note  
- Nelle build di debug si verifica un errore di asserzione se l'oggetto elenco non è valido, oppure se il `posStartAfter` valore non compreso nell'intervallo.  
+ Nelle build di debug, si verifica un errore di asserzione se l'oggetto elenco non è valido o se il *posStartAfter* hodnota JE MIMO rozsah.  
   
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_ATL_Utilities#19](../../atl/codesnippet/cpp/catllist-class_7.cpp)]  
@@ -278,14 +278,14 @@ POSITION FindIndex(size_t iElement) const throw();
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `iElement`  
- Indice in base zero dell'elemento di elenco ' required.  
+ *iElement*  
+ Indice a base zero dell'elemento elenco ' required.  
   
 ### <a name="return-value"></a>Valore restituito  
- Restituisce il valore di posizione corrispondente, o NULL se `iElement` non compreso nell'intervallo.  
+ Restituisce il valore di posizione corrispondente oppure NULL se *iElement* è compreso nell'intervallo.  
   
 ### <a name="remarks"></a>Note  
- Questo metodo restituisce la posizione corrispondente a un valore di indice specificato, che consente l'accesso per il *n*elemento th nell'elenco.  
+ Questo metodo restituisce la posizione corrispondente a un valore di indice specificato, che consente l'accesso per il *n*elemento nell'elenco.  
   
  Nelle build di debug, si verificherà un errore di asserzione se l'oggetto elenco non è valido.  
   
@@ -301,21 +301,21 @@ const E& GetAt(POSITION pos) const throw();
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `pos`  
- Il valore della posizione specifica di un elemento specifico.  
+ *POS*  
+ Il valore di posizione che specifica un particolare elemento.  
   
 ### <a name="return-value"></a>Valore restituito  
- Un riferimento a, o copia di, l'elemento.  
+ Un riferimento a, o copia, dell'elemento.  
   
 ### <a name="remarks"></a>Note  
- Se l'elenco è **const**, `GetAt` restituisce una copia dell'elemento. In questo modo il metodo può essere utilizzato solo sul lato destro di un'istruzione di assegnazione e protegge l'elenco dalla modifica.  
+ Se l'elenco **const**, `GetAt` restituisce una copia dell'elemento. In questo modo il metodo può essere utilizzato solo sul lato destro di un'istruzione di assegnazione e protegge l'elenco da eventuali modifiche.  
   
- Se l'elenco non è **const**, `GetAt` restituisce un riferimento all'elemento. Ciò consente al metodo da utilizzare su entrambi i lati di un'istruzione di assegnazione e pertanto consente le voci dell'elenco da modificare.  
+ Se non è nell'elenco **const**, `GetAt` restituisce un riferimento all'elemento. Questo modo il metodo da utilizzare su entrambi i lati di un'istruzione di assegnazione e pertanto le voci dell'elenco da modificare.  
   
- Nelle build di debug, un errore di asserzione si verificherà se `pos` è uguale a NULL.  
+ Nelle build di debug, un errore di asserzione si verificherà se *pos* è uguale a NULL.  
   
 ### <a name="example"></a>Esempio  
- Per vedere l'esempio [CAtlList::FindIndex](#findindex).  
+ Vedere l'esempio relativo [CAtlList::FindIndex](#findindex).  
   
 ##  <a name="getcount"></a>  CAtlList::GetCount  
  Chiamare questo metodo per restituire il numero di oggetti nell'elenco.  
@@ -328,7 +328,7 @@ size_t GetCount() const throw();
  Restituisce il numero di elementi nell'elenco.  
   
 ### <a name="example"></a>Esempio  
- Per vedere l'esempio [CAtlList::Find](#find).  
+ Vedere l'esempio relativo [CAtlList::Find](#find).  
   
 ##  <a name="gethead"></a>  CAtlList::GetHead  
  Chiamare questo metodo per restituire l'elemento in corrispondenza dell'inizio dell'elenco.  
@@ -342,14 +342,14 @@ const E& GetHead() const throw();
  Restituisce un riferimento o una copia di, l'elemento in corrispondenza dell'inizio dell'elenco.  
   
 ### <a name="remarks"></a>Note  
- Se l'elenco è **const**, `GetHead` restituisce una copia dell'elemento in corrispondenza dell'inizio dell'elenco. In questo modo il metodo può essere utilizzato solo sul lato destro di un'istruzione di assegnazione e protegge l'elenco dalla modifica.  
+ Se l'elenco **const**, `GetHead` restituisce una copia dell'elemento in corrispondenza dell'inizio dell'elenco. In questo modo il metodo può essere utilizzato solo sul lato destro di un'istruzione di assegnazione e protegge l'elenco da eventuali modifiche.  
   
- Se l'elenco non è **const**, `GetHead` restituisce un riferimento all'elemento in corrispondenza dell'inizio dell'elenco. Ciò consente al metodo da utilizzare su entrambi i lati di un'istruzione di assegnazione e pertanto consente le voci dell'elenco da modificare.  
+ Se non è nell'elenco **const**, `GetHead` restituisce un riferimento all'elemento in corrispondenza dell'inizio dell'elenco. Questo modo il metodo da utilizzare su entrambi i lati di un'istruzione di assegnazione e pertanto le voci dell'elenco da modificare.  
   
- Nelle build di debug, si verificherà un errore di asserzione se l'elemento head dell'elenco fa riferimento a NULL.  
+ Nelle build di debug, si verificherà un errore di asserzione se l'inizio dell'elenco punta a NULL.  
   
 ### <a name="example"></a>Esempio  
- Per vedere l'esempio [CAtlList::AddHead](#addhead).  
+ Vedere l'esempio relativo [CAtlList::AddHead](#addhead).  
   
 ##  <a name="getheadposition"></a>  CAtlList::GetHeadPosition  
  Chiamare questo metodo per ottenere la posizione di inizio dell'elenco.  
@@ -376,19 +376,19 @@ const E& GetNext(POSITION& pos) const throw();
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `pos`  
- Un valore di posizione, restituito da una precedente chiamata a `GetNext`, [CAtlList::GetHeadPosition](#getheadposition), o altri `CAtlList` metodo.  
+ *POS*  
+ Un valore di posizione, restituito da una chiamata precedente a `GetNext`, [CAtlList::GetHeadPosition](#getheadposition), o altri `CAtlList` (metodo).  
   
 ### <a name="return-value"></a>Valore restituito  
- Se l'elenco è **const**, `GetNext` restituisce una copia dell'elemento successivo dell'elenco. In questo modo il metodo può essere utilizzato solo sul lato destro di un'istruzione di assegnazione e protegge l'elenco dalla modifica.  
+ Se l'elenco **const**, `GetNext` restituisce una copia dell'elemento successivo dell'elenco. In questo modo il metodo può essere utilizzato solo sul lato destro di un'istruzione di assegnazione e protegge l'elenco da eventuali modifiche.  
   
- Se l'elenco non è **const**, `GetNext` restituisce un riferimento all'elemento successivo dell'elenco. Ciò consente al metodo da utilizzare su entrambi i lati di un'istruzione di assegnazione e pertanto consente le voci dell'elenco da modificare.  
+ Se non è nell'elenco **const**, `GetNext` restituisce un riferimento all'elemento successivo dell'elenco. Questo modo il metodo da utilizzare su entrambi i lati di un'istruzione di assegnazione e pertanto le voci dell'elenco da modificare.  
   
 ### <a name="remarks"></a>Note  
- Il contatore di posizione, `pos`, viene aggiornato per puntare all'elemento successivo nell'elenco oppure NULL se non sono presenti più elementi. Nelle build di debug, un errore di asserzione si verificherà se `pos` è uguale a NULL.  
+ Il contatore, posizione *pos*, viene aggiornato per puntare all'elemento successivo nell'elenco, oppure NULL se non sono presenti più elementi. Nelle build di debug, un errore di asserzione si verificherà se *pos* è uguale a NULL.  
   
 ### <a name="example"></a>Esempio  
- Per vedere l'esempio [CAtlList::GetHeadPosition](#getheadposition).  
+ Vedere l'esempio relativo [CAtlList::GetHeadPosition](#getheadposition).  
   
 ##  <a name="getprev"></a>  CAtlList::GetPrev  
  Chiamare questo metodo per restituire l'elemento precedente nell'elenco.  
@@ -399,19 +399,19 @@ const E& GetPrev(POSITION& pos) const throw();
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `pos`  
- Un valore di posizione, restituito da una precedente chiamata a `GetPrev`, [CAtlList::GetTailPosition](#gettailposition), o altri `CAtlList` metodo.  
+ *POS*  
+ Un valore di posizione, restituito da una chiamata precedente a `GetPrev`, [CAtlList::GetTailPosition](#gettailposition), o altri `CAtlList` (metodo).  
   
 ### <a name="return-value"></a>Valore restituito  
- Se l'elenco è **const**, `GetPrev` restituisce una copia di un elemento dell'elenco. In questo modo il metodo può essere utilizzato solo sul lato destro di un'istruzione di assegnazione e protegge l'elenco dalla modifica.  
+ Se l'elenco **const**, `GetPrev` restituisce una copia di un elemento dell'elenco. In questo modo il metodo può essere utilizzato solo sul lato destro di un'istruzione di assegnazione e protegge l'elenco da eventuali modifiche.  
   
- Se l'elenco non è **const**, `GetPrev` restituisce un riferimento a un elemento dell'elenco. Ciò consente al metodo da utilizzare su entrambi i lati di un'istruzione di assegnazione e pertanto consente le voci dell'elenco da modificare.  
+ Se non è nell'elenco **const**, `GetPrev` restituisce un riferimento a un elemento dell'elenco. Questo modo il metodo da utilizzare su entrambi i lati di un'istruzione di assegnazione e pertanto le voci dell'elenco da modificare.  
   
 ### <a name="remarks"></a>Note  
- Il contatore di posizione, `pos`, viene aggiornato per puntare all'elemento precedente nell'elenco oppure NULL se non sono presenti più elementi. Nelle build di debug, un errore di asserzione si verificherà se `pos` è uguale a NULL.  
+ Il contatore, posizione *pos*, viene aggiornato per puntare all'elemento precedente nell'elenco, oppure NULL se non sono presenti più elementi. Nelle build di debug, un errore di asserzione si verificherà se *pos* è uguale a NULL.  
   
 ### <a name="example"></a>Esempio  
- Per vedere l'esempio [CAtlList::GetTailPosition](#gettailposition).  
+ Vedere l'esempio relativo [CAtlList::GetTailPosition](#gettailposition).  
   
 ##  <a name="gettail"></a>  CAtlList::GetTail  
  Chiamare questo metodo per restituire l'elemento in corrispondenza della parte finale dell'elenco.  
@@ -425,24 +425,24 @@ const E& GetTail() const throw();
  Restituisce un riferimento o una copia di, l'elemento in corrispondenza della parte finale dell'elenco.  
   
 ### <a name="remarks"></a>Note  
- Se l'elenco è **const**, `GetTail` restituisce una copia dell'elemento in corrispondenza dell'inizio dell'elenco. In questo modo il metodo può essere utilizzato solo sul lato destro di un'istruzione di assegnazione e protegge l'elenco dalla modifica.  
+ Se l'elenco **const**, `GetTail` restituisce una copia dell'elemento in corrispondenza dell'inizio dell'elenco. In questo modo il metodo può essere utilizzato solo sul lato destro di un'istruzione di assegnazione e protegge l'elenco da eventuali modifiche.  
   
- Se l'elenco non è **const**, `GetTail` restituisce un riferimento all'elemento in corrispondenza dell'inizio dell'elenco. Ciò consente al metodo da utilizzare su entrambi i lati di un'istruzione di assegnazione e pertanto consente le voci dell'elenco da modificare.  
+ Se non è nell'elenco **const**, `GetTail` restituisce un riferimento all'elemento in corrispondenza dell'inizio dell'elenco. Questo modo il metodo da utilizzare su entrambi i lati di un'istruzione di assegnazione e pertanto le voci dell'elenco da modificare.  
   
- Nelle build di debug si verificherà un errore di asserzione se la parte finale dell'elenco fa riferimento a NULL.  
+ Nelle build di debug, si verificherà un errore di asserzione se la parte finale dell'elenco punta a NULL.  
   
 ### <a name="example"></a>Esempio  
- Per vedere l'esempio [CAtlList::AddTail](#addtail).  
+ Vedere l'esempio relativo [CAtlList::AddTail](#addtail).  
   
 ##  <a name="gettailposition"></a>  CAtlList::GetTailPosition  
- Chiamare questo metodo per ottenere la posizione di fine dell'elenco.  
+ Chiamare questo metodo per ottenere la posizione della parte finale dell'elenco.  
   
 ```
 POSITION GetTailPosition() const throw();
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- Restituisce il valore di posizione corrispondente all'elemento in corrispondenza della coda dell'elenco.  
+ Restituisce il valore di posizione corrispondente per l'elemento in corrispondenza della parte finale dell'elenco.  
   
 ### <a name="remarks"></a>Note  
  Se l'elenco è vuoto, il valore restituito è NULL.  
@@ -451,28 +451,28 @@ POSITION GetTailPosition() const throw();
  [!code-cpp[NVC_ATL_Utilities#22](../../atl/codesnippet/cpp/catllist-class_10.cpp)]  
   
 ##  <a name="inargtype"></a>  CAtlList::INARGTYPE  
- Tipo utilizzato per un elemento viene passato come argomento di input.  
+ Tipo utilizzato quando un elemento viene passato come argomento di input.  
   
 ```
 typedef ETraits::INARGTYPE INARGTYPE;
 ```  
   
 ##  <a name="insertafter"></a>  CAtlList::InsertAfter  
- Chiamare questo metodo per inserire un nuovo elemento nell'elenco alla posizione specificata.  
+ Chiamare questo metodo per inserire un nuovo elemento nell'elenco dopo la posizione specificata.  
   
 ```
 POSITION InsertAfter(POSITION pos, INARGTYPE element);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `pos`  
- Il valore della posizione dopo il quale verrà inserito il nuovo elemento.  
+ *POS*  
+ Il valore di posizione dopo il quale verrà inserito il nuovo elemento.  
   
- `element`  
+ *Elemento*  
  L'elemento da inserire.  
   
 ### <a name="return-value"></a>Valore restituito  
- Restituisce il valore della posizione del nuovo elemento.  
+ Restituisce il valore di posizione del nuovo elemento.  
   
 ### <a name="remarks"></a>Note  
  Nelle build di debug, si verificherà un errore di asserzione se l'elenco non è valido, se l'inserimento ha esito negativo o se viene effettuato un tentativo di inserire l'elemento dopo la parte finale.  
@@ -488,17 +488,17 @@ POSITION InsertBefore(POSITION pos, INARGTYPE element);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `pos`  
+ *POS*  
  Il nuovo elemento verrà inserito nell'elenco prima di questo valore di posizione.  
   
- `element`  
+ *Elemento*  
  L'elemento da inserire.  
   
 ### <a name="return-value"></a>Valore restituito  
- Restituisce il valore della posizione del nuovo elemento.  
+ Restituisce il valore di posizione del nuovo elemento.  
   
 ### <a name="remarks"></a>Note  
- Nelle build di debug si verificherà un errore di asserzione se l'elenco non è valido, se l'inserimento ha esito negativo o se viene effettuato un tentativo di inserire l'elemento prima dell'inizio.  
+ Nelle build di debug, si verificherà un errore di asserzione se l'elenco non è valido, se l'inserimento ha esito negativo o se viene effettuato un tentativo di inserire l'elemento prima dell'inizio.  
   
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_ATL_Utilities#24](../../atl/codesnippet/cpp/catllist-class_12.cpp)]  
@@ -511,24 +511,24 @@ bool IsEmpty() const throw();
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- Restituisce true se l'elenco non contiene oggetti, in caso contrario false.  
+ Restituisce true se l'elenco non contiene oggetti, in caso contrario, false.  
   
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_ATL_Utilities#25](../../atl/codesnippet/cpp/catllist-class_13.cpp)]  
   
 ##  <a name="movetohead"></a>  CAtlList::MoveToHead  
- Chiamare questo metodo per spostare l'elemento specificato all'inizio dell'elenco.  
+ Chiamare questo metodo per spostare l'elemento specificato nell'intestazione dell'elenco.  
   
 ```
 void MoveToHead(POSITION pos) throw();
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `pos`  
- Il valore della posizione dell'elemento da spostare.  
+ *POS*  
+ Il valore di posizione dell'elemento da spostare.  
   
 ### <a name="remarks"></a>Note  
- L'elemento specificato viene spostato dalla posizione corrente all'inizio dell'elenco. Nelle build di debug, un errore di asserzione si verificherà se `pos` è uguale a NULL.  
+ L'elemento specificato viene spostato dalla posizione corrente all'inizio dell'elenco. Nelle build di debug, un errore di asserzione si verificherà se *pos* è uguale a NULL.  
   
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_ATL_Utilities#26](../../atl/codesnippet/cpp/catllist-class_14.cpp)]  
@@ -541,14 +541,14 @@ void MoveToTail(POSITION pos) throw();
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `pos`  
- Il valore della posizione dell'elemento da spostare.  
+ *POS*  
+ Il valore di posizione dell'elemento da spostare.  
   
 ### <a name="remarks"></a>Note  
- L'elemento specificato viene spostato dalla posizione corrente alla fine dell'elenco. Nelle build di debug, un errore di asserzione si verificherà se `pos` è uguale a NULL.  
+ L'elemento specificato viene spostato dalla posizione corrente alla fine dell'elenco. Nelle build di debug, un errore di asserzione si verificherà se *pos* è uguale a NULL.  
   
 ### <a name="example"></a>Esempio  
- Per vedere l'esempio [CAtlList::MoveToHead](#movetohead).  
+ Vedere l'esempio relativo [CAtlList::MoveToHead](#movetohead).  
   
 ##  <a name="removeall"></a>  CAtlList::RemoveAll  
  Chiamare questo metodo per rimuovere tutti gli elementi dall'elenco.  
@@ -561,7 +561,7 @@ void RemoveAll() throw();
  Questo metodo rimuove tutti gli elementi dall'elenco e libera la memoria allocata. Nelle build di debug, verrà generato un ATLASSERT se non vengono eliminati tutti gli elementi o se la struttura dell'elenco è stata danneggiata.  
   
 ### <a name="example"></a>Esempio  
- Per vedere l'esempio [CAtlList::IsEmpty](#isempty).  
+ Vedere l'esempio relativo [CAtlList::IsEmpty](#isempty).  
   
 ##  <a name="removeat"></a>  CAtlList::RemoveAt  
  Chiamare questo metodo per rimuovere un singolo elemento dall'elenco.  
@@ -571,13 +571,13 @@ void RemoveAt(POSITION pos) throw();
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `pos`  
- Il valore della posizione dell'elemento da rimuovere.  
+ *POS*  
+ Il valore di posizione dell'elemento da rimuovere.  
   
 ### <a name="remarks"></a>Note  
- L'elemento a cui fa riferimento `pos` viene rimosso e viene liberata memoria. È possibile utilizzare `RemoveAt` per rimuovere l'intestazione o fine dell'elenco.  
+ L'elemento fa riferimento *pos* viene rimosso e viene liberata memoria. È accettabile usare `RemoveAt` per rimuovere l'intestazione o della parte finale dell'elenco.  
   
- Nelle build di debug, si verificherà un errore di asserzione se l'elenco non è valido o se la rimozione dell'elemento, l'elenco di accedere alla memoria che non fa parte della struttura di elenco.  
+ Nelle build di debug, si verificherà un errore di asserzione se l'elenco non è valido o se la rimozione dell'elemento fa sì che l'elenco di accedere alla memoria che non fa parte della struttura di elenco.  
   
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_ATL_Utilities#27](../../atl/codesnippet/cpp/catllist-class_15.cpp)]  
@@ -609,7 +609,7 @@ void RemoveHeadNoReturn() throw();
  L'elemento head viene eliminato dall'elenco e viene liberata memoria. Nelle build di debug, si verificherà un errore di asserzione se l'elenco è vuoto.  
   
 ### <a name="example"></a>Esempio  
- Per vedere l'esempio [CAtlList::IsEmpty](#isempty).  
+ Vedere l'esempio relativo [CAtlList::IsEmpty](#isempty).  
   
 ##  <a name="removetail"></a>  CAtlList::RemoveTail  
  Chiamare questo metodo per rimuovere l'elemento in corrispondenza della parte finale dell'elenco.  
@@ -622,7 +622,7 @@ E RemoveTail();
  Restituisce l'elemento in corrispondenza della parte finale dell'elenco.  
   
 ### <a name="remarks"></a>Note  
- L'elemento della parte finale è stato eliminato dall'elenco e viene liberata memoria. Viene restituita una copia dell'elemento. Nelle build di debug, si verificherà un errore di asserzione se l'elenco è vuoto.  
+ L'elemento della parte finale viene eliminato dall'elenco e viene liberata memoria. Viene restituita una copia dell'elemento. Nelle build di debug, si verificherà un errore di asserzione se l'elenco è vuoto.  
   
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_ATL_Utilities#29](../../atl/codesnippet/cpp/catllist-class_17.cpp)]  
@@ -635,10 +635,10 @@ void RemoveTailNoReturn() throw();
 ```  
   
 ### <a name="remarks"></a>Note  
- L'elemento della parte finale è stato eliminato dall'elenco e viene liberata memoria. Nelle build di debug, si verificherà un errore di asserzione se l'elenco è vuoto.  
+ L'elemento della parte finale viene eliminato dall'elenco e viene liberata memoria. Nelle build di debug, si verificherà un errore di asserzione se l'elenco è vuoto.  
   
 ### <a name="example"></a>Esempio  
- Per vedere l'esempio [CAtlList::IsEmpty](#isempty).  
+ Vedere l'esempio relativo [CAtlList::IsEmpty](#isempty).  
   
 ##  <a name="setat"></a>  CAtlList::SetAt  
  Chiamare questo metodo per impostare il valore dell'elemento in una determinata posizione nell'elenco.  
@@ -648,20 +648,20 @@ void SetAt(POSITION pos, INARGTYPE element);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `pos`  
+ *POS*  
  Il valore di posizione corrispondente all'elemento da modificare.  
   
- `element`  
+ *Elemento*  
  Il nuovo valore dell'elemento.  
   
 ### <a name="remarks"></a>Note  
- Sostituisce il valore esistente con `element`. Nelle build di debug, un errore di asserzione si verificherà se `pos` è uguale a NULL.  
+ Sostituisce il valore esistente con *elemento*. Nelle build di debug, un errore di asserzione si verificherà se *pos* è uguale a NULL.  
   
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_ATL_Utilities#30](../../atl/codesnippet/cpp/catllist-class_18.cpp)]  
   
 ##  <a name="swapelements"></a>  CAtlList::SwapElements  
- Chiamare questo metodo per eseguire lo scambio di elementi nell'elenco.  
+ Chiamare questo metodo per scambiare gli elementi nell'elenco.  
   
 ```
 void SwapElements(POSITION pos1, POSITION pos2) throw();
@@ -675,11 +675,11 @@ void SwapElements(POSITION pos1, POSITION pos2) throw();
  Il secondo valore di posizione.  
   
 ### <a name="remarks"></a>Note  
- Scambia gli elementi in due posizioni specificate. Nelle build di debug, si verificherà un errore di asserzione se il valore di posizione è uguale a NULL.  
+ Scambia gli elementi in due posizioni specificate. Nelle build di debug, si verificherà un errore di asserzione se il valore della posizione è uguale a NULL.  
   
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_ATL_Utilities#31](../../atl/codesnippet/cpp/catllist-class_19.cpp)]  
   
 ## <a name="see-also"></a>Vedere anche  
- [CList (classe)](../../mfc/reference/clist-class.md)   
- [Cenni preliminari sulla classe](../../atl/atl-class-overview.md)
+ [Classe CList](../../mfc/reference/clist-class.md)   
+ [Panoramica della classe](../../atl/atl-class-overview.md)

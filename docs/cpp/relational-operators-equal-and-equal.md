@@ -1,5 +1,5 @@
 ---
-title: 'Gli operatori relazionali: &lt;, &gt;, &lt;=, e &gt;= | Documenti Microsoft'
+title: 'Operatori relazionali: &lt;, &gt;, &lt;=, e &gt;= | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -25,11 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ea629afbe975e60e9fc4f25e51d757eb3f0f8728
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 56372764c70498aec4ccf7b23fc7d074d1df179e
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37943518"
 ---
 # <a name="relational-operators-lt-gt-lt-and-gt"></a>Operatori relazionali: &lt;, &gt;, &lt;=, e &gt;=
 ## <a name="syntax"></a>Sintassi  
@@ -52,11 +53,11 @@ expression >= expression
   
 -   Maggiore o uguale a (**>=**)  
   
- Gli operatori relazionali hanno un'associatività da sinistra a destra. Entrambi gli operandi degli operatori relazionali devono essere di tipo aritmetico o di tipo puntatore. Producono valori di tipo `bool`. Il valore restituito è **false** (0) se la relazione nell'espressione è false; in caso contrario, il valore restituito è **true** (1).  
+ Gli operatori relazionali hanno un'associatività da sinistra a destra. Entrambi gli operandi degli operatori relazionali devono essere di tipo aritmetico o di tipo puntatore. Producono valori di tipo **bool**. Il valore restituito è **false** (0) se la relazione nell'espressione è false; in caso contrario, il valore restituito è **true** (1).  
   
 ## <a name="example"></a>Esempio  
   
-```  
+```cpp 
 // expre_Relational_Operators.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -71,22 +72,22 @@ int main() {
 }  
 ```  
   
- Le espressioni nell'esempio precedente devono essere racchiusi tra parentesi perché l'operatore di inserimento del flusso (**<<**) ha precedenza più alta rispetto agli operatori relazionali. Di conseguenza, la prima espressione senza le parentesi verrebbe valutata come:  
+ Le espressioni nell'esempio precedente devono essere racchiuso tra parentesi perché l'operatore di inserimento di stream (**<<**) ha maggiore precedenza rispetto agli operatori relazionali. Di conseguenza, la prima espressione senza le parentesi verrebbe valutata come:  
   
-```  
+```cpp 
 (cout << "The true expression 3 > 2 yields: " << 3) < (2 << "\n");  
 ```  
   
  Le conversioni aritmetiche consuete analizzate [conversioni Standard](standard-conversions.md) si applicano agli operandi di tipi aritmetici.  
   
 ## <a name="comparing-pointers"></a>Confronto tra puntatori  
- Quando vengono confrontati due puntatori a oggetti dello stesso tipo, il risultato è determinato dalla posizione degli oggetti puntati nello spazio degli indirizzi del programma. I puntatori possono essere confrontati anche con un'espressione costante che restituisce 0 o con un puntatore di tipo void *. Se un confronto tra puntatori viene eseguito con un puntatore di tipo void \*, l'altro puntatore viene convertito in modo implicito nel tipo void \*. A questo punto, viene eseguito il confronto.  
+ Quando vengono confrontati due puntatori a oggetti dello stesso tipo, il risultato è determinato dalla posizione degli oggetti puntati nello spazio degli indirizzi del programma. I puntatori possono essere confrontati anche con un'espressione costante che restituisce 0 o con un puntatore di tipo void *. Se un confronto tra puntatori viene eseguito su un puntatore di tipo void \*, l'altro puntatore viene implicitamente convertito nel tipo void \*. A questo punto, viene eseguito il confronto.  
   
  Non è possibile eseguire il confronto di due puntatori di tipo diverso, tranne nei seguenti casi:  
   
 -   Un tipo è un tipo di classe derivato dall'altro tipo.  
   
--   Almeno uno dei puntatori viene convertito in modo esplicito (cast) nel tipo void *. (L'altro puntatore viene convertito in modo implicito nel tipo void \* per la conversione.)  
+-   Almeno uno dei puntatori viene convertito in modo esplicito (cast) nel tipo void *. (Il primo puntatore viene implicitamente convertito nel tipo void \* per la conversione.)  
   
  Due puntatori dello stesso tipo che puntano allo stesso oggetto risultano sicuramente uguali. Se due puntatori a membri non statici di un oggetto vengono confrontati, è necessario rispettare le seguenti regole:  
   
@@ -100,5 +101,5 @@ int main() {
   
 ## <a name="see-also"></a>Vedere anche  
  [Espressioni con operatori binari](../cpp/expressions-with-binary-operators.md)   
- [Operatori C++ predefiniti, precedenza e associazione](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
+ [Operatori C++ predefiniti, precedenza e associatività degli operatori](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
  [Operatori relazionali e operatori di uguaglianza C](../c-language/c-relational-and-equality-operators.md)

@@ -1,5 +1,5 @@
 ---
-title: Struttura SOCKADDR_IN | Documenti Microsoft
+title: Struttura SOCKADDR_IN | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aeb9e61f94ddd5f41ff3de26728c1fbe155f809d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5e5ec6ebf4329ff03c75240dc7cec93e9ba46331
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33373638"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37885738"
 ---
 # <a name="sockaddrin-structure"></a>Struttura SOCKADDR_IN
-Nella famiglia di indirizzi di Internet, il `SOCKADDR_IN` struttura viene utilizzata da Windows Sockets per specificare un indirizzo dell'endpoint locale o remoto a cui connettersi a un socket.  
+Nella famiglia degli indirizzi di Internet, il `SOCKADDR_IN` struttura viene utilizzata da Windows Sockets per specificare un indirizzo dell'endpoint locale o remoto a cui connettere un socket.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -39,7 +39,7 @@ struct in_addr sin_addr;
   
 #### <a name="parameters"></a>Parametri  
  *sin_family*  
- Famiglia di indirizzi (deve essere **AF_INET**).  
+ Famiglia di indirizzi (deve essere AF_INET).  
   
  *sin_port*  
  Porta IP.  
@@ -48,12 +48,12 @@ struct in_addr sin_addr;
  Indirizzo IP.  
   
  *sin_zero*  
- Spaziatura interna per rendere le stesse dimensioni di struttura `SOCKADDR`.  
+ Riempimento per impostare la struttura delle stesse dimensioni `SOCKADDR`.  
   
 ## <a name="remarks"></a>Note  
- Questa è la forma del `SOCKADDR` struttura specifiche per la famiglia di indirizzi Internet e può essere convertito in `SOCKADDR`.  
+ Si tratta del formato del `SOCKADDR` strutturare specifiche per la famiglia di indirizzi Internet e può essere convertito in `SOCKADDR`.  
   
- Il componente di indirizzo IP di questa struttura è di tipo **IN_ADDR**. Il **IN_ADDR** struttura viene definita nel file di intestazione Windows Socket WINSOCK. H come indicato di seguito:  
+ Il componente indirizzo IP di questa struttura è di tipo `IN_ADDR`. Il `IN_ADDR` struttura è definita nel file di intestazione di Windows Socket WINSOCK. H come segue:  
   
 ```  
 struct in_addr {
@@ -70,7 +70,7 @@ struct in_addr {
 ```  
   
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** Winsock2  
+ **Intestazione:** winsock2.h  
   
 ## <a name="see-also"></a>Vedere anche  
  [Strutture, stili, callback e mappe messaggi](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   

@@ -1,5 +1,5 @@
 ---
-title: Classe CDefaultHashTraits | Documenti Microsoft
+title: Classe CDefaultHashTraits | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 85cf9e27211763559617715a6c025055b25379fa
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a87ecddfff7cb3096ae30d9da5d9e5b6913adcbd
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32361512"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37886245"
 ---
 # <a name="cdefaulthashtraits-class"></a>Classe CDefaultHashTraits
 Questa classe fornisce una funzione statica per il calcolo dei valori hash.  
@@ -36,7 +36,7 @@ class CDefaultHashTraits
 ```  
   
 #### <a name="parameters"></a>Parametri  
- `T`  
+ *T*  
  Il tipo di dati da archiviare nella raccolta.  
   
 ## <a name="members"></a>Membri  
@@ -45,25 +45,25 @@ class CDefaultHashTraits
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[CDefaultHashTraits::Hash](#hash)|(Statico) Chiamare questa funzione per calcolare un valore hash per l'elemento specificato.|  
+|[CDefaultHashTraits::Hash](#hash)|(Statico) Chiamare questa funzione per calcolare un valore hash per un determinato elemento.|  
   
 ## <a name="remarks"></a>Note  
- Questa classe contiene una singola funzione statica che restituisce un valore hash per l'elemento specificato. Questa classe viene utilizzata per la [CDefaultElementTraits classe](../../atl/reference/cdefaultelementtraits-class.md).  
+ Questa classe contiene una singola funzione statica che restituisce un valore hash per un determinato elemento. Questa classe viene utilizzata per la [classe CDefaultElementTraits](../../atl/reference/cdefaultelementtraits-class.md).  
   
- Per ulteriori informazioni, vedere [classi Collection ATL](../../atl/atl-collection-classes.md).  
+ Per altre informazioni, vedere [classi Collection ATL](../../atl/atl-collection-classes.md).  
   
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** atlcoll. h  
   
 ##  <a name="hash"></a>  CDefaultHashTraits::Hash  
- Chiamare questa funzione per calcolare un valore hash per l'elemento specificato.  
+ Chiamare questa funzione per calcolare un valore hash per un determinato elemento.  
   
 ```
 static ULONG Hash(const T& element) throw();
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `element`  
+ *Elemento*  
  Elemento.  
   
 ### <a name="return-value"></a>Valore restituito  
@@ -73,4 +73,4 @@ static ULONG Hash(const T& element) throw();
  L'algoritmo hash predefinito è molto semplice: il valore restituito è il numero di elementi. Eseguire l'override di questa funzione se è richiesto un algoritmo più complesso.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Cenni preliminari sulla classe](../../atl/atl-class-overview.md)
+ [Panoramica della classe](../../atl/atl-class-overview.md)

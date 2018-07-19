@@ -1,5 +1,5 @@
 ---
-title: Regole e limitazioni per le funzioni Naked | Documenti Microsoft
+title: Regole e limitazioni per funzioni Naked | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,17 +14,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cb18f3e75bb7d912cbafbde01893d6283a4c61f6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c1a6f88717b8fb371c343d17a9b38608876cd900
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37943305"
 ---
 # <a name="rules-and-limitations-for-naked-functions"></a>Regole e limitazioni per le funzioni naked
 ## <a name="microsoft-specific"></a>Sezione specifica Microsoft  
  Le seguenti regole e limitazioni si applicano alle funzioni naked:  
   
--   L'istruzione `return` non è consentita.  
+-   Il **restituire** istruzione non è consentita.  
   
 -   I costrutti di gestione delle eccezioni C++ e di gestione strutturata delle eccezioni non sono consentiti in quanto è necessario rimuoverli nello stack frame.  
   
@@ -38,11 +39,11 @@ ms.lasthandoff: 05/03/2018
   
 -   Non è possibile dichiarare gli oggetti di classe C++ nell'ambito lessicale della funzione. È possibile, tuttavia, dichiarare gli oggetti in un blocco annidato.  
   
--   Il `naked` (parola chiave) viene ignorato durante la compilazione con [/clr](../build/reference/clr-common-language-runtime-compilation.md).  
+-   Il **naked** parola chiave viene ignorato durante la compilazione con [/clr](../build/reference/clr-common-language-runtime-compilation.md).  
   
--   Per [fastcall](../cpp/fastcall.md) funzioni naked, ogni volta che è un riferimento nel codice C/C++ a uno degli argomenti di registro, il codice di prologo deve archiviare i valori di tale registro nel percorso dello stack per tale variabile. Ad esempio:  
+-   Per la [fastcall](../cpp/fastcall.md) funzioni naked, ogni volta che si è un riferimento nel codice C/C++ a uno degli argomenti di registro, il codice di prologo deve archiviare i valori di tale registro nel percorso dello stack per tale variabile. Ad esempio:  
   
-```  
+```cpp 
 // nkdfastcl.cpp  
 // compile with: /c  
 // processor: x86  

@@ -1,5 +1,5 @@
 ---
-title: Classe COleDialog | Documenti Microsoft
+title: Classe COleDialog | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2c13b5d0a3bb30e08eaaeb0250da7deef692a66d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a41aa479fd87c76dbf167d728ad2dbb830f6a24b
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368660"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37853621"
 ---
 # <a name="coledialog-class"></a>Classe COleDialog
 Fornisce la funzionalità comune alle finestre di dialogo per OLE.  
@@ -63,7 +63,7 @@ class COleDialog : public CCommonDialog
   
 - [COleChangeSourceDialog](../../mfc/reference/colechangesourcedialog-class.md)  
   
- Per ulteriori informazioni sulle finestre di dialogo OLE specifici, vedere l'articolo [finestre di dialogo in OLE](../../mfc/dialog-boxes-in-ole.md).  
+ Per altre informazioni sulle finestre di dialogo OLE specifici, vedere l'articolo [finestre di dialogo in OLE](../../mfc/dialog-boxes-in-ole.md).  
   
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -82,7 +82,7 @@ class COleDialog : public CCommonDialog
  **Intestazione:** afxodlgs. h  
   
 ##  <a name="getlasterror"></a>  COleDialog:: GetLastError  
- Chiamare il `GetLastError` funzione membro per ottenere informazioni aggiuntive sull'errore quando `DoModal` restituisce **IDABORT**.  
+ Chiamare il `GetLastError` funzione di membro per ottenere informazioni aggiuntive sull'errore quando `DoModal` restituisce IDABORT.  
   
 ```  
 UINT GetLastError() const;  

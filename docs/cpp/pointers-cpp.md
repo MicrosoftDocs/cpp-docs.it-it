@@ -1,5 +1,5 @@
 ---
-title: Puntatori (C++) | Documenti Microsoft
+title: Puntatori (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,11 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 04d794041df385a9e18a8a4b25460d961a340cda
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: dad1f9a223d8eb97c8e59e955bd5358b27dafd08
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37943524"
 ---
 # <a name="pointers-c"></a>Puntatori (C++)
 I puntatori vengono dichiarati tramite la seguente sequenza  
@@ -39,25 +40,25 @@ I puntatori vengono dichiarati tramite la seguente sequenza
   
  1. Gli identificatori di dichiarazione:  
   
--   Identificatore della classe di archiviazione facoltativo. Per ulteriori informazioni, vedere [identificatori](../cpp/specifiers.md).  
+    - Identificatore della classe di archiviazione facoltativo. Per altre informazioni, vedere [identificatori](../cpp/specifiers.md).  
   
--   Una parola chiave `const` o `volatile` facoltativa, applicata al tipo di oggetto a cui puntare.  
+    - Facoltativo **const** oppure **volatile** (parola chiave) applicata al tipo dell'oggetto a cui puntare.  
   
--   L'identificatore di tipo: il nome di un tipo che rappresenta il tipo di oggetto a cui puntare.  
+    - L'identificatore di tipo: il nome di un tipo che rappresenta il tipo di oggetto a cui puntare.  
   
  2. Dichiaratore:  
   
--   Un modificatore facoltativo specifico di Microsoft. Per ulteriori informazioni, vedere [modificatori specifici Microsoft](../cpp/microsoft-specific-modifiers.md).  
+    - Un modificatore facoltativo specifico di Microsoft. Per altre informazioni, vedere [modificatori specifici Microsoft](../cpp/microsoft-specific-modifiers.md).  
   
--   Operatore `*`.  
+    - Operatore `*`.  
   
--   Una parola chiave `const` o `volatile` facoltativa che si applica al puntatore stesso.  
+    - Facoltativo **const** oppure **volatile** parola chiave applicazione al puntatore stesso.  
   
--   Identificatore.  
+    - Identificatore.  
   
--   Inizializzatore facoltativo.  
+    - Inizializzatore facoltativo.  
   
- Il dichiaratore per un puntatore a funzione ha il seguente aspetto:  
+     Il dichiaratore per un puntatore a funzione ha il seguente aspetto:  
   
 ```  
 (* [cv-qualifiers] identifier )( argument-list ) [cv-qualifers]  
@@ -74,31 +75,31 @@ I puntatori vengono dichiarati tramite la seguente sequenza
   
  Un esempio semplice di dichiarazione di puntatore è:  
   
-```  
+```cpp 
 char *pch;  
 ```  
   
- La dichiarazione precedente specifica che `pch` punta a un oggetto di tipo `char`.  
+ La dichiarazione precedente specifica che `pch` punta a un oggetto di tipo **char**.  
   
  Un esempio più complesso è  
   
-```  
+```cpp 
 static unsigned int * const ptr;  
 ```  
   
- La dichiarazione precedente specifica che `ptr` è un puntatore costante a un oggetto di tipo `unsigned` `int` con durata di archiviazione statica.  
+ La dichiarazione precedente specifica che `ptr` è un puntatore costante a un oggetto di tipo **senza segno** **int** con durata di archiviazione statica.  
   
  L'esempio riportato di seguito mostra il modo in cui vengono dichiarati e inizializzati più puntatori:  
   
-```  
+```cpp 
 static int *p = &i, *q = &j;  
 ```  
   
- Nell'esempio precedente i puntatori p e in q puntano entrambi a oggetti di tipo `int` e vengono inizializzati, rispettivamente sugli indirizzi di i e J.  L'identificatore della classe di archiviazione `static` viene applicato a entrambi i puntatori.  
+ Nell'esempio precedente, i puntatori p e q puntano a oggetti di tipo **int** e vengono inizializzati rispettivamente gli indirizzi di i e j.  Identificatore di classe di archiviazione **statici** si applica a entrambi i puntatori.  
   
 ## <a name="example"></a>Esempio  
   
-```  
+```cpp 
 // pointer.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -189,7 +190,7 @@ dog dog
 ## <a name="example"></a>Esempio  
  In un altro esempio viene illustrato l'utilizzo dei puntatori nelle strutture di dati; in questo caso, un elenco collegato.  
   
-```  
+```cpp 
 // pointer_linkedlist.cpp  
 // compile with: /EHsc  
 #include <iostream>  

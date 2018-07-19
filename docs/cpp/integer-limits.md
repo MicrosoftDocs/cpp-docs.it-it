@@ -1,5 +1,5 @@
 ---
-title: Limiti per tipi integer | Documenti Microsoft
+title: Limiti per tipi integer | Microsoft Docs
 ms.custom: ''
 ms.date: 01/29/2018
 ms.technology:
@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 656873dc510f53fc05250a28c61cc452078c4aca
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 174025fc1a44ce0db96a5a7038502dfabe90bfd6
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32420611"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37940134"
 ---
 # <a name="integer-limits"></a>Limiti per tipi Integer
 
@@ -34,25 +34,25 @@ I limiti per i tipi Integer sono elencati nella tabella seguente. Questi limiti 
 
 |Costante|Significato|Valore|
 |--------------|-------------|-----------|
-|**CHAR_BIT**|Numero di bit nella variabile minore che non sia un campo di bit.|8|
-|**SCHAR_MIN**|Valore minimo per una variabile di tipo **char con segno**.|-128|
-|**SCHAR_MAX**|Valore massimo per una variabile di tipo **char con segno**.|127|
-|**UCHAR_MAX**|Valore massimo per una variabile di tipo **unsigned char**.|255 (0xff)|
-|**CHAR_MIN**|Valore minimo per una variabile di tipo **char**.|-128; 0 se si usa l'opzione /J|
-|**CHAR_MAX**|Valore massimo per una variabile di tipo **char**.|127; 255 se si utilizza l'opzione /J|
-|**MB_LEN_MAX**|Numero massimo di byte in una costante multicarattere.|5|
-|**SHRT_MIN**|Valore minimo per una variabile di tipo **short**.|-32768|
-|**SHRT_MAX**|Valore massimo per una variabile di tipo **short**.|32767|
-|**USHRT_MAX**|Valore massimo per una variabile di tipo **short senza segno**.|65535 (0xffff)|
-|**INT_MIN**|Valore minimo per una variabile di tipo **int**.|-2147483648|
-|**INT_MAX**|Valore massimo per una variabile di tipo **int**.|2147483647|
-|**UINT_MAX**|Valore massimo per una variabile di tipo **unsigned int**.|4294967295 (0xffffffff)|
-|**LONG_MIN**|Valore minimo per una variabile di tipo **long**.|-2147483648|
-|**LONG_MAX**|Valore massimo per una variabile di tipo **long**.|2147483647|
-|**ULONG_MAX**|Valore massimo per una variabile di tipo **unsigned long**.|4294967295 (0xffffffff)|
-|**LLONG_MIN**|Valore minimo per una variabile di tipo **long long**|-9223372036854775808|
-|**LLONG_MAX**|Valore massimo per una variabile di tipo **long long**|9223372036854775807|
-|**ULLONG_MAX**|Valore massimo per una variabile di tipo **long long senza segno**|18446744073709551615 (0xffffffffffffffff)|
+|CHAR_BIT|Numero di bit nella variabile minore che non sia un campo di bit.|8|
+|SCHAR_MIN|Valore minimo per una variabile di tipo **char con segno**.|-128|
+|SCHAR_MAX|Valore massimo per una variabile di tipo **char con segno**.|127|
+|UCHAR_MAX|Valore massimo per una variabile di tipo **unsigned char**.|255 (0xff)|
+|CHAR_MIN|Valore minimo per una variabile di tipo **char**.|-128; 0 se si usa l'opzione /J|
+|CHAR_MAX|Valore massimo per una variabile di tipo **char**.|127; 255 se si utilizza l'opzione /J|
+|MB_LEN_MAX|Numero massimo di byte in una costante multicarattere.|5|
+|SHRT_MIN|Valore minimo per una variabile di tipo **short**.|-32768|
+|SHRT_MAX|Valore massimo per una variabile di tipo **short**.|32767|
+|USHRT_MAX|Valore massimo per una variabile di tipo **short senza segno**.|65535 (0xffff)|
+|INT_MIN|Valore minimo per una variabile di tipo **int**.|-2147483648|
+|INT_MAX|Valore massimo per una variabile di tipo **int**.|2147483647|
+|UINT_MAX|Valore massimo per una variabile di tipo **unsigned int**.|4294967295 (0xffffffff)|
+|LONG_MIN|Valore minimo per una variabile di tipo **long**.|-2147483648|
+|LONG_MAX|Valore massimo per una variabile di tipo **long**.|2147483647|
+|ULONG_MAX|Valore massimo per una variabile di tipo **unsigned long**.|4294967295 (0xffffffff)|
+|LLONG_MIN|Valore minimo per una variabile di tipo **long long**|-9223372036854775808|
+|LLONG_MAX|Valore massimo per una variabile di tipo **long long**|9223372036854775807|
+|ULLONG_MAX|Valore massimo per una variabile di tipo **long long senza segno**|18446744073709551615 (0xffffffffffffffff)|
 
 Se un valore è superiore al massimo valore rappresentabile con il tipo Integer, il compilatore Microsoft genera un errore.
 

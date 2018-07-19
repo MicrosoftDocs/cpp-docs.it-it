@@ -1,5 +1,5 @@
 ---
-title: Classe CSimpleMapEqualHelper | Documenti Microsoft
+title: Classe CSimpleMapEqualHelper | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,15 +19,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b4bfef99d12ae724c2ca6e70375f08a8dc1fb15b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7d629806582d7ad9902ef5ca0d9425d6f1ecd7d7
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32361840"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37879695"
 ---
 # <a name="csimplemapequalhelper-class"></a>Classe CSimpleMapEqualHelper
-Questa classe è un supporto per il [CSimpleMap](../../atl/reference/csimplemap-class.md) classe.  
+Questa classe è un supporto per la [CSimpleMap](../../atl/reference/csimplemap-class.md) classe.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,11 +37,11 @@ class CSimpleMapEqualHelper
 ```  
   
 #### <a name="parameters"></a>Parametri  
- `TKey`  
+ *TKey*  
  L'elemento principale.  
   
- `TVal`  
- L'elemento valore.  
+ *TVal*  
+ L'elemento di valore.  
   
 ## <a name="members"></a>Membri  
   
@@ -50,10 +50,10 @@ class CSimpleMapEqualHelper
 |Nome|Descrizione|  
 |----------|-----------------|  
 |[CSimpleMapEqualHelper::IsEqualKey](#isequalkey)|(Statico) Verifica l'uguaglianza delle due chiavi.|  
-|[CSimpleMapEqualHelper::IsEqualValue](#isequalvalue)|(Statico) Verifica due valori per verificarne l'uguaglianza.|  
+|[CSimpleMapEqualHelper::IsEqualValue](#isequalvalue)|(Statico) Verifica l'uguaglianza di due valori.|  
   
 ## <a name="remarks"></a>Note  
- Questa classe di tratti è un supplemento di `CSimpleMap` classe. Fornisce metodi per il confronto di due `CSimpleMap` elementi (in particolare, i componenti chiave e valore) per verificarne l'uguaglianza dell'oggetto. Per impostazione predefinita, le chiavi e valori vengono confrontati mediante `operator==()`, ma se la mappa contiene i tipi di dati complessi che non dispongono di propri operatore di uguaglianza, è possibile eseguire l'override di questa classe per fornire funzionalità aggiuntive necessarie.  
+ Questa classe traits costituisce un'integrazione di `CSimpleMap` classe. Fornisce metodi per confrontare due `CSimpleMap` eguaglianza degli elementi (in particolare, i componenti chiave / valore) dell'oggetto. Per impostazione predefinita, le chiavi e valori vengono confrontati usando **operator==()**, ma se la mappa contiene tipi di dati complessi che non dispongono di propri operatore di uguaglianza, è possibile eseguire l'override di questa classe per fornire le funzionalità aggiuntive richieste.  
   
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** atlsimpcoll. h  
@@ -66,17 +66,17 @@ static bool IsEqualKey(const TKey& k1, const TKey& k2);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `k1`  
+ *K1*  
  La prima chiave.  
   
- `k2`  
+ *K2*  
  La seconda chiave.  
   
 ### <a name="return-value"></a>Valore restituito  
- Restituisce true se le chiavi sono uguali, false in caso contrario.  
+ Restituisce true se le chiavi sono uguali e false in caso contrario.  
   
 ##  <a name="isequalvalue"></a>  CSimpleMapEqualHelper::IsEqualValue  
- Verifica due valori per verificarne l'uguaglianza.  
+ Verifica l'uguaglianza di due valori.  
   
 ```
 static bool IsEqualValue(const TVal& v1, const TVal& v2);
@@ -86,12 +86,12 @@ static bool IsEqualValue(const TVal& v1, const TVal& v2);
  *V1*  
  Primo valore.  
   
- *V2*  
+ *v2*  
  Secondo valore.  
   
 ### <a name="return-value"></a>Valore restituito  
- Restituisce true se i valori sono uguali, false in caso contrario.  
+ Restituisce true se i valori sono uguali e false in caso contrario.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Classe CSimpleMapEqualHelperFalse](../../atl/reference/csimplemapequalhelperfalse-class.md)   
- [Cenni preliminari sulla classe](../../atl/atl-class-overview.md)
+ [Panoramica della classe](../../atl/atl-class-overview.md)

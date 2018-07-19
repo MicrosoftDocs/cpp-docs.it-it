@@ -1,5 +1,5 @@
 ---
-title: Classe CHeapPtrBase | Documenti Microsoft
+title: Classe CHeapPtrBase | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -23,18 +23,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5ca18054509ab069722e632308b4d8f57706e548
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d847c83fce13ea39c3032e7db638a91b1cb7ad85
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32364568"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37880320"
 ---
 # <a name="cheapptrbase-class"></a>Classe CHeapPtrBase
 Questa classe costituisce la base per diverse classi di puntatore intelligente dell'heap.  
   
 > [!IMPORTANT]
->  Questa classe e i relativi membri non possono essere utilizzati nelle applicazioni eseguite in Windows Runtime.  
+>  Questa classe e i relativi membri non possono essere utilizzati nelle applicazioni eseguite nel Runtime di Windows.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -44,11 +44,11 @@ class CHeapPtrBase
 ```  
   
 #### <a name="parameters"></a>Parametri  
- `T`  
+ *T*  
  Il tipo di oggetto da archiviare nell'heap.  
   
- `Allocator`  
- La classe di allocazione di memoria da utilizzare. Per impostazione predefinita, le routine CRT vengono utilizzate per allocare e liberare memoria.  
+ *Allocatore*  
+ La classe di allocazione di memoria da utilizzare. Per impostazione predefinita le routine CRT vengono utilizzate per allocare e liberare memoria.  
   
 ## <a name="members"></a>Membri  
   
@@ -63,9 +63,9 @@ class CHeapPtrBase
 |Nome|Descrizione|  
 |----------|-----------------|  
 |[CHeapPtrBase::AllocateBytes](#allocatebytes)|Chiamare questo metodo per allocare memoria.|  
-|[CHeapPtrBase::Attach](#attach)|Chiamare questo metodo per assumere la proprietà di un indicatore di misura esistente.|  
+|[CHeapPtrBase::Attach](#attach)|Chiamare questo metodo per acquisire la proprietà di un indicatore di misura esistente.|  
 |[CHeapPtrBase::Detach](#detach)|Chiamare questo metodo per rilasciare la proprietà di un puntatore.|  
-|[CHeapPtrBase::Free](#free)|Chiamare questo metodo per eliminare un oggetto a cui fa riferimento un `CHeapPtrBase`.|  
+|[CHeapPtrBase::Free](#free)|Chiamare questo metodo per eliminare un oggetto a cui punta un `CHeapPtrBase`.|  
 |[CHeapPtrBase::ReallocateBytes](#reallocatebytes)|Chiamare questo metodo per riallocare la memoria.|  
   
 ### <a name="public-operators"></a>Operatori pubblici  
@@ -73,18 +73,18 @@ class CHeapPtrBase
 |Nome|Descrizione|  
 |----------|-----------------|  
 |[CHeapPtrBase::operator T *](#operator_t_star)|L'operatore di cast.|  
-|[CHeapPtrBase::operator &](#operator_amp)|Il & (operatore).|  
-|[CHeapPtrBase::operator ->](#operator_ptr)|L'operatore puntatore a membro.|  
+|[CHeapPtrBase::operator &](#operator_amp)|I & operatore.|  
+|[CHeapPtrBase::operator ->](#operator_ptr)|Operatore puntatore a membro.|  
 
   
 ### <a name="public-data-members"></a>Membri dati pubblici  
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[CHeapPtrBase::m_pData](#m_pdata)|La variabile membro di dati puntatore.|  
+|[CHeapPtrBase::m_pData](#m_pdata)|La variabile di membro dati puntatore.|  
   
 ## <a name="remarks"></a>Note  
- Questa classe costituisce la base per diverse classi di puntatore intelligente dell'heap. Le classi derivate, ad esempio, [CHeapPtr](../../atl/reference/cheapptr-class.md) e [template CComHeapPtr](../../atl/reference/ccomheapptr-class.md), aggiungere i propri costruttori e operatori. Vedere queste classi per gli esempi di implementazione.  
+ Questa classe costituisce la base per diverse classi di puntatore intelligente dell'heap. Ad esempio, le classi derivate [CHeapPtr](../../atl/reference/cheapptr-class.md) e [CComHeapPtr](../../atl/reference/ccomheapptr-class.md), aggiungere i propri costruttori e operatori. Vedere queste classi per gli esempi di implementazione.  
   
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** atlcore  
@@ -97,30 +97,30 @@ bool AllocateBytes(size_t nBytes) throw();
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `nBytes`  
+ *nBytes*  
  Il numero di byte di memoria da allocare.  
   
 ### <a name="return-value"></a>Valore restituito  
  Restituisce true se la memoria è stata allocata, false in caso contrario.  
   
 ### <a name="remarks"></a>Note  
- Nelle build di debug, un errore di asserzione si verificherà se il [CHeapPtrBase::m_pData](#m_pdata) variabile membro attualmente fa riferimento a un valore esistente; ovvero, non è uguale a NULL.  
+ Nelle build di debug, un errore di asserzione si verificherà se il [CHeapPtrBase::m_pData](#m_pdata) variabile membro attualmente punta a un valore esistente; vale a dire non è uguale a NULL.  
   
 ##  <a name="attach"></a>  CHeapPtrBase::Attach  
- Chiamare questo metodo per assumere la proprietà di un indicatore di misura esistente.  
+ Chiamare questo metodo per acquisire la proprietà di un indicatore di misura esistente.  
   
 ```
 void Attach(T* pData) throw();
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `pData`  
+ *pData*  
  Il `CHeapPtrBase` oggetto assumerà la proprietà del puntatore ' this '.  
   
 ### <a name="remarks"></a>Note  
- Quando un `CHeapPtrBase` oggetto acquisisce la proprietà di un puntatore, verranno automaticamente eliminati il puntatore e i dati allocati quando esce dall'ambito.  
+ Quando un `CHeapPtrBase` oggetto acquisisce la proprietà di un puntatore, eliminerà automaticamente tutti i dati allocati e il puntatore del mouse quando esce dall'ambito.  
   
- Nelle build di debug, un errore di asserzione si verificherà se il [CHeapPtrBase::m_pData](#m_pdata) variabile membro attualmente fa riferimento a un valore esistente; ovvero, non è uguale a NULL.  
+ Nelle build di debug, un errore di asserzione si verificherà se il [CHeapPtrBase::m_pData](#m_pdata) variabile membro attualmente punta a un valore esistente; vale a dire non è uguale a NULL.  
   
 ##  <a name="dtor"></a>  CHeapPtrBase:: ~ CHeapPtrBase  
  Distruttore.  
@@ -140,23 +140,23 @@ T* Detach() throw();
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- Restituisce una copia dell'indicatore di misura.  
+ Restituisce una copia del puntatore.  
   
 ### <a name="remarks"></a>Note  
- Rilascia la proprietà di un puntatore, imposta il [CHeapPtrBase::m_pData](#m_pdata) variabile membro su NULL e restituisce una copia dell'indicatore di misura.  
+ Rilascia la proprietà di un puntatore, imposta la [CHeapPtrBase::m_pData](#m_pdata) variabile membro null e restituisce una copia del puntatore.  
   
 ##  <a name="free"></a>  CHeapPtrBase::Free  
- Chiamare questo metodo per eliminare un oggetto a cui fa riferimento un `CHeapPtrBase`.  
+ Chiamare questo metodo per eliminare un oggetto a cui punta un `CHeapPtrBase`.  
   
 ```
 void Free() throw();
 ```  
   
 ### <a name="remarks"></a>Note  
- L'oggetto a cui punta il `CHeapPtrBase` viene liberato e [CHeapPtrBase::m_pData](#m_pdata) variabile membro è impostata su NULL.  
+ L'oggetto a cui fa riferimento il `CHeapPtrBase` viene liberato e il [CHeapPtrBase::m_pData](#m_pdata) variabile membro è impostata su NULL.  
   
 ##  <a name="m_pdata"></a>  CHeapPtrBase::m_pData  
- La variabile membro di dati puntatore.  
+ La variabile di membro dati puntatore.  
   
 ```
 T* m_pData;
@@ -166,19 +166,19 @@ T* m_pData;
  Questa variabile membro contiene le informazioni di puntatore.  
   
 ##  <a name="operator_amp"></a>  CHeapPtrBase::operator &amp;  
- Il & (operatore).  
+ I & operatore.  
   
 ```
 T** operator&() throw();
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- Restituisce l'indirizzo dell'oggetto a cui fa riferimento il `CHeapPtrBase` oggetto.  
+ Restituisce l'indirizzo dell'oggetto a cui punta il `CHeapPtrBase` oggetto.  
   
 
 ##  <a name="operator_ptr"></a>  CHeapPtrBase::operator-&gt;  
 
- L'operatore puntatore a membro.  
+ Operatore puntatore a membro.  
   
 ```
 T* operator->() const throw();
@@ -188,7 +188,7 @@ T* operator->() const throw();
  Restituisce il valore della [CHeapPtrBase::m_pData](#m_pdata) variabile membro.  
   
 ### <a name="remarks"></a>Note  
- Utilizzare questo operatore per chiamare un metodo in una classe a cui fa riferimento il `CHeapPtrBase` oggetto. Nelle build di debug, un errore di asserzione si verificherà se il `CHeapPtrBase` fa riferimento a NULL.  
+ Utilizzare questo operatore per chiamare un metodo in una classe a cui punta il `CHeapPtrBase` oggetto. Nelle build di debug, un errore di asserzione si verificherà se il `CHeapPtrBase` punta a NULL.  
   
 ##  <a name="operator_t_star"></a>  CHeapPtrBase::operator T *  
  L'operatore di cast.  
@@ -208,13 +208,13 @@ bool ReallocateBytes(size_t nBytes) throw();
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `nBytes`  
- Nuova quantità di memoria da allocare, in byte.  
+ *nBytes*  
+ La nuova quantità di memoria da allocare, in byte.  
   
 ### <a name="return-value"></a>Valore restituito  
  Restituisce true se la memoria è stata allocata, false in caso contrario.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Classe CHeapPtr](../../atl/reference/cheapptr-class.md)   
- [Classe template CComHeapPtr](../../atl/reference/ccomheapptr-class.md)   
- [Cenni preliminari sulla classe](../../atl/atl-class-overview.md)
+ [Classe CComHeapPtr](../../atl/reference/ccomheapptr-class.md)   
+ [Panoramica della classe](../../atl/atl-class-overview.md)

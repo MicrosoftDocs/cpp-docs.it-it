@@ -1,5 +1,5 @@
 ---
-title: Funzioni globali WinModule | Documenti Microsoft
+title: Funzioni globali WinModule | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,18 +15,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 514703e2c7c968035e9defc7677943377778a761
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9ac96acaf337ad3ee73f0b6f93ae6893632962e9
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32362297"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37884563"
 ---
 # <a name="winmodule-global-functions"></a>Funzioni globali WinModule
-Queste funzioni forniscono il supporto per `_AtlCreateWndData` struttura operazioni.  
+Queste funzioni forniscono il supporto per `_AtlCreateWndData` strutturare le operazioni.  
   
 > [!IMPORTANT]
->  Le funzioni elencate nella tabella seguente non possono essere utilizzate nelle applicazioni eseguite in Windows Runtime.  
+>  Le funzioni elencate nella tabella seguente non possono essere utilizzate nelle applicazioni eseguite nel Runtime di Windows.  
   
 |||  
 |-|-|  
@@ -47,17 +47,17 @@ ATLINLINE ATLAPI_(void) AtlWinModuleAddCreateWndData(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `pWinModule`  
+ *pWinModule*  
  Puntatore a un modulo [_ATL_WIN_MODULE70](../../atl/reference/atl-win-module70-structure.md) struttura.  
   
- `pData`  
- Puntatore al [_AtlCreateWndData](../../atl/reference/atlcreatewnddata-structure.md) struttura deve essere inizializzato e aggiunti al modulo corrente.  
+ *pData*  
+ Puntatore per il [atlcreatewnddata](../../atl/reference/atlcreatewnddata-structure.md) struttura deve essere inizializzato e aggiunto al modulo corrente.  
   
- `pObject`  
- Puntatore a un oggetto **questo** puntatore.  
+ *pObject*  
+ Puntatore a un oggetto **ciò** puntatore.  
   
 ### <a name="remarks"></a>Note  
- Inizializza un `_AtlCreateWndData` struttura, viene utilizzato per archiviare il **questo** puntatore utilizzato per fare riferimento a istanze di classe e lo aggiunge all'elenco a cui fa riferimento un modulo `_ATL_WIN_MODULE70` struttura. Chiamato da [CAtlWinModule::AddCreateWndData](catlwinmodule-class.md#addcreatewnddata).  
+ Inizializza un `_AtlCreateWndData` struttura, che viene usato per archiviare le **ciò** puntatore utilizzato per fare riferimento alle istanze di classe e lo aggiunge all'elenco di cui viene fatto riferimento da un modulo `_ATL_WIN_MODULE70` struttura. Chiamata eseguita dal [CAtlWinModule::AddCreateWndData](catlwinmodule-class.md#addcreatewnddata).  
   
 ##  <a name="atlwinmoduleextractcreatewnddata"></a>  AtlWinModuleExtractCreateWndData  
  Chiamare questa funzione per estrarre una struttura esistente `_AtlCreateWndData`.  
@@ -67,14 +67,14 @@ ATLINLINE ATLAPI_(void*) AtlWinModuleExtractCreateWndData(_ATL_WIN_MODULE* pWinM
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `pWinModule`  
+ *pWinModule*  
  Puntatore a un modulo [_ATL_WIN_MODULE70](../../atl/reference/atl-win-module70-structure.md) struttura.  
   
 ### <a name="return-value"></a>Valore restituito  
- Restituisce un puntatore al [_AtlCreateWndData](../../atl/reference/atlcreatewnddata-structure.md) struttura.  
+ Restituisce un puntatore per il [atlcreatewnddata](../../atl/reference/atlcreatewnddata-structure.md) struttura.  
   
 ### <a name="remarks"></a>Note  
- Questa funzione consentirà di estrarre un oggetto esistente `_AtlCreateWndData` struttura dall'elenco a cui fa riferimento un modulo `_ATL_WIN_MODULE70` struttura.  
+ Questa funzione estrae un oggetto esistente `_AtlCreateWndData` struttura dall'elenco a cui viene fatto riferimento da un modulo `_ATL_WIN_MODULE70` struttura.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Funzioni](../../atl/reference/atl-functions.md)

@@ -16,33 +16,32 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d6dbf91f2d354bf3a68ce0f251bc6b5d9675af7f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2683daf4fd1293d3fad043037165fa3cbc13de3c
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37943169"
 ---
 # <a name="convertstringtobstr"></a>ConvertStringToBSTR
 **Sezione specifica Microsoft**  
   
- Converte un **char \***  valore un `BSTR`.  
+ Converte un **char \***  valore a un `BSTR`.  
   
 ## <a name="syntax"></a>Sintassi  
   
 ```  
   
-      BSTR __stdcall ConvertStringToBSTR(  
-   const char* pSrc  
-)  
+BSTR __stdcall ConvertStringToBSTR(const char* pSrc)  
 ```  
   
 #### <a name="parameters"></a>Parametri  
- `pSrc`  
+ *pSrc*  
  Oggetto **char \***  variabile.  
   
 ## <a name="example"></a>Esempio  
   
-```  
+```cpp 
 // ConvertStringToBSTR.cpp  
 #include <comutil.h>  
 #include <stdio.h>  
@@ -71,7 +70,7 @@ BSTR text: Test
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** \<comutil.h >  
   
- **Lib:** comsuppw. lib o comsuppwd. lib (vedere [/Zc: wchar_t (wchar_t è il tipo nativo)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) per altre informazioni)  
+ **Lib:** comsuppw. lib o comsuppwd. lib (vedere [/Zc: wchar_t (wchar_t Is tipo nativo)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) per altre informazioni)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Funzioni globali COM del compilatore](../cpp/compiler-com-global-functions.md)

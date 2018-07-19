@@ -1,5 +1,5 @@
 ---
-title: Classe CMFCImageEditorPaletteBar | Documenti Microsoft
+title: Classe CMFCImageEditorPaletteBar | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,15 +20,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e377a465dd55d8940e74617130216220d03f1218
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e3b10e18e12b5a2f27c0b83562ef16321da67422
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370042"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37851457"
 ---
 # <a name="cmfcimageeditorpalettebar-class"></a>Classe CMFCImageEditorPaletteBar
-Fornisce funzionalità barra tavolozza per una finestra di dialogo editor di immagini.  
+Fornisce la funzionalità di indicatore tavolozza a una finestra di dialogo dell'editor di immagini.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -44,12 +44,12 @@ class CMFCImageEditorPaletteBar : public CMFCToolBar
 |-|-|  
 |Nome|Descrizione|  
 |[CMFCImageEditorPaletteBar::GetRowHeight](#getrowheight)|Restituisce l'altezza dei pulsanti della barra degli strumenti. (Esegue l'override [CMFCToolBar::GetRowHeight](../../mfc/reference/cmfctoolbar-class.md#getrowheight).)|  
-|[CMFCImageEditorPaletteBar::IsButtonExtraSizeAvailable](#isbuttonextrasizeavailable)|Determina se la barra degli strumenti possa visualizzare pulsanti che è sono esteso bordi. (Esegue l'override [CMFCToolBar::IsButtonExtraSizeAvailable](../../mfc/reference/cmfctoolbar-class.md#isbuttonextrasizeavailable).)|  
+|[CMFCImageEditorPaletteBar::IsButtonExtraSizeAvailable](#isbuttonextrasizeavailable)|Determina se la barra degli strumenti può mostrare pulsanti che hanno esteso i bordi. (Esegue l'override [CMFCToolBar::IsButtonExtraSizeAvailable](../../mfc/reference/cmfctoolbar-class.md#isbuttonextrasizeavailable).)|  
   
 ### <a name="remarks"></a>Note  
- Questa classe non deve essere utilizzato direttamente dal codice.  
+ Questa classe non deve essere usato direttamente dal codice.  
   
- Il framework utilizza questa classe per visualizzare una barra di tavolozza in una finestra di dialogo editor di immagini. Per ulteriori informazioni nella finestra di dialogo dell'editor di immagini, vedere [CMFCImageEditorDialog classe](../../mfc/reference/cmfcimageeditordialog-class.md).  
+ Il framework utilizza questa classe viene visualizzata una barra tavolozza in una finestra di dialogo dell'editor di immagini. Per altre informazioni nella finestra di dialogo dell'editor di immagini, vedere [classe CMFCImageEditorDialog](../../mfc/reference/cmfcimageeditordialog-class.md).  
   
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -82,14 +82,14 @@ virtual int GetRowHeight() const;
  L'altezza di ogni pulsante sulla barra degli strumenti.  
   
 ##  <a name="isbuttonextrasizeavailable"></a>  CMFCImageEditorPaletteBar::IsButtonExtraSizeAvailable  
- Determina se la barra degli strumenti possa visualizzare pulsanti che è sono esteso bordi.  
+ Determina se la barra degli strumenti può mostrare pulsanti che hanno esteso i bordi.  
   
 ```  
 virtual BOOL IsButtonExtraSizeAvailable() const;  
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- Questo metodo restituisce `FALSE`.  
+ Questo metodo restituisce FALSE.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Grafico delle gerarchie](../../mfc/hierarchy-chart.md)   

@@ -1,5 +1,5 @@
 ---
-title: Classe CFirePropNotifyEvent | Documenti Microsoft
+title: Classe CFirePropNotifyEvent | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,18 +21,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 728f4e973a7ef74dcdbb44150375df235e0d990e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 20fd9c660f036c04ea2ca7d06d04315391504e3e
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32360988"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37881529"
 ---
-# <a name="cfirepropnotifyevent-class"></a>CFirePropNotifyEvent (classe)
-Questa classe fornisce metodi per la notifica del sink del contenitore riguardanti le modifiche alle proprietà di controllo.  
+# <a name="cfirepropnotifyevent-class"></a>Classe CFirePropNotifyEvent
+Questa classe fornisce metodi per inviare la notifica sink del contenitore relative alle modifiche delle proprietà di controllo.  
   
 > [!IMPORTANT]
->  Questa classe e i relativi membri non possono essere utilizzati nelle applicazioni eseguite in Windows Runtime.  
+>  Questa classe e i relativi membri non possono essere utilizzati nelle applicazioni eseguite nel Runtime di Windows.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -46,21 +46,21 @@ class CFirePropNotifyEvent
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[CFirePropNotifyEvent::FireOnChanged](#fireonchanged)|(Statico) Notifica al sink del contenitore che ha modificato una proprietà del controllo.|  
+|[CFirePropNotifyEvent::FireOnChanged](#fireonchanged)|(Statico) Notifica al sink del contenitore che una proprietà del controllo è stato modificato.|  
 |[CFirePropNotifyEvent::FireOnRequestEdit](#fireonrequestedit)|(Statico) Notifica al sink del contenitore che una proprietà del controllo sta per essere modificata.|  
   
 ## <a name="remarks"></a>Note  
- `CFirePropNotifyEvent` presenta due metodi che segnalano il sink del contenitore che una proprietà controllo è stata modificata o sta per essere modificata.  
+ `CFirePropNotifyEvent` dispone di due metodi che segnalano il sink del contenitore che una proprietà del controllo è stato modificato o sta per essere modificata.  
   
- Se la classe che implementa il controllo è derivata da `IPropertyNotifySink`, `CFirePropNotifyEvent` metodi vengono richiamati quando si chiama `FireOnRequestEdit` o `FireOnChanged`. Se la classe di controllo non è derivata da `IPropertyNotifySink`, le chiamate a queste funzioni restituiscono `S_OK`.  
+ Se la classe che implementa il controllo è derivata da `IPropertyNotifySink`, il `CFirePropNotifyEvent` metodi vengono richiamati quando si chiama `FireOnRequestEdit` o `FireOnChanged`. Se la classe del controllo non è derivata da `IPropertyNotifySink`, chiamate a queste funzioni restituiscono S_OK.  
   
- Per ulteriori informazioni sulla creazione di controlli, vedere il [esercitazione di ATL](../../atl/active-template-library-atl-tutorial.md).  
+ Per altre informazioni sulla creazione di controlli, vedere la [esercitazione di ATL](../../atl/active-template-library-atl-tutorial.md).  
   
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** atlctl. h  
   
 ##  <a name="fireonchanged"></a>  CFirePropNotifyEvent::FireOnChanged  
- Notifica a tutti connessi [IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638) interfacce (per ogni punto di connessione dell'oggetto) che ha modificato la proprietà dell'oggetto specificato.  
+ Notifica tutti connessa [IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638) interfacce (per ogni punto di connessione dell'oggetto) che la proprietà dell'oggetto specificato è stato modificato.  
   
 ```
 static HRESULT FireOnChanged(IUnknown* pUnk, DISPID dispID);
@@ -68,19 +68,19 @@ static HRESULT FireOnChanged(IUnknown* pUnk, DISPID dispID);
   
 ### <a name="parameters"></a>Parametri  
  *pUnk*  
- [in] Puntatore al **IUnknown** dell'oggetto che invia la notifica.  
+ [in] Puntatore al `IUnknown` dell'oggetto che invia la notifica.  
   
  *dispID*  
  [in] Identificatore della proprietà che è stato modificato.  
   
 ### <a name="return-value"></a>Valore restituito  
- Uno degli standard `HRESULT` valori.  
+ Uno dei valori di HRESULT standard.  
   
 ### <a name="remarks"></a>Note  
  Questa funzione è sicura chiamare anche se il controllo non supporta i punti di connessione.  
   
 ##  <a name="fireonrequestedit"></a>  CFirePropNotifyEvent::FireOnRequestEdit  
- Notifica a tutti connessi [IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638) interfacce (per ogni punto di connessione dell'oggetto) che la proprietà dell'oggetto specificato sta per essere modificata.  
+ Notifica tutti connessa [IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638) interfacce (per ogni punto di connessione dell'oggetto) che la proprietà dell'oggetto specificato sta per essere modificata.  
   
 ```
 static HRESULT FireOnRequestEdit(IUnknown* pUnk, DISPID dispID);
@@ -88,16 +88,16 @@ static HRESULT FireOnRequestEdit(IUnknown* pUnk, DISPID dispID);
   
 ### <a name="parameters"></a>Parametri  
  *pUnk*  
- [in] Puntatore al **IUnknown** dell'oggetto che invia la notifica.  
+ [in] Puntatore al `IUnknown` dell'oggetto che invia la notifica.  
   
  *dispID*  
- [in] Identificatore della proprietà sta per essere modificata.  
+ [in] Identificatore della proprietà per essere modificata.  
   
 ### <a name="return-value"></a>Valore restituito  
- Uno degli standard `HRESULT` valori.  
+ Uno dei valori di HRESULT standard.  
   
 ### <a name="remarks"></a>Note  
  Questa funzione è sicura chiamare anche se il controllo non supporta i punti di connessione.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Cenni preliminari sulla classe](../../atl/atl-class-overview.md)
+ [Panoramica della classe](../../atl/atl-class-overview.md)

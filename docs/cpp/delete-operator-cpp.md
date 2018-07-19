@@ -1,5 +1,5 @@
 ---
-title: Operatore Delete (C++) | Documenti Microsoft
+title: Operatore Delete (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,11 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3b523f5c10cbd28dfb2d584ea8241bc1518cf925
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 89ad061dc2be090abbcfbc147f1ea5fbddb8ae6a
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37943269"
 ---
 # <a name="delete-operator-c"></a>Operatore delete (C++)
 Dealloca un blocco di memoria.  
@@ -35,34 +36,34 @@ Dealloca un blocco di memoria.
 ```  
   
 ## <a name="remarks"></a>Note  
- Il *cast-expression* argomento deve essere un puntatore a un blocco di memoria allocato in precedenza per un oggetto creato con il [nuovo operatore](../cpp/new-operator-cpp.md). Il **eliminare** operatore ha un risultato di tipo `void` e pertanto non restituisce un valore. Ad esempio:  
+ Il *cast-expression* argomento deve essere un puntatore a un blocco di memoria allocato in precedenza per un oggetto creato con il [operatore new](../cpp/new-operator-cpp.md). Il **eliminare** operatore ha un risultato di tipo **void** e pertanto non restituisce un valore. Ad esempio:  
   
-```  
+```cpp 
 CDialog* MyDialog = new CDialog;  
 // use MyDialog  
 delete MyDialog;  
 ```  
   
- Utilizzando **eliminare** su un puntatore a un oggetto non è stato allocato con **nuova** risultati imprevedibili. Tuttavia, è possibile utilizzare **eliminare** su un puntatore con il valore 0. Ciò significa che, quando **nuova** restituisce 0 in caso di errore, il risultato di un'operazione di eliminazione **nuova** operazione è puramente informativo. Vedere [nuovo ed eliminare operatori](../cpp/new-and-delete-operators.md) per ulteriori informazioni.  
+ Usando **eliminare** su un puntatore a un oggetto non allocato con **nuove** otterranno risultati imprevedibili. Tuttavia, è possibile utilizzare **eliminare** su un puntatore con il valore 0. Questo significa che, quando **nuove** restituisce 0 in caso di errore, il risultato di un'operazione di eliminazione **nuove** operazione è solo informativo. Visualizzare [la nuova ed eliminare operatori](../cpp/new-and-delete-operators.md) per altre informazioni.  
   
- Il **nuova** e **eliminare** operatori possono anche essere utilizzati per i tipi predefiniti, incluse le matrici. Se `pointer` fa riferimento a una matrice, inserire parentesi vuote prima di `pointer`:  
+ Il **nuove** e **eliminare** operatori possono anche essere utilizzati per i tipi predefiniti, incluse le matrici. Se `pointer` fa riferimento a una matrice, inserire parentesi vuote prima di `pointer`:  
   
-```  
+```cpp 
 int* set = new int[100];  
 //use set[]  
 delete [] set;  
 ```  
   
- Utilizzo di **eliminare** operatore su un oggetto dealloca la memoria. Un programma che dereferenzia un puntatore dopo l'eliminazione dell'oggetto può ottenere risultati imprevisti o un arresto anomalo.  
+ Usando il **eliminare** operatore su un oggetto dealloca la memoria. Un programma che dereferenzia un puntatore dopo l'eliminazione dell'oggetto può ottenere risultati imprevisti o un arresto anomalo.  
   
- Quando **eliminare** viene utilizzata per deallocare la memoria per un oggetto di classe C++, il distruttore dell'oggetto viene chiamato prima di deallocazione della memoria dell'oggetto (se l'oggetto ha un distruttore).  
+ Quando **eliminare** viene utilizzata per deallocare memoria per un oggetto di classe C++, il distruttore dell'oggetto viene chiamato prima di deallocazione della memoria dell'oggetto (se l'oggetto ha un distruttore).  
   
- Se l'operando per il **eliminare** operatore è un l-value modificabile, il relativo valore sarà non definito dopo l'eliminazione dell'oggetto.  
+ Se l'operando per il **eliminare** operatore è un l-value modificabile, il relativo valore è indefinito dopo che l'oggetto viene eliminato.  
   
 ## <a name="using-delete"></a>Utilizzo di delete  
  Esistono due varianti sintattiche per il [operatore delete](../cpp/delete-operator-cpp.md): uno per singoli oggetti e l'altro per le matrici di oggetti. Nel frammento di codice seguente viene illustrato in che modo differiscono:  
   
-```  
+```cpp 
 // expre_Using_delete.cpp  
 struct UDType   
 {  
@@ -89,12 +90,12 @@ int main()
  Nei due casi seguenti vengono prodotti risultati non definiti: utilizzando la forma per le matrici di eliminazione (delete [ ]) su un oggetto e utilizzando la forma per le non matrici di eliminazione su una matrice.  
   
 ## <a name="example"></a>Esempio  
- Per esempi di utilizzo **eliminare**, vedere [nuovo operatore](../cpp/new-operator-cpp.md).  
+ Per esempi di utilizzo **eliminare**, vedere [operatore new](../cpp/new-operator-cpp.md).  
   
 ## <a name="how-delete-works"></a>Funzionamento di delete  
  L'operatore delete richiama la funzione **operatore delete**.  
   
- Per gli oggetti non di tipo di classe ([classe](../cpp/class-cpp.md), [struct](../cpp/struct-cpp.md), o [unione](../cpp/unions.md)), viene richiamato l'operatore delete globale. Per oggetti di tipo classe, il nome della funzione di deallocazione viene risolto in ambito globale se l'espressione delete inizia con l'operatore di risoluzione dell'ambito (::) unario. In caso contrario, l'operatore delete richiama il distruttore di un oggetto prima della deallocazione di memoria (se il puntatore non ha valore null). L'operatore delete può essere definito in base alle classi; se non è presente una definizione per una determinata classe, l'operatore delete globale viene richiamato. Se l'espressione delete viene utilizzata per deallocare un oggetto di classe di tipo statico con un distruttore virtuale, la funzione di deallocazione viene risolta dal distruttore virtuale di tipo dinamico dell'oggetto.  
+ Per gli oggetti non di tipo classe ([classe](../cpp/class-cpp.md), [struct](../cpp/struct-cpp.md), o [union](../cpp/unions.md)), viene richiamato l'operatore delete globale. Per oggetti di tipo classe, il nome della funzione di deallocazione viene risolto in ambito globale se l'espressione delete inizia con l'operatore di risoluzione dell'ambito (::) unario. In caso contrario, l'operatore delete richiama il distruttore di un oggetto prima della deallocazione di memoria (se il puntatore non ha valore null). L'operatore delete può essere definito in base alle classi; se non è presente una definizione per una determinata classe, l'operatore delete globale viene richiamato. Se l'espressione delete viene utilizzata per deallocare un oggetto di classe di tipo statico con un distruttore virtuale, la funzione di deallocazione viene risolta dal distruttore virtuale di tipo dinamico dell'oggetto.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Espressioni con operatori unari](../cpp/expressions-with-unary-operators.md)   

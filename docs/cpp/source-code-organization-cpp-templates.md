@@ -1,5 +1,5 @@
 ---
-title: Origine dell'organizzazione di codice (modelli di C++) | Documenti Microsoft
+title: Origine di organizzazione del codice (modelli di C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -10,24 +10,24 @@ dev_langs:
 ms.assetid: 50569c5d-0219-4966-9bcf-a8689074ad1d
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: 05a5b0423b79e817e16aeb0d39f1d0dcf856c1ba
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ef23b1a12305be9ecf181beb085bb686e81b083b
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32423116"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37939754"
 ---
-# <a name="source-code-organization-c-templates"></a>Organizzazione di codice sorgente (modelli di C++)
+# <a name="source-code-organization-c-templates"></a>Organizzazione del codice sorgente (modelli di C++)
 
-Quando si definisce un modello di classe, è necessario organizzare il codice sorgente in modo che le definizioni dei membri sono visibili al compilatore quando li richiede.   È possibile scegliere di utilizzare il *modello inclusione* o *creazione esplicita di istanza* modello. Nel modello di inclusione, includere definizioni di membro in ogni file che utilizza un modello. Questo approccio è più semplice e offre la massima flessibilità in termini di quali tipi concreti possono essere utilizzati con il modello. Lo svantaggio è che è possibile aumentare i tempi di compilazione. L'impatto può essere significativo se un progetto e/o i file inclusi stessi sono di grandi dimensioni. Con l'approccio di creazione esplicita di istanza, il modello crea un'istanza concrete classi o membri di classe per tipi specifici.  Questo approccio può accelerare i tempi di compilazione, ma limita l'utilizzo solo alle classi che ha abilitato l'implementatore di modello anticipatamente. In generale, è consigliabile utilizzare il modello di inclusione a meno che i tempi di compilazione costituiscano un problema.
+Quando si definisce un modello di classe, è necessario organizzare il codice sorgente in modo che le definizioni di membro sono visibili al compilatore quando servono.   È possibile scegliere di mediante il *modello di inclusione* o nella *creazione esplicita di istanza* modello. Nel modello di inclusione, si includono le definizioni dei membri in tutti i file che usa un modello. Questo approccio è più semplice e offre la massima flessibilità in termini di quali tipi concreti sono utilizzabile con il modello. Lo svantaggio è che è possibile aumentare i tempi di compilazione. L'impatto può essere significativo se un progetto e/o i file inclusi stessi sono di grandi dimensioni. Con l'approccio di creazione esplicita di istanza, il modello stesso, crea un'istanza concrete classi o membri di classe per tipi specifici.  Questo approccio può accelerare i tempi di compilazione, ma limita l'utilizzo solo alle classi che l'implementatore del modello ha abilitato anticipatamente. In generale, è consigliabile usare il modello di inclusione a meno che i tempi di compilazione diventano un problema.
 
 ## <a name="background"></a>Sfondo
 
-Modelli non sono come le classi normali nel senso che il compilatore non genera il codice oggetto per un modello o i relativi membri. Non c'è niente per generare fino a quando il modello viene creata un'istanza con tipi concreti. Quando il compilatore rileva un'istanza del modello, ad esempio `MyClass<int> mc;` e ancora non esiste alcuna classe con la firma, crea una nuova classe. Inoltre, tenta di generare il codice per tutte le funzioni membro che vengono utilizzati. Se tali definizioni sono in un file che non è #included, direttamente o indirettamente, nel file con estensione cpp che viene compilato, il compilatore non è possibile visualizzarli.  Dal punto di vista del compilatore, ciò non rappresenta necessariamente un errore perché le funzioni possono essere definite in un'altra unità di conversione, in cui il linker caso verrà trovarli.  Se il linker non trovare tale codice, viene generato un **esterno non risolto** errore.
+Modelli non sono come le classi normali nel senso che il compilatore non genera codice oggetto per un modello o i relativi membri. Non sono necessarie per generare fino a quando il modello viene istanziato con tipi concreti. Quando il compilatore rileva un'istanza del modello, ad esempio `MyClass<int> mc;` e nessuna classe con tale firma non esiste ancora, crea una nuova classe. Tenta anche di generare codice per tutte le funzioni membro che vengono usati. Se tali definizioni sono in un file che non è #included, direttamente o indirettamente, nel file con estensione cpp che è in fase di compilazione, il compilatore non è possibile visualizzarli.  Dal punto di vista del compilatore, non è necessariamente un errore perché le funzioni possono essere definite in un'altra unità di conversione, nel quale caso il linker strumenti sarà disponibili.  Se il linker non rileva che il codice, genera un **esterno non risolto** errore.
 
 ## <a name="the-inclusion-model"></a>Il modello di inclusione
 
-Il modo più semplice e più comune per rendere visibile in un'unità di conversione, definizioni di modello è inserire le definizioni nel file di intestazione.  Qualsiasi file con estensione cpp che usa il modello deve semplicemente #include l'intestazione. Si tratta dell'approccio utilizzato nella libreria Standard.
+Il modo più semplice e più comune per rendere visibile in un'unità di conversione, definizioni di modello è di inserire le definizioni nel file di intestazione stessa.  Qualsiasi file con estensione cpp che usa il modello deve semplicemente #include l'intestazione. Questo è l'approccio usato nella libreria Standard.
 
 ```cpp
 #ifndef MYARRAY
@@ -57,13 +57,13 @@ public:
 #endif
 ```
 
-Con questo approccio, il compilatore ha accesso alla definizione del modello completo e può creare un'istanza di modelli su richiesta per qualsiasi tipo. È semplice e relativamente facile da gestire. Tuttavia, il modello di inclusione con un costo in termini di tempi di compilazione.   Questo costo può essere significativo nei programmi di grandi dimensioni, soprattutto se l'intestazione del modello stesso #includes altre intestazioni. File di ogni cpp #includes l'intestazione otterrà la propria copia di modelli di funzione e tutte le definizioni. Il linker in genere sarà in grado di operazioni in modo che non si finisce con più definizioni per una funzione, ma il tempo per eseguire questa operazione. Programmi di dimensioni ridotte che il tempo di compilazione aggiuntiva probabilmente non è significativo.
+Con questo approccio, il compilatore ha accesso alla definizione del modello completo e può creare istanze modelli on demand per qualsiasi tipo. È facile e relativamente facile da gestire. Tuttavia, il modello di inclusione con un costo in termini di tempi di compilazione.   Questo costo può essere significativo nei programmi di grandi dimensioni, soprattutto se l'intestazione del modello stesso #includes altre intestazioni. Ogni estensione cpp file #includes l'intestazione otterrà la propria copia di tutte le definizioni e i modelli di funzione. Il linker sarà in genere in grado di sistemare le cose in modo che non finire con più definizioni per una funzione, ma occorre tempo per eseguire questa operazione. Programmi di dimensioni ridotte che i tempi di compilazione aggiuntivi probabilmente non sono significativo.
 
 ## <a name="the-explicit-instantiation-model"></a>Il modello di creazione esplicita di istanza
 
-Il modello di inclusione non è valido per il progetto, se è certo il set di tipi che verrà utilizzato per creare un'istanza di un modello, è possibile separare il codice del modello in un file con estensione h e cpp e nel file con estensione cpp creare in modo esplicito i modelli. In questo modo il codice oggetto deve essere generato che il compilatore verrà visualizzato quando viene rilevato creazioni di istanze utente.
+Il modello di inclusione non è valido per il progetto, se è certo il set di tipi che verrà usato per creare un'istanza di un modello, è possibile separare il codice del modello in un file con estensione cpp e h e nel file con estensione cpp creare in modo esplicito i modelli. Ciò causerà generazione del codice oggetto che il compilatore visualizzeranno quando viene rilevato le creazioni di istanze utente.
 
-Creazione di un'istanza esplicita è creare usando il modello di parola chiave seguito dalla firma dell'entità che si desidera creare un'istanza. Può trattarsi di un tipo o un membro. Se si crea un'istanza in modo esplicito un tipo, vengono creata un'istanza di tutti i membri.
+Crei una creazione esplicita di istanza mediante la parola chiave template seguita dalla firma dell'entità che si desidera creare un'istanza. Può trattarsi di un tipo o un membro. Se si crea un'istanza in modo esplicito un tipo, tutti i membri vengono create istanze.
 
 ```cpp
 template MyArray<double, 5>;
@@ -108,7 +108,7 @@ void MyArray<T,N>::Print()
 template MyArray<double, 5>;template MyArray<string, 5>;
 ```
 
-Nell'esempio precedente, creazioni di istanze esplicite sono nella parte inferiore del file con estensione cpp. Oggetto `MyArray` può essere usata solo per **doppie** o **stringa** tipi.
+Nell'esempio precedente, le creazioni di istanze esplicite sono nella parte inferiore del file con estensione cpp. Oggetto `MyArray` può essere utilizzato soltanto **doppie** o `String` tipi.
 
 > [!NOTE]
-> In C++ 11 il **esportare** (parola chiave) è stata deprecata nel contesto di definizioni di modello. In termini pratici ha un impatto ridotto perché la maggior parte dei compilatori non supportavano mai.
+> In c++11 il **esportare** parola chiave è stata deprecata nel contesto di definizioni di modello. In termini pratici questo ha un impatto minimo perché la maggior parte dei compilatori non supportavano mai.

@@ -1,5 +1,5 @@
 ---
-title: Classe CMFCRibbonButton | Documenti Microsoft
+title: Classe CMFCRibbonButton | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -124,12 +124,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8dc6e780ece78bca59a95f8050a36a77656f0ad6
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: d1da517ef952dd3fcdb0772feedb8e576be9502b
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37040038"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37850020"
 ---
 # <a name="cmfcribbonbutton-class"></a>Classe CMFCRibbonButton
 La classe `CMFCRibbonButton` implementa i pulsanti che è possibile posizionare negli elementi della barra multifunzione, ad esempio pannelli, barre di accesso rapido e menu a comparsa.  
@@ -219,7 +219,7 @@ class CMFCRibbonButton : public CMFCRibbonBaseElement
  [!code-cpp[NVC_MFC_RibbonApp#7](../../mfc/reference/codesnippet/cpp/cmfcribbonbutton-class_1.cpp)]  
   
 ## <a name="remarks"></a>Note  
- Per usare un pulsante della barra multifunzione in un'applicazione, creare l'oggetto pulsante e aggiungerlo alla barra multifunzione appropriata [pannello](../../mfc/reference/cmfcribbonpanel-class.md).  
+ Per usare un pulsante della barra multifunzione in un'applicazione, costruire l'oggetto pulsante e aggiungerlo alla barra multifunzione appropriata [pannello](../../mfc/reference/cmfcribbonpanel-class.md).  
   
 ```  
 CMFCRibbonPanel* pPanel = pCategory->AddPanel (
@@ -325,12 +325,12 @@ CMFCRibbonButton(
  Specifica l'etichetta di testo del pulsante.  
   
  [in] *nSmallImageIndex*  
- Specifica un indice in base zero dell'immagine di piccole dimensioni del pulsante nell'elenco delle immagini della categoria padre.  
+ Specifica un indice in base zero dell'immagine di piccole dimensioni del pulsante dell'elenco di immagini della categoria padre.  
   
  [in] *nLargeImageIndex*  
- Specifica un indice in base zero dell'immagine di grandi dimensioni del pulsante nell'elenco delle immagini della categoria padre.  
+ Specifica un indice in base zero dell'immagine del pulsante di grandi dimensioni nell'elenco delle immagini della categoria padre.  
   
- [in] *icona*  
+ [in] *hIcon*  
  Specifica un handle per l'icona utilizzata dall'applicazione come immagine del pulsante.  
   
 ### <a name="example"></a>Esempio  
@@ -407,7 +407,7 @@ int FindSubItemIndexByID(UINT uiID) const;
  Specifica l'ID di comando della voce di menu a comparsa.  
   
 ### <a name="return-value"></a>Valore restituito  
- L'indice in base zero dell'elemento secondario associato con il *uiID*. -1 se non sono presenti tali elementi secondari.  
+ Indice a base zero dell'elemento secondario associato con il *uiID*. -1 se non sono presenti tali elementi secondari.  
   
 ##  <a name="getcommandrect"></a>  CMFCRibbonButton::GetCommandRect  
 
@@ -457,7 +457,7 @@ int GetImageIndex(BOOL bLargeImage) const;
   
 ### <a name="parameters"></a>Parametri  
  [in] *bLargeImage*  
- Se `TRUE`, restituisce l'indice dell'immagine nell'elenco delle immagini che contiene le immagini di grandi dimensioni; in caso contrario, restituisce l'indice dell'immagine nell'elenco delle immagini che contiene le immagini di piccole dimensioni.  
+ Se TRUE, restituisce l'indice dell'immagine nell'elenco delle immagini che contiene le immagini di grandi dimensioni. in caso contrario, restituisce l'indice dell'immagine nell'elenco delle immagini che contiene le immagini di piccole dimensioni.  
   
 ### <a name="return-value"></a>Valore restituito  
  L'indice dell'immagine del pulsante nell'elenco di immagini associato.  
@@ -498,7 +498,7 @@ HMENU GetMenu() const;
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- Un handle a un menu di Windows assegnato al pulsante; `NULL` se non è assegnato alcun menu.  
+ Un handle a un menu di Windows assegnato al pulsante. NULL se non esiste alcun menu di scelta assegnato.  
   
 ##  <a name="getmenurect"></a>  CMFCRibbonButton::GetMenuRect  
 
@@ -654,7 +654,7 @@ BOOL IsDefaultCommand() const;
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- `TRUE` Se è stato abilitato il comando predefinito per un pulsante della barra multifunzione. `FALSE` in caso contrario.  
+ TRUE se è stato abilitato il comando predefinito per un pulsante della barra multifunzione. FALSE in caso contrario.  
   
 ##  <a name="isdefaultpanelbutton"></a>  CMFCRibbonButton::IsDefaultPanelButton  
 
@@ -723,14 +723,14 @@ virtual BOOL IsPopupDefaultMenuLook() const;
 ### <a name="remarks"></a>Note  
   
 ##  <a name="isrightalignmenu"></a>  CMFCRibbonButton::IsRightAlignMenu  
- Specifica se il menu è allineato a destra.  
+ Specifica se il menu di scelta è allineata a destra.  
   
 ```  
 BOOL IsRightAlignMenu() const;  
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- `TRUE` Se i menu è allineato a destra; in caso contrario `FALSE`.  
+ TRUE se il menu di scelta è allineata a destra; in caso contrario, FALSE.  
   
 ##  <a name="issinglelinetext"></a>  CMFCRibbonButton::IsSingleLineText  
 
@@ -767,7 +767,7 @@ virtual void OnClick(CPoint point);
  Specifica la posizione di clic del mouse.  
   
 ### <a name="remarks"></a>Note  
- Eseguire l'override di questo metodo in una classe derivata se si desidera gestire questo evento.  
+ L'override del metodo in una classe derivata se si desidera gestire questo evento.  
   
 ##  <a name="ondraw"></a>  Cmfcribbonbutton:: OnDraw  
 
@@ -826,7 +826,7 @@ BOOL RemoveSubItem(int nIndex);
  Specifica l'indice in base zero della voce di menu che si desidera rimuovere.  
   
 ### <a name="return-value"></a>Valore restituito  
- `TRUE` Se l'elemento specificato è stato rimosso correttamente; in caso contrario `FALSE` se *nIndex* è negativo o supera il numero di voci di menu nel menu a comparsa.  
+ TRUE se l'elemento specificato è stato rimosso correttamente; in caso contrario, FALSE se *nIndex* è negativo o supera il numero di voci di menu nel menu a comparsa.  
   
 ##  <a name="setaccdata"></a>  Cmfcribbonbutton:: Setaccdata  
  Imposta i dati di accessibilità per il pulsante della barra multifunzione.  
@@ -845,7 +845,7 @@ virtual BOOL SetACCData(
  Dati di accessibilità per l'elemento della barra multifunzione.  
   
 ### <a name="return-value"></a>Valore restituito  
- Restituisce `TRUE` se l'operazione riesce; in caso contrario, FALSE.  
+ Restituisce TRUE se ha esito positivo. in caso contrario, FALSE.  
   
 ### <a name="remarks"></a>Note  
   
@@ -858,7 +858,7 @@ void SetAlwaysLargeImage(BOOL bSet=TRUE);
   
 ### <a name="parameters"></a>Parametri  
  [in] *bSet*  
- Se `TRUE`, il pulsante Visualizza un'immagine di grandi dimensioni. In caso contrario, il pulsante Visualizza un'immagine di piccole dimensioni.  
+ Se TRUE, il pulsante Visualizza un'immagine di grandi dimensioni. In caso contrario, il pulsante Visualizza un'immagine piccola.  
   
 ##  <a name="setdefaultcommand"></a>  CMFCRibbonButton::SetDefaultCommand  
  Abilita il comando predefinito per il pulsante della barra multifunzione.  
@@ -869,10 +869,10 @@ void SetDefaultCommand(BOOL bSet=TRUE);
   
 ### <a name="parameters"></a>Parametri  
  [in] *bSet*  
- Se `TRUE`, il pulsante può eseguire il comando predefinito. Se `FALSE`, il pulsante non è possibile eseguire il comando predefinito.  
+ Se TRUE, il pulsante può eseguire il comando predefinito. Se FALSE, il pulsante non è possibile eseguire il comando predefinito.  
   
 ### <a name="remarks"></a>Note  
- *bSet* è rilevante solo quando il pulsante dispone di un menu. Se *bSet* è `TRUE`, il pulsante può eseguire il comando predefinito e il menu di scelta rapida assegnato viene visualizzato solo quando un utente fa clic sulla freccia a destra del pulsante. In caso contrario, il pulsante non è possibile eseguire il comando predefinito e viene visualizzato il menu a comparsa indipendentemente da quale area del pulsante l'utente fa clic.  
+ *bSet* è rilevante solo quando il pulsante presenta un menu. Se *bSet* è TRUE, il pulsante può eseguire il comando predefinito e menu di scelta rapida assegnato viene visualizzato solo quando un utente fa clic sulla freccia a destra del pulsante. In caso contrario, il pulsante non è possibile eseguire il comando predefinito e viene visualizzato il menu a comparsa indipendentemente dall'area del pulsante l'utente fa clic.  
   
 ##  <a name="setdescription"></a>  CMFCRibbonButton::SetDescription  
 
@@ -900,7 +900,7 @@ void SetImageIndex(
  Specifica l'indice dell'immagine.  
   
  [in] *bLargeImage*  
- Se `TRUE`, dell'indice specificato fa riferimento all'elenco di immagini di grandi dimensioni. In caso contrario, l'indice fa riferimento all'elenco delle immagini di piccole dimensioni.  
+ Se TRUE, l'indice specificato si riferisce all'elenco di immagini di grandi dimensioni. In caso contrario, l'indice fa riferimento all'elenco delle immagini di piccole dimensioni.  
   
 ##  <a name="setmenu"></a>  CMFCRibbonButton::SetMenu  
  Assegna un menu a comparsa al pulsante della barra multifunzione.  
@@ -919,19 +919,19 @@ void SetMenu(
   
 ### <a name="parameters"></a>Parametri  
  *hMenu*  
- Un handle a un menu di Windows.  
+ Handle a un menu di Windows.  
   
  *bIsDefaultCommand*  
- Se `TRUE`, il pulsante può eseguire il comando predefinito; in caso contrario, il pulsante Visualizza un menu a comparsa.  
+ Se TRUE, il pulsante può essere eseguito il comando predefinito; in caso contrario, il pulsante Visualizza un menu a comparsa.  
   
  *bRightAlign*  
- Se `TRUE`, il menu è allineato a destra. In caso contrario, il menu è allineato a sinistra.  
+ Se TRUE, il menu di scelta è allineata a destra. In caso contrario, il menu di scelta è allineata a sinistra.  
   
  *uiMenuResID*  
  Un ID di risorsa di menu.  
   
 ### <a name="remarks"></a>Note  
- Quando l'applicazione assegna il menu sul pulsante, il pulsante viene visualizzata una freccia sul lato destro. Se *bIsDefaultCommand* è `TRUE`, il menu viene visualizzato solo quando l'utente fa clic sulla freccia. Se l'utente fa clic sul pulsante, viene eseguito il comando predefinito. Se *bIsDefaultCommand* è `FALSE`, viene visualizzato il menu, fare clic in qualsiasi punto sul pulsante.  
+ Quando l'applicazione assegna il menu di scelta per il pulsante, il pulsante Visualizza una freccia nel lato destro. Se *bIsDefaultCommand* è TRUE, il menu viene visualizzato solo quando l'utente fa clic sulla freccia. Se l'utente fa clic sul pulsante, viene eseguito il comando predefinito. Se *bIsDefaultCommand* è FALSE, facendo clic su un punto qualsiasi del pulsante viene visualizzato il menu.  
   
 ##  <a name="setparentcategory"></a>  CMFCRibbonButton::SetParentCategory  
 
@@ -946,7 +946,7 @@ virtual void SetParentCategory(CMFCRibbonCategory* pParent);
 ### <a name="remarks"></a>Note  
   
 ##  <a name="setrightalignmenu"></a>  CMFCRibbonButton::SetRightAlignMenu  
- Allinea il menu a comparsa al bordo del pulsante.  
+ Consente di allineare il menu a comparsa al bordo del pulsante.  
   
 ```  
 void SetRightAlignMenu(BOOL bSet=TRUE);
@@ -954,7 +954,7 @@ void SetRightAlignMenu(BOOL bSet=TRUE);
   
 ### <a name="parameters"></a>Parametri  
  [in] *bSet*  
- Se `TRUE`, il menu è allineato a destra. In caso contrario, il menu è allineato a sinistra  
+ Se TRUE, il menu di scelta è allineata a destra. In caso contrario, il menu di scelta è allineata a sinistra  
   
 ##  <a name="settext"></a>  CMFCRibbonButton::SetText  
 

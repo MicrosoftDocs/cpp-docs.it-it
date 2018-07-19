@@ -1,5 +1,5 @@
 ---
-title: Classe CComSimpleThreadAllocator | Documenti Microsoft
+title: Classe CComSimpleThreadAllocator | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: da050dbf2b4052aeadd9fe8380857a0ba15b264f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b2c571733aca48ddbfd881a294786d1de334c7c3
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32360920"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37884665"
 ---
 # <a name="ccomsimplethreadallocator-class"></a>Classe CComSimpleThreadAllocator
 Questa classe gestisce la selezione di thread per la classe `CComAutoThreadModule`.  
@@ -46,7 +46,7 @@ class CComSimpleThreadAllocator
 |[CComSimpleThreadAllocator::GetThread](#getthread)|Seleziona un thread.|  
   
 ## <a name="remarks"></a>Note  
- `CComSimpleThreadAllocator` gestisce la selezione di thread per [CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md). `CComSimpleThreadAllocator::GetThread` semplicemente scorre ogni thread e restituisce il successivo nella sequenza.  
+ `CComSimpleThreadAllocator` gestisce la selezione per thread [CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md). `CComSimpleThreadAllocator::GetThread` è sufficiente consente di scorrere ogni thread e restituisce quello successivo nella sequenza.  
   
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** atlbase. h  
@@ -59,20 +59,20 @@ int GetThread(CComApartment* /* pApt */, int nThreads);
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `pApt`  
- Non usato nell'implementazione predefinita ATL.  
+ *pApt*  
+ Non utilizzato nell'implementazione predefinita di ATL.  
   
- `nThreads`  
+ *nThreads*  
  Il numero massimo di thread nel modulo EXE.  
   
 ### <a name="return-value"></a>Valore restituito  
- Un numero intero compreso tra zero e ( `nThreads` - 1). Identifica uno dei thread nel modulo EXE.  
+ Un numero intero compreso tra zero e (*nThreads* - 1). Identifica uno dei thread nel modulo EXE.  
   
 ### <a name="remarks"></a>Note  
- È possibile eseguire l'override `GetThread` per fornire un altro metodo di selezione oppure per utilizzare il `pApt` parametro.  
+ È possibile eseguire l'override `GetThread` per fornire un altro metodo di selezione o per rendere utilizzare il *pApt* parametro.  
   
- `GetThread` viene chiamato dal [CComAutoThreadModule::CreateInstance](../../atl/reference/ccomautothreadmodule-class.md#createinstance).  
+ `GetThread` viene chiamato da [CComAutoThreadModule::CreateInstance](../../atl/reference/ccomautothreadmodule-class.md#createinstance).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Classe CComApartment](../../atl/reference/ccomapartment-class.md)   
- [Cenni preliminari sulla classe](../../atl/atl-class-overview.md)
+ [Panoramica della classe](../../atl/atl-class-overview.md)

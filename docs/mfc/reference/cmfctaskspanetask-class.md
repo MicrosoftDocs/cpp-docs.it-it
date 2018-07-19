@@ -1,5 +1,5 @@
 ---
-title: Classe CMFCTasksPaneTask | Documenti Microsoft
+title: Classe CMFCTasksPaneTask | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -40,15 +40,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c16644a90bb349a78cac43867fdc648e9c01223d
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 041a207af69ac65646e1b30672250b84aa3a5d36
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37040701"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37853969"
 ---
 # <a name="cmfctaskspanetask-class"></a>Classe CMFCTasksPaneTask
-Il `CMFCTasksPaneTask` classe è una classe helper che rappresenta le attività per il controllo riquadro attività ( [CMFCTasksPane](../../mfc/reference/cmfctaskspane-class.md)). L'oggetto attività rappresenta un elemento nel gruppo di attività ( [CMFCTasksPaneTaskGroup](../../mfc/reference/cmfctaskspanetaskgroup-class.md)). Ogni attività può avere un comando eseguito dal framework quando un utente fa clic sull'attività e un'icona visualizzata a sinistra del nome dell'attività.  
+Il `CMFCTasksPaneTask` classe è una classe helper che rappresenta le attività per il controllo del riquadro attività ( [CMFCTasksPane](../../mfc/reference/cmfctaskspane-class.md)). L'oggetto attività rappresenta un elemento nel gruppo di attività ( [CMFCTasksPaneTaskGroup](../../mfc/reference/cmfctaskspanetaskgroup-class.md)). Ogni attività può avere un comando eseguito dal framework quando un utente fa clic sull'attività e un'icona visualizzata a sinistra del nome dell'attività.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -75,24 +75,24 @@ class CMFCTasksPaneTask : public CObject
   
 |nome|Descrizione|  
 |----------|-----------------|  
-|[CMFCTasksPaneTask::m_bAutoDestroyWindow](#m_bautodestroywindow)|Determina se la finestra delle attività viene automaticamente distrutta.|  
-|[CMFCTasksPaneTask::m_bIsBold](#m_bisbold)|Determina se il framework disegna un'etichetta di attività come testo in grassetto.|  
-|[CMFCTasksPaneTask::m_dwUserData](#m_dwuserdata)|Contiene dati definiti dall'utente che il framework associa l'attività. Impostare su zero se l'attività non è disponibili dati associati.|  
-|[CMFCTasksPaneTask::m_hwndTask](#m_hwndtask)|Handle per la finestra delle attività.|  
-|[CMFCTasksPaneTask::m_nIcon](#m_nicon)|L'indice dell'elenco immagini dell'immagine che il framework Visualizza accanto all'attività.|  
-|[CMFCTasksPaneTask::m_nWindowHeight](#m_nwindowheight)|L'altezza della finestra dell'attività. Se l'attività dispone di alcuna finestra attività, questo valore è zero.|  
+|[CMFCTasksPaneTask::m_bAutoDestroyWindow](#m_bautodestroywindow)|Determina se la finestra di attività viene eliminata automaticamente.|  
+|[CMFCTasksPaneTask::m_bIsBold](#m_bisbold)|Determina se il framework consente di disegnare un'etichetta di attività come testo in grassetto.|  
+|[CMFCTasksPaneTask::m_dwUserData](#m_dwuserdata)|Contiene dati definiti dall'utente che associa il framework con l'attività. Impostare su zero se l'attività non è disponibili dati associati.|  
+|[CMFCTasksPaneTask::m_hwndTask](#m_hwndtask)|Handle alla finestra attività.|  
+|[CMFCTasksPaneTask::m_nIcon](#m_nicon)|L'indice nell'elenco delle immagini dell'immagine visualizzato dal framework accanto all'attività.|  
+|[CMFCTasksPaneTask::m_nWindowHeight](#m_nwindowheight)|L'altezza della finestra attività. Se l'attività non dispone di alcun intervallo di attività, questo valore è zero.|  
 |[CMFCTasksPaneTask::m_pGroup](#m_pgroup)|Un puntatore al `CMFCTasksPaneTaskGroup` a cui appartiene questa attività.|  
 |[CMFCTasksPaneTask::m_rect](#m_rect)|Specifica il rettangolo di delimitazione dell'attività.|  
 |[CMFCTasksPaneTask::m_strName](#m_strname)|Il nome dell'attività.|  
-|[CMFCTasksPaneTask::m_uiCommandID](#m_uicommandid)|Specifica l'ID di comando del comando eseguito dal framework quando l'utente fa clic sull'attività. Se questo valore non è un ID di comando valido, l'attività viene considerato come un'etichetta semplice.|  
+|[CMFCTasksPaneTask::m_uiCommandID](#m_uicommandid)|Specifica l'ID di comando del comando eseguito dal framework quando l'utente fa clic sull'attività. Se questo valore non è un ID di comando validi, l'attività viene considerato come un'etichetta semplice.|  
   
 ## <a name="remarks"></a>Note  
- La figura seguente mostra un gruppo di attività contenente tre attività:  
+ La figura seguente illustra un gruppo di attività contenente tre attività:  
   
  ![Gruppo di attività espanso](../../mfc/reference/media/nexttaskgrpexpand.png "nexttaskgrpexpand")  
   
 > [!NOTE]
->  Se un'attività non dispone di un ID di comando valido, viene considerato come un'etichetta semplice.  
+>  Se un'attività non ha un ID di comando validi, si viene considerato come un'etichetta semplice.  
   
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -119,13 +119,13 @@ CMFCTasksPaneTask(
   
 ### <a name="parameters"></a>Parametri  
  *pGroup*  
- Specifica il [CMFCTasksPaneTaskGroup](../../mfc/reference/cmfctaskspanetaskgroup-class.md) a cui appartiene l'attività.  
+ Specifica la [CMFCTasksPaneTaskGroup](../../mfc/reference/cmfctaskspanetaskgroup-class.md) a cui appartiene l'attività.  
   
  *lpszName*  
  Specifica il nome dell'attività.  
   
  *nIcon*  
- Specifica l'indice dell'immagine dell'attività nell'elenco immagini.  
+ Specifica l'indice dell'immagine dell'attività nell'elenco di immagini.  
   
  *uiCommandID*  
  Specifica l'ID di comando del comando che viene eseguito quando viene selezionato l'attività.  
@@ -134,25 +134,25 @@ CMFCTasksPaneTask(
  Dati definiti dall'utente.  
   
  *hwndTask*  
- Specifica l'handle per la finestra delle attività.  
+ Specifica l'handle della finestra attività.  
   
  *bAutoDestroyWindow*  
- Se `TRUE`, verrà eliminata automaticamente la finestra delle attività.  
+ Se TRUE, la finestra delle attività verrà eliminata automaticamente.  
   
  *nWindowHeight*  
- Specifica l'altezza della finestra dell'attività.  
+ Specifica l'altezza della finestra attività.  
   
 ### <a name="remarks"></a>Note  
   
 ##  <a name="m_bautodestroywindow"></a>  CMFCTasksPaneTask::m_bAutoDestroyWindow  
- Determina se la finestra delle attività viene automaticamente distrutta.  
+ Determina se la finestra di attività viene eliminata automaticamente.  
   
 ```  
 BOOL m_bAutoDestroyWindow;  
 ```  
   
 ### <a name="remarks"></a>Note  
- Impostato su `TRUE` per specificare che la finestra delle attività ( [CMFCTasksPaneTask::m_hwndTask](#m_hwndtask)) deve essere eliminato automaticamente; in caso contrario, `FALSE`.  
+ Impostare su TRUE per specificare che la finestra attività ( [CMFCTasksPaneTask::m_hwndTask](#m_hwndtask)) deve essere eliminato automaticamente; in caso contrario, FALSE.  
   
 ##  <a name="m_bisbold"></a>  CMFCTasksPaneTask::m_bIsBold  
  Determina se un'etichetta di attività viene disegnata il testo in grassetto.  
@@ -162,10 +162,10 @@ BOOL m_bIsBold;
 ```  
   
 ### <a name="remarks"></a>Note  
- Impostare il membro `TRUE` per visualizzare il testo in grassetto per l'etichetta di attività.  
+ Imposta questo membro su true per visualizzare testo in grassetto per l'etichetta di attività.  
   
 ##  <a name="m_dwuserdata"></a>  CMFCTasksPaneTask::m_dwUserData  
- Contiene dati definiti dall'utente che viene associati all'attività. Impostare su zero se nessun dato è associato all'attività.  
+ Contiene dati definiti dall'utente associati all'attività. Impostare su zero se nessun dato viene associato all'attività.  
   
 ```  
 DWORD m_dwUserData;  
@@ -174,29 +174,29 @@ DWORD m_dwUserData;
 ### <a name="remarks"></a>Note  
   
 ##  <a name="m_hwndtask"></a>  CMFCTasksPaneTask::m_hwndTask  
- Handle per la finestra delle attività.  
+ Handle alla finestra attività.  
   
 ```  
 HWND m_hwndTask;  
 ```  
   
 ### <a name="remarks"></a>Note  
- Per aggiungere una finestra delle attività, chiamare [CMFCTasksPane::AddWindow](../../mfc/reference/cmfctaskspane-class.md#addwindow).  
+ Per aggiungere una finestra attività, chiamare [CMFCTasksPane::AddWindow](../../mfc/reference/cmfctaskspane-class.md#addwindow).  
   
 ##  <a name="m_nicon"></a>  CMFCTasksPaneTask::m_nIcon  
- La posizione dell'indice in un elenco di immagini che identifica un'immagine che viene visualizzata accanto all'attività specificata.  
+ Posizione di indice in un elenco di immagini che identifica un'immagine visualizzata accanto all'attività specificata.  
   
 ```  
 int m_nIcon;  
 ```  
   
 ### <a name="remarks"></a>Note  
- L'elenco di immagini è l'impostazione [CMFCTasksPane::SetIconsList](../../mfc/reference/cmfctaskspane-class.md#seticonslist).  
+ L'elenco di immagini è impostato [CMFCTasksPane::SetIconsList](../../mfc/reference/cmfctaskspane-class.md#seticonslist).  
   
  Impostare `m_nIcon` su -1 se si desidera visualizzare l'attività senza un'immagine.  
   
 ##  <a name="m_nwindowheight"></a>  CMFCTasksPaneTask::m_nWindowHeight  
- L'altezza della finestra dell'attività. Se l'attività dispone di alcuna finestra attività, questo valore è zero.  
+ L'altezza della finestra attività. Se l'attività non dispone di alcun intervallo di attività, questo valore è zero.  
   
 ```  
 int m_nWindowHeight;  
@@ -205,7 +205,7 @@ int m_nWindowHeight;
 ### <a name="remarks"></a>Note  
   
 ##  <a name="m_pgroup"></a>  CMFCTasksPaneTask::m_pGroup  
- Puntatore ai [CMFCTasksPaneTaskGroup](../../mfc/reference/cmfctaskspanetaskgroup-class.md) a cui appartiene questa attività.  
+ Puntatore per il [CMFCTasksPaneTaskGroup](../../mfc/reference/cmfctaskspanetaskgroup-class.md) a cui appartiene questa attività.  
   
 ```  
 CMFCTasksPaneTaskGroup* m_pGroup;  
@@ -222,7 +222,7 @@ CRect m_rect;
 ```  
   
 ### <a name="remarks"></a>Note  
- Questo valore viene calcolato dal framework quando l'attività viene disegnato.  
+ Questo valore viene calcolato dal framework quando viene disegnata l'attività.  
   
 ##  <a name="m_strname"></a>  CMFCTasksPaneTask::m_strName  
  Il nome dell'attività.  
@@ -234,7 +234,7 @@ CString m_strName;
 ### <a name="remarks"></a>Note  
   
 ##  <a name="m_uicommandid"></a>  CMFCTasksPaneTask::m_uiCommandID  
- Specifica l'ID di comando del comando che viene eseguito quando l'utente fa clic sull'attività. Se questo valore non è un ID di comando valido, l'attività viene considerato come un'etichetta semplice.  
+ Specifica l'ID di comando del comando che viene eseguito quando l'utente fa clic sull'attività. Se questo valore non è un ID di comando validi, l'attività viene considerato come un'etichetta semplice.  
   
 ```  
 UINT m_uiCommandID;  
@@ -256,10 +256,10 @@ virtual BOOL SetACCData(
  Rappresenta la finestra padre dell'attività corrente.  
   
  [out] *dati*  
- Un oggetto di tipo `CAccessibilityData` che viene popolata con i dati di accessibilità dell'attività corrente.  
+ Un oggetto di tipo `CAccessibilityData` che viene popolato con i dati di accessibilità dell'attività corrente.  
   
 ### <a name="return-value"></a>Valore restituito  
- `TRUE` Se il *dati* parametro è stato popolato con i dati di accessibilità dell'attività corrente; in caso contrario, `FALSE`.  
+ TRUE se il *dati* parametro è stato popolato con i dati di accessibilità dell'attività corrente; in caso contrario, FALSE.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Grafico delle gerarchie](../../mfc/hierarchy-chart.md)   

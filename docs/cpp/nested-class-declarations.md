@@ -1,5 +1,5 @@
 ---
-title: Dichiarazioni di classi annidate | Documenti Microsoft
+title: Dichiarazioni di classi annidate | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,18 +19,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2fe55a1f67ff3c6ac06f1d6431e6e1a2fb8052d8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 86c61792ab20bc0c10c9297d2a66588dd3c066ef
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37943323"
 ---
 # <a name="nested-class-declarations"></a>Dichiarazioni di classi annidate
 La classe può essere dichiarata all'interno dell'ambito di un'altra classe. Tale classe viene denominata "una classe annidata". Le classi annidate sono considerate all'interno dell'ambito della classe contenitore e possono essere usate all'interno di tale ambito. Per fare riferimento a una classe annidata da un ambito diverso dal relativo ambito contenitore immediato, è necessario usare un nome completo.  
   
  Nell'esempio seguente viene illustrato come dichiarare classi annidate:  
   
-```  
+```cpp 
 // nested_class_declarations.cpp  
 class BufferedIO  
 {  
@@ -73,7 +74,7 @@ int main()
   
  Un'eccezione alla visibilità nell'ambito di una dichiarazione di classe annidata è quando il nome di un tipo viene dichiarato con una dichiarazione con prototipo.  In questo caso, il nome della classe dichiarata dalla dichiarazione con prototipo è visibile all'esterno della classe contenitore, con il relativo ambito definito come il più piccolo ambito contenitore di tipo non classe.  Ad esempio:  
   
-```  
+```cpp 
 // nested_class_declarations_2.cpp  
 class C  
 {  
@@ -104,7 +105,7 @@ int main()
 ## <a name="member-functions-in-nested-classes"></a>Funzioni membro in classi annidate  
  Le funzioni membro dichiarate nelle classi annidate possono essere definite in ambito file. Nell'esempio precedente potrebbe essere stato scritto:  
   
-```  
+```cpp 
 // member_functions_in_nested_classes.cpp  
 class BufferedIO  
 {  
@@ -140,26 +141,26 @@ int main()
 }  
 ```  
   
- Nell'esempio precedente, il *qualified-type-name* sintassi viene utilizzata per dichiarare il nome della funzione. La dichiarazione:  
+ Nell'esempio precedente, il *qualified-type-name* sintassi viene usata per dichiarare il nome della funzione. La dichiarazione:  
   
-```  
+```cpp 
 BufferedIO::BufferedInput::read()  
 ```  
   
- indica "la funzione `read` che è un membro della classe `BufferedInput` inclusa nell'ambito della classe `BufferedIO`". Poiché questa dichiarazione Usa il *qualified-type-name* sintassi, sono possibili i costrutti del form seguente:  
+ indica "la funzione `read` che è un membro della classe `BufferedInput` inclusa nell'ambito della classe `BufferedIO`". Poiché questa dichiarazione Usa la *qualified-type-name* informazioni sulla sintassi, sono possibili i costrutti del form seguente:  
   
-```  
+```cpp 
 typedef BufferedIO::BufferedInput BIO_INPUT;  
   
 int BIO_INPUT::read()  
 ```  
   
- La dichiarazione sopra equivale a quella precedente, ma usa un nome `typedef` anziché i nomi della classe.  
+ La dichiarazione precedente equivale al precedente, ma usa una **typedef** nome al posto dei nomi di classe.  
   
 ## <a name="friend-functions-in-nested-classes"></a>Funzioni friend in classi annidate  
  Le funzioni friend dichiarate in una classe annidata vengono considerate come esistenti nell'ambito della classe annidata, non della classe che le contiene. Pertanto, le funzioni friend non dispongono di privilegi di accesso speciali ai membri o alle funzioni di membro della classe che le contiene. Se si desidera usare un nome dichiarato in una classe annidata in una funzione friend e la funzione friend è definita nell'ambito file, usare nomi di tipo completi come illustrato di seguito:  
   
-```  
+```cpp 
 // friend_functions_and_nested_classes.cpp  
   
 #include <string.h>  
@@ -205,7 +206,7 @@ int main()
   
  Nel codice riportato di seguito viene illustrata la funzione `GetExtendedErrorStatus` dichiarata come funzione friend. Nella funzione, definita nell'ambito file, un messaggio viene copiato da una matrice statica a un membro della classe. Si noti che, per una migliore implementazione, si deve dichiarare `GetExtendedErrorStatus` come segue:  
   
-```  
+```cpp 
 int GetExtendedErrorStatus( char *message )  
 ```  
   

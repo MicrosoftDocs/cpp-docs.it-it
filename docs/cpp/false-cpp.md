@@ -1,5 +1,5 @@
 ---
-title: false (C++) | Documenti Microsoft
+title: false (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,18 +16,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 20b4015e5bdbb0ad015f3bb5299e888c862567c1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a743398b60bc51118045b00e8caf4effde2c68da
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37943260"
 ---
 # <a name="false-c"></a>false (C++)
-La parola chiave è uno dei due valori per una variabile di tipo [bool](../cpp/bool-cpp.md) o un'espressione condizionale (un'espressione condizionale è ora un **true** espressione booleana). Ad esempio, se `i` è una variabile di tipo `bool`, `i = false;` istruzione assegna **false** a `i`.  
+La parola chiave è uno dei due valori per una variabile di tipo [bool](../cpp/bool-cpp.md) o un'espressione condizionale (un'espressione condizionale è ora una **true** espressione booleana). Ad esempio, se `i` è una variabile di tipo **bool**, il `i = false;` istruzione assegna **false** a `i`.  
   
 ## <a name="example"></a>Esempio  
   
-```  
+```cpp 
 // bool_false.cpp  
 #include <stdio.h>  
   

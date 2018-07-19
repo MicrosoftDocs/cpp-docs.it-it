@@ -1,5 +1,5 @@
 ---
-title: Struttura le strutture ATL_FUNC_INFO | Documenti Microsoft
+title: Struttura ATL_FUNC_INFO | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,15 +19,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fa81e83d353c542ea5b2b6e8e5e8fe32f7c57606
-ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
+ms.openlocfilehash: 8852deacfd36ba988b9b31bdad363c05aee12b6e
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34255622"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37882208"
 ---
-# <a name="atlfuncinfo-structure"></a>Le strutture ATL_FUNC_INFO struttura
-Contiene informazioni sul tipo utilizzati per descrivere una proprietà o metodo in un'interfaccia dispatch.  
+# <a name="atlfuncinfo-structure"></a>Struttura ATL_FUNC_INFO
+Contiene informazioni sul tipo usati per descrivere una proprietà o metodo in un'interfaccia dispatch.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -41,23 +41,23 @@ struct _ATL_FUNC_INFO {
 ```  
   
 ## <a name="members"></a>Membri  
- **cc**  
- Convenzione di chiamata. Quando si usa questa struttura con il [IDispEventSimpleImpl](../../atl/reference/idispeventsimpleimpl-class.md) (classe), il membro deve essere **CC_STDCALL**. `CC_CDECL` è l'unica opzione è supportata in Windows CE per il `CALLCONV` campo il `_ATL_FUNC_INFO` struttura. Qualsiasi altro valore non è supportato in questo modo il comportamento corrispondente non è definito.  
+ `cc`  
+ Convenzione di chiamata. Quando si usa questa struttura con le [IDispEventSimpleImpl](../../atl/reference/idispeventsimpleimpl-class.md) (classe), questo membro deve essere CC_STDCALL. `CC_CDECL` è l'unica opzione supportata in Windows CE per la `CALLCONV` campo il `_ATL_FUNC_INFO` struttura. Qualsiasi altro valore non è supportato in questo modo il comportamento non definito.  
   
- **vtReturn**  
+ `vtReturn`  
  Il tipo variant della funzione di valore restituito.  
   
- **nParams**  
- Il numero di parametri di funzione.  
+ `nParams`  
+ Il numero di parametri della funzione.  
   
- **pVarTypes**  
- Matrice di tipi variant dei parametri della funzione.  
+ `pVarTypes`  
+ Matrice di tipi di varianti dei parametri di funzione.  
   
 ## <a name="remarks"></a>Note  
- Internamente, ATL Usa questa struttura per contenere le informazioni ottenute da una libreria dei tipi. Potrebbe essere necessario modificare direttamente questa struttura, se si forniscono informazioni sul tipo per un gestore eventi utilizzato con il [IDispEventSimpleImpl](../../atl/reference/idispeventsimpleimpl-class.md) classe e [macro SINK_ENTRY_INFO](composite-control-macros.md#sink_entry_info) (macro).  
+ Internamente, ATL Usa questa struttura per contenere le informazioni ottenute da una libreria dei tipi. Potrebbe essere necessario modificare questa struttura direttamente se si forniscono informazioni sul tipo per un gestore eventi utilizzato con il [IDispEventSimpleImpl](../../atl/reference/idispeventsimpleimpl-class.md) classe e [macro SINK_ENTRY_INFO](composite-control-macros.md#sink_entry_info) macro.  
   
 ## <a name="example"></a>Esempio  
- In presenza di un metodo di interfaccia dispatch definito nell'IDL:  
+ Dato un metodo di interfaccia dispatch definito nell'IDL:  
   
  [!code-cpp[NVC_ATL_Windowing#139](../../atl/codesnippet/cpp/atl-func-info-structure_1.idl)]  
   
@@ -66,11 +66,11 @@ struct _ATL_FUNC_INFO {
  [!code-cpp[NVC_ATL_Windowing#140](../../atl/codesnippet/cpp/atl-func-info-structure_2.h)]  
   
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** atlcom. h  
+ Intestazione: atlcom. h  
   
 ## <a name="see-also"></a>Vedere anche  
   [Classi e struct](../../atl/reference/atl-classes.md)  
- [IDispEventSimpleImpl (classe)](../../atl/reference/idispeventsimpleimpl-class.md)   
+ [Classe IDispEventSimpleImpl](../../atl/reference/idispeventsimpleimpl-class.md)   
  [SINK_ENTRY_INFO](composite-control-macros.md#sink_entry_info)
 
 

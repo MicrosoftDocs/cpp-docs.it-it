@@ -1,5 +1,5 @@
 ---
-title: Progettazione di raccolta e le interfacce di enumeratore (ATL) | Documenti Microsoft
+title: Progettazione di raccolta e le interfacce dell'enumeratore (ATL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,21 +15,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 05649cce0e80af6f54327545cef7b663d69babf9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ab8b42804ca892c80971928b869e09ccdf479d68
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32354919"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37851327"
 ---
-# <a name="design-principles-for-collection-and-enumerator-interfaces"></a>Principi di progettazione per la raccolta ed enumeratore (interfacce)
-Esistono diversi principi di progettazione protetti da ogni tipo di interfaccia:  
+# <a name="design-principles-for-collection-and-enumerator-interfaces"></a>Principi di progettazione per la raccolta e le interfacce dell'enumeratore
+Esistono diversi principi di progettazione alla base di ogni tipo di interfaccia:  
   
--   Fornisce un'interfaccia di raccolta *casuale* l'accesso a un *singolo* elemento nella raccolta tramite il **elemento** (metodo), consente ai client individua il numero di elementi presenti nella raccolta tramite il **conteggio** proprietà, e spesso consente ai client di aggiungere e rimuovere elementi.  
+-   Fornisce un'interfaccia di raccolta *casuale* l'accesso a un *singolo* elemento nella raccolta tramite il `Item` metodo, consente ai client di individuare il numero di elementi presenti nella raccolta tramite il `Count` proprietà, e spesso consente ai client di aggiungere e rimuovere elementi.  
   
--   Fornisce un'interfaccia di enumeratore *seriale* l'accesso a *più* gli elementi in una raccolta, quindi non consente al client di individuare il numero di elementi presenti nella raccolta (fino a quando l'enumeratore interrompe la restituzione gli elementi), e non fornisce alcun modo di aggiunta o rimozione di elementi.  
+-   Fornisce un'interfaccia dell'enumeratore *seriale* accedere al *più* elementi in una raccolta, questa funzionalità non consente al client di individuare il numero di elementi presenti nella raccolta (fino a quando l'enumeratore si arresta la restituzione gli elementi), e non fornisce alcun modo di aggiunta o rimozione di elementi.  
   
- Ogni tipo di interfaccia svolge un ruolo diverso nel fornire l'accesso agli elementi in una raccolta.  
+ Ogni tipo di interfaccia svolge un ruolo diverso di fornire l'accesso agli elementi in una raccolta.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Raccolte ed enumeratori](../atl/atl-collections-and-enumerators.md)

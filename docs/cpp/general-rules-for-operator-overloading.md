@@ -1,5 +1,5 @@
 ---
-title: Regole generali per overload dell'operatore | Documenti Microsoft
+title: Regole generali per overload degli operatori | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,15 +14,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d6912d410018966432ef66331354213bd70dfa8b
-ms.sourcegitcommit: e3b4ef19b534a2ed48bb9091e5197a6e536f16c1
+ms.openlocfilehash: cd7e7a64b1dfc30d1827da614f67a5b47bd42218
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/06/2018
-ms.locfileid: "34814339"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37943296"
 ---
 # <a name="general-rules-for-operator-overloading"></a>Regole generali per overload di operatori
-Le regole seguenti vincolano l'implementazione degli operatori di overload. Tuttavia, non si applicano al [nuova](../cpp/new-operator-cpp.md) e [eliminare](../cpp/delete-operator-cpp.md) operatori, analizzati separatamente.  
+Le regole seguenti vincolano l'implementazione degli operatori di overload. Tuttavia, non si applicano al [nuove](../cpp/new-operator-cpp.md) e [eliminare](../cpp/delete-operator-cpp.md) operatori, analizzati separatamente.  
   
 -   Non è possibile definire nuovi operatori, ad esempio **.**.  
   
@@ -47,7 +47,7 @@ Le regole seguenti vincolano l'implementazione degli operatori di overload. Tutt
     }  
     ```  
   
-     L'esempio di codice precedente dichiara l'operatore minore di come una funzione membro; tuttavia, gli operatori di addizione vengono dichiarati come funzioni globali con l'accesso Friend. Si noti che più di un'implementazione può essere fornita per un dato operatore. Nel caso dell'operatore di addizione precedente, le due implementazioni sono fornite per facilitare l'operazione commutativa. È ugualmente probabile che gli operatori che aggiungono un `Point` a un `Point`, `int` a un `Point` e così via, possano essere implementati.  
+     L'esempio di codice precedente dichiara l'operatore minore di come una funzione membro; tuttavia, gli operatori di addizione vengono dichiarati come funzioni globali con l'accesso Friend. Si noti che più di un'implementazione può essere fornita per un dato operatore. Nel caso dell'operatore di addizione precedente, le due implementazioni sono fornite per facilitare l'operazione commutativa. È ugualmente probabile che gli operatori che aggiungono una `Point` a un `Point`, **int** a un `Point`e così via, può essere implementato.  
   
 -   Gli operatori rispettano la precedenza, il raggruppamento e il numero di operandi stabiliti dall'utilizzo tipico con tipi incorporati. Pertanto, non è possibile esprimere il concetto "Aggiungi 2 e 3 per un oggetto di tipo `Point`," prevedendo che 2 da aggiungere al *x* coordinate e 3 da aggiungere al *y* coordinare.  
   
@@ -55,7 +55,7 @@ Le regole seguenti vincolano l'implementazione degli operatori di overload. Tutt
   
 -   Gli operatori binari dichiarati come funzioni membro accettano un argomento; se dichiarati come funzioni globali, accettano due argomenti.  
   
--   Se è possibile utilizzare un operatore unario o un operatore binario (__&__, __*__, __+__, e __-__), è possibile eseguire l'overload separatamente ogni utilizzo.  
+-   Se un operatore può essere usato come unario o un operatore binario (__&__, __*__, __+__, e __-__), è possibile eseguire l'overload ciascun utilizzo separatamente.  
   
 -   Operatori di overload non possono avere argomenti predefiniti.  
   
@@ -63,9 +63,9 @@ Le regole seguenti vincolano l'implementazione degli operatori di overload. Tutt
   
 -   Il primo argomento per gli operatori di overload della funzione membro è sempre del tipo classe dell'oggetto per cui l'operatore viene richiamato (la classe in cui l'operatore viene dichiarato o una classe derivata da quella classe). Nessuna conversione viene fornita per il primo argomento.  
   
- Si noti che il significato di uno qualsiasi degli operatori può essere modificato completamente. Che include il significato dell'indirizzo di (**&**), l'assegnazione (**=**) e gli operatori di chiamata di funzione. Inoltre, le identità che possono essere ritenute attendibili per tipi incorporati possono essere modificate utilizzando l'overload degli operatori. Ad esempio, le quattro istruzioni seguenti sono in genere equivalenti una volta completamente valutate:  
+ Si noti che il significato di uno qualsiasi degli operatori può essere modificato completamente. Ciò include il significato di address-of (**&**), assegnazione (**=**) e gli operatori di chiamata di funzione. Inoltre, le identità che possono essere ritenute attendibili per tipi incorporati possono essere modificate utilizzando l'overload degli operatori. Ad esempio, le quattro istruzioni seguenti sono in genere equivalenti una volta completamente valutate:  
   
-```  
+```cpp 
 var = var + 1;  
 var += 1;  
 var++;  

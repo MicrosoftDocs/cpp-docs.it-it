@@ -1,5 +1,5 @@
 ---
-title: Classe CMFCPropertyGridProperty | Documenti Microsoft
+title: Classe CMFCPropertyGridProperty | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -176,14 +176,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c218f38b76d70ef20fed46a502a7cc15041aa8c5
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 5879f4f81a847b21a0ab8d126a4a51bc0ee826e1
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37039181"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37850261"
 ---
-# <a name="cmfcpropertygridproperty-class"></a>CMFCPropertyGridProperty (classe)
+# <a name="cmfcpropertygridproperty-class"></a>Classe CMFCPropertyGridProperty
 Oggetto `CMFCPropertyGridProperty` oggetto rappresenta un elemento di elenco in un controllo elenco delle proprietà.  
   
    [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
@@ -207,23 +207,23 @@ class CMFCPropertyGridProperty : public CObject
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[CMFCPropertyGridProperty::AddOption](#addoption)|Aggiunge un nuovo elemento di elenco per un controllo elenco delle proprietà.|  
+|[CMFCPropertyGridProperty::AddOption](#addoption)|Aggiunge un nuovo elemento elenco per un controllo elenco delle proprietà.|  
 |[CMFCPropertyGridProperty::AddSubItem](#addsubitem)|Aggiunge un elemento figlio a una proprietà.|  
-|[CMFCPropertyGridProperty::AdjustButtonRect](#adjustbuttonrect)|Chiamato dal controllo elenco delle proprietà padre per indicare una proprietà per ridimensionare il rettangolo di delimitazione di un pulsante incorporato.|  
+|[CMFCPropertyGridProperty::AdjustButtonRect](#adjustbuttonrect)|Chiamato dal controllo elenco delle proprietà padre per indicare a una proprietà per ridimensionare il rettangolo di delimitazione di un pulsante incorporato.|  
 |[CMFCPropertyGridProperty::AdjustInPlaceEditRect](#adjustinplaceeditrect)|Recupera i limiti della casella di testo e controllo pulsante di selezione facoltativi che consentono di impostare un valore della proprietà.|  
-|[CMFCPropertyGridProperty::AllowEdit](#allowedit)|Rende una proprietà modificabile o sola lettura.|  
-|[CMFCPropertyGridProperty::CreateInPlaceEdit](#createinplaceedit)|Chiamata eseguita dal framework per creare un controllo per una proprietà modificabile.|  
+|[CMFCPropertyGridProperty::AllowEdit](#allowedit)|Consente di una proprietà modificabile o sola lettura.|  
+|[CMFCPropertyGridProperty::CreateInPlaceEdit](#createinplaceedit)|Chiamata eseguita dal framework per creare un controllo modificabile per una proprietà.|  
 |[CMFCPropertyGridProperty::CreateSpinControl](#createspincontrol)|Chiamata eseguita dal framework per creare un controllo pulsante di selezione modificabile.|  
 |[CMFCPropertyGridProperty::Enable](#enable)|Abilita o disabilita una proprietà.|  
 |[CMFCPropertyGridProperty::EnableSpinControl](#enablespincontrol)|Abilita o disabilita un controllo pulsante di selezione che consente di modificare un valore della proprietà.|  
-|[CMFCPropertyGridProperty::Expand](#expand)|Espande o comprime di una proprietà che contiene le sottoproprietà.|  
+|[CMFCPropertyGridProperty::Expand](#expand)|Espande o comprime una proprietà che contiene le sottoproprietà.|  
 |[Cmfcpropertygridproperty:: Formatproperty](#formatproperty)|Formatta la rappresentazione di testo di un valore della proprietà.|  
-|[CMFCPropertyGridProperty::GetData](#getdata)|Recupera un `DWORD` valore associato a una proprietà.|  
+|[CMFCPropertyGridProperty::GetData](#getdata)|Recupera un valore DWORD che è associato a una proprietà.|  
 |[CMFCPropertyGridProperty::GetDescription](#getdescription)|Recupera una descrizione della proprietà.|  
 |[CMFCPropertyGridProperty::GetExpandedSubItems](#getexpandedsubitems)|Recupera il numero di elementi secondari espansi.|  
-|[CMFCPropertyGridProperty::GetHierarchyLevel](#gethierarchylevel)|Recupera l'indice in base zero di livello della gerarchia della proprietà.|  
+|[CMFCPropertyGridProperty::GetHierarchyLevel](#gethierarchylevel)|Recupera l'indice in base zero del livello della gerarchia della proprietà.|  
 |[CMFCPropertyGridProperty::GetName](#getname)|Recupera il nome della proprietà.|  
-|[CMFCPropertyGridProperty::GetNameTooltip](#getnametooltip)|Chiamato dal framework per visualizzare il nome della proprietà in una descrizione comando.|  
+|[CMFCPropertyGridProperty::GetNameTooltip](#getnametooltip)|Chiamata eseguita dal framework per visualizzare il nome della proprietà in una descrizione comando.|  
 |[CMFCPropertyGridProperty::GetOption](#getoption)|Recupera il testo dell'opzione specificato da un indice.|  
 |[CMFCPropertyGridProperty::GetOptionCount](#getoptioncount)|Recupera il numero di opzioni che appartengono a una proprietà.|  
 |[CMFCPropertyGridProperty::GetOriginalValue](#getoriginalvalue)|Recupera il valore iniziale della proprietà corrente.|  
@@ -231,37 +231,37 @@ class CMFCPropertyGridProperty : public CObject
 |[CMFCPropertyGridProperty::GetRect](#getrect)|Recupera il rettangolo di delimitazione di una proprietà.|  
 |[CMFCPropertyGridProperty::GetSubItem](#getsubitem)|Recupera una sottoproprietà identificata da un indice in base zero.|  
 |[CMFCPropertyGridProperty::GetSubItemsCount](#getsubitemscount)|Recupera il numero di elementi secondari.|  
-|`CMFCPropertyGridProperty::GetThisClass`|Usato dal framework per ottenere un puntatore per il [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) oggetto associato a questo tipo di classe.|  
+|`CMFCPropertyGridProperty::GetThisClass`|Utilizzato dal framework per ottenere un puntatore per il [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) oggetto associato a questo tipo di classe.|  
 |[CMFCPropertyGridProperty::GetValue](#getvalue)|Recupera un valore della proprietà.|  
-|[CMFCPropertyGridProperty::GetValueTooltip](#getvaluetooltip)|Chiamata eseguita dal framework per recuperare la rappresentazione testo del valore della proprietà che viene quindi visualizzato in una descrizione comando.|  
+|[CMFCPropertyGridProperty::GetValueTooltip](#getvaluetooltip)|Chiamata eseguita dal framework per recuperare la rappresentazione testuale del valore della proprietà che viene quindi visualizzato in una descrizione comando.|  
 |[CMFCPropertyGridProperty::HitTest](#hittest)|Punta all'oggetto di proprietà che corrisponde all'elemento di elenco di proprietà che corrisponde a un punto.|  
 |[CMFCPropertyGridProperty::IsAllowEdit](#isallowedit)|Indica se una proprietà è modificabile.|  
 |[CMFCPropertyGridProperty::IsEnabled](#isenabled)|Indica se una proprietà è abilitata o disabilitata.|  
-|[CMFCPropertyGridProperty::IsExpanded](#isexpanded)|Indica se una proprietà è espansi o compressi.|  
+|[CMFCPropertyGridProperty::IsExpanded](#isexpanded)|Indica se una proprietà è espanso o compresso.|  
 |[CMFCPropertyGridProperty::IsGroup](#isgroup)|Indica se la proprietà corrente rappresenta un gruppo.|  
 |[CMFCPropertyGridProperty::IsInPlaceEditing](#isinplaceediting)|Indica se la proprietà corrente è modificabile.|  
-|[CMFCPropertyGridProperty::IsModified](#ismodified)|Indica se la proprietà corrente è stata modificata.|  
-|[CMFCPropertyGridProperty::IsParentExpanded](#isparentexpanded)|Indica se gli elementi padre della proprietà corrente vengono espanse.|  
+|[CMFCPropertyGridProperty::IsModified](#ismodified)|Indica se la proprietà corrente a cui è stata modificata.|  
+|[CMFCPropertyGridProperty::IsParentExpanded](#isparentexpanded)|Indica se gli elementi padre della proprietà corrente sono espanso.|  
 |[CMFCPropertyGridProperty::IsSelected](#isselected)|Indica se è selezionata la proprietà corrente.|  
 |[CMFCPropertyGridProperty::IsVisible](#isvisible)|Indica se la proprietà corrente è visibile.|  
 |[Cmfcpropertygridproperty:: Onclickbutton](#onclickbutton)|Chiamato dal framework quando l'utente fa clic su un pulsante contenuto in una proprietà.|  
-|[CMFCPropertyGridProperty::OnClickName](#onclickname)|Chiamato da un controllo elenco delle proprietà padre quando un utente fa clic il campo nome di una proprietà.|  
-|[CMFCPropertyGridProperty::OnClickValue](#onclickvalue)|Chiamato da un controllo elenco delle proprietà padre quando un utente fa clic il campo del valore di una proprietà.|  
-|[CMFCPropertyGridProperty::OnCloseCombo](#onclosecombo)|Chiamato dal framework quando viene chiuso una casella combinata che è contenuta in una proprietà.|  
-|[CMFCPropertyGridProperty::OnDblClk](#ondblclk)|Chiamato dal framework quando l'utente fa doppio clic su una proprietà.|  
-|[CMFCPropertyGridProperty::OnDrawButton](#ondrawbutton)|Chiamato dal framework per disegnare un pulsante che è contenuto in una proprietà.|  
+|[CMFCPropertyGridProperty::OnClickName](#onclickname)|Chiamato da un controllo elenco delle proprietà padre quando un utente fa clic sul campo del nome di una proprietà.|  
+|[CMFCPropertyGridProperty::OnClickValue](#onclickvalue)|Chiamato da un controllo elenco delle proprietà padre quando l'utente seleziona il campo del valore di una proprietà.|  
+|[CMFCPropertyGridProperty::OnCloseCombo](#onclosecombo)|Chiamato dal framework quando viene chiusa una casella combinata contenuto in una proprietà.|  
+|[CMFCPropertyGridProperty::OnDblClk](#ondblclk)|Chiamato dal framework quando l'utente fa doppio clic una proprietà.|  
+|[CMFCPropertyGridProperty::OnDrawButton](#ondrawbutton)|Chiamata eseguita dal framework per disegnare un pulsante che è contenuto in una proprietà.|  
 |[CMFCPropertyGridProperty::OnDrawDescription](#ondrawdescription)|Chiamata eseguita dal framework per visualizzare la descrizione della proprietà.|  
 |[CMFCPropertyGridProperty::OnDrawExpandBox](#ondrawexpandbox)|Chiamata eseguita dal framework per disegnare un controllo casella di espansione accanto a una proprietà che contiene le sottoproprietà.|  
 |[CMFCPropertyGridProperty::OnDrawName](#ondrawname)|Chiamata eseguita dal framework per visualizzare il nome della proprietà.|  
 |[Cmfcpropertygridproperty:: Ondrawvalue](#ondrawvalue)|Chiamato dal framework per visualizzare il valore della proprietà.|  
 |[Cmfcpropertygridproperty:: Onedit](#onedit)|Chiamato dal framework quando l'utente sta per modificare il valore di una proprietà.|  
-|[CMFCPropertyGridProperty::OnEndEdit](#onendedit)|Chiamato dal framework quando l'utente termina la modifica di un valore della proprietà.|  
+|[CMFCPropertyGridProperty::OnEndEdit](#onendedit)|Chiamato dal framework quando l'utente ha terminato la modifica di un valore della proprietà.|  
 |[CMFCPropertyGridProperty::OnKillSelection](#onkillselection)||  
 |[CMFCPropertyGridProperty::OnPosSizeChanged](#onpossizechanged)||  
-|[CMFCPropertyGridProperty::OnRClickName](#onrclickname)|Chiamato dal framework quando l'utente sceglie il pulsante destro del mouse nell'area del nome di proprietà.|  
-|[CMFCPropertyGridProperty::OnRClickValue](#onrclickvalue)|Chiamato dal framework quando l'utente sceglie il pulsante destro del mouse nell'area di valore della proprietà.|  
+|[CMFCPropertyGridProperty::OnRClickName](#onrclickname)|Chiamato dal framework quando l'utente sceglie il pulsante destro del mouse nell'area di nome della proprietà.|  
+|[CMFCPropertyGridProperty::OnRClickValue](#onrclickvalue)|Chiamato dal framework quando l'utente sceglie il pulsante destro del mouse nell'area del valore di proprietà.|  
 |[CMFCPropertyGridProperty::OnSelectCombo](#onselectcombo)|Chiamato dal framework quando l'utente seleziona un elemento dalla casella combinata modificabile.|  
-|[CMFCPropertyGridProperty::OnSetCursor](#onsetcursor)|Chiamato dal framework quando si sposta il puntatore del mouse su un elemento proprietà.|  
+|[CMFCPropertyGridProperty::OnSetCursor](#onsetcursor)|Chiamato dal framework quando si sposta il puntatore del mouse su un elemento di proprietà.|  
 |[CMFCPropertyGridProperty::OnSetSelection](#onsetselection)||  
 |[Cmfcpropertygridproperty:: Onupdatevalue](#onupdatevalue)|Chiamato dal framework quando viene modificato il valore di una proprietà modificabile.|  
 |[CMFCPropertyGridProperty::PushChar](#pushchar)|Chiamato dal controllo elenco delle proprietà quando la proprietà è selezionata e l'utente immette un carattere di nuova.|  
@@ -269,7 +269,7 @@ class CMFCPropertyGridProperty : public CObject
 |[CMFCPropertyGridProperty::RemoveAllOptions](#removealloptions)|Rimuove tutte le opzioni (elementi) da una proprietà.|  
 |[CMFCPropertyGridProperty::RemoveSubItem](#removesubitem)|Rimuove l'elemento secondario specificato.|  
 |[Cmfcpropertygridproperty:: Resetoriginalvalue](#resetoriginalvalue)|Ripristina il valore originale di una proprietà modificata.|  
-|[CMFCPropertyGridProperty::SetData](#setdata)|Associa un `DWORD` valore con una proprietà.|  
+|[CMFCPropertyGridProperty::SetData](#setdata)|Associa un valore DWORD a una proprietà.|  
 |[CMFCPropertyGridProperty::SetDescription](#setdescription)|Specifica il testo che descrive la proprietà corrente.|  
 |[CMFCPropertyGridProperty::SetName](#setname)|Imposta il nome di una proprietà.|  
 |[CMFCPropertyGridProperty::SetOriginalValue](#setoriginalvalue)|Imposta il valore originale di una proprietà modificabile.|  
@@ -282,12 +282,12 @@ class CMFCPropertyGridProperty : public CObject
 |----------|-----------------|  
 |[CMFCPropertyGridProperty::CreateCombo](#createcombo)|Chiamato dal framework per aggiungere una casella combinata a una proprietà.|  
 |[CMFCPropertyGridProperty::HasButton](#hasbutton)|Indica se una proprietà contiene un pulsante.|  
-|[CMFCPropertyGridProperty::Init](#init)|Chiamato dal framework per inizializzare un oggetto di proprietà.|  
+|[CMFCPropertyGridProperty::Init](#init)|Chiamata eseguita dal framework per inizializzare un oggetto proprietà.|  
 |[CMFCPropertyGridProperty::IsSubItem](#issubitem)|Indica se la proprietà specificata è un elemento secondario della proprietà corrente.|  
 |[CMFCPropertyGridProperty::IsValueChanged](#isvaluechanged)|Indica se il valore della proprietà corrente a cui è stato modificato.|  
-|[CMFCPropertyGridProperty::OnCtlColor](#onctlcolor)|Chiamato dal framework quando è necessario recuperare un pennello da riempire il colore di sfondo di una proprietà.|  
-|[CMFCPropertyGridProperty::OnDestroyWindow](#ondestroywindow)|Chiamato dal framework quando viene eliminata una proprietà o quando termina la modifica.|  
-|[CMFCPropertyGridProperty::OnKillFocus](#onkillfocus)|Chiamato dal framework quando la proprietà perde lo stato attivo di input.|  
+|[CMFCPropertyGridProperty::OnCtlColor](#onctlcolor)|Chiamato dal framework quando è necessario recuperare un pennello per riempire il colore di sfondo di una proprietà.|  
+|[CMFCPropertyGridProperty::OnDestroyWindow](#ondestroywindow)|Chiamato dal framework quando una proprietà viene eliminata definitivamente oppure quando viene completata la modifica.|  
+|[CMFCPropertyGridProperty::OnKillFocus](#onkillfocus)|Chiamato dal framework quando la proprietà perde lo stato attivo.|  
   
 ### <a name="data-members"></a>Membri di dati  
   
@@ -299,12 +299,12 @@ class CMFCPropertyGridProperty : public CObject
 |[CMFCPropertyGridProperty::m_strFormatShort](#m_strformatshort)|Stringa di formato per un valore di tipo short.|  
   
 ## <a name="remarks"></a>Note  
- Utilizzare un `CMFCPropertyGridProperty` oggetto per rappresentare una proprietà, quindi aggiungere a un controllo elenco delle proprietà. Per altre informazioni, vedere [CMFCPropertyGridCtrl Class](../../mfc/reference/cmfcpropertygridctrl-class.md).  
+ Usare un `CMFCPropertyGridProperty` oggetto da rappresentare una proprietà, che è quindi possibile aggiungere a un controllo elenco delle proprietà. Per altre informazioni, vedere [classe CMFCPropertyGridCtrl](../../mfc/reference/cmfcpropertygridctrl-class.md).  
   
- Oggetto property può rappresentare tipi di dati, ad esempio stringhe, date e i valori booleani o integer. Può contenere proprietà figlio oppure può contenere un controllo, ad esempio una casella combinata o un controllo pulsante.  
+ Oggetto property può rappresentare tipi di dati, ad esempio stringhe, date e valori booleani o interi. Può contenere le proprietà figlio, o può contenere un controllo, ad esempio una casella combinata o un controllo pulsante.  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene illustrato come costruire un `CMFCPropertyGridProperty` oggetto. Nell'esempio viene inoltre illustrato come utilizzare i vari metodi nella `CMFCPropertyGridProperty` classe per aggiungere un'opzione, aggiungere un elemento secondario, attivare una proprietà e visualizzare una proprietà. In questo esempio fa parte il [esempio di nuovi controlli](../../visual-cpp-samples.md).  
+ Nell'esempio seguente viene illustrato come costruire un `CMFCPropertyGridProperty` oggetto. Nell'esempio viene inoltre illustrato come utilizzare i vari metodi nel `CMFCPropertyGridProperty` classe per aggiungere un'opzione, aggiungere un elemento secondario, abilitare una proprietà e visualizzare una proprietà. In questo esempio fa parte il [esempio di nuovi controlli](../../visual-cpp-samples.md).  
   
  [!code-cpp[NVC_MFC_NewControls#27](../../mfc/reference/codesnippet/cpp/cmfcpropertygridproperty-class_1.cpp)]  
   
@@ -317,7 +317,7 @@ class CMFCPropertyGridProperty : public CObject
  **Intestazione:** afxpropertygridctrl. h  
   
 ##  <a name="addoption"></a>  CMFCPropertyGridProperty::AddOption  
- Aggiunge un nuovo elemento di elenco per un controllo elenco delle proprietà.  
+ Aggiunge un nuovo elemento elenco per un controllo elenco delle proprietà.  
   
 ```  
 BOOL AddOption(
@@ -327,13 +327,13 @@ BOOL AddOption(
   
 ### <a name="parameters"></a>Parametri  
  [in] *lpszOption*  
- L'elemento di elenco (opzione) da aggiungere.  
+ Elemento dell'elenco (opzione) da aggiungere.  
   
  [in] *bInsertUnique*  
- `TRUE` aggiungere l'elenco elemento solo se non esiste già; in caso contrario, `FALSE`. Il valore predefinito è `TRUE`.  
+ TRUE per aggiungere l'elenco dell'elemento solo se non esiste già; in caso contrario, FALSE. Il valore predefinito è TRUE.  
   
 ### <a name="return-value"></a>Valore restituito  
- `TRUE`, il che significa che viene aggiunto l'elemento di elenco. In caso contrario, `FALSE`, il che significa che l'elemento di elenco non è aggiunto perché la *bInsertUnique* parametro `TRUE` e nell'elenco l'elemento specificato dal *lpszOption* parametro già esiste.  
+ È TRUE, il che significa che viene aggiunto l'elemento dell'elenco. In caso contrario, FALSE, il che significa che l'elemento di elenco non è aggiunto perché la *bInsertUnique* parametro è TRUE e l'elenco dell'elemento specificato dalle *lpszOption* parametro già esistente.  
   
 ### <a name="remarks"></a>Note  
   
@@ -349,13 +349,13 @@ BOOL AddSubItem(CMFCPropertyGridProperty* pProp);
  Puntatore a una proprietà da aggiungere.  
   
 ### <a name="return-value"></a>Valore restituito  
- `TRUE` Se la proprietà specificata viene aggiunto correttamente come una proprietà figlio. `FALSE` Se la proprietà è stata aggiunta perché già presente nella proprietà padre.  
+ TRUE se la proprietà specificata viene aggiunto correttamente come una proprietà figlio. FALSE se la proprietà è stata aggiunta perché già presente nella proprietà padre.  
   
 ### <a name="remarks"></a>Note  
- Utilizzare questo metodo per creare un elenco gerarchico di padre e figlio le proprietà. Dopo un elemento figlio proprietà viene aggiunta, la proprietà padre viene automaticamente visualizzato un controllo casella di espansione indicato da un segno di addizione (+). Quando l'utente fa clic sul segno più, la proprietà padre viene espansa e vengono visualizzate tutte le voci di proprietà figlio.  
+ Usare questo metodo per creare un elenco gerarchico di padre e figlio le proprietà. Dopo un elemento figlio proprietà viene aggiunta, la proprietà padre consente di visualizzare automaticamente un controllo casella di espansione definito da un segno più (+). Quando l'utente fa clic sul segno più, la proprietà parent si espande e Visualizza tutte le voci di proprietà figlio.  
   
 ##  <a name="adjustbuttonrect"></a>  CMFCPropertyGridProperty::AdjustButtonRect  
- Chiamato dal controllo elenco delle proprietà padre per indicare una proprietà per ridimensionare il rettangolo di delimitazione di un pulsante incorporato.  
+ Chiamato dal controllo elenco delle proprietà padre per indicare a una proprietà per ridimensionare il rettangolo di delimitazione di un pulsante incorporato.  
   
 ```  
 virtual void AdjustButtonRect();
@@ -387,10 +387,10 @@ virtual void AdjustInPlaceEditRect(
  Quando questo metodo restituisce, un rettangolo che specifica i limiti del controllo pulsante di selezione per il valore della proprietà. In alternativa, se la proprietà non supporta un pulsante di selezione, un rettangolo vuoto.  
   
 ### <a name="remarks"></a>Note  
- L'area del valore di una proprietà composto da una casella di testo e possibilmente un *pulsante di opzione*, ad esempio un controllo pulsante di selezione. Questo metodo calcola le dimensioni del pulsante di opzione e casella di testo e quindi restituisce tali valori come i parametri specificati.  
+ L'area del valore di una proprietà è costituito da una casella di testo e possibilmente un *pulsante di opzione*, ad esempio un controllo pulsante di selezione. Questo metodo calcola le dimensioni del pulsante di opzione e casella di testo e quindi restituisce questi valori ai parametri specificati.  
   
 ##  <a name="allowedit"></a>  CMFCPropertyGridProperty::AllowEdit  
- Rende una proprietà modificabile o sola lettura.  
+ Consente di una proprietà modificabile o sola lettura.  
   
 ```  
 void AllowEdit(BOOL bAllow=TRUE);
@@ -398,7 +398,7 @@ void AllowEdit(BOOL bAllow=TRUE);
   
 ### <a name="parameters"></a>Parametri  
  [in] *bConsenti*  
- `TRUE` Per rendere la proprietà modificabile. `FALSE` per impostare la proprietà di sola lettura. Il valore predefinito è `TRUE`.  
+ TRUE per rendere la proprietà modificabile. FALSE per impostare la proprietà di sola lettura. Il valore predefinito è TRUE.  
   
 ### <a name="remarks"></a>Note  
   
@@ -424,7 +424,7 @@ CMFCPropertyGridProperty(
   
 ### <a name="parameters"></a>Parametri  
  [in] *strGroupName*  
- Il nome del gruppo. Un *gruppo* è una raccolta di proprietà correlate in un controllo griglia delle proprietà. Se il controllo viene visualizzato in ordine gerarchico, il *nome del gruppo* viene visualizzato come titolo categoria nella riga sopra il gruppo.  
+ Il nome del gruppo. Oggetto *gruppo* è una raccolta di proprietà correlate in un controllo griglia delle proprietà. Se il controllo viene visualizzato in modo gerarchico, il *nome gruppo* viene visualizzato come titolo categoria nella riga sopra il gruppo.  
   
  [in] *dwData*  
  Dati specifici dell'applicazione, ad esempio un numero intero o un puntatore a altri dati che sono associati alla proprietà. Il valore predefinito è 0.  
@@ -436,19 +436,19 @@ CMFCPropertyGridProperty(
  Valore della proprietà.  
   
  [in] *lpszDescr*  
- La descrizione della proprietà. Il valore predefinito è `NULL`.  
+ La descrizione della proprietà. Il valore predefinito è NULL.  
   
  [in] *lpszEditMask*  
- La maschera di modifica, se la proprietà è un controllo di modifica mascherato. Il valore predefinito è `NULL`.  
+ La maschera di modifica, se la proprietà è un controllo di modifica mascherato. Il valore predefinito è NULL.  
   
  [in] *lpszEditTemplate*  
- Il modello di modifica, se la proprietà è un controllo di modifica mascherato. Il valore predefinito è `NULL`.  
+ Il modello di modifica, se la proprietà è un controllo di modifica mascherato. Il valore predefinito è NULL.  
   
  [in] *lpszValidChars*  
- Un elenco di caratteri validi, se la proprietà è un controllo di modifica mascherato. Il valore predefinito è `NULL`.  
+ Elenco di caratteri validi, se la proprietà è un controllo di modifica mascherato. Il valore predefinito è NULL.  
   
  [in] *bIsValueList*  
- `TRUE` Se la proprietà rappresenta un elenco dei valori. `FALSE` se la proprietà rappresenta un singolo valore. Il valore predefinito è `FALSE`.  
+ TRUE se la proprietà rappresenta un elenco di valori. FALSE se la proprietà rappresenta un singolo valore. Il valore predefinito è FALSE.  
   
 ### <a name="remarks"></a>Note  
   
@@ -469,12 +469,12 @@ virtual CComboBox* CreateCombo(
  Il rettangolo di delimitazione della casella combinata.  
   
 ### <a name="return-value"></a>Valore restituito  
- Puntatore a un nuovo [CComboBox](../../mfc/reference/ccombobox-class.md) oggetto.  
+ Puntatore a una nuova [CComboBox](../../mfc/reference/ccombobox-class.md) oggetto.  
   
 ### <a name="remarks"></a>Note  
   
 ##  <a name="createinplaceedit"></a>  CMFCPropertyGridProperty::CreateInPlaceEdit  
- Chiamata eseguita dal framework per creare un controllo per una proprietà modificabile.  
+ Chiamata eseguita dal framework per creare un controllo modificabile per una proprietà.  
   
 ```  
 virtual CWnd* CreateInPlaceEdit(
@@ -487,15 +487,15 @@ virtual CWnd* CreateInPlaceEdit(
  Il rettangolo di delimitazione del controllo modificabile.  
   
  [in] *bDefaultFormat*  
- `TRUE` Utilizzare il formato predefinito della proprietà per impostare il testo del controllo modificabile. in caso contrario, `FALSE`.  
+ TRUE per utilizzare il formato di proprietà predefinito per impostare il testo del controllo modificabile. in caso contrario, FALSE.  
   
 ### <a name="return-value"></a>Valore restituito  
- Un puntatore per il controllo modificabile se questo metodo ha esito positivo; in caso contrario, `NULL`.  
+ Un puntatore al controllo modificabile se questo metodo ha esito positivo; in caso contrario, NULL.  
   
 ### <a name="remarks"></a>Note  
- Questo metodo utilizza i valori del *varValue*, *lpszEditMask*, *lpszEditTemplate*, e *lpszValidChars* parametri specificato nella [CMFCPropertyGridProperty](../../mfc/reference/cmfcpropertygridproperty-class.md) costruttore della classe. Per impostazione predefinita, questo metodo supporta il *varValue* tipi variant. Sono inclusi `VT_BSTR`, `VT_R4`, `VT_R8`, `VT_UI1`, `VT_I2`, `VT_INT`, `VT_UINT`, `VT_I4`, `VT_UI2`, `VT_UI4`, e `VT_BOOL`.  
+ Questo metodo Usa i valori delle *varValue*, *lpszEditMask*, *lpszEditTemplate*, e *lpszValidChars* parametri specificato nella [CMFCPropertyGridProperty](../../mfc/reference/cmfcpropertygridproperty-class.md) costruttore della classe. Per impostazione predefinita, questo metodo supporta il *varValue* tipi variant. Sono inclusi VT_BSTR, VT_R4, VT_R8, VT_ARRAY|VT_UI1, VT_I2, VT_INT, VT_UINT, VT_I4, VT_UI2, VT_UI4 e VT_BOOL.  
   
- Questo metodo crea un [CMFCMaskedEdit](../../mfc/reference/cmfcmaskededit-class.md) controllare se uno o più il *lpszEditMask*, *lpszEditTemplate*, oppure *lpszValidChars* i parametri vengono specificati; in caso contrario, viene creato un [CEdit](../../mfc/reference/cedit-class.md) controllo.  
+ Questo metodo crea un [CMFCMaskedEdit](../../mfc/reference/cmfcmaskededit-class.md) controllare se una o più delle *lpszEditMask*, *lpszEditTemplate*, oppure *lpszValidChars* i parametri vengono specificati; in caso contrario, viene creato un [CEdit](../../mfc/reference/cedit-class.md) controllo.  
   
 ##  <a name="createspincontrol"></a>  CMFCPropertyGridProperty::CreateSpinControl  
  Chiamata eseguita dal framework per creare un controllo pulsante di selezione modificabile.  
@@ -506,10 +506,10 @@ virtual CSpinButtonCtrl* CreateSpinControl(CRect rectSpin);
   
 ### <a name="parameters"></a>Parametri  
  [in] *rectSpin*  
- Un rettangolo che definisce in cui viene creato il controllo pulsante di selezione modificabile.  
+ Rettangolo che definisce in cui viene creato il controllo pulsante di selezione modificabile.  
   
 ### <a name="return-value"></a>Valore restituito  
- Un puntatore a un nuovo [CMFCSpinButtonCtrl](../../mfc/reference/cmfcspinbuttonctrl-class.md) oggetto cui viene eseguito il cast come un puntatore a un [CSpinButtonCtrl](../../mfc/reference/cspinbuttonctrl-class.md) oggetto.  
+ Un puntatore a una nuova [CMFCSpinButtonCtrl](../../mfc/reference/cmfcspinbuttonctrl-class.md) oggetto che viene eseguito il cast come un puntatore a un [CSpinButtonCtrl](../../mfc/reference/cspinbuttonctrl-class.md) oggetto.  
   
 ### <a name="remarks"></a>Note  
  Chiamare il [CMFCPropertyGridProperty::EnableSpinControl](#enablespincontrol) metodo per visualizzare un controllo pulsante di selezione modificabile sul bordo destro della proprietà.  
@@ -523,7 +523,7 @@ void Enable(BOOL bEnable=TRUE);
   
 ### <a name="parameters"></a>Parametri  
  [in] *bAttivare il*  
- `TRUE` Per abilitare la proprietà; `FALSE` per disabilitare la proprietà. Proprietà disabilitata non rispondono al mouse o tastiera. Il valore predefinito è `TRUE`.  
+ TRUE per abilitare la proprietà. FALSE per disabilitare la proprietà. Le proprietà disabilitate non rispondono al mouse o tastiera. Il valore predefinito è TRUE.  
   
 ### <a name="remarks"></a>Note  
   
@@ -539,7 +539,7 @@ void EnableSpinControl(
   
 ### <a name="parameters"></a>Parametri  
  [in] *bAttivare il*  
- `TRUE` Per abilitare il controllo pulsante di selezione; `FALSE` per disabilitare il controllo pulsante di selezione. Il valore predefinito è `TRUE`.  
+ TRUE per abilitare il controllo pulsante di selezione; FALSE per disabilitare il controllo pulsante di selezione. Il valore predefinito è TRUE.  
   
  [in] *nMin*  
  Il valore minimo del controllo pulsante di selezione. Il valore predefinito è 0.  
@@ -550,10 +550,10 @@ void EnableSpinControl(
 ### <a name="remarks"></a>Note  
  Il framework crea automaticamente un controllo pulsante di selezione quando una proprietà sta per essere modificato.  
   
- Il tipo di proprietà specificato dal *varValue* parametro del [CMFCPropertyGridProperty::CMFCPropertyGridProperty](#cmfcpropertygridproperty) costruttore, deve essere un tipo variant supportato. In caso contrario, questo metodo effettua un'asserzione in modalità di debug. Tipi supportati includono `VT_INT`, `VT_UINT`, `VT_I2`, `VT_I4`, `VT_UI2`, e `VT_UI4`.  
+ Il tipo di proprietà, specificato mediante il *varValue* parametro del [CMFCPropertyGridProperty::CMFCPropertyGridProperty](#cmfcpropertygridproperty) costruttore, deve essere un tipo variant supportato. In caso contrario, questo metodo effettua un'asserzione in modalità di debug. I tipi supportati includono VT_INT VT_UINT, VT_I2, VT_I4, VT_UI2 e VT_UI4.  
   
 ##  <a name="expand"></a>  CMFCPropertyGridProperty::Expand  
- Espande o comprime di una proprietà che contiene le sottoproprietà.  
+ Espande o comprime una proprietà che contiene le sottoproprietà.  
   
 ```  
 void Expand(BOOL bExpand=TRUE);
@@ -561,7 +561,7 @@ void Expand(BOOL bExpand=TRUE);
   
 ### <a name="parameters"></a>Parametri  
  [in] *bExpand*  
- `TRUE` Per espandere la proprietà. FALSE per comprimere le proprietà. Il valore predefinito è `TRUE`.  
+ TRUE per espandere la proprietà. FALSE per comprimere la proprietà. Il valore predefinito è TRUE.  
   
 ### <a name="remarks"></a>Note  
   
@@ -573,23 +573,23 @@ virtual CString FormatProperty();
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- La rappresentazione testo del valore della proprietà.  
+ La rappresentazione testuale del valore della proprietà.  
   
 ### <a name="remarks"></a>Note  
  Questo metodo viene chiamato dal framework prima che venga visualizzato il valore della proprietà.  
   
 ##  <a name="getdata"></a>  CMFCPropertyGridProperty::GetData  
- Recupera un `DWORD` valore associato a una proprietà.  
+ Recupera un valore DWORD che è associato a una proprietà.  
   
 ```  
 DWORD_PTR GetData() const;  
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- Valore `DWORD`.  
+ Un valore DWORD.  
   
 ### <a name="remarks"></a>Note  
- I dati che viene restituiti sono un valore specifico dell'applicazione, ad esempio un numero o un puntatore a altri dati. Specificare il valore dei dati quando si costruisce la proprietà o quando si chiama il [CMFCPropertyGridProperty::SetData](#setdata) metodo.  
+ I dati restituiti sono un valore specifico dell'applicazione, ad esempio un numero o un puntatore a altri dati. Specificare il valore dei dati quando si costruisce la proprietà o quando si chiama il [CMFCPropertyGridProperty::SetData](#setdata) (metodo).  
   
 ##  <a name="getdescription"></a>  CMFCPropertyGridProperty::GetDescription  
  Recupera una descrizione della proprietà.  
@@ -615,7 +615,7 @@ int GetExpandedSubItems(BOOL bIncludeHidden=TRUE) const;
   
 |Parametro|Descrizione|  
 |---------------|-----------------|  
-|[in] *bIncludeHidden*|`TRUE` Per includere gli elementi secondari nascosti nel conteggio. in caso contrario, `FALSE`. Il valore predefinito è `TRUE`.|  
+|[in] *bIncludeHidden*|TRUE per includere gli elementi secondari nascosti nel conteggio. in caso contrario, FALSE. Il valore predefinito è TRUE.|  
   
 ### <a name="return-value"></a>Valore restituito  
  Il numero di elementi secondari espansi.  
@@ -623,14 +623,14 @@ int GetExpandedSubItems(BOOL bIncludeHidden=TRUE) const;
 ### <a name="remarks"></a>Note  
   
 ##  <a name="gethierarchylevel"></a>  CMFCPropertyGridProperty::GetHierarchyLevel  
- Recupera l'indice in base zero di livello della gerarchia della proprietà.  
+ Recupera l'indice in base zero del livello della gerarchia della proprietà.  
   
 ```  
 int GetHierarchyLevel() const;  
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- Livello della gerarchia della proprietà.  
+ Livello gerarchico della proprietà.  
   
 ### <a name="remarks"></a>Note  
   
@@ -647,7 +647,7 @@ LPCTSTR GetName() const;
 ### <a name="remarks"></a>Note  
   
 ##  <a name="getnametooltip"></a>  CMFCPropertyGridProperty::GetNameTooltip  
- Chiamato dal framework per visualizzare il nome della proprietà in una descrizione comando.  
+ Chiamata eseguita dal framework per visualizzare il nome della proprietà in una descrizione comando.  
   
 ```  
 virtual CString GetNameTooltip();
@@ -667,7 +667,7 @@ LPCTSTR GetOption(int nIndex) const;
   
 ### <a name="parameters"></a>Parametri  
  *nIndex*  
- Indice in base zero dell'elemento di elenco (opzione) per il recupero della proprietà.  
+ Indice a base zero dell'elemento dell'elenco di proprietà (opzione) da recuperare.  
   
 ### <a name="return-value"></a>Valore restituito  
  Puntatore a una stringa che contiene il testo dell'opzione.  
@@ -682,10 +682,10 @@ int GetOptionCount() const;
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- Il numero di voci di elenco di proprietà (opzioni) contenuti nel controllo proprietà.  
+ Il numero di elementi di elenco di proprietà (opzioni) contenuti nel controllo proprietà.  
   
 ### <a name="remarks"></a>Note  
- Chiamare il [CMFCPropertyGridProperty::AddOption](#addoption) metodo per aggiungere elementi all'elenco delle proprietà. Chiamare il [CMFCPropertyGridProperty::RemoveAllOptions](#removealloptions) metodo utile per rimuovere tutti gli elementi.  
+ Chiamare il [CMFCPropertyGridProperty::AddOption](#addoption) metodo per aggiungere elementi all'elenco delle proprietà. Chiamare il [CMFCPropertyGridProperty::RemoveAllOptions](#removealloptions) metodo per rimuovere tutti gli elementi.  
   
 ##  <a name="getoriginalvalue"></a>  CMFCPropertyGridProperty::GetOriginalValue  
  Recupera il valore iniziale della proprietà corrente.  
@@ -698,9 +698,9 @@ const COleVariant& GetOriginalValue() const;
  Il valore originale della proprietà corrente.  
   
 ### <a name="remarks"></a>Note  
- Utilizzare questo metodo per annullare gli effetti di un'operazione di modifica che cambia il valore della proprietà corrente.  
+ Utilizzare questo metodo per annullare l'effetto di un'operazione di modifica che cambia il valore della proprietà corrente.  
   
- Il valore originale della proprietà corrente viene impostato il [CMFCPropertyGridProperty::CMFCPropertyGridProperty](#cmfcpropertygridproperty) costruttore, modificato dal [CMFCPropertyGridProperty::SetOriginalValue](#setoriginalvalue) (metodo) e reimpostare il [cmfcpropertygridproperty:: Resetoriginalvalue](#resetoriginalvalue) metodo.  
+ Il valore originale della proprietà corrente è impostato il [CMFCPropertyGridProperty::CMFCPropertyGridProperty](#cmfcpropertygridproperty) costruttore, modificata il [CMFCPropertyGridProperty::SetOriginalValue](#setoriginalvalue) (metodo) e ripristinare mediante il [cmfcpropertygridproperty:: Resetoriginalvalue](#resetoriginalvalue) (metodo).  
   
 ##  <a name="getparent"></a>  CMFCPropertyGridProperty::GetParent  
  Recupera un puntatore a una proprietà padre.  
@@ -710,7 +710,7 @@ CMFCPropertyGridProperty* GetParent() const;
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- Un puntatore a un oggetto di proprietà padre, o `NULL` per la proprietà di primo livello.  
+ Puntatore a un oggetto di proprietà padre o NULL per la proprietà di primo livello.  
   
 ### <a name="remarks"></a>Note  
   
@@ -722,7 +722,7 @@ CRect GetRect() const;
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- Un [CRect](../../atl-mfc-shared/reference/crect-class.md) oggetto che descrive il rettangolo di delimitazione.  
+ Oggetto [CRect](../../atl-mfc-shared/reference/crect-class.md) oggetto che descrive il rettangolo di delimitazione.  
   
 ### <a name="remarks"></a>Note  
   
@@ -735,14 +735,14 @@ CMFCPropertyGridProperty* GetSubItem(int nIndex) const;
   
 ### <a name="parameters"></a>Parametri  
  [in] *nIndex*  
- Indice in base zero della proprietà da recuperare. Questo parametro è valido se è minore di zero oppure maggiore o uguale al numero di sottoproprietà.  
+ Indice a base zero della proprietà da recuperare. Questo parametro è valido se è minore di zero oppure maggiore o uguale al numero di sottoproprietà.  
   
 ### <a name="return-value"></a>Valore restituito  
  Puntatore a un oggetto di proprietà che è un elemento figlio di questa proprietà.  
   
  oppure  
   
- In modalità delle vendite al dettaglio `NULL` se il *nIndex* parametro non è valido. In modalità debug, questo metodo asserzioni.  
+ In modalità delle vendite al dettaglio, NULL se il *nIndex* parametro non è valido. In modalità debug, questo metodo asserzioni.  
   
 ### <a name="remarks"></a>Note  
   
@@ -766,12 +766,12 @@ virtual const _variant_t& GetValue() const;
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- Una variabile variant contenente il valore della proprietà.  
+ Una variante che contiene il valore della proprietà.  
   
 ### <a name="remarks"></a>Note  
   
 ##  <a name="getvaluetooltip"></a>  CMFCPropertyGridProperty::GetValueTooltip  
- Chiamata eseguita dal framework per recuperare la rappresentazione testo del valore della proprietà che viene quindi visualizzato in una descrizione comando.  
+ Chiamata eseguita dal framework per recuperare la rappresentazione testuale del valore della proprietà che viene quindi visualizzato in una descrizione comando.  
   
 ```  
 virtual CString GetValueTooltip();
@@ -790,7 +790,7 @@ virtual BOOL HasButton() const;
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- `TRUE` Se una proprietà contiene un pulsante (o elenco di proprietà); in caso contrario, `FALSE`.  
+ TRUE se una proprietà contiene un pulsante (o un elenco di proprietà); in caso contrario, FALSE.  
   
 ### <a name="remarks"></a>Note  
   
@@ -811,33 +811,33 @@ CMFCPropertyGridProperty* HitTest(
   
 ### <a name="parameters"></a>Parametri  
  [in] *punto*  
- Il punto da testare, nelle coordinate client. Questo parametro viene in genere la posizione corrente del puntatore del mouse.  
+ Punto da testare, nelle coordinate del client. Questo parametro è in genere la posizione corrente del puntatore del mouse.  
   
  [in] *pt*  
- Il punto da testare, nelle coordinate client.  
+ Punto da testare, nelle coordinate del client.  
   
  [out] *pnArea*  
- Quando termina, questo metodo indica l'area che contiene il punto specificato. Per altre informazioni, vedere la sezione Note. Il valore predefinito è `NULL`.  
+ Quando termina, questo metodo indica l'area che contiene il punto specificato. Per altre informazioni, vedere la sezione Note. Il valore predefinito è NULL.  
   
  [in] *bPropsOnly*  
- `TRUE` Per testare qualsiasi area del controllo proprietà; `FALSE` per testare solo l'area di descrizione. Il valore predefinito è `FALSE`.  
+ TRUE per qualsiasi area di test nel controllo proprietà. FALSE per testare solo l'area di descrizione. Il valore predefinito è FALSE.  
   
 ### <a name="return-value"></a>Valore restituito  
- Un puntatore a un oggetto proprietà o `NULL`.  
+ Puntatore a un oggetto proprietà o NULL.  
   
 ### <a name="remarks"></a>Note  
- Per impostazione predefinita, questo metodo verifica proprietà elementi secondari se non viene trovato il punto specificato all'interno di uno qualsiasi degli elementi di proprietà.  
+ Per impostazione predefinita, questo metodo verifica proprietà elementi secondari se il punto specificato non viene trovato all'interno di uno qualsiasi degli elementi di proprietà.  
   
  Nella tabella seguente sono elencati i valori che possono essere restituiti per il *pnArea* parametro.  
   
 |Area|Descrizione|  
 |----------|-----------------|  
-|`ClickArea::ClickExpandBox`|Il controllo di finestra espansione, che viene indicato da un segno di addizione (+).|  
+|`ClickArea::ClickExpandBox`|Il controllo di casella Espandi, viene indicato da un segno più (+).|  
 |`ClickArea::ClickName`|Nome della proprietà.|  
 |`ClickArea::ClickValue`|Valore della proprietà.|  
   
 ##  <a name="init"></a>  CMFCPropertyGridProperty::Init  
- Chiamato dal framework per inizializzare un oggetto di proprietà.  
+ Chiamata eseguita dal framework per inizializzare un oggetto proprietà.  
   
 ```  
 void Init();
@@ -853,7 +853,7 @@ BOOL IsAllowEdit() const;
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- `TRUE` Se la proprietà è modificabile. in caso contrario `FALSE`.  
+ TRUE se la proprietà è modificabile. in caso contrario, FALSE.  
   
 ### <a name="remarks"></a>Note  
   
@@ -865,20 +865,20 @@ BOOL IsEnabled() const;
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- `TRUE` Se la proprietà è abilitata. `FALSE` se la proprietà è disabilitata.  
+ TRUE se la proprietà è abilitata. FALSE se la proprietà è disabilitata.  
   
 ### <a name="remarks"></a>Note  
  Indica se una proprietà è abilitata o disabilitata.  
   
 ##  <a name="isexpanded"></a>  CMFCPropertyGridProperty::IsExpanded  
- Indica se una proprietà è espansi o compressi.  
+ Indica se una proprietà è espanso o compresso.  
   
 ```  
 BOOL IsExpanded() const;  
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- `TRUE` Se la proprietà è espanso; `FALSE` se la proprietà viene compresso.  
+ TRUE se la proprietà è espansa; FALSE se la proprietà è compresso.  
   
 ### <a name="remarks"></a>Note  
   
@@ -890,10 +890,10 @@ BOOL IsGroup() const;
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- `TRUE` Se l'oggetto proprietà corrente rappresenta un gruppo. `FALSE` se la proprietà rappresenta un valore.  
+ TRUE se l'oggetto proprietà corrente rappresenta un gruppo. FALSE se la proprietà rappresenta un valore.  
   
 ### <a name="remarks"></a>Note  
- Un *gruppo* è una raccolta di proprietà correlate in un controllo griglia delle proprietà. Se il controllo viene visualizzato in ordine gerarchico, il *nome del gruppo* viene visualizzato come titolo categoria nella riga sopra il gruppo.  
+ Oggetto *gruppo* è una raccolta di proprietà correlate in un controllo griglia delle proprietà. Se il controllo viene visualizzato in modo gerarchico, il *nome gruppo* viene visualizzato come titolo categoria nella riga sopra il gruppo.  
   
 ##  <a name="isinplaceediting"></a>  CMFCPropertyGridProperty::IsInPlaceEditing  
  Indica se la proprietà corrente è modificabile.  
@@ -903,31 +903,31 @@ BOOL IsInPlaceEditing() const;
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- `TRUE` Se la proprietà corrente è modificabile. in caso contrario, `FALSE`.  
+ TRUE se la proprietà corrente è modificabile. in caso contrario, FALSE.  
   
 ### <a name="remarks"></a>Note  
   
 ##  <a name="ismodified"></a>  CMFCPropertyGridProperty::IsModified  
- Indica se la proprietà corrente è stata modificata.  
+ Indica se la proprietà corrente a cui è stata modificata.  
   
 ```  
 BOOL IsModified() const;  
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- `TRUE` Se la proprietà viene modificata. in caso contrario, `FALSE`.  
+ TRUE se la proprietà viene modificata. in caso contrario, FALSE.  
   
 ### <a name="remarks"></a>Note  
   
 ##  <a name="isparentexpanded"></a>  CMFCPropertyGridProperty::IsParentExpanded  
- Indica se gli elementi padre della proprietà corrente vengono espanse.  
+ Indica se gli elementi padre della proprietà corrente sono espanso.  
   
 ```  
 BOOL IsParentExpanded() const;  
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- `TRUE` Se tutti gli elementi padre della proprietà corrente vengono espansi; `FALSE` se le proprietà padre sono compressi.  
+ TRUE se tutti gli elementi padre della proprietà corrente vengono espansi; FALSE se la proprietà padre vengono compresse.  
   
 ### <a name="remarks"></a>Note  
   
@@ -939,7 +939,7 @@ virtual BOOL IsSelected() const;
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- `TRUE` Se è selezionata la proprietà corrente. in caso contrario, `FALSE`.  
+ TRUE se è selezionata la proprietà corrente. in caso contrario, FALSE.  
   
 ### <a name="remarks"></a>Note  
   
@@ -955,7 +955,7 @@ BOOL IsSubItem(CMFCPropertyGridProperty* pProp) const;
  Un puntatore a una proprietà.  
   
 ### <a name="return-value"></a>Valore restituito  
- `TRUE` Se la proprietà specificata è un elemento secondario della proprietà corrente. in caso contrario, `FALSE`.  
+ TRUE se la proprietà specificata è un elemento secondario della proprietà corrente. in caso contrario, FALSE.  
   
 ##  <a name="isvaluechanged"></a>  CMFCPropertyGridProperty::IsValueChanged  
  Indica se il valore della proprietà corrente a cui è stato modificato.  
@@ -965,7 +965,7 @@ virtual BOOL IsValueChanged() const;
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- `TRUE` Se il valore della proprietà corrente a cui è stato modificato; in caso contrario, `FALSE`.  
+ TRUE se il valore della proprietà corrente a cui è stato modificato; in caso contrario, FALSE.  
   
 ### <a name="remarks"></a>Note  
   
@@ -977,7 +977,7 @@ BOOL IsVisible() const;
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- `TRUE` Se la proprietà corrente è visibile; in caso contrario, `FALSE`.  
+ TRUE se la proprietà corrente è visibile; in caso contrario, FALSE.  
   
 ### <a name="remarks"></a>Note  
   
@@ -1026,13 +1026,13 @@ virtual void OnClickButton(CPoint point);
   
 ### <a name="parameters"></a>Parametri  
  [in] *punto*  
- Un punto, nelle coordinate client.  
+ Un punto, nelle coordinate del client.  
   
 ### <a name="remarks"></a>Note  
  Per impostazione predefinita, questo metodo non esegue alcuna operazione.  
   
 ##  <a name="onclickname"></a>  CMFCPropertyGridProperty::OnClickName  
- Chiamato da un controllo elenco delle proprietà padre quando un utente fa clic il campo nome di una proprietà.  
+ Chiamato da un controllo elenco delle proprietà padre quando un utente fa clic sul campo del nome di una proprietà.  
   
 ```  
 virtual void OnClickName(CPoint C);
@@ -1042,13 +1042,13 @@ virtual void OnClickName(CPoint C);
   
 |Parametro|Descrizione|  
 |---------------|-----------------|  
-|[in] *C*|Un punto, nelle coordinate client.|  
+|[in] *C*|Un punto, nelle coordinate del client.|  
   
 ### <a name="remarks"></a>Note  
  Per impostazione predefinita, questo metodo non esegue alcuna operazione.  
   
 ##  <a name="onclickvalue"></a>  CMFCPropertyGridProperty::OnClickValue  
- Chiamato da un controllo elenco delle proprietà padre quando un utente fa clic il campo del valore di una proprietà.  
+ Chiamato da un controllo elenco delle proprietà padre quando l'utente seleziona il campo del valore di una proprietà.  
   
 ```  
 virtual BOOL OnClickValue(
@@ -1058,19 +1058,19 @@ virtual BOOL OnClickValue(
   
 ### <a name="parameters"></a>Parametri  
  [in] *uiMsg*  
- Un messaggio.  
+ Un messaggio di mouse.  
   
  [in] *punto*  
- Un punto, nelle coordinate client.  
+ Un punto, nelle coordinate del client.  
   
 ### <a name="return-value"></a>Valore restituito  
- `TRUE` Se il messaggio specificato del mouse viene elaborato da questo metodo. in caso contrario, `FALSE`.  
+ TRUE se il messaggio specificato del mouse viene elaborato da questo metodo. in caso contrario, FALSE.  
   
 ### <a name="remarks"></a>Note  
- Per impostazione predefinita, questo metodo restituisce `FALSE` se la proprietà corrente non può essere modificata. In caso contrario, la modifica o un controllo di selezione che è associato a questa proprietà elabora il messaggio specificato del mouse e quindi il metodo viene restituito `TRUE`.  
+ Per impostazione predefinita, questo metodo restituisce FALSE se la proprietà corrente a cui non è modificabile. In caso contrario, la modifica o un controllo di selezione che è associato a questa proprietà elabora il messaggio specificato del mouse e quindi questo metodo restituisce TRUE.  
   
 ##  <a name="onclosecombo"></a>  CMFCPropertyGridProperty::OnCloseCombo  
- Chiamato dal framework quando viene chiuso una casella combinata che è contenuta in una proprietà.  
+ Chiamato dal framework quando viene chiusa una casella combinata contenuto in una proprietà.  
   
 ```  
 virtual void OnCloseCombo();
@@ -1079,7 +1079,7 @@ virtual void OnCloseCombo();
 ### <a name="remarks"></a>Note  
   
 ##  <a name="onctlcolor"></a>  CMFCPropertyGridProperty::OnCtlColor  
- Chiamato dal framework quando è necessario recuperare un pennello da riempire il colore di sfondo di una proprietà.  
+ Chiamato dal framework quando è necessario recuperare un pennello per riempire il colore di sfondo di una proprietà.  
   
 ```  
 virtual HBRUSH OnCtlColor(
@@ -1092,15 +1092,15 @@ virtual HBRUSH OnCtlColor(
  Puntatore a un contesto di dispositivo.  
   
  [in] *nCtlColor*  
- (Questo parametro non utilizzato).  
+ (Questo parametro non viene utilizzato).  
   
 ### <a name="return-value"></a>Valore restituito  
- L'handle per un pennello se questo metodo dà esito positivo. in caso contrario, `NULL`.  
+ L'handle per un pennello se questo metodo ha esito positivo; in caso contrario, NULL.  
   
 ### <a name="remarks"></a>Note  
   
 ##  <a name="ondblclk"></a>  CMFCPropertyGridProperty::OnDblClk  
- Chiamato dal framework quando l'utente fa doppio clic su una proprietà.  
+ Chiamato dal framework quando l'utente fa doppio clic una proprietà.  
   
 ```  
 virtual BOOL OnDblClk(CPoint point);
@@ -1108,16 +1108,16 @@ virtual BOOL OnDblClk(CPoint point);
   
 ### <a name="parameters"></a>Parametri  
  [in] *punto*  
- Un punto, nelle coordinate client.  
+ Un punto, nelle coordinate del client.  
   
 ### <a name="return-value"></a>Valore restituito  
- `TRUE` se questo metodo dà esito positivo; in caso contrario, `FALSE`.  
+ TRUE se questo metodo ha esito positivo; in caso contrario, FALSE.  
   
 ### <a name="remarks"></a>Note  
  Per impostazione predefinita, questo metodo consente di selezionare l'elemento successivo di proprietà nel controllo elenco delle proprietà.  
   
 ##  <a name="ondestroywindow"></a>  CMFCPropertyGridProperty::OnDestroyWindow  
- Chiamato dal framework quando viene eliminata una proprietà o quando termina la modifica.  
+ Chiamato dal framework quando una proprietà viene eliminata definitivamente oppure quando viene completata la modifica.  
   
 ```  
 virtual void OnDestroyWindow();
@@ -1126,7 +1126,7 @@ virtual void OnDestroyWindow();
 ### <a name="remarks"></a>Note  
   
 ##  <a name="ondrawbutton"></a>  CMFCPropertyGridProperty::OnDrawButton  
- Chiamato dal framework per disegnare un pulsante che è contenuto in una proprietà.  
+ Chiamata eseguita dal framework per disegnare un pulsante che è contenuto in una proprietà.  
   
 ```  
 virtual void OnDrawButton(
@@ -1160,7 +1160,7 @@ virtual void OnDrawDescription(
  Un rettangolo di delimitazione che specifica la posizione in cui disegnare la descrizione della proprietà.  
   
 ### <a name="remarks"></a>Note  
- Per impostazione predefinita, questo metodo crea il nome della proprietà e la descrizione del tipo di carattere utilizzato dal controllo elenco delle proprietà padre. La descrizione della proprietà viene disegnata nello stile regolare e il nome della proprietà è in grassetto.  
+ Per impostazione predefinita, questo metodo consente di disegnare il nome della proprietà e la descrizione del tipo di carattere utilizzato dal controllo elenco delle proprietà padre. La descrizione della proprietà viene disegnata nello stile regolare e il nome della proprietà nello stile grassetto.  
   
 ##  <a name="ondrawexpandbox"></a>  CMFCPropertyGridProperty::OnDrawExpandBox  
  Chiamata eseguita dal framework per disegnare un controllo casella di espansione accanto a una proprietà che contiene le sottoproprietà.  
@@ -1179,7 +1179,7 @@ virtual void OnDrawExpandBox(
  Un rettangolo di delimitazione che specifica la posizione in cui disegnare il controllo casella di espansione.  
   
 ### <a name="remarks"></a>Note  
- Fare clic sul controllo casella di espansione per espandere o comprimere un elenco di sottoproprietà. Il controllo casella di espansione viene indicato da un quadrato che contiene un segno più (+) o meno (-). Un segno di addizione indica che la proprietà può essere espanso per visualizzare un elenco di sottoproprietà. Un segno meno indica che l'elenco può essere compressa per visualizzare solo la proprietà.  
+ Fare clic sul controllo casella di espansione per espandere o comprimere un elenco di sottoproprietà. Il controllo casella di espansione viene indicato da un quadrato che contiene un segno più (+) o meno (-). Un segno indica che la proprietà può essere espanso per visualizzare un elenco di sottoproprietà. Un segno meno (-) indica che l'elenco può essere compressi per mostrare solo la proprietà.  
   
 ##  <a name="ondrawname"></a>  CMFCPropertyGridProperty::OnDrawName  
  Chiamata eseguita dal framework per visualizzare il nome della proprietà.  
@@ -1226,29 +1226,29 @@ virtual BOOL OnEdit(LPPOINT lptClick);
   
 ### <a name="parameters"></a>Parametri  
  [in] *lptClick*  
- (Questo parametro non utilizzato). Un puntatore a un punto, nelle coordinate client.  
+ (Questo parametro non viene utilizzato). Puntatore a un punto, nelle coordinate del client.  
   
 ### <a name="return-value"></a>Valore restituito  
- `TRUE` Se l'operazione di modifica viene avviato correttamente. in caso contrario, `FALSE`.  
+ TRUE se l'operazione di modifica viene avviata correttamente. in caso contrario, FALSE.  
   
 ### <a name="remarks"></a>Note  
- Questa funzione viene chiamata dal framework quando l'utente sta per modificare un valore della proprietà. Per impostazione predefinita, questo metodo avvia l'editor appropriato per un controllo casella combinata o un controllo di selezione.  
+ Questa funzione viene chiamata dal framework quando l'utente sta per modificare il valore della proprietà. Per impostazione predefinita, questo metodo avvia l'editor appropriato per un controllo casella combinata o un controllo di selezione.  
   
 ##  <a name="onendedit"></a>  CMFCPropertyGridProperty::OnEndEdit  
- Chiamato dal framework quando l'utente termina la modifica di un valore della proprietà.  
+ Chiamato dal framework quando l'utente ha terminato la modifica di un valore della proprietà.  
   
 ```  
 virtual BOOL OnEndEdit();
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- Questo metodo restituisce sempre `TRUE`.  
+ Questo metodo restituisce sempre TRUE.  
   
 ### <a name="remarks"></a>Note  
- Per impostazione predefinita, questo metodo elimina definitivamente il controllo di modifica corrente e quindi restituisce `TRUE`.  
+ Per impostazione predefinita, questo metodo elimina il controllo di modifica corrente e quindi restituisce TRUE.  
   
 ##  <a name="onkillfocus"></a>  CMFCPropertyGridProperty::OnKillFocus  
- Chiamato dal framework quando la proprietà perde lo stato attivo di input.  
+ Chiamato dal framework quando la proprietà perde lo stato attivo.  
   
 ```  
 virtual BOOL OnKillFocus(CWnd*);
@@ -1261,10 +1261,10 @@ virtual BOOL OnKillFocus(CWnd*);
 |[in] *CWnd*|Non usato. Puntatore a una finestra.|  
   
 ### <a name="return-value"></a>Valore restituito  
- Questo metodo restituisce sempre `TRUE`.  
+ Questo metodo restituisce sempre TRUE.  
   
 ### <a name="remarks"></a>Note  
- Per impostazione predefinita, questo metodo non esegue alcuna operazione e quindi restituisce `TRUE`. Se si esegue l'override di questo metodo, restituire `TRUE` se il framework può terminare l'operazione di modifica quando la proprietà perde lo stato attivo di input.  
+ Per impostazione predefinita, questo metodo non esegue alcuna operazione e quindi restituisce TRUE. Se si esegue l'override di questo metodo, restituisce TRUE se il framework può terminare l'operazione di modifica quando la proprietà perde lo stato attivo.  
   
 ##  <a name="onkillselection"></a>  CMFCPropertyGridProperty::OnKillSelection  
 
@@ -1293,7 +1293,7 @@ virtual void OnPosSizeChanged(CRect);
  Per impostazione predefinita, questo metodo non esegue alcuna operazione.  
   
 ##  <a name="onrclickname"></a>  CMFCPropertyGridProperty::OnRClickName  
- Chiamato dal framework quando l'utente sceglie il pulsante destro del mouse nell'area del nome di proprietà.  
+ Chiamato dal framework quando l'utente sceglie il pulsante destro del mouse nell'area di nome della proprietà.  
   
 ```  
 virtual void OnRClickName(CPoint C);
@@ -1303,13 +1303,13 @@ virtual void OnRClickName(CPoint C);
   
 |Parametro|Descrizione|  
 |---------------|-----------------|  
-|[in] *C*|Un punto, nelle coordinate client.|  
+|[in] *C*|Un punto, nelle coordinate del client.|  
   
 ### <a name="remarks"></a>Note  
  Per impostazione predefinita, questo metodo non esegue alcuna operazione.  
   
 ##  <a name="onrclickvalue"></a>  CMFCPropertyGridProperty::OnRClickValue  
- Chiamato dal framework quando l'utente sceglie il pulsante destro del mouse nell'area di valore della proprietà.  
+ Chiamato dal framework quando l'utente sceglie il pulsante destro del mouse nell'area del valore di proprietà.  
   
 ```  
 virtual void OnRClickValue(
@@ -1321,7 +1321,7 @@ virtual void OnRClickValue(
   
 |Parametro|Descrizione|  
 |---------------|-----------------|  
-|[in] *C*|Un punto, nelle coordinate client.|  
+|[in] *C*|Un punto, nelle coordinate del client.|  
 |[in] *B*|Valore booleano.|  
   
 ### <a name="remarks"></a>Note  
@@ -1335,20 +1335,20 @@ virtual void OnSelectCombo();
 ```  
   
 ### <a name="remarks"></a>Note  
- Per impostazione predefinita, questo metodo utilizza il testo dell'elemento selezionato per aggiornare il valore della proprietà.  
+ Per impostazione predefinita, questo metodo Usa il testo dell'elemento selezionato per aggiornare il valore della proprietà.  
   
 ##  <a name="onsetcursor"></a>  CMFCPropertyGridProperty::OnSetCursor  
- Chiamato dal framework quando si sposta il puntatore del mouse su un elemento proprietà.  
+ Chiamato dal framework quando si sposta il puntatore del mouse su un elemento di proprietà.  
   
 ```  
 virtual BOOL OnSetCursor() const;  
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- `TRUE` Se la proprietà corrente è un tipo variant né un elenco di valori, e questo metodo carica correttamente il cursore del mouse di inserimento (cursore) punto; in caso contrario, `FALSE`.  
+ TRUE se la proprietà corrente è un tipo variant né un elenco di valori, e questo metodo carica correttamente il cursore del mouse (cursore) punto di inserimento; in caso contrario, FALSE.  
   
 ### <a name="remarks"></a>Note  
- Questo metodo supporta i tipi variant seguenti: `VT_INT`, `VT_I2`, `VT_I4`, `VT_UINT`, `VT_UI1`, `VT_UI2`, `VT_UI4`, `VT_R4`, `VT_R8`, e `VT_BSTR`.  
+ Questo metodo supporta i seguenti tipi varianti: VT_INT VT_I2, VT_I4, VT_UINT, VT_ARRAY|VT_UI1, VT_UI2, VT_UI4, VT_R4, VT_R8 e VT_BSTR.  
   
 ##  <a name="onsetselection"></a>  CMFCPropertyGridProperty::OnSetSelection  
 
@@ -1371,7 +1371,7 @@ virtual BOOL OnUpdateValue();
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- `TRUE` se questo metodo dà esito positivo; in caso contrario, `FALSE`.  
+ TRUE se questo metodo ha esito positivo; in caso contrario, FALSE.  
   
 ### <a name="remarks"></a>Note  
   
@@ -1387,10 +1387,10 @@ virtual BOOL PushChar(UINT nChar);
  Carattere.  
   
 ### <a name="return-value"></a>Valore restituito  
- `TRUE` Se si continua l'operazione di modifica; in caso contrario, `FALSE`.  
+ TRUE se l'operazione di modifica sta continuando; in caso contrario, FALSE.  
   
 ### <a name="remarks"></a>Note  
- Questo metodo supporta una proprietà che è un elenco di valori o uno dei tipi variant seguenti: `VT_INT`, `VT_I2`, `VT_I4`, `VT_UINT`, `VT_UI1`, `VT_UI2`, `VT_UI4`, `VT_R4`, `VT_R8` , e `VT_BSTR`.  
+ Questo metodo supporta una proprietà che è un elenco di valori o uno dei seguenti tipi varianti: VT_INT VT_I2, VT_I4, VT_UINT, VT_ARRAY|VT_UI1, VT_UI2, VT_UI4, VT_R4, VT_R8 e VT_BSTR.  
   
 ##  <a name="redraw"></a>  CMFCPropertyGridProperty::Redraw  
  Ridisegna la proprietà.  
@@ -1409,7 +1409,7 @@ void RemoveAllOptions();
 ```  
   
 ### <a name="remarks"></a>Note  
- Le opzioni sono anche noti come gli elementi dell'elenco di un controllo elenco delle proprietà.  
+ Le opzioni sono dette anche gli elementi dell'elenco di un controllo elenco delle proprietà.  
   
 ##  <a name="removesubitem"></a>  CMFCPropertyGridProperty::RemoveSubItem  
  Rimuove l'elemento secondario specificato.  
@@ -1422,15 +1422,15 @@ BOOL RemoveSubItem(
   
 ### <a name="parameters"></a>Parametri  
  [in] *pProp*  
- Puntatore a un sottoelemento di proprietà.  
+ Puntatore a un elemento secondario di proprietà.  
   
  [in] *bElimina*  
- `TRUE` Per eliminare l'oggetto di proprietà specificato dal *pProp* parametro; in caso contrario, `FALSE`. Il valore predefinito è `TRUE`.  
+ True per eliminare l'oggetto di proprietà specificato dal *pProp* parametro; in caso contrario, FALSE. Il valore predefinito è TRUE.  
   
 ### <a name="return-value"></a>Valore restituito  
   
 ### <a name="remarks"></a>Note  
- Specificare `FALSE` per il *bElimina* parametro se si prevede di spostare l'elemento secondario specificato; vale a dire, rimuovere l'elemento secondario e quindi aggiungerlo in un' posizione.  
+ Specificare FALSE per i *bDelete* parametro se si prevede di spostare l'elemento secondario specificato; vale a dire, rimuovere la voce secondaria e quindi aggiungerlo in un' posizione.  
   
 ##  <a name="resetoriginalvalue"></a>  Cmfcpropertygridproperty:: Resetoriginalvalue  
  Ripristina il valore originale di una proprietà modificata.  
@@ -1442,7 +1442,7 @@ virtual void ResetOriginalValue();
 ### <a name="remarks"></a>Note  
   
 ##  <a name="setdata"></a>  CMFCPropertyGridProperty::SetData  
- Associa un `DWORD` valore con una proprietà.  
+ Associa un valore DWORD a una proprietà.  
   
 ```  
 void SetData(DWORD_PTR dwData);
@@ -1450,10 +1450,10 @@ void SetData(DWORD_PTR dwData);
   
 ### <a name="parameters"></a>Parametri  
  [in] *dwData*  
- Un valore a 32 bit specifico dell'applicazione, ad esempio un numero intero o un puntatore a altri dati.  
+ Un valore a 32 bit specifiche dell'applicazione, ad esempio un numero intero o un puntatore a altri dati.  
   
 ### <a name="remarks"></a>Note  
- Usare la [CMFCPropertyGridProperty::GetData](#getdata) metodo per recuperare il `DWORD` valore. Usare la [CMFCPropertyGridCtrl::FindItemByData](../../mfc/reference/cmfcpropertygridctrl-class.md#finditembydata) metodo per individuare l'elemento di elenco di proprietà che è associato all'oggetto specificato `DWORD` valore.  
+ Usare la [CMFCPropertyGridProperty::GetData](#getdata) metodo per recuperare il valore DWORD. Usare la [CMFCPropertyGridCtrl::FindItemByData](../../mfc/reference/cmfcpropertygridctrl-class.md#finditembydata) metodo per individuare l'elemento di elenco di proprietà che è associato il valore DWORD specificato.  
   
 ##  <a name="setdescription"></a>  CMFCPropertyGridProperty::SetDescription  
  Specifica il testo che descrive la proprietà corrente.  
@@ -1482,7 +1482,7 @@ void SetName(
  Nome della proprietà.  
   
  [in] *bRedraw*  
- `TRUE` Per ridisegnare la proprietà immediatamente. in caso contrario, `FALSE`. Il valore predefinito è `TRUE`.  
+ TRUE per ridisegnare la proprietà immediatamente. in caso contrario, FALSE. Il valore predefinito è TRUE.  
   
 ### <a name="remarks"></a>Note  
   
@@ -1498,7 +1498,7 @@ virtual void SetOriginalValue(const COleVariant& varValue);
  Un valore.  
   
 ### <a name="remarks"></a>Note  
- Usare la [cmfcpropertygridproperty:: Resetoriginalvalue](#resetoriginalvalue) metodo per reimpostare il valore originale di una proprietà modificata.  
+ Usare la [cmfcpropertygridproperty:: Resetoriginalvalue](#resetoriginalvalue) per reimpostare il valore originale di una proprietà modificata.  
   
 ##  <a name="setvalue"></a>  CMFCPropertyGridProperty::SetValue  
  Imposta il valore di una proprietà della griglia di proprietà.  
@@ -1524,10 +1524,10 @@ void Show(
   
 ### <a name="parameters"></a>Parametri  
  [in] *bMostra*  
- `TRUE` Per visualizzare la proprietà corrente e i relativi elementi secondari; `FALSE` per nascondere la proprietà corrente e i relativi elementi secondari. Il valore predefinito è `TRUE`.  
+ TRUE per visualizzare la proprietà corrente e i relativi elementi secondari; FALSE per nascondere la proprietà corrente e i relativi elementi secondari. Il valore predefinito è TRUE.  
   
- [in] `bAdjustLayout`  
- `TRUE` Per ricalcolare come disegnare l'etichetta e un valore di una proprietà e quindi disegnare la proprietà. `FALSE` da utilizzare calcoli esistenti per disegnare la proprietà. Il valore predefinito è `TRUE`.  
+ [in] *bAdjustLayout*  
+ TRUE per ricalcolare come disegnare l'etichetta e il valore di una proprietà e quindi disegnare la proprietà. FALSE per utilizzare calcoli esistenti per disegnare la proprietà. Il valore predefinito è TRUE.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Grafico delle gerarchie](../../mfc/hierarchy-chart.md)   

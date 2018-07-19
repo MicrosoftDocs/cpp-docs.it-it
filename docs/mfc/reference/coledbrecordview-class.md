@@ -1,5 +1,5 @@
 ---
-title: COleDBRecordView (classe) | Documenti Microsoft
+title: Classe COleDBRecordView | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 122ceb1715323e1482b2a8a8544cbe3f6270c713
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 623ba901d1998a899a443d235d65c6b205cfea4f
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37037857"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37853693"
 ---
 # <a name="coledbrecordview-class"></a>COleDBRecordView (classe)
 Visualizzazione che mostra i record del database nei controlli.  
@@ -50,20 +50,20 @@ class COleDBRecordView : public CFormView
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[COleDBRecordView::OnGetRowset](#ongetrowset)|Restituisce uno standard `HRESULT` valore.|  
-|[COleDBRecordView::OnMove](#onmove)|Aggiorna il record corrente (se dirty) nell'origine dati e viene spostato il record specificato (successivo, precedente, primo o ultimo).|  
+|[COleDBRecordView::OnGetRowset](#ongetrowset)|Restituisce un valore HRESULT standard.|  
+|[COleDBRecordView::OnMove](#onmove)|Aggiorna il record corrente (se dirty) nell'origine dati e viene spostato il record specificato (next, previous first o last).|  
   
 ## <a name="remarks"></a>Note  
- La vista è un modulo direttamente connesso a un `CRowset` oggetto. La vista viene creata da una risorsa modello di finestra di dialogo e visualizza i campi del `CRowset` oggetto nei controlli del modello di finestra di dialogo. Il `COleDBRecordView` oggetto utilizza dati DDX (dialog exchange) e la funzionalità per la navigazione incorporata nella `CRowset`, automatizzare lo spostamento dei dati tra i controlli nel form e i campi del set di righe. `COleDBRecordView` inoltre fornisce un'implementazione predefinita per lo spostamento al primo, successivo, precedente o l'ultimo record e un'interfaccia per l'aggiornamento del record attualmente sulla vista.  
+ La vista è una visualizzazione di form direttamente connessa a un `CRowset` oggetto. La vista viene creata da una risorsa modello di finestra di dialogo e visualizza i campi del `CRowset` oggetto nei controlli del modello di finestra di dialogo. Il `COleDBRecordView` oggetto utilizza DDX (DDX) e le funzionalità per la navigazione incorporate in `CRowset`per automatizzare lo spostamento dei dati tra i controlli nel form e i campi del set di righe. `COleDBRecordView` fornisce anche un'implementazione predefinita per lo spostamento al primo, successivo, precedente o gli ultimi record e un'interfaccia per l'aggiornamento del record attualmente nella vista.  
   
- È possibile utilizzare le funzioni DDX con **COleDbRecordView** per ottenere i dati direttamente dal recordset del database e visualizzarlo in un controllo di finestra di dialogo. È consigliabile utilizzare il **DDX _\***  metodi (ad esempio `DDX_Text`), non il **DDX_Field\***  funzioni (ad esempio `DDX_FieldText`) con **COleDbRecordView** . `DDX_FieldText` non funzionerà con **COleDbRecordView** poiché `DDX_FieldText` accetta un argomento supplementare di tipo **CRecordset\***  (per `CRecordView`) o **CDaoRecordset\***  (per `CDaoRecordView`).  
+ È possibile usare le funzioni DDX con `COleDbRecordView` per ottenere i dati direttamente dal set di record di database e visualizzarlo in un controllo di finestra di dialogo. È consigliabile usare la **DDX _\***  metodi (, ad esempio `DDX_Text`), non il **DDX_Field\***  funzioni (ad esempio `DDX_FieldText`) con `COleDbRecordView`. `DDX_FieldText` non funziona con `COleDbRecordView` poiché `DDX_FieldText` accetta un argomento di tipo aggiuntivo **CRecordset\***  (per `CRecordView`) o **CDaoRecordset\***  (per `CDaoRecordView`).  
   
 > [!NOTE]
->  Se si lavora con le classi di oggetti DAO (Data Access) anziché le classi di modelli Consumer OLE DB, utilizzare una classe [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) invece. Per altre informazioni, vedere l'articolo [Panoramica: programmazione di Database](../../data/data-access-programming-mfc-atl.md).  
+>  Se si lavora con le classi di oggetti DAO (Data Access) anziché le classi modello del Consumer OLE DB, usare una classe [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) invece. Per altre informazioni, vedere l'articolo [Overview: programmazione di Database](../../data/data-access-programming-mfc-atl.md).  
   
- `COleDBRecordView` tiene traccia della posizione dell'utente nel set di righe in modo che la visualizzazione di record può aggiornare l'interfaccia utente. Quando l'utente passa a delle estremità del set di righe, la visualizzazione dei record Disabilita oggetti dell'interfaccia utente, ad esempio voci di menu o pulsanti della barra degli strumenti, ovvero per lo spostamento di ulteriore nella stessa direzione.  
+ `COleDBRecordView` tiene traccia della posizione dell'utente nel set di righe in modo che la visualizzazione di record può aggiornare l'interfaccia utente. Quando l'utente passa a un'estremità del set di righe, la visualizzazione dei record Disabilita oggetti dell'interfaccia utente, ad esempio voci di menu o i pulsanti della barra degli strumenti, ovvero per lo spostamento ulteriormente nella stessa direzione.  
   
- Per ulteriori informazioni sulle classi di set di righe, vedere la [tramite OLE DB (modelli Consumer)](../../data/oledb/ole-db-consumer-templates-cpp.md) articolo.  
+ Per altre informazioni sulle classi di set di righe, vedere la [tramite OLE DB Consumer i modelli](../../data/oledb/ole-db-consumer-templates-cpp.md) articolo.  
   
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -93,13 +93,13 @@ COleDBRecordView(UINT nIDTemplate);
   
 ### <a name="parameters"></a>Parametri  
  *lpszTemplateName*  
- Contiene una stringa con terminazione null che rappresenta il nome di una risorsa modello di finestra di dialogo.  
+ Contiene una stringa con terminazione null che rappresenta il nome di una risorsa modello di finestra.  
   
  *nIDTemplate*  
  Contiene il numero di ID di una risorsa modello di finestra di dialogo.  
   
 ### <a name="remarks"></a>Note  
- Quando si crea un oggetto di un tipo derivato da `COleDBRecordView`, richiamare uno dei costruttori per creare l'oggetto visualizzazione e identificare le risorse di finestra di dialogo in cui si basa la vista. È possibile identificare la risorsa in base al nome (passare una stringa come argomento al costruttore) o tramite il relativo ID (passare un intero senza segno come argomento).  
+ Quando si crea un oggetto di un tipo derivato da `COleDBRecordView`, richiamare uno dei costruttori per creare l'oggetto di visualizzazione e identificare la risorsa finestra di dialogo in cui si basa la visualizzazione. È possibile identificare la risorsa in base al nome (passare una stringa come argomento al costruttore) o tramite il relativo ID (per passare un intero senza segno come argomento).  
   
 > [!NOTE]
 >  La classe derivata *necessario* fornire il proprio costruttore. Nel costruttore, richiamare il costruttore, `COleDBRecordView::COleDBRecordView`, con il nome della risorsa o l'ID come argomento.  
@@ -113,21 +113,21 @@ virtual CRowset<>* OnGetRowset() = 0;
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- Un valore `HRESULT` standard.  
+ Un valore HRESULT standard.  
   
 ### <a name="remarks"></a>Note  
- È necessario eseguire l'override di questa funzione membro per creare o ottenere un oggetto set di righe e restituire un handle a esso. Se si dichiara la classe di visualizzazione di record con ClassWizard, la procedura guidata scrive una sostituzione predefinita per l'utente. Implementazione predefinita di ClassWizard restituisce l'handle di set di righe archiviata nella visualizzazione dei record, se presente. Se non viene costruito un oggetto set di righe del tipo specificato con ClassWizard e viene chiamato il relativo `Open` membro funzione per aprire la tabella o eseguire la query e quindi restituisce un handle all'oggetto.  
+ È necessario eseguire l'override di questa funzione membro per creare o ottenere un oggetto set di righe e restituire un handle a esso. Se si dichiara la classe di visualizzazione di record con ClassWizard, la procedura guidata scrive una sostituzione predefinita per l'utente. Implementazione predefinita di ClassWizard restituisce l'handle di set di righe archiviata nella visualizzazione dei record, se presente. Se non, costruisce un oggetto set di righe del tipo specificato con la creazione guidata classe e le chiamate relative `Open` membro funzione per aprire la tabella o eseguire la query e quindi restituisce un handle all'oggetto.  
   
 > [!NOTE]
->  Precedenti a MFC 7.0 `OnGetRowset` ha restituito un puntatore a `CRowset`. Se si dispone di codice che chiama `OnGetRowset`, è necessario modificare il tipo restituito per la classe modello **<> CRowset**.  
+>  Precedenti a MFC 7.0 `OnGetRowset` ha restituito un puntatore a `CRowset`. Se si dispone di codice che chiama `OnGetRowset`, è necessario modificare il tipo restituito per la classe modello **CRowset <>**.  
   
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFCDatabase#38](../../mfc/codesnippet/cpp/coledbrecordview-class_1.cpp)]  
   
- Per ulteriori informazioni ed esempi, vedere l'articolo [visualizzazioni di Record: utilizzo di una visualizzazione di Record](../../data/using-a-record-view-mfc-data-access.md).  
+ Per altre informazioni ed esempi, vedere l'articolo [visualizzazioni di Record: uso di una visualizzazione di Record](../../data/using-a-record-view-mfc-data-access.md).  
   
 ##  <a name="onmove"></a>  COleDBRecordView::OnMove  
- Passa a un record diverso i set di righe e la visualizzazione consente di visualizzare i relativi campi nei controlli del record.  
+ Passa a un altro record nel set di righe e visualizzazione consente di visualizzare i campi nei controlli del record.  
   
 ```  
 virtual BOOL OnMove(UINT nIDMoveCommand);
@@ -137,25 +137,25 @@ virtual BOOL OnMove(UINT nIDMoveCommand);
  *nIDMoveCommand*  
  Uno dei valori di ID di comando standard seguenti:  
   
-- `ID_RECORD_FIRST` : Spostare il primo record del recordset.  
+- ID_RECORD_FIRST, Spostare il primo record del recordset.  
   
-- `ID_RECORD_LAST` -Sposta l'e l'ultimo record del recordset.  
+- ID_RECORD_LAST, ovvero Spostare all'ultimo record del recordset.  
   
-- `ID_RECORD_NEXT` -Sposta al record successivo nel recordset.  
+- ID_RECORD_NEXT, ovvero Spostamento al record successivo nel set di record.  
   
-- `ID_RECORD_PREV` -Sposta al record precedente nel recordset.  
+- ID_RECORD_PREV, Spostare il record precedente nel recordset.  
   
 ### <a name="return-value"></a>Valore restituito  
- Diverso da zero se lo spostamento ha avuto esito positivo; in caso contrario 0 se la richiesta di spostamento è stata negata.  
+ Diverso da zero se ha avuto esito positivo; lo spostamento in caso contrario, 0 se la richiesta di spostamento è stata negata.  
   
 ### <a name="remarks"></a>Note  
- L'implementazione predefinita chiama l'appropriato `Move` funzione membro del `CRowset` oggetto associato alla visualizzazione di record.  
+ L'implementazione predefinita chiama appropriato `Move` funzione membro del `CRowset` oggetto associato alla visualizzazione di record.  
   
  Per impostazione predefinita, `OnMove` aggiorna il record corrente nell'origine dati se l'utente ha modificato nella visualizzazione dei record.  
   
- La creazione guidata applicazione crea una risorsa di menu con voci di menu di primo Record, ultimo Record, Record successivo e Record precedente. Se si seleziona l'opzione della barra degli strumenti ancorabile, la creazione guidata applicazione crea anche una barra degli strumenti con pulsanti corrispondenti a questi comandi.  
+ La creazione guidata applicazione crea una risorsa di menu con voci di menu di primo Record, ultimo Record, Record successivo e Record precedente. Se si seleziona l'opzione della barra degli strumenti ancorabile, la creazione guidata applicazione crea anche una barra degli strumenti con pulsanti che corrispondono a questi comandi.  
   
- Se si sposta dopo l'ultimo record del recordset, la visualizzazione dei record continua a visualizzare l'ultimo record. Se si sposta all'indietro oltre il primo record, la visualizzazione dei record continua a visualizzare il primo record.  
+ Se si sposta oltre l'ultimo record del recordset, la visualizzazione dei record continua a essere visualizzato l'ultimo record. Se si sposta all'indietro oltre il primo record, la visualizzazione dei record continua a visualizzare il primo record.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Grafico della gerarchia](../../mfc/hierarchy-chart.md)

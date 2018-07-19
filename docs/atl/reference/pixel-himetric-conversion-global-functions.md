@@ -1,5 +1,5 @@
 ---
-title: Funzioni globali di conversione pixel HIMETRIC | Documenti Microsoft
+title: Funzioni globali di conversione pixel-HIMETRIC | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,23 +15,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 92d84204bdf02e75f1baf64bd52d96eab0b3d271
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 14b28ec031cf4570ec98e9ab2cebfa3954a88754
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32359426"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37881162"
 ---
-# <a name="pixelhimetric-conversion-global-functions"></a>Funzioni globali di pixel/HIMETRIC conversione
+# <a name="pixelhimetric-conversion-global-functions"></a>Funzioni globali di conversione pixel/HIMETRIC
 Queste funzioni forniscono supporto per la conversione da e verso pixel e unità HIMETRIC.  
   
 > [!IMPORTANT]
->  Le funzioni elencate nella tabella seguente non possono essere utilizzate nelle applicazioni eseguite in Windows Runtime.  
+>  Le funzioni elencate nella tabella seguente non possono essere utilizzate nelle applicazioni eseguite nel Runtime di Windows.  
   
 |||  
 |-|-|  
 |[AtlHiMetricToPixel](#atlhimetrictopixel)|Converte unità HIMETRIC (ogni unità corrisponde a 0,01 millimetri) in pixel.|  
-|[AtlPixelToHiMetric](#atlpixeltohimetric)|Converte i pixel in unità HIMETRIC (ogni unità corrisponde a 0,01 millimetri).|  
+|[AtlPixelToHiMetric](#atlpixeltohimetric)|Converte pixel in unità HIMETRIC (ogni unità corrisponde a 0,01 millimetri).|  
   
 ##  <a name="atlhimetrictopixel"></a>  AtlHiMetricToPixel  
  Converte la dimensione di un oggetto in unità HIMETRIC (ogni unità corrisponde a 0,01 millimetri) in una dimensione in pixel sullo schermo.  
@@ -44,11 +44,11 @@ extern void AtlHiMetricToPixel(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `lpSizeInHiMetric`  
+ *lpSizeInHiMetric*  
  [in] Puntatore alla dimensione dell'oggetto in unità HIMETRIC.  
   
- `lpSizeInPix`  
- [out] Puntatore a cui sono necessario restituire le dimensioni dell'oggetto in pixel.  
+ *lpSizeInPix*  
+ [out] Puntatore alla dimensione dell'oggetto in pixel, in cui deve essere restituita.  
   
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_ATL_COM#49](../../atl/codesnippet/cpp/pixel-himetric-conversion-global-functions_1.cpp)]  
@@ -66,11 +66,11 @@ extern void AtlPixelToHiMetric(
 ```  
   
 ### <a name="parameters"></a>Parametri  
- `lpSizeInPix`  
+ *lpSizeInPix*  
  [in] Puntatore alla dimensione dell'oggetto in pixel.  
   
- `lpSizeInHiMetric`  
- [out] Puntatore a in cui le dimensioni dell'oggetto in unità HIMETRIC deve essere restituito.  
+ *lpSizeInHiMetric*  
+ [out] Puntatore alla dimensione dell'oggetto in unità HIMETRIC, in cui deve essere restituita.  
   
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_ATL_COM#51](../../atl/codesnippet/cpp/pixel-himetric-conversion-global-functions_2.cpp)]  

@@ -1,5 +1,5 @@
 ---
-title: Classe classe COleConvertDialog | Documenti Microsoft
+title: Classe COleConvertDialog | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -32,15 +32,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dce62b489cce44070111586959796aadd04079b7
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: cd2b9e09ed536d30729d39d53dc983d02cf0c6d7
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37042521"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37849684"
 ---
-# <a name="coleconvertdialog-class"></a>Classe COleConvertDialog (classe)
-Per altre informazioni, vedere la [OLEUICONVERT](http://msdn.microsoft.com/library/windows/desktop/ms686657) struttura in Windows SDK.  
+# <a name="coleconvertdialog-class"></a>Classe COleConvertDialog
+Per altre informazioni, vedere la [OLEUICONVERT](http://msdn.microsoft.com/library/windows/desktop/ms686657) struttura nel SDK di Windows.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -62,23 +62,23 @@ class COleConvertDialog : public COleDialog
 |----------|-----------------|  
 |[COleConvertDialog::DoConvert](#doconvert)|Esegue la conversione specificata nella finestra di dialogo.|  
 |[COleConvertDialog::DoModal](#domodal)|Consente di visualizzare la finestra di dialogo OLE Modifica elemento.|  
-|[COleConvertDialog::GetClassID](#getclassid)|Ottiene il **CLSID** associato all'elemento selezionato.|  
+|[COleConvertDialog::GetClassID](#getclassid)|Ottiene il CLSID associato all'elemento selezionato.|  
 |[COleConvertDialog::GetDrawAspect](#getdrawaspect)|Specifica se disegnare elementi come un'icona.|  
-|[COleConvertDialog::GetIconicMetafile](#geticonicmetafile)|Ottiene un handle per il metafile associato al form sotto forma di icona di questo elemento.|  
+|[COleConvertDialog::GetIconicMetafile](#geticonicmetafile)|Ottiene un handle del metafile associato alla originalissima maschera di questo elemento.|  
 |[COleConvertDialog::GetSelectionType](#getselectiontype)|Ottiene il tipo dell'opzione selezionata.|  
   
 ### <a name="public-data-members"></a>Membri dati pubblici  
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[COleConvertDialog::m_cv](#m_cv)|Una struttura che controlla il comportamento della finestra di dialogo.|  
+|[COleConvertDialog::m_cv](#m_cv)|Struttura che controlla il comportamento della finestra di dialogo.|  
   
 ## <a name="remarks"></a>Note  
   
 > [!NOTE]
->  Codice dell'applicazione contenitore generato dalla procedura guidata utilizza questa classe.  
+>  Il codice dell'applicazione contenitore generato dalla procedura guidata Usa questa classe.  
   
- Per ulteriori informazioni sulle finestre di dialogo OLE specifici, vedere l'articolo [finestre di dialogo in OLE](../../mfc/dialog-boxes-in-ole.md).  
+ Per altre informazioni sulle finestre di dialogo OLE specifici, vedere l'articolo [finestre di dialogo in OLE](../../mfc/dialog-boxes-in-ole.md).  
   
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -111,26 +111,26 @@ explicit COleConvertDialog (
   
 ### <a name="parameters"></a>Parametri  
  *pItem*  
- Punta all'elemento per attivare o convertiti.  
+ Punta all'elemento per essere convertito o attivati.  
   
  *dwFlags*  
- Flag di creazione, che include il numero dei valori seguenti combinati tramite bit per bit-operatore or:  
+ Flag di creazione, che contiene qualsiasi numero dei valori seguenti combinati tramite bit per bit-operatore or:  
   
-- **CF_SELECTCONVERTTO** specifica che il pulsante di opzione Converti in verrà selezionato inizialmente quando viene chiamata la finestra di dialogo. Questa è l'impostazione predefinita.  
+- CF_SELECTCONVERTTO specifica che il pulsante di opzione Converti in saranno inizialmente selezionato quando viene chiamata nella finestra di dialogo. Questa è l'impostazione predefinita.  
   
-- **CF_SELECTACTIVATEAS** specifica che il pulsante di opzione attivare come verrà selezionato inizialmente quando viene chiamata la finestra di dialogo.  
+- CF_SELECTACTIVATEAS specifica che il pulsante di opzione attiva come verrà inizialmente selezionato quando viene chiamata nella finestra di dialogo.  
   
-- **CF_SETCONVERTDEFAULT** specifica che la classe il cui **CLSID** specificato dal **clsidConvertDefault** appartenente il `m_cv` struttura verrà utilizzata come la selezione predefinita Nell'elenco di classi quando Converti in pulsante di opzione è selezionata.  
+- CF_SETCONVERTDEFAULT specifica che la classe con CLSID specificato dal `clsidConvertDefault` membro del `m_cv` struttura verrà usata come selezione predefinita nella casella di riepilogo di classe quando è selezionato il pulsante di opzione Converti in.  
   
-- **CF_SETACTIVATEDEFAULT** specifica che la classe di cui **CLSID** specificato dal **clsidActivateDefault** membro del `m_cv` struttura verrà utilizzata come impostazione predefinita selezione nella casella di riepilogo di classe quando attivare come pulsante di opzione è selezionata.  
+- CF_SETACTIVATEDEFAULT specifica che la classe con CLSID specificato dal `clsidActivateDefault` membro del `m_cv` struttura verrà usata come selezione predefinita nella casella di riepilogo di classe quando è selezionato il pulsante di opzione attiva come.  
   
-- **CF_SHOWHELPBUTTON** specifica che il pulsante della Guida verrà visualizzato quando viene chiamata la finestra di dialogo.  
+- CF_SHOWHELPBUTTON specifica che il pulsante della Guida verrà visualizzato quando viene chiamata la finestra di dialogo.  
   
  *pClassID*  
- Punta al CLSID dell'elemento da convertire o attivato. Se **NULL**, la **CLSID** associato *pItem* verrà utilizzato.  
+ Punta al CLSID dell'elemento da convertire o attivato. Se NULL, il CLSID associato *pItem* verrà utilizzato.  
   
  *pParentWnd*  
- Punta all'oggetto finestra padre o proprietaria (di tipo `CWnd`) a cui appartiene l'oggetto finestra di dialogo. Se si tratta **NULL**, la finestra padre della finestra di dialogo è impostata per la finestra principale dell'applicazione.  
+ Punta all'oggetto finestra padre o proprietaria (di tipo `CWnd`) a cui appartiene l'oggetto finestra di dialogo. Se è NULL, la finestra padre della finestra di dialogo è impostata per la finestra principale dell'applicazione.  
   
 ### <a name="remarks"></a>Note  
  Per visualizzare la finestra di dialogo, chiamare il [DoModal](#domodal) (funzione).  
@@ -138,7 +138,7 @@ explicit COleConvertDialog (
  Per altre informazioni, vedere [chiave CLSID](http://msdn.microsoft.com/library/windows/desktop/ms691424) e il [OLEUICONVERT](http://msdn.microsoft.com/library/windows/desktop/ms686657) struttura.  
   
 ##  <a name="doconvert"></a>  COleConvertDialog::DoConvert  
- Chiamare questa funzione, dopo la restituzione correttamente da [DoModal](#domodal)per convertire, oppure per attivare un oggetto di tipo [COleClientItem](../../mfc/reference/coleclientitem-class.md).  
+ Chiamare questa funzione, dopo essere uscito correttamente dal [DoModal](#domodal), ad esempio la conversione o attivare un oggetto di tipo [COleClientItem](../../mfc/reference/coleclientitem-class.md).  
   
 ```  
 BOOL DoConvert(COleClientItem* pItem);
@@ -146,7 +146,7 @@ BOOL DoConvert(COleClientItem* pItem);
   
 ### <a name="parameters"></a>Parametri  
  *pItem*  
- Punta all'elemento per attivare o convertiti. Non può essere **NULL**.  
+ Punta all'elemento per essere convertito o attivati. Non può essere NULL.  
   
 ### <a name="return-value"></a>Valore restituito  
  Diverso da zero se ha esito positivo; in caso contrario 0.  
@@ -162,36 +162,36 @@ virtual INT_PTR DoModal();
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- Stato di completamento per la finestra di dialogo. Uno dei valori seguenti:  
+ Stato di completamento della finestra di dialogo. Uno dei valori seguenti:  
   
-- **IDOK** se la finestra di dialogo è stata visualizzata correttamente.  
+- IDOK se la finestra di dialogo viene visualizzata correttamente.  
   
-- **IDCANCEL** se l'utente ha annullato la finestra di dialogo.  
+- IDCANCEL, se l'utente ha annullato la finestra di dialogo.  
   
-- **IDABORT** se si è verificato un errore. Se **IDABORT** viene restituito, chiamare il [COleDialog:: GetLastError](../../mfc/reference/coledialog-class.md#getlasterror) funzione membro per ottenere ulteriori informazioni sul tipo di errore che si sono verificati. Per un elenco dei possibili errori, vedere la [OleUIConvert](http://msdn.microsoft.com/library/windows/desktop/ms680694) (funzione) in Windows SDK.  
+- IDABORT se si è verificato un errore. Se viene restituito IDABORT, chiamare il [COleDialog:: GetLastError](../../mfc/reference/coledialog-class.md#getlasterror) funzione membro per ottenere altre informazioni sul tipo di errore che si sono verificati. Per un elenco dei possibili errori, vedere la [OleUIConvert](http://msdn.microsoft.com/library/windows/desktop/ms680694) funzione nel SDK di Windows.  
   
 ### <a name="remarks"></a>Note  
- Se si desidera inizializzare i vari controlli di finestra di dialogo mediante impostazione dei membri del [m_cv](#m_cv) struttura, è consigliabile farlo prima di chiamare `DoModal`, ma dopo che l'oggetto finestra di dialogo viene costruito.  
+ Se si desidera inizializzare i vari controlli di finestra di dialogo impostando i membri del [m_cv](#m_cv) struttura, è necessario eseguire questa operazione prima di chiamare `DoModal`, ma dopo che viene costruito l'oggetto finestra di dialogo.  
   
- Se `DoModal` restituisce **IDOK**, è possibile chiamare altri membri funzioni per recuperare le impostazioni o informazioni che è stato immesso dall'utente nella finestra di dialogo.  
+ Se `DoModal` restituisce IDOK, è possibile chiamare altri membri funzioni per recuperare le impostazioni o le informazioni che è stato immesso dall'utente nella finestra di dialogo.  
   
 ##  <a name="getclassid"></a>  COleConvertDialog::GetClassID  
- Chiamare questa funzione per ottenere il **CLSID** associato all'elemento selezionato nella finestra di dialogo Converti dall'utente.  
+ Chiamare questa funzione per ottenere il CLSID associato all'elemento selezionato nella finestra di dialogo Converti dall'utente.  
   
 ```  
 REFCLSID GetClassID() const;  
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- Il **CLSID** associato all'elemento selezionato nella finestra di dialogo Converti.  
+ Il CLSID associato all'elemento selezionato nella finestra di dialogo Convert.  
   
 ### <a name="remarks"></a>Note  
- Questa funzione solo dopo la chiamata [DoModal](#domodal) restituisce **IDOK**.  
+ Questa funzione solo dopo la chiamata [DoModal](#domodal) restituisce IDOK.  
   
- Per altre informazioni, vedere [chiave CLSID](http://msdn.microsoft.com/library/windows/desktop/ms691424) in Windows SDK.  
+ Per altre informazioni, vedere [CLSID chiave](http://msdn.microsoft.com/library/windows/desktop/ms691424) nel SDK di Windows.  
   
 ##  <a name="getdrawaspect"></a>  COleConvertDialog::GetDrawAspect  
- Chiamare questa funzione per determinare se l'utente ha scelto di visualizzare l'elemento selezionato come icona.  
+ Chiamare questa funzione per determinare se l'utente sceglie di visualizzare l'elemento selezionato come icona.  
   
 ```  
 DVASPECT GetDrawAspect() const;  
@@ -200,27 +200,27 @@ DVASPECT GetDrawAspect() const;
 ### <a name="return-value"></a>Valore restituito  
  Il metodo necessario per il rendering dell'oggetto.  
   
-- `DVASPECT_CONTENT` Restituito se non è stata selezionata la casella di controllo da visualizzare come icona.  
+- DVASPECT_CONTENT restituito se non è stata selezionata la casella di controllo Visualizza come icona.  
   
-- `DVASPECT_ICON` Restituito se è stata selezionata la casella di controllo da visualizzare come icona.  
+- DVASPECT_ICON restituita se è stata selezionata la casella di controllo Visualizza come icona.  
   
 ### <a name="remarks"></a>Note  
- Questa funzione solo dopo la chiamata [DoModal](#domodal) restituisce **IDOK**.  
+ Questa funzione solo dopo la chiamata [DoModal](#domodal) restituisce IDOK.  
   
- Per ulteriori informazioni sulla creazione di aspetto, vedere la [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) struttura dei dati in Windows SDK.  
+ Per altre informazioni sugli aspetti di disegno, vedere la [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) struttura dei dati in Windows SDK.  
   
 ##  <a name="geticonicmetafile"></a>  COleConvertDialog::GetIconicMetafile  
- Chiamare questa funzione per ottenere un handle per il metafile che contiene l'aspetto delle icone dell'elemento selezionato.  
+ Chiamare questa funzione per ottenere un handle del metafile che contiene l'aspetto delle icone dell'elemento selezionato.  
   
 ```  
 HGLOBAL GetIconicMetafile() const;  
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- L'handle del metafile contenente l'aspetto delle icone dell'elemento selezionato, se la casella di controllo da visualizzare come icona è stata selezionata quando è stata chiusa la finestra di dialogo scegliendo **OK**; in caso contrario **NULL**.  
+ L'handle del metafile contenente l'aspetto delle icone dell'elemento selezionato, se la casella di controllo Visualizza come icona è stata selezionata quando è stata chiusa la finestra di dialogo, scegliere OK. in caso contrario NULL.  
   
 ##  <a name="getselectiontype"></a>  COleConvertDialog::GetSelectionType  
- Chiamare questa funzione per determinare il tipo di conversione selezionato nella finestra di dialogo Converti.  
+ Chiamare questa funzione per determinare il tipo di conversione selezionato nella finestra di dialogo Convert.  
   
 ```  
 UINT GetSelectionType() const;  
@@ -230,7 +230,7 @@ UINT GetSelectionType() const;
  Tipo di selezione effettuata.  
   
 ### <a name="remarks"></a>Note  
- Vengono specificati i valori di tipo restituito per il **selezione** enumerazione tipo dichiarato nel `COleConvertDialog` classe.  
+ Vengono specificati i valori di tipo restituito per il `Selection` tipo enumerazione dichiarato nel `COleConvertDialog` classe.  
   
 ```  
 enum Selection {
@@ -242,14 +242,14 @@ enum Selection {
   
  Seguono brevi descrizioni dei valori seguenti:  
   
-- **COleConvertDialog::noConversion** restituito se la finestra di dialogo è stata annullata o che l'utente ha selezionato alcuna conversione. Se `COleConvertDialog::DoModal` restituiti **IDOK**, è possibile che l'utente ha selezionato un'icona diversa rispetto a quello selezionato in precedenza.  
+- `COleConvertDialog::noConversion` Restituito se la finestra di dialogo è stata annullata o l'utente ha selezionato alcuna conversione. Se `COleConvertDialog::DoModal` restituito IDOK, è possibile che l'utente ha selezionato un'icona diversa rispetto a quello selezionato in precedenza.  
   
-- **COleConvertDialog::convertItem** restituito se è stato selezionato il pulsante di opzione Converti in, l'utente ha selezionato un elemento diverso da convertire in, e `DoModal` restituito **IDOK**.  
+- `COleConvertDialog::convertItem` Restituito se è stato selezionato il pulsante di opzione Converti in, l'utente ha selezionato un elemento diverso per la conversione e `DoModal` restituito IDOK.  
   
-- **COleConvertDialog::activateAs** restituito se il pulsante di opzione attivare come è stato selezionato, l'utente ha selezionato un elemento diverso da attivare, e `DoModal` restituito **IDOK**.  
+- `COleConvertDialog::activateAs` Restituito se il pulsante di opzione attiva come è stato selezionato, l'utente ha selezionato un elemento diverso da attivare, e `DoModal` restituito IDOK.  
   
 ##  <a name="m_cv"></a>  COleConvertDialog::m_cv  
- Struttura di tipo **OLEUICONVERT** consentono di controllare il comportamento della finestra di dialogo Converti.  
+ Struttura di tipo OLEUICONVERT consentono di controllare il comportamento della finestra di dialogo Convert.  
   
 ```  
 OLEUICONVERT m_cv;  
@@ -258,7 +258,7 @@ OLEUICONVERT m_cv;
 ### <a name="remarks"></a>Note  
  I membri di questa struttura possono essere modificati direttamente o tramite le funzioni membro.  
   
- Per altre informazioni, vedere la [OLEUICONVERT](http://msdn.microsoft.com/library/windows/desktop/ms686657) struttura in Windows SDK.  
+ Per altre informazioni, vedere la [OLEUICONVERT](http://msdn.microsoft.com/library/windows/desktop/ms686657) struttura nel SDK di Windows.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Classe COleDialog](../../mfc/reference/coledialog-class.md)   

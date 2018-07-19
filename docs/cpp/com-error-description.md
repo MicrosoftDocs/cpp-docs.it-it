@@ -1,5 +1,5 @@
 ---
-title: _com_error::Description | Documenti Microsoft
+title: _com_error::Description | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7df1fb3a8ca600b888e5d6f2c51fc44fda17dd27
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4be038bff05ce7a37b09ec3b3c61572635747864
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32414259"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37939897"
 ---
 # <a name="comerrordescription"></a>_com_error::Description
 **Sezione specifica Microsoft**  
   
- Chiamate **IErrorInfo:: GetDescription** (funzione).  
+ Le chiamate `IErrorInfo::GetDescription` (funzione).  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,10 +37,10 @@ _bstr_t Description( ) const;
 ```  
   
 ## <a name="return-value"></a>Valore restituito  
- Restituisce il risultato della **IErrorInfo:: GetDescription** per il **IErrorInfo** oggetto registrati all'interno di `_com_error` oggetto. La stringa `BSTR` risultante viene incapsulata in un oggetto `_bstr_t`. Se non **IErrorInfo** è registrato, restituisce un oggetto vuoto `_bstr_t`.  
+ Restituisce il risultato del `IErrorInfo::GetDescription` per il `IErrorInfo` registrato nel `_com_error` oggetto. La stringa `BSTR` risultante viene incapsulata in un oggetto `_bstr_t`. Se nessun `IErrorInfo` viene registrato, restituisce un oggetto vuoto `_bstr_t`.  
   
 ## <a name="remarks"></a>Note  
- Chiamate di **IErrorInfo:: GetDescription** (funzione) e recupera **IErrorInfo** registrati all'interno di `_com_error` oggetto. Qualsiasi errore durante la chiamata di **IErrorInfo:: GetDescription** metodo viene ignorato.  
+ Chiama il `IErrorInfo::GetDescription` funzione e recupera `IErrorInfo` registrato nel `_com_error` oggetto. Qualsiasi errore durante la chiamata di `IErrorInfo::GetDescription` metodo viene ignorato.  
   
  **Fine sezione specifica Microsoft**  
   

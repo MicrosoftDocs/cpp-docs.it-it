@@ -1,5 +1,5 @@
 ---
-title: 'Data e ora: supporto SYSTEMTIME | Documenti Microsoft'
+title: 'Data e ora: supporto per SYSTEMTIME | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,15 +21,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ecbfd517a0fd535a23920ae21d03f1756babc113
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: cf48881b3baeb7dc5ab48483ae9b075a9c048a38
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32355400"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37883567"
 ---
-# <a name="date-and-time-systemtime-support"></a>Data e ora: supporto SYSTEMTIME
-Il [CTime](../atl-mfc-shared/reference/ctime-class.md) classe dispone di costruttori che accettano i tempi di sistema e file da Win32. Se si usano gli oggetti `CTime` per tali scopi, è necessario modificarne di conseguenza l'inizializzazione, come descritto in questo articolo.  
+# <a name="date-and-time-systemtime-support"></a>Data e ora: supporto per SYSTEMTIME
+Il [CTime](../atl-mfc-shared/reference/ctime-class.md) classe dispone di costruttori che accettano le ore di sistema e file da Win32. Se si usano gli oggetti `CTime` per tali scopi, è necessario modificarne di conseguenza l'inizializzazione, come descritto in questo articolo.  
   
  Per informazioni sulla struttura SYSTEMTIME, vedere [SYSTEMTIME](../mfc/reference/systemtime-structure1.md). Per informazioni sulla struttura FILETIME, vedere [FILETIME](../mfc/reference/filetime-structure.md).  
   
@@ -37,23 +37,23 @@ Il [CTime](../atl-mfc-shared/reference/ctime-class.md) classe dispone di costrut
   
  I nuovi costruttori di `CTime` sono:  
   
--   CTime (const SYSTEMTIME & `sysTime`);  
+-   CTime (SYSTEMTIME const & `sysTime`);  
   
--   CTime (const FILETIME & `fileTime`);  
+-   CTime (FILETIME const & `fileTime`);  
   
- Il parametro `fileTime` è un riferimento a una struttura `FILETIME` di Win32 che rappresenta l'ora come valore a 64 bit, un formato più pratico per l'archiviazione interna rispetto a una struttura `SYSTEMTIME` e il formato usato da Win32 per rappresentare l'ora di creazione dei file.  
+ Il *fileTime* parametro è un riferimento a un Win32 `FILETIME` struttura, che rappresenta l'ora come valore a 64 bit, un formato più pratico per l'archiviazione interna rispetto a un `SYSTEMTIME` struttura e il formato usato da Win32 per rappresenta il tempo di creazione del file.  
   
  Se il codice contiene un oggetto `CTime` inizializzato con l'ora di sistema, è consigliabile usare il costruttore `SYSTEMTIME` in Win32.  
   
- Non è probabile che si utilizzerà `CTime` `FILETIME` direttamente l'inizializzazione. Se si utilizza un `CFile` oggetto per modificare un file, [CFile:: GetStatus](../mfc/reference/cfile-class.md#getstatus) recupera il timestamp del file per l'utente tramite un `CTime` oggetto inizializzato con un `FILETIME` struttura.  
+ Non è molto probabile che userà `CTime` `FILETIME` direttamente l'inizializzazione. Se si usa un' `CFile` oggetto per modificare un file, [CFile:: GetStatus](../mfc/reference/cfile-class.md#getstatus) recupera il file timestamp per l'utente tramite un `CTime` oggetto inizializzato con un `FILETIME` struttura.  
   
 ## <a name="what-do-you-want-to-know-more-about"></a>Ciò che si desidera saperne di più  
   
--   [Generale di data e ora programmazione in MFC](../atl-mfc-shared/date-and-time.md)  
+-   [Programmazione di tempo in MFC e data generale](../atl-mfc-shared/date-and-time.md)  
   
 -   [Supporto di automazione di data e ora programmazione](../atl-mfc-shared/date-and-time-automation-support.md)  
   
--   [Classi di uso generale per la programmazione di ora e data](../atl-mfc-shared/date-and-time-general-purpose-classes.md)  
+-   [Classi generiche per la programmazione di ora e data](../atl-mfc-shared/date-and-time-general-purpose-classes.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Data e ora](../atl-mfc-shared/date-and-time.md)

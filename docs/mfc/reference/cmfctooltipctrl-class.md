@@ -1,5 +1,5 @@
 ---
-title: Classe CMFCToolTipCtrl | Documenti Microsoft
+title: Classe CMFCToolTipCtrl | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -42,12 +42,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 74efac50304554af3224b8b707b29a31248143f6
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 094aa35d985d51019254bd4478ffbc8c534854a9
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37042069"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37849539"
 ---
 # <a name="cmfctooltipctrl-class"></a>Classe CMFCToolTipCtrl
 Implementazione estesa di descrizioni comandi basata sulla [CToolTipCtrl Class](../../mfc/reference/ctooltipctrl-class.md). Una descrizione comando basata sulla classe `CMFCToolTipCtrl` può visualizzare un'icona, un'etichetta e una descrizione. È possibile personalizzare l'aspetto visivo utilizzando un riempimento sfumato, testo e colori del bordo personalizzati, testo in grassetto, angoli arrotondati o uno stile di tipo fumetto.  
@@ -87,11 +87,11 @@ class CMFCToolTipCtrl : public CToolTipCtrl
 |[CMFCToolTipCtrl::SetParams](#setparams)|Specifica l'aspetto di una descrizione comando con un oggetto `CMFCToolTipInfo`.|  
   
 ## <a name="remarks"></a>Note  
- Uso `CMFCToolTipCtrl`, `CMFCToolTipInfo`, e [CTooltipManager classe](../../mfc/reference/ctooltipmanager-class.md) oggetti interagiscono per implementare le descrizioni comandi personalizzate nell'applicazione.  
+ Uso `CMFCToolTipCtrl`, `CMFCToolTipInfo`, e [classe CTooltipManager](../../mfc/reference/ctooltipmanager-class.md) oggetti interagiscono per implementare le descrizioni comandi personalizzate nell'applicazione.  
   
  Ad esempio, per usare le descrizioni comando di tipo fumetto, seguire questa procedura:  
   
- 1. Usare la [CWinAppEx Class](../../mfc/reference/cwinappex-class.md) metodo per inizializzare il gestore della descrizione comando nell'applicazione.  
+ 1. Usare la [classe CWinAppEx](../../mfc/reference/cwinappex-class.md) metodo per inizializzare il gestore della descrizione comando nell'applicazione.  
   
  2. Creare una struttura `CMFCToolTipInfo` per specificare lo stile di visualizzazione desiderata:  
   
@@ -122,7 +122,7 @@ CMFCToolTipInfo params;
 
  }  
 ```  
-3. Usare la [Settooltipparams](../../mfc/reference/ctooltipmanager-class.md#settooltipparams) metodo per impostare lo stile di visualizzazione per tutte le descrizioni comandi nell'applicazione tramite gli stili definiti nel `CMFCToolTipInfo` oggetto:  
+3. Usare la [Settooltipparams](../../mfc/reference/ctooltipmanager-class.md#settooltipparams) metodo per impostare lo stile di visualizzazione delle descrizioni comando nell'applicazione usando gli stili definiti nel `CMFCToolTipInfo` oggetto:  
   
 ```  
 theApp.GetTooltipManager ()->SetTooltipParams (AFX_TOOLTIP_TYPE_ALL,  
@@ -214,7 +214,7 @@ virtual void OnDrawBorder(
  Colore del bordo.  
   
 ### <a name="remarks"></a>Note  
- Eseguire l'override di questo metodo in una classe derivata per personalizzare l'aspetto del bordo della descrizione comando.  
+ L'override del metodo in una classe derivata per personalizzare l'aspetto del bordo della descrizione comando.  
   
 ##  <a name="ondrawdescription"></a>  CMFCToolTipCtrl::OnDrawDescription  
 
@@ -252,10 +252,10 @@ virtual BOOL OnDrawIcon(
  Coordinate dell'icona.  
   
 ### <a name="return-value"></a>Valore restituito  
- `TRUE` Se l'icona è stato creato. In caso contrario `FALSE`.  
+ TRUE se è stata disegnata l'icona. In caso contrario, FALSE.  
   
 ### <a name="remarks"></a>Note  
- Eseguire l'override di questo metodo in una classe derivata per visualizzare un'icona personalizzata. È inoltre necessario eseguire l'override [CMFCToolTipCtrl::GetIconSize](#geticonsize) per abilitare la descrizione comando calcolare correttamente il layout di testo e una descrizione.  
+ L'override del metodo in una classe derivata per visualizzare un'icona personalizzata. È anche necessario eseguire l'override [CMFCToolTipCtrl::GetIconSize](#geticonsize) per abilitare la descrizione comando calcolare correttamente il layout del testo e la descrizione.  
   
 ##  <a name="ondrawlabel"></a>  CMFCToolTipCtrl::OnDrawLabel  
  Crea l'etichetta della descrizione comando o calcola la dimensione dell'etichetta.  
@@ -275,13 +275,13 @@ virtual CSize OnDrawLabel(
  Rettangolo di delimitazione dell'area dell'etichetta.  
   
  [in] *bCalcOnly*  
- Se `TRUE`, l'etichetta non verrà creata.  
+ Se TRUE, non dell'etichetta verrà disegnato.  
   
 ### <a name="return-value"></a>Valore restituito  
  Dimensione dell'etichetta, in pixel.  
   
 ### <a name="remarks"></a>Note  
- Eseguire l'override di questo metodo in una classe derivata se si desidera personalizzare l'aspetto dell'etichetta della descrizione comando.  
+ L'override del metodo in una classe derivata se si desidera personalizzare l'aspetto dell'etichetta della descrizione comando.  
   
 ##  <a name="ondrawseparator"></a>  CMFCToolTipCtrl::OnDrawSeparator  
  Crea il separatore tra l'etichetta e la descrizione in una descrizione comando.  
@@ -299,18 +299,18 @@ virtual void OnDrawSeparator(
  Puntatore a un contesto di dispositivo.  
   
  [in] *x1*  
- Coordinata orizzontale estremità sinistra del separatore.  
+ Coordinata orizzontale dell'estremità sinistra del separatore.  
   
  [in] *x2*  
- Coordinata orizzontale l'estremità destra del separatore.  
+ Coordinata orizzontale dell'estremità destra del separatore.  
   
  [in] *Y*  
  Coordinata verticale del separatore.  
   
 ### <a name="remarks"></a>Note  
- L'implementazione predefinita Disegna una linea dal punto (x1, y) per il punto (x2, y).  
+ L'implementazione predefinita consente di disegnare una linea dal punto (x1, y) per il punto (x2, y).  
   
- Eseguire l'override di questo metodo in una classe derivata per personalizzare l'aspetto del separatore.  
+ L'override del metodo in una classe derivata per personalizzare l'aspetto del separatore.  
   
 ##  <a name="onfillbackground"></a>  CMFCToolTipCtrl::OnFillBackground  
  Riempie lo sfondo di descrizione comando.  
@@ -337,9 +337,9 @@ virtual void OnFillBackground(
  Colore dei bordi e la linea di delimitazione tra etichetta e descrizione.  
   
 ### <a name="remarks"></a>Note  
- L'implementazione predefinita riempie il rettangolo specificato da *rect* con il colore o il modello specificato dall'ultima chiamata a [CMFCToolTipCtrl::SetParams](#setparams).  
+ L'implementazione predefinita riempie il rettangolo specificato da *rect* con il colore o il modello specificato tramite la chiamata più recente di [CMFCToolTipCtrl::SetParams](#setparams).  
   
- Eseguire l'override di questo metodo in una classe derivata se si desidera personalizzare l'aspetto della descrizione comando.  
+ L'override del metodo in una classe derivata se si desidera personalizzare l'aspetto della descrizione comando.  
   
 ##  <a name="setdescription"></a>  CMFCToolTipCtrl::SetDescription  
  Imposta la descrizione che verrà visualizzata dalla descrizione comando.  
@@ -406,12 +406,12 @@ void SetParams(CMFCToolTipInfo* pParams);
  Puntatore a un [classe CMFCToolTipInfo](../../mfc/reference/cmfctooltipinfo-class.md) oggetto che contiene i parametri di visualizzazione.  
   
 ### <a name="remarks"></a>Note  
- Ogni volta che viene visualizzata la descrizione comando, viene disegnato utilizzando i colori e gli stili di visualizzazione *pParams* specifica. Il valore di *pParams* memorizzato nel membro protetto `m_Params`, cui è possibile accedere da una classe derivata che esegue l'override [CMFCToolTipCtrl::OnDrawBorder](#ondrawborder), [CMFCToolTipCtrl: : OnDrawIcon](#ondrawicon), [CMFCToolTipCtrl::OnDrawLabel](#ondrawlabel), [CMFCToolTipCtrl::OnDrawSeparator](#ondrawseparator), o [CMFCToolTipCtrl::OnFillBackground](#onfillbackground)per mantenere l'aspetto specificato.  
+ Ogni volta che viene visualizzata la descrizione, l'oggetto viene disegnato utilizzando i colori e gli stili di visualizzazione *pParams* specifica. Il valore di *pParams* viene archiviato nel membro protetto `m_Params`, che sono accessibili da una classe derivata che esegue l'override [CMFCToolTipCtrl::OnDrawBorder](#ondrawborder), [CMFCToolTipCtrl: : OnDrawIcon](#ondrawicon), [CMFCToolTipCtrl::OnDrawLabel](#ondrawlabel), [CMFCToolTipCtrl::OnDrawSeparator](#ondrawseparator), o [CMFCToolTipCtrl::OnFillBackground](#onfillbackground)per mantenere l'aspetto specificato.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Grafico delle gerarchie](../../mfc/hierarchy-chart.md)   
  [Classi](../../mfc/reference/mfc-classes.md)   
- [CToolTipCtrl (classe)](../../mfc/reference/ctooltipctrl-class.md)   
+ [Classe CToolTipCtrl](../../mfc/reference/ctooltipctrl-class.md)   
  [Classe CTooltipManager](../../mfc/reference/ctooltipmanager-class.md)   
  [Classe CMFCToolTipInfo](../../mfc/reference/cmfctooltipinfo-class.md)   
  [Classe CWinAppEx](../../mfc/reference/cwinappex-class.md)

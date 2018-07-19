@@ -1,5 +1,5 @@
 ---
-title: Overload di funzioni | Documenti Microsoft
+title: Overload di funzioni | Microsoft Docs
 ms.custom: ''
 ms.date: 1/25/2018
 ms.technology:
@@ -16,18 +16,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 07b7209c890ce3eeadb2db346445802576674bfd
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1506870ff0b5bb2aea55874d32f62b1da63c7302
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37943314"
 ---
 # <a name="function-overloading"></a>Overload di funzioni
-C++ consente la specifica di più funzioni con lo stesso nome nello stesso ambito. Questi sono denominati *overload* funzioni. Le funzioni in overload consentono di fornire diverse semantiche per una funzione, a seconda del tipo e il numero di argomenti. 
+C++ consente la specifica di più funzioni con lo stesso nome nello stesso ambito. Questi sono denominati *sottoposti a overload* funzioni. Le funzioni in overload consentono di fornire diverse semantiche per una funzione, a seconda del tipo e numero di argomenti. 
   
- Ad esempio, un **stampa** funzione che accetta un **std:: String** argomento potrà eseguire attività molto diverse rispetto a uno che accetta un argomento di tipo **double**. L'overload consente di evitare di utilizzare nomi, ad esempio `print_string` o `print_double`. In fase di compilazione, il compilatore sceglie quale eseguire l'overload da utilizzare in base al tipo di argomenti passati dal chiamante.  Se si chiama **print(42.0)** il **void stampa (d double)** funzione verrà richiamata. Se si chiama **stampa ("hello world")** il **void print(std::string)** overload verrà richiamato.
+ Ad esempio, un `print` funzione che accetta una `std::string` argomento potrebbe eseguire attività molto diverse rispetto a uno che accetta un argomento di tipo **doppie**. L'overload evita di dover usare, ad esempio i nomi `print_string` o `print_double`. In fase di compilazione, il compilatore sceglie quale overload usare in base al tipo di argomenti passato dal chiamante.  Se si chiama `print(42.0)` il `void print(double d)` funzione verrà richiamata. Se si chiama `print("hello world")` il `void print(std::string)` overload viene richiamato.
 
-È possibile eseguire l'overload di funzioni membro e delle funzioni non membro. Nella tabella seguente sono illustrate quali parti di una dichiarazione di funzione C++ vengono usate per distinguere tra gruppi di funzioni con lo stesso nome nello stesso ambito.  
+È possibile eseguire l'overload sia le funzioni membro e funzioni non membro. Nella tabella seguente sono illustrate quali parti di una dichiarazione di funzione C++ vengono usate per distinguere tra gruppi di funzioni con lo stesso nome nello stesso ambito.  
   
 ### <a name="overloading-considerations"></a>Considerazioni sull'overload  
   
@@ -37,15 +38,15 @@ C++ consente la specifica di più funzioni con lo stesso nome nello stesso ambit
 |Numero di argomenti|Yes|  
 |Tipo di argomenti|Yes|  
 |Presenza o assenza di puntini di sospensione|Yes|  
-|Utilizzo dei nomi `typedef`|No|  
+|Sfrutta **typedef** nomi|No|  
 |Limiti di matrice non specificati|No|  
-|**const** o `volatile`|Sì, quando applicato a una funzione intera|
+|**const** o **volatile**|Sì, quando applicato a una funzione intera|
 |[ref-qualifier](#ref-qualifier)|Yes|  
   
 ## <a name="example"></a>Esempio  
  Nell'esempio seguente viene illustrato come è possibile usare l'overload.  
   
-```  
+```cpp 
 // function_overloading.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -146,17 +147,17 @@ int print(double dvalue, int prec)
   
  Considerare le seguenti dichiarazioni (le funzioni vengono contrassegnate come `Variant 1`, `Variant 2` e `Variant 3` per l'identificazione nella discussione seguente):  
   
-```  
+```cpp 
 Fraction &Add( Fraction &f, long l );       // Variant 1  
 Fraction &Add( long l, Fraction &f );       // Variant 2  
 Fraction &Add( Fraction &f, Fraction &f );  // Variant 3  
   
 Fraction F1, F2;  
-```  
+```
   
  Si consideri la seguente istruzione:  
   
-```  
+```cpp 
 F1 = Add( F2, 23 );  
 ```  
   
@@ -164,14 +165,14 @@ F1 = Add( F2, 23 );
   
 |Set 1: Funzioni candidate con il primo argomento della frazione di tipo|Set 2: Funzioni candidate il cui secondo argomento può essere convertito nel tipo int|  
 |--------------------------------------------------------------------------|-----------------------------------------------------------------------------------|  
-|Variante 1|Variante 1 (`int` può essere convertito in `long` mediante una conversione standard)|  
+|Variante 1|Variante 1 (**int** può essere convertito in **lungo** mediante una conversione standard)|  
 |Variante 3||  
   
  Le funzioni del Set 2 sono funzioni per le quali vi sono conversioni implicite dal tipo di parametro effettivo nel tipo di parametro formale e tra tali funzioni vi è una funzione per cui il "costo" di conversione del tipo di parametro effettivo nel tipo di parametro formale è il più ridotto.  
   
  L'intersezione dei due set è la Variante 1. Un esempio di una chiamata di funzione ambigua è:  
   
-```  
+```cpp 
 F1 = Add( 3, 6 );  
 ```  
   
@@ -179,11 +180,11 @@ F1 = Add( 3, 6 );
   
 |Set 1: Funzioni candidate con il primo argomento di tipo int|Set 2: Funzioni candidate con il secondo argomento di tipo int|  
 |---------------------------------------------------------------------|----------------------------------------------------------------------|  
-|Variante 2 (`int` può essere convertito in `long` mediante una conversione standard)|Variante 1 (`int` può essere convertito in `long` mediante una conversione standard)|  
+|Variante 2 (**int** può essere convertito in **lungo** mediante una conversione standard)|Variante 1 (**int** può essere convertito in **lungo** mediante una conversione standard)|  
   
  Si noti che l'intersezione tra questi due set è vuota. Pertanto, il compilatore genera un messaggio di errore.  
   
- Per la corrispondenza all'argomento, una funzione con *n* argomenti predefiniti viene trattata *n*+ 1 funzioni separate, ognuna con un numero diverso di argomenti.  
+ Per l'argomento corrispondente, una funzione con *n* gli argomenti predefiniti viene trattato come *n*+ 1 funzioni separate, ognuna con un numero diverso di argomenti.  
   
  I puntini di sospensione (...) fungono da caratteri jolly; corrispondono a qualsiasi argomento effettivo. In tal modo, è possibile che vengano generati molti set ambigui se non si progettano set della funzione in overload con estrema attenzione.  
   
@@ -193,11 +194,11 @@ F1 = Add( 3, 6 );
 ## <a name="argument-type-differences"></a>Differenze tra tipi di argomenti  
  Le funzioni in overload fanno una differenza tra i tipi di argomento che accettano inizializzatori diversi. Pertanto, un argomento di tipo specificato e un riferimento al tipo sono considerati uguali allo scopo dell'overload. Vengono considerati uguali perché accettano gli stessi inizializzatori. Ad esempio, `max( double, double )` è considerato uguale a `max( double &, double & )`. La dichiarazione di tali due funzioni causa un errore.  
   
- Per lo stesso motivo, gli argomenti di un tipo modificato da delle funzioni **const** o `volatile` non vengono gestiti in modo diverso rispetto al tipo base per gli scopi dell'overload.  
+ Per lo stesso motivo, gli argomenti di un tipo modificato da delle funzioni **const** oppure **volatile** non vengono trattati in modo diverso rispetto al tipo di base per gli scopi dell'overload.  
   
- Tuttavia, la funzione meccanismo di overload consentono di distinguere i riferimenti che sono qualificati da **const** e `volatile` e i riferimenti al tipo di base. Ciò rende possibile un codice del tipo riportato di seguito:  
+ Tuttavia, il meccanismo di overload della funzione può distinguere tra i riferimenti che sono qualificati dal **const** e **volatile** e i riferimenti al tipo di base. Ciò rende possibile un codice del tipo riportato di seguito:  
   
-```  
+```cpp 
 // argument_type_differences.cpp  
 // compile with: /EHsc /W3  
 // C4521 expected  
@@ -224,7 +225,7 @@ int main() {
   
 ### <a name="output"></a>Output  
   
-```  
+```Output  
 Over default constructor  
 Over&  
 Over default constructor  
@@ -233,7 +234,7 @@ Over default constructor
 volatile Over&  
 ```  
   
- Puntatori a **const** e `volatile` gli oggetti sono inoltre considerati diversi dai puntatori al tipo di base per l'overload.  
+ Puntatori a **const** e **volatile** gli oggetti sono inoltre considerati diversi dai puntatori al tipo di base per gli scopi dell'overload.  
   
 ## <a name="argument-matching-and-conversions"></a>Corrispondenza e conversioni di argomenti  
  Quando il compilatore tenta di far corrispondere gli argomenti effettivi con gli argomenti nelle dichiarazioni di funzione, può fornire le conversioni standard o definite dall'utente per ottenere il tipo corretto se non è disponibile alcuna corrispondenza esatta. L'applicazione delle conversioni è soggetta a queste regole:  
@@ -242,11 +243,11 @@ volatile Over&
   
 -   Le sequenze di conversioni che possono essere abbreviate rimuovendo le conversioni intermedie vengono ignorate.  
   
- La sequenza di conversioni risultante, se disponibile, è nota come sequenza di corrispondenza migliore. Esistono diversi modi per convertire un oggetto di tipo `int` al tipo `unsigned long` Usa le conversioni standard (descritto in [conversioni Standard](../cpp/standard-conversions.md)):  
+ La sequenza di conversioni risultante, se disponibile, è nota come sequenza di corrispondenza migliore. Esistono diversi modi per convertire un oggetto di tipo **int** al tipo **unsigned long** Usa le conversioni standard (descritte in [conversioni Standard](../cpp/standard-conversions.md)):  
   
--   Conversione da `int` a `long`, quindi da `long` a `unsigned long`.  
+-   Eseguire la conversione da **int** al **lungo** e quindi dalla **long** a **long senza segno**.  
   
--   Conversione da `int` a `unsigned long`.  
+-   Eseguire la conversione da **int** al **long senza segno**.  
   
  La prima sequenza, sebbene raggiunga l'obiettivo desiderato, non è la migliore sequenza di corrispondenza (esiste una sequenza più breve).  
   
@@ -258,34 +259,34 @@ volatile Over&
 |-----------------------|---------------------|  
 |*type-name*|*type-name* **&**|  
 |*type-name* **&**|*type-name*|  
-|*nome di tipo* **]**|*type-name\**|  
-|*nome di tipo* **(** *elenco di argomenti* **)**|**(**  *\*nome di tipo* **) (** *elenco di argomenti* **)**|  
+|*nome del tipo* **]**|*type-name\**|  
+|*nome del tipo* **(** *elenco di argomenti* **)**|**(**  *\*nome_tipo* **) (** *dall'elenco di argomenti* **)**|  
 |*type-name*|**const** *-nome del tipo*|  
-|*type-name*|`volatile` *nome del tipo*|  
+|*type-name*|**volatili** *-nome del tipo*|  
 |*type-name\**|**const** *-nome del tipo\**|  
-|*type-name\**|`volatile` *type-name\**|  
+|*type-name\**|**volatili** *-nome del tipo\**|  
   
  La sequenza in cui vengono tentate le conversioni è la seguente:  
   
 1.  Corrispondenza esatta. Una corrispondenza esatta tra i tipi con cui viene chiamata la funzione e i tipi dichiarati nel prototipo di funzione è sempre la corrispondenza ottimale. Le sequenze di conversioni semplici vengono classificate come corrispondenze esatte. Tuttavia, le sequenze che non eseguono queste conversioni vengono considerate migliori rispetto alle sequenze che eseguono la conversione:  
   
-    -   Dal puntatore, al puntatore a **const** (`type` **\*** a **const** `type` **\*** ).  
+    -   Dal puntatore, al puntatore alla **const** (`type` **\*** al **const** `type` **\*** ).  
   
-    -   Dal puntatore, al puntatore a `volatile` (`type` **\*** a `volatile` `type` **\***).  
+    -   Dal puntatore, al puntatore alla **volatili** (`type` **\*** al **volatile** `type` **\***).  
   
-    -   Dal riferimento al riferimento a **const** (`type` **&** a **const** `type` **&**).  
+    -   Dal riferimento al riferimento al **const** (`type` **&** al **const** `type` **&**).  
   
-    -   Dal riferimento al riferimento a `volatile` (`type` **&** a `volatile` `type` **&**).  
+    -   Dal riferimento al riferimento al **volatili** (`type` **&** al **volatile** `type` **&**).  
   
-2.  Corrispondenza mediante le promozioni. Qualsiasi sequenza non classificata come una corrispondenza esatta che contiene solo le promozioni integrali, le conversioni da **float** a **doppie**, e conversioni semplici viene classificata come corrispondenza che usa promozioni. Sebbene non sia ottimale come una corrispondenza esatta, l'utilizzo delle promozioni è preferibile rispetto a una corrispondenza che usa le conversioni standard.  
+2.  Corrispondenza mediante le promozioni. Qualsiasi sequenza non classificata come corrispondenza esatta che contiene solo le promozioni integrali, le conversioni da **float** al **doppie**, e le conversioni semplici viene classificata come corrispondenza che usa le promozioni. Sebbene non sia ottimale come una corrispondenza esatta, l'utilizzo delle promozioni è preferibile rispetto a una corrispondenza che usa le conversioni standard.  
   
 3.  Corrispondenza che usa le conversioni standard. Qualsiasi sequenza non classificata come una corrispondenza esatta o una corrispondenza che usa promozioni solo con conversioni standard e semplici viene classificata come corrispondenza che usa le conversioni standard. All'interno di questa categoria, sono necessarie le seguenti regole:  
   
-    -   Conversione da un puntatore a una classe derivata, a un puntatore a una classe base diretta o indiretta è preferibile alla conversione in **void \***  o **const void \*** .  
+    -   Conversione da un puntatore a una classe derivata, a un puntatore a una classe base diretta o indiretta è preferibile eseguire la conversione **void \***  oppure **const void \*** .  
   
     -   La conversione da un puntatore a una classe derivata, a un puntatore a una classe base produce una corrispondenza migliore quanto più la classe base è vicina a una classe base diretta. Si supponga che la gerarchia di classi sia come illustrata di seguito.  
   
- ![Conversioni preferite](../cpp/media/vc391t1.gif "vc391T1")  
+ ![Le conversioni preferite](../cpp/media/vc391t1.gif "vc391T1")  
 Grafico indicante le conversioni preferite  
   
  La conversione dal tipo `D*` al tipo `C*` è preferibile rispetto alla conversione dal tipo `D*` al tipo `B*`. In modo simile, la conversione dal tipo `D*` al tipo `B*` è preferibile rispetto alla conversione dal tipo `D*` al tipo `A*`.  
@@ -296,7 +297,7 @@ Grafico indicante le conversioni preferite
   
  La regola precedente è valida solo insieme a un determinato percorso di derivazione. Esaminare il grafico illustrato nella seguente figura.  
   
- ![Multi&#45;ereditarietà che mostra le conversioni preferite](../cpp/media/vc391t2.gif "vc391T2")  
+ ![Con più&#45;ereditarietà multipla con conversioni preferite](../cpp/media/vc391t2.gif "vc391T2")  
 Grafico dell'ereditarietà multipla indicante le conversioni preferite  
   
  La conversione dal tipo `C*` al tipo `B*` è preferibile rispetto alla conversione dal tipo `C*` al tipo `A*`. Il motivo è che si trovano nello stesso percorso e `B*` è più vicino. Tuttavia, la conversione dal tipo `C*` al tipo `D*` non è preferibile alla conversione al tipo `A*`; non esiste alcuna preferenza poiché le conversioni seguono percorsi diversi.  
@@ -307,7 +308,7 @@ Grafico dell'ereditarietà multipla indicante le conversioni preferite
   
  Le conversioni definite dall'utente vengono applicate se non esiste alcuna conversione o promozione integrata. Queste conversioni sono selezionate in base al tipo di argomento di cui si sta eseguendo la corrispondenza. Esaminare il codice seguente:  
   
-```  
+```cpp 
 // argument_matching1.cpp  
 class UDC  
 {  
@@ -331,22 +332,22 @@ int main()
 }  
 ```  
   
- Le conversioni definite dall'utente per la classe `UDC` sono dal tipo `int` e tipo **lungo**. Di conseguenza, il compilatore considera le conversioni per il tipo di oggetto di cui si sta eseguendo la corrispondenza: `UDC`. Esiste una conversione in `int` ed è selezionata.  
+ Le conversioni definite dall'utente disponibili per la classe `UDC` sono di tipo **int** e digitare **long**. Di conseguenza, il compilatore considera le conversioni per il tipo di oggetto di cui si sta eseguendo la corrispondenza: `UDC`. Una conversione **int** esiste, ed è selezionata.  
   
  Durante il processo di corrispondenza degli argomenti, è possibile applicare le conversioni standard sia agli argomenti che al risultato di una conversione definita dall'utente. Pertanto, funziona il codice seguente:  
   
-```  
+```cpp 
 void LogToFile( long l );  
 ...  
 UDC udc;  
 LogToFile( udc );  
 ```  
   
- Nell'esempio precedente, la conversione definita dall'utente, **operatore long**, viene richiamata per convertire `udc` al tipo **lungo**. Se nessuna conversione definita dall'utente a tipo **lungo** è stato definito, la conversione sarebbe proseguita nel modo seguente: tipo `UDC` sarebbe stato convertito nel tipo `int` mediante la conversione definita dall'utente. La conversione standard dal tipo `int` al tipo **lungo** sarebbe stata applicata per corrisponde all'argomento nella dichiarazione.  
+ Nell'esempio precedente, la conversione definita dall'utente, **operator long**, viene richiamata per convertire `udc` per digitare **long**. Se nessuna conversione definita dall'utente nel tipo **lungo** fosse stato definito, la conversione sarebbe proseguita nel modo seguente: tipo `UDC` sarebbe stato convertito nel tipo **int** usando definite dall'utente conversione. La conversione standard dal tipo **int** al tipo **lungo** sarebbe stata applicata in modo da corrispondere l'argomento nella dichiarazione.  
   
  Se le conversioni definite dall'utente sono necessarie per la corrispondenza di un argomento, le conversioni standard non vengono usate per valutare la corrispondenza migliore. Questo vale anche se più funzioni candidate richiedono una conversione definita dall'utente; in tal caso, le funzioni sono considerate uguali. Ad esempio:  
   
-```  
+```cpp 
 // argument_matching2.cpp  
 // C2668 expected  
 class UDC1  
@@ -370,11 +371,11 @@ int main()
 }  
 ```  
   
- Entrambe le versioni di `Func` richiedono che la conversione definita dall'utente converta il tipo `int` nell'argomento di tipo classe. Le conversioni possibili sono:  
+ Entrambe le versioni `Func` richiedono una conversione definita dall'utente per convertire il tipo **int** all'argomento di tipo classe. Le conversioni possibili sono:  
   
--   Conversione dal tipo `int` al tipo `UDC1` (conversione definita dall'utente).  
+-   Conversione dal tipo **int** al tipo `UDC1` (conversione definita dall'utente).  
   
--   Eseguire la conversione da tipo `int` al tipo **lungo**; quindi conversione nel tipo `UDC2` (conversione in due fasi).  
+-   Conversione dal tipo **int** al tipo **long**; quindi conversione nel tipo `UDC2` (conversione in due passaggi).  
   
  Anche se la seconda di queste richiede una conversione standard e la conversione definita dall'utente, le due conversioni sono tuttavia considerate uguali.  
   
@@ -382,17 +383,17 @@ int main()
 >  Le conversioni definite dall'utente sono considerate conversioni per costruzione o per inizializzazione (funzione di conversione). Entrambi i metodi sono considerati uguali quando viene presa in considerazione la corrispondenza ottimale.  
   
 ## <a name="argument-matching-and-the-this-pointer"></a>Corrispondenza di argomenti e puntatore this  
- Le funzioni membro di classe vengono gestite in modo diverso, a seconda che vengono dichiarate come `static` o meno. Poiché le funzioni non statiche dispongono di un argomento implicito che specifica il puntatore `this`, si considera che le funzioni non statiche abbiano un argomento in più rispetto alle funzioni statiche; in caso contrario, vengono dichiarate in modo identico.  
+ Funzioni membro delle classi vengono trattate in modo diverso, a seconda del fatto che sono stati dichiarati come **statici**. Poiché le funzioni non statiche dispongono di un argomento implicito che fornisce il **ciò** puntatore, le funzioni non statiche vengono considerate un argomento in più rispetto alle funzioni statiche; in caso contrario, vengono dichiarati in modo identico.  
   
- Tali funzioni membro non statiche richiedono che il puntatore `this` corrisponda al tipo di oggetto tramite cui la funzione viene chiamata oppure, per gli operatori di overload, richiedono che il primo argomento corrisponda all'oggetto sul quale viene applicato l'operatore. (Per ulteriori informazioni sugli operatori di overload, vedere [operatori di overload](../cpp/operator-overloading.md).)  
+ Queste funzioni membro non statiche richiedono che l'implicita **ciò** puntatore corrisponde al tipo di oggetto attraverso il quale la funzione viene chiamata oppure, per gli operatori di overload, richiedono che il primo argomento corrisponde l'oggetto a cui il viene applicato l'operatore. (Per altre informazioni sugli operatori di overload, vedere [operatori di overload](../cpp/operator-overloading.md).)  
   
- A differenza di altri argomenti delle funzioni in overload, non viene introdotto alcun oggetto temporaneo e non viene tentata alcuna conversione quando si tenta di mettere in corrispondenza l'argomento del puntatore `this`.  
+ A differenza di altri argomenti in funzioni in overload, non è stati introdotti alcun oggetto temporaneo e viene tentata alcuna conversione durante il tentativo di corrispondere i **ciò** argomento di puntatore.  
   
- Quando il `->` operatore di selezione dei membri viene usato per accedere a una funzione membro della classe `class_name`, `this` argomento del puntatore di tipo `class_name * const`. Se i membri vengono dichiarati come `const` o `volatile`, i tipi sono `const class_name * const` e `volatile class_name * const`, rispettivamente.  
+ Quando la `->` operatore di selezione dei membri viene usato per accedere a una funzione membro della classe `class_name`, il **ciò** argomento di puntatore è di tipo `class_name * const`. Se i membri vengono dichiarati come **const** oppure **volatile**, i tipi sono `const class_name * const` e `volatile class_name * const`, rispettivamente.  
   
  L'operatore di selezione dei membri `.` funziona esattamente nello stesso modo, ad eccezione che un operatore `&` (address-of) implicito sia anteposto al nome di oggetto. L'esempio seguente illustra tale funzionamento:  
   
-```  
+```cpp 
 // Expression encountered in code  
 obj.name  
   
@@ -403,7 +404,7 @@ obj.name
  L'operando sinistro degli operatori `->*` e `.*` (puntatore a membro) vengono considerati nello stesso modo degli operatori `.` e `->` (selezione dei membri) in relazione alla corrispondenza dell'argomento.  
 
 ## <a name="ref-qualifiers"></a> Qualificatori di riferimento per le funzioni membro  
-Qualificatori ref consentono di eseguire l'overload di una funzione membro in base se l'oggetto a cui puntava `this` è un rvalue o lvalue.  Questa funzionalità consente di evitare operazioni di copia non necessarie in scenari in cui non si desidera fornire l'accesso di puntatore ai dati. Si supponga ad esempio di classe **C** alcuni dati nel relativo costruttore inizializza e restituisce una copia dei dati nella funzione membro **get_data()**. Se un oggetto di tipo **C** è un riferimento rvalue che sta per essere eliminato, quindi il compilatore sceglierà il **get_data() & &** overload, che consente di spostare i dati anziché copiarlo. 
+I qualificatori ref consentono di eseguire l'overload di una funzione membro in base a se l'oggetto a cui punta **ciò** è un rvalue o lvalue.  Questa funzionalità è utilizzabile per evitare operazioni di copia non necessarie in scenari in cui si sceglie di non consentire l'accesso di puntatore ai dati. Si supponga ad esempio di classe `C` alcuni dati nel relativo costruttore inizializza e restituisce una copia dei dati nella funzione membro `get_data()`. Se un oggetto di tipo `C` è un rvalue che sta per essere eliminato definitivamente, quindi il compilatore sceglierà il `get_data() &&` esegue l'overload, che sposta i dati invece di copiarlo. 
 
 ```cpp
 #include <iostream>
@@ -441,7 +442,7 @@ int main()
 
 ```
   
-## <a name="restrictions-on-overloading"></a>Restrizioni sull'overload  
+## <a name="restrictions-on-overloading"></a>Restrizioni all'overload degli operatori  
  Un set di funzioni in overload accettabile è regolato da numerose restrizioni:  
   
 -   È necessario che due funzioni presenti in un set di funzioni in overload abbiano elenchi di argomenti differenti.  
@@ -450,51 +451,51 @@ int main()
   
      **Sezione specifica Microsoft**  
   
- È possibile eseguire l'overload **operatore new** esclusivamente in base al tipo restituito, in particolare, in base al modificatore del modello di memoria specificato.  
+ È possibile eseguire l'overload **operatore new** esclusivamente sulla base del tipo restituito, in particolare, in base al modificatore del modello di memoria specificato.  
   
 **Fine sezione specifica Microsoft**  
   
 -   Le funzioni membro non possono essere sottoposte a overload unicamente perché una è statica e l'altra non statica.  
   
--   Le dichiarazioni `typedef` non definiscono nuovi tipi, ma introducono sinonimi per i tipi esistenti. Esse non influiscono sul meccanismo di overload. Esaminare il codice seguente:  
+-   **typedef** dichiarazioni di non definiscono nuovi tipi, ma introducono sinonimi per i tipi esistenti. Esse non influiscono sul meccanismo di overload. Esaminare il codice seguente:  
   
-    ```  
+    ```cpp 
     typedef char * PSTR;  
   
     void Print( char *szToPrint );  
     void Print( PSTR szToPrint );  
     ```  
   
-     Le due funzioni precedenti hanno elenchi di argomenti identici. `PSTR` è un sinonimo del tipo **char \*** . Nell'ambito del membro, questo codice genera un errore.  
+     Le due funzioni precedenti hanno elenchi di argomenti identici. `PSTR` è un sinonimo di tipo **char \*** . Nell'ambito del membro, questo codice genera un errore.  
   
 -   I tipi enumerati sono tipi distinti e possono essere usati per distinguere le funzioni in overload.  
   
 -   I tipi "matrice di" e "puntatore a" sono considerati identici, ai fini della distinzione tra le funzioni in overload. Ciò è valido solo per le matrici dimensionate singolarmente. Di conseguenza, le seguenti funzioni in overload sono in conflitto e generano un messaggio di errore:  
   
-    ```  
+    ```cpp 
     void Print( char *szToPrint );  
     void Print( char szToPrint[] );  
     ```  
   
      Nella moltiplicazione delle matrici dimensionate, la seconda dimensione e tutte le successive sono considerate parte del tipo. Di conseguenza, vengono usate per distinguere le funzioni in overload:  
   
-    ```  
+    ```cpp 
     void Print( char szToPrint[] );  
     void Print( char szToPrint[][7] );  
     void Print( char szToPrint[][9][42] );  
     ```  
   
-## <a name="overloading-overriding-and-hiding"></a>L'overload, override e nascondere
+## <a name="overloading-overriding-and-hiding"></a>L'overload, si esegue l'override e nascosti
   
  Tutte le due dichiarazioni di funzione con lo stesso nome nello stesso ambito possono fare riferimento alla stessa funzione o a due funzioni discrete in overload. Se gli elenchi di argomenti delle dichiarazioni contengono argomenti di tipi equivalenti (come descritto nella sezione precedente), le dichiarazioni di funzione si riferiscono alla stessa funzione. In caso contrario, si riferiscono a due diverse funzioni selezionate usando l'overload.  
   
- L'ambito di classe viene osservato rigidamente; pertanto, una funzione dichiarata in una classe base non si trova nello stesso ambito di una funzione dichiarata in una classe derivata. Se una funzione in una classe derivata viene dichiarata con lo stesso nome di una funzione virtuale nella classe base, la funzione di classe derivata *esegue l'override* la funzione di classe di base. Per ulteriori informazioni, vedere [funzioni virtuali](../cpp/virtual-functions.md).
+ L'ambito di classe viene osservato rigidamente; pertanto, una funzione dichiarata in una classe base non si trova nello stesso ambito di una funzione dichiarata in una classe derivata. Se una funzione in una classe derivata viene dichiarata con lo stesso nome di una funzione virtuale nella classe di base, la funzione di classe derivata *esegue l'override* la funzione di classe di base. Per altre informazioni, vedere [funzioni virtuali](../cpp/virtual-functions.md).
 
-Se la funzione di classe di base non è dichiarata come 'virtual', quindi viene definita la funzione della classe derivata *nascondere* è. Si esegue l'override sia nascondere sono distinti dagli overload.  
+Se la funzione di classe di base non è dichiarata come 'virtual', quindi la funzione di classe derivata viene detto *nascondere* è. Viene sottoposto a override sia nascondere sono distinti di eseguire l'overload.  
   
  L'ambito del blocco viene osservato rigidamente; pertanto, una funzione dichiarata in un ambito di file non si trova nello stesso ambito di una funzione dichiarata localmente. Se una funzione dichiarata localmente ha lo stesso nome di una funzione dichiarata in ambito di file, la funzione dichiarata localmente nasconde la funzione con ambito di file anziché causare l'overload. Ad esempio:  
   
-```  
+```cpp 
 // declaration_matching1.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -520,7 +521,7 @@ int main()
 }  
 ```  
   
- Il codice precedente mostra due definizioni dalla funzione `func`. La definizione che accetta un argomento di tipo `char *` è locale a `main` a causa dell'istruzione `extern`. Di conseguenza, la definizione che accetta un argomento di tipo `int` è nascosta e la prima chiamata a `func` avviene per errore.  
+ Il codice precedente mostra due definizioni dalla funzione `func`. La definizione che accetta un argomento di tipo `char *` è locale rispetto `main` perché la **extern** istruzione. Pertanto, la definizione che accetta un argomento di tipo **int** è nascosto e la prima chiamata a `func` in errore.  
   
  Per funzioni membro in overload, a versioni diverse della funzione possono essere assegnati privilegi di accesso differenti. Verranno ancora considerate nell'ambito della classe contenitore e pertanto sono funzioni in overload. Si consideri il codice seguente, in cui la funzione membro `Deposit` è in overload; una versione è pubblica, l'altra privata.  
   
@@ -528,7 +529,7 @@ int main()
   
  Si noti che la chiamata a `Deposit` in `Account::Deposit` chiama la funzione membro privato. Questa chiamata è corretta perché `Account::Deposit` è una funzione membro e pertanto dispone di accesso ai membri privati della classe.  
   
-```  
+```cpp 
 // declaration_matching2.cpp  
 class Account  
 {  

@@ -1,5 +1,5 @@
 ---
-title: Gestione della memoria con CStringT | Documenti Microsoft
+title: Gestione della memoria con CStringT | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,15 +24,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b65efd934fecdab36bfa1c0c882de1dd8862c81f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 73651aa4696425750fea728a5e66ca727e742b9a
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32354707"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37886193"
 ---
 # <a name="memory-management-with-cstringt"></a>Gestione della memoria con CStringT
-Classe [CStringT](../atl-mfc-shared/reference/cstringt-class.md) è una classe di modello utilizzata per modificare le stringhe di caratteri di lunghezza variabile. La memoria per queste stringhe viene allocata e rilasciata tramite gestione, un oggetto stringa associato a ogni istanza di `CStringT`. MFC e ATL forniscono creazioni di istanze predefinite di `CStringT`, denominato `CString`, `CStringA`, e `CStringW`, la quale modificare le stringhe di diversi tipi di carattere. Questi tipi di carattere sono di tipo **TCHAR**, `char`, e `wchar_t`, rispettivamente. Questi tipi di stringa del valore predefinito è utilizzare un gestore di stringhe che alloca la memoria dall'heap del processo (in ATL) o l'heap CRT (in MFC). Per applicazioni tipiche, questo schema di allocazione della memoria è sufficiente. Tuttavia, per il codice con utilizzo intensivo di rendere l'utilizzo di stringhe (o codice multithreading) i gestori di memoria predefinita potrebbero non essere ottimali. In questo argomento viene descritto come eseguire l'override del comportamento di gestione della memoria predefinito di `CStringT`, creando allocatori appositamente ottimizzato per l'attività in questione.  
+Classe [CStringT](../atl-mfc-shared/reference/cstringt-class.md) è una classe di modello utilizzata per modificare le stringhe di caratteri di lunghezza variabile. La memoria per contenere queste stringhe viene allocata e rilasciata tramite un oggetto di gestione di stringa, associato a ogni istanza di `CStringT`. MFC e ATL fornisce creazioni di istanze predefinite di `CStringT`, denominato `CString`, `CStringA`, e `CStringW`, la quale modificare le stringhe di diversi tipi di carattere. Questi tipi di carattere sono di tipo, TCHAR **char**, e `wchar_t`, rispettivamente. Questi tipi di stringa predefinita usano una gestione stringhe che alloca la memoria dall'heap del processo (in ATL) o nell'heap CRT (in MFC). Per le applicazioni tipiche, questo schema di allocazione della memoria è sufficiente. Tuttavia, per la creazione con utilizzo intensivo del codice usano di stringhe (o codice multithreading) i gestori di memoria predefinita non è possono eseguire in modo ottimale. In questo argomento descrive come sostituire il comportamento di gestione della memoria predefinito di `CStringT`, creando in modo specifico gli allocatori ottimizzato per l'attività in questione.  
   
 -   [Implementazione di una gestione stringhe personalizzata (metodo di base)](../atl-mfc-shared/implementation-of-a-custom-string-manager-basic-method.md)  
   
@@ -40,7 +40,7 @@ Classe [CStringT](../atl-mfc-shared/reference/cstringt-class.md) è una classe d
   
 -   [Implementazione di una gestione stringhe personalizzata (metodo avanzato)](../atl-mfc-shared/implementation-of-a-custom-string-manager-advanced-method.md)  
   
--   [CFixedStringT: Esempio di una gestione stringa personalizzata](../atl-mfc-shared/cfixedstringt-example-of-a-custom-string-manager.md)  
+-   [CFixedStringT: Esempio di una gestione stringhe personalizzata](../atl-mfc-shared/cfixedstringt-example-of-a-custom-string-manager.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Esempio CustomString](../visual-cpp-samples.md)

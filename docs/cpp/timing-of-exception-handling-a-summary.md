@@ -1,5 +1,5 @@
 ---
-title: 'Intervallo di gestione delle eccezioni: riepilogo | Documenti Microsoft'
+title: 'Intervallo di gestione delle eccezioni: riepilogo | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,18 +21,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 446925b6e00f4771229357effee0707af3fae52a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ff2ac5abb13ae700e464635efc90a91c4a5835ab
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32422176"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37939416"
 ---
 # <a name="timing-of-exception-handling-a-summary"></a>Intervallo di gestione delle eccezioni: riepilogo
-Un gestore terminazioni viene eseguito indipendentemente dalla modalità in cui il blocco di istruzioni `__try` viene terminato. Le cause possono includere l'uscita dal blocco `__try`, un'istruzione `longjmp` che trasferisce il controllo fuori dal blocco e la rimozione dello stack dovuta alla gestione delle eccezioni.  
+Un gestore terminazioni viene eseguito, indipendentemente dal modo in cui il **try** blocco di istruzioni viene terminato. Cause del passaggio fuori il **try** blocco, un `longjmp` istruzione che trasferisce il controllo di fuori del blocco e la rimozione dello stack dovuta alla gestione delle eccezioni.  
   
 > [!NOTE]
->  Visual C++ supporta due formati delle istruzioni `setjmp` e `longjmp`. La versione veloce ignora la gestione delle terminazioni ma è più efficiente. Per utilizzare questa versione, includere il file \<setjmp >. L'altra versione supporta la gestione delle terminazioni come descritto nel paragrafo precedente. Per utilizzare questa versione, includere il file \<setjmpex >. L'aumento delle prestazioni della versione veloce dipende dalla configurazione hardware.  
+>  Visual C++ supporta due formati delle istruzioni `setjmp` e `longjmp`. La versione veloce ignora la gestione delle terminazioni ma è più efficiente. Per usare questa versione, includere il file \<setjmp. h >. L'altra versione supporta la gestione delle terminazioni come descritto nel paragrafo precedente. Per usare questa versione, includere il file \<setjmpex >. L'aumento delle prestazioni della versione veloce dipende dalla configurazione hardware.  
   
  Il sistema operativo esegue tutti i gestori terminazioni nell'ordine corretto (incluso il corpo di un gestore eccezioni), prima che sia possibile eseguire qualsiasi altro codice.  
   
