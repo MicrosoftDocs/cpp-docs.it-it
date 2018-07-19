@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f1cc88fab5584d92d79bb0dabb816898f3925546
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: fc28cdb34148a525b193a93bec8d881bbbeb43f8
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33843067"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38963001"
 ---
 # <a name="constmemfunt-class"></a>Classe const_mem_fun_t
 
@@ -40,9 +40,9 @@ class const_mem_fun_t : public unary_function <Type *, Result>
 
 ### <a name="parameters"></a>Parametri
 
-`Pm` Un puntatore alla funzione membro della classe **tipo** da convertire in un oggetto funzione.
+*PM* un puntatore alla funzione membro della classe `Type` da convertire in un oggetto funzione.
 
-`Pleft` L'oggetto che il `Pm` funzione membro viene chiamata su.
+*Pleft* dell'oggetto che il *Pm* funzione membro viene chiamata su.
 
 ## <a name="return-value"></a>Valore restituito
 
@@ -50,7 +50,7 @@ Funzione unaria adattabile.
 
 ## <a name="remarks"></a>Note
 
-La classe modello archivia una copia di `Pm`, che deve essere un puntatore a una funzione membro della classe **Type**, in un oggetto membro privato. Definisce la relativa funzione membro `operator()` che restituisce ( `Pleft`->\* `Pm`)() **const**.
+La classe modello archivia una copia della *Pm*, che deve essere un puntatore a una funzione membro della classe `Type`, in un oggetto membro privato. Definisce la relativa funzione membro `operator()` che restituisce ( `Pleft`->\* `Pm`)() **const**.
 
 ## <a name="example"></a>Esempio
 

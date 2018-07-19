@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b19ac68f1d1db9ac73e0519b566f68443775db11
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1dc03a9d8f5f11b08ab2d5cb9d21190ac0a75925
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33852204"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962673"
 ---
 # <a name="maskarray-class"></a>Classe mask_array
 
@@ -31,11 +31,11 @@ Classe modello ausiliaria interna che supporta oggetti che sono subset di oggett
 
 ## <a name="remarks"></a>Note
 
-La classe descrive un oggetto che archivia un riferimento a un oggetto **va** della classe [valarray](../standard-library/valarray-class.md)**\<Type>**, insieme a un oggetto **ba** della classe [valarray\<bool>](../standard-library/valarray-bool-class.md), che descrive la sequenza di elementi da selezionare dall'oggetto **valarray\<Type>**.
+La classe descrive un oggetto che archivia un riferimento a un oggetto `va` della classe [valarray](../standard-library/valarray-class.md)**\<tipo >**, insieme a un oggetto `ba` della classe [ oggetto valarray\<bool >](../standard-library/valarray-bool-class.md), che descrive la sequenza di elementi da selezionare dal `valarray<Type>` oggetto.
 
-Si costruisce un oggetto **mask_array\<Type>** solo scrivendo un'espressione nel formato [va&#91;ba&#93;](../standard-library/valarray-class.md#op_at). Le funzioni membro della classe mask_array si comportano quindi come le firme di funzione corrispondenti definite per **valarray\<Type>**, ad eccezione del fatto che è interessata solo la sequenza degli elementi selezionati.
+Si costruisce una `mask_array<Type>` oggetto solo scrivendo un'espressione nel formato [va&#91;bin&#93;](../standard-library/valarray-class.md#op_at). Le funzioni membro della classe mask_array si comportano quindi come le firme di funzione corrispondenti definite per `valarray<Type>`, ad eccezione del fatto che è interessata solo la sequenza degli elementi selezionati.
 
-La sequenza è costituita da un numero massimo di elementi pari al valore di **ba.size** . Un elemento *J* viene incluso solo se **ba**[ *J*] è true. Nella sequenza è quindi presente un numero di elementi pari al numero di elementi true in **ba**. Se `I` è l'indice dell'elemento true più basso in **ba**, allora **va**[ `I`] è l'elemento zero nella sequenza selezionata.
+La sequenza è costituita al massimo `ba.size` elementi. Un elemento *J* viene incluso solo se **ba**[ *J*] è true. Di conseguenza, sono presenti tanti elementi nella sequenza di quanti sono gli elementi true in `ba`. Se `I` è l'indice dell'elemento true più basso nel `ba`, quindi **valutazione della vulnerabilità**[ `I`] è l'elemento zero nella sequenza selezionata.
 
 ## <a name="example"></a>Esempio
 

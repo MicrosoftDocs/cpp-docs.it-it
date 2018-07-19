@@ -40,12 +40,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fa161e1eec0e02097f22bb15f825542a6928111b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1ae2acae1664656883f4f2eba85c57c8e7725b26
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33861178"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38965565"
 ---
 # <a name="numpunct-class"></a>Classe numpunct
 
@@ -60,7 +60,7 @@ class numpunct : public locale::facet;
 
 ### <a name="parameters"></a>Parametri
 
-`CharType` Il tipo utilizzato all'interno di un programma per codificare i caratteri delle impostazioni locali.
+*CharType* il tipo utilizzato all'interno di un programma per codificare i caratteri delle impostazioni locali.
 
 ## <a name="remarks"></a>Note
 
@@ -85,14 +85,14 @@ Come in qualsiasi facet delle impostazioni locali, l'ID dell'oggetto statico ha 
 |-|-|
 |[decimal_point](#decimal_point)|Restituisce un elemento specifico delle impostazioni locali da utilizzare come virgola decimale.|
 |[do_decimal_point](#do_decimal_point)|Funzione membro virtuale protetta chiamata per restituire un elemento specifico delle impostazioni locali da utilizzare come virgola decimale.|
-|[do_falsename](#do_falsename)|Funzione membro virtuale protetta chiamata per restituire una stringa da utilizzare come rappresentazione testo del valore `false`.|
+|[do_falsename](#do_falsename)|Funzione membro virtuale viene chiamata per restituire una stringa da usare come rappresentazione testo del valore protetta **false**.|
 |[do_grouping](#do_grouping)|Funzione membro virtuale protetta chiamata per restituire una regola specifica delle impostazioni locali per determinare la modalità di raggruppamento delle cifre a sinistra di una virgola decimale.|
 |[do_thousands_sep](#do_thousands_sep)|Funzione membro virtuale protetta chiamata per restituire un elemento specifico delle impostazioni locali da utilizzare come separatore delle migliaia.|
-|[do_truename](#do_truename)|Funzione membro virtuale protetta chiamata per restituire una stringa da utilizzare come rappresentazione testo del valore `true`.|
-|[falsename](#falsename)|Restituisce una stringa da utilizzare come rappresentazione testo del valore `false`.|
+|[do_truename](#do_truename)|Funzione membro virtuale protetta chiamata per restituire una stringa da usare come rappresentazione testo del valore **true**.|
+|[falsename](#falsename)|Restituisce una stringa da usare come rappresentazione testo del valore **false**.|
 |[grouping](#grouping)|Restituisce una regola specifica delle impostazioni locali per determinare la modalità di raggruppamento delle cifre a sinistra della virgola decimale.|
 |[thousands_sep](#thousands_sep)|Restituisce un elemento specifico delle impostazioni locali da utilizzare come separatore delle migliaia.|
-|[truename](#truename)|Restituisce una stringa da utilizzare come rappresentazione testo del valore `true`.|
+|[truename](#truename)|Restituisce una stringa da usare come rappresentazione testo del valore **true**.|
 
 ## <a name="requirements"></a>Requisiti
 
@@ -209,7 +209,7 @@ La funzione membro virtuale protetta restituisce una regola specifica delle impo
 
 ### <a name="example"></a>Esempio
 
-Vedere l'esempio relativo a [grouping](#grouping), in cui la funzione membro virtuale viene chiamata da **grouping**.
+Vedere l'esempio relativo [raggruppamento](#grouping), in cui la funzione membro virtuale viene chiamata da `grouping`.
 
 ## <a name="do_thousands_sep"></a>  numpunct::do_thousands_sep
 
@@ -225,7 +225,7 @@ Restituisce un elemento specifico delle impostazioni locali da utilizzare come s
 
 ### <a name="remarks"></a>Note
 
-La funzione membro virtuale protetta restituisce un elemento specifico delle impostazioni locali di tipo **CharType** da usare come separatore dei gruppi a sinistra della virgola decimale.
+La funzione membro virtuale protetta restituisce un elemento specifico delle impostazioni locali di tipo `CharType` da usare come separatore dei gruppi a sinistra della virgola decimale.
 
 ### <a name="example"></a>Esempio
 
@@ -259,7 +259,7 @@ string_type falsename() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-Stringa contenente una sequenza di **CharType** da usare come rappresentazione testo del valore **false**.
+Stringa che contiene una sequenza di `CharType`per usare come rappresentazione testo del valore **false**.
 
 ### <a name="remarks"></a>Note
 
@@ -354,11 +354,11 @@ explicit numpunct(size_t _Refs = 0);
 
 ### <a name="parameters"></a>Parametri
 
-`_Refs` Valore integer utilizzato per specificare il tipo di gestione della memoria per l'oggetto.
+*_Refs* valore integer utilizzato per specificare il tipo di gestione della memoria per l'oggetto.
 
 ### <a name="remarks"></a>Note
 
-I valori possibili per il parametro `_Refs` e i relativi significati sono:
+I valori possibili per il *_Refs* parametro e i relativi significati sono:
 
 - 0: la durata dell'oggetto è gestita dalle impostazioni locali che lo contengono.
 
@@ -368,7 +368,7 @@ I valori possibili per il parametro `_Refs` e i relativi significati sono:
 
 Non è possibile fornire esempi diretti, poiché il distruttore è protetto.
 
-Il costruttore inizializza l'oggetto di base con **locale::**[facet](../standard-library/locale-class.md#facet_class)( `_Refs`).
+Il costruttore inizializza l'oggetto di base con **delle impostazioni locali::/**[facet](../standard-library/locale-class.md#facet_class)(`_Refs`).
 
 ## <a name="string_type"></a>  numpunct::string_type
 

@@ -23,12 +23,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 35ac7686706aad871b95f8b94d2bb11b459a64e8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7091ba3c7f4d40a2b16c48afadfd5068bcd794bb
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33848687"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961740"
 ---
 # <a name="checkedarrayiterator-class"></a>Classe checked_array_iterator
 
@@ -253,11 +253,11 @@ checked_array_iterator(
 
 ### <a name="parameters"></a>Parametri
 
-`ptr` Un puntatore alla matrice.
+*PTR* un puntatore alla matrice.
 
-`size` Le dimensioni della matrice.
+*dimensioni* le dimensioni della matrice.
 
-`index` (Facoltativo) Un elemento nella matrice, per inizializzare l'iteratore.  Per impostazione predefinita, l'iteratore viene inizializzato al primo elemento nella matrice.
+*indice* (facoltativo) un elemento nella matrice, per inizializzare l'iteratore.  Per impostazione predefinita, l'iteratore viene inizializzato al primo elemento nella matrice.
 
 ### <a name="remarks"></a>Note
 
@@ -325,7 +325,7 @@ bool operator==(const checked_array_iterator<_Iterator>& right) const;
 
 ### <a name="parameters"></a>Parametri
 
-`right` Il `checked_array_iterator` rispetto a cui si desidera controllare l'uguaglianza.
+*a destra* il `checked_array_iterator` in base al quale verificare l'uguaglianza.
 
 ### <a name="remarks"></a>Note
 
@@ -380,7 +380,7 @@ bool operator!=(const checked_array_iterator<_Iterator>& right) const;
 
 ### <a name="parameters"></a>Parametri
 
-`right` Il `checked_array_iterator` per verificare la disuguaglianza.
+*a destra* il `checked_array_iterator` rispetto alla quale verificare la disuguaglianza.
 
 ### <a name="remarks"></a>Note
 
@@ -435,7 +435,7 @@ bool operator<(const checked_array_iterator<_Iterator>& right) const;
 
 ### <a name="parameters"></a>Parametri
 
-`right` Il `checked_array_iterator` per verificare la disuguaglianza.
+*a destra* il `checked_array_iterator` rispetto alla quale verificare la disuguaglianza.
 
 ### <a name="remarks"></a>Note
 
@@ -490,7 +490,7 @@ bool operator>(const checked_array_iterator<_Iterator>& right) const;
 
 ### <a name="parameters"></a>Parametri
 
-`right` Il `checked_array_iterator` da confrontare.
+*a destra* il `checked_array_iterator` da confrontare.
 
 ### <a name="remarks"></a>Note
 
@@ -508,7 +508,7 @@ bool operator<=(const checked_array_iterator<_Iterator>& right) const;
 
 ### <a name="parameters"></a>Parametri
 
-`right` Il `checked_array_iterator` da confrontare.
+*a destra* il `checked_array_iterator` da confrontare.
 
 ### <a name="remarks"></a>Note
 
@@ -526,7 +526,7 @@ bool operator>=(const checked_array_iterator<_Iterator>& right) const;
 
 ### <a name="parameters"></a>Parametri
 
-`right` Il `checked_array_iterator` da confrontare.
+*a destra* il `checked_array_iterator` da confrontare.
 
 ### <a name="remarks"></a>Note
 
@@ -756,7 +756,7 @@ checked_array_iterator<_Iterator>& operator+=(difference_type _Off);
 
 ### <a name="parameters"></a>Parametri
 
-`_Off` L'offset di incremento l'iteratore.
+*Off* l'offset di incremento l'iteratore.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -803,7 +803,7 @@ checked_array_iterator<_Iterator> operator+(difference_type _Off) const;
 
 ### <a name="parameters"></a>Parametri
 
-`_Off` L'offset da aggiungere al `checked_array_iterator`.
+*Off* offset da aggiungere al `checked_array_iterator`.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -850,7 +850,7 @@ checked_array_iterator<_Iterator>& operator-=(difference_type _Off);
 
 ### <a name="parameters"></a>Parametri
 
-`_Off` L'offset di incremento l'iteratore.
+*Off* l'offset di incremento l'iteratore.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -900,7 +900,7 @@ difference_type operator-(const checked_array_iterator& right) const;
 
 ### <a name="parameters"></a>Parametri
 
-`_Off` L'offset per essere decrementato dal `checked_array_iterator`.
+*Off* l'offset deve essere diminuito dal `checked_array_iterator`.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -922,7 +922,7 @@ reference operator[](difference_type _Off) const;
 
 ### <a name="parameters"></a>Parametri
 
-`_Off` L'offset dal `checked_array_iterator` indirizzo.
+*Off* l'offset dal `checked_array_iterator` indirizzo.
 
 ### <a name="return-value"></a>Valore restituito
 

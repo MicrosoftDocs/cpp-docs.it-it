@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a54045dfdebf3ab7c9f7ad04611bc9e267faea0d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7becd4cb5700cfb31acacc244d2640498bf8120e
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33845726"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38963472"
 ---
 # <a name="ltconditionvariablegt"></a>&lt;condition_variable&gt;
 
@@ -34,7 +34,7 @@ Questa intestazione usa il runtime di concorrenza (ConcRT) in modo da essere uti
 ```
 
 > [!NOTE]
-> Nel codice compilato tramite **/clr**, questa intestazione è bloccata.
+> Nel codice compilato usando **/clr**, questa intestazione è bloccata.
 
 ### <a name="remarks"></a>Note
 
@@ -59,9 +59,9 @@ Le classi `condition_variable_any` e `condition_variable` hanno tre metodi che a
 
 - `wait_for` attende una condizione `time interval` specifica.
 
-Ognuno di questi metodi ha due versioni di overload. Una si limita ad attendere e può riattivarsi in modo spurio. L'altra accetta un argomento di modello aggiuntivo che definisce un predicato. Il metodo non restituisce alcun valore finché il predicato non è `true`.
+Ognuno di questi metodi ha due versioni di overload. Una si limita ad attendere e può riattivarsi in modo spurio. L'altra accetta un argomento di modello aggiuntivo che definisce un predicato. Il metodo non restituisce fino a quando non è il predicato **true**.
 
-Ogni classe include anche due metodi che vengono usati per notificare a una variabile di condizione che la condizione è `true`.
+Ogni classe include anche due metodi che consentono di inviare una notifica di una variabile di condizione che la condizione è **true**.
 
 - `notify_one` attiva uno dei thread in attesa della variabile di condizione.
 

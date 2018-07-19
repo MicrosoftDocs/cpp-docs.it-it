@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a29dfc976ca29405814bbae81f42a02a74300d74
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2e6a8364c6f0491344eef7faf381d701944f66d9
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33847624"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38965669"
 ---
 # <a name="ltcomplexgt"></a>&lt;complex&gt;
 
-Definisce la classe di modello del contenitore **complesso** e i relativi modelli di supporto.
+Definisce la classe modello contenitore `complex` e relativi modelli di supporto.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -38,21 +38,21 @@ Definisce la classe di modello del contenitore **complesso** e i relativi modell
 
 Un numero complesso è una coppia ordinata di numeri reali. In termini puramente geometrici, il piano complesso è il piano bidimensionale reale. Le qualità speciali del piano complesso che lo distinguono dal piano reale dipendono dal fatto che ha una struttura algebrica aggiuntiva. Questa struttura algebrica include due operazioni fondamentali:
 
-- Addizione, definita come (*un*, *b*) + (*c*, *d*) = (*un* + *c* , *b* + *d*)
+- Addizione, definita come (*una*, *b*) + (*c*, *1!d*) = (*un* + *c* , *b* + *1!d*)
 
-- Moltiplicazione, definita come (*un*, *b*) \* (*c*, *d*) = (*ac*  -  *bd*, *ad* + *bc*)
+- Moltiplicazione, definita come (*una*, *b*) \* (*c*, *1!d*) = (*ac*  -  *bd*, *ad* + *bc*)
 
 L'insieme di numeri complessi con operazioni di addizione complessa e moltiplicazione complessa corrisponde a un campo nel senso algebrico standard:
 
 - Le operazioni di addizione e moltiplicazione sono commutative e associative e la moltiplicazione è distributiva rispetto all'addizione, esattamente come rispetto alla vera addizione e moltiplicazione nel campo dei numeri reali.
 
-- Numero complesso (0, 0) è l'identità additiva e (1, 0) è l'identità moltiplicativa.
+- Il numero complesso (0, 0) è l'identità additiva e (1, 0) è l'identità moltiplicativa.
 
-- L'inverso additivo per un numero complesso (*un*, *b*) è (-*un*-*b*) e l'inverso moltiplicativo per tutti questi numeri complessi ad eccezione di (0, 0) è
+- L'inverso additivo per un numero complesso (*una*, *b*) è (-*un*, -*b*) e l'inverso moltiplicativo per tutti questi numeri complessi ad eccezione di (0, 0) è
 
    (*a*/(*a*<sup>2</sup> + *b*<sup>2</sup>), -*b*/(*a*<sup>2</sup> + *b*<sup>2</sup>))
 
-Mediante la rappresentazione di un numero complesso *z* = (*un*, *b*) nel formato *z* = *un*  +  *bi*, dove *si*<sup>2</sup> = -1, le regole per l'algebra del set di numeri reali può essere applicata per il set di numeri complessi e i relativi componenti. Ad esempio:
+Con la rappresentazione di un numero complesso *z* = (*una*, *b*) nel formato *z* = *un*  +  *Business Intelligence*, dove *ho*<sup>2</sup> = -1, le regole per il calcolo algebrico dell'insieme di numeri reali può essere applicato al set di numeri complessi e ai rispettivi componenti. Ad esempio:
 
    (1 + 2*i*) \* (2 + 3*i*)  
    = 1 \* (2 + 3*i*) + 2*i* \* (2 + 3*i*)  
@@ -60,15 +60,15 @@ Mediante la rappresentazione di un numero complesso *z* = (*un*, *b*) nel format
    = (2 - 6) + (3 + 4)*i*  
    = -4 + 7*i*
 
-Il sistema di numeri complessi è un campo, ma non è un campo ordinato. Non sussiste alcun ordinamento dei numeri complessi, come accade per il campo di numeri reali e i relativi sottoinsiemi, quindi non è possibile applicare disuguaglianze ai numeri complessi come se fossero in numeri reali.
+Il sistema di numeri complessi è un campo, ma non è un campo ordinato. Non vi è alcun ordine dei numeri complessi, di quanto accade per il campo di numeri reali e i relativi sottoinsiemi, in modo disuguaglianza non è possibile applicare a un numero complesso così come sono numeri reali.
 
 Esistono tre formati comuni di rappresentazione di un numero complesso *z*:
 
-- Cartesiana: *z* = *un* + *bi*
+- Cartesiano: *z* = *una* + *bi*
 
-- Polare: *z* = *r* (cos *p* + *si* sin *p*)
+- Polare: *z* = *r* (cos *p* + *ho* sin *p*)
 
-- Esponenziale: *z* = *r* \* *e*<sup>*ip*</sup>
+- Esponenziale: *z* = *r* \* *elettronica*<sup>*ip*</sup>
 
 I termini usati in queste rappresentazioni standard di un numero complesso vengono definiti come segue:
 
@@ -76,11 +76,11 @@ I termini usati in queste rappresentazioni standard di un numero complesso vengo
 
 - Componente cartesiana immaginaria o parte immaginaria *b*.
 
-- Il modulo o un valore assoluto di un numero complesso *r*.
+- Il modulo o il valore assoluto di un numero complesso *r*.
 
-- L'angolo di fase o argomento *p* in radianti.
+- L'argomento o una fase angolo *p* espresso in radianti.
 
-Se non diversamente specificato, le funzioni che possono restituire valori multipli sono necessarie per restituire un valore principale per i relativi argomenti di maggiore di - π e minore di o uguale a + π per mantenerli a singolo valore. Tutti gli angoli devono essere espressi in radianti, in cui sono presenti 2 π radianti (360 gradi) in un cerchio.
+Se non diversamente specificato, le funzioni che possono restituire valori multipli sono necessarie per restituire un valore principale per i relativi argomenti di maggiore di-π e minore di o uguale a + π per mantenerli a valore singolo. Tutti gli angoli devono essere espressi in radianti, in cui sono presenti 2π radianti (360 gradi) in un cerchio.
 
 ### <a name="functions"></a>Funzioni
 

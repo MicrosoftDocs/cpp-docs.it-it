@@ -14,12 +14,12 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: ec623e65-c186-491f-aa18-6b12b47e1127
-ms.openlocfilehash: 73469182938a51d89a9ca9777f5481824e54dbeb
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ccabc523ed502a3841cb9299ea2ccd2115115743
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33862614"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961542"
 ---
 # <a name="ltregexgt-operators"></a>Operatori &lt;regex&gt;
 
@@ -70,15 +70,15 @@ bool operator!=(const match_results<BidIt, Alloc>& left,
 
 ### <a name="parameters"></a>Parametri
 
-`BidIt` Tipo di iteratore.
+*BidIt* il tipo di iteratore.
 
-`IOtraits` Classe traits della stringa.
+*IOtraits* classe traits della stringa.
 
-`Alloc` Classe allocator.
+*Alloc* la classe allocator.
 
-`left` Oggetto a sinistra da confrontare.
+*a sinistra* l'oggetto a sinistra da confrontare.
 
-`right` Oggetto a destra da confrontare.
+*a destra* l'oggetto a destra da confrontare.
 
 ### <a name="remarks"></a>Note
 
@@ -181,19 +181,19 @@ bool operator<(const sub_match<BidIt>& left,
 
 ### <a name="parameters"></a>Parametri
 
-`BidIt` Tipo di iteratore.
+*BidIt* il tipo di iteratore.
 
-`IOtraits` Classe traits della stringa.
+*IOtraits* classe traits della stringa.
 
-`Alloc` Classe allocator.
+*Alloc* la classe allocator.
 
-`left` Oggetto a sinistra da confrontare.
+*a sinistra* l'oggetto a sinistra da confrontare.
 
-`right` Oggetto a destra da confrontare.
+*a destra* l'oggetto a destra da confrontare.
 
 ### <a name="remarks"></a>Note
 
-Ciascun operatore modello converte i relativi argomenti in un tipo stringa e restituisce true solo se il valore convertito di `left` al confronto risulta minore del valore convertito di `right`.
+Ciascun operatore modello converte gli argomenti in un tipo stringa e restituisce true solo se il valore convertito di *a sinistra* confronto risulta minore il valore convertito del *a destra*.
 
 ### <a name="example"></a>Esempio
 
@@ -262,17 +262,17 @@ basic_ostream<Elem, IOtraits>& operator<<(basic_ostream<Elem, IOtraits>& os,
 
 ### <a name="parameters"></a>Parametri
 
-`Elem` Il tipo di elemento.
+*Elem* il tipo di elemento.
 
-`IOtraits` Classe traits della stringa.
+*IOtraits* classe traits della stringa.
 
-`Alloc` Classe allocator.
+*Alloc* la classe allocator.
 
-`BidIt` Tipo di iteratore.
+*BidIt* il tipo di iteratore.
 
-`os` Flusso di output.
+*sistema operativo* nel flusso di output.
 
-`right` Oggetto da inserire.
+*a destra* oggetto da inserire.
 
 ### <a name="remarks"></a>Note
 
@@ -342,15 +342,15 @@ bool operator<=(const sub_match<BidIt>& left,
 
 ### <a name="parameters"></a>Parametri
 
-`BidIt` Tipo di iteratore.
+*BidIt* il tipo di iteratore.
 
-`IOtraits` Classe traits della stringa.
+*IOtraits* classe traits della stringa.
 
-`Alloc` Classe allocator.
+*Alloc* la classe allocator.
 
-`left` Oggetto a sinistra da confrontare.
+*a sinistra* l'oggetto a sinistra da confrontare.
 
-`right` Oggetto a destra da confrontare.
+*a destra* l'oggetto a destra da confrontare.
 
 ### <a name="remarks"></a>Note
 
@@ -452,15 +452,15 @@ bool operator==(const match_results<BidIt, Alloc>& left,
 
 ### <a name="parameters"></a>Parametri
 
-`BidIt` Tipo di iteratore.
+*BidIt* il tipo di iteratore.
 
-`IOtraits` Classe traits della stringa.
+*IOtraits* classe traits della stringa.
 
-`Alloc` Classe allocator.
+*Alloc* la classe allocator.
 
-`left` Oggetto a sinistra da confrontare.
+*a sinistra* l'oggetto a sinistra da confrontare.
 
-`right` Oggetto a destra da confrontare.
+*a destra* l'oggetto a destra da confrontare.
 
 ### <a name="remarks"></a>Note
 
@@ -571,15 +571,15 @@ bool operator>(const sub_match<BidIt>& left,
 
 ### <a name="parameters"></a>Parametri
 
-`BidIt` Tipo di iteratore.
+*BidIt* il tipo di iteratore.
 
-`IOtraits` Classe traits della stringa.
+*IOtraits* classe traits della stringa.
 
-`Alloc` Classe allocator.
+*Alloc* la classe allocator.
 
-`left` Oggetto a sinistra da confrontare.
+*a sinistra* l'oggetto a sinistra da confrontare.
 
-`right` Oggetto a destra da confrontare.
+*a destra* l'oggetto a destra da confrontare.
 
 ### <a name="remarks"></a>Note
 
@@ -677,15 +677,15 @@ bool operator>=(const sub_match<BidIt>& left,
 
 ### <a name="parameters"></a>Parametri
 
-`BidIt` Tipo di iteratore.
+*BidIt* il tipo di iteratore.
 
-`IOtraits` Classe traits della stringa.
+*IOtraits* classe traits della stringa.
 
-`Alloc` Classe allocator.
+*Alloc* la classe allocator.
 
-`left` Oggetto a sinistra da confrontare.
+*a sinistra* l'oggetto a sinistra da confrontare.
 
-`right` Oggetto a destra da confrontare.
+*a destra* l'oggetto a destra da confrontare.
 
 ### <a name="remarks"></a>Note
 

@@ -16,16 +16,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: abe2a27a79705e9850df2c9fb54037278abd8cd5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a471cdd63ed46e15c9ec41968ed341eefaf36963
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33843262"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38965392"
 ---
 # <a name="codecvtbase-class"></a>Classe codecvt_base
 
-Classe di base per la classe codecvt usata per definire un tipo di enumerazione a cui si fa riferimento come **result**, usato come tipo restituito per le funzioni membro facet per indicare il risultato di una conversione.
+Una classe base per la classe codecvt utilizzata per definire un tipo di enumerazione definito come `result`, usato come tipo restituito per le funzioni membro facet per indicare il risultato di una conversione.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -50,13 +50,13 @@ protected:
 
 La classe descrive un'enumerazione comune a tutte le specializzazioni della classe modello [codecvt](../standard-library/codecvt-class.md). Il risultato dell'enumerazione descrive i possibili valori restituiti da [do_in](../standard-library/codecvt-class.md#do_in) o [do_out](../standard-library/codecvt-class.md#do_out):
 
-- **ok** se la conversione tra codifiche di caratteri interni ed esterni ha esito positivo.
+- `ok` Se la conversione tra codifiche di caratteri interni ed esterni ha esito positivo.
 
-- **partial** se la destinazione non è abbastanza grande per consentire la conversione.
+- `partial` Se la destinazione non è sufficientemente grande per consentire la conversione.
 
-- **error** se la sequenza di origine non è stata creata nel formato corretto.
+- `error` Se la sequenza di origine non è nel formato corretto.
 
-- **noconv** se la funzione non esegue alcuna conversione.
+- `noconv` se la funzione non esegue alcuna conversione.
 
 ## <a name="requirements"></a>Requisiti
 

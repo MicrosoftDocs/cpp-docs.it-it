@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5d4e07c4869bd345e77f0af4f30f694773aed114
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 973f183980e89ac0be268e5cbbec42de83a378f4
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33845141"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38965815"
 ---
 # <a name="ltcodecvtgt"></a>&lt;codecvt&gt;
 
-Definisce diverse classi modello che descrivono oggetti basati sulla classe modello [codecvt](../standard-library/codecvt-class.md). Tali oggetti possono essere usati come [facet delle impostazioni locali](../standard-library/locale-class.md#facet_class) che controllano le conversioni tra una sequenza di valori di tipo `Elem` e una sequenza di valori di tipo `char`.
+Definisce diverse classi modello che descrivono oggetti basati sulla classe modello [codecvt](../standard-library/codecvt-class.md). Questi oggetti possono fungere [facet delle impostazioni locali](../standard-library/locale-class.md#facet_class) che controllano le conversioni tra una sequenza di valori di tipo `Elem` e una sequenza di valori di tipo **char**.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -45,7 +45,7 @@ I facet delle impostazioni locali dichiarati in questa intestazione eseguono la 
 
 - UCS-16 è codificato con Unicode all'interno del programma come uno dei due interi a 16 bit. Si noti che questo uso non soddisfa tutti i requisiti di una codifica di caratteri wide valida per C o C++ standard, ma è comunque ampiamente diffuso.
 
-Per i flussi di byte (archiviati in un file, trasmessi come sequenza di byte o archiviati all'interno del programma in una matrice di `char`):
+Per i flussi di byte (archiviati in un file, trasmessi come sequenza di byte o archiviati all'interno del programma in una matrice di **char**):
 
 - UTF-8 è codificato con Unicode all'interno di un flusso di byte come uno o più byte di otto bit con un ordine deterministico dei byte.
 

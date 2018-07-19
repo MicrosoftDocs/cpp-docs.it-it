@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1248c8efd06069863a9f78a94378fe7aed651011
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ae0db2b789e16a39396a329a64dfb8794eef5775
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33856085"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961909"
 ---
 # <a name="istriviallymoveassignable-class"></a>Classe is_trivially_move_assignable
 
@@ -36,19 +36,19 @@ struct is_trivially_move_assignable;
 
 ### <a name="parameters"></a>Parametri
 
-`Ty` Il tipo di query.
+*Ty* il tipo di query.
 
 ## <a name="remarks"></a>Note
 
-Un'istanza del predicato di tipo contiene true se il tipo `Ty` è una classe che ha un operatore di assegnazione di spostamento semplice; in caso contrario, contiene false.
+Un'istanza del tipo predicato contiene true se il tipo *Ty* è una classe che ha un semplice operatore di assegnazione spostamento, in caso contrario, contiene false.
 
-Un operatore di assegnazione di spostamento per una classe `Ty` è semplice se:
+Un operatore di assegnazione di spostamento per una classe *Ty* è piuttosto semplice se:
 
 viene fornito in modo implicito
 
-la classe `Ty` non ha funzioni virtuali
+la classe *Ty* non ha funzioni virtuali
 
-la classe `Ty` non ha basi virtuali
+la classe *Ty* non ha basi virtuali
 
 le classi di tutti i membri dati non statici del tipo di classe hanno operatori di assegnazione di spostamento semplici
 

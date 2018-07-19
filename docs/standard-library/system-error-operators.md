@@ -9,12 +9,12 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: c14edefb-bd8a-4e90-88d3-c59c98e6f73c
-ms.openlocfilehash: d0a556505370078f599d6d667fa856723d9bac8f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 974b1294f8ef23936d79e64926595779a9019368
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33856798"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38963693"
 ---
 # <a name="ltsystemerrorgt-operators"></a>Operatori &lt;system_error&gt;
 
@@ -38,8 +38,8 @@ bool operator==(const error_condition& left,
 
 |Parametro|Descrizione|
 |---------------|-----------------|
-|`left`|Oggetto di cui verificare l'uguaglianza.|
-|`right`|Oggetto di cui verificare l'uguaglianza.|
+|*left*|Oggetto di cui verificare l'uguaglianza.|
+|*right*|Oggetto di cui verificare l'uguaglianza.|
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -65,12 +65,12 @@ bool operator!=(const error_condition& left,
 
 |Parametro|Descrizione|
 |---------------|-----------------|
-|`left`|Oggetto di cui verificare la disuguaglianza.|
-|`right`|Oggetto di cui verificare la disuguaglianza.|
+|*left*|Oggetto di cui verificare la disuguaglianza.|
+|*right*|Oggetto di cui verificare la disuguaglianza.|
 
 ### <a name="return-value"></a>Valore restituito
 
-**true** se l'oggetto passato in `left` non è uguale all'oggetto passato in `right`; in caso contrario, **false**.
+**true** se l'oggetto passato in *a sinistra* non è uguale all'oggetto passato *a destra*; in caso contrario **false**.
 
 ### <a name="remarks"></a>Note
 
@@ -108,12 +108,12 @@ inline bool operator<(
 
 |Parametro|Descrizione|
 |---------------|-----------------|
-|`left`|Oggetto da confrontare.|
-|`right`|Oggetto da confrontare.|
+|*left*|Oggetto da confrontare.|
+|*right*|Oggetto da confrontare.|
 
 ### <a name="return-value"></a>Valore restituito
 
-**true** se l'oggetto passato in `left` è più piccolo dell'oggetto passato in `right`; in caso contrario, **false**.
+**true** se l'oggetto passato in *a sinistra* è minore dell'oggetto passato in *a destra*; In caso contrario, **false**.
 
 ### <a name="remarks"></a>Note
 

@@ -9,12 +9,12 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 403d8e4e-0b3f-43fb-bc5a-8100c4f331c5
-ms.openlocfilehash: 4f8347ad891508e7cdf06db5a42ec7953fb7746a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ecc6640dd41fcc6a275de10becf1d9c03128f562
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33847260"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38966654"
 ---
 # <a name="lthashsetgt-operators"></a>Operatori &lt;hash_set&gt;
 
@@ -36,9 +36,9 @@ bool operator!=(const hash_set <Key, Traits, Allocator>& left, const hash_set <K
 
 ### <a name="parameters"></a>Parametri
 
-`left` Un oggetto di tipo `hash_set`.
+*a sinistra* un oggetto di tipo `hash_set`.
 
-`right` Un oggetto di tipo `hash_set`.
+*a destra* un oggetto di tipo `hash_set`.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -48,7 +48,7 @@ bool operator!=(const hash_set <Key, Traits, Allocator>& left, const hash_set <K
 
 Il confronto tra gli oggetti hash_set si basa su un confronto a coppie dei rispettivi elementi. Due oggetti hash_set sono uguali se hanno lo stesso numero di elementi e se i rispettivi elementi hanno gli stessi valori. In caso contrario, non sono uguali.
 
-I membri del [< hash_map >](../standard-library/hash-map.md) e [< hash_set >](../standard-library/hash-set.md) presenti file di intestazione di [stdext Namespace](../standard-library/stdext-namespace.md).
+I membri del [< hash_map >](../standard-library/hash-map.md) e [< hash_set >](../standard-library/hash-set.md) inclusi tra i file di intestazione il [stdext Namespace](../standard-library/stdext-namespace.md).
 
 ### <a name="example"></a>Esempio
 
@@ -102,9 +102,9 @@ bool operator!==(const hash_set <Key, Traits, Allocator>& left, const hash_set <
 
 ### <a name="parameters"></a>Parametri
 
-`left` Un oggetto di tipo `hash_set`.
+*a sinistra* un oggetto di tipo `hash_set`.
 
-`right` Un oggetto di tipo `hash_set`.
+*a destra* un oggetto di tipo `hash_set`.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -166,9 +166,9 @@ bool operator!=(const hash_multiset <Key, Traits, Allocator>& left, const hash_m
 
 ### <a name="parameters"></a>Parametri
 
-`left` Un oggetto di tipo `hash_multiset`.
+*a sinistra* un oggetto di tipo `hash_multiset`.
 
-`right` Un oggetto di tipo `hash_multiset`.
+*a destra* un oggetto di tipo `hash_multiset`.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -230,9 +230,9 @@ bool operator!==(const hash_multiset <Key, Traits, Allocator>& left, const hash_
 
 ### <a name="parameters"></a>Parametri
 
-`left` Un oggetto di tipo `hash_multiset`.
+*a sinistra* un oggetto di tipo `hash_multiset`.
 
-`right` Un oggetto di tipo `hash_multiset`.
+*a destra* un oggetto di tipo `hash_multiset`.
 
 ### <a name="return-value"></a>Valore restituito
 

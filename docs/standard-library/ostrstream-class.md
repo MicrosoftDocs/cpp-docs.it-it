@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3d268b9cd2ba7d83f44b5e0ebd516208d17ee726
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6ea34ac38b70defc873278ce964ff10b8383dcc5
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33858107"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38966582"
 ---
 # <a name="ostrstream-class"></a>Classe ostrstream
 
@@ -77,7 +77,7 @@ void freeze(bool _Freezeit = true);
 
 ### <a name="parameters"></a>Parametri
 
-`_Freezeit` Oggetto `bool` che indica se si desidera che il flusso per essere bloccato.
+*_Freezeit* un' **bool** che indica se si desidera che il flusso per essere bloccato.
 
 ### <a name="remarks"></a>Note
 
@@ -85,7 +85,7 @@ La funzione membro chiama [rdbuf](#rdbuf) -> [freeze](../standard-library/strstr
 
 ### <a name="example"></a>Esempio
 
-Vedere [strstream::freeze](../standard-library/strstreambuf-class.md#freeze) per un esempio d'uso di **freeze**.
+Visualizzare [strstream:: Freeze](../standard-library/strstreambuf-class.md#freeze) per un esempio che usa `freeze`.
 
 ## <a name="ostrstream"></a>  ostrstream::ostrstream
 
@@ -101,19 +101,19 @@ ostrstream(char* ptr,
 
 ### <a name="parameters"></a>Parametri
 
-`ptr` Il buffer.
+*PTR* nel buffer.
 
-`count` Le dimensioni del buffer in byte.
+*conteggio* le dimensioni del buffer in byte.
 
-`_Mode` La modalità di input e output del buffer. Per altre informazioni, vedere [ios_base::openmode](../standard-library/ios-base-class.md#openmode).
+*Modalità* la modalità di input e output del buffer. Per altre informazioni, vedere [ios_base::openmode](../standard-library/ios-base-class.md#openmode).
 
 ### <a name="remarks"></a>Note
 
-Entrambi i costruttori inizializzano la classe di base tramite la chiamata di [ostream](../standard-library/ostream-typedefs.md#ostream)( **sb**), dove **sb** è l'oggetto archiviato della classe [strstreambuf](../standard-library/strstreambuf-class.md). Il primo costruttore inizializza inoltre **sb** tramite la chiamata di `strstreambuf`. Il secondo costruttore inizializza la classe di base in uno dei due modi seguenti:
+Entrambi i costruttori inizializzano la classe base chiamando [ostream](../standard-library/ostream-typedefs.md#ostream)(**sb**), dove `sb` è l'oggetto archiviato della classe [strstreambuf](../standard-library/strstreambuf-class.md). Il primo costruttore inizializza inoltre `sb` chiamando `strstreambuf`. Il secondo costruttore inizializza la classe di base in uno dei due modi seguenti:
 
-- Se `_Mode` & **ios_base::app**== 0, `ptr` deve designare il primo elemento di una matrice di elementi `count` e il costruttore chiama `strstreambuf`( `ptr`, `count`, `ptr`).
+- Se `_Mode`  &  **ios_base:: app**= = 0, quindi `ptr` deve designare il primo elemento della matrice di `count` elementi e il costruttore chiama `strstreambuf`(`ptr`, `count`, `ptr`).
 
-- In caso contrario, `ptr` deve designare il primo elemento di una matrice di elementi di conteggio contenente una stringa C il cui primo elemento è designato da `ptr` e il costruttore chiama `strstreambuf`( `ptr`, `count`, `ptr` + `strlen`( `ptr`) ).
+- In caso contrario, `ptr` deve designare il primo elemento della matrice di elementi di conteggio contenente una stringa C il cui primo elemento designato dal `ptr`e il costruttore chiama `strstreambuf`(`ptr`, `count`, `ptr` + `strlen`( `ptr`) ).
 
 ## <a name="pcount"></a>  ostrstream::pcount
 
@@ -149,7 +149,7 @@ Puntatore all'oggetto strstreambuf associato del flusso.
 
 ### <a name="remarks"></a>Note
 
-La funzione membro restituisce l'indirizzo del buffer del flusso archiviato di tipo **pointer** a [strstreambuf](../standard-library/strstreambuf-class.md).
+La funzione membro restituisce l'indirizzo del buffer del flusso archiviato di tipo `pointer` al [strstreambuf](../standard-library/strstreambuf-class.md).
 
 ### <a name="example"></a>Esempio
 
@@ -173,7 +173,7 @@ La funzione membro restituisce [rdbuf](#rdbuf) -> [str](../standard-library/strs
 
 ### <a name="example"></a>Esempio
 
-Vedere [strstream::str](../standard-library/strstreambuf-class.md#str) per un esempio d'uso di **str**.
+Visualizzare [strstream](../standard-library/strstreambuf-class.md#str) per un esempio che usa `str`.
 
 ## <a name="see-also"></a>Vedere anche
 

@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aa2694e9f5bb477447d08ab976cac60634ef3b60
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 09123f4b8d0200d133ae04244d38b615640f7d30
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33845453"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964927"
 ---
 # <a name="function-objects-in-the-c-standard-library"></a>Oggetti funzione della libreria standard C++
 
@@ -58,7 +58,7 @@ template <class Key,
 class set
 ```
 
-Il secondo argomento di modello è l'oggetto funzione `less`. Questo oggetto funzione restituisce `true` se il primo parametro passato è minore del secondo parametro passato. Siccome alcuni contenitori ordinano i relativi elementi, il contenitore necessita di un modo per confrontare due elementi, che in questo caso è l'uso dell'oggetto funzione. È possibile definirne i propri criteri di ordinamento per i contenitori creando un oggetto funzione e specificandolo nell'elenco di modelli del contenitore.
+Il secondo argomento di modello è l'oggetto funzione `less`. Questo oggetto funzione restituisce **true** se il primo parametro passato è minore del secondo parametro passato. Siccome alcuni contenitori ordinano i relativi elementi, il contenitore necessita di un modo per confrontare due elementi, che in questo caso è l'uso dell'oggetto funzione. È possibile definirne i propri criteri di ordinamento per i contenitori creando un oggetto funzione e specificandolo nell'elenco di modelli del contenitore.
 
 ## <a name="function-objects-and-algorithms"></a>Oggetti funzione e algoritmi
 
@@ -72,7 +72,7 @@ ForwardIterator remove_if(
     Predicate pred);
 ```
 
-L'ultimo argomento a `remove_if` è un oggetto funzione che restituisce un valore booleano (un *predicato*). Se il risultato dell'oggetto funzione è `true`, l'elemento viene rimosso dal contenitore a cui accedono gli iteratori `first` e `last`. È possibile usare uno qualsiasi degli oggetti funzione dichiarati nell'intestazione [\<functional>](../standard-library/functional.md) per l'argomento `pred` oppure è possibile crearne uno.
+L'ultimo argomento a `remove_if` è un oggetto funzione che restituisce un valore booleano (un *predicato*). Se il risultato dell'oggetto funzione **true**, quindi l'elemento viene rimosso dal contenitore a cui si accede da parte degli iteratori `first` e `last`. È possibile usare uno qualsiasi degli oggetti funzione dichiarati nell'intestazione [\<functional>](../standard-library/functional.md) per l'argomento `pred` oppure è possibile crearne uno.
 
 ## <a name="see-also"></a>Vedere anche
 

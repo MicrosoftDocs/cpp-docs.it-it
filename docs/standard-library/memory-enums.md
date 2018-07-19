@@ -6,12 +6,12 @@ ms.topic: reference
 f1_keywords:
 - memory/std::pointer_safety
 ms.assetid: b9be0a7b-0beb-40b2-8183-911de371c6b9
-ms.openlocfilehash: 4d33cf941341f26c88f3a73c5a3d9ac0326db545
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9b9ea485bb66292c3c0509036c22dd161a694dd3
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33859267"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961422"
 ---
 # <a name="ltmemorygt-enums"></a>Enumerazioni &lt;memory&gt;
 
@@ -27,7 +27,7 @@ classe pointer_safety { relaxed, preferred, strict };
 
 ### <a name="remarks"></a>Note
 
-L'ambito di `enum` definisce i valori che possono essere restituiti da `get_pointer_safety()`:
+L'ambito **enum** definisce i valori che possono essere restituiti da `get_pointer_safety()`:
 
 `relaxed` -- i puntatori non derivati in modo sicuro (ovviamente puntatori da dichiarare o oggetti allocati) sono considerati come quelli derivati in modo sicuro.
 

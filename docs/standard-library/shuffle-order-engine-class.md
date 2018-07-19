@@ -25,12 +25,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4adbf2c0b6f3ce6d1bababf0a69bb6720ef6be77
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 13b46bcd29624d696ae22494c394fa028d58fa8a
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33859017"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961974"
 ---
 # <a name="shuffleorderengine-class"></a>Classe shuffle_order_engine
 
@@ -45,9 +45,9 @@ class shuffle_order_engine;
 
 ### <a name="parameters"></a>Parametri
 
-`Engine` Il tipo di motore di base.
+*Motore* il tipo di motore di base.
 
-`K` **Dimensioni della tabella**. Numero di elementi nel buffer (tabella). **Precondizione:** `0 < K`
+*K* **dimensioni tabella**. Numero di elementi nel buffer (tabella). **Precondizione:** `0 < K`
 
 ## <a name="members"></a>Membri
 
@@ -60,7 +60,7 @@ Per altre informazioni sui membri del motore, vedere [\<random>](../standard-lib
 
 ## <a name="remarks"></a>Note
 
-Questa classe modello descrive un *adattatore del motore* che produce valori riordinando quelli restituiti dal rispettivo motore di base. Ogni costruttore inserisce nella tabella interna i valori `K` restituiti dal motore di base e un elemento casuale è selezionato dalla tabella quando viene richiesto un valore.
+Questa classe modello descrive un *adattatore del motore* che produce valori riordinando quelli restituiti dal rispettivo motore di base. Ogni costruttore inserisce nella tabella interna con *K* i valori restituiti dal motore di base e un elemento casuale è selezionato dalla tabella quando viene richiesto un valore.
 
 ## <a name="requirements"></a>Requisiti
 

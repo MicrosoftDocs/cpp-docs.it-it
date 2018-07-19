@@ -31,12 +31,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a0a3f60a4cbcde76a681b33ed9201e81f313bac1
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 80cb3dd5d60665fbfb510fb2fddf94f17ef9f171
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33862098"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38963794"
 ---
 # <a name="locale-class"></a>Classe locale
 
@@ -213,27 +213,27 @@ static const int none = 0;
 
 ### <a name="remarks"></a>Note
 
-Il tipo è sinonimo di un tipo `int` che può rappresentare un gruppo di elementi distinti di un tipo di maschera di bit specifico delle impostazioni locali della classe. In alternativa, può essere usato per rappresentare qualsiasi corrispondente categoria di impostazioni locali C. Gli elementi sono i seguenti:
+Il tipo è un sinonimo di un **int** tipo che può rappresentare un gruppo di elementi distinti di una maschera di bit tipo locale alle impostazioni locali di classe o può essere utilizzato per rappresentare qualsiasi corrispondente categoria delle impostazioni locali C. Gli elementi sono i seguenti:
 
-- **collate**, corrispondente alla categoria C LC_COLLATE
+- `collate`, corrispondente alla categoria C LC_COLLATE
 
-- **ctype**, corrispondente alla categoria C LC_CTYPE
+- `ctype`, corrispondente alla categoria C LC_CTYPE
 
-- **monetary**, corrispondente alla categoria C LC_MONETARY
+- `monetary`, corrispondente alla categoria C LC_MONETARY
 
-- **numeric**, corrispondente alla categoria C LC_NUMERIC
+- `numeric`, corrispondente alla categoria C LC_NUMERIC
 
-- **time**, corrispondente alla categoria C LC_TIME
+- `time`, corrispondente alla categoria C LC_TIME
 
-- **messages**, corrispondente alla categoria Posix LC_MESSAGES
+- `messages`, corrispondente alla categoria Posix LC_MESSAGES
 
 Sono inoltre utili i due valori seguenti:
 
-- **none**, non corrispondente ad alcuna delle categorie C
+- `none`, corrispondente a nessuna delle categorie C
 
-- **all**, corrispondente all'unione C di tutte le categorie LC_ALL
+- `all`, corrispondente all'unione C di tutte le categorie LC_ALL
 
-È possibile rappresentare un gruppo arbitrario di categorie usando `OR` con queste constanti, come in **monetary** &#124; **time**.
+È possibile rappresentare un gruppo arbitrario di categorie usando `OR` con queste constanti, come in `monetary` &#124; `time`.
 
 ## <a name="classic"></a>  locale::classic
 
@@ -301,11 +301,11 @@ locale combine(const locale& Loc) const;
 
 ### <a name="parameters"></a>Parametri
 
-`Loc` Le impostazioni locali che contiene il facet da inserire nelle impostazioni locali di destinazione.
+*Loc* impostazioni locali contenenti il facet da inserire nelle impostazioni locali di destinazione.
 
 ### <a name="return-value"></a>Valore restituito
 
-La funzione membro restituisce un oggetto locale che sostituisce o aggiunge a **\*this** il facet `Facet` elencato in `Loc`.
+La funzione membro restituisce un oggetto locale che sostituisce o aggiunge al  **\*ciò** facet `Facet` elencati nella *Loc*.
 
 ### <a name="example"></a>Esempio
 
@@ -369,7 +369,7 @@ static locale global(const locale& Loc);
 
 ### <a name="parameters"></a>Parametri
 
-`Loc` Le impostazioni locali da utilizzare come le impostazioni locali predefinite per il programma.
+*Loc* le impostazioni locali da utilizzare come le impostazioni locali predefinite dal programma.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -415,7 +415,7 @@ class id { protected:    id(); private:    id(const id&) // not defined void ope
 
 ### <a name="remarks"></a>Note
 
-La classe membro descrive l'oggetto membro statico richiesto da ciascun facet delle impostazioni locali univoco. Si noti che non è possibile copiare o assegnare un oggetto della classe **id**.
+La classe membro descrive l'oggetto membro statico richiesto da ciascun facet delle impostazioni locali univoco. Si noti che non è possibile copiare o assegnare un oggetto della classe `id`.
 
 ## <a name="locale"></a>  locale::locale
 
@@ -436,35 +436,35 @@ locale(const locale& Loc, const Facet* Fac);
 
 ### <a name="parameters"></a>Parametri
 
-`Locname` Nome delle impostazioni locali.
+*Locname* nome delle impostazioni locali.
 
-`Loc` Impostazioni locali che devono essere copiati nella costruzione le nuove impostazioni locali.
+*Loc* delle impostazioni locali che devono essere copiati nella costruzione delle nuove impostazioni locali.
 
-`Other` Impostazioni locali da cui selezionare una categoria.
+*Altri* delle impostazioni locali da cui selezionare una categoria.
 
-`Cat` La categoria da sostituire in impostazioni locali costruita.
+*Cat* la categoria da sostituire nelle impostazioni locali costruite.
 
-`Fac` Il facet deve essere sostituito con nelle impostazioni locali costruita.
+*FAc* il facet da sostituire nelle impostazioni locali costruite.
 
 ### <a name="remarks"></a>Note
 
-Il primo costruttore inizializza l'oggetto in modo che corrisponda alle impostazioni locali globali. Il secondo e il terzo costruttore inizializzano tutte le categorie delle impostazioni locali in modo che abbiano un comportamento coerente con il nome delle impostazioni locali `Locname`. I costruttori rimanenti copiano `Loc`, con le eccezioni seguenti:
+Il primo costruttore inizializza l'oggetto in modo che corrisponda alle impostazioni locali globali. Il secondo e terzo costruttore inizializzano tutte le categorie di impostazioni locali per hanno un comportamento coerenza con il nome delle impostazioni locali *Locname*. I costruttori rimanenti copiano *Loc*, con le eccezioni riportate:
 
 `locale(const locale& Loc, const locale& Other, category Cat);`
 
-sostituisce `Other` con i facet corrispondenti a un a categoria C per cui C & `Cat` è diverso da zero.
+sostituisce *altri* i facet corrispondenti a un a categoria C per cui C & *Cat* è diverso da zero.
 
 `locale(const locale& Loc, const char* Locname, category Cat);`
 
 `locale(const locale& Loc, const string& Locname, category Cat);`
 
-sostituisce `locale(Locname, _All)` con i facet corrispondenti a un a categoria C per cui C & `Cat` è diverso da zero.
+sostituisce `locale(Locname, _All)` i facet corrispondenti a un a categoria C per cui C & *Cat* è diverso da zero.
 
 `template<class Facet> locale(const locale& Loc, Facet* Fac);`
 
-sostituisce , o aggiunge, `Loc` al facet `Fac`, se `Fac` non è un puntatore null.
+sostituisce (o aggiunge a) *Loc* facet *Fac*, se *Fac* non è un puntatore null.
 
-Se un nome delle impostazioni locali `Locname` è un puntatore null o comunque non valido, la funzione genera l'errore [runtime_error](../standard-library/runtime-error-class.md).
+Se un nome delle impostazioni locali *Locname* è un puntatore null o comunque non validi, la funzione genera [runtime_error](../standard-library/runtime-error-class.md).
 
 ### <a name="example"></a>Esempio
 
@@ -555,7 +555,7 @@ bool operator!=(const locale& right) const;
 
 ### <a name="parameters"></a>Parametri
 
-`right` Una delle impostazioni locali di cui verificare la disuguaglianza.
+*a destra* una delle impostazioni locali di cui verificare la disuguaglianza.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -618,9 +618,9 @@ bool operator()(
 
 ### <a name="parameters"></a>Parametri
 
-`left` La stringa a sinistra.
+*a sinistra* la stringa a sinistra.
 
-`right` La stringa a destra.
+*a destra* la stringa a destra.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -685,7 +685,7 @@ bool operator==(const locale& right) const;
 
 ### <a name="parameters"></a>Parametri
 
-`right` Una delle impostazioni locali di cui verificare l'uguaglianza.
+*a destra* una delle impostazioni locali di cui verificare l'uguaglianza.
 
 ### <a name="return-value"></a>Valore restituito
 

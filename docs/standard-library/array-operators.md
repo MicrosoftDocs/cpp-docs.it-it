@@ -13,16 +13,16 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: c8f46282-f179-4909-9a01-639cb8e18c27
-ms.openlocfilehash: 09d09e47103fa263adc4c5cf288803835b112142
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 782acd7fda671d84252ab226d095fe21c75645bf
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33846142"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38965458"
 ---
 # <a name="ltarraygt-operators"></a>Operatori &lt;array&gt;
 
-L'intestazione \<array> include queste funzioni modello di confronto non membro `array`.
+Il \<array > intestazione include queste **matrice** funzioni del modello di confronto non membro.
 
 ||||
 |-|-|-|
@@ -42,13 +42,13 @@ bool operator!=(
 
 ### <a name="parameters"></a>Parametri
 
-`Ty` Il tipo di un elemento.
+*Ty* il tipo di un elemento.
 
-`N` Le dimensioni della matrice.
+*N* le dimensioni della matrice.
 
-`left` Contenitore a sinistra da confrontare.
+*a sinistra* contenitore sinistro da confrontare.
 
-`right` Contenitore a destra da confrontare.
+*a destra* contenitore destro da confrontare.
 
 ### <a name="remarks"></a>Note
 
@@ -111,13 +111,13 @@ bool operator<(
 
 ### <a name="parameters"></a>Parametri
 
-`Ty` Il tipo di un elemento.
+*Ty* il tipo di un elemento.
 
-`N` Le dimensioni della matrice.
+*N* le dimensioni della matrice.
 
-`left` Contenitore a sinistra da confrontare.
+*a sinistra* contenitore sinistro da confrontare.
 
-`right` Contenitore a destra da confrontare.
+*a destra* contenitore destro da confrontare.
 
 ### <a name="remarks"></a>Note
 
@@ -181,13 +181,13 @@ bool operator<=(
 
 ### <a name="parameters"></a>Parametri
 
-`Ty` Il tipo di un elemento.
+*Ty* il tipo di un elemento.
 
-`N` Le dimensioni della matrice.
+*N* le dimensioni della matrice.
 
-`left` Contenitore a sinistra da confrontare.
+*a sinistra* contenitore sinistro da confrontare.
 
-`right` Contenitore a destra da confrontare.
+*a destra* contenitore destro da confrontare.
 
 ### <a name="remarks"></a>Note
 
@@ -251,13 +251,13 @@ bool operator==(
 
 ### <a name="parameters"></a>Parametri
 
-`Ty` Il tipo di un elemento.
+*Ty* il tipo di un elemento.
 
-`N` Le dimensioni della matrice.
+*N* le dimensioni della matrice.
 
-`left` Contenitore a sinistra da confrontare.
+*a sinistra* contenitore sinistro da confrontare.
 
-`right` Contenitore a destra da confrontare.
+*a destra* contenitore destro da confrontare.
 
 ### <a name="remarks"></a>Note
 
@@ -321,13 +321,13 @@ bool operator>(
 
 ### <a name="parameters"></a>Parametri
 
-`Ty` Il tipo di un elemento.
+*Ty* il tipo di un elemento.
 
-`N` Le dimensioni della matrice.
+*N* le dimensioni della matrice.
 
-`left` Contenitore a sinistra da confrontare.
+*a sinistra* contenitore sinistro da confrontare.
 
-`right` Contenitore a destra da confrontare.
+*a destra* contenitore destro da confrontare.
 
 ### <a name="remarks"></a>Note
 
@@ -391,13 +391,13 @@ bool operator>=(
 
 ### <a name="parameters"></a>Parametri
 
-`Ty` Il tipo di un elemento.
+*Ty* il tipo di un elemento.
 
-`N` Le dimensioni della matrice.
+*N* le dimensioni della matrice.
 
-`left` Contenitore a sinistra da confrontare.
+*a sinistra* contenitore sinistro da confrontare.
 
-`right` Contenitore a destra da confrontare.
+*a destra* contenitore destro da confrontare.
 
 ### <a name="remarks"></a>Note
 

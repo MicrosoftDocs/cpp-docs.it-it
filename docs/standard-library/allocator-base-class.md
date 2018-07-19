@@ -48,12 +48,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8c078933ad35cff1a52de433b1ae5d321db1985c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9f27cb2bc1a711b77006fa496cc080f546e539ab
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33847780"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962459"
 ---
 # <a name="allocatorbase-class"></a>Classe allocator_base
 
@@ -70,8 +70,8 @@ class allocator_base
 
 |Parametro|Descrizione|
 |---------------|-----------------|
-|`Type`|Tipo degli elementi assegnato dall'allocatore.|
-|`Sync`|I criteri di sincronizzazione per l'allocatore, ovvero la [Classe sync_none](../standard-library/sync-none-class.md), la [Classe sync_per_container](../standard-library/sync-per-container-class.md), la [Classe sync_per_thread](../standard-library/sync-per-thread-class.md) o la [Classe sync_shared](../standard-library/sync-shared-class.md).|
+|*Type*|Tipo degli elementi assegnato dall'allocatore.|
+|*Sincronizzazione*|I criteri di sincronizzazione per l'allocatore, ovvero la [Classe sync_none](../standard-library/sync-none-class.md), la [Classe sync_per_container](../standard-library/sync-per-container-class.md), la [Classe sync_per_thread](../standard-library/sync-per-thread-class.md) o la [Classe sync_shared](../standard-library/sync-shared-class.md).|
 
 ### <a name="constructors"></a>Costruttori
 
@@ -95,14 +95,14 @@ class allocator_base
 
 |Funzione membro|Descrizione|
 |-|-|
-|[_Charalloc](#charalloc)|Alloca lo spazio di archiviazione per una matrice di tipo `char`.|
-|[_Chardealloc](#chardealloc)|Libera lo spazio di archiviazione per la matrice contenente gli elementi di tipo `char`.|
+|[_Charalloc](#charalloc)|Alloca memoria per una matrice di tipo **char**.|
+|[_Chardealloc](#chardealloc)|Libera la memoria per la matrice che contiene gli elementi di tipo **char**.|
 |[address](#address)|Trova l'indirizzo di un oggetto il cui valore è specificato.|
 |[allocate](#allocate)|Alloca un blocco di memoria sufficiente a contenere almeno un numero specificato di elementi.|
 |[construct](#construct)|Costruisce un tipo specifico di oggetto su un indirizzo specificato che viene inizializzato con un valore specificato.|
 |[deallocate](#deallocate)|Libera un numero specificato di oggetti dall'archiviazione iniziando da una posizione specificata.|
 |[destroy](#destroy)|Chiama un distruttore di oggetti senza deallocare la memoria in cui è stato archiviato l'oggetto.|
-|[max_size](#max_size)|Restituisce il numero di elementi di tipo `Type` che potrebbe essere assegnata da un oggetto dell'allocatore della classe prima che la memoria libera si esaurisca.|
+|[max_size](#max_size)|Restituisce il numero di elementi di tipo *Type* che possono essere allocati da un oggetto della classe allocator prima che la memoria libera si esaurisca.|
 
 ## <a name="requirements"></a>Requisiti
 
@@ -112,7 +112,7 @@ class allocator_base
 
 ## <a name="charalloc"></a>  allocator_base::_Charalloc
 
-Alloca lo spazio di archiviazione per una matrice di tipo `char`.
+Alloca memoria per una matrice di tipo **char**.
 
 ```cpp
 char *_Charalloc(size_type count);
@@ -122,7 +122,7 @@ char *_Charalloc(size_type count);
 
 |Parametro|Descrizione|
 |---------------|-----------------|
-|`count`|Numero di elementi della matrice da allocare.|
+|*count*|Numero di elementi della matrice da allocare.|
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -134,7 +134,7 @@ Questa funzione membro viene usata dai contenitori compilati con un compilatore 
 
 ## <a name="chardealloc"></a>  allocator_base::_Chardealloc
 
-Libera lo spazio di archiviazione per la matrice contenente gli elementi di tipo `char`.
+Libera la memoria per la matrice che contiene gli elementi di tipo **char**.
 
 ```cpp
 void _Chardealloc(void* ptr, size_type count);
@@ -144,8 +144,8 @@ void _Chardealloc(void* ptr, size_type count);
 
 |Parametro|Descrizione|
 |---------------|-----------------|
-|`ptr`|Puntatore al primo oggetto da deallocare dall'archivio.|
-|`count`|Numero di oggetti da deallocare dall'archivio.|
+|*ptr*|Puntatore al primo oggetto da deallocare dall'archivio.|
+|*count*|Numero di oggetti da deallocare dall'archivio.|
 
 ### <a name="remarks"></a>Note
 
@@ -163,7 +163,7 @@ const_pointer address(const_reference val);
 
 ### <a name="parameters"></a>Parametri
 
-`val` Il valore const o nonconst dell'oggetto il cui indirizzo è da ricercare.
+*Val* il valore const o nonconst dell'oggetto il cui indirizzo è da ricercare.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -188,8 +188,8 @@ pointer allocate(size_type _Nx);
 
 |Parametro|Descrizione|
 |---------------|-----------------|
-|`_Nx`|Numero di elementi della matrice da allocare.|
-|`_Hint`|Questo parametro viene ignorato.|
+|*_Nx*|Numero di elementi della matrice da allocare.|
+|*_Hint*|Questo parametro viene ignorato.|
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -214,7 +214,7 @@ allocator_base(const allocator_base<Other, Sync>& right);
 
 |Parametro|Descrizione|
 |---------------|-----------------|
-|`right`|Oggetto allocatore da copiare.|
+|*right*|Oggetto allocatore da copiare.|
 
 ### <a name="remarks"></a>Note
 
@@ -248,8 +248,8 @@ void construct(pointer ptr, const Type& val);
 
 |Parametro|Descrizione|
 |---------------|-----------------|
-|`ptr`|Puntatore al percorso in cui deve essere creato l'oggetto.|
-|`val`|Il valore con cui viene inizializzato l'oggetto costruito.|
+|*ptr*|Puntatore al percorso in cui deve essere creato l'oggetto.|
+|*Val*|Il valore con cui viene inizializzato l'oggetto costruito.|
 
 ### <a name="remarks"></a>Note
 
@@ -267,8 +267,8 @@ void deallocate(pointer ptr, size_type _Nx);
 
 |Parametro|Descrizione|
 |---------------|-----------------|
-|`ptr`|Puntatore al primo oggetto da deallocare dall'archivio.|
-|`_Nx`|Numero di oggetti da deallocare dall'archivio.|
+|*ptr*|Puntatore al primo oggetto da deallocare dall'archivio.|
+|*_Nx*|Numero di oggetti da deallocare dall'archivio.|
 
 ### <a name="remarks"></a>Note
 
@@ -286,7 +286,7 @@ void destroy(pointer ptr);
 
 |Parametro|Descrizione|
 |---------------|-----------------|
-|`ptr`|Un puntatore che indica l'indirizzo dell'oggetto da distruggere.|
+|*ptr*|Un puntatore che indica l'indirizzo dell'oggetto da distruggere.|
 
 ### <a name="remarks"></a>Note
 

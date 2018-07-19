@@ -36,12 +36,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 611030b6707a6087e0908aa69349af21858aba0e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 26386ebb5e2bbb20b952200869ccffb7677c59af
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33847065"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962426"
 ---
 # <a name="gammadistribution-class"></a>Classe gamma_distribution
 
@@ -80,13 +80,13 @@ public:
 
 ### <a name="parameters"></a>Parametri
 
-*RealType* valore predefinito è il tipo di risultato a virgola mobile, `double`. Per informazioni sui tipi possibili, vedere [\<random>](../standard-library/random.md).
+*RealType* il tipo di risultato a virgola mobile, per impostazione predefinita **doppie**. Per informazioni sui tipi possibili, vedere [\<random>](../standard-library/random.md).
 
 *URNG* Motore di generazione di numeri casuali uniformi. Per informazioni sui tipi possibili, vedere [\<random>](../standard-library/random.md).
 
 ## <a name="remarks"></a>Note
 
-La classe modello descrive una distribuzione che produce valori di un tipo a virgola mobile specificato dall'utente (o di tipo `double` se non ne viene specificato alcuno), distribuiti in base alla distribuzione gamma. La tabella seguente include collegamenti ad articoli relativi ai singoli membri.
+La classe modello descrive una distribuzione che produce valori di specificato dall'utente a virgola mobile a tipo, o tipo **doppie** se ne viene specificato alcuno, distribuiti in base alla distribuzione Gamma. La tabella seguente include collegamenti ad articoli relativi ai singoli membri.
 
 ||||
 |-|-|-|
@@ -209,9 +209,9 @@ explicit gamma_distribution(const param_type& parm);
 
 *Alpha* il `alpha` parametro di distribuzione.
 
-*Beta* il `beta` parametro di distribuzione.
+*versione Beta* il `beta` parametro di distribuzione.
 
-*Parm* struttura di parametri usata per costruire la distribuzione.
+*Parm* la struttura di parametri utilizzata per costruire la distribuzione.
 
 ### <a name="remarks"></a>Note
 
@@ -241,9 +241,9 @@ struct param_type {
 
 *Alpha* il `alpha` parametro di distribuzione.
 
-*Beta* il `beta` parametro di distribuzione.
+*versione Beta* il `beta` parametro di distribuzione.
 
-*a destra* il `param_type` istanza da confrontare per.
+*a destra* il `param_type` istanza per eseguire il confronto.
 
 ### <a name="remarks"></a>Note
 

@@ -1,5 +1,5 @@
 ---
-title: Gestione di classi (ATL) file | Documenti Microsoft
+title: Classi (ATL) di gestione file | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,24 +14,24 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 99430bc26754023bf7f23511546328e31b6be265
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: adff92e4b5c849c7fab151e716561e163cd59fff
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32353950"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962345"
 ---
-# <a name="file-handling-classes"></a>Classi di gestione dei file
+# <a name="file-handling-classes"></a>Classi di gestione file
 Queste classi forniscono metodi per la gestione di file, i file temporanei e i file mappati alla memoria.  
   
--   [CAtlFile](../atl/reference/catlfile-class.md) questa classe fornisce un semplice wrapper per le finestre di API di gestione di file.  
+-   [CAtlFile](../atl/reference/catlfile-class.md) questa classe fornisce un wrapper sottile per i Windows API di gestione di file.  
   
--   [CAtlFileMapping](../atl/reference/catlfilemapping-class.md) questa classe rappresenta un file mappato alla memoria, l'aggiunta di un operatore di cast per i metodi di [CAtlFileMappingBase](../atl/reference/catlfilemappingbase-class.md).  
+-   [CAtlFileMapping](../atl/reference/catlfilemapping-class.md) questa classe rappresenta un file mappato alla memoria, l'aggiunta di un operatore cast per i metodi del [CAtlFileMappingBase](../atl/reference/catlfilemappingbase-class.md).  
   
 -   [CAtlFileMappingBase](../atl/reference/catlfilemappingbase-class.md) questa classe rappresenta un file mappato alla memoria.  
   
 -   [CAtlTemporaryFile](../atl/reference/catltemporaryfile-class.md) questa classe fornisce metodi per la creazione e utilizzo di un file temporaneo.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Cenni preliminari sulla classe](../atl/atl-class-overview.md)
+ [Panoramica della classe](../atl/atl-class-overview.md)
 

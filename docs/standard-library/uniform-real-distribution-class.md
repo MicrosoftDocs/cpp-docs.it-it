@@ -36,12 +36,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bedb88ae44faaea9d65b41dcc98a4e83354ea71b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 222aef46fb8080ba044904dbbedd5546cec51929
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33858734"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38963087"
 ---
 # <a name="uniformrealdistribution-class"></a>Classe uniform_real_distribution
 
@@ -81,7 +81,7 @@ public:
 
 ### <a name="parameters"></a>Parametri
 
-*RealType* valore predefinito è il tipo di risultato a virgola mobile, `double`. Per informazioni sui tipi possibili, vedere [\<random>](../standard-library/random.md).
+*RealType* il tipo di risultato a virgola mobile, per impostazione predefinita **doppie**. Per informazioni sui tipi possibili, vedere [\<random>](../standard-library/random.md).
 
 ## <a name="remarks"></a>Note
 
@@ -199,17 +199,20 @@ explicit uniform_real_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parametri
 
-*un* il limite inferiore per i valori casuali, inclusivo.
+*a*  
+Limite inferiore per i valori casuali, inclusivo.
 
-*b* il limite superiore per i valori casuali, esclusivi.
+*b*  
+Limite superiore per i valori casuali, esclusivo.
 
-*Parm* il `param_type` struttura usata per costruire la distribuzione.
+*parm*  
+Struttura `param_type` usata per costruire la distribuzione.
 
 ### <a name="remarks"></a>Note
 
 **Precondizione:** `a < b`
 
-Il primo costruttore crea un oggetto il cui valore `a` archiviato include il valore *a* e il cui valore `b` archiviato include il valore *b*.
+Il primo costruttore crea un oggetto il cui stored *una* valore contiene il valore *una* e il cui stored *b* valore contiene il valore *b*.
 
 Il secondo costruttore crea un oggetto i cui parametri archiviati sono inizializzati da *parm*. È possibile ottenere e impostare i parametri correnti di una distribuzione esistente chiamando la funzione membro `param()`.
 
@@ -231,11 +234,14 @@ struct param_type {
 
 ### <a name="parameters"></a>Parametri
 
-*un* il limite inferiore per i valori casuali, inclusivo.
+*a*  
+Limite inferiore per i valori casuali, inclusivo.
 
-*b* il limite superiore per i valori casuali, esclusivi.
+*b*  
+Limite superiore per i valori casuali, esclusivo.
 
-*a destra* il `param_type` oggetto da confrontare con questa istanza.
+*right*  
+Oggetto `param_type` da confrontare con questo oggetto.
 
 ### <a name="remarks"></a>Note
 

@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cb4cc6588b61563d547cdbf8e332c66d1909e94d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 568eb077a2006bdb33eb08e0fa5618b7c38a6cb1
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33844868"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962637"
 ---
 # <a name="iscopyconstructible-class"></a>Classe is_copy_constructible
 
@@ -36,11 +36,11 @@ struct is_copy_constructible;
 
 ### <a name="parameters"></a>Parametri
 
-`Ty` Il tipo di query.
+*Ty* il tipo di query.
 
 ## <a name="remarks"></a>Note
 
-Un'istanza del predicato di tipo contiene true se il tipo `Ty` è una classe che ha un costruttore di copia; in caso contrario, contiene false.
+Un'istanza del tipo predicato contiene true se il tipo *Ty* è una classe che ha un costruttore di copia in caso contrario, contiene false.
 
 ## <a name="example"></a>Esempio
 

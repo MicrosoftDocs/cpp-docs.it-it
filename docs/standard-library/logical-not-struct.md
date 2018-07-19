@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a0d654c526e5c856431d69c045c5018d77a6fed3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: bf93d84534671cb65c873555d70fea756036fe06
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33860018"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961639"
 ---
-# <a name="logicalnot-struct"></a>Struct logical_not
+# <a name="logicalnot-struct"></a>logical_not (struct)
 
-Oggetto funzione predefinito che esegue l'operazione di not logico ( `operator!`) negli argomenti.
+Un oggetto funzione predefinito che esegue la logica non operazione (`operator!`) sul relativo argomento.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -49,9 +49,9 @@ struct logical_not<void>
 
 ### <a name="parameters"></a>Parametri
 
-`Type` Qualsiasi tipo che supporta un `operator!` che accetta un operando di tipo specificato o dedotto.
+*Tipo di* qualsiasi tipo che supporta un `operator!` che accetta un operando del tipo specificato o dedotto.
 
-`Left` L'operando di logico non operazione. Il modello non specializzato accetta un argomento di riferimento lvalue di tipo `Type`. Il modello specializzato esegue un inoltro perfetto degli argomenti di riferimento lvalue e rvalue del tipo dedotto `Type`.
+*Sinistra* l'operando di logico non operazione. Il modello non specializzato accetta un argomento di riferimento lvalue di tipo *tipo*. Il modello specializzato esegue un inoltro di lvalue perfetto e gli argomenti di riferimento rvalue del tipo di dedurre *tipo*.
 
 ## <a name="return-value"></a>Valore restituito
 

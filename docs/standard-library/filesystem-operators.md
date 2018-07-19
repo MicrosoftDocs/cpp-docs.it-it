@@ -22,16 +22,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 546e601afeb05e0347dba8bf792611f20068c69b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6e93cbd4298a0f2094c2c5950220610a17642512
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33845375"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38965578"
 ---
 # <a name="ltfilesystemgt-operators"></a>Operatori &lt;filesystem&gt;
 
-Gli operatori eseguono un confronto lessicale di due percorsi come stringhe. Usare la funzione **equivalent** per determinare se due percorsi (ad esempio, un percorso relativo e un percorso assoluto) fanno riferimento allo stesso file o directory sul disco.
+Gli operatori eseguono un confronto lessicale di due percorsi come stringhe. Usare il `equivalent` funzione per determinare se due percorsi (ad esempio un percorso relativo e un percorso assoluto) fanno riferimento allo stesso file o directory sul disco.
 
 Per altre informazioni, vedere [Esplorazione del file system (C++)](../standard-library/file-system-navigation.md).
 

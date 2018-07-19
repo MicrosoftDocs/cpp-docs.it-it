@@ -11,12 +11,12 @@ f1_keywords:
 - iosfwd/std::wios
 - iosfwd/std::wstreampos
 ms.assetid: 0b962632-3439-44de-bf26-20c67a7f0ff3
-ms.openlocfilehash: 7ee458d0d84b63de52a2840a7a86903afed1704d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d79e3361d58165ac356e2ef75c0a3fd1a4cb4f26
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33845986"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38963641"
 ---
 # <a name="ltiosgt-typedefs"></a>Typedef &lt;ios&gt;
 
@@ -35,7 +35,7 @@ typedef basic_ios<char, char_traits<char>> ios;
 
 ### <a name="remarks"></a>Note
 
-Il tipo è un sinonimo della classe modello [basic_ios](../standard-library/basic-ios-class.md), specializzata per elementi di tipo `char` con tratti di carattere predefiniti.
+Il tipo è un sinonimo della classe modello [basic_ios](../standard-library/basic-ios-class.md)specializzata per gli elementi di tipo **char** con tratti di carattere predefiniti.
 
 ## <a name="streamoff"></a>  streamoff
 
@@ -51,7 +51,7 @@ Supporta operazioni interne.
 
 ### <a name="remarks"></a>Note
 
-Il tipo è un intero con segno che descrive un oggetto in grado di archiviare un offset di byte interessato da varie operazioni di posizionamento del flusso. La relativa rappresentazione contiene almeno 32 bit di valore. Non necessariamente è abbastanza ampia da rappresentare una posizione di byte arbitraria all'interno di un flusso. Il valore **streamoff(-1)** indica generalmente un offset errato.
+Il tipo è un intero con segno che descrive un oggetto in grado di archiviare un offset di byte interessato da varie operazioni di posizionamento del flusso. La relativa rappresentazione contiene almeno 32 bit di valore. Non necessariamente è abbastanza ampia da rappresentare una posizione di byte arbitraria all'interno di un flusso. Il valore `streamoff(-1)` indica in genere un offset errato.
 
 ## <a name="streampos"></a>  streampos
 
@@ -134,7 +134,7 @@ typedef basic_ios<wchar_t, char_traits<wchar_t>> wios;
 
 ### <a name="remarks"></a>Note
 
-Il tipo è un sinonimo della classe modello [basic_ios](../standard-library/basic-ios-class.md), specializzata per elementi di tipo `wchar_t` con tratti di carattere predefiniti.
+Il tipo è un sinonimo della classe modello [basic_ios](../standard-library/basic-ios-class.md)specializzata per gli elementi di tipo **wchar_t** con tratti di carattere predefiniti.
 
 ## <a name="wstreampos"></a>  wstreampos
 

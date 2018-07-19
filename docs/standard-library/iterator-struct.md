@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e9cd414e2e6f23cb2fe44e6de4b5f53b33ef3555
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a399fa8a9f8fc9a73d75605f31245e42a2154b7c
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33857883"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38963628"
 ---
 # <a name="iterator-struct"></a>Struct iterator
 
-Struct di base vuota usata per assicurare il funzionamento corretto di una classe iterator definita dall'utente con **iterator_trait**.
+Struct di base vuoto utilizzato per garantire che una classe iterator definita dall'utente funziona correttamente con `iterator_trait`s.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -47,7 +47,7 @@ La struct modello viene usata come tipo di base per tutti gli iteratori. Definis
 
 - `iterator_category` (sinonimo del parametro modello `Category`)
 
-- `value_type` (sinonimo del parametro modello **Type**)
+- `value_type` (sinonimo del parametro modello `Type`)
 
 - `difference_type` (sinonimo del parametro modello `Distance`)
 
@@ -57,7 +57,7 @@ La struct modello viene usata come tipo di base per tutti gli iteratori. Definis
 
 - `reference` (sinonimo del parametro modello `Reference`)
 
-Si noti che `value_type` non deve essere un tipo costante anche se **pointer** punta a un oggetto di tipo **Type** const e definisce come riferimento un oggetto dello stesso **tipo**.
+Si noti che `value_type` non deve essere un tipo costante anche se `pointer` punta a un oggetto del **const** `Type` e definisce come un oggetto di riferimento **const** `Type`.
 
 ## <a name="example"></a>Esempio
 

@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 84cc8ade8d844b591d6cb848ebee0fb3b05fb932
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5c0e37eb0eaa7f0a6e40f385315822742f15516e
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33851902"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962371"
 ---
 # <a name="isscalar-class"></a>Classe is_scalar
 
@@ -37,11 +37,11 @@ struct is_scalar;
 
 ### <a name="parameters"></a>Parametri
 
-`Ty` Il tipo di query.
+*Ty* il tipo di query.
 
 ## <a name="remarks"></a>Note
 
-Un'istanza del predicato di tipo contiene true se il tipo `Ty` è un tipo integrale, un tipo a virgola mobile, un tipo di enumerazione, un tipo di puntatore o un puntatore a un tipo membro oppure un form `cv-qualified` di uno di essi; in caso contrario, contiene false.
+Un'istanza del tipo predicato contiene true se il tipo *Ty* è un tipo integrale, a virgola mobile tipo, un tipo di enumerazione, un tipo di puntatore o un puntatore al tipo di membro, o un `cv-qualified` forma di uno di essi, in caso contrario, contiene false.
 
 ## <a name="example"></a>Esempio
 

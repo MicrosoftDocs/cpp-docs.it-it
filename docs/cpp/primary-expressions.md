@@ -1,5 +1,5 @@
 ---
-title: Espressioni primarie | Documenti Microsoft
+title: Espressioni primarie | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,29 +18,31 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3c419bf65a02d13359335bc6cb527fc189d596d6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4356e15d1b74508b7fc2606b45b5fb2bc9a435eb
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38966944"
 ---
 # <a name="primary-expressions"></a>Espressioni primarie
 Le espressioni primarie sono i blocchi predefiniti di espressioni più complesse. Sono valori letterali, nomi e nomi qualificati dall'operatore di risoluzione dell'ambito (`::`).  Un'espressione primaria può avere uno dei seguenti formati:  
   
 ```  
   
-      literal  
-      this  
-:: namename( expression )  
+literal  
+this
+name  
+::name ( expression )  
 ```  
   
- Oggetto *letterale* è un'espressione primaria costante. Il tipo di tale valore letterale dipende dal formato della specifica. Vedere [valori letterali](../cpp/numeric-boolean-and-pointer-literals-cpp.md) per informazioni complete su come specificare i valori letterali.  
+ Oggetto *letterale* è un'espressione primaria costante. Il tipo di tale valore letterale dipende dal formato della specifica. Visualizzare [valori letterali](../cpp/numeric-boolean-and-pointer-literals-cpp.md) per informazioni complete su come specificare i valori letterali.  
   
- Il **questo** (parola chiave) è un puntatore a un oggetto della classe. È disponibile all'interno delle funzioni membro non statiche e fa riferimento all'istanza della classe per cui è stata richiamata la funzione. Il **questo** parola chiave non può essere utilizzata all'esterno del corpo di una funzione membro di classe.  
+ Il **ciò** (parola chiave) è un puntatore a un oggetto classe. È disponibile all'interno delle funzioni membro non statiche e fa riferimento all'istanza della classe per cui è stata richiamata la funzione. Il **ciò** parola chiave non può essere utilizzata all'esterno del corpo di una funzione membro di classe.  
   
- Il tipo del **questo** puntatore è `type`  **\*const** (dove `type` è il nome della classe) all'interno di funzioni non modifica il **questo** puntatore. Nell'esempio seguente viene membro dichiarazioni di funzione e i tipi di **questo**:  
+ Il tipo del **ciò** puntatore si trova `type`  **\*const** (in cui `type` è il nome della classe) all'interno di funzioni di modifica non specificamente il **questo** puntatore. L'esempio seguente mostra membro dichiarazioni di funzione e i tipi di **ciò**:  
   
-```  
+```cpp 
 // expre_Primary_Expressions.cpp  
 // compile with: /LD  
 class Example  
@@ -52,17 +54,15 @@ public:
 };  
 ```  
   
- Vedere [l'indicatore di misura](this-pointer.md) per ulteriori informazioni sulla modifica del tipo del **questo** puntatore.  
+ Visualizzare [questo puntatore](this-pointer.md) per altre informazioni sulla modifica del tipo del **ciò** puntatore.  
   
- L'operatore di risoluzione dell'ambito (`::`) seguito da un nome costituisce un'espressione primaria.  Tali nomi devono essere nomi in ambito globale e non nomi di membri.  Il tipo di questa espressione è determinato dalla dichiarazione del nome. È un l-value, ovvero può essere visualizzato a sinistra di un'espressione dell'operatore di assegnazione, se il nome dichiarante è un l-value. L'operatore di risoluzione dell'ambito consente di fare riferimento a un nome globale, anche se il nome è nascosto nell'ambito corrente. Vedere [ambito](../cpp/scope-visual-cpp.md) per un esempio di come utilizzare l'operatore di risoluzione dell'ambito.  
+ L'operatore di risoluzione dell'ambito (`::`) seguito da un nome costituisce un'espressione primaria.  Tali nomi devono essere nomi in ambito globale e non nomi di membri.  Il tipo di questa espressione è determinato dalla dichiarazione del nome. È un l-value, ovvero può essere visualizzato a sinistra di un'espressione dell'operatore di assegnazione, se il nome dichiarante è un l-value. L'operatore di risoluzione dell'ambito consente di fare riferimento a un nome globale, anche se il nome è nascosto nell'ambito corrente. Visualizzare [ambito](../cpp/scope-visual-cpp.md) per un esempio di come usare l'operatore di risoluzione dell'ambito.  
   
  Un'espressione racchiusa tra parentesi è un'espressione primaria il cui tipo e il cui valore sono identici a quelli dell'espressione non racchiusa tra parentesi. Si tratta di un l-value se l'espressione non racchiusa tra parentesi è un l-value.  
   
- Nel contesto dell'indicata in precedenza, la sintassi di espressione primaria *nome* corrisponde a qualsiasi nella sintassi descritta per [nomi](http://msdn.microsoft.com/en-us/1c49cc24-08d5-4884-b170-ba8ed42d80db), anche quando tramite l'operatore di risoluzione dell'ambito prima del nome, i tipi di nomi che può verificarsi solo in una classe non sono consentiti.  Sono inclusi i nomi delle funzioni di conversione definite dall'utente e i nomi dei distruttori.  
-  
  Gli esempi di espressioni primarie includono:  
   
-```  
+```cpp 
 100 // literal  
 'c' // literal  
 this // in a member function, a pointer to the class instance  
@@ -72,9 +72,9 @@ this // in a member function, a pointer to the class instance
 ( i + 1 ) // a parenthesized expression  
 ```  
   
- Gli esempi seguenti vengono tutti considerati *nomi*e pertanto espressioni primarie, in diversi modi:  
+ Gli esempi seguenti sono tutti considerati *nomi*e pertanto espressioni primarie, in diversi modi:  
   
-```  
+```cpp 
 MyClass // a identifier  
 MyClass::f // a qualified name  
 operator = // an operator function name  

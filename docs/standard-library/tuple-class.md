@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d5d265938eb024a41d8b90f3b9891c35ec1ec251
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3735b6cd8b0397ae1e1092fdb37ba094248ab507
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33858799"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38963926"
 ---
 # <a name="tuple-class"></a>Classe tuple
 
@@ -48,17 +48,18 @@ public:
    template <class U1, class U2>
       tuple& operator=(const pair<U1, U2>&); // N == 2
    };
+```
 
-### Parameters
+### <a name="parameters"></a>Parametri
 
-`TN`
- The type of the Nth tuple element.
+*TN*  
+ Tipo dell'ennesimo elemento tupla.
 
-## Remarks
+## <a name="remarks"></a>Note
 
-The template class describes an object that stores N objects of types `T1`, `T2`, ..., `TN`, respectively, where where `0 <= N <= Nmax`. The extent of a tuple instance `tuple<T1, T2, ..., TN>` is the number `N` of its template arguments. The index of the template argument `Ti` and of the corresponding stored value of that type is `i - 1`. Thus, while we number the types from 1 to N in this documentation, the corresponding index values range from 0 to N - 1.
+La classe modello descrive un oggetto che archivia gli oggetti di N di tipi `T1`, `T2`,..., `TN`, rispettivamente, in cui in cui `0 <= N <= Nmax`. L'ambito di un'istanza di tupla `tuple<T1, T2, ..., TN>` è il numero `N` dei relativi argomenti di modello. L'indice dell'argomento del modello `Ti` e del valore archiviato corrispondente di quel tipo è `i - 1`. Di conseguenza, mentre è numerare i tipi da 1 a N in questa documentazione, l'indice corrispondente i valori compresi tra 0 e N - 1.
 
-## Example
+## <a name="example"></a>Esempio
 
 ```cpp
 // tuple.cpp
@@ -153,13 +154,15 @@ template <class U1, class U2>
 
 ### <a name="parameters"></a>Parametri
 
-`UN` Il tipo dell'ennesimo elemento tupla copiato.
+*ANNULLA LA*  
+ Il tipo dell'ennesimo elemento tupla copiato.
 
-`right` Tupla da cui copiare.
+*right*  
+ Tupla da cui eseguire la copia.
 
 ### <a name="remarks"></a>Note
 
-I primi due operatori membro assegnano gli elementi di `right` ai corrispondenti elementi di `*this`. Il terzo operatore membro assegna `right.first` all'elemento in corrispondenza dell'indice 0 di `*this` e `right.second` all'elemento in corrispondenza dell'indice 1. Tutti e tre gli operatori membro restituiscono `*this`.
+I primi due operatori membro assegnano gli elementi della *a destra* agli elementi corrispondenti di `*this`. Il terzo operatore membro assegna `right.first` all'elemento in corrispondenza dell'indice 0 di `*this` e `right.second` all'elemento in corrispondenza dell'indice 1. Tutti e tre gli operatori membro restituiscono `*this`.
 
 Gli operatori membro rimanenti sono simili ai precedenti, ma con [Dichiaratore di riferimento: &&](../cpp/rvalue-reference-declarator-amp-amp.md).
 
@@ -226,8 +229,8 @@ template <class... Types>
 
 |Parametro|Descrizione|
 |---------------|-----------------|
-|`left`|Tupla i cui elementi andranno scambiati con quelli della tupla `right`.|
-|`right`|Tupla i cui elementi andranno scambiati con quelli della tupla `left`.|
+|*left*|Una tupla cui elementi devono essere scambiati con quelli della tupla *a destra*.|
+|*right*|Una tupla cui elementi devono essere scambiati con quelli della tupla *sinistro*.|
 
 ### <a name="remarks"></a>Note
 
@@ -260,9 +263,11 @@ template <class U1, class U2>
 
 ### <a name="parameters"></a>Parametri
 
-`UN` Il tipo dell'ennesimo elemento tupla copiato.
+*ANNULLA LA*  
+ Il tipo dell'ennesimo elemento tupla copiato.
 
-`right` Tupla da cui copiare.
+*right*  
+ Tupla da cui eseguire la copia.
 
 ### <a name="remarks"></a>Note
 
@@ -270,7 +275,7 @@ Il primo costruttore crea un oggetto i cui elementi sono costruiti per impostazi
 
 Il secondo costruttore crea un oggetto i cui elementi sono una copia costruita dagli argomenti `P1`, `P2`, ..., `PN` in cui ciascun `Pi` inizializza l'elemento nell'indice `i - 1`.
 
-Il terzo e il quarto costruttore creano un oggetto i cui elementi sono una copia costruita dall'elemento corrispondente di `right`.
+Il terzo e il quarto costruttore costruiscono un oggetto cui elementi sono una copia costruita dall'elemento corrispondente di *a destra*.
 
 Il quinto costruttore crea un oggetto il cui elemento nell'indice 0 è la copia costruita da `right.first` e il cui elemento nell'indice 1 è la copia costruita da `right.second`.
 

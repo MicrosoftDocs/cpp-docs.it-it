@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d59c994cba47cf609c13a1d35fbc7fed60fc531f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8bff57549307eeaa9245c0bb4083b206471fe726
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33844536"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962533"
 ---
 # <a name="integralconstant-class-boolconstant-class"></a>Classe integral_constant, classe bool_constant
 
@@ -54,7 +54,7 @@ struct integral_constant {
 
 La classe modello `integral_constant`, quando è specializzata con un tipo integrale *T* e un valore *v* di quel tipo, rappresenta un oggetto che contiene una costante del tipo integrale con il valore specificato. Il membro denominato `type` è un alias per il tipo di specializzazione del modello generato e il membro `value` contiene il valore *v* usato per creare la specializzazione.
 
-La classe modello `bool_constant` è una specializzazione parziale esplicita di `integral_constant` che usa `bool` come argomento *T*.
+Il `bool_constant` classe modello è una specializzazione parziale esplicita di `integral_constant` che usa **bool** come il *T* argomento.
 
 ## <a name="example"></a>Esempio
 

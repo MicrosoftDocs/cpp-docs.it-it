@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6d51397080267dd50f012b274e95ac4c9aa4fa64
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 57e01cbfd7cb291ff7d2651e3244b74ae96adbea
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33841876"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962400"
 ---
 # <a name="conditional-class"></a>Classe conditional
 
@@ -40,15 +40,15 @@ using conditional_t = typename conditional<_Test, _T1, _T2>::type;
 
 ### <a name="parameters"></a>Parametri
 
-`B` Il valore che determina il tipo selezionato.
+*B* il valore che determina il tipo selezionato.
 
-`T1` Il risultato di tipo quando B è true.
+*T1* il risultato di tipo quando B è true.
 
-`T2` Il risultato di tipo quando B è false.
+*T2* il risultato di tipo quando B è false.
 
 ## <a name="remarks"></a>Note
 
-L'oggetto typedef `conditional<B, T1, T2>::type` del membro del modello restituisce `T1` quando `B` restituisce `true`e restituisce `T2` quando `B` restituisce `false`.
+Il typedef del membro di modello `conditional<B, T1, T2>::type` restituisca *T1* quando *B* restituisce **true**e viene restituito *T2* quando  *B* restituisca **false**.
 
 ## <a name="requirements"></a>Requisiti
 

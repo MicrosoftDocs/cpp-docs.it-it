@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d87eac720b205560993a7d6995be8a8fe6ad6194
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 979e726e1374ac37844472d9e2f9ae8ddd5ddf4d
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33843522"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38965802"
 ---
 # <a name="ismoveconstructible-class"></a>Classe is_move_constructible
 
@@ -36,11 +36,11 @@ struct is_move_constructible;
 
 ### <a name="parameters"></a>Parametri
 
-T il tipo da valutare
+*T* il tipo da valutare
 
 ## <a name="remarks"></a>Note
 
-Un predicato di tipo che restituisce true se il tipo `T` può essere costruito con un'operazione di spostamento. Questo predicato è equivalente a `is_constructible<T, T&&>`.
+Un predicato di tipo che restituisce true se il tipo *T* può essere creato usando un'operazione di spostamento. Questo predicato è equivalente a `is_constructible<T, T&&>`.
 
 ## <a name="requirements"></a>Requisiti
 

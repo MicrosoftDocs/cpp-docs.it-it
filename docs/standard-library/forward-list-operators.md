@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::operatoroperator&gt=; (forward_list)
 - std::operatoroperator&lt; (forward_list)
 - std::operatoroperator&lt;= (forward_list)
-ms.openlocfilehash: 7966d428dd200f0cbb280c679c4072e1ad75757a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f4dd02275364b611ef5f9011041840a10709aa3f
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33846750"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38965630"
 ---
 # <a name="ltforwardlistgt-operators"></a>Operatori &lt;forward_list&gt;
 
@@ -48,8 +48,8 @@ bool operator==(
 
 |Parametro|Descrizione|
 |---------------|-----------------|
-|`left`|Oggetto di tipo `forward_list`.|
-|`right`|Oggetto di tipo `forward_list`.|
+|*left*|Oggetto di tipo `forward_list`.|
+|*right*|Oggetto di tipo `forward_list`.|
 
 ### <a name="remarks"></a>Note
 
@@ -69,8 +69,8 @@ bool operator!=(
 
 |Parametro|Descrizione|
 |---------------|-----------------|
-|`left`|Oggetto di tipo `forward_list`.|
-|`right`|Oggetto di tipo `forward_list`.|
+|*left*|Oggetto di tipo `forward_list`.|
+|*right*|Oggetto di tipo `forward_list`.|
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -94,12 +94,12 @@ bool operator<(
 
 |Parametro|Descrizione|
 |---------------|-----------------|
-|`left`|Oggetto di tipo `forward_list`.|
-|`right`|Oggetto di tipo `forward_list`.|
+|*left*|Oggetto di tipo `forward_list`.|
+|*right*|Oggetto di tipo `forward_list`.|
 
 ### <a name="return-value"></a>Valore restituito
 
-`true` se l'elenco a sinistra dell'operatore è minore ma non uguale all'elenco a destra; in caso contrario, `false`.
+**true** se l'elenco a sinistra dell'operatore è minore ma non uguale all'elenco a destra; in caso contrario, **false**.
 
 ### <a name="remarks"></a>Note
 
@@ -119,12 +119,12 @@ bool operator<=(
 
 |Parametro|Descrizione|
 |---------------|-----------------|
-|`left`|Oggetto di tipo `forward_list`.|
-|`right`|Oggetto di tipo `forward_list`.|
+|*left*|Oggetto di tipo `forward_list`.|
+|*right*|Oggetto di tipo `forward_list`.|
 
 ### <a name="return-value"></a>Valore restituito
 
-`true` se l'elenco a sinistra dell'operatore è minore o uguale all'elenco a destra dell'operatore; in caso contrario, `false`.
+**true** se l'elenco a sinistra dell'operatore è minore o uguale all'elenco a destra; in caso contrario, **false**.
 
 ### <a name="remarks"></a>Note
 
@@ -144,12 +144,12 @@ bool operator>(
 
 |Parametro|Descrizione|
 |---------------|-----------------|
-|`left`|Oggetto di tipo `forward_list`.|
-|`right`|Oggetto di tipo `forward_list`.|
+|*left*|Oggetto di tipo `forward_list`.|
+|*right*|Oggetto di tipo `forward_list`.|
 
 ### <a name="return-value"></a>Valore restituito
 
-`true` se l'elenco a sinistra dell'operatore è maggiore dell'elenco a destra; in caso contrario, `false`.
+**true** se l'elenco a sinistra dell'operatore è maggiore dell'elenco a destra; in caso contrario, **false**.
 
 ### <a name="remarks"></a>Note
 
@@ -169,12 +169,12 @@ bool operator>=(
 
 |Parametro|Descrizione|
 |---------------|-----------------|
-|`left`|Oggetto di tipo `forward_list`.|
-|`right`|Oggetto di tipo `forward_list`.|
+|*left*|Oggetto di tipo `forward_list`.|
+|*right*|Oggetto di tipo `forward_list`.|
 
 ### <a name="return-value"></a>Valore restituito
 
-`true` se l'elenco di inoltro a sinistra dell'operatore è maggiore o uguale all'elenco di inoltro a destra; in caso contrario, `false`.
+**true** se l'elenco di inoltro a sinistra dell'operatore è maggiore o uguale all'elenco di inoltro a destra dell'operatore; in caso contrario **false**.
 
 ### <a name="remarks"></a>Note
 

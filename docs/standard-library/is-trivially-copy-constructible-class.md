@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 01c95007f1db1bcaf549398fa8865a9e51fe23d1
-ms.sourcegitcommit: 96cdc2da0d8c3783cc2ce03bd280a5430e1ac01d
+ms.openlocfilehash: 410566c623595cc941ab6e6ad21dd95bd70fe516
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "33954102"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38963667"
 ---
 # <a name="istriviallycopyconstructible-class"></a>Classe is_trivially_copy_constructible
 
@@ -36,13 +36,13 @@ struct is_trivially_copy_constructible;
 
 ### <a name="parameters"></a>Parametri
 
-`T` Il tipo di query.
+*T* il tipo di query.
 
 ## <a name="remarks"></a>Note
 
-Un'istanza del predicato di tipo contiene true se il tipo `T` è una classe che ha un costruttore di copia semplice; in caso contrario, contiene false.
+Un'istanza del tipo predicato contiene true se il tipo *T* è una classe che ha un costruttore di copia semplice, in caso contrario, contiene false.
 
-Un costruttore di copia per una classe `T` è semplice se è dichiarato in modo implicito, la classe `T` non ha funzioni o basi virtuali, tutte le basi dirette della classe `T` hanno costruttori di copia semplice, le classi di tutti i membri di dati non statici di tipo classe hanno costruttori di copia semplice e le classi di tutti i membri di dati non statici di tipo matrice di classe hanno costruttori di copia semplice.
+Un costruttore di copia per una classe *T* è semplice se si è dichiarato in modo implicito, la classe *T* non dispone di funzioni virtuali o basi virtuali, tutte le basi dirette della classe *T* hanno i costruttori di copia semplice, le classi di tutti i membri dati non statici di tipo classe hanno costruttori di copia semplici e le classi di tutti i membri dati non statici di tipo matrice della classe hanno costruttori di copia semplice.
 
 ## <a name="requirements"></a>Requisiti
 

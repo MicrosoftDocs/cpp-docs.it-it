@@ -24,12 +24,12 @@ helpviewer_keywords:
 - std::operator&lt; (string)
 - std::operator&lt;&lt; (string)
 - std::operator&lt;= (string), std::operator== (string)
-ms.openlocfilehash: b0ca7da732786c2f0ff6087052b5867150702a5e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 728a0f643a77b47bf857d409517407bec3a1b8b4
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33862484"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38966626"
 ---
 # <a name="ltstringgt-operators"></a>Operatori &lt;string&gt;
 
@@ -107,9 +107,9 @@ basic_string<CharType, Traits, Allocator>&& operator+(
 
 ### <a name="parameters"></a>Parametri
 
-`left` Una stringa di tipo C o un oggetto di tipo `basic_string` da concatenare.
+*a sinistra* una stringa di tipo C o un oggetto di tipo `basic_string` da concatenare.
 
-`right` Una stringa di tipo C o un oggetto di tipo `basic_string` da concatenare.
+*a destra* una stringa di tipo C o un oggetto di tipo `basic_string` da concatenare.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -194,9 +194,9 @@ bool operator!=(
 
 ### <a name="parameters"></a>Parametri
 
-`left` Una stringa di tipo C o un oggetto di tipo `basic_string` da confrontare.
+*a sinistra* una stringa di tipo C o un oggetto di tipo `basic_string` da confrontare.
 
-`right` Una stringa di tipo C o un oggetto di tipo `basic_string` da confrontare.
+*a destra* una stringa di tipo C o un oggetto di tipo `basic_string` da confrontare.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -283,9 +283,9 @@ bool operator==(
 
 ### <a name="parameters"></a>Parametri
 
-`left` Una stringa di tipo C o un oggetto di tipo `basic_string` da confrontare.
+*a sinistra* una stringa di tipo C o un oggetto di tipo `basic_string` da confrontare.
 
-`right` Una stringa di tipo C o un oggetto di tipo `basic_string` da confrontare.
+*a destra* una stringa di tipo C o un oggetto di tipo `basic_string` da confrontare.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -372,9 +372,9 @@ bool operator<(
 
 ### <a name="parameters"></a>Parametri
 
-`left` Una stringa di tipo C o un oggetto di tipo `basic_string` da confrontare.
+*a sinistra* una stringa di tipo C o un oggetto di tipo `basic_string` da confrontare.
 
-`right` Una stringa di tipo C o un oggetto di tipo `basic_string` da confrontare.
+*a destra* una stringa di tipo C o un oggetto di tipo `basic_string` da confrontare.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -466,9 +466,9 @@ bool operator<=(
 
 ### <a name="parameters"></a>Parametri
 
-`left` Una stringa di tipo C o un oggetto di tipo `basic_string` da confrontare.
+*a sinistra* una stringa di tipo C o un oggetto di tipo `basic_string` da confrontare.
 
-`right` Una stringa di tipo C o un oggetto di tipo `basic_string` da confrontare.
+*a destra* una stringa di tipo C o un oggetto di tipo `basic_string` da confrontare.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -557,13 +557,13 @@ basic_ostream<CharType, Traits>& operator<<(
 
 ### <a name="parameters"></a>Parametri
 
-_Ostr da scrivere nel flusso di output.
+*_Ostr* il flusso di output su cui scritto.
 
-`str` La stringa deve essere immesso nel flusso di output.
+*str* la stringa deve essere immesso nel flusso di output.
 
 ### <a name="return-value"></a>Valore restituito
 
-Scrive il valore della stringa specificata nel flusso di output `_Ostr`.
+Scrive il valore della stringa specificata nel flusso di output *_Ostr*.
 
 ### <a name="remarks"></a>Note
 
@@ -592,9 +592,9 @@ bool operator>(
 
 ### <a name="parameters"></a>Parametri
 
-`left` Una stringa di tipo C o un oggetto di tipo `basic_string` da confrontare.
+*a sinistra* una stringa di tipo C o un oggetto di tipo `basic_string` da confrontare.
 
-`right` Una stringa di tipo C o un oggetto di tipo `basic_string` da confrontare.
+*a destra* una stringa di tipo C o un oggetto di tipo `basic_string` da confrontare.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -693,9 +693,9 @@ bool operator>=(
 
 ### <a name="parameters"></a>Parametri
 
-`left` Una stringa di tipo C o un oggetto di tipo `basic_string` da confrontare.
+*a sinistra* una stringa di tipo C o un oggetto di tipo `basic_string` da confrontare.
 
-`right` Una stringa di tipo C o un oggetto di tipo `basic_string` da confrontare.
+*a destra* una stringa di tipo C o un oggetto di tipo `basic_string` da confrontare.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -784,19 +784,19 @@ basic_istream<CharType, Traits>& operator>>(
 
 ### <a name="parameters"></a>Parametri
 
-`_Istr` Il flusso di input utilizzato per estrarre la sequenza
+*_Istr* il flusso di input utilizzato per estrarre la sequenza
 
-`right` La stringa da cui vengono estratti dal flusso di input.
+*a destra* la stringa da cui vengono estratti dal flusso di input.
 
 ### <a name="return-value"></a>Valore restituito
 
-Legge il valore della stringa specificata da `_Istr` e restituisce i dati in `right`.
+Legge il valore della stringa specificata da *_Istr* e lo restituisce in *a destra*.
 
 ### <a name="remarks"></a>Note
 
 L'operatore ignora gli spazi iniziali a meno che il flag `skipws` non sia impostato. Legge tutti i caratteri successivi fino a quando incontra uno spazio vuoto o arriva alla fine del file.
 
-La funzione modello esegue l'overload di **operator>>** per sostituire la sequenza controllata da `right` con una sequenza di elementi estratti dal flusso `_Istr`. L'estrazione termina:
+Gli overload della funzione modello **operatore >>** per sostituire la sequenza controllata da *destro* con una sequenza di elementi estratti dal flusso *_Istr*. L'estrazione termina:
 
 - Alla fine del file.
 
@@ -806,7 +806,7 @@ Dopo che la funzione ha estratto elementi `_Istr`. [max_size](../standard-librar
 
 - Dopo che la funzione ha estratto un elemento *ch* per cui [use_facet](../standard-library/basic-filebuf-class.md#open)< **ctype**\< **CharType**> >( `getloc`). **is**( **ctype**\< **CharType**>:: **space**, *ch*) è true, nel qual caso il carattere viene reinserito.
 
-Se non estrae alcun elemento, la funzione chiama [setstate](../standard-library/basic-ios-class.md#setstate)( `ios_base::failbit`). In tutti i casi, chiama **istr**. **width**(0) e restituisce \* **this**.
+Se la funzione non estrae alcun elemento, chiama il metodo [setstate](../standard-library/basic-ios-class.md#setstate)(`ios_base::failbit`). In tutti i casi, chiama **istr**. **width**(0) e restituisce \* **this**.
 
 ### <a name="example"></a>Esempio
 

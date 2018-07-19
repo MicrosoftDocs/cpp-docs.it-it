@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 15c7d7babe1112bbfcc80485d54d5a4a005b4dfc
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3ce85d846d142e2c15a0fba6d2d3fb76c924b97f
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33848635"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38966602"
 ---
 # <a name="fpos-class"></a>Classe fpos
 
@@ -34,7 +34,7 @@ La classe modello descrive un oggetto che può archiviare tutte le informazioni 
 
 - Un offset di byte, di tipo [streamoff](../standard-library/ios-typedefs.md#streamoff).
 
-- Uno stato di conversione, per l'uso da parte di un oggetto della classe basic_filebuf, di tipo **St**, in genere `mbstate_t`.
+- Uno stato di conversione, per l'uso da un oggetto della classe basic_filebuf, di tipo `St`, in genere `mbstate_t`.
 
 Può anche archiviare una posizione di file arbitraria per l'uso da parte di un oggetto della classe [basic_filebuf](../standard-library/basic-filebuf-class.md), di tipo `fpos_t`. Per un ambiente con dimensioni del file limitate, tuttavia, a volte è possibile usare indifferentemente `streamoff` e `fpos_t`. Per un ambiente senza flussi con codifica dipendente dallo stato, è effettivamente possibile che `mbstate_t` non sia usato. Di conseguenza, il numero di oggetti membro archiviati può variare.
 
@@ -47,7 +47,7 @@ class fpos
 
 ### <a name="parameters"></a>Parametri
 
-*Statetype* le informazioni sullo stato.
+*Statetype* informazioni sullo stato.
 
 ### <a name="constructors"></a>Costruttori
 
@@ -92,17 +92,17 @@ fpos(Statetype _State, fpos_t _Filepos);
 
 ### <a name="parameters"></a>Parametri
 
-`_Off` Offset nel flusso.
+*Off* l'offset nel flusso.
 
-`_State` Lo stato iniziale del `fpos` oggetto.
+*Stato* lo stato iniziale del `fpos` oggetto.
 
 *_Filepos* l'offset nel flusso.
 
 ### <a name="remarks"></a>Note
 
-Il primo costruttore archivia l'offset `_Off`, relativo all'inizio del file e nello stato di conversione iniziale (se importante). Se `_Off` è -1, l'oggetto risultante rappresenta una posizione nel flusso non valida.
+Il primo costruttore archivia l'offset *Off*, relativo all'inizio del file e nello stato di conversione iniziale (se importante). Se *Off* è -1, l'oggetto risultante rappresenta una posizione di flusso non è valido.
 
-Il secondo costruttore archivia un offset pari a zero e l'oggetto `_State`.
+Il secondo costruttore archivia un offset pari a zero e l'oggetto *stato*.
 
 ## <a name="op_neq"></a>  fpos::operator!=
 
@@ -114,7 +114,7 @@ bool operator!=(const fpos<Statetype>& right) const;
 
 ### <a name="parameters"></a>Parametri
 
-`right` L'indicatore di posizione del file con cui confrontare.
+*a destra* l'indicatore di posizione del file con cui confrontare.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -186,7 +186,7 @@ fpos<Statetype> operator+(streamoff _Off) const;
 
 ### <a name="parameters"></a>Parametri
 
-`_Off` Offset da cui si desidera incrementare l'indicatore di posizione del file.
+*Off* l'offset dal quale si vuole incrementare l'indicatore di posizione del file.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -210,7 +210,7 @@ fpos<Statetype>& operator+=(streamoff _Off);
 
 ### <a name="parameters"></a>Parametri
 
-`_Off` Offset da cui si desidera incrementare l'indicatore di posizione del file.
+*Off* l'offset dal quale si vuole incrementare l'indicatore di posizione del file.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -218,7 +218,7 @@ Posizione nel file.
 
 ### <a name="remarks"></a>Note
 
-La funzione membro aggiunge `_Off` all'oggetto membro offset archiviato e quindi restituisce **\*this**. Per il posizionamento all'interno di un file, il risultato in genere è valido solo per i flussi binari che non dispongono di una codifica dipendente dallo stato.
+La funzione membro aggiunge *Off* all'oggetto membro offset archiviato e quindi restituisce  **\*ciò**. Per il posizionamento all'interno di un file, il risultato in genere è valido solo per i flussi binari che non dispongono di una codifica dipendente dallo stato.
 
 ### <a name="example"></a>Esempio
 
@@ -236,9 +236,9 @@ fpos<Statetype> operator-(streamoff _Off) const;
 
 ### <a name="parameters"></a>Parametri
 
-`right` Posizione del file.
+*a destra* posizione del File.
 
-`_Off` Offset del flusso.
+*Off* offset Stream.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -258,7 +258,7 @@ fpos<Statetype>& operator-=(streamoff _Off);
 
 ### <a name="parameters"></a>Parametri
 
-`_Off` Offset del flusso.
+*Off* offset Stream.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -282,7 +282,7 @@ bool operator==(const fpos<Statetype>& right) const;
 
 ### <a name="parameters"></a>Parametri
 
-`right` L'indicatore di posizione del file con cui confrontare.
+*a destra* l'indicatore di posizione del file con cui confrontare.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -355,7 +355,7 @@ void state(Statetype _State);
 
 ### <a name="parameters"></a>Parametri
 
-`_State` Il nuovo stato di conversione.
+*Stato* nuovo stato di conversione.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -363,7 +363,7 @@ Stato di conversione.
 
 ### <a name="remarks"></a>Note
 
-La prima funzione membro restituisce il valore archiviato nell'oggetto membro **St**. La seconda funzione membro archivia `_State` nell'oggetto membro **St**.
+La prima funzione membro restituisce il valore archiviato nel `St` oggetto membro. La seconda funzione membro Archivia *state* nel `St` oggetto membro.
 
 ### <a name="example"></a>Esempio
 

@@ -16,16 +16,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2ddde025fa633ccc1b9561acf595de186548ba3a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e402f103a29dd4c4af49fa1c34b9cae71fc6e9af
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33857168"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964847"
 ---
 # <a name="messagesbase-class"></a>Classe messages_base
 
-Questa classe base descrive un tipo di `int` per il catalogo dei messaggi.
+La classe base descrive un **int** tipo per il catalogo dei messaggi.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -38,7 +38,7 @@ struct messages_base : locale::facet {
 
 ## <a name="remarks"></a>Note
 
-Il tipo di catalogo è un sinonimo del tipo `int` che descrive i possibili valori restituiti da messages:: [do_open](../standard-library/messages-class.md#do_open).
+Il catalogo di tipo è sinonimo di tipo **int** che descrive i possibili valori restituiti da messages:: [do_open](../standard-library/messages-class.md#do_open).
 
 ## <a name="requirements"></a>Requisiti
 

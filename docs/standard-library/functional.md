@@ -19,12 +19,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e1cf7d03b9c34f6be15fc947206e8d14ec04c991
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6528cb1f3aa4da429cd27d1123536ab694f60ac6
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33848011"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961236"
 ---
 # <a name="ltfunctionalgt"></a>&lt;functional&gt;
 
@@ -40,7 +40,7 @@ Definisce funzioni della libreria standard C++ che consentono di costruire *ogge
 
 Gli algoritmi richiedono due tipi di oggetti funzione, ovvero unario e binario. Gli oggetti funzione di tipo unario richiedono un argomento, mentre gli oggetti funzione di tipo binario richiedono due argomenti. Un oggetto funzione e i puntatori a funzione possono essere passati come predicato a un algoritmo, ma gli oggetti funzione sono anche adattabili e aumentano l'ambito, la flessibilità e l'efficienza della libreria standard C++. Se, ad esempio, un valore deve essere associato a una funzione prima del passaggio a un algoritmo, non è possibile ad esempio utilizzare un puntatore a funzione. Gli adattatori di funzione convertono i puntatori a funzione in oggetti funzione adattabili che possono essere associati a un valore. L'intestazione \<functional> contiene anche gli adattatori di funzione membro che consentono a queste ultime di essere chiamate come oggetti funzione adattabili. Le funzioni sono adattabili se le dichiarazioni di tipo corrispondenti sono annidate, ne specificano l'argomento e i tipi restituiti. Lo standard C++ richiede che l'adattabilità sia implementata con tutte le classi di oggetti standard che ereditano dalle classi base binary_function o unary_function. Gli oggetti funzione e i relativi adattatori consentono alla libreria standard C++ di aggiornare le applicazioni esistenti, oltre a facilitare l'integrazione di tale libreria nell'ambiente di programmazione C++.
 
-Visual C++ nell'implementazione dell'oggetto funzione in \<funzionale > include *funtori di operatori trasparenti*, quali sono le specializzazioni di standard di oggetti funzione e non richiedere parametri di modello, e eseguire l'inoltro perfetto degli argomenti di funzione e una restituzione perfetta del risultato. Questa funzionalità è parte della specifica dello standard C++ 14 in formato bozza. In queste specializzazioni del modello non è necessario specificare i tipi di argomento quando si richiamano i funtori di aritmetica, di confronto e degli operatori bit per bit. È possibile eseguire l'overload degli operatori di aritmetica, di confronto, logici o bit per bit per i tipi personalizzati o per le combinazioni eterogenee di tipi, quindi utilizzare i funtori di operatore trasparenti come argomenti della funzione. Ad esempio, se il tipo *MyType* implementa `operator<`, è possibile chiamare `sort(my_collection.begin(), my_collection.end(), less<>())` anziché specificare in modo esplicito il tipo `sort(my_collection.begin(), my_collection.end(), less<MyType>())`.
+L'implementazione di oggetti funzione in Visual C++ \<funzionale > include *funtori di operatori trasparenti*, quali sono le specializzazioni di standard di oggetti funzione e non accettano parametri modello, e eseguire l'inoltro perfetto degli argomenti di funzione e la restituzione perfetta del risultato. Questa funzionalità è parte della specifica dello standard C++ 14 in formato bozza. In queste specializzazioni del modello non è necessario specificare i tipi di argomento quando si richiamano i funtori di aritmetica, di confronto e degli operatori bit per bit. È possibile eseguire l'overload degli operatori di aritmetica, di confronto, logici o bit per bit per i tipi personalizzati o per le combinazioni eterogenee di tipi, quindi utilizzare i funtori di operatore trasparenti come argomenti della funzione. Ad esempio, se il tipo *MyType* implementa `operator<`, è possibile chiamare `sort(my_collection.begin(), my_collection.end(), less<>())` anziché specificare in modo esplicito il tipo `sort(my_collection.begin(), my_collection.end(), less<MyType>())`.
 
 ## <a name="c11c14-implementation"></a>Implementazione di C++11/C++14
 
@@ -100,10 +100,10 @@ A ogni wrapper di chiamata è associato un costruttore di spostamento e uno di c
 |[hash](../standard-library/hash-class.md)|Classe che calcola un codice hash per un valore.|
 |[is_bind_expression](../standard-library/is-bind-expression-class.md)|Classe che consente di verificare se un particolare tipo viene generato chiamando `bind`.|
 |[is_placeholder](../standard-library/is-placeholder-class.md)|Classe che consente di verificare se un particolare tipo è un segnaposto.|
-|[mem_fun_ref_t](../standard-library/mem-fun-ref-t-class.md)|Classe di adattatori che consente a una funzione membro **non_const** che non accetta argomenti di essere chiamata come oggetto funzione unaria se inizializzata con un argomento di riferimento.|
-|[mem_fun_t](../standard-library/mem-fun-t-class.md)|Classe di adattatori che consente a una funzione membro **non_const** che non accetta argomenti di essere chiamata come oggetto funzione unaria se inizializzata con un argomento di puntatore.|
-|[mem_fun1_ref_t](../standard-library/mem-fun1-ref-t-class.md)|Classe di adattatori che consente a una funzione membro **non_const** che accetta un singolo argomento di essere chiamata come oggetto funzione binaria se inizializzata con un argomento di riferimento.|
-|[mem_fun1_t](../standard-library/mem-fun1-t-class.md)|Classe di adattatori che consente a una funzione membro **non_const** che accetta un singolo argomento di essere chiamata come oggetto funzione binaria se inizializzata con un argomento di puntatore.|
+|[mem_fun_ref_t](../standard-library/mem-fun-ref-t-class.md)|Classe di adattatori che consente un `non_const` funzione membro che non accetta argomenti di essere chiamata come oggetto funzione unaria se inizializzata con un argomento di riferimento.|
+|[mem_fun_t](../standard-library/mem-fun-t-class.md)|Classe di adattatori che consente un `non_const` funzione membro che non accetta argomenti di essere chiamata come oggetto funzione unaria se inizializzata con un argomento di puntatore.|
+|[mem_fun1_ref_t](../standard-library/mem-fun1-ref-t-class.md)|Classe di adattatori che consente un `non_const` funzione membro che accetta un singolo argomento di essere chiamata come oggetto funzione binaria se inizializzata con un argomento di riferimento.|
+|[mem_fun1_t](../standard-library/mem-fun1-t-class.md)|Classe di adattatori che consente un `non_const` funzione membro che accetta un singolo argomento di essere chiamata come oggetto funzione binaria se inizializzata con un argomento di puntatore.|
 |[pointer_to_binary_function](../standard-library/pointer-to-binary-function-class.md)|Converte un puntatore a funzione binaria in una funzione binaria adattabile.|
 |[pointer_to_unary_function](../standard-library/pointer-to-unary-function-class.md)|Converte un puntatore a funzione unaria in una funzione unaria adattabile.|
 |[reference_wrapper](../standard-library/reference-wrapper-class.md)|Classe che incapsula un riferimento.|

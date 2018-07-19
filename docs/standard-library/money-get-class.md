@@ -26,12 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1e3059a4291d21e11304fdf571d2e12828df26fb
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7b6043da3945b36bd756714049b2bb6c91a32bd4
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33861701"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38966550"
 ---
 # <a name="moneyget-class"></a>Classe money_get
 
@@ -46,9 +46,9 @@ class money_get : public locale::facet;
 
 ### <a name="parameters"></a>Parametri
 
-`CharType` Il tipo utilizzato all'interno di un programma per codificare i caratteri delle impostazioni locali.
+*CharType* il tipo utilizzato all'interno di un programma per codificare i caratteri delle impostazioni locali.
 
-`InputIterator` Il tipo di iteratore da cui le funzioni get leggono il relativo input.
+*InputIterator* il tipo di iteratore da cui le funzioni get leggono il relativo input.
 
 ## <a name="remarks"></a>Note
 
@@ -91,7 +91,7 @@ typedef CharType char_type;
 
 ### <a name="remarks"></a>Note
 
-Il tipo è un sinonimo del parametro di modello **CharType**.
+Il tipo è un sinonimo del parametro di modello *CharType*.
 
 ## <a name="do_get"></a>  money_get::do_get
 
@@ -113,17 +113,17 @@ virtual iter_type do_get(iter_type first,
 
 ### <a name="parameters"></a>Parametri
 
-`first` Iteratore di input che punta l'inizio della sequenza da convertire.
+*primo* iteratore di Input che indica l'inizio della sequenza da convertire.
 
-`last` Iteratore di input che punta alla fine della sequenza da convertire.
+*ultimo* iteratore di Input che punta alla fine della sequenza da convertire.
 
-`Intl` Valore booleano che indica il tipo di simbolo di valuta previsto nella sequenza: **true** se internazionale, **false** se interne.
+*Intl* valore booleano che indica il tipo del simbolo di valuta previsto nella sequenza: **true** se internazionale, **false** se nazionale.
 
-`Iosbase` Un formato di flag che quando set indica che il simbolo di valuta è facoltativo. in caso contrario, è necessario.
+*Iosbase* flag di formato che, quando impostato indica che il simbolo di valuta è facoltativo; in caso contrario, è necessario.
 
-`State` Imposta gli elementi della maschera di bit appropriati per lo stato di flusso in base al fatto di operazioni ha avuto esito positivo o non.
+*Stato* imposta elementi della maschera di bit appropriati per lo stato del flusso in base al fatto che le operazioni positivo o negativo.
 
-`val` L'archiviazione la sequenza convertita una stringa.
+*Val* una stringa in cui archiviare la sequenza convertita.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -131,9 +131,9 @@ Iteratore di input che punta al primo elemento oltre il campo di input di tipo v
 
 ### <a name="remarks"></a>Note
 
-La prima funzione membro virtuale protetta cerca la corrispondenza con elementi sequenziali a partire dall'inizio nella sequenza [ `first`, `last`) fino a quando non viene riconosciuto un campo di input di tipo valuta completo e non vuoto. Se ha esito positivo, la funzione converte questo campo in una sequenza di una o più cifre decimali, preceduta in modo facoltativo da un segno meno ( `-`), per rappresentare l'importo e archivia il risultato nell'oggetto [string_type](#string_type) `val`. Restituisce un iteratore che designa il primo elemento successivo al campo di input di tipo valuta. In caso contrario, la funzione archivia una sequenza vuota in `val` e imposta `ios_base::failbit` in `State`. Restituisce un iteratore che designa il primo elemento successivo a qualsiasi prefisso di un campo di input di tipo valuta valido. In entrambi i casi, se il valore restituito è uguale a `last`, la funzione imposta `ios_base::eofbit` in `State`.
+La prima funzione membro virtuale protetta cerca la corrispondenza con elementi sequenziali a partire dall'inizio nella sequenza [ `first`, `last`) fino a quando non viene riconosciuto un campo di input di tipo valuta completo e non vuoto. Se ha esito positivo, la funzione converte questo campo in una sequenza di uno o più cifre decimali, preceduto facoltativamente da un segno meno ( `-`), per rappresentare l'importo e archivia il risultato nel [string_type](#string_type) oggetto *val*. Restituisce un iteratore che designa il primo elemento successivo al campo di input di tipo valuta. In caso contrario, la funzione archivia una sequenza vuota in *val* e imposta `ios_base::failbit` nelle *stato*. Restituisce un iteratore che designa il primo elemento successivo a qualsiasi prefisso di un campo di input di tipo valuta valido. In entrambi i casi, se il valore restituito è uguale a `last`, la funzione imposta `ios_base::eofbit` in `State`.
 
-La seconda funzione membro virtuale protetta si comporta come la prima, ad eccezione del fatto che, se ha esito positivo, converte la sequenza di cifre con segno facoltativo in un valore di tipo `long double` e archivia tale valore in `val`.
+La seconda funzione membro virtuale protetta si comporta come la prima, ad eccezione del fatto che se ha esito positivo Converte la sequenza di cifre con segno facoltativo su un valore di tipo **long double** e archivia tale valore in *val*.
 
 Il formato di un campo di input di tipo valuta è determinato dal valore [fac](../standard-library/locale-class.md#facet_class)**locale facet** restituito dalla chiamata effettiva [use_facet](../standard-library/locale-functions.md#use_facet) < [moneypunct](../standard-library/moneypunct-class.md)\< **CharType**, **intl**>>( **iosbase**. [getloc](../standard-library/ios-base-class.md#getloc)).
 
@@ -189,17 +189,17 @@ iter_type get(iter_type first,
 
 ### <a name="parameters"></a>Parametri
 
-`first` Iteratore di input che punta l'inizio della sequenza da convertire.
+*primo* iteratore di Input che indica l'inizio della sequenza da convertire.
 
-`last` Iteratore di input che punta alla fine della sequenza da convertire.
+*ultimo* iteratore di Input che punta alla fine della sequenza da convertire.
 
-`Intl` Valore booleano che indica il tipo di simbolo di valuta previsto nella sequenza: **true** se internazionale, **false** se interne.
+*Intl* valore booleano che indica il tipo del simbolo di valuta previsto nella sequenza: **true** se internazionale, **false** se nazionale.
 
-`Iosbase` Un formato di flag che quando set indica che il simbolo di valuta è facoltativo. in caso contrario, è necessario
+*Iosbase* flag di formato che, quando impostato indica che il simbolo di valuta è facoltativo; in caso contrario, è necessario
 
-`State` Imposta gli elementi della maschera di bit appropriati per lo stato di flusso in base al fatto di operazioni ha avuto esito positivo.
+*Stato* imposta elementi della maschera di bit appropriati per lo stato del flusso in base al fatto che le operazioni ha avuto esito positivo.
 
-`val` L'archiviazione la sequenza convertita una stringa.
+*Val* una stringa in cui archiviare la sequenza convertita.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -280,11 +280,11 @@ explicit money_get(size_t _Refs = 0);
 
 ### <a name="parameters"></a>Parametri
 
-`_Refs` Valore integer utilizzato per specificare il tipo di gestione della memoria per l'oggetto.
+*_Refs* valore integer utilizzato per specificare il tipo di gestione della memoria per l'oggetto.
 
 ### <a name="remarks"></a>Note
 
-I valori possibili per il parametro `_Refs` e i relativi significati sono:
+I valori possibili per il *_Refs* parametro e i relativi significati sono:
 
 - 0: la durata dell'oggetto è gestita dalle impostazioni locali che lo contengono.
 
@@ -294,7 +294,7 @@ I valori possibili per il parametro `_Refs` e i relativi significati sono:
 
 Non è possibile fornire esempi diretti, poiché il distruttore è protetto.
 
-Il costruttore inizializza il relativo oggetto di base con **internazionali::**[facet](../standard-library/locale-class.md#facet_class)(**_ * * * Refs*).
+Il costruttore inizializza l'oggetto di base con **delle impostazioni locali::/**[facet](../standard-library/locale-class.md#facet_class)(**_ * * * Refs*).
 
 ## <a name="string_type"></a>  money_get::string_type
 

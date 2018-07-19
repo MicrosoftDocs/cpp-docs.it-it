@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 177ba6e688f6d7ed2b4c76eb0ede95cc288b1d5d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 19bed4a455ea2b0b894ba842f349aa304e9f261d
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33857532"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964683"
 ---
 # <a name="istriviallycopyable-class"></a>Classe is_trivially_copyable
 
@@ -37,11 +37,11 @@ struct is_trivially_copyable;
 
 ### <a name="parameters"></a>Parametri
 
-`T` Il tipo di query.
+*T* il tipo di query.
 
 ## <a name="remarks"></a>Note
 
-Un'istanza del predicato di tipo contiene true se il tipo `T` è facilmente copiabile; in caso contrario, contiene false. I tipi facilmente copiabili non prevedono operazioni di copia o spostamento o distruttori complessi. In genere, un'operazione di copia è considerata semplice se può essere implementata come una copia bit per bit. I tipi incorporati e le matrici di tipi facilmente copiabili sono facilmente copiabili.
+Un'istanza del tipo predicato contiene true se il tipo *T* è un tipo facilmente copiabile in caso contrario, contiene false. I tipi facilmente copiabili non prevedono operazioni di copia o spostamento o distruttori complessi. In genere, un'operazione di copia è considerata semplice se può essere implementata come una copia bit per bit. I tipi incorporati e le matrici di tipi facilmente copiabili sono facilmente copiabili.
 
 ## <a name="requirements"></a>Requisiti
 

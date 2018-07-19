@@ -16,16 +16,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 882248ab4f9ed692aa36bac5873251867b2fff54
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a1695306ddc53a8150917eef8b27f5d3edce2bf3
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33856635"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961864"
 ---
 # <a name="ltstrstreamgt"></a>&lt;strstream&gt;
 
-Definisce diverse classi che supportano operazioni iostream su sequenze archiviate in una matrice allocata di oggetti `char`. Queste sequenze vengono facilmente convertite in e da stringhe C.
+Definisce diverse classi che supportano operazioni iostream su sequenze archiviate in una matrice allocata di **char** oggetto. Queste sequenze vengono facilmente convertite in e da stringhe C.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -39,13 +39,13 @@ Definisce diverse classi che supportano operazioni iostream su sequenze archivia
 Gli oggetti di tipo `strstream` funzionano con `char` *, che sono stringhe C. Usare [\<sstream>](../standard-library/sstream.md) per utilizzare oggetti di tipo [basic_string](../standard-library/basic-string-class.md).
 
 > [!NOTE]
-> Le classi in \<strstream > sono deprecati. Provare a usare le classi in \<sstream > invece.
+> Le classi in \<strstream > sono deprecati. È consigliabile usare le classi in \<sstream > in alternativa.
 
 ### <a name="classes"></a>Classi
 
 |Classe|Descrizione|
 |-|-|
-|[Classe strstreambuf](../standard-library/strstreambuf-class.md)|La classe descrive un buffer del flusso che controlla la trasmissione di elementi da e verso una sequenza di elementi archiviati in un oggetto matrice `char`.|
+|[Classe strstreambuf](../standard-library/strstreambuf-class.md)|La classe descrive un buffer del flusso che controlla la trasmissione di elementi da e verso una sequenza di elementi archiviati in un **char** oggetto matrice.|
 |[Classe istrstream](../standard-library/istrstream-class.md)|La classe descrive un oggetto che controlla l'estrazione di elementi e oggetti codificati da un buffer del flusso della classe [strstreambuf](../standard-library/strstreambuf-class.md).|
 |[Classe ostrstream](../standard-library/ostrstream-class.md)|La classe descrive un oggetto che controlla l'inserimento di elementi e oggetti codificati in un buffer del flusso della classe [strstreambuf](../standard-library/strstreambuf-class.md).|
 |[Classe strstream](../standard-library/strstream-class.md)|La classe descrive un oggetto che controlla l'inserimento e l'estrazione di elementi e oggetti codificati usando un buffer del flusso della classe [strstreambuf](../standard-library/strstreambuf-class.md).|

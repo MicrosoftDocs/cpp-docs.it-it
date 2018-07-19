@@ -12,12 +12,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5068c0bd540b1c44d2cdc484c2e511276bd12666
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 60ec526dd8874529b60558f7131c31f0bf4a2d3b
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33853060"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961113"
 ---
 # <a name="ltistreamgt-operators"></a>Operatori &lt;istream&gt;
 
@@ -64,13 +64,13 @@ basic_istream<Elem, Tr>& operator>>(
 
 ### <a name="parameters"></a>Parametri
 
-`Ch` Un carattere.
+*CH* un carattere.
 
-`Istr` Un flusso.
+*Istr* un flusso.
 
-`str` Una stringa.
+*str* una stringa.
 
-`val` Un tipo.
+*Val* un tipo.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -88,9 +88,9 @@ basic_istream<Elem, Tr>& operator>>(
     basic_istream<Elem, Tr>& Istr, Elem* str);
 ```
 
-estrae un massimo di *N* - 1 elementi e li archivia nella matrice a partire da _ *Str*. Se `Istr`. [width](../standard-library/ios-base-class.md#width) è maggiore di zero, *N* è `Istr`. **width**; in caso contrario, è possibile dichiarare la dimensione della matrice più grande di **Elem**. La funzione archivia sempre il valore **Elem()** dopo gli elementi estratti archiviati. L'estrazione termina prima della fine del file, in corrispondenza di un carattere con valore **Elem**(0) (non estratto) o di qualsiasi elemento (non estratto) che verrebbe rimosso da [ws](../standard-library/istream-functions.md#ws). Se non estrae alcun elemento, la funzione chiama `Istr`. [setstate](../standard-library/basic-ios-class.md#setstate)( **failbit**). In tutti i casi, chiama `Istr`. **width**(0) e restituisce `Istr`.
+estrae un massimo di *N* - 1 elementi e li archivia nella matrice a partire da _ *Str*. Se `Istr`. [width](../standard-library/ios-base-class.md#width) è maggiore di zero, *N* è `Istr`. **Larghezza**; in caso contrario, la dimensione della matrice più grande di `Elem` che possono essere dichiarate. La funzione archivia sempre il valore `Elem()` dopo eventuali elementi estratti archiviati. L'estrazione termina prima della fine del file, in corrispondenza di un carattere con valore **Elem**(0) (non estratto) o di qualsiasi elemento (non estratto) che verrebbe rimosso da [ws](../standard-library/istream-functions.md#ws). Se non estrae alcun elemento, la funzione chiama `Istr`. [SetState](../standard-library/basic-ios-class.md#setstate)(**failbit**). In tutti i casi, chiama `Istr`. **Larghezza**(0) e restituisce *Istr*.
 
-**Nota sulla sicurezza** La stringa con terminazione Null estratta dal flusso di input non deve superare la dimensione del buffer di destinazione `str`. Per altre informazioni, vedere [Evitare sovraccarichi del buffer](http://msdn.microsoft.com/library/windows/desktop/ms717795).
+**Nota sulla sicurezza** la stringa con terminazione null da estrarre dal flusso di input non può superare le dimensioni del buffer di destinazione *str*. Per altre informazioni, vedere [Evitare sovraccarichi del buffer](http://msdn.microsoft.com/library/windows/desktop/ms717795).
 
 La funzione modello:
 
@@ -100,7 +100,7 @@ basic_istream<Elem, Tr>& operator>>(
     basic_istream<Elem, Tr>& Istr, Elem& Ch);
 ```
 
-estrae un elemento, se possibile, e lo archivia in `Ch`. In caso contrario, chiama **is**. [setstate](../standard-library/basic-ios-class.md#setstate)( **failbit**). In tutti i casi, restituisce `Istr`.
+estrae un elemento, se è possibile e lo archivia nel *Ch*. In caso contrario, chiama **is**. [setstate](../standard-library/basic-ios-class.md#setstate)( **failbit**). In ogni caso, viene restituito *Istr*.
 
 La funzione modello:
 

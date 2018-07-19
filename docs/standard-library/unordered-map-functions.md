@@ -16,12 +16,12 @@ helpviewer_keywords:
 - std::swap (unordered_map/multimap)
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 665bdfd08fffdfcb662c175b9af44b8e9ed42a1a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 76210e9ae860f8a7de0f22db2b7108e90e09e5be
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33857311"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38965552"
 ---
 # <a name="ltunorderedmapgt-functions"></a>Funzioni &lt;unordered_map&gt;
 
@@ -42,19 +42,26 @@ void swap(
 
 ### <a name="parameters"></a>Parametri
 
-`Key` il tipo di chiave.
+*Key*  
+ Tipo di chiave.
 
-`Ty` Tipo mappato.
+*Ty*  
+ Tipo mappato.
 
-`Hash` Il tipo di oggetto funzione hash.
+*hash*  
+ Tipo di oggetto della funzione hash.
 
-`Pred` Il tipo di oggetto funzione confronto di uguaglianza.
+*Pred*  
+ Tipo di oggetto della funzione di confronto di uguaglianza.
 
-`Alloc` Classe allocator.
+*Alloc*  
+ Classe Allocator.
 
-`left` Il primo contenitore da scambiare.
+*left*  
+ Primo contenitore da scambiare.
 
-`right` Secondo contenitore da scambiare.
+*right*  
+ Secondo contenitore da scambiare.
 
 ### <a name="remarks"></a>Note
 
@@ -129,19 +136,26 @@ void swap(
 
 ### <a name="parameters"></a>Parametri
 
-`Key` il tipo di chiave.
+*Key*  
+ Tipo di chiave.
 
-`Ty` Tipo mappato.
+*Ty*  
+ Tipo mappato.
 
-`Hash` Il tipo di oggetto funzione hash.
+*hash*  
+ Tipo di oggetto della funzione hash.
 
-`Pred` Il tipo di oggetto funzione confronto di uguaglianza.
+*Pred*  
+ Tipo di oggetto della funzione di confronto di uguaglianza.
 
-`Alloc` Classe allocator.
+*Alloc*  
+ Classe Allocator.
 
-`left` Il primo contenitore da scambiare.
+*left*  
+ Primo contenitore da scambiare.
 
-`right` Secondo contenitore da scambiare.
+*right*  
+ Secondo contenitore da scambiare.
 
 ### <a name="remarks"></a>Note
 

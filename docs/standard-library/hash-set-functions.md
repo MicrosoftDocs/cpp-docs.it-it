@@ -7,12 +7,12 @@ f1_keywords:
 - hash_set/std::swap
 - hash_set/std::swap (hash_multiset)
 ms.assetid: 557a0162-3728-4537-97dc-f9f6cc7ece94
-ms.openlocfilehash: 083d928198d8d83d8a56d8a74a6204e94c86aa67
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ad8041ff6a4abab84272d2bbbdee290bfce4eff6
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33846285"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961877"
 ---
 # <a name="lthashsetgt-functions"></a>Funzioni &lt;hash_set&gt;
 
@@ -35,13 +35,13 @@ void swap(
 
 ### <a name="parameters"></a>Parametri
 
-`right` Hash_set che fornisce gli elementi da scambiare o hash_set cui elementi devono essere scambiati con quelli dell'hash_set `left`.
+*a destra* dell'oggetto hash_set che fornisce gli elementi da scambiare o i cui elementi devono essere scambiati con quelli dell'oggetto hash_set *sinistro*.
 
-`left` Hash_set cui elementi devono essere scambiati con quelli dell'hash_set `right`.
+*a sinistra* dell'oggetto hash_set la cui elementi devono essere scambiati con quelli dell'oggetto hash_set *destro*.
 
 ### <a name="remarks"></a>Note
 
-La funzione modello `swap` è un algoritmo specializzato sulla classe contenitore hash_set per l'esecuzione della funzione membro `left.`[swap](../standard-library/hash-set-class.md#swap)( `right`). Si tratta di un'istanza dell'ordinamento parziale dei modelli di funzione eseguito dal compilatore. Quando le funzioni modello sono sottoposte a overload in modo tale che la corrispondenza del modello con la chiamata di funzione non è univoca, il compilatore seleziona la versione più specializzata della funzione modello. La versione generale della funzione modello
+Il `swap` funzione di modello è un algoritmo specializzato sulla classe di contenitore hash_set per eseguire la funzione membro `left.` [swap](../standard-library/hash-set-class.md#swap)(`right`). Si tratta di un'istanza dell'ordinamento parziale dei modelli di funzione eseguito dal compilatore. Quando le funzioni modello sono sottoposte a overload in modo tale che la corrispondenza del modello con la chiamata di funzione non è univoca, il compilatore seleziona la versione più specializzata della funzione modello. La versione generale della funzione modello
 
 **template \<class T> void swap(T&, T&),**
 
@@ -64,13 +64,13 @@ void swap(hash_multiset <Key, Traits, Allocator>& left, hash_multiset <Key, Trai
 
 ### <a name="parameters"></a>Parametri
 
-`right` L'hash_multiset che fornisce gli elementi da scambiare o hash_multiset cui elementi devono essere scambiati con quelli dei hash_multiset `left`.
+*a destra* dell'oggetto hash_multiset che fornisce gli elementi da scambiare o i cui elementi devono essere scambiati con quelli dell'oggetto hash_multiset *sinistro*.
 
-`left` L'hash_multiset cui elementi devono essere scambiati con quelli dei hash_multiset `right`.
+*a sinistra* dell'oggetto hash_multiset la cui elementi devono essere scambiati con quelli dell'oggetto hash_multiset *destro*.
 
 ### <a name="remarks"></a>Note
 
-La funzione modello `swap` è un algoritmo specializzato sulla classe contenitore hash_multiset per l'esecuzione della funzione membro `left.`[swap](../standard-library/hash-multiset-class.md#swap)( `right`). Si tratta di un'istanza dell'ordinamento parziale dei modelli di funzione eseguito dal compilatore. Quando le funzioni modello sono sottoposte a overload in modo tale che la corrispondenza del modello con la chiamata di funzione non è univoca, il compilatore seleziona la versione più specializzata della funzione modello. La versione generale della funzione modello
+Il `swap` funzione di modello è un algoritmo specializzato sulla classe contenitore hash_multiset per eseguire la funzione membro `left.` [swap](../standard-library/hash-multiset-class.md#swap)(`right`). Si tratta di un'istanza dell'ordinamento parziale dei modelli di funzione eseguito dal compilatore. Quando le funzioni modello sono sottoposte a overload in modo tale che la corrispondenza del modello con la chiamata di funzione non è univoca, il compilatore seleziona la versione più specializzata della funzione modello. La versione generale della funzione modello
 
 **template \<class T> void swap(T&, T&),**
 

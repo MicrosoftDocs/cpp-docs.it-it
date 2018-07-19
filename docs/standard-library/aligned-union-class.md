@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a149269117f83b18838d54c728d6d8da580882b0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: bdd2a8417f66c0e095f571c914d5a4624179fdb6
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33840700"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962113"
 ---
 # <a name="alignedunion-class"></a>Classe aligned_union
 
@@ -39,13 +39,13 @@ using aligned_union_t = typename aligned_union<Len, Types...>::type;
 
 ### <a name="parameters"></a>Parametri
 
-`Len` Il valore di allineamento per il tipo più grande dell'unione.
+*Len* il valore di allineamento per il tipo più grande dell'unione.
 
-`Types` I tipi distinti nell'unione sottostante.
+*Tipi* tipi distinti nell'unione sottostante.
 
 ## <a name="remarks"></a>Note
 
-Usare la classe modello per ottenere l'allineamento e la dimensione necessari per archiviare un'unione nell'archivio non inizializzato. Il typedef del membro `type` assegna un nome a un tipo POD adatto per l'archiviazione di qualsiasi tipo elencato in `Types`; la dimensione minima è `Len`. Il membro statico `alignment_value` di tipo `std::size_t` contiene l'allineamento più restrittivo richiesto di tutti i tipi elencati in `Types`.
+Usare la classe modello per ottenere l'allineamento e la dimensione necessari per archiviare un'unione nell'archivio non inizializzato. Il typedef del membro `type` i nomi di un POD digitare adatto per l'archiviazione di qualsiasi tipo elencato nella *tipi*; le dimensioni minime *Len*. Il membro statico `alignment_value` typu `std::size_t` contiene l'allineamento più restrittivo richiesto di tutti i tipi elencati in *tipi*.
 
 ## <a name="example"></a>Esempio
 

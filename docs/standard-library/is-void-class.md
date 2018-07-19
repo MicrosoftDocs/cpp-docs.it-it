@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 13fee96611e2a2618de6ea6e1671ece9986a22d9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 35a40b016fa8fb25782393ea462b5cff2a3c3fac
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33857584"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38963253"
 ---
 # <a name="isvoid-class"></a>Classe is_void
 
@@ -37,11 +37,11 @@ struct is_void;
 
 ### <a name="parameters"></a>Parametri
 
-`T` Il tipo di query.
+*T* il tipo di query.
 
 ## <a name="remarks"></a>Note
 
-Un'istanza del predicato di tipo contiene true se il tipo `T` è `void` o un form qualificato CV di `void`; in caso contrario contiene false.
+Un'istanza del tipo predicato contiene true se il tipo *T* viene **void** o un form qualificato cv di **void**, in caso contrario, contiene false.
 
 ## <a name="example"></a>Esempio
 

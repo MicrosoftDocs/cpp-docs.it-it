@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 41a5da108c082dc4199a216d36f51d41e1748ada
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e5b2c9237c7f17217d28e489edef4ab65863b54b
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33844289"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964113"
 ---
 # <a name="isdestructible-class"></a>Classe is_destructible
 
@@ -37,11 +37,11 @@ struct is_destructible;
 
 ### <a name="parameters"></a>Parametri
 
-`T` Il tipo di query.
+*T* il tipo di query.
 
 ## <a name="remarks"></a>Note
 
-Un'istanza del predicato di tipo contiene true se il tipo `T` è un tipo destructible; in caso contrario, contiene false. I tipi destructible sono tipi di riferimento, tipi di oggetto e tipi in cui per un tipo `U` equivalente a `remove_all_extents_t<T>` , l'operando non valutato `std::declval<U&>.~U()` risulta ben formato. Gli altri tipi, inclusi i tipi incompleti, `void`e i tipi di funzione, non sono destructible.
+Un'istanza del tipo predicato contiene true se il tipo *T* è un tipo distruttibile, in caso contrario, contiene false. I tipi destructible sono tipi di riferimento, tipi di oggetto e tipi in cui per un tipo `U` equivalente a `remove_all_extents_t<T>` , l'operando non valutato `std::declval<U&>.~U()` risulta ben formato. Altri tipi, inclusi i tipi incompleti, **void**e tipi di funzione, non sono destructible.
 
 ## <a name="requirements"></a>Requisiti
 

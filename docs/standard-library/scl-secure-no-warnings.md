@@ -18,22 +18,22 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ec02ce5aab3d8a7f95ec9020fe3e2a00c1f5bef7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b24012825b883550de6f58e6ce2d53b826f746ca
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33854353"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38965500"
 ---
 # <a name="sclsecurenowarnings"></a>_SCL_SECURE_NO_WARNINGS
 
-La chiamata a uno dei metodi potenzialmente non sicuri nella libreria Standard C++ determina [avviso del compilatore (livello 3) l'avviso C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md). Per disabilitare questo avviso, definire la macro **_SCL_SECURE_NO_WARNINGS** nel codice:
+La chiamata a uno dei metodi potenzialmente non sicuri nella libreria Standard C++ determina [avviso del compilatore (livello 3) C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md). Per disabilitare questo avviso, definire la scl_secure_no_warnings macro nel codice:
 
 ```cpp
 #define _SCL_SECURE_NO_WARNINGS
 ```
 
-Se si utilizzano le intestazioni precompilate, inserire questa direttiva nel file di intestazione precompilata prima di includere qualsiasi libreria di runtime C o delle intestazioni della libreria standard. Se viene inserita in un file del codice sorgente singoli prima di includere il file di intestazione precompilata, viene ignorato dal compilatore.
+Se si utilizzano intestazioni precompilate, inserire questa direttiva nel file di intestazione precompilata prima di includere qualsiasi libreria di runtime C o le intestazioni della libreria standard. Se è inserirlo in un file di codice sorgente singoli prima di includere il file di intestazione precompilata, viene ignorato dal compilatore.
 
 ## <a name="remarks"></a>Note
 

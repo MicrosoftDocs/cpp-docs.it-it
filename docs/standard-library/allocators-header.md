@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f578ab4ea06db68b23a03374bcd787dc03715ab5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1a1d2d710631c01a39b910e7d9b15f14179b3125
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33847312"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38965743"
 ---
 # <a name="ltallocatorsgt"></a>&lt;allocators&gt;
 
@@ -87,7 +87,7 @@ Usare la macro [ALLOCATOR_DECL](../standard-library/allocators-functions.md#allo
 
 _Lst1 alloca nodi con `allocator_chunklist` e il filtro di sincronizzazione [sync_per_thread](../standard-library/sync-per-thread-class.md).
 
-Un allocatore di blocco è una cache o un filtro. Una cache è una classe di modello che accetta un solo argomento di tipo std::size_t. Definisce un allocatore di blocco che alloca e dealloca blocchi di memoria di un'unica dimensione. Deve ottenere la memoria usando l'operatore `new`, ma non necessita di eseguire una chiamata all'operatore `new` per ogni blocco. Può, ad esempio, sottoallocare da un blocco più grande o blocchi deallocati della cache per una riallocazione successiva.
+Un allocatore di blocco è una cache o un filtro. Una cache è una classe di modello che accetta un solo argomento di tipo std::size_t. Definisce un allocatore di blocco che alloca e dealloca blocchi di memoria di un'unica dimensione. Deve ottenere la memoria usando l'operatore **nuove**, ma non necessita di eseguire una chiamata distinta all'operatore **nuove** per ogni blocco. Può, ad esempio, sottoallocare da un blocco più grande o blocchi deallocati della cache per una riallocazione successiva.
 
 Con un compilatore che non compila la riassociazione il valore dell'argomento std::size_t usato al momento della creazione dell'istanza del modello non è necessariamente il valore dell'argomento _Sz passato alle funzioni membro di una cache allocate e deallocate.
 
@@ -151,7 +151,7 @@ Il modello di cache `cache_freelist` accetta un argomento classe max che determi
 |[allocator_base](../standard-library/allocator-base-class.md)|Definisce la classe base e le funzioni comuni necessari per creare un allocatore definito dall'utente da un filtro di sincronizzazione.|
 |[allocator_chunklist](../standard-library/allocator-chunklist-class.md)|Descrive un oggetto che gestisce l'allocazione e la liberazione dello spazio di archiviazione per gli oggetti usando una cache di tipo [cache_chunklist](../standard-library/cache-chunklist-class.md).|
 |[allocator_fixed_size](../standard-library/allocator-fixed-size-class.md)|Descrive un oggetto che gestisce l'allocazione e la liberazione dello spazio di archiviazione per gli oggetti di tipo `Type` usando una cache di tipo [cache_freelist](../standard-library/cache-freelist-class.md) con lunghezza gestita da [max_fixed_size](../standard-library/max-fixed-size-class.md).|
-|[allocator_newdel](../standard-library/allocator-newdel-class.md)|Implementa un allocatore che usa `operator delete` per deallocare un blocco di memoria e `operator new` per allocare un blocco di memoria.|
+|[allocator_newdel](../standard-library/allocator-newdel-class.md)|Implementa un allocatore che usa **operatore delete** deallocare una memoria di blocco e **operatore new** per allocare un blocco di memoria.|
 |[allocator_suballoc](../standard-library/allocator-suballoc-class.md)|Descrive un oggetto che gestisce l'allocazione e la liberazione dello spazio di archiviazione per gli oggetti di tipo `Type` usando una cache di tipo [cache_suballoc](../standard-library/cache-suballoc-class.md).|
 |[allocator_unbounded](../standard-library/allocator-unbounded-class.md)|Descrive un oggetto che gestisce l'allocazione e la liberazione dello spazio di archiviazione per gli oggetti di tipo `Type` usando una cache di tipo [cache_freelist](../standard-library/cache-freelist-class.md) con lunghezza gestita da [max_unbounded](../standard-library/max-unbounded-class.md).|
 |[allocator_variable_size](../standard-library/allocator-variable-size-class.md)|Descrive un oggetto che gestisce l'allocazione e la liberazione dello spazio di archiviazione per gli oggetti di tipo `Type` usando una cache di tipo [cache_freelist](../standard-library/cache-freelist-class.md) con lunghezza gestita da [max_variable_size](../standard-library/max-variable-size-class.md).|

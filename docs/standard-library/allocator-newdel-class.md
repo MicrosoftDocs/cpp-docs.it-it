@@ -19,16 +19,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9eea1a8fe89e9cabcfbe1bf9aa69f1c3fda775c0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: dde45090a534fc8d5aff09ee12b1b4fe838d9492
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33840651"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38966276"
 ---
 # <a name="allocatornewdel-class"></a>Classe allocator_newdel
 
-Implementa un allocatore che usa `operator delete` per deallocare un blocco di memoria e `operator new` per allocare un blocco di memoria.
+Implementa un allocatore che usa **operatore delete** deallocare una memoria di blocco e **operatore new** per allocare un blocco di memoria.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -41,11 +41,11 @@ class allocator_newdel;
 
 |Parametro|Descrizione|
 |---------------|-----------------|
-|`Type`|Tipo degli elementi assegnato dall'allocatore.|
+|*Type*|Tipo degli elementi assegnato dall'allocatore.|
 
 ## <a name="remarks"></a>Note
 
-La macro [ALLOCATOR_DECL](../standard-library/allocators-functions.md#allocator_decl) passa questa classe come parametro `name` nell'istruzione seguente: `ALLOCATOR_DECL(CACHE_FREELIST stdext::allocators::max_none), SYNC_DEFAULT, allocator_newdel);`
+Il [ALLOCATOR_DECL](../standard-library/allocators-functions.md#allocator_decl) macro passa questa classe come le *nome* parametro nell'istruzione seguente: `ALLOCATOR_DECL(CACHE_FREELIST stdext::allocators::max_none), SYNC_DEFAULT, allocator_newdel);`
 
 ## <a name="requirements"></a>Requisiti
 

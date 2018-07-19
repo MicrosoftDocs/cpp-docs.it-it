@@ -16,16 +16,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2c90838bf4ae49e372b35ca2e9a2f0feede4eb9b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1d73beb5b935a729eb5e304eb03cbc37536c4d0e
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33864060"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38963154"
 ---
 # <a name="memfun1t-class"></a>Classe mem_fun1_t
 
-Classe di adattatori che consente a una funzione membro **non_const** che accetta un singolo argomento di essere chiamata come oggetto funzione unaria se inizializzata con un argomento di puntatore.
+Classe di adattatori che consente un `non_const` funzione membro che accetta un singolo argomento di essere chiamata come oggetto funzione binaria se inizializzata con un argomento di puntatore.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -44,11 +44,11 @@ class mem_fun1_t : public binary_function<Type *, Arg, Result> {
 
 ### <a name="parameters"></a>Parametri
 
-`_Pm` Un puntatore alla funzione membro della classe **tipo** da convertire in un oggetto funzione.
+*_Pm* un puntatore alla funzione membro della classe `Type` da convertire in un oggetto funzione.
 
-`_Pleft` L'oggetto che il `_Pm` funzione membro viene chiamata su.
+*Pleft* dell'oggetto che il *_Pm* funzione membro viene chiamata su.
 
-`right` L'argomento cui è in corso ai `_Pm`.
+*a destra* l'argomento che viene assegnato a *_Pm*.
 
 ## <a name="return-value"></a>Valore restituito
 
@@ -56,7 +56,7 @@ Funzione binaria adattabile.
 
 ## <a name="remarks"></a>Note
 
-La classe modello archivia una copia di `_Pm`, che deve essere un puntatore a una funzione membro della classe **Type**, in un oggetto membro privato. Definisce la relativa funzione membro `operator()` che restituisce ( **_Pleft**->\* `_Pm`)( **right**).
+La classe modello archivia una copia della *_Pm*, che deve essere un puntatore a una funzione membro della classe `Type`, in un oggetto membro privato. Definisce la relativa funzione membro `operator()` che restituisce ( **_Pleft**->\* `_Pm`)( **right**).
 
 ## <a name="example"></a>Esempio
 

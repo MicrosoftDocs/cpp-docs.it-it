@@ -30,12 +30,12 @@ helpviewer_keywords:
 - std::condition_variable::wait_until
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 55598e4d4aad92e9f4557886bbcb3bd442917624
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ca85765d6fed21938a61f52f25c1a377ec43c499
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33847546"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38965178"
 ---
 # <a name="conditionvariable-class"></a>Classe condition_variable
 
@@ -125,9 +125,9 @@ void wait(unique_lock<mutex>& Lck, Predicate Pred);
 
 ### <a name="parameters"></a>Parametri
 
-`Lck` Un [unique_lock\<mutex >](../standard-library/unique-lock-class.md) oggetto.
+*Lck* un' [unique_lock\<mutex >](../standard-library/unique-lock-class.md) oggetto.
 
-`Pred` Qualsiasi espressione che restituisce `true` o `false`.
+*Pred* qualsiasi espressione che restituisca **true** oppure **false**.
 
 ### <a name="remarks"></a>Note
 
@@ -159,21 +159,21 @@ bool wait_for(
 
 ### <a name="parameters"></a>Parametri
 
-`Lck` Un [unique_lock\<mutex >](../standard-library/unique-lock-class.md) oggetto.
+*Lck* un' [unique_lock\<mutex >](../standard-library/unique-lock-class.md) oggetto.
 
-`Rel_time` Oggetto `chrono::duration` oggetto che specifica la quantità di tempo prima che il thread viene riattivato.
+*Rel_time* oggetto `chrono::duration` oggetto che specifica la quantità di tempo prima che il thread viene attivato.
 
-`Pred` Qualsiasi espressione che restituisce `true` o `false`.
+*Pred* qualsiasi espressione che restituisca **true** oppure **false**.
 
 ### <a name="return-value"></a>Valore restituito
 
-Il primo metodo restituisce `cv_status::timeout` se l'attesa termina quando `Rel_time` è trascorso. In caso contrario, il metodo restituisce `cv_status::no_timeout`.
+Il primo metodo restituisce `cv_status::timeout` se l'attesa termina quando *Rel_time* è trascorso. In caso contrario, il metodo restituisce `cv_status::no_timeout`.
 
-Il secondo metodo restituisce il valore di `Pred`.
+Il secondo metodo restituisce il valore della *Pred*.
 
 ### <a name="remarks"></a>Note
 
-Il primo metodo si blocca fino a quando l'oggetto `condition_variable` non viene segnalato da una chiamata a [notify_one](#notify_one) o [notify_all](#notify_all), oppure finché non è trascorso l'intervallo di tempo `Rel_time`. Può anche riattivarsi in modo spurio.
+Il primo metodo si blocca finché il `condition_variable` oggetto viene segnalato da una chiamata a [notify_one](#notify_one) o [notify_all](#notify_all) o fino a quando l'intervallo di tempo *Rel_time* è trascorso. Può anche riattivarsi in modo spurio.
 
 Il secondo metodo esegue il codice seguente.
 
@@ -214,17 +214,17 @@ bool wait_until(
 
 ### <a name="parameters"></a>Parametri
 
-`Lck` Un [unique_lock\<mutex >](../standard-library/unique-lock-class.md) oggetto.
+*Lck* un' [unique_lock\<mutex >](../standard-library/unique-lock-class.md) oggetto.
 
-`Abs_time` Un [chrono:: time_point](../standard-library/time-point-class.md) oggetto.
+*Abs_time* un' [chrono:: time_point](../standard-library/time-point-class.md) oggetto.
 
-`Pred` Qualsiasi espressione che restituisce `true` o `false`.
+*Pred* qualsiasi espressione che restituisca **true** oppure **false**.
 
 ### <a name="return-value"></a>Valore restituito
 
-I metodi che restituiscono un tipo `cv_status` restituiscono `cv_status::timeout` se l'attesa termina quando `Abs_time` è trascorso. In caso contrario, i metodi restituiscono `cv_status::no_timeout`.
+I metodi che restituiscono un `cv_status` tipo restituito `cv_status::timeout` se l'attesa termina quando *Abs_time* scade. In caso contrario, i metodi restituiscono `cv_status::no_timeout`.
 
-I metodi che restituiscono un oggetto `bool` restituiscono il valore di `Pred`.
+I metodi che restituiscono un **bool** restituire il valore di *Pred*.
 
 ### <a name="remarks"></a>Note
 

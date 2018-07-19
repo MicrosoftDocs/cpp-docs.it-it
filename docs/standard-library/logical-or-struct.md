@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9591e11774550f198de601f36fce0350f76cf6bd
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 4cef7f0b51d9dc7a44e6dbc45c32f1296825ca30
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33852097"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961506"
 ---
 # <a name="logicalor-struct"></a>Struct logical_or
 
@@ -49,11 +49,11 @@ struct logical_or<void>
 
 ### <a name="parameters"></a>Parametri
 
-`Type`, `T`, `U` Qualsiasi tipo che supporta un `operator||` che accetta gli operandi dei tipi specificati o dedotti.
+*Tipo di*, *T*, *U* qualsiasi tipo che supporta un `operator||` che accetta gli operandi dei tipi specificati o dedotti.
 
-`Left` L'operando sinistro dell'operazione di disgiunzione logica. Il modello non specializzato accetta un argomento di riferimento lvalue di tipo `Type`. Il modello specializzato esegue un inoltro perfetto degli argomenti di riferimento lvalue e rvalue del tipo dedotto `T`.
+*Sinistra* l'operando sinistro dell'operazione di disgiunzione logica. Il modello non specializzato accetta un argomento di riferimento lvalue di tipo *tipo*. Il modello specializzato esegue un inoltro di lvalue perfetto e gli argomenti di riferimento rvalue del tipo di dedurre *T*.
 
-`Right` L'operando destro dell'operazione di disgiunzione logica. Il modello non specializzato accetta un argomento di riferimento lvalue di tipo `Type`. Il modello specializzato esegue un inoltro perfetto degli argomenti di riferimento lvalue e rvalue del tipo dedotto `U`.
+*Destra* l'operando destro dell'operazione di disgiunzione logica. Il modello non specializzato accetta un argomento di riferimento lvalue di tipo *tipo*. Il modello specializzato esegue un inoltro di lvalue perfetto e gli argomenti di riferimento rvalue del tipo di dedurre *U*.
 
 ## <a name="return-value"></a>Valore restituito
 

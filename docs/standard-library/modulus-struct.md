@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 226e9895d7ddc199e2f15c3721228f59c0e5a0ac
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d5b9ae4ae3b7d741624d220ba00006d51a61fd20
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33853557"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962162"
 ---
-# <a name="modulus-struct"></a>Struct modulus
+# <a name="modulus-struct"></a>modulus (struct)
 
-Oggetto funzione predefinito che esegue l'operazione di divisione modulo ( `operator%`) negli argomenti.
+Un oggetto funzione predefinito che esegue l'operazione di divisione modulo (`operator%`) sui relativi argomenti.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -49,11 +49,11 @@ struct modulus<void>
 
 ### <a name="parameters"></a>Parametri
 
-`Type`, `T`, `U` Qualsiasi tipo che supporta un `operator%` che accetta gli operandi dei tipi specificati o dedotti.
+*Tipo di*, *T*, *U* qualsiasi tipo che supporta un `operator%` che accetta gli operandi dei tipi specificati o dedotti.
 
-`Left` L'operando sinistro dell'operazione di modulo. Il modello non specializzato accetta un argomento di riferimento lvalue di tipo `Type`. Il modello specializzato esegue un inoltro perfetto degli argomenti di riferimento lvalue e rvalue del tipo dedotto `T`.
+*Sinistra* l'operando sinistro dell'operazione modulo. Il modello non specializzato accetta un argomento di riferimento lvalue di tipo *tipo*. Il modello specializzato esegue un inoltro di lvalue perfetto e gli argomenti di riferimento rvalue del tipo di dedurre *T*.
 
-`Right` L'operando destro dell'operazione di modulo. Il modello non specializzato accetta un argomento di riferimento lvalue di tipo `Type`. Il modello specializzato esegue un inoltro perfetto degli argomenti di riferimento lvalue e rvalue del tipo dedotto `U`.
+*Destra* l'operando destro dell'operazione modulo. Il modello non specializzato accetta un argomento di riferimento lvalue di tipo *tipo*. Il modello specializzato esegue un inoltro di lvalue perfetto e gli argomenti di riferimento rvalue del tipo di dedurre *U*.
 
 ## <a name="return-value"></a>Valore restituito
 

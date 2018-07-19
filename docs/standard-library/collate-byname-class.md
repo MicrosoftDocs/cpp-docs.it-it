@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f619554db0a85ee8aafbdb8792d8fe233cc392a8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f104736d1c8f9d0ed60f2afd374345ab227300b4
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33843015"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964912"
 ---
 # <a name="collatebyname-class"></a>Classe collate_byname
 
@@ -49,13 +49,13 @@ protected:
 
 ### <a name="parameters"></a>Parametri
 
-`_Locname` Nome delle impostazioni locali.
+*_Locname* impostazioni locali denominate.
 
-`_Refs` Un conteggio dei riferimenti iniziale.
+*_Refs* conteggio di riferimento iniziale.
 
 ## <a name="remarks"></a>Note
 
-La classe modello descrive un oggetto che può fungere da [facet delle impostazioni locali](../standard-library/locale-class.md#facet_class) di tipo [collate](../standard-library/collate-class.md#collate)\<CharType>. Il comportamento è determinato dalle [impostazioni locali denominate](../standard-library/locale-class.md#name)`_Locname`. Ogni costruttore inizializza l'oggetto di base con [collate](../standard-library/collate-class.md#collate)\<CharType> (`_Refs`).
+La classe modello descrive un oggetto che può fungere da [facet delle impostazioni locali](../standard-library/locale-class.md#facet_class) di tipo [collate](../standard-library/collate-class.md#collate)\<CharType>. Il comportamento è determinato dal [denominate](../standard-library/locale-class.md#name) delle impostazioni locali *_Locname*. Ogni costruttore inizializza l'oggetto di base con [collate](../standard-library/collate-class.md#collate)\<CharType> (`_Refs`).
 
 ## <a name="requirements"></a>Requisiti
 

@@ -7,12 +7,12 @@ f1_keywords:
 - map/std::swap (map)
 - map/std::swap (multimap)
 ms.assetid: 7cb3d1a5-7add-4726-a73f-61927eafd466
-ms.openlocfilehash: d6f62868d17cec9215b18451527c3a2e4e22b7f2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3c6cb7d0308e4bafc531fe0baf0c5d666228c3ec
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33854922"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38966368"
 ---
 # <a name="ltmapgt-functions"></a>Funzioni &lt;map&gt;
 
@@ -33,13 +33,13 @@ void swap(
 
 ### <a name="parameters"></a>Parametri
 
-`right` La mappa che fornisce gli elementi da scambiare o la mappa cui elementi devono essere scambiati con quelli della mappa `left`.
+*a destra* la mappa che fornisce gli elementi da scambiare o i cui elementi devono essere scambiati con quelli dell'oggetto map *sinistro*.
 
-`left` La mappa cui elementi devono essere scambiati con quelli della mappa `right`.
+*a sinistra* mappa cui elementi devono essere scambiati con quelli dell'oggetto map *destro*.
 
 ### <a name="remarks"></a>Note
 
-La funzione di modello è un algoritmo specializzato sulla mappa della classe contenitore per eseguire la funzione membro `left`.[ scambio](../standard-library/map-class.md#swap)( `right`). Si tratta di un'istanza dell'ordinamento parziale dei modelli di funzione eseguito dal compilatore. Quando le funzioni modello sono sottoposte a overload in modo tale che la corrispondenza del modello con la chiamata di funzione non è univoca, il compilatore seleziona la versione più specializzata della funzione modello. La versione generale della funzione modello, **template** \< **class T**> **void swap**( **T&**, **T&**), nella classe algoritmo viene eseguita in base ad assegnazione ed è un'operazione lenta. La versione specializzata presente in ogni contenitore è molto più veloce, dal momento che funziona con la rappresentazione interna della classe contenitore.
+La funzione modello è un algoritmo specializzato sulla classe contenitore map per eseguire la funzione membro `left`.[ swap](../standard-library/map-class.md#swap)( `right`). Si tratta di un'istanza dell'ordinamento parziale dei modelli di funzione eseguito dal compilatore. Quando le funzioni modello sono sottoposte a overload in modo tale che la corrispondenza del modello con la chiamata di funzione non è univoca, il compilatore seleziona la versione più specializzata della funzione modello. La versione generale della funzione modello, **template** \< **class T**> **void swap**( **T&**, **T&**), nella classe algoritmo viene eseguita in base ad assegnazione ed è un'operazione lenta. La versione specializzata presente in ogni contenitore è molto più veloce, dal momento che funziona con la rappresentazione interna della classe contenitore.
 
 ### <a name="example"></a>Esempio
 
@@ -58,13 +58,13 @@ void swap(
 
 ### <a name="parameters"></a>Parametri
 
-`right` Il multimap che fornisce gli elementi da scambiare o multimap cui elementi devono essere scambiati con quelli del multimap `left`.
+*a destra* dell'oggetto multimap che fornisce gli elementi da scambiare o i cui elementi devono essere scambiati con quelli dell'oggetto multimap *sinistro*.
 
-`left` Il multimap cui elementi devono essere scambiati con quelli del multimap `right`.
+*a sinistra* multimap la cui elementi devono essere scambiati con quelli dell'oggetto multimap *destro*.
 
 ### <a name="remarks"></a>Note
 
-La funzione di modello è un algoritmo specializzato sulla mappa della classe contenitore da eseguire nel multimap classe contenitore per eseguire la funzione membro `left`.[ scambio](../standard-library/multimap-class.md#swap) ( `right`). Si tratta di un'istanza dell'ordinamento parziale dei modelli di funzione eseguito dal compilatore. Quando le funzioni modello sono sottoposte a overload in modo tale che la corrispondenza del modello con la chiamata di funzione non è univoca, il compilatore seleziona la versione più specializzata della funzione modello. La versione generale della funzione modello, **template** \< **class T**> **void swap**( **T&**, **T&**), nella classe algoritmo viene eseguita in base ad assegnazione ed è un'operazione lenta. La versione specializzata presente in ogni contenitore è molto più veloce, dal momento che funziona con la rappresentazione interna della classe contenitore.
+La funzione modello è un algoritmo specializzato sulla classe contenitore map per l'esecuzione in una classe contenitore multimap per eseguire la funzione membro `left`.[ swap](../standard-library/multimap-class.md#swap) (`right`). Si tratta di un'istanza dell'ordinamento parziale dei modelli di funzione eseguito dal compilatore. Quando le funzioni modello sono sottoposte a overload in modo tale che la corrispondenza del modello con la chiamata di funzione non è univoca, il compilatore seleziona la versione più specializzata della funzione modello. La versione generale della funzione modello, **template** \< **class T**> **void swap**( **T&**, **T&**), nella classe algoritmo viene eseguita in base ad assegnazione ed è un'operazione lenta. La versione specializzata presente in ogni contenitore è molto più veloce, dal momento che funziona con la rappresentazione interna della classe contenitore.
 
 ### <a name="example"></a>Esempio
 

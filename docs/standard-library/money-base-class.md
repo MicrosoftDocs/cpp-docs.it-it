@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 805045e4ea63f153e9a35b0d4b068bd69874b93f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3195d2c988abcfb2d62acb4ece957c8c5156bbd7
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33864086"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38965688"
 ---
 # <a name="moneybase-class"></a>Classe money_base
 
@@ -38,17 +38,17 @@ struct pattern
 
 ## <a name="remarks"></a>Note
 
-L'enumerazione **part** descrive i valori possibili degli elementi del campo matrice nel modello di struttura. I valori di **part** sono:
+L'enumerazione `part` descrive i possibili valori negli elementi del campo matrice nel modello di struttura. I valori di `part` sono:
 
-- **none** per trovare la corrispondenza con zero o più spazi o per non generare nulla.
+- `none` in base a zero o più spazi o generare nulla.
 
-- **sign** per trovare la corrispondenza con un segno positivo o negativo o per generare tale segno.
+- `sign` in base a o generare un segno positivo o negativo.
 
-- **space** per trovare la corrispondenza con zero o più spazi o per generare uno spazio.
+- `space` in base a zero o più spazi o generare uno spazio.
 
-- **symbol** per trovare la corrispondenza con un simbolo di valuta o per generare tale simbolo.
+- `symbol` in base a o generare un simbolo di valuta.
 
-- **value** per trovare la corrispondenza con un valore monetario o per generare tale valore.
+- `value` in base a o generare un valore monetario.
 
 ## <a name="requirements"></a>Requisiti
 

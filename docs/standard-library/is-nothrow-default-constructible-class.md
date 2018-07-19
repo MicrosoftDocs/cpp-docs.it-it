@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3bf12a91fc4dd1485e0129e8ce9049d3401c181c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 38e076d5a8e552efa353be711d84485c96f6ffd3
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33844803"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962988"
 ---
 # <a name="isnothrowdefaultconstructible-class"></a>Classe is_nothrow_default_constructible
 
@@ -36,11 +36,11 @@ struct is_nothrow_default_constructible;
 
 ### <a name="parameters"></a>Parametri
 
-`Ty` Il tipo di query.
+*Ty* il tipo di query.
 
 ## <a name="remarks"></a>Note
 
-Un'istanza del predicato di tipo contiene true se il tipo `Ty` ha un costruttore predefinito nothrow; in caso contrario, contiene false. Un'istanza del tipo predicato è equivalente a `is_nothrow_constructible<Ty>`.
+Un'istanza del tipo predicato contiene true se il tipo *Ty* ha un costruttore nothrow; impostazione predefinita, in caso contrario, contiene false. Un'istanza del tipo predicato è equivalente a `is_nothrow_constructible<Ty>`.
 
 ## <a name="requirements"></a>Requisiti
 

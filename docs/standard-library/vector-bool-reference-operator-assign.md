@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6413737b6b442313b77f0f2b2115631a260cc40b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 037c6cfb9360f85c1ffdf92dcce11a86a0c458d7
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33855344"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38965615"
 ---
 # <a name="vectorltboolgtreferenceoperator"></a>vector&lt;bool&gt;::reference::operator=
 
@@ -41,9 +41,11 @@ reference& operator=(bool Val);
 
 ### <a name="parameters"></a>Parametri
 
-`Right` Il riferimento all'elemento il cui valore viene assegnato al bit.
+*A destra*  
+ Riferimento dell'elemento il cui valore deve essere assegnato al bit.
 
-`Val` Valore booleano da assegnare al bit.
+*Val*  
+ Valore booleano da assegnare al bit.
 
 ## <a name="example"></a>Esempio
 

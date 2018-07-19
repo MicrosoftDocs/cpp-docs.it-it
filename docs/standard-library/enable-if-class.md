@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d8fbcf91b2b863312374fad96239a9585bb3b38c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2192ea954df1e7a63157d6deb04c7d34cd42337c
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33846909"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38966485"
 ---
 # <a name="enableif-class"></a>Classe enable_if
 
-Crea un'istanza di un tipo in modo condizionale per la risoluzione dell'overload SFINAE. Il typedef annidato `enable_if<Condition,Type>::type` esiste, ed è sinonimo di `Type`, solo ed esclusivamente se `Condition` è `true`.
+Crea un'istanza di un tipo in modo condizionale per la risoluzione dell'overload SFINAE. Il typedef annidato `enable_if<Condition,Type>::type` esiste, ed è un sinonimo `Type`, ovvero se e solo se `Condition` viene **true**.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -37,15 +37,15 @@ struct enable_if;
 
 ### <a name="parameters"></a>Parametri
 
-`B` Il valore che determina l'esistenza del tipo risultante.
+*B* il valore che determina l'esistenza del tipo risultante.
 
-`T` Il tipo per creare un'istanza se `B` è true.
+*T* per creare un'istanza se il tipo *B* è true.
 
 ## <a name="remarks"></a>Note
 
-Se `B` è true, `enable_if<B, T>` include un typedef annidato denominato "type" che è sinonimo di `T`.
+Se *B* è true, `enable_if<B, T>` include un typedef annidato denominato "type" che è un sinonimo *T*.
 
-Se `B` è false, `enable_if<B, T>` non dispone di un typedef annidato denominato "type".
+Se *B* è false, `enable_if<B, T>` non ha un typedef annidato denominato "type".
 
 Viene fornito questo modello di alias:
 
@@ -100,7 +100,7 @@ s) {// ...
 
 Lo scenario 1 non funziona con i costruttore e gli operatori di conversione poiché questi non dispongono di tipi restituiti.
 
-Lo scenario 2 lascia il parametro non denominato. È possibile specificare `::type Dummy = BAR`, ma il nome `Dummy` è irrilevante ed è probabile che l'assegnazione di un nome generi un avviso di tipo "parametro senza riferimento". È necessario scegliere un tipo di parametro di funzione `FOO` e l'argomento `BAR` predefinito.  È possibile specificare `int` e `0`, ma gli utenti del codice potrebbero accidentalmente passare un intero supplementare alla funzione, che verrebbe ignorato. È invece consigliabile usare `void **` e `0` o `nullptr` perché quasi nulla è convertibile in `void **`:
+Lo scenario 2 lascia il parametro non denominato. È possibile specificare `::type Dummy = BAR`, ma il nome `Dummy` è irrilevante ed è probabile che l'assegnazione di un nome generi un avviso di tipo "parametro senza riferimento". È necessario scegliere un tipo di parametro di funzione `FOO` e l'argomento `BAR` predefinito.  È possibile specificare **int** e `0`, ma quindi gli utenti del codice potrebbero accidentalmente passare alla funzione di un intero supplementare che verrebbe ignorato. È invece consigliabile usare `void **` e il valore `0` oppure **nullptr** perché quasi nulla è convertibile in `void **`:
 
 ```cpp
 template <your_stuff>
@@ -135,7 +135,7 @@ void func(const pair<string, string>&);
 func(make_pair("foo", "bar"));
 ```
 
-In questo esempio `make_pair("foo", "bar")` restituisce `pair<const char *, const char *>`. La risoluzione dell'overload deve stabilire quale `func()` è richiesto. `pair<A, B>` ha un costruttore a conversione implicita tratto da `pair<X, Y>`.  Non si tratta di una novità. Era infatti presente in C++98. In C++98/03, tuttavia, la firma del costruttore a conversione implicita esiste sempre, anche se è `pair<int, int>(const pair<const char *, const char *>&)`.  Per la risoluzione dell'overload non è rilevante che un tentativo di creare un'istanza del costruttore determini una forte esplosione perché `const char *` non è implicitamente convertibile in `int`; vengono cercate solo le firme, prima della creazione di un'istanza delle definizioni di funzione.  Il codice di esempio è quindi ambiguo perché sono presenti firme per convertire `pair<const char *, const char *>` sia in `pair<int, int>` che in `pair<string, string>`.
+In questo esempio `make_pair("foo", "bar")` restituisce `pair<const char *, const char *>`. La risoluzione dell'overload deve stabilire quale `func()` è richiesto. `pair<A, B>` ha un costruttore a conversione implicita tratto da `pair<X, Y>`.  Non si tratta di una novità. Era infatti presente in C++98. In C++98/03, tuttavia, la firma del costruttore a conversione implicita esiste sempre, anche se è `pair<int, int>(const pair<const char *, const char *>&)`.  Risoluzione dell'overload non è rilevante che un tentativo di creare un'istanza di tale costruttore determini una forte esplosione perché `const char *` non è implicitamente convertibile in **int**; vengono cercate solo le firme, prima della funzione sono le definizioni creare un'istanza.  Il codice di esempio è quindi ambiguo perché sono presenti firme per convertire `pair<const char *, const char *>` sia in `pair<int, int>` che in `pair<string, string>`.
 
 C++11 risolve questa ambiguità usando `enable_if` per verificare che `pair<A, B>(const pair<X, Y>&)` esista **solo** quando `const X&` è convertibile implicitamente in `A` e `const Y&` è convertibile implicitamente in `B`.  In questo modo, la risoluzione dell'overload può stabilire che `pair<const char *, const char *>` non è convertibile in `pair<int, int>` e che l'overload che accetta `pair<string, string>` è possibile.
 

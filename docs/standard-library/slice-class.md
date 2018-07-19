@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d17dc3e53504add2507617c95439fa7d32565a53
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2d0f45f1b8eac09ae28f8a289a59d8a16a709295
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33858513"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38965877"
 ---
 # <a name="slice-class"></a>Classe slice
 
@@ -146,15 +146,15 @@ slice(
 
 ### <a name="parameters"></a>Parametri
 
-`_StartIndex` Indice del primo elemento nel subset di valarray.
+*_StartIndex* indice valarray del primo elemento nel subset.
 
-`_Len` Il numero di elementi nel subset.
+*_Len* il numero di elementi nel subset.
 
-`stride` La distanza tra gli elementi nel subset.
+*stride* la distanza tra gli elementi del subset.
 
 ### <a name="return-value"></a>Valore restituito
 
-Il costruttore predefinito archivia zero per l'indice iniziale, la lunghezza totale e lo stride. Il secondo costruttore archivia `_StartIndex` per l'indice iniziale, `_Len` per la lunghezza totale e `stride` per lo stride.
+Il costruttore predefinito archivia zero per l'indice iniziale, la lunghezza totale e lo stride. Il secondo costruttore Archivia *_StartIndex* per l'indice iniziale *_Len* per la lunghezza totale, e *stride* per lo stride.
 
 ### <a name="remarks"></a>Note
 

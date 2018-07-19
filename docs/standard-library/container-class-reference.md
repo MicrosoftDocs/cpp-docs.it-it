@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cad92eb5ce664d22cc5ee0ad8b4c26d41c88d883
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 13883e1426be22c8cf3d329be33258c69511900d
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33842846"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38966019"
 ---
 # <a name="container-classreference"></a>Container Class::reference
 
@@ -37,7 +37,7 @@ typedef T2 reference;
 
 ## <a name="remarks"></a>Note
 
-Viene descritta come un sinonimo del tipo non specificato **T2** (in genere **Alloc::reference**). Un oggetto di tipo **reference** può essere convertito in un oggetto di tipo [const_reference](../standard-library/container-class-const-reference.md).
+Viene descritta come un sinonimo del tipo non specificato `T2` (in genere `Alloc::reference`). Un oggetto di tipo `reference` può essere convertito in un oggetto di tipo [const_reference](../standard-library/container-class-const-reference.md).
 
 ## <a name="see-also"></a>Vedere anche
 

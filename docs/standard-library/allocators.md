@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6d7ae039fefc0137d317a15a803a0bf5d8205c31
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: cc84748e35807ef0f270fe8fbbd7560a9a18e3b2
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33850014"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38963495"
 ---
 # <a name="allocators"></a>Allocatori
 
@@ -38,7 +38,7 @@ La libreria standard C++ offre un'implementazione predefinita per un allocatore.
 
 ## <a name="writing-your-own-allocator-c11"></a>Scrittura di un codificatore personalizzato (C++11)
 
-L'allocatore predefinito usa `new` e `delete` per allocare e deallocare la memoria. Se si vuole usare un altro metodo di allocazione della memoria, ad esempio l'uso di memoria condivisa, è necessario creare un allocatore personale. Se si usa C++ 11 ed è necessario scrivere un nuovo allocatore personalizzato, renderlo un allocatore minimo se possibile. Anche se è già stato implementato un allocatore obsoleto, provare a modificarlo in modo che diventi un *allocatore minimo* per sfruttare il più efficiente metodo `construct()` che verrà visualizzato automaticamente.
+L'allocatore predefinito Usa **nuove** e **eliminare** per allocare e deallocare la memoria. Se si vuole usare un altro metodo di allocazione della memoria, ad esempio l'uso di memoria condivisa, è necessario creare un allocatore personale. Se si usa C++ 11 ed è necessario scrivere un nuovo allocatore personalizzato, renderlo un allocatore minimo se possibile. Anche se è già stato implementato un allocatore obsoleto, provare a modificarlo in modo che diventi un *allocatore minimo* per sfruttare il più efficiente metodo `construct()` che verrà visualizzato automaticamente.
 
 Un allocatore minimo richiede molto meno boilerplate e consente di concentrarsi sulle funzioni membro `allocate` e `deallocate` che eseguono tutto il lavoro. Durante la creazione di un allocatore minimo, non implementare i membri tranne quelli illustrati nell'esempio riportato di seguito:
 

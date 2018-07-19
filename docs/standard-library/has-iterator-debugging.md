@@ -16,31 +16,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ab2de61df8c4e22b1955e9fd4798b5128a3e12be
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 81f0509c6230020b586c0341e1de608981c05476
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33845895"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38965979"
 ---
 # <a name="hasiteratordebugging"></a>_HAS_ITERATOR_DEBUGGING
 
 Sostituita da [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md), questa macro definisce se la funzionalità di debug degli iteratori è abilitata in una build di debug. Per impostazione predefinita, il debug degli iteratori è abilitato nelle build di debug e disabilitato nelle build per la vendita. Per altre informazioni, vedere [Supporto del debug degli iteratori](../standard-library/debug-iterator-support.md).
 
 > [!IMPORTANT]
-> L'uso diretto della macro `_HAS_ITERATOR_DEBUGGING` è deprecato. Usare invece `_ITERATOR_DEBUG_LEVEL` per controllare le impostazioni di debug degli iteratori. Per altre informazioni, vedere [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md).
+> Uso diretto della macro HAS_ITERATOR_DEBUGGING è deprecata. Usare invece ITERATOR_DEBUG_LEVEL per controllare le impostazioni di debug di iteratore. Per altre informazioni, vedere [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md).
 
 ## <a name="remarks"></a>Note
 
-Per abilitare il debug degli iteratori nelle build di debug, impostare `_ITERATOR_DEBUG_LEVEL` su 2. Ciò equivale a impostare `_HAS_ITERATOR_DEBUGGING` su 1 ovvero ad abilitarla:
+Per abilitare il debug degli iteratori nelle build di debug, impostare ITERATOR_DEBUG_LEVEL su 2. Ciò equivale a un'impostazione HAS_ITERATOR_DEBUGGING pari a 1 o abilitati:
 
 ```cpp
 #define _ITERATOR_DEBUG_LEVEL 2
 ```
 
-Non è possibile impostare `_ITERATOR_DEBUG_LEVEL` su 2 (e `_HAS_ITERATOR_DEBUGGING` su 1) nelle build per la vendita.
+ITERATOR_DEBUG_LEVEL non può essere impostato su 2 (e HAS_ITERATOR_DEBUGGING precedenti non può essere impostato su 1) compilazioni di vendita al dettaglio.
 
-Per disabilitare il debug degli iteratori nelle build di debug, impostare `_ITERATOR_DEBUG_LEVEL` su 0 o 1. Ciò equivale all'impostazione di `_HAS_ITERATOR_DEBUGGING` su 0 ovvero alla disabilitazione della macro:
+Per disabilitare gli iteratori di debug nella build di debug, impostare ITERATOR_DEBUG_LEVEL su 0 o 1. Ciò equivale a un'impostazione HAS_ITERATOR_DEBUGGING pari a 0 o disabilitate:
 
 ```cpp
 #define _ITERATOR_DEBUG_LEVEL 0

@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 89215ac3d7b1035ef4326d73b21d540aada5fba6
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a0e2fb16ad96ba102295981b9f9d56fda810ddff
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33857815"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961058"
 ---
 # <a name="istriviallydestructible-class"></a>Classe is_trivially_destructible
 
@@ -37,11 +37,11 @@ struct is_trivially_destructible;
 
 ### <a name="parameters"></a>Parametri
 
-`T` Il tipo di query.
+*T* il tipo di query.
 
 ## <a name="remarks"></a>Note
 
-Un'istanza del tipo di predicato contiene true se `T` è un tipo distruttibile e se il distruttore è noto al compilatore per usare operazioni semplici. In caso contrario, contiene false.
+Un'istanza del tipo predicato contiene true se il tipo *T* è un tipo distruttibile e il distruttore è noto al compilatore di non utilizzare alcuna operazione non semplice. In caso contrario, contiene false.
 
 ## <a name="requirements"></a>Requisiti
 

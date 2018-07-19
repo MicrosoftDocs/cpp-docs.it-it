@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5e1ef431fdba40ef9e8fd46b8c0e5d9cf7b32eda
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 68ca39b459b0d0e60305105986d3e76aa86a5bed
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33844003"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961652"
 ---
-# <a name="equalto-struct"></a>Struct equal_to
+# <a name="equalto-struct"></a>equal_to (struct)
 
-Predicato binario che esegue l'operazione di uguaglianza ( `operator==`) sugli argomenti.
+Un predicato binario che esegue l'operazione di uguaglianza (`operator==`) sui relativi argomenti.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -49,11 +49,11 @@ struct equal_to<void>
 
 ### <a name="parameters"></a>Parametri
 
-`Type`, `T`, `U` Qualsiasi tipo che supporta un `operator==` che accetta gli operandi dei tipi specificati o dedotti.
+*Tipo di*, *T*, *U* qualsiasi tipo che supporta un `operator==` che accetta gli operandi dei tipi specificati o dedotti.
 
-`Left` L'operando sinistro dell'operazione di uguaglianza. Il modello non specializzato accetta un argomento di riferimento lvalue di tipo `Type`. Il modello specializzato esegue un inoltro perfetto degli argomenti di riferimento lvalue e rvalue del tipo dedotto `T`.
+*Sinistra* l'operando sinistro dell'operazione di uguaglianza. Il modello non specializzato accetta un argomento di riferimento lvalue di tipo *tipo*. Il modello specializzato esegue un inoltro di lvalue perfetto e gli argomenti di riferimento rvalue del tipo di dedurre *T*.
 
-`Right` L'operando destro dell'operazione di uguaglianza. Il modello non specializzato accetta un argomento di riferimento lvalue di tipo `Type`. Il modello specializzato esegue un inoltro perfetto degli argomenti di riferimento lvalue e rvalue del tipo dedotto `U`.
+*Destra* operando destro dell'operazione di uguaglianza. Il modello non specializzato accetta un argomento di riferimento lvalue di tipo *tipo*. Il modello specializzato esegue un inoltro di lvalue perfetto e gli argomenti di riferimento rvalue del tipo di dedurre *U*.
 
 ## <a name="return-value"></a>Valore restituito
 
@@ -61,7 +61,7 @@ Risultato di `Left == Right`. Il modello specializzato esegue un inoltro perfett
 
 ## <a name="remarks"></a>Note
 
-Gli oggetti di tipo `Type` devono essere confrontabili in termini di uguaglianza. È necessario che l'operatore `operator==` definito nel set di oggetti soddisfi le proprietà matematiche di una relazione di equivalenza. Tutti i tipi di puntatore e numerici incorporati soddisfano questo requisito.
+Gli oggetti di tipo *tipo* deve essere confrontabile in termini di uguaglianza. È necessario che l'operatore `operator==` definito nel set di oggetti soddisfi le proprietà matematiche di una relazione di equivalenza. Tutti i tipi di puntatore e numerici incorporati soddisfano questo requisito.
 
 ## <a name="example"></a>Esempio
 

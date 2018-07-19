@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bf9f05b77adc7d989d37afcbce040405ccbfdf03
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 30234c932aad28d16830b80fd19e4ad334ba407c
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33852110"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962816"
 ---
 # <a name="ispointer-class"></a>Classe is_pointer
 
@@ -37,11 +37,11 @@ struct is_pointer;
 
 ### <a name="parameters"></a>Parametri
 
-`Ty` Il tipo di query.
+*Ty* il tipo di query.
 
 ## <a name="remarks"></a>Note
 
-Un'istanza del predicato di tipo contiene true se il tipo `Ty` è un puntatore a `void`, un puntatore a un oggetto o un puntatore a una funzione oppure un form `cv-qualified` di uno di essi; in caso contrario, contiene false. Si noti che `is_pointer` contiene false se `Ty` è un puntatore a un membro o un puntatore a una funzione membro.
+Un'istanza del tipo predicato contiene true se il tipo *Ty* è un puntatore a **void**, un puntatore a un oggetto, o un puntatore a una funzione o `cv-qualified` forma di uno di essi, in caso contrario, contiene false. Si noti che `is_pointer` contiene false se *Ty* è un puntatore a membro o un puntatore a funzione membro.
 
 ## <a name="example"></a>Esempio
 

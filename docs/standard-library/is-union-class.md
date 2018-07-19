@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 205b05b4832098bca1d97bd949137d7271f111d5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1ea1f79d9f57c34bf6deed94f04354b87759d794
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33855689"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38966585"
 ---
 # <a name="isunion-class"></a>Classe is_union
 
@@ -37,11 +37,11 @@ struct is_union;
 
 ### <a name="parameters"></a>Parametri
 
-`Ty` Il tipo di query.
+*Ty* il tipo di query.
 
 ## <a name="remarks"></a>Note
 
-Un'istanza del predicato di tipo contiene true se il tipo `Ty` è un tipo di unione o un form `cv-qualified` di un tipo di unione; in caso contrario, contiene false.
+Un'istanza del tipo predicato contiene true se il tipo *Ty* è un tipo unione o un `cv-qualified` form di un tipo unione, in caso contrario, contiene false.
 
 ## <a name="example"></a>Esempio
 

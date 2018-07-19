@@ -1,5 +1,5 @@
 ---
-title: Classe IDispatchImpl. | Documenti Microsoft
+title: Classe IDispatchImpl | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,18 +24,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7fddf556eba07264f6ea0b01edea3e3d1e8a3a7b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c30f65701aa42c3fb73a5ef544f4b4126468a29d
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32364366"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962579"
 ---
-# <a name="idispatchimpl-class"></a>IDispatchImpl (classe)
+# <a name="idispatchimpl-class"></a>Classe IDispatchImpl
 Fornisce un'implementazione predefinita per il `IDispatch` fa parte di un'interfaccia duale.  
   
 > [!IMPORTANT]
->  Questa classe e i relativi membri non possono essere utilizzati nelle applicazioni eseguite in Windows Runtime.  
+>  Questa classe e i relativi membri non possono essere utilizzati nelle applicazioni eseguite nel Runtime di Windows.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -50,23 +50,23 @@ class ATL_NO_VTABLE IDispatchImpl : public T
 ```  
   
 #### <a name="parameters"></a>Parametri  
- [in] `T`  
+ [in] *T*  
  Un'interfaccia duale.  
   
- [in] `piid`  
- Un puntatore per l'IID del `T`.  
+ [in] *piid*  
+ Un puntatore all'IID del *T*.  
   
- [in] `plibid`  
- Puntatore a LIBID della libreria dei tipi che contiene informazioni sull'interfaccia. Per impostazione predefinita, la libreria dei tipi a livello di server viene passata.  
+ [in] *plibid*  
+ Puntatore a LIBID della libreria dei tipi che contiene informazioni sull'interfaccia. Per impostazione predefinita, viene passata la libreria dei tipi a livello di server.  
   
- [in] `wMajor`  
+ [in] *wMajor*  
  Versione principale della libreria dei tipi. Per impostazione predefinita, il valore è 1.  
   
- [in] `wMinor`  
+ [in] *wMinor*  
  Versione secondaria della libreria dei tipi. Per impostazione predefinita, il valore è 0.  
   
- [in] `tihclass`  
- La classe utilizzata per gestire le informazioni sul tipo per `T`. Per impostazione predefinita, il valore è `CComTypeInfoHolder`.  
+ [in] *tihclass*  
+ La classe usata per gestire le informazioni sul tipo per *T*. Per impostazione predefinita, il valore è `CComTypeInfoHolder`.  
   
 ## <a name="members"></a>Membri  
   
@@ -74,27 +74,27 @@ class ATL_NO_VTABLE IDispatchImpl : public T
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[IDispatchImpl::IDispatchImpl](#idispatchimpl)|Costruttore. Chiamate `AddRef` sulla variabile membro protetto che gestisce le informazioni sul tipo di interfaccia duale. Il distruttore chiama `Release`.|  
+|[IDispatchImpl::IDispatchImpl](#idispatchimpl)|Costruttore. Le chiamate `AddRef` sulla variabile membro protetto che gestisce le informazioni sul tipo per l'interfaccia duale. Il distruttore chiama `Release`.|  
   
 ### <a name="public-methods"></a>Metodi pubblici  
   
 |Nome|Descrizione|  
 |----------|-----------------|  
 |[IDispatchImpl::GetIDsOfNames](#getidsofnames)|Esegue il mapping di un set di nomi a un set corrispondente di ID dispatch.|  
-|[IDispatchImpl::GetTypeInfo](#gettypeinfo)|Recupera le informazioni sul tipo di interfaccia duale.|  
+|[IDispatchImpl::GetTypeInfo](#gettypeinfo)|Recupera le informazioni sul tipo per l'interfaccia duale.|  
 |[IDispatchImpl::GetTypeInfoCount](#gettypeinfocount)|Determina se è disponibile per l'interfaccia duale informazioni sul tipo.|  
 |[IDispatchImpl::Invoke](#invoke)|Fornisce l'accesso ai metodi e proprietà esposte dall'interfaccia duale.|  
   
 ## <a name="remarks"></a>Note  
- `IDispatchImpl` fornisce un'implementazione predefinita per il `IDispatch` fa parte di un'interfaccia duale su un oggetto. Un'interfaccia duale deriva da `IDispatch` e utilizzare solo i tipi compatibili con l'automazione. Analogamente a un'interfaccia dispatch, un'interfaccia duale supporta l'associazione anticipata e tardiva; Tuttavia, un'interfaccia duale supporta anche l'associazione vtable.  
+ `IDispatchImpl` fornisce un'implementazione predefinita per il `IDispatch` fa parte di qualsiasi interfaccia duale su un oggetto. Un'interfaccia duale deriva da `IDispatch` e Usa solo tipi compatibili con l'automazione. Come un'interfaccia di dispatch, un'interfaccia duale supporta l'associazione anticipata e tardiva; Tuttavia, un'interfaccia duale supporta anche l'associazione vtable.  
   
- Nell'esempio seguente viene illustrata un'implementazione tipica di `IDispatchImpl`.  
+ Nell'esempio seguente viene illustrata un'implementazione tipica delle `IDispatchImpl`.  
   
  [!code-cpp[NVC_ATL_COM#47](../../atl/codesnippet/cpp/idispatchimpl-class_1.h)]  
   
- Per impostazione predefinita, il `IDispatchImpl` classe cerca le informazioni sul tipo per `T` nel Registro di sistema. Per implementare un'interfaccia di annullare la registrazione, è possibile utilizzare la `IDispatchImpl` classe senza accedere al Registro di sistema utilizzando un numero di versione predefiniti. Se si crea un `IDispatchImpl` oggetto con 0xFFFF come valore per `wMajor` e 0xFFFF come valore per `wMinor`, `IDispatchImpl` classe recupera la libreria dei tipi dal file con estensione dll anziché il Registro di sistema.  
+ Per impostazione predefinita, il `IDispatchImpl` cerca le informazioni sul tipo per la classe *T* nel Registro di sistema. Per implementare un'interfaccia non registrata, è possibile usare il `IDispatchImpl` classe senza accedere al Registro di sistema con un numero di versione predefinito. Se si crea un' `IDispatchImpl` oggetto avente 0xFFFF come valore per *wMajor* e 0xFFFF come valore per *wMinor*, il `IDispatchImpl` classe recupera la libreria dei tipi dal file con estensione dll anziché il Registro di sistema.  
   
- `IDispatchImpl` contiene un membro statico di tipo `CComTypeInfoHolder` che gestisce le informazioni sul tipo per l'interfaccia duale. Interfaccia se si dispone di più oggetti che implementano lo stesso duale, solo un'istanza di `CComTypeInfoHolder` viene utilizzato.  
+ `IDispatchImpl` contiene un membro statico di tipo `CComTypeInfoHolder` che gestisce le informazioni sul tipo per l'interfaccia duale. Se sono presenti più oggetti che implementano lo stesso doppia interfaccia, solo un'istanza di `CComTypeInfoHolder` viene usato.  
   
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  `T`  
@@ -117,10 +117,10 @@ STDMETHOD(GetIDsOfNames)(
 ```  
   
 ### <a name="remarks"></a>Note  
- Vedere [GetIDsOfNames](http://msdn.microsoft.com/en-us/6f6cf233-3481-436e-8d6a-51f93bf91619) in Windows SDK.  
+ Visualizzare [GetIDsOfNames](/previous-versions/windows/desktop/api/oaidl/nf-oaidl-idispatch-getidsofnames) in Windows SDK.  
   
 ##  <a name="gettypeinfo"></a>  IDispatchImpl::GetTypeInfo  
- Recupera le informazioni sul tipo di interfaccia duale.  
+ Recupera le informazioni sul tipo per l'interfaccia duale.  
   
 ```
 STDMETHOD(GetTypeInfo)(
@@ -130,7 +130,7 @@ STDMETHOD(GetTypeInfo)(
 ```  
   
 ### <a name="remarks"></a>Note  
- Vedere [IDispatch:: GetTypeInfo](http://msdn.microsoft.com/en-us/cc1ec9aa-6c40-4e70-819c-a7c6dd6b8c99) in Windows SDK.  
+ Visualizzare [IDispatch:: GetTypeInfo](/previous-versions/windows/desktop/api/oaidl/nf-oaidl-idispatch-gettypeinfo) in Windows SDK.  
   
 ##  <a name="gettypeinfocount"></a>  IDispatchImpl::GetTypeInfoCount  
  Determina se è disponibile per l'interfaccia duale informazioni sul tipo.  
@@ -143,7 +143,7 @@ STDMETHOD(GetTypeInfoCount)(UINT* pctinfo);
  Vedere `IDispatch::GetTypeInfoCount` in Windows SDK.  
   
 ##  <a name="idispatchimpl"></a>  IDispatchImpl::IDispatchImpl  
- Costruttore. Chiamate `AddRef` sulla variabile membro protetto che gestisce le informazioni sul tipo di interfaccia duale. Il distruttore chiama **versione**.  
+ Costruttore. Le chiamate `AddRef` sulla variabile membro protetto che gestisce le informazioni sul tipo per l'interfaccia duale. Il distruttore chiama `Release`.  
   
 ```
 IDispatchImpl();
@@ -165,7 +165,7 @@ STDMETHOD(Invoke)(
 ```  
   
 ### <a name="remarks"></a>Note  
- Vedere [IDispatch:: Invoke](http://msdn.microsoft.com/en-us/964ade8e-9d8a-4d32-bd47-aa678912a54d) in Windows SDK.  
+ Visualizzare [IDispatch:: Invoke](/previous-versions/windows/desktop/api/oaidl/nf-oaidl-idispatch-invoke) in Windows SDK.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Cenni preliminari sulla classe](../../atl/atl-class-overview.md)
+ [Panoramica della classe](../../atl/atl-class-overview.md)

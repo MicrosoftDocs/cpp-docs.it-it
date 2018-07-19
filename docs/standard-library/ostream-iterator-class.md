@@ -22,16 +22,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 49626cbb33ed1220ad82cbec10ad675769b054d6
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 4ee931abb2273ab3119fa62b9219ad69448b2048
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33863608"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38963524"
 ---
 # <a name="ostreamiterator-class"></a>Classe ostream_iterator
 
-La classe modello ostream_iterator descrive un oggetto iteratore di output che consente di scrivere elementi consecutivi nel flusso di output con l'estrazione **operator <<**.
+La classe modello ostream_iterator descrive un oggetto iteratore di output che consente di scrivere elementi consecutivi nel flusso di output con l'estrazione `operator <<`.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -44,9 +44,9 @@ class ostream_iterator
 
 *Tipo* il tipo di oggetto da inserire nel flusso di output.
 
-`CharType` Tipo che rappresenta il tipo di carattere per il `ostream_iterator`. Questo argomento è facoltativo e il valore predefinito è `char`.
+*CharType* il tipo che rappresenta il tipo di carattere per il `ostream_iterator`. Questo argomento è facoltativo e il valore predefinito è **char**.
 
-`Traits` Tipo che rappresenta il tipo di carattere per il `ostream_iterator`. Questo argomento è facoltativo e il valore predefinito è `char_traits`\< *CharType>.*
+*Tratti* il tipo che rappresenta il tipo di carattere per il `ostream_iterator`. Questo argomento è facoltativo e il valore predefinito è `char_traits`\< *CharType>.*
 
 La classe ostream_iterator deve soddisfare i requisiti per un iteratore di output. Gli algoritmi possono essere scritti direttamente nei flussi di output utilizzando un `ostream_iterator`.
 
@@ -88,7 +88,7 @@ typedef CharType char_type;
 
 ### <a name="remarks"></a>Note
 
-Il tipo è un sinonimo del parametro di modello **CharType**.
+Il tipo è un sinonimo del parametro di modello `CharType`.
 
 ### <a name="example"></a>Esempio
 
@@ -236,11 +236,11 @@ ostream_iterator<Type, CharType, Traits>& operator=(const Type& val);
 
 ### <a name="parameters"></a>Parametri
 
-`val` Il valore dell'oggetto di tipo `Type` da inserire nel flusso di output.
+*Val* il valore dell'oggetto di tipo `Type` da inserire nel flusso di output.
 
 ### <a name="return-value"></a>Valore restituito
 
-L'operatore inserisce `val` nel flusso di output associato all'oggetto, seguito dal delimitatore specificato nel [costruttore di ostream_iterator](#ostream_iterator) (se presente) e quindi restituisce un riferimento a `ostream_iterator`.
+L'operatore inserisce *val* nel flusso di output associato all'oggetto, seguito dal delimitatore specificato nella [costruttore di ostream_iterator](#ostream_iterator) (se presente) e quindi restituisce un riferimento per le `ostream_iterator`.
 
 ### <a name="remarks"></a>Note
 
@@ -294,15 +294,15 @@ ostream_iterator(
 
 ### <a name="parameters"></a>Parametri
 
-`_Ostr` Il flusso di output di tipo [ostream_iterator:: ostream_type](#ostream_type) per eseguire un'iterazione.
+*_Ostr* flusso di output di tipo [ostream_iterator:: ostream_type](#ostream_type) per eseguire l'iterazione.
 
-`_Delimiter` Il delimitatore che viene inserito nel flusso di output tra i valori.
+*Delimitazione* il delimitatore che viene inserito nel flusso di output tra i valori.
 
 ### <a name="remarks"></a>Note
 
 Il primo costruttore inizializza il puntatore del flusso di output con `&_Ostr`. Il puntatore di stringa del delimitatore designa una stringa vuota.
 
-Il secondo costruttore inizializza il puntatore del flusso di output con `&_Ostr` e il puntatore di stringa del delimitatore con `_Delimiter`.
+Il secondo costruttore inizializza il puntatore del flusso di output con `&_Ostr` e il puntatore di stringa del delimitatore con *delimitazione*.
 
 ### <a name="example"></a>Esempio
 
@@ -377,7 +377,7 @@ typedef Traits traits_type;
 
 ### <a name="remarks"></a>Note
 
-Il tipo è un sinonimo del parametro di modello **Traits**.
+Il tipo è un sinonimo del parametro di modello `Traits`.
 
 ### <a name="example"></a>Esempio
 

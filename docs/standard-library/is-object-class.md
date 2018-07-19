@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3eaae998f1ca975e8eb4d102c8f7793ac8ab3b34
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 413223636efb735303ec600b09803472370ff306
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33912784"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38965591"
 ---
 # <a name="isobject-class"></a>Classe is_object
 
@@ -37,11 +37,11 @@ struct is_object;
 
 ### <a name="parameters"></a>Parametri
 
-`Ty` Il tipo di query.
+*Ty* il tipo di query.
 
 ## <a name="remarks"></a>Note
 
-Un'istanza del tipo predicato contiene true se il tipo `Ty` è un tipo di riferimento, un tipo di funzione, o void, o un form `cv-qualified` di uno di essi; in caso contrario, contiene false.
+Un'istanza del tipo predicato contiene true se il tipo *Ty* è un tipo riferimento, un tipo di funzione o void, o un `cv-qualified` forma di uno di essi, in caso contrario risulta vera.
 
 ## <a name="example"></a>Esempio
 

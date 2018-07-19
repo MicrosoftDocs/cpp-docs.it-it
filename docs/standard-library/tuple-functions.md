@@ -17,12 +17,12 @@ helpviewer_keywords:
 - std::get [C++]
 - std::make_tuple [C++]
 - std::tie [C++]
-ms.openlocfilehash: d6f921f85ffc6ef6d7985d66fe8637f044965176
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f0b995c4a966481e02ebd96748b247fd8844f19f
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33858812"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38966407"
 ---
 # <a name="lttuplegt-functions"></a>Funzioni &lt;tuple&gt;
 
@@ -64,17 +64,21 @@ template <class T, class... Types>
 
 ### <a name="parameters"></a>Parametri
 
-`Index` Indice dell'elemento da ottenere.
+*Index*  
+ L'indice dell'elemento da visualizzare.
 
-`Types` La sequenza relativa ai tipi dichiarati nella tupla, in ordine di dichiarazione.
+*Tipi*  
+ La sequenza relativa ai tipi dichiarati nella tupla, in ordine di dichiarazione.
 
-`T` Il tipo di elemento da ottenere.
+*T*  
+ Il tipo di elemento da visualizzare.
 
-`Tuple` Std:: tuple che include il numero di elementi.
+*Tuple*  
+ Un valore std::tuple che include il numero degli elementi.
 
 ### <a name="remarks"></a>Note
 
-Le funzionalità del modello restituiscono un riferimento al valore dell'indice `Index`o del tipo `T` nell'oggetto `tuple` .
+Le funzioni di modello restituiscono un riferimento al valore in corrispondenza dell'indice *indice*, o di tipo *T* nel `tuple` oggetto.
 
 La chiamata `get<T>(Tuple)` genera un errore del compilatore, nel caso in cui la tupla contenga più di un elemento o non contenga elementi di tipo T.
 
@@ -118,9 +122,11 @@ template <class T1, class T2, ..., class TN>
 
 ### <a name="parameters"></a>Parametri
 
-`TN` Il tipo del parametro Nth (funzione).
+*TN*  
+ Tipo del parametro di funzione Nth.
 
-`tN` Il valore del parametro Nth (funzione).
+*TN*  
+ Valore del parametro di funzione Nth.
 
 ### <a name="remarks"></a>Note
 
@@ -174,7 +180,8 @@ tuple<T1&, T2&, ..., TN&> tie(T1& t1, T2& t2, ..., TN& tN);
 
 ### <a name="parameters"></a>Parametri
 
-`TN` Il tipo di base dell'ennesimo elemento tupla.
+*TN*  
+ Tipo di base dell'ennesimo elemento tupla.
 
 ### <a name="remarks"></a>Note
 

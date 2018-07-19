@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::operator&lt; (utility)
 - std::operator&lt;= (utility)
 - std::operator== (utility)
-ms.openlocfilehash: e5ed9d81e4b63dd57ebaf5f41ecc8422eaf166dd
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f5dc68dcd2b29b77b54bcc5af7e9dc8e4e79a897
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33861610"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962026"
 ---
 # <a name="ltutilitygt-operators"></a>Operatori &lt;utility&gt;
 
@@ -48,9 +48,11 @@ constexpr bool operator!=(const pair<T, U>& left, const pair<T, U>& right);
 
 ### <a name="parameters"></a>Parametri
 
-`left` Un oggetto di tipo **coppia.**
+*left*  
+ Oggetto di tipo `pair`.
 
-`right` Un oggetto di tipo `pair`.
+*right*  
+ Oggetto di tipo `pair`.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -118,9 +120,9 @@ constexpr bool operator==(const pair<T, U>& left, const pair<T, U>& right);
 
 ### <a name="parameters"></a>Parametri
 
-`left` Un oggetto di tipo **coppia.**
+*a sinistra* un oggetto di tipo `pair`.
 
-`right` Un oggetto di tipo `pair`.
+*a destra* un oggetto di tipo `pair`.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -179,9 +181,11 @@ constexpr bool operator<(const pair<T, U>& left, const pair<T, U>& right);
 
 ### <a name="parameters"></a>Parametri
 
-`left` Un oggetto di tipo `pair` sul lato sinistro dell'operatore.
+*left*  
+ Oggetto di tipo `pair` a sinistra dell'operatore.
 
-`right` Un oggetto di tipo `pair` sul lato destro dell'operatore.
+*right*  
+ Oggetto di tipo `pair` a destra dell'operatore.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -189,7 +193,7 @@ constexpr bool operator<(const pair<T, U>& left, const pair<T, U>& right);
 
 ### <a name="remarks"></a>Note
 
-Il `left` `pair` oggetto viene definito rigorosamente inferiore a quello di `right` `pair` oggetto se `left` è minore di e non è uguale a `right`.
+Il `left` `pair` oggetto viene definito come rigorosamente minore di `right` `pair` dell'oggetto se *sinistro* è minore di e non è uguale a *destro*.
 
 In un confronto tra coppie, i primi elementi dei valori delle due coppie hanno la priorità più alta. Se sono diversi, il risultato del confronto verrà quindi considerato come risultato del confronto della coppia. Se i valori dei primi elementi non sono diversi, vengono confrontati i valori dei secondi elementi e il risultato del confronto viene considerato il risultato del confronto della coppia.
 
@@ -254,9 +258,11 @@ constexpr bool operator<=(const pair<T, U>& left, const pair<T, U>& right);
 
 ### <a name="parameters"></a>Parametri
 
-`left` Un oggetto di tipo `pair` sul lato sinistro dell'operatore.
+*left*  
+ Oggetto di tipo `pair` a sinistra dell'operatore.
 
-`right` Un oggetto di tipo `pair` sul lato destro dell'operatore.
+*right*  
+ Oggetto di tipo `pair` a destra dell'operatore.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -337,9 +343,11 @@ constexpr bool operator>(const pair<T, U>& left, const pair<T, U>& right);
 
 ### <a name="parameters"></a>Parametri
 
-`left` Un oggetto di tipo `pair` sul lato sinistro dell'operatore.
+*left*  
+ Oggetto di tipo `pair` a sinistra dell'operatore.
 
-`right` Un oggetto di tipo `pair` sul lato destro dell'operatore.
+*right*  
+ Oggetto di tipo `pair` a destra dell'operatore.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -347,7 +355,7 @@ constexpr bool operator>(const pair<T, U>& left, const pair<T, U>& right);
 
 ### <a name="remarks"></a>Note
 
-Il `left` `pair` viene definito rigorosamente maggiore di `right` `pair` oggetto se `left` è maggiore di e non è uguale a `right`.
+Il `left` `pair` viene definito rigorosamente maggiore il `right` `pair` dell'oggetto se *sinistro* maggiore e non è uguale a *destro*.
 
 In un confronto tra coppie, i primi elementi dei valori delle due coppie hanno la priorità più alta. Se sono diversi, il risultato del confronto verrà quindi considerato come risultato del confronto della coppia. Se i valori dei primi elementi non sono diversi, vengono confrontati i valori dei secondi elementi e il risultato del confronto viene considerato il risultato del confronto della coppia.
 
@@ -422,9 +430,11 @@ constexpr bool operator>=(const pair<T, U>& left, const pair<T, U>& right);
 
 ### <a name="parameters"></a>Parametri
 
-`left` Un oggetto di tipo `pair` sul lato sinistro dell'operatore.
+*left*  
+ Oggetto di tipo `pair` a sinistra dell'operatore.
 
-`right` Un oggetto di tipo `pair` sul lato destro dell'operatore.
+*right*  
+ Oggetto di tipo `pair` a destra dell'operatore.
 
 ### <a name="return-value"></a>Valore restituito
 

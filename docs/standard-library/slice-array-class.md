@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 67ffb39df8f02df233a31cfffeea5ab5ddcdf933
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7cb34fd44214ac503c8b9e201d07dbe1a6eb85de
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33855442"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38965766"
 ---
 # <a name="slicearray-class"></a>Classe slice_array
 
@@ -58,7 +58,7 @@ La classe modello viene creata indirettamente da alcune operazioni valarray e no
 
 `slice_array`\< **Type**> `valarray`< **Type**:: `operator[]` ( `slice`).
 
-Si costruisce un oggetto **slice_array\<Type>** solo scrivendo un'espressione nel formato [va&#91;sl&#93;](../standard-library/valarray-class.md#op_at), per una sezione **sl** di valarray **va**. Le funzioni membro della classe slice_array si comportano quindi come le firme di funzione corrispondenti definite per **valarray\<Type>**, ad eccezione del fatto che è interessata solo la sequenza degli elementi selezionati. La sequenza controllata dall'oggetto slice_array è definita dai tre parametri del costruttore di sezione, ovvero l'indice del primo elemento della sezione, il numero di elementi e la distanza tra questi ultimi. Un oggetto slice_array sottratto da valarray **va** dichiarato da **va**[ `slice`(2, 5, 3)] seleziona da **va** elementi con indici 2, 5, 8, 11 e 14. Affinché la procedura sia valida, è necessario che gli indici siano validi.
+Si costruisce una `slice_array<Type>` oggetto solo scrivendo un'espressione nel formato [va&#91;sl&#93;](../standard-library/valarray-class.md#op_at), per una sezione `sl` dell'oggetto valarray `va`. Le funzioni membro della classe slice_array si comportano quindi come le firme di funzione corrispondenti definite per `valarray<Type>`, ad eccezione del fatto che è interessata solo la sequenza degli elementi selezionati. La sequenza controllata dall'oggetto slice_array è definita dai tre parametri del costruttore di sezione, ovvero l'indice del primo elemento della sezione, il numero di elementi e la distanza tra questi ultimi. Un oggetto slice_array sottratto da valarray `va` dichiarato da **valutazione della vulnerabilità**[ `slice`(2, 5, 3)] seleziona gli elementi con indici 2, 5, 8, 11 e 14 da `va`. Affinché la procedura sia valida, è necessario che gli indici siano validi.
 
 ## <a name="example"></a>Esempio
 

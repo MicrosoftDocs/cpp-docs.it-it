@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: de37ee92805d35b25e73e0682ce8abe79822a8b5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: bbd2f2c652c619a954b789a3b765fc636a03c33e
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33841180"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962724"
 ---
 # <a name="binder2nd-class"></a>Classe binder2nd
 
@@ -53,21 +53,21 @@ protected:
 
 ### <a name="parameters"></a>Parametri
 
-`Func` Oggetto funzione binaria da convertire in un oggetto funzione unaria.
+*Func* oggetto funzione binaria da convertire in un oggetto funzione unaria.
 
-`right` Il valore a cui è necessario associare il secondo argomento dell'oggetto funzione binaria.
+*a destra* il valore a cui è necessario associare il secondo argomento dell'oggetto funzione binaria.
 
-`left` Il valore dell'argomento che l'oggetto binario adattato confronta il valore predefinito del secondo argomento.
+*a sinistra* il valore dell'argomento che l'oggetto binario adattato confronta con il valore predefinito del secondo argomento.
 
 ## <a name="return-value"></a>Valore restituito
 
-L'oggetto funzione unaria risultante dall'associazione del secondo argomento dell'oggetto funzione binaria al valore `right.`
+L'oggetto funzione unaria risultante dall'associazione del secondo argomento dell'oggetto funzione binaria al valore *a destra*.
 
 ## <a name="remarks"></a>Note
 
-La classe modello archivia una copia di un oggetto funzione binaria _ *Func* in **op** e una copia di `right` in **value**. Definisce la relativa funzione membro `operator()` che restituisce **op**( `left`, **value**).
+La classe modello archivia una copia di un oggetto funzione binaria _ *Func* nelle `op`e una copia di *a destra* in `value`. Definisce la relativa funzione membro `operator()` che restituisce **op**( `left`, **value**).
 
-Se `Func` è un oggetto di tipo **Operation** e c è una costante, [bind2nd](../standard-library/functional-functions.md#bind2nd) ( `Func`, `c` ) equivale al costruttore di classe `binder2nd` `binder2nd`\< **Operation**> ( `Func`, `c` ) ed è più pratico.
+Se `Func` è un oggetto di tipo `Operation` e c è una costante, quindi [bind2nd](../standard-library/functional-functions.md#bind2nd) ( `Func`, `c` ) equivale al `binder2nd` costruttore della classe `binder2nd` \<  **Operazione**> ( `Func`, `c` ) ed è più pratico.
 
 ## <a name="example"></a>Esempio
 

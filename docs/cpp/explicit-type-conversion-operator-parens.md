@@ -1,5 +1,5 @@
 ---
-title: 'Operatore di conversione esplicita di tipi: () | Documenti Microsoft'
+title: 'Operatore di conversione esplicita di tipi: () | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,11 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 93cbd58b3259821292254d8395f5d2435ecaa365
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0f749f8cd43588eea8476c2746134b706737b6f5
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38966934"
 ---
 # <a name="explicit-type-conversion-operator-"></a>Operatore di conversione esplicita di tipi: ()
 Il linguaggio C++ consente la conversione esplicita del tipo mediante una sintassi simile a quella della chiamata di funzione.  
@@ -34,17 +35,17 @@ simple-type-name ( expression-list )
 ```  
   
 ## <a name="remarks"></a>Note  
- Oggetto *simple-type-name* seguito da un *expression-list* racchiuso costrutti parentesi di un oggetto del tipo specificato utilizzando le espressioni specificate. Nell'esempio seguente viene illustrata una conversione di tipo esplicita per il tipo int:  
+ Oggetto *simple-type-name* seguita da un *expression-list* racchiuso tra parentesi costrutti parentesi un oggetto del tipo specificato utilizzando le espressioni specificate. Nell'esempio seguente viene illustrata una conversione di tipo esplicita per il tipo int:  
   
-```  
+```cpp 
 int i = int( d );  
 ```  
   
- Nell'esempio seguente un `Point` classe.  
+ L'esempio seguente mostra un `Point` classe.  
   
 ## <a name="example"></a>Esempio  
   
-```  
+```cpp 
 // expre_Explicit_Type_Conversion_Operator.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -90,14 +91,14 @@ int main()
   
 ## <a name="output"></a>Output  
   
-```  
+```Output  
 x = 20, y = 10  
 x = 0, y = 0  
 ```  
   
  Sebbene l'esempio precedente dimostri la conversione del tipo esplicita mediante le costanti, la stessa tecnica può essere utilizzata per eseguire queste conversioni di oggetti. Nel frammento di codice che segue viene illustrata questa alternativa:  
   
-```  
+```cpp 
 int i = 7;  
 float d;  
   
@@ -106,13 +107,16 @@ d = float( i );
   
  Le conversioni esplicite dei tipi possono essere specificate utilizzando la sintassi di "cast". L'esempio precedente, riscritto utilizzando la sintassi di cast, è:  
   
-```  
+```cpp
+
 d = (float)i;  
+
 ```  
   
  Sia le conversioni eseguite con il cast che con la funzione danno gli stessi risultati quando si esegue la conversione di valori singoli. Tuttavia, nella sintassi stile-funzione è possibile specificare più argomenti per la conversione. Questa differenza è importante per i tipi definiti dall'utente. Si consideri una classe `Point` e le relative conversioni:  
   
-```  
+```cpp
+
 struct Point  
 {  
     Point( short x, short y ) { _x = x; _y = y; }  
@@ -121,14 +125,15 @@ struct Point
 };  
 ...  
 Point pt = Point( 3, 10 );  
-```  
+
+```
   
  Nell'esempio precedente, che utilizza la conversione stile-funzione, viene illustrato come convertire due valori (uno per *x* e uno per *y*) per il tipo definito dall'utente `Point`.  
   
 > [!CAUTION]
 >  Si consiglia di utilizzare con cautela le conversioni esplicite del tipo, poiché queste eseguono l'override del controllo del tipo incorporato del compilatore C++.  
   
- Il [cast](../cpp/cast-operator-parens.md) notation deve essere utilizzato per le conversioni in tipi che non dispongono di un *simple-type-name* (puntatore o tipi di riferimento, ad esempio). Conversione di tipi che possono essere espressi con un *simple-type-name* può essere scritta in qualsiasi formato. Vedere [gli identificatori di tipo](http://msdn.microsoft.com/en-us/34b6c737-0ef1-4470-9b77-b26e46c0bbd4) per ulteriori informazioni su cosa costituisce un *simple-type-name*.  
+ Il [cast](../cpp/cast-operator-parens.md) notation deve essere utilizzato per le conversioni verso tipi che non hanno una *simple-type-name* (puntatore o tipi di riferimento, ad esempio). La conversione a tipi che possono essere espressi con un *simple-type-name* può essere scritta in qualsiasi formato.  
   
  La definizione del tipo all'interno dei cast non è consentita.  
   

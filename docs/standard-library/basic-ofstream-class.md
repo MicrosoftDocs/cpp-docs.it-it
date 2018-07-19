@@ -26,12 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 57ed2b662b21425f206b0a4f07e072b723c8aae4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0d90cbfd5d1f239f05d19803c9ed89ad080667f2
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33847429"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964814"
 ---
 # <a name="basicofstream-class"></a>Classe basic_ofstream
 
@@ -46,13 +46,13 @@ class basic_ofstream : public basic_ostream<Elem, Tr>
 
 ### <a name="parameters"></a>Parametri
 
-`Elem` Elemento di base del buffer di file.
+*Elem* l'elemento di base del buffer di file.
 
-`Tr` I tratti dell'elemento di base del buffer di file (in genere `char_traits` <  `Elem`>).
+*TR* i tratti dell'elemento di base del buffer di file (in genere `char_traits` <  `Elem`>).
 
 ## <a name="remarks"></a>Note
 
-Quando la specializzazione `wchar_t` di `basic_ofstream` scrive nel file, se il file è aperto in modalità testo scriverà una sequenza MBCS. La rappresentazione interna userà un buffer di caratteri `wchar_t`.
+Quando la **wchar_t** specializzazione di `basic_ofstream` scrive nel file, se il file viene aperto in modalità testo scriverà una sequenza MBCS. La rappresentazione interna userà un buffer di caratteri `wchar_t`.
 
 L'oggetto archivia un oggetto della classe `basic_filebuf`< `Elem`, `Tr`>.
 
@@ -129,21 +129,21 @@ basic_ofstream(
 
 ### <a name="parameters"></a>Parametri
 
-`_Filename` Il nome del file da aprire.
+*Nome file* il nome del file da aprire.
 
-`_Mode` Una delle enumerazioni negli [ios_base:: OpenMode](../standard-library/ios-base-class.md#openmode).
+*Modalità* una delle enumerazioni nello [ios_base:: OpenMode](../standard-library/ios-base-class.md#openmode).
 
-`_Prot` Il file predefinito aprendo protezione, equivalente ai `shflag` parametro nel [fsopen, wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md).
+*_Prot* protezione dati, equivalente a di apertura file predefinita di `shflag` nel parametro [fsopen, wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md).
 
-`right` Riferimento rvalue ai `basic_ofstream` dell'oggetto utilizzato per inizializzare questa `basic_ofstream` oggetto.
+*a destra* riferimento rvalue al `basic_ofstream` dell'oggetto viene usato per inizializzare questo `basic_ofstream` oggetto.
 
 ### <a name="remarks"></a>Note
 
-Il primo costruttore inizializza la classe base chiamando [basic_ostream](../standard-library/basic-ostream-class.md)( **sb**), dove **sb** è l'oggetto archiviato della classe [basic_filebuf](../standard-library/basic-filebuf-class.md)< `Elem`, `Tr`>. Inizializza anche **sb** chiamando `basic_filebuf`< `Elem`, `Tr`>.
+Il primo costruttore inizializza la classe base chiamando [basic_ostream](../standard-library/basic-ostream-class.md)(`sb`), dove `sb` è l'oggetto archiviato della classe [basic_filebuf](../standard-library/basic-filebuf-class.md) <  `Elem`, `Tr`>. Inizializza anche `sb` chiamando `basic_filebuf`< `Elem`, `Tr`>.
 
-Il secondo e il terzo costruttore inizializza la classe base chiamando `basic_ostream`( **sb**). Inizializza anche **sb** chiamando `basic_filebuf`< `Elem`, `Tr`> e quindi **sb**. [open](../standard-library/basic-filebuf-class.md#open)( `_Filename`, `_Mode` &#124; `ios_base::out`). Se quest'ultima funzione restituisce un puntatore null, il costruttore chiama [setstate](../standard-library/basic-ios-class.md#setstate)( **failbit**).
+Il secondo e il terzo costruttore inizializza la classe base chiamando `basic_ostream`( **sb**). Inizializza anche `sb` chiamando `basic_filebuf` <  `Elem`, `Tr`> e quindi `sb`. [open](../standard-library/basic-filebuf-class.md#open)( `_Filename`, `_Mode` &#124; `ios_base::out`). Se quest'ultima restituisce un puntatore null, il costruttore chiama [setstate](../standard-library/basic-ios-class.md#setstate)(`failbit`).
 
-Il quarto costruttore è una funzione di copia. Inizializza l'oggetto con il contenuto di `right`, considerato come riferimento rvalue.
+Il quarto costruttore è una funzione di copia. Inizializza l'oggetto con il contenuto della *a destra*, considerato come riferimento rvalue.
 
 ### <a name="example"></a>Esempio
 
@@ -181,7 +181,7 @@ La funzione membro chiama [rdbuf](../standard-library/basic-ifstream-class.md#rd
 
 ### <a name="example"></a>Esempio
 
-Vedere [basic_filebuf::close](../standard-library/basic-filebuf-class.md#close) per un esempio di utilizzo di **close**.
+Vedere [basic_filebuf::close](../standard-library/basic-filebuf-class.md#close) per un esempio di utilizzo di `close`.
 
 ## <a name="is_open"></a>  basic_ofstream::is_open
 
@@ -193,7 +193,7 @@ bool is_open() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-`true` se il file è aperto; in caso contrario, `false`.
+**true** se il file è aperto; in caso contrario, **false**.
 
 ### <a name="remarks"></a>Note
 
@@ -247,19 +247,19 @@ void open(
 
 ### <a name="parameters"></a>Parametri
 
-`_Filename` Il nome del file da aprire.
+*Nome file* il nome del file da aprire.
 
-`_Mode` Una delle enumerazioni negli [ios_base:: OpenMode](../standard-library/ios-base-class.md#openmode).
+*Modalità* una delle enumerazioni nello [ios_base:: OpenMode](../standard-library/ios-base-class.md#openmode).
 
-`_Prot` Il file predefinito aprendo protezione, equivalente ai `shflag` parametro nel [fsopen, wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md).
+*_Prot* protezione dati, equivalente a di apertura file predefinita di `shflag` nel parametro [fsopen, wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md).
 
 ### <a name="remarks"></a>Note
 
-La funzione membro chiama [rdbuf](#rdbuf) **->** [open](../standard-library/basic-filebuf-class.md#open)(_ *Filename*, `_Mode` &#124; `ios_base::out`). Se tale funzione restituisce un puntatore null, la funzione chiama [setstate](../standard-library/basic-ios-class.md#setstate)( **failbit**).
+La funzione membro chiama [rdbuf](#rdbuf) **->** [open](../standard-library/basic-filebuf-class.md#open)(_ *Filename*, `_Mode` &#124; `ios_base::out`). Se la funzione restituisce un puntatore null, la funzione chiama [setstate](../standard-library/basic-ios-class.md#setstate)(`failbit`).
 
 ### <a name="example"></a>Esempio
 
-Vedere [basic_filebuf::open](../standard-library/basic-filebuf-class.md#open) per un esempio di utilizzo di **open**.
+Visualizzare [basic_filebuf:: Open](../standard-library/basic-filebuf-class.md#open) per un esempio che usa `open`.
 
 ## <a name="op_eq"></a>  basic_ofstream::operator=
 
@@ -271,7 +271,7 @@ basic_ofstream& operator=(basic_ofstream&& right);
 
 ### <a name="parameters"></a>Parametri
 
-`right` Un riferimento rvalue a un `basic_ofstream` oggetto.
+*a destra* riferimento rvalue a un `basic_ofstream` oggetto.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -279,7 +279,7 @@ Restituisce `*this`.
 
 ### <a name="remarks"></a>Note
 
-L'operatore del membro sostituisce i contenuti dell'oggetto usando i contenuti di `right`, gestiti come un riferimento rvalue.
+L'operatore membro sostituisce il contenuto dell'oggetto usando il contenuto del *a destra*, considerato come riferimento rvalue.
 
 ## <a name="rdbuf"></a>  basic_ofstream::rdbuf
 
@@ -307,11 +307,11 @@ void swap(basic_ofstream& right);
 
 ### <a name="parameters"></a>Parametri
 
-`right` Un' `lvalue` fanno riferimento a un altro `basic_ofstream` oggetto.
+*a destra* un' `lvalue` fanno riferimento a un altro `basic_ofstream` oggetto.
 
 ### <a name="remarks"></a>Note
 
-La funzione membro scambia il contenuto di questo oggetto con il contenuto di `right`.
+La funzione membro Scambia il contenuto di questo oggetto per il contenuto del *a destra*.
 
 ## <a name="see-also"></a>Vedere anche
 
