@@ -33,12 +33,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5c2ba300275f0154e84f7d2ced21b0893bbe3d85
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 43c76ae09f491ff163391f0ee46564af7bb629fe
+ms.sourcegitcommit: 04d327940787df1297b72d534f388a035d472af0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401685"
+ms.lasthandoff: 07/20/2018
+ms.locfileid: "39181172"
 ---
 # <a name="memchr-wmemchr"></a>memchr, wmemchr
 
@@ -92,20 +92,20 @@ Numero di caratteri da controllare.
 
 ## <a name="return-value"></a>Valore restituito
 
-Se l'operazione riesce, restituisce un puntatore alla prima posizione di *c* in *buffer*. In caso contrario restituirà **NULL**.
+Se ha esito positivo, restituisce un puntatore alla posizione del primo *c* nelle *buffer*. In caso contrario, restituisce NULL.
 
 ## <a name="remarks"></a>Note
 
-**memchr** e **wmemchr** cercare la prima occorrenza del *c* nel primo *conteggio* byte di *buffer*. Arresta quando trova *c* o quando ha controllato il primo *conteggio* byte.
+`memchr` e `wmemchr` cercano la prima occorrenza *c* nel primo *conteggio* byte del *buffer*. Arresta quando trova *c* o quando ha controllato i primi *conteggio* byte.
 
-In C, queste funzioni accettano un * * const * * puntatore per il primo argomento. In C++ sono disponibili due overload. L'overload che accetta un puntatore a * * const * * restituisce un puntatore a **const **; la versione che accetta un puntatore a non -** const * * restituisce un puntatore a non -** const **. La macro _CRT_CONST_CORRECT_OVERLOADS è definito se entrambi i **const * * e non-** const * * le versioni di queste funzioni sono disponibili. Se è necessario non**const * * il comportamento per entrambi gli overload C++, definire il simbolo CONST_RETURN.
+In C, queste funzioni accettano un **const** puntatore per il primo argomento. In C++ sono disponibili due overload. L'overload che accetta un puntatore alla **const** restituisce un puntatore a **const**; la versione che accetta un puntatore a non -**const** restituisce un puntatore a non -**const** . La macro _CRT_CONST_CORRECT_OVERLOADS è definito se entrambi i **const** e non-**const** sono disponibili versioni di queste funzioni. Se non occorre**const** comportamento per entrambi gli overload C++, definire il simbolo CONST_RETURN.
 
 ## <a name="requirements"></a>Requisiti
 
 |Routine|Intestazione obbligatoria|
 |-------------|---------------------|
-|**memchr**|\<memory.h> o \<string.h>|
-|**wmemchr**|\<wchar.h>|
+|`memchr`|\<memory.h> o \<string.h>|
+|`wmemchr`|\<wchar.h>|
 
 Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 

@@ -51,18 +51,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6d83407efee1da2bc1c59cf0d869f54f6022a4eb
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 459192f5936db3c47d2377885cf3ca30dadb92df
+ms.sourcegitcommit: 04d327940787df1297b72d534f388a035d472af0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32415528"
+ms.lasthandoff: 07/20/2018
+ms.locfileid: "39180790"
 ---
 # <a name="strchr-wcschr-mbschr-mbschrl"></a>strchr, wcschr, _mbschr, _mbschr_l
 Trova un carattere in una stringa usando le impostazioni locali correnti o una categoria di stato di conversione LC_CTYPE specificata.
 
 > [!IMPORTANT]
-> **mbschr** e **mbschr_l** non può essere usata nelle applicazioni eseguite in Windows Runtime. Per altre informazioni, vedere [Funzioni CRT non supportate nelle app della piattaforma UWP (Universal Windows Platform)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> `_mbschr` e `_mbschr_l` non possono essere usati nelle applicazioni eseguite in Windows Runtime. Per altre informazioni, vedere [Funzioni CRT non supportate nelle app della piattaforma UWP (Universal Windows Platform)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Sintassi
 
@@ -133,32 +133,32 @@ Impostazioni locali da usare.
 
 ## <a name="return-value"></a>Valore restituito
 
-Ognuna di queste funzioni restituisce un puntatore alla prima occorrenza di *c* in *str*, o **NULL** se *c* non viene trovato.
+Ognuna di queste funzioni restituisce un puntatore alla prima occorrenza di *c* nelle *str*, o NULL se *c* non viene trovato.
 
 ## <a name="remarks"></a>Note
 
-Il **strchr** funzione Trova la prima occorrenza del *c* in *str*, oppure restituisce **NULL** se *c* è non è stato trovato. Il carattere di terminazione Null è incluso nella ricerca.
+Il `strchr` funzione Trova la prima occorrenza del *c* nelle *str*, o restituisce NULL se *c* non viene trovato. Il carattere di terminazione Null è incluso nella ricerca.
 
-**wcschr**, **mbschr** e **mbschr_l** sono le versioni a caratteri wide e caratteri multibyte di **strchr**. Gli argomenti e il valore restituito di **wcschr** sono caratteri wide, mentre quelli di stringhe **mbschr** sono stringhe a caratteri multibyte. **mbschr** riconosce le sequenze di caratteri multibyte. Inoltre, se la stringa è un puntatore null, **mbschr** richiama il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, **mbschr** restituisce **NULL** e imposta **errno** a **EINVAL**. **strchr** e **wcschr** non convalidano i relativi parametri. A parte ciò, queste tre funzioni si comportano in modo identico.
+`wcschr`, `_mbschr` e `_mbschr_l` sono le versioni a caratteri wide e a caratteri multibyte di `strchr`. Gli argomenti e il valore restituito di `wcschr` sono stringhe con caratteri wide, mentre quelli di `_mbschr` sono stringhe con caratteri multibyte. `_mbschr` riconosce sequenze di caratteri multibyte. Inoltre, se la stringa è un puntatore Null, `_mbschr` richiama il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, `_mbschr` restituisce NULL e imposta `errno` su EINVAL. `strchr` e `wcschr` non convalidano i parametri. A parte ciò, queste tre funzioni si comportano in modo identico.
 
-Il valore di output è interessato dalla configurazione dell'impostazione delle **LC_CTYPE** categoria configurazione delle impostazioni locali; per ulteriori informazioni, vedere [setlocale](setlocale-wsetlocale.md). Le versioni di queste funzioni senza il suffisso **_l** usano le impostazioni locali correnti per questo comportamento dipendente dalle impostazioni locali. Le versioni con il suffisso **_l** sono identiche, ma usano il parametro passato alle impostazioni locali. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
+Il valore di output è interessato dall'impostazione dell'impostazione della categoria LC_CTYPE delle impostazioni locali; per altre informazioni, vedere [setlocale](setlocale-wsetlocale.md). Le versioni di queste funzioni senza il suffisso **_l** usano le impostazioni locali correnti per questo comportamento dipendente dalle impostazioni locali. Le versioni con il suffisso **_l** sono identiche, ma usano il parametro passato alle impostazioni locali. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
 
-In C, queste funzioni accettano un * * const * * puntatore per il primo argomento. In C++ sono disponibili due overload. L'overload che accetta un puntatore a * * const * * restituisce un puntatore a **const **; la versione che accetta un puntatore a non -** const * * restituisce un puntatore a non -** const **. La macro **_CRT_CONST_CORRECT_OVERLOADS** è definito se entrambi i **const * * e non-** const * * le versioni di queste funzioni sono disponibili. Se è necessario non -** const * * il comportamento per entrambi gli overload C++, definire il simbolo **CONST_RETURN**.
+In C, queste funzioni accettano un **const** puntatore per il primo argomento. In C++ sono disponibili due overload. L'overload che accetta un puntatore alla **const** restituisce un puntatore a **const**; la versione che accetta un puntatore a non -**const** restituisce un puntatore a non -**const** . La macro _CRT_CONST_CORRECT_OVERLOADS è definito se entrambi i **const** e non-**const** sono disponibili versioni di queste funzioni. Se non occorre**const** comportamento per entrambi gli overload C++, definire il simbolo CONST_RETURN.
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 
 |Routine TCHAR.H|_UNICODE e _MBCS non definiti|_MBCS definito|_UNICODE definito|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**tcschr**|**strchr**|**_mbschr**|**wcschr**|
-|**_n/a**|**n/d**|**_mbschr_l**|**n/d**|
+|`_tcschr`|`strchr`|`_mbschr`|`wcschr`|
+|**_n/a**|**n/d**|`_mbschr_l`|**n/d**|
 
 ## <a name="requirements"></a>Requisiti
 
 |Routine|Intestazione obbligatoria|
 |-------------|---------------------|
-|**strchr**|\<string.h>|
-|**wcschr**|\<string.h> o \<wchar.h>|
-|**mbschr**, **mbschr_l**|\<mbstring.h>|
+|`strchr`|\<string.h>|
+|`wcschr`|\<string.h> o \<wchar.h>|
+|`_mbschr`, `_mbschr_l`|\<mbstring.h>|
 
 Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 

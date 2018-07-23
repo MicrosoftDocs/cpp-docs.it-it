@@ -54,19 +54,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bd62d95e971ac5fd927cce1b7b4eb600ebcf7df6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: db26c60badceab6c1422146a32de3d6dd2ecb8bd
+ms.sourcegitcommit: 04d327940787df1297b72d534f388a035d472af0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32415878"
+ms.lasthandoff: 07/20/2018
+ms.locfileid: "39181133"
 ---
 # <a name="strpbrk-wcspbrk-mbspbrk-mbspbrkl"></a>strpbrk, wcspbrk, _mbspbrk, _mbspbrk_l
 
 Cerca nelle stringhe caratteri dei set di caratteri specificati.
 
 > [!IMPORTANT]
-> **mbspbrk** e **mbspbrk_l** non può essere usata nelle applicazioni eseguite in Windows Runtime. Per altre informazioni, vedere [Funzioni CRT non supportate nelle app della piattaforma UWP (Universal Windows Platform)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> `_mbspbrk` e `_mbspbrk_l` non possono essere usati nelle applicazioni eseguite in Windows Runtime. Per altre informazioni, vedere [Funzioni CRT non supportate nelle app della piattaforma UWP (Universal Windows Platform)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Sintassi
 
@@ -137,36 +137,36 @@ Impostazioni locali da usare.
 
 ## <a name="return-value"></a>Valore restituito
 
-Restituisce un puntatore alla prima occorrenza di qualsiasi carattere appartenente *strCharSet* in *str*, o un **NULL** puntatore la presenza di due argomenti della stringa senza caratteri in comune.
+Restituisce un puntatore alla prima occorrenza di qualsiasi carattere da *strCharSet* nelle *str*, o un puntatore NULL se i due argomenti di stringa non includono caratteri in comune.
 
 ## <a name="remarks"></a>Note
 
-Il **strpbrk** funzione restituisce un puntatore alla prima occorrenza di un carattere in *str* che appartiene al set di caratteri *strCharSet*. La ricerca non include il carattere Null di terminazione.
+Il `strpbrk` funzione restituisce un puntatore alla prima occorrenza di un carattere in *str* che appartiene al set di caratteri *strCharSet*. La ricerca non include il carattere Null di terminazione.
 
-**wcspbrk** e **mbspbrk** sono versioni a caratteri wide e caratteri multibyte di **strpbrk**. Gli argomenti e il valore restituito di **wcspbrk** sono caratteri wide, mentre quelli di stringhe **mbspbrk** sono stringhe a caratteri multibyte.
+`wcspbrk` e `_mbspbrk` sono le versioni a caratteri wide e a caratteri multibyte di `strpbrk`. Gli argomenti e il valore restituito di `wcspbrk` sono stringhe con caratteri wide, mentre quelli di `_mbspbrk` sono stringhe con caratteri multibyte.
 
-**mbspbrk** convalida i propri parametri. Se *str* oppure *strCharSet* è **NULL**, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, **mbspbrk** restituisce **NULL** e imposta **errno** a **EINVAL**. **strpbrk** e **wcspbrk** non convalidano i relativi parametri. A parte ciò, queste tre funzioni si comportano in modo identico.
+`_mbspbrk` convalida i propri parametri. Se *str* oppure *strCharSet* è NULL, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, `_mbspbrk` restituisce NULL e imposta `errno` su EINVAL. `strpbrk` e `wcspbrk` non convalidano i parametri. A parte ciò, queste tre funzioni si comportano in modo identico.
 
-**mbspbrk** è simile a **mbscspn** ad eccezione del fatto che **mbspbrk** restituisce un puntatore anziché un valore di tipo [size_t](../../c-runtime-library/standard-types.md).
+`_mbspbrk` è simile a `_mbscspn` ad eccezione del fatto che `_mbspbrk` restituisce un puntatore anziché un valore di tipo [size_t](../../c-runtime-library/standard-types.md).
 
-In C, queste funzioni accettano un * * const * * puntatore per il primo argomento. In C++ sono disponibili due overload. L'overload che accetta un puntatore a * * const * * restituisce un puntatore a **const **; la versione che accetta un puntatore a non -** const * * restituisce un puntatore a non -** const **. La macro **_CRT_CONST_CORRECT_OVERLOADS** è definito se entrambi i **const * * e non-** const * * le versioni di queste funzioni sono disponibili. Se è necessario non -** const * * il comportamento per entrambi gli overload C++, definire il simbolo **CONST_RETURN**.
+In C, queste funzioni accettano un **const** puntatore per il primo argomento. In C++ sono disponibili due overload. L'overload che accetta un puntatore alla **const** restituisce un puntatore a **const**; la versione che accetta un puntatore a non -**const** restituisce un puntatore a non -**const** . La macro _CRT_CONST_CORRECT_OVERLOADS è definito se entrambi i **const** e non-**const** sono disponibili versioni di queste funzioni. Se non occorre**const** comportamento per entrambi gli overload C++, definire il simbolo CONST_RETURN.
 
-Il valore di output è interessato dalla configurazione dell'impostazione delle **LC_CTYPE** categoria configurazione delle impostazioni locali; per ulteriori informazioni, vedere [setlocale](setlocale-wsetlocale.md). Le versioni di queste funzioni senza il **l** suffisso utilizzare le impostazioni locali correnti per questo comportamento dipendente dalle impostazioni locali; la versione con il **l** suffisso è identico ad eccezione del fatto che usa il parametro delle impostazioni locali passate. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
+Il valore di output è interessato dall'impostazione dell'impostazione della categoria LC_CTYPE delle impostazioni locali; per altre informazioni, vedere [setlocale](setlocale-wsetlocale.md). Le versioni di queste funzioni senza il **l** suffisso usano le impostazioni locali correnti per questo comportamento dipendente dalle impostazioni locali; la versione con la **l** suffisso è identico, ma usa il parametro delle impostazioni locali passate. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 
 |Routine TCHAR.H|_UNICODE e _MBCS non definiti|_MBCS definito|_UNICODE definito|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**tcspbrk**|**strpbrk**|**_mbspbrk**|**wcspbrk**|
-|**n/d**|**n/d**|**_mbspbrk_l**|**n/d**|
+|`_tcspbrk`|`strpbrk`|`_mbspbrk`|`wcspbrk`|
+|**n/d**|**n/d**|`_mbspbrk_l`|**n/d**|
 
 ## <a name="requirements"></a>Requisiti
 
 |Routine|Intestazione obbligatoria|
 |-------------|---------------------|
-|**strpbrk**|\<string.h>|
-|**wcspbrk**|\<string.h> o \<wchar.h>|
-|**mbspbrk**, **mbspbrk_l**|\<mbstring.h>|
+|`strpbrk`|\<string.h>|
+|`wcspbrk`|\<string.h> o \<wchar.h>|
+|`_mbspbrk`, `_mbspbrk_l`|\<mbstring.h>|
 
 Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 

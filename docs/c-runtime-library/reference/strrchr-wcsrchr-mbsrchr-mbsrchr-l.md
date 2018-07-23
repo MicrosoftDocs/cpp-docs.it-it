@@ -51,19 +51,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a41b52b07d5f3abc290773bd7c96ca82d1b698a8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 03b0ce2c9bd205f9065c783a4ff4d7e50d0ff803
+ms.sourcegitcommit: 04d327940787df1297b72d534f388a035d472af0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32416275"
+ms.lasthandoff: 07/20/2018
+ms.locfileid: "39181159"
 ---
 # <a name="strrchr-wcsrchr-mbsrchr-mbsrchrl"></a>strrchr, wcsrchr, _mbsrchr, _mbsrchr_l
 
 Cerca in una stringa l'ultima occorrenza di un carattere.
 
 > [!IMPORTANT]
-> **mbsrchr** e **mbsrchr_l** non può essere usata nelle applicazioni eseguite in Windows Runtime. Per altre informazioni, vedere [Funzioni CRT non supportate nelle app della piattaforma UWP (Universal Windows Platform)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> `_mbsrchr` e `_mbsrchr_l` non possono essere usati nelle applicazioni eseguite in Windows Runtime. Per altre informazioni, vedere [Funzioni CRT non supportate nelle app della piattaforma UWP (Universal Windows Platform)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Sintassi
 
@@ -134,40 +134,40 @@ Impostazioni locali da usare.
 
 ## <a name="return-value"></a>Valore restituito
 
-Restituisce un puntatore all'ultima occorrenza di *c* in *str*, o **NULL** se *c* non viene trovato.
+Restituisce un puntatore all'ultima occorrenza di *c* nelle *str*, o NULL se *c* non viene trovato.
 
 ## <a name="remarks"></a>Note
 
-Il **strrchr** funzione trova l'ultima occorrenza di *c* (convertito in **char**) in *str*. La ricerca include il carattere Null di terminazione.
+Il `strrchr` funzione trova l'ultima occorrenza del *c* (convertito **char**) in *str*. La ricerca include il carattere Null di terminazione.
 
-**wcsrchr** e **mbsrchr** sono versioni a caratteri wide e caratteri multibyte di **strrchr**. Gli argomenti e il valore restituito di **wcsrchr** sono caratteri wide, mentre quelli di stringhe **mbsrchr** sono stringhe a caratteri multibyte.
+`wcsrchr` e `_mbsrchr` sono le versioni a caratteri wide e a caratteri multibyte di `strrchr`. Gli argomenti e il valore restituito di `wcsrchr` sono stringhe con caratteri wide, mentre quelli di `_mbsrchr` sono stringhe con caratteri multibyte.
 
-In C, queste funzioni accettano un * * const * * puntatore per il primo argomento. In C++ sono disponibili due overload. L'overload che accetta un puntatore a * * const * * restituisce un puntatore a **const **; la versione che accetta un puntatore a non -** const * * restituisce un puntatore a non -** const **. La macro **_CRT_CONST_CORRECT_OVERLOADS** è definito se entrambi i **const * * e non-** const * * le versioni di queste funzioni sono disponibili. Se è necessario non -** const * * il comportamento per entrambi gli overload C++, definire il simbolo **CONST_RETURN**.
+In C, queste funzioni accettano un **const** puntatore per il primo argomento. In C++ sono disponibili due overload. L'overload che accetta un puntatore alla **const** restituisce un puntatore a **const**; la versione che accetta un puntatore a non -**const** restituisce un puntatore a non -**const** . La macro _CRT_CONST_CORRECT_OVERLOADS è definito se entrambi i **const** e non-**const** sono disponibili versioni di queste funzioni. Se non occorre**const** comportamento per entrambi gli overload C++, definire il simbolo CONST_RETURN.
 
-**mbsrchr** convalida i propri parametri. Se *str* viene **NULL**, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, **errno** è impostata su **EINVAL** e **mbsrchr** restituisce 0. **strrchr** e **wcsrchr** non convalidano i relativi parametri. A parte ciò, queste tre funzioni si comportano in modo identico.
+`_mbsrchr` convalida i propri parametri. Se *str* è NULL, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, `errno` è impostato su EINVAL e `_mbsrchr` restituisce 0. `strrchr` e `wcsrchr` non convalidano i parametri. A parte ciò, queste tre funzioni si comportano in modo identico.
 
-Il valore di output è interessato dalla configurazione dell'impostazione delle **LC_CTYPE** categoria configurazione delle impostazioni locali; per ulteriori informazioni, vedere [setlocale](setlocale-wsetlocale.md). Le versioni di queste funzioni senza il suffisso **_l** usano le impostazioni locali correnti per questo comportamento dipendente dalle impostazioni locali. Le versioni con il suffisso **_l** sono identiche, ma usano il parametro passato alle impostazioni locali. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
+Il valore di output è interessato dall'impostazione dell'impostazione della categoria LC_CTYPE delle impostazioni locali; per altre informazioni, vedere [setlocale](setlocale-wsetlocale.md). Le versioni di queste funzioni senza il suffisso **_l** usano le impostazioni locali correnti per questo comportamento dipendente dalle impostazioni locali. Le versioni con il suffisso **_l** sono identiche, ma usano il parametro passato alle impostazioni locali. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 
 |Routine TCHAR.H|_UNICODE e _MBCS non definiti|_MBCS definito|_UNICODE definito|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**tcsrchr**|**strrchr**|**_mbsrchr**|**wcsrchr**|
-|**n/d**|**n/d**|**_mbsrchr_l**|**n/d**|
+|`_tcsrchr`|`strrchr`|`_mbsrchr`|`wcsrchr`|
+|**n/d**|**n/d**|`_mbsrchr_l`|**n/d**|
 
 ## <a name="requirements"></a>Requisiti
 
 |Routine|Intestazione obbligatoria|
 |-------------|---------------------|
-|**strrchr**|\<string.h>|
-|**wcsrchr**|\<string.h> o \<wchar.h>|
-|**mbsrchr**, **mbsrchr_l**|\<mbstring.h>|
+|`strrchr`|\<string.h>|
+|`wcsrchr`|\<string.h> o \<wchar.h>|
+|`_mbsrchr`, `_mbsrchr_l`|\<mbstring.h>|
 
 Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Esempio
 
-Per un esempio di utilizzo **strrchr**, vedere [strchr](strchr-wcschr-mbschr-mbschr-l.md).
+Vedere [strchr](strchr-wcschr-mbschr-mbschr-l.md) per un esempio dell'uso di `strrchr`.
 
 ## <a name="see-also"></a>Vedere anche
 
