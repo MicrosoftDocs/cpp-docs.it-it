@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bf1c64aa2139764bcb26782c344a90379bafda23
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: a384f79944ace90fcb289511e18297de7a7da233
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37336774"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39208010"
 ---
 # <a name="clinkctrl-class"></a>Classe CLinkCtrl
 Fornisce la funzionalità del controllo SysLink comune di Windows.  
@@ -238,7 +238,7 @@ int GetIdealSize(
 |Parametro|Descrizione|  
 |---------------|-----------------|  
 |[in] *cxMaxWidth*|La larghezza massima del collegamento, in pixel.|  
-|[out] * *pSize*|Un puntatore a un Windows [dimensioni](http://msdn.microsoft.com/library/windows/desktop/dd145106) struttura. Quando termina, questo metodo il *cy* membro delle `SIZE` struttura contiene l'altezza del testo collegamento ideale per la larghezza di testo di collegamento specificato dal *cxMaxWidth*. Il *cx* membro della struttura contiene la larghezza di testo di collegamento che è effettivamente necessario.|  
+|[out] \* *pSize*|Un puntatore a un Windows [dimensioni](http://msdn.microsoft.com/library/windows/desktop/dd145106) struttura. Quando termina, questo metodo il *cy* membro delle `SIZE` struttura contiene l'altezza del testo collegamento ideale per la larghezza di testo di collegamento specificato dal *cxMaxWidth*. Il *cx* membro della struttura contiene la larghezza di testo di collegamento che è effettivamente necessario.|  
   
 ### <a name="return-value"></a>Valore restituito  
  L'altezza preferenziale del testo del collegamento, in pixel. Il valore restituito è identico al valore della *cy* membro del `SIZE` struttura.  

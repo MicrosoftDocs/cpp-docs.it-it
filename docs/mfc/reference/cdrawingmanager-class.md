@@ -66,12 +66,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 53b5970f9d0ea6e3b0c7ed4715c8ff9c3578dc00
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 2f19461b04f98ab06a2c828b0f61fb556f9a7d7d
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37337421"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39209170"
 ---
 # <a name="cdrawingmanager-class"></a>Classe CDrawingManager
 Il `CDrawingManager` classe implementa gli algoritmi di disegni complessi.  
@@ -932,7 +932,7 @@ static COLORREF __stdcall SmartMixColors(
 ### <a name="remarks"></a>Note  
  Questo metodo ha esito negativo con un errore se uno dei due *k1* oppure *k2* è minore di zero. Se entrambi i parametri vengono impostati su 0, il metodo restituisce `RGB(0, 0, 0)`.  
   
- Viene calcolato il rapporto ponderato con la formula seguente: (color1 * k1 + color2 \* k2) /(k1 + k2). Dopo aver determinato il rapporto ponderato, il metodo calcola la luminosità per la combinazione di colori. Quindi moltiplica la luminosità dal *dblLumRatio*. Se il valore è maggiore di 1.0, il metodo imposta la luminosità per la combinazione di colori per il nuovo valore. In caso contrario, la luminosità è impostata su 1.0.  
+ Viene calcolato il rapporto ponderato con la formula seguente: (color1 \* k1 + color2 \* k2) /(k1 + k2). Dopo aver determinato il rapporto ponderato, il metodo calcola la luminosità per la combinazione di colori. Quindi moltiplica la luminosità dal *dblLumRatio*. Se il valore è maggiore di 1.0, il metodo imposta la luminosità per la combinazione di colori per il nuovo valore. In caso contrario, la luminosità è impostata su 1.0.  
   
 ##  <a name="drawrotated"></a>  CDrawingManager::DrawRotated  
  Ruota un'origine contenuto di controller di dominio all'interno del rettangolo specificato di 90 gradi.  

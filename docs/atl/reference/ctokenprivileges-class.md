@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 31e313381eac3158a6cb72c7681bc49013e92f90
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: aa48af82fb5b6119e1efc14081c6851eafb85fa5
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37881753"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39208702"
 ---
 # <a name="ctokenprivileges-class"></a>Classe CTokenPrivileges
 Questa classe è un wrapper per il `TOKEN_PRIVILEGES` struttura.  
@@ -290,7 +290,7 @@ CTokenPrivileges& operator= (const CTokenPrivileges& rhs) throw(...);
 ### <a name="return-value"></a>Valore restituito  
  Restituisce l'aggiornato `CTokenPrivileges` oggetto.  
   
-##  <a name="operator_const_token_privileges__star"></a>  CTokenPrivileges::operator TOKEN_PRIVILEGES const *  
+##  <a name="operator_const_token_privileges__star"></a>  CTokenPrivileges::operator TOKEN_PRIVILEGES const \*  
  Esegue il cast a un puntatore a un valore di `TOKEN_PRIVILEGES` struttura.  
   
 ```  

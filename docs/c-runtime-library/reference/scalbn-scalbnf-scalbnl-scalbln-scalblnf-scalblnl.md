@@ -46,12 +46,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 26f3d4945ef339f5166bdd07bc8d5615b161d266
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3bcaebf6578bfb4168d17131989b9b200a7ef8f9
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32407077"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39209456"
 ---
 # <a name="scalbn-scalbnf-scalbnl-scalbln-scalblnf-scalblnl"></a>scalbn, scalbnf, scalbnl, scalbln, scalblnf, scalblnl
 
@@ -112,15 +112,15 @@ Esponente dell'intero.
 
 ## <a name="return-value"></a>Valore restituito
 
-Il **scalbn** le funzioni restituiscono il valore di *x* * **FLT_RADIX**<sup>exp</sup> quando ha esito positivo. In caso di overflow (in base al segno del *x*), **scalbn** restituisce + /- **HUGE_VAL**; **errno** valore è impostato su **ERANGE** .
+Il **scalbn** le funzioni restituiscono il valore di *x* \* **FLT_RADIX**<sup>exp</sup> quando ha esito positivo. In caso di overflow (a seconda del segno di *x*), **scalbn** restituisce + /- **HUGE_VAL**; il **errno** valore è impostato su **ERANGE** .
 
-Per ulteriori informazioni **errno** e di errore possibili valori restituiti, vedere [errno, doserrno, sys_errlist e sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Per altre informazioni sulle **errno** e di errore possibili valori restituiti, vedere [errno, doserrno, sys_errlist e sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Note
 
-**FLT_RADIX** è definito in \<float. h > ha un valore pari a 2, come la radice a virgola mobile nativa; nei sistemi binari, e **scalbn** equivale al [ldexp](ldexp.md).
+**FLT_RADIX** definito in \<float. h > come base a virgola mobile nativa; nei sistemi binari assume un valore pari a 2, e **scalbn** equivale a [ldexp](ldexp.md).
 
-Dato che C++ consente l'overload, è possibile chiamare overload di **scalbn** e **scalbln** che accettino e restituiscano **float** oppure **lungo** **doppie** tipi. In un programma C **scalbn** ha sempre un **double** e un **int** e restituisce un **doppie**, e **scalbln**accetta sempre una **doppie** e un **long** e restituisce un **doppie**.
+Dato che C++ consente l'overload, è possibile chiamare overload di **scalbn** e **scalbln** che accettino e restituiscano **float** oppure **lungo** **doppie** tipi. In un programma C **scalbn** accetta sempre un **double** e un **int** e restituisce un **double**, e **scalbln**accetta sempre un **doppie** e un **long** e restituisce un **double**.
 
 ## <a name="requirements"></a>Requisiti
 

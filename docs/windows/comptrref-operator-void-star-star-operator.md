@@ -1,5 +1,5 @@
 ---
-title: 'Operatore comptrref:: void * * (operatore) | Documenti Microsoft'
+title: 'Operatore comptrref:: void * Operator | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3993cb0a5ce55996ae2ff793e83453040455aa7f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9fb3cd0a4c180073499ec1bdde1ea4703ffbf9e8
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33887082"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39207852"
 ---
-# <a name="comptrrefoperator-void-operator"></a>Operatore ComPtrRef::operator void**
-Supporta l'infrastruttura WRL e non deve essere utilizzato direttamente dal codice.  
+# <a name="comptrrefoperator-void-operator"></a>Operatore comptrref:: void\* \* operatore
+Supporta l'infrastruttura WRL e non deve essere usato direttamente dal codice.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -34,7 +34,7 @@ operator void**() const;
 ```  
   
 ## <a name="remarks"></a>Note  
- Elimina l'oggetto ComPtrRef corrente, esegue il cast di puntatore a interfaccia che è stato rappresentato dall'oggetto ComPtrRef come un puntatore a puntatore-a `void`e quindi restituisce il puntatore di cast.  
+ Elimina l'oggetto ComPtrRef corrente, viene eseguito il cast di puntatore a interfaccia che è stato rappresentato dall'oggetto ComPtrRef come un puntatore a puntatore-a `void`e quindi restituisce il puntatore di cast.  
   
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** client.h  
@@ -42,5 +42,5 @@ operator void**() const;
  **Namespace:** Microsoft::WRL::Details  
   
 ## <a name="see-also"></a>Vedere anche  
- [Comptrref (classe)](../windows/comptrref-class.md)   
+ [ComPtrRef (classe)](../windows/comptrref-class.md)   
  [Spazio dei nomi Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)

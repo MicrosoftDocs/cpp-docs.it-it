@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 16a4d3e663c0cb8d80d3b154f23082d88b446b6f
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 360945f8156c5c92c62cb2209308c7cdd2860cbc
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37942094"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39208549"
 ---
 # <a name="string-and-character-literals--c"></a>Stringa e valori letterali carattere (C++)
 C++ supporta diversi tipi di stringa e di carattere e permette di esprimere i valori letterali di ogni tipo. Nel codice sorgente, si esprime il contenuto dei valori letterali carattere e stringa usando un set di caratteri. I nomi di caratteri universali e i caratteri di escape consentono di esprimere qualsiasi stringa usando solo il set di caratteri di origine di base. Un valore letterale stringa non elaborata permette di evitare l'uso di caratteri di escape e può essere usato per esprimere tutti i tipi di valori letterali stringa. È anche possibile creare valori letterali std::string senza dover eseguire ulteriori passaggi di costruzione o conversione.  
@@ -310,7 +310,7 @@ const wchar_t* str = L"Hello!";
 const size_t byteSize = (wcslen(str) + 1) * sizeof(wchar_t);  
 ```  
   
- Si noti che `strlen()` e `wcslen()` non includono le dimensioni del carattere null di terminazione, la cui dimensione è uguale alla dimensione elemento di tipo string: un byte in una stringa char *, due byte in wchar_t\* o char16_t\* stringhe, e quattro byte in char32_t\* stringhe.  
+ Si noti che `strlen()` e `wcslen()` non includono le dimensioni del carattere null di terminazione, la cui dimensione è uguale alla dimensione elemento di tipo string: un byte in un char\* stringa, due byte in wchar_t\* o char16_t\*le stringhe e quattro byte in char32_t\* stringhe.  
   
  La lunghezza massima di un valore letterale stringa è di 65.535 byte. Questo limite si applica sia ai valori letterali stringa a caratteri narrow che a quelli a caratteri wide.  
   
@@ -380,7 +380,7 @@ auto x4 = u8"hello" " "s u8"world"z; // C3688, disagree on suffixes
 ```  
   
 ### <a name="string-literals-with-universal-character-names"></a>Valori letterali stringa con nomi di caratteri universali  
- I valori letterali stringa (elaborata) nativi possono usare i nomi di caratteri universali per rappresentare qualsiasi carattere a condizione che il nome di carattere universale possa essere codificato come uno o più caratteri nel tipo di stringa.  Ad esempio, un nome di carattere universale che rappresenta un carattere esteso non può essere codificato in una stringa a caratteri narrow usando la tabella codici ANSI, ma può essere codificato in stringhe a caratteri narrow in alcune tabelle di codici multibyte o in stringhe UTF-8 o in una stringa a caratteri wide. In c++11 il supporto per Unicode è stato esteso char16_t * e char32_t\* tipi stringa:  
+ I valori letterali stringa (elaborata) nativi possono usare i nomi di caratteri universali per rappresentare qualsiasi carattere a condizione che il nome di carattere universale possa essere codificato come uno o più caratteri nel tipo di stringa.  Ad esempio, un nome di carattere universale che rappresenta un carattere esteso non può essere codificato in una stringa a caratteri narrow usando la tabella codici ANSI, ma può essere codificato in stringhe a caratteri narrow in alcune tabelle di codici multibyte o in stringhe UTF-8 o in una stringa a caratteri wide. In c++11, supporto Unicode viene esteso per il char16_t\* e char32_t\* tipi stringa:  
   
 ```cpp  
 // ASCII smiling face  

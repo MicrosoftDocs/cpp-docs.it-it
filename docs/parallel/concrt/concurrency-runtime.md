@@ -1,7 +1,7 @@
 ---
-title: Runtime di concorrenza | Documenti Microsoft
+title: Runtime di concorrenza | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 07/20/2018
 ms.technology:
 - cpp-concrt
 ms.topic: conceptual
@@ -16,20 +16,20 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fc147a2cd0c75bb57f12be4dd5e90e63ab4ec0d2
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: be177574aa78080f3a950fb674adc0a8fab0b5c4
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33693523"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39208389"
 ---
 # <a name="concurrency-runtime"></a>Runtime di concorrenza
 Il runtime di concorrenza per C++ consente di scrivere applicazioni parallele affidabili, scalabili ed efficienti. Innalza il livello di astrazione in modo da evitare di dover gestire i dettagli dell'infrastruttura correlati alla concorrenza. È anche possibile usarlo per specificare i criteri di pianificazione che soddisfano le richieste di qualità del servizio delle applicazioni. Queste risorse permettono di iniziare a usare il runtime di concorrenza.  
   
- Per la documentazione di riferimento, vedere [riferimento](../../parallel/concrt/reference/reference-concurrency-runtime.md).  
+ Per documentazione di riferimento, vedere [riferimento](../../parallel/concrt/reference/reference-concurrency-runtime.md).  
   
 > [!TIP]
->  Il runtime di concorrenza si basa fortemente sulle funzionalità C++11 e adotta lo stile C++ più moderno. Per altre informazioni, vedere [iniziale torna a C++](../../cpp/welcome-back-to-cpp-modern-cpp.md).  
+>  Il runtime di concorrenza si basa fortemente sulle funzionalità C++11 e adotta lo stile C++ più moderno. Per altre informazioni, leggere [benvenuto indietro per C++](../../cpp/welcome-back-to-cpp-modern-cpp.md).  
   
 ## <a name="choosing-concurrency-runtime-features"></a>Scelta delle funzionalità del runtime di concorrenza  
   
@@ -71,8 +71,8 @@ Il runtime di concorrenza per C++ consente di scrivere applicazioni parallele af
 |||  
 |-|-|  
 |[Creazione di operazioni asincrone in C++ per app UWP](../../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md)|Vengono descritti alcuni punti chiave da tenere presenti quando si usa il Runtime di concorrenza per produrre operazioni asincrone in un'app UWP.|  
-|[Procedura dettagliata: connessione tramite attività e richieste HTTP XML](../../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md)|Viene illustrato come combinare attività della libreria PPL con le `IXMLHTTPRequest2` e `IXMLHTTPRequest2Callback` interfacce per inviare richieste HTTP GET e POST a un servizio web in un'app UWP.|  
-|[Esempi di app di Windows Runtime](http://code.msdn.microsoft.com/windowsapps)|Contiene i codici di esempio scaricabili e demo App per Windows 8. x. Gli esempi in C++ usano le funzionalità del runtime di concorrenza come attività della libreria PPL per elaborare i dati in background per mantenere l'esperienza utente reattiva.|  
+|[Procedura dettagliata: connessione tramite attività e richieste HTTP XML](../../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md)|Viene illustrato come combinare attività PPL con le `IXMLHTTPRequest2` e `IXMLHTTPRequest2Callback` interfacce per inviare richieste HTTP GET e POST a un servizio web in un'app UWP.|  
+|[Esempi di app di Windows Runtime](http://code.msdn.microsoft.com/windowsapps)|Contiene esempi di codice scaricabile e demo di App per Windows 8. x. Gli esempi in C++ usano le funzionalità del runtime di concorrenza come attività della libreria PPL per elaborare i dati in background per mantenere l'esperienza utente reattiva.|  
   
 ## <a name="dataflow-programming-in-the-asynchronous-agents-library"></a>Programmazione del flusso di dati nella libreria di agenti asincroni  
   
@@ -107,10 +107,10 @@ Il runtime di concorrenza per C++ consente di scrivere applicazioni parallele af
   
 |||  
 |-|-|  
-|[Modelli di programmazione asincrona e suggerimenti in Hilo (app di Windows Store scritte in C++ e XAML)](http://msdn.microsoft.com/library/windows/apps/jj160321.aspx)|Informazioni sull'uso del Runtime di concorrenza per implementare operazioni asincrone in Hilo, un'app di Windows Runtime in C++ e XAML.|  
-|[Esempi di codice per il Runtime di concorrenza e la libreria in Visual Studio 2010](http://go.microsoft.com/fwlink/p/?linkid=183875)|Fornisce le applicazioni di esempio e utilità che illustrano il runtime di concorrenza.|  
-|[Programmazione parallela in codice nativo blog](http://go.microsoft.com/fwlink/p/?linkid=183873)|Fornisce altri articoli dettagliati del blog sulla programmazione in parallelo nel runtime di concorrenza.|  
-|[Elaborazione parallela in codice nativo e C++ forum](http://go.microsoft.com/fwlink/p/?linkid=183874)|Consente di partecipare alle discussioni della community sul runtime di concorrenza.|  
+|[Modelli di programmazione asincrona e suggerimenti in Hilo (app di Windows Store scritte in C++ e XAML)](http://msdn.microsoft.com/library/windows/apps/jj160321.aspx)|Informazioni sull'uso del Runtime di concorrenza per implementare operazioni asincrone in Hilo, un'app di Windows Runtime scritte in C++ e XAML.|  
+|[Esempi di codice per il Runtime di concorrenza e la libreria PPL in Visual Studio 2010](http://go.microsoft.com/fwlink/p/?linkid=183875)|Fornisce le applicazioni di esempio e utilità che illustrano il runtime di concorrenza.|  
+|[Programmazione parallela nel blog del codice nativo](http://go.microsoft.com/fwlink/p/?linkid=183873)|Fornisce altri articoli dettagliati del blog sulla programmazione in parallelo nel runtime di concorrenza.|  
+|[Elaborazione parallela in C++ e codice nativo forum](http://go.microsoft.com/fwlink/p/?linkid=183874)|Consente di partecipare alle discussioni della community sul runtime di concorrenza.|  
 |[Programmazione parallela](/dotnet/standard/parallel-programming/index)|Illustra il modello di programmazione in parallelo disponibile in [!INCLUDE[dnprdnshort](../../error-messages/tool-errors/includes/dnprdnshort_md.md)].|  
   
 ## <a name="see-also"></a>Vedere anche  

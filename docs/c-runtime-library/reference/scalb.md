@@ -1,5 +1,5 @@
 ---
-title: scalb, _scalbf | Documenti Microsoft
+title: scalb, _scalbf | Microsoft Docs
 ms.custom: ''
 ms.date: 04/05/2018
 ms.technology:
@@ -37,12 +37,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a465ca74af72a5114eac949439ab8493f89bcb39
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 47b6e20c6395337113088aa51d8ba75744421922
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32406264"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39207520"
 ---
 # <a name="scalb-scalbf"></a>scalb, _scalbf
 
@@ -71,13 +71,13 @@ Esponente Long Integer.
 
 ## <a name="return-value"></a>Valore restituito
 
-Restituisce un valore esponenziale se ha esito positivo. In caso di overflow (in base al segno del *x*), **scalb** restituisce + /- **HUGE_VAL**; **errno** variabile è impostata su  **ERANGE**.
+Restituisce un valore esponenziale se ha esito positivo. In caso di overflow (a seconda del segno di *x*), **scalb** restituisce + /- **HUGE_VAL**; il **errno** variabile è impostata su  **ERANGE**.
 
 Per altre informazioni su questi e su altri codici restituiti, vedere [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Note
 
-Il **scalb** funzione calcola il valore di *x* * 2<sup>*exp*</sup>.
+Il **scalb** funzione calcola il valore di *x* \* 2<sup>*exp*</sup>.
 
 ## <a name="requirements"></a>Requisiti
 

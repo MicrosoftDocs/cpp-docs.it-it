@@ -37,12 +37,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f277292f413e09b9c41a87cd82e438e0e1e883a8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 96d87a213029ab33e4d3c0269c4e7ba41e1aed43
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32406667"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39209417"
 ---
 # <a name="remainder-remainderf-remainderl"></a>remainder, remainderf, remainderl
 
@@ -71,13 +71,13 @@ Denominatore.
 
 ## <a name="return-value"></a>Valore restituito
 
-Il resto a virgola mobile della *x* / *y*. Se il valore di *y* è 0,0, **resto** restituisce una costante NaN non interattiva. Per informazioni sulla rappresentazione di un NaN non interattivo per la **printf** famiglia, vedere [printf, printf_l, wprintf, wprintf_l](printf-printf-l-wprintf-wprintf-l.md).
+Il resto a virgola mobile e del *x* / *y*. Se il valore di *y* è 0,0, **resto** restituisce un NaN non interattivo. Per informazioni sulla rappresentazione di un NaN non interattivo per il **printf** famiglia, vedere [printf, printf_l, wprintf, wprintf_l](printf-printf-l-wprintf-wprintf-l.md).
 
 ## <a name="remarks"></a>Note
 
-Il **resto** funzioni calcolano il resto a virgola mobile *r* dei *x* / *y* tale *x*   =  *n* * *y* + *r*, dove *n*è la numero intero più vicino al valore per *x* / *y* e *n*anche ogni volta che &#124; *n*  -  *x* / *y* &#124; = 1 o 2. Quando si *r* = 0, *r* ha lo stesso segno *x*.
+Il **resto** funzioni calcolano il resto a virgola mobile *r* dei *x* / *y* modo tale che *x*   =  *n* \* *y* + *r*, dove *n*è la numero intero più vicino al valore per *x* / *y* e *n*anche ogni volta che &#124; *n*  -  *x* / *y* &#124; = 1 o 2. Quando *r* = 0, *r* ha lo stesso segno *x*.
 
-Dato che C++ consente l'overload, è possibile chiamare overload di **resto** che accettano e restituiscono **float** oppure **lungo** **doppie** valori. In un programma C **resto** ha sempre due **double** argomenti e restituisce un **doppie**.
+Dato che C++ consente l'overload, è possibile chiamare overload di **resto** che accettano e restituiscono **float** oppure **long** **double** valori. In un programma C **resto** accetta sempre due **double** argomenti e restituisce un **double**.
 
 ## <a name="requirements"></a>Requisiti
 

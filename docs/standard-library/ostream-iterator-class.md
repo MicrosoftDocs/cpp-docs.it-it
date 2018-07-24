@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4ee931abb2273ab3119fa62b9219ad69448b2048
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 308254fded0ac38a794233fb3f4eacd4d7d6fd19
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38963524"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39207919"
 ---
 # <a name="ostreamiterator-class"></a>Classe ostream_iterator
 
@@ -68,9 +68,9 @@ La classe ostream_iterator deve soddisfare i requisiti per un iteratore di outpu
 
 |Operatore|Descrizione|
 |-|-|
-|[operator*](#op_star)|Operatore di dereferenziazione usato per implementare l'espressione dell'iteratore di output * `i` = `x`.|
+|[operator*](#op_star)|Operatore di dereferenziazione usato per implementare l'espressione dell'iteratore di output \* `i`  =  `x`.|
 |[operator++](#op_add_add)|Operatore di incremento non funzionale che restituisce `ostream_iterator` allo stesso oggetto a cui ha puntato prima che venisse chiamata l'operazione.|
-|[operator=](#op_eq)|Operatore di assegnazione usato per implementare l'espressione dell'iteratore di output * `i` = `x` per la scrittura in un flusso di output.|
+|[operator=](#op_eq)|Operatore di assegnazione usato per implementare l'espressione dell'iteratore di output \* `i`  =  `x` per la scrittura in un flusso di output.|
 
 ## <a name="requirements"></a>Requisiti
 
@@ -228,7 +228,7 @@ Elements written to output stream:
 
 ## <a name="op_eq"></a>  ostream_iterator::operator=
 
-Operatore di assegnazione usato per implementare l'espressione di output_iterator * `i` = `x` per la scrittura in un flusso di output.
+Operatore di assegnazione usato per implementare l'espressione di output_iterator \* `i`  =  `x` per la scrittura in un flusso di output.
 
 ```cpp
 ostream_iterator<Type, CharType, Traits>& operator=(const Type& val);
@@ -244,7 +244,7 @@ L'operatore inserisce *val* nel flusso di output associato all'oggetto, seguito 
 
 ### <a name="remarks"></a>Note
 
-I requisiti per un iteratore di output che devono essere soddisfatti da `ostream_iterator` richiedono solo che l'espressione * `ii` = `t` sia valida e non riguardano individualmente gli operatori operator o operator=. Questo operatore membro restituisce `*this`.
+I requisiti per un iteratore di output che la `ostream_iterator` deve soddisfare richiedono solo che l'espressione \* `ii`  =  `t` sia valida e non riguardano individualmente l'operatore o operatore = in modo indipendente. Questo operatore membro restituisce `*this`.
 
 ### <a name="example"></a>Esempio
 

@@ -1,5 +1,5 @@
 ---
-title: I caratteri jolly e NMAKE | Documenti Microsoft
+title: I caratteri jolly e NMAKE | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4dfe11313a456437fca2dd03aa8367c5f380e689
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6834e37c9f6624e231861fa28063cdbc7bec8508
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32380452"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39208624"
 ---
 # <a name="wildcards-and-nmake"></a>Caratteri jolly e NMAKE
-NMAKE espande i caratteri jolly filename (* e?) in righe di dipendenze. Un carattere jolly specificato in un comando viene passato al comando. NMAKE espande.  
+NMAKE espande i caratteri jolly filename (\* e?) nelle righe delle dipendenze. Un carattere jolly specificato in un comando viene passato al comando. NMAKE non viene espanso.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Contenuto di un makefile](../build/contents-of-a-makefile.md)

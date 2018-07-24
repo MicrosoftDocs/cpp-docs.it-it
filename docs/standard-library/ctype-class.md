@@ -46,12 +46,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 49329d97343cfd210a93879961b0492454be9efa
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 5a65008b01262ad6252e9942444a4e80602d4292
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954773"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39208637"
 ---
 # <a name="ctype-class"></a>Classe ctype
 
@@ -275,7 +275,7 @@ Puntatore al primo carattere in un intervallo che corrisponde a una maschera spe
 
 ### <a name="remarks"></a>Note
 
-La funzione membro protetto restituisce il più piccolo puntatore `ptr` nell'intervallo [ `first`, `last`) per il quale [do_is](#do_is)( `maskVal`, * `ptr`) è true.
+La funzione membro protetto restituisce il più piccolo puntatore `ptr` nell'intervallo [ `first`, `last`) per il quale [do_is](#do_is)( `maskVal`, \* `ptr`) è true.
 
 ### <a name="example"></a>Esempio
 
@@ -306,7 +306,7 @@ Puntatore al primo carattere in un intervallo che non corrisponde a una maschera
 
 ### <a name="remarks"></a>Note
 
-La funzione membro protetto restituisce il più piccolo puntatore `ptr` nell'intervallo [ `first`, `last`) per il quale [do_is](#do_is)( `maskVal`, * `ptr`) è false.
+La funzione membro protetto restituisce il più piccolo puntatore `ptr` nell'intervallo [ `first`, `last`) per il quale [do_is](#do_is)( `maskVal`, \* `ptr`) è false.
 
 ### <a name="example"></a>Esempio
 

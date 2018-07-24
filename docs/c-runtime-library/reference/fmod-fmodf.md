@@ -1,5 +1,5 @@
 ---
-title: fmod, fmodf, fmodl | Documenti Microsoft
+title: fmod, fmodf, fmodl | Microsoft Docs
 ms.custom: ''
 ms.date: 04/05/2018
 ms.technology:
@@ -39,12 +39,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9f6cc8cc10c026c5ecd621657c556da883c187f5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c473b5cb6822df07f4972ff2c964c828b14b5966
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32399036"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39207533"
 ---
 # <a name="fmod-fmodf-fmodl"></a>fmod, fmodf, fmodl
 
@@ -82,13 +82,13 @@ Valori a virgola mobile.
 
 ## <a name="return-value"></a>Valore restituito
 
-**fmod** restituisce il resto a virgola mobile di *x* / *y*. Se il valore di *y* è 0,0, **fmod** restituisce una costante NaN non interattiva. Per informazioni sulla rappresentazione di un NaN non interattivo per la **printf** famiglia, vedere [printf](printf-printf-l-wprintf-wprintf-l.md).
+**fmod** restituisce il resto a virgola mobile e di *x* / *y*. Se il valore di *y* è 0,0, **fmod** restituisce un NaN non interattivo. Per informazioni sulla rappresentazione di un NaN non interattivo per il **printf** famiglia, vedere [printf](printf-printf-l-wprintf-wprintf-l.md).
 
 ## <a name="remarks"></a>Note
 
-Il **fmod** funzione calcola il resto a virgola mobile *f* dei *x* / *y* tale *x*  =  *si* * *y* + *f*, dove *si* è un numero intero, *f* ha lo stesso segno *x*e il valore assoluto di *f* è minore del valore assoluto di *y*.
+Il **fmod** funzione calcola il resto a virgola mobile *f* dei *x* / *y* modo tale che *x*  =  *ho* \* *y* + *f*, dove *ho* è un numero intero, *f* ha lo stesso segno *x*e il valore assoluto del *f* è minore del valore assoluto di *y*.
 
-C++ consente l'overload, pertanto è possibile chiamare degli overload di **fmod** che accettano e restituiscono **float** e **lungo** **doppie** valori. In un programma C **fmod** ha sempre due **double** argomenti e restituisce un **doppie**.
+C++ consente l'overload, quindi è possibile chiamare overload di **fmod** che accettano e restituiscono **float** e **long** **double** valori. In un programma C **fmod** accetta sempre due **double** argomenti e restituisce un **double**.
 
 ## <a name="requirements"></a>Requisiti
 

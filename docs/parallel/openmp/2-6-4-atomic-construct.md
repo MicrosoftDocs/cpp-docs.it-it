@@ -1,5 +1,5 @@
 ---
-title: 2.6.4 costrutto atomic | Documenti Microsoft
+title: 2.6.4 costrutto atomic | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,21 +12,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 66f0dc8469d1d70b2697df1fe120f10142d90dbe
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 3c906a9a9b781f742f525688b77d5f58da16bb10
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33688128"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39208133"
 ---
 # <a name="264-atomic-construct"></a>2.6.4 Costrutto atomic
-Il `atomic` direttiva assicura che una determinata posizione di memoria viene aggiornata in modo atomico, anziché esporlo la possibilità di più thread di scrittura simultanee. La sintassi del `atomic` direttiva è come segue:  
+Il `atomic` direttiva garantisce che una determinata posizione di memoria viene aggiornata in modo atomico, anziché esporre la possibilità di più thread di scrittura simultanee. La sintassi del `atomic` direttiva è come segue:  
   
 ```  
 #pragma omp atomic new-lineexpression-stmt  
 ```  
   
- L'istruzione di espressione deve avere uno dei formati seguenti:  
+ L'istruzione di espressione deve essere uno dei formati seguenti:  
   
  *x binop*= *expr*  
   
@@ -38,21 +38,21 @@ Il `atomic` direttiva assicura che una determinata posizione di memoria viene ag
   
  --x  
   
- Nelle espressioni precedente:  
+ Nelle espressioni di precedente:  
   
--   *x* è un'espressione di lvalue con tipo scalare.  
+-   *x* è un'espressione di lvalue con un tipo scalare.  
   
--   *Expr* è un'espressione con tipo scalare e non fa riferimento l'oggetto specificato da *x*.  
+-   *Expr* è un'espressione con un tipo scalare, e non fa riferimento l'oggetto specificato da *x*.  
   
--   `binop` non è un operatore di overload e fa parte di +, *, -, / &, ^, &#124;, <\<, o >>.  
+-   `binop` non è un operatore di overload ed è uno dei + \*, -, / &, ^, &#124;, <\<, o >>.  
   
- Anche se è definito dall'implementazione se un'implementazione sostituisce tutte `atomic` direttive con **critico** direttive che hanno lo stesso oggetto univoco *nome*, `atomic` (direttiva) consente una maggiore ottimizzazione. Spesso le istruzioni di hardware sono disponibili in grado di eseguire l'aggiornamento atomico con un sovraccarico minimo.  
+ Anche se è definito dall'implementazione se un'implementazione sostituisce tutte `atomic` direttive con **critici** direttive che hanno lo stesso oggetto univoco *name*, il `atomic` (direttiva) consente un migliore ottimizzazione. Spesso le istruzioni di hardware sono disponibili in grado di eseguire l'aggiornamento atomico con un sovraccarico minimo.  
   
- Solo il carico e l'archivio dell'oggetto definito dal *x* sono atomica; la valutazione di *expr* non è atomico. Per evitare situazioni di race condition, tutti gli aggiornamenti della posizione in parallelo devono essere protetto con il `atomic` direttiva, ad eccezione di quelli che sono note privo di race condition.  
+ Solo il carico e l'archivio dell'oggetto definito dal *x* sono atomica, la valutazione del *expr* non è atomico. Per evitare situazioni di race condition, è consigliabile proteggere tutti gli aggiornamenti della posizione in parallelo tramite il `atomic` direttiva, ad eccezione di quelli che notoriamente privi di race condition.  
   
  Restrizioni per il `atomic` direttiva sono i seguenti:  
   
--   Tutti i riferimenti atomici al percorso di archiviazione x in tutto il programma devono avere un tipo compatibile.  
+-   Tutti i riferimenti atomici nel percorso di archiviazione x in tutto il programma deve essere un tipo compatibile.  
   
 ## <a name="examples"></a>Esempi:  
   

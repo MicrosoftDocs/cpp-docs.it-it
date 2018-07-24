@@ -1,5 +1,5 @@
 ---
-title: ldexp, ldexpf, ldexpl | Documenti Microsoft
+title: ldexp, ldexpf, ldexpl | Microsoft Docs
 ms.custom: ''
 ms.date: 04/05/2018
 ms.technology:
@@ -44,12 +44,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 012315e11ccf2dbe63e32c6208487f324ef29289
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8ead91ce542ce547f9453f52455dc76d61045b87
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401419"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39208415"
 ---
 # <a name="ldexp-ldexpf-ldexpl"></a>ldexp, ldexpf, ldexpl
 
@@ -90,13 +90,13 @@ Esponente dell'intero.
 
 ## <a name="return-value"></a>Valore restituito
 
-Il **ldexp** le funzioni restituiscono il valore di *x* * 2<sup>*exp* </sup> se ha esito positivo. In caso di overflow e in base al segno del *x*, **ldexp** restituisce + /- **HUGE_VAL**; **errno** valore è impostato su **ERANGE** .
+Il **ldexp** le funzioni restituiscono il valore di *x* \* 2<sup>*exp* </sup> se ha esito positivo. In caso di overflow e in base al segno del *x*, **ldexp** restituisce + /- **HUGE_VAL**; il **errno** valore è impostato su **ERANGE** .
 
-Per ulteriori informazioni **errno** e di errore possibili valori restituiti, vedere [errno, doserrno, sys_errlist e sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Per altre informazioni sulle **errno** e di errore possibili valori restituiti, vedere [errno, doserrno, sys_errlist e sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Note
 
-Dato che C++ consente l'overload, è possibile chiamare overload di **ldexp** che accettano **float** oppure **lungo** **doppie** tipi. In un programma C **ldexp** ha sempre un **double** e un **int** e restituisce un **doppie**.
+Dato che C++ consente l'overload, è possibile chiamare overload di **ldexp** che accettano **float** oppure **long** **double** tipi. In un programma C **ldexp** accetta sempre un **double** e un **int** e restituisce un **doppie**.
 
 ## <a name="requirements"></a>Requisiti
 

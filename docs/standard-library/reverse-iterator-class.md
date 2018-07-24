@@ -28,12 +28,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1610013027305d75a9520c8882b1900fe18c016c
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 534d2755dfb38e739234dd15eb7f04263874c59e
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38955371"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39209024"
 ---
 # <a name="reverseiterator-class"></a>Classe reverse_iterator
 
@@ -206,7 +206,7 @@ Il tipo è un sinonimo del parametro di modello `Iterator`.
 
 Vedere [reverse_iterator::base](#base) per indicazioni su come dichiarare e usare `iterator_type`.
 
-## <a name="op_star"></a>  reverse_iterator::operator*
+## <a name="op_star"></a>  reverse_iterator:: operator\*
 
 Restituisce l'elemento a cui punta un oggetto reverse_iterator.
 

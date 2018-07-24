@@ -28,12 +28,12 @@ helpviewer_keywords:
 - std::setiosflags [C++]
 - std::setprecision [C++]
 - std::setw [C++]
-ms.openlocfilehash: 34089ec501934f5d6aa8408acded821a67f67502
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 5882a2fc31d5c9369429cdc39fb86a1c08e0c828
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38958478"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39208832"
 ---
 # <a name="ltiomanipgt-functions"></a>Funzioni &lt;iomanip&gt;
 
@@ -141,7 +141,7 @@ quoted(const char* str, char delimiter, char escape) // or wide versions
 
 ### <a name="parameters"></a>Parametri
 
-*str* un std:: String, char *, stringa non elaborata o valore letterale stringa letterale o una versione estesa di uno di questi (ad esempio std:: wstring, wchar_t\*).
+*str* un oggetto std:: String, char\*, stringa di valore letterale stringa letterale o non elaborato oppure versione estesa di uno di questi (ad esempio std:: wstring, wchar_t\*).
 
 *delimitatore* un carattere specificato dall'utente o carattere wide da usare come delimitatore per l'inizio e fine della stringa.
 

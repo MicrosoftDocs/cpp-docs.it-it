@@ -72,12 +72,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aa0067e3054972ccc60253bb7205dc7a4f1fe4bd
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 7e6210f8c1b1fd1bd19efb74ca68c7a1bed3f7f1
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37337447"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39209131"
 ---
 # <a name="cdaoworkspace-class"></a>Classe CDaoWorkspace
 Gestisce una sessione di database denominata e protetta da password, dall'accesso alla disconnessione, di un singolo utente.  
@@ -745,7 +745,7 @@ static void PASCAL SetDefaultUser(LPCTSTR lpszDefaultUser);
   
 ### <a name="parameters"></a>Parametri  
  *lpszDefaultUser*  
- Il nome utente predefinito. Un nome utente può essere 1 e 20 caratteri e includere i caratteri alfabetici, accenti, numeri, spazi e simboli, ad eccezione di: "(virgolette), / (barra), \ (barra rovesciata), \[ \] (parentesi),: (due punti), &#124; ( barra verticale), \< (meno-segno di maggiore di), > (maggiore-segno di maggiore di), + (segno più), = (segno di uguale), (punto e virgola,), (virgola), (punto interrogativo) * (asterisco), spazi iniziali e caratteri di controllo (ASCII 00 a 31 ASCII). Per informazioni correlate, vedere l'argomento "Proprietà UserName" nella Guida di DAO.  
+ Il nome utente predefinito. Un nome utente può essere 1 e 20 caratteri e includere i caratteri alfabetici, accenti, numeri, spazi e simboli, ad eccezione di: "(virgolette), / (barra), \ (barra rovesciata), \[ \] (parentesi),: (due punti), &#124; ( barra verticale), \< (meno-segno di maggiore di), > (maggiore-segno di maggiore di), + (segno più), = (segno di uguale), (punto e virgola,), (virgola), (punto interrogativo), \* (asterisco), spazi iniziali e caratteri di controllo (ASCII 00 a 31 ASCII). Per informazioni correlate, vedere l'argomento "Proprietà UserName" nella Guida di DAO.  
   
 ### <a name="remarks"></a>Note  
  Il nome utente predefinito impostato si applica a nuove aree di lavoro che dopo la chiamata è stato creato. Quando si creano le aree di lavoro successivi, è necessario specificare un nome utente nel [Create](#create) chiamare.  

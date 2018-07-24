@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c7abcfcfe6aec722fa3540ad974017ab47e6cf71
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 26e2984a3b52152b54d5f35ae72b8f3fdeaff474
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37885451"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39209222"
 ---
 # <a name="ccomptrbase-class"></a>Classe CComPtrBase
 Questa classe fornisce una base per le classi di puntatore intelligente con le routine di memoria basato su COM.  
@@ -77,7 +77,7 @@ class CComPtrBase
 |[CComPtrBase::operator T *](#operator_t_star)|L'operatore di cast.|  
 |[CComPtrBase::operator!](#operator_not)|L'operatore NOT.|  
 |[CComPtrBase::operator &](#operator_amp)|I & operatore.|  
-|[CComPtrBase::operator *](#operator_star)|Il * operatore.|  
+|[CComPtrBase::operator *](#operator_star)|Operatore \*.|  
 |[CComPtrBase::operator <](#ccomptrbase__operator lt)|Minore di-operatore di maggioranza.|  
 |[CComPtrBase::operator = =](#operator_eq_eq)|L'operatore di uguaglianza.|  
 |[CComPtrBase::operator ->](#operator_ptr)|Operatore puntatore-a-membri.|  
@@ -246,8 +246,8 @@ T** operator&() throw();
 ### <a name="return-value"></a>Valore restituito  
  Restituisce l'indirizzo dell'oggetto a cui punta il `CComPtrBase` oggetto.  
   
-##  <a name="operator_star"></a>  CComPtrBase::operator *  
- Il * operatore.  
+##  <a name="operator_star"></a>  CComPtrBase::operator \*  
+ Operatore \*.  
   
 ```
 T& operator*() const throw();
@@ -300,7 +300,7 @@ bool operator<(T* pT) const throw();
 ### <a name="return-value"></a>Valore restituito  
  Restituisce true se il puntatore gestito dall'oggetto corrente è inferiore a quello del puntatore con cui è confrontato.  
   
-##  <a name="operator_t_star"></a>  CComPtrBase::operator T *  
+##  <a name="operator_t_star"></a>  CComPtrBase::operator T\*  
  L'operatore di cast.  
   
 ```  
