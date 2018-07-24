@@ -13,12 +13,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ef91c42d0787dac371d324eece1527e5366c89c3
-ms.sourcegitcommit: 05075fce8a0ed7fddb99f50f3931db966a91450d
+ms.openlocfilehash: 98c8bd78f465054e4d86a1bd16450aba9a0d8258
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/20/2018
-ms.locfileid: "36271396"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39209053"
 ---
 # <a name="visual-c-what39s-new-2003-through-2015"></a>Visual C++: novità dalla versione 2003 alla 2015
 
@@ -1494,7 +1494,7 @@ Il compilatore Microsoft Visual C++ supporta le seguenti funzionalità del lingu
 - Modelli di alias.
 - Funzioni eliminate.
 - Inizializzatori del membro dati non statici (NSDMI).
-- Funzioni impostate come predefinite. *
+- Funzioni impostate come predefinite. \*
 - Supporta le seguenti funzionalità del linguaggio ISO C99:
 - _Bool
 - Valori letterali composti.
