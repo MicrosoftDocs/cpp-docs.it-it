@@ -1,5 +1,5 @@
 ---
-title: CStreamRowset (classe) | Documenti Microsoft
+title: Classe CStreamRowset | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -11,25 +11,42 @@ f1_keywords:
 - CStreamRowset
 - ATL.CStreamRowset<TAccessor>
 - ATL.CStreamRowset
+- CStreamRowset::CStreamRowset
+- CStreamRowset.CStreamRowset
+- ATL.CStreamRowset.CStreamRowset
+- ATL::CStreamRowset::CStreamRowset
+- CStreamRowset
+- CStreamRowset<TAccessor>::CStreamRowset
+- ATL::CStreamRowset<TAccessor>::CStreamRowset
+- CStreamRowset<TAccessor>.Close
+- ATL.CStreamRowset<TAccessor>.Close
+- CStreamRowset::Close
+- CStreamRowset<TAccessor>::Close
+- ATL::CStreamRowset::Close
+- ATL.CStreamRowset.Close
+- ATL::CStreamRowset<TAccessor>::Close
+- CStreamRowset.Close
 dev_langs:
 - C++
 helpviewer_keywords:
 - CStreamRowset class
+- CStreamRowset class, constructor
+- Close method
 ms.assetid: a106e953-a38a-464e-8ea5-28963d9e4811
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 3365767ed36bcdc45e87f08fb038500fa9ac6d82
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e0aad7fe25205d4cf31cbe76db3f1fb441858858
+ms.sourcegitcommit: b217daee32d3413cf33753d9b4dc35a0022b1bfa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33100031"
+ms.lasthandoff: 07/24/2018
+ms.locfileid: "39233399"
 ---
 # <a name="cstreamrowset-class"></a>Classe CStreamRowset
-Utilizzato un `CCommand` o `CTable` dichiarazione.  
+Utilizzato in una `CCommand` o `CTable` dichiarazione.  
   
 ## <a name="syntax"></a>Sintassi
 
@@ -38,9 +55,12 @@ template <class TAccessor = CAccessorBase>
 class CStreamRowset  
 ```  
   
-#### <a name="parameters"></a>Parametri  
- `TAccessor`  
+### <a name="parameters"></a>Parametri  
+ *TAccessor*  
  Una classe di funzione di accesso.  
+
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** atldbcli.h  
   
 ## <a name="members"></a>Membri  
   
@@ -48,11 +68,11 @@ class CStreamRowset
   
 |||  
 |-|-|  
-|[CStreamRowset](../../data/oledb/cstreamrowset-cstreamrowset.md)|Costruttore. Crea e inizializza il `CStreamRowset` oggetto.|  
-|[Chiudi](../../data/oledb/cstreamrowset-close.md)|Versioni di [ISequentialStream](https://msdn.microsoft.com/en-us/library/ms718035.aspx) puntatore a interfaccia nella classe.|  
+|[CStreamRowset](#cstreamrowset)|Costruttore. Crea e inizializza il `CStreamRowset` oggetto.|  
+|[Chiudi](#close)|Rilascia il [ISequentialStream](https://msdn.microsoft.com/library/ms718035.aspx) puntatore a interfaccia nella classe.|  
   
 ## <a name="remarks"></a>Note  
- Utilizzare `CStreamRowset` nel `CCommand` o `CTable` dichiarazione, ad esempio:  
+ Uso `CStreamRowset` nella `CCommand` o `CTable` dichiarazione, ad esempio:  
   
  [!code-cpp[NVC_OLEDB_Consumer#11](../../data/oledb/codesnippet/cpp/cstreamrowset-class_1.cpp)]  
   
@@ -60,17 +80,34 @@ class CStreamRowset
   
  [!code-cpp[NVC_OLEDB_Consumer#12](../../data/oledb/codesnippet/cpp/cstreamrowset-class_2.cpp)]  
   
- `ICommand::Execute` Restituisce un `ISequentialStream` puntatore, che viene archiviato in `m_spStream`. Utilizzare quindi la **lettura** metodo per recuperare i dati (stringa Unicode) in formato XML. Ad esempio:  
+ `ICommand::Execute` Restituisce un `ISequentialStream` puntatore che viene archiviato in `m_spStream`. È quindi possibile usare il `Read` metodo per recuperare i dati (stringa Unicode) in formato XML. Ad esempio:  
   
  [!code-cpp[NVC_OLEDB_Consumer#13](../../data/oledb/codesnippet/cpp/cstreamrowset-class_3.cpp)]  
   
- SQL Server 2000 esegue il formattazione XML e restituisce tutte le colonne e tutte le righe del set di righe in un'unica stringa XML.  
+ SQL Server 2000 esegue il formattazione XML e restituirà tutte le colonne e tutte le righe del set di righe in un'unica stringa XML.  
   
 > [!NOTE]
 >  Questa funzionalità funziona solo con SQL Server 2000.  
   
-## <a name="requirements"></a>Requisiti  
- **Intestazione:** atldbcli.h  
+## <a name="cstreamrowset"></a> CStreamRowset:: CStreamRowset
+Crea e inizializza il `CStreamRowset` oggetto.  
+  
+### <a name="syntax"></a>Sintassi  
+  
+```cpp
+CStreamRowset();  
+  
+```  
+
+## <a name="close"></a> CStreamRowset:: Close
+Rilascia il [ISequentialStream](https://msdn.microsoft.com/library/ms718035.aspx) puntatore a interfaccia nella classe.  
+  
+### <a name="syntax"></a>Sintassi  
+  
+```cpp
+void Close();  
+  
+```  
   
 ## <a name="see-also"></a>Vedere anche  
  [Modelli Consumer OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)   
