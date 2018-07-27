@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8fe65dfec3befa15ffebde3d074081ee11364f4d
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: e4d22df877ab757134ee6da86a5ff22ec106f958
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33337574"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39208575"
 ---
 # <a name="delimiters-for-visual-c-documentation-tags"></a>Delimitatori per i tag della documentazione di Visual C++
 L'uso dei tag della documentazione richiede la specifica di delimitatori per indicare al compilatore il punto di inizio e di fine di un commento relativo alla documentazione.  
@@ -51,7 +51,7 @@ L'uso dei tag della documentazione richiede la specifica di delimitatori per ind
     /** <summary>text</summary> */  
     ```  
   
--   Il compilatore applica un modello " * " per ignorare la riga all'inizio della seconda e della terza riga.  
+-   Il compilatore applica un modello " \* " per ignorare la riga all'inizio della seconda e della terza riga.  
   
     ```  
     /**  

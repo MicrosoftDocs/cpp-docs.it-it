@@ -1,7 +1,8 @@
 ---
 title: Configurare un progetto CMake per Linux in Visual Studio | Microsoft Docs
+description: Come configurare un progetto CMake per Linux in Visual Studio
 ms.custom: ''
-ms.date: 04/28/2018
+ms.date: 07/20/2018
 ms.reviewer: ''
 ms.suite: ''
 ms.technology:
@@ -14,22 +15,22 @@ ms.author: corob
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: 014d23996777d0660d4978e307b80e4f94c19686
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: b96c44f978be18e83736736b6edd5965f0f49ef6
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849259"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39207787"
 ---
 # <a name="configure-a-linux-cmake-project"></a>Configurare un progetto CMake per Linux
 
 **Visual Studio 2017 versione 15.4 e successive**  
-Quando si installa il carico di lavoro Linux C++, il supporto di CMake per Linux è selezionato per impostazione predefinita. È ora possibile lavorare sulla base di codice esistente che usa CMake senza la necessità di convertirlo in un progetto di Visual Studio. Se il codebase è multipiattaforma, è possibile scegliere sia Windows che Linux da Visual Studio.
+Quando si installa il carico di lavoro Linux C++ per Visual Studio, il supporto CMake per Linux è selezionato per impostazione predefinita. È ora possibile lavorare sulla base di codice esistente che usa CMake senza la necessità di convertirlo in un progetto di Visual Studio. Se il codebase è multipiattaforma, è possibile scegliere sia Windows che Linux da Visual Studio.
 
 Questo argomento presuppone una familiarità di base con il supporto CMake in Visual Studio. Per altre informazioni, vedere [CMake Tools for Visual C++](../ide/cmake-tools-for-visual-cpp.md) (Strumenti CMake per Visual C++). Per altre informazioni su CMake, vedere [Build, Test and Package Your Software With CMake](https://cmake.org/) (Compilare e testare il software e includerlo in un pacchetto con CMake).
 
 > [!NOTE]  
-> Il supporto CMake in Visual Studio richiede il supporto della modalità server introdotta in CMake 3.8. Se la gestione pacchetti fornisce una versione meno recente di CMake, è possibile ovviare al problema [compilando CMake dall'origine](#build-a-supported-cmake release-from-source) o scaricandolo dalla [pagina di download di CMake](https://cmake.org/download/) ufficiale.
+> Il supporto CMake in Visual Studio richiede il supporto della modalità server introdotta in CMake 3.8. Se la gestione pacchetti fornisce una versione meno recente di CMake, è possibile ovviare al problema [compilando CMake dall'origine](#build-a-supported-cmake release-from-source) o scaricandolo dalla [pagina di download di CMake](https://cmake.org/download/) ufficiale. Per una variante di CMake fornita da Microsoft che supporta il riquadro [Visualizzazione destinazioni CMake](https://blogs.msdn.microsoft.com/vcblog/2018/04/09/cmake-support-in-visual-studio-targets-view-single-file-compilation-and-cache-generation-settings/) in Visual Studio, scaricare la versione più recente dei file binari all'indirizzo [https://github.com/Microsoft/CMake/releases](https://github.com/Microsoft/CMake/releases).
 
 ## <a name="open-a-folder"></a>Aprire una cartella
 

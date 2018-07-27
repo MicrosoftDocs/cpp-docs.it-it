@@ -1,7 +1,8 @@
 ---
-title: Distribuire, eseguire e sottoporre a debug il progetto Linux | Microsoft Docs
+title: Distribuire, eseguire ed eseguire il debug del progetto Linux C++ in Visual Studio | Microsoft Docs
+description: Descrive come compilare, eseguire ed eseguire il debug del codice nella destinazione remota all'interno di un progetto Linux C++ in Visual Studio.
 ms.custom: ''
-ms.date: 11/06/2017
+ms.date: 07/20/2018
 ms.technology:
 - cpp-linux
 ms.tgt_pltfrm: Linux
@@ -12,16 +13,16 @@ ms.author: corob
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: b3f3742f8a63bf93f5686143daeea23ba13255be
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 57f8aea7d3ff3ddfd28beff6647dc16885d972e3
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33338055"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39207679"
 ---
 # <a name="deploy-run-and-debug-your-linux-project"></a>Distribuire, eseguire e sottoporre a debug il progetto Linux
 
-Dopo avere creato un progetto Linux ed essersi connessi al progetto usando [Gestione connessione per Linux](../linux/connect-to-your-remote-linux-computer.md), è possibile eseguire il progetto ed eseguirne il debug. Si compila, si esegue e si sottopone a debug il codice nella destinazione remota.
+Dopo avere creato un progetto Linux C++ in Visual Studio ed essersi connessi al progetto usando [Gestione connessione per Linux](../linux/connect-to-your-remote-linux-computer.md), è possibile eseguire il progetto ed eseguirne il debug. Si compila, si esegue e si sottopone a debug il codice nella destinazione remota.
 
 Esistono diversi modi di interagire con il progetto Linux ed eseguirne il debug.
 

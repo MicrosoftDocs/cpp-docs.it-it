@@ -170,12 +170,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a66b351ba03ad6d8afb9d7423a2d1833eec8e2b7
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0865aaf418fb6d8624f3dec9c853c32c1e3bbc83
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32418523"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39208780"
 ---
 # <a name="standard-types"></a>Tipi standard
 La libreria di runtime Microsoft definisce i tipi standard e typedef seguenti.  
@@ -218,7 +218,7 @@ La libreria di runtime Microsoft definisce i tipi standard e typedef seguenti.
 |`fpos_t` (long integer, `__int64`, o struttura, a seconda della piattaforma di destinazione)|Usato da [fgetpos](../c-runtime-library/reference/fgetpos.md) e [fsetpos](../c-runtime-library/reference/fsetpos.md) per registrare informazioni per specificare in modo univoco ogni posizione all'interno di un file.|STDIO.H|  
 |`_fsize_t` (unsigned long integer)|Usato per rappresentare le dimensioni di un file.|IO.H,<br /><br /> WCHAR.H|  
 |Struttura `_HEAPINFO`|Contiene informazioni sulla voce dell'heap successiva per [_heapwalk](../c-runtime-library/reference/heapwalk.md).|MALLOC.H|  
-|`_HFILE` (void *)|Gestore di file del sistema operativo.|CRTDBG.H|  
+|`_HFILE` (void \*)|Gestore di file del sistema operativo.|CRTDBG.H|  
 |`imaxdiv_t`|Il tipo del valore restituito dalla funzione [imaxdiv](../c-runtime-library/reference/imaxdiv.md), contenente sia il quoziente che il resto.|inttypes.h|  
 |`ino_t`, `_ino_t` (unsigned short)|Per restituire informazioni sullo stato.|WCHAR.H|  
 |`intmax_t`|Tipo signed integer in grado di rappresentare qualsiasi valore di qualsiasi tipo signed integer.|stdint.h|  

@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f645d1202149ae2625d5a15df5be61029beb6ab1
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 28c99f5f45aba2c77b84dce63ea200fb33b76f84
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33848778"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39208809"
 ---
 # <a name="porting-guide-spy"></a>Guida al porting: Spy++
 Questo case study relativo al porting contiene informazioni generali sul funzionamento di un tipico progetto di porting e sui tipi di problemi che è possibile riscontrare, oltre ad alcuni suggerimenti e trucchi per la risoluzione dei problemi di porting. Questa non intende essere una guida definitiva, perché l'esperienza del porting di un progetto dipende in larga misura dalle specifiche del codice.  
@@ -195,7 +195,7 @@ MOUT << _T(" chUser:'") << chUser
   
 ```  
   
- La macro `MOUT` si risolve in *g_pmout, cioè un oggetto di tipo `mstream`. La classe mstream deriva dalla classe di stringa di output standard, `std::basic_ostream<TCHAR>.`. Tuttavia, con _T nei pressi del valore letterale stringa, che è stato inserito in preparazione alla conversione in Unicode, la risoluzione dell'overload per l'operatore >> non riesce, con il messaggio di errore seguente:  
+ La macro `MOUT` si risolve in \*g_pmout, cioè un oggetto di tipo `mstream`. La classe mstream deriva dalla classe di stringa di output standard, `std::basic_ostream<TCHAR>.`. Tuttavia, con _T nei pressi del valore letterale stringa, che è stato inserito in preparazione alla conversione in Unicode, la risoluzione dell'overload per l'operatore >> non riesce, con il messaggio di errore seguente:  
   
 ```Output  
 1>winmsgs.cpp(4612): error C2666: 'mstream::operator <<': 2 overloads have similar conversions
