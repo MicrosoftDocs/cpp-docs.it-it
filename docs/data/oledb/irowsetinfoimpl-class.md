@@ -1,5 +1,5 @@
 ---
-title: Classe IRowsetInfoImpl | Documenti Microsoft
+title: Classe IRowsetInfoImpl | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -9,25 +9,43 @@ f1_keywords:
 - ATL.IRowsetInfoImpl
 - IRowsetInfoImpl
 - ATL::IRowsetInfoImpl
+- ATL.IRowsetInfoImpl.GetProperties
+- IRowsetInfoImpl.GetProperties
+- ATL::IRowsetInfoImpl::GetProperties
+- IRowsetInfoImpl::GetProperties
+- GetProperties
+- ATL::IRowsetInfoImpl::GetReferencedRowset
+- GetReferencedRowset
+- ATL.IRowsetInfoImpl.GetReferencedRowset
+- IRowsetInfoImpl.GetReferencedRowset
+- IRowsetInfoImpl::GetReferencedRowset
+- IRowsetInfoImpl::GetSpecification
+- ATL.IRowsetInfoImpl.GetSpecification
+- IRowsetInfoImpl.GetSpecification
+- GetSpecification
+- ATL::IRowsetInfoImpl::GetSpecification
 dev_langs:
 - C++
 helpviewer_keywords:
 - IRowsetInfoImpl class
+- GetProperties method
+- GetReferencedRowset method
+- GetSpecification method
 ms.assetid: 9c654155-7727-464e-bd31-143e68391a47
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: f9b784dbb13ff39be21ccd353d514dd244d5ae41
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4ccf4d6b34362d4c8b7875319af444f755d741e7
+ms.sourcegitcommit: e5792fcb89b9ba64c401f90f4f26a8e45d4a2359
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33106219"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39322036"
 ---
 # <a name="irowsetinfoimpl-class"></a>Classe IRowsetInfoImpl
-Fornisce un'implementazione per il [IRowsetInfo](https://msdn.microsoft.com/en-us/library/ms724541.aspx) interfaccia.  
+Fornisce un'implementazione per il [IRowsetInfo](https://msdn.microsoft.com/library/ms724541.aspx) interfaccia.  
   
 ## <a name="syntax"></a>Sintassi
 
@@ -38,12 +56,15 @@ class ATL_NO_VTABLE IRowsetInfoImpl :
    public CUtlProps<PropClass>  
 ```  
   
-#### <a name="parameters"></a>Parametri  
- `T`  
+### <a name="parameters"></a>Parametri  
+ *T*  
  La classe, derivata da `IRowsetInfoImpl`.  
   
- `PropClass`  
- Una classe di proprietà definibili dall'utente che per impostazione predefinita `T`.  
+ *PropClass*  
+ Una classe di proprietà definibili dall'utente che viene impostato su *T*. 
+
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** altdb.h   
   
 ## <a name="members"></a>Membri  
   
@@ -51,15 +72,57 @@ class ATL_NO_VTABLE IRowsetInfoImpl :
   
 |||  
 |-|-|  
-|[GetProperties](../../data/oledb/irowsetinfoimpl-getproperties.md)|Restituisce le impostazioni correnti di tutte le proprietà supportate dal set di righe.|  
-|[GetReferencedRowset](../../data/oledb/irowsetinfoimpl-getreferencedrowset.md)|Restituisce un puntatore a interfaccia al set di righe a cui si applica un segnalibro.|  
-|[GetSpecification](../../data/oledb/irowsetinfoimpl-getspecification.md)|Restituisce un puntatore a interfaccia per l'oggetto (di comando o di sessione) che ha creato questo set di righe.|  
+|[GetProperties](#getproperties)|Restituisce le impostazioni correnti di tutte le proprietà supportate dal set di righe.|  
+|[GetReferencedRowset](#getreferencedrowset)|Restituisce un puntatore di interfaccia al set di righe a cui viene applicato un segnalibro.|  
+|[GetSpecification](#getspecification)|Restituisce un puntatore a interfaccia sull'oggetto (comando o sessione) che ha creato questo set di righe.|  
   
 ## <a name="remarks"></a>Note  
- Un'interfaccia obbligatoria sui set di righe. Questa classe implementa le proprietà del set di righe tramite il [mapping di set di proprietà](../../data/oledb/begin-propset-map.md) definito nella classe di comando. Sebbene la classe di set di righe viene visualizzata per utilizzare la proprietà della classe di comando set, il set di righe viene fornito con la propria copia delle proprietà in fase di esecuzione, quando viene creato da un oggetto comando o sessione.  
+ Un'interfaccia obbligatoria nel set di righe. Questa classe implementa le proprietà del set di righe usando il [mapping dell'insieme di proprietà](../../data/oledb/begin-propset-map.md) definito nella classe del comando. Anche se la classe di set di righe viene visualizzata usare proprietà della classe di comando imposta il set di righe viene fornito con la propria copia delle proprietà in fase di esecuzione, quando viene creato da un oggetto comando o sessione.  
   
-## <a name="requirements"></a>Requisiti  
- **Intestazione:** altdb.h  
+## <a name="getproperties"></a> Irowsetinfoimpl:: GetProperties
+Restituisce le impostazioni correnti per le proprietà di `DBPROPSET_ROWSET` gruppo.  
+  
+### <a name="syntax"></a>Sintassi  
+  
+```cpp
+      STDMETHOD (GetProperties )(const ULONG cPropertyIDSets,  
+   const DBPROPIDSET rgPropertyIDSets[],  
+   ULONG* pcPropertySets,  
+   DBPROPSET** prgPropertySets);  
+```  
+  
+#### <a name="parameters"></a>Parametri  
+ Visualizzare [IRowsetInfo:: GetProperties](https://msdn.microsoft.com/library/ms719611.aspx) nel *riferimento per programmatori OLE DB*. 
+
+## <a name="getreferencedrowset"></a> Irowsetinfoimpl:: Getreferencedrowset
+Restituisce un puntatore di interfaccia al set di righe a cui viene applicato un segnalibro.  
+  
+### <a name="syntax"></a>Sintassi  
+  
+```cpp
+      STDMETHOD (GetReferencedRowset )(DBORDINAL iOrdinal,  
+   REFIID riid,  
+   IUnknown** ppReferencedRowset);  
+```  
+  
+#### <a name="parameters"></a>Parametri  
+ Visualizzare [IRowsetInfo::GetReferencedRowset](https://msdn.microsoft.com/library/ms721145.aspx) nel *riferimento per programmatori OLE DB*. Il *iOrdinal* parametro deve essere una colonna del segnalibro. 
+
+## <a name="getspecification"></a> Irowsetinfoimpl:: Getspecification
+Restituisce un puntatore a interfaccia sull'oggetto (comando o sessione) che ha creato questo set di righe.  
+  
+### <a name="syntax"></a>Sintassi  
+  
+```cpp
+      STDMETHOD (GetSpecification )(REFIID riid,  
+   IUnknown** ppSpecification);  
+```  
+  
+#### <a name="parameters"></a>Parametri  
+ Visualizzare [IRowsetInfo::GetSpecification](https://msdn.microsoft.com/library/ms716746.aspx) nel *riferimento per programmatori OLE DB*.  
+  
+### <a name="remarks"></a>Note  
+ Utilizzare questo metodo con [IGetDataSourceImpl](../../data/oledb/igetdatasourceimpl-class.md) per recuperare le proprietà dall'oggetto origine dati.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Modelli Provider OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)   

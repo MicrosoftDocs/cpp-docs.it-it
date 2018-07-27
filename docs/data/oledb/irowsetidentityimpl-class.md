@@ -1,5 +1,5 @@
 ---
-title: Classe IRowsetIdentityImpl | Documenti Microsoft
+title: Classe IRowsetIdentityImpl | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -9,25 +9,31 @@ f1_keywords:
 - ATL::IRowsetIdentityImpl
 - ATL.IRowsetIdentityImpl
 - IRowsetIdentityImpl
+- IsSameRow
+- IRowsetIdentityImpl.IsSameRow
+- ATL.IRowsetIdentityImpl.IsSameRow
+- IRowsetIdentityImpl::IsSameRow
+- ATL::IRowsetIdentityImpl::IsSameRow
 dev_langs:
 - C++
 helpviewer_keywords:
 - IRowsetIdentityImpl class
+- IsSameRow method
 ms.assetid: 56821edf-e045-40c8-96bd-231552cd5799
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 29ec88546a622ee42ce0e81efa9400305e2e14ae
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5cbafe7f43d8a6c7acfaccb52fd22b595bdd0ec4
+ms.sourcegitcommit: e5792fcb89b9ba64c401f90f4f26a8e45d4a2359
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33101422"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39322098"
 ---
 # <a name="irowsetidentityimpl-class"></a>Classe IRowsetIdentityImpl
-Implementa OLE DB [IRowsetIdentity](https://msdn.microsoft.com/en-us/library/ms715913.aspx) interfaccia, che consente il test per l'identità di riga.  
+Implementa OLE DB [IRowsetIdentity](https://msdn.microsoft.com/library/ms715913.aspx) interfaccia, che consente di eseguire test per l'identità di riga.  
   
 ## <a name="syntax"></a>Sintassi
 
@@ -37,12 +43,15 @@ class ATL_NO_VTABLE IRowsetIdentityImpl
    : public IRowsetIdentity  
 ```  
   
-#### <a name="parameters"></a>Parametri  
- `T`  
+### <a name="parameters"></a>Parametri  
+ *T*  
  Una classe derivata da `IRowsetIdentityImpl`.  
   
- `RowClass`  
- L'unità di archiviazione per il **HROW**.  
+ *RowClass*  
+ L'unità di archiviazione per il `HROW`.  
+
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** atldb.h  
   
 ## <a name="members"></a>Membri  
   
@@ -50,10 +59,23 @@ class ATL_NO_VTABLE IRowsetIdentityImpl
   
 |||  
 |-|-|  
-|[IsSameRow](../../data/oledb/irowsetidentityimpl-issamerow.md)|Confronta due handle di riga per vedere se fanno riferimento alla stessa riga.|  
+|[IsSameRow](#issamerow)|Confronta due handle di riga per vedere se fanno riferimento alla stessa riga.|  
   
-## <a name="requirements"></a>Requisiti  
- **Intestazione:** atldb.h  
+## <a name="issamerow"></a> Irowsetidentityimpl:: Issamerow
+Confronta due handle di riga per vedere se fanno riferimento alla stessa riga.  
+  
+### <a name="syntax"></a>Sintassi  
+  
+```cpp
+      STDMETHOD(IsSameRow )(HROW hThisRow,  
+   HROW hThatRow);  
+```  
+  
+#### <a name="parameters"></a>Parametri  
+ Visualizzare [IRowsetIdentity::IsSameRow](https://msdn.microsoft.com/library/ms719629.aspx) nel *riferimento per programmatori OLE DB*.  
+  
+### <a name="remarks"></a>Note  
+ Per confrontare gli handle di riga, questo metodo viene eseguito il cast di `HROW` handle a `RowClass` membri e chiamate `memcmp` sugli indicatori di misura.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Modelli Provider OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)   
