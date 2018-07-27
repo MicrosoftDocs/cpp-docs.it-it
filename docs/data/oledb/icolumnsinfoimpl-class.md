@@ -1,5 +1,5 @@
 ---
-title: Classe IColumnsInfoImpl | Documenti Microsoft
+title: Classe IColumnsInfoImpl | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -11,25 +11,42 @@ f1_keywords:
 - IColumnsInfoImpl
 - ATL.IColumnsInfoImpl
 - ATL::IColumnsInfoImpl<T>
+- GetColumnInfo
+- ATL::IColumnsInfoImpl::GetColumnInfo
+- ATL.IColumnsInfoImpl.GetColumnInfo
+- ATL::IColumnsInfoImpl<T>::GetColumnInfo
+- IColumnsInfoImpl::GetColumnInfo
+- IColumnsInfoImpl<T>::GetColumnInfo
+- IColumnsInfoImpl.GetColumnInfo
+- IColumnsInfoImpl<T>::MapColumnIDs
+- MapColumnIDs
+- ATL::IColumnsInfoImpl::MapColumnIDs
+- IColumnsInfoImpl.MapColumnIDs
+- ATL::IColumnsInfoImpl<T>::MapColumnIDs
+- IColumnsInfoImpl::MapColumnIDs
+- ATL.IColumnsInfoImpl<T>.MapColumnIDs
+- ATL.IColumnsInfoImpl.MapColumnIDs
 dev_langs:
 - C++
 helpviewer_keywords:
 - IColumnsInfoImpl class
+- GetColumnInfo method
+- MapColumnIDs method
 ms.assetid: ba74c1c5-2eda-4452-8b57-84919fa0d066
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 93cc4c44031d2091de64f2d82c1866135d1702cd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1aa70a8efea82660632cf0219c76009eea44f606
+ms.sourcegitcommit: b0d6777cf4b580d093eaf6104d80a888706e7578
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33101058"
+ms.lasthandoff: 07/26/2018
+ms.locfileid: "39269813"
 ---
 # <a name="icolumnsinfoimpl-class"></a>Classe IColumnsInfoImpl
-Fornisce un'implementazione del [IColumnsInfo](https://msdn.microsoft.com/en-us/library/ms724541.aspx) interfaccia.  
+Fornisce un'implementazione del [IColumnsInfo](https://msdn.microsoft.com/library/ms724541.aspx) interfaccia.  
   
 ## <a name="syntax"></a>Sintassi
 
@@ -40,9 +57,12 @@ class ATL_NO_VTABLE IColumnsInfoImpl :
    public CDBIDOps  
 ```  
   
-#### <a name="parameters"></a>Parametri  
- `T`  
+### <a name="parameters"></a>Parametri  
+ *T*  
  La classe, derivata da `IColumnsInfoImpl`.  
+
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** atldb.h  
   
 ## <a name="members"></a>Membri  
   
@@ -50,14 +70,39 @@ class ATL_NO_VTABLE IColumnsInfoImpl :
   
 |||  
 |-|-|  
-|[GetColumnInfo](../../data/oledb/icolumnsinfoimpl-getcolumninfo.md)|Restituisce i metadati della colonna necessari per la maggior parte dei consumer.|  
-|[MapColumnIDs](../../data/oledb/icolumnsinfoimpl-mapcolumnids.md)|Restituisce una matrice di numeri ordinali delle colonne in un set di righe identificato dall'ID di colonna specificati.|  
+|[GetColumnInfo](#getcolumninfo)|Restituisce i metadati della colonna necessari per la maggior parte dei consumatori.|  
+|[MapColumnIDs](#mapcolumnids)|Restituisce una matrice di ordinali delle colonne in un set di righe che sono identificati dall'ID di colonna specificati.|  
   
 ## <a name="remarks"></a>Note  
  Un'interfaccia obbligatoria nel set di righe e i comandi. Per modificare il comportamento del proprio provider `IColumnsInfo` implementazione, è necessario modificare la mappa delle colonne del provider.  
+
+## <a name="getcolumninfo"></a> Icolumnsinfoimpl:: GetColumnInfo
+Restituisce i metadati della colonna necessari per la maggior parte dei consumatori.  
   
-## <a name="requirements"></a>Requisiti  
- **Intestazione:** atldb.h  
+### <a name="syntax"></a>Sintassi  
+  
+```cpp
+      STDMETHOD (GetColumnInfo)(DBORDINAL* pcColumns,  
+   DBCOLUMNINFO** prgInfo,  
+   OLECHAR** ppStringsBuffer);  
+```  
+  
+#### <a name="parameters"></a>Parametri  
+ Visualizzare [IColumnsInfo:: GetColumnInfo](https://msdn.microsoft.com/library/ms722704.aspx) nel *riferimento per programmatori OLE DB*.  
+
+## <a name="mapcolumnids"></a> Icolumnsinfoimpl:: Mapcolumnids
+Restituisce una matrice di ordinali delle colonne in un set di righe che sono identificati dall'ID di colonna specificati.  
+  
+### <a name="syntax"></a>Sintassi  
+  
+```cpp
+      STDMETHOD (MapColumnIDs)(DBORDINAL cColumnIDs,  
+   const DBID rgColumnIDs[],  
+   DBORDINAL rgColumns[]);  
+```  
+  
+#### <a name="parameters"></a>Parametri  
+ Visualizzare [IColumnsInfo::MapColumnIDs](https://msdn.microsoft.com/library/ms714200.aspx) nel *riferimento per programmatori OLE DB*.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Modelli Provider OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)   
