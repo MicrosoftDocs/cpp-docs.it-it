@@ -1,5 +1,5 @@
 ---
-title: 'Recordset: Ordinamento dei record (ODBC) | Documenti Microsoft'
+title: 'Recordset: Ordinamento dei record (ODBC) | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,27 +17,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: ddb92016b7b911fc86f2feab27a698ce7fa55c45
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c78603e12aec7653e7c5c62d9a0282241ccda99e
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33090273"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39337830"
 ---
 # <a name="recordset-sorting-records-odbc"></a>Recordset: ordinamento dei record (ODBC)
 Questo argomento si applica alle classi ODBC MFC.  
   
- In questo argomento viene illustrato l'ordinamento del recordset. È possibile specificare uno o più colonne su cui basare l'ordinamento e, è possibile specificare l'ordine crescente o decrescente (`ASC` o **DESC**; `ASC` è l'impostazione predefinita) per ciascuna colonna specificata. Ad esempio, se si specificano due colonne, i record sono ordinati in base alla prima e quindi in base alla seconda. Un database SQL **ORDER BY** clausola definisce un tipo di ordinamento. Quando il framework aggiunge il **ORDER BY** clausola to SQL del recordset esegue una query, la clausola controlla l'ordinamento della selezione.  
+ In questo argomento viene illustrato l'ordinamento del recordset. È possibile specificare uno o più colonne su cui basare l'ordinamento ed è possibile specificare l'ordine crescente o decrescente (**ASC** oppure **DESC**; **ASC** è l'impostazione predefinita) per ciascuna colonna specificata. Ad esempio, se si specificano due colonne, i record sono ordinati nella prima colonna denominata e quindi in base alla seconda. Un database SQL **ORDER BY** clausola definisce un ordinamento. Quando il framework aggiunge il **ORDER BY** clausola to SQL del recordset esegue una query, i controlli di clausola di selezione dell'ordinamento.  
   
- È necessario stabilire l'ordinamento di un oggetto recordset dopo la creazione dell'oggetto, ma prima di chiamare il relativo **aprire** funzione membro (o prima di chiamare il **Requery** funzione membro per un oggetto recordset esistente il cui **aprire** funzione membro è stata chiamata in precedenza).  
+ È necessario stabilire l'ordinamento del recordset dopo la creazione dell'oggetto, ma prima di chiamare relativi `Open` funzione membro (o prima di chiamare il `Requery` dell'oggetto la cui funzione membro per un set di record esistente `Open` funzione membro è stato chiamato in precedenza).  
   
-#### <a name="to-specify-a-sort-order-for-a-recordset-object"></a>Per specificare un criterio di ordinamento per un oggetto recordset  
+#### <a name="to-specify-a-sort-order-for-a-recordset-object"></a>Per specificare un ordine per un oggetto recordset  
   
-1.  Creare un nuovo oggetto recordset (o preparare una chiamata a **Requery** per quella esistente).  
+1.  Creare un nuovo oggetto recordset (o preparare una chiamata a `Requery` per uno esistente).  
   
 2.  Impostare il valore dell'oggetto [m_strSort](../../mfc/reference/crecordset-class.md#m_strsort) (membro dati).  
   
-     L'ordinamento è una stringa con terminazione null. I contenuti del **ORDER BY** clausola ma non la parola chiave **ORDER BY**. Ad esempio, utilizzare:  
+     L'ordinamento è una stringa con terminazione null. I contenuti del **ORDER BY** clausola, ma non la parola chiave **ORDER BY**. Ad esempio, usare:  
   
     ```  
     recordset.m_strSort = "LastName DESC, FirstName DESC";  
@@ -51,11 +51,11 @@ Questo argomento si applica alle classi ODBC MFC.
   
 3.  Impostare le opzioni che necessarie, come un filtro, la modalità di blocco o parametri.  
   
-4.  Chiamare **aprire** per il nuovo oggetto (o **Requery** per un oggetto esistente).  
+4.  Chiamare `Open` per il nuovo oggetto (o `Requery` per un oggetto esistente).  
   
- I record selezionati sono ordinati come specificato. Ad esempio, per ordinare un set di record dello studente in ordine decrescente per cognome e nome, quindi, eseguire le operazioni seguenti:  
+ I record selezionati vengono ordinati come specificato. Ad esempio, per ordinare un set di record in ordine decrescente per cognome e quindi al nome, eseguire le operazioni seguenti:  
   
-```  
+```cpp  
 // Construct the recordset  
 CStudentSet rsStudent( NULL );  
 // Set the sort  
@@ -64,10 +64,10 @@ rsStudent.m_strSort = "LastName DESC, FirstName DESC";
 rsStudent.Open( );  
 ```  
   
- Il recordset contiene tutti i record di studenti, ordinati in ordine decrescente (da Z ad A) il cognome, quindi in base al nome.  
+ Il set di record contiene tutti i record di studenti, vengono ordinati in senso decrescente (dalla Z alla A) il cognome, quindi in base al nome.  
   
 > [!NOTE]
->  Se si sceglie di eseguire l'override della stringa del recordset predefinito SQL passando una stringa SQL personalizzata per **aprire**, non impostare un ordinamento se la stringa personalizzata è un **ORDER BY** clausola.  
+>  Se si sceglie di eseguire l'override della stringa del recordset predefiniti SQL passando la stringa SQL personalizzata per `Open`, non impostare un ordinamento se la stringa personalizzata è un' **ORDER BY** clausola.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Recordset (ODBC)](../../data/odbc/recordset-odbc.md)   

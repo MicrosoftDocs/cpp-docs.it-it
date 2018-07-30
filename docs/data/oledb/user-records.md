@@ -1,5 +1,5 @@
 ---
-title: Record utente | Documenti Microsoft
+title: Record utente | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -26,21 +26,21 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: aea6b4b2ebb1a02e4ef669b437fbe7eb30937f9b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8e9549070acf08e566110ea30f4a0259caeca047
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33109807"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39339672"
 ---
 # <a name="user-records"></a>Record utente
-Per utilizzare una funzione di accesso statica (ovvero, una funzione di accesso derivata da **CAccessor)**, il consumer deve includere un record utente. Il record dell'utente è una classe C++ che contiene gli elementi di dati per gestire l'input o output. La creazione guidata Consumer OLE DB ATL genera un record utente per il consumer. È possibile aggiungere metodi per il record utente per attività facoltative, ad esempio gestione dei comandi.  
+Usare una funzione di accesso statico (vale a dire, una funzione di accesso derivata da `CAccessor`), il consumer deve disporre di un record utente. Il record dell'utente è una classe C++ che contiene gli elementi di dati per gestire l'input o output. La creazione guidata Consumer OLE DB ATL genera un record utente per i consumer. È possibile aggiungere i metodi per il record dell'utente per attività facoltative, ad esempio gestione dei comandi.  
   
- Il codice seguente viene illustrato un esempio di record che gestisce i comandi. Nel record utente, `BEGIN_COLUMN_MAP` rappresenta un set di righe di dati passato al consumer da un provider. `BEGIN_PARAM_MAP` rappresenta un set di parametri del comando. Questo esempio viene utilizzato un [CCommand](../../data/oledb/ccommand-class.md) classe per gestire i parametri del comando. I membri di dati nelle voci di mappa rappresentano gli offset in un blocco contiguo di memoria per ogni istanza della classe. Il `COLUMN_ENTRY` macro corrispondono al `PROVIDER_COLUMN_ENTRY` macro sul lato del provider.  
+ Il codice seguente mostra un record di esempio che gestisce i comandi. Nel record utente, BEGIN_COLUMN_MAP rappresenta un set di righe di dati passati al consumer di un provider. BEGIN_PARAM_MAP rappresenta un set di parametri del comando. Questo esempio Usa un' [CCommand](../../data/oledb/ccommand-class.md) classe per gestire i parametri del comando. I membri di dati nelle voci della mappa rappresentano gli offset in un blocco contiguo di memoria per ogni istanza della classe. Le macro COLUMN_ENTRY corrispondono alle macro PROVIDER_COLUMN_ENTRY sul lato del provider.  
   
- Per ulteriori informazioni sul **COLUMN_MAP** e **PARAM_MAP** macro, vedere [macro per i modelli Consumer OLE DB](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md).  
+ Per altre informazioni sulle macro dei COLUMN_MAP e PARAM_MAP, vedere [macro per modelli Consumer OLE DB](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md).  
   
-```  
+```cpp  
 class CArtists  
 {  
 public:  
@@ -64,14 +64,14 @@ END_PARAM_MAP()
 ```  
   
 ## <a name="wizard-generated-user-records"></a>Record utente generato dalla procedura guidata  
- Se si utilizza la creazione guidata Consumer OLE DB ATL per generare un consumer, è possibile scegliere di utilizzare i modelli OLE DB o gli attributi OLE DB. Il codice generato è diverso in ogni caso. Per ulteriori informazioni su questo codice, vedere [classi generate](../../data/oledb/consumer-wizard-generated-classes.md).  
+ Se si usa la creazione guidata Consumer OLE DB ATL per generare un consumer, è possibile scegliere di usare i modelli OLE DB o gli attributi OLE DB. Il codice generato è diverso in ogni caso. Per altre informazioni su questo codice, vedere [classi riguardano](../../data/oledb/consumer-wizard-generated-classes.md).  
   
-## <a name="user-record-support-for-multiple-accessors"></a>Supporto di Record utente per più funzioni di accesso  
- Per una descrizione dettagliata degli scenari in cui è necessario utilizzare più funzioni di accesso, vedere [utilizzo di più funzioni di accesso per un Rowset](../../data/oledb/using-multiple-accessors-on-a-rowset.md).  
+## <a name="user-record-support-for-multiple-accessors"></a>Supporto per più funzioni di accesso del Record utente  
+ Per una discussione dettagliata degli scenari in cui è necessario utilizzare più funzioni di accesso, vedere [uso di più funzioni di accesso su un set di righe](../../data/oledb/using-multiple-accessors-on-a-rowset.md).  
   
- Nell'esempio seguente viene modificato per supportare più funzioni di accesso nel set di righe il record dell'utente. Invece di `BEGIN_COLUMN_MAP` e `END_COLUMN_MAP`, Usa [BEGIN_ACCESSOR_MAP](../../data/oledb/begin-accessor-map.md) e [BEGIN_ACCESSOR](../../data/oledb/begin-accessor.md) per ogni funzione di accesso. Il `BEGIN_ACCESSOR` (macro) specifica il numero di funzioni di accesso (offset da zero) e indica se la funzione di accesso è un sia automatica o meno. Chiamata di Autoaccessors `GetData` per recuperare i dati automaticamente con una chiamata a [MoveNext](../../data/oledb/crowset-movenext.md). Le funzioni di accesso è necessario recuperare in modo esplicito i dati. Utilizzare una funzione di accesso si se si desidera associare a un campo di dati di grandi dimensioni (ad esempio un'immagine bitmap) che potrebbe non desidera recuperare per ogni record.  
+ Nell'esempio seguente mostra il record utente modificato per supportare più funzioni di accesso sul set di righe. Anziché BEGIN_COLUMN_MAP ed END_COLUMN_MAP, vengono usati [BEGIN_ACCESSOR_MAP](../../data/oledb/begin-accessor-map.md) e [BEGIN_ACCESSOR](../../data/oledb/begin-accessor.md) per ogni funzione di accesso. La macro BEGIN_ACCESSOR specifica il numero di funzioni di accesso (offset da zero) e indica se la funzione di accesso è un sia automatica o meno. Chiamata Autoaccessors `GetData` per recuperare i dati automaticamente in una chiamata a [MoveNext](../../data/oledb/crowset-movenext.md). Le funzioni di accesso necessario recuperare in modo esplicito i dati. Se si associa a un campo di dati di grandi dimensioni (ad esempio, un'immagine bitmap) che è possibile evitare di recuperare per ogni record, usare una funzione di accesso si.  
   
-```  
+```cpp  
 class CMultiArtists  
 {  
 public:  

@@ -41,12 +41,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: a9f869a901885b064ef4ddbbfddc23b246455a39
-ms.sourcegitcommit: 04d327940787df1297b72d534f388a035d472af0
+ms.openlocfilehash: edc18dcb83b2dda63fd5cfb5c56c3c95baa72df0
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/20/2018
-ms.locfileid: "39181185"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39340729"
 ---
 # <a name="caccessorrowset-class"></a>Classe CAccessorRowset
 Incapsula un set di righe e delle relative funzioni di accesso associati in una singola classe.  
@@ -55,7 +55,7 @@ Incapsula un set di righe e delle relative funzioni di accesso associati in una 
 
 ```cpp
 template <class TAccessor = CNoAccessor, 
-          template <typename T> class TRowset = CRowset>  
+   template <typename T> class TRowset = CRowset>  
 class CAccessorRowset : public TAccessor, public TRowset<TAccessor>  
 ```  
   
@@ -79,7 +79,7 @@ class CAccessorRowset : public TAccessor, public TRowset<TAccessor>
 |[CAccessorRowset](#caccessorrowset)|Costruttore.|  
 |[Chiudi](#close)|Chiude il set di righe e le funzioni di accesso.|  
 |[FreeRecordMemory](#freerecordmemory)|Libera tutte le colonne nel record corrente che devono essere liberate.|  
-|[GetColumnInfo](#getcolumninfo)|Implements [IColumnsInfo:: GetColumnInfo](https://msdn.microsoft.com/en-us/library/ms722704.aspx).|  
+|[GetColumnInfo](#getcolumninfo)|Implements [IColumnsInfo:: GetColumnInfo](https://msdn.microsoft.com/library/ms722704.aspx).|  
   
 ## <a name="remarks"></a>Note  
  Classe `TAccessor` gestisce la funzione di accesso. Classe *TRowset* gestisce il set di righe.  
@@ -91,7 +91,6 @@ Consente di creare le associazioni se è stato specificato `bBind` come **false*
   
 ```cpp
 HRESULT Bind();  
-  
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
@@ -104,7 +103,6 @@ Inizializza il `CAccessorRowset` oggetto.
   
 ```cpp
 CAccessorRowset();  
-  
 ```  
 
 ## <a name="close"></a> CAccessorRowset:: Close
@@ -114,7 +112,6 @@ Rilascia tutte le funzioni di accesso attivi e il set di righe.
   
 ```cpp
 void Close();  
-  
 ```  
   
 ### <a name="remarks"></a>Note  
@@ -127,7 +124,6 @@ Libera tutte le colonne nel record corrente che devono essere liberate.
   
 ```cpp
 void FreeRecordMemory();  
-  
 ```  
 
 ## <a name="getcolumninfo"></a> CAccessorRowset:: GetColumnInfo
@@ -136,16 +132,16 @@ Ottiene informazioni sulle colonne dal set di righe aperto.
 ### <a name="syntax"></a>Sintassi  
   
 ```cpp
-HRESULT GetColumnInfo(DBORDINAL* pulColumns,  
-   DBCOLUMNINFO** ppColumnInfo,  
-   LPOLESTR* ppStrings) const;  
-
-HRESULT GetColumnInfo(DBORDINAL* pColumns,  
+HRESULT GetColumnInfo(DBORDINAL* pulColumns, 
+   DBCOLUMNINFO** ppColumnInfo, 
+   LPOLESTR* ppStrings) const; 
+    
+HRESULT GetColumnInfo(DBORDINAL* pColumns, 
    DBCOLUMNINFO** ppColumnInfo);  
 ```  
   
 #### <a name="parameters"></a>Parametri  
- Visualizzare [IColumnsInfo:: GetColumnInfo](https://msdn.microsoft.com/en-us/library/ms722704.aspx) nel *riferimento per programmatori OLE DB*.  
+ Visualizzare [IColumnsInfo:: GetColumnInfo](https://msdn.microsoft.com/library/ms722704.aspx) nel *riferimento per programmatori OLE DB*.  
   
 ### <a name="return-value"></a>Valore restituito  
  Un valore HRESULT standard.  
@@ -153,7 +149,7 @@ HRESULT GetColumnInfo(DBORDINAL* pColumns,
 ### <a name="remarks"></a>Note  
  L'utente deve liberare il buffer di stringa e le informazioni di colonna restituita. Utilizzare la seconda versione di questo metodo quando si usa [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md) ed è necessario eseguire l'override delle associazioni.  
   
- Per altre informazioni, vedere [IColumnsInfo:: GetColumnInfo](https://msdn.microsoft.com/en-us/library/ms722704.aspx) nel *riferimento per programmatori OLE DB*.  
+ Per altre informazioni, vedere [IColumnsInfo:: GetColumnInfo](https://msdn.microsoft.com/library/ms722704.aspx) nel *riferimento per programmatori OLE DB*.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Modelli Consumer OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)   

@@ -1,5 +1,5 @@
 ---
-title: Utilizzo di segnalibri | Documenti Microsoft
+title: Uso dei segnalibri | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,17 +18,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 5aa16d5f2a3a02d0e9fd6bb3dd5de71494e81d4a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e6570e82c7cd50c03530b085ee9497fbc974fd58
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33104487"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39338739"
 ---
 # <a name="using-bookmarks"></a>Utilizzo dei bookmark
-Prima di aprire il set di righe, è necessario indicare al provider che si desidera utilizzare i segnalibri. A tale scopo, impostare il **DBPROP_BOOKMARKS** proprietà **true** nel set delle proprietà. Il provider recupera i segnalibri come colonna zero, pertanto è necessario utilizzare la macro speciale `BOOKMARK_ENTRY` e `CBookmark` classe se si utilizza una funzione di accesso statica. `CBookmark` è una classe di modello in cui l'argomento è la lunghezza in byte del buffer del segnalibro. La lunghezza del buffer necessaria per un segnalibro dipende dal provider. Se si utilizza il provider OLE DB ODBC, come illustrato nell'esempio seguente, il buffer deve essere 4 byte.  
+Prima di aprire il set di righe, è necessario indicare al provider che si desidera usare i segnalibri. A questo scopo, impostare il `DBPROP_BOOKMARKS` proprietà **true** nel set di proprietà. Il provider recupera segnalibri come colonna da zero, pertanto è necessario usare la macro speciale BOOKMARK_ENTRY e `CBookmark` classe se si usa una funzione di accesso statico. `CBookmark` è una classe di modello in cui l'argomento è la lunghezza in byte del buffer del segnalibro. La lunghezza del buffer necessaria per un segnalibro dipende dal provider. Se si utilizza il provider OLE DB ODBC, come illustrato nell'esempio seguente, il buffer deve essere 4 byte.  
   
-```  
+```cpp  
 class CProducts  
 {  
 public:  
@@ -48,9 +48,9 @@ CTable<CAccessor<CProducts>> product;
 product.Open(session, "Products", &propset);  
 ```  
   
- Se si utilizza `CDynamicAccessor`, il buffer viene allocato in modo dinamico in fase di esecuzione. In questo caso, è possibile utilizzare una versione specializzata di `CBookmark` per cui non si specifica la lunghezza del buffer. Utilizzare la funzione `GetBookmark` per recuperare il segnalibro dal record corrente, come illustrato in questo esempio di codice:  
+ Se si usa `CDynamicAccessor`, il buffer viene allocato dinamicamente in fase di esecuzione. In questo caso, è possibile usare una versione specializzata della `CBookmark` per cui non si specifica una lunghezza di buffer. Utilizzare la funzione `GetBookmark` per recuperare il segnalibro dal record corrente, come illustrato nell'esempio di codice:  
   
-```  
+```cpp  
 CTable<CDynamicAccessor> product;  
 CBookmark<>              bookmark;  
 CDBPropSet propset(DBPROPSET_ROWSET);  

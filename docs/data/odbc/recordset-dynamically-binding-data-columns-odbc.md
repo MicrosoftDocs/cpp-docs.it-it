@@ -1,5 +1,5 @@
 ---
-title: 'Recordset: Associazione dinamica di colonne di dati (ODBC) | Documenti Microsoft'
+title: 'Recordset: Associazione dinamica di colonne di dati (ODBC) | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,29 +19,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 9fe71707de20ba02228039e5693cab9c9401d560
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fe0be424b07fd9d13eec63c56172b2b0195b83d9
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33093386"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39338811"
 ---
 # <a name="recordset-dynamically-binding-data-columns-odbc"></a>Recordset: associazione dinamica di colonne di dati (ODBC)
 Questo argomento si applica alle classi ODBC MFC.  
   
- I recordset gestiscono colonne della tabella dell'associazione specificata in fase di progettazione, ma vi sono alcuni casi si potrebbe voler associare le colonne che sono stati noti in fase di progettazione. Questo argomento viene illustrato:  
+ Recordset gestiscono le colonne nella tabella di associazione specificate in fase di progettazione, ma vi sono casi in cui si potrebbe voler associare le colonne che erano sconosciute all'utente in fase di progettazione. Questo argomento viene illustrato:  
   
--   [Quando si potrebbe desiderare di associazione dinamica di colonne a un oggetto recordset](#_core_when_you_might_bind_columns_dynamically).  
+-   [Quando si potrebbe desiderare di associare le colonne in modo dinamico a un oggetto recordset](#_core_when_you_might_bind_columns_dynamically).  
   
 -   [Come associare le colonne in modo dinamico in fase di esecuzione](#_core_how_to_bind_columns_dynamically).  
   
 > [!NOTE]
->  Questo argomento si applica agli oggetti derivati da `CRecordset` in quale riga bulk recupero non è stato implementato. Le tecniche descritte in genere non sono consigliate se si utilizza il recupero di massa di righe. Per ulteriori informazioni sulle righe di massa, vedere [Recordset: recupero di record di massa (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
+>  In questo argomento si applica a oggetti derivati da `CRecordset` in quale riga bulk il recupero non è stato implementato. Le tecniche descritte in genere non sono consigliate se si usa il recupero di righe bulk. Per altre informazioni sul recupero di righe bulk, vedere [Recordset: recupero di record di massa (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
   
 ##  <a name="_core_when_you_might_bind_columns_dynamically"></a> Quando è possibile associare le colonne in modo dinamico  
- In fase di progettazione, la creazione guidata applicazione MFC o [Creazione guidata Consumer ODBC MFC](../../mfc/reference/adding-an-mfc-odbc-consumer.md) (da **Aggiungi classe**) consente di creare classi di recordset in base alle tabelle note e delle colonne nell'origine dati. I database possono variare tra durante la progettazione di loro e versioni successive, quando l'applicazione utilizza le tabelle e colonne in fase di esecuzione. Un utente può aggiungere o eliminare una tabella o aggiungere o eliminare colonne da una tabella da cui dipende il recordset dell'applicazione. Probabilmente non rappresenta un problema per tutte le applicazioni di accesso ai dati, ma se sia per quelle in uso, come possibile affrontano nello schema del database, diverso dalle modifiche? Lo scopo di questo argomento è per rispondere alla domanda.  
+ In fase di progettazione, la creazione guidata applicazione MFC o [Creazione guidata Consumer ODBC MFC](../../mfc/reference/adding-an-mfc-odbc-consumer.md) (dal **Aggiungi classe**) vengono create le classi di recordset basate su tabelle note e delle colonne nell'origine dati. I database possono variare tra durante la progettazione li e versioni successive se l'applicazione usa le tabelle e colonne in fase di esecuzione. Un utente potrebbe aggiungere o eliminare una tabella o aggiungere o eliminare colonne da una tabella di cui si basa il recordset dell'applicazione. Probabilmente non è un problema per tutte le applicazioni di accesso ai dati, ma se è valida anche per te, come può affrontano le modifiche dello schema del database, diverso da riprogettazione e ricompilando? Lo scopo di questo argomento è per rispondere a questa domanda.  
   
- Questo argomento viene descritto il caso più comune in cui è possibile associare le colonne in modo dinamico, aver iniziato con un recordset in base allo schema di un database noto, si desidera gestire colonne aggiuntive in fase di esecuzione. Suppone inoltre che le altre colonne siano mappati agli `CString` campo membri di dati, il caso più comune, anche se vengono forniti suggerimenti per la gestione di altri tipi di dati.  
+ Questo argomento viene descritto il caso più comune in cui è possibile associare le colonne in modo dinamico, ovvero aver iniziato con un recordset in base a uno schema di database noti, che si desidera gestire le colonne aggiuntive in fase di esecuzione. Ulteriormente nell'argomento si presuppone che le altre colonne siano mappati agli `CString` campo membri dati, il caso più comune, anche se vengono forniti suggerimenti per semplificare la gestione di altri tipi di dati.  
   
  Con una piccola quantità di codice aggiuntivo, è possibile:  
   
@@ -49,128 +49,128 @@ Questo argomento si applica alle classi ODBC MFC.
   
 -   [Associare le colonne aggiuntive per il recordset in modo dinamico, in fase di esecuzione](#_core_adding_the_columns).  
   
- Il recordset contiene ancora i membri dati per le colonne conosciute in fase di progettazione. Inoltre contiene una piccola quantità di codice aggiuntivo che determina in modo dinamico che siano state aggiunte nuove colonne alla tabella di destinazione e, in caso affermativo, associa le nuove colonne all'archiviazione allocata in modo dinamico (anziché ai membri di dati del recordset).  
+ Il recordset contiene ancora i membri di dati per le colonne che conosceva in fase di progettazione. Inoltre contiene una piccola quantità di codice aggiuntivo che determina in modo dinamico se tutte le nuove colonne sono stati aggiunti alla tabella di destinazione e, in caso affermativo, associa le nuove colonne alla memoria allocata in modo dinamico (invece che ai membri di dati del recordset).  
   
- Questo argomento vengono illustrati altri casi di associazione dinamica, ad esempio colonne o tabelle eliminate. Per i casi, è necessario utilizzare più direttamente le chiamate all'API ODBC. Per informazioni, vedere il SDK di ODBC *di riferimento per programmatori* sul CD di MSDN Library.  
+ Questo argomento vengono illustrati altri casi di binding dinamico, ad esempio colonne o tabelle eliminate. In questi casi, è necessario usare chiamate all'API ODBC in modo più diretto. Per informazioni, vedere il SDK di ODBC *di riferimento per programmatori* sul CD di MSDN Library.  
   
 ##  <a name="_core_how_to_bind_columns_dynamically"></a> Come associare le colonne in modo dinamico  
- Per associare le colonne in modo dinamico, è necessario conoscere (o essere in grado di determinare) i nomi delle colonne aggiuntive. È inoltre necessario allocare spazio di archiviazione per i membri di dati di campo, specificare i nomi e i relativi tipi e specificare il numero di colonne da aggiungere.  
+ Per associare le colonne in modo dinamico, è necessario sapere o essere in grado di determinare i nomi delle colonne. È anche necessario allocare spazio di archiviazione per i membri di dati campo aggiuntivo, specificare i nomi e i relativi tipi e specificare il numero di colonne da aggiungere.  
   
- Di seguito vengono indicate due diversi set di record. Il primo è il principale recordset che seleziona i record dalla tabella di destinazione. Il secondo è un oggetto recordset speciale di colonna utilizzato per ottenere informazioni sulle colonne nella tabella di destinazione.  
+ La discussione seguente specifica due set di record diversi. Il primo è il principale recordset che seleziona i record dalla tabella di destinazione. Il secondo è un set di record di colonna speciale usato per ottenere informazioni sulle colonne della tabella di destinazione.  
   
 ###  <a name="_core_the_general_process"></a> Processo generale  
- Livello più generale, eseguire la procedura seguente:  
+ A livello generale, seguire questi passaggi:  
   
 1.  Costruire l'oggetto recordset principale.  
   
-     Facoltativamente, passare un puntatore a un oggetto aperto `CDatabase` dell'oggetto o essere in grado di fornire informazioni di connessione per il recordset di colonna in un altro modo.  
+     Facoltativamente, passare un puntatore a un elemento aperto `CDatabase` dell'oggetto o essere in grado di fornire le informazioni di connessione per il recordset di colonna in un altro modo.  
   
 2.  Eseguire i passaggi per aggiungere le colonne in modo dinamico.  
   
-     Vedere il processo descritto per l'aggiunta di colonne riportata di seguito.  
+     Vedere la procedura descritta nell'aggiunta di colonne seguenti.  
   
-3.  Aprire il recordset principale.  
+3.  Aprire recordset principale.  
   
-     Il recordset seleziona i record e utilizza il trasferimento di campi di record (RFX) per associare le colonne statiche, ovvero il mapping ai membri dati di campo del recordset sia le colonne dinamiche (mappate a spazio di archiviazione allocato).  
+     Il set di record selezionati i record e Usa il trasferimento di campi di record (RFX) per associare le colonne statiche, ovvero il mapping ai membri dati di campo del recordset sia le colonne dinamiche (mappate a spazio di archiviazione allocata).  
   
 ###  <a name="_core_adding_the_columns"></a> L'aggiunta delle colonne  
- Associazione dinamica di aggiunta di colonne in fase di esecuzione richiede i passaggi seguenti:  
+ Associazione dinamica di aggiunta di colonne in fase di esecuzione sono necessari i passaggi seguenti:  
   
-1.  Determinare quali sono le colonne nella tabella di destinazione in fase di esecuzione. Estrarre da tali informazioni di un elenco delle colonne che sono stati aggiunti alla tabella dopo la classe del recordset è stata progettata.  
+1.  Determinare quali sono le colonne nella tabella di destinazione in fase di esecuzione. Estrarre da tale informazione un elenco delle colonne che sono state aggiunte alla tabella poiché la classe del recordset è stata progettata.  
   
      Un buon approccio consiste nell'utilizzare una classe recordset colonna progettata per eseguire query sull'origine dati per informazioni sulla colonna per la tabella di destinazione (ad esempio colonna nome e tipo di dati).  
   
-2.  Fornire l'archiviazione per i nuovi membri dati di campo. Poiché la classe recordset principale non dispone di membri di dati di campo per le colonne sconosciute, è necessario fornire una posizione per archiviare i nomi, valori dei risultati e possibilmente informazioni sul tipo di dati (se le colonne sono tipi di dati diversi).  
+2.  Offrire archiviazione per i nuovi membri dati di campo. Poiché la classe principale recordset non ha membri dati dei campi per le colonne sconosciute, è necessario fornire una posizione in cui archiviare i nomi, i valori dei risultati e possibilmente le informazioni sul tipo di dati (se le colonne sono diversi tipi di dati).  
   
-     Un approccio consiste nel creare uno o più elenchi dinamici, uno per i nuovi nomi delle colonne, un altro per i valori dei risultati e un terzo per i tipi di dati (se necessario). Questi elenchi, in particolare l'elenco di valore, forniscono le informazioni e lo spazio di archiviazione necessario per l'associazione. Nella figura seguente viene illustrata la compilazione degli elenchi.  
+     Un approccio consiste nella compilazione di uno o più elenchi dinamici, uno per i nuovi nomi delle colonne, un altro per i valori dei risultati e un terzo per i tipi di dati (se necessario). Questi elenchi, in particolare l'elenco di valori, forniscono le informazioni e lo spazio di archiviazione necessaria per l'associazione. La figura seguente illustra la compilazione degli elenchi.  
      ![Compilazione degli elenchi di colonne da associare in modo dinamico](../../data/odbc/media/vc37w61.gif "vc37w61")  
 Compilazione degli elenchi di colonne da associare in modo dinamico  
   
-3.  Aggiungere una chiamata di funzione RFX del recordset principale `DoFieldExchange` funzionerà per ciascuna colonna aggiunta. Queste chiamate RFX eseguono le operazioni di recupero di un record, incluse le colonne aggiuntive e binding le colonne a membri dati di recordset o lo spazio di archiviazione fornito in modo dinamico per tali.  
+3.  Aggiungere una chiamata di funzione RFX del recordset principale `DoFieldExchange` funzionare per ciascuna colonna aggiunta. Queste chiamate RFX l'operazione di recupero di un record, includendo le colonne aggiuntive e associando le colonne a membri dati di recordset o nella risorsa di archiviazione fornito in modo dinamico per loro.  
   
-     Un approccio consiste nell'aggiungere un ciclo del recordset principale `DoFieldExchange` funzione che consente di scorrere l'elenco delle nuove colonne, chiamando la funzione RFX appropriata per ciascuna colonna nell'elenco. Per ogni chiamata RFX, passare un nome di colonna dall'elenco dei nomi di colonna e un percorso di archiviazione nel membro corrispondente nell'elenco dei risultati valore.  
+     Un approccio consiste nell'aggiungere un ciclo al recordset principale `DoFieldExchange` funzione che consente di scorrere l'elenco delle nuove colonne, chiamando la funzione RFX appropriata per ogni colonna nell'elenco. Per ogni chiamata RFX, passare un nome di colonna dall'elenco dei nomi di colonna e un percorso di archiviazione nel corrispondente membro dell'elenco dei valori di risultato.  
   
 ###  <a name="_core_lists_of_columns"></a> Elenchi di colonne  
- È necessario utilizzare quattro elenchi vengono visualizzati nella tabella seguente.  
+ È necessario per lavorare con quattro elenchi vengono visualizzati nella tabella seguente.  
   
- **Colonne di tabella correnti (elenco 1 nell'illustrazione)** un elenco delle colonne attualmente presenti nella tabella nell'origine dati. Questo elenco può corrispondere all'elenco delle colonne attualmente associate nel recordset.  
+ **Colonne di tabella correnti (elenco 1 nella figura)** un elenco delle colonne attualmente presenti nella tabella dell'origine dati. Questo elenco può corrispondere all'elenco delle colonne attualmente associate nel set di record.  
   
  **Colonne associate del Recordset (elenco 2 nella figura)**  
- Un elenco delle colonne associate nel recordset. Queste colonne già presenti istruzioni RFX il `DoFieldExchange` (funzione).  
+ Un elenco delle colonne associate nel recordset. Queste colonne già istruzioni RFX di `DoFieldExchange` (funzione).  
   
  **Le colonne da associare in modo dinamico (elenco 3 nella figura)**  
- Un elenco di colonne nella tabella, ma non nel recordset. Queste sono le colonne che si desidera associare in modo dinamico.  
+ Un elenco di colonne nella tabella ma non nel set di record. Queste sono le colonne da associare in modo dinamico.  
   
- **Valori di colonna dinamici (elenco 4 dell'illustrazione)**  
- Un elenco di archiviazione per i valori recuperati dalle colonne associate in modo dinamico. Elementi dell'elenco corrispondono a quelli nelle colonne-a-binding-in modo dinamico, uno-a-uno.  
+ **Valori di colonna dinamiche (elenco 4 nella figura)**  
+ Un elenco che contiene risorse di archiviazione per i valori recuperati dalle colonne associate in modo dinamico. Elementi di questo elenco corrispondono a quelli nelle colonne-a-Bind-in modo dinamico, uno alla volta.  
   
 ###  <a name="_core_building_your_lists"></a> Compilazione degli elenchi  
- Con una strategia generale, è possibile attivare i dettagli. Le procedure nella parte restante di questo argomento viene descritta la compilazione degli elenchi nei [elenchi di colonne](#_core_lists_of_columns). Le procedure consentono di:  
+ Con una strategia generale, è possibile attivare i dettagli. Le procedure descritte nella parte restante di questo argomento mostrano come compilare gli elenchi visualizzati nella [elenchi di colonne](#_core_lists_of_columns). Le procedure descritte illustrano:  
   
--   [Determinare i nomi delle colonne non presenti nel recordset](#_core_determining_which_table_columns_are_not_in_your_recordset).  
+-   [Determinare i nomi delle colonne non presenti i recordset](#_core_determining_which_table_columns_are_not_in_your_recordset).  
   
--   [Archiviazione per le colonne aggiunte alla tabella](#_core_providing_storage_for_the_new_columns).  
+-   [Fornire archiviazione dinamica per le colonne appena aggiunte alla tabella](#_core_providing_storage_for_the_new_columns).  
   
 -   [Aggiunta dinamica di RFX chiama per le nuove colonne](#_core_adding_rfx_calls_to_bind_the_columns).  
   
-###  <a name="_core_determining_which_table_columns_are_not_in_your_recordset"></a> Determinare quali sono le colonne di tabella non presenti nel Recordset  
- Creare un elenco (colonne associate del Recordset, come l'elenco nella figura 2) che contiene un elenco di colonne già associate nel recordset principale. Quindi creare un elenco (colonne-a-binding-in modo dinamico, derivato da colonne correnti della tabella e colonne associate del Recordset) che contiene i nomi delle colonne presenti nella tabella nell'origine dati, ma non nel recordset principale.  
+###  <a name="_core_determining_which_table_columns_are_not_in_your_recordset"></a> Determinare quali sono le colonne di tabella non nel set di record  
+ Compila un elenco (associati a colonne del Recordset, come nell'elenco 2 nella figura) che contiene un elenco delle colonne di cui è già associata nel set di record principale. Compilare quindi un elenco (colonne-a-Bind-dinamicamente, derivata dalle colonne correnti della tabella e colonne associate del Recordset) che contiene i nomi di colonna presenti nella tabella dell'origine dati, ma non nel set di record principale.  
   
-##### <a name="to-determine-the-names-of-columns-not-in-the-recordset-columns-to-bind-dynamically"></a>Per determinare i nomi delle colonne non presenti nel recordset (colonne da associare in modo dinamico)  
+##### <a name="to-determine-the-names-of-columns-not-in-the-recordset-columns-to-bind-dynamically"></a>Per determinare i nomi delle colonne non presenti i recordset (le colonne da associare in modo dinamico)  
   
-1.  Compila un elenco (colonne associate del Recordset) delle colonne già associate nel recordset principale.  
+1.  Compila un elenco (Recordset-colonne associate) le colonne già associata nel set di record principale.  
   
-     Un approccio consiste nel creare colonne associate del Recordset in fase di progettazione. È possibile esaminare visivamente le chiamate alle funzioni RFX del recordset `DoFieldExchange` funzione per ottenere i nomi. Quindi, impostare l'elenco come una matrice inizializzata con i nomi.  
+     Un approccio consiste nella creazione di colonne associate del Recordset in fase di progettazione. È possibile esaminare visivamente le chiamate di funzione RFX del recordset `DoFieldExchange` funzione per ottenere i nomi. Quindi, impostare l'elenco come una matrice inizializzata con i nomi.  
   
-     Ad esempio, nell'illustrazione colonne associate del Recordset (elenco 2) con tre elementi. Colonne associate del Recordset manca la colonna telefono mostrata nelle colonne di tabella corrente (elenco 1).  
+     Ad esempio, la figura Mostra colonne associate del Recordset (elenco 2) con tre elementi. Colonne associate del Recordset manca la colonna telefono mostrata in colonne di tabella correnti (elenco 1).  
   
-2.  Confrontare Colonne correnti della tabella e delle colonne associate del Recordset per compilare un elenco (le colonne da associare in modo dinamico) delle colonne non sono già associate nel recordset principale.  
+2.  Confrontare Colonne correnti della tabella e colonne associate del Recordset per compilare un elenco (le colonne da associare in modo dinamico) delle colonne non ancora associato nel set di record principale.  
   
-     È possibile scorrere l'elenco di colonne nella tabella in fase di esecuzione (colonne correnti della tabella) e l'elenco delle colonne già associate nel recordset (colonne associate del Recordset) in parallelo. Inserire i nomi in colonne da associare in modo dinamico in colonne correnti della tabella non vengono visualizzati in colonne con associazione a Recordset.  
+     Un approccio consiste per scorrere in ciclo l'elenco di colonne della tabella in fase di esecuzione (colonne correnti della tabella) e l'elenco di colonne già associato nel set di record (Recordset-colonne associate) in parallelo. Inserire tutti i nomi in colonne da associare in modo dinamico in colonne correnti della tabella che non sono visibili nelle colonne associate del Recordset.  
   
-     Ad esempio, la figura mostra le colonne da associare in modo dinamico (elenco 3) con un elemento: la colonna telefono in colonne correnti della tabella (elenco 1) ma non nelle colonne associate del Recordset (elenco 2).  
+     Ad esempio, la figura mostra le colonne da associare in modo dinamico (elenco di 3) con un elemento: la colonna telefono in colonne di tabella correnti (elenco 1) ma non nelle colonne associate del Recordset (elenco 2).  
   
-3.  Compila un elenco di valori di colonna dinamici (come elenco 4 dell'illustrazione) in cui archiviare i valori dei dati corrispondente a ogni nome di colonna archiviato nell'elenco delle colonne da associare in modo dinamico (le colonne da associare in modo dinamico).  
+3.  Compilare un elenco di valori di colonna dinamiche (ad esempio elenco 4 dell'illustrazione) in cui archiviare i valori di dati corrispondenti a ogni nome di colonna archiviate nell'elenco delle colonne da associare in modo dinamico (le colonne da associare in modo dinamico).  
   
-     Gli elementi dell'elenco rivestono il ruolo del nuovo set di record membri dati di campo. Sono i percorsi di archiviazione a cui sono associate le colonne dinamiche. Per le descrizioni degli elenchi, vedere [elenchi di colonne](#_core_lists_of_columns).  
+     Gli elementi di questo elenco rivestono il ruolo del nuovo set di record membri dati di campo. Sono i percorsi di archiviazione a cui sono associate le colonne dinamiche. Per descrizioni degli elenchi, vedere [elenchi di colonne](#_core_lists_of_columns).  
   
-###  <a name="_core_providing_storage_for_the_new_columns"></a> Archiviazione per le nuove colonne  
- Successivamente, impostare i percorsi di archiviazione per le colonne da associare in modo dinamico. Lo scopo è fornire un elemento di elenco in cui archiviare ogni valore della colonna. Questi percorsi di archiviazione in parallelo le variabili membro recordset, archiviano le colonne associate normalmente.  
+###  <a name="_core_providing_storage_for_the_new_columns"></a> Offrono l'archiviazione per le nuove colonne  
+ Successivamente, impostare i percorsi di archiviazione per le colonne da associare in modo dinamico. L'idea consiste nel fornire un elemento di elenco in cui archiviare ogni valore della colonna. Questi percorsi di archiviazione in parallelo le variabili membro recordset, in cui sono archiviate le colonne in genere associate.  
   
-##### <a name="to-provide-dynamic-storage-for-new-columns-dynamic-column-values"></a>Per fornire l'archiviazione dinamica per le nuove colonne (valori di colonna dinamici)  
+##### <a name="to-provide-dynamic-storage-for-new-columns-dynamic-column-values"></a>Per fornire l'archiviazione dinamica per le nuove colonne (colonna-Dynamic-Values)  
   
-1.  Compilazione dinamica valori di colonna, paralleli a colonne-a-binding-dinamicamente, per contenere il valore dei dati in ogni colonna.  
+1.  Colonna di valori dinamici, paralleli a colonne-a-Bind-dinamicamente, per contenere il valore dei dati in ogni colonna di compilazione.  
   
-     Ad esempio, la figura mostra dinamico-4 valori di colonna (elenco) con un elemento: un `CString` oggetto contenente il numero di telefono per il record corrente: "555-1212".  
+     Ad esempio, nell'illustrazione mostra valori di colonna dinamiche (elenco 4) con un elemento: un `CString` oggetto contenente il numero di telefono per il record corrente: "555-1212".  
   
-     Nel caso più comune, valori di colonna dinamici include elementi di tipo `CString`. Se si utilizzano colonne di diversi tipi di dati, è necessario un elenco che può contenere elementi di una varietà di tipi.  
+     Nel caso più comune, colonna-Dynamic-Values dispone di elementi di tipo `CString`. Se si usano colonne con tipi di dati diversi, è necessario un elenco che può contenere elementi di una varietà di tipi.  
   
- Il risultato delle procedure precedente è due elenchi principali: colonne-a-binding-in modo dinamico contenente i nomi delle colonne e dinamico valori di colonna contenente i valori delle colonne per il record corrente.  
+ Il risultato di queste procedure è due elenchi principali: colonne-a-Bind-in modo dinamico che contiene i nomi delle colonne e dinamica-valori di colonna che contiene i valori nelle colonne del record corrente.  
   
 > [!TIP]
->  Se le nuove colonne non sono tutti dello stesso tipo di dati, è possibile che un altro elenco parallelo contenente gli elementi che in qualche modo definiscono il tipo di ciascun elemento corrispondente nell'elenco di colonne. (È possibile utilizzare i valori **AFX_RFX_BOOL**, **AFX_RFX_BYTE**e così via, per questa opzione se si desidera. Queste costanti sono definite in AFXDB. H.) Scegliere un tipo di elenco in base alle modalità di rappresentazione i tipi di dati della colonna.  
+>  Se le nuove colonne non sono tutti dello stesso tipo di dati, è possibile che un altro elenco parallelo contenente gli elementi che definiscono in qualche modo il tipo di ogni elemento corrispondente nell'elenco delle colonne. (È possibile usare i valori AFX_RFX_BOOL AFX_RFX_BYTE, e così via, per questa operazione se si desidera. Queste costanti sono definite in AFXDB. H.) Scegliere un tipo di elenco basato su cui si rappresentano i tipi di dati di colonna.  
   
 ###  <a name="_core_adding_rfx_calls_to_bind_the_columns"></a> Aggiunta chiamate RFX per associare le colonne  
- Disporre, infine, per l'associazione dinamica di inserendo chiamate RFX per le nuove colonne nel `DoFieldExchange` (funzione).  
+ Infine, Disponi per l'associazione dinamica a inserendo RFX chiama per le nuove colonne nel `DoFieldExchange` (funzione).  
   
-##### <a name="to-dynamically-add-rfx-calls-for-new-columns"></a>Per aggiungere in modo dinamico RFX di chiamate per le nuove colonne  
+##### <a name="to-dynamically-add-rfx-calls-for-new-columns"></a>Aggiungere in modo dinamico le chiamate RFX nuove colonne  
   
-1.  Il recordset principale `DoFieldExchange` membro funzione, aggiungere il codice che consente di scorrere l'elenco delle nuove colonne (colonne da associare in modo dinamico). In ogni ciclo, estrarre un nome di colonna da un valore di risultato per la colonna di valori di colonna dinamici e di colonne da associare in modo dinamico. Passare questi elementi a una chiamata di funzione RFX appropriato per il tipo di dati della colonna. Per le descrizioni degli elenchi, vedere [elenchi di colonne](#_core_lists_of_columns).  
+1.  Il recordset principale `DoFieldExchange` membro di funzione, aggiungere il codice che consente di scorrere l'elenco delle nuove colonne (le colonne da associare in modo dinamico). In ogni ciclo, estrarre un nome di colonna da colonne da associare in modo dinamico e un valore di risultato per la colonna dalla colonna-Dynamic-Values. Passare questi elementi a una chiamata di funzione RFX appropriato per il tipo di dati della colonna. Per descrizioni degli elenchi, vedere [elenchi di colonne](#_core_lists_of_columns).  
   
- Nel caso comune, nel `RFX_Text` estrazione di chiamate di funzione `CString` oggetti dagli elenchi, come le seguenti righe di codice, in cui le colonne da associare in modo dinamico un `CStringList` chiamato `m_listName` e valori di colonna dinamici è un `CStringList` chiamato `m_listValue`:  
+ Nel caso comune, nelle `RFX_Text` è estrarre le chiamate di funzioni `CString` oggetti dagli elenchi, come le seguenti righe di codice, in cui le colonne da associare in modo dinamico è un `CStringList` chiamato `m_listName` e valori di colonna dinamica è una `CStringList` chiamato `m_listValue`:  
   
-```  
+```cpp  
 RFX_Text( pFX,   
             m_listName.GetNext( posName ),   
             m_listValue.GetNext( posValue ));  
 ```  
   
- Per ulteriori informazioni sulle funzioni RFX, vedere [macro e funzioni globali](../../mfc/reference/mfc-macros-and-globals.md) nel *riferimenti alla libreria di classe*.  
+ Per altre informazioni sulle funzioni RFX, vedere [macro e funzioni globali](../../mfc/reference/mfc-macros-and-globals.md) nel *Class Library Reference*.  
   
 > [!TIP]
->  Se le nuove colonne sono tipi di dati diversi, utilizzare un'istruzione switch nel ciclo di chiamare la funzione RFX appropriata per ogni tipo.  
+>  Se le nuove colonne sono diversi tipi di dati, utilizzare un'istruzione switch nel ciclo per chiamare la funzione RFX appropriata per ogni tipo.  
   
- Quando il framework chiama `DoFieldExchange` durante il **aprire** processo per associare le colonne al recordset, le chiamate a RFX per le colonne statiche associano tali colonne. Il ciclo di chiama quindi ripetutamente RFX (funzioni) per le colonne dinamiche.  
+ Quando il framework chiama `DoFieldExchange` durante la `Open` processo per associare le colonne al set di record, le chiamate RFX per le colonne statiche associano tali colonne. Il ciclo chiama quindi ripetutamente funzioni RFX per le colonne dinamiche.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Recordset (ODBC)](../../data/odbc/recordset-odbc.md)   

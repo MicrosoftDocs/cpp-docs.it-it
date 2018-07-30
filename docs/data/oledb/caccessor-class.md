@@ -1,5 +1,5 @@
 ---
-title: Classe CAccessor | Documenti Microsoft
+title: Classe CAccessor | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,34 +21,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: dffefb74faf6836b9f2fc81a7800dc34084657cf
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9e7f722d4d1759bdec7a23bb15076b38de000eb6
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33093909"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39337417"
 ---
 # <a name="caccessor-class"></a>Classe CAccessor
 Rappresenta uno dei tipi di funzione di accesso.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
-  
+```cpp
 template <class T>  
 class CAccessor : public CAccessorBase, public T  
 ```  
   
-#### <a name="parameters"></a>Parametri  
- `T`  
+### <a name="parameters"></a>Parametri  
+ *T*  
  La classe di record utente.  
   
 ## <a name="remarks"></a>Note  
- Viene utilizzato quando un record in modo statico è associato a un'origine dati. Il record contiene il buffer. Questa classe supporta più funzioni di accesso su un set di righe.  
+ Viene usato quando un record in modo statico è associato a un'origine dati. Il record contiene il buffer. Questa classe supporta più funzioni di accesso su un set di righe.  
   
- Utilizzare questo tipo di funzione di accesso quando si conosce la struttura e il tipo del database.  
+ Usare questo tipo di funzione di accesso quando si conosce la struttura e il tipo del database.  
   
- Se la funzione di accesso contiene campi che fanno riferimento alla memoria (ad esempio un `BSTR` o interfaccia) che deve essere liberata, chiamare la funzione membro [CAccessorRowset:: Freerecordmemory](../../data/oledb/caccessorrowset-freerecordmemory.md) prima della successiva lettura di record.  
+ Se la funzione di accesso contiene campi che punta alla memoria (ad esempio un `BSTR` o l'interfaccia) che deve essere liberata, chiamare la funzione membro [CAccessorRowset:: Freerecordmemory](../../data/oledb/caccessorrowset-freerecordmemory.md) prima della successiva chiamata record viene letto.  
   
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** atldbcli.h  

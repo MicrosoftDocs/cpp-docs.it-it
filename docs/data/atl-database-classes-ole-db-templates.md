@@ -1,5 +1,5 @@
 ---
-title: Classi di Database ATL (modelli OLE DB) | Documenti Microsoft
+title: Classi di Database ATL (modelli OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,33 +17,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: fabced79232d17807d252da9dac5b066ddf69f25
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 083ac7485ce2056ab97ca32142be3e88094573f9
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33089052"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39337885"
 ---
 # <a name="atl-database-classes-ole-db-templates"></a>Classi di database ATL (modelli OLE DB)
-Microsoft offre varie implementazioni di OLE DB, un set di interfacce COM che forniscono un accesso uniforme ai dati in formati e origini diversi.  OLE DB sia ufficialmente deprecato; Questa documentazione è destinata agli sviluppatori che sono la gestione del codice legacy. Nuove applicazioni devono utilizzare ODBC per connettersi alle origini dati SQL.
+Microsoft offre varie implementazioni di OLE DB, un set di interfacce COM che consentono un accesso uniforme ai dati in formati e origini diversi.  OLE DB sia ufficialmente deprecato; Questa documentazione è per gli sviluppatori che sono la gestione del codice legacy. Nuove applicazioni devono utilizzare ODBC per connettersi a origini dati SQL.
   
- I modelli OLE DB sono modelli C++ in ATL che semplificano l'utilizzo fornisce classi che implementano molte delle interfacce OLE DB usate comunemente di tecnologia per database OLE DB.  
+ I modelli OLE DB sono modelli di C++ in ATL che rendono più facile da usare, fornendo le classi che implementano molte delle interfacce OLE DB maggiormente utilizzate tecnologia per database OLE DB.  
   
- Questa libreria di modelli include due parti:  
+ Questa libreria contiene due parti:  
   
--   [Modelli consumer OLE DB](../data/oledb/ole-db-consumer-templates-cpp.md) permette di implementare un'applicazione OLE DB (consumer).  
+-   [Modelli consumer OLE DB](../data/oledb/ole-db-consumer-templates-cpp.md) usato per implementare un'applicazione client / consumer OLE DB.  
   
--   [Modelli provider OLE DB](../data/oledb/ole-db-provider-templates-cpp.md) permette di implementare un'applicazione server (provider) OLE DB.  
+-   [Modelli provider OLE DB](../data/oledb/ole-db-provider-templates-cpp.md) usato per implementare un'applicazione server (provider) OLE DB.  
   
  Inoltre, il [attributi del consumer OLE DB](../windows/ole-db-consumer-attributes.md) forniscono un modo pratico per creare un consumer OLE DB. Gli attributi OLE DB inseriscono il codice in base ai modelli consumer OLE DB per creare i consumer OLE DB di lavoro.  
   
- Si noti che la libreria MFC contiene una classe, [COleDBRecordView](../mfc/reference/coledbrecordview-class.md), che consente di visualizzare i record del database nei controlli. La vista è un modulo connessi direttamente a un `CRowset` dell'oggetto e visualizza i campi del `CRowset` oggetto nei controlli del modello di finestra di dialogo.  
+ Si noti che la libreria MFC contiene una classe, [COleDBRecordView](../mfc/reference/coledbrecordview-class.md), che consente di visualizzare i record del database nei controlli. La vista è una visualizzazione di form direttamente connessa a un `CRowset` dell'oggetto e visualizza i campi del `CRowset` oggetto nei controlli del modello di finestra di dialogo.  
   
- Per ulteriori informazioni, vedere [programmazione con OLE DB](../data/oledb/ole-db-programming.md) e [Guida per programmatori OLE DB](http://go.microsoft.com/fwlink/p/?linkid=121548).  
+ Per altre informazioni, vedere [programmazione con OLE DB](../data/oledb/ole-db-programming.md) e [Guida per programmatori OLE DB](http://go.microsoft.com/fwlink/p/?linkid=121548).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Creazione di un Consumer OLE DB](../data/oledb/creating-an-ole-db-consumer.md)   
  [Creazione di un Provider OLE DB](../data/oledb/creating-an-ole-db-provider.md)   
- [Riferimenti per i modelli Consumer OLE DB](../data/oledb/ole-db-consumer-templates-reference.md)   
- [Riferimenti ai modelli Provider OLE DB](../data/oledb/ole-db-provider-templates-reference.md)   
- [Esempi di modelli OLE DB](http://msdn.microsoft.com/en-us/08958863-0b5f-41ad-ae99-fca7440c553c)
+ [Riferimenti ai modelli Consumer OLE DB](../data/oledb/ole-db-consumer-templates-reference.md)   
+ [Riferimenti ai modelli di Provider OLE DB](../data/oledb/ole-db-provider-templates-reference.md)   
+ [Esempi di modelli OLE DB](http://msdn.microsoft.com/08958863-0b5f-41ad-ae99-fca7440c553c)

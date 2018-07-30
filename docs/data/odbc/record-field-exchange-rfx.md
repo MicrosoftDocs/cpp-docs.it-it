@@ -1,5 +1,5 @@
 ---
-title: Campi di record (RFX) | Documenti Microsoft
+title: Campi di record (RFX) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,34 +19,34 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 8b214cf05115056efc96c4a078dedd4b7f9a3a1a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 563784a3f7c0961022972a1fd950218642d3ec2e
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33091654"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39337362"
 ---
 # <a name="record-field-exchange-rfx"></a>Trasferimento di campi di record (RFX)
-Le classi di database ODBC MFC automatizzare lo spostamento dei dati tra l'origine dati e un [recordset](../../data/odbc/recordset-odbc.md) oggetto. Quando si deriva una classe da [CRecordset](../../mfc/reference/crecordset-class.md) e non si utilizza il recupero di massa di righe, i dati vengono trasferiti mediante il meccanismo di campi di record (RFX) di exchange.  
+Le classi di database ODBC MFC automatizzare lo spostamento dei dati tra l'origine dati e un [recordset](../../data/odbc/recordset-odbc.md) oggetto. Quando si deriva una classe dalla classe [CRecordset](../../mfc/reference/crecordset-class.md) e non utilizzare il recupero di righe bulk, i dati vengono trasferiti dal meccanismo di campi di record (RFX) di exchange.  
   
 > [!NOTE]
->  Se è stato implementato il recupero di massa di righe in una classe `CRecordset` (classe), il framework utilizza il meccanismo di blocco campi di record (RFX di massa) di exchange per trasferire i dati. Per ulteriori informazioni, vedere [Recordset: recupero di record di massa (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
+>  Se è stato implementato il recupero di righe bulk in un oggetto derivato `CRecordset` (classe), il framework utilizza il meccanismo di scambio (RFX di massa) campi di record di operazioni bulk per trasferire i dati. Per altre informazioni, vedere [Recordset: recupero di record di massa (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
   
- RFX è simile a dialog data exchange (DDX). Lo spostamento dei dati tra un'origine dati e i membri di dati del campo di un recordset necessarie più chiamate per il recordset [DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange) funzione e una considerevole interazione tra il framework e [ODBC](../../data/odbc/odbc-basics.md). Il meccanismo RFX è indipendente dai tipi e si salva il lavoro di chiamare le funzioni ODBC quali **:: SQLBindCol**. Per ulteriori informazioni su DDX, vedere [convalida e DDX](../../mfc/dialog-data-exchange-and-validation.md).  
+ RFX è simile a dialog data exchange (DDX). Spostare dati tra un'origine dati e i membri di dati di campo di un recordset sono necessarie più chiamate per il recordset [DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange) (funzione) e una considerevole interazione tra framework e [ODBC](../../data/odbc/odbc-basics.md). Il meccanismo di RFX è indipendente dai tipi e si salva il lavoro di chiamata di funzioni ODBC come `::SQLBindCol`. Per altre informazioni su DDX, vedere [convalida e DDX](../../mfc/dialog-data-exchange-and-validation.md).  
   
- RFX è quasi completamente trasparente all'utente. Se si dichiarano le classi di recordset con la creazione guidata applicazione MFC o **Aggiungi classe** (come descritto in [aggiunta di un Consumer ODBC MFC](../../mfc/reference/adding-an-mfc-odbc-consumer.md)), RFX viene incorporato automaticamente. Deve essere derivata dalla classe di base della classe recordset `CRecordset` fornita dal framework. La creazione guidata applicazione MFC consente di creare una classe recordset iniziale. **Aggiungi classe** consente di aggiungere altre classi recordset secondo le esigenze. Per ulteriori informazioni ed esempi, vedere [aggiunta di un Consumer ODBC MFC](../../mfc/reference/adding-an-mfc-odbc-consumer.md).  
+ RFX è quasi completamente trasparente all'utente. Se si dichiarano le classi di recordset con la creazione guidata applicazione MFC o **Aggiungi classe** (come descritto in [aggiunta di un Consumer ODBC MFC](../../mfc/reference/adding-an-mfc-odbc-consumer.md)), RFX viene compilata automaticamente. La classe recordset deve essere derivata dalla classe di base `CRecordset` fornito dal framework. La creazione guidata applicazione MFC consente di creare una classe recordset iniziale. **Aggiungi classe** consente di aggiungere altre classi di recordset a seconda delle necessità. Per altre informazioni ed esempi, vedere [aggiunta di un Consumer ODBC MFC](../../mfc/reference/adding-an-mfc-odbc-consumer.md).  
   
  È necessario aggiungere manualmente una piccola quantità di codice RFX nei tre casi, quando si desidera:  
   
--   Utilizzare le query con parametri. Per ulteriori informazioni, vedere [Recordset: applicazione di parametri a un Recordset (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md).  
+-   Usare le query con parametri. Per altre informazioni, vedere [Recordset: applicazione di parametri a un Recordset (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md).  
   
--   Eseguire dei join (utilizzando un recordset per le colonne da due o più tabelle). Per ulteriori informazioni, vedere [Recordset: esecuzione di un Join (ODBC)](../../data/odbc/recordset-performing-a-join-odbc.md).  
+-   Eseguire join (utilizzando un recordset per le colonne da due o più tabelle). Per altre informazioni, vedere [Recordset: esecuzione di un Join (ODBC)](../../data/odbc/recordset-performing-a-join-odbc.md).  
   
--   Associazione dinamica di colonne di dati. Si tratta di una parametrizzazione meno frequente. Per ulteriori informazioni, vedere [Recordset: associazione dinamica di colonne di dati (ODBC)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md).  
+-   Associazione dinamica di colonne di dati. Questo è meno frequente la parametrizzazione. Per altre informazioni, vedere [Recordset: associazione dinamica di colonne di dati (ODBC)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md).  
   
- Se è necessaria una comprensione più avanzata di RFX, vedere [campi di record: funzionamento di RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).  
+ Se è necessario una più avanzate su RFX, vedere [Record Field Exchange: How RFX Works](../../data/odbc/record-field-exchange-how-rfx-works.md).  
   
- Gli argomenti seguenti illustrano i dettagli sull'utilizzo degli oggetti recordset:  
+ Gli argomenti seguenti illustrano i dettagli di utilizzo degli oggetti recordset:  
   
 -   [Trasferimento di campi di record: uso di RFX](../../data/odbc/record-field-exchange-using-rfx.md)  
   

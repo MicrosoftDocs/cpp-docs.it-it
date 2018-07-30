@@ -46,12 +46,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 7f37390b4ab5db4cb3b519c801052c4b02102af6
-ms.sourcegitcommit: b0d6777cf4b580d093eaf6104d80a888706e7578
+ms.openlocfilehash: 94f90e4c60e5669789caadaaa827b4c12f1f157f
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/26/2018
-ms.locfileid: "39269796"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39339783"
 ---
 # <a name="csimplerow-class"></a>Classe CSimpleRow
 Fornisce un'implementazione predefinita per l'handle di riga, che viene utilizzata per la [IRowsetImpl](../../data/oledb/irowsetimpl-class.md) classe.  
@@ -93,7 +93,6 @@ Aggiunge un conteggio dei riferimenti a un handle di riga esistente in modo thre
   
 ```cpp
 DWORD AddRefRow();  
-  
 ```  
 
 ## <a name="compare"></a> Csimplerow:: compare
@@ -118,7 +117,7 @@ Costruttore.
 ### <a name="syntax"></a>Sintassi  
   
 ```cpp
-      CSimpleRow(DBCOUNTITEM iRowsetCur);  
+CSimpleRow(DBCOUNTITEM iRowsetCur);  
 ```  
   
 #### <a name="parameters"></a>Parametri  
@@ -135,7 +134,6 @@ Rilascia le righe in modo thread-safe.
   
 ```cpp
 DWORD ReleaseRow();  
-  
 ```  
 
 ## <a name="dwref"></a> Csimplerow:: M_dwref
@@ -145,7 +143,6 @@ Conteggio dei riferimenti a un handle di riga esistente.
   
 ```cpp
 DWORD m_dwRef;  
-  
 ```  
 
 ## <a name="irowset"></a> Csimplerow:: M_irowset
@@ -155,7 +152,6 @@ Indice al set di righe che rappresenta il cursore.
   
 ```cpp
 KeyType m_iRowset;  
-  
 ```  
   
 ## <a name="see-also"></a>Vedere anche  

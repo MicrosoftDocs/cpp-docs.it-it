@@ -1,5 +1,5 @@
 ---
-title: Classi e thread ODBC | Documenti Microsoft
+title: Classi e thread ODBC | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,24 +17,24 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: dedd1f03bf14e0513f9f76a1e292b9180e4d60db
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0a7b78284b1fc0bd952928952c24c61423396eb2
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33090588"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39341049"
 ---
 # <a name="odbc-classes-and-threads"></a>Classi e thread ODBC
-A partire da MFC 4.2, è il supporto multithreading per le classi ODBC MFC. Si noti tuttavia che MFC non fornisce il supporto multithreading per le classi DAO.  
+A partire da MFC 4.2, vi è supporto del multithreading per le classi ODBC MFC. Si noti tuttavia che MFC non fornisce il supporto del multithreading per le classi DAO.  
   
- Supporto del multithreading per le classi ODBC presenta alcune limitazioni. Poiché queste classi eseguono il wrapping dell'API ODBC, sono limitati a supporto del multithreading dei componenti in cui vengono compilati. Ad esempio, molti driver ODBC non sono thread-safe. Pertanto, le classi ODBC MFC non sono thread-safe se utilizzati con uno di questi driver. È necessario verificare se il driver utilizzato è thread-safe.  
+ Il supporto del multithreading per le classi ODBC presenta alcune limitazioni. Poiché queste classi eseguono il wrapping dell'API ODBC, sono limitate a supporto del multithreading dei componenti in cui vengono compilati. Ad esempio, molti driver ODBC non sono thread-safe. di conseguenza, le classi ODBC MFC non sono thread-safe se vengono usati con uno di questi driver. È necessario verificare se il driver utilizzato è thread-safe.  
   
- Quando si crea un'applicazione multithreading, è necessario prestare attenzione nell'utilizzo di più thread per modificare l'oggetto stesso. Ad esempio, utilizzando lo stesso `CRecordset` oggetto in due thread può provocare problemi durante il recupero di dati; un'operazione di recupero in un thread potrebbe sovrascrivere i dati recuperati in altro thread. Le classi ODBC MFC in thread separati un utilizzo più comune è quello di condividere open `CDatabase` oggetto tra thread da utilizzare la stessa connessione ODBC, con un apposito `CRecordset` in ogni thread. Si noti che non deve passare un non aperta `CDatabase` l'oggetto in un `CRecordset` oggetto in un altro thread.  
+ Quando si crea un'applicazione multithreading, è necessario prestare attenzione nell'utilizzo di più thread per modificare l'oggetto stesso. Ad esempio, usando lo stesso `CRecordset` oggetto in due thread potrebbe però verificarsi problemi durante il recupero dei dati, un'operazione di recupero in un thread potrebbe sovrascrivere i dati recuperati da altro thread. Un uso più comune delle classi ODBC MFC in thread separati è quello di condividere un oggetto aperto `CDatabase` oggetto in più thread da usare la stessa connessione ODBC, con un oggetto separato `CRecordset` in ogni thread. Tenere presente che evita di passare un non aperte `CDatabase` dell'oggetto a un `CRecordset` oggetto in un altro thread.  
   
 > [!NOTE]
->  Se è necessario disporre di più thread per gestire lo stesso oggetto, è necessario implementare i meccanismi di sincronizzazione appropriate, ad esempio le sezioni critiche. Tenere presente che alcune operazioni, ad esempio **aprire**, non sono protetti. È necessario assicurarsi che queste operazioni non verranno chiamate simultaneamente da un thread separato.  
+>  Se è necessario disporre di più thread per gestire lo stesso oggetto, è necessario implementare i meccanismi di sincronizzazione appropriata, ad esempio le sezioni critiche. Tenere presente che alcune operazioni, ad esempio `Open`, non sono protette. È necessario assicurarsi che queste operazioni non verranno chiamate simultaneamente da thread distinti.  
   
- Per ulteriori informazioni sulla creazione di applicazioni multithreading, vedere [argomenti relativi al Multithreading](../../parallel/multithreading-support-for-older-code-visual-cpp.md).  
+ Per altre informazioni sulla creazione di applicazioni multithreading, vedere [argomenti relativi al Multithreading](../../parallel/multithreading-support-for-older-code-visual-cpp.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Open Database Connectivity (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)   

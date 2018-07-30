@@ -1,5 +1,5 @@
 ---
-title: 'Recordset: Blocco dei record (ODBC) | Documenti Microsoft'
+title: 'Recordset: Blocco dei record (ODBC) | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,12 +21,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 1fcef3233e4c2035cc481128d81723dad03fb18b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 344f567ab014fc854dcb44eebadcd7346af8e851
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33092140"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39339984"
 ---
 # <a name="recordset-locking-records-odbc"></a>Recordset: blocco dei record (ODBC)
 Questo argomento si applica alle classi ODBC MFC.  
@@ -35,41 +35,41 @@ Questo argomento si applica alle classi ODBC MFC.
   
 -   [I tipi di blocco dei record disponibili](#_core_record.2d.locking_modes).  
   
--   [Blocco dei record del recordset durante gli aggiornamenti](#_core_locking_records_in_your_recordset).  
+-   [Blocco dei record nel set di record durante gli aggiornamenti](#_core_locking_records_in_your_recordset).  
   
- Quando si utilizza un recordset per aggiornare un record nell'origine dati, l'applicazione può bloccare il record in modo da nessun altro utente può aggiornare il record contemporaneamente. Lo stato di un record aggiornato da due utenti allo stesso tempo è definito, a meno che il sistema in grado di garantire che due utenti non è possibile aggiornare un record contemporaneamente.  
+ Quando si usa un set di record per aggiornare un record nell'origine dati, l'applicazione può bloccare il record in modo che nessun altro utente può aggiornare il record nello stesso momento. Lo stato di un record di due utenti aggiornato allo stesso tempo è definito, a meno che il sistema in grado di garantire che due utenti non è possibile aggiornare un record contemporaneamente.  
   
 > [!NOTE]
->  Questo argomento si applica agli oggetti derivati da `CRecordset` in quale riga bulk recupero non è stato implementato. Se è stato implementato il recupero di massa di righe, alcune delle informazioni non si applica. Ad esempio, non è possibile chiamare il **modifica** e **aggiornamento** funzioni membro. Per ulteriori informazioni sulle righe di massa, vedere [Recordset: recupero di record di massa (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
+>  In questo argomento si applica a oggetti derivati da `CRecordset` in quale riga bulk il recupero non è stato implementato. Se è stato implementato il recupero di righe bulk, alcune informazioni non è applicabile. Ad esempio, non è possibile chiamare il `Edit` e `Update` funzioni membro. Per altre informazioni sul recupero di righe bulk, vedere [Recordset: recupero di record di massa (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
   
 ##  <a name="_core_record.2d.locking_modes"></a> Modalità di blocco dei record  
- Le classi di database forniscono due [modalità di blocco dei record](../../mfc/reference/crecordset-class.md#setlockingmode):  
+ Le classi di database offrono due [modalità di blocco dei record](../../mfc/reference/crecordset-class.md#setlockingmode):  
   
--   (Predefinito) di blocco ottimistico  
+-   Ottimistica (impostazione predefinita) il blocco  
   
--   blocco pessimistico  
+-   Il blocco pessimistico  
   
  Aggiornamento di un record si svolge in tre passaggi:  
   
 1.  Per avviare l'operazione, chiamare il [modifica](../../mfc/reference/crecordset-class.md#edit) funzione membro.  
   
-2.  Modificare i campi appropriati del record corrente.  
+2.  Si modificano i campi appropriati del record corrente.  
   
-3.  Per terminare l'operazione ed eseguire il commit in genere l'aggiornamento, chiamando la [aggiornare](../../mfc/reference/crecordset-class.md#update) funzione membro.  
+3.  Per terminare l'operazione, ovvero ed eseguire il commit in genere l'aggiornamento, ovvero chiamando il [aggiornare](../../mfc/reference/crecordset-class.md#update) funzione membro.  
   
- Blocco ottimistico blocca il record nell'origine dati solo durante la **aggiornamento** chiamare. Se si utilizza il blocco ottimistico in un ambiente multiutente, l'applicazione deve gestire un **aggiornamento** condizione di errore. Blocco pessimistico blocca il record appena chiama **modifica** e lo rilascia finché non verrà chiamata **aggiornamento** (errori sono indicati tramite il `CDBException` meccanismo, non da un valore di **FALSE** restituito da **aggiornamento**). Blocco pessimistico comporta una riduzione delle prestazioni potenziali di altri utenti, perché l'accesso simultaneo allo stesso record potrebbe essere necessario attendere fino al completamento di un'applicazione **aggiornamento** processo.  
+ Il blocco ottimistico blocca il record nell'origine dati solo durante la `Update` chiamare. Se si usa il blocco ottimistico in un ambiente multiutente, l'applicazione deve gestire un `Update` condizione di errore. Il blocco pessimistico blocca il record, non appena si chiama `Edit` e non lo rilascia finché non verrà chiamata `Update` (errori sono indicati tramite il `CDBException` meccanismo, non da un valore FALSE restituito da `Update`). Il blocco pessimistico comporta una riduzione delle prestazioni potenziali di altri utenti, perché l'accesso simultaneo allo stesso record potrebbe essere necessario attendere fino al completamento di un'applicazione `Update` processo.  
   
-##  <a name="_core_locking_records_in_your_recordset"></a> Blocco dei record del recordset  
- Se si desidera modificare un oggetto recordset [la modalità di blocco](#_core_record.2d.locking_modes) da quello predefinito, è necessario modificare la modalità prima di chiamare **modifica**.  
+##  <a name="_core_locking_records_in_your_recordset"></a> Blocco dei record nel set di record  
+ Se si desidera modificare un oggetto recordset [la modalità di blocco](#_core_record.2d.locking_modes) da quello predefinito, è necessario modificare la modalità prima di chiamare `Edit`.  
   
 #### <a name="to-change-the-current-locking-mode-for-your-recordset"></a>Per modificare la modalità di blocco corrente per il recordset  
   
-1.  Chiamare il [SetLockingMode](../../mfc/reference/crecordset-class.md#setlockingmode) funzione membro, specificando **CRecordset:: pessimistic** o **CRecordset:: optimistic**.  
+1.  Chiamare il [SetLockingMode](../../mfc/reference/crecordset-class.md#setlockingmode) funzione di membro, specificando `CRecordset::pessimistic` o `CRecordset::optimistic`.  
   
- La nuova modalità di blocco rimane attiva fino a quando non si modificherà nuovamente o viene chiuso il recordset.  
+ La nuova modalità del blocco rimane attiva fino a quando non si modificherà nuovamente o viene chiuso il recordset.  
   
 > [!NOTE]
->  Un numero relativamente basso di driver ODBC supporta attualmente il blocco pessimistico.  
+>  Un numero relativamente basso i driver ODBC supportano attualmente il blocco pessimistico.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Recordset (ODBC)](../../data/odbc/recordset-odbc.md)   

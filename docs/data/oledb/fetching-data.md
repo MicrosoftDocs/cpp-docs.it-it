@@ -1,5 +1,5 @@
 ---
-title: Recupero dei dati | Documenti Microsoft
+title: Recupero dei dati | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,23 +18,23 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: ab03da7c303552a715c6766af7829e74025866ed
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1dca3cc2d51f0e165e9b17d9fe630752a427590f
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33101201"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39339156"
 ---
 # <a name="fetching-data"></a>Recupero dei dati
-Dopo aver aperto l'origine dati, sessione e oggetti set di righe, è possibile recuperare i dati. A seconda del tipo di funzione di accesso in uso, potrebbe essere necessario associare le colonne.  
+Dopo aver aperto l'origine dati, sessione e oggetti set di righe, è possibile recuperare i dati. A seconda del tipo di funzione di accesso che si usa, è necessario associare le colonne.  
   
 ### <a name="to-fetch-data"></a>Per recuperare i dati  
   
-1.  Aprire il set di righe utilizzando il metodo appropriato **aprire** comando.  
+1.  Aprire il set di righe utilizzando il metodo appropriato **aperto** comando.  
   
-2.  Se si utilizza `CManualAccessor`, associare le colonne di output, se non è già stato fatto. Per associare le colonne, chiamare `GetColumnInfo`e quindi creare una funzione di accesso con le associazioni, come illustrato nell'esempio seguente:  
+2.  Se si usa `CManualAccessor`, associare le colonne di output se non si è già stato fatto. Per associare le colonne, chiamare `GetColumnInfo`e quindi creare una funzione di accesso con le associazioni, come illustrato nell'esempio seguente:  
   
-    ```  
+    ```cpp  
     // From the DBViewer Sample CDBTreeView::OnQueryEdit  
     // Get the column information  
     ULONG ulColumns       = 0;  
@@ -49,9 +49,9 @@ Dopo aver aperto l'origine dati, sessione e oggetti set di righe, è possibile r
     rs.Bind();  
     ```  
   
-3.  Scrivere un `while` ciclo per recuperare i dati. Nel ciclo, chiamare `MoveNext` per far avanzare il cursore e verificare il valore restituito con S_OK, come illustrato nell'esempio seguente:  
+3.  Scrivere un `while` ciclo per recuperare i dati. Nel ciclo, chiamare `MoveNext` far avanzare il cursore e testare il valore restituito rispetto S_OK, come illustrato nell'esempio seguente:  
   
-    ```  
+    ```cpp  
     while (rs.MoveNext() == S_OK)  
     {  
         // Add code to fetch data here  
@@ -61,9 +61,9 @@ Dopo aver aperto l'origine dati, sessione e oggetti set di righe, è possibile r
   
 4.  All'interno di `while` ciclo, è possibile recuperare i dati in base al tipo di funzione di accesso.  
   
-    -   Se si utilizza il [CAccessor](../../data/oledb/caccessor-class.md) (classe), è necessario un record dell'utente che contiene i membri di dati. È possibile accedere ai dati utilizzando i membri di dati, come illustrato nell'esempio seguente:  
+    -   Se si usa la [CAccessor](../../data/oledb/caccessor-class.md) (classe), è necessario un record utente che contiene i membri dati. È possibile accedere ai dati usando tali membri dati, come illustrato nell'esempio seguente:  
   
-        ```  
+        ```cpp  
         while (rs.MoveNext() == S_OK)  
         {  
             // Use the data members directly. In this case, m_nFooID  
@@ -73,9 +73,9 @@ Dopo aver aperto l'origine dati, sessione e oggetti set di righe, è possibile r
         }  
         ```  
   
-    -   Se si utilizza il `CDynamicAccessor` o `CDynamicParameterAccessor` (classe), è possibile recuperare i dati utilizzando le funzioni di accesso `GetValue` e `GetColumn`, come illustrato nell'esempio seguente. Se si desidera determinare il tipo di dati in uso, utilizzare `GetType`.  
+    -   Se si usa la `CDynamicAccessor` oppure `CDynamicParameterAccessor` (classe), è possibile recuperare i dati usando le funzioni di accesso `GetValue` e `GetColumn`, come illustrato nell'esempio seguente. Se si desidera determinare il tipo di dati in uso, utilizzare `GetType`.  
   
-        ```  
+        ```cpp  
         while (rs.MoveNext() == S_OK)  
         {  
             // Use the dynamic accessor functions to retrieve your data.  
@@ -88,9 +88,9 @@ Dopo aver aperto l'origine dati, sessione e oggetti set di righe, è possibile r
         }  
         ```  
   
-    -   Se si utilizza `CManualAccessor`, è necessario specificare i membri dati personalizzati, associarli manualmente e accedervi direttamente, come illustrato nell'esempio seguente:  
+    -   Se si usa `CManualAccessor`, è necessario specificare i propri membri dati, li associano personalmente e accedervi direttamente, come illustrato nell'esempio seguente:  
   
-        ```  
+        ```cpp  
         while (rs.MoveNext() == S_OK)  
         {  
             // Use the data members you specified in the calls to  

@@ -1,5 +1,5 @@
 ---
-title: Metodi generati dalla creazione guidata consumer | Documenti Microsoft
+title: Metodi generati dalla creazione guidata consumer | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -25,39 +25,39 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: c0e03d24f61b3eba1ff4c6fa1e4d888a0252a21b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9c8a3605a94e0feffa1072d1c7cd92a8bdfecb66
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33098602"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39340880"
 ---
 # <a name="consumer-wizard-generated-methods"></a>Metodi generati mediante la Creazione guidata consumer
-La creazione guidata Consumer OLE DB ATL e la creazione guidata applicazione MFC genera alcune funzioni di cui è necessario essere consapevoli. Si noti che alcuni metodi vengono implementati in modo diverso in progetti con attributi, pertanto vi sono alcune considerazioni; ogni case è descritto di seguito. Per informazioni sulla visualizzazione di codice inserito, vedere [Debug del codice inserito](/visualstudio/debugger/how-to-debug-injected-code).  
+La creazione guidata Consumer OLE DB ATL e la creazione guidata applicazione MFC genera alcune funzioni di cui è necessario essere consapevoli. Si noti che alcuni metodi sono implementati in modo diverso nei progetti con gli attributi, quindi esistono alcune limitazioni; ogni caso è illustrato più avanti. Per informazioni sulla visualizzazione di codice inserito, vedere [Debug del codice inserito](/visualstudio/debugger/how-to-debug-injected-code).  
   
--   `OpenAll` Apre l'origine dati, set di righe e attiva i segnalibri, se sono disponibili.  
+-   `OpenAll` l'origine dati, set di righe, aperta e attiva i segnalibri se sono disponibili.  
   
--   `CloseAll` Chiude tutti i rowset aperti e rilascia tutte le esecuzioni di comandi.  
+-   `CloseAll` Chiude tutti i set di righe e rilascia tutte le esecuzioni di comandi.  
   
--   `OpenRowset` viene chiamato da OpenAll per aprire i set di righe o set di righe del consumer.  
+-   `OpenRowset` viene chiamato da OpenAll aprire il set di righe o i set di righe del consumer.  
   
--   `GetRowsetProperties` Recupera un puntatore all'insieme con è possono impostare le proprietà di proprietà del set di righe.  
+-   `GetRowsetProperties` Recupera un puntatore alla proprietà del set di righe impostato con le proprietà che possono essere impostati.  
   
--   `OpenDataSource` Apre l'origine dati utilizzando la stringa di inizializzazione specificato nella **proprietà di Data Link** la finestra di dialogo.  
+-   `OpenDataSource` Apre l'origine dati utilizzando la stringa di inizializzazione specificato nella **proprietà di Data Link** nella finestra di dialogo.  
   
 -   `CloseDataSource` Chiude l'origine dati in modo appropriato.  
   
 ## <a name="openall-and-closeall"></a>OpenAll e CloseAll  
   
-```  
+```cpp  
 HRESULT OpenAll();   
 
 void CloseAll();  
 ```  
   
- Nell'esempio seguente viene illustrato come chiamare `OpenAll` e `CloseAll` quando si esegue più volte lo stesso comando. Confrontare l'esempio di codice in [CCommand](../../data/oledb/ccommand-close.md), che mostra una variazione che chiama **Chiudi** e `ReleaseCommand` anziché `CloseAll`.  
+ Nell'esempio seguente viene illustrato come è possibile richiamare `OpenAll` e `CloseAll` quando si esegue più volte lo stesso comando. Confrontare l'esempio di codice nel [CCommand](../../data/oledb/ccommand-close.md), che viene illustrata una variante che chiama `Close` e `ReleaseCommand` invece di `CloseAll`.  
   
-```  
+```cpp  
 int main(int argc, char* argv[])  
 {  
    HRESULT hr;  
@@ -89,18 +89,18 @@ int main(int argc, char* argv[])
 ```  
   
 ## <a name="remarks"></a>Note  
- Si noti che se si definisce un `HasBookmark` (metodo), il `OpenAll` codice imposta la proprietà DBPROP_IRowsetLocate; assicurarsi eseguire questa operazione solo se il provider supporta questa proprietà.  
+ Si noti che se si definisce una `HasBookmark` metodo, il `OpenAll` codice imposta la proprietà DBPROP_IRowsetLocate; assicurarsi eseguire questa operazione solo se il provider supporta tale proprietà.  
   
 ## <a name="openrowset"></a>OpenRowset  
   
-```  
+```cpp  
 // OLE DB Template version:   
 HRESULT OpenRowset(DBPROPSET* pPropSet = NULL)  
 // Attribute-injected version:  
 HRESULT OpenRowset(const CSession& session, LPCWSTR szCommand = NULL);  
 ```  
   
- **OpenAll** chiama questo metodo per aprire il set di righe o di un set di righe del consumer. In genere, non è necessario chiamare `OpenRowset` a meno che non si desidera lavorare con più origini dati, le sessioni/rowset. `OpenRowset` viene dichiarata nel file di intestazione classe di comando o di tabella:  
+ `OpenAll` chiama questo metodo per aprire il set di righe o di un set di righe del consumer. In genere, non è necessario chiamare `OpenRowset` a meno che non si desidera lavorare con più origini dati, le sessioni/rowset. `OpenRowset` viene dichiarata nel file di intestazione classe di comando o di tabella:  
   
 ```  
 // OLE DB Template version:  
@@ -115,9 +115,9 @@ HRESULT OpenRowset(DBPROPSET *pPropSet = NULL)
 }  
 ```  
   
- Gli attributi di questo metodo viene implementato in modo diverso. Questa versione accetta un oggetto di sessione e una stringa di comando che per impostazione predefinita la stringa di comando specificata in db_command, sebbene sia possibile passare a uno diverso. Si noti che se si definisce un `HasBookmark` (metodo), il `OpenRowset` codice imposta la proprietà DBPROP_IRowsetLocate; assicurarsi eseguire questa operazione solo se il provider supporta questa proprietà.  
+ Gli attributi implementano questo metodo in modo diverso. Questa versione accetta un oggetto sessione e una stringa di comando che per impostazione predefinita la stringa di comando specificata nella db_command, sebbene sia possibile passare uno diverso. Si noti che se si definisce una `HasBookmark` metodo, il `OpenRowset` codice imposta la proprietà DBPROP_IRowsetLocate; assicurarsi eseguire questa operazione solo se il provider supporta tale proprietà.  
   
-```  
+```cpp  
 // Attribute-injected version:  
 HRESULT OpenRowset(const CSession& session, LPCWSTR szCommand=NULL)  
 {  
@@ -136,13 +136,13 @@ HRESULT OpenRowset(const CSession& session, LPCWSTR szCommand=NULL)
   
 ## <a name="getrowsetproperties"></a>GetRowsetProperties  
   
-```  
+```cpp 
 void GetRowsetProperties(CDBPropSet* pPropSet);  
 ```  
   
- Questo metodo recupera un puntatore al set di proprietà del set di righe. è possibile utilizzare l'indicatore di misura per impostare le proprietà come illustrato di seguito. `GetRowsetProperties` viene utilizzato come indicato di seguito nella classe di record utente. È possibile modificare il codice per impostare le proprietà del set di righe aggiuntive:  
+ Questo metodo recupera un puntatore al set di proprietà del set di righe. è possibile utilizzare questo puntatore per impostare le proprietà come illustrato di seguito. `GetRowsetProperties` viene usato come indicato di seguito nella classe di record utente. È possibile modificare il codice seguente per impostare le proprietà del set di righe aggiuntive:  
   
-```  
+```cpp  
 void GetRowsetProperties(CDBPropSet* pPropSet)  
 {  
    pPropSet->AddProperty(DBPROP_CANFETCHBACKWARDS, true, DBPROPOPTIONS_OPTIONAL);  
@@ -153,11 +153,11 @@ void GetRowsetProperties(CDBPropSet* pPropSet)
 ```  
   
 ## <a name="remarks"></a>Note  
- È consigliabile non definire globale `GetRowsetProperties` metodo poiché potrebbero essere in conflitto con quella definiti dalla procedura guidata. Si noti che questo è un metodo generato dalla procedura guidata che con progetti di modelli e con attributi. gli attributi non inserire questo codice.  
+ Non è necessario definire un globale `GetRowsetProperties` (metodo) potrebbe essere in conflitto con quello definito dalla procedura guidata. Si tratta di un metodo generato dalla procedura guidata che si ottiene con i progetti di modelli e con attributi. gli attributi non inseriscono il codice.  
   
 ## <a name="opendatasource-and-closedatasource"></a>OpenDataSource e CloseDataSource  
   
-```  
+```cpp  
 HRESULT OpenDataSource();   
 
 void CloseDataSource();  

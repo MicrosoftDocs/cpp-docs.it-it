@@ -1,5 +1,5 @@
 ---
-title: I parametri di output | Documenti Microsoft
+title: I parametri di output | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,15 +19,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 8733b967ddab7e6f68fcbee1c80e78500a679f96
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ae742f27f7e2fd13de9acfc3c814b36c85e9e106
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33104386"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39339026"
 ---
 # <a name="output-parameters"></a>Parametri di output
-La chiamata di una stored procedure è simile alla chiamata a un comando SQL. La differenza principale è che le stored procedure utilizzano parametri di output (o "output") e valori restituiscono.  
+Chiama una stored procedure è simile a richiamare un comando SQL. La differenza principale è che le stored procedure utilizzano i parametri di output (o "output") e restituiscono valori.  
   
  Nella seguente stored procedure, il primo '? 'è il valore restituito (phone) e il secondo'?' è il parametro di input (nome):  
   
@@ -35,7 +35,7 @@ La chiamata di una stored procedure è simile alla chiamata a un comando SQL. La
 DEFINE_COMMAND(CMySProcAccessor, _T("{ ? = SELECT phone FROM shippers WHERE name = ? }")  
 ```  
   
- Specificare i parametri di input e nella mappa di parametri:  
+ Specificare i parametri in e out nella mappa del parametro:  
   
 ```  
 BEGIN_PARAM_MAP(CMySProcAccessor)  
@@ -46,14 +46,14 @@ BEGIN_PARAM_MAP(CMySProcAccessor)
 END_PARAM_MAP()  
 ```  
   
- L'applicazione deve gestire l'output restituito dalle stored procedure. Provider OLE DB diversi restituiscono parametri di output e restituire valori in momenti diversi durante l'elaborazione dei risultati. Il provider Microsoft OLE DB per SQL Server (SQLOLEDB), ad esempio, non fornire i parametri di output e codice restituito fino a quando il consumer ha recuperato o annullato i set di risultati restituiti dalla stored procedure. L'output viene restituito nell'ultimo pacchetto TDS dal server.  
+ L'applicazione deve gestire l'output restituito dalla stored procedure. Provider OLE DB diversi restituiscono parametri di output e valori restituiti in momenti diversi durante l'elaborazione dei risultati. Ad esempio, il provider Microsoft OLE DB per SQL Server (SQLOLEDB) non specificare i parametri di output e restituiscono codici di fino a quando il consumer ha recuperato o annullato i set di risultati restituiti dalla stored procedure. L'output viene restituito nell'ultimo pacchetto TDS dal server.  
   
 ## <a name="row-count"></a>Conteggio delle righe  
- Se si utilizza i modelli Consumer OLE DB per eseguire una stored procedure con parametri di output, non è impostato il numero di righe finché non si chiude il set di righe.  
+ Se si utilizza i modelli Consumer OLE DB per eseguire una stored procedure con parametri di output, il conteggio delle righe non è impostato fino a quando non si chiude il set di righe.  
   
  Si consideri ad esempio una stored procedure con un set di righe e un parametro di output:  
   
-```  
+```sql  
 create procedure sp_test  
    @_rowcount integer output  
 as  
@@ -62,7 +62,7 @@ as
 return 0  
 ```  
   
- Il @_rowcount parametro di output restituisce il numero di righe effettivamente restituito dalla tabella di prova. Tuttavia, questa stored procedure limita il numero di righe da un massimo di 50. Ad esempio, se vi sono 100 righe nel test, il conteggio delle righe sarebbe 50 (perché il codice recupera solo le prime 50 righe). Se sono stati solo 30 righe nella tabella, il conteggio delle righe sarebbe 30. È necessario chiamare **Chiudi** o **CloseAll** per popolare il parametro di output prima di recuperare il relativo valore.  
+ Il @_rowcount parametro di output segnala quante righe sono state effettivamente restituite dalla tabella dei test. Tuttavia, questa stored procedure consente di limitare il numero di righe a un massimo di 50. Ad esempio, se vi sono 100 righe nel test, il conteggio delle righe sarebbero 50 (poiché questo codice recupera solo le prime 50 righe). Se si sono verificati solo 30 righe nella tabella, il conteggio delle righe sarebbero 30. È necessario chiamare `Close` o `CloseAll` per popolare il parametro di output prima di recuperare il relativo valore.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Uso delle stored procedure](../../data/oledb/using-stored-procedures.md)

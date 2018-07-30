@@ -33,12 +33,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 3cc48b48c6d95cc07314030d6c7954898758e178
-ms.sourcegitcommit: b0d6777cf4b580d093eaf6104d80a888706e7578
+ms.openlocfilehash: 51593d14967e2814d69cb0a912d937b689dc3632
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/26/2018
-ms.locfileid: "39269427"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39337115"
 ---
 # <a name="idbpropertiesimpl-class"></a>Classe IDBPropertiesImpl
 Fornisce un'implementazione per il `IDBProperties` interfaccia.  
@@ -77,7 +77,7 @@ Restituisce i valori delle proprietà nei gruppi di proprietà di origine dati, 
 ### <a name="syntax"></a>Sintassi  
   
 ```cpp
-      STDMETHOD(GetProperties)(ULONG cPropertySets,   
+STDMETHOD(GetProperties)(ULONG cPropertySets,   
    const DBPROPIDSET rgPropertySets[],   
    ULONG * pcProperties,   
    DBPROPSET ** prgProperties);  
@@ -104,7 +104,7 @@ Restituisce informazioni sulle proprietà supportate dall'origine dati.
 ### <a name="syntax"></a>Sintassi  
   
 ```cpp
-      STDMETHOD(GetPropertyInfo)(ULONG cPropertySets,   
+STDMETHOD(GetPropertyInfo)(ULONG cPropertySets,   
    const DBPROPIDSET rgPropertySets[],   
    ULONG * pcPropertyInfoSets,   
    DBPROPINFOSET ** prgPropertyInfoSets,   
@@ -130,7 +130,7 @@ Imposta le proprietà nei gruppi di proprietà origine dati e l'inizializzazione
 ### <a name="syntax"></a>Sintassi  
   
 ```cpp
-      STDMETHOD(SetProperties)(ULONG cPropertySets,   
+STDMETHOD(SetProperties)(ULONG cPropertySets,   
    DBPROPSET rgPropertySets[]);  
 ```  
   

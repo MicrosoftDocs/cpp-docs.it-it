@@ -1,5 +1,5 @@
 ---
-title: Gestori di comandi per lo scorrimento (accesso ai dati MFC) dei Record | Documenti Microsoft
+title: I gestori di comando per lo scorrimento (accesso ai dati MFC) dei Record | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,25 +17,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 03dec2e3eff0f61db5f4c8b7573400a589615b02
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ef2b57bd37441b9a35c26ab36fcf3cb15cd0d878
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33089379"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39340328"
 ---
 # <a name="command-handlers-for-record-scrolling--mfc-data-access"></a>Gestione dei comandi per lo scorrimento dei record (accesso ai dati MFC)
-Il [CRecordView](../mfc/reference/crecordview-class.md) classe fornisce il comando predefinito per i seguenti comandi standard:  
+Il [CRecordView](../mfc/reference/crecordview-class.md) classe fornisce predefinito gestione dei comandi per i seguenti comandi standard:  
   
--   **ID_RECORD_MOVE_FIRST**  
+-   ID_RECORD_MOVE_FIRST  
   
--   **ID_RECORD_MOVE_LAST**  
+-   ID_RECORD_MOVE_LAST  
   
--   **ID_RECORD_MOVE_NEXT**  
+-   ID_RECORD_MOVE_NEXT  
   
--   **ID_RECORD_MOVE_PREV**  
+-   ID_RECORD_MOVE_PREV  
   
- Il `OnMove` funzione membro fornisce predefinito gestione dei comandi per tutti i quattro comandi che consentono lo spostamento da un record a altro. Quando vengono eseguiti tali comandi, RFX (o DFX) carica il nuovo record nei campi del recordset e DDX sposta i valori nei controlli del form del record. Per informazioni su RFX, vedere [trasferimento di campi di Record (RFX)](../data/odbc/record-field-exchange-rfx.md).  
+ Il `OnMove` funzione membro garantisce predefinito gestione dei comandi per tutti i quattro comandi, che consentono lo spostamento da un record a altro. Quando vengono eseguiti tali comandi, RFX (o DFX) carica il nuovo record nei campi del recordset e DDX sposta i valori nei controlli del form del record. Per informazioni su RFX, vedere [campi di Record (RFX)](../data/odbc/record-field-exchange-rfx.md).  
   
 > [!NOTE]
 >  Usare sempre questi ID di comando standard per qualsiasi oggetto di interfaccia utente associato ai comandi standard di navigazione tra i record.  

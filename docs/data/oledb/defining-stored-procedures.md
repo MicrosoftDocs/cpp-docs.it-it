@@ -1,5 +1,5 @@
 ---
-title: Definizione delle Stored procedure | Documenti Microsoft
+title: Definizione delle Stored procedure | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,23 +18,23 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 1e03a5ae2e7c75d905216a6be92630376484d047
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2856418da13cc80d47c10295234b47813071a4ec
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33101302"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39336953"
 ---
 # <a name="defining-stored-procedures"></a>Definizione delle stored procedure
-Prima di chiamare una stored procedure, è necessario innanzitutto definire, utilizzando il [DEFINE_COMMAND](../../data/oledb/define-command.md) (macro). Quando si definisce il comando, è possibile indicare i parametri con un punto interrogativo (?) come marcatore di parametro:  
+Prima di chiamare una stored procedure, è necessario innanzitutto definire, tramite il [DEFINE_COMMAND](../../data/oledb/define-command.md) macro. Quando si definisce il comando, indicare i parametri con un punto interrogativo (?) come marcatore di parametro:  
   
 ```  
 DEFINE_COMMAND(CMySProcAccessor, _T("{INSERT {name, phone} into shippers  (?,?)}")  
 ```  
   
- Si noti che la sintassi (l'utilizzo di parentesi graffe e così via) utilizzata negli esempi di codice in questo argomento è specifica di SQL Server. La sintassi utilizzata nelle stored procedure possono variare a seconda del provider in uso.  
+ Si noti che la sintassi (l'uso di parentesi graffe e così via) usata negli esempi di codice in questo argomento è specifica di SQL Server. La sintassi da utilizzare nelle stored procedure può variare a seconda del provider in uso.  
   
- Successivamente, nella mappa di parametri, specificare i parametri utilizzati nel comando, Elenca i parametri nell'ordine in cui sono presenti nel comando:  
+ Successivamente, nella mappa di parametri, specificare i parametri che è stato utilizzato nel comando Elenca i parametri nell'ordine in cui sono presenti nel comando:  
   
 ```  
 BEGIN_PARAM_MAP(CMySProcAccessor)  
@@ -45,7 +45,7 @@ BEGIN_PARAM_MAP(CMySProcAccessor)
 END_PARAM_MAP()  
 ```  
   
- L'esempio precedente definisce una stored procedure durante la sua esecuzione. Per un efficiente riutilizzo del codice, in genere, un database contiene un set di stored procedure già definite con nomi quali "Sales by Year" o "dt_adduserobject". È possibile visualizzare le relative definizioni utilizzando SQL Server Enterprise Manager. Si chiama come indicato di seguito (il posizionamento del '?' parametri dipende dall'interfaccia della stored procedure):  
+ Nell'esempio precedente definisce una stored procedure durante la sua esecuzione. In genere, per un efficiente riutilizzo di codice, un database contiene un set di stored procedure già definite con nomi quali "Sales by Year" o "dt_adduserobject." È possibile visualizzare le relative definizioni usando SQL Server Enterprise Manager. Vengono chiamate come indicato di seguito (il posizionamento dei '?' parametri varia a seconda dell'interfaccia della stored procedure):  
   
 ```  
 DEFINE_COMMAND(CMySProcAccessor, _T("{CALL \"Sales by Year\" (?,?) }")  
@@ -54,13 +54,13 @@ DEFINE_COMMAND(CMySProcAccessor, _T("{CALL dbo.dt_adduserobject (?,?) }")
   
  Successivamente, dichiarare la classe di comando:  
   
-```  
+```cpp  
 class CMySProc : public CCommand<CAccessor<CMySProcAccessor>>  
 ```  
   
  Infine, chiamare la stored procedure in `OpenRowset` come indicato di seguito:  
   
-```  
+```cpp  
 CSession m_session;  
 
 HRESULT OpenRowset()  
@@ -69,9 +69,9 @@ HRESULT OpenRowset()
 }  
 ```  
   
- Si noti inoltre che è possibile definire una stored procedure utilizzando l'attributo database [db_command](../../windows/db-command.md) come indicato di seguito:  
+ Si noti anche che è possibile definire una stored procedure utilizzando l'attributo di database [db_command](../../windows/db-command.md) come indicato di seguito:  
   
-```  
+```cpp  
 db_command("{ ? = CALL dbo.dt_adduserobject }")  
 ```  
   

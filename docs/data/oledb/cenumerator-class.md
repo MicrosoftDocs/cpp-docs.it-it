@@ -33,12 +33,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 9f8af45082f8b861b177c4e214a69e9b15799dd7
-ms.sourcegitcommit: b217daee32d3413cf33753d9b4dc35a0022b1bfa
+ms.openlocfilehash: 37d53932a283ea047d748985a1da348d9346ce1e
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2018
-ms.locfileid: "39233373"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39336966"
 ---
 # <a name="cenumerator-class"></a>Classe CEnumerator
 Usa un oggetto enumeratore OLE DB, che espone il [ISourcesRowset](https://msdn.microsoft.com/library/ms715969.aspx) interfaccia da restituire un set di righe che descrivono tutte le origini dati e gli enumeratori.  
@@ -72,7 +72,7 @@ Cerca un nome specificato tra i provider disponibili.
 ### <a name="syntax"></a>Sintassi  
   
 ```cpp
-      bool Find(TCHAR* szSearchName) throw();  
+bool Find(TCHAR* szSearchName) throw();  
 ```  
   
 #### <a name="parameters"></a>Parametri  
@@ -92,7 +92,6 @@ Analizza il nome visualizzato per estrarre il componente della stringa che può 
   
 ```cpp
 HRESULT GetMoniker(LPMONIKER* ppMoniker) const throw();  
-
 
 HRESULT GetMoniker(LPMONIKER* ppMoniker,   
    LPCTSTR lpszDisplayName) const throw();  
@@ -116,9 +115,7 @@ Associa il moniker per l'enumeratore, se uno è specificato, quindi recupera il 
 ```cpp
 HRESULT Open(LPMONIKER pMoniker) throw();  
 
-
 HRESULT Open(const CLSID* pClsid = & CLSID_OLEDB_ENUMERATOR) throw();  
-
 
 HRESULT Open(const CEnumerator& enumerator) throw();  
 ```  

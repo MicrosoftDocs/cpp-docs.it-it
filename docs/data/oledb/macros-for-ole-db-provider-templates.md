@@ -62,12 +62,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: a1845f2e2404604aa187a8569954b3cb289ae3ec
-ms.sourcegitcommit: e5792fcb89b9ba64c401f90f4f26a8e45d4a2359
+ms.openlocfilehash: a5c9132325af7c05980aac0d7b6b7d53958e4a2b
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39321929"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39338044"
 ---
 # <a name="macros-for-ole-db-provider-templates"></a>Macro per i modelli di provider OLE DB
 Le macro di Provider OLE DB per i modelli offrono funzionalità nelle categorie seguenti:  
@@ -118,7 +118,6 @@ Mapping di set di segni di che inizio di una proprietà impostata in una proprie
   
 ```cpp
 BEGIN_PROPERTY_SET(guid)  
-  
 ```  
   
 #### <a name="parameters"></a>Parametri  
@@ -134,8 +133,7 @@ Mapping di set di segni di che inizio di una proprietà impostata in una proprie
 #### <a name="syntax"></a>Sintassi  
   
 ```cpp
-BEGIN_PROPERTY_SET_EX(guid  
-, flags )  
+BEGIN_PROPERTY_SET_EX(guid, flags)  
 ```  
   
 #### <a name="parameters"></a>Parametri  
@@ -155,7 +153,6 @@ Segni di inizio della proprietà set di voci della mappa.
   
 ```cpp
 BEGIN_PROPSET_MAP(Class)  
-  
 ```  
   
 #### <a name="parameters"></a>Parametri  
@@ -180,7 +177,6 @@ Questa macro unisce i gruppi di proprietà.
   
 ```cpp
 CHAIN_PROPERTY_SET(ChainClass)  
-  
 ```  
   
 #### <a name="parameters"></a>Parametri  
@@ -200,7 +196,6 @@ Contrassegna la fine di un set di proprietà.
   
 ```cpp
 END_PROPERTY_SET(guid)  
-  
 ```  
   
 #### <a name="parameters"></a>Parametri  
@@ -217,7 +212,6 @@ Contrassegni la fine del proprietà set di voci della mappa.
   
 ```cpp
 END_PROPSET_MAP()  
-  
 ```  
   
 #### <a name="example"></a>Esempio  
@@ -230,7 +224,6 @@ Rappresenta una proprietà specifica in un insieme di proprietà.
   
 ```cpp
 PROPERTY_INFO_ENTRY(dwPropID)  
-  
 ```  
   
 #### <a name="parameters"></a>Parametri  
@@ -249,8 +242,7 @@ Rappresenta una proprietà specifica in un insieme di proprietà.
 #### <a name="syntax"></a>Sintassi  
   
 ```cpp
-PROPERTY_INFO_ENTRY_EX(dwPropID  
-, vt, dwFlags, value, options )  
+PROPERTY_INFO_ENTRY_EX(dwPropID, vt, dwFlags, value, options)  
 ```  
   
 #### <a name="parameters"></a>Parametri  
@@ -281,8 +273,7 @@ Rappresenta una proprietà specifica in un insieme di proprietà.
 #### <a name="syntax"></a>Sintassi  
   
 ```cpp
-PROPERTY_INFO_ENTRY_VALUE(dwPropID  
-, value )  
+PROPERTY_INFO_ENTRY_VALUE(dwPropID, value)  
 ```  
   
 #### <a name="parameters"></a>Parametri  
@@ -305,7 +296,6 @@ Contrassegna l'inizio delle voci della mappa colonna provider.
   
 ```cpp
 BEGIN_PROVIDER_COLUMN_MAP(theClass)  
-  
 ```  
   
 #### <a name="parameters"></a>Parametri  
@@ -324,7 +314,6 @@ Contrassegna la fine delle voci della mappa colonna provider.
   
 ```cpp
 END_PROVIDER_COLUMN_MAP()  
-  
 ```  
   
 #### <a name="example"></a>Esempio  
@@ -336,8 +325,7 @@ Rappresenta una colonna specifica è supportata dal provider.
 #### <a name="syntax"></a>Sintassi  
   
 ```cpp
-PROVIDER_COLUMN_ENTRY (name  
-, ordinal, member )  
+PROVIDER_COLUMN_ENTRY (name, ordinal, member)  
 ```  
   
 #### <a name="parameters"></a>Parametri  
@@ -356,8 +344,7 @@ Rappresenta una colonna specifica è supportata dal provider.
 #### <a name="syntax"></a>Sintassi  
   
 ```cpp
-PROVIDER_COLUMN_ENTRY_FIXED(name  
-, ordinal, dbtype, member )  
+PROVIDER_COLUMN_ENTRY_FIXED(name, ordinal, dbtype, member)  
 ```  
   
 #### <a name="parameters"></a>Parametri  
@@ -385,8 +372,7 @@ Rappresenta una colonna specifica è supportata dal provider.
 #### <a name="syntax"></a>Sintassi  
   
 ```cpp
-PROVIDER_COLUMN_ENTRY_GN (name  
-, ordinal, flags, colSize, dbtype, precision, scale, guid )  
+PROVIDER_COLUMN_ENTRY_GN (name, ordinal, flags, colSize, dbtype, precision, scale, guid)  
 ```  
   
 #### <a name="parameters"></a>Parametri  
@@ -423,8 +409,7 @@ Rappresenta una colonna specifica è supportata dal provider.
 #### <a name="syntax"></a>Sintassi  
   
 ```cpp
-PROVIDER_COLUMN_ENTRY_LENGTH(name  
-, ordinal, size, member )  
+PROVIDER_COLUMN_ENTRY_LENGTH(name, ordinal, size, member)  
 ```  
   
 #### <a name="parameters"></a>Parametri  
@@ -452,8 +437,7 @@ Rappresenta una colonna specifica è supportata dal provider.
 #### <a name="syntax"></a>Sintassi  
   
 ```cpp
-PROVIDER_COLUMN_ENTRY_STR(name  
-, ordinal, member )  
+PROVIDER_COLUMN_ENTRY_STR(name, ordinal, member)  
 ```  
   
 #### <a name="parameters"></a>Parametri  
@@ -478,13 +462,11 @@ Rappresenta una colonna specifica è supportata dal provider.
 #### <a name="syntax"></a>Sintassi  
   
 ```cpp
-PROVIDER_COLUMN_ENTRY_TYPE_LENGTH(name  
-, ordinal, dbtype, size, member )  
+PROVIDER_COLUMN_ENTRY_TYPE_LENGTH(name, ordinal, dbtype, size, member)  
 ```  
   
 #### <a name="parameters"></a>Parametri  
  *name*  
-  
  [in] Il nome della colonna.  
   
  *Numero ordinale*  
@@ -508,8 +490,7 @@ Rappresenta una colonna specifica è supportata dal provider.
 #### <a name="syntax"></a>Sintassi  
   
 ```cpp
-PROVIDER_COLUMN_ENTRY_WSTR(name  
-, ordinal, member )  
+PROVIDER_COLUMN_ENTRY_WSTR(name, ordinal, member)  
 ```  
   
 #### <a name="parameters"></a>Parametri  
@@ -531,7 +512,7 @@ Indica l'inizio di una mappa di schema.
 #### <a name="syntax"></a>Sintassi  
   
 ```cpp
-      BEGIN_SCHEMA_MAP(SchemaClass);  
+BEGIN_SCHEMA_MAP(SchemaClass);  
 ```  
   
 #### <a name="parameters"></a>Parametri  
@@ -548,7 +529,6 @@ Indica la fine della mappa dello schema.
   
 ```cpp
 END_SCHEMA_MAP()  
-  
 ```  
   
 #### <a name="see-also"></a>Vedere anche  
@@ -560,7 +540,7 @@ Associa un GUID a una classe.
 #### <a name="syntax"></a>Sintassi  
   
 ```cpp
-      SCHEMA_ENTRY(guid,  
+SCHEMA_ENTRY(guid,  
    rowsetClass);   
 ```  
   

@@ -1,5 +1,5 @@
 ---
-title: Semplificazione dell'accesso ai dati con gli attributi del Database | Documenti Microsoft
+title: Semplificazione dell'accesso ai dati con gli attributi del Database | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -29,42 +29,42 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: e665369f292a646353d1a180661982ce4c902665
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a143badef2aec500b12d176e10c0a5eaf06b2cf4
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33111715"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39339363"
 ---
 # <a name="simplifying-data-access-with-database-attributes"></a>Semplificazione dell'accesso ai dati con gli attributi del database
 In questo argomento viene illustrato l'utilizzo degli attributi del database per semplificare le operazioni di database.  
   
- Il metodo di base per accedere alle informazioni da un database consiste nel creare una classe di comando (o tabella) e una classe di record utente per una particolare tabella nel database. Gli attributi di database semplificano alcune delle dichiarazioni di modello che in precedenza era necessario eseguire.  
+ Il modo semplice per accedere alle informazioni da un database consiste nel creare una classe di comando (o tabella) e una classe di record utente per una determinata tabella nel database. Gli attributi di database semplificano alcune delle dichiarazioni di modello che in precedenza era necessario eseguire operazioni.  
   
- Per illustrare l'utilizzo degli attributi del database, le sezioni seguenti mostrano due tabella equivalente e dichiarazioni di classe di record utente: il primo utilizza gli attributi e il secondo utilizza i modelli OLE DB. Il codice delle dichiarazioni viene in genere inserito in un file di intestazione denominato per l'oggetto tabella o un comando, ad esempio, authors.  
+ Per illustrare l'uso degli attributi del database, le sezioni seguenti illustrano due equivalente nella tabella e le dichiarazioni di classe di record utente: il primo Usa gli attributi e il secondo Usa modelli OLE DB. Il codice delle dichiarazioni in genere viene inserito in un file di intestazione denominato per l'oggetto tabella o un comando, ad esempio authors.  
   
- Confrontando i due file, è possibile visualizzare molto più semplice è possibile utilizzare gli attributi. Tra le differenze sono:  
+ Confrontando i due file, è possibile vedere molto più semplice è usare gli attributi. Le principali differenze sono:  
   
--   Utilizzo degli attributi, è sufficiente dichiarare una classe: `CAuthors`, mentre con i modelli è necessario dichiarare due: `CAuthorsNoAttrAccessor` e `CAuthorsNoAttr`.  
+-   Uso di attributi, è sufficiente dichiarare una classe: `CAuthors`, mentre con i modelli è necessario dichiarare due: `CAuthorsNoAttrAccessor` e `CAuthorsNoAttr`.  
   
--   Il `db_source` è equivalente alla chiamata di una versione con gli attributi di `OpenDataSource()` chiamare nella dichiarazione del modello.  
+-   Il `db_source` chiamata nella versione con attributa è equivalente al `OpenDataSource()` chiamare nella dichiarazione del modello.  
   
--   Il **db_table** chiamata nella versione con gli attributi è equivalente alla dichiarazione di modello seguenti:  
+-   Il `db_table` chiamata nella versione con attributa è equivalente alla dichiarazione di modello seguente:  
   
     ```  
     class CAuthorsNoAttr : public CTable<CAccessor<CAuthorsNoAttrAccessor>>  
     ```  
   
--   Il **db_column** chiamate nella versione attributi equivalgono alla mappa delle colonne (vedere `BEGIN_COLUMN_MAP ... END_COLUMN_MAP`) nella dichiarazione del modello.  
+-   Il `db_column` chiamate nella versione con attributa sono equivalenti alla mappa delle colonne (vedere `BEGIN_COLUMN_MAP ... END_COLUMN_MAP`) nella dichiarazione del modello.  
   
- Gli attributi inseriscono una dichiarazione di classe di record utente per l'utente. È equivalente alla classe di record utente `CAuthorsNoAttrAccessor` nella dichiarazione del modello. Se la classe di tabella è `CAuthors`, la classe di record utente inserita è denominata `CAuthorsAccessor`, è possibile visualizzare solo la relativa dichiarazione nel codice inserito. Per ulteriori informazioni, vedere "Classi di Record utente inserite dagli attributi" in [record utente](../../data/oledb/user-records.md).  
+ Gli attributi inseriscono una dichiarazione di classe di record utente per l'utente. È equivalente alla classe di record utente `CAuthorsNoAttrAccessor` nella dichiarazione del modello. Se è la classe di tabella `CAuthors`, la classe di record utente inserito è denominata `CAuthorsAccessor`, ed è possibile visualizzare solo la relativa dichiarazione nel codice inserito. Per altre informazioni, vedere "Classi di Record utente inserite dagli attributi" nella [record utente](../../data/oledb/user-records.md).  
   
- Si noti che in entrambi i casi e il codice basato su modelli, è necessario impostare le proprietà del set di righe utilizzando `CDBPropSet::AddProperty`.  
+ Si noti che l'attributo sia il codice basato su modelli, è necessario impostare le proprietà del set di righe utilizzando `CDBPropSet::AddProperty`.  
   
  Per informazioni sugli attributi descritti in questo argomento, vedere [attributi del Consumer OLE DB](../../windows/ole-db-consumer-attributes.md).  
   
-## <a name="table-and-accessor-declaration-using-attributes"></a>Tabella e utilizzando gli attributi di dichiarazione di funzione di accesso  
- Il codice seguente chiama `db_source` e **db_table** sulla classe di tabella. `db_source` Specifica l'origine dati e la connessione da utilizzare. **db_table** inserisce il codice del modello appropriato per dichiarare una classe di tabella. **db_column** specifica la mappa delle colonne e inserisce la dichiarazione di funzione di accesso. È possibile utilizzare gli attributi del consumer OLE DB in qualsiasi progetto che supporti ATL.  
+## <a name="table-and-accessor-declaration-using-attributes"></a>Dichiarazione di funzione di accesso utilizzando gli attributi e tabella  
+ Il codice seguente chiama `db_source` e `db_table` sulla classe di tabella. `db_source` Specifica l'origine dati e la connessione da utilizzare. `db_table` Inserisce il codice del modello appropriato per dichiarare una classe di tabella. `db_column` Specifica la mappa delle colonne e inserire la dichiarazione di funzione di accesso. È possibile usare gli attributi del consumer OLE DB in qualsiasi progetto che supporta ATL.  
   
  Ecco la dichiarazione di funzioni di accesso e di tabella utilizzando gli attributi:  
   
@@ -101,8 +101,8 @@ public:
 };  
 ```  
   
-## <a name="table-and-accessor-declaration-using-templates"></a>Dichiarazione di funzione di accesso mediante modelli e di tabella  
- Ecco la dichiarazione di funzioni di accesso e di tabella utilizzando i modelli.  
+## <a name="table-and-accessor-declaration-using-templates"></a>Dichiarazione di funzione di accesso usando i modelli e tabella  
+ Ecco la dichiarazione di tabella e della funzione di accesso usando i modelli.  
   
 ```cpp
 //////////////////////////////////////////////////////////////////////  
@@ -208,4 +208,4 @@ HRESULT hr = Open(m_session, "Authors", pPropSet);
   
 ## <a name="see-also"></a>Vedere anche  
  [Attributi del Consumer OLE DB](../../windows/ole-db-consumer-attributes.md)   
- [Procedure dettagliate sugli attributi](http://msdn.microsoft.com/en-us/73df1d5d-261a-4521-98fb-06dcbf5ec0d0)
+ [Procedure dettagliate di attributi](http://msdn.microsoft.com/73df1d5d-261a-4521-98fb-06dcbf5ec0d0)

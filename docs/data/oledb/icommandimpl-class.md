@@ -63,12 +63,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 18174281baf76b383b56b10e86e2659279037b6c
-ms.sourcegitcommit: b0d6777cf4b580d093eaf6104d80a888706e7578
+ms.openlocfilehash: 07453e3040594332857ba75455b1847a3914fdd2
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/26/2018
-ms.locfileid: "39269599"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39337794"
 ---
 # <a name="icommandimpl-class"></a>Classe ICommandImpl
 Fornisce l'implementazione per il [ICommand](https://msdn.microsoft.com/library/ms709737.aspx) interfaccia.  
@@ -121,7 +121,6 @@ Annulla l'esecuzione del comando corrente.
   
 ```cpp
 STDMETHOD(Cancel)();  
-  
 ```  
   
 ### <a name="remarks"></a>Note  
@@ -134,7 +133,6 @@ Annulla l'esecuzione del comando corrente.
   
 ```cpp
 HRESULT CancelExecution();  
-  
 ```  
 
 ## <a name="createrowset"></a> ICommandImpl:: CreateRowset
@@ -143,8 +141,7 @@ Chiamata eseguita dal [Execute](../../data/oledb/icommandimpl-execute.md) per cr
 ### <a name="syntax"></a>Sintassi  
   
 ```cpp
-      template template <class RowsetClass  
-      >  
+template template <class RowsetClass>  
 HRESULT CreateRowset(IUnknown* pUnkOuter,  
    REFIID riid,  
    DBPARAMS* pParams,  
@@ -210,7 +207,7 @@ Restituisce un puntatore a interfaccia per la sessione che ha creato il comando.
 ### <a name="syntax"></a>Sintassi  
   
 ```cpp
-      STDMETHOD (GetDBSession) (REFIID riid,  
+STDMETHOD (GetDBSession) (REFIID riid,  
    IUnknown** ppSession);  
 ```  
   
@@ -227,7 +224,6 @@ Costruttore.
   
 ```cpp
 ICommandImpl();  
-  
 ```  
 
 ## <a name="bcancel"></a> ICommandImpl:: M_bcancel
@@ -237,7 +233,6 @@ Indica se il comando viene annullato.
   
 ```cpp
 unsigned m_bCancel:1;  
-  
 ```  
   
 ### <a name="remarks"></a>Note  
@@ -250,7 +245,6 @@ Indica se il comando può essere annullato durante l'esecuzione.
   
 ```cpp
 unsigned m_bCancelWhenExecuting:1;  
-  
 ```  
   
 ### <a name="remarks"></a>Note  
@@ -263,7 +257,6 @@ Indica se il comando attualmente in esecuzione.
   
 ```cpp
 unsigned m_bIsExecuting:1;  
-  
 ```  
   
 ### <a name="remarks"></a>Note  

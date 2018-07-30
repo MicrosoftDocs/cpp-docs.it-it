@@ -1,5 +1,5 @@
 ---
-title: Creazione di un Provider OLE DB | Documenti Microsoft
+title: Creazione di un Provider OLE DB | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,33 +16,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: f649b5b4c79c4148d0aed026b044485ca2b1eaa7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5de304b7a21c47af18b8b753d6de704ef2473c5f
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33097107"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39338792"
 ---
 # <a name="creating-an-ole-db-provider"></a>Creazione di un provider OLE DB
-Il metodo consigliato per creare un provider OLE DB consiste nell'utilizzare le procedure guidate per creare un progetto ATL COM e un provider e quindi modificare i file utilizzando i modelli OLE DB. Come la personalizzazione del provider, è possibile impostare come commento indesiderata proprietà e aggiungere interfacce facoltative.  
+Il metodo consigliato per creare un provider OLE DB è usare le procedure guidate per creare un progetto ATL COM e un provider e quindi modificare i file usando i modelli OLE DB. Quando si personalizza il provider, è possibile commento indesiderato delle proprietà e aggiungere le interfacce facoltative.  
   
  I passaggi di base sono descritti di seguito:  
   
-1.  Utilizzare la creazione guidata progetto ATL per creare i file di progetto di base e la creazione guidata Provider OLE DB ATL per creare il provider (selezionare **Provider OLE DB ATL** dalla cartella di Visual C++ in **Aggiungi classe**).  
+1.  Usare la creazione guidata progetto ATL per creare i file di progetto di base e la creazione guidata Provider OLE DB ATL per creare il provider (selezionare **Provider OLE DB ATL** dalla cartella in Visual C++ **Aggiungi classe**).  
   
-2.  Modificare il codice di `Execute` metodo in CMyProviderRS. Per un esempio, vedere [lettura di stringhe in un Provider OLE DB](../../data/oledb/reading-strings-into-the-ole-db-provider.md).  
+2.  Modificare il codice nel `Execute` metodo CMyProviderRS. Per un esempio, vedere [durante la lettura di stringhe in un Provider OLE DB](../../data/oledb/reading-strings-into-the-ole-db-provider.md).  
   
-3.  Modificare il mapping di proprietà in MyProviderDS. H, MyProviderSess. H e MyProviderRS. H. La procedura guidata crea i mapping di proprietà che contengono tutte le proprietà che è possibile implementare un provider. Eseguire il mapping di proprietà e rimuovere o impostare come commento le proprietà che non è necessario che il provider di supporto.  
+3.  Modificare i mapping di proprietà in MyProviderDS. H, MyProviderSess. H e MyProviderRS. H. La procedura guidata consente di creare mappe delle proprietà che contengono tutte le proprietà che è possibile implementare un provider. Scorrere le mappe delle proprietà e rimuovere o rimuovere i commenti per le proprietà che non è necessario che il provider di supporto.  
   
-4.  Aggiornare PROVIDER_COLUMN_MAP, che possono trovarsi in MyProviderRS. H. Per un esempio, vedere [l'archiviazione di stringhe In un Provider OLE DB](../../data/oledb/storing-strings-in-the-ole-db-provider.md).  
+4.  Aggiornare PROVIDER_COLUMN_MAP, che è reperibile in MyProviderRS. H. Per un esempio, vedere [memorizzazione di stringhe In un Provider OLE DB](../../data/oledb/storing-strings-in-the-ole-db-provider.md).  
   
-5.  Quando si è pronti per testare il provider, è possibile eseguirne il test quando si tenta di trovare il provider in un'enumerazione di provider. Per esempi di codice di test che consente di trovare un provider in un'enumerazione, vedere il [CATDB](http://msdn.microsoft.com/en-us/003d516b-2bf6-444e-8be5-4ebaa0b66046) e [DBVIEWER](http://msdn.microsoft.com/en-us/07620f99-c347-4d09-9ebc-2459e8049832) oppure l'esempio in [implementazione di un Consumer semplice](../../data/oledb/implementing-a-simple-consumer.md).  
+5.  Quando si è pronti per testare il provider, è possibile eseguirne il test quando si tenta di trovare il provider in un'enumerazione di provider. Per esempi di codice di test che consente di trovare un provider in un'enumerazione, vedere la [CATDB](http://msdn.microsoft.com/003d516b-2bf6-444e-8be5-4ebaa0b66046) e [DBVIEWER](http://msdn.microsoft.com/07620f99-c347-4d09-9ebc-2459e8049832) oppure l'esempio nella [implementazione di un Consumer semplice](../../data/oledb/implementing-a-simple-consumer.md).  
   
 6.  Aggiungere eventuali interfacce aggiuntive desiderate. Per un esempio, vedere [miglioramento di un Provider semplice in sola lettura](../../data/oledb/enhancing-the-simple-read-only-provider.md).  
   
     > [!NOTE]
-    >  Per impostazione predefinita, le procedure guidate di generano codice 0 conforme al livello OLE DB. Per garantire che l'applicazione rimanga livello 0 conforme, non rimuovere una delle interfacce generate dalla procedura guidata dal codice.  
+    >  Per impostazione predefinita, le procedure guidate di generano il codice al livello 0 conforme a OLE DB. Per assicurarsi che l'applicazione a livello 0 conforme, non rimuovere una delle interfacce generate dalla procedura guidata dal codice.  
   
 ## <a name="see-also"></a>Vedere anche  
- [CATDB](http://msdn.microsoft.com/en-us/003d516b-2bf6-444e-8be5-4ebaa0b66046)   
- [DBVIEWER](http://msdn.microsoft.com/en-us/07620f99-c347-4d09-9ebc-2459e8049832)
+ [CATDB](http://msdn.microsoft.com/003d516b-2bf6-444e-8be5-4ebaa0b66046)   
+ [DBVIEWER](http://msdn.microsoft.com/07620f99-c347-4d09-9ebc-2459e8049832)

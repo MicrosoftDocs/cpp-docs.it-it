@@ -1,5 +1,5 @@
 ---
-title: Mapping di proprietà | Documenti Microsoft
+title: Mappe delle proprietà | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: d7664562ff31f1f5871fab4ce74c1652370a540d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c1b109b86e35a3f27b95c5dbf3b729629235d3a2
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33103216"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39338655"
 ---
 # <a name="property-maps"></a>Mappe delle proprietà
-Oltre la sessione, set di righe e oggetto comando facoltativo, ogni provider supporta una o più proprietà. Queste proprietà sono definite in mappe delle proprietà contenute nel file di intestazione creati dalla creazione guidata Provider OLE DB. Ogni file di intestazione contiene una mappa per le proprietà del gruppo di proprietà OLE DB definiti per gli oggetti definiti in tale file. Il file di intestazione che contiene l'oggetto origine dati contiene inoltre il mapping di proprietà per il [le proprietà DataSource](https://msdn.microsoft.com/en-us/library/ms724188\(v=vs.140\).aspx). Session. h contiene il mapping di proprietà per il [le proprietà della sessione](https://msdn.microsoft.com/en-us/library/ms714221.aspx). Gli oggetti rowset e comando si trovano in un unico file di intestazione denominato *projectname*RS. Queste proprietà sono membri del [proprietà set di righe](https://msdn.microsoft.com/en-us/library/ms711252.aspx) gruppo.  
+Oltre la sessione, set di righe e l'oggetto comando facoltativo, ogni provider supporta una o più proprietà. Queste proprietà sono definite nelle proprietà mappe contenute nei file di intestazione creati dalla creazione guidata Provider OLE DB. Ogni file di intestazione contiene una mappa per le proprietà nel gruppo di proprietà OLE DB definite per gli oggetti definiti in tale file. Il file di intestazione che contiene l'oggetto origine dati contiene inoltre il mapping di proprietà per il [proprietà DataSource](https://msdn.microsoft.com/library/ms724188\(v=vs.140\).aspx). Session. h contiene il mapping di proprietà per il [le proprietà della sessione](https://msdn.microsoft.com/library/ms714221.aspx). Gli oggetti rowset e comando si trovano in un unico file di intestazione denominato *projectname*RS. Queste proprietà appartengono le [proprietà set di righe](https://msdn.microsoft.com/library/ms711252.aspx) gruppo.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Architettura dei modelli di provider OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

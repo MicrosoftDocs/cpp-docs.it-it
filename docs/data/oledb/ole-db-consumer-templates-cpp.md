@@ -1,5 +1,5 @@
 ---
-title: Modelli Consumer OLE DB (C++) | Documenti Microsoft
+title: Modelli Consumer OLE DB (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 39264ed7485e67377963316730689645c73f185f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 636f98337cacdeddbdd42dd74e498c0fbd12e4f8
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33112108"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39339399"
 ---
 # <a name="ole-db-consumer-templates-c"></a>Modelli consumer OLE DB (C++)
 I modelli consumer OLE DB supportano la specifica di OLE DB versione 2.6. Si noti tuttavia che, pur essendo stati testati con OLE DB 2.6, non supportano tutte le interfacce disponibili nella specifica. I modelli consumer consentono di ridurre notevolmente la quantità di codice da scrivere per implementare un consumer OLE DB. I vantaggi connessi al loro uso sono i seguenti:  
@@ -34,7 +34,7 @@ I modelli consumer OLE DB supportano la specifica di OLE DB versione 2.6. Si not
   
 -   Tipi di dati C/C++ nativi per la programmazione con OLE DB.  
   
- Per usare i modelli OLE DB è necessario avere una certa familiarità con i modelli C++, COM e le interfacce OLE DB. Se non si conosce sufficientemente OLE DB, vedere la [guida di riferimento per programmatori OLE DB](https://msdn.microsoft.com/en-us/library/ms718124.aspx).  
+ Per usare i modelli OLE DB è necessario avere una certa familiarità con i modelli C++, COM e le interfacce OLE DB. Se non si conosce sufficientemente OLE DB, vedere [riferimento per programmatori OLE DB](https://msdn.microsoft.com/library/ms718124.aspx).  
   
  I modelli OLE DB supportano il modello a oggetti OLE DB esistente anziché aggiungere un nuovo modello a oggetti. Le classi di primo livello dei modelli consumer OLE DB corrispondono ai componenti definiti nella specifica OLE DB. La struttura dei modelli consumer OLE DB comprende funzionalità avanzate, quali l'uso di più funzioni di accesso su un rowset. L'uso dei modelli e dell'ereditarietà multipla rende la libreria di piccole dimensioni e flessibile.  
   
@@ -68,5 +68,5 @@ I modelli consumer OLE DB supportano la specifica di OLE DB versione 2.6. Si not
 ## <a name="see-also"></a>Vedere anche  
  [Programmazione con OLE DB](../../data/oledb/ole-db-programming.md)   
  [Accesso ai dati](../data-access-in-cpp.md)   
- [Documentazione di OLE DB SDK](https://msdn.microsoft.com/en-us/library/ms722784.aspx)   
- [Riferimento per programmatori OLE DB](https://msdn.microsoft.com/en-us/library/ms713643.aspx)
+ [Documentazione di OLE DB SDK](https://msdn.microsoft.com/library/ms722784.aspx)   
+ [Riferimento per programmatori OLE DB](https://msdn.microsoft.com/library/ms713643.aspx)

@@ -38,12 +38,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: e0aad7fe25205d4cf31cbe76db3f1fb441858858
-ms.sourcegitcommit: b217daee32d3413cf33753d9b4dc35a0022b1bfa
+ms.openlocfilehash: 8b9f1c7aef4116ae057d771e66b5027c5783f64e
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2018
-ms.locfileid: "39233399"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39338012"
 ---
 # <a name="cstreamrowset-class"></a>Classe CStreamRowset
 Utilizzato in una `CCommand` o `CTable` dichiarazione.  
@@ -96,7 +96,6 @@ Crea e inizializza il `CStreamRowset` oggetto.
   
 ```cpp
 CStreamRowset();  
-  
 ```  
 
 ## <a name="close"></a> CStreamRowset:: Close
@@ -105,8 +104,7 @@ Rilascia il [ISequentialStream](https://msdn.microsoft.com/library/ms718035.aspx
 ### <a name="syntax"></a>Sintassi  
   
 ```cpp
-void Close();  
-  
+void Close();   
 ```  
   
 ## <a name="see-also"></a>Vedere anche  

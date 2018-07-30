@@ -24,12 +24,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: aa95eb630fac2fe30014e378cc79bdbac285dbdb
-ms.sourcegitcommit: b217daee32d3413cf33753d9b4dc35a0022b1bfa
+ms.openlocfilehash: 4d93d1042f48ae877e61692b095be9442f9a7917
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2018
-ms.locfileid: "39233503"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39337177"
 ---
 # <a name="crestrictions-class"></a>Classe CRestrictions
 Una classe generica che consente di specificare le restrizioni per i set di righe dello schema.  
@@ -39,10 +39,10 @@ Una classe generica che consente di specificare le restrizioni per i set di righ
 ```cpp
 template <class T, short nRestrictions, const GUID* pguid>  
 class CRestrictions : 
-        public CSchemaRowset <T, nRestrictions>  
+   public CSchemaRowset <T, nRestrictions>  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parametri  
  *T*  
  La classe utilizzata per la funzione di accesso.  
   

@@ -1,5 +1,5 @@
 ---
-title: Modifica dell'ereditarietà di RMyProviderRowset | Documenti Microsoft
+title: Modifica dell'ereditarietà di RMyProviderRowset | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 75acbc8370c1ea164c72aa6f0c61a95fe287e3d6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 407406683f03dbba2d582b1ae24d5cc3bb8680a5
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33106232"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39336465"
 ---
 # <a name="modifying-the-inheritance-of-rmyproviderrowset"></a>Modifica dell'ereditarietà di RMyProviderRowset
-Per aggiungere il `IRowsetLocate` l'interfaccia per l'esempio di un provider semplice in sola lettura, modificare l'ereditarietà di **RMyProviderRowset**. Inizialmente, **RMyProviderRowset** eredita da `CRowsetImpl`. È necessario modificare in modo che erediti da **CRowsetBaseImpl**.  
+Per aggiungere il `IRowsetLocate` l'interfaccia per l'esempio di un provider semplice in sola lettura, modifica dell'ereditarietà di `RMyProviderRowset`. Inizialmente `RMyProviderRowset` eredita da `CRowsetImpl`. È necessario modificare in modo che erediti da `CRowsetBaseImpl`.  
   
- A tale scopo, creare una nuova classe, `CMyRowsetImpl`, in MyProviderRS. H:  
+ A questo scopo, creare una nuova classe, `CMyRowsetImpl`, in MyProviderRS. H:  
   
 ```cpp
 ////////////////////////////////////////////////////////////////////////  
@@ -42,22 +42,22 @@ class CMyRowsetImpl:
   
  A questo punto, modificare la mappa dell'interfaccia COM in MyProviderRS. H come segue:  
   
-```  
+```cpp  
 BEGIN_COM_MAP(CMyRowsetImpl)  
    COM_INTERFACE_ENTRY(IRowsetLocate)  
    COM_INTERFACE_ENTRY_CHAIN(_RowsetBaseClass)  
 END_COM_MAP()  
 ```  
   
- Crea una mappa dell'interfaccia COM che comunica `CMyRowsetImpl` chiamare **QueryInterface** sia per il `IRowset` e `IRowsetLocate` interfacce. Per ottenere l'implementazione per l'altro set di righe tutte le classi, i collegamenti della mappa di `CMyRowsetImpl` classe eseguire il backup per il **CRowsetBaseImpl** classe definiti tramite i modelli OLE DB, la mappa usa la macro COM_INTERFACE_ENTRY_CHAIN, che indica Eseguire il mapping di modelli OLE DB per analizzare il modello COM in **CRowsetBaseImpl** in risposta a un `QueryInterface` chiamare.  
+ Verrà creata una mappa dell'interfaccia COM che comunica `CMyRowsetImpl` chiamare `QueryInterface` sia per il `IRowset` e `IRowsetLocate` interfacce. Per ottenere tutti l'implementazione per l'altro set di righe classi, i collegamenti della mappa la `CMyRowsetImpl` classe verso il `CRowsetBaseImpl` classe definiti tramite i modelli OLE DB; la mappa usa la macro COM_INTERFACE_ENTRY_CHAIN, richiedendo di modelli OLE DB per analizzare la mappa COM in `CRowsetBaseImpl` in risposta a un `QueryInterface` chiamare.  
   
- Collegare infine `RAgentRowset` a `CMyRowsetBaseImpl` modificando `RAgentRowset` da cui ereditare `CMyRowsetImpl`, come segue:  
+ Infine, collegare `RAgentRowset` al `CMyRowsetBaseImpl` modificando `RAgentRowset` da cui ereditare `CMyRowsetImpl`, come indicato di seguito:  
   
-```  
+```cpp  
 class RAgentRowset : public CMyRowsetImpl<RAgentRowset, CAgentMan, CMyProviderCommand>  
 ```  
   
- `RAgentRowset` ora è possibile utilizzare il `IRowsetLocate` interfaccia mentre il resto dell'implementazione della classe di rowset.  
+ `RAgentRowset` a questo punto è possibile usare il `IRowsetLocate` interfaccia sfruttando il resto dell'implementazione per la classe di set di righe.  
   
  Quando questa operazione, è possibile [determinare in modo dinamico le colonne restituite al consumer](../../data/oledb/dynamically-determining-columns-returned-to-the-consumer.md).  
   

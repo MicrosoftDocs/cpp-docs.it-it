@@ -1083,12 +1083,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 6c7b2cd83c9c0ce5dcaa32f04257bbbbe9618ca6
-ms.sourcegitcommit: 0bf5f6634d66ed92fffb32291ad9f854d9895b17
+ms.openlocfilehash: 02d0787ebb40379ac438880ab7a23aa36a0b0f56
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39250654"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39338298"
 ---
 # <a name="schema-rowset-classes-and-typedef-classes"></a>Classi Rowset dello schema e classi Typedef
 Uno schema è una raccolta di oggetti di database che sono di proprietà oppure sono stati creati da un utente specifico. Un catalogo può contenere uno o più schemi, ma deve sempre contenere un schema denominato INFORMATION_SCHEMA, che contiene le viste e i domini a dello schema di informazioni. Le informazioni sullo schema in OLE DB viene recuperate utilizzando i set di righe dello schema predefinito e includono tipi, tabelle, colonne, indici, viste, le asserzioni e vincoli, le statistiche, set di caratteri, le regole di confronto e domini.  

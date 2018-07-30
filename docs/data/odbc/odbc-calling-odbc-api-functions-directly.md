@@ -1,5 +1,5 @@
 ---
-title: 'ODBC: Chiamata di API ODBC direttamente le funzioni | Documenti Microsoft'
+title: 'ODBC: Chiamata di API ODBC direttamente le funzioni | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -23,35 +23,34 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 55b95c5dd48631f9c724aebd163ce948c3469850
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 386bc03234ccb29b293a413944f221189f466c80
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33089718"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39336595"
 ---
 # <a name="odbc-calling-odbc-api-functions-directly"></a>ODBC: chiamata diretta delle funzioni dell'API ODBC
-Le classi di database forniscono un'interfaccia più semplice per un [origine dati](../../data/odbc/data-source-odbc.md) rispetto a ODBC. Di conseguenza, le classi non includono tutte le API ODBC. Per tutte le funzionalità non è compresa la capacità delle classi, è necessario chiamare direttamente le funzioni API ODBC. Ad esempio, è necessario chiamare le funzioni di catalogo ODBC (**:: SQLColumns**, **:: SQLProcedures**, **:: SQLTables**e altri) direttamente.  
+Le classi di database forniscono un'interfaccia più semplice a un [zdroj dat](../../data/odbc/data-source-odbc.md) rispetto a ODBC. Di conseguenza, le classi non includono tutte le API ODBC. Per tutte le funzionalità non è compresa la capacità delle classi, è necessario chiamare direttamente le funzioni API ODBC. Ad esempio, è necessario chiamare le funzioni di catalogo ODBC (`::SQLColumns`, `::SQLProcedures`, `::SQLTables`e altri ancora) direttamente.  
   
 > [!NOTE]
->  Origini dati ODBC sono accessibili tramite le classi ODBC MFC, come descritto in questo argomento, oppure tramite le classi MFC oggetto DAO (Data Access).  
+>  Origini dati ODBC sono accessibili tramite le classi ODBC MFC, come descritto in questo argomento, o tramite le classi MFC oggetto DAO (Data Access).  
   
- Per chiamare una funzione API ODBC direttamente, è necessario eseguire gli stessi passaggi da eseguire se si sono effettuando chiamate senza il framework. Essi sono passaggi:  
+ Per chiamare una funzione API ODBC direttamente, è necessario eseguire gli stessi passaggi da eseguire se si sono effettuando le chiamate senza il framework. Essi sono passaggi:  
   
--   Allocare spazio di archiviazione per i risultati che della chiamata.  
+-   Allocare spazio di archiviazione per la chiamata restituisce risultati.  
   
--   Passare a un database ODBC **HDBC** o **HSTMT** gestire, a seconda della firma di parametro della funzione. Utilizzare il [AFXGetHENV](../../mfc/reference/database-macros-and-globals.md#afxgethenv) (macro) per recuperare l'handle ODBC.  
+-   Passare un database ODBC `HDBC` o `HSTMT` gestire, a seconda della firma di parametro della funzione. Usare la [AFXGetHENV](../../mfc/reference/database-macros-and-globals.md#afxgethenv) macro per recuperare l'handle ODBC.  
   
-     Variabili membro **CDatabase:: M_hdbc** e **CRecordset:: M_hstmt** sono disponibili in modo che non è necessaria allocare e inizializzare manualmente.  
+     Le variabili membro `CDatabase::m_hdbc` e `CRecordset::m_hstmt` sono disponibili in modo che non è necessario allocare e inizializzare manualmente.  
   
--   Ad esempio chiamare funzioni ODBC aggiuntive prima o dopo la chiamata principale.  
+-   Forse chiamare altre funzioni ODBC per prima o dopo la chiamata principale.  
   
 -   Al termine, deallocare spazio di archiviazione.  
   
- Per ulteriori informazioni su questi passaggi, vedere il [Open Database Connectivity (ODBC)](https://msdn.microsoft.com/en-us/library/ms710252.aspx) SDK nella documentazione di MSDN.  
+ Per altre informazioni su questi passaggi, vedere la [Open Database Connectivity (ODBC)](https://msdn.microsoft.com/library/ms710252.aspx) SDK nella documentazione MSDN.  
   
- Oltre a questi passaggi, è necessario eseguire passaggi aggiuntivi per controllare i valori restituiti dalla funzione, assicurarsi che il programma non è in attesa di una chiamata asincrona alla fine e così via. È possibile semplificare queste ultime operazioni utilizzando il `AFX_SQL_ASYNC` e `AFX_SQL_SYNC` macro. Per ulteriori informazioni, vedere [macro e funzioni globali](../../mfc/reference/mfc-macros-and-globals.md) nel *riferimenti alla libreria MFC*.  
+ Oltre a questi passaggi, è necessario eseguire passaggi aggiuntivi per verificare i valori restituiti di funzione, assicurarsi che il programma non è in attesa di una chiamata asincrona terminare e così via. È possibile semplificare questi ultimi passaggi usando le macro macro AFX_SQL_ASYNC e AFX_SQL_SYNC. Per altre informazioni, vedere [macro e funzioni globali](../../mfc/reference/mfc-macros-and-globals.md) nel *riferimento MFC*.  
 
-  
 ## <a name="see-also"></a>Vedere anche  
  [Nozioni fondamentali su ODBC](../../data/odbc/odbc-basics.md)

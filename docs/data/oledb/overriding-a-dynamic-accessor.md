@@ -1,5 +1,5 @@
 ---
-title: Si esegue l'override di una funzione di accesso dinamico | Documenti Microsoft
+title: Si esegue l'override di una funzione di accesso dinamico | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 9309180b05a6d91e6749f80c7a7b717b1bc57526
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e1d6d3277f27c20f7b1c002590fd26e1e2f08eb7
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33107857"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39340030"
 ---
 # <a name="overriding-a-dynamic-accessor"></a>Override di una funzione di accesso dinamica
-Quando si utilizza una funzione di accesso dinamico, ad esempio `CDynamicAccessor`, il comando **aprire** metodo crea una funzione di accesso per automaticamente, in base alle informazioni di colonna del set di righe aperto. È possibile sostituire la funzione di accesso dinamico per controllare esattamente come le colonne sono associate.  
+Quando si usa una funzione di accesso dinamico, ad esempio `CDynamicAccessor`, il comando `Open` metodo crea una funzione di accesso per automaticamente, in base alle informazioni di colonna del set di righe aperto. È possibile sostituire la funzione di accesso dinamico per controllare esattamente come le colonne sono associate.  
   
- Per eseguire l'override di funzioni di accesso dinamiche, passare **false** come ultimo parametro per il `CCommand::Open` metodo. In questo modo **aprire** dalla creazione automatica di una funzione di accesso. È quindi possibile chiamare `GetColumnInfo` e chiamare `AddBindEntry` per ogni colonna che si desidera associare. Il codice seguente viene illustrato come eseguire questa operazione:  
+ Per sostituire la funzione di accesso dinamico, passare **false** come ultimo parametro per il `CCommand::Open` (metodo). Ciò impedisce `Open` dalla creazione automatica di una funzione di accesso. È quindi possibile chiamare `GetColumnInfo` e chiamare `AddBindEntry` per ogni colonna che si desidera associare. Il codice seguente viene illustrato come eseguire questa operazione:  
   
-```  
+```cpp  
 USES_CONVERSION;  
 double   dblProductID;  
   

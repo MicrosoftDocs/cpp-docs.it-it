@@ -36,12 +36,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 99f6be0815572b88f7c46406262ed21eaefdb77d
-ms.sourcegitcommit: 04d327940787df1297b72d534f388a035d472af0
+ms.openlocfilehash: 18199a700cbc5065d987a57cc076a5d0cf670577
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/20/2018
-ms.locfileid: "39181198"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39340664"
 ---
 # <a name="caccessorbase-class"></a>Classe CAccessorBase
 Tutte le funzioni di accesso nei modelli OLE DB derivano da questa classe. `CAccessorBase` consente a un set di righe per la gestione di più funzioni di accesso. Fornisce inoltre l'associazione per entrambi i parametri e colonne di output.  
@@ -74,7 +74,6 @@ Chiude le funzioni di accesso.
   
 ```cpp
 void Close();  
-  
 ```  
   
 ### <a name="remarks"></a>Note  
@@ -86,7 +85,7 @@ Recupera l'handle di funzione di accesso di una funzione di accesso specificata.
 ### <a name="syntax"></a>Sintassi  
   
 ```cpp
-      HACCESSOR GetHAccessor(ULONG nAccessor) const;  
+HACCESSOR GetHAccessor(ULONG nAccessor) const;  
 ```  
   
 #### <a name="parameters"></a>Parametri  
@@ -103,7 +102,6 @@ Recupera il numero di funzioni di accesso creato dalla classe.
   
 ```cpp
 ULONG GetNumAccessors() const;  
-  
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
@@ -115,7 +113,7 @@ Restituisce true se i dati vengono recuperati automaticamente per la funzione di
 ### <a name="syntax"></a>Sintassi  
   
 ```cpp
-      bool IsAutoAccessor(ULONG nAccessor) const;  
+bool IsAutoAccessor(ULONG nAccessor) const;  
 ```  
   
 #### <a name="parameters"></a>Parametri  

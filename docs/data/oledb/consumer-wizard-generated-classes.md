@@ -1,5 +1,5 @@
 ---
-title: Classi generate dalla creazione guidata consumer | Documenti Microsoft
+title: Classi generate dalla creazione guidata consumer | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,12 +21,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 030445a8e6b46afb9f893e21bceb221f7f9e89a1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b63713dd57695a54a58ce3d57b295cd57cdf393d
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33091985"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39338740"
 ---
 # <a name="consumer-wizard-generated-classes"></a>Classi generate mediante la Creazione guidata consumer
 Quando si usa la Creazione guidata consumer OLE DB ATL per generare un consumer, si può scegliere di usare i modelli OLE DB o gli attributi OLE DB. In entrambi i casi, verrà generata una classe di comando e una classe di record utente. La classe di comando contiene codice che consente di aprire l'origine dati e il set di dati specificati nella procedura guidata. La classe di record utente contiene una mappa delle colonne per la tabella di database selezionata. Tuttavia, il codice generato in ciascuno dei casi sarà differente:  
@@ -47,9 +47,9 @@ Quando si usa la Creazione guidata consumer OLE DB ATL per generare un consumer,
 >  Se si modifica la classe di record utente o si crea un consumer personalizzato, le variabili dei dati devono essere specificate prima delle variabili di stato e di lunghezza.  
   
 > [!NOTE]
->  La Creazione guidata consumer OLE DB ATL usa il tipo **DB_NUMERIC** per associare tipi di dati numerici. In precedenza veniva usato **DBTYPE_VARNUMERIC** . Per informazioni sul formato descritto dal tipo **DB_VARNUMERIC** , vedere Oledb.h. Se non si usa la procedura guidata per creare i consumer, è consigliabile usare **DB_NUMERIC**.  
+>  La creazione guidata Consumer OLE DB ATL Usa il `DB_NUMERIC` tipo per associare tipi di dati numerici. In precedenza veniva usato `DBTYPE_VARNUMERIC` (il formato di cui è descritto dal `DB_VARNUMERIC` digitare, vedere OleDb). Se non si esegue la procedura guidata per creare i consumer, è consigliabile usare `DB_NUMERIC`.  
   
-```  
+```cpp  
 // Products.H : Declaration of the CProducts class  
   
 class CProductsAccessor  
@@ -95,7 +95,7 @@ public:
 ### <a name="rowset-properties"></a>Proprietà del set di righe  
  A questo punto, la procedura guidata imposta le proprietà del set di righe. Se si seleziona **Cambia**, **Inserisci**o **Elimina** nella Creazione guidata consumer OLE DB ATL, vengono impostate le proprietà adatte: DBPROP_IRowsetChange in tutti e tre i casi, e almeno una, rispettivamente, tra le proprietà DBPROPVAL_UP_CHANGE, DBPROPVAL_UP_INSERT e/o DBPROPVAL_UP_DELETE.  
   
-```  
+```cpp  
 void GetRowsetProperties(CDBPropSet* pPropSet)  
 {  
    pPropSet->AddProperty(DBPROP_CANFETCHBACKWARDS, true, DBPROPOPTIONS_OPTIONAL);  
@@ -108,7 +108,7 @@ void GetRowsetProperties(CDBPropSet* pPropSet)
 ### <a name="command-or-table-class"></a>Classe di comando o di tabella  
  Se si specifica una classe di comando, questa viene dichiarata dalla procedura guidata. Per il codice basato su modelli, il comando è analogo a quanto segue:  
   
-```  
+```cpp  
 DEFINE_COMMAND_EX(CProductsAccessor, L" \  
 SELECT \  
    ProductID, \  
@@ -146,7 +146,7 @@ SELECT \
 ### <a name="class-declaration"></a>Dichiarazione di classe  
  Infine, la procedura guidata genera una dichiarazione di classe di comando come la seguente:  
   
-```  
+```cpp  
 class CProducts : public CCommand<CAccessor<CProductsAccessor>>  
 ```  
   
@@ -157,7 +157,7 @@ class CProducts : public CCommand<CAccessor<CProductsAccessor>>
   
  Nell'esempio seguente la procedura guidata genera una dichiarazione per la classe `COrders`, ma la classe di record utente `COrdersAccessor` non compare perché viene inserita dagli attributi.  
   
-```  
+```cpp  
 #define _ATL_ATTRIBUTES  
 #include <atlbase.h>  
 #include <atldbcli.h>  

@@ -1,5 +1,5 @@
 ---
-title: Esecuzione di una Query con parametri | Documenti Microsoft
+title: Emette una Query con parametri | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,17 +15,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: b377df31e9166ee5288d37b0843944a3b2eb6bc7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 02ce5cbfdc6c5305ab356fc32993b6bdd34f1fac
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33104575"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39339536"
 ---
 # <a name="issuing-a-parameterized-query"></a>Esecuzione di una query con parametri
-Nell'esempio seguente genera una semplice query con parametri che recupera i record con un campo di validità (che è maggiore di 30) da una tabella in un database Microsoft Access. Per supportare il parametro, il record dell'utente deve avere una mappa aggiuntiva. Il codice seguente, in un progetto ATL, Usa il `CCommand` classe anziché il `CTable` classe utilizzata nell'esempio precedente, [scorrimento di un Rowset semplice](../../data/oledb/traversing-a-simple-rowset.md).  
+Nell'esempio seguente esegue una query con parametri semplice che consente di recuperare i record con un campo age (che è maggiore di 30) da una tabella in un database Microsoft Access. Per supportare il parametro, il record dell'utente deve disporre di una mappa aggiuntiva. Il codice seguente, in un progetto ATL, Usa la `CCommand` classe anziché il `CTable` classe usata nell'esempio precedente [scorrimento di un Rowset semplice](../../data/oledb/traversing-a-simple-rowset.md).  
   
-```  
+```cpp  
 #include <atldbcli.h>  
   
 CDataSource connection;  
@@ -51,9 +51,9 @@ while (artists.MoveNext() == S_OK)
 }  
 ```  
   
- Il record dell'utente, `CArtists`, simile al seguente:  
+ Il record dell'utente, `CArtists`, ha un aspetto simile al seguente:  
   
-```  
+```cpp  
 class CArtists  
 {  
 public:  

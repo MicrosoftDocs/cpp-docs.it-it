@@ -102,12 +102,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 59793d206f8b53d57347070cbfccd6d98ff2c005
-ms.sourcegitcommit: e5792fcb89b9ba64c401f90f4f26a8e45d4a2359
+ms.openlocfilehash: 6cd6ec4bcee26c1e2fb558670c69d0130808c933
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39321955"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39338340"
 ---
 # <a name="irowsetimpl-class"></a>Classe IRowsetImpl
 Fornisce un'implementazione dell'interfaccia `IRowset`.  
@@ -177,7 +177,7 @@ Aggiunge un conteggio dei riferimenti a un handle di riga esistente.
 ### <a name="syntax"></a>Sintassi  
   
 ```cpp
-      STDMETHOD(AddRefRows )(DBCOUNTITEM cRows,  
+STDMETHOD(AddRefRows )(DBCOUNTITEM cRows,  
    const HROW rghRows[],  
    DBREFCOUNT rgRefCounts[],  
    DBROWSTATUS rgRowStatus[]);  
@@ -193,7 +193,7 @@ Chiamato da un metodo di supporto [GetNextRows](../../data/oledb/irowsetimpl-get
   
 ```cpp
 HRESULT CreateRow(DBROWOFFSET lRowsOffset,  
-  DBCOUNTITEM& cRowsObtained,  
+   DBCOUNTITEM& cRowsObtained,  
    HROW* rgRows);  
 ```  
   
@@ -216,7 +216,7 @@ Recupera i dati dalla copia del set di righe della riga.
 ### <a name="syntax"></a>Sintassi  
   
 ```cpp
-      STDMETHOD(GetData )(HROW hRow,  
+STDMETHOD(GetData )(HROW hRow,  
    HACCESSOR hAccessor,  
    void* pDstData);  
 ```  
@@ -239,7 +239,7 @@ Restituisce i flag di stato DBSTATUS per il campo specificato.
 ### <a name="syntax"></a>Sintassi  
   
 ```cpp
-      virtual DBSTATUS GetDBStatus(RowClass* currentRow,  
+virtual DBSTATUS GetDBStatus(RowClass* currentRow,  
    ATLCOLUMNINFO* columnNames);  
 ```  
   
@@ -259,7 +259,7 @@ Recupera le righe in sequenza, memorizzando la posizione precedente.
 ### <a name="syntax"></a>Sintassi  
   
 ```cpp
-      STDMETHOD(GetNextRows )(HCHAPTER hReserved,  
+STDMETHOD(GetNextRows )(HCHAPTER hReserved,  
    DBROWOFFSET lRowsOffset,  
    DBROWCOUNT cRows,  
    DBCOUNTITEM* pcRowsObtained,  
@@ -276,7 +276,6 @@ Costruttore.
   
 ```cpp
 IRowsetImpl();  
-  
 ```  
   
 ### <a name="remarks"></a>Note  
@@ -307,7 +306,7 @@ Rilascia le righe.
 ### <a name="syntax"></a>Sintassi  
   
 ```cpp
-      STDMETHOD(ReleaseRows )(DBCOUNTITEM cRows,  
+STDMETHOD(ReleaseRows )(DBCOUNTITEM cRows,  
    const HROW rghRows[],  
    DBROWOPTIONS rgRowOptions[],  
    DBREFCOUNT rgRefCounts[],  
@@ -323,7 +322,7 @@ Riposiziona la posizione del recupero successivo sulla propria posizione inizial
 ### <a name="syntax"></a>Sintassi  
   
 ```cpp
-      STDMETHOD(RestartPosition )(HCHAPTER /* hReserved */);  
+STDMETHOD(RestartPosition )(HCHAPTER /* hReserved */);  
 ```  
   
 #### <a name="parameters"></a>Parametri  
@@ -338,7 +337,7 @@ Imposta i flag di stato DBSTATUS per il campo specificato.
 ### <a name="syntax"></a>Sintassi  
   
 ```cpp
-      virtual HRESULT SetDBStatus(DBSTATUS* statusFlags,  
+virtual HRESULT SetDBStatus(DBSTATUS* statusFlags,  
    RowClass* currentRow,  
    ATLCOLUMNINFO* columnInfo);  
 ```  
@@ -366,7 +365,6 @@ Indica se un provider supporta il recupero all'indietro.
   
 ```cpp
 unsigned m_bCanFetchBack:1;  
-  
 ```  
   
 ### <a name="remarks"></a>Note  
@@ -379,7 +377,6 @@ Indica se un provider può avere scorrimento relativo del cursore con le version
   
 ```cpp
 unsigned  m_bCanScrollBack:1;  
-  
 ```  
   
 ### <a name="remarks"></a>Note  
@@ -392,7 +389,6 @@ Un flag di bit utilizzato per determinare se la posizione del cursore è definit
   
 ```cpp
 unsigned m_bReset:1;  
-  
 ```  
   
 ### <a name="remarks"></a>Note  
@@ -405,7 +401,6 @@ Un indice al set di righe, che rappresenta il cursore.
   
 ```cpp
 DBROWOFFSET m_iRowset;  
-  
 ```  
 
 ## <a name="rgrowhandles"></a> IRowsetImpl:: M_rgrowhandles
@@ -414,9 +409,7 @@ Una mappa degli handle di riga attualmente contenuti dal provider in risposta a 
 ### <a name="syntax"></a>Sintassi  
   
 ```cpp
-MapClass  
- m_rgRowHandles;  
-  
+MapClass m_rgRowHandles;  
 ```  
   
 ### <a name="remarks"></a>Note  

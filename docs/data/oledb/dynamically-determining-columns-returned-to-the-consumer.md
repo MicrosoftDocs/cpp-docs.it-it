@@ -1,5 +1,5 @@
 ---
-title: Determinazione dinamica delle colonne restituite al Consumer | Documenti Microsoft
+title: Determinazione dinamica delle colonne restituite al Consumer | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: fd84b6f9451e924fac9e3630df38719c83ff583a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 28150a39042305ab96c4dba7746c0b79dbec9509
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33107939"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39340456"
 ---
 # <a name="dynamically-determining-columns-returned-to-the-consumer"></a>Determinazione dinamica delle colonne restituite al consumer
-Le macro PROVIDER_COLUMN_ENTRY in genere gestiscono il **IColumnsInfo::** chiamare. Tuttavia, poiché un utente può decidere di utilizzare i segnalibri, il provider deve essere in grado di modificare le colonne restituite a seconda se il consumer richiede un segnalibro.  
+Le macro PROVIDER_COLUMN_ENTRY gestiscono in genere il `IColumnsInfo::GetColumnsInfo` chiamare. Tuttavia, poiché un consumer potrebbe scegliere di usare i segnalibri, il provider deve essere in grado di modificare le colonne restituite a seconda del fatto che il consumer richiede un segnalibro.  
   
- Per gestire il **IColumnsInfo::** chiamare, eliminare PROVIDER_COLUMN_MAP, che definisce una funzione `GetColumnInfo`, dal `CAgentMan` utente registrare in MyProviderRS. H e sostituirla con la definizione per la propria `GetColumnInfo` funzione:  
+ Per gestire il `IColumnsInfo::GetColumnsInfo` chiamare, PROVIDER_COLUMN_MAP, che definisce una funzione di eliminazione `GetColumnInfo`, dalle `CAgentMan` utente di registrare in MyProviderRS. H e sostituirlo con la definizione per il proprio `GetColumnInfo` (funzione):  
   
 ```cpp
 ////////////////////////////////////////////////////////////////////////  
@@ -51,9 +51,9 @@ public:
   
  Successivamente, implementare il `GetColumnInfo` funzionare in MyProviderRS. cpp, come illustrato nel codice seguente.  
   
- `GetColumnInfo` controlla innanzitutto se la proprietà OLE DB **DBPROP_BOOKMARKS** è impostata. Per ottenere la proprietà, `GetColumnInfo` utilizza un puntatore (`pRowset`) per l'oggetto set di righe. Il `pThis` puntatore rappresenta la classe che ha creato il set di righe, ovvero la classe in cui è archiviato il mapping di proprietà. `GetColumnInfo` cast di tipo di `pThis` puntatore a un `RMyProviderRowset` puntatore.  
+ `GetColumnInfo` verifica innanzitutto se la proprietà OLE DB `DBPROP_BOOKMARKS` è impostata. Per ottenere la proprietà `GetColumnInfo` un indicatore di misura (`pRowset`) all'oggetto set di righe. Il `pThis` puntatore rappresenta la classe che ha creato il set di righe, ovvero la classe in cui è archiviato il mapping di proprietà. `GetColumnInfo` typecast il `pThis` puntatore a un `RMyProviderRowset` puntatore.  
   
- Per cercare il **DBPROP_BOOKMARKS** proprietà `GetColumnInfo` utilizza il `IRowsetInfo` interfaccia, che è possibile ottenere chiamando `QueryInterface` sul `pRowset` interfaccia. In alternativa, è possibile utilizzare un ATL [CComQIPtr](../../atl/reference/ccomqiptr-class.md) metodo invece.  
+ Per verificare la presenza di `DBPROP_BOOKMARKS` proprietà, `GetColumnInfo` Usa il `IRowsetInfo` interfaccia, che è possibile ottenere tramite una chiamata `QueryInterface` sul `pRowset` interfaccia. In alternativa, è possibile usare un ATL [CComQIPtr](../../atl/reference/ccomqiptr-class.md) metodo invece.  
   
 ```cpp
 ////////////////////////////////////////////////////////////////////  
@@ -114,7 +114,7 @@ ATLCOLUMNINFO* CAgentMan::GetColumnInfo(void* pThis, ULONG* pcCols)
 }  
 ```  
   
- In questo esempio utilizza una matrice statica per contenere le informazioni di colonna. Se il consumer non desidera che la colonna del segnalibro, una voce nella matrice è inutilizzata. Per gestire le informazioni, è possibile creare due macro di matrice: ADD_COLUMN_ENTRY e ADD_COLUMN_ENTRY_EX. ADD_COLUMN_ENTRY_EX accetta un parametro aggiuntivo, `flags`, che è necessario se si imposta una colonna del segnalibro.  
+ Questo esempio Usa una matrice statica per contenere le informazioni di colonna. Se il consumer non desidera che la colonna del segnalibro, una voce nella matrice è inutilizzata. Per gestire le informazioni, è possibile creare due macro di matrice: ADD_COLUMN_ENTRY e ADD_COLUMN_ENTRY_EX. ADD_COLUMN_ENTRY_EX accetta un parametro aggiuntivo, `flags`, che è necessario se si imposta una colonna del segnalibro.  
   
 ```cpp
 ////////////////////////////////////////////////////////////////////////  
@@ -145,15 +145,15 @@ ATLCOLUMNINFO* CAgentMan::GetColumnInfo(void* pThis, ULONG* pcCols)
    _rgColumns[ulCols].columnid.uName.pwszName = (LPOLESTR)name;  
 ```  
   
- Nel `GetColumnInfo` funzione, la macro di segnalibro è utilizzata come segue:  
+ Nel `GetColumnInfo` funzione, la macro segnalibro viene utilizzato come segue:  
   
-```  
+```cpp  
 ADD_COLUMN_ENTRY_EX(ulCols, OLESTR("Bookmark"), 0, sizeof(DWORD),  
    DBTYPE_BYTES, 0, 0, GUID_NULL, CAgentMan, dwBookmark,   
    DBCOLUMNFLAGS_ISBOOKMARK)  
 ```  
   
- È ora possibile compilare ed eseguire il provider avanzato. Per testare il provider, modificare il consumer di test come descritto in [implementazione di un Consumer semplice](../../data/oledb/implementing-a-simple-consumer.md). Eseguire il consumer di test con il provider. Verificare che il consumer di test consente di recuperare le stringhe corrette dal provider quando si fa clic il **eseguire** pulsante il **Test Consumer** la finestra di dialogo.  
+ È ora possibile compilare ed eseguire il provider migliorato. Per testare il provider, modificare l'utente di test come descritto nella [implementazione di un Consumer semplice](../../data/oledb/implementing-a-simple-consumer.md). Eseguire il consumer di test con il provider. Verificare che il consumer di test consente di recuperare le stringhe corrette dal provider quando si fa clic il **eseguiti** pulsante nel **Test Consumer** nella finestra di dialogo.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Miglioramento di un provider semplice in sola lettura](../../data/oledb/enhancing-the-simple-read-only-provider.md)

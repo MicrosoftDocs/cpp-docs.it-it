@@ -48,12 +48,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 0ac22d8ee45209ad6a20dcb34a75c06dd9b80b58
-ms.sourcegitcommit: b0d6777cf4b580d093eaf6104d80a888706e7578
+ms.openlocfilehash: 9ec9e30112a9f0f5b54b84ccbbb61268e56d70d2
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/26/2018
-ms.locfileid: "39269888"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39338779"
 ---
 # <a name="iaccessorimpl-class"></a>Classe IAccessorImpl
 Fornisce un'implementazione del [IAccessor](https://msdn.microsoft.com/library/ms719672.aspx) interfaccia.  
@@ -62,8 +62,8 @@ Fornisce un'implementazione del [IAccessor](https://msdn.microsoft.com/library/m
 
 ```cpp
 template <class T, 
-          class BindType = ATLBINDINGS,
-          class BindingVector = CAtlMap <HACCESSOR hAccessor, BindType* pBindingsStructure>>  
+   class BindType = ATLBINDINGS,
+   class BindingVector = CAtlMap <HACCESSOR hAccessor, BindType* pBindingsStructure>>  
 class ATL_NO_VTABLE IAccessorImpl : public IAccessorImplBase<BindType>  
 ```  
   
@@ -107,7 +107,6 @@ Costruttore.
   
 ```cpp
 IAccessorImpl();  
-  
 ```  
 
 ## <a name="addrefaccessor"></a> IAccessorImpl:: Addrefaccessor
@@ -116,7 +115,7 @@ Aggiunge un conteggio dei riferimenti a una funzione di accesso esistente.
 ### <a name="syntax"></a>Sintassi  
   
 ```cpp
-      STDMETHOD(AddRefAccessor)(HACCESSOR hAccessor,  
+STDMETHOD(AddRefAccessor)(HACCESSOR hAccessor,  
    DBREFCOUNT* pcRefCount);  
 ```  
   
@@ -129,7 +128,7 @@ Crea una funzione di accesso da un set di associazioni.
 ### <a name="syntax"></a>Sintassi  
   
 ```cpp
-      STDMETHOD(CreateAccessor)(DBACCESSORFLAGS dwAccessorFlags,  
+STDMETHOD(CreateAccessor)(DBACCESSORFLAGS dwAccessorFlags,  
    DBCOUNTITEM cBindings,  
    const DBBINDING rgBindings[],  
    DBLENGTH cbRowSize,  
@@ -146,7 +145,7 @@ Restituisce le associazioni di colonne di base da consumer in una funzione di ac
 ### <a name="syntax"></a>Sintassi  
   
 ```cpp
-      STDMETHOD(GetBindings)(HACCESSOR hAccessor,  
+STDMETHOD(GetBindings)(HACCESSOR hAccessor,  
    DBACCESSORFLAGS* pdwAccessorFlags,  
    DBCOUNTITEM* pcBindings,  
    DBBINDING** prgBindings);  
@@ -161,7 +160,7 @@ Rilascia una funzione di accesso.
 ### <a name="syntax"></a>Sintassi  
   
 ```cpp
-      STDMETHOD(ReleaseAccessor)(HACCESSOR hAccessor,  
+STDMETHOD(ReleaseAccessor)(HACCESSOR hAccessor,  
    DBREFCOUNT* pcRefCount);  
 ```  
   

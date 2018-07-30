@@ -113,12 +113,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 457091d5dc0a76ce0cd495679d7c5f978e483574
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: 2fa455bbe4a5aa902232b502e129f6c8e21463a9
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39207627"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39337722"
 ---
 # <a name="cbulkrowset-class"></a>Classe CBulkRowset
 Recupera e gestisce le righe da usare sui dati in blocco, recuperare più handle di riga con una singola chiamata.  
@@ -166,7 +166,6 @@ Le chiamate [IRowset:: Addrefrows](https://msdn.microsoft.com/library/ms719619.a
   
 ```cpp
 HRESULT AddRefRows() throw();  
-  
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
@@ -179,7 +178,6 @@ Crea un nuovo `CBulkRowset` dell'oggetto e imposta il numero di riga predefinito
   
 ```cpp
 CBulkRowset();  
-  
 ```  
 
 ## <a name="movefirst"></a> CBulkRowset:: MoveFirst
@@ -189,7 +187,6 @@ Recupera la prima riga di dati.
   
 ```cpp
 HRESULT MoveFirst() throw();  
-  
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
@@ -202,7 +199,6 @@ Passa all'ultima riga.
   
 ```cpp
 HRESULT MoveLast() throw();  
-  
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
@@ -215,7 +211,6 @@ Recupera la riga successiva di dati.
   
 ```cpp
 HRESULT MoveNext() throw();  
-  
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
@@ -228,7 +223,6 @@ Passa alla riga precedente.
   
 ```cpp
 HRESULT MovePrev() throw();  
-  
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
@@ -240,7 +234,7 @@ Recupera la riga contrassegnata da un segnalibro o la riga in corrispondenza di 
 ### <a name="syntax"></a>Sintassi  
   
 ```cpp
-HRESULT MoveToBookmark(const CBookmarkBase& bookmark,  
+HRESULT MoveToBookmark(const CBookmarkBase& bookmark, 
    DBCOUNTITEM lSkip = 0) throw();  
 ```  
   
@@ -259,8 +253,8 @@ Recupera le righe a partire da una posizione frazionaria nel set di righe.
   
 ### <a name="syntax"></a>Sintassi  
   
-```
-HRESULT MoveToRatio(DBCOUNTITEM nNumerator,  
+```cpp
+HRESULT MoveToRatio(DBCOUNTITEM nNumerator, 
    DBCOUNTITEM nDenominator)throw();  
 ```  
   
@@ -287,8 +281,7 @@ Le chiamate [:: ReleaseRows](https://msdn.microsoft.com/library/ms719771.aspx) p
 ### <a name="syntax"></a>Sintassi  
   
 ```cpp
-HRESULT ReleaseRows() throw();  
-  
+HRESULT ReleaseRows() throw();   
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
@@ -300,7 +293,7 @@ Imposta il numero di handle di riga recuperati da ogni chiamata.
 ### <a name="syntax"></a>Sintassi  
   
 ```cpp
-      void SetRows(DBROWCOUNT nRows) throw();  
+void SetRows(DBROWCOUNT nRows) throw();  
 ```  
   
 #### <a name="parameters"></a>Parametri  

@@ -211,7 +211,7 @@ f1_keywords:
 - CRowset<TAccessor>.UpdateAll
 - ATL.CRowset<TAccessor>.UpdateAll
 - UpdateAll
-- CRowset.UpdateAll
+- CRowset.UpdateAl
 - ATL::CRowset<TAccessor>::UpdateAll
 - CRowset<TAccessor>::UpdateAll
 - ATL::CRowset::UpdateAll
@@ -249,12 +249,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: d65f9c7c796724a77935693690ac73357867dab0
-ms.sourcegitcommit: b217daee32d3413cf33753d9b4dc35a0022b1bfa
+ms.openlocfilehash: f63fa932de6dc578fa29dd66c9b4030a8aa3140c
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2018
-ms.locfileid: "39233516"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39338233"
 ---
 # <a name="crowset-class"></a>Classe CRowset
 Incapsula un oggetto set di righe OLE DB e diverse relative interfacce e fornisce metodi di modifica per i dati di set di righe.  
@@ -266,7 +266,7 @@ template <class TAccessor = CAccessorBase>
 class CRowset  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+### <a name="parameters"></a>Parametri  
  *TAccessor*  
  Una classe di funzione di accesso. Il valore predefinito è `CAccessorBase`.  
   
@@ -316,7 +316,6 @@ Le chiamate [IRowset:: Addrefrows](https://msdn.microsoft.com/library/ms719619.a
   
 ```cpp
 HRESULT AddRefRows() throw();  
-  
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
@@ -332,7 +331,6 @@ Rilascia le righe e l'oggetto corrente [IRowset](https://msdn.microsoft.com/libr
   
 ```cpp
 void Close() throw();  
-  
 ```  
   
 ### <a name="remarks"></a>Note  
@@ -373,7 +371,7 @@ Crea un nuovo `CRowset` dell'oggetto e (facoltativamente) lo associa a un [IRows
 ### <a name="syntax"></a>Sintassi  
   
 ```cpp
-      CRowset();   
+CRowset();   
 
 CRowset(IRowset* pRowset);  
 ```  
@@ -389,7 +387,6 @@ Le chiamate [IRowsetChange:: DeleteRows](https://msdn.microsoft.com/library/ms72
   
 ```cpp
 HRESULT Delete() const throw();  
-  
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
@@ -402,7 +399,7 @@ Trova la riga corrispondente successiva dopo il segnalibro specificato.
   
 ```cpp
 HRESULT FindNextRow(DBCOMPAREOP op,   
-  BYTE* pData,   
+   BYTE* pData,   
    DBTYPE wType,   
    DBLENGTH nLength,   
    BYTE bPrecision,   
@@ -481,7 +478,6 @@ Recupera i dati dalla copia del set di righe della riga.
 ```cpp
 HRESULT GetData() throw();   
 
-
 HRESULT GetData(int nAccessor) throw();  
 ```  
   
@@ -502,7 +498,7 @@ Recupera i dati dalla riga corrente e lo inserisce nel buffer specificato.
   
 ```cpp
 HRESULT GetDataHere(int nAccessor,   
-  void* pBuffer) throw();  
+   void* pBuffer) throw();  
 ```  
   
 #### <a name="parameters"></a>Parametri  
@@ -525,7 +521,6 @@ Le chiamate `IRowsetUpdate::GetOriginalData` per recuperare i dati recuperati da
   
 ```cpp
 HRESULT GetOriginalData() throw();  
-  
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
@@ -610,7 +605,6 @@ Sposta il cursore nella posizione iniziale e recupera la riga iniziale.
   
 ```cpp
 HRESULT MoveFirst() throw();  
-  
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
@@ -626,7 +620,6 @@ Sposta il cursore nell'ultima riga.
   
 ```cpp
 HRESULT MoveLast() throw();  
-  
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
@@ -643,7 +636,9 @@ Sposta il cursore sul record successivo.
 ### <a name="syntax"></a>Sintassi  
   
 ```cpp
-HRESULT MoveNext() throw();HRESULT MoveNext(LONG lSkip,   
+HRESULT MoveNext() throw();
+
+HRESULT MoveNext(LONG lSkip,   
    bool bForward= true) throw();  
 ```  
   
@@ -675,7 +670,6 @@ Sposta il cursore al record precedente.
   
 ```cpp
 HRESULT MovePrev() throw();  
-  
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
@@ -748,7 +742,6 @@ Le chiamate [:: ReleaseRows](https://msdn.microsoft.com/library/ms719771.aspx) p
   
 ```cpp
 HRESULT ReleaseRows() throw();  
-  
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
@@ -761,7 +754,6 @@ Imposta i valori dei dati in una o più colonne di una riga.
   
 ```cpp
 HRESULT SetData() const throw();   
-
 
 HRESULT SetData(int nAccessor) const throw();  
 ```  

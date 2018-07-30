@@ -48,12 +48,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: d6275b07cd06c82d2b9531c3b206b81eedef10db
-ms.sourcegitcommit: b217daee32d3413cf33753d9b4dc35a0022b1bfa
+ms.openlocfilehash: 0836a09adac92300a8438a0433fda874e78bcb25
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2018
-ms.locfileid: "39233425"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39339217"
 ---
 # <a name="cenumeratoraccessor-class"></a>Classe CEnumeratorAccessor
 Utilizzato da [CEnumerator](../../data/oledb/cenumerator-class.md) per accedere ai dati dal set di righe di enumeratore.  
@@ -89,7 +89,6 @@ Una variabile che indica se l'enumeratore è un enumeratore di padre, se la riga
   
 ```cpp
 VARIANT_BOOL m_bIsParent;  
-  
 ```  
   
 ### <a name="remarks"></a>Note  
@@ -102,7 +101,6 @@ Una variabile che indica se la riga descrive un'origine dati o un enumeratore.
   
 ```cpp
 USHORT m_nType;  
-  
 ```  
   
 ### <a name="remarks"></a>Note  
@@ -115,7 +113,6 @@ Descrizione dell'origine dati o enumeratore.
   
 ```cpp
 WCHAR m_szDescription[129];  
-  
 ```  
   
 ### <a name="remarks"></a>Note  
@@ -128,7 +125,6 @@ Il nome dell'origine dati o enumeratore.
   
 ```cpp
 WCHAR m_szName[129];  
-  
 ```  
   
 ### <a name="remarks"></a>Note  
@@ -141,7 +137,6 @@ Stringa da passare al [IParseDisplayName](http://msdn.microsoft.com/library/wind
   
 ```cpp
 WCHAR m_szParseName[129];  
-  
 ```  
   
 ### <a name="remarks"></a>Note  

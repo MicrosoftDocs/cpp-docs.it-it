@@ -1,5 +1,5 @@
 ---
-title: Dynaset | Documenti Microsoft
+title: Dynaset | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,64 +21,64 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: ec71b5b00b26564f9c8dc3c2d98f53f8182b0ca3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5bd6abb1985ca50e7f63e600452b826972d403f1
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33092318"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39340430"
 ---
 # <a name="dynaset"></a>Dynaset
-In questo argomento vengono descritti i dynaset e vengono illustrati i [disponibilità](#_core_availability_of_dynasets).  
+Questo argomento vengono descritti i dynaset e illustra i [disponibilità](#_core_availability_of_dynasets).  
   
 > [!NOTE]
->  Questo argomento si applica alle classi ODBC MFC, tra cui [CRecordset](../../mfc/reference/crecordset-class.md). Per informazioni sui dynaset nelle classi DAO, vedere [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md). Con DAO, è possibile aprire recordset di tipo dynaset.  
+>  Questo argomento si applica alle classi ODBC MFC, incluso [CRecordset](../../mfc/reference/crecordset-class.md). Per informazioni su dynaset nelle classi DAO, vedere [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md). DAO, è possibile aprire recordset dynaset-type.  
   
- Un dynaset è un recordset con le proprietà dinamiche. Durante la sua durata, un oggetto recordset in modalità dynaset (denominato in genere un dynaset) rimane sincronizzato con l'origine dati nel modo seguente. In un ambiente multiutente, altri utenti potrebbero modificare o eliminare i record che sono in dynaset o aggiungere record alla tabella che dynaset rappresenta. Registra l'applicazione aggiunge o Elimina dal recordset viene riflesse nel dynaset. I record aggiunti da altri utenti alla tabella non si rifletteranno nel dynaset fino a quando non viene ricompilato chiamando il relativo **Requery** funzione membro. Quando altri utenti di eliminare i record, il codice MFC ignora le eliminazioni nel recordset. Le modifiche apportate dagli altri utenti per i record esistenti vengono riflesse nel dynaset non appena si scorre i record modificati.  
+ Tipo snapshot è un set di record con proprietà dinamiche. Durante la sua durata, un oggetto recordset in modalità di dynaset (in genere denominato dynaset) rimane sincronizzato con l'origine dati nel modo seguente. In un ambiente multiutente, altri utenti potrebbero modificare o eliminare i record che sono in dynaset o aggiungere i record alla tabella che dynaset rappresenta. Registra l'applicazione aggiunge o Elimina dal set di record viene riflesse in dynaset. I record aggiunti da altri utenti nella tabella non si rifletteranno nel dynaset fino a quando non viene ricompilato tramite una chiamata relativo `Requery` funzione membro. Quando altri utenti eliminano record, codice MFC ignora le eliminazioni nel set di record. Le modifiche apportate dagli altri utenti ai record esistenti vengono riflesse in dynaset, non appena si scorre verso il record interessato.  
   
- Analogamente, le modifiche ai record vengono riflesse in dynaset in uso da altri utenti. I record che aggiunti non vengono riflesse in dynaset degli altri utenti fino a quando non sono requery i dynaset. I record eliminati sono contrassegnati come "eliminato" nel recordset di altri utenti. Se si dispone di più connessioni allo stesso database (più `CDatabase` oggetti), recordset associati a tali connessioni avranno lo stesso stato recordset di altri utenti.  
+ Analogamente, le modifiche ai record in dynaset vengono riflesse in dynaset in uso da altri utenti. I record che aggiunti non vengono riflesse in dynaset degli altri utenti fino a quando non sono requery i dynaset. I record eliminati vengono contrassegnati come "eliminato" nei recordset di altri utenti. Se si dispone di più connessioni allo stesso database (più `CDatabase` oggetti), recordset associati a tali connessioni con lo stesso stato come recordset di altri utenti.  
   
- I dynaset sono utili quando i dati devono essere dinamici, come, ad esempio, in un sistema di prenotazione airline.  
-  
-> [!NOTE]
->  Per utilizzare i dynaset, è necessario disporre dei driver ODBC per l'origine dati che supporta i dynaset e la libreria di cursori ODBC non deve essere caricata. Per ulteriori informazioni, vedere [disponibilità di dynaset](#_core_availability_of_dynasets).  
-  
- Per specificare che un oggetto recordset dynaset, passare **CRecordset:: dynaset** come primo parametro per il **aprire** funzione membro dell'oggetto recordset.  
+ I dynaset risultano particolarmente utili quando i dati devono essere dinamici, come, ad esempio, in un sistema di prenotazione delle compagnie aeree.  
   
 > [!NOTE]
->  Per dynaset aggiornabile, il driver ODBC deve supportare entrambe le istruzioni per gli aggiornamenti posizionati o **:: SQLSetPos** funzione API ODBC. Se entrambi sono supportati, MFC utilizza **:: SQLSetPos** per migliorare l'efficienza.  
+>  Per usare dynaset, sono necessari un driver ODBC per l'origine dati che supporta dynaset e la libreria di cursori ODBC non deve essere caricata. Per altre informazioni, vedere [disponibilità di dynaset](#_core_availability_of_dynasets).  
+  
+ Per specificare che un set di record è di tipo snapshot, passare `CRecordset::dynaset` come primo parametro per il `Open` funzione membro dell'oggetto recordset.  
+  
+> [!NOTE]
+>  Per dynaset aggiornabile, il driver ODBC deve supportare entrambe le istruzioni per gli aggiornamenti posizionati o `::SQLSetPos` funzione API ODBC. Se entrambi sono supportati, MFC utilizza `::SQLSetPos` per migliorare l'efficienza.  
   
 ##  <a name="_core_availability_of_dynasets"></a> Disponibilità di dynaset  
- Le classi di database MFC supportano i dynaset se vengono soddisfatti i requisiti seguenti:  
+ Le classi di database MFC supportano dynaset se vengono soddisfatti i requisiti seguenti:  
   
 -   La libreria di cursori ODBC DLL non deve essere in uso per questa origine dati.  
   
-     Se si utilizza la libreria di cursori, la maschera di alcune funzionalità del driver ODBC sottostante che è necessario per il supporto di dynaset. Se si desidera utilizzare i dynaset e il driver ODBC è la funzionalità necessaria per dynaset, come descritto nella parte restante di questa sezione, è possibile generare MFC non caricare la libreria di cursori quando si crea un `CDatabase` oggetto. Per ulteriori informazioni, vedere [ODBC](../../data/odbc/odbc-basics.md) e [OpenEx](../../mfc/reference/cdatabase-class.md#openex) o [aprire](../../mfc/reference/cdatabase-class.md#open) funzione membro di classe `CDatabase`.  
+     Se viene usata la libreria di cursori, la maschera di alcune funzionalità del driver ODBC sottostante che è necessario per il supporto di dynaset. Se si desidera utilizzare dynaset (e il driver ODBC ha le funzionalità necessarie per dynaset, come descritto nella parte restante di questa sezione), è possibile generare MFC non caricare la libreria di cursori quando si crea un `CDatabase` oggetto. Per altre informazioni, vedere [ODBC](../../data/odbc/odbc-basics.md) e il [OpenEx](../../mfc/reference/cdatabase-class.md#openex) oppure [Open](../../mfc/reference/cdatabase-class.md#open) funzione membro di classe `CDatabase`.  
   
-     Nella terminologia ODBC, dynaset e gli snapshot sono definiti per i cursori. Un cursore è un meccanismo utilizzato per tenere traccia della posizione in un recordset.  
+     Nella terminologia di ODBC, dynaset e gli snapshot vengono definiti come cursori. Un cursore è un meccanismo utilizzato per tenere traccia della posizione in un recordset.  
   
--   Il driver ODBC per l'origine dati deve supportare i cursori basati su keyset.  
+-   Il driver ODBC per l'origine dati deve supportare gestito da keyset dei cursori.  
   
-     Cursori basati su keyset gestire i dati da una tabella da ottenere e archiviare un set di chiavi. Le chiavi vengono usate per ottenere dati aggiornati dalla tabella quando l'utente scorre su un record specifico. Per determinare se il driver fornisce il supporto, chiamare il **:: SQLGetInfo** funzione API ODBC con il **SQL_SCROLL_OPTIONS** parametro.  
+     Gestito da keyset dei cursori gestire i dati da una tabella, ottenendo e archiviare un set di chiavi. Le chiavi vengono usate per ottenere dati aggiornati dalla tabella quando l'utente scorre in un record specifico. Per determinare se il driver fornisce questo supporto, chiamare il `::SQLGetInfo` funzione API ODBC con il *SQL_SCROLL_OPTIONS* parametro.  
   
-     Se si tenta di aprire un dynaset senza il supporto di keyset, viene visualizzato un `CDBException` con il valore del codice restituito **AFX_SQL_ERROR_DYNASET_NOT_SUPPORTED**.  
+     Se si tenta di aprire un dynaset senza il supporto di keyset, viene visualizzato un `CDBException` valore AFX_SQL_ERROR_DYNASET_NOT_SUPPORTED con il codice restituito.  
   
--   Il driver ODBC per l'origine dati deve supportare il recupero esteso.  
+-   Il driver ODBC per l'origine dati deve supportare il recupero estesi.  
   
-     Il recupero esteso è la possibilità di scorrimento all'indietro, nonché di inoltrare i record risultanti della query SQL. Per determinare se il driver supporta questa funzionalità, chiamare il **:: SQLGetFunctions** funzione API ODBC con il **SQL_API_SQLEXTENDEDFETCH** parametro.  
+     Il recupero esteso è la possibilità di scorrimento all'indietro, oltre a inoltrare sui record risultante della query SQL. Per determinare se il driver supporta questa funzionalità, chiamare il `::SQLGetFunctions` funzione API ODBC con il *SQL_API_SQLEXTENDEDFETCH* parametro.  
   
- Se si desidera utilizzare i dynaset aggiornabili (o snapshot, d'altra parte), il driver ODBC deve inoltre supportare il **:: SQLSetPos** funzione API ODBC o gli aggiornamenti posizionati. Il **:: SQLSetPos** funzione consente di MFC per aggiornare l'origine dati senza l'invio di istruzioni SQL. Se questo supporto è disponibile, MFC utilizza anziché eseguire gli aggiornamenti utilizzando SQL. Per determinare se il driver supporta **:: SQLSetPos**, chiamare **:: SQLGetInfo** con il **SQL_POS_OPERATIONS** parametro.  
+ Se si desidera aggiornabili dynaset (o gli snapshot, d'altra parte), il driver ODBC deve anche supportare il `::SQLSetPos` funzione API ODBC o gli aggiornamenti posizionati. Il `::SQLSetPos` funzione permette di MFC aggiornare l'origine dati senza l'invio di istruzioni SQL. Se questo supporto è disponibile, MFC utilizza anziché eseguire gli aggiornamenti tramite SQL. Per determinare se il driver supporta `::SQLSetPos`, chiamare `::SQLGetInfo` con il *SQL_POS_OPERATIONS* parametro.  
   
- Gli aggiornamenti posizionati utilizzano la sintassi SQL (nel formato **WHERE CURRENT OF** \<nomecursore >) per identificare una determinata riga della tabella nell'origine dati. Per determinare se il driver supporta gli aggiornamenti posizionati, chiamare **:: SQLGetInfo** con il **SQL_POSITIONED_STATEMENTS** parametro.  
+ Gli aggiornamenti posizionati utilizzano la sintassi SQL (nel formato **WHERE CURRENT OF** \<nomecursore >) per identificare una determinata riga nella tabella dell'origine dati. Per determinare se il driver supporta gli aggiornamenti posizionati, chiamare `::SQLGetInfo` con il *SQL_POSITIONED_STATEMENTS* parametro.  
   
- I dynaset MFC (ma Recordset non forward-only) richiedono in genere, un driver ODBC con conformità API di livello 2. Se il driver per l'origine dati è conforme all'API di livello 1, è comunque possibile utilizzare gli snapshot aggiornabili e sola lettura e Recordset forward-only, ma non i dynaset. Tuttavia, un driver di livello 1 può supportare i dynaset se supporta il recupero esteso e basati su keyset. Per ulteriori informazioni sui livelli di conformità ODBC, vedere [ODBC](../../data/odbc/odbc-basics.md).  
+ MFC dynaset (ma Recordset non forward-only) richiede in genere, un driver ODBC con conformità API di livello 2. Se il driver per l'origine dati è conforme all'API di livello 1, è comunque possibile usare snapshot sia aggiornabile e read-only e Recordset forward-only, ma non i dynaset. Tuttavia, un driver di livello 1 può supportare dynaset se supporta il recupero esteso e gestito da keyset dei cursori. Per altre informazioni sui livelli di conformità di ODBC, vedere [ODBC](../../data/odbc/odbc-basics.md).  
   
 > [!NOTE]
->  Se si desidera utilizzare sia snapshot che dynaset, devono essere basati su due diversi `CDatabase` oggetti, ovvero due diverse connessioni.  
+>  Se si desidera utilizzare snapshot sia dynaset, è necessario basare tali criteri su due diversi `CDatabase` oggetti, ovvero due diverse connessioni.  
   
- A differenza degli snapshot, che utilizzano l'archiviazione intermedia gestita dalla libreria di cursori ODBC, dynaset recuperano un record direttamente dall'origine dati non appena si scorre. In questo modo i record selezionati originariamente dal dynaset sincronizzato con l'origine dati.  
+ A differenza di snapshot, che utilizza l'archiviazione intermedia gestito dalla libreria di cursori ODBC, dynaset recuperare un record direttamente dall'origine dati, non appena si scorre a esso. In questo modo il record selezionato originariamente per dynaset sincronizzato con l'origine dati.  
   
- Per un elenco dei driver ODBC inclusi in questa versione di Visual C++ e per informazioni su come ottenere i driver aggiuntivi, vedere [elenco dei Driver ODBC](../../data/odbc/odbc-driver-list.md).  
+ Per un elenco dei driver ODBC inclusa in questa versione di Visual C++ e per informazioni su come ottenere driver aggiuntivi, vedere [elenco dei Driver ODBC](../../data/odbc/odbc-driver-list.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Open Database Connectivity (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)

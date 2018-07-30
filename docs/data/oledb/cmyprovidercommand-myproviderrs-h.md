@@ -1,5 +1,5 @@
 ---
-title: CMyProviderCommand (MyProviderRS. H) | Documenti Microsoft
+title: CMyProviderCommand (MyProviderRS. H) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,17 +19,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 8c18742d9b3b1039033ad8d42939e0f5a4578fbb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b437f02a0df4f4ff0e34c44939c2a40f3ccebf74
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33098147"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39339741"
 ---
 # <a name="cmyprovidercommand-myproviderrsh"></a>CMyProviderCommand (MyProviderRS.H)
-La `CMyProviderCommand` classe è l'implementazione per l'oggetto comando provider. Fornisce l'implementazione per il `IAccessor`, `ICommandText`, e **ICommandProperties** interfacce. Il `IAccessor` interfaccia è identico a quello nel set di righe. L'oggetto comando utilizza la funzione di accesso per specificare le associazioni per i parametri. Oggetto set di righe utilizzati per specificare le associazioni per le colonne di output. Il `ICommandText` interfaccia è un modo utile per specificare un comando in formato testo. Questo esempio viene utilizzato il `ICommandText` interfaccia in un secondo momento quando aggiunge codice personalizzato, viene eseguito l'override anche di `ICommand::Execute` metodo. Il **ICommandProperties** interfaccia gestisce tutte le proprietà per gli oggetti comando e set di righe.  
+Il `CMyProviderCommand` classe è l'implementazione per l'oggetto provider di comandi. Fornisce l'implementazione per il `IAccessor`, `ICommandText`, e `ICommandProperties` interfacce. Il `IAccessor` interfaccia è identica a quella del set di righe. L'oggetto comando Usa la funzione di accesso per specificare le associazioni per i parametri. L'oggetto set di righe li utilizza per specificare le associazioni per le colonne di output. Il `ICommandText` interfaccia è un modo utile per specificare un comando in formato testo. Questo esempio Usa la `ICommandText` quando si aggiunge codice personalizzato di interfaccia in un secondo momento; viene anche eseguito l'override di `ICommand::Execute` (metodo). Il `ICommandProperties` interfaccia gestisce tutte le proprietà per gli oggetti comando e set di righe.  
   
-```  
+```cpp  
 // CMyProviderCommand  
 class ATL_NO_VTABLE CMyProviderCommand :   
 class ATL_NO_VTABLE CMyProviderCommand :   
@@ -42,11 +42,11 @@ class ATL_NO_VTABLE CMyProviderCommand :
    public IColumnsInfoImpl<CMyProviderCommand>  
 ```  
   
- Il `IAccessor` interfaccia gestisce tutte le associazioni utilizzate in comandi e i set di righe. Il consumer chiama **IAccessor:: CreateAccessor** con una matrice di **DBBINDING** strutture. Ogni **DBBINDING** struttura contiene le informazioni sulle modalità di gestione le associazioni di colonna (ad esempio tipo e lunghezza). Il provider riceve le strutture e quindi determina come devono essere trasferiti i dati e se tutte le conversioni sono necessarie. Il `IAccessor` interfaccia viene utilizzata nell'oggetto comando per gestire eventuali parametri nel comando.  
+ Il `IAccessor` interfaccia gestisce tutti i binding utilizzati in comandi e i set di righe. Il consumer chiama `IAccessor::CreateAccessor` con una matrice di `DBBINDING` strutture. Ogni `DBBINDING` struttura contiene le informazioni sul modo in cui le associazioni di colonna devono essere gestite (ad esempio tipo e lunghezza). Il provider riceve le strutture e quindi determina come devono essere trasferiti i dati e se sono necessarie tutte le conversioni. Il `IAccessor` interfaccia viene utilizzata nell'oggetto comando per gestire eventuali parametri nel comando.  
   
- L'oggetto comando fornisce anche un'implementazione di `IColumnsInfo`. OLE DB richiede il `IColumnsInfo` interfaccia. L'interfaccia consente al consumer di recuperare informazioni sui parametri dal comando. L'oggetto set di righe utilizza il `IColumnsInfo` interfaccia per restituire informazioni sulle colonne di output per il provider.  
+ L'oggetto comando fornisce anche un'implementazione di `IColumnsInfo`. OLE DB richiede il `IColumnsInfo` interfaccia. L'interfaccia consente al consumer di recuperare informazioni sui parametri del comando. L'oggetto set di righe utilizza la `IColumnsInfo` interfaccia per restituire informazioni sulle colonne di output per il provider.  
   
- Il provider contiene inoltre un'interfaccia denominata `IObjectWithSite`. Il `IObjectWithSite` è stata implementata in ATL 2.0 e consente all'implementatore di passare le informazioni su se stesso al relativo elemento figlio. L'oggetto comando Usa il `IObjectWithSite` informazioni per indicare qualsiasi generate oggetti set di righe su chi li ha creati.  
+ Il provider contiene anche un'interfaccia denominata `IObjectWithSite`. Il `IObjectWithSite` è stata implementata in 2.0 ATL e consente all'implementatore di passare le informazioni su se stesso al relativo elemento figlio. L'oggetto comando Usa il `IObjectWithSite` informazioni per indicare qualsiasi generati oggetti set di righe su chi li ha creati.  
   
 ## <a name="see-also"></a>Vedere anche  
  [File del provider generati tramite procedura guidata](../../data/oledb/provider-wizard-generated-files.md)

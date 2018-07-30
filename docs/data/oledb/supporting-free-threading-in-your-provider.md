@@ -1,5 +1,5 @@
 ---
-title: Modello di Threading Free nel Provider di supporto | Documenti Microsoft
+title: Modello di Threading Free nel Provider di supporto | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,21 +16,21 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: a9c61aea0fec1f6d808a0a34ee74bd0ce2d399a5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 17750a61675f9b208be69b86ec7b044b6b19f1bb
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33108514"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39336677"
 ---
 # <a name="supporting-free-threading-in-your-provider"></a>Supporto del modello di threading Free nel provider
-Tutte le classi del provider OLE DB sono thread-safe e voci del Registro di sistema vengono impostate di conseguenza. È consigliabile per supportare modelli di threading free per fornire un livello elevato di prestazioni in situazioni multiutente. Per mantenere il provider di thread-safe, è necessario verificare che il codice è stato bloccato in modo corretto. Ogni volta che si scrivono o archiviare i dati, è necessario bloccare l'accesso con le sezioni critiche.  
+Tutte le classi del provider OLE DB sono thread-safe e voci del Registro di sistema vengono impostate di conseguenza. È una buona idea per supportare modelli di threading free per fornire un elevato livello di prestazioni in situazioni multiutente. Per mantenere il provider sia thread-safe, è necessario verificare che il codice viene bloccato in modo corretto. Ogni volta che si scrivono o archiviare i dati, è necessario bloccare l'accesso con le sezioni critiche.  
   
- Ogni oggetto modello di provider OLE DB è una sezione critica. Per rendere il blocco, ogni nuova classe creata deve essere una classe di modello che accetta la classe padre nome come argomento.  
+ Ogni oggetto modello di provider OLE DB ha una sezione critica. Per rendere più semplice di blocco, ogni nuova classe creata deve essere una classe di modello che accetta la classe padre nome come argomento.  
   
- Nell'esempio seguente viene illustrato come bloccare il codice:  
+ Nell'esempio seguente mostra come bloccare il codice:  
   
-```  
+```cpp  
 template <class T>  
 class CMyObject<T> : public...  
   
@@ -47,9 +47,9 @@ HRESULT MyObject::MyMethod(void)
 }  
 ```  
   
- Per ulteriori informazioni su come proteggere le sezioni critiche con `Lock` e `Unlock`, vedere [Multithreading: utilizzo delle classi di sincronizzazione](../../parallel/multithreading-how-to-use-the-synchronization-classes.md).  
+ Per altre informazioni su come proteggere sezioni critiche con `Lock` e `Unlock`, vedere [Multithreading: come usare le classi di sincronizzazione](../../parallel/multithreading-how-to-use-the-synchronization-classes.md).  
   
- È inoltre necessario verificare che tutti i metodi eseguire l'override (ad esempio `Execute`) sono thread-safe.  
+ È inoltre necessario verificare che tutti i metodi si esegue l'override (ad esempio `Execute`) sono thread-safe.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Uso dei modelli provider OLE DB](../../data/oledb/working-with-ole-db-provider-templates.md)

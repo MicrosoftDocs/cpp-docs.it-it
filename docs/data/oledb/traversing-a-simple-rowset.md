@@ -1,5 +1,5 @@
 ---
-title: Scorrimento di un Rowset semplice | Documenti Microsoft
+title: Scorrimento di un Rowset semplice | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,17 +19,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: a29d7a226d12f9c464d91ec356ae8a1a02091f1e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6ba5262577fc9176669916a7fc30d299d06770a8
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33102951"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39336654"
 ---
 # <a name="traversing-a-simple-rowset"></a>Scorrimento di un rowset semplice
-Nell'esempio seguente viene illustrato un accesso semplice e rapido database che non implica i comandi. Il codice del consumer, in un progetto ATL, recupera i record da una tabella denominata *artisti* in Microsoft Access, database utilizzando il Provider Microsoft OLE DB per ODBC. Il codice crea un [CTable](../../data/oledb/ctable-class.md) oggetto della tabella con una funzione di accesso basato sulla classe di record utente `CArtists`. Apre una connessione, apre una sessione sulla connessione e la tabella viene aperta nella sessione.  
+L'esempio seguente illustra un accesso rapido e semplice database che non riguarda i comandi. Il codice del consumer, in un progetto ATL, recupera i record da una tabella denominata *alle creazioni degli artisti* in Microsoft Access database utilizzando il Provider Microsoft OLE DB per ODBC. Il codice crea un [CTable](../../data/oledb/ctable-class.md) oggetto di tabella con una funzione di accesso basato sulla classe di record utente `CArtists`. Apre una connessione, apre una sessione sulla connessione e la tabella viene aperta nella sessione.  
   
-```  
+```cpp  
 #include <atldbcli.h>  
   
 CDataSource connection;  
@@ -53,9 +53,9 @@ while (artists.MoveNext() == S_OK)
 }  
 ```  
   
- Il record dell'utente, `CArtists`, simile al seguente:  
+ Il record dell'utente, `CArtists`, ha un aspetto simile al seguente:  
   
-```  
+```cpp  
 class CArtists  
 {  
 public:  

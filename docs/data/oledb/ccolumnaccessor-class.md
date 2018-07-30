@@ -1,5 +1,5 @@
 ---
-title: Classe CColumnAccessor | Documenti Microsoft
+title: Classe CColumnAccessor | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,15 +19,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 8d211277a8354d94f1892b97ea8f808cc0b22c30
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4c55b2e10112c38835bb1f230970db56a6f53d4e
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33095320"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39341062"
 ---
 # <a name="ccolumnaccessor-class"></a>Classe CColumnAccessor
-Genera il codice consumer inserito.  
+Genera il codice inserito consumer.  
   
 ## <a name="syntax"></a>Sintassi
 
@@ -36,23 +36,23 @@ class CColumnAccessor : public CAccessorBase
 ```  
   
 ## <a name="remarks"></a>Note  
- Nel codice inserito, ogni colonna è associato come una funzione di accesso separato. Tenere presente che questa classe viene utilizzata l'inserimento di codice (ad esempio, che potrebbe verificarsi durante il debug), ma in genere non è necessario utilizzare direttamente il o i relativi metodi.  
+ Nel codice inserito, ogni colonna è associata come una funzione di accesso separato. È necessario essere consapevoli che questa classe viene utilizzata l'inserimento di codice (ad esempio, che potrebbe verificarsi durante il debug), ma in genere non è necessario usare direttamente o i relativi metodi.  
   
- `CColumnAccessor` implementa i metodi stub seguenti, ognuna delle quali corrispondono funzionalità agli altri metodi di classe della funzione di accesso:  
+ `CColumnAccessor` implementa i metodi stub seguenti, ognuno dei quali corrispondono funzionalità agli altri metodi di classe della funzione di accesso:  
   
 -   `CColumnAccessor` Il costruttore. Crea e inizializza il `CColumnAccessor` oggetto.  
   
--   `CreateAccessor` Alloca memoria per la colonna strutture di associazione e inizializza i membri dati della colonna.  
+-   `CreateAccessor` Alloca memoria per la colonna di strutture di associazione e inizializza i membri di dati di colonna.  
   
--   **BindColumns** associa le colonne per le funzioni di accesso.  
+-   `BindColumns` Associa le colonne per le funzioni di accesso.  
   
--   **SetParameterBuffer** alloca i buffer per i parametri.  
+-   `SetParameterBuffer` Alloca i buffer per i parametri.  
   
--   `AddParameter` Aggiunge una voce di parametro per le strutture di voce di parametro.  
+-   `AddParameter` Aggiunge una voce di parametro alle strutture di voce di parametro.  
   
--   **HasOutputColumns** determina se la funzione di accesso include colonne di output  
+-   `HasOutputColumns` Determina se la funzione di accesso include colonne di output  
   
--   **HasParameters** determina se la funzione di accesso dispone di parametri.  
+-   `HasParameters` Determina se la funzione di accesso dispone di parametri.  
   
 -   `BindParameters` Associa i parametri creati per le colonne.  
   

@@ -1,5 +1,5 @@
 ---
-title: Utilizzo di un Recordset ADO esistente | Documenti Microsoft
+title: Utilizzo di un Recordset ADO esistente | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 36c74ec0d17c296707334930736d0cf237ecfe7e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: be948293947d4f007d151e4a89e0ff87fc897bbd
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33103564"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39338938"
 ---
 # <a name="using-an-existing-ado-recordset"></a>Utilizzo di un recordset ADO esistente
-Per combinare i modelli consumer OLE DB e Active Data Objects (ADO), utilizzare ADO per aprire un recordset (corrispondente a un set di righe dei modelli Consumer OLE DB). Quando si dispone di un recordset, eseguire le operazioni seguenti per connettersi a un set di righe OLE DB:  
+Per combinare i modelli consumer OLE DB e Active Data Objects (ADO), utilizzare ADO per aprire un set di record (corrispondente a un set di righe nei modelli Consumer OLE DB). Quando si dispone di un set di record, eseguire le operazioni seguenti per connettersi a un set di righe OLE DB:  
   
 1.  Chiamare `QueryInterface` per il `IRowset` e `IAccessor` puntatori.  
   
-    ```  
+    ```cpp  
     IRowset* lpRowset = NULL;  
     IAccessor* lpAccessor = NULL;  
     lpUnk->QueryInterface(IID_IRowset, (void**)&lpRowset);  
@@ -37,11 +37,11 @@ Per combinare i modelli consumer OLE DB e Active Data Objects (ADO), utilizzare 
     ```  
   
     > [!NOTE]
-    >  *lpUnk* punta al **IUnknown** oggetto dell'oggetto recordset ADO.  
+    >  *lpUnk* punta al `IUnknown` oggetto del recordset ADO.  
   
-2.  Collegare la funzione di accesso e un set di righe per le classi di modello consumer OLE DB appropriate.  
+2.  Collegare la funzione di accesso e un set di righe per le classi di modello di consumer OLE DB appropriati.  
   
-    ```  
+    ```cpp  
     CRowset rs;  
     CAccessor accessor;  
   

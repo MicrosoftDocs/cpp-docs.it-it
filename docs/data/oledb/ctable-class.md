@@ -24,12 +24,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 7dc1383199b5e8167936d99d487bdfc3eb15bddb
-ms.sourcegitcommit: b217daee32d3413cf33753d9b4dc35a0022b1bfa
+ms.openlocfilehash: 723d4f1e8f44c3ce376b4f39f34a191265ca4eab
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2018
-ms.locfileid: "39233490"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39336726"
 ---
 # <a name="ctable-class"></a>Classe CTable
 Fornisce un mezzo per accedere direttamente a un rowset semplice (uno senza parametri).  
@@ -75,12 +75,10 @@ HRESULT Open(const CSession& session,
    DBPROPSET* pPropSet = NULL,  
    ULONG ulPropSets = 0) throw ();  
 
-
 HRESULT Open(const CSession& session,  
    LPCSTR szTableName,  
    DBPROPSET* pPropSet = NULL,  
    ULONG ulPropSets = 0) throw ();  
-
 
 HRESULT Open(const CSession& session,  
    DBID& dbid,  

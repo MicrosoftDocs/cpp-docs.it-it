@@ -1,5 +1,5 @@
 ---
-title: Amministratore ODBC | Documenti Microsoft
+title: Amministratore ODBC | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,43 +22,43 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 55b214ba3513f95533e3892fb93ad9298c44415d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 47b301e054f2bcd0a37e0ea8e5e71730fafb9ef7
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33090195"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39340524"
 ---
 # <a name="odbc-administrator"></a>Amministratore ODBC
-Amministratore ODBC registra e configura il [origini dati](../../data/odbc/data-source-odbc.md) disponibili localmente o in una rete. Le procedure guidate di utilizzano le informazioni fornite dall'amministratore ODBC per creare codice nelle applicazioni che si connette gli utenti a origini dati.  
+L'amministratore ODBC registra e consente di configurare il [zdroje dat](../../data/odbc/data-source-odbc.md) disponibili localmente o in una rete. Le procedure guidate di usano le informazioni fornite dall'amministratore ODBC per creare codice nelle applicazioni che si connette gli utenti a origini dati.  
   
- Per impostare un'origine dati ODBC per l'utilizzo con le classi ODBC MFC o le classi MFC oggetto DAO (Data Access), è necessario innanzitutto registrare e configurare l'origine dati. Per aggiungere e rimuovere le origini dati, utilizzare Amministratore ODBC. A seconda di driver ODBC, è anche possibile creare nuove origini dati.  
+ Per configurare un'origine dati ODBC per l'uso con le classi ODBC MFC o le classi MFC oggetto DAO (Data Access), è innanzitutto necessario registrare e configurare l'origine dati. Utilizzare Amministratore ODBC per aggiungere e rimuovere le origini dati. A seconda del driver ODBC, è anche possibile creare nuove origini dati.  
   
- Amministratore ODBC viene installato durante l'installazione. Se si sceglie **personalizzato** installazione e non si seleziona tutti i driver ODBC nel **opzioni di Database** la finestra di dialogo, è necessario eseguire nuovamente l'installazione per installare i file necessari.  
+ Amministratore ODBC viene installato durante l'installazione. Se si è scelto **Custom** installazione e non è stato selezionato alcun driver ODBC nel **opzioni di Database** finestra di dialogo, è necessario eseguire nuovamente l'installazione per installare i file necessari.  
   
- Durante l'installazione, selezionare il driver ODBC che si desidera installare. In un secondo momento, è possibile installare i driver aggiuntivi forniti con Visual C++ utilizzando il programma di installazione di Visual C++.  
+ Durante l'installazione, si seleziona i driver ODBC che si desidera installare. In un secondo momento, è possibile installare driver aggiuntivi forniti con Visual C++ tramite il programma di installazione di Visual C++.  
   
- Se si desidera installare il driver ODBC che non vengono forniti con Visual C++, è necessario eseguire il programma di installazione che accompagna il driver.  
+ Se si desidera installare i driver ODBC non forniti con Visual C++, è necessario eseguire il programma di installazione che accompagna il driver.  
   
-#### <a name="to-install-odbc-drivers-that-ship-with-visual-c"></a>Per installare driver ODBC forniti con Visual C++  
+#### <a name="to-install-odbc-drivers-that-ship-with-visual-c"></a>Per installare i driver ODBC forniti con Visual C++  
   
 1.  Eseguire il programma di installazione dal CD di distribuzione di Visual C++.  
   
-     L'apertura nella finestra di dialogo programma di installazione viene visualizzata.  
+     L'apertura nella finestra di dialogo del programma di installazione viene visualizzata.  
   
-2.  Fare clic su **Avanti** in ogni finestra di dialogo fino a raggiungere il **opzioni di installazione** la finestra di dialogo. Selezionare **personalizzato**, quindi fare clic su `Next`.  
+2.  Fare clic su **successivo** in ogni finestra di dialogo fino a raggiungere il **opzioni di installazione** nella finestra di dialogo. Selezionare **Custom**, quindi fare clic su **successivo**.  
   
-3.  Deselezionare tutte le caselle di controllo nel **installazione di Microsoft Visual C++** la finestra di dialogo, ad eccezione di **opzioni di Database** casella di controllo e quindi fare clic su **dettagli** per visualizzare il **Opzioni di database** la finestra di dialogo.  
+3.  Deselezionare tutte le caselle di controllo nel **installazione di Microsoft Visual C++** finestra di dialogo, ad eccezione di **opzioni di Database** casella di controllo e quindi fare clic su **dettagli** per visualizzare il **Opzioni database** nella finestra di dialogo.  
   
-4.  Cancella il **Microsoft Data Access Objects** casella di controllo, seleziona il **driver Microsoft ODBC** casella di controllo e quindi fare clic su **dettagli**.  
+4.  Cancella il **Microsoft Data Access Objects** casella di controllo, seleziona il **Microsoft ODBC driver** casella di controllo e quindi fare clic su **dettagli**.  
   
-     Il **driver Microsoft ODBC** viene visualizzata la finestra di dialogo.  
+     Il **Microsoft ODBC driver** verrà visualizzata la finestra di dialogo.  
   
 5.  Selezionare i driver che si desidera installare e quindi fare clic su **OK** due volte.  
   
-6.  Fare clic su **Avanti** rimanenti finestre di dialogo per avviare l'installazione. Il programma di installazione si invia una notifica al termine dell'installazione.  
+6.  Fare clic su **successivo** rimanenti finestre di dialogo per avviare l'installazione. Il programma di installazione si invia una notifica una volta completata l'installazione.  
   
- Quando vengono installati i driver, è possibile configurare l'origine dati tramite Amministratore ODBC. L'icona ODBC sono disponibili nel Pannello di controllo.  
+ Quando vengono installati i driver, è possibile configurare l'origine dati tramite Amministratore ODBC. Si noterà l'icona ODBC nel Pannello di controllo.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Open Database Connectivity (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)   

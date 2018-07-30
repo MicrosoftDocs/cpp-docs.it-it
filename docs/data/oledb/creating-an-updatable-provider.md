@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: cbcd69168b70e8d85bf2b90c3f456f79cd1c228c
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: e9ee36d2300ed1e86c1f867012ed54c85692f5bd
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954584"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39340638"
 ---
 # <a name="creating-an-updatable-provider"></a>Creazione di un provider aggiornabile
 
@@ -30,7 +30,7 @@ Visual C++ supporta i provider in grado di aggiornare o provider aggiornabili (s
   
  Questo argomento si presuppone che si inizi con un provider utilizzabile. Esistono due passaggi per la creazione di un provider aggiornabile. È prima necessario decidere come il provider verrà apportate modifiche all'archivio dati; in particolare, se le modifiche devono essere eseguite immediatamente o posticipata fino a quando non viene eseguito un comando update. La sezione "[rendendo provider aggiornabili](#vchowmakingprovidersupdatable)" descrive le modifiche e le impostazioni necessarie nel codice del provider.  
   
- Successivamente, è necessario assicurarsi che di provider contiene tutte le funzionalità necessarie per supportare che il consumer può richiedere di esso. Se l'utente vuole aggiornare l'archivio dati, il provider deve contenere codice che rende persistenti i dati nell'archivio dati. Ad esempio, si potrebbe usare la libreria Run-Time di C o MFC per eseguire queste operazioni nell'origine dati. La sezione "[scrittura all'origine dati](#vchowwritingtothedatasource)" viene descritto come scrivere nell'origine dati, affrontare `NULL` e i valori predefiniti e impostare i flag di colonna.  
+ Successivamente, è necessario assicurarsi che di provider contiene tutte le funzionalità necessarie per supportare che il consumer può richiedere di esso. Se l'utente vuole aggiornare l'archivio dati, il provider deve contenere codice che rende persistenti i dati nell'archivio dati. Ad esempio, si potrebbe usare la libreria Run-Time di C o MFC per eseguire queste operazioni nell'origine dati. La sezione "[scrittura all'origine dati](#vchowwritingtothedatasource)" viene descritto come scrivere nell'origine dati, gestire i valori NULL e predefiniti e impostare i flag di colonna.  
   
 > [!NOTE]
 >  UpdatePV è un esempio di un provider aggiornabile. UpdatePV è uguale a MyProv, ma con il supporto aggiornabile.  
@@ -55,7 +55,7 @@ Visual C++ supporta i provider in grado di aggiornare o provider aggiornabili (s
   
      Aggiungere `IRowsetChangeImpl` alla catena di ereditarietà usando questo formato:  
   
-    ```  
+    ```cpp  
     IRowsetChangeImpl< rowset-name, storage-name >  
     ```  
   
@@ -65,7 +65,7 @@ Visual C++ supporta i provider in grado di aggiornare o provider aggiornabili (s
   
      Aggiungere `IRowsetUpdate` alla catena di ereditarietà usando questo formato:  
   
-    ```  
+    ```cpp  
     IRowsetUpdateImpl< rowset-name, storage>  
     ```  
   
@@ -88,7 +88,7 @@ Visual C++ supporta i provider in grado di aggiornare o provider aggiornabili (s
   
 4.  Nel mapping dei set di proprietà, è necessario anche includere tutte le impostazioni seguenti riportati di seguito:  
   
-    ```  
+    ```cpp  
     PROPERTY_INFO_ENTRY_VALUE(UPDATABILITY, DBPROPVAL_UP_CHANGE |   
       DBPROPVAL_UP_INSERT | DBPROPVAL_UP_DELETE)  
     PROPERTY_INFO_ENTRY_VALUE(CHANGEINSERTEDROWS, VARIANT_TRUE)  

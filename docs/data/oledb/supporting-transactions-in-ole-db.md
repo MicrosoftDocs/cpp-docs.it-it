@@ -1,5 +1,5 @@
 ---
-title: Supporto delle transazioni in OLE DB | Documenti Microsoft
+title: Supporto delle transazioni in OLE DB | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,45 +20,45 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: ecd5b7274e62508289a83d6c0420d5f76e239e4d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 932185002032ab86ca80b2b3384bfe6cbb69f8b1
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33110341"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39338710"
 ---
 # <a name="supporting-transactions-in-ole-db"></a>Supporto delle transazioni in OLE DB
-Oggetto [transazione](../../data/transactions-mfc-data-access.md) è un modo per raggruppare o batch, una serie di aggiornamenti a un'origine dati in modo che tutti esito positivo e viene eseguito il commit in una sola volta oppure (se uno di essi ha esito negativo) non viene eseguito il commit e viene eseguito il rollback dell'intera transazione. Questo processo assicura l'integrità del risultato nell'origine dati.  
+Oggetto [transazione](../../data/transactions-mfc-data-access.md) è un modo per raggruppare o batch, una serie di aggiornamenti a un'origine dati in modo che tutti esito positivo e viene eseguito il commit in una sola volta oppure (se uno di questi ha esito negativo) non viene eseguito il commit e viene eseguito il rollback dell'intera transazione. Questo processo garantisce l'integrità del risultato nell'origine dati.  
   
- OLE DB supporta le transazioni con i tre metodi seguenti:  
+ OLE DB supporta le transazioni con tre metodi seguenti:  
   
--   [ITransactionLocal:: StartTransaction](https://msdn.microsoft.com/en-us/library/ms709786.aspx)  
+-   [ITransactionLocal:: StartTransaction](https://msdn.microsoft.com/library/ms709786.aspx)  
   
--   [ITransaction::Commit](https://msdn.microsoft.com/en-us/library/ms713008.aspx)  
+-   [ITransaction::Commit](https://msdn.microsoft.com/library/ms713008.aspx)  
   
--   [ITransaction:: Abort](https://msdn.microsoft.com/en-us/library/ms709833.aspx)  
+-   [ITransaction:: Abort](https://msdn.microsoft.com/library/ms709833.aspx)  
   
 ## <a name="relationship-of-sessions-and-transactions"></a>Relazione tra le sessioni e transazioni  
- Un singolo oggetto origine dati è possibile creare uno o più oggetti di sessione, ognuno dei quali può trovarsi all'interno o all'esterno dell'ambito di una transazione in un determinato momento.  
+ Un singolo oggetto origine dati è possibile creare uno o più oggetti di sessione, ognuno dei quali può essere all'interno o all'esterno dell'ambito di una transazione in un determinato momento.  
   
- Quando una sessione non immette una transazione, tutte le operazioni eseguite all'interno di tale sessione sull'archivio dati vengano immediatamente eseguito il commit in ogni chiamata al metodo. (Questo è talvolta detta modalità autocommit o implicite.)  
+ Quando una sessione non immette una transazione, tutte le operazioni eseguite all'interno di tale sessione sull'archivio dati vengano immediatamente eseguito il commit in ogni chiamata al metodo. (Ciò è talvolta detta modalità autocommit o implicite.)  
   
- Quando una sessione accede una transazione, tutte le operazioni eseguite all'interno di tale sessione sull'archivio dati fa parte di tale transazione vengano eseguito il commit e interromperle come unità singola. (Questo è talvolta detta modalità di commit manuale.)  
+ Quando una sessione entra in una transazione, i tutte le operazioni eseguite all'interno di tale sessione sull'archivio dati fa parte di tale transazione e viene eseguito il commit o interrotta come singola unità. (Ciò viene talvolta come modalità di commit manuale.)  
   
- Supporto delle transazioni è specifico del provider. Se il provider in uso supporta le transazioni, un oggetto di sessione che supporta **ITransaction** e **ITransactionLocal** possibile immettere una semplice (vale a dire non annidati) delle transazioni. La classe di modelli OLE DB [CSession](../../data/oledb/csession-class.md) supporta queste interfacce ed è lo strumento consigliato per implementare il supporto delle transazioni in Visual C++.  
+ Supporto delle transazioni è specifico del provider. Se il provider in uso supporta le transazioni, un oggetto di sessione che supporta `ITransaction` e `ITransactionLocal` possibile immettere un semplice (vale a dire, non annidata) delle transazioni. La classe di modelli OLE DB [CSession](../../data/oledb/csession-class.md) supporta queste interfacce ed è il metodo consigliato per implementare il supporto delle transazioni in Visual C++.  
   
 ## <a name="starting-and-ending-the-transaction"></a>Inizio e fine della transazione  
- Chiamare il `StartTransaction`, **Commit**, e **Abort** metodi nell'oggetto set di righe del consumer.  
+ Si chiama il `StartTransaction`, `Commit`, e `Abort` metodi nell'oggetto set di righe del consumer.  
   
- La chiamata **ITransactionLocal:: StartTransaction** avvia una nuova transazione locale. Quando si avvia la transazione, le modifiche apportate dalle operazioni successive non vengono effettivamente applicate all'archivio dati fino a quando non si esegue il commit della transazione.  
+ La chiamata a `ITransactionLocal::StartTransaction` avvia una nuova transazione locale. Quando si avvia la transazione, tutte le modifiche apportate dalle operazioni successive non vengono effettivamente applicate all'archivio dati fino a quando non si esegue il commit della transazione.  
   
- La chiamata **ITransaction:: commit** o **ITransaction:: Abort** termina la transazione. **Eseguire il commit** tutte le modifiche all'interno dell'ambito della transazione da applicare all'archivio dati. **Interrompere** cause tutte le modifiche all'interno dell'ambito della transazione deve essere annullato e l'archivio dati viene lasciato nello stato avevano prima dell'avvio della transazione.  
+ La chiamata `ITransaction::Commit` o `ITransaction::Abort` termina la transazione. `Commit` fa sì che tutte le modifiche apportate all'interno dell'ambito della transazione da applicare all'archivio dati. `Abort` cause tutte le modifiche apportate all'interno dell'ambito della transazione deve essere annullata e l'archivio dati viene lasciato nello stato avevano prima dell'avvio della transazione.  
   
 ## <a name="nested-transactions"></a>Transazioni nidificate  
- Oggetto [transazione annidata](https://msdn.microsoft.com/en-us/library/ms716985.aspx) si verifica quando si avvia una nuova transazione locale quando esiste già una transazione attiva nella sessione. La nuova transazione viene avviata come una transazione nidificata rispetto alla transazione corrente. Se il provider non supporta le transazioni nidificate, la chiamata `StartTransaction` quando è già presente una transazione attiva nella sessione restituisce **XACT_E_XTIONEXISTS**.  
+ Oggetto [transazione nidificata](https://msdn.microsoft.com/library/ms716985.aspx) si verifica quando si avvia una nuova transazione locale quando esiste già una transazione attiva nella sessione. La nuova transazione viene avviata come una transazione nidificata di sotto della transazione corrente. Se il provider non supporta le transazioni nidificate, la chiamata `StartTransaction` quando è già presente una transazione attiva nella sessione restituisce XACT_E_XTIONEXISTS.  
   
 ## <a name="distributed-transactions"></a>Transazioni distribuite  
- Una transazione distribuita è una transazione che aggiorna i dati distribuiti; ovvero, i dati in più computer in rete. Se si desidera supportare le transazioni in un sistema distribuito, è necessario utilizzare .NET Framework anziché il supporto delle transazioni di OLE DB.  
+ Una transazione distribuita è una transazione che aggiorna i dati distribuiti; vale a dire i dati in più di un sistema di computer in rete. Se si desidera supportare le transazioni in un sistema distribuito, è consigliabile usare .NET Framework anziché il supporto delle transazioni OLE DB.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Uso delle funzioni di accesso](../../data/oledb/using-accessors.md)

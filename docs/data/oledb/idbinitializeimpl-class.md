@@ -50,12 +50,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 69c7f92110312d4ae8cff427d1081853290919e9
-ms.sourcegitcommit: b0d6777cf4b580d093eaf6104d80a888706e7578
+ms.openlocfilehash: 756ced3e2e1eef48023831329751477d07d7cfec
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/26/2018
-ms.locfileid: "39269924"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39336488"
 ---
 # <a name="idbinitializeimpl-class"></a>Classe IDBInitializeImpl
 Fornisce un'implementazione per il [IDBInitialize](https://msdn.microsoft.com/library/ms713706.aspx) interfaccia.  
@@ -106,7 +106,6 @@ Costruttore.
   
 ```cpp
 IDBInitializeImpl();  
-  
 ```  
   
 ### <a name="remarks"></a>Note  
@@ -118,7 +117,7 @@ Inizializza l'oggetto datasource preparandone il supporto della proprietà.
 ### <a name="syntax"></a>Sintassi  
   
 ```cpp
-      STDMETHOD(Initialize)(void);  
+STDMETHOD(Initialize)(void);  
 ```  
   
 ### <a name="remarks"></a>Note  
@@ -130,7 +129,7 @@ Punti dati di origine oggetto in uno stato non inizializzato da liberare le riso
 ### <a name="syntax"></a>Sintassi  
   
 ```cpp
-      STDMETHOD(Uninitialize)(void);  
+STDMETHOD(Uninitialize)(void);  
 ```  
   
 ### <a name="remarks"></a>Note  
@@ -143,13 +142,12 @@ I flag dell'origine dati.
   
 ```cpp
 DWORD m_dwStatus;  
-  
 ```  
   
 ### <a name="remarks"></a>Note  
  Questi flag specificare o indicano lo stato di vari attributi per l'oggetto origine dati. Contiene uno o più dei seguenti **enum** valori:  
   
-```  
+```cpp  
 enum DATASOURCE_FLAGS {  
     DSF_MASK_INIT     = 0xFFFFF00F,  
     DSF_PERSIST_DIRTY = 0x00000001,  
@@ -169,10 +167,7 @@ Un puntatore all'oggetto di implementazione per le informazioni sulle proprietà
 ### <a name="syntax"></a>Sintassi  
   
 ```cpp
-CUtlPropInfo<  
-T  
->* m_pCUtlPropInfo;  
-  
+CUtlPropInfo< T >* m_pCUtlPropInfo;  
 ```  
   
 ## <a name="see-also"></a>Vedere anche  

@@ -1,5 +1,5 @@
 ---
-title: Recupero di un BLOB | Documenti Microsoft
+title: Recupero di un BLOB | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 420e863fcd5d4c666bf8e9a25a2f0f53e726c871
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: dcd166e205f35133fe2c466175e07ea82970e31f
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33105205"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39339275"
 ---
 # <a name="retrieving-a-blob"></a>Recupero di un BLOB
-È possibile recuperare un oggetto di grandi dimensioni (BLOB) in vari modi binario. È possibile utilizzare **DBTYPE_BYTES** per recuperare il BLOB come una sequenza di byte o un'interfaccia quale `ISequentialStream`. Per ulteriori informazioni, vedere [BLOB e gli oggetti OLE](https://msdn.microsoft.com/en-us/library/ms711511.aspx) nel *riferimento per programmatori OLE DB*.  
+È possibile recuperare un BLOB (BLOB) in vari modi. È possibile usare `DBTYPE_BYTES` per recuperare il BLOB come una sequenza di byte oppure usare un'interfaccia simile alla `ISequentialStream`. Per altre informazioni, vedere [BLOB e gli oggetti OLE](https://msdn.microsoft.com/library/ms711511.aspx) nel *riferimento per programmatori OLE DB*.  
   
- Il codice seguente viene illustrato come recuperare un BLOB utilizzando `ISequentialStream`. La macro [BLOB_ENTRY](../../data/oledb/blob-entry.md) consente di specificare l'interfaccia e i flag utilizzati per l'interfaccia. Dopo l'apertura della tabella, il codice chiama **lettura** ripetutamente su `ISequentialStream` per leggere i byte del BLOB. Il codice chiama **versione** per l'eliminazione del puntatore a interfaccia prima di chiamare `MoveNext` per recuperare il record successivo.  
+ Il codice seguente viene illustrato come recuperare un BLOB utilizzando `ISequentialStream`. La macro [BLOB_ENTRY](../../data/oledb/blob-entry.md) consente di specificare l'interfaccia e i flag utilizzati per l'interfaccia. Dopo l'apertura della tabella, il codice chiama `Read` ripetutamente su `ISequentialStream` per leggere i byte dal BLOB. Il codice chiama `Release` per l'eliminazione del puntatore a interfaccia prima di chiamare `MoveNext` per ottenere il record successivo.  
   
-```  
+```cpp  
 class CCategories  
 {  
 public:  
@@ -57,8 +57,8 @@ while (categories.MoveNext() == S_OK)
 }  
 ```  
   
- Per ulteriori informazioni sulle macro che gestiscono i dati BLOB, vedere "Macro della mappa colonne" in [macro e funzioni globali per modelli Consumer OLE DB](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md).  
+ Per altre informazioni sulle macro che gestiscono i dati BLOB, vedere "Macro della mappa di colonna" nella [macro e funzioni globali per modelli Consumer OLE DB](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Utilizzando funzioni di accesso](../../data/oledb/using-accessors.md)   
+ [Usare funzioni di accesso](../../data/oledb/using-accessors.md)   
  [Macro e funzioni globali per modelli consumer OLE DB](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md)

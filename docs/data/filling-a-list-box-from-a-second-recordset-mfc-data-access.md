@@ -1,5 +1,5 @@
 ---
-title: La compilazione di una casella di riepilogo da un secondo Recordset (accesso ai dati MFC) | Documenti Microsoft
+title: La compilazione di una casella di riepilogo da un secondo Recordset (accesso ai dati MFC) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,12 +21,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: ed294527b4335459ab6d0658d9f57a5cb64a8fd1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e980f42384052e0ab4fbd0f98889509c41accf0b
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33090656"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39339770"
 ---
 # <a name="filling-a-list-box-from-a-second-recordset--mfc-data-access"></a>Compilazione di una casella di riepilogo da un secondo recordset (accesso ai dati MFC)
 Per impostazione predefinita, una visualizzazione di record è associata a un unico oggetto recordset i cui campi sono associati ai controlli della visualizzazione di record. In alcuni casi, può essere utile aggiungere un controllo casella di riepilogo o casella combinata nella visualizzazione di record e inserirvi valori provenienti da un secondo oggetto recordset. L'utente può usare la casella di riepilogo per selezionare una nuova categoria di informazioni da visualizzare nella visualizzazione dei record. Questo argomento spiega come e quando eseguire questa operazione.  
@@ -44,11 +44,11 @@ Per impostazione predefinita, una visualizzazione di record è associata a un un
   
 3.  Eliminare eventuali dati già presenti nella casella combinata.  
   
-4.  Spostarsi tra tutti i record del recordset, chiamando [CComboBox:: AddString](../mfc/reference/ccombobox-class.md#addstring) per ogni stringa del record corrente da aggiungere alla casella combinata.  
+4.  Spostarsi tra tutti i record del recordset, chiamando [CComboBox:: AddString](../mfc/reference/ccombobox-class.md#addstring) per ogni stringa del record corrente si desidera aggiungere alla casella combinata.  
   
 5.  Inizializzare la selezione nella casella combinata.  
   
-```  
+```cpp  
 void CSectionForm::OnInitialUpdate()  
 {  
     // ...  

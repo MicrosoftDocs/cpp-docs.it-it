@@ -1,5 +1,5 @@
 ---
-title: Modelli OLE DB | Documenti Microsoft
+title: Modelli OLE DB | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,38 +17,38 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 3133341b3dffa27cb5a6cec60ab58254fbe12dea
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: af146c37490d86a839f717d387c4072fbd649a87
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33109573"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39339437"
 ---
 # <a name="ole-db-templates"></a>Modelli OLE DB
-I modelli OLE DB rendono più semplice l'accesso ai dati OLE DB. Visual C++ fornisce le classi di modello che implementano molte delle interfacce OLE DB comunemente utilizzate. È possibile utilizzare i modelli consumer di Visual C++ per scrivere un'applicazione OLE DB (consumer) e i modelli di provider per scrivere un'applicazione server (provider).  
+I modelli OLE DB semplificano l'accesso ai dati di OLE DB. Visual C++ fornisce le classi di modello che implementano molte delle interfacce OLE DB usate comune. È possibile usare i modelli consumer Visual C++ per scrivere un'applicazione client / consumer OLE DB e i modelli di provider per scrivere un'applicazione server (provider).  
   
 ## <a name="in-this-section"></a>In questa sezione  
  [Modelli Consumer OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)  
- Vengono forniti collegamenti alle classi di modelli Consumer OLE DB elencati per l'utilizzo.  
+ Vengono forniti collegamenti alle classi di modelli Consumer OLE DB elencate dall'utilizzo.  
   
  [Modelli Provider OLE DB](../../data/oledb/ole-db-provider-templates-reference.md)  
- Vengono forniti collegamenti alle classi di modello di Provider OLE DB elencati per l'utilizzo.  
+ Vengono forniti collegamenti alle classi di modello di Provider OLE DB elencate dall'utilizzo.  
   
 ## <a name="related-sections"></a>Sezioni correlate  
  [Panoramica della programmazione con OLE DB](../../data/oledb/ole-db-programming-overview.md)  
- Descrive le novità di OLE DB e vengono illustrati l'accesso universale ai dati in OLE DB.  
+ Descrive le novità di OLE DB e illustra l'accesso universale ai dati in OLE DB.  
   
- [Riferimento per programmatori OLE DB](https://msdn.microsoft.com/en-us/library/ms713643.aspx)  
+ [Riferimento per programmatori OLE DB](https://msdn.microsoft.com/library/ms713643.aspx)  
  Vengono forniti collegamenti alla documentazione di Windows SDK in OLE DB.  
   
  [Esempi di modelli OLE DB](../../visual-cpp-samples.md)  
  Vengono forniti collegamenti agli esempi che illustrano come utilizzare OLE DB nei progetti di modelli OLE DB.  
   
  [Modelli Consumer OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)  
- Vengono illustrati i modelli Consumer OLE DB materiale concettuale.  
+ Materiale concettuale vengono illustrati i modelli Consumer OLE DB.  
   
  [Modelli Provider OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)  
- Vengono illustrati i modelli di Provider OLE DB materiale concettuale.  
+ Materiale concettuale vengono illustrati i modelli di Provider OLE DB.  
   
  [Creazione di un consumer OLE DB](../../data/oledb/creating-an-ole-db-consumer.md)  
  Descrive la creazione di un consumer di modelli OLE DB con o senza la creazione guidata Consumer OLE DB ATL.  
@@ -60,7 +60,7 @@ I modelli OLE DB rendono più semplice l'accesso ai dati OLE DB. Visual C++ forn
  Descrive i provider di creazione in grado di scrivere nell'archivio dati.  
   
  [Attributi del consumer OLE DB](../../windows/ole-db-consumer-attributes.md)  
- Illustra un'interfaccia semplificata per inserire il codice in base i modelli Consumer OLE DB per creare i consumer OLE DB di lavoro.  
+ Descrive un'interfaccia semplificata per inserire il codice di base di modelli Consumer OLE DB per creare i consumer OLE DB di lavoro.  
   
  [Riferimento di Active Template Library (ATL)](../../atl/atl-com-desktop-components.md)  
  Viene fornito materiale di riferimento per la Libreria ATL, un insieme di classi C++ basate su modelli che semplifica la programmazione di oggetti COM.  

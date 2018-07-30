@@ -1,5 +1,5 @@
 ---
-title: Classe CNoRowset | Documenti Microsoft
+title: Classe CNoRowset | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,15 +21,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 87d005dc19ef286bc4b0da927ecabcd90e6f0235
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e92c9bfb49bbb64faca633f04bb87f40028b6e1e
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33098160"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39339562"
 ---
 # <a name="cnorowset-class"></a>Classe CNoRowset
-Può essere utilizzato come argomento di modello (`TRowset`) per [CCommand](../../data/oledb/ccommand-class.md) o [CTable](../../data/oledb/ctable-class.md).  
+Può essere utilizzato come argomento di modello (`TRowset`) per [CCommand](../../data/oledb/ccommand-class.md) oppure [CTable](../../data/oledb/ctable-class.md).  
   
 ## <a name="syntax"></a>Sintassi
 
@@ -38,28 +38,28 @@ template <class TAccessor = CAccessorBase>
 class CNoRowset  
 ```  
   
-#### <a name="parameters"></a>Parametri  
- `TAccessor`  
+### <a name="parameters"></a>Parametri  
+ *TAccessor*  
  Una classe di funzione di accesso. Il valore predefinito è `CAccessorBase`.  
   
 ## <a name="remarks"></a>Note  
- Utilizzare `CNoRowset` come argomento di modello se il comando non restituisce un set di righe.  
+ Usare `CNoRowset` come argomento di modello, se il comando non restituisce un set di righe.  
   
- `CNoRowset` implementa i metodi stub seguenti, ognuna delle quali corrispondono agli altri metodi di classe della funzione di accesso:  
+ `CNoRowset` implementa i metodi stub seguenti, ognuno dei quali corrisponde a altri metodi della classe della funzione di accesso:  
   
--   **BindFinished** -indica se l'associazione viene completata (restituisce `S_OK`).  
+-   `BindFinished` -Indica se l'associazione è completa (restituisce `S_OK`).  
   
--   **Chiudi** -rilascia l'interfaccia IRowset corrente e righe.  
+-   `Close` -Rilascia le righe e l'interfaccia IRowset corrente.  
   
--   `GetIID` : Recupera l'ID di interfaccia di un punto di connessione.  
+-   `GetIID` -Recupera l'ID di interfaccia di un punto di connessione.  
   
--   **GetInterface** -recupera un'interfaccia.  
+-   `GetInterface` : Recupera un'interfaccia.  
   
 -   `GetInterfacePtr` : Recupera un puntatore a interfaccia incapsulato.  
   
--   **SetAccessor** -imposta un puntatore alla funzione di accesso.  
+-   `SetAccessor` -Imposta un puntatore alla funzione di accesso.  
   
--   **SetupOptionalRowsetInterfaces** -imposta le interfacce facoltative per il set di righe.  
+-   `SetupOptionalRowsetInterfaces` -Imposta interfacce facoltative per il set di righe.  
   
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** atldbcli.h  
