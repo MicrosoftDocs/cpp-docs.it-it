@@ -1,5 +1,5 @@
 ---
-title: funzionale (STL/CLR) | Documenti Microsoft
+title: funzionali (STL/CLR) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -73,15 +73,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 04596cd043b90d8016cd0f9b1ebfe05a9bf82f72
-ms.sourcegitcommit: 301bb19056e5bae84ff50f7d1df1e546efe225ba
+ms.openlocfilehash: 98640997536bc48330beeda793a6067e3da97b5f
+ms.sourcegitcommit: bad2441d1930275ff506d44759d283d94cccd1c0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36305904"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39376365"
 ---
 # <a name="functional-stlclr"></a>functional (STL/CLR)
-Includere l'intestazione STL/CLR `<cliext/functional>` per definire le numerose funzioni e i delegati modello correlati e classi modello.  
+Includere l'intestazione STL/CLR `<cliext/functional>` per definire le numerose funzioni e i delegati modello correlato e classi modello.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -90,7 +90,7 @@ Includere l'intestazione STL/CLR `<cliext/functional>` per definire le numerose 
 ```  
 
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** \<cliext/funzionale >  
+ **Intestazione:** \<cliext/functional >  
   
  **Namespace:** cliext 
 
@@ -99,47 +99,47 @@ Includere l'intestazione STL/CLR `<cliext/functional>` per definire le numerose 
 |delegato|Descrizione|  
 |--------------|-----------------|  
 |[binary_delegate (STL/CLR)](#binary_delegate)|Delegato di due argomenti.|  
-|[binary_delegate_noreturn (STL/CLR)](#binary_delegate_noreturn)|Delegato di due argomenti restituzione `void`.|  
-|[unary_delegate (STL/CLR)](#unary_delegate)|Delegato di un solo argomento.|  
-|[unary_delegate_noreturn (STL/CLR)](#unary_delegate_noreturn)|Delegato di un solo argomento restituzione `void`.|  
+|[binary_delegate_noreturn (STL/CLR)](#binary_delegate_noreturn)|Delegato di due argomenti restituisce **void**.|  
+|[unary_delegate (STL/CLR)](#unary_delegate)|Un solo argomento delegato.|  
+|[unary_delegate_noreturn (STL/CLR)](#unary_delegate_noreturn)|Delegato di un solo argomento restituisce **void**.|  
   
 |Classe|Descrizione|  
 |-----------|-----------------|  
-|[binary_negate (STL/CLR)](#binary_negate)|Funtore per negare un funtore di due argomenti.|  
-|[binder1st (STL/CLR)](#binder1st)|Funtore di associare primo argomento a una funzione di due argomenti.|  
-|[binder2nd (STL/CLR)](#binder2nd)|Funtore di associare secondo argomento a una funzione di due argomenti.|  
+|[binary_negate (STL/CLR)](#binary_negate)|Funtore da negare un funtore due argomenti.|  
+|[binder1st (STL/CLR)](#binder1st)|Funtore associare primo argomento a un funtore due argomenti.|  
+|[binder2nd (STL/CLR)](#binder2nd)|Funtore associare secondo argomento a un funtore due argomenti.|  
 |[divides (STL/CLR)](#divides)|Dividere funtore.|  
 |[equal_to (STL/CLR)](#equal_to)|Funtore di confronto uguale.|  
 |[greater (STL/CLR)](#greater)|Maggiore funtore di confronto.|  
-|[greater_equal (STL/CLR)](#greater_equal)|Funtore di confronto maggiore o uguale a.|  
+|[greater_equal (STL/CLR)](#greater_equal)|Funtore di confronto maggiore o uguale.|  
 |[less (STL/CLR)](#less)|Meno funtore di confronto.|  
 |[less_equal (STL/CLR)](#less_equal)|Funtore di confronto minore o uguale.|  
 |[logical_and (STL/CLR)](#logical_and)|Funtore AND logico.|  
-|[logical_not (STL/CLR)](#logical_not)|Logico non funtore.|  
+|[logical_not (STL/CLR)](#logical_not)|Logica non funtore.|  
 |[logical_or (STL/CLR)](#logical_or)|Funtore OR logico.|  
-|[minus (STL/CLR)](#minus)|Sottrarre il funtore.|  
+|[minus (STL/CLR)](#minus)|Sottrarre funtore.|  
 |[modulus (STL/CLR)](#modulus)|Funtore di modulo.|  
-|[multiplies (STL/CLR)](#multiplies)|Moltiplicare funtore.|  
-|[negate (STL/CLR)](#negate)|Funtore per restituire il relativo argomento negato.|  
+|[multiplies (STL/CLR)](#multiplies)|Moltiplicare il funtore.|  
+|[negate (STL/CLR)](#negate)|Funtore per restituire il relativo argomento negata.|  
 |[not_equal_to (STL/CLR)](#not_equal_to)|Funtore di confronto non è uguale.|  
 |[plus (STL/CLR)](#plus)|Aggiungere funtore.|  
-|[unary_negate (STL/CLR)](#unary_negate)|Funtore per negare un funtore un solo argomento.|  
+|[unary_negate (STL/CLR)](#unary_negate)|Funtore da negare un funtore solo argomento.|  
   
 |Funzione|Descrizione|  
 |--------------|-----------------|  
-|[bind1st (STL/CLR)](#bind1st)|Genera un binder1st per un argomento e il funtore.|  
-|[bind2nd (STL/CLR)](#bind2nd)|Genera un binder2nd per un argomento e il funtore.|  
-|[not1 (STL/CLR)](#not1)|Genera un unary_negate per una funzione.|  
-|[not2 (STL/CLR)](#not2)|Genera un binary_negate per una funzione.|  
+|[bind1st (STL/CLR)](#bind1st)|Genera un binder1st per un argomento o un funtore.|  
+|[bind2nd (STL/CLR)](#bind2nd)|Genera un binder2nd per un argomento o un funtore.|  
+|[not1 (STL/CLR)](#not1)|Genera un unary_negate per un funtore.|  
+|[not2 (STL/CLR)](#not2)|Genera un binary_negate per un funtore.|  
    
 ## <a name="members"></a>Membri
 
 ## <a name="binary_delegate"></a> binary_delegate (STL/CLR)
-La classe genereic descrive un delegato di due argomenti. Utilizzare, specificare un delegato in termini relativi tipi di argomenti e valori restituiti.  
+La classe genereic descrive un delegato di due argomenti. Usarlo specificare un delegato in termini relativi tipi di argomenti e valori restituiti.  
   
 ### <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 generic<typename Arg1,  
     typename Arg2,  
     typename Result>  
@@ -147,17 +147,17 @@ generic<typename Arg1,
 ```  
   
 #### <a name="parameters"></a>Parametri  
- arg1  
+ *arg1*  
  Il tipo del primo argomento.  
   
- Arg2  
+ *Arg2*  
  Il tipo del secondo argomento.  
   
- Risultato  
+ *Risultato*  
  Tipo restituito.  
   
 ### <a name="remarks"></a>Note  
- Il delegato genereic descrive una funzione di due argomenti.  
+ Il delegato genereic descrive una funzione a due argomenti.  
   
  Si noti che per:  
   
@@ -165,7 +165,7 @@ generic<typename Arg1,
   
  `binary_delegate<int, int, int> Fun2;`  
   
- i tipi di `Fun1` e `Fun2` sono sinonimi, mentre per:  
+ i tipi `Fun1` e `Fun2` sono sinonimi, mentre per:  
   
  `delegate int Fun1(int, int);`  
   
@@ -199,7 +199,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -209,25 +208,25 @@ compare(L'b', L'a') = False
 ```  
 
 ## <a name="binary_delegate_noreturn"></a> binary_delegate_noreturn (STL/CLR)
-La classe genereic descrive un delegato di due argomenti che restituisce `void`. Utilizzare, specificare un delegato in termini di argomento.  
+La classe genereic descrive un delegato di due argomenti che restituisce **void**. Usarlo specificare un delegato in termini di relativo argomento.  
   
 ### <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 generic<typename Arg1,  
     typename Arg2>  
     delegate void binary_delegate(Arg1, Arg2);  
 ```  
   
 #### <a name="parameters"></a>Parametri  
- arg1  
+ *arg1*  
  Il tipo del primo argomento.  
   
- Arg2  
+ *Arg2*  
  Il tipo del secondo argomento.  
   
 ### <a name="remarks"></a>Note  
- Il delegato genereic descrive una funzione di due argomenti che restituisce `void`.  
+ Il delegato genereic descrive una funzione di due argomenti che restituisca **void**.  
   
  Si noti che per:  
   
@@ -235,7 +234,7 @@ generic<typename Arg1,
   
  `binary_delegate_noreturn<int, int> Fun2;`  
   
- i tipi di `Fun1` e `Fun2` sono sinonimi, mentre per:  
+ i tipi `Fun1` e `Fun2` sono sinonimi, mentre per:  
   
  `delegate void Fun1(int, int);`  
   
@@ -267,7 +266,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -277,11 +275,11 @@ compare(b, a) = False
 ```  
 
 ## <a name="binary_negate"></a> binary_negate (STL/CLR)
-La classe modello descrive una funzione che, quando viene chiamato, restituisce l'operatore logico non del relativo stored funtore di due argomenti. Utilizzare, specificare un oggetto funzione in termini del funtore stored.  
+La classe modello descrive un funtore che, quando viene chiamato, restituisce l'operatore logico non del relativo stored funtore di due argomenti. Usarlo specificare un oggetto funzione in termini del funtore stored.  
   
 ### <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 template<typename Fun>  
     ref class binary_negate  
     { // wrap operator()  
@@ -304,8 +302,8 @@ public:
 ```  
   
 #### <a name="parameters"></a>Parametri  
- Fun  
- Tipo del funtore stored.  
+ *Fun*  
+ Il tipo del funtore stored.  
   
 ## <a name="member-functions"></a>Funzioni membro  
   
@@ -315,7 +313,7 @@ public:
 |first_argument_type|Il tipo del primo argomento funtore.|  
 |result_type|Il tipo del risultato funtore.|  
 |second_argument_type|Il tipo del secondo argomento funtore.|  
-|stored_function_type|Tipo del funtore.|  
+|stored_function_type|Il tipo del funtore.|  
   
 |Member|Descrizione|  
 |------------|-----------------|  
@@ -324,10 +322,10 @@ public:
 |Operatore|Descrizione|  
 |--------------|-----------------|  
 |operator()|Calcola la funzione desiderata.|  
-|operatore delegate_type^()|Esegue il cast il funtore a un delegato.|  
+|operatore delegate_type^()|Il funtore a un delegato viene eseguito il cast.|  
   
 ### <a name="remarks"></a>Note  
- La classe modello descrive un funtore di due argomenti che archivia un altro funtore di due argomenti. Definisce l'operatore membro `operator()` restituisce in modo che, quando l'oggetto viene chiamato come una funzione, l'operatore logico non di un funtore stored chiamato con due argomenti.  
+ La classe modello descrive un funtore di due argomenti che archivia un altro funtore di due argomenti. Definisce l'operatore membro `operator()` restituisce in modo che, quando l'oggetto viene chiamato come una funzione, la logica non del funtore stored chiamato con due argomenti.  
   
  È anche possibile passare l'oggetto come argomento di funzione il cui tipo è `delegate_type^` e verrà convertito in modo appropriato.  
   
@@ -378,7 +376,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -389,11 +386,11 @@ int main()
 ```  
 
 ## <a name="bind1st"></a> bind1st (STL/CLR)
-Genera un `binder1st` per un argomento e il funtore.  
+Genera un `binder1st` per un argomento o un funtore.  
   
 ### <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 template<typename Fun,  
     typename Arg>  
     binder1st<Fun> bind1st(Fun% functor,  
@@ -401,21 +398,21 @@ template<typename Fun,
 ```  
   
 #### <a name="template-parameters"></a>Parametri di template  
- Arg  
+ *arg*  
  Il tipo di argomento.  
   
- Fun  
- Tipo del funtore.  
+ *Fun*  
+ Il tipo del funtore.  
   
 #### <a name="function-parameters"></a>Parametri di funzione  
- funtore  
+ *funtore*  
  Il funtore per eseguire il wrapping.  
   
- left  
+ *left*  
  Il primo argomento per eseguire il wrapping.  
   
 ### <a name="remarks"></a>Note  
- La funzione modello restituisce [binder1st (STL/CLR)](../dotnet/binder1st-stl-clr.md)`<Fun>(functor, left)`. Utilizzato come un modo pratico per eseguire il wrapping di una funzione di due argomenti e il relativo primo argomento in una funzione di un argomento che viene chiamato con un secondo argomento.  
+ La funzione modello restituisce [binder1st (STL/CLR)](../dotnet/binder1st-stl-clr.md)`<Fun>(functor, left)`. Usarlo come un modo pratico per eseguire il wrapping di un funtore due argomenti e il relativo primo argomento in un funtore solo argomento da cui viene chiamato con un secondo argomento.  
   
 ### <a name="example"></a>Esempio  
   
@@ -457,7 +454,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -467,11 +463,11 @@ int main()
 ```  
 
 ## <a name="bind2nd"></a> bind2nd (STL/CLR)
-Genera un `binder2nd` per un argomento e il funtore.  
+Genera un `binder2nd` per un argomento o un funtore.  
   
 ### <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 template<typename Fun,  
     typename Arg>  
     binder2nd<Fun> bind2nd(Fun% functor,  
@@ -479,21 +475,21 @@ template<typename Fun,
 ```  
   
 #### <a name="template-parameters"></a>Parametri di template  
- Arg  
+ *arg*  
  Il tipo di argomento.  
   
- Fun  
- Tipo del funtore.  
+ *Fun*  
+ Il tipo del funtore.  
   
 #### <a name="function-parameters"></a>Parametri di funzione  
- funtore  
+ *funtore*  
  Il funtore per eseguire il wrapping.  
   
- right  
+ *right*  
  Il secondo argomento per eseguire il wrapping.  
   
 ### <a name="remarks"></a>Note  
- La funzione modello restituisce [binder2nd (STL/CLR)](../dotnet/binder2nd-stl-clr.md)`<Fun>(functor, right)`. Utilizzato come un modo pratico per eseguire il wrapping di una funzione di due argomenti e il secondo argomento in una funzione di un argomento che viene chiamato con un primo argomento.  
+ La funzione modello restituisce [binder2nd (STL/CLR)](../dotnet/binder2nd-stl-clr.md)`<Fun>(functor, right)`. Usarlo come un modo pratico per eseguire il wrapping di un funtore due argomenti e il relativo argomento di secondo in un funtore solo argomento da cui viene chiamato con un primo argomento.  
   
 ### <a name="example"></a>Esempio  
   
@@ -535,7 +531,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -545,11 +540,11 @@ int main()
 ```  
 
 ## <a name="binder1st"></a> binder1st (STL/CLR)
-La classe modello descrive una funzione di un argomento che, quando viene chiamato, restituisce il funtore di due argomenti stored chiamato con il primo argomento archiviato e il secondo argomento fornito. Utilizzare, specificare un oggetto funzione in termini del funtore stored.  
+La classe modello descrive un solo argomento functor che, quando viene chiamato, restituisce il funtore due argomenti stored chiamato con il primo argomento archiviato e il secondo argomento specificato. Usarlo specificare un oggetto funzione in termini del funtore stored.  
   
 ### <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 template<typename Fun>  
     ref class binder1st  
     { // wrap operator()  
@@ -571,8 +566,8 @@ public:
 ```  
   
 #### <a name="parameters"></a>Parametri  
- Fun  
- Tipo del funtore stored.  
+ *Fun*  
+ Il tipo del funtore stored.  
   
 ### <a name="member-functions"></a>Funzioni membro  
   
@@ -582,7 +577,7 @@ public:
 |first_argument_type|Il tipo del primo argomento funtore.|  
 |result_type|Il tipo del risultato funtore.|  
 |second_argument_type|Il tipo del secondo argomento funtore.|  
-|stored_function_type|Tipo del funtore.|  
+|stored_function_type|Il tipo del funtore.|  
   
 |Member|Descrizione|  
 |------------|-----------------|  
@@ -591,10 +586,10 @@ public:
 |Operatore|Descrizione|  
 |--------------|-----------------|  
 |operator()|Calcola la funzione desiderata.|  
-|operatore delegate_type^()|Esegue il cast il funtore a un delegato.|  
+|operatore delegate_type^()|Il funtore a un delegato viene eseguito il cast.|  
   
 ### <a name="remarks"></a>Note  
- La classe modello descrive una funzione di un argomento che archivia un funtore di due argomenti e il primo argomento. Definisce l'operatore membro `operator()` in modo che, quando l'oggetto viene chiamato come una funzione, restituisce il risultato della chiamata il funtore archiviato con il primo argomento archiviato e il secondo argomento fornito.  
+ La classe modello descrive un funtore solo argomento che archivia un funtore due argomenti e un primo argomento. Definisce l'operatore membro `operator()` in modo che, quando l'oggetto viene chiamato come una funzione, restituisce il risultato della chiamata al metodo il funtore archiviato con il primo argomento archiviato e il secondo argomento specificato.  
   
  È anche possibile passare l'oggetto come argomento di funzione il cui tipo è `delegate_type^` e verrà convertito in modo appropriato.  
   
@@ -638,7 +633,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -648,11 +642,11 @@ int main()
 ```  
 
 ## <a name="binder2nd"></a> binder2nd (STL/CLR)
-La classe modello descrive una funzione di un argomento che, quando viene chiamato, restituisce il funtore di due argomenti stored chiamato con il primo argomento specificato e il secondo argomento stored. Utilizzare, specificare un oggetto funzione in termini del funtore stored.  
+La classe modello descrive un solo argomento functor che, quando viene chiamato, restituisce il funtore due argomenti stored chiamato con il primo argomento specificato e il relativo argomento secondo stored. Usarlo specificare un oggetto funzione in termini del funtore stored.  
   
 ### <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 template<typename Fun>  
     ref class binder2nd  
     { // wrap operator()  
@@ -674,8 +668,8 @@ public:
 ```  
   
 #### <a name="parameters"></a>Parametri  
- Fun  
- Tipo del funtore stored.  
+ *Fun*  
+ Il tipo del funtore stored.  
   
 ## <a name="member-functions"></a>Funzioni membro  
   
@@ -685,7 +679,7 @@ public:
 |first_argument_type|Il tipo del primo argomento funtore.|  
 |result_type|Il tipo del risultato funtore.|  
 |second_argument_type|Il tipo del secondo argomento funtore.|  
-|stored_function_type|Tipo del funtore.|  
+|stored_function_type|Il tipo del funtore.|  
   
 |Member|Descrizione|  
 |------------|-----------------|  
@@ -694,10 +688,10 @@ public:
 |Operatore|Descrizione|  
 |--------------|-----------------|  
 |operator()|Calcola la funzione desiderata.|  
-|operatore delegate_type^()|Esegue il cast il funtore a un delegato.|  
+|operatore delegate_type^()|Il funtore a un delegato viene eseguito il cast.|  
   
 ### <a name="remarks"></a>Note  
- La classe modello descrive una funzione di un argomento che archivia un funtore di due argomenti e un secondo argomento. Definisce l'operatore membro `operator()` in modo che, quando l'oggetto viene chiamato come una funzione, restituisce il risultato della chiamata il funtore archiviato con il primo argomento specificato e il secondo argomento stored.  
+ La classe modello descrive un funtore solo argomento che archivia un funtore due argomenti e un secondo argomento. Definisce l'operatore membro `operator()` in modo che, quando l'oggetto viene chiamato come una funzione, restituisce il risultato della chiamata al metodo il funtore archiviato con il primo argomento specificato e il secondo argomento stored.  
   
  È anche possibile passare l'oggetto come argomento di funzione il cui tipo è `delegate_type^` e verrà convertito in modo appropriato.  
   
@@ -741,7 +735,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -751,11 +744,11 @@ int main()
 ```  
   
 ## <a name="divides"></a> Divide (STL/CLR)
-La classe modello descrive una funzione che, quando viene chiamato, restituisce il primo argomento diviso per il secondo. Utilizzare, specificare un oggetto funzione in relazione al relativo tipo di argomento.  
+La classe modello descrive un funtore che, quando viene chiamato, restituisce il primo argomento diviso per il secondo. Usarlo specificare un oggetto funzione in base al relativo tipo di argomento.  
   
 ### <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 template<typename Arg>  
     ref class divides  
     { // wrap operator()  
@@ -777,8 +770,8 @@ public:
 ```  
   
 #### <a name="parameters"></a>Parametri  
- Arg  
- Il tipo di argomenti e il valore restituito.  
+ *arg*  
+ Tipo di argomenti e il valore restituito.  
   
 ### <a name="member-functions"></a>Funzioni membro  
   
@@ -796,10 +789,10 @@ public:
 |Operatore|Descrizione|  
 |--------------|-----------------|  
 |operator()|Calcola la funzione desiderata.|  
-|operatore delegate_type^()|Esegue il cast il funtore a un delegato.|  
+|operatore delegate_type^()|Il funtore a un delegato viene eseguito il cast.|  
   
 ### <a name="remarks"></a>Note  
- La classe modello descrive un funtore di due argomenti. Definisce l'operatore membro `operator()` in modo che, quando l'oggetto viene chiamato come una funzione, restituisce il primo argomento diviso per il secondo.  
+ La classe modello descrive un funtore due argomenti. Definisce l'operatore membro `operator()` in modo che, quando l'oggetto viene chiamato come una funzione, restituisce il primo argomento diviso per il secondo.  
   
  È anche possibile passare l'oggetto come argomento di funzione il cui tipo è `delegate_type^` e verrà convertito in modo appropriato.  
   
@@ -840,7 +833,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -850,11 +842,11 @@ int main()
 ```  
 
 ## <a name="equal_to"></a> equal_to (STL/CLR)
-La classe modello descrive una funzione che, quando viene chiamato, restituisce true solo se il primo argomento è uguale al secondo. Utilizzare, specificare un oggetto funzione in relazione al relativo tipo di argomento.  
+La classe modello descrive un funtore che, quando viene chiamato, restituisce true solo se il primo argomento è uguale al secondo. Usarlo specificare un oggetto funzione in base al relativo tipo di argomento.  
   
 ### <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 template<typename Arg>  
     ref class equal_to  
     { // wrap operator()  
@@ -876,8 +868,8 @@ public:
 ```  
   
 #### <a name="parameters"></a>Parametri  
- Arg  
- Tipo degli argomenti.  
+ *arg*  
+ Il tipo di argomenti.  
   
 ### <a name="member-functions"></a>Funzioni membro  
   
@@ -895,10 +887,10 @@ public:
 |Operatore|Descrizione|  
 |--------------|-----------------|  
 |operator()|Calcola la funzione desiderata.|  
-|operatore delegate_type^()|Esegue il cast il funtore a un delegato.|  
+|operatore delegate_type^()|Il funtore a un delegato viene eseguito il cast.|  
   
 ### <a name="remarks"></a>Note  
- La classe modello descrive un funtore di due argomenti. Definisce l'operatore membro `operator()` in modo che, quando l'oggetto viene chiamato come una funzione, viene restituito true solo se il primo argomento è uguale al secondo.  
+ La classe modello descrive un funtore due argomenti. Definisce l'operatore membro `operator()` in modo che, quando l'oggetto viene chiamato come una funzione, restituisce true solo se il primo argomento è uguale al secondo.  
   
  È anche possibile passare l'oggetto come argomento di funzione il cui tipo è `delegate_type^` e verrà convertito in modo appropriato.  
   
@@ -939,7 +931,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -949,11 +940,11 @@ int main()
 ```  
 
 ## <a name="greater"></a> maggiore (STL/CLR)
-La classe modello descrive una funzione che, quando viene chiamato, restituisce true solo se il primo argomento è maggiore del secondo. Utilizzare, specificare un oggetto funzione in relazione al relativo tipo di argomento.  
+La classe modello descrive un funtore che, quando viene chiamato, restituisce true solo se il primo argomento è maggiore del secondo. Usarlo specificare un oggetto funzione in base al relativo tipo di argomento.  
   
 ### <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 template<typename Arg>  
     ref class greater  
     { // wrap operator()  
@@ -975,8 +966,8 @@ public:
 ```  
   
 #### <a name="parameters"></a>Parametri  
- Arg  
- Tipo degli argomenti.  
+ *arg*  
+ Il tipo di argomenti.  
   
 ### <a name="member-functions"></a>Funzioni membro  
   
@@ -994,10 +985,10 @@ public:
 |Operatore|Descrizione|  
 |--------------|-----------------|  
 |operator()|Calcola la funzione desiderata.|  
-|operatore delegate_type ^|Esegue il cast il funtore a un delegato.|  
+|operatore delegate_type ^|Il funtore a un delegato viene eseguito il cast.|  
   
 ### <a name="remarks"></a>Note  
- La classe modello descrive un funtore di due argomenti. Definisce l'operatore membro `operator()` in modo che, quando l'oggetto viene chiamato come una funzione, viene restituito true solo se il primo argomento è maggiore del secondo.  
+ La classe modello descrive un funtore due argomenti. Definisce l'operatore membro `operator()` in modo che, quando l'oggetto viene chiamato come una funzione, restituisce true solo se il primo argomento è maggiore del secondo.  
   
  È anche possibile passare l'oggetto come argomento di funzione il cui tipo è `delegate_type^` e verrà convertito in modo appropriato.  
   
@@ -1038,7 +1029,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1048,11 +1038,11 @@ int main()
 ```  
 
 ## <a name="greater_equal"></a> greater_equal (STL/CLR)
-La classe modello descrive una funzione che, quando viene chiamato, restituisce true solo se il primo argomento è maggiore o uguale al secondo. Utilizzare, specificare un oggetto funzione in relazione al relativo tipo di argomento.  
+La classe modello descrive un funtore che, quando viene chiamato, restituisce true solo se il primo argomento è maggiore o uguale al secondo. Usarlo specificare un oggetto funzione in base al relativo tipo di argomento.  
   
 ### <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 template<typename Arg>  
     ref class greater_equal  
     { // wrap operator()  
@@ -1074,8 +1064,8 @@ public:
 ```  
   
 #### <a name="parameters"></a>Parametri  
- Arg  
- Tipo degli argomenti.  
+ *arg*  
+ Il tipo di argomenti.  
   
 ### <a name="member-functions"></a>Funzioni membro  
   
@@ -1093,10 +1083,10 @@ public:
 |Operatore|Descrizione|  
 |--------------|-----------------|  
 |operator()|Calcola la funzione desiderata.|  
-|operatore delegate_type ^|Esegue il cast il funtore a un delegato.|  
+|operatore delegate_type ^|Il funtore a un delegato viene eseguito il cast.|  
   
 ### <a name="remarks"></a>Note  
- La classe modello descrive un funtore di due argomenti. Definisce l'operatore membro `operator()` in modo che, quando l'oggetto viene chiamato come una funzione, viene restituito true solo se il primo argomento è maggiore o uguale al secondo.  
+ La classe modello descrive un funtore due argomenti. Definisce l'operatore membro `operator()` in modo che, quando l'oggetto viene chiamato come una funzione, restituisce true solo se il primo argomento è maggiore o uguale al secondo.  
   
  È anche possibile passare l'oggetto come argomento di funzione il cui tipo è `delegate_type^` e verrà convertito in modo appropriato.  
   
@@ -1137,7 +1127,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1147,11 +1136,11 @@ int main()
 ```  
 
 ## <a name="less"></a> less (STL/CLR)
-La classe modello descrive una funzione che, quando viene chiamato, restituisce true solo se il primo argomento è minore del secondo. Utilizzare, specificare un oggetto funzione in relazione al relativo tipo di argomento.  
+La classe modello descrive un funtore che, quando viene chiamato, restituisce true solo se il primo argomento è minore del secondo. Usarlo specificare un oggetto funzione in base al relativo tipo di argomento.  
   
 ### <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 template<typename Arg>  
     ref class less  
     { // wrap operator()  
@@ -1173,8 +1162,8 @@ public:
 ```  
   
 #### <a name="parameters"></a>Parametri  
- Arg  
- Tipo degli argomenti.  
+ *arg*  
+ Il tipo di argomenti.  
   
 ### <a name="member-functions"></a>Funzioni membro  
   
@@ -1192,10 +1181,10 @@ public:
 |Operatore|Descrizione|  
 |--------------|-----------------|  
 |operator()|Calcola la funzione desiderata.|  
-|operatore delegate_type ^|Esegue il cast il funtore a un delegato.|  
+|operatore delegate_type ^|Il funtore a un delegato viene eseguito il cast.|  
   
 ### <a name="remarks"></a>Note  
- La classe modello descrive un funtore di due argomenti. Definisce l'operatore membro `operator()` in modo che, quando l'oggetto viene chiamato come una funzione, viene restituito true solo se il primo argomento è minore del secondo.  
+ La classe modello descrive un funtore due argomenti. Definisce l'operatore membro `operator()` in modo che, quando l'oggetto viene chiamato come una funzione, restituisce true solo se il primo argomento è minore del secondo.  
   
  È anche possibile passare l'oggetto come argomento di funzione il cui tipo è `delegate_type^` e verrà convertito in modo appropriato.  
   
@@ -1236,7 +1225,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1246,11 +1234,11 @@ int main()
 ``` 
 
 ## <a name="less_equal"></a> less_equal (STL/CLR)
-La classe modello descrive una funzione che, quando viene chiamato, restituisce true solo se il primo argomento è minore o uguale al secondo. Utilizzare, specificare un oggetto funzione in relazione al relativo tipo di argomento.  
+La classe modello descrive un funtore che, quando viene chiamato, restituisce true solo se il primo argomento è minore o uguale al secondo. Usarlo specificare un oggetto funzione in base al relativo tipo di argomento.  
   
 ### <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 template<typename Arg>  
     ref class less_equal  
     { // wrap operator()  
@@ -1272,8 +1260,8 @@ public:
 ```  
   
 #### <a name="parameters"></a>Parametri  
- Arg  
- Tipo degli argomenti.  
+ *arg*  
+ Il tipo di argomenti.  
   
 ### <a name="member-functions"></a>Funzioni membro  
   
@@ -1291,10 +1279,10 @@ public:
 |Operatore|Descrizione|  
 |--------------|-----------------|  
 |operator()|Calcola la funzione desiderata.|  
-|operatore delegate_type ^|Esegue il cast il funtore a un delegato.|  
+|operatore delegate_type ^|Il funtore a un delegato viene eseguito il cast.|  
   
 ### <a name="remarks"></a>Note  
- La classe modello descrive un funtore di due argomenti. Definisce l'operatore membro `operator()` in modo che, quando l'oggetto viene chiamato come una funzione, viene restituito true solo se il primo argomento è minore o uguale al secondo.  
+ La classe modello descrive un funtore due argomenti. Definisce l'operatore membro `operator()` in modo che, quando l'oggetto viene chiamato come una funzione, restituisce true solo se il primo argomento è minore o uguale al secondo.  
   
  È anche possibile passare l'oggetto come argomento di funzione il cui tipo è `delegate_type^` e verrà convertito in modo appropriato.  
   
@@ -1335,7 +1323,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1345,11 +1332,11 @@ int main()
 ``` 
 
 ## <a name="logical_and"></a> logical_and (STL/CLR)
-La classe modello descrive una funzione che, quando viene chiamato, restituisce true solo se sia il primo argomento e il secondo test come true. Utilizzare, specificare un oggetto funzione in relazione al relativo tipo di argomento.  
+La classe modello descrive un funtore che, quando viene chiamato, restituisce true solo se il primo argomento sia il secondo test come true. Usarlo specificare un oggetto funzione in base al relativo tipo di argomento.  
   
 ### <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 template<typename Arg>  
     ref class logical_and  
     { // wrap operator()  
@@ -1371,8 +1358,8 @@ public:
 ```  
   
 #### <a name="parameters"></a>Parametri  
- Arg  
- Tipo degli argomenti.  
+ *arg*  
+ Il tipo di argomenti.  
   
 ### <a name="member-functions"></a>Funzioni membro  
   
@@ -1390,10 +1377,10 @@ public:
 |Operatore|Descrizione|  
 |--------------|-----------------|  
 |operator()|Calcola la funzione desiderata.|  
-|operatore delegate_type ^|Esegue il cast il funtore a un delegato.|  
+|operatore delegate_type ^|Il funtore a un delegato viene eseguito il cast.|  
   
 ### <a name="remarks"></a>Note  
- La classe modello descrive un funtore di due argomenti. Definisce l'operatore membro `operator()` in modo che, quando l'oggetto viene chiamato come una funzione, viene restituito true solo se sia il primo argomento e il secondo test come true.  
+ La classe modello descrive un funtore due argomenti. Definisce l'operatore membro `operator()` in modo che, quando l'oggetto viene chiamato come una funzione, viene restituito true solo se il primo argomento sia il secondo test come true.  
   
  È anche possibile passare l'oggetto come argomento di funzione il cui tipo è `delegate_type^` e verrà convertito in modo appropriato.  
   
@@ -1434,7 +1421,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1444,11 +1430,11 @@ int main()
 ``` 
 
 ## <a name="logical_not"></a> logical_not (STL/CLR)
-La classe modello descrive una funzione che, quando viene chiamato, restituisce true solo se il relativo argomento testa come false. Utilizzare, specificare un oggetto funzione in relazione al relativo tipo di argomento.  
+La classe modello descrive un funtore che, quando viene chiamato, restituisce true solo se il relativo argomento testa come false. Usarlo specificare un oggetto funzione in base al relativo tipo di argomento.  
   
 ### <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 template<typename Arg>  
     ref class logical_not  
     { // wrap operator()  
@@ -1468,8 +1454,8 @@ public:
 ```  
   
 #### <a name="parameters"></a>Parametri  
- Arg  
- Tipo degli argomenti.  
+ *arg*  
+ Il tipo di argomenti.  
   
 ### <a name="member-functions"></a>Funzioni membro  
   
@@ -1486,10 +1472,10 @@ public:
 |Operatore|Descrizione|  
 |--------------|-----------------|  
 |operator()|Calcola la funzione desiderata.|  
-|operatore delegate_type ^|Esegue il cast il funtore a un delegato.|  
+|operatore delegate_type ^|Il funtore a un delegato viene eseguito il cast.|  
   
 ### <a name="remarks"></a>Note  
- La classe modello descrive una funzione di un solo argomento. Definisce l'operatore membro `operator()` in modo che, quando l'oggetto viene chiamato come una funzione, viene restituito true solo se il relativo argomento test come false.  
+ La classe modello descrive un funtore solo argomento. Definisce l'operatore membro `operator()` in modo che, quando l'oggetto viene chiamato come una funzione, viene restituito true solo se il relativo argomento testa come false.  
   
  È anche possibile passare l'oggetto come argomento di funzione il cui tipo è `delegate_type^` e verrà convertito in modo appropriato.  
   
@@ -1523,7 +1509,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1532,11 +1517,11 @@ int main()
 ``` 
 
 ## <a name="logical_or"></a> logical_or (STL/CLR)
-La classe modello descrive una funzione che, quando viene chiamato, restituisce true solo se il primo argomento o il secondo test come true. Utilizzare, specificare un oggetto funzione in relazione al relativo tipo di argomento.  
+La classe modello descrive un funtore che, quando viene chiamato, restituisce true solo se il primo argomento o il secondo test come true. Usarlo specificare un oggetto funzione in base al relativo tipo di argomento.  
   
 ### <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 template<typename Arg>  
     ref class logical_or  
     { // wrap operator()  
@@ -1558,8 +1543,8 @@ public:
 ```  
   
 #### <a name="parameters"></a>Parametri  
- Arg  
- Tipo degli argomenti.  
+ *arg*  
+ Il tipo di argomenti.  
   
 ### <a name="member-functions"></a>Funzioni membro  
   
@@ -1577,10 +1562,10 @@ public:
 |Operatore|Descrizione|  
 |--------------|-----------------|  
 |operator()|Calcola la funzione desiderata.|  
-|operatore delegate_type ^|Esegue il cast il funtore a un delegato.|  
+|operatore delegate_type ^|Il funtore a un delegato viene eseguito il cast.|  
   
 ### <a name="remarks"></a>Note  
- La classe modello descrive un funtore di due argomenti. Definisce l'operatore membro `operator()` in modo che, quando l'oggetto viene chiamato come una funzione, viene restituito true solo se il primo argomento o il secondo test come true.  
+ La classe modello descrive un funtore due argomenti. Definisce l'operatore membro `operator()` in modo che, quando l'oggetto viene chiamato come una funzione, viene restituito true solo se il primo argomento o il secondo test come true.  
   
  È anche possibile passare l'oggetto come argomento di funzione il cui tipo è `delegate_type^` e verrà convertito in modo appropriato.  
   
@@ -1621,7 +1606,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1631,11 +1615,11 @@ int main()
 ```      
 
 ## <a name="minus"></a> meno (STL/CLR)
-La classe modello descrive una funzione che, quando viene chiamato, restituisce il primo argomento, meno il secondo. Utilizzare, specificare un oggetto funzione in relazione al relativo tipo di argomento.  
+La classe modello descrive un funtore che, quando viene chiamato, restituisce il primo argomento meno la seconda. Usarlo specificare un oggetto funzione in base al relativo tipo di argomento.  
   
 ### <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 template<typename Arg>  
     ref class minus  
     { // wrap operator()  
@@ -1657,8 +1641,8 @@ public:
 ```  
   
 #### <a name="parameters"></a>Parametri  
- Arg  
- Il tipo di argomenti e il valore restituito.  
+ *arg*  
+ Tipo di argomenti e il valore restituito.  
   
 ### <a name="member-functions"></a>Funzioni membro  
   
@@ -1676,10 +1660,10 @@ public:
 |Operatore|Descrizione|  
 |--------------|-----------------|  
 |operator()|Calcola la funzione desiderata.|  
-|operatore delegate_type ^|Esegue il cast il funtore a un delegato.|  
+|operatore delegate_type ^|Il funtore a un delegato viene eseguito il cast.|  
   
 ### <a name="remarks"></a>Note  
- La classe modello descrive un funtore di due argomenti. Definisce l'operatore membro `operator()` in modo che, quando l'oggetto viene chiamato come una funzione, restituisce il primo argomento, meno il secondo.  
+ La classe modello descrive un funtore due argomenti. Definisce l'operatore membro `operator()` in modo che, quando l'oggetto viene chiamato come una funzione, restituisce il primo argomento meno la seconda.  
   
  È anche possibile passare l'oggetto come argomento di funzione il cui tipo è `delegate_type^` e verrà convertito in modo appropriato.  
   
@@ -1720,7 +1704,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1730,11 +1713,11 @@ int main()
 ``` 
 
 ## <a name="modulus"></a> modulo (STL/CLR)
-La classe modello descrive una funzione che, quando viene chiamato, restituisce il primo argomento modulo il secondo. Utilizzare, specificare un oggetto funzione in relazione al relativo tipo di argomento.  
+La classe modello descrive un funtore che, quando viene chiamato, restituisce il primo argomento modulo del secondo. Usarlo specificare un oggetto funzione in base al relativo tipo di argomento.  
   
 ### <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 template<typename Arg>  
     ref class modulus  
     { // wrap operator()  
@@ -1756,8 +1739,8 @@ public:
 ```  
   
 #### <a name="parameters"></a>Parametri  
- Arg  
- Il tipo di argomenti e il valore restituito.  
+ *arg*  
+ Tipo di argomenti e il valore restituito.  
   
 ### <a name="member-functions"></a>Funzioni membro  
   
@@ -1775,10 +1758,10 @@ public:
 |Operatore|Descrizione|  
 |--------------|-----------------|  
 |operator()|Calcola la funzione desiderata.|  
-|operatore delegate_type ^|Esegue il cast il funtore a un delegato.|  
+|operatore delegate_type ^|Il funtore a un delegato viene eseguito il cast.|  
   
 ### <a name="remarks"></a>Note  
- La classe modello descrive un funtore di due argomenti. Definisce l'operatore membro `operator()` in modo che, quando l'oggetto viene chiamato come una funzione, restituisce il primo argomento modulo il secondo.  
+ La classe modello descrive un funtore due argomenti. Definisce l'operatore membro `operator()` in modo che, quando l'oggetto viene chiamato come una funzione, restituisce il primo argomento modulo del secondo.  
   
  È anche possibile passare l'oggetto come argomento di funzione il cui tipo è `delegate_type^` e verrà convertito in modo appropriato.  
   
@@ -1819,7 +1802,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1828,12 +1810,12 @@ int main()
 1 0  
 ```   
 
-## <a name="multiplies"></a> Moltiplica (STL/CLR)
-La classe modello descrive una funzione che, quando viene chiamato, restituisce il primo argomento per il secondo. Utilizzare, specificare un oggetto funzione in relazione al relativo tipo di argomento.  
+## <a name="multiplies"></a> multiplies (STL/CLR)
+La classe modello descrive un funtore che, quando viene chiamato, restituisce il primo argomento volte il secondo. Usarlo specificare un oggetto funzione in base al relativo tipo di argomento.  
   
 ### <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 template<typename Arg>  
     ref class multiplies  
     { // wrap operator()  
@@ -1855,8 +1837,8 @@ public:
 ```  
   
 #### <a name="parameters"></a>Parametri  
- Arg  
- Il tipo di argomenti e il valore restituito.  
+ *arg*  
+ Tipo di argomenti e il valore restituito.  
   
 ### <a name="member-functions"></a>Funzioni membro  
   
@@ -1874,10 +1856,10 @@ public:
 |Operatore|Descrizione|  
 |--------------|-----------------|  
 |operator()|Calcola la funzione desiderata.|  
-|operatore delegate_type ^|Esegue il cast il funtore a un delegato.|  
+|operatore delegate_type ^|Il funtore a un delegato viene eseguito il cast.|  
   
 ### <a name="remarks"></a>Note  
- La classe modello descrive un funtore di due argomenti. Definisce l'operatore membro `operator()` in modo che, quando l'oggetto viene chiamato come una funzione, restituisce il primo argomento per il secondo.  
+ La classe modello descrive un funtore due argomenti. Definisce l'operatore membro `operator()` in modo che, quando l'oggetto viene chiamato come una funzione, restituisce il primo argomento volte il secondo.  
   
  È anche possibile passare l'oggetto come argomento di funzione il cui tipo è `delegate_type^` e verrà convertito in modo appropriato.  
   
@@ -1918,7 +1900,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1927,12 +1908,12 @@ int main()
 8 3  
 ```  
 
-## <a name="negate"></a> negazione (STL/CLR)
-La classe modello descrive una funzione che, quando viene chiamato, restituisce il relativo argomento negato. Utilizzare, specificare un oggetto funzione in relazione al relativo tipo di argomento.  
+## <a name="negate"></a> negate (STL/CLR)
+La classe modello descrive un funtore che, quando viene chiamato, restituisce il relativo argomento negata. Usarlo specificare un oggetto funzione in base al relativo tipo di argomento.  
   
 ### <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 template<typename Arg>  
     ref class negate  
     { // wrap operator()  
@@ -1952,8 +1933,8 @@ public:
 ```  
   
 #### <a name="parameters"></a>Parametri  
- Arg  
- Tipo degli argomenti.  
+ *arg*  
+ Il tipo di argomenti.  
   
 ### <a name="member-functions"></a>Funzioni membro  
   
@@ -1970,10 +1951,10 @@ public:
 |Operatore|Descrizione|  
 |--------------|-----------------|  
 |operator()|Calcola la funzione desiderata.|  
-|operatore delegate_type ^|Esegue il cast il funtore a un delegato.|  
+|operatore delegate_type ^|Il funtore a un delegato viene eseguito il cast.|  
   
 ### <a name="remarks"></a>Note  
- La classe modello descrive una funzione di un solo argomento. Definisce l'operatore membro `operator()` in modo che, quando l'oggetto viene chiamato come una funzione, restituisce il relativo argomento negato.  
+ La classe modello descrive un funtore solo argomento. Definisce l'operatore membro `operator()` in modo che, quando l'oggetto viene chiamato come una funzione, restituisce il relativo argomento negata.  
   
  È anche possibile passare l'oggetto come argomento di funzione il cui tipo è `delegate_type^` e verrà convertito in modo appropriato.  
   
@@ -2007,7 +1988,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2016,11 +1996,11 @@ int main()
 ``` 
 
 ## <a name="not_equal_to"></a> not_equal_to (STL/CLR)
-La classe modello descrive una funzione che, quando viene chiamato, restituisce true solo se il primo argomento non è uguale al secondo. Utilizzare, specificare un oggetto funzione in relazione al relativo tipo di argomento.  
+La classe modello descrive un funtore che, quando viene chiamato, restituisce true solo se il primo argomento non è uguale al secondo. Usarlo specificare un oggetto funzione in base al relativo tipo di argomento.  
   
 ### <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 template<typename Arg>  
     ref class not_equal_to  
     { // wrap operator()  
@@ -2042,8 +2022,8 @@ public:
 ```  
   
 #### <a name="parameters"></a>Parametri  
- Arg  
- Tipo degli argomenti.  
+ *arg*  
+ Il tipo di argomenti.  
   
 ### <a name="member-functions"></a>Funzioni membro  
   
@@ -2061,10 +2041,10 @@ public:
 |Operatore|Descrizione|  
 |--------------|-----------------|  
 |operator()|Calcola la funzione desiderata.|  
-|operatore delegate_type ^|Esegue il cast il funtore a un delegato.|  
+|operatore delegate_type ^|Il funtore a un delegato viene eseguito il cast.|  
   
 ### <a name="remarks"></a>Note  
- La classe modello descrive un funtore di due argomenti. Definisce l'operatore membro `operator()` in modo che, quando l'oggetto viene chiamato come una funzione, restituisce true solo se il primo argomento non è uguale al secondo.  
+ La classe modello descrive un funtore due argomenti. Definisce l'operatore membro `operator()` in modo che, quando l'oggetto viene chiamato come una funzione, restituisce true solo se il primo argomento non è uguale al secondo.  
   
  È anche possibile passare l'oggetto come argomento di funzione il cui tipo è `delegate_type^` e verrà convertito in modo appropriato.  
   
@@ -2105,7 +2085,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2115,25 +2094,25 @@ int main()
 ```   
 
 ## <a name="not1"></a> not1 (STL/CLR)
-Genera un `unary_negate` per una funzione.  
+Genera un `unary_negate` per un funtore.  
   
 ### <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 template<typename Fun>  
     unary_negate<Fun> not1(Fun% functor);  
 ```  
   
 #### <a name="template-parameters"></a>Parametri di template  
- Fun  
- Tipo del funtore.  
+ *Fun*  
+ Il tipo del funtore.  
   
 #### <a name="function-parameters"></a>Parametri di funzione  
- funtore  
+ *funtore*  
  Il funtore per eseguire il wrapping.  
   
 ### <a name="remarks"></a>Note  
- La funzione modello restituisce [unary_negate (STL/CLR)](../dotnet/unary-negate-stl-clr.md)`<Fun>(functor)`. Utilizzato come un modo pratico per eseguire il wrapping di una funzione di un argomento in una funzione che fornisce il NOT logico.  
+ La funzione modello restituisce [unary_negate (STL/CLR)](../dotnet/unary-negate-stl-clr.md)`<Fun>(functor)`. Usarlo come un modo pratico per eseguire il wrapping di un solo argomento funtore in un funtore che offre il NOT logico.  
   
 ### <a name="example"></a>Esempio  
   
@@ -2174,7 +2153,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2184,25 +2162,25 @@ int main()
 ```  
 
 ## <a name="not2"></a> not2 (STL/CLR)
-Genera un `binary_negate` per una funzione.  
+Genera un `binary_negate` per un funtore.  
   
 ### <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 template<typename Fun>  
     binary_negate<Fun> not2(Fun% functor);  
 ```  
   
 #### <a name="template-parameters"></a>Parametri di template  
- Fun  
- Tipo del funtore.  
+ *Fun*  
+ Il tipo del funtore.  
   
 #### <a name="function-parameters"></a>Parametri di funzione  
- funtore  
+ *funtore*  
  Il funtore per eseguire il wrapping.  
   
 ### <a name="remarks"></a>Note  
- La funzione modello restituisce [binary_negate (STL/CLR)](../dotnet/binary-negate-stl-clr.md)`<Fun>(functor)`. Utilizzato come un modo pratico per eseguire il wrapping di una funzione di due argomenti in una funzione che fornisce il NOT logico.  
+ La funzione modello restituisce [binary_negate (STL/CLR)](../dotnet/binary-negate-stl-clr.md)`<Fun>(functor)`. Usarlo come un modo pratico per eseguire il wrapping di un funtore due argomenti in un funtore che offre il NOT logico.  
   
 ### <a name="example"></a>Esempio  
   
@@ -2251,7 +2229,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2262,11 +2239,11 @@ int main()
 ```  
 
 ## <a name="plus"></a> Plus (STL/CLR)
-La classe modello descrive una funzione che, quando viene chiamato, restituisce il primo argomento e il secondo. Utilizzare, specificare un oggetto funzione in relazione al relativo tipo di argomento.  
+La classe modello descrive un funtore che, quando viene chiamato, restituisce il primo argomento e il secondo. Usarlo specificare un oggetto funzione in base al relativo tipo di argomento.  
   
 ### <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 template<typename Arg>  
     ref class plus  
     { // wrap operator()  
@@ -2288,8 +2265,8 @@ public:
 ```  
   
 #### <a name="parameters"></a>Parametri  
- Arg  
- Il tipo di argomenti e il valore restituito.  
+ *arg*  
+ Tipo di argomenti e il valore restituito.  
   
 ### <a name="member-functions"></a>Funzioni membro  
   
@@ -2307,10 +2284,10 @@ public:
 |Operatore|Descrizione|  
 |--------------|-----------------|  
 |operator()|Calcola la funzione desiderata.|  
-|operatore delegate_type ^|Esegue il cast il funtore a un delegato.|  
+|operatore delegate_type ^|Il funtore a un delegato viene eseguito il cast.|  
   
 ### <a name="remarks"></a>Note  
- La classe modello descrive un funtore di due argomenti. Definisce l'operatore membro `operator()` in modo che, quando l'oggetto viene chiamato come una funzione, restituisce il primo argomento di secondo.  
+ La classe modello descrive un funtore due argomenti. Definisce l'operatore membro `operator()` in modo che, quando l'oggetto viene chiamato come una funzione, viene restituito il primo argomento e il secondo.  
   
  È anche possibile passare l'oggetto come argomento di funzione il cui tipo è `delegate_type^` e verrà convertito in modo appropriato.  
   
@@ -2351,7 +2328,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2361,21 +2337,21 @@ int main()
 ```  
 
 ## <a name="unary_delegate"></a> unary_delegate (STL/CLR)
-La classe genereic descrive un delegato di un solo argomento. Utilizzare, specificare un delegato in termini relativi tipi di argomenti e valori restituiti.  
+La classe genereic descrive un delegato di un solo argomento. Usarlo specificare un delegato in termini relativi tipi di argomenti e valori restituiti.  
   
 ### <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 generic<typename Arg,  
     typename Result>  
     delegate Result unary_delegate(Arg);  
 ```  
   
 #### <a name="parameters"></a>Parametri  
- Arg  
+ *arg*  
  Il tipo di argomento.  
   
- Risultato  
+ *Risultato*  
  Tipo restituito.  
   
 ### <a name="remarks"></a>Note  
@@ -2387,7 +2363,7 @@ generic<typename Arg,
   
  `unary_delegare<int, int> Fun2;`  
   
- i tipi di `Fun1` e `Fun2` sono sinonimi, mentre per:  
+ i tipi `Fun1` e `Fun2` sono sinonimi, mentre per:  
   
  `delegate int Fun1(int);`  
   
@@ -2416,7 +2392,6 @@ int main()
     System::Console::WriteLine("hash(L'b') = {0}", myhash(L'b'));   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2425,21 +2400,21 @@ hash(L'b') = 22
 ```  
 
 ## <a name="unary_delegate_noreturn"></a> unary_delegate_noreturn (STL/CLR)
-La classe genereic descrive un delegato di un argomento che restituisce `void`. Utilizzare, specificare un delegato in relazione al relativo tipo di argomento.  
+La classe genereic descrive un solo argomento di delegato che restituisce **void**. Usarlo specificare un delegato in base al relativo tipo di argomento.  
   
 ### <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 generic<typename Arg>  
     delegate void unary_delegate_noreturn(Arg);  
 ```  
   
 #### <a name="parameters"></a>Parametri  
- Arg  
+ *arg*  
  Il tipo di argomento.  
   
 ### <a name="remarks"></a>Note  
- Il delegato genereic descrive una funzione di un argomento che restituisce `void`.  
+ Il delegato genereic descrive una solo argomento funzione che restituisce **void**.  
   
  Si noti che per:  
   
@@ -2447,7 +2422,7 @@ generic<typename Arg>
   
  `unary_delegare_noreturn<int> Fun2;`  
   
- i tipi di `Fun1` e `Fun2` sono sinonimi, mentre per:  
+ i tipi `Fun1` e `Fun2` sono sinonimi, mentre per:  
   
  `delegate void Fun1(int);`  
   
@@ -2477,7 +2452,6 @@ int main()
     myhash(L'b');   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2486,11 +2460,11 @@ hash(b) = 22
 ```  
 
 ## <a name="unary_negate"></a> unary_negate (STL/CLR)
-La classe modello descrive una funzione che, quando viene chiamato, restituisce l'operatore logico non del relativo stored funtore un solo argomento. Utilizzare, specificare un oggetto funzione in termini del funtore stored.  
+La classe modello descrive un funtore che, quando viene chiamato, restituisce l'operatore logico non del relativo stored funtore di un solo argomento. Usarlo specificare un oggetto funzione in termini del funtore stored.  
   
 ### <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 template<typename Fun>  
     ref class unary_negate  
     { // wrap operator()  
@@ -2511,8 +2485,8 @@ public:
 ```  
   
 #### <a name="parameters"></a>Parametri  
- Fun  
- Tipo del funtore stored.  
+ *Fun*  
+ Il tipo del funtore stored.  
   
 ### <a name="member-functions"></a>Funzioni membro  
   
@@ -2529,10 +2503,10 @@ public:
 |Operatore|Descrizione|  
 |--------------|-----------------|  
 |operator()|Calcola la funzione desiderata.|  
-|delegate_type ^|Esegue il cast il funtore a un delegato.|  
+|delegate_type ^|Il funtore a un delegato viene eseguito il cast.|  
   
 ### <a name="remarks"></a>Note  
- La classe modello descrive una funzione di un argomento che archivia un altro funtore un solo argomento. Definisce l'operatore membro `operator()` restituisce in modo che, quando l'oggetto viene chiamato come una funzione, l'operatore logico non di un funtore stored chiamato con l'argomento.  
+ La classe modello descrive un funtore solo argomento che archivia un altro funtore solo argomento. Definisce l'operatore membro `operator()` restituisce in modo che, quando l'oggetto viene chiamato come una funzione, la logica non del funtore stored chiamato con l'argomento.  
   
  È anche possibile passare l'oggetto come argomento di funzione il cui tipo è `delegate_type^` e verrà convertito in modo appropriato.  
   
@@ -2575,7 +2549,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  

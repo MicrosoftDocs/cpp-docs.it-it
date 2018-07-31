@@ -1,5 +1,5 @@
 ---
-title: elenco (STL/CLR) | Documenti Microsoft
+title: elenco (STL/CLR) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -119,21 +119,21 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: db7398512e6b981f4da3fc0b88b6fbc7890c6016
-ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
+ms.openlocfilehash: 8eb64c41db0e6062f2be636ddce7e8cefe0bb32b
+ms.sourcegitcommit: bad2441d1930275ff506d44759d283d94cccd1c0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37079786"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39376290"
 ---
 # <a name="list-stlclr"></a>list (STL/CLR)
-La classe modello descrive un oggetto che controlla una sequenza di lunghezza variabile di elementi che dispone dell'accesso bidirezionale. Utilizzare il contenitore `list` per gestire una sequenza di elementi come un elenco collegato bidirezionale di nodi, ognuno l'archiviazione di un elemento.  
+La classe modello descrive un oggetto che controlla una sequenza di lunghezza variabile di elementi che dispone dell'accesso bidirezionale. Usare il contenitore `list` per gestire una sequenza di elementi come elenco collegato bidirezionale di nodi, ognuno l'archiviazione di un elemento.  
   
- In seguito, la descrizione `GValue` corrisponde al `Value` a meno che quest'ultimo è un tipo riferimento, nel qual caso è `Value^`.  
+ Nella sezione successiva, `GValue` equivale a *valore* , a meno che quest'ultimo è un tipo riferimento, nel qual caso è `Value^`.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 template<typename Value>  
     ref class list  
         :   public  
@@ -147,7 +147,7 @@ template<typename Value>
 ```  
   
 ### <a name="parameters"></a>Parametri  
- Valore  
+ *Valore*  
  Tipo di un elemento nella sequenza controllata.  
   
 ## <a name="requirements"></a>Requisiti  
@@ -164,8 +164,8 @@ template<typename Value>
 |[list::const_reverse_iterator (STL/CLR)](#const_reverse_iterator)|Tipo di un iteratore inverso costante per la sequenza controllata.|  
 |[list::difference_type (STL/CLR)](#difference_type)|Tipo di una distanza Signed tra due elementi.|  
 |[list::generic_container (STL/CLR)](#generic_container)|Il tipo dell'interfaccia generica per il contenitore.|  
-|[list::generic_iterator (STL/CLR)](#generic_iterator)|Il tipo di un iteratore per l'interfaccia generica per il contenitore.|  
-|[list::generic_reverse_iterator (STL/CLR)](#generic_reverse_iterator)|Il tipo di un iteratore inverso per l'interfaccia generica per il contenitore.|  
+|[list::generic_iterator (STL/CLR)](#generic_iterator)|Tipo di iteratore per l'interfaccia generica per il contenitore.|  
+|[list::generic_reverse_iterator (STL/CLR)](#generic_reverse_iterator)|Tipo di iteratore inverso per l'interfaccia generica per il contenitore.|  
 |[list::generic_value (STL/CLR)](#generic_value)|Il tipo di un elemento per l'interfaccia generica per il contenitore.|  
 |[list::iterator (STL/CLR)](#iterator)|Tipo di un iteratore per la sequenza controllata.|  
 |[list::reference (STL/CLR)](#reference)|Tipo di un riferimento a un elemento.|  
@@ -183,7 +183,7 @@ template<typename Value>
 |[list::end (STL/CLR)](#end)|Designa la fine della sequenza controllata.|  
 |[list::erase (STL/CLR)](#erase)|Rimuove gli elementi in corrispondenza delle posizioni specificate.|  
 |[list::front (STL/CLR)](#front)|Accede al primo elemento.|  
-|[list::insert (STL/CLR)](#insert)|Aggiunge gli elementi in una posizione specificata.|  
+|[list::insert (STL/CLR)](#insert)|Aggiunge elementi in una posizione specificata.|  
 |[list::list (STL/CLR)](#list)|Costruisce un oggetto contenitore.|  
 |[list::merge (STL/CLR)](#merge)|Unisce due sequenze controllate ordinate.|  
 |[list::pop_back (STL/CLR)](#pop_back)|Rimuove l'ultimo elemento.|  
@@ -200,7 +200,7 @@ template<typename Value>
 |[list::sort (STL/CLR)](#sort)|Ordina la sequenza controllata.|  
 |[list::splice (STL/CLR)](#splice)|Unisce di nuovo i collegamenti tra nodi.|  
 |[list::swap (STL/CLR)](#swap)|Scambia il contenuto di due contenitori.|  
-|[list::to_array (STL/CLR)](#to_array)|La sequenza controllata viene copiata in una nuova matrice.|  
+|[list::to_array (STL/CLR)](#to_array)|Copia la sequenza controllata in una nuova matrice.|  
 |[list::unique (STL/CLR)](#unique)|Rimuove gli elementi adiacenti che superano un test specificato.|  
   
 |Proprietà|Descrizione|  
@@ -225,20 +225,20 @@ template<typename Value>
 |<xref:System.ICloneable>|Duplicare un oggetto.|  
 |<xref:System.Collections.IEnumerable>|Tramite gli elementi di sequenza.|  
 |<xref:System.Collections.ICollection>|Gestione gruppo di elementi.|  
-|<xref:System.Collections.Generic.IEnumerable%601>|Sequenza tramite elementi tipizzati.|  
+|<xref:System.Collections.Generic.IEnumerable%601>|La sequenza tramite elementi tipizzati.|  
 |<xref:System.Collections.Generic.ICollection%601>|Gestione gruppo di elementi tipizzati.|  
-|IList\<valore >|Gestisci contenitore generico.|  
+|IList\<valore >|Mantenere contenitore generico.|  
   
 ## <a name="remarks"></a>Note  
- L'oggetto alloca e libera spazio di archiviazione per la sequenza di che tale vincolo controlla come singoli nodi in un elenco di collegamento bidirezionale. Riorganizza elementi modificando i collegamenti tra nodi, mai copiando i contenuti di un nodo a un altro. Pertanto, è possibile inserire e rimuovere elementi liberamente senza disturbare elementi rimanenti. Di conseguenza, un elenco è un buon candidato per il contenitore sottostante per la classe template [coda (STL/CLR)](../dotnet/queue-stl-clr.md) o una classe modello [stack (STL/CLR)](../dotnet/stack-stl-clr.md).  
+ L'oggetto alloca e libera la memoria per la sequenza che controlla come singoli nodi in un elenco di collegamento bidirezionale. Riorganizza gli elementi modificando i collegamenti tra nodi, mai copiando i contenuti di un nodo a un altro. Ciò significa che è possibile inserire e rimuovere elementi liberamente senza influenzare gli elementi rimanenti. Di conseguenza, un elenco è un buon candidato per il contenitore sottostante per la classe modello [coda (STL/CLR)](../dotnet/queue-stl-clr.md) o una classe modello [stack (STL/CLR)](../dotnet/stack-stl-clr.md).  
   
- Oggetto `list` oggetto supporta gli iteratori bidirezionali, ovvero è possibile eseguire per gli elementi adiacenti, dato un iteratore che definisce un elemento nella sequenza controllata. Un nodo head speciale corrisponde per l'iteratore restituito da [List:: end (STL/CLR)](../dotnet/list-end-stl-clr.md)`()`. È possibile diminuire questo iteratore per raggiungere l'ultimo elemento nella sequenza controllata, se presente. È possibile incrementare un iteratore di elenco per raggiungere il nodo head e quindi confronterà uguale a `end()`. Ma non è possibile dereferenziare l'iteratore restituito da `end()`.  
+ Oggetto `list` oggetto supporta gli iteratori bidirezionali, ovvero è possibile passare agli elementi adiacenti, dato un iteratore che designa un elemento nella sequenza controllata. Un nodo head speciale corrisponde all'iteratore restituito da [List:: end (STL/CLR)](../dotnet/list-end-stl-clr.md)`()`. È possibile diminuire l'iteratore per raggiungere l'ultimo elemento nella sequenza controllata, se presente. È possibile incrementare un iteratore di elenco per raggiungere il nodo head e quindi confronterà uguale a `end()`. Ma non è possibile dereferenziare l'iteratore restituito da `end()`.  
   
- Si noti che è possibile fare riferimento a un elemento di elenco specificato direttamente la posizione numerica - che richiede un iteratore ad accesso casuale. È un elenco `not` utilizzabile come contenitore sottostante per la classe modello [priority_queue (STL/CLR)](../dotnet/priority-queue-stl-clr.md).  
+ Si noti che è possibile fare riferimento a un elemento di elenco specificato direttamente la posizione numerica, che richiede un iteratore ad accesso casuale. Pertanto è un elenco *non* utilizzabili come contenitore sottostante per la classe template [priority_queue (STL/CLR)](../dotnet/priority-queue-stl-clr.md).  
   
- Un iteratore di elenco Archivia un handle al relativo nodo elenco associato, che a sua volta memorizza un handle al contenitore associato. È possibile utilizzare gli iteratori solo con i relativi oggetti contenitore associato. Un iteratore di elenco rimane valido finché il relativo nodo elenco associato è associato a un elenco. Inoltre, un iteratore valido dereferencable--è possibile utilizzare per accedere o modificare il valore dell'elemento che definisce, in modo fino a quando non è uguale a `end()`.  
+ Un iteratore elenco Archivia un handle al relativo nodo elenco associato, che a sua volta memorizza un handle per il contenitore associato. È possibile utilizzare gli iteratori solo con i relativi oggetti contenitore associato. Un iteratore elenco rimane valido purché relativo nodo elenco associato è associato a un elenco. Inoltre, un iteratore valido è dereferenziabile: è possibile usarlo per accedere o modificare il valore dell'elemento che definisce, in modo fino a quando non è uguale a `end()`.  
   
- La cancellazione o eliminazione di un elemento chiama il distruttore per il valore archiviato. Eliminazione del contenitore Cancella tutti gli elementi. Di conseguenza, un contenitore il cui tipo di elemento è una classe di riferimento assicura che nessun elemento sopravvivere al contenitore. Si noti, tuttavia, che non è un contenitore di handle `not` eliminare definitivamente gli elementi.  
+ La cancellazione o la rimozione di un elemento chiama il distruttore per il valore archiviato. Eliminazione definitiva del contenitore Cancella tutti gli elementi. Un contenitore il cui tipo di elemento è una classe di riferimento in questo modo, assicura che nessun elemento sopravvivere al contenitore. Si noti, tuttavia, che non è un contenitore di handle *non* eliminare definitivamente gli elementi.  
   
 ## <a name="members"></a>Membri
 
@@ -247,7 +247,7 @@ Sostituisce tutti gli elementi.
   
 ### <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 void assign(size_type count, value_type val);  
 template<typename InIt>  
     void assign(InIt first, InIt last);  
@@ -255,27 +255,27 @@ void assign(System::Collections::Generic::IEnumerable<Value>^ right);
 ```  
   
 #### <a name="parameters"></a>Parametri  
- count  
+ *count*  
  Numero di elementi da inserire.  
   
- primo  
+ *first*  
  Inizio dell'intervallo da inserire.  
   
- last  
+ *last*  
  Fine dell'intervallo da inserire.  
   
- right  
+ *right*  
  Enumerazione da inserire.  
   
- Val  
+ *Val*  
  Valore dell'elemento da inserire.  
   
 ### <a name="remarks"></a>Note  
- La prima funzione membro sostituisce la sequenza controllata con la ripetizione della `count` degli elementi di valore `val`. Utilizzarla per riempire il contenitore con elementi tutti con lo stesso valore.  
+ La prima funzione membro sostituisce la sequenza controllata con una ripetizione di *conteggio* elementi di valore *val*. Utilizzarla per riempire il contenitore con gli elementi tutti con lo stesso valore.  
   
- Se `InIt` è di tipo integer, la seconda funzione membro si comporta come `assign((size_type)first, (value_type)last)`. In caso contrario, sostituisce la sequenza controllata con la sequenza [`first`, `last`). È usata per garantire il controllato sequenza una copia di un'altra sequenza.  
+ Se `InIt` è di tipo integer, la seconda funzione membro si comporta come `assign((size_type)first, (value_type)last)`. In caso contrario, sostituisce la sequenza controllata con la sequenza [`first`, `last`). Utilizzarla per rendere controllata una copia di sequenziare un'altra sequenza.  
   
- La terza funzione membro sostituisce la sequenza controllata con la sequenza designata dall'enumeratore `right`. Utilizzarla per creare una copia di una sequenza descritta da un enumeratore nella sequenza controllata.  
+ La terza funzione membro sostituisce la sequenza controllata con la sequenza definita dall'enumeratore *a destra*. Usarlo per creare una copia di una sequenza descritta da un enumeratore nella sequenza controllata.  
   
 ### <a name="example"></a>Esempio  
   
@@ -313,7 +313,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -327,12 +326,12 @@ Accede all'ultimo elemento.
   
 ### <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 reference back();  
 ```  
   
 ### <a name="remarks"></a>Note  
- La funzione membro restituisce un riferimento all'ultimo elemento della sequenza controllata, che deve essere non vuoto. Usarlo per accedere all'ultimo elemento quando si è certi che esista.  
+ La funzione membro restituisce un riferimento all'ultimo elemento della sequenza controllata, che deve essere non vuoto. Usarlo per accedere all'ultimo elemento, quando si è certi che esista.  
   
 ### <a name="example"></a>Esempio  
   
@@ -363,7 +362,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -377,12 +375,12 @@ Accede all'ultimo elemento.
   
 ### <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 property value_type back_item;  
 ```  
   
 ### <a name="remarks"></a>Note  
- La proprietà accede all'ultimo elemento della sequenza controllata, che deve essere non vuoto. Utilizzarla per leggere o scrivere l'ultimo elemento, quando si è certi che esista.  
+ La proprietà accede all'ultimo elemento della sequenza controllata, che deve essere non vuoto. Usarlo per leggere o scrivere l'ultimo elemento, quando si è certi che esista.  
   
 ### <a name="example"></a>Esempio  
   
@@ -413,7 +411,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -427,12 +424,12 @@ Indica l'inizio della sequenza controllata.
   
 ### <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 iterator begin();  
 ```  
   
 ### <a name="remarks"></a>Note  
- La funzione membro restituisce un iteratore ad accesso casuale che definisce il primo elemento della sequenza controllata o appena oltre la fine di una sequenza vuota. Che consente di ottenere un iteratore che definisce il `current` inizio della sequenza controllata, ma il relativo stato è possibile modificare se viene modificata la lunghezza della sequenza controllata.  
+ La funzione membro restituisce un iteratore ad accesso casuale che definisce il primo elemento della sequenza controllata o appena oltre la fine di una sequenza vuota. Usarlo per ottenere un iteratore che designa il `current` inizio della sequenza controllata, ma il cui stato può modificarsi se la lunghezza della sequenza controllata cambia.  
   
 ### <a name="example"></a>Esempio  
   
@@ -466,7 +463,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -481,12 +477,12 @@ Rimuove tutti gli elementi.
   
 ### <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 void clear();  
 ```  
   
 ### <a name="remarks"></a>Note  
- La funzione membro chiama in modo efficace [List:: Erase (STL/CLR)](../dotnet/list-erase-stl-clr.md) `(` [List:: Begin (STL/CLR)](../dotnet/list-begin-stl-clr.md) `(),` [List:: end (STL/CLR)](../dotnet/list-end-stl-clr.md) `())`. Utilizzarla per garantire che la sequenza controllata vuota.  
+ La funzione membro chiama in modo efficace [List:: Erase (STL/CLR)](../dotnet/list-erase-stl-clr.md) `(` [List:: Begin (STL/CLR)](../dotnet/list-begin-stl-clr.md) `(),` [List:: end (STL/CLR)](../dotnet/list-end-stl-clr.md) `())`. Utilizzarla per assicurarsi che la sequenza controllata è vuota.  
   
 ### <a name="example"></a>Esempio  
   
@@ -522,7 +518,6 @@ int main()
     System::Console::WriteLine("size() = {0}", c1.size());   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -537,12 +532,12 @@ Tipo di un iteratore costante per la sequenza controllata.
   
 ### <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 typedef T2 const_iterator;  
 ```  
   
 ### <a name="remarks"></a>Note  
- Il tipo descrive un oggetto di tipo non specificato `T2` che può essere utilizzato come un iteratore ad accesso casuale costante per la sequenza controllata.  
+ Il tipo descrive un oggetto di tipo non specificato `T2` che può essere usato come iteratore ad accesso casuale costante per la sequenza controllata.  
   
 ### <a name="example"></a>Esempio  
   
@@ -565,7 +560,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -577,7 +571,7 @@ Tipo di un riferimento costante a un elemento.
   
 ### <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 typedef value_type% const_reference;  
 ```  
   
@@ -608,7 +602,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -616,16 +609,16 @@ a b c
 ```  
 
 ## <a name="const_reverse_iterator"></a> List:: const_reverse_iterator (STL/CLR)
-Il tipo di un iteratore inverso costante per la sequenza controllata.  
+Il tipo di iteratore inverso costante per la sequenza controllata...  
   
 ### <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 typedef T4 const_reverse_iterator;  
 ```  
   
 ### <a name="remarks"></a>Note  
- Il tipo descrive un oggetto di tipo non specificato `T4` che può essere utilizzato come un iteratore inverso costante per la sequenza controllata.  
+ Il tipo descrive un oggetto di tipo non specificato `T4` che può essere usato come iteratore inverso costante per la sequenza controllata.  
   
 ### <a name="example"></a>Esempio  
   
@@ -649,7 +642,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -661,7 +653,7 @@ I tipi di una distanza signed tra due elementi.
   
 ### <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 typedef int difference_type;  
 ```  
   
@@ -700,7 +692,6 @@ int main()
     System::Console::WriteLine("begin()-end() = {0}", diff);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -714,12 +705,12 @@ Verifica se sono presenti o meno degli elementi.
   
 ### <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 bool empty();  
 ```  
   
 ### <a name="remarks"></a>Note  
- La funzione membro restituisce true per una sequenza controllata vuota. È equivalente a [List:: Size (STL/CLR)](../dotnet/list-size-stl-clr.md)`() == 0`. Utilizzarla per verificare se l'elenco è vuoto.  
+ La funzione membro restituisce true per una sequenza controllata vuota. È equivalente a [List:: Size (STL/CLR)](../dotnet/list-size-stl-clr.md)`() == 0`. Usarlo per verificare se l'elenco è vuoto.  
   
 ### <a name="example"></a>Esempio  
   
@@ -748,7 +739,6 @@ int main()
     System::Console::WriteLine("empty() = {0}", c1.empty());   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -764,12 +754,12 @@ Designa la fine della sequenza controllata.
   
 ### <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 iterator end();  
 ```  
   
 ### <a name="remarks"></a>Note  
- La funzione membro restituisce un iteratore ad accesso casuale che punta appena oltre la fine della sequenza controllata. Che consente di ottenere un iteratore che indica la fine della sequenza controllata. il relativo stato non cambia se viene modificata la lunghezza della sequenza controllata.  
+ La funzione membro restituisce un iteratore ad accesso casuale che punta appena oltre la fine della sequenza controllata. Usarlo per ottenere un iteratore che designa la fine della sequenza controllata. l relativo stato cambia se la lunghezza della sequenza controllata cambia.  
   
 ### <a name="example"></a>Esempio  
   
@@ -804,7 +794,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -819,29 +808,29 @@ Rimuove gli elementi in corrispondenza delle posizioni specificate.
   
 ### <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 iterator erase(iterator where);  
 iterator erase(iterator first, iterator last);  
 ```  
   
 #### <a name="parameters"></a>Parametri  
- primo  
+ *first*  
  Inizio dell'intervallo da cancellare.  
   
- last  
+ *last*  
  Fine dell'intervallo da cancellare.  
   
- dove  
+ *where*  
  Elemento da cancellare.  
   
 ### <a name="remarks"></a>Note  
- Tramite la prima funzione membro viene rimosso l'elemento della sequenza controllata puntata da `where`. Usarlo per rimuovere un singolo elemento.  
+ La prima funzione membro rimuove l'elemento della sequenza controllata a cui punta *in cui*. Usarlo per rimuovere un singolo elemento.  
   
  La seconda funzione membro rimuove gli elementi della sequenza controllata nell'intervallo [`first`, `last`). Usarlo per rimuovere zero o più elementi adiacenti.  
   
- Entrambe le funzioni membro restituiscono un iteratore che definisce il primo elemento rimanente successivo a tutti gli elementi eliminati, o [List:: end (STL/CLR)](../dotnet/list-end-stl-clr.md) `()` se tale elemento non esiste.  
+ Entrambe le funzioni membro restituiscono un iteratore che designa il primo elemento rimanente oltre gli eventuali elementi rimossi, oppure [List:: end (STL/CLR)](../dotnet/list-end-stl-clr.md) `()` se tale elemento non esiste.  
   
- Quando si cancellano elementi, il numero di copie di elementi è lineare nel numero di elementi tra la fine della cancellazione e la fine della sequenza più vicini. (Quando la cancellazione di uno o più elementi in delle estremità della sequenza, alcuna copia elemento si verifica.)  
+ Quando si cancellano elementi, il numero di copie di elementi è lineare nel numero di elementi tra la fine della cancellazione e la fine della sequenza più vicini. (Quando la cancellazione di uno o più elementi in delle estremità della sequenza, alcuna copia elemento non verificarsi.)  
   
 ### <a name="example"></a>Esempio  
   
@@ -880,7 +869,6 @@ int main()
     System::Console::WriteLine("size() = {0}", c1.size());   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -896,12 +884,12 @@ Accede al primo elemento.
   
 ### <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 reference front();  
 ```  
   
 ### <a name="remarks"></a>Note  
- La funzione membro restituisce un riferimento al primo elemento della sequenza controllata, che deve essere non vuoto. Utilizzarla per leggere o scrivere sul primo elemento, quando si è certi che esista.  
+ La funzione membro restituisce un riferimento al primo elemento della sequenza controllata, che deve essere non vuoto. Usarlo per leggere o scrivere il primo elemento, quando si è certi che esista.  
   
 ### <a name="example"></a>Esempio  
   
@@ -932,7 +920,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -946,12 +933,12 @@ Accede al primo elemento.
   
 ### <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 property value_type front_item;  
 ```  
   
 ### <a name="remarks"></a>Note  
- La proprietà accede al primo elemento della sequenza controllata, che deve essere non vuoto. Utilizzarla per leggere o scrivere sul primo elemento, quando si è certi che esista.  
+ La proprietà accede al primo elemento della sequenza controllata, che deve essere non vuoto. Usarlo per leggere o scrivere il primo elemento, quando si è certi che esista.  
   
 ### <a name="example"></a>Esempio  
   
@@ -982,7 +969,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -996,14 +982,14 @@ Il tipo dell'interfaccia generica per il contenitore.
   
 ### <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 typedef Microsoft::VisualC::StlClr::  
     IList<generic_value>  
     generic_container;  
 ```  
   
 ### <a name="remarks"></a>Note  
- Tipo che descrive l'interfaccia generica per questa classe di contenitori di modelli.  
+ Il tipo descrive l'interfaccia generica per questa classe di contenitori di modelli.  
   
 ### <a name="example"></a>Esempio  
   
@@ -1046,7 +1032,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1057,18 +1042,18 @@ a b c d e
 ```  
 
 ## <a name="generic_iterator"></a> List::generic_iterator (STL/CLR)
-Il tipo di iteratore per l'utilizzo con l'interfaccia generica per il contenitore.  
+Tipo di iteratore per l'uso con l'interfaccia generica per il contenitore.  
   
 ### <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 typedef Microsoft::VisualC::StlClr::Generic::  
     ContainerBidirectionalIterator<generic_value>  
     generic_iterator;  
 ```  
   
 ### <a name="remarks"></a>Note  
- Il tipo descrive un iteratore generico che può essere usato con l'interfaccia generica per questa classe di contenitori di modelli.  
+ Il tipo descrive un iteratore generico che può essere utilizzato con l'interfaccia generica per questa classe di contenitori di modelli.  
   
 ### <a name="example"></a>Esempio  
   
@@ -1104,7 +1089,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1114,17 +1098,17 @@ a a c
 ```  
 
 ## <a name="generic_reverse_iterator"></a> List::generic_reverse_iterator (STL/CLR)
-Il tipo di un iteratore inverso per l'utilizzo con l'interfaccia generica per il contenitore.  
+Il tipo di un iteratore inverso per l'uso con l'interfaccia generica per il contenitore.  
   
 ### <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 typedef Microsoft::VisualC::StlClr::Generic::  
     ReverseBidirectionalIterator<generic_value> generic_reverse_iterator;  
 ```  
   
 ### <a name="remarks"></a>Note  
- Il tipo descrive un iteratore inverso generico che può essere usato con l'interfaccia generica per questa classe di contenitori di modelli.  
+ Il tipo descrive un iteratore inverso generico che può essere utilizzato con l'interfaccia generica per questa classe di contenitori di modelli.  
   
 ### <a name="example"></a>Esempio  
   
@@ -1160,7 +1144,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1170,16 +1153,16 @@ a c c
 ```  
 
 ## <a name="generic_value"></a> List::generic_value (STL/CLR)
-Il tipo di elemento per l'utilizzo con l'interfaccia generica per il contenitore.  
+Il tipo di elemento per l'uso con l'interfaccia generica per il contenitore.  
   
 ### <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 typedef GValue generic_value;  
 ```  
   
 ### <a name="remarks"></a>Note  
- Il tipo descrive un oggetto di tipo `GValue` che descrive il valore dell'elemento archiviato per l'utilizzo con l'interfaccia generica per questa classe di contenitori di modelli.  
+ Il tipo descrive un oggetto di tipo `GValue` che descrive il valore dell'elemento archiviato per l'uso con l'interfaccia generica per questa classe di contenitori di modelli.  
   
 ### <a name="example"></a>Esempio  
   
@@ -1215,7 +1198,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1225,11 +1207,11 @@ a a c
 ```  
 
 ## <a name="insert"></a> List:: Insert (STL/CLR)
-Aggiunge gli elementi in una posizione specificata.  
+Aggiunge elementi in una posizione specificata.  
   
 ### <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 iterator insert(iterator where, value_type val);  
 void insert(iterator where, size_type count, value_type val);  
 template<typename InIt>  
@@ -1239,36 +1221,36 @@ void insert(iterator where,
 ```  
   
 #### <a name="parameters"></a>Parametri  
- count  
+ *count*  
  Numero di elementi da inserire.  
   
- primo  
+ *first*  
  Inizio dell'intervallo da inserire.  
   
- last  
+ *last*  
  Fine dell'intervallo da inserire.  
   
- right  
+ *right*  
  Enumerazione da inserire.  
   
- Val  
+ *Val*  
  Valore dell'elemento da inserire.  
   
- dove  
+ *where*  
  Posizione in cui nel contenitore da inserire prima.  
   
 ### <a name="remarks"></a>Note  
- Ogni membro funzioni inserimenti, prima dell'elemento a cui puntata `where` nella sequenza controllata, una sequenza specificata dagli operandi rimanenti.  
+ Ognuna di membro funzioni inserimenti, prima dell'elemento a cui punta *in cui* nella sequenza controllata, una sequenza specificata dagli operandi rimanenti.  
   
- La prima funzione membro inserisce un elemento con valore `val` e restituisce un iteratore che definisce l'elemento appena inserito. Utilizzarla per inserire un singolo elemento prima di una posizione designata da un iteratore.  
+ La prima funzione membro inserisce un elemento con valore *val* e restituisce un iteratore che designa l'elemento appena inserito. Usarlo per inserire un singolo elemento prima di una posizione designata dall'iteratore.  
   
- La seconda funzione membro inserisce una ripetizione di `count` elementi con valore `val`. Utilizzarla per inserire zero o più elementi adiacenti che sono tutte le copie dello stesso valore.  
+ La seconda funzione membro inserisce una ripetizione di *conteggio* elementi di valore *val*. Usarlo per l'inserimento di zero o più elementi adiacenti che sono tutte le copie dello stesso valore.  
   
- Se `InIt` è di tipo Integer, la terza funzione membro si comporta come `insert(where, (size_type)first, (value_type)last)`. In caso contrario, inserisce la sequenza [`first`, `last`). Utilizzarla per inserire zero o più elementi contigui copiati da un'altra sequenza.  
+ Se `InIt` è di tipo Integer, la terza funzione membro si comporta come `insert(where, (size_type)first, (value_type)last)`. In caso contrario, inserisce la sequenza [`first`, `last`). Usarlo per l'inserimento di zero o più elementi contigui copiati da un'altra sequenza.  
   
- La quarta funzione membro inserisce la sequenza designata dal `right`. Utilizzarla per inserire una sequenza descritta dall'enumeratore.  
+ La quarta funzione membro inserisce la sequenza designata per il *a destra*. Usarlo per inserire una sequenza descritta da un enumeratore.  
   
- Quando si inserisce un singolo elemento, il numero di copie di elementi è lineare nel numero di elementi tra il punto di inserimento e la fine della sequenza più vicini. (Quando si inserisce uno o più elementi in delle estremità della sequenza, alcuna copia elemento non verificarsi.) Se `InIt` è un iteratore di input, la terza funzione membro esegue in modo efficace un inserimento singolo per ogni elemento nella sequenza. In caso contrario, quando si inseriscono `N` elementi, il numero di copie di elementi è lineare nel `N` più il numero di elementi tra il punto di inserimento e la fine della sequenza più vicini.  
+ Quando si inserisce un singolo elemento, il numero di copie di elementi è lineare nel numero di elementi tra il punto di inserimento e la fine della sequenza più vicini. (Quando si inserisce uno o più elementi in delle estremità della sequenza, alcuna copia elemento non verificarsi.) Se `InIt` è un iteratore di input, la terza funzione membro esegue in modo efficace un inserimento singolo per ogni elemento nella sequenza. In caso contrario, quando si inseriscono `N` elementi, il numero di copie di elementi è lineare nel `N` oltre il numero di elementi tra il punto di inserimento e la fine della sequenza più vicini.  
   
 ### <a name="example"></a>Esempio  
   
@@ -1328,7 +1310,6 @@ int main()
   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1345,12 +1326,12 @@ Tipo di un iteratore per la sequenza controllata.
   
 ### <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 typedef T1 iterator;  
 ```  
   
 ### <a name="remarks"></a>Note  
- Il tipo descrive un oggetto di tipo non specificato `T1` che può essere utilizzato come iteratore ad accesso casuale per la sequenza controllata.  
+ Il tipo descrive un oggetto di tipo non specificato `T1` che può essere usato come iteratore ad accesso casuale per la sequenza controllata.  
   
 ### <a name="example"></a>Esempio  
   
@@ -1380,7 +1361,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1388,12 +1368,12 @@ a b c
 x b c  
 ```  
 
-## <a name="list"></a> List::List (STL/CLR)
+## <a name="list"></a> List:: List (STL/CLR)
 Costruisce un oggetto contenitore.  
   
 ### <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 list();  
 list(list<Value>% right);  
 list(list<Value>^ right);  
@@ -1405,19 +1385,19 @@ list(System::Collections::Generic::IEnumerable<Value>^ right);
 ```  
   
 #### <a name="parameters"></a>Parametri  
- `count`  
+ *count*  
  Numero di elementi da inserire.  
   
- `first`  
+ *first*  
  Inizio dell'intervallo da inserire.  
   
- `last`  
+ *last*  
  Fine dell'intervallo da inserire.  
   
- `right`  
+ *right*  
  Oggetto o un intervallo da inserire.  
   
- `val`  
+ *Val*  
  Valore dell'elemento da inserire.  
   
 ### <a name="remarks"></a>Note  
@@ -1426,31 +1406,31 @@ list(System::Collections::Generic::IEnumerable<Value>^ right);
   
  `list();`  
   
- Inizializza la sequenza controllata senza elementi. È utilizzata per specificare una sequenza controllata iniziale vuota.  
+ Inizializza la sequenza controllata senza elementi. Utilizzarla per specificare una sequenza controllata iniziale vuota.  
   
  Il costruttore:  
   
  `list(list<Value>% right);`  
   
- Inizializza la sequenza controllata con la sequenza [`right.begin()`, `right.end()`). Che consente di specificare una sequenza controllata iniziale che è una copia della sequenza controllata dall'oggetto elenco `right`.  
+ Inizializza la sequenza controllata con la sequenza [`right.begin()`, `right.end()`). È utilizzata per specificare una sequenza controllata iniziale che è una copia della sequenza controllata dall'oggetto elenco *a destra*.  
   
  Il costruttore:  
   
  `list(list<Value>^ right);`  
   
- Inizializza la sequenza controllata con la sequenza [`right->begin()`, `right->end()`). Che consente di specificare una sequenza controllata iniziale che è una copia della sequenza controllata dall'oggetto elenco con handle `right`.  
+ Inizializza la sequenza controllata con la sequenza [`right->begin()`, `right->end()`). È utilizzata per specificare una sequenza controllata iniziale che è una copia della sequenza controllata dall'oggetto elenco con handle *a destra*.  
   
  Il costruttore:  
   
  `explicit list(size_type count);`  
   
- Inizializza la sequenza controllata con `count` elementi con valore `value_type()`. Utilizzarla per riempire il contenitore con elementi tutti con il valore predefinito.  
+ Inizializza la sequenza controllata con *conteggio* elementi con valore `value_type()`. Utilizzarla per riempire il contenitore con gli elementi tutti con il valore predefinito.  
   
  Il costruttore:  
   
  `list(size_type count, value_type val);`  
   
- Inizializza la sequenza controllata con `count` elementi con valore `val`. Utilizzarla per riempire il contenitore con elementi tutti con lo stesso valore.  
+ Inizializza la sequenza controllata con *conteggio* elementi con valore *val*. Utilizzarla per riempire il contenitore con gli elementi tutti con lo stesso valore.  
   
  Il costruttore:  
   
@@ -1458,13 +1438,13 @@ list(System::Collections::Generic::IEnumerable<Value>^ right);
   
  `list(InIt first, InIt last);`  
   
- Inizializza la sequenza controllata con la sequenza [`first`, `last`). Utilizzarla per creare una copia di un'altra sequenza la sequenza controllata.  
+ Inizializza la sequenza controllata con la sequenza [`first`, `last`). Utilizzarla per creare una copia di un'altra sequenza nella sequenza controllata.  
   
  Il costruttore:  
   
  `list(System::Collections::Generic::IEnumerable<Value>^ right);`  
   
- Inizializza la sequenza controllata con la sequenza designata dall'enumeratore `right`. Utilizzarla per creare una copia di un'altra sequenza descritta da un enumeratore nella sequenza controllata.  
+ Inizializza la sequenza controllata con la sequenza definita dall'enumeratore *a destra*. Usarlo per creare una copia di un'altra sequenza descritta da un enumeratore nella sequenza controllata.  
   
 ### <a name="example"></a>Esempio  
   
@@ -1519,7 +1499,6 @@ int main()
   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1537,25 +1516,25 @@ Unisce due sequenze controllate ordinate.
   
 ### <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 void merge(list<Value>% right);  
 template<typename Pred2>  
     void merge(list<Value>% right, Pred2 pred);  
 ```  
   
 #### <a name="parameters"></a>Parametri  
- pred  
+ *Pred*  
  Operatore di confronto per le coppie di elementi.  
   
- right  
+ *right*  
  Contenitore da unire.  
   
 ### <a name="remarks"></a>Note  
- La prima funzione membro rimuove tutti gli elementi dalla sequenza controllata da `right` e inserirli nella sequenza controllata. Entrambe le sequenze devono essere ordinate in precedenza tramite `operator<` -elementi non possono diminuire in valore andando avanti con una sequenza. La sequenza risultante è ordinata in base `operator<`. Utilizzare questa funzione membro di due sequenze che aumentano valore in una sequenza che aumenta anche nel valore di tipo merge.  
+ La prima funzione membro rimuove tutti gli elementi dalla sequenza controllata da *a destra* e inserirli nella sequenza controllata. Entrambe le sequenze devono essere ordinate in precedenza tramite `operator<` : elementi non è necessario diminuire nel valore man mano che procedi una sequenza. La sequenza risultante viene anche ordinata in base `operator<`. Utilizzare questa funzione membro di due sequenze che aumentano nel valore in una sequenza che aumenta anche nel valore di tipo merge.  
   
- La seconda funzione membro si comporta come la prima, ad eccezione del fatto che le sequenze vengono ordinate in base `pred`  --  `pred(X, Y)` deve essere false per qualsiasi elemento `X` che segue l'elemento `Y` nella sequenza. Utilizzarla per unire due sequenze ordinate in base a una funzione di predicato o delegato specificati.  
+ La seconda funzione membro si comporta come la prima, ad eccezione del fatto che le sequenze vengono ordinate in base `pred`  --  `pred(X, Y)` deve essere false per qualsiasi elemento `X` che segue l'elemento `Y` nella sequenza. Utilizzarla per unire due sequenze ordinate in base a una funzione di predicato o delegato specificato.  
   
- Le funzioni consentono di eseguire un'operazione di unione stabile - nessuna coppia di elementi in uno delle sequenze controllate originale viene invertita nella sequenza controllata risulta. Inoltre, se una coppia di elementi `X` e `Y` nella sequenza controllata risulta ha un ordinamento equivalente - `!(X < Y) && !(X < Y)` -un elemento dalla sequenza controllata originale viene visualizzato prima di un elemento dalla sequenza controllata dal `right`.  
+ Le funzioni consentono di eseguire un'unione nell'indice stabile: nessuna coppia di elementi in una delle sequenze controllate originale viene invertita nella sequenza controllata risulta. Inoltre, se una coppia di elementi `X` e `Y` nella sequenza controllata risulta ha ordinamento equivalente - `!(X < Y) && !(X < Y)` -un elemento dalla sequenza controllata originale appare prima di un elemento dalla sequenza controllata da *destro*.  
   
 ### <a name="example"></a>Esempio  
   
@@ -1613,7 +1592,6 @@ int main()
     System::Console::WriteLine("c1.size() = {0}", c1.size());   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1637,11 +1615,11 @@ list<Value>% operator=(list<Value>% right);
 ```  
   
 #### <a name="parameters"></a>Parametri  
- right  
+ *right*  
  Contenitore da copiare.  
   
 ### <a name="remarks"></a>Note  
- Le copie di operatore membro `right` sull'oggetto, quindi restituisce `*this`. Viene usato per sostituire la sequenza controllata con una copia della sequenza controllata in `right`.  
+ Le copie di operatore membro *a destra* all'oggetto, quindi restituisce `*this`. Usarlo per sostituire la sequenza controllata con una copia della sequenza controllata nel *a destra*.  
   
 ### <a name="example"></a>Esempio  
   
@@ -1670,7 +1648,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1683,12 +1660,12 @@ Rimuove l'ultimo elemento.
   
 ### <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 void pop_back();  
 ```  
   
 ### <a name="remarks"></a>Note  
- La funzione membro rimuove l'ultimo elemento della sequenza controllata, che deve essere non vuoto. Che consente di abbreviare l'elenco da un elemento nella parte posteriore.  
+ La funzione membro rimuove l'ultimo elemento della sequenza controllata, che deve essere non vuoto. Utilizzarla per abbreviare l'elenco di un elemento nella parte posteriore.  
   
 ### <a name="example"></a>Esempio  
   
@@ -1716,7 +1693,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1729,12 +1705,12 @@ Rimuove il primo elemento.
   
 ### <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 void pop_front();  
 ```  
   
 ### <a name="remarks"></a>Note  
- La funzione membro rimuove il primo elemento della sequenza controllata, che deve essere non vuoto. Che consente di abbreviare l'elenco di un elemento in primo piano.  
+ La funzione membro rimuove il primo elemento della sequenza controllata, che deve essere non vuoto. Utilizzarla per abbreviare l'elenco di un elemento in primo piano.  
   
 ### <a name="example"></a>Esempio  
   
@@ -1762,7 +1738,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1775,12 +1750,12 @@ Aggiunge un nuovo ultimo elemento.
   
 ### <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 void push_back(value_type val);  
 ```  
   
 ### <a name="remarks"></a>Note  
- La funzione membro inserisce un elemento con valore `val` alla fine della sequenza controllata. Utilizzarla per aggiungere un altro elemento all'elenco.  
+ La funzione membro inserisce un elemento con valore `val` alla fine della sequenza controllata. Usarlo per aggiungere un altro elemento all'elenco.  
   
 ### <a name="example"></a>Esempio  
   
@@ -1802,7 +1777,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1814,12 +1788,12 @@ Aggiunge un nuovo elemento di primo.
   
 ### <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 void push_front(value_type val);  
 ```  
   
 ### <a name="remarks"></a>Note  
- La funzione membro inserisce un elemento con valore `val` all'inizio della sequenza controllata. Che consente di anteporre un altro elemento all'elenco.  
+ La funzione membro inserisce un elemento con valore `val` all'inizio della sequenza controllata. Utilizzarla per anteporre un altro elemento all'elenco.  
   
 ### <a name="example"></a>Esempio  
   
@@ -1841,7 +1815,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1853,12 +1826,12 @@ Indica l'inizio della sequenza controllata inversa.
   
 ### <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 reverse_iterator rbegin();  
 ```  
   
 ### <a name="remarks"></a>Note  
- La funzione membro restituisce un iteratore inverso che definisce l'ultimo elemento della sequenza controllata o appena oltre l'inizio di una sequenza vuota. Di conseguenza, indica il `beginning` della sequenza inversa. Che consente di ottenere un iteratore che definisce il `current` inizio della sequenza controllata considerata in ordine inverso, ma il relativo stato è possibile modificare se viene modificata la lunghezza della sequenza controllata.  
+ La funzione membro restituisce un iteratore inverso che definisce l'ultimo elemento della sequenza controllata o appena oltre l'inizio di una sequenza vuota. Di conseguenza, indica il `beginning` della sequenza inversa. Usarlo per ottenere un iteratore che designa il `current` inizio della sequenza controllata considerata in ordine inverso, ma il cui stato può modificarsi se la lunghezza della sequenza controllata cambia.  
   
 ### <a name="example"></a>Esempio  
   
@@ -1892,7 +1865,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1907,7 +1879,7 @@ Tipo di un riferimento a un elemento.
   
 ### <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 typedef value_type% reference;  
 ```  
   
@@ -1948,7 +1920,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1961,12 +1932,12 @@ Rimuove un elemento con un valore specificato.
   
 ### <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 void remove(value_type val);  
 ```  
   
 #### <a name="parameters"></a>Parametri  
- Val  
+ *Val*  
  Valore dell'elemento da rimuovere.  
   
 ### <a name="remarks"></a>Note  
@@ -2004,7 +1975,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2018,17 +1988,17 @@ Rimuove gli elementi che superano un test specificato.
   
 ### <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 template<typename Pred1>  
     void remove_if(Pred1 pred);  
 ```  
   
 #### <a name="parameters"></a>Parametri  
- pred  
+ *Pred*  
  Test per gli elementi da rimuovere.  
   
 ### <a name="remarks"></a>Note  
- La funzione membro rimuove dalla sequenza controllata (cancellazioni) tutti gli elementi `X` per il quale `pred(X)` è true. Usarlo per rimuovere tutti gli elementi che soddisfano una condizione che specifica come una funzione o un delegato.  
+ La funzione membro rimuove dalla sequenza controllata (cancellazioni) tutti gli elementi `X` per il quale `pred(X)` è true. Usarlo per rimuovere tutti gli elementi che soddisfano una condizione che è specificare come una funzione o un delegato.  
   
 ### <a name="example"></a>Esempio  
   
@@ -2066,7 +2036,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2080,12 +2049,12 @@ Indica la fine della sequenza controllata inversa.
   
 ### <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 reverse_iterator rend();  
 ```  
   
 ### <a name="remarks"></a>Note  
- La funzione membro restituisce un iteratore inverso che punta appena oltre l'inizio della sequenza controllata. Di conseguenza, indica il `end` della sequenza inversa. Che consente di ottenere un iteratore che definisce il `current` fine della sequenza controllata considerata in ordine inverso, ma il relativo stato è possibile modificare se viene modificata la lunghezza della sequenza controllata.  
+ La funzione membro restituisce un iteratore inverso che punta appena oltre l'inizio della sequenza controllata. Di conseguenza, indica il `end` della sequenza inversa. Usarlo per ottenere un iteratore che designa il `current` fine della sequenza controllata considerata in ordine inverso, ma il cui stato può modificarsi se la lunghezza della sequenza controllata cambia.  
   
 ### <a name="example"></a>Esempio  
   
@@ -2120,7 +2089,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2135,20 +2103,20 @@ Modifica il numero di elementi.
   
 ### <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 void resize(size_type new_size);  
 void resize(size_type new_size, value_type val);  
 ```  
   
 #### <a name="parameters"></a>Parametri  
- NEW_SIZE  
+ *NEW_SIZE*  
  Nuova dimensione della sequenza controllata.  
   
- Val  
+ *Val*  
  Valore dell'elemento di spaziatura.  
   
 ### <a name="remarks"></a>Note  
- Funzioni membro di entrambi affinché [List:: Size (STL/CLR)](../dotnet/list-size-stl-clr.md) `()` ormai restituisce `new_size`. Se la sequenza controllata deve essere allungata, la prima funzione membro accoda elementi con valore `value_type()`, mentre la seconda funzione membro accoda elementi con valore `val`. Per rendere la sequenza controllata più breve, entrambe le funzioni membro cancellare in modo efficace l'ultimo elemento [List:: Size (STL/CLR)](../dotnet/list-size-stl-clr.md) `() -` `new_size` volte. Che consente di verificare che la sequenza controllata ha dimensioni `new_size`, trimming o padding la sequenza controllata corrente.  
+ Le funzioni membro entrambi assicurarsi che [List:: Size (STL/CLR)](../dotnet/list-size-stl-clr.md) `()` dispendio restituisce *new_size*. Se è necessario apportare la sequenza controllata più lungo, la prima funzione membro accoda elementi con valore `value_type()`, mentre la seconda funzione membro accoda elementi con valore *val*. Per rendere la sequenza controllata, entrambe le funzioni membro cancellare in modo efficace l'ultimo elemento [List:: Size (STL/CLR)](../dotnet/list-size-stl-clr.md) `() -` `new_size` volte. Usarlo per garantire che la sequenza controllata è di dimensioni *new_size*, spazi o riempimento la sequenza controllata corrente.  
   
 ### <a name="example"></a>Esempio  
   
@@ -2178,7 +2146,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2193,12 +2160,12 @@ Inverte la sequenza controllata.
   
 ### <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 void reverse();  
 ```  
   
 ### <a name="remarks"></a>Note  
- La funzione membro inverte l'ordine di tutti gli elementi nella sequenza controllata. Utilizzarlo in modo da riflettere un elenco di elementi.  
+ La funzione membro inverte l'ordine di tutti gli elementi nella sequenza controllata. Usarlo in modo da riflettere un elenco di elementi.  
   
 ### <a name="example"></a>Esempio  
   
@@ -2226,7 +2193,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2239,7 +2205,7 @@ Tipo di un iteratore inverso della sequenza controllata.
   
 ### <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 typedef T3 reverse_iterator;  
 ```  
   
@@ -2274,7 +2240,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2287,12 +2252,12 @@ Conta il numero di elementi.
   
 ### <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 size_type size();  
 ```  
   
 ### <a name="remarks"></a>Note  
- La funzione membro restituisce la lunghezza della sequenza controllata. Utilizzarla per determinare il numero di elementi attualmente presenti nella sequenza controllata. Se si è interessati se la sequenza di dimensioni diverso da zero, vedere [List:: Empty (STL/CLR)](../dotnet/list-empty-stl-clr.md)`()`.  
+ La funzione membro restituisce la lunghezza della sequenza controllata. Utilizzarla per determinare il numero di elementi attualmente presenti nella sequenza controllata. Se si è interessati è se la sequenza ha dimensioni diverse da zero, vedere [List:: Empty (STL/CLR)](../dotnet/list-empty-stl-clr.md)`()`.  
   
 ### <a name="example"></a>Esempio  
   
@@ -2324,7 +2289,6 @@ int main()
     System::Console::WriteLine("size() = {0} after adding 2", c1.size());   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2339,7 +2303,7 @@ Il tipo di una distanza signed tra due elementi.
   
 ### <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 typedef int size_type;  
 ```  
   
@@ -2373,7 +2337,6 @@ int main()
     System::Console::WriteLine("end()-begin() = {0}", diff);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2386,22 +2349,22 @@ Ordina la sequenza controllata.
   
 ### <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 void sort();  
 template<typename Pred2>  
     void sort(Pred2 pred);  
 ```  
   
 #### <a name="parameters"></a>Parametri  
- pred  
+ *Pred*  
  Operatore di confronto per le coppie di elementi.  
   
 ### <a name="remarks"></a>Note  
- La prima funzione membro Riordina gli elementi nella sequenza controllata in modo che vengono ordinati da `operator<` -elementi non diminuiscono nel valore andando avanti con la sequenza. Utilizzare questa funzione membro per ordinare la sequenza in ordine crescente.  
+ La prima funzione membro Riordina gli elementi nella sequenza controllata in modo che siano ordinate da `operator<` : elementi non diminuire nel valore man mano che procedi la sequenza. Utilizzare questa funzione membro per ordinare la sequenza in ordine crescente.  
   
- La seconda funzione membro si comporta come la prima, ad eccezione del fatto che la sequenza viene ordinata dagli `pred`  --  `pred(X, Y)` è false per qualsiasi elemento `X` che segue l'elemento `Y` nella sequenza risultante. Utilizzarla per ordinare la sequenza in un ordine in cui è possibile specificare una funzione di predicato o delegato.  
+ La seconda funzione membro si comporta come la prima, ad eccezione del fatto che la sequenza viene ordinata in base `pred`  --  `pred(X, Y)` è false per qualsiasi elemento `X` che segue l'elemento `Y` nella sequenza risultante. Utilizzarla per ordinare la sequenza in un ordine specificato da una funzione di predicato o di un delegato.  
   
- Le funzioni consentono di eseguire un ordinamento stabile - nessuna coppia di elementi nella sequenza controllata originale viene invertita nella sequenza controllata risulta.  
+ Le funzioni consentono di eseguire un ordinamento stabile, ovvero nessuna coppia di elementi nella sequenza controllata originale viene invertita nella sequenza controllata risulta.  
   
 ### <a name="example"></a>Esempio  
   
@@ -2435,7 +2398,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2445,11 +2407,11 @@ a b c
 ``` 
 
 ## <a name="splice"></a> List:: splice (STL/CLR)
-Restitch collegamenti tra i nodi.  
+Restitch collegamenti tra nodi.  
   
 ### <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 void splice(iterator where, list<Value>% right);  
 void splice(iterator where, list<Value>% right,  
     iterator first);  
@@ -2458,24 +2420,24 @@ void splice(iterator where, list<Value>% right,
 ```  
   
 #### <a name="parameters"></a>Parametri  
- primo  
+ *first*  
  Inizio dell'intervallo da inserire.  
   
- last  
+ *last*  
  Fine dell'intervallo da inserire.  
   
- right  
- Contenitore da inserire.  
+ *right*  
+ Contenitore da cui inserire.  
   
- dove  
- Posizione in cui nel contenitore per congiungere prima.  
+ *where*  
+ Posizione in cui nel contenitore da inserire prima.  
   
 ### <a name="remarks"></a>Note  
- La prima funzione membro inserisce la sequenza controllata da `right` prima dell'elemento nella sequenza controllata puntata da `where`. Inoltre, rimuove tutti gli elementi da `right` (`%right` non deve essere uguale `this`.) Che consente di inserire tutti un unico elenco in un altro.  
+ La prima funzione membro inserisce la sequenza controllata da *a destra* prima che l'elemento nella sequenza controllata a cui punta *in cui*. Rimuove anche tutti gli elementi da *a destra*. (`%right` non deve essere uguale `this`.) Usarlo per tutti un unico elenco a inserire in un altro.  
   
- La seconda funzione membro rimuove l'elemento a cui puntata `first` nella sequenza controllata da `right` e lo inserisce prima che l'elemento nella sequenza controllata a cui punta `where`. (Se `where` `==` `first` `||` `where` `== ++first`, si verifica alcun cambiamento.) Che consente di inserire un singolo elemento di un elenco in un altro.  
+ La seconda funzione membro rimuove l'elemento a cui punta *primo* nella sequenza controllata da *destro* e lo inserisce prima che l'elemento nella sequenza controllata a cui punta *dove* . (Se `where` `==` `first` `||` `where` `== ++first`, viene apportata alcuna modifica.) Usarlo per inserire un singolo elemento di un elenco in un altro.  
   
- La terza funzione membro inserisce il sottointervallo designato da [`first`, `last`) dalla sequenza controllata dal `right` prima dell'elemento nella sequenza controllata puntata da `where`. Viene anche rimosso il sottointervallo originale dalla sequenza controllata da `right` (Se `right` `==` `this`, nell'intervallo [`first`, `last`) non devono includere l'elemento a cui puntata `where`.) Che consente di inserire una sottosequenza di zero o più elementi da un elenco in un altro.  
+ La terza funzione membro inserisce il sottointervallo designato da [`first`, `last`) dalla sequenza controllata da *destro* prima dell'elemento nella sequenza controllata a cui punta *dove*. Anche rimosso il sottointervallo originale dalla sequenza controllata da *a destra*. (Se `right` `==` `this`, nell'intervallo [`first`, `last`) non deve includere l'elemento a cui punta *dove*.) Usarlo per inserire una sottosequenza di zero o più elementi da un elenco in un altro.  
   
 ### <a name="example"></a>Esempio  
   
@@ -2522,7 +2484,6 @@ int main()
     System::Console::WriteLine("c2.size() = {0}", c2.size());   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2540,16 +2501,16 @@ Scambia il contenuto di due contenitori.
   
 ### <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 void swap(list<Value>% right);  
 ```  
   
 #### <a name="parameters"></a>Parametri  
- right  
+ *right*  
  Contenitore con cui scambiare il contenuto.  
   
 ### <a name="remarks"></a>Note  
- La funzione membro scambia le sequenze controllate tra `*this` e `right`. Esegue l'operazione in un tempo costante e non genera alcuna eccezione. Utilizzato come un modo rapido per scambiare il contenuto di due contenitori.  
+ La funzione membro Scambia le sequenze controllate tra `*this` e *destro*. Esegue l'operazione in un tempo costante e non genera alcuna eccezione. Usarlo come un modo rapido per scambiare il contenuto di due contenitori.  
   
 ### <a name="example"></a>Esempio  
   
@@ -2587,7 +2548,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2598,11 +2558,11 @@ a b c
 ```   
 
 ## <a name="to_array"></a> List::to_array (STL/CLR)
-La sequenza controllata viene copiata in una nuova matrice.  
+Copia la sequenza controllata in una nuova matrice.  
   
 ### <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 cli::array<Value>^ to_array();  
 ```  
   
@@ -2637,7 +2597,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2650,20 +2609,20 @@ Rimuove gli elementi adiacenti che superano un test specificato.
   
 ### <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 void unique();  
 template<typename Pred2>  
     void unique(Pred2 pred);  
 ```  
   
 #### <a name="parameters"></a>Parametri  
- pred  
+ *Pred*  
  Operatore di confronto per le coppie di elementi.  
   
 ### <a name="remarks"></a>Note  
- La prima funzione membro rimuove dalla sequenza controllata (cancellazioni) tutti gli elementi che risultano uguali all'elemento precedente, se elemento `X` precede l'elemento `Y` e `X == Y`, la funzione membro rimuove `Y`. Si utilizzano per rimuovere tutte tranne una copia di ogni sottosequenza degli elementi adiacenti che risultano uguali. Si noti che se la sequenza controllata viene ordinato in, ad esempio come base chiamata [List:: Sort (STL/CLR)](../dotnet/list-sort-stl-clr.md)`()`, la funzione membro lascia solo elementi con valori univoci. come indicato dal nome.  
+ La prima funzione membro rimuove dalla sequenza controllata (cancellazioni) ogni elemento che risulta uguale all'elemento precedente, se elemento `X` precede l'elemento `Y` e `X == Y`, la funzione membro rimuove `Y`. Usarlo per rimuovere tutti tranne una copia di ogni sottosequenza degli elementi adiacenti che risultano uguali. Si noti che se viene ordinato nella sequenza controllata, ad esempio come tramite la chiamata [List:: Sort (STL/CLR)](../dotnet/list-sort-stl-clr.md)`()`, la funzione membro lascia solo elementi con valori univoci. come indicato dal nome.  
   
- La seconda funzione membro si comporta come la prima, ad eccezione del fatto che rimuove ogni elemento `Y` che segue un elemento `X` per il quale `pred(X, Y)`. Si utilizzarlo per rimuovere tutte tranne una copia di ogni sottosequenza di elementi adiacenti che soddisfano una funzione di predicato o delegato specificato. Si noti che se viene ordinato la sequenza controllata, ad esempio chiamando come `sort(pred)`, la funzione membro lascia solo gli elementi che non hanno un ordinamento equivalente con qualsiasi altro elemento.  
+ La seconda funzione membro si comporta come la prima, ad eccezione del fatto che rimuove ogni elemento `Y` che segue un elemento `X` per il quale `pred(X, Y)`. Usarlo per rimuovere tutti tranne una copia di ogni sottosequenza di elementi adiacenti che soddisfano una funzione di predicato o delegato specificato. Si noti che se viene ordinato nella sequenza controllata, ad esempio chiamando come `sort(pred)`, la funzione membro lascia che solo gli elementi che non hanno un ordinamento equivalente con altri elementi.  
   
 ### <a name="example"></a>Esempio  
   
@@ -2700,7 +2659,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2714,12 +2672,12 @@ Tipo di un elemento.
   
 ### <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 typedef Value value_type;  
 ```  
   
 ### <a name="remarks"></a>Note  
- Il tipo è un sinonimo del parametro di modello `Value`.  
+ Il tipo è un sinonimo del parametro di modello *valore*.  
   
 ### <a name="example"></a>Esempio  
   
@@ -2746,7 +2704,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2754,25 +2711,25 @@ a b c
 ``` 
 
 ## <a name="op_neq"></a> operatore! = (elenco) (STL/CLR)
-Elenco diverso di confronto.  
+Elenco di confronto non uguale.  
   
 ### <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 template<typename Value>  
     bool operator!=(list<Value>% left,  
         list<Value>% right);  
 ```  
   
 #### <a name="parameters"></a>Parametri  
- left  
+ *left*  
  Contenitore sinistro da confrontare.  
   
- right  
+ *right*  
  Contenitore destro da confrontare.  
   
 ### <a name="remarks"></a>Note  
- La funzione di operatore restituisce `!(left == right)`. Che consente di testare se `left` non viene ordinato identico `right` quando due elenchi vengono confrontato elemento per elemento.  
+ La funzione di operatore restituisce `!(left == right)`. Utilizzarla per testare se *a sinistra* non viene ordinato identico *a destra* quando i due elenchi sono confrontato elemento per elemento.  
   
 ### <a name="example"></a>Esempio  
   
@@ -2810,7 +2767,6 @@ int main()
         c1 != c2);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2825,21 +2781,21 @@ Elenco minore di confronto.
   
 ### <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 template<typename Value>  
     bool operator<(list<Value>% left,  
         list<Value>% right);  
 ```  
   
 #### <a name="parameters"></a>Parametri  
- left  
+ *left*  
  Contenitore sinistro da confrontare.  
   
- right  
+ *right*  
  Contenitore destro da confrontare.  
   
 ### <a name="remarks"></a>Note  
- L'operatore funzione restituisce true se, per la posizione più bassa `i` per il quale `!(right[i] < left[i])` è anche vero che `left[i] < right[i]`. In caso contrario, restituisce `left->size() < right->size()` che consente di testare se `left` viene ordinato in posizione precedente `right` quando due elenchi vengono confrontato elemento per elemento.  
+ L'operatore funzione restituisce true se, per la posizione più bassa `i` per il quale `!(right[i] < left[i])` è anche vero che `left[i] < right[i]`. In caso contrario, restituisce `left->size() < right->size()` utilizzati per verificare se *a sinistra* viene ordinato prima *a destra* quando i due elenchi sono confrontato elemento per elemento.  
   
 ### <a name="example"></a>Esempio  
   
@@ -2877,7 +2833,6 @@ int main()
         c1 < c2);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2892,21 +2847,21 @@ Elenco minore o uguale confronto.
   
 ### <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 template<typename Value>  
     bool operator<=(list<Value>% left,  
         list<Value>% right);  
 ```  
   
 #### <a name="parameters"></a>Parametri  
- left  
+ *left*  
  Contenitore sinistro da confrontare.  
   
- right  
+ *right*  
  Contenitore destro da confrontare.  
   
 ### <a name="remarks"></a>Note  
- La funzione di operatore restituisce `!(right < left)`. Che consente di testare se `left` non viene ordinato dopo `right` quando due elenchi vengono confrontato elemento per elemento.  
+ La funzione di operatore restituisce `!(right < left)`. Utilizzarla per testare se *a sinistra* non viene ordinato dopo *a destra* quando i due elenchi sono confrontato elemento per elemento.  
   
 ### <a name="example"></a>Esempio  
   
@@ -2944,7 +2899,6 @@ int main()
         c2 <= c1);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2959,21 +2913,21 @@ Confronto uguale a elenco.
   
 ### <a name="syntax"></a>Sintassi  
   
-```  
+```cpp 
 template<typename Value>  
     bool operator==(list<Value>% left,  
         list<Value>% right);  
 ```  
   
 #### <a name="parameters"></a>Parametri  
- left  
+ *left*  
  Contenitore sinistro da confrontare.  
   
- right  
+ *right*  
  Contenitore destro da confrontare.  
   
 ### <a name="remarks"></a>Note  
- La funzione di operatore restituisce true solo se le sequenze controllate da `left` e `right` hanno la stessa lunghezza e, per ogni posizione `i`, `left[i] ==` `right[i]`. Che consente di testare se `left` viene ordinata quella `right` quando due elenchi vengono confrontato elemento per elemento.  
+ La funzione di operatore restituisce true solo se le sequenze controllate da *a sinistra* e *destro* abbiano la stessa lunghezza e, per ogni posizione `i`, `left[i] ==` `right[i]`. Utilizzarla per testare se *a sinistra* è ordinate allo stesso modo come *a destra* quando i due elenchi sono confrontato elemento per elemento.  
   
 ### <a name="example"></a>Esempio  
   
@@ -3011,7 +2965,6 @@ int main()
         c1 == c2);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -3022,25 +2975,25 @@ int main()
 ```  
 
 ## <a name="op_gt"></a> operatore&gt; (elenco) (STL/CLR)
-Elenco maggiore di confronto.  
+Confronto maggiore di elenco.  
   
 ### <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 template<typename Value>  
     bool operator>(list<Value>% left,  
         list<Value>% right);  
 ```  
   
 #### <a name="parameters"></a>Parametri  
- left  
+ *left*  
  Contenitore sinistro da confrontare.  
   
- right  
+ *right*  
  Contenitore destro da confrontare.  
   
 ### <a name="remarks"></a>Note  
- La funzione di operatore restituisce `right` `<` `left`. Che consente di testare se `left` ordinate dopo `right` quando due elenchi vengono confrontato elemento per elemento.  
+ Restituisce la funzione dell'operatore `right` `<` `left`. Utilizzarla per testare se *a sinistra* viene ordinata dopo *a destra* quando i due elenchi sono confrontato elemento per elemento.  
   
 ### <a name="example"></a>Esempio  
   
@@ -3078,7 +3031,6 @@ int main()
         c2 > c1);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -3089,25 +3041,25 @@ int main()
 ```  
 
 ## <a name="op_gteq"></a> operatore&gt;= (elenco) (STL/CLR)
-Elenco maggiore o uguale a confronto.  
+Confronto uguale o maggiore di elenco.  
   
 ### <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 template<typename Value>  
     bool operator>=(list<Value>% left,  
         list<Value>% right);  
 ```  
   
 #### <a name="parameters"></a>Parametri  
- left  
+ *left*  
  Contenitore sinistro da confrontare.  
   
- right  
+ *right*  
  Contenitore destro da confrontare.  
   
 ### <a name="remarks"></a>Note  
- La funzione di operatore restituisce `!(left` `<` `right)`. Che consente di testare se `left` non viene ordinato prima `right` quando due elenchi vengono confrontato elemento per elemento.  
+ Restituisce la funzione dell'operatore `!(left` `<` `right)`. Utilizzarla per testare se *a sinistra* non viene ordinato prima *a destra* quando i due elenchi sono confrontato elemento per elemento.  
   
 ### <a name="example"></a>Esempio  
   
@@ -3145,7 +3097,6 @@ int main()
         c1 >= c2);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -3153,4 +3104,4 @@ int main()
  a b d  
 [a b c] >= [a b c] is True  
 [a b c] >= [a b d] is False  
-```  
+``` 

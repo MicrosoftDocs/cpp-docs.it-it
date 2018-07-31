@@ -1,5 +1,5 @@
 ---
-title: scheda (STL/CLR) | Documenti Microsoft
+title: scheda (STL/CLR) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/15/2018
 ms.technology:
@@ -59,19 +59,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: a472284df67993a65de98df7db698ea533451ea3
-ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
+ms.openlocfilehash: f87ea6791144b7ce40f4e2d71a2ca7f031adbedf
+ms.sourcegitcommit: bad2441d1930275ff506d44759d283d94cccd1c0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37079436"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39376108"
 ---
 # <a name="adapter-stlclr"></a>adapter (STL/CLR)
-L'intestazione STL/CLR `<cliext/adapter>` specifica due classi di modello (`collection_adapter` e `range_adapter`), la funzione di modello e `make_collection`.  
+L'intestazione STL/CLR `<cliext/adapter>` specifica due classi di modello (`collection_adapter` e `range_adapter`) e la funzione modello `make_collection`.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 #include <cliext/adapter>  
 ```  
 
@@ -84,21 +84,21 @@ L'intestazione STL/CLR `<cliext/adapter>` specifica due classi di modello (`coll
   
 |Classe|Descrizione|  
 |-----------|-----------------|  
-|[collection_adapter (STL/CLR)](#collection_adapter)|Esegue il wrapping raccolta libreria di classi Base (BCL) sotto forma di intervallo.|  
-|[range_adapter (STL/CLR)](#range_adapter)|Esegue il wrapping dell'intervallo come raccolta BCL.|  
+|[collection_adapter (STL/CLR)](#collection_adapter)|Esegue il wrapping dell'insieme di libreria di classi Base (BCL) come un intervallo.|  
+|[range_adapter (STL/CLR)](#range_adapter)|Esegue il wrapping dell'intervallo come una raccolta di libreria di classi base.|  
 
 |Funzione|Descrizione|  
 |--------------|-----------------|  
-|[make_collection (STL/CLR)](#make_collection)|Crea un adattatore di intervallo mediante una coppia di iteratori.|   
+|[make_collection (STL/CLR)](#make_collection)|Crea una scheda di intervallo usando una coppia di iteratori.|   
   
 ## <a name="members"></a>Membri
 
 ## <a name="collection_adapter"></a> collection_adapter (STL/CLR)
-Esegue il wrapping di una raccolta di .NET per l'utilizzo come un contenitore STL/CLR. Oggetto `collection_adapter` è una classe modello che descrive un oggetto contenitore STL/CLR semplice. Esegue il wrapping di un'interfaccia di libreria di classi Base (BCL) e restituisce una coppia iteratore che consente di modificare la sequenza controllata.  
+Esegue il wrapping di una raccolta di .NET per l'utilizzo come un contenitore STL/CLR. Oggetto `collection_adapter` è una classe di modello che descrive un oggetto contenitore STL/CLR semplice. Esegue il wrapping di un'interfaccia di libreria di classi Base (BCL) e restituisce una coppia di iteratori che consente di modificare la sequenza controllata.  
   
 ### <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 template<typename Coll>  
     ref class collection_adapter;  
   
@@ -129,8 +129,8 @@ template<typename Key,
         System::Collections::Generic::IDictionary<Key, Value>>;  
 ```  
   
-##### <a name="parameters"></a>Parametri  
- Coll  
+#### <a name="parameters"></a>Parametri  
+ *Coll*  
  Il tipo della raccolta sottoposta a wrapping.  
   
 ### <a name="specializations"></a>Specializzazioni  
@@ -152,15 +152,15 @@ template<typename Key,
 |---------------------|-----------------|  
 |[collection_adapter::difference_type (STL/CLR)](#difference_type)|Tipo di una distanza Signed tra due elementi.|  
 |[collection_adapter::iterator (STL/CLR)](#iterator)|Tipo di un iteratore per la sequenza controllata.|  
-|[collection_adapter::key_type (STL/CLR)](#key_type)|Il tipo di una chiave del dizionario.|  
-|[collection_adapter::mapped_type (STL/CLR)](#mapped_type)|Il tipo di un valore del dizionario.|  
+|[collection_adapter::key_type (STL/CLR)](#key_type)|Tipo di una chiave del dizionario.|  
+|[collection_adapter::mapped_type (STL/CLR)](#mapped_type)|Tipo di un valore del dizionario.|  
 |[collection_adapter::reference (STL/CLR)](#reference)|Tipo di un riferimento a un elemento.|  
 |[collection_adapter::size_type (STL/CLR)](#size_type)|Tipo di una distanza Signed tra due elementi.|  
 |[collection_adapter::value_type (STL/CLR)](#value_type)|Tipo di un elemento.|  
   
 |Funzione membro|Descrizione|  
 |---------------------|-----------------|  
-|[collection_adapter::base (STL/CLR)](#base)|Consente di definire l'interfaccia BCL sottoposta a wrapping.|  
+|[collection_adapter::base (STL/CLR)](#base)|Definisce l'interfaccia BCL sottoposta a wrapping.|  
 |[collection_adapter::begin (STL/CLR)](#begin)|Indica l'inizio della sequenza controllata.|  
 |[collection_adapter::collection_adapter (STL/CLR)](#collection_adapter_collection_adapter)|Costruisce un oggetto adattatore.|  
 |[collection_adapter::end (STL/CLR)](#end)|Designa la fine della sequenza controllata.|  
@@ -172,14 +172,14 @@ template<typename Key,
 |[collection_adapter::operator= (STL/CLR)](#op_eq)|Sostituisce l'handle BCL stored.|  
   
 ### <a name="remarks"></a>Note  
- Utilizzare questa classe di modello per modificare un contenitore BCL come un contenitore STL/CLR. Il `collection_adapter` archivia un handle a un'interfaccia BCL, che a sua volta controlla una sequenza di elementi. Un `collection_adapter` oggetto `X` restituisce una coppia di iteratori di input `X.begin()` e `X.end()` che si utilizza per visitare gli elementi, in ordine. Alcune delle specializzazioni consentono inoltre di scrivere `X.size()` per determinare la lunghezza della sequenza controllata.  
+ Utilizzare questa classe modello per modificare un contenitore di libreria di classi base come un contenitore STL/CLR. Il `collection_adapter` archivia un handle per un'interfaccia BCL, che a sua volta controlla una sequenza di elementi. Oggetto `collection_adapter` oggetti `X` restituisce una coppia di iteratori di input `X.begin()` e `X.end()` che userai per visitare gli elementi, in ordine. Alcune delle specializzazioni inoltre consentono di scrivere `X.size()` per determinare la lunghezza della sequenza controllata.  
 
 ## <a name="base"></a> collection_adapter::base (STL/CLR)
-Consente di definire l'interfaccia BCL sottoposta a wrapping.  
+Definisce l'interfaccia BCL sottoposta a wrapping.  
   
 ### <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 Coll^ base();  
 ```  
   
@@ -209,7 +209,6 @@ int main()
     System::Console::WriteLine("base() same = {0}", c1.base() == %c1);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -222,7 +221,7 @@ Indica l'inizio della sequenza controllata.
   
 ### <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 iterator begin();  
 ```  
   
@@ -258,7 +257,6 @@ int main()
     System::Console::WriteLine("*++begin() = {0}", *++it);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -272,7 +270,7 @@ Costruisce un oggetto adattatore.
   
 ### <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 collection_adapter();  
 collection_adapter(collection_adapter<Coll>% right);  
 collection_adapter(collection_adapter<Coll>^ right);  
@@ -280,10 +278,10 @@ collection_adapter(Coll^ collection);
 ```  
   
 #### <a name="parameters"></a>Parametri  
- raccolta  
- Handle BCL per eseguire il wrapping.  
+ *collection*  
+ Handle di libreria di classi base per eseguire il wrapping.  
   
- right  
+ *right*  
  Oggetto da copiare.  
   
 ### <a name="remarks"></a>Note  
@@ -291,7 +289,7 @@ collection_adapter(Coll^ collection);
   
  `collection_adapter();`  
   
- Inizializza l'handle memorizzato con `nullptr`.  
+ Inizializza l'handle stored con `nullptr`.  
   
  Il costruttore:  
   
@@ -309,7 +307,7 @@ collection_adapter(Coll^ collection);
   
  `collection_adapter(Coll^ collection);`  
   
- Inizializza l'handle memorizzato con con `collection`.  
+ Inizializza l'handle stored con con `collection`.  
   
 ### <a name="example"></a>Esempio  
   
@@ -349,7 +347,6 @@ int main()
   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -364,7 +361,7 @@ I tipi di una distanza signed tra due elementi.
   
 ### <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 typedef int difference_type;  
 ```  
   
@@ -415,7 +412,7 @@ Designa la fine della sequenza controllata.
   
 ### <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 iterator end();  
 ```  
   
@@ -459,7 +456,7 @@ Tipo di un iteratore per la sequenza controllata.
   
 ### <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 typedef T1 iterator;  
 ```  
   
@@ -491,7 +488,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -499,11 +495,11 @@ a b c
 ```  
 
 ## <a name="key_type"></a> collection_adapter::KEY_TYPE (STL/CLR)
-Il tipo di una chiave del dizionario.  
+Tipo di una chiave del dizionario.  
   
 ### <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 typedef Key key_type;  
 ```  
   
@@ -540,7 +536,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -548,11 +543,11 @@ int main()
 ```  
 
 ## <a name="mapped_type"></a> collection_adapter::mapped_type (STL/CLR)
-Il tipo di un valore del dizionario.  
+Tipo di un valore del dizionario.  
   
 ### <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 typedef Value mapped_type;  
 ```  
   
@@ -589,7 +584,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -601,16 +595,16 @@ Sostituisce l'handle BCL stored.
   
 ### <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 collection_adapter<Coll>% operator=(collection_adapter<Coll>% right);  
 ```  
   
 #### <a name="parameters"></a>Parametri  
- right  
- Adapter da copiare.  
+ *right*  
+ Scheda da copiare.  
   
 ### <a name="remarks"></a>Note  
- Le copie di operatore membro `right` sull'oggetto, quindi restituisce `*this`. Che consente di sostituire l'handle BCL stored con una copia dell'handle BCL stored in `right`.  
+ Le copie di operatore membro *a destra* all'oggetto, quindi restituisce `*this`. Usarlo per sostituire l'handle BCL stored con una copia dell'handle BCL archiviato in *a destra*.  
   
 ### <a name="example"></a>Esempio  
   
@@ -643,7 +637,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -656,7 +649,7 @@ Tipo di un riferimento a un elemento.
   
 ### <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 typedef value_type% reference;  
 ```  
   
@@ -691,7 +684,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -703,12 +695,12 @@ Conta il numero di elementi.
   
 ### <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 size_type size();  
 ```  
   
 ### <a name="remarks"></a>Note  
- La funzione membro restituisce la lunghezza della sequenza controllata. Non è stata definita in una specializzazione per `IEnumerable` o `IEnumerable<Value>`.  
+ La funzione membro restituisce la lunghezza della sequenza controllata. Non è definito in una specializzazione per `IEnumerable` o `IEnumerable<Value>`.  
   
 ### <a name="example"></a>Esempio  
   
@@ -732,7 +724,6 @@ int main()
     System::Console::WriteLine("size() = {0}", c1.size());   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -745,7 +736,7 @@ Il tipo di una distanza signed tra due elementi.
   
 ### <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 typedef int size_type;  
 ```  
   
@@ -776,7 +767,6 @@ int main()
     System::Console::WriteLine("size() = {0}", size);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -789,16 +779,16 @@ Scambia il contenuto di due contenitori.
   
 ### <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 void swap(collection_adapter<Coll>% right);  
 ```  
   
 #### <a name="parameters"></a>Parametri  
- right  
+ *right*  
  Contenitore con cui scambiare il contenuto.  
   
 ### <a name="remarks"></a>Note  
- La funzione membro Scambia le maniglie BCL stored tra `*this` e `right`.  
+ La funzione membro Scambia gli handle BCL stored tra `*this` e *destro*.  
   
 ### <a name="example"></a>Esempio  
   
@@ -841,7 +831,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -856,12 +845,12 @@ Tipo di un elemento.
   
 ### <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 typedef Value value_type;  
 ```  
   
 ### <a name="remarks"></a>Note  
- Il tipo è un sinonimo del parametro di modello `Value`, se presente nella specializzazione; in caso contrario, è un sinonimo per `System::Object^`.  
+ Il tipo è un sinonimo del parametro di modello *valore*, se presente nella specializzazione; in caso contrario, è un sinonimo di `System::Object^`.  
   
 ### <a name="example"></a>Esempio  
   
@@ -892,7 +881,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -900,27 +888,27 @@ a b c
 ```  
 
 ## <a name="make_collection"></a> make_collection (STL/CLR)
-Rendere una `range_adapter` da una coppia di iteratori.  
+Rendere un `range_adapter` da una coppia di iteratori.  
   
 ### <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 template<typename Iter>  
     range_adapter<Iter> make_collection(Iter first, Iter last);  
 ```  
   
 #### <a name="parameters"></a>Parametri  
- `Iter`  
- Tipo degli iteratori di sottoposta a wrapping.  
+ *Iter*  
+ Il tipo degli iteratori con wrapping.  
   
- `first`  
+ *first*  
  Primo iteratore per eseguire il wrapping.  
   
- `last`  
+ *last*  
  Secondo iteratore per eseguire il wrapping.  
   
 ### <a name="remarks"></a>Note  
- La funzione modello restituisce `gcnew range_adapter<Iter>(first, last)`. Che consente di costruire un `range_adapter<Iter>` oggetto da una coppia di iteratori.  
+ La funzione modello restituisce `gcnew range_adapter<Iter>(first, last)`. Utilizzarlo per creare un `range_adapter<Iter>` oggetto da una coppia di iteratori.  
   
 ### <a name="example"></a>Esempio  
   
@@ -964,7 +952,6 @@ int main()
   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -976,11 +963,11 @@ SyncRoot not nullptr = True
 ```  
 
 ## <a name="range_adapter"></a> range_adapter (STL/CLR)
-Classe modello che esegue il wrapping di una coppia di iteratori che consentono di implementare più interfacce di libreria di classi Base (BCL). Utilizzare il range_adapter per modificare un intervallo di STL/CLR come se fosse un insieme di BCL.  
+Classe modello che esegue il wrapping di una coppia di iteratori che consentono di implementare più interfacce di libreria di classi Base (BCL). Il range_adapter consente di modificare un intervallo di STL/CLR come se fosse una raccolta di libreria di classi base.  
   
 ### <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 template<typename Iter>  
     ref class range_adapter  
         :   public  
@@ -992,7 +979,7 @@ template<typename Iter>
 ```  
   
 #### <a name="parameters"></a>Parametri  
- Iter  
+ *Iter*  
  Il tipo associato gli iteratori sottoposta a wrapping.  
   
 ### <a name="members"></a>Membri  
@@ -1011,27 +998,27 @@ template<typename Iter>
 |---------------|-----------------|  
 |<xref:System.Collections.IEnumerable>|Scorre gli elementi della raccolta.|  
 |<xref:System.Collections.ICollection>|Gestisce un gruppo di elementi.|  
-|<xref:System.Collections.Generic.IEnumerable%601>|Elementi tipizzati nella raccolta vengono scorsi...|  
+|<xref:System.Collections.Generic.IEnumerable%601>|Scorre gli elementi tipizzati della raccolta...|  
 |<xref:System.Collections.Generic.ICollection%601>|Gestisce un gruppo di elementi tipizzati.|  
   
 ### <a name="remarks"></a>Note  
- Il range_adapter archivia una coppia di iteratori, che a sua volta delimitare una sequenza di elementi. L'oggetto implementa quattro interfacce BCL che consentono di scorrere gli elementi, in ordine. Utilizzare questa classe di modello per modificare gli intervalli STL/CLR Analogamente contenitori BCL.  
+ Il range_adapter archivia una coppia di iteratori, che a sua volta delimitare una sequenza di elementi. L'oggetto implementa quattro interfacce di libreria di classi base che consentono di scorrere gli elementi, in ordine. Utilizzare questa classe modello per modificare gli intervalli STL/CLR molto simile a contenitori di libreria di classi base.  
 
 ## <a name="range_adapter_op_eq"></a> range_adapter::operator = (STL/CLR)
 Sostituisce la coppia iteratore archiviato.  
   
 ### <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 range_adapter<Iter>% operator=(range_adapter<Iter>% right);  
 ```  
   
 #### <a name="parameters"></a>Parametri  
- right  
- Adapter da copiare.  
+ *right*  
+ Scheda da copiare.  
   
 ### <a name="remarks"></a>Note  
- Le copie di operatore membro `right` sull'oggetto, quindi restituisce `*this`. Che consente di sostituire la coppia iteratore archiviato con una copia della coppia iteratore archiviato in `right`.  
+ Le copie di operatore membro *a destra* all'oggetto, quindi restituisce `*this`. Usarlo per sostituire la coppia iteratore archiviato con una copia della coppia iteratore archiviato in *a destra*.  
   
 ### <a name="example"></a>Esempio  
   
@@ -1064,7 +1051,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1077,7 +1063,7 @@ Costruisce un oggetto adattatore.
   
 ### <a name="syntax"></a>Sintassi  
   
-```  
+```cpp  
 range_adapter();  
 range_adapter(range_adapter<Iter>% right);  
 range_adapter(range_adapter<Iter>^ right);  
@@ -1085,13 +1071,13 @@ range_adapter(Iter first, Iter last);
 ```  
   
 #### <a name="parameters"></a>Parametri  
- primo  
+ *first*  
  Primo iteratore per eseguire il wrapping.  
   
- last  
+ *last*  
  Secondo iteratore per eseguire il wrapping.  
   
- right  
+ *right*  
  Oggetto da copiare.  
   
 ### <a name="remarks"></a>Note  
@@ -1105,7 +1091,7 @@ range_adapter(Iter first, Iter last);
   
  `range_adapter(range_adapter<Iter>% right);`  
   
- Inizializza la coppia iteratore archiviato copiando la coppia archiviata in `right`.  
+ Inizializza la coppia iteratore archiviato copiando la coppia archiviata in *a destra*.  
   
  Il costruttore:  
   
@@ -1117,7 +1103,7 @@ range_adapter(Iter first, Iter last);
   
  `range_adapter(Iter^ first, last);`  
   
- Inizializza la coppia iteratore archiviato con `first` e `last`.  
+ Inizializza la coppia iteratore archiviato con *primo* e *ultima*.  
   
 ### <a name="example"></a>Esempio  
   
@@ -1159,7 +1145,6 @@ int main()
   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
