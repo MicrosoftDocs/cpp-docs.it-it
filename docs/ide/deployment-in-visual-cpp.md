@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5b9dfdcdce618df3f2bfec64892f62aec20b6db9
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 310f462414ce5e579ea16b40c44ce543bd74b107
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34256096"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39337518"
 ---
 # <a name="deployment-in-visual-c"></a>Distribuzione in Visual C++
 
