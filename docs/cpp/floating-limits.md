@@ -1,5 +1,5 @@
 ---
-title: Mobile limiti | Documenti Microsoft
+title: Mobile limiti | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7bba2bef20cbe5820d2a7feaae5743f151aea9da
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9a111d2ea3e8e5503754b0d9c0c1a4f69170a41c
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32417468"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39401759"
 ---
 # <a name="floating-limits"></a>Limiti sulle costanti a virgola mobile
 **Sezione specifica Microsoft**  
@@ -47,7 +47,7 @@ ms.locfileid: "32417468"
 |FLT_MIN_EXP DBL_MIN_EXP LDBL_MIN_EXP|Minimo numero negativo tale che FLT_RADIX elevato a tale numero sia un numero a virgola mobile rappresentabile.|-125<br /><br /> -1021<br /><br /> -1021|  
 |FLT_NORMALIZE||0|  
 |FLT_RADIX _DBL_RADIX _LDBL_RADIX|Base della rappresentazione dell'esponente.|2 2 2|  
-|FLT_ROUNDS _DBL_ROUNDS _LDBL_ROUNDS|Modalità di arrotondamento per addizione a virgola mobile.|1 (vicino) 1 (vicino) 1 (vicino)|  
+|FLT_ROUNDS _DBL_ROUNDS _LDBL_ROUNDS|Modalità di arrotondamento di addizione a virgola mobile.|1 (vicino) 1 (vicino) 1 (vicino)|  
   
 > [!NOTE]
 >  Le informazioni contenute nella tabella possono variare nelle versioni future del prodotto.  

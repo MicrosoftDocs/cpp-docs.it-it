@@ -1,5 +1,5 @@
 ---
-title: Coprocessore a virgola mobile e convenzioni di chiamata | Documenti Microsoft
+title: Coprocessore a virgola mobile e convenzioni di chiamata | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 46cf9c937453894ed37ad434ad94609d0744be24
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 66ccd54c4abb1d8d9761d5ded88beba76bfae043
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32410801"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39401354"
 ---
 # <a name="floating-point-coprocessor-and-calling-conventions"></a>Coprocessore a virgola mobile e convenzioni di chiamata
-Se si sta scrivendo assembly routine per Mobile punto del coprocessore, è necessario conservare mobile punto parola di controllo e pulire lo stack del coprocessore a meno che non viene restituito un **float** o **doppie** valore (che la funzione deve restituire in ST(0)).  
+Se si sta scrivendo assembly routine per Mobile punto del coprocessore, è necessario conservare mobile punto parola di controllo e pulire lo stack del coprocessore a meno che non si restituisce un **float** oppure **double** valore (in cui la funzione deve restituire in ST(0)).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Convenzioni di chiamata](../cpp/calling-conventions.md)

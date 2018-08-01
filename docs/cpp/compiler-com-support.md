@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a21b7dd00aa0bb0894da4cc13cf0f6f40078ee1b
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 7c2204e69ee6df64a08e3f5cf03191ad1e7e0535
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37941827"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39402461"
 ---
 # <a name="compiler-com-support"></a>Supporto COM del compilatore
 ## <a name="microsoft-specific"></a>Sezione specifica Microsoft  
@@ -28,7 +28,7 @@ ms.locfileid: "37941827"
   
  Tramite il [direttiva del preprocessore #import](../preprocessor/hash-import-directive-cpp.md), il compilatore può leggere una libreria dei tipi e convertire i dati in un file di intestazione C++ che descrive il modello COM interfacce come classi. È disponibile un set di attributi `#import` per il controllo utente del contenuto dei file di intestazione delle librerie dei tipi risultanti.  
   
- È possibile usare la [declspec](../cpp/declspec.md) attributo esteso [uuid](../cpp/uuid-cpp.md) per assegnare un identificatore univoco globale (GUID) a un oggetto COM. La parola chiave [uuidof](../cpp/uuidof-operator.md) può essere utilizzato per estrarre il GUID associato a un oggetto COM. Un'altra `__declspec` attributo, [proprietà](../cpp/property-cpp.md), può essere utilizzato per specificare il **ottenere** e **impostare** metodi per un membro dati di un oggetto COM.  
+ È possibile usare la [declspec](../cpp/declspec.md) attributo esteso [uuid](../cpp/uuid-cpp.md) per assegnare un identificatore univoco globale (GUID) a un oggetto COM. La parola chiave [uuidof](../cpp/uuidof-operator.md) può essere utilizzato per estrarre il GUID associato a un oggetto COM. Un'altra **declspec** attributo [proprietà](../cpp/property-cpp.md), può essere utilizzato per specificare la `get` e `set` metodi per un membro dati di un oggetto COM.  
   
  Viene fornito un set di classi e funzioni globali di supporto COM per supportare le `VARIANT` e `BSTR` tipi, implementare i puntatori intelligenti e incapsulare l'oggetto errore generato da `_com_raise_error`:  
   

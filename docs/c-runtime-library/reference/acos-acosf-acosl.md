@@ -41,12 +41,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 664c3555602dfc16ce811b065e0d38f8fe93e733
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5384d4e97ebb4f3f6152278e916c02bb350090ea
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32392770"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39401938"
 ---
 # <a name="acos-acosf-acosl"></a>acos, acosf, acosl
 
@@ -67,24 +67,24 @@ long double acos( long double x );   // C++ only
 
 ### <a name="parameters"></a>Parametri
 
-*x*<br/>
-Valore compreso tra -1 e 1, per cui si desidera calcolare l'arcocoseno (il coseno inverso).
+*x*  
+Valore compreso tra -1 e 1, per la quale calcolare l'arcocoseno (il coseno inverso).
 
 ## <a name="return-value"></a>Valore restituito
 
-Il **acos** funzione restituisce l'arcocoseno dei *x* nell'intervallo da 0 a radianti π.
+Il **acos** funzione restituisce l'arcocoseno di *x* nell'intervallo da 0 a radianti π.
 
 Per impostazione predefinita, se *x* è minore di -1 o maggiore di 1 **acos** restituisce un valore indefinito.
 
 |Input|Eccezione SEH|Eccezione Matherr|
 |-----------|-------------------|-----------------------|
-|± ∞|**NON VALIDO**|**DOMAIN**|
-|± QNAN,IND|none|**DOMAIN**|
-|&#124;x&#124;>1|**NON VALIDO**|**DOMAIN**|
+|± ∞|NON VALIDO|_DOMAIN|
+|± QNAN,IND|none|_DOMAIN|
+|&#124;x&#124;>1|NON VALIDO|_DOMAIN|
 
 ## <a name="remarks"></a>Note
 
-Dato che C++ consente l'overload, è possibile chiamare overload di **acos** che accettano e restituiscono **float** e **lungo** **doppie** tipi. In un programma C **acos** accetta e restituisce sempre un **doppie**.
+Dato che C++ consente l'overload, è possibile chiamare overload di **acos** che accettano e restituiscono **float** e **long** **double** tipi. In un programma C **acos** accetta e restituisce sempre un **doppie**.
 
 ## <a name="requirements"></a>Requisiti
 
@@ -94,7 +94,7 @@ Dato che C++ consente l'overload, è possibile chiamare overload di **acos** che
 
 ## <a name="example"></a>Esempio
 
-Questo programma richiede un valore compreso tra -1 e 1. I valori di input di fuori di questo intervallo producono **domain** i messaggi di errore. Se viene immesso un valore valido, il programma stampa l'arcoseno e l'arcocoseno di tale valore.
+Questo programma richiede un valore compreso tra -1 e 1. I valori di input all'esterno di questo intervallo producono i messaggi di errore `_DOMAIN`. Se viene immesso un valore valido, il programma stampa l'arcoseno e l'arcocoseno di tale valore.
 
 ```C
 // crt_asincos.c
@@ -144,10 +144,10 @@ Arccosine of 0.000000 = 1.570796
 
 ## <a name="see-also"></a>Vedere anche
 
-[Supporto delle funzioni a virgola mobile](../../c-runtime-library/floating-point-support.md)<br/>
-[asin, asinf, asinl](asin-asinf-asinl.md)<br/>
-[atan, atanf, atanl, atan2, atan2f, atan2l](atan-atanf-atanl-atan2-atan2f-atan2l.md)<br/>
-[cos, cosf, cosl](cos-cosf-cosl.md)<br/>
-[_matherr](matherr.md)<br/>
-[sin, sinf, sinl](sin-sinf-sinl.md)<br/>
-[tan, tanf, tanl](tan-tanf-tanl.md)<br/>
+[Supporto delle funzioni a virgola mobile](../../c-runtime-library/floating-point-support.md)  
+[asin, asinf, asinl](asin-asinf-asinl.md)  
+[atan, atanf, atanl, atan2, atan2f, atan2l](atan-atanf-atanl-atan2-atan2f-atan2l.md)  
+[cos, cosf, cosl](cos-cosf-cosl.md)  
+[_matherr](matherr.md)  
+[sin, sinf, sinl](sin-sinf-sinl.md)  
+[tan, tanf, tanl](tan-tanf-tanl.md)  

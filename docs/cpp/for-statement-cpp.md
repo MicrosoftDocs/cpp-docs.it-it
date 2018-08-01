@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b38b608d1d254d304c7182d5063f870e2bbfcffe
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: feb14056e3054cdf0e802b16ce9ff20f67da43fe
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37940819"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39401574"
 ---
 # <a name="for-statement-c"></a>Istruzione for (C++)
 Esegue ripetutamente un'istruzione finché la condizione non diventa false. Per informazioni su basato su intervallo per l'istruzione, vedere [Range-based per istruzione (C++)](../cpp/range-based-for-statement-cpp.md).  
@@ -137,9 +137,9 @@ for (int i = 0 ; i < 5 ; i++) {
   
  Per impostazione predefinita, sotto [/Ze](../build/reference/za-ze-disable-language-extensions.md), una variabile dichiarata in un **per** ciclo resta nell'ambito finché il **per** termina l'ambito di inclusione del ciclo.  
   
- [/Zc: forScope](../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md) consente il comportamento standard delle variabili dichiarate nei cicli for senza la necessità di specificare /Za.  
+ [/Zc: forScope](../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md) Abilita il comportamento standard delle variabili dichiarate nei cicli for senza la necessità di specificare `/Za`.  
   
- È anche possibile usare le differenze di ambito di **per** ciclo per dichiarare nuovamente le variabili in /Ze come segue:  
+ È anche possibile usare le differenze di ambito di **per** ciclo per dichiarare nuovamente le variabili in `/Ze` come indicato di seguito:  
   
 ```cpp  
 // for_statement5.cpp  

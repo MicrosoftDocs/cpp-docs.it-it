@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 161d47601423b84b0847186e1c5aed8aec8a631b
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: e395bcb32858bc63b3e848f20a7d794156876e26
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37942003"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39402029"
 ---
 # <a name="naked-function-calls"></a>Chiamate di funzioni naked
 ## <a name="microsoft-specific"></a>Sezione specifica Microsoft  

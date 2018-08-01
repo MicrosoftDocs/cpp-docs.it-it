@@ -1,5 +1,5 @@
 ---
-title: Accesso ai membri | Documenti Microsoft
+title: Accesso ai membri | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,25 +19,24 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d8896e473f1a419f24636d7c503924b51426be24
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 99f65d2b03f54eb16db56bf81948aadfb184cfa1
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32420086"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39402367"
 ---
 # <a name="member-access"></a>Accesso ai membri
-Accesso ai membri di classe può essere controllato mediante l'overload dell'operatore di accesso di membro (**->**). Questo operatore in tale utilizzo viene considerato un operatore unario e la funzione dell'operatore di overload deve essere una funzione membro di una classe. Di conseguenza, la dichiarazione per tale funzione è:  
+Accesso ai membri di classe può essere controllato tramite l'overload dell'operatore di accesso membri (**->**). Questo operatore in tale utilizzo viene considerato un operatore unario e la funzione dell'operatore di overload deve essere una funzione membro di una classe. Di conseguenza, la dichiarazione per tale funzione è:  
   
 ## <a name="syntax"></a>Sintassi  
   
 ```  
-  
 class-type *operator->()  
 ```  
   
 ## <a name="remarks"></a>Note  
- dove *-tipo di classe* è il nome della classe a cui appartiene questo operatore. La funzione operatore di accesso ai membri deve essere una funzione membro non statica.  
+ in cui *di tipo classe* è il nome della classe a cui appartiene questo operatore. La funzione operatore di accesso ai membri deve essere una funzione membro non statica.  
   
  Questo operatore viene utilizzato (spesso insieme all'operatore di dereferenziazione del puntatore) per implementare i "puntatori intelligenti" che convalidano i puntatori prima della dereferenziazione oppure ne conteggiano l'utilizzo.  
   

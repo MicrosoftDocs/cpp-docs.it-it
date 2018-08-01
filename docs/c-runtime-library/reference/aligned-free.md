@@ -33,12 +33,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bd89d0c8657df4bec2da5bf021c8964ad418cd9b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 51220aaf47056f63d37471c61857f8a128a67179
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32393368"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39402448"
 ---
 # <a name="alignedfree"></a>_aligned_free
 
@@ -54,13 +54,13 @@ void _aligned_free (
 
 ### <a name="parameters"></a>Parametri
 
-*memblock* un puntatore al blocco di memoria che è stato restituito per il **aligned_malloc** o **aligned_offset_malloc** (funzione).
+*memblock* un puntatore al blocco di memoria che è stato restituito per il `_aligned_malloc` o `_aligned_offset_malloc` (funzione).
 
 ## <a name="remarks"></a>Note
 
-**aligned_free** contrassegnato `__declspec(noalias)`, vale a dire che la funzione è sicuramente non per modificare le variabili globali. Per altre informazioni, vedere [noalias](../../cpp/noalias.md).
+**aligned_free** contrassegnato `__declspec(noalias)`, vale a dire che la funzione è garantito che non modifichi le variabili globali. Per altre informazioni, vedere [noalias](../../cpp/noalias.md).
 
-Questa funzione non convalida il parametro, a differenza di altre funzioni CRT _aligned. Se *memblock* è un **NULL** semplicemente puntatore, questa funzione non esegue alcuna azione. Non viene modificato **errno** e non richiamano il gestore di parametri non validi. Se si verifica un errore nella funzione a causa del mancato utilizzo precedente di funzioni _aligned per allocare il blocco di memoria oppure si verifica un problema di allineamento della memoria a causa di alcune calamità impreviste, la funzione genera un report di debug dalle [Macro _RPT, _RPTF, _RPTW, _RPTFW](rpt-rptf-rptw-rptfw-macros.md).
+Questa funzione non convalida il parametro, a differenza di altre funzioni CRT _aligned. Se *memblock* è un puntatore NULL, questa funzione non esegue alcuna azione. Non modifica `errno` e non richiama il gestore di parametri non validi. Se si verifica un errore nella funzione a causa del mancato utilizzo precedente di funzioni _aligned per allocare il blocco di memoria oppure si verifica un problema di allineamento della memoria a causa di alcune calamità impreviste, la funzione genera un report di debug dalle [Macro _RPT, _RPTF, _RPTW, _RPTFW](rpt-rptf-rptw-rptfw-macros.md).
 
 ## <a name="requirements"></a>Requisiti
 
@@ -74,4 +74,4 @@ Per altre informazioni, vedere [_aligned_malloc](aligned-malloc.md).
 
 ## <a name="see-also"></a>Vedere anche
 
-[Allineamento dati](../../c-runtime-library/data-alignment.md)<br/>
+[Allineamento dati](../../c-runtime-library/data-alignment.md)  

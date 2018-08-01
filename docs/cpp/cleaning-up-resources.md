@@ -1,5 +1,5 @@
 ---
-title: Pulizia delle risorse | Documenti Microsoft
+title: Pulizia delle risorse | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,27 +19,28 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 960e19400ae1d00108d57eb85d3df01ebf1dbc33
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1c7c589f5ac6baef0ef4420d997fa6497f4e03d5
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408736"
 ---
 # <a name="cleaning-up-resources"></a>Pulizia di risorse
-Durante l'esecuzione del gestore terminazioni, potrebbe essere possibile non sapere quali risorse sono effettivamente allocate prima che il gestore terminazioni venga chiamato. È possibile che il blocco di istruzioni `__try` sia stato arrestato prima che tutte le risorse fossero state allocate, pertanto non tutte le risorse sono aperte.  
+Durante l'esecuzione del gestore terminazioni, potrebbe essere possibile non sapere quali risorse sono effettivamente allocate prima che il gestore terminazioni venga chiamato. È possibile che il **try** blocco di istruzioni è stata interrotta prima tutte le risorse fossero state allocate, in modo che non tutte le risorse sono state aperte.  
   
  Di conseguenza, per essere certi, è necessario verificare quali risorse sono effettivamente aperte prima di procedere con la pulizia gestione-terminazione. Una procedura consigliata consiste in:  
   
 1.  Inizializzare gli handle su NULL.  
   
-2.  Allocare le risorse nel blocco di istruzioni `__try`. Gli handle vengono impostati su valori positivi mentre la risorsa viene allocata.  
+2.  Nel **try** istruzione block, allocare le risorse. Gli handle vengono impostati su valori positivi mentre la risorsa viene allocata.  
   
-3.  Nel blocco di istruzioni `__finally` rilasciare ogni risorsa la cui variabile di handle o di flag corrispondente è diversa da zero oppure non è NULL.  
+3.  Nel **finally** blocco di istruzioni, rilasciare ogni risorsa la cui handle corrispondenti o la variabile di flag è diverso da zero o not NULL.  
   
 ## <a name="example"></a>Esempio  
- Ad esempio, il codice seguente utilizza un gestore terminazioni per chiudere tre file e un blocco di memoria allocati nel blocco di istruzioni `__try`. Prima di pulire una risorsa, il codice controlla se la risorsa è stata allocata.  
+ Ad esempio, il codice seguente usa un gestore terminazioni per chiudere tre file e un blocco di memoria allocati nel **try** blocco di istruzioni. Prima di pulire una risorsa, il codice controlla se la risorsa è stata allocata.  
   
-```  
+```cpp 
 // exceptions_Cleaning_up_Resources.cpp  
 #include <stdlib.h>  
 #include <malloc.h>  

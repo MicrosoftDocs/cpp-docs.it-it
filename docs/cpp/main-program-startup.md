@@ -22,19 +22,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2f78a122837fc2cb9a89083d5be8fd2b488c1772
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: d78ca2a195ac60e31e01bbe271b7f92536cc1a05
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37939224"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39401482"
 ---
 # <a name="main-program-startup"></a>main: avvio del programma
-Una speciale funzione denominata `main` è il punto iniziale di esecuzione per tutti i programmi C e C++. Se si scrive il codice conforme al modello di programmazione [!INCLUDE[TLA#tla_unicode](../atl-mfc-shared/reference/includes/tlasharptla_unicode_md.md)], è possibile utilizzare `wmain` che è la versione a caratteri wide di `main`.  
+Una speciale funzione denominata **principale** è il punto iniziale di esecuzione per tutti i programmi C e C++. Se si sta scrivendo codice che rispetta il [!INCLUDE[TLA#tla_unicode](../atl-mfc-shared/reference/includes/tlasharptla_unicode_md.md)] modello di programmazione, è possibile usare `wmain`, ovvero la versione a caratteri wide di **principale**.  
   
- La funzione `main` non è predefinita dal compilatore. Deve essere fornita nel testo di programma.  
+ Il **principale** funzione non è predefinita dal compilatore. Deve essere fornita nel testo di programma.  
   
- La sintassi di dichiarazione per `main` è  
+ La sintassi di dichiarazione per **principale** è  
   
 ```cpp 
 int main();  
@@ -59,9 +59,9 @@ int wmain( );
 int wmain(int argc, wchar_t *argv[], wchar_t *envp[]);  
 ```  
   
- È inoltre possibile utilizzare `_tmain`, definito in TCHAR.h. `_tmain` si risolve in `main` a meno che _UNICODE non sia definito. In tal caso, `_tmain` si risolve in `wmain`.  
+ È inoltre possibile utilizzare `_tmain`, definito in TCHAR.h. `_tmain` si risolve in **principale** a meno che non è definito Unicode. In tal caso, `_tmain` si risolve in `wmain`.  
   
- In alternativa, il `main` e `wmain` le funzioni possono essere dichiarate come restituzione **void** (nessun valore restituito). Se si dichiara `main` oppure `wmain` prevede la restituzione **void**, è possibile restituire un codice di uscita al processo padre o al sistema operativo usando una [restituire](../cpp/return-statement-in-program-termination-cpp.md) istruzione. Per restituire una codice di uscita quando `main` oppure `wmain` viene dichiarato come **void**, è necessario usare il [uscire](../cpp/exit-function.md) (funzione).  
+ In alternativa, il **principale** e `wmain` funzioni possono essere dichiarate come elementi che restituiscono **void** (nessun valore restituito). Se si dichiara **principale** oppure `wmain` prevede la restituzione **void**, è possibile restituire un codice di uscita al processo padre o al sistema operativo usando un [restituiscono](../cpp/return-statement-in-program-termination-cpp.md) istruzione. Per restituire una codice di uscita quando **principale** oppure `wmain` viene dichiarato come **void**, è necessario usare il [uscire](../cpp/exit-function.md) (funzione).  
   
 **Fine sezione specifica Microsoft**  
  I tipi per `argc` e `argv` sono definiti dal linguaggio. I nomi `argc`, `argv` e `envp` sono tradizionali, ma non sono richiesti dal compilatore. Per altre informazioni e un esempio, vedere [definizioni di argomenti](../cpp/argument-definitions.md).  
